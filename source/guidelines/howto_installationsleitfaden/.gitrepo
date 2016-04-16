@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:linuxmuster-docs/howto_installationsleitfaden.git
+	branch = master
+	commit = a71d0524b8cbe9eb6b363d9d4aa569f6de30f0e0
+	parent = faa3919405c16d9ffea4bab46a4a5b2b6698264c
+	cmdver = 0.3.0
