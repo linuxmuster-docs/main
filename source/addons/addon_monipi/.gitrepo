@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:linuxmuster-docs/addon_monipi.git
+	branch = master
+	commit = a1e3dba87967e78f87af2af2838e30ef8ca45336
+	parent = a77e2223cc99373239cc76a6f45e0c5a632bb5c8
+	cmdver = 0.3.0
