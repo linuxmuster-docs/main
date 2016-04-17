@@ -9,6 +9,9 @@ linuxmuster.net documentation
 Die gesamte Dokumentation zu linuxmuster.net.
 Bindet die einzelnen Howtos und Leitfäden über subrepos ein.
 
+The full documentation of linuxmuster.net.
+Pulls in the separate howtos and guidelines via subrepos.
+
 Installation
 ++++++++++++
 Clone the repository "all-of-me" using git and later use ''git pull'' to update it
