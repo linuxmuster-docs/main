@@ -1,66 +1,111 @@
-linuxmuster.net documentation - the full monty
-##############################################
+linuxmuster.net documentation
+#############################
 
-The full Monty - Die gesamte Dokumentation.
-Bindet über git subtree die anderen benötigten Repositorien ein.
+::
+
+  All of me, why take not all of me.
+                   -- Seymour Simons
+
+Die gesamte Dokumentation zu linuxmuster.net.
+Bindet die einzelnen Howtos und Leitfäden über subrepos ein.
 
 Installation
 ++++++++++++
-Clone the repository using git
+Clone the repository "all-of-me" using git and later use ''git pull'' to update it
 
-.. code::
+.. code:: bash
 
-   $ git clone git@github.com:linuxmuster-docs/the-full-monty.git
+   ~$ git clone git@github.com:linuxmuster-docs/all-of-me.git
+   ~$ git pull
 
-Update the remote branches using the shell script
+Make a local copy of your documentation using 
 
-.. code::
+.. code:: bash
 
-   $ cd the-full-monty
-   $ ./update_repos.sh
+   ~$ cd all-of-me
+   ~/all-of-me$ make html
+
 
 Changing the documentation
 ++++++++++++++++++++++++++
 
-Not done here. Change the documentation in the respective repository (e.g. change linuxmuster-docs/system_clients_linux using git clone; git commit, git push). Now come back here and update the repository manually:
+Install "git-subrepo"
+---------------------
 
-.. code::
+For this repository "all-of-me" to be changed, you need to "install" the tool git-subrepo (see https://github.com/ingydotnet/git-subrepo) in a local directory:
 
-   $ git pull -s subtree system_clients_linux master
+.. code:: bash
 
-There should be no merging conflicts, if you have not altered the files here.
+   ~$ git clone https://github.com/ingydotnet/git-subrepo /path/to/git-subrepo
+   ~$ echo 'source /path/to/git-subrepo/.rc' >> ~/.bashrc
+   ~$ source ~/.bashrc
+   
+Change in the upstream repos
+----------------------------
 
-Updating
-++++++++
+Documentation can either be changed in the respective repository, commited locally there, pushed to the remote repository. (I call this "upstream" now). Now the repository "all-of-me" needs to update the respective subrepos, e.g. to update all subrepos at once
 
-Update the main repository using git
+.. code:: bash
 
-.. code::
+   ~/all-of-me$ git subrepo pull --all
 
-   $ git pull
+This does several steps in one, you are ending up with the upstream changes merged and commited locally. Now push those changes also to the "all-of-me"-repository.
 
-New upstream versions of the single chapters have to be merged, this can be done for each chapter manually, if many conflicts arise.
+.. code:: bash
 
-.. code::
+   ~/all-of-me$ git push
 
-   $ git pull -s subtree <name_of_subtree> master
+Change within the "all-of-me" repo
+----------------------------------
 
-Or pull all the updates from upstream using the shell script.
+Or you can change the documentation in the all-of-me repo altogether and later commit the changes back to upstream the following way:
 
-.. code::
+1. Make sure the "all-of-me"-repository is up-to-date with upstream documentation
 
-   $ ./update_repos.sh
+   .. code:: bash
 
-.. admonition:: Problem with updates
+      ~/all-of-me$ git subrepo pull --all
+      Subrepo ... is up to date
+      ...
+      ~/all-of-me$ git pull 
 
-   Beim mergen kann die index.rst aus verschiedensten Verzeichnissen herangenommen werden. Da muss man noch ne Lösung finden. Außerdem ist mir nicht bekannt, wie ich feststelle ob ich die identische Version wie upstream habe...
+   and, if necessary, commit and push the changes:
+   
+   .. code:: bash
+   
+      ~/all-of-me$ git push
 
+2. Make your local changes to the files within the subrepo subdirectories, commit them and push the changes to the "all-of-me" repository
 
-Adding new subtrees
+   .. code:: bash
+   
+      ~/all-of-me$ vi source/howtos/howto_printer/source/index.rst
+      ~/all-of-me$ git status
+      ~/all-of-me$ git commit -a "fix typo in printer docu"
+   
+   now push the changes within the subrepo to upstream, and pull immediatly back in
+   
+   .. code:: bash
+   
+      ~/all-of-me$ git subrepo push source/howtos/howto_printer 
+      Subrepo 'source/howtos/howto_printer' pushed to 'git@github.com:linuxmuster-docs/howto_printer.git' (master).
+      ~/all-of-me$ git subrepo pull source/howtos/howto_printer 
+      Subrepo 'source/howtos/howto_printer' pulled from 'git@github.com:linuxmuster-docs/howto_printer.git' (master).
+
+   now push the "all-of-me"-repository
+   
+   .. code:: bash
+   
+      ~/all-of-me$ git push
+
+Adding new subrepos
 +++++++++++++++++++
 
-If a new chapter is to be added,
+If a new howto is to be added, it is assumed the documentation of the howto is already in a repository. Now add it as a subrepo, optionally amend the commit, push it in the "all-of-me"-repo
 
-1. adapt ``update_repos.sh`` accordingly.
+.. code:: bash
+ 
+   ~/all-of-me$ git subrepo clone git@github.com:linuxmuster-docs/howto_leoclient2.git source/howtos/howto_leoclient2
+   ~/all-of-me$ git commit --amend
+   ~/all-of-me$ git push
 
-2. follow the guide https://help.github.com/articles/about-git-subtree-merges/ to add the new git-project, the subdirectory will be the argument to the ``--prefix`` parameter
