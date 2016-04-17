@@ -1,0 +1,234 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation von leoclient2 &mdash; linuxmuster.net leoclient2</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="linuxmuster.net leoclient2" href="index.html"/>
+        <link rel="next" title="Virtuelle Maschine erzeugen" href="leo2-vmerzeugen.html"/>
+        <link rel="prev" title="Funktionsprinzip" href="leo2-funktion.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> leoclient2
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="leo2-funktion.html">Funktionsprinzip</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Installation von leoclient2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#software-pakete-installieren">Software-Pakete installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#benutzer-rechte-anpassen">Benutzer-Rechte anpassen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rechte-an-den-lokalen-virtuellen-maschinen">Rechte an den lokalen virtuellen Maschinen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="leo2-vmerzeugen.html">Virtuelle Maschine erzeugen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="leo2-vmstarten.html">Virtuelle Maschinen starten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="leo2-erweiterungen.html">Weitere Informationen zu leoclient2</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">leoclient2</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">leoclient2</a> &raquo;</li>
+      
+    <li>Installation von leoclient2</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="_sources/leo2-installation.txt" rel="nofollow"> View page source</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation-von-leoclient2">
+<h1>Installation von leoclient2<a class="headerlink" href="#installation-von-leoclient2" title="Permalink zu dieser Überschrift">¶</a></h1>
+<div class="section" id="software-pakete-installieren">
+<h2>Software-Pakete installieren<a class="headerlink" href="#software-pakete-installieren" title="Permalink zu dieser Überschrift">¶</a></h2>
+<p>Die leoclient-Pakete liegen auf dem linuxmuster.net-Paketserver, der im Linuxclient schon zur Einrichtung der Anmeldung am Server eingetragen wurde.</p>
+<p>Die Pakete werden installiert mit root-Rechten auf dem Linuxclient mit folgenden Befehlen:
+<tt class="docutils literal"><span class="pre">#</span> <span class="pre">apt-get</span> <span class="pre">update</span></tt>
+<tt class="docutils literal"><span class="pre">#</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">libglib-perl</span> <span class="pre">libgtk2-perl</span></tt>
+<tt class="docutils literal"><span class="pre">#</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">leoclient2-leovirtstarter-client</span> <span class="pre">leoclient2-vm-printer</span> <span class="pre">linuxmuster-client-sudoers</span></tt></p>
+<p>Damit wird ggf. auch das Paket virtualbox-x.y auf dem Linuxclient installiert. Eine aktuelle Version kann man mit Hilfe der Anleitung z.B. unter <a class="reference external" href="https://www.virtualbox.org/wiki/Linux_Downloads">https://www.virtualbox.org/wiki/Linux_Downloads</a> installieren. Für die Schule kann die PUEL-Version installiert werden, die beispielsweise USB2 unterstützt (statt USB1.1).</p>
+</div>
+<div class="section" id="benutzer-rechte-anpassen">
+<h2>Benutzer-Rechte anpassen<a class="headerlink" href="#benutzer-rechte-anpassen" title="Permalink zu dieser Überschrift">¶</a></h2>
+<p>Um für die Domänenbenutzer alle Optionen von VirtualBox freizugeben, müssen diese Mitglied der Gruppe <tt class="docutils literal"><span class="pre">vboxusers</span></tt> sein. Hierzu ergänzt man in der Datei <tt class="docutils literal"><span class="pre">/etc/security/group.conf</span></tt> in der Zeile <tt class="docutils literal"><span class="pre">*;*;*;Al0000-2400;dialout...</span></tt> den Eintrag <tt class="docutils literal"><span class="pre">vboxusers</span></tt>. Diese Zeile könnte dann wie folgt aussehen:</p>
+<p><tt class="docutils literal"><span class="pre">*;*;*;Al0000-2400;dialout,cdrom,floppy,audio,dip,video,plugdev,scanner,vboxusers</span></tt></p>
+<p>Auch lokale Benutzer am Linuxclient (z.B. <tt class="docutils literal"><span class="pre">linuxuser</span></tt>) müssen in der Datei <tt class="docutils literal"><span class="pre">/etc/group</span></tt> der Gruppe <tt class="docutils literal"><span class="pre">vboxusers</span></tt> hinzugefügt werden. Dazu den Benutzername in der entsprechenden Zeile hinzufügen. (Nach Änderung ist eine erneute Anmeldung erforderlich).</p>
+<p>Hinweis: Diese Rechte-Anpassungen sind im Standard-Linuxclient schon eingepflegt.</p>
+</div>
+<div class="section" id="rechte-an-den-lokalen-virtuellen-maschinen">
+<h2>Rechte an den lokalen virtuellen Maschinen<a class="headerlink" href="#rechte-an-den-lokalen-virtuellen-maschinen" title="Permalink zu dieser Überschrift">¶</a></h2>
+<p>Bei der Anmeldung eines Benutzers werden die Rechte an den lokalen virtuellen Maschinen so gesetzt, dass der Benutzer die Maschine starten, Logs anlegen und den aktiven Snapshot verändern kann. Dazu muss nachfolgendes Script <tt class="docutils literal"><span class="pre">015-leoclient2</span></tt> unter <tt class="docutils literal"><span class="pre">/etc/linuxmuster-client/post-mount.d/</span></tt> abgelegt sein.</p>
+<p><tt class="docutils literal"><span class="pre">/etc/linuxmuster-client/post-mount.d/015-leoclient2</span></tt></p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="leo2-vmerzeugen.html" class="btn btn-neutral float-right" title="Virtuelle Maschine erzeugen" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="leo2-funktion.html" class="btn btn-neutral" title="Funktionsprinzip" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, linuxmuster.net.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

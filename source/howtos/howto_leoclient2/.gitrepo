@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:linuxmuster-docs/howto_leoclient2.git
+	branch = master
+	commit = 17c60bf2fb62676883eb683be8eabe4d77b5017d
+	parent = 1cb8c6ac722534bc59091f637eb4267c1b56f2ce
+	cmdver = 0.3.0

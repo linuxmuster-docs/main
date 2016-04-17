@@ -1,0 +1,639 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Weitere Informationen zu leoclient2 &mdash; linuxmuster.net leoclient2</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="linuxmuster.net leoclient2" href="index.html"/>
+        <link rel="prev" title="Virtuelle Maschinen starten" href="leo2-vmstarten.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> leoclient2
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="leo2-funktion.html">Funktionsprinzip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="leo2-installation.html">Installation von leoclient2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="leo2-vmerzeugen.html">Virtuelle Maschine erzeugen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="leo2-vmstarten.html">Virtuelle Maschinen starten</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Weitere Informationen zu leoclient2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#speicherort-der-virtuellen-maschinen">Speicherort der virtuellen Maschinen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lokale-virtuelle-maschinen-auf-einer-zusatzlichen-partition-ablegen">Lokale Virtuelle Maschinen auf einer zusätzlichen Partition ablegen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#frage-wann-muss-welche-partition-geimaged-werden">Frage: Wann muss welche Partition geimaged werden?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#virtuelle-maschinen-auf-dem-server">Virtuelle Maschinen auf dem Server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#remote-virtuelle-maschine-erzeugen">Remote virtuelle Maschine erzeugen</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#vm-basis-erneuern">VM-Basis erneuern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#neuen-snapshots-erzeugen">Neuen Snapshots erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vm-windows-xp-tipps-und-tricks">VM Windows XP – Tipps und Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vm-windows-7-tipps-und-tricks">VM Windows 7 – Tipps und Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vm-schrumpfen-tipps-und-tricks">VM schrumpfen – Tipps und Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#netzwerkeinstellungen-einer-vm">Netzwerkeinstellungen einer VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#berechtigungen-zum-starten-einer-vm-bzw-eines-snapshots">Berechtigungen zum Starten einer VM bzw. eines Snapshots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#leoclient-1-vm-s-umziehen-nach-leoclient2">Leoclient-1-VM&#8217;s umziehen nach Leoclient2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#alte-dateien-von-leoclient-version-1-entfernen">Alte Dateien von leoclient (Version 1) entfernen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#software-pakete-entfernen">Software-Pakete entfernen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rechte-korrigieren">Rechte korrigieren</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hintergrundinformationen">Hintergrundinformationen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#virtuelle-maschine-erzeugen">Virtuelle Maschine erzeugen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#serverbasierte-vm-kopieren-lokaler-cache">Serverbasierte VM kopieren, lokaler cache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#virtuelle-maschine-starten">Virtuelle Maschine starten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vm-direkt-starten">VM direkt starten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#datenstruktur-einer-vm">Datenstruktur einer VM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ubersicht-der-scripte-befehle-zum-leoclient2">Übersicht der Scripte/Befehle zum leoclient2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#entwicklungsdokumentation-des-leoclient2">Entwicklungsdokumentation des leoclient2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fehlersuche-fehlerbehebung">Fehlersuche - Fehlerbehebung</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#log-datei">Log-Datei</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#endlosschleife-bei-leoclient2-base-snapshot-renew">Endlosschleife bei <tt class="docutils literal"><span class="pre">leoclient2-base-snapshot-renew</span></tt></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#snapshot-passt-nicht-zur-basisfestplatte">Snapshot passt nicht zur Basisfestplatte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#network-conf-fur-lokalen-snapshot-bereitstellen"><tt class="docutils literal"><span class="pre">network.conf</span></tt> für lokalen Snapshot bereitstellen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#leovirtstarter2-zeigt-startet-wie-vorgefunden-nicht"><tt class="docutils literal"><span class="pre">leovirtstarter2</span></tt> zeigt/startet &#8220;wie vorgefunden&#8221; nicht</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">leoclient2</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">leoclient2</a> &raquo;</li>
+      
+    <li>Weitere Informationen zu leoclient2</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="_sources/leo2-erweiterungen.txt" rel="nofollow"> View page source</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="weitere-informationen-zu-leoclient2">
+<h1>Weitere Informationen zu leoclient2<a class="headerlink" href="#weitere-informationen-zu-leoclient2" title="Permalink zu dieser Überschrift">¶</a></h1>
+<div class="section" id="speicherort-der-virtuellen-maschinen">
+<h2>Speicherort der virtuellen Maschinen<a class="headerlink" href="#speicherort-der-virtuellen-maschinen" title="Permalink zu dieser Überschrift">¶</a></h2>
+<div class="section" id="lokale-virtuelle-maschinen-auf-einer-zusatzlichen-partition-ablegen">
+<h3>Lokale Virtuelle Maschinen auf einer zusätzlichen Partition ablegen<a class="headerlink" href="#lokale-virtuelle-maschinen-auf-einer-zusatzlichen-partition-ablegen" title="Permalink zu dieser Überschrift">¶</a></h3>
+<p>Standardmäßig werden die Dateien einer lokalen VM unter <tt class="docutils literal"><span class="pre">/var/virtual/</span></tt> abgelegt. Dieses Verzeichnis liegt im normalen Dateisystem des Linuxclients. Um diesen Speicherort auf eine extra Partition auszulagern, kann man eine zusätzliche Partition der Festplatte nach <tt class="docutils literal"><span class="pre">/var/virtual</span></tt> per fstab mounten. Eine Partition dynamisch unter <tt class="docutils literal"><span class="pre">/media</span></tt> dafür zu verwenden ist ungeeignet, da sich deren Namen und Zugriffsberechtigung je nach User ändern kann.</p>
+<p>Damit erfolgt die Synchronisation der Installation des Linuxclients deutlich schneller. Außerdem kann man die virtuellen Maschinen über das Synchronisieren der zugehörigwn Partition unabhängig von der Linuxinstallation zurücksetzen.</p>
+<p>Beispiel: Es existiert eine Partition <tt class="docutils literal"><span class="pre">/dev/sda3</span></tt> (wie z.B. bei der start.conf zum default-cloop), die mit ext4 formatiert ist. Zunächst das Verzeichnis <tt class="docutils literal"><span class="pre">/var/virtual/</span></tt> leeren bzw. den Inhalt wegsichern. Dann die Datei <tt class="docutils literal"><span class="pre">/etc/fstab</span></tt> als root editieren und letzte Zeile ergänzen:</p>
+<p>Danach als root folgendes auf der Konsole ausführen, um die Partition zu mounten und das ganze dann noch mit <tt class="docutils literal"><span class="pre">df</span></tt> zu überprüfen:</p>
+<p><tt class="docutils literal"><span class="pre">#</span> <span class="pre">mount</span> <span class="pre">-a</span></tt>
+<tt class="docutils literal"><span class="pre">#</span> <span class="pre">df</span> <span class="pre">-h</span></tt></p>
+<p>Nun ggf. die weggesicherten Dateien aus wieder nach <tt class="docutils literal"><span class="pre">/var/virtual/</span></tt> zurückspielen und von beiden Partitionen ein Image erstellen.</p>
+</div>
+<div class="section" id="frage-wann-muss-welche-partition-geimaged-werden">
+<h3>Frage: Wann muss welche Partition geimaged werden?<a class="headerlink" href="#frage-wann-muss-welche-partition-geimaged-werden" title="Permalink zu dieser Überschrift">¶</a></h3>
+<p>Nach dem Anlegen einer neuen VM müssen beide Partitionen geimaged werden da beim Anlegen einer neuen VM diese unter <tt class="docutils literal"><span class="pre">/etc/leoclient2/machines</span></tt> registiert wird.
+Nach dem Verändern einer VM muss nur die zusätzliche VM-Partition geimaged werden.</p>
+</div>
+<div class="section" id="virtuelle-maschinen-auf-dem-server">
+<h3>Virtuelle Maschinen auf dem Server<a class="headerlink" href="#virtuelle-maschinen-auf-dem-server" title="Permalink zu dieser Überschrift">¶</a></h3>
+<p>Wird ein vom Server gemountetes share für die Basisimages und die Snapshots einer remote-VM benutzt, so ist in der Datei <tt class="docutils literal"><span class="pre">/etc/leoclient2/servers.conf</span></tt> die Variable <tt class="docutils literal"><span class="pre">SERVERDIR</span></tt> zu setzen. Mehrere SERVERDIR sind (in Zukunft, todo) möglich.
+Nach der Installation enthält die Variable <tt class="docutils literal"><span class="pre">SERVERDIR</span></tt> den voreingestellten Pfad <tt class="docutils literal"><span class="pre">SERVERDIR=/media/leoclient2-vm</span></tt>. Dieses Verzeichnis wird bei der Installation des leoclient2 angelegt.
+Alternativ kann dieser Pfad auch auf ein anderes, existierendes Verzeichnis abgeändert werden, in dem sich die Remote-virtuellen Maschinen befinden.
+Welche Quellen mit dem Verzeichnis verbunden sind, kann wiederum in der Datei <tt class="docutils literal"><span class="pre">/etc/fstab</span></tt> eingerichtet werden.</p>
+</div>
+<div class="section" id="remote-virtuelle-maschine-erzeugen">
+<h3>Remote virtuelle Maschine erzeugen<a class="headerlink" href="#remote-virtuelle-maschine-erzeugen" title="Permalink zu dieser Überschrift">¶</a></h3>
+<p>Eine lokale VM wird zur remoten VM, indem
+- ihr Datenverzeichnis auf den Server kopiert wird, z.B. das Verzeichnis <tt class="docutils literal"><span class="pre">/var/virtual/winxp</span></tt> kopieren in das Netzlaufwerk auf dem Server <tt class="docutils literal"><span class="pre">/media/leoclient2-vm</span></tt>:</p>
+<blockquote>
+<div><tt class="docutils literal"><span class="pre">#</span> <span class="pre">cp</span> <span class="pre">-R</span> <span class="pre">/var/virtual/winxp</span> <span class="pre">/media/leoclient2-vm</span></tt></div></blockquote>
+<ul class="simple">
+<li>ggf. die Variable <tt class="docutils literal"><span class="pre">SERVERDIR</span></tt> angepasst wird, falls ein anderes Share verwendet</li>
+</ul>
+<p>Prinzipiell kann die VM danach lokal gelöscht werden. Dann wird die VM vor dem Starten vom Server nach lokal synchronisiert/kopiert. Da dabei beträchtliche Datenmengen übertragen werden, sollte man das nur bei kleinen, wenig genutzen VM&#8217;s machen (z.B. einem Linux-Mysql-Server o.ä.).</p>
+</div>
+</div>
+<div class="section" id="vm-basis-erneuern">
+<h2>VM-Basis erneuern<a class="headerlink" href="#vm-basis-erneuern" title="Permalink zu dieser Überschrift">¶</a></h2>
+<p>ACHTUNG:
+Ändert man die Basis einer VM, werden alle darauf basierenden Snapshot unbrauchbar.</p>
+<p>Nach dem Aufruf des Skripts mit root-Rechten</p>
+<p><tt class="docutils literal"><span class="pre">#</span> <span class="pre">sudo</span> <span class="pre">leoclient2-base-snapshot-renew</span></tt></p>
+<p>sind einige selbsterklärende Fragen zu beantworten.</p>
+<ul class="simple">
+<li>Soll der Vorgang abgebrochen werden? (J/N)</li>
+<li>Name der virtuellen Maschine?          (VM, die erneuert werden soll)</li>
+<li>Speicherort der virtuellen Maschine?   (VM, die erneuert werden soll)</li>
+</ul>
+<p>Das Skript startet dann zunächst VirtualBox, um die Sicherungspunkte zu löschen. Die Warnung, die aufgrund fehlender Verbinungen erscheint, kann ignoriert werden. Die Ursache ist z.B. bei dem vorkonfigurierten Ubuntu von linuxmuster.net die fehlende Verbindung zu den Homes als linuxadmin.</p>
+<p>Rechts oben findet man den Button Sicherungspunkte, den man anklickt. Es öffnet sich ein Fenster mit den Sicherheitspunkten. Rechtsklick auf den Snapshot bietet Sicherungspunkt löschen an. Diesen wählen und mit Löschen bestätigen. - Oder mit dem Icon löschen.</p>
+<p>Im Anschluss die VM starten, die gewünschten Änderungen durchführen und wieder ausschalten. Beendet man VirtualBox, wird eine neue Basisfestplatte unter <tt class="docutils literal"><span class="pre">/PFAD/MASCHINENNAME/MASCHINENNAME.vdi</span></tt> erzeugt und gezippt. Darüber hinaus wird noch ein neuer Snapshot in <tt class="docutils literal"><span class="pre">/PFAD/MASCHINENNAME/snapshot-store/standard</span></tt> erzeugt und gezippt. Der Name des neuen Snapshots, <tt class="docutils literal"><span class="pre">{..neuerSnapshot..}.vdi</span></tt>, erscheint in der Konsolenausgabe. Man sollte ihn sich merken, um im Anschluss den alten Snapshot in <tt class="docutils literal"><span class="pre">/snapshot-store/standard</span></tt> zu löschen.</p>
+<p>Dazu als root auf der Konsole</p>
+<p><tt class="docutils literal"><span class="pre">#</span> <span class="pre">rm</span> <span class="pre">/PFAD/MASCHINENNAME/{..alterSnapshot..}.vdi*</span></tt></p>
+<p>eingeben.</p>
+</div>
+<div class="section" id="neuen-snapshots-erzeugen">
+<h2>Neuen Snapshots erzeugen<a class="headerlink" href="#neuen-snapshots-erzeugen" title="Permalink zu dieser Überschrift">¶</a></h2>
+<p>Nachfolgendes Script legt mit dem aktuellen Snapshot der VM einen neuen auswählbaren Snapshot an. Ohne Angabe eines Snapshot-Namens wird der standard-Snapshot neu gesetzt. Script muss mit root-Rechten gestartet werden. Man legt es am besten unter <tt class="docutils literal"><span class="pre">/usr/bin/</span></tt> ab und macht es ausführbar. Der „base-Snapshot“, d.h. die zugrundeliegende Basisfestplatte wird dabei nicht verändert. Eine veränderte Hardwarekonfiguration speichert das Script auch nicht → ggf. selbst die .vbox-Datei sichern.</p>
+<p>Vorgehensweise:
+-   Arbeiten als linuxadmin am Ubuntu-Client
+-   Bisherigen base/standard-Snapshot der VM (z.B. hier winxp1) booten
+-   Software installieren und sonstige Veränderungen abarbeiten, VM dann herunterfahren
+-   untenstehendes Script für den Standard-Snapshot aufrufen:</p>
+<p><tt class="docutils literal"><span class="pre">#</span> <span class="pre">sudo</span> <span class="pre">leoclient2-snapshot-create</span> <span class="pre">-m</span> <span class="pre">winxp1</span></tt></p>
+<p>oder für den Snapshot <tt class="docutils literal"><span class="pre">Software2015</span></tt></p>
+<p><tt class="docutils literal"><span class="pre">#</span> <span class="pre">sudo</span> <span class="pre">leoclient2-snapshot-create</span> <span class="pre">-m</span> <span class="pre">winxp1</span> <span class="pre">-s</span> <span class="pre">Software2015</span></tt></p>
+<p>Damit gibt es nun einen neuen Snapshot mit dem Namen <tt class="docutils literal"><span class="pre">Software2015</span></tt> im Auswahlmenü des Snapshotstarters.</p>
+</div>
+<div class="section" id="vm-windows-xp-tipps-und-tricks">
+<h2>VM Windows XP – Tipps und Tricks<a class="headerlink" href="#vm-windows-xp-tipps-und-tricks" title="Permalink zu dieser Überschrift">¶</a></h2>
+<p>Zur Installation in VirtulBox ein CD-Rom-Lauftwerk hinzufügen und dann darin die Installations-iso einlegen, die NTFS-Schellformatierung genügt.
+Netzlaufwerke verbinden</p>
+<p>Zunächst die Gasterweiterungen installieren, mit Hilfe der Menüleiste des VBox-Fensters bei „Geräte“. Dadurch wird auch die Maus nicht mehr gefangen und das Fenster der VM ist beliebig skalierbar.</p>
+<p>Share zu Home_auf_Server einrichten:</p>
+<ul class="simple">
+<li>Windows Explorer → Menü Extras → Netzlaufwerk verbinden</li>
+<li>einen Laufwerksbuchstabe auswählen (z.B. H:) und Ordner angeben: \vboxsrvhome</li>
+<li>ggf. Verknüpfung auf Desktop ziehen und umbenennen</li>
+</ul>
+<p>Share zu Tauschordnern und USB-Sticks einrichten:</p>
+<ul class="simple">
+<li>Windows Explorer → Menü Extras → Netzlaufwerk verbinden</li>
+<li>einen Laufwerksbuchstabe und Orner angeben: \vboxsrvmedia</li>
+<li>ggf. Verknüpfungen auf Desktop ziehen und umbenennen</li>
+</ul>
+</div>
+<div class="section" id="vm-windows-7-tipps-und-tricks">
+<h2>VM Windows 7 – Tipps und Tricks<a class="headerlink" href="#vm-windows-7-tipps-und-tricks" title="Permalink zu dieser Überschrift">¶</a></h2>
+<p>Bei der Installation bricht die 64bit Version ab, wenn nur 1 GB RAM da ist.</p>
+<p>Netzlaufwerke</p>
+<p>Share zu Home_auf_Server einrichten:
+-    Windows Explorer → Rechte Maustaste auf Netzwerk → Netzlaufwerk verbinden
+-    Laufwerksbuchstabe und Pfad nennen: \vboxsrvhome
+-    Verknüpfung auf Desktop ziehen und umbenennen</p>
+<p>Share auf USB-Sticks einrichten:
+-    Windows Explorer → Rechte Maustaste auf Netzwerk → Netzlaufwerk verbinden
+-    Laufwerksbuchstabe und Pfad nennen: \vboxsrvmedia
+-    Verknüpfung auf Desktop ziehen und umbenennen</p>
+<p>Drucker einrichten
+-    Sieh FreePDF-Webseite: <a class="reference external" href="http://freepdfxp.de/download_de.html">http://freepdfxp.de/download_de.html</a>
+-    ghosscript Installieren
+-    Free-PDF Installieren (Version 4.08 bei mir ging 4.14 NICHT(Eigener Drucker anlegen bei 32bit Windows 7)
+-    FreePDF Config starten → admin Config starten
+-    Profile neu : Profil ausdrucken anlegen
+-    Button: Für das aktuelle Profil einen eigenen Drucker anlegen
+-    Profil ausdrucken bearbeiten: FreePDF Dialog</p>
+<blockquote>
+<div><ul class="simple">
+<li>Als festen Dateinamen speichern</li>
+<li>H:ausdruck.pdf (anpassen, entsprechend /etc/leoclient2/leoclient-vm-printer2.conf)</li>
+<li>Speichern</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li>Den Drucker FreePDF als Standard Drucker anlegen</li>
+</ul>
+</div>
+<div class="section" id="vm-schrumpfen-tipps-und-tricks">
+<h2>VM schrumpfen – Tipps und Tricks<a class="headerlink" href="#vm-schrumpfen-tipps-und-tricks" title="Permalink zu dieser Überschrift">¶</a></h2>
+<p>Die virtuellen dynamischen Festplattendateien werden im Laufe des Betriebes immer größer, nie kleiner, auch wenn man Dateien löscht. Zum Verkleinern muss man vierschrittig vorgehen:</p>
+<ul class="simple">
+<li>Alles überflüssige in der VM löschen</li>
+<li>Unbenutzte Festplattenbereiche in der VM nullen</li>
+<li>Mit dem Tool VBoxManage die .vdi-Festplattendatei schrinken</li>
+<li>Die geschrinkte Festplattendatei als neuen base-Snapshot setzen</li>
+</ul>
+<p>Windows XP schrinken</p>
+<p>Vorgehensweise (am Beispiel einer virtuellen Maschine mit Namen „winxp“):</p>
+<ul class="simple">
+<li>Die leoclient-VM booten und <tt class="docutils literal"><span class="pre">sdelete</span></tt> und <tt class="docutils literal"><span class="pre">CCleaner</span></tt> in der VM installieren:
+-   download → <tt class="docutils literal"><span class="pre">sdelete</span></tt> (Microsoft-Tool), kopieren nach <tt class="docutils literal"><span class="pre">C:\Windows</span></tt>
+-   download → <tt class="docutils literal"><span class="pre">CCleaner</span></tt> von heise.de</li>
+<li>Auslagerungsdatei abschalten, reboot der VM und dann die versteckte Datei <tt class="docutils literal"><span class="pre">C:\pagefile.sys</span></tt> löschen</li>
+<li>CCleaner ausführen und alles wesentliche löschen lassen</li>
+<li>Ggf. Defragmentieren von c: (Auswirkung unklar)</li>
+<li>In der Windows Eingabeaufforderung ausführen: <tt class="docutils literal"><span class="pre">sdelete.exe</span> <span class="pre">-z</span> <span class="pre">c:</span></tt> (dauert etwas)</li>
+<li>Auslagerungsdatei wieder anschalten, Herunterfahren der VM</li>
+<li>Als linuxadmin im Terminal ausführen und den Anweisungen folgen:</li>
+</ul>
+<blockquote>
+<div><tt class="docutils literal"><span class="pre">#</span> <span class="pre">sudo</span> <span class="pre">leoclient2-base-snapshot-renew</span></tt></div></blockquote>
+<ul class="simple">
+<li>Der aktuelle Snapshot <tt class="docutils literal"><span class="pre">../Snapshots/{...}.vdi</span></tt> wird dadurch zur Basisfestplatte <tt class="docutils literal"><span class="pre">winxp.vdi</span></tt> „gemerged“ und ist danach wieder sehr kein.</li>
+<li>Als linuxadmin im Terminal ausführen um die Basisfestplatte zu schrinken:</li>
+</ul>
+<blockquote>
+<div><tt class="docutils literal"><span class="pre">#</span> <span class="pre">sudo</span> <span class="pre">VBoxManage</span> <span class="pre">modifyhd</span> <span class="pre">--compact</span> <span class="pre">/var/virtual/winxp/winxp.vdi</span></tt></div></blockquote>
+<ul class="simple">
+<li>Nun Basis nochmals neu erstellen, um die geschrinkte Festplatte zu zippen und nach <tt class="docutils literal"><span class="pre">.../snapshot-store/</span></tt> zu kopieren:</li>
+</ul>
+<blockquote>
+<div><tt class="docutils literal"><span class="pre">#</span> <span class="pre">sudo</span> <span class="pre">leoclient2-base-snapshot-renew</span></tt></div></blockquote>
+<p>Linux-VM schrinken</p>
+<p>Zuerst alles Überflüssige in der laufenden VM löschen, u.a. auch der apt-Cache. Die anschließend beste Vorgehensweise ist das Einbinden der .vdi-Festplatte in ein anderes System, z.B. in ein live-Linux-System, um das „Nullen“ durchzuführen:</p>
+<blockquote>
+<div>das Tool „zerofree“ nullt die unbenutzten Festplatteninhalte
+auch Swap-Partition nullen per dd-Befehl</div></blockquote>
+<p>Schließlich die 3 Punkte wie oben bei WinXP durchführen.
+-    Als linuxadmin im Terminal ausführen und den Anweisungen folgen:</p>
+<blockquote>
+<div><tt class="docutils literal"><span class="pre">#</span> <span class="pre">sudo</span> <span class="pre">leoclient2-base-snapshot-renew</span></tt></div></blockquote>
+<ul class="simple">
+<li>Der aktuelle Snapshot <tt class="docutils literal"><span class="pre">../Snapshots/{...}.vdi</span></tt> wird dadurch zur Basisfestplatte <tt class="docutils literal"><span class="pre">winxp.vdi</span></tt> „gemerged“ und ist danach wieder sehr kein.</li>
+<li>Als linuxadmin im Terminal ausführen um die Basisfestplatte zu schrinken:</li>
+</ul>
+<blockquote>
+<div><tt class="docutils literal"><span class="pre">#</span> <span class="pre">sudo</span> <span class="pre">VBoxManage</span> <span class="pre">modifyhd</span> <span class="pre">--compact</span> <span class="pre">/var/virtual/winxp/winxp.vdi</span></tt></div></blockquote>
+<ul class="simple">
+<li>Nun Basis nochmals neu erstellen, um die geschrinkte Festplatte zu zippen und nach <tt class="docutils literal"><span class="pre">.../snapshot-store/</span></tt> zu kopieren:</li>
+</ul>
+<blockquote>
+<div><tt class="docutils literal"><span class="pre">#</span> <span class="pre">sudo</span> <span class="pre">leoclient2-base-snapshot-renew</span></tt></div></blockquote>
+<p>Das Tool VBoxManage kann nur .vdi-Datein schrinken. Dateien vom Typ .vmdk müssen zuerst in .vdi-Datein umgewandelt werden und danach ge-shrinked werden:</p>
+<p><tt class="docutils literal"><span class="pre">#</span> <span class="pre">VBoxManage</span> <span class="pre">clonehd</span> <span class="pre">disk1.vmdk</span> <span class="pre">disk1.vdi</span> <span class="pre">--format</span> <span class="pre">vdi</span></tt></p>
+<p><tt class="docutils literal"><span class="pre">#</span> <span class="pre">VBoxManage</span> <span class="pre">modifyhd</span> <span class="pre">--compact</span> <span class="pre">disk1.vdi</span></tt></p>
+</div>
+<div class="section" id="netzwerkeinstellungen-einer-vm">
+<h2>Netzwerkeinstellungen einer VM<a class="headerlink" href="#netzwerkeinstellungen-einer-vm" title="Permalink zu dieser Überschrift">¶</a></h2>
+<p>Die Netzwerkkonfiguration der VM erfolgt durch eine Datei <tt class="docutils literal"><span class="pre">network.conf</span></tt>, die zusätzlich im Verzeichnis der VM angelegt werden muss. Fehlt diese Datei oder treten Fehler bei der Konfiguration auf, werden beim Snapshot-Start des leovirtstarters2 immer alle Netzwerkkarten deaktiviert.</p>
+<p>Möchte man eine Netzwerkkarte aktivieren, so muss im Maschinenverzeichnis der VM eine Datei &lt;MASCHINENPFAD&gt;/network.conf angelegt werden, die 5 Einträge in einer Zeile, durch Strichpunkt getrennt, enthält. Diese Konfiguration gilt dann für alle lokalen Snapshots dieser VM.
+-    hostname (Name des Linux-Clients auf dem VirtualBox installiert ist)
+-    vm-nic (1-4)
+-    mode (none|null|nat|bridged|intnet|hostonly|generic|natnetwork)
+-    macaddress
+-    devicename (eth0,eth1,…) oder (auto-unused-nic|auto-used-nic)</p>
+<p>Z.B. <tt class="docutils literal"><span class="pre">/var/virtual/winxp/network.conf</span></tt></p>
+<p>Folgendes typische Netzwereinstellungen können bisher (Version 0.5.4-1, Juli 2015) umgesetzt werden:
+-    nat - NAT auf die NIC des pädagogischen Netzes (VM kann ins Internet)
+-    bridged + auto-used-nic - Bridge auf die Karte ins pädagogische Netz
+-    bridged + auto-unused-nic - Bridge auf eine zweite Karte (nicht ins pädagogische Netz verbunden -&gt; unused)</p>
+<p>Mit Hilfe des <tt class="docutils literal"><span class="pre">hostname</span></tt> kann man z.B. auf verschiedenen Clients verschiedene MAC-Adressen in der VM für den Bridged-Modus verwenden.</p>
+<p>Es gibt insgesamt 4 Möglichkeiten eine <tt class="docutils literal"><span class="pre">network.conf</span></tt> -Datei abzulegen: zweimal lokal und zweimal im <tt class="docutils literal"><span class="pre">SERVERDIR</span></tt>. Für die Priorität der Möglichkeiten gilt folgende Reihenfolge:</p>
+<ul class="simple">
+<li>Ist auf dem Server speziell für einen Snapshot der VM eine eigene Datei <tt class="docutils literal"><span class="pre">&lt;SERVERDIR&gt;/&lt;MACHINENAME&gt;/snapshot-store/&lt;SNAPSHOT&gt;/network.conf</span></tt> vorhanden, so wird diese benutzt.</li>
+<li>Danach wird die Datei auf dem Server für die VM <tt class="docutils literal"><span class="pre">&lt;SERVERDIR&gt;/&lt;MACHINENAME&gt;/network.conf</span></tt> ausgewertet (falls vorhanden).</li>
+<li>Anschließend wird die lokale Datei für den Snapshot der VM <tt class="docutils literal"><span class="pre">&lt;lokaler</span> <span class="pre">Maschinenpfad&gt;/network.conf</span></tt> ausgewertet (falls vorhanden).</li>
+<li>Abschließend wird die lokale Datei für die VM <tt class="docutils literal"><span class="pre">&lt;lokaler</span> <span class="pre">Maschinenpfad&gt;/snapshot-store/&lt;SNAPSHOT&gt;/network.conf</span></tt> ausgewertet (fals vorhanden).</li>
+<li>Ist keine Datei <tt class="docutils literal"><span class="pre">network.conf</span></tt> vorhanden, werden alle Netzwerkkarten für die VM deaktiviert.</li>
+</ul>
+</div>
+<div class="section" id="berechtigungen-zum-starten-einer-vm-bzw-eines-snapshots">
+<h2>Berechtigungen zum Starten einer VM bzw. eines Snapshots<a class="headerlink" href="#berechtigungen-zum-starten-einer-vm-bzw-eines-snapshots" title="Permalink zu dieser Überschrift">¶</a></h2>
+<p>An welchen Rechnern (Hosts) welcher User eine VM starten darf wird in <tt class="docutils literal"><span class="pre">/PFAD/MASCHINENNAME/image.conf</span></tt> konfiguriert.</p>
+<p>Es werden USER, GROUP, HOST, ROOM gelistet, die Zugriff erhalten sollen (Positivliste). Wenn nichts konfiguriert wird, haben alle User von allen Hosts Zugriff.
+Es gibt 2 Arten des Zugriffs:</p>
+<p>USER-LEVEL Zugriff:
+Zeile mit user=user1,user2 für den Zugriff eines Users
+Zeile mit group=group1,group2 für den Zugriff eines in der primären/sekundären Gruppe group1,group2 befindlichen Users (z.B. teachers)</p>
+<p>HOST-LEVEL Zugriff:
+Zeile mit host=host1,host2 für den Zugriff eines Hosts
+Zeile mit room=raum1,raum2 für den Zugriff eines in der primären Gruppe raum1,raum2 befindlichen Hosts</p>
+<p>Um eine Maschine starten zu können, müssen BEIDE Level erfüllt sein (logische UND-Verknüpfung): Der User muss auf die VM zugreifen dürfen UND der Host muss die VM starten dürfen.
+Die Dateirechte der VM- bzw. Snapshot-Verzeichnisse müssen so eingestellt sein (z.B. Zugriff für alle), das die Konfigurierten USER, GROUP, HOST, ROOM Zugriff auf die VM/den Snapshot besitzen.</p>
+<p>Beispieldatei image.conf</p>
+<p>Hinweis: Die Berechtigung für einen einzelnen Snapshot wird nur dann korrekt ausgewertet, wenn beim HOST-LEVEL beide Optionen host und room auftauchen. Fehlt z.B. die „room“-Option ist jeder Raum und damit auch jeder Host zugelassen!</p>
+<p>Stand Version 0.5.4-1 Juli 2015: Die Gruppen- und User-Beschränkung auf VM-Ebene wird z.Z. nicht korrekt ausgelesen → &#8216;group&#8217; und &#8216;user&#8217; damit ohne Funktion</p>
+</div>
+<div class="section" id="leoclient-1-vm-s-umziehen-nach-leoclient2">
+<h2>Leoclient-1-VM&#8217;s umziehen nach Leoclient2<a class="headerlink" href="#leoclient-1-vm-s-umziehen-nach-leoclient2" title="Permalink zu dieser Überschrift">¶</a></h2>
+<p>Umzug einer bestehenden virtuellen Maschine (VM) unter <tt class="docutils literal"><span class="pre">leoclient</span></tt> Version 1 auf <tt class="docutils literal"><span class="pre">leoclient2</span></tt>.
+(Hinweis: Es kann grundsätzlich jede VM mit genau einem Snapshot integriert werden.)</p>
+<p>Zunächst erzeugt man eine neue virtuelle Maschine nach Anleitung mit <tt class="docutils literal"><span class="pre">leoclient2-init</span></tt> (mit root-Rechten).
+Die Größe der Festplatte sollte der Größe der Festplatte der vorhandenen Maschine entsprechen.
+Der hier verwendete Name <tt class="docutils literal"><span class="pre">win-umzug</span></tt> kann natürlich angepasst werden.</p>
+<p>Auf die Installation des Betriebssystems kann verzichtet und VirtualBox kann sofort wieder geschlossen werden.</p>
+<p>Dann benötigt man die virtuelle Festplatte und den Standardsnapshot der alten VM und kopiert die virtuelle Festplatte (vdi-Datei) in das Verzeichnis der neuen VM unter <tt class="docutils literal"><span class="pre">leoclient2</span></tt> (hier nach <tt class="docutils literal"><span class="pre">/var/virtual/win-umzug</span></tt>) auf die Festplatten-Datei (hier: <tt class="docutils literal"><span class="pre">win-umzug.vdi</span></tt>).
+Außerdem kopiert man den Snapshot in das Unterverzeichnis <tt class="docutils literal"><span class="pre">Snapshot</span></tt> unter Verwendung des bestehenden Dateinamens der Snapshot-Datei der neuen virtuellen Maschine (bestehende Datei ersetzen).</p>
+<p>Anschließend startet man den <tt class="docutils literal"><span class="pre">leovirtstarter2</span></tt> mit normalen Benutzerrechten über die Konsole mit <tt class="docutils literal"><span class="pre">$</span> <span class="pre">leovirtstarter2</span></tt> und wählt die neue erstellte Maschine aus. Die VM wird wie vorgefunden gestartet.</p>
+<p>Da die Zuordnung in den Konfigurationsdateien noch nicht stimmt, bricht das Starten mit einer Fehlermeldung ab.</p>
+<p>Den Hinweis aus der Fehlermeldung nimmt man zur Korrektur der Konfigurationsdatei für die neue VM (hier: <tt class="docutils literal"><span class="pre">/var/virtual/win-umzug/win-umzug.vbox</span></tt>).
+Dabei muss man in diesem Beispiel die Einträge <tt class="docutils literal"><span class="pre">{764a4d59-464c-45ea-bd58-ee5ba35c1f09}</span></tt> durch <tt class="docutils literal"><span class="pre">{a9fbe850-cb0d-45d1-a08b-619fc3457410}</span></tt> ersetzen (vgl. Fehlermeldung).
+Die entsprechenden Abschnitte für HardDisks und StorageController könnten dann wie folgt aussehen:</p>
+<p>Die Datei <tt class="docutils literal"><span class="pre">VirtualBox.xml</span></tt> muss nicht angepasst werden.</p>
+<p>Anschließend sollte die neue-alte VM über den <tt class="docutils literal"><span class="pre">leovirtstarter2</span></tt> gestartet werden können.</p>
+</div>
+<div class="section" id="alte-dateien-von-leoclient-version-1-entfernen">
+<h2>Alte Dateien von leoclient (Version 1) entfernen<a class="headerlink" href="#alte-dateien-von-leoclient-version-1-entfernen" title="Permalink zu dieser Überschrift">¶</a></h2>
+<div class="section" id="software-pakete-entfernen">
+<h3>Software-Pakete entfernen<a class="headerlink" href="#software-pakete-entfernen" title="Permalink zu dieser Überschrift">¶</a></h3>
+<p>Die Pakete des alten Leoclient müssen von Hand entfernt werden:</p>
+<p><tt class="docutils literal"><span class="pre">#</span> <span class="pre">apt-get</span> <span class="pre">purge</span> <span class="pre">leoclient-leovirtstarter-client</span> <span class="pre">leoclient-leovirtstarter-common</span></tt>
+<tt class="docutils literal"><span class="pre">#</span> <span class="pre">apt-get</span> <span class="pre">purge</span> <span class="pre">leoclient-leovirtstarter-server</span> <span class="pre">leoclient-tools</span> <span class="pre">leoclient-virtualbox</span> <span class="pre">leoclient-vm-printer</span></tt></p>
+<p>Evtl. alte Daten von leoclient (Version 1) entfernen:</p>
+<p><tt class="docutils literal"><span class="pre">#</span> <span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">/etc/leoclient</span></tt></p>
+</div>
+<div class="section" id="rechte-korrigieren">
+<h3>Rechte korrigieren<a class="headerlink" href="#rechte-korrigieren" title="Permalink zu dieser Überschrift">¶</a></h3>
+<p>Der leovirtstarter2 benötigt sudo-Rechte zur Starten der virtuellen Maschinen.
+Dies wird mit dem folgenden Paket eingerichtet:</p>
+<p><tt class="docutils literal"><span class="pre">#</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">linuxmuster-client-sudoers</span></tt></p>
+<p>Eventuell muss auch die sudoers-Datei editiert werden. Dort sollten keine Einträge zu <tt class="docutils literal"><span class="pre">linuxmuster</span></tt> mehr vorhanden sein (ggf. löschen), da diese nach <tt class="docutils literal"><span class="pre">/etc/sudoers.d/10-linuxmuster-client-sudoers</span></tt> ausgelagert sind.
+Kommando zum Starten des Editors für die sudoers-Datei:</p>
+<p><tt class="docutils literal"><span class="pre">#</span> <span class="pre">visudo</span></tt></p>
+<p>z.B.: Inhalt der Datei:</p>
+<p><tt class="docutils literal"><span class="pre">#</span></tt>
+<tt class="docutils literal"><span class="pre">#</span> <span class="pre">This</span> <span class="pre">File</span> <span class="pre">MUST</span> <span class="pre">be</span> <span class="pre">edited</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">'visudo'</span> <span class="pre">command</span> <span class="pre">as</span> <span class="pre">root.</span></tt>
+<tt class="docutils literal"><span class="pre">#</span></tt>
+<tt class="docutils literal"><span class="pre">...</span></tt>
+<tt class="docutils literal"><span class="pre">...</span></tt>
+<tt class="docutils literal"><span class="pre">%sudo</span>&nbsp;&nbsp; <span class="pre">ALL=(ALL:ALL)</span> <span class="pre">ALL</span></tt>
+<tt class="docutils literal"><span class="pre">#</span> <span class="pre">see</span> <span class="pre">sudoers(5)</span> <span class="pre">for</span> <span class="pre">more</span> <span class="pre">Information</span> <span class="pre">on</span> <span class="pre">&quot;#include&quot;</span> <span class="pre">directives.</span></tt>
+<tt class="docutils literal"><span class="pre">#includedir</span> <span class="pre">/etc/sudoers.d</span></tt></p>
+</div>
+</div>
+<div class="section" id="hintergrundinformationen">
+<h2>Hintergrundinformationen<a class="headerlink" href="#hintergrundinformationen" title="Permalink zu dieser Überschrift">¶</a></h2>
+<div class="section" id="virtuelle-maschine-erzeugen">
+<h3>Virtuelle Maschine erzeugen<a class="headerlink" href="#virtuelle-maschine-erzeugen" title="Permalink zu dieser Überschrift">¶</a></h3>
+<p>Beim Anlegen einer virtuellen Maschine mit <tt class="docutils literal"><span class="pre">leoclient2-init</span></tt> wird der Pfad zur Maschine in <tt class="docutils literal"><span class="pre">/etc/leoclient2/machines/MASCHINENNAME.conf</span></tt> gespeichert.</p>
+<p>Nach Beenden von Virtualbox werden folgende Aktionen vom Script ausgeführt:
+- Ein Snapshot wird erzeugt (in <tt class="docutils literal"><span class="pre">/PFAD/MASCHINENNAME/Snapshot/</span></tt>) und dieser als Standard-Snapshot nach <tt class="docutils literal"><span class="pre">PFAD/MASCHINENNAME/snapshot-store/standard/</span></tt> gesichert.
+- Außerdem werden die Konfigurationsdateien (compreg.dat, VirtualBox.xml, xpti.dat und MASCHINENNAME.vbox) gesichert nach <tt class="docutils literal"><span class="pre">/PFAD/MASCHINENNAME/defaults/</span></tt>.
+- Abschließend werden alle Dateirechte für den Einsatz gesetzt (z.B. <tt class="docutils literal"><span class="pre">/PFAD/MASCHINENNAME/MASCHINENNAME.vdi</span></tt> nur lesbar, da diese Datei nicht verändert werden darf)</p>
+<p>Jede VM ist vollständig in ihrem Maschinenverzeichnis gespeichert.</p>
+</div>
+<div class="section" id="serverbasierte-vm-kopieren-lokaler-cache">
+<h3>Serverbasierte VM kopieren, lokaler cache<a class="headerlink" href="#serverbasierte-vm-kopieren-lokaler-cache" title="Permalink zu dieser Überschrift">¶</a></h3>
+<p>Die auf dem Server liegenden gezippten Basisimages und Snapshots werden (falls lokal nicht vorhanden oder verändert) beim Start in den lokalen cache kopiert und dann lokal an die Stelle entpackt, wo sie genutzt werden. Der Cache hat eine maximale Größe, die in <tt class="docutils literal"><span class="pre">SERVERDIR/caches.conf</span></tt> definiert wird. Es empfielt sich dafür ein lokales Datenlaufwerk zu verwenden. Falls das nicht vorhanden ist, ein Verzeichnis auf der Partition mit den virtuellen Maschinen.</p>
+</div>
+<div class="section" id="virtuelle-maschine-starten">
+<h3>Virtuelle Maschine starten<a class="headerlink" href="#virtuelle-maschine-starten" title="Permalink zu dieser Überschrift">¶</a></h3>
+<p>VirtualBox startet mit der Umgebungsvariablen <tt class="docutils literal"><span class="pre">VBOX_USER_HOME</span></tt> (<tt class="docutils literal"><span class="pre">$</span> <span class="pre">export</span> <span class="pre">VBOX_USER_HOME=/PFAD/MASCHINENNAME</span></tt>) und mit der Einstellung für den Standardort für die VM für Virtualbox (<tt class="docutils literal"><span class="pre">$</span> <span class="pre">VBoxManage</span> <span class="pre">setproperty</span> <span class="pre">machinefolder</span> <span class="pre">/PFAD/MASCHINENNAME</span></tt>).
+Mit diesen Anpassungen und anschließendem Starten von Virtualbox (<tt class="docutils literal"><span class="pre">$</span> <span class="pre">VirtualBox</span></tt>) kann eine VM auch von Hand gestartet werden.</p>
+<p>Damit <tt class="docutils literal"><span class="pre">leovirtstarter2</span></tt> eine lokale Maschine findet, muss in <tt class="docutils literal"><span class="pre">/etc/leoclient2/machines/MASCHINENNAME.conf</span></tt> ihr Pfad eingetragen sein. (leoclient2-init erzeugt diese Datei automatisch). Der Standard-Pfad für die lokalen VM ist dabei <tt class="docutils literal"><span class="pre">/var/virtual/</span></tt> .</p>
+<p>Außer den lokal vorhandenen Maschinen wird auch in allen in <tt class="docutils literal"><span class="pre">SERVERDIR</span></tt> konfigurierten Pfaden nach Maschinen gesucht. (Der Pfad MUSS NICHT remote liegen, allerdings geht <tt class="docutils literal"><span class="pre">leovirtstarter2</span></tt> davon aus und holt diese Maschinen in gezippter Form (Netzwerk-Bandbreitenschonend) zu den lokalen Maschinen und startet Sie dort).
+Der Standard-Pfad für die remote VM ist dabei <tt class="docutils literal"><span class="pre">/media/leoclient2-vm</span></tt> .</p>
+<p>Auflisten kann man alle sichtbaren VM&#8217;s mit:
+<tt class="docutils literal"><span class="pre">$</span> <span class="pre">leovirtstarter2</span> <span class="pre">-i</span></tt>
+<tt class="docutils literal"><span class="pre">$</span> <span class="pre">leovirtstarter2</span> <span class="pre">--info</span></tt></p>
+<p>Wird mit dem <tt class="docutils literal"><span class="pre">leovirtstarter2</span></tt> ein Snapshot einer VM zum Starten ausgewählt, wird folgendes abgearbeitet:
+- Kopieren der Standard-Konfigurationsdateien aus <tt class="docutils literal"><span class="pre">/PFAD/MASCHINENNAME/defaults/</span></tt> nach <tt class="docutils literal"><span class="pre">/PFAD/MASCHINENNAME/</span></tt>
+- Anpassen folgender Angaben:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Shared Folder verbinden ins Heimatverzeichnis des angemeldeten Benutzers</li>
+<li>Netzwerkeinstellungen (verschiedene Möglichkeiten stehen zur Verfügung)</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li>Starten der Maschine</li>
+</ul>
+<p>Gibt es die Maschine auch Remote, können zusätzlich folgende Dinge erfolgen:
+- Snapshots wird gegebenenfalls vom Server in den lokalen Cache kopiert.
+- Reparatur des Basisimages, falls notwendig
+- Update der lokalen VM durch die Remote-VM, falls verschieden.
+- Der Snapshot wird aus dem Cache bzw. aus <tt class="docutils literal"><span class="pre">/PFAD/MASCHINENNAME/snapshot-store/default/</span></tt> nach <tt class="docutils literal"><span class="pre">/PFAD/MASCHINENNAME/Snapshots/{…}.vdi</span></tt> entzippt</p>
+</div>
+<div class="section" id="vm-direkt-starten">
+<h3>VM direkt starten<a class="headerlink" href="#vm-direkt-starten" title="Permalink zu dieser Überschrift">¶</a></h3>
+<p>Nachfolgendes Script startet direkt ohne Dialog eine VM. Das Script ermittelt den aktuellen Snapshot-Namen <tt class="docutils literal"><span class="pre">{…}.vdi</span></tt> aus der VBox-XML-Datei der VM. Dann wird der gezippte-Snapshot verwendet. Starten, „wie vorgefunden“ klappt nicht, wenn sich die VM im einem „gespeicherten Zustand“ befindet.
+Script unter <tt class="docutils literal"><span class="pre">/usr/bin</span></tt> ablegen und ausführbar machen. Die Rechteanpassung erfolgt mit Hilfe des <tt class="docutils literal"><span class="pre">leovirtstarter2</span></tt>. Eine Datei <tt class="docutils literal"><span class="pre">network.conf</span></tt> wird von dem Script nicht ausgewertet. Bei den Berechtigugen wird nur der Snapshot und die primäre Gruppe des Users überprüft
+Aufruf z.B.:</p>
+<p><tt class="docutils literal"><span class="pre">#</span> <span class="pre">leoclient2-directstart</span> <span class="pre">-m</span> <span class="pre">winxp</span> <span class="pre">-r</span> <span class="pre">1024</span> <span class="pre">-s</span> <span class="pre">standard</span></tt></p>
+<p>Zum bequemen Starten kann man einen Desktop-Starter anlegen, z.B. für die VM „winxp“ mit 1024 MB RAM und „standard“-Snapshot:</p>
+<p>Hinweis: Nach Anlegen dieser Datei muss diese ausführbar gesetzt werden.</p>
+</div>
+<div class="section" id="datenstruktur-einer-vm">
+<h3>Datenstruktur einer VM<a class="headerlink" href="#datenstruktur-einer-vm" title="Permalink zu dieser Überschrift">¶</a></h3>
+<p>Virtualbox-Dateien
+In der obersten Verzeichnisebene im Verzeichnis der VM verwaltet VirtualBox die aktuell verwendete Maschine:
+- Die Basisdatei ist <tt class="docutils literal"><span class="pre">MASCHINENNAME.vdi</span></tt>, sie enthält den Basis-Zustand der Festplatte und ist meist mehrere GB groß
+- Konfigurationsdateien
+- Logdateien
+- usw. ...
+- Im Unterverzeichnis <tt class="docutils literal"><span class="pre">Snapshots</span></tt> verwaltet VirtualBox den aktuell verwendeten Snapshot {*}.vdi.</p>
+<p>leoclient2-Dateien
+- <tt class="docutils literal"><span class="pre">MASCHINENNAME.conf</span></tt> beinhaltet den Pfad in dem die VM erstellt wurde. Dorthin wird sie im Fall einer remoten Maschine auch wieder entpackt (funktioniert nur in diesem Pfad)
+- <tt class="docutils literal"><span class="pre">network.conf</span></tt> ist optional. Konfiguriert die Netzwerkkarten der Virtuellen Maschine (falls keine network.conf speziell für den Snapshot exisiert)
+- <tt class="docutils literal"><span class="pre">image.conf</span></tt> ist optional.
+- Das Unterverzeichnis <tt class="docutils literal"><span class="pre">snapshot-store</span></tt> enthält in Unterverzeichnissen weitere Snapshots. (Bei einer lokalen VM ist meist nur das Verzeichnis standard vorhanden):
+- <tt class="docutils literal"><span class="pre">{*}.vdi</span></tt> ist die Snapshot-Datei.
+- <tt class="docutils literal"><span class="pre">{*}.vdi.zip</span></tt> ist die gezippte Snapshot-Datei (nur etwa 1/3 so groß wie <tt class="docutils literal"><span class="pre">{*}.vdi)</span></tt> .
+- <tt class="docutils literal"><span class="pre">filesize.vdi</span></tt> ist eine Textdatei und enthält die Größe von <tt class="docutils literal"><span class="pre">{*}.vdi</span></tt> .
+- <tt class="docutils literal"><span class="pre">filesize.vdi.zipped</span></tt> ist eine Textdatei und enthält die Größe von <tt class="docutils literal"><span class="pre">{*}.vdi.zip</span></tt> .
+- <tt class="docutils literal"><span class="pre">network.conf</span></tt> ist optional. Konfiguriert die Netzwerkkarten für diesen Snapshot.
+- Das Unterverzeichnis <tt class="docutils literal"><span class="pre">defaults</span></tt> enthält ein Backup der Konfigurationsdateien. Vor dem Start der Maschine kann mit diesen Dateien die Maschine zurückgesetzt werden (Kopieren auf eine Verzeichnisebene höher).</p>
+</div>
+<div class="section" id="ubersicht-der-scripte-befehle-zum-leoclient2">
+<h3>Übersicht der Scripte/Befehle zum leoclient2<a class="headerlink" href="#ubersicht-der-scripte-befehle-zum-leoclient2" title="Permalink zu dieser Überschrift">¶</a></h3>
+<ul class="simple">
+<li>leoclient2-init               legt eine neue lokale VM an</li>
+<li>leovirtstarter2               startet das grafische Auswahlfenster und anschließend die VM
+mit Optionen
+&#8211;info        listet alle VMs auf der Konsole auf
+&#8211;vbox        startet das grafische Auswahlfenster und VirtualBox ohne die VM zu starten
+-h            Hilfe anzeigen
+&#8211;local-snapshots     nur lokale Snapshots listen
+&#8211;ignore-virtualbox   startet den leovirtstarter auch wenn gerade VirtualBox ausgeführt wird
+&#8211;serverdir &lt;abs path&gt;        verwendet anderen Pfad statt SERVERDIR zu den remote VMs</li>
+<li>leoclient2-base-snapshot-renew                Erstellt eine neue Basisfestplatte mit dem aktuellen Snapshot der zur bisherigen Basisfestplatte ge-„merged“ wird. Der „Aktuelle Zustand“ wird somit gesichert/festgeschrieben.</li>
+<li>leoclient2-vm-move            Importiert eine VM (z.B. vom externen Speichermedium) oder verschiebt ein VM</li>
+<li>VBoxManage    mit vielen Optionen     Konsolen-Tool zum Bearbeiten von VMs</li>
+</ul>
+</div>
+<div class="section" id="entwicklungsdokumentation-des-leoclient2">
+<h3>Entwicklungsdokumentation des leoclient2<a class="headerlink" href="#entwicklungsdokumentation-des-leoclient2" title="Permalink zu dieser Überschrift">¶</a></h3>
+<p>siehe <a class="reference external" href="http://www.linuxmuster.net/wiki/entwicklung:linuxclient:leoclient2">http://www.linuxmuster.net/wiki/entwicklung:linuxclient:leoclient2</a></p>
+</div>
+<div class="section" id="fehlersuche-fehlerbehebung">
+<h3>Fehlersuche - Fehlerbehebung<a class="headerlink" href="#fehlersuche-fehlerbehebung" title="Permalink zu dieser Überschrift">¶</a></h3>
+<div class="section" id="log-datei">
+<h4>Log-Datei<a class="headerlink" href="#log-datei" title="Permalink zu dieser Überschrift">¶</a></h4>
+<p>Am Client findet man unter <tt class="docutils literal"><span class="pre">/tmp/leovirtstarter2.log</span></tt> die aktuelle log-Datei des <tt class="docutils literal"><span class="pre">leovirtstarters2</span></tt> zur Fehlersuche.</p>
+</div>
+<div class="section" id="endlosschleife-bei-leoclient2-base-snapshot-renew">
+<h4>Endlosschleife bei <tt class="docutils literal"><span class="pre">leoclient2-base-snapshot-renew</span></tt><a class="headerlink" href="#endlosschleife-bei-leoclient2-base-snapshot-renew" title="Permalink zu dieser Überschrift">¶</a></h4>
+<p>Problem: Das Script <tt class="docutils literal"><span class="pre">leoclient2-base-snapshot-renew</span></tt> läuft in eine Endlosschleife, wenn im Verzeichnis <tt class="docutils literal"><span class="pre">&lt;lokaler</span> <span class="pre">Maschinenpfad&gt;/Snapshots/</span></tt> eine verweiste Snapshot-Datei übrig bleibt.
+Lösung: Die verweiste Snapshot-Datei manuell löschen, dann <tt class="docutils literal"><span class="pre">leoclient2-base-snapshot-renew</span></tt> nochmals ausführen.</p>
+</div>
+<div class="section" id="snapshot-passt-nicht-zur-basisfestplatte">
+<h4>Snapshot passt nicht zur Basisfestplatte<a class="headerlink" href="#snapshot-passt-nicht-zur-basisfestplatte" title="Permalink zu dieser Überschrift">¶</a></h4>
+<p>Nach einem <tt class="docutils literal"><span class="pre">leoclient2-base-snapshot-renew</span></tt> werden bisherige Snapshots unbrauchbar und sollten auch nicht mehr verwendet werden. Der Snapshotname wird dabei auch geändert. In der Datei <tt class="docutils literal"><span class="pre">&lt;Maschinennamen&gt;.vbox</span></tt> wird der aktuell gültige <tt class="docutils literal"><span class="pre">Snapshotnamen</span> <span class="pre">{…}.vdi</span></tt> aufgeführt.
+Problem: Unter <tt class="docutils literal"><span class="pre">&lt;Maschinenpfad&gt;/Snapshots</span></tt> liegt ein alter Snapshot, der Name passt nicht. VirtualBox startet deshalb nicht.
+Lösung: Den Snapshot in <tt class="docutils literal"><span class="pre">&lt;Maschinenpfad&gt;/Snapshots</span></tt> manuell löschen und dann einen Snapshot mit dem aktuellen Namen aus <tt class="docutils literal"><span class="pre">&lt;Maschinenpfad&gt;/snapshot-store/standard/</span></tt> in das Verzeichnis <tt class="docutils literal"><span class="pre">&lt;Maschinenpfad&gt;/Snapshots</span></tt> kopieren.</p>
+</div>
+<div class="section" id="network-conf-fur-lokalen-snapshot-bereitstellen">
+<h4><tt class="docutils literal"><span class="pre">network.conf</span></tt> für lokalen Snapshot bereitstellen<a class="headerlink" href="#network-conf-fur-lokalen-snapshot-bereitstellen" title="Permalink zu dieser Überschrift">¶</a></h4>
+<p>Problem: Aktuell wertet der <tt class="docutils literal"><span class="pre">leovirtstarter2</span></tt> eine <tt class="docutils literal"><span class="pre">network.conf</span></tt> im Verzeichnis des lokalen Snapshots nicht aus. (leoclient2-Version: 0.5.4-1)
+Lösung: Wenn man jedoch eine <tt class="docutils literal"><span class="pre">network.conf</span></tt> im remote-Pfad des Snapshots ablegt, wird diese ausgewertet. Weitere Dateien müssen im remote-Pfad nicht vorhanden sein. Der remote-Pfad muss nicht zwingend remote liegen!
+Z.B. mit den voreingestellten Standard-Pfaden des Snapshots „physik“:</p>
+<blockquote>
+<div>lokaler Snapshot-Pfad: <tt class="docutils literal"><span class="pre">/var/virtual/winxp1/snapshot-store/physik/...</span></tt>
+ergibt <tt class="docutils literal"><span class="pre">network.conf</span></tt>-Pfad: <tt class="docutils literal"><span class="pre">/media/leoclient2-vm/winxp1/snapshot-store/physik/network.conf</span></tt></div></blockquote>
+</div>
+<div class="section" id="leovirtstarter2-zeigt-startet-wie-vorgefunden-nicht">
+<h4><tt class="docutils literal"><span class="pre">leovirtstarter2</span></tt> zeigt/startet &#8220;wie vorgefunden&#8221; nicht<a class="headerlink" href="#leovirtstarter2-zeigt-startet-wie-vorgefunden-nicht" title="Permalink zu dieser Überschrift">¶</a></h4>
+<p>Problem: Im Auswahlmenü wird „wie vorgefunden“ nicht angezeigt oder kann nicht gestartet werden.
+Ursache 1: Die VM wurde nicht ausgeschaltet sondern befindet sich in einem gespeicherten Zustand. Im Verzeichnis <tt class="docutils literal"><span class="pre">.../Snapshots</span></tt> befindet sich eine <tt class="docutils literal"><span class="pre">*.sav</span></tt>-Datei.
+Lösung 1: Den „Standard“-Snapshot starten oder die Maschine direkt mit VirtualBox starten und dann herunterfahren.
+Ursache 2: Im Verzeichnis <tt class="docutils literal"><span class="pre">Maschinenpfad&gt;/Snapshots/</span></tt> befinden sich überflüssige Dateien.
+Lösung 2: Alle Dateien löschen bis auf den aktuellen Snapshot: <tt class="docutils literal"><span class="pre">{...}.vdi</span></tt>. Der Name/die UUID des aktuellen Snapshots kann man (falls unklar) aus der <tt class="docutils literal"><span class="pre">&lt;Maschinenname&gt;.vbox</span></tt>-Datei ermitteln.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="leo2-vmstarten.html" class="btn btn-neutral" title="Virtuelle Maschinen starten" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, linuxmuster.net.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
