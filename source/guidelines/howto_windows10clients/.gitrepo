@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:linuxmuster-docs/howto_windows10clients.git
+	branch = master
+	commit = eb5e0d35d089955e543235e1506dc2e9bae7da03
+	parent = 23a96f95fb7972fb5c33261cd79966d299fc298e
+	cmdver = 0.3.0
