@@ -6,6 +6,6 @@
 [subrepo]
 	remote = git@github.com:linuxmuster-docs/howto_printer.git
 	branch = master
-	commit = 54d196d045aadd289a6f005ee072349273d305f4
-	parent = 828b06d16cf7c0fdaa182a2f61b014a77fd54cbb
+	commit = d6cf62e01e4140d4c6287d55e3f44245a2fcf56d
+	parent = 7f5543a00f8031f8c5d53b05a155bc63c570ca09
 	cmdver = 0.3.0
