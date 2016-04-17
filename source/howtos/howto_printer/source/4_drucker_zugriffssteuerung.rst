@@ -8,7 +8,8 @@ Melden Sie sich dazu als Benutzer **administrator** auf der *Schulkonsole* ein u
 Diese erreichen Sie entweder über den Menüpunkt Drucker in der Schulkonsole, oder Sie geben in der Adresszeile der Browser nachstehende Adresse ein:
 
 .. code-block:: bash
-   (https://server:242/schulkonsole/printers). 
+
+   https://server:242/schulkonsole/printers
 
 Sie sehen eine Liste mit den in Ihrem Schulnetz verfügbaren Netzwerkdruckern. Sind einem Drucker Räume oder Rechner zugeordnet, sind diese hier ebenfalls aufgelistet. Ist ein Drucker weder einem Raum noch einem Rechner zugeordnet, ist er ohne Einschränkung netzweit verfügbar.
 
