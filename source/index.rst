@@ -8,7 +8,7 @@ Mit dieser Dokumentation wollen wir Ihnen alle nötigen Informationen zu unserem
  (LEITFÄDEN)
 \.. das System an Ihre Erfordernisse anzupassen.
  (HOWTOs)
-\.. Ihr System an ihre Wünsche anzupassen.
+\.. Ihr System an Ihre Wünsche anzupassen.
  (ADDONs)
 \.. Ihre Nutzer in das System einzuweisen.
  (HANDBÜCHER)
@@ -35,9 +35,9 @@ Inhalt:
 
    Da es unser Bestreben ist, Ihnen immer das beste System zur
    Verfügung zu stellen, möchten wir Sie um etwas bitten: Verwenden
-   Sie immer die neueste stabile Versionen von linuxmuster.net!
+   Sie immer die neueste stabile Version von linuxmuster.net!
 
-   Wir sind uns bewusst das ein Version-Upgrade nicht mal so gemacht werden kann/soll und aus diesem Grunde lassen wir Sie dabei auch nicht alleine. Neben einer detaillierten Anleitungen in den Howtos steht unsere Community und unser Telefon-Support Ihnen zur Seite.
+   Wir sind uns bewusst das ein Versionsupgrade nicht mal so gemacht werden kann/soll und aus diesem Grunde lassen wir Sie dabei auch nicht alleine. Neben einer detaillierten Anleitungen in den Howtos steht unsere Community und unser Telefon-Support Ihnen zur Seite.
 
    Das ist unser Versprechen, linuxmuster.net(t) halt!
 
