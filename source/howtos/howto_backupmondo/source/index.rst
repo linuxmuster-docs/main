@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-HOWTO Backup und Restore mit Mondo
-======================================
+Backup und Restore mit Mondo durchführen
+========================================
 
 Inhaltsverzeichnis:
 
@@ -22,8 +22,8 @@ Inhaltsverzeichnis:
 	restore_nfs
 	mindi
 
-Index 
-==================
+Index
+-----
 
 * :ref:`genindex`
 * :ref:`modindex`
