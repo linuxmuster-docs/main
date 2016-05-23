@@ -1,5 +1,5 @@
-Druckereinrichtung 
-==================
+Drucker auf dem Server und Clients einrichten
+=============================================
 
 .. toctree::
    :maxdepth: 1
