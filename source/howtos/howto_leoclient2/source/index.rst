@@ -3,12 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-linuxmuster.net leoclient2
-======================================
+Leoclient 2 - Windows im Linuxclient
+====================================
 
 Leoclient2 bietet die Möglichkeit auf einem Linuxclient verschiedene Virtuelle Maschinen, beispielsweise mit Windows-Betriebssystem, einzurichten und zu starten.
 
-Contents:
+Inhalt:
 
 .. toctree::
    :maxdepth: 2
@@ -21,7 +21,7 @@ Contents:
 
 
 Index 
-==================
+-----
 
 * :ref:`genindex`
 * :ref:`modindex`
