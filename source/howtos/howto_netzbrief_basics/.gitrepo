@@ -6,6 +6,6 @@
 [subrepo]
 	remote = git@github.com:linuxmuster-docs/howto_netzbrief_basics.git
 	branch = master
-	commit = 5bd2140db4a224284166f4e16bc162106fe5572b
-	parent = 01c7766c791e4c55229e96964bd7479839d40a30
+	commit = f2e354f80da1828468c4c8942d6c3cac6e7eca66
+	parent = 7fae1476302b6be1f1d89102c291c82e7ead1440
 	cmdver = 0.3.0
