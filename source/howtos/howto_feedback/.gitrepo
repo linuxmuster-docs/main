@@ -6,6 +6,6 @@
 [subrepo]
 	remote = git@github.com:linuxmuster-docs/howto_feedback.git
 	branch = master
-	commit = 291e21a4baa4f8e674413ec3a929648ee442762f
-	parent = 3668b07c9754a193fc5503f9858dd587136d3a33
+	commit = 68c78052c9d4c07e6576398ea7f5de1c7d7cc6ea
+	parent = c0d34e1374a670138bd4f53ad948b8a164490d24
 	cmdver = 0.3.0
