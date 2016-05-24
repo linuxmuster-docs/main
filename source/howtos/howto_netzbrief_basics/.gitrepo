@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:linuxmuster-docs/howto_netzbrief_basics.git
+	branch = master
+	commit = 5bd2140db4a224284166f4e16bc162106fe5572b
+	parent = 01c7766c791e4c55229e96964bd7479839d40a30
+	cmdver = 0.3.0

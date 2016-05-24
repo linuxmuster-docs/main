@@ -1,0 +1,66 @@
+config-file-header
+SG30-10L3
+v1.3.5.58 / R750_NIK_1_35_647_358
+CLI v1.0
+set system mode router 
+
+file SSD indicator encrypted
+@
+ssd-control-start 
+ssd config 
+ssd file passphrase control unrestricted 
+no ssd file integrity control 
+ssd-control-end cb0a3fdb1f3a1af4e4430033719968c0 
+!
+vlan database
+vlan 16-18 
+exit
+voice vlan oui-table add 0001e3 Siemens_AG_phone________
+voice vlan oui-table add 00036b Cisco_phone_____________
+voice vlan oui-table add 00096e Avaya___________________
+voice vlan oui-table add 000fe2 H3C_Aolynk______________
+voice vlan oui-table add 0060b9 Philips_and_NEC_AG_phone
+voice vlan oui-table add 00d01e Pingtel_phone___________
+voice vlan oui-table add 00e075 Polycom/Veritel_phone___
+voice vlan oui-table add 00e0bb 3Com_phone______________
+ip dhcp relay address 10.16.1.1
+ip dhcp relay enable
+bonjour interface range vlan 1
+ip access-list extended LEHRKRAEFTE
+permit ip any 10.16.1.0 0.0.0.255
+deny ip any 10.0.0.0 0.255.255.255
+exit
+ip access-list extended KLASSENRAEUME
+permit ip any 10.16.1.0 0.0.0.255
+deny ip any 10.0.0.0 0.255.255.255
+exit
+hostname SG30-10L3
+no passwords complexity enable 
+username cisco password encrypted 35be2368d129d585ed95aec72ad3d47e2a00d100 privilege 15 
+!
+interface vlan 1
+ no ip address dhcp 
+!
+interface vlan 16
+ name Servernetz 
+ ip address 10.16.1.253 255.255.255.0 
+ ip dhcp relay enable 
+!
+interface vlan 17
+ name Lehrernetz 
+ ip address 10.17.0.254 255.255.0.0 
+ ip dhcp relay enable 
+ service-acl input LEHRKRAEFTE default-action permit-any 
+!
+interface vlan 18
+ name Schuelernetz 
+ ip address 10.18.0.254 255.255.0.0 
+ ip dhcp relay enable 
+ service-acl input KLASSENRAEUME default-action permit-any 
+!
+interface gigabitethernet1
+ switchport trunk native vlan 16 
+!
+exit
+ip helper-address 10.16.1.253 255.255.255.255 9 
+ip default-gateway 10.16.1.254 
