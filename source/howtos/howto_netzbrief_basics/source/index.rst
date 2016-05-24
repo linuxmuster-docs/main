@@ -22,7 +22,7 @@ Vorgaben des Netzbriefs erfüllt sind.
 Eine Erweiterug um weitere Subnetzbereiche, beispielsweise Klassenraumweise, 
 ist später ohne Schwierigkeiten möglich. 
 
-Contents:
+Inhalt:
 
 .. toctree::
    :maxdepth: 2
@@ -36,7 +36,7 @@ Contents:
 
 
 Index 
-==================
+-----
 
 * :ref:`genindex`
 * :ref:`search`
