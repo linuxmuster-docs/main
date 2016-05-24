@@ -6,6 +6,6 @@
 [subrepo]
 	remote = git@github.com:linuxmuster-docs/howto_leoclient2.git
 	branch = master
-	commit = 6521ef3512a21fc465e2a7b53bec9fd3f5b84ecf
-	parent = 3d2e63219db719fc8e8ecf8d56c51fdd56c3f0f9
+	commit = ac6ec5cb04f6e29e6ca5cfbb52a455c4a7164c11
+	parent = 86c9f26948b7fbe3c526d3887f2c8d3f2f281a60
 	cmdver = 0.3.0
