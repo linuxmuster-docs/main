@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 linuxmuster.net Community Feedback
-======================================
+==================================
 
 linuxmuster-community-feedback ist ein Paket zur Erhebung fein konfigurierbarer 
 Statistiken zum Einsatz von linuxmuster.net.
@@ -25,7 +25,7 @@ oder Einsatzort an das Projekt übermittelt werden.
       
 
 
-Contents:
+Inhalt:
 
 .. toctree::
    :maxdepth: 2
@@ -38,8 +38,8 @@ Contents:
 
 
 
-Index 
-==================
+Index
+-----
 
 * :ref:`genindex`
 * :ref:`search`
