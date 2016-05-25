@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 MoniPi für linuxmuster.net
-======================================
+==========================
 
 Das Projekt "MoniPi" stellt ein vorbereitetes Image für den Raspberry Pi 2/Raspberry Pi 3 zur Verfügung, 
 mit dem ein kleines Netzwerk überwacht werden kann. 
@@ -29,7 +29,7 @@ Inhalt:
 
 
 Index 
-==================
+-----
 
 * :ref:`genindex`
 * :ref:`search`

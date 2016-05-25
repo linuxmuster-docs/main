@@ -6,6 +6,6 @@
 [subrepo]
 	remote = git@github.com:linuxmuster-docs/addon_monipi.git
 	branch = master
-	commit = a1e3dba87967e78f87af2af2838e30ef8ca45336
-	parent = a77e2223cc99373239cc76a6f45e0c5a632bb5c8
+	commit = 5fc2047d06525a2322ea1c006ac2eff4351be96e
+	parent = 1bcb6abcfbb9f9ad177e53d1a600dd2507aec5b6
 	cmdver = 0.3.0
