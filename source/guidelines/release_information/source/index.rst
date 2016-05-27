@@ -3,31 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-linuxmuster.net FIXME Titel
-======================================
+Was ist neu in 6.2?
+===================
 
-Das ist die Hauptdatei, die enthält zunächst nur das Inhaltsverzeichnis. 
-Jedes Kapitel der Dokumentation kommt in eine eigene Datei, die hier 
-eingebunden wird.
+.. todo::
 
-Inhalt:
-
-.. toctree::
-   :maxdepth: 2
-
-   ueberschriften
-   links
-   listen 
-   blockquote
-   bilder
-   quelltext
-   tabellen
-
-
-
-Index 
------
-
-* :ref:`genindex`
-* :ref:`search`
-
+   Dieses Kapitel schreiben, siehe
+   http://www.linuxmuster.net/flyspray/task/592?project=3
