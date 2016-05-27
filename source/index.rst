@@ -4,27 +4,26 @@ Herzlich Willkommen und Glückwunsch an ihrem Interesse an linuxmuster.net.
 
 Mit dieser Dokumentation wollen wir Ihnen alle nötigen Informationen zu unserem System an die Hand geben, die es Ihnen ermöglichen ..
 
-\.. das System zu installieren.
- (LEITFÄDEN)
-\.. das System an Ihre Erfordernisse anzupassen.
- (HOWTOs)
-\.. Ihr System an Ihre Wünsche anzupassen.
- (ADDONs)
-\.. Ihre Nutzer in das System einzuweisen.
- (HANDBÜCHER)
+`LEITFÄDEN <guidelines/index.html>`__
+ \.. das System zu installieren.
+`HOWTOs <howtos/index.html>`__
+ \.. das System an Ihre Erfordernisse anzupassen.
+`ADDONs <addons/index.html>`__
+ \.. Ihr System an Ihre Wünsche anzupassen.
+`HANDBÜCHER <manuals/index.html>`__
+ \.. Ihre Nutzer in das System einzuweisen.
 
-Inhalt:
--------
 
 .. toctree::
    :maxdepth: 1
-
+   :hidden:
+	      
    guidelines/index
    howtos/index
    addons/index
    manuals/index
 
-.. admonition:: Etwas in eigener Sache (in Ihrer und Unserer)
+.. admonition:: Etwas in eigener Sache (in Ihrer und unserer)
 
    Diese Dokumentation bezieht sich immer auf die aktuelle stabile
    Version unseres Systems.
