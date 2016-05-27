@@ -1,6 +1,9 @@
 LEITFÄDEN
 =========
 
+`Was ist neu in Version 6.2? <release_information/source/index.html>`__
+  Versionsinformationen zum aktuellen Release
+
 `Installationsleitfaden XEN <howto_installationsleitfaden/source/index.html>`__
   Wollen Sie schnell ein funktionstüchtiges System Ihr eigen nennen,
   dann würden wir Ihnen das virtualisierte System mit XEN vorschlagen.
@@ -22,6 +25,7 @@ Danach können Sie Ihr neues System an Ihre Gegebenheiten anpassen. Anleitung da
    :maxdepth: 1 
    :hidden:
    
+   release_information/source/index
    howto_installationsleitfaden/source/index
    howto_installation_klassisch/source/index
    howto_linuxclients/source/index
