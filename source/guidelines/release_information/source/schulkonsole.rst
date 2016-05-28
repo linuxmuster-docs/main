@@ -10,8 +10,27 @@ die Schulkonsole auf den Clients im Browser Javascript zu aktivieren.
 Netzwerkbetreuersicht
 ---------------------
 
+Reparaturen
+^^^^^^^^^^^
+Es gibt einige Reparaturmöglichkeiten für die Home-Verzeichnisse und andere wichtige Systemverzeichnisse. Diese
+finden sich im Menü **Reparaturen** (diese Seiten rufen *sophomorix-repair* auf).
+
+Einstellungen zu Reparaturen
+""""""""""""""""""""""""""""
+Es können Programmnamen mit deren Konfigurationsverzeichnissen verknüpft werden. Diese können dann auch für
+Reparaturen herangezogen werden.
+
 Benutzerverwaltung
 ^^^^^^^^^^^^^^^^^^
+
+Passwörter
+^^^^^^^^^^
+Es gibt unter *Einstellungen -> Schulkonsole* die Möglichkeit, die Passwortgüte überprüfen zu lassen. Damit werden zu einfache Passwörter der Benutzer abgelehnt.
+
+Einstellungen
+"""""""""""""
+Auf der Einstellungsseite zur Benutzerverwaltung gibt es viele weitere Einstellmöglichkeiten. Die wichtigste ist
+die Kodierung für die jeweiligen Dateien.
 
 Historie
 """"""""
@@ -84,6 +103,10 @@ Im Linbo-Menü gibt es einen neuen Menüpunkt *Linbo-Remote*. Dort können neue 
 Lehrersicht
 -----------
 
+Reparaturen
+^^^^^^^^^^^
+Auf den Seiten Klassen und Projekte gibt es jeweils den Unterpunkt zur Reparatur der *Persönlichen Ordner* der jeweiligen Mitglieder.
+
 WLAN-Zugriff steuern
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -111,6 +134,14 @@ Wegen des Austeilens, Einsammelns, Bereitstellens, sind neue Schülermenüs (Mei
 
 Alle Benutzer
 -------------
+
+Passwörter
+^^^^^^^^^^
+Hat der Netzwerkbetreuer die Passwortüberprüfung aktiviert, so werden neue Passwörter auf ihre Qualität überprüft.
+
+Reparaturen
+^^^^^^^^^^^
+Auf der Startseite befindet sich ein Punkt zur Reparatur des eigenen *Persönlichen Ordners*.
 
 Mailweiterleitung
 ^^^^^^^^^^^^^^^^^
@@ -141,8 +172,14 @@ Fehlerdialoge werden jetzt modal und zentriert und damit auffälliger dargestell
 
 Statusmeldungen
 ^^^^^^^^^^^^^^^
+
+.. image:: media/schulkonsole_statusmsg.png
+
 Statusmeldungen erscheinen auffälliger unterhalb des Menüs.
 
 Schwebende Hilfe
 ^^^^^^^^^^^^^^^^
+
+.. image:: media/schulkonsole_help.png
+
 Die schwebende Hilfe blendet sich zeitgesteuert aus und es kommt dadurch nicht mehr zur Verdeckung von wichtigen Seitenelementen.
