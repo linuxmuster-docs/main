@@ -12,6 +12,7 @@ backupdevice
 		
 		backupdevice=/dev/sdb1
 		backupdevice=10.16.1.10:/home/nfs
+		backupdevice="/dev/disk/by-uuid/ccfc9531-3486-4af0-9317-8f895f5a1c97"
 
 	.. note::
 		**Wichtiger Hinweis**
