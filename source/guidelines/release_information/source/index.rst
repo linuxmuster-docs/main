@@ -8,5 +8,7 @@ Was ist neu in 6.2?
 
 .. todo::
 
+   schulkonsole
+
    Dieses Kapitel schreiben, siehe
    http://www.linuxmuster.net/flyspray/task/592?project=3
