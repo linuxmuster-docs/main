@@ -6,9 +6,13 @@
 Was ist neu in 6.2?
 ===================
 
-.. todo::
+.. toctree::
+   :maxdepth: 2
 
    schulkonsole
+
+.. todo::
+
 
    Dieses Kapitel schreiben, siehe
    http://www.linuxmuster.net/flyspray/task/592?project=3
