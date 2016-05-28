@@ -92,7 +92,7 @@ Es gibt mehrere Erweiterungen der start.conf-Datei, die zum Teil mit der Umstell
 grub2 und der damit einhergehenden Unterstützung von UEFI-Rechnern zu tun hat.
 
 - **efi** ist ein neuer Partitionstyp, der bei UEFI-Rechnern zum Starten benötigt wird.
-- **Systemtyp** ist ein neues Feld, das den Rechnertyp (bios, bios64, efi, efi64) angibt.
+- **Systemtyp** ist ein neues Feld, das den Rechnertyp (bios, bios64, efi32, efi64) angibt.
 - **Label** ist ein neues Feld, in welchem man für jede Partition ein Label eintragen kann. Dieses kann
   z.B. zum mounten verwendet werden.
 
