@@ -14,6 +14,7 @@ Inhaltsverzeichnis:
 	uebersicht
 	installation
 	konfiguration
+	konfiguration_schulkonsole
 	backup
 	restore
 	restore_full
