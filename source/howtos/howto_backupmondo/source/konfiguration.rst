@@ -1,7 +1,13 @@
+.. _howto_backupmondo_konfiguration:
+
 Konfiguration
 -------------
 
-Die Konfiguration des Backupverhaltens kann direkt in der Datei ``/etc/linuxmuster/backup.conf`` geschehen. Die Parameter im Einzelnen:
+Die Konfiguration des Backupverhaltens kann direkt in der Datei ``/etc/linuxmuster/backup.conf`` geschehen. 
+
+Alternativ kann die Konfiguration über die Schulkonsole erfolgen, siehe  :ref:`howto_backupmondo_konfiguration_schulkonsole` beschrieben.
+
+Die Parameter im Einzelnen:
 
 backupdevice
 	Festplattenpartition oder NFS-Share, auf das gesichert werden soll, wird nach ``/media/backup`` gemountet. 
