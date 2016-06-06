@@ -7,6 +7,19 @@ es einige Neuerungen. Schließlich ist die Programmoberfläche insgesamt in Teil
 Für den letzten Punkt wurde Javascript und jQuery verwendet. Daher ist es jetzt erforderlich, zumindest für
 die Schulkonsole auf den Clients im Browser Javascript zu aktivieren.
 
+Allgemein
+---------
+Das Paket **linuxmuster-schulkonsole-template** ist jetzt integriert und damit in Zukunft überflüssig. Es sollte deinstalliert 
+werden.
+
+Das Design vieler Tabellen wurde zur besseren Übersicht um **Zeilennummern** erweitert.
+
+Die Rechtestruktur ist konfigurierbar geworden. Damit ist es z.B. möglich, Lehrern das Recht für die Abschaltung des Webfilters zu 
+entziehen. Genaueres dazu ist zu finden unter `Technische Dokumentation der Schulkonsole <http://www.linuxmuster.net/wiki/entwicklung:schulkonsole:sk_neue_plugin_seite>`_.
+Dort ist auch erklärt, wie die Menüstruktur durch z.B. Ausblendung oder Verschiebung von Menüpunkten lokalen Gegebenheiten angepasst werden kann.
+
+Die Kodierung ist intern jetzt vollständig auf **utf8** umgestellt.
+
 Netzwerkbetreuersicht
 ---------------------
 
@@ -32,6 +45,11 @@ Einstellungen
 Auf der Einstellungsseite zur Benutzerverwaltung gibt es viele weitere Einstellmöglichkeiten. Die wichtigste ist
 die Kodierung für die jeweiligen Dateien.
 
+Private Mailadresse im LDAP
+```````````````````````````
+Private Mailadressen können im LDAP-Attribut **mail** verwaltet werden. Dazu muss der Administrator die entsprechende Funktion wie in
+*TODO: howto_mailldap* beschrieben, freischalten.
+
 Historie
 """"""""
 Unter *Benutzer* gibt es den neuen Menüpunkt **Historie**, über den man gezielt Passwortlisten zu einem bestimmten Zeitpunkt angelegter Benutzer herunterladen kann.
@@ -45,7 +63,7 @@ Plugins
 ^^^^^^^
 
 Es ist möglich, Plugins für die Schulkonsole zu schreiben. Das Schreiben von Plugins ist auf der Seite
-https://www.linuxmuster.net/wiki/entwicklung:schulkonsole:sk_neue_plugin_seite dokumentiert.
+`Technische Doku der Schulkonsole <https://www.linuxmuster.net/wiki/entwicklung:schulkonsole:sk_neue_plugin_seite>`_ dokumentiert.
 
 Momentan gibt des 2 Plugins.
 
@@ -74,9 +92,10 @@ Rechnerverwaltung
 
 Hosts
 """""
-Die **hosts**-Tabelle kann nach verschiedenen Spalten aufsteigend bzw. absteigend sortiert werden. Damit ist es einfacher, z.B. freie IP-Adressen eines Raums herauszufinden.
-
-Bei einem *import_workstations*, also der Übernahme der Änderungen in das System wird die log-Datei angezeigt.
+- Die **hosts**-Tabelle kann nach verschiedenen Spalten aufsteigend bzw. absteigend sortiert werden. Damit ist es einfacher, z.B. freie IP-Adressen eines Raums herauszufinden.
+- Die Datei **/etc/linuxmuster/workstations** kann auch Kommentare enthalten. Wird vor den Raumnamen ein Kommentarzeichen eingefügt, bleibt die Zeile erhalten wird aber deaktiviert. 
+  Wird das Kommentarzeichen wieder entfernt, so wird die Zeile wieder aktiv.
+- Bei einem *import_workstations*, also der Übernahme der Änderungen in das System wird die log-Datei angezeigt.
 
 grub.cfg-Dateien
 """"""""""""""""
@@ -149,8 +168,8 @@ Unter *Horde* kann man eine Mailweiterleitungsadresse einrichten. Das ist umstä
 
 Alternative Mailadresse
 ^^^^^^^^^^^^^^^^^^^^^^^
-Abhängig von den Einstellungen für Mail (siehe mail-ldap-howto) kann auf der Startseite jeder Benutzer eine
-vom Standard abweichende Mailadresse einrichten.
+Abhängig von den Einstellungen für Mail (siehe TODO howto_mailldap) kann auf der Startseite jeder Benutzer eine
+vom Standard abweichende Mailadresse einrichten, die im LDAP-Attribut **mail** gespeichert wird.
 
 
 Oberfläche allgemein
