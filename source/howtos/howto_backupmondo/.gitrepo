@@ -6,6 +6,6 @@
 [subrepo]
 	remote = git@github.com:linuxmuster-docs/howto_backupmondo.git
 	branch = master
-	commit = 09038c0892d50edeb0730702e6bf231a59323c17
-	parent = a852a447b401058c4439a6586434d69861c5bdb5
+	commit = b3d6a2c014b659e64f693dcfafcfdc1a195ef7f7
+	parent = f5b9678f8783abaabf29b1ffa38626a20890b769
 	cmdver = 0.3.0
