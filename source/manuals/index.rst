@@ -1,5 +1,5 @@
 HANDBÜCHER
-======================================
+==========
 In diesem Abschnitt der Dokumentation finden Sie die Handbücher die den Umgang mit linuxmuster.net im Schulalltag erklären.
 
 Inhalt:

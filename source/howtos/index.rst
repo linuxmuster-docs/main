@@ -1,6 +1,9 @@
-HOWTOs
-======
-In diesem Abschnitt der Dokumentation finden Sie alle Howtos, die es ermöglichen Ihre linuxmuster.net Installation an Ihre Bedürfnisse anzupassen.
+Weitere HowTos
+==============
+
+In diesem Abschnitt der Dokumentation finden Sie weitere
+Bedienungsanleitungen und Howtos, die es ermöglichen Ihre
+linuxmuster.net Installation an Ihre Bedürfnisse anzupassen.
 
 Howtos, sortiert nach Relevanz:
 
@@ -8,7 +11,6 @@ Howtos, sortiert nach Relevanz:
    :maxdepth: 1 
 
    howto_upgrade/source/index
-   howto_printer/source/index
    howto_netzbrief_basics/source/index
    howto_leoclient2/source/index
    howto_backupmondo/source/index

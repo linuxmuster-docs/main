@@ -1,27 +1,15 @@
-linuxmuster.net DOKUMENTATION
-=============================
+===============================
+ linuxmuster.net DOKUMENTATION
+===============================
 Herzlich Willkommen und Glückwunsch an ihrem Interesse an linuxmuster.net.
-
-Mit dieser Dokumentation wollen wir Ihnen alle nötigen Informationen zu unserem System an die Hand geben, die es Ihnen ermöglichen ..
-
-`LEITFÄDEN <guidelines/index.html>`__
- \.. das System zu installieren.
-`HOWTOs <howtos/index.html>`__
- \.. das System an Ihre Erfordernisse anzupassen.
-`ADDONs <addons/index.html>`__
- \.. Ihr System an Ihre Wünsche anzupassen.
-`HANDBÜCHER <manuals/index.html>`__
- \.. Ihre Nutzer in das System einzuweisen.
-
 
 .. toctree::
    :maxdepth: 1
-   :hidden:
-	      
-   guidelines/index
+
+   advisor/index
+   teacher/index
+   student/index
    howtos/index
-   addons/index
-   manuals/index
 
 .. admonition:: Etwas in eigener Sache (in Ihrer und unserer)
 
@@ -41,23 +29,46 @@ Mit dieser Dokumentation wollen wir Ihnen alle nötigen Informationen zu unserem
    Das ist unser Versprechen, linuxmuster.net(t) halt!
 
 
-Todo-Liste:
------------
-
-.. hint::
-  Was jetzt folgt dient nur der Kenntlichmachung von fehlenden Kapiteln/Seiten/Texten/Bildern
-
-  Benutze ``.. todo::`` als Anker zum Kenntlichmachen in den betreffenden rst-Dateien.
-  Natürlich wird das nicht in der veröffentlichten Doku erscheinen.
-
-.. todolist::
-
-
-Index 
-==================
-
-* :ref:`genindex`
-* :ref:`search`
+..  Mit dieser Dokumentation wollen wir Ihnen alle nötigen Informationen zu unserem System an die Hand geben, die es Ihnen ermöglichen ..
+    
+    `LEITFÄDEN <guidelines/index.html>`__
+     \.. das System zu installieren.
+    `HOWTOs <howtos/index.html>`__
+     \.. das System an Ihre Erfordernisse anzupassen.
+    `ADDONs <addons/index.html>`__
+     \.. Ihr System an Ihre Wünsche anzupassen.
+    `HANDBÜCHER <manuals/index.html>`__
+     \.. Ihre Nutzer in das System einzuweisen.
+    
+    
+    .. toctree::
+       :maxdepth: 1
+       :hidden:
+    	      
+       guidelines/index
+       howtos/index
+       addons/index
+       manuals/index
+    
+    
+    
+    Todo-Liste:
+    -----------
+    
+    .. hint::
+      Was jetzt folgt dient nur der Kenntlichmachung von fehlenden Kapiteln/Seiten/Texten/Bildern
+    
+      Benutze ``.. todo::`` als Anker zum Kenntlichmachen in den betreffenden rst-Dateien.
+      Natürlich wird das nicht in der veröffentlichten Doku erscheinen.
+    
+    .. todolist::
+    
+    
+    Index 
+    ==================
+    
+    * :ref:`genindex`
+    * :ref:`search`
 
 
 
