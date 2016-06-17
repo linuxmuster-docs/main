@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:linuxmuster-docs/howto_manage_users.git
+	branch = master
+	commit = 7346f46372d179d73f735ccb337edcd8cedda889
+	parent = c490ca9860dece8756ecd4c8beadb7c8e0aa08df
+	cmdver = 0.3.0
