@@ -10,7 +10,6 @@ Howtos, sortiert nach Relevanz:
 .. toctree::
    :maxdepth: 1 
 
-   howto_upgrade/source/index
    howto_netzbrief_basics/source/index
    howto_leoclient2/source/index
    howto_backupmondo/source/index
