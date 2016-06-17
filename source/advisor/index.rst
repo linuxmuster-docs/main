@@ -27,17 +27,10 @@ Schritt-für-Schritt Anleitungen
    :glob:
    :maxdepth: 1
 
+   ../howtos/howto_upgrade/source/index
+   ../howtos/howto_keep_lmn_uptodate/source/index
    ../howtos/howto_printer/source/index
    ../howtos/howto_manage_users/source/index
-   ../howtos/howto_update/source/index
-   ../howtos/howto_upgrade/source/index
-
-Benutzer verwalten
-__________________
-
-Sicherheitsupdates
-__________________
-
 
 Bedienungsanleitungen
 ---------------------
