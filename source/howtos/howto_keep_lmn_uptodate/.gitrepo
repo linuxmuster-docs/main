@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:linuxmuster-docs/howto_keep_lmn_uptodate.git
+	branch = master
+	commit = 85be95644243e51f657b485456153966908a474a
+	parent = 932ebf7b2036d236f75406165b0f18a816842d3d
+	cmdver = 0.3.0
