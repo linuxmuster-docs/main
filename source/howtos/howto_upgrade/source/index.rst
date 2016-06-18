@@ -1,33 +1,32 @@
-.. Installationsleitfaden documentation master file, created by
-   sphinx-quickstart on Sat Nov  7 15:29:20 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Upgrade linuxmuster.net
 =======================
 
-.. todo::
+Um linuxmuster.net auf eine neue Version zu aktualisieren, gibt es zwei Alternativen.
 
-   Kapitel schreiben, siehe http://www.linuxmuster.net/flyspray/task/518
+1. Upgrade einer linuxmuster.net 6.x Version auf eine aktuellere Version
 
-Das ist die Hauptdatei, die enthält zunächst nur das Inhaltsverzeichnis. 
-Jedes Kapitel der Dokumentation kommt in eine eigene Datei, die hier 
-eingebunden wird.
+   a) Upgrade linuxmuster.net 6.0 -> 6.1
+   b) Upgrade linuxmuster.net 6.1 -> 6.2
+   c) Upgrade linuxmuster.net 6.0 -> 6.2
+ 
+2. Migration einer paedML oder linuxmuster.net Installation zu linuxmuster.net 6.2
+   
+   a) Migration paedML >= 4.0.6 -> openML 5.x
+   b) Migration openML 5.x -> linuxmuster.net 6.0
+   c) Migration linuxmuster.net 6.0 -> linuxmuster.net 6.1/6.2
+  
 
-Inhalt:
+Inhalt
+------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   ueberschriften
-   links
-   listen 
-   blockquote
-   bilder
-   quelltext
-   tabellen
-
-
+   1_upgrade_60_to_61
+   2_upgrade_61_to_62
+   3_upgrade_60_to_62
+   4_migration_to_62
+   
 
 Index 
 -----
