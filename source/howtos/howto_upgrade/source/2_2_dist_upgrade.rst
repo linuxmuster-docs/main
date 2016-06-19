@@ -14,7 +14,7 @@ Das Paketsystem fragt bei einigen Paketen nach, ob bei **geänderten Konfigurati
 
 .. attention:: Aktuelle Konfiguration beibehalten
 
-    Wählen Sie immer us, dass die aktuelle Konfiguration beibehalten werden soll. Dies entspricht auch 
+    Wählen Sie immer aus, dass die aktuelle Konfiguration beibehalten werden soll. Dies entspricht auch 
     der Voreinstellung, die Sie mit ENTER bestätigen können.
 
 
