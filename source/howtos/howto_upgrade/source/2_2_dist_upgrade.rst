@@ -1,13 +1,14 @@
-Dist-Upgarde durchführen
+Dist-upgrade durchführen
 ========================
 
-Nachdem die Paketquellen in der gannten Datei für Apt eingetragen wurden, können Sie nun die Paketquellen aktualisieren und die Pakete selbst aktualisieren.
+Nachdem die Paketquellen in der genannten Datei für Apt eingetragen wurden, können Sie nun die Paketquellen aktualisieren und die Pakete selbst aktualisieren.
 
 Dazu sind auf der Eingabekonsole als Benutzer root folgende Befehle einzugeben:
 
 .. code:: bash
 
-    # apt-get update && apt-get dist-upgrade
+   apt-get update
+   apt-get dist-upgrade
 
 Das Paketsystem fragt bei einigen Paketen nach, ob bei **geänderten Konfigurationsdateien die aktuelle Konfiguration beibehalten** werden sollen, oder ob die neuen angewendet werden sollen.
 

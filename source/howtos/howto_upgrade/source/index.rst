@@ -15,22 +15,12 @@ Um linuxmuster.net auf eine neue Version zu aktualisieren, gibt es zwei Alternat
    b) Migration openML 5.x -> linuxmuster.net 6.0
    c) Migration linuxmuster.net 6.0 -> linuxmuster.net 6.1/6.2
   
-
-Inhalt
-------
-
 .. toctree::
    :maxdepth: 1
 
-   1_upgrade_60_to_61
    2_upgrade_61_to_62
+   1_upgrade_60_to_61
    3_upgrade_60_to_62
    4_migration_to_62
    
-
-Index 
------
-
-* :ref:`genindex`
-* :ref:`search`
 
