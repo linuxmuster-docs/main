@@ -6,6 +6,6 @@
 [subrepo]
 	remote = git@github.com:linuxmuster-docs/howto_keep_lmn_uptodate.git
 	branch = master
-	commit = 3162ec0076c96f818dbaa444aace6e13e7c361ee
-	parent = b5b13d02ea8c3d7ff6b90a958415af415379f3b3
+	commit = 9a79008ca721f0f7ab387b934cbc232887228f69
+	parent = 534905f2c63ea9d0d0c0df70a82ed52fd712270b
 	cmdver = 0.3.0
