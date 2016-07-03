@@ -6,6 +6,6 @@
 [subrepo]
 	remote = git@github.com:linuxmuster-docs/release_information.git
 	branch = master
-	commit = e65d4f607b9971e4f98a64ae4b0e01d827a65b83
-	parent = 2b825ffadbb90dd0d0e7750a0306e65cb7812032
+	commit = d93bae4b7b4c19a8339cc9f13a1ead3c22f61e4b
+	parent = 2fdbac40acb40f659d3258f25b52b84af65fa475
 	cmdver = 0.3.0
