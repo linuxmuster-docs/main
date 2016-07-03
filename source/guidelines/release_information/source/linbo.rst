@@ -512,7 +512,7 @@ Problem. Es erstellt und verwaltet automatisch die notwendigen
 UEFI-Booteinträge.
 
 Hinweise zu Neuerungen der Schulkonsole
----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Die Verwaltung des WLAN-Zugriffs erfolgt intern über ein spezielles
 Projekt. Standardmäßig ist es das Projekt **p\_wifi**. Es wird angelegt,
