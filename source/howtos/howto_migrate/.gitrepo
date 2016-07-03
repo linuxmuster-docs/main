@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:linuxmuster-docs/howto_migrate.git
+	branch = master
+	commit = 96eeeae5badc3a948d7fdd594afc3cf9b4359648
+	parent = ab9a3c982e5b80b0e5003ea4c6220077e06686ed
+	cmdver = 0.3.0
