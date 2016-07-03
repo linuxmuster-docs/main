@@ -80,6 +80,7 @@ Meldung: Hardware Enablement Stack
 Ebenso wie beim „upgrade“ wird beim Anmelden über die Kommandozeile manchmal ein nicht mehr unterstützter Kernel gemeldet:
 
 .. code:: bash
+	  
     Your current Hardware Enablement Stack (HWE) is no longer supported
     since 2014-08-07.  Security updates for critical parts (kernel
     and graphics stack) of your system are no longer available.
@@ -150,6 +151,7 @@ Die Datei **/var/lib/update-notifier/hwe-eol** kann auch notfalls gelöscht werd
 Die Befehlsabfolge dazu ist also:
 
 .. code:: bash
+	  
    # apt-get purge <Paketnamen> 
    # apt-get install linux-hwe-generic
    # reboot 
