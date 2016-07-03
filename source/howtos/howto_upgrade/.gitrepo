@@ -6,6 +6,6 @@
 [subrepo]
 	remote = git@github.com:linuxmuster-docs/howto_upgrade.git
 	branch = master
-	commit = 941dcfa9479a08ec948e6e52fad93ebea4567fa4
-	parent = 2eba493f429f93102d351bafd16f8e423ac92b91
+	commit = 17c3000574af58ef24af4087814e80e580c422ef
+	parent = a9e64a6ec5dc2ee3bf7711bdd59b52e6a63aba50
 	cmdver = 0.3.0
