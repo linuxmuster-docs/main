@@ -9,14 +9,11 @@ Die URL für die Druckerverbindung wird nach folgendem Schema zusammengesetzt:
 
    http://<servername>:631/printers/<Druckername>
 
-
 **PDF Drucker**
 
 Beispielhaft wird der standardmäßig eingerichtete PDF-Drucker über die URL
 
-.. code-block:: bash
-
-  http://<servername>:631/printers/PDF-Printer
+http://server:631/printers/PDF-Printer
 
 angesprochen. Damit der PDF-Drucker auf dem Client genutzt werden kann, muss auf dem Client ein Standard-Postskript-Drucker eingerichtet werden.
 

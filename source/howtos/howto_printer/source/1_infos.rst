@@ -12,5 +12,13 @@ Vor dem Hinzufügen und Einrichten von Druckern in linuxmuster.net ist es sehr h
 - Raum / Standort des Druckers
 - IP-Adresse gemäß des genutzen Adressschema
 
-Die meisten Netzwerkdrucker sind bei Auslieferung so eingestellt, dass diese eine IP-Adresse via DHCP beziehen. Die IP-Adresse für den Drucker kann dann einfach mithilfe des Browsers gesetzt werden. Alternativ in der Datei /etc/linuxmuster/workstations.
+Die meisten Netzwerkdrucker sind bei Auslieferung so eingestellt, dass diese eine IP-Adresse via DHCP beziehen. Die IP-Adresse für den Drucker kann dann einfach in der Schulkonsole gesetzt werden. 
+
+.. caution:: 
+
+   Im folgenden Skript werden Änderungen an der Schulkonsole
+   vorgenommen. Alternativ können Änderungen meist auch über ein
+   Terminal direkt in den Konfigurationsdateien auf dem Server
+   vorgenommen werden. Das Mischen beider Verfahren ist zu vermeiden
+   und Fachkundigen zu überlassen.
 
