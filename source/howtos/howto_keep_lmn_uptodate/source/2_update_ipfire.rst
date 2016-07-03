@@ -12,7 +12,7 @@ Skriptgesteuerte Aktualisierung vom Server aus
 
 Es wird regelmäßig getestet, ob die neueren IPFire Versionen vollständig mit linuxmuster.net kompatibel sind. Um zu verhindern, dass vorschnell neue IPFire Versionen direkt nach Erscheinen installiert und so ggf. Inkompatibilitäten in Kauf genommen werden, kann das Update des IPFire auch vom Server aus mithilfe eines Skriptes angestossen werden:
 
-.. code:: bash
+.. code-block:: console
 
    # linuxmuster-ipfire --upgrade
 
@@ -27,17 +27,13 @@ Es wird regelmäßig getestet, ob die neueren IPFire Versionen vollständig mit 
    Your current IPFire core update level is higher than the supported level (95)!
 
 
-Welche Version von IPFire erfolgreich getestet wurde steht in der Datei:
-
-.. code:: bash
-
-   /var/lib/linuxmuster-ipfire/maxcore
-
-Diese Zahl wird von dem Skript zur Aktualisierung von IPFire ausgelesen und geprüft.
+Welche Version von IPFire erfolgreich getestet wurde steht in der
+Datei ``/var/lib/linuxmuster-ipfire/maxcore`` Diese Zahl wird von dem
+Skript zur Aktualisierung von IPFire ausgelesen und geprüft.
 
 Der Vorgang stellt sich dann wie folgt dar:
 
-.. code:: bash
+.. code-block:: console
 
    # linuxmuster-ipfire --upgrade
 
@@ -72,7 +68,7 @@ Nach dem Reboot von IPFire ist das Script erneut aufzurufen.
 
 Ist das Update abgeschlossen, finden Sie nachstehende Konsolenausgabe:
 
-.. code:: bash
+.. code-block:: console
 
    # linuxmuster-ipfire --upgrade
 
@@ -94,7 +90,7 @@ Ist das Update abgeschlossen, finden Sie nachstehende Konsolenausgabe:
 Manuelle Aktualisierung über das Paketsystem von IPFire
 -------------------------------------------------------
 
-IPFire muss mithilfe von ``Boardmitteln`` vom Administrator aktualisiert werden.
+IPFire kann mithilfe von ``Boardmitteln`` vom Administrator aktualisiert werden.
 
 .. attention::
 

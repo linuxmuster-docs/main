@@ -32,15 +32,15 @@ Um die Server-Installation auf den aktuellen Paketstand zu bringen, gehen Sie fo
 
 2. Aktualisieren Sie die Paketlisten:
 
-.. code:: bash
+   .. code-block:: console
 
-    aptitude update
+      # aptitude update
 
 3. Installieren Sie nun Aktualisierungen und weitere Software-Pakete über das Internet:
 
-.. code:: bash
+   .. code-block:: console
 
-    aptitude dist-upgrade  
+      # aptitude dist-upgrade  
 
 4. Es wird aufgelistet, welche Pakete aktualisiert werden. 
    Bestätigen Sie die Aktualisierung mit der Eingabe von **Y**
@@ -114,7 +114,7 @@ Aktualisierung des Linux-Kernels
 Um Ubutnu 12.04 LTS Server (Codename Trusty) auf einen neueren Kernel zu aktualisieren, kann der Befehl **linux-hwe-generic** genutzt werden:
 
 
-.. code:: bash
+.. code-block:: console
 
     # apt-get install linux-hwe-generic
     Paketlisten werden gelesen...Fertig
@@ -132,17 +132,17 @@ Um Ubutnu 12.04 LTS Server (Codename Trusty) auf einen neueren Kernel zu aktuali
 
 Nach Ausführen des Befehls ist der Server neu zu starten
 
-.. code:: bash
+.. code-block:: console
 
-   reboot
+   # reboot
 
 Sollte aus irgendeinem Grund der neue Kernel nicht booten oder funktionieren, kann der „alte“ Kernel über das Grub-Bootmenü ausgewählt werden, solange dieser nicht deinstalliert wurde.
 
 Sollte nach dem Neustart des Servers mit dem neu installierten Kernel dennoch die HWE-Meldung erscheinen, sollte nachstehender Befehl 
 
-.. code:: bash
+.. code-block:: console
 
-     hwe-support-status --show-all-unsupported
+   # hwe-support-status --show-all-unsupported
 
 ausgeführt werden. Die dort genannten Pakete müssen dann deinstalliert
 werden. Danach o.g. Befehl noch einmal abgesetzen, um sicherzugehen,

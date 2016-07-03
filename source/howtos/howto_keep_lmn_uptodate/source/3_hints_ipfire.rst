@@ -1,4 +1,4 @@
-Hinweise 
+Hinweise
 ========
    
 Konfiguration vom Server aus neu setzen
@@ -6,10 +6,10 @@ Konfiguration vom Server aus neu setzen
 
 Mit folgendem Befehl am Server konfiguriert man den IPFire neu. Es sollte zuvor aber ein Backup der IPFire-Einstellungen durchgeführt werden:
 
-.. code:: bash 
+.. code-block:: console
 
-    # linuxmuster-ipfire --backup
-    # dpkg-reconfigure linuxmuster-ipfire
+   # linuxmuster-ipfire --backup
+   # dpkg-reconfigure linuxmuster-ipfire
 
 .. attention::
 
@@ -22,9 +22,9 @@ Haben Sie eine SSH-Verbindung zum IPFire aufgebaut, können die diesen auch auf 
 
 Hierzu geben Sie nachstehende Konsolenbefehle an:
 
-.. code:: bash
+.. code-block:: console
 
-  # pakfire update
-  # pakfire upgrade
+   # pakfire update
+   # pakfire upgrade
 
 Danach ist der IPFire neu zu starten.
