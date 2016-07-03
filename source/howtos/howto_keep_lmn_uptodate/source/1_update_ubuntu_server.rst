@@ -1,20 +1,26 @@
 Update des Ubuntu Servers von linuxmuster.net 
 =============================================
 
-Um den Ubuntu Version für linuxmuster.net (Ubuntu-Server Version 12.04.5 LTS) zu aktualisieren, beachten Sie bitte nachstehndes Vorgehen bzw. Hinweise.
+Um die linuxmuster.net 6.x zugrunde liegende Ubuntu Version (Ubuntu Server 12.04.5 LTS 64bit) zu aktualisieren, beachten Sie bitte nachstehendes Vorgehen bzw. Hinweise.
 
-Führen Sie Updates bitte regelmäßig durch.
+.. caution::
+
+   Führen Sie Updates bitte regelmäßig durch.
 
 Automatische Updates
 --------------------
 
-Sollten Sie bei der Installation von linuxmuster.net die Option ``Automatische Updates`` aktiviert haben, so werden Paketaktualisierungen automatisch von dem Ubuntu-Server heruntergeladen und installiert.
+Es wird ausdrücklich davon abgeraten in Ubuntu die Option
+``Automatische Updates`` aktiviert haben, so dass
+Paketaktualisierungen automatisch von dem Ubuntu-Server
+heruntergeladen und installiert werden.
 
-Die nachstehend beschriebene Vorgehensweise ist dann entbehrlich.
-
-Hinweise zu Sicherheitsupdate von Ubuntu erhalten Sie hier:
-
-http://www.ubuntu.com/usn/
+Melden Sie sich stattdessen besser bei der entsprechenden
+`Mailingliste
+<https://lists.ubuntu.com/mailman/listinfo/ubuntu-security-announce>`_
+an oder abonnieren Sie entsprechenden `RSS-Feed
+<http://www.ubuntu.com/usn/rss.xml>`_. Alle Hinweise zu
+Sicherheitsupdates von Ubuntu erhalten Sie unter http://www.ubuntu.com/usn/
 
 
 Aktualisierungen einspielen
@@ -28,26 +34,22 @@ Um die Server-Installation auf den aktuellen Paketstand zu bringen, gehen Sie fo
 
 .. code:: bash
 
-    # aptitude update
-    oder
-    # apt-get update
+    aptitude update
 
 3. Installieren Sie nun Aktualisierungen und weitere Software-Pakete über das Internet:
 
 .. code:: bash
 
-    # aptitude dist-upgrade  
-    oder
-    # apt-get dist-upgrade
+    aptitude dist-upgrade  
 
 4. Es wird aufgelistet, welche Pakete aktualisiert werden. 
-   Bestätigen Sie die Aktualisierung mit der Eingabe von ** Y **
+   Bestätigen Sie die Aktualisierung mit der Eingabe von **Y**
 
-Dieses Vorgehen stellt sich in der Konsole wie folgt dar:
+   Dieses Vorgehen stellt sich in der Konsole wie folgt dar:
 
-.. image:: media/1_update_ubuntu_server/1_einrichtung_sicherheitsupdates.png
-   :alt: Upgrade Ubuntu Server
-   :align: center
+   .. image:: media/1_update_ubuntu_server/1_einrichtung_sicherheitsupdates.png
+	      :alt: Upgrade Ubuntu Server
+	      :align: center
 
 5. Während des Aktualisierungsverlaufs fragen einige Pakete nach, ob eine neue Konfigurationsdatei 
    installiert werden soll. Geben Sie ``N`` oder ENTER für Beibehalten an.
@@ -55,8 +57,8 @@ Dieses Vorgehen stellt sich in der Konsole wie folgt dar:
 Hinweise
 --------
 
-Ubuntu biete ein Upgrade an
-```````````````````````````
+Ubuntu bietet ein Upgrade an
+````````````````````````````
 
 Haben Sie sich an der Konsole des linuxmuster.net Servers angemeldet, so erhalten Sie Hinweise auf neue verfügbare Upgrades, also neue Versionen des Ubuntu-Servers.
 
@@ -136,29 +138,17 @@ Nach Ausführen des Befehls ist der Server neu zu starten
 
 Sollte aus irgendeinem Grund der neue Kernel nicht booten oder funktionieren, kann der „alte“ Kernel über das Grub-Bootmenü ausgewählt werden, solange dieser nicht deinstalliert wurde.
 
-Sollte nach dem Neustart des Servers, der diese mit dem neu installierten Kernel startet, dennoch die **HWE Meldung** erscheinen, sollte nachstehender Befehl noch angewendet werden:
+Sollte nach dem Neustart des Servers mit dem neu installierten Kernel dennoch die HWE-Meldung erscheinen, sollte nachstehender Befehl 
 
 .. code:: bash
 
      hwe-support-status --show-all-unsupported
 
-ausführen.
+ausgeführt werden. Die dort genannten Pakete müssen dann deinstalliert
+werden. Danach o.g. Befehl noch einmal abgesetzen, um sicherzugehen,
+dass keine weiteren Pakete den HWE-Status blockieren.
 
-Die dort genannten Pakete müssen dann deinstalliert werden und danach muss o.g. Befehl nocheinmal abgesetzt werden. 
-
-Die Datei **/var/lib/update-notifier/hwe-eol** kann auch notfalls gelöscht werden.
-
-Die Befehlsabfolge dazu ist also:
-
-.. code:: bash
-	  
-   # apt-get purge <Paketnamen> 
-   # apt-get install linux-hwe-generic
-   # reboot 
-
-
-
-
+Die Datei ``/var/lib/update-notifier/hwe-eol`` kann auch notfalls gelöscht werden.
 
 
 
