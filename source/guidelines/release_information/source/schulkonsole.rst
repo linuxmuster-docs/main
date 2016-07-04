@@ -202,3 +202,24 @@ Schwebende Hilfe
 .. image:: media/schulkonsole_help.png
 
 Die schwebende Hilfe blendet sich zeitgesteuert aus und es kommt dadurch nicht mehr zur Verdeckung von wichtigen Seitenelementen.
+
+Hinweise zu Neuerungen der Schulkonsole
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Die Verwaltung des WLAN-Zugriffs erfolgt intern über ein spezielles
+Projekt. Standardmäßig ist es das Projekt **p\_wifi**. Es wird angelegt,
+falls es bei der Installation nicht existiert.
+
+Der Projektname kann über die Schulkonsole unter Einstellungen geändert
+werden.
+
+Das WLAN-Projekt muss den *administrator* als Projektadmin haben und auf
+*nojoin* eingestellt sein. Das erledigt die Schulkonsole bei der
+Installation selbst, falls das WLAN-Projekt bereits existiert.
+
+Bis Version **0.36.0-1** musste das einmal manuell gemacht werden.
+
+::
+
+    sophomorix-project -p p_wifi --addadmins administrator --nojoin
+
