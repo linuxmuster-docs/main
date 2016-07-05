@@ -223,3 +223,59 @@ Bis Version **0.36.0-1** musste das einmal manuell gemacht werden.
 
     sophomorix-project -p p_wifi --addadmins administrator --nojoin
 
+Standardeinstellungen
+^^^^^^^^^^^^^^^^^^^^^
+
+Für die Standardeinstellungen zum **WLAN** gibt es die Datei 
+**/etc/linuxmuster/wlan_defaults** mit dem Inhalt
+
+::
+
+	# wlan_defaults will be processed by /usr/sbin/linuxmuster-wlan-reset.
+	# It defines the default wlan status for all users,classes and projects.
+	#
+	# Three columns have to be present:
+	# Identify colum: u - user, g - class/project/unix group
+	# user/class/project: user, class or project name
+	# wlan status: on/off/-
+	#
+	# Place a "-" in wlan column, if you want the current
+	# status not to be changed. 
+	#
+	# There has to be one user, class or project definition per line.
+	# Note: the users, classes and projects are processed in the sequence 
+	#       that is defined here.
+	#
+	# identity:user/class/project   wlan status
+	#
+	# Examples:
+	#g:07a          off
+	#g:11b          -
+	#u:test         on
+	#
+	# next entries set the default values for users/classes/projects, 
+	# which are not defined explicitly.
+	g:default               off
+	u:default               off
+	g:teachers              on
+
+Dort können beliebige Benutzer und Gruppen eingetragen werden. Dazu gibt es das Programm
+**linuxmuster-wlan-reset** mit der Syntax
+
+::
+
+
+	linuxmuster-wlan-reset resets wlan access to defaults
+
+	Options
+	-h  / --help
+	--kill  terminate group sessions
+
+	users/groups to work on:
+	--userlist=<user1,user2,user3,...> [--kill] list of users to be processed
+	--grouplist=<group1,group2,group3,...> list of groups to be processed
+	--all [--kill] process all users and groups from wlan_defaults
+
+Es dient dazu, Einstellungen für einzelne Nutzer/Gruppen wieder auf die Standardeinstellungen
+zurückzusetzen. Die Standardeinstellungen befinden sich in der oben beschriebenen Datei **wlan_defaults**.
+Die Schulkonsole verwendet diese Datei bzw. das Programm, um Einstellungen vorzunehmen.
