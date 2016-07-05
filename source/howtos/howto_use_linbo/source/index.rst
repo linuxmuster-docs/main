@@ -6,15 +6,30 @@
 LINBO nutzen
 ============
 
-Das ist die Hauptdatei aus dem meta_example-Paket, die enthält zunächst nur das Inhaltsverzeichnis. 
-Jedes Kapitel der Dokumentation kommt in eine eigene Datei, die hier 
-eingebunden wird.
+LINBO steht für GNU/\ **Li**\ nux **N**\ etwork **Bo**\ ot. Es wurde
+im Auftrag des Landesmedienzentrums Baden-Württemberg von der Firma
+KNOPPER.NET in Zusammenarbeit mit den damaligen paedML-Linux- und
+heutigen linuxmuster.net-Entwicklern realisiert. Der Sourcecode ist
+unter GNU General Public License Version 2 veröffentlicht.
 
-Inhalt:
+LINBO bietet
+------------
+
+* vollautomatisches Ausrollen von Client-Installationen im Netzwerk
+* Verwaltung mehrerer Betriebssystem-Installationen auf einem Client (Multiboot)
+* minutenschnelle automatische Reparatur des Betriebssystems (SheilA-Prinzip)
+* konfigurierbarer Autostart 
+* grafische Client-Oberfläche zur einfachen Bedienung durch Anwender und Netzwerkbetreuer
+* vollständige Integration in die linuxmuster.net
+
+Wie LINBO funktioniert
+----------------------
 
 .. toctree::
    :maxdepth: 2
 
+   linbo_mainscreen
+   schulkonsole
    ueberschriften
    links
    listen 
@@ -22,12 +37,4 @@ Inhalt:
    bilder
    quelltext
    tabellen
-
-
-
-Index 
------
-
-* :ref:`genindex`
-* :ref:`search`
 
