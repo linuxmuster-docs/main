@@ -13,7 +13,6 @@ heutigen linuxmuster.net-Entwicklern realisiert. Der Sourcecode ist
 unter GNU General Public License Version 2 veröffentlicht.
 
 LINBO bietet
-------------
 
 * vollautomatisches Ausrollen von Client-Installationen im Netzwerk
 * Verwaltung mehrerer Betriebssystem-Installationen auf einem Client (Multiboot)
@@ -22,10 +21,8 @@ LINBO bietet
 * grafische Client-Oberfläche zur einfachen Bedienung durch Anwender und Netzwerkbetreuer
 * vollständige Integration in die linuxmuster.net
 
-Wie LINBO funktioniert
-----------------------
-
 .. toctree::
+   :caption: Wie LINBO funktioniert
    :maxdepth: 2
 
    linbo_mainscreen

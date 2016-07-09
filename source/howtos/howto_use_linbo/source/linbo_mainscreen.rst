@@ -24,7 +24,7 @@ Informationen
 Im oberen Teil in LINBO werden Informationen zum Client angezeigt.
 
 Host
-   Der festgelegte Hostname oder "pxeclient", wenn der Client nicht registriert ist
+   Der festgelegte Hostname oder "pxeclient", wenn der Client nicht registriert ist.
 
 Gruppe
    Die festgelegte Hardwareklasse
@@ -33,10 +33,12 @@ IP, MAC
    Die festgelegten Netzwerkadressen oder "OFFLINE", wenn der Client ohne
    Netzwerkverbindung zum Server gestartet wurde.
 
-HD, Cache, CPU, RAM
+HD, CPU, RAM
    Zeigt die entsprechend verbaute Hardware des Clients an:
-   Festplattengröße, Partitionsgröße der Cache-Partition, Prozessor
-   und Hauptspeicherinformationen
+   Festplattengröße, Prozessor und Hauptspeicherinformationen
+
+Cache
+   Zeigt die freie/gesamte Partitionsgröße der Cache-Partition an.
 
 Neben der (vermutlich) aktuellen Uhrzeit auf dem Client werden im
 unteren Teil Status- und Rückmeldungen der einzelnen Aktionen in einem
@@ -107,13 +109,6 @@ folgenden Bedeutungen
    deaktiviert hat.
 
 
-Reiter der Betriebssysteme
-==========================
-
-Neben dem Reiter "Start" gibt es für jedes definierte Betriebssystem
-einen Reiter, der die Schaltflächen für Start und Synchronisation der
-Betriebssysteme noch einmal enthält.
-   
 Imaging-Reiter
 ==============
 
