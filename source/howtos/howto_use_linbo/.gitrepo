@@ -6,6 +6,6 @@
 [subrepo]
 	remote = git@github.com:linuxmuster-docs/howto_use_linbo.git
 	branch = master
-	commit = a876abcd86d610c5a47bf3cb983736343c92e68c
-	parent = 2096564024c3550daa8ce03bb552c048279a9222
+	commit = 51c8f8c074effc010369154a41b4bcc9dd59b2e8
+	parent = 78b091edee38a3113a3d692546a23070e202c012
 	cmdver = 0.3.0

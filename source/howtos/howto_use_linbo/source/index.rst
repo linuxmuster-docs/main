@@ -29,12 +29,5 @@ Wie LINBO funktioniert
    :maxdepth: 2
 
    linbo_mainscreen
-   schulkonsole
-   ueberschriften
-   links
-   listen 
-   blockquote
-   bilder
-   quelltext
-   tabellen
+   linbo_imagingscreen
 

@@ -46,15 +46,14 @@ Informationen liefern können.
 Reboot
 ======
 
-Das Icon
 
 .. figure:: ./media/linbo_mainscreen/system-reboot-32x32.png
 
-erzwingt einen Neustart und 
+   erzwingt einen Neustart und 
 
 .. figure:: ./media/linbo_mainscreen/system-shutdown-32x32.png
 
-lässt den Client herunterfahren.
+   lässt den Client herunterfahren.
 
 
 Start-Reiter
@@ -65,7 +64,6 @@ im Start-Reiter ein großer Knopf und vier kleinere Knöpfe mit
 folgenden Bedeutungen
 
 .. figure:: ./media/linbo_mainscreen/sync+start-22x22.png
-   :align: left
 	
    Sync+Start Knopf
 	    
@@ -83,7 +81,6 @@ folgenden Bedeutungen
    Patches werden angewandt.
 	    
 .. figure:: ./media/linbo_mainscreen/new+start-22x22.png
-   :align: left
 
    Neu+Start Knopf
 
@@ -92,15 +89,41 @@ folgenden Bedeutungen
    bei "Sync+Start".
 
 .. figure:: ./media/linbo_mainscreen/information-22x22.png
-   :align: left
 
    Information
 
    zeigt Informationen über das aktuell hinterlegte Abbild an.
    
 .. figure:: ./media/linbo_mainscreen/ubuntu.png
-   :align: left
 
    Standardknopf
 
    führt die Startmethode aus, die als solche definiert wurde.
+
+.. note::
+      
+   Die einzelnen Schaltflächen für die Startmechanismen können auch
+   ausgegraut sein, wenn der Administrator den jeweiligen Mechanismus
+   deaktiviert hat.
+
+
+Reiter der Betriebssysteme
+==========================
+
+Neben dem Reiter "Start" gibt es für jedes definierte Betriebssystem
+einen Reiter, der die Schaltflächen für Start und Synchronisation der
+Betriebssysteme noch einmal enthält.
+   
+Imaging-Reiter
+==============
+
+Hier können die Abbilder (Images) verwaltet werden. Der Bereich ist
+mit dem Passwort von "LINBO" abgesichert.
+
+.. figure:: ./media/linbo_mainscreen/password_dialog.png
+
+.. attention::
+
+   Bei der Eingabe des LINBO-Passwortes werden keine Zeichen
+   angezeigt, weder das Passwort selbst, noch Sterne.
+
