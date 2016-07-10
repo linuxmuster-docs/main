@@ -9,14 +9,11 @@ Die URL für die Druckerverbindung wird nach folgendem Schema zusammengesetzt:
 
    http://<servername>:631/printers/<Druckername>
 
-
 **PDF Drucker**
 
 Beispielhaft wird der standardmäßig eingerichtete PDF-Drucker über die URL
 
-.. code-block:: bash
-
-  http://<servername>:631/printers/PDF-Printer
+http://server:631/printers/PDF-Printer
 
 angesprochen. Damit der PDF-Drucker auf dem Client genutzt werden kann, muss auf dem Client ein Standard-Postskript-Drucker eingerichtet werden.
 
@@ -24,26 +21,32 @@ angesprochen. Damit der PDF-Drucker auf dem Client genutzt werden kann, muss auf
 Linux Clients
 -------------
 
-.. todo::
-
-  Bilder für die Linux-Clients fehlen noch!
-
 Die Druckerinstallation auf dem Linux-Client lässt sich wie auf dem Server mit Hilfe des CUPS-Webinterfaces 
 bewerkstelligen. Loggen Sie sich auf dem Client mit einem Browser über die URL http://localhost:631/admin als lokaler 
-Benutzer **administrator** auf der CUPS-Administrationsseite ein und klicken Sie auf **Drucker hinzufügen**. 
-Die Eingabe des Druckernamens ist zwingend, die anderen Felder sind optional: 
+Benutzer **administrator** auf der CUPS-Administrationsseite ein.
 
 .. image:: media/drucker_einrichten_client_linux/drucker_linux1.png
 
-Wählen Sie im nächsten Schritt für „Gerät“ Internet Printing Protocol (http): 
+Klicken Sie hier unter der Rubrik Drucker auf **Drucker hinzufügen**. 
 
 .. image:: media/drucker_einrichten_client_linux/drucker_linux2.png
 
-Geben Sie nun die Geräte-URI für den Drucker nach dem Schema
+Wählen Sie im nächsten Schritt als Netzwerkdrucker ** Internet-Druckprotokoll (https).
 
-.. code-block:: bash
+.. image:: media/drucker_einrichten_client_linux/drucker_linux3.png
 
-  http://<servername>:631/printers/<Name des Druckers>
+Wählen Sie im nächsten Schritt für unter Drucker hinzufügen die korrekte Adresse. Wird der Netzwerkdrucker über den linuxmuster.net Server angesteuert, so ist dessen Adressen anzugeben:
+  **https://10.16.1.1/printers<druckername>** 
+
+.. image:: media/drucker_einrichten_client_linux/drucker_linux4.png
+
+Wählen Sie danach die korrekte Druckermarke für den einzurichtenden Drucker aus.
+
+.. image:: media/drucker_einrichten_client_linux/drucker_linux5.png
+
+Wählen Sie abschliessend das geeignete Druckermodell aus, oder wählen Sie eine eigene sog. PPD-Datei aus, die auf dem Client installiert werden soll. 
+
+.. image:: media/drucker_einrichten_client_linux/drucker_linux6.png
 
 Die weiteren Einrichuntsschritte entsprechen denen, wie sie auf dem Server bereits ausgeführt wurden.
 

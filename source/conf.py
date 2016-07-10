@@ -72,6 +72,7 @@ release = u'6.2.0'
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
 language = 'de'
+gettext_compact = False
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -82,7 +83,7 @@ language = 'de'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = []
+exclude_patterns = ['**/README.rst']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.

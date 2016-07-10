@@ -7,6 +7,19 @@ es einige Neuerungen. Schließlich ist die Programmoberfläche insgesamt in Teil
 Für den letzten Punkt wurde Javascript und jQuery verwendet. Daher ist es jetzt erforderlich, zumindest für
 die Schulkonsole auf den Clients im Browser Javascript zu aktivieren.
 
+Allgemein
+---------
+Das Paket **linuxmuster-schulkonsole-template** ist jetzt integriert und damit in Zukunft überflüssig. Es sollte deinstalliert 
+werden.
+
+Das Design vieler Tabellen wurde zur besseren Übersicht um **Zeilennummern** erweitert.
+
+Die Rechtestruktur ist konfigurierbar geworden. Damit ist es z.B. möglich, Lehrern das Recht für die Abschaltung des Webfilters zu 
+entziehen. Genaueres dazu ist zu finden unter `Technische Dokumentation der Schulkonsole <http://www.linuxmuster.net/wiki/entwicklung:schulkonsole:sk_neue_plugin_seite>`_.
+Dort ist auch erklärt, wie die Menüstruktur durch z.B. Ausblendung oder Verschiebung von Menüpunkten lokalen Gegebenheiten angepasst werden kann.
+
+Die Kodierung ist intern jetzt vollständig auf **utf8** umgestellt.
+
 Netzwerkbetreuersicht
 ---------------------
 
@@ -32,6 +45,11 @@ Einstellungen
 Auf der Einstellungsseite zur Benutzerverwaltung gibt es viele weitere Einstellmöglichkeiten. Die wichtigste ist
 die Kodierung für die jeweiligen Dateien.
 
+Private Mailadresse im LDAP
+```````````````````````````
+Private Mailadressen können im LDAP-Attribut **mail** verwaltet werden. Dazu muss der Administrator die entsprechende Funktion wie in
+*TODO: howto_mailldap* beschrieben, freischalten.
+
 Historie
 """"""""
 Unter *Benutzer* gibt es den neuen Menüpunkt **Historie**, über den man gezielt Passwortlisten zu einem bestimmten Zeitpunkt angelegter Benutzer herunterladen kann.
@@ -45,7 +63,7 @@ Plugins
 ^^^^^^^
 
 Es ist möglich, Plugins für die Schulkonsole zu schreiben. Das Schreiben von Plugins ist auf der Seite
-https://www.linuxmuster.net/wiki/entwicklung:schulkonsole:sk_neue_plugin_seite dokumentiert.
+`Technische Doku der Schulkonsole <https://www.linuxmuster.net/wiki/entwicklung:schulkonsole:sk_neue_plugin_seite>`_ dokumentiert.
 
 Momentan gibt des 2 Plugins.
 
@@ -74,9 +92,10 @@ Rechnerverwaltung
 
 Hosts
 """""
-Die **hosts**-Tabelle kann nach verschiedenen Spalten aufsteigend bzw. absteigend sortiert werden. Damit ist es einfacher, z.B. freie IP-Adressen eines Raums herauszufinden.
-
-Bei einem *import_workstations*, also der Übernahme der Änderungen in das System wird die log-Datei angezeigt.
+- Die **hosts**-Tabelle kann nach verschiedenen Spalten aufsteigend bzw. absteigend sortiert werden. Damit ist es einfacher, z.B. freie IP-Adressen eines Raums herauszufinden.
+- Die Datei **/etc/linuxmuster/workstations** kann auch Kommentare enthalten. Wird vor den Raumnamen ein Kommentarzeichen eingefügt, bleibt die Zeile erhalten wird aber deaktiviert. 
+  Wird das Kommentarzeichen wieder entfernt, so wird die Zeile wieder aktiv.
+- Bei einem *import_workstations*, also der Übernahme der Änderungen in das System wird die log-Datei angezeigt.
 
 grub.cfg-Dateien
 """"""""""""""""
@@ -149,8 +168,8 @@ Unter *Horde* kann man eine Mailweiterleitungsadresse einrichten. Das ist umstä
 
 Alternative Mailadresse
 ^^^^^^^^^^^^^^^^^^^^^^^
-Abhängig von den Einstellungen für Mail (siehe mail-ldap-howto) kann auf der Startseite jeder Benutzer eine
-vom Standard abweichende Mailadresse einrichten.
+Abhängig von den Einstellungen für Mail (siehe TODO howto_mailldap) kann auf der Startseite jeder Benutzer eine
+vom Standard abweichende Mailadresse einrichten, die im LDAP-Attribut **mail** gespeichert wird.
 
 
 Oberfläche allgemein
@@ -183,3 +202,80 @@ Schwebende Hilfe
 .. image:: media/schulkonsole_help.png
 
 Die schwebende Hilfe blendet sich zeitgesteuert aus und es kommt dadurch nicht mehr zur Verdeckung von wichtigen Seitenelementen.
+
+Hinweise zu Neuerungen der Schulkonsole
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Die Verwaltung des WLAN-Zugriffs erfolgt intern über ein spezielles
+Projekt. Standardmäßig ist es das Projekt **p\_wifi**. Es wird angelegt,
+falls es bei der Installation nicht existiert.
+
+Der Projektname kann über die Schulkonsole unter Einstellungen geändert
+werden.
+
+Das WLAN-Projekt muss den *administrator* als Projektadmin haben und auf
+*nojoin* eingestellt sein. Das erledigt die Schulkonsole bei der
+Installation selbst, falls das WLAN-Projekt bereits existiert.
+
+Bis Version **0.36.0-1** musste das einmal manuell gemacht werden.
+
+::
+
+    sophomorix-project -p p_wifi --addadmins administrator --nojoin
+
+Standardeinstellungen
+^^^^^^^^^^^^^^^^^^^^^
+
+Für die Standardeinstellungen zum **WLAN** gibt es die Datei 
+**/etc/linuxmuster/wlan_defaults** mit dem Inhalt
+
+::
+
+	# wlan_defaults will be processed by /usr/sbin/linuxmuster-wlan-reset.
+	# It defines the default wlan status for all users,classes and projects.
+	#
+	# Three columns have to be present:
+	# Identify colum: u - user, g - class/project/unix group
+	# user/class/project: user, class or project name
+	# wlan status: on/off/-
+	#
+	# Place a "-" in wlan column, if you want the current
+	# status not to be changed. 
+	#
+	# There has to be one user, class or project definition per line.
+	# Note: the users, classes and projects are processed in the sequence 
+	#       that is defined here.
+	#
+	# identity:user/class/project   wlan status
+	#
+	# Examples:
+	#g:07a          off
+	#g:11b          -
+	#u:test         on
+	#
+	# next entries set the default values for users/classes/projects, 
+	# which are not defined explicitly.
+	g:default               off
+	u:default               off
+	g:teachers              on
+
+Dort können beliebige Benutzer und Gruppen eingetragen werden. Dazu gibt es das Programm
+**linuxmuster-wlan-reset** mit der Syntax
+
+::
+
+
+	linuxmuster-wlan-reset resets wlan access to defaults
+
+	Options
+	-h  / --help
+	--kill  terminate group sessions
+
+	users/groups to work on:
+	--userlist=<user1,user2,user3,...> [--kill] list of users to be processed
+	--grouplist=<group1,group2,group3,...> list of groups to be processed
+	--all [--kill] process all users and groups from wlan_defaults
+
+Es dient dazu, Einstellungen für einzelne Nutzer/Gruppen wieder auf die Standardeinstellungen
+zurückzusetzen. Die Standardeinstellungen befinden sich in der oben beschriebenen Datei **wlan_defaults**.
+Die Schulkonsole verwendet diese Datei bzw. das Programm, um Einstellungen vorzunehmen.

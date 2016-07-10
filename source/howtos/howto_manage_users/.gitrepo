@@ -7,5 +7,5 @@
 	remote = git@github.com:linuxmuster-docs/howto_manage_users.git
 	branch = master
 	commit = 7346f46372d179d73f735ccb337edcd8cedda889
-	parent = 647d8416b7a290595dfe672b059531b3e896415a
+	parent = c490ca9860dece8756ecd4c8beadb7c8e0aa08df
 	cmdver = 0.3.0

@@ -7,9 +7,10 @@ Was ist neu in 6.2?
 ===================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    schulkonsole
+   linbo
 
 .. todo::
 

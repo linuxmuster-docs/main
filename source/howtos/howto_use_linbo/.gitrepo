@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:linuxmuster-docs/howto_use_linbo.git
+	branch = master
+	commit = 616214bfde8b35c6d928a54682d2db504f92eb16
+	parent = 1617b22349c45b6a0fcac8e1680d9a010bd09884
+	cmdver = 0.3.0

@@ -1,37 +1,11 @@
-.. Installationsleitfaden documentation master file, created by
-   sphinx-quickstart on Sat Nov  7 15:29:20 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Upgrade linuxmuster.net
 =======================
-
-.. todo::
-
-   Kapitel schreiben, siehe http://www.linuxmuster.net/flyspray/task/518
-
-Das ist die Hauptdatei, die enthält zunächst nur das Inhaltsverzeichnis. 
-Jedes Kapitel der Dokumentation kommt in eine eigene Datei, die hier 
-eingebunden wird.
-
-Inhalt:
-
+  
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   ueberschriften
-   links
-   listen 
-   blockquote
-   bilder
-   quelltext
-   tabellen
-
-
-
-Index 
------
-
-* :ref:`genindex`
-* :ref:`search`
+   upgrade_61_to_62
+   upgrade_60_to_61
+   upgrade_60_to_62
+   
 
