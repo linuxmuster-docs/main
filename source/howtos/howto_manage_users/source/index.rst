@@ -6,26 +6,23 @@
 Benutzer verwalten mit der Schulkonsole
 =======================================
 
-Das ist die Hauptdatei aus dem meta_example-Paket, die enthält zunächst nur das Inhaltsverzeichnis. 
-Jedes Kapitel der Dokumentation kommt in eine eigene Datei, die hier 
-eingebunden wird.
+Dieses Dokument gibt Schritt-für-Schritt-Anleitungen für die wichtigstenTätigkeiten,
+die der Netzwerkbetreuer im Hinblick auf die Benutzer mit der Schulkonsole durchführt.
 
 Inhalt:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
-   ueberschriften
-   links
-   listen 
-   blockquote
-   bilder
-   quelltext
-   tabellen
-
+   allgemeines
+   konfiguration
+   verwalten
+   passworte
+   quota
+   weiteres
 
 
-Index 
+Index
 -----
 
 * :ref:`genindex`
