@@ -112,6 +112,10 @@ pygments_style = 'sphinx'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 
+#internationalisation
+locale_dirs = ['locale/']
+gettext_compact = False     # optional
+
 
 # -- Options for HTML output ----------------------------------------------
 
