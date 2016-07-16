@@ -3,29 +3,22 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Installation der linuxmuster.net von Grund auf
-==============================================
+Manuelle Installation von linuxmuster.net
+=========================================
 
-Das ist die Hauptdatei aus dem meta_example-Paket, die enthält zunächst nur das Inhaltsverzeichnis. 
-Jedes Kapitel der Dokumentation kommt in eine eigene Datei, die hier 
-eingebunden wird.
+Neben den vorgefertigten Paket für die Virtualiserungsumgebung XEN, können Sie linuxmuster.net auch manuell installieren. Im Folgenden werden die dazu notwendigen Schritte erklärt.
 
 Inhalt:
 
 .. toctree::
    :maxdepth: 2
 
-   ueberschriften
-   links
-   listen 
-   blockquote
-   bilder
-   quelltext
-   tabellen
+   installFirewall
+   installUbuntu
+   installLML
 
 
-
-Index 
+Index
 -----
 
 * :ref:`genindex`
