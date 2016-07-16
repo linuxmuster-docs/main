@@ -6,6 +6,6 @@
 [subrepo]
 	remote = git@github.com:linuxmuster-docs/howto_manage_users.git
 	branch = master
-	commit = 4589e574aa1e46072e12451464aa90a0aa063586
-	parent = 1ee2813af4f14f31e6cfed9716f35de42e9b413d
+	commit = e131fba62ce5731865ab2f69e34f41b8882d9821
+	parent = 9d8c949437243e6cdd723818854802526692eefb
 	cmdver = 0.3.0

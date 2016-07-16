@@ -6,7 +6,7 @@
 Benutzer verwalten mit der Schulkonsole
 =======================================
 
-Dieses Dokument gibt Schritt-für-Schritt-Anleitungen für die wichtigstenTätigkeiten,
+Dieses Dokument gibt Schritt-für-Schritt-Anleitungen für die wichtigsten Tätigkeiten,
 die der Netzwerkbetreuer im Hinblick auf die Benutzer mit der Schulkonsole durchführt.
 
 Inhalt:
