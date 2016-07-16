@@ -7,8 +7,7 @@ Schulkonsole
 ------------
 
 Wechseln Sie auf den Reiter
-LINBO
-. Klicken Sie auf der linken Seite auf
+LINBO. Klicken Sie auf der linken Seite auf
 Gruppenkonfiguration editieren
 und wählen anschließend die Gruppe (Hardwareklasse) die Sie editieren möchten.
 
@@ -16,8 +15,7 @@ und wählen anschließend die Gruppe (Hardwareklasse) die Sie editieren möchten
 
 
 Ändern Sie die Konfiguration nach Ihren Bedürfnissen und klicken Sie im Anschluss auf die Schaltfläche
-Änderungen Speichern
-. Wichtig sind dabei die Einstellungen unter dem Punkt Systeme
+Änderungen Speichern. Wichtig sind dabei die Einstellungen unter dem Punkt Systeme.
 
 |1000000000000382000003C15DFFA156_png|
 
@@ -27,11 +25,11 @@ Server-Konsole
 
 Geben Sie den Befehl
 nano /var/linbo/start.conf.<gruppe>
-ein
+ein.
 
 |100000000000028800000188045E477F_png|
 
-Ändern Sie die Konfiguration nach Ihren Bedürfnissen und verlassen danach den Editor speichernd
+Ändern Sie die Konfiguration nach Ihren Bedürfnissen und verlassen danach den Editor speichernd.
 
 |1000000000000295000002927824780F_png|
 
