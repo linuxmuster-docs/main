@@ -1,5 +1,5 @@
-Upgrade von 6.1 auf 6.2
-=======================
+Upgrade von 6.1
+===============
 
 Um linuxmuster.net 6.1 (Codename Babo) auf linuxmuster.net 6.2 (Codename babo62) zu aktualisieren, sind nachstehend aufgeführte Schritte auszuführen.
 
@@ -10,8 +10,8 @@ Zum Upgrade auf linuxmuster.net 6.2 (Codename Babo62) muss das entsprechende neu
 
 In der Datei ``/etc/apt/sources.list.d/linuxmuster-net.list`` sind folgende Paketquellen anzugeben:
 
-.. code:: bash
-   
+.. code::
+
    deb http://pkg.linuxmuster.net/ babo/
    deb-src http://pkg.linuxmuster.net/ babo/
    deb http://pkg.linuxmuster.net/ babo62/
@@ -24,14 +24,14 @@ In der Datei ``/etc/apt/sources.list.d/linuxmuster-net.list`` sind folgende Pake
 Dist-upgrade durchführen
 ------------------------
 
-Nachdem die Paketquellen in der genannten Datei für Apt eingetragen wurden, können Sie nun die Paketquellen aktualisieren und die Pakete selbst aktualisieren.
+Nachdem die Paketquellen in der genannten Datei für apt eingetragen wurden, können Sie nun die Paketquellen aktualisieren und die Pakete selbst aktualisieren.
 
 Dazu sind auf der Eingabekonsole als Benutzer root folgende Befehle einzugeben:
 
-.. code:: bash
+.. code-block:: console
 
-   apt-get update
-   apt-get dist-upgrade
+   # apt-get update
+   # apt-get dist-upgrade
 
 Das Paketsystem fragt bei einigen Paketen nach, ob bei **geänderten Konfigurationsdateien die aktuelle Konfiguration beibehalten** werden sollen, oder ob die neuen angewendet werden sollen.
 
@@ -47,9 +47,9 @@ Beim durchgeführten Upgrade wurde auch eine neue Version des Pakets linuxmuster
 
 Führen Sie hierzu folgenden Befehl aus:
 
-.. code:: bash
+.. code-block:: console
 
-   import_workstations
+   # import_workstations
 
 Das Skript prüft die angegebenen Eintragungen in der Datei ``/etc/linuxmuster/workstations``. Sind diese korrekt wird der Import ausgeführt. Wurde das Skript erfolgreich abgearbeitet, wird dies mit einem entsprechenden Hinweis quittiert.
 
@@ -60,13 +60,13 @@ Um sicherzustellen, dass das neue LINBO-System auch lokal auf den
 Clients installiert wird, erzwingt man eine Aktualisierung des Caches
 und einen Reboot.
 
-Setzen Sie auf der Serverkonsole den linbo-remote-Befehl zur Cache-Initialisierung ab:
+Folgender Befehl auf der Serverkonsole sorgt dafür, dass beim nächsten
+Bootvorgang per PXE der Cache initialisiert wird (und rebootet wird):
 
-.. code:: bash
+.. code-block:: console
 
-   linbo-remote -p initcache,reboot [-i <hostname>|-g <group>|-r <room>]
+   # linbo-remote -p initcache,reboot [-i <hostname>|-g <group>|-r <room>]
 
-Der Befehl wird nach dem nächsten Einschalten der Clients ausgeführt.
 
 ..
    2. **Alternativ: Wake-on-Lan**: Sind die Client für Wake-on-Lan konfiguriert, so kann der gesamte 
@@ -79,7 +79,10 @@ Der Befehl wird nach dem nächsten Einschalten der Clients ausgeführt.
 Sollten sich in Ihrem Netzwerk neben den Clients, die via
 PXE-Netwerk-Boot starten, auch solche befinden, die Linbo nur lokal
 starten, schalten Sie die betreffenden Rechner ein und lassen Sie
-diese mit LAN-Verbindung in die Linbo-Oberfläche booten.
+diese mit LAN-Verbindung in die Linbo-Oberfläche booten.  Über die
+Konfigurationseinstellung ``AutoInitCache = yes`` in der zugehörigen
+``start.conf`` erzwingt man die Cache-Initialisierung auch bei diesen
+Clients.
 
 .. note:: Nach dem Upgrade sollten alle Clients wie gewohnt weiter
    funktionieren. Die Bildschirmausgabe beim Bootvorgang ist leicht
