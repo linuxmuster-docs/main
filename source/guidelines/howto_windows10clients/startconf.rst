@@ -183,22 +183,22 @@ Das ist eine Beispielkonfiguration für eine Partition 50GB für eine Windowsins
     # DefaultAction bei Autostart: start|sync|new halt einer beispielhaften start.conf
 
 
-.. |1000000000000295000002927824780F_png| image:: images/1000000000000295000002927824780F.png
+.. |1000000000000295000002927824780F_png| image:: media/1000000000000295000002927824780F.png
     :width: 11.999cm
     :height: 11.944cm
 
 
-.. |10000000000003FC0000030089B2BD2A_png| image:: images/10000000000003FC0000030089B2BD2A.png
+.. |10000000000003FC0000030089B2BD2A_png| image:: media/10000000000003FC0000030089B2BD2A.png
     :width: 12.011cm
     :height: 9.042cm
 
 
-.. |1000000000000382000003C15DFFA156_png| image:: images/1000000000000382000003C15DFFA156.png
+.. |1000000000000382000003C15DFFA156_png| image:: media/1000000000000382000003C15DFFA156.png
     :width: 15.99cm
     :height: 17.112cm
 
 
-.. |100000000000028800000188045E477F_png| image:: images/100000000000028800000188045E477F.png
+.. |100000000000028800000188045E477F_png| image:: media/100000000000028800000188045E477F.png
     :width: 12.002cm
     :height: 7.261cm
 

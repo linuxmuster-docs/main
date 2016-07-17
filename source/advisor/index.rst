@@ -5,7 +5,7 @@ Handbuch für Netzwerkbetreuer
    :glob:
    :maxdepth: 1
 
-   ../guidelines/release_information/source/index
+   ../guidelines/release_information/index
 
 
 Leitfäden
@@ -15,9 +15,9 @@ Leitfäden
    :glob:
    :maxdepth: 1
 
-   ../guidelines/howto_installationsleitfaden/source/index
-   ../guidelines/howto_windows10clients/source/index
-   ../guidelines/howto_linuxclients/source/index
+   ../guidelines/howto_install_on_xen/index
+   ../guidelines/howto_windows10clients/index
+   ../guidelines/howto_linuxclients/index
 
 ..
    ../guidelines/howto_install_from_scratch/source/index
