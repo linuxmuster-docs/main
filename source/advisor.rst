@@ -29,10 +29,10 @@ Schritt-für-Schritt Anleitungen
    :glob:
    :maxdepth: 1
 
-   ./howtos/howto_upgrade/source/index
-   ./howtos/howto_keep_lmn_uptodate/source/index
-   ./howtos/howto_printer/source/index
-   ./howtos/howto_manage_users/source/index
+   howto_upgrade/index
+   howto_keep_lmn_uptodate/index
+   howto_printer/index
+   howto_manage_users/index
 
 Bedienungsanleitungen
 ---------------------
@@ -41,11 +41,11 @@ Bedienungsanleitungen
    :glob:
    :maxdepth: 1
 
-   ./howtos/howto_use_linbo/source/index
+   manual_linbo/index
 
 ..
-   ../howtos/howto_schulkonsole_admin/source/index
-   ../howtos/howto_use_xen/source/index
+   ../howtos/howto_schulkonsole_admin/index
+   ../howtos/howto_use_xen/index
 
 ..
    Schulkonsole für Admins

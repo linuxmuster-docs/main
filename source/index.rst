@@ -7,7 +7,9 @@ Herzlich Willkommen und Glückwunsch an ihrem Interesse an linuxmuster.net.
    :maxdepth: 1
 
    advisor
-   howtos/index
+   howtos
+   addons
+
 
 ..
    teacher/index

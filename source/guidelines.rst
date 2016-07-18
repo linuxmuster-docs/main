@@ -26,8 +26,8 @@ Danach können Sie Ihr neues System an Ihre Gegebenheiten anpassen. Anleitung da
    :hidden:
    
    release_information/index
-   howto_installationsleitfaden/index
-   howto_installation_klassisch/index
+   howto_install_on_xen/index
+   howto_install_from_scratch/index
    howto_linuxclients/index
    howto_windows10clients/index
 
