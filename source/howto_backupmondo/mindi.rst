@@ -22,32 +22,32 @@ auf der Konsole. In der Folge müssen Sie zwei Fragen beantworten. Die Frage nac
 
 Danach wird das System analysiert und das ISO-Image erstellt. Die abschließende Frage nach dem bootbaren USB Image beantworten Sie mit **n**.
 
-.. code-block:: bash
+.. code-block:: console
 
-  Analyzing dependency requirements       Done.         
-  Making complete dependency list Done.         
-  Analyzing your keyboard's configuration.
-  Adding the following keyboard mapping tables:   Done.         
-  Assembling dependency files...................................Done.         ..........
-  Your mountlist will look like this:
-  Analyzing LVM...
-  DEVICE          MOUNTPOINT      FORMAT          SIZE (MB)       LABEL/UUID     
-  /dev/sda6       lvm             lvm              140003                
-  /dev/sda1       /               ext3               9554                
-  /dev/mapper/vg_lml-home /home           ext3                lvm                
-  /dev/mapper/vg_lml-var /var            ext3                lvm                
-  /dev/mapper/vg_lml-var+spool+cups /var/spool/cups ext3                lvm                
-  /dev/sda5       swap            swap               3067                
-  Tarring and zipping the data content... Done.         
-  Making 16384KB boot disk...............udev device manager found
-  WARNING: No Hardware support for ST20V10
-  You may ask your manufacturer to contribute to the mindi project
-  ...11709 blocks
-  ............    Done.         
-  In the directory '/var/cache/mindi' you will find the images:-
-  mindi-bootroot.16384.img  
-  Created bootable ISO image at /var/cache/mindi/mindi.iso
-  Shall I make a bootable USB image ? (y/[n]) 
+   Analyzing dependency requirements       Done.         
+   Making complete dependency list Done.         
+   Analyzing your keyboard's configuration.
+   Adding the following keyboard mapping tables:   Done.         
+   Assembling dependency files...................................Done.         ..........
+   Your mountlist will look like this:
+   Analyzing LVM...
+   DEVICE          MOUNTPOINT      FORMAT          SIZE (MB)       LABEL/UUID     
+   /dev/sda6       lvm             lvm              140003                
+   /dev/sda1       /               ext3               9554                
+   /dev/mapper/vg_lml-home /home           ext3                lvm                
+   /dev/mapper/vg_lml-var /var            ext3                lvm                
+   /dev/mapper/vg_lml-var+spool+cups /var/spool/cups ext3                lvm                
+   /dev/sda5       swap            swap               3067                
+   Tarring and zipping the data content... Done.         
+   Making 16384KB boot disk...............udev device manager found
+   WARNING: No Hardware support for ST20V10
+   You may ask your manufacturer to contribute to the mindi project
+   ...11709 blocks
+   ............    Done.         
+   In the directory '/var/cache/mindi' you will find the images:-
+   mindi-bootroot.16384.img  
+   Created bootable ISO image at /var/cache/mindi/mindi.iso
+   Shall I make a bootable USB image ? (y/[n]) 
 
 Das mindi-CD-Image finden Sie unter ``/var/cache/mindi/mindi.iso``. Brennen Sie nun das ISO-Image auf einen CD-Rohling und booten Sie den Server damit.
 
