@@ -22,14 +22,14 @@ LEITFÄDEN
 Danach können Sie Ihr neues System an Ihre Gegebenheiten anpassen. Anleitung dazu finden Sie in unseren Howtos.
 
 .. toctree::
-   :maxdepth: 1 
+   :maxdepth: 1
    :hidden:
-   
+
    release_information/index
-   howto_install_on_xen/index
-   howto_install_from_scratch/index
-   howto_linuxclients/index
-   howto_windows10clients/index
+   howtos/install_on_xen/index
+   howtos/install_from_scratch/index
+   howtos/linuxclients/index
+   howtos/windows10clients/index
 
 .. admonition:: Bitte helfen Sie mit diese Dokumentation zu verbessern.
 

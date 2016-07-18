@@ -5,9 +5,9 @@ In diesem Abschnitt der Dokumentation finden Addons, die es ermöglichen Ihre li
 Inhalt:
 
 .. toctree::
-   :maxdepth: 1 
+   :maxdepth: 1
 
-   addon_monipi/index
+   addons/monipi/index
 
 .. admonition:: Bitte helfen Sie mit diese Dokumentation zu verbessern.
 
