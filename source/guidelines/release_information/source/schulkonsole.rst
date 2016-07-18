@@ -203,8 +203,8 @@ Schwebende Hilfe
 
 Die schwebende Hilfe blendet sich zeitgesteuert aus und es kommt dadurch nicht mehr zur Verdeckung von wichtigen Seitenelementen.
 
-Hinweise zu Neuerungen der Schulkonsole
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Verwaltung WLAN
+---------------
 
 Die Verwaltung des WLAN-Zugriffs erfolgt intern über ein spezielles
 Projekt. Standardmäßig ist es das Projekt **p\_wifi**. Es wird angelegt,

@@ -3,11 +3,11 @@
 Computer in Netzwerk aufnehmen
 ==============================
 
-Zunächst wird ein "Masterclient" eingerichtet, dessen Installation später auf alle Geräte des Computerraums verteilt wird. Dazu muss der Rechner als zunächst im Netzwerk bekannt gemacht werden, hierz gibt es drei alternative Vorgehensweisen.
+Zunächst wird ein "Masterclient" eingerichtet, dessen Installation später auf alle Geräte des Computerraums verteilt wird. Dazu muss der Rechner zunächst im Netzwerk bekannt gemacht werden, hierzu gibt es drei alternative Vorgehensweisen.
 
 * Rechneraufnahme am Clientrechner
 * Rechneraufnahme in der Schulkonsole 
-* Rchneraufnahme an der Serverkonsole
+* Rechneraufnahme an der Serverkonsole
 
 
 .. _rst_tutorial:
@@ -32,11 +32,11 @@ Entfernen Sie den Haken bei Timeout da Sie sonst nach Ablauf der Zeit automatisc
 
 Tragen Sie den Raumnamen, den Computernamen und die IP-Adresse ein. Es bietet sich an einen PC im Raum 123 als
 r123-pc<Rechnernummer> (z.B. r123-pc02) zu benennen und die IP-Adressen nach dem Schema 10.16.123.2 zu
-vergeben. Tragen Sie eine Rechnergruppe (Hardwareklasse) ein, zu der das Gerät gehören woll und bestätigen Sie mit ``Registrieren``.
+vergeben. Tragen Sie eine Rechnergruppe (Hardwareklasse) ein, zu der das Gerät gehören soll und bestätigen Sie mit ``Registrieren``.
 
 |100000000000032A00000261E61335F8_png|
 
-.. note:: Sobald alle Rechner aufgenommen wurden müssen Sie den Import der Rechner entweder in der Schulkonsole oder in der Konsole auf dem Server starten. 
+.. note:: Sobald alle Rechner aufgenommen wurden, müssen Sie den Import der Rechner entweder in der Schulkonsole oder in der Konsole auf dem Server starten. 
    Sehen Sie dazu auch die nachfolgenden Kapitel.
 
 
@@ -49,8 +49,8 @@ Rechnern aus aufgerufen werden kann, die bereits aufgenommen wurden.
 
 |10000000000003FC00000300014A97D9_png|
 
-Wechseln Sie auf den Reiter ``Hosts`` und tragen die Rechner in der Liste ein. Speichern Sie die Liste mit dem Butten ``Änderungen übernehmen``. 
-Starten Sie dann dden Import der Liste mit dem Button ``Hosts jetzt übernehmen``
+Wechseln Sie auf den Reiter ``Hosts`` und tragen die Rechner in der Liste ein. Speichern Sie die Liste mit dem Button ``Änderungen übernehmen``. 
+Starten Sie dann den Import der Liste mit dem Button ``Hosts jetzt übernehmen``
 
 |10000000000003FC00000300DEB043AA_png|
 

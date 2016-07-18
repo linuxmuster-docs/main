@@ -18,11 +18,11 @@ Imaging
 |100000000000032A000002612A58B1AE_png|
 
 Klicken Sie auf die Schaltfläche Partitionieren
-und bestätigen die Meldung mit ``Ja``
+und bestätigen die Meldung mit ``Ja``.
 
 |100000000000032A000002611AE27D91_png|
 
-Nach diesem Vorgang können Sie den Rechner neu starten
+Nach diesem Vorgang können Sie den Rechner neu starten.
 
 |100000000000032A00000261D7ACA8F5_png|
 
@@ -32,11 +32,11 @@ Windows installieren
 
 Legen Sie den Windows Installationsdatenträger ein und booten Sie von der CD. 
 Warten Sie bis der Installation-Assistent geladen ist und wählen Ihre Sprache aus. Bestätigen Sie mit
-``Weiter``
+``Weiter``.
 
 |100000000000040A00000319F588B76C_png|
 
-Klicken Sie auf ``Jetzt Installieren``
+Klicken Sie auf ``Jetzt Installieren``.
 
 |100000000000040A00000319DD5ADC8E_png|
 
@@ -45,7 +45,7 @@ Weiter bestätigen.
 
 |100000000000040A00000319E918A8C7_png|
 
-Klicken Sie auf Benutzerdefiniert: nur Windows installieren
+Klicken Sie auf Benutzerdefiniert: nur Windows installieren.
 
 |100000000000040A00000319A60B7FD3_png|
 
@@ -60,11 +60,11 @@ Warten Sie bis die Installation beendet ist.
 |100000000000040A000003193E3F3EC2_png|
 
 
-Wählen Sie die Option ``Einstellungen anpassen``
+Wählen Sie die Option ``Einstellungen anpassen``.
 
 |100000000000040A000003163D31984A_png|
 
-Konfigurieren Sie die Datenschutzeinstellungen nach Ihren Wünschen
+Konfigurieren Sie die Datenschutzeinstellungen nach Ihren Wünschen.
 
 |100000000000040A000003162FF66162_png|
 
@@ -72,13 +72,12 @@ Konfigurieren Sie die Datenschutzeinstellungen nach Ihren Wünschen
 
 Geben Sie nun einen Benutzer an, der lokal in Windows als administrativer Account verwendet wird. 
 Dieser wird im Netzwerk nicht verwendet. 
-Vergeben Sie ein Passwort für den lokalen Benutzer und klicken auf ``Weiter``
+Vergeben Sie ein Passwort für den lokalen Benutzer und klicken auf ``Weiter``.
 
 |10000000000004090000031BD6C06D3C_png|
 
 
-Sie haben Windows auf dem Rechner inst
-alliert und sollten nun auf den Desktop gelangen.
+Sie haben Windows auf dem Rechner installiert und sollten nun auf den Desktop gelangen.
 
 .. important:: Bevor Sie Herunterfahren müssen einige Anpassungen vorgenommen werden. Dazu benötigen Sie den von linuxmuster.net bereitgestellten Regpatch.
 
@@ -105,7 +104,7 @@ Heimatverzeichnis des Benutzers *pgmadmin* auf dem Server zugreifen zu können.
 
 |100000000000040900000309AD122632_png|
 
-Geben Sie die Benutzerdaten für den user pgmadmin ein und bestätigen Sie mit ``OK``
+Geben Sie die Benutzerdaten für den user pgmadmin ein und bestätigen Sie mit ``OK``.
 
 |100000000000040900000309D4AC838A_png|
 
@@ -115,36 +114,36 @@ Kopieren Sie die Datei win10-global auf den Desktop.
 
 |1000000000000409000003095FAC6141_png|
 
-Doppelklicken Sie die Datei und wählen bei beiden Abfragen ``Ja``
+Doppelklicken Sie die Datei und wählen bei beiden Abfragen ``Ja``.
 
 |100000000000040900000309C9151860_png|
 
 |1000000000000409000003090DE77B1D_png|
 
 Klicken Sie mit der rechten Maustaste auf das Windows-Symbol oder drücken Sie Windows-Taste + X
-Klicken Sie auf ``System``
+Klicken Sie auf ``System``.
 
 |100000000000040900000309D7642C20_png|
 
-Klicken Sie in der Übersicht bei dem Computername auf ``Einstellungen ändern``
+Klicken Sie in der Übersicht bei dem Computername auf ``Einstellungen ändern``.
 
 |1000000000000409000003093D2980DF_png|
 
-Klicken Sie auf ``Ändern``
+Klicken Sie auf ``Ändern``.
 
 |100000000000040900000309727EA44E_png|
 
 Tragen Sie den Computernamen ein den Sie in Linbo für den Rechner vergeben haben. In unserem Beispiel r123-pc02. 
-Wählen Sie Domäne und tragen den Domänennamen ein, im Beispiel ``schule``
+Wählen Sie Domäne und tragen den Domänennamen ein, im Beispiel ``schule``.
 
 |100000000000040900000309AFC96356_png|
 
 Geben Sie einen Benutzer der Gruppe Administratoren an. Beispielsweise den Benutzer ``domadmin`` mit dem dazugehörigen 
-Passwort und bestätigen mit ``Ok``
+Passwort und bestätigen mit ``Ok``.
 
 |10000000000004090000030964D1E68C_png|
 
-Bestätigen Sie die Meldung mit ``Ok``, schließen Sie alle Fenster und klicke Sie bei der Meldung auf ``Jetzt neu starten``
+Bestätigen Sie die Meldung mit ``Ok``, schließen Sie alle Fenster und klicken Sie bei der Meldung auf ``Jetzt neu starten``.
 
 |100000000000040900000309827575BC_png|
 
@@ -161,8 +160,8 @@ Sie können nun Änderungen an Windows vornehmen. Konfigurieren Sie das System n
 Image auf Server schreiben
 --------------------------
 
-Starten Sie den Computer, booten per pxe und wechseln Sie in LINBO auf den Reiter ``Imaging``. Klicken Sie auf ``Image erstellen``
-Starten Sie den Vorgang mit der Schaltfläche ``Erstellen+Hochladen``
+Starten Sie den Computer, booten per pxe und wechseln Sie in LINBO auf den Reiter ``Imaging``. Klicken Sie auf ``Image erstellen``.
+Starten Sie den Vorgang mit der Schaltfläche ``Erstellen+Hochladen``.
 
 |10000000000003300000026052C7AA3A_png|
 
@@ -170,8 +169,6 @@ Starten Sie den Vorgang mit der Schaltfläche ``Erstellen+Hochladen``
    aktuelle Image nimmt dessen Platz als aktives Image ein.
 
 Wählen Sie ``[Neuer Dateiname]`` und ``Neues Basisimage`` aus um ein Image zu erstellen welches das aktive Image nicht beeinflusst.
-
-|10000000000006760000092341F04D83_png|
 
 Sobald der Vorgang abgeschlossen ist können Sie den Zustand der Installation nun immer auf diesen Punkt zurücksetzen. 
 Das Image ist auf dem Server verfügbar und kann auf weitere Rechner ausgerollt werden.

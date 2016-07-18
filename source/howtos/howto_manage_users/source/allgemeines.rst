@@ -1,34 +1,20 @@
 Allgemeines
 -----------
 
-In jedem Netzwerk müssen die Benutzer vom Netzwerkbetreuer verwaltet werden. Es müssen Benutzer neu angelegt
- oder gelöscht, Benutzerdaten korrigiert oder Benutzer den Benutzergruppen zugewiesen werden. 
- In den meisten Fällen ist es außerdem im schulischen Umfeld angebracht, den zur Verfügung stehenden Plattenplatz 
- zu begrenzen und sog. Quotas anzulegen. In der *linuxmuster.net* wird für alle diese Aufgaben das Programm
-*Sophomorix* verwendet.
+In jedem Netzwerk müssen die Benutzer vom Netzwerkbetreuer verwaltet werden. Es müssen Benutzer neu angelegt oder gelöscht, Benutzerdaten korrigiert oder Benutzer den Benutzergruppen zugewiesen werden. In den meisten Fällen ist es außerdem im schulischen Umfeld angebracht, den zur Verfügung stehenden Plattenplatz zu begrenzen und sog. Quotas anzulegen. In der linuxmuster.net* wird für alle diese Aufgaben das Programm *Sophomorix* verwendet.
 
-Für die tägliche Arbeit steht dem Netzwerkbetreuer die *Schulkonsole* des Benutzers administrator
-zur Verfügung. Dort werden grundlegende Einstellungen vorgenommen, die Benutzerlisten gepflegt und geprüft 
-sowie Benutzer angelegt, versetzt und gelöscht, außerdem die Passwörter und der Plattenplatz (Quotas) für alle
- Benutzer und Gruppen verwaltet. Nur Passwörter von Schülern/innen sowie Projekte können auch von Personen mit 
- normalen Lehrer-Rechten verwaltet werden.
+Für die tägliche Arbeit steht dem Netzwerkbetreuer die *Schulkonsole* des Benutzers administrator zur Verfügung. Dort werden grundlegende Einstellungen vorgenommen, die Benutzerlisten gepflegt und geprüft sowie Benutzer angelegt, versetzt und gelöscht, außerdem die Passwörter und der Plattenplatz (Quotas) für alle Benutzer und Gruppen verwaltet. Nur Passwörter von Schülern/innen sowie Projekte können auch von Personen mit normalen Lehrer-Rechten verwaltet werden.
 
-Sehr hilfreich sind in der *Schulkonsole* die Hilfen und Erläuterungen in der rechten Spalte unten, sowie 
-die Status- bzw. Fehlermeldungen, die rechts oberhalb der Erläuterungen grün bzw. rot unterlegt angezeigt werden.
+Sehr hilfreich sind in der *Schulkonsole* die Hilfen und Erläuterungen in der rechten Spalte unten, sowie die Status- bzw. Fehlermeldungen, die rechts oberhalb der Erläuterungen grün bzw. rot unterlegt angezeigt werden.
 
-Aufgerufen wird die *Schulkonsole* durch Eingabe von https://server:242. Es erscheint eine Anmeldeseite 
-auf der man sich als Schüler, Lehrer oder Administrator anmelden kann und je nach Status unterschiedliche 
-Menüs zur Verfügung gestellt bekommt.
+Aufgerufen wird die *Schulkonsole* durch Eingabe von https://server:242. Es erscheint eine Anmeldeseite auf der man sich als Schüler, Lehrer oder Administrator anmelden kann und je nach Status unterschiedliche Menüs zur Verfügung gestellt bekommt.
 
 Die Benutzergruppen in der linuxmuster.net
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Wenn man auf Dateien des Servers zugreifen möchte, muss man sich mit einem Benutzernamen (Loginname) 
-und einem Kennwort (Passwort) am Server anmelden (authentifizieren). Dabei sollen nicht alle Benutzer 
-am System auf die gleichen Dateien und Drucker zugreifen oder an Dateien die selben Rechte haben können.
+Wenn man auf Dateien des Servers zugreifen möchte, muss man sich mit einem Benutzernamen (Loginname) und einem Kennwort (Passwort) am Server anmelden (authentifizieren). Dabei sollen nicht alle Benutzer am System auf die gleichen Dateien und Drucker zugreifen oder an Dateien die selben Rechte haben können.
 
-Es ist üblich, Benutzer, die gleiche Rechte haben sollen, zu Benutzergruppen zusammenzufassen. In der
-*linuxmuster.net* gibt es, angepasst auf Schulbedürfnisse, die folgenden Hauptbenutzergruppen:
+Es ist üblich, Benutzer, die gleiche Rechte haben sollen, zu Benutzergruppen zusammenzufassen. In der *linuxmuster.net* gibt es, angepasst auf Schulbedürfnisse, die folgenden Hauptbenutzergruppen:
 
 
 +--------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -51,8 +37,6 @@ Es ist üblich, Benutzer, die gleiche Rechte haben sollen, zu Benutzergruppen zu
 +--------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-Während der Installation der *linuxmuster.net* werden die Benutzer root und alle Administratoren angelegt.
- Für ganz bestimmte Aufgaben gibt es noch weitere Administratoren und Administratorengruppen.
+Während der Installation der *linuxmuster.net* werden die Benutzer root und alle Administratoren angelegt. Für ganz bestimmte Aufgaben gibt es noch weitere Administratoren und Administratorengruppen.
  
-Die Administratoren werden bei der Installation des Servers angelegt, alle Benutzer der Klassen-Gruppen und der Gruppe
-teachers müssen vom Netzwerkbetreuer nachträglich angelegt werden.
+Die Administratoren werden bei der Installation des Servers angelegt, alle Benutzer der Klassen-Gruppen und der Gruppe teachers müssen vom Netzwerkbetreuer nachträglich angelegt werden.

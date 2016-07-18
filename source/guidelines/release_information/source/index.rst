@@ -12,8 +12,3 @@ Was ist neu in 6.2?
    schulkonsole
    linbo
 
-.. todo::
-
-
-   Dieses Kapitel schreiben, siehe
-   http://www.linuxmuster.net/flyspray/task/592?project=3

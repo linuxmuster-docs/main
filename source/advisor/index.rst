@@ -18,6 +18,8 @@ Leitfäden
    ../guidelines/howto_installationsleitfaden/source/index
    ../guidelines/howto_windows10clients/source/index
    ../guidelines/howto_linuxclients/source/index
+
+..
    ../guidelines/howto_install_from_scratch/source/index
 
 Schritt-für-Schritt Anleitungen
@@ -40,15 +42,18 @@ Bedienungsanleitungen
    :maxdepth: 1
 
    ../howtos/howto_use_linbo/source/index
+
+..
    ../howtos/howto_schulkonsole_admin/source/index
    ../howtos/howto_use_xen/source/index
 
-Schulkonsole für Admins
-_______________________
+..
+   Schulkonsole für Admins
+   _______________________
 
 
-Hypervisorfunktionen
-____________________
+   Hypervisorfunktionen
+   ____________________
 
 
 .. admonition:: Bitte helfen Sie mit diese Dokumentation zu verbessern.

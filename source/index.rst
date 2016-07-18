@@ -1,15 +1,18 @@
-===============================
- linuxmuster.net DOKUMENTATION
-===============================
+===================================
+ linuxmuster.net 6.2 DOKUMENTATION
+===================================
 Herzlich Willkommen und Glückwunsch an ihrem Interesse an linuxmuster.net.
 
 .. toctree::
    :maxdepth: 1
 
    advisor/index
+   howtos/index
+
+..
    teacher/index
    student/index
-   howtos/index
+
 
 .. admonition:: Etwas in eigener Sache (in Ihrer und unserer)
 
