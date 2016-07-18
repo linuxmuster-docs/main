@@ -5,7 +5,7 @@ Handbuch für Netzwerkbetreuer
    :glob:
    :maxdepth: 1
 
-   ../guidelines/release_information/index
+   release_information/index
 
 
 Leitfäden
@@ -15,9 +15,9 @@ Leitfäden
    :glob:
    :maxdepth: 1
 
-   ../guidelines/howto_install_on_xen/index
-   ../guidelines/howto_windows10clients/index
-   ../guidelines/howto_linuxclients/index
+   howto_install_on_xen/index
+   howto_windows10clients/index
+   howto_linuxclients/index
 
 ..
    ../guidelines/howto_install_from_scratch/source/index
@@ -29,10 +29,10 @@ Schritt-für-Schritt Anleitungen
    :glob:
    :maxdepth: 1
 
-   ../howtos/howto_upgrade/source/index
-   ../howtos/howto_keep_lmn_uptodate/source/index
-   ../howtos/howto_printer/source/index
-   ../howtos/howto_manage_users/source/index
+   ./howtos/howto_upgrade/source/index
+   ./howtos/howto_keep_lmn_uptodate/source/index
+   ./howtos/howto_printer/source/index
+   ./howtos/howto_manage_users/source/index
 
 Bedienungsanleitungen
 ---------------------
@@ -41,7 +41,7 @@ Bedienungsanleitungen
    :glob:
    :maxdepth: 1
 
-   ../howtos/howto_use_linbo/source/index
+   ./howtos/howto_use_linbo/source/index
 
 ..
    ../howtos/howto_schulkonsole_admin/source/index

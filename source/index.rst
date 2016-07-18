@@ -6,7 +6,7 @@ Herzlich Willkommen und Glückwunsch an ihrem Interesse an linuxmuster.net.
 .. toctree::
    :maxdepth: 1
 
-   advisor/index
+   advisor
    howtos/index
 
 ..
