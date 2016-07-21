@@ -1,7 +1,7 @@
 Wiederherstellung
 =================
 
-Für die Datenmigration auf dem nun neu installierten Zielsystem ist das Shell-Skript 
+Für die Datenmigration auf dem nun neu installierten Zielsystem ist das Shell-Skript
 **linuxmuster-migration-restore** zuständig:
 
 Die Optionen des Skript können wie folgt ausgegeben werden:
@@ -9,11 +9,11 @@ Die Optionen des Skript können wie folgt ausgegeben werden:
 .. code:: bash
 
      server ~ > linuxmuster-migration-restore -h
-     
+
      Usage: linuxmuster-migration-restore <options>
-     
+
      Options:
-     
+
      -c <config dir>     Path to directory with config files (optional).
                          Per default we look in source dir for them.
      -d <source dir>     Path to source directory (mandatory,

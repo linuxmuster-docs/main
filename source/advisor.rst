@@ -15,12 +15,12 @@ Leitfäden
    :glob:
    :maxdepth: 1
 
-   howto_install_on_xen/index
-   howto_windows10clients/index
-   howto_linuxclients/index
+   howtos/install_on_xen/index
+   howtos/windows10clients/index
+   howtos/linuxclients/index
 
 ..
-   ../guidelines/howto_install_from_scratch/source/index
+   ../guidelines/install_from_scratch/index
 
 Schritt-für-Schritt Anleitungen
 -------------------------------
@@ -29,10 +29,10 @@ Schritt-für-Schritt Anleitungen
    :glob:
    :maxdepth: 1
 
-   howto_upgrade/index
-   howto_keep_lmn_uptodate/index
-   howto_printer/index
-   howto_manage_users/index
+   howtos/upgrade/index
+   howtos/keep_lmn_uptodate/index
+   howtos/printer/index
+   howtos/manage_users/index
 
 Bedienungsanleitungen
 ---------------------
@@ -41,11 +41,11 @@ Bedienungsanleitungen
    :glob:
    :maxdepth: 1
 
-   manual_linbo/index
+   manuals/linbo/index
 
 ..
-   ../howtos/howto_schulkonsole_admin/index
-   ../howtos/howto_use_xen/index
+   ../howtos/schulkonsole_admin/index
+   ../howtos/use_xen/index
 
 ..
    Schulkonsole für Admins

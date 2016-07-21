@@ -8,18 +8,18 @@ linuxmuster.net Installation an Ihre Bedürfnisse anzupassen.
 Howtos, sortiert nach Relevanz:
 
 .. toctree::
-   :maxdepth: 1 
+   :maxdepth: 1
 
-   howto_netzbrief_basics/index
-   howto_leoclient2/index
-   howto_backupmondo/index
+   howtos/netzbrief_basics/index
+   howtos/leoclient2/index
+   howtos/backupmondo/index
 
 Howtos, sonstige:
-	      
-.. toctree::
-   :maxdepth: 1 
 
-   howto_feedback/index
+.. toctree::
+   :maxdepth: 1
+
+   howtos/feedback/index
 
 
 .. admonition:: Bitte helfen Sie mit diese Dokumentation zu verbessern.
