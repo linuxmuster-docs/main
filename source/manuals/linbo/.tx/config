@@ -2,14 +2,14 @@
 host = https://www.transifex.com
 type = PO
 
-[official-documentation.howtos--howto_use_linbo--source--linbo_mainscreen]
-file_filter = source/locale/<lang>/LC_MESSAGES/linbo_mainscreen.po
-source_file = build/locale/linbo_mainscreen.pot
+[official-documentation.howtos--howto_use_linbo--source--linbo-mainscreen]
+file_filter = source/locale/<lang>/LC_MESSAGES/linbo-mainscreen.po
+source_file = build/locale/linbo-mainscreen.pot
 source_lang = de_DE
 
-[official-documentation.howtos--howto_use_linbo--source--linbo_imagingscreen]
-file_filter = source/locale/<lang>/LC_MESSAGES/linbo_imagingscreen.po
-source_file = build/locale/linbo_imagingscreen.pot
+[official-documentation.howtos--howto_use_linbo--source--linbo-imagingscreen]
+file_filter = source/locale/<lang>/LC_MESSAGES/linbo-imagingscreen.po
+source_file = build/locale/linbo-imagingscreen.pot
 source_lang = de_DE
 
 [official-documentation.howtos--howto_use_linbo--source--index]

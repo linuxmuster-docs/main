@@ -10,7 +10,7 @@ Howtos, sortiert nach Relevanz:
 .. toctree::
    :maxdepth: 1
 
-   howtos/netzbrief_basics/index
+   howtos/netzbrief-basics/index
    howtos/leoclient2/index
    howtos/backupmondo/index
 

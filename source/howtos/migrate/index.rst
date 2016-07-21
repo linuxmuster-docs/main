@@ -11,8 +11,8 @@ Inhalt:
    :maxdepth: 2
 
    summary
-   install_paket
-   config_migration_script
-   run_config_script
-   install_new_linuxmuster
-   restore_via_migration_script
+   install-paket
+   config-migration-script
+   run-config-script
+   install-new-linuxmuster
+   restore-via-migration-script

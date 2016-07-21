@@ -5,7 +5,7 @@ Handbuch für Netzwerkbetreuer
    :glob:
    :maxdepth: 1
 
-   release_information/index
+   release-information/index
 
 
 Leitfäden
@@ -15,12 +15,12 @@ Leitfäden
    :glob:
    :maxdepth: 1
 
-   howtos/install_on_xen/index
+   howtos/install-on-xen/index
    howtos/windows10clients/index
    howtos/linuxclients/index
 
 ..
-   ../guidelines/install_from_scratch/index
+   ../guidelines/install-from-scratch/index
 
 Schritt-für-Schritt Anleitungen
 -------------------------------
@@ -30,9 +30,9 @@ Schritt-für-Schritt Anleitungen
    :maxdepth: 1
 
    howtos/upgrade/index
-   howtos/keep_lmn_uptodate/index
+   howtos/keep-lmn-uptodate/index
    howtos/printer/index
-   howtos/manage_users/index
+   howtos/manage-users/index
 
 Bedienungsanleitungen
 ---------------------

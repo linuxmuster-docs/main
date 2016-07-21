@@ -1,14 +1,14 @@
 LEITFÄDEN
 =========
 
-`Was ist neu in Version 6.2? <release_information/index.html>`__
+`Was ist neu in Version 6.2? <release-information/index.html>`__
   Versionsinformationen zum aktuellen Release
 
-`Installationsleitfaden XEN <howto_install_on_xen/index.html>`__
+`Installationsleitfaden XEN <howto_install-on-xen/index.html>`__
   Wollen Sie schnell ein funktionstüchtiges System Ihr eigen nennen,
   dann würden wir Ihnen das virtualisierte System mit XEN vorschlagen.
 
-`Installationsleitfaden klassisch <howto_install_from_scratch/index.html>`__
+`Installationsleitfaden klassisch <howto_install-from-scratch/index.html>`__
   Sollten Sie stattdessen lieber genau wissen wollen, wie die
   Zusammenhänge bei der Installation verlaufen, dann legen wir Ihnen den
   Leitfaden zur Installation auf geeigneter Server-Hardware nahe.  Mit
@@ -25,9 +25,9 @@ Danach können Sie Ihr neues System an Ihre Gegebenheiten anpassen. Anleitung da
    :maxdepth: 1
    :hidden:
 
-   release_information/index
-   howtos/install_on_xen/index
-   howtos/install_from_scratch/index
+   release-information/index
+   howtos/install-on-xen/index
+   howtos/install-from-scratch/index
    howtos/linuxclients/index
    howtos/windows10clients/index
 

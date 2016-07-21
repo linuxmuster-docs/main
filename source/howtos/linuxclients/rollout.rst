@@ -3,14 +3,14 @@ Clients synchronisieren
 
 Wenn Sie nun den Client neu starten, erscheint die LINBO-Startseite mit der Auswahl, wie der Ubuntuclient gebootet werden soll.
 
-.. image:: media/rollout/linbo_startpage_ubuntu.png 
+.. image:: media/rollout/linbo-startpage-ubuntu.png 
 
 Festplatte partitionieren
 -------------------------
 
 Bevor ein Betriebssystem installiert werden kann, muss die Clientfestplatte entsprechend der in der Gruppenkonfiguration festgelegten Werte partitioniert werden. Klicken Sie wieder auf den Reiter `Imaging` und geben das LINBO-Passwort ein, danach die Schaltfläche `Partitionieren` wählen.
 
-.. image:: media/rollout/linbo_imaging_partitioning.jpg
+.. image:: media/rollout/linbo-imaging-partitioning.jpg
 
 Bestätigt man die Sicherheitsabfrage mit `Ja`, wird die Festplatte nach den Vorgaben der Gruppenkonfiguration partitioniert.
 

@@ -14,13 +14,13 @@ Inhaltsverzeichnis:
 	uebersicht
 	installation
 	konfiguration
-	konfiguration_schulkonsole
+	konfiguration-schulkonsole
 	backup
 	restore
-	restore_full
-	restore_diff
-	restore_interactive
-	restore_nfs
+	restore-full
+	restore-diff
+	restore-interactive
+	restore-nfs
 	mindi
 
 Index

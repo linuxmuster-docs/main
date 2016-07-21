@@ -25,6 +25,6 @@ LINBO bietet
    :caption: Wie LINBO funktioniert
    :maxdepth: 2
 
-   linbo_mainscreen
-   linbo_imagingscreen
+   linbo-mainscreen
+   linbo-imagingscreen
 

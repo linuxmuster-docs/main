@@ -10,7 +10,7 @@ Die LINBO-Oberfläche auf dem Client bietet jedoch auch eine Möglichkeit die Au
 
 Starten Sie den Rechner per PXE-Boot
 
-.. image:: media/registration/linbo_empty_startpage.jpg
+.. image:: media/registration/linbo-empty-startpage.jpg
 
 Klicken Sie auf den Reiter ''Imaging'' und loggen Sie sich mit dem LINBO-Passwort ein. 
 
@@ -18,15 +18,15 @@ Klicken Sie auf den Reiter ''Imaging'' und loggen Sie sich mit dem LINBO-Passwor
    
    Im Passwordfeld wird nichts angezeigt. Sie müssen es "blind" eintippen.
 
-.. image:: media/registration/linbo_passwordentry.png
+.. image:: media/registration/linbo-passwordentry.png
 
 Nun sind Sie LINBO-Administrator. Auf der Imaging-Seite fällt einem sofort das Timeout-Fenster auf, das anzeigt, nach welcher Zeit man automatisch wieder ausgeloggt wird. Mit einem Klick auf die Checkbox, kann der Timeout deaktiviert werden. 
 
-.. image:: media/registration/linbo_timeoutdialog.png
+.. image:: media/registration/linbo-timeoutdialog.png
 
 Über die Schaltfläche `Registrieren` öffnen Sie im nächsten Schritt das Dialogfenster ``Rechner registrieren``, das Eingabefelder für die Clientdaten anbietet. 
 
-.. image:: media/registration/linbo_registrationdialog.png
+.. image:: media/registration/linbo-registrationdialog.png
 
 .. note::
 
