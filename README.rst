@@ -34,6 +34,7 @@ Contribute to the documentation
 Fork the repository "all-of-me" within the github-webinterface.
 
 * Clone your fork
+
   .. code:: bash
 
      ~$ git clone https://github.com/mein-github-konto/all-of-me.git all-of-me-fork
