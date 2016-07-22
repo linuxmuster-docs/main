@@ -28,5 +28,21 @@ Make a local copy of your documentation using
    ~/all-of-me$ make html
 
 
-Changing the documentation
-++++++++++++++++++++++++++
+Contribute to the documentation
++++++++++++++++++++++++++++++++
+
+Fork the repository "all-of-me" within the github-webinterface.
+
+Clone your fork
+
+.. code:: bash
+
+   ~$ git clone https://github.com/mein-github-konto/all-of-me.git all-of-me-fork
+   ~$ cd all-of-me-fork
+   ~/all-of-me-fork$ make html
+
+Make your changes
+
+Commit your changes
+
+Push your changes
