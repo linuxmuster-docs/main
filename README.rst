@@ -33,16 +33,15 @@ Contribute to the documentation
 
 Fork the repository "all-of-me" within the github-webinterface.
 
-Clone your fork
+* Clone your fork
+  .. code:: bash
 
-.. code:: bash
+     ~$ git clone https://github.com/mein-github-konto/all-of-me.git all-of-me-fork
+     ~$ cd all-of-me-fork
+     ~/all-of-me-fork$ make html
 
-   ~$ git clone https://github.com/mein-github-konto/all-of-me.git all-of-me-fork
-   ~$ cd all-of-me-fork
-   ~/all-of-me-fork$ make html
-
-Make your changes
-
-Commit your changes
-
-Push your changes
+* Make your changes in your fork
+* Commit your changes to your fork
+* Push your changes to your fork on github
+* Create a new pull-request on github
+* If you are done and the pull-request was merged, you can delete your fork.
