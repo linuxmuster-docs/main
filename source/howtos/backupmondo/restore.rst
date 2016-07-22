@@ -58,7 +58,7 @@ Schließen Sie gegebenenfalls die Backupfestplatte an den Server an oder stellen
 Hier haben Sie nun unter anderem folgende Möglichkeiten für die Restaurationsmethode:
 
 nuke
-	Im Abschnitt :doc:`restore_full` wird die automatische Restauration erläutert.
+	Im Abschnitt :doc:`restore-full` wird die automatische Restauration erläutert.
 
 interactive
-	Der interaktive Modus im Abschnitt :doc:`restore_interactive` beschreibt die Benutzer gesteuerte Wiederherstellung.
+	Der interaktive Modus im Abschnitt :doc:`restore-interactive` beschreibt die Benutzer gesteuerte Wiederherstellung.

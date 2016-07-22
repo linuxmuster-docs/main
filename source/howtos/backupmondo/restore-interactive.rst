@@ -35,7 +35,7 @@ Bestätigen Sie noch die Sicherheitsabfrage bezüglich der Mountliste.
 
 .. image:: media/restore/restore19.png
 
-Nachdem die Zieldateisysteme gemountet wurden, werden Sie noch gefragt, ob Sie alle Dateien des Backupsets restaurieren wollen. Wählen Sie **Yes**, um den Backupset komplett zu restaurieren. Mit **No** erhalten Sie die im Abschnitt :doc:`restore_interactive` beschriebene Möglichkeit, einzelne Dateien und Verzeichnisse für die Restauration auszuwählen.
+Nachdem die Zieldateisysteme gemountet wurden, werden Sie noch gefragt, ob Sie alle Dateien des Backupsets restaurieren wollen. Wählen Sie **Yes**, um den Backupset komplett zu restaurieren. Mit **No** erhalten Sie die im Abschnitt :doc:`restore-interactive` beschriebene Möglichkeit, einzelne Dateien und Verzeichnisse für die Restauration auszuwählen.
 
 .. image:: media/restore/restore20.png
 

@@ -19,5 +19,5 @@ um schließlich auf die Konsole zu gelangen.
 
 .. image:: media/restore/restore13.png
 
-Falls Sie keine differentiellen und inkrementellen Backupsets restaurieren müssen, geben Sie am Prompt exit ein, um in den frisch restaurierten Server zu booten. Was im anderen Fall ist noch zu tun ist, lesen Sie im Abschnitt  :doc:`restore_diff`.
+Falls Sie keine differentiellen und inkrementellen Backupsets restaurieren müssen, geben Sie am Prompt exit ein, um in den frisch restaurierten Server zu booten. Was im anderen Fall ist noch zu tun ist, lesen Sie im Abschnitt  :doc:`restore-diff`.
 

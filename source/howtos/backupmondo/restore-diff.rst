@@ -12,7 +12,7 @@ Die Vorgehensweise anhand des oben genannten Beispiels
 
 wäre dann:
 
- - Automatisches Restore des Vollbackups 070201_010002_full, wie im Abschnitt :doc:`restore_full` beschrieben;
+ - Automatisches Restore des Vollbackups 070201_010002_full, wie im Abschnitt :doc:`restore-full` beschrieben;
  - Restore des differentiellen Backups 070225_020002_diff;
  - Restore der beiden nachfolgenden inkrementellen Backups 070227_030002_inc und 070228_030002_inc.
 
@@ -22,4 +22,4 @@ Nach erfolgtem Restore des Vollbackups booten Sie das System also nicht neu, son
 
 	mondorestore
 
-Fahren Sie fort, wie im :doc:`restore_interactive` beschrieben. Wiederholen Sie den Restorevorgang für jedes differentielle und inkrementelle Backup, das Sie restaurieren müssen.
+Fahren Sie fort, wie im :doc:`restore-interactive` beschrieben. Wiederholen Sie den Restorevorgang für jedes differentielle und inkrementelle Backup, das Sie restaurieren müssen.
