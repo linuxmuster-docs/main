@@ -6,8 +6,10 @@ Herzlich Willkommen und Glückwunsch an ihrem Interesse an linuxmuster.net.
 .. toctree::
    :maxdepth: 1
 
-   advisor/index
-   howtos/index
+   advisor
+   howtos
+   addons
+
 
 ..
    teacher/index
@@ -33,7 +35,7 @@ Herzlich Willkommen und Glückwunsch an ihrem Interesse an linuxmuster.net.
 
 
 ..  Mit dieser Dokumentation wollen wir Ihnen alle nötigen Informationen zu unserem System an die Hand geben, die es Ihnen ermöglichen ..
-    
+
     `LEITFÄDEN <guidelines/index.html>`__
      \.. das System zu installieren.
     `HOWTOs <howtos/index.html>`__
@@ -42,34 +44,34 @@ Herzlich Willkommen und Glückwunsch an ihrem Interesse an linuxmuster.net.
      \.. Ihr System an Ihre Wünsche anzupassen.
     `HANDBÜCHER <manuals/index.html>`__
      \.. Ihre Nutzer in das System einzuweisen.
-    
-    
+
+
     .. toctree::
        :maxdepth: 1
        :hidden:
-    	      
+
        guidelines/index
        howtos/index
        addons/index
        manuals/index
-    
-    
-    
+
+
+
     Todo-Liste:
     -----------
-    
+
     .. hint::
       Was jetzt folgt dient nur der Kenntlichmachung von fehlenden Kapiteln/Seiten/Texten/Bildern
-    
+
       Benutze ``.. todo::`` als Anker zum Kenntlichmachen in den betreffenden rst-Dateien.
       Natürlich wird das nicht in der veröffentlichten Doku erscheinen.
-    
+
     .. todolist::
-    
-    
-    Index 
+
+
+    Index
     ==================
-    
+
     * :ref:`genindex`
     * :ref:`search`
 
