@@ -6,7 +6,7 @@ Neue Rechner werden entweder durch direkten Eintrag in die Datei ``/etc/linuxmus
 Registrierung über LINBO
 ------------------------
 
-Die LINBO-Oberfläche auf dem Client bietet jedoch auch eine Möglichkeit die Aufnahme neuer Rechner ins System vorzubereiten.
+Die LINBO-Oberfläche (:doc:`Bedienungsanleitung LINBO <../../manuals/linbo/index>`) auf dem Client bietet jedoch auch eine Möglichkeit die Aufnahme neuer Rechner ins System vorzubereiten. 
 
 Starten Sie den Rechner per PXE-Boot
 
