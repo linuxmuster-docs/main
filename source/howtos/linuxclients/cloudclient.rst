@@ -5,7 +5,7 @@ Herunterladen des Standard-Linuxclients
 
 Installieren Sie auf dem Server das Paket ``linuxmuster-client-servertools``.
 
-::
+.. code-block:: console
 
    15:51/0 server ~ # apt-get install linuxmuster-client-servertools
    Reading package lists... Done
@@ -40,8 +40,9 @@ In der Datei ``/etc/linuxmuster/client-servertools.conf`` muss das gewünschte P
    CONF_DEFAULT_CLOOP_NAME="trusty714.cloop"
 
 Rufen Sie die Liste aller verfügbaren Clientabbilder auf:
-::
 
+.. code-block:: console
+   
    19:04/0 server ~ # linuxmuster-client -a list-available
    Hole Liste der verfügbaren cloops...OK
    
@@ -56,7 +57,7 @@ Herunterladen
 -------------
 
 Das Abbild lädt man nun herunter mit ``linuxmuster-client -a get-cloop -c <Imagename>``. Im Beispiel lautet das aktuellste Abbild `trusty714`.
-::
+.. code-block:: console
 
    16:47/1 server ~ # linuxmuster-client -a get-cloop -c trusty714
 
@@ -82,7 +83,7 @@ Abbild zur Synchronisation einrichten
 
 Der folgende Befehl erzeugt alle nötigen Konfigurationen, so dass das Abbild `ubuntuclient` im lokalen Netz einsatzfähig wird:
 
-::
+.. code-block:: console
 
    16:41/0 server ~ # linuxmuster-client -a configure -h ubuntuclient -p ubuntu1404 -c ubuntuclient.cloop
 
