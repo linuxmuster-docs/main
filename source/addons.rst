@@ -1,6 +1,6 @@
 ADDONs
 ======
-In diesem Abschnitt der Dokumentation finden Addons, die es ermöglichen Ihre linuxmuster.net Installations an ihre Wünsche anzupassen.
+In diesem Abschnitt der Dokumentation finden Sie Addons, die es ermöglichen ihre linuxmuster.net Installations an ihre Wünsche anzupassen.
 
 Inhalt:
 

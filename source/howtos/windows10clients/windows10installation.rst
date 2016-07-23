@@ -4,7 +4,7 @@ Windows 10 Image erstellen
 Computer partitionieren
 -----------------------
 
-.. important:: Die Partitionierung für die Installation des Betriebsystems **muss** durch linbo erfolgen, bevor Windows 
+.. important:: Die Partitionierung für die Installation des Betriebsystems **muss** durch linbo erfolgen, bevor Windows
    installiert wird, andernfalls kann durch linbo kein Festplattenabbild erstellt werden.
 
 Starten Sie den PC auf dem Sie das Image erstellen möchten neu und booten wieder vom Netzwerk (PXE). Sie erhalten nun folgende Ansicht:
@@ -30,7 +30,7 @@ Nach diesem Vorgang können Sie den Rechner neu starten.
 Windows installieren
 --------------------
 
-Legen Sie den Windows Installationsdatenträger ein und booten Sie von der CD. 
+Legen Sie den Windows Installationsdatenträger ein und booten Sie von der CD.
 Warten Sie bis der Installation-Assistent geladen ist und wählen Ihre Sprache aus. Bestätigen Sie mit
 ``Weiter``.
 
@@ -49,8 +49,8 @@ Klicken Sie auf Benutzerdefiniert: nur Windows installieren.
 
 |100000000000040A00000319A60B7FD3_png|
 
-Wählen Sie die Partition aus auf der Windows installiert werden soll. 
-Sie können die richtige Partition anhand der Größe in GB erkennen. 
+Wählen Sie die Partition aus auf der Windows installiert werden soll.
+Sie können die richtige Partition anhand der Größe in GB erkennen.
 In unserem Beispiel 50GB. Klicken Sie auf ``Weiter``.
 
 |100000000000040A00000319B79CACB3_png|
@@ -70,8 +70,8 @@ Konfigurieren Sie die Datenschutzeinstellungen nach Ihren Wünschen.
 
 |100000000000040A0000031696C05077_png|
 
-Geben Sie nun einen Benutzer an, der lokal in Windows als administrativer Account verwendet wird. 
-Dieser wird im Netzwerk nicht verwendet. 
+Geben Sie nun einen Benutzer an, der lokal in Windows als administrativer Account verwendet wird.
+Dieser wird im Netzwerk nicht verwendet.
 Vergeben Sie ein Passwort für den lokalen Benutzer und klicken auf ``Weiter``.
 
 |10000000000004090000031BD6C06D3C_png|
@@ -88,9 +88,9 @@ Regpatch bereitstellen
 
 Um den Regpatch für den Windowsclient bereitzustellen müssen Sie diesen auf der Konsole des Servers zunächst in das Homeverzeichnis des pgmadmins kopieren.
 
-.. code :: 
+.. code-block:: console
 
-   cp /var/linbo/examples/win10.global.reg /home/administrators/pgmadmin/
+   $ cp /var/linbo/examples/win10.global.reg /home/administrators/pgmadmin/
 
 |1000000000000288000001884164BC97_png|
 
@@ -99,8 +99,8 @@ Windows konfigurieren
 
 Es müssen einige essenzielle Einstellungen vorgenommen werden um Windows 10 benutzen zu können.
 
-Öffnen Sie den Windows Explorer und tragen in der Navigationsleiste den UNC-Pfad ``\\server\pgmadmin`` ein, um das 
-Heimatverzeichnis des Benutzers *pgmadmin* auf dem Server zugreifen zu können. 
+Öffnen Sie den Windows Explorer und tragen in der Navigationsleiste den UNC-Pfad ``\\server\pgmadmin`` ein, um das
+Heimatverzeichnis des Benutzers *pgmadmin* auf dem Server zugreifen zu können.
 
 |100000000000040900000309AD122632_png|
 
@@ -133,12 +133,12 @@ Klicken Sie auf ``Ändern``.
 
 |100000000000040900000309727EA44E_png|
 
-Tragen Sie den Computernamen ein den Sie in Linbo für den Rechner vergeben haben. In unserem Beispiel r123-pc02. 
+Tragen Sie den Computernamen ein den Sie in Linbo für den Rechner vergeben haben. In unserem Beispiel r123-pc02.
 Wählen Sie Domäne und tragen den Domänennamen ein, im Beispiel ``schule``.
 
 |100000000000040900000309AFC96356_png|
 
-Geben Sie einen Benutzer der Gruppe Administratoren an. Beispielsweise den Benutzer ``domadmin`` mit dem dazugehörigen 
+Geben Sie einen Benutzer der Gruppe Administratoren an. Beispielsweise den Benutzer ``domadmin`` mit dem dazugehörigen
 Passwort und bestätigen mit ``Ok``.
 
 |10000000000004090000030964D1E68C_png|
@@ -165,12 +165,12 @@ Starten Sie den Vorgang mit der Schaltfläche ``Erstellen+Hochladen``.
 
 |10000000000003300000026052C7AA3A_png|
 
-.. hint:: Bei dieser Methode wird sofern ein Image mit dem Namen bereits vorhanden ist, das alte Image umbenannt und das 
+.. hint:: Bei dieser Methode wird sofern ein Image mit dem Namen bereits vorhanden ist, das alte Image umbenannt und das
    aktuelle Image nimmt dessen Platz als aktives Image ein.
 
 Wählen Sie ``[Neuer Dateiname]`` und ``Neues Basisimage`` aus um ein Image zu erstellen welches das aktive Image nicht beeinflusst.
 
-Sobald der Vorgang abgeschlossen ist können Sie den Zustand der Installation nun immer auf diesen Punkt zurücksetzen. 
+Sobald der Vorgang abgeschlossen ist können Sie den Zustand der Installation nun immer auf diesen Punkt zurücksetzen.
 Das Image ist auf dem Server verfügbar und kann auf weitere Rechner ausgerollt werden.
 
 
