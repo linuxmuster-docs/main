@@ -32,7 +32,7 @@ Folgende Punkte sollten bei der Installation berücksichtigt werden:
 
 - Aktivieren Sie nicht den DHCP-Dienst für das GRÜNE Netzwerk!
 
-.. [#] Sie können auch andere IP-Bereiche vergeben. Lesen Sie dazu die Hinweise zu internen IP-Adressen in linuxmuster.net
+.. [#] Sie können auch andere IP-Bereiche vergeben. Lesen Sie dazu die Hinweise zu internen IP-Adressen in linuxmuster.net.
 
 Konfiguration
 -------------
@@ -112,21 +112,21 @@ Alternativ kann man die IP-Adresse auch von Hand in die Datei ``/var/ipfire/prox
 
 .. code-block:: console
 
-   mkdir /var/ipfire/proxy/advanced/acls
-   chown nobody:nobody /var/ipfire/proxy/advanced/acls
+   $ mkdir /var/ipfire/proxy/advanced/acls
+   $ chown nobody:nobody /var/ipfire/proxy/advanced/acls
 
 und in diesem Ordner die Datei ``src_unrestricted_ip.acl`` erzeugt.
 
 .. code-block:: console
 
-   touch /var/ipfire/proxy/advanced/acls/src_unrestricted_ip.acl
-   chown nobody:nobody /var/ipfire/proxy/advanced/acls/src_unrestricted_ip.acl
+   $ touch /var/ipfire/proxy/advanced/acls/src_unrestricted_ip.acl
+   $ chown nobody:nobody /var/ipfire/proxy/advanced/acls/src_unrestricted_ip.acl
 
 In die erstellte Datei wird die IP des Servers eingetragen (z.B. 10.16.1.1). Danach muss der Webproxy-Dienst neu gestartet werden:
 
 .. code-block:: console
 
-   /etc/rc.d/init.d/squid restart
+   $ /etc/rc.d/init.d/squid restart
 
 Jetzt ist das Firewallsystem soweit vorkonfiguriert, dass Sie den linuxmuster.net-Server installieren können.
 

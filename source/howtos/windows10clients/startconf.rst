@@ -23,9 +23,12 @@ und wählen anschließend die Gruppe (Hardwareklasse) die Sie editieren möchten
 Server-Konsole
 --------------
 
-Geben Sie den Befehl
-nano /var/linbo/start.conf.<gruppe>
-ein.
+Geben Sie den Befehl ein:
+
+.. code-block:: console
+
+   $ nano /var/linbo/start.conf.<gruppe>
+
 
 |100000000000028800000188045E477F_png|
 
