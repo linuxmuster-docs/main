@@ -1,5 +1,5 @@
 #!/bin/bash
 
 cd ..
-make html
+make clean && make html
 cd -
