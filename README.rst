@@ -12,7 +12,7 @@ The full documentation of linuxmuster.net.
 
 Installation
 ++++++++++++
-Clone the repository "all-of-me" using git 
+Clone the repository "all-of-me" using git
 
 .. code:: bash
 
@@ -26,7 +26,7 @@ Install sphinx, e.g. under Ubuntu 16.04, do
 
    ~$  sudo aptitude -R install git python3-sphinx texlive texlive-latex-extra texlive-lang-german
 
-Make a local copy of your documentation using 
+Make a local copy of your documentation using
 
 .. code:: bash
 
@@ -62,6 +62,37 @@ Fork the repository "all-of-me" within the github-webinterface_
 * Push your changes to your fork on github
 * Create a new pull-request on github
 * If you are done and the pull-request was merged, you can delete your fork.
+
+Translation
++++++++++++
+
+We use `Transifex <https://www.transifex.com/linuxmusternet/official-documentation/dashboard/>`__ to translate the documentation. Get started there!
+
+Build documantation in English
+++++++++++++++++++++++++++++++
+
+First you have to install ``sphinx-intl`` and the ``transifex-client``.
+
+.. code:: bash
+
+   $ pip install sphinx-intl
+   $ pip install transifex-client
+
+Make sure that ``sphinx-intl`` and ``transifex-client`` are in your PATH!
+
+Then run to following commands (inside the document root):
+
+.. code:: bash
+
+   $ make gettext
+   $ tx init
+   $ sphinx-intl update -p build/locale -l en
+   $ sphinx-intl update-txconfig-resources --pot-dir build/locale --transifex-project-name official-documentation
+   $ tx pull -l en
+   $ make -e SPHINXOPTS="-D language='en'" html
+
+Read the `Internationalization chapter <http://www.sphinx-doc.org/en/stable/intl.html>`__ in the offical sphinx documentation for a more detailed description.
+
 
 Further reading
 +++++++++++++++
