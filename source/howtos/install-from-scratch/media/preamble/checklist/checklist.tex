@@ -1,0 +1,106 @@
+\documentclass[ngerman,a4paper]{scrartcl}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage[scaled=.92]{helvet}
+\usepackage{courier}
+\renewcommand*{\familydefault}{phv}
+\usepackage[left=15mm,top=15mm,bottom=10mm,right=10mm,ignorefoot]{geometry}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[
+  pdftex,colorlinks=true,
+  pdftitle={Checklist Installation linuxmuster.net},pdfsubject={Checklist Installation linuxmuster.net},
+  pdfauthor={Sven Röhrauer},
+  pdfpagemode=UseNone,pdfstartview=FitH,
+  pagebackref,pdfhighlight={/N}
+]{hyperref}
+
+\begin{document}
+\section*{Installation von linuxmuster.net}
+\begin{Form}
+\begin{tabular}[t]{@{}llll}
+\multicolumn{2}{@{}l}{\textbf{Vorbereitungen}}\\
+Datum der Installation &\TextField[%
+name=date-of-install,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+Download des IPFires in Version 103 &
+\CheckBox[name=downloaded-server,width=1em,height=0.8em,bordercolor={0.65 0.79 0.94}]{}\\
+Download des Ubuntu-Servers (ubuntu-12.04.5-server-amd64) &
+\CheckBox[name=downloaded-ipfire,width=1em,height=0.8em,bordercolor={0.65 0.79 0.94}]{}\\
+\multicolumn{2}{c}{}\\
+\multicolumn{2}{@{}l}{\textbf{Installation der Firewall IPFire}}\\
+Hostname (Empfehlung: ipfire)&\TextField[%
+name=ipfire-local-domain,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+lokale Domäne (Empfehlung: linuxmuster-net.lokal)&\TextField[%
+name=name,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+Kennwort des Benutzer „root“&\TextField[%
+name=ipfire-password-root,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+Kennwort des Benutzer „admin“&\TextField[%
+name=ipfire-password-admin,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+Adresseinstellung IP grün&\ChoiceMenu[print,combo,name=ipfire-adress-green,default=,width=20em,bordercolor={0.65 0.79 0.94}]{}{10.16.1.254, 10.32.1.254, 10.48.1.254, 10.64.1.254, 10.80.1.254, 10.96.1.254, 10.112.1.254, 10.128.1.254, 10.144.1.254, 10.160.1.254, 10.176.1.254, 10.192.1.254, 10.208.1.254, 10.224.1.254}\\
+Adresseinstellung IP rot&\ChoiceMenu[print,name=adress-red,combo,default= ,width=20em,bordercolor={0.65 0.79 0.94}]{}{DHCP, statische IP}\\
+\hspace*{1cm} falls statische IP: DNS1&\TextField[%
+name=ipfire-dns1,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+\hspace*{1cm} falls statische IP: DNS2&\TextField[%
+name=ipfire-dns2,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+\hspace*{1cm} falls statische IP: gateway&\TextField[%
+name=ipfire-gateway,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+Adresseinstellung IP blau&\ChoiceMenu[name=adress-blue,print,combo,default=,width=20em,bordercolor={0.65 0.79 0.94}]{}{172.16.16.254, 172.16.31.254, 172.16.48.254, 172.16.64.254, 172.16.80.254, 172.16.96.254, 172.16.112.254, 172.16.128.254, 172.16.144.254, 172.16.160.254, 172.16.176.254, 172.16.192.254, 172.16.208.254, 172.16.224.254}\\
+\multicolumn{2}{c}{}\\
+\multicolumn{2}{@{}l}{\textbf{Konfiguration der Firewall IPFire}}\\
+ssh-Zugriff aktiviert & \CheckBox[name=ipfire-ssh-enabled,width=1em,height=0.8em,bordercolor={0.65 0.79 0.94}]{}\\
+Uneingeschränkten Proxyzugriff für den Server eingestellt & \CheckBox[name=ipfire-proxy-server,width=1em,height=0.8em,bordercolor={0.65 0.79 0.94}]{}\\
+\multicolumn{2}{c}{}\\
+\multicolumn{2}{@{}l}{\textbf{Installation des linuxmuster.net-Servers}}\\
+IP-Adresse des Servers&\ChoiceMenu[print,combo,name=server-ip,default=,width=20em,bordercolor={0.65 0.79 0.94}]{}{10.16.1.1, 10.32.1.1, 10.48.1.1, 10.64.1.1, 10.80.1.1, 10.96.1.1, 10.112.1.1, 10.128.1.1, 10.144.1.1, 10.160.1.1, 10.176.1.1, 10.192.1.1, 10.208.1.1, 10.224.1.1}\\
+DNS-Server&\ChoiceMenu[print,combo,name=ipfire-adress-green,default=,width=20em,bordercolor={0.65 0.79 0.94}]{}{10.16.1.254, 10.32.1.254, 10.48.1.254, 10.64.1.254, 10.80.1.254, 10.96.1.254, 10.112.1.254, 10.128.1.254, 10.144.1.254, 10.160.1.254, 10.176.1.254, 10.192.1.254, 10.208.1.254, 10.224.1.254}\\
+Gateway&\ChoiceMenu[print,combo,name=ipfire-adress-green,default=,width=20em,bordercolor={0.65 0.79 0.94}]{}{10.16.1.254, 10.32.1.254, 10.48.1.254, 10.64.1.254, 10.80.1.254, 10.96.1.254, 10.112.1.254, 10.128.1.254, 10.144.1.254, 10.160.1.254, 10.176.1.254, 10.192.1.254, 10.208.1.254, 10.224.1.254}\\
+Hostname&\TextField[%
+name=server-hostname,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+Hostname&\TextField[%
+name=server-external-name,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+Name des administrativen Nutzers&\TextField[%
+name=server-name-admin,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+Passwort des administrativen Nutzers&\TextField[%
+name=server-password-admin,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+\multicolumn{2}{c}{}\\
+\multicolumn{2}{@{}l}{\textbf{linuxmuster.net Pakete installieren}}\\
+Paketquellen eintragen &
+\CheckBox[name=lmn-package,width=1em,height=0.8em,bordercolor={0.65 0.79 0.94}]{}\\
+Installieren mit: \\
+\texttt{sudo apt-get install linuxmuster-base}  &
+\CheckBox[name=lmn-install,width=1em,height=0.8em,bordercolor={0.65 0.79 0.94}]{}\\
+\multicolumn{2}{c}{}\\
+\multicolumn{2}{@{}l}{\textbf{linuxmuster.net konfigurieren}}\\
+Konfiguration starten mit:\\
+\texttt{sudo linuxmuster-setup -first}  & \CheckBox[name=lmn-config,width=1em,height=0.8em,bordercolor={0.65 0.79 0.94}]{}\\
+Länderkürzel&\ChoiceMenu[print,combo,default=,width=20em,bordercolor={0.65 0.79 0.94}]{}{DE, AT, CH, --}\\
+Bundesland&\ChoiceMenu[print,combo,default=,width=20em,bordercolor={0.65 0.79 0.94}]{}{BW, BY, BE, BB, HB, HH, HE, MV, NI, NW, RP, SL, SN, ST, SH, TH, --}\\
+Schulort&\TextField[%
+name=lmn-school-place,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+Schulname&\TextField[%
+name=lmn-school-name,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+Schulort&\TextField[%
+name=lmn-school-place,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+Samba-Domäne&\TextField[%
+name=lmn-school-place,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+Hostname&\TextField[%
+name=lmn-hostname,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+lokale Domäne&\TextField[%
+name=lmn-domain,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+IP-Bereich&\ChoiceMenu[print,combo,default= ,width=20em,bordercolor={0.65 0.79 0.94}]{}{16-31, 32-47, 48-63, 64-79, 80-95, 96-111, 112-127, 128-143, 144-159, 160-175, 176-191, 192-207,208-223,224-239}\\
+externer Servername&\TextField[%
+name=lmn-external-name,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+SMTP-Relay-Host&\TextField[%
+name=lmn-smtp,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+subnetting&\TextField[%
+name=lmn-subnetting,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+Passwort des Benutzers administrator&\TextField[%
+name=lmn-admin-password,width=20em,bordercolor={0.65 0.79 0.94}]{}\\
+Neustart mit \texttt{sudo reboot}  &\CheckBox[name=lmn-reboot,width=1em,height=0.8em,bordercolor={0.65 0.79 0.94}]{}\\
+\end{tabular}
+\end{Form}
+\end{document}
+
+ 

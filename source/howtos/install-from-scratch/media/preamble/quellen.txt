@@ -1,0 +1,48 @@
+Switch
+======
+Grafik: switch-146067.svg
+Quelle: https://pixabay.com/de/schalter-netzwerk-lan-computer-146067/
+Lizens: CC0 Public Domain; Freie kommerzielle Nutzung; Kein Bildnachweis nötig 
+Datum des Downloads: 23.07.2016
+
+Router
+======
+Grafik: computer-159829.svg
+Quelle: https://pixabay.com/de/computer-netzwerk-router-server-159829/
+Lizens: CC0 Public Domain; Freie kommerzielle Nutzung; Kein Bildnachweis nötig
+Datum des Downloads: 23.07.2016
+
+WLAN-Router
+===========
+Grafik: computer-159828.svg
+Quelle: https://pixabay.com/de/computer-netzwerk-router-server-159828/
+Lizens: CC0 Public Domain; Freie kommerzielle Nutzung; Kein Bildnachweis nötig
+Datum des Downloads: 23.07.2016
+
+Server
+======
+Grafik: server-37258.svg
+Quelle: https://pixabay.com/de/server-hardware-netzwerk-computer-37258/
+Lizens: CC0 Public Domain; Freie kommerzielle Nutzung; Kein Bildnachweis nötig
+Datum des Downloads: 23.07.2016
+
+Firewall
+========
+Grafik: firewall-153179.svg
+Quelle: https://pixabay.com/de/firewall-feuer-wand-computer-153179/
+Lizens: CC0 Public Domain; Freie kommerzielle Nutzung; Kein Bildnachweis nötig
+Datum des Downloads: 23.07.2016
+
+Internet
+========
+Grafik: cloud-37010.svg
+Quelle: https://pixabay.com/de/wolke-tag-dunkel-cludy-wetter-37010/
+Lizens: CC0 Public Domain; Freie kommerzielle Nutzung; Kein Bildnachweis nötig
+Datum des Downloads: 23.07.2016
+
+Client
+======
+Grafik: computer-158675
+Quelle: https://pixabay.com/de/computer-schreibtisch-arbeitsplatz-158675/
+pLizens: CC0 Public Domain; Freie kommerzielle Nutzung; Kein Bildnachweis nötig
+Datum des Downloads: 23.07.2016
