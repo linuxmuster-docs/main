@@ -29,6 +29,7 @@ Schritt-für-Schritt Anleitungen
    :glob:
    :maxdepth: 1
 
+   howtos/install-from-scratch/index 
    howtos/upgrade/index
    howtos/keep-lmn-uptodate/index
    howtos/printer/index

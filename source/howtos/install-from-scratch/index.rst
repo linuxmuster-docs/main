@@ -11,11 +11,12 @@ Neben den vorgefertigten Paket für die Virtualiserungsumgebung XEN, können Sie
 Inhalt:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 5
 
-   installFirewall
-   installUbuntu
-   installLML
+   preamble
+   firewall
+   server
+
 
 
 Index
