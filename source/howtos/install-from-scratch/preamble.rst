@@ -9,7 +9,7 @@ Die linuxmuster.net 6.2 wird als Zwei-Server-Lösung (IPFire-Firewall und linuxm
 
 Checkliste
 ----------
-Nutzen Sie die :download:`Checkliste  <./media/preamble/checklist/checklist.pdf>`, um alle während der Installation gemachten Einstellungen festzuhalten. Es handelt sich um ein pdf-Formular, die können es also auch am PC ausfüllen. Halten Sie diese Checkliste bereits, wenn Sie den Telefon-Support in Anspruch nehmen wollen.
+Nutzen Sie die :download:`Checkliste  <./media/preamble/checklist/checklist.pdf>`, um alle während der Installation gemachten Einstellungen festzuhalten. Es handelt sich um ein PDF-Formular, Sie können es also auch am PC ausfüllen. Halten Sie diese Checkliste bereit, wenn Sie den Telefon-Support in Anspruch nehmen wollen.
 
 Download der Software
 ---------------------
@@ -35,14 +35,14 @@ Als Ausgabe erhält man die Prüfsumme, z.B.
 
    1b92a278709ddc0542dd0f8514693ec073a963c5  ipfire-2.19.x86_64-full-core103.iso
    
-Dies so erhalten Prüfsumme muss mit der auf der `Download-Seite <http://downloads.ipfire.org/release/ipfire-2.19-core103>`_ angegebenen übereinstimmen. 
+Dies so erhaltene Prüfsumme muss mit der auf der `Download-Seite <http://downloads.ipfire.org/release/ipfire-2.19-core103>`_ angegebenen übereinstimmen. 
    
 Ubuntu Server
 `````````````
 Laden Sie das Iso-Image ( `Ubuntu 12.04.5 LTS 64-bit PC (AMD64) server install CD <http://releases.ubuntu.com/12.04/ubuntu-12.04.5-server-amd64.iso>`_ ) herunter und brennen es auf eine CD.
  
   .. warning:: 
-   Verwenden Sie **nicht** Ubuntu 14.04 oder Ubuntu 16.04. |br| Erst die Anfang 2017 erscheinende Version linuxmuster.net 7 unterstütz Ubuntu 16.04.
+   Verwenden Sie **nicht** Ubuntu 14.04 oder Ubuntu 16.04. |br| Erst die Anfang 2017 erscheinende Version linuxmuster.net 7 unterstützt Ubuntu 16.04.
 
 Um sicher zu stellen, dass die Datei richtig heruntergeladen wurde, können Sie die SHA1-Summe prüfen. Auf der Konsole eines Linuxbetriebsystems steht z.B. der Befehl ``sha1sum`` zur Verfügung:    
 
@@ -77,7 +77,7 @@ Die linuxmuster.net-Lösung kann mit unterschiedlichen IP-Bereiche arbeiten. Jed
 | 224-239 | 10.224.0.0        | 10.239.255.255  | 10.224.1.1 | 10.224.1.254 |
 +---------+-------------------+-----------------+------------+--------------+
 
-Bei der Installation entscheiden Sie sich für einen der Bereiche. Liegen keine besonderen Anforderungen (z.B. Testbetrieb von linuxmuster.net in einem weiteren produktiv laufenden linuxmuster.net-System) vor, wird empfohlen den Bereich 16-31 zu verwenden.  |br| Dies hat auch den Vorteil, dass alle im vorliegenden Dokument enthaltenen Screenshots bei einer Installation mit diesem Bereichs gemacht wurden.
+Bei der Installation entscheiden Sie sich für einen der Bereiche. Liegen keine besonderen Anforderungen (z.B. Testbetrieb von linuxmuster.net in einem weiteren produktiv laufenden linuxmuster.net-System) vor, wird empfohlen den Bereich 16-31 zu verwenden.  |br| Dies hat auch den Vorteil, dass alle im vorliegenden Dokument enthaltenen Screenshots bei einer Installation mit diesem Bereich gemacht wurden.
 
 Netzwerknamen der Firewall-Lösung IPFire
 ````````````````````````````````````````

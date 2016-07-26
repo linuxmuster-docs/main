@@ -43,7 +43,7 @@ Bestätigen Sie durch Drücken der ``ENTER``-Taste, dass Sie den IPFire installi
 
    Bestätigen Sie, dass Sie den IPFire installieren möchten
 
-Akzeptieren Sie die Lizenz. Springen Sie dazu mit der ``TAB``-Taste auf das Bestätigungsfeld und Drücken die  ``Leer``-Taste. Bestätigen Sie anschließend mit der  ``ENTER``-Taste.
+Akzeptieren Sie die Lizenz. Springen Sie dazu mit der ``TAB``-Taste auf das Bestätigungsfeld und drücken die  ``Leer``-Taste. Bestätigen Sie anschließend mit der  ``ENTER``-Taste.
 
 .. figure:: media/firewall/040.png
    :width:  450px
@@ -61,7 +61,7 @@ Bestätigen Sie durch Drücken der ``ENTER``-Taste, dass in den folgenden Schrit
    :alt: Schritt 5 der Installation der Firewall
    :figwidth: 350px
 
-   Bestätigen Sie, dass Sie die Partitionierung und Formatierung der Festplatte.
+   Bestätigen Sie die Partitionierung und Formatierung der Festplatte.
    
 Wählen Sie durch Drücken der ``ENTER``-Taste **ext4** als Dateisystem.
 
@@ -116,7 +116,7 @@ Geben Sie als Hostname **ipfire** ein und bestätigen Sie durch Drücken der ``E
 
    Geben Sie als Hostname **ipfire** ein.
    
-Geben Sie den Domänennamen ein und bestätigen Sie durch Drücken der ``ENTER``-Taste. Empfehlung: verwenden Sie `linuxmuster-net.lokal`
+Geben Sie den Domänennamen ein und bestätigen Sie durch Drücken der ``ENTER``-Taste. Empfehlung: Verwenden Sie `linuxmuster-net.lokal`
 
   .. warning::
    Verwenden Sie **nicht** `local` als Teil des Domänennamens.
@@ -163,12 +163,12 @@ Wählen Sie den Punkt `Typ der Netzwerkkonfiguration` durch Drücken der ``ENTER
 
    Wählen Sie den Punkt `Typ der Netzwerkkonfiguration`.
 
-Wählen Sie den Punkt `GREEN + RED + BLUE` mit den ``Pfeil``-Tasten aus und bestätigen Sie ihre Auswahl mit der ``ENTER``-Taste.
+Wählen Sie den Punkt `GREEN + RED + BLUE` mit den ``Pfeil``-Tasten aus und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste.
 
   .. note::
    - Im `grünen Netz` befinden sich später die Computer der Schule.
    - Über das `rote Netz` wird der IPFire über den Router mit dem Internet verbunden.
-   - Das `blaue Netz` ist das Gästenetz, in diesem befinden sich später BYOD-Geräte.
+   - Das `blaue Netz` ist das Gästenetz, in diesem befinden sich später BYOD-Geräte oder per WLAN verbundene Geräte.
 
   .. warning::
    Wählen Sie die Konfiguration auch dann, wenn Sie nicht vorhaben, ein Gästenetz anzubieten. Die weitere Installation schlägt sonst fehl.
@@ -191,7 +191,7 @@ Wählen Sie  den Punkt `Netzwerkkartenzuordnungen` mit den mit den ``Pfeil``-Tas
    
    Wählen Sie den Punkt `Netzwerkkartenzuordnungen`.
 
-Im folgenden ordnen Sie die einzelnen Netzwerkkarten anhand ihrer MAC-Adresse den Netzen zu.
+Im Folgenden ordnen Sie die einzelnen Netzwerkkarten anhand ihrer MAC-Adresse die Netze zu.
 
   .. note::
    Falls Sie nicht wissen, welche MAC-Adressen zu welcher Netzwerkkarten gehört, können Sie die Netzwerkkartenzuordnung an dieser Stelle beliebig vornehmen und später feststellen, welche Netzwerkkarte sich in welchem Netz befindet.
@@ -422,9 +422,9 @@ Zuordnen der Netze zu den Netzwerkkarten
 ----------------------------------------- 
 Falls Sie während des Setup nicht sicher waren, welche Netzwerkkarte sich in welchem Netz befindet erfolgt nun die Zuordnung. Anderenfalls fahren Sie bitte mit dem :ref:`ssh-config-label` fort.
 
-Zuordnung der Netzwerkkarte zum grünen Netz
-```````````````````````````````````````````
-Verbinden Sie eine der drei Netzwerkkarten mit einem Switch. Im folgenden wird geprüft, ob diese Netzwetzwerkkarte dem grünen Netz zugeordnet ist. Verbinden Sie als nächstes einen Computer Ihrer Wahl mit diesem Switch und geben Sie dem Computer eine feste IP. Sie benötigen dazu folgende Daten:
+Zuordnen der Netzwerkkarte zum grünen Netz
+``````````````````````````````````````````
+Verbinden Sie eine der drei Netzwerkkarten mit einem Switch. Im Folgenden wird geprüft, ob diese Netzwetzwerkkarte dem grünen Netz zugeordnet ist. Verbinden Sie als nächstes einen Computer Ihrer Wahl mit diesem Switch und geben Sie dem Computer eine feste IP. Sie benötigen dazu folgende Daten:
 
 .. note::
   Wenn Sie einen anderen Adressbereich gewählt haben, müssen Sie diese Eingabe anpassen.
@@ -438,16 +438,16 @@ Verbinden Sie eine der drei Netzwerkkarten mit einem Switch. Im folgenden wird g
 
 Pingen Sie nun auf die IP `10.16.1.254`. Erhalten Sie eine Antwort befindet sich diese Netzwerkkarte im grünen Netz. Fahren Sie in diesem Fall mit der :ref:`red-network` fort.
 
-Erhalten Sie keine Antwort verbinden ziehen Sie das Kabel aus der 1. Netzwerkkarte des IPFires ab und stecken Sie es in die 2.
+Erhalten Sie keine Antwort, ziehen Sie das Kabel aus der 1. Netzwerkkarte des IPFires ab und stecken Sie es in die zweite.
 Pingen Sie erneut auf die IP `10.16.1.254`. Erhalten Sie eine Antwort befindet sich diese Netzwerkkarte im grünen Netz. Fahren Sie in diesem Fall mit :ref:`red-network` fort.
 
-Erhalten Sie keine Antwort verbinden ziehen Sie das Kabel aus der 2. Netzwerkkarte ab und stecken Sie es in die 3. |br|
-Testen Sie dies sicherheitshalber, indem sie erneut auf die IP `10.16.1.254` pingen. Sie erhalten nun eine Antwort.
+Erhalten Sie keine Antwort, ziehen Sie das Kabel aus der 2. Netzwerkkarte ab und stecken Sie es in die dritte. |br|
+Testen Sie dies sicherheitshalber, indem Sie erneut auf die IP `10.16.1.254` pingen. Sie erhalten nun eine Antwort.
 
 .. _red-network:
 
 Zuordnen der Netzwerkkarte zum roten Netz
-```````````````````````````````````````````
+`````````````````````````````````````````
 Melden Sie sich mit dem Benutzer `root` und dem von Ihnen gewählten Passwort an der Konsole des IPFire an.
 
 .. code-block:: console
@@ -497,8 +497,8 @@ Damit der linuxmuster.net-Server bei der Installation auf den IPFire zugreifen k
 .. _ssh-config-webinterface-label:
 
 Konfiguration über das Webinterface
-````````````````````````````````````
-Öffnen Sie in dem an den Switch angeschlossenen Computer einen Browser und rufen die Adresse `https://10.16.1.254:444` auf. Akzeptieren Sie den Sicherheitshinweis, in dem Sie zunächst auf ``Ich kenne das Risiko`` klicken.
+```````````````````````````````````
+Öffnen Sie in dem an den Switch angeschlossenen Computer einen Browser und rufen die Adresse https://10.16.1.254:444 auf. Akzeptieren Sie den Sicherheitshinweis, in dem Sie zunächst auf ``Ich kenne das Risiko`` klicken.
 
 .. note::
   Je nach Browser könne die folgenden Bilder variieren. Hier wurde der Firefox verwendet.
@@ -509,7 +509,7 @@ Konfiguration über das Webinterface
    :alt: Schritt 26 der Erstkonfiguration der Firewall
    :figwidth: 350px
    
-   Rufen Sie die Adresse `https://10.16.1.254:444` auf und akzeptieren Sie den Sicherheitshinweis.
+   Rufen Sie die Adresse `https://10.16.1.254:444 <https://10.16.1.254:444>`_ auf und akzeptieren Sie den Sicherheitshinweis.
 
 Klicken Sie auf ``Ausnahme hinzufügen``.
 
@@ -567,9 +567,14 @@ und bestätigen Sie Ihre Auswahl durch Klicken auf die Schaltfläche ``Speichern
    Erlauben sie den SSH-Zugriff sowie die Authentifizierung auf Basis öffentlicher Schlüssel
    
 .. note::
-  Werden in der Weboberfläche des IPFire Aktualisierungen gemeldet, spielen Sie diese bitte **nicht** ein. Nutzen Sie stattdessen nach der Installation des linuxmuster.net-Servers den Befehl ``linuxmuster-ipfire --upgrade``. So ist sichergestellt, dass die Version des IPFires mit der Version des linuxmuster.net-Server kompatibel sind. Siehe dazu auch :doc:`Aktualisierung der Firewall IPFire <../../howtos/keep-lmn-uptodate/2-update-ipfire/>`    
+  Werden in der Weboberfläche des IPFire Aktualisierungen gemeldet, spielen Sie diese bitte **nicht** ein. Nutzen Sie stattdessen nach der Installation des linuxmuster.net-Servers den Befehl ``linuxmuster-ipfire --upgrade``. So ist sichergestellt, dass die Version des IPFires mit der Version des linuxmuster.net-Servers kompatibel sind. Siehe dazu auch :doc:`Aktualisierung der Firewall IPFire <../../howtos/keep-lmn-uptodate/2-update-ipfire/>`    
    
 Fahren Sie nun mit der :ref:`Konfiguration des Proxys <proxy-config-label>` fort.
+
+
+..
+   review t.kuechel
+
 
 .. _ssh-config-console-label:   
    

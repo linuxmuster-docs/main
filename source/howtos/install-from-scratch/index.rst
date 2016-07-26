@@ -17,11 +17,3 @@ Inhalt:
    firewall
    server
 
-
-
-Index
------
-
-* :ref:`genindex`
-* :ref:`search`
-

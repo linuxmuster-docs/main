@@ -255,7 +255,7 @@ Bestätigen bzw. ggf. korrigieren Sie die Zeitzone.
    Bestätigen bzw. ggf. korrigieren Sie die Zeitzone.
    
 Partitionierung
-````````````````
+```````````````
    
 Partitionieren Sie nach Ihren Bedürfnissen. Hier gibt es nur eine linuxmuster.net spezifischen Vorgabe: 
 
@@ -609,8 +609,8 @@ Zum Abschluss der Installation wird das System neu gestartet.
 
    Zum Abschluss der Installation wird das System neu gestartet.
 
-Nach dem Neustart   
-````````````````   
+Nach dem Neustart
+`````````````````
 Melden Sie sie nach dem Neustart mit Ihrem bei der Installation gewählten Nutzer und Passwort an.
 
 .. code-block:: console
@@ -742,6 +742,7 @@ Installieren Sie das Paket ``linuxmuster-base``.
    Entfernen Sie alle Pakete aus dem Zwischenspeicher
    
    .. code-block:: console
+
       server ~ #  apt-get clean
        
    Aktualisieren Sie die Paketlisten
