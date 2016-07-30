@@ -12,3 +12,4 @@ Was ist neu in 6.2?
    schulkonsole
    linbo
 
+Nehmen Sie das Upgrade zu linuxmuster.net 6.2 wahr und folgen Sie der :doc:`Upgrade-Anleitung <../howtos/upgrade/index>`
