@@ -226,3 +226,4 @@ Tauschordnern angepasst werden.  Dies geschieht durch Aufruf von:
    # sophomorix-repair --permissions
 
 
+

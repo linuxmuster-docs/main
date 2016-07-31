@@ -10,8 +10,9 @@ Einstellungen bzgl. zusätzlich zu sichernden bzw. vom Backup auszuschließenden
     /etc/linuxmuster/migration 
 
 ein. Diese Dateien werden beim Backup mitgesichert und beim Restore auf dem Zielsystem ausgewertet.
-Eigene Dateien und Verzeichnisse einbeziehen
 
+Eigene Dateien und Verzeichnisse einbeziehen
+--------------------------------------------
 Soll zum Beispiel die Schulhomepage, die unter ``/var/www/homepage``  
 abgelegt ist, ebenfalls gesichert und auf dem Zielsystem wieder hergestellt werden, so trägt man den Pfad einfach in ``etc/linuxmuster/migration/include.conf`` ein:
 

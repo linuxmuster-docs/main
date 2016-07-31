@@ -1,8 +1,3 @@
-.. Installationsleitfaden documentation master file, created by
-   sphinx-quickstart on Sat Nov  7 15:29:20 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Manuelle Installation von linuxmuster.net
 =========================================
 
@@ -11,9 +6,11 @@ Neben den vorgefertigten Paket für die Virtualiserungsumgebung XEN, können Sie
 Inhalt:
 
 .. toctree::
-   :maxdepth: 5
+   :maxdepth: 1
 
    preamble
    firewall
    server
 
+..
+   preamble

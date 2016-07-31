@@ -27,7 +27,7 @@ Benutzer **administrator** auf der CUPS-Administrationsseite ein.
 
 .. image:: media/drucker-einrichten-client-linux/drucker-linux1.png
 
-Klicken Sie hier unter der Rubrik Drucker auf **Drucker hinzufügen**. 
+Klicken Sie hier unter der Rubrik Drucker auf **Drucker hinzufügen**.
 
 .. image:: media/drucker-einrichten-client-linux/drucker-linux2.png
 

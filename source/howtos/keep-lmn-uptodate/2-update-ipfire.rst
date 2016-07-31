@@ -49,20 +49,16 @@ Der Vorgang stellt sich dann wie folgt dar:
    ...package lists are up-to-date
    
    upgrading IPFire ...
+
+   Core-update 2.19
+   Release: 100 -> 102
+
    [screen is terminating]
    Connection to 10.16.1.254 closed.
    ...upgrade was successful
 
    Rebooting IPfire ...
 
-Nach Aufruf des Befehls ist der Aktualisierungsvorgang des IPFires wie nachstehend zu beobachten:
-
-
-.. todo::
-
-    Einfügen einer Grafik, die das Ergebnis auif dem IPFire zeigt.
-    Dateiname und-ort: media/2-update-ipfire/1-update-ipfire-script-ergebnis.png
-   
 Hierbei kann es sein, dass der Befehl ggf. auch zweimal aufgerufen werden muss, nachdem ein Zwischenupdate von IPFire installiert und hierbei ein größerer Versionssprung durchgeführt wurde.
 Nach dem Reboot von IPFire ist das Script erneut aufzurufen.
 
@@ -106,7 +102,7 @@ Vorrausetzungen damit Updates angezeigt werden:
 
 Sehen Sie nahstehende Abbildung, dann sind o.g. Voraussetzungen erfüllt.
 
-.. image:: media/2-update-ipfire/2-update-ipfire_gui_hint.png
+.. image:: media/2-update-ipfire/2-update-ipfire-gui-hint.png
    :alt: Upgrade Hinweis in IPFire GUI
    :align: center
 

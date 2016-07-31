@@ -7,11 +7,13 @@ Sicherheitskritische Aktualisierungen des Ubuntu-Betriebssystems werden von Ubun
     Aktualisieren Sie daher regelmäßig Ihr System. 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    1-update-ubuntu-server
    2-update-ipfire
    3-hints-ipfire
    
+..
+   1-update-ubuntu-server
    
 

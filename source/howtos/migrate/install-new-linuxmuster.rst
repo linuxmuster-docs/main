@@ -7,6 +7,8 @@ Nachdem das Backup mithilfe des Migrationsskripts linuxmuster-migration durchgef
 
     Zum weiteren Vorgehen Siehe `Installation der linuxmuster.net von Grund auf`_.
 
-.. _Installation der linuxmuster.net von Grund auf: howto_install-from-scratch/source/index.html
+.. _Installation der linuxmuster.net von Grund auf: ../install-from-scratch/index.html
+
+
 
 
