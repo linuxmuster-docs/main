@@ -6,23 +6,33 @@
 Installationsleitfaden XEN
 ==========================
 
-In diesem Dokument finden Sie die Anleitung zum Installieren der linuxmuster.net-Musterlösung.
+In diesem Dokument finden Sie Anleitungen zum Installieren der von
+Netzint bereitgestellten XenAppliance der linuxmuster.net-Musterlösung
+in der Version 6.2. Es werden diverse Installationsautomatismen
+verwendet, sodass keine erweiterten Kenntnisse für die Installation
+notwendig sind. Eine vollständige Installation des Hypervisors, der
+Import aller VMs sowie der Konfiguration laut Anleitung benötigt dauert ca. 80 Minuten.
 
-Die Installation erfolgt weitestgehend automatisiert und graphisch geführt.
-Eine vollständige Installation benötigt in der Regel 80 Minuten. 
+Citrix XenServer eignet sich für den virtuellen Betrieb von
+linuxmuster.net besonders, da er nahtlos dem OpenSource-Konzept
+entspricht. Es ist der führende Enterprise-OpenSource-Hypervisor und
+wird in den weltgrößten Rechenzentren eingesetzt. Der Betrieb wird auf
+jeglicher Markenhardware unterstützt und es gibt zahlreiche
+professionelle 3rd-Party Software für Backup und andere Features. Die
+meiste „Noname-Hardware“ kann ebenfalls nativ verwendet werden. Für
+einen Großteil der restlichen Hardware werden oft von den Herstellern
+Erweiterungen für XenServer angeboten, somit sind auch diese lauffähig.
 
-Für die Installation benötigen Sie lediglich 
+Für die Installation benötigen Sie lediglich
 
-* einen Installationsdatenträger Citrix XenServer 6.5
-  (zu finden auf http://xenserver.org) 
-* sowie die Erweiterungs-DVD „XenServerSupplementalPack“
-  (zu finden auf http://linuxmuster.net/FIXME)
+* einen Installationsdatenträger Citrix XenServer 7.0 (zu finden auf http://xenserver.org)
+* sowie die Erweiterungs-DVD `linuxmuster-SupplementalPack` (zu finden auf http://www.netzint.de/education/linuxmuster-net/xenserver-appliance-6-2)
 
-Nach der Installation gemäß dieser Anleitung erhalten Sie eine einsatzbereite Umgebung bestehend aus 
+Nach der Installation gemäß dieser Anleitung erhalten Sie eine einsatzbereite Umgebung bestehend aus
 
 * Server,
 * Firewall (IPFire) und
-* Administrationsoberfläche (xoa) sowie
+* Administrationsoberfläche (XOA) sowie
 * optionale Erweiterungen.
 
 Alle weiteren Schritte für spezifische Anpassungen finden Sie in den weiterführenden Leitfäden zur Installation.
@@ -36,10 +46,10 @@ Inhalt:
 .. toctree::
    :maxdepth: 2
 
-   systemanforderungen
-   installation-xenserver
-   administrationsmoeglichkeiten
-    
+   requirements
+   xenserver
+   administration
+
 
 .. admonition:: Bitte helfen Sie mit diese Dokumentation zu verbessern.
 
