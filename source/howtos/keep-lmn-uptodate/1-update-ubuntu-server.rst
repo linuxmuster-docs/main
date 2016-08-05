@@ -11,7 +11,7 @@ Automatische Updates
 --------------------
 
 Es wird ausdrücklich davon abgeraten in Ubuntu die Option
-``Automatische Updates`` aktiviert haben, so dass
+``Automatische Updates`` zu aktivieren, so dass
 Paketaktualisierungen automatisch von dem Ubuntu-Server
 heruntergeladen und installiert werden.
 
@@ -50,6 +50,7 @@ Um die Server-Installation auf den aktuellen Paketstand zu bringen, gehen Sie fo
    .. image:: media/1-update-ubuntu-server/1-einrichtung-sicherheitsupdates.png
 	      :alt: Upgrade Ubuntu Server
 	      :align: center
+
 
 5. Während des Aktualisierungsverlaufs fragen einige Pakete nach, ob eine neue Konfigurationsdatei 
    installiert werden soll. Geben Sie ``N`` oder ENTER für Beibehalten an.
@@ -113,7 +114,6 @@ Aktualisierung des Linux-Kernels
 
 Um Ubutnu 12.04 LTS Server (Codename Trusty) auf einen neueren Kernel zu aktualisieren, kann der Befehl **linux-hwe-generic** genutzt werden:
 
-
 .. code-block:: console
 
     # apt-get install linux-hwe-generic
@@ -149,12 +149,4 @@ werden. Danach o.g. Befehl noch einmal abgesetzen, um sicherzugehen,
 dass keine weiteren Pakete den HWE-Status blockieren.
 
 Die Datei ``/var/lib/update-notifier/hwe-eol`` kann auch notfalls gelöscht werden.
-
-
-
-
-
-
-
-
 
