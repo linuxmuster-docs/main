@@ -32,6 +32,7 @@ Schritt-für-Schritt Anleitungen
    howtos/install-from-scratch/index 
    howtos/upgrade/index
    howtos/keep-lmn-uptodate/index
+   howtos/migrate/index
    howtos/printer/index
    howtos/manage-users/index
 

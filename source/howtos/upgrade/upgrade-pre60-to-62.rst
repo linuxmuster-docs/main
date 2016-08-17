@@ -17,9 +17,9 @@ folgende Systeme möglich:
 Die Einschränkungen sind, dass eine Umstellung von REMBO auf LINBO,
 sowie eine Umstellung von IPCop auf IPFire erfolgen muss.
 
-Eine ausführliche Übersicht und Anleitungen hierzu finden Sie im
-`Kapitel 3 des Installationshandbuches zur linuxmuster.net 6.1
-<http://www.linuxmuster.net/wiki/dokumentation:handbuch:installation:start>`_
-und den darin verlinkten Seiten.
+Eine ausführliche Übersicht und Anleitungen hierzu finden Sie unter:
+
+:doc:`Migration von paedML/openML/linuxmuster.net <../migrate/index>`  
+
 
 

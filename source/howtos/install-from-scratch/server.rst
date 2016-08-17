@@ -14,8 +14,6 @@ Installation und Konfiguration des Servers
 Installation des Ubuntu-Servers
 -------------------------------
 
-
-
 Verbinden Sie die Netzwerkkarte des Servers mit dem Switch, an welchem die „grüne“ Netzwerkkarte des IPFire hängt. |br|
 
 .. note::
@@ -983,3 +981,5 @@ Als nächstes können Sie Arbeitsplatzrechner einbinden, besonders reizvoll ist 
 Alternativ können Sie z.B. auch selbst ein :doc:`Windows 10 <../../howtos/windows10clients/index/>` installieren. 
 
 .. [#FN-CustomFirewall] Bei Verwendung einer eigenen Firewalllösung funktionieren weder Internetsperre noch Webfilter. Weiterhin die Firewall in ihrem internen Netz (beim IPFire „grünes Netz“ genannt) die IP ``10.16.1.254`` und die Netzmaske ``255.240.0.0`` besitzen, sonst haben weder Server noch Clienten Internetzugang.     
+
+
