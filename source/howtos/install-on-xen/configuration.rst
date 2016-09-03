@@ -110,7 +110,7 @@ Führen Sie ggf. mit dem Befehl „reboot“ einen Neustart durch.
 Konfiguration Server
 --------------------
 
-Geben Sie als Benutzername ``root`` ein und als Passwort ``muster``. Anschließend geben Sie den Befehle
+Geben Sie als Benutzername ``root`` ein und als Passwort ``muster``. Anschließend geben Sie die Befehle
 
 .. code-block:: console
 
@@ -135,7 +135,7 @@ Geben Sie den Befehl
 
    $ passwd
 
-ein um das root-passwort zu ändern.
+ein um das ``root``-Passwort zu ändern.
 
 .. figure:: media/configuration/image74.png
    :width:  450px
@@ -245,7 +245,7 @@ Geben Sie an welche Firewall Sie verwenden. In der XenAppliance wird ``ipfire`` 
    :alt: Konfiguration Schritt 26
    :figwidth: 450px
 
-Tragen Sie für die Emailfunktion einen SMTP-Host ein mit dem der Server kommunizieren kann. Beispielsweise ``mbox1.belwue.de``.
+Tragen Sie für die Emailfunktion einen SMTP-Host ein mit dem der Server kommunizieren kann oder lassen Sie das Feld frei. Beispielsweise ``mbox1.belwue.de``.
 
 .. figure:: media/configuration/image87.png
    :width:  450px
@@ -269,7 +269,7 @@ Wählen Sie für die administrativen Domänenbenutzer ein Passwort.
    :alt: Konfiguration Schritt 29
    :figwidth: 450px
 
-Geben Sie das root-Passwort der Firewall ein das Sie im Schritt „Konfiguration IPFire“ vergeben haben.
+Geben Sie das root-Passwort der Firewall ein, das Sie im Schritt „Konfiguration IPFire“ vergeben haben.
 
 .. figure:: media/configuration/image90.png
    :width:  450px
@@ -277,7 +277,7 @@ Geben Sie das root-Passwort der Firewall ein das Sie im Schritt „Konfiguration
    :alt: Konfiguration Schritt 30
    :figwidth: 450px
 
-Wählen Sie die Netzwerkkarte aus, die mit dem Schulnetz (GREEN) verbunden ist. Sofern Sie keine zusätzlichen Adapter installiert haben bestätigen Sie die Auswahl mit ``Enter``.
+Wählen Sie die Netzwerkkarte aus, die mit dem Schulnetz (GREEN) verbunden ist. Sofern Sie keine zusätzlichen Adapter installiert haben, bestätigen Sie die Auswahl mit ``Enter``.
 
 .. figure:: media/configuration/image91.png
    :width:  450px
@@ -288,7 +288,7 @@ Wählen Sie die Netzwerkkarte aus, die mit dem Schulnetz (GREEN) verbunden ist. 
 Installation Netzint-lmntoolbox
 ===============================
 
-Um das LVM auf der VM Server zu vergrößern steht in der Netzint ``lmn-toolbox`` ein Skript bereit. Dieses Tool wird später in der Anleitung verwendet, daher sollte die Toolbox installiert werden. Es gibt aber auch weitere nützliche Tools um beispielsweise das LDAP zu editieren, Linbo anzupassen, unifi zu steuern, oder auch das Netzint-Multitool.
+Um das LVM auf der VM Server zu vergrößern, steht in der Netzint ``lmn-toolbox`` ein Skript bereit. Dieses Tool wird später in der Anleitung verwendet, daher sollte die Toolbox installiert werden. Es gibt aber auch weitere nützliche Tools, um beispielsweise das LDAP zu editieren, Linbo anzupassen, unifi zu steuern oder auch das Netzint-Multitool.
 
 .. figure:: media/configuration/image92.png
    :width:  450px
@@ -296,7 +296,7 @@ Um das LVM auf der VM Server zu vergrößern steht in der Netzint ``lmn-toolbox`
    :alt: Konfiguration Schritt 32
    :figwidth: 450px
 
-Erstellen und bearbeiten Sie eine Repository-Liste in dem Sie folgenden Befehl auf dem Server eingeben:
+Erstellen und bearbeiten Sie eine Repository-Liste indem Sie folgenden Befehl auf dem Server eingeben:
 
 .. code-block:: console
 
@@ -320,7 +320,7 @@ Schreiben Sie in die Datei folgende Zeile:
    :alt: Konfiguration Schritt 34
    :figwidth: 450px
 
-Verlassen Sie den Editor in dem Sie ``Strg+x`` drücken. Sie werden gefragt, ob Sie die Änderungen speichern wollen. Drücken Sie ``Y`` und bestätigen den Speicherort/Dateinamen mit ``Enter``.
+Verlassen Sie den Editor indem Sie ``Strg+x`` drücken. Sie werden gefragt, ob Sie die Änderungen speichern wollen. Drücken Sie ``Y`` und bestätigen den Speicherort/Dateinamen mit ``Enter``.
 
 Schreiben Sie folgende Befehle in die Konsole und bestätigen Sie jeweils mit ``Enter``:
 
@@ -446,14 +446,14 @@ Tragen Sie im Feld Size die gewünschte Festplattengröße ein und bestätigen S
    :figwidth: 450px
 
 .. note::
- Info: Hier werden später die Homeverzeichnisse der Schüler und Lehrer sowie die Tauschverzeichnisse abgelegt.
+ Hier werden später die Homeverzeichnisse der Schüler und Lehrer sowie die Tauschverzeichnisse abgelegt.
 
 Wiederholen Sie den Schritt mit der Festplatte ``..._var``. Hier werden später die Images der Schulnetzrechner abgelegt.
 
 XOA / XenKonsole
 ----------------
 
-Öffnen Sie XOA in einem Webbrowser und melden Sie sich an. Klicke Sie bei dem Server auf das Stopp-Symbol um diesen herunterzufahren. Klicken Sie dann auf den Server um auf dessen Übersichtseite zu gelangen.
+Öffnen Sie XOA in einem Webbrowser und melden Sie sich an. Klicke Sie bei dem Server auf das Stopp-Symbol, um diesen herunterzufahren. Klicken Sie dann auf den Server, um auf dessen Übersichtseite zu gelangen.
 
 .. figure:: media/configuration/image106.png
    :width:  450px
@@ -492,9 +492,9 @@ ein und bestätigen Sie mit ``Enter``.
    :figwidth: 450px
 
 .. note::
-  INFO: Mit der Taste „TAB“ können Sie die Autovervollständigung nutzen. Sobald Sie die ersten Buchstaben eines Befehls oder des Namens der VM eingegeben haben wird durch TAB der Befehl bzw. der Name vervollständigt.
+  Mit der Taste „TAB“ können Sie die Autovervollständigung nutzen. Sobald Sie die ersten Buchstaben eines Befehls oder des Namens der VM eingegeben haben, wird durch TAB der Befehl bzw. der Name vervollständigt.
 
-Es werden Ihnen nun alle Virtuellen Festplatten der Servers „lmn62.server“ aufgelistet. Sie müssen in der Ausgabe die Virtual Disk (VDI) suchen deren name-label mit ``..._var`` endet. Notieren Sie sich die ersten Zeichen der UUID.
+Es werden Ihnen nun alle Virtuellen Festplatten der Servers „lmn62.server“ aufgelistet. Sie müssen in der Ausgabe die Virtual Disk (VDI) suchen, deren name-label mit ``..._var`` endet. Notieren Sie sich die ersten Zeichen der UUID.
 
 .. figure:: media/configuration/image110.png
    :width:  450px
@@ -517,7 +517,7 @@ ein und bestätigen mit ``Enter``.
    :figwidth: 450px
 
 .. note::
-  INFO: Nutzen Sie die Autovervollständigung! Geben Sie bei der uuid die ersten Zeichen ein und drücken dann „TAB“ um die uuid einzutragen.
+  Nutzen Sie die Autovervollständigung! Geben Sie bei der UUID die ersten Zeichen ein und drücken dann „TAB“ um die UUID einzutragen.
 
 Wiederholen Sie den Vorgang für die VDI ``..._home``.
 
@@ -555,7 +555,7 @@ Mit dem Befehl
 
    $ df –lh
 
-können Sie die Speichergröße überprüfen:
+können Sie die Speichergröße überprüfen.
 
 .. figure:: media/configuration/image114.png
    :width:  450px
@@ -570,16 +570,16 @@ Ihre Umgebung ist nun für den regulären Einsatz von linuxmuster.net vorbereite
 
 Für die meisten Aufgaben der Administration können Sie nun die Schulkonsole verwenden. Diese öffnen Sie im Schulnetz mit einem Webbrowser unter ``https://server:242``.
 
-Sofern Sie die neue linuxmuster-WebUI bereits installiert haben können Sie diese über ``https://server:8000`` aufrufen.
+Sofern Sie die neue linuxmuster-WebUI bereits installiert haben, können Sie diese über ``https://server:8000`` aufrufen.
 
-Beachten Sie dass sie die Schulkonsole wie auch ssh auf den Server nur von Rechnern aus nutzen können die der Server in der Workstationsdatei gelistet hat. Wie Sie Rechner aufnehmen und auch wie Sie Linbo benutzen erfahren Sie auf linuxmuster.net.
+Beachten Sie, dass sie die Schulkonsole, wie auch ssh auf den Server, nur von Rechnern aus nutzen können, die der Server in der Workstationsdatei gelistet hat. Wie Sie Rechner aufnehmen und auch wie Sie Linbo benutzen erfahren Sie auf linuxmuster.net.
 
 Konfiguration automatisches Backup
 ==================================
 
-Um Ihre Server zu sichern ist in den ``linuxmuster-hv-tools`` ein Skript enthalten welches Snapshots erstellt und auf einen Datenträger Ihrer Wahl verschiebt. Beachten Sie dabei, dass die Backups nicht inkrementell abgelegt werden und dadurch viel Speicherplatz in Anspruch nehmen. Es können daher meist nur einige Vollbackups gespeichert werden. In der Datei main.cfg können Sie mit dem Parameter ``Maxage`` beeinflussen wieviele Backups auf dem Datenträger beibehalten werden. Diese Backups werden hauptsächlich im Desaster-Fall genutzt. Für versionssichere Backups über längeren Zeitraum empfehlen wir spezielle Software.
+Um Ihre Server zu sichern, ist in den ``linuxmuster-hv-tools`` ein Skript enthalten, welches Snapshots erstellt und auf einen Datenträger Ihrer Wahl verschiebt. Beachten Sie dabei, dass die Backups nicht inkrementell abgelegt werden und dadurch viel Speicherplatz in Anspruch nehmen. Es können daher meist nur einige Vollbackups gespeichert werden. In der Datei main.cfg können Sie mit dem Parameter ``Maxage`` beeinflussen, wieviele Backups auf dem Datenträger beibehalten werden. Diese Backups werden hauptsächlich im Desaster-Fall genutzt. Für versionssichere Backups über längeren Zeitraum empfehlen wir spezielle Software.
 
-Sie können jeden Storage verwenden den Sie möchten (NAS, USB-Disk, interne Disk, ...). Den Speicherort für das Backup kann in der Datei ``/usr/share/netzint/etc/main.cfg`` eingetragen werden. Sofern nichts eingetragen ist, wird nach einem SR gesucht, welches als BackupStore
+Sie können jeden Storage verwenden, den Sie möchten (NAS, USB-Disk, interne Disk, ...). Den Speicherort für das Backup kann in der Datei ``/usr/share/netzint/etc/main.cfg`` eingetragen werden. Sofern nichts eingetragen ist, wird nach einem SR gesucht, welches als BackupStore
 beschriftet ist. Dieses wird dann als Target verwendet. In unserem *Beispiel* verbinden wir uns mit einer NFS-Freigabe auf einer NAS mit
 der IP 10.16.1.9.
 
@@ -594,7 +594,7 @@ Konfiguration XenCenter
    :alt: Konfiguration Schritt 55
    :figwidth: 450px
 
-Wählen Sie einen Punkt unter **ISO library**.
+Wählen Sie einen Punkt unter ISO library.
 
 .. figure:: media/configuration/image116.png
    :width:  450px
@@ -602,7 +602,7 @@ Wählen Sie einen Punkt unter **ISO library**.
    :alt: Konfiguration Schritt 56
    :figwidth: 450px
 
-Bennen Sie Ihren Storage. Sofern Sie den Namen "BackupStore" verwenden müssen Sie später die main.cfg nicht anpassen. Dieser Name wird automatisch als Target erkannt.
+Bennen Sie Ihren Storage. Sofern Sie den Namen "BackupStore" verwenden, müssen Sie später die main.cfg nicht anpassen. Dieser Name wird automatisch als Target erkannt.
 
 .. figure:: media/configuration/image117.png
    :width:  450px
