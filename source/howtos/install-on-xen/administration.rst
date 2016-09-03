@@ -22,7 +22,7 @@ XenCenter
    :alt: XenCenter Schritt 1
    :figwidth: 450px
 
-Klicken Sie auf „XenCenter installer“ und speichern die Datei bzw. führen diese direkt aus. Folgen Sie dem Assistenten um das Programm zu  installieren
+Klicken Sie auf „XenCenter installer“ und speichern die Datei bzw. führen diese direkt aus. Folgen Sie dem Assistenten um das Programm zu  installieren.
 
 .. figure:: media/administration/image44.png
    :width:  450px
@@ -182,7 +182,7 @@ Nach der Installation starten Sie OpenXenmanager mit dem Befehl
    :alt: OpenXen Manager Schritt 6
    :figwidth: 450px
 
-Klicken Sie auf ``Add New Server`` und geben die IP-Adresse sowie den Benutzernamen root und das Passwort ein. Bestätigen Sie mit ``Connect``
+Klicken Sie auf ``Add New Server`` und geben die IP-Adresse sowie den Benutzernamen root und das Passwort ein. Bestätigen Sie mit ``Connect``.
 
 .. figure:: media/administration/image59.png
    :width:  450px
