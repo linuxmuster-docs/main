@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-03 15:19+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/howtos/linuxclients/registration.rst:2
+msgid "Client-Registrierung"
+msgstr "Register Client"
+
+#: ../../source/howtos/linuxclients/registration.rst:4
+msgid ""
+"Neue Rechner werden entweder durch direkten Eintrag in die Datei "
+"``/etc/linuxmuster/workstations`` und anschließendem Aufruf von "
+"``import_workstations`` aufgenommen oder durch direkten Eintrag auf der "
+"Hosts-Seite der Schulkonsole -- angemeldet als `administrator` -- ins System"
+" importiert."
+msgstr ""
+"New computers are either imported into the system by direct entry in the "
+"file ``/etc/linuxmuster/workstations`` and then running "
+"``import_workstations`` or through direct entry in the hosts tab of the "
+"school console - if logged in as administrator."
+
+#: ../../source/howtos/linuxclients/registration.rst:7
+msgid "Registrierung über LINBO"
+msgstr "Registration with LINBO"
+
+#: ../../source/howtos/linuxclients/registration.rst:9
+msgid ""
+"Die LINBO-Oberfläche (:doc:`Bedienungsanleitung LINBO "
+"<../../manuals/linbo/index>`) auf dem Client bietet jedoch auch eine "
+"Möglichkeit die Aufnahme neuer Rechner ins System vorzubereiten."
+msgstr ""
+"However the LINBO user interface  (:doc:`Manual "
+"<../../manuals/linbo/index>`) on the Client also provides a way to register "
+"a new machine to the system."
+
+#: ../../source/howtos/linuxclients/registration.rst:11
+msgid "Starten Sie den Rechner per PXE-Boot"
+msgstr "Restart the computer using PXE boot."
+
+#: ../../source/howtos/linuxclients/registration.rst:15
+msgid ""
+"Klicken Sie auf den Reiter ''Imaging'' und loggen Sie sich mit dem LINBO-"
+"Passwort ein."
+msgstr "Click on the \"Imaging\" tab and log in with the LINBO password."
+
+#: ../../source/howtos/linuxclients/registration.rst:19
+msgid "Im Passwordfeld wird nichts angezeigt. Sie müssen es \"blind\" eintippen."
+msgstr ""
+"In the password field, nothing is displayed. You must type it in \"blind\"."
+
+#: ../../source/howtos/linuxclients/registration.rst:23
+msgid ""
+"Nun sind Sie LINBO-Administrator. Auf der Imaging-Seite fällt einem sofort "
+"das Timeout-Fenster auf, das anzeigt, nach welcher Zeit man automatisch "
+"wieder ausgeloggt wird. Mit einem Klick auf die Checkbox, kann der Timeout "
+"deaktiviert werden."
+msgstr ""
+"Now you are LINBO administrator. There is a timeout window that shows the "
+"time after which you will be logged out automatically. By clicking the "
+"checkbox, the timeout can be disabled."
+
+#: ../../source/howtos/linuxclients/registration.rst:27
+msgid ""
+"Über die Schaltfläche `Registrieren` öffnen Sie im nächsten Schritt das "
+"Dialogfenster ``Rechner registrieren``, das Eingabefelder für die "
+"Clientdaten anbietet."
+msgstr ""
+"The button ``Register`` opens a dialog box where you can enter data for the "
+"client."
+
+#: ../../source/howtos/linuxclients/registration.rst:33
+msgid "Raumbezeichnung"
+msgstr "Room"
+
+#: ../../source/howtos/linuxclients/registration.rst:34
+msgid ""
+"Geben Sie hier den Namen des Raums (z.B. r100 oder g1r100) ein. Beachten Sie"
+" bitte, dass die Bezeichnung des Raumes oder auch des Gebäudes mit einem "
+"Kleinbuchstaben beginnen muss. Sonderzeichen sind nicht erlaubt."
+msgstr ""
+"Enter the name of the room (for example, r100 or g1r100). Please note that "
+"the name of the room or the building must begin with a lowercase letter. "
+"Special characters are not allowed."
+
+#: ../../source/howtos/linuxclients/registration.rst:35
+msgid "Rechnername"
+msgstr "Hostname"
+
+#: ../../source/howtos/linuxclients/registration.rst:36
+msgid ""
+"z.B. in der Form r100-pc01 (max. 15 Zeichen), (evtl. Gebäude berücksichtigen"
+" g21r100-pc01 ) eingeben. Beachten Sie bitte, dass als Zeichen nur "
+"Buchstaben und Zahlen erlaubt sind. Als Trennzeichen darf nur das Minus-"
+"Zeichen „-“ verwendet werden. Leerzeichen, Unterstriche oder andere "
+"Sonderzeichen (wie z.B. Umlaute, ß oder Satzzeichen) dürfen Sie hier unter "
+"keinen Umständen verwenden."
+msgstr ""
+"enter e.g. in the form r100-pc01 (max. 15 characters), (possibly take "
+"building into account, g21r100-pc01). Note that only letters and numbers are"
+" allowed ! As the delimiter only the minus sign \"-\" can be used. Spaces, "
+"underscores or other special characters (such as german Umlaute, ß or "
+"punctuation) are not allowed to use under any circumstances here."
+
+#: ../../source/howtos/linuxclients/registration.rst:37
+msgid "IP Adresse"
+msgstr "IP Address"
+
+#: ../../source/howtos/linuxclients/registration.rst:38
+msgid ""
+"Die IP-Adresse sollte zum Raum passen und außerhalb des Bereichs des DHCP-"
+"Servers liegen. Abhängig von Ihren Netzdaten z.B. 10.16.100.1 für diesen PC "
+"eingeben, üblicherweise *nicht* zwischen 10.16.1.100 und 10.16.1.200."
+msgstr ""
+"The IP address should match the room and must be out of range of the DHCP "
+"server. Depending of your network you can enter 10.16.100.1 (room 100, pc "
+"#1) for this PC, typically *not* between 10.16.1.100 and 10.16.1.200."
+
+#: ../../source/howtos/linuxclients/registration.rst:39
+msgid "Rechnergruppe"
+msgstr "Host Group"
+
+#: ../../source/howtos/linuxclients/registration.rst:40
+msgid ""
+"Die Rechnergruppe, bspw. `ubuntuclient`, wurde zuvor in der zugehörigen "
+"Datei ``start.conf.<rechnergruppe>`` festgelegt."
+msgstr ""
+"The host group, e.g. \"ubuntunclient\", was set in the corresponding "
+"``start.conf.<hostgroup>`` file."
+
+#: ../../source/howtos/linuxclients/registration.rst:43
+msgid ""
+"Ist alles korrekt ausgefüllt, werden die Clientdaten über die Schaltfläche "
+"`Registrieren` auf den Server hochgeladen."
+msgstr ""
+"If everything is filled in correctly, the client data is uploaded via the "
+"button ``Register`` on the server."
+
+#: ../../source/howtos/linuxclients/registration.rst:46
+msgid "Registrierung übernehmen"
+msgstr "Import Registered Clients"
+
+#: ../../source/howtos/linuxclients/registration.rst:48
+msgid ""
+"In der Schulkonsole -- angemeldet als `administrator` -- erscheinen alle "
+"neuen Clients als `noch nicht ins System übernommen`. Dies muss in der "
+"Schulkonsole bestätigt werden. Ein Klick auf die Schaltfläche `Hosts jetzt "
+"übernehmen` erledigt das und der neu registrierte Client ist importiert."
+msgstr ""
+"In the school console - logged in as `administrator` - all new clients "
+"appear  as `not imported into the system yet`. This must be confirmed in the"
+" school console. Clicking on the button `Import Hosts now` will import the "
+"newly registered clients."
+
+#: ../../source/howtos/linuxclients/registration.rst:51
+msgid "Alternativ werden alle registrierten Client mit dem Konsolenbefehl"
+msgstr ""
+"Alternatively, all registered client can be imported with the following "
+"command"
+
+#: ../../source/howtos/linuxclients/registration.rst:57
+msgid "ins System übernommen."
+msgstr "into the system."

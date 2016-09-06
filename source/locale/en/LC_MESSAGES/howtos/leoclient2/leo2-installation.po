@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-03 15:19+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:2
+msgid "Installation von leoclient2"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:5
+msgid "Software-Pakete installieren"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:7
+msgid ""
+"Die leoclient-Pakete liegen auf dem linuxmuster.net-Paketserver, der im "
+"Linuxclient schon zur Einrichtung der Anmeldung am Server eingetragen wurde."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:9
+msgid ""
+"Die Pakete werden installiert mit root-Rechten auf dem Linuxclient mit "
+"folgenden Befehlen: ``# apt-get update`` ``# apt-get install libglib-perl "
+"libgtk2-perl`` ``# apt-get install leoclient2-leovirtstarter-client "
+"leoclient2-vm-printer linuxmuster-client-sudoers``"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:14
+msgid ""
+"Damit wird ggf. auch das Paket virtualbox-x.y auf dem Linuxclient "
+"installiert. Eine aktuelle Version kann man mit Hilfe der Anleitung z.B. "
+"unter https://www.virtualbox.org/wiki/Linux_Downloads installieren. Für die "
+"Schule kann die PUEL-Version installiert werden, die beispielsweise USB2 "
+"unterstützt (statt USB1.1)."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:18
+msgid "Benutzer-Rechte anpassen"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:20
+msgid ""
+"Um für die Domänenbenutzer alle Optionen von VirtualBox freizugeben, müssen "
+"diese Mitglied der Gruppe ``vboxusers`` sein. Hierzu ergänzt man in der "
+"Datei ``/etc/security/group.conf`` in der Zeile "
+"``*;*;*;Al0000-2400;dialout...`` den Eintrag ``vboxusers``. Diese Zeile "
+"könnte dann wie folgt aussehen:"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:22
+msgid ""
+"``*;*;*;Al0000-2400;dialout,cdrom,floppy,audio,dip,video,plugdev,scanner,vboxusers``"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:24
+msgid ""
+"Auch lokale Benutzer am Linuxclient (z.B. ``linuxuser``) müssen in der Datei"
+" ``/etc/group`` der Gruppe ``vboxusers`` hinzugefügt werden. Dazu den "
+"Benutzername in der entsprechenden Zeile hinzufügen. (Nach Änderung ist eine"
+" erneute Anmeldung erforderlich)."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:26
+msgid ""
+"Hinweis: Diese Rechte-Anpassungen sind im Standard-Linuxclient schon "
+"eingepflegt."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:29
+msgid "Rechte an den lokalen virtuellen Maschinen"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:31
+msgid ""
+"Bei der Anmeldung eines Benutzers werden die Rechte an den lokalen "
+"virtuellen Maschinen so gesetzt, dass der Benutzer die Maschine starten, "
+"Logs anlegen und den aktiven Snapshot verändern kann. Dazu muss "
+"nachfolgendes Script ``015-leoclient2`` unter ``/etc/linuxmuster-client"
+"/post-mount.d/`` abgelegt sein."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:33
+msgid "``/etc/linuxmuster-client/post-mount.d/015-leoclient2``"
+msgstr ""

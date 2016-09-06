@@ -1,0 +1,261 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-26 07:00+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:2
+msgid "Installation XenServer"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:5
+msgid "Herunterladen von XenServer"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:7
+msgid ""
+"Das Installationsmedium kann von der Projekthomepage http://xenserver.org "
+"heruntergeladen werden. Diese Anleitung bezieht sich auf die Version 6.5. "
+"Unter älteren Versionen können die Xen-VMs lmn61 nicht importiert werden. "
+"Die ISO-Datei muss heruntergeladen und auf CD gebrannt werden."
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:10
+msgid "Installieren von XenServer"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:16
+msgid "Von der CD booten und dem Setup folgen."
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:22
+msgid "Wählen Sie Ihr Tastaturlayout. Wir verwenden ``[querz] de``"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:28
+msgid ""
+"Sollten Sie zusätzliche Treiber benötigen können Sie diese an dieser Stelle "
+"laden, indem Sie ``F9`` drücken. Andernfalls setzen Sie die Installation "
+"durch Bestätigung mit ``OK`` fort."
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:35
+msgid "Akzeptieren Sie die Lizenzbedingungen mit ``Ok``"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:40
+msgid ""
+"Wählen Sie den Datenträger der zur Installation verwendet werden soll und "
+"bestätigen Sie mit ``Ok``"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:46
+msgid ""
+"Hier können Sie das Installationsmedium wählen. Wir verwenden den lokalen "
+"Datenträger (CD)."
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:53
+msgid ""
+"Wählen Sie bei der Frage nach \"Supplemental-Packs\" ``Yes`` um die NI-"
+"XenServer-Tools installieren zu können."
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:59
+msgid "Wählen Sie „Verify installation source“ und bestätigen Sie mit ``Ok``"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:64
+msgid ""
+"Sofern „no problems were found“ angezeigt wird können Sie die Meldung mit Ok"
+" bestätigen."
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:69
+msgid ""
+"Tragen Sie hier Ihr gewünschtes root-Passwort ein. Dieses wird später "
+"benötigt um sich mit dem Hypervisor zu verbinden."
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:75
+msgid ""
+"Wählen Sie nun die Netzwerkkarte aus, an der später das grüne Netzwerk "
+"(GREEN) angeschlossen ist"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:81
+msgid ""
+"Wählen Sie „Static configuration“ und tragen Sie die Adresse aus dem "
+"Screenshot ein. Bestätigen Sie die Eingabe mit ``Ok``"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:87
+msgid ""
+"Tragen Sie den gewünschten Hostnamen und die DNS-Server 10.16.1.1 und "
+"10.16.1.254 ein"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:92
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:97
+msgid "Wählen Sie Ihre Zeitzone aus und bestätigen mit Ok"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:103
+msgid ""
+"Sollten Sie einen Zeitserver betrieben, können Sie diesen angeben. Wir "
+"stellen die Zeit manuell ein. Wählen Sie ``Manual time entry`` und "
+"bestätigen Sie mit ``Ok``"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:110
+msgid ""
+"Starten Sie nun die Installation mit der Schaltfläche ``Install XenServer``"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:121
+msgid ""
+"Legen Sie nun die CD \"XenServerSupplementalPack\" in das Laufwerk und "
+"bestätigen Sie die Meldung mit ``Ok``"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:127
+msgid ""
+"NetzInt XenServer Tools sollten bereits ausgewählt sein. Prüfen Sie die CD "
+"mit ``Verify``"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:133
+msgid "Starten Sie den Test mit ``Ok``"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:138
+msgid "Bestätigen Sie den erfolgreichen Test mit ``Ok``"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:143
+msgid "Wählen Sie nun die Schaltfläche ``Use`` und bestätigen Sie mit ``Ok``"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:148
+msgid ""
+"Nach der Installation werden Sie wieder aufgefordert weitere CDs einzulegen."
+" Wählen Sie ``Skip`` und bestätigen Sie mit ``Enter``."
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:154
+msgid "Stellen Sie die korrekte Uhrzeit ein und bestätigen Sie mit ``Ok``"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:159
+msgid ""
+"Nach erfolgreicher Installation können Sie mit ``Ok`` den Server neu starten"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:164
+msgid ""
+"Nach dem Setup erscheint diese Konsole und der Server kann verwaltet werden"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:174
+msgid "XenServer initialisieren"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:176
+msgid ""
+"Nun kann man die neue XenServer-Installation mit den virtuellen Maschinen "
+"für linuxmuster.net initialisieren."
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:181
+msgid ""
+"Wählen Sie auf dem XenServer den Punkt ``Local Command Shell`` und drücken "
+"Sie Enter"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:187
+msgid ""
+"Geben Sie den Benutzer ``root`` an und das Passwort das Sie während der "
+"Installation vergeben haben"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:194
+msgid ""
+"Geben Sie in der Konsole den Befehl ``ni-setup --first`` ein und bestätigen "
+"Sie mit Enter"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:199
+msgid ""
+"Stecken Sie alle Netzwerkkabel aus. Lassen Sie das Netzwerkkabel für das "
+"Netz GREEN eingesteckt im Switch und Server. Bestätigen Sie dann mit Ok"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:205
+msgid ""
+"Verbinden Sie nun die Netzwerkkarte RED mit Ihrem Modem oder Switch für das "
+"Netz RED. Es wird die betroffene Netzwerkkarte erkannt und konfiguriert."
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:212
+msgid ""
+"Verbinden Sie nun das Netzwerk BLUE mit dem gewünschten Interface am Server."
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:217
+msgid "Warten Sie ab, bis die blaue Netzwerkkarte erkannt wurde."
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:222
+msgid ""
+"Legen Sie nun die CD „XenServerSupplementalPack“ erneut in das Laufwerk ein "
+"und bestätigen Sie mit Ok"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:228
+msgid ""
+"Sie werden nun der Reihe nach abgefragt welche VMs Sie importieren wollen. "
+"Wählen Sie jeweils ``Yes`` bzw. ``No`` und bestätigen Sie mit ``Enter``."
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:244
+msgid "Entnehmen Sie nun die CD und bestätigen Sie mit ``Ok``"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:249
+msgid ""
+"Sie werden nun gefragt ob Sie die Autostartfunktion nutzen wollen. Mit "
+"dieser werden die gewünschten VMs automatisch beim Start von XenServer "
+"gestartet auch nach einem Stromausfall oder dergleichen. Wählen Sie ``Yes`` "
+"oder ``No``. Wir empfehlen, die Server von linuxmuster.net stets automatisch"
+" starten zu lassen."
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:257
+msgid ""
+"Sie werden nun der Reihe nach abgefragt welche VMs automatisch gestartet "
+"werden sollen. Wählen Sie jeweils Yes bzw. No und bestätigen Sie mit Enter"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:281
+msgid "Sie können nun das System mit der Auswahl ``Yes`` neu starten"
+msgstr ""
+
+#: ../../source/howtos/install-on-xen/installation-xenserver.rst:286
+msgid ""
+"Das System fährt herunter und startet danach wieder. Die VMs die Sie "
+"importiert haben werden - wenn entsprechend konfiguriert - direkt gestartet "
+"und sind bereit für die Konfiguration."
+msgstr ""

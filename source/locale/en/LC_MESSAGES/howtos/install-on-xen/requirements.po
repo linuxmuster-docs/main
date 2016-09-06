@@ -1,0 +1,207 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-03 15:19+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:2
+msgid "Systemvoraussetzungen"
+msgstr "System Requirements"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:4
+msgid ""
+"In der unten aufgeführten Tabelle finden Sie die Systemvoraussetzungen zum "
+"Betrieb der bereitgestellten virtuellen Maschinen. Die Systemanforderungen "
+"für die Installation von XenServer selbst finden Sie im Web unter "
+"support.citrix.com sowie xenserver.org"
+msgstr ""
+"The table below lists the system requirements for operating the deployed "
+"virtual machines. The system requirements for installing XenServer itself "
+"can be found on the Web at support.citrix.com and xenserver.org."
+
+#: ../../source/howtos/install-on-xen/requirements.rst:9
+msgid ""
+"Die Werte in der Spalte Default sind die voreingestellten Werte der VMs beim"
+" Import, diese Werte bilden gleichzeitig die Mindestvoraussetzungen. "
+"Festplatten- und Arbeitsspeicher der VMs müssen addiert werden um die "
+"Gesamtanforderung zu bestimmen."
+msgstr ""
+"The values ​​in the column Default are the default values ​​of the VMs "
+"during the import, these values ​​represent the minimum requirements. Disk "
+"space and memory of VMs must be added up to determine the total requirement."
+
+#: ../../source/howtos/install-on-xen/requirements.rst:15
+msgid "**IP**"
+msgstr "**IP**"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:15
+msgid "**VM**"
+msgstr "**VM**"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:15
+msgid "**HDD**"
+msgstr "**HDD**"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:15
+msgid "**RAM**"
+msgstr "**RAM**"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:17
+#: ../../source/howtos/install-on-xen/requirements.rst:17
+msgid "Default"
+msgstr "Default"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:17
+#: ../../source/howtos/install-on-xen/requirements.rst:17
+msgid "Empfohlen"
+msgstr "Recommended"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:19
+msgid "10.16.1.1"
+msgstr "10.16.1.1"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:19
+msgid "Server"
+msgstr "Server"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:19
+msgid "70GB"
+msgstr "70GB"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:19
+msgid "250GB+"
+msgstr "250GB+"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:19
+msgid "4GB"
+msgstr "4GB"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:19
+msgid "8GB+"
+msgstr "8GB+"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:21
+msgid "10.16.1.2"
+msgstr "10.16.1.2"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:21
+msgid "Opsi"
+msgstr "Opsi"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:21
+msgid "50GB"
+msgstr "50GB"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:21
+msgid "50GB+"
+msgstr "50GB+"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:21
+msgid "2GB"
+msgstr "2GB"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:21
+msgid "2GB+"
+msgstr "2GB+"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:23
+msgid "10.16.1.3"
+msgstr "10.16.1.3"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:23
+msgid "Unifi"
+msgstr "Unifi"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:23
+#: ../../source/howtos/install-on-xen/requirements.rst:23
+#: ../../source/howtos/install-on-xen/requirements.rst:27
+#: ../../source/howtos/install-on-xen/requirements.rst:27
+msgid "20GB"
+msgstr "20GB"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:23
+#: ../../source/howtos/install-on-xen/requirements.rst:27
+msgid "512MB"
+msgstr "512MB"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:23
+#: ../../source/howtos/install-on-xen/requirements.rst:27
+msgid "512MB+"
+msgstr "512MB+"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:25
+msgid "10.16.1.4"
+msgstr "10.16.1.4"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:25
+msgid "XOA"
+msgstr "XOA"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:25
+#: ../../source/howtos/install-on-xen/requirements.rst:25
+msgid "8GB"
+msgstr "8GB"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:25
+msgid "1GB"
+msgstr "1GB"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:25
+#: ../../source/howtos/install-on-xen/requirements.rst:29
+msgid "1GB+"
+msgstr "1GB+"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:27
+msgid "10.16.1.5"
+msgstr "10.16.1.5"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:27
+msgid "Chilli"
+msgstr "Chilli"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:29
+msgid "10.16.1.254"
+msgstr "10.16.1.254"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:29
+msgid "IPFire"
+msgstr "IPFire"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:29
+msgid "4,5GB"
+msgstr "4,5GB"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:29
+msgid "4,5GB+"
+msgstr "4,5GB+"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:29
+msgid "256MB"
+msgstr "256MB"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:32
+msgid ""
+"Für den Betrieb des Hypervisors (XenServer) sollten ca. 2 bis 5 GB "
+"Arbeitsspeicher eingeplant werden. Um nach Anleitung installieren zu können,"
+" sollte der Server mit mindestens 2 Netzwerkkarten bestückt sein. Durch "
+"VLANs kann der Betrieb aber auch bereits mit nur einer NIC erfolgen, bspw. "
+"10Gbit-Karte an Core-VLAN-Switch."
+msgstr ""
+"The hypervisor (XenServer) needs about 2 to 5 GB of memory. To install "
+"according to instructions, the server should have at least 2 network cards. "
+"If you use VLANs  one NIC is enough, for example. a 10Gbit network card "
+"connected to the core VLAN switch."

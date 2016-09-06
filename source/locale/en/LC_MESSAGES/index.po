@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-03 15:19+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/index.rst:3
+msgid "linuxmuster.net 6.2 DOKUMENTATION"
+msgstr "linuxmuster.net 6.2 Documentation"
+
+#: ../../source/index.rst:4
+msgid ""
+"Herzlich Willkommen und Glückwunsch an ihrem Interesse an linuxmuster.net."
+msgstr "Welcome to linuxmuster.net!"
+
+#: ../../source/index.rst:19
+msgid "Etwas in eigener Sache (in Ihrer und unserer)"
+msgstr "In our own interest (and yours)"
+
+#: ../../source/index.rst:21
+msgid ""
+"Diese Dokumentation bezieht sich immer auf die aktuelle stabile Version "
+"unseres Systems."
+msgstr ""
+"This documentation always refers to the current stable version of "
+"linuxmuster.net."
+
+#: ../../source/index.rst:24
+msgid ""
+"Unsere Erfahrungen haben gezeigt, dass sich an vielen Schulen ein einmal "
+"installiertes System nicht unbedingt immer an sämtliche Veränderungen "
+"anpasst."
+msgstr ""
+"Our experience has shown that in many schools an already installed system "
+"may not always conform to all changes."
+
+#: ../../source/index.rst:28
+msgid ""
+"Da es unser Bestreben ist, Ihnen immer das beste System zur Verfügung zu "
+"stellen, möchten wir Sie um etwas bitten: Verwenden Sie immer die neueste "
+"stabile Version von linuxmuster.net!"
+msgstr ""
+"Since it is our goal to always provide you with the best system available, "
+"we would like to ask you something: Always use the latest stable version of "
+"linuxmuster.net!"
+
+#: ../../source/index.rst:32
+msgid ""
+"Wir sind uns bewusst das ein Versionsupgrade nicht mal so gemacht werden "
+"kann/soll und aus diesem Grunde lassen wir Sie dabei auch nicht alleine. "
+"Neben einer detaillierten Anleitungen in den Howtos steht unsere Community "
+"und unser Telefon-Support Ihnen zur Seite."
+msgstr ""
+"We are aware that a version upgrade can/should not be done in a hurry and "
+"that is why we don't like to let you alone with this. In addition to "
+"detailed instructions in the HowTo's, our community and our telephone "
+"support is there to help you!"
+
+#: ../../source/index.rst:34
+msgid "Das ist unser Versprechen, linuxmuster.net(t) halt!"
+msgstr "This is our promise - linuxmuster.net(t)! (nett is german for `nice`)"

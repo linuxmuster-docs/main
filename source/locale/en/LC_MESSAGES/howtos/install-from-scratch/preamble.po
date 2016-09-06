@@ -1,0 +1,334 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-03 15:19+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:6
+msgid "Vorwort und Vorbereitungen"
+msgstr "Preface and Preparations"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:7
+msgid ""
+"Die linuxmuster.net 6.2 wird als Zwei-Server-Lösung (IPFire-Firewall und "
+"linuxmuster.net-Server) betrieben. Sie beginnen zunächst mit der "
+"Installation der IPFire-Firewall und fahren dann nach einer Vorkonfiguration"
+" der Firewall mit der Installation des linuxmuster.net-Servers fort."
+msgstr ""
+"The linuxmuster.net 6.2 operates as a two-server solution (IPFire firewall "
+"and linuxmuster.net server). First you start with the installation of IPFire"
+" firewall and then after pre-configuring the firewall, proceed to the "
+"installation of linuxmuster.net server."
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:11
+msgid "Checkliste"
+msgstr "Checklist"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:12
+msgid ""
+"Nutzen Sie die :download:`Checkliste  "
+"<./media/preamble/checklist/checklist.pdf>`, um alle während der "
+"Installation gemachten Einstellungen festzuhalten. Es handelt sich um ein "
+"PDF-Formular, Sie können es also auch am PC ausfüllen. Halten Sie diese "
+"Checkliste bereit, wenn Sie den Telefon-Support in Anspruch nehmen wollen."
+msgstr ""
+"Use the :download:`Checklist  <./media/preamble/checklist/checklist.pdf>` to"
+" retain all settings made during installation. It is a PDF form so you can "
+"fill it on the PC, too. Keep this checklist handy, if you want to contact "
+"the phone support."
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:15
+msgid "Download der Software"
+msgstr "Download the Software"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:16
+msgid ""
+"Laden Sie sich zunächst die benötigte Software herunter, beachten Sie dabei "
+"die Versionshinweise sorgfältig."
+msgstr ""
+"First download the necessary software and note the release notes carefully."
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:19
+msgid "IPFire"
+msgstr "IPFire"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:20
+msgid ""
+"Laden Sie das Iso-Image ( `IPFire Version 2.19 - Core Update 103 (x86_64) "
+"<http://downloads.ipfire.org/releases/ipfire-2.x/2.19-core103/ipfire-2.19.x86_64"
+"-full-core103.iso>`_ ) herunter und brennen es auf eine CD."
+msgstr ""
+"Download the Iso-Image ( `IPFire Version 2.19 - Core Update 103 (x86_64) "
+"<http://downloads.ipfire.org/releases/ipfire-2.x/2.19-core103/ipfire-2.19.x86_64"
+"-full-core103.iso>`_ ) und burn it to a CD."
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:24
+msgid ""
+"Neuere Version des IPFire wurden noch nicht auf Kompatibilität getestet. Es "
+"wird dringend empfohlen nur getestete Versionen des IPFire einzusetzen."
+msgstr ""
+"Newer version of IPFire have not been tested for compatibility. It is "
+"strongly recommended to use only tested versions of IPFire."
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:26
+#: ../../source/howtos/install-from-scratch/preamble.rst:47
+msgid ""
+"Um sicher zu stellen, dass die Datei richtig heruntergeladen wurde, können "
+"Sie die SHA1-Summe prüfen. Auf der Konsole eines Linuxbetriebsystems steht "
+"z.B. der Befehl ``sha1sum`` zur Verfügung:"
+msgstr ""
+"To make sure that the file was downloaded correctly, you can check the SHA1 "
+"sum. On the console of a Linux operating system there is the command "
+"``sha1sum`` available:"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:32
+#: ../../source/howtos/install-from-scratch/preamble.rst:53
+msgid "Als Ausgabe erhält man die Prüfsumme, z.B."
+msgstr "As output we get the checksum, for example"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:38
+msgid ""
+"Dies so erhaltene Prüfsumme muss mit der auf der `Download-Seite "
+"<http://downloads.ipfire.org/release/ipfire-2.19-core103>`_ angegebenen "
+"übereinstimmen."
+msgstr ""
+"This so obtained checksum must match the one on the `Download-Page "
+"<http://downloads.ipfire.org/release/ipfire-2.19-core103>`_ ."
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:41
+msgid "Ubuntu Server"
+msgstr "Ubuntu Server"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:42
+msgid ""
+"Laden Sie das Iso-Image ( `Ubuntu 12.04.5 LTS 64-bit PC (AMD64) server "
+"install CD <http://releases.ubuntu.com/12.04/ubuntu-12.04.5-server-"
+"amd64.iso>`_ ) herunter und brennen es auf eine CD."
+msgstr ""
+"Download the Iso-Image ( `Ubuntu 12.04.5 LTS 64-bit PC (AMD64) server "
+"install CD <http://releases.ubuntu.com/12.04/ubuntu-12.04.5-server-"
+"amd64.iso>`_ ) and burn it to a CD."
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:45
+msgid ""
+"Verwenden Sie **nicht** Ubuntu 14.04 oder Ubuntu 16.04. |br| Erst die Anfang"
+" 2017 erscheinende Version linuxmuster.net 7 unterstützt Ubuntu 16.04."
+msgstr ""
+"Do **not** use Ubuntu 14.04 or Ubuntu 04.16. |br| Only linxmuster.net 7 will"
+" support Ubuntu 16.04, ETA early 2017."
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:59
+msgid ""
+"Dies so erhalten Prüfsumme muss mit von Ubuntu zur Verfügung gestellten "
+"`Summe <http://releases.ubuntu.com/12.04/SHA1SUMS>`_ (Zeile ubuntu-12.04.5"
+"-server-amd64.iso) übereinstimmen."
+msgstr ""
+"This so obtained checksum must match the one on the `here "
+"<http://releases.ubuntu.com/12.04/SHA1SUMS>`_ (line ubuntu-12.04.5-server-"
+"amd64.iso)"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:62
+msgid "Hinweise zur Netzwerkstruktur"
+msgstr "Notes on network structure"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:65
+msgid "IP-Bereiche"
+msgstr "IP ranges"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:66
+msgid ""
+"Die linuxmuster.net-Lösung kann mit unterschiedlichen IP-Bereiche arbeiten. "
+"Jede Zeile der folgenden Tabelle stellt eine Möglichkeit dar."
+msgstr ""
+"The linuxmuster.net solution can work with different IP ranges. Each row of "
+"the table below constitutes one possibility."
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:69
+msgid "Auswahl"
+msgstr "Selection"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:69
+msgid "Beginn IP-Bereich"
+msgstr "Begin IP range"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:69
+msgid "Ende IP-Bereich"
+msgstr "End IP range"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:69
+msgid "Server-IP"
+msgstr "Server-IP"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:69
+msgid "IPFire-IP"
+msgstr "IPFire-IP"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:71
+msgid "16-31"
+msgstr "16-31"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:71
+msgid "10.16.0.0"
+msgstr "10.16.0.0"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:71
+msgid "10.31.255.255"
+msgstr "10.31.255.255"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:71
+msgid "10.16.1.1"
+msgstr "10.16.1.1"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:71
+msgid "10.16.1.254"
+msgstr "10.16.1.254"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:73
+msgid "32-47"
+msgstr "32-47"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:73
+msgid "10.32.0.0"
+msgstr "10.32.0.0"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:73
+msgid "10.47.255.255"
+msgstr "10.47.255.255"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:73
+msgid "10.32.1.1"
+msgstr "10.32.1.1"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:73
+msgid "10.32.1.254"
+msgstr "10.32.1.254"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:75
+#: ../../source/howtos/install-from-scratch/preamble.rst:75
+#: ../../source/howtos/install-from-scratch/preamble.rst:75
+#: ../../source/howtos/install-from-scratch/preamble.rst:75
+#: ../../source/howtos/install-from-scratch/preamble.rst:75
+msgid "..."
+msgstr "..."
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:77
+msgid "224-239"
+msgstr "224-239"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:77
+msgid "10.224.0.0"
+msgstr "10.224.0.0"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:77
+msgid "10.239.255.255"
+msgstr "10.239.255.255"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:77
+msgid "10.224.1.1"
+msgstr "10.224.1.1"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:77
+msgid "10.224.1.254"
+msgstr "10.224.1.254"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:80
+msgid ""
+"Bei der Installation entscheiden Sie sich für einen der Bereiche. Liegen "
+"keine besonderen Anforderungen (z.B. Testbetrieb von linuxmuster.net in "
+"einem weiteren produktiv laufenden linuxmuster.net-System) vor, wird "
+"empfohlen den Bereich 16-31 zu verwenden.  |br| Dies hat auch den Vorteil, "
+"dass alle im vorliegenden Dokument enthaltenen Screenshots bei einer "
+"Installation mit diesem Bereich gemacht wurden."
+msgstr ""
+"During installation, you opt for one of the areas. If there are no special "
+"requirements (for example, test operation of linuxmuster.net in another "
+"productive linuxmuster.net system), it is recommended to use the range "
+"16-31. |br| This also has the advantage that all installation screenshots in"
+" this document have been made with this IP range."
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:83
+msgid "Netzwerknamen der Firewall-Lösung IPFire"
+msgstr "Network names of the firewall solution IPFire"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:84
+msgid "Linuxmuster.net ordnet den unterschiedlichen Netzwerken Farben zu:"
+msgstr "Linuxmuster.net assigns colors to the different networks:"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:86
+msgid "Das interne Netzwerk wird GRÜNES Netzwerk genannt."
+msgstr "The internal network is called GREEN network."
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:87
+msgid ""
+"Das externe Netzwerk wird ROTES Netzwerk genannt, es ist über einen Router "
+"mit dem Internet verbunden."
+msgstr ""
+"The external network is called RED network, it is connected via a router to "
+"the Internet."
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:88
+msgid ""
+"Optional kann z.B. für WLAN-Accesspoints ein weiteres Netzwerk aufgebaut "
+"werden (BLAU), für welches andere Zugangsberechtigungen als denen im grünen "
+"Netzwerk gelten."
+msgstr ""
+"Optionally, for example, for wireless APs you can setup another network "
+"(BLUE), there, other credentials apply than those in the green network."
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:89
+msgid ""
+"Ebenso optional kann eine sog. demilitarisierte Zone (DMZ) als zusätzliches "
+"Netzwerk (ORANGE) aufgebaut werden."
+msgstr ""
+"Also optional you can setup a so-called demilitarized zone (DMZ) as an "
+"additional network (ORANGE)."
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:97
+msgid "Schematischer Aufbau eines Computernetzes mit linuxmuster.net."
+msgstr "Schematic structure of a computer network with linuxmuster.net."
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:100
+msgid "Hinweise für Profis"
+msgstr "Information for professionals"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:101
+msgid ""
+"Die linuxmuster.net-Lösung unterstützt auch komplexere Netzwerkstrukturen "
+"mit"
+msgstr ""
+"The linuxmuster.net solution also supports more complex network structures "
+"with"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:103
+msgid "subnetting"
+msgstr "subnetting"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:104
+msgid "VLANS"
+msgstr "VLANS"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:105
+msgid "Bonding"
+msgstr "Bonding"
+
+#: ../../source/howtos/install-from-scratch/preamble.rst:107
+msgid ""
+"Siehe dazu auch :doc:`Netzsegmentierung mit linuxmuster.net <../../howtos"
+"/netzbrief-basics/index/>`"
+msgstr ""
+"See also :doc:`network segmantation with linuxmuster.net <../../howtos"
+"/netzbrief-basics/index/>`"

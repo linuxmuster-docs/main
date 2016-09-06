@@ -1,0 +1,142 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-03 15:19+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:2
+msgid "Aktualisierung der Firewall IPFire"
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:4
+msgid ""
+"Um die Firewall von linuxmuster.net IPFire zu aktualisieren, beachten Sie "
+"bitte nachstehendes Vorgehen bzw. Hinweise."
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:6
+msgid "Führen Sie Updates bitte regelmäßig durch."
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:8
+msgid ""
+"Zur Aktualisierung gibt es zwei Verfahren. Das erste Verfahren nutze ein "
+"Skript auf dem linuxmuster.net Server, das die Aktualisierung initiiert und "
+"zugleich prüft, ob die zu installierende Version bereits unter "
+"linuxmuster.net erfolgreich getestet wurde. Das zweite Verfahren wird auf "
+"der Firewall selbst ausgeführt, so dass IPFire mithilfe des eigenen "
+"Paketsystes **pakfire** Aktualisierungen herunterlädt und installiert."
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:11
+msgid "Skriptgesteuerte Aktualisierung vom Server aus"
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:13
+msgid ""
+"Es wird regelmäßig getestet, ob die neueren IPFire Versionen vollständig mit"
+" linuxmuster.net kompatibel sind. Um zu verhindern, dass vorschnell neue "
+"IPFire Versionen direkt nach Erscheinen installiert und so ggf. "
+"Inkompatibilitäten in Kauf genommen werden, kann das Update des IPFire auch "
+"vom Server aus mithilfe eines Skriptes angestossen werden:"
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:30
+msgid ""
+"Welche Version von IPFire erfolgreich getestet wurde steht in der Datei "
+"``/var/lib/linuxmuster-ipfire/maxcore`` Diese Zahl wird von dem Skript zur "
+"Aktualisierung von IPFire ausgelesen und geprüft."
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:34
+msgid "Der Vorgang stellt sich dann wie folgt dar:"
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:62
+msgid ""
+"Hierbei kann es sein, dass der Befehl ggf. auch zweimal aufgerufen werden "
+"muss, nachdem ein Zwischenupdate von IPFire installiert und hierbei ein "
+"größerer Versionssprung durchgeführt wurde. Nach dem Reboot von IPFire ist "
+"das Script erneut aufzurufen."
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:65
+msgid "Ist das Update abgeschlossen, finden Sie nachstehende Konsolenausgabe:"
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:87
+msgid "Manuelle Aktualisierung über das Paketsystem von IPFire"
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:89
+msgid ""
+"IPFire kann mithilfe von ``Boardmitteln`` vom Administrator aktualisiert "
+"werden."
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:93
+msgid "Aktuell ist linuxmuster.net voll kompatibel mit IPFire Core 102"
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:95
+msgid ""
+"Melden Sie sich auf der Startseite des Webinterfaces https://ipfire:444 bzw."
+" https://10.16.1.254:444 an. Dort werden Hinweise auf vorliegende IPFire-"
+"Updates aausgegeben."
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:97
+msgid "Vorrausetzungen damit Updates angezeigt werden:"
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:99
+msgid ""
+"Um die Update-Server zu kontaktieren, muss ein ping nach extern möglich sein"
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:101
+msgid ""
+"Außerdem muss Port 11371 (hkp) offen sein um pgp-Keys herunterzuladen "
+"(einmalig reicht)"
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:103
+msgid ""
+"Sehen Sie nahstehende Abbildung, dann sind o.g. Voraussetzungen erfüllt."
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:109
+msgid ""
+"Zur Installation der Updates wechselt man über den Reiter ipfire in den "
+"Pakfire-Bereich. Die zur Installation vorgesehenen Core-Updates werden hier "
+"aufgelistet:"
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:115
+msgid ""
+"Die Installation startet man einfach durch Betätigen der Schaltfläche "
+"unterhalb der Updates-Liste:"
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:121
+msgid ""
+"Nach erfolgter Installation wird im System-Status-Bereich der aktuelle Core-"
+"Update-Level angezeigt:"
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:127
+msgid "Ipfire muss danach neu gestartet werden."
+msgstr ""

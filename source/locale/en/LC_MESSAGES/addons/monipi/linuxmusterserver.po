@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-03 15:19+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/addons/monipi/linuxmusterserver.rst:2
+msgid "Einrichtung auf dem linuxmuster.net Server"
+msgstr "Setup on the linumuster.net server"
+
+#: ../../source/addons/monipi/linuxmusterserver.rst:4
+msgid ""
+"Auf dem Server muss der check_mk-Client installiert werden, der dem "
+"Monitoring-Server auf Nachfrage die Performance-Daten übermittelt."
+msgstr ""
+
+#: ../../source/addons/monipi/linuxmusterserver.rst:7
+msgid ""
+"Melden Sie sich auf der Serverkonsole als administrativer Benutzer an und "
+"installieren Sie die Pakete ``check-mk-agent`` und ``xinetd``:"
+msgstr ""
+
+#: ../../source/addons/monipi/linuxmusterserver.rst:14
+msgid ""
+"Anschließend muss der xinetd konfiguriert werden, so dass eine Abfrage der "
+"Monitoring-Daten möglich wird. Editieren Sie dazu die Datei "
+"``/etc/xinetd.d/check_mk`` wie folgt:"
+msgstr ""
+
+#: ../../source/addons/monipi/linuxmusterserver.rst:52
+msgid ""
+"Die Beschränkung des Zugriffs auf bestimmte IP-Adressen ist aus "
+"Sicherheitsgründen sinnvoll, kann aber erst dann erfolgen, wenn der "
+"Monitoring-Server (MoniPi) eine dauerhafte IP-Adresse hat."
+msgstr ""
+
+#: ../../source/addons/monipi/linuxmusterserver.rst:55
+msgid ""
+"Starten Sie den xinetd nach den Anpassungen neu: ``service xinetd restart``"
+msgstr ""
+
+#: ../../source/addons/monipi/linuxmusterserver.rst:57
+msgid ""
+"Um zu überprüfen, ob die Einrichtung erfolgreich war, können Sie den Befehl "
+"``telnet localhost 6556`` ausführen [#f1]_, dabei sollte eine längere "
+"Ausgabe von Performancedaten die Folge sein:"
+msgstr ""
+
+#: ../../source/addons/monipi/linuxmusterserver.rst:65
+msgid "Fußnoten"
+msgstr ""
+
+#: ../../source/addons/monipi/linuxmusterserver.rst:66
+msgid ""
+"Möglicherweise muss man den telnet-Befehl ebenfalls noch nachinstallieren: "
+"``apt-get install telnet``"
+msgstr ""

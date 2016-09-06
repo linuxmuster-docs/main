@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-03 15:19+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/howtos/linuxclients/cloudclient.rst:4
+msgid "Herunterladen des Standard-Linuxclients"
+msgstr ""
+
+#: ../../source/howtos/linuxclients/cloudclient.rst:6
+msgid ""
+"Installieren Sie auf dem Server das Paket ``linuxmuster-client-"
+"servertools``."
+msgstr ""
+
+#: ../../source/howtos/linuxclients/cloudclient.rst:24
+msgid "Anpassung"
+msgstr ""
+
+#: ../../source/howtos/linuxclients/cloudclient.rst:26
+msgid ""
+"In der Datei ``/etc/linuxmuster/client-servertools.conf`` muss das "
+"gewünschte Passwort für den späteren administrativen Benutzer des Clients "
+"`linuxadmin` angepasst werden."
+msgstr ""
+
+#: ../../source/howtos/linuxclients/cloudclient.rst:42
+msgid "Rufen Sie die Liste aller verfügbaren Clientabbilder auf:"
+msgstr ""
+
+#: ../../source/howtos/linuxclients/cloudclient.rst:57
+msgid "Herunterladen"
+msgstr ""
+
+#: ../../source/howtos/linuxclients/cloudclient.rst:59
+msgid ""
+"Das Abbild lädt man nun herunter mit ``linuxmuster-client -a get-cloop -c "
+"<Imagename>``. Im Beispiel lautet das aktuellste Abbild `trusty714`. .. "
+"code-block:: console"
+msgstr ""
+
+#: ../../source/howtos/linuxclients/cloudclient.rst:62
+msgid "16:47/1 server ~ # linuxmuster-client -a get-cloop -c trusty714"
+msgstr ""
+
+#: ../../source/howtos/linuxclients/cloudclient.rst:64
+msgid ""
+"Wenn keine weiteren Optionen angegeben werden, wird dabei die Rechnergruppe "
+"`ubuntuclient` angelegt und die Dateien nach dem Schema ::"
+msgstr ""
+
+#: ../../source/howtos/linuxclients/cloudclient.rst:72
+msgid "erzeugt."
+msgstr ""
+
+#: ../../source/howtos/linuxclients/cloudclient.rst:75
+msgid ""
+"Es werden keine Dateien überschrieben. Wenn eine Datei bereits existiert "
+"bricht das Programm mit einer entsprechenden Meldung ab, das Problem muss "
+"dann zunächst händisch gelöst werden."
+msgstr ""
+
+#: ../../source/howtos/linuxclients/cloudclient.rst:0
+msgid "Zu tun"
+msgstr ""
+
+#: ../../source/howtos/linuxclients/cloudclient.rst:78
+msgid "Entwicklerdokumentation zu linuxmuster-client"
+msgstr ""
+
+#: ../../source/howtos/linuxclients/cloudclient.rst:82
+msgid "Abbild zur Synchronisation einrichten"
+msgstr ""
+
+#: ../../source/howtos/linuxclients/cloudclient.rst:84
+msgid ""
+"Der folgende Befehl erzeugt alle nötigen Konfigurationen, so dass das Abbild"
+" `ubuntuclient` im lokalen Netz einsatzfähig wird:"
+msgstr ""
+
+#: ../../source/howtos/linuxclients/cloudclient.rst:91
+msgid ""
+"Nun kann man Clientrechner in die Rechnergruppe `ubuntuclient` aufnehmen."
+msgstr ""

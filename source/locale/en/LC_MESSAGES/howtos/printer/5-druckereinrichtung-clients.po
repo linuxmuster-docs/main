@@ -1,0 +1,168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-03 15:19+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:2
+msgid "Wie richte ich Drucker auf den Clients ein?"
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:4
+msgid ""
+"Clientseitig müssen Drucker über das HTTP-Protokoll eingerichtet werden, "
+"damit die raumbezogene Druckerzugriffskontrolle über die Schulkonsole "
+"funktioniert. Die URL für die Druckerverbindung wird nach folgendem Schema "
+"zusammengesetzt:"
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:12
+msgid "**PDF Drucker**"
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:14
+msgid ""
+"Beispielhaft wird der standardmäßig eingerichtete PDF-Drucker über die URL"
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:16
+msgid "http://server:631/printers/PDF-Printer"
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:18
+msgid ""
+"angesprochen. Damit der PDF-Drucker auf dem Client genutzt werden kann, muss"
+" auf dem Client ein Standard-Postskript-Drucker eingerichtet werden."
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:22
+msgid "Linux Clients"
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:24
+msgid ""
+"Die Druckerinstallation auf dem Linux-Client lässt sich wie auf dem Server "
+"mit Hilfe des CUPS-Webinterfaces bewerkstelligen. Loggen Sie sich auf dem "
+"Client mit einem Browser über die URL http://localhost:631/admin als lokaler"
+" Benutzer **administrator** auf der CUPS-Administrationsseite ein."
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:30
+msgid "Klicken Sie hier unter der Rubrik Drucker auf **Drucker hinzufügen**."
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:34
+msgid ""
+"Wählen Sie im nächsten Schritt als Netzwerkdrucker ** Internet-"
+"Druckprotokoll (https)."
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:39
+msgid ""
+"Wählen Sie im nächsten Schritt für unter Drucker hinzufügen die korrekte "
+"Adresse. Wird der Netzwerkdrucker über den linuxmuster.net Server "
+"angesteuert, so ist dessen Adressen anzugeben:"
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:39
+msgid "**https://10.16.1.1/printers<druckername>**"
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:43
+msgid ""
+"Wählen Sie danach die korrekte Druckermarke für den einzurichtenden Drucker "
+"aus."
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:47
+msgid ""
+"Wählen Sie abschliessend das geeignete Druckermodell aus, oder wählen Sie "
+"eine eigene sog. PPD-Datei aus, die auf dem Client installiert werden soll."
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:51
+msgid ""
+"Die weiteren Einrichuntsschritte entsprechen denen, wie sie auf dem Server "
+"bereits ausgeführt wurden."
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:55
+msgid "Hier finden Sie die einzelnen Schritte:"
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:57
+msgid ":doc:`3-drucker-einrichten-cups`"
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:60
+msgid "Windows Clients"
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:62
+msgid ""
+"Melden Sie sich lokal am Windows-Client als **administrator** an und rufen "
+"Sie den Druckerinstallations-Assistnten auf, oder starten Sie den "
+"Druckerinstallations-Assistenten als Benutzer **administrator**. Den "
+"Druckerinstallations-Assistenten rufen Sie wie folgt auf: ** Systemsteuerung"
+" --> Hardware und Sound --> Geräte und Drucker --> Drucker**"
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:66
+msgid ""
+"Wählen Sie im Assistnten im Dialog **Drucker hinzufügen** die Option **Einen"
+" Netzwerk-, Drahtlos- oder Bluetoothdrucker hinzufügen**."
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:70
+msgid ""
+"Im folgenden Dialogfenster beenden Sie die Druckersuche und gehen über die "
+"Schalftfläche Der gesuchte Drucker ist nicht aufgeführt zum nächsten "
+"Schritt."
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:74
+msgid ""
+"Wählen Sie nun die Option *Freigegebenen Drucker* über den Namen auswählen "
+"und schreiben die Drucker-URL gemäß der Vorgabe aus dem Abschnitt "
+"Druckereinrichtung in das Eingabefeld (Beispiel "
+"http://server:631/printers/Netzwerkdrucker)."
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:79
+msgid ""
+"Nach Abschluss der Treiberinstallation steht der Drucker in unserem Beispiel"
+" als Netzwerkdrucker auf http://server:631 zur Verfügung."
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:81
+msgid "**Beispiel: PDF-Drucker**"
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:83
+msgid ""
+"Für die Nutzung des PDF-Druckers muss ein Postskript-Drucker eingerichtet "
+"werden. Starten Sie über den Druckerinstallations-Assistenten die "
+"Installation eines Netzwerkdruckers und geben als Netzwerkpfad die URL des "
+"PDF-Printers an (siehe :doc:`2-drucker-hinzufuegen`). Wählen Sie im weiteren"
+" Verlauf des Installationsdialogs das **Druckermodell MS Publisher Color "
+"Printer**, das unter **Hersteller Generic** aufgeführt ist:"
+msgstr ""
+
+#: ../../source/howtos/printer/5-druckereinrichtung-clients.rst:90
+msgid ""
+"Nach Abschluss der Druckerinstallation steht der PDF-Drucker als PDF-Printer"
+" an http://server:631 zur Verfügung."
+msgstr ""

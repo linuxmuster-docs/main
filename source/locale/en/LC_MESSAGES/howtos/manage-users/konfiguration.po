@@ -1,0 +1,492 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-03 15:19+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/howtos/manage-users/konfiguration.rst:2
+msgid "Grundkonfiguration der Benutzerverwaltung"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:5
+msgid ""
+"Einstellungen in der Datei sophomorix.conf vor dem ersten Anlegen von "
+"Benutzern"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:7
+msgid ""
+"Nach Installation des Servers muss die Hauptkonfigurationsdatei "
+"*sophomorix.conf*, die man unter ``/etc/sophomorix/user/`` findet, angepasst"
+" werden [#f1]_. Dazu muss die Datei vom Benutzer root editiert werden. Dies "
+"können Sie direkt am Server machen, oder Sie gehen von einem Client des "
+"Netzwerks aus mittels *putty* auf den Server."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:12
+msgid ""
+"*Putty* ist ein Freewareprogramm, das Sie sich herunterladen und dann "
+"starten können. Nach dem Aufruf geben Sie den Namen des Servers an und "
+"stellen auf *ssh* mit Port 22 um. Dann können Sie sich als root anmelden und"
+" die Datei in einem Editor [#f2]_ aufrufen [#f3]_."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:16
+msgid ""
+"Die einzelnen Angaben sind sehr gut kommentiert und mit Beispielen versehen."
+" Zeilen, die mit einem ``#`` beginnen, sind Kommentarzeilen."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:19
+msgid ""
+"Die meisten der Festlegungen können auch vom Benutzer administrator in der "
+"*Schulkonsole* im Menü unter *Einstellungen* -> *Benutzerverwaltung* gemacht"
+" werden."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:22
+msgid ""
+"In der *sophomorix.conf* können viele Einstellungen gemacht werden, unter "
+"anderem folgende Dinge werden dort festgelegt:"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:24
+msgid "der Schulname (Vorgabe: Schule), wird z.B. bei Passwortlisten benutzt"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:25
+msgid "die Kodierung von Benutzerdateien"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:26
+msgid "die zulässigen Geburtsjahreszahlen für Schüler"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:27
+msgid "Mindest- und Maximalschüleranzahl pro Klasse"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:28
+msgid "Anlegen von Schülern zukünftiger Klassen (Sternchenklassen)"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:29
+msgid "Anzahl von Zeichen für Schüler/Lehrer Loginnamen"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:30
+msgid "Zufallspasswörter verwenden (getrennt für Lehrer und Schüler)"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:31
+msgid "Länge der Zufallspasswörter (getrennt für Lehrer und Schüler)"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:32
+msgid ""
+"Einloggen per *ssh* (getrennt für Lehrer und Schüler), entspricht „Shell "
+"aktivieren“ in der Schulkonsole,"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:33
+msgid ""
+"Erstpasswort ändern müssen beim ersten Anmelden unter Windows(getrennt für "
+"Lehrer und Schüler)"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:34
+msgid "Duldungs- und Deaktivierungszeitraum vor dem Löschen von Benutzern"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:35
+msgid "Zusammensetzung der E-Mailadressen"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:36
+msgid "Warnung bei Plattenplatzmangel für E-Mails"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:37
+msgid "Festlegung des Log-Levels"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:38
+msgid "Einschalten der Quotas"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:44
+msgid "Grundeinstellungen in der Schulkonsole"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:46
+msgid ""
+"Aufgerufen wird die *Schulkonsole* mittels https://servername:242 in einem "
+"Webbrowser. Nach Anmeldung als administrator findet man im Hauptmenü die "
+"Rubrik *Einstellungen* mit dem Menüpunkt *Benutzerverwaltung*."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:49
+msgid ""
+"In der Rubrik *Einstellungen* gibt es verschiedene Abschnitte, die wir hier "
+"kurz vorstellen:"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:52
+msgid "**Abschnitt Global**"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:52
+#: ../../source/howtos/manage-users/konfiguration.rst:90
+#: ../../source/howtos/manage-users/konfiguration.rst:109
+#: ../../source/howtos/manage-users/konfiguration.rst:131
+#: ../../source/howtos/manage-users/konfiguration.rst:152
+#: ../../source/howtos/manage-users/konfiguration.rst:167
+msgid "**Erläuterungen**"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:55
+msgid "*Logmeldungen*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:55
+msgid ""
+"Mit dieser Angabe stellen Sie ein, wie ausführlich *Sophomorix* "
+"Informationen über die aktuellen Aktionen ausgibt."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:59
+msgid "*Anzahl der Schüler pro Klasse*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:59
+msgid ""
+"Mit diesen Angaben werden die Schülerzahlen aus der Schulverwaltung auf "
+"Gültigkeit geprüft."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:63
+msgid "*Geburtsjahreszahl* *für Schüler*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:63
+msgid ""
+"Mit diesen Angaben werden die Geburtsdaten aus der Schulverwaltung auf "
+"Gültigkeit geprüft."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:67
+msgid "*Sternchenklassen* *filtern*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:67
+msgid ""
+"Im Schulverwaltungsprogramm *Splan* werden vor die neuen Eingangsklassen für"
+" das nächste Schuljahr Sternchen gemacht. Diese Schüler können heraus "
+"gefiltert werden, damit sie in den anderen Report-Dateien nicht stören."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:73
+msgid "*Quota aktivieren*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:73
+msgid ""
+"Hier können Sie angeben, ob die Benutzer nur begrenzten Plattenplatz zur "
+"Verfügung gestellt bekommen sollen."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:76
+msgid "*Standardquota*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:78
+msgid "*Lehrer / Schüler*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:76
+msgid ""
+"Die Werte müssen für die einzelnen Partitionen getrennt eingegeben werden. "
+"Wie viele das sind hängt von der Partitionierung ihrer Serverplatte ab. Der "
+"letzte Eintrag ohne Partition bezieht sich auf Mailquota."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:81
+msgid "*Schulweites Tauschen aktivieren*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:81
+msgid ""
+"Damit stellen Sie ein, ob allen Benutzer der Ordner H:\\__tauschen\\tausch-"
+"Schule zur Verfügung steht."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:90
+msgid "**Abschnitt Kodierungen**"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:93
+msgid "*schueler.txt*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:93
+msgid ""
+"Bestimmt die Kodierung, die diese Textdatei im System hat. Das spielt für "
+"die Interpretation der Zeichen eine entscheidende Rolle. Bei Windows ist es "
+"meistens win1252, bei Linux utf8."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:96
+msgid "*lehrer.txt*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:96
+msgid ""
+"Bestimmt die Kodierung der Datei, in der die Lehrer gespeichert werden."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:99
+msgid "*extraschueler.txt*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:99
+msgid ""
+"Bestimmt die Kodierung der Datei, in der zusätzliche Schüler gespeichert "
+"werden, die nicht aus der Schulverwaltung übernommen werden."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:102
+msgid "*extrakurse.txt*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:102
+msgid ""
+"Bestimmt die Kodierung der Datei, in der zusätzliche Kurse mit zusätzlichen "
+"Benutzern gespeichert werden, die nicht als Benutzer in Klassen der "
+"Schulverwaltung entnommen wurden."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:109
+msgid "**Abschnitt E-Mail**"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:112
+msgid "*Mail-Alias*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:112
+msgid ""
+"Der Mail-Alias ist eine alternative Mailadresse, die aussagekräftiger ist."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:115
+msgid "*Mailquota-Warnungen*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:115
+msgid ""
+"Bestimmt, ob Benutzern bei Überschreitungen eines bestimmten Kontingents "
+"Warnungen zugestellt werden sollen."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:118
+msgid "*Warnungen bei ...*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:118
+msgid ""
+"Die Grenze, aber diese Warnungen zugestellt werden sollen. Die Grenze kann "
+"einmal absolut und einmal relativ festgelegt werden, da unterschiedliche "
+"Benutzer unterschiedliche Quoten haben können."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:121
+msgid "*Überschreitung an root* *melden*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:121
+msgid ""
+"Hier kann bestimmt werden, ob root eine Kopie der Quota-Warnungen erhält."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:127
+msgid ""
+"Den Abschnitt gibt es je einmal für *Schüler* und *Lehrer*, da man für diese"
+" Benutzergruppen sicherlich teilweise unterschiedliche Werte festlegen "
+"möchte. Für den Abschnitt *Löschen* gilt das ebenfalls."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:131
+msgid "**Abschnitt Login**"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:134
+msgid "*Zufallspasswort*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:134
+msgid ""
+"Mit einem Haken an dieser Stelle wird für jeden neu angelegten Benutzer ein "
+"Zufallspasswort generiert. Andernfalls wird jedem neuen Benutzer das "
+"Passwort *linux * vergeben, was eine Sicherheitslücke darstellt, wenn die "
+"Benutzer ihr Passwort nicht ändern. Die Loginkärtchen der neu angelegten "
+"Schüler können von jedem Lehrer ausgedruckt werden."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:139
+msgid "*Zufallspasswortzeichen*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:139
+msgid "Bestimmt die Länge der Zufallspasswörter"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:142
+msgid "*Shell aktivieren*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:142
+msgid ""
+"Der Benutzer benötigt eine Shell, wenn er sich auf einem Linux-System mit "
+"*gnome-* Oberfläche anmelden will."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:147
+msgid "*Sambapasswort ändern*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:147
+msgid ""
+"Ist das gewählt, müssen Benutzer bei der ersten Anmeldung ihr Passwort "
+"ändern. Das bezieht sich nur auf Windows."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:152
+msgid "**Sektor Löschen**"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:155
+msgid "*Duldungszeitraum*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:155
+msgid ""
+"Das ist der Zeitraum, in dem sich ein Benutzer nach Löschung in der "
+"Schulverwaltung noch am System anmelden kann, dann aber keinen Zugriff mehr "
+"auf das Klassentauschverzeichnis hat."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:158
+msgid "*Deaktivierungs­zeitraum*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:158
+msgid ""
+"In dieser Zeit ist keine Anmeldung mehr möglich, allerdings kann der "
+"Netzwerkbetreuer den Benutzer mit all seinen Daten wieder aktivieren und ins"
+" System zurückholen."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:164
+msgid ""
+"Die folgenden Daten werden z.B. für die Erstellung von Passwortzetteln mit "
+"Informationen genutzt, die neue Benutzer erhalten."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:167
+msgid "**Abschnitt Druckdaten**"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:170
+msgid "*Schulname*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:170
+msgid "So erscheint der Schulname auf Ausdrucken wie z.B. Passwortlisten."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:173
+msgid "*Interner Servername*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:173
+msgid ""
+"Das ist der Name des Servers, unter dem er im Schulnetz angesprochen wird. "
+"Dieser Ausdruck dient den Benutzern zur Orientierung."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:176
+msgid "*Externer Servername*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:176
+msgid ""
+"Hiermit ist ein Name, wie er z.B. über einen Service wie *dyndns* vergeben "
+"wird, gemeint."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:179
+msgid "*Samba-Domäne*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:179
+msgid ""
+"Hier sollte der Wert eingestellt werden, den man bei der Installation für "
+"die Domäne der Schule angegeben hat."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:182
+msgid "*Moodle-URL*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:182
+msgid ""
+"Da ein eventuell betriebenes Moodle nicht unbedingt über den eigenen Server "
+"zu erreichen ist, kann diese URL hier explizit eingegeben werden."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:185
+msgid "*Administratoren*"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:185
+msgid ""
+"Die Namen der Administratoren können angegeben werden, damit neue Benutzer "
+"leichter einen Ansprechpartner bei Problemen finden."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:191
+msgid ""
+"Alle Änderungen werden erst in die Datei *sophomorix.conf* geschrieben und "
+"damit beim nächsten Durchlauf wirksam, wenn ganz unten auf geklickt wird."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:195
+msgid "Footnotes"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:196
+msgid ""
+"Die Datei muss ggf. hinsichtlich des Alters der Schüler angepasst werden."
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:197
+msgid "Z.B. mcedit oder vim"
+msgstr ""
+
+#: ../../source/howtos/manage-users/konfiguration.rst:198
+msgid ""
+"Es gibt noch weitere Möglichkeiten um von außen auf den Server zuzugreifen."
+msgstr ""

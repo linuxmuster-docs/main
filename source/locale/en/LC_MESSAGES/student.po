@@ -1,0 +1,273 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-03 15:19+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/student.rst:2
+msgid "Handbuch für Schüler"
+msgstr "Manual for students"
+
+#: ../../source/student.rst:4
+msgid ""
+"Diese Datei ist ein Platzhalter für eine neu anzulegende Dokumentation."
+msgstr ""
+
+#: ../../source/student.rst:6
+msgid "Bitte verwenden Sie die förmliche Anrede \"Sie\" in ihrer Dokumentation."
+msgstr ""
+
+#: ../../source/student.rst:8
+msgid ""
+"Für die Struktierung halten Sie sich bitte an unseren Struktur- und "
+"Styleguide"
+msgstr ""
+
+#: ../../source/student.rst:11
+msgid "Strukturguide"
+msgstr ""
+
+#: ../../source/student.rst:13
+msgid "Dateinamen klein schreiben"
+msgstr ""
+
+#: ../../source/student.rst:14
+msgid "keine Leerzeichen stattdessen den Unterstrich _ benutzen"
+msgstr ""
+
+#: ../../source/student.rst:15
+msgid ""
+"Eine rst-Datei pro Kapitel (möglichst ein englischer Begriff), bsp: "
+"howto_printer.rst"
+msgstr ""
+
+#: ../../source/student.rst:16
+msgid ""
+"Für Bilder und Anderes einen Unterordner ``media`` in dem Kapitel-Ordner"
+msgstr ""
+
+#: ../../source/student.rst:17
+msgid ""
+"Auf der letzten \"Seite\" soll am Ende ein Verweis mit dem Link zur einer "
+"eventuellen Ticketgenerierung enthalten. (siehe unten)"
+msgstr ""
+
+#: ../../source/student.rst:18
+msgid "Die erste Übersichtsseite enthält einen Hinweis auf die Zielgruppe"
+msgstr ""
+
+#: ../../source/student.rst:20
+msgid "Ambitionierte Netzwerkbetreuer oder Dienstleister"
+msgstr ""
+
+#: ../../source/student.rst:21
+msgid "Netzwerkbetreuer"
+msgstr ""
+
+#: ../../source/student.rst:22
+msgid "Benutzer (Lehrer/Schüler)"
+msgstr ""
+
+#: ../../source/student.rst:24
+msgid ""
+"Nachfolgend ein Überblick von den Möglichkeit die reStructuredText Ihnen "
+"bietet und als Styleguide."
+msgstr ""
+
+#: ../../source/student.rst:27
+msgid "Styleguide"
+msgstr ""
+
+#: ../../source/student.rst:30
+msgid ""
+"Ein Backslash \\\\ in der .rst-Datei dient zur Maskierung des nachfolgenden "
+"Zeichens."
+msgstr ""
+
+#: ../../source/student.rst:32
+msgid ""
+"Absätze werden durch Leerzeilen voneinander getrennt. Da reStructuredText im"
+" Umfeld von Python entstanden ist, hat die Einrückung von Text Auswirkung "
+"auf die Formatierung."
+msgstr ""
+
+#: ../../source/student.rst:34
+msgid "Fortlaufende Absätze müssen daher alle gleich eingerückt sein."
+msgstr ""
+
+#: ../../source/student.rst:36
+msgid "Sollten Sie einen festen Zeilenumbrauch benötigen,"
+msgstr ""
+
+#: ../../source/student.rst:37
+msgid "können Sie diesen mit dem Pipe-Symbol \\| vor den"
+msgstr ""
+
+#: ../../source/student.rst:38
+msgid "einzelnen Zeilen erhalten."
+msgstr ""
+
+#: ../../source/student.rst:42
+msgid "Markierungen"
+msgstr ""
+
+#: ../../source/student.rst:44
+msgid "Folgende Markierungen werden empfohlen:"
+msgstr ""
+
+#: ../../source/student.rst:46
+msgid "\\:emphasis:`Hervorhebung` – :emphasis:`Hervorhebung (kursiv)`"
+msgstr ""
+
+#: ../../source/student.rst:48
+msgid "\\:strong:`Starke Hervorhebung` – :strong:`Starke Hervorhebung`"
+msgstr ""
+
+#: ../../source/student.rst:50
+msgid "\\:literal:`Quellcode` – :literal:`print(\"Hallo Welt!\")`"
+msgstr ""
+
+#: ../../source/student.rst:52
+msgid "\\:subscript:`tiefgestellter Text` – :subscript:`tiefgestellter Text`"
+msgstr ""
+
+#: ../../source/student.rst:54
+msgid ""
+"\\:superscript:`hochgestellter Text` – :superscript:`hochgestellter Text`"
+msgstr ""
+
+#: ../../source/student.rst:56
+msgid "Benutzen Sie einen \\`backtick\\` für das Hervorheben von"
+msgstr ""
+
+#: ../../source/student.rst:58
+msgid "`Benutzernamen`"
+msgstr ""
+
+#: ../../source/student.rst:59
+msgid "`Schaltflächen`"
+msgstr ""
+
+#: ../../source/student.rst:60
+msgid "`besondere Aktionen`"
+msgstr ""
+
+#: ../../source/student.rst:62
+msgid "Benutze Sie zwei ``backticks`` für die Hervorhebung von:"
+msgstr ""
+
+#: ../../source/student.rst:64
+msgid "``URLs``"
+msgstr ""
+
+#: ../../source/student.rst:65
+msgid "``URIs``"
+msgstr ""
+
+#: ../../source/student.rst:66
+msgid "``Dateipfade``"
+msgstr ""
+
+#: ../../source/student.rst:67
+msgid "``Dateinamen``"
+msgstr ""
+
+#: ../../source/student.rst:68
+msgid "``Code im Fließtext``"
+msgstr ""
+
+#: ../../source/student.rst:71
+msgid ""
+"In der rst-Datei können Sie sich anschauen wie diese Listen / Aufzählung "
+"notiert werden."
+msgstr ""
+
+#: ../../source/student.rst:74
+msgid "Überschriften"
+msgstr ""
+
+#: ../../source/student.rst:77
+msgid ""
+"werden durch Unterstreichungen, teilweise durch Unter- und Überstreichungen,"
+" markiert. Die Zeile mit der Unterstreichung muss ebenso lang sein, wie die "
+"Überschrift selbst. Siehe oben"
+msgstr ""
+
+#: ../../source/student.rst:80
+msgid "Eine mögliche Konvention ist:"
+msgstr ""
+
+#: ../../source/student.rst:82
+msgid "\\= als Unterstreichung für Unterkapitel"
+msgstr ""
+
+#: ../../source/student.rst:83
+msgid "\\- als Unterstreichung für Abschnitte"
+msgstr ""
+
+#: ../../source/student.rst:84
+msgid "\\^ als Unterstreichung für Unterabschnitte"
+msgstr ""
+
+#: ../../source/student.rst:87
+msgid "Infoboxen"
+msgstr ""
+
+#: ../../source/student.rst:89
+msgid "weitere"
+msgstr ""
+
+#: ../../source/student.rst:92
+msgid "Mögliche Fallstricke"
+msgstr ""
+
+#: ../../source/student.rst:95
+msgid "Wichtige Informationen"
+msgstr ""
+
+#: ../../source/student.rst:98
+msgid "Was es noch zu sagen gäbe"
+msgstr ""
+
+#: ../../source/student.rst:101
+msgid "Seien Sie sich immer bewusst was Sie tun"
+msgstr ""
+
+#: ../../source/student.rst:103
+msgid "Wichtiger Hinweis für Erstinstallierer"
+msgstr ""
+
+#: ../../source/student.rst:105
+msgid ""
+"Lesen Sie sich die Dokumentation am besten bis zum Ende durch! In diesem "
+"Fall sehen Sie wie Sie eine Hinweisbox mit einer eigenen Überschrift "
+"erzeugen."
+msgstr ""
+
+#: ../../source/student.rst:108
+msgid "Ende des Styleguide-Abschnittes"
+msgstr ""
+
+#: ../../source/student.rst:110
+msgid "Bitte helfen Sie mit diese Dokumentation zu verbessern."
+msgstr ""
+
+#: ../../source/student.rst:112
+msgid ""
+"Falls Sie einen Fehler in dieser Dokumentation entdeckt haben, teilen Sie "
+"uns diesen mit: http://www.linuxmuster.net/flyspray/"
+msgstr ""

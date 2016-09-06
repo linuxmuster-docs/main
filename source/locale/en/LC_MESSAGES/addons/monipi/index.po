@@ -1,0 +1,69 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-03 15:19+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/addons/monipi/index.rst:7
+msgid "MoniPi für linuxmuster.net"
+msgstr "MoniPi for linuxmuster.net"
+
+#: ../../source/addons/monipi/index.rst:9
+msgid ""
+"Das Projekt \"MoniPi\" stellt ein vorbereitetes Image für den Raspberry Pi "
+"2/Raspberry Pi 3 zur Verfügung, mit dem ein kleines Netzwerk überwacht "
+"werden kann."
+msgstr ""
+"The \"MoniPi\" project offers a prepared image for the Raspberry Pi 2 / "
+"Raspberry Pi 3, so that you can monitor a small network."
+
+#: ../../source/addons/monipi/index.rst:12
+msgid ""
+"MoniPi basiert auf `Raspbian Jessie Lite "
+"<https://www.raspberrypi.org/downloads/raspbian/>`_ mit den `Open Monitor "
+"Distribution (OMD) <http://omdistro.org/>`_ Paketen von `bananian.org "
+"<https://www.bananian.org/omd>`_"
+msgstr ""
+"MoniPi is based on `Raspbian Jessie Lite "
+"<https://www.raspberrypi.org/downloads/raspbian/>`_ with the `Open Monitor "
+"Distribution (OMD) <http://omdistro.org/>`_ packages from `bananian.org "
+"<https://www.bananian.org/omd>`_"
+
+#: ../../source/addons/monipi/index.rst:16
+msgid ""
+"Das vorliegende Dokument erläutert die Vorbereitung und Inbetriebnahme des "
+"Raspberry Pi sowie die Einrichtung des Monitoring für den linuxmuster.net "
+"Server."
+msgstr ""
+"This documentation explains the preparation and installation of the "
+"Raspberry Pi and the setup of the monitoring for a linuxmuster.net server."
+
+#: ../../source/addons/monipi/index.rst:19
+msgid "Inhalt:"
+msgstr "Content"
+
+#: ../../source/addons/monipi/index.rst:32
+msgid "Index"
+msgstr "Index"
+
+#: ../../source/addons/monipi/index.rst:34
+msgid ":ref:`genindex`"
+msgstr ":ref:`genindex`"
+
+#: ../../source/addons/monipi/index.rst:35
+msgid ":ref:`search`"
+msgstr ":ref:`search`"

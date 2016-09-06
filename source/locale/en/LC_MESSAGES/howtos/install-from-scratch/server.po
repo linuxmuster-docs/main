@@ -1,0 +1,826 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-03 15:19+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/howtos/install-from-scratch/server.rst:12
+msgid "Installation und Konfiguration des Servers"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:15
+msgid "Installation des Ubuntu-Servers"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:17
+msgid ""
+"Verbinden Sie die Netzwerkkarte des Servers mit dem Switch, an welchem die "
+"„grüne“ Netzwerkkarte des IPFire hängt. |br|"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:20
+msgid "Lesen Sie unbedingt die Hinweise bzgl. den einsetzbaren Versionen."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:23
+msgid "Grundeinstellungen"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:24
+msgid ""
+"Booten Sie den für den linuxmuster.net vorgesehenen Server von der Ubuntu-"
+"Server-CD. Wählen Sie mit den Pfeiltasten die gewünschte Sprache aus und "
+"bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:32
+msgid "Wählen Sie die gewünschte Sprache aus."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:34
+msgid ""
+"Bestätigen Sie durch Drücken der ``ENTER``-Taste, dass Sie Ubuntu "
+"installieren möchten."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:42
+msgid "Bestätigen Sie, dass Sie Ubuntu installieren möchten."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:44
+msgid ""
+"Bestätigen Sie durch Drücken der ``ENTER``-Taste den Hinweis, dass das "
+"gewählte Sprachpaket möglicherweise nicht vollständig sei."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:52
+msgid ""
+"Bestätigen Sie den Hinweis, dass gewählte Sprachpaket möglicherweise nicht "
+"vollständig ist."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:54
+msgid ""
+"Wählen Sie mit den Pfeiltasten den Standort aus und bestätigen Sie Ihre "
+"Auswahl durch Drücken der ``ENTER``-Taste."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:62
+msgid "Geben Sie den Standort an."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:64
+#: ../../source/howtos/install-from-scratch/server.rst:72
+msgid "Verneinen Sie die automatische Tastaturmodellerkennung."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:74
+#: ../../source/howtos/install-from-scratch/server.rst:82
+msgid "Wählen Sie das Herkunftsland der Tastatur."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:84
+#: ../../source/howtos/install-from-scratch/server.rst:92
+msgid "Wählen Sie das die Tastaturbelegung."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:95
+msgid "Einrichten des Netzwerks"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:97
+msgid ""
+"Der automatische Bezug einer IP-Adresse schlägt zunächst fehl, da kein DHCP-"
+"Server vorhanden ist."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:105
+msgid "Der automatische Bezug einer IP-Adresse schlägt zunächst fehl."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:107
+#: ../../source/howtos/install-from-scratch/server.rst:115
+msgid "Das Netzwerk richten Sie manuell ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:117
+#: ../../source/howtos/install-from-scratch/server.rst:128
+msgid "Geben Sie als IP-Adresse `10.16.1.1` ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:120
+#: ../../source/howtos/install-from-scratch/server.rst:143
+#: ../../source/howtos/install-from-scratch/server.rst:156
+msgid ""
+"Wenn Sie einen anderen Adressbereich gewählt haben, müssen Sie die folgende "
+"Eingabe anpassen."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:130
+msgid "Geben Sie als Netzmaske `255.240.0.0` ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:138
+msgid "Geben Sie als Netzmaske ``255.240.0.0`` ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:140
+#: ../../source/howtos/install-from-scratch/server.rst:151
+msgid "Geben Sie als Gateway ``10.16.1.254`` ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:153
+#: ../../source/howtos/install-from-scratch/server.rst:164
+msgid "Geben Sie als DNS-Server ``10.16.1.254`` ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:166
+#: ../../source/howtos/install-from-scratch/server.rst:174
+msgid "Geben Sie den gewünschten Namen des Servers ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:176
+msgid ""
+"Geben Sie lokale Domäne ein, die Sie bereits bei der Konfiguration des "
+"IPFires gewählt haben."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:184
+msgid "Geben Sie lokale Domäne ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:187
+msgid "Einrichten des administrativen Benutzers"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:189
+#: ../../source/howtos/install-from-scratch/server.rst:200
+msgid "Geben Sie den gewünschten Benutzernamen ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:192
+msgid ""
+"Es gibt vom System reservierte Namen, die nicht verwendet werden können, "
+"darunter auch ``admin``."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:202
+#: ../../source/howtos/install-from-scratch/server.rst:210
+msgid "Geben Sie den gewünschten Kontonamen zum Benutzernamen ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:212
+#: ../../source/howtos/install-from-scratch/server.rst:223
+msgid "Geben Sie das gewünschte Passwort ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:215
+msgid ""
+"Falls Sie an dieser Stelle darauf hingewiesen werden, dass Ihr eingegebenes "
+"Passwort schwach sei vergeben Sie bitte ein stärkeres. Die Sicherheit des "
+"Systems hängt von der Qualität des Passwortes ab!"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:225
+#: ../../source/howtos/install-from-scratch/server.rst:233
+msgid "Geben Sie das Passwort nochmals ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:235
+#: ../../source/howtos/install-from-scratch/server.rst:243
+msgid "Verschlüsseln Sie ihren persönlichen Ordner **nicht**."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:245
+#: ../../source/howtos/install-from-scratch/server.rst:253
+msgid "Bestätigen bzw. ggf. korrigieren Sie die Zeitzone."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:256
+msgid "Partitionierung"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:258
+msgid ""
+"Partitionieren Sie nach Ihren Bedürfnissen. Hier gibt es nur eine "
+"linuxmuster.net spezifischen Vorgabe:"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:261
+msgid ""
+"Es muss nur darauf geachtet werden, dass die Dateisysteme unter /home und "
+"/var mit den Quotaoptionen ``usrquota`` und ``grpquota`` versehen werden."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:263
+msgid ""
+"Im folgenden wird beispielhaft gezeigt wie auf einer einzigen Festplatte "
+"drei Partitionen (root-, home- und var-Partition) angelegt werden."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:265
+msgid ""
+"In der Regel sind einem einem Server mehrere Festplatten verbaut. Bitte "
+"lesen Sie den im Anhang den Abschnitt zum Thema „Partitionierung im "
+"Expertenmodus“ um zu erfahren, wie ein solches System - auch unter "
+"optionaler Benutzung des lvm und von Software-RAIDs- partitioniert wird."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:267
+msgid "An dieser Stelle wird auf eine Swap-Partition verzichtet."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:269
+#: ../../source/howtos/install-from-scratch/server.rst:277
+msgid "Partitionieren Sie manuell."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:279
+#: ../../source/howtos/install-from-scratch/server.rst:287
+msgid "Wählen Sie die zu partitionierende Festplatte aus."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:289
+#: ../../source/howtos/install-from-scratch/server.rst:297
+msgid "Bestätigen Sie das Erstellen der Partitionstabelle."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:299
+#: ../../source/howtos/install-from-scratch/server.rst:307
+msgid "Wählen Sie den freien Speicher zum Anlegen der ersten Partition."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:309
+#: ../../source/howtos/install-from-scratch/server.rst:317
+msgid "Bestätigen Sie das Anlegen der ersten Partition."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:319
+#: ../../source/howtos/install-from-scratch/server.rst:330
+#: ../../source/howtos/install-from-scratch/server.rst:383
+#: ../../source/howtos/install-from-scratch/server.rst:391
+#: ../../source/howtos/install-from-scratch/server.rst:465
+#: ../../source/howtos/install-from-scratch/server.rst:473
+msgid "Wählen Sie die Größe der Partition."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:322
+msgid ""
+"Die Größen der Partitionen auf den folgenden Screenshots stammen von einen "
+"Testsystem, an welches andere Anforderungen gestellt werden als ein "
+"Produktivsystem. Lesen Sie im Anhang den Abschnitt „Hinweise zur Größe von "
+"Partitionen“ um eine Gefühl für die notwendigen Größe der Partitionen zu "
+"erhalten."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:332
+#: ../../source/howtos/install-from-scratch/server.rst:340
+#: ../../source/howtos/install-from-scratch/server.rst:393
+#: ../../source/howtos/install-from-scratch/server.rst:401
+#: ../../source/howtos/install-from-scratch/server.rst:475
+#: ../../source/howtos/install-from-scratch/server.rst:483
+msgid "Wählen Sie als Typ der Partition ``primär``."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:342
+#: ../../source/howtos/install-from-scratch/server.rst:350
+#: ../../source/howtos/install-from-scratch/server.rst:403
+#: ../../source/howtos/install-from-scratch/server.rst:411
+msgid ""
+"Bestätigen Sie, dass die neue Partition am Anfang des freien Speichers "
+"angelegt werden soll."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:352
+msgid ""
+"Abschließend bestätigen Sie das Anlegen der Partition. Als Einbindungspunkt "
+"wurde automatisch die Wurzel ``/`` gewählt."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:360
+#: ../../source/howtos/install-from-scratch/server.rst:433
+#: ../../source/howtos/install-from-scratch/server.rst:441
+#: ../../source/howtos/install-from-scratch/server.rst:527
+#: ../../source/howtos/install-from-scratch/server.rst:535
+msgid "Abschließend bestätigen Sie das Anlegen der Partition."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:362
+msgid ""
+"Nun folgt das Anlegen der zweiten Partition, auf welcher die HOME-"
+"Verzeichnisse der Nutzer liegen werden. Wählen Sie den freien Speicher zum "
+"Anlegen der zweiten Partition."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:371
+msgid "Wählen Sie den freien Speicher zum Anlegen der zweiten Partition."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:373
+#: ../../source/howtos/install-from-scratch/server.rst:381
+msgid "Bestätigen Sie das Anlegen der zweiten Partition."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:413
+msgid ""
+"Als Einbindungspunkt wurde automatisch ``/home`` gewählt. Jetzt müssen die "
+"Einbindungsoptionen angepasst werden."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:421
+#: ../../source/howtos/install-from-scratch/server.rst:514
+msgid "Wählen die den Punkt Einbindungsoptionen."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:423
+msgid ""
+"Mit der ``Leertaste`` werden nun die Einbindungsoptionen ``usrquota`` und "
+"``grpquota``"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:431
+#: ../../source/howtos/install-from-scratch/server.rst:524
+msgid ""
+"Wählen die den Punkt Einbindungsoptionen ``usrquota`` und ``grpquota``."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:444
+msgid ""
+"Nun folgt das Anlegen der dritten Partition, auf welcher die Images der "
+"Clienten liegen werden. Wählen Sie den freien Speicher zum Anlegen der "
+"dritten Partition."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:453
+msgid "Wählen Sie den freien Speicher zum Anlegen der dritten Partition."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:455
+#: ../../source/howtos/install-from-scratch/server.rst:463
+msgid "Bestätigen Sie das Anlegen der dritten Partition."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:486
+msgid "Als Einbindungspunkt muss manuell ``/var`` gewählt."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:494
+msgid "Wählen Sie den Einbindungspunkt."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:496
+#: ../../source/howtos/install-from-scratch/server.rst:504
+msgid "Mit der ``Leertaste`` wird ``/var`` als  Einbindungsort gewählt."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:506
+msgid "Nun werden die Einbindungsoptionen gewählt."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:516
+msgid ""
+"Mit der ``Leertaste`` werden nun die Einbindungsoptionen ``usrquota`` und "
+"``grpquota`` gewählt."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:537
+msgid ""
+"Das System weist darauf hin, dass kein SWAP-Speicher angelegt wurde. "
+"Verneinen Sie die Frage, ob dies nachgeholt werden soll."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:545
+msgid ""
+"Verneinen Sie die Frage, ob doch noch eine SWAP-Partion angelegt werden."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:547
+msgid ""
+"Bestätigen Sie, dass die vorbereiteten Änderungen der Partition tatsächlich "
+"auf die Festplatte geschrieben werden."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:555
+msgid "Bestätigen Sie das Schreiben der Änderungen der Partitionen."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:557
+#: ../../source/howtos/install-from-scratch/server.rst:565
+msgid ""
+"Der Server ist nicht über einen Proxy angebunden, fahren Sie mit „Weiter“ "
+"fort."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:567
+msgid ""
+"Es wird ausdrücklich davon abgeraten, Updates automatisch einzuspielen. Sie "
+"als Administrator sollten stets wissen, wann sich etwas im System ändert, um"
+" z.B. zuvor eine Sicherung zu erstellen."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:575
+msgid "Wählen Sie „keine automatischen Updates“ aus."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:578
+msgid ""
+"Das bedeutet keineswegs, dass Sie das System nicht updaten sollen, nur eben "
+"nicht automatisch. Bitte lesen Sie dazu :doc:`Linuxmuster.net aktuell halten"
+" <../../howtos/keep-lmn-uptodate/index/>`"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:580
+msgid ""
+"Wählen Sie keine Software zum Installieren aus. Alle benötigten Pakete "
+"werden später durch ein Skript installiert, u.a. auch ein ``OpenSSH "
+"server``."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:588
+msgid "Wählen Sie keine Software aus, fahren Sie mit „Weiter“ fort."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:590
+#: ../../source/howtos/install-from-scratch/server.rst:598
+msgid ""
+"Bestätigen Sie, dass der Bootloader in den Master Boot Record installiert "
+"werden soll."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:600
+#: ../../source/howtos/install-from-scratch/server.rst:608
+msgid "Zum Abschluss der Installation wird das System neu gestartet."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:611
+msgid "Nach dem Neustart"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:612
+msgid ""
+"Melden Sie sie nach dem Neustart mit Ihrem bei der Installation gewählten "
+"Nutzer und Passwort an."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:620
+msgid ""
+"Nach dem Login werden sie möglicherweise darauf hingewiesen, dass ein „neues"
+" Release 14.04.4 LTS“ zur Verfügung stehe. Führen Sie den Vorschlag „do-"
+"release-upgrade“ **keinesfalls** durch. Alle andere Updates sollten wie im "
+"Folgenden gezeigt eingespielt werden. Zunächst verleihen Sie sich dauerhaft "
+"``root``-Rechte"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:629
+msgid "Nun holen Sie die aktuellen Paketlisten"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:637
+msgid ""
+"Sollte dies nicht funktionieren (erkennbar z.B. an der Ausgabe „Fehlschlag "
+"beim Holen von ...“) führen Sie folgende Schritte aus:"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:646
+msgid "Spielen Sie nun alle Updates ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:652
+msgid "Danach starten Sie den Server neu"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:658
+msgid ""
+"Prüfen Sie auch, ob das Sprachpaket zu der während der Installation "
+"gewählten Sprache installiert wurde. Z.B. für „Deutsch“ mit"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:664
+msgid ""
+"Man erwartet in etwa folgende Ausgabe, Versionsnummern können variieren."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:671
+msgid "Installieren Sie ggf. die fehlende deutsche Sprachunterstützung nach:"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:678
+msgid "Setup des linuxmuster.net Paketes"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:679
+msgid ""
+"Diese Anleitung beschreibt wie aus dem Ubuntu Server ein linuxmuster.net "
+"Server wird."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:681
+msgid "Zunächst verleihen Sie sich dauerhaft ``root``-rechte"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:688
+msgid "Vorbereitungen"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:689
+msgid ""
+"Erstellen Sie mit dem Editor ihrer Wahl (z.B. ``vi`` oder ``nano``) auf dem "
+"Server die Datei ``/etc/apt/sources.list.d/linuxmuster-net.list`` mit "
+"folgendem Inhalt:"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:699
+msgid ""
+"Damit das System der linuxmuster.net-Quelle vertraut, muss noch der "
+"linuxmuster.net-Schlüssel installiert werden. Laden Sie zunächst den "
+"Schlüssel herunter."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:705
+msgid "Importieren Sie den Schlüssel in Ihre System"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:711
+msgid "Löschen Sie den nun nicht weiter benötigte Schlüsseldatei."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:718
+msgid "Aktualisieren Sie die Paketlisten."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:724
+msgid "Installieren Sie das Paket ``linuxmuster-base``."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:732
+msgid ""
+"Sollte die Installation von linuxmuster-base scheitern, weil Pakete "
+"ungelöste Abhängigkeiten haben, gehen Sie wie folgt vor:"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:734
+msgid "Entfernen Sie alle Paketlisten vom System"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:740
+msgid "Entfernen Sie alle Pakete aus dem Zwischenspeicher"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:746
+msgid "Aktualisieren Sie die Paketlisten"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:752
+msgid "Spielen Sie alle Updates ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:758
+msgid ""
+"Bei der ``postfix``-Konfiguration kommt evtl. die Nachfrage nach der "
+"allgemeinen Konfiguration. Wählen Sie dann „Keine Konfiguration“."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:766
+msgid "Wählen Sie „keine Konfiguration“"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:769
+msgid "Setup"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:770
+msgid "Starten Sie nun zur Ersteinrichtung des Systems das Setupskript:"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:776
+msgid ""
+"In der Folge werden zunächst für das Serversetup benötigte Softwarepakete "
+"heruntergeladen und installiert. Das kann - abhängig von Internetanbindung "
+"und verwendeter Hardware - einige Minuten in Anspruch nehmen."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:778
+msgid ""
+"Sind alle Pakete installiert, erfolgen die Abfragen der Konfigurationswerte."
+" Sollten Sie während des Konfigurationsdialogs Fehleingaben machen, können "
+"Sie die Konfiguration zunächst fortführen und im letzten Dialog, im "
+"Netzwerkkarten-Menü, die Konfiguration abbrechen."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:780
+#: ../../source/howtos/install-from-scratch/server.rst:788
+msgid "Bestätigen Sie die Hinweise."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:790
+msgid ""
+"Geben Sie das internationale Länderkürzel ein. Erlaubt sind zwei "
+"Großbuchstaben, für Deutschland z.B. „DE“."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:798
+msgid "Geben Sie das internationale Länderkürzel ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:800
+#: ../../source/howtos/install-from-scratch/server.rst:808
+msgid "Geben Sie die Kurzbezeichnung des Bundeslandes ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:810
+#: ../../source/howtos/install-from-scratch/server.rst:818
+msgid "Geben Sie den Orts- oder Stadtnamen Ihrer Schule ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:821
+msgid ""
+"Geben Sie den Schulnamen ein, falls der Schulort Teil des Schulnamens ist, "
+"lassen Sie ihn hier weg. Es sind keine Leerzeichen erlaubt."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:829
+msgid "Geben Sie den Schulnamen ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:831
+msgid "Geben Sie den Namen der Samba-Domäne ein, es sind Buchstaben erlaubt."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:839
+msgid "Geben Sie den Namen der Samba-Domäne ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:841
+msgid ""
+"Geben Sie den Hostname des Servers ein, es sind nur Buchstaben, Ziffern und "
+"das Minuszeichen erlaubt."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:849
+msgid "Geben Sie den Hostname des Servers ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:851
+msgid ""
+"Geben Sie die Internet-Domänenname ein, sie darf nur aus Buchstaben, "
+"Ziffern, Minuszeichen und Punkten bestehen."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:855
+msgid ""
+"Falls Sie den externen Zugriff auf Ihren Server über eine dynamische DNS-"
+"Adresse realisieren wollen, können Sie sich einiges an händischer "
+"Nachkonfiguration ersparen, wenn Sie den dynamischen Domänennamen auch für "
+"das Intranet verwenden."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:863
+msgid "Geben Sie die Internet-Domänenname ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:865
+msgid ""
+"Wählen Sie den IP-Bereich für das interne Netz aus. Mit den Pfeiltasten "
+"können Sie in der Liste navigieren. Bestätigen Sie Ihre Auswahl mit der "
+"ENTER-Taste."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:873
+msgid "Wählen Sie den IP-Bereich für das interne Netz aus."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:875
+msgid ""
+"Geben Sie den externen Servernamen ein, wenn der Server von außen unter "
+"einem anderen Namen erreichbar ist. Dieser Namen wird u.a. für die OpenVPN-"
+"Konfiguration auf der Firewall verwendet."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:883
+msgid "Geben Sie den externen Servernamen ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:885
+msgid ""
+"Bestätigen Sie, IPFire als Firewall nutzen zu wollen. Prinzipiell können Sie"
+" eine beliebige Firewall (custom) nutzen, allerdings ist mit eingeschränkter"
+" Funktionalität [#FN-CustomFirewall]_."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:893
+msgid "Wählen Sie die Firewalllösung."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:895
+msgid ""
+"Fall der Server E-Mails über das Internet verschicken soll, geben Sie hier "
+"die Internetadresse des Mailservers Ihres Providers. Falls nicht, lassen Sie"
+" das Feld leer."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:903
+msgid "Geben Sie die Internetadresse des Mailservers Ihres Providers ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:905
+msgid ""
+"Entscheiden Sie, ob Sie Subnetze verwenden wollen oder nicht. Falls Sie "
+"nicht wissen, was Subnetze sind, wählen Sie „nein“."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:913
+msgid "Entscheiden Sie, ob Sie Subnetze verwenden wollen oder nicht."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:915
+#: ../../source/howtos/install-from-scratch/server.rst:929
+msgid "Wählen Sie ein Passwort für den Benutzer ``administrator``."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:919
+msgid ""
+"Es werden Klein- und Großbuchstaben akzeptiert. Sonderzeichen sind nur zum "
+"Teil erlaubt, folgende Zeichen sind **nicht** erlaubt:"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:921
+msgid "äöüß$&{}![]+#"
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:931
+#: ../../source/howtos/install-from-scratch/server.rst:951
+msgid "Geben Sie das Passwort erneut ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:939
+msgid ""
+"Geben Sie das Passwort für den Benutzer ``administrator`` nochmals ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:941
+msgid ""
+"Geben Sie das Passwort des Benutzer ``root`` auf dem IPFire ein, das Sie bei"
+" der Installation des IPFires eingegeben haben."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:949
+msgid "Geben Sie das Passwort für den Benutzer ``root`` auf dem IPFire ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:959
+msgid ""
+"Geben Sie nochmals das Passwort für den Benutzer ``root`` auf dem IPFire "
+"ein."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:961
+msgid ""
+"Wählen Sie die Netzwerkkarte, die mit dem grünen Netz verbunden ist. Durch "
+"Betätigen der Schaltfläche ``OK`` wird die Konfiguration erstellt."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:969
+msgid "Wählen Sie die Netzwerkkarte, die mit dem grünen Netz verbunden ist."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:971
+msgid "Die Installation wird nun abgeschlossen. Starten Sie den Server neu."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:978
+msgid ""
+"Nach dem Neustart begrüßt Sie der Login-Prompt von `linuxmuster.net 6.2.0 / "
+"Codename Babo`."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:980
+msgid ""
+"Als nächstes können Sie Arbeitsplatzrechner einbinden, besonders reizvoll "
+"ist dabei der :doc:`„Standard-Linuxclient“ "
+"<../../howtos/linuxclients/index/>`, das ist ein komplett installiertes und "
+"konfiguriertes LTS-Ubuntu, das Sie innerhalb weniger Minuten in das System "
+"integrieren können. Alternativ können Sie z.B. auch selbst ein :doc:`Windows"
+" 10 <../../howtos/windows10clients/index/>` installieren."
+msgstr ""
+
+#: ../../source/howtos/install-from-scratch/server.rst:983
+msgid ""
+"Bei Verwendung einer eigenen Firewalllösung funktionieren weder "
+"Internetsperre noch Webfilter. Weiterhin die Firewall in ihrem internen Netz"
+" (beim IPFire „grünes Netz“ genannt) die IP ``10.16.1.254`` und die "
+"Netzmaske ``255.240.0.0`` besitzen, sonst haben weder Server noch Clienten "
+"Internetzugang."
+msgstr ""

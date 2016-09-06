@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-03 15:19+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/howtos/windows10clients/startconf.rst:2
+msgid "Konfiguration start.conf"
+msgstr "Configuration start.conf"
+
+#: ../../source/howtos/windows10clients/startconf.rst:7
+msgid "Schulkonsole"
+msgstr "School Console"
+
+#: ../../source/howtos/windows10clients/startconf.rst:9
+msgid ""
+"Wechseln Sie auf den Reiter LINBO. Klicken Sie auf der linken Seite auf "
+"Gruppenkonfiguration editieren und wählen anschließend die Gruppe "
+"(Hardwareklasse) die Sie editieren möchten."
+msgstr ""
+"Switch to the LINBO tab. Click on the left side on ``Edit Group "
+"Configuration`` and then select the group (hardware class) you want to edit."
+
+#: ../../source/howtos/windows10clients/startconf.rst:14
+msgid "|10000000000003FC0000030089B2BD2A_png|"
+msgstr "|10000000000003FC0000030089B2BD2A_png|"
+
+#: ../../source/howtos/windows10clients/startconf.rst:17
+msgid ""
+"Ändern Sie die Konfiguration nach Ihren Bedürfnissen und klicken Sie im "
+"Anschluss auf die Schaltfläche Änderungen Speichern. Wichtig sind dabei die "
+"Einstellungen unter dem Punkt Systeme."
+msgstr ""
+"Change the configuration according to your needs and click afterwards on the"
+" button ``Save changes``. The settings are under the heading ``Systems`` are"
+" important."
+
+#: ../../source/howtos/windows10clients/startconf.rst:20
+msgid "|1000000000000382000003C15DFFA156_png|"
+msgstr "|1000000000000382000003C15DFFA156_png|"
+
+#: ../../source/howtos/windows10clients/startconf.rst:24
+msgid "Server-Konsole"
+msgstr "Server Console"
+
+#: ../../source/howtos/windows10clients/startconf.rst:26
+msgid "Geben Sie den Befehl ein:"
+msgstr "Enter the command:"
+
+#: ../../source/howtos/windows10clients/startconf.rst:33
+msgid "|100000000000028800000188045E477F_png|"
+msgstr "|100000000000028800000188045E477F_png|"
+
+#: ../../source/howtos/windows10clients/startconf.rst:35
+msgid ""
+"Ändern Sie die Konfiguration nach Ihren Bedürfnissen und verlassen danach "
+"den Editor speichernd."
+msgstr ""
+"Change the configuration according to your needs and save your changes."
+
+#: ../../source/howtos/windows10clients/startconf.rst:37
+msgid "|1000000000000295000002927824780F_png|"
+msgstr "|1000000000000295000002927824780F_png|"
+
+#: ../../source/howtos/windows10clients/startconf.rst:41
+msgid "Beispiel start.conf"
+msgstr "Example start.conf"
+
+#: ../../source/howtos/windows10clients/startconf.rst:43
+msgid ""
+"Das ist eine Beispielkonfiguration für eine Partition 50GB für eine "
+"Windowsinstallation und eine Cachepartition 90GB."
+msgstr ""
+"This is an example configuration for a 50 GB partition for a Windows "
+"installation and a 90GB cache partition."

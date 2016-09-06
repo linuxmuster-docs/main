@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-03 15:19+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:2
+msgid "Virtuelle Maschinen starten"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:4
+msgid ""
+"Das Script ``leovirtstarter2`` findet automatisch jede verfügbare VM und "
+"bietet diese zum Starten an."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:6
+msgid "Nachdem eine VM gewählt wurde, wird angeboten:"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:8
+msgid "„Starten wie vorgefunden“ - startet den aktuellen Zustand der VM."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:9
+msgid ""
+"„Standard“ - verwendet den Snapshot aus ``/PFAD/MASCHINENNAME/snapshot-"
+"store/standard/`` und startet die VM."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:10
+msgid ""
+"weitere lokale Snapshot aus ``/PFAD/MASCHINENNAME/snapshot-store/`` "
+"(optional - jeweils in einem eigenen Unterverzeichnis gespeichert)"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:11
+msgid ""
+"weitere Snapshots auf einem Serverlaufwerk (optional - Standardverzeichnis "
+"``/media/leoclient2-vm``)"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:12
+msgid ""
+"RAM: Arbeitsspeicherzuweisung an die VM - wird vorher automatisch an den "
+"vorhandenen Rechner angepasst. Hier kann man der VM mehr/weniger RAM "
+"zuweisen."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:13
+msgid "(Virtuelle Grafik: bisher ohne Funktion)"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:15
+msgid ""
+"Nach Auswahl einer VM wird die Umgebung automatisch vorbereitet und "
+"gestartet."
+msgstr ""
