@@ -1,5 +1,5 @@
-Neuerungen in linuxmuster-linbo 2.3.0
--------------------------------------
+Neuerungen in linuxmuster-linbo 2.3
+-----------------------------------
 
 -  Unterstützung von UEFI-Boot-Clients.
 -  Kernel 4.2.0 mit aktuellen Hardwaretreibern.
@@ -310,7 +310,7 @@ Für die Installation einer Linux-Distribution auf UEFI-Systemen ist in
 der start.conf-Datei eine EFI-Partition (200 MB) vorzusehen. Außerdem
 ist die Option *SystemType* auf *efi64* einzustellen. Damit wird die
 Clientfestplatte entsprechend dem
-`GPT-Schema <https///de.wikipedia.org/wiki/GUID_Partition_Table>`__
+`GPT-Schema <https://de.wikipedia.org/wiki/GUID_Partition_Table>`__
 partitioniert. Eine Beispiel-Datei ist auf dem Server unter
 `/var/linbo/examples/start.conf.ubuntu-efi <https://github.com/linuxmuster/linuxmuster-linbo/blob/2.3.0-8/var/examples/start.conf.ubuntu-efi>`__
 abgelegt.
@@ -510,3 +510,71 @@ Multiboot-Systeme mit UEFI
 Auch mehrere parallel installierte Betriebssysteme sind für Linbo kein
 Problem. Es erstellt und verwaltet automatisch die notwendigen
 UEFI-Booteinträge.
+
+LINBO-Bootmedien erstellen
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Bei der Installation von **linuxmuster-linbo** wird automatisch unter
+``/var/linbo/linbo.iso`` eine ISO-Datei erstellt, mit der sich
+Bootmedien erzeugen lassen. Das ist nützlich für den Fall, in dem sich
+bestimmte Hardware nicht über das Netzwerk booten lässt. Dann brennt
+man die Datei ``linbo.iso`` einfach auf einen CD-Rohling oder kopiert
+sie mit einem Tool wie zum Beispiel dem `ROSA ImageWriter <http://wiki.rosalab.com/en/index.php/ROSA_ImageWriter#Where_can_I_take_it.3F>`_
+auf einen USB-Stick.  Das so erstellte Bootmedium lässt sich
+universell einsetzen, denn es erkennt automatisch auf welchem System
+(BIOS, UEFI, 64bit, 32bit, Non-PAE) es gestartet wird.
+
+Um einen Rechner mit Hilfe des LINBO-Bootmediums einzurichten, bootet
+man ihn mit angeschlossenem Netzwerkkabel. Das LINBO-Startmenü
+präsentiert sich je nachdem ob es sich um ein BIOS- oder UEFI-System
+handelt leicht unterschiedlich:
+
+
+.. figure:: ./media/linbo-isoboot-bios1.png
+   :alt: LINBO-Startmenü im BIOS-Modus (unter Verwendung von Syslinux)
+
+   LINBO-Startmenü im BIOS-Modus (unter Verwendung von Syslinux), siehe `Syslinux Menü-System <http://www.syslinux.org/wiki/index.php?title=Menu>`_
+
+.. figure:: ./media/linbo-isoboot-efi1.png
+   :alt: LINBO-Startmenü im UEFI-Modus
+
+   LINBO-Startmenü im UEFI-Modus (unter Verwendung von Grub), siehe `Grub-Manual <https://www.gnu.org/software/grub/manual/>`_
+
+
+Die Startoptionen im Einzelnen:
+
+Standardboot
+  Es wird mit den Standardparametern bis zur Clientoberfläche durchgestartet.
+
+Ersteinrichtung + Neustart
+  Die Clientfestplatte wird automatisch nach
+  den Vorgaben der vom Server heruntergeladenen start.conf-Datei der
+  Rechnergruppe partitioniert und formatiert.  Anschließend startet
+  der Client neu. Danach kann das Bootmedium entfernt werden und man
+  arbeitet mit dem lokal im Cache installierten **LINBO** weiter.
+
+Debugmodus
+  Es wird im Textmodus nur bis zur Konsole gebootet.
+
+Nach einem Timeout von 10 Sekunden wird automatisch die Option //Standardboot// aktiviert.
+
+Die LINBO-Bootparameter lassen sich bei Bedarf anpassen.
+
+Im BIOS-Modus wird nach Betätigen der [TAB]-Taste eine Zeile
+eingeblendet, in der sich die Startparameter editieren lassen. Hat man
+die notwendigen Anpassungen gemacht, startet die [ENTER]-Taste den
+Bootvorgang:
+
+.. figure:: ./media/linbo-isoboot-bios2.png
+
+   Bearbeiten des LINBO-Startmenü im BIOS-Modus 
+
+Im UEFI-Modus lässt sich nach Drücken der [E]-Taste der entsprechende
+Bootmenü-Eintrag editieren. Mit [CTRL-X] oder [F10] startet man nach
+getaner Anpassung den Bootvorgang.
+
+.. figure:: ./media/linbo-isoboot-efi2.png
+
+   Bearbeiten LINBO-Startmenü im UEFI-Modus
+
+
