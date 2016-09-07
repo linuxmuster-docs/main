@@ -11,9 +11,9 @@ Sicherheitskritische Aktualisierungen des Ubuntu-Betriebssystems werden von Ubun
 
    1-update-ubuntu-server
    2-update-ipfire
-   3-hints-ipfire
    
 ..
+   3-hints-ipfire
    1-update-ubuntu-server
    
 

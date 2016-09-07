@@ -3,17 +3,22 @@ Update des Ubuntu Servers von linuxmuster.net
 
 Um die linuxmuster.net 6.x zugrunde liegende Ubuntu Version (Ubuntu Server 12.04.5 LTS 64bit) zu aktualisieren, beachten Sie bitte nachstehendes Vorgehen bzw. Hinweise.
 
-.. caution::
+.. attention::
 
-   Führen Sie Updates bitte regelmäßig durch.
+   Führen Sie Updates bitte regelmäßig manuell durch.
 
-Automatische Updates
---------------------
+Keine automatischen Updates
+---------------------------
 
 Es wird ausdrücklich davon abgeraten in Ubuntu die Option
 ``Automatische Updates`` zu aktivieren, so dass
 Paketaktualisierungen automatisch von dem Ubuntu-Server
 heruntergeladen und installiert werden.
+
+Ob Sie automatische Updates aktiviert haben, überprüfen Sie, in dem
+Sie auf dem Server in der Datei ``/etc/apt/apt.conf.d/10periodic``
+überprüfen, ob die Option ``APT::Periodic::Unattended-Upgrade "1";``
+existiert. In diesem Fall, ändern Sie die ``"1"`` in eine ``"0"``.
 
 Melden Sie sich stattdessen besser bei der entsprechenden
 `Mailingliste
@@ -53,7 +58,7 @@ Um die Server-Installation auf den aktuellen Paketstand zu bringen, gehen Sie fo
 
 
 5. Während des Aktualisierungsverlaufs fragen einige Pakete nach, ob eine neue Konfigurationsdatei 
-   installiert werden soll. Geben Sie ``N`` oder ENTER für Beibehalten an.
+   installiert werden soll. Geben Sie ``N`` oder ENTER für "Beibehalten" an.
 
 Hinweise
 --------
@@ -72,7 +77,7 @@ Diese stellen sich bsp. wie folgt dar:
     Run 'do-release-upgrade' to upgrade to it.
 
 
-.. attention:: **Niemals ein Release-Upgrade durchführen**
+.. caution:: **Niemals ein Release-Upgrade durchführen**
 
     Folgen Sie nicht der Empfehlung, denn linuxmuster.net ist auf die Version 12.04 LTS 64 bit 
     angepasst, deren Support bis 2017 gewährleistet ist. Neue Versionen (ab linuxmuster.net 7)
@@ -112,7 +117,7 @@ Ebenso wie beim „upgrade“ wird beim Anmelden über die Kommandozeile manchma
 Aktualisierung des Linux-Kernels
 ````````````````````````````````
 
-Um Ubutnu 12.04 LTS Server (Codename Trusty) auf einen neueren Kernel zu aktualisieren, kann der Befehl **linux-hwe-generic** genutzt werden:
+Um Ubuntu 12.04 LTS Server (Codename Trusty) auf einen neueren Kernel zu aktualisieren, kann das Paket **linux-hwe-generic** genutzt werden:
 
 .. code-block:: console
 
