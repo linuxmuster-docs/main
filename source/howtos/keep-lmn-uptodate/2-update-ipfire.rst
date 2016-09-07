@@ -89,10 +89,10 @@ Manuelle Aktualisierung über das Paketsystem von IPFire
 IPFire kann mithilfe von ``Boardmitteln`` vom Administrator aktualisiert werden.
 
 .. attention::
+   
+   Aktuell ist linuxmuster.net voll kompatibel mit IPFire Core 102
 
-    Aktuell ist linuxmuster.net voll kompatibel mit IPFire Core 102
-
-Melden Sie sich auf der Startseite des Webinterfaces https://ipfire:444 bzw. https://10.16.1.254:444 an. Dort werden Hinweise auf vorliegende IPFire-Updates aausgegeben.
+Melden Sie sich auf der Startseite des Webinterfaces https://ipfire:444 bzw. https://10.16.1.254:444 an. Dort werden Hinweise auf vorliegende IPFire-Updates ausgegeben.
 
 Vorrausetzungen damit Updates angezeigt werden:
 
