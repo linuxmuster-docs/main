@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-03 15:19+0700\n"
+"POT-Creation-Date: 2016-09-08 20:48+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -51,9 +51,8 @@ msgstr "XenCenter"
 
 #: ../../source/howtos/install-on-xen/administration.rst:17
 msgid ""
-"Öffnen Sie einen Webbrowser und wechseln auf die Seite "
-"``http://10.16.1.10``."
-msgstr "Open a web browser and navigate to the page ``http://10.16.1.10``."
+"Öffnen Sie einen Webbrowser und wechseln auf die Seite http://10.16.1.10."
+msgstr "Open a web browser and navigate to the page http://10.16.1.10."
 
 #: ../../source/howtos/install-on-xen/administration.rst:25
 msgid ""
@@ -94,12 +93,12 @@ msgstr "To use XOA the VM \"lmn62.xoa\" must be imported!"
 
 #: ../../source/howtos/install-on-xen/administration.rst:64
 msgid ""
-"Öffnen Sie einen Webbrowser und wechseln auf die Seite ``http://10.16.1.4``."
-" Geben Sie den User ``admin@admin.net`` mit dem Passwort ``admin`` ein und "
+"Öffnen Sie einen Webbrowser und wechseln auf die Seite http://10.16.1.4. "
+"Geben Sie den User ``admin@admin.net`` mit dem Passwort ``admin`` ein und "
 "klicken Sie auf Login."
 msgstr ""
-"Open a web browser and navigate to the page ``http://10.16.1.4``. Enter the "
-"user ``admin@admin.net`` with the password ``admin`` and click on Login."
+"Open a web browser and navigate to the page http://10.16.1.4. Enter the user"
+" ``admin@admin.net`` with the password ``admin`` and click on Login."
 
 #: ../../source/howtos/install-on-xen/administration.rst:73
 msgid "Klicken Sie auf das Kachelsymbol rechts oben und wählen Settings."

@@ -1,5 +1,5 @@
 ===================================
- linuxmuster.net 6.2 DOKUMENTATION
+ linuxmuster.net 6.2 Dokumentation
 ===================================
 Herzlich Willkommen und Glückwunsch an ihrem Interesse an linuxmuster.net.
 
@@ -54,19 +54,6 @@ Herzlich Willkommen und Glückwunsch an ihrem Interesse an linuxmuster.net.
        howtos/index
        addons/index
        manuals/index
-
-
-
-    Todo-Liste:
-    -----------
-
-    .. hint::
-      Was jetzt folgt dient nur der Kenntlichmachung von fehlenden Kapiteln/Seiten/Texten/Bildern
-
-      Benutze ``.. todo::`` als Anker zum Kenntlichmachen in den betreffenden rst-Dateien.
-      Natürlich wird das nicht in der veröffentlichten Doku erscheinen.
-
-    .. todolist::
 
 
     Index

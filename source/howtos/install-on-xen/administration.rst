@@ -14,7 +14,7 @@ die Bedienung Plattformunabhängig im Webbrowser durchführen.
 XenCenter
 ---------
 
-Öffnen Sie einen Webbrowser und wechseln auf die Seite ``http://10.16.1.10``.
+Öffnen Sie einen Webbrowser und wechseln auf die Seite http://10.16.1.10.
 
 .. figure:: media/administration/image43.png
    :width:  450px
@@ -61,7 +61,7 @@ Xen Orchestra (XOA)
 .. note::
  Um XOA nutzen zu können, muss die lmn62.xoa importiert sein!
 
-Öffnen Sie einen Webbrowser und wechseln auf die Seite ``http://10.16.1.4``. Geben Sie den User ``admin@admin.net`` mit dem Passwort ``admin`` ein und klicken Sie auf Login.
+Öffnen Sie einen Webbrowser und wechseln auf die Seite http://10.16.1.4. Geben Sie den User ``admin@admin.net`` mit dem Passwort ``admin`` ein und klicken Sie auf Login.
 
 .. figure:: media/administration/image48.png
    :width:  450px

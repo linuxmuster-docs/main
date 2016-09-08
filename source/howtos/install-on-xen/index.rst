@@ -41,6 +41,8 @@ Inhalt:
    xenserver
    administration
    configuration
+   lvm
+   backup
 
 
 .. admonition:: Bitte helfen Sie mit diese Dokumentation zu verbessern.
