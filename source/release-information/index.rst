@@ -6,10 +6,16 @@
 Was ist neu in 6.2?
 ===================
 
+Nehmen Sie das Upgrade zu linuxmuster.net 6.2 wahr und folgen Sie der
+:doc:`Upgrade-Anleitung <../howtos/upgrade/index>`.
+
 .. toctree::
    :maxdepth: 1
 
    schulkonsole
    linbo
+   ipfire
 
-Nehmen Sie das Upgrade zu linuxmuster.net 6.2 wahr und folgen Sie der :doc:`Upgrade-Anleitung <../howtos/upgrade/index>`
+Release-Informationen früherer Veröffentlichungen
+
+* `Release-Informationen zur linuxmuster.net 5.1, 6.0 und 6.1 <https://www.linuxmuster.net/wiki/dokumentation:handbuch:preparation:features>`_
