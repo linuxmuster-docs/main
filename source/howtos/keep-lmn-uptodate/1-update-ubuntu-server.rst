@@ -57,8 +57,22 @@ Um die Server-Installation auf den aktuellen Paketstand zu bringen, gehen Sie fo
 	      :align: center
 
 
-5. Während des Aktualisierungsverlaufs fragen einige Pakete nach, ob eine neue Konfigurationsdatei 
+5. Während des Aktualisierungsverlaufs fragen manchmal Pakete nach, ob eine neue Konfigurationsdatei 
    installiert werden soll. Geben Sie ``N`` oder ENTER für "Beibehalten" an.
+   
+   .. code-block:: console
+
+      Konfigurationsdatei »/etc/sudoers«
+       ==> Geändert (von Ihnen oder von einem Skript) seit der Installation.
+       ==> Paketverteiler hat eine aktualisierte Version herausgegeben.
+         Wie möchten Sie vorgehen? Ihre Wahlmöglichkeiten sind:
+	  Y oder I : Die Version des Paket-Betreuers installieren
+	  N oder O : Die momentan installierte Version beibehalten
+             D     : Die Unterschiede zwischen den Versionen anzeigen
+	     Z     : Eine Shell starten, um die Situation zu begutachten
+       Der Standardweg ist das Beibehalten der momentanen Version.
+      *** sudoers (Y/I/N/O/D/Z) [Vorgabe=N] ? N
+
 
 Hinweise
 --------
