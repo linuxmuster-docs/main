@@ -8,9 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-08 20:48+0700\n"
+"POT-Creation-Date: 2016-09-08 21:25+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,8 +18,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../source/release-information/linbo.rst:2
-msgid "Neuerungen in linuxmuster-linbo 2.3.0"
-msgstr "Innovations in linuxmuster-linbo 2.3.0"
+msgid "Neuerungen in linuxmuster-linbo 2.3"
+msgstr ""
 
 #: ../../source/release-information/linbo.rst:4
 msgid "Unterstützung von UEFI-Boot-Clients."
@@ -254,7 +253,7 @@ msgid ""
 "start.conf-Datei eine EFI-Partition (200 MB) vorzusehen. Außerdem ist die "
 "Option *SystemType* auf *efi64* einzustellen. Damit wird die "
 "Clientfestplatte entsprechend dem `GPT-Schema "
-"<https///de.wikipedia.org/wiki/GUID_Partition_Table>`__ partitioniert. Eine "
+"<https://de.wikipedia.org/wiki/GUID_Partition_Table>`__ partitioniert. Eine "
 "Beispiel-Datei ist auf dem Server unter `/var/linbo/examples/start.conf"
 ".ubuntu-efi <https://github.com/linuxmuster/linuxmuster-"
 "linbo/blob/2.3.0-8/var/examples/start.conf.ubuntu-efi>`__ abgelegt."
@@ -410,4 +409,108 @@ msgid ""
 "Auch mehrere parallel installierte Betriebssysteme sind für Linbo kein "
 "Problem. Es erstellt und verwaltet automatisch die notwendigen UEFI-"
 "Booteinträge."
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:515
+msgid "LINBO-Bootmedien erstellen"
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:517
+msgid ""
+"Bei der Installation von **linuxmuster-linbo** wird automatisch unter "
+"``/var/linbo/linbo.iso`` eine ISO-Datei erstellt, mit der sich Bootmedien "
+"erzeugen lassen. Das ist nützlich für den Fall, in dem sich bestimmte "
+"Hardware nicht über das Netzwerk booten lässt. Dann brennt man die Datei "
+"``linbo.iso`` einfach auf einen CD-Rohling oder kopiert sie mit einem Tool "
+"wie zum Beispiel dem `ROSA ImageWriter "
+"<http://wiki.rosalab.com/en/index.php/ROSA_ImageWriter#Where_can_I_take_it.3F>`_"
+" auf einen USB-Stick.  Das so erstellte Bootmedium lässt sich universell "
+"einsetzen, denn es erkennt automatisch auf welchem System (BIOS, UEFI, "
+"64bit, 32bit, Non-PAE) es gestartet wird."
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:527
+msgid ""
+"Um einen Rechner mit Hilfe des LINBO-Bootmediums einzurichten, bootet man "
+"ihn mit angeschlossenem Netzwerkkabel. Das LINBO-Startmenü präsentiert sich "
+"je nachdem ob es sich um ein BIOS- oder UEFI-System handelt leicht "
+"unterschiedlich:"
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:536
+msgid ""
+"LINBO-Startmenü im BIOS-Modus (unter Verwendung von Syslinux), siehe "
+"`Syslinux Menü-System <http://www.syslinux.org/wiki/index.php?title=Menu>`_"
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:541
+msgid ""
+"LINBO-Startmenü im UEFI-Modus (unter Verwendung von Grub), siehe `Grub-"
+"Manual <https://www.gnu.org/software/grub/manual/>`_"
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:544
+msgid "Die Startoptionen im Einzelnen:"
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:547
+msgid "Standardboot"
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:547
+msgid ""
+"Es wird mit den Standardparametern bis zur Clientoberfläche durchgestartet."
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:554
+msgid "Ersteinrichtung + Neustart"
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:550
+msgid ""
+"Die Clientfestplatte wird automatisch nach den Vorgaben der vom Server "
+"heruntergeladenen start.conf-Datei der Rechnergruppe partitioniert und "
+"formatiert.  Anschließend startet der Client neu. Danach kann das Bootmedium"
+" entfernt werden und man arbeitet mit dem lokal im Cache installierten "
+"**LINBO** weiter."
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:557
+msgid "Debugmodus"
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:557
+msgid "Es wird im Textmodus nur bis zur Konsole gebootet."
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:559
+msgid ""
+"Nach einem Timeout von 10 Sekunden wird automatisch die Option "
+"//Standardboot// aktiviert."
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:561
+msgid "Die LINBO-Bootparameter lassen sich bei Bedarf anpassen."
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:563
+msgid ""
+"Im BIOS-Modus wird nach Betätigen der [TAB]-Taste eine Zeile eingeblendet, "
+"in der sich die Startparameter editieren lassen. Hat man die notwendigen "
+"Anpassungen gemacht, startet die [ENTER]-Taste den Bootvorgang:"
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:570
+msgid "Bearbeiten des LINBO-Startmenü im BIOS-Modus"
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:572
+msgid ""
+"Im UEFI-Modus lässt sich nach Drücken der [E]-Taste der entsprechende "
+"Bootmenü-Eintrag editieren. Mit [CTRL-X] oder [F10] startet man nach getaner"
+" Anpassung den Bootvorgang."
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:578
+msgid "Bearbeiten LINBO-Startmenü im UEFI-Modus"
 msgstr ""

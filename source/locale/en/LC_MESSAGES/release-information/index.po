@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-08 20:48+0700\n"
+"POT-Creation-Date: 2016-09-08 21:25+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -22,8 +22,18 @@ msgstr ""
 msgid "Was ist neu in 6.2?"
 msgstr "What is new in 6.2?"
 
-#: ../../source/release-information/index.rst:15
+#: ../../source/release-information/index.rst:9
 msgid ""
 "Nehmen Sie das Upgrade zu linuxmuster.net 6.2 wahr und folgen Sie der :doc"
-":`Upgrade-Anleitung <../howtos/upgrade/index>`"
+":`Upgrade-Anleitung <../howtos/upgrade/index>`."
+msgstr ""
+
+#: ../../source/release-information/index.rst:19
+msgid "Release-Informationen früherer Veröffentlichungen"
+msgstr ""
+
+#: ../../source/release-information/index.rst:21
+msgid ""
+"`Release-Informationen zur linuxmuster.net 5.1, 6.0 und 6.1 "
+"<https://www.linuxmuster.net/wiki/dokumentation:handbuch:preparation:features>`_"
 msgstr ""
