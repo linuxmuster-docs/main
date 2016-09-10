@@ -3,7 +3,7 @@ Wie richte ich Drucker am Server ein?
 
 Um die eingesetzten Netzwerkdrucker serverseitig einzurichten, sind diese mithilfe eines Browsers hinzuzufügen und einzurichten.
 
-.. note:: 
+.. note::
 
    Auf dem Server ist automatisch ein PDF-Drucker eingerichtet. Auf den PDF-Drucker kann aus beliebigen Anwendungen heraus gedruckt werden. Die "gedruckte" PDF-Datei wird im Heimatverzeichnis des jeweiligen Benutzers im Ordner PDF abgelegt. Wird dieser später als Standard-Drucker festgelegt, so wird versehentliches Drucken auf einen nicht gewünschten Drucker unterbunden.
 
@@ -26,7 +26,7 @@ nachstehende Maske:
    Kontrollkästchen "Erlaube Benutzern jeden Auftrag abzubrechen" ist in
    manchen Situation hilfreich, da Lehrer oder Schüler "hängen
    gebliebene" Druckaufträge löschen können.
-   
+
    Danach haben Sie über verschiedene Reiterkarten die Möglichkeit,
    Drucker zu verwalten (hinzufügen, konfigurieren, Drcukaufträge
    verwalten, Druckerklassen definieren, Druckerstatus abzufragen).
@@ -59,7 +59,7 @@ genaue Verbindung manuell angegeben werden und es folgt folgender
 Dialog, andernfalls wird folgender Dialog übersprungen:
 
 .. image:: ./media/drucker-einrichten-cups/cups-server4.png
- 
+
 Im Falle eines Netzwerkdruckers müssen Sie hier die IP-Adresse oder
 den Hostnamen und zusätzlich bei Verwendung eines Print-Servers, der
 über mehrere Anschlüsse verfügt, noch die Warteschlange anzugeben. Zum
@@ -79,7 +79,7 @@ In dieser Maske muss für den Drucker ein Name vergeben werden (zum
 Beispiel *r203-pr01* oder *h109drucker*). Der hier vergebene Name gilt
 zugleich als Freigabename für Linux- und für Windows-Clients. Die
 restlichen Angaben sind zwar optional, sollten aber eingegeben werden,
-um die Zuordnung nachvollziehbar zu halten. 
+um die Zuordnung nachvollziehbar zu halten.
 
 Klicken Sie auf **Weiter**, um zur Auswahl des Druckermodells zu gelangen.
 
@@ -116,7 +116,7 @@ Drucker konfigurieren
 
 .. image:: ./media/drucker-einrichten-cups/cups-server7.png
 
-Hier können Sie abhängig vom Druckermodell verschiedene Einstellungen für das Standardverhalten des Druckertreibers vornehmen (zum Beispiel die Seitengröße auf A4 einstellen, Duplexdruck etc., falls dies nicht standardmäßig vorgesehen ist). 
+Hier können Sie abhängig vom Druckermodell verschiedene Einstellungen für das Standardverhalten des Druckertreibers vornehmen (zum Beispiel die Seitengröße auf A4 einstellen, Duplexdruck etc., falls dies nicht standardmäßig vorgesehen ist).
 
 Klicken Sie im Dialog für die Standardeinstellungen auf den Menüpunkt **Richtlinien**, um hier das Verhalten des Druckers im Fehlerfall festzulegen.
 
@@ -137,7 +137,7 @@ Hier können Sie
 - die Druckereinstellungen anpassen oder
 - erlaubte Benutzer festlegen.
 
-Nun ist Ihr Netzwerkdrucker betriebsbereit und kann auf den Arbeitsstationen eingerichtet werden. 
+Nun ist Ihr Netzwerkdrucker betriebsbereit und kann auf den Arbeitsstationen eingerichtet werden.
 
 Angesprochen wird obiger Drucker über den URL:
 

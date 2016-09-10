@@ -1,7 +1,7 @@
 Wie füge ich Drucker hinzu?
 ===========================
 
-Viele Printserver und Netzwerkdrucker sind in der Lage Ihre IP-Adresse von einem DHCP-Server zu beziehen. 
+Viele Printserver und Netzwerkdrucker sind in der Lage Ihre IP-Adresse von einem DHCP-Server zu beziehen.
 Zuerst muss der Drucker am Server mithilfe der Schulkonsole hinzugefügt werden.
 Hierbei wird dem Drucker ein Name sowie eine IP-Adresse zugewiesen.
 
