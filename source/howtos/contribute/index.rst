@@ -1,0 +1,56 @@
+Wie Sie helfen können
+=====================
+
+Es gibt verschiedene Möglichkeiten, wie Sie helfen können, Linuxmuster.net zu verbessern.
+
+- Dokumentation übersetzen
+- Dokumentation verbessern oder erstellen
+- Fehler melden
+- von Linuxmuster.net weitersagen (z.B. in Blogs, Sozialen Netzwerken, etc.)
+
+Dokumentation übersetzen
+------------------------
+
+Die Dokumentation kann auf der `Projektseite bei Transifex <https://www.transifex.com/linuxmusternet/official-documentation/>`_  übersetzt werden. Klicken Sie einfach auf den blauen "Help Translate 'official documentation'" und melden Sie sich mit ihrem Transifex-Konto an bzw. erstellen Sie ein neues.
+
+Dokumentation verbessern
+------------------------
+
+Die Dokumantion ist der Markupsprache "rST" geschrieben. `Hier <docutils.sourceforge.net/docs/user/rst/quickref.html>`_ finden Sie einen guten Überblick über die am häufigsten verwendeten Elemente.
+
+.. warning::
+   Bitte beachten Sie auch unbedingt die :doc:`Leitlinien zur Dokumenation <guidelines>`, damit ihre Änderungen schnell eingepflegt werden könnnen!
+
+Wenn Sie einen Fehler (Rechtschreibfehler, inhaltliche Fehler, etc.) in der Dokumentation gefunden haben, klicken Sie einfach auf den "Edit on Github" Link am oberen Rand jeder der Dokumentation.
+
+.. figure:: media/editGithub.png
+   :width:  450px
+   :align: center
+   :alt: Edit on Github 1
+   :figwidth: 450px
+
+Mit einem Klick auf den Stift (siehe Bild) können Sie das aktuelle Kapitel bearbeiten.
+
+.. figure:: media/editChapter.png
+   :width:  450px
+   :align: center
+   :alt: Edit on Github 2
+   :figwidth: 450px
+
+.. note::
+  Sie müssen sich vorher bei Github anmelden, um ein Kapitel zu bearbeiten. Wenn Sie noch keinen Account bei Github haben, können Sie sich `hier <https://github.com/join>`_ einen anlegen.
+
+Nachdem Sie alle Änderungen vorgenommen haben, geben Sie unten einen Titel und einen Kommentar ein. Die Änderungen können nun mit einem Klick auf "Propose file changes" eingereicht werden.
+
+.. figure:: media/proposeChanges.png
+   :width:  450px
+   :align: center
+   :alt: Edit on Github 3
+   :figwidth: 450px
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+
+   guidelines
+
