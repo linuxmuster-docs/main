@@ -3,12 +3,23 @@
 ===================================
 Herzlich Willkommen und Glückwunsch an ihrem Interesse an linuxmuster.net.
 
+.. _user-docs:
+
 .. toctree::
    :maxdepth: 1
+   :caption: Benutzerdokumentation
 
    advisor
    howtos
    addons
+
+.. _about-docs:
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Sonstiges
+
+   Mithelfen <howtos/contribute/index>
 
 
 ..
@@ -54,6 +65,7 @@ Herzlich Willkommen und Glückwunsch an ihrem Interesse an linuxmuster.net.
        howtos/index
        addons/index
        manuals/index
+       howtos/contribute/index
 
 
     Index
