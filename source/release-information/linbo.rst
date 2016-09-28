@@ -460,7 +460,7 @@ Megabyte, G für Gigabyte, T für Terabyte):
 
 
 Falls Sie keine Datenpartition benötigen, löschen Sie die Definition für
-die fünfte Partition einfach heraus. Sie können auch weitere Paritionen
+die fünfte Partition einfach heraus. Sie können auch weitere Partitionen
 anfügen (bis zu insgesamt 128).
 
 Beachten Sie, dass für den EFI-Betrieb als erste und zweite Partition
