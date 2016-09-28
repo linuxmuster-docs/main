@@ -1,3 +1,6 @@
+.. _linbo-startbildschirm-label:
+
+
 ===========================
  Der LINBO Startbildschirm
 ===========================

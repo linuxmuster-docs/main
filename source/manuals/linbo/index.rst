@@ -27,4 +27,5 @@ LINBO bietet
 
    linbo-mainscreen
    linbo-imagingscreen
-
+   linbo-bootscreen
+   linbo-bootmedia
