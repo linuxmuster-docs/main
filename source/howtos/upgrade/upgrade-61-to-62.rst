@@ -61,7 +61,8 @@ Clients installiert wird, erzwingt man eine Aktualisierung des Caches
 und einen Reboot.
 
 Folgender Befehl auf der Serverkonsole sorgt dafür, dass beim nächsten
-Bootvorgang per PXE der Cache initialisiert wird (und rebootet wird):
+Bootvorgang (egal ob per PXE oder von Festplatte) der Cache
+initialisiert wird (und rebootet wird):
 
 .. code-block:: console
 
@@ -76,19 +77,33 @@ Bootvorgang per PXE der Cache initialisiert wird (und rebootet wird):
 
 	 linbo-remote -w0 -p initcache,reboot [-i <hostname>|-g <group>|-r <room>]
 
-Sollten sich in Ihrem Netzwerk neben den Clients, die via
-PXE-Netwerk-Boot starten, auch solche befinden, die Linbo nur lokal
-starten, schalten Sie die betreffenden Rechner ein und lassen Sie
-diese mit LAN-Verbindung in die Linbo-Oberfläche booten.  Über die
-Konfigurationseinstellung ``AutoInitCache = yes`` in der zugehörigen
-``start.conf`` erzwingt man die Cache-Initialisierung auch bei diesen
-Clients.
+   Sollten sich in Ihrem Netzwerk neben den Clients, die via
+   PXE-Netwerk-Boot starten, auch solche befinden, die Linbo nur lokal
+   starten, schalten Sie die betreffenden Rechner ein und lassen Sie
+   diese mit LAN-Verbindung in die Linbo-Oberfläche booten.  Über die
+   Konfigurationseinstellung ``AutoInitCache = yes`` in der zugehörigen
+   ``start.conf`` erzwingt man die Cache-Initialisierung auch bei diesen
+   Clients.
 
 .. note:: Nach dem Upgrade sollten alle Clients wie gewohnt weiter
    funktionieren. Die Bildschirmausgabe beim Bootvorgang ist leicht
    verändert und vor dem Betriebssystemstart aus der Linbo-Oberfläche
    heraus wird nun immer ein Neustart initiiert (Der sogenannte
-   *reboot-Workaround* wird nun immer verwendet.)
+   *reboot-Workaround* wird nun immer verwendet.).
 
+Fehlerbehebung mit einem USB-Stick
+__________________________________
 
+Wenn ein Arbeitsplatz mit der Fehlermeldung "Kernel panic" hängt oder
+in Schleifen immer wieder rebootet, kann ein Neuanfang über einen
+USB-Stick oder CD/DVD initiiert werden.
 
+Laden Sie dazu die die Datei ``linbo.iso`` von ihrem Server herunter
+und brennen Sie diese auf CD/DVD oder kopieren diese auf einen
+USB-Stick, z.B. mit Hilfe des Befehls
+
+.. code-block:: console
+
+   # dd if=linbo.iso of=/dev/sdb
+
+wobei ``/dev/sdb`` der Schnittstellenname ihres USB-Sticks sein muss.
