@@ -11,7 +11,7 @@ Die Dokumantion ist in der Markupsprache "rST" geschrieben. `Hier <docutils.sour
 .. warning::
    Bitte beachten Sie auch unbedingt die :doc:`Leitlinien zur Dokumenation <guidelines>`, damit ihre Änderungen schnell eingepflegt werden könnnen!
 
-Wenn Sie einen Fehler (Rechtschreibfehler, inhaltliche Fehler, etc.) in der Dokumentation gefunden haben, klicken Sie einfach auf den "Edit on Github" Link am oberen Rand jeder der Dokumentation.
+Wenn Sie einen Fehler (Rechtschreibfehler, inhaltliche Fehler, etc.) in der Dokumentation gefunden haben, klicken Sie einfach auf den "Edit on Github" Link am oberen Rand jeder Dokumentation.
 
 .. figure:: media/editGithub.png
    :width:  450px
