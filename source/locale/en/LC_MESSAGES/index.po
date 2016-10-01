@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-08 21:25+0700\n"
+"POT-Creation-Date: 2016-10-01 20:37+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -27,11 +27,11 @@ msgid ""
 "Herzlich Willkommen und Glückwunsch an ihrem Interesse an linuxmuster.net."
 msgstr "Welcome to linuxmuster.net!"
 
-#: ../../source/index.rst:19
+#: ../../source/index.rst:30
 msgid "Etwas in eigener Sache (in Ihrer und unserer)"
 msgstr "In our own interest (and yours)"
 
-#: ../../source/index.rst:21
+#: ../../source/index.rst:32
 msgid ""
 "Diese Dokumentation bezieht sich immer auf die aktuelle stabile Version "
 "unseres Systems."
@@ -39,7 +39,7 @@ msgstr ""
 "This documentation always refers to the current stable version of "
 "linuxmuster.net."
 
-#: ../../source/index.rst:24
+#: ../../source/index.rst:35
 msgid ""
 "Unsere Erfahrungen haben gezeigt, dass sich an vielen Schulen ein einmal "
 "installiertes System nicht unbedingt immer an sämtliche Veränderungen "
@@ -48,7 +48,7 @@ msgstr ""
 "Our experience has shown that in many schools an already installed system "
 "may not always conform to all changes."
 
-#: ../../source/index.rst:28
+#: ../../source/index.rst:39
 msgid ""
 "Da es unser Bestreben ist, Ihnen immer das beste System zur Verfügung zu "
 "stellen, möchten wir Sie um etwas bitten: Verwenden Sie immer die neueste "
@@ -58,7 +58,7 @@ msgstr ""
 "we would like to ask you something: Always use the latest stable version of "
 "linuxmuster.net!"
 
-#: ../../source/index.rst:32
+#: ../../source/index.rst:43
 msgid ""
 "Wir sind uns bewusst das ein Versionsupgrade nicht mal so gemacht werden "
 "kann/soll und aus diesem Grunde lassen wir Sie dabei auch nicht alleine. "
@@ -70,6 +70,6 @@ msgstr ""
 "detailed instructions in the HowTo's, our community and our telephone "
 "support is there to help you!"
 
-#: ../../source/index.rst:34
+#: ../../source/index.rst:45
 msgid "Das ist unser Versprechen, linuxmuster.net(t) halt!"
 msgstr "This is our promise - linuxmuster.net(t)! (nett is german for `nice`)"

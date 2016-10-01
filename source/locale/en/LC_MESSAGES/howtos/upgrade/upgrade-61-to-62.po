@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-08 21:25+0700\n"
+"POT-Creation-Date: 2016-10-01 20:37+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -128,24 +128,37 @@ msgstr ""
 #: ../../source/howtos/upgrade/upgrade-61-to-62.rst:63
 msgid ""
 "Folgender Befehl auf der Serverkonsole sorgt dafür, dass beim nächsten "
-"Bootvorgang per PXE der Cache initialisiert wird (und rebootet wird):"
+"Bootvorgang (egal ob per PXE oder von Festplatte) der Cache initialisiert "
+"wird (und rebootet wird):"
 msgstr ""
 
-#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:79
-msgid ""
-"Sollten sich in Ihrem Netzwerk neben den Clients, die via PXE-Netwerk-Boot "
-"starten, auch solche befinden, die Linbo nur lokal starten, schalten Sie die"
-" betreffenden Rechner ein und lassen Sie diese mit LAN-Verbindung in die "
-"Linbo-Oberfläche booten.  Über die Konfigurationseinstellung ``AutoInitCache"
-" = yes`` in der zugehörigen ``start.conf`` erzwingt man die Cache-"
-"Initialisierung auch bei diesen Clients."
-msgstr ""
-
-#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:87
+#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:88
 msgid ""
 "Nach dem Upgrade sollten alle Clients wie gewohnt weiter funktionieren. Die "
 "Bildschirmausgabe beim Bootvorgang ist leicht verändert und vor dem "
 "Betriebssystemstart aus der Linbo-Oberfläche heraus wird nun immer ein "
 "Neustart initiiert (Der sogenannte *reboot-Workaround* wird nun immer "
-"verwendet.)"
+"verwendet.)."
+msgstr ""
+
+#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:95
+msgid "Fehlerbehebung mit einem USB-Stick"
+msgstr ""
+
+#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:97
+msgid ""
+"Wenn ein Arbeitsplatz mit der Fehlermeldung \"Kernel panic\" hängt oder in "
+"Schleifen immer wieder rebootet, kann ein Neuanfang über einen USB-Stick "
+"oder CD/DVD initiiert werden."
+msgstr ""
+
+#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:101
+msgid ""
+"Laden Sie dazu die die Datei ``linbo.iso`` von ihrem Server herunter und "
+"brennen Sie diese auf CD/DVD oder kopieren diese auf einen USB-Stick, z.B. "
+"mit Hilfe des Befehls"
+msgstr ""
+
+#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:109
+msgid "wobei ``/dev/sdb`` der Schnittstellenname ihres USB-Sticks sein muss."
 msgstr ""

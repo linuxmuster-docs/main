@@ -14,6 +14,7 @@ Howtos, sortiert nach Relevanz:
    howtos/leoclient2/index
    howtos/backupmondo/index
    howtos/backupmigration/index
+   howtos/radius/index
 
 Howtos, sonstige:
 
@@ -21,9 +22,3 @@ Howtos, sonstige:
    :maxdepth: 1
 
    howtos/feedback/index
-
-
-.. admonition:: Bitte helfen Sie mit diese Dokumentation zu verbessern.
-
-   Falls Sie einen Fehler in dieser Dokumentation entdeckt haben, teilen Sie uns diesen mit:
-   http://www.linuxmuster.net/flyspray/

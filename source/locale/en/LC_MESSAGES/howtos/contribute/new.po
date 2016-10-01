@@ -1,0 +1,168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-01 20:37+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/howtos/contribute/new.rst:2
+msgid "Dokumentation erweitern oder hinzufügen"
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:4
+msgid ""
+"Die Dokumantion ist in der Markupsprache \"rST\" geschrieben. `Hier "
+"<docutils.sourceforge.net/docs/user/rst/quickref.html>`_ finden Sie einen "
+"guten Überblick über die am häufigsten verwendeten Elemente."
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:7
+#: ../../source/howtos/contribute/new.rst:70
+msgid ""
+"Bitte beachten Sie auch unbedingt die :doc:`Leitlinien zur Dokumenation "
+"<guidelines>`, damit ihre Änderungen schnell eingepflegt werden könnnen!"
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:9
+msgid ""
+"Wenn Sie die Dokumentation erweitern wollen, z.B. mit einem eigenen HowTo "
+"oder ein fehlendes Kapitel ergänzen möchten, benötigen Sie folgende Dinge:"
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:11
+msgid ""
+"`git <https://git-scm.com/>`_ (wird zur Verwaltung und Versionierung der "
+"Dokumentation verwendet)"
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:12
+msgid ""
+"`sphinx <http://www.sphinx-doc.org>`_ (zum Übersetzen und Testen der "
+"Quelldateien)"
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:13
+msgid "ein Konto bei `Github <https://github.com/join>`_"
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:14
+msgid ""
+"optional: SSH-Schlüssel bei Github `hochladen "
+"<https://help.github.com/articles/generating-an-ssh-key/>`_ (erleichtert die"
+" Arbeit mit git sehr)"
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:17
+msgid "Installation (Ubuntu)"
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:19
+msgid "Git:"
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:25
+msgid "Sphinx:"
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:34
+msgid "Linuxmuster Dokumentation forken"
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:36
+msgid ""
+"Öffnen Sie die Linuxmuster Dokumentation auf Github und klicken Sie auf "
+"\"Fork\"."
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:44
+msgid ""
+"Öffnen Sie nun einen Terminal / Eingabeauffoderung (``Strg+Alt+t`` in "
+"Ubuntu) and geben Sie folgenden Befehl ein:"
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:47
+msgid "Ersetzen Sie \"github-account\" mit ihrem Github Kontonamen!"
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:50
+msgid ""
+"Nutzen Sie die URL ``git@github.com:github-account/all-of-me.git`` falls Sie"
+" bereits einen SSH-Schlüssel bei Github hochgeladen haben!"
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:57
+msgid "Sie können nun mit"
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:64
+msgid "die Dokumantion in HTML übersetzen und in ihrem Browser öffnen."
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:67
+msgid "Dokumentation ändern oder neu erstellen"
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:72
+msgid ""
+"Im Verzeichnis ``source`` und den entsprechenden Unterordnern befinden sich "
+"alle Dokumentationsdateien. Öffnen Sie einfach eine dieser Dateien und "
+"nehmen Sie die gewünschten Änderungen vor. Sie können auch eine neue "
+"Dokumentation in einem der Unterordner anlegen. Erstellen Sie dazu einfach "
+"einen Ordner mit einem passenden Namen und die notwendige ``index.rst`` "
+"Datei."
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:79
+msgid ""
+"Schaunen Sie sich auch die anderen Dokumentationsdateien an, um mehr über "
+"den Aufbau und Syntax zu lernen."
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:81
+msgid ""
+"Haben Sie alle Änderungen vorgenommen, können Sie sie nun zur Überprüfung "
+"einreichen. Dazu sind folgende Schritte notwendig:"
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:83
+msgid ""
+"Zuerst überprüfen Sie bitte, ob ``make html`` ohne Fehler (mit wenigen "
+"Warnungen) durchläuft."
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:89
+msgid ""
+"Falls Sie neue Dateien oder Ordner erstellt haben, müssen diese noch "
+"hinzugefügt werden:"
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:95
+msgid ""
+"Geben Sie nun noch einen Kommentar zu ihren Änderungen ein und laden Sie "
+"alles in ihren Fork hoch:"
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:102
+msgid ""
+"Erstellen Sie nun einen \"Pull-Request\" unter https://github.com/github-"
+"account/all-of-me, indem Sie auf \"New Pull Request\" klicken."
+msgstr ""
+
+#: ../../source/howtos/contribute/new.rst:110
+msgid ""
+"Wenn Sie weitere Änderungen vornehmen und mit ``git commit -a -m\"My "
+"comment\"`` und ``git push`` bei Github hochladen, werden diese Änderungen "
+"automatisch dem Pull Request hinzugefügt."
+msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-08 21:25+0700\n"
+"POT-Creation-Date: 2016-10-01 20:37+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -35,18 +35,6 @@ msgstr ""
 msgid "Howtos, sortiert nach Relevanz:"
 msgstr "HowTos, sort by relevance"
 
-#: ../../source/howtos.rst:18
+#: ../../source/howtos.rst:19
 msgid "Howtos, sonstige:"
 msgstr "other HowTos"
-
-#: ../../source/howtos.rst:26
-msgid "Bitte helfen Sie mit diese Dokumentation zu verbessern."
-msgstr "Please help to improve this documentation!"
-
-#: ../../source/howtos.rst:28
-msgid ""
-"Falls Sie einen Fehler in dieser Dokumentation entdeckt haben, teilen Sie "
-"uns diesen mit: http://www.linuxmuster.net/flyspray/"
-msgstr ""
-"If you've found a typo or an error in this documentation, report it, please:"
-" http://www.linuxmuster.net/flyspray/"
