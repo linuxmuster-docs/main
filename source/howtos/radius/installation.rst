@@ -57,7 +57,7 @@ Wenn man eine ähnliche Ausgabe erhält, kann nun der Zugriff auf das LDAP-Verze
 Radius-Server einrichten
 ------------------------
 
-Für die Authentifizierung mit einem Radius-Server gibt es verschiedene Protokolle, welche festlegen, wie die Übertragung und Authentifizierung abläuft. Dieses kann man in der Datei ``/etc/freeradius/eap.conf`` festlegen. Überprüfen Sie folgende Einstellungen und entfernen Sie fallPs notwendig die Kommentarzeichen.
+Für die Authentifizierung mit einem Radius-Server gibt es verschiedene Protokolle, welche festlegen, wie die Übertragung und Authentifizierung abläuft. Dieses kann man in der Datei ``/etc/freeradius/eap.conf`` festlegen. Überprüfen Sie folgende Einstellungen und entfernen Sie, falls notwendig, die Kommentarzeichen.
 
 .. code-block:: console
 

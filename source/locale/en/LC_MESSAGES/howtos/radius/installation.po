@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-01 20:37+0700\n"
+"POT-Creation-Date: 2016-10-03 10:05+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,23 +20,27 @@ msgstr ""
 
 #: ../../source/howtos/radius/installation.rst:2
 msgid "Installation"
-msgstr ""
+msgstr "Installation"
 
 #: ../../source/howtos/radius/installation.rst:4
 msgid ""
 "In den Paketquellen von Linuxmuster.net gibt es das Paket ``linuxmuster-"
 "freeradius``. Installieren Sie das Paket mit"
 msgstr ""
+"In the package repository of Linuxmuster.net there is the package "
+"``linuxmuster-freeradius``. Install the package with"
 
 #: ../../source/howtos/radius/installation.rst:12
 msgid "Test des Radius-Servers"
-msgstr ""
+msgstr "Test the Radius server"
 
 #: ../../source/howtos/radius/installation.rst:14
 msgid ""
 "In der Datei ``/etc/freeradius/users`` in der folgenden Zeile das "
 "Kommentarzeichen (``#``) entfernen."
 msgstr ""
+"In the file ``/etc/freeradius/users`` remove the comment mark ( ``#``) in "
+"the following line."
 
 #: ../../source/howtos/radius/installation.rst:20
 msgid ""
@@ -43,16 +48,20 @@ msgid ""
 "``/etc/freeradius/clients`` eingetragen ist. Dieser Eintrag kann nach dem "
 "Test wieder entfernt werden."
 msgstr ""
+"Next, check if ``localhost`` is entered in the file "
+"``/etc/freeradius/clients``. This entry can be removed after the test."
 
 #: ../../source/howtos/radius/installation.rst:29
 msgid ""
 "Nun kann man, nach einem Neustart des Radius-Servers, die Authentifizierung "
 "für diesen User testen."
 msgstr ""
+"Now, after restarting the Radius server, you can test the authentication for"
+" this user."
 
 #: ../../source/howtos/radius/installation.rst:36
 msgid "Als Ausgabe sollte man folgendes erhalten:"
-msgstr ""
+msgstr "The output should be as follows:"
 
 #: ../../source/howtos/radius/installation.rst:48
 msgid ""
@@ -63,35 +72,47 @@ msgid ""
 "``/etc/freeradius/clients`` eingetragen werden. Bitte passen Sie den Client "
 "Namen, die IP-Adresse und das Passwort entsprechend an."
 msgstr ""
+"If you get a similar output, access to the LDAP directory can now be set up,"
+" so that you can log in with its username and password of linuxmuster.net. "
+"To do so, the client (Access Point, Captive Portal Server, Wireless "
+"Controller) must be entered into the file ``/etc/freeradius/clients``. "
+"Please adjust the client name, the IP address and the password accordingly."
 
 #: ../../source/howtos/radius/installation.rst:58
 msgid "Radius-Server einrichten"
-msgstr ""
+msgstr "Setup Radius server"
 
 #: ../../source/howtos/radius/installation.rst:60
 msgid ""
 "Für die Authentifizierung mit einem Radius-Server gibt es verschiedene "
 "Protokolle, welche festlegen, wie die Übertragung und Authentifizierung "
 "abläuft. Dieses kann man in der Datei ``/etc/freeradius/eap.conf`` "
-"festlegen. Überprüfen Sie folgende Einstellungen und entfernen Sie fallPs "
-"notwendig die Kommentarzeichen."
+"festlegen. Überprüfen Sie folgende Einstellungen und entfernen Sie, falls "
+"notwendig, die Kommentarzeichen."
 msgstr ""
+"For authentication with a Radius server, there are different protocols that "
+"determine how the transfer and authentication process is running. This can "
+"be specified in the file ``/etc/freeradius/eap.conf``. Check the following "
+"settings and remove - if necessary - the comment marks."
 
 #: ../../source/howtos/radius/installation.rst:77
 msgid ""
 "MD5 kommt als Protokoll nicht in Frage, da die Passwörter nicht als MD5 im "
 "LDAP gespeichert sind!"
 msgstr ""
+"MD5 is not suitable as the passwords are not stored as MD5 in the LDAP!"
 
 #: ../../source/howtos/radius/installation.rst:79
 msgid ""
 "Überprüfen Sie weiterhin den Parameter ``auto_header`` in der Datei "
 "``/etc/freeradius/radiusd.conf``."
 msgstr ""
+"Also, check the ``auto_header`` parameter in the file "
+"``/etc/freeradius/radiusd.conf``."
 
 #: ../../source/howtos/radius/installation.rst:88
 msgid "LDAP Zugriff einrichten"
-msgstr ""
+msgstr "Setup LDAP Access"
 
 #: ../../source/howtos/radius/installation.rst:90
 msgid ""
@@ -99,18 +120,21 @@ msgid ""
 "anmelden kann, muss der Zugriff auf den LDAP eingerichtet werden. Ändern Sie"
 " bitte folgende Dateien und passen Sie die Angaben an ihren LDAP an."
 msgstr ""
+"To be able to log on to the Radius server with its user name and password, "
+"access to the LDAP must be established. Please change the following files "
+"and adapt the information to your LDAP."
 
 #: ../../source/howtos/radius/installation.rst:92
 msgid "``/etc/freeradius/modules/ldap``:"
-msgstr ""
+msgstr "``/etc/freeradius/modules/ldap``:"
 
 #: ../../source/howtos/radius/installation.rst:94
 msgid "Das benötige Passwort kann mit folgendem Befehl angezeigt werden:"
-msgstr ""
+msgstr "The required password can be displayed with the following command:"
 
 #: ../../source/howtos/radius/installation.rst:100
 msgid "Passen Sie nun die LDAP-Angaben an:"
-msgstr ""
+msgstr "Now adjust the LDAP information:"
 
 #: ../../source/howtos/radius/installation.rst:111
 msgid ""
@@ -118,14 +142,17 @@ msgid ""
 "die LDAP-Authentifizierung, d.h. entfernen Sie bei den jeweiligen Zeilen zu "
 "LDAP die Kommentarzeichen."
 msgstr ""
+"Now enable LDAP authentication in the file ``/etc/freeradius/sites-"
+"available/default`` by removing the comment marks for each line that refers "
+"to LDAP."
 
 #: ../../source/howtos/radius/installation.rst:130
 msgid "Am Ende starten Sie die Radius-Server neu:"
-msgstr ""
+msgstr "At the end, restart the Radius server:"
 
 #: ../../source/howtos/radius/installation.rst:137
 msgid "Firewall konfigurieren"
-msgstr ""
+msgstr "Configure Firewall"
 
 #: ../../source/howtos/radius/installation.rst:139
 msgid ""
@@ -134,40 +161,50 @@ msgid ""
 "``/etc/linuxmuster/allowed_ports`` und fügt in der Zeile \"udp\" den "
 "entsprechenden Port hinzu."
 msgstr ""
+"The firewall must now be configured so that the requests are also received "
+"on the server (UDP, port 1182). To do this, edit the file "
+"``/etc/linuxmuster/allowed_ports`` and add the appropriate port in the line "
+"\"udp\"."
 
 #: ../../source/howtos/radius/installation.rst:146
 msgid ""
 "Damit die Änderungen auf der Firewall (IPFire) wirksam werden, geben Sie "
 "bitte folgenden Befehl ein:"
 msgstr ""
+"In order for the changes to be effective on the firewall (IPFire), please "
+"enter the following command:"
 
 #: ../../source/howtos/radius/installation.rst:152
 msgid ""
 "Falls Sie eine andere Firewall als die empfohlene Firewalllösung (IPFire) "
 "verwenden, müssen Sie die entsprechende Firewallregel selbst einrichten!"
 msgstr ""
+"If you use a firewall other than the recommended firewall solution (IPFire),"
+" you must set up the appropriate firewall rule yourself!"
 
 #: ../../source/howtos/radius/installation.rst:155
 msgid "LDAP-Authentifizierung testen"
-msgstr ""
+msgstr "Test LDAP authentication"
 
 #: ../../source/howtos/radius/installation.rst:157
 msgid "Geben Sie folgenden Befehl ein (Benutzernamen und Passwort anpassen!):"
-msgstr ""
+msgstr "Enter the following command (adjust user name and password):"
 
 #: ../../source/howtos/radius/installation.rst:165
 msgid ""
 "Falls Sie ein *Access-Accept Packet* erhalten haben, war die "
 "Authentifizierung erfolgreich!"
 msgstr ""
+"If you received an *Access-Accept Packet*, the authentication was "
+"successful!"
 
 #: ../../source/howtos/radius/installation.rst:168
 msgid "Weitere Einstellungen"
-msgstr ""
+msgstr "Additional settings"
 
 #: ../../source/howtos/radius/installation.rst:171
 msgid "Logging aktivieren"
-msgstr ""
+msgstr "Enable logging"
 
 #: ../../source/howtos/radius/installation.rst:173
 msgid ""
@@ -176,3 +213,7 @@ msgid ""
 "``/var/log/freeradius/radius.log``. Vergessen Sie nicht den Neustart des "
 "Radius-Servers!"
 msgstr ""
+"The logging of authentication requests can be activated in "
+"``/etc/freeradius/radiusd.conf``. The log file is: "
+"``/var/log/freeradius/radius.log``. Do not forget to restart the Radius "
+"server!"

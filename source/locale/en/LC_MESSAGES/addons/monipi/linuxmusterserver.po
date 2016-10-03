@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-01 20:37+0700\n"
+"POT-Creation-Date: 2016-10-03 10:05+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -27,45 +27,60 @@ msgid ""
 "Auf dem Server muss der check_mk-Client installiert werden, der dem "
 "Monitoring-Server auf Nachfrage die Performance-Daten übermittelt."
 msgstr ""
+"On the server, the check_mk client must be installed, which sends the "
+"monitoring server the performance data on demand."
 
-#: ../../source/addons/monipi/linuxmusterserver.rst:7
+#: ../../source/addons/monipi/linuxmusterserver.rst:6
 msgid ""
 "Melden Sie sich auf der Serverkonsole als administrativer Benutzer an und "
 "installieren Sie die Pakete ``check-mk-agent`` und ``xinetd``:"
 msgstr ""
+"Log on to the server console as an administrative user and install ``check-"
+"mk-agent`` and ``xinetd``:"
 
-#: ../../source/addons/monipi/linuxmusterserver.rst:14
+#: ../../source/addons/monipi/linuxmusterserver.rst:12
 msgid ""
 "Anschließend muss der xinetd konfiguriert werden, so dass eine Abfrage der "
 "Monitoring-Daten möglich wird. Editieren Sie dazu die Datei "
 "``/etc/xinetd.d/check_mk`` wie folgt:"
 msgstr ""
+"The xinetd must then be configured so that the monitoring data can be "
+"queried. To do this, edit the file ``/etc/xinetd.d/check_mk`` as follows:"
 
-#: ../../source/addons/monipi/linuxmusterserver.rst:52
+#: ../../source/addons/monipi/linuxmusterserver.rst:48
 msgid ""
 "Die Beschränkung des Zugriffs auf bestimmte IP-Adressen ist aus "
 "Sicherheitsgründen sinnvoll, kann aber erst dann erfolgen, wenn der "
 "Monitoring-Server (MoniPi) eine dauerhafte IP-Adresse hat."
 msgstr ""
+"The limitation of access to certain IP addresses is useful for security "
+"reasons, but can only be carried out if the monitoring server (MoniPi) has a"
+" permanent IP address."
 
-#: ../../source/addons/monipi/linuxmusterserver.rst:55
+#: ../../source/addons/monipi/linuxmusterserver.rst:50
+msgid "Starten Sie den xinetd nach den Anpassungen neu:"
+msgstr "Restart the xinetd after the customizations:"
+
+#: ../../source/addons/monipi/linuxmusterserver.rst:56
 msgid ""
-"Starten Sie den xinetd nach den Anpassungen neu: ``service xinetd restart``"
+"Um zu überprüfen, ob die Einrichtung erfolgreich war, können Sie den Befehl"
 msgstr ""
+"To check whether the setup was successful, you can use the command [#f1]_"
 
-#: ../../source/addons/monipi/linuxmusterserver.rst:57
+#: ../../source/addons/monipi/linuxmusterserver.rst:62
 msgid ""
-"Um zu überprüfen, ob die Einrichtung erfolgreich war, können Sie den Befehl "
-"``telnet localhost 6556`` ausführen [#f1]_, dabei sollte eine längere "
-"Ausgabe von Performancedaten die Folge sein:"
-msgstr ""
+"ausführen [#f1]_, dabei sollte eine längere Ausgabe von Performancedaten die"
+" Folge sein:"
+msgstr "This should result in a longer output of performance data:"
 
-#: ../../source/addons/monipi/linuxmusterserver.rst:65
+#: ../../source/addons/monipi/linuxmusterserver.rst:69
 msgid "Fußnoten"
-msgstr ""
+msgstr "Footnotes"
 
-#: ../../source/addons/monipi/linuxmusterserver.rst:66
+#: ../../source/addons/monipi/linuxmusterserver.rst:70
 msgid ""
 "Möglicherweise muss man den telnet-Befehl ebenfalls noch nachinstallieren: "
 "``apt-get install telnet``"
 msgstr ""
+"You may also need to reinstall the telnet command: ``apt-get install "
+"telnet``"

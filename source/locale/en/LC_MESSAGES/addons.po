@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-01 20:37+0700\n"
+"POT-Creation-Date: 2016-10-03 10:05+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../source/addons.rst:2
 msgid "Addons"
-msgstr ""
+msgstr "Addons"
 
 #: ../../source/addons.rst:3
 msgid ""
