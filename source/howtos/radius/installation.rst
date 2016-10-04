@@ -108,7 +108,7 @@ Passen Sie nun die LDAP-Angaben an:
    filter = "(uid=%u)"
    ...
 
-Aktivieren Sie nun in der Datei ``/etc/freeradius/sites-available/default`` die LDAP-Authentifizierung, d.h. entfernen Sie bei den jeweiligen Zeilen zu LDAP die Kommentarzeichen.
+Aktivieren Sie nun in der Datei ``/etc/freeradius/sites-available/default`` **UND** ``/etc/freeradius/sites-available/inner-tunnel`` die LDAP-Authentifizierung, d.h. entfernen Sie bei den jeweiligen Zeilen zu LDAP die Kommentarzeichen.
 
 .. code-block:: console
 
