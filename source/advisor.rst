@@ -29,7 +29,7 @@ Schritt-für-Schritt Anleitungen
    :glob:
    :maxdepth: 1
 
-   howtos/install-from-scratch/index 
+   howtos/install-from-scratch/index
    howtos/upgrade/index
    howtos/keep-lmn-uptodate/index
    howtos/migrate/index
@@ -57,10 +57,5 @@ Bedienungsanleitungen
    Hypervisorfunktionen
    ____________________
 
-
-.. admonition:: Bitte helfen Sie mit diese Dokumentation zu verbessern.
-
-   Falls Sie einen Fehler in dieser Dokumentation entdeckt haben, teilen Sie uns diesen mit:
-   http://www.linuxmuster.net/flyspray/
 
 
