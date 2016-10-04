@@ -1,5 +1,0 @@
-=====================
-Release Informationen
-=====================
-
-Versionsinformationen

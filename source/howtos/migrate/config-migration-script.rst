@@ -3,17 +3,17 @@ Konfiguration des Migrationsskripts
 
 In der Standardeinstellung wird das komplette Home-Verzeichnis ohne Ausnahme gesichert und wieder hergestellt.
 
-Einstellungen bzgl. zusätzlich zu sichernden bzw. vom Backup auszuschließenden Dateien und Verzeichnissen trägt man in die Konfigurationsdateien **defaults.conf, include.conf und exclude.conf** unter 
+Einstellungen bzgl. zusätzlich zu sichernden bzw. vom Backup auszuschließenden Dateien und Verzeichnissen trägt man in die Konfigurationsdateien **defaults.conf, include.conf und exclude.conf** unter
 
 .. code:: bash
 
-    /etc/linuxmuster/migration 
+    /etc/linuxmuster/migration
 
 ein. Diese Dateien werden beim Backup mitgesichert und beim Restore auf dem Zielsystem ausgewertet.
 
 Eigene Dateien und Verzeichnisse einbeziehen
 --------------------------------------------
-Soll zum Beispiel die Schulhomepage, die unter ``/var/www/homepage``  
+Soll zum Beispiel die Schulhomepage, die unter ``/var/www/homepage``
 abgelegt ist, ebenfalls gesichert und auf dem Zielsystem wieder hergestellt werden, so trägt man den Pfad einfach in ``etc/linuxmuster/migration/include.conf`` ein:
 
 .. code:: bash
