@@ -1,5 +1,8 @@
-Installation
-------------
+Installation & Konfiguration
+----------------------------
+
+Radius-Server installieren
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In den Paketquellen von Linuxmuster.net gibt es das Paket ``linuxmuster-freeradius``. Installieren Sie das Paket mit
 
@@ -8,8 +11,27 @@ In den Paketquellen von Linuxmuster.net gibt es das Paket ``linuxmuster-freeradi
    $ apt-get install linuxmuster-freeradius
 
 
-Test des Radius-Servers
+Firewall konfigurieren
 ~~~~~~~~~~~~~~~~~~~~~~~
+
+Nun muss die Firewall konfiguriert werden, damit die Anfragen auch auf dem Server ankommen (UDP, Port 1182). Dazu bearbeitet man die Datei ``/etc/linuxmuster/allowed_ports`` und fügt in der Zeile "udp" den entsprechenden Port hinzu.
+
+.. code-block:: console
+
+   ...
+   udp domain, ... , 1812
+
+Damit die Änderungen auf der Firewall (IPFire) wirksam werden, geben Sie bitte folgenden Befehl ein:
+
+.. code-block:: console
+
+   $ service linuxmuster-base restart
+
+Falls Sie eine andere Firewall als die empfohlene Firewalllösung (IPFire) verwenden, müssen Sie die entsprechende Firewallregel selbst einrichten!
+
+
+Radius-Servers testen
+~~~~~~~~~~~~~~~~~~~~~
 
 In der Datei ``/etc/freeradius/users`` in der folgenden Zeile das Kommentarzeichen (``#``) entfernen.
 
@@ -54,8 +76,8 @@ Wenn man eine ähnliche Ausgabe erhält, kann nun der Zugriff auf das LDAP-Verze
       secret = geheim
    }
 
-Radius-Server einrichten
-------------------------
+Radius-Server konfigurieren
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Für die Authentifizierung mit einem Radius-Server gibt es verschiedene Protokolle, welche festlegen, wie die Übertragung und Authentifizierung abläuft. Dieses kann man in der Datei ``/etc/freeradius/eap.conf`` festlegen. Überprüfen Sie folgende Einstellungen und entfernen Sie, falls notwendig, die Kommentarzeichen.
 
@@ -82,101 +104,5 @@ MD5 kommt als Protokoll nicht in Frage, da die Passwörter nicht als MD5 im LDAP
 
    pap {
       auto_header = yes
-   }
-
-LDAP Zugriff einrichten
------------------------
-
-Damit man sich mit seinem Benutzernamen und Passwort am Radius-Server anmelden kann, muss der Zugriff auf den LDAP eingerichtet werden. Ändern Sie bitte folgende Dateien und passen Sie die Angaben an ihren LDAP an.
-
-``/etc/freeradius/modules/ldap``:
-
-Das benötige Passwort kann mit folgendem Befehl angezeigt werden:
-
-.. code-block:: console
-
-   $ cat /etc/ldap/slapd.conf | grep rootpw
-
-Passen Sie nun die LDAP-Angaben an:
-
-.. code-block:: console
-
-   ...
-   server = "localhost"
-   password = geheim
-   basedn = "dc=linuxmuster-net,dc=lokal"
-   filter = "(uid=%u)"
-   ...
-
-Aktivieren Sie nun in der Datei ``/etc/freeradius/sites-available/default`` **UND** ``/etc/freeradius/sites-available/inner-tunnel`` die LDAP-Authentifizierung, d.h. entfernen Sie bei den jeweiligen Zeilen zu LDAP die Kommentarzeichen.
-
-.. code-block:: console
-
-   ...
-   authorize {
-      ...
-      ldap
-      ...
-   }
-   ...
-   authenticate {
-      ...
-      Auth-Type LDAP {
-         ldap
-      }
-      ...
-   }
-
-Am Ende starten Sie die Radius-Server neu:
-
-.. code-block:: console
-
-   $ service freeradius restart
-
-Firewall konfigurieren
-----------------------
-
-Nun muss die Firewall konfiguriert werden, damit die Anfragen auch auf dem Server ankommen (UDP, Port 1182). Dazu bearbeitet man die Datei ``/etc/linuxmuster/allowed_ports`` und fügt in der Zeile "udp" den entsprechenden Port hinzu.
-
-.. code-block:: console
-
-   ...
-   udp domain, ... , 1812
-
-Damit die Änderungen auf der Firewall (IPFire) wirksam werden, geben Sie bitte folgenden Befehl ein:
-
-.. code-block:: console
-
-   $ service linuxmuster-base restart
-
-Falls Sie eine andere Firewall als die empfohlene Firewalllösung (IPFire) verwenden, müssen Sie die entsprechende Firewallregel selbst einrichten!
-
-LDAP-Authentifizierung testen
------------------------------
-
-Geben Sie folgenden Befehl ein (Benutzernamen und Passwort anpassen!):
-
-.. code-block:: console
-
-   $ radtest user password localhost 10 testing123
-   ....
-   rad_recv: Access-Accept Packet from ...
-
-Falls Sie ein *Access-Accept Packet* erhalten haben, war die Authentifizierung erfolgreich!
-
-Weitere Einstellungen
----------------------
-
-Logging aktivieren
-~~~~~~~~~~~~~~~~~~
-
-In der Datei ``/etc/freeradius/radiusd.conf`` kann das Logging von Authentifizierungs--Anfragen eingeschaltet werden. Die Log-Datei ist: ``/var/log/freeradius/radius.log``. Vergessen Sie nicht den Neustart des Radius-Servers!
-
-.. code-block:: console
-
-   log {
-      ...
-      auth = yes
-      ...
    }
 
