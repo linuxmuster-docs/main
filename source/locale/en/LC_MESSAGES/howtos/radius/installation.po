@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-04 11:32+0700\n"
+"POT-Creation-Date: 2016-10-08 07:27+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -19,10 +19,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../source/howtos/radius/installation.rst:2
-msgid "Installation"
-msgstr "Installation"
+msgid "Installation & Konfiguration"
+msgstr "Installation & Configuration"
 
-#: ../../source/howtos/radius/installation.rst:4
+#: ../../source/howtos/radius/installation.rst:5
+msgid "Radius-Server installieren"
+msgstr "Install Radius Server"
+
+#: ../../source/howtos/radius/installation.rst:7
 msgid ""
 "In den Paketquellen von Linuxmuster.net gibt es das Paket ``linuxmuster-"
 "freeradius``. Installieren Sie das Paket mit"
@@ -30,11 +34,43 @@ msgstr ""
 "In the package repository of Linuxmuster.net there is the package "
 "``linuxmuster-freeradius``. Install the package with"
 
-#: ../../source/howtos/radius/installation.rst:12
-msgid "Test des Radius-Servers"
-msgstr "Test the Radius server"
+#: ../../source/howtos/radius/installation.rst:15
+msgid "Firewall konfigurieren"
+msgstr "Configure Firewall"
 
-#: ../../source/howtos/radius/installation.rst:14
+#: ../../source/howtos/radius/installation.rst:17
+msgid ""
+"Nun muss die Firewall konfiguriert werden, damit die Anfragen auch auf dem "
+"Server ankommen (UDP, Port 1182). Dazu bearbeitet man die Datei "
+"``/etc/linuxmuster/allowed_ports`` und fügt in der Zeile \"udp\" den "
+"entsprechenden Port hinzu."
+msgstr ""
+"The firewall must now be configured so that the requests are also received "
+"on the server (UDP, port 1182). To do this, edit the file "
+"``/etc/linuxmuster/allowed_ports`` and add the appropriate port in the line "
+"\"udp\"."
+
+#: ../../source/howtos/radius/installation.rst:24
+msgid ""
+"Damit die Änderungen auf der Firewall (IPFire) wirksam werden, geben Sie "
+"bitte folgenden Befehl ein:"
+msgstr ""
+"In order for the changes to be effective on the firewall (IPFire), please "
+"enter the following command:"
+
+#: ../../source/howtos/radius/installation.rst:30
+msgid ""
+"Falls Sie eine andere Firewall als die empfohlene Firewalllösung (IPFire) "
+"verwenden, müssen Sie die entsprechende Firewallregel selbst einrichten!"
+msgstr ""
+"If you use a firewall other than the recommended firewall solution (IPFire),"
+" you must set up the appropriate firewall rule yourself!"
+
+#: ../../source/howtos/radius/installation.rst:34
+msgid "Radius-Servers testen"
+msgstr "Test the Radius Server"
+
+#: ../../source/howtos/radius/installation.rst:36
 msgid ""
 "In der Datei ``/etc/freeradius/users`` in der folgenden Zeile das "
 "Kommentarzeichen (``#``) entfernen."
@@ -42,7 +78,7 @@ msgstr ""
 "In the file ``/etc/freeradius/users`` remove the comment mark ( ``#``) in "
 "the following line."
 
-#: ../../source/howtos/radius/installation.rst:20
+#: ../../source/howtos/radius/installation.rst:42
 msgid ""
 "Als nächstes überprüft man, ob ``localhost`` in der Datei "
 "``/etc/freeradius/clients`` eingetragen ist. Dieser Eintrag kann nach dem "
@@ -51,7 +87,7 @@ msgstr ""
 "Next, check if ``localhost`` is entered in the file "
 "``/etc/freeradius/clients``. This entry can be removed after the test."
 
-#: ../../source/howtos/radius/installation.rst:29
+#: ../../source/howtos/radius/installation.rst:51
 msgid ""
 "Nun kann man, nach einem Neustart des Radius-Servers, die Authentifizierung "
 "für diesen User testen."
@@ -59,11 +95,11 @@ msgstr ""
 "Now, after restarting the Radius server, you can test the authentication for"
 " this user."
 
-#: ../../source/howtos/radius/installation.rst:36
+#: ../../source/howtos/radius/installation.rst:58
 msgid "Als Ausgabe sollte man folgendes erhalten:"
 msgstr "The output should be as follows:"
 
-#: ../../source/howtos/radius/installation.rst:48
+#: ../../source/howtos/radius/installation.rst:70
 msgid ""
 "Wenn man eine ähnliche Ausgabe erhält, kann nun der Zugriff auf das LDAP-"
 "Verzeichnis eingerichtet werden, damit man sich mit seinem Benutzernamen und"
@@ -78,11 +114,11 @@ msgstr ""
 "Controller) must be entered into the file ``/etc/freeradius/clients``. "
 "Please adjust the client name, the IP address and the password accordingly."
 
-#: ../../source/howtos/radius/installation.rst:58
-msgid "Radius-Server einrichten"
-msgstr "Setup Radius server"
+#: ../../source/howtos/radius/installation.rst:80
+msgid "Radius-Server konfigurieren"
+msgstr "Configure Radius Server"
 
-#: ../../source/howtos/radius/installation.rst:60
+#: ../../source/howtos/radius/installation.rst:82
 msgid ""
 "Für die Authentifizierung mit einem Radius-Server gibt es verschiedene "
 "Protokolle, welche festlegen, wie die Übertragung und Authentifizierung "
@@ -95,126 +131,17 @@ msgstr ""
 "be specified in the file ``/etc/freeradius/eap.conf``. Check the following "
 "settings and remove - if necessary - the comment marks."
 
-#: ../../source/howtos/radius/installation.rst:77
+#: ../../source/howtos/radius/installation.rst:99
 msgid ""
 "MD5 kommt als Protokoll nicht in Frage, da die Passwörter nicht als MD5 im "
 "LDAP gespeichert sind!"
 msgstr ""
 "MD5 is not suitable as the passwords are not stored as MD5 in the LDAP!"
 
-#: ../../source/howtos/radius/installation.rst:79
+#: ../../source/howtos/radius/installation.rst:101
 msgid ""
 "Überprüfen Sie weiterhin den Parameter ``auto_header`` in der Datei "
 "``/etc/freeradius/radiusd.conf``."
 msgstr ""
 "Also, check the ``auto_header`` parameter in the file "
 "``/etc/freeradius/radiusd.conf``."
-
-#: ../../source/howtos/radius/installation.rst:88
-msgid "LDAP Zugriff einrichten"
-msgstr "Setup LDAP Access"
-
-#: ../../source/howtos/radius/installation.rst:90
-msgid ""
-"Damit man sich mit seinem Benutzernamen und Passwort am Radius-Server "
-"anmelden kann, muss der Zugriff auf den LDAP eingerichtet werden. Ändern Sie"
-" bitte folgende Dateien und passen Sie die Angaben an ihren LDAP an."
-msgstr ""
-"To be able to log on to the Radius server with its user name and password, "
-"access to the LDAP must be established. Please change the following files "
-"and adapt the information to your LDAP."
-
-#: ../../source/howtos/radius/installation.rst:92
-msgid "``/etc/freeradius/modules/ldap``:"
-msgstr "``/etc/freeradius/modules/ldap``:"
-
-#: ../../source/howtos/radius/installation.rst:94
-msgid "Das benötige Passwort kann mit folgendem Befehl angezeigt werden:"
-msgstr "The required password can be displayed with the following command:"
-
-#: ../../source/howtos/radius/installation.rst:100
-msgid "Passen Sie nun die LDAP-Angaben an:"
-msgstr "Now adjust the LDAP information:"
-
-#: ../../source/howtos/radius/installation.rst:111
-msgid ""
-"Aktivieren Sie nun in der Datei ``/etc/freeradius/sites-available/default`` "
-"**UND** ``/etc/freeradius/sites-available/inner-tunnel`` die LDAP-"
-"Authentifizierung, d.h. entfernen Sie bei den jeweiligen Zeilen zu LDAP die "
-"Kommentarzeichen."
-msgstr ""
-"Now enable LDAP authentication in the file ``/etc/freeradius/sites-"
-"available/default`` **AND** ``/etc/freeradius/sites-available/inner-tunnel``"
-" by removing the comment marks for each line that refers to LDAP."
-
-#: ../../source/howtos/radius/installation.rst:130
-msgid "Am Ende starten Sie die Radius-Server neu:"
-msgstr "At the end, restart the Radius server:"
-
-#: ../../source/howtos/radius/installation.rst:137
-msgid "Firewall konfigurieren"
-msgstr "Configure Firewall"
-
-#: ../../source/howtos/radius/installation.rst:139
-msgid ""
-"Nun muss die Firewall konfiguriert werden, damit die Anfragen auch auf dem "
-"Server ankommen (UDP, Port 1182). Dazu bearbeitet man die Datei "
-"``/etc/linuxmuster/allowed_ports`` und fügt in der Zeile \"udp\" den "
-"entsprechenden Port hinzu."
-msgstr ""
-"The firewall must now be configured so that the requests are also received "
-"on the server (UDP, port 1182). To do this, edit the file "
-"``/etc/linuxmuster/allowed_ports`` and add the appropriate port in the line "
-"\"udp\"."
-
-#: ../../source/howtos/radius/installation.rst:146
-msgid ""
-"Damit die Änderungen auf der Firewall (IPFire) wirksam werden, geben Sie "
-"bitte folgenden Befehl ein:"
-msgstr ""
-"In order for the changes to be effective on the firewall (IPFire), please "
-"enter the following command:"
-
-#: ../../source/howtos/radius/installation.rst:152
-msgid ""
-"Falls Sie eine andere Firewall als die empfohlene Firewalllösung (IPFire) "
-"verwenden, müssen Sie die entsprechende Firewallregel selbst einrichten!"
-msgstr ""
-"If you use a firewall other than the recommended firewall solution (IPFire),"
-" you must set up the appropriate firewall rule yourself!"
-
-#: ../../source/howtos/radius/installation.rst:155
-msgid "LDAP-Authentifizierung testen"
-msgstr "Test LDAP authentication"
-
-#: ../../source/howtos/radius/installation.rst:157
-msgid "Geben Sie folgenden Befehl ein (Benutzernamen und Passwort anpassen!):"
-msgstr "Enter the following command (adjust user name and password):"
-
-#: ../../source/howtos/radius/installation.rst:165
-msgid ""
-"Falls Sie ein *Access-Accept Packet* erhalten haben, war die "
-"Authentifizierung erfolgreich!"
-msgstr ""
-"If you received an *Access-Accept Packet*, the authentication was "
-"successful!"
-
-#: ../../source/howtos/radius/installation.rst:168
-msgid "Weitere Einstellungen"
-msgstr "Additional settings"
-
-#: ../../source/howtos/radius/installation.rst:171
-msgid "Logging aktivieren"
-msgstr "Enable logging"
-
-#: ../../source/howtos/radius/installation.rst:173
-msgid ""
-"In der Datei ``/etc/freeradius/radiusd.conf`` kann das Logging von "
-"Authentifizierungs--Anfragen eingeschaltet werden. Die Log-Datei ist: "
-"``/var/log/freeradius/radius.log``. Vergessen Sie nicht den Neustart des "
-"Radius-Servers!"
-msgstr ""
-"The logging of authentication requests can be activated in "
-"``/etc/freeradius/radiusd.conf``. The log file is: "
-"``/var/log/freeradius/radius.log``. Do not forget to restart the Radius "
-"server!"
