@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-08 07:27+0700\n"
+"POT-Creation-Date: 2016-10-09 19:42+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,13 +20,15 @@ msgstr ""
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:2
 msgid "Wie richte ich Drucker am Server ein?"
-msgstr ""
+msgstr "How do I set up printers on the server?"
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:4
 msgid ""
 "Um die eingesetzten Netzwerkdrucker serverseitig einzurichten, sind diese "
 "mithilfe eines Browsers hinzuzufügen und einzurichten."
 msgstr ""
+"In order to set up the network printers used on the server side, they must "
+"be added and set up using a browser."
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:8
 msgid ""
@@ -36,6 +39,10 @@ msgid ""
 "so wird versehentliches Drucken auf einen nicht gewünschten Drucker "
 "unterbunden."
 msgstr ""
+"A PDF printer is automatically set up on the server. The PDF printer can be "
+"printed from any application. The \"printed\" PDF file is stored in the "
+"PDF's folder in the user's home directory. If this is set later as a "
+"standard printer, accidental printing on an undesired printer is prevented."
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:10
 msgid ""
@@ -43,10 +50,13 @@ msgid ""
 "zur weiteren Einrichtung der Drucker aufzurufen. Hierzu fügen Sie "
 "nachstehenden URL in der Adresszeile Ihres Browsers ein"
 msgstr ""
+"Start a browser on a computer to access the so-called CUPS web interface for"
+" further configuration of the printers. To do so, insert the following URL "
+"in the URL of your browser."
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:12
 msgid "https://server:631"
-msgstr ""
+msgstr "https://server:631"
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:14
 msgid ""
@@ -54,16 +64,19 @@ msgid ""
 "ist, ist es sicher nötig, dem benutzen Browser die sichere Kommunikation "
 "ausnahmsweise zu erlauben (SSL-Zertifikat akzeptieren)."
 msgstr ""
+"Since usually only a self-signed certificate is installed on the server, it "
+"is certainly necessary to allow the browser to use secure communication "
+"exceptionally (accept SSL certificate)."
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:17
 msgid "Drucker hinzufügen"
-msgstr ""
+msgstr "Add printer"
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:19
 msgid ""
 "Rufen Sie zunächst die **Reiterkarte Verwaltung** auf. Es erscheint "
 "nachstehende Maske:"
-msgstr ""
+msgstr "First, open the **Administration tab**. The following screen appears:"
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:37
 msgid ""
@@ -71,12 +84,15 @@ msgid ""
 " linuxmuster.net und einer manuellen Konfiguration in den Textdateien auf "
 "dem Server vorbehalten."
 msgstr ""
+"Do not change any configuration on this page, which remains to the "
+"linuxmuster.net scripts and a manual configuration in the text files on the "
+"server."
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:41
 msgid ""
 "Klicken Sie auf der Maske unter **Drucker** --> **Drucker hinzufügen**. Es "
 "erscheint nachstehende Maske:"
-msgstr ""
+msgstr "Click on **Printer** → **Add printer**. The following screen appears:"
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:46
 msgid ""
@@ -84,6 +100,8 @@ msgid ""
 "Server verbunden ist. Unter Umständen werden Netzwerkdrucker erkannt (im "
 "Beispiel \"HP Officejet\")."
 msgstr ""
+"In this dialog, you must specify how the printer is connected to the server."
+" Network printers may be detected (in the example, \"HP Officejet\")."
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:50
 msgid ""
@@ -92,6 +110,9 @@ msgid ""
 "Handbuch des Druckers / Printservers nach, welche Option für Ihren Drucker "
 "zutrifft."
 msgstr ""
+"The \"AppSocket / HP JetDirect\" option is normally correct for unrecognized"
+" network printers. If you are unsure, refer to the printer / printer server "
+"manual, which option applies to your printer."
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:56
 msgid ""
@@ -100,6 +121,10 @@ msgid ""
 "Verbindung manuell angegeben werden und es folgt folgender Dialog, "
 "andernfalls wird folgender Dialog übersprungen:"
 msgstr ""
+"Click **Next** to go to the next dialog. If an option under \"Other network "
+"printers\" is selected, the exact connection must be specified manually and "
+"the following dialog box is displayed, otherwise the following dialog is "
+"skipped:"
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:63
 msgid ""
@@ -107,6 +132,9 @@ msgid ""
 "Hostnamen und zusätzlich bei Verwendung eines Print-Servers, der über "
 "mehrere Anschlüsse verfügt, noch die Warteschlange anzugeben. Zum Beispiel:"
 msgstr ""
+"In the case of a network printer, you must specify the IP address or the "
+"host name, and also specify the queue when using a print server that has "
+"multiple ports. For example:"
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:72
 msgid ""
@@ -114,6 +142,8 @@ msgid ""
 "weiterhelfen. Klicken Sie auf **Weiter**, um zum nächsten Dialog zu "
 "gelangen."
 msgstr ""
+"In case of doubt, the printer operator's manual should also help. Click "
+"**Next** to go to the next dialog."
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:78
 msgid ""
@@ -123,11 +153,15 @@ msgid ""
 " zwar optional, sollten aber eingegeben werden, um die Zuordnung "
 "nachvollziehbar zu halten."
 msgstr ""
+"A name must be assigned for the printer in this form (for example, "
+"*r203-pr01* or *h109 printer*). The name given here also applies as a shared"
+" name for Linux and Windows clients. The rest of the information is "
+"optional, but should be entered to keep the assignment comprehensible."
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:84
 msgid ""
 "Klicken Sie auf **Weiter**, um zur Auswahl des Druckermodells zu gelangen."
-msgstr ""
+msgstr "Click **Next** to go to the selection of the printer model."
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:88
 msgid ""
@@ -141,6 +175,13 @@ msgid ""
 "Danach können Sie die PPD-Datei auf den linuxmuster.net Server mit o.g. "
 "Dialog hochladen."
 msgstr ""
+"Select your printer model from the list. With **Next**, drivers are offered "
+"for selection. If there are several drivers available for your model, select"
+" the recommended driver. If your model does not appear in the list, use the "
+"**Browse** button to upload the PPD file for your printer. The PPD file "
+"contains a driver for the printer for Linux. These drivers are available on "
+"your printer manufacturer's page. Download them locally. Then you can upload"
+" the PPD file on the linuxmuster.net server with Upload Dialog."
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:101
 msgid ""
@@ -148,6 +189,8 @@ msgid ""
 "entsprechenden Treiber (z.B. \"Generic PCL 5e ... (recommended)\") bereits "
 "drucken."
 msgstr ""
+"Your printer may also print with the \"Generic\" brand and a corresponding "
+"driver (for example, \"Generic PCL 5e ... (recommended)\")."
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:105
 msgid ""
@@ -155,14 +198,16 @@ msgid ""
 "Dafür benötigt das CUPS-Webinterface die Authentifizierung als "
 "**administrator**."
 msgstr ""
+"Click **Add Printer** to close the printer installation. For this, the CUPS "
+"Web Interface requires authentication as **administrator**."
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:111
 msgid "Danach gelangen Sie zur Einstellungsseite des Druckers."
-msgstr ""
+msgstr "Then you reach the setting page of the printer."
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:115
 msgid "Drucker konfigurieren"
-msgstr ""
+msgstr "Configure the printer"
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:119
 msgid ""
@@ -171,6 +216,9 @@ msgid ""
 "Seitengröße auf A4 einstellen, Duplexdruck etc., falls dies nicht "
 "standardmäßig vorgesehen ist)."
 msgstr ""
+"Here, depending on the printer model, you can set various settings for the "
+"default behavior of the printer driver (for example, set the page size to "
+"A4, duplex printing, if this is not standard)."
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:121
 msgid ""
@@ -178,75 +226,83 @@ msgid ""
 "**Richtlinien**, um hier das Verhalten des Druckers im Fehlerfall "
 "festzulegen."
 msgstr ""
+"In the default settings dialog, click the **Policy** menu item to set the "
+"behavior of the printer in the event of an error."
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:125
 msgid ""
 "Geben Sie unter \"Fehlerbehandlung\"  **abort-job** an, um sicherzustellen, "
 "dass CUPS im Fehlerfall den Druckjob löscht."
 msgstr ""
+"Under \"Troubleshooting\", specify **abort-job** to ensure that CUPS deletes"
+" the print job in the event of an error."
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:127
 msgid ""
 "Über den Knopf **Standardeinstellungen festlegen** werden Sie schließlich "
 "zur Verwaltungsseite des neu eingerichteten Druckers weitergeleitet:"
 msgstr ""
+"With the **Set default settings** button, you are finally redirected to the "
+"administration page of the newly set up printer:"
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:131
 msgid "Hier können Sie"
-msgstr ""
+msgstr "Here you can"
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:133
 msgid "eine Testseite ausdrucken lassen,"
-msgstr ""
+msgstr "print a test page,"
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:134
 msgid ""
 "den Drucker (die Ausführung von Druckaufträgen) stoppen und wieder starten,"
-msgstr ""
+msgstr "stop and restart the printer (and the execution of print jobs)"
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:135
 msgid "die Entgegennahme von Druckaufträgen sperren und wieder freischalten,"
-msgstr ""
+msgstr "block the receipt of print jobs and re-enable them,"
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:136
 msgid ""
 "die Druckereinrichtung wiederholen, um IP-Adresse oder Druckertreiber zu "
 "ändern,"
-msgstr ""
+msgstr "repeat the printer setup to change the IP address or printer driver,"
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:137
 msgid "die Druckereinstellungen anpassen oder"
-msgstr ""
+msgstr "adjust the printer settings or"
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:138
 msgid "erlaubte Benutzer festlegen."
-msgstr ""
+msgstr "setup allowed users."
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:140
 msgid ""
 "Nun ist Ihr Netzwerkdrucker betriebsbereit und kann auf den Arbeitsstationen"
 " eingerichtet werden."
 msgstr ""
+"Now your network printer is ready for operation and can be set up on the "
+"workstations."
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:142
 msgid "Angesprochen wird obiger Drucker über den URL:"
-msgstr ""
+msgstr "The above printer is addressed via the URL:"
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:144
 msgid "http://server:631/printers/r203-pr01"
-msgstr ""
+msgstr "http://server:631/printers/r203-pr01"
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:148
 msgid "PDF-Drucker aktivieren"
-msgstr ""
+msgstr "Enable PDF printer"
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:150
 msgid "Der standardmäßig eingerichtete PDF-Drucker wird über den URL"
-msgstr ""
+msgstr "The default PDF printer is accessible via the URL"
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:152
 msgid "http://server:631/printers/PDF-Printer"
-msgstr ""
+msgstr "http://server:631/printers/PDF-Printer"
 
 #: ../../source/howtos/printer/3-drucker-einrichten-cups.rst:154
 msgid ""
@@ -254,3 +310,6 @@ msgid ""
 "gedruckt werden, die auf dem Server im Homeverzeichnis des Benutzers im "
 "Unterverzeichnis PDF abgelegt wird."
 msgstr ""
+"Now it is also possible to print to a PDF file via the PDF printer, which is"
+" stored on the server in the home directory of the user in the subdirectory "
+"PDF."
