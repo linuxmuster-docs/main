@@ -29,24 +29,24 @@ Benutzer **administrator** auf der CUPS-Administrationsseite ein.
 
 Klicken Sie hier unter der Rubrik Drucker auf **Drucker hinzufügen**.
 
-.. image:: media/drucker-einrichten-client-linux/drucker-linux2.png
+.. image missing: media/drucker-einrichten-client-linux/drucker-linux2.png
 
 Wählen Sie im nächsten Schritt als Netzwerkdrucker ** Internet-Druckprotokoll (https).
 
-.. image:: media/drucker-einrichten-client-linux/drucker-linux3.png
+.. image missing: media/drucker-einrichten-client-linux/drucker-linux3.png
 
 Wählen Sie im nächsten Schritt für unter Drucker hinzufügen die korrekte Adresse. Wird der Netzwerkdrucker über den linuxmuster.net Server angesteuert, so ist dessen Adressen anzugeben:
   **https://10.16.1.1/printers<druckername>**
 
-.. image:: media/drucker-einrichten-client-linux/drucker-linux4.png
+.. image missing: media/drucker-einrichten-client-linux/drucker-linux4.png
 
 Wählen Sie danach die korrekte Druckermarke für den einzurichtenden Drucker aus.
 
-.. image:: media/drucker-einrichten-client-linux/drucker-linux5.png
+.. image missing: media/drucker-einrichten-client-linux/drucker-linux5.png
 
 Wählen Sie abschliessend das geeignete Druckermodell aus, oder wählen Sie eine eigene sog. PPD-Datei aus, die auf dem Client installiert werden soll.
 
-.. image:: media/drucker-einrichten-client-linux/drucker-linux6.png
+.. image missing: media/drucker-einrichten-client-linux/drucker-linux6.png
 
 Die weiteren Einrichuntsschritte entsprechen denen, wie sie auf dem Server bereits ausgeführt wurden.
 

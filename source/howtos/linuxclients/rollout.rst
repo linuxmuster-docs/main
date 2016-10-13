@@ -3,7 +3,7 @@ Clients synchronisieren
 
 Wenn Sie nun den Client neu starten, erscheint die LINBO-Startseite mit der Auswahl, wie der Ubuntuclient gebootet werden soll.
 
-.. image:: media/rollout/linbo-startpage-ubuntu.png 
+.. image missing: media/rollout/linbo-startpage-ubuntu.png
 
 Festplatte partitionieren
 -------------------------
@@ -20,7 +20,7 @@ Abbild synchronisieren und installieren
 Jetzt synchronisiert man mit dem Schalter ``Cache aktualisieren`` das Abbild des Linuxclients mit dem lokalen Cache und bereitet damit den Computer zur Synchronisation auf die Festplatte vor.
 Mit der Schaltfläche `Logout` kommt zurück zur Auswahl zum Starten des Systems.
 
-.. figure:: media/rollout/linbo-neustart.png 
+.. figure:: media/rollout/linbo-neustart.png
 
 Starten Sie nun das System über den Knopf `Neu+Start`, dann wird das System durch Kopieren installiert und gestartet.
 

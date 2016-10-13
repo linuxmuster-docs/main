@@ -13,8 +13,9 @@ Howtos, sortiert nach Relevanz:
    howtos/netzbrief-basics/index
    howtos/leoclient2/index
    howtos/backupmondo/index
-   howtos/backupmigration/index
    howtos/radius/index
+..   howtos/backupmigration/index
+
 
 Howtos, sonstige:
 
