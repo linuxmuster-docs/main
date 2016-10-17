@@ -5,6 +5,6 @@ Durch das Programmpaket leoclient2 ist es möglich auf einem Linuxclient virtuel
 
 Dabei können auf einfache Weise verschiedene Zustände der virtuellen Maschine erzeugt und den Benutzern angeboten werden. 
 
-Als Oberflche zur Auswahl für die Benutzer wurde eine grafische Oberfläche programmiert, auf der man zuerst die zu nutzende VM auswählt und dann den gewünschten Zustand startet.
+Zur Auswahl der virtuellen Maschinen als Benutzer wurde eine grafische Oberfläche programmiert, auf der man zuerst die zu nutzende VM auswählt und dann den gewünschten Zustand startet.
 
 Durch die Virtualisierung reduziert sich der administrative Aufwand auf ein Minimum, wogegen die Möglichkeit der Bereitstellung verschiedener Installationszustände extreme Flexibilität und ungeahnte Möglichkeiten bietet. 
