@@ -59,9 +59,25 @@ Fork the repository "all-of-me" within the github-webinterface_
 
 * Make changes in your fork
 * Commit your changes to your fork
+
+  .. code:: bash
+
+     ~/all-of-me-fork$ git commit -a -m"bugfix for bug in ticket #314 ..."
+
 * Push your changes to your fork on github
+
+  .. code:: bash
+
+     ~/all-of-me-fork$ git push
+	    
 * Create a new pull-request on github
-* If you are done and the pull-request was merged, you can delete your fork.
+* If you are done and the pull-request was merged, you can delete your fork and create a new one for the next task **or** bring your fork up-to-date:
+
+  .. code:: bash
+
+     ~/all-of-me-fork$ git fetch upstream
+     ~/all-of-me-fork$ git merge upstream/master
+     ~/all-of-me-fork$ git push	    
 
 Translation
 +++++++++++
