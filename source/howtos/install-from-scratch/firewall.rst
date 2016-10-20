@@ -6,7 +6,6 @@
 
    \\
 
-
 Installation und Konfiguration der Firewall
 ===========================================
 

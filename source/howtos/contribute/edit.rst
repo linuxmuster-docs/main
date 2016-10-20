@@ -28,7 +28,7 @@ Mit einem Klick auf den Stift (siehe Bild) können Sie das aktuelle Kapitel bear
    :figwidth: 450px
 
 .. note::
-  Sie müssen sich vorher bei Github anmelden, um ein Kapitel zu bearbeiten. Wenn Sie noch keinen Account bei Github haben, können Sie sich `hier <https://github.com/join>`_ einen anlegen.
+  Sie müssen sich vorher bei Github anmelden, um ein Kapitel zu bearbeiten. Wenn Sie noch keinen Account bei Github haben, können Sie sich `hier einen anlegen <https://github.com/join>`_.
 
 Nachdem Sie alle Änderungen vorgenommen haben, geben Sie unten einen Titel und einen Kommentar ein. Die Änderungen können nun mit einem Klick auf "Propose file changes" eingereicht werden.
 
