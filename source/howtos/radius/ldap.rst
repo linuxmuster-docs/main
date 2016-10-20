@@ -77,7 +77,7 @@ Wenn man den Radius-Server zur Authentifizierung im WLAN benutzt und nur bestimm
 
    ...
    DEFAULT Group != p_wifi
-      Auth-Type := Reject
+   DEFAULT Auth-Type := Reject
       Reply-Message = "Your are not allowed to access the WLAN!"
    ...
 
@@ -86,8 +86,8 @@ Alternativ kann man auch die entsprechende LDAP-Gruppe direkt abfragen.
 .. code-block:: console
 
    ...
-   DEFAULT Group == "cn=p_wifi,ou=groups,dc=linuxmuster-net,dc=lokal"
-      Auth-Type := Reject
+   DEFAULT Ldap-Group == "cn=p_wifi,ou=groups,dc=linuxmuster-net,dc=lokal"
+   DEFAULT Auth-Type := Reject
       Reply-Message = "Your are not allowed to access the WLAN!"
    ...
 
