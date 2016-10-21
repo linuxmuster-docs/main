@@ -58,6 +58,12 @@ Bei der Anmeldung eines Benutzers werden die Rechte an den lokalen virtuellen Ma
    #  Script /etc/linuxmuster-client/post-mount.d/015-leoclient2
    #  Setzt die Rechte für die lokalen VMs auf den aktuellen USER
    #
+
+   # this script is supposed to be run only once after mount of HOME_auf_Server
+   [ -z "$HOMEDIRMOUNT" ] && return 0
+
+   $LOGGING && msg2log post-mount "015-leoclient2 Environment settings are: USER=$USER VOLUME=$VOLUME MNPT=$MNTPT OPTIONS=$OPTIONS SERVER=$SERVER NUMUID=$NUMUID NUMPRIGID=$NUMPRIGID FULLNAME=$FULLNAME HOMEDIR=$HOMEDIR LOGINSHELL=$LOGINSHELL"
+   
    etcpfad="/etc/leoclient2/machines"
    for file in "$etcpfad"/*.conf ; do
       vmpfad=`cat $file`
@@ -69,5 +75,5 @@ Bei der Anmeldung eines Benutzers werden die Rechte an den lokalen virtuellen Ma
       chown $USER "$vmpfad/$vmname.vbox" 
       chown $USER "$vmpfad/$vmname.vbox-prev" 
    done  
-   exit 0 
+
 
