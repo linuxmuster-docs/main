@@ -1,0 +1,77 @@
+#!/bin/bash
+#
+# /usr/bin/leoclient2-snapshot-create
+#
+# Usage:  leoclient2-snapshot-create -m <VM-name> -s <Snapshot-name>
+# Ohne Snapshot-name wird der standard-Snapshot gesetzt
+# Script als root ausführen
+#
+ 
+etcdir="/etc/leoclient2/machines"
+OPTIND=1
+VMPATH="/var/virtual"
+ 
+vm=""
+S_NAME="standard"
+MACHINENAME=""
+MACHINEPATH=""
+ 
+while getopts "m:s:" opt; do
+    case "$opt" in
+    m)  vm=$OPTARG
+        ;;
+    s)  S_NAME=$OPTARG
+        ;;
+    esac
+done
+ 
+shift $((OPTIND-1))
+[ "$1" = "--" ] && shift
+ 
+for file in "$etcdir"/*.conf; do
+  pfad=`cat $file`
+  b=$(basename "$pfad")
+  if [ "$b" = "$vm" ] ; then
+    MACHINENAME=$b
+    MACHINEPATH=$pfad
+  fi
+done
+ 
+if [ "$MACHINENAME" = "" ] ; then
+  echo "ERROR: Virtual Machine $vm wurde nicht gefunden!"
+  exit 1
+fi
+ 
+snapshotdir="$MACHINEPATH/Snapshots"
+s_filepfad=`find $snapshotdir -name "*.vdi" -print -quit`
+ 
+if [ "$s_filepfad" = "" ] ; then
+  echo "ERROR: Kein Snapshot *.vdi gefunden!"
+  exit 1
+fi
+ 
+SNAPSHOTPATH="$MACHINEPATH/snapshot-store/$S_NAME"
+ 
+if [ -d "$SNAPSHOTPATH" ]; then
+  rm -Rf $SNAPSHOTPATH/*
+else
+  mkdir "$SNAPSHOTPATH"
+fi 
+ 
+cp -f "$s_filepfad" "$SNAPSHOTPATH"
+FILESIZE=$(stat -c%s "$s_filepfad")
+echo $FILESIZE > "$SNAPSHOTPATH/filesize.vdi"
+ 
+sf=$(basename "$s_filepfad")
+z_filepfad="$SNAPSHOTPATH/$sf.zip"
+ 
+zip -9 -j $z_filepfad $s_filepfad
+FILESIZE=$(stat -c%s "$z_filepfad")
+echo $FILESIZE > "$SNAPSHOTPATH/filesize.vdi.zipped"
+ 
+chmod -R 755 "$SNAPSHOTPATH"
+ 
+echo "  OK: Snapshot $sf wurde als $S_NAME gesetzt."
+ 
+exit 0
+

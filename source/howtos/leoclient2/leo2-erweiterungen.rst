@@ -56,136 +56,6 @@ Eine lokale VM wird zur remoten VM, indem
 Prinzipiell kann die VM danach lokal gelöscht werden. Dann wird die VM vor dem Starten vom Server nach lokal synchronisiert/kopiert. Da dabei beträchtliche Datenmengen übertragen werden, sollte man das nur bei kleinen, wenig genutzen VM's machen (z.B. einem Linux-Mysql-Server o.ä.).
 
 
-VM-Basis erneuern
------------------
-
-ACHTUNG:
-Ändert man die Basis einer VM, werden alle darauf basierenden Snapshot unbrauchbar.
-
-Nach dem Aufruf des Skripts mit root-Rechten
-
-``# sudo leoclient2-base-snapshot-renew``
-
-sind einige selbsterklärende Fragen zu beantworten.
-
--   Soll der Vorgang abgebrochen werden? (J/N)
--   Name der virtuellen Maschine?          (VM, die erneuert werden soll)
--   Speicherort der virtuellen Maschine?   (VM, die erneuert werden soll)
-
-Das Skript startet dann zunächst VirtualBox, um die Sicherungspunkte zu löschen. Die Warnung, die aufgrund fehlender Verbinungen erscheint, kann ignoriert werden. Die Ursache ist z.B. bei dem vorkonfigurierten Ubuntu von linuxmuster.net die fehlende Verbindung zu den Homes als linuxadmin.
-
-Rechts oben findet man den Button Sicherungspunkte, den man anklickt. Es öffnet sich ein Fenster mit den Sicherheitspunkten. Rechtsklick auf den Snapshot bietet Sicherungspunkt löschen an. Diesen wählen und mit Löschen bestätigen. - Oder mit dem Icon löschen.
-
-Im Anschluss die VM starten, die gewünschten Änderungen durchführen und wieder ausschalten. Beendet man VirtualBox, wird eine neue Basisfestplatte unter ``/PFAD/MASCHINENNAME/MASCHINENNAME.vdi`` erzeugt und gezippt. Darüber hinaus wird noch ein neuer Snapshot in ``/PFAD/MASCHINENNAME/snapshot-store/standard`` erzeugt und gezippt. Der Name des neuen Snapshots, ``{..neuerSnapshot..}.vdi``, erscheint in der Konsolenausgabe. Man sollte ihn sich merken, um im Anschluss den alten Snapshot in ``/snapshot-store/standard`` zu löschen.
-
-Dazu als root auf der Konsole
-
-``# rm /PFAD/MASCHINENNAME/{..alterSnapshot..}.vdi*``
-
-eingeben.
-
-
-Neuen Snapshots erzeugen
-------------------------
-
-Nachfolgendes Script legt mit dem aktuellen Snapshot der VM einen neuen auswählbaren Snapshot an. Ohne Angabe eines Snapshot-Namens wird der standard-Snapshot neu gesetzt. Script muss mit root-Rechten gestartet werden. Man legt es am besten unter ``/usr/bin/`` ab und macht es ausführbar. Der „base-Snapshot“, d.h. die zugrundeliegende Basisfestplatte wird dabei nicht verändert. Eine veränderte Hardwarekonfiguration speichert das Script auch nicht → ggf. selbst die .vbox-Datei sichern.
-
-Vorgehensweise:
--   Arbeiten als linuxadmin am Ubuntu-Client
--   Bisherigen base/standard-Snapshot der VM (z.B. hier winxp1) booten
--   Software installieren und sonstige Veränderungen abarbeiten, VM dann herunterfahren
--   untenstehendes Script für den Standard-Snapshot aufrufen:
-
-``# sudo leoclient2-snapshot-create -m winxp1``
-
-oder für den Snapshot ``Software2015``
-
-``# sudo leoclient2-snapshot-create -m winxp1 -s Software2015``
-
-Damit gibt es nun einen neuen Snapshot mit dem Namen ``Software2015`` im Auswahlmenü des Snapshotstarters.
-
-.. code: bash
-  
-  /usr/bin/leoclient2-snapshot-create
-  
-    #!/bin/bash
-    #
-    # /usr/bin/leoclient2-snapshot-create
-    #
-    # Usage:  leoclient2-snapshot-create -m <VM-name> -s <Snapshot-name>
-    # Ohne Snapshot-name wird der standard-Snapshot gesetzt
-    # Script als root ausführen
-    #
-     
-    etcdir="/etc/leoclient2/machines"
-    OPTIND=1
-    VMPATH="/var/virtual"
-     
-    vm=""
-    S_NAME="standard"
-    MACHINENAME=""
-    MACHINEPATH=""
-     
-    while getopts "m:s:" opt; do
-        case "$opt" in
-        m)  vm=$OPTARG
-            ;;
-        s)  S_NAME=$OPTARG
-            ;;
-        esac
-    done
-     
-    shift $((OPTIND-1))
-    [ "$1" = "--" ] && shift
-     
-    for file in "$etcdir"/*.conf; do
-      pfad=`cat $file`
-      b=$(basename "$pfad")
-      if [ "$b" = "$vm" ] ; then
-        MACHINENAME=$b
-        MACHINEPATH=$pfad
-      fi
-    done
-     
-    if [ "$MACHINENAME" = "" ] ; then
-      echo "ERROR: Virtual Machine $vm wurde nicht gefunden!"
-      exit 1
-    fi
-     
-    snapshotdir="$MACHINEPATH/Snapshots"
-    s_filepfad=`find $snapshotdir -name "*.vdi" -print -quit`
-     
-    if [ "$s_filepfad" = "" ] ; then
-      echo "ERROR: Kein Snapshot *.vdi gefunden!"
-      exit 1
-    fi
-     
-    SNAPSHOTPATH="$MACHINEPATH/snapshot-store/$S_NAME"
-     
-    if [ -d "$SNAPSHOTPATH" ]; then
-      rm -Rf $SNAPSHOTPATH/*
-    else
-      mkdir "$SNAPSHOTPATH"
-    fi 
-     
-    cp -f "$s_filepfad" "$SNAPSHOTPATH"
-    FILESIZE=$(stat -c%s "$s_filepfad")
-    echo $FILESIZE > "$SNAPSHOTPATH/filesize.vdi"
-     
-    sf=$(basename "$s_filepfad")
-    z_filepfad="$SNAPSHOTPATH/$sf.zip"
-     
-    zip -9 -j $z_filepfad $s_filepfad
-    FILESIZE=$(stat -c%s "$z_filepfad")
-    echo $FILESIZE > "$SNAPSHOTPATH/filesize.vdi.zipped"
-     
-    chmod -R 755 "$SNAPSHOTPATH"
-     
-    echo "  OK: Snapshot $sf wurde als $S_NAME gesetzt."
-     
-    exit 0
-
-
 VM Windows XP – Tipps und Tricks
 --------------------------------
 
@@ -317,7 +187,7 @@ Möchte man eine Netzwerkkarte aktivieren, so muss im Maschinenverzeichnis der V
 
 Z.B. ``/var/virtual/winxp/network.conf``
   
-.. code: bash
+.. code:: bash
 
     # Beispiel einer NAT-Netzwerkkarte
     r100-pclehrer;1;nat;080011223344;auto-used-nic
@@ -359,7 +229,7 @@ Die Dateirechte der VM- bzw. Snapshot-Verzeichnisse müssen so eingestellt sein 
 
 Beispieldatei image.conf
 
-.. code: bash
+.. code:: bash
 
   # Berechtigugen eine VM zu starten. 
   group=teachers
@@ -394,7 +264,7 @@ Den Hinweis aus der Fehlermeldung nimmt man zur Korrektur der Konfigurationsdate
 Dabei muss man in diesem Beispiel die Einträge ``{764a4d59-464c-45ea-bd58-ee5ba35c1f09}`` durch ``{a9fbe850-cb0d-45d1-a08b-619fc3457410}`` ersetzen (vgl. Fehlermeldung).
 Die entsprechenden Abschnitte für HardDisks und StorageController könnten dann wie folgt aussehen:
 
-.. code: bash
+.. code:: bash
 
     (...)
     <HardDisks>
@@ -520,7 +390,7 @@ Aufruf z.B.:
 
 ``# leoclient2-directstart -m winxp -r 1024 -s standard``
 
-.. code: bash
+.. code:: bash
 
   /usr/bin/leoclient2-directstart
   
@@ -681,7 +551,7 @@ Aufruf z.B.:
 
 Zum bequemen Starten kann man einen Desktop-Starter anlegen, z.B. für die VM „winxp“ mit 1024 MB RAM und „standard“-Snapshot:
 
-.. code: bash
+.. code:: bash
 
   leoclient2-directstart.desktop
 
