@@ -60,7 +60,7 @@ Bei der Anmeldung eines Benutzers werden die Rechte an den lokalen virtuellen Ma
    #
 
    # this script is supposed to be run only once after mount of HOME_auf_Server
-   [ -z "$HOMEDIRMOUNT" ] && return 0
+   #[ -z "$HOMEDIRMOUNT" ] && return 0
 
    $LOGGING && msg2log post-mount "015-leoclient2 Environment settings are: USER=$USER VOLUME=$VOLUME MNPT=$MNTPT OPTIONS=$OPTIONS SERVER=$SERVER NUMUID=$NUMUID NUMPRIGID=$NUMPRIGID FULLNAME=$FULLNAME HOMEDIR=$HOMEDIR LOGINSHELL=$LOGINSHELL"
    
@@ -77,3 +77,21 @@ Bei der Anmeldung eines Benutzers werden die Rechte an den lokalen virtuellen Ma
    done  
 
 
+Drucker-Spooler aktivieren
+--------------------------
+
+Um aus der virtuellen Maschine heraus drucken zu können, müssen ein
+Drucker-Spooler und ein -Splitter bei Anmeldung am Linuxclient
+gestartet werden.
+
+Mit Hilfe der linuxmuster-client-extras Skripte gelingt dies wie folgt:
+
+.. code-block:: console
+
+   # linuxmuster-client-extras-setup --type login --on /usr/bin/run-vm-printer2-splitter --order 060
+   # linuxmuster-client-extras-setup --type login --on /usr/bin/run-vm-printer2-spooler --order 070
+
+Die Konfigurationsdatei dazu liegt unter
+``/etc/leoclient2/leoclient-vm-printer2.conf``, zur Fehlerbehebung
+werden Log-Dateien in ``/tmp/run-vm-printer2-spooler.log-USERNAME``
+und ``/tmp/run-vm-printer2-splitter.log-USERNAME`` abgelegt.
