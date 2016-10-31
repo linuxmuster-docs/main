@@ -15,11 +15,9 @@ Neue Snapshots erzeugen
 Bezüglich der Basis können für verschiedene Varianten der virtuellen
 Maschine weitere Snapshots angelegt werden.
 
-Nachfolgendes Skript :download:`leoclient2-snapshot-create
+Das Skript :download:`leoclient2-snapshot-create
 <media/leoclient2-snapshot-create>` legt mit dem aktuellen Zustand der
-VM einen neuen auswählbaren Snapshot oder setzt ohne Angabe eines
-Snapshot-Namens den Standard-Snapshot neu.
-
+VM einen neuen auswählbaren Snapshot an oder den Standard-Snapshot neu.
 
 .. hint::
    
@@ -44,34 +42,37 @@ Vorgehensweise:
      $ leovirtstarter2
   
 - Installieren Sie Software nehmen Sie die Änderungen vor, fahren Sie die VM herunter.
-- Rufen Sie das Skript (als root) ohne Argument auf, um den Standard-Snapshot neu zu setzen, 
+- Rufen Sie das Skript (als root) ohne Argument ``-s`` auf, um den Standard-Snapshot neu zu setzen, 
 
   .. code-block:: console
    
      $ sudo leoclient2-snapshot-create -m winxp
 
-- oder mit einem Argument ``-s Software2016``, um einen neuen Snapshot zu erzeugen.
+- oder mit einem Argument ``-s``, um einen neuen Snapshot zu erzeugen.
 
   .. code-block:: console
      
      $ sudo leoclient2-snapshot-create -m winxp -s Software2016
 
-  Jetzt erscheint im Auswahlmenü von ``leovirtstarter2`` ein neue
+  Jetzt erscheint im Auswahlmenü von ``leovirtstarter2`` ein neuer
   Snapshot mit dem Namen ``Software2016``.
 
 VM-Basis erneuern
 -----------------
 
+Mit Hilfe des Skripts ``leoclient2-base-snapshot-renew`` wird der
+aktuelle Zustand der virtuellen Maschine zur neuen Basis.
+
 .. hint::
    
-   Durch eine Erneuerung der Basis werden alle darauf aufbauenden
-   Snapshots unbrauchbar.
+   Durch eine Erneuerung der Basis werden alle (anderen) darauf
+   aufbauenden Snapshots unbrauchbar.
 
 Nach dem Aufruf des Skripts ``leoclient2-base-snapshot-renew`` mit root-Rechten
 
 .. code-block:: console
 
-   # sudo leoclient2-base-snapshot-renew
+   $ sudo leoclient2-base-snapshot-renew
 
 sind einige selbsterklärende Fragen zu beantworten.
 
@@ -92,27 +93,63 @@ linuxadmin.
 
    VirtualBox-Optionen für Snapshots
 
-Klicken Sie rechts oben auf die Schaltfläche "Sicherungspunkte (1)".
-Klicken Sie auf den Snapshot, löschen Sie diesen mit einem Rechtsklick
-oder mit dem entsprechenden Icon und bestätigen Sie mit "Löschen" den
-nächsten Dialog.
-Löschen Sie so alle bestehenden Sicherungspunkte.
+- Klicken Sie rechts oben auf die Schaltfläche "Sicherungspunkte (1)".
+- Klicken Sie auf den Snapshot, löschen Sie diesen mit einem
+  Rechtsklick oder mit dem entsprechenden Icon und bestätigen Sie mit
+  "Löschen" den nächsten Dialog.
 
-Im Anschluss kann die VM gestartet werden und die gewünschten
-Änderungen durchgeführt werden.  Schalten Sie die VM aus. Beendet man
-VirtualBox, wird eine neue Basisfestplatte unter
-``/PFAD/MASCHINENNAME/MASCHINENNAME.vdi`` erzeugt und gezippt. Darüber
-hinaus wird noch ein neuer Standard-Snapshot in
-``/PFAD/MASCHINENNAME/snapshot-store/standard`` erzeugt und
-gezippt. Der Name des neuen Snapshots, ``{..neuerSnapshot..}.vdi``,
-erscheint in der Konsolenausgabe. Man sollte ihn sich merken, um im
-Anschluss den alten Snapshot in ``/snapshot-store/standard`` zu
-löschen.
+Haben Sie im aktuellen Zustand bereits Änderungen vorgenommen, so kann
+das Löschen des Snapshots eine Weile dauern.  Im Anschluss kann die VM
+gestartet werden und (weitere) gewünschte Änderungen durchgeführt
+werden.
 
-Dazu als root auf der Konsole
+- Schalten Sie die VM aus und beenden Sie VirtualBox
 
-``# rm /PFAD/MASCHINENNAME/{..alterSnapshot..}.vdi*``
+Das Skript erzeugt eine neue Basisfestplatte unter
+``/PFAD/MASCHINENNAME/MASCHINENNAME.vdi`` und komprimiert sie (auch
+das kann dauern).  Darüber hinaus wird noch ein neuer
+Standard-Snapshot erzeugt und gezippt. Der Name des neuen Snapshots,
+hier: ``{c81442ac-4e03-487c-a05a-e82b8918c834}.vdi``, erscheint in der Konsolenausgabe.
 
-eingeben.
+.. code-block:: console
+
+   ...
+   ##### Processing snapshot: standard #####
+   * Zipping standard:
+     * Image:   /virtual/winxp/snapshot-store/standard/{c81442ac-4e03-487c-a05a-e82b8918c834}.vdi
+     * Dir:     /virtual/winxp/snapshot-store/standard
+     * File:    {c81442ac-4e03-487c-a05a-e82b8918c834}.vdi
+   ...
+	      
+
+- Vergleichen Sie den neuen Snapshot-Dateinamen und löschen Sie den
+  alten Standard-Snapshot entsprechend dem Muster ``sudo rm
+  /PFAD/MASCHINENNAME/{..alterSnapshot..}.vdi*``
+
+  .. code-block:: console
+
+     $ ls -1 /virtual/winxp/snapshot-store/standard/
+     {4a895e9c-a6e9-416d-b612-b643035c0103}.vdi
+     {4a895e9c-a6e9-416d-b612-b643035c0103}.vdi.zip
+     {c81442ac-4e03-487c-a05a-e82b8918c834}.vdi
+     {c81442ac-4e03-487c-a05a-e82b8918c834}.vdi.zip
+     filesize.vdi
+     filesize.vdi.zipped
+     $ sudo rm /virtual/winxp/snapshot-store/standard/{4a895e9c-a6e9-416d-b612-b643035c0103}.vdi*
+	  
+- Sollten Sie weitere Snapshots zur virtuellen Maschine haben, haben
+  diese ihre Basis verloren. Löschen Sie diese Snapshots oder erzeugen
+  Sie sie erneut aus dem bestehenden neuen Standard-Snapshot.
+
+  .. code-block:: console
+
+     $ ls -1 /virtual/winxp/snapshot-store/Software2016
+     {4a895e9c-a6e9-416d-b612-b643035c0103}.vdi
+     {4a895e9c-a6e9-416d-b612-b643035c0103}.vdi.zip
+     filesize.vdi
+     filesize.vdi.zipped
+     $ sudo leoclient2-snapshot-create -m winxp -s Software2016
+       adding: {c81442ac-4e03-487c-a05a-e82b8918c834}.vdi (deflated 100%)
+       OK: Snapshot {c81442ac-4e03-487c-a05a-e82b8918c834}.vdi wurde als Software2016 gesetzt.
 
 
