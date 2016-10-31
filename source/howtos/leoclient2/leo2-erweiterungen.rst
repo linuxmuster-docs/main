@@ -50,26 +50,27 @@ Es existiert eine Partition ``/dev/sda3`` (wie z.B. bei der start.conf zum defau
 Virtuelle Maschinen auf dem Server
 ``````````````````````````````````
 
-Wird ein vom Server gemountetes share für die Basisimages und die Snapshots einer remote-VM benutzt, so ist in der Datei ``/etc/leoclient2/servers.conf`` die Variable ``SERVERDIR`` zu setzen. Mehrere SERVERDIR sind (in Zukunft, todo) möglich.
-Nach der Installation enthält die Variable ``SERVERDIR`` den voreingestellten Pfad ``SERVERDIR=/media/leoclient2-vm``. Dieses Verzeichnis wird bei der Installation des leoclient2 angelegt. 
-Alternativ kann dieser Pfad auch auf ein anderes, existierendes Verzeichnis abgeändert werden, in dem sich die Remote-virtuellen Maschinen befinden.
-Welche Quellen mit dem Verzeichnis verbunden sind, kann wiederum in der Datei ``/etc/fstab`` eingerichtet werden.
-
-
 Remote virtuelle Maschine erzeugen
-``````````````````````````````````
+''''''''''''''''''''''''''''''''''
 
 Eine lokale VM wird zur remoten VM, indem
-- ihr Datenverzeichnis auf den Server kopiert wird, z.B. das Verzeichnis ``/var/virtual/winxp`` kopieren in das Netzlaufwerk auf dem Server ``/media/leoclient2-vm``:
+
+- ihr Datenverzeichnis auf den Server kopiert wird, z.B. das
+  Verzeichnis ``/var/virtual/winxp`` in das vom Server gemountete
+  Netzlaufwerk ``/media/leoclient2-vm`` kopiert wird
   
   .. code-block:: console
 
      $ sudo cp -R /var/virtual/winxp /media/leoclient2-vm
   
-- ggf. die Variable ``SERVERDIR`` angepasst wird, falls ein anderes Share verwendet
+- ggf. die Variable ``SERVERDIR`` in ``/etc/leoclient2/servers.conf`` angepasst wird, falls ein anderes Verzeichnis verwendet wird.
 
-Prinzipiell kann die VM danach lokal gelöscht werden. Dann wird die VM vor dem Starten vom Server nach lokal synchronisiert/kopiert. Da dabei beträchtliche Datenmengen übertragen werden, sollte man das nur bei kleinen, wenig genutzen VM's machen (z.B. einem Linux-Mysql-Server o.ä.).
+Prinzipiell kann die VM danach lokal gelöscht werden.
 
+Dann wird die VM vor dem Starten vom Server nach lokal
+synchronisiert/kopiert. Da dabei beträchtliche Datenmengen übertragen
+werden, sollte man das nur bei kleinen, wenig genutzen VM's machen
+(z.B. einem Linux-Mysql-Server o.ä.).
 
 VM Windows XP – Tipps und Tricks
 --------------------------------
