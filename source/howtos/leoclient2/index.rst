@@ -13,6 +13,7 @@ Inhalt:
    leo2-vmerzeugen.rst
    leo2-vmstarten.rst
    leo2-vmerneuern.rst
+   leo2-migrateleo1.rst
    leo2-erweiterungen.rst
 
 
