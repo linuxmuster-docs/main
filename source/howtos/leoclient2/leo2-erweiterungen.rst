@@ -1,37 +1,156 @@
 Weitere Informationen zu leoclient2
 ===================================
 
+Umzug von Leoclient1 nach Leoclient2
+------------------------------------
+
+Für den Umzug benötigen Sie die alte virtuelle Festplatte ``old.vdi``
+und den alten Standard-Snapshot ``old-snapshot.vdi`` der
+leoclient1-VM.
+
+
+- Ermitteln Sie die Größe und UUID der alten Festplatte
+
+  .. code-block:: console
+
+     # vboxmanage showmediuminfo /media/old/old.vdi | grep -E 'UUID|MBytes'
+     UUID:           22df228d-ecb2-44ba-a281-7c73a02d26bc
+     Parent UUID:    base
+     Capacity:       16384 MBytes
+     Size on disk:   1921 MBytes
+  
+- Erzeugen Sie eine neue virtuelle Maschine nach :ref:`Anleitung
+  <virtuelle-maschine-erzeugen>` (mindestens) mit der ermittelten
+  Größe. Im Beispiel wird die neue VM "win-migrate" genannt. Auf die
+  Installation des Betriebssystems kann verzichtet werden. Ändern Sie
+  Typ und Version des Betriebssystem und schließen Sie VirtualBox.
+
+- Ermitteln Sie die UUID der neuen Festplatte:
+
+  .. code-block:: console
+
+     # VBOX_USER_HOME=/var/virtual/win-migrate vboxmanage showmediuminfo /var/virtual/win-migrate/win-migrate.vdi  | grep ^UUID
+     UUID:           1fbc6a0c-d9c9-48bf-ad1c-e94c4d7da406
+  
+- Kopieren Sie die alte virtuelle Festplatte auf die neue
+  Festplatten-Datei 
+
+  .. code-block:: console
+
+     # cp /media/old/old.vdi /var/virtual/win-migrate/win-migrate.vdi
+
+- Korrigieren Sie die UUID an den entsprechenden Stellen mit dem
+  Schema ``sed -i "s@neue UUID@alte UUID@" Datei``
+
+  .. code-block:: console
+
+     # sed -i "s@1fbc6a0c-d9c9-48bf-ad1c-e94c4d7da406@22df228d-ecb2-44ba-a281-7c73a02d26bc@" /var/virtual/win-migrate/win-migrate.vbox
+     # sed -i "s@1fbc6a0c-d9c9-48bf-ad1c-e94c4d7da406@22df228d-ecb2-44ba-a281-7c73a02d26bc@" /var/virtual/win-migrate/defaults/win-migrate.vbox
+
+- Kopieren Sie den alten Standard-Snapshot in das Unterverzeichnis
+  ``Snapshots`` unter Verwendung des bestehenden Dateinamens der
+  Snapshot-Datei der neuen virtuellen Maschine (bestehende Datei
+  ersetzen).
+
+  .. code-block:: console
+
+     # cp /media/old/old-snapshot.vdi /var/virtual/win-migrate/Snapshots/\{08b01eb0-2f5b-4091-acf7-cd5f8cbfcef7\}.vdi
+
+- Aus folgender Fehlermeldung kann man die UUIDs des alten
+  (``ef8629ce-c7c1-424b-8089-0e1d526b0c2c``) und des neuen
+  (``08b01eb0-2f5b-4091-acf7-cd5f8cbfcef7``) Snapshots herauslesen
+
+  .. code-block:: console
+
+     # VBOX_USER_HOME=/var/virtual/win-migrate vboxmanage showmediuminfo /var/virtual/win-migrate/Snapshots/*.vdi | grep Error
+
+     Access Error: UUID {ef8629ce-c7c1-424b-8089-0e1d526b0c2c} of the
+     medium
+     '/var/virtual/win-migrate/Snapshots/{08b01eb0-2f5b-4091-acf7-cd5f8cbfcef7}.vdi'
+     does not match the value {08b01eb0-2f5b-4091-acf7-cd5f8cbfcef7}
+     stored in the media registry
+     ('/var/virtual/win-migrate/VirtualBox.xml')
+		  
+- Korrigieren Sie die UUID des Snapshots in den folgenden Dateien
+  wiederum mit dem Schema ``sed -i "s@neue UUID@alte UUID@" Datei``
+
+  .. code-block:: console
+
+     # sed -i "s@08b01eb0-2f5b-4091-acf7-cd5f8cbfcef7@ef8629ce-c7c1-424b-8089-0e1d526b0c2c@" /var/virtual/win-migrate/win-migrate.vbox
+     # sed -i "s@08b01eb0-2f5b-4091-acf7-cd5f8cbfcef7@ef8629ce-c7c1-424b-8089-0e1d526b0c2c@" /var/virtual/win-migrate/defaults/win-migrate.vbox
+
+- Setzen Sie den Standard-Snapshot neu (Skript siehe :ref:`leoclient2-snapshot-neu`)
+
+  .. code-block:: console
+
+     # leoclient2-snapshot-create -m win-migrate
+     adding: {08b01eb0-2f5b-4091-acf7-cd5f8cbfcef7}.vdi (deflated 57%)
+     OK: Snapshot {08b01eb0-2f5b-4091-acf7-cd5f8cbfcef7}.vdi wurde als standard gesetzt.
+     
+- Starten Sie ``leovirtstarter2`` mit normalen Benutzerrechten über
+  die Konsole, eventuelle Fehlermeldungen
+
+
+Alte Dateien von leoclient1 entfernen
+`````````````````````````````````````  
+
+Die Pakete des alten Leoclient müssen von Hand entfernt werden:
+
+.. code-block:: console
+
+   # apt-get purge leoclient-leovirtstarter-client leoclient-leovirtstarter-common
+   # apt-get purge leoclient-leovirtstarter-server leoclient-tools leoclient-virtualbox leoclient-vm-printer
+
+Evtl. alte Daten von leoclient (Version 1) entfernen:
+
+.. code-block:: console
+
+   # rm -rf /etc/leoclient
+
 Speicherort der virtuellen Maschinen
 ------------------------------------
 
-Lokale Virtuelle Maschinen auf einer zusätzlichen Partition ablegen
-```````````````````````````````````````````````````````````````````
+Virtuelle Maschinen auf einer zusätzlichen Partition
+````````````````````````````````````````````````````
 
-Standardmäßig werden die Dateien einer lokalen VM unter ``/var/virtual/`` abgelegt. Dieses Verzeichnis liegt im normalen Dateisystem des Linuxclients. Um diesen Speicherort auf eine extra Partition auszulagern, kann man eine zusätzliche Partition der Festplatte nach ``/var/virtual`` per fstab mounten. Eine Partition dynamisch unter ``/media`` dafür zu verwenden ist ungeeignet, da sich deren Namen und Zugriffsberechtigung je nach User ändern kann.
+Standardmäßig werden die Dateien einer lokalen VM unter ``/var/virtual/`` abgelegt. Dieses Verzeichnis liegt im normalen Dateisystem des Linuxclients.
+Es wird empfohlen, diesen Speicherort auf eine zusätzliche Partition auszulagern und nach ``/var/virtual`` per fstab mounten.
 
-Damit erfolgt die Synchronisation der Installation des Linuxclients deutlich schneller. Außerdem kann man die virtuellen Maschinen über das Synchronisieren der zugehörigwn Partition unabhängig von der Linuxinstallation zurücksetzen. 
+Gründe für diese Empfehlung:
 
-Beispiel: Es existiert eine Partition ``/dev/sda3`` (wie z.B. bei der start.conf zum default-cloop), die mit ext4 formatiert ist. Zunächst das Verzeichnis ``/var/virtual/`` leeren bzw. den Inhalt wegsichern. Dann die Datei ``/etc/fstab`` als root editieren und letzte Zeile ergänzen:
+- Eine Partition dynamisch unter ``/media`` dafür zu verwenden ist ungeeignet, da sich deren Namen und Zugriffsberechtigung je nach User ändern kann.
+- Mit der Auslagerung erfolgt die Synchronisation der Installation des Linuxclients deutlich schneller.
+- Die virtuellen Maschinen können über das Synchronisieren der zugehörigen Partition unabhängig von der Linuxinstallation zurückgesetzt werden.
 
-.. code: bash
+Vorgehensweise:
 
-  #  /etc/fstab: static file system information.
-  #
-  /dev/sda3   /var/virtual    ext4   defaults  0  0
+Es existiert eine Partition ``/dev/sda3`` (wie z.B. bei der start.conf zum default-cloop), die mit ``ext4`` formatiert ist.
 
-Danach als root folgendes auf der Konsole ausführen, um die Partition zu mounten und das ganze dann noch mit ``df`` zu überprüfen:
+- Zunächst das Verzeichnis ``/var/virtual/`` leeren bzw. den Inhalt wegsichern.
+- Die Datei ``/etc/fstab`` als root editieren und letzte Zeile ergänzen:
 
-``# mount -a``
-``# df -h``
+  .. code:: bash
+     
+     #  /etc/fstab: static file system information.
+     #
+     /dev/sda3   /var/virtual    ext4   defaults  0  0
 
-Nun ggf. die weggesicherten Dateien aus wieder nach ``/var/virtual/`` zurückspielen und von beiden Partitionen ein Image erstellen.
+- Danach als ``root`` die Partition mounten und das ganze dann noch mit ``df`` überprüfen:
+
+  .. code-block:: console
+
+     # mount -a
+     # df -h
+
+- Nun ggf. die weggesicherten Dateien wieder nach ``/var/virtual/``
+  zurückspielen und von beiden Partitionen mit Hilfe von LINBO ein
+  Image erstellen.
 
 
-Frage: Wann muss welche Partition geimaged werden?
-``````````````````````````````````````````````````
+.. attention:: 
 
-Nach dem Anlegen einer neuen VM müssen beide Partitionen geimaged werden da beim Anlegen einer neuen VM diese unter ``/etc/leoclient2/machines`` registiert wird.
-Nach dem Verändern einer VM muss nur die zusätzliche VM-Partition geimaged werden.
+   Nach dem Anlegen einer neuen VM müssen beide Partitionen geimaged werden da beim Anlegen einer neuen VM diese unter ``/etc/leoclient2/machines`` registiert wird.
+   Nach dem Verändern einer VM muss nur die zusätzliche VM-Partition geimaged werden.
 
 
 Virtuelle Maschinen auf dem Server
@@ -49,7 +168,9 @@ Remote virtuelle Maschine erzeugen
 Eine lokale VM wird zur remoten VM, indem
 - ihr Datenverzeichnis auf den Server kopiert wird, z.B. das Verzeichnis ``/var/virtual/winxp`` kopieren in das Netzlaufwerk auf dem Server ``/media/leoclient2-vm``:
   
-  ``# cp -R /var/virtual/winxp /media/leoclient2-vm``
+  .. code-block:: console
+
+     $ sudo cp -R /var/virtual/winxp /media/leoclient2-vm
   
 - ggf. die Variable ``SERVERDIR`` angepasst wird, falls ein anderes Share verwendet
 
@@ -95,8 +216,8 @@ Share auf USB-Sticks einrichten:
 -    Verknüpfung auf Desktop ziehen und umbenennen
 
 Drucker einrichten
--    Sieh FreePDF-Webseite: http://freepdfxp.de/download_de.html
--    ghosscript Installieren
+-    Siehe FreePDF-Webseite: http://freepdfxp.de/download_de.html
+-    ghostscript Installieren
 -    Free-PDF Installieren (Version 4.08 bei mir ging 4.14 NICHT(Eigener Drucker anlegen bei 32bit Windows 7)
 -    FreePDF Config starten → admin Config starten
 -    Profile neu : Profil ausdrucken anlegen
@@ -117,10 +238,10 @@ Die virtuellen dynamischen Festplattendateien werden im Laufe des Betriebes imme
 
 -    Alles überflüssige in der VM löschen
 -    Unbenutzte Festplattenbereiche in der VM nullen
--    Mit dem Tool VBoxManage die .vdi-Festplattendatei schrinken
--    Die geschrinkte Festplattendatei als neuen base-Snapshot setzen
+-    Mit dem Tool VBoxManage die .vdi-Festplattendatei kompakter machen
+-    Die kompakte Festplattendatei als neuen base-Snapshot setzen
 
-Windows XP schrinken
+Windows XP kompakter machen
 
 Vorgehensweise (am Beispiel einer virtuellen Maschine mit Namen „winxp“):
 
@@ -145,7 +266,7 @@ Vorgehensweise (am Beispiel einer virtuellen Maschine mit Namen „winxp“):
 
     ``# sudo leoclient2-base-snapshot-renew``
 
-Linux-VM schrinken
+Linux-VM kompakter machen
 
 Zuerst alles Überflüssige in der laufenden VM löschen, u.a. auch der apt-Cache. Die anschließend beste Vorgehensweise ist das Einbinden der .vdi-Festplatte in ein anderes System, z.B. in ein live-Linux-System, um das „Nullen“ durchzuführen:
 
@@ -240,67 +361,6 @@ Hinweis: Die Berechtigung für einen einzelnen Snapshot wird nur dann korrekt au
 
 Stand Version 0.5.4-1 Juli 2015: Die Gruppen- und User-Beschränkung auf VM-Ebene wird z.Z. nicht korrekt ausgelesen → 'group' und 'user' damit ohne Funktion
 
-
-Leoclient-1-VM's umziehen nach Leoclient2
------------------------------------------
-
-Umzug einer bestehenden virtuellen Maschine (VM) unter ``leoclient`` Version 1 auf ``leoclient2``. 
-(Hinweis: Es kann grundsätzlich jede VM mit genau einem Snapshot integriert werden.)
-
-Zunächst erzeugt man eine neue virtuelle Maschine nach Anleitung mit ``leoclient2-init`` (mit root-Rechten).
-Die Größe der Festplatte sollte der Größe der Festplatte der vorhandenen Maschine entsprechen.
-Der hier verwendete Name ``win-umzug`` kann natürlich angepasst werden.
-
-Auf die Installation des Betriebssystems kann verzichtet und VirtualBox kann sofort wieder geschlossen werden.
-
-Dann benötigt man die virtuelle Festplatte und den Standardsnapshot der alten VM und kopiert die virtuelle Festplatte (vdi-Datei) in das Verzeichnis der neuen VM unter ``leoclient2`` (hier nach ``/var/virtual/win-umzug``) auf die Festplatten-Datei (hier: ``win-umzug.vdi``).
-Außerdem kopiert man den Snapshot in das Unterverzeichnis ``Snapshot`` unter Verwendung des bestehenden Dateinamens der Snapshot-Datei der neuen virtuellen Maschine (bestehende Datei ersetzen).
-
-Anschließend startet man den ``leovirtstarter2`` mit normalen Benutzerrechten über die Konsole mit ``$ leovirtstarter2`` und wählt die neue erstellte Maschine aus. Die VM wird wie vorgefunden gestartet.
-
-Da die Zuordnung in den Konfigurationsdateien noch nicht stimmt, bricht das Starten mit einer Fehlermeldung ab.
-
-Den Hinweis aus der Fehlermeldung nimmt man zur Korrektur der Konfigurationsdatei für die neue VM (hier: ``/var/virtual/win-umzug/win-umzug.vbox``).
-Dabei muss man in diesem Beispiel die Einträge ``{764a4d59-464c-45ea-bd58-ee5ba35c1f09}`` durch ``{a9fbe850-cb0d-45d1-a08b-619fc3457410}`` ersetzen (vgl. Fehlermeldung).
-Die entsprechenden Abschnitte für HardDisks und StorageController könnten dann wie folgt aussehen:
-
-.. code:: bash
-
-    (...)
-    <HardDisks>
-      <HardDisk uuid="{a9fbe850-cb0d-45d1-a08b-619fc3457410}" location="win-umzug.vdi" format="VDI" type="Normal">
-        <HardDisk uuid="{4852257a-b9b9-4a69-8b75-84555b24064d}" location="Snapshots/{4852257a-b9b9-4a69-8b75-84555b24064d}.vdi" format="VDI"/>
-      </HardDisk>
-    (...)
-    <StorageControllers>
-      <StorageController name="win-umzug" type="PIIX4" PortCount="2" useHostIOCache="true" Bootable="true">
-        <AttachedDevice type="HardDisk" port="0" device="0">
-          <Image uuid="{a9fbe850-cb0d-45d1-a08b-619fc3457410}"/>
-        </AttachedDevice>
-      </StorageController>
-    </StorageControllers>
-    (...)
-    
-
-Die Datei ``VirtualBox.xml`` muss nicht angepasst werden.
-
-Anschließend sollte die neue-alte VM über den ``leovirtstarter2`` gestartet werden können.
-
-
-Alte Dateien von leoclient (Version 1) entfernen
-------------------------------------------------
-
-Software-Pakete entfernen
-`````````````````````````
-
-Die Pakete des alten Leoclient müssen von Hand entfernt werden:
-
-``# apt-get purge leoclient-leovirtstarter-client leoclient-leovirtstarter-common``
-``# apt-get purge leoclient-leovirtstarter-server leoclient-tools leoclient-virtualbox leoclient-vm-printer``
-
-Evtl. alte Daten von leoclient (Version 1) entfernen:
-
-``# rm -rf /etc/leoclient``
 
 
 Rechte korrigieren
