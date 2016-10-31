@@ -9,6 +9,8 @@ Bezüglich dieser Basis können weitere Snapshots erzeugt werden.
 Ebenso kann man die Basis erneuern, woraufhin aber alle darauf
 basierenden weiteren Snapshots wieder unbrauchbar werden.
 
+.. _leoclient2-snapshot-neu:
+
 Neue Snapshots erzeugen
 -----------------------
 
