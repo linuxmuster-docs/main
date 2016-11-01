@@ -56,6 +56,8 @@ Das Skript prüft die angegebenen Eintragungen in der Datei ``/etc/linuxmuster/w
 Clients mit neuem Linbo booten
 ------------------------------
 
+.. note:: Ab Linbo 2.3 ist es zwingend notwendig, im BIOS auch die Festplatte als Bootmedium einzustellen.
+
 Um sicherzustellen, dass das neue LINBO-System auch lokal auf den
 Clients installiert wird, erzwingt man eine Aktualisierung des Caches
 und einen Reboot.
