@@ -55,42 +55,64 @@ Remote virtuelle Maschine erzeugen
 
 Eine lokale VM wird zur remoten VM, indem
 
-- ihr Datenverzeichnis auf den Server kopiert wird, z.B. das
+- die in ``/etc/leoclient2/servers.conf`` konfigurierbare Variable
+  ``SERVERDIR`` auf ein Verzeichnis gesetzt wird, in das im Verlauf des
+  Bootprozesses oder der Anmeldung ein Netzwerk-Share gemountet wird
+
+- das Datenverzeichnis der VM auf den Server kopiert wird, z.B. das
   Verzeichnis ``/var/virtual/winxp`` in das vom Server gemountete
-  Netzlaufwerk ``/media/leoclient2-vm`` kopiert wird
+  Netzlaufwerk ``/media/leoclient2-vm`` kopiert wird.
   
   .. code-block:: console
 
      $ sudo cp -R /var/virtual/winxp /media/leoclient2-vm
   
-- ggf. die Variable ``SERVERDIR`` in ``/etc/leoclient2/servers.conf`` angepasst wird, falls ein anderes Verzeichnis verwendet wird.
-
 Prinzipiell kann die VM danach lokal gelöscht werden.
 
 Dann wird die VM vor dem Starten vom Server nach lokal
 synchronisiert/kopiert. Da dabei beträchtliche Datenmengen übertragen
 werden, sollte man das nur bei kleinen, wenig genutzen VM's machen
-(z.B. einem Linux-Mysql-Server o.ä.).
+(z.B. einem Linux-MySQL-Server o.ä.).
 
 VM Windows XP – Tipps und Tricks
 --------------------------------
 
-Zur Installation in VirtulBox ein CD-Rom-Lauftwerk hinzufügen und dann darin die Installations-iso einlegen, die NTFS-Schellformatierung genügt.
-Netzlaufwerke verbinden
+- Zur Installation in VirtualBox ein CD-Rom-Laufwerk hinzufügen und
+  dann darin das Installations-ISO einlegen, die
+  NTFS-Schellformatierung genügt.
 
-Zunächst die Gasterweiterungen installieren, mit Hilfe der Menüleiste des VBox-Fensters bei „Geräte“. Dadurch wird auch die Maus nicht mehr gefangen und das Fenster der VM ist beliebig skalierbar.
+- Die Gasterweiterungen installieren, mit Hilfe der Menüleiste des
+  VBox-Fensters bei "Geräte". Dadurch wird auch die Maus nicht mehr
+  gefangen und das Fenster der VM ist beliebig skalierbar.
 
-Share zu Home_auf_Server einrichten:
+Verbindung zu ``Home_auf_Server`` einrichten:
 
--    Windows Explorer → Menü Extras → Netzlaufwerk verbinden
--    einen Laufwerksbuchstabe auswählen (z.B. H:) und Ordner angeben: \\vboxsrv\home
--    ggf. Verknüpfung auf Desktop ziehen und umbenennen
+  - Windows Explorer → Menü Extras → Netzlaufwerk verbinden
+  - einen Laufwerksbuchstabe auswählen (z.B. H:) und Ordner angeben: ``\\vboxsrv\home``
+  - ggf. Verknüpfung auf Desktop ziehen und umbenennen
 
-Share zu Tauschordnern und USB-Sticks einrichten:
+Verbindung zu Tausch-Ordner und USB-Sticks einrichten:
 
--    Windows Explorer → Menü Extras → Netzlaufwerk verbinden
--    einen Laufwerksbuchstabe und Orner angeben: \\vboxsrv\media
--    ggf. Verknüpfungen auf Desktop ziehen und umbenennen
+  - Windows Explorer → Menü Extras → Netzlaufwerk verbinden
+  - einen Laufwerksbuchstabe und Ordner angeben: ``\\vboxsrv\media``
+  - ggf. Verknüpfungen auf Desktop ziehen und umbenennen
+
+Drucker einrichten
+
+  - Siehe FreePDF-Webseite: http://freepdfxp.de/download_de.html
+  - ghostscript Installieren
+  - Free-PDF Installieren (Version 4.08 bei mir ging 4.14 NICHT(Eigener Drucker anlegen bei 32bit Windows 7))
+  - FreePDF Config starten → admin Config starten
+  - Profile neu : Profil ausdrucken anlegen
+  - Button: Für das aktuelle Profil einen eigenen Drucker anlegen
+  - Profil ausdrucken bearbeiten: FreePDF Dialog
+
+     - Als festen Dateinamen speichern
+     - H:\ausdruck.pdf (anpassen, entsprechend ``/etc/leoclient2/leoclient-vm-printer2.conf``)
+     - Speichern
+
+  - Den Drucker FreePDF als Standard Drucker anlegen
+  - Äquivalent funktioniert das Programm PDF24
 
 
 VM Windows 7 – Tipps und Tricks
@@ -98,33 +120,17 @@ VM Windows 7 – Tipps und Tricks
 
 Bei der Installation bricht die 64bit Version ab, wenn nur 1 GB RAM da ist.
 
-Netzlaufwerke
+Verbindung zu ``Home_auf_Server`` einrichten:
 
-Share zu Home_auf_Server einrichten:
 -    Windows Explorer → Rechte Maustaste auf Netzwerk → Netzlaufwerk verbinden
--    Laufwerksbuchstabe und Pfad nennen: \\vboxsrv\home
+-    Laufwerksbuchstabe und Pfad nennen: ``\\vboxsrv\home``
 -    Verknüpfung auf Desktop ziehen und umbenennen
 
-Share auf USB-Sticks einrichten:
+Verbindung zu Tausch-Ordnern und USB-Sticks einrichten:
+
 -    Windows Explorer → Rechte Maustaste auf Netzwerk → Netzlaufwerk verbinden
--    Laufwerksbuchstabe und Pfad nennen: \\vboxsrv\media
+-    Laufwerksbuchstabe und Pfad nennen: ``\\vboxsrv\media``
 -    Verknüpfung auf Desktop ziehen und umbenennen
-
-Drucker einrichten
--    Siehe FreePDF-Webseite: http://freepdfxp.de/download_de.html
--    ghostscript Installieren
--    Free-PDF Installieren (Version 4.08 bei mir ging 4.14 NICHT(Eigener Drucker anlegen bei 32bit Windows 7)
--    FreePDF Config starten → admin Config starten
--    Profile neu : Profil ausdrucken anlegen
--    Button: Für das aktuelle Profil einen eigenen Drucker anlegen
--    Profil ausdrucken bearbeiten: FreePDF Dialog
-
-     -   Als festen Dateinamen speichern
-     -   H:\ausdruck.pdf (anpassen, entsprechend /etc/leoclient2/leoclient-vm-printer2.conf)
-     -   Speichern
-
--    Den Drucker FreePDF als Standard Drucker anlegen
-
 
 VM schrumpfen – Tipps und Tricks
 --------------------------------
@@ -255,12 +261,13 @@ Netzwerkeinstellungen einer VM
 
 Die Netzwerkkonfiguration der VM erfolgt durch eine Datei ``network.conf``, die zusätzlich im Verzeichnis der VM angelegt werden muss. Fehlt diese Datei oder treten Fehler bei der Konfiguration auf, werden beim Snapshot-Start des leovirtstarters2 immer alle Netzwerkkarten deaktiviert.
 
-Möchte man eine Netzwerkkarte aktivieren, so muss im Maschinenverzeichnis der VM eine Datei <MASCHINENPFAD>/network.conf angelegt werden, die 5 Einträge in einer Zeile, durch Strichpunkt getrennt, enthält. Diese Konfiguration gilt dann für alle lokalen Snapshots dieser VM.
--    hostname (Name des Linux-Clients auf dem VirtualBox installiert ist)
--    vm-nic (1-4)
--    mode (none|null|nat|bridged|intnet|hostonly|generic|natnetwork)
--    macaddress
--    devicename (eth0,eth1,…) oder (auto-unused-nic|auto-used-nic)
+Möchte man eine Netzwerkkarte aktivieren, so muss im Maschinenverzeichnis der VM eine Datei ``<MASCHINENPFAD>/network.conf`` angelegt werden, die 5 Einträge in einer Zeile, durch Strichpunkt getrennt, enthält. Diese Konfiguration gilt dann für alle lokalen Snapshots dieser VM.
+
+- hostname (Name des Linux-Clients auf dem VirtualBox installiert ist)
+- vm-nic (1-4)
+- mode (none|null|nat|bridged|intnet|hostonly|generic|natnetwork)
+- macaddress
+- devicename (eth0,eth1,…) oder (auto-unused-nic|auto-used-nic)
 
 Z.B. ``/var/virtual/winxp/network.conf``
   
@@ -270,6 +277,7 @@ Z.B. ``/var/virtual/winxp/network.conf``
     r100-pclehrer;1;nat;080011223344;auto-used-nic
 
 Folgendes typische Netzwereinstellungen können bisher (Version 0.5.4-1, Juli 2015) umgesetzt werden:
+
 -    nat - NAT auf die NIC des pädagogischen Netzes (VM kann ins Internet)
 -    bridged + auto-used-nic - Bridge auf die Karte ins pädagogische Netz
 -    bridged + auto-unused-nic - Bridge auf eine zweite Karte (nicht ins pädagogische Netz verbunden -> unused)
@@ -283,6 +291,50 @@ Es gibt insgesamt 4 Möglichkeiten eine ``network.conf`` -Datei abzulegen: zweim
 -    Anschließend wird die lokale Datei für den Snapshot der VM ``<lokaler Maschinenpfad>/network.conf`` ausgewertet (falls vorhanden).
 -    Abschließend wird die lokale Datei für die VM ``<lokaler Maschinenpfad>/snapshot-store/<SNAPSHOT>/network.conf`` ausgewertet (fals vorhanden).
 -    Ist keine Datei ``network.conf`` vorhanden, werden alle Netzwerkkarten für die VM deaktiviert.
+
+Fehlersuche - Fehlerbehebung
+----------------------------
+
+Log-Datei
+`````````
+Am Client findet man unter ``/tmp/leovirtstarter2.log`` die aktuelle log-Datei des ``leovirtstarters2`` zur Fehlersuche.
+
+Endlosschleife bei ``leoclient2-base-snapshot-renew``
+`````````````````````````````````````````````````````
+Problem: Das Script ``leoclient2-base-snapshot-renew`` läuft in eine Endlosschleife, wenn im Verzeichnis ``<lokaler Maschinenpfad>/Snapshots/`` eine verweiste Snapshot-Datei übrig bleibt.
+
+Lösung: Die verweiste Snapshot-Datei manuell löschen, dann ``leoclient2-base-snapshot-renew`` nochmals ausführen.
+
+Snapshot passt nicht zur Basisfestplatte
+````````````````````````````````````````
+Nach einem ``leoclient2-base-snapshot-renew`` werden bisherige Snapshots unbrauchbar und sollten auch nicht mehr verwendet werden. Der Snapshotname wird dabei auch geändert. In der Datei ``<Maschinennamen>.vbox`` wird der aktuell gültige ``Snapshotnamen {…}.vdi`` aufgeführt.
+
+Problem: Unter ``<Maschinenpfad>/Snapshots`` liegt ein alter Snapshot, der Name passt nicht. VirtualBox startet deshalb nicht.
+
+Lösung: Den Snapshot in ``<Maschinenpfad>/Snapshots`` manuell löschen und dann einen Snapshot mit dem aktuellen Namen aus ``<Maschinenpfad>/snapshot-store/standard/`` in das Verzeichnis ``<Maschinenpfad>/Snapshots`` kopieren.
+
+``network.conf`` für lokalen Snapshot bereitstellen
+```````````````````````````````````````````````````
+Problem: Aktuell wertet der ``leovirtstarter2`` eine ``network.conf`` im Verzeichnis des lokalen Snapshots nicht aus. (leoclient2-Version: 0.5.4-1)
+
+Lösung: Wenn man jedoch eine ``network.conf`` im remote-Pfad des Snapshots ablegt, wird diese ausgewertet. Weitere Dateien müssen im remote-Pfad nicht vorhanden sein. Der remote-Pfad muss nicht zwingend remote liegen!
+Z.B. mit den voreingestellten Standard-Pfaden des Snapshots „physik“:
+
+- lokaler Snapshot-Pfad: ``/var/virtual/winxp1/snapshot-store/physik/...``
+- ergibt ``network.conf``-Pfad: ``/media/leoclient2-vm/winxp1/snapshot-store/physik/network.conf``
+
+``leovirtstarter2`` zeigt "wie vorgefunden" nicht an
+````````````````````````````````````````````````````
+Problem: Im Auswahlmenü wird „wie vorgefunden“ nicht angezeigt oder kann nicht gestartet werden.
+
+Ursache 1: Die VM wurde nicht ausgeschaltet sondern befindet sich in einem gespeicherten Zustand. Im Verzeichnis ``.../Snapshots`` befindet sich eine ``*.sav``-Datei.
+
+Lösung 1: Den „Standard“-Snapshot starten oder die Maschine direkt mit VirtualBox starten und dann herunterfahren.
+
+Ursache 2: Im Verzeichnis ``Maschinenpfad>/Snapshots/`` befinden sich überflüssige Dateien.
+
+Lösung 2: Alle Dateien löschen bis auf den aktuellen Snapshot: ``{...}.vdi``. Der Name/die UUID des aktuellen Snapshots kann man (falls unklar) aus der ``<Maschinenname>.vbox``-Datei ermitteln.
+
 
 
 
@@ -385,6 +437,7 @@ Datenstruktur einer VM
 
 Virtualbox-Dateien
 In der obersten Verzeichnisebene im Verzeichnis der VM verwaltet VirtualBox die aktuell verwendete Maschine:
+
 - Die Basisdatei ist ``MASCHINENNAME.vdi``, sie enthält den Basis-Zustand der Festplatte und ist meist mehrere GB groß
 - Konfigurationsdateien
 - Logdateien
@@ -392,6 +445,7 @@ In der obersten Verzeichnisebene im Verzeichnis der VM verwaltet VirtualBox die 
 - Im Unterverzeichnis ``Snapshots`` verwaltet VirtualBox den aktuell verwendeten Snapshot {*}.vdi.
 
 leoclient2-Dateien
+
 - ``MASCHINENNAME.conf`` beinhaltet den Pfad in dem die VM erstellt wurde. Dorthin wird sie im Fall einer remoten Maschine auch wieder entpackt (funktioniert nur in diesem Pfad)
 - ``network.conf`` ist optional. Konfiguriert die Netzwerkkarten der Virtuellen Maschine (falls keine network.conf speziell für den Snapshot exisiert)
 - ``image.conf`` ist optional.
@@ -407,22 +461,30 @@ leoclient2-Dateien
 Übersicht der Scripte/Befehle zum leoclient2
 ````````````````````````````````````````````
 
-- leoclient2-init 		legt eine neue lokale VM an
+leoclient2-init:
+  legt eine neue lokale VM an
 
-- leovirtstarter2 		startet das grafische Auswahlfenster und anschließend die VM
+leovirtstarter2
+  startet das grafische Auswahlfenster und anschließend die VM
   mit Optionen
-  --info 	listet alle VMs auf der Konsole auf
-  --vbox 	startet das grafische Auswahlfenster und VirtualBox ohne die VM zu starten
-  -h 	        Hilfe anzeigen
-  --local-snapshots 	nur lokale Snapshots listen
-  --ignore-virtualbox 	startet den leovirtstarter auch wenn gerade VirtualBox ausgeführt wird
-  --serverdir <abs path> 	verwendet anderen Pfad statt SERVERDIR zu den remote VMs
 
-- leoclient2-base-snapshot-renew 		Erstellt eine neue Basisfestplatte mit dem aktuellen Snapshot der zur bisherigen Basisfestplatte ge-„merged“ wird. Der „Aktuelle Zustand“ wird somit gesichert/festgeschrieben.
+  .. code:: 
 
-- leoclient2-vm-move 		Importiert eine VM (z.B. vom externen Speichermedium) oder verschiebt ein VM
+     --info 	listet alle VMs auf der Konsole auf
+     --vbox 	startet das grafische Auswahlfenster und VirtualBox ohne die VM zu starten
+     -h 	        Hilfe anzeigen
+     --local-snapshots 	nur lokale Snapshots listen
+     --ignore-virtualbox 	startet den leovirtstarter auch wenn gerade VirtualBox ausgeführt wird
+     --serverdir <abs path> 	verwendet anderen Pfad statt SERVERDIR zu den remote VMs
 
-- VBoxManage 	mit vielen Optionen 	Konsolen-Tool zum Bearbeiten von VMs 
+leoclient2-base-snapshot-renew
+  Erstellt eine neue Basisfestplatte mit dem aktuellen Snapshot der zur bisherigen Basisfestplatte ge-„merged“ wird. Der „Aktuelle Zustand“ wird somit gesichert/festgeschrieben.
+
+leoclient2-vm-move
+  Importiert eine VM (z.B. vom externen Speichermedium) oder verschiebt ein VM
+
+VBoxManage
+  mit vielen Optionen Konsolen-Tool zum Bearbeiten von VMs 
 
 
 Entwicklungsdokumentation des leoclient2
@@ -430,39 +492,4 @@ Entwicklungsdokumentation des leoclient2
 
 siehe http://www.linuxmuster.net/wiki/entwicklung:linuxclient:leoclient2
 
-
-Fehlersuche - Fehlerbehebung
-````````````````````````````
-
-Log-Datei
-'''''''''
-Am Client findet man unter ``/tmp/leovirtstarter2.log`` die aktuelle log-Datei des ``leovirtstarters2`` zur Fehlersuche.
-
-Endlosschleife bei ``leoclient2-base-snapshot-renew``
-'''''''''''''''''''''''''''''''''''''''''''''''''''''
-Problem: Das Script ``leoclient2-base-snapshot-renew`` läuft in eine Endlosschleife, wenn im Verzeichnis ``<lokaler Maschinenpfad>/Snapshots/`` eine verweiste Snapshot-Datei übrig bleibt.
-Lösung: Die verweiste Snapshot-Datei manuell löschen, dann ``leoclient2-base-snapshot-renew`` nochmals ausführen.
-
-Snapshot passt nicht zur Basisfestplatte
-''''''''''''''''''''''''''''''''''''''''
-Nach einem ``leoclient2-base-snapshot-renew`` werden bisherige Snapshots unbrauchbar und sollten auch nicht mehr verwendet werden. Der Snapshotname wird dabei auch geändert. In der Datei ``<Maschinennamen>.vbox`` wird der aktuell gültige ``Snapshotnamen {…}.vdi`` aufgeführt.
-Problem: Unter ``<Maschinenpfad>/Snapshots`` liegt ein alter Snapshot, der Name passt nicht. VirtualBox startet deshalb nicht.
-Lösung: Den Snapshot in ``<Maschinenpfad>/Snapshots`` manuell löschen und dann einen Snapshot mit dem aktuellen Namen aus ``<Maschinenpfad>/snapshot-store/standard/`` in das Verzeichnis ``<Maschinenpfad>/Snapshots`` kopieren.
-
-``network.conf`` für lokalen Snapshot bereitstellen
-'''''''''''''''''''''''''''''''''''''''''''''''''''
-Problem: Aktuell wertet der ``leovirtstarter2`` eine ``network.conf`` im Verzeichnis des lokalen Snapshots nicht aus. (leoclient2-Version: 0.5.4-1)
-Lösung: Wenn man jedoch eine ``network.conf`` im remote-Pfad des Snapshots ablegt, wird diese ausgewertet. Weitere Dateien müssen im remote-Pfad nicht vorhanden sein. Der remote-Pfad muss nicht zwingend remote liegen!
-Z.B. mit den voreingestellten Standard-Pfaden des Snapshots „physik“:
-
-    lokaler Snapshot-Pfad: ``/var/virtual/winxp1/snapshot-store/physik/...``
-    ergibt ``network.conf``-Pfad: ``/media/leoclient2-vm/winxp1/snapshot-store/physik/network.conf``
-
-``leovirtstarter2`` zeigt/startet "wie vorgefunden" nicht
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-Problem: Im Auswahlmenü wird „wie vorgefunden“ nicht angezeigt oder kann nicht gestartet werden.
-Ursache 1: Die VM wurde nicht ausgeschaltet sondern befindet sich in einem gespeicherten Zustand. Im Verzeichnis ``.../Snapshots`` befindet sich eine ``*.sav``-Datei.
-Lösung 1: Den „Standard“-Snapshot starten oder die Maschine direkt mit VirtualBox starten und dann herunterfahren.
-Ursache 2: Im Verzeichnis ``Maschinenpfad>/Snapshots/`` befinden sich überflüssige Dateien.
-Lösung 2: Alle Dateien löschen bis auf den aktuellen Snapshot: ``{...}.vdi``. Der Name/die UUID des aktuellen Snapshots kann man (falls unklar) aus der ``<Maschinenname>.vbox``-Datei ermitteln.
 
