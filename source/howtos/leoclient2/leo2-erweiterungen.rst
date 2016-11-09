@@ -194,6 +194,61 @@ Das Tool VBoxManage kann nur .vdi-Datein schrinken. Dateien vom Typ .vmdk müsse
    # VBoxManage clonehd disk1.vmdk disk1.vdi --format vdi
    # VBoxManage modifyhd --compact disk1.vdi
 
+Virtuelle Maschine direkt starten
+---------------------------------
+
+Das zusätzliche Skript :download:`leoclient2-directstart <media/leoclient2-directstart>` startet direkt ohne Dialog eine VM. 
+
+Vorgehensweise:
+
+- Laden Sie das Skript herunter :download:`leoclient2-directstart <media/leoclient2-directstart>`
+- Legen Sie das Skript unter ``/usr/bin`` ab und machen es ausführbar.
+
+  .. code-block:: console
+
+     $ sudo mv leoclient2-directstart /usr/bin/
+     $ sudo chmod 755 /usr/bin/leoclient2-directstart
+
+- Das Skript kann mit folgenden Parameter gestartet werden: 
+
+  .. code:: 
+     
+     # /usr/bin/leoclient2-directstart -m <VM> [-s <Snapshot>] -r <RAM>
+     
+     m: Name der lokalen VM, zwingend notwendig
+     s: Name des lokalen Snapshots, ohne wird "wie vorgefunden" verwendet
+     r: RAM in MB, zwingend notwendig
+
+- Starten Sie das Skript 
+
+  .. code-block:: console
+
+     $ leoclient2-directstart -m winxp -r 1024 -s standard
+
+.. hint::
+
+   Einschränkungen des Skriptes:
+
+   - Eine Datei ``network.conf`` wird von dem Script nicht ausgewertet.
+   - Bei den Berechtigungen wird nur der Snapshot und die primäre Gruppe des Users überprüft.
+
+  
+Zum bequemen Starten kann man einen Desktop-Starter anlegen, z.B. für die VM „winxp“ mit 1024 MB RAM und „standard“-Snapshot:
+
+.. code-block:: bash
+   :caption: /usr/share/applications/leoclient2-directstart.desktop
+
+   [Desktop Entry]
+   Version=1.0
+   Type=Application
+   Name=VirtualBox Direktstart
+   Comment=Starting Snapshots of VirtualBox
+   Comment[de]=Starten von VirtualBox Snapshots
+   Exec=/usr/bin/leoclient2-directstart -m winxp -r 1024 -s standard
+   Icon=leovirtstarter2
+   Categories=Graphics;Engineering;
+   Categories=Emulator;System;Application;
+   Terminal=false
 
 Netzwerkeinstellungen einer VM
 ------------------------------
@@ -230,8 +285,69 @@ Es gibt insgesamt 4 Möglichkeiten eine ``network.conf`` -Datei abzulegen: zweim
 -    Ist keine Datei ``network.conf`` vorhanden, werden alle Netzwerkkarten für die VM deaktiviert.
 
 
+
+
+Hintergrundinformationen
+------------------------
+
+Virtuelle Maschine erzeugen
+```````````````````````````
+
+Beim Anlegen einer virtuellen Maschine mit ``leoclient2-init`` wird der Pfad zur Maschine in ``/etc/leoclient2/machines/MASCHINENNAME.conf`` gespeichert.
+
+Nach Beenden von Virtualbox werden folgende Aktionen vom Script ausgeführt:
+
+- Ein Snapshot wird erzeugt (in ``/PFAD/MASCHINENNAME/Snapshot/``) und dieser als Standard-Snapshot nach ``PFAD/MASCHINENNAME/snapshot-store/standard/`` gesichert.
+- Außerdem werden die Konfigurationsdateien (compreg.dat, VirtualBox.xml, xpti.dat und MASCHINENNAME.vbox) gesichert nach ``/PFAD/MASCHINENNAME/defaults/``.
+- Abschließend werden alle Dateirechte für den Einsatz gesetzt (z.B. ``/PFAD/MASCHINENNAME/MASCHINENNAME.vdi`` nur lesbar, da diese Datei nicht verändert werden darf)
+
+Jede VM ist vollständig in ihrem Maschinenverzeichnis gespeichert.
+
+
+Serverbasierte VM kopieren, lokaler cache
+`````````````````````````````````````````
+
+Die auf dem Server liegenden gezippten Basisimages und Snapshots werden (falls lokal nicht vorhanden oder verändert) beim Start in den lokalen cache kopiert und dann lokal an die Stelle entpackt, wo sie genutzt werden. Der Cache hat eine maximale Größe, die in ``SERVERDIR/caches.conf`` definiert wird. Es empfielt sich dafür ein lokales Datenlaufwerk zu verwenden. Falls das nicht vorhanden ist, ein Verzeichnis auf der Partition mit den virtuellen Maschinen.
+
+
+Virtuelle Maschine starten
+``````````````````````````
+
+VirtualBox startet mit der Umgebungsvariablen ``VBOX_USER_HOME`` (``$ export VBOX_USER_HOME=/PFAD/MASCHINENNAME``) und mit der Einstellung für den Standardort für die VM für Virtualbox (``$ VBoxManage setproperty machinefolder /PFAD/MASCHINENNAME``).
+Mit diesen Anpassungen und anschließendem Starten von Virtualbox (``$ VirtualBox``) kann eine VM auch von Hand gestartet werden.
+
+Damit ``leovirtstarter2`` eine lokale Maschine findet, muss in ``/etc/leoclient2/machines/MASCHINENNAME.conf`` ihr Pfad eingetragen sein. (leoclient2-init erzeugt diese Datei automatisch). Der Standard-Pfad für die lokalen VM ist dabei ``/var/virtual/`` .
+
+Außer den lokal vorhandenen Maschinen wird auch in allen in ``SERVERDIR`` konfigurierten Pfaden nach Maschinen gesucht. (Der Pfad MUSS NICHT remote liegen, allerdings geht ``leovirtstarter2`` davon aus und holt diese Maschinen in gezippter Form (Netzwerk-Bandbreitenschonend) zu den lokalen Maschinen und startet Sie dort). 
+Der Standard-Pfad für die remote VM ist dabei ``/media/leoclient2-vm`` .
+
+Auflisten kann man alle sichtbaren VM's mit:
+
+.. code-block:: console
+
+   $ leovirtstarter2 -i
+   $ leovirtstarter2 --info
+
+Wird mit dem ``leovirtstarter2`` ein Snapshot einer VM zum Starten ausgewählt, wird folgendes abgearbeitet:
+
+- Kopieren der Standard-Konfigurationsdateien aus ``/PFAD/MASCHINENNAME/defaults/`` nach ``/PFAD/MASCHINENNAME/`` 
+- Anpassen folgender Angaben:
+
+  - Shared Folder verbinden ins Heimatverzeichnis des angemeldeten Benutzers
+  - Netzwerkeinstellungen (verschiedene Möglichkeiten stehen zur Verfügung)
+
+- Starten der Maschine
+
+Gibt es die Maschine auch Remote, können zusätzlich folgende Dinge erfolgen:
+
+- Snapshots wird gegebenenfalls vom Server in den lokalen Cache kopiert.
+- Reparatur des Basisimages, falls notwendig
+- Update der lokalen VM durch die Remote-VM, falls verschieden.
+- Der Snapshot wird aus dem Cache bzw. aus ``/PFAD/MASCHINENNAME/snapshot-store/default/`` nach ``/PFAD/MASCHINENNAME/Snapshots/{…}.vdi`` entzippt
+
+
 Berechtigungen zum Starten einer VM bzw. eines Snapshots
---------------------------------------------------------
+````````````````````````````````````````````````````````
 
 An welchen Rechnern (Hosts) welcher User eine VM starten darf wird in ``/PFAD/MASCHINENNAME/image.conf`` konfiguriert.
 
@@ -262,248 +378,6 @@ Hinweis: Die Berechtigung für einen einzelnen Snapshot wird nur dann korrekt au
 
 Stand Version 0.5.4-1 Juli 2015: Die Gruppen- und User-Beschränkung auf VM-Ebene wird z.Z. nicht korrekt ausgelesen → 'group' und 'user' damit ohne Funktion
 
-
-
-Hintergrundinformationen
-------------------------
-
-Virtuelle Maschine erzeugen
-```````````````````````````
-
-Beim Anlegen einer virtuellen Maschine mit ``leoclient2-init`` wird der Pfad zur Maschine in ``/etc/leoclient2/machines/MASCHINENNAME.conf`` gespeichert.
-
-Nach Beenden von Virtualbox werden folgende Aktionen vom Script ausgeführt:
-- Ein Snapshot wird erzeugt (in ``/PFAD/MASCHINENNAME/Snapshot/``) und dieser als Standard-Snapshot nach ``PFAD/MASCHINENNAME/snapshot-store/standard/`` gesichert.
-- Außerdem werden die Konfigurationsdateien (compreg.dat, VirtualBox.xml, xpti.dat und MASCHINENNAME.vbox) gesichert nach ``/PFAD/MASCHINENNAME/defaults/``.
-- Abschließend werden alle Dateirechte für den Einsatz gesetzt (z.B. ``/PFAD/MASCHINENNAME/MASCHINENNAME.vdi`` nur lesbar, da diese Datei nicht verändert werden darf)
-
-Jede VM ist vollständig in ihrem Maschinenverzeichnis gespeichert.
-
-
-Serverbasierte VM kopieren, lokaler cache
-`````````````````````````````````````````
-
-Die auf dem Server liegenden gezippten Basisimages und Snapshots werden (falls lokal nicht vorhanden oder verändert) beim Start in den lokalen cache kopiert und dann lokal an die Stelle entpackt, wo sie genutzt werden. Der Cache hat eine maximale Größe, die in ``SERVERDIR/caches.conf`` definiert wird. Es empfielt sich dafür ein lokales Datenlaufwerk zu verwenden. Falls das nicht vorhanden ist, ein Verzeichnis auf der Partition mit den virtuellen Maschinen.
-
-
-Virtuelle Maschine starten
-``````````````````````````
-
-VirtualBox startet mit der Umgebungsvariablen ``VBOX_USER_HOME`` (``$ export VBOX_USER_HOME=/PFAD/MASCHINENNAME``) und mit der Einstellung für den Standardort für die VM für Virtualbox (``$ VBoxManage setproperty machinefolder /PFAD/MASCHINENNAME``).
-Mit diesen Anpassungen und anschließendem Starten von Virtualbox (``$ VirtualBox``) kann eine VM auch von Hand gestartet werden.
-
-Damit ``leovirtstarter2`` eine lokale Maschine findet, muss in ``/etc/leoclient2/machines/MASCHINENNAME.conf`` ihr Pfad eingetragen sein. (leoclient2-init erzeugt diese Datei automatisch). Der Standard-Pfad für die lokalen VM ist dabei ``/var/virtual/`` .
-
-Außer den lokal vorhandenen Maschinen wird auch in allen in ``SERVERDIR`` konfigurierten Pfaden nach Maschinen gesucht. (Der Pfad MUSS NICHT remote liegen, allerdings geht ``leovirtstarter2`` davon aus und holt diese Maschinen in gezippter Form (Netzwerk-Bandbreitenschonend) zu den lokalen Maschinen und startet Sie dort). 
-Der Standard-Pfad für die remote VM ist dabei ``/media/leoclient2-vm`` .
-
-Auflisten kann man alle sichtbaren VM's mit:
-``$ leovirtstarter2 -i``
-``$ leovirtstarter2 --info``
-
-Wird mit dem ``leovirtstarter2`` ein Snapshot einer VM zum Starten ausgewählt, wird folgendes abgearbeitet:
-- Kopieren der Standard-Konfigurationsdateien aus ``/PFAD/MASCHINENNAME/defaults/`` nach ``/PFAD/MASCHINENNAME/`` 
-- Anpassen folgender Angaben:
-
-  - Shared Folder verbinden ins Heimatverzeichnis des angemeldeten Benutzers
-  - Netzwerkeinstellungen (verschiedene Möglichkeiten stehen zur Verfügung)
-
-- Starten der Maschine
-
-Gibt es die Maschine auch Remote, können zusätzlich folgende Dinge erfolgen:
-- Snapshots wird gegebenenfalls vom Server in den lokalen Cache kopiert.
-- Reparatur des Basisimages, falls notwendig
-- Update der lokalen VM durch die Remote-VM, falls verschieden.
-- Der Snapshot wird aus dem Cache bzw. aus ``/PFAD/MASCHINENNAME/snapshot-store/default/`` nach ``/PFAD/MASCHINENNAME/Snapshots/{…}.vdi`` entzippt
-
-
-VM direkt starten
-`````````````````
-
-Nachfolgendes Script startet direkt ohne Dialog eine VM. Das Script ermittelt den aktuellen Snapshot-Namen ``{…}.vdi`` aus der VBox-XML-Datei der VM. Dann wird der gezippte-Snapshot verwendet. Starten, „wie vorgefunden“ klappt nicht, wenn sich die VM im einem „gespeicherten Zustand“ befindet.
-Script unter ``/usr/bin`` ablegen und ausführbar machen. Die Rechteanpassung erfolgt mit Hilfe des ``leovirtstarter2``. Eine Datei ``network.conf`` wird von dem Script nicht ausgewertet. Bei den Berechtigugen wird nur der Snapshot und die primäre Gruppe des Users überprüft
-Aufruf z.B.:
-
-``# leoclient2-directstart -m winxp -r 1024 -s standard``
-
-.. code:: bash
-
-  /usr/bin/leoclient2-directstart
-  
-    #! /bin/bash
-    #
-    #  /usr/bin/leoclient2-directstart -m <VM> -s <Snapshot> -r <RAM>
-    #
-    #  m: Name der lokalen VM
-    #  s: Name des lokalen Snapshots, ohne wird "wie vorgefunden" verwendet
-    #  r: RAM in MB
-    #
-    #  Version 3 - September 2015
-     
-    etcdir="/etc/leoclient2/machines"
-    OPTIND=1
-     
-    vm=""
-    S_NAME=""
-    MACHINENAME=""
-    MACHINEPATH=""
-    RAM="1024"
-     
-    while getopts "m:s:r:" opt; do
-        case "$opt" in
-        m)  vm=$OPTARG
-            ;;
-        s)  S_NAME=$OPTARG
-            ;;
-        r)  RAM=$OPTARG
-            ;;
-        esac
-    done
-     
-    shift $((OPTIND-1))
-    [ "$1" = "--" ] && shift
-     
-    for file in "$etcdir"/*.conf; do
-      pfad=`cat $file`
-      b=$(basename "$pfad")
-      if [ "$b" = "$vm" ] ; then
-        MACHINENAME=$b
-        MACHINEPATH=$pfad
-      fi
-    done
-     
-    if [ "$MACHINENAME" = "" ] ; then
-      echo "ERROR: Die Virtuelle Maschine $vm wurde nicht gefunden!"
-      exit 1
-    fi
-     
-    sudo /usr/bin/leovirtstarter2 --set-permissions
-     
-    if [ "$S_NAME" != "" ] ; then
-      SNAPSHOTPATH="$MACHINEPATH/snapshot-store/$S_NAME"
-      if [ -d "$SNAPSHOTPATH" ]; then
-        # Name des aktuellen Snapshots aus der VBox-XML-Dstei ermitteln
-        XMLPATH="$MACHINEPATH/defaults/$MACHINENAME.vbox"
-        SNAPSHOTNAME=`sed -n 's|.*location="Snapshots\/\([^"]*\).*|\1|p' $XMLPATH`
-        # echo $SNAPSHOTNAME
-        if [ -f "$SNAPSHOTPATH/$SNAPSHOTNAME.zip" ]; then
-          rm -Rf "$MACHINEPATH/Snapshots"/*
-          unzip "$SNAPSHOTPATH/$SNAPSHOTNAME.zip" -d "$MACHINEPATH/Snapshots"
-          cp -f "$MACHINEPATH/defaults/$MACHINENAME.vbox" "$MACHINEPATH"
-          echo "zip"
-        elif [ -f "$SNAPSHOTPATH/$SNAPSHOTNAME.ZIP" ]; then
-          rm -Rf "$MACHINEPATH/Snapshots"/*
-          unzip "$SNAPSHOTPATH/$SNAPSHOTNAME.ZIP" -d "$MACHINEPATH/Snapshots"
-          cp -f "$MACHINEPATH/defaults/$MACHINENAME.vbox" "$MACHINEPATH"
-        else
-          echo "ERROR: Snapshot $S_NAME wurde nicht gefunden!"
-          exit 1
-        fi
-      fi
-    fi
-     
-    # Berechtigungen des Snapshots Ueberpruefen
-     
-    if [ -f "$SNAPSHOTPATH/image.conf" ]; then
-      auser=1
-      ahost=1
-      buser=0
-      bhost=0
-      HOST=$(hostname)
-      ROOM=`groups $HOST | gawk -F" " '{ print $3 }'`
-      GROUP=`groups $USER | gawk -F" " '{ print $3 }'`
-      # echo  "---$USER---$GROUP---$HOST---$ROOM---"
-      IFS="="
-      while read -r name value
-      do
-        liste=${value//\"/}
-        # echo "Inhalt von $name ist $liste"
-        if [ "$name" == "user" ]; then
-          auser=0
-          IFS=","
-          for u in $liste
-            do
-              if [ "$USER" == "$u" ]; then
-                buser=1
-                echo "Berechtigung user gefunden: $u"
-              fi
-            done
-        fi
-        if [ "$name" == "group" ]; then
-          auser=0
-          IFS=","
-          for u in $liste
-            do
-              if [ "$GROUP" == "$u" ]; then
-                buser=1
-                echo "Berechtigung group gefunden: $u"
-              fi
-            done
-        fi
-        if [ "$name" == "host" ]; then
-          ahost=0
-          IFS=","
-          for u in $liste
-            do
-              if [ "$HOST" == "$u" ]; then
-                bhost=1
-                echo "Berechtigung host gefunden: $u"
-              fi
-            done
-        fi
-        if [ "$name" == "room" ]; then
-          ahost=0
-          IFS=","
-          for u in $liste
-            do
-              if [ "$ROOM" == "$u" ]; then
-                bhost=1
-                echo "Berechtigung room gefunden: $u"
-              fi
-            done
-        fi
-        IFS="="
-      done < "$SNAPSHOTPATH/image.conf"
-     
-      if [ $auser = 0 ] && [ $buser = 0 ]; then
-        echo "User/Group hat keine Berechtigung -> ABBRUCH"
-        exit 1
-      fi
-     
-      if [ $ahost = 0 ] && [ $bhost = 0 ]; then
-        echo "Host/Room hat keine Berechtigung -> ABBRUCH"
-        exit 1
-      fi
-    fi
-     
-    export VBOX_USER_HOME=$MACHINEPATH
-     
-    /usr/bin/VBoxManage sharedfolder remove "$vm" --name home 
-    /usr/bin/VBoxManage sharedfolder add "$vm" --name home --hostpath "$HOME/Home_auf_Server"
-    /usr/bin/VBoxManage modifyvm "$vm" --memory "$RAM"
-    /usr/bin/VBoxManage startvm "$vm" --type gui
-     
-    exit 0
-
-Zum bequemen Starten kann man einen Desktop-Starter anlegen, z.B. für die VM „winxp“ mit 1024 MB RAM und „standard“-Snapshot:
-
-.. code:: bash
-
-  leoclient2-directstart.desktop
-
-    [Desktop Entry]
-    Version=1.0
-    Type=Application
-    Name=VirtualBox Direktstart
-    Comment=Starting Snapshots of VirtualBox
-    Comment[de]=Starten von VirtualBox Snapshots
-    Exec=/usr/bin/leoclient2-directstart -m winxp -r 1024 -s standard
-    Icon=leovirtstarter2
-    Categories=Graphics;Engineering;
-    Categories=Emulator;System;Application;
-    Terminal=false
-
-Hinweis: Nach Anlegen dieser Datei muss diese ausführbar gesetzt werden.
 
 
 Datenstruktur einer VM
