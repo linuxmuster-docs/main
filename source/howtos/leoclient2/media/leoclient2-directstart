@@ -1,0 +1,156 @@
+#! /bin/bash
+#
+#  /usr/bin/leoclient2-directstart -m <VM> -s <Snapshot> -r <RAM>
+#
+#  m: Name der lokalen VM
+#  s: Name des lokalen Snapshots, ohne wird "wie vorgefunden" verwendet
+#  r: RAM in MB
+#
+#  Version 3 - September 2015
+ 
+etcdir="/etc/leoclient2/machines"
+OPTIND=1
+ 
+vm=""
+S_NAME=""
+MACHINENAME=""
+MACHINEPATH=""
+RAM="1024"
+ 
+while getopts "m:s:r:" opt; do
+    case "$opt" in
+    m)  vm=$OPTARG
+        ;;
+    s)  S_NAME=$OPTARG
+        ;;
+    r)  RAM=$OPTARG
+        ;;
+    esac
+done
+ 
+shift $((OPTIND-1))
+[ "$1" = "--" ] && shift
+ 
+for file in "$etcdir"/*.conf; do
+  pfad=`cat $file`
+  b=$(basename "$pfad")
+  if [ "$b" = "$vm" ] ; then
+    MACHINENAME=$b
+    MACHINEPATH=$pfad
+  fi
+done
+ 
+if [ "$MACHINENAME" = "" ] ; then
+  echo "ERROR: Die Virtuelle Maschine $vm wurde nicht gefunden!"
+  exit 1
+fi
+ 
+sudo /usr/bin/leovirtstarter2 --set-permissions
+ 
+if [ "$S_NAME" != "" ] ; then
+  SNAPSHOTPATH="$MACHINEPATH/snapshot-store/$S_NAME"
+  if [ -d "$SNAPSHOTPATH" ]; then
+    # Name des aktuellen Snapshots aus der VBox-XML-Dstei ermitteln
+    XMLPATH="$MACHINEPATH/defaults/$MACHINENAME.vbox"
+    SNAPSHOTNAME=`sed -n 's|.*location="Snapshots\/\([^"]*\).*|\1|p' $XMLPATH`
+    # echo $SNAPSHOTNAME
+    if [ -f "$SNAPSHOTPATH/$SNAPSHOTNAME.zip" ]; then
+      rm -Rf "$MACHINEPATH/Snapshots"/*
+      unzip "$SNAPSHOTPATH/$SNAPSHOTNAME.zip" -d "$MACHINEPATH/Snapshots"
+      cp -f "$MACHINEPATH/defaults/$MACHINENAME.vbox" "$MACHINEPATH"
+      echo "zip"
+    elif [ -f "$SNAPSHOTPATH/$SNAPSHOTNAME.ZIP" ]; then
+      rm -Rf "$MACHINEPATH/Snapshots"/*
+      unzip "$SNAPSHOTPATH/$SNAPSHOTNAME.ZIP" -d "$MACHINEPATH/Snapshots"
+      cp -f "$MACHINEPATH/defaults/$MACHINENAME.vbox" "$MACHINEPATH"
+    else
+      echo "ERROR: Snapshot $S_NAME wurde nicht gefunden!"
+      exit 1
+    fi
+  fi
+fi
+ 
+# Berechtigungen des Snapshots Ueberpruefen
+ 
+if [ -f "$SNAPSHOTPATH/image.conf" ]; then
+  auser=1
+  ahost=1
+  buser=0
+  bhost=0
+  HOST=$(hostname)
+  ROOM=`groups $HOST | gawk -F" " '{ print $3 }'`
+  GROUP=`groups $USER | gawk -F" " '{ print $3 }'`
+  # echo  "---$USER---$GROUP---$HOST---$ROOM---"
+  IFS="="
+  while read -r name value
+  do
+    liste=${value//\"/}
+    # echo "Inhalt von $name ist $liste"
+    if [ "$name" == "user" ]; then
+      auser=0
+      IFS=","
+      for u in $liste
+        do
+          if [ "$USER" == "$u" ]; then
+            buser=1
+            echo "Berechtigung user gefunden: $u"
+          fi
+        done
+    fi
+    if [ "$name" == "group" ]; then
+      auser=0
+      IFS=","
+      for u in $liste
+        do
+          if [ "$GROUP" == "$u" ]; then
+            buser=1
+            echo "Berechtigung group gefunden: $u"
+          fi
+        done
+    fi
+    if [ "$name" == "host" ]; then
+      ahost=0
+      IFS=","
+      for u in $liste
+        do
+          if [ "$HOST" == "$u" ]; then
+            bhost=1
+            echo "Berechtigung host gefunden: $u"
+          fi
+        done
+    fi
+    if [ "$name" == "room" ]; then
+      ahost=0
+      IFS=","
+      for u in $liste
+        do
+          if [ "$ROOM" == "$u" ]; then
+            bhost=1
+            echo "Berechtigung room gefunden: $u"
+          fi
+        done
+    fi
+    IFS="="
+  done < "$SNAPSHOTPATH/image.conf"
+ 
+  if [ $auser = 0 ] && [ $buser = 0 ]; then
+    echo "User/Group hat keine Berechtigung -> ABBRUCH"
+    exit 1
+  fi
+ 
+  if [ $ahost = 0 ] && [ $bhost = 0 ]; then
+    echo "Host/Room hat keine Berechtigung -> ABBRUCH"
+    exit 1
+  fi
+fi
+ 
+export VBOX_USER_HOME=$MACHINEPATH
+ 
+/usr/bin/VBoxManage sharedfolder remove "$vm" --name home 
+/usr/bin/VBoxManage sharedfolder add "$vm" --name home --hostpath "$HOME/Home_auf_Server"
+/usr/bin/VBoxManage modifyvm "$vm" --memory "$RAM"
+/usr/bin/VBoxManage startvm "$vm" --type gui
+ 
+exit 0
+
+
