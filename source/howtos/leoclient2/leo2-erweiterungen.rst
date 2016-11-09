@@ -55,27 +55,29 @@ Remote virtuelle Maschine erzeugen
 
 Eine lokale VM wird zur remoten VM, indem
 
-- ihr Datenverzeichnis auf den Server kopiert wird, z.B. das
+- die in ``/etc/leoclient2/servers.conf`` konfigurierbare Variable
+  ``SERVERDIR`` auf ein Verzeichnis gesetzt wird, in das im Verlauf des
+  Bootprozesses oder der Anmeldung ein Netzwerk-Share gemountet wird
+
+- das Datenverzeichnis der VM auf den Server kopiert wird, z.B. das
   Verzeichnis ``/var/virtual/winxp`` in das vom Server gemountete
-  Netzlaufwerk ``/media/leoclient2-vm`` kopiert wird
+  Netzlaufwerk ``/media/leoclient2-vm`` kopiert wird.
   
   .. code-block:: console
 
      $ sudo cp -R /var/virtual/winxp /media/leoclient2-vm
   
-- ggf. die Variable ``SERVERDIR`` in ``/etc/leoclient2/servers.conf`` angepasst wird, falls ein anderes Verzeichnis verwendet wird.
-
 Prinzipiell kann die VM danach lokal gelöscht werden.
 
 Dann wird die VM vor dem Starten vom Server nach lokal
 synchronisiert/kopiert. Da dabei beträchtliche Datenmengen übertragen
 werden, sollte man das nur bei kleinen, wenig genutzen VM's machen
-(z.B. einem Linux-Mysql-Server o.ä.).
+(z.B. einem Linux-MySQL-Server o.ä.).
 
 VM Windows XP – Tipps und Tricks
 --------------------------------
 
-Zur Installation in VirtulBox ein CD-Rom-Lauftwerk hinzufügen und dann darin die Installations-iso einlegen, die NTFS-Schellformatierung genügt.
+Zur Installation in VirtualBox ein CD-Rom-Laufwerk hinzufügen und dann darin die Installations-iso einlegen, die NTFS-Schellformatierung genügt.
 Netzlaufwerke verbinden
 
 Zunächst die Gasterweiterungen installieren, mit Hilfe der Menüleiste des VBox-Fensters bei „Geräte“. Dadurch wird auch die Maus nicht mehr gefangen und das Fenster der VM ist beliebig skalierbar.
