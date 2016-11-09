@@ -437,6 +437,7 @@ Datenstruktur einer VM
 
 Virtualbox-Dateien
 In der obersten Verzeichnisebene im Verzeichnis der VM verwaltet VirtualBox die aktuell verwendete Maschine:
+
 - Die Basisdatei ist ``MASCHINENNAME.vdi``, sie enthält den Basis-Zustand der Festplatte und ist meist mehrere GB groß
 - Konfigurationsdateien
 - Logdateien
@@ -444,6 +445,7 @@ In der obersten Verzeichnisebene im Verzeichnis der VM verwaltet VirtualBox die 
 - Im Unterverzeichnis ``Snapshots`` verwaltet VirtualBox den aktuell verwendeten Snapshot {*}.vdi.
 
 leoclient2-Dateien
+
 - ``MASCHINENNAME.conf`` beinhaltet den Pfad in dem die VM erstellt wurde. Dorthin wird sie im Fall einer remoten Maschine auch wieder entpackt (funktioniert nur in diesem Pfad)
 - ``network.conf`` ist optional. Konfiguriert die Netzwerkkarten der Virtuellen Maschine (falls keine network.conf speziell für den Snapshot exisiert)
 - ``image.conf`` ist optional.
@@ -459,22 +461,30 @@ leoclient2-Dateien
 Übersicht der Scripte/Befehle zum leoclient2
 ````````````````````````````````````````````
 
-- leoclient2-init 		legt eine neue lokale VM an
+leoclient2-init:
+  legt eine neue lokale VM an
 
-- leovirtstarter2 		startet das grafische Auswahlfenster und anschließend die VM
+leovirtstarter2
+  startet das grafische Auswahlfenster und anschließend die VM
   mit Optionen
-  --info 	listet alle VMs auf der Konsole auf
-  --vbox 	startet das grafische Auswahlfenster und VirtualBox ohne die VM zu starten
-  -h 	        Hilfe anzeigen
-  --local-snapshots 	nur lokale Snapshots listen
-  --ignore-virtualbox 	startet den leovirtstarter auch wenn gerade VirtualBox ausgeführt wird
-  --serverdir <abs path> 	verwendet anderen Pfad statt SERVERDIR zu den remote VMs
 
-- leoclient2-base-snapshot-renew 		Erstellt eine neue Basisfestplatte mit dem aktuellen Snapshot der zur bisherigen Basisfestplatte ge-„merged“ wird. Der „Aktuelle Zustand“ wird somit gesichert/festgeschrieben.
+  .. code:: 
 
-- leoclient2-vm-move 		Importiert eine VM (z.B. vom externen Speichermedium) oder verschiebt ein VM
+     --info 	listet alle VMs auf der Konsole auf
+     --vbox 	startet das grafische Auswahlfenster und VirtualBox ohne die VM zu starten
+     -h 	        Hilfe anzeigen
+     --local-snapshots 	nur lokale Snapshots listen
+     --ignore-virtualbox 	startet den leovirtstarter auch wenn gerade VirtualBox ausgeführt wird
+     --serverdir <abs path> 	verwendet anderen Pfad statt SERVERDIR zu den remote VMs
 
-- VBoxManage 	mit vielen Optionen 	Konsolen-Tool zum Bearbeiten von VMs 
+leoclient2-base-snapshot-renew
+  Erstellt eine neue Basisfestplatte mit dem aktuellen Snapshot der zur bisherigen Basisfestplatte ge-„merged“ wird. Der „Aktuelle Zustand“ wird somit gesichert/festgeschrieben.
+
+leoclient2-vm-move
+  Importiert eine VM (z.B. vom externen Speichermedium) oder verschiebt ein VM
+
+VBoxManage
+  mit vielen Optionen Konsolen-Tool zum Bearbeiten von VMs 
 
 
 Entwicklungsdokumentation des leoclient2
