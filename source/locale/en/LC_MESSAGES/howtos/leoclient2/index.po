@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-09 19:42+0700\n"
+"POT-Creation-Date: 2016-11-10 17:43+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -24,26 +24,10 @@ msgstr ""
 #: ../../source/howtos/leoclient2/index.rst:4
 msgid ""
 "Leoclient2 bietet die Möglichkeit auf einem Linuxclient verschiedene "
-"Virtuelle Maschinen, beispielsweise mit Windows-Betriebssystem, einzurichten"
+"virtuelle Maschinen, beispielsweise mit Windows-Betriebssystem, einzurichten"
 " und zu starten."
 msgstr ""
 
 #: ../../source/howtos/leoclient2/index.rst:6
 msgid "Inhalt:"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/index.rst:19
-msgid "Index"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/index.rst:21
-msgid ":ref:`genindex`"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/index.rst:22
-msgid ":ref:`modindex`"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/index.rst:23
-msgid ":ref:`search`"
 msgstr ""

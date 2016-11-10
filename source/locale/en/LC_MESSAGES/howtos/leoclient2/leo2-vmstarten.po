@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-09 19:42+0700\n"
+"POT-Creation-Date: 2016-11-10 17:43+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -24,47 +24,70 @@ msgstr ""
 #: ../../source/howtos/leoclient2/leo2-vmstarten.rst:4
 msgid ""
 "Das Script ``leovirtstarter2`` findet automatisch jede verfügbare VM und "
-"bietet diese zum Starten an."
+"bietet diese zum Starten an. Das kann über den mitgelieferten Menüeintrag "
+"oder über die Konsole stattfinden."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:6
-msgid "Nachdem eine VM gewählt wurde, wird angeboten:"
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:17
+msgid "Wählen Sie eine virtuelle Maschine"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:8
-msgid "„Starten wie vorgefunden“ - startet den aktuellen Zustand der VM."
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:19
+msgid "Nachdem eine VM gewählt wurde, werden mehrere Optionen angeboten"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:9
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:25
+msgid "Optionen zum Starten der virtuellen Maschine"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:29
+msgid "*<VM> wie vorgefunden*"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:29
+msgid "startet den aktuellen unveränderten Zustand der VM"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:33
+msgid "*<VM> Standard*"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:32
 msgid ""
-"„Standard“ - verwendet den Snapshot aus ``/PFAD/MASCHINENNAME/snapshot-"
-"store/standard/`` und startet die VM."
+"verwendet den Standard-Snapshot und startet die VM, d.h. die virtuelle "
+"Maschine wird auf den Zustand des Snapshots zurückgesetzt."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:10
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:36
+msgid "*optional weitere Snapshots*"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:36
 msgid ""
-"weitere lokale Snapshot aus ``/PFAD/MASCHINENNAME/snapshot-store/`` "
-"(optional - jeweils in einem eigenen Unterverzeichnis gespeichert)"
+"wenn konfiguriert, tauchen weitere lokal oder auf einem Serverlaufwerk "
+"gespeicherte Snapshots auf"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:11
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:39
+msgid "*Virtuelle Grafik*"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:39
+msgid "Diese Optionen sind bisher ohne Funktion"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:45
+msgid "*Virtueller Arbeitsspeicher (RAM)*"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:42
 msgid ""
-"weitere Snapshots auf einem Serverlaufwerk (optional - Standardverzeichnis "
-"``/media/leoclient2-vm``)"
+"Arbeitsspeicherzuweisung an die VM - vorausgewählt ist ein automatisch an "
+"den vorhandenen Rechner angepasster Wert. Hier kann man der VM den minimalen"
+" oder maximalen RAM zuweisen."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:12
-msgid ""
-"RAM: Arbeitsspeicherzuweisung an die VM - wird vorher automatisch an den "
-"vorhandenen Rechner angepasst. Hier kann man der VM mehr/weniger RAM "
-"zuweisen."
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:13
-msgid "(Virtuelle Grafik: bisher ohne Funktion)"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:15
+#: ../../source/howtos/leoclient2/leo2-vmstarten.rst:47
 msgid ""
 "Nach Auswahl einer VM wird die Umgebung automatisch vorbereitet und "
 "gestartet."

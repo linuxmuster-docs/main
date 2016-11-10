@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-09 19:42+0700\n"
+"POT-Creation-Date: 2016-11-10 17:43+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -26,57 +26,74 @@ msgid "Speicherort der virtuellen Maschinen"
 msgstr ""
 
 #: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:8
-msgid "Lokale Virtuelle Maschinen auf einer zusätzlichen Partition ablegen"
+msgid "Virtuelle Maschinen auf einer zusätzlichen Partition"
 msgstr ""
 
 #: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:10
 msgid ""
 "Standardmäßig werden die Dateien einer lokalen VM unter ``/var/virtual/`` "
 "abgelegt. Dieses Verzeichnis liegt im normalen Dateisystem des Linuxclients."
-" Um diesen Speicherort auf eine extra Partition auszulagern, kann man eine "
-"zusätzliche Partition der Festplatte nach ``/var/virtual`` per fstab "
-"mounten. Eine Partition dynamisch unter ``/media`` dafür zu verwenden ist "
-"ungeeignet, da sich deren Namen und Zugriffsberechtigung je nach User ändern"
-" kann."
+" Es wird empfohlen, diesen Speicherort auf eine zusätzliche Partition "
+"auszulagern und nach ``/var/virtual`` per fstab mounten."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:12
-msgid ""
-"Damit erfolgt die Synchronisation der Installation des Linuxclients deutlich"
-" schneller. Außerdem kann man die virtuellen Maschinen über das "
-"Synchronisieren der zugehörigwn Partition unabhängig von der "
-"Linuxinstallation zurücksetzen."
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:13
+msgid "Gründe für diese Empfehlung:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:14
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:15
 msgid ""
-"Beispiel: Es existiert eine Partition ``/dev/sda3`` (wie z.B. bei der "
-"start.conf zum default-cloop), die mit ext4 formatiert ist. Zunächst das "
-"Verzeichnis ``/var/virtual/`` leeren bzw. den Inhalt wegsichern. Dann die "
-"Datei ``/etc/fstab`` als root editieren und letzte Zeile ergänzen:"
+"Eine Partition dynamisch unter ``/media`` dafür zu verwenden ist ungeeignet,"
+" da sich deren Namen und Zugriffsberechtigung je nach User ändern kann."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:22
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:16
 msgid ""
-"Danach als root folgendes auf der Konsole ausführen, um die Partition zu "
-"mounten und das ganze dann noch mit ``df`` zu überprüfen:"
+"Mit der Auslagerung erfolgt die Synchronisation der Installation des "
+"Linuxclients deutlich schneller."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:17
+msgid ""
+"Die virtuellen Maschinen können über das Synchronisieren der zugehörigen "
+"Partition unabhängig von der Linuxinstallation zurückgesetzt werden."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:19
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:208
+msgid "Vorgehensweise:"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:21
+msgid ""
+"Es existiert eine Partition ``/dev/sda3`` (wie z.B. bei der start.conf zum "
+"default-cloop), die mit ``ext4`` formatiert ist."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:23
+msgid ""
+"Zunächst das Verzeichnis ``/var/virtual/`` leeren bzw. den Inhalt "
+"wegsichern."
 msgstr ""
 
 #: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:24
-msgid "``# mount -a`` ``# df -h``"
+msgid "Die Datei ``/etc/fstab`` als root editieren und letzte Zeile ergänzen:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:27
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:32
 msgid ""
-"Nun ggf. die weggesicherten Dateien aus wieder nach ``/var/virtual/`` "
-"zurückspielen und von beiden Partitionen ein Image erstellen."
+"Danach als ``root`` die Partition mounten und das ganze dann noch mit ``df``"
+" überprüfen:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:31
-msgid "Frage: Wann muss welche Partition geimaged werden?"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:39
+msgid ""
+"Nun ggf. die weggesicherten Dateien wieder nach ``/var/virtual/`` "
+"zurückspielen und von beiden Partitionen mit Hilfe von LINBO ein Image "
+"erstellen."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:33
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:46
 msgid ""
 "Nach dem Anlegen einer neuen VM müssen beide Partitionen geimaged werden da "
 "beim Anlegen einer neuen VM diese unter ``/etc/leoclient2/machines`` "
@@ -84,381 +101,282 @@ msgid ""
 "Partition geimaged werden."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:38
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:51
 msgid "Virtuelle Maschinen auf dem Server"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:40
-msgid ""
-"Wird ein vom Server gemountetes share für die Basisimages und die Snapshots "
-"einer remote-VM benutzt, so ist in der Datei "
-"``/etc/leoclient2/servers.conf`` die Variable ``SERVERDIR`` zu setzen. "
-"Mehrere SERVERDIR sind (in Zukunft, todo) möglich. Nach der Installation "
-"enthält die Variable ``SERVERDIR`` den voreingestellten Pfad "
-"``SERVERDIR=/media/leoclient2-vm``. Dieses Verzeichnis wird bei der "
-"Installation des leoclient2 angelegt. Alternativ kann dieser Pfad auch auf "
-"ein anderes, existierendes Verzeichnis abgeändert werden, in dem sich die "
-"Remote-virtuellen Maschinen befinden. Welche Quellen mit dem Verzeichnis "
-"verbunden sind, kann wiederum in der Datei ``/etc/fstab`` eingerichtet "
-"werden."
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:47
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:54
 msgid "Remote virtuelle Maschine erzeugen"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:49
-msgid ""
-"Eine lokale VM wird zur remoten VM, indem - ihr Datenverzeichnis auf den "
-"Server kopiert wird, z.B. das Verzeichnis ``/var/virtual/winxp`` kopieren in"
-" das Netzlaufwerk auf dem Server ``/media/leoclient2-vm``:"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:52
-msgid "``# cp -R /var/virtual/winxp /media/leoclient2-vm``"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:54
-msgid ""
-"ggf. die Variable ``SERVERDIR`` angepasst wird, falls ein anderes Share "
-"verwendet"
-msgstr ""
-
 #: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:56
-msgid ""
-"Prinzipiell kann die VM danach lokal gelöscht werden. Dann wird die VM vor "
-"dem Starten vom Server nach lokal synchronisiert/kopiert. Da dabei "
-"beträchtliche Datenmengen übertragen werden, sollte man das nur bei kleinen,"
-" wenig genutzen VM's machen (z.B. einem Linux-Mysql-Server o.ä.)."
+msgid "Eine lokale VM wird zur remoten VM, indem"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:60
-msgid "VM-Basis erneuern"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:58
+msgid ""
+"die in ``/etc/leoclient2/servers.conf`` konfigurierbare Variable "
+"``SERVERDIR`` auf ein Verzeichnis gesetzt wird, in das im Verlauf des "
+"Bootprozesses oder der Anmeldung ein Netzwerk-Share gemountet wird"
 msgstr ""
 
 #: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:62
 msgid ""
-"ACHTUNG: Ändert man die Basis einer VM, werden alle darauf basierenden "
-"Snapshot unbrauchbar."
+"das Datenverzeichnis der VM auf den Server kopiert wird, z.B. das "
+"Verzeichnis ``/var/virtual/winxp`` in das vom Server gemountete Netzlaufwerk"
+" ``/media/leoclient2-vm`` kopiert wird."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:65
-msgid "Nach dem Aufruf des Skripts mit root-Rechten"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:67
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:267
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:276
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:288
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:297
-msgid "``# sudo leoclient2-base-snapshot-renew``"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:69
-msgid "sind einige selbsterklärende Fragen zu beantworten."
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:71
-msgid "Soll der Vorgang abgebrochen werden? (J/N)"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:70
+msgid "Prinzipiell kann die VM danach lokal gelöscht werden."
 msgstr ""
 
 #: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:72
-msgid "Name der virtuellen Maschine?          (VM, die erneuert werden soll)"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:73
-msgid "Speicherort der virtuellen Maschine?   (VM, die erneuert werden soll)"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:75
 msgid ""
-"Das Skript startet dann zunächst VirtualBox, um die Sicherungspunkte zu "
-"löschen. Die Warnung, die aufgrund fehlender Verbinungen erscheint, kann "
-"ignoriert werden. Die Ursache ist z.B. bei dem vorkonfigurierten Ubuntu von "
-"linuxmuster.net die fehlende Verbindung zu den Homes als linuxadmin."
+"Dann wird die VM vor dem Starten vom Server nach lokal "
+"synchronisiert/kopiert. Da dabei beträchtliche Datenmengen übertragen "
+"werden, sollte man das nur bei kleinen, wenig genutzen VM's machen (z.B. "
+"einem Linux-MySQL-Server o.ä.)."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:77
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:78
+msgid "VM Windows XP – Tipps und Tricks"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:80
 msgid ""
-"Rechts oben findet man den Button Sicherungspunkte, den man anklickt. Es "
-"öffnet sich ein Fenster mit den Sicherheitspunkten. Rechtsklick auf den "
-"Snapshot bietet Sicherungspunkt löschen an. Diesen wählen und mit Löschen "
-"bestätigen. - Oder mit dem Icon löschen."
+"Zur Installation in VirtualBox ein CD-Rom-Laufwerk hinzufügen und dann darin"
+" das Installations-ISO einlegen, die NTFS-Schellformatierung genügt."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:79
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:84
 msgid ""
-"Im Anschluss die VM starten, die gewünschten Änderungen durchführen und "
-"wieder ausschalten. Beendet man VirtualBox, wird eine neue Basisfestplatte "
-"unter ``/PFAD/MASCHINENNAME/MASCHINENNAME.vdi`` erzeugt und gezippt. Darüber"
-" hinaus wird noch ein neuer Snapshot in ``/PFAD/MASCHINENNAME/snapshot-"
-"store/standard`` erzeugt und gezippt. Der Name des neuen Snapshots, "
-"``{..neuerSnapshot..}.vdi``, erscheint in der Konsolenausgabe. Man sollte "
-"ihn sich merken, um im Anschluss den alten Snapshot in ``/snapshot-"
-"store/standard`` zu löschen."
+"Die Gasterweiterungen installieren, mit Hilfe der Menüleiste des VBox-"
+"Fensters bei \"Geräte\". Dadurch wird auch die Maus nicht mehr gefangen und "
+"das Fenster der VM ist beliebig skalierbar."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:81
-msgid "Dazu als root auf der Konsole"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:88
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:123
+msgid "Verbindung zu ``Home_auf_Server`` einrichten:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:83
-msgid "``# rm /PFAD/MASCHINENNAME/{..alterSnapshot..}.vdi*``"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:85
-msgid "eingeben."
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:89
-msgid "Neuen Snapshots erzeugen"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:90
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:96
+msgid "Windows Explorer → Menü Extras → Netzlaufwerk verbinden"
 msgstr ""
 
 #: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:91
 msgid ""
-"Nachfolgendes Script legt mit dem aktuellen Snapshot der VM einen neuen "
-"auswählbaren Snapshot an. Ohne Angabe eines Snapshot-Namens wird der "
-"standard-Snapshot neu gesetzt. Script muss mit root-Rechten gestartet "
-"werden. Man legt es am besten unter ``/usr/bin/`` ab und macht es "
-"ausführbar. Der „base-Snapshot“, d.h. die zugrundeliegende Basisfestplatte "
-"wird dabei nicht verändert. Eine veränderte Hardwarekonfiguration speichert "
-"das Script auch nicht → ggf. selbst die .vbox-Datei sichern."
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:93
-msgid ""
-"Vorgehensweise: -   Arbeiten als linuxadmin am Ubuntu-Client -   Bisherigen "
-"base/standard-Snapshot der VM (z.B. hier winxp1) booten -   Software "
-"installieren und sonstige Veränderungen abarbeiten, VM dann herunterfahren -"
-"   untenstehendes Script für den Standard-Snapshot aufrufen:"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:99
-msgid "``# sudo leoclient2-snapshot-create -m winxp1``"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:101
-msgid "oder für den Snapshot ``Software2015``"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:103
-msgid "``# sudo leoclient2-snapshot-create -m winxp1 -s Software2015``"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:105
-msgid ""
-"Damit gibt es nun einen neuen Snapshot mit dem Namen ``Software2015`` im "
-"Auswahlmenü des Snapshotstarters."
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:190
-msgid "VM Windows XP – Tipps und Tricks"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:192
-msgid ""
-"Zur Installation in VirtulBox ein CD-Rom-Lauftwerk hinzufügen und dann darin"
-" die Installations-iso einlegen, die NTFS-Schellformatierung genügt. "
-"Netzlaufwerke verbinden"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:195
-msgid ""
-"Zunächst die Gasterweiterungen installieren, mit Hilfe der Menüleiste des "
-"VBox-Fensters bei „Geräte“. Dadurch wird auch die Maus nicht mehr gefangen "
-"und das Fenster der VM ist beliebig skalierbar."
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:197
-msgid "Share zu Home_auf_Server einrichten:"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:199
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:205
-msgid "Windows Explorer → Menü Extras → Netzlaufwerk verbinden"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:200
-msgid ""
 "einen Laufwerksbuchstabe auswählen (z.B. H:) und Ordner angeben: "
-"\\\\vboxsrv\\home"
+"``\\\\vboxsrv\\home``"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:201
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:92
 msgid "ggf. Verknüpfung auf Desktop ziehen und umbenennen"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:203
-msgid "Share zu Tauschordnern und USB-Sticks einrichten:"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:94
+msgid "Verbindung zu Tausch-Ordner und USB-Sticks einrichten:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:206
-msgid "einen Laufwerksbuchstabe und Orner angeben: \\\\vboxsrv\\media"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:97
+msgid "einen Laufwerksbuchstabe und Ordner angeben: ``\\\\vboxsrv\\media``"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:207
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:98
 msgid "ggf. Verknüpfungen auf Desktop ziehen und umbenennen"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:211
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:100
+msgid "Drucker einrichten"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:102
+msgid "Siehe FreePDF-Webseite: http://freepdfxp.de/download_de.html"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:103
+msgid "ghostscript Installieren"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:104
+msgid ""
+"Free-PDF Installieren (Version 4.08 bei mir ging 4.14 NICHT(Eigener Drucker "
+"anlegen bei 32bit Windows 7))"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:105
+msgid "FreePDF Config starten → admin Config starten"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:106
+msgid "Profile neu : Profil ausdrucken anlegen"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:107
+msgid "Button: Für das aktuelle Profil einen eigenen Drucker anlegen"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:108
+msgid "Profil ausdrucken bearbeiten: FreePDF Dialog"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:110
+msgid "Als festen Dateinamen speichern"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:111
+msgid ""
+"H:\\ausdruck.pdf (anpassen, entsprechend ``/etc/leoclient2/leoclient-vm-"
+"printer2.conf``)"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:112
+msgid "Speichern"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:114
+msgid "Den Drucker FreePDF als Standard Drucker anlegen"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:115
+msgid "Äquivalent funktioniert das Programm PDF24"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:119
 msgid "VM Windows 7 – Tipps und Tricks"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:213
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:121
 msgid ""
 "Bei der Installation bricht die 64bit Version ab, wenn nur 1 GB RAM da ist."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:215
-msgid "Netzlaufwerke"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:217
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:125
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:131
 msgid ""
-"Share zu Home_auf_Server einrichten: -    Windows Explorer → Rechte "
-"Maustaste auf Netzwerk → Netzlaufwerk verbinden -    Laufwerksbuchstabe und "
-"Pfad nennen: \\\\vboxsrv\\home -    Verknüpfung auf Desktop ziehen und "
-"umbenennen"
+"Windows Explorer → Rechte Maustaste auf Netzwerk → Netzlaufwerk verbinden"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:222
-msgid ""
-"Share auf USB-Sticks einrichten: -    Windows Explorer → Rechte Maustaste "
-"auf Netzwerk → Netzlaufwerk verbinden -    Laufwerksbuchstabe und Pfad "
-"nennen: \\\\vboxsrv\\media -    Verknüpfung auf Desktop ziehen und "
-"umbenennen"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:126
+msgid "Laufwerksbuchstabe und Pfad nennen: ``\\\\vboxsrv\\home``"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:227
-msgid ""
-"Drucker einrichten -    Sieh FreePDF-Webseite: "
-"http://freepdfxp.de/download_de.html -    ghosscript Installieren -    Free-"
-"PDF Installieren (Version 4.08 bei mir ging 4.14 NICHT(Eigener Drucker "
-"anlegen bei 32bit Windows 7) -    FreePDF Config starten → admin Config "
-"starten -    Profile neu : Profil ausdrucken anlegen -    Button: Für das "
-"aktuelle Profil einen eigenen Drucker anlegen -    Profil ausdrucken "
-"bearbeiten: FreePDF Dialog"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:127
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:133
+msgid "Verknüpfung auf Desktop ziehen und umbenennen"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:236
-msgid "Als festen Dateinamen speichern"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:129
+msgid "Verbindung zu Tausch-Ordnern und USB-Sticks einrichten:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:237
-msgid ""
-"H:\\ausdruck.pdf (anpassen, entsprechend /etc/leoclient2/leoclient-vm-"
-"printer2.conf)"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:132
+msgid "Laufwerksbuchstabe und Pfad nennen: ``\\\\vboxsrv\\media``"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:238
-msgid "Speichern"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:240
-msgid "Den Drucker FreePDF als Standard Drucker anlegen"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:244
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:136
 msgid "VM schrumpfen – Tipps und Tricks"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:246
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:138
 msgid ""
 "Die virtuellen dynamischen Festplattendateien werden im Laufe des Betriebes "
 "immer größer, nie kleiner, auch wenn man Dateien löscht. Zum Verkleinern "
 "muss man vierschrittig vorgehen:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:248
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:140
 msgid "Alles überflüssige in der VM löschen"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:249
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:141
 msgid "Unbenutzte Festplattenbereiche in der VM nullen"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:250
-msgid "Mit dem Tool VBoxManage die .vdi-Festplattendatei schrinken"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:142
+msgid "Mit dem Tool VBoxManage die .vdi-Festplattendatei kompakter machen"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:251
-msgid "Die geschrinkte Festplattendatei als neuen base-Snapshot setzen"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:143
+msgid "Die kompakte Festplattendatei als neuen base-Snapshot setzen"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:253
-msgid "Windows XP schrinken"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:146
+msgid "Windows XP kompakter machen"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:255
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:148
 msgid ""
 "Vorgehensweise (am Beispiel einer virtuellen Maschine mit Namen „winxp“):"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:257
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:150
 msgid ""
 "Die leoclient-VM booten und ``sdelete`` und ``CCleaner`` in der VM "
-"installieren: -   download → ``sdelete`` (Microsoft-Tool), kopieren nach "
-"``C:\\Windows`` -   download → ``CCleaner`` von heise.de"
+"installieren:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:260
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:152
+msgid "download → ``sdelete`` (Microsoft-Tool), kopieren nach ``C:\\Windows``"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:153
+msgid "download → ``CCleaner`` von heise.de"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:155
 msgid ""
 "Auslagerungsdatei abschalten, reboot der VM und dann die versteckte Datei "
 "``C:\\pagefile.sys`` löschen"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:261
-msgid "CCleaner ausführen und alles wesentliche löschen lassen"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:156
+msgid "CCleaner ausführen und alles Wesentliche löschen lassen"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:262
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:157
 msgid "Ggf. Defragmentieren von c: (Auswirkung unklar)"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:263
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:158
 msgid ""
 "In der Windows Eingabeaufforderung ausführen: ``sdelete.exe -z c:`` (dauert "
 "etwas)"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:264
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:159
 msgid "Auslagerungsdatei wieder anschalten, Herunterfahren der VM"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:265
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:160
 msgid "Als linuxadmin im Terminal ausführen und den Anweisungen folgen:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:269
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:290
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:166
 msgid ""
-"Der aktuelle Snapshot ``../Snapshots/{...}.vdi`` wird dadurch zur "
-"Basisfestplatte ``winxp.vdi`` „gemerged“ und ist danach wieder sehr kein."
+"Der aktuelle Snapshot ``Snapshots/{...}.vdi`` wird dadurch zur "
+"Basisfestplatte ``winxp.vdi`` „gemerged“ und ist diese danach wieder sehr "
+"kein."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:270
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:291
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:170
 msgid ""
 "Als linuxadmin im Terminal ausführen um die Basisfestplatte zu schrinken:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:272
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:293
-msgid "``# sudo VBoxManage modifyhd --compact /var/virtual/winxp/winxp.vdi``"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:274
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:295
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:176
 msgid ""
-"Nun Basis nochmals neu erstellen, um die geschrinkte Festplatte zu zippen "
-"und nach ``.../snapshot-store/`` zu kopieren:"
+"Nun Basis nochmals neu erstellen, um die kompaktere Festplatte zu zippen und"
+" nach ``snapshot-store/`` zu kopieren:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:278
-msgid "Linux-VM schrinken"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:184
+msgid "Linux-VM kompakter machen"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:280
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:186
 msgid ""
 "Zuerst alles Überflüssige in der laufenden VM löschen, u.a. auch der apt-"
 "Cache. Die anschließend beste Vorgehensweise ist das Einbinden der .vdi-"
@@ -466,38 +384,98 @@ msgid ""
 "„Nullen“ durchzuführen:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:282
-msgid ""
-"das Tool „zerofree“ nullt die unbenutzten Festplatteninhalte auch Swap-"
-"Partition nullen per dd-Befehl"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:188
+msgid "das Tool „zerofree“ nullt die unbenutzten Festplatteninhalte"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:285
-msgid ""
-"Schließlich die 3 Punkte wie oben bei WinXP durchführen. -    Als linuxadmin"
-" im Terminal ausführen und den Anweisungen folgen:"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:189
+msgid "auch Swap-Partition nullen per dd-Befehl"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:299
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:190
+msgid "Schließlich die 3 Punkte wie oben bei WinXP durchführen."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:192
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:194
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:481
+msgid "leoclient2-base-snapshot-renew"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:193
+msgid "vboxmanage modifymedium"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:196
 msgid ""
 "Das Tool VBoxManage kann nur .vdi-Datein schrinken. Dateien vom Typ .vmdk "
 "müssen zuerst in .vdi-Datein umgewandelt werden und danach ge-shrinked "
 "werden:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:301
-msgid "``# VBoxManage clonehd disk1.vmdk disk1.vdi --format vdi``"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:204
+msgid "Virtuelle Maschine direkt starten"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:303
-msgid "``# VBoxManage modifyhd --compact disk1.vdi``"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:206
+msgid ""
+"Das zusätzliche Skript :download:`leoclient2-directstart "
+"<media/leoclient2-directstart>` startet direkt ohne Dialog eine VM."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:307
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:210
+msgid ""
+"Laden Sie das Skript herunter :download:`leoclient2-directstart "
+"<media/leoclient2-directstart>`"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:211
+msgid "Legen Sie das Skript unter ``/usr/bin`` ab und machen es ausführbar."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:218
+msgid "Das Skript kann mit folgenden Parameter gestartet werden:"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:228
+msgid "Starten Sie das Skript"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:236
+msgid "Einschränkungen des Skriptes:"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:238
+msgid "Eine Datei ``network.conf`` wird von dem Script nicht ausgewertet."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:239
+msgid ""
+"Bei den Berechtigungen wird nur der Snapshot und die primäre Gruppe des "
+"Users überprüft."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:240
+msgid ""
+"Bei Angabe ohne Snapshot, kann \"wie vorgefunden\" nicht einen gespeicherten"
+" Zustand starten."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:242
+msgid ""
+"Zum bequemen Starten kann man einen Desktop-Starter anlegen, z.B. für die VM"
+" „winxp“ mit 1024 MB RAM und „standard“-Snapshot:"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:0
+msgid "/usr/share/applications/leoclient2-directstart.desktop"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:260
 msgid "Netzwerkeinstellungen einer VM"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:309
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:262
 msgid ""
 "Die Netzwerkkonfiguration der VM erfolgt durch eine Datei ``network.conf``, "
 "die zusätzlich im Verzeichnis der VM angelegt werden muss. Fehlt diese Datei"
@@ -505,306 +483,273 @@ msgid ""
 "des leovirtstarters2 immer alle Netzwerkkarten deaktiviert."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:311
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:264
 msgid ""
 "Möchte man eine Netzwerkkarte aktivieren, so muss im Maschinenverzeichnis "
-"der VM eine Datei <MASCHINENPFAD>/network.conf angelegt werden, die 5 "
+"der VM eine Datei ``<MASCHINENPFAD>/network.conf`` angelegt werden, die 5 "
 "Einträge in einer Zeile, durch Strichpunkt getrennt, enthält. Diese "
-"Konfiguration gilt dann für alle lokalen Snapshots dieser VM. -    hostname "
-"(Name des Linux-Clients auf dem VirtualBox installiert ist) -    vm-nic "
-"(1-4) -    mode (none|null|nat|bridged|intnet|hostonly|generic|natnetwork) -"
-"    macaddress -    devicename (eth0,eth1,…) oder (auto-unused-nic|auto-"
-"used-nic)"
+"Konfiguration gilt dann für alle lokalen Snapshots dieser VM."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:318
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:266
+msgid "hostname (Name des Linux-Clients auf dem VirtualBox installiert ist)"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:267
+msgid "vm-nic (1-4)"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:268
+msgid "mode (none|null|nat|bridged|intnet|hostonly|generic|natnetwork)"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:269
+msgid "macaddress"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:270
+msgid "devicename (eth0,eth1,…) oder (auto-unused-nic|auto-used-nic)"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:272
 msgid "Z.B. ``/var/virtual/winxp/network.conf``"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:325
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:279
 msgid ""
 "Folgendes typische Netzwereinstellungen können bisher (Version 0.5.4-1, Juli"
-" 2015) umgesetzt werden: -    nat - NAT auf die NIC des pädagogischen Netzes"
-" (VM kann ins Internet) -    bridged + auto-used-nic - Bridge auf die Karte "
-"ins pädagogische Netz -    bridged + auto-unused-nic - Bridge auf eine "
-"zweite Karte (nicht ins pädagogische Netz verbunden -> unused)"
+" 2015) umgesetzt werden:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:330
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:281
+msgid "nat - NAT auf die NIC des pädagogischen Netzes (VM kann ins Internet)"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:282
+msgid "bridged + auto-used-nic - Bridge auf die Karte ins pädagogische Netz"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:283
+msgid ""
+"bridged + auto-unused-nic - Bridge auf eine zweite Karte (nicht ins "
+"pädagogische Netz verbunden -> unused)"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:285
 msgid ""
 "Mit Hilfe des ``hostname`` kann man z.B. auf verschiedenen Clients "
 "verschiedene MAC-Adressen in der VM für den Bridged-Modus verwenden."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:332
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:287
 msgid ""
 "Es gibt insgesamt 4 Möglichkeiten eine ``network.conf`` -Datei abzulegen: "
 "zweimal lokal und zweimal im ``SERVERDIR``. Für die Priorität der "
 "Möglichkeiten gilt folgende Reihenfolge:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:334
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:289
 msgid ""
 "Ist auf dem Server speziell für einen Snapshot der VM eine eigene Datei "
 "``<SERVERDIR>/<MACHINENAME>/snapshot-store/<SNAPSHOT>/network.conf`` "
 "vorhanden, so wird diese benutzt."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:335
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:290
 msgid ""
 "Danach wird die Datei auf dem Server für die VM "
 "``<SERVERDIR>/<MACHINENAME>/network.conf`` ausgewertet (falls vorhanden)."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:336
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:291
 msgid ""
 "Anschließend wird die lokale Datei für den Snapshot der VM ``<lokaler "
 "Maschinenpfad>/network.conf`` ausgewertet (falls vorhanden)."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:337
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:292
 msgid ""
 "Abschließend wird die lokale Datei für die VM ``<lokaler Maschinenpfad"
 ">/snapshot-store/<SNAPSHOT>/network.conf`` ausgewertet (fals vorhanden)."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:338
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:293
 msgid ""
 "Ist keine Datei ``network.conf`` vorhanden, werden alle Netzwerkkarten für "
 "die VM deaktiviert."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:342
-msgid "Berechtigungen zum Starten einer VM bzw. eines Snapshots"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:296
+msgid "Fehlersuche - Fehlerbehebung"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:344
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:299
+msgid "Log-Datei"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:300
 msgid ""
-"An welchen Rechnern (Hosts) welcher User eine VM starten darf wird in "
-"``/PFAD/MASCHINENNAME/image.conf`` konfiguriert."
+"Am Client findet man unter ``/tmp/leovirtstarter2.log`` die aktuelle log-"
+"Datei des ``leovirtstarters2`` zur Fehlersuche."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:346
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:303
+msgid "Endlosschleife bei ``leoclient2-base-snapshot-renew``"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:304
 msgid ""
-"Es werden USER, GROUP, HOST, ROOM gelistet, die Zugriff erhalten sollen "
-"(Positivliste). Wenn nichts konfiguriert wird, haben alle User von allen "
-"Hosts Zugriff. Es gibt 2 Arten des Zugriffs:"
+"Problem: Das Script ``leoclient2-base-snapshot-renew`` läuft in eine "
+"Endlosschleife, wenn im Verzeichnis ``<lokaler Maschinenpfad>/Snapshots/`` "
+"eine verweiste Snapshot-Datei übrig bleibt."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:349
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:306
 msgid ""
-"USER-LEVEL Zugriff: Zeile mit user=user1,user2 für den Zugriff eines Users "
-"Zeile mit group=group1,group2 für den Zugriff eines in der "
-"primären/sekundären Gruppe group1,group2 befindlichen Users (z.B. teachers)"
+"Lösung: Die verweiste Snapshot-Datei manuell löschen, dann ``leoclient2"
+"-base-snapshot-renew`` nochmals ausführen."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:353
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:309
+msgid "Snapshot passt nicht zur Basisfestplatte"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:310
 msgid ""
-"HOST-LEVEL Zugriff: Zeile mit host=host1,host2 für den Zugriff eines Hosts "
-"Zeile mit room=raum1,raum2 für den Zugriff eines in der primären Gruppe "
-"raum1,raum2 befindlichen Hosts"
+"Nach einem ``leoclient2-base-snapshot-renew`` werden bisherige Snapshots "
+"unbrauchbar und sollten auch nicht mehr verwendet werden. Der Snapshotname "
+"wird dabei auch geändert. In der Datei ``<Maschinennamen>.vbox`` wird der "
+"aktuell gültige ``Snapshotnamen {…}.vdi`` aufgeführt."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:357
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:312
 msgid ""
-"Um eine Maschine starten zu können, müssen BEIDE Level erfüllt sein "
-"(logische UND-Verknüpfung): Der User muss auf die VM zugreifen dürfen UND "
-"der Host muss die VM starten dürfen. Die Dateirechte der VM- bzw. Snapshot-"
-"Verzeichnisse müssen so eingestellt sein (z.B. Zugriff für alle), das die "
-"Konfigurierten USER, GROUP, HOST, ROOM Zugriff auf die VM/den Snapshot "
-"besitzen."
+"Problem: Unter ``<Maschinenpfad>/Snapshots`` liegt ein alter Snapshot, der "
+"Name passt nicht. VirtualBox startet deshalb nicht."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:360
-msgid "Beispieldatei image.conf"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:369
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:314
 msgid ""
-"Hinweis: Die Berechtigung für einen einzelnen Snapshot wird nur dann korrekt"
-" ausgewertet, wenn beim HOST-LEVEL beide Optionen host und room auftauchen. "
-"Fehlt z.B. die „room“-Option ist jeder Raum und damit auch jeder Host "
-"zugelassen!"
+"Lösung: Den Snapshot in ``<Maschinenpfad>/Snapshots`` manuell löschen und "
+"dann einen Snapshot mit dem aktuellen Namen aus ``<Maschinenpfad>/snapshot-"
+"store/standard/`` in das Verzeichnis ``<Maschinenpfad>/Snapshots`` kopieren."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:371
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:317
+msgid "``network.conf`` für lokalen Snapshot bereitstellen"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:318
 msgid ""
-"Stand Version 0.5.4-1 Juli 2015: Die Gruppen- und User-Beschränkung auf VM-"
-"Ebene wird z.Z. nicht korrekt ausgelesen → 'group' und 'user' damit ohne "
-"Funktion"
+"Problem: Aktuell wertet der ``leovirtstarter2`` eine ``network.conf`` im "
+"Verzeichnis des lokalen Snapshots nicht aus. (leoclient2-Version: 0.5.4-1)"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:375
-msgid "Leoclient-1-VM's umziehen nach Leoclient2"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:377
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:320
 msgid ""
-"Umzug einer bestehenden virtuellen Maschine (VM) unter ``leoclient`` Version"
-" 1 auf ``leoclient2``. (Hinweis: Es kann grundsätzlich jede VM mit genau "
-"einem Snapshot integriert werden.)"
+"Lösung: Wenn man jedoch eine ``network.conf`` im remote-Pfad des Snapshots "
+"ablegt, wird diese ausgewertet. Weitere Dateien müssen im remote-Pfad nicht "
+"vorhanden sein. Der remote-Pfad muss nicht zwingend remote liegen! Z.B. mit "
+"den voreingestellten Standard-Pfaden des Snapshots „physik“:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:380
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:323
 msgid ""
-"Zunächst erzeugt man eine neue virtuelle Maschine nach Anleitung mit "
-"``leoclient2-init`` (mit root-Rechten). Die Größe der Festplatte sollte der "
-"Größe der Festplatte der vorhandenen Maschine entsprechen. Der hier "
-"verwendete Name ``win-umzug`` kann natürlich angepasst werden."
+"lokaler Snapshot-Pfad: ``/var/virtual/winxp1/snapshot-store/physik/...``"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:384
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:324
 msgid ""
-"Auf die Installation des Betriebssystems kann verzichtet und VirtualBox kann"
-" sofort wieder geschlossen werden."
+"ergibt ``network.conf``-Pfad: ``/media/leoclient2-vm/winxp1/snapshot-"
+"store/physik/network.conf``"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:386
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:327
+msgid "``leovirtstarter2`` zeigt \"wie vorgefunden\" nicht an"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:328
 msgid ""
-"Dann benötigt man die virtuelle Festplatte und den Standardsnapshot der "
-"alten VM und kopiert die virtuelle Festplatte (vdi-Datei) in das Verzeichnis"
-" der neuen VM unter ``leoclient2`` (hier nach ``/var/virtual/win-umzug``) "
-"auf die Festplatten-Datei (hier: ``win-umzug.vdi``). Außerdem kopiert man "
-"den Snapshot in das Unterverzeichnis ``Snapshot`` unter Verwendung des "
-"bestehenden Dateinamens der Snapshot-Datei der neuen virtuellen Maschine "
-"(bestehende Datei ersetzen)."
+"Problem: Im Auswahlmenü wird „wie vorgefunden“ nicht angezeigt oder kann "
+"nicht gestartet werden."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:389
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:330
 msgid ""
-"Anschließend startet man den ``leovirtstarter2`` mit normalen "
-"Benutzerrechten über die Konsole mit ``$ leovirtstarter2`` und wählt die "
-"neue erstellte Maschine aus. Die VM wird wie vorgefunden gestartet."
+"Ursache 1: Die VM wurde nicht ausgeschaltet sondern befindet sich in einem "
+"gespeicherten Zustand. Im Verzeichnis ``.../Snapshots`` befindet sich eine "
+"``*.sav``-Datei."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:391
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:332
 msgid ""
-"Da die Zuordnung in den Konfigurationsdateien noch nicht stimmt, bricht das "
-"Starten mit einer Fehlermeldung ab."
+"Lösung 1: Den „Standard“-Snapshot starten oder die Maschine direkt mit "
+"VirtualBox starten und dann herunterfahren."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:393
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:334
 msgid ""
-"Den Hinweis aus der Fehlermeldung nimmt man zur Korrektur der "
-"Konfigurationsdatei für die neue VM (hier: ``/var/virtual/win-umzug/win-"
-"umzug.vbox``). Dabei muss man in diesem Beispiel die Einträge ``{764a4d59"
-"-464c-45ea-bd58-ee5ba35c1f09}`` durch ``{a9fbe850-cb0d-45d1-a08b-"
-"619fc3457410}`` ersetzen (vgl. Fehlermeldung). Die entsprechenden Abschnitte"
-" für HardDisks und StorageController könnten dann wie folgt aussehen:"
+"Ursache 2: Im Verzeichnis ``Maschinenpfad>/Snapshots/`` befinden sich "
+"überflüssige Dateien."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:415
-msgid "Die Datei ``VirtualBox.xml`` muss nicht angepasst werden."
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:417
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:336
 msgid ""
-"Anschließend sollte die neue-alte VM über den ``leovirtstarter2`` gestartet "
-"werden können."
+"Lösung 2: Alle Dateien löschen bis auf den aktuellen Snapshot: "
+"``{...}.vdi``. Der Name/die UUID des aktuellen Snapshots kann man (falls "
+"unklar) aus der ``<Maschinenname>.vbox``-Datei ermitteln."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:421
-msgid "Alte Dateien von leoclient (Version 1) entfernen"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:424
-msgid "Software-Pakete entfernen"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:426
-msgid "Die Pakete des alten Leoclient müssen von Hand entfernt werden:"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:428
-msgid ""
-"``# apt-get purge leoclient-leovirtstarter-client leoclient-leovirtstarter-"
-"common`` ``# apt-get purge leoclient-leovirtstarter-server leoclient-tools "
-"leoclient-virtualbox leoclient-vm-printer``"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:431
-msgid "Evtl. alte Daten von leoclient (Version 1) entfernen:"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:433
-msgid "``# rm -rf /etc/leoclient``"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:437
-msgid "Rechte korrigieren"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:439
-msgid ""
-"Der leovirtstarter2 benötigt sudo-Rechte zur Starten der virtuellen "
-"Maschinen. Dies wird mit dem folgenden Paket eingerichtet:"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:442
-msgid "``# apt-get install linuxmuster-client-sudoers``"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:444
-msgid ""
-"Eventuell muss auch die sudoers-Datei editiert werden. Dort sollten keine "
-"Einträge zu ``linuxmuster`` mehr vorhanden sein (ggf. löschen), da diese "
-"nach ``/etc/sudoers.d/10-linuxmuster-client-sudoers`` ausgelagert sind. "
-"Kommando zum Starten des Editors für die sudoers-Datei:"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:447
-msgid "``# visudo``"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:449
-msgid "z.B.: Inhalt der Datei:"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:451
-msgid ""
-"``#`` ``# This File MUST be edited with the 'visudo' command as root.`` "
-"``#`` ``...`` ``...`` ``%sudo   ALL=(ALL:ALL) ALL`` ``# see sudoers(5) for "
-"more Information on \"#include\" directives.`` ``#includedir "
-"/etc/sudoers.d``"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:462
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:343
 msgid "Hintergrundinformationen"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:465
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:346
 msgid "Virtuelle Maschine erzeugen"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:467
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:348
 msgid ""
 "Beim Anlegen einer virtuellen Maschine mit ``leoclient2-init`` wird der Pfad"
 " zur Maschine in ``/etc/leoclient2/machines/MASCHINENNAME.conf`` "
 "gespeichert."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:469
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:350
 msgid ""
-"Nach Beenden von Virtualbox werden folgende Aktionen vom Script ausgeführt: "
-"- Ein Snapshot wird erzeugt (in ``/PFAD/MASCHINENNAME/Snapshot/``) und "
-"dieser als Standard-Snapshot nach ``PFAD/MASCHINENNAME/snapshot-"
-"store/standard/`` gesichert. - Außerdem werden die Konfigurationsdateien "
-"(compreg.dat, VirtualBox.xml, xpti.dat und MASCHINENNAME.vbox) gesichert "
-"nach ``/PFAD/MASCHINENNAME/defaults/``. - Abschließend werden alle "
-"Dateirechte für den Einsatz gesetzt (z.B. "
+"Nach Beenden von Virtualbox werden folgende Aktionen vom Script ausgeführt:"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:352
+msgid ""
+"Ein Snapshot wird erzeugt (in ``/PFAD/MASCHINENNAME/Snapshot/``) und dieser "
+"als Standard-Snapshot nach ``PFAD/MASCHINENNAME/snapshot-store/standard/`` "
+"gesichert."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:353
+msgid ""
+"Außerdem werden die Konfigurationsdateien (compreg.dat, VirtualBox.xml, "
+"xpti.dat und MASCHINENNAME.vbox) gesichert nach "
+"``/PFAD/MASCHINENNAME/defaults/``."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:354
+msgid ""
+"Abschließend werden alle Dateirechte für den Einsatz gesetzt (z.B. "
 "``/PFAD/MASCHINENNAME/MASCHINENNAME.vdi`` nur lesbar, da diese Datei nicht "
 "verändert werden darf)"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:474
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:356
 msgid "Jede VM ist vollständig in ihrem Maschinenverzeichnis gespeichert."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:478
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:360
 msgid "Serverbasierte VM kopieren, lokaler cache"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:480
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:362
 msgid ""
 "Die auf dem Server liegenden gezippten Basisimages und Snapshots werden "
 "(falls lokal nicht vorhanden oder verändert) beim Start in den lokalen cache"
@@ -815,11 +760,11 @@ msgid ""
 "virtuellen Maschinen."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:484
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:366
 msgid "Virtuelle Maschine starten"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:486
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:368
 msgid ""
 "VirtualBox startet mit der Umgebungsvariablen ``VBOX_USER_HOME`` (``$ export"
 " VBOX_USER_HOME=/PFAD/MASCHINENNAME``) und mit der Einstellung für den "
@@ -829,7 +774,7 @@ msgid ""
 "von Hand gestartet werden."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:489
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:371
 msgid ""
 "Damit ``leovirtstarter2`` eine lokale Maschine findet, muss in "
 "``/etc/leoclient2/machines/MASCHINENNAME.conf`` ihr Pfad eingetragen sein. "
@@ -837,7 +782,7 @@ msgid ""
 " lokalen VM ist dabei ``/var/virtual/`` ."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:491
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:373
 msgid ""
 "Außer den lokal vorhandenen Maschinen wird auch in allen in ``SERVERDIR`` "
 "konfigurierten Pfaden nach Maschinen gesucht. (Der Pfad MUSS NICHT remote "
@@ -847,236 +792,271 @@ msgid ""
 "dabei ``/media/leoclient2-vm`` ."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:494
-msgid ""
-"Auflisten kann man alle sichtbaren VM's mit: ``$ leovirtstarter2 -i`` ``$ "
-"leovirtstarter2 --info``"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:376
+msgid "Auflisten kann man alle sichtbaren VM's mit:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:498
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:383
 msgid ""
 "Wird mit dem ``leovirtstarter2`` ein Snapshot einer VM zum Starten "
-"ausgewählt, wird folgendes abgearbeitet: - Kopieren der Standard-"
-"Konfigurationsdateien aus ``/PFAD/MASCHINENNAME/defaults/`` nach "
-"``/PFAD/MASCHINENNAME/`` - Anpassen folgender Angaben:"
+"ausgewählt, wird folgendes abgearbeitet:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:502
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:385
+msgid ""
+"Kopieren der Standard-Konfigurationsdateien aus "
+"``/PFAD/MASCHINENNAME/defaults/`` nach ``/PFAD/MASCHINENNAME/``"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:386
+msgid "Anpassen folgender Angaben:"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:388
 msgid ""
 "Shared Folder verbinden ins Heimatverzeichnis des angemeldeten Benutzers"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:503
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:389
 msgid ""
 "Netzwerkeinstellungen (verschiedene Möglichkeiten stehen zur Verfügung)"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:505
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:391
 msgid "Starten der Maschine"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:507
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:393
 msgid ""
 "Gibt es die Maschine auch Remote, können zusätzlich folgende Dinge erfolgen:"
-" - Snapshots wird gegebenenfalls vom Server in den lokalen Cache kopiert. - "
-"Reparatur des Basisimages, falls notwendig - Update der lokalen VM durch die"
-" Remote-VM, falls verschieden. - Der Snapshot wird aus dem Cache bzw. aus "
-"``/PFAD/MASCHINENNAME/snapshot-store/default/`` nach "
-"``/PFAD/MASCHINENNAME/Snapshots/{…}.vdi`` entzippt"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:515
-msgid "VM direkt starten"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:395
+msgid "Snapshots wird gegebenenfalls vom Server in den lokalen Cache kopiert."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:517
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:396
+msgid "Reparatur des Basisimages, falls notwendig"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:397
+msgid "Update der lokalen VM durch die Remote-VM, falls verschieden."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:398
 msgid ""
-"Nachfolgendes Script startet direkt ohne Dialog eine VM. Das Script "
-"ermittelt den aktuellen Snapshot-Namen ``{…}.vdi`` aus der VBox-XML-Datei "
-"der VM. Dann wird der gezippte-Snapshot verwendet. Starten, „wie "
-"vorgefunden“ klappt nicht, wenn sich die VM im einem „gespeicherten Zustand“"
-" befindet. Script unter ``/usr/bin`` ablegen und ausführbar machen. Die "
-"Rechteanpassung erfolgt mit Hilfe des ``leovirtstarter2``. Eine Datei "
-"``network.conf`` wird von dem Script nicht ausgewertet. Bei den "
-"Berechtigugen wird nur der Snapshot und die primäre Gruppe des Users "
-"überprüft Aufruf z.B.:"
+"Der Snapshot wird aus dem Cache bzw. aus ``/PFAD/MASCHINENNAME/snapshot-"
+"store/default/`` nach ``/PFAD/MASCHINENNAME/Snapshots/{…}.vdi`` entzippt"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:521
-msgid "``# leoclient2-directstart -m winxp -r 1024 -s standard``"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:402
+msgid "Berechtigungen zum Starten einer VM bzw. eines Snapshots"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:682
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:404
 msgid ""
-"Zum bequemen Starten kann man einen Desktop-Starter anlegen, z.B. für die VM"
-" „winxp“ mit 1024 MB RAM und „standard“-Snapshot:"
+"An welchen Rechnern (Hosts) welcher User eine VM starten darf wird in "
+"``/PFAD/MASCHINENNAME/image.conf`` konfiguriert."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:700
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:406
 msgid ""
-"Hinweis: Nach Anlegen dieser Datei muss diese ausführbar gesetzt werden."
+"Es werden USER, GROUP, HOST, ROOM gelistet, die Zugriff erhalten sollen "
+"(Positivliste). Wenn nichts konfiguriert wird, haben alle User von allen "
+"Hosts Zugriff. Es gibt 2 Arten des Zugriffs:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:704
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:409
+msgid ""
+"USER-LEVEL Zugriff: Zeile mit user=user1,user2 für den Zugriff eines Users "
+"Zeile mit group=group1,group2 für den Zugriff eines in der "
+"primären/sekundären Gruppe group1,group2 befindlichen Users (z.B. teachers)"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:413
+msgid ""
+"HOST-LEVEL Zugriff: Zeile mit host=host1,host2 für den Zugriff eines Hosts "
+"Zeile mit room=raum1,raum2 für den Zugriff eines in der primären Gruppe "
+"raum1,raum2 befindlichen Hosts"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:417
+msgid ""
+"Um eine Maschine starten zu können, müssen BEIDE Level erfüllt sein "
+"(logische UND-Verknüpfung): Der User muss auf die VM zugreifen dürfen UND "
+"der Host muss die VM starten dürfen. Die Dateirechte der VM- bzw. Snapshot-"
+"Verzeichnisse müssen so eingestellt sein (z.B. Zugriff für alle), das die "
+"Konfigurierten USER, GROUP, HOST, ROOM Zugriff auf die VM/den Snapshot "
+"besitzen."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:420
+msgid "Beispieldatei image.conf"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:429
+msgid ""
+"Hinweis: Die Berechtigung für einen einzelnen Snapshot wird nur dann korrekt"
+" ausgewertet, wenn beim HOST-LEVEL beide Optionen host und room auftauchen. "
+"Fehlt z.B. die „room“-Option ist jeder Raum und damit auch jeder Host "
+"zugelassen!"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:431
+msgid ""
+"Stand Version 0.5.4-1 Juli 2015: Die Gruppen- und User-Beschränkung auf VM-"
+"Ebene wird z.Z. nicht korrekt ausgelesen → 'group' und 'user' damit ohne "
+"Funktion"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:436
 msgid "Datenstruktur einer VM"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:706
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:438
 msgid ""
 "Virtualbox-Dateien In der obersten Verzeichnisebene im Verzeichnis der VM "
-"verwaltet VirtualBox die aktuell verwendete Maschine: - Die Basisdatei ist "
-"``MASCHINENNAME.vdi``, sie enthält den Basis-Zustand der Festplatte und ist "
-"meist mehrere GB groß - Konfigurationsdateien - Logdateien - usw. ... - Im "
-"Unterverzeichnis ``Snapshots`` verwaltet VirtualBox den aktuell verwendeten "
-"Snapshot {*}.vdi."
+"verwaltet VirtualBox die aktuell verwendete Maschine:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:714
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:441
 msgid ""
-"leoclient2-Dateien - ``MASCHINENNAME.conf`` beinhaltet den Pfad in dem die "
-"VM erstellt wurde. Dorthin wird sie im Fall einer remoten Maschine auch "
-"wieder entpackt (funktioniert nur in diesem Pfad) - ``network.conf`` ist "
-"optional. Konfiguriert die Netzwerkkarten der Virtuellen Maschine (falls "
-"keine network.conf speziell für den Snapshot exisiert) - ``image.conf`` ist "
-"optional. - Das Unterverzeichnis ``snapshot-store`` enthält in "
-"Unterverzeichnissen weitere Snapshots. (Bei einer lokalen VM ist meist nur "
-"das Verzeichnis standard vorhanden): - ``{*}.vdi`` ist die Snapshot-Datei. -"
-" ``{*}.vdi.zip`` ist die gezippte Snapshot-Datei (nur etwa 1/3 so groß wie "
-"``{*}.vdi)`` . - ``filesize.vdi`` ist eine Textdatei und enthält die Größe "
-"von ``{*}.vdi`` . - ``filesize.vdi.zipped`` ist eine Textdatei und enthält "
-"die Größe von ``{*}.vdi.zip`` . - ``network.conf`` ist optional. "
-"Konfiguriert die Netzwerkkarten für diesen Snapshot. - Das Unterverzeichnis "
-"``defaults`` enthält ein Backup der Konfigurationsdateien. Vor dem Start der"
-" Maschine kann mit diesen Dateien die Maschine zurückgesetzt werden "
-"(Kopieren auf eine Verzeichnisebene höher)."
+"Die Basisdatei ist ``MASCHINENNAME.vdi``, sie enthält den Basis-Zustand der "
+"Festplatte und ist meist mehrere GB groß"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:728
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:442
+msgid "Konfigurationsdateien"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:443
+msgid "Logdateien"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:444
+msgid "usw. ..."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:445
+msgid ""
+"Im Unterverzeichnis ``Snapshots`` verwaltet VirtualBox den aktuell "
+"verwendeten Snapshot {*}.vdi."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:447
+msgid "leoclient2-Dateien"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:449
+msgid ""
+"``MASCHINENNAME.conf`` beinhaltet den Pfad in dem die VM erstellt wurde. "
+"Dorthin wird sie im Fall einer remoten Maschine auch wieder entpackt "
+"(funktioniert nur in diesem Pfad)"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:450
+msgid ""
+"``network.conf`` ist optional. Konfiguriert die Netzwerkkarten der "
+"Virtuellen Maschine (falls keine network.conf speziell für den Snapshot "
+"exisiert)"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:451
+msgid "``image.conf`` ist optional."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:452
+msgid ""
+"Das Unterverzeichnis ``snapshot-store`` enthält in Unterverzeichnissen "
+"weitere Snapshots. (Bei einer lokalen VM ist meist nur das Verzeichnis "
+"standard vorhanden):"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:453
+msgid "``{*}.vdi`` ist die Snapshot-Datei."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:454
+msgid ""
+"``{*}.vdi.zip`` ist die gezippte Snapshot-Datei (nur etwa 1/3 so groß wie "
+"``{*}.vdi)`` ."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:455
+msgid ""
+"``filesize.vdi`` ist eine Textdatei und enthält die Größe von ``{*}.vdi`` ."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:456
+msgid ""
+"``filesize.vdi.zipped`` ist eine Textdatei und enthält die Größe von "
+"``{*}.vdi.zip`` ."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:457
+msgid ""
+"``network.conf`` ist optional. Konfiguriert die Netzwerkkarten für diesen "
+"Snapshot."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:458
+msgid ""
+"Das Unterverzeichnis ``defaults`` enthält ein Backup der "
+"Konfigurationsdateien. Vor dem Start der Maschine kann mit diesen Dateien "
+"die Maschine zurückgesetzt werden (Kopieren auf eine Verzeichnisebene "
+"höher)."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:462
 msgid "Übersicht der Scripte/Befehle zum leoclient2"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:730
-msgid "leoclient2-init               legt eine neue lokale VM an"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:465
+msgid "leoclient2-init:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:732
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:465
+msgid "legt eine neue lokale VM an"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:478
+msgid "leovirtstarter2"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:468
 msgid ""
-"leovirtstarter2               startet das grafische Auswahlfenster und "
-"anschließend die VM mit Optionen --info        listet alle VMs auf der "
-"Konsole auf --vbox        startet das grafische Auswahlfenster und "
-"VirtualBox ohne die VM zu starten -h            Hilfe anzeigen --local-"
-"snapshots     nur lokale Snapshots listen --ignore-virtualbox   startet den "
-"leovirtstarter auch wenn gerade VirtualBox ausgeführt wird --serverdir <abs "
-"path>        verwendet anderen Pfad statt SERVERDIR zu den remote VMs"
+"startet das grafische Auswahlfenster und anschließend die VM mit Optionen"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:741
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:481
 msgid ""
-"leoclient2-base-snapshot-renew                Erstellt eine neue "
-"Basisfestplatte mit dem aktuellen Snapshot der zur bisherigen "
-"Basisfestplatte ge-„merged“ wird. Der „Aktuelle Zustand“ wird somit "
-"gesichert/festgeschrieben."
+"Erstellt eine neue Basisfestplatte mit dem aktuellen Snapshot der zur "
+"bisherigen Basisfestplatte ge-„merged“ wird. Der „Aktuelle Zustand“ wird "
+"somit gesichert/festgeschrieben."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:743
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:484
+msgid "leoclient2-vm-move"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:484
 msgid ""
-"leoclient2-vm-move            Importiert eine VM (z.B. vom externen "
-"Speichermedium) oder verschiebt ein VM"
+"Importiert eine VM (z.B. vom externen Speichermedium) oder verschiebt ein VM"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:745
-msgid ""
-"VBoxManage    mit vielen Optionen     Konsolen-Tool zum Bearbeiten von VMs"
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:488
+msgid "VBoxManage"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:749
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:487
+msgid "mit vielen Optionen Konsolen-Tool zum Bearbeiten von VMs"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:491
 msgid "Entwicklungsdokumentation des leoclient2"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:751
+#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:493
 msgid ""
 "siehe http://www.linuxmuster.net/wiki/entwicklung:linuxclient:leoclient2"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:755
-msgid "Fehlersuche - Fehlerbehebung"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:758
-msgid "Log-Datei"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:759
-msgid ""
-"Am Client findet man unter ``/tmp/leovirtstarter2.log`` die aktuelle log-"
-"Datei des ``leovirtstarters2`` zur Fehlersuche."
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:762
-msgid "Endlosschleife bei ``leoclient2-base-snapshot-renew``"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:763
-msgid ""
-"Problem: Das Script ``leoclient2-base-snapshot-renew`` läuft in eine "
-"Endlosschleife, wenn im Verzeichnis ``<lokaler Maschinenpfad>/Snapshots/`` "
-"eine verweiste Snapshot-Datei übrig bleibt. Lösung: Die verweiste Snapshot-"
-"Datei manuell löschen, dann ``leoclient2-base-snapshot-renew`` nochmals "
-"ausführen."
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:767
-msgid "Snapshot passt nicht zur Basisfestplatte"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:768
-msgid ""
-"Nach einem ``leoclient2-base-snapshot-renew`` werden bisherige Snapshots "
-"unbrauchbar und sollten auch nicht mehr verwendet werden. Der Snapshotname "
-"wird dabei auch geändert. In der Datei ``<Maschinennamen>.vbox`` wird der "
-"aktuell gültige ``Snapshotnamen {…}.vdi`` aufgeführt. Problem: Unter "
-"``<Maschinenpfad>/Snapshots`` liegt ein alter Snapshot, der Name passt "
-"nicht. VirtualBox startet deshalb nicht. Lösung: Den Snapshot in "
-"``<Maschinenpfad>/Snapshots`` manuell löschen und dann einen Snapshot mit "
-"dem aktuellen Namen aus ``<Maschinenpfad>/snapshot-store/standard/`` in das "
-"Verzeichnis ``<Maschinenpfad>/Snapshots`` kopieren."
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:773
-msgid "``network.conf`` für lokalen Snapshot bereitstellen"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:774
-msgid ""
-"Problem: Aktuell wertet der ``leovirtstarter2`` eine ``network.conf`` im "
-"Verzeichnis des lokalen Snapshots nicht aus. (leoclient2-Version: 0.5.4-1) "
-"Lösung: Wenn man jedoch eine ``network.conf`` im remote-Pfad des Snapshots "
-"ablegt, wird diese ausgewertet. Weitere Dateien müssen im remote-Pfad nicht "
-"vorhanden sein. Der remote-Pfad muss nicht zwingend remote liegen! Z.B. mit "
-"den voreingestellten Standard-Pfaden des Snapshots „physik“:"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:778
-msgid ""
-"lokaler Snapshot-Pfad: ``/var/virtual/winxp1/snapshot-store/physik/...`` "
-"ergibt ``network.conf``-Pfad: ``/media/leoclient2-vm/winxp1/snapshot-"
-"store/physik/network.conf``"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:782
-msgid "``leovirtstarter2`` zeigt/startet \"wie vorgefunden\" nicht"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-erweiterungen.rst:783
-msgid ""
-"Problem: Im Auswahlmenü wird „wie vorgefunden“ nicht angezeigt oder kann "
-"nicht gestartet werden. Ursache 1: Die VM wurde nicht ausgeschaltet sondern "
-"befindet sich in einem gespeicherten Zustand. Im Verzeichnis "
-"``.../Snapshots`` befindet sich eine ``*.sav``-Datei. Lösung 1: Den "
-"„Standard“-Snapshot starten oder die Maschine direkt mit VirtualBox starten "
-"und dann herunterfahren. Ursache 2: Im Verzeichnis "
-"``Maschinenpfad>/Snapshots/`` befinden sich überflüssige Dateien. Lösung 2: "
-"Alle Dateien löschen bis auf den aktuellen Snapshot: ``{...}.vdi``. Der "
-"Name/die UUID des aktuellen Snapshots kann man (falls unklar) aus der "
-"``<Maschinenname>.vbox``-Datei ermitteln."
 msgstr ""

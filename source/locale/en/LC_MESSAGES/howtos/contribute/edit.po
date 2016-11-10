@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-09 19:42+0700\n"
+"POT-Creation-Date: 2016-11-10 17:43+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -36,8 +36,8 @@ msgstr ""
 
 #: ../../source/howtos/contribute/edit.rst:9
 msgid ""
-"Die Dokumantion ist in der Markupsprache \"rST\" geschrieben. `Hier "
-"<docutils.sourceforge.net/docs/user/rst/quickref.html>`_ finden Sie einen "
+"Die Dokumentation ist in der Auszeichnungssprache \"rST\" geschrieben. `Hier"
+" <docutils.sourceforge.net/docs/user/rst/quickref.html>`_ finden Sie einen "
 "guten Überblick über die am häufigsten verwendeten Elemente."
 msgstr ""
 
@@ -55,19 +55,23 @@ msgid ""
 msgstr ""
 
 #: ../../source/howtos/contribute/edit.rst:22
+msgid "Sie werden auf github.com geleitet."
+msgstr ""
+
+#: ../../source/howtos/contribute/edit.rst:25
+msgid ""
+"Sie müssen sich bei Github anmelden, um ein Kapitel zu bearbeiten. Wenn Sie "
+"noch kein Konto bei Github haben, können Sie sich `hier eines anlegen "
+"<https://github.com/join>`_."
+msgstr ""
+
+#: ../../source/howtos/contribute/edit.rst:27
 msgid ""
 "Mit einem Klick auf den Stift (siehe Bild) können Sie das aktuelle Kapitel "
 "bearbeiten."
 msgstr ""
 
-#: ../../source/howtos/contribute/edit.rst:31
-msgid ""
-"Sie müssen sich vorher bei Github anmelden, um ein Kapitel zu bearbeiten. "
-"Wenn Sie noch keinen Account bei Github haben, können Sie sich `hier "
-"<https://github.com/join>`_ einen anlegen."
-msgstr ""
-
-#: ../../source/howtos/contribute/edit.rst:33
+#: ../../source/howtos/contribute/edit.rst:35
 msgid ""
 "Nachdem Sie alle Änderungen vorgenommen haben, geben Sie unten einen Titel "
 "und einen Kommentar ein. Die Änderungen können nun mit einem Klick auf "
