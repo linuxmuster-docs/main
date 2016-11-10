@@ -1,7 +1,8 @@
 linuxmuster.net documentation
 #############################
 
-[![Build Status](https://travis-ci.org/linuxmuster-docs/all-of-me.svg?branch=master)](https://travis-ci.org/linuxmuster-docs/all-of-me)
+.. image:: https://travis-ci.org/linuxmuster-docs/all-of-me.svg?branch=master
+    :target: https://travis-ci.org/linuxmuster-docs/all-of-me
 
 ::
 
