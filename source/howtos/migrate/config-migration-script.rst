@@ -33,7 +33,7 @@ Soll zum Beispiel das schulweite Tauschverzeichnis von der Migration ausgeschlos
     #*.mp3
     /home/share/school/*
 
-Es können per Wildcard (*) bestimmte Dateimuster ausgeschlossen werden (z. Bsp. *.mp3).
+Es können per Wildcard (*) bestimmte Dateimuster ausgeschlossen werden (z.B. \*.mp3).
 
 Weitere Wiederherstellungsoptionen
 ----------------------------------

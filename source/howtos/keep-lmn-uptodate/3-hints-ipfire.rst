@@ -1,6 +1,6 @@
-Hinweise
-========
-   
+Weitere Hinweise
+================
+
 Konfiguration des IPFire vom Server aus neu setzen
 --------------------------------------------------
 

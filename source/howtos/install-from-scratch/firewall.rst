@@ -1,11 +1,3 @@
-.. |br| raw:: html
-
-   <br />
-
-.. |br| raw:: latex
-
-   \\
-
 Installation und Konfiguration der Firewall
 ===========================================
 
@@ -372,29 +364,36 @@ Wählen Sie entsprechend Ihrer Internetverbindung die passende Option mit den ``
    :alt: Schritt 22b der Erstkonfiguration der Firewall
 
 
-=  =======================================================  ========================================================
-.  Statisch                                                 DHCP
-=  =======================================================  ========================================================
-.  Falls Sie `Statisch` gewählt haben, geben Sie die |br|   Falls Sie `DHCP` gewählt bestätigen Sie mit |br|
-   Daten, die Sie von Ihrem Provider (z.B. Belwü |br|       der ``ENTER``-Taste
-   erhalten haben, ein und bestätigen Sie mit der |br|
-   ``ENTER``-Taste
-.  |STAT1|                                                  |DHCP1|
-.  Falls Sie im letzten Schritt `Statisch` gewählt  |br|    Falls Sie im letzten Schritt `DHCP` gewählt  |br|
-   haben, navigieren Sie mit ``Pfeil``-Tasten auf |br|      haben, navigieren Sie mit ``Pfeil``-Tasten auf |br|
-   `DNS- und Gatewayeinstellungen` und bestätigen |br|      `Fertig` und bestätigen Sie Ihre Auswahl mit der |br|
-   Sie mit der ``ENTER`` -Taste.                            ``ENTER`` -Taste.
-.  |STAT2|                                                  |DHCP2|
-.  Geben Sie nun Ihren `primären` und `sekundären` |br|     Fahren Sie bitte nach der Tabelle fort.
-   DNS sowie das Standard-Gateway ein und |br|
-   bestätigen Sie Ihre Eingabe mit der ``ENTER``- |br|
-   Taste.
-.  |STAT3|
-.  Navigieren Sie mit ``Pfeil``-Tasten auf `Fertig` |br|
-   und bestätigen Sie Ihre Auswahl mit der ``ENTER``- |br|
-   Taste.
-.  |DHCP2|
-=  =======================================================  ========================================================
++---------------------------------------------------+--------------------------------------------------------+
+| Statisch                                          | DHCP                                                   |
++===================================================+========================================================+
+| Falls Sie `Statisch` gewählt haben, geben Sie die | Falls Sie `DHCP` gewählt bestätigen Sie mit            |
+| Daten, die Sie von Ihrem Provider (z.B. Belwü     | der ``ENTER``-Tasten                                   |
+| erhalten haben, ein und bestätigen Sie mit der    |                                                        |
+| ``ENTER``-Tasten                                  |                                                        |
++---------------------------------------------------+--------------------------------------------------------+
+| |STAT1|                                           | |DHCP1|                                                |
++---------------------------------------------------+--------------------------------------------------------+
+| Falls Sie im letzten Schritt `Statisch` gewählt   | Falls Sie im letzten Schritt `DHCP` gewählt            |
+| haben, navigieren Sie mit ``Pfeil``-Tasten auf    | haben, navigieren Sie mit ``Pfeil``-Tasten auf         |
+| `DNS- und Gatewayeinstellungen` und bestätigen    | `Fertig` und bestätigen Sie Ihre Auswahl mit der       |
+| Sie mit der ``ENTER`` -Taste.                     | ``ENTER`` -Taste.                                      |
++---------------------------------------------------+--------------------------------------------------------+
+| |STAT2|                                           | |DHCP2|                                                |
++---------------------------------------------------+--------------------------------------------------------+
+| Geben Sie nun Ihren `primären` und `sekundären`   | Fahren Sie bitte nach der Tabelle fort.                |
+| DNS sowie das Standard-Gateway ein und            |                                                        |
+| bestätigen Sie Ihre Eingabe mit der ``ENTER``-    |                                                        |
+| Taste.                                            |                                                        |
++---------------------------------------------------+--------------------------------------------------------+
+| |STAT3|                                           |                                                        |
++---------------------------------------------------+--------------------------------------------------------+
+| Navigieren Sie mit ``Pfeil``-Tasten auf `Fertig`  |                                                        |
+| und bestätigen Sie Ihre Auswahl mit der ``ENTER``-|                                                        |
+| Taste.                                            |                                                        |
++---------------------------------------------------+--------------------------------------------------------+
+| |DHCP2|                                           |                                                        |
++---------------------------------------------------+--------------------------------------------------------+
 
 Aktivieren Sie **nicht** den DHCP-Dienst für das grüne Netzwerk, diese Funktionalität übernimmt der der linuxmuster.net-Server selbst. Navigieren Sie mit den ``Pfeil``-Tasten auf die Schaltfläche `OK` und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste.
 
@@ -440,7 +439,7 @@ Pingen Sie nun auf die IP `10.16.1.254`. Erhalten Sie eine Antwort befindet sich
 Erhalten Sie keine Antwort, ziehen Sie das Kabel aus der 1. Netzwerkkarte des IPFires ab und stecken Sie es in die zweite.
 Pingen Sie erneut auf die IP `10.16.1.254`. Erhalten Sie eine Antwort befindet sich diese Netzwerkkarte im grünen Netz. Fahren Sie in diesem Fall mit :ref:`red-network` fort.
 
-Erhalten Sie keine Antwort, ziehen Sie das Kabel aus der 2. Netzwerkkarte ab und stecken Sie es in die dritte. |br|
+Erhalten Sie keine Antwort, ziehen Sie das Kabel aus der 2. Netzwerkkarte ab und stecken Sie es in die dritte.
 Testen Sie dies sicherheitshalber, indem Sie erneut auf die IP `10.16.1.254` pingen. Sie erhalten nun eine Antwort.
 
 .. _red-network:
@@ -469,7 +468,7 @@ Bringen Sie danach die Paketlisten auf den neuesten Stand, um die Verbindung zum
 
   [root@ipfire ~]:# pakfire update
 
-Wird der Befehl ohne Rückmeldung ausgeführt, befindet sich die Netzwerkkarte im roten Netz (und somit die dritte noch nicht verkabelte im blauen Netz, die belassen sie auch vorerst so). Fahren Sie mit dem :ref:`ssh-config-label` fort. |br|
+Wird der Befehl ohne Rückmeldung ausgeführt, befindet sich die Netzwerkkarte im roten Netz (und somit die dritte noch nicht verkabelte im blauen Netz, die belassen sie auch vorerst so). Fahren Sie mit dem :ref:`ssh-config-label` fort.
 Gibt der Befehl
 
 .. code-block:: console
@@ -477,15 +476,14 @@ Gibt der Befehl
   [root@ipfire ~]:# pakfire update
   PAKFIRE ERROR: You need to be online to run pakfire!
 
-zurück befindet sich die Netzwerkkarte im blauen Netz. |br|
+zurück befindet sich die Netzwerkkarte im blauen Netz.
 Verbinden Sie in diesem Fall die verbleibende dritte Netzwerkkarte mit Ihrem Router und führen danach den Befehl
 
 .. code-block:: console
 
   [root@ipfire ~]:# /etc/init.d/network restart
 
-erneut aus. |br|
-Die „blaue Netzwerkkarte“ bleibt vorerst unverkabelt.
+erneut aus. Die „blaue Netzwerkkarte“ bleibt vorerst unverkabelt.
 
 .. _ssh-config-label:
 

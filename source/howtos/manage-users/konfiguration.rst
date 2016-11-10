@@ -5,15 +5,15 @@ Einstellungen in der Datei sophomorix.conf vor dem ersten Anlegen von Benutzern
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Nach Installation des Servers muss die Hauptkonfigurationsdatei *sophomorix.conf*, die man unter
-``/etc/sophomorix/user/`` findet, angepasst werden [#f1]_. Dazu muss die Datei vom Benutzer root editiert werden. 
+``/etc/sophomorix/user/`` findet, angepasst werden [#f1]_. Dazu muss die Datei vom Benutzer root editiert werden.
 Dies können Sie direkt am Server machen, oder Sie gehen von einem Client des Netzwerks aus mittels *putty*
 auf den Server.
 
-*Putty* ist ein Freewareprogramm, das Sie sich herunterladen und dann starten können. Nach dem Aufruf 
+*Putty* ist ein Freewareprogramm, das Sie sich herunterladen und dann starten können. Nach dem Aufruf
 geben Sie den Namen des Servers an und stellen auf *ssh* mit Port 22 um. Dann können Sie sich als root
 anmelden und die Datei in einem Editor [#f2]_ aufrufen [#f3]_.
 
-Die einzelnen Angaben sind sehr gut kommentiert und mit Beispielen versehen. Zeilen, die mit einem ``#`` beginnen, 
+Die einzelnen Angaben sind sehr gut kommentiert und mit Beispielen versehen. Zeilen, die mit einem ``#`` beginnen,
 sind Kommentarzeilen.
 
 Die meisten der Festlegungen können auch vom Benutzer administrator in der *Schulkonsole* im Menü unter
@@ -125,14 +125,14 @@ In der Rubrik *Einstellungen* gibt es verschiedene Abschnitte, die wir hier kurz
 .. image:: media/schulkonsole-einstellungen-email.png
 
 Den Abschnitt gibt es je einmal für *Schüler* und *Lehrer*, da man für diese Benutzergruppen sicherlich teilweise unterschiedliche Werte
-festlegen möchte. Für den Abschnitt *Löschen* gilt das ebenfalls. 
+festlegen möchte. Für den Abschnitt *Löschen* gilt das ebenfalls.
 
 +--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Abschnitt Login**      | **Erläuterungen**                                                                                                                                                                    |
 |                          |                                                                                                                                                                                      |
 +==========================+======================================================================================================================================================================================+
 | *Zufallspasswort*        | Mit einem Haken an dieser Stelle wird für jeden neu angelegten Benutzer ein Zufallspasswort generiert. Andernfalls wird jedem neuen Benutzer das Passwort                            |
-|                          | *linux *                                                                                                                                                                             |
+|                          | *linux*                                                                                                                                                                              |
 |                          | vergeben, was eine Sicherheitslücke darstellt, wenn die Benutzer ihr Passwort nicht ändern. Die Loginkärtchen der neu angelegten Schüler können von jedem Lehrer ausgedruckt werden. |
 |                          |                                                                                                                                                                                      |
 +--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

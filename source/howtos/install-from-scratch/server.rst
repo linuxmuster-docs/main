@@ -1,11 +1,3 @@
-.. |br| raw:: html
-
-   <br />
-
-.. |br| raw:: latex
-
-   \\
-
 .. _server-install-label:
 
 Installation und Konfiguration des Servers
@@ -14,7 +6,7 @@ Installation und Konfiguration des Servers
 Installation des Ubuntu-Servers
 -------------------------------
 
-Verbinden Sie die Netzwerkkarte des Servers mit dem Switch, an welchem die „grüne“ Netzwerkkarte des IPFire hängt. |br|
+Verbinden Sie die Netzwerkkarte des Servers mit dem Switch, an welchem die „grüne“ Netzwerkkarte des IPFire hängt.
 
 .. note::
    Lesen Sie unbedingt die Hinweise bzgl. den einsetzbaren Versionen.
