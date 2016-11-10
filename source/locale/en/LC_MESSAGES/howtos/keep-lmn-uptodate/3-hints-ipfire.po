@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-10 17:43+0700\n"
+"POT-Creation-Date: 2016-11-10 20:56+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../source/howtos/keep-lmn-uptodate/3-hints-ipfire.rst:2
-msgid "Hinweise"
+msgid "Weitere Hinweise"
 msgstr ""
 
 #: ../../source/howtos/keep-lmn-uptodate/3-hints-ipfire.rst:5

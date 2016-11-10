@@ -363,37 +363,38 @@ Wählen Sie entsprechend Ihrer Internetverbindung die passende Option mit den ``
    :align: middle
    :alt: Schritt 22b der Erstkonfiguration der Firewall
 
+Statisch
+````````
 
-+---------------------------------------------------+--------------------------------------------------------+
-| Statisch                                          | DHCP                                                   |
-+===================================================+========================================================+
-| Falls Sie `Statisch` gewählt haben, geben Sie die | Falls Sie `DHCP` gewählt bestätigen Sie mit            |
-| Daten, die Sie von Ihrem Provider (z.B. Belwü     | der ``ENTER``-Tasten                                   |
-| erhalten haben, ein und bestätigen Sie mit der    |                                                        |
-| ``ENTER``-Tasten                                  |                                                        |
-+---------------------------------------------------+--------------------------------------------------------+
-| |STAT1|                                           | |DHCP1|                                                |
-+---------------------------------------------------+--------------------------------------------------------+
-| Falls Sie im letzten Schritt `Statisch` gewählt   | Falls Sie im letzten Schritt `DHCP` gewählt            |
-| haben, navigieren Sie mit ``Pfeil``-Tasten auf    | haben, navigieren Sie mit ``Pfeil``-Tasten auf         |
-| `DNS- und Gatewayeinstellungen` und bestätigen    | `Fertig` und bestätigen Sie Ihre Auswahl mit der       |
-| Sie mit der ``ENTER`` -Taste.                     | ``ENTER`` -Taste.                                      |
-+---------------------------------------------------+--------------------------------------------------------+
-| |STAT2|                                           | |DHCP2|                                                |
-+---------------------------------------------------+--------------------------------------------------------+
-| Geben Sie nun Ihren `primären` und `sekundären`   | Fahren Sie bitte nach der Tabelle fort.                |
-| DNS sowie das Standard-Gateway ein und            |                                                        |
-| bestätigen Sie Ihre Eingabe mit der ``ENTER``-    |                                                        |
-| Taste.                                            |                                                        |
-+---------------------------------------------------+--------------------------------------------------------+
-| |STAT3|                                           |                                                        |
-+---------------------------------------------------+--------------------------------------------------------+
-| Navigieren Sie mit ``Pfeil``-Tasten auf `Fertig`  |                                                        |
-| und bestätigen Sie Ihre Auswahl mit der ``ENTER``-|                                                        |
-| Taste.                                            |                                                        |
-+---------------------------------------------------+--------------------------------------------------------+
-| |DHCP2|                                           |                                                        |
-+---------------------------------------------------+--------------------------------------------------------+
+Falls Sie `Statisch` gewählt haben, geben Sie die Daten, die Sie von Ihrem Provider (z.B. Belwü der ``ENTER``Tasten erhalten haben, ein und bestätigen Sie mit der ``ENTER``-Taste.
+
+|STAT1|
+
+Falls Sie im letzten Schritt `Statisch` gewählt haben, navigieren Sie mit ``Pfeil``-Tasten auf `DNS- und Gatewayeinstellungen` und bestätigen Sie mit der ``ENTER`` -Taste.
+
+|STAT2|
+
+Geben Sie nun Ihren `primären` und `sekundären` DNS sowie das Standard-Gateway ein und bestätigen Sie Ihre Eingabe mit der ``ENTER``-Taste.
+
+|STAT3|
+
+Navigieren Sie mit ``Pfeil``-Tasten auf `Fertig` und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste.
+
+|DHCP2|
+
+DHCP
+````
+
+Falls Sie `DHCP` gewählt bestätigen Sie mit der ``ENTER``-Taste.
+
+|DHCP1|
+
+Falls Sie im letzten Schritt `DHCP` gewählt haben, navigieren Sie mit ``Pfeil``-Tasten auf `Fertig` und bestätigen Sie Ihre Auswahl mit der ``ENTER`` -Taste.
+
+|DHCP2|
+
+Abschluss der Konfiguration
+```````````````````````````
 
 Aktivieren Sie **nicht** den DHCP-Dienst für das grüne Netzwerk, diese Funktionalität übernimmt der der linuxmuster.net-Server selbst. Navigieren Sie mit den ``Pfeil``-Tasten auf die Schaltfläche `OK` und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste.
 
