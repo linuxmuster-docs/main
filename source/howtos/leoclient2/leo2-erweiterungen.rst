@@ -237,7 +237,7 @@ Vorgehensweise:
 
    - Eine Datei ``network.conf`` wird von dem Script nicht ausgewertet.
    - Bei den Berechtigungen wird nur der Snapshot und die primäre Gruppe des Users überprüft.
-
+   - Bei Angabe ohne Snapshot, kann "wie vorgefunden" nicht einen gespeicherten Zustand starten.
   
 Zum bequemen Starten kann man einen Desktop-Starter anlegen, z.B. für die VM „winxp“ mit 1024 MB RAM und „standard“-Snapshot:
 
