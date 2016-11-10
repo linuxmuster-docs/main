@@ -1,6 +1,8 @@
 linuxmuster.net documentation
 #############################
 
+[![Build Status](https://travis-ci.org/linuxmuster-docs/all-of-me.svg?branch=master)](https://travis-ci.org/linuxmuster-docs/all-of-me)
+
 ::
 
   All of me, why take not all of me.
@@ -69,7 +71,7 @@ Fork the repository "all-of-me" within the github-webinterface_
   .. code:: bash
 
      ~/all-of-me-fork$ git push
-	    
+
 * Create a new pull-request on github
 * If you are done and the pull-request was merged, you can delete your fork and create a new one for the next task **or** bring your fork up-to-date:
 
@@ -77,7 +79,7 @@ Fork the repository "all-of-me" within the github-webinterface_
 
      ~/all-of-me-fork$ git fetch upstream
      ~/all-of-me-fork$ git merge upstream/master
-     ~/all-of-me-fork$ git push	    
+     ~/all-of-me-fork$ git push
 
 Translation
 +++++++++++
