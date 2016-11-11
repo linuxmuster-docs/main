@@ -5,8 +5,8 @@ linuxmuster.net documentation
     :target: https://travis-ci.org/linuxmuster-docs/all-of-me
 
 .. image:: http://readthedocs.org/projects/linuxmuster/badge/?version=latest
-:target: http://docs.linuxmuster.net/de/latest/?badge=latest
-:alt: Documentation Status
+    :target: http://docs.linuxmuster.net/de/latest/?badge=latest
+    :alt: Documentation Status
 
 ::
 
