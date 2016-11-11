@@ -4,6 +4,10 @@ linuxmuster.net documentation
 .. image:: https://travis-ci.org/linuxmuster-docs/all-of-me.svg?branch=master
     :target: https://travis-ci.org/linuxmuster-docs/all-of-me
 
+.. image:: http://readthedocs.org/projects/linuxmuster/badge/?version=latest
+:target: http://docs.linuxmuster.net/de/latest/?badge=latest
+:alt: Documentation Status
+
 ::
 
   All of me, why take not all of me.
