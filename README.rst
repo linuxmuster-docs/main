@@ -24,8 +24,7 @@ Clone the repository "all-of-me" using git
 .. code:: bash
 
    ~$ git clone https://github.com/linuxmuster-docs/all-of-me.git  # if you have no ssh-key within github
-   ~$ git clone git@github.com:linuxmuster-docs/all-of-me.git  # if you have a ssh-key within github
-   ~$ git pull
+   ~$ git clone git@github.com:linuxmuster-docs/all-of-me.git # if you have a ssh-key within github
 
 Install sphinx, e.g. under Ubuntu 16.04, do
 
@@ -60,38 +59,69 @@ Fork the repository "all-of-me" within the github-webinterface_
 
   .. code:: bash
 
-     ~$ git clone https://github.com/mein-github-konto/all-of-me.git all-of-me-fork
-     ~$ cd all-of-me-fork
-     ~/all-of-me-fork$ make html
+     ~$ git clone https://github.com/mein-github-konto/all-of-me.git docs
+     ~$ cd docs
+     ~/docs$ make html
 
 * Make changes in your fork
 * Commit your changes to your fork
 
   .. code:: bash
 
-     ~/all-of-me-fork$ git commit -a -m"bugfix for bug in ticket #314 ..."
+     ~/docs$ git commit -a -m"bugfix for bug in ticket #314 ..."
 
 * Push your changes to your fork on github
 
   .. code:: bash
 
-     ~/all-of-me-fork$ git push
+     ~/docs$ git push
 
 * Create a new pull-request on github
-* If you are done and the pull-request was merged, you can delete your fork and create a new one for the next task **or** bring your fork up-to-date:
+* If you are done and the pull-request was merged, you can delete your fork and create a new one.
+
+Update your fork
+----------------
+
+Instead of deleting and creating a new fork you can bring your own fork up-to-date the following way:
+
+* Any changes you made you have to stash away for a while:
 
   .. code:: bash
 
-     ~/all-of-me-fork$ git fetch upstream
-     ~/all-of-me-fork$ git merge upstream/master
-     ~/all-of-me-fork$ git push
+     ~/docs$ git stash
+
+* Add a remote tracking branch:
+
+  .. code:: bash
+
+     ~/docs$ git remote add upstream https://github.com/linuxmuster-docs/all-of-me.git
+
+* Fetch and merge the remote master
+
+  .. code:: bash
+
+     ~/docs$ git fetch upstream
+     ~/docs$ git merge upstream/master
+  
+* (If the merge does not end in an fast-forward result, you better delete and refork.) Push your changes into your fork.
+
+  .. code:: bash
+  
+     ~/docs$ git push
+
+* Now you can get your stashed away changes:
+
+  .. code:: bash
+
+     ~/docs$ git stash pop
+
 
 Translation
 +++++++++++
 
 We use `Transifex <https://www.transifex.com/linuxmusternet/official-documentation/dashboard/>`__ to translate the documentation. Get started there!
 
-Build documantation in English
+Build documentation in English
 ++++++++++++++++++++++++++++++
 
 First you have to install ``sphinx-intl`` and the ``transifex-client``.
