@@ -121,7 +121,7 @@ Translation
 
 We use `Transifex <https://www.transifex.com/linuxmusternet/official-documentation/dashboard/>`__ to translate the documentation. Get started there!
 
-Build documantation in English
+Build documentation in English
 ++++++++++++++++++++++++++++++
 
 First you have to install ``sphinx-intl`` and the ``transifex-client``.
