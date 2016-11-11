@@ -132,6 +132,8 @@ Das Skript prüft die angegebenen Eintragungen in der Datei ``/etc/linuxmuster/w
 Clients mit neuem Linbo booten
 ------------------------------
 
+.. note:: Ab Linbo 2.3 ist es zwingend notwendig, im BIOS auch die Festplatte als Bootmedium einzustellen.
+
 Um sicherzustellen, dass das neue LINBO-System auch lokal auf den
 Clients installiert wird, erzwingt man eine Aktualisierung des Caches
 und einen Reboot.
@@ -157,6 +159,22 @@ Clients.
    heraus wird nun immer ein Neustart initiiert (Der sogenannte
    *reboot-Workaround* wird nun immer verwendet.)
 
+Fehlerbehebung mit einem USB-Stick
+__________________________________
+
+Wenn ein Arbeitsplatz mit der Fehlermeldung "Kernel panic" hängt oder
+in Schleifen immer wieder rebootet, kann ein Neuanfang über einen
+USB-Stick oder CD/DVD initiiert werden.
+
+Laden Sie dazu die die Datei ``linbo.iso`` von ihrem Server herunter (z.B. über http://10.16.1.1/linbo.iso)
+und brennen Sie diese auf CD/DVD oder kopieren diese auf einen
+USB-Stick, z.B. mit Hilfe des Befehls
+
+.. code-block:: console
+
+   # dd if=linbo.iso of=/dev/sdb
+
+wobei ``/dev/sdb`` der Schnittstellenname ihres USB-Sticks sein muss.
 
 Tausch- und Vorlagenordner umstellen
 ------------------------------------
