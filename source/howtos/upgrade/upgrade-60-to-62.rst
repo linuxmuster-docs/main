@@ -166,7 +166,7 @@ Wenn ein Arbeitsplatz mit der Fehlermeldung "Kernel panic" hängt oder
 in Schleifen immer wieder rebootet, kann ein Neuanfang über einen
 USB-Stick oder CD/DVD initiiert werden.
 
-Laden Sie dazu die die Datei ``linbo.iso`` von ihrem Server herunter (z.B. über http://10.16.1.1/linbo.iso)
+Laden Sie dazu die die Datei ``linbo.iso`` von ihrem Server herunter (z.B. über `<http://10.16.1.1/linbo.iso>`_)
 und brennen Sie diese auf CD/DVD oder kopieren diese auf einen
 USB-Stick, z.B. mit Hilfe des Befehls
 
