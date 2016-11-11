@@ -366,7 +366,7 @@ Wählen Sie entsprechend Ihrer Internetverbindung die passende Option mit den ``
 Statisch
 ````````
 
-Falls Sie `Statisch` gewählt haben, geben Sie die Daten, die Sie von Ihrem Provider (z.B. Belwü der ``ENTER``Tasten erhalten haben, ein und bestätigen Sie mit der ``ENTER``-Taste.
+Falls Sie `Statisch` gewählt haben, geben Sie die Daten, die Sie von Ihrem Provider (z.B. Belwü) erhalten haben, ein und bestätigen Sie mit der ``ENTER``-Taste.
 
 |STAT1|
 
