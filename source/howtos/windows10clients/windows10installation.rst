@@ -168,7 +168,6 @@ Starten Sie den Vorgang mit der Schaltfläche ``Erstellen+Hochladen``.
 .. hint:: Bei dieser Methode wird sofern ein Image mit dem Namen bereits vorhanden ist, das alte Image umbenannt und das
    aktuelle Image nimmt dessen Platz als aktives Image ein.
 
-Wählen Sie ``[Neuer Dateiname]`` und ``Neues Basisimage`` aus um ein Image zu erstellen welches das aktive Image nicht beeinflusst.
 
 Sobald der Vorgang abgeschlossen ist können Sie den Zustand der Installation nun immer auf diesen Punkt zurücksetzen.
 Das Image ist auf dem Server verfügbar und kann auf weitere Rechner ausgerollt werden.
