@@ -18,6 +18,7 @@ Neben dieser detaillierten Anleitungen in den Howtos steht Ihnen unsere Communit
 
    advisor
    teacher
+   student
    howtos
    addons
 
