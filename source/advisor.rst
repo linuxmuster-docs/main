@@ -36,6 +36,7 @@ Schritt-für-Schritt Anleitungen
    howtos/backup-migrating/index
    howtos/printer/index
    howtos/manage-users/index
+   howtos/change-teacher-passwords/index
 
 Bedienungsanleitungen
 ---------------------

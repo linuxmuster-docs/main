@@ -1,5 +1,5 @@
-Einstellungen über die Schulkonsole
-===================================
+Schulkonsole nutzen
+===================
 
 Aufgerufen wird die *Schulkonsole* mittels `<https://server:242>`_ in
 einem Webbrowser.
@@ -15,11 +15,12 @@ folgende Einstellungsmöglichkeiten
    :caption: Die Schulkonsole aus Sicht des Administrators
    :maxdepth: 1
 
+   account
    settings
-.. user
+   user
    quota
    printer
    hosts
-   LINBO
-   account
+   linbo
+   repair
    
