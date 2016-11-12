@@ -2,7 +2,7 @@
  Einstellungen in der Schulkonsole
 ===================================
 
-.. schulkonsole-einstellungen_
+.. _schulkonsole-einstellungen:
 
 Einstellungen der Schulkonsole
 ------------------------------
