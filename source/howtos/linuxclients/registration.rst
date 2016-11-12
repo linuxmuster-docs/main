@@ -53,10 +53,7 @@ Ist alles korrekt ausgefüllt, werden die Clientdaten über die Schaltfläche `R
 Registrierung übernehmen
 ------------------------
 
-.. note::
-
-   Sobald alle Rechner aufgenommen wurden, müssen Sie den Import der Rechner entweder in der Schulkonsole oder an der Konsole 
-   starten! 
+Sobald alle Rechner aufgenommen wurden, müssen Sie den Import der Rechner entweder in der Schulkonsole oder an der Konsole starten! 
 
 .. attention::
 
