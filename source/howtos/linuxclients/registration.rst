@@ -1,5 +1,4 @@
-Client-Registrierung
-====================
+Client-Registrierung ====================
 
 Neue Rechner werden entweder durch direkten Eintrag in die Datei ``/etc/linuxmuster/workstations`` und anschließendem Aufruf von ``import_workstations`` aufgenommen oder durch direkten Eintrag auf der Hosts-Seite der Schulkonsole -- angemeldet als `administrator` -- ins System importiert.
 
@@ -20,7 +19,7 @@ Klicken Sie auf den Reiter ''Imaging'' und loggen Sie sich mit dem LINBO-Passwor
 
 .. image:: media/registration/linbo-passwordentry.png
 
-Nun sind Sie LINBO-Administrator. Auf der Imaging-Seite fällt einem sofort das Timeout-Fenster auf, das anzeigt, nach welcher Zeit man automatisch wieder ausgeloggt wird. Mit einem Klick auf die Checkbox, kann der Timeout deaktiviert werden. 
+Nun sind Sie LINBO-Administrator. Auf der Imaging-Seite fällt das Timeout-Fenster auf, welches die Zeit anzeigt, nach der man automatisch ausgeloggt wird. Mit einem Klick auf die Checkbox, kann der Timeout deaktiviert werden. 
 
 .. image:: media/registration/linbo-timeoutdialog.png
 
@@ -42,13 +41,26 @@ Nun sind Sie LINBO-Administrator. Auf der Imaging-Seite fällt einem sofort das 
 
 Ist alles korrekt ausgefüllt, werden die Clientdaten über die Schaltfläche `Registrieren` auf den Server hochgeladen. 
 
+.. note::
+
+   Werden weitere Clients registriert, dann muss man die Felder nicht mehr ausfüllen. Linbo inkrementiert an der richtigen
+   Stelle automatisch. Z.B. wird aus `r100-pc01` = `r100-pc02` und aus der IP-Adresse `10.16.100.1` =  `10.16.100.2`.
+   Es versteht sich von selbst dass, will man das Feature nutzen, man die Rechner in der richtigen Reihenfolge registrieren
+   muss!
+
 Registrierung übernehmen
 ------------------------
 
-In der Schulkonsole -- angemeldet als `administrator` -- erscheinen alle neuen Clients als `noch nicht ins System übernommen`. Dies muss in der Schulkonsole bestätigt werden.
-Ein Klick auf die Schaltfläche `Hosts jetzt übernehmen` erledigt das und der neu registrierte Client ist importiert.
+.. note::
 
-Alternativ werden alle registrierten Client mit dem Konsolenbefehl
+   Sobald alle Rechner aufgenommen wurden, müssen Sie den Import der Rechner entweder in der Schulkonsole oder an der Konsole 
+   starten! 
+
+In der Schulkonsole -- angemeldet als `administrator` -- erscheinen alle neuen Clients als `noch nicht ins System übernommen`. 
+Dies muss in der Schulkonsole bestätigt werden. Ein Klick auf die Schaltfläche `Hosts jetzt übernehmen` erledigt das und 
+die neu registrierten Clients sind importiert.
+
+Alternativ werden alle registrierten Clients mit dem Konsolenbefehl
 
 ::
 
