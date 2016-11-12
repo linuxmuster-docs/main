@@ -18,7 +18,7 @@ Laden Sie sich zunächst die benötigte Software herunter, beachten Sie dabei di
 IPFire
 ``````
 Laden Sie das Iso-Image (
-`IPFire Version 2.19 - Core Update 103 (x86_64) <http://downloads.ipfire.org/releases/ipfire-2.x/2.19-core103/ipfire-2.19.x86_64-full-core103.iso>`_ ) herunter und brennen es auf eine CD.
+`IPFire Version 2.19 - Core Update 107 (x86_64) <http://downloads.ipfire.org/releases/ipfire-2.x/2.19-core103/ipfire-2.19.x86_64-full-core103.iso>`_ ) herunter und brennen es auf eine CD.
 
   .. warning::
    Neuere Version des IPFire wurden noch nicht auf Kompatibilität getestet. Es wird dringend empfohlen nur getestete Versionen des IPFire einzusetzen.
