@@ -78,7 +78,7 @@ Das ist eine Beispielkonfiguration für eine Partition 50GB für eine Windowsins
     # kein automatisches Befüllen des Caches beim LINBO-Start
 
     DownloadType = torrent
-    # Image-Download per Rsync
+    # Image-Download per torrent (alternativ rsync, oder multicast. Multicast muss ggf. noch eingerichtet werden)
 
     BackgroundFontColor = white
     # Bildschirmschriftfarbe (default: white)
@@ -114,13 +114,13 @@ Das ist eine Beispielkonfiguration für eine Partition 50GB für eine Windowsins
 
 
     [Partition]
-    # Start einer Partitionsdefinition, Ubuntu
+    # Start einer Partitionsdefinition, Cache
 
     Dev = /dev/sda2
     # Device-Name der Partition (sda2 = zweite Partition auf erster Platte)
 
-    Size =
-    # Partitionsgroesse in kB (Bsp.: 90G)
+    Size = 
+    # Partitionsgroesse in kB (Muss bei der Cache-Partition nicht angegeben werden. Es wird automatisch der Rest der Platte verwendet)
 
     Id = 83
     # Partitionstyp (83 = Linux, 82 = swap, c = FAT32, 7 = NTFS, ...)
@@ -144,7 +144,7 @@ Das ist eine Beispielkonfiguration für eine Partition 50GB für eine Windowsins
     Description = Windows 1 Edu
     # Beschreibung
 
-    IconName = winxp.png
+    IconName = win10.png
     # Icon für die Startseite, muss unter /var/linbo/icons abgelegt sein
 
     Image =
@@ -184,7 +184,7 @@ Das ist eine Beispielkonfiguration für eine Partition 50GB für eine Windowsins
     # automatischer synchronisierter Start dieses Betriebssystems: yes|no
 
     AutostartTimeout = 3
-    # Timeout in Sekunden für Benutzerabbruch bei Autostart
+    # Timeout in Sekunden für Benutzerabbruch bei Autostart. Nach 3 Sekunden startet Windows
 
     DefaultAction = start
     # DefaultAction bei Autostart: start|sync|new halt einer beispielhaften start.conf
