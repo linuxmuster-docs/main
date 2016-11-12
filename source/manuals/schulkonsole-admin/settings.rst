@@ -11,20 +11,20 @@ Einstellungen der Schulkonsole
    :align: center
    :alt: Einstellungen der Schulkonsole
 
-+-----------------------------------+--------------------------------------------------------------------------------------------------------------+
-| **Abschnitt Global**              | **Erläuterungen**                                                                                            |
-|                                   |                                                                                                              |
-+===================================+==============================================================================================================+
-| *Sitzungsdauer*                   | Zeit, bis zum automatischen Logout aus der Schulkonsole.                                                     |
-+-----------------------------------+--------------------------------------------------------------------------------------------------------------+
-| *Überprüfe die Passwortgüte*      | Soll das Passwort auf Länge, der zwingenden Verwendung zweier unterschiedliche                               |
-|                                   | Zeichenarten und auf verbotene Sonderzeichen überprüft werden.                                               |
-+-----------------------------------+--------------------------------------------------------------------------------------------------------------+
-| *Minimale Passwortlänge*          | Diese Anzahl an Zeichen muss ein Passwort mindestens haben.                                                  |
-+-----------------------------------+--------------------------------------------------------------------------------------------------------------+
++-----------------------------------+-----------------------------------------------------------------------------------+
+| **Abschnitt Global**              | **Erläuterungen**                                                                 |
+|                                   |                                                                                   |
++===================================+===================================================================================+
+| *Sitzungsdauer*                   | Zeit, bis zum automatischen Logout aus der Schulkonsole.                          |
++-----------------------------------+-----------------------------------------------------------------------------------+
+| *Überprüfe die Passwortgüte*      | Soll das Passwort auf Länge, der zwingenden Verwendung zweier unterschiedliche    |
+|                                   | Zeichenarten und auf verbotene Sonderzeichen überprüft werden.                    |
++-----------------------------------+-----------------------------------------------------------------------------------+
+| *Minimale Passwortlänge*          | Diese Anzahl an Zeichen muss ein Passwort mindestens haben.                       |
++-----------------------------------+-----------------------------------------------------------------------------------+
 
-Einstellungen Benutzerverwaltung Global
----------------------------------------
+Einstellungen der Benutzerverwaltung
+------------------------------------
 
 .. image:: media/schulkonsole-einstellungen-global.png
 
@@ -64,8 +64,9 @@ Einstellungen Benutzerverwaltung Global
 |                                   |                                                                                                              |
 +-----------------------------------+--------------------------------------------------------------------------------------------------------------+
 
-Einstellungen Benutzerverwaltung Kodierung
-------------------------------------------
+Kodierung
++++++++++
+
 
 .. image:: media/schulkonsole-einstellungen-kodierung.png
 
@@ -86,8 +87,9 @@ Einstellungen Benutzerverwaltung Kodierung
 |                           | die nicht als Benutzer in Klassen der Schulverwaltung entnommen wurden.                                   |
 +---------------------------+-----------------------------------------------------------------------------------------------------------+
 
-Einstellungen Benutzerverwaltung E-Mail
----------------------------------------
+E-Mail
+++++++
+
 
 .. image:: media/schulkonsole-einstellungen-email.png
 
@@ -108,8 +110,9 @@ Einstellungen Benutzerverwaltung E-Mail
 | *melden*                 |                                                                                                      |
 +--------------------------+------------------------------------------------------------------------------------------------------+
 
-Einstellungen Benutzerverwaltung Login und Löschen
---------------------------------------------------
+Login und Löschen
++++++++++++++++++
+
 
 Den Abschnitt gibt es je einmal für *Schüler* und *Lehrer*, da man für diese Benutzergruppen sicherlich teilweise unterschiedliche Werte
 festlegen möchte. Für den Abschnitt *Löschen* gilt das ebenfalls.
@@ -117,38 +120,43 @@ festlegen möchte. Für den Abschnitt *Löschen* gilt das ebenfalls.
 .. image:: media/schulkonsole-einstellungen-login.png
 
 
-+--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Abschnitt Login**      | **Erläuterungen**                                                                                                                                                                    |
-|                          |                                                                                                                                                                                      |
-+==========================+======================================================================================================================================================================================+
-| *Zufallspasswort*        | Mit einem Haken an dieser Stelle wird für jeden neu angelegten Benutzer ein Zufallspasswort generiert. Andernfalls wird jedem neuen Benutzer das Passwort                            |
-|                          | *linux*                                                                                                                                                                              |
-|                          | vergeben, was eine Sicherheitslücke darstellt, wenn die Benutzer ihr Passwort nicht ändern. Die Loginkärtchen der neu angelegten Schüler können von jedem Lehrer ausgedruckt werden. |
-|                          |                                                                                                                                                                                      |
-+--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| *Zufallspasswortzeichen* | Bestimmt die Länge der Zufallspasswörter                                                                                                                                             |
-|                          |                                                                                                                                                                                      |
-+--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| *Shell aktivieren*       | Der Benutzer benötigt eine Shell, wenn er sich auf einem Linux-System mit                                                                                                            |
-|                          | *gnome-*                                                                                                                                                                             |
-|                          | Oberfläche anmelden will.                                                                                                                                                            |
-|                          |                                                                                                                                                                                      |
-+--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| *Sambapasswort ändern*   | Ist das gewählt, müssen Benutzer bei der ersten Anmeldung ihr Passwort ändern. Das bezieht sich nur auf Windows.                                                                     |
-|                          |                                                                                                                                                                                      |
-+--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Abschnitt Löschen**    | **Erläuterungen**                                                                                                                                                                    |
-|                          |                                                                                                                                                                                      |
-+--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| *Duldungszeitraum*       | Das ist der Zeitraum, in dem sich ein Benutzer nach Löschung in der Schulverwaltung noch am System anmelden kann, dann aber keinen Zugriff mehr auf das Klassentauschverzeichnis hat.|
-|                          |                                                                                                                                                                                      |
-+--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| *Deaktivierungs­zeitraum*| In dieser Zeit ist keine Anmeldung mehr möglich, allerdings kann der Netzwerkbetreuer den Benutzer mit all seinen Daten wieder aktivieren und ins System zurückholen.                |
-|                          |                                                                                                                                                                                      |
-+--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------+--------------------------------------------------------------------------------------------------------------------+
+| **Abschnitt Login**      | **Erläuterungen**                                                                                                  |
+|                          |                                                                                                                    |
++==========================+====================================================================================================================+
+| *Zufallspasswort*        | Mit einem Haken an dieser Stelle wird für jeden neu angelegten Benutzer ein                                        |
+|                          | Zufallspasswort generiert. Andernfalls wird jedem neuen Benutzer das Passwort                                      |
+|                          | *linux*                                                                                                            |
+|                          | vergeben, was eine Sicherheitslücke darstellt, wenn die Benutzer ihr Passwort                                      |
+|                          | nicht ändern. Die Loginkärtchen der neu angelegten Schüler können von jedem Lehrer ausgedruckt werden.             |
+|                          |                                                                                                                    |
++--------------------------+--------------------------------------------------------------------------------------------------------------------+
+| *Zufallspasswortzeichen* | Bestimmt die Länge der Zufallspasswörter                                                                           |
+|                          |                                                                                                                    |
++--------------------------+--------------------------------------------------------------------------------------------------------------------+
+| *Shell aktivieren*       | Der Benutzer benötigt eine Shell, wenn er sich auf einem Linux-System mit                                          |
+|                          | *gnome-*                                                                                                           |
+|                          | Oberfläche anmelden will.                                                                                          |
+|                          |                                                                                                                    |
++--------------------------+--------------------------------------------------------------------------------------------------------------------+
+| *Sambapasswort ändern*   | Ist das gewählt, müssen Benutzer bei der ersten Anmeldung ihr Passwort ändern. Das bezieht sich nur auf Windows.   |
+|                          |                                                                                                                    |
++--------------------------+--------------------------------------------------------------------------------------------------------------------+
+| **Abschnitt Löschen**    | **Erläuterungen**                                                                                                  |
+|                          |                                                                                                                    |
++--------------------------+--------------------------------------------------------------------------------------------------------------------+
+| *Duldungszeitraum*       | Das ist der Zeitraum, in dem sich ein Benutzer nach Löschung in der Schulverwaltung                                |
+|                          | noch am System anmelden kann, dann aber keinen Zugriff mehr auf das Klassentauschverzeichnis hat.                  |
+|                          |                                                                                                                    |
++--------------------------+--------------------------------------------------------------------------------------------------------------------+
+| *Deaktivierungs­zeitraum*| In dieser Zeit ist keine Anmeldung mehr möglich, allerdings kann der Netzwerkbetreuer                              |
+|                          | den Benutzer mit all seinen Daten wieder aktivieren und ins System zurückholen.                                    |
+|                          |                                                                                                                    |
++--------------------------+--------------------------------------------------------------------------------------------------------------------+
 
-Einstellungen Benutzerverwaltung Druckdaten
--------------------------------------------
+Druckdaten
+++++++++++
+
 
 Die folgenden Daten werden z.B. für die Erstellung von Passwortzetteln mit Informationen genutzt, die neue Benutzer erhalten.
 
@@ -178,3 +186,54 @@ Die folgenden Daten werden z.B. für die Erstellung von Passwortzetteln mit Info
 +--------------------------+----------------------------------------------------------------------------------------------------+
 
 Alle Änderungen werden erst wirksam, wenn ganz unten auf ``Änderungen übernehmen`` geklickt wird.
+
+
+Einstellungen Räume
+-------------------
+
+Legen Sie hier die Standardeinstellungen für den Zugang zu *Internet*,
+*Intranet* und *Webfilter* für die Workstations in den Räumen fest.
+
+.. image:: media/schulkonsole-settings-rooms.png
+
+* Aus der "default"-Zeile kann für einen gesamten Raum eine Ausnahme
+  hinzugefügt werden.
+ 
+* Um eine Ausnahme für eine Workstation anzulegen, muss ein Eintrag für
+  den Raum hinzugefügt worden sein.
+
+* Um einen Eintrag zu löschen, setzen Sie das Häkchen in der
+  entsprechenden Checkbox am Zeilenende.
+ 
+* Um die Rechner in einem Raum oder einzelne Rechner zurückzusetzen,
+  setzen Sie das Häkchen in der entsprechenden Checkbox und wählen die
+  Aktion „Auswahl zurücksetzen“.
+ 
+* Legen Sie außerdem fest, welche Räume von der Schulkonsole als
+  Computerraum unter „aktueller Raum“ verwaltbar sein sollen.
+
+* Schliessen Sie die Aktion mit „Änderungen übernehmen“ ab.
+ 
+
+Einstellungen Klassen
+---------------------
+
+Nehmen Sie hier einige Einstellungen für Klassen vor.
+
+.. image:: media/schulkonsole-settings-class.png
+
+
+Einstellungen Projekte
+----------------------
+
+Nehmen Sie hier einige Einstellungen für Projekte vor.
+
+.. image:: media/schulkonsole-settings-projects.png
+
+
+Einstellungen Reparaturen
+-------------------------
+
+Nehmen Sie hier spezielle Reparatureinstellungen vor.
+
+.. image:: media/schulkonsole-settings-repairaddons.png
