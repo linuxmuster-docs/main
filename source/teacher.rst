@@ -12,6 +12,7 @@ Schritt-für-Schritt Anleitungen
    howtos/use-internet-in-class/index
    howtos/use-files-in-class/index
    howtos/change-student-passwords/index
+   howtos/print-student-passwords/index
    howtos/use-openvpn/index
    howtos/use-horde/index
    howtos/use-printer/index

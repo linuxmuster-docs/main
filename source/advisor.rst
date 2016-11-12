@@ -33,6 +33,7 @@ Schritt-für-Schritt Anleitungen
    howtos/upgrade/index
    howtos/keep-lmn-uptodate/index
    howtos/migrate/index
+   howtos/backup-migrating/index
    howtos/printer/index
    howtos/manage-users/index
 
