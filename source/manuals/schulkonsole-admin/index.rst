@@ -16,4 +16,10 @@ folgende Einstellungsmöglichkeiten
    :maxdepth: 1
 
    settings
-
+.. user
+   quota
+   printer
+   hosts
+   LINBO
+   account
+   
