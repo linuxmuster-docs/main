@@ -6,6 +6,7 @@ Es gibt verschiedene Möglichkeiten, wie Sie helfen können, Linuxmuster.net zu 
 .. toctree::
    :maxdepth: 1
 
+   translate
    edit
    new
 
