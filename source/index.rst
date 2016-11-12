@@ -17,6 +17,7 @@ Neben dieser detaillierten Anleitungen in den Howtos steht Ihnen unsere Communit
    :caption: Benutzerdokumentation
 
    advisor
+   teacher
    howtos
    addons
 
