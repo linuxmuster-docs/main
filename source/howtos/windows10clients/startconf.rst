@@ -17,6 +17,10 @@ und wählen anschließend die Gruppe (Hardwareklasse) die Sie editieren möchten
 Ändern Sie die Konfiguration nach Ihren Bedürfnissen und klicken Sie im Anschluss auf die Schaltfläche
 Änderungen Speichern. Wichtig sind dabei die Einstellungen unter dem Punkt Systeme.
 
+.. attention::
+             Geben Sie für Windows eine ausreichend große Partition an (Empfehlung: mindestens 50 G), da Windows 
+             extrem viel Festplattenplatz beansprucht. "Viel hilft viel ist hier ausnahmsweise richtig!".
+
 |1000000000000382000003C15DFFA156_png|
 
 
