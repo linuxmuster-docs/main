@@ -8,9 +8,10 @@ Um Ihr Passwort zu ändern melden Sie sich mit Ihrem Benutzernamen (bestehend au
 
 Geben Sie unter „Passwortänderung“ nochmals Ihr aktuelles Passwort ein, sowie zweimal das neue Passwort.
 Beachten Sie die Anforderungen an das neue Passwort:
+
   * Die Mindestlänge des Passwortes sind 8 Zeichen.
   * Das Passwort muss mindestens einen Großbuchstaben und einen Kleinbuchstaben oder eine Zahl enthalten.
-  * Nicht alle Sonderzeichen können verwendet werden. Folgende Zeichen funktionieren **nicht**: äöüß$&{}![]+#
+  * Nicht alle Sonderzeichen können verwendet werden. Folgende Zeichen funktionieren **nicht**: ``äöüß$&{}![]+#``
 
 .. image:: media/03.png
 
