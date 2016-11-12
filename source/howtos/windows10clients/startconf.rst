@@ -162,9 +162,6 @@ Größe der Cache-Partition = Rest der Festplatte.
     Root = /dev/sda1
     # Rootpartition, in die das BS installiert ist
 
-    Kernel = auto
-    # Windows: auto (LINBO & Grub erkennen die Startparameter automatisch)
-
     Initrd =
     # Relativer Pfad zur Initrd, bei Windows immer leer
 
@@ -212,3 +209,7 @@ Größe der Cache-Partition = Rest der Festplatte.
     :width: 12.002cm
     :height: 7.261cm
 
+..note ::
+         **Faustregel:** Die Cachepartition ist ausreichend groß, wenn sie die gleiche Größe wie die 
+         Windows-Partition hat. Für zukünftige Installationen unter Windows sollte man die Festplatte 
+         nicht zu knapp bemessen. 150 G sollte bei Windows die unterste Größe sein!
