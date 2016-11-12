@@ -120,7 +120,8 @@ Das ist eine Beispielkonfiguration für eine Partition 50GB für eine Windowsins
     # Device-Name der Partition (sda2 = zweite Partition auf erster Platte)
 
     Size = 
-    # Partitionsgroesse in kB (Muss bei der Cache-Partition nicht angegeben werden. Es wird automatisch der Rest der Platte verwendet)
+    # Partitionsgroesse in kB (Muss bei der Cache-Partition nicht angegeben werden. Es wird automatisch der 
+    Rest der Platte verwendet)
 
     Id = 83
     # Partitionstyp (83 = Linux, 82 = swap, c = FAT32, 7 = NTFS, ...)
