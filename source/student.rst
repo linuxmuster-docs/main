@@ -8,5 +8,5 @@ Schritt-für-Schritt Anleitungen
    :glob:
    :maxdepth: 1
 
-   howtos/change-student-passwords/index
+   howtos/change-own-password/index
 
