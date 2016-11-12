@@ -209,7 +209,7 @@ Größe der Cache-Partition = Rest der Festplatte.
     :width: 12.002cm
     :height: 7.261cm
 
-..note ::
+.. note::
          **Faustregel:** Die Cachepartition ist ausreichend groß, wenn sie die gleiche Größe wie die 
          Windows-Partition hat. Für zukünftige Installationen unter Windows sollte man die Festplatte 
          nicht zu knapp bemessen. 150 G sollte bei Windows die unterste Größe sein!
