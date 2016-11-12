@@ -122,7 +122,7 @@ Größe der Cache-Partition = Rest der Festplatte.
     # Device-Name der Partition (sda2 = zweite Partition auf erster Platte)
 
     Size = 
-    # Partitionsgroesse in kB Muss bei der Cache-Partition nicht angegeben werden. 
+    # Partitionsgroesse in kB muss bei der Cache-Partition nicht angegeben werden. 
     # Es wird automatisch der Rest der Festplatte verwendet
 
     Id = 83
@@ -162,8 +162,8 @@ Größe der Cache-Partition = Rest der Festplatte.
     Root = /dev/sda1
     # Rootpartition, in die das BS installiert ist
 
-    Kernel = reboot
-    # Relativer Pfad zum Kernel, bei Windows immer grub.exe
+    Kernel = auto
+    # Windows: auto (LINBO & Grub erkennen die Startparameter automatisch)
 
     Initrd =
     # Relativer Pfad zur Initrd, bei Windows immer leer
