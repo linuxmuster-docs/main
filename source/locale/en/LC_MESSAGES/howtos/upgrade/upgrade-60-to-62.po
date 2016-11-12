@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-10 20:56+0700\n"
+"POT-Creation-Date: 2016-11-12 08:21+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -211,18 +211,24 @@ msgstr ""
 
 #: ../../source/howtos/upgrade/upgrade-60-to-62.rst:135
 msgid ""
+"Ab Linbo 2.3 ist es zwingend notwendig, im BIOS auch die Festplatte als "
+"Bootmedium einzustellen."
+msgstr ""
+
+#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:137
+msgid ""
 "Um sicherzustellen, dass das neue LINBO-System auch lokal auf den Clients "
 "installiert wird, erzwingt man eine Aktualisierung des Caches und einen "
 "Reboot."
 msgstr ""
 
-#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:139
+#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:141
 msgid ""
 "Folgender Befehl auf der Serverkonsole sorgt dafür, dass beim nächsten "
 "Bootvorgang per PXE der Cache initialisiert wird (und rebootet wird):"
 msgstr ""
 
-#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:146
+#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:148
 msgid ""
 "Sollten sich in Ihrem Netzwerk neben den Clients, die via PXE-Netwerk-Boot "
 "starten, auch solche befinden, die Linbo nur lokal starten, schalten Sie die"
@@ -232,7 +238,7 @@ msgid ""
 "Initialisierung auch bei diesen Clients."
 msgstr ""
 
-#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:154
+#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:156
 msgid ""
 "Nach dem Upgrade sollten alle Clients wie gewohnt weiter funktionieren. Die "
 "Bildschirmausgabe beim Bootvorgang ist leicht verändert und vor dem "
@@ -241,72 +247,94 @@ msgid ""
 "verwendet.)"
 msgstr ""
 
-#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:162
+#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:163
+msgid "Fehlerbehebung mit einem USB-Stick"
+msgstr ""
+
+#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:165
+msgid ""
+"Wenn ein Arbeitsplatz mit der Fehlermeldung \"Kernel panic\" hängt oder in "
+"Schleifen immer wieder rebootet, kann ein Neuanfang über einen USB-Stick "
+"oder CD/DVD initiiert werden."
+msgstr ""
+
+#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:169
+msgid ""
+"Laden Sie dazu die die Datei ``linbo.iso`` von ihrem Server herunter (z.B. "
+"über `<http://10.16.1.1/linbo.iso>`_) und brennen Sie diese auf CD/DVD oder "
+"kopieren diese auf einen USB-Stick, z.B. mit Hilfe des Befehls"
+msgstr ""
+
+#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:177
+msgid "wobei ``/dev/sdb`` der Schnittstellenname ihres USB-Sticks sein muss."
+msgstr ""
+
+#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:180
 msgid "Tausch- und Vorlagenordner umstellen"
 msgstr ""
 
-#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:164
+#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:182
 msgid ""
 "Die Tausch- und Vorlagenordner der Klassen/Projekte und des aktuellen Raums "
 "müssen ab linuxmuster.net 6.1 von den bisherigen so genannten `bind-mounts` "
 "auf verlinkte `shares` umgestellt werden."
 msgstr ""
 
-#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:169
+#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:187
 msgid "Homeverzeichnisse bereinigen"
 msgstr ""
 
-#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:171
+#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:189
 msgid "Dazu ist es zunächst erforderlich die Verzeichnisse"
 msgstr ""
 
-#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:178
+#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:196
 msgid ""
 "in jedem Benutzerverzeichnis zu entfernen. Dies kann man mit folgenden "
 "Befehlen für alle Benutzer oder gezielt für einzelne Benutzer erledigt "
 "werden:"
 msgstr ""
 
-#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:188
+#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:206
 msgid ""
 "Es ist notwendig, dass die Benutzer nicht am System angemeldet sind, sonst "
 "können die in Benutzung befindlichen Links nicht entfernt werden."
 msgstr ""
 
-#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:192
+#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:210
 msgid "Bind-mounts abschalten"
 msgstr ""
 
-#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:194
+#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:212
 msgid ""
 "Die Verwendung der bind-mounts auf dem Server sind händisch abzuschalten. "
 "Dies wurde so vorgesehen, damit ein Parallelbetrieb als Übergang genutzt "
 "werden kann. Dazu in den Dateien"
 msgstr ""
 
-#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:201
+#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:219
 msgid ""
 "die Zeilen mit \"sophomorix-bind\" durch Voranstellen eines ``#`` "
 "auszukommentieren."
 msgstr ""
 
-#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:209
+#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:227
 msgid ""
 "Damit werden die bind-mounts bei der Benutzeran- bzw. abmeldung nicht mehr "
 "angelegt bzw. entfernt."
 msgstr ""
 
-#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:211
+#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:229
 msgid ""
 "Da es möglich ist, dass zum Umstellungszeitpunkt Bind-mounts gesetzt waren, "
 "sollten diese entfernt werden mit:"
 msgstr ""
 
-#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:218
+#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:236
 msgid "Dateirechte umstellen"
 msgstr ""
 
-#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:220
+#: ../../source/howtos/upgrade/upgrade-60-to-62.rst:238
 msgid ""
 "Mit dem Upgrade von 6.0 auf 6.1 müssen auch noch die Dateirechte/Eigentümer "
 "von schon erstellten Verzeichnissen in den Tauschordnern angepasst werden.  "

@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-10 20:56+0700\n"
+"POT-Creation-Date: 2016-11-12 08:21+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,13 +20,14 @@ msgstr ""
 
 #: ../../source/howtos/manage-users/konfiguration.rst:2
 msgid "Grundkonfiguration der Benutzerverwaltung"
-msgstr ""
+msgstr "Basic configuration of user administration"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:5
 msgid ""
 "Einstellungen in der Datei sophomorix.conf vor dem ersten Anlegen von "
 "Benutzern"
 msgstr ""
+"Settings in the file sophomorix.conf before the first creation of users"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:7
 msgid ""
@@ -35,6 +37,11 @@ msgid ""
 "können Sie direkt am Server machen, oder Sie gehen von einem Client des "
 "Netzwerks aus mittels *putty* auf den Server."
 msgstr ""
+"After the server has been installed, the main configuration file "
+"*sophomorix.conf *, that can be found under ``/etc/sophomorix/user/``, has "
+"to be adapted [#f1]_. To do this, the file must be edited by the user root. "
+"You can do this directly on the server, or go to the server from a client on"
+" the network using *putty*."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:12
 msgid ""
@@ -43,12 +50,17 @@ msgid ""
 "stellen auf *ssh* mit Port 22 um. Dann können Sie sich als root anmelden und"
 " die Datei in einem Editor [#f2]_ aufrufen [#f3]_."
 msgstr ""
+"*Putty* is a freeware program that you can download and then start. Enter "
+"the name of the server and set *ssh* to port 22. Then you can login as root "
+"and open [#f3]_ the file in an editor [#f2]_."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:16
 msgid ""
 "Die einzelnen Angaben sind sehr gut kommentiert und mit Beispielen versehen."
 " Zeilen, die mit einem ``#`` beginnen, sind Kommentarzeilen."
 msgstr ""
+"The individual data are very well commented and provided with examples. "
+"Lines that start with a ``#`` are comments."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:19
 msgid ""
@@ -56,80 +68,88 @@ msgid ""
 "*Schulkonsole* im Menü unter *Einstellungen* -> *Benutzerverwaltung* gemacht"
 " werden."
 msgstr ""
+"Most of the settings can also be set by the user administrator in the "
+"*school console* in the menu under *Settings* → *User Administration*."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:22
 msgid ""
 "In der *sophomorix.conf* können viele Einstellungen gemacht werden, unter "
 "anderem folgende Dinge werden dort festgelegt:"
 msgstr ""
+"In the *sophomorix.conf * config file many settings can be made, including "
+"the following things are defined there:"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:24
 msgid "der Schulname (Vorgabe: Schule), wird z.B. bei Passwortlisten benutzt"
-msgstr ""
+msgstr "The school name (default: school), e.g. is used on password lists"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:25
 msgid "die Kodierung von Benutzerdateien"
-msgstr ""
+msgstr "the encoding of user files"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:26
 msgid "die zulässigen Geburtsjahreszahlen für Schüler"
-msgstr ""
+msgstr "The allowed year of birth for pupils"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:27
 msgid "Mindest- und Maximalschüleranzahl pro Klasse"
-msgstr ""
+msgstr "Minimum and maximum number of pupils per class"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:28
 msgid "Anlegen von Schülern zukünftiger Klassen (Sternchenklassen)"
-msgstr ""
+msgstr "Creation of pupils of future classes (asterisk classes)"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:29
 msgid "Anzahl von Zeichen für Schüler/Lehrer Loginnamen"
-msgstr ""
+msgstr "Number of characters for student / teacher loginnames"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:30
 msgid "Zufallspasswörter verwenden (getrennt für Lehrer und Schüler)"
-msgstr ""
+msgstr "Use random passwords (separated for teachers and students)"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:31
 msgid "Länge der Zufallspasswörter (getrennt für Lehrer und Schüler)"
-msgstr ""
+msgstr "Length of random passwords (separated for teachers and students)"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:32
 msgid ""
 "Einloggen per *ssh* (getrennt für Lehrer und Schüler), entspricht „Shell "
 "aktivieren“ in der Schulkonsole,"
 msgstr ""
+"Log in via *ssh* (separated for teachers and students), equivalent to "
+"\"Enable shell\" in the school console,"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:33
 msgid ""
 "Erstpasswort ändern müssen beim ersten Anmelden unter Windows(getrennt für "
 "Lehrer und Schüler)"
 msgstr ""
+"Change the first password on the first login in Windows (separate for "
+"teachers and students)"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:34
 msgid "Duldungs- und Deaktivierungszeitraum vor dem Löschen von Benutzern"
-msgstr ""
+msgstr "Toleration and deactivation period before deleting users"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:35
 msgid "Zusammensetzung der E-Mailadressen"
-msgstr ""
+msgstr "Composition of e-mail addresses"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:36
 msgid "Warnung bei Plattenplatzmangel für E-Mails"
-msgstr ""
+msgstr "Warning for disk space shortage for e-mail"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:37
 msgid "Festlegung des Log-Levels"
-msgstr ""
+msgstr "Set the log level"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:38
 msgid "Einschalten der Quotas"
-msgstr ""
+msgstr "Switch on the quotas"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:44
 msgid "Grundeinstellungen in der Schulkonsole"
-msgstr ""
+msgstr "Basic settings in the school console"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:46
 msgid ""
@@ -137,16 +157,21 @@ msgid ""
 "Webbrowser. Nach Anmeldung als administrator findet man im Hauptmenü die "
 "Rubrik *Einstellungen* mit dem Menüpunkt *Benutzerverwaltung*."
 msgstr ""
+"Open the *school console* - https://servername:242 - in a web browser. After"
+" logging on as an administrator, you will find the *Settings* section with "
+"the menu item *User administration* in the main menu."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:49
 msgid ""
 "In der Rubrik *Einstellungen* gibt es verschiedene Abschnitte, die wir hier "
 "kurz vorstellen:"
 msgstr ""
+"In the section *Settings* there are different sections, which we briefly "
+"present here:"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:52
 msgid "**Abschnitt Global**"
-msgstr ""
+msgstr "**Section Global**"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:52
 #: ../../source/howtos/manage-users/konfiguration.rst:90
@@ -155,41 +180,47 @@ msgstr ""
 #: ../../source/howtos/manage-users/konfiguration.rst:152
 #: ../../source/howtos/manage-users/konfiguration.rst:167
 msgid "**Erläuterungen**"
-msgstr ""
+msgstr "**Explanations**"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:55
 msgid "*Logmeldungen*"
-msgstr ""
+msgstr "*Log messages*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:55
 msgid ""
 "Mit dieser Angabe stellen Sie ein, wie ausführlich *Sophomorix* "
 "Informationen über die aktuellen Aktionen ausgibt."
 msgstr ""
+"With this, you specify how detailed *Sophomorix* provides information about "
+"the current actions."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:59
 msgid "*Anzahl der Schüler pro Klasse*"
-msgstr ""
+msgstr "*Number of students per class*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:59
 msgid ""
 "Mit diesen Angaben werden die Schülerzahlen aus der Schulverwaltung auf "
 "Gültigkeit geprüft."
 msgstr ""
+"With this information the student numbers from the school administration are"
+" checked for validity."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:63
 msgid "*Geburtsjahreszahl* *für Schüler*"
-msgstr ""
+msgstr "*Year of birth for pupils*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:63
 msgid ""
 "Mit diesen Angaben werden die Geburtsdaten aus der Schulverwaltung auf "
 "Gültigkeit geprüft."
 msgstr ""
+"With this information, the birth data from the school administration is "
+"checked for validity."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:67
 msgid "*Sternchenklassen* *filtern*"
-msgstr ""
+msgstr "*Filter Asterisk classes*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:67
 msgid ""
@@ -197,24 +228,29 @@ msgid ""
 " das nächste Schuljahr Sternchen gemacht. Diese Schüler können heraus "
 "gefiltert werden, damit sie in den anderen Report-Dateien nicht stören."
 msgstr ""
+"In the school management program *Splan*, starlets are made before the new "
+"entrance classes for the next school year. These students can be filtered "
+"out so they do not interfere with the other report files."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:73
 msgid "*Quota aktivieren*"
-msgstr ""
+msgstr "*Activate Quota*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:73
 msgid ""
 "Hier können Sie angeben, ob die Benutzer nur begrenzten Plattenplatz zur "
 "Verfügung gestellt bekommen sollen."
 msgstr ""
+"Here, you can specify whether users should only have limited disk space "
+"available."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:76
 msgid "*Standardquota*"
-msgstr ""
+msgstr "*default quota*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:78
 msgid "*Lehrer / Schüler*"
-msgstr ""
+msgstr "*Teacher / pupils*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:76
 msgid ""
@@ -222,24 +258,29 @@ msgid ""
 "Wie viele das sind hängt von der Partitionierung ihrer Serverplatte ab. Der "
 "letzte Eintrag ohne Partition bezieht sich auf Mailquota."
 msgstr ""
+"The values ​​must be entered separately for the individual partitions. How "
+"many of these are dependent on the partitioning of their server disk. The "
+"last entry without a partition refers to Mailquota."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:81
 msgid "*Schulweites Tauschen aktivieren*"
-msgstr ""
+msgstr "*Enable school-wide sharing*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:81
 msgid ""
 "Damit stellen Sie ein, ob allen Benutzer der Ordner H:\\__tauschen\\tausch-"
 "Schule zur Verfügung steht."
 msgstr ""
+"This sets whether all users have the folder ``H:\\__tauschen\\tausch-"
+"Schule`` available."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:90
 msgid "**Abschnitt Kodierungen**"
-msgstr ""
+msgstr "**Section Codes**"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:93
 msgid "*schueler.txt*"
-msgstr ""
+msgstr "*schueler.txt*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:93
 msgid ""
@@ -247,29 +288,34 @@ msgid ""
 "die Interpretation der Zeichen eine entscheidende Rolle. Bei Windows ist es "
 "meistens win1252, bei Linux utf8."
 msgstr ""
+"Determines the encoding that this text file has in the system. This plays a "
+"decisive role for the interpretation of the characters. For Windows it is "
+"mostly win1252, with Linux utf8."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:96
 msgid "*lehrer.txt*"
-msgstr ""
+msgstr "*lehrer.txt*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:96
 msgid ""
 "Bestimmt die Kodierung der Datei, in der die Lehrer gespeichert werden."
-msgstr ""
+msgstr "Determines the encoding of the file in which the teachers are stored."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:99
 msgid "*extraschueler.txt*"
-msgstr ""
+msgstr "*extraschueler.txt*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:99
 msgid ""
 "Bestimmt die Kodierung der Datei, in der zusätzliche Schüler gespeichert "
 "werden, die nicht aus der Schulverwaltung übernommen werden."
 msgstr ""
+"Determines the encoding of the file in which additional students are saved "
+"who are not taken from school administration."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:102
 msgid "*extrakurse.txt*"
-msgstr ""
+msgstr "*extrakurse.txt*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:102
 msgid ""
@@ -277,33 +323,38 @@ msgid ""
 "Benutzern gespeichert werden, die nicht als Benutzer in Klassen der "
 "Schulverwaltung entnommen wurden."
 msgstr ""
+"Determines the encoding of the file that stores additional courses with "
+"additional users not taken as users in school administration classes."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:109
 msgid "**Abschnitt E-Mail**"
-msgstr ""
+msgstr "**Section E-Mail**"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:112
 msgid "*Mail-Alias*"
-msgstr ""
+msgstr "*Mail-Alias*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:112
 msgid ""
 "Der Mail-Alias ist eine alternative Mailadresse, die aussagekräftiger ist."
 msgstr ""
+"The mail alias is an alternative mail address, which is more meaningful."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:115
 msgid "*Mailquota-Warnungen*"
-msgstr ""
+msgstr "*Mail quota warnings*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:115
 msgid ""
 "Bestimmt, ob Benutzern bei Überschreitungen eines bestimmten Kontingents "
 "Warnungen zugestellt werden sollen."
 msgstr ""
+"Determines whether warnings are to be given to users when a certain quota is"
+" exceeded."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:118
 msgid "*Warnungen bei ...*"
-msgstr ""
+msgstr "*Warnings at ...*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:118
 msgid ""
@@ -311,15 +362,19 @@ msgid ""
 "einmal absolut und einmal relativ festgelegt werden, da unterschiedliche "
 "Benutzer unterschiedliche Quoten haben können."
 msgstr ""
+"The limit, at which these warnings are to be given. The limit can be fixed "
+"once absolute and once relative, as different users can have different "
+"quotas."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:121
 msgid "*Überschreitung an root* *melden*"
-msgstr ""
+msgstr "*Report to root*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:121
 msgid ""
 "Hier kann bestimmt werden, ob root eine Kopie der Quota-Warnungen erhält."
 msgstr ""
+"Here you can determine, if root receives a copy of the quota warnings."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:127
 msgid ""
@@ -327,14 +382,17 @@ msgid ""
 " Benutzergruppen sicherlich teilweise unterschiedliche Werte festlegen "
 "möchte. Für den Abschnitt *Löschen* gilt das ebenfalls."
 msgstr ""
+"The section is available once for *pupils* and *teachers*, since you would "
+"certainly want to set partly different values ​​for these user groups. This "
+"also applies to the *Delete* section."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:131
 msgid "**Abschnitt Login**"
-msgstr ""
+msgstr "**Section Login**"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:134
 msgid "*Zufallspasswort*"
-msgstr ""
+msgstr "*Random password*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:134
 msgid ""
@@ -344,42 +402,50 @@ msgid ""
 "Benutzer ihr Passwort nicht ändern. Die Loginkärtchen der neu angelegten "
 "Schüler können von jedem Lehrer ausgedruckt werden."
 msgstr ""
+"A checkmark at this point generates a random password for each newly created"
+" user. Otherwise, the password *linux* is given to each new user, which is a"
+" security breach if the users do not change their password. The logins of "
+"the newly created pupils can be printed by each teacher."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:139
 msgid "*Zufallspasswortzeichen*"
-msgstr ""
+msgstr "*Random character*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:139
 msgid "Bestimmt die Länge der Zufallspasswörter"
-msgstr ""
+msgstr "Sets the length of random passwords"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:142
 msgid "*Shell aktivieren*"
-msgstr ""
+msgstr "*Enable Shell*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:142
 msgid ""
 "Der Benutzer benötigt eine Shell, wenn er sich auf einem Linux-System mit "
 "*gnome-* Oberfläche anmelden will."
 msgstr ""
+"The user needs a shell if he wants to log on to a Linux system with *gnome-*"
+" user interface."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:147
 msgid "*Sambapasswort ändern*"
-msgstr ""
+msgstr "*Change Samba password*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:147
 msgid ""
 "Ist das gewählt, müssen Benutzer bei der ersten Anmeldung ihr Passwort "
 "ändern. Das bezieht sich nur auf Windows."
 msgstr ""
+"If this is selected, users must change their password at the first login. "
+"This only applies to Windows."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:152
 msgid "**Sektor Löschen**"
-msgstr ""
+msgstr "**Section Delete**"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:155
 msgid "*Duldungszeitraum*"
-msgstr ""
+msgstr "*Period of grace*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:155
 msgid ""
@@ -387,10 +453,13 @@ msgid ""
 "Schulverwaltung noch am System anmelden kann, dann aber keinen Zugriff mehr "
 "auf das Klassentauschverzeichnis hat."
 msgstr ""
+"This is the period in which a user can still log on to the system after "
+"deletion in the school administration, but then no longer has access to the "
+"class exchange directory."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:158
 msgid "*Deaktivierungs­zeitraum*"
-msgstr ""
+msgstr "*Deactivation period*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:158
 msgid ""
@@ -398,95 +467,109 @@ msgid ""
 "Netzwerkbetreuer den Benutzer mit all seinen Daten wieder aktivieren und ins"
 " System zurückholen."
 msgstr ""
+"During this time, no login is possible, but the network administrator can "
+"reactivate the user with all his data and return to the system."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:164
 msgid ""
 "Die folgenden Daten werden z.B. für die Erstellung von Passwortzetteln mit "
 "Informationen genutzt, die neue Benutzer erhalten."
 msgstr ""
+"The following data are obtained e.g. Is used to create password labels with "
+"information that new users receive."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:167
 msgid "**Abschnitt Druckdaten**"
-msgstr ""
+msgstr "**Print Data Section**"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:170
 msgid "*Schulname*"
-msgstr ""
+msgstr "*School name*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:170
 msgid "So erscheint der Schulname auf Ausdrucken wie z.B. Passwortlisten."
-msgstr ""
+msgstr "Thus, the name appears on printouts, e.g. Password lists."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:173
 msgid "*Interner Servername*"
-msgstr ""
+msgstr "*Internal server name*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:173
 msgid ""
 "Das ist der Name des Servers, unter dem er im Schulnetz angesprochen wird. "
 "Dieser Ausdruck dient den Benutzern zur Orientierung."
 msgstr ""
+"This is the name of the server under which he is addressed in the school "
+"network. This expression serves the users for orientation."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:176
 msgid "*Externer Servername*"
-msgstr ""
+msgstr "*External server name*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:176
 msgid ""
 "Hiermit ist ein Name, wie er z.B. über einen Service wie *dyndns* vergeben "
 "wird, gemeint."
-msgstr ""
+msgstr "This is a name you would use for services like *dyndns*."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:179
 msgid "*Samba-Domäne*"
-msgstr ""
+msgstr "*Samba domain*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:179
 msgid ""
 "Hier sollte der Wert eingestellt werden, den man bei der Installation für "
 "die Domäne der Schule angegeben hat."
 msgstr ""
+"Here, you should set the value that was specified during the installation "
+"for the domain of the school."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:182
 msgid "*Moodle-URL*"
-msgstr ""
+msgstr "*Moodle-URL*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:182
 msgid ""
 "Da ein eventuell betriebenes Moodle nicht unbedingt über den eigenen Server "
 "zu erreichen ist, kann diese URL hier explizit eingegeben werden."
 msgstr ""
+"Since a possibly operated Moodle is not necessarily to be reached via its "
+"own server, this URL can be entered here explicitly."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:185
 msgid "*Administratoren*"
-msgstr ""
+msgstr "*Administrators*"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:185
 msgid ""
 "Die Namen der Administratoren können angegeben werden, damit neue Benutzer "
 "leichter einen Ansprechpartner bei Problemen finden."
 msgstr ""
+"The names of the administrators can be specified so that new users can "
+"easily find a contact for problems."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:191
 msgid ""
 "Alle Änderungen werden erst in die Datei *sophomorix.conf* geschrieben und "
 "damit beim nächsten Durchlauf wirksam, wenn ganz unten auf geklickt wird."
 msgstr ""
+"All changes are written to the file *sophomorix.conf*, which means that the "
+"will take effect in the next run when the button is clicked at the bottom."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:195
 msgid "Footnotes"
-msgstr ""
+msgstr "Footnotes"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:196
 msgid ""
 "Die Datei muss ggf. hinsichtlich des Alters der Schüler angepasst werden."
-msgstr ""
+msgstr "The file may need to be adapted to the age of the students."
 
 #: ../../source/howtos/manage-users/konfiguration.rst:197
 msgid "Z.B. mcedit oder vim"
-msgstr ""
+msgstr "e.g. mcedit or vim"
 
 #: ../../source/howtos/manage-users/konfiguration.rst:198
 msgid ""
 "Es gibt noch weitere Möglichkeiten um von außen auf den Server zuzugreifen."
-msgstr ""
+msgstr "There are other ways to access the server from the outside."

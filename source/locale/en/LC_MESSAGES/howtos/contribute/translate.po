@@ -17,21 +17,15 @@ msgstr ""
 "Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/howtos/contribute/index.rst:2
-msgid "Wie Sie helfen können"
+#: ../../source/howtos/contribute/translate.rst:2
+msgid "Dokumentation übersetzen"
 msgstr ""
 
-#: ../../source/howtos/contribute/index.rst:4
+#: ../../source/howtos/contribute/translate.rst:4
 msgid ""
-"Es gibt verschiedene Möglichkeiten, wie Sie helfen können, Linuxmuster.net "
-"zu verbessern."
-msgstr ""
-
-#: ../../source/howtos/contribute/index.rst:13
-msgid "Fehler melden"
-msgstr ""
-
-#: ../../source/howtos/contribute/index.rst:14
-msgid ""
-"von Linuxmuster.net weitersagen (z.B. in Blogs, Sozialen Netzwerken, etc.)"
+"Die Dokumentation kann auf der `Projektseite bei Transifex "
+"<https://www.transifex.com/linuxmusternet/official-documentation/>`_  "
+"übersetzt werden. Klicken Sie einfach auf den blauen \"Help Translate "
+"'official documentation'\" und melden Sie sich mit ihrem Transifex-Konto an "
+"bzw. erstellen Sie ein neues."
 msgstr ""

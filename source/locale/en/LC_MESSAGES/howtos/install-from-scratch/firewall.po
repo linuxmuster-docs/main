@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-10 20:56+0700\n"
+"POT-Creation-Date: 2016-11-12 08:21+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -474,8 +474,8 @@ msgstr "Static"
 #: ../../source/howtos/install-from-scratch/firewall.rst:369
 msgid ""
 "Falls Sie `Statisch` gewählt haben, geben Sie die Daten, die Sie von Ihrem "
-"Provider (z.B. Belwü der ``ENTER``Tasten erhalten haben, ein und bestätigen "
-"Sie mit der ``ENTER``-Taste."
+"Provider (z.B. Belwü) erhalten haben, ein und bestätigen Sie mit der "
+"``ENTER``-Taste."
 msgstr ""
 
 #: ../../source/howtos/install-from-scratch/firewall.rst:371
@@ -488,6 +488,8 @@ msgid ""
 "``Pfeil``-Tasten auf `DNS- und Gatewayeinstellungen` und bestätigen Sie mit "
 "der ``ENTER`` -Taste."
 msgstr ""
+"If you selected `Static` the last step, go to `DNS and Gatewaye settings` "
+"with the ``arrow`` keys and confirm with the ``ENTER`` key."
 
 #: ../../source/howtos/install-from-scratch/firewall.rst:375
 msgid "|STAT2|"
@@ -498,6 +500,8 @@ msgid ""
 "Geben Sie nun Ihren `primären` und `sekundären` DNS sowie das Standard-"
 "Gateway ein und bestätigen Sie Ihre Eingabe mit der ``ENTER``-Taste."
 msgstr ""
+"Now enter your `primary` and `secondary` DNS and the default gateway and "
+"confirm your entry with the ``ENTER``-key."
 
 #: ../../source/howtos/install-from-scratch/firewall.rst:379
 msgid "|STAT3|"
@@ -508,6 +512,8 @@ msgid ""
 "Navigieren Sie mit ``Pfeil``-Tasten auf `Fertig` und bestätigen Sie Ihre "
 "Auswahl mit der ``ENTER``-Taste."
 msgstr ""
+"Navigate with ``Arrow`` keys on `Done` and confirm your selection with the "
+"``ENTER``-key."
 
 #: ../../source/howtos/install-from-scratch/firewall.rst:383
 #: ../../source/howtos/install-from-scratch/firewall.rst:394
@@ -520,7 +526,7 @@ msgstr "DHCP"
 
 #: ../../source/howtos/install-from-scratch/firewall.rst:388
 msgid "Falls Sie `DHCP` gewählt bestätigen Sie mit der ``ENTER``-Taste."
-msgstr ""
+msgstr "If you have selected `DHCP` press the ``ENTER`` key."
 
 #: ../../source/howtos/install-from-scratch/firewall.rst:390
 msgid "|DHCP1|"
@@ -532,10 +538,12 @@ msgid ""
 "``Pfeil``-Tasten auf `Fertig` und bestätigen Sie Ihre Auswahl mit der "
 "``ENTER`` -Taste."
 msgstr ""
+"If you selected `DHCP` the last step, go to `Done` with the ``arrow`` keys "
+"and confirm with the ``ENTER``-key."
 
 #: ../../source/howtos/install-from-scratch/firewall.rst:397
 msgid "Abschluss der Konfiguration"
-msgstr ""
+msgstr "Completion of configuration"
 
 #: ../../source/howtos/install-from-scratch/firewall.rst:399
 msgid ""
@@ -637,6 +645,8 @@ msgid ""
 " und stecken Sie es in die dritte. Testen Sie dies sicherheitshalber, indem "
 "Sie erneut auf die IP `10.16.1.254` pingen. Sie erhalten nun eine Antwort."
 msgstr ""
+"If you don't get an answer unplug the cable, insert it again in the third "
+"NIC and ping again the IP `10.16.1.254`. You should get an answer."
 
 #: ../../source/howtos/install-from-scratch/firewall.rst:449
 msgid "Zuordnen der Netzwerkkarte zum roten Netz"
@@ -673,6 +683,10 @@ msgid ""
 "die belassen sie auch vorerst so). Fahren Sie mit dem :ref:`ssh-config-"
 "label` fort. Gibt der Befehl"
 msgstr ""
+"If the command is executed without feedback, then the NIC is in the red "
+"network (an thus the third that is not wired yet is in the blue network, "
+"which you can leave for the time being so). Continue with :ref:`ssh-config-"
+"label` If you get this output"
 
 #: ../../source/howtos/install-from-scratch/firewall.rst:480
 msgid ""
@@ -680,10 +694,12 @@ msgid ""
 "diesem Fall die verbleibende dritte Netzwerkkarte mit Ihrem Router und "
 "führen danach den Befehl"
 msgstr ""
+"the network card in the blue network. Connect in this case, the remaining "
+"third network card to your router and run the command again."
 
 #: ../../source/howtos/install-from-scratch/firewall.rst:487
 msgid "erneut aus. Die „blaue Netzwerkkarte“ bleibt vorerst unverkabelt."
-msgstr ""
+msgstr "The \"blue network card\" initially remains unwired."
 
 #: ../../source/howtos/install-from-scratch/firewall.rst:492
 msgid "Anpassen der SSH-Konfiguration"
