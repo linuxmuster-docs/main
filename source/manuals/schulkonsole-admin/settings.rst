@@ -1,6 +1,6 @@
-===================================
- Einstellungen in der Schulkonsole
-===================================
+=====================
+ Menü: Einstellungen
+=====================
 
 .. _schulkonsole-einstellungen:
 
