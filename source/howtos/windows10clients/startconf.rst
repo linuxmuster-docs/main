@@ -44,7 +44,7 @@ Geben Sie den Befehl ein:
 Beispiel start.conf
 -------------------
 
-Das ist eine Beispielkonfiguration für eine Partition 50GB für eine Windowsinstallation und eine Cachepartition. Größe der Partition = Rest der Festplatte.
+Das ist eine Beispielkonfiguration für eine Partition 50GB für eine Windowsinstallation und eine Cachepartition. Größe der Cache-Partition = Rest der Festplatte.
 
 .. code:: bash
 
