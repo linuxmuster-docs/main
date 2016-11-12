@@ -57,7 +57,7 @@ Sobald alle Rechner aufgenommen wurden, müssen Sie den Import der Rechner entwe
 
 .. attention::
 
-   Der erste Rechner muss mit *import_workstations* importiert werden, da nur mit einem im System angemeldeten Rechner auf 
+   Der erste Rechner **muss** mit *import_workstations* importiert werden, da nur mit einem im System angemeldeten Rechner auf 
    die Schulkonsole zugegriffen werden kann!!
 
 In der Schulkonsole -- angemeldet als `administrator` -- erscheinen alle neuen Clients als `noch nicht ins System übernommen`. 
