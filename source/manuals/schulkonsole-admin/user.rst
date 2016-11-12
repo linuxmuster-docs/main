@@ -9,8 +9,7 @@ Benutzerlisten gepflegt, Änderungen überprüft und übernommen werden.
 Die genaue Funktionsweise wird in der Anleitung
 :ref:`howto-user-management` beschrieben.
 
-Darüber hinaus können Lehrerpasswörter zurückgesetzt werden, siehe
-  :ref:`howto-change-teacher-passwords`.
+Darüber hinaus können Lehrerpasswörter zurückgesetzt werden, siehe :ref:`howto-change-teacher-passwords`.
 
 Passwortlisten
 --------------
