@@ -61,6 +61,8 @@ In der Schulkonsole -- angemeldet als `administrator` -- erscheinen alle neuen C
 Dies muss in der Schulkonsole bestätigt werden. Ein Klick auf die Schaltfläche `Hosts jetzt übernehmen` erledigt das und 
 die neu registrierten Clients sind importiert.
 
+.. image:: media/registration/hosts-uebernehmen-schulkonsole.png
+
 Alternativ werden alle registrierten Clients mit dem Konsolenbefehl
 
 ::
