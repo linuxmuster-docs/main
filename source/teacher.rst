@@ -8,14 +8,13 @@ Schritt-für-Schritt Anleitungen
    :glob:
    :maxdepth: 1
 
-   howtos/starting/index
-   howtos/preparation-newterm
-   howtos/use-internet-in-class
-   howtos/use-files-in-class
+   howtos/preparation-newterm/index
+   howtos/use-internet-in-class/index
+   howtos/use-files-in-class/index
    howtos/change-student-password/index
-   howtos/use-openvpn
-   howtos/use-horde
-   howtos/use/printer
+   howtos/use-openvpn/index
+   howtos/use-horde/index
+   howtos/use-printer/index
    howtos/check-student-quota/index
 
 * Vorbereitung am Schuljahresanfang
