@@ -58,6 +58,11 @@ Registrierung übernehmen
    Sobald alle Rechner aufgenommen wurden, müssen Sie den Import der Rechner entweder in der Schulkonsole oder an der Konsole 
    starten! 
 
+.. attention::
+
+   Der erste Rechner muss mit *import_workstations* importiert werden, da nur mit einem im System angemeldeten Rechner auf 
+   die Schulkonsole zugegriffen werden kann!!
+
 In der Schulkonsole -- angemeldet als `administrator` -- erscheinen alle neuen Clients als `noch nicht ins System übernommen`. 
 Dies muss in der Schulkonsole bestätigt werden. Ein Klick auf die Schaltfläche `Hosts jetzt übernehmen` erledigt das und 
 die neu registrierten Clients sind importiert.
@@ -73,7 +78,4 @@ Alternativ werden alle registrierten Clients mit dem Konsolenbefehl
 
 ins System übernommen.
 
-.. attention::
 
-   Der erste Rechner muss mit *import_workstations* importiert werden, da nur mit einem im System angemeldeten Rechner auf 
-   die Schulkonsole zugegriffen werden kann!!
