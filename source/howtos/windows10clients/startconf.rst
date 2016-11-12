@@ -44,7 +44,8 @@ Geben Sie den Befehl ein:
 Beispiel start.conf
 -------------------
 
-Das ist eine Beispielkonfiguration für eine Partition 50GB für eine Windowsinstallation und eine Cachepartition. Größe der Cache-Partition = Rest der Festplatte.
+Das ist eine Beispielkonfiguration für eine Partition 50GB für eine Windowsinstallation und eine Cachepartition. 
+Größe der Cache-Partition = Rest der Festplatte.
 
 .. code:: bash
 
@@ -78,7 +79,8 @@ Das ist eine Beispielkonfiguration für eine Partition 50GB für eine Windowsins
     # kein automatisches Befüllen des Caches beim LINBO-Start
 
     DownloadType = torrent
-    # Image-Download per torrent (alternativ rsync, oder multicast. Multicast muss ggf. noch eingerichtet werden)
+    # Image-Download per torrent (alternativ rsync, oder multicast. Multicast muss ggf. 
+    # noch eingerichtet werden)
 
     BackgroundFontColor = white
     # Bildschirmschriftfarbe (default: white)
@@ -120,8 +122,8 @@ Das ist eine Beispielkonfiguration für eine Partition 50GB für eine Windowsins
     # Device-Name der Partition (sda2 = zweite Partition auf erster Platte)
 
     Size = 
-    # Partitionsgroesse in kB (Muss bei der Cache-Partition nicht angegeben werden. Es wird automatisch der 
-    # Rest der Platte verwendet)
+    # Partitionsgroesse in kB Muss bei der Cache-Partition nicht angegeben werden. 
+    # Es wird automatisch der Rest der Festplatte verwendet
 
     Id = 83
     # Partitionstyp (83 = Linux, 82 = swap, c = FAT32, 7 = NTFS, ...)
