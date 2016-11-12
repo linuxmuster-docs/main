@@ -15,7 +15,3 @@ Arbeitsstationen ("Clients") werden in der linuxmuster.net über die Software LI
     startconf
     windows10installation
 
-.. toctree::
-   :hidden:
-
-   computeraufnahme
