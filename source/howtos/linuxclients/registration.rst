@@ -35,7 +35,8 @@ Nun sind Sie LINBO-Administrator. Auf der Imaging-Seite fällt das Timeout-Fenst
    Rechnername 
       z.B. in der Form r100-pc01 (max. 15 Zeichen), (evtl. Gebäude berücksichtigen g21r100-pc01 ) eingeben. Beachten Sie bitte, dass als Zeichen nur Buchstaben und Zahlen erlaubt sind. Als Trennzeichen darf nur das Minus-Zeichen „-“ verwendet werden. Leerzeichen, Unterstriche oder andere Sonderzeichen (wie z.B. Umlaute, ß oder Satzzeichen) dürfen Sie hier unter keinen Umständen verwenden.
    IP Adresse  
-      Die IP-Adresse sollte zum Raum passen und außerhalb des Bereichs des DHCP-Servers liegen. Abhängig von Ihren Netzdaten z.B. 10.16.100.1 für diesen PC eingeben, üblicherweise *nicht* zwischen 10.16.1.100 und 10.16.1.200.
+      Die IP-Adresse sollte zum Raum passen und muss außerhalb des Bereichs für die Rechneraufnahme liegen. Abhängig von 
+      Ihren Netzdaten z.B. 10.16.100.1 für diesen PC eingeben, üblicherweise *nicht* zwischen 10.16.1.100 und 10.16.1.200.
    Rechnergruppe 
       Die Rechnergruppe, bspw. `ubuntuclient`, wurde zuvor in der zugehörigen Datei ``start.conf.<rechnergruppe>`` festgelegt.
 
@@ -63,6 +64,7 @@ die neu registrierten Clients sind importiert.
 
 .. image:: media/registration/hosts-uebernehmen-schulkonsole.png
 
+
 Alternativ werden alle registrierten Clients mit dem Konsolenbefehl
 
 ::
@@ -70,3 +72,8 @@ Alternativ werden alle registrierten Clients mit dem Konsolenbefehl
    server ~# import_workstations
 
 ins System übernommen.
+
+.. attention::
+
+   Der erste Rechner muss mit *import_workstations* importiert werden, da nur mit einem im System angemeldeten Rechner auf 
+   die Schulkonsole zugegriffen werden kann!!
