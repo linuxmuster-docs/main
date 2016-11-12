@@ -121,7 +121,7 @@ Das ist eine Beispielkonfiguration für eine Partition 50GB für eine Windowsins
 
     Size = 
     # Partitionsgroesse in kB (Muss bei der Cache-Partition nicht angegeben werden. Es wird automatisch der 
-    Rest der Platte verwendet)
+    # Rest der Platte verwendet)
 
     Id = 83
     # Partitionstyp (83 = Linux, 82 = swap, c = FAT32, 7 = NTFS, ...)
