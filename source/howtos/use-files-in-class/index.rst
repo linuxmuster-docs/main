@@ -70,7 +70,7 @@ Klicken Sie zum Abschluss auf den Button `Klassenarbeit starten`.
 
 Danach gelangen zur Übersicht im Klassenarbeitsmodus. Haben Sie den Schülern migeteilt, dass Sie sich mit dem Namen des PC (z.B. musterraum01) und dem festgelegten Kennwort (z.B. linuxmuster) am PC anmelden, warten Sie, bis alle Schüler dies durchgeführt haben.
 
-.. image:: media/room-test-handout.png
+.. image:: media/room_test_handout.png
 
 Danach klicken Sie den Button `Aktualisieren`. Es müssten dann alle PCs in der Übersicht erscheinen, an den sich Nutzer angemeldet hat.
 
