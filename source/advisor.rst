@@ -44,18 +44,8 @@ Bedienungsanleitungen
    :maxdepth: 1
 
    manuals/linbo/index
+   manuals/schulkonsole-admin/index
 
 ..
-   ../howtos/schulkonsole_admin/index
-   ../howtos/use_xen/index
-
-..
-   Schulkonsole für Admins
-   _______________________
-
-
-   Hypervisorfunktionen
-   ____________________
-
-
+   manuals/use_xen/index
 
