@@ -1,5 +1,5 @@
 Handbuch für Schüler
-===================
+====================
 
 Schritt-für-Schritt Anleitungen
 -------------------------------

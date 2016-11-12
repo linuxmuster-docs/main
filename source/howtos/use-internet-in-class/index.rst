@@ -42,7 +42,7 @@ Unterricht beenden
 ------------------
 
 Nach Ablauf der eingestellten Zeit wird der Unterricht im Raum von der Lehrperson automatisch beendet.
-Eine vorzeitige Beendigung des Unterrichts ist ebenfalls jederzeit möglich, indem Sie auf der Raumübersicht oben den Button `sofort beenden`klicken.
+Eine vorzeitige Beendigung des Unterrichts ist ebenfalls jederzeit möglich, indem Sie auf der Raumübersicht oben den Button `sofort beenden` klicken.
 
 .. image:: media/close-directly.png
 
