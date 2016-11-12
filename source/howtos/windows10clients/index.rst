@@ -14,4 +14,5 @@ Arbeitsstationen ("Clients") werden in der linuxmuster.net über die Software LI
     ../linuxclients/registration
     startconf
     windows10installation
+    defaultprofile
 
