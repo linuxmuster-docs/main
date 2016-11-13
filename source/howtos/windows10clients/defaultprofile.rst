@@ -16,5 +16,3 @@ Linuxmuster.net sieht vor dass **Programminstallationen von "pgmadmin"** durchge
 6. Fahren Sie den Rechner herunter
 7. Starten Sie den Rechner neu und erstellen ein neues Image mit linbo
 
-.. note:: 
-         Screenshots werden noch eingefügt
