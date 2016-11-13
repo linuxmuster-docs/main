@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-13 18:12+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/howtos/windows10clients/defaultprofile.rst:3
+msgid "Default Profil kopieren"
+msgstr ""
+
+#: ../../source/howtos/windows10clients/defaultprofile.rst:5
+msgid ""
+"Linuxmuster.net sieht vor dass **Programminstallationen von \"pgmadmin\"** "
+"durchgeführt werden. Damit alle User die bei der Installation vorgenommenen "
+"Änderungen bekommen muss das Profil des \"pgmadmin\" nach \"Default\" "
+"kopiert werden. Um das Profil zu kopieren ist wie folgt vorzugehen:"
+msgstr ""
+
+#: ../../source/howtos/windows10clients/defaultprofile.rst:7
+msgid ""
+"Starten Sie den Rechner nach der Installation von Programmen neu ohne "
+"Synchronisation"
+msgstr ""
+
+#: ../../source/howtos/windows10clients/defaultprofile.rst:10
+msgid ""
+"Der Neustart ist notwenig, da das Profil des \"pgmadmin\" ansonsten nicht "
+"kopiert werden kann"
+msgstr ""
+
+#: ../../source/howtos/windows10clients/defaultprofile.rst:12
+msgid "Melden Sie sich als lokaler User mit Admin-Rechten an dem Rechner an"
+msgstr ""
+
+#: ../../source/howtos/windows10clients/defaultprofile.rst:13
+msgid ""
+"Kopieren Sie die Datei "
+"https://www.forensit.com/Downloads/Support/DefProf.zip und entpacken sie "
+"nach ``C:\\Windows\\system32\\Defprof.exe``. Befindet sich Defprof.exe schon"
+" in ``C:\\Windows\\system32\\`` geht es mit Schritt 4. weiter."
+msgstr ""
+
+#: ../../source/howtos/windows10clients/defaultprofile.rst:14
+msgid "Führen Sie den Befehl ``C:>defprof pgmadmin.SCHULE`` aus."
+msgstr ""
+
+#: ../../source/howtos/windows10clients/defaultprofile.rst:15
+msgid "Melden Sie sich als lokaler User ab und als pgmadmin an"
+msgstr ""
+
+#: ../../source/howtos/windows10clients/defaultprofile.rst:16
+msgid "Fahren Sie den Rechner herunter"
+msgstr ""
+
+#: ../../source/howtos/windows10clients/defaultprofile.rst:17
+msgid "Starten Sie den Rechner neu und erstellen ein neues Image mit linbo"
+msgstr ""

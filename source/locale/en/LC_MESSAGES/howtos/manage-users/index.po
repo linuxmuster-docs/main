@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-12 08:21+0700\n"
+"POT-Creation-Date: 2016-11-13 18:12+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/howtos/manage-users/index.rst:7
+#: ../../source/howtos/manage-users/index.rst:9
 msgid "Benutzer verwalten mit der Schulkonsole"
 msgstr "Manage users with the school console"
 
-#: ../../source/howtos/manage-users/index.rst:9
+#: ../../source/howtos/manage-users/index.rst:11
 msgid ""
 "Dieses Dokument gibt Schritt-für-Schritt-Anleitungen für die wichtigsten "
 "Tätigkeiten, die der Netzwerkbetreuer im Hinblick auf die Benutzer mit der "
@@ -31,18 +31,18 @@ msgstr ""
 "This document provides step-by-step instructions for a network administrator"
 " to manage users in the school console."
 
-#: ../../source/howtos/manage-users/index.rst:12
+#: ../../source/howtos/manage-users/index.rst:14
 msgid "Inhalt:"
 msgstr "Content"
 
-#: ../../source/howtos/manage-users/index.rst:26
+#: ../../source/howtos/manage-users/index.rst:28
 msgid "Index"
 msgstr "Index"
 
-#: ../../source/howtos/manage-users/index.rst:28
+#: ../../source/howtos/manage-users/index.rst:30
 msgid ":ref:`genindex`"
 msgstr ":ref:`genindex`"
 
-#: ../../source/howtos/manage-users/index.rst:29
+#: ../../source/howtos/manage-users/index.rst:31
 msgid ":ref:`search`"
 msgstr ":ref:`search`"

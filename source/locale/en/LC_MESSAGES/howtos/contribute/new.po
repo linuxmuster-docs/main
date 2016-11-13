@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-12 08:21+0700\n"
+"POT-Creation-Date: 2016-11-13 18:12+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -137,73 +137,74 @@ msgid ""
 "einreichen. Dazu sind folgende Schritte notwendig:"
 msgstr ""
 
-#: ../../source/howtos/contribute/new.rst:81
+#: ../../source/howtos/contribute/new.rst:82
 msgid ""
-"Zuerst überprüfen Sie bitte, ob ``make html`` ohne Fehler (mit wenigen "
-"Warnungen) durchläuft."
+"Überprüfen Sie bitte zuerst, ob ``make html`` ohne Fehler durchläuft! Falls "
+"nicht, beheben Sie bitte alle Fehler und Warnungen, bevor Sie Ihre "
+"Änderungen hochladen!"
 msgstr ""
 
-#: ../../source/howtos/contribute/new.rst:87
+#: ../../source/howtos/contribute/new.rst:88
 msgid ""
 "Falls Sie neue Dateien oder Ordner erstellt haben, müssen diese noch "
 "hinzugefügt werden:"
 msgstr ""
 
-#: ../../source/howtos/contribute/new.rst:93
+#: ../../source/howtos/contribute/new.rst:94
 msgid ""
 "Geben Sie nun noch einen Kommentar zu Ihren Änderungen ein und laden Sie "
 "alles in Ihren Fork hoch:"
 msgstr ""
 
-#: ../../source/howtos/contribute/new.rst:100
+#: ../../source/howtos/contribute/new.rst:101
 msgid ""
 "Erstellen Sie nun einen \"Pull-Request\" unter `<https://github.com/github-"
 "account/all-of-me>`_, indem Sie auf \"New Pull Request\" klicken."
 msgstr ""
 
-#: ../../source/howtos/contribute/new.rst:106
+#: ../../source/howtos/contribute/new.rst:107
 msgid ""
 "Wenn Sie weitere Änderungen vornehmen und mit ``git commit -a -m\"My "
 "comment\"`` und ``git push`` bei Github hochladen, werden diese Änderungen "
 "automatisch dem Pull Request hinzugefügt."
 msgstr ""
 
-#: ../../source/howtos/contribute/new.rst:110
+#: ../../source/howtos/contribute/new.rst:111
 msgid "Den eigenen Fork aktualisieren"
 msgstr ""
 
-#: ../../source/howtos/contribute/new.rst:112
+#: ../../source/howtos/contribute/new.rst:113
 msgid ""
 "Um später weiter Änderungen vornehmen zu können, kann der eigene Fork "
 "gelöscht werden und ein neuer erzeugt werden."
 msgstr ""
 
-#: ../../source/howtos/contribute/new.rst:115
+#: ../../source/howtos/contribute/new.rst:116
 msgid ""
 "Alternativ kann der eigene Fork auf den Stand des offiziellen Repositoriums "
 "gebracht werden:"
 msgstr ""
 
-#: ../../source/howtos/contribute/new.rst:117
+#: ../../source/howtos/contribute/new.rst:118
 msgid ""
 "Verschiebe alle lokalen Änderungen mit ``git stash`` in den Hintergrund"
 msgstr ""
 
-#: ../../source/howtos/contribute/new.rst:123
+#: ../../source/howtos/contribute/new.rst:124
 msgid "Füge (einmalig) einen remote-tracking branch hinzu:"
 msgstr ""
 
-#: ../../source/howtos/contribute/new.rst:129
+#: ../../source/howtos/contribute/new.rst:130
 msgid "Hole und merge den aktuellen offiziellen branch:"
 msgstr ""
 
-#: ../../source/howtos/contribute/new.rst:138
+#: ../../source/howtos/contribute/new.rst:139
 msgid ""
 "Wenn der merge nicht in einem \"Fast-forward\" endet, sollte man besser den "
 "Fork löschen und neu erzeugen. Andernfalls kann man jetzt die offiziellen "
 "Änderungen hochladen."
 msgstr ""
 
-#: ../../source/howtos/contribute/new.rst:146
+#: ../../source/howtos/contribute/new.rst:147
 msgid "Jetzt kann man seine lokale Änderungen wieder hervorholen"
 msgstr ""

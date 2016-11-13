@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-13 18:12+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/howtos/change-student-passwords/index.rst:2
+msgid "Zurücksetzen eines Schülerpasswortes"
+msgstr ""
+
+#: ../../source/howtos/change-student-passwords/index.rst:4
+msgid ""
+"Vergisst ein Schüler sein Passwort, kann jede Lehrkraft das Passwort des "
+"Schülers über die Schulkonsole auf das Erstpasswort zurücksetzen. Dieses "
+"teilen Sie dem Schüler mit."
+msgstr ""
+
+#: ../../source/howtos/change-student-passwords/index.rst:6
+msgid ""
+"Dazu melden Sie sich an der Schulkonsole an und wählen unter „Klassen” den "
+"Menüpunkt „Passwörter“."
+msgstr ""
+
+#: ../../source/howtos/change-student-passwords/index.rst:10
+msgid ""
+"Wählen Sie nun Ihre Klasse aus indem Sie auf die Klassenbezeichnung klicken."
+msgstr ""
+
+#: ../../source/howtos/change-student-passwords/index.rst:12
+msgid ""
+"Falls Ihre Klasse nicht in der oberen Liste auftaucht, müssen Sie sich "
+"zunäst in die Klasse eintragen. Wählen Sie dazu im Dropdown-Menü die Klasse "
+"aus und klicken anschließend auf eintragen."
+msgstr ""
+
+#: ../../source/howtos/change-student-passwords/index.rst:16
+msgid ""
+"Setzen Sie hinter dem vergesslichen Schüler den Haken und scrollen Sie auf "
+"das Ende der Seite. Klicken Sie auf „Passwort auf Erstpasswort setzen“."
+msgstr ""
+
+#: ../../source/howtos/change-student-passwords/index.rst:20
+msgid ""
+"Die Seite wird neu geladen. Klicken Sie neben dem Schülernamen auf "
+"„Erstpasswort anzeigen“."
+msgstr ""
+
+#: ../../source/howtos/change-student-passwords/index.rst:24
+msgid ""
+"Teilen Sie da angezeigte Erstpasswort dem Schüler mit der Aufforderung mit, "
+"es in der Schulkonsole zu ändern."
+msgstr ""

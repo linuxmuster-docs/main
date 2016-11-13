@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-12 08:21+0700\n"
+"POT-Creation-Date: 2016-11-13 18:12+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -19,8 +19,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../source/howtos/linuxclients/registration.rst:2
-msgid "Client-Registrierung"
-msgstr "Register Client"
+msgid "Computer in Netzwerk aufnehmen"
+msgstr ""
 
 #: ../../source/howtos/linuxclients/registration.rst:4
 msgid ""
@@ -66,14 +66,10 @@ msgstr ""
 
 #: ../../source/howtos/linuxclients/registration.rst:23
 msgid ""
-"Nun sind Sie LINBO-Administrator. Auf der Imaging-Seite fällt einem sofort "
-"das Timeout-Fenster auf, das anzeigt, nach welcher Zeit man automatisch "
-"wieder ausgeloggt wird. Mit einem Klick auf die Checkbox, kann der Timeout "
-"deaktiviert werden."
+"Nun sind Sie LINBO-Administrator. Auf der Imaging-Seite fällt das Timeout-"
+"Fenster auf, welches die Zeit anzeigt, nach der man automatisch ausgeloggt "
+"wird. Mit einem Klick auf die Checkbox, kann der Timeout deaktiviert werden."
 msgstr ""
-"Now you are LINBO administrator. There is a timeout window that shows the "
-"time after which you will be logged out automatically. By clicking the "
-"checkbox, the timeout can be disabled."
 
 #: ../../source/howtos/linuxclients/registration.rst:27
 msgid ""
@@ -117,25 +113,23 @@ msgstr ""
 "underscores or other special characters (such as german Umlaute, ß or "
 "punctuation) are not allowed to use under any circumstances here."
 
-#: ../../source/howtos/linuxclients/registration.rst:37
+#: ../../source/howtos/linuxclients/registration.rst:39
 msgid "IP Adresse"
 msgstr "IP Address"
 
 #: ../../source/howtos/linuxclients/registration.rst:38
 msgid ""
-"Die IP-Adresse sollte zum Raum passen und außerhalb des Bereichs des DHCP-"
-"Servers liegen. Abhängig von Ihren Netzdaten z.B. 10.16.100.1 für diesen PC "
-"eingeben, üblicherweise *nicht* zwischen 10.16.1.100 und 10.16.1.200."
+"Die IP-Adresse sollte zum Raum passen und **muss** außerhalb des Bereichs "
+"für die Rechneraufnahme liegen. Abhängig von Ihren Netzdaten z.B. "
+"10.16.100.1 für diesen PC eingeben, üblicherweise **nicht** zwischen "
+"10.16.1.100 und 10.16.1.200 (Bereich für die Rechneraufnahme)."
 msgstr ""
-"The IP address should match the room and must be out of range of the DHCP "
-"server. Depending of your network you can enter 10.16.100.1 (room 100, pc "
-"#1) for this PC, typically *not* between 10.16.1.100 and 10.16.1.200."
 
-#: ../../source/howtos/linuxclients/registration.rst:39
+#: ../../source/howtos/linuxclients/registration.rst:41
 msgid "Rechnergruppe"
 msgstr "Host Group"
 
-#: ../../source/howtos/linuxclients/registration.rst:40
+#: ../../source/howtos/linuxclients/registration.rst:42
 msgid ""
 "Die Rechnergruppe, bspw. `ubuntuclient`, wurde zuvor in der zugehörigen "
 "Datei ``start.conf.<rechnergruppe>`` festgelegt."
@@ -143,7 +137,7 @@ msgstr ""
 "The host group, e.g. \"ubuntunclient\", was set in the corresponding "
 "``start.conf.<hostgroup>`` file."
 
-#: ../../source/howtos/linuxclients/registration.rst:43
+#: ../../source/howtos/linuxclients/registration.rst:45
 msgid ""
 "Ist alles korrekt ausgefüllt, werden die Clientdaten über die Schaltfläche "
 "`Registrieren` auf den Server hochgeladen."
@@ -151,28 +145,44 @@ msgstr ""
 "If everything is filled in correctly, the client data is uploaded via the "
 "button ``Register`` on the server."
 
-#: ../../source/howtos/linuxclients/registration.rst:46
+#: ../../source/howtos/linuxclients/registration.rst:49
+msgid ""
+"Werden weitere Clients registriert, dann muss man die Felder nicht mehr "
+"ausfüllen. Linbo inkrementiert an der richtigen Stelle automatisch. Z.B. "
+"wird aus `r100-pc01` = `r100-pc02` und aus der IP-Adresse `10.16.100.1` =  "
+"`10.16.100.2`. Es versteht sich von selbst dass, will man das Feature "
+"nutzen, man die Rechner in der richtigen Reihenfolge registrieren muss!"
+msgstr ""
+
+#: ../../source/howtos/linuxclients/registration.rst:55
 msgid "Registrierung übernehmen"
 msgstr "Import Registered Clients"
 
-#: ../../source/howtos/linuxclients/registration.rst:48
+#: ../../source/howtos/linuxclients/registration.rst:57
 msgid ""
-"In der Schulkonsole -- angemeldet als `administrator` -- erscheinen alle "
+"Sobald alle Rechner aufgenommen wurden, müssen Sie den Import der Rechner "
+"entweder in der Schulkonsole oder an der Konsole starten!"
+msgstr ""
+
+#: ../../source/howtos/linuxclients/registration.rst:61
+msgid ""
+"Der erste Rechner **muss** mit *import_workstations* importiert werden, da "
+"nur mit einem im System angemeldeten Rechner auf die Schulkonsole "
+"zugegriffen werden kann!!"
+msgstr ""
+
+#: ../../source/howtos/linuxclients/registration.rst:64
+msgid ""
+"In der Schulkonsole -- angemeldet als *administrator* -- erscheinen alle "
 "neuen Clients als `noch nicht ins System übernommen`. Dies muss in der "
 "Schulkonsole bestätigt werden. Ein Klick auf die Schaltfläche `Hosts jetzt "
-"übernehmen` erledigt das und der neu registrierte Client ist importiert."
+"übernehmen` erledigt das und die neu registrierten Clients sind importiert."
 msgstr ""
-"In the school console - logged in as `administrator` - all new clients "
-"appear  as `not imported into the system yet`. This must be confirmed in the"
-" school console. Clicking on the button `Import Hosts now` will import the "
-"newly registered clients."
 
-#: ../../source/howtos/linuxclients/registration.rst:51
-msgid "Alternativ werden alle registrierten Client mit dem Konsolenbefehl"
+#: ../../source/howtos/linuxclients/registration.rst:71
+msgid "Alternativ werden alle registrierten Clients mit dem Konsolenbefehl"
 msgstr ""
-"Alternatively, all registered client can be imported with the following "
-"command"
 
-#: ../../source/howtos/linuxclients/registration.rst:57
+#: ../../source/howtos/linuxclients/registration.rst:77
 msgid "ins System übernommen."
 msgstr "into the system."

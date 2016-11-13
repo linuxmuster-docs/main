@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-12 08:21+0700\n"
+"POT-Creation-Date: 2016-11-13 18:12+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -396,15 +396,7 @@ msgstr ""
 "old image will be renamed and the current image takes its place as the "
 "active image."
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:171
-msgid ""
-"Wählen Sie ``[Neuer Dateiname]`` und ``Neues Basisimage`` aus um ein Image "
-"zu erstellen welches das aktive Image nicht beeinflusst."
-msgstr ""
-"Select ``[New file name]`` and ``New Base image`` to create an image that "
-"does not affect the active image."
-
-#: ../../source/howtos/windows10clients/windows10installation.rst:173
+#: ../../source/howtos/windows10clients/windows10installation.rst:172
 msgid ""
 "Sobald der Vorgang abgeschlossen ist können Sie den Zustand der Installation"
 " nun immer auf diesen Punkt zurücksetzen. Das Image ist auf dem Server "

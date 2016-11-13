@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-12 08:21+0700\n"
+"POT-Creation-Date: 2016-11-13 18:12+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -64,9 +64,8 @@ msgstr "For the installation you need"
 #: ../../source/howtos/install-on-xen/index.rst:23
 msgid ""
 "einen Installationsdatenträger Citrix XenServer 7.0 (zu finden auf "
-"http://xenserver.org)"
+"`XenServer Webseite <http://xenserver.org>`_)"
 msgstr ""
-"an installation disc Citrix XenServer 7.0 (found on http://xenserver.org)"
 
 #: ../../source/howtos/install-on-xen/index.rst:24
 msgid ""
@@ -110,15 +109,3 @@ msgstr ""
 #: ../../source/howtos/install-on-xen/index.rst:35
 msgid "Inhalt:"
 msgstr "Content"
-
-#: ../../source/howtos/install-on-xen/index.rst:48
-msgid "Bitte helfen Sie mit diese Dokumentation zu verbessern."
-msgstr "Please help to improve this documentation!"
-
-#: ../../source/howtos/install-on-xen/index.rst:50
-msgid ""
-"Falls Sie einen Fehler in dieser Dokumentation entdeckt haben, teilen Sie "
-"uns diesen mit: http://www.linuxmuster.net/flyspray/"
-msgstr ""
-"If you've found a typo or an error in this documentation, report it, please:"
-" http://www.linuxmuster.net/flyspray/"

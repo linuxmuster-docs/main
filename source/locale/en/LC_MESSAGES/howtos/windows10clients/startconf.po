@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-12 08:21+0700\n"
+"POT-Creation-Date: 2016-11-13 18:12+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -49,41 +49,56 @@ msgstr ""
 " button ``Save changes``. The settings are under the heading ``Systems`` are"
 " important."
 
-#: ../../source/howtos/windows10clients/startconf.rst:20
+#: ../../source/howtos/windows10clients/startconf.rst:21
+msgid ""
+"Geben Sie für Windows eine ausreichend große Partition an (Empfehlung: "
+"mindestens 50 G), da Windows extrem viel Festplattenplatz beansprucht. "
+"\"Viel hilft viel ist hier ausnahmsweise richtig!\"."
+msgstr ""
+
+#: ../../source/howtos/windows10clients/startconf.rst:24
 msgid "|1000000000000382000003C15DFFA156_png|"
 msgstr "|1000000000000382000003C15DFFA156_png|"
 
-#: ../../source/howtos/windows10clients/startconf.rst:24
+#: ../../source/howtos/windows10clients/startconf.rst:28
 msgid "Server-Konsole"
 msgstr "Server Console"
 
-#: ../../source/howtos/windows10clients/startconf.rst:26
+#: ../../source/howtos/windows10clients/startconf.rst:30
 msgid "Geben Sie den Befehl ein:"
 msgstr "Enter the command:"
 
-#: ../../source/howtos/windows10clients/startconf.rst:33
+#: ../../source/howtos/windows10clients/startconf.rst:37
 msgid "|100000000000028800000188045E477F_png|"
 msgstr "|100000000000028800000188045E477F_png|"
 
-#: ../../source/howtos/windows10clients/startconf.rst:35
+#: ../../source/howtos/windows10clients/startconf.rst:39
 msgid ""
 "Ändern Sie die Konfiguration nach Ihren Bedürfnissen und verlassen danach "
 "den Editor speichernd."
 msgstr ""
 "Change the configuration according to your needs and save your changes."
 
-#: ../../source/howtos/windows10clients/startconf.rst:37
+#: ../../source/howtos/windows10clients/startconf.rst:41
 msgid "|1000000000000295000002927824780F_png|"
 msgstr "|1000000000000295000002927824780F_png|"
 
-#: ../../source/howtos/windows10clients/startconf.rst:41
+#: ../../source/howtos/windows10clients/startconf.rst:45
 msgid "Beispiel start.conf"
 msgstr "Example start.conf"
 
-#: ../../source/howtos/windows10clients/startconf.rst:43
+#: ../../source/howtos/windows10clients/startconf.rst:47
 msgid ""
 "Das ist eine Beispielkonfiguration für eine Partition 50GB für eine "
-"Windowsinstallation und eine Cachepartition 90GB."
+"Windowsinstallation und eine Cachepartition. Größe der Cache-Partition = "
+"Rest der Festplatte."
 msgstr ""
-"This is an example configuration for a 50 GB partition for a Windows "
-"installation and a 90GB cache partition."
+
+#: ../../source/howtos/windows10clients/startconf.rst:213
+msgid ""
+"**Faustregel:** Die Cachepartition ist ausreichend groß, wenn sie die "
+"gleiche Größe wie die Windows-Partition hat. Für zukünftige Installationen "
+"unter Windows sollte man die Festplatte nicht zu knapp bemessen. 150 G "
+"sollte bei Windows die unterste Größe sein! Aus Performancegründen sollte "
+"man eine SSD-Festplatte vorziehen."
+msgstr ""

@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-13 18:12+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/manuals/schulkonsole-admin/user.rst:3
+msgid "Menü: Benutzerverwaltung"
+msgstr ""
+
+#: ../../source/manuals/schulkonsole-admin/user.rst:7
+msgid ""
+"Im Menüpunkt \"Benutzerverwaltung\" können die verschiedenen Benutzerlisten "
+"gepflegt, Änderungen überprüft und übernommen werden. Die genaue "
+"Funktionsweise wird in der Anleitung :ref:`howto-user-management` "
+"beschrieben."
+msgstr ""
+
+#: ../../source/manuals/schulkonsole-admin/user.rst:12
+msgid ""
+"Darüber hinaus können Lehrerpasswörter zurückgesetzt werden, siehe :ref"
+":`howto-change-teacher-passwords`."
+msgstr ""
+
+#: ../../source/manuals/schulkonsole-admin/user.rst:15
+msgid "Passwortlisten"
+msgstr ""
+
+#: ../../source/manuals/schulkonsole-admin/user.rst:17
+msgid ""
+"Auf dieser Seite können Sie Benutzerlisten als PDF oder CSV von zu einem "
+"bestimmten Zeitpunkt hinzugefügten oder allen Benutzern erzeugen lassen."
+msgstr ""
+
+#: ../../source/manuals/schulkonsole-admin/user.rst:22
+msgid "Berichte"
+msgstr ""
+
+#: ../../source/manuals/schulkonsole-admin/user.rst:24
+msgid "Hier rufen Sie die Berichte der jeweils letzten Aktion ab."
+msgstr ""
+
+#: ../../source/manuals/schulkonsole-admin/user.rst:26
+msgid ""
+"Unter „Administrator-Report“ erhalten Sie ein Protokoll des letzten "
+"Durchlaufs von „anlegen/versetzen/löschen“."
+msgstr ""
+
+#: ../../source/manuals/schulkonsole-admin/user.rst:29
+msgid ""
+"Unter „Report für das Sekretariat“ finden Sie Angaben zu Datensätzen, die "
+"nicht den Vorgaben von Sophomorix entsprechen und evtl. im "
+"Schulverwaltungsprogramm korrigiert werden müssen."
+msgstr ""

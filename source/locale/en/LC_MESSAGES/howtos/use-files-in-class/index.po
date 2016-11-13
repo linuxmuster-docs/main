@@ -1,0 +1,254 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-13 18:12+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/howtos/use-files-in-class/index.rst:2
+msgid "Unterricht: Austeilen von Dateien und weitere Funktionen"
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:4
+msgid ""
+"Mithilfe der Schulkonsole können Sie in Ihrem Unterricht folgende Funktionen"
+" nutzen:"
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:6
+#: ../../source/howtos/use-files-in-class/index.rst:15
+msgid "Austeilen"
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:7
+#: ../../source/howtos/use-files-in-class/index.rst:38
+msgid "Einsammeln"
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:8
+#: ../../source/howtos/use-files-in-class/index.rst:53
+msgid "Klassenarbeit"
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:10
+msgid ""
+"Wollen Sie die Funktionen unmittelbar in dem Raum nutzen, in dem Sie "
+"unterrichten, wählen Sie diese Funktionen im Menü `aktueller Raum`."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:12
+msgid ""
+"Möchten Sie vorbereitend diese Funktionen für eine Ihrer Klassen verwenden, "
+"wählen Sie die gewünschte Funktion aus dem Menü `Klassen` aus."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:17
+msgid ""
+"Nachdem Sie sich an der Schulkonsole als Lehrer angemeldet haben, gehen Sie "
+"zu dem Menüpunkt `Klassen` und dort zum Unterpunkt `Auteilen`."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:19
+msgid ""
+"Sie sehen dann die Übersicht der auszuteilenden Dateien für eine Klasse."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:23
+msgid ""
+"Wählen Sie nun oben rechts die gewünschte Klasse im Drop-don Menü aus. "
+"Danach klicken Sie auf den Button Durchsuchen`, um eine auszuteilende Datei "
+"hochzuladen. Es erscheint Ihr Dateimanager. Hier wählen Sie aus dem "
+"geeigenten Verzeichnis die gewünschte Datei aus. Danach erscheint der "
+"Dateiname in der Liste der auszuteilenden Dateien. Um diese noch für das "
+"Austeilen zur Verfügung zu stellen, klicken Sie auf den Button `Daten "
+"absenden`."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:25
+msgid ""
+"Alle zu verteilende Dateien erscheinen in der darüber angezeigten "
+"Dateiliste. Wollen Sie weitere Dateien hinzufügen, so ist o.g. Vorgang "
+"entsprechend zu wiederholen."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:29
+msgid ""
+"Um die so bereitgestellten Dateien nun zu verteilen, wählen Sie die Schüler "
+"der Klasse aus, denen Sie die Dateien zur Verfügung stellen wollen. Hierzu "
+"klicken Sie pro Schüler in der Spalte `Auswahl` auf die Auswahlbox. Sollen "
+"alle Schüler der Klasse die Dateien erhalten, so können Sie hierzu die "
+"Auswahlbox unterhalb der Spalte nutzen. Danach klicken Sie auf den Button "
+"`austeilen`. Auszuteilende Dateien liegen dann in Ihrem Heimatverzeichnis "
+"unter `_auszuteilen -> auszuteilen-Klasse`."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:34
+msgid ""
+"Die auszuteilenden Dateien liegen nun in den Heimatverzeichnissen der "
+"Schüler/innen in dem Ordner `__austeilen -> austeilen-Klasse`."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:40
+msgid ""
+"Haben Schüler Dateien erstellt, die Sie als Lehrkraft einsammeln möchten, so"
+" müssen Sie Schüler die Dateien in ihrem Heimatverzeichnis im Ordner "
+"`__einsammeln` ablgen. Es kann auch in diesem Ordner ein Verzeichnis "
+"angelegt werden, in das mehrere Dateien abgelegt werden. Beim Einsammlen "
+"würden dann pro Schüler das Verzeichnis mit allen enthaltenden Dateien "
+"eingesammelt werden."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:42
+msgid ""
+"Haben die Schüler ihre Dateien entsprechend kopiert, rufen Sie in der "
+"Schulkonsole das Menü `Klassen` und dort das Untermenü `Einsammeln` auf."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:46
+msgid ""
+"Sie sehen hinter jedem Schüler, ob und welche Dateien bereitgestellt wurden."
+" Wählen Sie aus, ob die einzusammelnden Dateien erhalten bleiben oder "
+"gelöscht werden sollen. Wählen Sie die Schüler/innen, von denen Sie "
+"einsammeln wollen, oder die ganze Klasse aus."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:50
+msgid ""
+"Sie finden die eingesammelten Arbeiten in Ihrem Heimatverzeichnis unter "
+"„_eingesammelt -> eingesammelt-Klasse“."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:55
+msgid ""
+"Im Klassenarbeitsmodus haben Sie als Lehrer die Möglichkeit, Dateien an "
+"Schüler zu verteilen und die Lösungen via Netzwerk wieder einzusammeln. "
+"Zugleich unterbindet dieser Modus den Internet-Zugriff sowie den Zugriff auf"
+" das Heimatverzeichnis der Schüler sowie auf Tauschverzeichnisse."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:57
+msgid ""
+"Um in den Klassenarbeitsmodus zu gelangen, rufen Sie in der Schulkonsole als"
+" Lehrer den Menüpunkt `aktueller Raum` und dort das Untermenü "
+"`Klassenarbeitmodus` auf."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:59
+msgid ""
+"Sollten Sie im Raum noch keinen Unterricht begonnen haben, so gelangen Sie "
+"zum Menü des aktuellen Raums, um den Unterricht zuerst zu beginnen."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:63
+msgid ""
+"Haben Sie den Unterricht für den Raum begonnen und die korrekte Zeit für die"
+" Klassenarbeit eingetragen, so müssen Sie das Menü für den "
+"Klassenarbeitsmodus erneut aufrufen."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:65
+msgid ""
+"Sie gelangen dann zur Festlegung des sog. Workstationspasswort. Dieses legen"
+" Sie hier fest und teilen es, nach der Aktivierung des Modus den Schülern "
+"mit. Diese müssen sich nach Start der Clients mit dem Namen des des als "
+"Benutzername und dem hier festgelegten Kennwort an."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:69
+msgid "Klicken Sie zum Abschluss auf den Button `Klassenarbeit starten`."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:71
+msgid ""
+"Danach gelangen zur Übersicht im Klassenarbeitsmodus. Haben Sie den Schülern"
+" migeteilt, dass Sie sich mit dem Namen des PC (z.B. musterraum01) und dem "
+"festgelegten Kennwort (z.B. linuxmuster) am PC anmelden, warten Sie, bis "
+"alle Schüler dies durchgeführt haben."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:75
+msgid ""
+"Danach klicken Sie den Button `Aktualisieren`. Es müssten dann alle PCs in "
+"der Übersicht erscheinen, an den sich Nutzer angemeldet hat."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:77
+msgid ""
+"Wollen Sie Aufgaben der Klassenarbeit oder eine Vorlage zur weiteren "
+"Bearbeitung zur Verfügung stellen, so klicken Sie auf den Button "
+"`Durchsuchen`. Wählen Sie in Ihrem Dateisystem dann die gewünschten Dateien "
+"aus und klicken Sie den Button `Daten absenden`, um die Datei hochzuladen. "
+"Um mehrere Dateien bereitzustellen, wiederholen Sie diesen Vorgang."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:80
+msgid ""
+"Die bereitzustellenden Dateien werden in einer Dateiliste angezeigt. Um "
+"diese Dateien nun allen angemeldeten Schülern für die Klassenarbeit "
+"bereitzustellen, klicken Sie den Button `bereitstellen`."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:82
+msgid ""
+"Die Schüler finden diese Vorlagen in ihrem Heimatverzeichnis im Unterordner "
+"`tasks -> Raumnummer -> Lehrerlogin`."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:84
+msgid ""
+"Danach werden Sie aufgefordert, das Passwort für die Workstations neu zu "
+"setzen."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:88
+msgid ""
+"Klicken Sie nun den Button `Passwort ändern`, um die Klassenarbeit zu "
+"beginnen. Sie gelangen zur Übersicht im Klassenarbeitsmodus."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:92
+msgid ""
+"Unter der Spalte `Hostname` werden alle PCs, die aktiv angemldet sind, "
+"angezeigt. Zudem sehen Sie unter `Dateien`, ob und welche Dateien jeweils im"
+" Ordner `einsammeln` abgelegt sind."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:94
+msgid ""
+"Sollten Schüler vor Beendigung des Klassenarbeitsmodus die Klassenarbeit "
+"abgeben wollen, so müssen Sie sicherstellen, dass diese ihre Arbeit unter "
+"`__einsammeln` abgespeichert haben. Ist dies der Fall, so können diese den "
+"PC herunterfahren. Zur Überprüfung können Sie die Ansicht mit dem Button "
+"`Aktualisieren` immer wieder auf den aktuellen Stand bringen."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:96
+msgid ""
+"Um die Klassenarbeit zu beenden und gleichzeitig alle Schülerarbeiten "
+"einzusammeln, klicken Sie auf den Button `Einsammeln und beenden`."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:100
+msgid ""
+"Bestätigen Sie das Beenden der Klassenarbeit. Die eingesammelten Ergebnisse "
+"finden Sie danach in Ihrem Heimatverzeichnis unter „_eingesammelt -> "
+"eingesammelt-klassenarbeit“."
+msgstr ""
+
+#: ../../source/howtos/use-files-in-class/index.rst:102
+msgid ""
+"Falls Sie doch noch nicht beenden wollen, können Sie über den Link "
+"„Einsammeln“ wieder zur vorigen Seite zurückkehren."
+msgstr ""
