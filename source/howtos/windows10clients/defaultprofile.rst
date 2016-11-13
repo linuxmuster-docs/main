@@ -7,7 +7,7 @@ Linuxmuster.net sieht vor dass **Programminstallationen von "pgmadmin"** durchge
 1. Starten Sie den Rechner nach der Installation von Programmen neu ohne Synchronisation
 
 .. attention:: 
-              Der Neustart ist notwenig, weil das Profil des "pgmadmin" ansonsten nicht kopiert werden kann
+              Der Neustart ist notwenig, da das Profil des "pgmadmin" ansonsten nicht kopiert werden kann
               
 2. Melden Sie sich als lokaler User mit Admin-Rechten an dem Rechner an 
 3. Kopieren Sie die Datei https://www.forensit.com/Downloads/Support/DefProf.zip und entpacken sie nach ``C:\Windows\system32\Defprof.exe``. Befindet sich Defprof.exe schon in ``C:\Windows\system32\`` dann geht es direkt mit Schritt 4. weiter. 
