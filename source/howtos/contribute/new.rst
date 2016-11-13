@@ -78,7 +78,8 @@ Schauen Sie sich auch die anderen Dokumentationsdateien an, um mehr über den Au
 
 Haben Sie alle Änderungen vorgenommen, können Sie sie nun zur Überprüfung einreichen. Dazu sind folgende Schritte notwendig:
 
-Zuerst überprüfen Sie bitte, ob ``make html`` ohne Fehler (mit wenigen Warnungen) durchläuft.
+.. important::
+   Überprüfen Sie bitte zuerst, ob ``make html`` ohne Fehler durchläuft! Falls nicht, beheben Sie bitte alle Fehler und Warnungen, bevor Sie Ihre Änderungen hochladen!
 
 .. code-block:: console
 
@@ -140,7 +141,7 @@ Alternativ kann der eigene Fork auf den Stand des offiziellen Repositoriums gebr
   die offiziellen Änderungen hochladen.
 
   .. code:: bash
-  
+
      ~/docs$ git push
 
 * Jetzt kann man seine lokale Änderungen wieder hervorholen
