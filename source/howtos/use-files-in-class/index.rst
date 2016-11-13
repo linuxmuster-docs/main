@@ -7,7 +7,7 @@ Mithilfe der Schulkonsole können Sie in Ihrem Unterricht folgende Funktionen nu
 * Einsammeln
 * Klassenarbeit
 
-Wollen Sie die Funktionen unmittelbar in dem Raum nutzen, in dem Sie unterrichten, wählen Sie diese Funktionen im Menü `aktueller Raum`. 
+Wollen Sie die Funktionen unmittelbar in dem Raum nutzen, in dem Sie unterrichten, wählen Sie diese Funktionen im Menü `aktueller Raum`.
 
 Möchten Sie vorbereitend diese Funktionen für eine Ihrer Klassen verwenden, wählen Sie die gewünschte Funktion aus dem Menü `Klassen` aus.
 
@@ -45,7 +45,7 @@ Haben die Schüler ihre Dateien entsprechend kopiert, rufen Sie in der Schulkons
 
 Sie sehen hinter jedem Schüler, ob und welche Dateien bereitgestellt wurden.
 Wählen Sie aus, ob die einzusammelnden Dateien erhalten bleiben oder gelöscht werden sollen.
-Wählen Sie die Schüler/innen, von denen Sie einsammeln wollen, oder die ganze Klasse aus. 
+Wählen Sie die Schüler/innen, von denen Sie einsammeln wollen, oder die ganze Klasse aus.
 
 Sie finden die eingesammelten Arbeiten in Ihrem Heimatverzeichnis unter „_eingesammelt -> eingesammelt-Klasse“.
 
@@ -56,7 +56,7 @@ Im Klassenarbeitsmodus haben Sie als Lehrer die Möglichkeit, Dateien an Schüle
 
 Um in den Klassenarbeitsmodus zu gelangen, rufen Sie in der Schulkonsole als Lehrer den Menüpunkt `aktueller Raum` und dort das Untermenü `Klassenarbeitmodus` auf.
 
-Sollten Sie im Raum noch keinen Unterricht begonnen haben, so gelangen Sie zum Menü des aktuellen Raums, um den Unterricht zuerst zu beginnen. 
+Sollten Sie im Raum noch keinen Unterricht begonnen haben, so gelangen Sie zum Menü des aktuellen Raums, um den Unterricht zuerst zu beginnen.
 
 .. image:: media/room-start.png
 
@@ -70,7 +70,7 @@ Klicken Sie zum Abschluss auf den Button `Klassenarbeit starten`.
 
 Danach gelangen zur Übersicht im Klassenarbeitsmodus. Haben Sie den Schülern migeteilt, dass Sie sich mit dem Namen des PC (z.B. musterraum01) und dem festgelegten Kennwort (z.B. linuxmuster) am PC anmelden, warten Sie, bis alle Schüler dies durchgeführt haben.
 
-.. image:: media/room_test_handout.png
+.. image:: media/room-test-handout.png
 
 Danach klicken Sie den Button `Aktualisieren`. Es müssten dann alle PCs in der Übersicht erscheinen, an den sich Nutzer angemeldet hat.
 
@@ -85,7 +85,7 @@ Danach werden Sie aufgefordert, das Passwort für die Workstations neu zu setzen
 
 .. image:: media/room-test-activation.png
 
-Klicken Sie nun den Button `Passwort ändern`, um die Klassenarbeit zu beginnen. Sie gelangen zur Übersicht im Klassenarbeitsmodus. 
+Klicken Sie nun den Button `Passwort ändern`, um die Klassenarbeit zu beginnen. Sie gelangen zur Übersicht im Klassenarbeitsmodus.
 
 .. image:: media/room-test-collect.png
 
@@ -93,7 +93,7 @@ Unter der Spalte `Hostname` werden alle PCs, die aktiv angemldet sind, angezeigt
 
 Sollten Schüler vor Beendigung des Klassenarbeitsmodus die Klassenarbeit abgeben wollen, so müssen Sie sicherstellen, dass diese ihre Arbeit unter `__einsammeln` abgespeichert haben. Ist dies der Fall, so können diese den PC herunterfahren. Zur Überprüfung können Sie die Ansicht mit dem Button `Aktualisieren` immer wieder auf den aktuellen Stand bringen.
 
-Um die Klassenarbeit zu beenden und gleichzeitig alle Schülerarbeiten einzusammeln, klicken Sie auf den Button `Einsammeln und beenden`. 
+Um die Klassenarbeit zu beenden und gleichzeitig alle Schülerarbeiten einzusammeln, klicken Sie auf den Button `Einsammeln und beenden`.
 
 .. image:: media/room-test-end.png
 
