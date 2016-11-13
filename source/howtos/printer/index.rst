@@ -1,3 +1,6 @@
+
+.. _howto-install-printer:
+
 Drucker auf dem Server und Clients einrichten
 =============================================
 
