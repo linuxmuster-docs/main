@@ -7,7 +7,7 @@
 
    basiskurs/preface
    basiskurs/pedagogical-requirements
-   basiskurs/Wir_nutzen_die_linuxmuster_net
+   basiskurs/first-steps
    basiskurs/Die_linuxmuster_net_im_Unterricht
    basiskurs/Server
    basiskurs/Benutzerverwaltung_in_der_linuxmuster_net
