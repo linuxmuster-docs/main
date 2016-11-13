@@ -16,7 +16,7 @@ Neben dieser detaillierten Anleitungen in den Howtos steht Ihnen unsere Communit
    :maxdepth: 1
    :caption: Einsteigerdokumentation
 
-   basiskurs/index
+   basiskurs
 
 .. _user-docs:
 
