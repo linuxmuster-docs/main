@@ -10,6 +10,14 @@ Dabei richtet sich die Dokumentation an verschiedene Zielgruppen. Das Handbuch f
 
 Neben dieser detaillierten Anleitungen in den Howtos steht Ihnen unsere Community und unser Telefon-Support zur Seite. Weiter Informationen dazu finden sie auf der `Website von Linuxmuster.net <http://linuxmuster.net/about/hilfsbereit/>`_.
 
+.. _beginner-docs:
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Einsteigerdokumentation
+
+   basiskurs/index
+
 .. _user-docs:
 
 .. toctree::

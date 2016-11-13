@@ -11,7 +11,7 @@ Für das folgende Beispiel nehmen wir an, der Drucker stehe in Raum
 IP-Adresse 10.16.203.101.
 
 Melden Sie sich als **administrator** in der `Schulkonsole (https://server:242) <https://server:242>`_ an.
-Wählen Sie dort die Reiterkarte Drucker aus und fügen Sie den Drucker gemäß dem nachstehenden Schema hinzu:
+Wählen Sie dort die Reiterkarte "Hosts" aus und fügen Sie den Drucker gemäß dem nachstehenden Schema hinzu:
 
 .. image:: media/drucker-hinzufuegen/drucker-hinzufuegen-server.png
 
