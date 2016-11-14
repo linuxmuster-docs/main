@@ -1,71 +1,81 @@
 Wir nutzen die linuxmuster.net
 ==============================
 
-
 Dieses Kapitel enthält Anleitungen und Übungen zur Nutzung der
-*linuxmuster.net*
-mit einer
-*Windows*
--Arbeitsstation.
+*linuxmuster.net* mit einer *Windows*-Arbeitsstation und einer
+*Linux*-Arbeitsstation.
 
 **Selbstheilende Arbeitsstationen (SheilA)**
-
-
-einfaches und schnelles Restaurieren des PCs mittels Knopfdruck
+  einfaches und schnelles Restaurieren des PCs mittels Knopfdruck
 
 **Erste Schritte im Netzwerk**
-
-
-An- und Abmelden im Netzwerk, Netzlaufwerke, Netzwerkumgebung
+  An- und Abmelden im Netzwerk, Netzlaufwerke, Netzwerkumgebung
 
 **Rechte im Netzwerk**
-
-
-Rechtevergabe, Homeverzeichnis, Tauschverzeichnisse
+  Rechtevergabe, Homeverzeichnis, Tauschverzeichnisse
 
 **Drucken im Netz**
-
-
-Vorteile, Weg des Druckauftrags, Druckaufträge kontrollieren
+  Vorteile, Weg des Druckauftrags, Druckaufträge kontrollieren
 
 Selbstheilende Arbeitsstationen
 -------------------------------
 
-In diesem Abschnitt wird das
-*SheilA*
--Konzept ansatzweise vorgestellt bevor es in Kapitel
-vertiefend besprochen wird.
+In diesem Abschnitt wird das *SheilA*-Konzept ansatzweise vorgestellt
+bevor es in Kapitel :ref:`sheila` vertiefend besprochen wird.
 
-In einem Schulnetz arbeiten sehr viele unterschiedliche Benutzer am selben Rechner. Viele Benutzer versuchen, ein System ihren eigenen Wünschen anzupassen oder Systemeinstellungen zu ändern und sei es nur die Einstellung eines anderen Bildschirmhintergrunds. Im schlimmsten Fall startet eine Arbeitsstation nach solchen „Benutzereingriffen“ überhaupt nicht mehr.
+In einem Schulnetz arbeiten sehr viele unterschiedliche Benutzer am
+selben Rechner. Viele Benutzer versuchen, ein System ihren eigenen
+Wünschen anzupassen oder Systemeinstellungen zu ändern und sei es nur
+die Einstellung eines anderen Bildschirmhintergrunds. Im schlimmsten
+Fall startet eine Arbeitsstation nach solchen „Benutzereingriffen“
+überhaupt nicht mehr.
 
-Als Administrator muss man für solche Probleme Lösungen bereit haben. Die einfachste Methode ist, auf einer verkonfigurierten Arbeitsstation das Betriebssystem und die Software von Hand neu einzuspielen, was allerdings einen erheblichen Arbeits- und Zeitaufwand bedeutet. Um sich gegen Benutzereingriffe zu schützen, kann man auch versuchen, ein System möglichst „dicht“ zu machen, indem man den Zugriff auf Systemprogramme und -verzeichnisse sperrt. Allerdings hat man dann aus Benutzersicht ein sehr eingeschränktes System, was die tägliche Arbeit erschwert. Außerdem werden
-die Schüler/innen zu Hause oder später an Ihrem Arbeitsplatz kein solches System vorfinden.
+Als Administrator muss man für solche Probleme Lösungen bereit
+haben. Die einfachste Methode ist, auf einer "ver"konfigurierten
+Arbeitsstation das Betriebssystem und die Software von Hand neu
+einzuspielen, was allerdings einen erheblichen Arbeits- und
+Zeitaufwand bedeutet. Um sich gegen Benutzereingriffe zu schützen,
+kann man auch versuchen, ein System möglichst „dicht“ zu machen, indem
+man den Zugriff auf Systemprogramme und -verzeichnisse
+sperrt. Allerdings hat man dann aus Benutzersicht ein sehr
+eingeschränktes System, was die tägliche Arbeit erschwert. Außerdem
+werden die Schüler/innen zu Hause oder später an Ihrem Arbeitsplatz
+kein solches System vorfinden.
 
-Die
-*linuxmuster.net*
-verfolgt ein anderes Konzept, das der
-*Selbstheilenden Arbeitsstationen*
-(kurz
-*SheilA*
-). Das bedeutet, dass ein Abbild („Image“) der gesamten Festplatte der Arbeitsstation vom Administrator auf dem Server gespeichert wird. Ein Image ist ein Abbild einer Installation, das aus seiner lauffähigen Umgebung heraus verlagert wird und erst nach dem Zurückspielen wieder funktionstüchtig ist. Mit Hilfe dieses Festplattenimages kann dann eine Arbeitsstation auf Knopfdruck wieder in ihren ursprünglichen Zustand zurückversetzt werden.
+Die *linuxmuster.net* verfolgt ein anderes Konzept, das der
+*Selbstheilenden Arbeitsstationen* (kurz *SheilA* ). Das bedeutet,
+dass ein Abbild („Image“) der gesamten Festplatte der Arbeitsstation
+vom Administrator auf dem Server gespeichert wird. Ein Image ist ein
+Abbild einer Installation, das aus seiner lauffähigen Umgebung heraus
+verlagert wird und erst nach dem Zurückspielen wieder funktionstüchtig
+ist. Mit Hilfe dieses Festplattenimages kann dann eine Arbeitsstation
+auf Knopfdruck wieder in ihren ursprünglichen Zustand zurückversetzt
+werden.
 
-Mit diesem Prinzip System kann man den Benutzern ein vollkommen offenes System anbieten. Selbst wenn ein Benutzer auf die Idee kommen sollte, die Festplatte zu formatieren,
-kann er selbst den Schaden durch einfachen Tastendruck beheben. Die Schüler und Lehrer können somit am PC vollkommen angstfrei und unbefangen arbeiten und testen.
+Mit diesem Prinzip kann man den Benutzern ein vollkommen offenes
+System anbieten. Selbst wenn ein Benutzer auf die Idee kommen sollte,
+die Festplatte zu formatieren, kann er selbst den Schaden durch
+einfachen Tastendruck beheben. Die Schüler und Lehrer können somit am
+PC vollkommen angstfrei und unbefangen arbeiten und testen.
 
-In Kapitel
-wird das
-*SheilA-*
-Konzept dazu benutzt, die Installation eines Rechners auf weitere Rechner zu „klonen“. Man richtet dabei eine Arbeitsstation mit ihrem Betriebssystem und der Anwendungssoftware ein, übernimmt die anderen Stationen in diesem Raum ins System
-und startet die Installation auf Knopfdruck (sofern die Hardware der Rechner weitgehend übereinstimmt).
+In Kapitel :ref:`sheila` wird das *SheilA-* Konzept dazu benutzt, die
+Installation eines Rechners auf weitere Rechner zu „klonen“. Man
+richtet dabei eine Arbeitsstation mit ihrem Betriebssystem und der
+Anwendungssoftware ein, übernimmt die anderen Stationen in diesem Raum
+ins System und startet die Installation auf Knopfdruck (sofern die
+Hardware der Rechner weitgehend übereinstimmt).
 
 Restauration auf Knopfdruck
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Die Restauration auf Knopfdruck entspricht dem Zurückspielen eines Festplattenimages (bzw. nur der Dateien, die verändert wurden)
-auf die Arbeitsstation. Dabei wird der Teil der Festplatte (Partition), der die Installation enthält, durch das
-Image überschrieben und damit in seinen ursprünglichen Zustand zurückversetzt. Notfalls wird auch die Partitionierung erneuert.
+Die Restauration auf Knopfdruck entspricht dem Zurückspielen eines
+Festplattenimages (bzw. nur der Dateien, die verändert wurden) auf die
+Arbeitsstation. Dabei wird der Teil der Festplatte (Partition), der
+die Installation enthält, durch das Image überschrieben und damit in
+seinen ursprünglichen Zustand zurückversetzt. Notfalls wird auch die
+Partitionierung erneuert.
 
-Als Managementsystem für die Images wird hier *Linbo * eingesetzt.
+Als Managementsystem für die Images wird hier *Linbo* eingesetzt.
 *Linbo* legt zusätzlich zu den auf dem Server gespeicherten Abbildern
 das aktuelle Image in einer speziell reservierten Partition auf der
 lokalen Festplatte ab, um unnötigen Netzwerkverkehr zu vermeiden und
@@ -75,15 +85,29 @@ das Restaurieren zu beschleunigen.
 unterschiedliche Betriebssysteme zu verwalten, für die dann jeweils
 ein eigenes Image benutzt wird.
 
-Im unten gezeigten Beispiel kann der Benutzer entscheiden, ob der Rechner mit *Ubuntu 10.04 LTS* oder *Windows XP* starten soll. In
-Kapitel erfahren Sie, wie man *LINBO* konfiguriert, um
+.. todo::
+
+   neue screenshots mit Ubuntu 16.04 und Windows 7/(10?)
+
+Im unten gezeigten Beispiel kann der Benutzer entscheiden, ob der
+Rechner mit *Ubuntu 16.04 LTS* oder *Windows 7* starten soll. In
+Kapitel ?? erfahren Sie, wie man *LINBO* konfiguriert, um
 unterschiedliche Betriebssysteme wahlweise auf einem Netzwerkrechner
 starten zu können.
 
-Schaltet man eine bereits am Server aufgenommene Arbeitsstation ein, erscheint auf dem Bildschirm zunächst die LINBO-Startseite:
+.. todo::
 
-|100000000000031F0000025B651F9602_jpg|
-Zu jedem Betriebssystem gibt es 4 Schaltflächen, die folgende Bedeutungen und Wirkungen haben:
+   übernehme/verweise auf Bedienungsanleitung von LINBO,
+   bzw. übernehme screenshots.
+
+Schaltet man eine bereits am Server aufgenommene Arbeitsstation ein,
+erscheint auf dem Bildschirm zunächst die LINBO-Startseite:
+
+
+.. figure:: media/linbo-explained.jpg
+
+Zu jedem Betriebssystem gibt es 4 Schaltflächen, die folgende
+Bedeutungen und Wirkungen haben:
 
 
 *   |Nutzen_linbo_syncundstart_png|
@@ -857,9 +881,6 @@ der ausgewählte Druckjob gelöscht. Es lassen sich nur eigene Druckjobs lösche
 
 
 
-.. |100000000000031F0000025B651F9602_jpg| image:: media/100000000000031F0000025B651F9602.jpg
-    :width: 12.001cm
-    :height: 9.041cm
 
 
 .. |Nutzen_linbo_syncundstart_png| image:: media/Nutzen_linbo_syncundstart.png

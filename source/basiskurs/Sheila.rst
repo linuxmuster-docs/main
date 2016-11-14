@@ -1,3 +1,5 @@
+.. _sheila:
+
 Sheila
 ======
 
@@ -44,7 +46,7 @@ PXE-Bootvorgang
 
 Schaltet man eine bereits auf dem Server registrierte Arbeitsstation ein, erscheint nach dem Bootvorgang das LINBO-Startmenü:
 
-|100000000000031F0000025B651F9602_jpg|
+|linbo-explained.jpg|
 Die Software, die dieses Menü und die entsprechenden Aktionen steuert, wurde nicht von der Festplatte geladen, sondern über die Netzwerkkarte vom Server. Damit vor dem Zugriff auf ein lokales Laufwerk des Rechners eine Software, genauer gesagt ein Betriebssystem, vom Server geladen werden kann, benötigt die Netzwerkkarte der Arbeitsstation eine BIOS Erweiterung, ein so genanntes PXE-Bootrom, das bei gängigen Netzwerkkarten bereits auf der Karte integriert ist. Nur bei älteren Karten muss das Bootrom noch in einen Sockel auf der Netzwerkkarte gesteckt werden.
 
 Mit Hilfe des PXE-Bootroms wird vor dem Booten vom Server ein Minibetriebssystem geladen (im Fall der
@@ -1050,7 +1052,7 @@ Der Umgang mit Images in der Schulkonsole wird im Administratorhandbuch zur linu
 
 
 
-.. |100000000000031F0000025B651F9602_jpg| image:: media/100000000000031F0000025B651F9602.jpg
+.. |linbo-explained.jpg| image:: media/linbo-explained.jpg
     :width: 12.001cm
     :height: 9.041cm
 

@@ -5,9 +5,9 @@
 .. toctree::
    :maxdepth: 1
 
-   basiskurs/Vorwort
-   basiskurs/P_dagogische_Anforderungen_an_ein_Schulnetz
-   basiskurs/Wir_nutzen_die_linuxmuster_net
+   basiskurs/preface
+   basiskurs/pedagogical-requirements
+   basiskurs/first-steps
    basiskurs/Die_linuxmuster_net_im_Unterricht
    basiskurs/Server
    basiskurs/Benutzerverwaltung_in_der_linuxmuster_net
