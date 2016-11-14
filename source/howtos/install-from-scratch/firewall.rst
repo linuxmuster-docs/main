@@ -7,70 +7,56 @@ Installation der Firewall
 Booten Sie den für die Firewall vorgesehenen Server von der IPFire-CD. Bestätigen Sie durch Drücken der ``ENTER``-Taste, dass Sie den IPFire installieren möchten.
 
 .. figure:: media/firewall/010.png
-   :width:  500px
    :align: center
    :alt: Schritt 1 der Installation der Firewall
-   :figwidth: 500px
 
    Bestätigen Sie, dass Sie den IPFire installieren möchten.
 
 Wählen Sie mit den Pfeiltasten die Sprache aus und bestätigen Sie ihre Auswahl mit der ``ENTER``-Taste.
 
 .. figure:: media/firewall/020.png
-   :width:  350px
    :align: center
    :alt: Schritt 2 der Installation der Firewall
-   :figwidth: 350px
 
    Wählen Sie die gewünschte Sprache aus.
 
 Bestätigen Sie durch Drücken der ``ENTER``-Taste, dass Sie den IPFire installieren möchten.
 
 .. figure:: media/firewall/030.png
-   :width:  350px
    :align: center
    :alt: Schritt 3 der Installation der Firewall
-   :figwidth: 350px
 
    Bestätigen Sie, dass Sie den IPFire installieren möchten
 
 Akzeptieren Sie die Lizenz. Springen Sie dazu mit der ``TAB``-Taste auf das Bestätigungsfeld und drücken die  ``Leer``-Taste. Bestätigen Sie anschließend mit der  ``ENTER``-Taste.
 
 .. figure:: media/firewall/040.png
-   :width:  450px
    :align: center
    :alt: Schritt 4 der Installation der Firewall
-   :figwidth: 450px
 
    Akzeptieren Sie die Lizenz
 
 Bestätigen Sie durch Drücken der ``ENTER``-Taste, dass in den folgenden Schritten die Festplatte partitioniert und formatiert werden soll. Dabei gehen alle auf der Festplatte vorhandenen Daten verloren.
 
 .. figure:: media/firewall/050.png
-   :width:  350px
    :align: center
    :alt: Schritt 5 der Installation der Firewall
-   :figwidth: 350px
 
    Bestätigen Sie die Partitionierung und Formatierung der Festplatte.
 
 Wählen Sie durch Drücken der ``ENTER``-Taste **ext4** als Dateisystem.
 
 .. figure:: media/firewall/060.png
-   :width:  350px
    :align: center
    :alt: Schritt 6 der Installation der Firewall
-   :figwidth: 350px
 
    Wählen Sie **ext4** als Dateisystem
 
 Nach der Installation entfernen Sie die CD und bestätigen Sie den Reboot durch Drücken der ``ENTER``-Taste.
 
 .. figure:: media/firewall/070.png
-   :width:  350px
    :align: center
    :alt: Schritt 7 der Installation der Firewall
-   :figwidth: 350px
 
    Entfernen Sie die CD und bestätigen Sie den Reboot.
 
@@ -80,30 +66,24 @@ Konfiguration der Firewall
 Nach dem Reboot erfolgt die Erstkonfiguration des IPFire. Wählen Sie mit den ``Pfeil``-Tasten das Tastaturlayout und bestätigen Sie ihre Auswahl durch Drücken der ``ENTER``-Taste.
 
 .. figure:: media/firewall/080.png
-   :width:  350px
    :align: center
    :alt: Schritt 1 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Wählen Sie das Tastaturlayout.
 
 Wählen Sie mit den ``Pfeil``-Tasten die Zeitzone aus und bestätigen Sie ihre Auswahl durch Drücken der ``ENTER``-Taste.
 
 .. figure:: media/firewall/090.png
-   :width:  350px
    :align: center
    :alt: Schritt 2 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Wählen Sie die Zeitzone aus.
 
 Geben Sie als Hostname **ipfire** ein und bestätigen Sie durch Drücken der ``ENTER``-Taste.
 
 .. figure:: media/firewall/100.png
-   :width:  350px
    :align: center
    :alt: Schritt 3 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Geben Sie als Hostname **ipfire** ein.
 
@@ -113,10 +93,8 @@ Geben Sie den Domänennamen ein und bestätigen Sie durch Drücken der ``ENTER``
    Verwenden Sie **nicht** `local` als Teil des Domänennamens.
 
 .. figure:: media/firewall/110.png
-   :width:  350px
    :align: center
    :alt: Schritt 4 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Geben Sie den Domänennamen ein.
 
@@ -127,30 +105,24 @@ Geben Sie das Passwort für den Benutzer `root` ein und bestätigen Sie Ihre Ein
 
 
 .. figure:: media/firewall/120.png
-   :width:  350px
    :align: center
    :alt: Schritt 5 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Wählen Sie das Passwort für den Benutzer **root**.
 
 Geben Sie das Passwort für den Benutzer `admin` ein und bestätigen Sie Ihre Eingabe mit der ``ENTER``-Taste. Mit diesem Benutzer melden Sie sich später am Webinterface des IPFire an.
 
 .. figure:: media/firewall/130.png
-   :width:  350px
    :align: center
    :alt: Schritt 6 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Wählen Sie das Passwort für den Benutzer **admin**.
 
 Wählen Sie den Punkt `Typ der Netzwerkkonfiguration` durch Drücken der ``ENTER``-Taste aus.
 
 .. figure:: media/firewall/140.png
-   :width:  350px
    :align: center
    :alt: Schritt 7 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Wählen Sie den Punkt `Typ der Netzwerkkonfiguration`.
 
@@ -165,20 +137,16 @@ Wählen Sie den Punkt `GREEN + RED + BLUE` mit den ``Pfeil``-Tasten aus und best
    Wählen Sie die Konfiguration auch dann, wenn Sie nicht vorhaben, ein Gästenetz anzubieten. Die weitere Installation schlägt sonst fehl.
 
 .. figure:: media/firewall/150.png
-   :width:  350px
    :align: center
    :alt: Schritt 8 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Wählen Sie den Punkt `GREEN + RED + BLUE`.
 
 Wählen Sie  den Punkt `Netzwerkkartenzuordnungen` mit den mit den ``Pfeil``-Tasten  aus und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste.
 
 .. figure:: media/firewall/160.png
-   :width:  350px
    :align: center
    :alt: Schritt 9 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Wählen Sie den Punkt `Netzwerkkartenzuordnungen`.
 
@@ -190,100 +158,80 @@ Im Folgenden ordnen Sie die einzelnen Netzwerkkarten anhand ihrer MAC-Adresse di
 Wählen Sie den Punkt `GREEN` mit den mit den ``Pfeil``-Tasten  aus und bestätigen Sie ihre Auswahl mit der ``ENTER``-Taste.
 
 .. figure:: media/firewall/170.png
-   :width:  350px
    :align: center
    :alt: Schritt 10 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Wählen Sie den Punkt `GREEN`.
 
 Wählen Sie die Netzwerkkarte für das grüne Netzwerk mit den ``Pfeil``-Tasten  aus und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste.
 
 .. figure:: media/firewall/180.png
-   :width:  350px
    :align: center
    :alt: Schritt 11 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Wählen Sie die Netzwerkkarte für das grüne Netzwerk.
 
 Wählen Sie den Punkt `RED` mit den mit den ``Pfeil``-Tasten  aus und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste.
 
 .. figure:: media/firewall/190.png
-   :width:  350px
    :align: center
    :alt: Schritt 12 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Wählen Sie den Punkt `RED`.
 
 Wählen Sie die Netzwerkkarte für das rote Netzwerk mit den ``Pfeil``-Tasten  aus und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste.
 
 .. figure:: media/firewall/200.png
-   :width:  350px
    :align: center
    :alt: Schritt 13 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Wählen Sie die Netzwerkkarte für das rote Netzwerk.
 
 Wählen Sie den Punkt `BLUE` mit den mit den ``Pfeil``-Tasten  aus und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste.
 
 .. figure:: media/firewall/210.png
-   :width:  350px
    :align: center
    :alt: Schritt 14 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Wählen Sie den Punkt `BLUE`.
 
 Wählen Sie die Netzwerkkarte für das blaue Netzwerk mit den ``Pfeil``-Tasten  aus und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste.
 
 .. figure:: media/firewall/220.png
-   :width:  350px
    :align: center
    :alt: Schritt 15 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Wählen Sie die Netzwerkkarte für das blaue Netzwerk.
 
 Bestätigen Sie das Ende der Netzwerkkartenzuordnungen. Wählen mit mit den ``Pfeil``-Tasten den Punkt `FERTIG` aus und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste.
 
 .. figure:: media/firewall/230.png
-   :width:  350px
    :align: center
    :alt: Schritt 16 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Bestätigen Sie das Ende der Netzwerkkartenzuordnungen.
 
 Wählen Sie  den Punkt `Adresseinstellungen` mit den mit den ``Pfeil``-Tasten  aus und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste.
 
 .. figure:: media/firewall/240.png
-   :width:  350px
    :align: center
    :alt: Schritt 17 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Wählen Sie den Punkt `Adresseinstellungen`.
 
 Wählen Sie  den Punkt `GREEN` mit den mit den ``Pfeil``-Tasten  aus und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste.
 
 .. figure:: media/firewall/250.png
-   :width:  350px
    :align: center
    :alt: Schritt 18 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Wählen Sie den Punkt `GREEN`.
 
 Bestätigen Sie den Sicherheitshinweis durch Drücken der ``ENTER``-Taste.
 
 .. figure:: media/firewall/260.png
-   :width:  350px
    :align: center
    :alt: Schritt 19 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Bestätigen Sie den Sicherheitshinweis.
 
@@ -293,20 +241,16 @@ Geben Sie als IP-Adresse `10.16.1.254` und als Netzmaske `255.240.0.0` ein und b
   Wenn Sie einen anderen Adressbereich gewählt haben, müssen Sie diese Eingabe anpassen.
 
 .. figure:: media/firewall/270.png
-   :width:  350px
    :align: center
    :alt: Schritt 19 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Geben Sie als IP-Adresse `10.16.1.254` und als Netzmaske `255.240.0.0` ein.
 
 Wählen Sie  den Punkt `BLUE` mit den mit den ``Pfeil``-Tasten  aus und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste.
 
 .. figure:: media/firewall/280.png
-   :width:  350px
    :align: center
    :alt: Schritt 18 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Wählen Sie den Punkt `BLUE`.
 
@@ -316,20 +260,16 @@ Geben Sie als IP-Adresse `172.16.16.254` und als Netzmaske `255.255.255.0` ein u
   Wenn Sie einen anderen Adressbereich gewählt haben, müssen Sie diese Eingabe anpassen.
 
 .. figure:: media/firewall/290.png
-   :width:  350px
    :align: center
    :alt: Schritt 19 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Geben Sie als IP-Adresse `172.16.16.254` und als Netzmaske `255.255.255.0` ein.
 
 Wählen Sie den Punkt `RED` mit den mit den ``Pfeil``-Tasten  aus und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste.
 
 .. figure:: media/firewall/300.png
-   :width:  350px
    :align: center
    :alt: Schritt 20 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Wählen Sie den Punkt `RED`.
 
@@ -339,27 +279,22 @@ Wählen Sie entsprechend Ihrer Internetverbindung die passende Option mit den ``
    Schulen in Baden-Württemberg sind oft mit einem Router von BelWü ausgestattet und besitzen damit eine statische IP. In diesem Fall wählen Sie `Statisch` aus.
 
 .. |STAT1| image:: media/firewall/310.png
-   :width:  290px
    :align: middle
    :alt: Schritt 21a der Erstkonfiguration der Firewall
 
 .. |STAT2| image:: media/firewall/340.png
-   :width:  290px
    :align: middle
    :alt: Schritt 22a der Erstkonfiguration der Firewall
 
 .. |STAT3| image:: media/firewall/350.png
-   :width:  290px
    :align: middle
    :alt: Schritt 23a der Erstkonfiguration der Firewall
 
 .. |DHCP1| image:: media/firewall/320.png
-   :width:  290px
    :align: middle
    :alt: Schritt 21b der Erstkonfiguration der Firewall
 
 .. |DHCP2| image:: media/firewall/330.png
-   :width:  290px
    :align: middle
    :alt: Schritt 22b der Erstkonfiguration der Firewall
 
@@ -399,20 +334,16 @@ Abschluss der Konfiguration
 Aktivieren Sie **nicht** den DHCP-Dienst für das grüne Netzwerk, diese Funktionalität übernimmt der der linuxmuster.net-Server selbst. Navigieren Sie mit den ``Pfeil``-Tasten auf die Schaltfläche `OK` und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste.
 
 .. figure:: media/firewall/360.png
-   :width:  350px
    :align: center
    :alt: Schritt 24 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Aktivieren Sie **nicht** den DHCP-Dienst.
 
 Bestätigen Sie das Ende des Setups mit der `ENTER`-Taste.
 
 .. figure:: media/firewall/370.png
-   :width:  350px
    :align: center
    :alt: Schritt 25 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Bestätigen Sie das Ende des Setups.
 
@@ -502,50 +433,40 @@ Konfiguration über das Webinterface
   Je nach Browser könne die folgenden Bilder variieren. Hier wurde der Firefox verwendet.
 
 .. figure:: media/firewall/450.png
-   :width:  350px
    :align: center
    :alt: Schritt 26 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Rufen Sie die Adresse `https://10.16.1.254:444 <https://10.16.1.254:444>`_ auf und akzeptieren Sie den Sicherheitshinweis.
 
 Klicken Sie auf ``Ausnahme hinzufügen``.
 
 .. figure:: media/firewall/460.png
-   :width:  350px
    :align: center
    :alt: Schritt 27 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Klicken Sie auf ``Ausnahme hinzufügen``.
 
 Klicken Sie auf ``Sicherheits-Ausnahme bestätigen``.
 
 .. figure:: media/firewall/470.png
-   :width:  350px
    :align: center
    :alt: Schritt 27 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Klicken Sie auf ``Sicherheits-Ausnahme bestätigen``
 
 Melden Sie sich mit dem Benutzer `admin` und dem von Ihnen gewählten Passwort an.
 
 .. figure:: media/firewall/480.png
-   :width:  350px
    :align: center
    :alt: Schritt 28 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Geben Sie Ihre Anmeldedaten ein.
 
 Klicken Sie unter ``System`` auf ``SSH-Zugriff``.
 
 .. figure:: media/firewall/490.png
-   :width:  550px
    :align: center
    :alt: Schritt 29 der Erstkonfiguration der Firewall
-   :figwidth: 550px
 
    Klicken Sie unter ``System`` auf ``SSH-Zugriff``.
 
@@ -557,10 +478,8 @@ Setzen Sie zusätzlich Haken bei
 und bestätigen Sie Ihre Auswahl durch Klicken auf die Schaltfläche ``Speichern``.
 
  .. figure:: media/firewall/500.png
-   :width:  550px
    :align: center
    :alt: Schritt 30 der Erstkonfiguration der Firewall
-   :figwidth: 550px
 
    Erlauben sie den SSH-Zugriff sowie die Authentifizierung auf Basis öffentlicher Schlüssel
 
@@ -607,10 +526,8 @@ die Datei ``enablessh`` an, damit der SSH-Dienst gestartet werden kann. Der Befe
 startet den Dienst schließlich, was auf der Konsole mit einem [OK] quittiert wird.
 
 .. figure:: media/firewall/510.png
-   :width:  550px
    :align: center
    :alt: Schritt 31 der Erstkonfiguration der Firewall
-   :figwidth: 550px
 
    Starten Sie den SSH-Dienst neu.
 
@@ -632,60 +549,48 @@ Konfiguration über das Webinterface
   Je nach Browser könne die folgenden Bilder variieren. Hier wurde der Firefox verwendet.
 
 .. figure:: media/firewall/450.png
-   :width:  350px
    :align: center
    :alt: Schritt 26 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Rufen Sie die Adresse `https://10.16.1.254:444` auf und akzeptieren Sie den Sicherheitshinweis.
 
 Klicken Sie auf ``Ausnahme hinzufügen``.
 
 .. figure:: media/firewall/460.png
-   :width:  350px
    :align: center
    :alt: Schritt 27 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Klicken Sie auf ``Ausnahme hinzufügen``.
 
 Klicken Sie auf ``Sicherheits-Ausnahme bestätigen``.
 
 .. figure:: media/firewall/470.png
-   :width:  350px
    :align: center
    :alt: Schritt 27 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Klicken Sie auf ``Sicherheits-Ausnahme bestätigen``
 
 Melden Sie sich mit dem Benutzer `admin` und dem von Ihnen gewählten Passwort an.
 
 .. figure:: media/firewall/480.png
-   :width:  350px
    :align: center
    :alt: Schritt 28 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Geben Sie Ihre Anmeldedaten ein.
 
 Klicken Sie unter ``Netzwerk`` auf ``Web-Proxy``.
 
 .. figure:: media/firewall/520.png
-   :width:  350px
    :align: center
    :alt: Schritt 28 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Klicken Sie unter ``Netzwerk`` auf ``Web-Proxy``.
 
 Tragen Sie im Abschnitt Netzwerkbasierte Zugriffskontrolle im Eingabefeld unterhalb von ``Uneingeschränkte IP-Adressen (eine pro Zeile)``: die IP-Adresse des Servers also ``10.16.1.1`` ein. Betätigen Sie danach die Schaltfläche Speichern und Neustart auf der Seite unten.
 
 .. figure:: media/firewall/530.png
-   :width:  350px
    :align: center
    :alt: Schritt 28 der Erstkonfiguration der Firewall
-   :figwidth: 350px
 
    Gestatten Sie dem Server uneingeschränkten Zugriff auf das Internet.
 

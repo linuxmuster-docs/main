@@ -9,10 +9,8 @@ Das kann über den mitgelieferten Menüeintrag oder über die Konsole stattfinde
    $ leovirtstarter2
 
 .. figure:: media/leovirtstarter2_dialog1.png
-   :width:  450px
    :align: center
    :alt: Wählen Sie eine virtuelle Maschine
-   :figwidth: 450px
 
    Wählen Sie eine virtuelle Maschine
 

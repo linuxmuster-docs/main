@@ -18,7 +18,7 @@ und wählen anschließend die Gruppe (Hardwareklasse) die Sie editieren möchten
 Änderungen Speichern. Wichtig sind dabei die Einstellungen unter dem Punkt Systeme.
 
 .. attention::
-             Geben Sie für Windows eine ausreichend große Partition an (Empfehlung: mindestens 50 G), da Windows 
+             Geben Sie für Windows eine ausreichend große Partition an (Empfehlung: mindestens 50 G), da Windows
              extrem viel Festplattenplatz beansprucht. "Viel hilft viel ist hier ausnahmsweise richtig!".
 
 |1000000000000382000003C15DFFA156_png|
@@ -44,7 +44,7 @@ Geben Sie den Befehl ein:
 Beispiel start.conf
 -------------------
 
-Das ist eine Beispielkonfiguration für eine Partition 50GB für eine Windowsinstallation und eine Cachepartition. 
+Das ist eine Beispielkonfiguration für eine Partition 50GB für eine Windowsinstallation und eine Cachepartition.
 Größe der Cache-Partition = Rest der Festplatte.
 
 .. code:: bash
@@ -79,7 +79,7 @@ Größe der Cache-Partition = Rest der Festplatte.
     # kein automatisches Befüllen des Caches beim LINBO-Start
 
     DownloadType = torrent
-    # Image-Download per torrent (alternativ rsync, oder multicast. Multicast muss ggf. 
+    # Image-Download per torrent (alternativ rsync, oder multicast. Multicast muss ggf.
     # noch eingerichtet werden)
 
     BackgroundFontColor = white
@@ -121,8 +121,8 @@ Größe der Cache-Partition = Rest der Festplatte.
     Dev = /dev/sda2
     # Device-Name der Partition (sda2 = zweite Partition auf erster Platte)
 
-    Size = 
-    # Partitionsgroesse in kB muss bei der Cache-Partition nicht angegeben werden. 
+    Size =
+    # Partitionsgroesse in kB muss bei der Cache-Partition nicht angegeben werden.
     # Es wird automatisch der Rest der Festplatte verwendet
 
     Id = 83
@@ -191,26 +191,15 @@ Größe der Cache-Partition = Rest der Festplatte.
 
 
 .. |1000000000000295000002927824780F_png| image:: media/1000000000000295000002927824780F.png
-    :width: 11.999cm
-    :height: 11.944cm
-
 
 .. |10000000000003FC0000030089B2BD2A_png| image:: media/10000000000003FC0000030089B2BD2A.png
-    :width: 12.011cm
-    :height: 9.042cm
-
 
 .. |1000000000000382000003C15DFFA156_png| image:: media/1000000000000382000003C15DFFA156.png
-    :width: 15.99cm
-    :height: 17.112cm
-
 
 .. |100000000000028800000188045E477F_png| image:: media/100000000000028800000188045E477F.png
-    :width: 12.002cm
-    :height: 7.261cm
 
 .. note::
-         **Faustregel:** Die Cachepartition ist ausreichend groß, wenn sie die gleiche Größe wie die 
-         Windows-Partition hat. Für zukünftige Installationen unter Windows sollte man die Festplatte 
-         nicht zu knapp bemessen. 150 G sollte bei Windows die unterste Größe sein! Aus Performancegründen 
-         sollte man eine SSD-Festplatte vorziehen. 
+         **Faustregel:** Die Cachepartition ist ausreichend groß, wenn sie die gleiche Größe wie die
+         Windows-Partition hat. Für zukünftige Installationen unter Windows sollte man die Festplatte
+         nicht zu knapp bemessen. 150 G sollte bei Windows die unterste Größe sein! Aus Performancegründen
+         sollte man eine SSD-Festplatte vorziehen.

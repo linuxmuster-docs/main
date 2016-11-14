@@ -89,10 +89,8 @@ Linuxmuster.net ordnet den unterschiedlichen Netzwerken Farben zu:
 *  Ebenso optional kann eine sog. demilitarisierte Zone (DMZ) als zusätzliches Netzwerk (ORANGE) aufgebaut werden.
 
 .. figure:: media/preamble/einfaches-netz.png
-   :width:  510px
    :align: center
    :alt: Schematischer Aufbau eines Computernetzes mit linuxmuster.net.
-   :figwidth: 510px
 
    Schematischer Aufbau eines Computernetzes mit linuxmuster.net.
 

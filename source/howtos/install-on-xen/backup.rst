@@ -13,72 +13,54 @@ Konfiguration XenCenter
 Öffnen Sie XenCenter und klicken Sie mit der rechten Maustaste auf ``xen``, wählen Sie ``New SR``.
 
 .. figure:: media/configuration/image115.png
-   :width:  450px
    :align: center
    :alt: Konfiguration Schritt 55
-   :figwidth: 450px
 
 Wählen Sie einen Punkt unter ISO library.
 
 .. figure:: media/configuration/image116.png
-   :width:  450px
    :align: center
    :alt: Konfiguration Schritt 56
-   :figwidth: 450px
 
 Bennen Sie Ihren Storage. Sofern Sie den Namen "BackupStore" verwenden, müssen Sie später die main.cfg nicht anpassen. Dieser Name wird automatisch als Target erkannt.
 
 .. figure:: media/configuration/image117.png
-   :width:  450px
    :align: center
    :alt: Konfiguration Schritt 57
-   :figwidth: 450px
 
 Tragen Sie den Pfad zur Freigabe ein, welchen Sie verwenden wollen und klicken auf ``Finish``.
 
 .. figure:: media/configuration/image118.png
-   :width:  450px
    :align: center
    :alt: Konfiguration Schritt 58
-   :figwidth: 450px
 
 Sie haben den Storage erfolgreich eingerichtet, wenn er links in der Übersicht angezeigt wird.
 
 .. figure:: media/configuration/image119.png
-   :width:  450px
    :align: center
    :alt: Konfiguration Schritt 59
-   :figwidth: 450px
 
 Um einzustellen, welche VMs gesichert werden sollen, genügt es bei den zu sichernden VMs einen bestimmten Tag zu setzen. Klicken Sie dazu mit der rechten Maustaste auf die gewünschte VM und wählen ``Properties``.
 
 .. figure:: media/configuration/image120.png
-   :width:  450px
    :align: center
    :alt: Konfiguration Schritt 60
-   :figwidth: 450px
 
 Im Feld ``General`` klicken Sie unten auf ``Edit tags...``.
 
 .. figure:: media/configuration/image121.png
-   :width:  450px
    :align: center
    :alt: Konfiguration Schritt 61
-   :figwidth: 450px
 
 Tragen Sie als Tag ``ni-backup`` ein. Klicken Sie auf ``Create`` und dann auf ``OK``. Durch diesen Tag wird die Maschine in die Sicherung mit aufgenommen. Bei allen weiteren Maschinen wird der Tag bereits aufgelistet und es muss nur noch die Checkbox aktiviert werden.
 
 .. figure:: media/configuration/image122.png
-   :width:  450px
    :align: center
    :alt: Konfiguration Schritt 62
-   :figwidth: 450px
 
 .. figure:: media/configuration/image123.png
-   :width:  450px
    :align: center
    :alt: Konfiguration Schritt 63
-   :figwidth: 450px
 
 Konfiguration XenServer
 -----------------------
@@ -92,18 +74,15 @@ Um ein Backup zu starten, wechseln Sie auf die Konsole des XenServers und geben 
 und bestätigen mit ``Enter``.
 
 .. figure:: media/configuration/image124.png
-   :width:  450px
    :align: center
    :alt: Konfiguration Schritt 64
-   :figwidth: 450px
+
 
 Nach Abschluss finden Sie in Ihrer Freigabe einen Snapshot, den Sie im Notfall wiederherstellen können.
 
 .. figure:: media/configuration/image125.png
-   :width:  450px
    :align: center
    :alt: Konfiguration Schritt 65
-   :figwidth: 450px
 
 Automatische Backups
 --------------------
@@ -117,10 +96,8 @@ Um Backups automatisch zu bestimmten Zeitpunkten auszuführen, können Sie einen
 ein und bestätigen Sie mit ``Enter``.
 
 .. figure:: media/configuration/image126.png
-   :width:  450px
    :align: center
    :alt: Konfiguration Schritt 66
-   :figwidth: 450px
 
 Tragen Sie für ein wöchentliches Backup, dass jeden Freitag um 20:00 Uhr startet, folgende Zeile in die Datei ein:
 
@@ -129,10 +106,8 @@ Tragen Sie für ein wöchentliches Backup, dass jeden Freitag um 20:00 Uhr start
    0 20 \* \* 5 /usr/share/netzint/tools/backup.sh
 
 .. figure:: media/configuration/image127.png
-   :width:  450px
    :align: center
    :alt: Konfiguration Schritt 67
-   :figwidth: 450px
 
 Verlassen Sie den Editor und speichern Sie die Datei. Die Zeit für das Backup folgt dieser Zeitangabe die als Filter gelesen wird:
 
