@@ -14,7 +14,8 @@ Linuxmuster.net sieht vor dass **Programminstallationen von "pgmadmin"** durchge
 4. Führen Sie den Befehl ``C:>defprof pgmadmin.<Domainname der Schule>`` aus.
 
 .. note::
-         Bei Installation nach Handbuch müsste der Befehl ``C:>defprof pgmadmin.SCHULE``  lauten!
+         Bei Installation der "linuxmuster.net" nach Handbuch müsste der Befehl ``C:>defprof pgmadmin.SCHULE``  
+         lauten!
          
 5. Melden Sie sich als lokaler User ab und als pgmadmin an
 6. Fahren Sie den Rechner herunter
