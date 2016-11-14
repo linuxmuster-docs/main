@@ -138,19 +138,12 @@ Alternativ kann der eigene Fork auf den Stand des offiziellen Repositoriums gebr
      Aktualisiere 76e2e32..be2f941
      Fast-forward
 
-* Der Befehl sollte in einem "Fast-forward" enden. Jetzt kann man 
-  die offiziellen Änderungen in sein eigenen Fork hochladen.
-
-  .. code:: bash
-
-     ~/docs$ git push
-
-* Jetzt ist der eigene Fork aktuell und man kann seine lokale Änderungen wieder hervorholen
+* Der Befehl sollte in einem "Fast-forward" enden. Jetzt ist der eigene lokale Fork aktuell und man kann seine Änderungen wieder hervorholen
 
   .. code:: bash
 
      ~/docs$ git stash pop
-* Zu diesem Zeitpunkt kann man bei :ref:`documentation-changes` mit den Befehlen ``git add``, 
+* Ab diesem Zeitpunkt kann man bei :ref:`documentation-changes` mit den Befehlen ``git add``, 
   ``git commit`` und ``git push`` und einem Pull-Request fortfahren
 
 
