@@ -61,6 +61,8 @@ Sie können nun mit
 
 die Dokumentation in HTML übersetzen und in ihrem Browser öffnen.
 
+.. _documentation-changes:
+
 Dokumentation ändern oder neu erstellen
 ---------------------------------------
 
@@ -83,6 +85,7 @@ Haben Sie alle Änderungen vorgenommen, können Sie sie nun zur Überprüfung ei
 
 .. code-block:: console
 
+   $ make clean
    $ make html
 
 Falls Sie neue Dateien oder Ordner erstellt haben, müssen diese noch hinzugefügt werden:
@@ -106,7 +109,6 @@ Erstellen Sie nun einen "Pull-Request" unter `<https://github.com/github-account
 
 Wenn Sie weitere Änderungen vornehmen und mit ``git commit -a -m"My comment"`` und ``git push`` bei Github hochladen, werden diese Änderungen automatisch dem Pull Request hinzugefügt.
 
-
 Den eigenen Fork aktualisieren
 ------------------------------
 
@@ -115,40 +117,40 @@ gelöscht werden und ein neuer erzeugt werden.
 
 Alternativ kann der eigene Fork auf den Stand des offiziellen Repositoriums gebracht werden:
 
-* Verschiebe alle lokalen Änderungen mit ``git stash`` in den Hintergrund
-
-  .. code:: bash
-
-     ~/docs$ git stash
-
 * Füge (einmalig) einen remote-tracking branch hinzu:
 
   .. code:: bash
 
      ~/docs$ git remote add upstream https://github.com/linuxmuster-docs/all-of-me.git
 
+* Verschiebe alle lokalen Änderungen mit ``git stash`` in den Hintergrund
+
+  .. code:: bash
+
+     ~/docs$ git stash
+
 * Hole und merge den aktuellen offiziellen branch:
 
   .. code:: bash
 
-     ~/docs$ git fetch upstream
-     ~/docs$ git merge upstream/master
+     ~/docs$ git pull upstream master
+     ...
      Aktualisiere 76e2e32..be2f941
      Fast-forward
 
-* Wenn der merge nicht in einem "Fast-forward" endet, sollte man
-  besser den Fork löschen und neu erzeugen. Andernfalls kann man jetzt
-  die offiziellen Änderungen hochladen.
+* Der Befehl sollte in einem "Fast-forward" enden. Jetzt kann man 
+  die offiziellen Änderungen in sein eigenen Fork hochladen.
 
   .. code:: bash
 
      ~/docs$ git push
 
-* Jetzt kann man seine lokale Änderungen wieder hervorholen
+* Jetzt ist der eigene Fork aktuell und man kann seine lokale Änderungen wieder hervorholen
 
   .. code:: bash
 
      ~/docs$ git stash pop
-
+* Zu diesem Zeitpunkt kann man bei :ref:`documentation-changes` mit den Befehlen ``git add``, 
+  ``git commit`` und ``git push`` und einem Pull-Request fortfahren
 
 
