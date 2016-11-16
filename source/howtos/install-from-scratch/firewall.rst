@@ -278,55 +278,49 @@ Wählen Sie entsprechend Ihrer Internetverbindung die passende Option mit den ``
   .. note::
    Schulen in Baden-Württemberg sind oft mit einem Router von BelWü ausgestattet und besitzen damit eine statische IP. In diesem Fall wählen Sie `Statisch` aus.
 
-.. |STAT1| image:: media/firewall/310.png
-   :align: middle
-   :alt: Schritt 21a der Erstkonfiguration der Firewall
 
-.. |STAT2| image:: media/firewall/340.png
-   :align: middle
-   :alt: Schritt 22a der Erstkonfiguration der Firewall
-
-.. |STAT3| image:: media/firewall/350.png
-   :align: middle
-   :alt: Schritt 23a der Erstkonfiguration der Firewall
-
-.. |DHCP1| image:: media/firewall/320.png
-   :align: middle
-   :alt: Schritt 21b der Erstkonfiguration der Firewall
-
-.. |DHCP2| image:: media/firewall/330.png
-   :align: middle
-   :alt: Schritt 22b der Erstkonfiguration der Firewall
 
 Statisch
 ````````
 
 Falls Sie `Statisch` gewählt haben, geben Sie die Daten, die Sie von Ihrem Provider (z.B. Belwü) erhalten haben, ein und bestätigen Sie mit der ``ENTER``-Taste.
 
-|STAT1|
+.. figure:: media/firewall/310.png
+   :align: center
+   :alt: Schritt 21a der Erstkonfiguration der Firewall
 
 Falls Sie im letzten Schritt `Statisch` gewählt haben, navigieren Sie mit ``Pfeil``-Tasten auf `DNS- und Gatewayeinstellungen` und bestätigen Sie mit der ``ENTER`` -Taste.
 
-|STAT2|
+.. figure:: media/firewall/340.png
+   :align: center
+   :alt: Schritt 22a der Erstkonfiguration der Firewall
 
 Geben Sie nun Ihren `primären` und `sekundären` DNS sowie das Standard-Gateway ein und bestätigen Sie Ihre Eingabe mit der ``ENTER``-Taste.
 
-|STAT3|
+.. figure:: media/firewall/350.png
+   :align: center
+   :alt: Schritt 23a der Erstkonfiguration der Firewall
 
 Navigieren Sie mit ``Pfeil``-Tasten auf `Fertig` und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste.
 
-|DHCP2|
+.. figure:: media/firewall/330.png
+   :align: center
+   :alt: Schritt 22b der Erstkonfiguration der Firewall
 
 DHCP
 ````
 
 Falls Sie `DHCP` gewählt bestätigen Sie mit der ``ENTER``-Taste.
 
-|DHCP1|
+.. figure:: media/firewall/320.png
+   :align: center
+   :alt: Schritt 21b der Erstkonfiguration der Firewall
 
-Falls Sie im letzten Schritt `DHCP` gewählt haben, navigieren Sie mit ``Pfeil``-Tasten auf `Fertig` und bestätigen Sie Ihre Auswahl mit der ``ENTER`` -Taste.
+Falls Sie im letzten Schritt `DHCP` gewählt haben, navigieren Sie mit ``Pfeil``-Tasten auf `Fertig` und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste.
 
-|DHCP2|
+.. figure:: media/firewall/330.png
+   :align: center
+   :alt: Schritt 22b der Erstkonfiguration der Firewall
 
 Abschluss der Konfiguration
 ```````````````````````````
