@@ -11,12 +11,7 @@ Linuxmuster.net sieht vor dass **Programminstallationen von "pgmadmin"** durchge
 
 2. Melden Sie sich als lokaler User mit Admin-Rechten an dem Rechner an
 3. Kopieren Sie die Datei https://www.forensit.com/Downloads/Support/DefProf.zip und entpacken sie nach ``C:\Windows\system32\Defprof.exe``. Befindet sich Defprof.exe schon in ``C:\Windows\system32\`` geht es mit Schritt 4. weiter.
-4. Führen Sie den Befehl ``C:>defprof pgmadmin.<Domainname der Schule>`` aus.
-
-.. note::
-         Bei Installation der "linuxmuster.net" nach Handbuch müsste der Befehl ``C:>defprof pgmadmin.SCHULE``
-         lauten!
-
+4. Führen Sie den Befehl ``C:>defprof pgmadmin`` aus.
 5. Melden Sie sich als lokaler User ab und als pgmadmin an
 6. Fahren Sie den Rechner herunter
 7. Starten Sie den Rechner neu und erstellen ein neues Image mit linbo
