@@ -117,6 +117,7 @@ Starten Sie nun die Installation mit der Schaltfläche ``Install XenServer``.
    :align: center
    :alt: Schritt 17 der Installation des XenServers
 
+Warten Sie, bis der Dialog "New Media" erscheint.
 Legen Sie nun die CD „linuxmuster-SupplementalPack“ in das Laufwerk und bestätigen Sie die Meldung mit ``Ok``.
 
 .. figure:: media/xenserver/image18.png
