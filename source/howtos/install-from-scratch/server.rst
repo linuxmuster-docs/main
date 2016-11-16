@@ -212,7 +212,7 @@ Partitionieren Sie nach Ihren Bedürfnissen. Hier gibt es nur eine linuxmuster.n
 
 Im folgenden wird beispielhaft gezeigt wie auf einer einzigen Festplatte drei Partitionen (root-, home- und var-Partition) angelegt werden.
 
-In der Regel sind einem einem Server mehrere Festplatten verbaut. Bitte lesen Sie den im Anhang den Abschnitt zum Thema „Partitionierung im Expertenmodus“ um zu erfahren, wie ein solches System - auch unter optionaler Benutzung des lvm und von Software-RAIDs- partitioniert wird.
+In der Regel sind einem einem Server mehrere Festplatten verbaut. Bitte lesen Sie den Abschnitt zum Thema „Partitionierung im Expertenmodus“ https://www.linuxmuster.net/wiki/dokumentation:handbuch51:anhang:partitionierung_expertenmodus um zu erfahren, wie ein solches System - auch unter optionaler Benutzung des lvm und von Software-RAIDs- partitioniert wird. Dort finden Sie auch Hinweise zu sinnvollen Partitionsgrößen.
 
 An dieser Stelle wird auf eine Swap-Partition verzichtet.
 
