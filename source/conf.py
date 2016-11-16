@@ -119,6 +119,13 @@ gettext_compact = False     # optional
 
 
 # -- Options for HTML output ----------------------------------------------
+html_context = {
+    'css_files': [
+        'https://media.readthedocs.org/css/sphinx_rtd_theme.css',
+        'https://media.readthedocs.org/css/readthedocs-doc-embed.css',
+        '_static/theme_overrides.css',
+    ],
+}
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
