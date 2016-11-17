@@ -248,13 +248,17 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'linuxmusternet.tex', u'linuxmuster.net documentation',
+    ('advisor', 'advisor.tex', u'Network advisor documentation',
+     u'linuxmuster.net', 'manual'),
+    ('student', 'student.tex', u'Students documentation',
+     u'linuxmuster.net', 'manual'),
+    ('teacher', 'teacher.tex', u'Teachers documentation',
      u'linuxmuster.net', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-#latex_logo = None
+latex_logo = '_static/logo.png'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
