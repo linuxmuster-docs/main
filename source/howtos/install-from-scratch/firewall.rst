@@ -341,6 +341,24 @@ Bestätigen Sie das Ende des Setups mit der `ENTER`-Taste.
 
    Bestätigen Sie das Ende des Setups.
 
+Installation eines Admin-PCs
+----------------------------
+
+Richten Sie einen PC ein, der über einen Switch mit dem grünen
+Netzwerkinterface des IPFire verbunden wird.  Mit diesem PC können Sie
+im nächten Abschnitt die Netzwerkkarten zuordnen und später per
+Browser das Web-Interface des IPFire bedienen.
+
+Geben Sie dem Admin-PC eine feste IP. Sie benötigen dazu folgende
+Daten:
+
+* IP: `10.16.1.2`
+* Netzmaske: `255.240.0.0`
+* Gateway: `10.16.1.254`
+
+.. note::
+   Wenn Sie einen anderen Adressbereich gewählt haben, müssen Sie diese Eingabe anpassen.
+
 
 Zuordnen der Netze zu den Netzwerkkarten
 -----------------------------------------
@@ -348,19 +366,31 @@ Falls Sie während des Setup nicht sicher waren, welche Netzwerkkarte sich in we
 
 Zuordnen der Netzwerkkarte zum grünen Netz
 ``````````````````````````````````````````
-Verbinden Sie eine der drei Netzwerkkarten mit einem Switch. Im Folgenden wird geprüft, ob diese Netzwetzwerkkarte dem grünen Netz zugeordnet ist. Verbinden Sie als nächstes einen Computer Ihrer Wahl mit diesem Switch und geben Sie dem Computer eine feste IP. Sie benötigen dazu folgende Daten:
+
+Verbinden Sie eine der drei Netzwerkkarten mit einem Switch. Im
+Folgenden wird geprüft, ob diese Netzwetzwerkkarte dem grünen Netz
+zugeordnet ist.
 
 .. note::
-  Wenn Sie einen anderen Adressbereich gewählt haben, müssen Sie diese Eingabe anpassen.
+   An diesen Switch dürfen während des Testens keine weiteren Geräte angeschlossen sein.
 
-* IP: `10.16.1.2`
-* Netzmaske: `255.240.0.0`
-* Gateway: `10.16.1.254`
+Vom Admin-PC aus pingen Sie nun auf die IP `10.16.1.254`. 
+Unter Linux sieht der Befehl und eine Antwort so aus:
 
-.. note::
-     An diesen Switch dürfen während des Testens keine weiteren Geräte angeschlossen sein.
+.. code-block:: console
 
-Pingen Sie nun auf die IP `10.16.1.254`. Erhalten Sie eine Antwort befindet sich diese Netzwerkkarte im grünen Netz. Fahren Sie in diesem Fall mit der :ref:`red-network` fort.
+   linuxadmin@admin-pc:~$ ping 10.16.1.254 -c 1
+   PING 10.16.1.254 (10.16.1.254) 56(84) bytes of data.
+   64 bytes from 10.16.1.254: icmp_req=1 ttl=63 time=0.438 ms
+   
+   --- 10.16.1.254 ping statistics ---
+   1 packets transmitted, 1 received, 0% packet loss, time 0ms
+   rtt min/avg/max/mdev = 0.438/0.438/0.438/0.000 ms
+
+Bei keiner Antwort lautet die Rückmeldung ``Destination Host Unreachable`` und liefert ``100% packet loss``.
+
+Erhalten Sie eine Antwort befindet sich diese Netzwerkkarte im grünen
+Netz. Fahren Sie in diesem Fall mit der :ref:`red-network` fort.
 
 Erhalten Sie keine Antwort, ziehen Sie das Kabel aus der 1. Netzwerkkarte des IPFires ab und stecken Sie es in die zweite.
 Pingen Sie erneut auf die IP `10.16.1.254`. Erhalten Sie eine Antwort befindet sich diese Netzwerkkarte im grünen Netz. Fahren Sie in diesem Fall mit :ref:`red-network` fort.
@@ -394,7 +424,7 @@ Bringen Sie danach die Paketlisten auf den neuesten Stand, um die Verbindung zum
 
   [root@ipfire ~]:# pakfire update
 
-Wird der Befehl ohne Rückmeldung ausgeführt, befindet sich die Netzwerkkarte im roten Netz (und somit die dritte noch nicht verkabelte im blauen Netz, die belassen sie auch vorerst so). Fahren Sie mit dem :ref:`ssh-config-label` fort.
+Wird der Befehl mit einem Herunterladen neuer Listen oder ohne Rückmeldung ausgeführt, befindet sich die Netzwerkkarte im roten Netz (und somit die dritte noch nicht verkabelte im blauen Netz, die belassen sie auch vorerst so). Fahren Sie mit dem :ref:`ssh-config-label` fort.
 Gibt der Befehl
 
 .. code-block:: console
@@ -419,9 +449,9 @@ Damit der linuxmuster.net-Server bei der Installation auf den IPFire zugreifen k
 
 .. _ssh-config-webinterface-label:
 
-Konfiguration über das Webinterface
-```````````````````````````````````
-Öffnen Sie in dem an den Switch angeschlossenen Computer einen Browser und rufen die Adresse https://10.16.1.254:444 auf. Akzeptieren Sie den Sicherheitshinweis, in dem Sie zunächst auf ``Ich kenne das Risiko`` klicken.
+SSH-Konfiguration über das Webinterface
+```````````````````````````````````````
+Öffnen Sie in dem an den Switch angeschlossenen Admin-PC einen Browser und rufen die Adresse `https://10.16.1.254:444`_ auf. Akzeptieren Sie den Sicherheitshinweis, in dem Sie zunächst auf ``Ich kenne das Risiko`` klicken.
 
 .. note::
   Je nach Browser könne die folgenden Bilder variieren. Hier wurde der Firefox verwendet.
@@ -482,15 +512,10 @@ und bestätigen Sie Ihre Auswahl durch Klicken auf die Schaltfläche ``Speichern
 
 Fahren Sie nun mit der :ref:`Konfiguration des Proxys <proxy-config-label>` fort.
 
-
-..
-   review t.kuechel
-
-
 .. _ssh-config-console-label:
 
-Konfiguration über die Konsole
-```````````````````````````````
+SSH-Konfiguration über die Konsole
+``````````````````````````````````
 Melden Sie sich an der Konsole mit dem Benutzer ``root`` und dem von Ihnen vergebenen Passwort an.
 Bearbeiten Sie die Datei ``/var/ipfire/remote/settings`` mit dem Editor ``vi``, sodass diese den folgenden Inhalt hat. Die letzte Zeile muss nicht angepasst werden.
 
@@ -535,86 +560,72 @@ Der linuxmuster.net-Server darf uneingeschränkt auf das Internet zugreifen. Hie
 
 .. _proxy-config-webinterface-label:
 
-Konfiguration über das Webinterface
-````````````````````````````````````
-Öffnen Sie in dem an den Switch angeschlossenen Computer einen Browser und rufen die Adresse `https://10.16.1.254:444` auf. Akzeptieren Sie den Sicherheitshinweis, in dem Sie zunächst auf ``Ich kenne das Risiko`` klicken.
+Proxy-Konfiguration über das Webinterface
+`````````````````````````````````````````
 
-.. note::
-  Je nach Browser könne die folgenden Bilder variieren. Hier wurde der Firefox verwendet.
+Öffnen Sie in dem an den Switch angeschlossenen Computer einen Browser
+und rufen die Adresse `https://10.16.1.254:444`_ auf.
 
-.. figure:: media/firewall/450.png
-   :align: center
-   :alt: Schritt 26 der Erstkonfiguration der Firewall
-
-   Rufen Sie die Adresse `https://10.16.1.254:444` auf und akzeptieren Sie den Sicherheitshinweis.
-
-Klicken Sie auf ``Ausnahme hinzufügen``.
-
-.. figure:: media/firewall/460.png
-   :align: center
-   :alt: Schritt 27 der Erstkonfiguration der Firewall
-
-   Klicken Sie auf ``Ausnahme hinzufügen``.
-
-Klicken Sie auf ``Sicherheits-Ausnahme bestätigen``.
-
-.. figure:: media/firewall/470.png
-   :align: center
-   :alt: Schritt 27 der Erstkonfiguration der Firewall
-
-   Klicken Sie auf ``Sicherheits-Ausnahme bestätigen``
-
-Melden Sie sich mit dem Benutzer `admin` und dem von Ihnen gewählten Passwort an.
-
-.. figure:: media/firewall/480.png
-   :align: center
-   :alt: Schritt 28 der Erstkonfiguration der Firewall
-
-   Geben Sie Ihre Anmeldedaten ein.
+Falls noch nicht geschehen, akzeptieren Sie den Sicherheitshinweis und
+fügen eine Ausnahme hinzu wie in Abschnitt :ref:`SSH-Konfiguration
+über das Webinterface <ssh-config-webinterface-label>` und melden Sie
+sich mit ``admin`` und dem gewählten Passwort an.
 
 Klicken Sie unter ``Netzwerk`` auf ``Web-Proxy``.
 
 .. figure:: media/firewall/520.png
    :align: center
-   :alt: Schritt 28 der Erstkonfiguration der Firewall
+   :alt: Schritt 32 der Erstkonfiguration der Firewall
 
    Klicken Sie unter ``Netzwerk`` auf ``Web-Proxy``.
 
-Tragen Sie im Abschnitt Netzwerkbasierte Zugriffskontrolle im Eingabefeld unterhalb von ``Uneingeschränkte IP-Adressen (eine pro Zeile)``: die IP-Adresse des Servers also ``10.16.1.1`` ein. Betätigen Sie danach die Schaltfläche Speichern und Neustart auf der Seite unten.
+Tragen Sie im Abschnitt Netzwerkbasierte Zugriffskontrolle im Eingabefeld unterhalb von ``Uneingeschränkte IP-Adressen (eine pro Zeile)``: die IP-Adresse des Servers also ``10.16.1.1`` ein. 
 
-.. figure:: media/firewall/530.png
+.. figure:: media/firewall/531.png
    :align: center
-   :alt: Schritt 28 der Erstkonfiguration der Firewall
+   :alt: Schritt 33 der Erstkonfiguration der Firewall
 
    Gestatten Sie dem Server uneingeschränkten Zugriff auf das Internet.
 
+Betätigen Sie danach die Schaltfläche "Speichern und Neustart" auf der Seite unten.
+
+.. figure:: media/firewall/532.png
+   :align: center
+   :alt: Schritt 34 der Erstkonfiguration der Firewall
+
+   Bestätigen Sie die Änderungen durch "Speichern und Neustart"
+
 .. note::
-  Werden in der Weboberfläche des IPFire Aktualisierungen gemeldet, spielen Sie diese bitte **nicht** ein. Nutzen Sie stattdessen nach der Installation des linuxmuster.net-Servers den Befehl ``linuxmuster-ipfire --upgrade``. So ist sichergestellt, dass die Version des IPFires mit der Version des linuxmuster.net-Server kompatibel sind. Siehe dazu auch :doc:`Aktualisierung der Firewall IPFire <../../howtos/keep-lmn-uptodate/2-update-ipfire/>`
+   
+   Werden in der Weboberfläche des IPFire Aktualisierungen gemeldet,
+   spielen Sie diese bitte **nicht** ein. Nutzen Sie stattdessen nach
+   der Installation des linuxmuster.net-Servers den Befehl
+   ``linuxmuster-ipfire --upgrade``. So ist sichergestellt, dass die
+   Version des IPFires mit der Version des linuxmuster.net-Server
+   kompatibel sind. Siehe dazu auch :doc:`Aktualisierung der Firewall
+   IPFire <../../howtos/keep-lmn-uptodate/2-update-ipfire/>`
 
 Fahren Sie nun mit der :ref:`Installation des Servers <server-install-label>` fort.
 
 .. _proxy-config-console-label:
 
-Konfiguration über die Konsole
-```````````````````````````````
-Zunächst wird ein neuer Ordner ``acls`` angelegt und dessen recht angepasst.
+Proxy-Konfiguration über die Konsole
+````````````````````````````````````
+Zunächst wird ein neuer Ordner ``acls`` angelegt und dessen Rechte angepasst.
 
-.. code::
+.. code-block:: console
 
     [root@ipfire ~]:# mkdir /var/ipfire/proxy/advanced/acls
     [root@ipfire ~]:# chown nobody:nobody /var/ipfire/proxy/advanced/acls
 
-In diesem Ordner wird die Datei ``src_unrestricted_ip.acl`` erzeugt und ihre Rechte angepasst.
+In diesem Ordner wird die Datei ``src_unrestricted_ip.acl`` erzeugt und deren Rechte angepasst.
 
-.. code::
+.. code-block:: console
 
     [root@ipfire ~]:# touch /var/ipfire/proxy/advanced/acls/src_unrestricted_ip.acl
     [root@ipfire ~]:# chown nobody:nobody /var/ipfire/proxy/advanced/acls/src_unrestricted_ip.acl
 
 In die erstellte Datei mit dem Editor ``vi`` die IP des Servers eingetragen.
-
-.. note::
-  Wenn Sie einen anderen Adressbereich gewählt haben, müssen Sie diese Eingabe anpassen.
 
 .. code::
 
@@ -622,7 +633,7 @@ In die erstellte Datei mit dem Editor ``vi`` die IP des Servers eingetragen.
 
 Abschließend wird Webproxy-Dienst neu gestartet.
 
-.. code::
+.. code-block:: console
 
     [root@ipfire ~]:# /etc/rc.d/init.d/squid restart
 
