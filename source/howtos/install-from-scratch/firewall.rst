@@ -571,52 +571,61 @@ fügen eine Ausnahme hinzu wie in Abschnitt :ref:`SSH-Konfiguration
 über das Webinterface <ssh-config-webinterface-label>` und melden Sie
 sich mit ``admin`` und dem gewählten Passwort an.
 
-..
-   review t.kuechel
-
 Klicken Sie unter ``Netzwerk`` auf ``Web-Proxy``.
 
 .. figure:: media/firewall/520.png
    :align: center
-   :alt: Schritt 28 der Erstkonfiguration der Firewall
+   :alt: Schritt 32 der Erstkonfiguration der Firewall
 
    Klicken Sie unter ``Netzwerk`` auf ``Web-Proxy``.
 
-Tragen Sie im Abschnitt Netzwerkbasierte Zugriffskontrolle im Eingabefeld unterhalb von ``Uneingeschränkte IP-Adressen (eine pro Zeile)``: die IP-Adresse des Servers also ``10.16.1.1`` ein. Betätigen Sie danach die Schaltfläche Speichern und Neustart auf der Seite unten.
+Tragen Sie im Abschnitt Netzwerkbasierte Zugriffskontrolle im Eingabefeld unterhalb von ``Uneingeschränkte IP-Adressen (eine pro Zeile)``: die IP-Adresse des Servers also ``10.16.1.1`` ein. 
 
-.. figure:: media/firewall/530.png
+.. figure:: media/firewall/531.png
    :align: center
-   :alt: Schritt 28 der Erstkonfiguration der Firewall
+   :alt: Schritt 33 der Erstkonfiguration der Firewall
 
    Gestatten Sie dem Server uneingeschränkten Zugriff auf das Internet.
 
+Betätigen Sie danach die Schaltfläche "Speichern und Neustart" auf der Seite unten.
+
+.. figure:: media/firewall/532.png
+   :align: center
+   :alt: Schritt 34 der Erstkonfiguration der Firewall
+
+   Bestätigen Sie die Änderungen durch "Speichern und Neustart"
+
 .. note::
-  Werden in der Weboberfläche des IPFire Aktualisierungen gemeldet, spielen Sie diese bitte **nicht** ein. Nutzen Sie stattdessen nach der Installation des linuxmuster.net-Servers den Befehl ``linuxmuster-ipfire --upgrade``. So ist sichergestellt, dass die Version des IPFires mit der Version des linuxmuster.net-Server kompatibel sind. Siehe dazu auch :doc:`Aktualisierung der Firewall IPFire <../../howtos/keep-lmn-uptodate/2-update-ipfire/>`
+   
+   Werden in der Weboberfläche des IPFire Aktualisierungen gemeldet,
+   spielen Sie diese bitte **nicht** ein. Nutzen Sie stattdessen nach
+   der Installation des linuxmuster.net-Servers den Befehl
+   ``linuxmuster-ipfire --upgrade``. So ist sichergestellt, dass die
+   Version des IPFires mit der Version des linuxmuster.net-Server
+   kompatibel sind. Siehe dazu auch :doc:`Aktualisierung der Firewall
+   IPFire <../../howtos/keep-lmn-uptodate/2-update-ipfire/>`
 
 Fahren Sie nun mit der :ref:`Installation des Servers <server-install-label>` fort.
 
 .. _proxy-config-console-label:
 
-Konfiguration über die Konsole
-```````````````````````````````
-Zunächst wird ein neuer Ordner ``acls`` angelegt und dessen recht angepasst.
+Proxy-Konfiguration über die Konsole
+````````````````````````````````````
+Zunächst wird ein neuer Ordner ``acls`` angelegt und dessen Rechte angepasst.
 
-.. code::
+.. code-block:: console
 
     [root@ipfire ~]:# mkdir /var/ipfire/proxy/advanced/acls
     [root@ipfire ~]:# chown nobody:nobody /var/ipfire/proxy/advanced/acls
 
-In diesem Ordner wird die Datei ``src_unrestricted_ip.acl`` erzeugt und ihre Rechte angepasst.
+In diesem Ordner wird die Datei ``src_unrestricted_ip.acl`` erzeugt und deren Rechte angepasst.
 
-.. code::
+.. code-block:: console
 
     [root@ipfire ~]:# touch /var/ipfire/proxy/advanced/acls/src_unrestricted_ip.acl
     [root@ipfire ~]:# chown nobody:nobody /var/ipfire/proxy/advanced/acls/src_unrestricted_ip.acl
 
 In die erstellte Datei mit dem Editor ``vi`` die IP des Servers eingetragen.
-
-.. note::
-  Wenn Sie einen anderen Adressbereich gewählt haben, müssen Sie diese Eingabe anpassen.
 
 .. code::
 
@@ -624,7 +633,7 @@ In die erstellte Datei mit dem Editor ``vi`` die IP des Servers eingetragen.
 
 Abschließend wird Webproxy-Dienst neu gestartet.
 
-.. code::
+.. code-block:: console
 
     [root@ipfire ~]:# /etc/rc.d/init.d/squid restart
 
