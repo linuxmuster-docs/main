@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-13 18:12+0700\n"
+"POT-Creation-Date: 2016-11-19 10:13+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -297,15 +297,15 @@ msgstr ""
 "Also optional you can setup a so-called demilitarized zone (DMZ) as an "
 "additional network (ORANGE)."
 
-#: ../../source/howtos/install-from-scratch/preamble.rst:97
+#: ../../source/howtos/install-from-scratch/preamble.rst:95
 msgid "Schematischer Aufbau eines Computernetzes mit linuxmuster.net."
 msgstr "Schematic structure of a computer network with linuxmuster.net."
 
-#: ../../source/howtos/install-from-scratch/preamble.rst:100
+#: ../../source/howtos/install-from-scratch/preamble.rst:98
 msgid "Hinweise für Profis"
 msgstr "Information for professionals"
 
-#: ../../source/howtos/install-from-scratch/preamble.rst:101
+#: ../../source/howtos/install-from-scratch/preamble.rst:99
 msgid ""
 "Die linuxmuster.net-Lösung unterstützt auch komplexere Netzwerkstrukturen "
 "mit"
@@ -313,19 +313,19 @@ msgstr ""
 "The linuxmuster.net solution also supports more complex network structures "
 "with"
 
-#: ../../source/howtos/install-from-scratch/preamble.rst:103
+#: ../../source/howtos/install-from-scratch/preamble.rst:101
 msgid "subnetting"
 msgstr "subnetting"
 
-#: ../../source/howtos/install-from-scratch/preamble.rst:104
+#: ../../source/howtos/install-from-scratch/preamble.rst:102
 msgid "VLANS"
 msgstr "VLANS"
 
-#: ../../source/howtos/install-from-scratch/preamble.rst:105
+#: ../../source/howtos/install-from-scratch/preamble.rst:103
 msgid "Bonding"
 msgstr "Bonding"
 
-#: ../../source/howtos/install-from-scratch/preamble.rst:107
+#: ../../source/howtos/install-from-scratch/preamble.rst:105
 msgid ""
 "Siehe dazu auch :doc:`Netzsegmentierung mit linuxmuster.net <../../howtos"
 "/netzbrief-basics/index/>`"

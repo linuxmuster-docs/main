@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-13 18:12+0700\n"
+"POT-Creation-Date: 2016-11-19 10:13+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,6 @@ msgid "Klassenliste aktualisieren"
 msgstr ""
 
 #: ../../source/howtos/preparation-newterm/index.rst:7
-#: ../../source/howtos/preparation-newterm/index.rst:33
 msgid ""
 "Zu Schuljahresbeginn müssen Sie als Lehrer einmalig die Klassenliste "
 "aktualisieren. Sie fügen neue Klasse, die Sie unterrichten, hinzu und tragen"
@@ -34,61 +33,49 @@ msgid ""
 msgstr ""
 
 #: ../../source/howtos/preparation-newterm/index.rst:9
-#: ../../source/howtos/preparation-newterm/index.rst:35
 msgid ""
 "Um die Klassenliste zu aktualisieren, melden Sie sich zunächst als Lehrer an"
 " der Schulkonsole an."
 msgstr ""
 
 #: ../../source/howtos/preparation-newterm/index.rst:14
-#: ../../source/howtos/preparation-newterm/index.rst:40
 msgid "Klassenliste auswählen"
 msgstr ""
 
 #: ../../source/howtos/preparation-newterm/index.rst:16
-#: ../../source/howtos/preparation-newterm/index.rst:42
 msgid ""
 "Nach erfolgreicher Anmeldung in der Schulkonsole für Lehrer, wählen Sie aus "
 "dem Menü `Klassen` und danach den Unterpunkt `Klassenliste` aus."
 msgstr ""
 
 #: ../../source/howtos/preparation-newterm/index.rst:20
-#: ../../source/howtos/preparation-newterm/index.rst:46
 msgid "Sie sehen dann die bereits zugeordneten Klassen."
 msgstr ""
 
 #: ../../source/howtos/preparation-newterm/index.rst:24
-#: ../../source/howtos/preparation-newterm/index.rst:50
 msgid ""
 "Unter den bereits zugeordneten Klassen finden Sie ein Drop-down Menü, in dem"
 " Sie diejenigen Klassen finden, die Sie sich noch zuordnen können."
 msgstr ""
 
 #: ../../source/howtos/preparation-newterm/index.rst:28
-#: ../../source/howtos/preparation-newterm/index.rst:54
 msgid ""
 "Wählen Sie aus dieser Liste nun diejenige Klasse aus, die Sie hinzufügen "
 "möchten und klicken auf den Button `eintragen`. Benötigen Sie mehrere neue "
 "Klasse, so fügen Sie diese nacheinander hinzu."
 msgstr ""
 
-#: ../../source/howtos/preparation-newterm/index.rst:31
-msgid ""
-"Abschliessend müssen Sie sich von Ihrem Client abmelden und wieder neu "
-"anmelden, damit die Netzlaufwerke in Ihr"
-msgstr ""
-
-#: ../../source/howtos/preparation-newterm/index.rst:58
+#: ../../source/howtos/preparation-newterm/index.rst:32
 msgid "Neue Anmeldung"
 msgstr ""
 
-#: ../../source/howtos/preparation-newterm/index.rst:60
+#: ../../source/howtos/preparation-newterm/index.rst:34
 msgid ""
 "Abschliessend müssen Sie sich von Ihrem Client abmelden und wieder neu "
 "anmelden, damit die Netzlaufwerke korrekt zugeordnet sind."
 msgstr ""
 
-#: ../../source/howtos/preparation-newterm/index.rst:62
+#: ../../source/howtos/preparation-newterm/index.rst:36
 msgid ""
 "Dies können Sie kontrollieren, indem Sie nach der erneuten Anmeldung mit dem"
 " Dateimanager prüfen, ob für die neue Klasse ein Tauschverzeichnis vorhanden"

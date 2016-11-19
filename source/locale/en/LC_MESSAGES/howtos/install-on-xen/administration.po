@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-13 18:12+0700\n"
+"POT-Creation-Date: 2016-11-19 10:13+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -54,7 +54,7 @@ msgid ""
 "Öffnen Sie einen Webbrowser und wechseln auf die Seite http://10.16.1.10."
 msgstr "Open a web browser and navigate to the page http://10.16.1.10."
 
-#: ../../source/howtos/install-on-xen/administration.rst:25
+#: ../../source/howtos/install-on-xen/administration.rst:23
 msgid ""
 "Klicken Sie auf „XenCenter installer“ und speichern die Datei bzw. führen "
 "diese direkt aus. Folgen Sie dem Assistenten um das Programm zu  "
@@ -63,7 +63,7 @@ msgstr ""
 "Click \"XenCenter installer\" and save the file and execute it directly. "
 "Follow the wizard to install the program."
 
-#: ../../source/howtos/install-on-xen/administration.rst:34
+#: ../../source/howtos/install-on-xen/administration.rst:29
 msgid ""
 "Starten Sie das Programm und klicken mit der rechten Maustaste auf "
 "XenCenter. Wählen Sie ``Add``."
@@ -71,11 +71,11 @@ msgstr ""
 "Run the program and click with the right mouse button on XenCenter. Select "
 "``Add``."
 
-#: ../../source/howtos/install-on-xen/administration.rst:42
+#: ../../source/howtos/install-on-xen/administration.rst:35
 msgid "Geben Sie die IP-Adresse ``10.16.1.10`` und die Benutzerdaten ein."
 msgstr "Enter the IP address ``10.16.1.10`` and the user data for root."
 
-#: ../../source/howtos/install-on-xen/administration.rst:50
+#: ../../source/howtos/install-on-xen/administration.rst:41
 msgid ""
 "Klicken Sie nun auf eine VM aus der Liste und wechseln auf den Reiter "
 "``Console``. Sie können nun die VM bedienen."
@@ -83,15 +83,15 @@ msgstr ""
 "Now click on a VM from the list and switch to the tab ``Console``. You can "
 "now use the VM."
 
-#: ../../source/howtos/install-on-xen/administration.rst:59
+#: ../../source/howtos/install-on-xen/administration.rst:48
 msgid "Xen Orchestra (XOA)"
 msgstr "Xen Orchestra (XOA)"
 
-#: ../../source/howtos/install-on-xen/administration.rst:62
+#: ../../source/howtos/install-on-xen/administration.rst:51
 msgid "Um XOA nutzen zu können, muss die lmn62.xoa importiert sein!"
 msgstr "To use XOA the VM \"lmn62.xoa\" must be imported!"
 
-#: ../../source/howtos/install-on-xen/administration.rst:64
+#: ../../source/howtos/install-on-xen/administration.rst:53
 msgid ""
 "Öffnen Sie einen Webbrowser und wechseln auf die Seite http://10.16.1.4. "
 "Geben Sie den User ``admin@admin.net`` mit dem Passwort ``admin`` ein und "
@@ -100,11 +100,11 @@ msgstr ""
 "Open a web browser and navigate to the page http://10.16.1.4. Enter the user"
 " ``admin@admin.net`` with the password ``admin`` and click on Login."
 
-#: ../../source/howtos/install-on-xen/administration.rst:73
+#: ../../source/howtos/install-on-xen/administration.rst:59
 msgid "Klicken Sie auf das Kachelsymbol rechts oben und wählen Settings."
 msgstr "Click on the tile icon on the top right and select Settings."
 
-#: ../../source/howtos/install-on-xen/administration.rst:81
+#: ../../source/howtos/install-on-xen/administration.rst:65
 msgid ""
 "Tragen Sie links die IP-Adresse ``10.16.1.10`` ein und das Passwort, das Sie"
 " vergeben haben. Klicken Sie zum Übernehmen auf ``Save``."
@@ -112,7 +112,7 @@ msgstr ""
 "Enter IP address ``10.16.1.10`` and the root password that you have "
 "assigned. Click to apply to ``Save``."
 
-#: ../../source/howtos/install-on-xen/administration.rst:89
+#: ../../source/howtos/install-on-xen/administration.rst:71
 msgid ""
 "Wenn Sie mit der Maus über eine VM fahren erscheinen direkt einige "
 "Schaltflächen. Klicken Sie auf VM Console um eine Maschine zu bedienen."
@@ -120,15 +120,15 @@ msgstr ""
 "If you move your mouse over a VM some buttons appear directly. Click \"VM "
 "Console\" to operate a machine."
 
-#: ../../source/howtos/install-on-xen/administration.rst:97
+#: ../../source/howtos/install-on-xen/administration.rst:77
 msgid "Sie können nun die Virtuelle Maschine bedienen."
 msgstr "You can now use the Virtual Machine."
 
-#: ../../source/howtos/install-on-xen/administration.rst:106
+#: ../../source/howtos/install-on-xen/administration.rst:84
 msgid "OpenXen Manager"
 msgstr "OpenXen Manager"
 
-#: ../../source/howtos/install-on-xen/administration.rst:108
+#: ../../source/howtos/install-on-xen/administration.rst:86
 msgid ""
 "Um OpenXen Manager zu verwenden müssen Sie zunächst das Paket installieren. "
 "Gehen Sie dazu wie folgt vor."
@@ -136,15 +136,15 @@ msgstr ""
 "To use OpenXen Manager you must first install the package. Proceed as "
 "follows."
 
-#: ../../source/howtos/install-on-xen/administration.rst:110
+#: ../../source/howtos/install-on-xen/administration.rst:88
 msgid "Öffnen Sie ein Terminal und geben folgenden Befehl ein:"
 msgstr "Open a terminal and enter the following command:"
 
-#: ../../source/howtos/install-on-xen/administration.rst:122
+#: ../../source/howtos/install-on-xen/administration.rst:98
 msgid "Schreiben Sie nun in die Zeile:"
 msgstr "Now write in the line:"
 
-#: ../../source/howtos/install-on-xen/administration.rst:134
+#: ../../source/howtos/install-on-xen/administration.rst:108
 msgid ""
 "Verlassen Sie den Editor in dem Sie ``Strg+x`` drücken. Sie werden gefragt "
 "ob Sie die Änderungen speichern wollen. Drücken Sie ``Y`` und bestätigen den"
@@ -154,7 +154,7 @@ msgstr ""
 "the changes. Press ``Y`` and confirm the location / filenames with "
 "``Enter``."
 
-#: ../../source/howtos/install-on-xen/administration.rst:136
+#: ../../source/howtos/install-on-xen/administration.rst:110
 msgid ""
 "Schreiben Sie folgende Befehle in die Konsole und bestätigen Sie jeweils mit"
 " ``Enter``:"
@@ -162,14 +162,14 @@ msgstr ""
 "Enter the following commands in the console and confirm each with `` "
 "Enter``:"
 
-#: ../../source/howtos/install-on-xen/administration.rst:149
+#: ../../source/howtos/install-on-xen/administration.rst:121
 msgid ""
 "Schreiben Sie den Befehl ``apt-get update`` in die Konsole und drücken Sie "
 "``Enter``."
 msgstr ""
 "Enter the command ``apt-get update`` in the console and press ``Enter``."
 
-#: ../../source/howtos/install-on-xen/administration.rst:161
+#: ../../source/howtos/install-on-xen/administration.rst:131
 msgid ""
 "Schreiben Sie den Befehl ``apt-get install netzint-xenmanager`` in die "
 "Konsole und drücken ``Enter``. Bestätigen Sie die Abfrage fortzufahren mit "
@@ -178,11 +178,11 @@ msgstr ""
 "Enter the command ``apt-get install netzint-xenmanager`` in the console and "
 "press ``Enter``. Continue with ``Y``."
 
-#: ../../source/howtos/install-on-xen/administration.rst:173
+#: ../../source/howtos/install-on-xen/administration.rst:141
 msgid "Nach der Installation starten Sie OpenXenmanager mit dem Befehl"
 msgstr "After installation, you can start OpenXenmanager with the command"
 
-#: ../../source/howtos/install-on-xen/administration.rst:185
+#: ../../source/howtos/install-on-xen/administration.rst:151
 msgid ""
 "Klicken Sie auf ``Add New Server`` und geben die IP-Adresse sowie den "
 "Benutzernamen root und das Passwort ein. Bestätigen Sie mit ``Connect``."
@@ -190,7 +190,7 @@ msgstr ""
 "Click on ``Add New Server`` and enter the IP address and the username root "
 "and the password. Confirm with ``Connect``."
 
-#: ../../source/howtos/install-on-xen/administration.rst:193
+#: ../../source/howtos/install-on-xen/administration.rst:157
 msgid ""
 "Sie sehen nun die Verwaltungsoberfläche mit der Sie den XenServer "
 "administrieren können."

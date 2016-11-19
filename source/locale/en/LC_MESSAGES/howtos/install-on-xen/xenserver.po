@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-13 18:12+0700\n"
+"POT-Creation-Date: 2016-11-19 10:13+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -48,21 +48,21 @@ msgstr "Installation XenServer"
 msgid "Von der CD booten und dem Setup folgen:"
 msgstr "Boot from the CD and follow the setup:"
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:25
+#: ../../source/howtos/install-on-xen/xenserver.rst:23
 msgid "Wählen Sie Ihr Tastaturlayout. Wir verwenden ``[querz] de``."
 msgstr "Select your keyboard layout. We use ``[querz] de``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:33
+#: ../../source/howtos/install-on-xen/xenserver.rst:29
 msgid ""
 "Sollten Sie zusätzliche Treiber benötigen können Sie diese nun laden in dem "
 "Sie ``F9`` drücken."
 msgstr "If you need additional drivers you can load by pressing ``F9``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:41
+#: ../../source/howtos/install-on-xen/xenserver.rst:35
 msgid "Akzeptieren Sie die Lizenzbedingungen mit Accept EULA."
 msgstr "Accept the license conditions with ``Accept EULA``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:49
+#: ../../source/howtos/install-on-xen/xenserver.rst:41
 msgid ""
 "Wählen Sie den Datenträger, der verwendet werden soll und setzen Sie den "
 "Haken bei „Enable thin provisioning“. Bestätigen Sie mit ``Ok``."
@@ -70,24 +70,24 @@ msgstr ""
 "Select the disk to be used and set the check mark for \"Enable thin "
 "provisioning\". Confirm with ``Ok``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:57
+#: ../../source/howtos/install-on-xen/xenserver.rst:47
 msgid ""
 "Hier können Sie das Installationsmedium wählen. Wir verwenden den lokalen "
 "Datenträger (CD)."
 msgstr ""
 "Here you can choose the installation media. We use the local disk (CD)."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:65
+#: ../../source/howtos/install-on-xen/xenserver.rst:53
 msgid ""
 "Wählen Sie bei der Abfrage ``Yes`` um die NI-XenServer-Tools installieren zu"
 " können."
 msgstr "Select ``Yes`` to be able to install NI XenServer Tools."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:73
+#: ../../source/howtos/install-on-xen/xenserver.rst:59
 msgid "Wählen Sie „Verify installation source“ und bestätigen Sie mit ``Ok``."
 msgstr "Select \"Verify installation source\" and confirm with ``Ok``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:81
+#: ../../source/howtos/install-on-xen/xenserver.rst:65
 msgid ""
 "Sofern „no problems were found“ angezeigt wird können Sie die Meldung mit "
 "``Ok`` bestätigen."
@@ -95,7 +95,7 @@ msgstr ""
 "If \"no problems were found\" appears, you can confirm the message with "
 "``OK``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:89
+#: ../../source/howtos/install-on-xen/xenserver.rst:71
 msgid ""
 "Tragen Sie hier Ihr gewünschtes root-Passwort ein. Dieses wird später "
 "benötigt um sich mit dem Hypervisor zu verbinden."
@@ -103,7 +103,7 @@ msgstr ""
 "Enter your desired root password. This will be needed later to connect with "
 "the hypervisor."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:97
+#: ../../source/howtos/install-on-xen/xenserver.rst:77
 msgid ""
 "Wählen Sie nun die Netzwerkkarte aus, an der später das grüne Netzwerk "
 "(GREEN) angeschlossen ist."
@@ -111,7 +111,7 @@ msgstr ""
 "Now select the network card, that is connected to the green network (GREEN) "
 "later."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:105
+#: ../../source/howtos/install-on-xen/xenserver.rst:84
 msgid ""
 "Wählen Sie „Static configuration“ und tragen Sie die Adresse aus dem "
 "Screenshot ein. Bestätigen Sie die Eingabe mit ``Ok``."
@@ -119,19 +119,19 @@ msgstr ""
 "Select \"Static configuration\" and enter the address of the screenshot. "
 "Confirm your entry with ``Ok``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:113
+#: ../../source/howtos/install-on-xen/xenserver.rst:90
 msgid ""
 "Tragen Sie den gewünschten Hostnamen und die DNS-Server ``10.16.1.1`` und "
 "``10.16.1.254`` ein."
 msgstr ""
 "Enter the host name and the DNS server ``10.16.1.1`` and ``10.16.1.254``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:121
-#: ../../source/howtos/install-on-xen/xenserver.rst:129
+#: ../../source/howtos/install-on-xen/xenserver.rst:96
+#: ../../source/howtos/install-on-xen/xenserver.rst:102
 msgid "Wählen Sie Ihre Zeitzone aus und bestätigen mit ``Ok``."
 msgstr "Select your time zone and confirm with ``Ok``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:137
+#: ../../source/howtos/install-on-xen/xenserver.rst:108
 msgid ""
 "Sollten Sie einen Zeitserver betrieben, können Sie diesen angeben. Wir "
 "stellen die Zeit manuell ein. Wählen Sie „Manual time entry“ und  bestätigen"
@@ -140,20 +140,19 @@ msgstr ""
 "If you operate a time server, you can specify this. We set the time "
 "manually. Select \"Manual time entry\" and confirm with ``Ok``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:145
+#: ../../source/howtos/install-on-xen/xenserver.rst:114
 msgid ""
 "Starten Sie nun die Installation mit der Schaltfläche ``Install XenServer``."
 msgstr "Now start the installation by selecting ``Install XenServer``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:153
+#: ../../source/howtos/install-on-xen/xenserver.rst:120
 msgid ""
-"Legen Sie nun die CD „linuxmuster-SupplementalPack“ in das Laufwerk und "
-"bestätigen Sie die Meldung mit ``Ok``."
+"Warten Sie, bis der Dialog \"New Media\" erscheint. Legen Sie nun die CD "
+"„linuxmuster-SupplementalPack“ in das Laufwerk und bestätigen Sie die "
+"Meldung mit ``Ok``."
 msgstr ""
-"Now insert the CD \"linuxmuster-SupplementalPack\" and confirm the message "
-"with ``OK``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:161
+#: ../../source/howtos/install-on-xen/xenserver.rst:127
 msgid ""
 "„linuxmuster-hv-tools“ sollten bereits ausgewählt sein. Prüfen Sie die CD "
 "mit ``Verify``."
@@ -161,19 +160,19 @@ msgstr ""
 "\"linuxmuster-hv-tools\" should already be selected. Check the CD with "
 "``Verify``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:169
+#: ../../source/howtos/install-on-xen/xenserver.rst:133
 msgid "Starten Sie den Test mit ``Ok``."
 msgstr "Start the test with ``Ok``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:177
+#: ../../source/howtos/install-on-xen/xenserver.rst:139
 msgid "Bestätigen Sie den erfolgreichen Test mit ``Ok``."
 msgstr "Confirm the successful test with ``Ok``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:185
+#: ../../source/howtos/install-on-xen/xenserver.rst:145
 msgid "Wählen Sie nun die Schaltfläche ``Use`` und bestätigen Sie mit ``Ok``."
 msgstr "Now select button ``Use`` and confirm with ``Ok``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:193
+#: ../../source/howtos/install-on-xen/xenserver.rst:151
 msgid ""
 "Nach der Installation werden Sie wieder aufgefordert weitere CDs einzulegen."
 " Wählen Sie ``Skip`` und bestätigen Sie mit ``Enter``."
@@ -181,53 +180,53 @@ msgstr ""
 "After installation, you will be prompted to insert additional CDs again. "
 "Select ``Skip`` and confirm with ``Enter``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:201
+#: ../../source/howtos/install-on-xen/xenserver.rst:157
 msgid "Stellen Sie die korrekte Uhrzeit ein und bestätigen Sie mit ``Ok``."
 msgstr "Set the correct time and confirm with ``Ok``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:209
+#: ../../source/howtos/install-on-xen/xenserver.rst:163
 msgid ""
 "Nach erfolgreicher Installation können Sie mit ``Ok`` den Server neu "
 "starten."
 msgstr "After successful installation, you can reboot the server with ``Ok``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:217
+#: ../../source/howtos/install-on-xen/xenserver.rst:169
 msgid ""
 "Nach dem Setup erscheint diese Konsole und der Server kann verwaltet werden."
 msgstr "After the setup a console appears where you can managed the server."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:226
+#: ../../source/howtos/install-on-xen/xenserver.rst:176
 msgid "XenServer initialisieren"
 msgstr "Initialize XenServer"
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:228
+#: ../../source/howtos/install-on-xen/xenserver.rst:178
 msgid ""
 "Wählen Sie auf dem XenServer den Punkt ``Local Command Shell`` und drücken "
 "Sie ``Enter``."
 msgstr "On the XenServer select ``Local Command Shell`` and press ``Enter``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:236
+#: ../../source/howtos/install-on-xen/xenserver.rst:184
 msgid ""
 "Geben Sie den Benutzer root an und das Passwort das Sie während der "
 "Installation vergeben haben."
 msgstr ""
 "Enter the user root and the password you have assigned during installation."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:244
+#: ../../source/howtos/install-on-xen/xenserver.rst:190
 msgid ""
 "Geben Sie in der Konsole den Befehl ``linuxmuster-hv-setup --first`` ein und"
 " bestätigen Sie mit Enter"
 msgstr "Enter the command ``linuxmuster-hv-setup --first`` and press Enter."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:252
+#: ../../source/howtos/install-on-xen/xenserver.rst:196
 msgid "Starten Sie die Installation mit ``Ok``"
 msgstr "Start the installation with ``Ok``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:260
+#: ../../source/howtos/install-on-xen/xenserver.rst:202
 msgid "Sofern genügend Netzwerkkarten vorhanden sind erscheint diese Meldung:"
 msgstr "If there are enough NICs this message appears:"
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:268
+#: ../../source/howtos/install-on-xen/xenserver.rst:208
 msgid ""
 "Stecken Sie alle Netzwerkkabel außer das Netzwerkkabel GREEN (internes "
 "Schulnetz) aus. Es muss eine Verbindung zwischen Switch und Server stehen. "
@@ -237,7 +236,7 @@ msgstr ""
 "school network). There must be a connection between the switch and server. "
 "Then confirm with ``Ok``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:276
+#: ../../source/howtos/install-on-xen/xenserver.rst:214
 msgid ""
 "Verbinden Sie nun die Netzwerkkarte RED mit Ihrem Modem oder Switch für das "
 "Netz RED. Es wird die betroffene Netzwerkkarte erkannt und  konfiguriert."
@@ -245,13 +244,13 @@ msgstr ""
 "Now connect the RED network card with your modem or switch for the RED "
 "network. The affected NIC is recognized and configured."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:284
+#: ../../source/howtos/install-on-xen/xenserver.rst:220
 msgid ""
 "Verbinden Sie nun das Netzwerk BLUE mit dem gewünschten Interface am Server."
 msgstr ""
 "Now connect the BLUE network with the desired interface at the server."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:292
+#: ../../source/howtos/install-on-xen/xenserver.rst:226
 msgid ""
 "Legen Sie nun die CD „linuxmuster-SupplementalPack“ erneut in das Laufwerk "
 "ein und bestätigen Sie mit ``Ok``."
@@ -259,7 +258,7 @@ msgstr ""
 "Now insert the CD \"linuxmuster-SupplementalPack\" again into the drive and "
 "press ``Ok``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:300
+#: ../../source/howtos/install-on-xen/xenserver.rst:232
 msgid ""
 "Sie werden nun der Reihe nach abgefragt welche VMs Sie importieren wollen. "
 "Wählen Sie jeweils ``Yes`` bzw. ``No`` und bestätigen mit ``Enter``."
@@ -267,11 +266,11 @@ msgstr ""
 "You will now be asked which VMs you want to import. Select for each VM "
 "``Yes`` or ``No`` and confirm with ``Enter``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:320
+#: ../../source/howtos/install-on-xen/xenserver.rst:246
 msgid "Entnehmen Sie nun die CD und bestätigen Sie mit ``Ok``."
 msgstr "Now remove the CD and confirm with ``Ok``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:328
+#: ../../source/howtos/install-on-xen/xenserver.rst:252
 msgid ""
 "Sie werden nun gefragt ob Sie die Autostartfunktion nutzen wollen. Wenn Sie "
 "diese Funktion aktivieren können im Folgeschritt VMs ausgewählt werden, die "
@@ -282,7 +281,7 @@ msgstr ""
 "enable this feature you can select VMs to be automatically started when the "
 "XenServer in the following step. Select ``Yes`` or ``No``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:336
+#: ../../source/howtos/install-on-xen/xenserver.rst:258
 msgid ""
 "Sie werden nun der Reihe nach abgefragt welche VMs automatisch gestartet "
 "werden sollen. Wählen Sie jeweils ``Yes`` bzw. ``No`` und bestätigen Sie mit"
@@ -291,11 +290,11 @@ msgstr ""
 "You will now be called one after another which VMs should start "
 "automatically. Select each ``Yes`` or ``No`` and confirm with ``Enter``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:350
+#: ../../source/howtos/install-on-xen/xenserver.rst:268
 msgid "Sie können nun das System mit der Auswahl ``Yes`` neu starten."
 msgstr "You can now restart the system by selecting ``Yes``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:358
+#: ../../source/howtos/install-on-xen/xenserver.rst:274
 msgid ""
 "Das System fährt herunter und startet danach wieder. Die VMs, die Sie "
 "importiert haben, werden - sofern entsprechend konfiguriert - direkt "
