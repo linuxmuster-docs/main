@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-19 10:13+0100\n"
+"POT-Creation-Date: 2016-11-19 18:16+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../source/howtos/linuxclients/registration.rst:2
 msgid "Computer in Netzwerk aufnehmen"
-msgstr ""
+msgstr "Register computer in the network"
 
 #: ../../source/howtos/linuxclients/registration.rst:4
 msgid ""
@@ -70,6 +70,9 @@ msgid ""
 "Fenster auf, welches die Zeit anzeigt, nach der man automatisch ausgeloggt "
 "wird. Mit einem Klick auf die Checkbox, kann der Timeout deaktiviert werden."
 msgstr ""
+"Now you are LINBO administrator. There is a timeout window that shows the "
+"time after which you will be logged out automatically. By clicking the "
+"checkbox, the timeout can be disabled."
 
 #: ../../source/howtos/linuxclients/registration.rst:27
 msgid ""
@@ -124,6 +127,10 @@ msgid ""
 "10.16.100.1 für diesen PC eingeben, üblicherweise **nicht** zwischen "
 "10.16.1.100 und 10.16.1.200 (Bereich für die Rechneraufnahme)."
 msgstr ""
+"The IP address should fit to the room and **must be** outside the default "
+"DHCP range. Depending on your network data, you can enter e.g. 10.16.100.1 "
+"for this PC, usually **not** between 10.16.1.100 and 10.16.1.200 (default "
+"DHCP range)."
 
 #: ../../source/howtos/linuxclients/registration.rst:41
 msgid "Rechnergruppe"
@@ -153,6 +160,11 @@ msgid ""
 "`10.16.100.2`. Es versteht sich von selbst dass, will man das Feature "
 "nutzen, man die Rechner in der richtigen Reihenfolge registrieren muss!"
 msgstr ""
+"If other clients are registered, you do not have to fill in the fields. "
+"Linbo increments automatically in the right place. E.g. its increments the "
+"hostname `r100-pc01` =` r100-pc02` and the IP address `10.16.100.1` =` "
+"10.16.100.2`. It's clear that if you want to use the feature, you must "
+"register the computers in the correct order!"
 
 #: ../../source/howtos/linuxclients/registration.rst:55
 msgid "Registrierung übernehmen"
@@ -163,6 +175,8 @@ msgid ""
 "Sobald alle Rechner aufgenommen wurden, müssen Sie den Import der Rechner "
 "entweder in der Schulkonsole oder an der Konsole starten!"
 msgstr ""
+"As soon as all hosts are added, you have to start the import of the "
+"computers in the school console or at the console!"
 
 #: ../../source/howtos/linuxclients/registration.rst:61
 msgid ""
@@ -170,6 +184,9 @@ msgid ""
 "nur mit einem im System angemeldeten Rechner auf die Schulkonsole "
 "zugegriffen werden kann!!"
 msgstr ""
+"The first computer **has to be imported** with *import_workstations*, "
+"because only with a registered computer (in the system) you can access the "
+"school console!"
 
 #: ../../source/howtos/linuxclients/registration.rst:64
 msgid ""
@@ -178,10 +195,16 @@ msgid ""
 "Schulkonsole bestätigt werden. Ein Klick auf die Schaltfläche `Hosts jetzt "
 "übernehmen` erledigt das und die neu registrierten Clients sind importiert."
 msgstr ""
+"In the school console - logged in as *administrator* - all new clients "
+"appear  as `not imported into the system yet`. This must be confirmed in the"
+" school console. Clicking on the button `Import Hosts now` will import the "
+"newly registered clients."
 
 #: ../../source/howtos/linuxclients/registration.rst:71
 msgid "Alternativ werden alle registrierten Clients mit dem Konsolenbefehl"
 msgstr ""
+"Alternatively, all registered client can be imported with the following "
+"command"
 
 #: ../../source/howtos/linuxclients/registration.rst:77
 msgid "ins System übernommen."
