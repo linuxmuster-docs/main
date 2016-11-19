@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-13 18:12+0700\n"
+"POT-Creation-Date: 2016-11-19 10:13+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -35,25 +35,25 @@ msgstr ""
 "Enter ``root`` as the username and the password ``muster``. Confirm each "
 "with ``Enter``. Then enter the command ``setup`` and confirm with ``Enter``."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:19
+#: ../../source/howtos/install-on-xen/configuration.rst:17
 msgid "Wählen Sie „Networking“ und bestätigen Sie mit ``Enter``."
 msgstr "Select \"Networking\" and press ``Enter``."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:27
+#: ../../source/howtos/install-on-xen/configuration.rst:23
 msgid "Wählen Sie „Drivers and card assigments“ und bestätigen mit ``Enter``."
 msgstr "Select \"Drivers and card assigments\" and confirm with ``Enter``."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:35
+#: ../../source/howtos/install-on-xen/configuration.rst:29
 msgid "Wählen Sie „GREEN“ und bestätigen Sie mit ``Enter``."
 msgstr "Select \"GREEN\" and confirm with ``Enter``."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:43
+#: ../../source/howtos/install-on-xen/configuration.rst:35
 msgid ""
 "Wählen Sie die zugehörige Netzwerkkarte aus und bestätigen Sie mit "
 "``Enter``."
 msgstr "Select the appropriate network card and press ``Enter``."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:52
+#: ../../source/howtos/install-on-xen/configuration.rst:42
 msgid ""
 "Sie finden die passende Netzwerkkarte anhand der MAC-Adresse heraus. Diese "
 "können Sie hier abgleichen:"
@@ -61,7 +61,7 @@ msgstr ""
 "Find out the appropriate network card based on the MAC address. You can "
 "compare this here:"
 
-#: ../../source/howtos/install-on-xen/configuration.rst:66
+#: ../../source/howtos/install-on-xen/configuration.rst:52
 msgid ""
 "In der Standardkonfiguration stimmt die Reihenfolge der NICs meist, es muss "
 "dann nur der Reihe nach ausgewählt werden."
@@ -69,7 +69,7 @@ msgstr ""
 "In the default configuration, the order of the NICs is mostly true, "
 "therefore it must be selected just one after the other."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:68
+#: ../../source/howtos/install-on-xen/configuration.rst:54
 msgid ""
 "Wiederholen Sie den Vorgang für das Interface RED und BLUE. Wählen Sie im "
 "Anschluss „Done“ und bestätigen mit ``Enter``."
@@ -77,21 +77,21 @@ msgstr ""
 "Repeat the process for the RED and BLUE interface. Then, select \"Done\" and"
 " press ``Enter``."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:76
+#: ../../source/howtos/install-on-xen/configuration.rst:60
 msgid "Bestätigen Sie Ihre Eingaben mit ``Done``."
 msgstr "Confirm your entries with ``Done``."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:84
+#: ../../source/howtos/install-on-xen/configuration.rst:66
 msgid "Wählen Sie „´root´ password“ und bestätigen Sie mit ``Enter``."
 msgstr "Select \"'root' password\" and confirm with ``Enter``."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:92
+#: ../../source/howtos/install-on-xen/configuration.rst:72
 msgid ""
 "Geben Sie ein neues Passwort für den Account root ein und bestätigen mit "
 "``Ok``."
 msgstr "Enter a new password for the root account and confirm with ``Ok``."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:100
+#: ../../source/howtos/install-on-xen/configuration.rst:78
 msgid ""
 "Wiederholen Sie den Vorgang für den Benutzer „admin“. Mit diesem Benutzer / "
 "Passwort melden Sie sich später an der Weboberfläche der Firewall an. "
@@ -101,15 +101,15 @@ msgstr ""
 "login later to the web interface of the firewall. Exit the setup with the "
 "button ``Quit``."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:108
+#: ../../source/howtos/install-on-xen/configuration.rst:84
 msgid "Führen Sie ggf. mit dem Befehl „reboot“ einen Neustart durch."
 msgstr "If necessary, run the command \"reboot\" to reboot."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:111
+#: ../../source/howtos/install-on-xen/configuration.rst:87
 msgid "Konfiguration Server"
 msgstr "Configuration Server"
 
-#: ../../source/howtos/install-on-xen/configuration.rst:113
+#: ../../source/howtos/install-on-xen/configuration.rst:89
 msgid ""
 "Geben Sie als Benutzername ``root`` ein und als Passwort ``muster``. "
 "Anschließend geben Sie die Befehle"
@@ -117,11 +117,11 @@ msgstr ""
 "Enter the user name ``root`` and ``muster`` as password. Then enter the "
 "commands"
 
-#: ../../source/howtos/install-on-xen/configuration.rst:121
+#: ../../source/howtos/install-on-xen/configuration.rst:97
 msgid "ein und bestätigen jeweils mit ``Enter`` bzw. ``Y``."
 msgstr "and confirm it with ``Enter`` or ``Y``."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:130
+#: ../../source/howtos/install-on-xen/configuration.rst:104
 msgid ""
 "Mit diesem Befehl aktualisieren Sie den Server auf den neusten Stand. Sie "
 "müssen ggf. mit der Eingabe ``Y`` das Update bestätigen."
@@ -129,54 +129,54 @@ msgstr ""
 "With this command you update the server to the latest version. You may have "
 "to confirm the update with ``Y``."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:132
-#: ../../source/howtos/install-on-xen/configuration.rst:146
+#: ../../source/howtos/install-on-xen/configuration.rst:106
+#: ../../source/howtos/install-on-xen/configuration.rst:118
 msgid "Geben Sie den Befehl"
 msgstr "Enter the command"
 
-#: ../../source/howtos/install-on-xen/configuration.rst:138
+#: ../../source/howtos/install-on-xen/configuration.rst:112
 msgid "ein um das ``root``-Passwort zu ändern."
 msgstr "to change the root password."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:152
+#: ../../source/howtos/install-on-xen/configuration.rst:124
 msgid "ein und bestätigen Sie mit ``Enter``."
 msgstr "and confirm with ``Enter``."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:160
+#: ../../source/howtos/install-on-xen/configuration.rst:130
 msgid ""
 "Bestätigen Sie die Meldung mit den Hinweisen mit der Schaltfläche ``Ok``."
 msgstr "Confirm the message with the hints by clicking ``Ok``."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:168
+#: ../../source/howtos/install-on-xen/configuration.rst:136
 msgid "Geben Sie Ihr Länderkürzel ein bzw. bestätigen „DE“ mit ``Enter``."
 msgstr "Enter your country code, or confirm \"DE\" with ``Enter``."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:176
+#: ../../source/howtos/install-on-xen/configuration.rst:142
 msgid "Geben Sie Ihr Bundesland ein bzw. bestätigen Sie „BW“ mit ``Enter``."
 msgstr "Enter your state, or confirm \"BW\" with ``Enter``."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:184
+#: ../../source/howtos/install-on-xen/configuration.rst:148
 msgid "Geben Sie den Schulstandort ein (Stadt)."
 msgstr "Enter the school location (city)."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:192
+#: ../../source/howtos/install-on-xen/configuration.rst:154
 msgid "Geben Sie den Schulnamen Ihrer Schule an."
 msgstr "Enter the name of your school."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:200
+#: ../../source/howtos/install-on-xen/configuration.rst:160
 msgid ""
 "Geben Sie den Domänennamen ein den Sie verwenden möchten. Im Beispiel "
 "„SCHULE“."
 msgstr "Enter the domain name you want to use. In the example, \"SCHOOL\"."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:208
+#: ../../source/howtos/install-on-xen/configuration.rst:166
 msgid ""
 "Geben Sie den Servernamen ein. Es ist zu empfehlen den Server ``server`` zu "
 "nennen."
 msgstr ""
 "Enter the server name. It is recommended to name the server ``server``."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:216
+#: ../../source/howtos/install-on-xen/configuration.rst:172
 msgid ""
 "Geben Sie den Internetdomänennamen des Schulnetzes an den Sie verwenden "
 "möchten. Beispielsweise „schule.lokal“."
@@ -184,11 +184,11 @@ msgstr ""
 "Enter the Internet domain name of the school network that you want to use. "
 "For example, \"school.lokal\"."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:224
+#: ../../source/howtos/install-on-xen/configuration.rst:178
 msgid "Wählen den gewünschten IP-Adressbereich aus den Sie verwenden möchten."
 msgstr "Select the desired IP address range you want to use."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:232
+#: ../../source/howtos/install-on-xen/configuration.rst:184
 msgid ""
 "Geben Sie den externen Domänennamen an, auf dem Ihr Server im Internet "
 "erreichbar ist. Sofern keine externe Kommunikation vorgesehen ist, können "
@@ -198,14 +198,14 @@ msgstr ""
 "Internet. If no external communication is planned, you can leave the field "
 "blank."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:240
+#: ../../source/howtos/install-on-xen/configuration.rst:190
 msgid ""
 "Geben Sie an welche Firewall Sie verwenden. In der XenAppliance wird "
 "``ipfire`` verwendet."
 msgstr ""
 "Specify which firewall you are using. In the XenAppliance uses ``ipfire``."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:248
+#: ../../source/howtos/install-on-xen/configuration.rst:196
 msgid ""
 "Tragen Sie für die Emailfunktion einen SMTP-Host ein mit dem der Server "
 "kommunizieren kann oder lassen Sie das Feld frei. Beispielsweise "
@@ -214,15 +214,15 @@ msgstr ""
 "Enter a SMTP host  for the email function or leave the field blank. For "
 "example, ``mbox1.belwue.de``."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:256
+#: ../../source/howtos/install-on-xen/configuration.rst:202
 msgid "Sofern Sie Subnetting nutzen möchten, können Sie dies hier aktivieren."
 msgstr "If you want to use subnetting, you can activate it here."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:264
+#: ../../source/howtos/install-on-xen/configuration.rst:208
 msgid "Wählen Sie für die administrativen Domänenbenutzer ein Passwort."
 msgstr "Enter a password for the administrative domain user."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:272
+#: ../../source/howtos/install-on-xen/configuration.rst:214
 msgid ""
 "Geben Sie das root-Passwort der Firewall ein, das Sie im Schritt "
 "„Konfiguration IPFire“ vergeben haben."
@@ -230,7 +230,7 @@ msgstr ""
 "Enter  the root password of the firewall you have assigned in step "
 "\"Configuration IPFire\"."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:280
+#: ../../source/howtos/install-on-xen/configuration.rst:220
 msgid ""
 "Wählen Sie die Netzwerkkarte aus, die mit dem Schulnetz (GREEN) verbunden "
 "ist. Sofern Sie keine zusätzlichen Adapter installiert haben, bestätigen Sie"

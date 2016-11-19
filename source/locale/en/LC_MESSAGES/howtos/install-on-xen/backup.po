@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-13 18:12+0700\n"
+"POT-Creation-Date: 2016-11-19 10:13+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -72,11 +72,11 @@ msgstr ""
 "Open XenCenter and click with the right mouse button on ``xen``, select "
 "``New SR``."
 
-#: ../../source/howtos/install-on-xen/backup.rst:21
+#: ../../source/howtos/install-on-xen/backup.rst:19
 msgid "Wählen Sie einen Punkt unter ISO library."
 msgstr "Select one of the items under **ISO library**."
 
-#: ../../source/howtos/install-on-xen/backup.rst:29
+#: ../../source/howtos/install-on-xen/backup.rst:25
 msgid ""
 "Bennen Sie Ihren Storage. Sofern Sie den Namen \"BackupStore\" verwenden, "
 "müssen Sie später die main.cfg nicht anpassen. Dieser Name wird automatisch "
@@ -85,7 +85,7 @@ msgstr ""
 "Name your Storage. If you use the name \"BackupStore\" you do not need to "
 "adjust the main.cfg later. This name is automatically detected as a target."
 
-#: ../../source/howtos/install-on-xen/backup.rst:37
+#: ../../source/howtos/install-on-xen/backup.rst:31
 msgid ""
 "Tragen Sie den Pfad zur Freigabe ein, welchen Sie verwenden wollen und "
 "klicken auf ``Finish``."
@@ -93,7 +93,7 @@ msgstr ""
 "Enter the path to the share that that you want to use and click on "
 "``Finish``."
 
-#: ../../source/howtos/install-on-xen/backup.rst:45
+#: ../../source/howtos/install-on-xen/backup.rst:37
 msgid ""
 "Sie haben den Storage erfolgreich eingerichtet, wenn er links in der "
 "Übersicht angezeigt wird."
@@ -101,7 +101,7 @@ msgstr ""
 "You have successfully set up the storage if it is displayed on the left in "
 "the overview."
 
-#: ../../source/howtos/install-on-xen/backup.rst:53
+#: ../../source/howtos/install-on-xen/backup.rst:43
 msgid ""
 "Um einzustellen, welche VMs gesichert werden sollen, genügt es bei den zu "
 "sichernden VMs einen bestimmten Tag zu setzen. Klicken Sie dazu mit der "
@@ -111,11 +111,11 @@ msgstr ""
 " in the VMs that should be backed up. Click with the right mouse button on "
 "the desired VM and select ``Properties``."
 
-#: ../../source/howtos/install-on-xen/backup.rst:61
+#: ../../source/howtos/install-on-xen/backup.rst:49
 msgid "Im Feld ``General`` klicken Sie unten auf ``Edit tags...``."
 msgstr "In the ``General`` section click on ``Edit tags...``."
 
-#: ../../source/howtos/install-on-xen/backup.rst:69
+#: ../../source/howtos/install-on-xen/backup.rst:55
 msgid ""
 "Tragen Sie als Tag ``ni-backup`` ein. Klicken Sie auf ``Create`` und dann "
 "auf ``OK``. Durch diesen Tag wird die Maschine in die Sicherung mit "
@@ -126,11 +126,11 @@ msgstr ""
 "of this tag the machine is included in the backup. For all other machines "
 "the tag is already listed and only needs to be activated with the checkbox."
 
-#: ../../source/howtos/install-on-xen/backup.rst:84
+#: ../../source/howtos/install-on-xen/backup.rst:66
 msgid "Konfiguration XenServer"
 msgstr "Configuration XenServer"
 
-#: ../../source/howtos/install-on-xen/backup.rst:86
+#: ../../source/howtos/install-on-xen/backup.rst:68
 msgid ""
 "Um ein Backup zu starten, wechseln Sie auf die Konsole des XenServers und "
 "geben folgenden Befehl ein:"
@@ -138,11 +138,11 @@ msgstr ""
 "To start a backup, go to the console of the XenServer and enter the "
 "following command:"
 
-#: ../../source/howtos/install-on-xen/backup.rst:92
+#: ../../source/howtos/install-on-xen/backup.rst:74
 msgid "und bestätigen mit ``Enter``."
 msgstr "and confirm with ``Enter``."
 
-#: ../../source/howtos/install-on-xen/backup.rst:100
+#: ../../source/howtos/install-on-xen/backup.rst:81
 msgid ""
 "Nach Abschluss finden Sie in Ihrer Freigabe einen Snapshot, den Sie im "
 "Notfall wiederherstellen können."
@@ -150,11 +150,11 @@ msgstr ""
 "You will now see a snapshot on your share, that you can restore in case of "
 "emergency."
 
-#: ../../source/howtos/install-on-xen/backup.rst:109
+#: ../../source/howtos/install-on-xen/backup.rst:88
 msgid "Automatische Backups"
 msgstr "Automatic backups"
 
-#: ../../source/howtos/install-on-xen/backup.rst:111
+#: ../../source/howtos/install-on-xen/backup.rst:90
 msgid ""
 "Um Backups automatisch zu bestimmten Zeitpunkten auszuführen, können Sie "
 "einen Cronjob anlegen. Geben Sie dazu in der XenServer-Konsole den Befehl"
@@ -162,11 +162,11 @@ msgstr ""
 "To automatically perform backups at certain times, you can create a cron "
 "job. To do this, enter the command in the XenServer console"
 
-#: ../../source/howtos/install-on-xen/backup.rst:117
+#: ../../source/howtos/install-on-xen/backup.rst:96
 msgid "ein und bestätigen Sie mit ``Enter``."
 msgstr "and confirm with ``Enter``."
 
-#: ../../source/howtos/install-on-xen/backup.rst:125
+#: ../../source/howtos/install-on-xen/backup.rst:102
 msgid ""
 "Tragen Sie für ein wöchentliches Backup, dass jeden Freitag um 20:00 Uhr "
 "startet, folgende Zeile in die Datei ein:"
@@ -174,7 +174,7 @@ msgstr ""
 "For a weekly backup that starts every Friday at 20:00, enter the following "
 "line in the file:"
 
-#: ../../source/howtos/install-on-xen/backup.rst:137
+#: ../../source/howtos/install-on-xen/backup.rst:112
 msgid ""
 "Verlassen Sie den Editor und speichern Sie die Datei. Die Zeit für das "
 "Backup folgt dieser Zeitangabe die als Filter gelesen wird:"
@@ -182,39 +182,39 @@ msgstr ""
 "Exit the editor and save the file. The time for the backup follows this time"
 " specification which is read as a filter:"
 
-#: ../../source/howtos/install-on-xen/backup.rst:140
+#: ../../source/howtos/install-on-xen/backup.rst:115
 msgid "Nur bei Minute 0 [0-60]"
 msgstr "Only at minute 0 [0-60]"
 
-#: ../../source/howtos/install-on-xen/backup.rst:140
+#: ../../source/howtos/install-on-xen/backup.rst:115
 msgid "Nur bei Stunde 20 [0-20]"
 msgstr "Only at hour 20 [0-20]"
 
-#: ../../source/howtos/install-on-xen/backup.rst:140
+#: ../../source/howtos/install-on-xen/backup.rst:115
 msgid "Nur bei Tag \\* (Jeder Tag im Monat) [1-31]"
 msgstr "Only at day \\* (every day of the month) [1-31]"
 
-#: ../../source/howtos/install-on-xen/backup.rst:140
+#: ../../source/howtos/install-on-xen/backup.rst:115
 msgid "Nur bei Monat \\* (Jeder Monat im Jahr) [1-12]"
 msgstr "Only at month \\* (every month of the year) [1-12]"
 
-#: ../../source/howtos/install-on-xen/backup.rst:140
+#: ../../source/howtos/install-on-xen/backup.rst:115
 msgid "Nur bei Wochentag 5 [0-7] 0,7=Sonntag"
 msgstr "Only at weekday 5 [0-7] 0,7 = Sunday"
 
-#: ../../source/howtos/install-on-xen/backup.rst:144
+#: ../../source/howtos/install-on-xen/backup.rst:119
 msgid "0"
 msgstr "0"
 
-#: ../../source/howtos/install-on-xen/backup.rst:144
+#: ../../source/howtos/install-on-xen/backup.rst:119
 msgid "20"
 msgstr "20"
 
-#: ../../source/howtos/install-on-xen/backup.rst:144
-#: ../../source/howtos/install-on-xen/backup.rst:144
+#: ../../source/howtos/install-on-xen/backup.rst:119
+#: ../../source/howtos/install-on-xen/backup.rst:119
 msgid "\\*"
 msgstr "\\*"
 
-#: ../../source/howtos/install-on-xen/backup.rst:144
+#: ../../source/howtos/install-on-xen/backup.rst:119
 msgid "5"
 msgstr "5"
