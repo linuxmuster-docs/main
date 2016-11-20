@@ -5,14 +5,10 @@ Sheila
 
 
 In diesem Kapitel lernen Sie eine der wichtigsten Eigenschaften der
-*linuxmuster.net*
-für den Schulalltag kennen, die der „
-**S**
-elbst
-**hei**
-lenden
-**A**
-rbeitsstationen“ (SheilA). Mit diesem Konzept gehören Ausfälle von Arbeitsstationen durch falsche Bedienung oder mutwillige Zerstörung der Softwareinstallation der Vergangenheit an.
+*linuxmuster.net* für den Schulalltag kennen, die der „**S** elbst
+**hei** lenden **A** rbeitsstationen“ (SheilA). Mit diesem Konzept
+gehören Ausfälle von Arbeitsstationen durch falsche Bedienung oder
+mutwillige Zerstörung der Softwareinstallation der Vergangenheit an.
 
 
 PXE-Bootvorgang

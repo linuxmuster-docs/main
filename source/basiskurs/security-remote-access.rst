@@ -1,3 +1,6 @@
+
+.. _basiskurs-security-remote-access-label:
+
 Sicherheit / Zugang von außen
 =============================
 

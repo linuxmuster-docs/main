@@ -1,6 +1,5 @@
 .. _linbo-startbildschirm-label:
 
-
 ===========================
  Der LINBO Startbildschirm
 ===========================
@@ -60,6 +59,7 @@ Reboot
 
    lässt den Client herunterfahren.
 
+.. _manuals-linbo-start-tab-label:
 
 Start-Reiter
 ============

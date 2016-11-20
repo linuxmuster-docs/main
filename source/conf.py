@@ -119,15 +119,25 @@ gettext_compact = False     # optional
 
 
 # -- Options for HTML output ----------------------------------------------
+html_context = {
+    'css_files': [
+        'https://media.readthedocs.org/css/sphinx_rtd_theme.css',
+        'https://media.readthedocs.org/css/readthedocs-doc-embed.css',
+        '_static/theme_overrides.css',
+    ],
+}
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 # html_theme = 'linuxmuster'
+html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+html_theme_options = {
+    'logo_only': True
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = ["_themes"]
@@ -141,7 +151,7 @@ gettext_compact = False     # optional
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#html_logo = None
+html_logo = '_static/logo.png'
 
 # The name of an image file (relative to this directory) to use as a favicon of
 # the docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -238,13 +248,17 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'linuxmusternet.tex', u'linuxmuster.net documentation',
+    ('advisor', 'advisor.tex', u'Network advisor documentation',
+     u'linuxmuster.net', 'manual'),
+    ('student', 'student.tex', u'Students documentation',
+     u'linuxmuster.net', 'manual'),
+    ('teacher', 'teacher.tex', u'Teachers documentation',
      u'linuxmuster.net', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-#latex_logo = None
+latex_logo = '_static/logo.png'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
