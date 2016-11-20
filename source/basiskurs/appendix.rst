@@ -1,6 +1,7 @@
 Anhang
 ======
 
+.. _basiskurs-appendix-users:
 
 Basiskurs: Benutzer mit Passwörtern
 -----------------------------------
@@ -109,9 +110,8 @@ Auf dem Server sind für den Basiskurs die folgenden Benutzer eingerichtet, die 
 
 
 
-Für die
-*Windows*
--Arbeitsstation wird ein lokaler Administrator benötigt:
+Für die *Windows*-Arbeitsstation wird ein lokaler Administrator
+benötigt:
 
 +------------------+---------------------------------+
 | **Anmeldename**  | **Benutzergruppe/Bemerkungen**  |
@@ -125,10 +125,8 @@ Für die
 
 
 
-Für den
-*I*
-FIRE
-, der „unabhängig” vom Server installiert ist, sind zwei weitere Benutzer eingerichtet:
+Für den IPFire, der „unabhängig” vom Server installiert ist, sind zwei
+weitere Benutzer eingerichtet:
 
 +------------------+---------------------------------+
 | **Anmeldename**  | **Benutzergruppe/Bemerkungen**  |
@@ -137,15 +135,23 @@ FIRE
 | admin            |                                 |
 |                  |                                 |
 +------------------+---------------------------------+
-| root             | Hauptadministrator des IPCop    |
+| root             | Hauptadministrator des IPFire   |
 |                  |                                 |
 +------------------+---------------------------------+
 
+.. todo::
+
+   Sophomorix gehört in ein eigenes Manual. Im Zweifel das des
+   Wikis. Hier löschen, Verweise auf das Manual/Wikieinträge hinlegen.
+
 
 Sophomorix
------------
+----------
 
-Im der folgenden Tabelle finden Sie Befehle mit denen die sophomorix Skripte direkt an der Serverkonsole aufgerufen werden können. Ausführliche Informationen zu den einzelnen Befehlen erhalten Sie mit:
+Im der folgenden Tabelle finden Sie Befehle mit denen die sophomorix
+Skripte direkt an der Serverkonsole aufgerufen werden
+können. Ausführliche Informationen zu den einzelnen Befehlen erhalten
+Sie mit:
 
 
 10:34/0 server # <Name des Sophomorix-Modul> --help

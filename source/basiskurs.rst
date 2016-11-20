@@ -14,7 +14,7 @@
    basiskurs/sheila
    basiskurs/software
    basiskurs/printing
-   basiskurs/security
+   basiskurs/security-remote-access
    basiskurs/backup-and-restore
    basiskurs/appendix
 

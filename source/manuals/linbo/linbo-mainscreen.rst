@@ -24,7 +24,7 @@ Informationen
 =============
 
 Im oberen Teil in LINBO werden Informationen zum Client angezeigt.
-p
+
 Host
    Der festgelegte Hostname oder "pxeclient", wenn der Client nicht registriert ist.
 

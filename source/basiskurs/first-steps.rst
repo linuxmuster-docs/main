@@ -140,35 +140,40 @@ Die folgenden Schritte werden an Hand von *Windows 10* und *Ubuntu
 Grundzüge des Arbeitens im Netz auch für andere Windows-
 bzw. Linuxsysteme.
 
-Anmelden
-~~~~~~~~
-
 Wenn man in einem Netzwerk arbeiten möchte, muss man sich mit einem
-Benutzernamen (Loginname,Anmeldenme) und Kennwort (Passwort) am Server anmelden
-(authentifizieren, einloggen). In diesem Skript werden im Folgenden
-die Begriffe Benutzername und Passwort verwendet.
+Benutzernamen (Loginname,Anmeldename) und Kennwort (Passwort) am
+Server anmelden (authentifizieren, einloggen). In diesem Skript werden
+im Folgenden die Begriffe "Benutzername" und "Passwort" verwendet.
+
+Die Arbeitsstationen fragen bei der Anmeldung beim Server nach
+("Authentifizierung") und erlauben je nachdem, zu welcher Gruppe der
+Benutzer gehört (z.B. Lehrer oder Schüler) unterschiedliche Funktionen
+("Authorisierung").
+
+.. note:: **Fortbildungsumgebung**
+
+   Im Anhang :ref:`basiskurs-appendix-users` finden Sie eine Liste der
+   Benutzer, die für den Basiskurs eingerichtet wurden.
+
+Anmelden unter Windows 10
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Unter Windows 10 geht die Anmeldung so von statten:
 
 .. figure:: media/windows10-login-zell.png
    :alt: Windows 10 Anmeldebildschirm im Schulbetrieb
 
    Windows 10 Anmeldebildschirm im Schulbetrieb
 
-Sobald auf den Arbeitsstationen das Netzwerk schon entsprechend
+Da auf den Arbeitsstationen das Netzwerk schon entsprechend
 eingerichtet ist, erscheint nach dem Start ein Anmeldefenster. Bei
-``Anmelden an:`` steht der Name der Domäne, an der man sich anmeldet. Die
-Domäne heißt bei der *linuxmuster.net* standardmäßig SCHULE .
-
-Je nachdem, zu welcher Gruppe der Benutzername gehört, hat man
-bestimmte Zugriffsrechte.
-
-.. note:: **Fortbildungsumgebung**
-
-   Im Anhang finden Sie eine Liste der Benutzer, die für den Basiskurs
-   eingerichtet wurden.
+``Anmelden an:`` steht der Name der Domäne, an der man sich
+anmeldet. Die Domäne heißt bei der *linuxmuster.net* standardmäßig
+"SCHULE".
 
 Nach dem Einloggen wird auf dem Server eine Batch-Datei gestartet, ein
-sog.  *Login-Skript*. Dieses verbindet ("mappt"), abhängig von der
-Benutzergruppe, der man angehört, Verzeichnisse auf dem Server mit
+sogenanntes *Login-Skript*. Dieses verbindet ("mappt"), abhängig von
+der Benutzergruppe, der man angehört, Verzeichnisse auf dem Server mit
 Laufwerksbuchstaben auf der Arbeitsstation, stellt die lokale Zeit ein
 und weist evtl. Drucker zu.
 
@@ -177,20 +182,16 @@ außerhalb, z.B. von zu Hause, am Schulserver anmelden, auf seine Daten
 zugreifen, oder auch als administrator den Server
 administrieren. 
 
-.. todo:: 
-
-   Näheres dazu finden Sie im Kapitel ??
+Näheres dazu finden Sie im Kapitel :ref:`basiskurs-security-remote-access-label`.
 
 Veränderungen gegenüber lokalem Windows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In der
-*linuxmuster.net*
-werden beim Anmelden automatisch bestimmte Verzeichnisse des Servers mit Laufwerksbuchstaben auf der Arbeitsstation verbunden. (Ist dies in anderen Netzwerken nicht der Fall, kann man über das Kontextmenü von
-*Arbeitsplatz*
-oder
-*Netzwerkumgebung*
-Netzlaufwerke verbinden oder trennen.)
+In der *linuxmuster.net* werden beim Anmelden automatisch bestimmte
+Verzeichnisse des Servers mit Laufwerksbuchstaben auf der
+Arbeitsstation verbunden. (Ist dies in anderen Netzwerken nicht der
+Fall, kann man über das Kontextmenü von *Arbeitsplatz* oder
+*Netzwerkumgebung* Netzlaufwerke verbinden oder trennen.)
 
 In der folgenden Tabelle finden Sie die Netzlaufwerke für Lehrer. Der
 *Uniform Resource Name (URN)*
