@@ -1,6 +1,5 @@
 .. _linbo-startbildschirm-label:
 
-
 ===========================
  Der LINBO Startbildschirm
 ===========================
@@ -25,7 +24,7 @@ Informationen
 =============
 
 Im oberen Teil in LINBO werden Informationen zum Client angezeigt.
-
+p
 Host
    Der festgelegte Hostname oder "pxeclient", wenn der Client nicht registriert ist.
 
@@ -60,6 +59,7 @@ Reboot
 
    lässt den Client herunterfahren.
 
+.. _manuals-linbo-start-tab-label:
 
 Start-Reiter
 ============

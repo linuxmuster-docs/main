@@ -75,13 +75,13 @@ die Installation enthält, durch das Image überschrieben und damit in
 seinen ursprünglichen Zustand zurückversetzt. Notfalls wird auch die
 Partitionierung erneuert.
 
-Als Managementsystem für die Images wird hier *Linbo* eingesetzt.
-*Linbo* legt zusätzlich zu den auf dem Server gespeicherten Abbildern
+Als Managementsystem für die Images wird hier *LINBO* eingesetzt.
+*LINBO* legt zusätzlich zu den auf dem Server gespeicherten Abbildern
 das aktuelle Image in einer speziell reservierten Partition auf der
 lokalen Festplatte ab, um unnötigen Netzwerkverkehr zu vermeiden und
 das Restaurieren zu beschleunigen.
 
-*Linbo* ist außerdem in der Lage auf den Festplatten mehrere auch
+*LINBO* ist außerdem in der Lage auf den Festplatten mehrere auch
 unterschiedliche Betriebssysteme zu verwalten, für die dann jeweils
 ein eigenes Image benutzt wird.
 
@@ -90,121 +90,96 @@ ein eigenes Image benutzt wird.
    neue screenshots mit Ubuntu 16.04 und Windows 7/(10?)
 
 Im unten gezeigten Beispiel kann der Benutzer entscheiden, ob der
-Rechner mit *Ubuntu 16.04 LTS* oder *Windows 7* starten soll. In
-Kapitel ?? erfahren Sie, wie man *LINBO* konfiguriert, um
+Rechner mit *Ubuntu 16.04 LTS* oder *Windows 10* starten soll. In
+Kapitel :ref:`sheila` erfahren Sie, wie man *LINBO* konfiguriert, um
 unterschiedliche Betriebssysteme wahlweise auf einem Netzwerkrechner
 starten zu können.
-
-.. todo::
-
-   übernehme/verweise auf Bedienungsanleitung von LINBO,
-   bzw. übernehme screenshots.
 
 Schaltet man eine bereits am Server aufgenommene Arbeitsstation ein,
 erscheint auf dem Bildschirm zunächst die LINBO-Startseite:
 
+.. figure:: ../manuals/linbo/media/linbo-mainscreen/linbo-mainscreen-registered.png
+   :alt: Linbo Startbildschirm eines aufgenommenen Clients
 
-.. figure:: media/linbo-explained.jpg
+   Linbo Startbildschirm eines aufgenommenen Clients
 
-Zu jedem Betriebssystem gibt es 4 Schaltflächen, die folgende
-Bedeutungen und Wirkungen haben:
-
-
-*   |Nutzen_linbo_syncundstart_png|
-    synchronisiert das System mit dem letzten aktuellen Image. Falls ein neueres Image auf dem Server liegt, wird dies zunächst heruntergeladen. Bei Windows-Syste
-    men wird eine bereitgestellte Registry-Patch-Datei angewendet. Bei Linux-Systemen werden Hostname und Rootpartition gepatcht.
+Lesen Sie im Handbuch zu LINBO :ref:`linbo-startbildschirm-label` im
+Abschnitt :ref:`manuals-linbo-start-tab-label` nach, welche
+Bedeutungen die Schaltflächen im Reiter "Start" bedeuten.
 
 
+.. note:: **Fortbildungsumgebung**
 
-*   |Nutzen_linbo_start_png|
-    startet das System im aktuellen Zustand, unsynchronisiert, keine Patches werden angewandt.
+   Für den Basiskurs wurde bereits je ein Image (Abbild der
+   Festplatte) einer Ubuntu- und einer Windowsinstallation auf dem
+   Server abgelegt, so dass Sie das Zurückspielen eines
+   Festplattenimages mit Hilfe der folgenden Übung ausprobieren
+   können.
 
+   **Übungsaufgaben**
 
+   #. Zurückspielen eines Festplattenimages
 
-*   |100002010000002000000020BA4D51A8_png|
-    formatiert zunächst die Partition und setzt dann das Betriebssystem komplett neu auf, verhält sich sonst wie Sync+Start.
-
-
-
-*   |100002010000002000000020D7FFD0EC_png|
-    Zeigt den Imagekommentar an, falls der Administrator bei der Erstellung einen eingegeben hat.
-
-
-
-
-
-Der Bootvorgang und die damit zusammenhängenden Aspekte werden in Abschnitt
-näher erläutert.
-
-
-Für den Basiskurs wurde bereits je ein Image (Abbild der Festplatte) einer Ubuntu- und einer Windowsinstallation auf dem Server abgelegt, so dass Sie das Zurückspielen eines Festplattenimages mit Hilfe der folgenden Übung ausprobieren können.
-
-
-
-#.  Zurückspielen eines Festplattenimages
-
-    *   Starten Sie eine Ihrer Arbeitsstationen neu und beobachten Sie den Bootvorgang und das Laden von
-        *LINBO*
-        .
-
-
-
-    *   Starten Sie den PC synchronisiert über den Schalter
+      * Starten Sie eine Ihrer Arbeitsstationen neu und beobachten Sie
+        *den Bootvorgang und das Laden von LINBO* .
+      * Starten Sie den PC synchronisiert über den Schalter
         *Sync+Start.*
-
-
-
-    *   Machen Sie einen Neustart und starten Sie dann mit
-        *Start*
-        .
-
-
-
-    *   Nur wenn Sie sowieso einen Kaffee trinken wollten, starten Sie ein weiteres Mal mit dem Schalter
-        *Neu+Start*
-        , dann wird neu formatiert und das Image komplett zurückgespielt. Das dauert je nach Größe des Systems unterschiedlich lange.
-
-
-
-
+      * Machen Sie einen Neustart und starten Sie dann mit
+        *Start*.
+      * Nur wenn Sie sowieso einen Kaffee trinken wollten, starten Sie
+        *ein weiteres Mal mit dem Schalter Neu+Start*, dann wird neu
+	formatiert und das Image komplett zurückgespielt. Das dauert
+	je nach Größe des Systems unterschiedlich lange.
 
 
 Erste Schritte im Netzwerk
 --------------------------
 
-Die folgenden Schritte werden an Hand von
-*Windows-XP*
-illustriert. In ähnlicher Form gelten die dargestellten Grundzüge des Arbeitens im Netz auch für andere Windows- bzw. Linuxsysteme.
+Die folgenden Schritte werden an Hand von *Windows 10* und *Ubuntu
+16.04* illustriert. In ähnlicher Form gelten die dargestellten
+Grundzüge des Arbeitens im Netz auch für andere Windows-
+bzw. Linuxsysteme.
 
 Anmelden
 ~~~~~~~~
 
-Wenn man in einem Netzwerk arbeiten möchte, muss man sich mit einem Benutzernamen (= Loginname) und Kennwort (= Passwort) am Server anmelden (authentifizieren). Dieser Vorgang wird neudeutsch auch mit
-einloggen
+Wenn man in einem Netzwerk arbeiten möchte, muss man sich mit einem
+Benutzernamen (Loginname,Anmeldenme) und Kennwort (Passwort) am Server anmelden
+(authentifizieren, einloggen). In diesem Skript werden im Folgenden
+die Begriffe Benutzername und Passwort verwendet.
 
-bezeichnet. In diesem Skript werden im Folgenden die Begriffe Benutzername und Passwort verwendet.
+.. figure:: media/windows10-login-zell.png
+   :alt: Windows 10 Anmeldebildschirm im Schulbetrieb
 
-|10000000000004A8000002F73F6B6089_jpg|
-Da auf den Arbeitsstationen das Netzwerk schon entsprechend eingerichtet ist, erscheint nach dem Start ein Anmeldefenster. Bei
-*Anmelden an*
-steht der Name der Domäne, an der man sich anmeldet. Die Domäne heißt bei der
-*linuxmuster.net*
-standardmäßig
-SCHULE
-.
+   Windows 10 Anmeldebildschirm im Schulbetrieb
 
-Je nachdem, zu welcher Gruppe der Benutzername und das zugehörige Passwort gehören, hat man bestimmte Zugriffsrechte. Im Anhang finden Sie eine Liste der Benutzer, die für den Basiskurs eingerichtet wurden.
+Sobald auf den Arbeitsstationen das Netzwerk schon entsprechend
+eingerichtet ist, erscheint nach dem Start ein Anmeldefenster. Bei
+``Anmelden an:`` steht der Name der Domäne, an der man sich anmeldet. Die
+Domäne heißt bei der *linuxmuster.net* standardmäßig SCHULE .
 
-Nach dem Einloggen wird auf dem Server eine Batch-Datei gestartet, ein sog.
-*Login-Skript. *
-Dieses verbindet (
-*mappt)*
-, abhängig von der Benutzergruppe, der man angehört, Verzeichnisse auf dem Server mit Laufwerksbuchstaben auf der Arbeitsstation, stellt die lokale Zeit ein und weist evtl. Drucker zu.
+Je nachdem, zu welcher Gruppe der Benutzername gehört, hat man
+bestimmte Zugriffsrechte.
 
-Wenn der Netzwerkbetreuer es eingerichtet hat, kann man sich auch von außerhalb, z.B. von zu Hause, am Schulserver anmelden, auf seine Daten zugreifen, oder auch als
-administrator
-den Server administrieren. Näheres dazu finden Sie im Kapitel
-.
+.. note:: **Fortbildungsumgebung**
+
+   Im Anhang finden Sie eine Liste der Benutzer, die für den Basiskurs
+   eingerichtet wurden.
+
+Nach dem Einloggen wird auf dem Server eine Batch-Datei gestartet, ein
+sog.  *Login-Skript*. Dieses verbindet ("mappt"), abhängig von der
+Benutzergruppe, der man angehört, Verzeichnisse auf dem Server mit
+Laufwerksbuchstaben auf der Arbeitsstation, stellt die lokale Zeit ein
+und weist evtl. Drucker zu.
+
+Wenn der Netzwerkbetreuer es eingerichtet hat, kann man sich auch von
+außerhalb, z.B. von zu Hause, am Schulserver anmelden, auf seine Daten
+zugreifen, oder auch als administrator den Server
+administrieren. 
+
+.. todo:: 
+
+   Näheres dazu finden Sie im Kapitel ??
 
 Veränderungen gegenüber lokalem Windows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -916,11 +891,6 @@ der ausgewählte Druckjob gelöscht. Es lassen sich nur eigene Druckjobs lösche
 .. |10000000000003C9000002F09E76347A_jpg| image:: media/10000000000003C9000002F09E76347A.jpg
     :width: 12.001cm
     :height: 8.591cm
-
-
-.. |10000000000004A8000002F73F6B6089_jpg| image:: media/10000000000004A8000002F73F6B6089.jpg
-    :width: 12.001cm
-    :height: 7.64cm
 
 
 .. |Nutzen_linbo_start_png| image:: media/Nutzen_linbo_start.png
