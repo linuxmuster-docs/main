@@ -2,6 +2,8 @@
 
    <br />
 
+.. _preface-preparations-label:
+
 Vorwort und Vorbereitungen
 ==========================
 Die linuxmuster.net 6.2 wird als Zwei-Server-Lösung (IPFire-Firewall und linuxmuster.net-Server) betrieben. Sie beginnen zunächst mit der Installation der IPFire-Firewall und fahren dann nach einer Vorkonfiguration der Firewall mit der Installation des linuxmuster.net-Servers fort.
@@ -42,7 +44,8 @@ Ubuntu Server
 Laden Sie das Iso-Image ( `Ubuntu 12.04.5 LTS 64-bit PC (AMD64) server install CD <http://releases.ubuntu.com/12.04/ubuntu-12.04.5-server-amd64.iso>`_ ) herunter und brennen es auf eine CD.
 
   .. warning::
-   Verwenden Sie **nicht** Ubuntu 14.04 oder Ubuntu 16.04. |br| Erst die Anfang 2017 erscheinende Version linuxmuster.net 7 unterstützt Ubuntu 16.04.
+   Verwenden Sie **nicht** Ubuntu 14.04 oder Ubuntu 16.04.
+   |br| Erst die Anfang 2017 erscheinende Version linuxmuster.net 7 unterstützt Ubuntu 16.04.
 
 Um sicher zu stellen, dass die Datei richtig heruntergeladen wurde, können Sie die SHA1-Summe prüfen. Auf der Konsole eines Linuxbetriebsystems steht z.B. der Befehl ``sha1sum`` zur Verfügung:
 

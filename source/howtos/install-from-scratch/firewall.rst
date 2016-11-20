@@ -1,3 +1,5 @@
+.. _install-configure-firewall-label:
+
 Installation und Konfiguration der Firewall
 ===========================================
 
