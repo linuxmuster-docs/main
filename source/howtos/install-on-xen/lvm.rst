@@ -238,7 +238,7 @@ können Sie die Speichergröße überprüfen.
 
 
 Abschluss der Grundinstallation
-===============================
+-------------------------------
 
 Ihre Umgebung ist nun für den regulären Einsatz von linuxmuster.net vorbereitet.
 

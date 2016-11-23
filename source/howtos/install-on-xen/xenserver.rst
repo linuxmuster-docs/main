@@ -265,6 +265,10 @@ Sie werden nun der Reihe nach abgefragt welche VMs automatisch gestartet werden 
    :align: center
    :alt: Schritt 41 der Installation des XenServers
 
+.. figure:: media/xenserver/image41a.png
+   :align: center
+   :alt: Schritt 41a der Installation des XenServers
+
 Sie können nun das System mit der Auswahl ``Yes`` neu starten.
 
 .. figure:: media/xenserver/image42.png
