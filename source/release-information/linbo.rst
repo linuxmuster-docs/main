@@ -578,3 +578,30 @@ getaner Anpassung den Bootvorgang.
    Bearbeiten LINBO-Startmenü im UEFI-Modus
 
 
+LINBO kann die Systemuhr setzen
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Seit LINBO-Version 2.3.13 kann LINBO die Systemzeit setzen
+(``hwclock``) und hat das Programm ``ntpd`` zur Abfrage eines
+NTP-Servers integriert. Das bedeutet, dass man mit Hilfe eines
+postsync-Skriptes sowohl die aktuelle Uhrzeit mit dem IPFire
+synchronisieren kann und danach auch die Hardware-Uhr auf diese Zeit
+setzen kann.
+
+.. code-block:: console
+
+   echo -n "Setting date from: [$(date)] to ...wait for it... "
+   ntpd -nq -p 10.16.1.254
+   hwclock -u -w
+   echo -n "[$(date)]"
+
+Die Synchronisation dauert etwa 6 Sekunden. Die Hardware-Uhr wird so
+auf UTC gestellt, woraufhin Windows-Clients angepasst werden müssen,
+z.B. mit
+
+.. code::
+
+   [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation]
+   "RealTimeIsUniversal"=dword:00000001
+
+Weitere Informationen finden sich `hier <http://www.linuxmuster.net/wiki/anwenderwiki:linbo:ntp_sync>`_.
