@@ -21,14 +21,6 @@ vergebene Passwort beim Anlegen des Schülers durch den Administrator oder das a
 
 **Lehrkräfte können niemals ein vom Schüler geändertes Passwort einsehen oder ausdrucken.**
 
-Verwaltung der Lehrerpasswörter durch den Administrator
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Der Administrator hat in der *Schulkonsole* unter *Benutzer* -> *Lehrerpasswörter* die gleichen Möglichkeiten für die Passwörter der Lehrer, 
-wie die Lehrer für die Passwörter der Schüler. Er kann die komplette Passwortliste als PDF ausdrucken oder als CSV-Datei weiter verarbeiten. 
-Außerdem ist es möglich ein neues Erstpasswort zu setzen oder es sich für einzelne Lehrer anzuschauen.
-
-**Der Administrator kann vom Lehrer geänderte Passwörter nicht einsehen.**
 
 Ausdrucken von Passwortlisten für neu angelegte Benutzer durch den Administrator
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
