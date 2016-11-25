@@ -1,3 +1,5 @@
+.. _schulkonsole-admin-user-label:
+
 ==========================
  Menü: Benutzerverwaltung
 ==========================
@@ -14,9 +16,31 @@ Darüber hinaus können Lehrerpasswörter zurückgesetzt werden, siehe :ref:`how
 Passwortlisten
 --------------
 
-Auf dieser Seite können Sie Benutzerlisten als PDF oder CSV von zu
-einem bestimmten Zeitpunkt hinzugefügten oder allen Benutzern
-erzeugen lassen.
+Der Administrator kann hier einsehen, zu welchen Zeitpunkten Benutzer
+neu angelegt wurden.
+
+.. image:: media/schulkonsole-benutzer-passwortlisten.png
+
+Sie können entweder eine **Gesamtliste** aller Benutzer mit deren
+Passwörtern erhalten oder aber einen bestimmten Zeitpunkt heraussuchen
+und dann die Liste der zu diesem Zeitpunkt angelegten Benutzer
+erhalten.  
+
+Dabei können Sie jeweils entweder eine Liste als *PDF*-Datei
+oder als *CSV*-Datei erhalten. Die *PDF*-Datei enthält Anmeldekärtchen
+der Benutzer.
+
+.. figure:: media/schulkonsole-benutzer-passwortlisten-pdf.png
+
+   Anmeldekärtchen der Lehrer
+
+Alternativ können Sie sich über die Option **Ein Eintrag pro Seite**
+Seiten mit ausführlichen Anmeldeinformationen ausgeben lassen.
+
+.. figure:: media/schulkonsole-benutzer-passwortlisten-pdf-detailiert.png
+ 
+   Ausführliche Anmeldeinformationen für den Lehrer
+
 	   
 Berichte
 --------

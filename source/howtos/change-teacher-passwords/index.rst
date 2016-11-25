@@ -63,3 +63,10 @@ Erstpasswort anzeigen
 
 Um ein einzelnes Passwort anzeigen zu lassen, drücken Sie in der Reihe
 des entsprechenden Lehrers auf den Knopf "Erstpasswort anzeigen".
+
+Weiterführende Informationen
+============================
+
+Weitere Informationen zum Thema finden Sie
+
+  * im Handbuch zur Schulkonsole im Abschnitt :ref:`schulkonsole-admin-user-label` 

@@ -22,19 +22,3 @@ vergebene Passwort beim Anlegen des Schülers durch den Administrator oder das a
 **Lehrkräfte können niemals ein vom Schüler geändertes Passwort einsehen oder ausdrucken.**
 
 
-Ausdrucken von Passwortlisten für neu angelegte Benutzer durch den Administrator
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Der Administrator kann in der *Schulkonsole* unter *Bentuzer* -> *Passwortlisten** einsehen, zu welchen Zeitpunkten Benutzer neu angelegt wurden.
-
-.. image:: media/schulkonsole-benutzer-passwortlisten.png
-
-Er kann entweder eine **Gesamtliste** aller Benutzer mit deren Passworten erhalten oder aber einen bestimmten Zeitpunkt heraussuchen und dann die Liste 
-der zu diesem Zeitpunkt angelegten Benutzer erhalten. Dabei kann er jeweils entweder eine Liste als *PDF*-Datei oder als *CSV*-Datei erhalten. Die *PDF*-Datei
-enthält Anmeldekärtchen der Benutzer. Alternativ kann er sich über die Option **Ein Eintrag pro Seite** Seiten mit ausführlichen Anmeldeinformationen
-ausgeben lassen.
-
-.. image:: media/schulkonsole-benutzer-passwortlisten-pdf.png
-
-.. image:: media/schulkonsole-benutzer-passwortlisten-pdf-detailiert.png
- 
