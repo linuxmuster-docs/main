@@ -39,6 +39,12 @@ Schritt-für-Schritt Anleitungen
    howtos/keep-lmn-uptodate/index
    howtos/backup-migrating/index
    howtos/printer/index
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :caption: Benutzerverwaltung
+
    howtos/manage-users/index
    howtos/change-teacher-passwords/index
    howtos/manage-quota/index
