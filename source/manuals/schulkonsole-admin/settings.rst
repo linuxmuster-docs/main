@@ -23,6 +23,8 @@ Einstellungen der Schulkonsole
 | *Minimale Passwortlänge*          | Diese Anzahl an Zeichen muss ein Passwort mindestens haben.                       |
 +-----------------------------------+-----------------------------------------------------------------------------------+
 
+.. _manual-sk-admin-settings-user-label:
+
 Einstellungen der Benutzerverwaltung
 ------------------------------------
 

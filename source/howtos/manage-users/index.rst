@@ -19,6 +19,5 @@ Inhalt:
    allgemeines
    konfiguration
    verwalten
-   quota
    weiteres
 
