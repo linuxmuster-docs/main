@@ -19,24 +19,29 @@ Leitfäden
    howtos/windows10clients/index
    howtos/linuxclients/index
 
-..
-   ../guidelines/install-from-scratch/index
-
 Schritt-für-Schritt Anleitungen
 -------------------------------
 
 .. toctree::
    :glob:
    :maxdepth: 1
+   :caption: Getting Started
 
    howtos/install-from-scratch/index
    howtos/upgrade/index
-   howtos/keep-lmn-uptodate/index
    howtos/migrate/index
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :caption: Administration
+
+   howtos/keep-lmn-uptodate/index
    howtos/backup-migrating/index
    howtos/printer/index
    howtos/manage-users/index
    howtos/change-teacher-passwords/index
+   howtos/manage-quota/index
 
 Bedienungsanleitungen
 ---------------------
@@ -47,7 +52,6 @@ Bedienungsanleitungen
 
    manuals/linbo/index
    manuals/schulkonsole-admin/index
-
 ..
    manuals/use_xen/index
 
