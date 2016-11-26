@@ -1,3 +1,5 @@
+.. _schulekonsole-admin-label:
+
 Schulkonsole nutzen
 ===================
 
