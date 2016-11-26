@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-19 18:16+0700\n"
+"POT-Creation-Date: 2016-11-26 10:54+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -292,11 +292,11 @@ msgstr ""
 "You will now be called one after another which VMs should start "
 "automatically. Select each ``Yes`` or ``No`` and confirm with ``Enter``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:268
+#: ../../source/howtos/install-on-xen/xenserver.rst:272
 msgid "Sie können nun das System mit der Auswahl ``Yes`` neu starten."
 msgstr "You can now restart the system by selecting ``Yes``."
 
-#: ../../source/howtos/install-on-xen/xenserver.rst:274
+#: ../../source/howtos/install-on-xen/xenserver.rst:278
 msgid ""
 "Das System fährt herunter und startet danach wieder. Die VMs, die Sie "
 "importiert haben, werden - sofern entsprechend konfiguriert - direkt "

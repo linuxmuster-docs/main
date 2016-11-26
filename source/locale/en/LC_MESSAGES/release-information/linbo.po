@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-19 18:16+0700\n"
+"POT-Creation-Date: 2016-11-26 10:54+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -684,3 +684,28 @@ msgstr ""
 #: ../../source/release-information/linbo.rst:578
 msgid "Bearbeiten LINBO-Startmenü im UEFI-Modus"
 msgstr "Edit LINBO start menu in UEFI mode"
+
+#: ../../source/release-information/linbo.rst:582
+msgid "LINBO kann die Systemuhr setzen"
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:584
+msgid ""
+"Seit LINBO-Version 2.3.13 kann LINBO die Systemzeit setzen (``hwclock``) und"
+" hat das Programm ``ntpd`` zur Abfrage eines NTP-Servers integriert. Das "
+"bedeutet, dass man mit Hilfe eines postsync-Skriptes sowohl die aktuelle "
+"Uhrzeit mit dem IPFire synchronisieren kann und danach auch die Hardware-Uhr"
+" auf diese Zeit setzen kann."
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:598
+msgid ""
+"Die Synchronisation dauert etwa 6 Sekunden. Die Hardware-Uhr wird so auf UTC"
+" gestellt, woraufhin Windows-Clients angepasst werden müssen, z.B. mit"
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:607
+msgid ""
+"Weitere Informationen finden sich `hier "
+"<http://www.linuxmuster.net/wiki/anwenderwiki:linbo:ntp_sync>`_."
+msgstr ""

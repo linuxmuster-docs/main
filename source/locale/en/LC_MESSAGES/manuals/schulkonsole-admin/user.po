@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-19 18:16+0700\n"
+"POT-Creation-Date: 2016-11-26 10:54+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/manuals/schulkonsole-admin/user.rst:3
+#: ../../source/manuals/schulkonsole-admin/user.rst:5
 msgid "Menü: Benutzerverwaltung"
 msgstr ""
 
-#: ../../source/manuals/schulkonsole-admin/user.rst:7
+#: ../../source/manuals/schulkonsole-admin/user.rst:9
 msgid ""
 "Im Menüpunkt \"Benutzerverwaltung\" können die verschiedenen Benutzerlisten "
 "gepflegt, Änderungen überprüft und übernommen werden. Die genaue "
@@ -29,37 +29,64 @@ msgid ""
 "beschrieben."
 msgstr ""
 
-#: ../../source/manuals/schulkonsole-admin/user.rst:12
+#: ../../source/manuals/schulkonsole-admin/user.rst:14
 msgid ""
 "Darüber hinaus können Lehrerpasswörter zurückgesetzt werden, siehe :ref"
 ":`howto-change-teacher-passwords`."
 msgstr ""
 
-#: ../../source/manuals/schulkonsole-admin/user.rst:15
+#: ../../source/manuals/schulkonsole-admin/user.rst:17
 msgid "Passwortlisten"
 msgstr ""
 
-#: ../../source/manuals/schulkonsole-admin/user.rst:17
+#: ../../source/manuals/schulkonsole-admin/user.rst:19
 msgid ""
-"Auf dieser Seite können Sie Benutzerlisten als PDF oder CSV von zu einem "
-"bestimmten Zeitpunkt hinzugefügten oder allen Benutzern erzeugen lassen."
-msgstr ""
-
-#: ../../source/manuals/schulkonsole-admin/user.rst:22
-msgid "Berichte"
+"Der Administrator kann hier einsehen, zu welchen Zeitpunkten Benutzer neu "
+"angelegt wurden."
 msgstr ""
 
 #: ../../source/manuals/schulkonsole-admin/user.rst:24
+msgid ""
+"Sie können entweder eine **Gesamtliste** aller Benutzer mit deren "
+"Passwörtern erhalten oder aber einen bestimmten Zeitpunkt heraussuchen und "
+"dann die Liste der zu diesem Zeitpunkt angelegten Benutzer erhalten."
+msgstr ""
+
+#: ../../source/manuals/schulkonsole-admin/user.rst:29
+msgid ""
+"Dabei können Sie jeweils entweder eine Liste als *PDF*-Datei oder als "
+"*CSV*-Datei erhalten. Die *PDF*-Datei enthält Anmeldekärtchen der Benutzer."
+msgstr ""
+
+#: ../../source/manuals/schulkonsole-admin/user.rst:35
+msgid "Anmeldekärtchen der Lehrer"
+msgstr ""
+
+#: ../../source/manuals/schulkonsole-admin/user.rst:37
+msgid ""
+"Alternativ können Sie sich über die Option **Ein Eintrag pro Seite** Seiten "
+"mit ausführlichen Anmeldeinformationen ausgeben lassen."
+msgstr ""
+
+#: ../../source/manuals/schulkonsole-admin/user.rst:42
+msgid "Ausführliche Anmeldeinformationen für den Lehrer"
+msgstr ""
+
+#: ../../source/manuals/schulkonsole-admin/user.rst:46
+msgid "Berichte"
+msgstr ""
+
+#: ../../source/manuals/schulkonsole-admin/user.rst:48
 msgid "Hier rufen Sie die Berichte der jeweils letzten Aktion ab."
 msgstr ""
 
-#: ../../source/manuals/schulkonsole-admin/user.rst:26
+#: ../../source/manuals/schulkonsole-admin/user.rst:50
 msgid ""
 "Unter „Administrator-Report“ erhalten Sie ein Protokoll des letzten "
 "Durchlaufs von „anlegen/versetzen/löschen“."
 msgstr ""
 
-#: ../../source/manuals/schulkonsole-admin/user.rst:29
+#: ../../source/manuals/schulkonsole-admin/user.rst:53
 msgid ""
 "Unter „Report für das Sekretariat“ finden Sie Angaben zu Datensätzen, die "
 "nicht den Vorgaben von Sophomorix entsprechen und evtl. im "

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-19 18:16+0700\n"
+"POT-Creation-Date: 2016-11-26 10:54+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: T. Küchel <t.kuechel@humboldt-ka.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:2
+#: ../../source/howtos/install-from-scratch/firewall.rst:4
 msgid "Installation und Konfiguration der Firewall"
 msgstr "Install and configure the firewall"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:5
+#: ../../source/howtos/install-from-scratch/firewall.rst:7
 msgid "Installation der Firewall"
 msgstr "Install the firewall"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:7
+#: ../../source/howtos/install-from-scratch/firewall.rst:9
 msgid ""
 "Booten Sie den für die Firewall vorgesehenen Server von der IPFire-CD. "
 "Bestätigen Sie durch Drücken der ``ENTER``-Taste, dass Sie den IPFire "
@@ -35,11 +35,11 @@ msgstr ""
 "Boot the server you want to use for the firewall with the IPFire CD. Confirm"
 " by pressing the ``ENTER`` key that you want to install IPFire."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:13
+#: ../../source/howtos/install-from-scratch/firewall.rst:15
 msgid "Bestätigen Sie, dass Sie den IPFire installieren möchten."
 msgstr "Confirm that you want to install IPFire."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:15
+#: ../../source/howtos/install-from-scratch/firewall.rst:17
 msgid ""
 "Wählen Sie mit den Pfeiltasten die Sprache aus und bestätigen Sie ihre "
 "Auswahl mit der ``ENTER``-Taste."
@@ -47,22 +47,22 @@ msgstr ""
 "Use the ``arrow`` keys to select your language and confirm your selection "
 "with the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:21
+#: ../../source/howtos/install-from-scratch/firewall.rst:23
 msgid "Wählen Sie die gewünschte Sprache aus."
 msgstr "Select the desired language."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:23
+#: ../../source/howtos/install-from-scratch/firewall.rst:25
 msgid ""
 "Bestätigen Sie durch Drücken der ``ENTER``-Taste, dass Sie den IPFire "
 "installieren möchten."
 msgstr ""
 "Confirm by pressing the ``ENTER`` key that you want to install IPFire."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:29
+#: ../../source/howtos/install-from-scratch/firewall.rst:31
 msgid "Bestätigen Sie, dass Sie den IPFire installieren möchten"
 msgstr "Confirm that you want to install IPFire."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:31
+#: ../../source/howtos/install-from-scratch/firewall.rst:33
 msgid ""
 "Akzeptieren Sie die Lizenz. Springen Sie dazu mit der ``TAB``-Taste auf das "
 "Bestätigungsfeld und drücken die  ``Leer``-Taste. Bestätigen Sie "
@@ -71,11 +71,11 @@ msgstr ""
 "Accept the license. Press the ``TAB`` key to jump to the confirmation "
 "checkbox and press the ``Spacebar``. Confirm with the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:37
+#: ../../source/howtos/install-from-scratch/firewall.rst:39
 msgid "Akzeptieren Sie die Lizenz"
 msgstr "Accept the license"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:39
+#: ../../source/howtos/install-from-scratch/firewall.rst:41
 msgid ""
 "Bestätigen Sie durch Drücken der ``ENTER``-Taste, dass in den folgenden "
 "Schritten die Festplatte partitioniert und formatiert werden soll. Dabei "
@@ -84,19 +84,19 @@ msgstr ""
 "Confirm by pressing the ``ENTER`` key that in the following steps the hard "
 "disk will be partitioned and formatted. All data will be lost on the disk."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:45
+#: ../../source/howtos/install-from-scratch/firewall.rst:47
 msgid "Bestätigen Sie die Partitionierung und Formatierung der Festplatte."
 msgstr "Confirm the partitioning and formatting of the hard disk."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:47
+#: ../../source/howtos/install-from-scratch/firewall.rst:49
 msgid "Wählen Sie durch Drücken der ``ENTER``-Taste **ext4** als Dateisystem."
 msgstr "Select **ext4** as file system by pressing the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:53
+#: ../../source/howtos/install-from-scratch/firewall.rst:55
 msgid "Wählen Sie **ext4** als Dateisystem"
 msgstr "Select **ext4** as file system."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:55
+#: ../../source/howtos/install-from-scratch/firewall.rst:57
 msgid ""
 "Nach der Installation entfernen Sie die CD und bestätigen Sie den Reboot "
 "durch Drücken der ``ENTER``-Taste."
@@ -104,15 +104,15 @@ msgstr ""
 "After installation, remove the CD and confirm the reboot by pressing the "
 "``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:61
+#: ../../source/howtos/install-from-scratch/firewall.rst:63
 msgid "Entfernen Sie die CD und bestätigen Sie den Reboot."
 msgstr "Remove the CD and confirm the reboot."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:64
+#: ../../source/howtos/install-from-scratch/firewall.rst:66
 msgid "Konfiguration der Firewall"
 msgstr "Configuration of the Firewall"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:66
+#: ../../source/howtos/install-from-scratch/firewall.rst:68
 msgid ""
 "Nach dem Reboot erfolgt die Erstkonfiguration des IPFire. Wählen Sie mit den"
 " ``Pfeil``-Tasten das Tastaturlayout und bestätigen Sie ihre Auswahl durch "
@@ -122,11 +122,11 @@ msgstr ""
 "``Arrow`` keys to select the keyboard layout and confirm your selection by "
 "pressing the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:72
+#: ../../source/howtos/install-from-scratch/firewall.rst:74
 msgid "Wählen Sie das Tastaturlayout."
 msgstr "Select the keyboard layout."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:74
+#: ../../source/howtos/install-from-scratch/firewall.rst:76
 msgid ""
 "Wählen Sie mit den ``Pfeil``-Tasten die Zeitzone aus und bestätigen Sie ihre"
 " Auswahl durch Drücken der ``ENTER``-Taste."
@@ -134,22 +134,22 @@ msgstr ""
 "Use the ``Arrow`` keys to select the time zone and confirm your selection by"
 " pressing the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:80
+#: ../../source/howtos/install-from-scratch/firewall.rst:82
 msgid "Wählen Sie die Zeitzone aus."
 msgstr "Select the time zone."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:82
+#: ../../source/howtos/install-from-scratch/firewall.rst:84
 msgid ""
 "Geben Sie als Hostname **ipfire** ein und bestätigen Sie durch Drücken der "
 "``ENTER``-Taste."
 msgstr ""
 "Enter **ipfire** as host name and confirm by pressing the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:88
+#: ../../source/howtos/install-from-scratch/firewall.rst:90
 msgid "Geben Sie als Hostname **ipfire** ein."
 msgstr "Enter **ipfire** as host name."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:90
+#: ../../source/howtos/install-from-scratch/firewall.rst:92
 msgid ""
 "Geben Sie den Domänennamen ein und bestätigen Sie durch Drücken der "
 "``ENTER``-Taste. Empfehlung: Verwenden Sie `linuxmuster-net.lokal`"
@@ -157,15 +157,15 @@ msgstr ""
 "Enter the domain name and confirm by pressing the ``ENTER`` key. "
 "Recommendation: Use `linuxmuster-net.lokal`"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:93
+#: ../../source/howtos/install-from-scratch/firewall.rst:95
 msgid "Verwenden Sie **nicht** `local` als Teil des Domänennamens."
 msgstr "Do **not** use `local` as part of the domain name!"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:99
+#: ../../source/howtos/install-from-scratch/firewall.rst:101
 msgid "Geben Sie den Domänennamen ein."
 msgstr "Enter the domain name."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:101
+#: ../../source/howtos/install-from-scratch/firewall.rst:103
 msgid ""
 "Geben Sie das Passwort für den Benutzer `root` ein und bestätigen Sie Ihre "
 "Eingabe mit der ``ENTER``-Taste. Mit diesem Benutzer melden Sie sich später "
@@ -175,8 +175,8 @@ msgstr ""
 "``ENTER`` key. With this user you can login later on to the console of the "
 "IPFire."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:104
-#: ../../source/howtos/install-from-scratch/firewall.rst:413
+#: ../../source/howtos/install-from-scratch/firewall.rst:106
+#: ../../source/howtos/install-from-scratch/firewall.rst:415
 msgid ""
 "Sie sehen das Passwort bei der Eingabe nicht, auch nicht in Form der sonst "
 "üblichen Sterne."
@@ -184,11 +184,11 @@ msgstr ""
 "You won't see the password as you enter, not even in the form of the usual "
 "stars."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:111
+#: ../../source/howtos/install-from-scratch/firewall.rst:113
 msgid "Wählen Sie das Passwort für den Benutzer **root**."
 msgstr "Choose the password for the user **root**."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:113
+#: ../../source/howtos/install-from-scratch/firewall.rst:115
 msgid ""
 "Geben Sie das Passwort für den Benutzer `admin` ein und bestätigen Sie Ihre "
 "Eingabe mit der ``ENTER``-Taste. Mit diesem Benutzer melden Sie sich später "
@@ -198,22 +198,22 @@ msgstr ""
 "``ENTER`` key. With this user you can login later to the web interface of "
 "the IPFire."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:119
+#: ../../source/howtos/install-from-scratch/firewall.rst:121
 msgid "Wählen Sie das Passwort für den Benutzer **admin**."
 msgstr "Choose the password for the user **admin**."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:121
+#: ../../source/howtos/install-from-scratch/firewall.rst:123
 msgid ""
 "Wählen Sie den Punkt `Typ der Netzwerkkonfiguration` durch Drücken der "
 "``ENTER``-Taste aus."
 msgstr ""
 "Select the item `Network configuration type` by pressing the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:127
+#: ../../source/howtos/install-from-scratch/firewall.rst:129
 msgid "Wählen Sie den Punkt `Typ der Netzwerkkonfiguration`."
 msgstr "Select the item `Network configuration type`."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:129
+#: ../../source/howtos/install-from-scratch/firewall.rst:131
 msgid ""
 "Wählen Sie den Punkt `GREEN + RED + BLUE` mit den ``Pfeil``-Tasten aus und "
 "bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste."
@@ -221,11 +221,11 @@ msgstr ""
 "Select the item `GREEN + RED  + BLUE` with the ``Arrow`` keys and confirm "
 "your selection with the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:132
+#: ../../source/howtos/install-from-scratch/firewall.rst:134
 msgid "Im `grünen Netz` befinden sich später die Computer der Schule."
 msgstr "The school computers are located in the `green network` later."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:133
+#: ../../source/howtos/install-from-scratch/firewall.rst:135
 msgid ""
 "Über das `rote Netz` wird der IPFire über den Router mit dem Internet "
 "verbunden."
@@ -233,7 +233,7 @@ msgstr ""
 "The IPFire is connected to the internet via the `red network` via the "
 "router."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:134
+#: ../../source/howtos/install-from-scratch/firewall.rst:136
 msgid ""
 "Das `blaue Netz` ist das Gästenetz, in diesem befinden sich später BYOD-"
 "Geräte oder per WLAN verbundene Geräte."
@@ -241,7 +241,7 @@ msgstr ""
 "The `blue network` is the guest network, this will be used for BYOD or wifi "
 "connected devices later."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:137
+#: ../../source/howtos/install-from-scratch/firewall.rst:139
 msgid ""
 "Wählen Sie die Konfiguration auch dann, wenn Sie nicht vorhaben, ein "
 "Gästenetz anzubieten. Die weitere Installation schlägt sonst fehl."
@@ -249,11 +249,11 @@ msgstr ""
 "Select the configuration even if you do not plan to offer a guest network. "
 "Otherwise the additional installation will fail."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:143
+#: ../../source/howtos/install-from-scratch/firewall.rst:145
 msgid "Wählen Sie den Punkt `GREEN + RED + BLUE`."
 msgstr "Select the item `GREEN + RED + BLUE`."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:145
+#: ../../source/howtos/install-from-scratch/firewall.rst:147
 msgid ""
 "Wählen Sie  den Punkt `Netzwerkkartenzuordnungen` mit den mit den "
 "``Pfeil``-Tasten  aus und bestätigen Sie Ihre Auswahl mit der "
@@ -262,11 +262,11 @@ msgstr ""
 "Select the item `Drivers and card assignments` with the ``Arrow`` keys and "
 "confirm your selection with the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:151
+#: ../../source/howtos/install-from-scratch/firewall.rst:153
 msgid "Wählen Sie den Punkt `Netzwerkkartenzuordnungen`."
 msgstr "Select the item `Drivers and card assignments`."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:153
+#: ../../source/howtos/install-from-scratch/firewall.rst:155
 msgid ""
 "Im Folgenden ordnen Sie die einzelnen Netzwerkkarten anhand ihrer MAC-"
 "Adresse die Netze zu."
@@ -274,7 +274,7 @@ msgstr ""
 "Now you assign the individual network cards based on their MAC address to "
 "the networks."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:156
+#: ../../source/howtos/install-from-scratch/firewall.rst:158
 msgid ""
 "Falls Sie nicht wissen, welche MAC-Adressen zu welcher Netzwerkkarten "
 "gehört, können Sie die Netzwerkkartenzuordnung an dieser Stelle beliebig "
@@ -285,7 +285,7 @@ msgstr ""
 "can configure the network card assignment - at this point - arbitrarily and "
 "determine later which network card is connect which network."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:158
+#: ../../source/howtos/install-from-scratch/firewall.rst:160
 msgid ""
 "Wählen Sie den Punkt `GREEN` mit den mit den ``Pfeil``-Tasten  aus und "
 "bestätigen Sie ihre Auswahl mit der ``ENTER``-Taste."
@@ -293,12 +293,12 @@ msgstr ""
 "Select the item `GREEN` with the ``Arrow`` keys and confirm your selection "
 "with the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:164
-#: ../../source/howtos/install-from-scratch/firewall.rst:228
+#: ../../source/howtos/install-from-scratch/firewall.rst:166
+#: ../../source/howtos/install-from-scratch/firewall.rst:230
 msgid "Wählen Sie den Punkt `GREEN`."
 msgstr "Select the item `GREEN`."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:166
+#: ../../source/howtos/install-from-scratch/firewall.rst:168
 msgid ""
 "Wählen Sie die Netzwerkkarte für das grüne Netzwerk mit den ``Pfeil``-Tasten"
 "  aus und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste."
@@ -306,12 +306,12 @@ msgstr ""
 "Select the network card for the green network with the ``Arrow`` keys and "
 "confirm your selection with the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:172
+#: ../../source/howtos/install-from-scratch/firewall.rst:174
 msgid "Wählen Sie die Netzwerkkarte für das grüne Netzwerk."
 msgstr "Select the network card for the green network."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:174
-#: ../../source/howtos/install-from-scratch/firewall.rst:268
+#: ../../source/howtos/install-from-scratch/firewall.rst:176
+#: ../../source/howtos/install-from-scratch/firewall.rst:270
 msgid ""
 "Wählen Sie den Punkt `RED` mit den mit den ``Pfeil``-Tasten  aus und "
 "bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste."
@@ -319,12 +319,12 @@ msgstr ""
 "Select the item `RED` with the ``Arrow`` keys and confirm your selection "
 "with the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:180
-#: ../../source/howtos/install-from-scratch/firewall.rst:274
+#: ../../source/howtos/install-from-scratch/firewall.rst:182
+#: ../../source/howtos/install-from-scratch/firewall.rst:276
 msgid "Wählen Sie den Punkt `RED`."
 msgstr "Select the item `RED`."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:182
+#: ../../source/howtos/install-from-scratch/firewall.rst:184
 msgid ""
 "Wählen Sie die Netzwerkkarte für das rote Netzwerk mit den ``Pfeil``-Tasten"
 "  aus und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste."
@@ -332,11 +332,11 @@ msgstr ""
 "Select the network card for the red network with the ``Arrow`` keys and "
 "confirm your selection with the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:188
+#: ../../source/howtos/install-from-scratch/firewall.rst:190
 msgid "Wählen Sie die Netzwerkkarte für das rote Netzwerk."
 msgstr "Select the network card for the red network."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:190
+#: ../../source/howtos/install-from-scratch/firewall.rst:192
 msgid ""
 "Wählen Sie den Punkt `BLUE` mit den mit den ``Pfeil``-Tasten  aus und "
 "bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste."
@@ -344,12 +344,12 @@ msgstr ""
 "Select the item `BLUE` with the ``Arrow`` keys and confirm your selection "
 "with the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:196
-#: ../../source/howtos/install-from-scratch/firewall.rst:255
+#: ../../source/howtos/install-from-scratch/firewall.rst:198
+#: ../../source/howtos/install-from-scratch/firewall.rst:257
 msgid "Wählen Sie den Punkt `BLUE`."
 msgstr "Select the item `BLUE`."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:198
+#: ../../source/howtos/install-from-scratch/firewall.rst:200
 msgid ""
 "Wählen Sie die Netzwerkkarte für das blaue Netzwerk mit den ``Pfeil``-Tasten"
 "  aus und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste."
@@ -357,11 +357,11 @@ msgstr ""
 "Select the network card for the blue network with the ``Arrow`` keys and "
 "confirm your selection with the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:204
+#: ../../source/howtos/install-from-scratch/firewall.rst:206
 msgid "Wählen Sie die Netzwerkkarte für das blaue Netzwerk."
 msgstr "Select the network card for the blue network."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:206
+#: ../../source/howtos/install-from-scratch/firewall.rst:208
 msgid ""
 "Bestätigen Sie das Ende der Netzwerkkartenzuordnungen. Wählen mit mit den "
 "``Pfeil``-Tasten den Punkt `FERTIG` aus und bestätigen Sie Ihre Auswahl mit "
@@ -370,11 +370,11 @@ msgstr ""
 "Confirm the end of the NICs assignments. Select with the ``Arrow`` keys the "
 "item `DONE` and confirm your selection with the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:212
+#: ../../source/howtos/install-from-scratch/firewall.rst:214
 msgid "Bestätigen Sie das Ende der Netzwerkkartenzuordnungen."
 msgstr "Confirm the end of the NICs assignments."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:214
+#: ../../source/howtos/install-from-scratch/firewall.rst:216
 msgid ""
 "Wählen Sie  den Punkt `Adresseinstellungen` mit den mit den ``Pfeil``-Tasten"
 "  aus und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste."
@@ -382,11 +382,11 @@ msgstr ""
 "Select the item `Address Settings` with the ``Arrow`` keys and confirm your "
 "selection with the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:220
+#: ../../source/howtos/install-from-scratch/firewall.rst:222
 msgid "Wählen Sie den Punkt `Adresseinstellungen`."
 msgstr "Select the item `Address Settings`."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:222
+#: ../../source/howtos/install-from-scratch/firewall.rst:224
 msgid ""
 "Wählen Sie  den Punkt `GREEN` mit den mit den ``Pfeil``-Tasten  aus und "
 "bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste."
@@ -394,16 +394,16 @@ msgstr ""
 "Select the item `GREEN` with the ``Arrow`` keys and confirm your selection "
 "with the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:230
+#: ../../source/howtos/install-from-scratch/firewall.rst:232
 msgid ""
 "Bestätigen Sie den Sicherheitshinweis durch Drücken der ``ENTER``-Taste."
 msgstr "Confirm the security note by pressing the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:236
+#: ../../source/howtos/install-from-scratch/firewall.rst:238
 msgid "Bestätigen Sie den Sicherheitshinweis."
 msgstr "Confirm the security note."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:238
+#: ../../source/howtos/install-from-scratch/firewall.rst:240
 msgid ""
 "Geben Sie als IP-Adresse `10.16.1.254` und als Netzmaske `255.240.0.0` ein "
 "und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste."
@@ -411,21 +411,21 @@ msgstr ""
 "Enter the IP address `10.16.1.254` and the netmask `255.240.0.0` and confirm"
 " your selection with the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:241
-#: ../../source/howtos/install-from-scratch/firewall.rst:260
-#: ../../source/howtos/install-from-scratch/firewall.rst:360
+#: ../../source/howtos/install-from-scratch/firewall.rst:243
+#: ../../source/howtos/install-from-scratch/firewall.rst:262
+#: ../../source/howtos/install-from-scratch/firewall.rst:362
 msgid ""
 "Wenn Sie einen anderen Adressbereich gewählt haben, müssen Sie diese Eingabe"
 " anpassen."
 msgstr ""
 "If you have chosen a different IP address range, you must adjust this input."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:247
+#: ../../source/howtos/install-from-scratch/firewall.rst:249
 msgid ""
 "Geben Sie als IP-Adresse `10.16.1.254` und als Netzmaske `255.240.0.0` ein."
 msgstr "Enter the IP address `10.16.1.254` and the netmask `255.240.0.0`."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:249
+#: ../../source/howtos/install-from-scratch/firewall.rst:251
 msgid ""
 "Wählen Sie  den Punkt `BLUE` mit den mit den ``Pfeil``-Tasten  aus und "
 "bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste."
@@ -433,7 +433,7 @@ msgstr ""
 "Select the item `BLUE` with the ``Arrow`` keys and confirm your selection "
 "with the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:257
+#: ../../source/howtos/install-from-scratch/firewall.rst:259
 msgid ""
 "Geben Sie als IP-Adresse `172.16.16.254` und als Netzmaske `255.255.255.0` "
 "ein und bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste."
@@ -441,13 +441,13 @@ msgstr ""
 "Enter the IP address `172.16.16.254` and the netmask `255.255.255.0` and "
 "confirm your selection with the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:266
+#: ../../source/howtos/install-from-scratch/firewall.rst:268
 msgid ""
 "Geben Sie als IP-Adresse `172.16.16.254` und als Netzmaske `255.255.255.0` "
 "ein."
 msgstr "Enter the IP address `172.16.16.254` and the netmask `255.255.255.0`."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:276
+#: ../../source/howtos/install-from-scratch/firewall.rst:278
 msgid ""
 "Wählen Sie entsprechend Ihrer Internetverbindung die passende Option mit den"
 " ``Pfeil``-Tasten  aus und bestätigen Sie Ihre Auswahl mit der "
@@ -456,7 +456,7 @@ msgstr ""
 "Choose according to your internet connection the appropriate option with the"
 " ``Arrow`` keys and confirm your selection with the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:279
+#: ../../source/howtos/install-from-scratch/firewall.rst:281
 msgid ""
 "Schulen in Baden-Württemberg sind oft mit einem Router von BelWü "
 "ausgestattet und besitzen damit eine statische IP. In diesem Fall wählen Sie"
@@ -465,11 +465,11 @@ msgstr ""
 "Schools in Baden-Württemberg are often equipped with a router of BelWü and "
 "thus have a static IP. In this case, select `Static`."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:284
+#: ../../source/howtos/install-from-scratch/firewall.rst:286
 msgid "Statisch"
 msgstr "Static"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:286
+#: ../../source/howtos/install-from-scratch/firewall.rst:288
 msgid ""
 "Falls Sie `Statisch` gewählt haben, geben Sie die Daten, die Sie von Ihrem "
 "Provider (z.B. Belwü) erhalten haben, ein und bestätigen Sie mit der "
@@ -478,7 +478,7 @@ msgstr ""
 "If you have selected `Static`, enter the data from your provider (for "
 "example BelWü) , and confirm with the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:292
+#: ../../source/howtos/install-from-scratch/firewall.rst:294
 msgid ""
 "Falls Sie im letzten Schritt `Statisch` gewählt haben, navigieren Sie mit "
 "``Pfeil``-Tasten auf `DNS- und Gatewayeinstellungen` und bestätigen Sie mit "
@@ -487,7 +487,7 @@ msgstr ""
 "If you selected `Static` the last step, go to `DNS and Gateway settings` "
 "with the ``arrow`` keys and confirm with the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:298
+#: ../../source/howtos/install-from-scratch/firewall.rst:300
 msgid ""
 "Geben Sie nun Ihren `primären` und `sekundären` DNS sowie das Standard-"
 "Gateway ein und bestätigen Sie Ihre Eingabe mit der ``ENTER``-Taste."
@@ -495,7 +495,7 @@ msgstr ""
 "Now enter your `primary` and `secondary` DNS and the default gateway and "
 "confirm your entry with the ``ENTER``-key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:304
+#: ../../source/howtos/install-from-scratch/firewall.rst:306
 msgid ""
 "Navigieren Sie mit ``Pfeil``-Tasten auf `Fertig` und bestätigen Sie Ihre "
 "Auswahl mit der ``ENTER``-Taste."
@@ -503,15 +503,15 @@ msgstr ""
 "Navigate with ``Arrow`` keys on `Done` and confirm your selection with the "
 "``ENTER``-key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:311
+#: ../../source/howtos/install-from-scratch/firewall.rst:313
 msgid "DHCP"
 msgstr "DHCP"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:313
+#: ../../source/howtos/install-from-scratch/firewall.rst:315
 msgid "Falls Sie `DHCP` gewählt bestätigen Sie mit der ``ENTER``-Taste."
 msgstr "If you have selected `DHCP` press the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:319
+#: ../../source/howtos/install-from-scratch/firewall.rst:321
 msgid ""
 "Falls Sie im letzten Schritt `DHCP` gewählt haben, navigieren Sie mit "
 "``Pfeil``-Tasten auf `Fertig` und bestätigen Sie Ihre Auswahl mit der "
@@ -520,11 +520,11 @@ msgstr ""
 "If you have selected `DHCP` in the last step, navigate using the ``arrow`` "
 "buttons to `Done` and confirm your selection with ``ENTER``."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:326
+#: ../../source/howtos/install-from-scratch/firewall.rst:328
 msgid "Abschluss der Konfiguration"
 msgstr "Completion of configuration"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:328
+#: ../../source/howtos/install-from-scratch/firewall.rst:330
 msgid ""
 "Aktivieren Sie **nicht** den DHCP-Dienst für das grüne Netzwerk, diese "
 "Funktionalität übernimmt der der linuxmuster.net-Server selbst. Navigieren "
@@ -535,23 +535,23 @@ msgstr ""
 " does the linuxmuster.net server itself. Navigate with the ``Arrow`` keys on"
 " the button `OK` and confirm your choice with the ``ENTER`` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:334
+#: ../../source/howtos/install-from-scratch/firewall.rst:336
 msgid "Aktivieren Sie **nicht** den DHCP-Dienst."
 msgstr "Do **not** activate the DHCP service."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:336
+#: ../../source/howtos/install-from-scratch/firewall.rst:338
 msgid "Bestätigen Sie das Ende des Setups mit der `ENTER`-Taste."
 msgstr "Confirm the end of the setup with the `ENTER` key."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:342
+#: ../../source/howtos/install-from-scratch/firewall.rst:344
 msgid "Bestätigen Sie das Ende des Setups."
 msgstr "Confirm the end of the setup."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:345
+#: ../../source/howtos/install-from-scratch/firewall.rst:347
 msgid "Installation eines Admin-PCs"
 msgstr "Install an admin-PC"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:347
+#: ../../source/howtos/install-from-scratch/firewall.rst:349
 msgid ""
 "Richten Sie einen PC ein, der über einen Switch mit dem grünen "
 "Netzwerkinterface des IPFire verbunden wird.  Mit diesem PC können Sie im "
@@ -562,28 +562,28 @@ msgstr ""
 "switch. With this PC you can assign the network cards in the next section "
 "and later use the web interface of the IPFire."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:352
+#: ../../source/howtos/install-from-scratch/firewall.rst:354
 msgid ""
 "Geben Sie dem Admin-PC eine feste IP. Sie benötigen dazu folgende Daten:"
 msgstr "Give the Admin PC a fixed IP. You need the following data:"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:355
+#: ../../source/howtos/install-from-scratch/firewall.rst:357
 msgid "IP: `10.16.1.2`"
 msgstr "IP: `10.16.1.2`"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:356
+#: ../../source/howtos/install-from-scratch/firewall.rst:358
 msgid "Netzmaske: `255.240.0.0`"
 msgstr "Netzmask: `255.240.0.0`"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:357
+#: ../../source/howtos/install-from-scratch/firewall.rst:359
 msgid "Gateway: `10.16.1.254`"
 msgstr "Gateway: `10.16.1.254`"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:364
+#: ../../source/howtos/install-from-scratch/firewall.rst:366
 msgid "Zuordnen der Netze zu den Netzwerkkarten"
 msgstr "Assigning networks to network cards"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:365
+#: ../../source/howtos/install-from-scratch/firewall.rst:367
 msgid ""
 "Falls Sie während des Setup nicht sicher waren, welche Netzwerkkarte sich in"
 " welchem Netz befindet erfolgt nun die Zuordnung. Anderenfalls fahren Sie "
@@ -593,24 +593,26 @@ msgstr ""
 "network you will now finish the assignment. Otherwise, please continue with "
 ":ref:`ssh-config-label`."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:368
+#: ../../source/howtos/install-from-scratch/firewall.rst:370
 msgid "Zuordnen der Netzwerkkarte zum grünen Netz"
 msgstr "Assignment of the NIC to the green network"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:370
+#: ../../source/howtos/install-from-scratch/firewall.rst:372
 msgid ""
 "Verbinden Sie eine der drei Netzwerkkarten mit einem Switch. Im Folgenden "
 "wird geprüft, ob diese Netzwetzwerkkarte dem grünen Netz zugeordnet ist."
 msgstr ""
+"Connect one of the three network cards to the switch. In the following, it "
+"is checked whether this network device is in the green network."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:375
+#: ../../source/howtos/install-from-scratch/firewall.rst:377
 msgid ""
 "An diesen Switch dürfen während des Testens keine weiteren Geräte "
 "angeschlossen sein."
 msgstr ""
 "During testing no other devices are aloowed to be connected to the switch."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:377
+#: ../../source/howtos/install-from-scratch/firewall.rst:379
 msgid ""
 "Vom Admin-PC aus pingen Sie nun auf die IP `10.16.1.254`. Unter Linux sieht "
 "der Befehl und eine Antwort so aus:"
@@ -618,23 +620,23 @@ msgstr ""
 "From the Admin PC, ping to the IP `10.16.1.254`. On Linux, the command and "
 "its answer looks as follows:"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:390
+#: ../../source/howtos/install-from-scratch/firewall.rst:392
 msgid ""
 "Bei keiner Antwort lautet die Rückmeldung ``Destination Host Unreachable`` "
 "und liefert ``100% packet loss``."
 msgstr ""
-"If there is answer, the program says `` Destination Host Unreachable`` and "
-"returns `` 100% packet loss``."
+"If there is no answer, the program says ``Destination Host Unreachable`` and"
+" returns ``100% packet loss``."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:392
+#: ../../source/howtos/install-from-scratch/firewall.rst:394
 msgid ""
 "Erhalten Sie eine Antwort befindet sich diese Netzwerkkarte im grünen Netz. "
 "Fahren Sie in diesem Fall mit der :ref:`red-network` fort."
 msgstr ""
 "If you do get a response this network device is located in the green "
-"network. In this case, continue with: ref:`red-network`."
+"network. In this case, continue with  :ref:`red-network`."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:395
+#: ../../source/howtos/install-from-scratch/firewall.rst:397
 msgid ""
 "Erhalten Sie keine Antwort, ziehen Sie das Kabel aus der 1. Netzwerkkarte "
 "des IPFires ab und stecken Sie es in die zweite. Pingen Sie erneut auf die "
@@ -647,7 +649,7 @@ msgstr ""
 "you now get an answer then this network card is in the green network. "
 "Continue in this case with the :ref:`red-network`."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:398
+#: ../../source/howtos/install-from-scratch/firewall.rst:400
 msgid ""
 "Erhalten Sie keine Antwort, ziehen Sie das Kabel aus der 2. Netzwerkkarte ab"
 " und stecken Sie es in die dritte. Testen Sie dies sicherheitshalber, indem "
@@ -656,11 +658,11 @@ msgstr ""
 "If you don't get an answer unplug the cable, insert it again in the third "
 "NIC and ping again the IP `10.16.1.254`. You should get an answer."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:404
+#: ../../source/howtos/install-from-scratch/firewall.rst:406
 msgid "Zuordnen der Netzwerkkarte zum roten Netz"
 msgstr "Assignment of the NIC to the red network"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:405
+#: ../../source/howtos/install-from-scratch/firewall.rst:407
 msgid ""
 "Melden Sie sich mit dem Benutzer `root` und dem von Ihnen gewählten Passwort"
 " an der Konsole des IPFire an."
@@ -668,7 +670,7 @@ msgstr ""
 "Login in as user `root` at the console of the IPFire with your chosen "
 "password."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:415
+#: ../../source/howtos/install-from-scratch/firewall.rst:417
 msgid ""
 "Verbinden Sie nun eine der beiden noch nicht angeschlossenen Netzwerkkarten "
 "mit Ihrem Router. Starten Sie danach das Netzwerk neu."
@@ -676,7 +678,7 @@ msgstr ""
 "Now connect one of the two network cards that is not connected yet to your "
 "router. Then start the network again."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:421
+#: ../../source/howtos/install-from-scratch/firewall.rst:423
 msgid ""
 "Bringen Sie danach die Paketlisten auf den neuesten Stand, um die Verbindung"
 " zum Internet zur Prüfen."
@@ -684,7 +686,7 @@ msgstr ""
 "Then update the package lists in order to check your connection to the "
 "Internet."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:427
+#: ../../source/howtos/install-from-scratch/firewall.rst:429
 msgid ""
 "Wird der Befehl mit einem Herunterladen neuer Listen oder ohne Rückmeldung "
 "ausgeführt, befindet sich die Netzwerkkarte im roten Netz (und somit die "
@@ -696,7 +698,7 @@ msgstr ""
 "third network is not yet wired in the blue network, which we leave like "
 "that). Continue with :ref:`ssh-config-label`. If the command returns"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:435
+#: ../../source/howtos/install-from-scratch/firewall.rst:437
 msgid ""
 "zurück befindet sich die Netzwerkkarte im blauen Netz. Verbinden Sie in "
 "diesem Fall die verbleibende dritte Netzwerkkarte mit Ihrem Router und "
@@ -705,15 +707,15 @@ msgstr ""
 "the network card is in the blue network. Connect in this case, the remaining"
 " third network card to your router and run the command again."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:442
+#: ../../source/howtos/install-from-scratch/firewall.rst:444
 msgid "erneut aus. Die „blaue Netzwerkkarte“ bleibt vorerst unverkabelt."
 msgstr "The \"blue network card\" initially remains unwired."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:447
+#: ../../source/howtos/install-from-scratch/firewall.rst:449
 msgid "Anpassen der SSH-Konfiguration"
 msgstr "Customizing the SSH configuration"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:448
+#: ../../source/howtos/install-from-scratch/firewall.rst:450
 msgid ""
 "Damit der linuxmuster.net-Server bei der Installation auf den IPFire "
 "zugreifen kann, muss der SSH-Server aktiviert werden. Die ist auf zwei "
@@ -726,11 +728,11 @@ msgstr ""
 ":ref:`Console <ssh-config-console-label>` or with the :ref:`Webinterface "
 "<ssh-config-webinterface-label>` of the IPFire.  Both ways are equivalent."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:453
+#: ../../source/howtos/install-from-scratch/firewall.rst:455
 msgid "SSH-Konfiguration über das Webinterface"
 msgstr "SSH configuration via the web interface"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:454
+#: ../../source/howtos/install-from-scratch/firewall.rst:456
 msgid ""
 "Öffnen Sie in dem an den Switch angeschlossenen Admin-PC einen Browser und "
 "rufen die Adresse `https://10.16.1.254:444`_ auf. Akzeptieren Sie den "
@@ -741,7 +743,7 @@ msgstr ""
 "`https://10.16.1.254:444`_ . Accept the security notice by clicking on ``I "
 "know the risk``."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:457
+#: ../../source/howtos/install-from-scratch/firewall.rst:459
 msgid ""
 "Je nach Browser könne die folgenden Bilder variieren. Hier wurde der Firefox"
 " verwendet."
@@ -749,7 +751,7 @@ msgstr ""
 "Depending on the browser the following images can vary. Here Firefox was "
 "used."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:463
+#: ../../source/howtos/install-from-scratch/firewall.rst:465
 msgid ""
 "Rufen Sie die Adresse `https://10.16.1.254:444 <https://10.16.1.254:444>`_ "
 "auf und akzeptieren Sie den Sicherheitshinweis."
@@ -757,59 +759,59 @@ msgstr ""
 "Open the address `https://10.16.1.254:444 <https://10.16.1.254:444>`_ and "
 "accept the security note."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:465
-#: ../../source/howtos/install-from-scratch/firewall.rst:471
+#: ../../source/howtos/install-from-scratch/firewall.rst:467
+#: ../../source/howtos/install-from-scratch/firewall.rst:473
 msgid "Klicken Sie auf ``Ausnahme hinzufügen``."
 msgstr "Click on ``Add exception``."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:473
+#: ../../source/howtos/install-from-scratch/firewall.rst:475
 msgid "Klicken Sie auf ``Sicherheits-Ausnahme bestätigen``."
 msgstr "Click on ``Confirm security exception``."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:479
+#: ../../source/howtos/install-from-scratch/firewall.rst:481
 msgid "Klicken Sie auf ``Sicherheits-Ausnahme bestätigen``"
 msgstr "Click on ``Confirm Security Exception``."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:481
+#: ../../source/howtos/install-from-scratch/firewall.rst:483
 msgid ""
 "Melden Sie sich mit dem Benutzer `admin` und dem von Ihnen gewählten "
 "Passwort an."
-msgstr "Login in as user `admin` with your choosen password."
+msgstr "Login in as user `admin` with your chosen password."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:487
+#: ../../source/howtos/install-from-scratch/firewall.rst:489
 msgid "Geben Sie Ihre Anmeldedaten ein."
 msgstr "Enter your credentials."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:489
-#: ../../source/howtos/install-from-scratch/firewall.rst:495
-msgid "Klicken Sie unter ``System`` auf ``SSH-Zugriff``."
-msgstr "Goto ``System`` and then ``SHH Access``."
-
+#: ../../source/howtos/install-from-scratch/firewall.rst:491
 #: ../../source/howtos/install-from-scratch/firewall.rst:497
+msgid "Klicken Sie unter ``System`` auf ``SSH-Zugriff``."
+msgstr "Goto ``System`` and then ``SSH Access``."
+
+#: ../../source/howtos/install-from-scratch/firewall.rst:499
 msgid "Setzen Sie zusätzlich Haken bei"
 msgstr "You should additionally put hooks in"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:499
+#: ../../source/howtos/install-from-scratch/firewall.rst:501
 msgid "SSH-Zugriff"
 msgstr "SSH access"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:500
+#: ../../source/howtos/install-from-scratch/firewall.rst:502
 msgid "Authentifizierung auf Basis öffentlicher Schlüssel zulassen"
 msgstr "Allow public key based authentication"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:502
+#: ../../source/howtos/install-from-scratch/firewall.rst:504
 msgid ""
 "und bestätigen Sie Ihre Auswahl durch Klicken auf die Schaltfläche "
 "``Speichern``."
 msgstr "and confirm your choice by clicking on the ``Save``."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:508
+#: ../../source/howtos/install-from-scratch/firewall.rst:510
 msgid ""
 "Erlauben sie den SSH-Zugriff sowie die Authentifizierung auf Basis "
 "öffentlicher Schlüssel"
 msgstr "Allow SSH access and authentication based on public key"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:511
+#: ../../source/howtos/install-from-scratch/firewall.rst:513
 msgid ""
 "Werden in der Weboberfläche des IPFire Aktualisierungen gemeldet, spielen "
 "Sie diese bitte **nicht** ein. Nutzen Sie stattdessen nach der Installation "
@@ -826,8 +828,8 @@ msgstr ""
 "also :doc:`Update the IPFire Firewall <../../howtos/keep-lmn-uptodate/2"
 "-update-ipfire/>`."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:513
-#: ../../source/howtos/install-from-scratch/firewall.rst:553
+#: ../../source/howtos/install-from-scratch/firewall.rst:515
+#: ../../source/howtos/install-from-scratch/firewall.rst:555
 msgid ""
 "Fahren Sie nun mit der :ref:`Konfiguration des Proxys <proxy-config-label>` "
 "fort."
@@ -835,11 +837,11 @@ msgstr ""
 "Now continue with the :ref:`Configuration of the proxy <proxy-config-"
 "label>`."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:518
+#: ../../source/howtos/install-from-scratch/firewall.rst:520
 msgid "SSH-Konfiguration über die Konsole"
 msgstr "SSH configuration from the console"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:519
+#: ../../source/howtos/install-from-scratch/firewall.rst:521
 msgid ""
 "Melden Sie sich an der Konsole mit dem Benutzer ``root`` und dem von Ihnen "
 "vergebenen Passwort an. Bearbeiten Sie die Datei "
@@ -850,11 +852,11 @@ msgstr ""
 "``/var/ipfire/remote/settings`` with the editor ``vi``, so it has the "
 "following content. The last line does not need to be adjusted."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:532
+#: ../../source/howtos/install-from-scratch/firewall.rst:534
 msgid "Außerdem legt man mit den Befehlen"
 msgstr "In addition, with the following command"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:539
+#: ../../source/howtos/install-from-scratch/firewall.rst:541
 msgid ""
 "die Datei ``enablessh`` an, damit der SSH-Dienst gestartet werden kann. Der "
 "Befehl"
@@ -862,22 +864,22 @@ msgstr ""
 "create the file ``enablessh`` so that you can start the SSH service. The "
 "command"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:545
+#: ../../source/howtos/install-from-scratch/firewall.rst:547
 msgid ""
 "startet den Dienst schließlich, was auf der Konsole mit einem [OK] quittiert"
 " wird."
 msgstr ""
 "starts the service after all, what is acknowledged on the console with [OK]."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:551
+#: ../../source/howtos/install-from-scratch/firewall.rst:553
 msgid "Starten Sie den SSH-Dienst neu."
 msgstr "Restart the SSH service."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:558
+#: ../../source/howtos/install-from-scratch/firewall.rst:560
 msgid "Proxy-Zugriff für den Server aktivieren"
 msgstr "Enable proxy access for the server"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:559
+#: ../../source/howtos/install-from-scratch/firewall.rst:561
 msgid ""
 "Der linuxmuster.net-Server darf uneingeschränkt auf das Internet zugreifen. "
 "Hierzu muss der Webproxy konfiguriert werden, es gibt wieder zwei "
@@ -889,11 +891,11 @@ msgstr ""
 ":ref:`webinterface <proxy-config-webinterface-label>` or :ref:`console "
 "<proxy-config-console-label>`."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:564
+#: ../../source/howtos/install-from-scratch/firewall.rst:566
 msgid "Proxy-Konfiguration über das Webinterface"
 msgstr "Proxy configuration via the web interface"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:566
+#: ../../source/howtos/install-from-scratch/firewall.rst:568
 msgid ""
 "Öffnen Sie in dem an den Switch angeschlossenen Computer einen Browser und "
 "rufen die Adresse `https://10.16.1.254:444`_ auf."
@@ -901,7 +903,7 @@ msgstr ""
 "In the computer connected to the switch, open a browser and invoke the "
 "address `https://10.16.1.254:444`_."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:569
+#: ../../source/howtos/install-from-scratch/firewall.rst:571
 msgid ""
 "Falls noch nicht geschehen, akzeptieren Sie den Sicherheitshinweis und fügen"
 " eine Ausnahme hinzu wie in Abschnitt :ref:`SSH-Konfiguration über das "
@@ -910,15 +912,15 @@ msgid ""
 msgstr ""
 "If you have not already done so, accept the security note and add an "
 "exception as described in section :ref:`SSH configuration via the web "
-"interface <<ssh-config-webinterface-label>` and log in with ``admin`` and "
+"interface <ssh-config-webinterface-label>` and log in with ``admin`` and "
 "your chosen password."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:574
-#: ../../source/howtos/install-from-scratch/firewall.rst:580
+#: ../../source/howtos/install-from-scratch/firewall.rst:576
+#: ../../source/howtos/install-from-scratch/firewall.rst:582
 msgid "Klicken Sie unter ``Netzwerk`` auf ``Web-Proxy``."
 msgstr "Click on ``Web Proxy`` in the ``Network``-Menu."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:582
+#: ../../source/howtos/install-from-scratch/firewall.rst:584
 msgid ""
 "Tragen Sie im Abschnitt Netzwerkbasierte Zugriffskontrolle im Eingabefeld "
 "unterhalb von ``Uneingeschränkte IP-Adressen (eine pro Zeile)``: die IP-"
@@ -928,22 +930,22 @@ msgstr ""
 "server, ``10.16.1.1``, in the input field below ``Unrestricted IP addresses "
 "(one per line)``."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:588
+#: ../../source/howtos/install-from-scratch/firewall.rst:590
 msgid "Gestatten Sie dem Server uneingeschränkten Zugriff auf das Internet."
 msgstr "Allow the server unrestricted access to the Internet."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:590
+#: ../../source/howtos/install-from-scratch/firewall.rst:592
 msgid ""
 "Betätigen Sie danach die Schaltfläche \"Speichern und Neustart\" auf der "
 "Seite unten."
 msgstr "Then press the \"Save and Restart\" button on the bottom of the page."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:596
+#: ../../source/howtos/install-from-scratch/firewall.rst:598
 msgid "Bestätigen Sie die Änderungen durch \"Speichern und Neustart\""
 msgstr "Confirm the changes by \"Save and Restart\""
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:600
-#: ../../source/howtos/install-from-scratch/firewall.rst:643
+#: ../../source/howtos/install-from-scratch/firewall.rst:602
+#: ../../source/howtos/install-from-scratch/firewall.rst:645
 msgid ""
 "Werden in der Weboberfläche des IPFire Aktualisierungen gemeldet, spielen "
 "Sie diese bitte **nicht** ein. Nutzen Sie stattdessen nach der Installation "
@@ -959,8 +961,8 @@ msgstr ""
 "also :doc:`Update the IPFire Firewall <../../howtos/keep-lmn-uptodate/2"
 "-update-ipfire/>`."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:608
-#: ../../source/howtos/install-from-scratch/firewall.rst:645
+#: ../../source/howtos/install-from-scratch/firewall.rst:610
+#: ../../source/howtos/install-from-scratch/firewall.rst:647
 msgid ""
 "Fahren Sie nun mit der :ref:`Installation des Servers <server-install-"
 "label>` fort."
@@ -968,17 +970,17 @@ msgstr ""
 "Now continue with the :ref:`Installation of the server <server-install-"
 "label>`."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:613
+#: ../../source/howtos/install-from-scratch/firewall.rst:615
 msgid "Proxy-Konfiguration über die Konsole"
 msgstr "Proxy configuration from the console"
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:614
+#: ../../source/howtos/install-from-scratch/firewall.rst:616
 msgid ""
 "Zunächst wird ein neuer Ordner ``acls`` angelegt und dessen Rechte "
 "angepasst."
 msgstr "First, a new folder ``acls`` is created and its rights are adapted."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:621
+#: ../../source/howtos/install-from-scratch/firewall.rst:623
 msgid ""
 "In diesem Ordner wird die Datei ``src_unrestricted_ip.acl`` erzeugt und "
 "deren Rechte angepasst."
@@ -986,15 +988,15 @@ msgstr ""
 "The file ``src_unrestricted_ip.acl`` is created in this folder and its "
 "rights are adapted."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:628
+#: ../../source/howtos/install-from-scratch/firewall.rst:630
 msgid ""
 "In die erstellte Datei mit dem Editor ``vi`` die IP des Servers eingetragen."
 msgstr "In the created file you enter the server's IP with the editor ``vi``."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:634
+#: ../../source/howtos/install-from-scratch/firewall.rst:636
 msgid "Abschließend wird Webproxy-Dienst neu gestartet."
 msgstr "Finally, Web Proxy Service is restarted."
 
-#: ../../source/howtos/install-from-scratch/firewall.rst:640
+#: ../../source/howtos/install-from-scratch/firewall.rst:642
 msgid "Bei Erfolg wieder keinerlei Ausgabe erzeugt."
 msgstr "If this is successful you will see no output on the commandline."

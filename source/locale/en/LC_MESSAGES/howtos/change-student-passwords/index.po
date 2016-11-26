@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-19 18:16+0700\n"
+"POT-Creation-Date: 2016-11-26 10:54+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -17,49 +17,122 @@ msgstr ""
 "Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/howtos/change-student-passwords/index.rst:2
-msgid "Zurücksetzen eines Schülerpasswortes"
+#: ../../source/howtos/change-student-passwords/index.rst:5
+msgid "Schüler-Passwörter zurücksetzen und ausdrucken"
 msgstr ""
 
-#: ../../source/howtos/change-student-passwords/index.rst:4
+#: ../../source/howtos/change-student-passwords/index.rst:7
 msgid ""
 "Vergisst ein Schüler sein Passwort, kann jede Lehrkraft das Passwort des "
-"Schülers über die Schulkonsole auf das Erstpasswort zurücksetzen. Dieses "
-"teilen Sie dem Schüler mit."
-msgstr ""
-
-#: ../../source/howtos/change-student-passwords/index.rst:6
-msgid ""
-"Dazu melden Sie sich an der Schulkonsole an und wählen unter „Klassen” den "
-"Menüpunkt „Passwörter“."
+"Schülers über die Schulkonsole auf das Erstpasswort [#f1]_ zurücksetzen. "
+"Dieses teilen Sie dem Schüler mit."
 msgstr ""
 
 #: ../../source/howtos/change-student-passwords/index.rst:10
 msgid ""
+"Die Bezeichnung **Erstpasswort** bezieht sich dabei immer auf das zeitlich "
+"neueste über die Schulkonsole vergebene Passwort, also entweder das "
+"vergebene Passwort beim Anlegen des Schülers durch den Administrator oder "
+"das aktuellste Passwort, das eine Lehrperson über die Schulkonsole vergeben "
+"hat."
+msgstr ""
+
+#: ../../source/howtos/change-student-passwords/index.rst:19
+msgid ""
+"Dazu melden Sie sich an der Schulkonsole wie im Handbuch :ref"
+":`schulekonsole-admin-label` beschrieben an. Wählen Sie unter „Klassen” den "
+"Menüpunkt „Passwörter“."
+msgstr ""
+
+#: ../../source/howtos/change-student-passwords/index.rst:24
+msgid ""
 "Wählen Sie nun Ihre Klasse aus indem Sie auf die Klassenbezeichnung klicken."
 msgstr ""
 
-#: ../../source/howtos/change-student-passwords/index.rst:12
+#: ../../source/howtos/change-student-passwords/index.rst:28
 msgid ""
-"Falls Ihre Klasse nicht in der oberen Liste auftaucht, müssen Sie sich "
-"zunäst in die Klasse eintragen. Wählen Sie dazu im Dropdown-Menü die Klasse "
-"aus und klicken anschließend auf eintragen."
+"Falls Ihre Klasse nicht in der oberen Liste (im Beispiel: 10b) auftaucht, "
+"müssen Sie sich zunächst in die Klasse eintragen. Wählen Sie dazu im "
+"Dropdown-Menü die Klasse aus und klicken anschließend auf \"Eintragen\"."
 msgstr ""
 
-#: ../../source/howtos/change-student-passwords/index.rst:16
+#: ../../source/howtos/change-student-passwords/index.rst:35
 msgid ""
 "Setzen Sie hinter dem vergesslichen Schüler den Haken und scrollen Sie auf "
-"das Ende der Seite. Klicken Sie auf „Passwort auf Erstpasswort setzen“."
+"das Ende der Seite. Unterhalb der Liste können Sie unter \"Schnellauswahl\" "
+"mit dem Knopf \"An\" auch alle Schüler auswählen, wenn Sie allen das "
+"Passwort zurücksetzen wollen."
 msgstr ""
 
-#: ../../source/howtos/change-student-passwords/index.rst:20
+#: ../../source/howtos/change-student-passwords/index.rst:40
+msgid "Klicken Sie nun ganz unten auf dieser Seite auf"
+msgstr ""
+
+#: ../../source/howtos/change-student-passwords/index.rst:43
+msgid "Passwort auf Erstpasswort setzen"
+msgstr ""
+
+#: ../../source/howtos/change-student-passwords/index.rst:43
+msgid "um das Passwort auf dessen Erstpasswort zurückzusetzen,"
+msgstr ""
+
+#: ../../source/howtos/change-student-passwords/index.rst:47
+msgid "Passwort auf Erstpasswort setzen (Zufallswert)"
+msgstr ""
+
+#: ../../source/howtos/change-student-passwords/index.rst:46
+msgid ""
+"um dem Schüler ein neues zufälliges Erstpasswort zuzuteilen und sein "
+"Passwort darauf zu setzen,"
+msgstr ""
+
+#: ../../source/howtos/change-student-passwords/index.rst:53
+msgid "Passwort auf Erstpasswort setzen (Eingabewert):"
+msgstr ""
+
+#: ../../source/howtos/change-student-passwords/index.rst:50
+msgid ""
+"um dem Schüler ein von Ihnen gewähltes Passwort als Erstpasswort zuzuweisen."
+"  Diese Eingabe ist nicht dafür geeignet, dass der Schüler sein dauerhaftes "
+"Passwort setzt, weil das Erstpasswort nicht verschlüsselt abgespeichert wird"
+" und somit nicht geheim ist."
+msgstr ""
+
+#: ../../source/howtos/change-student-passwords/index.rst:57
 msgid ""
 "Die Seite wird neu geladen. Klicken Sie neben dem Schülernamen auf "
 "„Erstpasswort anzeigen“."
 msgstr ""
 
-#: ../../source/howtos/change-student-passwords/index.rst:24
+#: ../../source/howtos/change-student-passwords/index.rst:61
 msgid ""
-"Teilen Sie da angezeigte Erstpasswort dem Schüler mit der Aufforderung mit, "
-"es in der Schulkonsole zu ändern."
+"Teilen Sie das angezeigte Erstpasswort dem Schüler mit der Aufforderung mit,"
+" es in der Schulkonsole zu ändern."
+msgstr ""
+
+#: ../../source/howtos/change-student-passwords/index.rst:68
+msgid ""
+"Weder Lehrer noch Administrator können vom Schüler geänderte Passwörter "
+"einsehen. Sie werden grundsätzlich verschlüsselt gespeichert."
+msgstr ""
+
+#: ../../source/howtos/change-student-passwords/index.rst:73
+msgid ""
+"Die kompletten Anmeldekärtchen der Klasse können als *PDF*-Datei ausgedruckt"
+" oder als *CSV*-Datei heruntergeladen und mit einem "
+"Tabellenkalkulationsprogramm weiterverarbeitet werden."
+msgstr ""
+
+#: ../../source/howtos/change-student-passwords/index.rst:78
+msgid "Weiterführende Informationen"
+msgstr ""
+
+#: ../../source/howtos/change-student-passwords/index.rst:80
+msgid "Weitere Informationen zum Thema finden Sie"
+msgstr ""
+
+#: ../../source/howtos/change-student-passwords/index.rst:82
+msgid ""
+"im Handbuch zur Schulkonsole im Abschnitt :ref:`schulkonsole-teacher-user-"
+"label`"
 msgstr ""
