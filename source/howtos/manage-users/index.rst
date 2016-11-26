@@ -19,14 +19,6 @@ Inhalt:
    allgemeines
    konfiguration
    verwalten
-   passworte
    quota
    weiteres
-
-
-Index
------
-
-* :ref:`genindex`
-* :ref:`search`
 
