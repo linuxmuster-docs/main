@@ -42,11 +42,11 @@ Klicken Sie nun ganz unten auf dieser Seite auf
 Passwort auf Erstpasswort setzen
   um das Passwort auf dessen Erstpasswort zurückzusetzen,
 
-Passwort auf Erstpasswort setzen (Zufallswert)
+Passwort und Erstpasswort setzen (Zufallswert)
   um dem Schüler ein neues zufälliges Erstpasswort zuzuteilen und sein
   Passwort darauf zu setzen,
 
-Passwort auf Erstpasswort setzen (Eingabewert):
+Passwort und Erstpasswort setzen (Eingabewert):
   um dem Schüler ein von Ihnen gewähltes Passwort als Erstpasswort
   zuzuweisen.  Diese Eingabe ist nicht dafür geeignet, dass der Schüler
   sein dauerhaftes Passwort setzt, weil das Erstpasswort nicht
