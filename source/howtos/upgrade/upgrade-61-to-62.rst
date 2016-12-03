@@ -3,6 +3,12 @@ Upgrade von 6.1
 
 Um linuxmuster.net 6.1 (Codename Babo) auf linuxmuster.net 6.2 (Codename babo62) zu aktualisieren, sind nachstehend aufgeführte Schritte auszuführen.
 
+Lesen der Release-Informationen
+-------------------------------
+
+Lesen Sie die Informationen zu :ref:`release-information-label`, speziell, welche :ref:`Fehler bekannt sind<knownbugs-label>`.
+
+
 Paketquellen anpassen
 ---------------------
 

@@ -5,6 +5,12 @@ Ein schrittweises Upgrade 6.0 -> 6.1 -> 6.2 ist nicht nötig.  Neben
 dem hier beschriebenen direkten Upgradepfad 6.0 (Codename ObenBleiben) auf  6.2 (Codename Babo62), ist auch eine
 Aktualisierung mithilfe der Migration möglich.
 
+Lesen der Release-Informationen
+-------------------------------
+
+Lesen Sie die Informationen zu :ref:`release-information-label`, speziell, welche :ref:`Fehler bekannt sind<knownbugs-label>`.
+
+
 Dokumentation der eigenen Firewallregeln 
 ----------------------------------------
 

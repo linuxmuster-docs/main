@@ -3,11 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. _release-information-label:
+
 Was ist neu in 6.2?
 ===================
 
 Nehmen Sie das Upgrade zu linuxmuster.net 6.2 wahr und folgen Sie der
 :doc:`Upgrade-Anleitung <../howtos/upgrade/index>`.
+Lesen Sie dennoch zunächst die Liste der Neuerungen und bekannten Probleme.
 
 .. toctree::
    :maxdepth: 1
@@ -15,6 +18,7 @@ Nehmen Sie das Upgrade zu linuxmuster.net 6.2 wahr und folgen Sie der
    schulkonsole
    linbo
    ipfire
+   knownbugs
 
 Release-Informationen früherer Veröffentlichungen
 
