@@ -1,43 +1,36 @@
 Neuerungen in linuxmuster-linbo 2.3
 -----------------------------------
 
--  Unterstützung von UEFI-Boot-Clients.
--  Kernel 4.2.0 mit aktuellen Hardwaretreibern.
--  Unterstützung von 64bit-Hardware.
+- Kernel 4.8.x mit aktuellen Hardwaretreibern.
 
-   -  Automatische Erkennung von 32- und 64bit-Hardware.
+- Unterstützung von UEFI-Boot-Clients.
 
--  Partitionierung im GPT-Modus auf EFI-Systemen.
--  Umstellung des lokalen und PXE-Bootsystems auf Grub 2.
+  - Partitionierung im GPT-Modus auf EFI-Systemen.
 
-   -  Vereinfachte Boot-Konfiguration in nur noch einer
-      Grub-Konfigurationsdatei für lokalen und Netzwerkboot.
-   -  Vorkonfigurierte Grub-Bootmenüs können einfach aktiviert und
-      angepasst werden.
-   -  Unterstützung für Grub-Themes.
+- Native Unterstützung von 64bit-Hardware zur LINBO-Laufzeit.
 
--  Minimierte Hardwareprobleme, da nun vor dem
-   Betriebssystemstart immer ein Reboot erfolgt.
--  Einheiten-Angabe für Partitionsgrößen in der
-   start.conf-Datei (M für Megabyte, G für Gigabyte, T für
-   Terabyte).
--  Automatisches Linbo-Update auf lokal gebooteten Clients.
+  - Automatische Erkennung von 32bit PAE, 32bit non-PAE und 64bit-Hardware.
 
--  Nach dem Upgrade sollten alle Clients wie gewohnt weiter
-   funktionieren. Die Bildschirmausgabe beim Bootvorgang ist leicht
-   verändert und vor dem Betriebssystemstart aus der Linbo-Oberfläche
-   heraus wird nun immer ein Neustart initiiert.
+- Automatischer Reboot vor jedem Betriebssystemstart minimiert Hardwareprobleme.
 
--  Die start.conf-Dateien erhalten eine neue Option *SystemType*, der
-   man die Werte *bios\|bios64\|efi32\|efi64* zuweisen kann. Zunächst
-   ist der Standardwert *bios* eingetragen, der für alle Clients mit
-   konventionellem BIOS-Boot funktioniert.
+- Umstellung des lokalen und PXE-Bootsystems auf Grub 2.
 
--  Neuerung bei lokal gebooteten Clients: Wird beim Linbo-Start eine
-   neue Version erkannt, wird diese automatisch im Cache installiert.
-   Danach erfolgt ein automatischer Reboot, damit die neue Version
-   sofort aktiv wird. Analog verfährt Linbo, wenn eine geänderte
-   Grubkonfigurationsdatei für die Gruppe vorliegt.
+  - Vereinfachte Boot-Konfiguration in nur noch einer
+    Grub-Konfigurationsdatei für lokalen und Netzwerkboot.
+  - Vorkonfigurierte Grub-Bootmenüs können einfach aktiviert und
+    angepasst werden.
+  - Unterstützung für Grub-Themes.
+
+- Automatisches Linbo- oder Grub-Update auf lokal gebooteten Clients
+  mit automatischem Reboot
+
+- Einheiten-Angabe für Partitionsgrößen in der start.conf-Datei (M für
+  Megabyte, G für Gigabyte, T für Terabyte).
+
+- Die start.conf-Dateien erhalten eine neue Option *SystemType*, der
+  man die Werte *bios\|bios64\|efi32\|efi64* zuweisen kann. Zunächst
+  ist der Standardwert *bios* eingetragen, der für alle Clients mit
+  konventionellem BIOS-Boot funktioniert.
 
 Boot-Konfiguration mit Grub
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -510,6 +503,8 @@ Multiboot-Systeme mit UEFI
 Auch mehrere parallel installierte Betriebssysteme sind für Linbo kein
 Problem. Es erstellt und verwaltet automatisch die notwendigen
 UEFI-Booteinträge.
+
+.. _release-linbo-bootmedium-label:
 
 LINBO-Bootmedien erstellen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
