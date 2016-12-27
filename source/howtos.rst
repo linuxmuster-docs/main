@@ -14,6 +14,7 @@ Howtos, sortiert nach Relevanz:
    howtos/leoclient2/index
    howtos/backupmondo/index
    howtos/radius/index
+   howtos/use-mail-ldap/index
 ..   howtos/backupmigration/index
 
 
