@@ -50,8 +50,6 @@ Darüberhinaus können bei Ihrer Schule folgende Einschränkungen gelten:
    Ticket zur Lokalisierung: http://linuxmuster.net/flyspray/task/552
    Status quo schließt: http://www.linuxmuster.net/flyspray/task/597
     
-.. image:: media/03.png
-
 Das erfolgreiche Ändern des Passwortes wird mit einer grünen Leiste unterhalb der Menüleiste bestätigt.
 
 .. image:: media/03.png
