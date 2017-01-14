@@ -21,6 +21,114 @@ angesprochen. Damit der PDF-Drucker auf dem Client genutzt werden kann, muss auf
 Linux Clients
 -------------
 
+Die Druckerinstallation auf den Clients erfolgt automatisch mithilfe eines sog. universelles Postsync - Script. Voraussetzung ist lediglich, dass die Drucker bereits auf dem Server eingerichtet wurden und als Linux Client vorkonfigurierte Musterimage (Cloop) genutzt wird. Dieses gibt es für Ubuntu 14.04 (trusty) und Ubuntu 16.04 (xenial).
+
+Dieses Script liegt im Verzeichnis:
+
+.. code::
+
+   /var/linbo/<LinuxImagename>.cloop.postsync
+
+Es weist folgende Rechte auf:
+
+.. code::
+
+   -rw-rw---- 1 root root
+
+In dem Postsync-Script finden sich folgende Eintragungen (hier für Trusty-Cloop):
+
+.. code:: 
+
+echo "##### trusty-linuxmuster POSTSYNC BEGIN #####"
+    
+    # IP-Adresse des Server
+    SERVERIP=10.16.1.1
+    STARTCONF=/cache/start.conf
+    
+    # Raum feststellen. Dieses Skript geht davon aus
+    # dass die Rechner Namen der Form
+    # raumname-hostname haben, also z.B. cr01-pc18
+    RAUM=${HOSTNAME%-*}
+    # wenn der string leer ist, raum auf unknown setzen
+    if [ "x${RAUM}" == "x" ]; then
+        RAUM="unknown"
+    fi
+    
+    # Das Verzeichnis, in dem die Serverpatches
+    # local synchronisiert werden.
+    PATCHCACHE=/linuxmuster-client/serverpatches
+    # UVZ auf dem Server. Mit diesem Variablen kann
+    # man verschiedene Images bedienen (was bei linux
+    # selten nötig ist)
+    PATCHCLASS="trusty"
+    
+    echo ""
+    echo "Hostname:      ${HOSTNAME}"
+    echo "Raum:          ${RAUM}"
+    echo "Patchcache:    ${PATCHCACHE}"
+    echo "Patchclass:    ${PATCHCLASS}"
+    echo ""
+    if [ ! -d /cache/${PATCHCACHE}/${PATCHCLASS} ]; then
+      echo "Patchklasse ist nicht vorhanden."
+      echo "Auf dem Server mit mkdir -p /var/linbo/linuxmuster-client/${PATCHCLASS}/common/ das Grundverzeichnis anlegen und dort die gepatchten Dateien ablegen."
+    fi
+        
+    # -----------------------------------------
+    # Patchdateien auf das lokale Image rsyncen
+    # -----------------------------------------
+    echo " - getting patchfiles"
+    
+    # RAUM     -> Raumname
+    # HOSTNAME -> Rechnername
+    # Verzeichnis anlegen, damit es sicher existiert
+    mkdir -p /cache/${PATCHCACHE}
+    rsync --progress -r "${SERVERIP}::linbo/linuxmuster-client/${PATCHCLASS}" "/cache/${PATCHCACHE}"
+    
+    echo " - patching local files"
+    # zuerst alles in common
+    if [ -d /cache/${PATCHCACHE}/${PATCHCLASS}/common ]; then
+        cp -ar /cache/${PATCHCACHE}/${PATCHCLASS}/common/* /mnt/
+    fi
+    
+    # dann raumspezifisch
+    if [ -d /cache/${PATCHCACHE}/${PATCHCLASS}/${RAUM} ]; then
+        cp -ar /cache/${PATCHCACHE}/${PATCHCLASS}/${RAUM}/* /mnt/
+    fi
+    
+    # dann rechnerspezifisch
+    if [ -d /cache/${PATCHCACHE}/${PATCHCLASS}/${HOSTNAME} ]; then
+        cp -ar /cache/${PATCHCACHE}/${PATCHCLASS}/${HOSTNAME}/* /mnt/
+    fi
+    
+    # -----------------------------------
+    # Berechtigungen anpassen, wenn nötig
+    # -----------------------------------
+    echo " - setting permissions of patched local files"
+    
+    # printers.conf
+    #[ -f /mnt/etc/cups/printers.conf ] && chmod 600 /mnt/etc/cups/printers.conf
+    
+    # .ssh verzeichnis
+    #chmod 700 /mnt/root/.ssh/
+    #chmod 600 /mnt/root/.ssh/authorized_keys
+
+    # hostname in /etc/hosts patchen
+    sed -i "s/HOSTNAME/$HOSTNAME/g" /mnt/etc/hosts    
+    sed -i "s/#SERVERIP/$SERVERIP/g" /mnt/etc/hosts    
+
+    # fstab anpassen, damit Swap-Partition stimmt
+    echo "---- hier beginnen wir mit dem debuggen:"
+    SWAPZEILENNR=$(grep -i "^fstype" $STARTCONF | cut -d"#" -f1 | grep -n -i "swap" | cut -d":" -f1)
+    echo Swapzeilennummer: $SWAPZEILENNR
+    SWAP=$(grep -i "^dev" -m $SWAPZEILENNR $STARTCONF | tail -n1 | cut -d"=" -f2 | tr -d [:blank:]|head -c9)
+    echo Swap: $SWAP
+    sed -i "s|#dummyswap|$SWAP|g" /mnt/etc/fstab   
+
+    echo "##### trusty-linuxmuster POSTSYNC END #####"
+
+Alternativ: Druckerinstallation manuell
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Die Druckerinstallation auf dem Linux-Client lässt sich wie auf dem Server mit Hilfe des CUPS-Webinterfaces
 bewerkstelligen. Loggen Sie sich auf dem Client mit einem Browser über die URL http://localhost:631/admin als lokaler
 Benutzer **administrator** auf der CUPS-Administrationsseite ein.
@@ -31,7 +139,7 @@ Klicken Sie hier unter der Rubrik Drucker auf **Drucker hinzufügen**.
 
 .. image missing: media/drucker-einrichten-client-linux/drucker-linux2.png
 
-Wählen Sie im nächsten Schritt als Netzwerkdrucker ** Internet-Druckprotokoll (https).
+Wählen Sie im nächsten Schritt als Netzwerkdrucker ** Internet-Druckprotokoll (https)**.
 
 .. image missing: media/drucker-einrichten-client-linux/drucker-linux3.png
 
