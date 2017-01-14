@@ -10,3 +10,4 @@ Schritt-für-Schritt Anleitungen
 
    howtos/change-own-password/index
    howtos/check-own-quota/index
+   howtos/use-horde/index

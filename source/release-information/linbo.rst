@@ -39,12 +39,26 @@ linuxmuster-linbo ab Version 2.3.0 verwendet
 `Grub <http://www.gnu.org/software/grub/manual/>`__ als Bootloader für
 Netzwerkboot und lokalen Boot.
 
-Die bisherige PXE-Bootkonfiguration unter ``/var/linbo/pxelinux.cfg``
-ist damit obsolet. Spezifische PXE-Boot-Einstellungen für eine
+.. important::
+
+   Die bisherige PXE-Bootkonfiguration unter ``/var/linbo/pxelinux.cfg``
+   ist damit obsolet.
+
+Kerneloptionen werden aus der start.conf übernommen. Dafür gibt es
+eine neue Option *KernelOptions*, der man Leerzeichen getrennt
+Kernel-Parameter übergibt (keine Leerzeichen innerhalb eines Parameters):
+
+.. code-block:: sh
+
+   KernelOptions = quiet splash dhcpretry=10 acpi=noirq
+
+
+   
+Spezifische PXE-Boot-Einstellungen für eine
 bestimmte Rechnergruppe werden jetzt in den Boot-Konfigurationsdateien
-vorgenommen, die Im Verzeichnis ``/var/linbo/boot/grub`` unter dem
+vorgenommen, die im Verzeichnis ``/var/linbo/boot/grub`` unter dem
 Namen der jeweiligen Rechnergruppe mit der Erweiterung *.cfg* angelegt
-werden.  In dieser Datei können für spezielle Zwecke Anpassungen
+werden. In dieser Datei können für spezielle Zwecke Anpassungen
 gemacht werden.
 
 Beim Start über Grub wird zunächst die Konfigurationsdatei geladen, die
@@ -65,8 +79,7 @@ Gruppenspezifische Boot-Konfiguration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Die gruppenspezifische Boot-Konfigurationsdatei wird automatisch beim
-Workstationimport ((Siehe Abschnitt `Client
-registrieren <dokumentation/handbuch/linbo/registration>`__)) aus der
+Workstationimport (siehe Abschnitt :doc:`../howtos/windows10clients/registration`) aus der
 start.conf-Datei der Gruppe erstellt. Sie enthält einen Menü-Eintrag für
 Linbo und drei weitere für jedes in der start.conf-Datei definierte
 Betriebssystem. Das Menü ist standardmäßig ausgeblendet und so

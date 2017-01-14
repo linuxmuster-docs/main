@@ -1,33 +1,31 @@
 Clients synchronisieren
 =======================
 
-Wenn Sie nun den Client neu starten, erscheint die LINBO-Startseite mit der Auswahl, wie der Ubuntuclient gebootet werden soll.
+Um den Client erstmalig zu partitionieren, formatieren,
+synchronisieren und zu starten, führen Sie auf dem Server folgenden
+Befehl aus
 
-.. image missing: media/rollout/linbo-startpage-ubuntu.png
+.. code-block:: console
 
-Festplatte partitionieren
--------------------------
+   server ~ # linbo-remote -i r100-pc01 -p partition,format,initcache:torrent,sync:1,start:1
 
-Bevor ein Betriebssystem installiert werden kann, muss die Clientfestplatte entsprechend der in der Gruppenkonfiguration festgelegten Werte partitioniert werden. Klicken Sie wieder auf den Reiter `Imaging` und geben das LINBO-Passwort ein, danach die Schaltfläche `Partitionieren` wählen.
+(Re-)booten Sie nun den Client und verfolgen Sie die vollautomatische
+Einrichtung oder trinken Sie eine Tasse Ihres Lieblingsgetränks.
 
-.. image:: media/rollout/linbo-imaging-partitioning.jpg
+Der Ubuntu-Client startet und aufgenommene Benutzer können sich nun am System anmelden.
 
-Bestätigt man die Sicherheitsabfrage mit `Ja`, wird die Festplatte nach den Vorgaben der Gruppenkonfiguration partitioniert.
+Weitere Clients können unter Kenntnis der jeweiligen MAC-Adressen mit
+derselben Methode direkt in die Datei
+``/etc/linuxmuster/workstations`` aufgenommen werden.
 
-Abbild synchronisieren und installieren
----------------------------------------
+Alternativ kann jeder aufzunehmende Rechner in LINBO gestartet werden
+und über die grafische Oberfläche von LINBO registriert werden. Dabei
+werden die relevanten Werte automatisch inkrementiert. Lesen Sie dazu
+:ref:`registration-linbo-label`.
 
-Jetzt synchronisiert man mit dem Schalter ``Cache aktualisieren`` das Abbild des Linuxclients mit dem lokalen Cache und bereitet damit den Computer zur Synchronisation auf die Festplatte vor.
-Mit der Schaltfläche `Logout` kommt zurück zur Auswahl zum Starten des Systems.
-
-.. figure:: media/rollout/linbo-neustart.png
-
-Starten Sie nun das System über den Knopf `Neu+Start`, dann wird das System durch Kopieren installiert und gestartet.
-
-Der Ubuntuclient startet und aufgenommene Benutzer können sich nun am System anmelden.
 
 Weiterführende Dokumentation
-----------------------------
+============================
 
 - Howto: Patchklassen, Rechnergruppe, postsync skript
 - Howto: Linbo

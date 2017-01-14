@@ -1,7 +1,7 @@
 Ändern des eigenen Passwortes
 =============================
 
-Benutzernamen und Passwörter werden in der linuxmuster.net zentral verwaltet, d.h. Sie können sich an den Computern, an der Schulkonssole und in Horde mit dem selben Passwort anmelden.
+Benutzernamen und Passwörter werden in der linuxmuster.net zentral verwaltet, d.h. Sie können sich an den Computern, an der Schulkonsole und in Horde mit dem selben Passwort anmelden.
 Um Ihr Passwort zu ändern melden Sie sich mit Ihrem Benutzernamen (bestehend aus Kleinbuchstaben und event. Zahlen) und dem aktuellen Passwort an der Schulkonsole an.
 
 .. image:: media/01.png
@@ -50,8 +50,6 @@ Darüberhinaus können bei Ihrer Schule folgende Einschränkungen gelten:
    Ticket zur Lokalisierung: http://linuxmuster.net/flyspray/task/552
    Status quo schließt: http://www.linuxmuster.net/flyspray/task/597
     
-.. image:: media/03.png
-
 Das erfolgreiche Ändern des Passwortes wird mit einer grünen Leiste unterhalb der Menüleiste bestätigt.
 
 .. image:: media/03.png

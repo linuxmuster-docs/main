@@ -15,7 +15,6 @@ Schritt-für-Schritt Anleitungen
    howtos/change-own-password/index
    howtos/change-student-passwords/index
    howtos/use-openvpn/index
-   howtos/use-horde/index
    howtos/use-printer/index
    howtos/check-student-quota/index
 
