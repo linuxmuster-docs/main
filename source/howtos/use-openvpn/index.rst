@@ -12,8 +12,10 @@ Alle Aktivitäten, die Sie mit geöffnetem VPN-Tunnel im Internet durchführen, 
 
 .. warning::
 
-Je nach Einstellung kann es sein, dass sie auf Ihr Netzwerk zu Hause (Netzwerkdrucker, NAS (Network Attached Storage), Netzwerkfreigaben) während eines geöffneten Tunnels nicht zugreifen können.
-Die Internet-Geschwindigkeit ist durch die geringe Upload-Geschwindigkeit der Schul-Internetverbindung langsam. 
+   Je nach Einstellung kann es sein, dass sie auf Ihr Netzwerk zu Hause (Netzwerkdrucker, Network    
+   Attached Storage, Netzwerkfreigaben) während eines geöffneten Tunnels nicht zugreifen können.
+   Die Internet-Geschwindigkeit ist durch die geringe Upload-Geschwindigkeit der Schul-Internetverbindung   
+   langsam. 
 
 .. note::
 
@@ -61,7 +63,7 @@ Haben Sie sich die Schlüssel- und Konfigurationsdateien heruntergeladen, benöt
 Windows-Client
 """"""""""""""
 
-Sie benötigen den aktuellen OpenVPN-Client 2.4 (OpenSource - `Download <https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.0-I601.exe>`_) 
+Sie benötigen den aktuellen OpenVPN-Client 2.4 (OpenSource - `Download OPenVPN Windows <https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.0-I601.exe>`_) 
 
 **Konfiguration**
 
@@ -146,7 +148,7 @@ Der erfolgreiche Verbindungsaufbau wird dann im Netzwerkmanager bestätigt.
 MAC-Clients
 """""""""""
 
-Unter MAC OS X benötigen Sie als Client für OpenVPN das Programm `Tunnelblick` (`Download <https://tunnelblick.net/release/Tunnelblick_3.6.9_build_4685.dmg>`_).
+Unter MAC OS X benötigen Sie als Client für OpenVPN das Programm `Tunnelblick` (`Download OpenVPN MAC <https://tunnelblick.net/release/Tunnelblick_3.6.9_build_4685.dmg>`_).
 
 Installieren Sie dieses Programm. Während der Installation werden Sie nach einem Benutzer und einem Kennwort gefragt. Hier müssen Sie einen lokalen Benutzernamen mit Administratorrechten des MAC OS X Systems angeben - nicht den OpenVPN-Benutzer.
 
