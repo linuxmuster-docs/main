@@ -24,12 +24,10 @@ Der VPN-Tunnel wird verschlüsselt, damit der Datenverkehr nicht abgehört werde
 Hierzu hat der Netzwerkbetreuer auf dem IPFire-Server bereits den OpenVPN-Server aktiviert.
 
 Ob dies so ist, können Sie selbst in der Schulkonsole kontrollieren.
-<<<<<<< Updated upstream
-=======
+
 
 VPN-Zugang einrichten
 --------------------- 
->>>>>>> Stashed changes
 
 VPN-Zertifikat erstellen
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -63,12 +61,7 @@ Haben Sie sich die Schlüssel- und Konfigurationsdateien heruntergeladen, benöt
 Windows-Client
 """"""""""""""
 
-<<<<<<< Updated upstream
-Sie benötigen den aktuellen OpenVPN-Client 2.4 (OpenSource - `Download OpenVPN für Windows <https://openvpn.net/index.php/open-source/downloads.html>`_) 
-=======
 Sie benötigen den aktuellen OpenVPN-Client 2.4 (OpenSource - `Download <https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.0-I601.exe>`_) 
-
->>>>>>> Stashed changes
 
 **Konfiguration**
 
@@ -153,11 +146,7 @@ Der erfolgreiche Verbindungsaufbau wird dann im Netzwerkmanager bestätigt.
 MAC-Clients
 """""""""""
 
-<<<<<<< Updated upstream
-Unter MAC OS X benötigen Sie als Client für OpenVPN das Programm `Tunnelblick` (`Download OpenVPN für MAC <https://tunnelblick.net/downloads.html>`_).
-=======
 Unter MAC OS X benötigen Sie als Client für OpenVPN das Programm `Tunnelblick` (`Download <https://tunnelblick.net/release/Tunnelblick_3.6.9_build_4685.dmg>`_).
->>>>>>> Stashed changes
 
 Installieren Sie dieses Programm. Während der Installation werden Sie nach einem Benutzer und einem Kennwort gefragt. Hier müssen Sie einen lokalen Benutzernamen mit Administratorrechten des MAC OS X Systems angeben - nicht den OpenVPN-Benutzer.
 
