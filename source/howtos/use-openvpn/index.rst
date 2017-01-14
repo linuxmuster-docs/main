@@ -29,7 +29,7 @@ Die Dateien des Zertifikates finden Sich nun in Ihrem Home-Laufwerk im Verzeichn
 .. image:: media/openvpn-directory-certificate-files.png
 
 Laden Sie diese Dateien herunter. Sie benötigen diese zur Nutzung Ihres VPN-Clients.
-Haben Sie Zertifikate für sich erstellt, müssen Sie Ihren Administrator bitten, diese noch zu aktivieren.
+Haben Sie Zertifikate für sich erstellt und heruntergeladen, müssen Sie Ihren Administrator bitten, diese noch zu aktivieren.
 
 VPN-Client einrichten
 ---------------------
@@ -39,15 +39,14 @@ Haben Sie sich die Schlüssel- und Konfigurationsdateien heruntergeladen, benöt
 Windows-Clients
 ^^^^^^^^^^^^^^^
 
-Sie benötigen den aktuellen OpenVPN-Client 2.4 (OpenSource - `Download https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.0-I601.exe_`)
-
+Sie benötigen den aktuellen OpenVPN-Client 2.4 (OpenSource - `Download OpenVPN für Windows <https://openvpn.net/index.php/open-source/downloads.html>`_) 
 
 **Konfiguration**
 
 Bei der Installation des OpenVPN Clients werden unter Windows neue Netzwerkadapter (TUN- und TAP-Devices installiert. Der OpenVPN-Client wird dabei in das Verzeichnis ``C:\Programme\OpenVPN\`` installiert.
 
-Kopieren Sie nun die heruntergeladenen Dateien in das Unterverzeichnis ``c:\Programme\OpenVPN\config\``.
-Öffnen Sie nun als Administrator die Datei ``<dateiname>.ovpn`` und passen Sie ggf. Einträge an.
+Kopieren Sie nun die heruntergeladenen Dateien in das Unterverzeichnis ``c:\Programme\OpenVPN\config\``. 
+Öffnen Sie nun als Administrator die Datei ``<dateiname>-RED.ovpn`` und passen Sie ggf. Einträge an. 
 
 Für Windows haben sich bislang folgende Einträge bewährt:
 
@@ -95,13 +94,14 @@ Nach der Installation ist der Netzwerkmanager wie folgt neu zu starten:
 
 .. code::
 
-   sudo apt-get service network-manager restart
+   sudo service network-manager restart
 
 Legen Sie einen neuen Ordner OpenVPN in Ihrem Benutzerverzeichnis (`Persönlicher Ordner`) an. Kopieren Sie die zuvor heruntergeladenen Dateien in dieses Verzeichnis.
 
 .. image:: media/openvpn-config-files-ubuntu.png
 
-Klicken Sie jetzt auf das Doppelpfeil-Symbol in der Kopfleiste, um den Netzwerkmanagers aufzurufen. Wählen Sie den Menüpunt `VPN Verbindungen bearbeiten` aus.
+
+Klicken Sie jetzt auf das Doppelpfeil-Symbol in der Kopfleiste, um den Netzwerkmanagers aufzurufen. Wählen Sie den Menüpunkt `VPN Verbindungen bearbeiten` aus. 
 
 .. image:: media/openvpn-ubuntu-network-manager-setup.png
 
@@ -124,7 +124,7 @@ Der erfolgreiche Verbindungsaufbau wird dann im Netzwerkmanager bestätigt.
 MAC-Clients
 ^^^^^^^^^^^
 
-Unter MAC OS X benötigen Sie als Client für OpenVPN das Programm `Tunnelblick` (`Download https://tunnelblick.net/release/Tunnelblick_3.6.9_build_4685.dmg_`).
+Unter MAC OS X benötigen Sie als Client für OpenVPN das Programm `Tunnelblick` (`Download OpenVPN für MAC <https://tunnelblick.net/downloads.html>`_).
 
 Installieren Sie dieses Programm. Während der Installation werden Sie nach einem Benutzer und einem Kennwort gefragt. Hier müssen Sie einen lokalen Benutzernamen mit Administratorrechten des MAC OS X Systems angeben - nicht den OpenVPN-Benutzer.
 
@@ -132,7 +132,7 @@ War die Installation erfolgreich klicken Sie am Ende der Installation auf den Bu
 
 Nach Installation und Konfiguration wurd Tunnelblick nun nach jeder Anmeldung am MAC OS X System gestartet und Sie finden oben rechts in der Symbolleiste das graue Tunnel-Icon.
 
-Zum testen der Verbindung klicken Sie mit der Maus auf dieses Icon und wählen im Kontextmenü den Eintrag   `<benutzer> verbinden` aus. Während des Verbindungsaufbaus erhalten Sie eine Rückfrage nach Ihrem OpenVPN Benutzer und Ihrem Kennwort. Nach erfolgreicher Verbindung erscheint das Tunnel-Symbol schwarz hinterlegt.
+Zum Testen der Verbindung klicken Sie mit der Maus auf dieses Icon und wählen im Kontextmenü den Eintrag `<Benutzer> verbinden` aus. Während des Verbindungsaufbaus erhalten Sie eine Rückfrage nach Ihrem OpenVPN Benutzer und Ihrem Kennwort. Nach erfolgreicher Verbindung erscheint das Tunnel-Symbol schwarz hinterlegt.  
 
 
 
