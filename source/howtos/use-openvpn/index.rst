@@ -19,7 +19,7 @@ Alle Aktivitäten, die Sie mit geöffnetem VPN-Tunnel im Internet durchführen, 
 
 .. note::
 
-   VPN ist nicht für einen Intrernet-Zugriff gedacht.
+   VPN ist nicht für einen Internet-Zugriff gedacht.
 
 Der VPN-Tunnel wird verschlüsselt, damit der Datenverkehr nicht abgehört werden kann. Hierfür benötigen Sie ihren persönlichen Schlüssel, der zusätzlich mit einem Passwort gesichert ist.
 
