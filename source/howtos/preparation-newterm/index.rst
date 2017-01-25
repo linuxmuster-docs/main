@@ -4,7 +4,7 @@ Vorbereitung am Schuljahresanfang
 Klassenliste aktualisieren
 --------------------------
 
-Zu Schuljahresbeginn müssen Sie als Lehrer einmalig die Klassenliste aktualisieren. Sie fügen neue Klasse, die Sie unterrichten, hinzu und tragen Klassen aus, die Sie abgegeben haben.
+Zu Schuljahresbeginn müssen Sie als Lehrer einmalig die Klassenliste aktualisieren. Sie fügen neue Klassen, die Sie unterrichten, hinzu und tragen Klassen aus, die Sie abgegeben haben.
 
 Um die Klassenliste zu aktualisieren, melden Sie sich zunächst als Lehrer an der Schulkonsole an.
 
