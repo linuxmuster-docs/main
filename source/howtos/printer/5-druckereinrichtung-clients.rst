@@ -37,14 +37,14 @@ Es weist folgende Rechte auf:
 
 In dem Postsync-Script finden sich folgende Eintragungen (hier für Trusty-Cloop):
 
-.. code:: 
+.. code::
 
-echo "##### trusty-linuxmuster POSTSYNC BEGIN #####"
-    
+    echo "##### trusty-linuxmuster POSTSYNC BEGIN #####"
+
     # IP-Adresse des Server
     SERVERIP=10.16.1.1
     STARTCONF=/cache/start.conf
-    
+
     # Raum feststellen. Dieses Skript geht davon aus
     # dass die Rechner Namen der Form
     # raumname-hostname haben, also z.B. cr01-pc18
@@ -53,7 +53,7 @@ echo "##### trusty-linuxmuster POSTSYNC BEGIN #####"
     if [ "x${RAUM}" == "x" ]; then
         RAUM="unknown"
     fi
-    
+
     # Das Verzeichnis, in dem die Serverpatches
     # local synchronisiert werden.
     PATCHCACHE=/linuxmuster-client/serverpatches
@@ -61,7 +61,7 @@ echo "##### trusty-linuxmuster POSTSYNC BEGIN #####"
     # man verschiedene Images bedienen (was bei linux
     # selten nötig ist)
     PATCHCLASS="trusty"
-    
+
     echo ""
     echo "Hostname:      ${HOSTNAME}"
     echo "Raum:          ${RAUM}"
@@ -72,49 +72,49 @@ echo "##### trusty-linuxmuster POSTSYNC BEGIN #####"
       echo "Patchklasse ist nicht vorhanden."
       echo "Auf dem Server mit mkdir -p /var/linbo/linuxmuster-client/${PATCHCLASS}/common/ das Grundverzeichnis anlegen und dort die gepatchten Dateien ablegen."
     fi
-        
+
     # -----------------------------------------
     # Patchdateien auf das lokale Image rsyncen
     # -----------------------------------------
     echo " - getting patchfiles"
-    
+
     # RAUM     -> Raumname
     # HOSTNAME -> Rechnername
     # Verzeichnis anlegen, damit es sicher existiert
     mkdir -p /cache/${PATCHCACHE}
     rsync --progress -r "${SERVERIP}::linbo/linuxmuster-client/${PATCHCLASS}" "/cache/${PATCHCACHE}"
-    
+
     echo " - patching local files"
     # zuerst alles in common
     if [ -d /cache/${PATCHCACHE}/${PATCHCLASS}/common ]; then
         cp -ar /cache/${PATCHCACHE}/${PATCHCLASS}/common/* /mnt/
     fi
-    
+
     # dann raumspezifisch
     if [ -d /cache/${PATCHCACHE}/${PATCHCLASS}/${RAUM} ]; then
         cp -ar /cache/${PATCHCACHE}/${PATCHCLASS}/${RAUM}/* /mnt/
     fi
-    
+
     # dann rechnerspezifisch
     if [ -d /cache/${PATCHCACHE}/${PATCHCLASS}/${HOSTNAME} ]; then
         cp -ar /cache/${PATCHCACHE}/${PATCHCLASS}/${HOSTNAME}/* /mnt/
     fi
-    
+
     # -----------------------------------
     # Berechtigungen anpassen, wenn nötig
     # -----------------------------------
     echo " - setting permissions of patched local files"
-    
+
     # printers.conf
     #[ -f /mnt/etc/cups/printers.conf ] && chmod 600 /mnt/etc/cups/printers.conf
-    
+
     # .ssh verzeichnis
     #chmod 700 /mnt/root/.ssh/
     #chmod 600 /mnt/root/.ssh/authorized_keys
 
     # hostname in /etc/hosts patchen
-    sed -i "s/HOSTNAME/$HOSTNAME/g" /mnt/etc/hosts    
-    sed -i "s/#SERVERIP/$SERVERIP/g" /mnt/etc/hosts    
+    sed -i "s/HOSTNAME/$HOSTNAME/g" /mnt/etc/hosts
+    sed -i "s/#SERVERIP/$SERVERIP/g" /mnt/etc/hosts
 
     # fstab anpassen, damit Swap-Partition stimmt
     echo "---- hier beginnen wir mit dem debuggen:"
@@ -122,7 +122,7 @@ echo "##### trusty-linuxmuster POSTSYNC BEGIN #####"
     echo Swapzeilennummer: $SWAPZEILENNR
     SWAP=$(grep -i "^dev" -m $SWAPZEILENNR $STARTCONF | tail -n1 | cut -d"=" -f2 | tr -d [:blank:]|head -c9)
     echo Swap: $SWAP
-    sed -i "s|#dummyswap|$SWAP|g" /mnt/etc/fstab   
+    sed -i "s|#dummyswap|$SWAP|g" /mnt/etc/fstab
 
     echo "##### trusty-linuxmuster POSTSYNC END #####"
 
