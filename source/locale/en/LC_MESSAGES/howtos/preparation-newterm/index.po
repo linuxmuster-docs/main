@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-26 10:54+0700\n"
+"POT-Creation-Date: 2017-01-28 14:02+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,44 +20,52 @@ msgstr ""
 
 #: ../../source/howtos/preparation-newterm/index.rst:2
 msgid "Vorbereitung am Schuljahresanfang"
-msgstr ""
+msgstr "Preparation at the beginning of the school year"
 
 #: ../../source/howtos/preparation-newterm/index.rst:5
 msgid "Klassenliste aktualisieren"
-msgstr ""
+msgstr "Update class list"
 
 #: ../../source/howtos/preparation-newterm/index.rst:7
 msgid ""
 "Zu Schuljahresbeginn müssen Sie als Lehrer einmalig die Klassenliste "
-"aktualisieren. Sie fügen neue Klasse, die Sie unterrichten, hinzu und tragen"
-" Klassen aus, die Sie abgegeben haben."
+"aktualisieren. Sie fügen neue Klassen, die Sie unterrichten, hinzu und "
+"tragen Klassen aus, die Sie abgegeben haben."
 msgstr ""
+"At the beginning of the school year you have to update the class list once "
+"as a teacher. You add new classes that you teach, and you are taking classes"
+" that you have submitted."
 
 #: ../../source/howtos/preparation-newterm/index.rst:9
 msgid ""
 "Um die Klassenliste zu aktualisieren, melden Sie sich zunächst als Lehrer an"
 " der Schulkonsole an."
 msgstr ""
+"To update the class list, first log on to the school console as a teacher."
 
 #: ../../source/howtos/preparation-newterm/index.rst:14
 msgid "Klassenliste auswählen"
-msgstr ""
+msgstr "Select class list"
 
 #: ../../source/howtos/preparation-newterm/index.rst:16
 msgid ""
 "Nach erfolgreicher Anmeldung in der Schulkonsole für Lehrer, wählen Sie aus "
 "dem Menü `Klassen` und danach den Unterpunkt `Klassenliste` aus."
 msgstr ""
+"After successful login in the school console for teachers, select 'Classes' "
+"from the menu and then the 'Class list' sub-item."
 
 #: ../../source/howtos/preparation-newterm/index.rst:20
 msgid "Sie sehen dann die bereits zugeordneten Klassen."
-msgstr ""
+msgstr "You will then see the classes already assigned."
 
 #: ../../source/howtos/preparation-newterm/index.rst:24
 msgid ""
 "Unter den bereits zugeordneten Klassen finden Sie ein Drop-down Menü, in dem"
 " Sie diejenigen Klassen finden, die Sie sich noch zuordnen können."
 msgstr ""
+"Under the already assigned classes, you will find a drop-down menu in which "
+"you can find the classes that you can assign."
 
 #: ../../source/howtos/preparation-newterm/index.rst:28
 msgid ""
@@ -64,16 +73,20 @@ msgid ""
 "möchten und klicken auf den Button `eintragen`. Benötigen Sie mehrere neue "
 "Klasse, so fügen Sie diese nacheinander hinzu."
 msgstr ""
+"From this list, select the class you want to add and click on the 'Add' "
+"button. If you need several new classes, add them one at a time."
 
 #: ../../source/howtos/preparation-newterm/index.rst:32
 msgid "Neue Anmeldung"
-msgstr ""
+msgstr "New registration"
 
 #: ../../source/howtos/preparation-newterm/index.rst:34
 msgid ""
 "Abschliessend müssen Sie sich von Ihrem Client abmelden und wieder neu "
 "anmelden, damit die Netzlaufwerke korrekt zugeordnet sind."
 msgstr ""
+"Finally, you must log off and log on again from your client so that the "
+"network drives are correctly assigned."
 
 #: ../../source/howtos/preparation-newterm/index.rst:36
 msgid ""
@@ -81,3 +94,5 @@ msgid ""
 " Dateimanager prüfen, ob für die neue Klasse ein Tauschverzeichnis vorhanden"
 " ist."
 msgstr ""
+"You can check this by checking whether the new class has a shared directory "
+"after re-logging on in the file manager."

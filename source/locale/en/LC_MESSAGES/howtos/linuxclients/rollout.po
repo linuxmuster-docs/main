@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-26 10:54+0700\n"
+"POT-Creation-Date: 2017-01-28 14:02+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -24,79 +24,49 @@ msgstr "Sync Clients"
 
 #: ../../source/howtos/linuxclients/rollout.rst:4
 msgid ""
-"Wenn Sie nun den Client neu starten, erscheint die LINBO-Startseite mit der "
-"Auswahl, wie der Ubuntuclient gebootet werden soll."
+"Um den Client erstmalig zu partitionieren, formatieren, synchronisieren und "
+"zu starten, führen Sie auf dem Server folgenden Befehl aus"
 msgstr ""
-"Now, when you restart the client, the LINBO home page appears with the "
-"selection, how the Ubuntu client should boot."
 
-#: ../../source/howtos/linuxclients/rollout.rst:9
-msgid "Festplatte partitionieren"
-msgstr "Repartition the Hard Drive"
-
-#: ../../source/howtos/linuxclients/rollout.rst:11
+#: ../../source/howtos/linuxclients/rollout.rst:12
 msgid ""
-"Bevor ein Betriebssystem installiert werden kann, muss die Clientfestplatte "
-"entsprechend der in der Gruppenkonfiguration festgelegten Werte "
-"partitioniert werden. Klicken Sie wieder auf den Reiter `Imaging` und geben "
-"das LINBO-Passwort ein, danach die Schaltfläche `Partitionieren` wählen."
+"(Re-)booten Sie nun den Client und verfolgen Sie die vollautomatische "
+"Einrichtung oder trinken Sie eine Tasse Ihres Lieblingsgetränks."
 msgstr ""
-"Before an OS can be installed, the client disk must be partitioned according"
-" to the specified values set in the group configuration. Click again on the "
-"tab ``Imaging`` and enter the LINBO password. Then select the button "
-"``Partitioning``."
 
 #: ../../source/howtos/linuxclients/rollout.rst:15
 msgid ""
-"Bestätigt man die Sicherheitsabfrage mit `Ja`, wird die Festplatte nach den "
-"Vorgaben der Gruppenkonfiguration partitioniert."
+"Der Ubuntu-Client startet und aufgenommene Benutzer können sich nun am "
+"System anmelden."
 msgstr ""
-"If you confirm the prompt with ``Yes``, the hard drive is partitioned "
-"according to the specifications of the group configuration."
 
-#: ../../source/howtos/linuxclients/rollout.rst:18
-msgid "Abbild synchronisieren und installieren"
-msgstr "Synchronize and Install Image"
-
-#: ../../source/howtos/linuxclients/rollout.rst:20
+#: ../../source/howtos/linuxclients/rollout.rst:17
 msgid ""
-"Jetzt synchronisiert man mit dem Schalter ``Cache aktualisieren`` das Abbild"
-" des Linuxclients mit dem lokalen Cache und bereitet damit den Computer zur "
-"Synchronisation auf die Festplatte vor. Mit der Schaltfläche `Logout` kommt "
-"zurück zur Auswahl zum Starten des Systems."
+"Weitere Clients können unter Kenntnis der jeweiligen MAC-Adressen mit "
+"derselben Methode direkt in die Datei ``/etc/linuxmuster/workstations`` "
+"aufgenommen werden."
 msgstr ""
-"Now you synchronize the image of the Linux clients to the local cache with "
-"the button ``Update Cache``, thus preparing the computer for "
-"synchronization. Log out with the button ``Logout`` to get back to the main "
-"screen."
 
-#: ../../source/howtos/linuxclients/rollout.rst:25
+#: ../../source/howtos/linuxclients/rollout.rst:21
 msgid ""
-"Starten Sie nun das System über den Knopf `Neu+Start`, dann wird das System "
-"durch Kopieren installiert und gestartet."
+"Alternativ kann jeder aufzunehmende Rechner in LINBO gestartet werden und "
+"über die grafische Oberfläche von LINBO registriert werden. Dabei werden die"
+" relevanten Werte automatisch inkrementiert. Lesen Sie dazu :ref"
+":`registration-linbo-label`."
 msgstr ""
-"Now start the system with the red button ``New+Start``, then the system is "
-"installed and started."
 
-#: ../../source/howtos/linuxclients/rollout.rst:27
-msgid ""
-"Der Ubuntuclient startet und aufgenommene Benutzer können sich nun am System"
-" anmelden."
-msgstr ""
-"The Ubuntu client starts and registered user can now log into the system."
-
-#: ../../source/howtos/linuxclients/rollout.rst:30
+#: ../../source/howtos/linuxclients/rollout.rst:28
 msgid "Weiterführende Dokumentation"
 msgstr "Additional Documentation"
 
-#: ../../source/howtos/linuxclients/rollout.rst:32
+#: ../../source/howtos/linuxclients/rollout.rst:30
 msgid "Howto: Patchklassen, Rechnergruppe, postsync skript"
 msgstr "Howto: Patch classes, hosts group, postsync scripts"
 
-#: ../../source/howtos/linuxclients/rollout.rst:33
+#: ../../source/howtos/linuxclients/rollout.rst:31
 msgid "Howto: Linbo"
 msgstr "Howto: Linbo"
 
-#: ../../source/howtos/linuxclients/rollout.rst:34
+#: ../../source/howtos/linuxclients/rollout.rst:32
 msgid "Howto: Standardclient updaten"
 msgstr "Howto: Update Standard Client"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-26 10:54+0700\n"
+"POT-Creation-Date: 2017-01-28 14:02+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -35,6 +35,6 @@ msgstr ""
 msgid "Howtos, sortiert nach Relevanz:"
 msgstr "HowTos, sort by relevance"
 
-#: ../../source/howtos.rst:20
+#: ../../source/howtos.rst:21
 msgid "Howtos, sonstige:"
 msgstr "other HowTos"

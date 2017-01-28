@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-26 10:54+0700\n"
+"POT-Creation-Date: 2017-01-28 14:02+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,13 +20,15 @@ msgstr ""
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:5
 msgid "Lehrer-Passwörter zurücksetzen und ausdrucken"
-msgstr ""
+msgstr "Reset and print teacher passwords"
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:7
 msgid ""
 "Melden Sie sich wie im Handbuch :ref:`schulekonsole-admin-label` beschrieben"
 " an der Schulkonsole als ``administrator`` an."
 msgstr ""
+"Log in to the school console as ``administrator`` as described in the manual"
+" :ref:`schulekonsole-admin-label`."
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:12
 msgid ""
@@ -33,22 +36,28 @@ msgid ""
 "*Lehrerpasswörter* die gleichen Möglichkeiten für die Passwörter der Lehrer,"
 " wie die Lehrer für die Passwörter der Schüler."
 msgstr ""
+"Under *Users* → *Teacher Passwords* the administrator has the same options "
+"for teacher passwords as the teachers for the student passwords."
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:18
 msgid ""
 "Der Administrator kann vom Lehrer geänderte Passwörter nicht einsehen. Sie "
 "werden grundsätzlich verschlüsselt gespeichert."
 msgstr ""
+"The administrator can not view changed passwords from the teacher. They are "
+"stored in encrypted form."
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:23
 msgid "Passwortliste herunterladen und ausdrucken"
-msgstr ""
+msgstr "Download and print the password list"
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:25
 msgid ""
 "Laden Sie die komplette Passwortliste als PDF zum Ausdrucken herunter oder "
 "als CSV-Datei zur Weiterverarbeitung."
 msgstr ""
+"Download the complete password list as a PDF file for printing or as a CSV "
+"file for further processing."
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:30
 msgid ""
@@ -56,16 +65,18 @@ msgid ""
 "Lehrer an. In der CSV-Datei werden die selben Informationen in Tabellenform "
 "angeboten."
 msgstr ""
+"The PDF file offers small rectangles for cutting and distributing to "
+"teachers. The same information is provided in table format in the CSV file."
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:35
 msgid "Passwörter zurücksetzen"
-msgstr ""
+msgstr "Reset passwords"
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:37
 msgid ""
 "Wählen Sie in der Liste durch Setzen eines Häkchens den oder die Lehrer aus,"
 " deren Passwort Sie zurücksetzen wollen."
-msgstr ""
+msgstr "In the list, select the teacher(s) whose password you want to reset."
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:42
 msgid ""
@@ -73,32 +84,34 @@ msgid ""
 " auch alle Lehrer auswählen, wenn Sie allen das Passwort zurücksetzen "
 "wollen."
 msgstr ""
+"Below the list, you can also select all teachers under \"Quick selection\" "
+"with the \"All\" button if you want to reset the password of all teachers."
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:46
 msgid "Wählen Sie nun ganz unten auf dieser Seite"
-msgstr ""
+msgstr "Please select at the bottom of this page"
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:49
 msgid "Passwort auf Erstpasswort setzen"
-msgstr ""
+msgstr "Set password to initial password"
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:49
 msgid "um das Passwort auf dessen Erstpasswort zurückzusetzen,"
-msgstr ""
+msgstr "To reset the password to its initial password,"
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:53
 msgid "Passwort auf Erstpasswort setzen (Zufallswert)"
-msgstr ""
+msgstr "Set password to initial password (random value)"
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:52
 msgid ""
 "um dem Lehrer ein neues zufälliges Erstpasswort zuzuteilen und sein Passwort"
 " darauf zu setzen,"
-msgstr ""
+msgstr "To give the teacher a new random initial password,"
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:59
 msgid "Passwort auf Erstpasswort setzen (Eingabewert):"
-msgstr ""
+msgstr "Set password to initial password (input value):"
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:56
 msgid ""
@@ -107,27 +120,35 @@ msgid ""
 "Passwort setzt, weil das Erstpasswort nicht verschlüsselt abgespeichert wird"
 " und somit nicht geheim ist."
 msgstr ""
+"To assign the teacher a password you have selected as the initial password. "
+"This input is not suitable for the teacher to set his permanent password "
+"because the first password is not stored in encrypted form and is thus not "
+"secret."
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:62
 msgid "Erstpasswort anzeigen"
-msgstr ""
+msgstr "Show initial password"
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:64
 msgid ""
 "Um ein einzelnes Passwort anzeigen zu lassen, drücken Sie in der Reihe des "
 "entsprechenden Lehrers auf den Knopf \"Erstpasswort anzeigen\"."
 msgstr ""
+"To display a single password, press the \"Show initial password\" button in "
+"the corresponding teacher's row."
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:68
 msgid "Weiterführende Informationen"
-msgstr ""
+msgstr "Additional information"
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:70
 msgid "Weitere Informationen zum Thema finden Sie"
-msgstr ""
+msgstr "You can find more information about this topic"
 
 #: ../../source/howtos/change-teacher-passwords/index.rst:72
 msgid ""
 "im Handbuch zur Schulkonsole im Abschnitt :ref:`schulkonsole-admin-user-"
 "label`"
 msgstr ""
+"in the manual for the school console in the section :ref:`schulkonsole-"
+"admin-user-label`"
