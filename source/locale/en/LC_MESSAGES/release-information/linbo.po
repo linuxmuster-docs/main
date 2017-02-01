@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-28 14:02+0700\n"
+"POT-Creation-Date: 2017-02-01 20:05+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../../source/release-information/linbo.rst:2
 msgid "Neuerungen in linuxmuster-linbo 2.3"
-msgstr "What's New in linuxmuster-linbo 2.3"
+msgstr "What's new in linuxmuster-linbo 2.3"
 
 #: ../../source/release-information/linbo.rst:4
 msgid "Kernel 4.8.x mit aktuellen Hardwaretreibern."
-msgstr ""
+msgstr "Kernel 4.8.x with current hardware drivers."
 
 #: ../../source/release-information/linbo.rst:6
 msgid "Unterstützung von UEFI-Boot-Clients."
@@ -36,18 +36,20 @@ msgstr "Partitioning in GPT mode on EFI systems."
 
 #: ../../source/release-information/linbo.rst:10
 msgid "Native Unterstützung von 64bit-Hardware zur LINBO-Laufzeit."
-msgstr ""
+msgstr "Native support of 64bit hardware at LINBO-runtime."
 
 #: ../../source/release-information/linbo.rst:12
 msgid ""
 "Automatische Erkennung von 32bit PAE, 32bit non-PAE und 64bit-Hardware."
-msgstr ""
+msgstr "Automatic recognition of 32bit PAE, 32bit non-PAE and 64bit hardware."
 
 #: ../../source/release-information/linbo.rst:14
 msgid ""
 "Automatischer Reboot vor jedem Betriebssystemstart minimiert "
 "Hardwareprobleme."
 msgstr ""
+"Automatic reboot before each start of operating system minimizes hardware "
+"problems."
 
 #: ../../source/release-information/linbo.rst:16
 msgid "Umstellung des lokalen und PXE-Bootsystems auf Grub 2."
@@ -77,6 +79,8 @@ msgid ""
 "Automatisches Linbo- oder Grub-Update auf lokal gebooteten Clients mit "
 "automatischem Reboot"
 msgstr ""
+"Automatic Linbo- or Grub-update on locally booted clients with automatic "
+"reboot."
 
 #: ../../source/release-information/linbo.rst:27
 msgid ""
@@ -117,6 +121,8 @@ msgid ""
 "Die bisherige PXE-Bootkonfiguration unter ``/var/linbo/pxelinux.cfg`` ist "
 "damit obsolet."
 msgstr ""
+"The previous PXE-bootconfiguration under \"/var/linbo/pxelinux.cfg\" is "
+"obsolete with that."
 
 #: ../../source/release-information/linbo.rst:47
 msgid ""
@@ -124,6 +130,9 @@ msgid ""
 " Option *KernelOptions*, der man Leerzeichen getrennt Kernel-Parameter "
 "übergibt (keine Leerzeichen innerhalb eines Parameters):"
 msgstr ""
+"Kernel options are taken over from start.conf. Therefore there is a new "
+"option *KernelOptions*, where you can add kernel parameters separated by "
+"whitespace (no whitespaces within a parameter):"
 
 #: ../../source/release-information/linbo.rst:57
 msgid ""
@@ -133,6 +142,11 @@ msgid ""
 "der Erweiterung *.cfg* angelegt werden. In dieser Datei können für spezielle"
 " Zwecke Anpassungen gemacht werden."
 msgstr ""
+"Specific PXE-boot-settings for a certain hardware class are now conducted in"
+" the boot-config files that are created under the filename of the "
+"corresponding hardware class with extension *.cfg* in the directory "
+"\"/var/linbo/boot/grub\". In this file, adjustments for special reasons can "
+"be made."
 
 #: ../../source/release-information/linbo.rst:64
 msgid ""
@@ -177,6 +191,12 @@ msgid ""
 "standardmäßig ausgeblendet und so konfiguriert, dass automatisch Linbo "
 "gebootet wird."
 msgstr ""
+"The group-specific boot-configuration-file is created automatically at "
+"workstation import (see chapter "
+":doc:'../howtos/windows10clients/registration') from the start-conf file of "
+"the group. It contains a menu entry for Linbo and three more for every "
+"operating system defined in start.conf. By default, the menu is hidden and "
+"configured in a way, that Linbo will be booted automatically."
 
 #: ../../source/release-information/linbo.rst:88
 msgid ""
