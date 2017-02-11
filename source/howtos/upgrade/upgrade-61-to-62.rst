@@ -99,8 +99,41 @@ initialisiert wird (und rebootet wird):
    heraus wird nun immer ein Neustart initiiert (Der sogenannte
    *reboot-Workaround* wird nun immer verwendet.).
 
+.. _howtos-upgrade-image-label:
+
+Reparatur und Neuerstellen eines Abbildes nach Partitionierung
+--------------------------------------------------------------
+
+Ab Version 2.3.0 wird ein anderer Partitionsprogramm verwendet. Leider
+kommt Windows mit einer *Neupartitionierung* nicht zurecht.  Im
+normalen Betrieb gibt es keine Probleme. Erst dann, wenn Sie einen
+Computer neu partitionieren müssen, quittiert Windows mit einer
+Fehlermeldung den Dienst beim Start dieses Images:
+
+.. code-block:: bash
+
+   ...
+
+   Status 0xc0000000e
+
+   Info: The boot selection failed because a required device is inaccessible.
+
+
+Lösungsweg
+__________
+
+Abhilfe schafft,
+
+- Windows mit Hilfe der Boot-DVD zu reparieren (Systemstartreparatur),
+- danach Windows ohne Synchronisation zu starten und wieder zu rebooten. 
+- Beim Reboot erstellen Sie ein neues Image, das danach auf allen
+  anderen Rechnern ausgerollt werden kann und auch nach einer neuen
+  Partitionierung normal funktioniert.
+
+
+
 Fehlerbehebung mit einem USB-Stick
-__________________________________
+----------------------------------
 
 Wenn ein Arbeitsplatz mit der Fehlermeldung "Kernel panic" hängt oder
 in Schleifen immer wieder rebootet, kann ein Neuanfang über einen

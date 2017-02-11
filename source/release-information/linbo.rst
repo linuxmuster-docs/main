@@ -41,9 +41,9 @@ Reparatur und Neuerstellen eines Abbildes nach Partitionierung
 
 Ab Version 2.3.0 wird ein anderes Partitionsprogramm verwendet, um für
 UEFI sowie BIOS valide Partitionstabellen anlegen zu können. Bei
-Neupartitionierung erforder Windows eine Systemstartreparatur und
-danach das erneute Erstellen eines Abbilds. Lesen Sie :ref:`hier
-<knownbugs-label>` nach, wie es genau geht.
+Neupartitionierung erfordert Windows eine Systemstartreparatur und
+danach das erneute Erstellen eines Abbildes. Lesen Sie :ref:`hier
+<howtos-upgrade-image-label>` nach, wie es genau geht.
 
 
 Boot-Konfiguration mit Grub
