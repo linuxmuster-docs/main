@@ -1,3 +1,6 @@
+
+.. _use-horde-label:
+
 ===================================
 Schulinternen E-Mail-Versand nutzen
 ===================================
