@@ -1,6 +1,8 @@
 .. HOWTO E-Mail im LDAP documentation master file, created by Frank Schütte
    sphinx-quickstart on Sun Jan 31 13:14:00 2016.
 
+.. _howto-use-mail-ldap-label:
+
 Individuelle E-Mail-Adressen verwalten
 ======================================
 

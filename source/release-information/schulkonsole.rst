@@ -47,8 +47,11 @@ die Kodierung für die jeweiligen Dateien.
 
 Private Mailadresse im LDAP
 ```````````````````````````
-Private Mailadressen können im LDAP-Attribut **mail** verwaltet werden. Dazu muss der Administrator die entsprechende Funktion wie in
-*TODO: howto_mailldap* beschrieben, freischalten.
+
+Private Mailadressen können im LDAP-Attribut **mail** verwaltet
+werden. Dazu muss der Administrator die entsprechende Funktion wie in
+:ref:`howto-use-mail-ldap-label` beschrieben, freischalten.
+
 
 Historie
 """"""""
@@ -77,8 +80,8 @@ Backup mit MondoRescue
 
 `MondoRescue <http://www.mondorescue.org>`_ ist ein schon recht altes zuverlässiges Backupprogramm. Das Plugin **linuxmuster-schulkonsole-backup** ergänzt das Menü des Netzwerkbetreuers um einen Menüpunkt im Menü Einstellunglen zur Konfiguration der Backups.
 
-Einstellungen für Klassen, Projekte
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Einstellungen für Klassen und Projekte
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Für den Netzwerkbetreuer gibt es unter Einstellungen Menüpunkte für Klassen und Projekte. Dort können Standardeinstellungen festgelegt werden.
 
 - Mailingliste gibt an, ob für die betreffende Gruppe eine Mailingliste angelegt wird.
@@ -131,7 +134,7 @@ WLAN-Zugriff steuern
 
 .. image:: media/schulkonsole-wlan.png
 
-In den Menüs für Projekte, Klassen ist ein Menüpunkt **Unterricht**, über den sich der WLAN-Zugriff für ausgewählte Benutzer von Projekten, Klassen zeitgesteuert ein- und ausschalten lässt.
+In den Menüs für Klassen und Projekte ist ein Menüpunkt **Unterricht**, über den sich der WLAN-Zugriff für ausgewählte Benutzer von Projekten, Klassen zeitgesteuert ein- und ausschalten lässt.
 
 Austeilen, Einsammeln, Bereitstellen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -168,7 +171,7 @@ Unter *Horde* kann man eine Mailweiterleitungsadresse einrichten. Das ist umstä
 
 Alternative Mailadresse
 ^^^^^^^^^^^^^^^^^^^^^^^
-Abhängig von den Einstellungen für Mail (siehe TODO howto_mailldap) kann auf der Startseite jeder Benutzer eine
+Abhängig von den Einstellungen für Mail (siehe :ref:`howto-use-mail-ldap-label`) kann auf der Startseite jeder Benutzer eine
 vom Standard abweichende Mailadresse einrichten, die im LDAP-Attribut **mail** gespeichert wird.
 
 
@@ -207,21 +210,19 @@ Verwaltung WLAN
 ---------------
 
 Die Verwaltung des WLAN-Zugriffs erfolgt intern über ein spezielles
-Projekt. Standardmäßig ist es das Projekt **p\_wifi**. Es wird angelegt,
-falls es bei der Installation nicht existiert.
-
-Der Projektname kann über die Schulkonsole unter Einstellungen geändert
+Projekt. Standardmäßig heißt das Projekt **p\_wifi**. Es wird
+angelegt, falls es bei der Installation nicht existiert. Der
+Projektname kann über die Schulkonsole des `administrator` unter Einstellungen geändert
 werden.
 
-Das WLAN-Projekt muss den *administrator* als Projektadmin haben und auf
-*nojoin* eingestellt sein. Das erledigt die Schulkonsole bei der
-Installation selbst, falls das WLAN-Projekt bereits existiert.
+.. Das WLAN-Projekt muss den *administrator* als Projektadmin haben und auf
+   *nojoin* eingestellt sein. Das erledigt die Schulkonsole bei der
+   Installation selbst, falls das WLAN-Projekt bereits existiert.
+   Bis Version **0.36.0-1** musste das einmal manuell gemacht werden.
 
-Bis Version **0.36.0-1** musste das einmal manuell gemacht werden.
+   ::
 
-::
-
-    sophomorix-project -p p_wifi --addadmins administrator --nojoin
+      sophomorix-project -p p_wifi --addadmins administrator --nojoin
 
 Standardeinstellungen
 ^^^^^^^^^^^^^^^^^^^^^
@@ -279,3 +280,8 @@ Dort können beliebige Benutzer und Gruppen eingetragen werden. Dazu gibt es das
 Es dient dazu, Einstellungen für einzelne Nutzer/Gruppen wieder auf die Standardeinstellungen
 zurückzusetzen. Die Standardeinstellungen befinden sich in der oben beschriebenen Datei **wlan_defaults**.
 Die Schulkonsole verwendet diese Datei bzw. das Programm, um Einstellungen vorzunehmen.
+
+Wenn die Gruppe ``teachers`` mit Zugang zum WLAN ausgestattet wird,
+dann ist es den Lehrern möglich über WLAN und der Schulkonsole während
+des Unterrichts temporär Berechtigungen an Klassen oder Projekte zu
+vergeben.

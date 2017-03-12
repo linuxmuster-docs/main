@@ -2,7 +2,7 @@
  Menü: Mein Konto
 ==================
 
-.. image:: media/schulkonsole-account.png
+.. image:: ../schulkonsole-admin/media/schulkonsole-account.png
 
 Auf dieser Seite können Sie eigene Druckaufträge löschen und Ihr
 Passwort ändern.
