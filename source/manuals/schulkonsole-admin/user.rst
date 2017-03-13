@@ -19,7 +19,7 @@ Passwortlisten
 Der Administrator kann hier einsehen, zu welchen Zeitpunkten Benutzer
 neu angelegt wurden.
 
-.. image:: media/schulkonsole-benutzer-passwortlisten.png
+.. image:: media/schulkonsole-user-passwordlists.png
 
 Sie können entweder eine **Gesamtliste** aller Benutzer mit deren
 Passwörtern erhalten oder aber einen bestimmten Zeitpunkt heraussuchen
@@ -32,14 +32,14 @@ der Benutzer.
 
 .. figure:: media/schulkonsole-benutzer-passwortlisten-pdf.png
 
-   Anmeldekärtchen der Lehrer
+   Anmeldekärtchen der Benutzer
 
 Alternativ können Sie sich über die Option **Ein Eintrag pro Seite**
 Seiten mit ausführlichen Anmeldeinformationen ausgeben lassen.
 
 .. figure:: media/schulkonsole-benutzer-passwortlisten-pdf-detailiert.png
  
-   Ausführliche Anmeldeinformationen für den Lehrer
+   Ausführliche Anmeldeinformationen für den Benutzer
 
 	   
 Berichte
