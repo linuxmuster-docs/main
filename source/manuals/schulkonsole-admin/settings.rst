@@ -60,22 +60,20 @@ Kodierung
 
 .. image:: media/schulkonsole-settings-usermanagement-encoding.png
 
-+---------------------------+-----------------------------------------------------------------------------------------------------------+
-| **Abschnitt Kodierungen** | **Erläuterungen**                                                                                         |
-|                           |                                                                                                           |
-+===========================+===========================================================================================================+
-| *schueler.txt*            | Bestimmt die Kodierung, die diese Textdatei im System hat. Das spielt für die Interpretation der Zeichen  |
-|                           | eine entscheidende Rolle. Bei Windows ist es meistens win1252, bei Linux utf8.                            |
-+---------------------------+-----------------------------------------------------------------------------------------------------------+
-| *lehrer.txt*              | Bestimmt die Kodierung der Datei, in der die Lehrer gespeichert werden.                                   |
-|                           |                                                                                                           |
-+---------------------------+-----------------------------------------------------------------------------------------------------------+
-| *extraschueler.txt*       | Bestimmt die Kodierung der Datei, in der zusätzliche Schüler gespeichert werden, die nicht aus der        |
-|                           | Schulverwaltung übernommen werden.                                                                        |
-+---------------------------+-----------------------------------------------------------------------------------------------------------+
-| *extrakurse.txt*          | Bestimmt die Kodierung der Datei, in der zusätzliche Kurse mit zusätzlichen Benutzern gespeichert werden, |
-|                           | die nicht als Benutzer in Klassen der Schulverwaltung entnommen wurden.                                   |
-+---------------------------+-----------------------------------------------------------------------------------------------------------+
+Kodierung der Datei xxx.txt:
+ Bestimmt die Kodierung, die die jeweilige Textdatei im System
+ hat. Das spielt für die Interpretation der Zeichen (vor allem
+ Sonderzeichen) eine entscheidende Rolle. Bei Windows ist es meistens
+ win1252, bei Linux utf8, historisch gewachsen oft noch iso8859-1 oder
+ iso8859-15.
+
+.. warning::
+    
+   Ändern Sie die Kodierung an dieser Stelle nur, wenn Sie sicher
+   sind, dass die jeweilige Datei jetzt in einer anderen Kodierung auf
+   dem Server vorliegt als hier angegeben und Sie Probleme mit
+   besonderen Zeichen erfahren.
+
 
 E-Mail
 ------
@@ -83,22 +81,19 @@ E-Mail
 
 .. image:: media/schulkonsole-settings-usermanagement-email.png
 
-+--------------------------+------------------------------------------------------------------------------------------------------+
-| **Abschnitt E-Mail**     | **Erläuterungen**                                                                                    |
-|                          |                                                                                                      |
-+==========================+======================================================================================================+
-| *Mail-Alias*             | Der Mail-Alias ist eine alternative Mailadresse, die aussagekräftiger ist.                           |
-|                          |                                                                                                      |
-+--------------------------+------------------------------------------------------------------------------------------------------+
-| *Mailquota-Warnungen*    | Bestimmt, ob Benutzern bei Überschreitungen eines bestimmten Kontingents Warnungen zugestellt werden |
-|                          | sollen.                                                                                              |
-+--------------------------+------------------------------------------------------------------------------------------------------+
-| *Warnungen bei ...*      | Grenzen, ab wann Warnungen zugestellt werden sollen. Die Grenze kann einmal absolut und einmal       |
-|                          | relativ festgelegt werden, da unterschiedliche Benutzer unterschiedliche Quoten haben können.        |
-+--------------------------+------------------------------------------------------------------------------------------------------+
-| *Überschreitung an root* | Hier kann bestimmt werden, ob root eine Kopie der Quota-Warnungen erhält.                            |
-| *melden*                 |                                                                                                      |
-+--------------------------+------------------------------------------------------------------------------------------------------+
+Mail-Alias:
+ Der Mail-Alias ist eine alternative Mailadresse, die manchmal aussagekräftiger als der Benutzername ist.
+
+Mailquota-Warnungen:
+ Bestimmt, ob Benutzern bei Überschreitungen eines bestimmten Kontingents Warnungen zugestellt werden sollen.
+
+Warnungen bei ...:
+ Grenzen, ab wann Warnungen zugestellt werden sollen. Die Grenze kann
+ einmal absolut und einmal relativ festgelegt werden, da
+ unterschiedliche Benutzer unterschiedliche Quoten haben können.
+
+Überschreitung an root:
+ Hier kann bestimmt werden, ob root eine Kopie der Quota-Warnungen erhält.
 
 Login und Löschen
 -----------------
