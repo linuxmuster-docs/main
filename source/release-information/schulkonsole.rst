@@ -181,7 +181,7 @@ Oberfläche allgemein
 Menü
 ^^^^
 
-.. image:: media/schulkonsole-menu.png
+.. image:: ../howtos/print-student-passwords/media/03.png
 
 Das Menü ist jetzt ein 2-Ebenenmenü, das nicht mehr soviel Bildschirmplatz benötigt und intuitiver zu bedienen ist.
 
