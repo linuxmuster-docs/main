@@ -145,6 +145,6 @@ USB-Stick, z.B. mit Hilfe des Befehls
 
 .. code-block:: console
 
-   # dd if=linbo.iso of=/dev/sdb
+   # dd if=linbo.iso of=/dev/sdX
 
-wobei ``/dev/sdb`` der Schnittstellenname ihres USB-Sticks sein muss.
+wobei ``/dev/sdX`` der Schnittstellenname ihres USB-Sticks sein muss.
