@@ -1,7 +1,7 @@
 Neuerungen in linuxmuster-linbo 2.3
 -----------------------------------
 
-- Kernel 4.8.x mit **aktuellen Hardwaretreibern**
+- Kernel 4.9.x mit **aktuellen Hardwaretreibern**
 
   - Native Unterstützung von 64bit-Hardware zur LINBO-Laufzeit
   - Automatische Erkennung von 32bit PAE, 32bit non-PAE und 64bit-Hardware
