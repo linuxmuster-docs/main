@@ -29,6 +29,7 @@ Rufen Sie die Liste aller verfügbaren Clientabbilder auf:
    
    Imagename                 Info
    -----------------------------------------------
+   xenial-qgm                          Ubuntu 16.04 LTS 64Bit
    trusty714                          Ubuntu 14.04 LTS 64Bit
    xenial916                          Ubuntu 16.04 LTS 64Bit
    -----------------------------------------------
