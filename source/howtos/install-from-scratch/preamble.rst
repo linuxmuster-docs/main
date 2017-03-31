@@ -45,7 +45,7 @@ Laden Sie das Iso-Image ( `Ubuntu 12.04.5 LTS 64-bit PC (AMD64) server install C
 
   .. warning::
    Verwenden Sie **nicht** Ubuntu 14.04 oder Ubuntu 16.04.
-   |br| Erst die Anfang 2017 erscheinende Version linuxmuster.net 7 unterstützt Ubuntu 16.04.
+   |br| Erst die Version linuxmuster.net 7 beruht voraussichtlich auf Ubuntu 16.04.
 
 Um sicher zu stellen, dass die Datei richtig heruntergeladen wurde, können Sie die SHA1-Summe prüfen. Auf der Konsole eines Linuxbetriebsystems steht z.B. der Befehl ``sha1sum`` zur Verfügung:
 
