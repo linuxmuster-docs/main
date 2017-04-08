@@ -2,15 +2,32 @@
 Anlegen, Versetzen und Löschen von Benutzern
 --------------------------------------------
 
-Normalerweise werden an einem Linux-Server die Benutzer durch Aufruf eines Programms angelegt, dem man den Benutzernamen des anzulegenden Benutzers und die Gruppe mitteilt, in welche der Benutzer zugeordnet werden soll.
+..  
+ Normalerweise werden an einem Linux-Server die Benutzer durch Aufruf
+ eines Programms angelegt, dem man den Benutzernamen des anzulegenden
+ Benutzers und die Gruppe mitteilt, in welche der Benutzer zugeordnet
+ werden soll.
+ 
+ Für eine Schule ist dieses Vorgehen nicht praktikabel, da meist
+ mehrere hundert bis einige tausend Schüler als Benutzer angelegt
+ werden müssen. Deshalb übernimmt bei der *linuxmuster.net* das
+ Programm *Sophomorix* diese Aufgabe.
+ 
+ *Sophomorix* liest alle Schüler aus einer Text-Datei ein, die aus dem
+  Schulverwaltungsprogramm der Schule bezogen oder von Hand mit Hilfe
+  eines Editors erstellt wurde. Anschließend werden alle Schüler dieser
+  Liste, die im System noch nicht vorhanden sind, angelegt, solche mit
+  einer neuen Klasse versetzt und nicht mehr aufgeführte Schüler im
+  System gelöscht.
+ 
+  Mit der *Schulkonsole* gibt es für den Netzwerkbetreuer ein
+  webbasiertes Werkzeug, das ihm die Bedienung von *Sophomorix* sehr
+  erleichtert. Die einzelnen Schritte werden im Folgenden erläutert. Der
+  Netzwerkbetreuer muss nur noch in Ausnahmefällen mit der Kommandozeile
+  arbeiten.
 
-Für eine Schule ist dieses Vorgehen nicht praktikabel, da meist mehrere hundert bis einige tausend Schüler als Benutzer angelegt werden müssen. Deshalb übernimmt bei der *linuxmuster.net* das Programm *Sophomorix* diese Aufgabe.
-
-*Sophomorix* liest alle Schüler aus einer Text-Datei ein, die aus dem Schulverwaltungsprogramm der Schule bezogen oder von Hand mit Hilfe eines Editors erstellt wurde. Anschließend werden alle Schüler dieser Liste, die im System noch nicht vorhanden sind, angelegt, solche mit einer neuen Klasse versetzt und nicht mehr aufgeführte Schüler im System gelöscht.
-
-Mit der *Schulkonsole* gibt es für den Netzwerkbetreuer ein webbasiertes Werkzeug, das ihm die Bedienung von *Sophomorix* sehr erleichtert. Die einzelnen Schritte werden im Folgenden erläutert. Der Netzwerkbetreuer muss nur noch in Ausnahmefällen mit der Kommandozeile arbeiten.
-
-Um Benutzer neu aufzunehmen, zu versetzen oder zu löschen müssen die folgenden Schritte nacheinander ausgeführt werden:
+Um Benutzer neu aufzunehmen, zu versetzen oder zu löschen müssen die
+folgenden Schritte nacheinander ausgeführt werden:
 
 *   Schüler und Lehrerliste aus dem Schulverwaltungsprogramm exportieren.
 *   Die Benutzerlisten auf dem Server aktualisieren. Dazu gehört im Einzelnen:
