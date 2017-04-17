@@ -11,6 +11,10 @@ beim Import, diese Werte bilden gleichzeitig die Mindestvoraussetzungen.
 Festplatten- und Arbeitsspeicher der VMs müssen addiert werden um die
 Gesamtanforderung zu bestimmen.
 
+Hinweis: 
+Wer mehrere Images hat, oder mehrere Sicherungen der Images vorhalten will 
+sollte beim HDD-Speicherplatz deutlich mehr veranschlagen!
+
 +---------------+----------+-----------------------+-----------------------+---------+----------+
 | **IP**        | **VM**   | **HDD**                                       |**RAM**             |
 |               |          +-----------------------+-----------------------+---------+----------+
