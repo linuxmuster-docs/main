@@ -1,3 +1,5 @@
+.. _linuxmuster-freeradius-label:
+
 Authentifizierung mit RADIUS
 ============================
 
