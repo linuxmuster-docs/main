@@ -20,7 +20,7 @@ vorzunehmen:
 * Stellen Sie die momentan zulässigen Geburtsjahreszahlen für Schüler ein.
 * Entscheiden Sie, ob Sie Speicherplatzkontingente (Quota) festlegen
   wollen und legen Sie die Menge fest. Beachten Sie, dass ein
-  Benutzers höhere Quota von einer Gruppe erbt, der er angehört.
+  Benutzer höhere Quota von einer Gruppe erbt, der er angehört.
 * Entscheiden Sie die Zusammensetzung der internen E-Mail-Adressen,
   falls Sie diese Funktion an der Schule verwenden wollen. Stellen Sie
   ebenso die Schwelle für Warnungen bei Plattenplatzmangel für E-Mails
@@ -28,6 +28,8 @@ vorzunehmen:
 * Stellen Sie ein, ob und wieviel Zeichen die Zufallspasswörter für Schüler und Lehrer bekommen.
 * Legen Sie fest, ob Lehrer oder Schüler ein Terminal auf einem Linux-Client öffnen können darf.
 * Legen Sie einige Daten fest, die beim Ausdruck von Passwortinformationen für Benutzer verwendet werden.
+
+
 
 ..
   *   Anzahl von Zeichen für Schüler/Lehrer Loginnamen

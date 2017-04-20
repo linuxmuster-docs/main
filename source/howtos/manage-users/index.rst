@@ -20,7 +20,7 @@ Schülern/innen sowie Projekte können auch von Personen mit normalen
 Lehrer-Rechten verwaltet werden.
 
 Benutzergruppen in der linuxmuster.net
---------------------------------------
+======================================
 
 Wenn man auf Dienste und Dateien des Servers zugreifen möchte, muss
 man sich mit einem Benutzernamen (Loginname) und einem Kennwort
