@@ -20,6 +20,6 @@ Inhalt:
 .. toctree::
    :maxdepth: 2
 
-   topologie
+   topology
    switch
    unificontroller
