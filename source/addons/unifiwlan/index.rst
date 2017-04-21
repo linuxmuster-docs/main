@@ -9,7 +9,7 @@ Eine WLAN-Lösung für Schulen sollte mindestens zwei WLAN-Netze aufspannen.
 .. figure:: media/vlantopologie.png
    :alt: VLAN-Topologie
 
-In der hier vorgestellten Lösung kommen Accesspoints von Unifi und der kostenlose Unif-Controller zum Einsatz. 
+In der hier vorgestellten Lösung kommen Accesspoints von Unifi und der kostenlose Unifi-Controller zum Einsatz. 
 
 Die Geräte im Lehrernetz werden in die Datei `/etc/linuxmuster/workstations` aufgenommen. Das Lehrernetz ist ein Teil des Schulnetzes. Damit können sich beispielsweise Benutzer mit einem Schullaptop per WLAN wie gewohnt anmelden und auf ihre Daten zugreifen.
 
