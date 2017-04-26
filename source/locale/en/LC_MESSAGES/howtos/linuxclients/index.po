@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2016, linuxmuster.net
+# Copyright (C) 2017, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-01 20:05+0700\n"
+"POT-Creation-Date: 2017-04-26 19:52+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -33,12 +33,17 @@ msgid ""
 "zum Download bei linuxmuster.net bereit und kann sofort auf alle "
 "Arbeitsstationen verteilt werden."
 msgstr ""
+"This guide describes how to install Linux on a sample workstation. A ready-"
+"made pre-configured image is available for download from linuxmuster.net and"
+" can be immediately distributed to all workstations."
 
 #: ../../source/howtos/linuxclients/index.rst:11
 msgid ""
 "Arbeitsstationen (\"Clients\") werden in der linuxmuster.net über die "
 "Software LINBO (\"GNU/Linux Network Boot\") installiert."
 msgstr ""
+"Workstations (\"Clients\") are installed in linuxmuster.net via LINBO "
+"software (\"GNU / Linux Network Boot\")."
 
 #: ../../source/howtos/linuxclients/index.rst:13
 msgid ""
@@ -47,3 +52,7 @@ msgid ""
 "dem Webinterface ausgeführt werden, wie es die Anleitung :ref:`install-"
 "windows10-clients-label` beschreibt."
 msgstr ""
+"All work steps that require changes to the server are done at a server "
+"console. Alternatively, these steps can also be executed on the web "
+"interface as described in the instructions :ref:`install-windows10-clients-"
+"label`."

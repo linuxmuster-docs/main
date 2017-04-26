@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2016, linuxmuster.net
+# Copyright (C) 2017, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-01 20:05+0700\n"
+"POT-Creation-Date: 2017-04-26 19:52+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -23,58 +23,44 @@ msgid "Neuerungen in linuxmuster-linbo 2.3"
 msgstr "What's new in linuxmuster-linbo 2.3"
 
 #: ../../source/release-information/linbo.rst:4
-msgid "Kernel 4.8.x mit aktuellen Hardwaretreibern."
-msgstr "Kernel 4.8.x with current hardware drivers."
+msgid "Kernel 4.9.x mit **aktuellen Hardwaretreibern**"
+msgstr ""
 
 #: ../../source/release-information/linbo.rst:6
-msgid "Unterstützung von UEFI-Boot-Clients."
-msgstr "Support for UEFI boot clients."
+msgid "Native Unterstützung von 64bit-Hardware zur LINBO-Laufzeit"
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:7
+msgid "Automatische Erkennung von 32bit PAE, 32bit non-PAE und 64bit-Hardware"
+msgstr ""
 
 #: ../../source/release-information/linbo.rst:8
-msgid "Partitionierung im GPT-Modus auf EFI-Systemen."
-msgstr "Partitioning in GPT mode on EFI systems."
+msgid "Neuer Partitionsmechanismus"
+msgstr ""
 
 #: ../../source/release-information/linbo.rst:10
-msgid "Native Unterstützung von 64bit-Hardware zur LINBO-Laufzeit."
-msgstr "Native support of 64bit hardware at LINBO-runtime."
+msgid "Umstellung des lokalen und PXE-Bootsystems auf **Grub** 2"
+msgstr ""
 
 #: ../../source/release-information/linbo.rst:12
 msgid ""
-"Automatische Erkennung von 32bit PAE, 32bit non-PAE und 64bit-Hardware."
-msgstr "Automatic recognition of 32bit PAE, 32bit non-PAE and 64bit hardware."
+"Vereinfachte Boot-Konfiguration in nur noch einer Grub-Konfigurationsdatei "
+"für lokalen und Netzwerkboot"
+msgstr ""
 
 #: ../../source/release-information/linbo.rst:14
 msgid ""
-"Automatischer Reboot vor jedem Betriebssystemstart minimiert "
-"Hardwareprobleme."
+"Vorkonfigurierte Grub-Bootmenüs können einfach aktiviert und angepasst "
+"werden"
 msgstr ""
-"Automatic reboot before each start of operating system minimizes hardware "
-"problems."
 
 #: ../../source/release-information/linbo.rst:16
-msgid "Umstellung des lokalen und PXE-Bootsystems auf Grub 2."
-msgstr "Change of local and PXE boot system to Grub 2."
-
-#: ../../source/release-information/linbo.rst:18
 msgid ""
-"Vereinfachte Boot-Konfiguration in nur noch einer Grub-Konfigurationsdatei "
-"für lokalen und Netzwerkboot."
+"Automatischer Reboot vor jedem Betriebssystemstart minimiert "
+"Hardwareprobleme"
 msgstr ""
-"Simplified boot configuration in just one Grub configuration file for local "
-"and networkboot."
 
-#: ../../source/release-information/linbo.rst:20
-msgid ""
-"Vorkonfigurierte Grub-Bootmenüs können einfach aktiviert und angepasst "
-"werden."
-msgstr ""
-"Pre-configured grub boot menus can be easily activated and customized."
-
-#: ../../source/release-information/linbo.rst:22
-msgid "Unterstützung für Grub-Themes."
-msgstr "Support for grub themes."
-
-#: ../../source/release-information/linbo.rst:24
+#: ../../source/release-information/linbo.rst:17
 msgid ""
 "Automatisches Linbo- oder Grub-Update auf lokal gebooteten Clients mit "
 "automatischem Reboot"
@@ -82,15 +68,19 @@ msgstr ""
 "Automatic Linbo- or Grub-update on locally booted clients with automatic "
 "reboot."
 
-#: ../../source/release-information/linbo.rst:27
-msgid ""
-"Einheiten-Angabe für Partitionsgrößen in der start.conf-Datei (M für "
-"Megabyte, G für Gigabyte, T für Terabyte)."
+#: ../../source/release-information/linbo.rst:19
+msgid "Unterstützung für Grub-Themes"
 msgstr ""
-"Unit specification for partition variables in the start.conf file (M for "
-"megabytes, G for gigabytes, T for terabytes)."
 
-#: ../../source/release-information/linbo.rst:30
+#: ../../source/release-information/linbo.rst:21
+msgid "Unterstützung von **UEFI-Boot**-Clients"
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:23
+msgid "Partitionierung im GPT-Modus auf EFI-Systemen"
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:24
 msgid ""
 "Die start.conf-Dateien erhalten eine neue Option *SystemType*, der man die "
 "Werte *bios\\|bios64\\|efi32\\|efi64* zuweisen kann. Zunächst ist der "
@@ -102,11 +92,45 @@ msgstr ""
 "*bios* is entered, which works for all clients with a conventional BIOS "
 "boot."
 
+#: ../../source/release-information/linbo.rst:28
+msgid "Unterstützung von Multiboot-Systemen mit UEFI"
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:30
+msgid ""
+"Automatische Erstellung und vereinfachter Download von "
+"**Bootmedien**-Abbilder für USB-Speicher oder zum direkten Brennen auf "
+"CD/DVD"
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:34
+msgid "Unterstützung des Setzens der **Systemzeit** durch einen Zeitserver"
+msgstr ""
+
 #: ../../source/release-information/linbo.rst:36
+msgid ""
+"Einheiten-Angabe für Partitionsgrößen in der start.conf-Datei (M für "
+"Megabyte, G für Gigabyte, T für Terabyte)"
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:40
+msgid "Reparatur und Neuerstellen eines Abbildes nach Partitionierung"
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:42
+msgid ""
+"Ab Version 2.3.0 wird ein anderes Partitionsprogramm verwendet, um für UEFI "
+"sowie BIOS valide Partitionstabellen anlegen zu können. Bei "
+"Neupartitionierung erfordert Windows eine Systemstartreparatur und danach "
+"das erneute Erstellen eines Abbildes. Lesen Sie :ref:`hier <howtos-upgrade-"
+"image-label>` nach, wie es genau geht."
+msgstr ""
+
+#: ../../source/release-information/linbo.rst:50
 msgid "Boot-Konfiguration mit Grub"
 msgstr "Boot configuration with grub"
 
-#: ../../source/release-information/linbo.rst:38
+#: ../../source/release-information/linbo.rst:52
 msgid ""
 "linuxmuster-linbo ab Version 2.3.0 verwendet `Grub "
 "<http://www.gnu.org/software/grub/manual/>`__ als Bootloader für "
@@ -116,7 +140,7 @@ msgstr ""
 "<http://www.gnu.org/software/grub/manual/>`__ as bootloader for networkboot "
 "and local boot."
 
-#: ../../source/release-information/linbo.rst:44
+#: ../../source/release-information/linbo.rst:58
 msgid ""
 "Die bisherige PXE-Bootkonfiguration unter ``/var/linbo/pxelinux.cfg`` ist "
 "damit obsolet."
@@ -124,7 +148,7 @@ msgstr ""
 "The previous PXE-bootconfiguration under \"/var/linbo/pxelinux.cfg\" is "
 "obsolete with that."
 
-#: ../../source/release-information/linbo.rst:47
+#: ../../source/release-information/linbo.rst:61
 msgid ""
 "Kerneloptionen werden aus der start.conf übernommen. Dafür gibt es eine neue"
 " Option *KernelOptions*, der man Leerzeichen getrennt Kernel-Parameter "
@@ -134,7 +158,7 @@ msgstr ""
 "option *KernelOptions*, where you can add kernel parameters separated by "
 "whitespace (no whitespaces within a parameter):"
 
-#: ../../source/release-information/linbo.rst:57
+#: ../../source/release-information/linbo.rst:71
 msgid ""
 "Spezifische PXE-Boot-Einstellungen für eine bestimmte Rechnergruppe werden "
 "jetzt in den Boot-Konfigurationsdateien vorgenommen, die im Verzeichnis "
@@ -148,7 +172,7 @@ msgstr ""
 "\"/var/linbo/boot/grub\". In this file, adjustments for special reasons can "
 "be made."
 
-#: ../../source/release-information/linbo.rst:64
+#: ../../source/release-information/linbo.rst:78
 msgid ""
 "Beim Start über Grub wird zunächst die Konfigurationsdatei geladen, die "
 "lokal unter `/cache/boot/grub/grub.cfg <https://github.com/linuxmuster"
@@ -177,11 +201,11 @@ msgstr ""
 " file is loaded, which contains specific menu entries for the relevant "
 "computer group."
 
-#: ../../source/release-information/linbo.rst:79
+#: ../../source/release-information/linbo.rst:93
 msgid "Gruppenspezifische Boot-Konfiguration"
 msgstr "Group-specific boot configuration"
 
-#: ../../source/release-information/linbo.rst:81
+#: ../../source/release-information/linbo.rst:95
 msgid ""
 "Die gruppenspezifische Boot-Konfigurationsdatei wird automatisch beim "
 "Workstationimport (siehe Abschnitt "
@@ -198,13 +222,13 @@ msgstr ""
 "operating system defined in start.conf. By default, the menu is hidden and "
 "configured in a way, that Linbo will be booted automatically."
 
-#: ../../source/release-information/linbo.rst:88
+#: ../../source/release-information/linbo.rst:102
 msgid ""
 "Hier ein Beispiel für ein System mit Windows 7. Zunächst der globale Teil:"
 msgstr ""
 "Here is an example of a system running Windows 7. First, the global part:"
 
-#: ../../source/release-information/linbo.rst:128
+#: ../../source/release-information/linbo.rst:142
 msgid ""
 "Um das Boot-Menü zu aktivieren, setzt man einfach den `Timeout "
 "<http://www.gnu.org/software/grub/manual/grub.html#timeout>`__-Wert hoch. "
@@ -222,7 +246,7 @@ msgstr ""
 "<http://www.gnu.org/software/grub/manual/grub.html#fallback>`__-entry is "
 "started."
 
-#: ../../source/release-information/linbo.rst:136
+#: ../../source/release-information/linbo.rst:150
 msgid ""
 "Mit dem Wert für `gfxpayload "
 "<http://www.gnu.org/software/grub/manual/grub.html#gfxpayload>`__ lassen "
@@ -232,7 +256,7 @@ msgstr ""
 "<http://www.gnu.org/software/grub/manual/grub.html#gfxpayload>`__ the "
 "resolution and color depth can be adjusted."
 
-#: ../../source/release-information/linbo.rst:139
+#: ../../source/release-information/linbo.rst:153
 msgid ""
 "Alternative Grub-Themes lassen sich per `theme "
 "<http://www.gnu.org/software/grub/manual/grub.html#theme>`__-Variable "
@@ -243,7 +267,7 @@ msgstr ""
 "<http://www.gnu.org/software/grub/manual/grub.html#theme>`__ variable. These"
 " must be stored in a directory under ``/var/linbo/boot/grub/themes``."
 
-#: ../../source/release-information/linbo.rst:144
+#: ../../source/release-information/linbo.rst:158
 msgid ""
 "Nach dem globalen Teil folgen die Menüeinträge für **LINBO** und die "
 "Betriebssysteme (je einer für Start, Sync und Neu)."
@@ -251,7 +275,7 @@ msgstr ""
 "After the global part the menu entries for **LINBO** and the operating "
 "systems (one for Start, Sync and New) follow."
 
-#: ../../source/release-information/linbo.rst:147
+#: ../../source/release-information/linbo.rst:161
 msgid ""
 "Der erste Menü-Eintrag (Nr. 0) startet **LINBO**, falls möglich aus dem "
 "lokalen Cache, ansonsten über Netzwerk:"
@@ -259,7 +283,7 @@ msgstr ""
 "The first menu entry (No. 0) starts **LINBO**, if possible from the local "
 "cache, otherwise via network:"
 
-#: ../../source/release-information/linbo.rst:187
+#: ../../source/release-information/linbo.rst:201
 msgid ""
 "Danach folgt der Eintrag (Nr. 1) für den unsynchronisierten Start des "
 "Betriebssystems:"
@@ -267,7 +291,7 @@ msgstr ""
 "This is followed by the entry (No. 1) for the unsynchronized start of the "
 "operating system:"
 
-#: ../../source/release-information/linbo.rst:229
+#: ../../source/release-information/linbo.rst:243
 msgid ""
 "Der nächste Menü-Eintrag (Nr. 2) ermöglicht den synchronisierten Start des "
 "Betriebssystems:"
@@ -275,11 +299,11 @@ msgstr ""
 "The next menu entry (No. 2) enables the synchronized start of the operating "
 "system:"
 
-#: ../../source/release-information/linbo.rst:260
+#: ../../source/release-information/linbo.rst:274
 msgid "Schließlich folgt der Menü-Eintrag (Nr. 3) für Neu+Start:"
 msgstr "Finally, the menu entry (No. 3) for New Start follows:"
 
-#: ../../source/release-information/linbo.rst:290
+#: ../../source/release-information/linbo.rst:304
 msgid ""
 "Die Bootmenü-Einträge müssen in der Regel nicht angepasst werden. Je nach "
 "eigener Anforderung kann es eventuell notwendig werden die Reihenfolge oder "
@@ -294,7 +318,7 @@ msgstr ""
 "unsynchronized start). In the last case, simply delete the complete line "
 "range from *menuentry* to the closing brace."
 
-#: ../../source/release-information/linbo.rst:297
+#: ../../source/release-information/linbo.rst:311
 msgid ""
 "Pflegt man eigene Anpassungen in die Datei ein, sollte man noch die Zeile "
 "``### managed by linuxmuster.net ###`` entfernen, damit die Änderungen beim "
@@ -304,7 +328,7 @@ msgstr ""
 "  ``### managed by linuxmuster.net ###``, so that the changes to the "
 "workstation import are not overwritten."
 
-#: ../../source/release-information/linbo.rst:303
+#: ../../source/release-information/linbo.rst:317
 msgid ""
 "Die gruppenspezifische Bootkonfiguration kann auch über die Schulkonsole "
 "angepasst werden."
@@ -312,7 +336,7 @@ msgstr ""
 "The group-specific boot configuration can also be adapted via the school "
 "console."
 
-#: ../../source/release-information/linbo.rst:307
+#: ../../source/release-information/linbo.rst:321
 msgid ""
 "Hat man das Grub-Bootmenü aktiviert, präsentiert es sich beim nächsten Start"
 " des Clients z.B. so:"
@@ -320,11 +344,11 @@ msgstr ""
 "If the Grub boot menu has been activated, it will be displayed the next time"
 " the client is started like this:"
 
-#: ../../source/release-information/linbo.rst:313
+#: ../../source/release-information/linbo.rst:327
 msgid "Linux-Clients mit UEFI-Boot einrichten"
 msgstr "Linux clients with UEFI boot"
 
-#: ../../source/release-information/linbo.rst:315
+#: ../../source/release-information/linbo.rst:329
 msgid ""
 "Für die Installation einer Linux-Distribution auf UEFI-Systemen ist in der "
 "start.conf-Datei eine EFI-Partition (200 MB) vorzusehen. Außerdem ist die "
@@ -344,7 +368,7 @@ msgstr ""
 "<https://github.com/linuxmuster/linuxmuster-"
 "linbo/blob/2.3.0-8/var/examples/start.conf.ubuntu-efi>`__."
 
-#: ../../source/release-information/linbo.rst:324
+#: ../../source/release-information/linbo.rst:338
 msgid ""
 "Die Vorgehensweise unterscheidet sich nicht von der bei BIOS-Systemen: "
 "Nachdem man die Clientfestplatte mit Linbo partitioniert hat, bootet man den"
@@ -355,7 +379,7 @@ msgstr ""
 "partitioned the client hard disk with Linbo, you boot the installation media"
 " (of course in the UEFI mode) and installed according to the instructions."
 
-#: ../../source/release-information/linbo.rst:329
+#: ../../source/release-information/linbo.rst:343
 msgid ""
 "Alternativ lässt sich auch das Cloop-Image einer Installation von einem "
 "BIOS-Rechner auf einem UEFI-Rechner einspielen ((Hat hier mit Ubuntu 14.04 "
@@ -370,11 +394,11 @@ msgstr ""
 "simply create a new image and distribute it to the rest of your computer. "
 "The image can be used for BIOS and UEFI computers as well."
 
-#: ../../source/release-information/linbo.rst:338
+#: ../../source/release-information/linbo.rst:352
 msgid "Windows-Clients mit UEFI-Boot einrichten"
 msgstr "Windows clients with UEFI boot"
 
-#: ../../source/release-information/linbo.rst:340
+#: ../../source/release-information/linbo.rst:354
 msgid ""
 "Für Windows auf UEFI-Systemen ist zusätzlich zur EFI-Partition noch eine "
 "*Microsoft reserved partition (msr))* (128 MB) vorzusehen, sodass das "
@@ -394,7 +418,7 @@ msgstr ""
 "server. The procedure is as usual: first partitioning with Linbo, then "
 "installation."
 
-#: ../../source/release-information/linbo.rst:348
+#: ../../source/release-information/linbo.rst:362
 msgid ""
 "Auch mit Windows ist es möglich ein auf einem BIOS-Rechner erstelltes Image "
 "auf der UEFI-Maschine zu verwenden. Zunächst wird das Betriebssystem zwar "
@@ -409,15 +433,15 @@ msgstr ""
 "installation media. If you are lucky and Windows is finally booting, you can"
 " use the image created on the UEFI computer also on BIOS systems."
 
-#: ../../source/release-information/linbo.rst:356
+#: ../../source/release-information/linbo.rst:370
 msgid "Vorgehensweise bei der Installation von Windows mit UEFI"
 msgstr "How to install Windows with UEFI"
 
-#: ../../source/release-information/linbo.rst:359
+#: ../../source/release-information/linbo.rst:373
 msgid "Erstellung der start.conf-Datei"
 msgstr "Create the start.conf file"
 
-#: ../../source/release-information/linbo.rst:361
+#: ../../source/release-information/linbo.rst:375
 msgid ""
 "Im ersten Schritt erstellen Sie für die Rechnergruppe *win7-efi* unter "
 "*/var/linbo* eine EFI-gerechte start.conf-Datei für eine neue Rechnergruppe "
@@ -428,7 +452,7 @@ msgstr ""
 "computer group *win7-efi * at */var/linbo*. Just copy the example file "
 "*start.conf.win7-efi* to */var/linbo* (as user root on the server):"
 
-#: ../../source/release-information/linbo.rst:371
+#: ../../source/release-information/linbo.rst:385
 msgid ""
 "Falls Ihre Rechnergruppe anders heißt, passen Sie den Namen der Zieldatei "
 "entsprechend an."
@@ -436,7 +460,7 @@ msgstr ""
 "If your computer group is named differently, adjust the name of the target "
 "file accordingly."
 
-#: ../../source/release-information/linbo.rst:374
+#: ../../source/release-information/linbo.rst:388
 msgid ""
 "Passen Sie die Partitionsgrößen in der start.conf-Datei nach Ihren "
 "Bedürfnissen an. Sie können Einheiten für die Größen angeben (M für "
@@ -446,7 +470,7 @@ msgstr ""
 " can specify units for the quantities (M for megabytes, G for gigabytes, T "
 "for terabytes):"
 
-#: ../../source/release-information/linbo.rst:468
+#: ../../source/release-information/linbo.rst:482
 msgid ""
 "Falls Sie keine Datenpartition benötigen, löschen Sie die Definition für die"
 " fünfte Partition einfach heraus. Sie können auch weitere Partitionen "
@@ -455,7 +479,7 @@ msgstr ""
 "If you do not need a data partition, simply delete the definition for the "
 "fifth partition. You can also add more partitions (up to a total of 128)."
 
-#: ../../source/release-information/linbo.rst:472
+#: ../../source/release-information/linbo.rst:486
 msgid ""
 "Beachten Sie, dass für den EFI-Betrieb als erste und zweite Partition eine "
 "EFI- und eine MSR-Partition definiert sein müssen. Diese Partitionen sollten"
@@ -464,7 +488,7 @@ msgstr ""
 "Note that for EFI operation as the first and second partition, an EFI and "
 "MSR partition must be defined. So you should not change these partitions."
 
-#: ../../source/release-information/linbo.rst:476
+#: ../../source/release-information/linbo.rst:490
 msgid ""
 "Ist die start.conf-Datei erstellt, nehmen Sie den Rechner über den "
 "Workstations-Import in die Gruppe *win7-efi* auf."
@@ -472,11 +496,11 @@ msgstr ""
 "If the start.conf file has been created, you should add the computer to the "
 "*win7-efi* group via the workstation import."
 
-#: ../../source/release-information/linbo.rst:480
+#: ../../source/release-information/linbo.rst:494
 msgid "Neueinrichten des Clients"
 msgstr "Setup Client"
 
-#: ../../source/release-information/linbo.rst:482
+#: ../../source/release-information/linbo.rst:496
 msgid ""
 "Aktivieren Sie, falls noch nicht geschehen, in der Rechnerfirmware des "
 "vorbereiteten Rechners den UEFI-Netzwerk-Boot. In den BIOS-Einstellungen "
@@ -489,7 +513,7 @@ msgstr ""
 "differentiated between *Legacy* and *UEFI* booting. If necessary, you must "
 "access the computer manual to find the appropriate setting."
 
-#: ../../source/release-information/linbo.rst:488
+#: ../../source/release-information/linbo.rst:502
 msgid ""
 "Bevor Sie den Rechner mit der geänderten Einstellung booten, veranlassen Sie"
 " zunächst das Partitionieren per *linbo-remote* auf dem Server. Angenommen "
@@ -500,7 +524,7 @@ msgstr ""
 "partitioning via *linbo-remote* on the server. Assuming the computer is "
 "called *r100-pc01*, prepare the following command on the server:"
 
-#: ../../source/release-information/linbo.rst:497
+#: ../../source/release-information/linbo.rst:511
 msgid ""
 "Alternativ können Sie in der Schulkonsole als Benutzer *Administrator* unter"
 " *LINBO\\|Fernsteuerung* eine entsprechende Aufgabe erstellen."
@@ -508,7 +532,7 @@ msgstr ""
 "Alternatively, you can create a corresponding task in the school console as "
 "user *administrator* under *LINBO\\|remote control*."
 
-#: ../../source/release-information/linbo.rst:500
+#: ../../source/release-information/linbo.rst:514
 msgid ""
 "Schalten Sie danach den vorbereiteten Rechner ein, wird **LINBO** die "
 "Festplatte gemäß dem in der start.conf-Datei definierten Partitionsschema "
@@ -518,7 +542,7 @@ msgstr ""
 "the hard disk according to the partition scheme defined in the start.conf "
 "file and then shut it down again."
 
-#: ../../source/release-information/linbo.rst:505
+#: ../../source/release-information/linbo.rst:519
 msgid ""
 "Installieren Sie nun Windows 7 mit Hilfe des Installationsdatenträgers wie "
 "gewohnt. Wählen Sie dazu zu Beginn der Installation die richtige Partition "
@@ -530,7 +554,7 @@ msgstr ""
 "installation (in the example it is the third partition). If necessary, it "
 "must be formatted."
 
-#: ../../source/release-information/linbo.rst:510
+#: ../../source/release-information/linbo.rst:524
 msgid ""
 "Ist der Rechner eingerichtet, erstellen Sie mit **LINBO** ein Image, das Sie"
 " wie gewohnt auf weitere Rechner derselben Gruppe ausrollen können."
@@ -538,11 +562,11 @@ msgstr ""
 "If the computer is configured, use **LINBO** to create an image that you can"
 " roll out to other computers in the same group as usual."
 
-#: ../../source/release-information/linbo.rst:514
+#: ../../source/release-information/linbo.rst:528
 msgid "Multiboot-Systeme mit UEFI"
 msgstr "Multiboot systems with UEFI"
 
-#: ../../source/release-information/linbo.rst:516
+#: ../../source/release-information/linbo.rst:530
 msgid ""
 "Auch mehrere parallel installierte Betriebssysteme sind für Linbo kein "
 "Problem. Es erstellt und verwaltet automatisch die notwendigen UEFI-"
@@ -551,11 +575,11 @@ msgstr ""
 "Several parallel operating systems are no problem for Linbo. It "
 "automatically creates and manages the necessary UEFI boat records."
 
-#: ../../source/release-information/linbo.rst:523
+#: ../../source/release-information/linbo.rst:537
 msgid "LINBO-Bootmedien erstellen"
 msgstr "LINBO boot media"
 
-#: ../../source/release-information/linbo.rst:525
+#: ../../source/release-information/linbo.rst:539
 msgid ""
 "Bei der Installation von **linuxmuster-linbo** wird automatisch unter "
 "``/var/linbo/linbo.iso`` eine ISO-Datei erstellt, mit der sich Bootmedien "
@@ -578,7 +602,7 @@ msgstr ""
 " because it automatically detects which system (BIOS, UEFI, 64bit, 32bit, "
 "non-PAE) is started."
 
-#: ../../source/release-information/linbo.rst:535
+#: ../../source/release-information/linbo.rst:549
 msgid ""
 "Um einen Rechner mit Hilfe des LINBO-Bootmediums einzurichten, bootet man "
 "ihn mit angeschlossenem Netzwerkkabel. Das LINBO-Startmenü präsentiert sich "
@@ -589,7 +613,7 @@ msgstr ""
 "network cable connected. The LINBO start menu is slightly different "
 "depending on whether it is a BIOS or UEFI system:"
 
-#: ../../source/release-information/linbo.rst:544
+#: ../../source/release-information/linbo.rst:558
 msgid ""
 "LINBO-Startmenü im BIOS-Modus (unter Verwendung von Syslinux), siehe "
 "`Syslinux Menü-System <http://www.syslinux.org/wiki/index.php?title=Menu>`_"
@@ -597,7 +621,7 @@ msgstr ""
 "LINBO start menu in BIOS mode (using Syslinux), see `Syslinux Menu-System "
 "<http://www.syslinux.org/wiki/index.php?title=Menu>`_"
 
-#: ../../source/release-information/linbo.rst:549
+#: ../../source/release-information/linbo.rst:563
 msgid ""
 "LINBO-Startmenü im UEFI-Modus (unter Verwendung von Grub), siehe `Grub-"
 "Manual <https://www.gnu.org/software/grub/manual/>`_"
@@ -605,24 +629,24 @@ msgstr ""
 "LINBO start menu in UEFI mode (using Grub), see  `Grub-Manual "
 "<https://www.gnu.org/software/grub/manual/>`_"
 
-#: ../../source/release-information/linbo.rst:552
+#: ../../source/release-information/linbo.rst:566
 msgid "Die Startoptionen im Einzelnen:"
 msgstr "The starting options in detail:"
 
-#: ../../source/release-information/linbo.rst:555
+#: ../../source/release-information/linbo.rst:569
 msgid "Standardboot"
 msgstr "Default boot"
 
-#: ../../source/release-information/linbo.rst:555
+#: ../../source/release-information/linbo.rst:569
 msgid ""
 "Es wird mit den Standardparametern bis zur Clientoberfläche durchgestartet."
 msgstr "Booting with the default parameters up to the client interface."
 
-#: ../../source/release-information/linbo.rst:562
+#: ../../source/release-information/linbo.rst:576
 msgid "Ersteinrichtung + Neustart"
 msgstr "First setup + restart"
 
-#: ../../source/release-information/linbo.rst:558
+#: ../../source/release-information/linbo.rst:572
 msgid ""
 "Die Clientfestplatte wird automatisch nach den Vorgaben der vom Server "
 "heruntergeladenen start.conf-Datei der Rechnergruppe partitioniert und "
@@ -635,15 +659,15 @@ msgstr ""
 "the server. The client then restarts. After this, the boot medium can be "
 "removed and you can continue with the locally installed **LINBO** cache."
 
-#: ../../source/release-information/linbo.rst:565
+#: ../../source/release-information/linbo.rst:579
 msgid "Debugmodus"
 msgstr "Debug Mode"
 
-#: ../../source/release-information/linbo.rst:565
+#: ../../source/release-information/linbo.rst:579
 msgid "Es wird im Textmodus nur bis zur Konsole gebootet."
 msgstr "Boot in the text mode only to the console."
 
-#: ../../source/release-information/linbo.rst:567
+#: ../../source/release-information/linbo.rst:581
 msgid ""
 "Nach einem Timeout von 10 Sekunden wird automatisch die Option "
 "//Standardboot// aktiviert."
@@ -651,11 +675,11 @@ msgstr ""
 "After a timeout of 10 seconds, the option //Default boot// is automatically "
 "activated."
 
-#: ../../source/release-information/linbo.rst:569
+#: ../../source/release-information/linbo.rst:583
 msgid "Die LINBO-Bootparameter lassen sich bei Bedarf anpassen."
 msgstr "The LINBO boot parameters can be adapted as required."
 
-#: ../../source/release-information/linbo.rst:571
+#: ../../source/release-information/linbo.rst:585
 msgid ""
 "Im BIOS-Modus wird nach Betätigen der [TAB]-Taste eine Zeile eingeblendet, "
 "in der sich die Startparameter editieren lassen. Hat man die notwendigen "
@@ -665,11 +689,11 @@ msgstr ""
 " start parameters can be edited. Once the necessary adjustments have been "
 "made, the [ENTER] button starts the boot process:"
 
-#: ../../source/release-information/linbo.rst:578
+#: ../../source/release-information/linbo.rst:592
 msgid "Bearbeiten des LINBO-Startmenü im BIOS-Modus"
 msgstr "Edit the LINBO start menu in BIOS mode"
 
-#: ../../source/release-information/linbo.rst:580
+#: ../../source/release-information/linbo.rst:594
 msgid ""
 "Im UEFI-Modus lässt sich nach Drücken der [E]-Taste der entsprechende "
 "Bootmenü-Eintrag editieren. Mit [CTRL-X] oder [F10] startet man nach getaner"
@@ -678,15 +702,15 @@ msgstr ""
 "In the UEFI mode, the corresponding boot menu entry can be edited by "
 "pressing the [E] button. Press [CTRL-X] or [F10] to start the boot process."
 
-#: ../../source/release-information/linbo.rst:586
+#: ../../source/release-information/linbo.rst:600
 msgid "Bearbeiten LINBO-Startmenü im UEFI-Modus"
 msgstr "Edit LINBO start menu in UEFI mode"
 
-#: ../../source/release-information/linbo.rst:590
+#: ../../source/release-information/linbo.rst:604
 msgid "LINBO kann die Systemuhr setzen"
 msgstr "LINBO can set the system clock"
 
-#: ../../source/release-information/linbo.rst:592
+#: ../../source/release-information/linbo.rst:606
 msgid ""
 "Seit LINBO-Version 2.3.13 kann LINBO die Systemzeit setzen (``hwclock``) und"
 " hat das Programm ``ntpd`` zur Abfrage eines NTP-Servers integriert. Das "
@@ -699,7 +723,7 @@ msgstr ""
 " This means that you can use a postsync script to synchronize the current "
 "time with the IPFire and then set the hardware clock to this time."
 
-#: ../../source/release-information/linbo.rst:606
+#: ../../source/release-information/linbo.rst:620
 msgid ""
 "Die Synchronisation dauert etwa 6 Sekunden. Die Hardware-Uhr wird so auf UTC"
 " gestellt, woraufhin Windows-Clients angepasst werden müssen, z.B. mit"
@@ -707,7 +731,7 @@ msgstr ""
 "Synchronization takes about 6 seconds. The hardware clock is thus set to "
 "UTC, where upon Windows clients must be adapted, e.g. with"
 
-#: ../../source/release-information/linbo.rst:615
+#: ../../source/release-information/linbo.rst:629
 msgid ""
 "Weitere Informationen finden sich `hier "
 "<http://www.linuxmuster.net/wiki/anwenderwiki:linbo:ntp_sync>`_."

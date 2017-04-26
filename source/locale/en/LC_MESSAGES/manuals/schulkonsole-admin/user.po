@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2016, linuxmuster.net
+# Copyright (C) 2017, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-01 20:05+0700\n"
+"POT-Creation-Date: 2017-04-26 19:52+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -59,7 +59,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/manuals/schulkonsole-admin/user.rst:35
-msgid "Anmeldekärtchen der Lehrer"
+msgid "Anmeldekärtchen der Benutzer"
 msgstr ""
 
 #: ../../source/manuals/schulkonsole-admin/user.rst:37
@@ -69,7 +69,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/manuals/schulkonsole-admin/user.rst:42
-msgid "Ausführliche Anmeldeinformationen für den Lehrer"
+msgid "Ausführliche Anmeldeinformationen für den Benutzer"
 msgstr ""
 
 #: ../../source/manuals/schulkonsole-admin/user.rst:46

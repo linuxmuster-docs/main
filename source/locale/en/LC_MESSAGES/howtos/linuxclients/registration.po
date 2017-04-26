@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2016, linuxmuster.net
+# Copyright (C) 2017, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-01 20:05+0700\n"
+"POT-Creation-Date: 2017-04-26 19:52+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -28,28 +28,32 @@ msgid ""
 "``/etc/linuxmuster/workstations`` und anschließendem Aufruf von "
 "``import_workstations`` aufgenommen."
 msgstr ""
+"New machines are added by direct entry into the file "
+"`/etc/linuxmuster/workstations` and then called `import_workstations`."
 
 #: ../../source/howtos/linuxclients/registration.rst:8
 msgid ""
 "Ermitteln Sie die MAC-Adresse des ersten Clients, z.B. indem Sie den Client "
 "per PXE booten."
 msgstr ""
+"Determine the MAC address of the first client, e.g. by booting the client "
+"via PXE."
 
 #: ../../source/howtos/linuxclients/registration.rst:13
 msgid "Lesen Sie die \"MAC-Adresse\" im LINBO-Startbildschirm ab."
-msgstr ""
+msgstr "Read the \"MAC address\" on the LINBO start screen."
 
 #: ../../source/howtos/linuxclients/registration.rst:15
 msgid "Öffnen Sie die Datei ``/etc/linuxmuster/workstations`` auf dem Server."
-msgstr ""
+msgstr "Open the `/etc/linuxmuster/workstations` file on the server."
 
 #: ../../source/howtos/linuxclients/registration.rst:21
 msgid "Tragen Sie dort den Rechner ein mit folgender Syntax"
-msgstr ""
+msgstr "Enter the computer with the following syntax"
 
 #: ../../source/howtos/linuxclients/registration.rst:31
 msgid "Raum"
-msgstr ""
+msgstr "room"
 
 #: ../../source/howtos/linuxclients/registration.rst:28
 msgid ""
@@ -74,6 +78,11 @@ msgid ""
 "z.B. Umlaute, ß oder Satzzeichen) dürfen Sie hier unter keinen Umständen "
 "verwenden."
 msgstr ""
+"e.g. In the form r100-pc01 (up to 15 characters), (if necessary, take the "
+"building into account g21r100-pc01). Please note that only characters and "
+"numbers are allowed as characters. Only the hyphen ``-`` may be used as a "
+"separator. You may not use spaces, underlines or other special characters "
+"(such as german Umlaute, ß or punctuation marks) under any circumstances."
 
 #: ../../source/howtos/linuxclients/registration.rst:46
 msgid "IP Adresse"
@@ -101,14 +110,16 @@ msgid ""
 "ähnlichen Rechner zusammengefasst, die eine (nahezu) identische "
 "Konfiguration bekommen."
 msgstr ""
+"In the computer group, e.g. `xenial`, several (almost all) similar computers"
+" are combined, which get an (nearly) identical configuration."
 
 #: ../../source/howtos/linuxclients/registration.rst:53
 msgid "Beispielkonfiguration."
-msgstr ""
+msgstr "Sample configuration."
 
 #: ../../source/howtos/linuxclients/registration.rst:59
 msgid "Der registrierte Client wird nun mit dem Konsolenbefehl"
-msgstr ""
+msgstr "The registered client is now using the console command"
 
 #: ../../source/howtos/linuxclients/registration.rst:65
 msgid ""
@@ -116,3 +127,6 @@ msgid ""
 "mit dem zuvor heruntergeladenen Standard-Linuxclient eine Rechnergruppe "
 "`xenial` erstellt haben, kann nun der Rechner fertig eingerichtet werden."
 msgstr ""
+"into the system and assigned to the computer group `xenial`. If you have "
+"created a computer group `xenial` with the previously downloaded standard "
+"Linux client, the computer can now be set up."

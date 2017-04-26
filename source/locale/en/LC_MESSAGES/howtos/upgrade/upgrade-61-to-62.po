@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2016, linuxmuster.net
+# Copyright (C) 2017, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-01 20:05+0700\n"
+"POT-Creation-Date: 2017-04-26 19:52+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -157,24 +157,60 @@ msgid ""
 "verwendet.)."
 msgstr ""
 
-#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:103
+#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:105
+msgid "Reparatur und Neuerstellen eines Abbildes nach Partitionierung"
+msgstr ""
+
+#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:107
+msgid ""
+"Ab Version 2.3.0 wird ein anderer Partitionsprogramm verwendet. Leider kommt"
+" Windows mit einer *Neupartitionierung* nicht zurecht.  Im normalen Betrieb "
+"gibt es keine Probleme. Erst dann, wenn Sie einen Computer neu "
+"partitionieren müssen, quittiert Windows mit einer Fehlermeldung den Dienst "
+"beim Start dieses Images:"
+msgstr ""
+
+#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:123
+msgid "Lösungsweg"
+msgstr ""
+
+#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:125
+msgid "Abhilfe schafft,"
+msgstr ""
+
+#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:127
+msgid "Windows mit Hilfe der Boot-DVD zu reparieren (Systemstartreparatur),"
+msgstr ""
+
+#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:128
+msgid "danach Windows ohne Synchronisation zu starten und wieder zu rebooten."
+msgstr ""
+
+#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:129
+msgid ""
+"Beim Reboot erstellen Sie ein neues Image, das danach auf allen anderen "
+"Rechnern ausgerollt werden kann und auch nach einer neuen Partitionierung "
+"normal funktioniert."
+msgstr ""
+
+#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:136
 msgid "Fehlerbehebung mit einem USB-Stick"
 msgstr ""
 
-#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:105
+#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:138
 msgid ""
 "Wenn ein Arbeitsplatz mit der Fehlermeldung \"Kernel panic\" hängt oder in "
 "Schleifen immer wieder rebootet, kann ein Neuanfang über einen USB-Stick "
 "oder CD/DVD initiiert werden."
 msgstr ""
 
-#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:109
+#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:142
 msgid ""
 "Laden Sie dazu die die Datei ``linbo.iso`` von ihrem Server herunter (z.B. "
 "über 10.16.1.1/linbo.iso) und brennen Sie diese auf CD/DVD oder kopieren "
 "diese auf einen USB-Stick, z.B. mit Hilfe des Befehls"
 msgstr ""
 
-#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:117
-msgid "wobei ``/dev/sdb`` der Schnittstellenname ihres USB-Sticks sein muss."
+#: ../../source/howtos/upgrade/upgrade-61-to-62.rst:150
+msgid "wobei ``/dev/sdX`` der Schnittstellenname ihres USB-Sticks sein muss."
 msgstr ""

@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2016, linuxmuster.net
+# Copyright (C) 2017, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-01 20:05+0700\n"
+"POT-Creation-Date: 2017-04-26 19:52+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -125,11 +125,11 @@ msgstr ""
 
 #: ../../source/howtos/install-from-scratch/preamble.rst:47
 msgid ""
-"Verwenden Sie **nicht** Ubuntu 14.04 oder Ubuntu 16.04. |br| Erst die Anfang"
-" 2017 erscheinende Version linuxmuster.net 7 unterstützt Ubuntu 16.04."
+"Verwenden Sie **nicht** Ubuntu 14.04 oder Ubuntu 16.04. |br| Erst die "
+"Version linuxmuster.net 7 beruht voraussichtlich auf Ubuntu 16.04."
 msgstr ""
-"Do **not** use Ubuntu 14.04 or Ubuntu 16.04. |br| Only linxmuster.net 7 will"
-" support Ubuntu 16.04, ETA early 2017."
+"Do **not** use Ubuntu 14.04 or Ubuntu 04.16. |br| Only linxmuster.net 7 will"
+" support Ubuntu 16.04."
 
 #: ../../source/howtos/install-from-scratch/preamble.rst:62
 msgid ""

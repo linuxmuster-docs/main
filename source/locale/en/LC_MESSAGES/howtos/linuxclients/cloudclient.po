@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2016, linuxmuster.net
+# Copyright (C) 2017, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-01 20:05+0700\n"
+"POT-Creation-Date: 2017-04-26 19:52+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -31,23 +31,25 @@ msgstr ""
 msgid "Rufen Sie die Liste aller verfügbaren Clientabbilder auf:"
 msgstr ""
 
-#: ../../source/howtos/linuxclients/cloudclient.rst:36
+#: ../../source/howtos/linuxclients/cloudclient.rst:37
 msgid "Laden Sie das Abbild Ihrer Wahl (hier: `xenial916`) herunter mit"
 msgstr ""
 
-#: ../../source/howtos/linuxclients/cloudclient.rst:42
+#: ../../source/howtos/linuxclients/cloudclient.rst:43
 msgid ""
-"Es wird die Rechnergruppe `xenial` angelegt und mehrere Dateien werden "
-"erzeugt. Die wichtigsten sind"
+"Es wird die Rechnergruppe (Hardwareklasse) `xenial` angelegt und mehrere "
+"Dateien werden erzeugt. Die wichtigsten sind"
 msgstr ""
 
-#: ../../source/howtos/linuxclients/cloudclient.rst:51
+#: ../../source/howtos/linuxclients/cloudclient.rst:52
 msgid "Nun kann man Clientrechner in die Rechnergruppe `xenial` aufnehmen."
 msgstr ""
 
-#: ../../source/howtos/linuxclients/cloudclient.rst:55
+#: ../../source/howtos/linuxclients/cloudclient.rst:56
 msgid ""
-"Es werden keine Dateien überschrieben. Wenn eine Datei bereits existiert "
-"bricht das Programm mit einer entsprechenden Meldung ab, das Problem muss "
-"dann zunächst händisch gelöst werden."
+"Wenn eine Datei bereits existiert, bricht das Programm zunächst ab. Mit der "
+"Option ``-f`` wird ein angebrochener Download fortgesetzt und bestehende "
+"Dateien werden überschrieben, dabei werden von "
+"`/var/linbo/start.conf.xenial` und `/var/linbo/linuxmuster-client/xenial` "
+"jeweils automatisch Backups erstellt."
 msgstr ""
