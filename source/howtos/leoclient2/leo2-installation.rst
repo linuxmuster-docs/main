@@ -77,8 +77,8 @@ Bei der Anmeldung eines Benutzers werden die Rechte an den lokalen virtuellen Ma
    done  
 
 
-Drucker-Spooler aktivieren
---------------------------
+Drucker-Spooler beim login aktivieren
+-------------------------------------
 
 Um aus der virtuellen Maschine heraus drucken zu können, müssen ein
 Drucker-Spooler und ein -Splitter bei Anmeldung am Linuxclient
