@@ -11,7 +11,6 @@ Die Pakete werden installiert mit root-Rechten auf dem Linuxclient mit folgenden
 .. code-block:: console
 
    # apt-get update
-   # apt-get install libglib-perl libgtk2-perl
    # apt-get install leoclient2-leovirtstarter-client leoclient2-vm-printer linuxmuster-client-sudoers
 
 Damit wird ggf. auch das Paket virtualbox-x.y auf dem Linuxclient installiert.
