@@ -4,7 +4,7 @@
 Virtuelle Maschine erzeugen
 ===========================
 
-Das ``leoclient2-init``-Script bereitet eine virtuelle Machine (VM) vor, die später mit dem Programm ``leovirtstarter2`` gestartet werden kann. Es muss mit root-Rechten gestartet werden:
+Das Script ``leoclient2-init`` bereitet eine virtuelle Machine (VM) vor, die später mit dem Programm ``leovirtstarter2`` gestartet werden kann. Es muss mit root-Rechten gestartet werden:
 
 .. code-block:: console
 
