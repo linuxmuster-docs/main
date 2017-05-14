@@ -17,9 +17,14 @@ Damit wird ggf. auch das Paket virtualbox-x.y auf dem Linuxclient installiert.
 
 .. todo:: Mit dem aktuellen Default-cloop Linuxclient nachprüfen, ob virtualbox und welches installiert ist und wie man ein aktuelleres installieren kann.
 	  
-Eine aktuelle Version kann man mit Hilfe der Anleitung z.B. unter
-https://www.virtualbox.org/wiki/Linux_Downloads installieren. Für die
-Schule kann die PUEL-Version installiert werden, die beispielsweise
+Virtualbox updaten
+------------------
+Es wird empfohlen eine aktuelle Version von Virtualbox zu installieren (5.1.22 beim schreiben dieser Zeilen).
+	  
+Die Anleitung dazu findet sich unter
+https://www.virtualbox.org/wiki/Linux_Downloads im Bereich ''Debian-based Linux distributions''.
+
+Für die Schule kann die PUEL-Version installiert werden, die beispielsweise
 USB2 unterstützt (statt USB1.1).
 
 
