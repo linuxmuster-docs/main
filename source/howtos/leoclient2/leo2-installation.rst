@@ -47,6 +47,8 @@ Hinweis: Diese Rechte-Anpassungen sind im Standard-Linuxclient schon eingepflegt
 Rechte an den lokalen virtuellen Maschinen
 ------------------------------------------
 
+.. todo:: Das sollte eigentlich mit dem im paket befindlichen Rechte /etc/sudoers.d/80-leoclient2 tun
+
 Bei der Anmeldung eines Benutzers werden die Rechte an den lokalen virtuellen Maschinen so gesetzt, dass der Benutzer die Maschine starten, Logs anlegen und den aktiven Snapshot verändern kann. Dazu muss nachfolgendes Script ``015-leoclient2`` unter ``/etc/linuxmuster-client/post-mount.d/`` abgelegt sein.
 
 .. code-block:: bash 
