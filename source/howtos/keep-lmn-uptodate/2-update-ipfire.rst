@@ -20,10 +20,10 @@ installiert und so ggf. Inkompatibilitäten in Kauf genommen werden,
 wird das Update des IPFire vom Server aus mithilfe eines Skriptes
 angestossen.
 
-Welche Version von linuxmuster.net positiv getestet wurde erfahren sie im 
+Welche Version von linuxmuster.net positiv getestet wurde erfahren Sie im 
 Support Forum in der Kategorie Server - Firewall ``https://ask.linuxmuster.net/c/server/firewall``
 
-Damit das Update mithilfe des angesprochem Skiptes ausgeführt wird, müssen sie die Datei ``/var/lib/linuxmuster-ipfire/maxcore`` an der Server-Konsole editieren. Nach dem Speichern der Datei kann das Update gestartet werden.
+Damit das Update mithilfe des angesprochem Skiptes ausgeführt wird, müssen Sie die Datei ``/var/lib/linuxmuster-ipfire/maxcore`` an der Server-Konsole editieren. Nach dem Speichern der Datei kann das Update gestartet werden.
 
 .. Welche Version von IPFire erfolgreich getestet wurde steht in der
    Datei ``/var/lib/linuxmuster-ipfire/maxcore`` Diese Zahl wird von dem
