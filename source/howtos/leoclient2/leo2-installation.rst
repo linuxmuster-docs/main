@@ -45,11 +45,11 @@ Um für die Domänenbenutzer alle Optionen von VirtualBox freizugeben, müssen d
    
    *;*;*;Al0000-2400;dialout,cdrom,floppy,audio,dip,video,plugdev,scanner,vboxusers
 
-Auch lokale Benutzer am Linuxclient (z.B. ``linuxuser``) müssen  der Gruppe ``vboxusers`` hinzugefügt werden. Für lokale Benutzer erfolgt das mit
+Auch lokale Benutzer am Linuxclient (z.B. ``linuxadmin``) müssen  der Gruppe ``vboxusers`` hinzugefügt werden. Für lokale Benutzer erfolgt das mit
 
 .. code-block:: console
 
-   # sudo adduser linuxuser vboxusers
+   # sudo adduser linuxadmin vboxusers
 
 Diese Änderung ist erst bei einer erneuten Anmeldung des Nutzers wirksam.
 
