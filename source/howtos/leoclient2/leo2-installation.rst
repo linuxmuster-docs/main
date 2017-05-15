@@ -6,14 +6,20 @@ Software-Pakete installieren
 
 Die leoclient-Pakete liegen auf dem linuxmuster.net-Paketserver, der im Linuxclient schon zur Einrichtung der Anmeldung am Server eingetragen wurde.
 
-.. todo:: link um Quellen einzutragen
+.. todo:: link um Quellen einzutragen statt
+
+# wget http://pkg.linuxmuster.net/linuxmuster.net.key -O - | sudo apt-key add -
+
+In /etc/apt/sources.list:
+
+deb http://pkg.linuxmuster.net/ xenial/ 
  
 Die Pakete werden installiert mit root-Rechten auf dem Linuxclient mit folgenden Befehlen:
 
 .. code-block:: console
 
-   # apt-get update
-   # apt-get install leoclient2-leovirtstarter-client leoclient2-vm-printer linuxmuster-client-sudoers
+   # sudo apt-get update
+   # sudo apt-get install leoclient2-leovirtstarter-client leoclient2-vm-printer linuxmuster-client-sudoers
 
 Damit wird ggf. auch das Paket virtualbox-x.y auf dem Linuxclient installiert.
 
