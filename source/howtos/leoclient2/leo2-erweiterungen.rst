@@ -159,16 +159,39 @@ Verbindung zu ``Home_auf_Server`` (im Homeverzeichnis) einrichten:
      verbinden
 - Laufwerksbuchstabe (Üblicherweise ``H:``) und Pfad nennen:
   ``\\vboxsrv\home`` sowie Haken bei "Verbindung bei Anmeldung
-  wiedergerstellen".
+  wiederherstellen".
 - Verknüpfung auf Desktop ziehen und umbenennen in z.B. ``Home_auf_Server``
 
 Verbindung zu Tausch-Ordnern und USB-Sticks einrichten:
 
 - Windows Explorer → Rechte Maustaste auf Dieser PC → Netzlaufwerk
      verbinden
-- Laufwerksbuchstabe (Üblicherweise ``M:``) und Pfad nennen: ``\\vboxsrv\media``
+- Laufwerksbuchstabe (Üblicherweise ``M:``) und Pfad nennen:
+  ``\\vboxsrv\media`` sowie Haken bei "Verbindung bei Anmeldung
+  wiederherstellen".
 - Verknüpfung auf Desktop ziehen und umbenennen in z.B. ``Medien``
 
+Drucker einrichten
+
+  - Siehe FreePDF-Webseite: http://freepdfxp.de/download_de.html
+  - ghostscript Installieren (9.20)
+  - Free-PDF Installieren (Version 4.08 getestet)
+  - <Start> -> FreePDF Config starten
+  - Profile neu
+  - Name des Profils:  "ausdrucken", Button: "Alle Benutzer"   --> Speichern
+  - Profil "ausdrucken" wählen, "Für das aktuelle Profil einen eigenen Drucker anlegen" (Schild um Änderung zuzulassen)
+  - Profil "ausdrucken" wählen, Button: Ändern -> Free PDF Dialog (linker Bereich)
+
+     - Aktion beim Drucken: Als festen Dateinamen speichern
+     - H:\ausdruck.pdf (anpassen, entsprechend ``/etc/leoclient2/leoclient-vm-printer2.conf``)
+     - Speichern
+
+  - Den Drucker FreePDF als Standard Drucker anlegen
+  - Äquivalent funktioniert das Programm PDF24
+
+
+
+  
 VM schrumpfen – Tipps und Tricks
 --------------------------------
 

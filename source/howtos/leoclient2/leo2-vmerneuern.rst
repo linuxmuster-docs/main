@@ -58,10 +58,11 @@ werden.
 - Schalten Sie die VM aus und beenden Sie VirtualBox
 
 Das Skript erzeugt eine neue Basisfestplatte unter
-``/PFAD/MASCHINENNAME/MASCHINENNAME.vdi`` und komprimiert sie (auch
-das kann dauern).  Darüber hinaus wird noch ein neuer
+``/PFAD/MASCHINENNAME/MASCHINENNAME.vdi`` und komprimiert sie (Das
+dauert einige Minuten).  Darüber hinaus wird noch ein neuer
 Standard-Snapshot erzeugt und gezippt. Der Name des neuen Snapshots,
-hier: ``{c81442ac-4e03-487c-a05a-e82b8918c834}.vdi``, erscheint in der Konsolenausgabe.
+hier: ``{c81442ac-4e03-487c-a05a-e82b8918c834}.vdi``, erscheint in der
+Konsolenausgabe.
 
 .. code-block:: console
 
@@ -90,8 +91,9 @@ hier: ``{c81442ac-4e03-487c-a05a-e82b8918c834}.vdi``, erscheint in der Konsolena
      $ sudo rm /virtual/winxp/snapshot-store/standard/{4a895e9c-a6e9-416d-b612-b643035c0103}.vdi*
 	  
 - Sollten Sie weitere Snapshots zur virtuellen Maschine haben, haben
-  diese ihre Basis verloren. Löschen Sie diese Snapshots oder erzeugen
-  Sie sie erneut aus dem bestehenden neuen Standard-Snapshot.
+  diese ihre Basis verloren. Löschen Sie diese Snapshots (als root)
+  oder erzeugen Sie sie erneut aus dem bestehenden neuen
+  Standard-Snapshot.
 
   .. code-block:: console
 
