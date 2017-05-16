@@ -19,7 +19,7 @@ In /etc/apt/sources.list eintragen:
 
    deb http://pkg.linuxmuster.net/ xenial/ 
  
-Die Pakete werden installiert mit root-Rechten auf dem Linuxclient mit folgenden Befehlen:
+Installation der Pakete auf dem Linuxclient mit folgenden Befehlen:
 
 .. code-block:: console
 

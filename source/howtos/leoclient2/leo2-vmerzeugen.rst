@@ -4,7 +4,13 @@
 Virtuelle Maschine erzeugen
 ===========================
 
-Das Script ``leoclient2-init`` bereitet eine virtuelle Machine (VM) vor, die später mit dem Programm ``leovirtstarter2`` gestartet werden kann. Es muss mit root-Rechten gestartet werden:
+Das Script ``leoclient2-init`` bereitet eine virtuelle Machine (VM)
+vor, die später mit dem Programm ``leovirtstarter2`` gestartet werden
+kann.
+
+Die VM kann nur in einem Verzeichnis erstellt werden das der
+aufrufende User anlegen darf.  Üblicherweise muss das Script also mit
+root-Rechten gestartet werden:
 
 .. code-block:: console
 
@@ -30,7 +36,7 @@ Es werden folgende Parameter abgefragt und auf Nachfrage VirtualBox gestartet.
 
 - der MASCHINENNAME für die VM (keine Leerzeichen verwenden)
 - der PFAD für den Speicherort der VM (Standardpfad ``/var/virtual/``)
-- die Größe der virtuellen Festplatte für die VM in MB
+- die Größe der dynamisch wachsenden virtuellen Festplatte für die VM in MB
 
 ..
    Damit werden folgende Aktionen vom Script ausgeführt:
@@ -41,17 +47,27 @@ Es werden folgende Parameter abgefragt und auf Nachfrage VirtualBox gestartet.
    - anschließend wird die Konfiguration für die VM eingestellt und VirtualBox damit gestartet
 
 
-Man kann unter VirtualBox die Konfiguration der VM noch an die eigenen
+Man sollte unter VirtualBox die Konfiguration der VM noch an die eigenen
 Bedürfnisse anpassen (Die Arbeitsspeichergröße für die VM wird beim
 Starten an die Gegebenheiten der vorhandenen Maschine angepasst).
 
-Betriebsystem
--------------
+Betriebsystemeinstellungen
+--------------------------
 
-Der Typ und die Version des Betriebssystems sollten von "Other" auf
-das jeweilig Gewünschte geändert werden.
+Unter ``Allgemein``, Reiter Basis muss der Betriebsystemtyp und Version angepasst werden.
 
+Systemanforderungen/Ressourcen
+--------------------------
 
+Unter ``System``, wird konfiguriert, welche Hardware-Ressourcen die VM zur Verfügung gestellt bekommt.
+Je nach Gast sind hier Mindestwerte zu beachten:
+
+Win10 (Beispielhaft):
+
+- Hauptspeicher 4096 MB (System -> Hauptplatine)
+- 4 CPU's (System -> Prozessor)
+- 64 MB Grafikspeicher (System -> Bildschirm)
+ 
 DVD-Laufwerk
 ------------
 
@@ -80,9 +96,14 @@ Netzwerk offline
 
 Eine Netzwerkkarte ist in der Standardkonfiguration nicht aktiviert,
 dadurch bietet die VM keine Angriffsfläche und man kann auf
-zeitraubende Updates verzichten.  Trotzdem ist es möglich auf die
-Netzlaufwerke auf dem Server zuzugreifen und Netzwerkdrucker zu
-verwenden.
+zeitraubende Updates verzichten.
+
+Wenn sie aktiviert wird, gilt das nur vorübergehend.
+
+Trotzdem ist es möglich auf die Netzlaufwerke auf dem Server
+zuzugreifen und Netzwerkdrucker zu verwenden.
+
+
 
 Betriebssystem installieren
 ---------------------------
