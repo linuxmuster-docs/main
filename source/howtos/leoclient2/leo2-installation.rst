@@ -6,7 +6,7 @@ Software-Pakete installieren
 
 Die leoclient-Pakete liegen auf dem linuxmuster.net-Paketserver, der im Linuxclient schon zur Einrichtung der Anmeldung am Server eingetragen wurde.
 
-.. todo:: link um Quellen einzutragen statt
+.. todo:: link um Quellen einzutragen statt folgendes ...
 
 # wget http://pkg.linuxmuster.net/linuxmuster.net.key -O - | sudo apt-key add -
 
