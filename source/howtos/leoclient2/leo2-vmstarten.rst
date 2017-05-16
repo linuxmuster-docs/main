@@ -1,8 +1,10 @@
 Virtuelle Maschinen starten
 ===========================
 
-Das Script ``leovirtstarter2`` findet automatisch jede verfügbare VM und bietet diese zum Starten an.
-Das kann über den mitgelieferten Menüeintrag oder über die Konsole stattfinden.
+Das Script ``leovirtstarter2`` findet automatisch jede verfügbare VM
+(Eintrag in ``/etc/leoclient2/machines``) und bietet diese zum Starten
+an.  Es kann im Ubuntu Dash (Virtualbox Snapshotstarter) oder über die
+Konsole gestartet werden:
 
 .. code-block:: console
 
@@ -23,23 +25,22 @@ Nachdem eine VM gewählt wurde, werden mehrere Optionen angeboten
    Optionen zum Starten der virtuellen Maschine
 
 
-*<VM> wie vorgefunden*
-   startet den aktuellen unveränderten Zustand der VM
+*<VM> wie vorgefunden* startet den aktuellen, unveränderten Zustand
+   der VM
 
-*<VM> Standard*
-   verwendet den Standard-Snapshot und startet die VM, d.h. die
-   virtuelle Maschine wird auf den Zustand des Snapshots zurückgesetzt.
+*<VM> Standard* verwendet den Standard-Snapshot und startet die VM,
+   d.h. die virtuelle Maschine wird auf den Zustand des Snapshots
+   zurückgesetzt.
 
-*optional weitere Snapshots*
-   wenn konfiguriert, tauchen weitere lokal oder auf einem Serverlaufwerk gespeicherte Snapshots auf
+*optional weitere Snapshots* wenn konfiguriert, tauchen weitere lokal
+   oder auf einem Serverlaufwerk gespeicherte Snapshots auf
 
-*Virtuelle Grafik*
-   Diese Optionen sind bisher ohne Funktion
+*Virtuelle Grafik* Diese Optionen sind bisher ohne Funktion
 
-*Virtueller Arbeitsspeicher (RAM)*
-   Arbeitsspeicherzuweisung an die VM - vorausgewählt ist ein automatisch an den
-   vorhandenen Rechner angepasster Wert. Hier kann man der VM den minimalen oder
-   maximalen RAM zuweisen.
+*Virtueller Arbeitsspeicher (RAM)* Arbeitsspeicherzuweisung an die
+   VM - vorausgewählt ist ein automatisch an den vorhandenen realen
+   Hauptspeicher angepasster Wert. Mit der Auswahl kann man den
+   Hauptspeicher der VM etwas erhöhen oder vermindern.
 
 
-Nach Auswahl einer VM wird die Umgebung automatisch vorbereitet und gestartet.
+Nach Auswahl wird die VM mit dem Button ``Starten!`` gestartet.
