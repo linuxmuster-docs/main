@@ -57,7 +57,7 @@ Betriebsystemeinstellungen
 Unter ``Allgemein``, Reiter Basis muss der Betriebsystemtyp und Version angepasst werden.
 
 Systemanforderungen/Ressourcen
---------------------------
+------------------------------
 
 Unter ``System``, wird konfiguriert, welche Hardware-Ressourcen die VM zur Verfügung gestellt bekommt.
 Je nach Gast sind hier Mindestwerte zu beachten:
