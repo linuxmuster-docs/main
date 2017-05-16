@@ -148,10 +148,12 @@ Basis der VM noch folgende Anpassungen vorzunehmen:
 - (Schrumpfen ???)
 
 Diese Anpassungen unterscheiden sich je nach verwendeten
-Betriebsystem. Anleitungen finden sie beim jeweiligen
-Gastbetriebsystem unter Tipps und Tricks.
+Betriebsystem. Anleitungen finden sie bei "Weitere Informationen zu
+leoclient2" und dem jeweiligen Gastbetriebsystem unter Tipps und
+Tricks.
   
-Danach muss die Basis aktualisiert werden (Siehe folgendes Kapitel: Basis und Snapshots verwalten).
+Danach muss die Basis aktualisiert werden (Siehe folgendes Kapitel:
+Basis und Snapshots verwalten).
 
 
   
