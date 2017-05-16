@@ -380,9 +380,8 @@ Priorität der Möglichkeiten gilt folgende Reihenfolge:
      vorhanden, so wird diese benutzt.
 -    Danach wird die Datei auf dem Server für die VM ``<SERVERDIR>/<MACHINENAME>/network.conf`` ausgewertet (falls vorhanden).
 -    Anschließend wird die lokale Datei für den Snapshot der VM ``<lokaler Maschinenpfad>/network.conf`` ausgewertet (falls vorhanden).
-- Abschließend wird die lokale Datei für die VM ``<lokaler
-     Maschinenpfad>/snapshot-store/<SNAPSHOT>/network.conf``
-     ausgewertet (fals vorhanden).
+- Abschließend wird die lokale Datei für die VM ``<lokaler Maschinenpfad>/snapshot-store/<SNAPSHOT>/network.conf``
+     ausgewertet (falls vorhanden).
 -    Ist keine Datei ``network.conf`` vorhanden, werden alle Netzwerkkarten für die VM deaktiviert.
 
 Fehlersuche - Fehlerbehebung
