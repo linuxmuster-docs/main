@@ -111,7 +111,7 @@ Verbindung zu Tausch-Ordner und USB-Sticks einrichten:
   - einen Laufwerksbuchstabe und Ordner angeben: ``\\vboxsrv\media``
   - ggf. Verknüpfungen auf Desktop ziehen und umbenennen
 
-Drucker einrichten
+PDF-Drucker in der VM einrichten
 
   - Siehe FreePDF-Webseite: http://freepdfxp.de/download_de.html
   - ghostscript Installieren
@@ -171,7 +171,7 @@ Verbindung zu Tausch-Ordnern und USB-Sticks einrichten:
   wiederherstellen".
 - Verknüpfung auf Desktop ziehen und umbenennen in z.B. ``Medien``
 
-Drucker einrichten
+PDF-Drucker in der VM einrichten
 
   - Siehe FreePDF-Webseite: http://freepdfxp.de/download_de.html
   - ghostscript Installieren (9.20)

@@ -4,10 +4,11 @@ Basis und Snapshots verwalten
 Jede virtuelle Maschine besitzt neben der Basis
 ``/PFAD/MASCHINENNAME/MASCHINENNAME.vdi`` einen Standard-Snapshot.
 
-Aufbaund auf diese Basis können weitere Snapshots erzeugt werden.
+Zuerst sollte man eine solide VM-Basis erstellt haben. Da alle darauf
+basierenden weiteren Snapshots unbrauchbar werden, wenn die Basis
+aktualisiert werden muss.
 
-Ebenso kann man die Basis aktualisieren, woraufhin aber alle darauf
-basierenden weiteren Snapshots wieder unbrauchbar werden.
+Aufbauend auf diese Basis können dann weitere Snapshots erzeugt werden.
 
 VM-Basis aktualisieren
 ----------------------

@@ -80,16 +80,8 @@ USB verwenden
 -------------
 
 Sollte man, wie voreingestellt, USB2 verwenden wollen, muss man das
-zur Version von VirtualBox passende Extension Pack installieren. Unter
-Ubuntu 16.04 kann man das Paket ``virtualbox-ext-pack`` passend zur
-installierten Version von VirtualBox nachinstallieren.
+zur Version von VirtualBox passende Extension Pack installieren.
 
-In anderen Linux-Distributionen muss man eventuell das richtige
-Extension Pack manuell herunterladen
-(https://virtualbox.org/wiki/Download_Old_Builds) und installieren (→
-Datei → Globale Einstellungen … → Zusatzpakete → Rechtsklick auf
-rechtes Feld → Paket hinzufügen → auswählen → installieren →
-OK). 
 
 Netzwerk offline
 ----------------
