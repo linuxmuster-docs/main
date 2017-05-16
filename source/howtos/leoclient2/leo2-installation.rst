@@ -21,19 +21,25 @@ Die Pakete werden installiert mit root-Rechten auf dem Linuxclient mit folgenden
    # sudo apt-get update
    # sudo apt-get install leoclient2-leovirtstarter-client leoclient2-vm-printer linuxmuster-client-sudoers
 
-Damit wird ggf. auch das Paket virtualbox-x.y auf dem Linuxclient installiert.
+Virtualbox installieren/updaten
+-------------------------------
+Es wird empfohlen eine aktuelle Version von Virtualbox zu installieren (5.1.22 Mai 2017).
+	  
+Für die Schule kann die PUEL-Version (aktuelles VirtualBox mit Extension pack) installiert werden, die beispielsweise
+USB2 unterstützt (statt USB1.1).
 
-.. todo:: Mit dem aktuellen Default-cloop Linuxclient nachprüfen, ob virtualbox und welches installiert ist und wie man ein aktuelleres installieren kann.
-	  
-Virtualbox updaten
-------------------
-Es wird empfohlen eine aktuelle Version von Virtualbox zu installieren (5.1.22 beim schreiben dieser Zeilen).
-	  
-Die Anleitung dazu findet sich unter
+Die Anleitung zur Installation findet sich unter
 https://www.virtualbox.org/wiki/Linux_Downloads im Bereich ''Debian-based Linux distributions''.
 
-Für die Schule kann die PUEL-Version installiert werden, die beispielsweise
-USB2 unterstützt (statt USB1.1).
+In Kürze das Vorgehen für Ubuntu 16.04/xenial:
+
+1. apt-get install dkms
+
+2. Schlüssel laden, Quellen eintagen, apt-get update
+
+3. apt-get install virtualbox-5.1
+
+4. Extension-Pack downloaden, installieren
 
 
 Benutzer-Rechte anpassen
