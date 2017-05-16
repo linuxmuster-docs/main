@@ -1,4 +1,4 @@
-Snapshots und Basis verwalten
+Basis und Snapshots verwalten
 =============================
 
 Jede virtuelle Maschine besitzt neben der Basis
@@ -9,8 +9,8 @@ Aufbaund auf diese Basis können weitere Snapshots erzeugt werden.
 Ebenso kann man die Basis aktualisieren, woraufhin aber alle darauf
 basierenden weiteren Snapshots wieder unbrauchbar werden.
 
-VM-Basis erneuern
------------------
+VM-Basis aktualisieren
+----------------------
 
 Mit Hilfe des Skripts ``leoclient2-base-snapshot-renew`` wird der
 aktuelle Zustand der virtuellen Maschine zur neuen Basis.

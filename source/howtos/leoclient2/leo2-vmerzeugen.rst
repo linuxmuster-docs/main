@@ -64,8 +64,8 @@ Je nach Gast sind hier Mindestwerte zu beachten:
 
 Win10 (Beispielhaft):
 
-- Hauptspeicher 4096 MB (System -> Hauptplatine)
-- 4 CPU's (System -> Prozessor)
+- Hauptspeicher 2048 MB (System -> Hauptplatine)
+- 2 CPU's (System -> Prozessor)
 - 64 MB Grafikspeicher (System -> Bildschirm)
  
 DVD-Laufwerk
@@ -136,3 +136,22 @@ Nach Beenden von Virtualbox wird die VM für den Start mit dem Programm
    Wenn Sie die vollständige virtuelle Maschine in ein anderes Verzeichnis
    umziehen wollen, starten Sie das Script 'leoclient2-vm-move'.
 						
+Weitere Schritte
+----------------
+
+Nachdem das Betriebsystem installiert ist, ist es sinnvoll in der
+Basis der VM noch folgende Anpassungen vorzunehmen:
+
+- Installation der Gasterweiterungen in der VM
+- Verbinden der Netzlaufwerke in der VM
+- Einrichten eines PDF-Druckers in der VM
+- (Schrumpfen ???)
+
+Diese Anpassungen unterscheiden sich je nach verwendeten
+Betriebsystem. Anleitungen finden sie beim jeweiligen
+Gastbetriebsystem unter Tipps und Tricks.
+  
+Danach muss die Basis aktualisiert werden (Siehe folgendes Kapitel: Basis und Snapshots verwalten).
+
+
+  
