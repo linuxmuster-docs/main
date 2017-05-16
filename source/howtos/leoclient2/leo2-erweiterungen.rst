@@ -148,8 +148,8 @@ Verbindung zu Tausch-Ordnern und USB-Sticks einrichten:
 - Laufwerksbuchstabe (Üblicherweise ``M:``) und Pfad nennen: ``\\vboxsrv\media``
 - Verknüpfung auf Desktop ziehen und umbenennen
 
-VM Windows 10 – Tipps und Tricks
--------------------------------
+VM Windows 10 - Tipps und Tricks
+--------------------------------
 
 Bei der Installation kommen komische Fehlermeldungen, wenn nicht mindestens 2 CPU und 2096MB RAM vorhanden sind.
 
