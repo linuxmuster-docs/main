@@ -103,8 +103,14 @@ Auf dem Standard-Linux-Client gelingt dies mit Hilfe der
 
 .. code-block:: console
 
-   # linuxmuster-client-extras-setup --type login --on /usr/bin/run-vm-printer2-splitter --order 060
-   # linuxmuster-client-extras-setup --type login --on /usr/bin/run-vm-printer2-spooler --order 070
+   # linuxmuster-client-extras-setup --type login --on /usr/bin/run-vm-printer2-splitter
+   # linuxmuster-client-extras-setup --type login --on /usr/bin/run-vm-printer2-spooler
+   
+Überprüft werden kann das mit
+
+.. code-block:: console
+
+   # linuxmuster-client-extras-setup --type login -i
 
 Ohne den Standard-Linux-Client kann man mit folgenden Befehlen einen
 ähnlichen Effekt erzielen:
