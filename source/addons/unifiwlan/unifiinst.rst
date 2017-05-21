@@ -63,6 +63,8 @@ Der Rechner muss upgedatet, die Paketquellen müssen ergänzt und das Unifi-Pake
 Schritt für Schritt
 -------------------
 
+Die englische Anleitung von Unifi finden Sie `hier <https://help.ubnt.com/hc/en-us/articles/220066768-UniFi-How-to-Install-Update-via-APT-on-Debian-or-Ubuntu>`_.
+
 Melden Sie sich an.
 
 öffnen Sie eine root-shell mit `sudo -i`
@@ -79,7 +81,7 @@ Editieren Sie die Datei `/etc/apt/sources.list` und fügen Sie die folgende Zeil
 
 ::
 
-  deb http://www.ubnt.com/downloads/unifi/debian unifi5 ubiquiti
+  deb http://www.ubnt.com/downloads/unifi/debian stable ubiquiti
 
 Fügen Sie den GPG-key hinzu:
 

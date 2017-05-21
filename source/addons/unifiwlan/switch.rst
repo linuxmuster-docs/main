@@ -1,7 +1,7 @@
 Der Switch
 ==========
 
-In der hier vorgestellten Lösung wird ein Cisco SG300-10 Switch verwandet. Die Überlegungen lassen sich aber leicht auf andere Switches übertragen.
+In der hier vorgestellten Lösung wird ein Cisco SG300-10 Switch verwandt. Die Überlegungen lassen sich aber leicht auf andere Switches übertragen.
 
 Grundsätzliches
 ---------------
