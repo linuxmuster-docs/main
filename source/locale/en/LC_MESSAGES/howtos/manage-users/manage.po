@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-26 19:52+0700\n"
+"POT-Creation-Date: 2017-06-03 11:23+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2017\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,64 +20,68 @@ msgstr ""
 
 #: ../../source/howtos/manage-users/manage.rst:3
 msgid "Anlegen, Versetzen und Löschen von Benutzern"
-msgstr ""
+msgstr "Create, move, and delete users"
 
 #: ../../source/howtos/manage-users/manage.rst:29
 msgid ""
 "Um Benutzer neu aufzunehmen, zu versetzen oder zu löschen müssen die "
 "folgenden Schritte nacheinander ausgeführt werden:"
-msgstr ""
+msgstr "To resume, move, or delete users, follow these steps:"
 
 #: ../../source/howtos/manage-users/manage.rst:32
 msgid "Schüler und Lehrerliste aus dem Schulverwaltungsprogramm exportieren."
-msgstr ""
+msgstr "Export students and teachers from the school administration program."
 
 #: ../../source/howtos/manage-users/manage.rst:33
 msgid ""
 "Die Benutzerlisten auf dem Server aktualisieren. Dazu gehört im Einzelnen:"
-msgstr ""
+msgstr "Update the user lists on the server. This includes in particular:"
 
 #: ../../source/howtos/manage-users/manage.rst:35
 msgid "die Schülerliste in das System übertragen,"
-msgstr ""
+msgstr "The student list is transferred to the system,"
 
 #: ../../source/howtos/manage-users/manage.rst:36
 msgid "die Änderungen bei den Lehrern einzeln eingeben,"
-msgstr ""
+msgstr "enter the teachers' individual changes,"
 
 #: ../../source/howtos/manage-users/manage.rst:37
 msgid ""
 "evtl. eine Extraliste für Gast- und Kooperationsschüler, die nicht in das "
 "Schulverwaltungsprogramm aufgenommen werden, pflegen,"
 msgstr ""
+"Possibly an extra list for guest and cooperation pupils who are not included"
+" in the school management program,"
 
 #: ../../source/howtos/manage-users/manage.rst:38
 msgid "evtl. eine Extraliste für Kurse mit schulfremden Teilnehmern pflegen."
 msgstr ""
+"Possibly maintain an extra list for courses with outside participants."
 
 #: ../../source/howtos/manage-users/manage.rst:40
 msgid ""
 "Alle Benutzerlisten auf Fehleingaben, oder Ähnlichkeiten mit vorhandenen "
 "Benutzern prüfen."
 msgstr ""
+"Check all user lists for error inputs, or similarities with existing users."
 
 #: ../../source/howtos/manage-users/manage.rst:41
 msgid "Danach evtl. die Benutzerlisten entsprechend korrigieren."
-msgstr ""
+msgstr "Danach evtl. die Benutzerlisten entsprechend korrigieren."
 
 #: ../../source/howtos/manage-users/manage.rst:42
 msgid ""
 "Benutzerdaten übernehmen, d.h. Benutzer jetzt tatsächlich anlegen, versetzen"
 " oder löschen"
-msgstr ""
+msgstr "Apply user data, i.e. create, move, or delete users"
 
 #: ../../source/howtos/manage-users/manage.rst:43
 msgid "Passwortlisten bzw. Anmeldekärtchen ausdrucken"
-msgstr ""
+msgstr "Print out password lists or login cards"
 
 #: ../../source/howtos/manage-users/manage.rst:47
 msgid "Änderung von Benutzerdaten"
-msgstr ""
+msgstr "Change user data"
 
 #: ../../source/howtos/manage-users/manage.rst:49
 msgid ""
@@ -85,16 +90,22 @@ msgid ""
 "Hilfe erhalten Sie eine Übersicht mit einer kurzen Beschreibung der "
 "Vorgehensweise zum Anlegen, Versetzen und Löschen von Benutzern:"
 msgstr ""
+"If you are logged on to *school console* as an administrator, you will get "
+"the following menu items under the *Users* heading, the pending help gives "
+"you an overview with a brief description of how to create, move and delete "
+"users:"
 
 #: ../../source/howtos/manage-users/manage.rst:53
 msgid ""
 "Diese Vorgänge zum Aufnehmen, Versetzen und Löschen von Benutzern können "
 "beliebig oft im Verlauf eines Schuljahres durchgeführt werden."
 msgstr ""
+"These operations for recording, moving, and deleting users can be performed "
+"as often as necessary during a school year."
 
 #: ../../source/howtos/manage-users/manage.rst:58
 msgid "Export von Schüler- und Lehrerliste aus dem Schulverwaltungsprogramm"
-msgstr ""
+msgstr "Export of student and teacher list from the school management program"
 
 #: ../../source/howtos/manage-users/manage.rst:60
 msgid ""
@@ -103,10 +114,14 @@ msgid ""
 "die Daten mit dem benötigten Datensatzformat untereinander in eine Textdatei"
 " geschrieben. Für die Schülerliste gilt folgendes Format:"
 msgstr ""
+"Most school administration programs offer the possibility to export a list "
+"of students and teachers for the *linuxmuster.net*. The data with the "
+"required data format is written into a text file. The following format "
+"applies to the student list:"
 
 #: ../../source/howtos/manage-users/manage.rst:62
 msgid "``Klasse;Nachname;Vorname;Geburtsdatum;Nr;``"
-msgstr ""
+msgstr "``Class;last name;first name;date of birth;no;``"
 
 #: ../../source/howtos/manage-users/manage.rst:64
 msgid ""
@@ -117,10 +132,15 @@ msgid ""
 "usw. erheblich erleichtert. Falls die Nummer nicht vorhanden ist, besteht "
 "jede Zeile nur aus den 4 Feldern"
 msgstr ""
+"The last field is optional. It contains the student number clearly assigned "
+"in the school management program. If it is present, it is essential that you"
+" take over the identification of the correct data set for transfers, name "
+"changes etc. If the number does not exist, each line consists of the 4 "
+"fields only."
 
 #: ../../source/howtos/manage-users/manage.rst:66
 msgid "``Klasse;Nachname;Vorname;Geburtsdatum;``"
-msgstr ""
+msgstr "``Class;last name;first name;date of birth;``"
 
 #: ../../source/howtos/manage-users/manage.rst:68
 msgid ""
@@ -128,6 +148,9 @@ msgid ""
 "Musterlösung vorsieht, können die Daten meist unter Angabe der benötigten "
 "Felder und mit dem Semikolon als Trennzeichen exportiert werden."
 msgstr ""
+"Even if your school administration program does not provide direct output "
+"for the sample solution, the data can usually be exported with the required "
+"fields and with the semicolon as a separator."
 
 #: ../../source/howtos/manage-users/manage.rst:70
 msgid ""
@@ -135,10 +158,13 @@ msgid ""
 "unter :ref:`schulkonsole-einstellungen` **vor dem ersten Import** einstellen"
 " muss. [#f1]_"
 msgstr ""
+"It is also important to know the encoding since you have to set it in the "
+"school console at :ref:`schulkonsole-einstellungen` **before the first "
+"import** [#f1]_."
 
 #: ../../source/howtos/manage-users/manage.rst:73
 msgid "Pflege der Schülerdatei"
-msgstr ""
+msgstr "Maintain student file"
 
 #: ../../source/howtos/manage-users/manage.rst:77
 msgid ""
@@ -148,6 +174,11 @@ msgid ""
 "Verzeichnis ``/etc/sophomorix/user``. Dort befinden sich alle Benutzer- und "
 "Konfigurationsdateien von *Sophomorix.*"
 msgstr ""
+"You can select the file from the school management program by clicking on "
+"*Browse* and copy it to the server by *uploading*. It is automatically "
+"renamed and is located as file ``schueler.txt`` in the directory "
+"``/etc/sophomorix/user/``. There are all user and configuration files for "
+"*Sophomorix*."
 
 #: ../../source/howtos/manage-users/manage.rst:79
 msgid ""
@@ -157,6 +188,10 @@ msgid ""
 "Datei aus dem Schulverwaltungsprogramm Ihre Änderungen wieder überschrieben "
 "werden."
 msgstr ""
+"In the *Edit* section, you can edit the file schueler.txt, and then click "
+"*Apply changes*, but you should only use it in exceptional cases, since you "
+"will overwrite your changes by importing a new file from the school "
+"administration program."
 
 #: ../../source/howtos/manage-users/manage.rst:81
 msgid ""
@@ -164,6 +199,9 @@ msgid ""
 "Sekretariat z.B. mit Hilfe des *Report für das Sekretariat*, damit die Daten"
 " dort korrigiert werden. Spielen Sie die geänderte Datei dann neu ein."
 msgstr ""
+"If data need to be corrected, please provide feedback to the secretariat, "
+"e.g. with the *report for the secretariat*, so that the data can be "
+"corrected there. Then re-apply the modified file."
 
 #: ../../source/howtos/manage-users/manage.rst:83
 msgid ""
@@ -171,10 +209,13 @@ msgid ""
 "Schulverwaltungsprogramm aufgenommen werden, so verwenden Sie dazu die Datei"
 " ``extraschueler.txt``, die Sie über *Extralisten pflegen* editieren können."
 msgstr ""
+"If you want to enter additional students who are not included in the school "
+"management program, use the file ``extraschueler.txt`` which can be edited "
+"by *Maintaining extra lists*."
 
 #: ../../source/howtos/manage-users/manage.rst:86
 msgid "Pflege der Lehrerdatei"
-msgstr ""
+msgstr "Maintain teacher file"
 
 #: ../../source/howtos/manage-users/manage.rst:88
 msgid ""
@@ -183,16 +224,22 @@ msgid ""
 "ergänzt. Der Klassenname ist für alle Lehrer *lehrer*, somit ist das Format "
 "der Datei ``lehrer.txt``:"
 msgstr ""
+"Teachers have the option to specify a desired login name. The data set from "
+"the school management program is therefore supplemented by one field. The "
+"class name is *teacher* for all teachers, so the format of the file "
+"``lehrer.txt`` is:"
 
 #: ../../source/howtos/manage-users/manage.rst:90
 msgid "``lehrer;Nachname;Vorname;Geburtsdatum;Wunschlogin;``"
-msgstr ""
+msgstr "``teacher;surname;first name;date of birth;login name;``"
 
 #: ../../source/howtos/manage-users/manage.rst:92
 msgid ""
 "Außerdem werden von *Sophomorix* noch die für einzelne Lehrer gesondert "
 "eingegebenen Quotas hinten angehängt."
 msgstr ""
+"In addition *Sophomorix* the separately entered quotas for individual "
+"teachers are attached at the back."
 
 #: ../../source/howtos/manage-users/manage.rst:94
 msgid ""
@@ -200,6 +247,9 @@ msgid ""
 "derjenigen aus dem Schulverwaltungsprogramm zu überspielen, da Sie dann für "
 "alle Lehrer *Wunschlogin* und *Sonderquota* wieder neu eingeben müssten."
 msgstr ""
+"For this reason it makes no sense to overwrite an existing teacher file with"
+" the one from the school administration program, since you would then have "
+"to enter again the *login name* and the *special quota* for all teachers."
 
 #: ../../source/howtos/manage-users/manage.rst:96
 msgid ""
@@ -210,6 +260,11 @@ msgid ""
 "vorhandenen Lehrer zu editieren, wobei Sie den Loginnamen, der unter Kürzel "
 "steht, nicht ändern können:"
 msgstr ""
+"In the school console you will only have the opportunity to upload a file on"
+" the server if there is no file ``lehrer.txt``. If a file ``lehrer.txt`` "
+"already exists in the system, the section *Import file* is omitted and you "
+"only have the option to edit existing teachers, where you can not change the"
+" login name."
 
 #: ../../source/howtos/manage-users/manage.rst:100
 msgid ""
@@ -217,22 +272,28 @@ msgid ""
 "damit die geänderten Daten in die Datei ``lehrer.txt`` übernommen werden. "
 "[#f2]_"
 msgstr ""
+"Once you have made any changes, you must click *Apply changes* so that the "
+"changed data is transferred to the ``lehrer.txt`` file. [#f2]_"
 
 #: ../../source/howtos/manage-users/manage.rst:103
 msgid ""
 "Unterhalb des Abschnitts *Lehrer hinzufügen* finden Sie noch zwei weitere "
 "Abschnitte, um Lehrer zu editieren oder zu entfernen:"
 msgstr ""
+"Below the *Add Teacher* section, there are two more sections to edit or "
+"remove teachers:"
 
 #: ../../source/howtos/manage-users/manage.rst:105
 msgid ""
 "Auch hier gilt wieder: *Änderungen übernehmen* schreibt die Änderungen in "
 "die ``lehrer.txt``, vollzieht sie aber noch nicht im System."
 msgstr ""
+"Again, the following applies: *Apply changes* writes the changes to the "
+"``lehrer.txt``, but does not yet add them in the system."
 
 #: ../../source/howtos/manage-users/manage.rst:109
 msgid "Pflege der Extraschüler und Extrakurse"
-msgstr ""
+msgstr "Maintain extra students and extra courses"
 
 #: ../../source/howtos/manage-users/manage.rst:111
 msgid ""
@@ -240,6 +301,9 @@ msgid ""
 "aufgenommen sind, gibt es für den administrator in der *Schulkonsole* unter "
 "der Rubrik *Benutzer* den Unterpunkt *Extralisten pflegen*:"
 msgstr ""
+"To manage students who are not enrolled in the school administration "
+"program, the administrator can maintain them in the *school console* under "
+"the *Users* section → *Maintain extra students*:"
 
 #: ../../source/howtos/manage-users/manage.rst:113
 msgid ""
@@ -248,10 +312,14 @@ msgid ""
 "Editierfenster erläutert und dieselbe wie bei der Schülerdatei, ergänzt um "
 "ein Feld für einen Wunschanmeldenamen:"
 msgstr ""
+"In the *Edit Extra students* section, students can be entered from "
+"cooperation schools or exchange / guest students. The syntax is explained at"
+" the top of the edit window and is the same as for the student file, "
+"supplemented by a field for a desired login name:"
 
 #: ../../source/howtos/manage-users/manage.rst:115
 msgid "``Klasse;Nachname;Vorname;Geburtsdatum;Wunschlogin;``"
-msgstr ""
+msgstr "``class;surname;first name;date of birth;login name;``"
 
 #: ../../source/howtos/manage-users/manage.rst:117
 msgid ""
@@ -262,6 +330,11 @@ msgid ""
 "soll. Bei neuen Gruppennamen, wird auch ein neues Klassentauschverzeichnis "
 "angelegt."
 msgstr ""
+"The name for the class is freely selectable, eg: *coop* (for cooperation) or"
+" *ex* (for exchange). However, the **existing** class names can also be "
+"used, especially for co-op students. This is important if access to the "
+"class repository is to be enabled. For new group names, a new class exchange"
+" directory is created."
 
 #: ../../source/howtos/manage-users/manage.rst:121
 msgid ""
@@ -271,11 +344,16 @@ msgid ""
 "*Änderungen speichern* werden die geänderten Daten in die Datei "
 "``/etc/sophomorix/user/extraschueler.txt`` übernommen."
 msgstr ""
+"Here, some pupils were admitted without a desired login name, partly to "
+"grade 12 (*12*), and partly to an extra group *at* (exchange pupil), who "
+"thus have their own shared directory. By clicking *Save Changes*, the "
+"modified data will be copied to the file "
+"``/etc/sophomorix/user/extraschueler.txt``."
 
 #: ../../source/howtos/manage-users/manage.rst:123
 msgid ""
 "Unterhalb von *Extraschüler editieren* befindet sich *Extrakurse editieren.*"
-msgstr ""
+msgstr "Below *Edit Extras Students* is *Edit Extra courses*"
 
 #: ../../source/howtos/manage-users/manage.rst:125
 msgid ""
@@ -284,16 +362,21 @@ msgid ""
 "Passwort generiert werden. Die Syntax ergibt sich aus der Beschreibung oben "
 "im Editierfenster."
 msgstr ""
+"For teacher trainings with foreign teachers, time-limited guest accounts can"
+" be generated here for an entire course with a uniform password. The syntax "
+"follows from the description above in the edit window."
 
 #: ../../source/howtos/manage-users/manage.rst:127
 msgid ""
 "Mit *Änderungen übernehmen* werden die geänderten Daten in die Datei "
 "``/etc/sophomorix/user/extrakurse.txt`` geschrieben."
 msgstr ""
+"With *Apply changes*, the changed data is written to the file "
+"``/etc/sophomorix/user/extrakurse.txt``."
 
 #: ../../source/howtos/manage-users/manage.rst:130
 msgid "Übernahme geänderter Daten in das System"
-msgstr ""
+msgstr "Transfer of changed data into the system"
 
 #: ../../source/howtos/manage-users/manage.rst:132
 msgid ""
@@ -302,10 +385,13 @@ msgid ""
 "ist. Nachdem man alle gewünschten Änderungen vorgenommen hat, geschieht das "
 "''in einem Rutsch''."
 msgstr ""
+"Due to the changes to the files, the users are **not yet** transferred to "
+"the system, since this process can be quite time-consuming. After making all"
+" the desired changes, you an apply all changes all at once."
 
 #: ../../source/howtos/manage-users/manage.rst:135
 msgid "Benutzerlisten prüfen"
-msgstr ""
+msgstr "Check user lists"
 
 #: ../../source/howtos/manage-users/manage.rst:137
 msgid ""
@@ -313,22 +399,24 @@ msgid ""
 "*Benutzerlisten prüfen* werden alle Dateien [#f3]_ von sophomorix-check "
 "daraufhin überprüft,"
 msgstr ""
+"Using the *Check user list* checkbox in the *Check user lists* submenu, all "
+"files [#f3]_ are checked by sophomorix-check."
 
 #: ../../source/howtos/manage-users/manage.rst:139
 msgid "ob die Geburtsdaten im Rahmen der Vorgaben liegen,"
-msgstr ""
+msgstr "Whether the birth data are within the framework of the guidelines,"
 
 #: ../../source/howtos/manage-users/manage.rst:140
 msgid "ob die Benutzer schon im System vorhanden sind,"
-msgstr ""
+msgstr "Whether the users already exist in the system,"
 
 #: ../../source/howtos/manage-users/manage.rst:141
 msgid "ob abgegangene Schüler gelöscht werden sollen, oder"
-msgstr ""
+msgstr "Whether or not students who are leaving are deleted; or"
 
 #: ../../source/howtos/manage-users/manage.rst:142
 msgid "ob Benutzer ähnlichen Namens zum Entfernen vorgesehen sind."
-msgstr ""
+msgstr "Whether users of similar names are provided for removal."
 
 #: ../../source/howtos/manage-users/manage.rst:144
 msgid ""
@@ -337,38 +425,45 @@ msgid ""
 " mit dem dann neu ausgewiesenen Link *Benutzerdaten übernehmen* gleich "
 "weitergehen:"
 msgstr ""
+"After the checks finished, a log is output from which further information "
+"can be found. In addition, in the case of success with the then displayed "
+"link *Apply user data* can proceed immediately:"
 
 #: ../../source/howtos/manage-users/manage.rst:146
 msgid ""
 "Beim Überprüfen der Benutzerlisten werden intern alle Datensätze aus den "
 "vier Dateien sortiert in Benutzer,"
 msgstr ""
+"When verifying the user lists, all the records from the four files are "
+"sorted internally into users,"
 
 #: ../../source/howtos/manage-users/manage.rst:148
 msgid "die neu angelegt werden sollen,"
-msgstr ""
+msgstr "Which are to be newly created,"
 
 #: ../../source/howtos/manage-users/manage.rst:149
 msgid "die unverändert bleiben sollen,"
-msgstr ""
+msgstr "Which should remain unchanged,"
 
 #: ../../source/howtos/manage-users/manage.rst:150
 msgid "die in eine andere Klasse versetzt werden sollen,"
-msgstr ""
+msgstr "Which should be moved to another class,"
 
 #: ../../source/howtos/manage-users/manage.rst:151
 msgid "die entfernt werden sollen und solche,"
-msgstr ""
+msgstr "Which are to be removed,"
 
 #: ../../source/howtos/manage-users/manage.rst:152
 msgid ""
 "die daraufhin überprüft werden sollen, ob sie mit kleinen Abweichungen "
 "anderen entsprechen, die aus dem System gelöscht werden sollen."
 msgstr ""
+"Which are then to be checked to determine whether they correspond to others "
+"with minor deviations, which are to be deleted from the system."
 
 #: ../../source/howtos/manage-users/manage.rst:157
 msgid "Benutzerdaten übernehmen"
-msgstr ""
+msgstr "Apply User data"
 
 #: ../../source/howtos/manage-users/manage.rst:159
 msgid ""
@@ -379,6 +474,11 @@ msgid ""
 "Unterpunkt *Benutzerdaten übernehmen* bekommt man die Benutzer angezeigt, "
 "die zum Anlegen, Versetzen und Löschen vorgesehen sind:"
 msgstr ""
+"If the point *Check user list* has been successfully passed, the data can "
+"now be transferred to the system, that is, The new users are created "
+"(sophomorix-add), or moved (sophomorix-move) or removed (sophomorix-kill). "
+"Under the submenu *Apply user data* you can see the users who are set up for"
+" creating, moving and deleting:"
 
 #: ../../source/howtos/manage-users/manage.rst:161
 msgid ""
@@ -387,22 +487,29 @@ msgid ""
 "anlegen/versetzen/löschen.* Man kann jedoch auch die Operationen einzeln "
 "ausführen lassen."
 msgstr ""
+"In the normal case, all three actions will be executed one after the other "
+"by clicking on the *Create / move / delete / delete user* button. You can "
+"also execute the operations individually."
 
 #: ../../source/howtos/manage-users/manage.rst:165
 msgid ""
 "In obigem Beispiel würden zwei Benutzer neu angelegt. Während der "
 "Bearbeitung werden die laufenden Systemmeldungen ausgegeben."
 msgstr ""
+"In the above example, two users would be newly created. The running system "
+"messages are output during the processing."
 
 #: ../../source/howtos/manage-users/manage.rst:170
 msgid "Benutzer anlegen"
-msgstr ""
+msgstr "Create user"
 
 #: ../../source/howtos/manage-users/manage.rst:172
 msgid ""
 "Beim Anlegen wird jedem neuen Benutzer ein Benutzername (Loginname) und eine"
 " Gruppe, zu der er gehört und deren Rechte er hat, zugewiesen."
 msgstr ""
+"On creation, each new user is assigned a user name (loginname) and a group "
+"to which he belongs and whose rights he has."
 
 #: ../../source/howtos/manage-users/manage.rst:174
 msgid ""
@@ -416,6 +523,13 @@ msgid ""
 "Benutzername bereits vorhanden, wird an den zweiten sonst gleichen "
 "Benutzernamen eine 1 angehängt."
 msgstr ""
+"The username is usually given in the form of \"six letters of the last name "
+"plus two letters of the first name\" (in the case of a shorter surname, less"
+" letters). When the users are created, special characters are rewritten, "
+"that is, Ä, ö, ü and ß becomes ae, oe, ue and ss. For teachers, the desired "
+"login name is already defined in the file ``teacher.txt``. The date of birth"
+" is used to distinguish between users of the same name. If the username "
+"already exists, a 1 is attached to the second otherwise same user name."
 
 #: ../../source/howtos/manage-users/manage.rst:176
 msgid ""
@@ -424,20 +538,25 @@ msgid ""
 "Dieser Bezeichner wird als primäre Gruppe verwendet. Alle Lehrer gehören der"
 " Gruppe ``teachers`` an."
 msgstr ""
+"In the *linuxmuster.net*, each student is assigned a class as a group. The "
+"class identifier is arbitrary but limited to 8 characters. This identifier "
+"is used as the primary group. All teachers belong to the group ``teachers``."
 
 #: ../../source/howtos/manage-users/manage.rst:178
 msgid ""
 "Jeder neue Benutzer bekommt ein Passwort zugewiesen und erhält die "
 "angegebenen Standardquota."
 msgstr ""
+"Each new user is assigned a password and receives the specified default "
+"quota."
 
 #: ../../source/howtos/manage-users/manage.rst:180
 msgid "Dies alles wird von ``sophomorix-add`` erledigt."
-msgstr ""
+msgstr "This is all done by ``sophomorix-add``."
 
 #: ../../source/howtos/manage-users/manage.rst:183
 msgid "Benutzer versetzen"
-msgstr ""
+msgstr "Move Users"
 
 #: ../../source/howtos/manage-users/manage.rst:185
 msgid ""
@@ -445,10 +564,13 @@ msgid ""
 "Schulverwaltungsprogramm die neuen Klassen angegeben. ``sophomorix-move`` "
 "versetzt diese Schüler automatisch in die neuen Klassen."
 msgstr ""
+"For the new school year, the new classes are indicated for the student data "
+"from the school management program. ``sophomorix-move`` automatically places"
+" these students in the new classes."
 
 #: ../../source/howtos/manage-users/manage.rst:187
 msgid "Beim Versetzen bzw. Löschen ist folgende Besonderheit zu beachten:"
-msgstr ""
+msgstr "The following peculiarities must be observed when moving or deleting:"
 
 #: ../../source/howtos/manage-users/manage.rst:189
 msgid ""
@@ -457,26 +579,33 @@ msgid ""
 "gelöscht, sondern er wird auf den Dachboden (Gruppe attic) geschoben und "
 "bekommt den Status"
 msgstr ""
+"If a user's record is no longer present in the associated text file (for "
+"example, students in the student.txt), it is not deleted immediately, but is"
+" moved to the attic group and gets the status"
 
 #: ../../source/howtos/manage-users/manage.rst:191
 msgid "``T`` (tolerated)."
-msgstr ""
+msgstr "``T`` (tolerated)."
 
 #: ../../source/howtos/manage-users/manage.rst:193
 msgid ""
 "Ab sofort wird der Benutzer nur noch geduldet, d.h. er kann sich noch "
 "anmelden, hat aber keinen Zugriff mehr auf sein Klassentauschverzeichnis."
 msgstr ""
+"From now on, the user is only tolerated. He can still log on, but he has no "
+"access to his class exchange directory."
 
 #: ../../source/howtos/manage-users/manage.rst:195
 msgid ""
 "Ist der *Duldungszeitraum* abgelaufen, bekommt er nach dem nächsten "
 "Überprüfen der Benutzerdaten den Status"
 msgstr ""
+"If the *toleration period* has elapsed, it gets the status after the next "
+"user data is verified"
 
 #: ../../source/howtos/manage-users/manage.rst:197
 msgid "``D`` (disabled)."
-msgstr ""
+msgstr "``D`` (disabled)."
 
 #: ../../source/howtos/manage-users/manage.rst:199
 msgid ""
@@ -486,20 +615,23 @@ msgid ""
 "Reaktivierungszeitraum beendet, wird der Benutzer mit dem nächsten "
 "*Benutzerdaten überprüfen* durch Vergabe des Status"
 msgstr ""
+"Now the *reactivation period* starts, the user can not log on now. However, "
+"his data are not yet deleted. If the reactivation period is terminated, the "
+"user will check with the next *user data* by assigning the status"
 
 #: ../../source/howtos/manage-users/manage.rst:201
 msgid "``R`` (removable)"
-msgstr ""
+msgstr "``R`` (removable)"
 
 #: ../../source/howtos/manage-users/manage.rst:203
 msgid ""
 "zum Löschen freigegeben und beim nächsten Aufruf von *Löschen* ``sophomorix-"
 "kill`` tatsächlich gelöscht."
-msgstr ""
+msgstr "To be cleared and deleted the next time you run ``sophomorix-kill``."
 
 #: ../../source/howtos/manage-users/manage.rst:206
 msgid "Benutzer löschen"
-msgstr ""
+msgstr "Delete user"
 
 #: ../../source/howtos/manage-users/manage.rst:208
 msgid ""
@@ -507,10 +639,12 @@ msgid ""
 "mitsamt ihren Daten aus dem System entfernt und können nicht wieder "
 "zurückgeholt werden."
 msgstr ""
+"If you select *Delete user*, users marked with a checkmark are removed from "
+"the system together with their data and can not be retrieved."
 
 #: ../../source/howtos/manage-users/manage.rst:211
 msgid "Berichte"
-msgstr ""
+msgstr "Reports"
 
 #: ../../source/howtos/manage-users/manage.rst:213
 msgid ""
@@ -519,12 +653,17 @@ msgid ""
 "versehen mit dem Hinweis *Teach-in* aufzurufen, was über *Benutzerlisten "
 "prüfen* gemacht werden kann."
 msgstr ""
+"In the *Reports* sub-item you will find a log of the last run *Create / move"
+" and delete* in the *Administrator report* with the note *Teach-in* which "
+"can be made via *Check user lists*."
 
 #: ../../source/howtos/manage-users/manage.rst:216
 msgid ""
 "Unter *Protokoll für das Sekretariat* finden Sie Angaben zu Datensätzen, die"
 " nicht den Vorgaben von *Sophomorix* entsprechen."
 msgstr ""
+"Under *Protocol for the Secretariat*, you will find information on records "
+"that do not meet the requirements of *Sophomorix*."
 
 #: ../../source/howtos/manage-users/manage.rst:218
 msgid ""
@@ -532,6 +671,9 @@ msgid ""
 " Datei neu exportiert und wieder ins System übernommen werden. (Nicht von "
 "Hand editieren unter *Schülerliste pflegen*!)"
 msgstr ""
+"These errors should be corrected in the school management program, then re-"
+"exported and re-imported into the system. (Do not manually edit under "
+"*Maintain student list*!)"
 
 #: ../../source/howtos/manage-users/manage.rst:220
 msgid ""
@@ -542,10 +684,15 @@ msgid ""
 "*LibreOffice* der Zeichensatz geändert werden (z.B. auf *utf8*). Danach "
 "sollte dann die Übertragung problemlos möglich sein."
 msgstr ""
+"If it should be found here that the umlauts and special characters, e.g. É, "
+"have not been adopted correctly, this is probably due to differently set "
+"character sets of the participating PCs. Then, e.g. by opening the file "
+"``schueler.txt`` as *csv* -file in *LibreOffice* and reset the character set"
+" (e.g. *utf8*). Then the transmission should be possible without problems."
 
 #: ../../source/howtos/manage-users/manage.rst:226
 msgid "Benutzer reaktivieren"
-msgstr ""
+msgstr "Reactivate user"
 
 #: ../../source/howtos/manage-users/manage.rst:228
 msgid ""
@@ -555,24 +702,30 @@ msgid ""
 "Benutzer vom Dachboden wieder vollwertig in das System zurückgeholt "
 "(reaktiviert) werden, indem man folgende Schritte nacheinander ausführt."
 msgstr ""
+"If students or teachers who already have a user name are no longer listed in"
+" the user lists, they are moved to the **attic**. If the removal from the "
+"user lists was an oversight, users from the attic can be fully restored "
+"(reactivated) to the system by performing the following steps one at a time."
 
 #: ../../source/howtos/manage-users/manage.rst:231
 msgid "Die Benutzer werden wieder in die Benutzerlisten eingetragen,"
-msgstr ""
+msgstr "The users are entered again into the user lists,"
 
 #: ../../source/howtos/manage-users/manage.rst:232
 msgid "*Benutzer* -> *Benutzerlisten prüfen*,"
-msgstr ""
+msgstr "*Users* → *Check user lists*"
 
 #: ../../source/howtos/manage-users/manage.rst:233
 msgid "*Benutzer* -> *Benutzerdaten übernehmen* -> *Benutzer versetzen*."
-msgstr ""
+msgstr "*Users* → *Apply user data* → *Move users*"
 
 #: ../../source/howtos/manage-users/manage.rst:235
 msgid ""
 "Danach können sich die Benutzer wieder anmelden und haben wieder alle ihre "
 "Daten im *Home-* und den *Tausch-Verzeichnissen* zur Verfügung."
 msgstr ""
+"Afterwards, the users can log on again and have all their data in the *Home*"
+" and the *Exchange directories* available."
 
 #: ../../source/howtos/manage-users/manage.rst:238
 msgid ""
@@ -582,13 +735,19 @@ msgid ""
 "werden. Eine Kontrolle der Umlaute ist ein gutes Indiz für die richtig "
 "eingestellte Kodierung."
 msgstr ""
+"The encoding can also be changed later. The sequence is important: First set"
+" the new encoding, then transfer the users to the system so that they are "
+"copied in the correct encoding. A check of the umlauts is a good indication "
+"for the correct coding."
 
 #: ../../source/howtos/manage-users/manage.rst:240
 msgid ""
 "Damit ist jetzt die Datei ``lehrer.txt`` geändert, aber die Daten sind noch "
 "nicht geprüft oder gar in das System übernommen."
 msgstr ""
+"The file ``teacher.txt`` has now been changed, but the data has not yet been"
+" checked or even taken over into the system."
 
 #: ../../source/howtos/manage-users/manage.rst:242
 msgid "schueler.txt, lehrer.txt, extraschueler.txt und extrakurse.txt"
-msgstr ""
+msgstr "schueler.txt, lehrer.txt, extraschueler.txt and extrakursse.txt"

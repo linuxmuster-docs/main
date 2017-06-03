@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-26 19:52+0700\n"
+"POT-Creation-Date: 2017-06-03 11:23+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -28,6 +28,8 @@ msgid ""
 "Tätigkeiten, die der Netzwerkbetreuer im Hinblick auf die Benutzer mit der "
 "*Schulkonsole* durchführt."
 msgstr ""
+"This document provides step-by-step instructions for a network administrator"
+" to manage users in the school console."
 
 #: ../../source/howtos/manage-users/index.rst:15
 msgid ""
@@ -38,10 +40,16 @@ msgid ""
 "Projekte können auch von Personen mit normalen Lehrer-Rechten verwaltet "
 "werden."
 msgstr ""
+"With the school console you can configure basic user settings and manage, "
+"maintain and check user lists. Here users are added, moved and deleted, "
+"moreover, passwords and disk space (quota) for all users and groups can be "
+"managed. Only student passwords can be managed by users with teacher "
+"privileges, these users can also create projects and manage their own "
+"projects."
 
 #: ../../source/howtos/manage-users/index.rst:23
 msgid "Benutzergruppen in der linuxmuster.net"
-msgstr ""
+msgstr "The user groups in the linuxmuster.net"
 
 #: ../../source/howtos/manage-users/index.rst:25
 msgid ""
@@ -51,6 +59,9 @@ msgid ""
 " die gleichen Dateien und Drucker zugreifen oder an Dateien die selben "
 "Rechte haben können."
 msgstr ""
+"If you want to access services and files on the server, you must log in with"
+" a user name (login name) and a password on the server. Not all users should"
+" have the same rights to access files and printers."
 
 #: ../../source/howtos/manage-users/index.rst:31
 msgid ""
@@ -58,20 +69,25 @@ msgid ""
 " zusammenzufassen. In der *linuxmuster.net* gibt es, angepasst auf "
 "Schulbedürfnisse, die folgenden Hauptbenutzergruppen:"
 msgstr ""
+"Users, who have the same rights, belong to the same user group. In "
+"linuxmuster.net there are, adapted to school needs, the following main user "
+"groups:"
 
 #: ../../source/howtos/manage-users/index.rst:37
 msgid "<Klassengruppe> (z.B. 10a, 5a, usw):"
-msgstr ""
+msgstr "<classgroups> (e.g. K10, K5, ...)"
 
 #: ../../source/howtos/manage-users/index.rst:36
 msgid ""
 "Schüler-Benutzer mit (halb)privatem Datenbereich. Es dürfen keinerlei "
 "Systemdateien modifiziert werden."
 msgstr ""
+"Student users with (half) private data area. System files are not allowed to"
+" be modified."
 
 #: ../../source/howtos/manage-users/index.rst:45
 msgid "teachers:"
-msgstr ""
+msgstr "teachers:"
 
 #: ../../source/howtos/manage-users/index.rst:40
 msgid ""
@@ -82,23 +98,32 @@ msgid ""
 "notwendige Aufgaben auf dem Server ausführen (z. B. Dateien austeilen, "
 "Internetzugang abschalten)"
 msgstr ""
+"Teacher user with private data area. System files are not allowed to be "
+"modified. In addition, the teacher has access to all shared class  "
+"directories and read access to the student's home directories. All teachers "
+"can do the educationally necessary tasks in the school console (e.g. "
+"distribute files, disable Internet access, ...)."
 
 #: ../../source/howtos/manage-users/index.rst:50
 msgid "domadmins:"
-msgstr ""
+msgstr "domadmins:"
 
 #: ../../source/howtos/manage-users/index.rst:48
 msgid ""
 "Dürfen alle für den reinen Schulbetrieb wichtigen Aufgaben am Server "
 "durchführen, vor allem der Benutzer ``administrator`` wird dafür verwendet."
 msgstr ""
+"Can perform all important tasks for school operations on the server. "
+"Especially the user \"administrator\" is used for this."
 
 #: ../../source/howtos/manage-users/index.rst:56
 msgid "root:"
-msgstr ""
+msgstr "root:"
 
 #: ../../source/howtos/manage-users/index.rst:53
 msgid ""
 "Darf ohne Einschränkung alle Aufgaben am Server durchführen. (u.a. alle "
 "Dateien, auch Passwortdateien, einsehen/verändern/löschen)"
 msgstr ""
+"Can perform all tasks on the server without limitation (all files, including"
+" password files, view, change, delete)"
