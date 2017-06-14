@@ -169,7 +169,8 @@ Starten Sie den Vorgang mit der Schaltfläche ``Erstellen+Hochladen``.
    aktuelle Image nimmt dessen Platz als aktives Image ein.
 
 
-Sobald der Vorgang abgeschlossen ist können Sie den Zustand der Installation nun immer auf diesen Punkt zurücksetzen.
+Sobald der Vorgang abgeschlossen ist, können Sie den Zustand der Installation nun immer auf diesen Punkt zurücksetzen.
+
 Das Image ist auf dem Server verfügbar. Soll es auch auf andere Rechner ausgerollt werden, so muss noch die image.reg auf dem Serverbereitgestellt werden.
 
 Dazu kopiert man die Musterdatei ``/var/linbo/win10.image.reg`` nach ``/var/linbo/<BEZEICHNUNG DER RECHNERGRUPPE>.cloop.reg``
