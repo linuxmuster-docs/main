@@ -170,7 +170,9 @@ Starten Sie den Vorgang mit der Schaltfläche ``Erstellen+Hochladen``.
 
 
 Sobald der Vorgang abgeschlossen ist können Sie den Zustand der Installation nun immer auf diesen Punkt zurücksetzen.
-Das Image ist auf dem Server verfügbar und kann auf weitere Rechner ausgerollt werden.
+Das Image ist auf dem Server verfügbar. Soll es auch auf andere Rechner ausgerollt werden, so muss noch die image.reg auf dem Serverbereitgestellt werden.
+
+Dazu kopiert man die Musterdatei ``/var/linbo/win10.image.reg`` nach ``/var/linbo/<BEZEICHNUNG DER RECHNERGRUPPE>.cloop.reg``
 
 
 .. |1000000000000409000003095F824A32_png| image:: media/1000000000000409000003095F824A32.png
