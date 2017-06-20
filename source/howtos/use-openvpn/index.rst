@@ -63,7 +63,7 @@ Haben Sie sich die Schlüssel- und Konfigurationsdateien heruntergeladen, benöt
 Windows-Client
 """"""""""""""
 
-Sie benötigen den aktuellen OpenVPN-Client 2.4 (OpenSource - `Download OPenVPN Windows <https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.0-I601.exe>`_) 
+Sie benötigen den aktuellen OpenVPN-Client 2.4 (OpenSource - `Download OPenVPN Windows <https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.2-I601.exe>`_) 
 
 **Konfiguration**
 
