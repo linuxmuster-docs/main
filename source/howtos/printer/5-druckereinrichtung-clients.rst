@@ -21,9 +21,36 @@ angesprochen. Damit der PDF-Drucker auf dem Client genutzt werden kann, muss auf
 Linux Clients
 -------------
 
-Die Druckerinstallation auf den Clients erfolgt automatisch mithilfe eines sog. universelles Postsync - Script. Voraussetzung ist lediglich, dass die Drucker bereits auf dem Server eingerichtet wurden und als Linux Client vorkonfigurierte Musterimage (Cloop) genutzt wird. Dieses gibt es für Ubuntu 14.04 (trusty) und Ubuntu 16.04 (xenial).
+Die Druckerinstallation auf den Clients erfolgt automatisch mithilfe eines sog. universellen Postsync - Scripts. Voraussetzung ist, dass die Drucker bereits auf dem Server eingerichtet wurden und als Linux Client das vorkonfigurierte Musterimage (Cloop) genutzt wird. Dieses gibt es für Ubuntu 14.04 (trusty) und Ubuntu 16.04 (xenial).
 
-Dieses Script liegt im Verzeichnis:
+Auf dem Server existiert dann folgende Datei in einem der Verzeichnisse:
+
+.. code::
+
+   /var/linbo/linuxmuster-client/trusty/common/etc/hosts
+   /var/linbo/linuxmuster-client/xenial/common/etc/hosts
+
+Diese Datei weist nachstehende Rechte auf:
+
+.. code::
+
+   -rw-r--r-- 1 root root 459 Jul 18 2014 hosts
+
+In dieser Hosts Datei findet sich folgender Inhalt, der dann mithilfe des Postsync-Scripts rechnerspezifisch angepasst wird:
+
+.. code::
+
+   # Diese Datei wird per postsync gepatcht. Zu bearbeiten ist sie auf dem Server.
+   # Pfad: /var/linbo/linuxmuster-client/trusty/common/etc/hosts
+   # HOSTNAME wird im Postsyncskript mit dem echten Namen gepatcht
+   127.0.0.1    HOSTNAME
+   #Die nächste Zeile enthält die Hostnamen so, wie sie auf dem Server eingetragen sind...
+   #SERVERIP server.linuxmuster.local server
+   # damit CUPS zufrieden ist, muss noch diese Zeile hier dazu:
+   #SERVERIP  server.lokal server.local
+
+
+Das Postsync-Script liegt im Verzeichnis:
 
 .. code::
 
@@ -39,7 +66,7 @@ In dem Postsync-Script finden sich folgende Eintragungen (hier für Trusty-Cloop
 
 .. code:: 
 
-echo "##### trusty-linuxmuster POSTSYNC BEGIN #####"
+    echo "##### trusty-linuxmuster POSTSYNC BEGIN #####"
     
     # IP-Adresse des Server
     SERVERIP=10.16.1.1
@@ -126,6 +153,31 @@ echo "##### trusty-linuxmuster POSTSYNC BEGIN #####"
 
     echo "##### trusty-linuxmuster POSTSYNC END #####"
 
+
+
+.. note::
+   
+   **Hinweis für linuxmuster.net Version 6.2**
+
+   Sollte bei Verwendung des Postsync-Scripts auf dem Client ein Drucker nicht ansteuerbar sein, obwohl
+   dieser am Server eingerichtet wurde, so sollten noch am CUPS-Dienst des Servers alle sog. 
+   **CUPS-browsed** Einträge und für den **CUPS-Dienst** des Clients alle Browse-Poll Einträge entfernt 
+   werden. Dies liegt daran, dass auf dem Server eine ältere CUPS-Version installiert ist als auf den 
+   Clients, deren CUPS-Version ab Ubuntu 14.04 aktueller ist.
+
+   Die Einträge sind wie folgt zu entfernen:
+
+   **Server-Cups: Datei /etc/cups/cupsd.conf** - alle Einträge mit cups-browsed auskommentieren
+   **Client-Cups: Datei /etc/cups/cupsd.conf** - alle Einträge mit BrowsePoll auskommentieren
+   
+
+.. seealso::
+
+   https://ask.linuxmuster.net/t/netzwerkdrucker-verschwinden/181
+
+
+
+
 Alternativ: Druckerinstallation manuell
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -139,11 +191,14 @@ Klicken Sie hier unter der Rubrik Drucker auf **Drucker hinzufügen**.
 
 .. image missing: media/drucker-einrichten-client-linux/drucker-linux2.png
 
-Wählen Sie im nächsten Schritt als Netzwerkdrucker ** Internet-Druckprotokoll (https)**.
+Wählen Sie im nächsten Schritt als Netzwerkdrucker **Internet-Druckprotokoll (https)**.
 
 .. image missing: media/drucker-einrichten-client-linux/drucker-linux3.png
 
 Wählen Sie im nächsten Schritt für unter Drucker hinzufügen die korrekte Adresse. Wird der Netzwerkdrucker über den linuxmuster.net Server angesteuert, so ist dessen Adressen anzugeben:
+
+.. code::
+
   **https://10.16.1.1/printers<druckername>**
 
 .. image missing: media/drucker-einrichten-client-linux/drucker-linux4.png
