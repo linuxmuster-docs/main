@@ -13,6 +13,12 @@ einem Webbrowser.
 Nach der Anmeldung als ``administrator`` findet man im Hauptmenü
 folgende Einstellungsmöglichkeiten
 
+.. image:: media/schulkonsole-header-admin.png
+
+Die Statusleiste unterhalb des Menüs zeigt über Farbe und Text an, ob
+der letzte Befehl erfolgreich (grün) oder nicht erfolgreich (orange)
+ausgeführt wurde.
+
 .. toctree::
    :caption: Die Schulkonsole aus Sicht des Administrators
    :maxdepth: 1

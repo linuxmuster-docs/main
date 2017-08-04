@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2016, linuxmuster.net
+# Copyright (C) 2017, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-26 10:54+0700\n"
+"POT-Creation-Date: 2017-06-03 11:23+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -23,22 +23,30 @@ msgstr ""
 
 #: ../../source/manuals/schulkonsole-admin/account.rst:7
 msgid ""
-"Auf dieser Seite können Sie eigene Druckaufträge löschen und Ihr Passwort "
-"ändern."
+"Auf dieser Seite können Sie eigene Druckaufträge löschen und Ihren "
+"persönlichen Ordner reparieren lassen."
 msgstr ""
 
-#: ../../source/manuals/schulkonsole-admin/account.rst:10
-msgid "Außerdem können Sie Ihren Persönlichen Ordner reparieren lassen."
+#: ../../source/manuals/schulkonsole-admin/account.rst:9
+msgid "Außerdem können Sie Ihr Passwort ändern."
 msgstr ""
 
-#: ../../source/manuals/schulkonsole-admin/account.rst:12
+#: ../../source/manuals/schulkonsole-admin/account.rst:13
+msgid ""
+"Im Abschnitt Mail-Weiterleitung können Sie eine Weiterleitung an eine oder "
+"mehrere durch Komma getrennte Mail-Adressen einrichten und festlegen, ob "
+"eine Kopie im Postfach verbleiben soll. Dies ist nur sinnvoll, wenn der "
+"Server für eine Weiterleitung an externe Adressen konfiguriert ist."
+msgstr ""
+
+#: ../../source/manuals/schulkonsole-admin/account.rst:21
 msgid ""
 "Im Info-Bereich sehen Sie Ihren Speicherplatzverbrauch auf dem Server und in"
 " Ihrem Postfach. Alle Werte sind in Kilobyte angegeben. Zusätzlich wird "
 "angezeigt in welchen Projekten Sie Mitglied sind."
 msgstr ""
 
-#: ../../source/manuals/schulkonsole-admin/account.rst:17
+#: ../../source/manuals/schulkonsole-admin/account.rst:28
 msgid ""
 "Im untersten Bereich kann ein OpenVPN-Zertifikat erstellt werden. Das "
 "Zertifikat wird in Ihrem Heimatverzeichnis (H:) im Ordner „OpenVPN“ "

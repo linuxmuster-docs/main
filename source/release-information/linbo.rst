@@ -1,36 +1,50 @@
 Neuerungen in linuxmuster-linbo 2.3
 -----------------------------------
 
-- Kernel 4.8.x mit aktuellen Hardwaretreibern.
+- Kernel 4.9.x mit **aktuellen Hardwaretreibern**
 
-- Unterstützung von UEFI-Boot-Clients.
+  - Native Unterstützung von 64bit-Hardware zur LINBO-Laufzeit
+  - Automatische Erkennung von 32bit PAE, 32bit non-PAE und 64bit-Hardware
+  - Neuer Partitionsmechanismus
 
-  - Partitionierung im GPT-Modus auf EFI-Systemen.
-
-- Native Unterstützung von 64bit-Hardware zur LINBO-Laufzeit.
-
-  - Automatische Erkennung von 32bit PAE, 32bit non-PAE und 64bit-Hardware.
-
-- Automatischer Reboot vor jedem Betriebssystemstart minimiert Hardwareprobleme.
-
-- Umstellung des lokalen und PXE-Bootsystems auf Grub 2.
+- Umstellung des lokalen und PXE-Bootsystems auf **Grub** 2
 
   - Vereinfachte Boot-Konfiguration in nur noch einer
-    Grub-Konfigurationsdatei für lokalen und Netzwerkboot.
+    Grub-Konfigurationsdatei für lokalen und Netzwerkboot
   - Vorkonfigurierte Grub-Bootmenüs können einfach aktiviert und
-    angepasst werden.
-  - Unterstützung für Grub-Themes.
+    angepasst werden
+  - Automatischer Reboot vor jedem Betriebssystemstart minimiert Hardwareprobleme
+  - Automatisches Linbo- oder Grub-Update auf lokal gebooteten Clients
+    mit automatischem Reboot
+  - Unterstützung für Grub-Themes
 
-- Automatisches Linbo- oder Grub-Update auf lokal gebooteten Clients
-  mit automatischem Reboot
+- Unterstützung von **UEFI-Boot**-Clients
+
+  - Partitionierung im GPT-Modus auf EFI-Systemen
+  - Die start.conf-Dateien erhalten eine neue Option *SystemType*, der
+    man die Werte *bios\|bios64\|efi32\|efi64* zuweisen kann. Zunächst
+    ist der Standardwert *bios* eingetragen, der für alle Clients mit
+    konventionellem BIOS-Boot funktioniert.
+  - Unterstützung von Multiboot-Systemen mit UEFI
+
+- Automatische Erstellung und vereinfachter Download von
+  **Bootmedien**-Abbilder für USB-Speicher oder zum direkten Brennen auf
+  CD/DVD
+
+- Unterstützung des Setzens der **Systemzeit** durch einen Zeitserver
 
 - Einheiten-Angabe für Partitionsgrößen in der start.conf-Datei (M für
-  Megabyte, G für Gigabyte, T für Terabyte).
+  Megabyte, G für Gigabyte, T für Terabyte)
 
-- Die start.conf-Dateien erhalten eine neue Option *SystemType*, der
-  man die Werte *bios\|bios64\|efi32\|efi64* zuweisen kann. Zunächst
-  ist der Standardwert *bios* eingetragen, der für alle Clients mit
-  konventionellem BIOS-Boot funktioniert.
+Reparatur und Neuerstellen eines Abbildes nach Partitionierung
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Ab Version 2.3.0 wird ein anderes Partitionsprogramm verwendet, um für
+UEFI sowie BIOS valide Partitionstabellen anlegen zu können. Bei
+Neupartitionierung erfordert Windows eine Systemstartreparatur und
+danach das erneute Erstellen eines Abbildes. Lesen Sie :ref:`hier
+<howtos-upgrade-image-label>` nach, wie es genau geht.
+
 
 Boot-Konfiguration mit Grub
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

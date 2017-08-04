@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2016, linuxmuster.net
+# Copyright (C) 2017, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-26 10:54+0700\n"
+"POT-Creation-Date: 2017-06-03 11:23+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -62,53 +62,3 @@ msgstr ""
 #: ../../source/howtos/windows10clients/startconf.rst:24
 msgid "|1000000000000382000003C15DFFA156_png|"
 msgstr "|1000000000000382000003C15DFFA156_png|"
-
-#: ../../source/howtos/windows10clients/startconf.rst:28
-msgid "Server-Konsole"
-msgstr "Server Console"
-
-#: ../../source/howtos/windows10clients/startconf.rst:30
-msgid "Geben Sie den Befehl ein:"
-msgstr "Enter the command:"
-
-#: ../../source/howtos/windows10clients/startconf.rst:37
-msgid "|100000000000028800000188045E477F_png|"
-msgstr "|100000000000028800000188045E477F_png|"
-
-#: ../../source/howtos/windows10clients/startconf.rst:39
-msgid ""
-"Ändern Sie die Konfiguration nach Ihren Bedürfnissen und verlassen danach "
-"den Editor speichernd."
-msgstr ""
-"Change the configuration according to your needs and save your changes."
-
-#: ../../source/howtos/windows10clients/startconf.rst:41
-msgid "|1000000000000295000002927824780F_png|"
-msgstr "|1000000000000295000002927824780F_png|"
-
-#: ../../source/howtos/windows10clients/startconf.rst:45
-msgid "Beispiel start.conf"
-msgstr "Example start.conf"
-
-#: ../../source/howtos/windows10clients/startconf.rst:47
-msgid ""
-"Das ist eine Beispielkonfiguration für eine Partition 50GB für eine "
-"Windowsinstallation und eine Cachepartition. Größe der Cache-Partition = "
-"Rest der Festplatte."
-msgstr ""
-"This is a sample configuration for a 50GB partition for a Windows "
-"installation and a cache partition. Size of the cache partition equals the "
-"remaining disk space of the hard disk."
-
-#: ../../source/howtos/windows10clients/startconf.rst:202
-msgid ""
-"**Faustregel:** Die Cachepartition ist ausreichend groß, wenn sie die "
-"gleiche Größe wie die Windows-Partition hat. Für zukünftige Installationen "
-"unter Windows sollte man die Festplatte nicht zu knapp bemessen. 150 G "
-"sollte bei Windows die unterste Größe sein! Aus Performancegründen sollte "
-"man eine SSD-Festplatte vorziehen."
-msgstr ""
-"**Thumb rule:** The cache partition is sufficiently large if it is the same "
-"size as the Windows partition. For future installations under Windows, the "
-"hard disk should not be too tight. 150G should be the lowest limit on "
-"Windows! For performance reasons you should prefer an SSD hard drive."

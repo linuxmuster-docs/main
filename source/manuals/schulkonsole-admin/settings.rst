@@ -4,122 +4,105 @@
 
 .. _schulkonsole-einstellungen:
 
-Einstellungen der Schulkonsole
-------------------------------
+Schulkonsole
+============
 
-.. figure:: media/schulkonsole-settings.png
+.. image:: media/schulkonsole-settings.png
    :align: center
    :alt: Einstellungen der Schulkonsole
 
-+-----------------------------------+-----------------------------------------------------------------------------------+
-| **Abschnitt Global**              | **Erläuterungen**                                                                 |
-|                                   |                                                                                   |
-+===================================+===================================================================================+
-| *Sitzungsdauer*                   | Zeit, bis zum automatischen Logout aus der Schulkonsole.                          |
-+-----------------------------------+-----------------------------------------------------------------------------------+
-| *Überprüfe die Passwortgüte*      | Soll das Passwort auf Länge, der zwingenden Verwendung zweier unterschiedliche    |
-|                                   | Zeichenarten und auf verbotene Sonderzeichen überprüft werden.                    |
-+-----------------------------------+-----------------------------------------------------------------------------------+
-| *Minimale Passwortlänge*          | Diese Anzahl an Zeichen muss ein Passwort mindestens haben.                       |
-+-----------------------------------+-----------------------------------------------------------------------------------+
+Sitzungsdauer:
+ Zeit bis zum automatischen Logout aus der Schulkonsole
+
+Überprüfe die Passwortgüte:
+ Soll das Passwort auf eine minimale Länge, der zwingenden Verwendung zweier unterschiedlicher Zeichenarten und auf verbotene Sonderzeichen überprüft werden?
+
+Minimale Passwortlänge:
+ Diese Anzahl an Zeichen muss ein Passwort mindestens haben.
 
 .. _manual-sk-admin-settings-user-label:
 
-Einstellungen der Benutzerverwaltung
-------------------------------------
+Benutzerverwaltung
+==================
 
-.. image:: media/schulkonsole-einstellungen-global.png
+Global
+------
 
-+-----------------------------------+--------------------------------------------------------------------------------------------------------------+
-| **Abschnitt Global**              | **Erläuterungen**                                                                                            |
-|                                   |                                                                                                              |
-+===================================+==============================================================================================================+
-| *Logmeldungen*                    | Mit dieser Angabe stellen Sie ein, wie ausführlich *Sophomorix* Informationen über die aktuellen Aktionen    |
-|                                   | ausgibt.                                                                                                     |
-|                                   |                                                                                                              |
-+-----------------------------------+--------------------------------------------------------------------------------------------------------------+
-| *Anzahl der Schüler pro Klasse*   | Mit diesen Angaben werden die Schülerzahlen aus der Schulverwaltung auf Gültigkeit geprüft.                  |
-|                                   |                                                                                                              |
-|                                   |                                                                                                              |
-+-----------------------------------+--------------------------------------------------------------------------------------------------------------+
-| *Geburtsjahreszahl*               | Mit diesen Angaben werden die Geburtsdaten aus der Schulverwaltung auf Gültigkeit geprüft.                   |
-| *für Schüler*                     |                                                                                                              |
-|                                   |                                                                                                              |
-+-----------------------------------+--------------------------------------------------------------------------------------------------------------+
-| *Sternchenklassen*                | Im Schulverwaltungsprogramm                                                                                  |
-| *filtern*                         | *Splan*                                                                                                      |
-|                                   | werden vor die neuen Eingangsklassen für das nächste Schuljahr Sternchen gemacht. Diese Schüler              |
-|                                   | können heraus gefiltert werden, damit sie in den anderen Report-Dateien nicht stören.                        |
-|                                   |                                                                                                              |
-+-----------------------------------+--------------------------------------------------------------------------------------------------------------+
-| *Quota aktivieren*                | Hier können Sie angeben, ob die Benutzer nur begrenzten Plattenplatz zur Verfügung gestellt bekommen sollen. |
-|                                   |                                                                                                              |
-+-----------------------------------+--------------------------------------------------------------------------------------------------------------+
-| *Standardquota*                   | Die Werte müssen für die einzelnen Partitionen getrennt eingegeben werden. Wie viele das sind hängt von der  |
-|                                   | Partitionierung ihrer Serverplatte ab. Der letzte Eintrag ohne Partition bezieht sich auf Mailquota.         |
-| *Lehrer / Schüler*                |                                                                                                              |
-|                                   |                                                                                                              |
-+-----------------------------------+--------------------------------------------------------------------------------------------------------------+
-| *Schulweites Tauschen aktivieren* | Damit stellen Sie ein, ob allen Benutzer der Ordner                                                          |
-|                                   | ``H:\__tauschen\tausch-Schule``                                                                              |
-|                                   | zur Verfügung steht.                                                                                         |
-|                                   |                                                                                                              |
-+-----------------------------------+--------------------------------------------------------------------------------------------------------------+
+.. image:: media/schulkonsole-settings-usermanagement-global.png
+
+Logmeldungen:
+ Mit dieser Angabe stellen Sie ein, wie ausführlich *Sophomorix* Informationen über die aktuellen Aktionen ausgibt.
+
+Anzahl der Schüler pro Klasse:
+ Mit diesen Angaben werden die Schülerzahlen aus der Schulverwaltung auf Gültigkeit geprüft.
+
+Geburtsjahreszahl für Schüler:
+ Mit diesen Angaben werden die Geburtsdaten aus der Schulverwaltung auf Gültigkeit geprüft.
+
+Sternchenklassen filtern:
+ Im Schulverwaltungsprogramm *Splan* werden vor die neuen Eingangsklassen für das nächste Schuljahr Sternchen gemacht. Diese Schüler können heraus gefiltert werden, damit sie in den anderen Report-Dateien nicht stören.                        
+
+Quota aktivieren:
+ Hier können Sie angeben, ob die Benutzer nur begrenzten Plattenplatz zur Verfügung gestellt bekommen sollen.
+
+Standardquota Lehrer/Schüler:
+ Die Werte müssen für die einzelnen Partitionen getrennt eingegeben werden. Wie viele das sind hängt von der Partitionierung ihrer Serverplatte ab. Der letzte Eintrag ohne Partition bezieht sich auf Mailquota. Bei Übernahme der Änderungen werden die Quota-Einstellungen der entsprechenden Benutzer angepasst.
+
+Schulweites Tauschen aktivieren:
+ Damit stellen Sie ein, ob allen Benutzer der Ordner ``T:\tausch-Schule`` (in einem Windows-Client) bzw. ``Tausch_auf_Server/tausch-Schule`` (in einem Linux-Clientd) zur Verfügung steht. 
+
+
+
 
 Kodierung
-+++++++++
+---------
 
 
-.. image:: media/schulkonsole-einstellungen-kodierung.png
+.. image:: media/schulkonsole-settings-usermanagement-encoding.png
 
-+---------------------------+-----------------------------------------------------------------------------------------------------------+
-| **Abschnitt Kodierungen** | **Erläuterungen**                                                                                         |
-|                           |                                                                                                           |
-+===========================+===========================================================================================================+
-| *schueler.txt*            | Bestimmt die Kodierung, die diese Textdatei im System hat. Das spielt für die Interpretation der Zeichen  |
-|                           | eine entscheidende Rolle. Bei Windows ist es meistens win1252, bei Linux utf8.                            |
-+---------------------------+-----------------------------------------------------------------------------------------------------------+
-| *lehrer.txt*              | Bestimmt die Kodierung der Datei, in der die Lehrer gespeichert werden.                                   |
-|                           |                                                                                                           |
-+---------------------------+-----------------------------------------------------------------------------------------------------------+
-| *extraschueler.txt*       | Bestimmt die Kodierung der Datei, in der zusätzliche Schüler gespeichert werden, die nicht aus der        |
-|                           | Schulverwaltung übernommen werden.                                                                        |
-+---------------------------+-----------------------------------------------------------------------------------------------------------+
-| *extrakurse.txt*          | Bestimmt die Kodierung der Datei, in der zusätzliche Kurse mit zusätzlichen Benutzern gespeichert werden, |
-|                           | die nicht als Benutzer in Klassen der Schulverwaltung entnommen wurden.                                   |
-+---------------------------+-----------------------------------------------------------------------------------------------------------+
+Kodierung der Datei xxx.txt:
+ Bestimmt die Kodierung, die die jeweilige Textdatei im System
+ hat. Das spielt für die Interpretation der Zeichen (vor allem
+ Sonderzeichen) eine entscheidende Rolle. Bei Windows ist es meistens
+ win1252, bei Linux utf8, historisch gewachsen oft noch iso8859-1 oder
+ iso8859-15.
+
+.. warning::
+    
+   Ändern Sie die Kodierung an dieser Stelle nur, wenn Sie sicher
+   sind, dass die jeweilige Datei jetzt in einer anderen Kodierung auf
+   dem Server vorliegt als hier angegeben und Sie Probleme mit
+   besonderen Zeichen erfahren.
+
 
 E-Mail
-++++++
+------
 
 
-.. image:: media/schulkonsole-einstellungen-email.png
+.. image:: media/schulkonsole-settings-usermanagement-email.png
 
-+--------------------------+------------------------------------------------------------------------------------------------------+
-| **Abschnitt E-Mail**     | **Erläuterungen**                                                                                    |
-|                          |                                                                                                      |
-+==========================+======================================================================================================+
-| *Mail-Alias*             | Der Mail-Alias ist eine alternative Mailadresse, die aussagekräftiger ist.                           |
-|                          |                                                                                                      |
-+--------------------------+------------------------------------------------------------------------------------------------------+
-| *Mailquota-Warnungen*    | Bestimmt, ob Benutzern bei Überschreitungen eines bestimmten Kontingents Warnungen zugestellt werden |
-|                          | sollen.                                                                                              |
-+--------------------------+------------------------------------------------------------------------------------------------------+
-| *Warnungen bei ...*      | Grenzen, ab wann Warnungen zugestellt werden sollen. Die Grenze kann einmal absolut und einmal       |
-|                          | relativ festgelegt werden, da unterschiedliche Benutzer unterschiedliche Quoten haben können.        |
-+--------------------------+------------------------------------------------------------------------------------------------------+
-| *Überschreitung an root* | Hier kann bestimmt werden, ob root eine Kopie der Quota-Warnungen erhält.                            |
-| *melden*                 |                                                                                                      |
-+--------------------------+------------------------------------------------------------------------------------------------------+
+Mail-Alias:
+ Der Mail-Alias ist eine alternative Mailadresse, die manchmal aussagekräftiger als der Benutzername ist.
+
+Mailquota-Warnungen:
+ Bestimmt, ob Benutzern bei Überschreitungen eines bestimmten Kontingents Warnungen zugestellt werden sollen.
+
+Warnungen bei ...:
+ Grenzen, ab wann Warnungen zugestellt werden sollen. Die Grenze kann
+ einmal absolut und einmal relativ festgelegt werden, da
+ unterschiedliche Benutzer unterschiedliche Quoten haben können.
+
+Überschreitung an root:
+ Hier kann bestimmt werden, ob root eine Kopie der Quota-Warnungen erhält.
 
 Login und Löschen
-+++++++++++++++++
+-----------------
 
 
 Den Abschnitt gibt es je einmal für *Schüler* und *Lehrer*, da man für diese Benutzergruppen sicherlich teilweise unterschiedliche Werte
 festlegen möchte. Für den Abschnitt *Löschen* gilt das ebenfalls.
 
-.. image:: media/schulkonsole-einstellungen-login.png
+.. image:: media/schulkonsole-settings-usermanagement-userlogin.png
 
 
 +--------------------------+--------------------------------------------------------------------------------------------------------------------+
@@ -162,7 +145,7 @@ Druckdaten
 
 Die folgenden Daten werden z.B. für die Erstellung von Passwortzetteln mit Informationen genutzt, die neue Benutzer erhalten.
 
-.. image:: media/schulkonsole-einstellungen-druckdaten.png
+.. image:: media/schulkonsole-settings-usermanagement-printing.png
 
 +--------------------------+----------------------------------------------------------------------------------------------------+
 | **Abschnitt Druckdaten** | **Erläuterungen**                                                                                  |
@@ -190,8 +173,8 @@ Die folgenden Daten werden z.B. für die Erstellung von Passwortzetteln mit Info
 Alle Änderungen werden erst wirksam, wenn ganz unten auf ``Änderungen übernehmen`` geklickt wird.
 
 
-Einstellungen Räume
--------------------
+Räume
+=====
 
 Legen Sie hier die Standardeinstellungen für den Zugang zu *Internet*,
 *Intranet* und *Webfilter* für die Workstations in den Räumen fest.
@@ -217,24 +200,48 @@ Legen Sie hier die Standardeinstellungen für den Zugang zu *Internet*,
 * Schliessen Sie die Aktion mit „Änderungen übernehmen“ ab.
  
 
-Einstellungen Klassen
----------------------
+Klassen
+=======
 
 Nehmen Sie hier einige Einstellungen für Klassen vor.
 
 .. image:: media/schulkonsole-settings-class.png
 
+sichtbar:
+ Ausgewählte Klassen sind die Klassen, in die sich der Lehrer in der Schulkonsole eintragen kann.
 
-Einstellungen Projekte
-----------------------
+Liste:
+ Für ausgewählte Klassen wird Server-intern ein Mailverteiler eingerichtet.
+
+Aliase:
+ Für ausgewählte Klassen werden Server-intern Mailaliase für die jeweiligen Mitglieder erstellt.
+
+WLAN:
+ Für ausgewählte Klassen wird *permanent* den jeweiligen Mitgliedern
+ die Berechtigung zum Login über WLAN gegeben. Zeitgesteuerte
+ Einstellungen können eingetragene Lehrer bei ihren Klassen vornehmen.
+
+Projekte
+========
 
 Nehmen Sie hier einige Einstellungen für Projekte vor.
 
 .. image:: media/schulkonsole-settings-projects.png
 
+Liste:
+ Für ausgewählte Projekte wird Server-intern ein Mailverteiler eingerichtet.
 
-Einstellungen Reparaturen
--------------------------
+Aliase:
+ Für ausgewählte Projekte werden Server-intern Mailaliase für die jeweiligen Mitglieder erstellt.
+
+WLAN:
+ Für ausgewählte Projekte wird *permanent* den jeweiligen Mitgliedern
+ die Berechtigung zum Login über WLAN gegeben. Zeitgesteuerte
+ Einstellungen können eingetragene Lehrer bei ihren Klassen vornehmen.
+
+
+Reparaturen
+===========
 
 Nehmen Sie hier spezielle Reparatureinstellungen vor.
 

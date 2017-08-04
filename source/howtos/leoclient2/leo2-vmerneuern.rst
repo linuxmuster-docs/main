@@ -1,66 +1,17 @@
-Snapshots und Basis verwalten
+Basis und Snapshots verwalten
 =============================
 
 Jede virtuelle Maschine besitzt neben der Basis
 ``/PFAD/MASCHINENNAME/MASCHINENNAME.vdi`` einen Standard-Snapshot.
 
-Bezüglich dieser Basis können weitere Snapshots erzeugt werden.
+Zuerst sollte man eine solide VM-Basis erstellt haben. Da alle darauf
+basierenden weiteren Snapshots unbrauchbar werden, wenn die Basis
+aktualisiert werden muss.
 
-Ebenso kann man die Basis erneuern, woraufhin aber alle darauf
-basierenden weiteren Snapshots wieder unbrauchbar werden.
+Aufbauend auf diese Basis können dann weitere Snapshots erzeugt werden.
 
-.. _leoclient2-snapshot-neu:
-
-Neue Snapshots erzeugen
------------------------
-
-Bezüglich der Basis können für verschiedene Varianten der virtuellen
-Maschine weitere Snapshots angelegt werden.
-
-Das Skript :download:`leoclient2-snapshot-create
-<media/leoclient2-snapshot-create>` legt mit dem aktuellen Zustand der
-VM einen neuen auswählbaren Snapshot an oder den Standard-Snapshot neu.
-
-.. hint::
-   
-   Die Basis, d.h. die zugrundeliegende Basisfestplatte wird dabei nicht
-   verändert. Eine veränderte Hardwarekonfiguration speichert das Skript
-   auch nicht.
-   
-Vorgehensweise:
-
-- Laden Sie das Skript herunter: :download:`leoclient2-snapshot-create <media/leoclient2-snapshot-create>`
-- Legen Sie es unter ``/usr/bin/leoclient2-snapshot-create`` ab und machen Sie es ausführbar. 
-
-  .. code-block:: console
-     
-     $ sudo mv leoclient2-snapshot-create /usr/bin/
-     $ sudo chmod 755 /usr/bin/leoclient2-snapshot-create
-  
-- Starten Sie als Benutzer die VM (z.B. hier winxp)
-
-  .. code-block:: console
-
-     $ leovirtstarter2
-  
-- Installieren Sie Software nehmen Sie die Änderungen vor, fahren Sie die VM herunter.
-- Rufen Sie das Skript (als root) ohne Argument ``-s`` auf, um den Standard-Snapshot neu zu setzen, 
-
-  .. code-block:: console
-   
-     $ sudo leoclient2-snapshot-create -m winxp
-
-- oder mit einem Argument ``-s``, um einen neuen Snapshot zu erzeugen.
-
-  .. code-block:: console
-     
-     $ sudo leoclient2-snapshot-create -m winxp -s Software2016
-
-  Jetzt erscheint im Auswahlmenü von ``leovirtstarter2`` ein neuer
-  Snapshot mit dem Namen ``Software2016``.
-
-VM-Basis erneuern
------------------
+VM-Basis aktualisieren
+----------------------
 
 Mit Hilfe des Skripts ``leoclient2-base-snapshot-renew`` wird der
 aktuelle Zustand der virtuellen Maschine zur neuen Basis.
@@ -108,10 +59,11 @@ werden.
 - Schalten Sie die VM aus und beenden Sie VirtualBox
 
 Das Skript erzeugt eine neue Basisfestplatte unter
-``/PFAD/MASCHINENNAME/MASCHINENNAME.vdi`` und komprimiert sie (auch
-das kann dauern).  Darüber hinaus wird noch ein neuer
+``/PFAD/MASCHINENNAME/MASCHINENNAME.vdi`` und komprimiert sie (Das
+dauert einige Minuten).  Darüber hinaus wird noch ein neuer
 Standard-Snapshot erzeugt und gezippt. Der Name des neuen Snapshots,
-hier: ``{c81442ac-4e03-487c-a05a-e82b8918c834}.vdi``, erscheint in der Konsolenausgabe.
+hier: ``{c81442ac-4e03-487c-a05a-e82b8918c834}.vdi``, erscheint in der
+Konsolenausgabe.
 
 .. code-block:: console
 
@@ -140,8 +92,9 @@ hier: ``{c81442ac-4e03-487c-a05a-e82b8918c834}.vdi``, erscheint in der Konsolena
      $ sudo rm /virtual/winxp/snapshot-store/standard/{4a895e9c-a6e9-416d-b612-b643035c0103}.vdi*
 	  
 - Sollten Sie weitere Snapshots zur virtuellen Maschine haben, haben
-  diese ihre Basis verloren. Löschen Sie diese Snapshots oder erzeugen
-  Sie sie erneut aus dem bestehenden neuen Standard-Snapshot.
+  diese ihre Basis verloren. Löschen Sie diese Snapshots (als root)
+  oder erzeugen Sie sie erneut aus dem bestehenden neuen
+  Standard-Snapshot.
 
   .. code-block:: console
 
@@ -154,4 +107,54 @@ hier: ``{c81442ac-4e03-487c-a05a-e82b8918c834}.vdi``, erscheint in der Konsolena
        adding: {c81442ac-4e03-487c-a05a-e82b8918c834}.vdi (deflated 100%)
        OK: Snapshot {c81442ac-4e03-487c-a05a-e82b8918c834}.vdi wurde als Software2016 gesetzt.
 
+
+
+
+.. _leoclient2-snapshot-neu:
+
+Neue Snapshots erzeugen
+-----------------------
+
+Das Skript :download:`leoclient2-snapshot-create
+<media/leoclient2-snapshot-create>` legt mit dem aktuellen Zustand der
+VM einen neuen auswählbaren Snapshot an oder den Standard-Snapshot
+neu.
+
+.. hint::
+   
+   Die Basis, d.h. die zugrundeliegende Basisfestplatte wird dabei nicht
+   verändert. Eine veränderte Hardwarekonfiguration speichert das Skript
+   auch nicht.
+   
+Vorgehensweise:
+
+- Laden Sie das Skript herunter: :download:`leoclient2-snapshot-create <media/leoclient2-snapshot-create>`
+- Legen Sie es unter ``/usr/bin/leoclient2-snapshot-create`` ab und machen Sie es ausführbar. 
+
+  .. code-block:: console
+     
+     $ sudo mv leoclient2-snapshot-create /usr/bin/
+     $ sudo chmod 755 /usr/bin/leoclient2-snapshot-create
+  
+- Starten Sie als Benutzer die VM (z.B. hier winxp)
+
+  .. code-block:: console
+
+     $ leovirtstarter2
+  
+- Installieren Sie Software nehmen Sie die Änderungen vor, fahren Sie die VM herunter.
+- Rufen Sie das Skript (als root) ohne Argument ``-s`` auf, um den Standard-Snapshot neu zu setzen, 
+
+  .. code-block:: console
+   
+     $ sudo leoclient2-snapshot-create -m winxp
+
+- oder mit einem Argument ``-s``, um einen neuen Snapshot zu erzeugen.
+
+  .. code-block:: console
+     
+     $ sudo leoclient2-snapshot-create -m winxp -s Software2016
+
+  Jetzt erscheint im Auswahlmenü von ``leovirtstarter2`` ein neuer
+  Snapshot mit dem Namen ``Software2016``.
 

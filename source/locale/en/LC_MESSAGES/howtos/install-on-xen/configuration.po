@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2016, linuxmuster.net
+# Copyright (C) 2017, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-26 10:54+0700\n"
+"POT-Creation-Date: 2017-06-03 11:23+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -178,34 +178,38 @@ msgstr ""
 
 #: ../../source/howtos/install-on-xen/configuration.rst:172
 msgid ""
-"Geben Sie den Internetdomänennamen des Schulnetzes an den Sie verwenden "
-"möchten. Beispielsweise „schule.lokal“."
+"Geben Sie den Domänennamen des Schulnetzes an den Sie verwenden möchten. "
+"Beispielsweise ein internes Netz wie „linuxmuster-net.lokal“ oder natürlich "
+"einen externe Domäne wie \"meine-schule.de\"."
 msgstr ""
-"Enter the Internet domain name of the school network that you want to use. "
-"For example, \"school.lokal\"."
+"Enter the domain name of the school network that you want to use. For "
+"example, an internal network such as \"linuxmuster-net.lokal\" or, of "
+"course, an external domain such as \"internal.my-school.com\"."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:178
-msgid "Wählen den gewünschten IP-Adressbereich aus den Sie verwenden möchten."
-msgstr "Select the desired IP address range you want to use."
-
-#: ../../source/howtos/install-on-xen/configuration.rst:184
+#: ../../source/howtos/install-on-xen/configuration.rst:180
 msgid ""
-"Geben Sie den externen Domänennamen an, auf dem Ihr Server im Internet "
-"erreichbar ist. Sofern keine externe Kommunikation vorgesehen ist, können "
-"Sie das Feld auch leer lassen."
+"Wählen den gewünschten internen IP-Adressbereich aus den Sie verwenden "
+"möchten."
+msgstr "Select the desired internal IP address range you want to use."
+
+#: ../../source/howtos/install-on-xen/configuration.rst:186
+msgid ""
+"Geben Sie den externen Namen an, unter dem Ihr Server im Internet erreichbar"
+" sein soll, z.B. \"server.meine-schule.de\". Sofern keine externe "
+"Kommunikation vorgesehen ist, können Sie das Feld auch leer lassen."
 msgstr ""
 "Specify the external url on which your server is accessible from the "
 "Internet. If no external communication is planned, you can leave the field "
 "blank."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:190
+#: ../../source/howtos/install-on-xen/configuration.rst:195
 msgid ""
 "Geben Sie an welche Firewall Sie verwenden. In der XenAppliance wird "
 "``ipfire`` verwendet."
 msgstr ""
 "Specify which firewall you are using. In the XenAppliance uses ``ipfire``."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:196
+#: ../../source/howtos/install-on-xen/configuration.rst:201
 msgid ""
 "Tragen Sie für die Emailfunktion einen SMTP-Host ein mit dem der Server "
 "kommunizieren kann oder lassen Sie das Feld frei. Beispielsweise "
@@ -214,23 +218,28 @@ msgstr ""
 "Enter a SMTP host  for the email function or leave the field blank. For "
 "example, ``mbox1.belwue.de``."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:202
+#: ../../source/howtos/install-on-xen/configuration.rst:207
 msgid "Sofern Sie Subnetting nutzen möchten, können Sie dies hier aktivieren."
 msgstr "If you want to use subnetting, you can activate it here."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:208
-msgid "Wählen Sie für die administrativen Domänenbenutzer ein Passwort."
-msgstr "Enter a password for the administrative domain user."
+#: ../../source/howtos/install-on-xen/configuration.rst:213
+msgid ""
+"Wählen Sie für die administrativen Domänenbenutzer ein Passwort und "
+"bestätigen Sie es im nächsten Schritt."
+msgstr ""
+"Select a password for the administrative domain users and confirm it in the "
+"next step."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:214
+#: ../../source/howtos/install-on-xen/configuration.rst:219
 msgid ""
 "Geben Sie das root-Passwort der Firewall ein, das Sie im Schritt "
-"„Konfiguration IPFire“ vergeben haben."
+"„Konfiguration IPFire“ vergeben haben und bestätigen Sie es im nächsten "
+"Schritt."
 msgstr ""
-"Enter  the root password of the firewall you have assigned in step "
-"\"Configuration IPFire\"."
+"Enter the root password of the firewall that you assigned in the \"IPFire "
+"Configuration\" step and confirm it in the next step."
 
-#: ../../source/howtos/install-on-xen/configuration.rst:220
+#: ../../source/howtos/install-on-xen/configuration.rst:225
 msgid ""
 "Wählen Sie die Netzwerkkarte aus, die mit dem Schulnetz (GREEN) verbunden "
 "ist. Sofern Sie keine zusätzlichen Adapter installiert haben, bestätigen Sie"

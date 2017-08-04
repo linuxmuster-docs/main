@@ -135,90 +135,95 @@ Bestätigen Sie die Meldung mit den Hinweisen mit der Schaltfläche ``Ok``.
 
 Geben Sie Ihr Länderkürzel ein bzw. bestätigen „DE“ mit ``Enter``.
 
-.. figure:: media/configuration/image77.png
+.. figure:: ../install-from-scratch/media/server/590.png
    :align: center
    :alt: Konfiguration Schritt 17
 
 Geben Sie Ihr Bundesland ein bzw. bestätigen Sie „BW“ mit ``Enter``.
 
-.. figure:: media/configuration/image78.png
+.. figure:: ../install-from-scratch/media/server/600.png
    :align: center
    :alt: Konfiguration Schritt 18
 
 Geben Sie den Schulstandort ein (Stadt).
 
-.. figure:: media/configuration/image79.png
+.. figure:: ../install-from-scratch/media/server/610.png
    :align: center
    :alt: Konfiguration Schritt 19
 
 Geben Sie den Schulnamen Ihrer Schule an.
 
-.. figure:: media/configuration/image80.png
+.. figure:: ../install-from-scratch/media/server/620.png
    :align: center
    :alt: Konfiguration Schritt 20
 
 Geben Sie den Domänennamen ein den Sie verwenden möchten. Im Beispiel „SCHULE“.
 
-.. figure:: media/configuration/image81.png
+.. figure:: ../install-from-scratch/media/server/630.png
    :align: center
    :alt: Konfiguration Schritt 21
 
 Geben Sie den Servernamen ein. Es ist zu empfehlen den Server ``server`` zu nennen.
 
-.. figure:: media/configuration/image82.png
+.. figure:: ../install-from-scratch/media/server/640.png
    :align: center
    :alt: Konfiguration Schritt 22
 
-Geben Sie den Internetdomänennamen des Schulnetzes an den Sie verwenden möchten. Beispielsweise „schule.lokal“.
+Geben Sie den Domänennamen des Schulnetzes an den Sie verwenden
+möchten. Beispielsweise ein internes Netz wie „linuxmuster-net.lokal“
+oder natürlich einen externe Domäne wie "meine-schule.de".
 
-.. figure:: media/configuration/image83.png
+.. figure:: ../install-from-scratch/media/server/650.png
    :align: center
    :alt: Konfiguration Schritt 23
 
-Wählen den gewünschten IP-Adressbereich aus den Sie verwenden möchten.
+Wählen den gewünschten internen IP-Adressbereich aus den Sie verwenden möchten.
 
-.. figure:: media/configuration/image84.png
+.. figure:: ../install-from-scratch/media/server/660.png
    :align: center
    :alt: Konfiguration Schritt 24
 
-Geben Sie den externen Domänennamen an, auf dem Ihr Server im Internet erreichbar ist. Sofern keine externe Kommunikation vorgesehen ist, können Sie das Feld auch leer lassen.
+Geben Sie den externen Namen an, unter dem Ihr Server im Internet
+erreichbar sein soll, z.B. "server.meine-schule.de". Sofern keine
+externe Kommunikation vorgesehen ist, können Sie das Feld auch leer
+lassen.
 
-.. figure:: media/configuration/image85.png
+.. figure:: ../install-from-scratch/media/server/670.png
    :align: center
    :alt: Konfiguration Schritt 25
 
 Geben Sie an welche Firewall Sie verwenden. In der XenAppliance wird ``ipfire`` verwendet.
 
-.. figure:: media/configuration/image86.png
+.. figure:: ../install-from-scratch/media/server/680.png
    :align: center
    :alt: Konfiguration Schritt 26
 
 Tragen Sie für die Emailfunktion einen SMTP-Host ein mit dem der Server kommunizieren kann oder lassen Sie das Feld frei. Beispielsweise ``mbox1.belwue.de``.
 
-.. figure:: media/configuration/image87.png
+.. figure:: ../install-from-scratch/media/server/690.png
    :align: center
    :alt: Konfiguration Schritt 27
 
 Sofern Sie Subnetting nutzen möchten, können Sie dies hier aktivieren.
 
-.. figure:: media/configuration/image88.png
+.. figure:: ../install-from-scratch/media/server/700.png
    :align: center
    :alt: Konfiguration Schritt 28
 
-Wählen Sie für die administrativen Domänenbenutzer ein Passwort.
+Wählen Sie für die administrativen Domänenbenutzer ein Passwort und bestätigen Sie es im nächsten Schritt.
 
-.. figure:: media/configuration/image89.png
+.. figure:: ../install-from-scratch/media/server/710.png
    :align: center
    :alt: Konfiguration Schritt 29
 
-Geben Sie das root-Passwort der Firewall ein, das Sie im Schritt „Konfiguration IPFire“ vergeben haben.
+Geben Sie das root-Passwort der Firewall ein, das Sie im Schritt „Konfiguration IPFire“ vergeben haben und bestätigen Sie es im nächsten Schritt.
 
-.. figure:: media/configuration/image90.png
+.. figure:: ../install-from-scratch/media/server/730.png
    :align: center
    :alt: Konfiguration Schritt 30
 
 Wählen Sie die Netzwerkkarte aus, die mit dem Schulnetz (GREEN) verbunden ist. Sofern Sie keine zusätzlichen Adapter installiert haben, bestätigen Sie die Auswahl mit ``Enter``.
 
-.. figure:: media/configuration/image91.png
+.. figure:: ../install-from-scratch/media/server/server-assign-network.png
    :align: center
    :alt: Konfiguration Schritt 31

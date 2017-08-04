@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2016, linuxmuster.net
+# Copyright (C) 2017, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-26 10:54+0700\n"
+"POT-Creation-Date: 2017-06-03 11:23+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -44,156 +44,185 @@ msgstr ""
 "during the import, these values ​​represent the minimum requirements. Disk "
 "space and memory of VMs must be added up to determine the total requirement."
 
-#: ../../source/howtos/install-on-xen/requirements.rst:15
+#: ../../source/howtos/install-on-xen/requirements.rst:14
+msgid "**Hinweis:**"
+msgstr "**Note:**"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:16
+msgid ""
+"Wer mehrere Images hat, oder mehrere Sicherungen der Images vorhalten will "
+"sollte beim HDD-Speicherplatz deutlich mehr veranschlagen!"
+msgstr ""
+"If you have multiple images, or want to maintain multiple backups of the "
+"images, the HDD storage space should be significantly more!"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:19
+msgid "**Beispiel:**"
+msgstr "**Example:**"
+
+#: ../../source/howtos/install-on-xen/requirements.rst:21
+msgid ""
+"Drei W7-Images a 30 G. Von jedem Image sollen drei Kopien vorgehalten "
+"werden, dann ist man schon bei 270 G benötigtem HDD-Speicher. Dabei ist noch"
+" nicht berücksichtigt, dass auch in /home Platz benötigt wird. Dieser Platz "
+"ist abhängig von der Anzahl der Benutzer und der Anwendungen. Hier sollte "
+"man zwischen 500 G und 1000 G einplanen."
+msgstr ""
+"Three Windows7 images à 30 G. Three copies of each image should be stored, "
+"then you'll need already 270 G HDD memory. It is not yet taken into account "
+"that space is also needed in /home. This location depends on the number of "
+"users and applications. Here you should plan between 500 G and 1000 G."
+
+#: ../../source/howtos/install-on-xen/requirements.rst:27
 msgid "**IP**"
 msgstr "**IP**"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:15
+#: ../../source/howtos/install-on-xen/requirements.rst:27
 msgid "**VM**"
 msgstr "**VM**"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:15
+#: ../../source/howtos/install-on-xen/requirements.rst:27
 msgid "**HDD**"
 msgstr "**HDD**"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:15
+#: ../../source/howtos/install-on-xen/requirements.rst:27
 msgid "**RAM**"
 msgstr "**RAM**"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:17
-#: ../../source/howtos/install-on-xen/requirements.rst:17
+#: ../../source/howtos/install-on-xen/requirements.rst:29
+#: ../../source/howtos/install-on-xen/requirements.rst:29
 msgid "Default"
 msgstr "Default"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:17
-#: ../../source/howtos/install-on-xen/requirements.rst:17
+#: ../../source/howtos/install-on-xen/requirements.rst:29
+#: ../../source/howtos/install-on-xen/requirements.rst:29
 msgid "Empfohlen"
 msgstr "Recommended"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:19
+#: ../../source/howtos/install-on-xen/requirements.rst:31
 msgid "10.16.1.1"
 msgstr "10.16.1.1"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:19
+#: ../../source/howtos/install-on-xen/requirements.rst:31
 msgid "Server"
 msgstr "Server"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:19
+#: ../../source/howtos/install-on-xen/requirements.rst:31
 msgid "70GB"
 msgstr "70GB"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:19
+#: ../../source/howtos/install-on-xen/requirements.rst:31
 msgid "250GB+"
 msgstr "250GB+"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:19
+#: ../../source/howtos/install-on-xen/requirements.rst:31
 msgid "4GB"
 msgstr "4GB"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:19
+#: ../../source/howtos/install-on-xen/requirements.rst:31
 msgid "8GB+"
 msgstr "8GB+"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:21
+#: ../../source/howtos/install-on-xen/requirements.rst:33
 msgid "10.16.1.2"
 msgstr "10.16.1.2"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:21
+#: ../../source/howtos/install-on-xen/requirements.rst:33
 msgid "Opsi"
 msgstr "Opsi"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:21
+#: ../../source/howtos/install-on-xen/requirements.rst:33
 msgid "50GB"
 msgstr "50GB"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:21
+#: ../../source/howtos/install-on-xen/requirements.rst:33
 msgid "50GB+"
 msgstr "50GB+"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:21
+#: ../../source/howtos/install-on-xen/requirements.rst:33
 msgid "2GB"
 msgstr "2GB"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:21
+#: ../../source/howtos/install-on-xen/requirements.rst:33
 msgid "2GB+"
 msgstr "2GB+"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:23
+#: ../../source/howtos/install-on-xen/requirements.rst:35
 msgid "10.16.1.3"
 msgstr "10.16.1.3"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:23
+#: ../../source/howtos/install-on-xen/requirements.rst:35
 msgid "Unifi"
 msgstr "Unifi"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:23
-#: ../../source/howtos/install-on-xen/requirements.rst:23
-#: ../../source/howtos/install-on-xen/requirements.rst:27
-#: ../../source/howtos/install-on-xen/requirements.rst:27
+#: ../../source/howtos/install-on-xen/requirements.rst:35
+#: ../../source/howtos/install-on-xen/requirements.rst:35
+#: ../../source/howtos/install-on-xen/requirements.rst:39
+#: ../../source/howtos/install-on-xen/requirements.rst:39
 msgid "20GB"
 msgstr "20GB"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:23
-#: ../../source/howtos/install-on-xen/requirements.rst:27
+#: ../../source/howtos/install-on-xen/requirements.rst:35
+#: ../../source/howtos/install-on-xen/requirements.rst:39
 msgid "512MB"
 msgstr "512MB"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:23
-#: ../../source/howtos/install-on-xen/requirements.rst:27
+#: ../../source/howtos/install-on-xen/requirements.rst:35
+#: ../../source/howtos/install-on-xen/requirements.rst:39
 msgid "512MB+"
 msgstr "512MB+"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:25
+#: ../../source/howtos/install-on-xen/requirements.rst:37
 msgid "10.16.1.4"
 msgstr "10.16.1.4"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:25
+#: ../../source/howtos/install-on-xen/requirements.rst:37
 msgid "XOA"
 msgstr "XOA"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:25
-#: ../../source/howtos/install-on-xen/requirements.rst:25
+#: ../../source/howtos/install-on-xen/requirements.rst:37
+#: ../../source/howtos/install-on-xen/requirements.rst:37
 msgid "8GB"
 msgstr "8GB"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:25
+#: ../../source/howtos/install-on-xen/requirements.rst:37
 msgid "1GB"
 msgstr "1GB"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:25
-#: ../../source/howtos/install-on-xen/requirements.rst:29
+#: ../../source/howtos/install-on-xen/requirements.rst:37
+#: ../../source/howtos/install-on-xen/requirements.rst:41
 msgid "1GB+"
 msgstr "1GB+"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:27
+#: ../../source/howtos/install-on-xen/requirements.rst:39
 msgid "10.16.1.5"
 msgstr "10.16.1.5"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:27
+#: ../../source/howtos/install-on-xen/requirements.rst:39
 msgid "Chilli"
 msgstr "Chilli"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:29
+#: ../../source/howtos/install-on-xen/requirements.rst:41
 msgid "10.16.1.254"
 msgstr "10.16.1.254"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:29
+#: ../../source/howtos/install-on-xen/requirements.rst:41
 msgid "IPFire"
 msgstr "IPFire"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:29
+#: ../../source/howtos/install-on-xen/requirements.rst:41
 msgid "4,5GB"
 msgstr "4,5GB"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:29
+#: ../../source/howtos/install-on-xen/requirements.rst:41
 msgid "4,5GB+"
 msgstr "4,5GB+"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:29
+#: ../../source/howtos/install-on-xen/requirements.rst:41
 msgid "256MB"
 msgstr "256MB"
 
-#: ../../source/howtos/install-on-xen/requirements.rst:32
+#: ../../source/howtos/install-on-xen/requirements.rst:44
 msgid ""
 "Für den Betrieb des Hypervisors (XenServer) sollten ca. 2 bis 5 GB "
 "Arbeitsspeicher eingeplant werden. Um nach Anleitung installieren zu können,"

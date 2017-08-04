@@ -29,6 +29,7 @@ Rufen Sie die Liste aller verfügbaren Clientabbilder auf:
    
    Imagename                 Info
    -----------------------------------------------
+   xenial-qgm                          Ubuntu 16.04 LTS 64Bit
    trusty714                          Ubuntu 14.04 LTS 64Bit
    xenial916                          Ubuntu 16.04 LTS 64Bit
    -----------------------------------------------
@@ -39,22 +40,25 @@ Laden Sie das Abbild Ihrer Wahl (hier: `xenial916`) herunter mit
 
    server ~ # linuxmuster-client -a auto -c xenial916 -H xenial
 
-Es wird die Rechnergruppe `xenial` angelegt und mehrere Dateien werden erzeugt. Die wichtigsten sind
+Es wird die Rechnergruppe (Hardwareklasse) `xenial` angelegt und mehrere Dateien werden erzeugt. Die wichtigsten sind
 
 .. code-block:: bash
 
    /var/linbo/start.conf.xenial
-   /var/linbo/xenial.cloop
-   /var/linbo/xenial.cloop.postsync
-
+   /var/linbo/xenial916.cloop
+   /var/linbo/xenial916.cloop.postsync
+   /var/linbo/linuxmuster-client/xenial/...
 
 Nun kann man Clientrechner in die Rechnergruppe `xenial` aufnehmen. 
 
 .. note::
 
-   Es werden keine Dateien überschrieben. Wenn eine Datei bereits
-   existiert bricht das Programm mit einer entsprechenden Meldung ab,
-   das Problem muss dann zunächst händisch gelöst werden.
+   Wenn eine Datei bereits existiert, bricht das Programm zunächst
+   ab. Mit der Option ``-f`` wird ein angebrochener Download
+   fortgesetzt und bestehende Dateien werden überschrieben, dabei
+   werden von `/var/linbo/start.conf.xenial` und
+   `/var/linbo/linuxmuster-client/xenial` jeweils automatisch Backups
+   erstellt.
 
 
 .. 

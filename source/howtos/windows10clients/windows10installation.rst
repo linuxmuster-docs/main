@@ -168,9 +168,19 @@ Starten Sie den Vorgang mit der Schaltfläche ``Erstellen+Hochladen``.
 .. hint:: Bei dieser Methode wird sofern ein Image mit dem Namen bereits vorhanden ist, das alte Image umbenannt und das
    aktuelle Image nimmt dessen Platz als aktives Image ein.
 
+Sobald der Vorgang abgeschlossen ist, können Sie den Zustand der Installation nun immer auf diesen Punkt zurücksetzen.
 
-Sobald der Vorgang abgeschlossen ist können Sie den Zustand der Installation nun immer auf diesen Punkt zurücksetzen.
-Das Image ist auf dem Server verfügbar und kann auf weitere Rechner ausgerollt werden.
+Das Image ist auf dem Server verfügbar.
+
+Soll es auch auf andere Rechner ausgerollt werden, so muss noch die ``image.reg`` auf dem Server bereitgestellt werden.
+Dazu kopiert man die ``/var/linbo/win10.image.reg`` nach ``/var/linbo/<BEZEICHNUNG DER RECHNERGRUPPE>.cloop.reg``.
+
+Im Beispiel würde das so gehen:
+
+.. code-block:: console
+cp /var/linbo/examples/win10.image.reg /var/linbo/win10.cloop.reg
+
+Ab sofort wird linbo die image.reg nach dem sync eines Betriebsystems in die Registry des gesyncten Rechners eintragen und so z.B. den Hostnamen auf den korrekten Wert setzen.
 
 
 .. |1000000000000409000003095F824A32_png| image:: media/1000000000000409000003095F824A32.png

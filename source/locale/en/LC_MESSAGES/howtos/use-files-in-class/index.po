@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2016, linuxmuster.net
+# Copyright (C) 2017, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-26 10:54+0700\n"
+"POT-Creation-Date: 2017-06-03 11:23+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2017\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,51 +20,59 @@ msgstr ""
 
 #: ../../source/howtos/use-files-in-class/index.rst:2
 msgid "Unterricht: Austeilen von Dateien und weitere Funktionen"
-msgstr ""
+msgstr "Teaching: distributing files and other features"
 
 #: ../../source/howtos/use-files-in-class/index.rst:4
 msgid ""
 "Mithilfe der Schulkonsole können Sie in Ihrem Unterricht folgende Funktionen"
 " nutzen:"
 msgstr ""
+"Using the school console, you can use the following features in your "
+"lessons:"
 
 #: ../../source/howtos/use-files-in-class/index.rst:6
 #: ../../source/howtos/use-files-in-class/index.rst:15
 msgid "Austeilen"
-msgstr ""
+msgstr "Distribute"
 
 #: ../../source/howtos/use-files-in-class/index.rst:7
 #: ../../source/howtos/use-files-in-class/index.rst:38
 msgid "Einsammeln"
-msgstr ""
+msgstr "Collect"
 
 #: ../../source/howtos/use-files-in-class/index.rst:8
 #: ../../source/howtos/use-files-in-class/index.rst:53
 msgid "Klassenarbeit"
-msgstr ""
+msgstr "Class test"
 
 #: ../../source/howtos/use-files-in-class/index.rst:10
 msgid ""
 "Wollen Sie die Funktionen unmittelbar in dem Raum nutzen, in dem Sie "
 "unterrichten, wählen Sie diese Funktionen im Menü `aktueller Raum`."
 msgstr ""
+"If you want to use the functions directly in the room in which you are "
+"teaching, select these functions from the menu `current room`."
 
 #: ../../source/howtos/use-files-in-class/index.rst:12
 msgid ""
 "Möchten Sie vorbereitend diese Funktionen für eine Ihrer Klassen verwenden, "
 "wählen Sie die gewünschte Funktion aus dem Menü `Klassen` aus."
 msgstr ""
+"If you would like to use these functions in preperation for one of your "
+"classes, select the desired function from the `Classes` menu."
 
 #: ../../source/howtos/use-files-in-class/index.rst:17
 msgid ""
 "Nachdem Sie sich an der Schulkonsole als Lehrer angemeldet haben, gehen Sie "
 "zu dem Menüpunkt `Klassen` und dort zum Unterpunkt `Auteilen`."
 msgstr ""
+"After you have registered as a teacher at the school console, go to the "
+"`Class` menu and select `Distribute`."
 
 #: ../../source/howtos/use-files-in-class/index.rst:19
 msgid ""
 "Sie sehen dann die Übersicht der auszuteilenden Dateien für eine Klasse."
-msgstr ""
+msgstr "You will see the overview of the files to be distributed for a class."
 
 #: ../../source/howtos/use-files-in-class/index.rst:23
 msgid ""
@@ -75,6 +84,12 @@ msgid ""
 "Austeilen zur Verfügung zu stellen, klicken Sie auf den Button `Daten "
 "absenden`."
 msgstr ""
+"In the upper right corner, select the desired class from the drop-down menu."
+" Then click the Browse button to upload a file to be distributed. Your file "
+"manager will appear. Here, select the desired file from the appropriate "
+"directory. The file name then appears in the list of files to be "
+"distributed. To make it available for distribution, click on the `Send data`"
+" button."
 
 #: ../../source/howtos/use-files-in-class/index.rst:25
 msgid ""
@@ -82,6 +97,8 @@ msgid ""
 "Dateiliste. Wollen Sie weitere Dateien hinzufügen, so ist o.g. Vorgang "
 "entsprechend zu wiederholen."
 msgstr ""
+"All files to be distributed appear in the file list displayed above. If you "
+"want to add additional files, repeat the procedure."
 
 #: ../../source/howtos/use-files-in-class/index.rst:29
 msgid ""
@@ -93,12 +110,20 @@ msgid ""
 "`austeilen`. Auszuteilende Dateien liegen dann in Ihrem Heimatverzeichnis "
 "unter `_auszuteilen -> auszuteilen-Klasse`."
 msgstr ""
+"In order to distribute the files thus distributed, select the students of "
+"the class to which you want to make the files available. To do this, click "
+"on the selection box for each student in the `Select` column. If all "
+"students of the class are to receive the files, you can use the selection "
+"box below the column. Then click on the `Share` button. The files to be "
+"distributed are located in your home directory under `_shares → class`."
 
 #: ../../source/howtos/use-files-in-class/index.rst:34
 msgid ""
 "Die auszuteilenden Dateien liegen nun in den Heimatverzeichnissen der "
 "Schüler/innen in dem Ordner `__austeilen -> austeilen-Klasse`."
 msgstr ""
+"The files to be distributed are now located in the home directories of the "
+"students in the folder `_shares → shared-class`."
 
 #: ../../source/howtos/use-files-in-class/index.rst:40
 msgid ""
@@ -109,12 +134,19 @@ msgid ""
 "würden dann pro Schüler das Verzeichnis mit allen enthaltenden Dateien "
 "eingesammelt werden."
 msgstr ""
+"If students have created files that you would like to collect as a teacher, "
+"you have to put the files in their home directory in the folder '__collect`."
+" A directory can also be created in this folder, into which several files "
+"are stored. During the collection, the folder containing all the files "
+"containing the file would then be collected per student."
 
 #: ../../source/howtos/use-files-in-class/index.rst:42
 msgid ""
 "Haben die Schüler ihre Dateien entsprechend kopiert, rufen Sie in der "
 "Schulkonsole das Menü `Klassen` und dort das Untermenü `Einsammeln` auf."
 msgstr ""
+"If the students copied their files appropriately, call the `Classes` menu in"
+" the school console and the `Collect` submenu."
 
 #: ../../source/howtos/use-files-in-class/index.rst:46
 msgid ""
@@ -123,12 +155,17 @@ msgid ""
 "gelöscht werden sollen. Wählen Sie die Schüler/innen, von denen Sie "
 "einsammeln wollen, oder die ganze Klasse aus."
 msgstr ""
+"You see behind each student, if and which files were provided. Select "
+"whether the files to be collected are to be retained or deleted. Select the "
+"students from whom you want to collect or the whole class."
 
 #: ../../source/howtos/use-files-in-class/index.rst:50
 msgid ""
 "Sie finden die eingesammelten Arbeiten in Ihrem Heimatverzeichnis unter "
 "„_eingesammelt -> eingesammelt-Klasse“."
 msgstr ""
+"You will find the collected work in your home directory under \"_collected →"
+" collected-class\"."
 
 #: ../../source/howtos/use-files-in-class/index.rst:55
 msgid ""
@@ -137,6 +174,10 @@ msgid ""
 "Zugleich unterbindet dieser Modus den Internet-Zugriff sowie den Zugriff auf"
 " das Heimatverzeichnis der Schüler sowie auf Tauschverzeichnisse."
 msgstr ""
+"In the classroom mode, you have the option of distributing files to students"
+" and collecting the solutions via a network. At the same time, this mode "
+"prevents Internet access as well as access to the home directory of the "
+"students as well as on exchange directories."
 
 #: ../../source/howtos/use-files-in-class/index.rst:57
 msgid ""

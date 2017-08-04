@@ -19,7 +19,7 @@ Alle Aktivitäten, die Sie mit geöffnetem VPN-Tunnel im Internet durchführen, 
 
 .. note::
 
-   VPN ist nicht für einen Intrernet-Zugriff gedacht.
+   VPN ist nicht für einen Internet-Zugriff gedacht.
 
 Der VPN-Tunnel wird verschlüsselt, damit der Datenverkehr nicht abgehört werden kann. Hierfür benötigen Sie ihren persönlichen Schlüssel, der zusätzlich mit einem Passwort gesichert ist.
 
@@ -63,7 +63,7 @@ Haben Sie sich die Schlüssel- und Konfigurationsdateien heruntergeladen, benöt
 Windows-Client
 """"""""""""""
 
-Sie benötigen den aktuellen OpenVPN-Client 2.4 (OpenSource - `Download OPenVPN Windows <https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.0-I601.exe>`_) 
+Sie benötigen den aktuellen OpenVPN-Client 2.4 (OpenSource - `Download OPenVPN Windows <https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.2-I601.exe>`_) 
 
 **Konfiguration**
 

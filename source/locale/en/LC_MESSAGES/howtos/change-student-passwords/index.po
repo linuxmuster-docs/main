@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2016, linuxmuster.net
+# Copyright (C) 2017, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-26 10:54+0700\n"
+"POT-Creation-Date: 2017-06-03 11:23+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +20,7 @@ msgstr ""
 
 #: ../../source/howtos/change-student-passwords/index.rst:5
 msgid "Schüler-Passwörter zurücksetzen und ausdrucken"
-msgstr ""
+msgstr "Resetting and printing student passwords"
 
 #: ../../source/howtos/change-student-passwords/index.rst:7
 msgid ""
@@ -27,6 +28,8 @@ msgid ""
 "Schülers über die Schulkonsole auf das Erstpasswort [#f1]_ zurücksetzen. "
 "Dieses teilen Sie dem Schüler mit."
 msgstr ""
+"If a student forgets his password, each teacher can reset the pupil's "
+"password via the school console to the initial password [#f1]_."
 
 #: ../../source/howtos/change-student-passwords/index.rst:10
 msgid ""
@@ -36,6 +39,10 @@ msgid ""
 "das aktuellste Passwort, das eine Lehrperson über die Schulkonsole vergeben "
 "hat."
 msgstr ""
+"The term **initial password** always refers to the most recent password "
+"assigned to the school console, that is, either the assigned password when "
+"the student is created by the administrator or the most recent password "
+"given by the teacher via the school console."
 
 #: ../../source/howtos/change-student-passwords/index.rst:19
 msgid ""
@@ -43,11 +50,14 @@ msgid ""
 ":`schulekonsole-admin-label` beschrieben an. Wählen Sie unter „Klassen” den "
 "Menüpunkt „Passwörter“."
 msgstr ""
+"To do so, log on to the school console as described in the manual :ref"
+":`schulekonsole-admin-label`. Under \"Classes\", select the \"Passwords\" "
+"menu item."
 
 #: ../../source/howtos/change-student-passwords/index.rst:24
 msgid ""
 "Wählen Sie nun Ihre Klasse aus indem Sie auf die Klassenbezeichnung klicken."
-msgstr ""
+msgstr "Select your class by clicking on the class name."
 
 #: ../../source/howtos/change-student-passwords/index.rst:28
 msgid ""
@@ -55,6 +65,9 @@ msgid ""
 "müssen Sie sich zunächst in die Klasse eintragen. Wählen Sie dazu im "
 "Dropdown-Menü die Klasse aus und klicken anschließend auf \"Eintragen\"."
 msgstr ""
+"If your class does not appear in the upper list (in the example: 10b), you "
+"must first enter the class. To do this, select the class from the drop-down "
+"menu and click on \"Apply\"."
 
 #: ../../source/howtos/change-student-passwords/index.rst:35
 msgid ""
@@ -63,32 +76,36 @@ msgid ""
 "mit dem Knopf \"An\" auch alle Schüler auswählen, wenn Sie allen das "
 "Passwort zurücksetzen wollen."
 msgstr ""
+"Place the hook behind the forgetful student and scroll to the end of the "
+"page. Below the list you can also select all pupils under \"Quick "
+"selection\" with the button \"All\", if you want to reset the password of "
+"all students."
 
 #: ../../source/howtos/change-student-passwords/index.rst:40
 msgid "Klicken Sie nun ganz unten auf dieser Seite auf"
-msgstr ""
+msgstr "Click at the bottom of this page"
 
 #: ../../source/howtos/change-student-passwords/index.rst:43
 msgid "Passwort auf Erstpasswort setzen"
-msgstr ""
+msgstr "Set password to initial password"
 
 #: ../../source/howtos/change-student-passwords/index.rst:43
 msgid "um das Passwort auf dessen Erstpasswort zurückzusetzen,"
-msgstr ""
+msgstr "To reset the password to its initial password,"
 
 #: ../../source/howtos/change-student-passwords/index.rst:47
-msgid "Passwort auf Erstpasswort setzen (Zufallswert)"
-msgstr ""
+msgid "Passwort und Erstpasswort setzen (Zufallswert)"
+msgstr "Set password and initial password (random value)"
 
 #: ../../source/howtos/change-student-passwords/index.rst:46
 msgid ""
 "um dem Schüler ein neues zufälliges Erstpasswort zuzuteilen und sein "
 "Passwort darauf zu setzen,"
-msgstr ""
+msgstr "To give the student a new random initial password,"
 
 #: ../../source/howtos/change-student-passwords/index.rst:53
-msgid "Passwort auf Erstpasswort setzen (Eingabewert):"
-msgstr ""
+msgid "Passwort und Erstpasswort setzen (Eingabewert):"
+msgstr "Set password and initial password (input value):"
 
 #: ../../source/howtos/change-student-passwords/index.rst:50
 msgid ""
@@ -97,24 +114,34 @@ msgid ""
 "Passwort setzt, weil das Erstpasswort nicht verschlüsselt abgespeichert wird"
 " und somit nicht geheim ist."
 msgstr ""
+"To assign the student a password you have selected as the initial password. "
+"This input is not suitable for the student to set his permanent password "
+"because the first password is not stored in encrypted form and is thus not "
+"secret."
 
 #: ../../source/howtos/change-student-passwords/index.rst:57
 msgid ""
 "Die Seite wird neu geladen. Klicken Sie neben dem Schülernamen auf "
 "„Erstpasswort anzeigen“."
 msgstr ""
+"The page is reloaded. Click \"Show first password\" next to the student "
+"name."
 
 #: ../../source/howtos/change-student-passwords/index.rst:61
 msgid ""
 "Teilen Sie das angezeigte Erstpasswort dem Schüler mit der Aufforderung mit,"
 " es in der Schulkonsole zu ändern."
 msgstr ""
+"Tell the shown initial password to the student with the prompt to change it "
+"in the school console."
 
 #: ../../source/howtos/change-student-passwords/index.rst:68
 msgid ""
 "Weder Lehrer noch Administrator können vom Schüler geänderte Passwörter "
 "einsehen. Sie werden grundsätzlich verschlüsselt gespeichert."
 msgstr ""
+"Neither the teacher nor the administrator can recognize changed passwords. "
+"They are stored in encrypted form."
 
 #: ../../source/howtos/change-student-passwords/index.rst:73
 msgid ""
@@ -122,17 +149,22 @@ msgid ""
 " oder als *CSV*-Datei heruntergeladen und mit einem "
 "Tabellenkalkulationsprogramm weiterverarbeitet werden."
 msgstr ""
+"The complete registration cards of the class can be printed as a *PDF* file "
+"or downloaded as a *CSV* file and further processed with a spreadsheet "
+"program."
 
 #: ../../source/howtos/change-student-passwords/index.rst:78
 msgid "Weiterführende Informationen"
-msgstr ""
+msgstr "Additional information"
 
 #: ../../source/howtos/change-student-passwords/index.rst:80
 msgid "Weitere Informationen zum Thema finden Sie"
-msgstr ""
+msgstr "You can find more information about this topic"
 
 #: ../../source/howtos/change-student-passwords/index.rst:82
 msgid ""
 "im Handbuch zur Schulkonsole im Abschnitt :ref:`schulkonsole-teacher-user-"
 "label`"
 msgstr ""
+"in the manual for the school console in the section :ref:`schulkonsole-"
+"teacher-user-label`"

@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2016, linuxmuster.net
+# Copyright (C) 2017, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-26 10:54+0700\n"
+"POT-Creation-Date: 2017-06-03 11:23+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -87,8 +87,8 @@ msgid "Netzwerkbetreuersicht"
 msgstr "Network adivisor view"
 
 #: ../../source/release-information/schulkonsole.rst:27
-#: ../../source/release-information/schulkonsole.rst:126
-#: ../../source/release-information/schulkonsole.rst:162
+#: ../../source/release-information/schulkonsole.rst:129
+#: ../../source/release-information/schulkonsole.rst:165
 msgid "Reparaturen"
 msgstr "Repairs"
 
@@ -119,7 +119,7 @@ msgid "Benutzerverwaltung"
 msgstr "user administration"
 
 #: ../../source/release-information/schulkonsole.rst:40
-#: ../../source/release-information/schulkonsole.rst:158
+#: ../../source/release-information/schulkonsole.rst:161
 msgid "Passwörter"
 msgstr "passwords"
 
@@ -149,21 +149,18 @@ msgstr ""
 msgid "Private Mailadresse im LDAP"
 msgstr "Private Email address in LDAP"
 
-#: ../../source/release-information/schulkonsole.rst:50
+#: ../../source/release-information/schulkonsole.rst:51
 msgid ""
 "Private Mailadressen können im LDAP-Attribut **mail** verwaltet werden. Dazu"
-" muss der Administrator die entsprechende Funktion wie in *TODO: "
-"howto_mailldap* beschrieben, freischalten."
+" muss der Administrator die entsprechende Funktion wie in :ref:`howto-use-"
+"mail-ldap-label` beschrieben, freischalten."
 msgstr ""
-"Private mail addresses can be managed in the LDAP attribute **mail**. To do "
-"this, the administrator must deactivate the corresponding function as "
-"described in *TODO: howto_mailldap*."
 
-#: ../../source/release-information/schulkonsole.rst:54
+#: ../../source/release-information/schulkonsole.rst:57
 msgid "Historie"
 msgstr "History"
 
-#: ../../source/release-information/schulkonsole.rst:55
+#: ../../source/release-information/schulkonsole.rst:58
 msgid ""
 "Unter *Benutzer* gibt es den neuen Menüpunkt **Historie**, über den man "
 "gezielt Passwortlisten zu einem bestimmten Zeitpunkt angelegter Benutzer "
@@ -172,11 +169,11 @@ msgstr ""
 "Under *User*, there is the new menu item **History**, which can be used to "
 "download specific password lists at a particular time."
 
-#: ../../source/release-information/schulkonsole.rst:58
+#: ../../source/release-information/schulkonsole.rst:61
 msgid "Anlegen, Versetzen, Löschen"
 msgstr "Create, move, delete"
 
-#: ../../source/release-information/schulkonsole.rst:59
+#: ../../source/release-information/schulkonsole.rst:62
 msgid ""
 "In diesem Bereich wird jetzt die log-Datei für einen laufenden Prozess "
 "automatisch angezeigt. Das erlaubt eine bessere laufende Kontrolle."
@@ -184,11 +181,11 @@ msgstr ""
 "In this area, the log file for a running process is now displayed "
 "automatically. This allows for better ongoing control."
 
-#: ../../source/release-information/schulkonsole.rst:63
+#: ../../source/release-information/schulkonsole.rst:66
 msgid "Plugins"
 msgstr "Plugins"
 
-#: ../../source/release-information/schulkonsole.rst:65
+#: ../../source/release-information/schulkonsole.rst:68
 msgid ""
 "Es ist möglich, Plugins für die Schulkonsole zu schreiben. Das Schreiben von"
 " Plugins ist auf der Seite `Technische Doku der Schulkonsole "
@@ -199,15 +196,15 @@ msgstr ""
 "documented on the `Technical Documenatation page of the school console  "
 "<https://www.linuxmuster.net/wiki/entwicklung:schulkonsole:sk_neue_plugin_seite>`_."
 
-#: ../../source/release-information/schulkonsole.rst:68
+#: ../../source/release-information/schulkonsole.rst:71
 msgid "Momentan gibt des 2 Plugins."
 msgstr "Currently there are 2 plugins."
 
-#: ../../source/release-information/schulkonsole.rst:71
+#: ../../source/release-information/schulkonsole.rst:74
 msgid "Druckerquotierung (Pykota)"
 msgstr "Printer quotation (Pykota)"
 
-#: ../../source/release-information/schulkonsole.rst:73
+#: ../../source/release-information/schulkonsole.rst:76
 msgid ""
 "Das Plugin ermöglicht die Einrichtung und Einstellung der Quotierung über "
 "die Schulkonsole. Das Paket dazu heißt **linuxmuster-pk-schulkonsole**. Es "
@@ -219,11 +216,11 @@ msgstr ""
 "supplements the menu of the network controller by a menu point in the "
 "Settings menu and a menu Print Quotas."
 
-#: ../../source/release-information/schulkonsole.rst:76
+#: ../../source/release-information/schulkonsole.rst:79
 msgid "Backup mit MondoRescue"
 msgstr "Backup with MondoRescue"
 
-#: ../../source/release-information/schulkonsole.rst:78
+#: ../../source/release-information/schulkonsole.rst:81
 msgid ""
 "`MondoRescue <http://www.mondorescue.org>`_ ist ein schon recht altes "
 "zuverlässiges Backupprogramm. Das Plugin **linuxmuster-schulkonsole-backup**"
@@ -235,11 +232,11 @@ msgstr ""
 " the menu of the network administrator by a menu point in the menu Settings "
 "to configure the backups."
 
-#: ../../source/release-information/schulkonsole.rst:81
-msgid "Einstellungen für Klassen, Projekte"
-msgstr "Settings for classes, projects"
+#: ../../source/release-information/schulkonsole.rst:84
+msgid "Einstellungen für Klassen und Projekte"
+msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:82
+#: ../../source/release-information/schulkonsole.rst:85
 msgid ""
 "Für den Netzwerkbetreuer gibt es unter Einstellungen Menüpunkte für Klassen "
 "und Projekte. Dort können Standardeinstellungen festgelegt werden."
@@ -247,7 +244,7 @@ msgstr ""
 "There are menu items for classes and projects under the Settings menu for "
 "the network administrator. There, default settings can be defined."
 
-#: ../../source/release-information/schulkonsole.rst:84
+#: ../../source/release-information/schulkonsole.rst:87
 msgid ""
 "Mailingliste gibt an, ob für die betreffende Gruppe eine Mailingliste "
 "angelegt wird."
@@ -255,7 +252,7 @@ msgstr ""
 "Mailing list specifies whether a mailing list is created for the relevant "
 "group."
 
-#: ../../source/release-information/schulkonsole.rst:85
+#: ../../source/release-information/schulkonsole.rst:88
 msgid ""
 "Mailalias gibt an, ob die Mitglieder der betreffenden Gruppe Mailalias-"
 "Einträge nach dem vorgegebenen Muster erhalten."
@@ -263,7 +260,7 @@ msgstr ""
 "Mailalias specifies whether members of the group receive mailalias in the "
 "specified pattern."
 
-#: ../../source/release-information/schulkonsole.rst:87
+#: ../../source/release-information/schulkonsole.rst:90
 msgid ""
 "WLAN gibt an, ob für die Mitglieder der betreffenden Gruppe das WLAN "
 "standardmäßig ein- oder ausgeschaltet ist."
@@ -271,22 +268,22 @@ msgstr ""
 "WLAN indicates whether the WLAN is switched on or off by default for the "
 "members of the concerned group."
 
-#: ../../source/release-information/schulkonsole.rst:91
+#: ../../source/release-information/schulkonsole.rst:94
 msgid "Rechnerverwaltung"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:94
+#: ../../source/release-information/schulkonsole.rst:97
 msgid "Hosts"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:95
+#: ../../source/release-information/schulkonsole.rst:98
 msgid ""
 "Die **hosts**-Tabelle kann nach verschiedenen Spalten aufsteigend bzw. "
 "absteigend sortiert werden. Damit ist es einfacher, z.B. freie IP-Adressen "
 "eines Raums herauszufinden."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:96
+#: ../../source/release-information/schulkonsole.rst:99
 msgid ""
 "Die Datei **/etc/linuxmuster/workstations** kann auch Kommentare enthalten. "
 "Wird vor den Raumnamen ein Kommentarzeichen eingefügt, bleibt die Zeile "
@@ -294,98 +291,98 @@ msgid ""
 "so wird die Zeile wieder aktiv."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:98
+#: ../../source/release-information/schulkonsole.rst:101
 msgid ""
 "Bei einem *import_workstations*, also der Übernahme der Änderungen in das "
 "System wird die log-Datei angezeigt."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:101
+#: ../../source/release-information/schulkonsole.rst:104
 msgid "grub.cfg-Dateien"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:102
+#: ../../source/release-information/schulkonsole.rst:105
 msgid ""
 "In der Schulkonsole im Menü LINBO kann der Netzwerkbetreuer direkt grub-"
 "Startdateien einer Gruppe bearbeiten."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:105
+#: ../../source/release-information/schulkonsole.rst:108
 msgid "regpatch-Dateien"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:106
+#: ../../source/release-information/schulkonsole.rst:109
 msgid ""
 "Regpatch-Dateien können im Menü Linbo über den Eintrag Regpatch direkt "
 "bearbeitet werden."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:109
+#: ../../source/release-information/schulkonsole.rst:112
 msgid "start.conf"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:110
+#: ../../source/release-information/schulkonsole.rst:113
 msgid ""
 "Es gibt mehrere Erweiterungen der start.conf-Datei, die zum Teil mit der "
 "Umstellung auf grub2 und der damit einhergehenden Unterstützung von UEFI-"
 "Rechnern zu tun hat."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:113
+#: ../../source/release-information/schulkonsole.rst:116
 msgid ""
 "**efi** ist ein neuer Partitionstyp, der bei UEFI-Rechnern zum Starten "
 "benötigt wird."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:114
+#: ../../source/release-information/schulkonsole.rst:117
 msgid ""
 "**Systemtyp** ist ein neues Feld, das den Rechnertyp (bios, bios64, efi32, "
 "efi64) angibt."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:115
+#: ../../source/release-information/schulkonsole.rst:118
 msgid ""
 "**Label** ist ein neues Feld, in welchem man für jede Partition ein Label "
 "eintragen kann. Dieses kann z.B. zum mounten verwendet werden."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:119
+#: ../../source/release-information/schulkonsole.rst:122
 msgid "Linbo"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:120
+#: ../../source/release-information/schulkonsole.rst:123
 msgid ""
 "Im Linbo-Menü gibt es einen neuen Menüpunkt *Linbo-Remote*. Dort können neue"
 " Aufgaben erstellt, laufende Aufgaben überwacht und geplante Aufgaben wieder"
 " entfernt werden."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:123
+#: ../../source/release-information/schulkonsole.rst:126
 msgid "Lehrersicht"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:127
+#: ../../source/release-information/schulkonsole.rst:130
 msgid ""
 "Auf den Seiten Klassen und Projekte gibt es jeweils den Unterpunkt zur "
 "Reparatur der *Persönlichen Ordner* der jeweiligen Mitglieder."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:130
+#: ../../source/release-information/schulkonsole.rst:133
 msgid "WLAN-Zugriff steuern"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:134
+#: ../../source/release-information/schulkonsole.rst:137
 msgid ""
-"In den Menüs für Projekte, Klassen ist ein Menüpunkt **Unterricht**, über "
-"den sich der WLAN-Zugriff für ausgewählte Benutzer von Projekten, Klassen "
+"In den Menüs für Klassen und Projekte ist ein Menüpunkt **Unterricht**, über"
+" den sich der WLAN-Zugriff für ausgewählte Benutzer von Projekten, Klassen "
 "zeitgesteuert ein- und ausschalten lässt."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:137
+#: ../../source/release-information/schulkonsole.rst:140
 msgid "Austeilen, Einsammeln, Bereitstellen"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:141
+#: ../../source/release-information/schulkonsole.rst:144
 msgid ""
 "An vielen Stellen, an denen man bisher auf die *Unterstrich*-Verzeichnisse "
 "zugreifen musste, hat man jetzt in der Schulkonsole Knöpfe zum "
@@ -393,47 +390,47 @@ msgid ""
 "das Hangeln durch lange Pfade überflüssig."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:144
+#: ../../source/release-information/schulkonsole.rst:147
 msgid "Projekte"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:145
+#: ../../source/release-information/schulkonsole.rst:148
 msgid ""
 "Ein Projektadministrator kann Schülerpassworte direkt im Menü Projekte "
 "ähnlich zu Schülerpassworten in Klassen ändern/anzeigen."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:148
+#: ../../source/release-information/schulkonsole.rst:151
 msgid "Schülersicht"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:152
+#: ../../source/release-information/schulkonsole.rst:155
 msgid ""
 "Wegen des Austeilens, Einsammelns, Bereitstellens, sind neue Schülermenüs "
 "(Mein Raum, Meine Klasse, Mein Projekt) hinzugekommen."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:155
+#: ../../source/release-information/schulkonsole.rst:158
 msgid "Alle Benutzer"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:159
+#: ../../source/release-information/schulkonsole.rst:162
 msgid ""
 "Hat der Netzwerkbetreuer die Passwortüberprüfung aktiviert, so werden neue "
 "Passwörter auf ihre Qualität überprüft."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:163
+#: ../../source/release-information/schulkonsole.rst:166
 msgid ""
 "Auf der Startseite befindet sich ein Punkt zur Reparatur des eigenen "
 "*Persönlichen Ordners*."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:166
+#: ../../source/release-information/schulkonsole.rst:169
 msgid "Mailweiterleitung"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:167
+#: ../../source/release-information/schulkonsole.rst:170
 msgid ""
 "Unter *Horde* kann man eine Mailweiterleitungsadresse einrichten. Das ist "
 "umständlich. Diese Einrichtung kann jeder Benutzer jetzt auch auf der "
@@ -441,107 +438,98 @@ msgid ""
 "der Server auch als Mailserver eingerichtet worden ist."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:170
+#: ../../source/release-information/schulkonsole.rst:173
 msgid "Alternative Mailadresse"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:171
+#: ../../source/release-information/schulkonsole.rst:174
 msgid ""
-"Abhängig von den Einstellungen für Mail (siehe TODO howto_mailldap) kann auf"
-" der Startseite jeder Benutzer eine vom Standard abweichende Mailadresse "
-"einrichten, die im LDAP-Attribut **mail** gespeichert wird."
-msgstr ""
-
-#: ../../source/release-information/schulkonsole.rst:176
-msgid "Oberfläche allgemein"
+"Abhängig von den Einstellungen für Mail (siehe :ref:`howto-use-mail-ldap-"
+"label`) kann auf der Startseite jeder Benutzer eine vom Standard abweichende"
+" Mailadresse einrichten, die im LDAP-Attribut **mail** gespeichert wird."
 msgstr ""
 
 #: ../../source/release-information/schulkonsole.rst:179
+msgid "Oberfläche allgemein"
+msgstr ""
+
+#: ../../source/release-information/schulkonsole.rst:182
 msgid "Menü"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:183
+#: ../../source/release-information/schulkonsole.rst:186
 msgid ""
 "Das Menü ist jetzt ein 2-Ebenenmenü, das nicht mehr soviel Bildschirmplatz "
 "benötigt und intuitiver zu bedienen ist."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:186
+#: ../../source/release-information/schulkonsole.rst:189
 msgid "Dialoge"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:190
+#: ../../source/release-information/schulkonsole.rst:193
 msgid ""
 "Fehlerdialoge werden jetzt modal und zentriert und damit auffälliger "
 "dargestellt."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:193
+#: ../../source/release-information/schulkonsole.rst:196
 msgid "Statusmeldungen"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:197
+#: ../../source/release-information/schulkonsole.rst:200
 msgid "Statusmeldungen erscheinen auffälliger unterhalb des Menüs."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:200
+#: ../../source/release-information/schulkonsole.rst:203
 msgid "Schwebende Hilfe"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:204
+#: ../../source/release-information/schulkonsole.rst:207
 msgid ""
 "Die schwebende Hilfe blendet sich zeitgesteuert aus und es kommt dadurch "
 "nicht mehr zur Verdeckung von wichtigen Seitenelementen."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:207
+#: ../../source/release-information/schulkonsole.rst:210
 msgid "Verwaltung WLAN"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:209
+#: ../../source/release-information/schulkonsole.rst:212
 msgid ""
 "Die Verwaltung des WLAN-Zugriffs erfolgt intern über ein spezielles Projekt."
-" Standardmäßig ist es das Projekt **p\\_wifi**. Es wird angelegt, falls es "
-"bei der Installation nicht existiert."
+" Standardmäßig heißt das Projekt **p\\_wifi**. Es wird angelegt, falls es "
+"bei der Installation nicht existiert. Der Projektname kann über die "
+"Schulkonsole des `administrator` unter Einstellungen geändert werden."
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:213
-msgid ""
-"Der Projektname kann über die Schulkonsole unter Einstellungen geändert "
-"werden."
-msgstr ""
-
-#: ../../source/release-information/schulkonsole.rst:216
-msgid ""
-"Das WLAN-Projekt muss den *administrator* als Projektadmin haben und auf "
-"*nojoin* eingestellt sein. Das erledigt die Schulkonsole bei der "
-"Installation selbst, falls das WLAN-Projekt bereits existiert."
-msgstr ""
-
-#: ../../source/release-information/schulkonsole.rst:220
-msgid "Bis Version **0.36.0-1** musste das einmal manuell gemacht werden."
-msgstr ""
-
-#: ../../source/release-information/schulkonsole.rst:227
+#: ../../source/release-information/schulkonsole.rst:228
 msgid "Standardeinstellungen"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:229
+#: ../../source/release-information/schulkonsole.rst:230
 msgid ""
 "Für die Standardeinstellungen zum **WLAN** gibt es die Datei "
 "**/etc/linuxmuster/wlan_defaults** mit dem Inhalt"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:262
+#: ../../source/release-information/schulkonsole.rst:263
 msgid ""
 "Dort können beliebige Benutzer und Gruppen eingetragen werden. Dazu gibt es "
 "das Programm **linuxmuster-wlan-reset** mit der Syntax"
 msgstr ""
 
-#: ../../source/release-information/schulkonsole.rst:279
+#: ../../source/release-information/schulkonsole.rst:280
 msgid ""
 "Es dient dazu, Einstellungen für einzelne Nutzer/Gruppen wieder auf die "
 "Standardeinstellungen zurückzusetzen. Die Standardeinstellungen befinden "
 "sich in der oben beschriebenen Datei **wlan_defaults**. Die Schulkonsole "
 "verwendet diese Datei bzw. das Programm, um Einstellungen vorzunehmen."
+msgstr ""
+
+#: ../../source/release-information/schulkonsole.rst:284
+msgid ""
+"Wenn die Gruppe ``teachers`` mit Zugang zum WLAN ausgestattet wird, dann ist"
+" es den Lehrern möglich über WLAN und der Schulkonsole während des "
+"Unterrichts temporär Berechtigungen an Klassen oder Projekte zu vergeben."
 msgstr ""

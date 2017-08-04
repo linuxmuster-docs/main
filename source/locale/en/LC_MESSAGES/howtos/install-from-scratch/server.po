@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2016, linuxmuster.net
+# Copyright (C) 2017, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-26 10:54+0700\n"
+"POT-Creation-Date: 2017-06-03 11:23+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: T. Küchel <t.kuechel@humboldt-ka.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -41,6 +41,10 @@ msgid ""
 "Sie zuvor die Firewall (`Installation und Konfiguration der Firewall "
 "<install-configure-firewall-label>`_)."
 msgstr ""
+"Be sure to read the notes on the applicable versions in `Preface and "
+"preparations <preface-preparations-label>`_ and then install the firewall "
+"(`Installation und Configuration of the Firewall <install-configure-"
+"firewall-label>`_)."
 
 #: ../../source/howtos/install-from-scratch/server.rst:19
 msgid "Grundeinstellungen"

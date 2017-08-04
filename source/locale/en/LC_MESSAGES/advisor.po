@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2016, linuxmuster.net
+# Copyright (C) 2017, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-26 10:54+0700\n"
+"POT-Creation-Date: 2017-06-03 11:23+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -26,10 +26,10 @@ msgstr "Manual for network advisors"
 msgid "Leitfäden"
 msgstr "Guidelines"
 
-#: ../../source/advisor.rst:26
+#: ../../source/advisor.rst:23
 msgid "Schritt-für-Schritt Anleitungen"
 msgstr "Step-by-Step Instructions"
 
-#: ../../source/advisor.rst:42
+#: ../../source/advisor.rst:53
 msgid "Bedienungsanleitungen"
 msgstr "Manuals"

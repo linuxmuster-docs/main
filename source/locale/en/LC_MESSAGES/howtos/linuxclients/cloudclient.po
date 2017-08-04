@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2016, linuxmuster.net
+# Copyright (C) 2017, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-26 10:54+0700\n"
+"POT-Creation-Date: 2017-06-03 11:23+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -27,72 +27,29 @@ msgid ""
 "servertools``."
 msgstr ""
 
-#: ../../source/howtos/linuxclients/cloudclient.rst:24
-msgid "Anpassung"
-msgstr ""
-
-#: ../../source/howtos/linuxclients/cloudclient.rst:26
-msgid ""
-"In der Datei ``/etc/linuxmuster/client-servertools.conf`` muss das "
-"gewünschte Passwort für den späteren administrativen Benutzer des Clients "
-"`linuxadmin` angepasst werden."
-msgstr ""
-
-#: ../../source/howtos/linuxclients/cloudclient.rst:42
+#: ../../source/howtos/linuxclients/cloudclient.rst:23
 msgid "Rufen Sie die Liste aller verfügbaren Clientabbilder auf:"
 msgstr ""
 
-#: ../../source/howtos/linuxclients/cloudclient.rst:57
-msgid "Herunterladen"
+#: ../../source/howtos/linuxclients/cloudclient.rst:37
+msgid "Laden Sie das Abbild Ihrer Wahl (hier: `xenial916`) herunter mit"
 msgstr ""
 
-#: ../../source/howtos/linuxclients/cloudclient.rst:59
+#: ../../source/howtos/linuxclients/cloudclient.rst:43
 msgid ""
-"Das Abbild lädt man nun herunter mit ``linuxmuster-client -a get-cloop -c "
-"<Imagename>``. Im Beispiel lautet das aktuellste Abbild `trusty714`. .. "
-"code-block:: console"
+"Es wird die Rechnergruppe (Hardwareklasse) `xenial` angelegt und mehrere "
+"Dateien werden erzeugt. Die wichtigsten sind"
 msgstr ""
 
-#: ../../source/howtos/linuxclients/cloudclient.rst:62
-msgid "16:47/1 server ~ # linuxmuster-client -a get-cloop -c trusty714"
+#: ../../source/howtos/linuxclients/cloudclient.rst:52
+msgid "Nun kann man Clientrechner in die Rechnergruppe `xenial` aufnehmen."
 msgstr ""
 
-#: ../../source/howtos/linuxclients/cloudclient.rst:64
+#: ../../source/howtos/linuxclients/cloudclient.rst:56
 msgid ""
-"Wenn keine weiteren Optionen angegeben werden, wird dabei die Rechnergruppe "
-"`ubuntuclient` angelegt und die Dateien nach dem Schema ::"
-msgstr ""
-
-#: ../../source/howtos/linuxclients/cloudclient.rst:72
-msgid "erzeugt."
-msgstr ""
-
-#: ../../source/howtos/linuxclients/cloudclient.rst:75
-msgid ""
-"Es werden keine Dateien überschrieben. Wenn eine Datei bereits existiert "
-"bricht das Programm mit einer entsprechenden Meldung ab, das Problem muss "
-"dann zunächst händisch gelöst werden."
-msgstr ""
-
-#: ../../source/howtos/linuxclients/cloudclient.rst:0
-msgid "Zu tun"
-msgstr ""
-
-#: ../../source/howtos/linuxclients/cloudclient.rst:78
-msgid "Entwicklerdokumentation zu linuxmuster-client"
-msgstr ""
-
-#: ../../source/howtos/linuxclients/cloudclient.rst:82
-msgid "Abbild zur Synchronisation einrichten"
-msgstr ""
-
-#: ../../source/howtos/linuxclients/cloudclient.rst:84
-msgid ""
-"Der folgende Befehl erzeugt alle nötigen Konfigurationen, so dass das Abbild"
-" `ubuntuclient` im lokalen Netz einsatzfähig wird:"
-msgstr ""
-
-#: ../../source/howtos/linuxclients/cloudclient.rst:91
-msgid ""
-"Nun kann man Clientrechner in die Rechnergruppe `ubuntuclient` aufnehmen."
+"Wenn eine Datei bereits existiert, bricht das Programm zunächst ab. Mit der "
+"Option ``-f`` wird ein angebrochener Download fortgesetzt und bestehende "
+"Dateien werden überschrieben, dabei werden von "
+"`/var/linbo/start.conf.xenial` und `/var/linbo/linuxmuster-client/xenial` "
+"jeweils automatisch Backups erstellt."
 msgstr ""

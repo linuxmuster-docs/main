@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2016, linuxmuster.net
+# Copyright (C) 2017, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-26 10:54+0700\n"
+"POT-Creation-Date: 2017-06-03 11:23+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Jochen Rupp <jochen_rupp@web.de>, 2017\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +20,7 @@ msgstr ""
 
 #: ../../source/howtos/backup-migrating/configuration_execution.rst:2
 msgid "Konfiguration und Anwendung"
-msgstr ""
+msgstr "Configuration and use"
 
 #: ../../source/howtos/backup-migrating/configuration_execution.rst:4
 msgid ""
@@ -28,32 +29,41 @@ msgid ""
 "dass im Falle einer Wiederherstellung üblicherweise derselbe Rechner mit "
 "derselben linuxmuster.net Version das Migrationsziel darstellt."
 msgstr ""
+"Since the scripts for the migration of a system are used, configuration and "
+"use are identical to a migration. Sole exception is, that in case of "
+"recovery normally the same machine with the same version of linuxmuster.net "
+"is used as migration target."
 
 #: ../../source/howtos/backup-migrating/configuration_execution.rst:6
 msgid ""
 "Zur Umsetzung der Backuplösung folgen Sie bitte dem `Howto_Migration` "
 "Schritt für Schritt"
 msgstr ""
+"For the backup solution please follow the 'howto_migration' step by step"
 
 #: ../../source/howtos/backup-migrating/configuration_execution.rst:9
 msgid "Automatisierung"
-msgstr ""
+msgstr "Automation"
 
 #: ../../source/howtos/backup-migrating/configuration_execution.rst:10
 msgid ""
 "Ein regelmäßiges Backup per kann per `cronjob` eingerichtet werden. "
 "Erstellen und editieren Sie die Datei ``/etc/cron.d/backupservice``"
 msgstr ""
+"A regular backup can be set up via 'cronjob'. Create and edit the file "
+"\"/etc/cron.d/backupservice\""
 
 #: ../../source/howtos/backup-migrating/configuration_execution.rst:21
 msgid "Pseudo-Vollbackups"
-msgstr ""
+msgstr "Pseudo-Fullbackups"
 
 #: ../../source/howtos/backup-migrating/configuration_execution.rst:22
 msgid ""
 "Mit Hilfe des Werkzeuges `rsnapshot` kann eine Versionierung des Backupziels"
 " erfolgen. Dazu installieren Sie zunächst rsnapshot:"
 msgstr ""
+"With the tool 'rsnapshot' versioning of the backup target can be "
+"established. Therefore you have to install rsnapshot first:"
 
 #: ../../source/howtos/backup-migrating/configuration_execution.rst:29
 msgid ""
@@ -61,22 +71,28 @@ msgid ""
 "``/srv/backup/server`` gesichert, dann können Sie dieses nun mit einer "
 "Versionverwaltung ergänzen."
 msgstr ""
+"If you already have saved a backup at the target \"/srv/backup/server\" with"
+" the migration tool, you can add versioning to it."
 
 #: ../../source/howtos/backup-migrating/configuration_execution.rst:31
 msgid ""
 "Ziel des Migrationsbackups: ``/srv/backup/server`` Versionen dieser Backups "
 "(Pseudo-Vollbackups): ``/srv/backup/rsnapshot``"
 msgstr ""
+"Target of migration-backup: \"/srv/backup/server\". Versions of these "
+"backups (pseudo-fullbackups): \"/srv/backup/rsnapshot\""
 
 #: ../../source/howtos/backup-migrating/configuration_execution.rst:34
 msgid ""
 "Um hierfür eine Versionierung einzurichten find folgende Einträge in "
 "``/etc/rsnapshot.conf`` vorzunehmen:"
 msgstr ""
+"In order to establish versioning therefor, you have to add the following "
+"entries in \"/etc/rsnapshot.conf\":"
 
 #: ../../source/howtos/backup-migrating/configuration_execution.rst:47
 msgid "Dabei gilt:"
-msgstr ""
+msgstr "Thereby applies:"
 
 #: ../../source/howtos/backup-migrating/configuration_execution.rst:49
 msgid ""
@@ -87,27 +103,39 @@ msgid ""
 "sorgt dafür, dass 15 Backups vom Typ „daily“ behalten werden, dagegen 12 vom"
 " Typ „monthly“ behalten."
 msgstr ""
+"The characters >> stand for TABs and $ for the end of the line. This is "
+"emphasized because the program rsnapshot doesn't work well with additional "
+"whitespaces, e.g. at the end of a line. Also all directories have to end "
+"with a /. The entry \"retain daily 15\" means, that 15 backups of type "
+"\"daily\" will be kept, whereat 12 of type \"monthly\" will be kept."
 
 #: ../../source/howtos/backup-migrating/configuration_execution.rst:52
 msgid ""
 "Wann diese Backups erfolgen, ist selbst festzulegen, indem rsnapshot von "
 "cron aus mit dem richtigen Argument gestartet wird."
 msgstr ""
+"When these backups will take place has to be specified by oneself by "
+"starting rsnapshot from cron with the right argument."
 
 #: ../../source/howtos/backup-migrating/configuration_execution.rst:54
 msgid ""
 "Eine beispielhafte Konfiguration für cron in ``/etc/cron.d/backupservice`` "
 "wäre:"
 msgstr ""
+"A sample configuration for cron in \"/etc/cron.d/backupservice\" would be:"
 
 #: ../../source/howtos/backup-migrating/configuration_execution.rst:65
 msgid ""
 "Diese Einstellung hat zur Folge, dass die täglichen Backups der letzten 15 "
 "Tage und die zweiwöchentlichen Backups der letzten 6 Monate behalten werden."
 msgstr ""
+"This setting has the consequence that the daily backups  of the last 15 days"
+" and the fortnightly backups of the last 6 months will be kept."
 
 #: ../../source/howtos/backup-migrating/configuration_execution.rst:67
 msgid ""
 "Das Verzeichnis der Pseudo-Vollbackups sollte dann nach einiger Zeit "
 "folgende Struktur haben:"
 msgstr ""
+"After a while, the pseudo-fullbackup directory should have a structure like "
+"this:"

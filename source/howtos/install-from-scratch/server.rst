@@ -812,7 +812,7 @@ Geben Sie das Passwort erneut ein.
 
 Wählen Sie die Netzwerkkarte, die mit dem grünen Netz verbunden ist. Durch Betätigen der Schaltfläche ``OK`` wird die Konfiguration erstellt.
 
-.. figure:: media/server/720.png
+.. figure:: media/server/server-assign-network.png
    :align: center
    :alt: Wahl der Netzwerkkarte, die mit dem grünen Netz verbunden ist.
 

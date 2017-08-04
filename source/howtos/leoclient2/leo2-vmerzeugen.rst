@@ -4,7 +4,13 @@
 Virtuelle Maschine erzeugen
 ===========================
 
-Das ``leoclient2-init``-Script bereitet eine virtuelle Machine (VM) vor, die später mit dem Programm ``leovirtstarter2`` gestartet werden kann. Es muss mit root-Rechten gestartet werden:
+Das Script ``leoclient2-init`` bereitet eine virtuelle Machine (VM)
+vor, die später mit dem Programm ``leovirtstarter2`` gestartet werden
+kann.
+
+Die VM kann nur in einem Verzeichnis erstellt werden das der
+aufrufende User anlegen darf.  Üblicherweise muss das Script also mit
+root-Rechten gestartet werden:
 
 .. code-block:: console
 
@@ -30,7 +36,7 @@ Es werden folgende Parameter abgefragt und auf Nachfrage VirtualBox gestartet.
 
 - der MASCHINENNAME für die VM (keine Leerzeichen verwenden)
 - der PFAD für den Speicherort der VM (Standardpfad ``/var/virtual/``)
-- die Größe der virtuellen Festplatte für die VM in MB
+- die Größe der dynamisch wachsenden virtuellen Festplatte für die VM in MB
 
 ..
    Damit werden folgende Aktionen vom Script ausgeführt:
@@ -41,17 +47,27 @@ Es werden folgende Parameter abgefragt und auf Nachfrage VirtualBox gestartet.
    - anschließend wird die Konfiguration für die VM eingestellt und VirtualBox damit gestartet
 
 
-Man kann unter VirtualBox die Konfiguration der VM noch an die eigenen
+Man sollte unter VirtualBox die Konfiguration der VM noch an die eigenen
 Bedürfnisse anpassen (Die Arbeitsspeichergröße für die VM wird beim
 Starten an die Gegebenheiten der vorhandenen Maschine angepasst).
 
-Betriebsystem
--------------
+Betriebsystemeinstellungen
+--------------------------
 
-Der Typ und die Version des Betriebssystems sollten von "Other" auf
-das jeweilig Gewünschte geändert werden.
+Unter ``Allgemein``, Reiter Basis muss der Betriebsystemtyp und Version angepasst werden.
 
+Systemanforderungen/Ressourcen
+------------------------------
 
+Unter ``System``, wird konfiguriert, welche Hardware-Ressourcen die VM zur Verfügung gestellt bekommt.
+Je nach Gast sind hier Mindestwerte zu beachten:
+
+Win10 (Beispielhaft):
+
+- Hauptspeicher 2048 MB (System -> Hauptplatine)
+- 2 CPU's (System -> Prozessor)
+- 64 MB Grafikspeicher (System -> Bildschirm)
+ 
 DVD-Laufwerk
 ------------
 
@@ -64,25 +80,22 @@ USB verwenden
 -------------
 
 Sollte man, wie voreingestellt, USB2 verwenden wollen, muss man das
-zur Version von VirtualBox passende Extension Pack installieren. Unter
-Ubuntu 16.04 kann man das Paket ``virtualbox-ext-pack`` passend zur
-installierten Version von VirtualBox nachinstallieren.
+zur Version von VirtualBox passende Extension Pack installieren.
 
-In anderen Linux-Distributionen muss man eventuell das richtige
-Extension Pack manuell herunterladen
-(https://virtualbox.org/wiki/Download_Old_Builds) und installieren (→
-Datei → Globale Einstellungen … → Zusatzpakete → Rechtsklick auf
-rechtes Feld → Paket hinzufügen → auswählen → installieren →
-OK). 
 
 Netzwerk offline
 ----------------
 
 Eine Netzwerkkarte ist in der Standardkonfiguration nicht aktiviert,
 dadurch bietet die VM keine Angriffsfläche und man kann auf
-zeitraubende Updates verzichten.  Trotzdem ist es möglich auf die
-Netzlaufwerke auf dem Server zuzugreifen und Netzwerkdrucker zu
-verwenden.
+zeitraubende Updates verzichten.
+
+Wenn sie aktiviert wird, gilt das nur vorübergehend.
+
+Trotzdem ist es möglich auf die Netzlaufwerke auf dem Server
+zuzugreifen und Netzwerkdrucker zu verwenden.
+
+
 
 Betriebssystem installieren
 ---------------------------
@@ -115,3 +128,24 @@ Nach Beenden von Virtualbox wird die VM für den Start mit dem Programm
    Wenn Sie die vollständige virtuelle Maschine in ein anderes Verzeichnis
    umziehen wollen, starten Sie das Script 'leoclient2-vm-move'.
 						
+Weitere Schritte
+----------------
+
+Nachdem das Betriebsystem installiert ist, ist es sinnvoll in der
+Basis der VM noch folgende Anpassungen vorzunehmen:
+
+- Installation der Gasterweiterungen in der VM
+- Verbinden der Netzlaufwerke in der VM
+- Einrichten eines PDF-Druckers in der VM
+- (Schrumpfen ???)
+
+Diese Anpassungen unterscheiden sich je nach verwendeten
+Betriebsystem. Anleitungen finden sie bei "Weitere Informationen zu
+leoclient2" und dem jeweiligen Gastbetriebsystem unter Tipps und
+Tricks.
+  
+Danach muss die Basis aktualisiert werden (Siehe folgendes Kapitel:
+Basis und Snapshots verwalten).
+
+
+  

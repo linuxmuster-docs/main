@@ -1,7 +1,16 @@
+
+.. _use-horde-label:
+
 ===================================
 Schulinternen E-Mail-Versand nutzen
 ===================================
 
+
+Diese Schritt-für-Schritt-Anleitung erklärt, wie Sie im Schulnetzwerk
+E-Mails mit Hilfe eines Webmailers versenden und empfangen können. In
+dem Webmailer ist auch die Möglichkeit enthalten, Weiterleitungen auf
+externe E-Mail-Adressen einzurichten und auf die "Home_auf_Server" und
+"Tausch"-Verzeichnisse zuzugreifen.
 
 Auf dem Schulserver läuft ein Webmail-Programm mit dem Namen
 *Horde*. Rufen Sie im Browser die Adresse
@@ -50,6 +59,19 @@ Um Schüler und Lehrer im Adressbuch zu finden, wählen Sie im Menü *Organisier
 .. figure:: media/horde-address-lookup.png
 
   
+Weiterleitung an externe E-Mail-Adressen konfigurieren
+======================================================
+
+Horde erlaubt die Einrichtung vieler unterschiedlicher sogenannter
+Filter für das Mailsystem. Der wohl wichtigste davon ist der
+vordefinierte Filter *Weiterleitung*, den man im Menü über
+*Einstellungen* -> *Filter* und dann im oberen Menü *Weiterleitung*
+erreicht. Man trägt dort ein oder mehrere gewünschte Adressen zur
+Weiterleitung ein und entscheidet, ob zusätzlich eine Kopie im 
+Postfach an der Schule verbleiben soll.
+
+.. figure:: media/horde-forwarding.png
+
 Zugriff auf Tauschordner und Heimatverzeichnis
 ==============================================
 
@@ -67,19 +89,5 @@ Um auf die eigenen Dateien auf dem Server ("Home_auf_Server") und auf die Tausch
    Dateien, die heruntergeladen werden, sollten standardmäßig
    abgespeichert werden, da ein direktes Ausführen meist nicht
    funktioniert.
-
-Weiterleitung an externe E-Mail-Adressen konfigurieren
-======================================================
-
-Horde erlaubt die Einrichtung vieler unterschiedlicher sogenannter
-Filter für das Mailsystem. Der wohl wichtigste davon ist der
-vordefinierte Filter *Weiterleitung*, den man im Menü über
-*Einstellungen* -> *Filter* und dann im oberen Menü *Weiterleitung*
-erreicht. Man trägt dort ein oder mehrere gewünschte Adressen zur
-Weiterleitung ein und entscheidet, ob zusätzlich eine Kopie im 
-Postfach an der Schule verbleiben soll.
-
-.. figure:: media/horde-forwarding.png
-
 
 Melden Sie sich nach getaner Arbeit über *Abmelden* ab.	  

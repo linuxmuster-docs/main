@@ -24,11 +24,3 @@ werden die relevanten Werte automatisch inkrementiert. Lesen Sie dazu
 :ref:`registration-linbo-label`.
 
 
-Weiterführende Dokumentation
-============================
-
-- Howto: Patchklassen, Rechnergruppe, postsync skript
-- Howto: Linbo
-- Howto: Standardclient updaten
-
-

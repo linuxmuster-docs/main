@@ -8,3 +8,4 @@ Inhalt:
    :maxdepth: 1
 
    addons/monipi/index
+   addons/unifiwlan/index

@@ -20,7 +20,7 @@ Erweiterungen für XenServer angeboten, somit sind auch diese lauffähig.
 
 Für die Installation benötigen Sie lediglich
 
-* einen Installationsdatenträger Citrix XenServer 7.0 (zu finden auf `XenServer Webseite <http://xenserver.org>`_)
+* einen Installationsdatenträger Citrix XenServer 7.1 (zu finden auf `XenServer Webseite <http://xenserver.org>`_)
 * sowie die Erweiterungs-DVD `linuxmuster-SupplementalPack` (zu finden auf http://www.netzint.de/education/linuxmuster-net/xenserver-appliance-6-2)
 
 Nach der Installation gemäß dieser Anleitung erhalten Sie eine einsatzbereite Umgebung bestehend aus
@@ -43,3 +43,4 @@ Inhalt:
    configuration
    lvm
    backup
+   outlook
