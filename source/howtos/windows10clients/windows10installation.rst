@@ -178,6 +178,7 @@ Dazu kopiert man die ``/var/linbo/win10.image.reg`` nach ``/var/linbo/<BEZEICHNU
 Im Beispiel würde das so gehen:
 
 .. code-block:: console
+
    $ cp /var/linbo/examples/win10.image.reg /var/linbo/win10.cloop.reg
 
 Ab sofort wird linbo die image.reg nach dem sync eines Betriebsystems in die Registry des gesyncten Rechners eintragen und so z.B. den Hostnamen auf den korrekten Wert setzen.
