@@ -1,7 +1,12 @@
 Weiterführende Dokumentation
 ============================
 
-- Howto: Patchklassen, Rechnergruppe, postsync skript
+.. toctree::
+   :maxdepth: 2
+
+   ../use-postsync/index
+
+
 - Howto: Linbo
 - Howto: Standardclient updaten
 - Todo: are there pages in the Anwenderwiki
