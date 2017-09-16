@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-03 11:23+0700\n"
+"POT-Creation-Date: 2017-09-16 17:16+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../source/addons/unifiwlan/switch.rst:4
 msgid ""
-"In der hier vorgestellten Lösung wird ein Cisco SG300-10 Switch verwandet. "
+"In der hier vorgestellten Lösung wird ein Cisco SG300-10 Switch verwandt. "
 "Die Überlegungen lassen sich aber leicht auf andere Switches übertragen."
 msgstr ""
 

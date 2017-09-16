@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-03 11:23+0700\n"
+"POT-Creation-Date: 2017-09-16 17:16+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -44,11 +44,25 @@ msgid ""
 "Server aus mithilfe eines Skriptes angestossen."
 msgstr ""
 
-#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:27
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:23
+msgid ""
+"Welche Version von linuxmuster.net positiv getestet wurde erfahren Sie im "
+"Support Forum in der Kategorie Server - Firewall "
+"``https://ask.linuxmuster.net/c/server/firewall``"
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:26
+msgid ""
+"Damit das Update mithilfe des angesprochem Skiptes ausgeführt wird, müssen "
+"Sie die Datei ``/var/lib/linuxmuster-ipfire/maxcore`` an der Server-Konsole "
+"editieren. Nach dem Speichern der Datei kann das Update gestartet werden."
+msgstr ""
+
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:32
 msgid "Ein erfolgreicher Upgrade-Vorgang stellt sich dann so dar:"
 msgstr ""
 
-#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:55
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:60
 msgid ""
 "Wenn ein Zwischenupdate von IPFire installert wird und hierbei ein größerer "
 "Versionssprung durchgeführt wird, ist nach dem Reboot von IPFire der Befehl "
@@ -56,6 +70,6 @@ msgid ""
 "Upgrade nicht erfolgreich beendet wurde."
 msgstr ""
 
-#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:60
+#: ../../source/howtos/keep-lmn-uptodate/2-update-ipfire.rst:65
 msgid "Ist das Update abgeschlossen, finden Sie nachstehende Konsolenausgabe:"
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-03 11:23+0700\n"
+"POT-Creation-Date: 2017-09-16 17:16+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -110,27 +110,34 @@ msgid ""
 msgstr ""
 
 #: ../../source/addons/unifiwlan/unifiinst.rst:66
-msgid "Melden Sie sich an."
+msgid ""
+"Die englische Anleitung von Unifi finden Sie `hier <https://help.ubnt.com/hc"
+"/en-us/articles/220066768-UniFi-How-to-Install-Update-via-APT-on-Debian-or-"
+"Ubuntu>`_."
 msgstr ""
 
 #: ../../source/addons/unifiwlan/unifiinst.rst:68
-msgid "öffnen Sie eine root-shell mit `sudo -i`"
+msgid "Melden Sie sich an."
 msgstr ""
 
 #: ../../source/addons/unifiwlan/unifiinst.rst:70
+msgid "öffnen Sie eine root-shell mit `sudo -i`"
+msgstr ""
+
+#: ../../source/addons/unifiwlan/unifiinst.rst:72
 msgid "Updaten Sie den Rechner mit"
 msgstr ""
 
-#: ../../source/addons/unifiwlan/unifiinst.rst:77
+#: ../../source/addons/unifiwlan/unifiinst.rst:79
 msgid ""
 "Editieren Sie die Datei `/etc/apt/sources.list` und fügen Sie die folgende "
 "Zeile hinzu:"
 msgstr ""
 
-#: ../../source/addons/unifiwlan/unifiinst.rst:84
+#: ../../source/addons/unifiwlan/unifiinst.rst:86
 msgid "Fügen Sie den GPG-key hinzu:"
 msgstr ""
 
-#: ../../source/addons/unifiwlan/unifiinst.rst:90
+#: ../../source/addons/unifiwlan/unifiinst.rst:92
 msgid "Nochmal updaten, unifi installieren und neu starten:"
 msgstr ""

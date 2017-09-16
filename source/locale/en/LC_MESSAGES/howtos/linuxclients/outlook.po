@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-03 11:23+0700\n"
+"POT-Creation-Date: 2017-09-16 17:16+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2017\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -22,27 +22,23 @@ msgstr ""
 msgid "Weiterführende Dokumentation"
 msgstr "Additional Documentation"
 
-#: ../../source/howtos/linuxclients/outlook.rst:4
-msgid "Howto: Patchklassen, Rechnergruppe, postsync skript"
-msgstr "Howto: patch classes, host groups, postsync script"
-
-#: ../../source/howtos/linuxclients/outlook.rst:5
+#: ../../source/howtos/linuxclients/outlook.rst:10
 msgid "Howto: Linbo"
 msgstr "Howto: Linbo"
 
-#: ../../source/howtos/linuxclients/outlook.rst:6
+#: ../../source/howtos/linuxclients/outlook.rst:11
 msgid "Howto: Standardclient updaten"
 msgstr "Howto: Update Standard Client"
 
-#: ../../source/howtos/linuxclients/outlook.rst:7
+#: ../../source/howtos/linuxclients/outlook.rst:12
 msgid "Todo: are there pages in the Anwenderwiki"
 msgstr ""
 
-#: ../../source/howtos/linuxclients/outlook.rst:8
+#: ../../source/howtos/linuxclients/outlook.rst:13
 msgid "Todo: are there howtos under docs.linuxmuster.net"
 msgstr ""
 
-#: ../../source/howtos/linuxclients/outlook.rst:9
+#: ../../source/howtos/linuxclients/outlook.rst:14
 msgid ""
 "Todo: is there development documentation or techsheets under "
 "docs.linuxmuster.net"

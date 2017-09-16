@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-03 11:23+0700\n"
+"POT-Creation-Date: 2017-09-16 17:16+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2017\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,19 +20,20 @@ msgstr ""
 
 #: ../../source/howtos/contribute/index.rst:2
 msgid "Wie Sie helfen können"
-msgstr ""
+msgstr "How you can help"
 
 #: ../../source/howtos/contribute/index.rst:4
 msgid ""
 "Es gibt verschiedene Möglichkeiten, wie Sie helfen können, Linuxmuster.net "
 "zu verbessern."
-msgstr ""
+msgstr "There are several ways you can help improve Linuxmuster.net."
 
 #: ../../source/howtos/contribute/index.rst:13
 msgid "Fehler melden"
-msgstr ""
+msgstr "Report a bug"
 
 #: ../../source/howtos/contribute/index.rst:14
 msgid ""
 "von Linuxmuster.net weitersagen (z.B. in Blogs, Sozialen Netzwerken, etc.)"
 msgstr ""
+"tell others about Linuxmuster.net (e.g. in blogs, social networks, etc.)"

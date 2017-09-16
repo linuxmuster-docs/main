@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-03 11:23+0700\n"
+"POT-Creation-Date: 2017-09-16 17:16+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -396,12 +396,39 @@ msgstr ""
 "old image will be renamed and the current image takes its place as the "
 "active image."
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:172
+#: ../../source/howtos/windows10clients/windows10installation.rst:171
 msgid ""
-"Sobald der Vorgang abgeschlossen ist können Sie den Zustand der Installation"
-" nun immer auf diesen Punkt zurücksetzen. Das Image ist auf dem Server "
-"verfügbar und kann auf weitere Rechner ausgerollt werden."
+"Sobald der Vorgang abgeschlossen ist, können Sie den Zustand der "
+"Installation nun immer auf diesen Punkt zurücksetzen."
 msgstr ""
-"Once the process is completed you can always reset the status of the "
-"installation to this point. The image is available on the server and can be "
-"rolled out to other computers."
+"As soon as the process is completed, you can now always reset the status of "
+"the installation to this point."
+
+#: ../../source/howtos/windows10clients/windows10installation.rst:173
+msgid "Das Image ist auf dem Server verfügbar."
+msgstr "The image is available on the server."
+
+#: ../../source/howtos/windows10clients/windows10installation.rst:175
+msgid ""
+"Soll es auch auf andere Rechner ausgerollt werden, so muss noch die "
+"``image.reg`` auf dem Server bereitgestellt werden. Dazu kopiert man die "
+"``/var/linbo/win10.image.reg`` nach ``/var/linbo/<BEZEICHNUNG DER "
+"RECHNERGRUPPE>.cloop.reg``."
+msgstr ""
+"If you want to roll it out to other computers, the ``image. reg`` has to be "
+"made available on the server. Copy the ``/var/linbo/win10.image.reg`` to "
+"``/var/linbo/<BEZEICHNUNG DER RECHNERGRUPPE>.cloop.reg``."
+
+#: ../../source/howtos/windows10clients/windows10installation.rst:178
+msgid "Im Beispiel würde das so gehen:"
+msgstr "Here's the example:"
+
+#: ../../source/howtos/windows10clients/windows10installation.rst:184
+msgid ""
+"Ab sofort wird linbo die image.reg nach dem sync eines Betriebsystems in die"
+" Registry des gesyncten Rechners eintragen und so z.B. den Hostnamen auf den"
+" korrekten Wert setzen."
+msgstr ""
+"From now on linbo will enter the image.reg file after the sync of an "
+"operating system into the registry of the synced computer and set the "
+"hostname to the correct value."

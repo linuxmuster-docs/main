@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-03 11:23+0700\n"
+"POT-Creation-Date: 2017-09-16 17:16+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -31,42 +31,81 @@ msgid ""
 "Linuxclient schon zur Einrichtung der Anmeldung am Server eingetragen wurde."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-installation.rst:9
-msgid ""
-"Die Pakete werden installiert mit root-Rechten auf dem Linuxclient mit "
-"folgenden Befehlen:"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-installation.rst:17
-msgid ""
-"Damit wird ggf. auch das Paket virtualbox-x.y auf dem Linuxclient "
-"installiert."
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-installation.rst:0
 #: ../../source/howtos/leoclient2/leo2-installation.rst:0
 msgid "Zu tun"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-installation.rst:19
-msgid ""
-"Mit dem aktuellen Default-cloop Linuxclient nachprüfen, ob virtualbox und "
-"welches installiert ist und wie man ein aktuelleres installieren kann."
+#: ../../source/howtos/leoclient2/leo2-installation.rst:9
+msgid "link um Quellen einzutragen statt folgendes ..."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-installation.rst:21
-msgid ""
-"Eine aktuelle Version kann man mit Hilfe der Anleitung z.B. unter "
-"https://www.virtualbox.org/wiki/Linux_Downloads installieren. Für die Schule"
-" kann die PUEL-Version installiert werden, die beispielsweise USB2 "
-"unterstützt (statt USB1.1)."
+#: ../../source/howtos/leoclient2/leo2-installation.rst:16
+msgid "In /etc/apt/sources.list eintragen:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-installation.rst:28
-msgid "Benutzer-Rechte anpassen"
+#: ../../source/howtos/leoclient2/leo2-installation.rst:22
+msgid "Installation der Pakete auf dem Linuxclient mit folgenden Befehlen:"
 msgstr ""
 
 #: ../../source/howtos/leoclient2/leo2-installation.rst:30
+msgid "Virtualbox installieren/updaten"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:32
+msgid ""
+"Es wird empfohlen eine aktuelle Version von Virtualbox zu installieren "
+"(5.1.22 im Mai 2017)."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:35
+msgid ""
+"Für die Schule kann die PUEL-Version (aktuelles VirtualBox mit "
+"ExtensionPack) installiert werden, die beispielsweise USB2 unterstützt "
+"(statt USB1.1)."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:39
+msgid ""
+"Die Anleitung zur Installation findet sich unter "
+"https://www.virtualbox.org/wiki/Linux_Downloads im Bereich ''Debian-based "
+"Linux distributions''."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:43
+msgid "In Kürze das Vorgehen für Ubuntu 16.04/xenial:"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:45
+msgid "apt-get install dkms"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:47
+msgid "Virtualbox Schlüssel laden, Quellen eintagen, apt-get update"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:49
+msgid "apt-get install virtualbox-5.1"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:51
+msgid "Extension-Pack im Browser downloaden, installieren im Virtualbox-gui"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:55
+msgid "Benutzer-Rechte anpassen"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:57
+msgid ""
+"Hinweis: Diese Rechte-Anpassungen sind im Standard-Linuxclient schon "
+"eingepflegt."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:59
+msgid "Domänenbenutzer"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:61
 msgid ""
 "Um für die Domänenbenutzer alle Optionen von VirtualBox freizugeben, müssen "
 "diese Mitglied der Gruppe ``vboxusers`` sein. Hierzu ergänzt man in der "
@@ -75,63 +114,75 @@ msgid ""
 "könnte dann wie folgt aussehen:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-installation.rst:36
+#: ../../source/howtos/leoclient2/leo2-installation.rst:71
+msgid "Lokale Benutzer"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:73
 msgid ""
-"Auch lokale Benutzer am Linuxclient (z.B. ``linuxuser``) müssen  der Gruppe "
+"Auch lokale Benutzer am Linuxclient (z.B. ``linuxadmin``) müssen der Gruppe "
 "``vboxusers`` hinzugefügt werden. Für lokale Benutzer erfolgt das mit"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-installation.rst:42
+#: ../../source/howtos/leoclient2/leo2-installation.rst:81
 msgid ""
-"Diese Änderung ist erst bei einer erneuten Anmeldung des Nutzers wirksam."
+"Diese Änderung wird erst bei einer erneuten Anmeldung des Nutzers wirksam."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-installation.rst:44
-msgid "Nachprüfen ob folgendes stimmt:"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-installation.rst:46
-msgid ""
-"Hinweis: Diese Rechte-Anpassungen sind im Standard-Linuxclient schon "
-"eingepflegt."
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-installation.rst:49
+#: ../../source/howtos/leoclient2/leo2-installation.rst:84
 msgid "Rechte an den lokalen virtuellen Maschinen"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-installation.rst:51
+#: ../../source/howtos/leoclient2/leo2-installation.rst:86
 msgid ""
-"Bei der Anmeldung eines Benutzers werden die Rechte an den lokalen "
-"virtuellen Maschinen so gesetzt, dass der Benutzer die Maschine starten, "
-"Logs anlegen und den aktiven Snapshot verändern kann. Dazu muss "
-"nachfolgendes Script ``015-leoclient2`` unter ``/etc/linuxmuster-client"
-"/post-mount.d/`` abgelegt sein."
+"Mit der im Paket ``leoclient2-leovirtstarter-client`` befindlichen Datei "
+"``/etc/sudoers.d/80-leoclient2`` wird der Eigentümer der lokalen virtuellen "
+"Maschine vor ihrem Start auf den angemeldeten Benutzer gesetzt. Somit kann "
+"die Maschine gestartet, Logs angelegt und der aktiven Snapshot verändern "
+"werden."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-installation.rst:0
-msgid "/etc/linuxmuster-client/post-mount.d/015-leoclient2"
+#: ../../source/howtos/leoclient2/leo2-installation.rst:93
+msgid "Drucker-Spooler beim login aktivieren"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-installation.rst:81
-msgid "Drucker-Spooler aktivieren"
-msgstr ""
-
-#: ../../source/howtos/leoclient2/leo2-installation.rst:83
+#: ../../source/howtos/leoclient2/leo2-installation.rst:95
 msgid ""
 "Um aus der virtuellen Maschine heraus drucken zu können, müssen ein Drucker-"
-"Spooler und ein -Splitter bei Anmeldung am Linuxclient gestartet werden."
+"Splitter und ein Drucker-Spooler bei Anmeldung am Linuxclient gestartet "
+"werden. Der Drucker-Splitter fängt ankommende Druckdateien ab, bevor sie "
+"überschrieben werden. Der Drucker-Spooler druckt sie aus."
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-installation.rst:87
+#: ../../source/howtos/leoclient2/leo2-installation.rst:101
 msgid ""
-"Mit Hilfe der linuxmuster-client-extras Skripte gelingt dies wie folgt:"
+"Auf dem Standard-Linux-Client gelingt dies mit Hilfe der ``linuxmuster-"
+"client-extras`` Skripte wie folgt:"
 msgstr ""
 
-#: ../../source/howtos/leoclient2/leo2-installation.rst:94
+#: ../../source/howtos/leoclient2/leo2-installation.rst:109
+msgid "Überprüft werden kann das mit"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:115
 msgid ""
-"Die Konfigurationsdatei dazu liegt unter ``/etc/leoclient2/leoclient-vm-"
-"printer2.conf``, zur Fehlerbehebung werden Log-Dateien in ``/tmp/run-vm-"
-"printer2-spooler.log-USERNAME`` und ``/tmp/run-vm-printer2-splitter.log-"
-"USERNAME`` abgelegt."
+"Ohne den Standard-Linux-Client kann man mit folgenden Befehlen einen "
+"ähnlichen Effekt erzielen:"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:123
+msgid "Konfiguration"
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:125
+msgid ""
+"Die Konfigurationsdatei liegt unter ``/etc/leoclient2/leoclient-vm-"
+"printer2.conf``."
+msgstr ""
+
+#: ../../source/howtos/leoclient2/leo2-installation.rst:128
+msgid ""
+"Zur Fehlerbehebung werden Log-Dateien in ``/tmp/run-vm-printer2-spooler.log-"
+"USERNAME`` und ``/tmp/run-vm-printer2-splitter.log-USERNAME`` abgelegt. Dort"
+" sieht man nach welcher Datei der Drucker-Splitter sucht"
 msgstr ""

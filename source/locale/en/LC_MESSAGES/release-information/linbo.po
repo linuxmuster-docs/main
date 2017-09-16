@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-03 11:23+0700\n"
+"POT-Creation-Date: 2017-09-16 17:16+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -24,41 +24,45 @@ msgstr "What's new in linuxmuster-linbo 2.3"
 
 #: ../../source/release-information/linbo.rst:4
 msgid "Kernel 4.9.x mit **aktuellen Hardwaretreibern**"
-msgstr ""
+msgstr "Kernel 4.9.x with current hardware drivers."
 
 #: ../../source/release-information/linbo.rst:6
 msgid "Native Unterstützung von 64bit-Hardware zur LINBO-Laufzeit"
-msgstr ""
+msgstr "Native support of 64bit hardware at LINBO-runtime"
 
 #: ../../source/release-information/linbo.rst:7
 msgid "Automatische Erkennung von 32bit PAE, 32bit non-PAE und 64bit-Hardware"
-msgstr ""
+msgstr "Automatic recognition of 32bit PAE, 32bit non-PAE and 64bit hardware"
 
 #: ../../source/release-information/linbo.rst:8
 msgid "Neuer Partitionsmechanismus"
-msgstr ""
+msgstr "New Partition Mechanism"
 
 #: ../../source/release-information/linbo.rst:10
 msgid "Umstellung des lokalen und PXE-Bootsystems auf **Grub** 2"
-msgstr ""
+msgstr "Change of local and PXE boot system to **Grub 2**."
 
 #: ../../source/release-information/linbo.rst:12
 msgid ""
 "Vereinfachte Boot-Konfiguration in nur noch einer Grub-Konfigurationsdatei "
 "für lokalen und Netzwerkboot"
 msgstr ""
+"Simplified boot configuration in just one Grub configuration file for local "
+"and networkboot"
 
 #: ../../source/release-information/linbo.rst:14
 msgid ""
 "Vorkonfigurierte Grub-Bootmenüs können einfach aktiviert und angepasst "
 "werden"
-msgstr ""
+msgstr "Pre-configured grub boot menus can be easily activated and customized"
 
 #: ../../source/release-information/linbo.rst:16
 msgid ""
 "Automatischer Reboot vor jedem Betriebssystemstart minimiert "
 "Hardwareprobleme"
 msgstr ""
+"Automatic reboot before each start of operating system minimizes hardware "
+"problems"
 
 #: ../../source/release-information/linbo.rst:17
 msgid ""
@@ -70,15 +74,15 @@ msgstr ""
 
 #: ../../source/release-information/linbo.rst:19
 msgid "Unterstützung für Grub-Themes"
-msgstr ""
+msgstr "Support for grub themes"
 
 #: ../../source/release-information/linbo.rst:21
 msgid "Unterstützung von **UEFI-Boot**-Clients"
-msgstr ""
+msgstr "Support for UEFI boot clients"
 
 #: ../../source/release-information/linbo.rst:23
 msgid "Partitionierung im GPT-Modus auf EFI-Systemen"
-msgstr ""
+msgstr "Partitioning in GPT mode on EFI systems"
 
 #: ../../source/release-information/linbo.rst:24
 msgid ""
@@ -94,7 +98,7 @@ msgstr ""
 
 #: ../../source/release-information/linbo.rst:28
 msgid "Unterstützung von Multiboot-Systemen mit UEFI"
-msgstr ""
+msgstr "Support of multiboot systems with UEFI"
 
 #: ../../source/release-information/linbo.rst:30
 msgid ""
@@ -102,20 +106,24 @@ msgid ""
 "**Bootmedien**-Abbilder für USB-Speicher oder zum direkten Brennen auf "
 "CD/DVD"
 msgstr ""
+"Automatic creation and simplified download of **boot media** images for USB "
+"storage or direct CD/DVD burning"
 
 #: ../../source/release-information/linbo.rst:34
 msgid "Unterstützung des Setzens der **Systemzeit** durch einen Zeitserver"
-msgstr ""
+msgstr "Support for setting **System time** by a time server"
 
 #: ../../source/release-information/linbo.rst:36
 msgid ""
 "Einheiten-Angabe für Partitionsgrößen in der start.conf-Datei (M für "
 "Megabyte, G für Gigabyte, T für Terabyte)"
 msgstr ""
+"Unit specification for partition variables in the start.conf file (M for "
+"megabytes, G for gigabytes, T for terabytes)"
 
 #: ../../source/release-information/linbo.rst:40
 msgid "Reparatur und Neuerstellen eines Abbildes nach Partitionierung"
-msgstr ""
+msgstr "Repair and recreate an image after partitioning"
 
 #: ../../source/release-information/linbo.rst:42
 msgid ""
@@ -125,6 +133,10 @@ msgid ""
 "das erneute Erstellen eines Abbildes. Lesen Sie :ref:`hier <howtos-upgrade-"
 "image-label>` nach, wie es genau geht."
 msgstr ""
+"As of version 2.3.0, another partition program is used to create valid "
+"partition tables for UEFI and BIOS. For re-partitioning, Windows requires a "
+"system boot repair and then re-creating an image. Read :ref: `here <howtos-"
+"upgrade-image-label>` how it works."
 
 #: ../../source/release-information/linbo.rst:50
 msgid "Boot-Konfiguration mit Grub"
