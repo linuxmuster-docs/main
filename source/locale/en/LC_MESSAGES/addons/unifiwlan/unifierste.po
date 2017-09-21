@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-16 17:16+0700\n"
+"POT-Creation-Date: 2017-09-21 19:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2017\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,17 +20,19 @@ msgstr ""
 
 #: ../../source/addons/unifiwlan/unifierste.rst:2
 msgid "Die Grundkonfiguration"
-msgstr ""
+msgstr "The basic configuration"
 
 #: ../../source/addons/unifiwlan/unifierste.rst:4
 msgid ""
 "Hier werden die Standardsprache sowie der Adminaccount gewählt und es können"
 " die APs aufgenommen werden."
 msgstr ""
+"Here the standard language as well as the adminaccount is chosen and the APs"
+" can be added."
 
 #: ../../source/addons/unifiwlan/unifierste.rst:7
 msgid "Schritt für Schritt"
-msgstr ""
+msgstr "Step-by-Step Instructions"
 
 #: ../../source/addons/unifiwlan/unifierste.rst:9
 msgid ""
@@ -37,37 +40,46 @@ msgid ""
 "`<https://unifi:8443>`_ (falls der Unificontroller in der Datei "
 "`workstations` unifi heißt)."
 msgstr ""
+"Open the following URL from a computer in the school network:  "
+"`<https://unifi:8443>`_ (if the Unifi controller is called unifi in the "
+"`workstations` file)."
 
 #: ../../source/addons/unifiwlan/unifierste.rst:11
 msgid ""
 "Da der Unifi-Kontroller mit einem selbstzertifizierten Zertifikat arbeitet, "
 "werden Sie eine Zertifikatswarnung erhalten."
 msgstr ""
+"Since the Unifi controller will work with a self-certified certificate, you "
+"will receive a certificate warning."
 
 #: ../../source/addons/unifiwlan/unifierste.rst:16
 msgid "Wählen Sie Germany als Land und klicken Sie auf `weiter`."
-msgstr ""
+msgstr "Select your country and click on `continue`."
 
 #: ../../source/addons/unifiwlan/unifierste.rst:21
 msgid ""
 "Wählen Sie die Geräte aus, die Sie mit dem Unifi-Kontroller managen wollen "
 "(also alle) und klicken auf `WEITER`."
 msgstr ""
+"Select the devices you want to manage with the Unifi controller (all), and "
+"click on `CONTINUE`."
 
 #: ../../source/addons/unifiwlan/unifierste.rst:26
 msgid ""
 "An dieser Stelle überspringen Sie die Einrichtung eines WLANs. Das wird "
 "später ausführlich beschrieben."
 msgstr ""
+"At this point, you can skip the setup of a WLAN. This will be described in "
+"detail later."
 
 #: ../../source/addons/unifiwlan/unifierste.rst:31
 msgid "An dieser Stelle wird ein Administrator-Zugang angelegt."
-msgstr ""
+msgstr "An administrator account is created at this point."
 
 #: ../../source/addons/unifiwlan/unifierste.rst:36
 msgid "Überspringen Sie auch diesen Schritt."
-msgstr ""
+msgstr "Also skip this step."
 
 #: ../../source/addons/unifiwlan/unifierste.rst:41
 msgid "Bestätigen Sie schließlich Ihre Einstellungen."
-msgstr ""
+msgstr "Finally, confirm your settings."

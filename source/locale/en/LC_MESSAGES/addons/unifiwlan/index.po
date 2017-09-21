@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-16 17:16+0700\n"
+"POT-Creation-Date: 2017-09-21 19:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2017\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,12 +20,12 @@ msgstr ""
 
 #: ../../source/addons/unifiwlan/index.rst:2
 msgid "Unifi-WLAN-Lösung für linuxmuster.net"
-msgstr ""
+msgstr "Unifi WLAN solution for linuxmuster.net"
 
 #: ../../source/addons/unifiwlan/index.rst:4
 msgid ""
 "Eine WLAN-Lösung für Schulen sollte mindestens zwei WLAN-Netze aufspannen."
-msgstr ""
+msgstr "A WLAN solution for schools should span at least two WLAN networks."
 
 #: ../../source/addons/unifiwlan/index.rst:6
 msgid ""
@@ -32,16 +33,21 @@ msgid ""
 " und für private Geräte der Lehrer, die auf Beamer und Chromecasts zugreifen"
 " wollen."
 msgstr ""
+"The teachers' network for school equipment such as projectors, laptops or "
+"chromecasts, and for private teachers' devices that want to access "
+"projectors and chromecasts."
 
 #: ../../source/addons/unifiwlan/index.rst:7
 msgid "Das Schülernetz für Schüler."
-msgstr ""
+msgstr "The WLAN Network for Students."
 
 #: ../../source/addons/unifiwlan/index.rst:12
 msgid ""
 "In der hier vorgestellten Lösung kommen Accesspoints von Unifi und der "
 "kostenlose Unifi-Controller zum Einsatz."
 msgstr ""
+"In the solution presented here, access points from Unifi and the free Unifi "
+"controller are used."
 
 #: ../../source/addons/unifiwlan/index.rst:14
 msgid ""
@@ -50,6 +56,10 @@ msgid ""
 " beispielsweise Benutzer mit einem Schullaptop per WLAN wie gewohnt anmelden"
 " und auf ihre Daten zugreifen."
 msgstr ""
+"The devices in the teacher wlan network are included in the file "
+"`/etc/linuxmuster/workstations`. The teacher network is part of the school "
+"network. Thus, for example, users with a school laptop can log on as usual "
+"using WLAN and access their data."
 
 #: ../../source/addons/unifiwlan/index.rst:16
 msgid ""
@@ -58,7 +68,11 @@ msgid ""
 "Gruppe von Schülern das WLAN freigeschaltet oder gesperrt werden. Eine "
 "Verwaltung der Benutzergeräte durch den Netzwerkberater entfällt."
 msgstr ""
+"In the student WLAN network, users must log in with the user name and "
+"password for the WLAN. Via the school console, a student or a group of "
+"pupils can be unlock or lock for the WLAN. The network administrator do not "
+"need to manage the user equipment."
 
 #: ../../source/addons/unifiwlan/index.rst:18
 msgid "Inhalt:"
-msgstr ""
+msgstr "Content"

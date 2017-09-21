@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-16 17:16+0700\n"
+"POT-Creation-Date: 2017-09-21 19:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2017\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,33 +20,33 @@ msgstr ""
 
 #: ../../source/addons/unifiwlan/unifivouchererstellen.rst:2
 msgid "WLAN-Gutscheine / Voucher erstellen"
-msgstr ""
+msgstr "Create WLAN vouchers"
 
 #: ../../source/addons/unifiwlan/unifivouchererstellen.rst:4
 msgid "Jetzt müssen die Gutscheine noch erzeugt und ausgedruckt werden."
-msgstr ""
+msgstr "Now the vouchers have to be created and printed."
 
 #: ../../source/addons/unifiwlan/unifivouchererstellen.rst:7
 msgid "Schritt für Schritt"
-msgstr ""
+msgstr "Step by step"
 
 #: ../../source/addons/unifiwlan/unifivouchererstellen.rst:9
 msgid ""
 "Gehen Sie auf `<https://unifi:8443/manage/hotspot>`_ und melden Sie sich an."
-msgstr ""
+msgstr "Go to `<https://unifi:8443/manage/hotspot`_ and log in."
 
 #: ../../source/addons/unifiwlan/unifivouchererstellen.rst:14
 msgid "Gehen Sie auf `GUTSCHEINE`->`GUTSCHEIN ERSTELLEN`."
-msgstr ""
+msgstr "Go to `VOUCHERS` → `CREATE VOUCHER`."
 
 #: ../../source/addons/unifiwlan/unifivouchererstellen.rst:19
 msgid ""
 "Füllen Sie die Felder des Dialogfensters aus und speichern Sie Ihre Eingabe."
-msgstr ""
+msgstr "Fill in the fields of the dialog box and save your entries."
 
 #: ../../source/addons/unifiwlan/unifivouchererstellen.rst:24
 msgid "In dieser Ansicht sehen Sie alle gültigen Gutscheine."
-msgstr ""
+msgstr "In this view you will see all valid vouchers."
 
 #: ../../source/addons/unifiwlan/unifivouchererstellen.rst:26
 msgid ""
@@ -53,7 +54,9 @@ msgid ""
 "Gutscheine oder alle Gutscheine, die an einem bestimmten Zeitpunkt erstellt "
 "wurden, zu drucken."
 msgstr ""
+"You have the option of printing individual vouchers, all unused vouchers or "
+"all vouchers created at a specific time."
 
 #: ../../source/addons/unifiwlan/unifivouchererstellen.rst:28
 msgid "Hier können Sie auch Gutscheine löschen."
-msgstr ""
+msgstr "Here you can also delete vouchers."
