@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-26 06:08+0700\n"
+"POT-Creation-Date: 2017-09-29 05:50+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2017\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,20 +20,24 @@ msgstr ""
 
 #: ../../source/manuals/linbo/linbo-bootmedia.rst:3
 msgid "Boot-Abbild für USB-Sticks und CD/DVD"
-msgstr ""
+msgstr "Boot image for USB sticks and CD/DVD"
 
 #: ../../source/manuals/linbo/linbo-bootmedia.rst:5
 msgid ""
 "Zum Brennen auf CD/DVD oder zum Kopieren auf einen USB-Stick kann man unter "
 "der Adresse"
 msgstr ""
+"For burning on CD/DVD or copying to a USB stick you can use the following "
+"address"
 
 #: ../../source/manuals/linbo/linbo-bootmedia.rst:7
 msgid "https://server/linbo.iso"
-msgstr ""
+msgstr "https://server/linbo.iso"
 
 #: ../../source/manuals/linbo/linbo-bootmedia.rst:9
 msgid ""
 "das aktuelle LINBO herunterladen und auf einen USB-Stick oder eine CD/DVD "
 "kopieren."
 msgstr ""
+"There you can download the current LINBO and copy it to a USB stick or "
+"CD/DVD."

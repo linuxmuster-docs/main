@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-26 06:08+0700\n"
+"POT-Creation-Date: 2017-09-29 05:50+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2017\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,19 +20,19 @@ msgstr ""
 
 #: ../../source/manuals/linbo/linbo-bootscreen.rst:3
 msgid "Boot-Bildschirme in LINBO"
-msgstr ""
+msgstr "Boot screens in LINBO"
 
 #: ../../source/manuals/linbo/linbo-bootscreen.rst:5
 msgid "Beim Booten in LINBO sind folgende Bildschirme sichtbar:"
-msgstr ""
+msgstr "When booting in LINBO, the following screens are visible:"
 
 #: ../../source/manuals/linbo/linbo-bootscreen.rst:7
 msgid "Bootvorgang via Netzwerk"
-msgstr ""
+msgstr "Network boot process"
 
 #: ../../source/manuals/linbo/linbo-bootscreen.rst:12
 msgid "Initialmeldungen beim Bootvorgang via Netzwerk (PXE)"
-msgstr ""
+msgstr "Initial messages during boot process via network (PXE)"
 
 #: ../../source/manuals/linbo/linbo-bootscreen.rst:14
 msgid ""
@@ -39,29 +40,32 @@ msgid ""
 "via Netzwerkkarte (PXE) wird mit der Gruppenkonfiguration der Kernel "
 "geladen."
 msgstr ""
+"Regardless of whether you have booted from the local hard disk or after "
+"booting via network card (PXE), the kernel is loaded with the group "
+"configuration."
 
 #: ../../source/manuals/linbo/linbo-bootscreen.rst:21
 msgid "Bootbildschirm: Laden des Kernels"
-msgstr ""
+msgstr "Boot screen: loading the kernel"
 
 #: ../../source/manuals/linbo/linbo-bootscreen.rst:24
 msgid "Der gebootete LINBO-Kernel erscheint als ASCII-Art."
-msgstr ""
+msgstr "The booted LINBO kernel appears as an ASCII-art."
 
 #: ../../source/manuals/linbo/linbo-bootscreen.rst:29
 msgid "LINBO-Kernelboot ASCII-Art"
-msgstr ""
+msgstr "LINBO-Kernelboot ASCII-art"
 
 #: ../../source/manuals/linbo/linbo-bootscreen.rst:31
 msgid "Die Grub-Konfiguration wird aktualisiert."
-msgstr ""
+msgstr "The Grub configuration is updated."
 
 #: ../../source/manuals/linbo/linbo-bootscreen.rst:36
 msgid "LINBO-Grub Installation"
-msgstr ""
+msgstr "LINBO-Grub Installation"
 
 #: ../../source/manuals/linbo/linbo-bootscreen.rst:38
 msgid ""
 "Darauf folgt der reguläre :ref:`LINBO Startbildschirm <linbo-"
 "startbildschirm-label>`."
-msgstr ""
+msgstr "This is followed by the regular :ref:`LINBO Startbildschirm`."
