@@ -180,7 +180,7 @@ Zugriff auf das Home-Verzeichnis (Server)
 **Windows**
 
 1. Gehen Sie im Explorer auf Extras → Netzwerklaufwerk verbinden
-2. Geben Sie unter Adresse „\\\<Name-oder-IP-des-Servers>\“ gefolgt von Ihrem Kürzel ein, also z.B. \\server\me
+2. Geben Sie unter Adresse „\\<Name-oder-IP-des-Servers>\“ gefolgt von Ihrem Kürzel ein, also z.B. \\server\me
 3. Wählen Sie einen freien Laufwerksbuchstaben
 4. Geben Sie ihren Schul-Benutzernamen (eben dieses Kürzel) samt Kennwort ein.
 
