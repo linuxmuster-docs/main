@@ -1,9 +1,7 @@
 .. _install-windows10-clients-label:
 
-Windows 10 Clients in linuxmuster.net
-=====================================
-
-Zielgruppe: Ambitionierte Netzwerkberater oder Dienstleister
+Windows 10 Clients
+==================
 
 In dieser Anleitung wird beschrieben, wie man Windows 10 auf einer Musterarbeitsstation installiert,
 um diese Installation auf weitere Clients mit identischer Hardware zu übertragen.

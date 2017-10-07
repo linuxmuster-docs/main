@@ -1,5 +1,5 @@
-Installationsleitfaden XEN
-==========================
+Installation mit XEN
+====================
 
 In diesem Dokument finden Sie Anleitungen zum Installieren der von
 Netzint bereitgestellten XenAppliance der linuxmuster.net-Musterlösung

@@ -1,6 +1,6 @@
-===================================
- linuxmuster.net 6.2 Dokumentation
-===================================
+===========
+ Einführung
+===========
 
 Herzlich Willkommen zur Dokumentation von linuxmuster.net! Diese Dokumentation beschreibt alle wichtigen Schritte von der Installation, der Einrichtung von Windows- und Ubuntu-Rechnern, der Verwaltung von Nutzern bis hin zu individuellen Anpassungen.
 
@@ -10,78 +10,102 @@ Dabei richtet sich die Dokumentation an verschiedene Zielgruppen. Das Handbuch f
 
 Neben dieser detaillierten Anleitungen in den Howtos steht Ihnen unsere Community und unser Telefon-Support zur Seite. Weiter Informationen dazu finden sie auf der `Website von Linuxmuster.net <http://linuxmuster.net/about/hilfsbereit/>`_.
 
-.. _user-docs:
 
 .. toctree::
    :maxdepth: 1
-   :caption: Benutzerdokumentation
+   :caption: Über
 
-   advisor
-   teacher
-   student
-   howtos
-   addons
+   about/release-information/index
 
-.. _about-docs:
+.. toctree::
+  :maxdepth: 1
+  :caption: Voraussetzungen
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Installation
+
+  installation/install-on-xen/index
+  installation/install-from-scratch/index
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Erste Schritte
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Windows- und Linuxclients
+
+  clients/windows10clients/index
+  clients/linuxclients/index
+  clients/leoclient2/index
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Benutzerverwaltung
+
+  user-management/manage-users/index
+  user-management/change-own-password/index
+  user-management/change-teacher-passwords/index
+  user-management/change-student-passwords/index
+  user-management/print-student-passwords/index
+  user-management/manage-quota/index
+  user-management/check-own-quota/index
+  user-management/check-student-quota/index
+  user-management/preparation-newterm/index
+
+.. toctree::
+  :maxdepth: 1
+  :caption: LINBO
+
+  linbo/use-linbo/index
+  linbo/use-postsync/index
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Drucker
+
+  printer/printer/index
+  printer/use-printer/index
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Upgrade, Backup & Migration
+
+  backup-migration/keep-lmn-uptodate/index
+  backup-migration/upgrade/index
+  backup-migration/backupmondo/index
+  backup-migration/backup-migrating/index
+  backup-migration/migrate/index
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Unterricht
+
+  classroom/use-internet-in-class/index
+  classroom/use-files-in-class/index
+
+
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Sonstiges
+
+  misc/radius/index
+  misc/use-openvpn/index
+  misc/use-horde/index
+  misc/use-mail-ldap/index
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Addons
+
+  addons/monipi/index
+  addons/unifiwlan/index
 
 .. toctree::
    :maxdepth: 1
-   :caption: Sonstiges
+   :caption: Mithelfen
 
-   Mithelfen <howtos/contribute/index>
-
-
-..
-   teacher/index
-   student/index
-
-..
-  .. admonition:: Etwas in eigener Sache (in Ihrer und unserer)
-
-   Diese Dokumentation bezieht sich immer auf die aktuelle stabile
-   Version unseres Systems.
-
-   Unsere Erfahrungen haben gezeigt, dass sich an vielen Schulen ein
-   einmal installiertes System nicht unbedingt immer an sämtliche
-   Veränderungen anpasst.
-
-   Da es unser Bestreben ist, Ihnen immer das beste System zur
-   Verfügung zu stellen, möchten wir Sie um etwas bitten: Verwenden
-   Sie immer die neueste stabile Version von linuxmuster.net!
-
-   Wir sind uns bewusst das ein Versionsupgrade nicht mal so gemacht werden kann/soll und aus diesem Grunde lassen wir Sie dabei auch nicht alleine. Neben einer detaillierten Anleitungen in den Howtos steht unsere Community und unser Telefon-Support Ihnen zur Seite.
-
-   Das ist unser Versprechen, linuxmuster.net(t) halt!
-
-
-..  Mit dieser Dokumentation wollen wir Ihnen alle nötigen Informationen zu unserem System an die Hand geben, die es Ihnen ermöglichen ..
-
-    `LEITFÄDEN <guidelines/index.html>`__
-     \.. das System zu installieren.
-    `HOWTOs <howtos/index.html>`__
-     \.. das System an Ihre Erfordernisse anzupassen.
-    `ADDONs <addons/index.html>`__
-     \.. Ihr System an Ihre Wünsche anzupassen.
-    `HANDBÜCHER <manuals/index.html>`__
-     \.. Ihre Nutzer in das System einzuweisen.
-
-
-    .. toctree::
-       :maxdepth: 1
-       :hidden:
-
-       guidelines/index
-       howtos/index
-       addons/index
-       manuals/index
-       howtos/contribute/index
-
-
-    Index
-    ==================
-
-    * :ref:`genindex`
-    * :ref:`search`
-
-
-
+   Dokumentation <contribute/contribute/index>
+   Community Feedback <contribute/feedback/index>

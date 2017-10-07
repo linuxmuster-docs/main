@@ -1,5 +1,5 @@
-Unterricht: Internetrecherche
-=============================
+Internetrecherche
+=================
 
 Um im Unterricht den Schülern eine Internet-Recherche zu ermöglichen, müssen Sie sich zunächst an der Schulkonsole als Lehrer anmelden, danach den Raum auswählen, in dem Sie unterrichten, im Raum den Unterricht beginnen und ggf. den Internet-Zugriff für die gewünschten PCs freischalten.
 
@@ -45,5 +45,3 @@ Nach Ablauf der eingestellten Zeit wird der Unterricht im Raum von der Lehrperso
 Eine vorzeitige Beendigung des Unterrichts ist ebenfalls jederzeit möglich, indem Sie auf der Raumübersicht oben den Button `sofort beenden` klicken.
 
 .. image:: media/close-directly.png
-
-

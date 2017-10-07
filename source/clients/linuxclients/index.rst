@@ -1,9 +1,7 @@
 .. _install-linux-clients-label:
 
-Linux Clients in linuxmuster.net
-================================
-
-Zielgruppe: Ambitionierte Netzwerkberater oder Dienstleister
+Linux Clients
+=============
 
 In dieser Anleitung wird beschrieben, wie man Linux auf einer Musterarbeitsstation installiert.
 Ein fertig vorkonfiguriertes Abbild liegt zum Download bei linuxmuster.net bereit und kann sofort auf alle Arbeitsstationen verteilt werden.
