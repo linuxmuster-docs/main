@@ -1,9 +1,8 @@
-Was ist linuxmuster.net?
-========================
+Über
+====
 
-linuxmuster.net ist eine umfassende Komplettlösung zum Betrieb schulischer IT-Infrastruktur.
+.. toctree::
+  :maxdepth: 2
 
-* benutzerfreundlich
-* anpassungsfähig
-* hilfsbereit
-* nachhaltig
+  about
+  release-information/index

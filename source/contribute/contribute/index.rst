@@ -1,5 +1,5 @@
-Wie Sie helfen können
-=====================
+Dokumentation
+=============
 
 Es gibt verschiedene Möglichkeiten, wie Sie helfen können, Linuxmuster.net zu verbessern.
 
@@ -19,4 +19,3 @@ Es gibt verschiedene Möglichkeiten, wie Sie helfen können, Linuxmuster.net zu 
    :hidden:
 
    guidelines
-
