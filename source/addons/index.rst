@@ -1,5 +1,5 @@
-Sonstiges
-=========
+Erweiterungen
+=============
 
 .. toctree::
   :maxdepth: 2
