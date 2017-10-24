@@ -120,6 +120,8 @@ Doppelklicken Sie die Datei und wählen bei beiden Abfragen ``Ja``.
 
 |1000000000000409000003090DE77B1D_png|
 
+..important:: Ab Windows 10 Stand 1709 ist der Domänenbeitritt nicht ohne weiteres zu bewerkstelligen. Bei Windows 10 Prof muss innerhalb der ersten 15 Tage nach Installation der Domain beigetreten werden. Hier ist SMB 1 Client noch installiert, deinstalliert sich aber nach den 15 Tagen sofern es nicht verwendet wird. Anders bei den Versionen Education und Enterprise, hier muss Samba 1.0 nachinstalliert werden. Eine Anleitung ist unter https://ask.linuxmuster.net/t/windows-10-1709-laesst-sich-nicht-in-domain-aufnehemen/1402/1 verfügbar.
+
 Klicken Sie mit der rechten Maustaste auf das Windows-Symbol oder drücken Sie Windows-Taste + X
 Klicken Sie auf ``System``.
 
