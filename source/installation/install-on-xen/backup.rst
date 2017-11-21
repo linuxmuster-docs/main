@@ -3,7 +3,7 @@ Konfiguration automatisches Backup
 
 Um Ihre Server zu sichern, ist in den ``linuxmuster-hv-tools`` ein Skript enthalten, welches Snapshots erstellt und auf einen Datenträger Ihrer Wahl verschiebt. Beachten Sie dabei, dass die Backups nicht inkrementell abgelegt werden und dadurch viel Speicherplatz in Anspruch nehmen. Es können daher meist nur einige Vollbackups gespeichert werden. In der Datei main.cfg können Sie mit dem Parameter ``Maxage`` beeinflussen, wieviele Backups auf dem Datenträger beibehalten werden. Diese Backups werden hauptsächlich im Desaster-Fall genutzt. Für versionssichere Backups über längeren Zeitraum empfehlen wir spezielle Software.
 
-Sie können jeden Storage verwenden, den Sie möchten (NAS, USB-Disk, interne Disk, ...). Den Speicherort für das Backup kann in der Datei ``/usr/share/netzint/etc/main.cfg`` eingetragen werden. Sofern nichts eingetragen ist, wird nach einem SR gesucht, welches als BackupStore
+Sie können jeden Storage verwenden, den Sie möchten (NAS, USB-Disk, interne Disk, ...). Den Speicherort für das Backup kann in der Datei ``/usr/share/linuxmuster-hv-tools/etc/main.cfg`` eingetragen werden. Sofern nichts eingetragen ist, wird nach einem SR gesucht, welches als BackupStore
 beschriftet ist. Dieses wird dann als Target verwendet. In unserem *Beispiel* verbinden wir uns mit einer NFS-Freigabe auf einer NAS mit
 der IP 10.16.1.9.
 
@@ -69,7 +69,7 @@ Um ein Backup zu starten, wechseln Sie auf die Konsole des XenServers und geben 
 
 .. code-block:: console
 
-   $ /usr/share/netzint/tools/backup.sh
+   $ /usr/share/linuxmuster-hv-tools/tools/backup.sh
 
 und bestätigen mit ``Enter``.
 
@@ -103,7 +103,7 @@ Tragen Sie für ein wöchentliches Backup, dass jeden Freitag um 20:00 Uhr start
 
 .. code-block:: console
 
-   0 20 \* \* 5 /usr/share/netzint/tools/backup.sh
+   0 20 \* \* 5 /usr/share/linuxmuster-hv-tools/tools/backup.sh
 
 .. figure:: media/configuration/image127.png
    :align: center
