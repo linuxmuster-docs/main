@@ -376,7 +376,7 @@ zugeordnet ist.
 .. note::
    An diesen Switch dürfen während des Testens keine weiteren Geräte angeschlossen sein.
 
-Vom Admin-PC aus pingen Sie nun auf die IP `10.16.1.254`. 
+Vom Admin-PC aus pingen Sie nun auf die IP `10.16.1.254`.
 Unter Linux sieht der Befehl und eine Antwort so aus:
 
 .. code-block:: console
@@ -384,7 +384,7 @@ Unter Linux sieht der Befehl und eine Antwort so aus:
    linuxadmin@admin-pc:~$ ping 10.16.1.254 -c 1
    PING 10.16.1.254 (10.16.1.254) 56(84) bytes of data.
    64 bytes from 10.16.1.254: icmp_req=1 ttl=63 time=0.438 ms
-   
+
    --- 10.16.1.254 ping statistics ---
    1 packets transmitted, 1 received, 0% packet loss, time 0ms
    rtt min/avg/max/mdev = 0.438/0.438/0.438/0.000 ms
@@ -510,7 +510,7 @@ und bestätigen Sie Ihre Auswahl durch Klicken auf die Schaltfläche ``Speichern
    Erlauben sie den SSH-Zugriff sowie die Authentifizierung auf Basis öffentlicher Schlüssel
 
 .. note::
-  Werden in der Weboberfläche des IPFire Aktualisierungen gemeldet, spielen Sie diese bitte **nicht** ein. Nutzen Sie stattdessen nach der Installation des linuxmuster.net-Servers den Befehl ``linuxmuster-ipfire --upgrade``. So ist sichergestellt, dass die Version des IPFires mit der Version des linuxmuster.net-Servers kompatibel sind. Siehe dazu auch :doc:`Aktualisierung der Firewall IPFire <../../howtos/keep-lmn-uptodate/2-update-ipfire/>`
+  Werden in der Weboberfläche des IPFire Aktualisierungen gemeldet, spielen Sie diese bitte **nicht** ein. Nutzen Sie stattdessen nach der Installation des linuxmuster.net-Servers den Befehl ``linuxmuster-ipfire --upgrade``. So ist sichergestellt, dass die Version des IPFires mit der Version des linuxmuster.net-Servers kompatibel sind. Siehe dazu auch :doc:`Aktualisierung der Firewall IPFire <../../backup-migration/keep-lmn-uptodate/2-update-ipfire/>`
 
 Fahren Sie nun mit der :ref:`Konfiguration des Proxys <proxy-config-label>` fort.
 
@@ -581,7 +581,7 @@ Klicken Sie unter ``Netzwerk`` auf ``Web-Proxy``.
 
    Klicken Sie unter ``Netzwerk`` auf ``Web-Proxy``.
 
-Tragen Sie im Abschnitt Netzwerkbasierte Zugriffskontrolle im Eingabefeld unterhalb von ``Uneingeschränkte IP-Adressen (eine pro Zeile)``: die IP-Adresse des Servers also ``10.16.1.1`` ein. 
+Tragen Sie im Abschnitt Netzwerkbasierte Zugriffskontrolle im Eingabefeld unterhalb von ``Uneingeschränkte IP-Adressen (eine pro Zeile)``: die IP-Adresse des Servers also ``10.16.1.1`` ein.
 
 .. figure:: media/firewall/531.png
    :align: center
@@ -598,14 +598,14 @@ Betätigen Sie danach die Schaltfläche "Speichern und Neustart" auf der Seite u
    Bestätigen Sie die Änderungen durch "Speichern und Neustart"
 
 .. note::
-   
+
    Werden in der Weboberfläche des IPFire Aktualisierungen gemeldet,
    spielen Sie diese bitte **nicht** ein. Nutzen Sie stattdessen nach
    der Installation des linuxmuster.net-Servers den Befehl
    ``linuxmuster-ipfire --upgrade``. So ist sichergestellt, dass die
    Version des IPFires mit der Version des linuxmuster.net-Server
    kompatibel sind. Siehe dazu auch :doc:`Aktualisierung der Firewall
-   IPFire <../../howtos/keep-lmn-uptodate/2-update-ipfire/>`
+   IPFire <../../backup-migration/keep-lmn-uptodate/2-update-ipfire/>`
 
 Fahren Sie nun mit der :ref:`Installation des Servers <server-install-label>` fort.
 
@@ -642,6 +642,6 @@ Abschließend wird Webproxy-Dienst neu gestartet.
 Bei Erfolg wieder keinerlei Ausgabe erzeugt.
 
 .. note::
-  Werden in der Weboberfläche des IPFire Aktualisierungen gemeldet, spielen Sie diese bitte **nicht** ein. Nutzen Sie stattdessen nach der Installation des linuxmuster.net-Servers den Befehl ``linuxmuster-ipfire --upgrade``. So ist sichergestellt, dass die Version des IPFires mit der Version des linuxmuster.net-Server kompatibel sind. Siehe dazu auch :doc:`Aktualisierung der Firewall IPFire <../../howtos/keep-lmn-uptodate/2-update-ipfire/>`
+  Werden in der Weboberfläche des IPFire Aktualisierungen gemeldet, spielen Sie diese bitte **nicht** ein. Nutzen Sie stattdessen nach der Installation des linuxmuster.net-Servers den Befehl ``linuxmuster-ipfire --upgrade``. So ist sichergestellt, dass die Version des IPFires mit der Version des linuxmuster.net-Server kompatibel sind. Siehe dazu auch :doc:`Aktualisierung der Firewall IPFire <../../backup-migration/keep-lmn-uptodate/2-update-ipfire/>`
 
 Fahren Sie nun mit der :ref:`Installation des Servers <server-install-label>` fort.

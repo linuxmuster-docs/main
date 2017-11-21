@@ -8,3 +8,4 @@ Sonstiges
   use-openvpn/index
   use-horde/index
   use-mail-ldap/index
+  netzbrief-basics/index

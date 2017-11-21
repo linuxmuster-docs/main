@@ -9,12 +9,12 @@ die Schulkonsole auf den Clients im Browser Javascript zu aktivieren.
 
 Allgemein
 ---------
-Das Paket **linuxmuster-schulkonsole-template** ist jetzt integriert und damit in Zukunft überflüssig. Es sollte deinstalliert 
+Das Paket **linuxmuster-schulkonsole-template** ist jetzt integriert und damit in Zukunft überflüssig. Es sollte deinstalliert
 werden.
 
 Das Design vieler Tabellen wurde zur besseren Übersicht um **Zeilennummern** erweitert.
 
-Die Rechtestruktur ist konfigurierbar geworden. Damit ist es z.B. möglich, Lehrern das Recht für die Abschaltung des Webfilters zu 
+Die Rechtestruktur ist konfigurierbar geworden. Damit ist es z.B. möglich, Lehrern das Recht für die Abschaltung des Webfilters zu
 entziehen. Genaueres dazu ist zu finden unter `Technische Dokumentation der Schulkonsole <http://www.linuxmuster.net/wiki/entwicklung:schulkonsole:sk_neue_plugin_seite>`_.
 Dort ist auch erklärt, wie die Menüstruktur durch z.B. Ausblendung oder Verschiebung von Menüpunkten lokalen Gegebenheiten angepasst werden kann.
 
@@ -96,7 +96,7 @@ Rechnerverwaltung
 Hosts
 """""
 - Die **hosts**-Tabelle kann nach verschiedenen Spalten aufsteigend bzw. absteigend sortiert werden. Damit ist es einfacher, z.B. freie IP-Adressen eines Raums herauszufinden.
-- Die Datei **/etc/linuxmuster/workstations** kann auch Kommentare enthalten. Wird vor den Raumnamen ein Kommentarzeichen eingefügt, bleibt die Zeile erhalten wird aber deaktiviert. 
+- Die Datei **/etc/linuxmuster/workstations** kann auch Kommentare enthalten. Wird vor den Raumnamen ein Kommentarzeichen eingefügt, bleibt die Zeile erhalten wird aber deaktiviert.
   Wird das Kommentarzeichen wieder entfernt, so wird die Zeile wieder aktiv.
 - Bei einem *import_workstations*, also der Übernahme der Änderungen in das System wird die log-Datei angezeigt.
 
@@ -110,7 +110,7 @@ Regpatch-Dateien können im Menü Linbo über den Eintrag Regpatch direkt bearbe
 
 start.conf
 """"""""""
-Es gibt mehrere Erweiterungen der start.conf-Datei, die zum Teil mit der Umstellung auf 
+Es gibt mehrere Erweiterungen der start.conf-Datei, die zum Teil mit der Umstellung auf
 grub2 und der damit einhergehenden Unterstützung von UEFI-Rechnern zu tun hat.
 
 - **efi** ist ein neuer Partitionstyp, der bei UEFI-Rechnern zum Starten benötigt wird.
@@ -181,7 +181,7 @@ Oberfläche allgemein
 Menü
 ^^^^
 
-.. image:: ../howtos/print-student-passwords/media/03.png
+.. image:: ../../user-management/print-student-passwords/media/03.png
 
 Das Menü ist jetzt ein 2-Ebenenmenü, das nicht mehr soviel Bildschirmplatz benötigt und intuitiver zu bedienen ist.
 
@@ -227,7 +227,7 @@ werden.
 Standardeinstellungen
 ^^^^^^^^^^^^^^^^^^^^^
 
-Für die Standardeinstellungen zum **WLAN** gibt es die Datei 
+Für die Standardeinstellungen zum **WLAN** gibt es die Datei
 **/etc/linuxmuster/wlan_defaults** mit dem Inhalt
 
 ::
@@ -241,10 +241,10 @@ Für die Standardeinstellungen zum **WLAN** gibt es die Datei
 	# wlan status: on/off/-
 	#
 	# Place a "-" in wlan column, if you want the current
-	# status not to be changed. 
+	# status not to be changed.
 	#
 	# There has to be one user, class or project definition per line.
-	# Note: the users, classes and projects are processed in the sequence 
+	# Note: the users, classes and projects are processed in the sequence
 	#       that is defined here.
 	#
 	# identity:user/class/project   wlan status
@@ -254,7 +254,7 @@ Für die Standardeinstellungen zum **WLAN** gibt es die Datei
 	#g:11b          -
 	#u:test         on
 	#
-	# next entries set the default values for users/classes/projects, 
+	# next entries set the default values for users/classes/projects,
 	# which are not defined explicitly.
 	g:default               off
 	u:default               off

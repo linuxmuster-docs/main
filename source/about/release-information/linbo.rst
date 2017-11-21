@@ -67,7 +67,7 @@ Kernel-Parameter übergibt (keine Leerzeichen innerhalb eines Parameters):
    KernelOptions = quiet splash dhcpretry=10 acpi=noirq
 
 
-   
+
 Spezifische PXE-Boot-Einstellungen für eine
 bestimmte Rechnergruppe werden jetzt in den Boot-Konfigurationsdateien
 vorgenommen, die im Verzeichnis ``/var/linbo/boot/grub`` unter dem
@@ -93,7 +93,7 @@ Gruppenspezifische Boot-Konfiguration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Die gruppenspezifische Boot-Konfigurationsdatei wird automatisch beim
-Workstationimport (siehe Abschnitt :doc:`../howtos/windows10clients/registration`) aus der
+Workstationimport (siehe Abschnitt :doc:`../../clients/windows10clients/registration`) aus der
 start.conf-Datei der Gruppe erstellt. Sie enthält einen Menü-Eintrag für
 Linbo und drei weitere für jedes in der start.conf-Datei definierte
 Betriebssystem. Das Menü ist standardmäßig ausgeblendet und so
@@ -108,17 +108,17 @@ Teil:
    # thomas@linuxmuster.net
    # 12.02.2016
    #
-   
+
    # if you don't want this file being overwritten by import_workstations remove the following line:
    # ### managed by linuxmuster.net ###
-   
+
    # edit to your needs
    set default=0
    set timeout=0
    set fallback=1
-   
+
    set gfxpayload=800x600x16
-   
+
    # set apropriate linbo kernel and initrd
    if cpuid -l; then
       set linbo_kernel=/linbo64
@@ -127,7 +127,7 @@ Teil:
       set linbo_kernel=/linbo
       set linbo_initrd=/linbofs.lz
    fi
-   
+
    # theme settings (modify for custom theme)
    set theme=/boot/grub/themes/linbo/theme.txt
    set font=/boot/grub/themes/linbo/unifont-regular-16.pf2
@@ -138,7 +138,7 @@ Teil:
       export theme
    fi
 
-   
+
 -  Um das Boot-Menü zu aktivieren, setzt man einfach den
    `Timeout <http://www.gnu.org/software/grub/manual/grub.html#timeout>`__-Wert
    hoch. Nach Ablauf der angegebenen Sekunden wird der
@@ -205,7 +205,7 @@ Betriebssystems:
 
    # start "Windows 7" directly
    menuentry 'Windows 7 (Start)' --class win_start {
- 
+
       set root="(hd0,1)"
       set win_efiloader="/EFI/Microsoft/Boot/bootmgfw.efi"
 
@@ -239,7 +239,7 @@ Betriebssystems:
 
    }
 
-		
+
 Der nächste Menü-Eintrag (Nr. 2) ermöglicht den synchronisierten Start
 des Betriebssystems:
 
@@ -249,7 +249,7 @@ des Betriebssystems:
    menuentry 'Windows 7 (Sync+Start)' --class win_syncstart {
 
       set root="(hd0,2)"
-   
+
       if [ -e "$linbo_kernel" -a -e "$linbo_initrd" ]; then
          set bootflag=localboot
       elif [ -n "$pxe_default_server" ]; then
@@ -279,14 +279,14 @@ Schließlich folgt der Menü-Eintrag (Nr. 3) für Neu+Start:
    menuentry 'Windows 7 (Neu+Start)' --class win_newstart {
 
       set root="(hd0,2)"
-   
+
       if [ -e "$linbo_kernel" -a -e "$linbo_initrd" ]; then
          set bootflag=localboot
       elif [ -n "$pxe_default_server" ]; then
          set root="(tftp)"
          set bootflag=netboot
       fi
-   
+
       if [ -n "$bootflag" ]; then
          echo LINBO $bootflag for group win7
          echo
@@ -297,7 +297,7 @@ Schließlich folgt der Menü-Eintrag (Nr. 3) für Neu+Start:
          initrd $linbo_initrd
          boot
       fi
-   
+
    }
 
 
@@ -398,7 +398,7 @@ Megabyte, G für Gigabyte, T für Terabyte):
    # Cache auf Partition 4
    # Daten auf Partition 5
    # Festplatte 160G
-		
+
    [LINBO]                  # globale Konfiguration
    Server = 10.16.1.1       # IP des Linbo-Servers, der das Linbo-Repository vorhaelt
    Group = win7-efi           # Name der Rechnergruppe fuer die diese Konfigurationsdatei gilt
@@ -433,7 +433,7 @@ Megabyte, G für Gigabyte, T für Terabyte):
    Id = 0c01                # Partitionstyp 0c01
    FSType =                 # kein Dateisystem
    Bootable = no            # kein Bootable-Flag
-   
+
    [Partition]              # Partition fuer Windows
    Dev = /dev/sda3          # Device-Name der Partition (sda3 = dritte Partition auf erster Platte)
    Label = win7             # Partitionslabel win7
@@ -441,7 +441,7 @@ Megabyte, G für Gigabyte, T für Terabyte):
    Id = 7                   # Partitionstyp 83
    FSType = ntfs            # Dateisystem ext4
    Bootable = no            # kein Bootable-Flag
-   
+
    [Partition]              # Cache-Partition
    Dev = /dev/sda4          # Device-Name der Partition (sda4 = vierte Partition auf erster Platte)
    Label = cache            # Partitionslabel cache
@@ -449,7 +449,7 @@ Megabyte, G für Gigabyte, T für Terabyte):
    Id = 83                  # Partitionstyp 83
    FSType = ext4            # Dateisystem ext4
    Bootable = no            # kein Bootable-Flag
-   
+
    [Partition]              # Daten-Partition
    Dev = /dev/sda5          # Device-Name der Partition (sda5 = sechste Partition auf erster IDE-Platte)
    Label = daten            # Partitionslabel daten
@@ -457,7 +457,7 @@ Megabyte, G für Gigabyte, T für Terabyte):
    Id = 7                   # Partitionstyp 7
    FSType = ntfs            # Dateisystem ntfs
    Bootable = no            # kein Bootable-Flag
-   
+
    [OS]                         # Beginn einer Betriebssystemdefinition
    Name = Windows 7             # Name des Betriebssystems
    Version =                    # Version (unbenutzt, leer lassen)
@@ -589,7 +589,7 @@ Bootvorgang:
 
 .. figure:: ./media/linbo-isoboot-bios2.png
 
-   Bearbeiten des LINBO-Startmenü im BIOS-Modus 
+   Bearbeiten des LINBO-Startmenü im BIOS-Modus
 
 Im UEFI-Modus lässt sich nach Drücken der [E]-Taste der entsprechende
 Bootmenü-Eintrag editieren. Mit [CTRL-X] oder [F10] startet man nach

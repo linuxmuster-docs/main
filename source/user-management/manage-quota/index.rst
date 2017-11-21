@@ -37,7 +37,7 @@ Im Bereich Quotierung können Sie diese aktivieren (Standard) oder
 deaktivieren. Ebenso können Sie für Schüler und Lehrer jeweils drei
 Quotas angeben.
 
-.. image:: ../../manuals/schulkonsole-admin/media/schulkonsole-einstellungen-global.png
+.. image:: ../../school-console/admin/media/schulkonsole-einstellungen-global.png
 
 Ändern Sie die Einstellungen für ``/home``, dann beschränkt das den
 Platz, den neue Lehrer oder versetzte Schüler auf ``Home_auf_Server``
@@ -74,7 +74,7 @@ Der Administrator hat in der *Schulkonsole* im Menü unter *Quota* die
 Möglichkeit, den Festplattenplatz für Lehrer und Schüler zu
 beschränken.
 
-.. image:: ../../manuals/schulkonsole-admin/media/schulkonsole-quota.png
+.. image:: ../../school-console/admin/media/schulkonsole-quota.png
 
 Benötigt ein Kollege mehr Platz, können Sie dessen Quota leicht über die *Schulkonsole* unter *Quota* -> *Lehrer* ändern:
 

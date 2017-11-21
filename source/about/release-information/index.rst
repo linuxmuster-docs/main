@@ -9,7 +9,7 @@ Was ist neu in 6.2?
 ===================
 
 Nehmen Sie das Upgrade zu linuxmuster.net 6.2 wahr und folgen Sie der
-:doc:`Upgrade-Anleitung <../howtos/upgrade/index>`.
+:doc:`Upgrade-Anleitung <../../backup-migration/upgrade/index>`.
 Lesen Sie dennoch zunächst die Liste der Neuerungen und bekannten Probleme.
 
 .. toctree::

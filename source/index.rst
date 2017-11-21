@@ -15,6 +15,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   installation/index
   getting-started/index
   clients/index
+  school-console/index
   user-management/index
   linbo/index
   printer/index
