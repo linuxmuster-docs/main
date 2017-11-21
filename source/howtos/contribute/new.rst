@@ -45,11 +45,11 @@ Linuxmuster Dokumentation forken
    Ersetzen Sie "github-account" mit ihrem Github Kontonamen!
 
 .. note::
-   Nutzen Sie die URL ``git@github.com:github-account/all-of-me.git`` falls Sie bereits einen SSH-Schlüssel bei Github hochgeladen haben!
+   Nutzen Sie die URL ``git@github.com:github-account/main.git`` falls Sie bereits einen SSH-Schlüssel bei Github hochgeladen haben!
 
 .. code-block:: console
 
-   $ git clone https://github.com/github-account/all-of-me.git docs
+   $ git clone https://github.com/github-account/main.git docs
    $ cd docs
 
 Sie können nun mit
@@ -98,7 +98,7 @@ Geben Sie nun noch einen Kommentar zu Ihren Änderungen ein und laden Sie alles 
    $ git commit -a -m"My great documentation"
    $ git push
 
-Erstellen Sie nun einen "Pull-Request" unter `<https://github.com/github-account/all-of-me>`_, indem Sie auf "New Pull Request" klicken.
+Erstellen Sie nun einen "Pull-Request" unter `<https://github.com/github-account/main>`_, indem Sie auf "New Pull Request" klicken.
 
 .. figure:: media/pr.png
    :align: center
@@ -125,7 +125,7 @@ Alternativ kann der eigene Fork auf den Stand des offiziellen Repositoriums gebr
 
   .. code:: bash
 
-     ~/docs$ git remote add upstream https://github.com/linuxmuster-docs/all-of-me.git
+     ~/docs$ git remote add upstream https://github.com/linuxmuster-docs/main.git
 
 * Hole und merge den aktuellen offiziellen branch:
 
