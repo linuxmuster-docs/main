@@ -1,8 +1,8 @@
 linuxmuster.net documentation
 #############################
 
-.. image:: https://travis-ci.org/linuxmuster-docs/all-of-me.svg?branch=master
-    :target: https://travis-ci.org/linuxmuster-docs/all-of-me
+.. image:: https://travis-ci.org/linuxmuster-docs/main.svg?branch=master
+    :target: https://travis-ci.org/linuxmuster-docs/main
 
 .. image:: http://readthedocs.org/projects/linuxmuster/badge/?version=latest
     :target: http://docs.linuxmuster.net/de/latest/?badge=latest
@@ -19,12 +19,12 @@ The full documentation of linuxmuster.net.
 
 Installation
 ++++++++++++
-Clone the repository "all-of-me" using git
+Clone the repository "main" using git
 
 .. code:: bash
 
-   ~$ git clone https://github.com/linuxmuster-docs/all-of-me.git  # if you have no ssh-key within github
-   ~$ git clone git@github.com:linuxmuster-docs/all-of-me.git # if you have a ssh-key within github
+   ~$ git clone https://github.com/linuxmuster-docs/main.git  # if you have no ssh-key within github
+   ~$ git clone git@github.com:linuxmuster-docs/main.git # if you have a ssh-key within github
 
 Install sphinx, e.g. under Ubuntu 16.04, do
 
@@ -36,30 +36,30 @@ Make a local copy of your documentation using
 
 .. code:: bash
 
-   ~$ cd all-of-me
-   ~/all-of-me$ make clean
-   ~/all-of-me$ make html
+   ~$ cd main
+   ~/main$ make clean
+   ~/main$ make html
 
 Later, if you work again on the repository, update it with
 
 .. code:: bash
 
-   ~/all-of-me$ git pull
+   ~/main$ git pull
 
 
 
 Contribute to the documentation
 +++++++++++++++++++++++++++++++
 
-Fork the repository "all-of-me" within the github-webinterface_
+Fork the repository "main" within the github-webinterface_
 
-.. _github-webinterface: https://github.com/linuxmuster-docs/all-of-me
+.. _github-webinterface: https://github.com/linuxmuster-docs/main
 
 * Clone your fork
 
   .. code:: bash
 
-     ~$ git clone https://github.com/mein-github-konto/all-of-me.git docs
+     ~$ git clone https://github.com/mein-github-konto/main.git docs
      ~$ cd docs
      ~/docs$ make html
 
@@ -94,7 +94,7 @@ Instead of deleting and creating a new fork you can bring your own fork up-to-da
 
   .. code:: bash
 
-     ~/docs$ git remote add upstream https://github.com/linuxmuster-docs/all-of-me.git
+     ~/docs$ git remote add upstream https://github.com/linuxmuster-docs/main.git
 
 * Fetch and merge the remote master
 
