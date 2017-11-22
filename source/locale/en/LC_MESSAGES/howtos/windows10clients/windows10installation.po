@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-29 05:50+0700\n"
+"POT-Creation-Date: 2017-11-22 00:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -273,35 +273,47 @@ msgstr "|1000000000000409000003090DE77B1D_png|"
 
 #: ../../source/howtos/windows10clients/windows10installation.rst:123
 msgid ""
+"Ab Windows 10 Stand 1709 ist der Domänenbeitritt nicht ohne weiteres zu "
+"bewerkstelligen. Bei Windows 10 Prof muss innerhalb der ersten 15 Tage nach "
+"Installation der Domain beigetreten werden. Hier ist SMB 1 Client noch "
+"installiert, deinstalliert sich aber nach den 15 Tagen sofern es nicht "
+"verwendet wird. Anders bei den Versionen Education und Enterprise, hier muss"
+" Samba 1.0 nachinstalliert werden. Eine Anleitung ist unter "
+"https://ask.linuxmuster.net/t/windows-10-1709-laesst-sich-nicht-in-domain-"
+"aufnehemen/1402/1 verfügbar. Bitte zu erst lesen!"
+msgstr ""
+
+#: ../../source/howtos/windows10clients/windows10installation.rst:125
+msgid ""
 "Klicken Sie mit der rechten Maustaste auf das Windows-Symbol oder drücken "
 "Sie Windows-Taste + X Klicken Sie auf ``System``."
 msgstr ""
 "Click with the right mouse button on the Windows icon or press the Windows "
 "key+X. Click on ``System``."
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:126
+#: ../../source/howtos/windows10clients/windows10installation.rst:128
 msgid "|100000000000040900000309D7642C20_png|"
 msgstr "|100000000000040900000309D7642C20_png|"
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:128
+#: ../../source/howtos/windows10clients/windows10installation.rst:130
 msgid ""
 "Klicken Sie in der Übersicht bei dem Computername auf ``Einstellungen "
 "ändern``."
 msgstr "Click on ``Change Settings`` (next to the computer name)."
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:130
+#: ../../source/howtos/windows10clients/windows10installation.rst:132
 msgid "|1000000000000409000003093D2980DF_png|"
 msgstr "|1000000000000409000003093D2980DF_png|"
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:132
+#: ../../source/howtos/windows10clients/windows10installation.rst:134
 msgid "Klicken Sie auf ``Ändern``."
 msgstr "Click on ``Change``."
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:134
+#: ../../source/howtos/windows10clients/windows10installation.rst:136
 msgid "|100000000000040900000309727EA44E_png|"
 msgstr "|100000000000040900000309727EA44E_png|"
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:136
+#: ../../source/howtos/windows10clients/windows10installation.rst:138
 msgid ""
 "Tragen Sie den Computernamen ein den Sie in Linbo für den Rechner vergeben "
 "haben. In unserem Beispiel r123-pc02. Wählen Sie Domäne und tragen den "
@@ -311,11 +323,11 @@ msgstr ""
 "example, r123-pc02. Choose Domain and enter the domain name, in our example "
 "``schule``"
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:139
+#: ../../source/howtos/windows10clients/windows10installation.rst:141
 msgid "|100000000000040900000309AFC96356_png|"
 msgstr "|100000000000040900000309AFC96356_png|"
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:141
+#: ../../source/howtos/windows10clients/windows10installation.rst:143
 msgid ""
 "Geben Sie einen Benutzer der Gruppe Administratoren an. Beispielsweise den "
 "Benutzer ``domadmin`` mit dem dazugehörigen Passwort und bestätigen mit "
@@ -324,11 +336,11 @@ msgstr ""
 "Enter one of the administrator users. For example, the user ``domadmin`` "
 "with the appropriate password and confirm with ``Ok``."
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:144
+#: ../../source/howtos/windows10clients/windows10installation.rst:146
 msgid "|10000000000004090000030964D1E68C_png|"
 msgstr "|10000000000004090000030964D1E68C_png|"
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:146
+#: ../../source/howtos/windows10clients/windows10installation.rst:148
 msgid ""
 "Bestätigen Sie die Meldung mit ``Ok``, schließen Sie alle Fenster und "
 "klicken Sie bei der Meldung auf ``Jetzt neu starten``."
@@ -336,19 +348,19 @@ msgstr ""
 "Confirm the message with ``Ok``, close all the windows and click on "
 "``Restart Now``."
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:148
+#: ../../source/howtos/windows10clients/windows10installation.rst:150
 msgid "|100000000000040900000309827575BC_png|"
 msgstr "|100000000000040900000309827575BC_png|"
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:150
+#: ../../source/howtos/windows10clients/windows10installation.rst:152
 msgid "|1000000000000409000003095F824A32_png|"
 msgstr "|1000000000000409000003095F824A32_png|"
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:152
+#: ../../source/howtos/windows10clients/windows10installation.rst:154
 msgid "|100000000000040900000309B4D432CA_png|"
 msgstr "|100000000000040900000309B4D432CA_png|"
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:154
+#: ../../source/howtos/windows10clients/windows10installation.rst:156
 msgid ""
 "Nach einem Neustart können sie in der links-unteren Ecke Anderer Benutzer "
 "wählen um sich anschließend mit einem Domänenbenutzer anzumelden."
@@ -356,11 +368,11 @@ msgstr ""
 "After rebooting you can choose ``Other User`` in the left-bottom corner to "
 "log in with a domain user."
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:156
+#: ../../source/howtos/windows10clients/windows10installation.rst:158
 msgid "|100000000000040900000309092F3627_png|"
 msgstr "|100000000000040900000309092F3627_png|"
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:158
+#: ../../source/howtos/windows10clients/windows10installation.rst:160
 msgid ""
 "Sie können nun Änderungen an Windows vornehmen. Konfigurieren Sie das System"
 " nach Ihren Wünschen und fahren Windows danach herunter."
@@ -368,11 +380,11 @@ msgstr ""
 "You can now make changes to Windows. Configure the system to your needs and "
 "then shutdown Windows."
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:161
+#: ../../source/howtos/windows10clients/windows10installation.rst:163
 msgid "Image auf Server schreiben"
 msgstr "Write Image to the Server"
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:163
+#: ../../source/howtos/windows10clients/windows10installation.rst:165
 msgid ""
 "Starten Sie den Computer, booten per pxe und wechseln Sie in LINBO auf den "
 "Reiter ``Imaging``. Klicken Sie auf ``Image erstellen``. Starten Sie den "
@@ -382,11 +394,11 @@ msgstr ""
 "``Imaging``. Click on ``Create Image``. Start the process by clicking on "
 "``Create and Upload``."
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:166
+#: ../../source/howtos/windows10clients/windows10installation.rst:168
 msgid "|10000000000003300000026052C7AA3A_png|"
 msgstr "|10000000000003300000026052C7AA3A_png|"
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:168
+#: ../../source/howtos/windows10clients/windows10installation.rst:170
 msgid ""
 "Bei dieser Methode wird sofern ein Image mit dem Namen bereits vorhanden "
 "ist, das alte Image umbenannt und das aktuelle Image nimmt dessen Platz als "
@@ -396,7 +408,7 @@ msgstr ""
 "old image will be renamed and the current image takes its place as the "
 "active image."
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:171
+#: ../../source/howtos/windows10clients/windows10installation.rst:173
 msgid ""
 "Sobald der Vorgang abgeschlossen ist, können Sie den Zustand der "
 "Installation nun immer auf diesen Punkt zurücksetzen."
@@ -404,11 +416,11 @@ msgstr ""
 "As soon as the process is completed, you can now always reset the status of "
 "the installation to this point."
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:173
+#: ../../source/howtos/windows10clients/windows10installation.rst:175
 msgid "Das Image ist auf dem Server verfügbar."
 msgstr "The image is available on the server."
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:175
+#: ../../source/howtos/windows10clients/windows10installation.rst:177
 msgid ""
 "Soll es auch auf andere Rechner ausgerollt werden, so muss noch die "
 "``image.reg`` auf dem Server bereitgestellt werden. Dazu kopiert man die "
@@ -419,11 +431,11 @@ msgstr ""
 "made available on the server. Copy the ``/var/linbo/win10.image.reg`` to "
 "``/var/linbo/<BEZEICHNUNG DER RECHNERGRUPPE>.cloop.reg``."
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:178
+#: ../../source/howtos/windows10clients/windows10installation.rst:180
 msgid "Im Beispiel würde das so gehen:"
 msgstr "Here's the example:"
 
-#: ../../source/howtos/windows10clients/windows10installation.rst:184
+#: ../../source/howtos/windows10clients/windows10installation.rst:186
 msgid ""
 "Ab sofort wird linbo die image.reg nach dem sync eines Betriebsystems in die"
 " Registry des gesyncten Rechners eintragen und so z.B. den Hostnamen auf den"

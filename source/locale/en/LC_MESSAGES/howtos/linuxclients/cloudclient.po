@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-29 05:50+0700\n"
+"POT-Creation-Date: 2017-11-22 00:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2017\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,31 +20,33 @@ msgstr ""
 
 #: ../../source/howtos/linuxclients/cloudclient.rst:4
 msgid "Herunterladen des Standard-Linuxclients"
-msgstr ""
+msgstr "Downloading the Default Linux Client"
 
 #: ../../source/howtos/linuxclients/cloudclient.rst:6
 msgid ""
 "Installieren Sie auf dem Server das Paket ``linuxmuster-client-"
 "servertools``."
-msgstr ""
+msgstr "Install the ``linuxmuster-client-servertools`` package on the server."
 
 #: ../../source/howtos/linuxclients/cloudclient.rst:23
 msgid "Rufen Sie die Liste aller verfügbaren Clientabbilder auf:"
-msgstr ""
+msgstr "View the list of all available client images:"
 
 #: ../../source/howtos/linuxclients/cloudclient.rst:37
 msgid "Laden Sie das Abbild Ihrer Wahl (hier: `xenial916`) herunter mit"
-msgstr ""
+msgstr "Download the image of your choice (here: `xenial916`) with"
 
 #: ../../source/howtos/linuxclients/cloudclient.rst:43
 msgid ""
 "Es wird die Rechnergruppe (Hardwareklasse) `xenial` angelegt und mehrere "
 "Dateien werden erzeugt. Die wichtigsten sind"
 msgstr ""
+"The computer group (hardware class) `xenial` is created and several files "
+"are created. The most important ones are"
 
 #: ../../source/howtos/linuxclients/cloudclient.rst:52
 msgid "Nun kann man Clientrechner in die Rechnergruppe `xenial` aufnehmen."
-msgstr ""
+msgstr "Now you can add client computers to the computer group `xenial`."
 
 #: ../../source/howtos/linuxclients/cloudclient.rst:56
 msgid ""
@@ -53,3 +56,6 @@ msgid ""
 "`/var/linbo/start.conf.xenial` und `/var/linbo/linuxmuster-client/xenial` "
 "jeweils automatisch Backups erstellt."
 msgstr ""
+"If a file already exists, the program terminates first. The ``-f`` option "
+"resumes a download and overwrites existing files, automatically backing up "
+"`/var/linbo/start. conf. xenial` and `/var/linbo/linuxmuster-client/xenial`."

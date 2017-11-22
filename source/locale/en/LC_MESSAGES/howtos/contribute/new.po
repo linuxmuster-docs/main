@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-29 05:50+0700\n"
+"POT-Creation-Date: 2017-11-22 00:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -99,8 +99,8 @@ msgstr ""
 
 #: ../../source/howtos/contribute/new.rst:48
 msgid ""
-"Nutzen Sie die URL ``git@github.com:github-account/all-of-me.git`` falls Sie"
-" bereits einen SSH-Schlüssel bei Github hochgeladen haben!"
+"Nutzen Sie die URL ``git@github.com:github-account/main.git`` falls Sie "
+"bereits einen SSH-Schlüssel bei Github hochgeladen haben!"
 msgstr ""
 
 #: ../../source/howtos/contribute/new.rst:55
@@ -159,7 +159,7 @@ msgstr ""
 #: ../../source/howtos/contribute/new.rst:101
 msgid ""
 "Erstellen Sie nun einen \"Pull-Request\" unter `<https://github.com/github-"
-"account/all-of-me>`_, indem Sie auf \"New Pull Request\" klicken."
+"account/main>`_, indem Sie auf \"New Pull Request\" klicken."
 msgstr ""
 
 #: ../../source/howtos/contribute/new.rst:107
