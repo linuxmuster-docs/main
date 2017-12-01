@@ -105,4 +105,4 @@ Die linuxmuster.net-Lösung unterstützt auch komplexere Netzwerkstrukturen mit
 * VLANS
 * Bonding
 
-Siehe dazu auch :doc:`Netzsegmentierung mit linuxmuster.net <../../misc/netzbrief-basics/index/>`
+Siehe dazu auch :doc:`Netzsegmentierung mit linuxmuster.net <../network/subnetting-basics/index/>`

@@ -469,7 +469,7 @@ Es wird ausdrücklich davon abgeraten, Updates automatisch einzuspielen. Sie als
    Wählen Sie „keine automatischen Updates“ aus.
 
 .. note::
-   Das bedeutet keineswegs, dass Sie das System nicht updaten sollen, nur eben nicht automatisch. Bitte lesen Sie dazu :doc:`Linuxmuster.net aktuell halten <../../backup-migration/keep-lmn-uptodate/index/>`
+   Das bedeutet keineswegs, dass Sie das System nicht updaten sollen, nur eben nicht automatisch. Bitte lesen Sie dazu :doc:`Linuxmuster.net aktuell halten <../maintenance/keep-lmn-uptodate/index>`
 
 Wählen Sie keine Software zum Installieren aus. Alle benötigten Pakete werden später durch ein Skript installiert, u.a. auch ein ``OpenSSH server``.
 
@@ -827,7 +827,7 @@ Starten Sie den Server neu.
 
 Nach dem Neustart begrüßt Sie der Login-Prompt von `linuxmuster.net 6.2.0 / Codename Babo`.
 
-Als nächstes können Sie Arbeitsplatzrechner einbinden, besonders reizvoll ist dabei der :doc:`„Standard-Linuxclient“ <../../clients/linuxclients/index/>`, das ist ein komplett installiertes und konfiguriertes LTS-Ubuntu, das Sie innerhalb weniger Minuten in das System integrieren können.
+Als nächstes können Sie Arbeitsplatzrechner einbinden, besonders reizvoll ist dabei der :doc:`„Standard-Linuxclient“ <../../getting-started/linuxclients/index>`, das ist ein komplett installiertes und konfiguriertes LTS-Ubuntu, das Sie innerhalb weniger Minuten in das System integrieren können.
 Alternativ können Sie z.B. auch selbst ein :doc:`Windows 10 <../../clients/windows10clients/index/>` installieren.
 
 .. [#FN-CustomFirewall] Bei Verwendung einer eigenen Firewalllösung funktionieren weder Internetsperre noch Webfilter. Weiterhin die Firewall in ihrem internen Netz (beim IPFire „grünes Netz“ genannt) die IP ``10.16.1.254`` und die Netzmaske ``255.240.0.0`` besitzen, sonst haben weder Server noch Clienten Internetzugang.

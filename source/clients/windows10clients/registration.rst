@@ -10,7 +10,7 @@ Registrierung über LINBO
 ------------------------
 
 Die LINBO-Oberfläche (:doc:`Bedienungsanleitung LINBO
-<../../linbo/index>`) auf dem Client bietet eine Möglichkeit
+<../linbo/index>`) auf dem Client bietet eine Möglichkeit
 die Aufnahme eines neuen Rechners ins System vorzubereiten.
 
 Starten Sie den Rechner per PXE-Boot
@@ -76,7 +76,7 @@ Registrierung übernehmen
 
 Sobald alle Rechner registriert wurden, müssen Sie die Aufnahme der
 Clients entweder in der `Schulkonsole` (:doc:`Bedienungsanleitung Schulkonsole
-<../../school-console/admin/index>`) oder an der Konsole starten!
+<../../appendix/school-console/admin/index>`) oder an der Konsole starten!
 
 Da der Zugriff auf die Schulkonsole nur von ins System aufgenommenen
 Rechnern erlaubt ist, muss zumindest der erste Rechner händisch importiert werden.
