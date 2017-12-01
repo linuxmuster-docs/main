@@ -10,47 +10,81 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   :maxdepth: 2
   :caption: Erste Schritte
 
-  about/index
-  prerequisites/index
-  getting-started/index
+  getting-started/about/index
+  getting-started/prerequisites/index
+  getting-started/install-on-xen/index
+  getting-started/linuxclients/index
+  getting-started/add-user-accounts/index
 
 .. toctree::
   :maxdepth: 2
   :caption: Systemadministration
 
-  install-from-scratch/index
-  maintenance/index
-  network/index
-  printer/index
+  systemadministration/install-from-scratch/index
+  systemadministration/maintenance/index
+  systemadministration/network/index
+  systemadministration/printer/index
 
 .. toctree::
   :maxdepth: 2
   :caption: Clientverwaltung
 
-  clients/index
-  school-console/index
-  user-management/index
-  linbo/index
-  printer/index
-  backup-migration/index
-  classroom/index
-  misc/index
-  addons/index
-  contribute/index
-  backupmondo/index
-
-.. toctree::
-  :maxdepth: 2
-  :caption: Handbuch für Lehrkräfte
-
-  classroom/teacher
-  user-management/teacher
-  misc/teacher
+  clients/windows10clients/index
+  clients/leoclient2/index
+  clients/linbo/index
+  clients/postsync/index
 
 .. toctree::
   :maxdepth: 1
-  :caption: Handbuch für Schüler
+  :caption: Benutzerverwaltung
 
+  user-management/manage-users/index
   user-management/change-own-password/index
-  user-management/check-own-quota/index
-  misc/use-horde/index
+  user-management/change-teacher-passwords/index
+  user-management/change-student-passwords/index
+  user-management/manage-quota/index
+  user-management/preparation-newterm/index
+  user-management/use-mail-ldap/index
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Pädagogische Funktionen
+
+  classroom/use-internet-in-class/index
+  classroom/use-files-in-class/index
+  classroom/use-horde/index
+  classroom/use-openvpn/index
+  classroom/print-student-passwords/index
+  classroom/check-own-quota/index
+  classroom/check-student-quota/index
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Erweiterungen
+
+  addons/monipi/index
+  addons/backupmondo/index
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Anhang
+
+  appendix/contribute/index
+  appendix/school-console/index
+  clients/linbo/index
+
+..
+   .. toctree::
+     :maxdepth: 1
+     :caption: Handbuch für Lehrkräfte
+
+     user-management/change-own-password/index
+
+
+   .. toctree::
+     :maxdepth: 1
+     :caption: Handbuch für Schüler
+
+     user-management/change-own-password/index
+     classroom/check-own-quota/index
+

@@ -4,7 +4,7 @@ Weiterführende Dokumentation
 .. toctree::
    :maxdepth: 2
 
-   ../../linbo/use-postsync/index
+   ../../clients/postsync/index
 
 
 - Howto: Linbo

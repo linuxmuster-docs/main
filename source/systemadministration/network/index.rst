@@ -7,4 +7,6 @@
   :caption: Netzwerkkonfiguration
 
   subnetting/index
+  unifiwifi/index
   radius/index
+

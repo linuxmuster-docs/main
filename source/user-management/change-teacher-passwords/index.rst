@@ -7,7 +7,7 @@ Lehrer-Passwörter zurücksetzen und ausdrucken
 Melden Sie sich wie im Handbuch :ref:`schulekonsole-admin-label`
 beschrieben an der Schulkonsole als ``administrator`` an.
 
-.. image:: ../../school-console/admin/media/schulkonsole-user.png
+.. image:: ../../appendix/school-console/admin/media/schulkonsole-user.png
 
 Der Administrator hat in der *Schulkonsole* im Menü unter *Benutzer* ->
 *Lehrerpasswörter* die gleichen Möglichkeiten für die Passwörter der
