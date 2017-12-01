@@ -8,12 +8,25 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
 
 .. toctree::
   :maxdepth: 2
-  :caption: Handbuch für Netzwerkbetreuer
+  :caption: Erste Schritte
 
   about/index
   prerequisites/index
-  installation/index
   getting-started/index
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Systemadministration
+
+  install-from-scratch/index
+  maintenance/index
+  network/index
+  printer/index
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Clientverwaltung
+
   clients/index
   school-console/index
   user-management/index
@@ -24,6 +37,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   misc/index
   addons/index
   contribute/index
+  backupmondo/index
 
 .. toctree::
   :maxdepth: 2
