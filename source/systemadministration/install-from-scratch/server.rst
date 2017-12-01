@@ -469,7 +469,7 @@ Es wird ausdrücklich davon abgeraten, Updates automatisch einzuspielen. Sie als
    Wählen Sie „keine automatischen Updates“ aus.
 
 .. note::
-   Das bedeutet keineswegs, dass Sie das System nicht updaten sollen, nur eben nicht automatisch. Bitte lesen Sie dazu :doc:`Linuxmuster.net aktuell halten <../../backup-migration/keep-lmn-uptodate/index/>`
+   Das bedeutet keineswegs, dass Sie das System nicht updaten sollen, nur eben nicht automatisch. Bitte lesen Sie dazu :doc:`Linuxmuster.net aktuell halten <../maintenance/keep-lmn-uptodate/index/>`
 
 Wählen Sie keine Software zum Installieren aus. Alle benötigten Pakete werden später durch ein Skript installiert, u.a. auch ein ``OpenSSH server``.
 

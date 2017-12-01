@@ -7,4 +7,4 @@ Upgrade, Update, Backup
   upgrade/index
   migrate/index
   keep-lmn-uptodate/index
-  backup-migrating/index
+  backup-migration/index

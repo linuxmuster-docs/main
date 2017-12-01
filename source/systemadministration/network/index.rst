@@ -6,7 +6,7 @@
   :maxdepth: 2
   :caption: Netzwerkkonfiguration
 
-  subnetting/index
+  subnetting-basics/index
   unifiwifi/index
   radius/index
 

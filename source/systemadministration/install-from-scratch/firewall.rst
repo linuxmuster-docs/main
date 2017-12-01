@@ -510,7 +510,7 @@ und bestätigen Sie Ihre Auswahl durch Klicken auf die Schaltfläche ``Speichern
    Erlauben sie den SSH-Zugriff sowie die Authentifizierung auf Basis öffentlicher Schlüssel
 
 .. note::
-  Werden in der Weboberfläche des IPFire Aktualisierungen gemeldet, spielen Sie diese bitte **nicht** ein. Nutzen Sie stattdessen nach der Installation des linuxmuster.net-Servers den Befehl ``linuxmuster-ipfire --upgrade``. So ist sichergestellt, dass die Version des IPFires mit der Version des linuxmuster.net-Servers kompatibel sind. Siehe dazu auch :doc:`Aktualisierung der Firewall IPFire <../../backup-migration/keep-lmn-uptodate/2-update-ipfire/>`
+  Werden in der Weboberfläche des IPFire Aktualisierungen gemeldet, spielen Sie diese bitte **nicht** ein. Nutzen Sie stattdessen nach der Installation des linuxmuster.net-Servers den Befehl ``linuxmuster-ipfire --upgrade``. So ist sichergestellt, dass die Version des IPFires mit der Version des linuxmuster.net-Servers kompatibel sind. Siehe dazu auch :doc:`Aktualisierung der Firewall IPFire <../maintenance/keep-lmn-uptodate/2-update-ipfire/>`
 
 Fahren Sie nun mit der :ref:`Konfiguration des Proxys <proxy-config-label>` fort.
 
@@ -605,7 +605,7 @@ Betätigen Sie danach die Schaltfläche "Speichern und Neustart" auf der Seite u
    ``linuxmuster-ipfire --upgrade``. So ist sichergestellt, dass die
    Version des IPFires mit der Version des linuxmuster.net-Server
    kompatibel sind. Siehe dazu auch :doc:`Aktualisierung der Firewall
-   IPFire <../../backup-migration/keep-lmn-uptodate/2-update-ipfire/>`
+   IPFire <../maintenance/keep-lmn-uptodate/2-update-ipfire/>`
 
 Fahren Sie nun mit der :ref:`Installation des Servers <server-install-label>` fort.
 
@@ -642,6 +642,6 @@ Abschließend wird Webproxy-Dienst neu gestartet.
 Bei Erfolg wieder keinerlei Ausgabe erzeugt.
 
 .. note::
-  Werden in der Weboberfläche des IPFire Aktualisierungen gemeldet, spielen Sie diese bitte **nicht** ein. Nutzen Sie stattdessen nach der Installation des linuxmuster.net-Servers den Befehl ``linuxmuster-ipfire --upgrade``. So ist sichergestellt, dass die Version des IPFires mit der Version des linuxmuster.net-Server kompatibel sind. Siehe dazu auch :doc:`Aktualisierung der Firewall IPFire <../../backup-migration/keep-lmn-uptodate/2-update-ipfire/>`
+  Werden in der Weboberfläche des IPFire Aktualisierungen gemeldet, spielen Sie diese bitte **nicht** ein. Nutzen Sie stattdessen nach der Installation des linuxmuster.net-Servers den Befehl ``linuxmuster-ipfire --upgrade``. So ist sichergestellt, dass die Version des IPFires mit der Version des linuxmuster.net-Server kompatibel sind. Siehe dazu auch :doc:`Aktualisierung der Firewall IPFire <../maintenance/keep-lmn-uptodate/2-update-ipfire/>`
 
 Fahren Sie nun mit der :ref:`Installation des Servers <server-install-label>` fort.
