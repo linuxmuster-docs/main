@@ -35,7 +35,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   clients/postsync/index
 
 .. toctree::
-  :maxdepth: 1
+  :maxdepth: 2
   :caption: Benutzerverwaltung
 
   user-management/manage-users/index
@@ -59,7 +59,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   classroom/check-student-quota/index
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 1
   :caption: Erweiterungen
 
   addons/monipi/index
