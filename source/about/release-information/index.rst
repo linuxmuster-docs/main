@@ -8,6 +8,9 @@
 Was ist neu in 7.0?
 ===================
 
+.. sectionauthor:: Hans Wurst <fleischsalat@linuxmuster.net>
+
+
 Linuxmuster.net 7.0 ist in großen Teilen neu geschrieben worden. Es
 gibt einen Upgrade-Pfad über eine Migration, da ein Update des
 Basissystems aufgrund der zahlreichen Veränderungen unter der Haube
@@ -19,18 +22,39 @@ Opsi, usw. zu verlieren.
 
 Lesen Sie im Detail die Neuerungen in den einzelnen Teilfeldern und bekannten Probleme.
 
-.. toctree::
-   :maxdepth: 1
+Installation
+------------
 
-   schulkonsole
-   linbo
-   firewall
-   sophomorix
-   additionalserver
-   technical
-   knownbugs
+* Docker-Container für Mailserver und weitere externe Services
 
-Release-Informationen früherer Veröffentlichungen
+
+Systemadministration
+--------------------
+
+Linbo
++++++
+
+Die größte Modernisierung hat LINBO schon mit der Version 2.3.x in
+linuxmuster.net 6.2 erfahren. Dennoch gibt es einige Neuigkeiten, die
+nur die linuxmuster.net 7.0 betreffen.
+
+...
+
+Firewall
+++++++++
+
+* OpnSense auf Basis von FreeBSD
+* Squid-Proxy ermöglicht Benutzerbezogene Authentifizierung, z.B. für Internetzugang, Wifizugang, etc.
+
+...
+
+Bekannte Probleme
+-----------------
+
+...
+
+Release-Informationen früherer Versionen
+----------------------------------------
 
 * `Release-Information zur linuxmuster.net 6.2 <https://docs.linuxmuster.net/de/v6.2/release-information/index.html>`_
 * `Release-Informationen zur linuxmuster.net 5.1, 6.0 und 6.1 <https://www.linuxmuster.net/wiki/dokumentation:handbuch:preparation:features>`_

@@ -1,4 +1,0 @@
-Neuerungen in der Benutzerverwaltung
-------------------------------------
-
-
