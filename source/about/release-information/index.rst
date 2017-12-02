@@ -48,6 +48,15 @@ Firewall
 
 ...
 
+Benutzerverwaltung
+------------------
+
+* Session-basierte Berechtigungen für die Unterrichtsteuerung:
+* Freiwählbare Gruppen, Speichern als Session, Klassen hinzufügen
+* Raumsteuerung nicht mehr so einfach (nur inkl. User)
+
+.. _knownbugs-label:
+
 Bekannte Probleme
 -----------------
 
