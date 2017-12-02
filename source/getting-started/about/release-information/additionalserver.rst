@@ -1,3 +1,0 @@
-Ein Diensteserver mit Mailfunktionalität
-----------------------------------------
-

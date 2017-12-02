@@ -8,9 +8,13 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
 
 .. toctree::
   :maxdepth: 2
+
+  about/index
+  
+.. toctree::
+  :maxdepth: 2
   :caption: Erste Schritte
 
-  getting-started/about/index
   getting-started/prerequisites/index
   getting-started/install-on-xen/index
   getting-started/linuxclients/index
