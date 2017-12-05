@@ -211,9 +211,7 @@ Verwaltung WLAN
 
 Die Verwaltung des WLAN-Zugriffs erfolgt intern über ein spezielles
 Projekt. Standardmäßig heißt das Projekt **p\_wifi**. Es wird
-angelegt, falls es bei der Installation nicht existiert. Der
-Projektname kann über die Schulkonsole des `administrator` unter Einstellungen geändert
-werden.
+angelegt, falls es bei der Installation nicht existiert.
 
 .. Das WLAN-Projekt muss den *administrator* als Projektadmin haben und auf
    *nojoin* eingestellt sein. Das erledigt die Schulkonsole bei der
