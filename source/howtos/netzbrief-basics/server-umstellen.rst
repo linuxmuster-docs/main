@@ -1,2 +1,2 @@
-Umstellen des Servers auif Subnetting
+Umstellen des Servers auf Subnetting
 =====================================
