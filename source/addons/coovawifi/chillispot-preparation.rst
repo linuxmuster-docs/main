@@ -33,7 +33,11 @@ vertraut wird.
 -  Nach der Anmeldung ist der Client nicht im grünen Netz (kein Drucken,
    kein Home- oder Tausch-Verzeichnis).
 
-{{ .:chillispot-coova_blue.png?400 \|}}
+
+.. figure:: media/chillispot-coova_blue.png
+   :align: center
+   :alt: Einsatz eines Coova im blauen Netz
+
 
 Zugang über das grüne Netz des IPFire
 -------------------------------------
@@ -49,7 +53,10 @@ Zugang über das grüne Netz des IPFire
 -  Nach der Anmeldung ist der Client im grünen Netz: Eine Lücke im
    Hotspot-System kann das grüne Netz exponieren.
 
-{{ .:chillispot-coova_green.png?400 \|}}
+.. figure:: media/chillispot-coova_green.png
+   :align: center
+   :alt: Einsatz eines Coova im grünen Netz
+
 
 Zugang im roten Netz des IPFire (Direktzugang)
 ----------------------------------------------
@@ -70,7 +77,9 @@ Zugang im roten Netz des IPFire (Direktzugang)
 -  Nach der Anmeldung ist der Client nicht im grünen Netz (kein Drucken,
    kein Home- oder Tausch-Verzeichnis).
 
-{{ .:chillispot-coova_red.png?400 \|}}
+.. figure:: media/chillispot-coova_red.png
+   :align: center
+   :alt: Einsatz eines Coova im roten Netz
 
 
 Je nach gewähltem Szenario müssen entsprechende Einstellungen am IPFire
@@ -103,16 +112,20 @@ werden. Folgende Situation muss erreicht werden:
 Die Netzverkabelung versteht man am besten beim Betrachten eines
 Beispiels eines CoovaChilli in einer virtualisierten Umgebung:
 
-{{ :anwenderwiki:benutzerrechner:wlan:coova-virt.jpg?600 \|}}
+.. figure:: media/coova-virt.jpg
+   :align: center
+   :alt: Einsatz eines Coova in einer virtualisierten Umgebung
 
-``<note important>`` Die folgenden Bilder zeigen wie im obigen Beispiel
-die Einstellungen für einen linuxmuster.net-Server im IP Bereich
-10.16.\ *.* und dementsprechend einem blauen Netz 172.16.16.\ *.\\
-Gegebenenfalls muss das der eigenen Situation angepasst werden, z.B. auf
-10.32.*.\* und 172.16.32.*.
+.. important:: 
+
+   Die folgenden Bilder zeigen wie im obigen Beispiel
+   die Einstellungen für einen linuxmuster.net-Server im IP Bereich
+   10.16.*.* und dementsprechend einem blauen Netz 172.16.16.*.
+   Gegebenenfalls muss das der eigenen Situation angepasst werden, z.B. auf
+   10.32.*.* und 172.16.32.*.
 
 Die jeweils richtigen IPs sind aber in der Regel bei den Dialogen schon
-voreingestellt. ``</note>``
+voreingestellt.
 
 1. DHCP-Server
 --------------
@@ -120,9 +133,9 @@ voreingestellt. ``</note>``
 Zunächst sollte sichergestellt sein, dass der DHCP Server für das blaue
 Interface läuft. Dies überprüft man im Menü ''Netzwerk -> DHCP-Server'':
 
-FIXME: Bild anpassen, wenn der Upload wieder funktioniert.
-
-{{ .:chillispot-ipfire-chilli-dhcp.jpg?300|}}
+.. figure:: media/chillispot-ipfire-chilli-dhcp.jpg
+   :align: center
+   :alt: DHCP-Server im blauen Netz
 
 2. Zugriff auf Blau
 -------------------
@@ -138,9 +151,10 @@ fügt dort die "externe" Schnittstelle/MAC des Coovachilli Servers hinzu
 
 -  Aktiviert: Ja
 
-FIXME: Bild anpassen, wenn der Upload wieder funktioniert.
+.. figure:: media/chillispot-ipfire-chilli-blau.jpg
+   :align: center
+   :alt: DHCP-Server im blauen Netz
 
-{{ .:chillispot-ipfire-chilli-blau.jpg?300|}}
 
 3. Zugriff von Blau auf LDAPs zulassen
 --------------------------------------
@@ -159,14 +173,17 @@ die Seite ''Firewall -> Firewallregeln'' und fügt eine neue Regel ein.
 
 -  Logging: optional
 
-FIXME: Bild anpassen, wenn der Upload wieder funktioniert.
-
-{{ .:chillispot-ipfire-chilli-ldaps.jpg?300|}}
+.. figure:: media/chillispot-ipfire-chilli-ldaps.jpg
+   :align: center
+   :alt: Zugriff von Blau auf LDAPs zulassen
 
 Schließlich **"Hinzufügen"** und anschließend auch noch **"Änderungen
 übernehmen"** nicht vergessen!
 
-{{ .:chillispot-ipfire-chilli-aenderungen-ueb.jpg?500 \|}}
+.. figure:: media/chillispot-ipfire-chilli-aenderungen-ueb.jpg
+   :align: center
+   :alt: Änderungen zulassen
+
 
 4. Advanced Proxy für Blau aktivieren
 -------------------------------------
@@ -175,7 +192,10 @@ Im Menü ''Netzwerk -> Webproxy'' sollte für Blau der transparente Proxy
 wie im grünen Netz aktiviert sein. Der Zugriff auf den Proxy muss in der
 Firewall **nicht** freigeschaltet werden.
 
-{{ .:chillispot-ipfire-chilli-proxy.jpg?600 \|}}
+.. figure:: media/chillispot-ipfire-chilli-proxy.jpg
+   :align: center
+   :alt: Advanced Proxy für das blaue Netz aktivieren
+
 
 5. Erlaubte Dienste
 -------------------
@@ -186,9 +206,9 @@ blauen Netz erlaubt werden sollen, freigeschaltet werden.
 Für https, ssh und ping Regeln 10 bis 12 hinzufügen. Für Ping als
 Protokoll "ICMP" auswählen.
 
-FIXME: Bild anpassen, wenn der Upload wieder funktioniert.
-
-{{ .:chillispot-ipfire-chilli-firewallregel-4.jpg?300|}}
+.. figure:: media/chillispot-ipfire-chilli-firewallregel-4.jpg
+   :align: center
+   :alt: Erlaubte Dienste
 
 Der Zugriff auf den IPFire-DNS-Server muss nicht extra erlaubt werden,
 auf einen anderen DNS-Server (z.B. Google - 8.8.8.8) jedoch schon.
@@ -223,4 +243,4 @@ Vorbereitung des Hotspot-Servers
 Für den Hotspot-Server selbst benötigen Sie einen Server/PC oder eine
 virtuelle Maschine mit zwei Netzwerkkarten. Wir empfehlen den Betrieb
 als virtuelle Maschine, eine entsprechend vorkonfigurierte Appliance
-finden Sie unter `Appliance Download <chillispot.vboxappliance>`__.
+finden Sie unter `Appliance Download <chillispot-vboxappliance>`__.
