@@ -8,12 +8,11 @@ Einsatzszenarien
 
 Mit Hilfe von linuxmuster-chilli kann der Netzwerkzugang von
 mitgebrachten Geräten über das grüne, das blaue oder das rote
-Netzwerkinterface erfolgen. (Es gibt noch mehr Möglichkeiten, aber diese
+Netzwerk erfolgen. (Es gibt noch mehr Möglichkeiten, aber diese
 drei sollten die häufigsten Anwendungsfälle abdecken...)
 
 Die Firewall IPFire bietet verschiedene Netze mit unterschiedlichen
-Vertrauensstellungen an, siehe
-`..preparation:networktopology <..preparation/networktopology>`__.
+Vertrauensstellungen an, lesen Sie dazu die :ref:`net-infrastructure-label`.
 
 Zugang über das blaue Netz des IPFire
 -------------------------------------
@@ -25,7 +24,6 @@ vertraut wird.
 **Vorteile:**
 
 -  Kontrolle des Internetzugangs mit Hilfe des IPFire möglich
-
 -  Eine Lücke im Hotspot-System kann das grüne Netz nicht exponieren.
 
 **Nachteile:**
@@ -82,8 +80,9 @@ Zugang im roten Netz des IPFire (Direktzugang)
    :alt: Einsatz eines Coova im roten Netz
 
 
-Je nach gewähltem Szenario müssen entsprechende Einstellungen am IPFire
-vorgenommen werden. 
+Je nach gewähltem Szenario müssen entsprechende Einstellungen am
+IPFire vorgenommen werden.  Im folgenden wird der Einsatz im blauen
+Netzwerk ausführlich dokumentiert. 
 
 IPFire-Konfiguration für den Einsatz im blauen Netz
 ===================================================
