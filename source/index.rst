@@ -24,7 +24,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community mit einem `Forum <https:
 
 .. toctree::
   :maxdepth: 1
-  :caption: Systemadministration
+  :caption: System administration
 
   systemadministration/install-from-scratch/index
   systemadministration/maintenance/index
@@ -33,7 +33,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community mit einem `Forum <https:
 
 .. toctree::
   :maxdepth: 1
-  :caption: Clientadministrattion
+  :caption: Client administrattion
 
   clients/windows10clients/index
   clients/leoclient2/index
