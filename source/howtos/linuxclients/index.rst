@@ -1,7 +1,7 @@
 .. _install-linux-clients-label:
 
-Linux Client's in linuxmuster.net
-=================================
+Linux Clients in linuxmuster.net
+================================
 
 Zielgruppe: Ambitionierte Netzwerkberater oder Dienstleister
 
