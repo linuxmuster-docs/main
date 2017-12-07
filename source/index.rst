@@ -11,18 +11,39 @@ Neben dieser Dokumentation steht Ihnen unsere Community mit einem `Forum <https:
   :hidden:
 	     
   about/index
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Getting started
+
+
   getting-started/prerequisites/index
   getting-started/install-on-xen/index
   getting-started/linuxclients/index
   getting-started/add-user-accounts/index
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Systemadministration
+
   systemadministration/install-from-scratch/index
   systemadministration/maintenance/index
   systemadministration/network/index
   systemadministration/printer/index
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Clientadministrattion
+
   clients/windows10clients/index
   clients/leoclient2/index
   clients/linbo/index
   clients/postsync/index
+
+.. toctree::
+  :maxdepth: 1
+  :caption: User management
+
   user-management/manage-users/index
   user-management/change-own-password/index
   user-management/change-teacher-passwords/index
@@ -30,6 +51,11 @@ Neben dieser Dokumentation steht Ihnen unsere Community mit einem `Forum <https:
   user-management/manage-quota/index
   user-management/preparation-newterm/index
   user-management/use-mail-ldap/index
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Classroom management
+
   classroom/use-internet-in-class/index
   classroom/use-files-in-class/index
   classroom/use-horde/index
@@ -37,11 +63,22 @@ Neben dieser Dokumentation steht Ihnen unsere Community mit einem `Forum <https:
   classroom/print-student-passwords/index
   classroom/check-own-quota/index
   classroom/check-student-quota/index
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Addons
+
+
   addons/monipi/index
   addons/backupmondo/index
-  appendix/contribute/index
-  appendix/school-console/index
-  clients/linbo/index
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Appendix
+
+   appendix/contribute/index
+   appendix/school-console/index
+   clients/linbo/index
 
 ..
    .. toctree::
