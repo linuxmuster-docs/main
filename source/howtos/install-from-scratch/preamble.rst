@@ -61,6 +61,8 @@ Als Ausgabe erhält man die Prüfsumme, z.B.
 
 Dies so erhalten Prüfsumme muss mit von Ubuntu zur Verfügung gestellten `Summe <http://releases.ubuntu.com/12.04/SHA1SUMS>`_ (Zeile ubuntu-12.04.5-server-amd64.iso) übereinstimmen.
 
+.. _`net-infrastructure-label`:
+
 Hinweise zur Netzwerkstruktur
 -----------------------------
 

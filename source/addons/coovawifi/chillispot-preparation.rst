@@ -3,17 +3,16 @@
 ================
 
 
-Einsatzszenarien
-================
+Verschiedene Einsatzszenarien
+=============================
 
 Mit Hilfe von linuxmuster-chilli kann der Netzwerkzugang von
 mitgebrachten Geräten über das grüne, das blaue oder das rote
-Netzwerkinterface erfolgen. (Es gibt noch mehr Möglichkeiten, aber diese
+Netzwerk erfolgen. (Es gibt noch mehr Möglichkeiten, aber diese
 drei sollten die häufigsten Anwendungsfälle abdecken...)
 
 Die Firewall IPFire bietet verschiedene Netze mit unterschiedlichen
-Vertrauensstellungen an, siehe
-`..preparation:networktopology <..preparation/networktopology>`__.
+Vertrauensstellungen an, lesen Sie dazu die :ref:`net-infrastructure-label`.
 
 Zugang über das blaue Netz des IPFire
 -------------------------------------
@@ -25,7 +24,6 @@ vertraut wird.
 **Vorteile:**
 
 -  Kontrolle des Internetzugangs mit Hilfe des IPFire möglich
-
 -  Eine Lücke im Hotspot-System kann das grüne Netz nicht exponieren.
 
 **Nachteile:**
@@ -82,15 +80,17 @@ Zugang im roten Netz des IPFire (Direktzugang)
    :alt: Einsatz eines Coova im roten Netz
 
 
-Je nach gewähltem Szenario müssen entsprechende Einstellungen am IPFire
-vorgenommen werden. 
+Je nach gewähltem Szenario müssen entsprechende Einstellungen am
+IPFire vorgenommen werden.  Im folgenden wird der Einsatz im blauen
+Netzwerk ausführlich dokumentiert. 
 
 IPFire-Konfiguration für den Einsatz im blauen Netz
 ===================================================
 
 Als Vorbereitung auf die Installation eines CoovaChilli-Servers müssen
 das Netzwerk richtig verkabelt werden und der IPFire vorkonfiguriert
-werden. Folgende Situation muss erreicht werden:
+werden. Melden Sie sich dazu am IPFire an. Folgende Situation muss
+erreicht werden:
 
 -  Nur das externe Interface (in der Skizze dunkelblau) des
    CoovaChilli-Servers muss sich im blauen Netzwerk des IPFire befinden.
@@ -110,7 +110,7 @@ werden. Folgende Situation muss erreicht werden:
    Accesspoints oder frei zugänglichen Netzwerkdosen verbunden.
 
 Die Netzverkabelung versteht man am besten beim Betrachten eines
-Beispiels eines CoovaChilli in einer virtualisierten Umgebung:
+Beispiels eines CoovaChilli hier in einer virtualisierten Umgebung:
 
 .. figure:: media/coova-virt.jpg
    :align: center
@@ -123,95 +123,94 @@ Beispiels eines CoovaChilli in einer virtualisierten Umgebung:
    10.16.*.* und dementsprechend einem blauen Netz 172.16.16.*.
    Gegebenenfalls muss das der eigenen Situation angepasst werden, z.B. auf
    10.32.*.* und 172.16.32.*.
-
-Die jeweils richtigen IPs sind aber in der Regel bei den Dialogen schon
-voreingestellt.
+   
+   Darüberhinaus ist für den Endnutzer der Bereich 192.168.99.1 bis
+   192.168.99.255 vorgesehen. Hier kann jedes beliebige andere private
+   Subnetzwerk verwendet werden (außer den bereits verwendeten
+   Adressbereichen).
+   Die jeweils richtigen IPs sind aber in der Regel bei den Dialogen schon
+   voreingestellt.
 
 1. DHCP-Server
 --------------
 
 Zunächst sollte sichergestellt sein, dass der DHCP Server für das blaue
-Interface läuft. Dies überprüft man im Menü ''Netzwerk -> DHCP-Server'':
+Interface läuft. Dies überprüft man im Menü des IPFire unter `Netzwerk -> DHCP-Server`:
 
-.. figure:: media/chillispot-ipfire-chilli-dhcp.jpg
+.. figure:: media/chillispot-ipfire-chilli-dhcp.png
    :align: center
    :alt: DHCP-Server im blauen Netz
 
 2. Zugriff auf Blau
 -------------------
 
-Dann wechselt man auf die Seite ''Firewall -> Zugriff auf Blau'' und
-fügt dort die "externe" Schnittstelle/MAC des Coovachilli Servers hinzu
+Dann wechselt man auf die Seite `Firewall -> Zugriff` auf Blau und
+fügt dort die "externe" Schnittstelle/MAC des CoovaChilli-Servers hinzu
 
--  Quell IP-Adresse: leer
-
--  MAC Adresse: Vom Coovachilli Server
-
--  Anmerkung: ...
-
+-  Quell-IP-Adresse: 172.16.16.1
+-  MAC-Adresse: xx:xx:xx:xx:xx:xx
+-  Anmerkung: coovachilli
 -  Aktiviert: Ja
 
-.. figure:: media/chillispot-ipfire-chilli-blau.jpg
+.. figure:: media/chillispot-ipfire-chilli-blau.png
    :align: center
-   :alt: DHCP-Server im blauen Netz
+   :alt: CoovaChilli im blauen Netz fest zuordnen
 
 
 3. Zugriff von Blau auf LDAPs zulassen
 --------------------------------------
 
 Zuletzt muss das DMZ Schlupfloch gebohrt werden, dazu wechselt man auf
-die Seite ''Firewall -> Firewallregeln'' und fügt eine neue Regel ein.
+die Seite `Firewall -> Firewallregeln` und fügt eine neue Regel ein.
 
 -  Quelle: Standard-Netzwerk Blau
-
 -  Zieladresse: linuxmuster.net Server-IP (10.16.1.1 oder 10.32.1.1 oder
    ...)
-
 -  Protokoll TCP, Quellport: leer, Zielport 636 für LDAPs
-
 -  Anmerkung, damit man weiß, was man gemacht hat
-
 -  Logging: optional
 
-.. figure:: media/chillispot-ipfire-chilli-ldaps.jpg
+.. figure:: media/chillispot-ipfire-chilli-ldaps.png
    :align: center
    :alt: Zugriff von Blau auf LDAPs zulassen
 
 Schließlich **"Hinzufügen"** und anschließend auch noch **"Änderungen
 übernehmen"** nicht vergessen!
 
-.. figure:: media/chillispot-ipfire-chilli-aenderungen-ueb.jpg
+.. figure:: media/chillispot-ipfire-agree.png
    :align: center
-   :alt: Änderungen zulassen
+   :alt: Änderungen übernehmen
 
+4. Weitere Dienste erlauben
+---------------------------
 
-4. Advanced Proxy für Blau aktivieren
--------------------------------------
+Unter `Firewall -> Firewallregeln` müssen die zusätzlichen Dienste,
+die aus dem blauen Netz erlaubt werden sollen, freigeschaltet werden.
 
-Im Menü ''Netzwerk -> Webproxy'' sollte für Blau der transparente Proxy
-wie im grünen Netz aktiviert sein. Der Zugriff auf den Proxy muss in der
-Firewall **nicht** freigeschaltet werden.
+Im Beispiel unten wurde für das Protokoll `https` auf den Ports 443
+(Webserver), 242 (Schulkonsole) und 631 (Cups-Druckerserver) und für
+das Protokoll `ping` je eine Regel hinzugefügt. Für `ping` muss als
+Protokoll-Typ `ICMP` ausgewählt werden.
 
-.. figure:: media/chillispot-ipfire-chilli-proxy.jpg
+.. figure:: media/chillispot-ipfire-additionalrules.png
    :align: center
-   :alt: Advanced Proxy für das blaue Netz aktivieren
-
-
-5. Erlaubte Dienste
--------------------
-
-Unter ''Firewall -> Firewallregeln'' müssen die Dienste, die aus dem
-blauen Netz erlaubt werden sollen, freigeschaltet werden.
-
-Für https, ssh und ping Regeln 10 bis 12 hinzufügen. Für Ping als
-Protokoll "ICMP" auswählen.
-
-.. figure:: media/chillispot-ipfire-chilli-firewallregel-4.jpg
-   :align: center
-   :alt: Erlaubte Dienste
+   :alt: Weitere Dienste erlauben
 
 Der Zugriff auf den IPFire-DNS-Server muss nicht extra erlaubt werden,
 auf einen anderen DNS-Server (z.B. Google - 8.8.8.8) jedoch schon.
+
+
+5. Advanced Proxy für Blau aktivieren
+-------------------------------------
+
+Im Menü `Netzwerk -> Webproxy` sollte für Blau der transparente Proxy
+wie im grünen Netz aktiviert sein. Der Zugriff auf den Proxy muss in der
+Firewall **nicht** freigeschaltet werden.
+
+.. figure:: media/chillispot-ipfire-chilli-proxy.png
+   :align: center
+   :alt: Advanced Proxy für das blaue Netz aktivieren
+
 
 Netzwerkkonfiguration auf dem Coovachilli-Server
 ------------------------------------------------
@@ -220,7 +219,7 @@ FIXME: Diese Zeilen gehören zur Konfigurationsseite
 
 Wenn der Coovachilli Server (was sinnvoll ist) der einzige Rechner im
 blauen Netz ist, kann man die Schnittstellenkonfiguration problemlos dem
-DHCP Server überlassen. Die Datei ''/etc/network/interfaces'' auf dem
+DHCP Server überlassen. Die Datei `/etc/network/interfaces` auf dem
 coovachilli Server sieht dann folgendermaßen aus:
 
 ::
