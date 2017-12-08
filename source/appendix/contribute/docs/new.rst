@@ -1,20 +1,30 @@
-Dokumentation erweitern oder hinzufügen
-=======================================
+Dokumentation lokal bearbeiten und veröffentlichen
+==================================================
+
+Wenn du die Dokumentation erweitern willst, z.B. mit einem eigenen HowTo, ein fehlendes Kapitel ergänzen möchtest oder größere Änderungen machen und testen willst, benötigst du folgende Dinge:
+
+- ein Konto bei `Github <https://github.com/join>`_
+- Die Software `git <https://git-scm.com/>`_ (wird zur Verwaltung und Versionierung der Dokumentation verwendet)
+- Die Software `sphinx <http://www.sphinx-doc.org>`_ (zum Übersetzen und Testen der Quelldateien), die wiederum python voraussetzt
+- optional: SSH-Schlüssel bei Github `hochladen <https://help.github.com/articles/generating-an-ssh-key/>`_ (erleichtert die Arbeit mit git)
+
+Um den Umgang mit rST/sphinx, git und github zu erleichtern, wird von uns eine virtuelle Umgebung angeboten.
+
+
+Virtualbox-Appliance verwenden
+------------------------------
+
+... todo
+
 
 Die Dokumentation ist in der Markupsprache "rST" geschrieben. `Hier <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_ finden Sie einen guten Überblick über die am häufigsten verwendeten Elemente.
 
 .. hint::
    Bitte beachten Sie auch unbedingt die :doc:`Leitlinien zur Dokumentation <guidelines>`, damit ihre Änderungen schnell eingepflegt werden könnnen!
 
-Wenn Sie die Dokumentation erweitern wollen, z.B. mit einem eigenen HowTo, ein fehlendes Kapitel ergänzen möchten oder größere Änderungen machen und testen wollen, benötigen Sie folgende Dinge:
 
-- `git <https://git-scm.com/>`_ (wird zur Verwaltung und Versionierung der Dokumentation verwendet)
-- `sphinx <http://www.sphinx-doc.org>`_ (zum Übersetzen und Testen der Quelldateien)
-- ein Konto bei `Github <https://github.com/join>`_
-- optional: SSH-Schlüssel bei Github `hochladen <https://help.github.com/articles/generating-an-ssh-key/>`_ (erleichtert die Arbeit mit git sehr)
-
-Installation (Ubuntu)
----------------------
+Manuelle Installation (Ubuntu)
+------------------------------
 
 Git:
 
