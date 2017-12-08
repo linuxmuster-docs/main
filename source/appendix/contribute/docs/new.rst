@@ -8,42 +8,72 @@ Wenn du die Dokumentation erweitern willst, z.B. mit einem eigenen HowTo, ein fe
 - Die Software `sphinx <http://www.sphinx-doc.org>`_ (zum Übersetzen und Testen der Quelldateien), die wiederum python voraussetzt
 - optional: SSH-Schlüssel bei Github `hochladen <https://help.github.com/articles/generating-an-ssh-key/>`_ (erleichtert die Arbeit mit git)
 
-Um den Umgang mit rST/sphinx, git und github zu erleichtern, wird von uns eine virtuelle Umgebung angeboten.
-
-
 Virtualbox-Appliance verwenden
 ------------------------------
 
-... todo
+Um den Umgang mit rST/sphinx, git und github zu erleichtern, wird von uns eine virtuelle Umgebung angeboten.
 
+- Installiere VirtualBox (mind. 5.2.2) von hier https://www.virtualbox.org/wiki/Downloads inklusive des Extension Packs
+- Lade dir die neueste virtuelle Umgebung von hier herunter: http://www.lehrer.uni-karlsruhe.de/~za3966/lmn/
+- Importiere die heruntergeladene OVA-Datei und starte die virtuelle Umgebung
 
-Die Dokumentation ist in der Markupsprache "rST" geschrieben. `Hier <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_ finden Sie einen guten Überblick über die am häufigsten verwendeten Elemente.
+Benutzername: 
+  linuxadmin (angezeigt wird: Linux Admin)
 
-.. hint::
-   Bitte beachten Sie auch unbedingt die :doc:`Leitlinien zur Dokumentation <guidelines>`, damit ihre Änderungen schnell eingepflegt werden könnnen!
-
+Passwort:
+  linuxmuster
 
 Manuelle Installation (Ubuntu)
 ------------------------------
 
-Git:
+Wer die virtuelle Appliance nicht nutzen will, kann mit folgenden Befehlen unter aktuellen (ab 16.04) Ubuntu-Distributionen git, python und sphinx nachinstallieren:
 
 .. code-block:: console
 
    $ sudo apt install git
+   $ sudo apt install python3-pip
+   $ pip3 install sphinx 
+   $ pip3 install sphinx_rtd_theme
 
-Sphinx:
+Nachfolgende Befehle gehen davon aus, dass die virtuelle Umgebung verwendet wird.
+
+Erste Schritte: Offizielle Dokumentation kompilieren
+----------------------------------------------------
+
+Jetzt kannst du bereits die bereits heruntergeladene Dokumentation aus
+dem offiziellen Repositorium bauen und betrachten. Öffne dazu ein
+Terminal, navigiere zum Ordner `linuxmuster-docs/main`, führe `make
+html` aus und führe `xdg-open build/html/index.html` aus, um das Ergebnis zu betrachten.
 
 .. code-block:: console
 
-   $ sudo apt install python3-pip
-   $ pip install sphinx
+   linuxadmin@lmn-docs:~$ cd linuxmuster-docs/
+   linuxadmin@lmn-docs:~/linuxmuster-docs$ cd main/
+   linuxadmin@lmn-docs:~/linuxmuster-docs/main$ make html
+   sphinx-build -b html -d build/doctrees   source build/html
+   Running Sphinx v1.6.5
+   loading translations [de_DE]... done
+   loading pickled environment... done
+   ...
+   linuxadmin@lmn-docs:~/linuxmuster-docs/main$ xdg-open build/html/index.html
 
+GitHub Konto erstellen
+----------------------
+
+Spätestens jetzt sollte ein Konto bei GitHub erstellt werden:
+https://github.com/join. Verifziere deine E-Mail-Adresse. Natürlich
+kannst du die Dokumentation zu GitHub durchlesen. Weiter geht es dann
+unter https://github.com/linuxmuster-docs/main
+
+.. hint::
+
+   Im folgenden wird das Konto "lmn-docs-bot" verwendet. Überall wo
+   dieser auftaucht, ersetze ihn durch dein Kontonamen bei GitHub.
 
 Linuxmuster Dokumentation forken
 --------------------------------
 
-Öffnen Sie die Linuxmuster Dokumentation auf Github und klicken Sie auf "Fork".
+Öffnen Sie die `linuxmuster.net Dokumentation auf Github <https://github.com/linuxmuster-docs/main>`_ und klicken Sie auf "Fork".
 
 .. figure:: media/fork.png
    :align: center
@@ -52,27 +82,28 @@ Linuxmuster Dokumentation forken
 Öffnen Sie nun einen Terminal / Eingabeauffoderung (``Strg+Alt+t`` in Ubuntu) and geben Sie folgenden Befehl ein:
 
 .. note::
-   Ersetzen Sie "github-account" mit ihrem Github Kontonamen!
-
-.. note::
-   Nutzen Sie die URL ``git@github.com:github-account/main.git`` falls Sie bereits einen SSH-Schlüssel bei Github hochgeladen haben!
+   Nutzen Sie die URL ``git@github.com:lmn-docs-bot/main.git`` falls Sie bereits einen SSH-Schlüssel bei Github hochgeladen haben!
 
 .. code-block:: console
 
-   $ git clone https://github.com/github-account/main.git docs
-   $ cd docs
+   linuxadmin@lmn-docs:~$ git clone https://github.com/lmn-docs-bot/main.git my-docs
+   Klone nach 'my-docs' ...
+   ...
+   linuxadmin@lmn-docs:~$ cd my-docs
 
 Sie können nun mit
 
 .. code-block:: console
 
-   $ make html
-   $ xdg-open build/html/index.html
+   linuxadmin@lmn-docs:~/my-docs$ make html
+   linuxadmin@lmn-docs:~/my-docs$ xdg-open build/html/index.html
 
 die Dokumentation in HTML übersetzen und in ihrem Browser öffnen.
 
 Dokumentation ändern oder neu erstellen
 ---------------------------------------
+
+Die Dokumentation ist in der Markupsprache "rST" geschrieben. `Hier <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_ finden Sie einen guten Überblick über die am häufigsten verwendeten Elemente.
 
 .. hint::
    Bitte beachten Sie auch unbedingt die :doc:`Leitlinien zur Dokumentation <guidelines>`, damit ihre Änderungen schnell eingepflegt werden könnnen!
@@ -86,10 +117,16 @@ Im Verzeichnis ``source`` und den entsprechenden Unterordnern befinden sich alle
 
 Schauen Sie sich auch die anderen Dokumentationsdateien an, um mehr über den Aufbau und Syntax zu lernen.
 
+Commit und push
+~~~~~~~~~~~~~~~
+
 Haben Sie alle Änderungen vorgenommen, können Sie sie nun zur Überprüfung einreichen. Dazu sind folgende Schritte notwendig:
 
 .. important::
-   Überprüfen Sie bitte zuerst, ob ``make html`` ohne Fehler durchläuft! Falls nicht, beheben Sie bitte alle Fehler und Warnungen, bevor Sie Ihre Änderungen hochladen!
+
+   Überprüfen Sie bitte zuerst, ob ``make html`` ohne Fehler
+   durchläuft! Falls nicht, beheben Sie bitte alle Fehler und
+   Warnungen, bevor Sie Ihre Änderungen hochladen!
 
 .. code-block:: console
 
@@ -108,7 +145,10 @@ Geben Sie nun noch einen Kommentar zu Ihren Änderungen ein und laden Sie alles 
    $ git commit -a -m"My great documentation"
    $ git push
 
-Erstellen Sie nun einen "Pull-Request" unter `<https://github.com/github-account/main>`_, indem Sie auf "New Pull Request" klicken.
+Pull-Request
+~~~~~~~~~~~~
+
+Erstellen Sie nun einen "Pull-Request" unter `<https://github.com/lmn-docs-bot/main>`_, indem Sie auf "New Pull Request" klicken.
 
 .. figure:: media/pr.png
    :align: center
@@ -121,28 +161,28 @@ Den eigenen Fork aktualisieren
 ------------------------------
 
 Um später weiter Änderungen vornehmen zu können, kann der eigene Fork
-gelöscht werden und ein neuer erzeugt werden.
-
-Alternativ kann der eigene Fork auf den Stand des offiziellen Repositoriums gebracht werden:
+bei GitHub komplett gelöscht werden und ein neuer erzeugt werden.
+Alternativ kann der eigene Fork auf den Stand des offiziellen
+Repositoriums gebracht werden:
 
 * Verschiebe alle lokalen Änderungen mit ``git stash`` in den Hintergrund
 
   .. code:: bash
 
-     ~/docs$ git stash
+     ~/my-docs$ git stash
 
 * Füge (einmalig) einen remote-tracking branch hinzu:
 
   .. code:: bash
 
-     ~/docs$ git remote add upstream https://github.com/linuxmuster-docs/main.git
+     ~/my-docs$ git remote add upstream https://github.com/linuxmuster-docs/main.git
 
 * Hole und merge den aktuellen offiziellen branch:
 
   .. code:: bash
 
-     ~/docs$ git fetch upstream
-     ~/docs$ git merge upstream/master
+     ~/my-docs$ git fetch upstream
+     ~/my-docs$ git merge upstream/master
      Aktualisiere 76e2e32..be2f941
      Fast-forward
 
@@ -152,13 +192,13 @@ Alternativ kann der eigene Fork auf den Stand des offiziellen Repositoriums gebr
 
   .. code:: bash
 
-     ~/docs$ git push
+     ~/my-docs$ git push
 
 * Jetzt kann man seine lokale Änderungen wieder hervorholen
 
   .. code:: bash
 
-     ~/docs$ git stash pop
+     ~/my-docs$ git stash pop
 
 
 
