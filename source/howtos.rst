@@ -18,10 +18,3 @@ Howtos, sortiert nach Relevanz:
    howtos/use-mail-ldap/index
 ..   howtos/backupmigration/index
 
-
-Howtos, sonstige:
-
-.. toctree::
-   :maxdepth: 1
-
-   howtos/feedback/index

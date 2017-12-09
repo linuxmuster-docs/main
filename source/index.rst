@@ -28,7 +28,7 @@ Neben dieser detaillierten Anleitungen in den Howtos steht Ihnen unsere Communit
    :maxdepth: 1
    :caption: Sonstiges
 
-   Mithelfen <howtos/contribute/index>
+   Mithelfen <appendix/contribute/index>
 
 
 ..
