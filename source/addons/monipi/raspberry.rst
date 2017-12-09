@@ -8,7 +8,7 @@ Einrichtung des Raspberry Pi
 Das linuxmuster-monipi-Image herunterladen
 -------------------------------------------
 
-Laden Sie das vorbereitete gepackte Raspbian-Image `von der Wikiseite <http://www.linuxmuster.net/wiki/dokumentation:addons:monipi:start>`_ auf Ihren Rechner herunter. Entpacken Sie die  Datei mit dem Befehl
+Laden Sie das vorbereitete gepackte Raspbian-Image `von dieser Seite <http://www.lehrer.uni-karlsruhe.de/~za3966/lmn/>`_ auf Ihren Rechner herunter. Entpacken Sie die  Datei mit dem Befehl
 
 .. code-block:: console
 
