@@ -29,7 +29,7 @@ Voraussetzungen
 .. _chillispot-vbox-label:
 
 Das Captive Portal als virtuelle Maschine herunterladen
-=======================================================
+-------------------------------------------------------
 
 Lade zunächst die virtuelle Maschine herunter:
 
@@ -57,105 +57,95 @@ Die Anmeldedaten für die Appliance sind
 
 Nach der ersten Anmeldung muss der Befehl
 
-::
+.. code-block:: console
 
-    linuxmuster-chilli-turnkey
+   # linuxmuster-chilli-turnkey
 
 ausgeführt werden. Dabei wird das Passwort des administrativen Benutzers
 *coovaadmin* geändert und ein neues SSL Zertifikat für den apache
 Webserver erzeugt. Anschließend wird CoovaChilli interaktiv für die
-Arbeit in der linuxmuster.net-Umgebung konfiguriert. `Details hierzu
-finden sich in der konfigurationsanleitung für
-linuxmuster-chilli <.chillispot.konfiguration>`__.
+Arbeit in der linuxmuster.net-Umgebung konfiguriert. Details hierzu
+finden sich in der :doc:`Konfigurationsanleitung für
+linuxmuster-chilli <chillispot-configuration>`.
 
 CoovaChilli mit der Paketverwaltung installieren
 ------------------------------------------------
 
 Auf dem Chilli-Server muss der Repo-Schlüssel importiert werden:
 
-# wget -q http://pkg.linuxmuster.net/linuxmuster.net.key -O - \| apt-key
-add -
+.. code-block:: console
 
-Eine neue Datei anlegen
-**''/etc/apt/sources.list.d/linuxmuster-chilli.list''** und die folgende
-Zeile eintragen:
+   # wget -q http://pkg.linuxmuster.net/linuxmuster.net.key -O - | apt-key add -
 
-::
+Eine neue Datei `/etc/apt/sources.list.d/linuxmuster-chilli.list`
+anlegen und die folgende Zeile eintragen:
 
-       # linuxmuster-chilli Pakete
-       deb http://pkg.linuxmuster.net/ precise-chilli/
+.. code-block:: console
+
+   # linuxmuster-chilli Pakete
+   deb http://pkg.linuxmuster.net/ precise-chilli/
 
 Aktualisieren der Paketliste mit
 
-# apt-get update
+.. code-block:: console
 
-Installation/update des Hotspot Pakets mit
+   # apt-get update
 
-# apt-get install linuxmuster-chilli
+Installation bzw. Update des Paketes mit
 
-Jetzt gehts dann weiter mit der -> `Konfiguration von
-linuxmuster-chilli <chillispot.konfiguration>`__
+.. code-block:: console
 
-Einen Beitrag hierzu findet man im Forum von linuxmuster.net unter ->
-http://www.linuxmuster.net/forum/forum.php?req=thread&id=232
+   # apt-get install linuxmuster-chilli
 
---------------
-
-Alternative ohne Paketverwaltung: linuxmuster-chilli direkt installieren
-------------------------------------------------------------------------
-
-Zuerst sollte man die Paketabhängigkeiten für die späteren Pakete
-installieren:
-
-::
-
-    apt-get install apache2 freeradius freeradius-ldap pwgen dnsmasq ipcalc haserl ssl-cert ffproxy
-
-Nun muss das
-{{:linuxmusternet:downloads:iso:linuxmuster-chilli_0.1.18_i386.deb|linuxmuster-chilli-Paket}}
-heruntergeladen und entpackt werden:
-
-wget
-http://www.linuxmuster.net/_media/linuxmusternet:downloads:iso:linuxmuster-chilli_0.1.18_i386.deb
--O linuxmuster-chilli_0.1.18_i386.deb dpkg --unpack
-linuxmuster-chilli_0.1.18_i386.deb
-
-Jetzt muss das (durch das Entpacken von linuxmuster-chilli auf das
-System kopierte) CoovaChilli Paket installiert werden:
-
-dpkg -i /var/lib/linuxmuster-chilli/src/coova-chilli_1.3.0_i386.deb
-
-Die Konfiguration wird durch den Befehl
-
-::
-
-    dpkg --configure linuxmuster-chilli
-
-angestoßen. Genauere Erklärungen finde sich auf der Seite ->
-`Konfiguration von linuxmuster-chilli <chillispot.konfiguration>`__
+Jetzt geht es dann weiter mit der :doc:`Konfiguration von
+linuxmuster-chilli <chillispot-configuration>`.
 
 
-Netzwerkkonfiguration auf dem Coovachilli-Server
+Netzwerkkonfiguration auf dem CoovaChilli-Server
 ------------------------------------------------
 
-FIXME: Diese Zeilen gehören zur Konfigurationsseite
+Wenn der CoovaChilli-Server der einzige Rechner im blauen Netz ist,
+kann man die Schnittstellenkonfiguration problemlos dem DHCP Server
+überlassen. Die Datei `/etc/network/interfaces` auf dem coovachilli
+Server sieht dann folgendermaßen aus:
 
-Wenn der Coovachilli Server (was sinnvoll ist) der einzige Rechner im
-blauen Netz ist, kann man die Schnittstellenkonfiguration problemlos dem
-DHCP Server überlassen. Die Datei `/etc/network/interfaces` auf dem
-coovachilli Server sieht dann folgendermaßen aus:
+.. code-block:: console
 
-::
+   # This file describes the network ...
+   # and how to activate them. For more information, see interfaces(5).
+   #
+   
+   # The loopback network 
+   auto lo
+   iface lo inet loopback
+   
+   # These interfaces are brought up automatically
+   auto eth0
+   iface eth0 inet dhcp
 
-    # This file describes the network ...
-    # and how to activate them. For more information, see interfaces(5).
-    #
+Ebenso kann man, sofern man den :ref:`DHCP-Adressbereich
+<chillispot-dhcp-server-label>` geändert hat, kann man dem
+CoovaChilli-Server auch eine statische IP-Adresse geben, z.B.
 
-    # The loopback network 
-    auto lo
-    iface lo inet loopback
+.. code-block:: console
 
-    # These interfaces are brought up automatically
-    auto eth0
-    iface eth0 inet dhcp
+   # This file describes the network ...
+   # and how to activate them. For more information, see interfaces(5).
+   #
+   
+   # The loopback network 
+   auto lo
+   iface lo inet loopback
+   
+   auto eth0
+   iface eth0 inet static
+   address 172.16.16.1
+   netmask 255.255.255.0
+   network 172.16.16.0
+   broadcast 172.16.16.255
+   gateway 172.16.16.254
+   dns-nameservers 172.16.16.254
+   dns-search linuxmuster-net.lokal
+
+
 

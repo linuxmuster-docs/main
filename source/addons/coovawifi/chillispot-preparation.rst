@@ -127,6 +127,8 @@ Beispiels eines CoovaChilli hier in einer virtualisierten Umgebung:
    werden.  Die jeweils richtigen IPs sind aber in der Regel bei den
    Dialogen schon voreingestellt.
 
+.. _chillispot-dhcp-server-label:
+
 1. DHCP-Server
 --------------
 

@@ -2,17 +2,17 @@
 Konfiguration von linuxmuster-chilli
 ====================================
 
-Unabhängig davon, ob man den CoovaChilli Server selbst auf einer
-Ubuntu-Basis installiert hat oder die Virtuelle Appliance für Virtualbox
+Unabhängig davon, ob man den CoovaChilli-Server selbst auf einer
+Ubuntu-Basis installiert hat oder die virtuelle Appliance für Virtualbox
 nutzt, kann man mit dem Befehl
 
-::
+.. code-block:: console
 
-    dpkg-reconfigure linuxmuster-chilli
+   # dpkg-reconfigure linuxmuster-chilli
 
-das Hotspot Paket für die eigenen Bedürfnisse konfigurieren((Dieser
-Vorgang wird auch durch den Befehl ''linuxmuster-chilli-turnkey''
-ausgelöst, der die Virtual Appliance personalisiert)).
+das Paket für die eigenen Bedürfnisse konfigurieren. Dieser Vorgang
+wird auch durch den Befehl linuxmuster-chilli-turnkey` ausgelöst, der
+die virtuelle Appliance personalisiert.
 
 Nachfolgend werden die Schritte der Konfiguration erklärt.
 
@@ -26,14 +26,15 @@ ZUnächst muss die Adresse des LDAP-Servers angegeben werden. Der genaue
 Wert hängt davon ab, welches der Szenarien für den Einsatz des Captive
 Portals zur Anwendung kommt:
 
--  Zugang zu grün: Interne IP-Adresse des Servers
+-  Zugang zum grünen Netz: Interne IP-Adresse des Servers
 
--  Zugang zu IPCop Blau: Interne IP-Adresse des Servers. -> `Hinweise
+-  Zugang zum blauen Netz: Interne IP-Adresse des Servers. -> `Hinweise
    zur IPFire Konfiguration <chillispot.chilliipfireconfigblau>`__
 
--  Zugang zum Internet: Adresse oder DynDNS-Name der roten Schnittstelle
-   des IPCop, Portweiterleitung für LDAPs (Port 636) von Rot nach
-   Server-IP Grün muss aktiviert sein.
+- Zugang zum roten Netz bzw. direkt ins Internet: Adresse oder
+   DynDNS-Name der roten Schnittstelle des IPFire, Portweiterleitung
+   für LDAPs (Port 636) von Rot nach Server-IP Grün muss aktiviert
+   sein.
 
 {{ .:chillispot-root_linuxmuster-chilli_060.png \|}}
 
