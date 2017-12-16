@@ -77,7 +77,7 @@ Auf dem Chilli-Server muss der Repo-Schlüssel importiert werden:
 
    # wget -q http://pkg.linuxmuster.net/linuxmuster.net.key -O - | apt-key add -
 
-Eine neue Datei `/etc/apt/sources.list.d/linuxmuster-chilli.list`
+Eine neue Datei ``/etc/apt/sources.list.d/linuxmuster-chilli.list``
 anlegen und die folgende Zeile eintragen:
 
 .. code-block:: console
@@ -106,7 +106,7 @@ Netzwerkkonfiguration auf dem CoovaChilli-Server
 
 Wenn der CoovaChilli-Server der einzige Rechner im blauen Netz ist,
 kann man die Schnittstellenkonfiguration problemlos dem DHCP Server
-überlassen. Die Datei `/etc/network/interfaces` auf dem coovachilli
+überlassen. Die Datei ``/etc/network/interfaces`` auf dem coovachilli
 Server sieht dann folgendermaßen aus:
 
 .. code-block:: console

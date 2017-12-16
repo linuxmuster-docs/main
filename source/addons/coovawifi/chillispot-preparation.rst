@@ -147,7 +147,7 @@ Man setzt den Haken bei "Aktiviert" und speichere.  Ist der
 CoovaChilli-Server der einzige Rechner im blauen Netzwerk, ist man
 fertig. Gibt es weitere Computer, ist es ratsam dem CoovaChilli die
 erste IP-Adresse fest zu vergeben und die Anfangsadresse auf
-`172.16.16.2` zu setzen.
+``172.16.16.2`` zu setzen.
 
 2. Zugriff auf Blau
 -------------------
@@ -194,10 +194,10 @@ Schließlich **"Hinzufügen"** und anschließend auch noch **"Änderungen
 Unter `Firewall -> Firewallregeln` müssen die zusätzlichen Dienste,
 die aus dem blauen Netz erlaubt werden sollen, freigeschaltet werden.
 
-Im Beispiel unten wurde für das Protokoll `https` auf den Ports 443
+Im Beispiel unten wurde für das Protokoll ``https`` auf den Ports 443
 (Webserver), 242 (Schulkonsole) und 631 (Cups-Druckerserver) und für
-das Protokoll `ping` je eine Regel hinzugefügt. Für `ping` muss als
-Protokoll-Typ `ICMP` ausgewählt werden.
+das Protokoll ``ping`` je eine Regel hinzugefügt. Für ``ping`` muss als
+Protokoll-Typ ``ICMP`` ausgewählt werden.
 
 .. figure:: media/chillispot-ipfire-additionalrules.png
    :align: center

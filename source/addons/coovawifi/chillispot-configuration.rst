@@ -11,7 +11,7 @@ nutzt, kann man mit dem Befehl
    # dpkg-reconfigure linuxmuster-chilli
 
 das Paket für die eigenen Bedürfnisse konfigurieren. Dieser Vorgang
-wird auch durch den Befehl linuxmuster-chilli-turnkey` ausgelöst, der
+wird auch durch den Befehl ``linuxmuster-chilli-turnkey`` ausgelöst, der
 die virtuelle Appliance personalisiert.
 
 Nachfolgend werden die Schritte der Konfiguration erklärt.
@@ -149,7 +149,6 @@ durch Komma trennen.
 Überschrift der Anmeldeseite
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 .. figure:: media/chillispot-root_linuxmuster-chilli_069.png
    :align: center
 
@@ -197,7 +196,7 @@ CoovaChilli festgelegt werden. Die dort definierten Werte überschreiben
 bzw. ergänzen diejenigen aus der Paketkonfiguration von
 *linuxmuster-chilli*
 
-Beispiel: Eine Datei ''/etc/chilli/userconf'' mit dem folgenden Inhalt,
+Beispiel: Eine Datei ``/etc/chilli/userconf`` mit dem folgenden Inhalt,
 würde eine Clientsession unabhängig von der Aktivität des Benutzers nach
 900 Sekunden beenden, so dass sich der Nutzer neu anmelden muss:
 
