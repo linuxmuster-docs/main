@@ -18,6 +18,5 @@ die Anleitung :ref:`install-windows10-clients-label` beschreibt.
    :maxdepth: 2
 
    cloudclient
-   registration
    rollout
    outlook

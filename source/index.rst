@@ -17,6 +17,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
 
   getting-started/prerequisites/index
   getting-started/install-on-xen/index
+  getting-started/registration/index
   getting-started/linuxclients/index
   getting-started/add-user-accounts/index
 
