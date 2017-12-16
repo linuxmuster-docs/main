@@ -217,10 +217,3 @@ den Proxy muss in der Firewall **nicht** freigeschaltet werden.
    :alt: Advanced Proxy für das blaue Netz aktivieren
 
 
-Vorbereitung des Hotspot-Servers
-================================
-
-Für den Hotspot-Server selbst benötigen Sie einen Server/PC oder eine
-virtuelle Maschine mit zwei Netzwerkkarten. Wir empfehlen den Betrieb
-als virtuelle Maschine, eine entsprechend vorkonfigurierte Appliance
-finden Sie unter `Appliance Download <chillispot-vboxappliance>`__.

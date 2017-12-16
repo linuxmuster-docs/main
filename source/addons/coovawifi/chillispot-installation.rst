@@ -26,29 +26,27 @@ Voraussetzungen
   14.04.4 32bit funktionierte die Installation - bisher ohne erkennbare
   Probleme.
 
-
+.. _chillispot-vbox-label:
 
 Das Captive Portal als virtuelle Maschine herunterladen
 =======================================================
 
-Lade zunächst 
+Lade zunächst die virtuelle Maschine herunter:
 
-Die im Torrent {{:torrentfiles:coovachilli-ova.torrent|}} enthaltene
-OVA-Datei enthält eine virtuelle Appliance, auf der die komplette
+https://www.linuxmuster.net/downloads/ova/linuxmuster-chilli.ova
+
+Die OVA-Datei enthält eine virtuelle Appliance, auf der die komplette
 linuxmuster-chilli Umgebung bereits vorinstalliert ist.
 
-Inbetriebnahme
---------------
-
 Auspacken der Appliance
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 Die Appliance kann problemlos mit Virtualbox geöffnet werden. Der
 neuralgische Punkt ist die Konfiguration der Netzwerkkarten für die
 virtuelle Maschine.
 
-Konfiguration
-~~~~~~~~~~~~~
+Bereitstellen
+-------------
 
 Die Anmeldedaten für die Appliance sind
 
