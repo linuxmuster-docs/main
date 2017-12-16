@@ -21,10 +21,11 @@ Voraussetzungen
 - Für eine manuelle Installation, muss ein Ubuntu-Server
   14.04.4 *32bit* auf dem späteren Captive-Portal-Server installiert
   werden. Als einziges Zusatzpaket sollte bei der Softwareauswahl
-  "ssh-server" gewählt werden.\\ **Achtung:** Mit der 64bit Version
-  funktioniert das Setup wahrscheinlich nicht.\\ Mit Ubuntu-Server
-  14.04.4 32bit funktionierte die Installation - bisher ohne erkennbare
-  Probleme.
+  "ssh-server" gewählt werden.
+
+.. important:: 
+
+   **Achtung:** Mit der 64bit Version funktioniert das Setup nicht.
 
 .. _chillispot-vbox-label:
 
