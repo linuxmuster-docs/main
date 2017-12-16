@@ -43,7 +43,6 @@ Zugang über das grüne Netz des IPFire
 **Vorteile:**
 
 -  Nach der Anmeldung stehen alle Dienste im grünen Netz zur Verfügung
-
 -  Kontrolle des Internetzugangs mit Hilfe des IPFire möglich
 
 **Nachteile:**
@@ -62,16 +61,13 @@ Zugang im roten Netz des IPFire (Direktzugang)
 **Vorteile:**
 
 -  Kontrolle des Internetzugangs mit Hilfe des IPFire möglich
-
 -  Eine Lücke im Hotspot-System kann das grüne Netz nicht exponieren.
-
 -  Für die Anwender sind nur zwei Fälle zu dokumentieren: Am
    Schulrechner/am privaten Gerät.
 
 **Nachteile:**
 
 -  Eine Lücke im Hotspot-System kann zu freiem Internetzugriff führen.
-
 -  Nach der Anmeldung ist der Client nicht im grünen Netz (kein Drucken,
    kein Home- oder Tausch-Verzeichnis).
 
@@ -92,24 +88,25 @@ das Netzwerk richtig verkabelt werden und der IPFire vorkonfiguriert
 werden. Melden Sie sich dazu am IPFire an. Folgende Situation muss
 erreicht werden:
 
--  Nur das externe Interface (in der Skizze dunkelblau) des
-   CoovaChilli-Servers muss sich im blauen Netzwerk des IPFire befinden.
-   (Bei Virtualisierung kann diese Verbindung rein virtuell erfolgen).
+- Nur das externe Interface (im folgenden Netzdiagramm dunkelblau) des
+  CoovaChilli-Servers muss sich im blauen Netzwerk des IPFire
+  befinden.  (Bei Virtualisierung kann diese Verbindung rein virtuell
+  erfolgen).
 
--  Der CoovaChilli-Server muss am IPFire mit diesem Interface für den
-   "Zugriff auf Blau" freigeschaltet sein.
+- Der CoovaChilli-Server muss am IPFire mit diesem Interface für den
+  "Zugriff auf Blau" freigeschaltet sein.
 
--  Es muss eine Weiterleitung für LDAPs konfiguriert werden, so dass der
-   CoovaChilli-Server den im grünen Netz stehenden
-   linuxmuster.net-Server erreichen kann.
+- Es muss eine Weiterleitung für LDAPs konfiguriert werden, so dass der
+  CoovaChilli-Server den im grünen Netz stehenden
+  linuxmuster.net-Server erreichen kann.
 
--  Eine zweiten Netzwerkverbindung (mit physikalischer Anbindung bei
-   Virtualisierung), an der dann die Access-Points hängen, muss
-   geschaffen werden. Das WLAN-Interface (in der oberen Skizze hellblau,
-   im Netzdiagramm unten lila) wird nach Installation mit den
-   Accesspoints oder frei zugänglichen Netzwerkdosen verbunden.
+- Eine zweiten Netzwerkverbindung (mit physikalischer Anbindung bei
+  Virtualisierung), an der dann die Access-Points hängen, muss
+  geschaffen werden. Das WLAN-Interface (in den oberen Skizze
+  hellblau, im Netzdiagramm unten lila) wird nach Installation mit den
+  Accesspoints oder frei zugänglichen Netzwerkdosen verbunden.
 
-Die Netzverkabelung versteht man am besten beim Betrachten eines
+Die Netzverkabelung versteht man am Besten beim Betrachten eines
 Beispiels eines CoovaChilli hier in einer virtualisierten Umgebung:
 
 .. figure:: media/coova-virt.jpg
@@ -125,27 +122,36 @@ Beispiels eines CoovaChilli hier in einer virtualisierten Umgebung:
    10.32.*.* und 172.16.32.*.
    
    Darüberhinaus ist für den Endnutzer der Bereich 192.168.99.1 bis
-   192.168.99.255 vorgesehen. Hier kann jedes beliebige andere private
-   Subnetzwerk verwendet werden (außer den bereits verwendeten
-   Adressbereichen).
-   Die jeweils richtigen IPs sind aber in der Regel bei den Dialogen schon
-   voreingestellt.
+   192.168.99.255 vorgesehen. Hier kann jedes beliebige andere
+   private, außer den bereits verwendeten, Subnetzwerk verwendet
+   werden.  Die jeweils richtigen IPs sind aber in der Regel bei den
+   Dialogen schon voreingestellt.
 
 1. DHCP-Server
 --------------
 
-Zunächst sollte sichergestellt sein, dass der DHCP Server für das blaue
-Interface läuft. Dies überprüft man im Menü des IPFire unter `Netzwerk -> DHCP-Server`:
+Zunächst sollte sichergestellt sein, dass der DHCP Server für das
+blaue Interface läuft. Das ist insbesondere dann sinnvoll, wenn man
+neben dem CoovaChilli-Server noch weitere Clients im blauen Netzwerk
+hat, z.B. Schulcomputer die ohne Zugangsüberprüfung Netzwerkzugang
+haben sollen. Dies überprüft man im Menü des IPFire unter `Netzwerk
+-> DHCP-Server`:
 
 .. figure:: media/chillispot-ipfire-chilli-dhcp.png
    :align: center
    :alt: DHCP-Server im blauen Netz
 
+Man setzt den Haken bei "Aktiviert" und speichere.  Ist der
+CoovaChilli-Server der einzige Rechner im blauen Netzwerk, ist man
+fertig. Gibt es weitere Computer, ist es ratsam dem CoovaChilli die
+erste IP-Adresse fest zu vergeben und die Anfangsadresse auf
+`172.16.16.2` zu setzen.
+
 2. Zugriff auf Blau
 -------------------
 
-Dann wechselt man auf die Seite `Firewall -> Zugriff` auf Blau und
-fügt dort die "externe" Schnittstelle/MAC des CoovaChilli-Servers hinzu
+Dann wechselt man auf die Seite `Firewall -> Zugriff auf Blau` und
+fügt dort die "externe" Schnittstelle/MAC des CoovaChilli-Servers hinzu.
 
 -  Quell-IP-Adresse: 172.16.16.1
 -  MAC-Adresse: xx:xx:xx:xx:xx:xx
@@ -155,7 +161,6 @@ fügt dort die "externe" Schnittstelle/MAC des CoovaChilli-Servers hinzu
 .. figure:: media/chillispot-ipfire-chilli-blau.png
    :align: center
    :alt: CoovaChilli im blauen Netz fest zuordnen
-
 
 3. Zugriff von Blau auf LDAPs zulassen
 --------------------------------------
@@ -203,38 +208,14 @@ auf einen anderen DNS-Server (z.B. Google - 8.8.8.8) jedoch schon.
 5. Advanced Proxy für Blau aktivieren
 -------------------------------------
 
-Im Menü `Netzwerk -> Webproxy` sollte für Blau der transparente Proxy
-wie im grünen Netz aktiviert sein. Der Zugriff auf den Proxy muss in der
-Firewall **nicht** freigeschaltet werden.
+Im Menü `Netzwerk -> Webproxy` sollte für das blaue Netz der
+transparente Proxy wie im grünen Netz aktiviert sein. Der Zugriff auf
+den Proxy muss in der Firewall **nicht** freigeschaltet werden.
 
 .. figure:: media/chillispot-ipfire-chilli-proxy.png
    :align: center
    :alt: Advanced Proxy für das blaue Netz aktivieren
 
-
-Netzwerkkonfiguration auf dem Coovachilli-Server
-------------------------------------------------
-
-FIXME: Diese Zeilen gehören zur Konfigurationsseite
-
-Wenn der Coovachilli Server (was sinnvoll ist) der einzige Rechner im
-blauen Netz ist, kann man die Schnittstellenkonfiguration problemlos dem
-DHCP Server überlassen. Die Datei `/etc/network/interfaces` auf dem
-coovachilli Server sieht dann folgendermaßen aus:
-
-::
-
-    # This file describes the network ...
-    # and how to activate them. For more information, see interfaces(5).
-    #
-
-    # The loopback network 
-    auto lo
-    iface lo inet loopback
-
-    # These interfaces are brought up automatically
-    auto eth0
-    iface eth0 inet dhcp
 
 Vorbereitung des Hotspot-Servers
 ================================
