@@ -18,7 +18,7 @@ sind im Lehrernetz und haben Adressen aus dem Bereich 10.17.120.x. Die Untersche
 der Räume bleibt also im 3. Oktett, die Unterscheidung der Subnetze findet im 2.
 Oktett statt.
 
-Für die Unterteilung werden auf den Switches VLANs eingerichtet, diese Anleitung Verwendet 
+Für die Unterteilung werden auf den Switches VLANs eingerichtet, diese Anleitung verwendet 
 
 * für das Servernetz die VLAN-ID 16 
 * für das Lehrernetz die VLAN-ID 17
