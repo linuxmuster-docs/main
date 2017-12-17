@@ -11,7 +11,7 @@ Howtos, sortiert nach Relevanz:
    :maxdepth: 1
 
    howtos/use-postsync/index
-   howtos/netzbrief-basics/index
+   howtos/subnetting-basics/index
    howtos/leoclient2/index
    howtos/backupmondo/index
    howtos/radius/index
