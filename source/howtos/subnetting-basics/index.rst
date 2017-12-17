@@ -1,5 +1,5 @@
-linuxmuster.net Netzsegmentierung Basisanleitung
-================================================
+Netzsegmentierung - Grundlagen
+==============================
 
 Im `aktuellen Netzbrief
 <http://www.it.kultus-bw.de/,Lde/Startseite/IT-Sicherheit/Netztechnik+_+Netzbrief>`_
@@ -22,18 +22,9 @@ Inhalt:
 .. toctree::
    :maxdepth: 2
 
-   vorbemerkungen
-   workstations-vorbereiten
-   switches-vorbereiten
-   switch-konfiguration
-   switch-kaskadiert
-   server-umstellen
-
-
-Index 
------
-
-* :ref:`genindex`
-* :ref:`search`
-
-
+   preface
+   server-preparation
+   switch-preparation
+   switch-configuration
+   switch-cascading
+   server-setup
