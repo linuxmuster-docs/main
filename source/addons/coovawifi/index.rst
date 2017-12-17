@@ -27,7 +27,6 @@ vergeben werden.
    chillispot-preparation
    chillispot-installation
    chillispot-configuration
-   chillispot-vboxappliance
 
 
 Weitere Ergänzungen finden Sie im Anwenderwiki ->
