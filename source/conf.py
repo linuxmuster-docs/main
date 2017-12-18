@@ -100,6 +100,7 @@ exclude_patterns = ['**/README.rst']
 # If true, sectionauthor and moduleauthor directives will be shown in the
 # output. They are ignored by default.
 #show_authors = False
+show_authors = True
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -247,14 +248,14 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    ('advisor', 'advisor.tex', u'Network advisor documentation',
-     u'linuxmuster.net', 'manual'),
-    ('student', 'student.tex', u'Students documentation',
-     u'linuxmuster.net', 'manual'),
-    ('teacher', 'teacher.tex', u'Teachers documentation',
-     u'linuxmuster.net', 'manual'),
-]
+# latex_documents = [
+#     ('advisor', 'advisor.tex', u'Network advisor documentation',
+#      u'linuxmuster.net', 'manual'),
+#     ('student', 'student.tex', u'Students documentation',
+#      u'linuxmuster.net', 'manual'),
+#     ('teacher', 'teacher.tex', u'Teachers documentation',
+#      u'linuxmuster.net', 'manual'),
+# ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
