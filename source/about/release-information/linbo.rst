@@ -93,7 +93,7 @@ Gruppenspezifische Boot-Konfiguration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Die gruppenspezifische Boot-Konfigurationsdatei wird automatisch beim
-Workstationimport (siehe Abschnitt :doc:`../howtos/windows10clients/registration`) aus der
+Workstationimport (siehe Abschnitt :doc:`../../clients/windows10clients/registration`) aus der
 start.conf-Datei der Gruppe erstellt. Sie enthält einen Menü-Eintrag für
 Linbo und drei weitere für jedes in der start.conf-Datei definierte
 Betriebssystem. Das Menü ist standardmäßig ausgeblendet und so

@@ -6,7 +6,8 @@
   :maxdepth: 2
   :caption: Netzwerkkonfiguration
 
-  subnetting-basics/index
+  coovawifi/index
   unifiwifi/index
   radius/index
+  subnetting-basics/index
 

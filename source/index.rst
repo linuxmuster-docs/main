@@ -21,9 +21,11 @@ Dabei richtet sich die Dokumentation an verschiedene Zielgruppen. Das Handbuch f
 
   getting-started/prerequisites/index
   getting-started/install-on-xen/index
-..  getting-started/add-computer/index
   getting-started/linuxclients/index
   getting-started/add-user-accounts/index
+
+..  getting-started/add-computer/index
+
 
 .. toctree::
   :maxdepth: 2

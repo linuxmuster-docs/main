@@ -9,7 +9,7 @@ Was ist neu in 6.2?
 ===================
 
 Nehmen Sie das Upgrade zu linuxmuster.net 6.2 wahr und folgen Sie der
-:doc:`Upgrade-Anleitung <../howtos/upgrade/index>`.
+:doc:`Upgrade-Anleitung <../../systemadministration/maintenance/upgrade/index>`.
 Lesen Sie dennoch zunächst die Liste der Neuerungen und bekannten Probleme.
 
 .. toctree::
@@ -22,4 +22,4 @@ Lesen Sie dennoch zunächst die Liste der Neuerungen und bekannten Probleme.
 
 Release-Informationen früherer Veröffentlichungen
 
-* `Release-Informationen zur linuxmuster.net 5.1, 6.0 und 6.1 <https://www.linuxmuster.net/wiki/dokumentation:handbuch:preparation:features>`_
+* `Release-Informationen zur linuxmuster.net 5.1, 6.0 und 6.1 <https://www.linuxmuster.net/wikiarchiv/dokumentation:handbuch:preparation:features>`_

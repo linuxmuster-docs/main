@@ -12,4 +12,4 @@ ggf. Inkompatibilitäten in Kauf genommen werden, wird das Update des
 IPFire vom Server aus mithilfe eines Skriptes angestossen.
 
 Lesen Sie die neue Vorgehensweise in der :doc:`Schritt-für-Schritt
-Anleitung <../howtos/keep-lmn-uptodate/2-update-ipfire>` nach.
+Anleitung <../../systemadministration/maintenance/keep-lmn-uptodate/2-update-ipfire>` nach.
