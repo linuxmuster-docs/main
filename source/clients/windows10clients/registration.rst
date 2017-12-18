@@ -2,7 +2,7 @@ Computer in Netzwerk aufnehmen
 ==============================
 
 Neue Clients werden über die LINBO-Oberfläche des Clients registriert
-und dann auf dem Server ins System aufgenommen. 
+und dann auf dem Server ins System aufgenommen.
 
 .. _registration-linbo-label:
 
@@ -10,26 +10,26 @@ Registrierung über LINBO
 ------------------------
 
 Die LINBO-Oberfläche (:doc:`Bedienungsanleitung LINBO
-<../../manuals/linbo/index>`) auf dem Client bietet eine Möglichkeit
+<../linbo/index>`) auf dem Client bietet eine Möglichkeit
 die Aufnahme eines neuen Rechners ins System vorzubereiten.
 
 Starten Sie den Rechner per PXE-Boot
 
 .. image:: media/registration/linbo-empty-startpage.jpg
 
-Klicken Sie auf den Reiter ''Imaging'' und loggen Sie sich mit dem LINBO-Passwort ein. 
+Klicken Sie auf den Reiter ''Imaging'' und loggen Sie sich mit dem LINBO-Passwort ein.
 
 .. note::
-   
+
    Im Passwordfeld wird nichts angezeigt. Sie müssen es "blind" eintippen.
 
 .. image:: media/registration/linbo-passwordentry.png
 
-Nun sind Sie LINBO-Administrator. Auf der Imaging-Seite fällt das Timeout-Fenster auf, welches die Zeit anzeigt, nach der man automatisch ausgeloggt wird. Mit einem Klick auf die Checkbox, kann der Timeout deaktiviert werden. 
+Nun sind Sie LINBO-Administrator. Auf der Imaging-Seite fällt das Timeout-Fenster auf, welches die Zeit anzeigt, nach der man automatisch ausgeloggt wird. Mit einem Klick auf die Checkbox, kann der Timeout deaktiviert werden.
 
 .. image:: media/registration/linbo-timeoutdialog.png
 
-Über die Schaltfläche `Registrieren` öffnen Sie im nächsten Schritt das Dialogfenster ``Rechner registrieren``, das Eingabefelder für die Clientdaten anbietet. 
+Über die Schaltfläche `Registrieren` öffnen Sie im nächsten Schritt das Dialogfenster ``Rechner registrieren``, das Eingabefelder für die Clientdaten anbietet.
 
 .. image:: media/registration/linbo-registrationdialog.png
 
@@ -40,29 +40,29 @@ Nun sind Sie LINBO-Administrator. Auf der Imaging-Seite fällt das Timeout-Fenst
      ein. Beachten Sie bitte, dass die Bezeichnung des Raumes oder auch
      des Gebäudes mit einem Kleinbuchstaben beginnen muss. Sonderzeichen
      sind nicht erlaubt.
-   
-   Rechnername 
+
+   Rechnername
      z.B. in der Form r100-pc01 (max. 15 Zeichen), (evtl. Gebäude
      berücksichtigen g21r100-pc01) eingeben. Beachten Sie bitte, dass als
      Zeichen nur Buchstaben und Zahlen erlaubt sind. Als Trennzeichen
      darf nur das Minus-Zeichen ``-`` verwendet werden. Leerzeichen,
      Unterstriche oder andere Sonderzeichen (wie z.B. Umlaute, ß oder
      Satzzeichen) dürfen Sie hier unter keinen Umständen verwenden.
-   
-   IP Adresse  
+
+   IP Adresse
      Die IP-Adresse sollte zum Raum passen und **muss** außerhalb des
      Bereichs für die Rechneraufnahme liegen. Abhängig von Ihren
      Netzdaten z.B. 10.16.100.1 für diesen PC eingeben, üblicherweise
      **nicht** zwischen 10.16.1.100 und 10.16.1.200 (Bereich für die
-     Rechneraufnahme).  
-   
-   Rechnergruppe 
+     Rechneraufnahme).
+
+   Rechnergruppe
      In der Rechnergruppe, bspw. `xenial` werden mehrere (idealerweise
      alle) ähnlichen Rechner zusammengefasst, die eine (nahezu)
-     identische Konfiguration bekommen. 
+     identische Konfiguration bekommen.
 
 
-Ist alles korrekt ausgefüllt, werden die Clientdaten über die Schaltfläche `Registrieren` auf den Server hochgeladen. 
+Ist alles korrekt ausgefüllt, werden die Clientdaten über die Schaltfläche `Registrieren` auf den Server hochgeladen.
 
 .. note::
 
@@ -76,7 +76,7 @@ Registrierung übernehmen
 
 Sobald alle Rechner registriert wurden, müssen Sie die Aufnahme der
 Clients entweder in der `Schulkonsole` (:doc:`Bedienungsanleitung Schulkonsole
-<../../manuals/schulkonsole-admin/index>`) oder an der Konsole starten!
+<../../appendix/school-console/admin/index>`) oder an der Konsole starten!
 
 Da der Zugriff auf die Schulkonsole nur von ins System aufgenommenen
 Rechnern erlaubt ist, muss zumindest der erste Rechner händisch importiert werden.
@@ -100,4 +100,3 @@ jetzt übernehmen` erledigt das und die neu registrierten Clients sind
 importiert.
 
 .. image:: media/registration/hosts-uebernehmen-schulkonsole.png
-
