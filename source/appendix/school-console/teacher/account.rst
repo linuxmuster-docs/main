@@ -8,7 +8,7 @@ Auf dieser Seite können Sie eigene Druckaufträge löschen und Ihren persönlic
 
 Außerdem können Sie Ihr Passwort ändern.
 
-.. image:: ../schulkonsole-admin/media/schulkonsole-account-mailforward.png
+.. image:: ../admin/media/schulkonsole-account-mailforward.png
 
 Im Abschnitt Mail-Weiterleitung können Sie eine Weiterleitung an eine
 oder mehrere durch Komma getrennte Mail-Adressen einrichten und
@@ -23,7 +23,7 @@ und in Ihrem Postfach. Alle Werte sind in Kilobyte
 angegeben. Zusätzlich wird angezeigt in welchen Projekten Sie Mitglied
 sind.
 
-.. image:: ../schulkonsole-admin/media/schulkonsole-account-vpn.png
+.. image:: ../admin/media/schulkonsole-account-vpn.png
 
 Im untersten Bereich kann ein OpenVPN-Zertifikat erstellt werden. Das
 Zertifikat wird in Ihrem Heimatverzeichnis (H:) im Ordner „OpenVPN“
