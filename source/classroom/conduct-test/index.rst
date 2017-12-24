@@ -10,21 +10,21 @@ kann man ignorieren.
 
 Nach dem Login sieht man folgende Ansicht:
 
-.. image:: media/U_Beginn1.png
+.. image:: media/class-start.png
 
 und beginnt mit Klick auf "Unterricht beginnen" den Unterricht.
 
 Unter "aktueller Raum" findet man den Menüpunkt "Klassenarbeit" den man mit Klick auswählt
 
-.. image:: media/KA_Auswahl1.png 
+.. image:: media/currentroom-test.png 
 
 Bevor der Klassenarbeitsmodus gestartet wird setzt man ein Workstationpasswort, welches man den Teilnehmern an der Klassenarbeit mitteilt. Hier:"frei_wählbar"
 
-.. image:: media/PW_setzen_KA_starten.png
+.. image:: media/set-password-start-test.png
 
 und startet mit Klick auf "Klassenarbeit starten" den Klassenarbeitsmodus
 
-.. image:: media/bereit_stellen1.png
+.. image:: media/provide-files.png
 
 In der Schulkonsole bekommt man nun folgende Informationen:
 
@@ -38,13 +38,13 @@ In der Schulkonsole bekommt man nun folgende Informationen:
 Ist an jedem Platz ein Teilnehmer der Klassenarbeit angemeldet, dann klickt man auf "bereitstellen" und stellt damit den Schülern die Aufgabe "Klassenarbeit.txt" 
 bereit. Man hat jetzt die Möglichkeit ein neues Passwort zu setzen. Hier "neues_PW_setzen"
 
-.. image:: media/PW_neu_setzen.png
+.. image:: media/set-password-second-time.png
 
 .. note:: Das neue Passwort darf erst gesetzt werden, wenn sich alle Teilnehmer an den Rechnern angemeldet haben
 
 Die Schulkonsole sieht nach dem Passwort setzen so aus:
 
-.. image:: media/nach_PW_neu_setzen.png
+.. image:: media/set-password-second-time.png
 
 Der Lehrer hat dann folgende Möglichkeiten:
 
