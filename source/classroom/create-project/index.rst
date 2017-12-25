@@ -1,6 +1,6 @@
-==========
- Projekte
-==========
+=================
+ Projekte nutzen
+=================
 
 Projekte bilden Gruppen in der Schule ab die außerhalb von Klassen existieren. Ein Projekt kann ein Leistungskurs im Gymnasium, oder eine Neigungsgruppe in einer Gesamtschule sein.
 
@@ -45,7 +45,6 @@ Sind alle Mitglieder ausgewählt, klickt man auf `Aufnehmen` und sieht nach eini
 Lehrer als Projektleiter hinzufügen
 ===================================
 
-	   
 Sollen Lehrer zur Gruppe hinzu gefügt werden, dann setzt man den Radiobutton auf Lehrer 
 
 .. image:: media/Aufnahme_Lehrer_1.png
