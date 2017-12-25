@@ -62,5 +62,5 @@ Nach Klick auf `Aufnehmen` sieht man die Gruppe mit den hinzugefügten Lehrern
 
 .. image:: media/teacher-select-4.png
 
-.. note:: Die Suche kann man verfeinern indem man z.B. ``schm*`` in die ``suchen Zeile`` eingibt und auf ``suchen`` klickt. Damit werden alle Schüler aufgelistet in deren Name die Zeichenfolge ``schm`` vor kommt. Ähnlich kann man mit den Radiobuttons Lehrer; Klasse und Projekt verfährt.  
+.. note:: Die Suche kann man verfeinern indem man z.B. ``schm*`` in die ``suchen Zeile`` eingibt und auf ``suchen`` klickt. Damit werden alle Schüler aufgelistet in deren Name die Zeichenfolge ``schm`` vor kommt. Ähnlich kann man mit den Radiobuttons Lehrer; Klasse und Projekt verfahren.  
 
