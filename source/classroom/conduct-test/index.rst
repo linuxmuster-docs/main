@@ -2,29 +2,33 @@
  Klassenarbeit durchführen
 ===========================
 
-Um sich in der Schulkonsole einloggen zu können ruft man in einem Browser die Seite 
+Um sich in der Schulkonsole einloggen zu können, ruft man in einem Browser die Seite 
 https://10.16.1.1:242 auf. Eventuelle Warnmeldungen wegen eines selbst erstellten Zertifikates 
 kann man ignorieren.
 
 .. image:: media/login1.png
 
+Klassenarbeit starten
+=====================
+
 Nach dem Login sieht man folgende Ansicht:
 
 .. image:: media/class-start.png
 
-und beginnt mit Klick auf "Unterricht beginnen" den Unterricht.
+und beginnt mit Klick auf `Unterricht beginnen` den Unterricht.
 
-Unter "aktueller Raum" findet man den Menüpunkt "Klassenarbeit" den man mit Klick auswählt
+Unter "aktueller Raum" findet man den Menüpunkt "Klassenarbeit", den man mit Klick auswählt.
 
 .. image:: media/currentroom-test.png 
 
-Bevor der Klassenarbeitsmodus gestartet wird setzt man ein Workstationpasswort, welches man den Teilnehmern an der Klassenarbeit mitteilt. Hier:"frei_wählbar"
+Bevor der Klassenarbeitsmodus gestartet wird setzt man ein Workstationpasswort, welches man den Teilnehmern an der Klassenarbeit mitteilt (hier: ``frei_wählbar``).
 
 .. image:: media/set-password-start-test.png
 
-und startet mit Klick auf "Klassenarbeit starten" den Klassenarbeitsmodus
+und startet mit Klick auf "Klassenarbeit starten" den Klassenarbeitsmodus.
 
-.. image:: media/provide-files.png
+Dateien austeilen
+=================
 
 In der Schulkonsole bekommt man nun folgende Informationen:
 
@@ -35,6 +39,10 @@ In der Schulkonsole bekommt man nun folgende Informationen:
 
 .. note:: Solange nicht alle an der Klassenarbeit beteiligten Benutzer unter "Login" zu sehen sind klickt man immer wieder auf "aktualisieren"
 
+.. image:: media/provide-files.png
+
+
+
 Ist an jedem Platz ein Teilnehmer der Klassenarbeit angemeldet, dann klickt man auf "bereitstellen" und stellt damit den Schülern die Aufgabe "Klassenarbeit.txt" 
 bereit. Man hat jetzt die Möglichkeit ein neues Passwort zu setzen. Hier "neues_PW_setzen"
 
@@ -44,7 +52,7 @@ bereit. Man hat jetzt die Möglichkeit ein neues Passwort zu setzen. Hier "neues
 
 Die Schulkonsole sieht nach dem Passwort setzen so aus:
 
-.. image:: media/set-password-second-time.png
+.. image:: media/during-test.png
 
 Der Lehrer hat dann folgende Möglichkeiten:
 
@@ -59,19 +67,19 @@ Die Schüler holen sich den Arbeitsauftrag für die Klassenarbeit im Ordner V:\\
 
 .. note:: die Angabe des Raumes (hier: r306) und des Lehrerordners (hier: rau) können nach Schule und Lehrer variieren
 
-.. image:: media/Schueleransicht.png
+.. image:: media/students-view-winclient.png
 
 .. note:: Man sollte die Schüler auffordern die Datei sofort in den Ordner H:\\_einsammeln abzulegen und dort zu bearbeiten. Es ist auch sinnvoll die Datei mit dem Schülernamen zu versehen.
 
-.. image:: media/Speichern_durch_Schueler.png
+.. image:: media/students-saveto-winclient.png
 
 Ist die Klassenarbeit beendet, dann klickt der Lehrer auf "Einsammeln und beenden"
 
-.. image:: media/Einsammeln_und_beenden.png
+.. image:: media/collect-and-finish.png
 
 und wird im folgenden Fenster aufgefordert das Beenden zu bestätigen.
 
-.. image:: media/Beenden_bestaetigen.png
+.. image:: media/confirm-finish.png
 
 .. note:: Ehe man den Klassenarbeitsmodus beendet fordert man die Schüler auf ihre  Arbeiten im Ordner "Einsammeln" letztmalig zu speichern. Durch Klick auf "Aktualisieren werden in der Tabelle unter "Dateien" die gespeicherten Dateien sichtbar.
 
@@ -79,6 +87,6 @@ Der Klassenarbeitsmodus ist damit beendet und der Raum kann wieder als Computerr
 
 Die eingesammelten Dateien findet der Lehrer nach dem Beenden des Klassenarbeitsmodus im Ordner _eingesammelt mit einem Datums-Zeitstempel versehen.
 
-.. image:: media/Ordner_eingesammelt_Ansicht.png 
-.. image:: media/Ordner_eingesammelt_Ansicht2.png
+.. image:: media/collected-folderview1.png 
+.. image:: media/collected-folderview2.png
 
