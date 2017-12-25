@@ -2,7 +2,7 @@
  Erste Benutzeraufnahme
 ========================
 
-In einer müssen meist mehrere hundert bis einige tausend Schüler als
+In einer Schule müssen meist mehrere hundert bis einige tausend Schüler als
 Benutzer angelegt werden müssen. Deshalb übernimmt diese komplexe
 Aufgabe bei der *linuxmuster.net* das Programm *Sophomorix*.
 
