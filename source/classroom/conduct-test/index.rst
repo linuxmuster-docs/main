@@ -17,10 +17,6 @@ Im Menü unter `aktueller Raum` beginnt man den Unterricht mit Klick auf `Unterr
 
 .. image:: media/class-start.png
 
-Haben Sie den Unterricht für den Raum begonnen und die korrekte Zeit
-für die Klassenarbeit eingetragen, so müssen Sie das Menü für den
-Klassenarbeitsmodus erneut aufrufen.
-
 Unter `aktueller Raum` findet man den Menüpunkt `Klassenarbeit`, den man mit Klick auswählt.
 
 .. image:: media/currentroom-test.png 
