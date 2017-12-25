@@ -2,13 +2,13 @@
  Projekte nutzen
 =================
 
-Projekte bilden Gruppen in der Schule ab die außerhalb von Klassen existieren. Ein Projekt kann ein Leistungskurs im Gymnasium, oder eine Neigungsgruppe in einer Gesamtschule sein.
+Projekte bilden Gruppen in der Schule ab, die außerhalb von Klassen existieren. Ein Projekt kann ein Leistungskurs im Gymnasium, eine Neigungsgruppe in einer Gesamtschule oder jede beliebige Gruppe von Benutzern des Systems sein.
 
 Um ein Projekt einzurichten, wählt man nach der Anmeldung als Lehrer aus dem Menü `Projekte` das Untemenü `Mitglieder` aus.
 
 .. image:: media/menu-project.png
 
-Im folgenden Fenster vergibt man einen Namen für das Projekt (Hier:``demo``). Dabei ist ``p _`` bereits vorgegeben und wird Teil des Projektnamens
+Im folgenden Fenster vergibt man einen Namen für das Projekt (hier:``demo``). Dabei ist ``p _`` bereits vorgegeben und wird Teil des Projektnamens
 
 .. image:: media/new-project-name.png
 
@@ -63,5 +63,5 @@ Nach Klick auf `Aufnehmen` sieht man die Gruppe mit den hinzugefügten Lehrern
 .. image:: media/teacher-select-4.png
 
 
-.. note:: Die Suche kann man verfeinern indem man z.B. ``schm*`` in die ``suchen Zeile`` eingibt und auf `suchen` klickt. Damit werden alle Schüler aufgelistet in deren Name die Zeichenfolge ``schm`` vor kommt. Ähnlich kann man mit den Radiobuttons `Lehrer`; `Klasse` und `Projekt` verfahren.  
+.. note:: Die Suche kann man verfeinern indem man z.B. ``schm*`` in die ``Suche:``-Zeile eingibt und auf `Suche` klickt. Damit werden alle Schüler aufgelistet in deren Name die Zeichenfolge ``schm`` vor kommt. Ähnlich kann man mit den Radiobuttons `Lehrer`, `Klasse` und `Projekt` verfahren.  
 
