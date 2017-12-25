@@ -136,7 +136,7 @@ Der Klassenarbeitsmodus ist damit beendet und der Raum kann wieder als Computerr
 Die eingesammelten Dateien findet der Lehrer nach dem Beenden des
 Klassenarbeitsmodus im Unterordner von
 ``_eingesammelt/eingesammelt-klassenarbeit``. Beim Einsammeln werden
-die Ordner mit einem Datums-Zeitstempel versehen.
+die Ordner mit einem Datums-Zeitstempel versehen. Hier:``EXAM_rau_2017-12-23_14-15-38_r306``.
 
 .. image:: media/collected-folderview1.png 
 .. image:: media/collected-folderview2.png
