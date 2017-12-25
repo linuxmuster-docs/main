@@ -28,39 +28,39 @@ Nun kann man dem Projekt weitere Mitglieder hinzufügen.
 
 Um z.B. aus der gesamten Schülerschaft Schüler für die Projektgruppe ``p_demo`` auszuwählen gibt man unter `Suche` einen ``*`` ein. Der Radiobutton ist auf `Schüler` gesetzt. Hat man diese Auswahl getroffen, klickt man auf `Suche`
 
-.. image:: media/Auswahl_Mitglieder_1.png
+.. image:: media/member-select-2.png
 
 und erhält das folgende Fenster:
 
-.. image:: media/Auswahl_Mitglieder_2.png
+.. image:: media/member-select-3.png
 
-In diesem Fenster wählt man die Mitglieder der Projektgruppe aus indem man rechts neben dem Namen Haken setzt. 
+In diesem Fenster wählt man die Mitglieder der Projektgruppe aus indem man rechts neben dem Namen einen Haken setzt. 
 
-.. image:: media/Auswahl_Mitglieder_3.png
+.. image:: media/member-select-4.png
 
 Sind alle Mitglieder ausgewählt, klickt man auf `Aufnehmen` und sieht nach einigen Sekunden das folgende Fenster:
 
-.. image:: media/Aufgenommen.png
+.. image:: media/member-selected.png
 
 Lehrer als Projektleiter hinzufügen
 ===================================
 
-Sollen Lehrer zur Gruppe hinzu gefügt werden, dann setzt man den Radiobutton auf Lehrer 
+Sollen Lehrer zur Gruppe hinzugefügt werden, dann setzt man den Radiobutton auf `Lehrer`, 
 
-.. image:: media/Aufnahme_Lehrer_1.png
+.. image:: media/teacher-select-1.png
 
-und klickt auf Suchen
+klickt auf `Suchen`
 
-.. image:: media/Aufnahme_Lehrer.png
+.. image:: media/teacher-select-2.png
 
 und erhält eine Liste aller Lehrer der Schule.
 
 Man wählt nun die aufzunehmenden Lehrer aus und kann zusätzlich
 bestimmen ob ein Lehrer zusätzlich Projektleiter wird.
 
-.. image:: media/Aufnahme_Lehrer_2.png
+.. image:: media/teacher-select-3.png
 
 Nach Klick auf `Aufnehmen` sieht man die Gruppe mit den hinzugefügten Lehrern
 
-.. image:: media/Aufnahme_Lehrer_3.png 
+.. image:: media/teacher-select-4.png
 
