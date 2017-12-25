@@ -82,8 +82,8 @@ Computerkonten missbrauchen.
 
 .. note:: Das neue Passwort darf erst gesetzt werden, wenn sich alle Teilnehmer an den Rechnern angemeldet haben.
 
-Während des Unterrichts
-=======================
+Während der Klassenarbeit
+=========================
 
 Die Schulkonsole sieht nach dem Passwort setzen so aus:
 
