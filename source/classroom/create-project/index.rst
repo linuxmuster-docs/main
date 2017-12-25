@@ -55,6 +55,8 @@ klickt auf `Suchen`
 
 und erhält eine Liste aller Lehrer der Schule.
 
+.. image:: media/teacher-select-1.png
+
 Man wählt nun die aufzunehmenden Lehrer aus und kann zusätzlich
 bestimmen ob ein Lehrer zusätzlich Projektleiter wird.
 
