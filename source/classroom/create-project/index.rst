@@ -8,7 +8,7 @@ Um ein Projekt einzurichten, wählt man nach der Anmeldung als Lehrer aus dem Me
 
 .. image:: media/menu-project.png
 
-Im folgenden Fenster vergibt man einen Namen für das Projekt (Hier: demo). Dabei ist `p _` bereits vorgegeben und wird Teil des Projektnamens
+Im folgenden Fenster vergibt man einen Namen für das Projekt (Hier:``demo``). Dabei ist ``p _`` bereits vorgegeben und wird Teil des Projektnamens
 
 .. image:: media/new-project-name.png
 
