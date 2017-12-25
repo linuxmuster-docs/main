@@ -30,7 +30,7 @@ Um z.B. aus der gesamten Schülerschaft Schüler für die Projektgruppe ``p_demo
 
 .. image:: media/member-select-2.png
 
-und erhält das folgende Fenster:
+und erhält eine Liste aller Schüler der Schule:
 
 .. image:: media/member-select-3.png
 
