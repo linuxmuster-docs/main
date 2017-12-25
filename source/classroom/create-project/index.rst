@@ -46,11 +46,10 @@ Lehrer als Projektleiter hinzufügen
 ===================================
 
 Sollen Lehrer zur Gruppe hinzugefügt werden, dann setzt man den Radiobutton auf `Lehrer`, 
-klickt auf `Suchen`
 
 .. image:: media/teacher-select-2.png
 
-und erhält eine Liste aller Lehrer der Schule.
+klickt auf `Suchen` und erhält eine Liste aller Lehrer der Schule.
 
 .. image:: media/teacher-select-1.png
 
