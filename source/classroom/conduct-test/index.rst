@@ -27,28 +27,42 @@ Bevor der Klassenarbeitsmodus gestartet wird setzt man ein Workstationpasswort, 
 
 und startet mit Klick auf "Klassenarbeit starten" den Klassenarbeitsmodus.
 
-Dateien austeilen
-=================
+Dateien bereitstellen und Schüler melden sich an
+================================================
 
 In der Schulkonsole bekommt man nun folgende Informationen:
 
-- An welchem Rechner ist welcher Benutzer angemeldet. 
-- Welche Dateien liegen unter H:\\bereitstellen\\bereitstellen-klassenarbeit. Hier: Klassenarbeit.txt
+- an welchem Rechner, welcher Benutzer angemeldet ist
+- welche Dateien unter ``H:\bereitstellen\bereitstellen-klassenarbeit`` zum Bereitstellen an die Schüler hochgeladen wurden (hier: die Datei ``Klassenarbeit.txt``).
 
-.. note:: Unter Login dürfen nur Rechnernamen auftauchen, da man sich im Klassenarbeitsmodus mit den Rechnernamen anmeldet. Hier z.B. login: r306-c01; Passwort: frei_waehlbar
+Schüler melden sich jetzt an den Clients mit jeweiligen PC-Namen als
+Benutzernamen (hier z.B.: ``r306-c01``) und dem Workstationpasswort
+an (hier: ``frei_wählbar``).
 
-.. note:: Solange nicht alle an der Klassenarbeit beteiligten Benutzer unter "Login" zu sehen sind klickt man immer wieder auf "aktualisieren"
+.. note:: Unter Login dürfen nur Rechnernamen auftauchen, da man sich
+          im Klassenarbeitsmodus mit den Rechnernamen
+          anmeldet. Solange nicht alle an der Klassenarbeit
+          beteiligten Benutzer unter "Login" zu sehen sind klickt man
+          immer wieder auf "Aktualisieren".
 
 .. image:: media/provide-files.png
 
-
-
 Ist an jedem Platz ein Teilnehmer der Klassenarbeit angemeldet, dann klickt man auf "bereitstellen" und stellt damit den Schülern die Aufgabe "Klassenarbeit.txt" 
-bereit. Man hat jetzt die Möglichkeit ein neues Passwort zu setzen. Hier "neues_PW_setzen"
+bereit. 
+
+Passwort neu setzen
+===================
+
+Man hat jetzt die Möglichkeit ein neues Passwort (hier:
+``neues_PW_setzen``) zu setzen. Dies verhindert, dass Schüler die
+Computerkonten missbrauchen.
 
 .. image:: media/set-password-second-time.png
 
 .. note:: Das neue Passwort darf erst gesetzt werden, wenn sich alle Teilnehmer an den Rechnern angemeldet haben
+
+Während des Unterrichts
+=======================
 
 Die Schulkonsole sieht nach dem Passwort setzen so aus:
 
@@ -57,21 +71,27 @@ Die Schulkonsole sieht nach dem Passwort setzen so aus:
 Der Lehrer hat dann folgende Möglichkeiten:
 
 - Kopien einsammeln (sparsam nutzen ist sinnvoll)
-- Einsammeln der Schülerdateien und beenden des Klassenarbeitsmodus
+- Einsammeln der Schülerdateien und Beenden des Klassenarbeitsmodus'
+- Es ist aber auch immer wieder möglich auf "Passwort ändern" zu klicken, um zwischendurch ein neues Passwort zu setzen. Das kann notwendig werden, wenn z.B. ein Rechner während der Klassenarbeit abstürzt und sich ein Schüler erneut anmelden muss.
 
-Es ist aber immer wieder möglich auf "Passwort ändern" zu klicken um zwischendurch ein neues Passwort zu setzen.
+Die Schüler holen sich den Arbeitsauftrag für die Klassenarbeit im Ordner ``V:\Räume\r306\rau`` (Windows) bzw. im Ordner ``Vorlagen_auf_Server/r306/rau`` (Linux) ab.
 
-.. note:: Das kann notwendig werden, wenn z.B. ein Rechner während der Klassenarbeit abstürzt und sich ein Schüler erneut anmelden muss.
-
-Die Schüler holen sich den Arbeitsauftrag für die Klassenarbeit im Ordner V:\\Räume\\r306\\rau ab
-
-.. note:: die Angabe des Raumes (hier: r306) und des Lehrerordners (hier: rau) können nach Schule und Lehrer variieren
+.. note:: Die Angabe des Raumes (hier: r306) und des Lehrerordners (hier: rau) werden nach Schule und Lehrer variieren
 
 .. image:: media/students-view-winclient.png
 
-.. note:: Man sollte die Schüler auffordern die Datei sofort in den Ordner H:\\_einsammeln abzulegen und dort zu bearbeiten. Es ist auch sinnvoll die Datei mit dem Schülernamen zu versehen.
+Die Schüler müssen alle ihre Ergebnisse im Ordner ``H:\_einsammeln``
+(Windows) bzw. unter ``Home_auf_Server/_einsammeln`` (Linux)
+speichern.
+
+.. note:: Es ist sinnvoll, den Schülern zu raten, die Vorlagen sofort
+	  dort abzulegen und dort zu bearbeiten. Es ist auch sinnvoll die Datei
+	  mit dem Schülernamen zu versehen.
 
 .. image:: media/students-saveto-winclient.png
+
+Klassenarbeit beenden und Daten einsammeln
+==========================================
 
 Ist die Klassenarbeit beendet, dann klickt der Lehrer auf "Einsammeln und beenden"
 
@@ -81,11 +101,14 @@ und wird im folgenden Fenster aufgefordert das Beenden zu bestätigen.
 
 .. image:: media/confirm-finish.png
 
-.. note:: Ehe man den Klassenarbeitsmodus beendet fordert man die Schüler auf ihre  Arbeiten im Ordner "Einsammeln" letztmalig zu speichern. Durch Klick auf "Aktualisieren werden in der Tabelle unter "Dateien" die gespeicherten Dateien sichtbar.
+.. note:: Ehe man den Klassenarbeitsmodus beendet fordert man die
+          Schüler auf, ihre Arbeiten im Ordner "Einsammeln" letztmalig
+          zu speichern. Durch Klick auf "Aktualisieren" werden in der
+          Tabelle unter "Dateien" die gespeicherten Dateien sichtbar.
 
 Der Klassenarbeitsmodus ist damit beendet und der Raum kann wieder als Computerraum benutzt werden.
 
-Die eingesammelten Dateien findet der Lehrer nach dem Beenden des Klassenarbeitsmodus im Ordner _eingesammelt mit einem Datums-Zeitstempel versehen.
+Die eingesammelten Dateien findet der Lehrer nach dem Beenden des Klassenarbeitsmodus im Ordner ``_eingesammelt`` mit einem Datums-Zeitstempel versehen.
 
 .. image:: media/collected-folderview1.png 
 .. image:: media/collected-folderview2.png
