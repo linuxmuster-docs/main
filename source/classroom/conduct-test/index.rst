@@ -25,7 +25,7 @@ Unter `aktueller Raum` findet man den Menüpunkt `Klassenarbeit`, den man mit Kl
 
 .. image:: media/currentroom-test.png 
 
-Bevor der Klassenarbeitsmodus gestartet wird setzt man ein Workstationpasswort, welches man den Teilnehmern an der Klassenarbeit mitteilt (hier: ``frei_wählbar``).
+Bevor der Klassenarbeitsmodus gestartet wird, setzt man ein Workstationpasswort, welches man den Teilnehmern an der Klassenarbeit mitteilt (hier: ``frei_wählbar``).
 
 .. image:: media/set-password-start-test.png
 
@@ -36,13 +36,13 @@ Dateien bereitstellen und Schüler melden sich an
 
 In der Schulkonsole bekommt man nun folgende Informationen:
 
-- an welchem Rechner, welcher Benutzer angemeldet ist
+- an welchem Rechner welcher Benutzer angemeldet ist
 - welche Dateien zum Bereitstellen an die Schüler bereits hochgeladen wurden (hier: die Datei ``Klassenarbeit.txt``).
 
 Schüler melden sich jetzt an den Clients mit jeweiligen PC-Namen als
 Benutzernamen (hier z.B.: ``r306-c01``) und dem Workstationpasswort an
 (hier: ``frei_wählbar``). Solange nicht alle an der Klassenarbeit
-beteiligten Benutzer unter `Login` zu sehen sind klickt man immer
+beteiligten Benutzer unter `Login` zu sehen sind, klickt man immer
 wieder auf `Aktualisieren`.
 
 .. note:: Unter Login dürfen nur Rechnernamen auftauchen, da man sich
@@ -63,7 +63,7 @@ hochzuladen. Um mehrere Dateien bereitzustellen, wiederholen Sie
 diesen Vorgang.
 
 Die bereitzustellenden Dateien werden in der Dateiliste in der
-Schulkonsole angezeigt (hier: ``Klassenarbeit.txt``) angezeigt. Um
+Schulkonsole angezeigt (hier: ``Klassenarbeit.txt``). Um
 diese Dateien nun allen angemeldeten Schülern für die Klassenarbeit
 bereitzustellen, klicken Sie den Button `bereitstellen`.
 
@@ -74,7 +74,7 @@ bereit.
 Passwort neu setzen
 ===================
 
-Man hat jetzt die Möglichkeit ein neues Passwort (hier:
+Man hat jetzt die Möglichkeit,eine ein neues Passwort (hier:
 ``neues_PW_setzen``) zu setzen. Dies verhindert, dass Schüler die
 Computerkonten missbrauchen.
 
@@ -95,9 +95,9 @@ Dateien jeweils im Einsammeln-Ordner abgelegt worden sind.
 
 Der Lehrer hat dann folgende Möglichkeiten:
 
-- Kopien einsammeln (sparsam nutzen ist sinnvoll)
+- Kopien einsammeln (eine sparsame Nutzung ist sinnvoll)
 - Einsammeln der Schülerdateien und Beenden des Klassenarbeitsmodus'
-- Es ist aber auch immer wieder möglich auf "Passwort ändern" zu klicken, um zwischendurch ein neues Passwort zu setzen. Das kann notwendig werden, wenn z.B. ein Rechner während der Klassenarbeit abstürzt und sich ein Schüler erneut anmelden muss.
+- Es ist aber auch immer wieder möglich auf, "Passwort ändern" zu klicken, um zwischendurch ein neues Passwort zu setzen. Das kann notwendig werden, wenn z.B. ein Rechner während der Klassenarbeit abstürzt und sich ein Schüler erneut anmelden muss.
 
 Die Schüler holen sich den Arbeitsauftrag für die Klassenarbeit im Ordner ``V:\Räume\r306\rau`` (Windows) bzw. im Ordner ``Vorlagen_auf_Server/r306/rau`` (Linux) ab.
 
@@ -113,7 +113,7 @@ speichern.
 
 .. image:: media/students-saveto-winclient.png
 
-Sollten Schüler vor Beendigung des Klassenarbeitsmodus die Klassenarbeit abgeben wollen, so müssen Sie sicherstellen, dass diese ihre Arbeit unter ``__einsammeln`` abgespeichert haben. Ist dies der Fall, so können diese den PC herunterfahren. Zur Überprüfung können Sie die Ansicht mit dem Button `Aktualisieren` immer wieder auf den aktuellen Stand bringen.
+Sollten Schüler vor Beendigung des Klassenarbeitsmodus die Klassenarbeit abgeben wollen, so müssen Sie sicherstellen, dass diese ihre Arbeit unter ``__einsammeln`` abgespeichert haben. Ist dies der Fall, so können diese Schüler den PC herunterfahren. Zur Überprüfung können Sie die Ansicht mit dem Button `Aktualisieren` immer wieder auf den aktuellen Stand bringen.
 
 Klassenarbeit beenden und Daten einsammeln
 ==========================================
@@ -122,7 +122,7 @@ Ist die Klassenarbeit beendet, dann klickt der Lehrer auf `Einsammeln und beende
 
 .. image:: media/collect-and-finish.png
 
-und wird im folgenden Fenster aufgefordert das Beenden zu bestätigen.
+und wird im folgenden Fenster aufgefordert, das Beenden zu bestätigen.
 
 .. image:: media/confirm-finish.png
 
