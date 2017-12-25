@@ -25,7 +25,7 @@ Bevor der Klassenarbeitsmodus gestartet wird, setzt man ein Workstationpasswort,
 
 .. image:: media/set-password-start-test.png
 
-und startet mit Klick auf `Klassenarbeit starten` den Klassenarbeitsmodus.
+und startet mit Klick auf ``Klassenarbeit starten`` den Klassenarbeitsmodus.
 
 Dateien bereitstellen und Schüler melden sich an
 ================================================
