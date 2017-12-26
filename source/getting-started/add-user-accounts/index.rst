@@ -47,7 +47,7 @@ und sehen ein leeres Fenster.
 .. image:: media/user-management-students-empty.png
 
 .. note:: Prinzipiell kann man die Schülerliste per `"Copy und Paste"`  in das leere Fenster einfügen. Hier wird gezeigt wie man die Datei importiert.
-.. note:: Die Schülerliste muss im CSV-Format in der Form ``"Klasse; Zuname; Vorname; Geburtsdatum; Nr."`` vor liegen. Dabei ist das letzte Feld optional. Es enthält die im Schulverwaltungsprogramm eindeutig vergebene Schülernummer. Ist sie vorhanden, sollte man sie unbedingt mit übernehmen, das sie die Identifikation des richtigen Datensatzes bei Versetzungen, Namensänderungen usw. erheblich erleichtert. Falls die Nummer nicht vorhanden ist, besteht jede Zeile nur aus den 4 Feldern.
+.. note:: Die Schülerliste muss im CSV-Format in der Form ``"Klasse; Zuname; Vorname; Geburtsdatum; Nr."`` vor liegen. Dabei ist das letzte Feld optional. Es enthält die im Schulverwaltungsprogramm eindeutig vergebene Schülernummer. Ist sie vorhanden, sollte man sie unbedingt mit übernehmen, das sie die Identifikation des richtigen Datensatzes bei Versetzungen, Namensänderungen usw. erheblich erleichtert. Falls die Nummer nicht vorhanden ist, besteht jede Zeile nur aus den 4 Feldern. Die Schülerwaltungsprogramme der Länder besitzen idR. eine Funktion um Schülerdaten als .CSV-Datei zu exportieren. Diese Datei muss man sich als Administrator aushändigen lassen, wenn man nicht selbst Zugang zum Schülerverwaltungsprogramm hat.
 
 Nach Klick auf `Durchsuchen`
 
