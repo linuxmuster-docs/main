@@ -26,7 +26,7 @@ ausgeführt werden:
 *   Alle Benutzerlisten auf Fehleingaben, oder Ähnlichkeiten mit vorhandenen Benutzern prüfen.
 *   Danach evtl. die Benutzerlisten entsprechend korrigieren.
 *   Benutzerdaten übernehmen, d.h. Benutzer jetzt tatsächlich anlegen
-*   Passwortlisten bzw. Anmeldekärtchen ausdrucken
+*   Passwortlisten bzw. Anmeldekärtchen ausdrucken (idR. durch das Lehrpersonal)
 
 Im folgenden wird gezeigt wie die Erstaufnahme von Schülern vonstatten geht.
 
