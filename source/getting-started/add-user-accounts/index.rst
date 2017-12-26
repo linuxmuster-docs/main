@@ -32,7 +32,7 @@ Im folgenden wird gezeigt wie die Erstaufnahme von Schülern vonstatten geht.
 
 Erstaufnahme von Schülern
 -------------------------
-.. note:: Alle hier aufgelistete Schülernamen sind frei erfunden. Sollte es dennoch Menschen mit dem gleichen Namen geben, dann ist das Zufall.
+.. note:: Alle hier aufgelistete Schülernamen sind Beispielhaft und frei erfunden. Sollte es dennoch Menschen mit der gleichen Namenskombination geben, dann ist das Zufall.
 
 Benutzerverwaltung ist Sache des Administrators, deshalb loggt sich der Administrator in die Schulkonsole ein
 
