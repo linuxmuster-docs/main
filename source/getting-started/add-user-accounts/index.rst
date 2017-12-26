@@ -45,7 +45,7 @@ und sehen ein leeres Fenster.
 
 .. image:: media/user-management-students-empty.png
 
-.. note:: Prinzipiell kann man die Schülerliste per Copy und Paste in dieses leere Fenster einfügen. Hier wird gezeigt wie man diese Datei importiert.
+.. note:: Prinzipiell kann man die Schülerliste per Copy und Paste in das leere Fenster einfügen. Hier wird gezeigt wie man die Datei importiert.
 
 Nach Klick auf `Durchsuchen`
 
