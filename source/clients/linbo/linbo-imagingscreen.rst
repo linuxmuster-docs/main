@@ -72,6 +72,8 @@ vorherigen Abbilds erstellt.
 Wird ein neuer Dateiname gewählt, kann man Informationen zu dem neuen
 Image verfassen.
 
+.. importend :: Vergibt man einen neuen Dateinamen, sollte man sicher stellen, dass die Cache-Partition über ausreichend Platz verfügt. Ist nicht genügend Platz  vorhanden, dann schlägt das Erstellen des Abbildes fehl.
+
 Wird "Differentielles Image" gewählt, dann gilt der neue Dateiname für
 das zu erstellende differentielle Image (mit der Dateiendung '.rsync').
 
