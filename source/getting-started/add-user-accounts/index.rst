@@ -92,6 +92,8 @@ Gegebenenfalls muss man die Datei schueler.txt noch überarbeiten, wenn in der L
 
 Sind alle Fehler beseitigt, dann klickt man auf `Benutzerdaten übernehmen`
 
+.. note:: Man kann - auch wenn noch nicht alle Fehler beseitigt sind - auf `Benutzerdaten übernehmen` und `Benutzer anlegen` klicken. Dann werden die Schüler angelegt, bei denen die Datensätze in Ordnung sind. Man fährt danach mit dem Schritt `Benutzerlisten überprüfen` s.O. fort.
+
 Es wird erneut eine Liste der anzulegenden Schüler angezeigt
 
 .. image:: media/students-adduser.png
