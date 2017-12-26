@@ -186,6 +186,8 @@ Geben Sie den Benutzer root an und das Passwort das Sie während der Installatio
 .. figure:: media/xenserver/image27.png
    :align: center
    :alt: Schritt 27 der Installation des XenServers
+   
+.. note:: Sollten Sie ein Raid installiert haben sollten Sie vor diesem Schritt warten bis das Raid komplett initialisiert ist. Je größer das Raid, desto länger die Wartezeit. U.U kann man eine Nacht Wartezeit einkalkulieren (z.B. bei 6 Terrabyte Festplattengröße). Wartet man nicht, so kann der Import der Maschinen fehl schlagen, weil das Raid noch nicht bereit ist und damit die Festplatte nicht zur Verfügung steht.   
 
 Geben Sie in der Konsole den Befehl ``linuxmuster-hv-setup --first`` ein und bestätigen Sie mit Enter
 
