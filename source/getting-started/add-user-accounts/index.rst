@@ -106,3 +106,5 @@ Bei einer großen Schülerzahl kann es einige Stunden dauern bis das folgende Bi
 .. image:: media/students-adduser-finished.png
 
 Damit ist die Erstaufnahme abgeschlossen.
+
+.. note:: Im Sinne einer vernünftigen Arbeitsteilung sollte der Ausdruck der Kärtchen mit den Anmeldenamen und Passwörtern den Lehrern überlassen werden die mit den Schülern den Computerraum benutzen. Lehrer sollen auch die Passwörter von Schülern ändern, wenn das Passwort vergessen wurde.
