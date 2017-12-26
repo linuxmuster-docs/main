@@ -45,11 +45,13 @@ und sehen ein leeres Fenster.
 
 .. image:: media/user-management-students-empty.png
 
+.. note:: Prinzipiell kann man die Schülerliste per Copy und Paste in dieses leere Fenster einfügen. Hier wird gezeigt wie man diese Datei importiert.
+
 Nach Klick auf `Durchsuchen`
 
 .. image:: media/user-management-browse.png
 
-navigiert man zu dem Ort an dem die aus der Schülerverwaltungsdatei exportierte Datei liegt. Hier der ``Desktop``
+navigiert man zu dem Ort an dem die aus der Schülerverwaltungsdatei exportierte Datei liegt. Hier auf dem ``Desktop`` die Datei ``schueler_aus_export.txt``.
 
 .. image:: media/students-import-1.png
 
@@ -65,17 +67,17 @@ Mit Klick auf `Änderungen speichern`
 
 .. image:: media/students-import-5.png
 
-werden die aufzunehmenden Schüler in der Datei schueler.txt abgespeichert
+werden die aufzunehmenden Schüler in der Datei ``schueler.txt`` auf dem Server unter ``/etc/sophomorix/user/`` abgespeichert
 
-Nun muss de Datei schueler.txt überprüft werden. Dies geschieht durch Auswahl im Menü `Benutzer` `Benutzerlisten prüfen`
+Nun muss die Datei schueler.txt überprüft werden. Dies geschieht durch Auswahl im Menü `Benutzer` `Benutzerlisten prüfen`,
 
 .. image:: media/studentslist-check.png
 
-um dann auf `Benutzerlisten überprüfen` zu klicken
+um dann auf `Benutzerlisten überprüfen` zu klicken.
 
 .. image:: media/studentslist-check-2.png
 
-Ist das Prüfen beendet erhält man eine Liste ähnlich der hier gezeigten
+Ist das Überprüfen beendet erhält man eine Liste ähnlich der hier gezeigten
 
 .. image:: media/studentslist-check-finished.png
 
@@ -89,7 +91,7 @@ Es wird erneut eine Liste der anzulegenden Schüler angezeigt
 
 .. image:: media/students-adduser.png
 
-Unterhalb dieser Liste klickt man auf `Benutzer anlegen`
+Unterhalb dieser Liste klickt man auf `Benutzer anlegen`.
 
 Es folgen Statusmeldungen wie die im folgenden Bild gezeigten
 
