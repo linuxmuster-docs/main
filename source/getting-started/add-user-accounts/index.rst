@@ -79,6 +79,10 @@ um dann auf `Benutzerlisten überprüfen` zu klicken.
 
 Ist das Überprüfen beendet erhält man eine Liste ähnlich der hier gezeigten
 
+.. note :: Das Überprüfen ist nötig um eventuelle Fehler ausfindig zu machen. In mindestens einem Bundesland ist es möglich den Schüler-Namen mit Zahlen zu versehen. Solche Fehler meldet Sophomorix. Ebenfall gemeldet werden Geburtsdaten die nicht der Realität entprechen.
+
+.. note :: Um Probleme zu vermeiden ist es ratsam Sonderzeichen `ä; ö; ü; ß` umzuwandeln in àe; oe; ue; ss`.
+
 .. image:: media/studentslist-check-finished.png
 
 Gegebenenfalls muss man die Datei schueler.txt noch überarbeiten, wenn in der Liste Fehler gemeldet werden
