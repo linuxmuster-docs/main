@@ -89,7 +89,7 @@ folgenden Bedeutungen
 
    Neu+Start Knopf
 
-   formatiert die relevante Parition neu, synchronisiert das System
+   formatiert die relevante Partition neu, synchronisiert das System
    von Grund auf mit dem aktuellen Image und startet das System wie
    bei "Sync+Start".
 
