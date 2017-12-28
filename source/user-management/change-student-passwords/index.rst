@@ -25,7 +25,7 @@ Wählen Sie nun Ihre Klasse aus indem Sie auf die Klassenbezeichnung klicken.
 
 .. note:: 
 
-   Falls Ihre Klasse nicht in der oberen Liste (im Beispiel: 10b)
+   Falls Ihre Klasse nicht in der oberen Liste (im Beispiel: 11c)
    auftaucht, müssen Sie sich zunächst in die Klasse eintragen. Wählen
    Sie dazu im Dropdown-Menü die Klasse aus und klicken anschließend
    auf "Eintragen".
