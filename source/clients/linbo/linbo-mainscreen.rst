@@ -101,7 +101,11 @@ folgenden Bedeutungen
    
 .. figure:: ./media/linbo-mainscreen/ubuntu.png
 
-   Standardknopf
+   Standardknopf Ubuntu
+
+.. figure:: ./media/linbo-mainscreen/Windows.png
+
+   Standardknopf Windows
 
    führt die Startmethode aus, die als solche definiert wurde.
 
