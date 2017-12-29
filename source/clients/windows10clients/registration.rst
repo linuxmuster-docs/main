@@ -96,9 +96,22 @@ Sie die Schulkonsole von einem bereits importierten Rechner aus an:
 https://server:242 und melden sich als ``administrator`` an.
 
 Auf der Hosts-Seite der Schulkonsole können neue Rechner direkt
-eingetragen werden und es erscheinen alle neuen Clients als `noch
-nicht ins System übernommen`.  Ein Klick auf die Schaltfläche `Hosts
-jetzt übernehmen` erledigt das und die neu registrierten Clients sind
-importiert.
+eingetragen werden.
 
-.. image:: media/registration/hosts-uebernehmen-schulkonsole.png
+.. image:: media/registration/Rechneraufnahme_1.png
+
+Ein Klick auf die Schaltfläche `Hosts jetzt übernehmen` importiert die neu registrierten Clients.
+
+.. image:: media/registration/Rechneraufnahme_2.png
+
+Im Bild endet die Aufnahme mit einer Fehlermeldung
+
+.. image:: media/registration/Rechneraufnahme_3.png
+
+Nach Beseitigen des Fehlers und Klick auf die Schaltfläche `Hosts jetzt übernehmen` werden die Clients importiert.
+
+.. image:: media/registration/Rechneraufnahme_4.png
+
+Die Rechneraufnahme wird von diversen Log-Meldungen begleitet und endet mit dem folgenden Fenster.
+
+.. image:: media/registration/Rechneraufnahme_5.png
