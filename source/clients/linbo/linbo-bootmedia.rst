@@ -19,5 +19,8 @@ Mit ``Enter`` wird der Client gebootet
 
 Mit der Auswahl ``Ersteinrichtung + Neustart`` wird Linbo eingerichtet und der Rechner mit Linbo gestartet.
 
+Nach einem Neustart stehen alle Linbo-Funktionen zur Verfügung.
+
+.. image:: media/linbo_screen4.png
 
 
