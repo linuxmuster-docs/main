@@ -36,13 +36,13 @@ Nun sind Sie LINBO-Administrator. Auf der Imaging-Seite fällt das Timeout-Fenst
 .. note::
 
    Raumbezeichnung
-     Geben Sie hier den Namen des Raums (z.B. r100 oder g1r100)
+     Geben Sie hier den Namen des Raums (z.B. r111 oder g1r100)
      ein. Beachten Sie bitte, dass die Bezeichnung des Raumes oder auch
      des Gebäudes mit einem Kleinbuchstaben beginnen muss. Sonderzeichen
      sind nicht erlaubt.
 
    Rechnername
-     z.B. in der Form r100-pc01 (max. 15 Zeichen), (evtl. Gebäude
+     z.B. in der Form r111-pc03 (max. 15 Zeichen), (evtl. Gebäude
      berücksichtigen g21r100-pc01) eingeben. Beachten Sie bitte, dass als
      Zeichen nur Buchstaben und Zahlen erlaubt sind. Als Trennzeichen
      darf nur das Minus-Zeichen ``-`` verwendet werden. Leerzeichen,
@@ -52,12 +52,12 @@ Nun sind Sie LINBO-Administrator. Auf der Imaging-Seite fällt das Timeout-Fenst
    IP Adresse
      Die IP-Adresse sollte zum Raum passen und **muss** außerhalb des
      Bereichs für die Rechneraufnahme liegen. Abhängig von Ihren
-     Netzdaten z.B. 10.16.100.1 für diesen PC eingeben, üblicherweise
+     Netzdaten z.B. 10.16.11.3 für diesen PC eingeben, üblicherweise
      **nicht** zwischen 10.16.1.100 und 10.16.1.200 (Bereich für die
      Rechneraufnahme).
 
    Rechnergruppe
-     In der Rechnergruppe, bspw. `xenial` werden mehrere (idealerweise
+     In der Rechnergruppe, bspw. `win7` werden mehrere (idealerweise
      alle) ähnlichen Rechner zusammengefasst, die eine (nahezu)
      identische Konfiguration bekommen.
 
@@ -67,7 +67,7 @@ Ist alles korrekt ausgefüllt, werden die Clientdaten über die Schaltfläche `R
 .. note::
 
    Werden weitere Clients registriert, dann muss man die Felder nicht mehr ausfüllen. Linbo inkrementiert an der richtigen
-   Stelle automatisch. Z.B. wird aus `r100-pc01` = `r100-pc02` und aus der IP-Adresse `10.16.100.1` =  `10.16.100.2`.
+   Stelle automatisch. Z.B. wird aus `r111-pc03` = `r111-pc04` und aus der IP-Adresse `10.16.11.3` =  `10.16.111.4`.
    Es versteht sich von selbst dass, will man das Feature nutzen, man die Rechner in der richtigen Reihenfolge registrieren
    muss!
 
