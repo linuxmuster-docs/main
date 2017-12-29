@@ -106,6 +106,8 @@ Ein Klick auf die Schaltfläche `Hosts jetzt übernehmen` importiert die neu reg
 
 Im Bild endet die Aufnahme mit einer Fehlermeldung
 
+.. image:: media/registration/Rechneraufnahme_3a.png
+
 .. image:: media/registration/Rechneraufnahme_3.png
 
 Nach Beseitigen des Fehlers und Klick auf die Schaltfläche `Hosts jetzt übernehmen` werden die Clients importiert.
