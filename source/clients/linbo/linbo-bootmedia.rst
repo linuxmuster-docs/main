@@ -6,9 +6,9 @@ Zum Brennen auf CD/DVD oder zum Kopieren auf einen USB-Stick kann man unter der 
 
 https://server/linbo.iso
 
-.. image:: media/
+.. image:: media/linbo_screen1.pg
 
-:: image:: media/
+.. image:: media/linbo_screen2.png
 
 das aktuelle LINBO herunterladen und auf einen USB-Stick oder eine
 CD/DVD kopieren.
