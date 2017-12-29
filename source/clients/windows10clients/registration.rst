@@ -15,7 +15,7 @@ die Aufnahme eines neuen Rechners ins System vorzubereiten.
 
 Starten Sie den Rechner per PXE-Boot
 
-.. image:: media/registration/linbo-empty-startpage.png
+.. image:: media/registration/linbo-empty-startpage1.png
 
 Klicken Sie auf den Reiter ''Imaging'' und loggen Sie sich mit dem LINBO-Passwort ein.
 
