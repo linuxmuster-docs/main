@@ -100,7 +100,7 @@ eingetragen werden.
 
 .. image:: media/registration/Rechneraufnahme_1.png
 
-Ein Klick auf die Schaltfläche `Hosts jetzt übernehmen` importiert die neu registrierten Clients.
+Ein Klick auf die Schaltfläche `Änderungen übernehmen` importiert die neu registrierten Clients.
 
 .. image:: media/registration/Rechneraufnahme_2.png
 
@@ -110,7 +110,7 @@ Im Bild endet die Aufnahme mit einer Fehlermeldung
 
 .. image:: media/registration/Rechneraufnahme_3.png
 
-Nach Beseitigen des Fehlers und Klick auf die Schaltfläche `Hosts jetzt übernehmen` werden die Clients importiert.
+Nach Beseitigen des Fehlers und Klick auf die Schaltfläche `Änderungen übernehmen` werden die Clients importiert.
 
 .. image:: media/registration/Rechneraufnahme_4.png
 
