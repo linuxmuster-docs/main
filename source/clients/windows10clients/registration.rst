@@ -70,6 +70,8 @@ Ist alles korrekt ausgefüllt, werden die Clientdaten über die Schaltfläche `R
    Stelle automatisch. Z.B. wird aus `r111-pc03` = `r111-pc04` und aus der IP-Adresse `10.16.11.3` =  `10.16.111.4`.
    Es versteht sich von selbst dass, will man das Feature nutzen, man die Rechner in der richtigen Reihenfolge registrieren
    muss!
+   
+.. importent:: "Linbo inkrementiert an der richtigen Stelle automatisch" funtioniert nur, wenn die Rechner in der richtigen Reigenfolge hoch gefahren werden!
 
 Registrierung übernehmen
 ------------------------
