@@ -11,7 +11,7 @@ Starten Sie den PC auf dem Sie das Image erstellen möchten neu und booten wiede
 
 |100000000000032A00000261ABEB2582_png|
 
-Wechseln Sie auf den Reiter Imaging, geben Sie das Passwort ein und bestätigen Sie mit `Enter`.
+Wechseln Sie auf den Reiter Imaging, geben Sie das Passwort ein und bestätigen Sie mit ``Enter``.
 
 |100000000000032A000002612A58B1AE_png|
 
