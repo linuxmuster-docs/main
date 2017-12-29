@@ -71,7 +71,7 @@ Ist alles korrekt ausgefüllt, werden die Clientdaten über die Schaltfläche `R
    Es versteht sich von selbst dass, will man das Feature nutzen, man die Rechner in der richtigen Reihenfolge registrieren
    muss!
    
-.. importent:: "Linbo inkrementiert an der richtigen Stelle automatisch" funtioniert nur, wenn die Rechner in der richtigen Reigenfolge hoch gefahren werden!
+.. important:: "Linbo inkrementiert an der richtigen Stelle automatisch" funtioniert nur, wenn die Rechner in der richtigen Reigenfolge hoch gefahren werden!
 
 Registrierung übernehmen
 ------------------------
