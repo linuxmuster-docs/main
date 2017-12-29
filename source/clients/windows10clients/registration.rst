@@ -57,7 +57,7 @@ Nun sind Sie LINBO-Administrator. Auf der Imaging-Seite fällt das Timeout-Fenst
      Rechneraufnahme).
 
    Rechnergruppe
-     In der Rechnergruppe, bspw. `win7` werden mehrere (idealerweise
+     In der Rechnergruppe, bspw. `win10` werden mehrere (idealerweise
      alle) ähnlichen Rechner zusammengefasst, die eine (nahezu)
      identische Konfiguration bekommen.
 
