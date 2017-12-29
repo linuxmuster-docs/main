@@ -10,8 +10,6 @@ Client per PXE booten.
 
 .. image:: media/rollout/linbo-empty-startpage1.png
 
-.. image:: media/rollout/linbo-empty-startpage1.png
-
 Lesen Sie die "MAC-Adresse" im LINBO-Startbildschirm ab.
 
 Öffnen Sie die Datei ``/etc/linuxmuster/workstations`` auf dem Server.
