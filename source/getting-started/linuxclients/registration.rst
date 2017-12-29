@@ -8,7 +8,7 @@ Neue Rechner werden durch direkten Eintrag in die Datei
 Ermitteln Sie die MAC-Adresse des ersten Clients, z.B. indem Sie den
 Client per PXE booten.
 
-.. image:: ../../clients/windows10clients/media/registration/linbo-empty-startpage.png
+.. image:: ../../clients/windows10clients/media/registration/linbo-empty-startpage1.png
 
 Lesen Sie die "MAC-Adresse" im LINBO-Startbildschirm ab.
 
