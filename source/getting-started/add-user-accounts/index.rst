@@ -90,7 +90,7 @@ Ist das Überprüfen beendet erhält man eine Liste ähnlich der hier gezeigten
 
 .. image:: media/studentslist-check-finished.png
 
-Gegebenenfalls muss man die Datei schueler.txt noch überarbeiten, wenn in der Liste Fehler gemeldet werden
+Gegebenenfalls muss man die Datei schueler.txt noch überarbeiten, wenn in der Liste Fehler gemeldet werden. Das Überarbeiten kann selbstverständlich in der Schulkonsole erfolgen.
 
 .. image:: media/studentslist-check-confirm.png
 
