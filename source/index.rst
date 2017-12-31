@@ -70,6 +70,8 @@ Dabei richtet sich die Dokumentation an verschiedene Zielgruppen. Das Handbuch f
   classroom/print-student-passwords/index
   classroom/check-own-quota/index
   classroom/check-student-quota/index
+  classroom/wlan_klasse/index
+  classroom/wlan_projekt/index
 
 .. toctree::
   :maxdepth: 1
