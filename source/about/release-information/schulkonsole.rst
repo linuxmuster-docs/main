@@ -288,3 +288,7 @@ Die Datei **/etc/linuxmuster/wlan_defaults** kann auch via Schulkonsole verände
 
 .. image:: media/WLAN_config.png
 
+.. image:: media/WLAN_config_2.png
+
+
+
