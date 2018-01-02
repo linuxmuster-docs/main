@@ -1,0 +1,132 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 14:37+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2018\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/getting-started/linuxclients/registration.rst:2
+msgid "Computer in Netzwerk aufnehmen"
+msgstr "Register computer in the network"
+
+#: ../../source/getting-started/linuxclients/registration.rst:4
+msgid ""
+"Neue Rechner werden durch direkten Eintrag in die Datei "
+"``/etc/linuxmuster/workstations`` und anschließendem Aufruf von "
+"``import_workstations`` aufgenommen."
+msgstr ""
+"New machines are added by direct entry into the file "
+"`/etc/linuxmuster/workstations` and then called `import_workstations`."
+
+#: ../../source/getting-started/linuxclients/registration.rst:8
+msgid ""
+"Ermitteln Sie die MAC-Adresse des ersten Clients, z.B. indem Sie den Client "
+"per PXE booten."
+msgstr ""
+"Determine the MAC address of the first client, e.g. by booting the client "
+"via PXE."
+
+#: ../../source/getting-started/linuxclients/registration.rst:13
+msgid "Lesen Sie die \"MAC-Adresse\" im LINBO-Startbildschirm ab."
+msgstr "Read the \"MAC address\" on the LINBO start screen."
+
+#: ../../source/getting-started/linuxclients/registration.rst:15
+msgid "Öffnen Sie die Datei ``/etc/linuxmuster/workstations`` auf dem Server."
+msgstr "Open the `/etc/linuxmuster/workstations` file on the server."
+
+#: ../../source/getting-started/linuxclients/registration.rst:21
+msgid "Tragen Sie dort den Rechner ein mit folgender Syntax"
+msgstr "Enter the computer with the following syntax"
+
+#: ../../source/getting-started/linuxclients/registration.rst:31
+msgid "Raum"
+msgstr "room"
+
+#: ../../source/getting-started/linuxclients/registration.rst:28
+msgid ""
+"Geben Sie hier den Namen des Raums (z.B. r100 oder g1r100) ein. Beachten Sie"
+" bitte, dass die Bezeichnung des Raumes oder auch des Gebäudes mit einem "
+"Kleinbuchstaben beginnen muss. Sonderzeichen sind nicht erlaubt."
+msgstr ""
+"Enter the name of the room (for example, r100 or g1r100). Please note that "
+"the name of the room or the building must begin with a lowercase letter. "
+"Special characters are not allowed."
+
+#: ../../source/getting-started/linuxclients/registration.rst:39
+msgid "Rechnername"
+msgstr "Hostname"
+
+#: ../../source/getting-started/linuxclients/registration.rst:34
+msgid ""
+"z.B. in der Form r100-pc01 (max. 15 Zeichen), (evtl. Gebäude berücksichtigen"
+" g21r100-pc01) eingeben. Beachten Sie bitte, dass als Zeichen nur Buchstaben"
+" und Zahlen erlaubt sind. Als Trennzeichen darf nur das Minus-Zeichen ``-`` "
+"verwendet werden. Leerzeichen, Unterstriche oder andere Sonderzeichen (wie "
+"z.B. Umlaute, ß oder Satzzeichen) dürfen Sie hier unter keinen Umständen "
+"verwenden."
+msgstr ""
+"e.g. In the form r100-pc01 (up to 15 characters), (if necessary, take the "
+"building into account g21r100-pc01). Please note that only characters and "
+"numbers are allowed as characters. Only the hyphen ``-`` may be used as a "
+"separator. You may not use spaces, underlines or other special characters "
+"(such as german Umlaute, ß or punctuation marks) under any circumstances."
+
+#: ../../source/getting-started/linuxclients/registration.rst:46
+msgid "IP Adresse"
+msgstr "IP Address"
+
+#: ../../source/getting-started/linuxclients/registration.rst:42
+msgid ""
+"Die IP-Adresse sollte zum Raum passen und **muss** außerhalb des Bereichs "
+"für die Rechneraufnahme liegen. Abhängig von Ihren Netzdaten z.B. "
+"10.16.100.1 für diesen PC eingeben, üblicherweise **nicht** zwischen "
+"10.16.1.100 und 10.16.1.200 (Bereich für die Rechneraufnahme)."
+msgstr ""
+"The IP address should fit to the room and **must be** outside the default "
+"DHCP range. Depending on your network data, you can enter e.g. 10.16.100.1 "
+"for this PC, usually **not** between 10.16.1.100 and 10.16.1.200 (default "
+"DHCP range)."
+
+#: ../../source/getting-started/linuxclients/registration.rst:51
+msgid "Rechnergruppe"
+msgstr "Host Group"
+
+#: ../../source/getting-started/linuxclients/registration.rst:49
+msgid ""
+"In der Rechnergruppe, bspw. `xenial` werden mehrere (idealerweise alle) "
+"ähnlichen Rechner zusammengefasst, die eine (nahezu) identische "
+"Konfiguration bekommen."
+msgstr ""
+"In the computer group, e.g. `xenial`, several (almost all) similar computers"
+" are combined, which get an (nearly) identical configuration."
+
+#: ../../source/getting-started/linuxclients/registration.rst:53
+msgid "Beispielkonfiguration."
+msgstr "Sample configuration."
+
+#: ../../source/getting-started/linuxclients/registration.rst:59
+msgid "Der registrierte Client wird nun mit dem Konsolenbefehl"
+msgstr "The registered client is now using the console command"
+
+#: ../../source/getting-started/linuxclients/registration.rst:65
+msgid ""
+"ins System aufgenommen und der Rechnergruppe `xenial` zugewiesen. Wenn Sie "
+"mit dem zuvor heruntergeladenen Standard-Linuxclient eine Rechnergruppe "
+"`xenial` erstellt haben, kann nun der Rechner fertig eingerichtet werden."
+msgstr ""
+"into the system and assigned to the computer group `xenial`. If you have "
+"created a computer group `xenial` with the previously downloaded standard "
+"Linux client, the computer can now be set up."

@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 14:37+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/clients/linbo/linbo-bootmedia.rst:3
+msgid "Boot-Abbild für USB-Sticks und CD/DVD"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-bootmedia.rst:5
+msgid ""
+"Zum Brennen auf CD/DVD oder zum Kopieren auf einen USB-Stick kann man unter "
+"der Adresse"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-bootmedia.rst:7
+msgid ""
+"https://server/linbo.iso das aktuelle LINBO herunterladen und auf einen USB-"
+"Stick oder eine CD/DVD kopieren."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-bootmedia.rst:10
+msgid ""
+"Das Booten eines Rechers mit einem Linbo-Stick/Linbo-CD/CVD kann nötig "
+"werden, wenn - in seltenen Fällen - Linbo nicht per PXE installiert wird."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-bootmedia.rst:12
+msgid ""
+"Bootet man einen Rechner vom Stick, oder von einer CD/DVD, dann sieht man "
+"folgendes Bild:"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-bootmedia.rst:16
+msgid "Mit ``Enter`` wird der Client gebootet"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-bootmedia.rst:20
+msgid ""
+"Mit der Auswahl ``Ersteinrichtung + Neustart`` wird Linbo eingerichtet und "
+"der Rechner mit Linbo gestartet."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-bootmedia.rst:22
+msgid "Nach einem Neustart stehen alle Linbo-Funktionen zur Verfügung."
+msgstr ""

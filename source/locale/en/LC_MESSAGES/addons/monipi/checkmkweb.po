@@ -8,9 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-22 00:46+0100\n"
+"POT-Creation-Date: 2018-01-02 14:37+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,92 +19,79 @@ msgstr ""
 
 #: ../../source/addons/monipi/checkmkweb.rst:2
 msgid "Hinzufügen des Servers zu OMD/check_mk"
-msgstr "Adding server to OMD/check_mk"
+msgstr ""
 
 #: ../../source/addons/monipi/checkmkweb.rst:4
 msgid ""
 "Im letzten Schritt muss der vorbereitete Server im Webinterface von "
 "OMD/check_mk aufgenommen werden."
 msgstr ""
-"In the last step, the prepared server must be included in the OMD/check_mk "
-"web interface."
 
 #: ../../source/addons/monipi/checkmkweb.rst:8
 msgid "Anmeldung am Check_MK Webinterface des MoniPi"
-msgstr "Log in to the Check_MK Web Interface of the MoniPi"
+msgstr ""
 
 #: ../../source/addons/monipi/checkmkweb.rst:10
 msgid ""
 "Melden Sie sich am Webinterface unter der Adresse ``https://<ip-des-"
 "monipi>/default/`` mit den folgenden Zugangsdaten an:"
 msgstr ""
-"Login to the Webinterface under ``https://<ip-des-monipi>/default/`` with "
-"the following credetials:"
 
 #: ../../source/addons/monipi/checkmkweb.rst:12
 msgid "Benutzername: omdadmin"
-msgstr "User name: omdadmin"
+msgstr ""
 
 #: ../../source/addons/monipi/checkmkweb.rst:13
 msgid "Passwort: omd"
-msgstr "Password: omd"
+msgstr ""
 
 #: ../../source/addons/monipi/checkmkweb.rst:15
 msgid ""
 "Die Zertifikatswarnung müssen Sie ignorieren (die Verbindung wird mit einem "
 "debian-Snake-Oil-Zertifikat verschlüsselt)."
 msgstr ""
-"You must ignore the certificate warning (the connection is encrypted with a "
-"debian Snake-Oil certificate)."
 
 #: ../../source/addons/monipi/checkmkweb.rst:20
 msgid ""
 "Anschließend sollten Sie auf das Webinterface von Check_MK weitergeleitet "
 "werden."
-msgstr "You should then be redirected to the Web interface of Check_MK."
+msgstr ""
 
 #: ../../source/addons/monipi/checkmkweb.rst:26
 msgid "Ändern des Passworts"
-msgstr "Change the password"
+msgstr ""
 
 #: ../../source/addons/monipi/checkmkweb.rst:29
 msgid ""
 "Ändern Sie unbedingt als erstes das Passwort für den administrativen "
 "Benutzer des Webinterfaces."
 msgstr ""
-"Be sure to first change the password for the administrative user of the Web "
-"Interface."
 
 #: ../../source/addons/monipi/checkmkweb.rst:31
 msgid ""
 "Klicken Sie zunächst auf das Werkzeugsymol in der linken unteren Ecke des "
 "Webinterfaces."
 msgstr ""
-"First, click the tool icon in the lower-left corner of the Web Interface."
 
 #: ../../source/addons/monipi/checkmkweb.rst:37
 msgid ""
 "Geben Sie in der nächsten Maske zweimal ein neues Passwort ein und "
 "übernehmen Sie es mit Klick auf \"Save\"."
 msgstr ""
-"Enter a new password twice in the next screen and accept it by clicking on "
-"\"Save\"."
 
 #: ../../source/addons/monipi/checkmkweb.rst:43
 msgid "Einrichtung des linuxmuster.net Servers als weiteren Host"
-msgstr "Setup the linuxmuster.net server as another host"
+msgstr ""
 
 #: ../../source/addons/monipi/checkmkweb.rst:44
 msgid ""
 "Wählen Sie in der Box \"Wato-Configuration\" links unten den Bereich "
 "\"Hosts\" aus, um zur Hostliste zu gelangen."
 msgstr ""
-"Select the \"Hosts\" area in the \"Wato-Configuration\" box at the bottom "
-"left to get to the host list."
 
 #: ../../source/addons/monipi/checkmkweb.rst:49
 msgid "Legen Sie durch Klick auf \"New Host\" einen neuen Host an."
-msgstr "Click on \"New Host\" to create a new host."
+msgstr ""
 
 #: ../../source/addons/monipi/checkmkweb.rst:54
 msgid ""
@@ -114,10 +100,6 @@ msgid ""
 " Sie die IP-Adresse des Servers ein. Schließen Sie den Vorgang mit einem "
 "Klick auf ``Save & go to Services`` ab."
 msgstr ""
-"Enter a hostname, which should be checked by the system to be monitored in "
-"the Check-MK web interface, check the ``IP address`` and enter the IP "
-"address of the server. Close the process by clicking ``Save & go to "
-"Service``."
 
 #: ../../source/addons/monipi/checkmkweb.rst:59
 msgid ""
@@ -125,36 +107,28 @@ msgid ""
 "ist, werden die überwachten Dienste des Servers angezeigt, die die "
 "automatische Inventarisierung auf dem Server finden konnte."
 msgstr ""
-"If the server is reachable on port 6556 at the specified IP address, the "
-"monitored services of the server that the automatic inventory could find on "
-"the server are displayed."
 
 #: ../../source/addons/monipi/checkmkweb.rst:61
 msgid ""
 "Übernehmen Sie diese Dienste mit einem Klick auf ``Automatic Refresh (Tabula"
 " Rasa)``."
 msgstr ""
-"Apply these services by clicking on `` Automatic Refresh (Tabula Rasa) ``."
 
 #: ../../source/addons/monipi/checkmkweb.rst:66
 msgid ""
 "Das Webinterface springt zurück zur Hostliste und zeigt oben in Orange, dass"
 " es ungespeicherte Änderungen gibt. Klicken Sie auf den orangenen Button."
 msgstr ""
-"The Web Interface jumps back to the host list and shows in orange that there"
-" are unsaved changes. Click on the orange button."
 
 #: ../../source/addons/monipi/checkmkweb.rst:71
 msgid ""
 "Die ungespeicherten Änderungen werden angezeigt, übernehmen Sie diese mit "
 "einem Klick auf ``Activate Changes`` ins System."
 msgstr ""
-"The unsaved changes will be displayed and you will be taken to the system by"
-" clicking on ``Activate Changes``."
 
 #: ../../source/addons/monipi/checkmkweb.rst:76
 msgid "Die Änderungen werden übernommen."
-msgstr "The changes are accepted."
+msgstr ""
 
 #: ../../source/addons/monipi/checkmkweb.rst:81
 msgid ""
@@ -162,6 +136,3 @@ msgid ""
 " im Menü ``Views`` den Punkt ``Hosts`` -> ``All Hosts`` öffnet. Durch einen "
 "Klick auf den Servernamen gelangt man zur Übersicht der überwachten Dienste."
 msgstr ""
-"Now the server appears in the host list of the monitored systems, if the you"
-" click on ``Hosts`` → ``All Hosts`` in the ``Views`` menu. Clicking on the "
-"server name will take you to the overview of the monitored services."
