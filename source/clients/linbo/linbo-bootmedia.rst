@@ -18,7 +18,7 @@ Mit ``Enter`` wird der Client gebootet
 .. image:: media/linbo_screen2.png
 
 Mit der Auswahl ``Ersteinrichtung + Neustart`` wird Linbo eingerichtet und der Rechner mit Linbo gestartet.
-Nach einem Neustart stehen alle Linbo-Funktionen zur Verfügung.
+Nach einem Neustart stehen alle Linbo-Funktionen zur Verfügung (Bild unten).
 
 Mit der Auswahl ``Debugmodus`` wird im Textmodus nur bis zur Konsole gebootet.
 
