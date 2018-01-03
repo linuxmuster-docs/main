@@ -143,6 +143,7 @@ fi
 
 clear
 .. code-block:: sh
+.. code-block:: sh
 -  Um das Boot-Menü zu aktivieren, setzt man einfach den
    `Timeout <http://www.gnu.org/software/grub/manual/grub.html#timeout>`__-Wert
    hoch. Nach Ablauf der angegebenen Sekunden wird der
