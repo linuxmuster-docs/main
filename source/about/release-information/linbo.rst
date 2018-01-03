@@ -228,7 +228,6 @@ lokalen Cache, ansonsten über Netzwerk:
          boot
       fi
     fi
-
    }
 
 
@@ -273,8 +272,7 @@ Betriebssystems:
 	 chainloader $win_efiloader
          boot
       fi
-
-   }
+     }
 
 		
 Der nächste Menü-Eintrag (Nr. 2) ermöglicht den synchronisierten Start
@@ -304,8 +302,7 @@ des Betriebssystems:
          initrd $linbo_initrd
          boot
       fi
-
-   }
+     }
 
 
 Schließlich folgt der Menü-Eintrag (Nr. 3) für Neu+Start:
@@ -334,8 +331,7 @@ Schließlich folgt der Menü-Eintrag (Nr. 3) für Neu+Start:
          initrd $linbo_initrd
          boot
       fi
-   
-   }
+     }
 
 Nun noch die Einträge für den Ubuntu-Boot
 
@@ -379,8 +375,7 @@ Nun noch die Einträge für den Ubuntu-Boot
    chainloader $win_efiloader
    boot
   fi
-
-}
+ }
 
 .. code-block:: sh
   
@@ -406,8 +401,7 @@ Nun noch die Einträge für den Ubuntu-Boot
      initrd $linbo_initrd
      boot
     fi
-
-}
+   }
 
 .. code-block:: sh
 
@@ -433,8 +427,7 @@ Nun noch die Einträge für den Ubuntu-Boot
       initrd $linbo_initrd
       boot
      fi
-
-}
+    }
 
 .. code-block:: sh
 
