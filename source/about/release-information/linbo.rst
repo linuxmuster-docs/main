@@ -557,6 +557,7 @@ handelt leicht unterschiedlich:
 
    LINBO-Startmenü im BIOS-Modus (unter Verwendung von Syslinux), siehe `Syslinux Menü-System <http://www.syslinux.org/wiki/index.php?title=Menu>`_
 
+.. figure:: media/linbo_screen1.png
 .. figure:: ./media/linbo-isoboot-efi1.png
    :alt: LINBO-Startmenü im UEFI-Modus
 
