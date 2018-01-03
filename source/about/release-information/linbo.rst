@@ -372,15 +372,15 @@ Vorgehensweise bei der Installation von Windows mit UEFI
 Erstellung der start.conf-Datei
 '''''''''''''''''''''''''''''''
 
-Im ersten Schritt erstellen Sie für die Rechnergruppe *win7-efi* unter
+Im ersten Schritt erstellen Sie für die Rechnergruppe *win10-efi* unter
 */var/linbo* eine EFI-gerechte start.conf-Datei für eine neue
-Rechnergruppe *win7-efi*. Kopieren Sie dazu einfach die Beispiel-Datei
-*start.conf.win7-efi* nach */var/linbo* (als Benutzer root auf dem
+Rechnergruppe *win10-efi*. Kopieren Sie dazu einfach die Beispiel-Datei
+*start.conf.win10-efi* nach */var/linbo* (als Benutzer root auf dem
 Server):
 
 .. code-block:: console
 
-   # cp /var/linbo/examples/start.conf.win10-efi /var/linbo/start.conf.win7-efi
+   # cp /var/linbo/examples/start.conf.win10-efi /var/linbo/start.conf.win10-efi
 
 Falls Ihre Rechnergruppe anders heißt, passen Sie den Namen der
 Zieldatei entsprechend an.
@@ -436,7 +436,7 @@ Megabyte, G für Gigabyte, T für Terabyte):
    
    [Partition]              # Partition fuer Windows
    Dev = /dev/sda3          # Device-Name der Partition (sda3 = dritte Partition auf erster Platte)
-   Label = win7             # Partitionslabel win7
+   Label = win10             # Partitionslabel win10
    Size = 50G               # Partitionsgroesse 50G
    Id = 7                   # Partitionstyp 83
    FSType = ntfs            # Dateisystem ext4
