@@ -107,39 +107,39 @@ konfiguriert, dass automatisch Linbo gebootet wird.
    `Fallback <http://www.gnu.org/software/grub/manual/grub.html#fallback>`__-Eintrag
    zu starten.
    -  Mit dem Wert für
-   `gfxpayload <http://www.gnu.org/software/grub/manual/grub.html#gfxpayload>`__
-   lassen sich Auflösung und Farbtiefe anpassen.
+      `gfxpayload <http://www.gnu.org/software/grub/manual/grub.html#gfxpayload>`__
+      lassen sich Auflösung und Farbtiefe anpassen.
    -  Alternative Grub-Themes lassen sich per
-   `theme <http://www.gnu.org/software/grub/manual/grub.html#theme>`__-Variable
-   konfigurieren (``set theme=``). Diese müssen in einem Verzeichnis
-   unter ``/var/linbo/boot/grub/themes`` abgelegt werden.
+      `theme <http://www.gnu.org/software/grub/manual/grub.html#theme>`__-Variable
+      konfigurieren (``set theme=``). Diese müssen in einem Verzeichnis
+      unter ``/var/linbo/boot/grub/themes`` abgelegt werden.
     
-   Die Bootmenü-Einträge müssen in der Regel nicht angepasst werden. Je
+-  Die Bootmenü-Einträge müssen in der Regel nicht angepasst werden. Je
    nach eigener Anforderung kann es eventuell notwendig werden die
    Reihenfolge oder den Text der Menü-Einträge zu ändern oder einzelne
    Einträge (z.B. für den unsychronisierten Start) zu entfernen. Im letzten
    Fall löscht man einfach den kompletten Zeilenbereich von *menuentry* bis
    zur schließenden geschweiften Klammer.
 
-Unter `set-Default` bedeuten die Einträge 0 - 6 folgendes:
+-  Unter `set-Default` bedeuten die Einträge 0 - 6 folgendes:
  
-set default = x;
+   set default = x;
 
-Für x:;
+   Für x:;
 
-0 = linbo;
+   0 = linbo;
 
-1 = erstes Betriebsystem ungesynct;
+   1 = erstes Betriebsystem ungesynct;
 
-2 = erstes Betriebsystem gesyct;
+   2 = erstes Betriebsystem gesyct;
 
-3 = erstes Betriebsystem neu+sync;
+   3 = erstes Betriebsystem neu+sync;
 
-4 = zweites Betriebsystem ungesynct;
+   4 = zweites Betriebsystem ungesynct;
 
-5 = zweites Betriebsystem gesyct;
+   5 = zweites Betriebsystem gesyct;
 
-6 = zweites Betriebsystem neu+sync;
+   6 = zweites Betriebsystem neu+sync;
 
     
 .. important:: Pflegt man eigene Anpassungen in die Datei ein, sollte man noch die Zeile ``### managed by linuxmuster.net ###`` in ``### not managed by linuxmuster.net ###`` ändern, damit die Änderungen beim Workstationsimport nicht wieder überschrieben werden. 
