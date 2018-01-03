@@ -353,54 +353,58 @@ Nun noch die Einträge für den Ubuntu-Boot
   fi
 
 }
+
 .. code-block:: sh
+  
   # boot LINBO, sync and then start "ubuntu 16.04"
-  menuentry 'ubuntu 16.04 (Sync+Start)' --class ubuntu_syncstart {
+    menuentry 'ubuntu 16.04 (Sync+Start)' --class ubuntu_syncstart {
 
-  set root="(hd0,6)"
+    set root="(hd0,6)"
 
-  if [ -e "$linbo_kernel" -a -e "$linbo_initrd" ]; then
-   set bootflag=localboot
-  elif [ -n "$pxe_default_server" ]; then
-   set root="(tftp)"
-   set bootflag=netboot
-  fi
+    if [ -e "$linbo_kernel" -a -e "$linbo_initrd" ]; then
+     set bootflag=localboot
+    elif [ -n "$pxe_default_server" ]; then
+     set root="(tftp)"
+     set bootflag=netboot
+    fi
 
-  if [ -n "$bootflag" ]; then
-   echo LINBO $bootflag for group win10
-   echo
-   echo -n "Loading $linbo_kernel ..."
-   linux $linbo_kernel  linbocmd=sync:2,start:2 $bootflag
-   echo
-   echo -n "Loading $linbo_initrd ..."
-   initrd $linbo_initrd
-   boot
-  fi
+    if [ -n "$bootflag" ]; then
+     echo LINBO $bootflag for group win10
+     echo
+     echo -n "Loading $linbo_kernel ..."
+     linux $linbo_kernel  linbocmd=sync:2,start:2 $bootflag
+     echo
+     echo -n "Loading $linbo_initrd ..."
+     initrd $linbo_initrd
+     boot
+    fi
 
 }
+
 .. code-block:: sh
-  # boot LINBO, format os partition, sync and then start "ubuntu 16.04"
-   menuentry 'ubuntu 16.04 (Neu+Start)' --class ubuntu_newstart {
 
-   set root="(hd0,6)"
+   # boot LINBO, format os partition, sync and then start "ubuntu 16.04"
+     menuentry 'ubuntu 16.04 (Neu+Start)' --class ubuntu_newstart {
 
-   if [ -e "$linbo_kernel" -a -e "$linbo_initrd" ]; then
-    set bootflag=localboot
-   elif [ -n "$pxe_default_server" ]; then
-    set root="(tftp)"
-    set bootflag=netboot
-   fi
+     set root="(hd0,6)"
 
-   if [ -n "$bootflag" ]; then
-    echo LINBO $bootflag for group win10
-    echo
-    echo -n "Loading $linbo_kernel ..."
-    linux $linbo_kernel  linbocmd=format:2,sync:2,start:2 $bootflag
-    echo
-    echo -n "Loading $linbo_initrd ..."
-    initrd $linbo_initrd
-    boot
-   fi
+     if [ -e "$linbo_kernel" -a -e "$linbo_initrd" ]; then
+      set bootflag=localboot
+     elif [ -n "$pxe_default_server" ]; then
+      set root="(tftp)"
+      set bootflag=netboot
+     fi
+
+     if [ -n "$bootflag" ]; then
+      echo LINBO $bootflag for group win10
+      echo
+      echo -n "Loading $linbo_kernel ..."
+      linux $linbo_kernel  linbocmd=format:2,sync:2,start:2 $bootflag
+      echo
+      echo -n "Loading $linbo_initrd ..."
+      initrd $linbo_initrd
+      boot
+     fi
 
 }
 
