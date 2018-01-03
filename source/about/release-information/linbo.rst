@@ -319,41 +319,41 @@ Nun noch die Einträge für den Ubuntu-Boot
   #
 
   # start "ubuntu 16.04" directly
-  menuentry 'ubuntu 16.04 (Start)' --class ubuntu_start {
+    menuentry 'ubuntu 16.04 (Start)' --class ubuntu_start {
 
-  set root="(hd0,2)"
-  set win_efiloader="/EFI/Microsoft/Boot/bootmgfw.efi"
+    set root="(hd0,2)"
+    set win_efiloader="/EFI/Microsoft/Boot/bootmgfw.efi"
  
   if [ -e /vmlinuz -a -e /initrd.img ]; then
-   linux /vmlinuz root=/dev/sda2 ro splash
-   initrd /initrd.img
+    linux /vmlinuz root=/dev/sda2 ro splash
+    initrd /initrd.img
   elif [ -e /vmlinuz -a -e /initrd ]; then
-   linux /vmlinuz root=/dev/sda2 ro splash
-   initrd /initrd
+    linux /vmlinuz root=/dev/sda2 ro splash
+    initrd /initrd
   elif [ -e /vmlinuz -a -e /initrd.img ]; then
-   linux /vmlinuz root=/dev/sda2 ro splash
-   initrd /initrd.img
+    linux /vmlinuz root=/dev/sda2 ro splash
+    initrd /initrd.img
   elif [ -e /vmlinuz ]; then
-   linux /vmlinuz root=/dev/sda2 ro splash
+    linux /vmlinuz root=/dev/sda2 ro splash
   elif [ -s /boot/grub/grub.cfg ] ; then
-   configfile /boot/grub/grub.cfg
+    configfile /boot/grub/grub.cfg
   elif [ "$grub_platform" = "pc" ]; then
-   if [ -s /bootmgr ] ; then
-   ntldr /bootmgr
+    if [ -s /bootmgr ] ; then
+    ntldr /bootmgr
   elif [ -s /ntldr ] ; then
-   ntldr /ntldr
+    ntldr /ntldr
   elif [ -s /grldr ] ; then
-   ntldr /grldr
+    ntldr /grldr
   else
-   chainloader +1
+    chainloader +1
   fi
-  elif [ -e "$win_efiloader" ]; then
+   elif [ -e "$win_efiloader" ]; then
    chainloader $win_efiloader
    boot
   fi
 
 }
-
+.. code-block:: sh
   # boot LINBO, sync and then start "ubuntu 16.04"
   menuentry 'ubuntu 16.04 (Sync+Start)' --class ubuntu_syncstart {
 
@@ -378,7 +378,7 @@ Nun noch die Einträge für den Ubuntu-Boot
   fi
 
 }
-
+.. code-block:: sh
   # boot LINBO, format os partition, sync and then start "ubuntu 16.04"
    menuentry 'ubuntu 16.04 (Neu+Start)' --class ubuntu_newstart {
 
