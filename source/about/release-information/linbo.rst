@@ -114,31 +114,35 @@ Teil:
    
    # edit to your needs
    set default=0
-   set timeout=0
+   set timeout=10
    set fallback=1
    
    set gfxpayload=800x600x16
    
-   # set apropriate linbo kernel and initrd
-   if cpuid -l; then
-      set linbo_kernel=/linbo64
-      set linbo_initrd=/linbofs64.lz
-   else
-      set linbo_kernel=/linbo
-      set linbo_initrd=/linbofs.lz
-   fi
+# 32bit pae, non pae or 64bit kernel
+if cpuid -l; then
+ set linbo_kernel=/linbo64
+ set linbo_initrd=/linbofs64.lz
+elif cpuid -p; then
+ set linbo_kernel=/linbo
+ set linbo_initrd=/linbofs.lz
+else
+ set linbo_kernel=/linbo-np
+ set linbo_initrd=/linbofs-np.lz
+fi
    
-   # theme settings (modify for custom theme)
-   set theme=/boot/grub/themes/linbo/theme.txt
-   set font=/boot/grub/themes/linbo/unifont-regular-16.pf2
+# theme settings (modify for custom theme)
+  set theme=/boot/grub/themes/linbo/theme.txt
+  set font=/boot/grub/themes/linbo/unifont-regular-16.pf2
 
-   # load theme
-   if [ -e "$theme" -a -e "$font" ]; then
-      loadfont "$font"
-      export theme
-   fi
+# load theme
+# if [ -e "$theme" -a -e "$font" ]; then
+#     loadfont "$font"
+     export theme
+# fi
 
-   
+clear
+
 -  Um das Boot-Menü zu aktivieren, setzt man einfach den
    `Timeout <http://www.gnu.org/software/grub/manual/grub.html#timeout>`__-Wert
    hoch. Nach Ablauf der angegebenen Sekunden wird der
@@ -163,37 +167,37 @@ lokalen Cache, ansonsten über Netzwerk:
 
 .. code-block:: sh
 
-   # linbo part, boot local or net (default #0)
-   menuentry 'LINBO' --class linux {
+# linbo part, boot local or net (default #0)
+  menuentry 'LINBO' --class linux {
 
-     echo LINBO $bootflag for group win10
-     echo
+  echo LINBO $bootflag for group win10
+  echo
 
-     set root="(hd0,2)"
-     if [ -e "$linbo_kernel" -a -e "$linbo_initrd" ]; then
-        set bootflag=localboot
-     elif [ -n "$pxe_default_server" ]; then
-        set root="(tftp)"
-        set bootflag=netboot
-     fi
+    set root="(hd0,6)"
+    if [ -e "$linbo_kernel" -a -e "$linbo_initrd" ]; then
+       set bootflag=localboot
+    elif [ -n "$pxe_default_server" ]; then
+       set root="(tftp)"
+       set bootflag=netboot
+    fi
 
-     if [ -n "$bootflag" ]; then
-        echo -n "Loading $linbo_kernel ..."
-        linux $linbo_kernel splash quiet $bootflag
-        echo
-        echo -n "Loading $linbo_initrd ..."
-        initrd $linbo_initrd
-        boot
-     else
-        if [ "$grub_platform" = "pc" ]; then
-           set ipxe="/ipxe.lkrn"
-        fi
-        if [ -e "$ipxe" ]; then
-           echo -n "Initiating pxe boot ..."
-           linux16 $ipxe dhcp
-           boot
-        fi
-     fi
+    if [ -n "$bootflag" ]; then
+       echo -n "Loading $linbo_kernel ..."
+       linux $linbo_kernel splash quiet $bootflag
+       echo
+       echo -n "Loading $linbo_initrd ..."
+       initrd $linbo_initrd
+       boot
+    else
+       if [ "$grub_platform" = "pc" ]; then
+          set ipxe="/ipxe.lkrn"
+       fi
+       if [ -e "$ipxe" ]; then
+          echo -n "Initiating pxe boot ..."
+          linux16 $ipxe dhcp
+          boot
+       fi
+    fi
 
    }
 
@@ -202,36 +206,39 @@ Danach folgt der Eintrag (Nr. 1) für den unsynchronisierten Start des
 Betriebssystems:
 
 .. code-block:: sh
-
-   # start "Windows 10" directly
+# group specific grub.cfg template for linbo net boot, should work with linux and windows operating systems
+# thomas@linuxmuster.net
+# 20160804
+#
+ # start "Windows 10" directly
    menuentry 'Windows 10 (Start)' --class win_start {
  
-      set root="(hd0,1)"
-      set win_efiloader="/EFI/Microsoft/Boot/bootmgfw.efi"
+   set root="(hd0,1)"
+   set win_efiloader="/EFI/Microsoft/Boot/bootmgfw.efi"
 
-      if [ -e /vmlinuz -a -e /initrd.img ]; then
-         linux /vmlinuz root=/dev/sda1
-         initrd /initrd.img
-      elif [ -e /vmlinuz -a -e /initrd ]; then
-         linux /vmlinuz root=/dev/sda1
-         initrd /initrd
-      elif [ -e /grub.exe -a -e /noinitrd_placeholder ]; then
-         linux /grub.exe root=/dev/sda1
-         initrd /noinitrd_placeholder
-      elif [ -e /grub.exe ]; then
-         linux /grub.exe root=/dev/sda1
-      elif [ -s /boot/grub/grub.cfg ] ; then
-         configfile /boot/grub/grub.cfg
-      elif [ "$grub_platform" = "pc" ]; then
-         if [ -s /bootmgr ] ; then
-            ntldr /bootmgr
-         elif [ -s /ntldr ] ; then
-            ntldr /ntldr
-         elif [ -s /grldr ] ; then
-            ntldr /grldr
-         else
-            chainloader +1
-         fi
+    if [ -e /vmlinuz -a -e /initrd.img ]; then
+        linux /vmlinuz root=/dev/sda1
+        initrd /initrd.img
+     elif [ -e /vmlinuz -a -e /initrd ]; then
+        linux /vmlinuz root=/dev/sda1
+        initrd /initrd
+     elif [ -e /grub.exe -a -e /noinitrd_placeholder ]; then
+        linux /grub.exe root=/dev/sda1
+        initrd /noinitrd_placeholder
+     elif [ -e /grub.exe ]; then
+        linux /grub.exe root=/dev/sda1
+        elif [ -s /boot/grub/grub.cfg ] ; then
+        configfile /boot/grub/grub.cfg
+     elif [ "$grub_platform" = "pc" ]; then
+        if [ -s /bootmgr ] ; then
+           ntldr /bootmgr
+        elif [ -s /ntldr ] ; then
+           ntldr /ntldr
+        elif [ -s /grldr ] ; then
+           ntldr /grldr
+        else
+           chainloader +1
+        fi
       elif [ -e "$win_efiloader" ]; then
 	 chainloader $win_efiloader
          boot
@@ -248,7 +255,7 @@ des Betriebssystems:
    # boot LINBO, sync and then start "Windows 10"
    menuentry 'Windows 10 (Sync+Start)' --class win_syncstart {
 
-      set root="(hd0,2)"
+      set root="(hd0,6)"
    
       if [ -e "$linbo_kernel" -a -e "$linbo_initrd" ]; then
          set bootflag=localboot
@@ -278,7 +285,7 @@ Schließlich folgt der Menü-Eintrag (Nr. 3) für Neu+Start:
    # boot LINBO, format os partition, sync and then start "Windows 10"
    menuentry 'Windows 10 (Neu+Start)' --class win_newstart {
 
-      set root="(hd0,2)"
+      set root="(hd0,6)"
    
       if [ -e "$linbo_kernel" -a -e "$linbo_initrd" ]; then
          set bootflag=localboot
@@ -299,6 +306,100 @@ Schließlich folgt der Menü-Eintrag (Nr. 3) für Neu+Start:
       fi
    
    }
+
+Nun noch die Einträge für den Ubuntu-Boot
+.. code-block:: sh
+
+# group specific grub.cfg template for linbo net boot, should work with linux and windows operating systems
+# thomas@linuxmuster.net
+# 20160804
+#
+
+# start "ubuntu 16.04" directly
+menuentry 'ubuntu 16.04 (Start)' --class ubuntu_start {
+
+ set root="(hd0,2)"
+ set win_efiloader="/EFI/Microsoft/Boot/bootmgfw.efi"
+ 
+ if [ -e /vmlinuz -a -e /initrd.img ]; then
+  linux /vmlinuz root=/dev/sda2 ro splash
+  initrd /initrd.img
+ elif [ -e /vmlinuz -a -e /initrd ]; then
+  linux /vmlinuz root=/dev/sda2 ro splash
+  initrd /initrd
+ elif [ -e /vmlinuz -a -e /initrd.img ]; then
+  linux /vmlinuz root=/dev/sda2 ro splash
+  initrd /initrd.img
+ elif [ -e /vmlinuz ]; then
+  linux /vmlinuz root=/dev/sda2 ro splash
+ elif [ -s /boot/grub/grub.cfg ] ; then
+  configfile /boot/grub/grub.cfg
+ elif [ "$grub_platform" = "pc" ]; then
+  if [ -s /bootmgr ] ; then
+   ntldr /bootmgr
+  elif [ -s /ntldr ] ; then
+   ntldr /ntldr
+  elif [ -s /grldr ] ; then
+   ntldr /grldr
+  else
+   chainloader +1
+  fi
+ elif [ -e "$win_efiloader" ]; then
+  chainloader $win_efiloader
+  boot
+ fi
+
+}
+
+# boot LINBO, sync and then start "ubuntu 16.04"
+menuentry 'ubuntu 16.04 (Sync+Start)' --class ubuntu_syncstart {
+
+ set root="(hd0,6)"
+
+ if [ -e "$linbo_kernel" -a -e "$linbo_initrd" ]; then
+  set bootflag=localboot
+ elif [ -n "$pxe_default_server" ]; then
+  set root="(tftp)"
+  set bootflag=netboot
+ fi
+
+ if [ -n "$bootflag" ]; then
+  echo LINBO $bootflag for group win10
+  echo
+  echo -n "Loading $linbo_kernel ..."
+  linux $linbo_kernel  linbocmd=sync:2,start:2 $bootflag
+  echo
+  echo -n "Loading $linbo_initrd ..."
+  initrd $linbo_initrd
+  boot
+ fi
+
+}
+
+# boot LINBO, format os partition, sync and then start "ubuntu 16.04"
+menuentry 'ubuntu 16.04 (Neu+Start)' --class ubuntu_newstart {
+
+ set root="(hd0,6)"
+
+ if [ -e "$linbo_kernel" -a -e "$linbo_initrd" ]; then
+  set bootflag=localboot
+ elif [ -n "$pxe_default_server" ]; then
+  set root="(tftp)"
+  set bootflag=netboot
+ fi
+
+ if [ -n "$bootflag" ]; then
+  echo LINBO $bootflag for group win10
+  echo
+  echo -n "Loading $linbo_kernel ..."
+  linux $linbo_kernel  linbocmd=format:2,sync:2,start:2 $bootflag
+  echo
+  echo -n "Loading $linbo_initrd ..."
+  initrd $linbo_initrd
+  boot
+ fi
+
+}
 
 
 Die Bootmenü-Einträge müssen in der Regel nicht angepasst werden. Je
