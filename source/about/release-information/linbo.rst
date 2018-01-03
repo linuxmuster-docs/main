@@ -114,7 +114,15 @@ konfiguriert, dass automatisch Linbo gebootet wird.
    konfigurieren (``set theme=``). Diese müssen in einem Verzeichnis
     unter ``/var/linbo/boot/grub/themes`` abgelegt werden.
     
-.. important:: Die Zeile `# ### managed by linuxmuster` ändert man sinnvollerweise in `# ### not managed by linuxmuster` 
+ Die Bootmenü-Einträge müssen in der Regel nicht angepasst werden. Je
+nach eigener Anforderung kann es eventuell notwendig werden die
+Reihenfolge oder den Text der Menü-Einträge zu ändern oder einzelne
+Einträge (z.B. für den unsychronisierten Start) zu entfernen. Im letzten
+Fall löscht man einfach den kompletten Zeilenbereich von *menuentry* bis
+zur schließenden geschweiften Klammer.
+
+    
+.. important:: Pflegt man eigene Anpassungen in die Datei ein, sollte man noch die Zeile ``### managed by linuxmuster.net ###`` in , ``### not managed by linuxmuster.net ###`` damit die Änderungen beim Workstationsimport nicht wieder überschrieben werden. 
 
 Hier ein Beispiel für ein System mit Windows 10. Zunächst der globale
 Teil:
@@ -413,16 +421,6 @@ Nun noch die Einträge für den Ubuntu-Boot
 
 .. code-block:: sh
 
-Die Bootmenü-Einträge müssen in der Regel nicht angepasst werden. Je
-nach eigener Anforderung kann es eventuell notwendig werden die
-Reihenfolge oder den Text der Menü-Einträge zu ändern oder einzelne
-Einträge (z.B. für den unsychronisierten Start) zu entfernen. Im letzten
-Fall löscht man einfach den kompletten Zeilenbereich von *menuentry* bis
-zur schließenden geschweiften Klammer.
-
-Pflegt man eigene Anpassungen in die Datei ein, sollte man noch die
-Zeile ``### managed by linuxmuster.net ###`` entfernen, damit die
-Änderungen beim Workstationsimport nicht wieder überschrieben werden.
 
 .. tip::
 
