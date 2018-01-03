@@ -208,17 +208,17 @@ Danach folgt der Eintrag (Nr. 1) für den unsynchronisierten Start des
 Betriebssystems:
 
 .. code-block:: sh
-# group specific grub.cfg template for linbo net boot, should work with linux and windows operating systems
-# thomas@linuxmuster.net
-# 20160804
-#
-# start "Windows 10" directly
-   menuentry 'Windows 10 (Start)' --class win_start {
+   # group specific grub.cfg template for linbo net boot, should work with linux and windows operating systems
+   # thomas@linuxmuster.net
+   # 20160804
+   #
+   # start "Windows 10" directly
+     menuentry 'Windows 10 (Start)' --class win_start {
  
-   set root="(hd0,1)"
-   set win_efiloader="/EFI/Microsoft/Boot/bootmgfw.efi"
+     set root="(hd0,1)"
+     set win_efiloader="/EFI/Microsoft/Boot/bootmgfw.efi"
 
-    if [ -e /vmlinuz -a -e /initrd.img ]; then
+     if [ -e /vmlinuz -a -e /initrd.img ]; then
         linux /vmlinuz root=/dev/sda1
         initrd /initrd.img
      elif [ -e /vmlinuz -a -e /initrd ]; then
