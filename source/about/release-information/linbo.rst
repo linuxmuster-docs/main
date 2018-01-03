@@ -119,31 +119,32 @@ Teil:
    
    set gfxpayload=800x600x16
    
-# 32bit pae, non pae or 64bit kernel
-if cpuid -l; then
- set linbo_kernel=/linbo64
- set linbo_initrd=/linbofs64.lz
-elif cpuid -p; then
- set linbo_kernel=/linbo
- set linbo_initrd=/linbofs.lz
-else
- set linbo_kernel=/linbo-np
- set linbo_initrd=/linbofs-np.lz
-fi
+   # 32bit pae, non pae or 64bit kernel
+    if cpuid -l; then
+     set linbo_kernel=/linbo64
+     set linbo_initrd=/linbofs64.lz
+    elif cpuid -p; then
+     set linbo_kernel=/linbo
+     set linbo_initrd=/linbofs.lz
+    else
+     set linbo_kernel=/linbo-np
+     set linbo_initrd=/linbofs-np.lz
+    fi
    
-# theme settings (modify for custom theme)
-  set theme=/boot/grub/themes/linbo/theme.txt
-  set font=/boot/grub/themes/linbo/unifont-regular-16.pf2
+  # theme settings (modify for custom theme)
+    set theme=/boot/grub/themes/linbo/theme.txt
+    set font=/boot/grub/themes/linbo/unifont-regular-16.pf2
 
-# load theme
-# if [ -e "$theme" -a -e "$font" ]; then
-#     loadfont "$font"
-     export theme
-# fi
+  # load theme
+  # if [ -e "$theme" -a -e "$font" ]; then
+  #     loadfont "$font"
+      export theme
+  # fi
 
-clear
+    clear
+
 .. code-block:: sh
-.. code-block:: sh
+
 -  Um das Boot-Menü zu aktivieren, setzt man einfach den
    `Timeout <http://www.gnu.org/software/grub/manual/grub.html#timeout>`__-Wert
    hoch. Nach Ablauf der angegebenen Sekunden wird der
@@ -211,7 +212,7 @@ Betriebssystems:
 # thomas@linuxmuster.net
 # 20160804
 #
- # start "Windows 10" directly
+# start "Windows 10" directly
    menuentry 'Windows 10 (Start)' --class win_start {
  
    set root="(hd0,1)"
