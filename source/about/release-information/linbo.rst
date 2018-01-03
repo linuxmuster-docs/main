@@ -122,7 +122,7 @@ Fall löscht man einfach den kompletten Zeilenbereich von *menuentry* bis
 zur schließenden geschweiften Klammer.
 
     
-.. important:: Pflegt man eigene Anpassungen in die Datei ein, sollte man noch die Zeile ``### managed by linuxmuster.net ###`` in , ``### not managed by linuxmuster.net ###`` damit die Änderungen beim Workstationsimport nicht wieder überschrieben werden. 
+.. important:: Pflegt man eigene Anpassungen in die Datei ein, sollte man noch die Zeile ``### managed by linuxmuster.net ###`` in , ``### not managed by linuxmuster.net ###`` ändern damit die Änderungen beim Workstationsimport nicht wieder überschrieben werden. 
 
 Hier ein Beispiel für ein System mit Windows 10. Zunächst der globale
 Teil:
