@@ -124,13 +124,21 @@ zur schließenden geschweiften Klammer.
 Unter `set-Default` bedeuten die Einträge 0 - 6 folgendes:
  
 set default = x;
+
 Für x:;
+
 0 = linbo;
+
 1 = erstes Betriebsystem ungesynct;
+
 2 = erstes Betriebsystem gesyct;
+
 3 = erstes Betriebsystem neu+sync;
+
 4 = zweites Betriebsystem ungesynct;
+
 5 = zweites Betriebsystem gesyct;
+
 6 = zweites Betriebsystem neu+sync;
 
     
