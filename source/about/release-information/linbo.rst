@@ -112,14 +112,14 @@ konfiguriert, dass automatisch Linbo gebootet wird.
    -  Alternative Grub-Themes lassen sich per
    `theme <http://www.gnu.org/software/grub/manual/grub.html#theme>`__-Variable
    konfigurieren (``set theme=``). Diese müssen in einem Verzeichnis
-    unter ``/var/linbo/boot/grub/themes`` abgelegt werden.
+   unter ``/var/linbo/boot/grub/themes`` abgelegt werden.
     
- Die Bootmenü-Einträge müssen in der Regel nicht angepasst werden. Je
-nach eigener Anforderung kann es eventuell notwendig werden die
-Reihenfolge oder den Text der Menü-Einträge zu ändern oder einzelne
-Einträge (z.B. für den unsychronisierten Start) zu entfernen. Im letzten
-Fall löscht man einfach den kompletten Zeilenbereich von *menuentry* bis
-zur schließenden geschweiften Klammer.
+   Die Bootmenü-Einträge müssen in der Regel nicht angepasst werden. Je
+   nach eigener Anforderung kann es eventuell notwendig werden die
+   Reihenfolge oder den Text der Menü-Einträge zu ändern oder einzelne
+   Einträge (z.B. für den unsychronisierten Start) zu entfernen. Im letzten
+   Fall löscht man einfach den kompletten Zeilenbereich von *menuentry* bis
+   zur schließenden geschweiften Klammer.
 
 Unter `set-Default` bedeuten die Einträge 0 - 6 folgendes:
  
