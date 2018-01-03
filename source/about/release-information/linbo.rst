@@ -429,9 +429,6 @@ Nun noch die Einträge für den Ubuntu-Boot
      fi
     }
 
-.. code-block:: sh
-
-
 .. tip::
 
    Die gruppenspezifische Bootkonfiguration kann auch über
