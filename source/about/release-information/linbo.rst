@@ -99,7 +99,7 @@ Linbo und drei weitere für jedes in der start.conf-Datei definierte
 Betriebssystem. Das Menü ist standardmäßig ausgeblendet und so
 konfiguriert, dass automatisch Linbo gebootet wird.
 
--  Um das Boot-Menü zu aktivieren, setzt man einfach in der Datei ``/var/linbo/boot/grub/win10.cfg`` den
+-  Um das Boot-Menü zu aktivieren, setzt man in der Datei ``/var/linbo/boot/grub/win10.cfg`` den
    `Timeout <http://www.gnu.org/software/grub/manual/grub.html#timeout>`__-Wert
    hoch. Nach Ablauf der angegebenen Sekunden wird der
    `Default <http://www.gnu.org/software/grub/manual/grub.html#default>`__-Eintrag
