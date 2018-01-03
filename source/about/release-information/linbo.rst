@@ -99,7 +99,7 @@ Linbo und drei weitere für jedes in der start.conf-Datei definierte
 Betriebssystem. Das Menü ist standardmäßig ausgeblendet und so
 konfiguriert, dass automatisch Linbo gebootet wird.
 
-Hier ein Beispiel für ein System mit Windows 7. Zunächst der globale
+Hier ein Beispiel für ein System mit Windows 10. Zunächst der globale
 Teil:
 
 .. code-block:: sh
@@ -394,14 +394,14 @@ Megabyte, G für Gigabyte, T für Terabyte):
    # LINBO start.conf Beispiel mit EFI (GPT)
    # EFI 64 Partition 1
    # MSR  Partition 2
-   # Windows 7  Partition 3
+   # Windows 10  Partition 3
    # Cache auf Partition 4
    # Daten auf Partition 5
    # Festplatte 160G
 		
    [LINBO]                  # globale Konfiguration
    Server = 10.16.1.1       # IP des Linbo-Servers, der das Linbo-Repository vorhaelt
-   Group = win7-efi           # Name der Rechnergruppe fuer die diese Konfigurationsdatei gilt
+   Group = win10-efi           # Name der Rechnergruppe fuer die diese Konfigurationsdatei gilt
    # Achtung: Server und Group werden beim Workstationsimport automatisch gesetzt!
    Cache = /dev/sda4        # lokale Cache Partition
    RootTimeout = 600        # automatischer Rootlogout nach 600 Sek.
@@ -459,12 +459,12 @@ Megabyte, G für Gigabyte, T für Terabyte):
    Bootable = no            # kein Bootable-Flag
    
    [OS]                         # Beginn einer Betriebssystemdefinition
-   Name = Windows 7             # Name des Betriebssystems
+   Name = Windows 10             # Name des Betriebssystems
    Version =                    # Version (unbenutzt, leer lassen)
-   Description = Windows 7 SP1  # Beschreibung
-   IconName = winxp.png         # Icon für den Startbutton, muss unter /var/linbo/icons abgelegt sein
+   Description = Windows 10 SP1  # Beschreibung
+   IconName = win10.png         # Icon für den Startbutton, muss unter /var/linbo/icons abgelegt sein
    Image =                      # differentielles Image (Erweiterung .rsync, Verwendung nicht empfohlen)
-   BaseImage = win7.cloop       # Dateiname des Basisimages (Erweiterung .cloop)
+   BaseImage = win10.cloop       # Dateiname des Basisimages (Erweiterung .cloop)
    Boot = /dev/sda3             # Bootpartition (unbenutzt, immer gleich Rootpartition)
    Root = /dev/sda3             # Rootpartition, in die das BS installiert ist
    Kernel = auto                # Windows: auto (LINBO & Grub erkennen die Startparameter automatisch)
@@ -488,7 +488,7 @@ eine EFI- und eine MSR-Partition definiert sein müssen. Diese
 Partitionen sollten Sie also nicht ändern.
 
 Ist die start.conf-Datei erstellt, nehmen Sie den Rechner über den
-Workstations-Import in die Gruppe *win7-efi* auf.
+Workstations-Import in die Gruppe *win10-efi* auf.
 
 Neueinrichten des Clients
 '''''''''''''''''''''''''
@@ -516,7 +516,7 @@ Festplatte gemäß dem in der start.conf-Datei definierten
 Partitionsschema neu partionieren und anschließend wieder
 herunterfahren.
 
-Installieren Sie nun Windows 7 mit Hilfe des Installationsdatenträgers
+Installieren Sie nun Windows 10 mit Hilfe des Installationsdatenträgers
 wie gewohnt. Wählen Sie dazu zu Beginn der Installation die richtige
 Partition für die Installation aus (im Beispiel ist es die dritte
 Partition). Gegebenenfalls muss sie formatiert werden.
