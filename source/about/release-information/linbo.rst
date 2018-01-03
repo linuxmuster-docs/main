@@ -99,6 +99,23 @@ Linbo und drei weitere für jedes in der start.conf-Datei definierte
 Betriebssystem. Das Menü ist standardmäßig ausgeblendet und so
 konfiguriert, dass automatisch Linbo gebootet wird.
 
+-  Um das Boot-Menü zu aktivieren, setzt man einfach in der Datei ``\var\linbo\grub\win10.cfg`` den
+   `Timeout <http://www.gnu.org/software/grub/manual/grub.html#timeout>`__-Wert
+   hoch. Nach Ablauf der angegebenen Sekunden wird der
+   `Default <http://www.gnu.org/software/grub/manual/grub.html#default>`__-Eintrag
+   gestartet. Schlägt dies fehl, wird versucht den
+   `Fallback <http://www.gnu.org/software/grub/manual/grub.html#fallback>`__-Eintrag
+   zu starten.
+   -  Mit dem Wert für
+   `gfxpayload <http://www.gnu.org/software/grub/manual/grub.html#gfxpayload>`__
+   lassen sich Auflösung und Farbtiefe anpassen.
+   -  Alternative Grub-Themes lassen sich per
+   `theme <http://www.gnu.org/software/grub/manual/grub.html#theme>`__-Variable
+   konfigurieren (``set theme=``). Diese müssen in einem Verzeichnis
+    unter ``/var/linbo/boot/grub/themes`` abgelegt werden.
+    
+.. important:: Die Zeile `# ### managed by linuxmuster` ändert man sinnvollerweise in `# ### not managed by linuxmuster` 
+
 Hier ein Beispiel für ein System mit Windows 10. Zunächst der globale
 Teil:
 
@@ -145,21 +162,7 @@ Teil:
 
 .. code-block:: sh
 
--  Um das Boot-Menü zu aktivieren, setzt man einfach den
-   `Timeout <http://www.gnu.org/software/grub/manual/grub.html#timeout>`__-Wert
-   hoch. Nach Ablauf der angegebenen Sekunden wird der
-   `Default <http://www.gnu.org/software/grub/manual/grub.html#default>`__-Eintrag
-   gestartet. Schlägt dies fehl, wird versucht den
-   `Fallback <http://www.gnu.org/software/grub/manual/grub.html#fallback>`__-Eintrag
-   zu starten.
 
-   -  Mit dem Wert für
-      `gfxpayload <http://www.gnu.org/software/grub/manual/grub.html#gfxpayload>`__
-      lassen sich Auflösung und Farbtiefe anpassen.
-   -  Alternative Grub-Themes lassen sich per
-      `theme <http://www.gnu.org/software/grub/manual/grub.html#theme>`__-Variable
-      konfigurieren (``set theme=``). Diese müssen in einem Verzeichnis
-      unter ``/var/linbo/boot/grub/themes`` abgelegt werden.
 
 Nach dem globalen Teil folgen die Menüeinträge für **LINBO** und die
 Betriebssysteme (je einer für Start, Sync und Neu).
