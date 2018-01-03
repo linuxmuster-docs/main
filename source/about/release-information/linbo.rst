@@ -552,6 +552,7 @@ präsentiert sich je nachdem ob es sich um ein BIOS- oder UEFI-System
 handelt leicht unterschiedlich:
 
 
+.. image:: media/linbo_screen1.png
 .. figure:: ./media/linbo-isoboot-bios1.png
    :alt: LINBO-Startmenü im BIOS-Modus (unter Verwendung von Syslinux)
 
