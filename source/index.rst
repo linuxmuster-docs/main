@@ -65,6 +65,7 @@ Dabei richtet sich die Dokumentation an verschiedene Zielgruppen. Das Handbuch f
   classroom/use-files-in-class/index
   classroom/conduct-test/index
   classroom/create-project/index
+  classroom/use-wifi/index
   classroom/use-horde/index
   classroom/use-openvpn/index
   classroom/print-student-passwords/index
