@@ -113,11 +113,11 @@ Teil:
    # ### managed by linuxmuster.net ###
    
    # edit to your needs
-   set default=0
-   set timeout=10
-   set fallback=1
+     set default=0
+     set timeout=10
+     set fallback=1
    
-   set gfxpayload=800x600x16
+    set gfxpayload=800x600x16
    
    # 32bit pae, non pae or 64bit kernel
     if cpuid -l; then
@@ -138,10 +138,10 @@ Teil:
   # load theme
   # if [ -e "$theme" -a -e "$font" ]; then
   #     loadfont "$font"
-      export theme
+     export theme
   # fi
 
-    clear
+     clear
 
 .. code-block:: sh
 
@@ -169,36 +169,36 @@ lokalen Cache, ansonsten über Netzwerk:
 
 .. code-block:: sh
 
-# linbo part, boot local or net (default #0)
-  menuentry 'LINBO' --class linux {
+    # linbo part, boot local or net (default #0)
+       menuentry 'LINBO' --class linux {
 
-  echo LINBO $bootflag for group win10
-  echo
+       echo LINBO $bootflag for group win10
+       echo
 
-    set root="(hd0,6)"
-    if [ -e "$linbo_kernel" -a -e "$linbo_initrd" ]; then
+       set root="(hd0,6)"
+      if [ -e "$linbo_kernel" -a -e "$linbo_initrd" ]; then
        set bootflag=localboot
-    elif [ -n "$pxe_default_server" ]; then
+      elif [ -n "$pxe_default_server" ]; then
        set root="(tftp)"
        set bootflag=netboot
-    fi
+      fi
 
-    if [ -n "$bootflag" ]; then
+      if [ -n "$bootflag" ]; then
        echo -n "Loading $linbo_kernel ..."
        linux $linbo_kernel splash quiet $bootflag
        echo
        echo -n "Loading $linbo_initrd ..."
        initrd $linbo_initrd
        boot
-    else
-       if [ "$grub_platform" = "pc" ]; then
-          set ipxe="/ipxe.lkrn"
-       fi
-       if [ -e "$ipxe" ]; then
-          echo -n "Initiating pxe boot ..."
-          linux16 $ipxe dhcp
-          boot
-       fi
+      else
+      if [ "$grub_platform" = "pc" ]; then
+        set ipxe="/ipxe.lkrn"
+      fi
+      if [ -e "$ipxe" ]; then
+         echo -n "Initiating pxe boot ..."
+         linux16 $ipxe dhcp
+         boot
+      fi
     fi
 
    }
