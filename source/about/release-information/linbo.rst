@@ -313,32 +313,32 @@ Nun noch die Einträge für den Ubuntu-Boot
 
 .. code-block:: sh
 
-# group specific grub.cfg template for linbo net boot, should work with linux and windows operating systems
-# thomas@linuxmuster.net
-# 20160804
-#
+  # group specific grub.cfg template for linbo net boot, should work with linux and windows operating systems
+  # thomas@linuxmuster.net
+  # 20160804
+  #
 
-# start "ubuntu 16.04" directly
-menuentry 'ubuntu 16.04 (Start)' --class ubuntu_start {
+  # start "ubuntu 16.04" directly
+  menuentry 'ubuntu 16.04 (Start)' --class ubuntu_start {
 
- set root="(hd0,2)"
- set win_efiloader="/EFI/Microsoft/Boot/bootmgfw.efi"
+  set root="(hd0,2)"
+  set win_efiloader="/EFI/Microsoft/Boot/bootmgfw.efi"
  
- if [ -e /vmlinuz -a -e /initrd.img ]; then
-  linux /vmlinuz root=/dev/sda2 ro splash
-  initrd /initrd.img
- elif [ -e /vmlinuz -a -e /initrd ]; then
-  linux /vmlinuz root=/dev/sda2 ro splash
-  initrd /initrd
- elif [ -e /vmlinuz -a -e /initrd.img ]; then
-  linux /vmlinuz root=/dev/sda2 ro splash
-  initrd /initrd.img
- elif [ -e /vmlinuz ]; then
-  linux /vmlinuz root=/dev/sda2 ro splash
- elif [ -s /boot/grub/grub.cfg ] ; then
-  configfile /boot/grub/grub.cfg
- elif [ "$grub_platform" = "pc" ]; then
-  if [ -s /bootmgr ] ; then
+  if [ -e /vmlinuz -a -e /initrd.img ]; then
+   linux /vmlinuz root=/dev/sda2 ro splash
+   initrd /initrd.img
+  elif [ -e /vmlinuz -a -e /initrd ]; then
+   linux /vmlinuz root=/dev/sda2 ro splash
+   initrd /initrd
+  elif [ -e /vmlinuz -a -e /initrd.img ]; then
+   linux /vmlinuz root=/dev/sda2 ro splash
+   initrd /initrd.img
+  elif [ -e /vmlinuz ]; then
+   linux /vmlinuz root=/dev/sda2 ro splash
+  elif [ -s /boot/grub/grub.cfg ] ; then
+   configfile /boot/grub/grub.cfg
+  elif [ "$grub_platform" = "pc" ]; then
+   if [ -s /bootmgr ] ; then
    ntldr /bootmgr
   elif [ -s /ntldr ] ; then
    ntldr /ntldr
@@ -347,60 +347,60 @@ menuentry 'ubuntu 16.04 (Start)' --class ubuntu_start {
   else
    chainloader +1
   fi
- elif [ -e "$win_efiloader" ]; then
-  chainloader $win_efiloader
-  boot
- fi
+  elif [ -e "$win_efiloader" ]; then
+   chainloader $win_efiloader
+   boot
+  fi
 
 }
 
-# boot LINBO, sync and then start "ubuntu 16.04"
-menuentry 'ubuntu 16.04 (Sync+Start)' --class ubuntu_syncstart {
+  # boot LINBO, sync and then start "ubuntu 16.04"
+  menuentry 'ubuntu 16.04 (Sync+Start)' --class ubuntu_syncstart {
 
- set root="(hd0,6)"
+  set root="(hd0,6)"
 
- if [ -e "$linbo_kernel" -a -e "$linbo_initrd" ]; then
-  set bootflag=localboot
- elif [ -n "$pxe_default_server" ]; then
-  set root="(tftp)"
-  set bootflag=netboot
- fi
+  if [ -e "$linbo_kernel" -a -e "$linbo_initrd" ]; then
+   set bootflag=localboot
+  elif [ -n "$pxe_default_server" ]; then
+   set root="(tftp)"
+   set bootflag=netboot
+  fi
 
- if [ -n "$bootflag" ]; then
-  echo LINBO $bootflag for group win10
-  echo
-  echo -n "Loading $linbo_kernel ..."
-  linux $linbo_kernel  linbocmd=sync:2,start:2 $bootflag
-  echo
-  echo -n "Loading $linbo_initrd ..."
-  initrd $linbo_initrd
-  boot
- fi
+  if [ -n "$bootflag" ]; then
+   echo LINBO $bootflag for group win10
+   echo
+   echo -n "Loading $linbo_kernel ..."
+   linux $linbo_kernel  linbocmd=sync:2,start:2 $bootflag
+   echo
+   echo -n "Loading $linbo_initrd ..."
+   initrd $linbo_initrd
+   boot
+  fi
 
 }
 
-# boot LINBO, format os partition, sync and then start "ubuntu 16.04"
-menuentry 'ubuntu 16.04 (Neu+Start)' --class ubuntu_newstart {
+  # boot LINBO, format os partition, sync and then start "ubuntu 16.04"
+   menuentry 'ubuntu 16.04 (Neu+Start)' --class ubuntu_newstart {
 
- set root="(hd0,6)"
+   set root="(hd0,6)"
 
- if [ -e "$linbo_kernel" -a -e "$linbo_initrd" ]; then
-  set bootflag=localboot
- elif [ -n "$pxe_default_server" ]; then
-  set root="(tftp)"
-  set bootflag=netboot
- fi
+   if [ -e "$linbo_kernel" -a -e "$linbo_initrd" ]; then
+    set bootflag=localboot
+   elif [ -n "$pxe_default_server" ]; then
+    set root="(tftp)"
+    set bootflag=netboot
+   fi
 
- if [ -n "$bootflag" ]; then
-  echo LINBO $bootflag for group win10
-  echo
-  echo -n "Loading $linbo_kernel ..."
-  linux $linbo_kernel  linbocmd=format:2,sync:2,start:2 $bootflag
-  echo
-  echo -n "Loading $linbo_initrd ..."
-  initrd $linbo_initrd
-  boot
- fi
+   if [ -n "$bootflag" ]; then
+    echo LINBO $bootflag for group win10
+    echo
+    echo -n "Loading $linbo_kernel ..."
+    linux $linbo_kernel  linbocmd=format:2,sync:2,start:2 $bootflag
+    echo
+    echo -n "Loading $linbo_initrd ..."
+    initrd $linbo_initrd
+    boot
+   fi
 
 }
 
