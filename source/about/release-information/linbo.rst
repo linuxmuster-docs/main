@@ -587,7 +587,7 @@ eingeblendet, in der sich die Startparameter editieren lassen. Hat man
 die notwendigen Anpassungen gemacht, startet die [ENTER]-Taste den
 Bootvorgang:
 
-.. figure:: ./media/inbo_screen4.png
+.. figure:: media/inbo_screen4.png
 
    Bearbeiten des LINBO-Startmenü im BIOS-Modus 
 
