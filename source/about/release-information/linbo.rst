@@ -106,9 +106,7 @@ konfiguriert, dass automatisch Linbo gebootet wird.
    gestartet. Schlägt dies fehl, wird versucht den
    `Fallback <http://www.gnu.org/software/grub/manual/grub.html#fallback>`__-Eintrag
    zu starten.
-   -  Mit dem Wert für
-      `gfxpayload <http://www.gnu.org/software/grub/manual/grub.html#gfxpayload>`__
-      lassen sich Auflösung und Farbtiefe anpassen.
+   -  Mit dem Wert für `gfxpayload <http://www.gnu.org/software/grub/manual/grub.html#gfxpayload>`__ lassen sich Auflösung und Farbtiefe anpassen.
    -  Alternative Grub-Themes lassen sich per
       `theme <http://www.gnu.org/software/grub/manual/grub.html#theme>`__-Variable
       konfigurieren (``set theme=``). Diese müssen in einem Verzeichnis
