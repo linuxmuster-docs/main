@@ -355,7 +355,7 @@ Für Windows auf UEFI-Systemen ist zusätzlich zur EFI-Partition noch eine
 *Microsoft reserved partition (msr))* (128 MB) vorzusehen, sodass das
 Betriebssystem in die dritte Partition installiert wird. Ein
 entprechendes start.conf-Beispiel ist unter
-`/var/linbo/examples/start.conf.win7-efi <https://github.com/linuxmuster/linuxmuster-linbo/blob/2.3.0-8/var/examples/start.conf.win7-efi>`__
+`/var/linbo/examples/start.conf.win10-efi <https://github.com/linuxmuster/linuxmuster-linbo/blob/2.3.0-8/var/examples/start.conf.win10-efi>`__
 abgelegt. Die Vorgehensweise ist wie gehabt: zuerst Partitionierung mit
 Linbo, danach Installation.
 
@@ -380,7 +380,7 @@ Server):
 
 .. code-block:: console
 
-   # cp /var/linbo/examples/start.conf.win7-efi /var/linbo/start.conf.win7-efi
+   # cp /var/linbo/examples/start.conf.win10-efi /var/linbo/start.conf.win7-efi
 
 Falls Ihre Rechnergruppe anders heißt, passen Sie den Namen der
 Zieldatei entsprechend an.
