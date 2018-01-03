@@ -321,7 +321,7 @@ Zeile ``### managed by linuxmuster.net ###`` entfernen, damit die
 Hat man das Grub-Bootmenü aktiviert, präsentiert es sich beim nächsten
 Start des Clients z.B. so:
 
-.. image:: ./media/grub-bootmenue.png
+.. image:: ./media/linbo_screen6.png
 
 Linux-Clients mit UEFI-Boot einrichten
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
