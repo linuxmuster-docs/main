@@ -117,7 +117,7 @@ konfiguriert, dass automatisch Linbo gebootet wird.
    Fall löscht man einfach den kompletten Zeilenbereich von *menuentry* bis
    zur schließenden geschweiften Klammer.
 
--  Unter `set-Default` bedeuten die Einträge 0 - 6 folgendes:
+-  Unter `set-Default` bedeuten die Einträge 0 - 6 folgendes: 
  
    set default = x;
 
