@@ -166,7 +166,7 @@ lokalen Cache, ansonsten über Netzwerk:
    # linbo part, boot local or net (default #0)
    menuentry 'LINBO' --class linux {
 
-     echo LINBO $bootflag for group win7
+     echo LINBO $bootflag for group win10
      echo
 
      set root="(hd0,2)"
@@ -203,8 +203,8 @@ Betriebssystems:
 
 .. code-block:: sh
 
-   # start "Windows 7" directly
-   menuentry 'Windows 7 (Start)' --class win_start {
+   # start "Windows 10" directly
+   menuentry 'Windows 10 (Start)' --class win_start {
  
       set root="(hd0,1)"
       set win_efiloader="/EFI/Microsoft/Boot/bootmgfw.efi"
@@ -245,8 +245,8 @@ des Betriebssystems:
 
 .. code-block:: sh
 
-   # boot LINBO, sync and then start "Windows 7"
-   menuentry 'Windows 7 (Sync+Start)' --class win_syncstart {
+   # boot LINBO, sync and then start "Windows 10"
+   menuentry 'Windows 10 (Sync+Start)' --class win_syncstart {
 
       set root="(hd0,2)"
    
@@ -275,8 +275,8 @@ Schließlich folgt der Menü-Eintrag (Nr. 3) für Neu+Start:
 
 .. code-block:: sh
 
-   # boot LINBO, format os partition, sync and then start "Windows 7"
-   menuentry 'Windows 7 (Neu+Start)' --class win_newstart {
+   # boot LINBO, format os partition, sync and then start "Windows 10"
+   menuentry 'Windows 10 (Neu+Start)' --class win_newstart {
 
       set root="(hd0,2)"
    
