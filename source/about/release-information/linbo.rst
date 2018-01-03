@@ -232,6 +232,7 @@ Danach folgt der Eintrag (Nr. 1) für den unsynchronisierten Start des
 Betriebssystems:
 
 .. code-block:: sh
+
    # group specific grub.cfg template for linbo net boot, should work with linux and windows operating systems
    # thomas@linuxmuster.net
    # 20160804

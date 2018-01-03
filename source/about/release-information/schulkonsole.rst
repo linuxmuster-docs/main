@@ -288,9 +288,10 @@ Verwaltung Wlan via Schulkonsole
 --------------------------------
 Die Datei **/etc/linuxmuster/wlan_defaults** kann auch via Schulkonsole verändert werden. Dazu loggt man sich als Administrator ein und kann unter `Einstellungen` `Klassen` oder `Einstellungen` `Projekte` auswählen welche/s Klasse/Projekt dauerhaft das Internet benutzen darf.
 
-.. image:: media/WLAN_config.png
-Bild: **Wlan konfigurieren Klasse**
+.. figure:: media/WLAN_config.png
 
+   Wlan konfigurieren Klasse
 
-.. image:: media/WLAN_config_2.png
-Bild: **Wlan konfigurieren Projekt**
+.. figure:: media/WLAN_config_2.png
+
+   Wlan konfigurieren Projekt
