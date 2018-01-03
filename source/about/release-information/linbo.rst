@@ -185,9 +185,6 @@ Teil:
 
      clear
 
-.. code-block:: sh
-
-
 
 Nach dem globalen Teil folgen die Menüeinträge für **LINBO** und die
 Betriebssysteme (je einer für Start, Sync und Neu).
