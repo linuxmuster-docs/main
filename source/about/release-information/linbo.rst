@@ -308,6 +308,7 @@ Schließlich folgt der Menü-Eintrag (Nr. 3) für Neu+Start:
    }
 
 Nun noch die Einträge für den Ubuntu-Boot
+
 .. code-block:: sh
 
 # group specific grub.cfg template for linbo net boot, should work with linux and windows operating systems
@@ -401,6 +402,7 @@ menuentry 'ubuntu 16.04 (Neu+Start)' --class ubuntu_newstart {
 
 }
 
+.. code-block:: sh
 
 Die Bootmenü-Einträge müssen in der Regel nicht angepasst werden. Je
 nach eigener Anforderung kann es eventuell notwendig werden die
