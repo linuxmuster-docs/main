@@ -595,7 +595,7 @@ Im UEFI-Modus lässt sich nach Drücken der [E]-Taste der entsprechende
 Bootmenü-Eintrag editieren. Mit [CTRL-X] oder [F10] startet man nach
 getaner Anpassung den Bootvorgang.
 
-.. figure:: ./media/linbo-isoboot-efi2.png
+.. figure:: ./media/linbo_screen5.png
 
    Bearbeiten LINBO-Startmenü im UEFI-Modus
 
