@@ -258,7 +258,7 @@ des Betriebssystems:
       fi
 
       if [ -n "$bootflag" ]; then
-         echo LINBO $bootflag for group win7
+         echo LINBO $bootflag for group win10
          echo
          echo -n "Loading $linbo_kernel ..."
          linux $linbo_kernel splash quiet linbocmd=sync:1,start:1 $bootflag
@@ -288,7 +288,7 @@ Schließlich folgt der Menü-Eintrag (Nr. 3) für Neu+Start:
       fi
    
       if [ -n "$bootflag" ]; then
-         echo LINBO $bootflag for group win7
+         echo LINBO $bootflag for group win10
          echo
          echo -n "Loading $linbo_kernel ..."
          linux $linbo_kernel splash quiet linbocmd=format:1,sync:1,start:1 $bootflag
