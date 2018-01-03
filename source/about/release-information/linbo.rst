@@ -122,7 +122,7 @@ Fall löscht man einfach den kompletten Zeilenbereich von *menuentry* bis
 zur schließenden geschweiften Klammer.
 
 Unter `set-Default` bedeuten die Einträge 0 - 6 folgendes:
-
+ 
 set default = x
 Für x:
 0 = linbo
