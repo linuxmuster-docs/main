@@ -7,6 +7,8 @@ WLAN für eine Klasse freischalten
 
 Mit Linuxmuster.net kann man bei vorhandenem WLAN temporär Klassen oder Projekten das WLAN frei schalten. Diese Anleitung zeigt wie es funktioniert.
 
+.. important:: Das Schalten des WLAN ist nur möglich, wenn es nicht bereits durch den Administrator in der Administrator Schulkonsole frei geschaltet wurde.
+
 .. image:: media/class/Klasse_Wlan2.png
 
 Nach dem Anmelden als Lehrer wählt man zunächst die Klasse aus (hier 10a)
@@ -35,6 +37,8 @@ WLAN für ein Projekt freischalten
 ==================================
 
 Mit Linuxmuster.net kann man bei vorhandenem WLAN temporär Klassen oder Projekten das WLAN frei schalten. Diese Anleitung zeigt wie es funktioniert.
+
+.. important:: Das Schalten des WLAN ist nur möglich, wenn es nicht bereits durch den Administrator in der Administrator Schulkonsole frei geschaltet wurde.
 
 .. image:: media/project/Wlan_Projekt1.png
 
