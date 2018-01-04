@@ -2,12 +2,12 @@
 Unterricht: WLAN freischalten
 =============================
 
+.. important:: Wenn der Administrator eine Klasse, ein Projekt oder einzelne Schüler permanent freigeschaltet hat, hat das hier beschriebene Schalten des WLANs für die freigeschalteten Benutzer keine Auswirkungen.
+
 WLAN für eine Klasse freischalten
 =================================
 
 Mit Linuxmuster.net kann man bei vorhandenem WLAN temporär Klassen oder Projekten das WLAN frei schalten. Diese Anleitung zeigt wie es funktioniert.
-
-.. important:: Das Schalten des WLAN ist nur möglich, wenn es nicht bereits durch den Administrator in der Administrator Schulkonsole frei geschaltet wurde.
 
 .. image:: media/class/Klasse_Wlan2.png
 
