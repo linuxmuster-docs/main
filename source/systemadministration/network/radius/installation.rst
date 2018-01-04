@@ -19,7 +19,7 @@ Nun muss die Firewall konfiguriert werden, damit die Anfragen auch auf dem Serve
 .. code-block:: console
 
    ...
-   udp domain, ... , 1812
+   udp domain, ... , 1182
 
 Damit die Änderungen auf der Firewall (IPFire) wirksam werden, geben Sie bitte folgenden Befehl ein:
 
