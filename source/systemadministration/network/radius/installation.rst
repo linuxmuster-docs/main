@@ -53,19 +53,19 @@ Nun kann man, nach einem Neustart des Radius-Servers, die Authentifizierung für
 .. code-block:: console
 
    $ service freeradius restart
-   $ radtest steve testing 127.0.0.1:1812 10 testing123
+   $ radtest steve testing 127.0.0.1:1182 10 testing123
 
 Als Ausgabe sollte man folgendes erhalten:
 
 .. code-block:: console
 
-   $ radtest steve testing 127.0.0.1:1812 10 testing123
-   Sending Access-Request of id 34 to 127.0.0.1 port 1812
+   $ radtest steve testing 127.0.0.1:1182 10 testing123
+   Sending Access-Request of id 34 to 127.0.0.1 port 1182
           User-Name = "steve"
           User-Password = "testing"
           NAS-IP-Address = 127.0.0.1
           NAS-Port = 0
-  rad_recv: Access-Accept packet from host 127.0.0.1 port 1812, id=34, length=20
+  rad_recv: Access-Accept packet from host 127.0.0.1 port 1182, id=34, length=20
 
 Wenn man eine ähnliche Ausgabe erhält, kann nun der Zugriff auf das LDAP-Verzeichnis eingerichtet werden, damit man sich mit seinem Benutzernamen und Passwort der linuxmuster.net anmelden kann. Dazu muss der Client (Access Point, Captive Portal Server, Wireless Controller) in die Datei ``/etc/freeradius/clients`` eingetragen werden. Bitte passen Sie den Client Namen, die IP-Adresse und das Passwort entsprechend an.
 
