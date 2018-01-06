@@ -1,0 +1,44 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/about/release-information/ipfire.rst:2
+msgid "Neuerungen zur Firewall"
+msgstr ""
+
+#: ../../source/about/release-information/ipfire.rst:4
+msgid ""
+"Die Firewall IPFire wird ab der Version 6.2 vom Server aus aktualisiert."
+msgstr ""
+
+#: ../../source/about/release-information/ipfire.rst:7
+msgid ""
+"Dabei wird von Seiten der Entwickler der linuxmuster.net regelmäßig "
+"getestet, ob die neueren IPFire Versionen vollständig mit linuxmuster.net "
+"kompatibel sind. Um zu verhindern, dass vorschnell neue IPFire Versionen "
+"direkt nach Erscheinen installiert und so ggf. Inkompatibilitäten in Kauf "
+"genommen werden, wird das Update des IPFire vom Server aus mithilfe eines "
+"Skriptes angestossen."
+msgstr ""
+
+#: ../../source/about/release-information/ipfire.rst:14
+msgid ""
+"Lesen Sie die neue Vorgehensweise in der :doc:`Schritt-für-Schritt Anleitung"
+" <../../systemadministration/maintenance/keep-lmn-uptodate/2-update-ipfire>`"
+" nach."
+msgstr ""

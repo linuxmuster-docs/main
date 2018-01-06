@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/getting-started/linuxclients/cloudclient.rst:4
+msgid "Herunterladen des Standard-Linuxclients"
+msgstr ""
+
+#: ../../source/getting-started/linuxclients/cloudclient.rst:6
+msgid ""
+"Installieren Sie auf dem Server das Paket ``linuxmuster-client-"
+"servertools``."
+msgstr ""
+
+#: ../../source/getting-started/linuxclients/cloudclient.rst:23
+msgid "Rufen Sie die Liste aller verfügbaren Clientabbilder auf:"
+msgstr ""
+
+#: ../../source/getting-started/linuxclients/cloudclient.rst:37
+msgid "Laden Sie das Abbild Ihrer Wahl (hier: `xenial916`) herunter mit"
+msgstr ""
+
+#: ../../source/getting-started/linuxclients/cloudclient.rst:43
+msgid ""
+"Es wird die Rechnergruppe (Hardwareklasse) `xenial` angelegt und mehrere "
+"Dateien werden erzeugt. Die wichtigsten sind"
+msgstr ""
+
+#: ../../source/getting-started/linuxclients/cloudclient.rst:52
+msgid "Nun kann man Clientrechner in die Rechnergruppe `xenial` aufnehmen."
+msgstr ""
+
+#: ../../source/getting-started/linuxclients/cloudclient.rst:56
+msgid ""
+"Wenn eine Datei bereits existiert, bricht das Programm zunächst ab. Mit der "
+"Option ``-f`` wird ein angebrochener Download fortgesetzt und bestehende "
+"Dateien werden überschrieben, dabei werden von "
+"`/var/linbo/start.conf.xenial` und `/var/linbo/linuxmuster-client/xenial` "
+"jeweils automatisch Backups erstellt."
+msgstr ""

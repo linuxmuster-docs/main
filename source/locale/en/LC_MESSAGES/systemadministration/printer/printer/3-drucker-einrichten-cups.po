@@ -1,0 +1,256 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:2
+msgid "Wie richte ich Drucker am Server ein?"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:4
+msgid ""
+"Um die eingesetzten Netzwerkdrucker serverseitig einzurichten, sind diese "
+"mithilfe eines Browsers hinzuzufügen und einzurichten."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:8
+msgid ""
+"Auf dem Server ist automatisch ein PDF-Drucker eingerichtet. Auf den PDF-"
+"Drucker kann aus beliebigen Anwendungen heraus gedruckt werden. Die "
+"\"gedruckte\" PDF-Datei wird im Heimatverzeichnis des jeweiligen Benutzers "
+"im Ordner PDF abgelegt. Wird dieser später als Standard-Drucker festgelegt, "
+"so wird versehentliches Drucken auf einen nicht gewünschten Drucker "
+"unterbunden."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:10
+msgid ""
+"Starten Sie auf einem Rechner einen Browser, um das sog. CUPS-Webinterface "
+"zur weiteren Einrichtung der Drucker aufzurufen. Hierzu fügen Sie "
+"nachstehenden URL in der Adresszeile Ihres Browsers ein"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:12
+msgid "https://server:631"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:14
+msgid ""
+"Da meist nur ein selbst-signiertes Zertifikat auf dem Server installiert "
+"ist, ist es sicher nötig, dem benutzen Browser die sichere Kommunikation "
+"ausnahmsweise zu erlauben (SSL-Zertifikat akzeptieren)."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:17
+msgid "Drucker hinzufügen"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:19
+msgid ""
+"Rufen Sie zunächst die **Reiterkarte Verwaltung** auf. Es erscheint "
+"nachstehende Maske:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:37
+msgid ""
+"Ändern Sie keine Konfiguration auf dieser Seite, das bleibt den Skripten von"
+" linuxmuster.net und einer manuellen Konfiguration in den Textdateien auf "
+"dem Server vorbehalten."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:41
+msgid ""
+"Klicken Sie auf der Maske unter **Drucker** --> **Drucker hinzufügen**. Es "
+"erscheint nachstehende Maske:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:46
+msgid ""
+"In diesem Dialog müssen Sie angeben, auf welche Weise der Drucker mit dem "
+"Server verbunden ist. Unter Umständen werden Netzwerkdrucker erkannt (im "
+"Beispiel \"HP Officejet\")."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:50
+msgid ""
+"Bei nicht erkannten Netzwerkdruckern ist im Normalfall die Option "
+"\"AppSocket/HP JetDirect\" korrekt. Sind Sie unsicher, schauen Sie im "
+"Handbuch des Druckers / Printservers nach, welche Option für Ihren Drucker "
+"zutrifft."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:56
+msgid ""
+"Klicken Sie auf **Weiter**, um zum nächsten Dialog zu gelangen.  Wurde eine "
+"Option unter \"Andere Netzwerkdrucker\" ausgewählt, so muss die genaue "
+"Verbindung manuell angegeben werden und es folgt folgender Dialog, "
+"andernfalls wird folgender Dialog übersprungen:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:63
+msgid ""
+"Im Falle eines Netzwerkdruckers müssen Sie hier die IP-Adresse oder den "
+"Hostnamen und zusätzlich bei Verwendung eines Print-Servers, der über "
+"mehrere Anschlüsse verfügt, noch die Warteschlange anzugeben. Zum Beispiel:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:72
+msgid ""
+"Im Zweifelsfall sollte auch hier die Bedienungsanleitung des Printservers "
+"weiterhelfen. Klicken Sie auf **Weiter**, um zum nächsten Dialog zu "
+"gelangen."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:78
+msgid ""
+"In dieser Maske muss für den Drucker ein Name vergeben werden (zum Beispiel "
+"*r203-pr01* oder *h109drucker*). Der hier vergebene Name gilt zugleich als "
+"Freigabename für Linux- und für Windows-Clients. Die restlichen Angaben sind"
+" zwar optional, sollten aber eingegeben werden, um die Zuordnung "
+"nachvollziehbar zu halten."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:84
+msgid ""
+"Klicken Sie auf **Weiter**, um zur Auswahl des Druckermodells zu gelangen."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:88
+msgid ""
+"Wählen Sie in Liste Ihr Druckermodell aus. Mit **Weiter** werden Treiber zur"
+" Auswahl angeboten. Stehen für Ihr Modell mehrere Treiber zur Auswahl "
+"stehen, wählen Sie den empfohlenen Treiber (recommended) aus. Sollte Ihr "
+"Modell nicht in der Liste erscheinen, laden Sie über den Button "
+"**Durchsuchen** die sog. PPD-Datei für Ihren Drucker hoch. Die PPD-Datei ist"
+" beinhaltet einen Treiber für den Drucker für Linux. Diese Treiber erhalten "
+"Sie auf der Seite Ihres Druckerherstellers. Laden Sie diese lokal herunter. "
+"Danach können Sie die PPD-Datei auf den linuxmuster.net Server mit o.g. "
+"Dialog hochladen."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:101
+msgid ""
+"Eventuell kann Ihr Drucker auch mit der Marke \"Generic\" und einem "
+"entsprechenden Treiber (z.B. \"Generic PCL 5e ... (recommended)\") bereits "
+"drucken."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:105
+msgid ""
+"Mit Klick auf **Drucker hinzufügen** schließen Sie die Druckerinstallation. "
+"Dafür benötigt das CUPS-Webinterface die Authentifizierung als "
+"**administrator**."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:111
+msgid "Danach gelangen Sie zur Einstellungsseite des Druckers."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:115
+msgid "Drucker konfigurieren"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:119
+msgid ""
+"Hier können Sie abhängig vom Druckermodell verschiedene Einstellungen für "
+"das Standardverhalten des Druckertreibers vornehmen (zum Beispiel die "
+"Seitengröße auf A4 einstellen, Duplexdruck etc., falls dies nicht "
+"standardmäßig vorgesehen ist)."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:121
+msgid ""
+"Klicken Sie im Dialog für die Standardeinstellungen auf den Menüpunkt "
+"**Richtlinien**, um hier das Verhalten des Druckers im Fehlerfall "
+"festzulegen."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:125
+msgid ""
+"Geben Sie unter \"Fehlerbehandlung\"  **abort-job** an, um sicherzustellen, "
+"dass CUPS im Fehlerfall den Druckjob löscht."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:127
+msgid ""
+"Über den Knopf **Standardeinstellungen festlegen** werden Sie schließlich "
+"zur Verwaltungsseite des neu eingerichteten Druckers weitergeleitet:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:131
+msgid "Hier können Sie"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:133
+msgid "eine Testseite ausdrucken lassen,"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:134
+msgid ""
+"den Drucker (die Ausführung von Druckaufträgen) stoppen und wieder starten,"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:135
+msgid "die Entgegennahme von Druckaufträgen sperren und wieder freischalten,"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:136
+msgid ""
+"die Druckereinrichtung wiederholen, um IP-Adresse oder Druckertreiber zu "
+"ändern,"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:137
+msgid "die Druckereinstellungen anpassen oder"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:138
+msgid "erlaubte Benutzer festlegen."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:140
+msgid ""
+"Nun ist Ihr Netzwerkdrucker betriebsbereit und kann auf den Arbeitsstationen"
+" eingerichtet werden."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:142
+msgid "Angesprochen wird obiger Drucker über den URL:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:144
+msgid "http://server:631/printers/r203-pr01"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:148
+msgid "PDF-Drucker aktivieren"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:150
+msgid "Der standardmäßig eingerichtete PDF-Drucker wird über den URL"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:152
+msgid "http://server:631/printers/PDF-Printer"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:154
+msgid ""
+"angesprochen. Jetzt kann auch über den PDF-Drucker in eine PDF-Datei "
+"gedruckt werden, die auf dem Server im Homeverzeichnis des Benutzers im "
+"Unterverzeichnis PDF abgelegt wird."
+msgstr ""

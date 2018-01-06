@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/printer/printer/4-drucker-zugriffssteuerung.rst:2
+msgid "Wie verwalte ich den Zugriff auf die Drucker?"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/4-drucker-zugriffssteuerung.rst:4
+msgid ""
+"Zunächst ist jeder neu eingerichtete Netzwerkdrucker im gesamten Netz an "
+"jeder Arbeitsstation verfügbar. Sie können jedoch den Druckerzugriff auf "
+"bestimmte Räume und/oder Arbeitsstationen beschränken."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/4-drucker-zugriffssteuerung.rst:7
+msgid ""
+"Melden Sie sich dazu als Benutzer **administrator** auf der *Schulkonsole* "
+"ein und gehen Sie zur Druckerseite. Diese erreichen Sie entweder über den "
+"Menüpunkt Drucker in der Schulkonsole, oder Sie geben in der Adresszeile der"
+" Browser nachstehende Adresse ein:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/4-drucker-zugriffssteuerung.rst:10
+msgid "https://server:242/schulkonsole/printers"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/4-drucker-zugriffssteuerung.rst:12
+msgid ""
+"Sie sehen eine Liste mit den in Ihrem Schulnetz verfügbaren "
+"Netzwerkdruckern."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/4-drucker-zugriffssteuerung.rst:16
+msgid ""
+"Sind einem Drucker Räume oder Rechner zugeordnet, sind diese hier ebenfalls "
+"aufgelistet. Ist ein Drucker weder einem Raum noch einem Rechner zugeordnet,"
+" ist er ohne Einschränkung netzweit verfügbar."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/4-drucker-zugriffssteuerung.rst:18
+msgid ""
+"Um einem Drucker einen Raum zuzuordnen, klicken Sie auf **Bearbeiten** und "
+"ordnen über die Pfeile wie im unten abgebildeten Dialog den Raum zu."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/4-drucker-zugriffssteuerung.rst:24
+msgid ""
+"Ist ein Drucker einem Raum bzw. Rechner zugeordnet, so ist der Zugriff von "
+"anderen Räumen bzw. Rechnern aus gesperrt.  In diesem Fall müssen Sie dem "
+"Drucker zusätzlich diejenigen Räume/Rechner zuordnen, die ebenfalls Zugriff "
+"auf den Drucker haben sollen.  Nur wenn ein Drucker einem entsprechenden "
+"Raum zugeordnet wurde, kann ein Lehrer über die Schulkonsole (im Bereich "
+"Aktueller Raum) den Zugriff auf diesen Drucker steuern."
+msgstr ""

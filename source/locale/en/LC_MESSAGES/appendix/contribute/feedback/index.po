@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/appendix/contribute/feedback/index.rst:2
+msgid "linuxmuster.net Community Feedback"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/index.rst:4
+msgid ""
+"linuxmuster-community-feedback ist ein Paket zur Erhebung fein "
+"konfigurierbarer Statistiken zum Einsatz von linuxmuster.net."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/index.rst:7
+msgid ""
+"Das Paket kann ohne die Übermittlung personen- beziehungsweise "
+"institutionsbezogener Daten verwendet werden, es können jedoch auf "
+"expliziten Wunsch auch Informationen wie Schulname oder Einsatzort an das "
+"Projekt übermittelt werden."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/index.rst:12
+msgid ""
+"Eine Übermittlung der Statistiken ist für das Open Source Projekt "
+"\"linuxmuster.net\" sehr wichtig, da es mitunter schwer ist, offizielle "
+"Entscheider von der Zuverlässigkeit eines \"kostenlosen\" Produkts zu "
+"überzeugen."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/index.rst:16
+msgid ""
+"Ein wichtiges Argument ist hier stets auch die Verbreitung des Systems "
+"belegen zu können, damit man darlegen kann, dass es sich bei linuxmuster.net"
+" nicht um ein \"Nischenprodukt\" handelt. In diesem Sinne sind zuverlässige "
+"Zahlen ein Baustein für den Erfolg des Projekts - bitte helfen Sie mit."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/index.rst:23
+msgid "Inhalt:"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/index.rst:37
+msgid "Index"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/index.rst:39
+msgid ":ref:`genindex`"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/index.rst:40
+msgid ":ref:`search`"
+msgstr ""

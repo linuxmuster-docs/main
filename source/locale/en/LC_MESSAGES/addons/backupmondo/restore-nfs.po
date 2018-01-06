@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/addons/backupmondo/restore-nfs.rst:2
+msgid "Restore von einem NFS-Share"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-nfs.rst:4
+msgid ""
+"Bei meinen Versuchen von einem NFS-Share zu restaurieren, gelang es der "
+"Mondo-Rescue-CD nicht, das Netzwerk zu konfigurieren. In dem Fall müssen Sie"
+" die Netzwerkkonfiguration auf der Konsole von Hand einrichten. Gehen Sie so"
+" vor:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-nfs.rst:6
+msgid "Beenden Sie mondorestore, um auf die Konsole zu gelangen."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-nfs.rst:7
+msgid ""
+"Finden Sie heraus, welches Netzwerkinterface mit dem NFS-Server verbunden "
+"ist. Der Befehl"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-nfs.rst:15
+msgid ""
+"Konfigurieren Sie jetzt das Netzwerkinterface (Beispiel, Interface und IP-"
+"Adresse müssen ggf. angepasst werden):"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-nfs.rst:21
+msgid "Überprüfen Sie mit ping, ob der NFS-Server erreichbar ist."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-nfs.rst:22
+msgid "Starten Sie den Portmap-Dienst:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-nfs.rst:28
+msgid "Mounten Sie nun das NFS-Share nach ``/tmp/isodir`` (Beispiel):"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-nfs.rst:34
+msgid ""
+"Starten Sie nun ``mondorestore`` und führen Sie die Restauration durch."
+msgstr ""

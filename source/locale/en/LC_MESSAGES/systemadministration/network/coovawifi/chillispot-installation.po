@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:3
+msgid "Installation des Captive Portal Servers"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:6
+msgid "Voraussetzungen"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:8
+msgid ""
+"Für das Captive Portal wird ein PC oder eine virtuelle Maschine mit zwei "
+"Netzwerkkarten benötigt:"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:11
+msgid ""
+"**eth0** muss die Netzwerkkarte sein, die mit dem Internet verbunden ist, je"
+" nach Einsatzszenario also z.B. grünem oder blauem Interface. Bei "
+"Virtualisierung empfiehlt sich die Einrichtung einer virtuellen "
+"Netzwerkbrücke, die man an keinen physikalischen Port binden muss (-> "
+"IPFire)."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:16
+msgid ""
+"**eth1** wird nicht konfiguriert und mit dem Netzwerksegment verbunden, an "
+"dem die Clients sich später verbinden werden. Konfiguration und DHCP werden "
+"beim Start des chilli-Diensts von CoovaChilli vorgenommen."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:21
+msgid ""
+"Für eine manuelle Installation, muss ein Ubuntu-Server 14.04.4 *32bit* auf "
+"dem späteren Captive-Portal-Server installiert werden. Als einziges "
+"Zusatzpaket sollte bei der Softwareauswahl \"ssh-server\" gewählt werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:28
+msgid "**Achtung:** Mit der 64bit Version funktioniert das Setup nicht."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:33
+msgid "Das Captive Portal als virtuelle Maschine herunterladen"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:35
+msgid "Lade zunächst die virtuelle Maschine herunter:"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:37
+msgid "https://www.linuxmuster.net/downloads/ova/linuxmuster-chilli.ova"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:39
+msgid ""
+"Die OVA-Datei enthält eine virtuelle Appliance, auf der die komplette "
+"linuxmuster-chilli Umgebung bereits vorinstalliert ist."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:43
+msgid "Auspacken der Appliance"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:45
+msgid ""
+"Die Appliance kann problemlos mit Virtualbox geöffnet werden. Der "
+"neuralgische Punkt ist die Konfiguration der Netzwerkkarten für die "
+"virtuelle Maschine."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:50
+msgid "Bereitstellen"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:52
+msgid "Die Anmeldedaten für die Appliance sind"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:59
+msgid "Nach der ersten Anmeldung muss der Befehl"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:65
+msgid ""
+"ausgeführt werden. Dabei wird das Passwort des administrativen Benutzers "
+"*coovaadmin* geändert und ein neues SSL Zertifikat für den apache Webserver "
+"erzeugt. Anschließend wird CoovaChilli interaktiv für die Arbeit in der "
+"linuxmuster.net-Umgebung konfiguriert. Details hierzu finden sich in der "
+":doc:`Konfigurationsanleitung für linuxmuster-chilli <chillispot-"
+"configuration>`."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:73
+msgid "CoovaChilli mit der Paketverwaltung installieren"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:75
+msgid "Auf dem Chilli-Server muss der Repo-Schlüssel importiert werden:"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:81
+msgid ""
+"Eine neue Datei ``/etc/apt/sources.list.d/linuxmuster-chilli.list`` anlegen "
+"und die folgende Zeile eintragen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:89
+msgid "Aktualisieren der Paketliste mit"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:95
+msgid "Installation bzw. Update des Paketes mit"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:101
+msgid ""
+"Jetzt geht es dann weiter mit der :doc:`Konfiguration von linuxmuster-chilli"
+" <chillispot-configuration>`."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:106
+msgid "Netzwerkkonfiguration auf dem CoovaChilli-Server"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:108
+msgid ""
+"Wenn der CoovaChilli-Server der einzige Rechner im blauen Netz ist, kann man"
+" die Schnittstellenkonfiguration problemlos dem DHCP Server überlassen. Die "
+"Datei ``/etc/network/interfaces`` auf dem coovachilli Server sieht dann "
+"folgendermaßen aus:"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:127
+msgid ""
+"Ebenso kann man, sofern man den :ref:`DHCP-Adressbereich <chillispot-dhcp-"
+"server-label>` geändert hat, kann man dem CoovaChilli-Server auch eine "
+"statische IP-Adresse geben, z.B."
+msgstr ""

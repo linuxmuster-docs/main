@@ -1,0 +1,267 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:2
+msgid "Der Switch"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:4
+msgid ""
+"In der hier vorgestellten Lösung wird ein Cisco SG300-10 Switch verwandt. "
+"Die Überlegungen lassen sich aber leicht auf andere Switches übertragen."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:7
+msgid "Grundsätzliches"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:9
+msgid ""
+"Bei vielen Switches ist es unmöglich, sich komplett auszusperren. Der SG300 "
+"hat die Konfigurationsspeicher `Ausgeführte Konfiguration` und "
+"`Startkonfiguration`."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:11
+msgid ""
+"In die `Ausgeführte Konfiguration` werden alle Einstellungen gespeichert, "
+"die Sie vornehmen. Bei einem Neustart wird als erstes die "
+"`Startkonfiguration` in die `Ausgeführte Konfiguration` kopiert und dann die"
+" `Ausgeführte Konfiguration` ausgeführt."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:13
+msgid ""
+"Wenn Sie sich also mit einer Einstellung ausgeschlossen haben, starten Sie "
+"den Switch einfach neu und Sie haben den zuletzt in die `Startkonfiguration`"
+" gespeicherten Stand."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:15
+msgid ""
+"Sobald Sie eine Einstellung vorgenommen haben, die Sie nicht aussperrt, "
+"sehen Sie oben neben dem Benutzernamen einen Link zum Speichern der "
+"`Aktuellen Konfiguration` in die `Startkonfiguration`."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:21
+msgid "VLANs anlegen"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:23
+msgid ""
+"Das VLAN für den Internetzugang hat die VLAN-ID 2, das Schüler-WLAN die "
+"VLAN-ID 10 und das Schulnetz die VLAN-ID 16."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:28
+msgid ""
+"Wählen Sie VLAN-Verwaltung -> VLAN-Einstellungen und klicken auf "
+"`Hinzufügen`."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:30
+msgid ""
+"Es öffnet sich ein Dialogfenster, mit dem Sie die VLANs hinzufügen können."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:35
+msgid "Fügen Sie die VLANs wie im Bild hinzu."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:40
+msgid ""
+"Sobald alle VLANs hinzugefügt sind, schließen Sie das Fenster. Die VLANs "
+"sollten jetzt aufgeführt sein."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:42
+msgid ""
+"Jetzt wäre ein guter Zeitpunkt, um die `Ausgeführte Konfiguartion` zu "
+"speichern."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:46
+msgid "Ausgeschlossen, Getaggt, Ungetaggt und PVID"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:48
+msgid ""
+"Für jeden Switchport und für jedes VLAN muss festgelegt werden, ob das VLAN "
+"mit der VLAN-ID x ausgeschlossen, getaggt akzeptiert oder Datenpakete, die "
+"mit der VLAN-ID x getaggt sind, ungetaggt weitergeleitet werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:51
+msgid "Ausgeschlossen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:51
+msgid "Datenpakete, die mit der VLAN-ID x getaggt sind, werden verworfen."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:54
+msgid "Getaggt:"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:54
+msgid ""
+"Datenpakete, die mit der VLAN-ID x getaggt sind, werden weitergeleitet."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:57
+msgid "Ungetaggt:"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:57
+msgid ""
+"Von Datenpaketen, die mit der VLAN-ID x getaggt sind, wird die VLAN-ID "
+"entfernt und zum Client weitergeleitet. Die meisten Clients können mit "
+"getaggten Datenpaketen nichts anfangen."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:61
+msgid "PVID:"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:60
+msgid ""
+"Bie einem Port, der mit der PVID x markiert ist, werden alle ungetaggten "
+"Datenpakete des Clients mit der VLAN-ID x getaggt."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:64
+msgid "Den Ports die VLANs zuweisen"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:71
+msgid "Port 1:"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:70
+msgid ""
+"Der Hypervisor ist über ein Netzwerkkabel mit Port 1 des Switches verbunden."
+" Der Port 1 ist getaggtes Mitglied der VLANs 2, 10 und 16."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:77
+msgid "Port 2-5:"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:74
+msgid ""
+"Die APs sind im Schulnetz und werden über ein ungetaggtes VLAN verwaltet. "
+"VLAN 16 ist ungetaggt und PVID ist 16."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:77
+msgid ""
+"Zusätzlich soll das Schüler-WLAN vom AP ausgestrahlt werden. Um es vom "
+"Schulnetz zu trennen, muss es getaggt am AP ankommen. VLAN 10 ist getaggt."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:80
+msgid "Port 7-8:"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:80
+msgid ""
+"Die Clients sind nur im Schulnetz und arbeiten mit ungetaggten Datenpaketen."
+" VLAN 16 ist ungetaggt und PVID ist 16."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:83
+msgid "Port 9:"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:83
+msgid ""
+"Auch der Router arbeitet mit ungetaggten Datenpaketen. VLAN 2 ist ungetaggt "
+"und PVID ist 2."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:86
+msgid "Port 10:"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:86
+msgid ""
+"Über diesen Port wird der Switch gemanaged. Er ist das einzige Mitglied des "
+"Standard VLAN 1. Damit ist der Switch weder über das WLAN noch über das "
+"Schulnetz managebar."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:89
+msgid "Schritt für Schritt"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:91
+msgid "Wählen Sie VLAN-Verwaltung -> Port-VLAN."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:96
+msgid ""
+"In der Grundeinstellung ist für jeden Port VLAN 1 ungetaggt und PVID 1 "
+"eingestellt."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:98
+msgid ""
+"Da der Switch nur über den Port 1 verwaltet wird, verbieten Sie den Ports 1 "
+"bis 9 die Mitgliedschaft zu VLAN 1 und bestätigen anschließend mit "
+"`Übernehmen`. Man beachte, dass dabei PVID 1 automatisch gelöscht wird."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:100
+msgid "Nun wählen Sie die VLAN-ID 2 und klicken auf `Los`."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:105
+msgid ""
+"Für Port 1 wählen Sie getaggt und für Port 9 Ungetaggt. Dabei wird PVID "
+"automatisch selektiert."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:107
+msgid "Jetzt ist VLAN 10 an der Reihe."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:112
+msgid "Für die Ports 1 bis 5 wählen Sie getaggt."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:114
+msgid "Und schließlich noch VLAN 16."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:119
+msgid ""
+"Da die APs und die Clients im Schulnetz sind, sind die Ports 2 bis 8 "
+"ungetaggt und PVID ist gesetzt."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:121
+msgid ""
+"Über `VLAN-Verwaltung` -> `Port-VLAN-Mitgliedschaft` erhält man eine "
+"Zusammenfassung."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/switch.rst:126
+msgid "Jetzt wäre ein guter Zeitpunkt zum Speichern der Konfiguration."
+msgstr ""

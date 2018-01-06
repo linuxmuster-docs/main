@@ -14,11 +14,16 @@
 
 import sys
 import os
+import sphinx_bootstrap_theme
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('.'))
+
+# > Sphinx v1.6.1
+#def setup(app):
+#    app.add_stylesheet("my-styles.css")
 
 # -- General configuration ------------------------------------------------
 
@@ -120,24 +125,33 @@ gettext_compact = False     # optional
 
 
 # -- Options for HTML output ----------------------------------------------
-html_context = {
-    'css_files': [
-        'https://media.readthedocs.org/css/sphinx_rtd_theme.css',
-        'https://media.readthedocs.org/css/readthedocs-doc-embed.css',
-        '_static/theme_overrides.css',
-    ],
-}
+# html_context = {
+#     'css_files': [
+#         'https://media.readthedocs.org/css/sphinx_rtd_theme.css',
+#         'https://media.readthedocs.org/css/readthedocs-doc-embed.css',
+#         '_static/theme_overrides.css',
+#     ],
+# }
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 # html_theme = 'linuxmuster'
-html_theme = 'sphinx_rtd_theme'
+#html_theme = 'sphinx_rtd_theme'
+html_theme = 'bootstrap'
+html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    'logo_only': True
+    #'logo_only': True
+    'bootswatch_theme': "united",
+    'source_link_position': "footer",
+    'navbar_links': [],
+    'navbar_title': "",
+    'navbar_site_name': "Kapitel",
+    'navbar_pagenav_name': "Seite",
+    'navbar_title': " ",
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
@@ -162,7 +176,7 @@ html_logo = '_static/logo.png'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-#html_static_path = ['_static']
+html_static_path = ['_static']
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -180,6 +194,7 @@ html_logo = '_static/logo.png'
 
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
+html_sidebars = {'**': ['localtoc.html']}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.

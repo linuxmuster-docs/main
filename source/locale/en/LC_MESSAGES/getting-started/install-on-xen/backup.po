@@ -1,0 +1,219 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2018\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/getting-started/install-on-xen/backup.rst:2
+msgid "Konfiguration automatisches Backup"
+msgstr "Configuration automatic backup"
+
+#: ../../source/getting-started/install-on-xen/backup.rst:4
+msgid ""
+"Um Ihre Server zu sichern, ist in den ``linuxmuster-hv-tools`` ein Skript "
+"enthalten, welches Snapshots erstellt und auf einen Datenträger Ihrer Wahl "
+"verschiebt. Beachten Sie dabei, dass die Backups nicht inkrementell abgelegt"
+" werden und dadurch viel Speicherplatz in Anspruch nehmen. Es können daher "
+"meist nur einige Vollbackups gespeichert werden. In der Datei main.cfg "
+"können Sie mit dem Parameter ``Maxage`` beeinflussen, wieviele Backups auf "
+"dem Datenträger beibehalten werden. Diese Backups werden hauptsächlich im "
+"Desaster-Fall genutzt. Für versionssichere Backups über längeren Zeitraum "
+"empfehlen wir spezielle Software."
+msgstr ""
+"To back up your server there is a script included in the ``linuxmuster-hv-"
+"tools`` which creates snapshots and shifts them to a storage of your choice."
+" Keep in mind that the backups are not stored incrementally and thereby take"
+" a lot of storage space. Therefore usually only a few full backups can be "
+"stored . In the ``main.cfg`` file you can use the parameter ``Maxage`` to "
+"specify how many backups are retained on disk. These backups are used "
+"primarily in the case of disaster. For version secure backups over a longer "
+"period of time, we recommend special software."
+
+#: ../../source/getting-started/install-on-xen/backup.rst:6
+msgid ""
+"Sie können jeden Storage verwenden, den Sie möchten (NAS, USB-Disk, interne "
+"Disk, ...). Den Speicherort für das Backup kann in der Datei ``/usr/share"
+"/linuxmuster-hv-tools/etc/main.cfg`` eingetragen werden. Sofern nichts "
+"eingetragen ist, wird nach einem SR gesucht, welches als BackupStore "
+"beschriftet ist. Dieses wird dann als Target verwendet. In unserem "
+"*Beispiel* verbinden wir uns mit einer NFS-Freigabe auf einer NAS mit der IP"
+" 10.16.1.9."
+msgstr ""
+"You can use any storage you want (NAS, USB disk, internal disk, ...). You "
+"can enter the location for the backup in the file ``/usr/share/linuxmuster-"
+"hv-tools/etc/main.cfg``. If nothing is entered, it will search for an SR, "
+"which is labeled \"BackupStore\". This is then used as a target. In our "
+"example, we connect to an NFS share on a NAS device with the IP 10.16.1.9."
+
+#: ../../source/getting-started/install-on-xen/backup.rst:11
+msgid "Konfiguration XenCenter"
+msgstr "Configuration XenCenter"
+
+#: ../../source/getting-started/install-on-xen/backup.rst:13
+msgid ""
+"Öffnen Sie XenCenter und klicken Sie mit der rechten Maustaste auf ``xen``, "
+"wählen Sie ``New SR``."
+msgstr ""
+"Open XenCenter and click with the right mouse button on ``xen``, select "
+"``New SR``."
+
+#: ../../source/getting-started/install-on-xen/backup.rst:19
+msgid "Wählen Sie einen Punkt unter ISO library."
+msgstr "Select one of the items under **ISO library**."
+
+#: ../../source/getting-started/install-on-xen/backup.rst:25
+msgid ""
+"Bennen Sie Ihren Storage. Sofern Sie den Namen \"BackupStore\" verwenden, "
+"müssen Sie später die main.cfg nicht anpassen. Dieser Name wird automatisch "
+"als Target erkannt."
+msgstr ""
+"Name your Storage. If you use the name \"BackupStore\" you do not need to "
+"adjust the main.cfg later. This name is automatically detected as a target."
+
+#: ../../source/getting-started/install-on-xen/backup.rst:31
+msgid ""
+"Tragen Sie den Pfad zur Freigabe ein, welchen Sie verwenden wollen und "
+"klicken auf ``Finish``."
+msgstr ""
+"Enter the path to the share that that you want to use and click on "
+"``Finish``."
+
+#: ../../source/getting-started/install-on-xen/backup.rst:37
+msgid ""
+"Sie haben den Storage erfolgreich eingerichtet, wenn er links in der "
+"Übersicht angezeigt wird."
+msgstr ""
+"You have successfully set up the storage if it is displayed on the left in "
+"the overview."
+
+#: ../../source/getting-started/install-on-xen/backup.rst:43
+msgid ""
+"Um einzustellen, welche VMs gesichert werden sollen, genügt es bei den zu "
+"sichernden VMs einen bestimmten Tag zu setzen. Klicken Sie dazu mit der "
+"rechten Maustaste auf die gewünschte VM und wählen ``Properties``."
+msgstr ""
+"To set which VMs should be backed up, it is sufficient to set a specific tag"
+" in the VMs that should be backed up. Click with the right mouse button on "
+"the desired VM and select ``Properties``."
+
+#: ../../source/getting-started/install-on-xen/backup.rst:49
+msgid "Im Feld ``General`` klicken Sie unten auf ``Edit tags...``."
+msgstr "In the ``General`` section click on ``Edit tags...``."
+
+#: ../../source/getting-started/install-on-xen/backup.rst:55
+msgid ""
+"Tragen Sie als Tag ``ni-backup`` ein. Klicken Sie auf ``Create`` und dann "
+"auf ``OK``. Durch diesen Tag wird die Maschine in die Sicherung mit "
+"aufgenommen. Bei allen weiteren Maschinen wird der Tag bereits aufgelistet "
+"und es muss nur noch die Checkbox aktiviert werden."
+msgstr ""
+"Enter ``ni-backup`` as tag. Click on ``Create`` and then on ``OK``. Because "
+"of this tag the machine is included in the backup. For all other machines "
+"the tag is already listed and only needs to be activated with the checkbox."
+
+#: ../../source/getting-started/install-on-xen/backup.rst:66
+msgid "Konfiguration XenServer"
+msgstr "Configuration XenServer"
+
+#: ../../source/getting-started/install-on-xen/backup.rst:68
+msgid ""
+"Um ein Backup zu starten, wechseln Sie auf die Konsole des XenServers und "
+"geben folgenden Befehl ein:"
+msgstr ""
+"To start a backup, go to the console of the XenServer and enter the "
+"following command:"
+
+#: ../../source/getting-started/install-on-xen/backup.rst:74
+msgid "und bestätigen mit ``Enter``."
+msgstr "and confirm with ``Enter``."
+
+#: ../../source/getting-started/install-on-xen/backup.rst:81
+msgid ""
+"Nach Abschluss finden Sie in Ihrer Freigabe einen Snapshot, den Sie im "
+"Notfall wiederherstellen können."
+msgstr ""
+"You will now see a snapshot on your share, that you can restore in case of "
+"emergency."
+
+#: ../../source/getting-started/install-on-xen/backup.rst:88
+msgid "Automatische Backups"
+msgstr "Automatic backups"
+
+#: ../../source/getting-started/install-on-xen/backup.rst:90
+msgid ""
+"Um Backups automatisch zu bestimmten Zeitpunkten auszuführen, können Sie "
+"einen Cronjob anlegen. Geben Sie dazu in der XenServer-Konsole den Befehl"
+msgstr ""
+"To automatically perform backups at certain times, you can create a cron "
+"job. To do this, enter the command in the XenServer console"
+
+#: ../../source/getting-started/install-on-xen/backup.rst:96
+msgid "ein und bestätigen Sie mit ``Enter``."
+msgstr "and confirm with ``Enter``."
+
+#: ../../source/getting-started/install-on-xen/backup.rst:102
+msgid ""
+"Tragen Sie für ein wöchentliches Backup, dass jeden Freitag um 20:00 Uhr "
+"startet, folgende Zeile in die Datei ein:"
+msgstr ""
+"For a weekly backup that starts every Friday at 20:00, enter the following "
+"line in the file:"
+
+#: ../../source/getting-started/install-on-xen/backup.rst:112
+msgid ""
+"Verlassen Sie den Editor und speichern Sie die Datei. Die Zeit für das "
+"Backup folgt dieser Zeitangabe die als Filter gelesen wird:"
+msgstr ""
+"Exit the editor and save the file. The time for the backup follows this time"
+" specification which is read as a filter:"
+
+#: ../../source/getting-started/install-on-xen/backup.rst:115
+msgid "Nur bei Minute 0 [0-60]"
+msgstr "Only at minute 0 [0-60]"
+
+#: ../../source/getting-started/install-on-xen/backup.rst:115
+msgid "Nur bei Stunde 20 [0-20]"
+msgstr "Only at hour 20 [0-20]"
+
+#: ../../source/getting-started/install-on-xen/backup.rst:115
+msgid "Nur bei Tag \\* (Jeder Tag im Monat) [1-31]"
+msgstr "Only at day \\* (every day of the month) [1-31]"
+
+#: ../../source/getting-started/install-on-xen/backup.rst:115
+msgid "Nur bei Monat \\* (Jeder Monat im Jahr) [1-12]"
+msgstr "Only at month \\* (every month of the year) [1-12]"
+
+#: ../../source/getting-started/install-on-xen/backup.rst:115
+msgid "Nur bei Wochentag 5 [0-7] 0,7=Sonntag"
+msgstr "Only at weekday 5 [0-7] 0,7 = Sunday"
+
+#: ../../source/getting-started/install-on-xen/backup.rst:119
+msgid "0"
+msgstr "0"
+
+#: ../../source/getting-started/install-on-xen/backup.rst:119
+msgid "20"
+msgstr "20"
+
+#: ../../source/getting-started/install-on-xen/backup.rst:119
+#: ../../source/getting-started/install-on-xen/backup.rst:119
+msgid "\\*"
+msgstr "\\*"
+
+#: ../../source/getting-started/install-on-xen/backup.rst:119
+msgid "5"
+msgstr "5"

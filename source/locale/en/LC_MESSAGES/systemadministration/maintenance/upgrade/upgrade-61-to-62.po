@@ -1,0 +1,216 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:2
+msgid "Upgrade von 6.1"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:4
+msgid ""
+"Um linuxmuster.net 6.1 (Codename Babo) auf linuxmuster.net 6.2 (Codename "
+"babo62) zu aktualisieren, sind nachstehend aufgeführte Schritte auszuführen."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:7
+msgid "Lesen der Release-Informationen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:9
+msgid ""
+"Lesen Sie die Informationen zu :ref:`release-information-label`, speziell, "
+"welche :ref:`Fehler bekannt sind<knownbugs-label>`."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:13
+msgid "Paketquellen anpassen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:15
+msgid ""
+"Zum Upgrade auf linuxmuster.net 6.2 (Codename Babo62) muss das entsprechende"
+" neue **babo62**-Repositorium eingebunden werden."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:17
+msgid ""
+"In der Datei ``/etc/apt/sources.list.d/linuxmuster-net.list`` sind folgende "
+"Paketquellen anzugeben:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:26
+msgid "Paketquellen überprüfen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:28
+msgid ""
+"Stellen Sie sicher, dass keine weitere Datei im Verzeichnis "
+"``/etc/apt/sources.list.d/`` oder die Datei ``/etc/apt/sources.list`` "
+"Repositorien von ``pkg.linuxmuster.net`` enthält."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:31
+msgid "Dist-upgrade durchführen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:33
+msgid ""
+"Nachdem die Paketquellen in der genannten Datei für apt eingetragen wurden, "
+"können Sie nun die Paketquellen aktualisieren und die Pakete selbst "
+"aktualisieren."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:35
+msgid ""
+"Dazu sind auf der Eingabekonsole als Benutzer root folgende Befehle "
+"einzugeben:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:42
+msgid ""
+"Das Paketsystem fragt bei einigen Paketen nach, ob bei **geänderten "
+"Konfigurationsdateien die aktuelle Konfiguration beibehalten** werden "
+"sollen, oder ob die neuen angewendet werden sollen."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:44
+msgid "Aktuelle Konfiguration beibehalten"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:46
+msgid ""
+"Wählen Sie immer aus, dass die aktuelle Konfiguration beibehalten werden "
+"soll. Dies entspricht auch der Voreinstellung, die Sie mit ENTER bestätigen "
+"können."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:50
+msgid "Import der Workstations durchführen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:52
+msgid ""
+"Beim durchgeführten Upgrade wurde auch eine neue Version des Pakets "
+"linuxmuster-linbo eingespielt. Diese neue Version von Linbo erfordert es, "
+"dass zur Aktivierung zu Beginn ein einmaliger Import der Workstations "
+"ausgeführt wird. Auf diese Weise werden die notwendigen "
+"Konfigurationsdateien erstellt."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:54
+msgid "Führen Sie hierzu folgenden Befehl aus:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:60
+msgid ""
+"Das Skript prüft die angegebenen Eintragungen in der Datei "
+"``/etc/linuxmuster/workstations``. Sind diese korrekt wird der Import "
+"ausgeführt. Wurde das Skript erfolgreich abgearbeitet, wird dies mit einem "
+"entsprechenden Hinweis quittiert."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:63
+msgid "Clients mit neuem Linbo booten"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:65
+msgid ""
+"Ab Linbo 2.3 ist es zwingend notwendig, im BIOS auch die Festplatte als "
+"Bootmedium einzustellen."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:67
+msgid ""
+"Um sicherzustellen, dass das neue LINBO-System auch lokal auf den Clients "
+"installiert wird, erzwingt man eine Aktualisierung des Caches und einen "
+"Reboot."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:71
+msgid ""
+"Folgender Befehl auf der Serverkonsole sorgt dafür, dass beim nächsten "
+"Bootvorgang (egal ob per PXE oder von Festplatte) der Cache initialisiert "
+"wird (und rebootet wird):"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:96
+msgid ""
+"Nach dem Upgrade sollten alle Clients wie gewohnt weiter funktionieren. Die "
+"Bildschirmausgabe beim Bootvorgang ist leicht verändert und vor dem "
+"Betriebssystemstart aus der Linbo-Oberfläche heraus wird nun immer ein "
+"Neustart initiiert (Der sogenannte *reboot-Workaround* wird nun immer "
+"verwendet.)."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:105
+msgid "Reparatur und Neuerstellen eines Abbildes nach Partitionierung"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:107
+msgid ""
+"Ab Version 2.3.0 wird ein anderer Partitionsprogramm verwendet. Leider kommt"
+" Windows mit einer *Neupartitionierung* nicht zurecht.  Im normalen Betrieb "
+"gibt es keine Probleme. Erst dann, wenn Sie einen Computer neu "
+"partitionieren müssen, quittiert Windows mit einer Fehlermeldung den Dienst "
+"beim Start dieses Images:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:123
+msgid "Lösungsweg"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:125
+msgid "Abhilfe schafft,"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:127
+msgid "Windows mit Hilfe der Boot-DVD zu reparieren (Systemstartreparatur),"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:128
+msgid "danach Windows ohne Synchronisation zu starten und wieder zu rebooten."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:129
+msgid ""
+"Beim Reboot erstellen Sie ein neues Image, das danach auf allen anderen "
+"Rechnern ausgerollt werden kann und auch nach einer neuen Partitionierung "
+"normal funktioniert."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:136
+msgid "Fehlerbehebung mit einem USB-Stick"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:138
+msgid ""
+"Wenn ein Arbeitsplatz mit der Fehlermeldung \"Kernel panic\" hängt oder in "
+"Schleifen immer wieder rebootet, kann ein Neuanfang über einen USB-Stick "
+"oder CD/DVD initiiert werden."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:142
+msgid ""
+"Laden Sie dazu die die Datei ``linbo.iso`` von ihrem Server herunter (z.B. "
+"über 10.16.1.1/linbo.iso) und brennen Sie diese auf CD/DVD oder kopieren "
+"diese auf einen USB-Stick, z.B. mit Hilfe des Befehls"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:150
+msgid "wobei ``/dev/sdX`` der Schnittstellenname ihres USB-Sticks sein muss."
+msgstr ""

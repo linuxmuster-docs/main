@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/user-management/change-own-password/index.rst:2
+msgid "Ändern des eigenen Passwortes"
+msgstr ""
+
+#: ../../source/user-management/change-own-password/index.rst:4
+msgid ""
+"Benutzernamen und Passwörter werden in der linuxmuster.net zentral "
+"verwaltet, d.h. Sie können sich an den Computern, an der Schulkonsole und in"
+" Horde mit dem selben Passwort anmelden. Um Ihr Passwort zu ändern melden "
+"Sie sich mit Ihrem Benutzernamen (bestehend aus Kleinbuchstaben und event. "
+"Zahlen) und dem aktuellen Passwort an der Schulkonsole an."
+msgstr ""
+
+#: ../../source/user-management/change-own-password/index.rst:9
+msgid ""
+"Geben Sie unter „Passwortänderung“ nochmals Ihr aktuelles Passwort ein, "
+"sowie zweimal das neue Passwort. Beachten Sie die Anforderungen an das neue "
+"Passwort:"
+msgstr ""
+
+#: ../../source/user-management/change-own-password/index.rst:12
+msgid ""
+"Nicht alle Sonderzeichen können verwendet werden. Folgende Zeichen "
+"funktionieren **nicht**:"
+msgstr ""
+
+#: ../../source/user-management/change-own-password/index.rst:19
+msgid "Folgende Sonderzeichen dürfen ebenso nicht verwendet werden:"
+msgstr ""
+
+#: ../../source/user-management/change-own-password/index.rst:25
+msgid "Darüberhinaus können bei Ihrer Schule folgende Einschränkungen gelten:"
+msgstr ""
+
+#: ../../source/user-management/change-own-password/index.rst:27
+msgid ""
+"Die Mindestlänge des Passwortes sind 6 Zeichen. (Mindestlänge kann der "
+"Netzwerkberater vorgeben)."
+msgstr ""
+
+#: ../../source/user-management/change-own-password/index.rst:28
+msgid ""
+"Das Passwort muss mindestens zwei unterschiedliche Zeichenklassen enthalten."
+" Zeichenklassen sind Großbuchstaben, Kleinbuchstaben, Zahlen und "
+"Sonderzeichen. (Abschaltbar vom Netzwerkberater)."
+msgstr ""
+
+#: ../../source/user-management/change-own-password/index.rst:32
+msgid ""
+"Beispielsweise sollte das Passwort dann aus Groß- und Kleinbuchstaben oder "
+"Zahlen und Kleinbuchstaben bestehen, etc."
+msgstr ""
+
+#: ../../source/user-management/change-own-password/index.rst:53
+msgid ""
+"Das erfolgreiche Ändern des Passwortes wird mit einer grünen Leiste "
+"unterhalb der Menüleiste bestätigt."
+msgstr ""
+
+#: ../../source/user-management/change-own-password/index.rst:57
+msgid ""
+"Falls die Änderung nicht erfolgreich war erhalten Sie eine Fehlermeldung mit"
+" einem Hinweis auf den Fehler."
+msgstr ""
+
+#: ../../source/user-management/change-own-password/index.rst:61
+msgid ""
+"In dieser Beispielfehlermeldung bestand das Passwort nur aus "
+"Kleinbuchstaben."
+msgstr ""

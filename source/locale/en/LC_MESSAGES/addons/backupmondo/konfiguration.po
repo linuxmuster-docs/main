@@ -1,0 +1,269 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/addons/backupmondo/konfiguration.rst:4
+msgid "Konfiguration"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:6
+msgid ""
+"Die Konfiguration des Backupverhaltens kann direkt in der Datei "
+"``/etc/linuxmuster/backup.conf`` geschehen."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:8
+msgid ""
+"Alternativ kann die Konfiguration über die Schulkonsole erfolgen, siehe  "
+":ref:`howto_backupmondo_konfiguration_schulkonsole` beschrieben."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:10
+msgid "Die Parameter im Einzelnen:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:26
+msgid "backupdevice"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:13
+msgid ""
+"Festplattenpartition oder NFS-Share, auf das gesichert werden soll, wird "
+"nach ``/media/backup`` gemountet."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:15
+msgid "Beispiele:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:24
+msgid "**Wichtiger Hinweis**"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:26
+msgid ""
+"Das Backupgerät darf nicht in ``/etc/fstab`` eingetragen sein, da alle dort "
+"eingetragenen Dateisysteme bei einer Komplettrestaurierung formatiert "
+"werden!"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:34
+msgid "restoremethod"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:29
+msgid ""
+"Mögl. Werte: \"hd\" oder \"nfs\", je nachdem, ob von Festplatte oder NFS-"
+"Share restauriert werden soll."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:31
+msgid "Standard: .. code-block:: bash"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:34
+msgid "restoremethod=hd"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:43
+msgid "firewall"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:37
+msgid ""
+"Mögl. Werte: \"yes\" oder \"no\", je nachdem, ob die aktuellen Einstellungen"
+" des IPFire gesichert werden sollen. Es wird unter ``/var/backup/ipfire`` "
+"gesichert. Diese Sicherung kann nach einer Vollrestauration bei der "
+"Erstellung des IPFire eingespielt werden."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:39
+#: ../../source/addons/backupmondo/konfiguration.rst:48
+#: ../../source/addons/backupmondo/konfiguration.rst:57
+#: ../../source/addons/backupmondo/konfiguration.rst:66
+#: ../../source/addons/backupmondo/konfiguration.rst:75
+#: ../../source/addons/backupmondo/konfiguration.rst:87
+#: ../../source/addons/backupmondo/konfiguration.rst:96
+#: ../../source/addons/backupmondo/konfiguration.rst:105
+#: ../../source/addons/backupmondo/konfiguration.rst:114
+#: ../../source/addons/backupmondo/konfiguration.rst:123
+#: ../../source/addons/backupmondo/konfiguration.rst:132
+#: ../../source/addons/backupmondo/konfiguration.rst:141
+msgid "Standard:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:52
+msgid "verify"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:46
+msgid ""
+"Mögl. Werte: \"yes\" oder \"no\", je nachdem, ob die gesicherten Daten nach "
+"dem Backuplauf auf Konsistenz überprüft werden sollen."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:61
+msgid "isoprefix"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:55
+msgid ""
+"Wird für die Bezeichnung der ISO-Images und des Backup-Verzeichnisses "
+"verwendet."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:70
+msgid "mediasize"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:64
+msgid ""
+"mondo benutzt ISO-Images als Backup-Container, die bei Bedarf auch auf "
+"CD/DVD gebrannt werden können. Diese Option legt die Größe der Images in MB "
+"fest. Da Mondo Schwierigkeiten bei mehr als 50 Medien bekommt, sollte man "
+"die Größe seiner Installation anpassen. Falls die Medien nicht auf DVD "
+"gebrannt werden müssen, ist eine beliebige Größe möglich."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:79
+msgid "excludedirs"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:73
+msgid ""
+"Eine durch Kommas separierte Liste der Verzeichnisse, die nicht gesichert "
+"werden sollen. Die Standardeinstellung sollte nicht entfernt werden."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:82
+msgid "includedirs"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:82
+msgid ""
+"Eine durch Kommas separierte Liste der Verzeichnisse, die gesichert werden "
+"sollen. Wird nichts angegeben (Standard), wird das gesamte Dateisystem "
+"gesichert."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:91
+msgid "services"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:85
+msgid ""
+"Mögliche Werte: \"all\" oder eine Komma separierte Liste der Dienste des "
+"aktuellen Runlevels, die vor dem Start des Backups heruntergefahren werden "
+"sollen. \"all\" fährt alle Dienste des aktuellen Runlevels herunter. Nach "
+"dem Backuplauf werden die Dienste wieder hochgefahren. Wird nichts "
+"angegeben, werden auch keine Dienste heruntergefahren. Die in der "
+"Standardeinstellung vorgesehenen Dienste sollten nicht entfernt werden."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:100
+msgid "compression"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:94
+msgid ""
+"Kompressionsgrad, mögl. Werte 0-9, der Standardwert 3 ist ein guter "
+"Kompromiss zwischen Schnelligkeit und Komprimierung. Wert 0 bedeutet keine "
+"Komprimierung."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:109
+msgid "unmount"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:103
+msgid ""
+"Mögl. Werte: \"yes\" oder \"no\", bei \"yes\" wird versucht das backupdevice"
+" nach dem Backup auszuhängen. Das klappt natürlich nur, wenn es nicht noch "
+"anderweitig in Gebrauch ist."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:118
+msgid "keepfull"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:112
+msgid ""
+"Mögl. Werte: integer ab 1. Definiert die Anzahl der Vollbackups, die "
+"vorgehalten werden."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:127
+msgid "keepdiff"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:121
+msgid ""
+"Mögl. Werte: integer ab 1. Definiert die Anzahl der differentiellen Backups,"
+" die vorgehalten werden."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:136
+msgid "keepinc"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:130
+msgid ""
+"Mögl. Werte: integer ab 1. Definiert die Anzahl der inkrementellen Backups, "
+"die vorgehalten werden."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:145
+msgid "cronbackup"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:139
+msgid ""
+"Mögl. Werte: boolean yes|no. Legt fest, ob automatisch tägliche "
+"inkrementelle und wöchentliche differentielle bzw. Vollbackups durchgeführt "
+"werden."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:148
+msgid ""
+"**Anmerkung** Alte Backups werden nur gelöscht, wenn das Backup zuvor "
+"fehlerfrei durchlief."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:151
+msgid ""
+"Die Backupsets werden in ISO-Dateien in ein Verzeichnis nach dem Schema "
+"``<isoprefix>/<datum>_full``, ``<isoprefix>/<datum>_diff`` bzw. "
+"``<isoprefix>/<datum>_inc`` auf das Backupmedium gesichert."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:155
+msgid ""
+"Dabei werden die ISO-Dateien nach dem Schema ``<isoprefix>-1.iso``, "
+"``<isoprefix>-2.iso`` usw. abgelegt. Die ISO-Dateien dienen als Backup-"
+"Container und können ggf. auch auf CD/DVD gebrannt werden, um davon zu "
+"restaurieren. Desweiteren wird bei einem Vollbackup das für die Restauration"
+" benötigte Bootimage ``mondorescue.iso`` im Backupverzeichnis abgelegt."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:159
+msgid ""
+"Im Homeverzeichnis des Benutzers ``administrator`` wird ein Link ``_backup``"
+" zum Mountpoint ``/media/backup`` des Backupmediums angelegt, sodass er in "
+"der Lage ist, ISO-Images von einem Client aus auf einen Rohling zu brennen. "
+"Dazu muss jedoch das Backupmedium gemountet sein."
+msgstr ""

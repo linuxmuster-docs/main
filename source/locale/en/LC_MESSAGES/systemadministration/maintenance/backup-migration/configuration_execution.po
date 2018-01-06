@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:2
+msgid "Konfiguration und Anwendung"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:4
+msgid ""
+"Da die Skripte der Migration eines Systems zur Anwendung kommen, ist die "
+"Konfiguration und Anwendung identisch mit einer Migration. Ausnahme ist, "
+"dass im Falle einer Wiederherstellung üblicherweise derselbe Rechner mit "
+"derselben linuxmuster.net Version das Migrationsziel darstellt."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:6
+msgid ""
+"Zur Umsetzung der Backuplösung folgen Sie bitte dem `Howto_Migration` "
+"Schritt für Schritt"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:9
+msgid "Automatisierung"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:10
+msgid ""
+"Ein regelmäßiges Backup per kann per `cronjob` eingerichtet werden. "
+"Erstellen und editieren Sie die Datei ``/etc/cron.d/backupservice``"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:21
+msgid "Pseudo-Vollbackups"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:22
+msgid ""
+"Mit Hilfe des Werkzeuges `rsnapshot` kann eine Versionierung des Backupziels"
+" erfolgen. Dazu installieren Sie zunächst rsnapshot:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:29
+msgid ""
+"Haben Sie mit den Migrationstools bereits ein Backup auf das Ziel "
+"``/srv/backup/server`` gesichert, dann können Sie dieses nun mit einer "
+"Versionverwaltung ergänzen."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:31
+msgid ""
+"Ziel des Migrationsbackups: ``/srv/backup/server`` Versionen dieser Backups "
+"(Pseudo-Vollbackups): ``/srv/backup/rsnapshot``"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:34
+msgid ""
+"Um hierfür eine Versionierung einzurichten find folgende Einträge in "
+"``/etc/rsnapshot.conf`` vorzunehmen:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:47
+msgid "Dabei gilt:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:49
+msgid ""
+"Die Zeichen » stehen für TABs und $ für das Ende der Zeile. Dies ist so "
+"besonders hervorgehoben, weil das Programm rsnapshot bei zusätzlichen "
+"Leerzeichen, z.B. am Ende der Zeile nicht richtig funktioniert. Ebenso "
+"müssen alle Verzeichnisse mit einem / enden. Der Eiontrag `retain daily 15` "
+"sorgt dafür, dass 15 Backups vom Typ „daily“ behalten werden, dagegen 12 vom"
+" Typ „monthly“ behalten."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:52
+msgid ""
+"Wann diese Backups erfolgen, ist selbst festzulegen, indem rsnapshot von "
+"cron aus mit dem richtigen Argument gestartet wird."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:54
+msgid ""
+"Eine beispielhafte Konfiguration für cron in ``/etc/cron.d/backupservice`` "
+"wäre:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:65
+msgid ""
+"Diese Einstellung hat zur Folge, dass die täglichen Backups der letzten 15 "
+"Tage und die zweiwöchentlichen Backups der letzten 6 Monate behalten werden."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:67
+msgid ""
+"Das Verzeichnis der Pseudo-Vollbackups sollte dann nach einiger Zeit "
+"folgende Struktur haben:"
+msgstr ""

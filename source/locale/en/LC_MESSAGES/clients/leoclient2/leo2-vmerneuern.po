@@ -1,0 +1,196 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:2
+msgid "Basis und Snapshots verwalten"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:4
+msgid ""
+"Jede virtuelle Maschine besitzt neben der Basis "
+"``/PFAD/MASCHINENNAME/MASCHINENNAME.vdi`` einen Standard-Snapshot."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:7
+msgid ""
+"Zuerst sollte man eine solide VM-Basis erstellt haben. Da alle darauf "
+"basierenden weiteren Snapshots unbrauchbar werden, wenn die Basis "
+"aktualisiert werden muss."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:11
+msgid ""
+"Aufbauend auf diese Basis können dann weitere Snapshots erzeugt werden."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:14
+msgid "VM-Basis aktualisieren"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:16
+msgid ""
+"Mit Hilfe des Skripts ``leoclient2-base-snapshot-renew`` wird der aktuelle "
+"Zustand der virtuellen Maschine zur neuen Basis."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:21
+msgid ""
+"Durch eine Erneuerung der Basis werden alle (anderen) darauf aufbauenden "
+"Snapshots unbrauchbar."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:24
+msgid ""
+"Nach dem Aufruf des Skripts ``leoclient2-base-snapshot-renew`` mit root-"
+"Rechten"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:30
+msgid "sind einige selbsterklärende Fragen zu beantworten."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:32
+msgid "Soll der Vorgang abgebrochen werden? (J/N)"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:33
+msgid "Name der virtuellen Maschine?          (VM, die erneuert werden soll)"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:34
+msgid "Speicherort der virtuellen Maschine?   (VM, die erneuert werden soll)"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:36
+msgid ""
+"Das Skript startet dann zunächst VirtualBox, um die Sicherungspunkte zu "
+"löschen. Eine eventuelle Warnung, die aufgrund fehlender Verbinungen "
+"erscheint, kann ignoriert werden. Die Ursache ist z.B. bei dem "
+"vorkonfigurierten Ubuntu von linuxmuster.net die fehlende Verbindung zu den "
+"Homes als linuxadmin."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:47
+msgid "VirtualBox-Optionen für Snapshots"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:49
+msgid "Klicken Sie rechts oben auf die Schaltfläche \"Sicherungspunkte (1)\"."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:50
+msgid ""
+"Klicken Sie auf den Snapshot, löschen Sie diesen mit einem Rechtsklick oder "
+"mit dem entsprechenden Icon und bestätigen Sie mit \"Löschen\" den nächsten "
+"Dialog."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:54
+msgid ""
+"Haben Sie im aktuellen Zustand bereits Änderungen vorgenommen, so kann das "
+"Löschen des Snapshots eine Weile dauern.  Im Anschluss kann die VM gestartet"
+" werden und (weitere) gewünschte Änderungen durchgeführt werden."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:59
+msgid "Schalten Sie die VM aus und beenden Sie VirtualBox"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:61
+msgid ""
+"Das Skript erzeugt eine neue Basisfestplatte unter "
+"``/PFAD/MASCHINENNAME/MASCHINENNAME.vdi`` und komprimiert sie (Das dauert "
+"einige Minuten).  Darüber hinaus wird noch ein neuer Standard-Snapshot "
+"erzeugt und gezippt. Der Name des neuen Snapshots, hier: ``{c81442ac-4e03"
+"-487c-a05a-e82b8918c834}.vdi``, erscheint in der Konsolenausgabe."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:79
+msgid ""
+"Vergleichen Sie den neuen Snapshot-Dateinamen und löschen Sie den alten "
+"Standard-Snapshot entsprechend dem Muster ``sudo rm "
+"/PFAD/MASCHINENNAME/{..alterSnapshot..}.vdi*``"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:94
+msgid ""
+"Sollten Sie weitere Snapshots zur virtuellen Maschine haben, haben diese "
+"ihre Basis verloren. Löschen Sie diese Snapshots (als root) oder erzeugen "
+"Sie sie erneut aus dem bestehenden neuen Standard-Snapshot."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:116
+msgid "Neue Snapshots erzeugen"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:118
+msgid ""
+"Das Skript :download:`leoclient2-snapshot-create <media/leoclient2-snapshot-"
+"create>` legt mit dem aktuellen Zustand der VM einen neuen auswählbaren "
+"Snapshot an oder den Standard-Snapshot neu."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:125
+msgid ""
+"Die Basis, d.h. die zugrundeliegende Basisfestplatte wird dabei nicht "
+"verändert. Eine veränderte Hardwarekonfiguration speichert das Skript auch "
+"nicht."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:129
+msgid "Vorgehensweise:"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:131
+msgid ""
+"Laden Sie das Skript herunter: :download:`leoclient2-snapshot-create "
+"<media/leoclient2-snapshot-create>`"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:132
+msgid ""
+"Legen Sie es unter ``/usr/bin/leoclient2-snapshot-create`` ab und machen Sie"
+" es ausführbar."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:139
+msgid "Starten Sie als Benutzer die VM (z.B. hier winxp)"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:145
+msgid ""
+"Installieren Sie Software nehmen Sie die Änderungen vor, fahren Sie die VM "
+"herunter."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:146
+msgid ""
+"Rufen Sie das Skript (als root) ohne Argument ``-s`` auf, um den Standard-"
+"Snapshot neu zu setzen,"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:152
+msgid "oder mit einem Argument ``-s``, um einen neuen Snapshot zu erzeugen."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:158
+msgid ""
+"Jetzt erscheint im Auswahlmenü von ``leovirtstarter2`` ein neuer Snapshot "
+"mit dem Namen ``Software2016``."
+msgstr ""

@@ -1,0 +1,247 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/getting-started/add-user-accounts/index.rst:3
+msgid "Erste Benutzeraufnahme"
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:5
+msgid ""
+"In einer Schule müssen meist mehrere hundert bis einige tausend Schüler als "
+"Benutzer angelegt werden müssen. Deshalb übernimmt diese komplexe Aufgabe "
+"bei der *linuxmuster.net* das Programm *Sophomorix*."
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:9
+msgid ""
+"*Sophomorix* liest alle Schüler aus einer Text-Datei ein, die z.B. aus dem "
+"Schulverwaltungsprogramm der Schule bezogen wurde. Anschließend werden alle "
+"Schüler dieser Liste, die im System noch nicht vorhanden sind, angelegt, "
+"solche mit einer neuen Klasse versetzt und nicht mehr aufgeführte Schüler "
+"aus dem System gelöscht."
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:15
+msgid ""
+"Mit der *Schulkonsole* gibt es für den Netzwerkbetreuer ein webbasiertes "
+"Werkzeug, das ihm die Bedienung von *Sophomorix* sehr erleichtert. Die "
+"einzelnen Schritte werden im Folgenden erläutert. Der Netzwerkbetreuer muss "
+"nur noch in Ausnahmefällen mit der Kommandozeile arbeiten."
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:21
+msgid ""
+"Um Benutzer neu aufzunehmen müssen die folgenden Schritte nacheinander "
+"ausgeführt werden:"
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:24
+msgid "Schüler und Lehrerliste aus dem Schulverwaltungsprogramm exportieren."
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:25
+msgid "Die Benutzerlisten auf dem Server einlesen."
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:26
+msgid ""
+"Alle Benutzerlisten auf Fehleingaben, oder Ähnlichkeiten mit vorhandenen "
+"Benutzern prüfen."
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:27
+msgid "Danach evtl. die Benutzerlisten entsprechend korrigieren."
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:28
+msgid "Benutzerdaten übernehmen, d.h. Benutzer jetzt tatsächlich anlegen"
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:29
+msgid ""
+"Passwortlisten bzw. Anmeldekärtchen ausdrucken (idR. durch das Lehrpersonal)"
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:31
+msgid ""
+"Im folgenden wird gezeigt wie die Erstaufnahme von Schülern vonstatten geht."
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:34
+msgid "Erstaufnahme von Schülern"
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:35
+msgid ""
+"Alle hier aufgelistete Schülernamen sind Beispielhaft und frei erfunden. "
+"Sollte es dennoch Menschen mit der gleichen Namenskombination geben, dann "
+"ist das Zufall."
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:37
+msgid ""
+"Benutzerverwaltung ist Sache des Administrators, deshalb loggt sich der "
+"Administrator in die Schulkonsole ein"
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:41
+msgid ""
+"In der Schulkonsole wählen Sie  im Menü `Benutzer` `Schülerliste pflegen`"
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:45
+msgid "und sehen ein leeres Fenster."
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:49
+msgid ""
+"Prinzipiell kann man die Schülerliste per `\"Copy und Paste\"`  in das leere"
+" Fenster einfügen. Hier wird gezeigt wie man die Datei importiert."
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:51
+msgid ""
+"Die Schülerliste muss im CSV-Format in der Form ``\"Klasse; Zuname; Vorname;"
+" Geburtsdatum; Nr.\"`` vor liegen. Dabei ist das letzte Feld optional. Es "
+"enthält die im Schulverwaltungsprogramm eindeutig vergebene Schülernummer. "
+"Ist sie vorhanden, sollte man sie unbedingt mit übernehmen, das sie die "
+"Identifikation des richtigen Datensatzes bei Versetzungen, Namensänderungen "
+"usw. erheblich erleichtert. Falls die Nummer nicht vorhanden ist, besteht "
+"jede Zeile nur aus den 4 Feldern."
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:53
+msgid ""
+"Die Schülerwaltungsprogramme der Länder besitzen idR. eine Funktion um "
+"Schülerdaten als .CSV-Datei zu exportieren. Diese Datei muss man sich als "
+"Administrator aushändigen lassen, wenn man nicht selbst Zugang zum "
+"Schülerverwaltungsprogramm hat."
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:55
+msgid "Nach Klick auf `Durchsuchen`"
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:59
+msgid ""
+"navigiert man zu dem Ort an dem die aus der Schülerverwaltungsdatei "
+"exportierte Datei liegt. Hier auf dem ``Desktop`` die Datei "
+"``schueler_aus_export.txt``."
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:63
+msgid ""
+"Man wählt die Datei durch Doppelklick aus und klickt im folgenden Fenster "
+"auf Hochladen"
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:67
+msgid ""
+"Je nach Anzahl der Schüler dauert es eine Weile bis im folgenden Fenster die"
+" Liste der aufzunehmenden Schüler erscheint."
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:71
+msgid "Mit Klick auf `Änderungen speichern`"
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:75
+msgid ""
+"werden die aufzunehmenden Schüler in der Datei ``schueler.txt`` auf dem "
+"Server unter ``/etc/sophomorix/user/`` abgespeichert"
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:77
+msgid ""
+"Nun muss die Datei schueler.txt überprüft werden. Dies geschieht durch "
+"Auswahl im Menü `Benutzer` `Benutzerlisten prüfen`,"
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:81
+msgid "um dann auf `Benutzerlisten überprüfen` zu klicken."
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:85
+msgid ""
+"Ist das Überprüfen beendet erhält man eine Liste ähnlich der hier gezeigten"
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:87
+msgid ""
+"Das Überprüfen ist nötig um eventuelle Fehler ausfindig zu machen. In "
+"mindestens einem Bundesland ist es möglich den Schüler-Namen mit Zahlen zu "
+"versehen. Solche Fehler meldet Sophomorix. Ebenfalls gemeldet werden "
+"Geburtsdaten die nicht der Realität entprechen bzw. nicht im Zeitraum der "
+"``/etc/sophomorix/user/sophomorix.conf`` liegen."
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:89
+msgid ""
+"Um Probleme zu vermeiden ist es ratsam Sonderzeichen `ä; ö; ü; ß` "
+"umzuwandeln in `ae; oe; ue; ss`."
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:93
+msgid ""
+"Gegebenenfalls muss man die Datei schueler.txt noch überarbeiten, wenn in "
+"der Liste Fehler gemeldet werden"
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:97
+msgid ""
+"Sind alle Fehler beseitigt, dann klickt man auf `Benutzerdaten übernehmen`"
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:99
+msgid ""
+"Man kann - auch wenn noch nicht alle Fehler beseitigt sind - auf "
+"`Benutzerdaten übernehmen` und `Benutzer anlegen` klicken. Dann werden die "
+"Schüler angelegt, bei denen die Datensätze in Ordnung sind. Man fährt danach"
+" mit dem Schritt `Benutzerlisten überprüfen` s.O. fort."
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:101
+msgid "Es wird erneut eine Liste der anzulegenden Schüler angezeigt"
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:105
+msgid "Unterhalb dieser Liste klickt man auf `Benutzer anlegen`."
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:107
+msgid "Es folgen Statusmeldungen wie die im folgenden Bild gezeigten"
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:111
+msgid ""
+"Bei einer großen Schülerzahl kann es einige Stunden dauern bis das folgende "
+"Bild das Ende des Benutzerimports anzeigt"
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:115
+msgid "Damit ist die Erstaufnahme abgeschlossen."
+msgstr ""
+
+#: ../../source/getting-started/add-user-accounts/index.rst:117
+msgid ""
+"Im Sinne einer vernünftigen Arbeitsteilung sollte der Ausdruck der Kärtchen "
+"mit den Anmeldenamen und Passwörtern den Lehrern überlassen werden die mit "
+"den Schülern den Computerraum benutzen. Lehrer sollen auch die Passwörter "
+"von Schülern ändern, wenn das Passwort vergessen wurde."
+msgstr ""

@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/2-update-ipfire.rst:2
+msgid "Aktualisierung der Firewall IPFire"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/2-update-ipfire.rst:4
+msgid ""
+"Um die Firewall von linuxmuster.net IPFire zu aktualisieren, beachten Sie "
+"bitte nachstehendes Vorgehen bzw. Hinweise."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/2-update-ipfire.rst:8
+msgid "Führen Sie Updates bitte regelmäßig manuell durch."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/2-update-ipfire.rst:14
+msgid "Skriptgesteuerte Aktualisierung vom Server aus"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/2-update-ipfire.rst:16
+msgid ""
+"Es wird regelmäßig getestet, ob die neueren IPFire Versionen vollständig mit"
+" linuxmuster.net kompatibel sind. Um zu verhindern, dass vorschnell neue "
+"IPFire Versionen direkt nach Erscheinen installiert und so ggf. "
+"Inkompatibilitäten in Kauf genommen werden, wird das Update des IPFire vom "
+"Server aus mithilfe eines Skriptes angestossen."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/2-update-ipfire.rst:23
+msgid ""
+"Welche Version von linuxmuster.net positiv getestet wurde erfahren Sie im "
+"Support Forum in der Kategorie Server - Firewall "
+"``https://ask.linuxmuster.net/c/server/firewall``"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/2-update-ipfire.rst:26
+msgid ""
+"Damit das Update mithilfe des angesprochem Skiptes ausgeführt wird, müssen "
+"Sie die Datei ``/var/lib/linuxmuster-ipfire/maxcore`` an der Server-Konsole "
+"editieren. Nach dem Speichern der Datei kann das Update gestartet werden."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/2-update-ipfire.rst:32
+msgid "Ein erfolgreicher Upgrade-Vorgang stellt sich dann so dar:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/2-update-ipfire.rst:60
+msgid ""
+"Wenn ein Zwischenupdate von IPFire installert wird und hierbei ein größerer "
+"Versionssprung durchgeführt wird, ist nach dem Reboot von IPFire der Befehl "
+"erneut aufzurufen.  Ebenso empfiehlt sich ein erneuter Aufruf, wenn das "
+"Upgrade nicht erfolgreich beendet wurde."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/2-update-ipfire.rst:65
+msgid "Ist das Update abgeschlossen, finden Sie nachstehende Konsolenausgabe:"
+msgstr ""

@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/clients/postsync/basics.rst:2
+msgid "Funktionsweise und Grundlagen der Postsync-Scripte"
+msgstr ""
+
+#: ../../source/clients/postsync/basics.rst:4
+msgid "**Allgemeines**"
+msgstr ""
+
+#: ../../source/clients/postsync/basics.rst:6
+msgid ""
+"Nachdem der Linux-Client mit Linbo seinen lokalen Cache mit dem Cloop auf "
+"dem Server synchronisiert hat, wird ein vorhandenes Postsync-Script "
+"angewendet, das für ein sog. Cloop (also ein Client-Image) auf dem Server "
+"vorhanden ist. Wird ein sog. universelles Postsync-Script erstellt, so "
+"können sog. Patches – also spezifische Anpassungen – für die Patchklasse, "
+"den Raum und ggf. einzelne Rechner angewendet werden."
+msgstr ""
+
+#: ../../source/clients/postsync/basics.rst:9
+msgid ""
+"Nach der Synchronisation werden die Clients durch das Script vollständig auf"
+" deren Einsatzumgebung angepasst wird. Hierdurch können z.B. spezielle "
+"Anpassungen für Lehrer – PCs in einzelnen Räumen, oder für alle zu nutzenden"
+" Drucker bereitgestellt werden."
+msgstr ""
+
+#: ../../source/clients/postsync/basics.rst:11
+msgid "**Wo liegt das Postsync-Script ?**"
+msgstr ""
+
+#: ../../source/clients/postsync/basics.rst:13
+msgid "Das Postsync-Script liegt im Verzeichnis:"
+msgstr ""
+
+#: ../../source/clients/postsync/basics.rst:19
+msgid "Es weist folgende Rechte auf:"
+msgstr ""
+
+#: ../../source/clients/postsync/basics.rst:26
+msgid "Dieses Script wird also auf das jeweilige Cloop angewendet."
+msgstr ""

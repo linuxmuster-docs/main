@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/appendix/school-console/admin/quota.rst:3
+msgid "Menü: Quota"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/quota.rst:7
+msgid "Für alle folgenden Einstellungen gilt:"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/quota.rst:9
+msgid ""
+"Leere Felder bedeuten, dass in dem Fall die Standardeinstellungen gelten."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/quota.rst:11
+msgid "Alle Werte sind in Megabyte (MB) einzugeben."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/quota.rst:12
+msgid ""
+"Eine der Spalten gehört immer zu der Partition, die nach ``/home`` gemountet"
+" wird, die andere Spalte gehört immer zu der Partition, die nach ``/var`` "
+"gemountet wird."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/quota.rst:18
+msgid "Lehrer"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/quota.rst:20
+msgid ""
+"Hier können Sie die Disk- und Mailquota für Lehrer/innen individuell "
+"anpassen. Die Darstellung der Diskquota hängt von Ihrer Partitionierung ab."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/quota.rst:25
+msgid "Klassen"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/quota.rst:27
+msgid "Hier ändern Sie die Quotawerte aller Schüler/innen einer Klasse."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/quota.rst:30
+msgid "Projekte"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/quota.rst:32
+msgid ""
+"Hier können Sie den Mitgliedern eines Projekts zusätzliche Quota zuweisen."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/quota.rst:36
+msgid "Sonderquota"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/quota.rst:38
+msgid ""
+"Hier ändern Sie die Quotawerte spezieller Benutzer und einzelner "
+"Schüler/innen."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/quota.rst:41
+msgid ""
+"Unter „Neu anlegen“ können Sie einem bisher hier nicht aufgeführten Benutzer"
+" Sonderquota zuweisen. Geben Sie dazu den Login ein und passen Sie die "
+"Quotawerte entsprechend an."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/quota.rst:45
+msgid ""
+"Unter „Webspace“ legen Sie fest, wieviel Platz alle veröffentlichten "
+"Webseiten insgesamt belegen dürfen. Ändern Sie hierzu den Quotawert für "
+"„www-data“ auf „/var“."
+msgstr ""

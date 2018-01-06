@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/about/release-information/knownbugs.rst:6
+msgid "Bekannte Probleme"
+msgstr ""
+
+#: ../../source/about/release-information/knownbugs.rst:10
+msgid "Fehlerhafte Atheros-Chipsätze"
+msgstr ""
+
+#: ../../source/about/release-information/knownbugs.rst:12
+msgid ""
+"Mit der neuen Art und Weise LINBO über PXE zu booten kommen manche "
+"Implementationen von Atheros-Chipsätzen nicht zurecht. Dies wirkt sich "
+"dadurch aus, dass die Systeme beim Booten über das Netzwerk in einem sehr "
+"frühen Stadium hängen bleiben."
+msgstr ""
+
+#: ../../source/about/release-information/knownbugs.rst:17
+msgid ""
+"Testen Sie bitte vor dem Upgrade auf Linbo 2.3.x, ob Sie Systeme mit "
+"Atheros-Chipsätzen besitzen."
+msgstr ""
+
+#: ../../source/about/release-information/knownbugs.rst:21
+msgid "Lösungsweg"
+msgstr ""
+
+#: ../../source/about/release-information/knownbugs.rst:23
+msgid ""
+"Zunächst muss im BIOS die lokale Festplatte als Bootmedium eingestellt "
+"werden. Dabei sollte man überprüfen, ob in der jeweiligen start.conf die "
+"Cache-Partition als ``Bootable=yes`` markiert ist."
+msgstr ""
+
+#: ../../source/about/release-information/knownbugs.rst:28
+msgid ""
+"Ist das System in einem unbootbaren Zustand, muss man ein CD- oder USB-"
+"Bootmedium erstellen, um die lokale LINBO-Installation wiederherzustellen. "
+"Lesen Sie dazu die Anleitung in den Releaseinformationen von LINBO: :ref"
+":`release-linbo-bootmedium-label`"
+msgstr ""

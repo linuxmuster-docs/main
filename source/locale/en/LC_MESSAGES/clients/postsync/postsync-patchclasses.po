@@ -1,0 +1,179 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:2
+msgid "Patchklassen für Postsync-Scripte"
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:4
+msgid "**Wo müssen die Anpassungen (Patches) abgelegt werden ?**"
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:6
+msgid "Unter"
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:12
+msgid ""
+"Dort finden sich weitere Unterverzeichnisse. Diese stellen die sog. "
+"Patchklasse dar. Wird also z.B. der Linuxmuster-Client 14.04 (trusty = Name "
+"der Patchklasse) verwendet, so sind alle weiteren Patches für 14.04er-"
+"Clients in diesem Verzeichnis abzulegen."
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:14
+msgid "Die Anpassungen finden sich also unter:"
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:20
+msgid "Bei Linuxmuster-Clients 16.04 (Xenial) wäre dies z.B. das Verzeichnis:"
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:26
+msgid "Diese Patches werden nach folgendem Schema angewendet:"
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:34
+msgid ""
+"Unterhalb dieser Verzeichnisse sind alle Anpassungen so abzulegen, wie diese"
+" dann auf den betreffenden Clients angewendet werden sollen - bsp.:"
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:40
+msgid ""
+"Auf diese Weise würde die Datei cups.conf im Verzeichnis /etc/cups auf allen"
+" Clients der Patchklasse angepasst werden."
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:42
+msgid ""
+"In der Patchklasse xenial würde eine Änderung der Datei rc.local auf allen "
+"Rechnern in folgendem Verzeichnis abgelegt:"
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:48
+msgid ""
+"Um auf dem Server obige Verzeichnisstruktur zu erhalten, ist auf dem "
+"linuxmuster.net Server das Paket **linuxmuster-client-servertools** zu "
+"installieren."
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:50
+msgid "Hierzu ist folgender Befehel anzuwenden:"
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:57
+msgid ""
+"Dieses Paket liefert ein sog. universelles Postsync-Script mit, das weiter "
+"angepasst und auf die Cloops angewendet werden kann."
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:59
+msgid ""
+"Dieses Script ist zur Anwendung auf ein Cloop entsprechend zu kopieren nach:"
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:65
+msgid ""
+"Die Vorlage des universellen Postsync-Scriptes liegt in folgendem "
+"Verzeichnis:"
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:71
+msgid ""
+"Dieses Script ist so aufgebaut, dass auch noch weitere Scripte ausgeführt "
+"werden (z.B. solche, die nur in Raum r100 ausgeführt werden sollen). "
+"Scripte, die abgearbeitet werden sollen, müssen in dem jeweiligen "
+"Unterverzeichnis postsync.d liegen."
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:73
+msgid ""
+"Sollen Scripte für die Patchklasse xenial und dann nur auf PCs im Raum r100 "
+"angewendet werden, so müssen die Scripte in folgendem Verzeichnis liegen:"
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:79
+msgid ""
+"Die Skripte müssen Sh-Scripte sein, da Linbo keine BASH als Shell kennt."
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:81
+msgid "In diesen Scripten ist der Shebang"
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:87
+msgid "voranzustellen."
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:89
+msgid "Beipiele für solche Scripte finden sich im Verzeichnis"
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:95
+msgid "Es finden sich folgende Skripte als Beispielvorlagen:"
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:105
+msgid ""
+"Diese können für die gewünschte Patchklasse in das jeweilige Verzeichnis "
+"kopiert und angepasst werden. Diese Scripte werden entsprechend ihrer "
+"lexikalischen Reihenfolge ausgeführt, also hier beginnend mit der "
+"niedrigsten Ziffer."
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:108
+msgid "Nachstehende Abbildungen verdeutlichen diesen Aufbau:"
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:112
+msgid "Das allgemeine Postsync-Script arbeitet nach folgendem Schema:"
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:117
+msgid "**Beispiel**"
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:119
+msgid ""
+"Nachstehender Verzeichnisbaum verdeutlicht, dass für Linuxmuster-Clients für"
+" alle PCs der Patchklasse xenial alles unterhalb von ./common angewendet "
+"wird. Zudem wird für den raum1 alles unterhalb von ./raum1 angewendet und "
+"schließlich wird für den Lehrer-PC in raum1 alles unterhalb von ./raum1"
+"-lehrer-pc angewendet."
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:164
+msgid "**Universelles Postsync-Script**"
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:166
+msgid "Das universelle Postsync-Script weist derzeit folgenden Inhalt auf:"
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:296
+msgid "Aktualisierungen für dieses Script finden sich unter:"
+msgstr ""
+
+#: ../../source/clients/postsync/postsync-patchclasses.rst:298
+msgid ""
+"https://github.com/linuxmuster/linuxmuster-client-"
+"servertools/blob/master/usr/lib/linuxmuster-client-"
+"servertools/generic.postsync"
+msgstr ""

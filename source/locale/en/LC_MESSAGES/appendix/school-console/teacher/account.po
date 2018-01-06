@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/appendix/school-console/teacher/account.rst:3
+msgid "Menü: Mein Konto"
+msgstr ""
+
+#: ../../source/appendix/school-console/teacher/account.rst:7
+msgid ""
+"Auf dieser Seite können Sie eigene Druckaufträge löschen und Ihren "
+"persönlichen Ordner reparieren lassen."
+msgstr ""
+
+#: ../../source/appendix/school-console/teacher/account.rst:9
+msgid "Außerdem können Sie Ihr Passwort ändern."
+msgstr ""
+
+#: ../../source/appendix/school-console/teacher/account.rst:13
+msgid ""
+"Im Abschnitt Mail-Weiterleitung können Sie eine Weiterleitung an eine oder "
+"mehrere durch Komma getrennte Mail-Adressen einrichten und festlegen, ob "
+"eine Kopie im Postfach verbleiben soll. Dies ist nur sinnvoll, wenn der "
+"Server für eine Weiterleitung an externe Adressen konfiguriert ist."
+msgstr ""
+
+#: ../../source/appendix/school-console/teacher/account.rst:21
+msgid ""
+"Im Info-Bereich sehen Sie Ihren Speicherplatzverbrauch auf dem Server und in"
+" Ihrem Postfach. Alle Werte sind in Kilobyte angegeben. Zusätzlich wird "
+"angezeigt in welchen Projekten Sie Mitglied sind."
+msgstr ""
+
+#: ../../source/appendix/school-console/teacher/account.rst:28
+msgid ""
+"Im untersten Bereich kann ein OpenVPN-Zertifikat erstellt werden. Das "
+"Zertifikat wird in Ihrem Heimatverzeichnis (H:) im Ordner „OpenVPN“ "
+"abgelegt."
+msgstr ""

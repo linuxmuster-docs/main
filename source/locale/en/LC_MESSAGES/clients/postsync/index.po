@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/clients/postsync/index.rst:2
+msgid "Linux-Client - Anpassungen mit Postsync-Scripten"
+msgstr ""
+
+#: ../../source/clients/postsync/index.rst:4
+msgid ""
+"Linux-Clients können in linuxmuster.net mithilfe sog. Postsync-Scripte an "
+"besondere Nutzungssituationen sehr variabel angepasst werden."
+msgstr ""
+
+#: ../../source/clients/postsync/index.rst:6
+msgid ""
+"Nach erfolgreicher Synchronisation mit dem Client-Image, das auf dem Server "
+"liegt (sog. Cloop), werden weitere Scripte auf dem Client ausgeführt. Es "
+"können so z.B. bestimmte Dateien vom Server auf den Client gespielt werden, "
+"oder z.B. auf dem Lehrer-PC spezifische Anpassungen vorgenommen werden, die "
+"die anderen Schüler-PCs nicht erhalten."
+msgstr ""
+
+#: ../../source/clients/postsync/index.rst:9
+msgid "Inhalt:"
+msgstr ""

@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/clients/postsync/troubleshooting.rst:2
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../source/clients/postsync/troubleshooting.rst:4
+msgid "**Welche Möglichkeiten der Fehlersuche gibt es ?**"
+msgstr ""
+
+#: ../../source/clients/postsync/troubleshooting.rst:6
+msgid ""
+"Vom linuxmuster.net Server aus kann man sich auf dem Client mithilfe von "
+"**linbo_ssh** anmelden und dort z.B. den Synchronisationsvorgang aktivieren."
+" Es lassen sich so dann die Postsync-Ausgaben / Fehlermeldungen auf dem "
+"Client einsehen."
+msgstr ""
+
+#: ../../source/clients/postsync/troubleshooting.rst:8
+msgid "Das Postsync-Script schreibt eine LOG-Datei, die auf dem Client unter"
+msgstr ""
+
+#: ../../source/clients/postsync/troubleshooting.rst:15
+msgid ""
+"Auf dem linuxmuster.net Server gibt man hierzu folgendes an, um den Client "
+"zu starten, zu synchronisieren und dann in den Linbo-Bildschirm zu gelangen,"
+" um die Log-Datei einzusehen:"
+msgstr ""
+
+#: ../../source/clients/postsync/troubleshooting.rst:24
+msgid "Herunterfahren der Clients mit:"
+msgstr ""
+
+#: ../../source/clients/postsync/troubleshooting.rst:30
+msgid "Hinweise zu linbo-remote und linbo-ssh"
+msgstr ""
+
+#: ../../source/clients/postsync/troubleshooting.rst:33
+msgid ""
+"https://www.linuxmuster.net/wiki/dokumentation:handbuch:linbo:linbo.remote"
+msgstr ""
+
+#: ../../source/clients/postsync/troubleshooting.rst:35
+msgid ""
+"https://www.linuxmuster.net/wiki/dokumentation:handbuch51:clients:linbo:linbo_remote?s[]=linbo&s[]=ssh"
+msgstr ""

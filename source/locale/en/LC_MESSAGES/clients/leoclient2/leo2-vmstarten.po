@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/clients/leoclient2/leo2-vmstarten.rst:2
+msgid "Virtuelle Maschinen starten"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmstarten.rst:4
+msgid ""
+"Das Script ``leovirtstarter2`` findet automatisch jede verfügbare VM "
+"(Eintrag in ``/etc/leoclient2/machines``) und bietet diese zum Starten an.  "
+"Es kann im Ubuntu Dash (Virtualbox Snapshotstarter) oder über die Konsole "
+"gestartet werden:"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmstarten.rst:17
+msgid "Wählen Sie eine virtuelle Maschine"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmstarten.rst:19
+msgid "Nachdem eine VM gewählt wurde, werden mehrere Optionen angeboten"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmstarten.rst:25
+msgid "Optionen zum Starten der virtuellen Maschine"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmstarten.rst:29
+msgid "*<VM> wie vorgefunden* startet den aktuellen, unveränderten Zustand"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmstarten.rst:29
+msgid "der VM"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmstarten.rst:33
+msgid "*<VM> Standard* verwendet den Standard-Snapshot und startet die VM,"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmstarten.rst:32
+msgid ""
+"d.h. die virtuelle Maschine wird auf den Zustand des Snapshots "
+"zurückgesetzt."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmstarten.rst:36
+msgid "*optional weitere Snapshots* wenn konfiguriert, tauchen weitere lokal"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmstarten.rst:36
+msgid "oder auf einem Serverlaufwerk gespeicherte Snapshots auf"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmstarten.rst:38
+msgid "*Virtuelle Grafik* Diese Optionen sind bisher ohne Funktion"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmstarten.rst:44
+msgid "*Virtueller Arbeitsspeicher (RAM)* Arbeitsspeicherzuweisung an die"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmstarten.rst:41
+msgid ""
+"VM - vorausgewählt ist ein automatisch an den vorhandenen realen "
+"Hauptspeicher angepasster Wert. Mit der Auswahl kann man den Hauptspeicher "
+"der VM etwas erhöhen oder vermindern."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmstarten.rst:46
+msgid "Nach Auswahl wird die VM mit dem Button ``Starten!`` gestartet."
+msgstr ""

@@ -1,0 +1,199 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2018\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/getting-started/install-on-xen/administration.rst:2
+msgid "Möglichkeiten der Administration"
+msgstr "Management Options for the XenServer"
+
+#: ../../source/getting-started/install-on-xen/administration.rst:4
+msgid ""
+"Für die Bedienung stehen Ihnen mehrere Möglichkeiten zur Verfügung. Sofern "
+"Sie einen Windows-Rechner im Netzwerk haben, können Sie das Programm "
+"XenCenter verwenden."
+msgstr ""
+"For the operation, you have several options available. If you have a Windows"
+" computer in the network, you can use the program XenCenter."
+
+#: ../../source/getting-started/install-on-xen/administration.rst:8
+msgid ""
+"Für Linuxrechner gibt es einen Clone von XenCenter namens OpenXenManager."
+msgstr ""
+"For Linux computers, there is a clone of XenCenter called OpenXenManager."
+
+#: ../../source/getting-started/install-on-xen/administration.rst:11
+msgid ""
+"Alternativ können Sie, sofern Sie die VM „lmn62.xoa“ importiert haben, die "
+"Bedienung Plattformunabhängig im Webbrowser durchführen."
+msgstr ""
+"Alternatively, if you have the VM \"lmn62.xoa\" imported, you can manage the"
+" XenServer platform independent from web browser."
+
+#: ../../source/getting-started/install-on-xen/administration.rst:15
+msgid "XenCenter"
+msgstr "XenCenter"
+
+#: ../../source/getting-started/install-on-xen/administration.rst:17
+msgid ""
+"Öffnen Sie einen Webbrowser und wechseln auf die Seite http://10.16.1.10."
+msgstr "Open a web browser and navigate to the page http://10.16.1.10."
+
+#: ../../source/getting-started/install-on-xen/administration.rst:23
+msgid ""
+"Klicken Sie auf „XenCenter installer“ und speichern die Datei bzw. führen "
+"diese direkt aus. Folgen Sie dem Assistenten um das Programm zu  "
+"installieren."
+msgstr ""
+"Click \"XenCenter installer\" and save the file and execute it directly. "
+"Follow the wizard to install the program."
+
+#: ../../source/getting-started/install-on-xen/administration.rst:29
+msgid ""
+"Starten Sie das Programm und klicken mit der rechten Maustaste auf "
+"XenCenter. Wählen Sie ``Add``."
+msgstr ""
+"Run the program and click with the right mouse button on XenCenter. Select "
+"``Add``."
+
+#: ../../source/getting-started/install-on-xen/administration.rst:35
+msgid "Geben Sie die IP-Adresse ``10.16.1.10`` und die Benutzerdaten ein."
+msgstr "Enter the IP address ``10.16.1.10`` and the user data for root."
+
+#: ../../source/getting-started/install-on-xen/administration.rst:41
+msgid ""
+"Klicken Sie nun auf eine VM aus der Liste und wechseln auf den Reiter "
+"``Console``. Sie können nun die VM bedienen."
+msgstr ""
+"Now click on a VM from the list and switch to the tab ``Console``. You can "
+"now use the VM."
+
+#: ../../source/getting-started/install-on-xen/administration.rst:48
+msgid "Xen Orchestra (XOA)"
+msgstr "Xen Orchestra (XOA)"
+
+#: ../../source/getting-started/install-on-xen/administration.rst:51
+msgid "Um XOA nutzen zu können, muss die lmn62.xoa importiert sein!"
+msgstr "To use XOA the VM \"lmn62.xoa\" must be imported!"
+
+#: ../../source/getting-started/install-on-xen/administration.rst:53
+msgid ""
+"Öffnen Sie einen Webbrowser und wechseln auf die Seite http://10.16.1.4. "
+"Geben Sie den User ``admin@admin.net`` mit dem Passwort ``admin`` ein und "
+"klicken Sie auf Login."
+msgstr ""
+"Open a web browser and navigate to the page http://10.16.1.4. Enter the user"
+" ``admin@admin.net`` with the password ``admin`` and click on Login."
+
+#: ../../source/getting-started/install-on-xen/administration.rst:59
+msgid "Klicken Sie auf das Kachelsymbol rechts oben und wählen Settings."
+msgstr "Click on the tile icon on the top right and select Settings."
+
+#: ../../source/getting-started/install-on-xen/administration.rst:65
+msgid ""
+"Tragen Sie links die IP-Adresse ``10.16.1.10`` ein und das Passwort, das Sie"
+" vergeben haben. Klicken Sie zum Übernehmen auf ``Save``."
+msgstr ""
+"Enter IP address ``10.16.1.10`` and the root password that you have "
+"assigned. Click to apply to ``Save``."
+
+#: ../../source/getting-started/install-on-xen/administration.rst:71
+msgid ""
+"Wenn Sie mit der Maus über eine VM fahren erscheinen direkt einige "
+"Schaltflächen. Klicken Sie auf VM Console um eine Maschine zu bedienen."
+msgstr ""
+"If you move your mouse over a VM some buttons appear directly. Click \"VM "
+"Console\" to operate a machine."
+
+#: ../../source/getting-started/install-on-xen/administration.rst:77
+msgid "Sie können nun die Virtuelle Maschine bedienen."
+msgstr "You can now use the Virtual Machine."
+
+#: ../../source/getting-started/install-on-xen/administration.rst:84
+msgid "OpenXen Manager"
+msgstr "OpenXen Manager"
+
+#: ../../source/getting-started/install-on-xen/administration.rst:86
+msgid ""
+"Um OpenXen Manager zu verwenden müssen Sie zunächst das Paket installieren. "
+"Gehen Sie dazu wie folgt vor."
+msgstr ""
+"To use OpenXen Manager you must first install the package. Proceed as "
+"follows."
+
+#: ../../source/getting-started/install-on-xen/administration.rst:88
+msgid "Öffnen Sie ein Terminal und geben folgenden Befehl ein:"
+msgstr "Open a terminal and enter the following command:"
+
+#: ../../source/getting-started/install-on-xen/administration.rst:98
+msgid "Schreiben Sie nun in die Zeile:"
+msgstr "Now write in the line:"
+
+#: ../../source/getting-started/install-on-xen/administration.rst:108
+msgid ""
+"Verlassen Sie den Editor in dem Sie ``Strg+x`` drücken. Sie werden gefragt "
+"ob Sie die Änderungen speichern wollen. Drücken Sie ``Y`` und bestätigen den"
+" Speicherort/Dateinamen mit ``Enter``."
+msgstr ""
+"Exit the editor with ``Ctrl+x``. You will be asked whether you want to save "
+"the changes. Press ``Y`` and confirm the location / filenames with "
+"``Enter``."
+
+#: ../../source/getting-started/install-on-xen/administration.rst:110
+msgid ""
+"Schreiben Sie folgende Befehle in die Konsole und bestätigen Sie jeweils mit"
+" ``Enter``:"
+msgstr ""
+"Enter the following commands in the console and confirm each with `` "
+"Enter``:"
+
+#: ../../source/getting-started/install-on-xen/administration.rst:121
+msgid ""
+"Schreiben Sie den Befehl ``apt-get update`` in die Konsole und drücken Sie "
+"``Enter``."
+msgstr ""
+"Enter the command ``apt-get update`` in the console and press ``Enter``."
+
+#: ../../source/getting-started/install-on-xen/administration.rst:131
+msgid ""
+"Schreiben Sie den Befehl ``apt-get install netzint-xenmanager`` in die "
+"Konsole und drücken ``Enter``. Bestätigen Sie die Abfrage fortzufahren mit "
+"``Y``."
+msgstr ""
+"Enter the command ``apt-get install netzint-xenmanager`` in the console and "
+"press ``Enter``. Continue with ``Y``."
+
+#: ../../source/getting-started/install-on-xen/administration.rst:141
+msgid "Nach der Installation starten Sie OpenXenmanager mit dem Befehl"
+msgstr "After installation, you can start OpenXenmanager with the command"
+
+#: ../../source/getting-started/install-on-xen/administration.rst:151
+msgid ""
+"Klicken Sie auf ``Add New Server`` und geben die IP-Adresse sowie den "
+"Benutzernamen root und das Passwort ein. Bestätigen Sie mit ``Connect``."
+msgstr ""
+"Click on ``Add New Server`` and enter the IP address and the username root "
+"and the password. Confirm with ``Connect``."
+
+#: ../../source/getting-started/install-on-xen/administration.rst:157
+msgid ""
+"Sie sehen nun die Verwaltungsoberfläche mit der Sie den XenServer "
+"administrieren können."
+msgstr ""
+"Now you can see the management interface that allows you to manage the "
+"XenServer."

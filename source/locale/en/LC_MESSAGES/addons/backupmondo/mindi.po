@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/addons/backupmondo/mindi.rst:2
+msgid "Hardwaretest mit mindi"
+msgstr ""
+
+#: ../../source/addons/backupmondo/mindi.rst:4
+msgid ""
+"Mit Hilfe des Tools **mindi** erzeugt **mondoarchive** beim Backup ein "
+"bootbares Restore-CD-Image. Um zu testen, ob bei einem späteren Restore die "
+"Festplatten und Partitionen richtig erkannt werden, ist es empfehlenswert "
+"den Server einmal von einer mit **mindi** erzeugten CD zu booten."
+msgstr ""
+
+#: ../../source/addons/backupmondo/mindi.rst:6
+msgid "Das mindi-CD-Image erstellen Sie einfach mit dem Befehl"
+msgstr ""
+
+#: ../../source/addons/backupmondo/mindi.rst:12
+msgid ""
+"auf der Konsole. In der Folge müssen Sie zwei Fragen beantworten. Die Frage "
+"nach dem eigenen Kernel beantworten Sie mit **y**:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/mindi.rst:23
+msgid ""
+"Danach wird das System analysiert und das ISO-Image erstellt. Die "
+"abschließende Frage nach dem bootbaren USB Image beantworten Sie mit **n**."
+msgstr ""
+
+#: ../../source/addons/backupmondo/mindi.rst:52
+msgid ""
+"Das mindi-CD-Image finden Sie unter ``/var/cache/mindi/mindi.iso``. Brennen "
+"Sie nun das ISO-Image auf einen CD-Rohling und booten Sie den Server damit."
+msgstr ""
+
+#: ../../source/addons/backupmondo/mindi.rst:54
+msgid ""
+"Ist der Bootvorgang abgeschlossen, erscheint eine Konsole. Durch Eingabe des"
+" Befehls"
+msgstr ""
+
+#: ../../source/addons/backupmondo/mindi.rst:60
+msgid ""
+"verschaffen Sie sich einen Überblick über die gefundenen "
+"Festplattenpartitionen. Wenn die Partitionen (inkl. Backuppartition) nicht "
+"so angezeigt werden, wie auf dem laufenden linuxmuster.net-Server, wurde "
+"wahrscheinlich der Festplattenkontroller nicht erkannt. In dem Fall kann man"
+" durch Hinzufügen des entsprechenden Treibermoduls in der "
+"Konfigurationsdatei ``/etc/mindi/mindi.conf`` unter *SCSI_MODS* oder "
+"*IDE_MODS* den Fehler eventuell beheben. Ein Vergleich der Ausgabe von"
+msgstr ""
+
+#: ../../source/addons/backupmondo/mindi.rst:66
+msgid ""
+"des linuxmuster.net-Servers mit derjenigen unter **mindi** hilft "
+"gegebenenfalls bei der Suche nach fehlenden Modulen."
+msgstr ""
+
+#: ../../source/addons/backupmondo/mindi.rst:69
+msgid ""
+"**Wichtiger Hinweis** Ein Workaround, der evtl. hilft auf linuxmuster.net"
+"/openML-Systemen der Version 4.0.x Hardware-Probleme beim Restore zu "
+"vermeiden, besteht darin die Konfigurationsdatei ``/etc/mindi/mindi.conf`` "
+"zu entfernen, sodass **mindi** die Hardwarekonfiguration nach "
+"Standardeinstellungen ermittelt. Erstellen Sie, wie oben beschrieben, ein "
+"Mindi-ISO-Image, verschieben Sie jedoch zuvor die Konfigurationsdatei "
+"``/etc/mindi/mindi.conf`` in ein anderes Verzeichnis, zum Beispiel:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/mindi.rst:80
+msgid ""
+"Im Forum_ findet sich dieser Hinweis auf die Konfiguration der "
+"``/etc/mindi/mindi.conf``."
+msgstr ""
+
+#: ../../source/addons/backupmondo/mindi.rst:82
+msgid ""
+"Falls Mindi Fehler liefert, kann es nach folgender Anpassung funktionieren:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/mindi.rst:84
+msgid "In der Datei ``/etc/mindi/mindi.conf`` die Parameter anpassen:"
+msgstr ""

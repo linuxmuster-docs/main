@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/classroom/print-student-passwords/index.rst:2
+msgid "Drucken der Erstpasswortlisten"
+msgstr ""
+
+#: ../../source/classroom/print-student-passwords/index.rst:4
+msgid ""
+"Jede Lehrkraft kann z.B. zum Schuljahresanfang die Erstpasswortlisten ihrer "
+"Schülerinnen und Schüler ausdrucken."
+msgstr ""
+
+#: ../../source/classroom/print-student-passwords/index.rst:7
+msgid ""
+"Sobald ein Schüler sein Erstpasswort geändert hat, funktioniert das "
+"Erstpasswort nicht mehr."
+msgstr ""
+
+#: ../../source/classroom/print-student-passwords/index.rst:9
+msgid ""
+"Dazu melden Sie sich an der Schulkonsole an und wählen unter „Klassen” den "
+"Menüpunkt „Passwörter“."
+msgstr ""
+
+#: ../../source/classroom/print-student-passwords/index.rst:13
+msgid ""
+"Wälen Sie nun Ihre Klasse aus indem Sie auf die Klassenbezeichnung klicken."
+msgstr ""
+
+#: ../../source/classroom/print-student-passwords/index.rst:15
+msgid ""
+"Falls Ihre Klasse nicht in der oberen Liste auftaucht, müssen Sie sich "
+"zunäst in die Klasse eintragen. Wählen Sie dazu im Dropdown-Menü die Klasse "
+"aus und klicken anschließend auf eintragen."
+msgstr ""
+
+#: ../../source/classroom/print-student-passwords/index.rst:19
+msgid ""
+"Laden Sie sich die Liste durch klicken auf „Passwortliste als PDF“ herunter."
+msgstr ""
+
+#: ../../source/classroom/print-student-passwords/index.rst:23
+msgid "Abschließend drucken Sie die Datei aus."
+msgstr ""

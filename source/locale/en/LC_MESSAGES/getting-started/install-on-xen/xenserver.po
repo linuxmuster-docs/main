@@ -1,0 +1,323 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2018\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:2
+msgid "Installation XenServer"
+msgstr "Installation XenServer"
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:5
+msgid "Herunterladen von XenServer"
+msgstr "Download XenServer"
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:7
+msgid ""
+"Der Hypervisor kann von der Projekthomepage www.xenserver.org "
+"heruntergeladen werden. Diese Anleitung bezieht sich auf die Version 7.0. "
+"Unter älteren Versionen können die Xen-VMs lmn62 nicht importiert werden."
+msgstr ""
+"The hypervisor can be downloaded from the project website www.xenserver.org."
+" This manual refers to the version 7.0. In older versions of XenServer the "
+"VMs lmn62 can not be imported."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:12
+msgid "Die ISO-Datei muss heruntergeladen und auf CD gebrannt werden."
+msgstr "The ISO file must be downloaded and burned to a CD."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:15
+msgid "Installieren von XenServer"
+msgstr "Installation XenServer"
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:17
+msgid "Von der CD booten und dem Setup folgen:"
+msgstr "Boot from the CD and follow the setup:"
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:23
+msgid "Wählen Sie Ihr Tastaturlayout. Wir verwenden ``[querz] de``."
+msgstr "Select your keyboard layout. We use ``[querz] de``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:29
+msgid ""
+"Sollten Sie zusätzliche Treiber benötigen können Sie diese nun laden in dem "
+"Sie ``F9`` drücken."
+msgstr "If you need additional drivers you can load by pressing ``F9``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:35
+msgid "Akzeptieren Sie die Lizenzbedingungen mit Accept EULA."
+msgstr "Accept the license conditions with ``Accept EULA``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:41
+msgid ""
+"Wählen Sie den Datenträger, der verwendet werden soll und setzen Sie den "
+"Haken bei „Enable thin provisioning“. Bestätigen Sie mit ``Ok``."
+msgstr ""
+"Select the disk to be used and set the check mark for \"Enable thin "
+"provisioning\". Confirm with ``Ok``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:47
+msgid ""
+"Hier können Sie das Installationsmedium wählen. Wir verwenden den lokalen "
+"Datenträger (CD)."
+msgstr ""
+"Here you can choose the installation media. We use the local disk (CD)."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:53
+msgid ""
+"Wählen Sie bei der Abfrage ``Yes`` um die NI-XenServer-Tools installieren zu"
+" können."
+msgstr "Select ``Yes`` to be able to install NI XenServer Tools."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:59
+msgid "Wählen Sie „Verify installation source“ und bestätigen Sie mit ``Ok``."
+msgstr "Select \"Verify installation source\" and confirm with ``Ok``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:65
+msgid ""
+"Sofern „no problems were found“ angezeigt wird können Sie die Meldung mit "
+"``Ok`` bestätigen."
+msgstr ""
+"If \"no problems were found\" appears, you can confirm the message with "
+"``OK``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:71
+msgid ""
+"Tragen Sie hier Ihr gewünschtes root-Passwort ein. Dieses wird später "
+"benötigt um sich mit dem Hypervisor zu verbinden."
+msgstr ""
+"Enter your desired root password. This will be needed later to connect with "
+"the hypervisor."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:77
+msgid ""
+"Wählen Sie nun die Netzwerkkarte aus, an der später das grüne Netzwerk "
+"(GREEN) angeschlossen ist."
+msgstr ""
+"Now select the network card, that is connected to the green network (GREEN) "
+"later."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:84
+msgid ""
+"Wählen Sie „Static configuration“ und tragen Sie die Adresse aus dem "
+"Screenshot ein. Bestätigen Sie die Eingabe mit ``Ok``."
+msgstr ""
+"Select \"Static configuration\" and enter the address of the screenshot. "
+"Confirm your entry with ``Ok``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:90
+msgid ""
+"Tragen Sie den gewünschten Hostnamen und die DNS-Server ``10.16.1.1`` und "
+"``10.16.1.254`` ein."
+msgstr ""
+"Enter the host name and the DNS server ``10.16.1.1`` and ``10.16.1.254``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:96
+#: ../../source/getting-started/install-on-xen/xenserver.rst:102
+msgid "Wählen Sie Ihre Zeitzone aus und bestätigen mit ``Ok``."
+msgstr "Select your time zone and confirm with ``Ok``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:108
+msgid ""
+"Sollten Sie einen Zeitserver betrieben, können Sie diesen angeben. Wir "
+"stellen die Zeit manuell ein. Wählen Sie „Manual time entry“ und  bestätigen"
+" Sie mit ``Ok``."
+msgstr ""
+"If you operate a time server, you can specify this. We set the time "
+"manually. Select \"Manual time entry\" and confirm with ``Ok``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:114
+msgid ""
+"Starten Sie nun die Installation mit der Schaltfläche ``Install XenServer``."
+msgstr "Now start the installation by selecting ``Install XenServer``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:120
+msgid ""
+"Warten Sie, bis der Dialog \"New Media\" erscheint. Legen Sie nun die CD "
+"„linuxmuster-SupplementalPack“ in das Laufwerk und bestätigen Sie die "
+"Meldung mit ``Ok``."
+msgstr ""
+"Wait for the \"New Media\" dialog to appear. Insert the \"linuxmuster-"
+"SupplementalPack\" CD into the drive and confirm with ``Ok``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:127
+msgid ""
+"„linuxmuster-hv-tools“ sollten bereits ausgewählt sein. Prüfen Sie die CD "
+"mit ``Verify``."
+msgstr ""
+"\"linuxmuster-hv-tools\" should already be selected. Check the CD with "
+"``Verify``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:133
+msgid "Starten Sie den Test mit ``Ok``."
+msgstr "Start the test with ``Ok``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:139
+msgid "Bestätigen Sie den erfolgreichen Test mit ``Ok``."
+msgstr "Confirm the successful test with ``Ok``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:145
+msgid "Wählen Sie nun die Schaltfläche ``Use`` und bestätigen Sie mit ``Ok``."
+msgstr "Now select button ``Use`` and confirm with ``Ok``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:151
+msgid ""
+"Nach der Installation werden Sie wieder aufgefordert weitere CDs einzulegen."
+" Wählen Sie ``Skip`` und bestätigen Sie mit ``Enter``."
+msgstr ""
+"After installation, you will be prompted to insert additional CDs again. "
+"Select ``Skip`` and confirm with ``Enter``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:157
+msgid "Stellen Sie die korrekte Uhrzeit ein und bestätigen Sie mit ``Ok``."
+msgstr "Set the correct time and confirm with ``Ok``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:163
+msgid ""
+"Nach erfolgreicher Installation können Sie mit ``Ok`` den Server neu "
+"starten."
+msgstr "After successful installation, you can reboot the server with ``Ok``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:169
+msgid ""
+"Nach dem Setup erscheint diese Konsole und der Server kann verwaltet werden."
+msgstr "After the setup a console appears where you can managed the server."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:176
+msgid "XenServer initialisieren"
+msgstr "Initialize XenServer"
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:178
+msgid ""
+"Wählen Sie auf dem XenServer den Punkt ``Local Command Shell`` und drücken "
+"Sie ``Enter``."
+msgstr "On the XenServer select ``Local Command Shell`` and press ``Enter``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:184
+msgid ""
+"Geben Sie den Benutzer root an und das Passwort das Sie während der "
+"Installation vergeben haben."
+msgstr ""
+"Enter the user root and the password you have assigned during installation."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:190
+msgid ""
+"Für den Fall, dass Sie ein Raid installiert haben sollten Sie vor diesem "
+"Schritt warten bis das Raid komplett initialisiert ist. Je größer das Raid, "
+"desto länger die Wartezeit. U.U kann man eine Nacht Wartezeit einkalkulieren"
+" (z.B. bei 6 Terrabyte Festplattengröße). Wartet man nicht, so kann der "
+"Import der Maschinen fehl schlagen, weil das Raid noch nicht bereit ist und "
+"damit die Festplatte nicht zur Verfügung steht."
+msgstr ""
+"In case you have installed a raid, you should wait until the raid is "
+"completely initialized before doing this step. The larger the raid, the "
+"longer the waiting time. It is possible to calculate a waiting time of one "
+"night (e. g. 6 Terrabyte hard disk space). If you don't wait, the import of "
+"the machines can fail, because the raid is not yet ready and therefore the "
+"hard disk is not available."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:192
+msgid ""
+"Geben Sie in der Konsole den Befehl ``linuxmuster-hv-setup --first`` ein und"
+" bestätigen Sie mit Enter"
+msgstr "Enter the command ``linuxmuster-hv-setup --first`` and press Enter."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:198
+msgid "Starten Sie die Installation mit ``Ok``"
+msgstr "Start the installation with ``Ok``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:204
+msgid "Sofern genügend Netzwerkkarten vorhanden sind erscheint diese Meldung:"
+msgstr "If there are enough NICs this message appears:"
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:210
+msgid ""
+"Stecken Sie alle Netzwerkkabel außer das Netzwerkkabel GREEN (internes "
+"Schulnetz) aus. Es muss eine Verbindung zwischen Switch und Server stehen. "
+"Bestätigen Sie dann mit ``Ok``."
+msgstr ""
+"Disconnect all network cables except the GREEN network cable (internal "
+"school network). There must be a connection between the switch and server. "
+"Then confirm with ``Ok``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:216
+msgid ""
+"Verbinden Sie nun die Netzwerkkarte RED mit Ihrem Modem oder Switch für das "
+"Netz RED. Es wird die betroffene Netzwerkkarte erkannt und  konfiguriert."
+msgstr ""
+"Now connect the RED network card with your modem or switch for the RED "
+"network. The affected NIC is recognized and configured."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:222
+msgid ""
+"Verbinden Sie nun das Netzwerk BLUE mit dem gewünschten Interface am Server."
+msgstr ""
+"Now connect the BLUE network with the desired interface at the server."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:228
+msgid ""
+"Legen Sie nun die CD „linuxmuster-SupplementalPack“ erneut in das Laufwerk "
+"ein und bestätigen Sie mit ``Ok``."
+msgstr ""
+"Now insert the CD \"linuxmuster-SupplementalPack\" again into the drive and "
+"press ``Ok``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:234
+msgid ""
+"Sie werden nun der Reihe nach abgefragt welche VMs Sie importieren wollen. "
+"Wählen Sie jeweils ``Yes`` bzw. ``No`` und bestätigen mit ``Enter``."
+msgstr ""
+"You will now be asked which VMs you want to import. Select for each VM "
+"``Yes`` or ``No`` and confirm with ``Enter``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:248
+msgid "Entnehmen Sie nun die CD und bestätigen Sie mit ``Ok``."
+msgstr "Now remove the CD and confirm with ``Ok``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:254
+msgid ""
+"Sie werden nun gefragt ob Sie die Autostartfunktion nutzen wollen. Wenn Sie "
+"diese Funktion aktivieren können im Folgeschritt VMs ausgewählt werden, die "
+"beim Start des XenServers automatisch gestartet werden sollen. Wählen Sie "
+"``Yes`` oder ``No``."
+msgstr ""
+"You will be asked whether you want to use the Autostart function. If you "
+"enable this feature you can select VMs to be automatically started when the "
+"XenServer in the following step. Select ``Yes`` or ``No``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:260
+msgid ""
+"Sie werden nun der Reihe nach abgefragt welche VMs automatisch gestartet "
+"werden sollen. Wählen Sie jeweils ``Yes`` bzw. ``No`` und bestätigen Sie mit"
+" ``Enter``."
+msgstr ""
+"You will now be called one after another which VMs should start "
+"automatically. Select each ``Yes`` or ``No`` and confirm with ``Enter``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:274
+msgid "Sie können nun das System mit der Auswahl ``Yes`` neu starten."
+msgstr "You can now restart the system by selecting ``Yes``."
+
+#: ../../source/getting-started/install-on-xen/xenserver.rst:280
+msgid ""
+"Das System fährt herunter und startet danach wieder. Die VMs, die Sie "
+"importiert haben, werden - sofern entsprechend konfiguriert - direkt "
+"gestartet und sind bereit für die Konfiguration."
+msgstr ""
+"The system shuts down and starts thereafter. The VMs that you have imported "
+"will start directly - if accordingly configured - and are ready for "
+"configuration."

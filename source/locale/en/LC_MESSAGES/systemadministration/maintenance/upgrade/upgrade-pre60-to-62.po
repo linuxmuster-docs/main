@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-pre60-to-62.rst:2
+msgid "Migration von openML/paedML"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-pre60-to-62.rst:4
+msgid ""
+"Das Paket `linuxmuster-migration <https://github.com/linuxmuster"
+"/linuxmuster-migration>`_ stellt eine Sammlung von Shellskripten zur "
+"Verfügung, die es ermöglichen, sämtliche System- und Benutzerdaten zwischen "
+"openML/linuxmuster.net-Systemen zu übertragen."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-pre60-to-62.rst:10
+msgid ""
+"Ein Upgrade auf linuxmuster.net 6.2 mithilfe der Migration ist für folgende "
+"Systeme möglich:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-pre60-to-62.rst:13
+msgid "paedML Linux >= 4.0.6"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-pre60-to-62.rst:14
+msgid "openML 5.x"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-pre60-to-62.rst:15
+msgid "linuxmuster.net 6.x"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-pre60-to-62.rst:17
+msgid ""
+"Die Einschränkungen sind, dass eine Umstellung von REMBO auf LINBO, sowie "
+"eine Umstellung von IPCop auf IPFire erfolgen muss."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-pre60-to-62.rst:20
+msgid "Eine ausführliche Übersicht und Anleitungen hierzu finden Sie unter:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-pre60-to-62.rst:22
+msgid ":doc:`Migration von paedML/openML/linuxmuster.net <../migrate/index>`"
+msgstr ""

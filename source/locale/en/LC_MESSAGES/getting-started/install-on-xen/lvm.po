@@ -1,0 +1,312 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2018\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:2
+msgid "Anpassungen"
+msgstr "Adjustments"
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:5
+msgid "Installation Netzint-lmntoolbox"
+msgstr "Installation Netzint-lmntoolbox"
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:7
+msgid ""
+"Um das LVM auf der VM Server zu vergrößern, steht in der Netzint ``lmn-"
+"toolbox`` ein Skript bereit. Dieses Tool wird später in der Anleitung "
+"verwendet, daher sollte die Toolbox installiert werden. Es gibt aber auch "
+"weitere nützliche Tools, um beispielsweise das LDAP zu editieren, Linbo "
+"anzupassen, unifi zu steuern oder auch das Netzint-Multitool."
+msgstr ""
+"There is a script in the Netzint ``lmn-toolbox`` to extend the LVM on the VM"
+" server. This tool is used later in the manual, so the toolbox should be "
+"installed. But there are also other useful tools for example, to edit the "
+"LDAP, customize Linbo, to control Unifi or even the Netzint-multitool."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:13
+msgid ""
+"Erstellen und bearbeiten Sie eine Repository-Liste indem Sie folgenden "
+"Befehl auf dem Server eingeben:"
+msgstr ""
+"Enter the following command on the server to create and edit a repository "
+"list:"
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:23
+msgid "Schreiben Sie in die Datei folgende Zeile:"
+msgstr "Enter the following line in the file:"
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:33
+msgid ""
+"Verlassen Sie den Editor indem Sie ``Strg+x`` drücken. Sie werden gefragt, "
+"ob Sie die Änderungen speichern wollen. Drücken Sie ``Y`` und bestätigen den"
+" Speicherort/Dateinamen mit ``Enter``."
+msgstr ""
+"Exit the editor with ``Ctrl+x``. You will be asked whether you want to save "
+"the changes. Press ``Y`` and confirm the location / filenames with "
+"``Enter``."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:35
+msgid ""
+"Schreiben Sie folgende Befehle in die Konsole und bestätigen Sie jeweils mit"
+" ``Enter``:"
+msgstr ""
+"Enter the following commands in the console and confirm each with `` "
+"Enter``:"
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:46
+#: ../../source/getting-started/install-on-xen/lvm.rst:58
+msgid "Schreiben Sie den Befehl"
+msgstr "Enter the command"
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:52
+msgid "in die Konsole und drücken ``Enter``."
+msgstr "in the console and press ``Enter``."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:64
+msgid ""
+"in die Konsole und drücken ``Enter``. Bestätigen Sie die Abfrage "
+"fortzufahren mit ``Y``."
+msgstr "in the console and press ``Enter``. Continue with ``Y``."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:70
+msgid "Erstellen Sie die Grundkonfigurationsdateien mit dem Befehl"
+msgstr "Create the basic configuration files with the command"
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:80
+#: ../../source/getting-started/install-on-xen/lvm.rst:227
+msgid "Mit dem Befehl"
+msgstr "The command"
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:86
+msgid "können Sie die Grundeinstellungen für einige Tools bearbeiten."
+msgstr "you can edit the default settings for some tools."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:94
+msgid "Systemressourcen"
+msgstr "Customizing the system resources"
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:97
+msgid "XenCenter"
+msgstr "XenCenter"
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:99
+msgid ""
+"Klicken Sie mit der rechten Maustaste auf den Server und wählen "
+"``Herunterfahren``. Wechseln Sie auf den Reiter General und klicken auf "
+"``Properties``."
+msgstr ""
+"Click with the right mouse button on the server and select ``Shut Down``. "
+"Switch to the General tab and click on ``Properties``."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:105
+msgid ""
+"Wählen Sie auf der linken Seite CPU und tragen die gewünschte Anzahl "
+"virtueller Kerne ein und bestätigen die Einstellung mit ``Ok``."
+msgstr ""
+"Select CPU on the left side and enter the desired number of virtual cores "
+"and confirm the setting with ``Ok``."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:111
+msgid ""
+"Wechseln Sie auf den Reiter Memory und klicken auf die Schaltfläche "
+"``Edit...``."
+msgstr "Switch to the Memory tab and click on the ``Edit ... ``."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:117
+msgid ""
+"Tragen Sie die gewünschte Größe des Arbeitsspeichers ein und bestätigen Sie "
+"die Einstellung mit ``OK``."
+msgstr ""
+"Enter the desired amount of memory and confirm the setting with ``OK``."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:123
+msgid ""
+"Wiederholen Sie die Schritte für die Anpassung für CPU und Memory für die "
+"anderen Virtuellen Maschinen in Ihrem Pool."
+msgstr ""
+"Repeat the steps for the adjustment of CPU and memory for the other virtual "
+"machines in your pool."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:125
+msgid ""
+"Wählen Sie aus der Bestandsliste links den Server an und wechseln Sie auf "
+"den Reiter Storage. Doppelklicken Sie die Festplatte ``..._home`` bzw. "
+"wählen diese aus und klicken auf ``Properties``."
+msgstr ""
+"Select the server in the inventory list on the left and navigate to the "
+"Storage tab. Double-click the hard disk ``..._home`` or select it and click "
+"on ``Properties``."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:131
+msgid ""
+"Tragen Sie im Feld Size die gewünschte Festplattengröße ein und bestätigen "
+"Sie die Eingabe mit ``OK``."
+msgstr ""
+"Enter the desired disk size in the size field and confirm the entry with "
+"``OK``."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:138
+msgid ""
+"Hier werden später die Homeverzeichnisse der Schüler und Lehrer sowie die "
+"Tauschverzeichnisse abgelegt."
+msgstr ""
+"Hint: The home directories of students and teachers as well as the exchange "
+"directories are deposited here later."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:140
+msgid ""
+"Wiederholen Sie den Schritt mit der Festplatte ``..._var``. Hier werden "
+"später die Images der Schulnetzrechner abgelegt."
+msgstr ""
+"Repeat this step with the hard disk ``..._var``. The images of the school "
+"network computers are stored here later."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:143
+msgid "XOA / XenKonsole"
+msgstr "XOA / XenKonsole"
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:145
+msgid ""
+"Öffnen Sie XOA in einem Webbrowser und melden Sie sich an. Klicke Sie bei "
+"dem Server auf das Stopp-Symbol, um diesen herunterzufahren. Klicken Sie "
+"dann auf den Server, um auf dessen Übersichtseite zu gelangen."
+msgstr ""
+"Open XOA in a web browser and log in. Click on the stop icon to shut down "
+"the server. Then click on the server to access the overview page."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:151
+msgid ""
+"Klicken Sie auf das Bearbeiten-Symbol im Bereich General. Tragen Sie die "
+"gewünschte Anzahl virtueller CPUs sowie die Größe des Arbeitsspeichers für "
+"die VM ein und übernehmen die Einstellung mit der Schaltfläche ``Save``."
+msgstr ""
+"Click on the edit icon in the field General. Enter the desired number of "
+"virtual CPUs and the amount of memory for the VM and complete the setting "
+"with the button ``Save``."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:157
+msgid ""
+"Wechseln Sie auf dem XenServer auf die Konsole mit dem Benutzer ``root``."
+msgstr "Open a root console on the XenServer."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:163
+#: ../../source/getting-started/install-on-xen/lvm.rst:184
+msgid "Geben Sie den Befehl"
+msgstr "Enter the command"
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:169
+msgid "ein und bestätigen Sie mit ``Enter``."
+msgstr "and confirm with ``Enter``."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:176
+msgid ""
+"Mit der Taste „TAB“ können Sie die Autovervollständigung nutzen. Sobald Sie "
+"die ersten Buchstaben eines Befehls oder des Namens der VM eingegeben haben,"
+" wird durch TAB der Befehl bzw. der Name vervollständigt."
+msgstr ""
+"Hint: By pressing \"TAB\" you can use auto-completion. Once you have entered"
+" the first few letters of a command or the name of the VM pressing TAB "
+"completes the command or the name."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:178
+msgid ""
+"Es werden Ihnen nun alle Virtuellen Festplatten der Servers „lmn62.server“ "
+"aufgelistet. Sie müssen in der Ausgabe die Virtual Disk (VDI) suchen, deren "
+"name-label mit ``..._var`` endet. Notieren Sie sich die ersten Zeichen der "
+"UUID."
+msgstr ""
+"All all virtual hard disks of the server \"lmn62.server\" will be listed. "
+"You must look for the Virtual Disk (VDI) thats label ends with ``..._var``. "
+"Write down the first letters of the UUID."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:190
+msgid "ein und bestätigen mit ``Enter``."
+msgstr "and confirm with ``Enter``."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:197
+msgid ""
+"Nutzen Sie die Autovervollständigung! Geben Sie bei der UUID die ersten "
+"Zeichen ein und drücken dann „TAB“ um die UUID einzutragen."
+msgstr ""
+"Hint: Use autocompletion! Enter the first character of the UUID, then press "
+"\"TAB\" to complete the UUID."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:199
+msgid "Wiederholen Sie den Vorgang für die VDI ``..._home``."
+msgstr "Repeat the process for the VDI ``..._home``."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:201
+msgid "Starten Sie nun die VM mit dem Befehl"
+msgstr "Now start the VM with the command"
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:213
+msgid "Expandieren des LVMs auf dem Server"
+msgstr "Expanding the LVMs on the server"
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:215
+msgid ""
+"Tragen Sie in der Konsole des Servers folgende Befehle nacheinander ein und "
+"bestätigen Sie jeweils mit ``Enter``:"
+msgstr ""
+"Enter the following commands in the console of the server and confirm each "
+"with ``Enter``:"
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:233
+msgid "können Sie die Speichergröße überprüfen."
+msgstr "you can check the amount of memory."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:241
+msgid "Abschluss der Grundinstallation"
+msgstr "Completion of the basic installation"
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:243
+msgid ""
+"Ihre Umgebung ist nun für den regulären Einsatz von linuxmuster.net "
+"vorbereitet."
+msgstr "Your environment is now ready for the regular use of linuxmuster.net."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:245
+msgid ""
+"Für die meisten Aufgaben der Administration können Sie nun die Schulkonsole "
+"verwenden. Diese öffnen Sie im Schulnetz mit einem Webbrowser unter "
+"https://server:242."
+msgstr ""
+"For most of the administrative tasks you can use the school console. You can"
+"  open it from a computer in the school network with any web browser under "
+"the url https://server:242."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:247
+msgid ""
+"Sofern Sie die neue linuxmuster-WebUI bereits installiert haben, können Sie "
+"diese über https://server:8000 aufrufen."
+msgstr ""
+"If you have the new linuxmuster-WebUI installed you can open it with "
+"https://server:8000."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:249
+msgid ""
+"Beachten Sie, dass sie die Schulkonsole, wie auch ssh auf den Server, nur "
+"von Rechnern aus nutzen können, die der Server in der Workstationsdatei "
+"gelistet hat. Wie Sie Rechner aufnehmen und auch wie Sie Linbo benutzen "
+"erfahren Sie auf linuxmuster.net."
+msgstr ""
+"Note that you can use the school console and ssh to the server only from "
+"computers that are listed in the workstation file on the server! Read the "
+"documentation about Linbo to learn how you can register a computer in the "
+"school network."

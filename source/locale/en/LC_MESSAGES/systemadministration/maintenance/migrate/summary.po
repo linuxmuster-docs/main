@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/maintenance/migrate/summary.rst:2
+msgid "Übersicht zu den Migrationsschritten"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/summary.rst:5
+msgid "Voraussetzungen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/summary.rst:9
+msgid ""
+"Es muss als Quellsystem die sog. paedML in der Version >= 4.0.6 installiert "
+"sein. Es kann ebenfalls als Quellsystem eine sog. openML/paedML Version 5.x "
+"oder linuxmuster.net Version 6.x installiert sein."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/summary.rst:14
+msgid "Vorgehen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/summary.rst:16
+msgid ""
+"Zunächst installiert man auf dem Quellsystem (mind. Version 4.0.6) das Paket"
+" `linuxmuster-migration` und erstellt dann ein Backup der zu migrierenden "
+"Daten in ein Verzeichnis auf einer lokal angeschlossenen Festplatte oder "
+"einem NFS-Share."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/summary.rst:20
+msgid ""
+"Danach setzt man das Zielsystem (linuxmuster.net 6.x mit IPFire und Server) "
+"neu auf. Hardware und Partitionierung können von derjenigen des Quellsystems"
+" abweichen."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/summary.rst:23
+msgid ""
+"Schließlich installiert man auf dem Zielsystem ebenfalls das linuxmuster-"
+"migration-Paket, stellt dann das Sicherungsverzeichnis aus Schritt 1 per "
+"lokaler Festplatte oder NFS-Share auf dem Server bereit und spielt die Daten"
+" aus der Sicherung wieder zurück."
+msgstr ""

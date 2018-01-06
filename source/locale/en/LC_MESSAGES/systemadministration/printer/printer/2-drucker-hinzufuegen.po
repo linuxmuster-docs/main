@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/printer/printer/2-drucker-hinzufuegen.rst:2
+msgid "Wie füge ich Drucker hinzu?"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/2-drucker-hinzufuegen.rst:4
+msgid ""
+"Viele Printserver und Netzwerkdrucker sind in der Lage Ihre IP-Adresse von "
+"einem DHCP-Server zu beziehen. Zuerst muss der Drucker am Server mithilfe "
+"der Schulkonsole hinzugefügt werden. Hierbei wird dem Drucker ein Name sowie"
+" eine IP-Adresse zugewiesen."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/2-drucker-hinzufuegen.rst:8
+msgid ""
+"Für das folgende Beispiel nehmen wir an, der Drucker stehe in Raum \"R203\","
+" bekomme den Namen \"r203-pr01\", habe die MAC-Adresse \"00:11:22:33:44:55\""
+" und bekomme entsprechend einem IP-Adressschema die IP-Adresse "
+"10.16.203.101."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/2-drucker-hinzufuegen.rst:13
+msgid ""
+"Melden Sie sich als **administrator** in der `Schulkonsole "
+"(https://server:242) <https://server:242>`_ an. Wählen Sie dort die "
+"Reiterkarte \"Hosts\" aus und fügen Sie den Drucker gemäß dem nachstehenden "
+"Schema hinzu:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/2-drucker-hinzufuegen.rst:18
+msgid ""
+"Die Option PXE ist zu deaktivieren, da die Drucker nicht via PXE starten."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/2-drucker-hinzufuegen.rst:20
+msgid "Bestätigen Sie den Eintrag mit \"Änderungen übernehmen\"."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/2-drucker-hinzufuegen.rst:22
+msgid ""
+"Ein Neustart des Druckers ist empfehlenswert, damit dieser die neue IP-"
+"Adresse übernimmt."
+msgstr ""

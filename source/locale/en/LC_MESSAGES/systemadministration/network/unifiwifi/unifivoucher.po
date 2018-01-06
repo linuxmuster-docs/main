@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:2
+msgid "Gast-WLAN mit Gutschein / Voucher"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:4
+msgid "Unifi unterstützt auch WLAN-Gutscheine (WLAN-Voucher)."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:9
+msgid ""
+"Bei einem WLAN-Gutschein meldet man sich, wie in einigen Hotels, an einem "
+"unverschlüsselten Gästenetz an und wird auf eine Anmeldeseite umgeleitet. "
+"Dort gibt man einen Gutschein-Code ein."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:11
+msgid "Der Unifi-Controller unterstützt zwei Arten von Gutscheinen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:14
+msgid "Einmaliger Gebrauch:"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:14
+msgid ""
+"Der Gutschein-Code ist nur für ein Gerät gültig. Nach der Anmeldung kann man"
+" mit seinem Gerät so lange ins Internet, bis der Gutschein abgelaufen ist. "
+"Das Gerät kann sich in dieser Zeit unbegrenzt mit dem Gäste-WLAN neu "
+"verbinden."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:17
+msgid "Mehrmaliger Gebrauch:"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:17
+msgid ""
+"Der Gutschein-Code ist für beliebig viele Geräte gültig. Sobald sich das "
+"erste Gerät mit dem Gutschein-Code angemeldet hat, beginnt die Gültigkeit "
+"des Gutscheins abzulaufen. Solche Gutscheine eignen sich beispielsweise für "
+"VHS-Kurse, die keine Accounts im Schulnetz haben."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:20
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:55
+msgid "Schritt für Schritt"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:22
+msgid ""
+"Melden Sie sich an und gehen Sie auf `Einstellungen` -> `Gastkontrolle`."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:27
+msgid ""
+"Im Bereich Gastrichtlinien setzen Sie ein Häkchen bei `Gastzugang "
+"aktivieren`."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:29
+msgid "Bei `Authentifizierung` wählen Sie `Hotspot`."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:31
+msgid ""
+"Hat `HTTPS-Umleitung aktivieren` ein Häkchen, so werden Clients auch dann "
+"umgeleitet, wenn Sie auf HTTPS-Seiten surfen. Leider erhält man dann eine "
+"Zertifikatswarnung, da der Unifi-Kontroller mit einem selbstsignierten "
+"Zertifikat arbeitet. Allerdings leiten viele Betriebsysteme von selbst auf "
+"das Gastportal um."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:36
+msgid ""
+"In der Portal-Anpassung wählen Sie die Template-Engine AngularJS und fügen "
+"die Sprache Deutsch hinzu."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:38
+msgid "Den Rest der Einstellungen können Sie so lassen."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:43
+msgid "Unter `HOTSPOT` setzen Sie ein Häkchen bei Gutscheine."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:45
+msgid ""
+"In der `Zugriffskontrolle` müssen Sie den Zugriff auf den Unifi-Kontroller "
+"noch vor der Anmeldung erlauben, da man sonst nicht auf die Anmeldeseite "
+"kommt."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:47
+msgid ""
+"Gehen Sie auf `ÄNDERUNGEN ANWENDEN`. Damit werden die Änderungen gespeichert"
+" und auf die APs ausgerollt."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:50
+msgid "Firewall-Regeln für den IPFire"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:52
+msgid ""
+"Damit die Clients überhaupt auf den Unifi-Kontroller zugreifen können, muss "
+"eine neue Firewallregel für den IPFire angelegt werden:"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:57
+msgid "Öffnen Sie den IPFire `<https://ipfire:444>`_ und melden Sie sich an."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:59
+msgid "Gehen Sie auf `Firewall`->`Firewallregeln`."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:61
+msgid "Wahlen Sie `Neue Regel erstellen`."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:66
+msgid "Machen Sie die folgenden Eingaben:"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:69
+msgid "Quelle:"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:69
+msgid "Standard-Netzwerk: BLAU"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:72
+msgid "Ziel:"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:72
+msgid "Zieladresse: `IP-Adresse des Unifi-Kontrollers`"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:75
+msgid "Protokoll:"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:75
+msgid "Alle"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:78
+msgid "Weitere Einstellungen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:78
+msgid "Setzen Sie einen Haken bei `Regel aktivieren`."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:80
+msgid ""
+"Speichern Sie die Regel mit `Hinzufügen` und vergessen Sie nicht, die "
+"Änderungen zu übernehmen."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:83
+msgid "Bemerkung"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivoucher.rst:85
+msgid ""
+"Statt alle Protokolle zu erlauben, reicht es, die Zielports 8880 und 8443 "
+"freizugeben. Dazu müssen Sie für jeden Port eine Regel definieren."
+msgstr ""

@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/clients/linbo/linbo-bootscreen.rst:3
+msgid "Boot-Bildschirme in LINBO"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-bootscreen.rst:5
+msgid "Beim Booten in LINBO sind folgende Bildschirme sichtbar:"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-bootscreen.rst:7
+msgid "Bootvorgang via Netzwerk"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-bootscreen.rst:12
+msgid "Initialmeldungen beim Bootvorgang via Netzwerk (PXE)"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-bootscreen.rst:14
+msgid ""
+"Egal ob über die lokale Festplatte gebootet wurde oder nach dem Bootvorgang "
+"via Netzwerkkarte (PXE) wird mit der Gruppenkonfiguration der Kernel "
+"geladen."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-bootscreen.rst:21
+msgid "Bootbildschirm: Laden des Kernels"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-bootscreen.rst:24
+msgid "Der gebootete LINBO-Kernel erscheint als ASCII-Art."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-bootscreen.rst:29
+msgid "LINBO-Kernelboot ASCII-Art"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-bootscreen.rst:31
+msgid "Die Grub-Konfiguration wird aktualisiert."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-bootscreen.rst:36
+msgid "LINBO-Grub Installation"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-bootscreen.rst:38
+msgid ""
+"Darauf folgt der reguläre :ref:`LINBO Startbildschirm <linbo-"
+"startbildschirm-label>`."
+msgstr ""

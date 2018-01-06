@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2018\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/getting-started/install-on-xen/index.rst:2
+msgid "Installation mit XEN"
+msgstr "Installation Xen"
+
+#: ../../source/getting-started/install-on-xen/index.rst:4
+msgid ""
+"In diesem Dokument finden Sie Anleitungen zum Installieren der von Netzint "
+"bereitgestellten XenAppliance der linuxmuster.net-Musterlösung in der "
+"Version 6.2. Es werden diverse Installationsautomatismen verwendet, sodass "
+"keine erweiterten Kenntnisse für die Installation notwendig sind. Eine "
+"vollständige Installation des Hypervisors, der Import aller VMs sowie deren "
+"Konfiguration dauert ca. 80 Minuten."
+msgstr ""
+"This document provides instructions to install the XenAppliance of "
+"linuxmuster.net solution in version 6.2 (provided by Netzint). The "
+"installation is automated as much as possible, so no advanced skills for "
+"installation are required. A complete installation of the hypervisor, the "
+"import of all VMs and configuration takes about 80 minutes."
+
+#: ../../source/getting-started/install-on-xen/index.rst:11
+msgid ""
+"Citrix XenServer eignet sich für den virtuellen Betrieb von linuxmuster.net "
+"besonders, da er nahtlos dem OpenSource-Konzept entspricht. Es ist der "
+"führende Enterprise-OpenSource-Hypervisor und wird in den weltgrößten "
+"Rechenzentren eingesetzt. Der Betrieb wird auf jeglicher Markenhardware "
+"unterstützt und es gibt zahlreiche professionelle 3rd-Party Software für "
+"Backup und andere Features. Die meiste „Noname-Hardware“ kann ebenfalls "
+"nativ verwendet werden. Für einen Großteil der restlichen Hardware werden "
+"oft von den Herstellern Erweiterungen für XenServer angeboten, somit sind "
+"auch diese lauffähig."
+msgstr ""
+"Citrix XenServer is particularly suitable for virtualising linuxmuster.net "
+"because it seamlessly matches the Open Source concept. It is the leading "
+"enterprise open source hypervisor and is used in the world's largest data "
+"centers. Operation is supported on any brand hardware and there are numerous"
+" professional 3rd party software for backup and other features. Most "
+"\"Noname hardware\" can also be used natively. For much of the rest of "
+"hardware extensions are often offered by manufacturers for XenServer."
+
+#: ../../source/getting-started/install-on-xen/index.rst:21
+msgid "Für die Installation benötigen Sie lediglich"
+msgstr "For the installation you need"
+
+#: ../../source/getting-started/install-on-xen/index.rst:23
+msgid ""
+"einen Installationsdatenträger Citrix XenServer 7.1 (zu finden auf "
+"`XenServer Webseite <http://xenserver.org>`_)"
+msgstr ""
+"an installation disc Citrix XenServer 7.1 (download from the `XenServer "
+"Webseite <http://xenserver.org>`_)"
+
+#: ../../source/getting-started/install-on-xen/index.rst:24
+msgid ""
+"sowie die Erweiterungs-DVD `linuxmuster-SupplementalPack` (zu finden auf "
+"http://www.netzint.de/education/linuxmuster-net/xenserver-appliance-6-2)"
+msgstr ""
+"and the expansion DVD \"XenServerSupplementalPack\" "
+"(http://www.netzint.de/education/linuxmuster-net/xenserver-appliance-6-2)"
+
+#: ../../source/getting-started/install-on-xen/index.rst:26
+msgid ""
+"Nach der Installation gemäß dieser Anleitung erhalten Sie eine "
+"einsatzbereite Umgebung bestehend aus"
+msgstr ""
+"After the installation you'll have a ready-to-use environment consisting of"
+
+#: ../../source/getting-started/install-on-xen/index.rst:28
+msgid "Server,"
+msgstr "Server,"
+
+#: ../../source/getting-started/install-on-xen/index.rst:29
+msgid "Firewall (IPFire) und"
+msgstr "Firewall (IPFire) and"
+
+#: ../../source/getting-started/install-on-xen/index.rst:30
+msgid "Administrationsoberfläche (XOA) sowie"
+msgstr "Administration interface (XOA) and"
+
+#: ../../source/getting-started/install-on-xen/index.rst:31
+msgid "optionale Erweiterungen."
+msgstr "optional extensions."
+
+#: ../../source/getting-started/install-on-xen/index.rst:33
+msgid ""
+"Alle weiteren Schritte für spezifische Anpassungen finden Sie in den "
+"weiterführenden Leitfäden zur Installation."
+msgstr ""
+"All other steps for custom adjustments, see the further guidelines and "
+"howtos."
+
+#: ../../source/getting-started/install-on-xen/index.rst:35
+msgid "Inhalt:"
+msgstr "Content"

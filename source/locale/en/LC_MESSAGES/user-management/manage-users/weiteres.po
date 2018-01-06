@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/user-management/manage-users/weiteres.rst:2
+msgid "Weiterführendes zur Benutzerverwaltung mit Sophomorix"
+msgstr ""
+
+#: ../../source/user-management/manage-users/weiteres.rst:4
+msgid ""
+"In der *linuxmuster.net* wird die Benutzerverwaltung mit Hilfe des Programms"
+" *Sophomorix* durchgeführt. Alle Schüler und Lehrer einer Schule, die als "
+"Benutzer im System vorhanden sein sollen, sind in vier Benutzerlisten "
+"(schueler.txt, lehrer.txt, extraschueler.txt und extrakurse.txt) aufgeführt."
+msgstr ""
+
+#: ../../source/user-management/manage-users/weiteres.rst:8
+msgid "Zur Verwaltung der Benutzer wird folgendermaßen verfahren:"
+msgstr ""
+
+#: ../../source/user-management/manage-users/weiteres.rst:10
+msgid "Alle Datensätze aus den Benutzerlisten werden geprüft und vorsortiert."
+msgstr ""
+
+#: ../../source/user-management/manage-users/weiteres.rst:11
+msgid ""
+"Bestehende Benutzer, die nicht mehr in den Listen aufgeführt sind, werden "
+"zum Verschieben auf dem *Dachboden* (*attic*) vorgesehen."
+msgstr ""
+
+#: ../../source/user-management/manage-users/weiteres.rst:13
+msgid ""
+"Ähnelt ein Datensatz (z.B. nach Namenskorrekturen im Sekretariat) einem, der"
+" zum Verschieben auf dem *Dachboden* vorgesehen wurde, wird er - evtl. nach "
+"Rückfrage -  mit dem bestehenden Benutzernamen verbunden und somit der "
+"Benutzer nicht auf den *Dachboden* verschoben. In diesem Fall behält der "
+"Benutzer seinen alten Login-Namen."
+msgstr ""
+
+#: ../../source/user-management/manage-users/weiteres.rst:17
+msgid ""
+"Neue Datensätze werden als Benutzer neu angelegt (Status U) und bekommen "
+"Benutzername und Passwort zugewiesen."
+msgstr ""
+
+#: ../../source/user-management/manage-users/weiteres.rst:18
+msgid "Bestehende Benutzer werden evtl. in neue Klassen versetzt."
+msgstr ""
+
+#: ../../source/user-management/manage-users/weiteres.rst:19
+msgid ""
+"Bestehende Benutzer, die nicht mehr in den Benutzerlisten vorhanden sind, "
+"werden auf den *Dachboden* verschoben (Status T). Sie können sich dann "
+"während eines *Duldungszeitraumes* zwar noch anmelden, haben aber keinen "
+"Zugriff mehr auf die Tauschverzeichnisse."
+msgstr ""
+
+#: ../../source/user-management/manage-users/weiteres.rst:21
+msgid ""
+"Benutzer, deren *Duldungszeitraum* auf dem *Dachboden* abgelaufen ist, "
+"können sich nicht mehr anmelden, aber ihre Daten verbleiben während eines "
+"*Reaktivierungszeitraumes* noch auf dem *Dachboden* (Status D)."
+msgstr ""
+
+#: ../../source/user-management/manage-users/weiteres.rst:23
+msgid ""
+"Benutzer, deren *Reaktivierungszeitraum* abgelaufen ist, werden zum Löschen "
+"vorgesehen (Status R)."
+msgstr ""
+
+#: ../../source/user-management/manage-users/weiteres.rst:24
+msgid ""
+"Benutzer auf dem *Dachboden*, die wieder in den Benutzerlisten aufgeführt "
+"sind, werden aus dem *Dachboden* wieder zurückgeholt (reaktiviert) und "
+"bekommen den Status E."
+msgstr ""
+
+#: ../../source/user-management/manage-users/weiteres.rst:26
+msgid ""
+"Benutzer, die zum Löschen markiert sind, werden mit ihren Daten endgültig "
+"gelöscht."
+msgstr ""

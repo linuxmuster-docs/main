@@ -1,0 +1,47 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/network/coovawifi/index.rst:3
+msgid "linuxmuster-chilli: Ein Captive Portal für linuxmuster.net"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/index.rst:5
+msgid ""
+"*linuxmuster-chilli* ist ein vorbereitetes Paket, das zur Installation auf "
+"einem **Ubuntu Server 12.04 32bit** gedacht ist und aus diesem ein "
+"sogenanntes \"Captive Portal\" (bei WLAN manchmal auch Hot-Spot genannt) "
+"macht, welches eine Anmeldung von mitgebrachten Geräten wie Laptops, "
+"Smartphones, Tablets u.ä. gegen den LDAP Server der linuxmuster.net Umgebung"
+" ermöglicht."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/index.rst:16
+msgid ""
+"Die Zugriffssteuerung liegt in den Händen des Netzwerkberaters und der "
+"Lehrer. Die Entscheidung, ob ein Benutzer das Netzwerk nutzen kann oder "
+"nicht, wird dabei über die Zugehörigkeit in LDAP Gruppen gesteuert. So "
+"können Zugänge fein gesteuert über Projektgruppen in der Schulkonsole "
+"vergeben werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/index.rst:32
+msgid ""
+"Weitere Ergänzungen finden Sie im Anwenderwiki -> `Coovachilli "
+"<https://linuxmuster.net/wiki/anwenderwiki:wlan:coovachilli>`__."
+msgstr ""

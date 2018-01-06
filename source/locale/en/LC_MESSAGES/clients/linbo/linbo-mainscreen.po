@@ -1,0 +1,197 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:6
+msgid "Der LINBO Startbildschirm"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:8
+msgid ""
+"Wird der Arbeitsplatzrechner (Client-PC) über das Netzwerk gebootet, startet"
+" LINBO und zeigt folgenden Bildschirm, wenn der PC noch nicht aufgenommen / "
+"registriert wurde."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:14
+msgid "Linbo Startbildschirm eines nicht aufgenommenen Clients"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:17
+msgid ""
+"Sobald der Client registriert wurde, zeigt der Startbildschirm weitere "
+"Optionen an."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:22
+msgid "Linbo Startbildschirm eines aufgenommenen Clients"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:25
+msgid "Informationen"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:27
+msgid "Im oberen Teil in LINBO werden Informationen zum Client angezeigt."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:30
+msgid "Host"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:30
+msgid ""
+"Der festgelegte Hostname oder \"pxeclient\", wenn der Client nicht "
+"registriert ist."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:33
+msgid "Gruppe"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:33
+msgid "Die festgelegte Hardwareklasse"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:37
+msgid "IP, MAC"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:36
+msgid ""
+"Die festgelegten Netzwerkadressen oder \"OFFLINE\", wenn der Client ohne "
+"Netzwerkverbindung zum Server gestartet wurde."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:41
+msgid "HD, CPU, RAM"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:40
+msgid ""
+"Zeigt die entsprechend verbaute Hardware des Clients an: Festplattengröße, "
+"Prozessor und Hauptspeicherinformationen"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:44
+msgid "Cache"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:44
+msgid "Zeigt die freie/gesamte Partitionsgröße der Cache-Partition an."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:46
+msgid ""
+"Neben der (vermutlich) aktuellen Uhrzeit auf dem Client werden im unteren "
+"Teil Status- und Rückmeldungen der einzelnen Aktionen in einem scrollbaren "
+"Texftfeld angezeigt, die bei einer Fehlersuche Informationen liefern können."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:52
+msgid "Reboot"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:57
+msgid "erzwingt einen Neustart und"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:61
+msgid "lässt den Client herunterfahren."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:65
+msgid "Start-Reiter"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:67
+msgid ""
+"Pro festgelegter Partition (mit Betriebssystem oder ohne) erscheinen im "
+"Start-Reiter ein großer Knopf und vier kleinere Knöpfe mit folgenden "
+"Bedeutungen"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:73
+msgid "Sync+Start Knopf"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:75
+msgid ""
+"synchronisiert das System mit dem letzten aktuellen Abbild.  Bei Windows-"
+"Systemen wird eine bereitgestellte Registry-Patch-Datei angewendet. Bei "
+"Linux-Systemen werden Hostname und Rootpartition gepatcht. Falls ein neueres"
+" Abbild auf dem Server liegt, wird dies zunächst heruntergeladen."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:83
+msgid "Start Knopf"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:85
+msgid ""
+"startet das System im aktuellen Zustand, unsynchronisiert, keine Patches "
+"werden angewandt."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:90
+msgid "Neu+Start Knopf"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:92
+msgid ""
+"formatiert die relevante Partition neu, synchronisiert das System von Grund "
+"auf mit dem aktuellen Image und startet das System wie bei \"Sync+Start\"."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:98
+msgid "Information"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:100
+msgid "zeigt Informationen über das aktuell hinterlegte Abbild an."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:104
+msgid "Standardknopf"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:106
+msgid "führt die Startmethode aus, die als solche definiert wurde."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:110
+msgid ""
+"Die einzelnen Schaltflächen für die Startmechanismen können auch ausgegraut "
+"sein, wenn der Administrator den jeweiligen Mechanismus deaktiviert hat."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:116
+msgid "Imaging-Reiter"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:118
+msgid ""
+"Hier können die Abbilder (Images) verwaltet werden. Der Bereich ist mit dem "
+"Passwort von \"LINBO\" abgesichert."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-mainscreen.rst:125
+msgid ""
+"Bei der Eingabe des LINBO-Passwortes werden keine Zeichen angezeigt, weder "
+"das Passwort selbst, noch Sterne."
+msgstr ""

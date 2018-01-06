@@ -1,0 +1,194 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:3
+msgid "LINBO Imageverwaltung am Client"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:5
+msgid "Über den Tab \"Imaging\" erhält der Administrator neue Funktionen"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:10
+msgid ""
+"Für jedes definierte Betriebssystem gibt es Schaltflächen für die Funktionen"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:14
+msgid "Image erstellen"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:16
+msgid ""
+"Es öffnet sich ein neues Dialogfenster, über das man ein neues Abbild "
+"erstellen (und hochladen) kann."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:21
+msgid "Image hochladen"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:23
+msgid ""
+"Es öffnet sich ein neues Dialogfenster, über das man das aktuelle Abbild auf"
+" den Server hochladen kann."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:27
+msgid ""
+"Daneben können gibt es Schaltflächen für folgende administrative Funktionen"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:31
+msgid "Console"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:33
+msgid ""
+"Man kann eine (rudimentäre) Console öffnen, um Shell-Befehle abzusetzen und "
+"Fehler zu diagnostizieren."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:38
+msgid "Cache aktualisieren"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:40
+msgid ""
+"Üblicherweise wird eine Partition auf dem Client als Cache festgelegt. Mit "
+"dieser Schaltfläche kann der Cache aktualisiert werden, d.h. alle für diesen"
+" Client nötigen Abbilder und postsync-Dateien werden gegebenenfalls "
+"heruntergeladen."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:47
+msgid "Partitionieren"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:49
+msgid "Partitioniert die gesamte Festplatte."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:53
+msgid "Registrieren"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:55
+msgid ""
+"Öffnet den Registrierungdialog zur erstmaligen Aufnahme dieses Rechners."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:58
+msgid ""
+"Darüberhinaus läuft in einem kleinen Fenster ein Timeout herunter, den man "
+"abstellen kann. Dort kann man auch über die Schaltfläche LOGOUT zurück zum "
+"Startbildschirm."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:63
+msgid "Dialog: Image erstellen"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:67
+msgid ""
+"Zur Auswahl steht der momentane Name des Abbilds. Das aktuelle Abbild wird "
+"dann beim Erstellen überschrieben. Beim Hochladen des aktuellen Abbilds mit "
+"demselben Namen wird auf dem Server ein Backup des vorherigen Abbilds "
+"erstellt."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:72
+msgid ""
+"Wird ein neuer Dateiname gewählt, kann man Informationen zu dem neuen Image "
+"verfassen."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:75
+msgid ""
+"Vergibt man einen neuen Dateinamen, sollte man sicher stellen, dass die "
+"Cache-Partition über ausreichend Platz verfügt, da das alte Image ebenfalls "
+"im Cache gespeichert bleibt. Ist nicht genügend Platz  vorhanden, dann "
+"schlägt das Erstellen des Abbildes fehl."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:77
+msgid ""
+"Wird \"Differentielles Image\" gewählt, dann gilt der neue Dateiname für das"
+" zu erstellende differentielle Image (mit der Dateiendung '.rsync')."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:80
+msgid ""
+"Es gibt die beiden Optionen zum Abschluss der Aktion \"Erstellen\" oder "
+"\"Erstellen+Hochladen\" den Computer neu zu starten oder herunterzufahren."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:85
+msgid "Dialog: Image hochladen"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:89
+msgid ""
+"Wie beim Image erstellen Dialog, kann hier explizit nur ein ausgewähltes "
+"Image hochgeladen werden und der Rechner zum Abschluss neu gestartet oder "
+"heruntergefahren werden."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:94
+msgid "Dialog: Console"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:98
+msgid ""
+"Der einfache Konsolendialog erlaubt die Eingabe einzelner Befehle in die "
+"untere Zeile. Die Ausgabe des ausgeführten Befehls erscheint im oberen "
+"Fenster."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:103
+msgid "Dialog: Cache aktualisieren"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:107
+msgid ""
+"Der Cache wird aktualisiert. Es werden die drei Möglichkeiten der "
+"Synchronisation zur Auswahl gegeben: Rsync, Multicast oder Bittorrent."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:112
+msgid "Dialog: Partitionieren"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:114
+msgid ""
+"Es wird noch einmal gefragt, ob man wirklich alle Daten auf der Festplatte "
+"löschen will. Danach kann man mit \"Cache aktualisieren\" aber auch wieder "
+"die Abbilder vom Server kopieren."
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:119
+msgid "Dialog: Registrieren"
+msgstr ""
+
+#: ../../source/clients/linbo/linbo-imagingscreen.rst:123
+msgid ""
+"Mit diesem Dialog kann ein erstmalig genutzer Rechner registriert werden. "
+"Dafür müssen alle Eingabefelder dem Vergabeschema entsprechend ausgefüllt "
+"werden."
+msgstr ""

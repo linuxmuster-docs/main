@@ -1,0 +1,499 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/appendix/school-console/admin/settings.rst:3
+msgid "Menü: Einstellungen"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:8
+msgid "Schulkonsole"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:15
+msgid "Sitzungsdauer:"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:15
+msgid "Zeit bis zum automatischen Logout aus der Schulkonsole"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:18
+msgid "Überprüfe die Passwortgüte:"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:18
+msgid ""
+"Soll das Passwort auf eine minimale Länge, der zwingenden Verwendung zweier "
+"unterschiedlicher Zeichenarten und auf verbotene Sonderzeichen überprüft "
+"werden?"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:21
+msgid "Minimale Passwortlänge:"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:21
+msgid "Diese Anzahl an Zeichen muss ein Passwort mindestens haben."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:26
+msgid "Benutzerverwaltung"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:29
+msgid "Global"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:34
+msgid "Logmeldungen:"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:34
+msgid ""
+"Mit dieser Angabe stellen Sie ein, wie ausführlich *Sophomorix* "
+"Informationen über die aktuellen Aktionen ausgibt."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:37
+msgid "Anzahl der Schüler pro Klasse:"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:37
+msgid ""
+"Mit diesen Angaben werden die Schülerzahlen aus der Schulverwaltung auf "
+"Gültigkeit geprüft."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:40
+msgid "Geburtsjahreszahl für Schüler:"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:40
+msgid ""
+"Mit diesen Angaben werden die Geburtsdaten aus der Schulverwaltung auf "
+"Gültigkeit geprüft."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:43
+msgid "Sternchenklassen filtern:"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:43
+msgid ""
+"Im Schulverwaltungsprogramm *Splan* werden vor die neuen Eingangsklassen für"
+" das nächste Schuljahr Sternchen gemacht. Diese Schüler können heraus "
+"gefiltert werden, damit sie in den anderen Report-Dateien nicht stören."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:46
+msgid "Quota aktivieren:"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:46
+msgid ""
+"Hier können Sie angeben, ob die Benutzer nur begrenzten Plattenplatz zur "
+"Verfügung gestellt bekommen sollen."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:49
+msgid "Standardquota Lehrer/Schüler:"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:49
+msgid ""
+"Die Werte müssen für die einzelnen Partitionen getrennt eingegeben werden. "
+"Wie viele das sind hängt von der Partitionierung ihrer Serverplatte ab. Der "
+"letzte Eintrag ohne Partition bezieht sich auf Mailquota. Bei Übernahme der "
+"Änderungen werden die Quota-Einstellungen der entsprechenden Benutzer "
+"angepasst."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:55
+msgid "Schulweites Tauschen aktivieren:"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:52
+msgid ""
+"Damit stellen Sie ein, ob allen Benutzer der Ordner ``T:\\tausch-Schule`` "
+"(in einem Windows-Client) bzw. ``Tausch_auf_Server/tausch-Schule`` (in einem"
+" Linux-Clientd) zur Verfügung steht."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:58
+msgid "Kodierung"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:68
+msgid "Kodierung der Datei xxx.txt:"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:64
+msgid ""
+"Bestimmt die Kodierung, die die jeweilige Textdatei im System hat. Das "
+"spielt für die Interpretation der Zeichen (vor allem Sonderzeichen) eine "
+"entscheidende Rolle. Bei Windows ist es meistens win1252, bei Linux utf8, "
+"historisch gewachsen oft noch iso8859-1 oder iso8859-15."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:72
+msgid ""
+"Ändern Sie die Kodierung an dieser Stelle nur, wenn Sie sicher sind, dass "
+"die jeweilige Datei jetzt in einer anderen Kodierung auf dem Server vorliegt"
+" als hier angegeben und Sie Probleme mit besonderen Zeichen erfahren."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:79
+msgid "E-Mail"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:85
+msgid "Mail-Alias:"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:85
+msgid ""
+"Der Mail-Alias ist eine alternative Mailadresse, die manchmal "
+"aussagekräftiger als der Benutzername ist."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:88
+msgid "Mailquota-Warnungen:"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:88
+msgid ""
+"Bestimmt, ob Benutzern bei Überschreitungen eines bestimmten Kontingents "
+"Warnungen zugestellt werden sollen."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:93
+msgid "Warnungen bei ...:"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:91
+msgid ""
+"Grenzen, ab wann Warnungen zugestellt werden sollen. Die Grenze kann einmal "
+"absolut und einmal relativ festgelegt werden, da unterschiedliche Benutzer "
+"unterschiedliche Quoten haben können."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:96
+msgid "Überschreitung an root:"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:96
+msgid ""
+"Hier kann bestimmt werden, ob root eine Kopie der Quota-Warnungen erhält."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:99
+msgid "Login und Löschen"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:102
+msgid ""
+"Den Abschnitt gibt es je einmal für *Schüler* und *Lehrer*, da man für diese"
+" Benutzergruppen sicherlich teilweise unterschiedliche Werte festlegen "
+"möchte. Für den Abschnitt *Löschen* gilt das ebenfalls."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:109
+msgid "**Abschnitt Login**"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:109
+#: ../../source/appendix/school-console/admin/settings.rst:130
+#: ../../source/appendix/school-console/admin/settings.rst:151
+msgid "**Erläuterungen**"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:112
+msgid "*Zufallspasswort*"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:112
+msgid ""
+"Mit einem Haken an dieser Stelle wird für jeden neu angelegten Benutzer ein "
+"Zufallspasswort generiert. Andernfalls wird jedem neuen Benutzer das "
+"Passwort *linux* vergeben, was eine Sicherheitslücke darstellt, wenn die "
+"Benutzer ihr Passwort nicht ändern. Die Loginkärtchen der neu angelegten "
+"Schüler können von jedem Lehrer ausgedruckt werden."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:119
+msgid "*Zufallspasswortzeichen*"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:119
+msgid "Bestimmt die Länge der Zufallspasswörter"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:122
+msgid "*Shell aktivieren*"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:122
+msgid ""
+"Der Benutzer benötigt eine Shell, wenn er sich auf einem Linux-System mit "
+"*gnome-* Oberfläche anmelden will."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:127
+msgid "*Sambapasswort ändern*"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:127
+msgid ""
+"Ist das gewählt, müssen Benutzer bei der ersten Anmeldung ihr Passwort "
+"ändern. Das bezieht sich nur auf Windows."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:130
+msgid "**Abschnitt Löschen**"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:133
+msgid "*Duldungszeitraum*"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:133
+msgid ""
+"Das ist der Zeitraum, in dem sich ein Benutzer nach Löschung in der "
+"Schulverwaltung noch am System anmelden kann, dann aber keinen Zugriff mehr "
+"auf das Klassentauschverzeichnis hat."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:137
+msgid "*Deaktivierungs­zeitraum*"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:137
+msgid ""
+"In dieser Zeit ist keine Anmeldung mehr möglich, allerdings kann der "
+"Netzwerkbetreuer den Benutzer mit all seinen Daten wieder aktivieren und ins"
+" System zurückholen."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:143
+msgid "Druckdaten"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:146
+msgid ""
+"Die folgenden Daten werden z.B. für die Erstellung von Passwortzetteln mit "
+"Informationen genutzt, die neue Benutzer erhalten."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:151
+msgid "**Abschnitt Druckdaten**"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:154
+msgid "*Schulname*"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:154
+msgid "So erscheint der Schulname auf Ausdrucken wie z.B. Passwortlisten."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:157
+msgid "*Interner Servername*"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:157
+msgid ""
+"Das ist der Name des Servers, unter dem er im Schulnetz angesprochen wird. "
+"Dieser Ausdruck dient den Benutzern zur Orientierung."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:160
+msgid "*Externer Servername*"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:160
+msgid ""
+"Hiermit ist ein Name, wie er z.B. über einen Service wie *dyndns* vergeben "
+"wird, gemeint."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:163
+msgid "*Samba-Domäne*"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:163
+msgid ""
+"Hier sollte der Wert eingestellt werden, den man bei der Installation für "
+"die Domäne der Schule angegeben hat."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:166
+msgid "*Moodle-URL*"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:166
+msgid ""
+"Da ein eventuell betriebenes Moodle nicht unbedingt über den eigenen Server "
+"zu erreichen ist, kann diese URL hier explizit eingegeben werden."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:169
+msgid "*Administratoren*"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:169
+msgid ""
+"Die Namen der Administratoren können angegeben werden, damit neue Benutzer "
+"leichter einen Ansprechpartner bei Problemen finden."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:173
+msgid ""
+"Alle Änderungen werden erst wirksam, wenn ganz unten auf ``Änderungen "
+"übernehmen`` geklickt wird."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:177
+msgid "Räume"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:179
+msgid ""
+"Legen Sie hier die Standardeinstellungen für den Zugang zu *Internet*, "
+"*Intranet* und *Webfilter* für die Workstations in den Räumen fest."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:184
+msgid ""
+"Aus der \"default\"-Zeile kann für einen gesamten Raum eine Ausnahme "
+"hinzugefügt werden."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:187
+msgid ""
+"Um eine Ausnahme für eine Workstation anzulegen, muss ein Eintrag für den "
+"Raum hinzugefügt worden sein."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:190
+msgid ""
+"Um einen Eintrag zu löschen, setzen Sie das Häkchen in der entsprechenden "
+"Checkbox am Zeilenende."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:193
+msgid ""
+"Um die Rechner in einem Raum oder einzelne Rechner zurückzusetzen, setzen "
+"Sie das Häkchen in der entsprechenden Checkbox und wählen die Aktion "
+"„Auswahl zurücksetzen“."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:197
+msgid ""
+"Legen Sie außerdem fest, welche Räume von der Schulkonsole als Computerraum "
+"unter „aktueller Raum“ verwaltbar sein sollen."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:200
+msgid "Schliessen Sie die Aktion mit „Änderungen übernehmen“ ab."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:204
+msgid "Klassen"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:206
+msgid "Nehmen Sie hier einige Einstellungen für Klassen vor."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:211
+msgid "sichtbar:"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:211
+msgid ""
+"Ausgewählte Klassen sind die Klassen, in die sich der Lehrer in der "
+"Schulkonsole eintragen kann."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:214
+#: ../../source/appendix/school-console/admin/settings.rst:232
+msgid "Liste:"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:214
+msgid ""
+"Für ausgewählte Klassen wird Server-intern ein Mailverteiler eingerichtet."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:217
+#: ../../source/appendix/school-console/admin/settings.rst:235
+msgid "Aliase:"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:217
+msgid ""
+"Für ausgewählte Klassen werden Server-intern Mailaliase für die jeweiligen "
+"Mitglieder erstellt."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:222
+#: ../../source/appendix/school-console/admin/settings.rst:241
+msgid "WLAN:"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:220
+msgid ""
+"Für ausgewählte Klassen wird *permanent* den jeweiligen Mitgliedern die "
+"Berechtigung zum Login über WLAN gegeben. Zeitgesteuerte Einstellungen "
+"können eingetragene Lehrer bei ihren Klassen vornehmen."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:225
+msgid "Projekte"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:227
+msgid "Nehmen Sie hier einige Einstellungen für Projekte vor."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:232
+msgid ""
+"Für ausgewählte Projekte wird Server-intern ein Mailverteiler eingerichtet."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:235
+msgid ""
+"Für ausgewählte Projekte werden Server-intern Mailaliase für die jeweiligen "
+"Mitglieder erstellt."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:238
+msgid ""
+"Für ausgewählte Projekte wird *permanent* den jeweiligen Mitgliedern die "
+"Berechtigung zum Login über WLAN gegeben. Zeitgesteuerte Einstellungen "
+"können eingetragene Lehrer bei ihren Klassen vornehmen."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:244
+msgid "Reparaturen"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/settings.rst:246
+msgid "Nehmen Sie hier spezielle Reparatureinstellungen vor."
+msgstr ""

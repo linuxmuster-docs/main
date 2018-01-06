@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/classroom/create-project/index.rst:3
+msgid "Projekte nutzen"
+msgstr ""
+
+#: ../../source/classroom/create-project/index.rst:5
+msgid ""
+"Projekte bilden Gruppen in der Schule ab, die außerhalb von Klassen "
+"existieren. Ein Projekt kann ein Leistungskurs im Gymnasium, eine "
+"Neigungsgruppe in einer Gesamtschule oder jede beliebige Gruppe von "
+"Benutzern des Systems sein."
+msgstr ""
+
+#: ../../source/classroom/create-project/index.rst:7
+msgid ""
+"Um ein Projekt einzurichten, wählt man nach der Anmeldung als Lehrer aus dem"
+" Menü `Projekte` das Untemenü `Mitglieder` aus."
+msgstr ""
+
+#: ../../source/classroom/create-project/index.rst:11
+msgid ""
+"Im folgenden Fenster vergibt man einen Namen für das Projekt "
+"(hier:``demo``). Dabei ist ``p _`` bereits vorgegeben und wird Teil des "
+"Projektnamens"
+msgstr ""
+
+#: ../../source/classroom/create-project/index.rst:15
+msgid "Man klickt auf den Projektnamen"
+msgstr ""
+
+#: ../../source/classroom/create-project/index.rst:19
+msgid "und sieht das folgende Fenster."
+msgstr ""
+
+#: ../../source/classroom/create-project/index.rst:24
+msgid "Mitglieder hinzufügen"
+msgstr ""
+
+#: ../../source/classroom/create-project/index.rst:26
+msgid ""
+"Der Lehrer, welcher das Projekt eingerichtet hat ist schon als Mitglied und "
+"Projektleiter eingetragen. Nun kann man dem Projekt weitere Mitglieder "
+"hinzufügen."
+msgstr ""
+
+#: ../../source/classroom/create-project/index.rst:29
+msgid ""
+"Um z.B. aus der gesamten Schülerschaft Schüler für die Projektgruppe "
+"``p_demo`` auszuwählen gibt man unter `Suche` einen ``*`` ein. Der "
+"Radiobutton ist auf `Schüler` gesetzt. Hat man diese Auswahl getroffen, "
+"klickt man auf `Suche`"
+msgstr ""
+
+#: ../../source/classroom/create-project/index.rst:33
+msgid "und erhält eine Liste aller Schüler der Schule:"
+msgstr ""
+
+#: ../../source/classroom/create-project/index.rst:37
+msgid ""
+"In diesem Fenster wählt man die Mitglieder der Projektgruppe aus indem man "
+"rechts neben dem Namen einen Haken setzt."
+msgstr ""
+
+#: ../../source/classroom/create-project/index.rst:41
+msgid ""
+"Sind alle Mitglieder ausgewählt, klickt man auf `Aufnehmen` und sieht nach "
+"einigen Sekunden das folgende Fenster:"
+msgstr ""
+
+#: ../../source/classroom/create-project/index.rst:46
+msgid "Lehrer als Projektleiter hinzufügen"
+msgstr ""
+
+#: ../../source/classroom/create-project/index.rst:48
+msgid ""
+"Sollen Lehrer zur Gruppe hinzugefügt werden, dann setzt man den Radiobutton "
+"auf `Lehrer`,"
+msgstr ""
+
+#: ../../source/classroom/create-project/index.rst:52
+msgid "klickt auf `Suchen` und erhält eine Liste aller Lehrer der Schule."
+msgstr ""
+
+#: ../../source/classroom/create-project/index.rst:56
+msgid ""
+"Man wählt nun die aufzunehmenden Lehrer aus und kann zusätzlich bestimmen ob"
+" ein Lehrer zusätzlich Projektleiter wird."
+msgstr ""
+
+#: ../../source/classroom/create-project/index.rst:61
+msgid ""
+"Nach Klick auf `Aufnehmen` sieht man die Gruppe mit den hinzugefügten "
+"Lehrern"
+msgstr ""
+
+#: ../../source/classroom/create-project/index.rst:66
+msgid ""
+"Die Suche kann man verfeinern indem man z.B. ``schm*`` in die "
+"``Suche:``-Zeile eingibt und auf `Suche` klickt. Damit werden alle Schüler "
+"aufgelistet in deren Name die Zeichenfolge ``schm`` vor kommt. Ähnlich kann "
+"man mit den Radiobuttons `Lehrer`, `Klasse` und `Projekt` verfahren."
+msgstr ""

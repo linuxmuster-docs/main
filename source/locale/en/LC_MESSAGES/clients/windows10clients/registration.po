@@ -1,0 +1,218 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2018\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/clients/windows10clients/registration.rst:2
+msgid "Computer in Netzwerk aufnehmen"
+msgstr "Register computer in the network"
+
+#: ../../source/clients/windows10clients/registration.rst:4
+msgid ""
+"Neue Clients werden über die LINBO-Oberfläche des Clients registriert und "
+"dann auf dem Server ins System aufgenommen."
+msgstr ""
+"New clients are registered via the LINBO interface of the client and then "
+"recorded on the server in the system."
+
+#: ../../source/clients/windows10clients/registration.rst:10
+msgid "Registrierung über LINBO"
+msgstr "Registration with LINBO"
+
+#: ../../source/clients/windows10clients/registration.rst:12
+msgid ""
+"Die LINBO-Oberfläche (:doc:`Bedienungsanleitung LINBO <../linbo/index>`) auf"
+" dem Client bietet eine Möglichkeit die Aufnahme eines neuen Rechners ins "
+"System vorzubereiten."
+msgstr ""
+"However the LINBO user interface  (:doc:`Manual <../linbo/index>`) on the "
+"Client provides a way to register a new machine to the system."
+
+#: ../../source/clients/windows10clients/registration.rst:16
+msgid "Starten Sie den Rechner per PXE-Boot"
+msgstr "Restart the computer using PXE boot."
+
+#: ../../source/clients/windows10clients/registration.rst:20
+msgid ""
+"Klicken Sie auf den Reiter ''Imaging'' und loggen Sie sich mit dem LINBO-"
+"Passwort ein."
+msgstr "Click on the \"Imaging\" tab and log in with the LINBO password."
+
+#: ../../source/clients/windows10clients/registration.rst:24
+msgid "Im Passwordfeld wird nichts angezeigt. Sie müssen es \"blind\" eintippen."
+msgstr ""
+"In the password field, nothing is displayed. You must type it in \"blind\"."
+
+#: ../../source/clients/windows10clients/registration.rst:28
+msgid ""
+"Nun sind Sie LINBO-Administrator. Auf der Imaging-Seite fällt das Timeout-"
+"Fenster auf, welches die Zeit anzeigt, nach der man automatisch ausgeloggt "
+"wird. Mit einem Klick auf die Checkbox, kann der Timeout deaktiviert werden."
+msgstr ""
+"Now you are LINBO administrator. There is a timeout window that shows the "
+"time after which you will be logged out automatically. By clicking the "
+"checkbox, the timeout can be disabled."
+
+#: ../../source/clients/windows10clients/registration.rst:32
+msgid ""
+"Über die Schaltfläche `Registrieren` öffnen Sie im nächsten Schritt das "
+"Dialogfenster ``Rechner registrieren``, das Eingabefelder für die "
+"Clientdaten anbietet."
+msgstr ""
+"The button ``Register`` opens a dialog box where you can enter data for the "
+"client."
+
+#: ../../source/clients/windows10clients/registration.rst:42
+msgid "Raumbezeichnung"
+msgstr "Room"
+
+#: ../../source/clients/windows10clients/registration.rst:39
+msgid ""
+"Geben Sie hier den Namen des Raums (z.B. r100 oder g1r100) ein. Beachten Sie"
+" bitte, dass die Bezeichnung des Raumes oder auch des Gebäudes mit einem "
+"Kleinbuchstaben beginnen muss. Sonderzeichen sind nicht erlaubt."
+msgstr ""
+"Enter the name of the room (for example, r100 or g1r100). Please note that "
+"the name of the room or the building must begin with a lowercase letter. "
+"Special characters are not allowed."
+
+#: ../../source/clients/windows10clients/registration.rst:50
+msgid "Rechnername"
+msgstr "Hostname"
+
+#: ../../source/clients/windows10clients/registration.rst:45
+msgid ""
+"z.B. in der Form r100-pc01 (max. 15 Zeichen), (evtl. Gebäude berücksichtigen"
+" g21r100-pc01) eingeben. Beachten Sie bitte, dass als Zeichen nur Buchstaben"
+" und Zahlen erlaubt sind. Als Trennzeichen darf nur das Minus-Zeichen ``-`` "
+"verwendet werden. Leerzeichen, Unterstriche oder andere Sonderzeichen (wie "
+"z.B. Umlaute, ß oder Satzzeichen) dürfen Sie hier unter keinen Umständen "
+"verwenden."
+msgstr ""
+"e.g. In the form r100-pc01 (up to 15 characters), (if necessary, take the "
+"building into account g21r100-pc01). Please note that only characters and "
+"numbers are allowed as characters. Only the hyphen ``-`` may be used as a "
+"separator. You may not use spaces, underlines or other special characters "
+"(such as german Umlaute, ß or punctuation marks) under any circumstances."
+
+#: ../../source/clients/windows10clients/registration.rst:57
+msgid "IP Adresse"
+msgstr "IP Address"
+
+#: ../../source/clients/windows10clients/registration.rst:53
+msgid ""
+"Die IP-Adresse sollte zum Raum passen und **muss** außerhalb des Bereichs "
+"für die Rechneraufnahme liegen. Abhängig von Ihren Netzdaten z.B. "
+"10.16.100.1 für diesen PC eingeben, üblicherweise **nicht** zwischen "
+"10.16.1.100 und 10.16.1.200 (Bereich für die Rechneraufnahme)."
+msgstr ""
+"The IP address should fit to the room and **must be** outside the default "
+"DHCP range. Depending on your network data, you can enter e.g. 10.16.100.1 "
+"for this PC, usually **not** between 10.16.1.100 and 10.16.1.200 (default "
+"DHCP range)."
+
+#: ../../source/clients/windows10clients/registration.rst:61
+msgid "Rechnergruppe"
+msgstr "Host Group"
+
+#: ../../source/clients/windows10clients/registration.rst:60
+msgid ""
+"In der Rechnergruppe, bspw. `xenial` werden mehrere (idealerweise alle) "
+"ähnlichen Rechner zusammengefasst, die eine (nahezu) identische "
+"Konfiguration bekommen."
+msgstr ""
+"In the computer group, e.g. `xenial`, several (almost all) similar computers"
+" are combined, which get an (nearly) identical configuration."
+
+#: ../../source/clients/windows10clients/registration.rst:65
+msgid ""
+"Ist alles korrekt ausgefüllt, werden die Clientdaten über die Schaltfläche "
+"`Registrieren` auf den Server hochgeladen."
+msgstr ""
+"If everything is filled in correctly, the client data is uploaded via the "
+"button ``Register`` on the server."
+
+#: ../../source/clients/windows10clients/registration.rst:69
+msgid ""
+"Werden weitere Clients registriert, dann muss man die Felder nicht mehr "
+"ausfüllen. Linbo inkrementiert an der richtigen Stelle automatisch. Z.B. "
+"wird aus `r100-pc01` = `r100-pc02` und aus der IP-Adresse `10.16.100.1` =  "
+"`10.16.100.2`. Es versteht sich von selbst dass, will man das Feature "
+"nutzen, man die Rechner in der richtigen Reihenfolge registrieren muss!"
+msgstr ""
+"If other clients are registered, you do not have to fill in the fields. "
+"Linbo increments automatically in the right place. E.g. its increments the "
+"hostname `r100-pc01` =` r100-pc02` and the IP address `10.16.100.1` =` "
+"10.16.100.2`. It's clear that if you want to use the feature, you must "
+"register the computers in the correct order!"
+
+#: ../../source/clients/windows10clients/registration.rst:75
+msgid "Registrierung übernehmen"
+msgstr "Import Registered Clients"
+
+#: ../../source/clients/windows10clients/registration.rst:77
+msgid ""
+"Sobald alle Rechner registriert wurden, müssen Sie die Aufnahme der Clients "
+"entweder in der `Schulkonsole` (:doc:`Bedienungsanleitung Schulkonsole "
+"<../../appendix/school-console/admin/index>`) oder an der Konsole starten!"
+msgstr ""
+"As soon as all hosts are added, you have to start the import of the "
+"computers in the school console (:doc:`school console manual <../../appendix"
+"/school-console/admin/index>`) or at the console!"
+
+#: ../../source/clients/windows10clients/registration.rst:81
+msgid ""
+"Da der Zugriff auf die Schulkonsole nur von ins System aufgenommenen "
+"Rechnern erlaubt ist, muss zumindest der erste Rechner händisch importiert "
+"werden."
+msgstr ""
+"Since the access to the school console is only allowed by computers that are"
+" included in the system, at least the first computer must be imported "
+"manually."
+
+#: ../../source/clients/windows10clients/registration.rst:84
+msgid ""
+"Melden Sie sich als ``root`` auf dem Server an und führen den "
+"Kommandozeilenbefehl"
+msgstr "Log on to the server as ``root`` and run the command line command"
+
+#: ../../source/clients/windows10clients/registration.rst:90
+msgid "aus."
+msgstr "out."
+
+#: ../../source/clients/windows10clients/registration.rst:92
+msgid ""
+"Wollen Sie später weitere Clients registrieren und aufnehmen, browsen Sie "
+"die Schulkonsole von einem bereits importierten Rechner aus an: "
+"https://server:242 und melden sich als ``administrator`` an."
+msgstr ""
+"If you want to register and record other clients later, browse the school "
+"console from an already imported computer: https://server:242 and log in as "
+"``administrator``."
+
+#: ../../source/clients/windows10clients/registration.rst:96
+msgid ""
+"Auf der Hosts-Seite der Schulkonsole können neue Rechner direkt eingetragen "
+"werden und es erscheinen alle neuen Clients als `noch nicht ins System "
+"übernommen`.  Ein Klick auf die Schaltfläche `Hosts jetzt übernehmen` "
+"erledigt das und die neu registrierten Clients sind importiert."
+msgstr ""
+"On the host tab of the school console, new computers can be entered directly"
+" and all new clients appear as `not yet taken over into the system`. A click"
+" on the 'Import hosts now' button does this and the newly registered clients"
+" are imported."

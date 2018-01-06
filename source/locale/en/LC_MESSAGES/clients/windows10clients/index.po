@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2018\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/clients/windows10clients/index.rst:4
+msgid "Windows 10 Clients"
+msgstr "Windows 10 Clients"
+
+#: ../../source/clients/windows10clients/index.rst:6
+msgid ""
+"In dieser Anleitung wird beschrieben, wie man Windows 10 auf einer "
+"Musterarbeitsstation installiert, um diese Installation auf weitere Clients "
+"mit identischer Hardware zu übertragen."
+msgstr ""
+"This guideline helps you to install Windows 10 on a master workstation and "
+"clone it to any other clients with identical hardware."
+
+#: ../../source/clients/windows10clients/index.rst:9
+msgid ""
+"Arbeitsstationen (\"Clients\") werden in der linuxmuster.net über die "
+"Software LINBO (\"GNU/Linux Network Boot\") installiert."
+msgstr ""
+"Workstations (\"Clients\") are installed in linuxmuster.net via LINBO "
+"software (\"GNU / Linux Network Boot\")."
+
+#: ../../source/clients/windows10clients/index.rst:11
+msgid ""
+"Nahezu alle Arbeitsschritte, die Änderungen am Server benötigen, werden über"
+" ein Webinterface erledigt.  Alternativ können diese Arbeitsschritte auch an"
+" der Serverkonsole ausgeführt werden, wie es die Anleitung :ref:`install-"
+"linux-clients-label` beschreibt."
+msgstr ""
+"Nearly all steps that require changes at server side are accomplished via "
+"webinterface. Alternatively these steps can also be executed at the server "
+"console as described in the manual :ref:'install-linux-clients-label'."

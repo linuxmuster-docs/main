@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/addons/backupmondo/restore-interactive.rst:2
+msgid "Interaktiver Restore"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-interactive.rst:4
+msgid ""
+"Geben Sie am Bootprompt **interactive** ein. Die CD bootet dann direkt in "
+"das Startmenü von *mondorestore*."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-interactive.rst:6
+msgid "Wählen Sie im Startmenü die Option **Interactively**:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-interactive.rst:10
+msgid "Wählen Sie im nächsten Schritt das Backupmedium aus:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-interactive.rst:14
+msgid ""
+"Geben Sie den Präfix für die ISO-Dateien nun ein (in unserem Fall "
+"\"server\"):"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-interactive.rst:18
+msgid ""
+"Geben Sie das Backupgerät ebenfalls ein (in unserem Beispiel eine "
+"Festplattenpartition):"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-interactive.rst:22
+msgid ""
+"Das Dateisystem der Backup-Partition wird automatisch erkannt, das "
+"Eingabefeld kann also leer bleiben:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-interactive.rst:26
+msgid ""
+"Geben Sie den Pfad zum gewünschten Backupset ein. Vorgegeben wird der Pfad "
+"zum Vollbackup. Wenn Sie ein differentielles oder inkrementelles Backupset "
+"zurückspielen möchten, müssen Sie den Pfad anpassen."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-interactive.rst:30
+msgid ""
+"Jetzt können Sie noch die Partitionierung der Festplatte(n) anpassen. Das "
+"ist jedoch nur in Spezialfällen notwendig, wenn Sie zum Beispiel ein "
+"Vollbackup interaktiv restaurieren und die Partitionierung auf dem "
+"Zielsystem anders sein soll als auf dem System, das gesichert wurde. Um "
+"weiter zu gelangen, navigieren Sie mit der **TAB-Taste** auf **OK** und "
+"drücken Sie **ENTER**."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-interactive.rst:34
+msgid "Bestätigen Sie noch die Sicherheitsabfrage bezüglich der Mountliste."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-interactive.rst:38
+msgid ""
+"Nachdem die Zieldateisysteme gemountet wurden, werden Sie noch gefragt, ob "
+"Sie alle Dateien des Backupsets restaurieren wollen. Wählen Sie **Yes**, um "
+"den Backupset komplett zu restaurieren. Mit **No** erhalten Sie die im "
+"Abschnitt :doc:`restore-interactive` beschriebene Möglichkeit, einzelne "
+"Dateien und Verzeichnisse für die Restauration auszuwählen."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-interactive.rst:42
+msgid "Schließlich startet der Restaurationsvorgang."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-interactive.rst:46
+msgid ""
+"Sind alle Dateien restauriert kann der Bootloader initialisiert werden. "
+"Wählen Sie **Yes**."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-interactive.rst:50
+msgid ""
+"In einem weiteren Schritt muss noch angegeben werden, ob die Mountliste "
+"geändert wurde."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-interactive.rst:54
+msgid ""
+"Sollen die Partitionen mit einem Label versehen werden? Hier kann mit "
+"**Yes** geantwortet werden."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-interactive.rst:58
+msgid "Bestätigen Sie abschließend noch den Start des post-nuke scripts."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-interactive.rst:62
+msgid ""
+"Nun ist die Restauration des Backupsets abgeschlossen und die Mondo-Rescue-"
+"Konsole erscheint. Wenn Sie weitere Backupsets zurückspielen müssen, starten"
+" Sie mondorestore auf der Konsole. Um das System neu zu starten, geben Sie "
+"exit ein."
+msgstr ""

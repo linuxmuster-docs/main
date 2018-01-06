@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/appendix/contribute/feedback/kommandozeile.rst:2
+msgid "Kommandozeilenbefehl"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/kommandozeile.rst:4
+msgid ""
+"Das Paket installiert den Kommandozeilenbefehl ``linuxmuster-community-"
+"feedback``. Der Befehl kennt vier Optionen, die mit Ausnahme der Hilfe "
+"beliebig kombiniert werden können:"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/kommandozeile.rst:18
+msgid ""
+"Die Option ``-v`` zeigt Informationen über das Statusfile an - sowohl wie "
+"dieses heißt, als auch welchen Inhalt es hat. Das Statusfile ist die Datei, "
+"die letztlich beim übermitteln der Informationen an den Projektserver "
+"übertragen wird."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/kommandozeile.rst:23
+msgid "Die Option ``-u`` stößt eine Übertragung an."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/kommandozeile.rst:25
+msgid ""
+"Die Option ``-s`` zeigt Informationen zum Cronjob an, der vom Paket in der "
+"Datei ``/etc/cron.d/linuxmuster-community-feedback`` eingerichtet wird:"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/kommandozeile.rst:41
+msgid ""
+"Hier zeigt die Ausgabe, dass jeden Sonntag um 04:58 Uhr eine aktualisierte "
+"Version der Statistik zum Projektserver übertragen wird."
+msgstr ""

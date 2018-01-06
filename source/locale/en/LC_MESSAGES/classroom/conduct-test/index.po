@@ -1,0 +1,241 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/classroom/conduct-test/index.rst:3
+msgid "Klassenarbeit durchführen"
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:5
+msgid ""
+"Im Klassenarbeitsmodus haben Sie als Lehrer die Möglichkeit, Dateien an "
+"Schüler zu verteilen und die Lösungen via Netzwerk wieder einzusammeln. "
+"Zugleich unterbindet dieser Modus den Internet-Zugriff sowie den Zugriff auf"
+" das Heimatverzeichnis der Schüler sowie auf Tauschverzeichnisse."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:7
+msgid ""
+"Um in den Klassenarbeitsmodus zu gelangen, ruft man in einem Browser die "
+"Seite https://10.16.1.1:242 auf. Eventuelle Warnmeldungen wegen eines selbst"
+" erstellten Zertifikates kann man ignorieren."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:14
+msgid "Klassenarbeit starten"
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:16
+msgid ""
+"Im Menü unter `aktueller Raum` beginnt man den Unterricht mit Klick auf "
+"`Unterricht beginnen`."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:20
+msgid ""
+"Unter `aktueller Raum` findet man den Menüpunkt `Klassenarbeit`, den man mit"
+" Klick auswählt."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:24
+msgid ""
+"Bevor der Klassenarbeitsmodus gestartet wird, setzt man ein "
+"Workstationpasswort, welches man den Teilnehmern an der Klassenarbeit "
+"mitteilt (hier: ``frei_wählbar``)."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:28
+msgid ""
+"und startet mit Klick auf `Klassenarbeit starten` den Klassenarbeitsmodus."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:31
+msgid "Dateien bereitstellen und Schüler melden sich an"
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:33
+msgid "In der Schulkonsole bekommt man nun folgende Informationen:"
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:35
+msgid "an welchem Rechner welcher Benutzer angemeldet ist"
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:36
+msgid ""
+"welche Dateien zum Bereitstellen an die Schüler bereits hochgeladen wurden "
+"(hier: die Datei ``Klassenarbeit.txt``)."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:38
+msgid ""
+"Schüler melden sich jetzt an den Clients mit jeweiligen PC-Namen als "
+"Benutzernamen (hier z.B.: ``r306-c01``) und dem Workstationpasswort an "
+"(hier: ``frei_wählbar``). Solange nicht alle an der Klassenarbeit "
+"beteiligten Benutzer unter `Login` zu sehen sind, klickt man immer wieder "
+"auf `Aktualisieren`."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:44
+msgid ""
+"Unter Login dürfen nur Rechnernamen auftauchen, da man sich im "
+"Klassenarbeitsmodus mit den Rechnernamen anmeldet."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:50
+msgid ""
+"Wollen Sie Aufgaben der Klassenarbeit oder eine Vorlage zur weiteren "
+"Bearbeitung zur Verfügung stellen, so kopieren Sie die Dateien im "
+"Dateisystem nach ``H:\\bereitstellen\\bereitstellen-klassenarbeit`` "
+"(Windows) bzw. ``Home_auf_Server/_bereitstellen/bereitstellen-"
+"klassenarbeit`` (Linux) oder klicken Sie in der Schulkonsole auf den Button "
+"`Durchsuchen`. Wählen Sie in Ihrem Dateisystem dann die gewünschten Dateien "
+"aus und klicken Sie den Button `Daten absenden`, um die Datei hochzuladen. "
+"Um mehrere Dateien bereitzustellen, wiederholen Sie diesen Vorgang."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:61
+msgid ""
+"Die bereitzustellenden Dateien werden in der Dateiliste in der Schulkonsole "
+"angezeigt (hier: ``Klassenarbeit.txt``). Um diese Dateien nun allen "
+"angemeldeten Schülern für die Klassenarbeit bereitzustellen, klicken Sie den"
+" Button `bereitstellen`."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:66
+msgid ""
+"Ist an jedem Platz ein Teilnehmer der Klassenarbeit angemeldet, dann klickt "
+"man auf `bereitstellen` und stellt damit den Schülern die Daten bereit."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:71
+msgid "Passwort neu setzen"
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:73
+msgid ""
+"Man hat jetzt die Möglichkeit,eine ein neues Passwort (hier: "
+"``neues_PW_setzen``) zu setzen. Dies verhindert, dass Schüler die "
+"Computerkonten missbrauchen."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:79
+msgid ""
+"Das neue Passwort darf erst gesetzt werden, wenn sich alle Teilnehmer an den"
+" Rechnern angemeldet haben."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:82
+msgid "Während der Klassenarbeit"
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:84
+msgid "Die Schulkonsole sieht nach dem Passwort setzen so aus:"
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:88
+msgid ""
+"Unter der Spalte `Hostname` werden alle PCs, die aktiv angemeldet sind, "
+"angezeigt. Zudem sehen Sie unter `Dateien`, ob und welche Dateien jeweils im"
+" Einsammeln-Ordner abgelegt worden sind."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:92
+msgid "Der Lehrer hat dann folgende Möglichkeiten:"
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:94
+msgid "Kopien einsammeln (eine sparsame Nutzung ist sinnvoll)"
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:95
+msgid "Einsammeln der Schülerdateien und Beenden des Klassenarbeitsmodus'"
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:96
+msgid ""
+"Es ist aber auch immer wieder möglich auf, \"Passwort ändern\" zu klicken, "
+"um zwischendurch ein neues Passwort zu setzen. Das kann notwendig werden, "
+"wenn z.B. ein Rechner während der Klassenarbeit abstürzt und sich ein "
+"Schüler erneut anmelden muss."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:98
+msgid ""
+"Die Schüler holen sich den Arbeitsauftrag für die Klassenarbeit im Ordner "
+"``V:\\Räume\\r306\\rau`` (Windows) bzw. im Ordner "
+"``Vorlagen_auf_Server/r306/rau`` (Linux) ab."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:102
+msgid ""
+"Die Schüler müssen alle ihre Ergebnisse im Ordner ``H:\\__einsammeln`` "
+"(Windows) bzw. unter ``Home_auf_Server/__einsammeln`` (Linux) speichern."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:106
+msgid ""
+"Es ist sinnvoll, den Schülern zu raten, die Vorlagen sofort dort abzulegen "
+"und dort zu bearbeiten. Es ist auch sinnvoll die Datei mit dem Schülernamen "
+"zu versehen."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:112
+msgid ""
+"Sollten Schüler vor Beendigung des Klassenarbeitsmodus die Klassenarbeit "
+"abgeben wollen, so müssen Sie sicherstellen, dass diese ihre Arbeit unter "
+"``__einsammeln`` abgespeichert haben. Ist dies der Fall, so können diese "
+"Schüler den PC herunterfahren. Zur Überprüfung können Sie die Ansicht mit "
+"dem Button `Aktualisieren` immer wieder auf den aktuellen Stand bringen."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:115
+msgid "Klassenarbeit beenden und Daten einsammeln"
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:117
+msgid ""
+"Ist die Klassenarbeit beendet, dann klickt der Lehrer auf `Einsammeln und "
+"beenden`"
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:121
+msgid "und wird im folgenden Fenster aufgefordert, das Beenden zu bestätigen."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:125
+msgid ""
+"Ehe man den Klassenarbeitsmodus beendet, fordert man die Schüler auf, ihre "
+"Arbeiten im Ordner `Einsammeln` letztmalig zu speichern. Durch Klick auf "
+"`Aktualisieren` werden in der Tabelle unter `Dateien` die gespeicherten "
+"Dateien sichtbar."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:130
+msgid ""
+"Der Klassenarbeitsmodus ist damit beendet und der Raum kann wieder als "
+"Computerraum benutzt werden."
+msgstr ""
+
+#: ../../source/classroom/conduct-test/index.rst:132
+msgid ""
+"Die eingesammelten Dateien findet der Lehrer nach dem Beenden des "
+"Klassenarbeitsmodus im Unterordner von ``_eingesammelt/eingesammelt-"
+"klassenarbeit``. Beim Einsammeln werden die Ordner mit einem Datums-"
+"Zeitstempel versehen. Hier:``EXAM_rau_2017-12-23_14-15-38_r306``."
+msgstr ""

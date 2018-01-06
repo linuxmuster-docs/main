@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:5
+msgid "Lehrer-Passwörter zurücksetzen und ausdrucken"
+msgstr ""
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:7
+msgid ""
+"Melden Sie sich wie im Handbuch :ref:`schulekonsole-admin-label` beschrieben"
+" an der Schulkonsole als ``administrator`` an."
+msgstr ""
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:12
+msgid ""
+"Der Administrator hat in der *Schulkonsole* im Menü unter *Benutzer* -> "
+"*Lehrerpasswörter* die gleichen Möglichkeiten für die Passwörter der Lehrer,"
+" wie die Lehrer für die Passwörter der Schüler."
+msgstr ""
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:18
+msgid ""
+"Der Administrator kann vom Lehrer geänderte Passwörter nicht einsehen. Sie "
+"werden grundsätzlich verschlüsselt gespeichert."
+msgstr ""
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:23
+msgid "Passwortliste herunterladen und ausdrucken"
+msgstr ""
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:25
+msgid ""
+"Laden Sie die komplette Passwortliste als PDF zum Ausdrucken herunter oder "
+"als CSV-Datei zur Weiterverarbeitung."
+msgstr ""
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:30
+msgid ""
+"Die PDF-Datei bietet kleine Rechtecke zum Ausschneiden und Austeilen an die "
+"Lehrer an. In der CSV-Datei werden die selben Informationen in Tabellenform "
+"angeboten."
+msgstr ""
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:35
+msgid "Passwörter zurücksetzen"
+msgstr ""
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:37
+msgid ""
+"Wählen Sie in der Liste durch Setzen eines Häkchens den oder die Lehrer aus,"
+" deren Passwort Sie zurücksetzen wollen."
+msgstr ""
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:42
+msgid ""
+"Unterhalb der Liste können Sie unter \"Schnellauswahl\" mit dem Knopf \"An\""
+" auch alle Lehrer auswählen, wenn Sie allen das Passwort zurücksetzen "
+"wollen."
+msgstr ""
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:46
+msgid "Wählen Sie nun ganz unten auf dieser Seite"
+msgstr ""
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:49
+msgid "Passwort auf Erstpasswort setzen"
+msgstr ""
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:49
+msgid "um das Passwort auf dessen Erstpasswort zurückzusetzen,"
+msgstr ""
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:53
+msgid "Passwort auf Erstpasswort setzen (Zufallswert)"
+msgstr ""
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:52
+msgid ""
+"um dem Lehrer ein neues zufälliges Erstpasswort zuzuteilen und sein Passwort"
+" darauf zu setzen,"
+msgstr ""
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:59
+msgid "Passwort auf Erstpasswort setzen (Eingabewert):"
+msgstr ""
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:56
+msgid ""
+"um dem Lehrer ein von Ihnen gewähltes Passwornt als Erstpasswort zuzuweisen."
+"  Diese Eingabe ist nicht dafür geeignet, dass der Lehrer sein dauerhaftes "
+"Passwort setzt, weil das Erstpasswort nicht verschlüsselt abgespeichert wird"
+" und somit nicht geheim ist."
+msgstr ""
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:62
+msgid "Erstpasswort anzeigen"
+msgstr ""
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:64
+msgid ""
+"Um ein einzelnes Passwort anzeigen zu lassen, drücken Sie in der Reihe des "
+"entsprechenden Lehrers auf den Knopf \"Erstpasswort anzeigen\"."
+msgstr ""
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:68
+msgid "Weiterführende Informationen"
+msgstr ""
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:70
+msgid "Weitere Informationen zum Thema finden Sie"
+msgstr ""
+
+#: ../../source/user-management/change-teacher-passwords/index.rst:72
+msgid ""
+"im Handbuch zur Schulkonsole im Abschnitt :ref:`schulkonsole-admin-user-"
+"label`"
+msgstr ""

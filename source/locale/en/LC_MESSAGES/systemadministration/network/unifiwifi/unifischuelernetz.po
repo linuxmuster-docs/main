@@ -1,0 +1,95 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/network/unifiwifi/unifischuelernetz.rst:2
+msgid "Einrichtung des Schüler-WLANs"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifischuelernetz.rst:4
+msgid ""
+"Im Schüler-WLAN sind die Geräte der Schüler. Es liegt im blauen Netz des "
+"IPFire. Der Netzwerk-Schlüssel des Schüler-WLANs basiert auf ihrem "
+"Benutzernamen und ihrem Kennwort."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifischuelernetz.rst:7
+msgid "Schritt für Schritt"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifischuelernetz.rst:9
+msgid ""
+"Installieren Sie auf dem linuxmuster.net-Server das Paket linuxmuster-"
+"freeradius. Siehe :ref:`linuxmuster-freeradius-label`"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifischuelernetz.rst:11
+msgid "Melden Sie sich am Unifi-Kontroller an `<https://unifi:8443>`_."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifischuelernetz.rst:13
+msgid ""
+"Gehen Sie zu `Einstellungen` -> `Profile` -> `NEUES RADIUS-PROFIL "
+"ERSTELLEN`."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifischuelernetz.rst:18
+msgid "Geben Sie dem neuen Radius-Profil einen Namen."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifischuelernetz.rst:20
+msgid ""
+"Tragen Sie bei `Radius-Authentifikationsserver` die IP-Adresse des "
+"linuxmuster.net-Servers und das Passwort für die APs ein."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifischuelernetz.rst:22
+msgid "Speichern Sie die Einstellungen."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifischuelernetz.rst:24
+msgid ""
+"Gehen Sie zu `Einstellungen` -> `Drahtlose-Netzwerke` -> `NEUES DRAHTLOSES "
+"NETZWERK HINZUFÜGEN`."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifischuelernetz.rst:29
+msgid "Geben Sie dem Schüler-WLAN einen Namen."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifischuelernetz.rst:31
+msgid "Sicherheit ist `WPA Enterprise`."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifischuelernetz.rst:33
+msgid "Wählen Sie das vorher definierte Radius-Profil."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifischuelernetz.rst:35
+msgid ""
+"Da das blaue Netz des IPFire als getaggtes VLAN mit der VLAN-ID 10 zu den "
+"APs kommt, setzen Sie ein Häkchen bei VLAN und geben die VLAN-ID 10 ein."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifischuelernetz.rst:37
+msgid "Speichern Sie die Enstellungen."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifischuelernetz.rst:39
+msgid "Das Schüler-WLAN wird jetzt an die APs ausgerollt."
+msgstr ""

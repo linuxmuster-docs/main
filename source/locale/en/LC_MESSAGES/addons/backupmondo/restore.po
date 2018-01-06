@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/addons/backupmondo/restore.rst:2
+msgid "Dateiwiederherstellung im Live-Betrieb"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore.rst:5
+msgid "Wiederherstellung von Dateien und Verzeichnissen im Live-Betrieb"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore.rst:7
+msgid "Dazu muss das Backupmedium unter ``/media/backup`` gemountet sein:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore.rst:13
+msgid "Starten Sie als ``root`` in einer Konsole das Programm *mondorestore*:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore.rst:19
+msgid ""
+"Es begrüßt Sie der Startbildschirm von *Mondo Rescue*. Drücken Sie "
+"**ENTER**:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore.rst:23
+msgid "Wählen Sie als Backupmedium **Hard Disk** aus:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore.rst:27
+msgid ""
+"Geben Sie nun den kompletten Pfad zu dem Backupset an, von dem Sie "
+"restaurieren wollen:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore.rst:31
+msgid ""
+"Im nächsten Schritt geben Sie das Präfix für die ISO-Dateien ein (in unserem"
+" Fall \"server\"):"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore.rst:35
+msgid "Anschließend liest *mondorescue* die Dateilisten ein:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore.rst:39
+msgid ""
+"Sind alle Dateilisten geladen, wird Ihnen der zugegebenermaßen etwas "
+"umständlich zu bedienende Dateilisten-Editor präsentiert. Navigieren Sie mit"
+" den **Pfeiltasten** auf ein Verzeichnis. Mit der **TAB-Taste** gelangen Sie"
+" in das Menü und wieder heraus. Innerhalb des Menüs können Sie wiederum mit "
+"der **TAB-Taste** navigieren. Wählen Sie **More**, um den Verzeichnisbaum "
+"aufzuklappen, **Less** um ihn wieder zuzuklappen. Mit **Toggle** können Sie "
+"ein Verzeichnis oder eine Datei für den Restore markieren oder die "
+"Markierung wieder aufheben. Für den Restore markierte Elemente werden mit "
+"einem * gekennzeichnet. Haben Sie die Auswahl abgeschlossen, so navigieren "
+"Sie auf **OK** und drücken **ENTER**. Mit **Cancel** wird das Programm ohne "
+"Nachfrage verlassen."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore.rst:43
+msgid ""
+"Bestätigen Sie die folgende Sicherheitsabfrage, um schließlich den Zielpfad "
+"einzugeben. Es ist sicher eine gute Idee, erst einmal in ein temporäres "
+"Verzeichnis (z. Bsp. ``/var/tmp``) zu restaurieren, um die Dateien dann nach"
+" eingehender Prüfung an den vorgesehenen Ort zu verschieben."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore.rst:47
+msgid ""
+"Die ausgewählten Dateien und Verzeichnisse werden nun unter ``/var/tmp`` "
+"wieder hergestellt. Danach beendet sich *mondorestore* und Sie können das "
+"Backupmedium wieder unmounten."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore.rst:50
+msgid "Komplettrestore des Servers"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore.rst:52
+msgid ""
+"Da dies nicht im Livebetrieb geschehen kann, muss ein Bootmedium hergestellt"
+" werden. Dazu brennen Sie die ISO-Datei ``mondorescue.iso`` aus dem "
+"Verzeichnis des jüngsten Vollbackupsets (vgl. Abschnitt "
+":doc:`konfiguration`) mit einem handelsüblichen Brennprogramm auf einen CD-"
+"Rohling."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore.rst:54
+msgid ""
+"Schließen Sie gegebenenfalls die Backupfestplatte an den Server an oder "
+"stellen Sie sicher, dass Netzwerkverbindung zum NFS-Backup-Server besteht. "
+"Booten Sie dann den Server von der mondorescue-Boot-CD. Nach kurzer Zeit "
+"erscheint der Bootprompt von Mondo Rescue:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore.rst:58
+msgid ""
+"Hier haben Sie nun unter anderem folgende Möglichkeiten für die "
+"Restaurationsmethode:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore.rst:61
+msgid "nuke"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore.rst:61
+msgid ""
+"Im Abschnitt :doc:`restore-full` wird die automatische Restauration "
+"erläutert."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore.rst:63
+msgid "interactive"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore.rst:64
+msgid ""
+"Der interaktive Modus im Abschnitt :doc:`restore-interactive` beschreibt die"
+" Benutzer gesteuerte Wiederherstellung."
+msgstr ""

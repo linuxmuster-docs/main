@@ -1,0 +1,44 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/getting-started/linuxclients/index.rst:4
+msgid "Linux Clients"
+msgstr ""
+
+#: ../../source/getting-started/linuxclients/index.rst:6
+msgid ""
+"In dieser Anleitung wird beschrieben, wie man Linux auf einer "
+"Musterarbeitsstation installiert. Ein fertig vorkonfiguriertes Abbild liegt "
+"zum Download bei linuxmuster.net bereit und kann sofort auf alle "
+"Arbeitsstationen verteilt werden."
+msgstr ""
+
+#: ../../source/getting-started/linuxclients/index.rst:9
+msgid ""
+"Arbeitsstationen (\"Clients\") werden in der linuxmuster.net über die "
+"Software LINBO (\"GNU/Linux Network Boot\") installiert."
+msgstr ""
+
+#: ../../source/getting-started/linuxclients/index.rst:11
+msgid ""
+"Alle Arbeitsschritte, die Änderungen am Server benötigen, werden an einer "
+"Serverkonsole erledigt.  Alternativ können diese Arbeitsschritte auch auf "
+"dem Webinterface ausgeführt werden, wie es die Anleitung :ref:`install-"
+"windows10-clients-label` beschreibt."
+msgstr ""

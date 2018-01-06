@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/addons/backupmondo/installation.rst:2
+msgid "Installation"
+msgstr ""
+
+#: ../../source/addons/backupmondo/installation.rst:4
+msgid ""
+"Das **linuxmuster-backup**-Programm befindet sich im Hauptrepo, ist also in "
+"der normalen Paketauswahl verfügbar. Für das eigentlich Backup wird "
+"**mondo** verwendet. Dieses befindet sich nicht im Hauptrepo und auch nicht "
+"in den üblichen Paketquellen für Ubuntu. Daher muss die Paketquelle für "
+"mondo eingerichtet werden, was im folgenden schrittweise beschrieben wird."
+msgstr ""
+
+#: ../../source/addons/backupmondo/installation.rst:9
+msgid ""
+"Erstellen Sie mit dem Editor ihrer Wahl als Benutzer ''root'' auf dem Server"
+" die Datei ``/etc/apt/sources.list.d/mondorescue.list`` mit folgendem "
+"Inhalt:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/installation.rst:11
+msgid ""
+"Momentan (April/2015) ist die Mondorescue-Version 3.2.0 aktuell. Sie enthält"
+" einen schwerwiegenden Fehler, der ein korrektes Backup großer Dateien "
+"verhindert. Daher muss abweichend die aktuelle Testversion 3.2.0.xxx "
+"verwendet werden, bis die Version 3.2.1 erschienen ist."
+msgstr ""
+
+#: ../../source/addons/backupmondo/installation.rst:15
+msgid "Die Paketquelle lautet:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/installation.rst:26
+msgid "Zusätzlich muss noch ein Link gesetzt werden:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/installation.rst:34
+msgid ""
+"Damit das System der Quelle vertraut, müssen noch der Repository-Schlüssel "
+"installiert werden:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/installation.rst:43
+msgid ""
+"Nun aktualisieren wir die Paketlisten, damit dem System bekannt wird, welche"
+" zusätzlichen Pakete zur Verfügung stehen:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/installation.rst:50
+msgid ""
+"Schließlich installieren wir das Paket, welches das Backup-Programm zur "
+"Verfügung stellt und mondo mit installiert:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/installation.rst:56
+msgid "Abhängigkeiten werden dadurch automatisch mit installiert."
+msgstr ""

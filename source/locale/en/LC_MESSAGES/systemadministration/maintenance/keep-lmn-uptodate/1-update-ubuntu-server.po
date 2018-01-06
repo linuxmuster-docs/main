@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:2
+msgid "Update des Ubuntu Servers von linuxmuster.net"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:4
+msgid ""
+"Um die linuxmuster.net 6.x zugrunde liegende Ubuntu Version (Ubuntu Server "
+"12.04.5 LTS 64bit) zu aktualisieren, beachten Sie bitte nachstehendes "
+"Vorgehen bzw. Hinweise."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:8
+msgid "Führen Sie Updates bitte regelmäßig manuell durch."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:11
+msgid "Keine automatischen Updates"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:13
+msgid ""
+"Es wird ausdrücklich davon abgeraten in Ubuntu die Option ``Automatische "
+"Updates`` zu aktivieren, so dass Paketaktualisierungen automatisch von dem "
+"Ubuntu-Server heruntergeladen und installiert werden."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:18
+msgid ""
+"Ob Sie automatische Updates aktiviert haben, überprüfen Sie, in dem Sie auf "
+"dem Server in der Datei ``/etc/apt/apt.conf.d/10periodic`` überprüfen, ob "
+"die Option ``APT::Periodic::Unattended-Upgrade \"1\";`` existiert. In diesem"
+" Fall, ändern Sie die ``\"1\"`` in eine ``\"0\"``."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:23
+msgid ""
+"Melden Sie sich stattdessen besser bei der entsprechenden `Mailingliste "
+"<https://lists.ubuntu.com/mailman/listinfo/ubuntu-security-announce>`_ an "
+"oder abonnieren Sie entsprechenden `RSS-Feed "
+"<http://www.ubuntu.com/usn/rss.xml>`_. Alle Hinweise zu Sicherheitsupdates "
+"von Ubuntu erhalten Sie unter http://www.ubuntu.com/usn/"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:32
+msgid "Aktualisierungen einspielen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:34
+msgid ""
+"Um die Server-Installation auf den aktuellen Paketstand zu bringen, gehen "
+"Sie folgendermaßen vor:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:36
+msgid "Loggen Sie sich als User root auf einer Serverkonsole ein."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:38
+msgid "Aktualisieren Sie die Paketlisten:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:44
+msgid ""
+"Installieren Sie nun Aktualisierungen und weitere Software-Pakete über das "
+"Internet:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:50
+msgid ""
+"Es wird aufgelistet, welche Pakete aktualisiert werden. Bestätigen Sie die "
+"Aktualisierung mit der Eingabe von **Y**"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:53
+msgid "Dieses Vorgehen stellt sich in der Konsole wie folgt dar:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:60
+msgid ""
+"Während des Aktualisierungsverlaufs fragen manchmal Pakete nach, ob eine "
+"neue Konfigurationsdatei installiert werden soll. Geben Sie ``N`` oder ENTER"
+" für \"Beibehalten\" an."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:78
+msgid "Hinweise"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:81
+msgid "Ubuntu bietet ein Upgrade an"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:83
+msgid ""
+"Haben Sie sich an der Konsole des linuxmuster.net Servers angemeldet, so "
+"erhalten Sie Hinweise auf neue verfügbare Upgrades, also neue Versionen des "
+"Ubuntu-Servers."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:86
+msgid "Diese stellen sich bsp. wie folgt dar:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:94
+msgid "**Niemals ein Release-Upgrade durchführen**"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:96
+msgid ""
+"Folgen Sie nicht der Empfehlung, denn linuxmuster.net ist auf die Version "
+"12.04 LTS 64 bit angepasst, deren Support bis 2017 gewährleistet ist. Neue "
+"Versionen (ab linuxmuster.net 7) werden über ein solches Release-Upgrade "
+"bereits verfügen (Version 16.04 LTS 64 bit)"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:101
+msgid "Meldung: Hardware Enablement Stack"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:102
+msgid ""
+"Ebenso wie beim „upgrade“ wird beim Anmelden über die Kommandozeile manchmal"
+" ein nicht mehr unterstützter Kernel gemeldet:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:126
+msgid ""
+"Führen Sie kein upgrade auf 14.04 LTS durch. Support wird von Ubuntu für "
+"12.04, 12.04.1 und 12.04.5 (Stand: August 2014) geleistet, das bedeutet ein "
+"mit 12.04.2 installiertes System muss einen neuen Kernel bekommen. "
+"(https://wiki.ubuntu.com/1204_HWE_EOL)"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:132
+msgid "Aktualisierung des Linux-Kernels"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:134
+msgid ""
+"Um Ubuntu 12.04 LTS Server (Codename Trusty) auf einen neueren Kernel zu "
+"aktualisieren, kann das Paket **linux-hwe-generic** genutzt werden:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:152
+msgid "Nach Ausführen des Befehls ist der Server neu zu starten"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:158
+msgid ""
+"Sollte aus irgendeinem Grund der neue Kernel nicht booten oder "
+"funktionieren, kann der „alte“ Kernel über das Grub-Bootmenü ausgewählt "
+"werden, solange dieser nicht deinstalliert wurde."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:160
+msgid ""
+"Sollte nach dem Neustart des Servers mit dem neu installierten Kernel "
+"dennoch die HWE-Meldung erscheinen, sollte nachstehender Befehl"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:166
+msgid ""
+"ausgeführt werden. Die dort genannten Pakete müssen dann deinstalliert "
+"werden. Danach o.g. Befehl noch einmal abgesetzen, um sicherzugehen, dass "
+"keine weiteren Pakete den HWE-Status blockieren."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:170
+msgid ""
+"Die Datei ``/var/lib/update-notifier/hwe-eol`` kann auch notfalls gelöscht "
+"werden."
+msgstr ""

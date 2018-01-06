@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/clients/linbo/index.rst:7
+msgid "LINBO nutzen"
+msgstr ""
+
+#: ../../source/clients/linbo/index.rst:9
+msgid ""
+"LINBO steht für GNU/\\ **Li**\\ nux **N**\\ etwork **Bo**\\ ot. Es wurde im "
+"Auftrag des Landesmedienzentrums Baden-Württemberg von der Firma KNOPPER.NET"
+" in Zusammenarbeit mit den damaligen paedML-Linux- und heutigen linuxmuster"
+".net-Entwicklern realisiert. Der Sourcecode ist unter GNU General Public "
+"License Version 2 veröffentlicht."
+msgstr ""
+
+#: ../../source/clients/linbo/index.rst:15
+msgid "LINBO bietet"
+msgstr ""
+
+#: ../../source/clients/linbo/index.rst:17
+msgid "vollautomatisches Ausrollen von Client-Installationen im Netzwerk"
+msgstr ""
+
+#: ../../source/clients/linbo/index.rst:18
+msgid ""
+"Verwaltung mehrerer Betriebssystem-Installationen auf einem Client "
+"(Multiboot)"
+msgstr ""
+
+#: ../../source/clients/linbo/index.rst:19
+msgid ""
+"minutenschnelle automatische Reparatur des Betriebssystems (SheilA-Prinzip)"
+msgstr ""
+
+#: ../../source/clients/linbo/index.rst:20
+msgid "konfigurierbarer Autostart"
+msgstr ""
+
+#: ../../source/clients/linbo/index.rst:21
+msgid ""
+"grafische Client-Oberfläche zur einfachen Bedienung durch Anwender und "
+"Netzwerkbetreuer"
+msgstr ""
+
+#: ../../source/clients/linbo/index.rst:22
+msgid "vollständige Integration in die linuxmuster.net"
+msgstr ""

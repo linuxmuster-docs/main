@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/appendix/contribute/index.rst:2
+msgid "Linuxmuster.net helfen"
+msgstr ""
+
+#: ../../source/appendix/contribute/index.rst:4
+msgid ""
+"Es gibt verschiedene Möglichkeiten, wie Sie helfen können, linuxmuster.net "
+"zu verbessern."
+msgstr ""
+
+#: ../../source/appendix/contribute/index.rst:6
+msgid ""
+"Über linuxmuster.net berichten (z.B. in Blogs, Sozialen Netzwerken, etc.)"
+msgstr ""
+
+#: ../../source/appendix/contribute/index.rst:7
+msgid "Fragen stellen und Fehler melden: https://ask.linuxmuster.net"
+msgstr ""
+
+#: ../../source/appendix/contribute/index.rst:8
+msgid "selbst Fragen beantworten: https://ask.linuxmuster.net"
+msgstr ""
+
+#: ../../source/appendix/contribute/index.rst:9
+msgid "Eigene Tipps und Tricks dokumentieren: https://linuxmuster.net/wiki"
+msgstr ""
+
+#: ../../source/appendix/contribute/index.rst:10
+msgid "Dem Verein beitreten"
+msgstr ""

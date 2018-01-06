@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/3-hints-ipfire.rst:2
+msgid "Weitere Hinweise"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/3-hints-ipfire.rst:5
+msgid "Konfiguration des IPFire vom Server aus neu setzen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/3-hints-ipfire.rst:7
+msgid ""
+"Mit folgendem Befehl am Server konfiguriert man den IPFire neu. Es sollte "
+"zuvor aber ein Backup der IPFire-Einstellungen durchgeführt werden:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/3-hints-ipfire.rst:16
+msgid ""
+"Nur im Ausnahmefall anwenden. Es gehen alle eigenen "
+"Konfigurationseinstellungen des IPFire verloren."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/3-hints-ipfire.rst:20
+msgid "Aktualisierung des IPFire via Konsole"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/3-hints-ipfire.rst:22
+msgid ""
+"Haben Sie eine SSH-Verbindung zum IPFire aufgebaut, können die diesen auch "
+"auf der Konsole des IPFire mithilfe der Paketverwaltung ``Pakfire`` des "
+"IPFire durchführen."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/3-hints-ipfire.rst:24
+msgid "Hierzu geben Sie nachstehende Konsolenbefehle an:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/3-hints-ipfire.rst:31
+msgid "Danach ist der IPFire neu zu starten."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/3-hints-ipfire.rst:35
+msgid ""
+"Prüfen Sie vorher, ob die zu installierende Version des IPFire vollständig "
+"kompatibel zu linuxmuster.net ist. Im Forum oder über die Mailing-Liste "
+"erhalten Sie entsprechende Hinweise."
+msgstr ""

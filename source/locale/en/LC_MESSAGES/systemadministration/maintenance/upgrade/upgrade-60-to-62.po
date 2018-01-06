@@ -1,0 +1,352 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:2
+msgid "Upgrade von 6.0"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:4
+msgid ""
+"Ein schrittweises Upgrade 6.0 -> 6.1 -> 6.2 ist nicht nötig.  Neben dem hier"
+" beschriebenen direkten Upgradepfad 6.0 (Codename ObenBleiben) auf  6.2 "
+"(Codename Babo62), ist auch eine Aktualisierung mithilfe der Migration "
+"möglich."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:9
+msgid "Lesen der Release-Informationen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:11
+msgid ""
+"Lesen Sie die Informationen zu :ref:`release-information-label`, speziell, "
+"welche :ref:`Fehler bekannt sind<knownbugs-label>`."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:15
+msgid "Dokumentation der eigenen Firewallregeln"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:17
+msgid ""
+"Im Zuge der Aktualisierung wird die interne und externe Firewall auf IP-"
+"basierte Regeln umgestellt.  Daher ist es notwendig alle selbst definierten "
+"und in IPFire eingetragenen Regeln vorab zu dokumentieren. Diese müssen nach"
+" dem Upgrade neu in IPFire eingetragen werden."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:24
+msgid "Screenshots erstellen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:26
+msgid ""
+"Die Regeln / Einstellungen aus den folgenden IPFire-Bereichen müssen "
+"dokumentiert werden:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:28
+msgid "Eingehende Firewallregeln"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:30
+msgid "Ausgehende Firewallregeln"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:32
+msgid "Eingehender Firewallzugang"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:34
+msgid "Ausgehender Firewallzugang"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:36
+msgid "Standardverhalten der Firewall"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:38
+msgid ""
+"Zu diesen Bereichen sind sinnvollerweise Screenshots zu erstellen, um so die"
+" Regeln erfassen.  Die eigenen Regeln ergeben sich im Vergleich mit dem "
+"`Auslieferungszustand "
+"<https://www.linuxmuster.net/wiki/dokumentation:techsheets:ipfire.defaultconfig>`_"
+" des IPFire.  Nach dem Upgrade der Firewall müssen die eigenen Regeln wieder"
+" eingepflegt werden."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:46
+msgid "Sperrliste löschen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:48
+msgid ""
+"Prüfen Sie, ob im IPFire auf der **Webproxy-Seite** noch MAC-Adressen in der"
+" Sperrliste eingetragen sind.  Sind hier MAC-Adressen noch eingetragen, "
+"müssen Sie diese löschen und diese Änderungen mit der Schaltfläche "
+"**Speichern und Neustart** übernehmen."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:54
+msgid "Paketquellen anpassen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:56
+msgid ""
+"Zum Upgrade auf linuxmuster.net 6.2 (Codename Babo62) muss das entsprechende"
+" Repositorium eingebunden werden."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:58
+msgid ""
+"In der Datei ``/etc/apt/sources.list.d/linuxmuster-net.list`` sind folgende "
+"Paketquellen anzugeben:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:68
+msgid ""
+"Bestehende Zeilen, die auf das precise-Repositorium verweisen, ebenso alte "
+"Quellendateien, die auf precise-Repositorien verweisen, sollten "
+"auskommentiert oder gelöscht bzw. verschoben werden."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:75
+msgid "Paketquellen überprüfen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:77
+msgid ""
+"Stellen Sie sicher, dass keine weitere Datei im Verzeichnis "
+"``/etc/apt/sources.list.d/`` oder die Datei ``/etc/apt/sources.list`` "
+"Repositorien von ``pkg.linuxmuster.net`` enthält."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:81
+msgid "Dist-upgrade durchführen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:83
+msgid ""
+"Nachdem die Paketquellen in der genannten Datei für apt eingetragen wurden, "
+"können Sie nun die Paketquellen aktualisieren und die Pakete selbst "
+"aktualisieren."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:85
+msgid ""
+"Dazu sind auf der Eingabekonsole als Benutzer root folgende Befehle "
+"einzugeben:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:100
+msgid ""
+"Sollte die Paketaktualisierung verletzte Abhängigkeiten für tftpd-hpa "
+"melden, so installieren Sie zunächst gezielt atftpd oder installieren Sie "
+"das deinstallierte linuxmuster-linbo nach dem upgrade neu."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:102
+msgid "Aktuelle Konfiguration beibehalten"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:104
+msgid ""
+"Wählen Sie immer aus, dass die aktuelle Konfiguration beibehalten werden "
+"soll. Dies entspricht auch der Voreinstellung, die Sie mit ENTER bestätigen "
+"können."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:108
+msgid "Externe Firewall umstellen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:110
+msgid ""
+"Nachdem das Distributions-Upgrade durchgelaufen ist, setzen Sie die externe "
+"Firewall mit dem Befehl"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:116
+msgid ""
+"einmal in den Auslieferungszustand zurück.  Starten Sie die Firewall neu und"
+" warten Sie, bis diese vollständig neu gestartet ist."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:119
+msgid ""
+"Ab jetzt können Sie die vorher dokumentierten eigenen Regeln und "
+"Portweiterleitungen wieder einpflegen und aktivieren."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:123
+msgid "Import der Workstations durchführen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:125
+msgid ""
+"Beim durchgeführten Upgrade wurde auch eine neue Version des Pakets "
+"linuxmuster-linbo eingespielt. Diese neue Version von Linbo erfordert es, "
+"dass zur Aktivierung zu Beginn ein einmaliger Import der Workstations "
+"ausgeführt wird. Auf diese Weise werden die notwendigen "
+"Konfigurationsdateien erstellt.  Führen Sie hierzu folgenden Befehl aus:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:136
+msgid ""
+"Das Skript prüft die angegebenen Eintragungen in der Datei "
+"``/etc/linuxmuster/workstations``. Sind diese korrekt wird der Import "
+"ausgeführt. Wurde das Skript erfolgreich abgearbeitet, wird dies mit einem "
+"entsprechenden Hinweis quittiert."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:139
+msgid "Clients mit neuem Linbo booten"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:141
+msgid ""
+"Ab Linbo 2.3 ist es zwingend notwendig, im BIOS auch die Festplatte als "
+"Bootmedium einzustellen."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:143
+msgid ""
+"Um sicherzustellen, dass das neue LINBO-System auch lokal auf den Clients "
+"installiert wird, erzwingt man eine Aktualisierung des Caches und einen "
+"Reboot."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:147
+msgid ""
+"Folgender Befehl auf der Serverkonsole sorgt dafür, dass beim nächsten "
+"Bootvorgang per PXE der Cache initialisiert wird (und rebootet wird):"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:154
+msgid ""
+"Sollten sich in Ihrem Netzwerk neben den Clients, die via PXE-Netwerk-Boot "
+"starten, auch solche befinden, die Linbo nur lokal starten, schalten Sie die"
+" betreffenden Rechner ein und lassen Sie diese mit LAN-Verbindung in die "
+"Linbo-Oberfläche booten.  Über die Konfigurationseinstellung ``AutoInitCache"
+" = yes`` in der zugehörigen ``start.conf`` erzwingt man die Cache-"
+"Initialisierung auch bei diesen Clients."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:162
+msgid ""
+"Nach dem Upgrade sollten alle Clients wie gewohnt weiter funktionieren. Die "
+"Bildschirmausgabe beim Bootvorgang ist leicht verändert und vor dem "
+"Betriebssystemstart aus der Linbo-Oberfläche heraus wird nun immer ein "
+"Neustart initiiert (Der sogenannte *reboot-Workaround* wird nun immer "
+"verwendet.)"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:169
+msgid "Fehlerbehebung mit einem USB-Stick"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:171
+msgid ""
+"Wenn ein Arbeitsplatz mit der Fehlermeldung \"Kernel panic\" hängt oder in "
+"Schleifen immer wieder rebootet, kann ein Neuanfang über einen USB-Stick "
+"oder CD/DVD initiiert werden."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:175
+msgid ""
+"Laden Sie dazu die die Datei ``linbo.iso`` von ihrem Server herunter (z.B. "
+"über `<http://10.16.1.1/linbo.iso>`_) und brennen Sie diese auf CD/DVD oder "
+"kopieren diese auf einen USB-Stick, z.B. mit Hilfe des Befehls"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:183
+msgid "wobei ``/dev/sdb`` der Schnittstellenname ihres USB-Sticks sein muss."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:186
+msgid "Tausch- und Vorlagenordner umstellen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:188
+msgid ""
+"Die Tausch- und Vorlagenordner der Klassen/Projekte und des aktuellen Raums "
+"müssen ab linuxmuster.net 6.1 von den bisherigen so genannten `bind-mounts` "
+"auf verlinkte `shares` umgestellt werden."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:193
+msgid "Homeverzeichnisse bereinigen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:195
+msgid "Dazu ist es zunächst erforderlich die Verzeichnisse"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:202
+msgid ""
+"in jedem Benutzerverzeichnis zu entfernen. Dies kann man mit folgenden "
+"Befehlen für alle Benutzer oder gezielt für einzelne Benutzer erledigt "
+"werden:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:212
+msgid ""
+"Es ist notwendig, dass die Benutzer nicht am System angemeldet sind, sonst "
+"können die in Benutzung befindlichen Links nicht entfernt werden."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:216
+msgid "Bind-mounts abschalten"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:218
+msgid ""
+"Die Verwendung der bind-mounts auf dem Server sind händisch abzuschalten. "
+"Dies wurde so vorgesehen, damit ein Parallelbetrieb als Übergang genutzt "
+"werden kann. Dazu in den Dateien"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:225
+msgid ""
+"die Zeilen mit \"sophomorix-bind\" durch Voranstellen eines ``#`` "
+"auszukommentieren."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:233
+msgid ""
+"Damit werden die bind-mounts bei der Benutzeran- bzw. abmeldung nicht mehr "
+"angelegt bzw. entfernt."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:235
+msgid ""
+"Da es möglich ist, dass zum Umstellungszeitpunkt Bind-mounts gesetzt waren, "
+"sollten diese entfernt werden mit:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:242
+msgid "Dateirechte umstellen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:244
+msgid ""
+"Mit dem Upgrade von 6.0 auf 6.1 müssen auch noch die Dateirechte/Eigentümer "
+"von schon erstellten Verzeichnissen in den Tauschordnern angepasst werden.  "
+"Dies geschieht durch Aufruf von:"
+msgstr ""

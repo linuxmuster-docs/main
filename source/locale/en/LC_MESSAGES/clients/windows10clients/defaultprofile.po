@@ -1,0 +1,81 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2018\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/clients/windows10clients/defaultprofile.rst:3
+msgid "Default Profil kopieren"
+msgstr "Copy default profile"
+
+#: ../../source/clients/windows10clients/defaultprofile.rst:5
+msgid ""
+"Linuxmuster.net sieht vor dass **Programminstallationen von \"pgmadmin\"** "
+"durchgeführt werden. Damit alle User die bei der Installation vorgenommenen "
+"Änderungen bekommen muss das Profil des \"pgmadmin\" nach \"Default\" "
+"kopiert werden. Um das Profil zu kopieren ist wie folgt vorzugehen:"
+msgstr ""
+"In Linuxmuster.net the user **pgadmin** will **install software**, that is "
+"planned to be used by other users. In order for all users to get the changes"
+" made during the installation, the profile of the \"pgmadmin\" must be "
+"copied to \"Default\". To copy the profile, proceed as follows:"
+
+#: ../../source/clients/windows10clients/defaultprofile.rst:7
+msgid ""
+"Starten Sie den Rechner nach der Installation von Programmen neu ohne "
+"Synchronisation"
+msgstr ""
+"Restart the computer after installing programs without synchronization"
+
+#: ../../source/clients/windows10clients/defaultprofile.rst:10
+msgid ""
+"Der Neustart ist notwenig, da das Profil des \"pgmadmin\" ansonsten nicht "
+"kopiert werden kann"
+msgstr ""
+"The restart is necessary because the profile of the \"pgmadmin\" can not be "
+"copied otherwise"
+
+#: ../../source/clients/windows10clients/defaultprofile.rst:12
+msgid "Melden Sie sich als lokaler User mit Admin-Rechten an dem Rechner an"
+msgstr "Log in as a local user with admin rights"
+
+#: ../../source/clients/windows10clients/defaultprofile.rst:13
+msgid ""
+"Kopieren Sie die Datei "
+"https://www.forensit.com/Downloads/Support/DefProf.zip und entpacken sie "
+"nach ``C:\\Windows\\system32\\Defprof.exe``. Befindet sich Defprof.exe schon"
+" in ``C:\\Windows\\system32\\`` geht es mit Schritt 4. weiter."
+msgstr ""
+"Copy the file https://www.forensit.com/Downloads/Support/DefProf.zip and "
+"unzip it to ``C:\\Windows\\system32\\Defprof.exe``. If Defprof.exe is "
+"already in ``C:\\Windows\\system32\\``, go to step 4."
+
+#: ../../source/clients/windows10clients/defaultprofile.rst:14
+msgid "Führen Sie den Befehl ``C:>defprof pgmadmin`` aus."
+msgstr "Run the command ``C:>defprof pgmadmin``"
+
+#: ../../source/clients/windows10clients/defaultprofile.rst:15
+msgid "Melden Sie sich als lokaler User ab und als pgmadmin an"
+msgstr "Log off as local user and login again as pgmadmin"
+
+#: ../../source/clients/windows10clients/defaultprofile.rst:16
+msgid "Fahren Sie den Rechner herunter"
+msgstr "Shut down the computer"
+
+#: ../../source/clients/windows10clients/defaultprofile.rst:17
+msgid "Starten Sie den Rechner neu und erstellen ein neues Image mit linbo"
+msgstr "Restart the computer and create a new image with linbo"

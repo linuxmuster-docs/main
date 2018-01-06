@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/addons/backupmondo/restore-diff.rst:2
+msgid "Restore von differentiellen und inkrementellen Backups"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-diff.rst:4
+msgid ""
+"Wenn Sie nach einem Vollbackup noch weitere differentielle und/oder "
+"inkrementelle Backups erstellt haben, müssen diese anschließend an den "
+"Restore des Vollbackups in chronologischer Reihenfolge zurückgespielt "
+"werden. Das muss dann im [[backup.disaster.recovery.interactiv|interaktiven "
+"Modus]] erfolgen. FIXME"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-diff.rst:7
+msgid ""
+"Haben Sie differentielle Backups erstellt, wird als nächstes das aktuellste,"
+" differentielle Backup restauriert. Sind dann noch inkrementelle Backups "
+"jüngeren Datums vorhanden, müssen diese nacheinander auch noch "
+"zurückgespielt werden."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-diff.rst:9
+msgid "Die Vorgehensweise anhand des oben genannten Beispiels"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-diff.rst:13
+msgid "wäre dann:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-diff.rst:15
+msgid ""
+"Automatisches Restore des Vollbackups 070201_010002_full, wie im Abschnitt "
+":doc:`restore-full` beschrieben;"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-diff.rst:16
+msgid "Restore des differentiellen Backups 070225_020002_diff;"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-diff.rst:17
+msgid ""
+"Restore der beiden nachfolgenden inkrementellen Backups 070227_030002_inc "
+"und 070228_030002_inc."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-diff.rst:19
+msgid ""
+"Nach erfolgtem Restore des Vollbackups booten Sie das System also nicht neu,"
+" sondern starten auf der Mondo-Rescue-Konsole das Programm *mondorestore*:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-diff.rst:25
+msgid ""
+"Fahren Sie fort, wie im :doc:`restore-interactive` beschrieben. Wiederholen "
+"Sie den Restorevorgang für jedes differentielle und inkrementelle Backup, "
+"das Sie restaurieren müssen."
+msgstr ""

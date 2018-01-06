@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:2
+msgid "Die Installation"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:5
+msgid "Hardwareanforderungen"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:7
+msgid "3 GB RAM"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:8
+msgid "Eine Netzwerkkarte im Schulnetz (VLAN 16)"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:9
+msgid ""
+"10 GB Festplatte (bei mir im Schulbetrieb sind 3,3 GB vom 40 GB belegt)."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:13
+msgid "Die Grundinstallation"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:15
+msgid ""
+"Bevor die Installation begonnen werden kann, muss ein Ubuntu-Server 16.04 "
+"64-Bit auf dem späteren Unifi-Kontroller installiert werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:18
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:64
+msgid "Schritt für Schritt"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:20
+msgid "Starten Sie vom Installationsmedium und wählen Sie die Sprache."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:25
+msgid "Wählen Sie `Ubuntu Server installieren`."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:27
+msgid "Bestätigen Sie die Installation in der gewählten Sprache."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:29
+msgid ""
+"Ist der Rechner bereits in `/etc/linuxmuster/workstations`, so ist der "
+"Rechnername bereits in der Eingabemaske eingetragen."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:34
+msgid "Wählen Sie einen Benutzer, seinen Benutzernamen und das Passwort."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:36
+msgid "Verschlüsseln Sie Ihren persönlichen Ordner **nicht**!"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:41
+msgid ""
+"Wählen Sie `vollständige Festplatte verwenden` und bestätigen Sie die "
+"Partitionierung."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:46
+msgid ""
+"Es ist zu empfehlen, `keine automatischen Aktualisierungen` zu wählen, da "
+"Sie dann nicht von unerwarteten Aktualisierungen überrascht werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:51
+msgid "An Software gibt es nichts Besonderes zu wählen."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:56
+msgid "Beenden Sie die Installation und starten Sie den Rechner neu."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:59
+msgid "Die Installation der Unifi-Pakete"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:61
+msgid ""
+"Der Rechner muss upgedatet, die Paketquellen müssen ergänzt und das Unifi-"
+"Paket installiert werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:66
+msgid ""
+"Die englische Anleitung von Unifi finden Sie `hier <https://help.ubnt.com/hc"
+"/en-us/articles/220066768-UniFi-How-to-Install-Update-via-APT-on-Debian-or-"
+"Ubuntu>`_."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:68
+msgid "Melden Sie sich an."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:70
+msgid "öffnen Sie eine root-shell mit `sudo -i`"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:72
+msgid "Updaten Sie den Rechner mit"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:79
+msgid ""
+"Editieren Sie die Datei `/etc/apt/sources.list` und fügen Sie die folgende "
+"Zeile hinzu:"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:86
+msgid "Fügen Sie den GPG-key hinzu:"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:92
+msgid "Nochmal updaten, unifi installieren und neu starten:"
+msgstr ""

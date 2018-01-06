@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/user-management/use-mail-ldap/installation.rst:2
+msgid "Installation"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/installation.rst:5
+msgid "Rechte für Gruppen festlegen"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/installation.rst:6
+msgid ""
+"Der Bereich für die Eingabe der eigenen Mail-Adresse muss zunächst in der "
+"Schulkonsole aktiviert werden. Dazu erstellt man im Verzeichnis"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/installation.rst:13
+msgid "die Datei ``all-pages-mymail`` mit dem Inhalt"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/installation.rst:19
+msgid ""
+"und im gleichen Verzeichnis die Datei ``all-programs-mymail`` mit dem Inhalt"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/installation.rst:25
+msgid ""
+"Die erste Datei ``all-pages-myemail`` erlaubt es allen Benutzern, den "
+"Bereich auf der Startseite der Schulkonsole zur Änderung der Mailadresse zu "
+"sehen. Die zweite Datei ``all-programs-mymail`` erlaubt es dem Benutzer, die"
+" Funktion zur Änderung der Mailadresse zu verwenden."
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/installation.rst:31
+msgid ""
+"Sollen nur die Lehrer in der Lage sein, eine eigene Mailadresse zu "
+"verwenden, so lauten die Dateinamen ``teachers-pages-mymail`` mit dem "
+"Eintrag"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/installation.rst:38
+msgid "und ``teachers-programs-mymail`` mit dem Eintrag"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/installation.rst:44
+msgid ""
+"Analog kann die Funktion auch lediglich für Administratoren freigeschaltet "
+"werden."
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/installation.rst:46
+msgid ""
+"Es ist auch möglich, die Seite freizugeben (über die pages-Datei), nicht "
+"aber die Funktion zur Änderung. In diesem Fall kann der Benutzer den Eintrag"
+" zwar sehen, ist aber nicht in der Lage, ihn zu verändern."
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/installation.rst:51
+msgid "Rechte übernehmen"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/installation.rst:52
+msgid ""
+"Nachdem die Dateien fertig editiert wurden, müssen die neuen Einstellungen "
+"ins System übernommen werden. Das geschieht durch zwei Skripte im "
+"Verzeichnis ``/usr/share/schulkonsole/scripts``. Diese Skripte müssen "
+"ausgeführt werden, also"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/installation.rst:61
+msgid ""
+"Nach Ausführung dieser Skripte erscheint auf der Startseite der Schulkonsole"
+" für die berechtigten Benutzer ein neuer Bereich zur Änderung der Adresse."
+msgstr ""

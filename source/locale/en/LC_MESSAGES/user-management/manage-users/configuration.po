@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/user-management/manage-users/configuration.rst:3
+msgid "Konfiguration vor dem ersten Anlegen von Benutzern"
+msgstr ""
+
+#: ../../source/user-management/manage-users/configuration.rst:5
+msgid ""
+"Nach Installation des Servers sollten Sie vorab einige "
+"Konfigurationseinstellungen für Ihre Schule festlegen."
+msgstr ""
+
+#: ../../source/user-management/manage-users/configuration.rst:9
+msgid ""
+"Melden Sie sich an der *Schulkonsole* durch Eingabe von https://server:242 "
+"in einen Browser als ``administrator`` an. Die meisten der Festlegungen "
+"können in der *Schulkonsole* im Menü unter *Einstellungen* -> "
+"*Benutzerverwaltung* gemacht werden."
+msgstr ""
+
+#: ../../source/user-management/manage-users/configuration.rst:14
+msgid ""
+"Lesen Sie die Bedienungsanleitung unter :ref:`manual-sk-admin-settings-user-"
+"label`, um folgende Einstellungen vorzunehmen:"
+msgstr ""
+
+#: ../../source/user-management/manage-users/configuration.rst:18
+msgid ""
+"Legen Sie fest, ob die Passwortgüte überprüft wird und welche minimale Länge"
+" gefordert werden soll."
+msgstr ""
+
+#: ../../source/user-management/manage-users/configuration.rst:20
+msgid ""
+"Stellen Sie die momentan zulässigen Geburtsjahreszahlen für Schüler ein."
+msgstr ""
+
+#: ../../source/user-management/manage-users/configuration.rst:21
+msgid ""
+"Entscheiden Sie, ob Sie Speicherplatzkontingente (Quota) festlegen wollen "
+"und legen Sie die Menge fest. Beachten Sie, dass ein Benutzer höhere Quota "
+"von einer Gruppe erbt, der er angehört."
+msgstr ""
+
+#: ../../source/user-management/manage-users/configuration.rst:24
+msgid ""
+"Entscheiden Sie die Zusammensetzung der internen E-Mail-Adressen, falls Sie "
+"diese Funktion an der Schule verwenden wollen. Stellen Sie ebenso die "
+"Schwelle für Warnungen bei Plattenplatzmangel für E-Mails ein."
+msgstr ""
+
+#: ../../source/user-management/manage-users/configuration.rst:28
+msgid ""
+"Stellen Sie ein, ob und wieviel Zeichen die Zufallspasswörter für Schüler "
+"und Lehrer bekommen."
+msgstr ""
+
+#: ../../source/user-management/manage-users/configuration.rst:29
+msgid ""
+"Legen Sie fest, ob Lehrer oder Schüler ein Terminal auf einem Linux-Client "
+"öffnen können darf."
+msgstr ""
+
+#: ../../source/user-management/manage-users/configuration.rst:30
+msgid ""
+"Legen Sie einige Daten fest, die beim Ausdruck von Passwortinformationen für"
+" Benutzer verwendet werden."
+msgstr ""

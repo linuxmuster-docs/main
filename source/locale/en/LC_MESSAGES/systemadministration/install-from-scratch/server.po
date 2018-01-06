@@ -1,0 +1,967 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2017\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:4
+msgid "Installation und Konfiguration des Servers"
+msgstr "Installation and configuration of the server"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:7
+msgid "Installation des Ubuntu-Servers"
+msgstr "Installing the Ubuntu Server"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:9
+msgid ""
+"Verbinden Sie die Netzwerkkarte des Servers mit dem Switch, an welchem die "
+"„grüne“ Netzwerkkarte des IPFire hängt."
+msgstr ""
+"Connect the network card of the server to the switch to which the \"green\" "
+"network card of the IPFire is connected."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:13
+msgid ""
+"Lesen Sie unbedingt die Hinweise bzgl. der einsetzbaren Versionen in "
+"`Vorwort und Vorbereitungen <preface-preparations-label>`_ und installieren "
+"Sie zuvor die Firewall (`Installation und Konfiguration der Firewall "
+"<install-configure-firewall-label>`_)."
+msgstr ""
+"Be sure to read the notes on the applicable versions in `Preface and "
+"preparations <preface-preparations-label>`_ and then install the firewall "
+"(`Installation und Configuration of the Firewall <install-configure-"
+"firewall-label>`_)."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:19
+msgid "Grundeinstellungen"
+msgstr "Basic settings"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:20
+msgid ""
+"Booten Sie den für den linuxmuster.net vorgesehenen Server von der Ubuntu-"
+"Server-CD. Wählen Sie mit den Pfeiltasten die gewünschte Sprache aus und "
+"bestätigen Sie Ihre Auswahl mit der ``ENTER``-Taste."
+msgstr ""
+"Boot the server provided for linuxmuster.net from the Ubuntu server CD. Use "
+"the arrow keys to select the desired language and confirm with the ``ENTER``"
+" key."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:26
+msgid "Wählen Sie die gewünschte Sprache aus."
+msgstr "Select the desired language."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:28
+msgid ""
+"Bestätigen Sie durch Drücken der ``ENTER``-Taste, dass Sie Ubuntu "
+"installieren möchten."
+msgstr ""
+"Confirm by pressing the ``ENTER`` button that you want to install Ubuntu."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:34
+msgid "Bestätigen Sie, dass Sie Ubuntu installieren möchten."
+msgstr "Confirm that you want to install Ubuntu."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:36
+msgid ""
+"Bestätigen Sie durch Drücken der ``ENTER``-Taste den Hinweis, dass das "
+"gewählte Sprachpaket möglicherweise nicht vollständig sei."
+msgstr ""
+"Confirm by pressing the ``ENTER`` key that the selected language pack might "
+"not be complete."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:42
+msgid ""
+"Bestätigen Sie den Hinweis, dass gewählte Sprachpaket möglicherweise nicht "
+"vollständig ist."
+msgstr "Confirm that the selected language pack may not be complete."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:44
+msgid ""
+"Wählen Sie mit den Pfeiltasten den Standort aus und bestätigen Sie Ihre "
+"Auswahl durch Drücken der ``ENTER``-Taste."
+msgstr ""
+"Use the arrow keys to select the location and confirm your selection by "
+"pressing the ``ENTER`` key."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:50
+msgid "Geben Sie den Standort an."
+msgstr "Specify the location."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:52
+#: ../../source/systemadministration/install-from-scratch/server.rst:58
+msgid "Verneinen Sie die automatische Tastaturmodellerkennung."
+msgstr "Negate the automatic keyboard model detection."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:60
+#: ../../source/systemadministration/install-from-scratch/server.rst:66
+msgid "Wählen Sie das Herkunftsland der Tastatur."
+msgstr "Select the country of origin of the keyboard layout."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:68
+#: ../../source/systemadministration/install-from-scratch/server.rst:74
+msgid "Wählen Sie das die Tastaturbelegung."
+msgstr "Select the keyboard layout."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:77
+msgid "Einrichten des Netzwerks"
+msgstr "Set up the network"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:79
+msgid ""
+"Der automatische Bezug einer IP-Adresse schlägt zunächst fehl, da kein DHCP-"
+"Server vorhanden ist."
+msgstr ""
+"Automatically obtaining an IP address fails first because there is no DHCP "
+"server."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:85
+msgid "Der automatische Bezug einer IP-Adresse schlägt zunächst fehl."
+msgstr "Automatically obtaining an IP address will fail first."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:87
+#: ../../source/systemadministration/install-from-scratch/server.rst:93
+msgid "Das Netzwerk richten Sie manuell ein."
+msgstr "You set up the network manually."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:95
+#: ../../source/systemadministration/install-from-scratch/server.rst:104
+msgid "Geben Sie als IP-Adresse `10.16.1.1` ein."
+msgstr "Enter `10.16.1.1` as the IP address."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:98
+#: ../../source/systemadministration/install-from-scratch/server.rst:117
+#: ../../source/systemadministration/install-from-scratch/server.rst:128
+msgid ""
+"Wenn Sie einen anderen Adressbereich gewählt haben, müssen Sie die folgende "
+"Eingabe anpassen."
+msgstr ""
+"If you have selected a different address range, you must adjust the "
+"following entry."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:106
+msgid "Geben Sie als Netzmaske `255.240.0.0` ein."
+msgstr "Enter `255.240.0.0` as the netmask."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:112
+msgid "Geben Sie als Netzmaske ``255.240.0.0`` ein."
+msgstr "Enter ``255.240.0.0`` as the netmask."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:114
+#: ../../source/systemadministration/install-from-scratch/server.rst:123
+msgid "Geben Sie als Gateway ``10.16.1.254`` ein."
+msgstr "Enter the gateway ``10.16.1.254``."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:125
+#: ../../source/systemadministration/install-from-scratch/server.rst:134
+msgid "Geben Sie als DNS-Server ``10.16.1.254`` ein."
+msgstr "Enter ``10.16.1.254`` as the DNS server."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:136
+#: ../../source/systemadministration/install-from-scratch/server.rst:142
+msgid "Geben Sie den gewünschten Namen des Servers ein."
+msgstr "Enter the desired server name."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:144
+msgid ""
+"Geben Sie lokale Domäne ein, die Sie bereits bei der Konfiguration des "
+"IPFires gewählt haben."
+msgstr ""
+"Enter the local domain that you have already selected when configuring the "
+"IPFire."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:150
+msgid "Geben Sie lokale Domäne ein."
+msgstr "Enter local domain."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:153
+msgid "Einrichten des administrativen Benutzers"
+msgstr "Set up the administrative user"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:155
+#: ../../source/systemadministration/install-from-scratch/server.rst:164
+msgid "Geben Sie den gewünschten Benutzernamen ein."
+msgstr "Enter the desired user name."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:158
+msgid ""
+"Es gibt vom System reservierte Namen, die nicht verwendet werden können, "
+"darunter auch ``admin``."
+msgstr ""
+"There are system-reserved names that can not be used, including ``admin``."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:166
+#: ../../source/systemadministration/install-from-scratch/server.rst:172
+msgid "Geben Sie den gewünschten Kontonamen zum Benutzernamen ein."
+msgstr "Enter the desired account for the user name."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:174
+#: ../../source/systemadministration/install-from-scratch/server.rst:183
+msgid "Geben Sie das gewünschte Passwort ein."
+msgstr "Enter the desired password."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:177
+msgid ""
+"Falls Sie an dieser Stelle darauf hingewiesen werden, dass Ihr eingegebenes "
+"Passwort schwach sei vergeben Sie bitte ein stärkeres. Die Sicherheit des "
+"Systems hängt von der Qualität des Passwortes ab!"
+msgstr ""
+"If you are told that your password is weak, please choose a stronger one. "
+"The security of the system depends on the quality of the password!"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:185
+#: ../../source/systemadministration/install-from-scratch/server.rst:191
+msgid "Geben Sie das Passwort nochmals ein."
+msgstr "Enter the password again."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:193
+#: ../../source/systemadministration/install-from-scratch/server.rst:199
+msgid "Verschlüsseln Sie ihren persönlichen Ordner **nicht**."
+msgstr "Do not encrypt your personal folder."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:201
+#: ../../source/systemadministration/install-from-scratch/server.rst:207
+msgid "Bestätigen bzw. ggf. korrigieren Sie die Zeitzone."
+msgstr "Confirm or, if necessary, correct the time zone."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:210
+msgid "Partitionierung"
+msgstr "Partitioning"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:212
+msgid ""
+"Partitionieren Sie nach Ihren Bedürfnissen. Hier gibt es nur eine "
+"linuxmuster.net spezifischen Vorgabe:"
+msgstr ""
+"Partition it according to your needs. Here is only one linuxmuster.net "
+"specific specification:"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:215
+msgid ""
+"Es muss nur darauf geachtet werden, dass die Dateisysteme unter /home und "
+"/var mit den Quotaoptionen ``usrquota`` und ``grpquota`` versehen werden."
+msgstr ""
+"It is only necessary to ensure that the file systems under /home and /var "
+"are provided with the quota options ``usrquota`` and ``grpquota``."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:217
+msgid ""
+"Im folgenden wird beispielhaft gezeigt wie auf einer einzigen Festplatte "
+"drei Partitionen (root-, home- und var-Partition) angelegt werden."
+msgstr ""
+"The following is an example of how to create three partitions (root, home "
+"and var partition) on a single hard drive."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:219
+msgid ""
+"In der Regel sind einem einem Server mehrere Festplatten verbaut. Bitte "
+"lesen Sie den Abschnitt zum Thema „Partitionierung im Expertenmodus“ "
+"https://www.linuxmuster.net/wiki/dokumentation:techsheets:partitionierung.expertenmodus"
+" um zu erfahren, wie ein solches System - auch unter optionaler Benutzung "
+"des lvm und von Software-RAIDs- partitioniert wird. Dort finden Sie auch "
+"Hinweise zu sinnvollen Partitionsgrößen."
+msgstr ""
+"As a rule, several hard disks are installed on one server. Please read the "
+"section `Partitioning in expert mode "
+"<https://www.linuxmuster.net/wiki/documentation:techsheets:partitioning.expertenmodus>`_"
+" to find out how such a system - even under optional use of the lvm and "
+"software- RAIDs is partitioned. There you will also find information on "
+"meaningful partition sizes."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:221
+msgid "An dieser Stelle wird auf eine Swap-Partition verzichtet."
+msgstr "At this point a swap partition is not used."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:223
+#: ../../source/systemadministration/install-from-scratch/server.rst:229
+msgid "Partitionieren Sie manuell."
+msgstr "Partition manually."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:231
+#: ../../source/systemadministration/install-from-scratch/server.rst:237
+msgid "Wählen Sie die zu partitionierende Festplatte aus."
+msgstr "Select the hard disk to partition."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:239
+#: ../../source/systemadministration/install-from-scratch/server.rst:245
+msgid "Bestätigen Sie das Erstellen der Partitionstabelle."
+msgstr "Confirm the creation of the partition table."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:247
+#: ../../source/systemadministration/install-from-scratch/server.rst:253
+msgid "Wählen Sie den freien Speicher zum Anlegen der ersten Partition."
+msgstr "Select the free space to create the first partition."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:255
+#: ../../source/systemadministration/install-from-scratch/server.rst:261
+msgid "Bestätigen Sie das Anlegen der ersten Partition."
+msgstr "Confirm the creation of the first partition."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:263
+#: ../../source/systemadministration/install-from-scratch/server.rst:272
+#: ../../source/systemadministration/install-from-scratch/server.rst:315
+#: ../../source/systemadministration/install-from-scratch/server.rst:321
+#: ../../source/systemadministration/install-from-scratch/server.rst:381
+#: ../../source/systemadministration/install-from-scratch/server.rst:387
+msgid "Wählen Sie die Größe der Partition."
+msgstr "Select the size of the partition."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:266
+msgid ""
+"Die Größen der Partitionen auf den folgenden Screenshots stammen von einen "
+"Testsystem, an welches andere Anforderungen gestellt werden als ein "
+"Produktivsystem. Lesen Sie im Anhang den Abschnitt „Hinweise zur Größe von "
+"Partitionen“ um eine Gefühl für die notwendigen Größe der Partitionen zu "
+"erhalten."
+msgstr ""
+"The sizes of the partitions on the following screenshots come from a test "
+"system, to which other requirements are placed than a productive system. "
+"Read the section \"Notes on the size of partitions\" in the appendix to get "
+"a feeling for the necessary size of the partitions."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:274
+#: ../../source/systemadministration/install-from-scratch/server.rst:280
+#: ../../source/systemadministration/install-from-scratch/server.rst:323
+#: ../../source/systemadministration/install-from-scratch/server.rst:329
+#: ../../source/systemadministration/install-from-scratch/server.rst:389
+#: ../../source/systemadministration/install-from-scratch/server.rst:395
+msgid "Wählen Sie als Typ der Partition ``primär``."
+msgstr "Select ``primary`` as the type of the partition."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:282
+#: ../../source/systemadministration/install-from-scratch/server.rst:288
+#: ../../source/systemadministration/install-from-scratch/server.rst:331
+#: ../../source/systemadministration/install-from-scratch/server.rst:337
+msgid ""
+"Bestätigen Sie, dass die neue Partition am Anfang des freien Speichers "
+"angelegt werden soll."
+msgstr ""
+"Confirm that the new partition is to be created at the beginning of free "
+"space."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:290
+msgid ""
+"Abschließend bestätigen Sie das Anlegen der Partition. Als Einbindungspunkt "
+"wurde automatisch die Wurzel ``/`` gewählt."
+msgstr ""
+"Finally, confirm the creation of the partition. The root ``/`` was selected "
+"automatically as the mount point."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:296
+#: ../../source/systemadministration/install-from-scratch/server.rst:355
+#: ../../source/systemadministration/install-from-scratch/server.rst:361
+#: ../../source/systemadministration/install-from-scratch/server.rst:431
+#: ../../source/systemadministration/install-from-scratch/server.rst:437
+msgid "Abschließend bestätigen Sie das Anlegen der Partition."
+msgstr "Finally, confirm the creation of the partition."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:298
+msgid ""
+"Nun folgt das Anlegen der zweiten Partition, auf welcher die HOME-"
+"Verzeichnisse der Nutzer liegen werden. Wählen Sie den freien Speicher zum "
+"Anlegen der zweiten Partition."
+msgstr ""
+"This is followed by the creation of the second partition on which the HOME "
+"directories of the users will be located. Select the free space to create "
+"the second partition."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:305
+msgid "Wählen Sie den freien Speicher zum Anlegen der zweiten Partition."
+msgstr "Select the free space to create the second partition."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:307
+#: ../../source/systemadministration/install-from-scratch/server.rst:313
+msgid "Bestätigen Sie das Anlegen der zweiten Partition."
+msgstr "Confirm the creation of the second partition."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:339
+msgid ""
+"Als Einbindungspunkt wurde automatisch ``/home`` gewählt. Jetzt müssen die "
+"Einbindungsoptionen angepasst werden."
+msgstr ""
+"``/home`` is automatically selected as the mount point. Now the mount "
+"options have to be adapted."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:345
+#: ../../source/systemadministration/install-from-scratch/server.rst:420
+msgid "Wählen die den Punkt Einbindungsoptionen."
+msgstr "Select the mount options item."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:347
+msgid ""
+"Mit der ``Leertaste`` werden nun die Einbindungsoptionen ``usrquota`` und "
+"``grpquota``"
+msgstr ""
+"Select the mount options ``usrquota`` and ``grpquota`` with the "
+"``Spacebar``."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:353
+#: ../../source/systemadministration/install-from-scratch/server.rst:428
+msgid ""
+"Wählen die den Punkt Einbindungsoptionen ``usrquota`` und ``grpquota``."
+msgstr "Choose the option ``usrquota`` and ``grpquota``."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:364
+msgid ""
+"Nun folgt das Anlegen der dritten Partition, auf welcher die Images der "
+"Clienten liegen werden. Wählen Sie den freien Speicher zum Anlegen der "
+"dritten Partition."
+msgstr ""
+"This is followed by the creation of the third partition on which the images "
+"of the clients will be located. Select the free space to create the third "
+"partition."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:371
+msgid "Wählen Sie den freien Speicher zum Anlegen der dritten Partition."
+msgstr "Select the free space to create the third partition."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:373
+#: ../../source/systemadministration/install-from-scratch/server.rst:379
+msgid "Bestätigen Sie das Anlegen der dritten Partition."
+msgstr "Confirm the creation of the third partition."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:398
+msgid "Als Einbindungspunkt muss manuell ``/var`` gewählt."
+msgstr "Select the mount point ``/var`` manually."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:404
+msgid "Wählen Sie den Einbindungspunkt."
+msgstr "Select the mount point."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:406
+#: ../../source/systemadministration/install-from-scratch/server.rst:412
+msgid "Mit der ``Leertaste`` wird ``/var`` als  Einbindungsort gewählt."
+msgstr "Select ``/var`` with the ``Spacebar``."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:414
+msgid "Nun werden die Einbindungsoptionen gewählt."
+msgstr "The mount options are now selected."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:422
+msgid ""
+"Mit der ``Leertaste`` werden nun die Einbindungsoptionen ``usrquota`` und "
+"``grpquota`` gewählt."
+msgstr ""
+"Select the mount options ``usrquota`` and ``grpquota`` with the "
+"``Spacebar``."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:439
+msgid ""
+"Das System weist darauf hin, dass kein SWAP-Speicher angelegt wurde. "
+"Verneinen Sie die Frage, ob dies nachgeholt werden soll."
+msgstr ""
+"The system indicates that no SWAP storage was created. Answer the question "
+"whether this should be done."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:445
+msgid ""
+"Verneinen Sie die Frage, ob doch noch eine SWAP-Partion angelegt werden."
+msgstr "Answer the question whether a SWAP part is still being created."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:447
+msgid ""
+"Bestätigen Sie, dass die vorbereiteten Änderungen der Partition tatsächlich "
+"auf die Festplatte geschrieben werden."
+msgstr ""
+"Confirm that the prepared changes to the partition are actually written to "
+"the disk."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:453
+msgid "Bestätigen Sie das Schreiben der Änderungen der Partitionen."
+msgstr "Confirm the writing of the changes to the partitions."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:455
+#: ../../source/systemadministration/install-from-scratch/server.rst:461
+msgid ""
+"Der Server ist nicht über einen Proxy angebunden, fahren Sie mit „Weiter“ "
+"fort."
+msgstr "The server is not connected via a proxy, continue with \"Next\"."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:463
+msgid ""
+"Es wird ausdrücklich davon abgeraten, Updates automatisch einzuspielen. Sie "
+"als Administrator sollten stets wissen, wann sich etwas im System ändert, um"
+" z.B. zuvor eine Sicherung zu erstellen."
+msgstr ""
+"It is strongly advised not to import updates automatically. As an "
+"administrator, you should always know when something in the system changes, "
+"e.g. to create a backup first."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:469
+msgid "Wählen Sie „keine automatischen Updates“ aus."
+msgstr "Select \"No automatic updates\"."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:472
+msgid ""
+"Das bedeutet keineswegs, dass Sie das System nicht updaten sollen, nur eben "
+"nicht automatisch. Bitte lesen Sie dazu :doc:`Linuxmuster.net aktuell halten"
+" <../maintenance/keep-lmn-uptodate/index>`"
+msgstr ""
+"This does not mean that you should not update the system, but not "
+"automatically. Please read :doc:`Keep Linuxmuster.net up-to-date "
+"<../../howtos/keep-lmn-uptodate/index/>`"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:474
+msgid ""
+"Wählen Sie keine Software zum Installieren aus. Alle benötigten Pakete "
+"werden später durch ein Skript installiert, u.a. auch ein ``OpenSSH "
+"server``."
+msgstr ""
+"Do not select any software to install. All required packages are installed "
+"later by a script, Also an ``OpenSSH server``."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:480
+msgid "Wählen Sie keine Software aus, fahren Sie mit „Weiter“ fort."
+msgstr "If no software is selected, continue with \"Next\"."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:482
+#: ../../source/systemadministration/install-from-scratch/server.rst:488
+msgid ""
+"Bestätigen Sie, dass der Bootloader in den Master Boot Record installiert "
+"werden soll."
+msgstr ""
+"Confirm that the bootloader is to be installed in the master boot record."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:490
+#: ../../source/systemadministration/install-from-scratch/server.rst:496
+msgid "Zum Abschluss der Installation wird das System neu gestartet."
+msgstr "The system is rebooted to complete the installation."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:499
+msgid "Nach dem Neustart"
+msgstr "After Reboot"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:500
+msgid ""
+"Melden Sie sie nach dem Neustart mit Ihrem bei der Installation gewählten "
+"Nutzer und Passwort an."
+msgstr ""
+"After rebooting, log it in with your user and password selected during "
+"installation."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:508
+msgid ""
+"Nach dem Login werden sie möglicherweise darauf hingewiesen, dass ein „neues"
+" Release 14.04.4 LTS“ zur Verfügung stehe. Führen Sie den Vorschlag „do-"
+"release-upgrade“ **keinesfalls** durch. Alle andere Updates sollten wie im "
+"Folgenden gezeigt eingespielt werden. Zunächst verleihen Sie sich dauerhaft "
+"``root``-Rechte"
+msgstr ""
+"After logging in they may be advised that a \"new release 14.04.4 LTS\" is "
+"available. Do not execute **the \"do-release-upgrade\"**. All other updates "
+"should be installed as shown below. First, give yourself ``root`` rights"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:517
+msgid "Nun holen Sie die aktuellen Paketlisten"
+msgstr "Now retrieve the current package lists"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:525
+msgid ""
+"Sollte dies nicht funktionieren (erkennbar z.B. an der Ausgabe „Fehlschlag "
+"beim Holen von ...“) führen Sie folgende Schritte aus:"
+msgstr ""
+"If this does not work (as can be seen, for example, in the output \"Error "
+"when ...\"), perform the following steps:"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:534
+msgid "Spielen Sie nun alle Updates ein."
+msgstr "Now install all the updates."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:540
+msgid "Danach starten Sie den Server neu"
+msgstr "Then restart the server"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:546
+msgid ""
+"Prüfen Sie auch, ob das Sprachpaket zu der während der Installation "
+"gewählten Sprache installiert wurde. Z.B. für „Deutsch“ mit"
+msgstr ""
+"Also check whether the language pack has been installed for the language "
+"selected during the installation. e.g. For \"German\" with"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:552
+msgid ""
+"Man erwartet in etwa folgende Ausgabe, Versionsnummern können variieren."
+msgstr "The following edition is expected: version numbers may vary."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:559
+msgid "Installieren Sie ggf. die fehlende deutsche Sprachunterstützung nach:"
+msgstr "If necessary, install the missing German language support:"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:566
+msgid "Setup des linuxmuster.net Paketes"
+msgstr "Set up the linuxmuster.net packages"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:567
+msgid ""
+"Diese Anleitung beschreibt wie aus dem Ubuntu Server ein linuxmuster.net "
+"Server wird."
+msgstr ""
+"This tutorial describes how the Ubuntu server becomes a linuxmuster.net "
+"server."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:569
+msgid "Zunächst verleihen Sie sich dauerhaft ``root``-rechte"
+msgstr "First, give yourself ``root`` privileges."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:576
+msgid "Vorbereitungen"
+msgstr "Preparations"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:577
+msgid ""
+"Erstellen Sie mit dem Editor ihrer Wahl (z.B. ``vi`` oder ``nano``) auf dem "
+"Server die Datei ``/etc/apt/sources.list.d/linuxmuster-net.list`` mit "
+"folgendem Inhalt:"
+msgstr ""
+"Use a editor (e.g. ``vi`` or ``nano``) to generate the file "
+"``/etc/apt/sources.list.d/linuxmuster-net.list`` with the following content:"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:587
+msgid ""
+"Damit das System der linuxmuster.net-Quelle vertraut, muss noch der "
+"linuxmuster.net-Schlüssel installiert werden. Laden Sie zunächst den "
+"Schlüssel herunter."
+msgstr ""
+"For the system to rely on the linuxmuster.net source, the linuxmuster.net "
+"key must still be installed. First, download the key."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:593
+msgid "Importieren Sie den Schlüssel in Ihre System"
+msgstr "Import the key into your system"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:599
+msgid "Löschen Sie den nun nicht weiter benötigte Schlüsseldatei."
+msgstr "Delete the key file that is not required any more."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:606
+msgid "Aktualisieren Sie die Paketlisten."
+msgstr "Update the package lists."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:612
+msgid "Installieren Sie das Paket ``linuxmuster-base``."
+msgstr "Install the ``linuxmuster-base`` package."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:620
+msgid ""
+"Sollte die Installation von linuxmuster-base scheitern, weil Pakete "
+"ungelöste Abhängigkeiten haben, gehen Sie wie folgt vor:"
+msgstr ""
+"If the installation of linuxmuster-base fails because packages have "
+"unresolved dependencies, proceed as follows:"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:622
+msgid "Entfernen Sie alle Paketlisten vom System"
+msgstr "Remove all package lists from the system"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:628
+msgid "Entfernen Sie alle Pakete aus dem Zwischenspeicher"
+msgstr "Remove all packages from the cache"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:634
+msgid "Aktualisieren Sie die Paketlisten"
+msgstr "Update the package lists"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:640
+msgid "Spielen Sie alle Updates ein."
+msgstr "Now install all the updates."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:646
+msgid ""
+"Bei der ``postfix``-Konfiguration kommt evtl. die Nachfrage nach der "
+"allgemeinen Konfiguration. Wählen Sie dann „Keine Konfiguration“."
+msgstr ""
+"You may get a question about ``postfix``-configuration. Select \"No "
+"configuration\"."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:652
+msgid "Wählen Sie „keine Konfiguration“"
+msgstr "Select \"No Configuration\""
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:655
+msgid "Setup"
+msgstr "Setup"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:656
+msgid "Starten Sie nun zur Ersteinrichtung des Systems das Setupskript:"
+msgstr "Now start the setup script for initial setup of the system:"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:662
+msgid ""
+"In der Folge werden zunächst für das Serversetup benötigte Softwarepakete "
+"heruntergeladen und installiert. Das kann - abhängig von Internetanbindung "
+"und verwendeter Hardware - einige Minuten in Anspruch nehmen."
+msgstr ""
+"Subsequently, software packages required for the server setup are downloaded"
+" and installed. Depending on the Internet connection and the hardware used, "
+"this can take a few minutes."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:664
+msgid ""
+"Sind alle Pakete installiert, erfolgen die Abfragen der Konfigurationswerte."
+" Sollten Sie während des Konfigurationsdialogs Fehleingaben machen, können "
+"Sie die Konfiguration zunächst fortführen und im letzten Dialog, im "
+"Netzwerkkarten-Menü, die Konfiguration abbrechen."
+msgstr ""
+"If all packages are installed, the configuration values ​​are queried. If "
+"you make any errors during the configuration dialog, you can continue with "
+"the configuration and abort the configuration in the last dialog, in the "
+"network card menu."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:666
+#: ../../source/systemadministration/install-from-scratch/server.rst:672
+msgid "Bestätigen Sie die Hinweise."
+msgstr "Confirm the notes."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:674
+msgid ""
+"Geben Sie das internationale Länderkürzel ein. Erlaubt sind zwei "
+"Großbuchstaben, für Deutschland z.B. „DE“."
+msgstr ""
+"Enter the international country code. Two upper-case letters are allowed; "
+"\"DE\"."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:680
+msgid "Geben Sie das internationale Länderkürzel ein."
+msgstr "Enter the international country code."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:682
+#: ../../source/systemadministration/install-from-scratch/server.rst:688
+msgid "Geben Sie die Kurzbezeichnung des Bundeslandes ein."
+msgstr "Enter the short name of the state."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:690
+#: ../../source/systemadministration/install-from-scratch/server.rst:696
+msgid "Geben Sie den Orts- oder Stadtnamen Ihrer Schule ein."
+msgstr "Enter the city name of your school."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:699
+msgid ""
+"Geben Sie den Schulnamen ein, falls der Schulort Teil des Schulnamens ist, "
+"lassen Sie ihn hier weg. Es sind keine Leerzeichen erlaubt."
+msgstr ""
+"Enter the school name, if the school location is part of the school name, "
+"leave it here. There are no spaces allowed."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:705
+msgid "Geben Sie den Schulnamen ein."
+msgstr "Enter the name."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:707
+msgid "Geben Sie den Namen der Samba-Domäne ein, es sind Buchstaben erlaubt."
+msgstr "Enter the name of the Samba domain, letters are allowed."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:713
+msgid "Geben Sie den Namen der Samba-Domäne ein."
+msgstr "Enter the name of the Samba domain."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:715
+msgid ""
+"Geben Sie den Hostname des Servers ein, es sind nur Buchstaben, Ziffern und "
+"das Minuszeichen erlaubt."
+msgstr ""
+"Enter the hostname of the server, only letters, digits and the minus sign "
+"are allowed."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:721
+msgid "Geben Sie den Hostname des Servers ein."
+msgstr "Enter the hostname of the server."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:723
+msgid ""
+"Geben Sie die Internet-Domänenname ein, sie darf nur aus Buchstaben, "
+"Ziffern, Minuszeichen und Punkten bestehen."
+msgstr ""
+"Enter the Internet domain name, which can only consist of letters, digits, "
+"minus signs, and dots."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:727
+msgid ""
+"Falls Sie den externen Zugriff auf Ihren Server über eine dynamische DNS-"
+"Adresse realisieren wollen, können Sie sich einiges an händischer "
+"Nachkonfiguration ersparen, wenn Sie den dynamischen Domänennamen auch für "
+"das Intranet verwenden."
+msgstr ""
+"If you want external access to your server via a dynamic DNS address, you "
+"can spare some manual reconfiguration if you also use the dynamic domain "
+"name for the intranet."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:733
+msgid "Geben Sie die Internet-Domänenname ein."
+msgstr "Enter the Internet domain name."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:735
+msgid ""
+"Wählen Sie den IP-Bereich für das interne Netz aus. Mit den Pfeiltasten "
+"können Sie in der Liste navigieren. Bestätigen Sie Ihre Auswahl mit der "
+"ENTER-Taste."
+msgstr ""
+"Select the IP range for the internal network. Use the arrow keys to navigate"
+" the list. Confirm your selection with the ENTER key."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:741
+msgid "Wählen Sie den IP-Bereich für das interne Netz aus."
+msgstr "Select the IP range for the internal network."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:743
+msgid ""
+"Geben Sie den externen Servernamen ein, wenn der Server von außen unter "
+"einem anderen Namen erreichbar ist. Dieser Namen wird u.a. für die OpenVPN-"
+"Konfiguration auf der Firewall verwendet."
+msgstr ""
+"Enter the external server name if the server is accessible from outside "
+"under a different name. This name is used for the OpenVPN configuration on "
+"the firewall."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:749
+msgid "Geben Sie den externen Servernamen ein."
+msgstr "Enter the external server name."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:751
+msgid ""
+"Bestätigen Sie, IPFire als Firewall nutzen zu wollen. Prinzipiell können Sie"
+" eine beliebige Firewall (custom) nutzen, allerdings ist mit eingeschränkter"
+" Funktionalität [#FN-CustomFirewall]_."
+msgstr ""
+"Confirm to use IPFire as a firewall. In principle, you can use any firewall "
+"(custom), but with limited functionality [#FN-CustomFirewall]_."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:757
+msgid "Wählen Sie die Firewalllösung."
+msgstr "Select the firewall solution."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:759
+msgid ""
+"Fall der Server E-Mails über das Internet verschicken soll, geben Sie hier "
+"die Internetadresse des Mailservers Ihres Providers. Falls nicht, lassen Sie"
+" das Feld leer."
+msgstr ""
+"If the server should send e-mails over the Internet, enter the Internet "
+"address of the e-mail server of your provider. If not, leave the field "
+"empty."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:765
+msgid "Geben Sie die Internetadresse des Mailservers Ihres Providers ein."
+msgstr "Enter the Internet address of the e-mail server of your provider."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:767
+msgid ""
+"Entscheiden Sie, ob Sie Subnetze verwenden wollen oder nicht. Falls Sie "
+"nicht wissen, was Subnetze sind, wählen Sie „nein“."
+msgstr ""
+"Decide whether you want to use subnets or not. If you do not know what "
+"subnets are, select \"no\"."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:773
+msgid "Entscheiden Sie, ob Sie Subnetze verwenden wollen oder nicht."
+msgstr "Decide whether you want to use subnets or not."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:775
+#: ../../source/systemadministration/install-from-scratch/server.rst:787
+msgid "Wählen Sie ein Passwort für den Benutzer ``administrator``."
+msgstr "Select a password for the ``administrator`` user."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:779
+msgid ""
+"Es werden Klein- und Großbuchstaben akzeptiert. Sonderzeichen sind nur zum "
+"Teil erlaubt, folgende Zeichen sind **nicht** erlaubt:"
+msgstr ""
+"Small and uppercase letters are accepted. Special characters are only "
+"allowed in part, the following characters are **not allowed**:"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:781
+msgid "äöüß$&{}![]+#"
+msgstr "äöüß$&{}![]+#"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:789
+#: ../../source/systemadministration/install-from-scratch/server.rst:805
+msgid "Geben Sie das Passwort erneut ein."
+msgstr "Re-enter the password."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:795
+msgid ""
+"Geben Sie das Passwort für den Benutzer ``administrator`` nochmals ein."
+msgstr "Enter the password for the ``administrator`` again."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:797
+msgid ""
+"Geben Sie das Passwort des Benutzer ``root`` auf dem IPFire ein, das Sie bei"
+" der Installation des IPFires eingegeben haben."
+msgstr ""
+"Enter the password of the user ``root`` on the IPFire you entered when you "
+"installed the IPFire."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:803
+msgid "Geben Sie das Passwort für den Benutzer ``root`` auf dem IPFire ein."
+msgstr "Enter the password for the ``root`` user on the IPFire."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:811
+msgid ""
+"Geben Sie nochmals das Passwort für den Benutzer ``root`` auf dem IPFire "
+"ein."
+msgstr "Enter the password again for the user ``root`` on the IPFire."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:813
+msgid ""
+"Wählen Sie die Netzwerkkarte, die mit dem grünen Netz verbunden ist. Durch "
+"Betätigen der Schaltfläche ``OK`` wird die Konfiguration erstellt."
+msgstr ""
+"Select the network card that is connected to the green network. By pressing "
+"the ``OK`` button, the configuration is created."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:819
+msgid "Wählen Sie die Netzwerkkarte, die mit dem grünen Netz verbunden ist."
+msgstr "Select the network card that is connected to the green network."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:821
+msgid "Die Installation wird nun abgeschlossen. Starten Sie den Server neu."
+msgstr "The installation is now completed. Restart the server."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:828
+msgid ""
+"Nach dem Neustart begrüßt Sie der Login-Prompt von `linuxmuster.net 6.2.0 / "
+"Codename Babo`."
+msgstr ""
+"After restarting, you are welcomed by the login prompt of `linuxmuster.net "
+"6.2.0 / Codename Babo`."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:830
+msgid ""
+"Als nächstes können Sie Arbeitsplatzrechner einbinden, besonders reizvoll "
+"ist dabei der :doc:`„Standard-Linuxclient“ <../../getting-"
+"started/linuxclients/index>`, das ist ein komplett installiertes und "
+"konfiguriertes LTS-Ubuntu, das Sie innerhalb weniger Minuten in das System "
+"integrieren können. Alternativ können Sie z.B. auch selbst ein :doc:`Windows"
+" 10 <../../clients/windows10clients/index/>` installieren."
+msgstr ""
+"Next, you can include workstations, especially the :doc:`\"default "
+"Linuxclient\" <../../getting-started/linuxclients/index/>` is very "
+"interesting. This is a fully installed and configured LTS Ubuntu, which you "
+"can integrate into the system within minutes. Alternatively, you can also "
+"install a :doc:`Windows 10 <../../clients/windows10clients/index/>`."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:833
+msgid ""
+"Bei Verwendung einer eigenen Firewalllösung funktionieren weder "
+"Internetsperre noch Webfilter. Weiterhin die Firewall in ihrem internen Netz"
+" (beim IPFire „grünes Netz“ genannt) die IP ``10.16.1.254`` und die "
+"Netzmaske ``255.240.0.0`` besitzen, sonst haben weder Server noch Clienten "
+"Internetzugang."
+msgstr ""
+"If you use your own firewall solution, neither Internet lock nor web filter "
+"will work. Furthermore the firewall in their internal network (with the "
+"IPFire \"green network\") has to have the IP ``10.16.1.254`` and the netmask"
+" ``255.240.0.0``, otherwise neither server nor clients have Internet access."

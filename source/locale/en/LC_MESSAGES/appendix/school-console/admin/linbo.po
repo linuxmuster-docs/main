@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/appendix/school-console/admin/linbo.rst:3
+msgid "Menü: LINBO"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:8
+msgid "Gruppenkonfiguration editieren"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:10
+msgid "Klicken Sie auf einen Gruppennamen, um den Editor zu öffnen."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:12
+msgid ""
+"Beachten Sie, daß sich im Editor der Radio-Button zur Deaktivierung des "
+"Autostarts am Seitenende befindet."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:0
+#: ../../source/appendix/school-console/admin/linbo.rst:0
+msgid "Zu tun"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:17
+msgid ""
+"Fehler in der Info-Beschreibung der Schulkonsole: pxelinux.cfg ist "
+"abgeschafft."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:19
+msgid ""
+"Beachten Sie außerdem, daß beim reboot-workaround in der gruppenspezifischen"
+" Linbo-Startdatei unter \"pxelinux.cfg/<gruppe>\" der Eintrag \"DEFAULT "
+"reboot\" aktiviert ist und der Rechner über PXE startet."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:26
+msgid ""
+"Hinweis auf ein eigenes Todo, oder längere Erklärung, was welcher Eintrag "
+"bedeutet."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:30
+msgid "Gruppenkonfiguration erstellen"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:32
+msgid ""
+"Kopieren Sie hier die Konfiguration einer bestehenden Rechnergruppe oder "
+"erstellen Sie eine neue Gruppenkonfiguration."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:35
+msgid ""
+"Beachten Sie, dass ab LINBO 1.1.0 IDE-Platten wie SATA-Platten angesprochen "
+"werden. MMC steht für eine neue Art von günstigen SSD-Speichern, wie sie "
+"bisher nur in Kameras Verwendung fanden."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:39
+msgid ""
+"Ist die neue Gruppenkonfiguration erstellt, können Sie im Untermenü "
+"„Gruppenkonfiguration editieren“ gegebenenfalls weitere Anpassungen an der "
+"neuen Konfiguration vornehmen."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:44
+msgid "GRUB-Startdatei"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:46
+msgid "GRUB-Startdateien können hier editiert werden."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:49
+msgid "Imageverwaltung"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:51
+msgid ""
+"Es können die bestehenden Abbilder umbenannt oder kopiert und Informationen "
+"oder Beschreibungen zu den Abbilder angesehen werden."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:54
+msgid ""
+"Zum Umbennenen und Kopieren von Images, müssen Sie einen neuen Dateinamen "
+"eingeben. Dateierweiterungen (.cloop/.rsync) können weggelassen werden."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:58
+msgid ""
+"Wenn Sie die Maus auf die Symbole bewegen, werden Hilfetexte angezeigt."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:62
+msgid "Registrypatch editieren"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:64
+msgid ""
+"Klicken Sie auf den Namen einer Registrypatch-Datei, um sie zu editieren."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:67
+msgid ""
+"Wollen Sie eine neue Registrypatch-Datei erstellen, wählen Sie zunächst die "
+"Image-Datei aus dem oberen Dropdown-Menü. Im unteren Dropdown-Menü wählen "
+"Sie die Registrypatch-Datei aus, die als Vorlage für die neue Datei dienen "
+"soll."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:73
+msgid "Postsync-Datei editieren"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:75
+msgid "Hier können Sie die postsync-Dateien der Images bearbeiten."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:78
+msgid "Fernsteuerung"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/linbo.rst:80
+msgid ""
+"Beobachten Sie laufende Fernsteuerungsbefehle oder erstellen Sie neue "
+"Befehle."
+msgstr ""

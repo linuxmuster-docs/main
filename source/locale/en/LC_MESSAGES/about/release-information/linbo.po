@@ -1,0 +1,570 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/about/release-information/linbo.rst:2
+msgid "Neuerungen in linuxmuster-linbo 2.3"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:4
+msgid "Kernel 4.9.x mit **aktuellen Hardwaretreibern**"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:6
+msgid "Native Unterstützung von 64bit-Hardware zur LINBO-Laufzeit"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:7
+msgid "Automatische Erkennung von 32bit PAE, 32bit non-PAE und 64bit-Hardware"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:8
+msgid "Neuer Partitionsmechanismus"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:10
+msgid "Umstellung des lokalen und PXE-Bootsystems auf **Grub** 2"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:12
+msgid ""
+"Vereinfachte Boot-Konfiguration in nur noch einer Grub-Konfigurationsdatei "
+"für lokalen und Netzwerkboot"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:14
+msgid ""
+"Vorkonfigurierte Grub-Bootmenüs können einfach aktiviert und angepasst "
+"werden"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:16
+msgid ""
+"Automatischer Reboot vor jedem Betriebssystemstart minimiert "
+"Hardwareprobleme"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:17
+msgid ""
+"Automatisches Linbo- oder Grub-Update auf lokal gebooteten Clients mit "
+"automatischem Reboot"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:19
+msgid "Unterstützung für Grub-Themes"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:21
+msgid "Unterstützung von **UEFI-Boot**-Clients"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:23
+msgid "Partitionierung im GPT-Modus auf EFI-Systemen"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:24
+msgid ""
+"Die start.conf-Dateien erhalten eine neue Option *SystemType*, der man die "
+"Werte *bios\\|bios64\\|efi32\\|efi64* zuweisen kann. Zunächst ist der "
+"Standardwert *bios* eingetragen, der für alle Clients mit konventionellem "
+"BIOS-Boot funktioniert."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:28
+msgid "Unterstützung von Multiboot-Systemen mit UEFI"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:30
+msgid ""
+"Automatische Erstellung und vereinfachter Download von "
+"**Bootmedien**-Abbilder für USB-Speicher oder zum direkten Brennen auf "
+"CD/DVD"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:34
+msgid "Unterstützung des Setzens der **Systemzeit** durch einen Zeitserver"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:36
+msgid ""
+"Einheiten-Angabe für Partitionsgrößen in der start.conf-Datei (M für "
+"Megabyte, G für Gigabyte, T für Terabyte)"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:40
+msgid "Reparatur und Neuerstellen eines Abbildes nach Partitionierung"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:42
+msgid ""
+"Ab Version 2.3.0 wird ein anderes Partitionsprogramm verwendet, um für UEFI "
+"sowie BIOS valide Partitionstabellen anlegen zu können. Bei "
+"Neupartitionierung erfordert Windows eine Systemstartreparatur und danach "
+"das erneute Erstellen eines Abbildes. Lesen Sie :ref:`hier <howtos-upgrade-"
+"image-label>` nach, wie es genau geht."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:50
+msgid "Boot-Konfiguration mit Grub"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:52
+msgid ""
+"linuxmuster-linbo ab Version 2.3.0 verwendet `Grub "
+"<http://www.gnu.org/software/grub/manual/>`__ als Bootloader für "
+"Netzwerkboot und lokalen Boot."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:58
+msgid ""
+"Die bisherige PXE-Bootkonfiguration unter ``/var/linbo/pxelinux.cfg`` ist "
+"damit obsolet."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:61
+msgid ""
+"Kerneloptionen werden aus der start.conf übernommen. Dafür gibt es eine neue"
+" Option *KernelOptions*, der man Leerzeichen getrennt Kernel-Parameter "
+"übergibt (keine Leerzeichen innerhalb eines Parameters):"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:71
+msgid ""
+"Spezifische PXE-Boot-Einstellungen für eine bestimmte Rechnergruppe werden "
+"jetzt in den Boot-Konfigurationsdateien vorgenommen, die im Verzeichnis "
+"``/var/linbo/boot/grub`` unter dem Namen der jeweiligen Rechnergruppe mit "
+"der Erweiterung *.cfg* angelegt werden. In dieser Datei können für spezielle"
+" Zwecke Anpassungen gemacht werden."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:78
+msgid ""
+"Beim Start über Grub wird zunächst die Konfigurationsdatei geladen, die "
+"lokal unter `/cache/boot/grub/grub.cfg <https://github.com/linuxmuster"
+"/linuxmuster-linbo/blob/2.3.0-8/share/templates/grub.cfg.local>`__ bzw. auf "
+"dem Server unter `/var/linbo/boot/grub/grub.cfg "
+"<https://github.com/linuxmuster/linuxmuster-"
+"linbo/blob/2.3.0-8/share/templates/grub.cfg.pxe>`__ abgelegt ist. Diese "
+"Datei veranlasst den Grub-Bootloader eine etwaige lokal im Cache abgelegte "
+"Grub-Konfiguration auszulesen. Wurde zuvor durch einen von Linbo initiierten"
+" Betriebssystemstart die Grub-Environmentvariable *reboot\\_grub* mit einer "
+"Partitionsinformation belegt, startet Grub das Betriebssystem, das auf "
+"dieser Partition installiert ist. Ist die Variable nicht gesetzt, wird die "
+"gruppenspezifische Konfigurationsdatei nachgeladen, die für die jeweilige "
+"Rechnergruppe spezifische Menüeinträge enthält."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:93
+msgid "Gruppenspezifische Boot-Konfiguration"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:95
+msgid ""
+"Die gruppenspezifische Boot-Konfigurationsdatei wird automatisch beim "
+"Workstationimport (siehe Abschnitt "
+":doc:`../../clients/windows10clients/registration`) aus der start.conf-Datei"
+" der Gruppe erstellt. Sie enthält einen Menü-Eintrag für Linbo und drei "
+"weitere für jedes in der start.conf-Datei definierte Betriebssystem. Das "
+"Menü ist standardmäßig ausgeblendet und so konfiguriert, dass automatisch "
+"Linbo gebootet wird."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:102
+msgid ""
+"Hier ein Beispiel für ein System mit Windows 7. Zunächst der globale Teil:"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:142
+msgid ""
+"Um das Boot-Menü zu aktivieren, setzt man einfach den `Timeout "
+"<http://www.gnu.org/software/grub/manual/grub.html#timeout>`__-Wert hoch. "
+"Nach Ablauf der angegebenen Sekunden wird der `Default "
+"<http://www.gnu.org/software/grub/manual/grub.html#default>`__-Eintrag "
+"gestartet. Schlägt dies fehl, wird versucht den `Fallback "
+"<http://www.gnu.org/software/grub/manual/grub.html#fallback>`__-Eintrag zu "
+"starten."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:150
+msgid ""
+"Mit dem Wert für `gfxpayload "
+"<http://www.gnu.org/software/grub/manual/grub.html#gfxpayload>`__ lassen "
+"sich Auflösung und Farbtiefe anpassen."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:153
+msgid ""
+"Alternative Grub-Themes lassen sich per `theme "
+"<http://www.gnu.org/software/grub/manual/grub.html#theme>`__-Variable "
+"konfigurieren (``set theme=``). Diese müssen in einem Verzeichnis unter "
+"``/var/linbo/boot/grub/themes`` abgelegt werden."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:158
+msgid ""
+"Nach dem globalen Teil folgen die Menüeinträge für **LINBO** und die "
+"Betriebssysteme (je einer für Start, Sync und Neu)."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:161
+msgid ""
+"Der erste Menü-Eintrag (Nr. 0) startet **LINBO**, falls möglich aus dem "
+"lokalen Cache, ansonsten über Netzwerk:"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:201
+msgid ""
+"Danach folgt der Eintrag (Nr. 1) für den unsynchronisierten Start des "
+"Betriebssystems:"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:243
+msgid ""
+"Der nächste Menü-Eintrag (Nr. 2) ermöglicht den synchronisierten Start des "
+"Betriebssystems:"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:274
+msgid "Schließlich folgt der Menü-Eintrag (Nr. 3) für Neu+Start:"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:304
+msgid ""
+"Die Bootmenü-Einträge müssen in der Regel nicht angepasst werden. Je nach "
+"eigener Anforderung kann es eventuell notwendig werden die Reihenfolge oder "
+"den Text der Menü-Einträge zu ändern oder einzelne Einträge (z.B. für den "
+"unsychronisierten Start) zu entfernen. Im letzten Fall löscht man einfach "
+"den kompletten Zeilenbereich von *menuentry* bis zur schließenden "
+"geschweiften Klammer."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:311
+msgid ""
+"Pflegt man eigene Anpassungen in die Datei ein, sollte man noch die Zeile "
+"``### managed by linuxmuster.net ###`` entfernen, damit die Änderungen beim "
+"Workstationsimport nicht wieder überschrieben werden."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:317
+msgid ""
+"Die gruppenspezifische Bootkonfiguration kann auch über die Schulkonsole "
+"angepasst werden."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:321
+msgid ""
+"Hat man das Grub-Bootmenü aktiviert, präsentiert es sich beim nächsten Start"
+" des Clients z.B. so:"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:327
+msgid "Linux-Clients mit UEFI-Boot einrichten"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:329
+msgid ""
+"Für die Installation einer Linux-Distribution auf UEFI-Systemen ist in der "
+"start.conf-Datei eine EFI-Partition (200 MB) vorzusehen. Außerdem ist die "
+"Option *SystemType* auf *efi64* einzustellen. Damit wird die "
+"Clientfestplatte entsprechend dem `GPT-Schema "
+"<https://de.wikipedia.org/wiki/GUID_Partition_Table>`__ partitioniert. Eine "
+"Beispiel-Datei ist auf dem Server unter `/var/linbo/examples/start.conf"
+".ubuntu-efi <https://github.com/linuxmuster/linuxmuster-"
+"linbo/blob/2.3.0-8/var/examples/start.conf.ubuntu-efi>`__ abgelegt."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:338
+msgid ""
+"Die Vorgehensweise unterscheidet sich nicht von der bei BIOS-Systemen: "
+"Nachdem man die Clientfestplatte mit Linbo partitioniert hat, bootet man den"
+" Installationsdatenträger (natürlich im UEFI-Modus) und installiert nach "
+"Anleitung."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:343
+msgid ""
+"Alternativ lässt sich auch das Cloop-Image einer Installation von einem "
+"BIOS-Rechner auf einem UEFI-Rechner einspielen ((Hat hier mit Ubuntu 14.04 "
+"problemlos geklappt und sollte auch mit anderen Linuxen funktionieren)). "
+"Nachdem man den UEFI-Rechner einmal gebootet hat, erstellt man einfach ein "
+"neues Image und verteilt das an die restlichen Rechner. Das Image lässt sich"
+" fürderhin für BIOS- und UEFI-Rechner gleichermaßen verwenden."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:352
+msgid "Windows-Clients mit UEFI-Boot einrichten"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:354
+msgid ""
+"Für Windows auf UEFI-Systemen ist zusätzlich zur EFI-Partition noch eine "
+"*Microsoft reserved partition (msr))* (128 MB) vorzusehen, sodass das "
+"Betriebssystem in die dritte Partition installiert wird. Ein entprechendes "
+"start.conf-Beispiel ist unter `/var/linbo/examples/start.conf.win7-efi "
+"<https://github.com/linuxmuster/linuxmuster-"
+"linbo/blob/2.3.0-8/var/examples/start.conf.win7-efi>`__ abgelegt. Die "
+"Vorgehensweise ist wie gehabt: zuerst Partitionierung mit Linbo, danach "
+"Installation."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:362
+msgid ""
+"Auch mit Windows ist es möglich ein auf einem BIOS-Rechner erstelltes Image "
+"auf der UEFI-Maschine zu verwenden. Zunächst wird das Betriebssystem zwar "
+"nicht starten, aber die Chancen stehen gut, dass es nach einer "
+"Startreparatur mit dem Installationsdatenträger klappt. Hat man Glück und "
+"Windows bootet schließlich, kann man das auf dem UEFI-Rechner erstellte "
+"Image auch auf BIOS-Systemen verwenden."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:370
+msgid "Vorgehensweise bei der Installation von Windows mit UEFI"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:373
+msgid "Erstellung der start.conf-Datei"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:375
+msgid ""
+"Im ersten Schritt erstellen Sie für die Rechnergruppe *win7-efi* unter "
+"*/var/linbo* eine EFI-gerechte start.conf-Datei für eine neue Rechnergruppe "
+"*win7-efi*. Kopieren Sie dazu einfach die Beispiel-Datei "
+"*start.conf.win7-efi* nach */var/linbo* (als Benutzer root auf dem Server):"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:385
+msgid ""
+"Falls Ihre Rechnergruppe anders heißt, passen Sie den Namen der Zieldatei "
+"entsprechend an."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:388
+msgid ""
+"Passen Sie die Partitionsgrößen in der start.conf-Datei nach Ihren "
+"Bedürfnissen an. Sie können Einheiten für die Größen angeben (M für "
+"Megabyte, G für Gigabyte, T für Terabyte):"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:482
+msgid ""
+"Falls Sie keine Datenpartition benötigen, löschen Sie die Definition für die"
+" fünfte Partition einfach heraus. Sie können auch weitere Partitionen "
+"anfügen (bis zu insgesamt 128)."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:486
+msgid ""
+"Beachten Sie, dass für den EFI-Betrieb als erste und zweite Partition eine "
+"EFI- und eine MSR-Partition definiert sein müssen. Diese Partitionen sollten"
+" Sie also nicht ändern."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:490
+msgid ""
+"Ist die start.conf-Datei erstellt, nehmen Sie den Rechner über den "
+"Workstations-Import in die Gruppe *win7-efi* auf."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:494
+msgid "Neueinrichten des Clients"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:496
+msgid ""
+"Aktivieren Sie, falls noch nicht geschehen, in der Rechnerfirmware des "
+"vorbereiteten Rechners den UEFI-Netzwerk-Boot. In den BIOS-Einstellungen "
+"wird dabei oft zwischen *Legacy*- und *UEFI*-Boot unterschieden. "
+"Gegebenenfalls müssen Sie auf das Rechnerhandbuch zurückgreifen, um die "
+"entsprechende Einstellung zu finden."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:502
+msgid ""
+"Bevor Sie den Rechner mit der geänderten Einstellung booten, veranlassen Sie"
+" zunächst das Partitionieren per *linbo-remote* auf dem Server. Angenommen "
+"der Rechner heißt *r100-pc01* bereitet das folgender Befehl auf dem Server "
+"vor:"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:511
+msgid ""
+"Alternativ können Sie in der Schulkonsole als Benutzer *Administrator* unter"
+" *LINBO\\|Fernsteuerung* eine entsprechende Aufgabe erstellen."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:514
+msgid ""
+"Schalten Sie danach den vorbereiteten Rechner ein, wird **LINBO** die "
+"Festplatte gemäß dem in der start.conf-Datei definierten Partitionsschema "
+"neu partionieren und anschließend wieder herunterfahren."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:519
+msgid ""
+"Installieren Sie nun Windows 7 mit Hilfe des Installationsdatenträgers wie "
+"gewohnt. Wählen Sie dazu zu Beginn der Installation die richtige Partition "
+"für die Installation aus (im Beispiel ist es die dritte Partition). "
+"Gegebenenfalls muss sie formatiert werden."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:524
+msgid ""
+"Ist der Rechner eingerichtet, erstellen Sie mit **LINBO** ein Image, das Sie"
+" wie gewohnt auf weitere Rechner derselben Gruppe ausrollen können."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:528
+msgid "Multiboot-Systeme mit UEFI"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:530
+msgid ""
+"Auch mehrere parallel installierte Betriebssysteme sind für Linbo kein "
+"Problem. Es erstellt und verwaltet automatisch die notwendigen UEFI-"
+"Booteinträge."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:537
+msgid "LINBO-Bootmedien erstellen"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:539
+msgid ""
+"Bei der Installation von **linuxmuster-linbo** wird automatisch unter "
+"``/var/linbo/linbo.iso`` eine ISO-Datei erstellt, mit der sich Bootmedien "
+"erzeugen lassen. Das ist nützlich für den Fall, in dem sich bestimmte "
+"Hardware nicht über das Netzwerk booten lässt. Dann brennt man die Datei "
+"``linbo.iso`` einfach auf einen CD-Rohling oder kopiert sie mit einem Tool "
+"wie zum Beispiel dem `ROSA ImageWriter "
+"<http://wiki.rosalab.com/en/index.php/ROSA_ImageWriter#Where_can_I_take_it.3F>`_"
+" auf einen USB-Stick.  Das so erstellte Bootmedium lässt sich universell "
+"einsetzen, denn es erkennt automatisch auf welchem System (BIOS, UEFI, "
+"64bit, 32bit, Non-PAE) es gestartet wird."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:549
+msgid ""
+"Um einen Rechner mit Hilfe des LINBO-Bootmediums einzurichten, bootet man "
+"ihn mit angeschlossenem Netzwerkkabel. Das LINBO-Startmenü präsentiert sich "
+"je nachdem ob es sich um ein BIOS- oder UEFI-System handelt leicht "
+"unterschiedlich:"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:558
+msgid ""
+"LINBO-Startmenü im BIOS-Modus (unter Verwendung von Syslinux), siehe "
+"`Syslinux Menü-System <http://www.syslinux.org/wiki/index.php?title=Menu>`_"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:563
+msgid ""
+"LINBO-Startmenü im UEFI-Modus (unter Verwendung von Grub), siehe `Grub-"
+"Manual <https://www.gnu.org/software/grub/manual/>`_"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:566
+msgid "Die Startoptionen im Einzelnen:"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:569
+msgid "Standardboot"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:569
+msgid ""
+"Es wird mit den Standardparametern bis zur Clientoberfläche durchgestartet."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:576
+msgid "Ersteinrichtung + Neustart"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:572
+msgid ""
+"Die Clientfestplatte wird automatisch nach den Vorgaben der vom Server "
+"heruntergeladenen start.conf-Datei der Rechnergruppe partitioniert und "
+"formatiert.  Anschließend startet der Client neu. Danach kann das Bootmedium"
+" entfernt werden und man arbeitet mit dem lokal im Cache installierten "
+"**LINBO** weiter."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:579
+msgid "Debugmodus"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:579
+msgid "Es wird im Textmodus nur bis zur Konsole gebootet."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:581
+msgid ""
+"Nach einem Timeout von 10 Sekunden wird automatisch die Option "
+"//Standardboot// aktiviert."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:583
+msgid "Die LINBO-Bootparameter lassen sich bei Bedarf anpassen."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:585
+msgid ""
+"Im BIOS-Modus wird nach Betätigen der [TAB]-Taste eine Zeile eingeblendet, "
+"in der sich die Startparameter editieren lassen. Hat man die notwendigen "
+"Anpassungen gemacht, startet die [ENTER]-Taste den Bootvorgang:"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:592
+msgid "Bearbeiten des LINBO-Startmenü im BIOS-Modus"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:594
+msgid ""
+"Im UEFI-Modus lässt sich nach Drücken der [E]-Taste der entsprechende "
+"Bootmenü-Eintrag editieren. Mit [CTRL-X] oder [F10] startet man nach getaner"
+" Anpassung den Bootvorgang."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:600
+msgid "Bearbeiten LINBO-Startmenü im UEFI-Modus"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:604
+msgid "LINBO kann die Systemuhr setzen"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:606
+msgid ""
+"Seit LINBO-Version 2.3.13 kann LINBO die Systemzeit setzen (``hwclock``) und"
+" hat das Programm ``ntpd`` zur Abfrage eines NTP-Servers integriert. Das "
+"bedeutet, dass man mit Hilfe eines postsync-Skriptes sowohl die aktuelle "
+"Uhrzeit mit dem IPFire synchronisieren kann und danach auch die Hardware-Uhr"
+" auf diese Zeit setzen kann."
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:620
+msgid ""
+"Die Synchronisation dauert etwa 6 Sekunden. Die Hardware-Uhr wird so auf UTC"
+" gestellt, woraufhin Windows-Clients angepasst werden müssen, z.B. mit"
+msgstr ""
+
+#: ../../source/about/release-information/linbo.rst:629
+msgid ""
+"Weitere Informationen finden sich `hier "
+"<http://www.linuxmuster.net/wiki/anwenderwiki:linbo:ntp_sync>`_."
+msgstr ""

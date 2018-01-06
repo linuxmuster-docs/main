@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:2
+msgid "Umzug von Leoclient1 nach Leoclient2"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:4
+msgid ""
+"Für den Umzug benötigen Sie die alte virtuelle Festplatte ``old.vdi`` und "
+"den alten Standard-Snapshot ``old-snapshot.vdi`` der leoclient1-VM."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:9
+msgid "Ermitteln Sie die Größe und UUID der alten Festplatte"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:19
+msgid ""
+"Erzeugen Sie eine neue virtuelle Maschine nach :ref:`Anleitung <virtuelle-"
+"maschine-erzeugen>` (mindestens) mit der ermittelten Größe. Im Beispiel wird"
+" die neue VM \"win-migrate\" genannt. Auf die Installation des "
+"Betriebssystems kann verzichtet werden. Ändern Sie Typ und Version des "
+"Betriebssystem und schließen Sie VirtualBox."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:25
+msgid "Ermitteln Sie die UUID der neuen Festplatte:"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:32
+msgid ""
+"Kopieren Sie die alte virtuelle Festplatte auf die neue Festplatten-Datei"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:39
+msgid ""
+"Korrigieren Sie die UUID an den entsprechenden Stellen mit dem Schema ``sed "
+"-i \"s@neue UUID@alte UUID@\" Datei``"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:47
+msgid ""
+"Kopieren Sie den alten Standard-Snapshot in das Unterverzeichnis "
+"``Snapshots`` unter Verwendung des bestehenden Dateinamens der Snapshot-"
+"Datei der neuen virtuellen Maschine (bestehende Datei ersetzen)."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:56
+msgid ""
+"Aus folgender Fehlermeldung kann man die UUIDs des alten (``ef8629ce-"
+"c7c1-424b-8089-0e1d526b0c2c``) und des neuen "
+"(``08b01eb0-2f5b-4091-acf7-cd5f8cbfcef7``) Snapshots herauslesen"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:71
+msgid ""
+"Korrigieren Sie die UUID des Snapshots in den folgenden Dateien wiederum mit"
+" dem Schema ``sed -i \"s@neue UUID@alte UUID@\" Datei``"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:79
+msgid ""
+"Setzen Sie den Standard-Snapshot neu (Skript siehe :ref:`leoclient2"
+"-snapshot-neu`)"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:87
+msgid ""
+"Starten Sie ``leovirtstarter2`` mit normalen Benutzerrechten über die "
+"Konsole, eventuelle Fehlermeldungen können so gesehen werden."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:92
+msgid "Alte Dateien von leoclient1 entfernen"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:94
+msgid "Die Pakete des alten Leoclient müssen von Hand entfernt werden:"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:101
+msgid "Evtl. alte Daten von leoclient (Version 1) entfernen:"
+msgstr ""

@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/getting-started/linuxclients/rollout.rst:2
+msgid "Clients synchronisieren"
+msgstr ""
+
+#: ../../source/getting-started/linuxclients/rollout.rst:4
+msgid ""
+"Um den Client erstmalig zu partitionieren, formatieren, synchronisieren und "
+"zu starten, führen Sie auf dem Server folgenden Befehl aus"
+msgstr ""
+
+#: ../../source/getting-started/linuxclients/rollout.rst:12
+msgid ""
+"(Re-)booten Sie nun den Client und verfolgen Sie die vollautomatische "
+"Einrichtung oder trinken Sie eine Tasse Ihres Lieblingsgetränks."
+msgstr ""
+
+#: ../../source/getting-started/linuxclients/rollout.rst:15
+msgid ""
+"Der Ubuntu-Client startet und aufgenommene Benutzer können sich nun am "
+"System anmelden."
+msgstr ""
+
+#: ../../source/getting-started/linuxclients/rollout.rst:17
+msgid ""
+"Weitere Clients können unter Kenntnis der jeweiligen MAC-Adressen mit "
+"derselben Methode direkt in die Datei ``/etc/linuxmuster/workstations`` "
+"aufgenommen werden."
+msgstr ""
+
+#: ../../source/getting-started/linuxclients/rollout.rst:21
+msgid ""
+"Alternativ kann jeder aufzunehmende Rechner in LINBO gestartet werden und "
+"über die grafische Oberfläche von LINBO registriert werden. Dabei werden die"
+" relevanten Werte automatisch inkrementiert. Lesen Sie dazu :ref"
+":`registration-linbo-label`."
+msgstr ""

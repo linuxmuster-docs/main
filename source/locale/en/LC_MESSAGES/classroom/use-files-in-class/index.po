@@ -1,0 +1,126 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/classroom/use-files-in-class/index.rst:2
+msgid "Unterricht: Austeilen und Einsammeln von Dateien"
+msgstr ""
+
+#: ../../source/classroom/use-files-in-class/index.rst:4
+msgid ""
+"Mithilfe der Schulkonsole können Sie in Ihrem Unterricht folgende Funktionen"
+" nutzen:"
+msgstr ""
+
+#: ../../source/classroom/use-files-in-class/index.rst:6
+#: ../../source/classroom/use-files-in-class/index.rst:14
+msgid "Austeilen"
+msgstr ""
+
+#: ../../source/classroom/use-files-in-class/index.rst:7
+#: ../../source/classroom/use-files-in-class/index.rst:37
+msgid "Einsammeln"
+msgstr ""
+
+#: ../../source/classroom/use-files-in-class/index.rst:9
+msgid ""
+"Wollen Sie die Funktionen unmittelbar in dem Raum nutzen, in dem Sie "
+"unterrichten, wählen Sie diese Funktionen im Menü `aktueller Raum`."
+msgstr ""
+
+#: ../../source/classroom/use-files-in-class/index.rst:11
+msgid ""
+"Möchten Sie vorbereitend diese Funktionen für eine Ihrer Klassen verwenden, "
+"wählen Sie die gewünschte Funktion aus dem Menü `Klassen` aus."
+msgstr ""
+
+#: ../../source/classroom/use-files-in-class/index.rst:16
+msgid ""
+"Nachdem Sie sich an der Schulkonsole als Lehrer angemeldet haben, gehen Sie "
+"zu dem Menüpunkt `Klassen` und dort zum Unterpunkt `Auteilen`."
+msgstr ""
+
+#: ../../source/classroom/use-files-in-class/index.rst:18
+msgid ""
+"Sie sehen dann die Übersicht der auszuteilenden Dateien für eine Klasse."
+msgstr ""
+
+#: ../../source/classroom/use-files-in-class/index.rst:22
+msgid ""
+"Wählen Sie nun oben rechts die gewünschte Klasse im Drop-don Menü aus. "
+"Danach klicken Sie auf den Button Durchsuchen`, um eine auszuteilende Datei "
+"hochzuladen. Es erscheint Ihr Dateimanager. Hier wählen Sie aus dem "
+"geeigenten Verzeichnis die gewünschte Datei aus. Danach erscheint der "
+"Dateiname in der Liste der auszuteilenden Dateien. Um diese noch für das "
+"Austeilen zur Verfügung zu stellen, klicken Sie auf den Button `Daten "
+"absenden`."
+msgstr ""
+
+#: ../../source/classroom/use-files-in-class/index.rst:24
+msgid ""
+"Alle zu verteilende Dateien erscheinen in der darüber angezeigten "
+"Dateiliste. Wollen Sie weitere Dateien hinzufügen, so ist o.g. Vorgang "
+"entsprechend zu wiederholen."
+msgstr ""
+
+#: ../../source/classroom/use-files-in-class/index.rst:28
+msgid ""
+"Um die so bereitgestellten Dateien nun zu verteilen, wählen Sie die Schüler "
+"der Klasse aus, denen Sie die Dateien zur Verfügung stellen wollen. Hierzu "
+"klicken Sie pro Schüler in der Spalte `Auswahl` auf die Auswahlbox. Sollen "
+"alle Schüler der Klasse die Dateien erhalten, so können Sie hierzu die "
+"Auswahlbox unterhalb der Spalte nutzen. Danach klicken Sie auf den Button "
+"`austeilen`. Auszuteilende Dateien liegen dann in Ihrem Heimatverzeichnis "
+"unter `_auszuteilen -> auszuteilen-Klasse`."
+msgstr ""
+
+#: ../../source/classroom/use-files-in-class/index.rst:33
+msgid ""
+"Die auszuteilenden Dateien liegen nun in den Heimatverzeichnissen der "
+"Schüler/innen in dem Ordner `__austeilen -> austeilen-Klasse`."
+msgstr ""
+
+#: ../../source/classroom/use-files-in-class/index.rst:39
+msgid ""
+"Haben Schüler Dateien erstellt, die Sie als Lehrkraft einsammeln möchten, so"
+" müssen Sie Schüler die Dateien in ihrem Heimatverzeichnis im Ordner "
+"`__einsammeln` ablgen. Es kann auch in diesem Ordner ein Verzeichnis "
+"angelegt werden, in das mehrere Dateien abgelegt werden. Beim Einsammlen "
+"würden dann pro Schüler das Verzeichnis mit allen enthaltenden Dateien "
+"eingesammelt werden."
+msgstr ""
+
+#: ../../source/classroom/use-files-in-class/index.rst:41
+msgid ""
+"Haben die Schüler ihre Dateien entsprechend kopiert, rufen Sie in der "
+"Schulkonsole das Menü `Klassen` und dort das Untermenü `Einsammeln` auf."
+msgstr ""
+
+#: ../../source/classroom/use-files-in-class/index.rst:45
+msgid ""
+"Sie sehen hinter jedem Schüler, ob und welche Dateien bereitgestellt wurden."
+" Wählen Sie aus, ob die einzusammelnden Dateien erhalten bleiben oder "
+"gelöscht werden sollen. Wählen Sie die Schüler/innen, von denen Sie "
+"einsammeln wollen, oder die ganze Klasse aus."
+msgstr ""
+
+#: ../../source/classroom/use-files-in-class/index.rst:49
+msgid ""
+"Sie finden die eingesammelten Arbeiten in Ihrem Heimatverzeichnis unter "
+"„_eingesammelt -> eingesammelt-Klasse“."
+msgstr ""

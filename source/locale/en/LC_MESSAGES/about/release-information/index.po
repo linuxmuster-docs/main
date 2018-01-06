@@ -1,0 +1,39 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/about/release-information/index.rst:9
+msgid "Was ist neu in 6.2?"
+msgstr ""
+
+#: ../../source/about/release-information/index.rst:11
+msgid ""
+"Nehmen Sie das Upgrade zu linuxmuster.net 6.2 wahr und folgen Sie der :doc"
+":`Upgrade-Anleitung <../../systemadministration/maintenance/upgrade/index>`."
+" Lesen Sie dennoch zunächst die Liste der Neuerungen und bekannten Probleme."
+msgstr ""
+
+#: ../../source/about/release-information/index.rst:23
+msgid "Release-Informationen früherer Veröffentlichungen"
+msgstr ""
+
+#: ../../source/about/release-information/index.rst:25
+msgid ""
+"`Release-Informationen zur linuxmuster.net 5.1, 6.0 und 6.1 "
+"<https://www.linuxmuster.net/wikiarchiv/dokumentation:handbuch:preparation:features>`_"
+msgstr ""

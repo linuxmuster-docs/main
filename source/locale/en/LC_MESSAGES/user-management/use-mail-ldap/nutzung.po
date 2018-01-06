@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/user-management/use-mail-ldap/nutzung.rst:2
+msgid "Nutzung einer eigenen Mailadresse im LDAP"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/nutzung.rst:4
+msgid "Voraussetzung ist die korrekte Installation."
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/nutzung.rst:6
+msgid ""
+"Starten Sie die Schulkonsole und melden Sie sich an. Auf der Seite \"Mein "
+"Konto\" sehen Sie jetzt einen neuen Bereich mit der Überschrift **Private "
+"Mailadresse**."
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/nutzung.rst:10
+msgid "Mailadresse eintragen"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/nutzung.rst:11
+msgid ""
+"Voreingestellt ist die interne Mailadresse nach dem Muster "
+"<Benutzer>@<Domain>. Tragen Sie die gewünschte Mailadresse ein und "
+"bestätigen Sie diese durch Klicken auf **Mailadresse ändern**."
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/nutzung.rst:16
+msgid "Mailadresse entfernen"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/nutzung.rst:17
+msgid ""
+"Entfernen Sie den Eintrag im Feld **Mailadresse** und klicken Sie auf "
+"**Mailadresse ändern**. Dadurch wird der Standardeintrag nach dem Muster "
+"<Benutzer>@<Domain> wieder hergestellt."
+msgstr ""

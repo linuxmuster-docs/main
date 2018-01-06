@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/addons/backupmondo/uebersicht.rst:2
+msgid "Übersicht"
+msgstr ""
+
+#: ../../source/addons/backupmondo/uebersicht.rst:4
+msgid ""
+"Das notwendige Paket **mondo** befindet sich in einem externen Repository. "
+"Dieses muss also vor der Installation eingebunden werden. Zur Vorgehensweise"
+" siehe Abschnitt :doc:`installation`."
+msgstr ""
+
+#: ../../source/addons/backupmondo/uebersicht.rst:10
+msgid ""
+"Backup und Restore des Servers können in linuxmuster.net 6.1 mit dem "
+"Opensource-Tool `Mondo Rescue`_ realisiert werden. Es ermöglicht:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/uebersicht.rst:12
+msgid "Vollbackup im Live-Betrieb;"
+msgstr ""
+
+#: ../../source/addons/backupmondo/uebersicht.rst:13
+msgid "Automatische Backups per Cronjob;"
+msgstr ""
+
+#: ../../source/addons/backupmondo/uebersicht.rst:14
+msgid "Backup-Strategien mit inkrementellen und differentiellen Backups;"
+msgstr ""
+
+#: ../../source/addons/backupmondo/uebersicht.rst:15
+msgid "Backup auf Wechselplatte/NFS-Share;"
+msgstr ""
+
+#: ../../source/addons/backupmondo/uebersicht.rst:16
+msgid "Restore von Festplatte, NFS oder CD-/DVD-Medien;"
+msgstr ""
+
+#: ../../source/addons/backupmondo/uebersicht.rst:17
+msgid "Komplettwiederherstellung des Servers inklusive LVM- oder Raidsystem;"
+msgstr ""
+
+#: ../../source/addons/backupmondo/uebersicht.rst:18
+msgid "Wiederherstellung einzelner Dateien und Verzeichnisse im Live-Betrieb."
+msgstr ""
+
+#: ../../source/addons/backupmondo/uebersicht.rst:22
+msgid ""
+"Weiterführende Informationen zu Mondo Rescue finden Sie im `MondoRescue "
+"HOWTO`_."
+msgstr ""
+
+#: ../../source/addons/backupmondo/uebersicht.rst:25
+msgid ""
+"Führen Sie nach der Erstinstallation des Servers - noch bevor Sie Benutzer "
+"und Arbeitsstationen einrichten - testweise ein Vollbackup und danach einen "
+"Restore durch, um sicherzugehen, dass *MondoRescue* mit Ihrer Hardware "
+"kompatibel ist. Falls Probleme mit IDE-Festplatten auftreten, sollten Sie "
+"SATA-Platten einsetzen oder ein alternatives Backupverfahren wählen."
+msgstr ""

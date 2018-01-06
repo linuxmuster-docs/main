@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:2
+msgid "Paket linuxmuster-migration installieren"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:4
+msgid ""
+"Je nach Quellsystem sind zur Installation des linuxmuster-migration Pakets "
+"verschiedene Paketquellen einzutragen, die zum Qellsystem passen müssen."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:6
+msgid "In nachstehender Tabelle sind diese zusammengefasst:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:9
+msgid "Quellsystem"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:9
+msgid "Repo"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:9
+msgid "Eintrag sources.list"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:11
+msgid "paedML 4.X"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:11
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:14
+msgid "openml5-stable"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:11
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:14
+msgid ""
+"deb http://pkg.linuxmuster.net/ openml5-stable/ deb-src "
+"http://pkg.linuxmuster.net/ openml5-stable/"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:14
+msgid "openML 5.X linuxmuster.net 5.X"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:17
+msgid "linuxmuster.net 6.0"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:17
+msgid "precise"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:17
+msgid ""
+"deb http://pkg.linuxmuster.net/ precise/ deb-src http://pkg.linuxmuster.net/"
+" precise/"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:20
+msgid "linuxmuster.net 6.1"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:20
+msgid "babo"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:20
+msgid ""
+"deb http://pkg.linuxmuster.net/ babo/ deb-src http://pkg.linuxmuster.net/ "
+"babo/"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:23
+msgid "linuxmuster.net 6.2"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:23
+msgid "babo62"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:23
+msgid ""
+"deb http://pkg.linuxmuster.net/ babo62/ deb-src http://pkg.linuxmuster.net/ "
+"babo62/"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:27
+msgid ""
+"Ergänzen Sie in der nachstehendeb Datei gemäß Ihres eingesetzten "
+"Quellsystems die Eintragungen für das Repository:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:33
+msgid "Danach aktualisieren Sie die Paketquellen mit nachstehendem Befehl:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:39
+msgid "Anschließend installieren Sie das Paket **linuxmuster-migration**:"
+msgstr ""

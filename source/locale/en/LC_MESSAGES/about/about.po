@@ -1,0 +1,44 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/about/about.rst:2
+msgid "Was ist linuxmuster.net?"
+msgstr ""
+
+#: ../../source/about/about.rst:4
+msgid ""
+"linuxmuster.net ist eine umfassende Komplettlösung zum Betrieb schulischer "
+"IT-Infrastruktur."
+msgstr ""
+
+#: ../../source/about/about.rst:6
+msgid "benutzerfreundlich"
+msgstr ""
+
+#: ../../source/about/about.rst:7
+msgid "anpassungsfähig"
+msgstr ""
+
+#: ../../source/about/about.rst:8
+msgid "hilfsbereit"
+msgstr ""
+
+#: ../../source/about/about.rst:9
+msgid "nachhaltig"
+msgstr ""

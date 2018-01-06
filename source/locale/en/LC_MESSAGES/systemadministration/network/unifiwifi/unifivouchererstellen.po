@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/network/unifiwifi/unifivouchererstellen.rst:2
+msgid "WLAN-Gutscheine / Voucher erstellen"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivouchererstellen.rst:4
+msgid "Jetzt müssen die Gutscheine noch erzeugt und ausgedruckt werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivouchererstellen.rst:7
+msgid "Schritt für Schritt"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivouchererstellen.rst:9
+msgid ""
+"Gehen Sie auf `<https://unifi:8443/manage/hotspot>`_ und melden Sie sich an."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivouchererstellen.rst:14
+msgid "Gehen Sie auf `GUTSCHEINE`->`GUTSCHEIN ERSTELLEN`."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivouchererstellen.rst:19
+msgid ""
+"Füllen Sie die Felder des Dialogfensters aus und speichern Sie Ihre Eingabe."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivouchererstellen.rst:24
+msgid "In dieser Ansicht sehen Sie alle gültigen Gutscheine."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivouchererstellen.rst:26
+msgid ""
+"Sie haben die Möglichkeit, einzelne Gutscheine, alle nicht benutzten "
+"Gutscheine oder alle Gutscheine, die an einem bestimmten Zeitpunkt erstellt "
+"wurden, zu drucken."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifivouchererstellen.rst:28
+msgid "Hier können Sie auch Gutscheine löschen."
+msgstr ""

@@ -1,0 +1,453 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja <npm@zefanjas.de>, 2018\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:2
+msgid "Windows 10 Image erstellen"
+msgstr "Create Windows 10 Image"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:5
+msgid "Computer partitionieren"
+msgstr "Partition your Computer"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:7
+msgid ""
+"Die Partitionierung für die Installation des Betriebsystems **muss** durch "
+"linbo erfolgen, bevor Windows installiert wird, andernfalls kann durch linbo"
+" kein Festplattenabbild erstellt werden."
+msgstr ""
+"The partitioning for the operating system installation **has to be done** by"
+" Linbo before Windows is installed, otherwise Linbo can't create the hard "
+"disk images."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:10
+msgid ""
+"Starten Sie den PC auf dem Sie das Image erstellen möchten neu und booten "
+"wieder vom Netzwerk (PXE). Sie erhalten nun folgende Ansicht:"
+msgstr ""
+"Restart the PC on which you want to create the image and boot again from the"
+" network (PXE). You'll get the following screen:"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:12
+msgid "|100000000000032A00000261ABEB2582_png|"
+msgstr "|100000000000032A00000261ABEB2582_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:14
+msgid ""
+"Wechseln Sie auf den Reiter Imaging , geben Sie das Passwort ein und "
+"entfernen den Haken bei Timeout."
+msgstr "Navigate to the Imaging tab, enter the password and uncheck timeout."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:18
+msgid "|100000000000032A000002612A58B1AE_png|"
+msgstr "|100000000000032A000002612A58B1AE_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:20
+msgid ""
+"Klicken Sie auf die Schaltfläche Partitionieren und bestätigen die Meldung "
+"mit ``Ja``."
+msgstr "Click the button ``Partition`` and confirm the message with ``Yes``"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:23
+msgid "|100000000000032A000002611AE27D91_png|"
+msgstr "|100000000000032A000002611AE27D91_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:25
+msgid "Nach diesem Vorgang können Sie den Rechner neu starten."
+msgstr "After this, you can restart the computer."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:27
+msgid "|100000000000032A00000261D7ACA8F5_png|"
+msgstr "|100000000000032A00000261D7ACA8F5_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:31
+msgid "Windows installieren"
+msgstr "Install Windows"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:33
+msgid ""
+"Legen Sie den Windows Installationsdatenträger ein und booten Sie von der "
+"CD. Warten Sie bis der Installation-Assistent geladen ist und wählen Ihre "
+"Sprache aus. Bestätigen Sie mit ``Weiter``."
+msgstr ""
+"Insert the Windows installation disc and boot from the CD. Wait for the "
+"installation wizard to load and select your language. Confirm with ``Next``"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:37
+msgid "|100000000000040A00000319F588B76C_png|"
+msgstr "|100000000000040A00000319F588B76C_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:39
+msgid "Klicken Sie auf ``Jetzt Installieren``."
+msgstr "Click on ``Install Now``"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:41
+msgid "|100000000000040A00000319DD5ADC8E_png|"
+msgstr "|100000000000040A00000319DD5ADC8E_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:43
+msgid ""
+"Akzeptieren Sie die Lizenzbedingungen in dem Sie den entsprechenden Haken "
+"setzen und mit Weiter bestätigen."
+msgstr ""
+"Accept the license conditions and set the corresponding hook and confirm "
+"with ``Next``."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:46
+msgid "|100000000000040A00000319E918A8C7_png|"
+msgstr "|100000000000040A00000319E918A8C7_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:48
+msgid "Klicken Sie auf Benutzerdefiniert: nur Windows installieren."
+msgstr "Click on Custom: Install Windows only."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:50
+msgid "|100000000000040A00000319A60B7FD3_png|"
+msgstr "|100000000000040A00000319A60B7FD3_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:52
+msgid ""
+"Wählen Sie die Partition aus auf der Windows installiert werden soll. Sie "
+"können die richtige Partition anhand der Größe in GB erkennen. In unserem "
+"Beispiel 50GB. Klicken Sie auf ``Weiter``."
+msgstr ""
+"Select the partition on which Windows should be installed. You can identify "
+"the correct partition in terms of size in GB. In our example 50GB. Click on "
+"``Netx``."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:56
+msgid "|100000000000040A00000319B79CACB3_png|"
+msgstr "|100000000000040A00000319B79CACB3_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:58
+msgid "Warten Sie bis die Installation beendet ist."
+msgstr "Wait until the installation has completed."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:60
+msgid "|100000000000040A000003193E3F3EC2_png|"
+msgstr "|100000000000040A000003193E3F3EC2_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:63
+msgid "Wählen Sie die Option ``Einstellungen anpassen``."
+msgstr "Select the option ``Adjust settings``."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:65
+msgid "|100000000000040A000003163D31984A_png|"
+msgstr "|100000000000040A000003163D31984A_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:67
+msgid "Konfigurieren Sie die Datenschutzeinstellungen nach Ihren Wünschen."
+msgstr "Configure the privacy settings to your needs."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:69
+msgid "|100000000000040A000003162FF66162_png|"
+msgstr "|100000000000040A000003162FF66162_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:71
+msgid "|100000000000040A0000031696C05077_png|"
+msgstr "|100000000000040A0000031696C05077_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:73
+msgid ""
+"Geben Sie nun einen Benutzer an, der lokal in Windows als administrativer "
+"Account verwendet wird. Dieser wird im Netzwerk nicht verwendet. Vergeben "
+"Sie ein Passwort für den lokalen Benutzer und klicken auf ``Weiter``."
+msgstr ""
+"Now enter a user who is locally used in Windows as an administrative "
+"account. This account is not used on the network. Set a new password for the"
+" local user and click on ``Next``."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:77
+msgid "|10000000000004090000031BD6C06D3C_png|"
+msgstr "|10000000000004090000031BD6C06D3C_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:80
+msgid ""
+"Sie haben Windows auf dem Rechner installiert und sollten nun auf den "
+"Desktop gelangen."
+msgstr ""
+"You have installed Windows on the computer and you should be redirected to "
+"the desktop."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:82
+msgid ""
+"Bevor Sie Herunterfahren müssen einige Anpassungen vorgenommen werden. Dazu "
+"benötigen Sie den von linuxmuster.net bereitgestellten Regpatch."
+msgstr ""
+"Before you shutdown the computer some adjustments have to be made. You will "
+"need the regpatch provided by linuxmuster.net."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:84
+msgid "|100000000000040900000309C0521273_png|"
+msgstr "|100000000000040900000309C0521273_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:87
+msgid "Regpatch bereitstellen"
+msgstr "provide regpatch"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:89
+msgid ""
+"Um den Regpatch für den Windowsclient bereitzustellen müssen Sie diesen auf "
+"der Konsole des Servers zunächst in das Homeverzeichnis des pgmadmins "
+"kopieren."
+msgstr ""
+"To provide the regpatch for the Windows client, you have to copy it first on"
+" the server console to the home directory of pgmadmin."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:95
+msgid "|1000000000000288000001884164BC97_png|"
+msgstr "|1000000000000288000001884164BC97_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:98
+msgid "Windows konfigurieren"
+msgstr "Configuring Windows"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:100
+msgid ""
+"Es müssen einige essenzielle Einstellungen vorgenommen werden um Windows 10 "
+"benutzen zu können."
+msgstr "Some essential settings have to be made to be able to use Windows 10."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:102
+msgid ""
+"Öffnen Sie den Windows Explorer und tragen in der Navigationsleiste den UNC-"
+"Pfad ``\\\\server\\pgmadmin`` ein, um das Heimatverzeichnis des Benutzers "
+"*pgmadmin* auf dem Server zugreifen zu können."
+msgstr ""
+"Open the Windows Explorer and put the UNC path ``\\\\server\\pgmadmin`` in "
+"the navigation bar to access the *pgmadmin*'s home directory on the server."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:105
+msgid "|100000000000040900000309AD122632_png|"
+msgstr "|100000000000040900000309AD122632_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:107
+msgid ""
+"Geben Sie die Benutzerdaten für den user pgmadmin ein und bestätigen Sie mit"
+" ``OK``."
+msgstr "Enter the credentials for the user pgmadmin and confirm with ``OK``"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:109
+msgid "|100000000000040900000309D4AC838A_png|"
+msgstr "|100000000000040900000309D4AC838A_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:111
+msgid "Kopieren Sie die Datei win10-global auf den Desktop."
+msgstr "Copy the file win10-global to the desktop."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:113
+msgid "|100000000000040900000309A0EFAE74_png|"
+msgstr "|100000000000040900000309A0EFAE74_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:115
+msgid "|1000000000000409000003095FAC6141_png|"
+msgstr "|1000000000000409000003095FAC6141_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:117
+msgid "Doppelklicken Sie die Datei und wählen bei beiden Abfragen ``Ja``."
+msgstr "Double-click the file and click in both dialogs on ``Yes``."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:119
+msgid "|100000000000040900000309C9151860_png|"
+msgstr "|100000000000040900000309C9151860_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:121
+msgid "|1000000000000409000003090DE77B1D_png|"
+msgstr "|1000000000000409000003090DE77B1D_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:123
+msgid ""
+"Ab Windows 10 Stand 1709 ist der Domänenbeitritt nicht ohne weiteres zu "
+"bewerkstelligen. Bei Windows 10 Prof muss innerhalb der ersten 15 Tage nach "
+"Installation der Domain beigetreten werden. Hier ist SMB 1 Client noch "
+"installiert, deinstalliert sich aber nach den 15 Tagen sofern es nicht "
+"verwendet wird. Anders bei den Versionen Education und Enterprise, hier muss"
+" Samba 1.0 nachinstalliert werden. Eine Anleitung ist unter "
+"https://ask.linuxmuster.net/t/windows-10-1709-laesst-sich-nicht-in-domain-"
+"aufnehemen/1402/1 verfügbar. Bitte zu erst lesen!"
+msgstr ""
+"As of Windows 10 version 1709, domain joining cannot be achieved without "
+"difficulty. With Windows 10 Prof you have to join the domain within the "
+"first 15 days after installation. Here SMB 1 Client is still installed, but "
+"will be uninstalled after 15 days if not in use. It is different with the "
+"Education and Enterprise versions, Samba 1.0 must be installed here. A "
+"manual is available at https://ask.linuxmuster.net/t/windows-10-1709-laesst-"
+"sich-nicht-in-domain-aufnehemen/1402/1 Please read first!"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:125
+msgid ""
+"Klicken Sie mit der rechten Maustaste auf das Windows-Symbol oder drücken "
+"Sie Windows-Taste + X Klicken Sie auf ``System``."
+msgstr ""
+"Click with the right mouse button on the Windows icon or press the Windows "
+"key+X. Click on ``System``."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:128
+msgid "|100000000000040900000309D7642C20_png|"
+msgstr "|100000000000040900000309D7642C20_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:130
+msgid ""
+"Klicken Sie in der Übersicht bei dem Computername auf ``Einstellungen "
+"ändern``."
+msgstr "Click on ``Change Settings`` (next to the computer name)."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:132
+msgid "|1000000000000409000003093D2980DF_png|"
+msgstr "|1000000000000409000003093D2980DF_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:134
+msgid "Klicken Sie auf ``Ändern``."
+msgstr "Click on ``Change``."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:136
+msgid "|100000000000040900000309727EA44E_png|"
+msgstr "|100000000000040900000309727EA44E_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:138
+msgid ""
+"Tragen Sie den Computernamen ein den Sie in Linbo für den Rechner vergeben "
+"haben. In unserem Beispiel r123-pc02. Wählen Sie Domäne und tragen den "
+"Domänennamen ein, im Beispiel ``schule``."
+msgstr ""
+"Enter the computer name you assigned in Linbo for the computer. In our "
+"example, r123-pc02. Choose Domain and enter the domain name, in our example "
+"``schule``"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:141
+msgid "|100000000000040900000309AFC96356_png|"
+msgstr "|100000000000040900000309AFC96356_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:143
+msgid ""
+"Geben Sie einen Benutzer der Gruppe Administratoren an. Beispielsweise den "
+"Benutzer ``domadmin`` mit dem dazugehörigen Passwort und bestätigen mit "
+"``Ok``."
+msgstr ""
+"Enter one of the administrator users. For example, the user ``domadmin`` "
+"with the appropriate password and confirm with ``Ok``."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:146
+msgid "|10000000000004090000030964D1E68C_png|"
+msgstr "|10000000000004090000030964D1E68C_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:148
+msgid ""
+"Bestätigen Sie die Meldung mit ``Ok``, schließen Sie alle Fenster und "
+"klicken Sie bei der Meldung auf ``Jetzt neu starten``."
+msgstr ""
+"Confirm the message with ``Ok``, close all the windows and click on "
+"``Restart Now``."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:150
+msgid "|100000000000040900000309827575BC_png|"
+msgstr "|100000000000040900000309827575BC_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:152
+msgid "|1000000000000409000003095F824A32_png|"
+msgstr "|1000000000000409000003095F824A32_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:154
+msgid "|100000000000040900000309B4D432CA_png|"
+msgstr "|100000000000040900000309B4D432CA_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:156
+msgid ""
+"Nach einem Neustart können sie in der links-unteren Ecke Anderer Benutzer "
+"wählen um sich anschließend mit einem Domänenbenutzer anzumelden."
+msgstr ""
+"After rebooting you can choose ``Other User`` in the left-bottom corner to "
+"log in with a domain user."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:158
+msgid "|100000000000040900000309092F3627_png|"
+msgstr "|100000000000040900000309092F3627_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:160
+msgid ""
+"Sie können nun Änderungen an Windows vornehmen. Konfigurieren Sie das System"
+" nach Ihren Wünschen und fahren Windows danach herunter."
+msgstr ""
+"You can now make changes to Windows. Configure the system to your needs and "
+"then shutdown Windows."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:163
+msgid "Image auf Server schreiben"
+msgstr "Write Image to the Server"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:165
+msgid ""
+"Starten Sie den Computer, booten per pxe und wechseln Sie in LINBO auf den "
+"Reiter ``Imaging``. Klicken Sie auf ``Image erstellen``. Starten Sie den "
+"Vorgang mit der Schaltfläche ``Erstellen+Hochladen``."
+msgstr ""
+"Restart the computer, boot via pxe and switch in Linbo to the tab "
+"``Imaging``. Click on ``Create Image``. Start the process by clicking on "
+"``Create and Upload``."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:168
+msgid "|10000000000003300000026052C7AA3A_png|"
+msgstr "|10000000000003300000026052C7AA3A_png|"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:170
+msgid ""
+"Bei dieser Methode wird sofern ein Image mit dem Namen bereits vorhanden "
+"ist, das alte Image umbenannt und das aktuelle Image nimmt dessen Platz als "
+"aktives Image ein."
+msgstr ""
+"In this method, as long as an image with the same name already exists, the "
+"old image will be renamed and the current image takes its place as the "
+"active image."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:173
+msgid ""
+"Sobald der Vorgang abgeschlossen ist, können Sie den Zustand der "
+"Installation nun immer auf diesen Punkt zurücksetzen."
+msgstr ""
+"As soon as the process is completed, you can now always reset the status of "
+"the installation to this point."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:175
+msgid "Das Image ist auf dem Server verfügbar."
+msgstr "The image is available on the server."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:177
+msgid ""
+"Soll es auch auf andere Rechner ausgerollt werden, so muss noch die "
+"``image.reg`` auf dem Server bereitgestellt werden. Dazu kopiert man die "
+"``/var/linbo/win10.image.reg`` nach ``/var/linbo/<BEZEICHNUNG DER "
+"RECHNERGRUPPE>.cloop.reg``."
+msgstr ""
+"If you want to roll it out to other computers, the ``image. reg`` has to be "
+"made available on the server. Copy the ``/var/linbo/win10.image.reg`` to "
+"``/var/linbo/<BEZEICHNUNG DER RECHNERGRUPPE>.cloop.reg``."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:180
+msgid "Im Beispiel würde das so gehen:"
+msgstr "Here's the example:"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:186
+msgid ""
+"Ab sofort wird linbo die image.reg nach dem sync eines Betriebsystems in die"
+" Registry des gesyncten Rechners eintragen und so z.B. den Hostnamen auf den"
+" korrekten Wert setzen."
+msgstr ""
+"From now on linbo will enter the image.reg file after the sync of an "
+"operating system into the registry of the synced computer and set the "
+"hostname to the correct value."

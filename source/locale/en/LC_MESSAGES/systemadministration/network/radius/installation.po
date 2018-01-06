@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/network/radius/installation.rst:2
+msgid "Installation & Konfiguration"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/installation.rst:5
+msgid "Radius-Server installieren"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/installation.rst:7
+msgid ""
+"In den Paketquellen von Linuxmuster.net gibt es das Paket ``linuxmuster-"
+"freeradius``. Installieren Sie das Paket mit"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/installation.rst:15
+msgid "Firewall konfigurieren"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/installation.rst:17
+msgid ""
+"Nun muss die Firewall konfiguriert werden, damit die Anfragen auch auf dem "
+"Server ankommen (UDP, Port 1182). Dazu bearbeitet man die Datei "
+"``/etc/linuxmuster/allowed_ports`` und fügt in der Zeile \"udp\" den "
+"entsprechenden Port hinzu."
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/installation.rst:24
+msgid ""
+"Damit die Änderungen auf der Firewall (IPFire) wirksam werden, geben Sie "
+"bitte folgenden Befehl ein:"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/installation.rst:30
+msgid ""
+"Falls Sie eine andere Firewall als die empfohlene Firewalllösung (IPFire) "
+"verwenden, müssen Sie die entsprechende Firewallregel selbst einrichten!"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/installation.rst:34
+msgid "Radius-Servers testen"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/installation.rst:36
+msgid ""
+"In der Datei ``/etc/freeradius/users`` in der folgenden Zeile das "
+"Kommentarzeichen (``#``) entfernen."
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/installation.rst:42
+msgid ""
+"Als nächstes überprüft man, ob ``localhost`` in der Datei "
+"``/etc/freeradius/clients`` eingetragen ist. Dieser Eintrag kann nach dem "
+"Test wieder entfernt werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/installation.rst:51
+msgid ""
+"Nun kann man, nach einem Neustart des Radius-Servers, die Authentifizierung "
+"für diesen User testen."
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/installation.rst:58
+msgid "Als Ausgabe sollte man folgendes erhalten:"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/installation.rst:70
+msgid ""
+"Wenn man eine ähnliche Ausgabe erhält, kann nun der Zugriff auf das LDAP-"
+"Verzeichnis eingerichtet werden, damit man sich mit seinem Benutzernamen und"
+" Passwort der linuxmuster.net anmelden kann. Dazu muss der Client (Access "
+"Point, Captive Portal Server, Wireless Controller) in die Datei "
+"``/etc/freeradius/clients`` eingetragen werden. Bitte passen Sie den Client "
+"Namen, die IP-Adresse und das Passwort entsprechend an."
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/installation.rst:80
+msgid "Radius-Server konfigurieren"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/installation.rst:82
+msgid ""
+"Für die Authentifizierung mit einem Radius-Server gibt es verschiedene "
+"Protokolle, welche festlegen, wie die Übertragung und Authentifizierung "
+"abläuft. Dieses kann man in der Datei ``/etc/freeradius/eap.conf`` "
+"festlegen. Überprüfen Sie folgende Einstellungen und entfernen Sie, falls "
+"notwendig, die Kommentarzeichen."
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/installation.rst:99
+msgid ""
+"MD5 kommt als Protokoll nicht in Frage, da die Passwörter nicht als MD5 im "
+"LDAP gespeichert sind!"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/installation.rst:101
+msgid ""
+"Überprüfen Sie weiterhin den Parameter ``auto_header`` in der Datei "
+"``/etc/freeradius/radiusd.conf``."
+msgstr ""

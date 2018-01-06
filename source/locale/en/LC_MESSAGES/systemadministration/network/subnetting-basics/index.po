@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/network/subnetting-basics/index.rst:2
+msgid "Netzsegmentierung - Grundlagen"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/index.rst:4
+msgid ""
+"Im `aktuellen Netzbrief <http://www.it.kultus-bw.de/,Lde/Startseite/IT-"
+"Sicherheit/Netztechnik+_+Netzbrief>`_ des Landes Baden-Württemberg wird "
+"empfohlen, das Schulnetzwerk aus datenschutzrechtlichen Erwägungen in "
+"mindestens drei Subnetze zu untergliedern: Lehrernetz, Schülernetz und "
+"Servernetz."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/index.rst:10
+msgid ""
+"Sehr ausführliche Informationen, wie  dies in linuxmuster.net umgesetzt "
+"werden kann finden Sie im `linuxmuster.net Wiki "
+"<http://www.linuxmuster.net/wikiarchiv/dokumentation:addons:subnetting:start>`_"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/index.rst:13
+msgid ""
+"Diese Anleitung soll den einfachsten Spezialfall dokumentieren, das Netz in "
+"drei Segmente aufzuteilen, so dass die Vorgaben des Netzbriefs erfüllt sind."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/index.rst:17
+msgid ""
+"Eine Erweiterung um weitere Subnetzbereiche, beispielsweise "
+"klassenraumweise, ist später ohne Schwierigkeiten möglich."
+msgstr ""

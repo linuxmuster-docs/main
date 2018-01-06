@@ -1,0 +1,81 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/maintenance/migrate/restore-via-migration-script.rst:2
+msgid "Wiederherstellung"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/restore-via-migration-script.rst:4
+msgid ""
+"Für die Datenmigration auf dem nun neu installierten Zielsystem ist das "
+"Shell-Skript **linuxmuster-migration-restore** zuständig:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/restore-via-migration-script.rst:7
+msgid "Die Optionen des Skript können wie folgt ausgegeben werden:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/restore-via-migration-script.rst:28
+msgid ""
+"Das Quellverzeichnis mit den Migrationsdaten muss mit dem Parameter -d "
+"zwingend angegeben werden."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/restore-via-migration-script.rst:30
+msgid ""
+"Mit der Option -i kann das Root-Passwort der Firewall übergeben werden. Gibt"
+" man es nicht auf der Kommandozeile an, wird danach gefragt."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/restore-via-migration-script.rst:32
+msgid ""
+"Liegt das Quellverzeichnis auf einem NFS-Share, kann mit der Option -t ein "
+"lokales Verzeichnis angegeben werden, in das die Migrationsdaten aus dem "
+"Quellverzeichnis kopiert werden. Das ist notwendig, da während des Restores "
+"das Netzwerk neu gestartet wird und damit die Verbindung zum Share verloren "
+"ginge. Gibt man kein lokales Verzeichnis an, sucht das Skript nach genügend "
+"freiem Platz im Wurzelverzeichnis, dann unter ``/var/tmp`` und ``/home``. "
+"Die Verarbeitung wird abgebrochen, falls nicht genügend Speicherplatz "
+"gefunden wird. Im anderen Fall wird ein temporäres Verzeichnis migration.tmp"
+" angelegt, das nach Abschluss der Verarbeitung wieder gelöscht wird."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/restore-via-migration-script.rst:34
+msgid ""
+"Die Ausgaben des Skripts werden in die Datei ``/var/log/linuxmuster"
+"/migration-restore.log`` geschrieben. Die Remote-Ausführung des Restore-"
+"Skripts per SSH-Konsole ist nicht zu empfehlen, da wie schon erwähnt das "
+"Netzwerk neu gestartet wird. Ist der Zugriff nur per SSH möglich, muss das "
+"Skript in einer **Screen-Session** gestartet werden, damit es komplett "
+"durchlaufen kann."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/restore-via-migration-script.rst:38
+msgid "Nacharbeit"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/restore-via-migration-script.rst:40
+msgid ""
+"Falls sich bei der Wiederherstellung der IP-Bereich des Zielsystems ändert, "
+"muss dies ebenfalls händisch in ``/etc/default/atftpd`` abgeändert werden."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/restore-via-migration-script.rst:42
+msgid "Abschließend muss der Server neu gestartet werden."
+msgstr ""

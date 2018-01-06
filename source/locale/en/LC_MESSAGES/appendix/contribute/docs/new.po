@@ -1,0 +1,287 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/appendix/contribute/docs/new.rst:2
+msgid "Dokumentation lokal bearbeiten und veröffentlichen"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:4
+msgid ""
+"Wenn du die Dokumentation erweitern willst, z.B. mit einem eigenen HowTo, "
+"ein fehlendes Kapitel ergänzen möchtest oder größere Änderungen machen und "
+"testen willst, benötigst du folgende Dinge:"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:6
+msgid "ein Konto bei `Github <https://github.com/join>`_"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:7
+msgid ""
+"Die Software `git <https://git-scm.com/>`_ (wird zur Verwaltung und "
+"Versionierung der Dokumentation verwendet)"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:8
+msgid ""
+"Die Software `sphinx <http://www.sphinx-doc.org>`_ (zum Übersetzen und "
+"Testen der Quelldateien), die wiederum python voraussetzt"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:9
+msgid ""
+"optional: SSH-Schlüssel bei Github `hochladen "
+"<https://help.github.com/articles/generating-an-ssh-key/>`_ (erleichtert die"
+" Arbeit mit git)"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:12
+msgid "Virtualbox-Appliance verwenden"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:14
+msgid ""
+"Um den Umgang mit rST/sphinx, git und github zu erleichtern, wird von uns "
+"eine virtuelle Umgebung angeboten."
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:16
+msgid ""
+"Installiere VirtualBox (mind. 5.2.2) von hier "
+"https://www.virtualbox.org/wiki/Downloads inklusive des Extension Packs"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:17
+msgid ""
+"Lade dir die neueste virtuelle Umgebung von hier herunter: http://www.lehrer"
+".uni-karlsruhe.de/~za3966/lmn/"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:18
+msgid ""
+"Importiere die heruntergeladene OVA-Datei und starte die virtuelle Umgebung"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:21
+msgid "Benutzername:"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:21
+msgid "linuxadmin (angezeigt wird: Linux Admin)"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:24
+msgid "Passwort:"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:24
+msgid "linuxmuster"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:27
+msgid "Manuelle Installation (Ubuntu)"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:29
+msgid ""
+"Wer die virtuelle Appliance nicht nutzen will, kann mit folgenden Befehlen "
+"unter aktuellen (ab 16.04) Ubuntu-Distributionen git, python und sphinx "
+"nachinstallieren:"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:38
+msgid ""
+"Nachfolgende Befehle gehen davon aus, dass die virtuelle Umgebung verwendet "
+"wird."
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:41
+msgid "Erste Schritte: Offizielle Dokumentation kompilieren"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:43
+msgid ""
+"Jetzt kannst du bereits die bereits heruntergeladene Dokumentation aus dem "
+"offiziellen Repositorium bauen und betrachten. Öffne dazu ein Terminal, "
+"navigiere zum Ordner `linuxmuster-docs/main`, führe `make html` aus und "
+"führe `xdg-open build/html/index.html` aus, um das Ergebnis zu betrachten."
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:61
+msgid "GitHub Konto erstellen"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:63
+msgid ""
+"Spätestens jetzt sollte ein Konto bei GitHub erstellt werden: "
+"https://github.com/join. Verifziere deine E-Mail-Adresse. Natürlich kannst "
+"du die Dokumentation zu GitHub durchlesen. Weiter geht es dann unter "
+"https://github.com/linuxmuster-docs/main"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:70
+msgid ""
+"Im folgenden wird das Konto \"lmn-docs-bot\" verwendet. Überall wo dieser "
+"auftaucht, ersetze ihn durch dein Kontonamen bei GitHub."
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:74
+msgid "Linuxmuster Dokumentation forken"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:76
+msgid ""
+"Öffnen Sie die `linuxmuster.net Dokumentation auf Github <https://github.com"
+"/linuxmuster-docs/main>`_ und klicken Sie auf \"Fork\"."
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:82
+msgid ""
+"Öffnen Sie nun einen Terminal / Eingabeauffoderung (``Strg+Alt+t`` in "
+"Ubuntu) and geben Sie folgenden Befehl ein:"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:85
+msgid ""
+"Nutzen Sie die URL ``git@github.com:lmn-docs-bot/main.git`` falls Sie "
+"bereits einen SSH-Schlüssel bei Github hochgeladen haben!"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:94
+msgid "Sie können nun mit"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:101
+msgid "die Dokumentation in HTML übersetzen und in ihrem Browser öffnen."
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:104
+msgid "Dokumentation ändern oder neu erstellen"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:106
+msgid ""
+"Die Dokumentation ist in der Markupsprache \"rST\" geschrieben. `Hier "
+"<http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_ finden Sie "
+"einen guten Überblick über die am häufigsten verwendeten Elemente."
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:109
+msgid ""
+"Bitte beachten Sie auch unbedingt die :doc:`Leitlinien zur Dokumentation "
+"<guidelines>`, damit ihre Änderungen schnell eingepflegt werden könnnen!"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:111
+msgid ""
+"Im Verzeichnis ``source`` und den entsprechenden Unterordnern befinden sich "
+"alle Dokumentationsdateien. Öffnen Sie einfach eine dieser Dateien und "
+"nehmen Sie die gewünschten Änderungen vor. Sie können auch eine neue "
+"Dokumentation in einem der Unterordner anlegen. Erstellen Sie dazu einfach "
+"einen Ordner mit einem passenden Namen und die notwendige ``index.rst`` "
+"Datei."
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:118
+msgid ""
+"Schauen Sie sich auch die anderen Dokumentationsdateien an, um mehr über den"
+" Aufbau und Syntax zu lernen."
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:121
+msgid "Commit und push"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:123
+msgid ""
+"Haben Sie alle Änderungen vorgenommen, können Sie sie nun zur Überprüfung "
+"einreichen. Dazu sind folgende Schritte notwendig:"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:127
+msgid ""
+"Überprüfen Sie bitte zuerst, ob ``make html`` ohne Fehler durchläuft! Falls "
+"nicht, beheben Sie bitte alle Fehler und Warnungen, bevor Sie Ihre "
+"Änderungen hochladen!"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:135
+msgid ""
+"Falls Sie neue Dateien oder Ordner erstellt haben, müssen diese noch "
+"hinzugefügt werden:"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:141
+msgid ""
+"Geben Sie nun noch einen Kommentar zu Ihren Änderungen ein und laden Sie "
+"alles in Ihren Fork hoch:"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:149
+msgid "Pull-Request"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:151
+msgid ""
+"Erstellen Sie nun einen \"Pull-Request\" unter `<https://github.com/lmn-"
+"docs-bot/main>`_, indem Sie auf \"New Pull Request\" klicken."
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:157
+msgid ""
+"Wenn Sie weitere Änderungen vornehmen und mit ``git commit -a -m\"My "
+"comment\"`` und ``git push`` bei Github hochladen, werden diese Änderungen "
+"automatisch dem Pull Request hinzugefügt."
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:161
+msgid "Den eigenen Fork aktualisieren"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:163
+msgid ""
+"Um später weiter Änderungen vornehmen zu können, kann der eigene Fork bei "
+"GitHub komplett gelöscht werden und ein neuer erzeugt werden. Alternativ "
+"kann der eigene Fork auf den Stand des offiziellen Repositoriums gebracht "
+"werden:"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:168
+msgid ""
+"Verschiebe alle lokalen Änderungen mit ``git stash`` in den Hintergrund"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:174
+msgid "Füge (einmalig) einen remote-tracking branch hinzu:"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:180
+msgid "Hole und merge den aktuellen offiziellen branch:"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:189
+msgid ""
+"Wenn der merge nicht in einem \"Fast-forward\" endet, sollte man besser den "
+"Fork löschen und neu erzeugen. Andernfalls kann man jetzt die offiziellen "
+"Änderungen hochladen."
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:197
+msgid "Jetzt kann man seine lokale Änderungen wieder hervorholen"
+msgstr ""

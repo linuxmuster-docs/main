@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/appendix/school-console/admin/repair.rst:3
+msgid "Menü: Reparieren"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/repair.rst:8
+msgid "Rechte"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/repair.rst:10
+msgid ""
+"Hier können Sie verschiedene Verzeichnisse auswählen und deren "
+"Rechteeinstellungen wieder auf die Grundeinstellungen zurücksetzen lassen."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/repair.rst:15
+msgid "Persönliche Ordner"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/repair.rst:17
+msgid ""
+"Hier können Sie Benutzergruppen auswählen und deren Persönliche Ordner "
+"reparieren lassen."
+msgstr ""

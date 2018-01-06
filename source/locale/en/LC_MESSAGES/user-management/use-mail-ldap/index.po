@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/user-management/use-mail-ldap/index.rst:7
+msgid "Individuelle E-Mail-Adressen verwalten"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/index.rst:9
+msgid "Zielgruppe: Netzwerkberater und Supportfirmen"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/index.rst:11
+msgid ""
+"Einige Programme greifen standardmäßig auf die im LDAP unter dem Attribut "
+"`mail` gespeicherte Mail-Adresse zu. Beispiele dafür sind `moodle`, "
+"`owncloud`, ..."
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/index.rst:15
+msgid ""
+"Standardmäßig wird für diesen Zweck die interne Mailadresse des "
+"linuxmuster.net Servers verwendet (<Benutzer>@<Domain>)."
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/index.rst:18
+msgid ""
+"Diese Dokumentation beschreibt, wie man von diesem Standard abweichen und "
+"die hinterlegte Adresse mit der Schulkonsole bearbeiten kann. Die "
+"Installation sollte der Netzwerkbetreuer oder Administrator ausführen. Jeder"
+" Nutzer kann dann selbst seine eigene Adresse verwalten. Sollte für einen "
+"Benutzer keine Adresse eingetragen sein, wird automatisch oben genannte "
+"Standardadresse verwendet."
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/index.rst:32
+msgid "Weitere Informationen"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/index.rst:34
+msgid ""
+"`Hintergrundinformationen zum Thema dieses Kapitels "
+"<http://www.linuxmuster.net/flyspray/task/508>`_"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/index.rst:35
+msgid ":ref:`use-horde-label`"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/index.rst:36
+msgid ""
+"`Hintergrundinformationen zur Nutzung des internen Webmailers "
+"<https://www.linuxmuster.net/wiki/dokumentation:techsheets:hordeconfiguration>`_"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/index.rst:37
+msgid ""
+"`Hintergrundinformationen zum Betrieb eines Mailservers "
+"<https://www.linuxmuster.net/wiki/dokumentation:techsheets:mailserver>`_"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/index.rst:38
+msgid ""
+"`Hintergrundinformationen zur Änderung der Domain "
+"<https://www.linuxmuster.net/wiki/dokumentation:techsheets:linuxmustersetup>`_"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/index.rst:39
+msgid ""
+"`Community-Dokumentation zur Thema Mail "
+"<https://www.linuxmuster.net/wiki/anwenderwiki:mail:start>`_"
+msgstr ""

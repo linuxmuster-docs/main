@@ -1,0 +1,410 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/classroom/use-openvpn/index.rst:2
+msgid "OpenVPN nutzen"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:5
+msgid "Externer Zugang zum Schulnetz"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:7
+msgid "**Funktionsweise**"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:9
+msgid ""
+"Sie können auch von extern auf das Schulnetzwerk zugreifen. Hierzu müssen "
+"Sie Ihren Computer (temporär) in das Schulnetzwerk integrieren. Dies "
+"funktioniert über ein sogenanntes „Virtual Private Network“, kurz VPN "
+"genannt. Dies erstellt über Ihre Internetverbindung einen abhörsicheren "
+"Tunnel in die Schule und integriert Ihren PC in das Schulnetzwerk. Sie "
+"bekommen (temporär) eine schulinterne IP-Adresse. Voraussetzung ist, dass "
+"Ihr Schulserver mithilfe einer Internet-Adresse (URL) erreichbar ist. Ob "
+"dies so ist, kann Ihnen Ihr Administrator des Schulnetzes sagen."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:11
+msgid ""
+"Alle Aktivitäten, die Sie mit geöffnetem VPN-Tunnel im Internet durchführen,"
+" laufen über den Schulserver bzw. die Schul-Internetleitung. Es gilt somit "
+"die Nutzervereinbarung der Schule. Da die Schule i.d.R. nur über eine "
+"einfache DSL-Leitung verfügt, sollten Sie z.B. das Herunterladen oder das "
+"Bereitsstellen von größeren Dateien in den Tauschordner (v.a. während der "
+"Unterrichtszeit) vermeiden."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:15
+msgid ""
+"Je nach Einstellung kann es sein, dass sie auf Ihr Netzwerk zu Hause "
+"(Netzwerkdrucker, Network Attached Storage, Netzwerkfreigaben) während eines"
+" geöffneten Tunnels nicht zugreifen können. Die Internet-Geschwindigkeit ist"
+" durch die geringe Upload-Geschwindigkeit der Schul-Internetverbindung "
+"langsam."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:22
+msgid "VPN ist nicht für einen Internet-Zugriff gedacht."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:24
+msgid ""
+"Der VPN-Tunnel wird verschlüsselt, damit der Datenverkehr nicht abgehört "
+"werden kann. Hierfür benötigen Sie ihren persönlichen Schlüssel, der "
+"zusätzlich mit einem Passwort gesichert ist."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:26
+msgid ""
+"Hierzu hat der Netzwerkbetreuer auf dem IPFire-Server bereits den OpenVPN-"
+"Server aktiviert."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:28
+msgid "Ob dies so ist, können Sie selbst in der Schulkonsole kontrollieren."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:32
+msgid "VPN-Zugang einrichten"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:35
+msgid "VPN-Zertifikat erstellen"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:37
+msgid ""
+"Melden Sie sich an der Schulkonsole an und gehen Sie mit der Bildlaufleiste "
+"zum Ende der Übersichtseite Ihres Kontos zum Bereich `OpenVPN-Zertifikat`."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:39
+msgid "Sehen Sie nachstehende Eingabemöglichkeit,"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:43
+msgid ""
+"so erstellen Sie für sich ein OpenVPN-Zertifikat, indem Sie ein Kennwort für"
+" das Zertifikat festlegen. Bestätigen Sie dieses Kennwort in der darunter "
+"liegenden Zeile und klicken Sie dann den Button `Zertifikat erstellen und "
+"herunterladen`."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:45
+msgid ""
+"Danach erhalten Sie die Bestätigung, dass das Zertifikat für Sie erstellt "
+"wurde:"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:51
+msgid ""
+"Die Dateien des Zertifikates finden Sich nun in Ihrem Home-Laufwerk im "
+"Verzeichnis `OpenVPN`."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:55
+msgid ""
+"Laden Sie diese Dateien herunter. Sie benötigen diese zur Nutzung Ihres VPN-"
+"Clients. Haben Sie Zertifikate für sich erstellt und heruntergeladen, müssen"
+" Sie Ihren Administrator bitten, diese noch zu aktivieren."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:59
+msgid "VPN-Client einrichten"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:61
+msgid ""
+"Haben Sie sich die Schlüssel- und Konfigurationsdateien heruntergeladen, "
+"benötigen Sie noch eine Client- Software für den Zugriff via OpenVPN."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:64
+msgid "Windows-Client"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:66
+msgid ""
+"Sie benötigen den aktuellen OpenVPN-Client 2.4 (OpenSource - `Download "
+"OPenVPN Windows <https://swupdate.openvpn.org/community/releases/openvpn-"
+"install-2.4.2-I601.exe>`_)"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:68
+#: ../../source/classroom/use-openvpn/index.rst:106
+#: ../../source/classroom/use-openvpn/index.rst:155
+msgid "**Konfiguration**"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:70
+msgid ""
+"Bei der Installation des OpenVPN Clients werden unter Windows neue "
+"Netzwerkadapter (TUN- und TAP-Devices installiert. Der OpenVPN-Client wird "
+"dabei in das Verzeichnis ``C:\\Programme\\OpenVPN\\`` installiert."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:72
+msgid ""
+"Kopieren Sie nun die heruntergeladenen Dateien in das Unterverzeichnis "
+"``c:\\Programme\\OpenVPN\\config\\``. Öffnen Sie nun als Administrator die "
+"Datei ``<dateiname>-RED.ovpn`` und passen Sie ggf. Einträge an."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:75
+msgid "Für Windows haben sich bislang folgende Einträge bewährt:"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:94
+msgid ""
+"Testen Sie nun die Verbindung, indem Sie mit der rechten Maustaste auf das "
+"Symbol des OpenVPN-Clients klicken und diesen dann *als Administrator* "
+"starten. Rechts unten in der Symbolleiste finden Sie dann das Symbol des "
+"gestarteten OpenVPN-Clients. Klicken Sie mit der rechten Maustaste hierauf "
+"und wählen Sie den Menüpunkt `Connect` aus. Sie werden nach dem Kennwort "
+"gefragt. Haben Sie das Kennwort des OpenVPN-Zertifikats erfolgreich "
+"eingegeben, wird eine Verbindung aufgebaut. War dieser Vorgang erfolgreiche,"
+" sehen Sie unten rechts in der Symbolleiste einen grünen Tunnel."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:97
+msgid "Linux-Clients"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:99
+msgid ""
+"Sie benötigen ebenfalls den aktuellen OpenVPN-Client. Installieren Sie "
+"diesen mit Ihrer Paketverwaltung. Unter Ubuntu geben Sie bitte folgende "
+"Befehle zur Installation an:"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:108
+msgid ""
+"Es kann mithilfe der grafischen Oberfläche Gnome der sog. Netzwerkmanager "
+"zur Konfiguration genutzt werden. Damit dieser ebenfalls für VPN-"
+"Verbindungen genutzt werden kann, muss noch das Plugin hierfür installiert "
+"werden."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:110
+msgid "Hierzu sind folgende Befehle auf der Konsole anzugeben:"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:117
+msgid ""
+"Nach der Installation ist der Netzwerkmanager wie folgt neu zu starten:"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:123
+msgid ""
+"Legen Sie einen neuen Ordner OpenVPN in Ihrem Benutzerverzeichnis "
+"(`Persönlicher Ordner`) an. Kopieren Sie die zuvor heruntergeladenen Dateien"
+" in dieses Verzeichnis."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:128
+msgid ""
+"Klicken Sie jetzt auf das Doppelpfeil-Symbol in der Kopfleiste, um den "
+"Netzwerkmanagers aufzurufen. Wählen Sie den Menüpunkt `VPN Verbindungen "
+"bearbeiten` aus."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:132
+msgid ""
+"Wählen Sie im neuen Fenster `Netzwerkverbindungen` Den Button `Hinzufügen`. "
+"Wählen Sie dann als Verbindungstyp `OpenVPN` aus und klicken den Button "
+"`Erzeugen`."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:134
+msgid ""
+"In dem neuen Fenster geben Sie bitte einen Namen für die VPB-Verbindung an. "
+"Die weiteren Felder füllen Sie wie in den beiden nachstehenden Abbildungen "
+"angegeben. Die angegebenen Dateinamen sind die Dateien, die Sie soeben in "
+"das Verzeichnis OpenVPN kopiert haben."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:138
+msgid "In o.g. Fenster klicken Sie auf den Button `Erweitert...`."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:142
+msgid "Speichern Sie nun die OpenVPN-Verbindung ab."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:144
+msgid ""
+"Testen Sie den Verbindungsuafbau, in dem Sie oben rechts mit der rechten "
+"Maustaste auf das Doppelpfeil-Symbol des Netzwerkmanagers klicken und danach"
+" den Menüeintrag VPN-Verbindungen -> <Meine-OpenVPN-Verbindung> auswählen, "
+"die Sie gerade angelegt haben."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:146
+msgid ""
+"Der erfolgreiche Verbindungsaufbau wird dann im Netzwerkmanager bestätigt."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:149
+msgid "MAC-Clients"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:151
+msgid ""
+"Unter MAC OS X benötigen Sie als Client für OpenVPN das Programm "
+"`Tunnelblick` (`Download OpenVPN MAC "
+"<https://tunnelblick.net/release/Tunnelblick_3.6.9_build_4685.dmg>`_)."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:153
+msgid ""
+"Installieren Sie dieses Programm. Während der Installation werden Sie nach "
+"einem Benutzer und einem Kennwort gefragt. Hier müssen Sie einen lokalen "
+"Benutzernamen mit Administratorrechten des MAC OS X Systems angeben - nicht "
+"den OpenVPN-Benutzer."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:157
+msgid ""
+"War die Installation erfolgreich klicken Sie am Ende der Installation auf "
+"den Button `Ausführen`. Sie gelangen in das nächste Fenster `Willkommen zu "
+"Tunnelblick`. Klicken Sie hier den Button `Ich habe Konfigurationsdateien`. "
+"Danach wählen Sie die heruntergeladenen Zertifikatsdateien (OVPN-Datei und "
+"Zertifikatsdateien) aus. Zum Abschluss der Konfiguration geben Sie an, dass "
+"die Konfiguration `nur für diesen Benutzer` installiert werden soll. Zum "
+"Abschluss fragt Tunneblick wieder nach dem lokalen Benutzer mit "
+"Administrationsrechten."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:159
+msgid ""
+"Nach Installation und Konfiguration wurd Tunnelblick nun nach jeder "
+"Anmeldung am MAC OS X System gestartet und Sie finden oben rechts in der "
+"Symbolleiste das graue Tunnel-Icon."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:161
+msgid ""
+"Zum Testen der Verbindung klicken Sie mit der Maus auf dieses Icon und "
+"wählen im Kontextmenü den Eintrag `<Benutzer> verbinden` aus. Während des "
+"Verbindungsaufbaus erhalten Sie eine Rückfrage nach Ihrem OpenVPN Benutzer "
+"und Ihrem Kennwort. Nach erfolgreicher Verbindung erscheint das Tunnel-"
+"Symbol schwarz hinterlegt."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:164
+msgid "Nutzungshinweise"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:167
+msgid "Zugriff auf die Schulkonsole"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:169
+msgid ""
+"Haben Sie von den Tunnel aufgebaut, haben Sie Zugriff zum Schulnetzwerk. Sie"
+" könne somit nun uach auf die Schulkonsole zugreifen. Geben Sie dann in "
+"Ihrem Browser die gleichen Adressen wie in der Schule ein:"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:171
+msgid ""
+"Für die Schulkonsole (evtl. kommt eine Sicherheitszertifikatsabfrage, "
+"einfach annehmen):"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:178
+msgid "Zugriff auf das Home-Verzeichnis (Server)"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:180
+msgid "**Windows**"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:182
+msgid "Gehen Sie im Explorer auf Extras → Netzwerklaufwerk verbinden"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:183
+msgid ""
+"Geben Sie unter Adresse „\\\\<Name-oder-IP-des-Servers>\\“ gefolgt von Ihrem"
+" Kürzel ein, also z.B. \\\\server\\me"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:184
+msgid "Wählen Sie einen freien Laufwerksbuchstaben"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:185
+msgid ""
+"Geben Sie ihren Schul-Benutzernamen (eben dieses Kürzel) samt Kennwort ein."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:187
+msgid ""
+"Danach wurde Ihr Home-Verzeichnis auf dem Server dem zuvor gewählten "
+"Laufwerksbuchstaben zugeordnet."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:189
+msgid "**Linux**"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:191
+msgid ""
+"Ihr Home-Verzeichnis bekommen Sie im Datei-Browser (Nautilus) über **Gehe zu"
+" → Ort**, dann geben Sie .. code::bash"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:194
+msgid "smb://<Servername-oder-IP>/<benutzername>"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:196
+msgid "ein (ersetzen Sie <benutzername> immer mit Ihrem Login-Kürzel)."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:198
+msgid "**MAC**"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:200
+msgid "Das Vorgehen erfolgt wie unter Linux beschrieben."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:204
+msgid ""
+"Der externe Zugang zum Server ist nur für gelegentliche Zugriffe gedacht. "
+"Daher ist der Zugriff so konfiguriert, dass Sie nicht über die VPN-"
+"Verbindung auf dem Schuldrucker ausdrucken können. Dies und auch weitere "
+"Funktionen können Sie aber mithilfe einiger Anpassungen selbst aktivieren. "
+"Hilfestellungen finden Sie hierzu in unserem Anwenderwiki."
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:211
+msgid ""
+"**Weiterführende Hinweise:** * Druckerzugriff via VPN: "
+"http://www.linuxmuster.net/wiki/dokumentation:handbuch:printing:remoteaccess"
+" * Mounten des Home-Verzeichnisses unter Linux: "
+"http://www.linuxmuster.net/wiki/anwenderwiki:openvpn:start * Hinweise zu den"
+" Zertifikaten: "
+"http://www.linuxmuster.net/wiki/dokumentation:handbuch:maintenance:certificates.openvpn"
+" * Viel weitere Hinweise zu VPN: "
+"http://www.linuxmuster.net/wiki/version3:openvpn"
+msgstr ""

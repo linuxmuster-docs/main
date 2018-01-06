@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/network/unifiwifi/index.rst:2
+msgid "Unifi-WLAN-Lösung für linuxmuster.net"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/index.rst:4
+msgid ""
+"Eine WLAN-Lösung für Schulen sollte mindestens zwei WLAN-Netze aufspannen."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/index.rst:6
+msgid ""
+"Das Lehrernetz für schuleigene Geräte, wie Beamer, Laptops oder Chromecasts,"
+" und für private Geräte der Lehrer, die auf Beamer und Chromecasts zugreifen"
+" wollen."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/index.rst:7
+msgid "Das Schülernetz für Schüler."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/index.rst:12
+msgid ""
+"In der hier vorgestellten Lösung kommen Accesspoints von Unifi und der "
+"kostenlose Unifi-Controller zum Einsatz."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/index.rst:14
+msgid ""
+"Die Geräte im Lehrernetz werden in die Datei `/etc/linuxmuster/workstations`"
+" aufgenommen. Das Lehrernetz ist ein Teil des Schulnetzes. Damit können sich"
+" beispielsweise Benutzer mit einem Schullaptop per WLAN wie gewohnt anmelden"
+" und auf ihre Daten zugreifen."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/index.rst:16
+msgid ""
+"Im Schülernetz müssen sich die Benutzer für das WLAN mit ihrem Benutzernamen"
+" und Kennwort anmelden. Über die Schulkonsole kann einem Schüler oder einer "
+"Gruppe von Schülern das WLAN freigeschaltet oder gesperrt werden. Eine "
+"Verwaltung der Benutzergeräte durch den Netzwerkberater entfällt."
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/index.rst:18
+msgid "Inhalt:"
+msgstr ""

@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/addons/backupmondo/konfiguration-schulkonsole.rst:4
+msgid "Konfiguration mit der Schulkonsole"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration-schulkonsole.rst:6
+msgid ""
+"Anstatt direkt die Konfigurationsdatei zu bearbeiten, kann man auch die "
+"Schulkonsole zur Konfiguration verwenden. Dazu installiert man zunächst das "
+"Paket ``linuxmuster-schulkonsole-backup``."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration-schulkonsole.rst:8
+msgid ""
+"Das erweitert das Einstellungen-Menü des **Netzwerkbetreuers** um den "
+"Menüpunkt Backup."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration-schulkonsole.rst:12
+msgid ""
+"Zur Bedeutung der einzelnen Parameter siehe "
+":ref:`howto_backupmondo_konfiguration`."
+msgstr ""

@@ -1,0 +1,232 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:3
+msgid "Konfiguration von linuxmuster-chilli"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:5
+msgid ""
+"Unabhängig davon, ob man den CoovaChilli-Server selbst auf einer Ubuntu-"
+"Basis installiert hat oder die virtuelle Appliance für Virtualbox nutzt, "
+"kann man mit dem Befehl"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:13
+msgid ""
+"das Paket für die eigenen Bedürfnisse konfigurieren. Dieser Vorgang wird "
+"auch durch den Befehl ``linuxmuster-chilli-turnkey`` ausgelöst, der die "
+"virtuelle Appliance personalisiert."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:17
+msgid "Nachfolgend werden die Schritte der Konfiguration erklärt."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:20
+msgid "Schrittweise Konfiguration"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:23
+msgid "Adresse des LDAP-Servers"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:25
+msgid ""
+"Zunächst muss die Adresse des LDAP-Servers angegeben werden. Der genaue Wert"
+" hängt davon ab, welches der Szenarien für den Einsatz des Captive Portals "
+"zur Anwendung kommt:"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:29
+msgid "Zugang zum grünen Netz: Interne IP-Adresse des Servers"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:31
+msgid "Zugang zum blauen Netz: Interne IP-Adresse des Servers"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:33
+msgid ""
+"Zugang zum roten Netz bzw. direkt ins Internet: Adresse oder DynDNS-Name der"
+" roten Schnittstelle des IPFire, Portweiterleitung für LDAPs (Port 636) von "
+"Rot nach Server-IP Grün muss aktiviert sein."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:43
+msgid "LDAP Suchbasis"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:45
+msgid ""
+"Hier muss die LDAP Suchbasis des Schulservers angegeben werden, "
+"standardmäßig ``dc=linuxmuster-net,dc=lokal``. Diese kann auf dem "
+"Schulserver durch den Befehl ``grep basedn "
+"/var/lib/linuxmuster/network.settings`` ermittelt werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:56
+msgid "Passwort für den LDAP Server"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:58
+msgid ""
+"Hier muss das Passwort zur Abfrage des LDAP Servers eingegeben werden. "
+"Dieses kann auf dem Schulserver durch den Befehl ``grep rootpw "
+"/etc/ldap/slapd.conf`` ermittelt werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:68
+msgid "Netzwerkbereich/Netzmaske für die Clientseite des Hotspot-Servers"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:70
+msgid ""
+"Hier muss ein privates Netzwerksegment angegeben werden. Wenn sich der "
+"CoovaChilli-Server im grünen oder blauen Netz befindet, dann kann die "
+"Vorgabe mit einem 192.168.x.x Netzwerk einfach übernommen werden. Wenn das "
+"dem Internet zugewandte Interface des CoovaChilli-Servers sich selbst in "
+"einem 192.168.x.x Netzwerk befindet (z.B. wenn es am roten Netz hängt), muss"
+" ein anderes privates Netz genommen werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:81
+msgid ""
+"Die Netzmaske für das Clientnetzwerk. Der Standard stellt 255x255 Adressen "
+"für Clients zur Verfügung das sollte reichen."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:89
+msgid "Nameserver"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:91
+msgid ""
+"Hier sollten wenn möglich zwei Nameserver angegeben werden, die vom "
+"CoovaChilli-Server zur Adressauflösung verwendet werden. Die Werte hängen "
+"vom Anwendungsfall für den Hotspot ab. Man kann hier auch die Blaue IP des "
+"IPFire eintragen (z.B. 172.16.16.254). Gegebenenfalls muss aber in der "
+"Firewall noch zusätzlich eine Durchlassen-Regel zum DNS-Port 53 erstellt "
+"werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:104
+msgid "Zugangsgruppen"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:106
+msgid ""
+"Nur die Mitglieder dieser Systemgruppen auf den Schulserver erhalten Zugang "
+"zum Internet. Mehrere Gruppen werden durch ein Leerzeichen getrennt."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:115
+msgid "Autologout"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:117
+msgid ""
+"Nach welcher Zeit in Sekunden soll ein Client bei *Untätigkeit* automatisch "
+"abgemeldet werden? Dieser Wert wird in die Konfigurationsoption "
+"HS_DEFIDLETIMEOUT von CoovaChilli übernommen. Ein harter Logout, unabhängig "
+"von der Nutzeraktivität, der durch den Parameter HS_DEFSESSIONTIMEOUT "
+"festgelegt wird, wird durch die Konfiguration von linuxmuster-chilli nicht "
+"gesetzt, dies kann bei Bedarf manuell an anderer Stelle erfolgen."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:130
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:179
+msgid "Logging"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:132
+msgid ""
+"Sollen alle Seitenaufrufe von der Clientseite aus für 30 Tage mitgeloggt "
+"werden? Auswahl *ja* oder *nein*. Der Datenschutz ist zu beachten. Werden "
+"die Adressen geloggt, müssen die Nutzer darüber informiert werden und dem "
+"zustimmen."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:141
+msgid "Freie Domains"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:143
+msgid ""
+"Diese Domains können ohne Anmeldung angesurft werden. Mehrere Domains durch "
+"Komma trennen."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:150
+msgid "Überschrift der Anmeldeseite"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:156
+msgid "SSL Zertifikat"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:158
+msgid ""
+"Hier gibt man den Hostnamen ein, den der Server bei der Installation des "
+"Grundsystems erhalten hat."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:165
+msgid "Konfigurationsänderung"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:167
+msgid "Die Konfiguration kann jederzeit durch Aufruf des Befehls"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:173
+msgid ""
+"geändert werden, dabei werden die oben mit Screenshots beschriebenen "
+"Schritte erneut durchlaufen, die zuletzt vorgenommenen "
+"Konfigurationseinträge werden dabei als Vorgaben verwendet. Man fängt also "
+"stets bei seiner letzten Konfiguration an."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:181
+msgid "Der Hotspot loggt alle Anmeldungen und Seitenaufrufe in den Dateien:"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:188
+msgid ""
+"Die Logs werden täglich rotiert, Logs werden 30 Tage aufbewahrt und dann "
+"gelöscht."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:192
+msgid "Erweiterte Optionen für CoovaChilli"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:194
+msgid ""
+"In der Datei ``/etc/chilli/userconf`` können eigene Optionen für CoovaChilli"
+" festgelegt werden. Die dort definierten Werte überschreiben bzw. ergänzen "
+"diejenigen aus der Paketkonfiguration von *linuxmuster-chilli*"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:199
+msgid ""
+"Beispiel: Eine Datei ``/etc/chilli/userconf`` mit dem folgenden Inhalt, "
+"würde eine Clientsession unabhängig von der Aktivität des Benutzers nach 900"
+" Sekunden beenden, so dass sich der Nutzer neu anmelden muss:"
+msgstr ""

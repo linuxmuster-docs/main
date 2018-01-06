@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-preparation.rst:2
+msgid "Vorbereitung der Switches im Netzwerk"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-preparation.rst:4
+msgid ""
+"In Vorbereitung auf das Subnetting sollten auf allen L2 Switches im Netzwerk"
+" die VLANs mit den IDs ``16``, ``17``, und ``18`` angelegt werden, damit "
+"später die Portkonfiguration aller Switches leicht passend eingestellt "
+"werden kann."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-preparation.rst:8
+msgid ""
+"Je nachdem wie die Geräte der einzelnen Subnetze im Schulhaus verteilt sind,"
+" ist es nicht zwar unbeding notwendig, alle Subnetze auf allen Switches "
+"einzurichten, es richtet aber keinen Schaden an und vereinheitlicht das "
+"Vorgehen. Ausserdem können spätere Erweiterungen der Infrastruktur mit "
+"weniger Konfigurationsaufwand umgesetzt werden, beispielsweise wenn in einem"
+" Gebäuteteil in dem zunächst nur Schülergeräte angeschlossen waren ein "
+"Lehrerarbeitsraum eingerichtet werden soll."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-preparation.rst:16
+msgid ""
+"Das genaue Vorgehen kann hier nicht umfassend dokumentiert werden, das es "
+"von Art und Hersteller des Switches abhängt, exemplarisch sollen folgende "
+"Beispiele stehen."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-preparation.rst:21
+msgid "Hewlett Packard HP2650"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-preparation.rst:27
+msgid ""
+"Einige HP-Switches haben eine textbasierte \"Menükonsole\", hier geht man "
+"prinzipiell folgendermaßen vor:"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-preparation.rst:29
+msgid "Mit telnet/ssh auf die Switchkonsole verbinden"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-preparation.rst:30
+msgid "Das Konfigurationsmenü öffnen"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-preparation.rst:31
+msgid ""
+"Nach  ``Switch-Konfiguration``, ``VLAN Menu``, ``VLAN Names`` wechseln und "
+"dort die VLans mit den IDs ``16``, ``17`` und ``18`` anlegen."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-preparation.rst:46
+msgid ""
+"Auf diesem Switch gibt es bereits 2 VLANs (mit den IDs ``2`` und ``3``) für "
+"andere Zwecke, diese stören nicht."
+msgstr ""

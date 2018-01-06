@@ -8,9 +8,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< Updated upstream
 "POT-Creation-Date: 2017-09-29 05:50+0700\n"
+=======
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+>>>>>>> Stashed changes
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +23,7 @@ msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:2
 msgid "Einrichtung des Raspberry Pi"
-msgstr "Setup Raspberry Pi"
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:4
 msgid ""
@@ -29,50 +32,43 @@ msgid ""
 "haben einen anderen Prozessor verbaut und sind zu schwach, um OMD zu "
 "betreiben!"
 msgstr ""
-"It is absolutely necessary to use a **Raspberry Pi 2** or a **Raspberry Pi "
-"3** [#f1]_ ! Older models have another CPU that to weak to run OMD!"
 
 #: ../../source/addons/monipi/raspberry.rst:6
 msgid ""
 "Diese Anleitung geht davon aus, dass die folgenden Schritte auf einem "
 "Rechner mit Linux als Betriebssystem durchgeführt werden."
 msgstr ""
-"This guide assumes that the following steps are performed on a computer "
-"running Linux as the operating system."
 
 #: ../../source/addons/monipi/raspberry.rst:9
 msgid "Das linuxmuster-monipi-Image herunterladen"
-msgstr "Download the linuxmuster-monipi-image"
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:11
 msgid ""
-"Laden Sie das vorbereitete gepackte Raspbian-Image `von der Wikiseite "
-"<http://www.linuxmuster.net/wiki/dokumentation:addons:monipi:start>`_ auf "
-"Ihren Rechner herunter. Entpacken Sie die  Datei mit dem Befehl"
+"Laden Sie das vorbereitete gepackte Raspbian-Image `von dieser Seite "
+"<http://www.lehrer.uni-karlsruhe.de/~za3966/lmn/>`_ auf Ihren Rechner "
+"herunter. Entpacken Sie die  Datei mit dem Befehl"
 msgstr ""
-"Download the prepared `Raspbian-Image "
-"<http://www.linuxmuster.net/wiki/dokumentation:addons:monipi:start>`_. "
-"Unpack it with the following command"
 
 #: ../../source/addons/monipi/raspberry.rst:18
 msgid "Image auf eine SD-Karte schreiben"
-msgstr "Write Image to an SD card"
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:20
 msgid "Die verwendete SD-Karte muss mindestens eine Größe von 4GB haben."
-msgstr "The SD card must have a minimum size of 4GB."
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:22
 msgid "Legen Sie die SD-Karte in ein geeignetes Lesegerät ein."
-msgstr "Insert the SD card into a suitable reader."
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:24
 msgid "Öffnen Sie eine root-Shell."
-msgstr "Open a root shell."
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:26
 msgid "Geben Sie den Befehl"
-msgstr "Enter the command"
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:32
 msgid ""
@@ -80,9 +76,6 @@ msgid ""
 "Im Beispiel unten ist der Device-Name ``/dev/mmcblk0`` die weiteren Zeichen "
 "(``p1``,...) stehen für die Partitionen der Karte."
 msgstr ""
-"and refer to the output of the command for the devicename of the SD card. In"
-" the example below the device name ``/dev/mmcblk0`` contains the additional "
-"characters ( ``p1``, ...) for the partitions of the SD card."
 
 #: ../../source/addons/monipi/raspberry.rst:46
 msgid ""
@@ -91,94 +84,85 @@ msgid ""
 "werden und nicht in eine möglichwerweise bereits auf der Karte vorhandene "
 "Partition."
 msgstr ""
-"The image file already contains the necessary partitions and the partition "
-"table and must therefore be written directly to the device file and not to a"
-" partition already existing on the card."
 
 #: ../../source/addons/monipi/raspberry.rst:48
 msgid ""
 "Der folgende Befehl erledigt das, das Device der SD-Karte muss dabei "
 "möglicherweise angepasst werden:"
 msgstr ""
-"The following command does this, the device name of the SD card may have to "
-"be adjusted:"
 
 #: ../../source/addons/monipi/raspberry.rst:54
 msgid ""
 "Legen Sie nach Beendigung des Vorgangs die SD-Karte in den Raspberry Pi ein "
 "und starten Sie diesen."
 msgstr ""
-"After completing the process, insert the SD card into the Raspberry Pi and "
-"start it."
 
 #: ../../source/addons/monipi/raspberry.rst:57
 msgid "Ersteinrichtung des Raspberry Pi"
-msgstr "First Setup of Raspberry Pi"
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:59
 msgid ""
 "Die folgenden Schritte müssen an der Kommandozeile des Raspberry Pi "
 "durchgeführt werden."
 msgstr ""
-"The following steps must be performed at the Raspberry Pi command line."
 
 #: ../../source/addons/monipi/raspberry.rst:62
 msgid "Standardzugangsdaten: Übersicht"
-msgstr "Default access data: Overview"
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:63
 msgid ""
 "Im Auslieferungszustand hat das MoniPi System die folgenden Zugangsdaten:"
 msgstr ""
-"In the delivery state, the MoniPi system has the following access data:"
 
 #: ../../source/addons/monipi/raspberry.rst:66
 msgid "Benutzername"
-msgstr "User name"
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:66
 msgid "Passwort"
-msgstr "password"
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:66
 msgid "Bemerkungen"
-msgstr "Remarks"
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:68
 msgid "pi"
-msgstr "pi"
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:68
 msgid "muster"
-msgstr "muster"
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:68
 msgid "Administrativer Benutzer für die Konsole."
-msgstr "Administrative user for the console."
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:70
 msgid "Kann sich per ssh anmelden, root-Shell mit ``sudo -i``"
-msgstr "Can login via ssh, root shell with ``sudo -i``"
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:72
 msgid "omdadmin"
-msgstr "omdadmin"
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:72
 msgid "omd"
-msgstr "omd"
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:72
 msgid "Administrativer Benutzer für das ChecMK Webinterface"
-msgstr "Administrative user for the CheckMK Web Interface"
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:74
 msgid "Erreichbar unter ``https://<monipi-IP>/default/``"
-msgstr "Accessible under ``https://<monopi-IP>/default``"
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:78
 msgid "Turnkey"
-msgstr "Turnkey"
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:80
 msgid ""
@@ -187,21 +171,16 @@ msgid ""
 " und ein neues \"Snake-Oil\" SSL-Zertifikat erzeugt sowie ein neues Passwort"
 " für den administrativen Benutzer ``pi`` gesetzt."
 msgstr ""
-"To personalize the Raspbian image, run ``monipi-turnkey`` as root. This "
-"creates new SSH host keys and a new \"Snake-Oil\" SSL certificate, as well "
-"as a new password for the administrative user ``pi``."
 
 #: ../../source/addons/monipi/raspberry.rst:82
 msgid ""
 "Melden Sie sich am Raspberry an. Benutzername im Auslieferungszustand ist "
 "``pi``, das Passwort ``muster``"
 msgstr ""
-"Log on to Raspberry. The username in the delivery state is ``pi``, the "
-"password ``muster``"
 
 #: ../../source/addons/monipi/raspberry.rst:83
 msgid "Werden Sie root durch Eingabe des Befehls ``sudo -i``"
-msgstr "Become root by typing the command ``sudo -i``"
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:84
 msgid ""
@@ -209,12 +188,10 @@ msgid ""
 " Geben Sie zweimal ein gutes Passwort für den administrativen Benutzer ein, "
 "wenn Sie dazu aufgefordert werden."
 msgstr ""
-"Run ``monipi-turnkey`` and follow the instructions. Enter a good password "
-"for the administrative user twice when prompted."
 
 #: ../../source/addons/monipi/raspberry.rst:107
 msgid "Raspi-Config"
-msgstr "Raspi-Config"
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:109
 msgid ""
@@ -222,8 +199,6 @@ msgid ""
 "empfiehlt sich die Systempartition des MoniPi entprechend der verwendeten "
 "SD-Karte zu vergrößern."
 msgstr ""
-"Usually the SD cards available today are larger than 4GB, it is recommended "
-"to increase the system partition of the MoniPi according to the SD card."
 
 #: ../../source/addons/monipi/raspberry.rst:111
 msgid ""
@@ -231,9 +206,6 @@ msgid ""
 " Wählen Sie dann den ersten Eintrag, beenden Sie raspi-config mit \"Finish\""
 "  und starten Sie den Raspberry Pi neu, wenn dies vorgeschlagen wird."
 msgstr ""
-"To do this, start the command ``raspi-config`` on the command line as root. "
-"Then select the first entry, exit raspi-config with \"Finish\" and restart "
-"the Raspberry Pi, if this is suggested."
 
 #: ../../source/addons/monipi/raspberry.rst:120
 msgid ""
@@ -241,18 +213,13 @@ msgid ""
 "abzüglich des Platzes für die Boot-Partition umfassen. Im Beispiel unten mit"
 " einer 32GB Karte sieht die Ausgabe von ``df -h`` folgendermaßen aus:"
 msgstr ""
-"After rebooting, the system partition should include the total SD card size "
-"minus the space for the boot partition. In the example below with a 32GB "
-"card the output of ``df -h`` looks as follows:"
 
 #: ../../source/addons/monipi/raspberry.rst:137
 msgid "Fussnoten"
-msgstr "footnote"
+msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:138
 msgid ""
 "Bei Verwendung eines Raspberry Pi 3 muss darauf geachtet werden, dass man "
 "mindestenst die Version 1.1 des MoniPi Images zur Installation verwendet."
 msgstr ""
-"When using a Raspberry Pi 3 care must be taken that at least the 1.1 version"
-" of the MoniPi image is used for installation."

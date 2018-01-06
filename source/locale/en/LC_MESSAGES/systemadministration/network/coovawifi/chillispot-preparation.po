@@ -1,0 +1,296 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:3
+msgid "Vorbereitungen"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:7
+msgid "Verschiedene Einsatzszenarien"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:9
+msgid ""
+"Mit Hilfe von linuxmuster-chilli kann der Netzwerkzugang von mitgebrachten "
+"Geräten über das grüne, das blaue oder das rote Netzwerk erfolgen. (Es gibt "
+"noch mehr Möglichkeiten, aber diese drei sollten die häufigsten "
+"Anwendungsfälle abdecken...)"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:14
+msgid ""
+"Die Firewall IPFire bietet verschiedene Netze mit unterschiedlichen "
+"Vertrauensstellungen an, lesen Sie dazu die :ref:`net-infrastructure-label`."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:18
+msgid "Zugang über das blaue Netz des IPFire"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:20
+msgid ""
+"Das blaue Netzwerk wird überlicherweise für genau diese Aufgabe verwendet: "
+"Ein logisch getrenntes Netzwerk zu haben, dem zunächst nicht vertraut wird."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:24
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:43
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:61
+msgid "**Vorteile:**"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:26
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:46
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:63
+msgid "Kontrolle des Internetzugangs mit Hilfe des IPFire möglich"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:27
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:64
+msgid "Eine Lücke im Hotspot-System kann das grüne Netz nicht exponieren."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:29
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:48
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:68
+msgid "**Nachteile:**"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:31
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:71
+msgid ""
+"Nach der Anmeldung ist der Client nicht im grünen Netz (kein Drucken, kein "
+"Home- oder Tausch-Verzeichnis)."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:41
+msgid "Zugang über das grüne Netz des IPFire"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:45
+msgid "Nach der Anmeldung stehen alle Dienste im grünen Netz zur Verfügung"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:50
+msgid ""
+"Nach der Anmeldung ist der Client im grünen Netz: Eine Lücke im Hotspot-"
+"System kann das grüne Netz exponieren."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:59
+msgid "Zugang im roten Netz des IPFire (Direktzugang)"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:65
+msgid ""
+"Für die Anwender sind nur zwei Fälle zu dokumentieren: Am Schulrechner/am "
+"privaten Gerät."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:70
+msgid "Eine Lücke im Hotspot-System kann zu freiem Internetzugriff führen."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:79
+msgid ""
+"Je nach gewähltem Szenario müssen entsprechende Einstellungen am IPFire "
+"vorgenommen werden.  Im folgenden wird der Einsatz im blauen Netzwerk "
+"ausführlich dokumentiert."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:84
+msgid "IPFire-Konfiguration für den Einsatz im blauen Netz"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:86
+msgid ""
+"Als Vorbereitung auf die Installation eines CoovaChilli-Servers müssen das "
+"Netzwerk richtig verkabelt werden und der IPFire vorkonfiguriert werden. "
+"Melden Sie sich dazu am IPFire an. Folgende Situation muss erreicht werden:"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:91
+msgid ""
+"Nur das externe Interface (im folgenden Netzdiagramm dunkelblau) des "
+"CoovaChilli-Servers muss sich im blauen Netzwerk des IPFire befinden.  (Bei "
+"Virtualisierung kann diese Verbindung rein virtuell erfolgen)."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:96
+msgid ""
+"Der CoovaChilli-Server muss am IPFire mit diesem Interface für den \"Zugriff"
+" auf Blau\" freigeschaltet sein."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:99
+msgid ""
+"Es muss eine Weiterleitung für LDAPs konfiguriert werden, so dass der "
+"CoovaChilli-Server den im grünen Netz stehenden linuxmuster.net-Server "
+"erreichen kann."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:103
+msgid ""
+"Eine zweiten Netzwerkverbindung (mit physikalischer Anbindung bei "
+"Virtualisierung), an der dann die Access-Points hängen, muss geschaffen "
+"werden. Das WLAN-Interface (in den oberen Skizze hellblau, im Netzdiagramm "
+"unten lila) wird nach Installation mit den Accesspoints oder frei "
+"zugänglichen Netzwerkdosen verbunden."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:109
+msgid ""
+"Die Netzverkabelung versteht man am Besten beim Betrachten eines Beispiels "
+"eines CoovaChilli hier in einer virtualisierten Umgebung:"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:118
+msgid ""
+"Die folgenden Bilder zeigen wie im obigen Beispiel die Einstellungen für "
+"einen linuxmuster.net-Server im IP Bereich 10.16.*.* und dementsprechend "
+"einem blauen Netz 172.16.16.*. Gegebenenfalls muss das der eigenen Situation"
+" angepasst werden, z.B. auf 10.32.*.* und 172.16.32.*."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:124
+msgid ""
+"Darüberhinaus ist für den Endnutzer der Bereich 192.168.99.1 bis "
+"192.168.99.255 vorgesehen. Hier kann jedes beliebige andere private, außer "
+"den bereits verwendeten, Subnetzwerk verwendet werden.  Die jeweils "
+"richtigen IPs sind aber in der Regel bei den Dialogen schon voreingestellt."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:133
+msgid "1. DHCP-Server"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:135
+msgid ""
+"Zunächst sollte sichergestellt sein, dass der DHCP Server für das blaue "
+"Interface läuft. Das ist insbesondere dann sinnvoll, wenn man neben dem "
+"CoovaChilli-Server noch weitere Clients im blauen Netzwerk hat, z.B. "
+"Schulcomputer die ohne Zugangsüberprüfung Netzwerkzugang haben sollen. Dies "
+"überprüft man im Menü des IPFire unter `Netzwerk -> DHCP-Server`:"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:146
+msgid ""
+"Man setzt den Haken bei \"Aktiviert\" und speichere.  Ist der CoovaChilli-"
+"Server der einzige Rechner im blauen Netzwerk, ist man fertig. Gibt es "
+"weitere Computer, ist es ratsam dem CoovaChilli die erste IP-Adresse fest zu"
+" vergeben und die Anfangsadresse auf ``172.16.16.2`` zu setzen."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:153
+msgid "2. Zugriff auf Blau"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:155
+msgid ""
+"Dann wechselt man auf die Seite `Firewall -> Zugriff auf Blau` und fügt dort"
+" die \"externe\" Schnittstelle/MAC des CoovaChilli-Servers hinzu."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:158
+msgid "Quell-IP-Adresse: 172.16.16.1"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:159
+msgid "MAC-Adresse: xx:xx:xx:xx:xx:xx"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:160
+msgid "Anmerkung: coovachilli"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:161
+msgid "Aktiviert: Ja"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:168
+msgid "3. Zugriff von Blau auf LDAPs zulassen"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:170
+msgid ""
+"Zuletzt muss das DMZ Schlupfloch gebohrt werden, dazu wechselt man auf die "
+"Seite `Firewall -> Firewallregeln` und fügt eine neue Regel ein."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:173
+msgid "Quelle: Standard-Netzwerk Blau"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:174
+msgid ""
+"Zieladresse: linuxmuster.net Server-IP (10.16.1.1 oder 10.32.1.1 oder ...)"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:176
+msgid "Protokoll TCP, Quellport: leer, Zielport 636 für LDAPs"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:177
+msgid "Anmerkung, damit man weiß, was man gemacht hat"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:178
+msgid "Logging: optional"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:184
+msgid ""
+"Schließlich **\"Hinzufügen\"** und anschließend auch noch **\"Änderungen "
+"übernehmen\"** nicht vergessen!"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:192
+msgid "4. Weitere Dienste erlauben"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:194
+msgid ""
+"Unter `Firewall -> Firewallregeln` müssen die zusätzlichen Dienste, die aus "
+"dem blauen Netz erlaubt werden sollen, freigeschaltet werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:197
+msgid ""
+"Im Beispiel unten wurde für das Protokoll ``https`` auf den Ports 443 "
+"(Webserver), 242 (Schulkonsole) und 631 (Cups-Druckerserver) und für das "
+"Protokoll ``ping`` je eine Regel hinzugefügt. Für ``ping`` muss als "
+"Protokoll-Typ ``ICMP`` ausgewählt werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:206
+msgid ""
+"Der Zugriff auf den IPFire-DNS-Server muss nicht extra erlaubt werden, auf "
+"einen anderen DNS-Server (z.B. Google - 8.8.8.8) jedoch schon."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:211
+msgid "5. Advanced Proxy für Blau aktivieren"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-preparation.rst:213
+msgid ""
+"Im Menü `Netzwerk -> Webproxy` sollte für das blaue Netz der transparente "
+"Proxy wie im grünen Netz aktiviert sein. Der Zugriff auf den Proxy muss in "
+"der Firewall **nicht** freigeschaltet werden."
+msgstr ""

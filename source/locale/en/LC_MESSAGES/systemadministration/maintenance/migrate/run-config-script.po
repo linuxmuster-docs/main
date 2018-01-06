@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/maintenance/migrate/run-config-script.rst:2
+msgid "Migrationsskript ausführen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/run-config-script.rst:4
+msgid ""
+"Die Sicherung der Migrationsdaten wird über das Shell-Skript **linuxmuster-"
+"migration-backup** realisiert."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/run-config-script.rst:6
+msgid ""
+"Die Optionen des Skripts könenn mit folgendem Befehl kontrolliert werdne:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/run-config-script.rst:23
+msgid ""
+"Das Zielverzeichnis für die Sicherung muss mit dem Parameter -d zwingend "
+"angegeben werden. Das Verzeichnis muss existieren und kann auf einem NFS-"
+"Share liegen, das jedoch gemountet sein muss."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/run-config-script.rst:29
+msgid ""
+"Für die Sicherung auf eine lokal angeschlossene Platte ist ein Linux-"
+"Dateisystem des Typs ext2, ext3, reiserfs oder xfs Voraussetzung."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/run-config-script.rst:33
+msgid ""
+"Die Sicherung kann problemlos auch remote in einer SSH-Konsole gestartet "
+"werden. Die Ausgaben des Skripts werden in die Datei ``/var/log/linuxmuster"
+"/migration-backup.log`` geschrieben. Nach Abschluss des Backups wird die "
+"Logdatei in das Backupverzeichnis kopiert."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/run-config-script.rst:36
+msgid "Beispiel:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/run-config-script.rst:42
+msgid ""
+"Dieser Befehl würde nun mithilfe des Mikrationsskripts eine Sicherung in das"
+" Verzeichnis ``/media/backup/migration`` durchführen. Die lokale Festplatte "
+"oder das NFS-Share (mit Schreibrechten) müssen hierin gemountet worden sein,"
+" damit der Befehl erfolgreich durchläuft."
+msgstr ""

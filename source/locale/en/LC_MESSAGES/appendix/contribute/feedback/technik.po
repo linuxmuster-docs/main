@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/appendix/contribute/feedback/technik.rst:2
+msgid "Technische Hintergrundinformationen"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/technik.rst:4
+msgid ""
+"Das Paket linuxmuster-community-feedback wird über das Debian eigene debconf"
+" System konfiguriert, schreibt seine Konfiguration anschließend aber nach "
+"``/etc/linuxmuster/community-feedback.conf``."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/technik.rst:8
+msgid ""
+"Wird bei der Paketkonfiguration der Übermittlung statistischer Daten "
+"zugestimmt, erzeugt das Skript ``/usr/bin/linuxmuster-community-feedback`` "
+"aus den Werten, die bei der Installation des linuxmuster.net-Servers für den"
+" Schulnamen und die Domäne angegeben wurde sowie der MAC Adresse des "
+"\"grünen\" Interfaces durch aneinanderhängen und bilden der MD5-Summe eine "
+"eindeutige ID für das aktuelle System."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/technik.rst:15
+msgid ""
+"Anschließend werden entsprechend der vom Benutzer bei der Paketinstallation "
+"gewählten Konfiguration Informationen über das System gesammelt, z.B. die "
+"Versionsnummern der installierten linuxmuster Pakete oder die Anzahl der "
+"Benutzer, und zusammen mit den Informationen aus der Konfigurationsdatei in "
+"der Datei ``var/cache/linuxmuster/feedback-<ID>.txt`` abgelegt."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/technik.rst:22
+msgid ""
+"Bei der Übermittlung an den Projektserver wird der Inhalt dieser Datei per "
+"https verschlüsselt zum linuxmuster.net Server übertragen. Dort werden die "
+"Dateien statistisch ausgewertet."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/technik.rst:26
+msgid ""
+"Außerdem wird in der Datei ``/etc/cron.d/linuxmuster-community-feedback`` "
+"ein Cronjob eingerichtet, der den Upload einmal pro Woche anstößt. Dieser "
+"Cronjob sollte nicht deaktiviert werden, da auf dem linuxmuster.net-Server "
+"Server-IDs, die mehr als zwei Wochen keine aktualisierte Datei mehr "
+"geliefert haben aus der Statistik entfernt werden."
+msgstr ""

@@ -1,0 +1,111 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/appendix/school-console/teacher/currentroom.rst:4
+msgid "Aktueller Raum"
+msgstr ""
+
+#: ../../source/appendix/school-console/teacher/currentroom.rst:7
+msgid "Unterricht"
+msgstr ""
+
+#: ../../source/appendix/school-console/teacher/currentroom.rst:11
+msgid ""
+"Auf dieser Seite können Sie den Unterricht steuern: Unterricht beginnen und "
+"beenden, die Verbindung zu Internet, Intranet, den Druckern steuern, den "
+"Webfilter ein- oder ausschalten."
+msgstr ""
+
+#: ../../source/appendix/school-console/teacher/currentroom.rst:15
+msgid ""
+"Sobald der Unterricht begonnen wurde, kann man im Menü weitere pädagogische "
+"Funktionen nutzen:"
+msgstr ""
+
+#: ../../source/appendix/school-console/teacher/currentroom.rst:20
+msgid "Tauschen"
+msgstr ""
+
+#: ../../source/appendix/school-console/teacher/currentroom.rst:23
+msgid ""
+"Steuern Sie hier den Zugriff auf das globale Tauschverzeichnis, indem Sie "
+"entweder einzelne Arbeitsplätze über die Checkboxen auswählen oder über die "
+"`Schnellauswahl` für alle.  Mit `Änderungen übernehmen` aktivieren Sie Ihre "
+"Auswahl."
+msgstr ""
+
+#: ../../source/appendix/school-console/teacher/currentroom.rst:30
+msgid "Austeilen"
+msgstr ""
+
+#: ../../source/appendix/school-console/teacher/currentroom.rst:33
+msgid ""
+"Auszuteilende Dateien müssen in Ihrem Heimatverzeichnis unter ``_auszuteilen"
+" -> auszuteilen-aktueller_raum`` abgelegt sein. Der Inhalt dieses Ordners "
+"wird hier aufgelistet.  Nachträglich dorthin abgelegte Dateien können Sie "
+"über die Schaltfläche `Ansicht aktualiseren` sichtbar machen."
+msgstr ""
+
+#: ../../source/appendix/school-console/teacher/currentroom.rst:39
+msgid ""
+"Die Schüler/innen finden die ausgeteilten Dateien in ihrem Heimatverzeichnis"
+" unter ``__austeilen -> austeilen-aktueller_raum``."
+msgstr ""
+
+#: ../../source/appendix/school-console/teacher/currentroom.rst:43
+msgid "Einsammeln"
+msgstr ""
+
+#: ../../source/appendix/school-console/teacher/currentroom.rst:45
+msgid ""
+"Einzusammelnde Dateien müssen im Heimatverzeichnis der Schüler/innen im "
+"Ordner ``__einsammeln`` abgelegt sein, damit sie hier aufgelistet werden.  "
+"Nachträglich von den Schüler/innen dorthin abgelegte Dateien können Sie über"
+" `Ansicht aktualisieren` sichtbar machen."
+msgstr ""
+
+#: ../../source/appendix/school-console/teacher/currentroom.rst:50
+msgid ""
+"Wählen Sie aus, ob die Originaldateien auf Schülerseite gelöscht werden oder"
+" erhalten bleiben sollen."
+msgstr ""
+
+#: ../../source/appendix/school-console/teacher/currentroom.rst:53
+msgid ""
+"Sie finden die eingesammelten Dateien in Ihrem Heimatverzeichnis unter "
+"``_eingesammelt -> eingesammelt-aktueller_raum``."
+msgstr ""
+
+#: ../../source/appendix/school-console/teacher/currentroom.rst:57
+msgid "Klassenarbeit"
+msgstr ""
+
+#: ../../source/appendix/school-console/teacher/currentroom.rst:59
+msgid ""
+"Übernehmen Sie entweder das vorgegebene Zufallspasswort oder geben Sie ein "
+"eigenes Passwort ein."
+msgstr ""
+
+#: ../../source/appendix/school-console/teacher/currentroom.rst:62
+msgid ""
+"Mit Betätigung der Schaltfläche `Klassenarbeit starten` wird das neue "
+"Passwort an alle Arbeitsstationen im Raum verteilt, und die Schüler/innen "
+"können sich mit dem Namen der Arbeitsstation und dem eben vergebenen "
+"Passwort anmelden."
+msgstr ""

@@ -8,9 +8,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< Updated upstream
 "POT-Creation-Date: 2017-09-29 05:50+0700\n"
+=======
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+>>>>>>> Stashed changes
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: zefanja <npm@zefanjas.de>, 2016\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +23,7 @@ msgstr ""
 
 #: ../../source/addons/monipi/index.rst:7
 msgid "MoniPi für linuxmuster.net"
-msgstr "MoniPi for linuxmuster.net"
+msgstr ""
 
 #: ../../source/addons/monipi/index.rst:9
 msgid ""
@@ -28,8 +31,6 @@ msgid ""
 "2/Raspberry Pi 3 zur Verfügung, mit dem ein kleines Netzwerk überwacht "
 "werden kann."
 msgstr ""
-"The \"MoniPi\" project offers a prepared image for the Raspberry Pi 2 / "
-"Raspberry Pi 3, so that you can monitor a small network."
 
 #: ../../source/addons/monipi/index.rst:11
 msgid ""
@@ -38,10 +39,6 @@ msgid ""
 "Distribution (OMD) <http://omdistro.org/>`_ Paketen von `bananian.org "
 "<https://www.bananian.org/omd>`_"
 msgstr ""
-"MoniPi is based on `Raspbian Jessie Lite "
-"<https://www.raspberrypi.org/downloads/raspbian/>`_ with the `Open Monitor "
-"Distribution (OMD) <http://omdistro.org/>`_ packages from `bananian.org "
-"<https://www.bananian.org/omd>`_"
 
 #: ../../source/addons/monipi/index.rst:13
 msgid ""
@@ -49,21 +46,19 @@ msgid ""
 "Raspberry Pi sowie die Einrichtung des Monitoring für den linuxmuster.net "
 "Server."
 msgstr ""
-"This documentation explains the preparation and installation of the "
-"Raspberry Pi and the setup of the monitoring for a linuxmuster.net server."
 
 #: ../../source/addons/monipi/index.rst:15
 msgid "Inhalt:"
-msgstr "Content"
+msgstr ""
 
 #: ../../source/addons/monipi/index.rst:28
 msgid "Index"
-msgstr "Index"
+msgstr ""
 
 #: ../../source/addons/monipi/index.rst:30
 msgid ":ref:`genindex`"
-msgstr ":ref:`genindex`"
+msgstr ""
 
 #: ../../source/addons/monipi/index.rst:31
 msgid ":ref:`search`"
-msgstr ":ref:`search`"
+msgstr ""

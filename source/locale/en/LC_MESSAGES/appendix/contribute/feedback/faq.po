@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/appendix/contribute/feedback/faq.rst:2
+msgid "FAQ - Häufige Fragen"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/faq.rst:5
+msgid "Wie kann ich ich sehen, welche Daten übertragen werden?"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/faq.rst:7
+msgid "Mit dem Befehl"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/faq.rst:13
+msgid ""
+"werden die Daten angezeigt, die dem linuxmuster.net Server übermittelt "
+"werden."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/faq.rst:15
+msgid "Technisch wird dabei die Datei"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/faq.rst:21
+msgid "zum linuxmuster.net Server übertragen."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/faq.rst:24
+msgid "Stimmt es, dass die Daten regelmäßig übermittelt werden?"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/faq.rst:26
+msgid "Ja."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/faq.rst:28
+msgid ""
+"Nach Aktivierung des Feedbacks wird auf dem System in der Datei "
+"``/etc/cron.d/linuxmuster-community-feedback`` ein cronjob eingerichtet, der"
+" die Statistikdaten einmal pro Woche zum linuxmuster.net-Server überträgt.  "
+"Der genaue Zeitpunkt (Uhrzeit, Samstag/Sonntag) wird bei der "
+"Paketkonfiguration zufällig ermittelt und variiert von System zu System."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/faq.rst:41
+msgid "Warum werden die Daten regelmäßig übertragen?"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/faq.rst:43
+msgid "Die regelmäßige Übertragung hat zwei Gründe:"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/faq.rst:45
+msgid ""
+"1. Einige der statistischen Daten sind nicht statisch, beispielsweise die "
+"Versionsnummern der essentiellen linuxmuster-Pakete. Für die "
+"Projektentwicklung ist es wichtig, zu wissen, wie der Update-Stand der "
+"Lösung im Einsatz ist. Aus diesem Grund müssen die Daten regelmäßig "
+"aktualisiert werden."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/faq.rst:50
+msgid ""
+"2. Um \"Karteileichen\" von Systemen, die außer Betrieb genommen werden zu "
+"vermeiden, werden Installationen, die einige Zeit keine aktualisierten Daten"
+" mehr übermittelt haben serverseitig automatisch aus der Statistik entfernt."
+msgstr ""

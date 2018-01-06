@@ -1,0 +1,212 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/user-management/manage-quota/index.rst:5
+msgid "Festplattenplatz für Benutzer einschränken (Quota)"
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:7
+msgid ""
+"Alle Benutzer im System dürfen Daten auf dem Server abspeichern. Es kann "
+"also vorkommen, dass Schüler und Lehrer so viele Daten abspeichern, dass der"
+" Festplattenplatz des Servers erschöpft ist, was bis zur Einstellung des "
+"Betriebes führen kann. Außerdem kann das „Vollmüllen“ des Servers auch vom "
+"Internet aus z.B. durch E-Mail-Bombing erfolgen."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:14
+msgid ""
+"Einziger Ausweg: Sie beschränken (\"quotieren\") den Festplattenplatz eines "
+"jeden Benutzers und achten darauf, dass die Summe der vergebenen „Quota” "
+"nicht die Kapazität der Festplatten des Servers übersteigt."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:18
+msgid ""
+"Melden Sie sich wie im Handbuch :ref:`schulekonsole-admin-label` beschrieben"
+" an der Schulkonsole als ``administrator`` an."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:23
+msgid "Standardeinstellungen ändern"
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:25
+msgid ""
+"Im Abschnitt :ref:`manual-sk-admin-settings-user-label` des Handbuchs zur "
+"Schulkonsole finden Sie eine Übersicht über alle Einstellungsmöglichkeiten."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:36
+msgid ""
+"Im Bereich Quotierung können Sie diese aktivieren (Standard) oder "
+"deaktivieren. Ebenso können Sie für Schüler und Lehrer jeweils drei Quotas "
+"angeben."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:42
+msgid ""
+"Ändern Sie die Einstellungen für ``/home``, dann beschränkt das den Platz, "
+"den neue Lehrer oder versetzte Schüler auf ``Home_auf_Server`` bzw. unter "
+"``H:\\`` und ``Tausch_auf_Server`` bzw. unter ``T:\\`` belegen können."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:47
+msgid ""
+"Ändern Sie die Einstellungen für ``/var``, dann beschränkt das den Platz, "
+"den neue Lehrer oder versetzte Schüler auf ``Vorlagen_auf_Server`` bzw. "
+"unter ``V:\\`` oder mit Dateien während des Klassenarbeitsmodus belegen "
+"können."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:52
+msgid ""
+"Ändern Sie die Einstellungen in der dritten Spalte, dann beschränkt das den "
+"Platz für Mails, die auf dem Server liegen."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:59
+msgid ""
+"Wirksam sind die geänderten Werte erst nach einem Durchlauf zum "
+"*Anlegen/Versetzen/Löschen* von Benutzern. Auf das Quota bestehender Lehrer "
+"haben die Einstellungen keinen Einfluss."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:71
+msgid "Ändern von einzelnen Lehrerquota"
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:73
+msgid ""
+"Der Administrator hat in der *Schulkonsole* im Menü unter *Quota* die "
+"Möglichkeit, den Festplattenplatz für Lehrer und Schüler zu beschränken."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:79
+msgid ""
+"Benötigt ein Kollege mehr Platz, können Sie dessen Quota leicht über die "
+"*Schulkonsole* unter *Quota* -> *Lehrer* ändern:"
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:83
+msgid ""
+"Sind die Felder leer, gelten die Standardwerte. Mit einem Klick auf die "
+"Schaltfläche *Änderungen übernehmen* werden die geänderten Werte gleich "
+"gesetzt."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:89
+msgid ""
+"Beachten Sie auch, dass das gesetzte Quota immer für eine ganze "
+"Festplattenpartition auf dem Linux-Server gilt. Üblicherweise befinden sich "
+"alle Netzlaufwerke auf der selben Serverpartition ``/home``. Befindet sich "
+"z.B. das Kollegiumstauschverzeichnis auf der selben Serverpartition wie das "
+"Heimatverzeichnis ``H:`` bzw. ``Home_auf_Server``, werden die Daten auf dem "
+"Tauschverzeichnis zum verbrauchten Plattenplatz hinzugerechnet."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:97
+msgid ""
+"Ein Lehrer kann also auf allen Netzlaufwerken zusammen nicht mehr als das "
+"voreingestellte Quota belegen."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:105
+msgid "Ändern von Klassen- und Projektquota"
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:107
+msgid ""
+"Unter *Quota* -> *Klassen* können Sie die Quota für alle Schüler einer "
+"Klasse ändern."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:109
+msgid ""
+"Unter *Quota* -> *Projekte* können Sie zusätzliche Quota für alle Schüler "
+"eines Projektes vergeben."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:111
+msgid ""
+"Mit *Änderungen übernehmen* werden die geänderten Quotas in diesen beiden "
+"Fällen nicht in einer Datei abgelegt, sondern gleich in die "
+"*Sophomorix*-Datenbank geschrieben und sind damit sofort gültig."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:116
+msgid "Sonderquota: Quota für Administratoren und einzelne Schüler"
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:118
+msgid ""
+"Mittels *Quota* -> *Sonderquota* in der *Schulkonsole* können Sie nun Quota "
+"für"
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:120
+msgid "einzelne Schüler,"
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:121
+msgid "Administratoren und"
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:122
+msgid "den max. für Homepages zur Verfügung stehenden Platz (Webspace)"
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:124
+msgid "festlegen."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:126
+msgid ""
+"Für den *Webspace* und die *Administratoren* können einfach die Werte "
+"überschrieben werden und dann mittels *Änderungen übernehmen* gesetzt "
+"werden."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:129
+msgid ""
+"Für einzelne Schüler müssen Sonderquota erst neu angelegt werden, indem der "
+"Login-Name und die gewünschten Quota eingegeben werden. Nach einem Klick auf"
+" *Änderungen übernehmen* ist dann der Schüler in einer Schülerliste "
+"unterhalb des Abschnitts für die Administratoren aufgeführt."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:135
+msgid ""
+"Für bereits dort vorhandene Schüler können Sie einfach die Quotawerte "
+"überschreiben und dann mittels *Änderungen übernehmen* setzten."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:139
+msgid ""
+"Die obige wichtige Anmerkung gilt auch für Schüler: Befindet sich z.B. das "
+"Klassentauschverzeichnis eines Schülers auf der selben Serverpartition wie "
+"das Heimatverzeichnis ``H:`` bzw. ``Home_auf_Server``, werden die Daten auf "
+"dem Tauschverzeichnis zum verbrauchten Plattenplatz hinzugerechnet."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:145
+msgid ""
+"Ein Schüler kann also auf allen Netzlaufwerken zusammen nicht mehr als das "
+"voreingestellte Quota belegen."
+msgstr ""

@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/user-management/manage-users/usergroups.rst:2
+msgid "Benutzergruppen in der linuxmuster.net"
+msgstr ""
+
+#: ../../source/user-management/manage-users/usergroups.rst:4
+msgid ""
+"Wenn man auf Dienste und Dateien des Servers zugreifen möchte, muss man sich"
+" mit einem Benutzernamen (Loginname) und einem Kennwort (Passwort) am Server"
+" anmelden (authentifizieren). Dabei sollen nicht alle Benutzer am System auf"
+" die gleichen Dateien und Drucker zugreifen oder an Dateien die selben "
+"Rechte haben können."
+msgstr ""
+
+#: ../../source/user-management/manage-users/usergroups.rst:10
+msgid ""
+"Es ist üblich, Benutzer, die gleiche Rechte haben sollen, zu Benutzergruppen"
+" zusammenzufassen. In der *linuxmuster.net* gibt es, angepasst auf "
+"Schulbedürfnisse, die folgenden Hauptbenutzergruppen:"
+msgstr ""
+
+#: ../../source/user-management/manage-users/usergroups.rst:16
+msgid "<Klassengruppe> (z.B. 10a, 5a, usw):"
+msgstr ""
+
+#: ../../source/user-management/manage-users/usergroups.rst:15
+msgid ""
+"Schüler-Benutzer mit (halb)privatem Datenbereich. Es dürfen keinerlei "
+"Systemdateien modifiziert werden."
+msgstr ""
+
+#: ../../source/user-management/manage-users/usergroups.rst:24
+msgid "teachers:"
+msgstr ""
+
+#: ../../source/user-management/manage-users/usergroups.rst:19
+msgid ""
+"Lehrer-Benutzer mit privatem Datenbereich. Es dürfen keine Systemdateien "
+"modifiziert werden.  Zusätzlich hat der Lehrer Zugriff auf alle "
+"Klassentauschverzeichnisse und lesenden Zugriff auf die Schüler-"
+"Homeverzeichnisse. Alle Lehrer können über die Schulkonsole pädagogisch "
+"notwendige Aufgaben auf dem Server ausführen (z. B. Dateien austeilen, "
+"Internetzugang abschalten)"
+msgstr ""
+
+#: ../../source/user-management/manage-users/usergroups.rst:29
+msgid "domadmins:"
+msgstr ""
+
+#: ../../source/user-management/manage-users/usergroups.rst:27
+msgid ""
+"Dürfen alle für den reinen Schulbetrieb wichtigen Aufgaben am Server "
+"durchführen, vor allem der Benutzer ``administrator`` wird dafür verwendet."
+msgstr ""
+
+#: ../../source/user-management/manage-users/usergroups.rst:34
+msgid "root:"
+msgstr ""
+
+#: ../../source/user-management/manage-users/usergroups.rst:32
+msgid ""
+"Darf ohne Einschränkung alle Aufgaben am Server durchführen. (u.a. alle "
+"Dateien, auch Passwortdateien, einsehen/verändern/löschen)"
+msgstr ""

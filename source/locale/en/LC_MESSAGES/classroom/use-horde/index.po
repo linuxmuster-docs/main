@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/classroom/use-horde/index.rst:6
+msgid "Schulinternen E-Mail-Versand nutzen"
+msgstr ""
+
+#: ../../source/classroom/use-horde/index.rst:9
+msgid ""
+"Diese Schritt-für-Schritt-Anleitung erklärt, wie Sie im Schulnetzwerk "
+"E-Mails mit Hilfe eines Webmailers versenden und empfangen können. In dem "
+"Webmailer ist auch die Möglichkeit enthalten, Weiterleitungen auf externe E"
+"-Mail-Adressen einzurichten und auf die \"Home_auf_Server\" und "
+"\"Tausch\"-Verzeichnisse zuzugreifen."
+msgstr ""
+
+#: ../../source/classroom/use-horde/index.rst:15
+msgid ""
+"Auf dem Schulserver läuft ein Webmail-Programm mit dem Namen *Horde*. Rufen "
+"Sie im Browser die Adresse"
+msgstr ""
+
+#: ../../source/classroom/use-horde/index.rst:18
+msgid "https://server/horde3"
+msgstr ""
+
+#: ../../source/classroom/use-horde/index.rst:20
+msgid ""
+"auf. Üblicherweise ist diese Adresse nur von innerhalb des Schulnetzwerkes "
+"erreichbar."
+msgstr ""
+
+#: ../../source/classroom/use-horde/index.rst:25
+msgid ""
+"Melden Sie sich mit Ihrem Benutzernamen und Passwort des Schulkontos an.  "
+"Auf der Startseite können Sie das Speicherplatzkontingent einsehen."
+msgstr ""
+
+#: ../../source/classroom/use-horde/index.rst:31
+msgid ""
+"Unter *Webmail* -> *Posteingang* erreichen Sie ihr Mail-Konto.  Unter *Neue "
+"Nachricht* wird ein neues Fenster geöffnet."
+msgstr ""
+
+#: ../../source/classroom/use-horde/index.rst:36
+msgid ""
+"Ihre eigene E-Mail-Adresse wird unter \"Identität\" angezeigt und ist - je "
+"nach Schulkonfiguration - auf \"benutzername@linuxmuster-net.lokal\" "
+"eingestellt. Das bedeutet, dass Sie mit dieser E-Mail-Adresse nur interne "
+"E-Mails von anderen Schülern oder Lehrern bekommen können, denn "
+"\"linuxmuster-net.lokal\" ist keine weltweit eindeutige Adresse."
+msgstr ""
+
+#: ../../source/classroom/use-horde/index.rst:42
+msgid ""
+"Für interne Adressen kann die E-Mail-Domäne weggelassen werden. Man kann "
+"aber auch weltweit gültige E-Mail-Adressen als Empfänger einstellen."
+msgstr ""
+
+#: ../../source/classroom/use-horde/index.rst:48
+msgid ""
+"Standardmäßig wird der Versand an weltweite Adressen erlaubt. Vorsicht: Die "
+"Empfänger dieser E-Mail können nicht darauf antworten, wenn \"linuxmuster-"
+"net.lokal\" als Domäne in Ihrer Schule voreingestellt ist."
+msgstr ""
+
+#: ../../source/classroom/use-horde/index.rst:55
+msgid "Adressbuch verwenden"
+msgstr ""
+
+#: ../../source/classroom/use-horde/index.rst:57
+msgid ""
+"Um Schüler und Lehrer im Adressbuch zu finden, wählen Sie im Menü "
+"*Organisieren* -> *Adressbuch* -> *Suche* aus und suchen Sie nach "
+"Namensbestandteilen."
+msgstr ""
+
+#: ../../source/classroom/use-horde/index.rst:63
+msgid "Weiterleitung an externe E-Mail-Adressen konfigurieren"
+msgstr ""
+
+#: ../../source/classroom/use-horde/index.rst:65
+msgid ""
+"Horde erlaubt die Einrichtung vieler unterschiedlicher sogenannter Filter "
+"für das Mailsystem. Der wohl wichtigste davon ist der vordefinierte Filter "
+"*Weiterleitung*, den man im Menü über *Einstellungen* -> *Filter* und dann "
+"im oberen Menü *Weiterleitung* erreicht. Man trägt dort ein oder mehrere "
+"gewünschte Adressen zur Weiterleitung ein und entscheidet, ob zusätzlich "
+"eine Kopie im Postfach an der Schule verbleiben soll."
+msgstr ""
+
+#: ../../source/classroom/use-horde/index.rst:76
+msgid "Zugriff auf Tauschordner und Heimatverzeichnis"
+msgstr ""
+
+#: ../../source/classroom/use-horde/index.rst:78
+msgid ""
+"Um auf die eigenen Dateien auf dem Server (\"Home_auf_Server\") und auf die "
+"Tauschverzeichnisse zuzugreifen, wählen Sie im Menü *Mein Konto* -> "
+"*Dateimanager* -> *Home* bzw. *Tauschen*."
+msgstr ""
+
+#: ../../source/classroom/use-horde/index.rst:85
+msgid ""
+"Sollten Umlaute im Dateinamen vorkommen, kann man die Dateien nicht "
+"herunterladen. Ändern Sie den Dateinamen am Schulcomputer im dortigen "
+"Dateimanager."
+msgstr ""
+
+#: ../../source/classroom/use-horde/index.rst:89
+msgid ""
+"Dateien, die heruntergeladen werden, sollten standardmäßig abgespeichert "
+"werden, da ein direktes Ausführen meist nicht funktioniert."
+msgstr ""
+
+#: ../../source/classroom/use-horde/index.rst:93
+msgid "Melden Sie sich nach getaner Arbeit über *Abmelden* ab."
+msgstr ""

@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/maintenance/backup-migration/features.rst:2
+msgid "Features der Backuplösung"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/features.rst:4
+msgid ""
+"Ab der Version 6.1 sind die sog. Migrationsskripte ``linuxmuster-migration-"
+"backup``und ``linuxmuster-backup-restore`` zu verwenden, um den Server sowie"
+" die Firewall zu sichern und wiederherzustellen."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/features.rst:6
+msgid "Diese Lösung bietet:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/features.rst:8
+msgid ""
+"einfache Konfiguration der einzubindenden oder auszuschließenden "
+"Verzeichnisse"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/features.rst:9
+msgid "automatische Sicherung der aktuellen Firewalleinstellungen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/features.rst:10
+msgid ""
+"kurzzeitiges Herunterfahren sensitiver Dienste (z.B. Datenbanken) zum Schutz"
+" der Datenintegrität"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/features.rst:11
+msgid ""
+"ab der zweiten Sicherung werden nur noch die Änderungen gesichert (Rsync-"
+"Funktionalität)"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/features.rst:12
+msgid "„Disaster-Recovery“ ist durch die rasche Neuinstallation gegeben"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/features.rst:13
+msgid ""
+"äußerst einfaches Wiederherstellen einzelner Dateien durch den Administrator"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/features.rst:15
+msgid "Es fehlt:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/features.rst:18
+msgid "Sicherung der Virtualisierungsumgebung"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/features.rst:19
+msgid "eine Versionverwaltung des Backups"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/features.rst:22
+msgid "Es gibt nur ein Backup"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/features.rst:25
+msgid "Erweiterungen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/features.rst:27
+msgid ""
+"Es wird als linuxmuster-addon eine weitere Disaster-Recovery Lösung ``Mondo-"
+"Rescue`` als Paket ``linuxmuster-addon`` zur Verfügung gestellt."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/features.rst:31
+msgid "Für Mondo-Rescue finden Sie in der Dokumentation ebenfalls ein Howto."
+msgstr ""

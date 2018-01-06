@@ -1,0 +1,92 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/maintenance/migrate/config-migration-script.rst:2
+msgid "Konfiguration des Migrationsskripts"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/config-migration-script.rst:4
+msgid ""
+"In der Standardeinstellung wird das komplette Home-Verzeichnis ohne Ausnahme"
+" gesichert und wieder hergestellt."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/config-migration-script.rst:6
+msgid ""
+"Einstellungen bzgl. zusätzlich zu sichernden bzw. vom Backup "
+"auszuschließenden Dateien und Verzeichnissen trägt man in die "
+"Konfigurationsdateien **defaults.conf, include.conf und exclude.conf** unter"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/config-migration-script.rst:12
+msgid ""
+"ein. Diese Dateien werden beim Backup mitgesichert und beim Restore auf dem "
+"Zielsystem ausgewertet."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/config-migration-script.rst:15
+msgid "Eigene Dateien und Verzeichnisse einbeziehen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/config-migration-script.rst:16
+msgid ""
+"Soll zum Beispiel die Schulhomepage, die unter ``/var/www/homepage`` "
+"abgelegt ist, ebenfalls gesichert und auf dem Zielsystem wieder hergestellt "
+"werden, so trägt man den Pfad einfach in "
+"``etc/linuxmuster/migration/include.conf`` ein:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/config-migration-script.rst:24
+msgid ""
+"Dabei ist zu beachten, dass pro Zeile nur ein Eintrag erlaubt ist. Außerdem "
+"müssen immer absolute Pfade angegeben werden. Wildcards sind erlaubt."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/config-migration-script.rst:27
+msgid "Dateien und Verzeichnisse ausschließen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/config-migration-script.rst:29
+msgid ""
+"Soll zum Beispiel das schulweite Tauschverzeichnis von der Migration "
+"ausgeschlossen werden, trägt man in die Konfigurationsdatei "
+"``/etc/linuxmuster/migration/exclude.conf`` den entsprechenden Pfad ein:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/config-migration-script.rst:36
+msgid ""
+"Es können per Wildcard (*) bestimmte Dateimuster ausgeschlossen werden (z.B."
+" \\*.mp3)."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/config-migration-script.rst:39
+msgid "Weitere Wiederherstellungsoptionen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/config-migration-script.rst:41
+msgid ""
+"Über die Konfigurationsdatei **custom.conf** kann das Verhalten bei der "
+"Wiederherstellung gesteuert werden."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/config-migration-script.rst:43
+msgid ""
+"Soll über ein Netzwerk migriert werden, so ist ein Backup auf ein "
+"Netzwerkshare durchzuführen und hiervon das Restore auszuführen."
+msgstr ""

@@ -1,0 +1,203 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:5
+msgid "Virtuelle Maschine erzeugen"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:7
+msgid ""
+"Das Script ``leoclient2-init`` bereitet eine virtuelle Machine (VM) vor, die"
+" später mit dem Programm ``leovirtstarter2`` gestartet werden kann."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:11
+msgid ""
+"Die VM kann nur in einem Verzeichnis erstellt werden das der aufrufende User"
+" anlegen darf.  Üblicherweise muss das Script also mit root-Rechten "
+"gestartet werden:"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:35
+msgid ""
+"Es werden folgende Parameter abgefragt und auf Nachfrage VirtualBox "
+"gestartet."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:37
+msgid "der MASCHINENNAME für die VM (keine Leerzeichen verwenden)"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:38
+msgid "der PFAD für den Speicherort der VM (Standardpfad ``/var/virtual/``)"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:39
+msgid ""
+"die Größe der dynamisch wachsenden virtuellen Festplatte für die VM in MB"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:50
+msgid ""
+"Man sollte unter VirtualBox die Konfiguration der VM noch an die eigenen "
+"Bedürfnisse anpassen (Die Arbeitsspeichergröße für die VM wird beim Starten "
+"an die Gegebenheiten der vorhandenen Maschine angepasst)."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:55
+msgid "Betriebsystemeinstellungen"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:57
+msgid ""
+"Unter ``Allgemein``, Reiter Basis muss der Betriebsystemtyp und Version "
+"angepasst werden."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:60
+msgid "Systemanforderungen/Ressourcen"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:62
+msgid ""
+"Unter ``System``, wird konfiguriert, welche Hardware-Ressourcen die VM zur "
+"Verfügung gestellt bekommt. Je nach Gast sind hier Mindestwerte zu beachten:"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:65
+msgid "Win10 (Beispielhaft):"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:67
+msgid "Hauptspeicher 2048 MB (System -> Hauptplatine)"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:68
+msgid "2 CPU's (System -> Prozessor)"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:69
+msgid "64 MB Grafikspeicher (System -> Bildschirm)"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:72
+msgid "DVD-Laufwerk"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:74
+msgid ""
+"Ein CD-/DVD-Laufwerk kann man ebenso einbinden wie iso-Dateien (→ CD-/DVD-"
+"Laufwerk hinzufügen → kein Medium (Laufwerk) → über das CD-Symbol rechts das"
+" Laufwerk auswählen bzw. → CD-/DVD-Laufwerk hinzufügen → Medium auswählen "
+"(iso-Datei) )."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:80
+msgid "USB verwenden"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:82
+msgid ""
+"Sollte man, wie voreingestellt, USB2 verwenden wollen, muss man das zur "
+"Version von VirtualBox passende Extension Pack installieren."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:87
+msgid "Netzwerk offline"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:89
+msgid ""
+"Eine Netzwerkkarte ist in der Standardkonfiguration nicht aktiviert, dadurch"
+" bietet die VM keine Angriffsfläche und man kann auf zeitraubende Updates "
+"verzichten."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:93
+msgid "Wenn sie aktiviert wird, gilt das nur vorübergehend."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:95
+msgid ""
+"Trotzdem ist es möglich auf die Netzlaufwerke auf dem Server zuzugreifen und"
+" Netzwerkdrucker zu verwenden."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:101
+msgid "Betriebssystem installieren"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:103
+msgid ""
+"Sind die Einstellungen wunschgemäß, startet man die VM und installiert das "
+"Betriebssystem über eine verbundene Installations-CD-/DVD oder eine "
+"entsprechende iso-Datei."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:107
+msgid ""
+"Ist die Installation abgeschlossen, fährt man die VM herunter.  Bevor "
+"VirtualBox beendet wird, sollte man eventuell verbundene CD-/DVD-Laufwerke "
+"trennen."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:111
+msgid ""
+"Nach Beenden von Virtualbox wird die VM für den Start mit dem Programm "
+"``leovirtstarter2`` fertiggestellt."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:132
+msgid "Weitere Schritte"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:134
+msgid ""
+"Nachdem das Betriebsystem installiert ist, ist es sinnvoll in der Basis der "
+"VM noch folgende Anpassungen vorzunehmen:"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:137
+msgid "Installation der Gasterweiterungen in der VM"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:138
+msgid "Verbinden der Netzlaufwerke in der VM"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:139
+msgid "Einrichten eines PDF-Druckers in der VM"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:140
+msgid "(Schrumpfen ???)"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:142
+msgid ""
+"Diese Anpassungen unterscheiden sich je nach verwendeten Betriebsystem. "
+"Anleitungen finden sie bei \"Weitere Informationen zu leoclient2\" und dem "
+"jeweiligen Gastbetriebsystem unter Tipps und Tricks."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerzeugen.rst:147
+msgid ""
+"Danach muss die Basis aktualisiert werden (Siehe folgendes Kapitel: Basis "
+"und Snapshots verwalten)."
+msgstr ""

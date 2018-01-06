@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/clients/leoclient2/leo2-funktion.rst:2
+msgid "Funktionsprinzip"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-funktion.rst:4
+msgid ""
+"Durch das Programmpaket leoclient2 ist es möglich auf einem Linuxclient "
+"virtuelle Maschinen (VM), beispielsweise mit Windows-Betriebssystem, "
+"parallel zu nutzen."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-funktion.rst:6
+msgid ""
+"Dabei können auf einfache Weise verschiedene Zustände der virtuellen "
+"Maschine erzeugt und den Benutzern angeboten werden."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-funktion.rst:8
+msgid ""
+"Zur Auswahl der virtuellen Maschinen als Benutzer wurde eine grafische "
+"Oberfläche programmiert, auf der man zuerst die zu nutzende VM auswählt und "
+"dann den gewünschten Zustand startet."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-funktion.rst:10
+msgid ""
+"Durch die Virtualisierung reduziert sich der administrative Aufwand auf ein "
+"Minimum, wogegen die Möglichkeit der Bereitstellung verschiedener "
+"Installationszustände extreme Flexibilität und ungeahnte Möglichkeiten "
+"bietet."
+msgstr ""

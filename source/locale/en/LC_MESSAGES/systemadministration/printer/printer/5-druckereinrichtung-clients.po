@@ -1,0 +1,235 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:2
+msgid "Wie richte ich Drucker auf den Clients ein?"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:4
+msgid ""
+"Clientseitig müssen Drucker über das HTTP-Protokoll eingerichtet werden, "
+"damit die raumbezogene Druckerzugriffskontrolle über die Schulkonsole "
+"funktioniert. Die URL für die Druckerverbindung wird nach folgendem Schema "
+"zusammengesetzt:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:12
+msgid "**PDF Drucker**"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:14
+msgid ""
+"Beispielhaft wird der standardmäßig eingerichtete PDF-Drucker über die URL"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:16
+msgid "http://server:631/printers/PDF-Printer"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:18
+msgid ""
+"angesprochen. Damit der PDF-Drucker auf dem Client genutzt werden kann, muss"
+" auf dem Client ein Standard-Postskript-Drucker eingerichtet werden."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:22
+msgid "Linux Clients"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:24
+msgid ""
+"Die Druckerinstallation auf den Clients erfolgt automatisch mithilfe eines "
+"sog. universellen Postsync - Scripts. Voraussetzung ist, dass die Drucker "
+"bereits auf dem Server eingerichtet wurden und als Linux Client das "
+"vorkonfigurierte Musterimage (Cloop) genutzt wird. Dieses gibt es für Ubuntu"
+" 14.04 (trusty) und Ubuntu 16.04 (xenial)."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:26
+msgid ""
+"Auf dem Server existiert dann folgende Datei in einem der Verzeichnisse:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:33
+msgid "Diese Datei weist nachstehende Rechte auf:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:39
+msgid ""
+"In dieser Hosts Datei findet sich folgender Inhalt, der dann mithilfe des "
+"Postsync-Scripts rechnerspezifisch angepasst wird:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:53
+msgid "Das Postsync-Script liegt im Verzeichnis:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:59
+msgid "Es weist folgende Rechte auf:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:65
+msgid ""
+"In dem Postsync-Script finden sich folgende Eintragungen (hier für Trusty-"
+"Cloop):"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:160
+msgid "**Hinweis für linuxmuster.net Version 6.2**"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:162
+msgid ""
+"Sollte bei Verwendung des Postsync-Scripts auf dem Client ein Drucker nicht "
+"ansteuerbar sein, obwohl dieser am Server eingerichtet wurde, so sollten "
+"noch am CUPS-Dienst des Servers alle sog. **CUPS-browsed** Einträge und für "
+"den **CUPS-Dienst** des Clients alle Browse-Poll Einträge entfernt werden. "
+"Dies liegt daran, dass auf dem Server eine ältere CUPS-Version installiert "
+"ist als auf den Clients, deren CUPS-Version ab Ubuntu 14.04 aktueller ist."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:168
+msgid "Die Einträge sind wie folgt zu entfernen:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:170
+msgid ""
+"**Server-Cups: Datei /etc/cups/cupsd.conf** - alle Einträge mit cups-browsed"
+" auskommentieren **Client-Cups: Datei /etc/cups/cupsd.conf** - alle Einträge"
+" mit BrowsePoll auskommentieren"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:176
+msgid "https://ask.linuxmuster.net/t/netzwerkdrucker-verschwinden/181"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:182
+msgid "Alternativ: Druckerinstallation manuell"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:184
+msgid ""
+"Die Druckerinstallation auf dem Linux-Client lässt sich wie auf dem Server "
+"mit Hilfe des CUPS-Webinterfaces bewerkstelligen. Loggen Sie sich auf dem "
+"Client mit einem Browser über die URL http://localhost:631/admin als lokaler"
+" Benutzer **administrator** auf der CUPS-Administrationsseite ein."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:190
+msgid "Klicken Sie hier unter der Rubrik Drucker auf **Drucker hinzufügen**."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:194
+msgid ""
+"Wählen Sie im nächsten Schritt als Netzwerkdrucker **Internet-Druckprotokoll"
+" (https)**."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:198
+msgid ""
+"Wählen Sie im nächsten Schritt für unter Drucker hinzufügen die korrekte "
+"Adresse. Wird der Netzwerkdrucker über den linuxmuster.net Server "
+"angesteuert, so ist dessen Adressen anzugeben:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:206
+msgid ""
+"Wählen Sie danach die korrekte Druckermarke für den einzurichtenden Drucker "
+"aus."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:210
+msgid ""
+"Wählen Sie abschliessend das geeignete Druckermodell aus, oder wählen Sie "
+"eine eigene sog. PPD-Datei aus, die auf dem Client installiert werden soll."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:214
+msgid ""
+"Die weiteren Einrichuntsschritte entsprechen denen, wie sie auf dem Server "
+"bereits ausgeführt wurden."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:218
+msgid "Hier finden Sie die einzelnen Schritte:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:220
+msgid ":doc:`3-drucker-einrichten-cups`"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:223
+msgid "Windows Clients"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:225
+msgid ""
+"Melden Sie sich lokal am Windows-Client als **administrator** an und rufen "
+"Sie den Druckerinstallations-Assistnten auf, oder starten Sie den "
+"Druckerinstallations-Assistenten als Benutzer **administrator**. Den "
+"Druckerinstallations-Assistenten rufen Sie wie folgt auf: ** Systemsteuerung"
+" --> Hardware und Sound --> Geräte und Drucker --> Drucker**"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:229
+msgid ""
+"Wählen Sie im Assistnten im Dialog **Drucker hinzufügen** die Option **Einen"
+" Netzwerk-, Drahtlos- oder Bluetoothdrucker hinzufügen**."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:233
+msgid ""
+"Im folgenden Dialogfenster beenden Sie die Druckersuche und gehen über die "
+"Schalftfläche Der gesuchte Drucker ist nicht aufgeführt zum nächsten "
+"Schritt."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:237
+msgid ""
+"Wählen Sie nun die Option *Freigegebenen Drucker* über den Namen auswählen "
+"und schreiben die Drucker-URL gemäß der Vorgabe aus dem Abschnitt "
+"Druckereinrichtung in das Eingabefeld (Beispiel "
+"http://server:631/printers/Netzwerkdrucker)."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:242
+msgid ""
+"Nach Abschluss der Treiberinstallation steht der Drucker in unserem Beispiel"
+" als Netzwerkdrucker auf http://server:631 zur Verfügung."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:244
+msgid "**Beispiel: PDF-Drucker**"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:246
+msgid ""
+"Für die Nutzung des PDF-Druckers muss ein Postskript-Drucker eingerichtet "
+"werden. Starten Sie über den Druckerinstallations-Assistenten die "
+"Installation eines Netzwerkdruckers und geben als Netzwerkpfad die URL des "
+"PDF-Printers an (siehe :doc:`2-drucker-hinzufuegen`). Wählen Sie im weiteren"
+" Verlauf des Installationsdialogs das **Druckermodell MS Publisher Color "
+"Printer**, das unter **Hersteller Generic** aufgeführt ist:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:253
+msgid ""
+"Nach Abschluss der Druckerinstallation steht der PDF-Drucker als PDF-Printer"
+" an http://server:631 zur Verfügung."
+msgstr ""

@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/network/radius/ldap.rst:2
+msgid "LDAP"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/ldap.rst:5
+msgid "LDAP Zugriff einrichten"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/ldap.rst:7
+msgid ""
+"Bei der Installation von Linuxmuster.net wurde bereits die notwendige "
+"Konfiguration in der Datei ``/etc/freeradius/radiusd.conf`` vorgenommen. "
+"Suchen Sie in der Datei den Abschnitt, der den LDAP betrifft und überprüfen "
+"sie folgende Angaben:"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/ldap.rst:23
+msgid "Das benötige Passwort kann mit folgendem Befehl angezeigt werden:"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/ldap.rst:29
+msgid ""
+"Aktivieren Sie nun in der Datei ``/etc/freeradius/sites-available/default`` "
+"**UND** ``/etc/freeradius/sites-available/inner-tunnel`` die LDAP-"
+"Authentifizierung, d.h. entfernen Sie bei den jeweiligen Zeilen zu LDAP die "
+"Kommentarzeichen."
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/ldap.rst:48
+msgid "Am Ende starten Sie die Radius-Server neu:"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/ldap.rst:56
+msgid "LDAP-Authentifizierung testen"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/ldap.rst:58
+msgid "Geben Sie folgenden Befehl ein (Benutzernamen und Passwort anpassen!):"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/ldap.rst:66
+msgid ""
+"Falls Sie ein *Access-Accept Packet* erhalten haben, war die "
+"Authentifizierung erfolgreich!"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/ldap.rst:69
+msgid "Weitere Einstellungen"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/ldap.rst:72
+msgid "Zugriffsbeschränkung aktivieren"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/ldap.rst:74
+msgid ""
+"Wenn man den Radius-Server zur Authentifizierung im WLAN benutzt und nur "
+"bestimmte Nutzer Zugriff erhalten sollen (z.B. alle Mitglieder der Gruppe "
+"``p_wifi``), so muss man in der Datei ``/etc/freeradius/users`` folgende "
+"Änderung vornehmen bzw. hinzufügen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/ldap.rst:84
+msgid ""
+"Alternativ kann man auch die entsprechende LDAP-Gruppe direkt abfragen."
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/ldap.rst:94
+msgid ""
+"Im Abschnitt ``ldap {...}`` in der Datei ``/etc/freeradius/radiusd.conf`` "
+"muss noch der entsprechende Filter aktiviert werden:"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/ldap.rst:103
+msgid "Logging aktivieren"
+msgstr ""
+
+#: ../../source/systemadministration/network/radius/ldap.rst:105
+msgid ""
+"In der Datei ``/etc/freeradius/radiusd.conf`` kann das Logging von "
+"Authentifizierungs-Anfragen eingeschaltet werden. Die Log-Datei ist: "
+"``/var/log/freeradius/radius.log``. Vergessen Sie nicht den Neustart des "
+"Radius-Servers!"
+msgstr ""

@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/appendix/school-console/admin/user.rst:5
+msgid "Menü: Benutzerverwaltung"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/user.rst:9
+msgid ""
+"Im Menüpunkt \"Benutzerverwaltung\" können die verschiedenen Benutzerlisten "
+"gepflegt, Änderungen überprüft und übernommen werden. Die genaue "
+"Funktionsweise wird in der Anleitung :ref:`howto-user-management` "
+"beschrieben."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/user.rst:14
+msgid ""
+"Darüber hinaus können Lehrerpasswörter zurückgesetzt werden, siehe :ref"
+":`howto-change-teacher-passwords`."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/user.rst:17
+msgid "Passwortlisten"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/user.rst:19
+msgid ""
+"Der Administrator kann hier einsehen, zu welchen Zeitpunkten Benutzer neu "
+"angelegt wurden."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/user.rst:24
+msgid ""
+"Sie können entweder eine **Gesamtliste** aller Benutzer mit deren "
+"Passwörtern erhalten oder aber einen bestimmten Zeitpunkt heraussuchen und "
+"dann die Liste der zu diesem Zeitpunkt angelegten Benutzer erhalten."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/user.rst:29
+msgid ""
+"Dabei können Sie jeweils entweder eine Liste als *PDF*-Datei oder als "
+"*CSV*-Datei erhalten. Die *PDF*-Datei enthält Anmeldekärtchen der Benutzer."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/user.rst:35
+msgid "Anmeldekärtchen der Benutzer"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/user.rst:37
+msgid ""
+"Alternativ können Sie sich über die Option **Ein Eintrag pro Seite** Seiten "
+"mit ausführlichen Anmeldeinformationen ausgeben lassen."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/user.rst:42
+msgid "Ausführliche Anmeldeinformationen für den Benutzer"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/user.rst:46
+msgid "Berichte"
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/user.rst:48
+msgid "Hier rufen Sie die Berichte der jeweils letzten Aktion ab."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/user.rst:50
+msgid ""
+"Unter „Administrator-Report“ erhalten Sie ein Protokoll des letzten "
+"Durchlaufs von „anlegen/versetzen/löschen“."
+msgstr ""
+
+#: ../../source/appendix/school-console/admin/user.rst:53
+msgid ""
+"Unter „Report für das Sekretariat“ finden Sie Angaben zu Datensätzen, die "
+"nicht den Vorgaben von Sophomorix entsprechen und evtl. im "
+"Schulverwaltungsprogramm korrigiert werden müssen."
+msgstr ""

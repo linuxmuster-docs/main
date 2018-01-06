@@ -1,0 +1,274 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/appendix/contribute/feedback/installation.rst:2
+msgid "Installation des Pakets"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:4
+msgid ""
+"Das Paket linuxmuster-community-feedback wird mit dem "
+"Paketverwaltungswerkzeug aus den linuxmuster Repositorys installiert."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:15
+msgid ""
+"Direkt nach der Installation wird detailliert abgefragt, welche "
+"Informationen übermittelt werden sollen, am Ende des Konfigurationsvorgangs "
+"wird angezeigt, welche Daten genau übermittelt werden."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:20
+msgid "Konfiguration"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:22
+msgid ""
+"Nach der Paketinstallation wird zunächst die zentrale Frage gestellt: Sollen"
+" überhaupt Daten an linuxmuster.net übermittelt werden?"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:25
+msgid ""
+"Wird hier mit ``Nein`` geantwortet, ist die Konfiguration des Pakets damit "
+"beendet, es werden keine weiteren Änderungen am System vorgenommen und "
+"keinerlei Daten an linuxmuster.net übermittelt."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:34
+msgid ""
+"Wenn Statistiken übermittelt werden sollen, wird zunächst erfragt, in "
+"welchem Umfeld die linuxmuster.net-Installation zum Einsatz kommt."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:40
+msgid ""
+"Anschließend geben Sie bitte an, ob und wie die Installation von "
+"linuxmuster.net virtualisiert ist."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:46
+msgid ""
+"Wird die linuxmuster.net Installation ganz oder teilweise durch einen "
+"Dienstleister betreut oder liegen Installation und Pflege des Systems "
+"alleine an der Schule?"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:52
+msgid ""
+"Wo wird Ihre linuxmuster.net Installation eingesetzt? wenn Sie ``Nicht in "
+"Deutschland`` auswählen, können Sie im nächsten Schritt eine freie Angabe "
+"zum Einsatzort machen."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:58
+msgid ""
+"Diese Eingabemöglichkeit gibt es nur bei der Auswahl ``Nicht in "
+"Deutschland`` im vorigen Schritt:"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:65
+msgid ""
+"Darf die Anzahl der Nutzer übermittelt werden? Wenn Sie hier mit ``YES`` "
+"antworten, ermittelt das Feedback-Paket aus den Dateien \"schueler.txt\" und"
+" \"lehrer.txt\" die Anzahl der Schüler beziehungsweise der Lehrer. Dabei "
+"werden keine personenbezogenen Daten erhoben."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:74
+msgid ""
+"Dürfen Informationen über Zahl und Art der eingesetzten Clients übermittelt "
+"werden? Wenn Sie hier mit ``YES`` antworten, ermittelt das Feedback-Paket "
+"aus der Datei \"workstations\" die Anzahl der dort eingetragenen "
+"Clientcomputer. Die Zahlen werden getrennt aufgelistet, je nachdem ob ein "
+"Clientrechner von linuxmuster.net mit linbo, mit linbo und opsi mit opsi "
+"oder als IP-Host verwaltet wird."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:80
+msgid ""
+"Weitere Informtionen zu den Clients wie Namen, Hardware Adresse, Hersteller "
+"o.ä. werden weder ermittelt, noch übertragen."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:87
+msgid ""
+"Mit der Beantwortung der nächsten Frage entscheiden Sie, ob Ihre "
+"Datenübermittlung anonym bleibt oder nicht. Wenn Sie sich entscheiden, den "
+"Namen Ihrer Schule an linuxmuster.net zu übertragen, können Sie später im "
+"Konfigurationsprozess festlegen, ob Ihre Installation auf der Nutzerkarte "
+"erscheinen soll und ob der Schulname auf der Karte dargestellt werden soll."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:93
+msgid "Der Schulname wird darüberhinaus nicht automatisiert veröffentlicht."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:99
+msgid ""
+"Der Schulname wird nur dann erfragt, wenn man im vorherigen Schritt der "
+"Übermittlung zugestimmt hat:"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:105
+msgid ""
+"Darf Ihre Installation auf der Nutzerkarte erscheinen? Wenn ja, müssen Sie "
+"anschließende die Postleitzahl angeben."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:111
+msgid ""
+"Die Postleitzahl muss nur angegeben werden, wenn ein Eintrag auf der Karte "
+"gewünscht ist:"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:117
+msgid ""
+"Soll der Name am Kartenpin angezeigt werden? Diese Frage erscheint nur, wenn"
+" zuvor der Schulname angegeben wurde."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:124
+msgid ""
+"Am Ende der Konfiguration wird eine Übersicht angezeigt, welche Daten an "
+"linuxmuster.net übertragen werden. Die dargestellten Informationen sind "
+"dabei exakt der Inhalt der Datei, die später an den Projektserver "
+"übermittelt wird."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:133
+msgid ""
+"Bestätigung der Anfrage überträgt die Daten wie dargestellt zum "
+"linuxmuster.net Server und erstellt einen Cronjob, der diesen Vorgang einmal"
+" wöchentlich automatisch wiederholt."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:136
+msgid ""
+"Dabei werden die Werte im Anschnitt \"Statistiken\" jeweils nach den "
+"Vorgaben der Konfiguration neu ermittelt."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:140
+msgid "Beispielkonfiguration: Minimale Angaben"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:142
+msgid ""
+"Der folgende Screenshot zeigt den minimalen Datensatz, der als Feedback "
+"übertragen wird:"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:148
+msgid "Übertragen werden dabei Informationen zu:"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:150
+msgid "Virtualisierung"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:151
+msgid "Bundesland/Einsatzort"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:152
+msgid "Einsatzzweck"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:153
+msgid "Dienstleisterunterstützung"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:156
+msgid ""
+"Außerdem werden einmal je Woche die installierten Versionen der linuxmuster-"
+"Basispakete"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:158
+msgid "linuxmuster-base"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:159
+msgid "linuxmuster-linbo"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:160
+msgid "linuxmuster-schulkonsole"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:161
+msgid "sophomorix2"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:163
+msgid ""
+"und der Status der Einstellung \"subnetting\" ermittelt und in der "
+"Statistikdatei aktualisiert."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:165
+msgid ""
+"Die id der Installation wird aus der Mac-Adresse, dem Schulnamen und der "
+"Domäne ermittelt und mit MD5 gehasht, so dass das System zwar für "
+"statistische Zwecke anonym identifizierbar wird, aber ohne weitere Angaben "
+"keine Rückschlüsse auf die Ausgangswerte möglich sind."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:171
+msgid "Beispielkonfiguration: Maximale Angaben"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:173
+msgid ""
+"Der folgende Screenshot zeigt den maximalen Datensatz, der als Feedback "
+"übertragen wird:"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:179
+msgid ""
+"Der maximale Datensatz enthält alle Informationen des minimalen Datensatzes,"
+" ergänzt um:"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:181
+msgid "Schulname"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:182
+msgid "Postleitzahl"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:183
+msgid ""
+"Einverständnis zur Kartendarstellung und zur Darstellung des Schunamens am "
+"Kartenpin"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:185
+msgid "Aktuell gehalten werden zusätzlich Informationen zu:"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:187
+msgid "Anzahl der Schüler/Lehreraccounts"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/installation.rst:188
+msgid "Anzahl der Clients, aufgeschlüsselt nach Kategorie"
+msgstr ""

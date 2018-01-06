@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:2
+msgid "Vorbereitung der workstations-Datei"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:4
+msgid ""
+"Zunächst bearbeitet man die Workstations-Datei derart, dass alle Rechner, "
+"die später im Lehrernetz sein sollen, Adressen mit dem Beginn ``10.17.x.x`` "
+"erhalten. Rechner die sich später im Schülersegment befinden sollen Adressen"
+" mit dem Beginn ``10.18.x.x`` erhalten."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:9
+msgid ""
+"Dabei ist es unerheblich, ob die Veränderungen im Serverterminal oder in der"
+" Schulkonsole vorgenommen werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:13
+msgid "Ausgangszustand"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:15
+msgid ""
+"Die Rechner sind Raumweise einsortiert, beispielsweise haben alle Rechner in"
+" Raum r120 IP-Adressen der Form ``10.16.120.x``."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:18
+msgid "Die Workstations-Datei soll nun so umstrukturiert werden, dass später"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:20
+msgid "alle Rechner in Raum r120 und der Rechner rhm-ws01 im Lehrernetz sind"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:21
+msgid "alle übrigen Rechner im Schülernetz sind"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:23
+msgid ""
+"Dazu ersetzt man bei den betreffenden Rechnern die Zahl im zweiten  Oktett "
+"der IP-Adresse (derzeit bei allen die ``16``) durch die entsprechende Zahl "
+"für das spätere Subnetz (``17`` für das Lehrernetz, ``18`` für das "
+"Schülernetz). Die Drucker werden dabei ebenfalls in das entsprechende "
+"Teilnetz verlegt, hier sind später noch weitere Anpassungen auf dem Server "
+"nötig."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:47
+msgid "Endzustand"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:49
+msgid ""
+"Alle Rechner die später im Lehrernetz sein sollen, haben nun Adressen der "
+"Form ``10.17.x.x``, alle Rechner die später im Schülernetz sein sollen haben"
+" Adressen der Form ``10.18.x.x``. Eventuell noch bestehende Netzmasken im "
+"sechsten Feld sind obsolet."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:54
+msgid ""
+"Nun übernimmt man die Änderungen durch ausführen des Befehls "
+"``import_workstations`` oder entsprechend in der Schulkonsole."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:57
+msgid ""
+"Nach dem nächsten Rechnerstart erhalten die geänderten Rechner die neuen IP-"
+"Adressen."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:79
+msgid "Geänderte Drucker auf dem Server anpassen"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:81
+msgid ""
+"Hat man bei der Neustrukturierung IP-Adressen von Druckern geändert, die in "
+"CUPS auf dem Server als Netzwerkdrucker eingerichtet sind, muss man dort die"
+" neue IP-Adresse anpassen, da diese Änderungen durch den erneuten Import der"
+" Arbeitsstationen nicht übernommen werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:86
+msgid ""
+"Am Beispiel des Druckers ``r120-printer-bw`` wird das Vorgehen kurz "
+"dargestellt."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:88
+msgid ""
+"Dazu öffnet man die CUPS Seite auf dem Server und bearbeitet den "
+"betreffenden Drucker - man sieht, die ursprüngliche IP-Adresse "
+"``10.16.120.203``."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:95
+msgid "Zunächst wählt man im Administrationsmenü ``Drucker ändern``."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:101
+msgid ""
+"Jetzt wählt man die bisherige Anschlussart, im Beispiel ``AppSocket/HP "
+"JetDirect``, im nächsten Bildschirm werden dann die bisherigen Einstellungen"
+" angezeigt."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:108
+msgid "In diesem Fall, wie zu sehen ``socket://10.16.120.203:9100``."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:114
+msgid ""
+"Jetzt ändert man die IP-Adresse auf den neuen Wert und lässt den Rest "
+"unverändert."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:120
+msgid ""
+"Im weiteren Änderungsverlauf werden jeweils die bisherigen Einstellungen "
+"angezeigt, die man stets übernimmt. Um die Änderungen abzuschliessen, muss "
+"man am Ende das ``root``-Passwort angeben."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:124
+msgid ""
+"Auf diese Weise müssen alle zuvor geänderten Drucker auf Ihre neue IP-"
+"Adresse angepasst werden."
+msgstr ""

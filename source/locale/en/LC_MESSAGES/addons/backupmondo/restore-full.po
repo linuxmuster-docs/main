@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/addons/backupmondo/restore-full.rst:2
+msgid "Restore eines Vollbackups"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-full.rst:4
+msgid ""
+"Nach der Eingabe von **nuke** am Bootprompt wird der Rechner vollautomatisch"
+" aus dem letzten Vollbackupset restauriert. Die Festplatte(n) werden "
+"partitioniert und formatiert. Raid- bzw. LVM-Systeme werden "
+"wiederhergestellt. Falls auf dem Zielsystem größere Festplatten vorhanden "
+"sind, werden die Partitionsgrößen dynamisch angepasst."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-full.rst:8
+msgid ""
+"Anschließend wird der auf dem Backupmedium gefundene Vollbackupset, aus dem "
+"das zur Restauration verwendete ISO-Image ``mondorescue.iso`` stammt, wieder"
+" hergestellt."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-full.rst:13
+msgid ""
+"Nach Abschluss des Restaurationsvorgangs erscheint noch ein Hinweis, den Sie"
+" mit **ENTER** bestätigen müssen,"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-full.rst:18
+msgid "um schließlich auf die Konsole zu gelangen."
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-full.rst:22
+msgid ""
+"Falls Sie keine differentiellen und inkrementellen Backupsets restaurieren "
+"müssen, geben Sie am Prompt exit ein, um in den frisch restaurierten Server "
+"zu booten. Was im anderen Fall ist noch zu tun ist, lesen Sie im Abschnitt  "
+":doc:`restore-diff`."
+msgstr ""
