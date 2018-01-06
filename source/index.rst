@@ -8,9 +8,11 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
 
 .. toctree::
   :maxdepth: 2
+  :caption: Über
 
-  about/index
-  
+  about/about
+  about/release-information/index
+
 .. toctree::
   :maxdepth: 2
   :caption: Erste Schritte
@@ -92,4 +94,3 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
 
      user-management/change-own-password/index
      classroom/check-own-quota/index
-
