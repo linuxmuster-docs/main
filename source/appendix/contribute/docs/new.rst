@@ -49,6 +49,8 @@ html` aus und führe `xdg-open build/html/index.html` aus, um das Ergebnis zu be
 
    linuxadmin@lmn-docs:~$ cd linuxmuster-docs/
    linuxadmin@lmn-docs:~/linuxmuster-docs$ cd main/
+   linuxadmin@lmn-docs:~/linuxmuster-docs/main$ git pull
+   ...
    linuxadmin@lmn-docs:~/linuxmuster-docs/main$ make html
    sphinx-build -b html -d build/doctrees   source build/html
    Running Sphinx v1.6.5
