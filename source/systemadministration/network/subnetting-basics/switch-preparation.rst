@@ -1,21 +1,13 @@
 Vorbereitung der Switches im Netzwerk
 =====================================
 
-In Vorbereitung auf das Subnetting sollten auf allen L2 Switches im Netzwerk
-die VLANs mit den IDs ``16``, ``17``, und ``18`` angelegt werden, damit später
-die Portkonfiguration aller Switches leicht passend eingestellt werden kann.
+In Vorbereitung auf das Subnetting sind auf allen Switches im Netzwerk (in allen Gebäuden)
+die VLANs mit den IDs ``10``, ``20``, ``30``, ``40``, ``50``, ``100``, und ``200`` anzulegen, damit später
+die Portkonfiguration aller Switches angepasst werden kann.
 
-Je nachdem wie die Geräte der einzelnen Subnetze im Schulhaus verteilt sind,
-ist es nicht zwar unbeding notwendig, alle Subnetze auf allen Switches
-einzurichten, es richtet aber keinen Schaden an und vereinheitlicht das
-Vorgehen. Ausserdem können spätere Erweiterungen der Infrastruktur mit weniger
-Konfigurationsaufwand umgesetzt werden, beispielsweise wenn in einem
-Gebäuteteil in dem zunächst nur Schülergeräte angeschlossen waren ein
-Lehrerarbeitsraum eingerichtet werden soll.
+Das genaue Vorgehen kann hier nicht umfassend dokumentiert werden, da es auch von Art und Hersteller der Switche abhängt. 
 
-Das genaue Vorgehen kann hier nicht umfassend dokumentiert werden, das es von
-Art und Hersteller des Switches abhängt, exemplarisch sollen folgende Beispiele
-stehen.
+Exemplarisch erfolgt die Darstellung zur Einrichtung der VLANS auf L2-Switches anhand des Modells Hewlett Packard HP 2650. Für andere Modelle sind die Konfigurationsschritte entsprechend anzupassen.
 
 Hewlett Packard HP2650
 ----------------------
@@ -29,7 +21,11 @@ Einige HP-Switches haben eine textbasierte "Menükonsole", hier geht man prinzip
 * Mit telnet/ssh auf die Switchkonsole verbinden 
 * Das Konfigurationsmenü öffnen
 * Nach  ``Switch-Konfiguration``, ``VLAN Menu``, ``VLAN Names`` wechseln und
-  dort die VLans mit den IDs ``16``, ``17`` und ``18`` anlegen.
+  dort die VLans mit den IDs ```10``, ``20``, ``30``, ``40``, ``50``, ``100``, und ``200`` anlegen.
+
+.. important::
+
+   Bilder sind noch anzupassen !!
 
 .. image:: media/hp2650-02.png
    :alt: VLANs HP2650
@@ -43,9 +39,13 @@ Einige HP-Switches haben eine textbasierte "Menükonsole", hier geht man prinzip
    :alt: VLANs HP2650
    :align: center
 
-Auf diesem Switch gibt es bereits 2 VLANs (mit den IDs ``2`` und ``3``) für andere Zwecke, diese stören nicht.
 
-.. image:: media/hp2650-05.png
-   :alt: VLANs HP2650
-   :align: center
+Als VLAN Name ist auf allen Switches ein identischer Name - also z.B. VLAN Server, VLAN WLAN, VLAN DMZ, VLAN Lehrer,
+VLAN Gaeste, VLAN Raum100, VLAN Raum200 - für das jeweilige VLAN anzugeben.
+
+.. important::
+
+   Es ist immer das Protokoll 802.1q für die Definition der VLANs anzuwenden. 
+   Dies ist ein genormtes Netzwerkprotokoll, das es ermöglicht, sog. tagged VLANs zu definieren.
+
 
