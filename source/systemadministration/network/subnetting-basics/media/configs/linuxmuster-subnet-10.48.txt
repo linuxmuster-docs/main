@@ -1,0 +1,131 @@
+config-file-header
+SG30-10L3
+v1.4.8.6 / R800_NIK_1_4_202_008
+CLI v1.0
+set system mode router 
+
+file SSD indicator excluded
+@
+vlan database
+vlan 5,10,20,30,40,50,100,200 
+exit
+voice vlan oui-table add 0001e3 Siemens_AG_phone________
+voice vlan oui-table add 00036b Cisco_phone_____________
+voice vlan oui-table add 00096e Avaya___________________
+voice vlan oui-table add 000fe2 H3C_Aolynk______________
+voice vlan oui-table add 0060b9 Philips_and_NEC_AG_phone
+voice vlan oui-table add 00d01e Pingtel_phone___________
+voice vlan oui-table add 00e075 Polycom/Veritel_phone___
+voice vlan oui-table add 00e0bb 3Com_phone______________
+arp timeout 600
+system router resources ip-entries 454 
+ip dhcp relay address 10.48.1.1
+ip dhcp relay enable
+bonjour interface range vlan 1
+ip access-list extended LEHRKRAEFTE
+permit ip any 10.48.1.0 0.0.0.255 ace-priority 20
+deny ip any 10.0.0.0 0.255.255.255 ace-priority 40
+exit
+ip access-list extended KLASSENRAEUME
+permit ip any 10.48.1.0 0.0.0.255 ace-priority 60
+deny ip any 10.0.0.0 0.255.255.255 ace-priority 80
+exit
+hostname SG30-10L3
+no passwords complexity enable 
+username cisco password encrypted 35be2368d129d585ed95aec72ad3d47e2a00d100 privilege 15 
+clock timezone " " 0 minutes 0
+!
+interface vlan 1
+ ip address 192.168.1.254 255.255.255.0 
+ no ip address dhcp 
+!
+interface vlan 5
+ name Internet 
+!
+interface vlan 10
+ name Server 
+ ip address 10.48.1.253 255.255.255.0 
+ ip dhcp relay enable 
+!
+interface vlan 20
+ name WLAN 
+!
+interface vlan 30
+ name DMZ 
+!
+interface vlan 40
+ name Lehrer 
+ ip address 10.49.10.254 255.255.255.0 
+ ip dhcp relay enable 
+ service-acl input LEHRKRAEFTE default-action permit-any 
+!
+interface vlan 50
+ name Gaeste 
+ ip address 10.50.20.254 255.255.255.0 
+ ip dhcp relay enable 
+ service-acl input KLASSENRAEUME default-action permit-any 
+!
+interface vlan 100
+ name Raum100 
+ ip address 10.60.100.254 255.255.255.0 
+ ip dhcp relay enable 
+ service-acl input KLASSENRAEUME default-action permit-any 
+!
+interface vlan 200
+ name Raum200 
+ ip address 10.60.200.254 255.255.255.0 
+ ip dhcp relay enable 
+ service-acl input KLASSENRAEUME default-action permit-any 
+!
+interface gigabitethernet1
+ channel-group 1 mode auto 
+!
+interface gigabitethernet2
+ channel-group 1 mode auto 
+!
+interface gigabitethernet3
+ channel-group 2 mode auto 
+!
+interface gigabitethernet4
+ channel-group 2 mode auto 
+!
+interface gigabitethernet5
+ channel-group 3 mode auto 
+!
+interface gigabitethernet6
+ channel-group 3 mode auto 
+!
+interface gigabitethernet7
+ switchport mode access 
+ switchport access vlan 10 
+!
+interface gigabitethernet8
+ switchport mode access 
+ switchport access vlan 5 
+!
+interface gigabitethernet9
+ channel-group 4 mode on 
+!
+interface gigabitethernet10
+ channel-group 4 mode on 
+!
+interface Port-channel1
+ description "Port 1&2 als Trunk zur VM, VLANs 5,10,20,30,40,50,60,100,200"
+ switchport trunk allowed vlan add 5,10,20,30,40,50,100,200 
+!
+interface Port-channel2
+ description "Port 3&4, Trunk, VLANs 20,30,40,50,60,100,200"
+ switchport trunk allowed vlan add 20,30,40,50,100,200 
+!
+interface Port-channel3
+ description "Port 5&6, Trunk, VLANs 20,30,40,50,60,100,200"
+ switchport trunk allowed vlan add 20,30,40,50,100,200 
+!
+interface Port-channel4
+ flowcontrol auto 
+ description "Ports 9&10, Trunk, VLANs 20,30,40,50,60,100,200"
+ switchport trunk allowed vlan add 20,30,40,50,100,200 
+!
+exit
+ip helper-address 10.48.1.253 255.255.255.255 9 
+ip default-gateway 10.48.1.254 

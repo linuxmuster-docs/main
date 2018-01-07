@@ -42,6 +42,7 @@ Nun übernimmt man die Änderungen durch den Befehl ``import_workstations`` oder
 Nach dem nächsten Rechnerstart erhalten die geänderten Rechner die neuen IP-Adressen.
 
 .. code::
+   
    #Raum;Rechnername;Imageklasse;Mac-Adresse;IP-Adresse;Subnetzmaske;;;;;
    r100;r100-ws01;qgm;C4:34:6B:7E:71:10;10.20.100.1;;1;1;1;1;1
    r100;r100-ws02;qgm;64:51:06:38:B6:6F;10.20.100.2;;1;1;1;1;1
