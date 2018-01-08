@@ -15,7 +15,7 @@ Ausgangszustand
 Die Rechner sind raumweise einsortiert. Die Workstations-Datei soll nun so umstrukturiert werden, dass später
 
 * alle Rechner in Raum r100 und r200 IPs aus den Subnetzen der beiden Räume VLAN100 und VLAN200 erhalten
-* alle anderen Rechner sollen IPs aus dem Subnetz VLAN Lehrer erhalten
+* alle anderen Rechner sollen IPs aus dem Subnetz ``VLAN Lehrer`` erhalten
 
 .. code::
    
@@ -34,7 +34,7 @@ Endzustand
 ----------
 
 Alle Rechner die später im Lehrernetz sein sollen, haben nun Adressen der Form ``10.30.10.x``,
-alle Rechner die später im VLAN Raum100 sein sollen haben Adressen der Form ``10.20.100.x``. 
+alle Rechner die später im ``VLAN Raum100`` sein sollen haben Adressen der Form ``10.20.100.x``. 
 Eventuell noch bestehende Netzmasken im sechsten Feld sind nicht mehr erforderlich. Dies wird durch die später folgende Umstellung des linuxmuster.net Servers auf Subnetting geregelt.
 
 Nun übernimmt man die Änderungen durch den Befehl ``import_workstations`` oder entsprechend in der Schulkonsole.
