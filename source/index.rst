@@ -4,11 +4,9 @@
 
 Herzlich Willkommen zur Dokumentation von linuxmuster.net! Diese Dokumentation beschreibt alle wichtigen Schritte von der Installation, der Einrichtung von Windows- und Ubuntu-Rechnern, der Verwaltung von Nutzern bis hin zu individuellen Anpassungen.
 
-Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Support helfend Seite. Weiter Informationen dazu finden sie auf der `Website von Linuxmuster.net <http://linuxmuster.net/about/hilfsbereit/>`_.
+Neben dieser Dokumentation steht dir unsere Community und unser Telefon-Support helfend Seite. Weitere Informationen dazu findest du auf der `Website von linuxmuster.net <http://linuxmuster.net/about/hilfsbereit/>`_.
 
-Zum einen dient die Dokumentation als Schritt-für-Schritt Anleitung für die Einrichtungs- und Administrationsaufgaben, zum anderen als Referenz für die Möglichkeiten der freien Musterlösung linuxmuster.net.
-
-Dabei richtet sich die Dokumentation an verschiedene Zielgruppen. Das Handbuch für Netzwerkbetreuer beschreibt die Installation und Konfiguration von Linuxmuster.net. Die Handbücher für Lehrkräfte und SchülerInnen haben vor allem die pädagogischen Funktionen der Musterlösung (Funktionen für den Unterricht, Klassenarbeitsmodus, Dateien austeilen und einsammeln, etc.).
+Zum einen dient die Dokumentation als Schritt-für-Schritt Anleitung für die Einrichtungs- und Administrationsaufgaben, zum anderen als Referenz für die Möglichkeiten der freien Musterlösung linuxmuster.net. Für Lehrkräfte und Schüler*innen werden die pädagogischen Funktionen für den Unterricht und darüberhinaus beschrieben.
 
 .. toctree::
   :maxdepth: 2
