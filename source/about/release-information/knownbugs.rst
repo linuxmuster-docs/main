@@ -32,5 +32,16 @@ Lösungsweg
   :ref:`release-linbo-bootmedium-label`
 
 
+Probleme mit Grafikkarten-Treibern
+==================================
 
+Der Linbo-64bit-Kernel enthält ab LINBO 2.3.31 (ca. Januar 2018) modularisierte Grafiktreiber. Es könnte damit auf mancher Hardware der Start der Linbo-GUI fehlschlagen. In dem Fall, muss man mit einem blacklist-Parameter `modprobe.blacklist=` verhindern, dass ein bestimmter Grafiktreiber geladen wird:
+Beispiele:
+
+.. code-block:: console
+
+   modprobe.blacklist=radeon
+   modprobe.blacklist=nvidia
+
+Nähere Umstände werden im Forum hier https://ask.linuxmuster.net/t/testing-pakete-fuer-6-2/1205/11 erläutert.
 
