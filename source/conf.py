@@ -14,7 +14,6 @@
 
 import sys
 import os
-import sphinx_bootstrap_theme
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -125,33 +124,31 @@ gettext_compact = False     # optional
 
 
 # -- Options for HTML output ----------------------------------------------
-# html_context = {
-#     'css_files': [
-#         'https://media.readthedocs.org/css/sphinx_rtd_theme.css',
-#         'https://media.readthedocs.org/css/readthedocs-doc-embed.css',
-#         '_static/theme_overrides.css',
-#     ],
-# }
+html_context = {
+    'css_files': [
+        'https://media.readthedocs.org/css/sphinx_rtd_theme.css',
+        'https://media.readthedocs.org/css/readthedocs-doc-embed.css',
+        '_static/theme_overrides.css',
+    ],
+}
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 # html_theme = 'linuxmuster'
-#html_theme = 'sphinx_rtd_theme'
-html_theme = 'bootstrap'
-html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    #'logo_only': True
-    'bootswatch_theme': "united",
-    'source_link_position': "footer",
-    'navbar_links': [],
-    'navbar_title': "",
-    'navbar_site_name': "Kapitel",
-    'navbar_pagenav_name': "Seite",
-    'navbar_title': " ",
+    'logo_only': True
+    # 'bootswatch_theme': "united",
+    # 'source_link_position': "footer",
+    # 'navbar_links': [],
+    # 'navbar_title': "",
+    # 'navbar_site_name': "Kapitel",
+    # 'navbar_pagenav_name': "Seite",
+    # 'navbar_title': " ",
 }
 
 # Add any paths that contain custom themes here, relative to this directory.

@@ -1,21 +1,3 @@
 .wy-side-nav-search {
 	background-color: #233c4c;
 }
-
-.dropdown-menu.globaltoc {
-  max-height: calc(100vh - 50px);
-  overflow: scroll;
-}
-
-.navbar {
-  background-color: #233c4c;
-  border-color: #233c4c;
-}
-
-.caption-text {
-  font-weight: bold;
-}
-
-.caption {
-  margin: 10px;
-}
