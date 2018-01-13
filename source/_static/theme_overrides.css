@@ -1,3 +1,17 @@
 .wy-side-nav-search {
 	background-color: #233c4c;
 }
+
+.rtd-pro {
+  display: none;
+}
+
+.wy-side-nav-search > div.version {
+  color: #f49e00;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.wy-menu-vertical p.caption {
+  color: #f49e00;
+}
