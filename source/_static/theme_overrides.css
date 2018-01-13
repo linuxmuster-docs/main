@@ -1,8 +1,8 @@
-.wy-side-nav-search {
+.wy-nav-side, .wy-side-nav-search {
 	background-color: #233c4c;
 }
 
-.rtd-pro {
+div.rtd-pro.wy-menu, div.rst-pro.wy-menu {
   display: none;
 }
 
@@ -14,4 +14,12 @@
 
 .wy-menu-vertical p.caption {
   color: #f49e00;
+}
+
+.wy-menu-vertical a {
+  color: #ffffff
+}
+
+.wy-menu-vertical a:hover {
+  background-color: #f49e00
 }
