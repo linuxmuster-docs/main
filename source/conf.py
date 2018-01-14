@@ -143,7 +143,8 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    'logo_only': True
+    'logo_only': True,
+    'sticky_navigation': False,
     # 'bootswatch_theme': "united",
     # 'source_link_position': "footer",
     # 'navbar_links': [],
