@@ -1,4 +1,4 @@
-Weitere L2-Switches mit VLans anbinden
+Weitere L2-Switches mit VLANs anbinden
 ======================================
 
 In der hier dargestellten Konfiguration des L3-Switches gibt es vier LAG-Ports.

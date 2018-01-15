@@ -4,13 +4,13 @@ Umstellen des Servers auf Subnetting
 
 Das Umstellen auf Subnetzbetrieb geschieht per Setuproutine mit
 
-.. code::
+.. code-block:: console
 
    # linuxmuster-setup --modify
 
 oder im Falle einer Neuinstallation mit
 
-.. code::
+.. code-block:: console
 
    # linuxmuster-setup --first
 
@@ -53,7 +53,7 @@ Subnetze werden über die Konfigurationsdatei ``/etc/linuxmuster/subnets`` einge
 
 Daraus ergibt sich folgender Aufbau der Konfigurationsdatei ``/etc/linuxmuster/subnets``:
 
-.. code::
+.. code-block:: none
 
    # Raum 100
    10.20.100.0/24;10.20.100.254;10.20.100.100;10.20.100.200;0;0
@@ -66,7 +66,7 @@ Daraus ergibt sich folgender Aufbau der Konfigurationsdatei ``/etc/linuxmuster/s
 
 Beachten Sie, dass Änderungen der Subnetzkonfiguration erst wirksam werden, wenn sie durch Ausführung des Befehls
 
-.. code:: 
+.. code-block:: console
 
    # import_workstations
 
@@ -85,14 +85,16 @@ Denken Sie daran neue Subnetze in der VLAN-Konfiguration ihrer Switche entsprech
 Interner und externer Zugriff
 -----------------------------
 
-In der Konfigurationsdatei ``/etc/linuxmuster/subnets`` lässt sich für jedes Subnetz festlegen, ob IP-Adressen aus der frei definierten Range Zugriff auf Intranet-Resourcen8) (Feld 5) oder Internet (Feld 6) haben. Dabei bedeuten
+In der Konfigurationsdatei ``/etc/linuxmuster/subnets`` lässt sich für jedes Subnetz festlegen, ob IP-Adressen aus der frei definierten Range Zugriff auf Intranet-Resourcen (Feld 5) oder Internet (Feld 6) haben. Dabei bedeuten
 
-    0 = kein Zugriff
-    1 = Zugriff erlaubt
+.. code-block:: none
+
+   0 = kein Zugriff
+   1 = Zugriff erlaubt
 
 Zwei Dinge sind hierbei zu beachten:
 
-Voreinstellungen für die Intranet- und Internetsperre für Räume und einzelne (in ``/etc/linuxmuster/workstations definierte``) Rechner werden nach wie vor über die Schulkonsole (Aktueller Raum) bzw. die Konfigurationsdatei ``/etc/linuxmuster /room_defaults`` vorgenommen.
+Voreinstellungen für die Intranet- und Internetsperre für Räume und einzelne (in ``/etc/linuxmuster/workstations`` definierte) Rechner werden nach wie vor über die Schulkonsole (Aktueller Raum) bzw. die Konfigurationsdatei ``/etc/linuxmuster/room_defaults`` vorgenommen.
 
 **Ausnahme**: Wird für die freie Range eines Subnetzes das Internet freigegeben (1 in Feld 6), ist für importierte Rechner dieses Subnetzes die Internetsperre wirkungslos. Falls Sie also z.B. für mobile Geräte ein Netz mit freiem Internetzugriff benötigen, konfigurieren Sie dafür besser ein eigenes Subnetz.
 

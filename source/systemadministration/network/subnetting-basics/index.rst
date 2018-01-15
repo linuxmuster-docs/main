@@ -1,5 +1,6 @@
-Netzsegmentierung - Grundlagen
-==============================
+================================
+ Netzsegmentierung - Grundlagen
+================================
 
 In Schulen sind Netzwerke grundsätzlich in getrennte logische Bereiche zu unterteilen und voneinander zu trennen. In allen Bundesländern gibt es die Vorgabe, dass das schulische Verwaltungsnetz vom sog. pädagogischen Netz zu trennen ist.
 
@@ -15,13 +16,10 @@ Es können ebenfalls andere managebare L2- und L3-Switches eingesetzt werden. Di
  
 Eine Erweiterung (oder Reduzierung) um weitere Subnetzbereiche, beispielsweise klassenraumweise oder der Wegfall der DMZ, ist ohne Schwierigkeiten möglich. 
 
-.. toctree::
-   :maxdepth: 2
-
-   preface
-   server-preparation
-   switch-preparation
-   switch-configuration
-   switch-cascading
-   server-setup
-   troubleshooting
+.. include::   preface.rst
+.. include::   server-preparation.rst
+.. include::   switch-preparation.rst
+.. include::   switch-configuration.rst
+.. include::   switch-cascading.rst
+.. include::   server-setup.rst
+.. include::   troubleshooting.rst

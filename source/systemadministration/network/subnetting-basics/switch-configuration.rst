@@ -7,11 +7,7 @@ Einspielen der vordefinierten Konfiguration
 .. hint::
 
   Die Firmware des Cisco L3 Switch SG300-10 ist vorab auf die Version 1.4.8.6 zu aktualisieren.
-  FW_ `Hier der Link für die Firmware`__: 
-  
-  .. _FW: https://software.cisco.com/download/release.html?mdfid=283019611&softwareid=282463181&release=1.4.8.06 
-
-  __ FW_
+  `Hier der Link für die Firmware <https://software.cisco.com/download/release.html?mdfid=283019611&softwareid=282463181&release=1.4.8.06>`_
 
 Für den L3-Switch Cisco SG300 stehen vorbereitete Konfigurationsdateien zur
 Verfügung, die die Konfiguration auf dem Switch so einspielen, wie diese in dieser Dokumentation beschrieben wird. Es werden also 8-Ports zu vier Link Aggregation Ports - jeweils bestehend aus zwei Ports - erstellt. Zudem werden alle Ports als Access Ports oder Trunks definiert und die weitergeleiteten / getaggten VLANs hierfür definiert. DHCP Einstellungen und ARP Einstellungen werden ebenso definiert.
