@@ -1,5 +1,10 @@
-Vorbereitung der workstations-Datei
-===================================
+Vorbereitungen auf dem Server
+=============================
+
+Im ersten Schritt werden die in der Datei
+``/etc/linuxmuster/workstations`` verwalteten Rechner so geordnet,
+dass Sie in weiteren Schritten automatisch in das richtige Subnetz
+einsortiert werden.
 
 Zunächst bearbeitet man die Workstations-Datei derart, dass alle Rechner, die
 später in den jeweiligen Netzen sein sollen, Adressen aus dem jeweiligen VLAN erhalten. 
@@ -9,15 +14,12 @@ erhalten (VLAN ID 100).
 Dabei ist es unerheblich, ob die Veränderungen im Serverterminal oder in der
 Schulkonsole vorgenommen werden.
 
-Ausgangszustand
----------------
+Ausgangszustand der Datei ``workstations``
+------------------------------------------
 
-Die Rechner sind raumweise einsortiert. Die Workstations-Datei soll nun so umstrukturiert werden, dass später
+Die Rechner sind raumweise einsortiert. 
 
-* alle Rechner in Raum r100 und r200 IPs aus den Subnetzen der beiden Räume VLAN100 und VLAN200 erhalten
-* alle anderen Rechner sollen IPs aus dem Subnetz ``VLAN Lehrer`` erhalten
-
-.. code::
+.. code-block:: none
    
    #Raum;Rechnername;Imageklasse;Mac-Adresse;IP-Adresse;Subnetzmaske;;;;;
    r100;r100-ws01;qgm;C4:34:6B:7E:71:10;10.16.100.1;255.240.0.0;1;1;1;1;1
@@ -30,18 +32,16 @@ Die Rechner sind raumweise einsortiert. Die Workstations-Datei soll nun so umstr
    nwt100;r110-ws02;qgm;64:51:06:43:D3:21;10.16.100.2;255.240.0.0;1;1;1;1;1
    rhm;rhm-ws01;qgm;64:51:06:38:B7:AC;10.19.111.1;255.240.0.0;1;1;1;1;1
 
-Endzustand
-----------
 
-Alle Rechner die später im Lehrernetz sein sollen, haben nun Adressen der Form ``10.30.10.x``,
-alle Rechner die später im ``VLAN Raum100`` sein sollen haben Adressen der Form ``10.20.100.x``. 
-Eventuell noch bestehende Netzmasken im sechsten Feld sind nicht mehr erforderlich. Dies wird durch die später folgende Umstellung des linuxmuster.net Servers auf Subnetting geregelt.
+Die Workstations-Datei soll nun so umstrukturiert werden, dass später
 
-Nun übernimmt man die Änderungen durch den Befehl ``import_workstations`` oder entsprechend in der Schulkonsole.
+* alle Rechner in Raum r100 und r200 IPs aus den Subnetzen der beiden Räume VLAN100 und VLAN200 erhalten
+* alle anderen Rechner IPs aus dem Subnetz ``VLAN Lehrer`` erhalten
 
-Nach dem nächsten Rechnerstart erhalten die geänderten Rechner die neuen IP-Adressen.
+Endzustand der Datei ``workstations``
+-------------------------------------
 
-.. code::
+.. code-block:: none
    
    #Raum;Rechnername;Imageklasse;Mac-Adresse;IP-Adresse;Subnetzmaske;;;;;
    r100;r100-ws01;qgm;C4:34:6B:7E:71:10;10.20.100.1;;1;1;1;1;1
@@ -53,6 +53,14 @@ Nach dem nächsten Rechnerstart erhalten die geänderten Rechner die neuen IP-Ad
    nwt100;r110-ws01;qgm;64:51:06:43:D2:62;10.30.10.2;;1;1;1;1;1
    nwt100;r110-ws02;qgm;64:51:06:43:D3:21;10.30.10.3;;1;1;1;1;1
    rhm;rhm-ws01;qgm;64:51:06:38:B7:AC;10.30.10.4;;1;1;1;1;1
+
+
+Alle Rechner die später im Lehrernetz sein sollen, haben nun Adressen der Form ``10.30.10.x``,
+alle Rechner die später im ``VLAN Raum100`` sein sollen haben Adressen der Form ``10.20.100.x``. 
+Eventuell noch bestehende Netzmasken im sechsten Feld sind nicht mehr erforderlich. Dies wird durch die später folgende Umstellung des linuxmuster.net Servers auf Subnetting geregelt.
+
+Nun übernimmt man die Änderungen durch den Befehl ``import_workstations`` oder entsprechend in der Schulkonsole.
+Nach dem nächsten Rechnerstart erhalten die geänderten Rechner die neuen IP-Adressen.
 
 
 Geänderte Drucker auf dem Server anpassen

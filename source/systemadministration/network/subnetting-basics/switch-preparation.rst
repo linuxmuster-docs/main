@@ -21,7 +21,7 @@ Einige HP-Switches haben eine textbasierte "Menükonsole", hier geht man prinzip
 * Mit telnet/ssh auf die Switchkonsole verbinden 
 * Das Konfigurationsmenü öffnen
 * Nach  ``Switch-Konfiguration``, ``VLAN Menu``, ``VLAN Names`` wechseln und
-  dort die VLans mit den IDs ```10``, ``20``, ``30``, ``40``, ``50``, ``100``, und ``200`` anlegen.
+  dort die VLans mit den IDs ``10``, ``20``, ``30``, ``40``, ``50``, ``100``, und ``200`` anlegen.
 
 .. important::
 
