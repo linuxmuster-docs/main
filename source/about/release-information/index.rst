@@ -8,9 +8,9 @@
 Was ist neu in 6.2?
 ===================
 
-Nehmen Sie das Upgrade zu linuxmuster.net 6.2 wahr und folgen Sie der
+Nimm das Upgrade zu linuxmuster.net 6.2 wahr und folge der
 :doc:`Upgrade-Anleitung <../../systemadministration/maintenance/upgrade/index>`.
-Lesen Sie dennoch zunächst die Liste der Neuerungen und bekannten Probleme.
+Lies dennoch zunächst die Liste der Neuerungen und bekannten Probleme.
 
 .. toctree::
    :maxdepth: 1
