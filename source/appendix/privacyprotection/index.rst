@@ -10,8 +10,6 @@ Stellen ergänzen muss.
 
 Sie finden die Dokumente im ODF-Format in der `HTML-Version dieser Dokumentation <http://docs.linuxmuster.net>`_
 
-.. only:: builder_html
-
-   - :download:`Verfahrensverzeichnis linuxmuster.net 6.2 – Teil 1 <media/Verfahrensverzeichnis_linuxmuster-net_Teil1_Vorlage.odt>`
-   - :download:`Verfahrensverzeichnis linuxmuster.net 6.2 – Teil 2 <media/Verfahrensverzeichnis_linuxmuster-net_Teil2_Vorlage.odt>`
-   - :download:`Verfahrensverzeichnis linuxmuster.net 6.2 – Anlage <media/Verfahrensverzeichnis_linuxmuster-net_Anlage_Vorlage.odt>`
+- :download:`Verfahrensverzeichnis linuxmuster.net 6.2 – Teil 1 <./media/Verfahrensverzeichnis_linuxmuster-net_Teil1_Vorlage.odt>`
+- :download:`Verfahrensverzeichnis linuxmuster.net 6.2 – Teil 2 <./media/Verfahrensverzeichnis_linuxmuster-net_Teil2_Vorlage.odt>`
+- :download:`Verfahrensverzeichnis linuxmuster.net 6.2 – Anlage <./media/Verfahrensverzeichnis_linuxmuster-net_Anlage_Vorlage.odt>`
