@@ -84,7 +84,7 @@ Zum einen dient die Dokumentation als Schritt-für-Schritt Anleitung für die Ei
   appendix/contribute/index
   appendix/school-console/index
   clients/linbo/index
-
+  appendix/privacyprotection/index
 
 ..
    teacher/index
