@@ -22,7 +22,4 @@ Inhalt:
 .. toctree::
    :maxdepth: 2
 
-   adminpc
-   kvmserver
-   ipfire
-   server
+   install

@@ -1,3 +1,5 @@
+.. _preface-networksegmentation-label:
+
 ================================
  Netzsegmentierung - Grundlagen
 ================================
