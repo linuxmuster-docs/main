@@ -23,3 +23,4 @@ Inhalt:
    :maxdepth: 2
 
    install
+   backuprestore

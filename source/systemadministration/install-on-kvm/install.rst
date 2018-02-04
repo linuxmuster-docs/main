@@ -82,6 +82,8 @@ Folgende Hardware sollte der Server mindestens zur Verfügung stellen:
 
 Als Betriebssystem wird *Ubuntu Server* in der Version 16.04 LTS verwendet. Es kann `hier <https://www.ubuntu.com/download/server>`_ heruntergeladen werden.  
 
+.. _preface-usb-stick-label:
+
 kvm Tipp: Erstellen eines USB-Sticks
 -------------------------------------
 
@@ -589,6 +591,18 @@ adminPC: Erstellen eines ssh-Aliases zum Server
 
 	<p>
 	<iframe width="696" height="392" src="https://www.youtube.com/embed/lnOlyK9h8QI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</p>
+..
+
+kvm: Aktivieren des Autostarts der VMs
+--------------------------------------
+
+Damit die VMs zukünftig bei einem Neustart des KVM-Servers nicht immer von Hand gestartet werden müssen, ist es sinnvoll den Autostart zu aktivieren.
+
+.. raw:: html
+
+	<p>
+	<iframe width="696" height="392" src="https://www.youtube.com/embed/osTrXaVFRK4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 	</p>
 ..
 
