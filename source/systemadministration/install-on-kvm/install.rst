@@ -393,10 +393,10 @@ Die Installation der Firewall erfolgt in folgenden Schritten:
 
 Die VM verfügt über folgende Parameter:
 
-* 3 CPUs,
-* 4GB RAM,
-* 51GB HDD,
-* 4 NICs.
+* 2 CPUs,
+* 3GB RAM,
+* 50GB HDD,
+* 3 NICs.
 
 .. raw:: html
 
