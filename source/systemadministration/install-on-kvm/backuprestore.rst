@@ -208,7 +208,8 @@ Installation z.B. nach: ``/usr/local``
 	</p>
 ..
 
-Naürlich muss die Swap-Partition des *servers* nicht gesichert werden. Also einfach im Backup-Skript *ausklammern*! Kleine Hausaufgabe ... ;-)
+Naürlich muss die Swap-Partition des *servers* nicht gesichert werden. Also einfach im Backup-Skript *ausklammern*! Kleine Hausaufgabe [#f1]_ ... ;-)
+
 
 Ein Log des Backups ist unter ``/root/virt-backup.log`` zu finden.
 
@@ -219,3 +220,120 @@ Ein Log des Backups ist unter ``/root/virt-backup.log`` zu finden.
 	</p>
 
 ..
+
+Restore der VMs ipfire und server
+---------------------------------
+
+Jedes Backup ist nur ein Backup, wenn Du sicher sein kannst, dass auch ein Restore funktioniert. Exemplarisch werden wir ein Restore bei der Firewall *ipfire* durchführen, sowohl der gesamten VM als auch einzelner Dateien der virtuellen Festplatte.
+
+.. hint::
+	Es ist sinnvoll, dass Zurückspielen der virtuellen HDDs einer VM in einer Screen-Session durchzuführen. Da der Vorgang u.U. sehr lange dauert, kann die Sitzung verlassen werden, ohne das es zum Abbruch des Befehles kommt (Gleiches Prinzip wie bei linbo-remote ...).
+
+Die wichtigsten Dinge dabei sind(KVM-Server):
+
+.. code-block:: console
+
+	Installation notwendiger Pakete
+	# apt-get install kpartx pv
+
+	Optional: Anlegen eines Restore-Verzeichnisses 
+	# mkdir /media/virt-restore
+
+	Mounten der Backup-HDD
+	# mount /dev/sd1X /media/virt-restore
+
+Beim Restore ist es wichtig, dass die betroffene VM heruntergefahren ist. **DES WEITEREN GEHEN ALLE VORHANDENEN DATEN VERLOREN!**
+
+**Restore der virtuellen HDD am Beispiel der Firewall**
+
+.. code-block:: console
+
+	Aufruf Screen
+	# screen
+
+	Starten des Restores
+	# lzop -dc /media/virt-restore/VMs/ipfire/ipfire_vda.img.lzo |pv -s 50G |dd of=/dev/kvm-vg/ipfire bs=4M
+
+	Allgemein
+	# lzop -dc <Quelle> |pv -s <Groesse der HDD> |dd of=<Ziel> bs=4M
+
+
+Die Screen-Sitzung kann mit *STRG+A+D* beendet werden. Gestartet wird die Sitzung mit:
+
+.. code-block:: console
+
+	Finden der ID
+	# screen -ls
+
+	Öffnen der Sitzung
+	# screen -r <ID>
+
+.. hint::
+	Im Screencast wird die komplette VM gelöscht. Dies ist nicht notwendig! Man kann aber ... ;-)
+
+Nachdem die HDD wiederhergestellt wurde, muss, nur falls nicht mehr vorhanden, die Definition der VM auch wiederherstellt werden.
+
+.. code-block:: console
+
+	Wiederherstellen der VM-Definition
+	# virsh define /media/virt-restore/VMs/ipfire/ipfire.xml
+
+	Allgemein
+	# virsh define <Name>.xml
+
+.. hint::
+
+	Falls die VM neben einer vorhanden VM wiederhergestellt werden soll, muss in der XML-Datei der *Name* geändert werden, sowie die vorhanden *MAC-Adressen* der Netzwerkkarten und die *UUID* gelöscht werden. Die MAC-Adressen und die UUID werden dann beim Import neu generiert. Wenn Du ganz sicher gehen willst, kannst Du zusätzlich im *Virt-Manager* die Netzwerkkarten auch noch deaktivieren.
+
+.. code-block:: console
+
+	---snip---
+	
+	# Ändern
+	<name>ipfire</name>
+	
+	# Löschen
+	<uuid>0fa619e6-32e7-44e4-be31-920696bab268</uuid>
+
+	<mac address='52:54:00:49:20:91'/>
+
+
+
+
+**Lokales Einbinden der VM HDDs auf dem KVM-Server**
+
+Um einzelne Dateien wiederherzustellen, ist es möglich, die virtuellen Festplatten lokal auf dem KVM-Server zu mounten (Die HDD darf natürlich nicht aktiv sein).
+
+.. code-block:: console
+
+	# lvscan
+
+	Sichtbar machen der Partitionen
+	# kpartx -a /dev/mapper/kvm--vg-ipfire
+
+	Allgemein
+	# kpartx -a <HDD> oder auch <RAW Image>
+
+	Optional: Anlegen eines Verzeichnisses
+	# mkdir /media/HDD-restore
+
+	Mounten einer Partition
+	# mount /dev/mapper/kvm--vg-ipfire1 /media/HDD-restore
+
+	Unmounten einer Partition
+	# umount /media/HDD-restore
+
+	Freigeben der Partitionen der HDD
+	# kpartx -d /dev/mapper/kvm--vg-ipfire
+
+	Allgemein
+	# kpartx -d <HDD> oder auch <RAW Image>
+
+.. raw:: html
+
+	<p>
+	<iframe width="696" height="392" src="https://www.youtube.com/embed/W91Jc3C5Li4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</p>
+
+
+.. [#f1] /usr/local/bin/virt-backup --vm=server --debug --no-offline --compress=lzop --blocksize=4M --exclude=vdb --backupdir=/media/virt-backup/VMs/
