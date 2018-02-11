@@ -428,7 +428,7 @@ server: Installation des Servers
 
 .. image:: media/server/server-image01.png
 
-server: Download des Ubuntu 13.04.5 ISOs
+server: Download des Ubuntu 12.04.5 ISOs
 ----------------------------------------
 
 Der Download des ISOs erfolgt auf dem KVM-Server im Verzeichnis analog zum ISO der Firewall unter ``/var/lib/libvirt/images``.
