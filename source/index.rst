@@ -30,6 +30,7 @@ Zum einen dient die Dokumentation als Schritt-für-Schritt Anleitung für die Ei
   :caption: Systemadministration
 
   systemadministration/install-from-scratch/index
+  systemadministration/install-on-kvm/index
   systemadministration/maintenance/index
   systemadministration/network/index
   systemadministration/printer/index
