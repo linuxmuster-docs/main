@@ -73,6 +73,7 @@ release = u'6.2.0'
 # Usually you set "language" from the command line for these cases.
 language = 'de_DE'
 gettext_compact = False
+gettext_additional_targets = ['literal-block']
 locale_dirs = ['locale/']
 
 # There are two options for replacing |today|: either, you set today to some
@@ -113,10 +114,6 @@ pygments_style = 'sphinx'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
-
-#internationalisation
-locale_dirs = ['locale/']
-gettext_compact = False     # optional
 
 
 # -- Options for HTML output ----------------------------------------------
