@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/classroom/use-wifi/index.rst:3
+msgid "Unterricht: WLAN freischalten"
+msgstr ""
+
+#: ../../source/classroom/use-wifi/index.rst:5
+#: ../../source/classroom/use-wifi/index.rst:41
+msgid ""
+"Wenn der Administrator eine Klasse, ein Projekt oder einzelne Schüler "
+"permanent freigeschaltet hat, hat das hier beschriebene Schalten des WLANs "
+"für die freigeschalteten Benutzer keine Auswirkungen."
+msgstr ""
+
+#: ../../source/classroom/use-wifi/index.rst:8
+msgid "WLAN für eine Klasse freischalten"
+msgstr ""
+
+#: ../../source/classroom/use-wifi/index.rst:10
+#: ../../source/classroom/use-wifi/index.rst:39
+msgid ""
+"Mit Linuxmuster.net kann man bei vorhandenem WLAN temporär Klassen oder "
+"Projekten das WLAN frei schalten. Diese Anleitung zeigt wie es funktioniert."
+msgstr ""
+
+#: ../../source/classroom/use-wifi/index.rst:14
+msgid ""
+"Nach dem Anmelden als Lehrer wählt man zunächst die Klasse aus (hier 10a)"
+msgstr ""
+
+#: ../../source/classroom/use-wifi/index.rst:18
+msgid ""
+"um danach im Menü `Klassen` im Untemenü `Unterricht` auf `Unterricht "
+"beginnen` zu klicken"
+msgstr ""
+
+#: ../../source/classroom/use-wifi/index.rst:22
+msgid ""
+"Bei Bedarf stellt man das Unterrichtsende im Drop-Down Menü auf eine "
+"gewünschte Zeit (hier 15.00 Uhr) und klickt auf `beenden lassen`"
+msgstr ""
+
+#: ../../source/classroom/use-wifi/index.rst:26
+msgid ""
+"Im gleichen Fenster kann man mittels der Schnellauswahl die Haken hinter den"
+" Schülernamen setzen"
+msgstr ""
+
+#: ../../source/classroom/use-wifi/index.rst:30
+msgid ""
+"und dann auf `Änderungen übenehmen` klicken. Damit ist das WLAN bis 15 Uhr "
+"für die ausgewählten Schüler eingeschaltet. Beendet man den Unterricht vor "
+"15 Uhr, dann kann man mit Klick auf `sofort beenden` das WLAN für die "
+"Schüler ausschalten"
+msgstr ""
+
+#: ../../source/classroom/use-wifi/index.rst:37
+msgid "WLAN für ein Projekt freischalten"
+msgstr ""
+
+#: ../../source/classroom/use-wifi/index.rst:45
+msgid ""
+"Nach dem Anmelden als Lehrer wählt man im Menü `Projekte` das Untermenü "
+"`Mitglieder` und klickt dort auf das gewünschte Projekt"
+msgstr ""
+
+#: ../../source/classroom/use-wifi/index.rst:49
+msgid "Hier p_demo"
+msgstr ""
+
+#: ../../source/classroom/use-wifi/index.rst:53
+msgid "Im folgenden Fenster klickt man auf `Unterricht beginnen`"
+msgstr ""
+
+#: ../../source/classroom/use-wifi/index.rst:57
+msgid ""
+"und hat die Option die Unterrichtszeit über das Drop-Down-Menü auf einen "
+"gewünschten Zeitpunkt zu setzen (hier: 15:00 Uhr). Mit Klick auf `beenden "
+"lassen` wird die gewählte Uhrzeit für das Unterrichtende eingestellt."
+msgstr ""
+
+#: ../../source/classroom/use-wifi/index.rst:61
+msgid ""
+"Mit dem Button `Schnellauswahl` setzt man die Haken für alle Schüler und "
+"klickt auf `Änderungen übernehmen`. Damit ist das Wlan für die Projektgruppe"
+" frei geschaltet."
+msgstr ""
+
+#: ../../source/classroom/use-wifi/index.rst:63
+msgid ""
+"Sollte der Unterricht vorzeitig enden, dann kann man mit klick auf `sofort "
+"beenden` das Wlan für die Projektgruppe ausschalten."
+msgstr ""

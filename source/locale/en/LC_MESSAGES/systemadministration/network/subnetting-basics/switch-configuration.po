@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 14:37+0700\n"
+"POT-Creation-Date: 2018-02-13 19:40+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -21,38 +21,319 @@ msgstr ""
 msgid "Konfiguration des L3-Switches"
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:4
-msgid ""
-"Für den Layer3-Switch Cisco SG300 stehen vorbereitete Konfigurationsdateien "
-"zur Verfügung, die eine netzbriefkonfome Grundkonfiguration auf dem Switch "
-"einspielen. Anschließemnd müssen nur noch die Switch Ports passend "
-"konfiguriert werden."
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:5
+msgid "Einspielen der vordefinierten Konfiguration"
 msgstr ""
 
 #: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:9
+msgid ""
+"Die Firmware des Cisco L3 Switch SG300-10 ist vorab auf die Version 1.4.8.6 "
+"zu aktualisieren. `Hier der Link für die Firmware "
+"<https://software.cisco.com/download/release.html?mdfid=283019611&softwareid=282463181&release=1.4.8.06>`_"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:12
+msgid ""
+"Für den L3-Switch Cisco SG300 stehen vorbereitete Konfigurationsdateien zur "
+"Verfügung, die die Konfiguration auf dem Switch so einspielen, wie diese in "
+"dieser Dokumentation beschrieben wird. Es werden also 8-Ports zu vier Link "
+"Aggregation Ports - jeweils bestehend aus zwei Ports - erstellt. Zudem "
+"werden alle Ports als Access Ports oder Trunks definiert und die "
+"weitergeleiteten / getaggten VLANs hierfür definiert. DHCP Einstellungen und"
+" ARP Einstellungen werden ebenso definiert."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:15
+msgid ""
+"Je nachdem für welches Subnetz der Server von linuxmuster.net konfiguriert "
+"wurde, ist die passende Konfigurationsdatei zu wählen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:17
 msgid ""
 ":download:`Konfiguration für Server-IP 10.16.1.1  <./media/configs"
 "/linuxmuster-subnet-10.16.txt>`."
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:10
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:18
 msgid ""
 ":download:`Konfiguration für Server-IP 10.32.1.1  <./media/configs"
-"/linuxmuster-subnet-10.16.txt>`."
+"/linuxmuster-subnet-10.32.txt>`."
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:11
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:19
 msgid ""
 ":download:`Konfiguration für Server-IP 10.48.1.1  <./media/configs"
-"/linuxmuster-subnet-10.16.txt>`."
+"/linuxmuster-subnet-10.48.txt>`."
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:12
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:20
 msgid ""
 ":download:`Konfiguration für Server-IP 10.64.1.1  <./media/configs"
-"/linuxmuster-subnet-10.16.txt>`."
+"/linuxmuster-subnet-10.64.txt>`."
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:16
-msgid "Schritt für Schritt"
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:23
+msgid "Upload der Konfiguration: Schritt für Schritt"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:27
+msgid ""
+"Im Auslieferungszustand kann auf den Cisco Switch mit der IP "
+"192.168.1.254/24 zugegriffen werden. Diese IP wird in dieser Konfiguration "
+"dem VLAN 1 (Management) zugewiesen, so dass nach Einspielen der "
+"Konfiguration und dem Reboot weiterhin mit der Adresse die Konfiguration "
+"angepasst werden kann."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:71
+msgid ""
+"Nach dem Neustart melden Sie sich erneut an dem L3-Switch an und "
+"kontrollieren nochmals die Switch-Ports. Hierbei ist zwischen Access-Ports "
+"(port-basierte VLANs) und Trunk-Ports zu unterscheiden."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:74
+msgid "Allgemeine Hinweise zur Konfiguration der Switch-Ports"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:76
+msgid ""
+"Für jeden Switchport muss festgelegt werden, ob das VLAN mit der VLAN-ID x "
+"ausgeschlossen, getaggt akzeptiert oder Datenpakete, die mit der VLAN-ID x "
+"getaggt sind, ungetaggt weitergeleitet werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:78
+msgid ""
+"``Ausgeschlossen``:   Datenpakete, die mit der VLAN-ID x getaggt sind, "
+"werden verworfen."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:79
+msgid ""
+"``Getaggt``:          Datenpakete, die mit der VLAN-ID x getaggt sind, "
+"werden weitergeleitet."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:80
+msgid ""
+"``Ungetaggt``:        Von Datenpaketen, die mit der VLAN-ID x getaggt sind, "
+"wird die VLAN-ID entfernt und zum Client weitergeleitet. Die meisten Clients"
+" können mit getaggten Datenpaketen nichts anfangen."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:81
+msgid ""
+"``PVID``:             Bei einem Port, der mit der PVID x markiert ist, "
+"werden alle ungetaggten Datenpakete des Clients mit der VLAN-ID x getaggt."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:84
+msgid "Anwendung auf das Ausgangsbeispiel"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:86
+msgid ""
+"Nachstehende Ausführungen, dienen dazu, die eingespielte Konfiguration zu "
+"prüfen oder ggf. Anpassungen für abweichend eingesetzte Hadrware zu "
+"erstellen."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:90
+msgid "Abb. fehlt, die die Nutzung der Ports zu den Uplinks darstellt"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:94
+msgid "Definition der Link Aggregation Ports"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:96
+msgid "``LAG1``: Ports 1 & 2 -> Verbindung zu VMs / Servern"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:97
+msgid "``LAG2``: Ports 3 & 4 -> Uplink zu L2-Switch"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:98
+msgid "``LAG3``: Ports 5 & 6 -> Uplink zu L2-Switch"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:99
+msgid "``LAG4``: Ports 9 & 10 -> Uplink zu L2-Switch"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:110
+msgid "Definition der Access Ports (port-based VLAN)"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:112
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:130
+msgid ""
+"``Port 7``: Port wird dem VLAN 10 (Server VLAN) zugeordnet (untagged / PVID "
+"10)."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:113
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:131
+msgid ""
+"``Port 8``: Port wird dem VLAN 5 (Internet VLAN) zugeordnet (untagged / PVID"
+" 5)."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:125
+msgid "Definition / Zuordnung der VLANs"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:127
+msgid ""
+"``LAG1 (Port 1 & 2)``: Der Hypervisor ist über zwei Netzwerkkabel mit Port 1"
+" & 2 des Switches verbunden. Auf der Seite des Hypervisor sind ebenfalls "
+"zwei Ports durch LinkAggregation definiert. LAG1 ist getaggtes Mitglied der "
+"VLANs 5, 10,20,30,40,50,100,200."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:128
+msgid ""
+"``LAG2 (Port 3 & 4)``: Ein anderern L2-Switch ist über zwei Netzwerkkabel "
+"mit Port 3 & 4 des Switches verbunden. Auf dem L2-Switch sind ebenfalls zwei"
+" Ports durch LinkAggregation definiert. LAG2 ist getaggtes Mitglied der "
+"VLANs 5, 10,20,30,40,50,100,200."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:129
+msgid ""
+"``LAG3 (Port 5 & 6)``: Ein anderern L2-Switch ist über zwei Netzwerkkabel "
+"mit Port 5 & 6 des Switches verbunden. Auf dem L2-Switch sind ebenfalls zwei"
+" Ports durch LinkAggregation definiert. LAG2 ist getaggtes Mitglied der "
+"VLANs 5, 10,20,30,40,50,100,200."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:132
+msgid ""
+"``LAG4 (Port 9 & 10)``: Ein anderern L2-Switch ist über zwei Netzwerkkabel "
+"mit Port 9 & 10 des Switches verbunden. Auf dem L2-Switch sind ebenfalls "
+"zwei Ports durch LinkAggregation definiert. LAG2 ist getaggtes Mitglied der "
+"VLANs 5, 10,20,30,40,50,100,200."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:150
+msgid ""
+"Für die VLANs sollten schliesslich folgende statischen Routen definiert "
+"sein:"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:158
+msgid "Access Listen definieren"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:162
+msgid ""
+"Der Cisco L3-Switch kann nur eingehenden Datenverkehr filtern. Dies ist "
+"relevant für die Definition und Anwendung der Listen für die "
+"Zugriffssteuerung (ACLs). **Achtung**: Die hier vorgestellten ACLs führen "
+"dazu, dass bsp. PCs aus zwei verschiednen Klassenräumen sich untereinander "
+"via ping nicht mehr erreichen können. Wenn dies gewünscht ist, müsste in den"
+" ACEs eine weitere Regel erstellt werden, die Daten Zulassen --> "
+"10.(subnet).0 mit Netmask 0.0.0.255 - also z.B. 10.16.1.0 0.0.0.255. Diese "
+"Regel muss die niedrigste Priorität erhalten."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:169
+msgid "**ACL: Lehrkraefte und Klassenraeume**"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:171
+msgid ""
+"Es sind Zwei ACL anzulegen: Lehrkraefte und Klassenraume. Dies erfolgt im "
+"Menü unter: Zugriffssteuerung --> IPv4 basierte ACL --> Hinzufügen --> <Name"
+" der ACL>"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:173
+msgid "**ACEs hinzufügen**"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:175
+msgid ""
+"Für die zuvor genannten ACLs sind jetzt sog. Entries (Einträge) anzulegen. "
+"Hierfür wählen Sie im Menü:  Zugriffssteuerung --> IPv4 basiertes ACE --> "
+"<Name der ACL aus Liste auswählen - hier Lehrkraefte> --> Hinzufügen"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:182
+msgid "Sie geben dann folgende Werte an:"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:184
+msgid "Priorität: 20"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:185
+msgid "Aktion: Zulassen (permit)"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:186
+msgid "Protokoll: Beliebig (IP) (any)"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:187
+msgid "Quell-IP-Adresse: Beliebig (any)"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:188
+msgid "Ziel-IP-Adresse: Benutzerdefiniert (user defined)"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:189
+msgid "Wert der Ziel-IP-Adresse: 10.16.1.0 (Servernetz-IP)"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:190
+msgid "Ziel-IP-Platzhaltermaske: 0.0.0.255 (invertierte Netzmaske)"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:192
+msgid ""
+"Danach legen sie eine zweite ACE für die ACL Lehrkraefte an. Im Ergebnis "
+"sollten Sie für die Lehrkraefte dann nachstehenden Einträge haben:"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:198
+msgid ""
+"Danach legen Sie ACEs für die ACL Klassenraeume an. Danach sollten Sie "
+"nachstehende Einträge haben:"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:204
+msgid ""
+"Schliesslich müssen die definierten ACLs noch an die VLANs gebunden werden, "
+"damit diese korrekt angewendet werden. Die Zuordnung sollte für das hier "
+"gewählte Beispiel wie folgt aussehen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:211
+msgid "Die Einstellungen für das DHCP-Relaying sollten wie folgt aussehen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:217
+msgid ""
+"Hierdurch wird sichergestellt, dass DHCp-Anfragen aus den genannten VLANs "
+"auch beim linuxmuster.net Server ankommen und bedient werden können."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:219
+msgid ""
+"Um Wake-on-LAN über Subnetze hinweg nutzen, so muss ein sog. UDP-Relaying "
+"eingerichtet werden. Hierdruch können dann z.B. Clients via ``linbo-remote``"
+" aufgeweckt werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-configuration.rst:225
+msgid ""
+"Nachdem Sie alle Einstellungen kontrolliert und ggf. angepasst haben, "
+"speichern Sie die aktuelle Konfiguration. Dies erledigen Sie bei dem Cisco-"
+"Switch dadruch, dass Sie die Konfiguration aus dem RAM (running-config) auf "
+"die NVRAM-Konfiguration kopieren (startup-config)."
 msgstr ""

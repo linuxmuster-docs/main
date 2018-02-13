@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 14:37+0700\n"
+"POT-Creation-Date: 2018-02-13 19:40+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -123,11 +123,11 @@ msgid ""
 "führe `xdg-open build/html/index.html` aus, um das Ergebnis zu betrachten."
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:61
+#: ../../source/appendix/contribute/docs/new.rst:63
 msgid "GitHub Konto erstellen"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:63
+#: ../../source/appendix/contribute/docs/new.rst:65
 msgid ""
 "Spätestens jetzt sollte ein Konto bei GitHub erstellt werden: "
 "https://github.com/join. Verifziere deine E-Mail-Adresse. Natürlich kannst "
@@ -135,60 +135,60 @@ msgid ""
 "https://github.com/linuxmuster-docs/main"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:70
+#: ../../source/appendix/contribute/docs/new.rst:72
 msgid ""
 "Im folgenden wird das Konto \"lmn-docs-bot\" verwendet. Überall wo dieser "
 "auftaucht, ersetze ihn durch dein Kontonamen bei GitHub."
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:74
+#: ../../source/appendix/contribute/docs/new.rst:76
 msgid "Linuxmuster Dokumentation forken"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:76
+#: ../../source/appendix/contribute/docs/new.rst:78
 msgid ""
 "Öffnen Sie die `linuxmuster.net Dokumentation auf Github <https://github.com"
 "/linuxmuster-docs/main>`_ und klicken Sie auf \"Fork\"."
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:82
+#: ../../source/appendix/contribute/docs/new.rst:84
 msgid ""
 "Öffnen Sie nun einen Terminal / Eingabeauffoderung (``Strg+Alt+t`` in "
 "Ubuntu) and geben Sie folgenden Befehl ein:"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:85
+#: ../../source/appendix/contribute/docs/new.rst:87
 msgid ""
 "Nutzen Sie die URL ``git@github.com:lmn-docs-bot/main.git`` falls Sie "
 "bereits einen SSH-Schlüssel bei Github hochgeladen haben!"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:94
+#: ../../source/appendix/contribute/docs/new.rst:96
 msgid "Sie können nun mit"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:101
+#: ../../source/appendix/contribute/docs/new.rst:103
 msgid "die Dokumentation in HTML übersetzen und in ihrem Browser öffnen."
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:104
+#: ../../source/appendix/contribute/docs/new.rst:106
 msgid "Dokumentation ändern oder neu erstellen"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:106
+#: ../../source/appendix/contribute/docs/new.rst:108
 msgid ""
 "Die Dokumentation ist in der Markupsprache \"rST\" geschrieben. `Hier "
 "<http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_ finden Sie "
 "einen guten Überblick über die am häufigsten verwendeten Elemente."
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:109
+#: ../../source/appendix/contribute/docs/new.rst:111
 msgid ""
 "Bitte beachten Sie auch unbedingt die :doc:`Leitlinien zur Dokumentation "
 "<guidelines>`, damit ihre Änderungen schnell eingepflegt werden könnnen!"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:111
+#: ../../source/appendix/contribute/docs/new.rst:113
 msgid ""
 "Im Verzeichnis ``source`` und den entsprechenden Unterordnern befinden sich "
 "alle Dokumentationsdateien. Öffnen Sie einfach eine dieser Dateien und "
@@ -198,63 +198,63 @@ msgid ""
 "Datei."
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:118
+#: ../../source/appendix/contribute/docs/new.rst:120
 msgid ""
 "Schauen Sie sich auch die anderen Dokumentationsdateien an, um mehr über den"
 " Aufbau und Syntax zu lernen."
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:121
+#: ../../source/appendix/contribute/docs/new.rst:123
 msgid "Commit und push"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:123
+#: ../../source/appendix/contribute/docs/new.rst:125
 msgid ""
 "Haben Sie alle Änderungen vorgenommen, können Sie sie nun zur Überprüfung "
 "einreichen. Dazu sind folgende Schritte notwendig:"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:127
+#: ../../source/appendix/contribute/docs/new.rst:129
 msgid ""
 "Überprüfen Sie bitte zuerst, ob ``make html`` ohne Fehler durchläuft! Falls "
 "nicht, beheben Sie bitte alle Fehler und Warnungen, bevor Sie Ihre "
 "Änderungen hochladen!"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:135
+#: ../../source/appendix/contribute/docs/new.rst:137
 msgid ""
 "Falls Sie neue Dateien oder Ordner erstellt haben, müssen diese noch "
 "hinzugefügt werden:"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:141
+#: ../../source/appendix/contribute/docs/new.rst:143
 msgid ""
 "Geben Sie nun noch einen Kommentar zu Ihren Änderungen ein und laden Sie "
 "alles in Ihren Fork hoch:"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:149
+#: ../../source/appendix/contribute/docs/new.rst:151
 msgid "Pull-Request"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:151
+#: ../../source/appendix/contribute/docs/new.rst:153
 msgid ""
 "Erstellen Sie nun einen \"Pull-Request\" unter `<https://github.com/lmn-"
 "docs-bot/main>`_, indem Sie auf \"New Pull Request\" klicken."
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:157
+#: ../../source/appendix/contribute/docs/new.rst:159
 msgid ""
 "Wenn Sie weitere Änderungen vornehmen und mit ``git commit -a -m\"My "
 "comment\"`` und ``git push`` bei Github hochladen, werden diese Änderungen "
 "automatisch dem Pull Request hinzugefügt."
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:161
+#: ../../source/appendix/contribute/docs/new.rst:163
 msgid "Den eigenen Fork aktualisieren"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:163
+#: ../../source/appendix/contribute/docs/new.rst:165
 msgid ""
 "Um später weiter Änderungen vornehmen zu können, kann der eigene Fork bei "
 "GitHub komplett gelöscht werden und ein neuer erzeugt werden. Alternativ "
@@ -262,26 +262,26 @@ msgid ""
 "werden:"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:168
+#: ../../source/appendix/contribute/docs/new.rst:170
 msgid ""
 "Verschiebe alle lokalen Änderungen mit ``git stash`` in den Hintergrund"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:174
+#: ../../source/appendix/contribute/docs/new.rst:176
 msgid "Füge (einmalig) einen remote-tracking branch hinzu:"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:180
+#: ../../source/appendix/contribute/docs/new.rst:182
 msgid "Hole und merge den aktuellen offiziellen branch:"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:189
+#: ../../source/appendix/contribute/docs/new.rst:191
 msgid ""
 "Wenn der merge nicht in einem \"Fast-forward\" endet, sollte man besser den "
 "Fork löschen und neu erzeugen. Andernfalls kann man jetzt die offiziellen "
 "Änderungen hochladen."
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:197
+#: ../../source/appendix/contribute/docs/new.rst:199
 msgid "Jetzt kann man seine lokale Änderungen wieder hervorholen"
 msgstr ""

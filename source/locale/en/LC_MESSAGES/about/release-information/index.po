@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 14:37+0700\n"
+"POT-Creation-Date: 2018-02-13 19:40+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -23,9 +23,9 @@ msgstr ""
 
 #: ../../source/about/release-information/index.rst:11
 msgid ""
-"Nehmen Sie das Upgrade zu linuxmuster.net 6.2 wahr und folgen Sie der :doc"
-":`Upgrade-Anleitung <../../systemadministration/maintenance/upgrade/index>`."
-" Lesen Sie dennoch zunächst die Liste der Neuerungen und bekannten Probleme."
+"Nimm das Upgrade zu linuxmuster.net 6.2 wahr und folge der :doc:`Upgrade-"
+"Anleitung <../../systemadministration/maintenance/upgrade/index>`. Lies "
+"dennoch zunächst die Liste der Neuerungen und bekannten Probleme."
 msgstr ""
 
 #: ../../source/about/release-information/index.rst:23

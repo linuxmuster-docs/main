@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 14:37+0700\n"
+"POT-Creation-Date: 2018-02-13 19:40+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -19,4 +19,300 @@ msgstr ""
 
 #: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:2
 msgid "Umstellen des Servers auf Subnetting"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:5
+msgid "Das Umstellen auf Subnetzbetrieb geschieht per Setuproutine mit"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:11
+msgid "oder im Falle einer Neuinstallation mit"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:17
+msgid ""
+"Dazu muss die Frage nach dem Subnetting nur mit ``Ja`` beantwortet werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:19
+msgid ""
+"Im Verlauf des Setups werden die für Subnetzbetrieb notwendigen Anpassungen "
+"auf Server und Firewall vorgenommen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:21
+msgid ""
+"Die Netzwerkkonfiguration von Server und Firewall wird auf ein 24 Bit-Netz "
+"geändert (10.16.1.0/255.255.255.0), sodass diese quasi ein Serversubnetz "
+"innerhalb des übergeordneten 12 Bit-Netzes (10.16.0.0/255.240.0.0) bilden. "
+"Es werden statische Routen auf Server und Firewall für das übergeordnete 12 "
+"Bit-Netz mit der IP-Adresse des Layer-3-Switches als Gateway (10.16.1.253 "
+"für das 10.16.0.0er Netz) angelegt, damit das Routing aus den Subnetzen zum "
+"Server funktioniert."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:23
+msgid ""
+"Für die Subnetzkonfiguration wird mit ``/etc/linuxmuster/subnets`` eine neue"
+" Konfigurationsdatei eingerichtet. Für jeden in "
+"``/etc/linuxmuster/workstations`` definierten Raum wird automatisch ein "
+"Subnetz mit 24 Bit-Netzwerkpräfix (Netzmaske 255.255.255.0) angelegt. Die "
+"DHCP-Konfiguration wird dergestalt angepasst, dass die bisherige freie IP-"
+"Range für die Rechneraufnahme (z.B. 10.16.1.100-10.16.1.200) entfällt. Freie"
+" IP-Ranges müssen künftig in ``/etc/linuxmuster/subnets`` für jedes Subnetz "
+"definiert werden. Die DHCP-Subnetzkonfiguration wird danach von "
+"``import_workstations`` in die Konfigurationsdatei "
+"``/etc/dhcp/dhcpd.conf.linuxmuster`` geschrieben."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:25
+msgid ""
+"Die Standardnetzmaske 255.240.0.0 bleibt global gültig. Subnetze werden "
+"innerhalb des durch die globale Netzmaske vorgegebenen IP-Bereichs) "
+"angelegt. Dabei sind 24 Bit- (Netzmaske 255.255.255.0), als auch 16 Bit-"
+"Subnetze (Netzmaske 255.255.0.0) möglich."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:28
+msgid "Subnetze einrichten / Aufbau der Konfigurationsdatei"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:30
+msgid ""
+"Subnetze werden über die Konfigurationsdatei ``/etc/linuxmuster/subnets`` "
+"eingerichtet und konfiguriert. Sie enthält pro Zeile eine Subnetzdefinition,"
+" die aus sechs mit Semikolon getrennten Feldern besteht (Kommentarzeilen "
+"sind erlaubt):"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:33
+msgid "Feld 1"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:33
+msgid "Feld 2"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:33
+msgid "Feld 3"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:33
+msgid "Feld 4"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:33
+msgid "Feld 5"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:33
+msgid "Feld 6"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:35
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:42
+msgid "Netz-IP/Präfix"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:35
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:42
+msgid "Gateway-IP"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:35
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:42
+msgid "Erste Range-IP"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:35
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:42
+msgid "Letzte Range-IP"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:35
+msgid "Intranet-Zugriff (0/1)"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:35
+msgid "Internet-Zugriff (0/1)"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:39
+msgid "**Konfiguration für das Ausgangsbeispiel**"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:42
+msgid "Bezeichnung"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:42
+msgid "Intranet-Zugriff"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:42
+msgid "Internet-Zugriff"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:44
+msgid "Raum 100"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:44
+msgid "10.20.100.0/24"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:44
+msgid "10.20.100.254"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:44
+msgid "10.20.100.100"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:44
+msgid "10.20.100.200"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:44
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:44
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:46
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:46
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:48
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:48
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:50
+msgid "nein"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:46
+msgid "Raum 200"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:46
+msgid "10.20.200.0/24"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:46
+msgid "10.20.200.254"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:46
+msgid "10.20.200.100"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:46
+msgid "10.20.200.200"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:48
+msgid "Lehrer"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:48
+msgid "10.30.10.0/24"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:48
+msgid "10.30.10.254"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:48
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:48
+msgid "/"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:50
+msgid "Gaeste"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:50
+msgid "10.30.20.0/24"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:50
+msgid "10.30.20.254"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:50
+msgid "10.30.20.1"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:50
+msgid "10.30.20.253"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:50
+msgid "ja"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:54
+msgid ""
+"Daraus ergibt sich folgender Aufbau der Konfigurationsdatei "
+"``/etc/linuxmuster/subnets``:"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:67
+msgid ""
+"Beachten Sie, dass Änderungen der Subnetzkonfiguration erst wirksam werden, "
+"wenn sie durch Ausführung des Befehls"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:73
+msgid "in das System übernommen wurden."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:77
+msgid ""
+"Sonderstellung für Serversubnetz: Das Servernetz wird automatisch per "
+"default ohne freie Range angelegt und daher auch nicht in "
+"``/etc/linuxmuster/subnets`` eingetragen. Hosts, die Teil des Servernetzes "
+"sein sollen, benötigen also immer einen Eintrag in "
+"``/etc/linuxmuster/workstations``."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:81
+msgid ""
+"Wird in ``/etc/linuxmuster/workstations`` ein neuer Host hinzugefügt, dessen"
+" IP-Adresse in keines der aktuell definierten Subnetze passt, legt "
+"``import_workstations`` für ihn ein neues 24 Bit-Subnetz an. Das bedeutet "
+"auch, bei der Umstellung auf Subnetzbetrieb wird Ihre in "
+"``/etc/linuxmuster/workstations`` angelegte Raumstruktur automatisch in "
+"Subnetze aufgeteilt."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:83
+msgid ""
+"Denken Sie daran neue Subnetze in der VLAN-Konfiguration ihrer Switche "
+"entsprechend zu ergänzen."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:86
+msgid "Interner und externer Zugriff"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:88
+msgid ""
+"In der Konfigurationsdatei ``/etc/linuxmuster/subnets`` lässt sich für jedes"
+" Subnetz festlegen, ob IP-Adressen aus der frei definierten Range Zugriff "
+"auf Intranet-Resourcen (Feld 5) oder Internet (Feld 6) haben. Dabei bedeuten"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:95
+msgid "Zwei Dinge sind hierbei zu beachten:"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:97
+msgid ""
+"Voreinstellungen für die Intranet- und Internetsperre für Räume und einzelne"
+" (in ``/etc/linuxmuster/workstations`` definierte) Rechner werden nach wie "
+"vor über die Schulkonsole (Aktueller Raum) bzw. die Konfigurationsdatei "
+"``/etc/linuxmuster/room_defaults`` vorgenommen."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:99
+msgid ""
+"**Ausnahme**: Wird für die freie Range eines Subnetzes das Internet "
+"freigegeben (1 in Feld 6), ist für importierte Rechner dieses Subnetzes die "
+"Internetsperre wirkungslos. Falls Sie also z.B. für mobile Geräte ein Netz "
+"mit freiem Internetzugriff benötigen, konfigurieren Sie dafür besser ein "
+"eigenes Subnetz."
 msgstr ""

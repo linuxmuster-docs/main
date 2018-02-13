@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 14:37+0700\n"
+"POT-Creation-Date: 2018-02-13 19:40+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -482,4 +482,24 @@ msgid ""
 "Wenn die Gruppe ``teachers`` mit Zugang zum WLAN ausgestattet wird, dann ist"
 " es den Lehrern möglich über WLAN und der Schulkonsole während des "
 "Unterrichts temporär Berechtigungen an Klassen oder Projekte zu vergeben."
+msgstr ""
+
+#: ../../source/about/release-information/schulkonsole.rst:288
+msgid "Verwaltung Wlan via Schulkonsole"
+msgstr ""
+
+#: ../../source/about/release-information/schulkonsole.rst:289
+msgid ""
+"Die Datei **/etc/linuxmuster/wlan_defaults** kann auch via Schulkonsole "
+"verändert werden. Dazu loggt man sich als Administrator ein und kann unter "
+"`Einstellungen` `Klassen` oder `Einstellungen` `Projekte` auswählen welche/s"
+" Klasse/Projekt dauerhaft das Internet benutzen darf."
+msgstr ""
+
+#: ../../source/about/release-information/schulkonsole.rst:293
+msgid "Wlan konfigurieren Klasse"
+msgstr ""
+
+#: ../../source/about/release-information/schulkonsole.rst:297
+msgid "Wlan konfigurieren Projekt"
 msgstr ""

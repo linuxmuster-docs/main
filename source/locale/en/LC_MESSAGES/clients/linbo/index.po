@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 14:37+0700\n"
+"POT-Creation-Date: 2018-02-13 19:40+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -61,4 +61,8 @@ msgstr ""
 
 #: ../../source/clients/linbo/index.rst:22
 msgid "vollständige Integration in die linuxmuster.net"
+msgstr ""
+
+#: ../../source/clients/linbo/index.rst:24
+msgid "Wie LINBO funktioniert"
 msgstr ""

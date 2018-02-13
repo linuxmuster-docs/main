@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 14:37+0700\n"
+"POT-Creation-Date: 2018-02-13 19:40+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +20,7 @@ msgstr ""
 
 #: ../../source/index.rst:3
 msgid "linuxmuster.net 6.2 Dokumentation"
-msgstr ""
+msgstr "linuxmuster.net 6.2 documentation"
 
 #: ../../source/index.rst:5
 msgid ""
@@ -28,26 +29,58 @@ msgid ""
 "Einrichtung von Windows- und Ubuntu-Rechnern, der Verwaltung von Nutzern bis"
 " hin zu individuellen Anpassungen."
 msgstr ""
+"Welcome to the documentation of linuxmuster.net! This documentation "
+"describes all the important steps from installation, setting up Windows and "
+"Ubuntu computers, managing users and customizations."
 
 #: ../../source/index.rst:7
 msgid ""
-"Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-"
-"Support helfend Seite. Weiter Informationen dazu finden sie auf der `Website"
-" von Linuxmuster.net <http://linuxmuster.net/about/hilfsbereit/>`_."
+"Neben dieser Dokumentation steht dir unsere Community und unser Telefon-"
+"Support helfend zur Seite. Weitere Informationen dazu findest du auf der "
+"`Website von linuxmuster.net <http://linuxmuster.net/about/hilfsbereit/>`_."
 msgstr ""
+"In addition to these detailed instructions, our community and our telephone "
+"support are at your disposal. Further information can be found on the "
+"`Website of Linuxmuster.net <http://linuxmuster.net/about/hilfsbereit/>`_."
 
 #: ../../source/index.rst:9
 msgid ""
 "Zum einen dient die Dokumentation als Schritt-für-Schritt Anleitung für die "
 "Einrichtungs- und Administrationsaufgaben, zum anderen als Referenz für die "
-"Möglichkeiten der freien Musterlösung linuxmuster.net."
+"Möglichkeiten der freien Musterlösung linuxmuster.net. Für Lehrkräfte und "
+"Schüler*innen werden die pädagogischen Funktionen für den Unterricht und "
+"darüberhinaus beschrieben."
 msgstr ""
+"On the one hand, the documentation serves as a step-by-step guide for the "
+"setup and administration tasks, and on the other hand as a reference for the"
+" possibilities of the free school server solution linuxmuster.net. For "
+"teachers and pupils, the educational functions for teaching and beyond are "
+"described."
 
-#: ../../source/index.rst:11
-msgid ""
-"Dabei richtet sich die Dokumentation an verschiedene Zielgruppen. Das "
-"Handbuch für Netzwerkbetreuer beschreibt die Installation und Konfiguration "
-"von Linuxmuster.net. Die Handbücher für Lehrkräfte und SchülerInnen haben "
-"vor allem die pädagogischen Funktionen der Musterlösung (Funktionen für den "
-"Unterricht, Klassenarbeitsmodus, Dateien austeilen und einsammeln, etc.)."
-msgstr ""
+#: ../../source/index.rst:16
+msgid "Erste Schritte"
+msgstr "Getting Started"
+
+#: ../../source/index.rst:28
+msgid "Systemadministration"
+msgstr "Systemadministration"
+
+#: ../../source/index.rst:38
+msgid "Clientverwaltung"
+msgstr "Client Management"
+
+#: ../../source/index.rst:47
+msgid "Benutzerverwaltung"
+msgstr "User Management"
+
+#: ../../source/index.rst:59
+msgid "Pädagogische Funktionen"
+msgstr "Educational Features"
+
+#: ../../source/index.rst:74
+msgid "Erweiterungen"
+msgstr "Addons"
+
+#: ../../source/index.rst:81
+msgid "Anhang"
+msgstr "Appendix"

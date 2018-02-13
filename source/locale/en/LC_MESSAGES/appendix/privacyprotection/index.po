@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/appendix/privacyprotection/index.rst:2
+msgid "Datenschutz"
+msgstr ""
+
+#: ../../source/appendix/privacyprotection/index.rst:4
+msgid ""
+"Der Schulserver verarbeitet persönliche Daten, sobald Schüler und Lehrer "
+"Konten erhalten. Daher muss (z.B. nach dem LandesdatenschutzGesetz in Baden-"
+"Württemberg) ein Verfahrensverzeichnis geführt werden. Um das zu "
+"erleichtern, stellen wir eine Vorlage mit Anlage zur Verfügung die man nur "
+"an wenigen Stellen ergänzen muss."
+msgstr ""
+
+#: ../../source/appendix/privacyprotection/index.rst:11
+msgid ""
+"Sie finden die Dokumente im ODF-Format in der `HTML-Version dieser "
+"Dokumentation <http://docs.linuxmuster.net>`_"
+msgstr ""
+
+#: ../../source/appendix/privacyprotection/index.rst:13
+msgid ""
+":download:`Verfahrensverzeichnis linuxmuster.net 6.2 – Teil 1 <./media"
+"/Verfahrensverzeichnis_linuxmuster-net_Teil1_Vorlage.odt>`"
+msgstr ""
+
+#: ../../source/appendix/privacyprotection/index.rst:14
+msgid ""
+":download:`Verfahrensverzeichnis linuxmuster.net 6.2 – Teil 2 <./media"
+"/Verfahrensverzeichnis_linuxmuster-net_Teil2_Vorlage.odt>`"
+msgstr ""
+
+#: ../../source/appendix/privacyprotection/index.rst:15
+msgid ""
+":download:`Verfahrensverzeichnis linuxmuster.net 6.2 – Anlage <./media"
+"/Verfahrensverzeichnis_linuxmuster-net_Anlage_Vorlage.odt>`"
+msgstr ""

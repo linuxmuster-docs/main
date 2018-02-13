@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 14:37+0700\n"
+"POT-Creation-Date: 2018-02-13 19:40+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -562,7 +562,7 @@ msgid ""
 " „winxp“ mit 1024 MB RAM und „standard“-Snapshot:"
 msgstr ""
 
-#: ../../source/clients/leoclient2/leo2-erweiterungen.rst:0
+#: ../../source/clients/leoclient2/leo2-erweiterungen.rst:321
 msgid "/usr/share/applications/leoclient2-directstart.desktop"
 msgstr ""
 

@@ -1,0 +1,551 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:2
+msgid "Installation"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:5
+msgid "adminPC: Installation"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:8
+msgid ""
+"Der *adminPC* soll zur Administration des KVM-Servers dienen. Der Vorteil "
+"dieser Variante liegt vor allen Dingen darin, dass der "
+"Virtualisierungsserver so schlank wie möglich gehalten werden kann."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:12
+msgid "Die Hardware sollte folgende Mindestmerkmale aufweisen:"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:14
+msgid "DualCore CPU"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:15
+msgid "1GB RAM"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:16
+msgid "20GB HDD"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:18
+msgid ""
+"Als Betriebssystem wird *Lubuntu* in der Version 16.04 LTS verwendet. Es "
+"kann auf der `Lubuntu <http://lubuntu.net/>`_ Seite heruntergeladen werden."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:28
+msgid "adminPC: Installation der Updates"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:30
+#: ../../source/systemadministration/install-on-kvm/install.rst:179
+msgid ""
+"Nach der Erstinstallation ist es sinnvoll, das System erst einmal auf den "
+"aktuellen Stand zu bringen. Auf der Console wird dies mit folgenden Befehlen"
+" durchgeführt:"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:48
+msgid "adminPC: Deaktivierung von IPv6"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:50
+#: ../../source/systemadministration/install-on-kvm/install.rst:328
+msgid ""
+"Um sich später keine Gedanken um Netzwerksicherheit machen zu müssen, sollte"
+" IPv6 global deaktiviert werden."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:65
+msgid "kvm: Installation des KVM-Servers"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:68
+msgid ""
+"Der *kvm* Server bildet das Grundgerüst für die Firewall *ipfire* und den "
+"Schulserver *server*. Da KVM im Gegensatz zu Xen oder VMWare auf die "
+"Virtualisierungsfunktionen der CPU angewiesen ist, müssen Diese natürlich "
+"vorhanden sein."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:72
+msgid ""
+"Die folgende Anleitung beschreibt die *einfachste* Implementierung ohne "
+"Dinge wie VLANs, Teaming oder Raids. Diese Themen werden in zusätzlichen "
+"Anleitungen betrachtet."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:74
+msgid ""
+":ref:`Anleitung Netzwerksegmentierung <preface-networksegmentation-label>`"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:76
+msgid "Folgende Hardware sollte der Server mindestens zur Verfügung stellen:"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:78
+msgid "CPU mit 4 Kernen"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:79
+msgid "16GB RAM"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:80
+msgid "1TB HDD plus zweite HDD für ein Backup"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:81
+msgid "2x 1GBit/s Netzwerkkarten"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:83
+msgid ""
+"Als Betriebssystem wird *Ubuntu Server* in der Version 16.04 LTS verwendet. "
+"Es kann `hier <https://www.ubuntu.com/download/server>`_ heruntergeladen "
+"werden."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:88
+msgid "kvm Tipp: Erstellen eines USB-Sticks"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:90
+msgid ""
+"Hilfreiche Befehle sind (Vorsicht - mit dd werden vorhandene Daten "
+"unwiderruflich zerstört):"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:100
+msgid ""
+"Natürlich können auch alle anderen gängigen Tools zur Erstellung genutzt "
+"werden."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:110
+msgid "kvm: Installation"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:113
+msgid "Bei der Installation sind folgende Merkmale zu berücksichtigen:"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:115
+msgid "Auswahl des HWE Kernels"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:116
+msgid "Einrichtung eines LVMs auf der HDD mit 25GB für das Betriebssystem"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:117
+msgid "Auswahl der Pakete *Virtual Machine host* und *OpenSSH server*"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:119
+msgid ""
+"Des Weiteren ist es sinnvoll, die erste Netzwerkkarte des Servers an den "
+"Internet-Router anzuschließen, um eventuell notwendige Pakete (Sprachpakete)"
+" während der Installation zu installieren."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:129
+msgid "kvm: Netzwerkkonfiguration des KVM-Servers"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:131
+msgid ""
+"In diesem Schritt erfolgt die Anbindung des KVM-Servers an das Schulnetz und"
+" an das Internet sowohl für den KVM-Server selbst, als auch für die "
+"virtuellen Maschinen. Die Implementierung erfolgt mit Hilfe von Bridges."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:133
+msgid "**Herausfinden der Namen der Netzwerkkarten**"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:139
+msgid "**Anpassen der Netzwerkkonfiguration**"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:177
+msgid "kvm: Installation der Updates"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:197
+msgid "kvm: Einrichten des SSH-Zugangs auf Zertifikatsbasis"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:199
+msgid ""
+"Die Remote-Administration des KVM-Servers soll per SSH und Zertifikaten "
+"erfolgen. Als Benutzer wird root verwendet."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:201
+msgid "**Setzen des Rootpassworts und Aktivierung des SSH-Zugangs für root**"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:211
+msgid ""
+"**Erstellen von SSH-Zertifikaten auf dem AdminPC und Kopieren auf den KVM-"
+"Server**"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:219
+msgid "**Deaktivierung des SSH-Zugangs für root per Passwort**"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:227
+msgid "**Löschen des lmadmin Users auf dem KVM-Server**"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:241
+msgid "kvm: Einrichten der Zeit-Synchronisation"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:243
+msgid ""
+"Immer eine gute Sache ist es, z.B. in Logfiles die korrekte Zeit zu finden. "
+"Aus diesem Grund erfolgt die Konfiguration eines NTP-Clients."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:267
+msgid "adminPC: Installation des Virt-Managers"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:269
+msgid ""
+"In diesem Schritt erfolgt die Installation des Virt-Managers, um die "
+"virtuellen Maschinen auf dem KVM-Server zu verwalten."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:287
+msgid "kvm: Konfigurieren der Virt-Manager-Verbindung im Schulnetz"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:289
+msgid ""
+"In diesem Schritt erfolgt nach der Installation der *Virt-Managers* die "
+"Konfiguration"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:291
+msgid "der Anbindung des adminPCs an das Schulnetz und"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:292
+msgid "die Einrichtung der *KVM-Server* Verbindung."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:302
+msgid "kvm: Anpassen des Namens der Virt-Manager-Verbindung"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:312
+msgid "kvm: Einrichtung des LVM-Storage-Pools"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:314
+msgid ""
+"In diesem Schritt erfolgt die Einrichtung des Speicherplatzes der virtuellen"
+" HDDs. Die Nutzung eines LVM-Storages stellt dabei die performanteste "
+"Möglichkeit dar."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:317
+msgid ""
+"Leider ist es nicht möglich, direkt über den *Virt-Manager* Snapshots zu "
+"erstellen, wie z.B. bei Nutzung von qcow2 HDDs. Diese werden jedoch nicht "
+"verwendet, da es einen erheblichen Geschwindigkeitsnachteil gibt. LVM bietet"
+" aber selbst eine Snapshotfunktionalität, die Du später beim Backup der VMs "
+"nutzen kannst."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:326
+msgid "kvm: Deaktivierung von IPv6"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:343
+msgid "kvm: Einstellen der Swappiness"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:345
+msgid ""
+"Der Swap-Speicher soll nur im Notfall verwendet werden. Dazu wird die "
+"*swappiness* auf 0 gestellt."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:364
+msgid "adminPC: Erstellung eines ssh-Aliases zum KVM-Server"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:381
+msgid "ipfire: Installation der VM"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:384
+msgid ""
+"In diesem Schritt folgt die Installation der Firewall dieser :ref:`Anleitung"
+" <install-configure-firewall-label>` und diesen :ref:`Voraussetzungen "
+"<preface-preparations-label>`."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:388
+msgid "Die Installation der Firewall erfolgt in folgenden Schritten:"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:390
+msgid "Download des ISOs der Installation,"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:391
+msgid "Anlegen und Konfigurieren der VM und"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:392
+msgid "Installation der VM."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:394
+msgid "Die VM verfügt über folgende Parameter:"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:396
+#: ../../source/systemadministration/install-on-kvm/install.rst:448
+msgid "2 CPUs,"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:397
+msgid "3GB RAM,"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:398
+msgid "50GB HDD,"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:399
+msgid "3 NICs."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:409
+msgid "ipfire: Grundkonfiguration des IPFire"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:411
+msgid ""
+"In diesem Schritt werden die Voraussetzungen geschaffen, um den eigentlichen"
+" Schulserver zu installieren:"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:413
+msgid "SSH Zugang mittels Zertifikaten,"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:414
+msgid "Transparenter Proxy für die IP-Adresse (10.16.1.1) des Schuservers."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:424
+msgid "server: Installation des Servers"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:427
+msgid ""
+"In diesem Schritt folgt die Installation der Firewall dieser :ref:`Anleitung"
+" <server-install-label>` und diesen :ref:`Voraussetzungen <preface-"
+"preparations-label>`."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:432
+msgid "server: Download des Ubuntu 12.04.5 ISOs"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:434
+msgid ""
+"Der Download des ISOs erfolgt auf dem KVM-Server im Verzeichnis analog zum "
+"ISO der Firewall unter ``/var/lib/libvirt/images``."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:444
+msgid "server: Erstellen, Konfigurieren und Installieren der VM des Servers"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:446
+msgid ""
+"In diesem Schritt erfolgt die Erstellung, Konfiguration und Installation des"
+" Ubuntu-Systems des Schulservers. Die VM verfügt dabei über folgende "
+"Parameter:"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:449
+msgid "8GB RAM,"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:450
+msgid "HDDs für / (50GB), swap (2GB), /home (500GB) und /var (500GB),"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:451
+msgid "1 NIC."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:454
+msgid ""
+"Die Grössen der virtuellen HDDs sind natürlich auf die eigenen Erfordernisse"
+" anzupassen."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:464
+msgid ""
+"server: Installieren aller verfügbaren Updates nach der Installation des "
+"Servers"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:466
+msgid "Die Installation der Updates erfolgt mit den üblichen Befehlen:"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:478
+msgid ""
+"Falls beim *apt-get update* Fehlermeldungen erscheinen: *Fehlschlag beim "
+"Holen ...*, so hilft es, den Inhalt des Verzeichnisses "
+"``/var/lib/apt/lists`` zu löschen und den Befehl erneut auszuführen."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:488
+msgid "server: Grundkonfiguration des Servers"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:490
+msgid ""
+"Im letzten Schritt vor der eigentlichen Installation werden folgende "
+"Schritte durchgeführt:"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:492
+msgid "Setzen des Root-Passwortes und Löschen des *lmadmin* Accountes,"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:493
+msgid "Setzen der *vm.swappiness auf 0*,"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:494
+msgid "Deaktivierung von IPv6 und Setzen des Text-Modes beim Booten."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:504
+msgid "server: Installation des linuxmuster-base Paketes"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:506
+msgid "Die Installation erfolgt mittels:"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:521
+msgid "server: Start der LinuxMuster-Erstkonfiguration"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:523
+msgid "Endlich ist das Ziel der Vorbereitungen erreicht und mittels"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:529
+msgid ""
+"kann die eigentliche Konfiguration des Servers gestartet werden. Zu Beachten"
+" ist hierbei, dass ein Neustart der Firewall erfolgen muss."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:532
+msgid ""
+"Nach dem Start der Installation mittels *linuxmuster-setup --first* wird im "
+"Screencast mit *Alt+F2* kurz auf das zweite Terminal des Servers gewechselt "
+"um die Konnektivität zum *ipfire* zu testen."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:542
+msgid ""
+"server Tipp: Schaffung einer einheitlichen Netzwerkzeit mit der Firewall als"
+" Quelle"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:545
+msgid ""
+"Dieser Schritt ist optional. Aus der Sicht des Schreibers ist es jedoch "
+"sinnvoll, pro Netzwerk eine Zeitquelle zu definieren, an der sich Alle "
+"orientieren."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:547
+msgid ""
+"Die Firewall holt sich die Zeit aus dem Internet und verteilt sie im "
+"Schulnetz. So ist sichergestellt, dass auch bei Ausfall des Internets alle "
+"Geräte die selbe Zeit sprechen."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:557
+msgid "adminPC: Zulassen des Zugriffs auf den Server"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:559
+msgid ""
+"Nach der Installation des Schulservers ist der Zugriff auf ihn komplett "
+"gesperrt. Ein Eintrag in die ``/etc/linuxmuster/workstations`` ist "
+"erforderlich. Die einfachste Möglichkeit, diese Datei zu bearbeiten, ist die"
+" Schulkonsole. Um auf Diese Zugriff zu erhalten, muss temporär die Firewall "
+"deaktiviert werden."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:566
+msgid "Zugriff auf die Schulkonsole über https://server:242"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:576
+msgid "adminPC Tipp: Anpassen der Zeitquelle"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:578
+msgid "Als Zeitquelle des adminPCs soll auch die Firewall dienen."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:588
+msgid "adminPC: Erstellen eines ssh-Aliases zum Server"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:598
+msgid "kvm: Aktivieren des Autostarts der VMs"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:600
+msgid ""
+"Damit die VMs zukünftig bei einem Neustart des KVM-Servers nicht immer von "
+"Hand gestartet werden müssen, ist es sinnvoll den Autostart zu aktivieren."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:609
+msgid ""
+"Damit ist die Erstinstallation aller Komponenten mittels KVM geschafft."
+msgstr ""

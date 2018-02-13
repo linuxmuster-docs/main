@@ -1,0 +1,245 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:2
+msgid "Backup und Restore"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:4
+msgid ""
+"Als Erstes kümmern wir uns um ein Notfall-Backup des KVM-Servers selbst. "
+"Dieses sollte immer dann erstellt/erneuert werden, wenn es größere "
+"Veränderungen am Server gegeben hat. Also genau jetzt! ;-)"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:6
+msgid ""
+"In unserem Beispiel ist die Backup-Platte direkt am Server angeschlossen. "
+"Für die Praxis ist sicherlich eine externe USB3 HDD zu empfehlen, die direkt"
+" an den KVM-Server angeschlossen wird."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:11
+msgid "Notfallbackup des KVM-Servers"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:13
+msgid ""
+"Das Backup wird mit Hilfe von `CloneZilla <http://clonezilla.org/>`_ "
+"erstellt. Hier nutzen wir die Funktionalität, ganze Platten in ein Image zu "
+"schreiben. Das ISO-Image wird auf einen USB-Stick geschrieben, der auch als "
+"Bootmedium genutzt wird (z.B. mittels :ref:`dd<preface-usb-stick-label>` )."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:23
+msgid ""
+"Im nächsten Schritt bereiten wir die Backup-HDD vor, indem wir diese "
+"Partitionieren und Formatieren."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:26
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:62
+msgid ""
+"**ACHTUNG** Dabei gehen alle vorhandenen Daten auf der Platte verloren!"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:44
+msgid "Alle Vorbeitungen sind getroffen und das Backup kann erstellt werden."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:47
+msgid ""
+"Der Screencast erstellt das Backup noch ohne die *ipfire* und *server* VM-"
+"LVMs. Sind Diese vorhanden, dauert der ganze Vorgang natürlich entsprechend "
+"länger."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:57
+msgid "Notfallrestore des KVM-Servers"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:59
+msgid ""
+"Im Falle eines Totalverlustes des KVM-Servers kann Dieser einfach neu "
+"installiert werden. Schneller geht es aber mit dem gerade erstellten Backup."
+" Dieses wird die komplette HDD inklusive Bootsektor und LVM "
+"wiederherstellen."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:72
+msgid "Backup der VMs ipfire und server"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:74
+msgid ""
+"Die virtuellen Maschinen werden als Ganzes gesichert. Ein Backup besteht "
+"dabei aus Kopien der virtuellen Festplatten und der "
+"Konfigurationsbeschreibung. Erstellt wird das Backup im laufenden Betrieb "
+"mit Hilfe eines LVM-Snapshots. Damit das auch funktioniert, sollten immer "
+"noch 10-20 % Platzreserve in der Volumen-Group vorhanden sein."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:77
+msgid "Niemals den gesamten Platz virtuellen Festplatten zuweisen."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:79
+msgid ""
+"Das Backup sollte jedes Wochenende ausgeführt werden, da es je nach Größe "
+"der virtuellen Festplatten länger dauern kann."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:81
+msgid ""
+"Die Kopien der virtuellen HDDs werden mit der *lzop* Kompression gesichert. "
+"Damit sollte eine Platzersparnis von bis zu einem Viertel der Originalgröße "
+"zu erreichen sein ohne die Backupzeit zu sehr zu verlängern."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:83
+msgid ""
+"In unserem Fall wird die Backup-Platte direkt an den Server angeschlossen. "
+"Weitere Möglichkeiten sind USB3-Platten oder NFS-Dateifreigaben auf einem "
+"NAS."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:85
+msgid ""
+"Als Backup-Tool verwenden wir `virt-backup <http://gitweb.firewall-"
+"services.com/?p=virt-backup;a=summary>`_ ."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:87
+msgid "**Installation der Backupsoftware**"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:89
+msgid "Paketabhängigkeiten:"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:96
+msgid "Installation z.B. nach: ``/usr/local``"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:131
+msgid "**Optional: Testen des Backups von Hand**"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:154
+msgid "**Erstellen eines Backup-Skriptes**"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:192
+msgid "**Erstellen eine Crontab-Jobs**"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:202
+msgid ""
+"Wichtig ist es, eine Leerzeile nach Definition des Jobs einzufügen. "
+"Ansonsten wird der Auftrag nicht ausgeführt."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:211
+msgid ""
+"Naürlich muss die Swap-Partition des *servers* nicht gesichert werden. Also "
+"einfach im Backup-Skript *ausklammern*! Kleine Hausaufgabe [#f1]_ ... ;-)"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:214
+msgid "Ein Log des Backups ist unter ``/root/virt-backup.log`` zu finden."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:225
+msgid "Restore der VMs ipfire und server"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:227
+msgid ""
+"Jedes Backup ist nur ein Backup, wenn Du sicher sein kannst, dass auch ein "
+"Restore funktioniert. Exemplarisch werden wir ein Restore bei der Firewall "
+"*ipfire* durchführen, sowohl der gesamten VM als auch einzelner Dateien der "
+"virtuellen Festplatte."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:230
+msgid ""
+"Es ist sinnvoll, dass Zurückspielen der virtuellen HDDs einer VM in einer "
+"Screen-Session durchzuführen. Da der Vorgang u.U. sehr lange dauert, kann "
+"die Sitzung verlassen werden, ohne das es zum Abbruch des Befehles kommt "
+"(Gleiches Prinzip wie bei linbo-remote ...)."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:232
+msgid "Die wichtigsten Dinge dabei sind(KVM-Server):"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:245
+msgid ""
+"Beim Restore ist es wichtig, dass die betroffene VM heruntergefahren ist. "
+"**DES WEITEREN GEHEN ALLE VORHANDENEN DATEN VERLOREN!**"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:247
+msgid "**Restore der virtuellen HDD am Beispiel der Firewall**"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:261
+msgid ""
+"Die Screen-Sitzung kann mit *STRG+A+D* beendet werden. Gestartet wird die "
+"Sitzung mit:"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:272
+msgid ""
+"Im Screencast wird die komplette VM gelöscht. Dies ist nicht notwendig! Man "
+"kann aber ... ;-)"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:274
+msgid ""
+"Nachdem die HDD wiederhergestellt wurde, muss, nur falls nicht mehr "
+"vorhanden, die Definition der VM auch wiederherstellt werden."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:286
+msgid ""
+"Falls die VM neben einer vorhanden VM wiederhergestellt werden soll, muss in"
+" der XML-Datei der *Name* geändert werden, sowie die vorhanden *MAC-"
+"Adressen* der Netzwerkkarten und die *UUID* gelöscht werden. Die MAC-"
+"Adressen und die UUID werden dann beim Import neu generiert. Wenn Du ganz "
+"sicher gehen willst, kannst Du zusätzlich im *Virt-Manager* die "
+"Netzwerkkarten auch noch deaktivieren."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:303
+msgid "**Lokales Einbinden der VM HDDs auf dem KVM-Server**"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:305
+msgid ""
+"Um einzelne Dateien wiederherzustellen, ist es möglich, die virtuellen "
+"Festplatten lokal auf dem KVM-Server zu mounten (Die HDD darf natürlich "
+"nicht aktiv sein)."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:339
+msgid ""
+"/usr/local/bin/virt-backup --vm=server --debug --no-offline --compress=lzop "
+"--blocksize=4M --exclude=vdb --backupdir=/media/virt-backup/VMs/"
+msgstr ""

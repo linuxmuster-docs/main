@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 14:37+0700\n"
+"POT-Creation-Date: 2018-02-13 19:40+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -18,5 +18,52 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../source/systemadministration/network/subnetting-basics/switch-cascading.rst:2
-msgid "Weitere L2-Switches mit VLans anbinden"
+msgid "Weitere L2-Switches mit VLANs anbinden"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-cascading.rst:4
+msgid ""
+"In der hier dargestellten Konfiguration des L3-Switches gibt es vier LAG-"
+"Ports. Drei von diesen LAG-Ports (2,3,4) sind dazu gedacht, um eine "
+"Anbindung zu weiteren L2-Switches zu ermöglichen, die ebenfalls für die "
+"Nutzung der VLANs zu konfigurieren sind."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-cascading.rst:7
+msgid ""
+"Wesentlich ist, dass ebenfalls alle VLANs, die auf dem L3-Switch "
+"eingerichtet wurden, hier ebenfalls erstellt werden. Danach muss eine "
+"LinkAggregation mit zwei Ports erstellt werden, die die Anbindung zum LAG-"
+"Port des L3-Switches zur Verfügung stellt. Diese LA ist dann als Trunk zu "
+"definieren, der alle VLANs (20,30,40,50,100,200) tagged."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-cascading.rst:9
+msgid ""
+"Danach werden die einzelnen Ports als untagged Ports einem der gewünschten "
+"VLANs zugeordnet. Die Clients sind dann entsprechend auf den gewünschten "
+"VLAN-Port anzuschliessen."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-cascading.rst:11
+msgid ""
+"Ist es ein Switch in einem PC-Raum, so ist der Uplink als LinkAggregation "
+"und Trunk mit den o.g. getaggten VLANs zu definieren. Alle anderen Ports "
+"sind dann z.B. als Access Ports zu definieren, die dem VLAN 100 (Raum 100) "
+"zugeordnet sind, so dass alle angeschlossenen PCs in diesem VLAN sind."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-cascading.rst:15
+msgid ""
+"Es sollten alle Switch Konfigurationen, VLANs und Port-Belegungen sehr genau"
+" pro Switch dokumentiert sein. Hierzu ist es hilfreich in jedem "
+"Verteilerschrank eine entsprechende Dokumentation zu hinterlegen. Als "
+"Hilfestellung zur Erstellung dieser Dokumentation kann folgende Datei "
+"dienen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/switch-cascading.rst:19
+msgid ""
+":download:`Einfache Dokumentation mit Calc  "
+"<./media/filedownload/einfache_vlandoku_mit_calc.zip>`."
 msgstr ""

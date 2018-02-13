@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 14:37+0700\n"
+"POT-Creation-Date: 2018-02-13 19:40+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -56,4 +56,23 @@ msgid ""
 "Bootmedium erstellen, um die lokale LINBO-Installation wiederherzustellen. "
 "Lesen Sie dazu die Anleitung in den Releaseinformationen von LINBO: :ref"
 ":`release-linbo-bootmedium-label`"
+msgstr ""
+
+#: ../../source/about/release-information/knownbugs.rst:36
+msgid "Probleme mit Grafikkarten-Treibern"
+msgstr ""
+
+#: ../../source/about/release-information/knownbugs.rst:38
+msgid ""
+"Der Linbo-64bit-Kernel enthält ab LINBO 2.3.31 (ca. Januar 2018) "
+"modularisierte Grafiktreiber. Es könnte damit auf mancher Hardware der Start"
+" der Linbo-GUI fehlschlagen. In dem Fall, muss man mit einem blacklist-"
+"Parameter `modprobe.blacklist=` verhindern, dass ein bestimmter "
+"Grafiktreiber geladen wird: Beispiele:"
+msgstr ""
+
+#: ../../source/about/release-information/knownbugs.rst:46
+msgid ""
+"Nähere Umstände werden im Forum hier https://ask.linuxmuster.net/t/testing-"
+"pakete-fuer-6-2/1205/11 erläutert."
 msgstr ""

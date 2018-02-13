@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 14:37+0700\n"
+"POT-Creation-Date: 2018-02-13 19:40+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -18,84 +18,78 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:2
-msgid "Vorbereitung der workstations-Datei"
+msgid "Vorbereitungen auf dem Server"
 msgstr ""
 
 #: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:4
 msgid ""
-"Zunächst bearbeitet man die Workstations-Datei derart, dass alle Rechner, "
-"die später im Lehrernetz sein sollen, Adressen mit dem Beginn ``10.17.x.x`` "
-"erhalten. Rechner die sich später im Schülersegment befinden sollen Adressen"
-" mit dem Beginn ``10.18.x.x`` erhalten."
+"Im ersten Schritt werden die in der Datei ``/etc/linuxmuster/workstations`` "
+"verwalteten Rechner so geordnet, dass Sie in weiteren Schritten automatisch "
+"in das richtige Subnetz einsortiert werden."
 msgstr ""
 
 #: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:9
+msgid ""
+"Zunächst bearbeitet man die Workstations-Datei derart, dass alle Rechner, "
+"die später in den jeweiligen Netzen sein sollen, Adressen aus dem jeweiligen"
+" VLAN erhalten. So müssen z.B. für Raum 100 die PCs eine IP aus dem Netz "
+"``10.20.100.x`` erhalten (VLAN ID 100)."
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:14
 msgid ""
 "Dabei ist es unerheblich, ob die Veränderungen im Serverterminal oder in der"
 " Schulkonsole vorgenommen werden."
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:13
-msgid "Ausgangszustand"
-msgstr ""
-
-#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:15
-msgid ""
-"Die Rechner sind Raumweise einsortiert, beispielsweise haben alle Rechner in"
-" Raum r120 IP-Adressen der Form ``10.16.120.x``."
-msgstr ""
-
 #: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:18
-msgid "Die Workstations-Datei soll nun so umstrukturiert werden, dass später"
+msgid "Ausgangszustand der Datei ``workstations``"
 msgstr ""
 
 #: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:20
-msgid "alle Rechner in Raum r120 und der Rechner rhm-ws01 im Lehrernetz sind"
+msgid "Die Rechner sind raumweise einsortiert."
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:21
-msgid "alle übrigen Rechner im Schülernetz sind"
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:36
+msgid "Die Workstations-Datei soll nun so umstrukturiert werden, dass später"
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:23
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:38
 msgid ""
-"Dazu ersetzt man bei den betreffenden Rechnern die Zahl im zweiten  Oktett "
-"der IP-Adresse (derzeit bei allen die ``16``) durch die entsprechende Zahl "
-"für das spätere Subnetz (``17`` für das Lehrernetz, ``18`` für das "
-"Schülernetz). Die Drucker werden dabei ebenfalls in das entsprechende "
-"Teilnetz verlegt, hier sind später noch weitere Anpassungen auf dem Server "
-"nötig."
+"alle Rechner in Raum r100 und r200 IPs aus den Subnetzen der beiden Räume "
+"VLAN100 und VLAN200 erhalten"
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:47
-msgid "Endzustand"
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:39
+msgid "alle anderen Rechner IPs aus dem Subnetz ``VLAN Lehrer`` erhalten"
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:49
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:42
+msgid "Endzustand der Datei ``workstations``"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:58
 msgid ""
 "Alle Rechner die später im Lehrernetz sein sollen, haben nun Adressen der "
-"Form ``10.17.x.x``, alle Rechner die später im Schülernetz sein sollen haben"
-" Adressen der Form ``10.18.x.x``. Eventuell noch bestehende Netzmasken im "
-"sechsten Feld sind obsolet."
+"Form ``10.30.10.x``, alle Rechner die später im ``VLAN Raum100`` sein sollen"
+" haben Adressen der Form ``10.20.100.x``. Eventuell noch bestehende "
+"Netzmasken im sechsten Feld sind nicht mehr erforderlich. Dies wird durch "
+"die später folgende Umstellung des linuxmuster.net Servers auf Subnetting "
+"geregelt."
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:54
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:62
 msgid ""
-"Nun übernimmt man die Änderungen durch ausführen des Befehls "
-"``import_workstations`` oder entsprechend in der Schulkonsole."
+"Nun übernimmt man die Änderungen durch den Befehl ``import_workstations`` "
+"oder entsprechend in der Schulkonsole. Nach dem nächsten Rechnerstart "
+"erhalten die geänderten Rechner die neuen IP-Adressen."
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:57
-msgid ""
-"Nach dem nächsten Rechnerstart erhalten die geänderten Rechner die neuen IP-"
-"Adressen."
-msgstr ""
-
-#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:79
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:67
 msgid "Geänderte Drucker auf dem Server anpassen"
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:81
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:69
 msgid ""
 "Hat man bei der Neustrukturierung IP-Adressen von Druckern geändert, die in "
 "CUPS auf dem Server als Netzwerkdrucker eingerichtet sind, muss man dort die"
@@ -103,48 +97,52 @@ msgid ""
 " Arbeitsstationen nicht übernommen werden."
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:86
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:74
 msgid ""
 "Am Beispiel des Druckers ``r120-printer-bw`` wird das Vorgehen kurz "
 "dargestellt."
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:88
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:76
 msgid ""
 "Dazu öffnet man die CUPS Seite auf dem Server und bearbeitet den "
 "betreffenden Drucker - man sieht, die ursprüngliche IP-Adresse "
 "``10.16.120.203``."
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:95
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:81
+msgid "Bilder sind anzupassen !!"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:87
 msgid "Zunächst wählt man im Administrationsmenü ``Drucker ändern``."
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:101
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:93
 msgid ""
 "Jetzt wählt man die bisherige Anschlussart, im Beispiel ``AppSocket/HP "
 "JetDirect``, im nächsten Bildschirm werden dann die bisherigen Einstellungen"
 " angezeigt."
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:108
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:100
 msgid "In diesem Fall, wie zu sehen ``socket://10.16.120.203:9100``."
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:114
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:106
 msgid ""
 "Jetzt ändert man die IP-Adresse auf den neuen Wert und lässt den Rest "
 "unverändert."
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:120
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:112
 msgid ""
 "Im weiteren Änderungsverlauf werden jeweils die bisherigen Einstellungen "
 "angezeigt, die man stets übernimmt. Um die Änderungen abzuschliessen, muss "
 "man am Ende das ``root``-Passwort angeben."
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:124
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:116
 msgid ""
 "Auf diese Weise müssen alle zuvor geänderten Drucker auf Ihre neue IP-"
 "Adresse angepasst werden."
