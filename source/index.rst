@@ -10,9 +10,11 @@ Zum einen dient die Dokumentation als Schritt-für-Schritt Anleitung für die Ei
 
 .. toctree::
   :maxdepth: 2
+  :caption: Über
 
-  about/index
-  
+  about/about
+  about/release-information/index
+
 .. toctree::
   :maxdepth: 2
   :caption: Erste Schritte
@@ -138,6 +140,3 @@ Zum einen dient die Dokumentation als Schritt-für-Schritt Anleitung für die Ei
 
     * :ref:`genindex`
     * :ref:`search`
-
-
-
