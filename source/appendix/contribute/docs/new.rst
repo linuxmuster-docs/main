@@ -150,7 +150,7 @@ Gib nun noch einen Kommentar zu deinen Änderungen ein und lade alles in deinen 
 Pull-Request
 ~~~~~~~~~~~~
 
-Erstelle nun einen "Pull-Request" aus deinem eigenen Fork `<https://github.com/<lmn-docs-bot>/main>`_ (ersetze hier <lmn-docs-bot> durch deinen eigenen github-Namen), indem du auf "New Pull Request" klickst.
+Erstelle nun einen "Pull-Request" aus deinem eigenen Fork `<https://github.com/lmn-docs-bot/main>`_ (ersetze hier "lmn-docs-bot" durch deinen eigenen github-Namen), indem du auf "New Pull Request" klickst.
 
 .. figure:: media/pr.png
    :align: center
