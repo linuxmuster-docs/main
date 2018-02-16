@@ -75,16 +75,16 @@ unter https://github.com/linuxmuster-docs/main
 Linuxmuster Dokumentation forken
 --------------------------------
 
-Öffnen Sie die `linuxmuster.net Dokumentation auf Github <https://github.com/linuxmuster-docs/main>`_ und klicken Sie auf "Fork".
+Öffne  die `linuxmuster.net Dokumentation auf Github <https://github.com/linuxmuster-docs/main>`_ und klicke auf "Fork".
 
 .. figure:: media/fork.png
    :align: center
    :alt: Fork on Github
 
-Öffnen Sie nun einen Terminal / Eingabeauffoderung (``Strg+Alt+t`` in Ubuntu) and geben Sie folgenden Befehl ein:
+Öffne nun ein Terminal / eine Eingabeauffoderung (``Strg+Alt+t`` in Ubuntu) and gib folgenden Befehl ein:
 
 .. note::
-   Nutzen Sie die URL ``git@github.com:lmn-docs-bot/main.git`` falls Sie bereits einen SSH-Schlüssel bei Github hochgeladen haben!
+   Nutze die URL ``git@github.com:lmn-docs-bot/main.git`` falls du bereits einen SSH-Schlüssel bei Github hochgeladen hast!
 
 .. code-block:: console
 
@@ -93,79 +93,81 @@ Linuxmuster Dokumentation forken
    ...
    linuxadmin@lmn-docs:~$ cd my-docs
 
-Sie können nun mit
+Du kannst nun mit
 
 .. code-block:: console
 
    linuxadmin@lmn-docs:~/my-docs$ make html
    linuxadmin@lmn-docs:~/my-docs$ xdg-open build/html/index.html
 
-die Dokumentation in HTML übersetzen und in ihrem Browser öffnen.
+die Dokumentation in HTML übersetzen und in deinem Browser öffnen.
 
 Dokumentation ändern oder neu erstellen
 ---------------------------------------
 
-Die Dokumentation ist in der Markupsprache "rST" geschrieben. `Hier <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_ finden Sie einen guten Überblick über die am häufigsten verwendeten Elemente.
+Die Dokumentation ist in der Markupsprache "rST" geschrieben. `Hier <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_ findest du einen guten Überblick über die am häufigsten verwendeten Elemente.
 
 .. hint::
-   Bitte beachten Sie auch unbedingt die :doc:`Leitlinien zur Dokumentation <guidelines>`, damit ihre Änderungen schnell eingepflegt werden könnnen!
+   Bitte beachte auch unbedingt die :doc:`Leitlinien zur Dokumentation <guidelines>`, damit ihre Änderungen schnell eingepflegt werden könnnen!
 
-Im Verzeichnis ``source`` und den entsprechenden Unterordnern befinden sich alle Dokumentationsdateien. Öffnen Sie einfach eine dieser Dateien und nehmen Sie die gewünschten Änderungen vor. Sie können auch eine neue Dokumentation in einem der Unterordner anlegen. Erstellen Sie dazu einfach einen Ordner mit einem passenden Namen und die notwendige ``index.rst`` Datei.
+Im Verzeichnis ``source`` und den entsprechenden Unterordnern befinden sich alle Dokumentationsdateien. Öffne einfach eine dieser Dateien und nimm die gewünschten Änderungen vor. Du kannst auch eine neue Dokumentation in einem der Unterordner anlegen. Erstelle dazu einfach einen Ordner mit einem passenden Namen und die notwendige ``index.rst`` Datei.
 
 .. code-block:: console
 
    $ mkdir source/howto/foobar
    $ touch source/howto/foobar/index.rst
 
-Schauen Sie sich auch die anderen Dokumentationsdateien an, um mehr über den Aufbau und Syntax zu lernen.
+Schaue dir auch die anderen Dokumentationsdateien an, um mehr über den Aufbau und Syntax zu lernen.
 
 Commit und push
 ~~~~~~~~~~~~~~~
 
-Haben Sie alle Änderungen vorgenommen, können Sie sie nun zur Überprüfung einreichen. Dazu sind folgende Schritte notwendig:
+Hast du alle Änderungen vorgenommen, kannst du sie nun zur Überprüfung einreichen. Dazu sind folgende Schritte notwendig:
 
 .. important::
 
-   Überprüfen Sie bitte zuerst, ob ``make html`` ohne Fehler
-   durchläuft! Falls nicht, beheben Sie bitte alle Fehler und
-   Warnungen, bevor Sie Ihre Änderungen hochladen!
+   Überprüfe bitte zuerst selbst, ob ``make clean; make html`` ohne Fehler
+   durchläuft! Falls nicht, behebe bitte alle Fehler und
+   Warnungen, bevor du deine Änderungen hochlädst!
 
 .. code-block:: console
 
-   $ make html
+   $ make clean; make html
 
-Falls Sie neue Dateien oder Ordner erstellt haben, müssen diese noch hinzugefügt werden:
+Falls du neue Dateien oder Ordner erstellt hast, müssen diese noch hinzugefügt werden:
 
 .. code-block:: console
 
    $ git add source/howto/foobar
 
-Geben Sie nun noch einen Kommentar zu Ihren Änderungen ein und laden Sie alles in Ihren Fork hoch:
+Gib nun noch einen Kommentar zu deinen Änderungen ein und lade alles in deinen Fork hoch:
 
 .. code-block:: console
 
-   $ git commit -a -m"My great documentation"
+   $ git commit -a -m"My great documentation update"
    $ git push
 
 Pull-Request
 ~~~~~~~~~~~~
 
-Erstellen Sie nun einen "Pull-Request" unter `<https://github.com/lmn-docs-bot/main>`_, indem Sie auf "New Pull Request" klicken.
+Erstelle nun einen "Pull-Request" aus deinem eigenen Fork `<https://github.com/<lmn-docs-bot>/main>`_ (ersetze hier <lmn-docs-bot> durch deinen eigenen github-Namen), indem du auf "New Pull Request" klickst.
 
 .. figure:: media/pr.png
    :align: center
    :alt: PR on Github
 
-Wenn Sie weitere Änderungen vornehmen und mit ``git commit -a -m"My comment"`` und ``git push`` bei Github hochladen, werden diese Änderungen automatisch dem Pull Request hinzugefügt.
+Wenn du weitere Änderungen vornimmst und mit ``git commit -a -m"My comment"`` und ``git push`` bei Github hochlädst, werden diese Änderungen automatisch dem Pull Request hinzugefügt, so lange, bis der Pull Request akzeptiert wird.
+
+Wenn der Pull Request akzeptiert wurde: Herzlichen Glückwunsch! Falls ein "Review" erstellt wird und du gebeten wirst, Änderungen vorzunehmen, dann kannst du die Änderungen einfach mit "commit" und "push" ebenfalls hochladen und so den Pull Request verbessern.
 
 
 Den eigenen Fork aktualisieren
 ------------------------------
 
-Um später weiter Änderungen vornehmen zu können, kann der eigene Fork
+Um später weitere Änderungen vornehmen zu können, kann der eigene Fork
 bei GitHub komplett gelöscht werden und ein neuer erzeugt werden.
 Alternativ kann der eigene Fork auf den Stand des offiziellen
-Repositoriums gebracht werden:
+Repositoriums gebracht werden. Das läuft so ab: Eigene neue Änderungen verstecken, dann einmalig die original-Quellen hinzufügen, dann die Originalversion herunterladen, dann diese Version in den eigenen Fork hochladen, dann eventuell eigene Änderungen wieder aus dem Versteck holen. Und dann kann man wie oben weitermachen.
 
 * Verschiebe alle lokalen Änderungen mit ``git stash`` in den Hintergrund
 
@@ -190,7 +192,7 @@ Repositoriums gebracht werden:
 
 * Wenn der merge nicht in einem "Fast-forward" endet, sollte man
   besser den Fork löschen und neu erzeugen. Andernfalls kann man jetzt
-  die offiziellen Änderungen hochladen.
+  die offiziellen Änderungen in seinen eigenen Fork hochladen.
 
   .. code:: bash
 
