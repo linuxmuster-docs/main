@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -28,13 +28,46 @@ msgid ""
 "servertools``."
 msgstr "Install the ``linuxmuster-client-servertools`` package on the server."
 
+#: ../../source/getting-started/linuxclients/cloudclient.rst:8
+msgid ""
+"server ~ # apt-get install linuxmuster-client-servertools\n"
+"Reading package lists... Done\n"
+"Building dependency tree\n"
+"Reading state information... Done\n"
+"The following extra packages will be installed:\n"
+"  libcrypt-openssl-random-perl makepasswd\n"
+"The following NEW packages will be installed:\n"
+"  libcrypt-openssl-random-perl linuxmuster-client-servertools makepasswd\n"
+"0 upgraded, 3 newly installed, 0 to remove and 4 not upgraded.\n"
+"Need to get 31.8 kB of archives.\n"
+"After this operation, 239 kB of additional disk space will be used.\n"
+"Do you want to continue [Y/n]? Y"
+msgstr ""
+
 #: ../../source/getting-started/linuxclients/cloudclient.rst:23
 msgid "Rufen Sie die Liste aller verfügbaren Clientabbilder auf:"
 msgstr "View the list of all available client images:"
 
+#: ../../source/getting-started/linuxclients/cloudclient.rst:25
+msgid ""
+"server ~ # linuxmuster-client -a list-available\n"
+"Hole Liste der verfügbaren cloops...OK\n"
+"\n"
+"Imagename                 Info\n"
+"-----------------------------------------------\n"
+"xenial-qgm                          Ubuntu 16.04 LTS 64Bit\n"
+"trusty714                          Ubuntu 14.04 LTS 64Bit\n"
+"xenial916                          Ubuntu 16.04 LTS 64Bit\n"
+"-----------------------------------------------"
+msgstr ""
+
 #: ../../source/getting-started/linuxclients/cloudclient.rst:37
 msgid "Laden Sie das Abbild Ihrer Wahl (hier: `xenial916`) herunter mit"
 msgstr "Download the image of your choice (here: `xenial916`) with"
+
+#: ../../source/getting-started/linuxclients/cloudclient.rst:39
+msgid "server ~ # linuxmuster-client -a auto -c xenial916 -H xenial"
+msgstr ""
 
 #: ../../source/getting-started/linuxclients/cloudclient.rst:43
 msgid ""
@@ -43,6 +76,14 @@ msgid ""
 msgstr ""
 "The computer group (hardware class) `xenial` is created and several files "
 "are created. The most important ones are"
+
+#: ../../source/getting-started/linuxclients/cloudclient.rst:45
+msgid ""
+"/var/linbo/start.conf.xenial\n"
+"/var/linbo/xenial916.cloop\n"
+"/var/linbo/xenial916.cloop.postsync\n"
+"/var/linbo/linuxmuster-client/xenial/..."
+msgstr ""
 
 #: ../../source/getting-started/linuxclients/cloudclient.rst:52
 msgid "Nun kann man Clientrechner in die Rechnergruppe `xenial` aufnehmen."

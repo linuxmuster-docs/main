@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -86,6 +86,12 @@ msgid ""
 " überprüfen:"
 msgstr ""
 
+#: ../../source/clients/leoclient2/leo2-erweiterungen.rst:46
+msgid ""
+"# mount -a\n"
+"# df -h"
+msgstr ""
+
 #: ../../source/clients/leoclient2/leo2-erweiterungen.rst:51
 msgid ""
 "Nun ggf. die weggesicherten Dateien wieder nach ``/var/virtual/`` "
@@ -125,6 +131,10 @@ msgid ""
 "das Datenverzeichnis der VM auf den Server kopiert wird, z.B. das "
 "Verzeichnis ``/var/virtual/winxp`` in das vom Server gemountete Netzlaufwerk"
 " ``/media/leoclient2-vm`` kopiert wird."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-erweiterungen.rst:80
+msgid "$ sudo cp -R /var/virtual/winxp /media/leoclient2-vm"
 msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-erweiterungen.rst:84
@@ -449,6 +459,11 @@ msgstr ""
 msgid "Als linuxadmin im Terminal ausführen und den Anweisungen folgen:"
 msgstr ""
 
+#: ../../source/clients/leoclient2/leo2-erweiterungen.rst:227
+#: ../../source/clients/leoclient2/leo2-erweiterungen.rst:245
+msgid "# sudo leoclient2-base-snapshot-renew"
+msgstr ""
+
 #: ../../source/clients/leoclient2/leo2-erweiterungen.rst:231
 msgid ""
 "Der aktuelle Snapshot ``Snapshots/{...}.vdi`` wird dadurch zur "
@@ -459,6 +474,10 @@ msgstr ""
 #: ../../source/clients/leoclient2/leo2-erweiterungen.rst:235
 msgid ""
 "Als linuxadmin im Terminal ausführen um die Basisfestplatte zu schrinken:"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-erweiterungen.rst:238
+msgid "# sudo VBoxManage modifymedium --compact /var/virtual/winxp/winxp.vdi"
 msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-erweiterungen.rst:242
@@ -508,6 +527,12 @@ msgid ""
 "werden:"
 msgstr ""
 
+#: ../../source/clients/leoclient2/leo2-erweiterungen.rst:269
+msgid ""
+"# VBoxManage clonehd disk1.vmdk disk1.vdi --format vdi\n"
+"# VBoxManage modifyhd --compact disk1.vdi"
+msgstr ""
+
 #: ../../source/clients/leoclient2/leo2-erweiterungen.rst:275
 msgid "Virtuelle Maschine direkt starten"
 msgstr ""
@@ -528,12 +553,22 @@ msgstr ""
 msgid "Legen Sie das Skript unter ``/usr/bin`` ab und machen es ausführbar."
 msgstr ""
 
+#: ../../source/clients/leoclient2/leo2-erweiterungen.rst:286
+msgid ""
+"$ sudo mv leoclient2-directstart /usr/bin/\n"
+"$ sudo chmod 755 /usr/bin/leoclient2-directstart"
+msgstr ""
+
 #: ../../source/clients/leoclient2/leo2-erweiterungen.rst:291
 msgid "Das Skript kann mit folgenden Parameter gestartet werden:"
 msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-erweiterungen.rst:301
 msgid "Starten Sie das Skript"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-erweiterungen.rst:303
+msgid "$ leoclient2-directstart -m winxp -r 1024 -s standard"
 msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-erweiterungen.rst:309
@@ -564,6 +599,21 @@ msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-erweiterungen.rst:321
 msgid "/usr/share/applications/leoclient2-directstart.desktop"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-erweiterungen.rst:321
+msgid ""
+"[Desktop Entry]\n"
+"Version=1.0\n"
+"Type=Application\n"
+"Name=VirtualBox Direktstart\n"
+"Comment=Starting Snapshots of VirtualBox\n"
+"Comment[de]=Starten von VirtualBox Snapshots\n"
+"Exec=/usr/bin/leoclient2-directstart -m winxp -r 1024 -s standard\n"
+"Icon=leovirtstarter2\n"
+"Categories=Graphics;Engineering;\n"
+"Categories=Emulator;System;Application;\n"
+"Terminal=false"
 msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-erweiterungen.rst:337
@@ -608,6 +658,12 @@ msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-erweiterungen.rst:357
 msgid "Z.B. ``/var/virtual/winxp/network.conf``"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-erweiterungen.rst:363
+msgid ""
+"# Beispiel einer NAT-Netzwerkkarte\n"
+"r100-pclehrer;1;nat;080011223344;auto-used-nic"
 msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-erweiterungen.rst:364
@@ -892,6 +948,12 @@ msgstr ""
 msgid "Auflisten kann man alle sichtbaren VM's mit:"
 msgstr ""
 
+#: ../../source/clients/leoclient2/leo2-erweiterungen.rst:520
+msgid ""
+"$ leovirtstarter2 -i\n"
+"$ leovirtstarter2 --info"
+msgstr ""
+
 #: ../../source/clients/leoclient2/leo2-erweiterungen.rst:525
 msgid ""
 "Wird mit dem ``leovirtstarter2`` ein Snapshot einer VM zum Starten "
@@ -996,6 +1058,14 @@ msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-erweiterungen.rst:577
 msgid "Beispieldatei image.conf"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-erweiterungen.rst:585
+msgid ""
+"# Berechtigugen eine VM zu starten.\n"
+"group=teachers\n"
+"host=\n"
+"room=lehrerzimmer"
 msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-erweiterungen.rst:586

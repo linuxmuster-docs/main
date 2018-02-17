@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -27,6 +27,10 @@ msgid ""
 "(Eintrag in ``/etc/leoclient2/machines``) und bietet diese zum Starten an.  "
 "Es kann im Ubuntu Dash (Virtualbox Snapshotstarter) oder über die Konsole "
 "gestartet werden:"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmstarten.rst:9
+msgid "$ leovirtstarter2"
 msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-vmstarten.rst:17

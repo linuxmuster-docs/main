@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -34,6 +34,10 @@ msgid ""
 msgstr ""
 "Enter ``root`` as the username and the password ``muster``. Confirm each "
 "with ``Enter``. Then enter the command ``setup`` and confirm with ``Enter``."
+
+#: ../../source/getting-started/install-on-xen/configuration.rst:9
+msgid "$ setup"
+msgstr ""
 
 #: ../../source/getting-started/install-on-xen/configuration.rst:17
 msgid "Wählen Sie „Networking“ und bestätigen Sie mit ``Enter``."
@@ -117,6 +121,13 @@ msgstr ""
 "Enter the user name ``root`` and ``muster`` as password. Then enter the "
 "commands"
 
+#: ../../source/getting-started/install-on-xen/configuration.rst:91
+msgid ""
+"$ aptitude update\n"
+"$ aptitude upgrade\n"
+"$ aptitude dist-upgrade"
+msgstr ""
+
 #: ../../source/getting-started/install-on-xen/configuration.rst:97
 msgid "ein und bestätigen jeweils mit ``Enter`` bzw. ``Y``."
 msgstr "and confirm it with ``Enter`` or ``Y``."
@@ -134,9 +145,17 @@ msgstr ""
 msgid "Geben Sie den Befehl"
 msgstr "Enter the command"
 
+#: ../../source/getting-started/install-on-xen/configuration.rst:108
+msgid "$ passwd"
+msgstr ""
+
 #: ../../source/getting-started/install-on-xen/configuration.rst:112
 msgid "ein um das ``root``-Passwort zu ändern."
 msgstr "to change the root password."
+
+#: ../../source/getting-started/install-on-xen/configuration.rst:120
+msgid "linuxmuster-setup --first"
+msgstr ""
 
 #: ../../source/getting-started/install-on-xen/configuration.rst:124
 msgid "ein und bestätigen Sie mit ``Enter``."

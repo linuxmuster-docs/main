@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -140,9 +140,17 @@ msgstr ""
 msgid "Öffnen Sie ein Terminal und geben folgenden Befehl ein:"
 msgstr "Open a terminal and enter the following command:"
 
+#: ../../source/getting-started/install-on-xen/administration.rst:90
+msgid "$ nano /etc/apt/sources.list.d/netzint.list"
+msgstr ""
+
 #: ../../source/getting-started/install-on-xen/administration.rst:98
 msgid "Schreiben Sie nun in die Zeile:"
 msgstr "Now write in the line:"
+
+#: ../../source/getting-started/install-on-xen/administration.rst:100
+msgid "deb http://pkg.netzint.de/ precise main"
+msgstr ""
 
 #: ../../source/getting-started/install-on-xen/administration.rst:108
 msgid ""
@@ -162,12 +170,22 @@ msgstr ""
 "Enter the following commands in the console and confirm each with `` "
 "Enter``:"
 
+#: ../../source/getting-started/install-on-xen/administration.rst:112
+msgid ""
+"$ wget http://pkg.netzint.de/netzint.pub.key\n"
+"$ apt-key add netzint.pub.key"
+msgstr ""
+
 #: ../../source/getting-started/install-on-xen/administration.rst:121
 msgid ""
 "Schreiben Sie den Befehl ``apt-get update`` in die Konsole und drücken Sie "
 "``Enter``."
 msgstr ""
 "Enter the command ``apt-get update`` in the console and press ``Enter``."
+
+#: ../../source/getting-started/install-on-xen/administration.rst:123
+msgid "$ apt-get update"
+msgstr ""
 
 #: ../../source/getting-started/install-on-xen/administration.rst:131
 msgid ""
@@ -178,9 +196,17 @@ msgstr ""
 "Enter the command ``apt-get install netzint-xenmanager`` in the console and "
 "press ``Enter``. Continue with ``Y``."
 
+#: ../../source/getting-started/install-on-xen/administration.rst:133
+msgid "$ apt-get install netzint-xenmanager"
+msgstr ""
+
 #: ../../source/getting-started/install-on-xen/administration.rst:141
 msgid "Nach der Installation starten Sie OpenXenmanager mit dem Befehl"
 msgstr "After installation, you can start OpenXenmanager with the command"
+
+#: ../../source/getting-started/install-on-xen/administration.rst:143
+msgid "$ xenmanager"
+msgstr ""
 
 #: ../../source/getting-started/install-on-xen/administration.rst:151
 msgid ""

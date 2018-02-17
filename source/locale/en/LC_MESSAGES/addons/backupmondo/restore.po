@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -29,8 +29,16 @@ msgstr ""
 msgid "Dazu muss das Backupmedium unter ``/media/backup`` gemountet sein:"
 msgstr ""
 
+#: ../../source/addons/backupmondo/restore.rst:9
+msgid "mount /dev/sdb1 /media/backup"
+msgstr ""
+
 #: ../../source/addons/backupmondo/restore.rst:13
 msgid "Starten Sie als ``root`` in einer Konsole das Programm *mondorestore*:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore.rst:15
+msgid "mondorestore"
 msgstr ""
 
 #: ../../source/addons/backupmondo/restore.rst:19

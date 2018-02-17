@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -33,11 +33,49 @@ msgid ""
 "installieren Sie die Pakete ``check-mk-agent`` und ``xinetd``:"
 msgstr ""
 
+#: ../../source/addons/monipi/linuxmusterserver.rst:8
+msgid "$ apt-get install check-mk-agent xinetd"
+msgstr ""
+
 #: ../../source/addons/monipi/linuxmusterserver.rst:12
 msgid ""
 "Anschließend muss der xinetd konfiguriert werden, so dass eine Abfrage der "
 "Monitoring-Daten möglich wird. Editieren Sie dazu die Datei "
 "``/etc/xinetd.d/check_mk`` wie folgt:"
+msgstr ""
+
+#: ../../source/addons/monipi/linuxmusterserver.rst:14
+msgid ""
+"service check_mk\n"
+"{\n"
+"        type           = UNLISTED\n"
+"        port           = 6556\n"
+"        socket_type    = stream\n"
+"        protocol       = tcp\n"
+"        wait           = no\n"
+"        user           = root\n"
+"        server         = /usr/bin/check_mk_agent\n"
+"\n"
+"        # If you use fully redundant monitoring and poll the client\n"
+"        # from more then one monitoring servers in parallel you might\n"
+"        # want to use the agent cache wrapper:\n"
+"        #server         = /usr/bin/check_mk_caching_agent\n"
+"\n"
+"        # configure the IP address(es) of your Nagios server here:\n"
+"        # EDIT: KANN GEAENDERT WERDEN\n"
+"        # Wenn der MoniPi eine feste IP-Adresse hat, ist es sinnvoll,\n"
+"        # das Kommentarzeichen an der nächsten Zeile zu entfernen und dort\n"
+"        # die IP-Adresse des Monitoring Servers einzutragen\n"
+"        #only_from      = 127.0.0.1 10.17.1.3\n"
+"\n"
+"        # Don't be too verbose. Don't log every check. This might be\n"
+"        # commented out for debugging. If this option is commented out\n"
+"        # the default options will be used for this service.\n"
+"        log_on_success =\n"
+"\n"
+"        # EDIT: MUSS GEAENDERT WERDEN von \"yes\" auf \"no\"\n"
+"        disable        = no\n"
+"}"
 msgstr ""
 
 #: ../../source/addons/monipi/linuxmusterserver.rst:48
@@ -51,9 +89,17 @@ msgstr ""
 msgid "Starten Sie den xinetd nach den Anpassungen neu:"
 msgstr ""
 
+#: ../../source/addons/monipi/linuxmusterserver.rst:52
+msgid "$ service xinetd restart"
+msgstr ""
+
 #: ../../source/addons/monipi/linuxmusterserver.rst:56
 msgid ""
 "Um zu überprüfen, ob die Einrichtung erfolgreich war, können Sie den Befehl"
+msgstr ""
+
+#: ../../source/addons/monipi/linuxmusterserver.rst:58
+msgid "$ telnet localhost 6556"
 msgstr ""
 
 #: ../../source/addons/monipi/linuxmusterserver.rst:62

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -49,6 +49,13 @@ msgstr ""
 
 #: ../../source/addons/backupmondo/konfiguration.rst:15
 msgid "Beispiele:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:17
+msgid ""
+"backupdevice=/dev/sdb1\n"
+"backupdevice=10.16.1.10:/home/nfs\n"
+"backupdevice=\"/dev/disk/by-uuid/ccfc9531-3486-4af0-9317-8f895f5a1c97\""
 msgstr ""
 
 #: ../../source/addons/backupmondo/konfiguration.rst:24
@@ -107,6 +114,10 @@ msgstr ""
 msgid "Standard:"
 msgstr ""
 
+#: ../../source/addons/backupmondo/konfiguration.rst:41
+msgid "firewall=yes"
+msgstr ""
+
 #: ../../source/addons/backupmondo/konfiguration.rst:52
 msgid "verify"
 msgstr ""
@@ -117,6 +128,10 @@ msgid ""
 "dem Backuplauf auf Konsistenz überprüft werden sollen."
 msgstr ""
 
+#: ../../source/addons/backupmondo/konfiguration.rst:50
+msgid "verify=yes"
+msgstr ""
+
 #: ../../source/addons/backupmondo/konfiguration.rst:61
 msgid "isoprefix"
 msgstr ""
@@ -125,6 +140,10 @@ msgstr ""
 msgid ""
 "Wird für die Bezeichnung der ISO-Images und des Backup-Verzeichnisses "
 "verwendet."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:59
+msgid "isoprefix=server"
 msgstr ""
 
 #: ../../source/addons/backupmondo/konfiguration.rst:70
@@ -140,6 +159,10 @@ msgid ""
 "gebrannt werden müssen, ist eine beliebige Größe möglich."
 msgstr ""
 
+#: ../../source/addons/backupmondo/konfiguration.rst:68
+msgid "mediasize=4430"
+msgstr ""
+
 #: ../../source/addons/backupmondo/konfiguration.rst:79
 msgid "excludedirs"
 msgstr ""
@@ -148,6 +171,10 @@ msgstr ""
 msgid ""
 "Eine durch Kommas separierte Liste der Verzeichnisse, die nicht gesichert "
 "werden sollen. Die Standardeinstellung sollte nicht entfernt werden."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:77
+msgid "excludedirs=/var/tmp,/var/cache/apt/archives"
 msgstr ""
 
 #: ../../source/addons/backupmondo/konfiguration.rst:82
@@ -175,6 +202,13 @@ msgid ""
 "Standardeinstellung vorgesehenen Dienste sollten nicht entfernt werden."
 msgstr ""
 
+#: ../../source/addons/backupmondo/konfiguration.rst:89
+msgid ""
+"services=cups,nagios3,postgresql,mysql,slapd,smbd,nmbd,postfix,apache2"
+",cyrus-imapd,saslauthd,clamav-daemon,clamav-"
+"freshclam,rsync,atftpd,nscd,cron,bittorrent,linbo-bittorrent,linbo-multicast"
+msgstr ""
+
 #: ../../source/addons/backupmondo/konfiguration.rst:100
 msgid "compression"
 msgstr ""
@@ -184,6 +218,10 @@ msgid ""
 "Kompressionsgrad, mögl. Werte 0-9, der Standardwert 3 ist ein guter "
 "Kompromiss zwischen Schnelligkeit und Komprimierung. Wert 0 bedeutet keine "
 "Komprimierung."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:98
+msgid "compression=3"
 msgstr ""
 
 #: ../../source/addons/backupmondo/konfiguration.rst:109
@@ -197,6 +235,10 @@ msgid ""
 "anderweitig in Gebrauch ist."
 msgstr ""
 
+#: ../../source/addons/backupmondo/konfiguration.rst:107
+msgid "unmount=yes"
+msgstr ""
+
 #: ../../source/addons/backupmondo/konfiguration.rst:118
 msgid "keepfull"
 msgstr ""
@@ -205,6 +247,10 @@ msgstr ""
 msgid ""
 "Mögl. Werte: integer ab 1. Definiert die Anzahl der Vollbackups, die "
 "vorgehalten werden."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:116
+msgid "keepfull=1"
 msgstr ""
 
 #: ../../source/addons/backupmondo/konfiguration.rst:127
@@ -217,6 +263,10 @@ msgid ""
 " die vorgehalten werden."
 msgstr ""
 
+#: ../../source/addons/backupmondo/konfiguration.rst:125
+msgid "keepdiff=3"
+msgstr ""
+
 #: ../../source/addons/backupmondo/konfiguration.rst:136
 msgid "keepinc"
 msgstr ""
@@ -225,6 +275,10 @@ msgstr ""
 msgid ""
 "Mögl. Werte: integer ab 1. Definiert die Anzahl der inkrementellen Backups, "
 "die vorgehalten werden."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:134
+msgid "keepinc=7"
 msgstr ""
 
 #: ../../source/addons/backupmondo/konfiguration.rst:145
@@ -236,6 +290,10 @@ msgid ""
 "Mögl. Werte: boolean yes|no. Legt fest, ob automatisch tägliche "
 "inkrementelle und wöchentliche differentielle bzw. Vollbackups durchgeführt "
 "werden."
+msgstr ""
+
+#: ../../source/addons/backupmondo/konfiguration.rst:143
+msgid "cronbackup=no"
 msgstr ""
 
 #: ../../source/addons/backupmondo/konfiguration.rst:148

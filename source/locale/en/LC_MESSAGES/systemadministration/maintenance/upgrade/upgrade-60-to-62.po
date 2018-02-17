@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -119,11 +119,25 @@ msgid ""
 "Paketquellen anzugeben:"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:67
+msgid ""
+"deb http://pkg.linuxmuster.net/ babo/\n"
+"deb-src http://pkg.linuxmuster.net/ babo/\n"
+"deb http://pkg.linuxmuster.net/ babo62/\n"
+"deb-src http://pkg.linuxmuster.net/ babo62/"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:68
 msgid ""
 "Bestehende Zeilen, die auf das precise-Repositorium verweisen, ebenso alte "
 "Quellendateien, die auf precise-Repositorien verweisen, sollten "
 "auskommentiert oder gelöscht bzw. verschoben werden."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:74
+msgid ""
+"# deb http://pkg.linuxmuster.net/ precise/\n"
+"# deb-src http://pkg.linuxmuster.net/ precise/"
 msgstr ""
 
 #: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:75
@@ -154,6 +168,20 @@ msgid ""
 "einzugeben:"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:87
+msgid ""
+"# apt-get update\n"
+"# apt-get dist-upgrade\n"
+"Paketaktualisierung (Upgrade) wird berechnet...Fertig\n"
+"Die folgenden Pakete werden ENTFERNT:\n"
+"   tftpd-hpa\n"
+"Die folgenden NEUEN Pakete werden installiert:\n"
+"  atftpd ipcalc\n"
+"Die folgenden Pakete werden aktualisiert (Upgrade):\n"
+"  linuxmuster-base linuxmuster-ipfire linuxmuster-linbo linuxmuster-migration\n"
+"  sophomorix-base sophomorix-doc-html sophomorix-pgldap sophomorix2"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:100
 msgid ""
 "Sollte die Paketaktualisierung verletzte Abhängigkeiten für tftpd-hpa "
@@ -182,6 +210,10 @@ msgid ""
 "Firewall mit dem Befehl"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:112
+msgid "# linuxmuster-ipfire --setup"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:116
 msgid ""
 "einmal in den Auslieferungszustand zurück.  Starten Sie die Firewall neu und"
@@ -205,6 +237,10 @@ msgid ""
 "dass zur Aktivierung zu Beginn ein einmaliger Import der Workstations "
 "ausgeführt wird. Auf diese Weise werden die notwendigen "
 "Konfigurationsdateien erstellt.  Führen Sie hierzu folgenden Befehl aus:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:132
+msgid "# import_workstations"
 msgstr ""
 
 #: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:136
@@ -236,6 +272,11 @@ msgstr ""
 msgid ""
 "Folgender Befehl auf der Serverkonsole sorgt dafür, dass beim nächsten "
 "Bootvorgang per PXE der Cache initialisiert wird (und rebootet wird):"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:150
+msgid ""
+"# linbo-remote -p initcache,reboot [-i <hostname>|-g <group>|-r <room>]"
 msgstr ""
 
 #: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:154
@@ -275,6 +316,10 @@ msgid ""
 "kopieren diese auf einen USB-Stick, z.B. mit Hilfe des Befehls"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:179
+msgid "# dd if=linbo.iso of=/dev/sdb"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:183
 msgid "wobei ``/dev/sdb`` der Schnittstellenname ihres USB-Sticks sein muss."
 msgstr ""
@@ -298,11 +343,23 @@ msgstr ""
 msgid "Dazu ist es zunächst erforderlich die Verzeichnisse"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:201
+msgid ""
+"__tauschen\n"
+"__vorlagen"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:202
 msgid ""
 "in jedem Benutzerverzeichnis zu entfernen. Dies kann man mit folgenden "
 "Befehlen für alle Benutzer oder gezielt für einzelne Benutzer erledigt "
 "werden:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:206
+msgid ""
+"# sophomorix-repair --repairhome\n"
+"# sophomorix-repair --repairhome -u user"
 msgstr ""
 
 #: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:212
@@ -322,10 +379,22 @@ msgid ""
 "werden kann. Dazu in den Dateien"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:224
+msgid ""
+"/etc/linuxmuster/samba/root-preexec.d/sophomorix-root-preexec\n"
+"/etc/linuxmuster/samba/root-postexec.d/sophomorix-root-postexec"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:225
 msgid ""
 "die Zeilen mit \"sophomorix-bind\" durch Voranstellen eines ``#`` "
 "auszukommentieren."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:232
+msgid ""
+"#!/bin/bash\n"
+"# sophomorix-bind --quick --login --host $HOSTNAME --user $USERNAME --homedir $HOMEDIR"
 msgstr ""
 
 #: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:233
@@ -340,6 +409,10 @@ msgid ""
 "sollten diese entfernt werden mit:"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:237
+msgid "# sophomorix-bind --cron"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:242
 msgid "Dateirechte umstellen"
 msgstr ""
@@ -349,4 +422,8 @@ msgid ""
 "Mit dem Upgrade von 6.0 auf 6.1 müssen auch noch die Dateirechte/Eigentümer "
 "von schon erstellten Verzeichnissen in den Tauschordnern angepasst werden.  "
 "Dies geschieht durch Aufruf von:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-60-to-62.rst:248
+msgid "# sophomorix-repair --permissions"
 msgstr ""

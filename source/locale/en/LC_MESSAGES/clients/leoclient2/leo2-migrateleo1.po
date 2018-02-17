@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -31,6 +31,15 @@ msgstr ""
 msgid "Ermitteln Sie die Größe und UUID der alten Festplatte"
 msgstr ""
 
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:11
+msgid ""
+"# vboxmanage showmediuminfo /media/old/old.vdi | grep -E 'UUID|MBytes'\n"
+"UUID:           22df228d-ecb2-44ba-a281-7c73a02d26bc\n"
+"Parent UUID:    base\n"
+"Capacity:       16384 MBytes\n"
+"Size on disk:   1921 MBytes"
+msgstr ""
+
 #: ../../source/clients/leoclient2/leo2-migrateleo1.rst:19
 msgid ""
 "Erzeugen Sie eine neue virtuelle Maschine nach :ref:`Anleitung <virtuelle-"
@@ -44,15 +53,31 @@ msgstr ""
 msgid "Ermitteln Sie die UUID der neuen Festplatte:"
 msgstr ""
 
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:27
+msgid ""
+"# VBOX_USER_HOME=/var/virtual/win-migrate vboxmanage showmediuminfo /var/virtual/win-migrate/win-migrate.vdi  | grep ^UUID\n"
+"UUID:           1fbc6a0c-d9c9-48bf-ad1c-e94c4d7da406"
+msgstr ""
+
 #: ../../source/clients/leoclient2/leo2-migrateleo1.rst:32
 msgid ""
 "Kopieren Sie die alte virtuelle Festplatte auf die neue Festplatten-Datei"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:35
+msgid "# cp /media/old/old.vdi /var/virtual/win-migrate/win-migrate.vdi"
 msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-migrateleo1.rst:39
 msgid ""
 "Korrigieren Sie die UUID an den entsprechenden Stellen mit dem Schema ``sed "
 "-i \"s@neue UUID@alte UUID@\" Datei``"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:42
+msgid ""
+"# sed -i \"s@1fbc6a0c-d9c9-48bf-ad1c-e94c4d7da406@22df228d-ecb2-44ba-a281-7c73a02d26bc@\" /var/virtual/win-migrate/win-migrate.vbox\n"
+"# sed -i \"s@1fbc6a0c-d9c9-48bf-ad1c-e94c4d7da406@22df228d-ecb2-44ba-a281-7c73a02d26bc@\" /var/virtual/win-migrate/defaults/win-migrate.vbox"
 msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-migrateleo1.rst:47
@@ -62,11 +87,29 @@ msgid ""
 "Datei der neuen virtuellen Maschine (bestehende Datei ersetzen)."
 msgstr ""
 
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:52
+msgid ""
+"# cp /media/old/old-snapshot.vdi /var/virtual/win-"
+"migrate/Snapshots/\\{08b01eb0-2f5b-4091-acf7-cd5f8cbfcef7\\}.vdi"
+msgstr ""
+
 #: ../../source/clients/leoclient2/leo2-migrateleo1.rst:56
 msgid ""
 "Aus folgender Fehlermeldung kann man die UUIDs des alten (``ef8629ce-"
 "c7c1-424b-8089-0e1d526b0c2c``) und des neuen "
 "(``08b01eb0-2f5b-4091-acf7-cd5f8cbfcef7``) Snapshots herauslesen"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:60
+msgid ""
+"# VBOX_USER_HOME=/var/virtual/win-migrate vboxmanage showmediuminfo /var/virtual/win-migrate/Snapshots/*.vdi | grep Error\n"
+"\n"
+"Access Error: UUID {ef8629ce-c7c1-424b-8089-0e1d526b0c2c} of the\n"
+"medium\n"
+"'/var/virtual/win-migrate/Snapshots/{08b01eb0-2f5b-4091-acf7-cd5f8cbfcef7}.vdi'\n"
+"does not match the value {08b01eb0-2f5b-4091-acf7-cd5f8cbfcef7}\n"
+"stored in the media registry\n"
+"('/var/virtual/win-migrate/VirtualBox.xml')"
 msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-migrateleo1.rst:71
@@ -75,10 +118,23 @@ msgid ""
 " dem Schema ``sed -i \"s@neue UUID@alte UUID@\" Datei``"
 msgstr ""
 
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:74
+msgid ""
+"# sed -i \"s@08b01eb0-2f5b-4091-acf7-cd5f8cbfcef7@ef8629ce-c7c1-424b-8089-0e1d526b0c2c@\" /var/virtual/win-migrate/win-migrate.vbox\n"
+"# sed -i \"s@08b01eb0-2f5b-4091-acf7-cd5f8cbfcef7@ef8629ce-c7c1-424b-8089-0e1d526b0c2c@\" /var/virtual/win-migrate/defaults/win-migrate.vbox"
+msgstr ""
+
 #: ../../source/clients/leoclient2/leo2-migrateleo1.rst:79
 msgid ""
 "Setzen Sie den Standard-Snapshot neu (Skript siehe :ref:`leoclient2"
 "-snapshot-neu`)"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:81
+msgid ""
+"# leoclient2-snapshot-create -m win-migrate\n"
+"adding: {08b01eb0-2f5b-4091-acf7-cd5f8cbfcef7}.vdi (deflated 57%)\n"
+"OK: Snapshot {08b01eb0-2f5b-4091-acf7-cd5f8cbfcef7}.vdi wurde als standard gesetzt."
 msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-migrateleo1.rst:87
@@ -95,6 +151,16 @@ msgstr ""
 msgid "Die Pakete des alten Leoclient müssen von Hand entfernt werden:"
 msgstr ""
 
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:96
+msgid ""
+"# apt-get purge leoclient-leovirtstarter-client leoclient-leovirtstarter-common\n"
+"# apt-get purge leoclient-leovirtstarter-server leoclient-tools leoclient-virtualbox leoclient-vm-printer"
+msgstr ""
+
 #: ../../source/clients/leoclient2/leo2-migrateleo1.rst:101
 msgid "Evtl. alte Daten von leoclient (Version 1) entfernen:"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-migrateleo1.rst:103
+msgid "# rm -rf /etc/leoclient"
 msgstr ""

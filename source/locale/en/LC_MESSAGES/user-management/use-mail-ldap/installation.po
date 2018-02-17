@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -31,13 +31,25 @@ msgid ""
 "Schulkonsole aktiviert werden. Dazu erstellt man im Verzeichnis"
 msgstr ""
 
+#: ../../source/user-management/use-mail-ldap/installation.rst:9
+msgid "/etc/linuxmuster/schulkonsole/permissions.d"
+msgstr ""
+
 #: ../../source/user-management/use-mail-ldap/installation.rst:13
 msgid "die Datei ``all-pages-mymail`` mit dem Inhalt"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/installation.rst:15
+msgid "ALL=start_mymail"
 msgstr ""
 
 #: ../../source/user-management/use-mail-ldap/installation.rst:19
 msgid ""
 "und im gleichen Verzeichnis die Datei ``all-programs-mymail`` mit dem Inhalt"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/installation.rst:21
+msgid "ALL=set_user_mymail"
 msgstr ""
 
 #: ../../source/user-management/use-mail-ldap/installation.rst:25
@@ -55,8 +67,16 @@ msgid ""
 "Eintrag"
 msgstr ""
 
+#: ../../source/user-management/use-mail-ldap/installation.rst:34
+msgid "teachers=start_mymail"
+msgstr ""
+
 #: ../../source/user-management/use-mail-ldap/installation.rst:38
 msgid "und ``teachers-programs-mymail`` mit dem Eintrag"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/installation.rst:40
+msgid "teachers=set_user_mymail"
 msgstr ""
 
 #: ../../source/user-management/use-mail-ldap/installation.rst:44
@@ -82,6 +102,12 @@ msgid ""
 "ins System übernommen werden. Das geschieht durch zwei Skripte im "
 "Verzeichnis ``/usr/share/schulkonsole/scripts``. Diese Skripte müssen "
 "ausgeführt werden, also"
+msgstr ""
+
+#: ../../source/user-management/use-mail-ldap/installation.rst:56
+msgid ""
+"server ~ # /usr/share/schulkonsole/scripts/update-permissions.sh\n"
+"server ~ # /usr/share/schulkonsole/scripts/make-menus.sh"
 msgstr ""
 
 #: ../../source/user-management/use-mail-ldap/installation.rst:61

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -25,8 +25,16 @@ msgstr ""
 msgid "Das Umstellen auf Subnetzbetrieb geschieht per Setuproutine mit"
 msgstr ""
 
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:7
+msgid "# linuxmuster-setup --modify"
+msgstr ""
+
 #: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:11
 msgid "oder im Falle einer Neuinstallation mit"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:13
+msgid "# linuxmuster-setup --first"
 msgstr ""
 
 #: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:17
@@ -250,10 +258,26 @@ msgid ""
 "``/etc/linuxmuster/subnets``:"
 msgstr ""
 
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:56
+msgid ""
+"# Raum 100\n"
+"10.20.100.0/24;10.20.100.254;10.20.100.100;10.20.100.200;0;0\n"
+"# Raum 200\n"
+"10.20.200.0/24;10.20.200.254;10.20.200.100;10.20.200.200;0;0\n"
+"# Lehrkräftenetz\n"
+"10.30.10.0/24;10.30.10.254;;;0;0\n"
+"# Gästenetz\n"
+"10.30.20.0/24;10.30.20.254;10.30.20.1;10.30.20.253;0;1"
+msgstr ""
+
 #: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:67
 msgid ""
 "Beachten Sie, dass Änderungen der Subnetzkonfiguration erst wirksam werden, "
 "wenn sie durch Ausführung des Befehls"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:69
+msgid "# import_workstations"
 msgstr ""
 
 #: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:73
@@ -294,6 +318,12 @@ msgid ""
 "In der Konfigurationsdatei ``/etc/linuxmuster/subnets`` lässt sich für jedes"
 " Subnetz festlegen, ob IP-Adressen aus der frei definierten Range Zugriff "
 "auf Intranet-Resourcen (Feld 5) oder Internet (Feld 6) haben. Dabei bedeuten"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:90
+msgid ""
+"0 = kein Zugriff\n"
+"1 = Zugriff erlaubt"
 msgstr ""
 
 #: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:95

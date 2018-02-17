@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -111,10 +111,22 @@ msgid ""
 "Quellsystems die Eintragungen für das Repository:"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:32
+msgid "/etc/apt/sources.list.d/linuxmuster.net.list"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/migrate/install-paket.rst:33
 msgid "Danach aktualisieren Sie die Paketquellen mit nachstehendem Befehl:"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:38
+msgid "apt-get update"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/migrate/install-paket.rst:39
 msgid "Anschließend installieren Sie das Paket **linuxmuster-migration**:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/install-paket.rst:45
+msgid "apt-get install linuxmuster-migration"
 msgstr ""

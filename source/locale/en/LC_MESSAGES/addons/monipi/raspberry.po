@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -46,6 +46,10 @@ msgid ""
 "herunter. Entpacken Sie die  Datei mit dem Befehl"
 msgstr ""
 
+#: ../../source/addons/monipi/raspberry.rst:13
+msgid "$ gunzip monipi_<version>.img.gz"
+msgstr ""
+
 #: ../../source/addons/monipi/raspberry.rst:18
 msgid "Image auf eine SD-Karte schreiben"
 msgstr ""
@@ -66,11 +70,28 @@ msgstr ""
 msgid "Geben Sie den Befehl"
 msgstr ""
 
+#: ../../source/addons/monipi/raspberry.rst:28
+msgid "$ fdisk -l"
+msgstr ""
+
 #: ../../source/addons/monipi/raspberry.rst:32
 msgid ""
 "ein und entnehmen Sie der Ausgabe des Befehls den Devicenamen der SD-Karte. "
 "Im Beispiel unten ist der Device-Name ``/dev/mmcblk0`` die weiteren Zeichen "
 "(``p1``,...) stehen für die Partitionen der Karte."
+msgstr ""
+
+#: ../../source/addons/monipi/raspberry.rst:34
+msgid ""
+"Disk /dev/mmcblk0: 32.0 GB, 32010928128 bytes\n"
+"4 Köpfe, 16 Sektoren/Spur, 976896 Zylinder, zusammen 62521344 Sektoren\n"
+"Einheiten = Sektoren von 1 × 512 = 512 Bytes\n"
+"Sector size (logical/physical): 512 bytes / 512 bytes\n"
+"I/O size (minimum/optimal): 512 bytes / 512 bytes\n"
+"Festplattenidentifikation: 0xb3c5e39a\n"
+"\n"
+"Gerät  boot.     Anfang        Ende     Blöcke   Id  System\n"
+"/dev/mmcblk0p1            2048    62521343    31259648   83  Linux"
 msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:46
@@ -85,6 +106,10 @@ msgstr ""
 msgid ""
 "Der folgende Befehl erledigt das, das Device der SD-Karte muss dabei "
 "möglicherweise angepasst werden:"
+msgstr ""
+
+#: ../../source/addons/monipi/raspberry.rst:50
+msgid "$ dd bs=4M if=monipi.img of=/dev/mmcblk0"
 msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:54
@@ -185,6 +210,27 @@ msgid ""
 "wenn Sie dazu aufgefordert werden."
 msgstr ""
 
+#: ../../source/addons/monipi/raspberry.rst:86
+msgid ""
+"pi@raspberrypi:~ $ sudo -i\n"
+"root@raspberrypi:~# monipi-turnkey\n"
+"Generiere neue SSH Host-Keys...\n"
+"Creating SSH2 RSA key; this may take some time ...\n"
+"2048 4d:f7:1c:98:78:9b:05:0c:95:dd:b4:e4:c1:33:4f:62 /etc/ssh/ssh_host_rsa_key.pub (RSA)\n"
+"Creating SSH2 DSA key; this may take some time ...\n"
+"1024 a6:05:41:0e:02:7d:99:6f:58:0c:0a:ea:ce:54:e7:b9 /etc/ssh/ssh_host_dsa_key.pub (DSA)\n"
+"Creating SSH2 ECDSA key; this may take some time ...\n"
+"256 55:e6:b6:79:ca:47:59:4a:54:3c:1b:ee:2b:5e:0f:0a /etc/ssh/ssh_host_ecdsa_key.pub (ECDSA)\n"
+"Creating SSH2 ED25519 key; this may take some time ...\n"
+"256 28:95:7a:3d:81:38:6a:c6:6a:c7:09:58:8c:d8:e5:e6 /etc/ssh/ssh_host_ed25519_key.pub (ED25519)\n"
+"\n"
+"Geben Sie ein neues Passwort für den administrativen Benutzer (pi) ein\n"
+"Geben Sie ein neues UNIX-Passwort ein:\n"
+"Geben Sie das neue UNIX-Passwort erneut ein:\n"
+"passwd: Passwort erfolgreich geändert\n"
+"root@raspberrypi:~#"
+msgstr ""
+
 #: ../../source/addons/monipi/raspberry.rst:107
 msgid "Raspi-Config"
 msgstr ""
@@ -208,6 +254,20 @@ msgid ""
 "Nach dem Neustart sollte die Systempartition die gesamte SD-Kartengröße "
 "abzüglich des Platzes für die Boot-Partition umfassen. Im Beispiel unten mit"
 " einer 32GB Karte sieht die Ausgabe von ``df -h`` folgendermaßen aus:"
+msgstr ""
+
+#: ../../source/addons/monipi/raspberry.rst:122
+msgid ""
+"pi@raspberrypi:~ $ df -h\n"
+"Dateisystem    Größe Benutzt Verf. Verw% Eingehängt auf\n"
+"/dev/root        30G    1,7G   27G    6% /\n"
+"devtmpfs        459M       0  459M    0% /dev\n"
+"tmpfs           463M       0  463M    0% /dev/shm\n"
+"tmpfs           463M    6,3M  457M    2% /run\n"
+"tmpfs           5,0M    4,0K  5,0M    1% /run/lock\n"
+"tmpfs           463M       0  463M    0% /sys/fs/cgroup\n"
+"/dev/mmcblk0p1   60M     20M   41M   34% /boot\n"
+"tmpfs           463M     88K  463M    1% /opt/omd/sites/default/tmp"
 msgstr ""
 
 #: ../../source/addons/monipi/raspberry.rst:137

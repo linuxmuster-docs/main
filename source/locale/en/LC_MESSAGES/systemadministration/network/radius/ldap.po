@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -37,9 +37,28 @@ msgstr ""
 "already made in the ``/etc/freeradius/radiusd.conf`` file. Locate the LDAP-"
 "related section in the file and check the following:"
 
+#: ../../source/systemadministration/network/radius/ldap.rst:9
+msgid ""
+"...\n"
+"ldap {\n"
+"   ...\n"
+"   server = \"localhost\"\n"
+"   identity = \"cn=admin,dc=linuxmuster-net,dc=lokal\"\n"
+"   password = geheim\n"
+"   basedn = \"ou=accounts,dc=linuxmuster-net,dc=lokal\"\n"
+"   filter = \"(uid=%u)\"\n"
+"   ...\n"
+"}\n"
+"..."
+msgstr ""
+
 #: ../../source/systemadministration/network/radius/ldap.rst:23
 msgid "Das benötige Passwort kann mit folgendem Befehl angezeigt werden:"
 msgstr "The required password can be displayed with the following command:"
+
+#: ../../source/systemadministration/network/radius/ldap.rst:25
+msgid "$ cat /etc/ldap/slapd.conf | grep rootpw"
+msgstr ""
 
 #: ../../source/systemadministration/network/radius/ldap.rst:29
 msgid ""
@@ -52,9 +71,31 @@ msgstr ""
 "available/default`` **AND** ``/etc/freeradius/sites-available/inner-tunnel``"
 " by removing the comment marks for each line that refers to LDAP."
 
+#: ../../source/systemadministration/network/radius/ldap.rst:31
+msgid ""
+"...\n"
+"authorize {\n"
+"   ...\n"
+"   ldap\n"
+"   ...\n"
+"}\n"
+"...\n"
+"authenticate {\n"
+"   ...\n"
+"   Auth-Type LDAP {\n"
+"      ldap\n"
+"   }\n"
+"   ...\n"
+"}"
+msgstr ""
+
 #: ../../source/systemadministration/network/radius/ldap.rst:48
 msgid "Am Ende starten Sie die Radius-Server neu:"
 msgstr "At the end, restart the Radius server:"
+
+#: ../../source/systemadministration/network/radius/ldap.rst:50
+msgid "$ service freeradius restart"
+msgstr ""
 
 #: ../../source/systemadministration/network/radius/ldap.rst:56
 msgid "LDAP-Authentifizierung testen"
@@ -63,6 +104,13 @@ msgstr "Test LDAP authentication"
 #: ../../source/systemadministration/network/radius/ldap.rst:58
 msgid "Geben Sie folgenden Befehl ein (Benutzernamen und Passwort anpassen!):"
 msgstr "Enter the following command (adjust user name and password):"
+
+#: ../../source/systemadministration/network/radius/ldap.rst:60
+msgid ""
+"$ radtest user password localhost 10 testing123\n"
+"....\n"
+"rad_recv: Access-Accept Packet from ..."
+msgstr ""
 
 #: ../../source/systemadministration/network/radius/ldap.rst:66
 msgid ""
@@ -92,11 +140,29 @@ msgstr ""
 "``p_wifi``), make the following changes in the file "
 "``/etc/freeradius/users`` Respectively add:"
 
+#: ../../source/systemadministration/network/radius/ldap.rst:76
+msgid ""
+"...\n"
+"DEFAULT Group != p_wifi\n"
+"DEFAULT Auth-Type := Reject\n"
+"   Reply-Message = \"Your are not allowed to access the WLAN!\"\n"
+"..."
+msgstr ""
+
 #: ../../source/systemadministration/network/radius/ldap.rst:84
 msgid ""
 "Alternativ kann man auch die entsprechende LDAP-Gruppe direkt abfragen."
 msgstr ""
 "Alternatively, you can also directly query the corresponding LDAP group."
+
+#: ../../source/systemadministration/network/radius/ldap.rst:86
+msgid ""
+"...\n"
+"DEFAULT Ldap-Group == \"cn=p_wifi,ou=groups,dc=linuxmuster-net,dc=lokal\"\n"
+"DEFAULT Auth-Type := Reject\n"
+"   Reply-Message = \"Your are not allowed to access the WLAN!\"\n"
+"..."
+msgstr ""
 
 #: ../../source/systemadministration/network/radius/ldap.rst:94
 msgid ""
@@ -105,6 +171,13 @@ msgid ""
 msgstr ""
 "In the ``ldap {...}`` section of the file ``/etc/freeradius/radiusd.conf`` "
 "the corresponding filter must be activated:"
+
+#: ../../source/systemadministration/network/radius/ldap.rst:96
+msgid ""
+"...\n"
+"groupmembership_filter = (&(objectClass=posixGroup)(memberUid=%u))\n"
+"..."
+msgstr ""
 
 #: ../../source/systemadministration/network/radius/ldap.rst:103
 msgid "Logging aktivieren"
@@ -121,3 +194,12 @@ msgstr ""
 "``/etc/freeradius/radiusd.conf``. The log file is: "
 "``/var/log/freeradius/radius.log``. Do not forget to restart the Radius "
 "server!"
+
+#: ../../source/systemadministration/network/radius/ldap.rst:107
+msgid ""
+"log {\n"
+"   ...\n"
+"   auth = yes\n"
+"   ...\n"
+"}"
+msgstr ""

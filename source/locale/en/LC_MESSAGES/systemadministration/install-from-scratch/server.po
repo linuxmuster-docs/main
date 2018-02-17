@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja, 2017\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -552,6 +552,13 @@ msgstr ""
 "After rebooting, log it in with your user and password selected during "
 "installation."
 
+#: ../../source/systemadministration/install-from-scratch/server.rst:502
+msgid ""
+"linuxmuster.net 6.2.0 / Codename Babo\n"
+"server login:lmn-admin\n"
+"Passwort:"
+msgstr ""
+
 #: ../../source/systemadministration/install-from-scratch/server.rst:508
 msgid ""
 "Nach dem Login werden sie möglicherweise darauf hingewiesen, dass ein „neues"
@@ -564,9 +571,22 @@ msgstr ""
 "available. Do not execute **the \"do-release-upgrade\"**. All other updates "
 "should be installed as shown below. First, give yourself ``root`` rights"
 
+#: ../../source/systemadministration/install-from-scratch/server.rst:511
+msgid ""
+"lmn-admin@server:~$ sudo -i\n"
+"Password:\n"
+"server ~ #"
+msgstr ""
+
 #: ../../source/systemadministration/install-from-scratch/server.rst:517
 msgid "Nun holen Sie die aktuellen Paketlisten"
 msgstr "Now retrieve the current package lists"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:519
+#: ../../source/systemadministration/install-from-scratch/server.rst:608
+#: ../../source/systemadministration/install-from-scratch/server.rst:636
+msgid "server ~ # apt-get update"
+msgstr ""
 
 #: ../../source/systemadministration/install-from-scratch/server.rst:525
 msgid ""
@@ -576,13 +596,30 @@ msgstr ""
 "If this does not work (as can be seen, for example, in the output \"Error "
 "when ...\"), perform the following steps:"
 
+#: ../../source/systemadministration/install-from-scratch/server.rst:527
+msgid ""
+"server ~ # rm -rf /var/lib/apt/lists/*\n"
+"server ~ # apt-get clean\n"
+"server ~ # apt-get update\n"
+"server ~ # apt-get dist-upgrade"
+msgstr ""
+
 #: ../../source/systemadministration/install-from-scratch/server.rst:534
 msgid "Spielen Sie nun alle Updates ein."
 msgstr "Now install all the updates."
 
+#: ../../source/systemadministration/install-from-scratch/server.rst:536
+#: ../../source/systemadministration/install-from-scratch/server.rst:642
+msgid "server ~ # apt-get dist-upgrade"
+msgstr ""
+
 #: ../../source/systemadministration/install-from-scratch/server.rst:540
 msgid "Danach starten Sie den Server neu"
 msgstr "Then restart the server"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:542
+msgid "server ~ # reboot"
+msgstr ""
 
 #: ../../source/systemadministration/install-from-scratch/server.rst:546
 msgid ""
@@ -592,14 +629,28 @@ msgstr ""
 "Also check whether the language pack has been installed for the language "
 "selected during the installation. e.g. For \"German\" with"
 
+#: ../../source/systemadministration/install-from-scratch/server.rst:548
+msgid "lmn-admin@server:~$ dpkg -l | grep language-pack-de"
+msgstr ""
+
 #: ../../source/systemadministration/install-from-scratch/server.rst:552
 msgid ""
 "Man erwartet in etwa folgende Ausgabe, Versionsnummern können variieren."
 msgstr "The following edition is expected: version numbers may vary."
 
+#: ../../source/systemadministration/install-from-scratch/server.rst:554
+msgid ""
+"ii  language-pack-de         1:12.04+20120618      translation updates for language German\n"
+"ii  language-pack-de-base    1:12.04+20120508      translations for language German"
+msgstr ""
+
 #: ../../source/systemadministration/install-from-scratch/server.rst:559
 msgid "Installieren Sie ggf. die fehlende deutsche Sprachunterstützung nach:"
 msgstr "If necessary, install the missing German language support:"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:561
+msgid "lmn-admin@server:~$ sudo apt-get install language-pack-de"
+msgstr ""
 
 #: ../../source/systemadministration/install-from-scratch/server.rst:566
 msgid "Setup des linuxmuster.net Paketes"
@@ -617,6 +668,10 @@ msgstr ""
 msgid "Zunächst verleihen Sie sich dauerhaft ``root``-rechte"
 msgstr "First, give yourself ``root`` privileges."
 
+#: ../../source/systemadministration/install-from-scratch/server.rst:571
+msgid "lmn-admin@server:~$ sudo -i"
+msgstr ""
+
 #: ../../source/systemadministration/install-from-scratch/server.rst:576
 msgid "Vorbereitungen"
 msgstr "Preparations"
@@ -630,6 +685,15 @@ msgstr ""
 "Use a editor (e.g. ``vi`` or ``nano``) to generate the file "
 "``/etc/apt/sources.list.d/linuxmuster-net.list`` with the following content:"
 
+#: ../../source/systemadministration/install-from-scratch/server.rst:579
+msgid ""
+"deb http://pkg.linuxmuster.net/ babo/\n"
+"deb-src http://pkg.linuxmuster.net/ babo/\n"
+"\n"
+"deb http://pkg.linuxmuster.net/ babo62/\n"
+"deb-src http://pkg.linuxmuster.net/ babo62/"
+msgstr ""
+
 #: ../../source/systemadministration/install-from-scratch/server.rst:587
 msgid ""
 "Damit das System der linuxmuster.net-Quelle vertraut, muss noch der "
@@ -639,13 +703,25 @@ msgstr ""
 "For the system to rely on the linuxmuster.net source, the linuxmuster.net "
 "key must still be installed. First, download the key."
 
+#: ../../source/systemadministration/install-from-scratch/server.rst:589
+msgid "server ~ # wget http://pkg.linuxmuster.net/linuxmuster.net.key"
+msgstr ""
+
 #: ../../source/systemadministration/install-from-scratch/server.rst:593
 msgid "Importieren Sie den Schlüssel in Ihre System"
 msgstr "Import the key into your system"
 
+#: ../../source/systemadministration/install-from-scratch/server.rst:595
+msgid "server ~ # apt-key add linuxmuster.net.key"
+msgstr ""
+
 #: ../../source/systemadministration/install-from-scratch/server.rst:599
 msgid "Löschen Sie den nun nicht weiter benötigte Schlüsseldatei."
 msgstr "Delete the key file that is not required any more."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:601
+msgid "server ~ # rm linuxmuster.net.key"
+msgstr ""
 
 #: ../../source/systemadministration/install-from-scratch/server.rst:606
 msgid "Aktualisieren Sie die Paketlisten."
@@ -654,6 +730,10 @@ msgstr "Update the package lists."
 #: ../../source/systemadministration/install-from-scratch/server.rst:612
 msgid "Installieren Sie das Paket ``linuxmuster-base``."
 msgstr "Install the ``linuxmuster-base`` package."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:614
+msgid "server ~ # apt-get install linuxmuster-base"
+msgstr ""
 
 #: ../../source/systemadministration/install-from-scratch/server.rst:620
 msgid ""
@@ -667,9 +747,17 @@ msgstr ""
 msgid "Entfernen Sie alle Paketlisten vom System"
 msgstr "Remove all package lists from the system"
 
+#: ../../source/systemadministration/install-from-scratch/server.rst:624
+msgid "server ~ # rm -rf /var/lib/apt/lists/*"
+msgstr ""
+
 #: ../../source/systemadministration/install-from-scratch/server.rst:628
 msgid "Entfernen Sie alle Pakete aus dem Zwischenspeicher"
 msgstr "Remove all packages from the cache"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:630
+msgid "server ~ #  apt-get clean"
+msgstr ""
 
 #: ../../source/systemadministration/install-from-scratch/server.rst:634
 msgid "Aktualisieren Sie die Paketlisten"
@@ -698,6 +786,10 @@ msgstr "Setup"
 #: ../../source/systemadministration/install-from-scratch/server.rst:656
 msgid "Starten Sie nun zur Ersteinrichtung des Systems das Setupskript:"
 msgstr "Now start the setup script for initial setup of the system:"
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:658
+msgid "server ~ # linuxmuster-setup --first"
+msgstr ""
 
 #: ../../source/systemadministration/install-from-scratch/server.rst:662
 msgid ""
@@ -929,6 +1021,10 @@ msgstr "Select the network card that is connected to the green network."
 #: ../../source/systemadministration/install-from-scratch/server.rst:821
 msgid "Die Installation wird nun abgeschlossen. Starten Sie den Server neu."
 msgstr "The installation is now completed. Restart the server."
+
+#: ../../source/systemadministration/install-from-scratch/server.rst:824
+msgid "reboot"
+msgstr ""
 
 #: ../../source/systemadministration/install-from-scratch/server.rst:828
 msgid ""

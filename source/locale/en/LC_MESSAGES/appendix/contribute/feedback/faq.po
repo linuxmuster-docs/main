@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -29,6 +29,10 @@ msgstr ""
 msgid "Mit dem Befehl"
 msgstr ""
 
+#: ../../source/appendix/contribute/feedback/faq.rst:12
+msgid "linuxmuster-community-feedback -v"
+msgstr ""
+
 #: ../../source/appendix/contribute/feedback/faq.rst:13
 msgid ""
 "werden die Daten angezeigt, die dem linuxmuster.net Server übermittelt "
@@ -37,6 +41,10 @@ msgstr ""
 
 #: ../../source/appendix/contribute/feedback/faq.rst:15
 msgid "Technisch wird dabei die Datei"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/faq.rst:20
+msgid "/var/cache/linuxmuster/feedback-<systemid>.txt"
 msgstr ""
 
 #: ../../source/appendix/contribute/feedback/faq.rst:21
@@ -58,6 +66,13 @@ msgid ""
 " die Statistikdaten einmal pro Woche zum linuxmuster.net-Server überträgt.  "
 "Der genaue Zeitpunkt (Uhrzeit, Samstag/Sonntag) wird bei der "
 "Paketkonfiguration zufällig ermittelt und variiert von System zu System."
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/faq.rst:39
+msgid ""
+"# Diese Datei wird automatisch erstellt.\n"
+"# Manuelle Aenderungen werden ueberschrieben!\n"
+"48 4 * * 6   root /usr/bin/linuxmuster-community-feedback -u > /dev/null 2>&1"
 msgstr ""
 
 #: ../../source/appendix/contribute/feedback/faq.rst:41

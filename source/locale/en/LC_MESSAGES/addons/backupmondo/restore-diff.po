@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -66,6 +66,10 @@ msgstr ""
 msgid ""
 "Nach erfolgtem Restore des Vollbackups booten Sie das System also nicht neu,"
 " sondern starten auf der Mondo-Rescue-Konsole das Programm *mondorestore*:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-diff.rst:21
+msgid "mondorestore"
 msgstr ""
 
 #: ../../source/addons/backupmondo/restore-diff.rst:25

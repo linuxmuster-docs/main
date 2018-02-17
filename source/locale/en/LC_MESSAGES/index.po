@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -57,30 +57,34 @@ msgstr ""
 "teachers and pupils, the educational functions for teaching and beyond are "
 "described."
 
-#: ../../source/index.rst:16
+#: ../../source/index.rst:11
+msgid "Über"
+msgstr "About"
+
+#: ../../source/index.rst:18
 msgid "Erste Schritte"
 msgstr "Getting Started"
 
-#: ../../source/index.rst:28
+#: ../../source/index.rst:30
 msgid "Systemadministration"
 msgstr "Systemadministration"
 
-#: ../../source/index.rst:38
+#: ../../source/index.rst:40
 msgid "Clientverwaltung"
 msgstr "Client Management"
 
-#: ../../source/index.rst:47
+#: ../../source/index.rst:49
 msgid "Benutzerverwaltung"
 msgstr "User Management"
 
-#: ../../source/index.rst:59
+#: ../../source/index.rst:61
 msgid "Pädagogische Funktionen"
 msgstr "Educational Features"
 
-#: ../../source/index.rst:74
+#: ../../source/index.rst:76
 msgid "Erweiterungen"
 msgstr "Addons"
 
-#: ../../source/index.rst:81
+#: ../../source/index.rst:83
 msgid "Anhang"
 msgstr "Appendix"

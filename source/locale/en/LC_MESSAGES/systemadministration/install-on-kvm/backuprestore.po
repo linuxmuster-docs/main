@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -57,6 +57,15 @@ msgstr ""
 #: ../../source/systemadministration/install-on-kvm/backuprestore.rst:62
 msgid ""
 "**ACHTUNG** Dabei gehen alle vorhandenen Daten auf der Platte verloren!"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:28
+msgid ""
+"Partitionieren\n"
+"# fdisk /dev/sdX\n"
+"\n"
+"Formatieren\n"
+"# mkfs.ext4 /dev/sdX1"
 msgstr ""
 
 #: ../../source/systemadministration/install-on-kvm/backuprestore.rst:44
@@ -133,20 +142,117 @@ msgstr ""
 msgid "Paketabhängigkeiten:"
 msgstr ""
 
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:91
+msgid "# apt-get install libxml-simple-perl libsys-virt-perl lzop"
+msgstr ""
+
 #: ../../source/systemadministration/install-on-kvm/backuprestore.rst:96
 msgid "Installation z.B. nach: ``/usr/local``"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:98
+msgid ""
+"Entpacken des Archivs\n"
+"# cd /usr/local\n"
+"# tar -xzvf virtbackup-xxx.tar.gz\n"
+"# ln -s virt-backup virt-backup-xxx\n"
+"# cd virt-backup\n"
+"# chmod ugo+x virt-backup\n"
+"\n"
+"Erstellen eines Aliases\n"
+"# cd /usr/local/bin\n"
+"# ln -s /usr/local/virt-backup/virt-backup\n"
+"\n"
+"Erstellen eines Backup-Ordners\n"
+"# mkdir /media/virt-backup\n"
+"\n"
+"Mounte Backup-HDD\n"
+"# mount /dev/sdx1 /media/virt-backup\n"
+"\n"
+"Erstelle Ordner fuer VMs\n"
+"# mkdir /media/virt-backup/VMs\n"
+"\n"
+"Unmounte Backup-HDD\n"
+"# umount /media/virt-backup"
 msgstr ""
 
 #: ../../source/systemadministration/install-on-kvm/backuprestore.rst:131
 msgid "**Optional: Testen des Backups von Hand**"
 msgstr ""
 
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:133
+msgid ""
+"Mounte Backup-HDD\n"
+"# mount /dev/sdx1 /media/virt-backup\n"
+"\n"
+"Test Backup ipfire\n"
+"# virt-backup --vm=ipfire --debug --no-offline --compress=lzop --blocksize=4M --backupdir=/media/virt-backup/VMs/\n"
+"\n"
+"Test Backup server\n"
+"# virt-backup --vm=server --debug --no-offline --compress=lzop --blocksize=4M --backupdir=/media/virt-backup/VMs/\n"
+"\n"
+"\n"
+"Loesche Backup ipfire\n"
+"# virt-backup --vm=ipfire --debug --cleanup --backupdir=/media/virt-backup/VMs/\n"
+"\n"
+"Loesche Backup server\n"
+"# virt-backup --vm=server --debug --cleanup --backupdir=/media/virt-backup/VMs/\n"
+"\n"
+"Unmounte Backup-HDD\n"
+"# umount /media/virt-backup"
+msgstr ""
+
 #: ../../source/systemadministration/install-on-kvm/backuprestore.rst:154
 msgid "**Erstellen eines Backup-Skriptes**"
 msgstr ""
 
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:156
+msgid ""
+"Erstellen der Datei z.B. mittels vi\n"
+"# vi /root/virt-backup.sh"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:161
+msgid ""
+"#!/bin/bash\n"
+"\n"
+"source /root/.profile\n"
+"\n"
+"# Mounte Backup-HDD\n"
+"mount /dev/sdx1 /media/virt-backup\n"
+"\n"
+"# Loesche altes Backup ipfire\n"
+"/usr/local/bin/virt-backup --vm=ipfire --debug --cleanup --backupdir=/media/virt-backup/VMs/\n"
+"\n"
+"# Backup ipfire\n"
+"/usr/local/bin/virt-backup --vm=ipfire --debug --no-offline --compress=lzop --blocksize=4M --backupdir=/media/virt-backup/VMs/\n"
+"\n"
+"# Loesche altes Backup server\n"
+"/usr/local/bin/virt-backup --vm=server --debug --cleanup --backupdir=/media/virt-backup/VMs/\n"
+"\n"
+"# Backup server\n"
+"/usr/local/bin/virt-backup --vm=server --debug --no-offline --compress=lzop --blocksize=4M --backupdir=/media/virt-backup/VMs/\n"
+"\n"
+"# Unmounte Backup-HDD\n"
+"umount /media/virt-backup"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:186
+msgid ""
+"Skript ausführbar machen\n"
+"# chmod ugo+x /root/virt-backup.sh"
+msgstr ""
+
 #: ../../source/systemadministration/install-on-kvm/backuprestore.rst:192
 msgid "**Erstellen eine Crontab-Jobs**"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:194
+msgid ""
+"# crontab -e\n"
+"\n"
+"# VM Backup Samstags 20 Uhr\n"
+"0 20 * * 6 /root/virt-backup.sh > /root/virt-backup.log 2>&1"
 msgstr ""
 
 #: ../../source/systemadministration/install-on-kvm/backuprestore.rst:202
@@ -189,6 +295,18 @@ msgstr ""
 msgid "Die wichtigsten Dinge dabei sind(KVM-Server):"
 msgstr ""
 
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:234
+msgid ""
+"Installation notwendiger Pakete\n"
+"# apt-get install kpartx pv\n"
+"\n"
+"Optional: Anlegen eines Restore-Verzeichnisses\n"
+"# mkdir /media/virt-restore\n"
+"\n"
+"Mounten der Backup-HDD\n"
+"# mount /dev/sd1X /media/virt-restore"
+msgstr ""
+
 #: ../../source/systemadministration/install-on-kvm/backuprestore.rst:245
 msgid ""
 "Beim Restore ist es wichtig, dass die betroffene VM heruntergefahren ist. "
@@ -199,10 +317,31 @@ msgstr ""
 msgid "**Restore der virtuellen HDD am Beispiel der Firewall**"
 msgstr ""
 
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:249
+msgid ""
+"Aufruf Screen\n"
+"# screen\n"
+"\n"
+"Starten des Restores\n"
+"# lzop -dc /media/virt-restore/VMs/ipfire/ipfire_vda.img.lzo |pv -s 50G |dd of=/dev/kvm-vg/ipfire bs=4M\n"
+"\n"
+"Allgemein\n"
+"# lzop -dc <Quelle> |pv -s <Groesse der HDD> |dd of=<Ziel> bs=4M"
+msgstr ""
+
 #: ../../source/systemadministration/install-on-kvm/backuprestore.rst:261
 msgid ""
 "Die Screen-Sitzung kann mit *STRG+A+D* beendet werden. Gestartet wird die "
 "Sitzung mit:"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:263
+msgid ""
+"Finden der ID\n"
+"# screen -ls\n"
+"\n"
+"Öffnen der Sitzung\n"
+"# screen -r <ID>"
 msgstr ""
 
 #: ../../source/systemadministration/install-on-kvm/backuprestore.rst:272
@@ -217,6 +356,15 @@ msgid ""
 "vorhanden, die Definition der VM auch wiederherstellt werden."
 msgstr ""
 
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:276
+msgid ""
+"Wiederherstellen der VM-Definition\n"
+"# virsh define /media/virt-restore/VMs/ipfire/ipfire.xml\n"
+"\n"
+"Allgemein\n"
+"# virsh define <Name>.xml"
+msgstr ""
+
 #: ../../source/systemadministration/install-on-kvm/backuprestore.rst:286
 msgid ""
 "Falls die VM neben einer vorhanden VM wiederhergestellt werden soll, muss in"
@@ -225,6 +373,19 @@ msgid ""
 "Adressen und die UUID werden dann beim Import neu generiert. Wenn Du ganz "
 "sicher gehen willst, kannst Du zusätzlich im *Virt-Manager* die "
 "Netzwerkkarten auch noch deaktivieren."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:288
+msgid ""
+"---snip---\n"
+"\n"
+"# Ändern\n"
+"<name>ipfire</name>\n"
+"\n"
+"# Löschen\n"
+"<uuid>0fa619e6-32e7-44e4-be31-920696bab268</uuid>\n"
+"\n"
+"<mac address='52:54:00:49:20:91'/>"
 msgstr ""
 
 #: ../../source/systemadministration/install-on-kvm/backuprestore.rst:303
@@ -236,6 +397,32 @@ msgid ""
 "Um einzelne Dateien wiederherzustellen, ist es möglich, die virtuellen "
 "Festplatten lokal auf dem KVM-Server zu mounten (Die HDD darf natürlich "
 "nicht aktiv sein)."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/backuprestore.rst:307
+msgid ""
+"# lvscan\n"
+"\n"
+"Sichtbar machen der Partitionen\n"
+"# kpartx -a /dev/mapper/kvm--vg-ipfire\n"
+"\n"
+"Allgemein\n"
+"# kpartx -a <HDD> oder auch <RAW Image>\n"
+"\n"
+"Optional: Anlegen eines Verzeichnisses\n"
+"# mkdir /media/HDD-restore\n"
+"\n"
+"Mounten einer Partition\n"
+"# mount /dev/mapper/kvm--vg-ipfire1 /media/HDD-restore\n"
+"\n"
+"Unmounten einer Partition\n"
+"# umount /media/HDD-restore\n"
+"\n"
+"Freigeben der Partitionen der HDD\n"
+"# kpartx -d /dev/mapper/kvm--vg-ipfire\n"
+"\n"
+"Allgemein\n"
+"# kpartx -d <HDD> oder auch <RAW Image>"
 msgstr ""
 
 #: ../../source/systemadministration/install-on-kvm/backuprestore.rst:339

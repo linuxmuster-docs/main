@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -128,16 +128,39 @@ msgstr ""
 msgid "Updaten Sie den Rechner mit"
 msgstr ""
 
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:76
+msgid ""
+"apt-get update\n"
+"apt-get dist-upgrade"
+msgstr ""
+
 #: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:79
 msgid ""
 "Editieren Sie die Datei `/etc/apt/sources.list` und fügen Sie die folgende "
 "Zeile hinzu:"
 msgstr ""
 
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:84
+msgid "deb http://www.ubnt.com/downloads/unifi/debian stable ubiquiti"
+msgstr ""
+
 #: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:86
 msgid "Fügen Sie den GPG-key hinzu:"
 msgstr ""
 
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:90
+msgid ""
+"apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv "
+"06E85760C0A52C50"
+msgstr ""
+
 #: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:92
 msgid "Nochmal updaten, unifi installieren und neu starten:"
+msgstr ""
+
+#: ../../source/systemadministration/network/unifiwifi/unifiinst.rst:96
+msgid ""
+"sudo apt-get update\n"
+"sudo apt-get install unifi\n"
+"reboot"
 msgstr ""

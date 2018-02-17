@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Jochen Rupp <jochen_rupp@web.de>, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -211,6 +211,11 @@ msgid ""
 msgstr ""
 "To provide the regpatch for the Windows client, you have to copy it first on"
 " the server console to the home directory of pgmadmin."
+
+#: ../../source/clients/windows10clients/windows10installation.rst:89
+msgid ""
+"$ cp /var/linbo/examples/win10.global.reg /home/administrators/pgmadmin/"
+msgstr ""
 
 #: ../../source/clients/windows10clients/windows10installation.rst:93
 msgid "|1000000000000288000001884164BC97_png|"
@@ -443,6 +448,10 @@ msgstr ""
 #: ../../source/clients/windows10clients/windows10installation.rst:178
 msgid "Im Beispiel würde das so gehen:"
 msgstr "Here's the example:"
+
+#: ../../source/clients/windows10clients/windows10installation.rst:180
+msgid "$ cp /var/linbo/examples/win10.image.reg /var/linbo/win10.cloop.reg"
+msgstr ""
 
 #: ../../source/clients/windows10clients/windows10installation.rst:184
 msgid ""

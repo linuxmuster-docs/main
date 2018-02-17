@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -26,6 +26,11 @@ msgid ""
 "Unabhängig davon, ob man den CoovaChilli-Server selbst auf einer Ubuntu-"
 "Basis installiert hat oder die virtuelle Appliance für Virtualbox nutzt, "
 "kann man mit dem Befehl"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:9
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:169
+msgid "# dpkg-reconfigure linuxmuster-chilli"
 msgstr ""
 
 #: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:13
@@ -207,6 +212,12 @@ msgstr ""
 msgid "Der Hotspot loggt alle Anmeldungen und Seitenaufrufe in den Dateien:"
 msgstr ""
 
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:183
+msgid ""
+"/var/log/linuxmuster-chilli/coova-chilli.log  # Anmeldungen und chilli-bezogene Meldungen\n"
+"/var/log/linuxmuster-chilli/ffproxy.log       # Seitenaufrufe"
+msgstr ""
+
 #: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:188
 msgid ""
 "Die Logs werden täglich rotiert, Logs werden 30 Tage aufbewahrt und dann "
@@ -229,4 +240,10 @@ msgid ""
 "Beispiel: Eine Datei ``/etc/chilli/userconf`` mit dem folgenden Inhalt, "
 "würde eine Clientsession unabhängig von der Aktivität des Benutzers nach 900"
 " Sekunden beenden, so dass sich der Nutzer neu anmelden muss:"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-configuration.rst:203
+msgid ""
+"# Wenn im Radius kein Session Timeout definiert wurde, wann fliegt der Hotspot User wieder raus\n"
+"HS_DEFSESSIONTIMEOUT=900 # In Sekunden"
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -39,10 +39,21 @@ msgid ""
 "ist. Der Befehl"
 msgstr ""
 
+#: ../../source/addons/backupmondo/restore-nfs.rst:9
+msgid ""
+"        ifconfig -a\n"
+"\n"
+"gibt eine Übersicht aller Netzwerkinterfaces aus."
+msgstr ""
+
 #: ../../source/addons/backupmondo/restore-nfs.rst:15
 msgid ""
 "Konfigurieren Sie jetzt das Netzwerkinterface (Beispiel, Interface und IP-"
 "Adresse müssen ggf. angepasst werden):"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-nfs.rst:17
+msgid "ifconfig eth0 10.16.1.1 netmask 255.240.0.0 up"
 msgstr ""
 
 #: ../../source/addons/backupmondo/restore-nfs.rst:21
@@ -53,8 +64,16 @@ msgstr ""
 msgid "Starten Sie den Portmap-Dienst:"
 msgstr ""
 
+#: ../../source/addons/backupmondo/restore-nfs.rst:24
+msgid "portmap"
+msgstr ""
+
 #: ../../source/addons/backupmondo/restore-nfs.rst:28
 msgid "Mounten Sie nun das NFS-Share nach ``/tmp/isodir`` (Beispiel):"
+msgstr ""
+
+#: ../../source/addons/backupmondo/restore-nfs.rst:30
+msgid "mount -t nfs -o nolock 10.16.1.10:/home/nfs /tmp/isodir"
 msgstr ""
 
 #: ../../source/addons/backupmondo/restore-nfs.rst:34

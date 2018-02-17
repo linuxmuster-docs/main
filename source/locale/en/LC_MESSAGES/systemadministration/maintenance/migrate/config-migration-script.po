@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -34,6 +34,10 @@ msgid ""
 "Konfigurationsdateien **defaults.conf, include.conf und exclude.conf** unter"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/migrate/config-migration-script.rst:11
+msgid "/etc/linuxmuster/migration"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/migrate/config-migration-script.rst:12
 msgid ""
 "ein. Diese Dateien werden beim Backup mitgesichert und beim Restore auf dem "
@@ -52,6 +56,12 @@ msgid ""
 "``etc/linuxmuster/migration/include.conf`` ein:"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/migrate/config-migration-script.rst:23
+msgid ""
+"#/var/www/index.html\n"
+"/var/www/homepage"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/migrate/config-migration-script.rst:24
 msgid ""
 "Dabei ist zu beachten, dass pro Zeile nur ein Eintrag erlaubt ist. Außerdem "
@@ -67,6 +77,12 @@ msgid ""
 "Soll zum Beispiel das schulweite Tauschverzeichnis von der Migration "
 "ausgeschlossen werden, trägt man in die Konfigurationsdatei "
 "``/etc/linuxmuster/migration/exclude.conf`` den entsprechenden Pfad ein:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/config-migration-script.rst:35
+msgid ""
+"#*.mp3\n"
+"/home/share/school/*"
 msgstr ""
 
 #: ../../source/systemadministration/maintenance/migrate/config-migration-script.rst:36

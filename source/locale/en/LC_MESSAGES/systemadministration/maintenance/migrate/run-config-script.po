@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -30,6 +30,20 @@ msgstr ""
 #: ../../source/systemadministration/maintenance/migrate/run-config-script.rst:6
 msgid ""
 "Die Optionen des Skripts könenn mit folgendem Befehl kontrolliert werdne:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/run-config-script.rst:20
+msgid ""
+"server ~>  linuxmuster-migration-backup -h\n"
+"\n"
+"Usage: linuxmuster-migration-backup <options>\n"
+"\n"
+"Options:\n"
+"\n"
+"-c <config dir>  Path to config directory (optional).\n"
+"                 Default is /etc/linuxmuster/migration.\n"
+"-d <target dir>  Path to target directory (must exist, mandatory).\n"
+"-h               Show this help."
 msgstr ""
 
 #: ../../source/systemadministration/maintenance/migrate/run-config-script.rst:23
@@ -55,6 +69,10 @@ msgstr ""
 
 #: ../../source/systemadministration/maintenance/migrate/run-config-script.rst:36
 msgid "Beispiel:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/migrate/run-config-script.rst:41
+msgid "linuxmuster-migration-backup -d /media/backup/migration"
 msgstr ""
 
 #: ../../source/systemadministration/maintenance/migrate/run-config-script.rst:42

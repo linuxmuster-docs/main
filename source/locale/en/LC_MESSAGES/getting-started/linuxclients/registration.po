@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -47,9 +47,17 @@ msgstr "Read the \"MAC address\" on the LINBO start screen."
 msgid "Öffnen Sie die Datei ``/etc/linuxmuster/workstations`` auf dem Server."
 msgstr "Open the `/etc/linuxmuster/workstations` file on the server."
 
+#: ../../source/getting-started/linuxclients/registration.rst:17
+msgid "server ~ # nano /etc/linuxmuster/workstations"
+msgstr ""
+
 #: ../../source/getting-started/linuxclients/registration.rst:21
 msgid "Tragen Sie dort den Rechner ein mit folgender Syntax"
 msgstr "Enter the computer with the following syntax"
+
+#: ../../source/getting-started/linuxclients/registration.rst:23
+msgid "Raum;Rechnername;Gruppe;MAC;IP;;;;;;PXE-Flag;"
+msgstr ""
 
 #: ../../source/getting-started/linuxclients/registration.rst:31
 msgid "Raum"
@@ -117,9 +125,17 @@ msgstr ""
 msgid "Beispielkonfiguration."
 msgstr "Sample configuration."
 
+#: ../../source/getting-started/linuxclients/registration.rst:55
+msgid "r100;r100-pc01;xenial;08:00:27:57:1D:C5;10.16.100.1;;;;;;1;"
+msgstr ""
+
 #: ../../source/getting-started/linuxclients/registration.rst:59
 msgid "Der registrierte Client wird nun mit dem Konsolenbefehl"
 msgstr "The registered client is now using the console command"
+
+#: ../../source/getting-started/linuxclients/registration.rst:61
+msgid "server ~# import_workstations"
+msgstr ""
 
 #: ../../source/getting-started/linuxclients/registration.rst:65
 msgid ""

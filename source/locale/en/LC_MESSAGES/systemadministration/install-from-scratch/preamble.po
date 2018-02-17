@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja, 2017\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -95,10 +95,20 @@ msgstr ""
 "sum. On the console of a Linux operating system there is the command "
 "``sha1sum`` available:"
 
+#: ../../source/systemadministration/install-from-scratch/preamble.rst:30
+msgid "sha1sum ipfire-2.19.x86_64-full-core103.iso"
+msgstr ""
+
 #: ../../source/systemadministration/install-from-scratch/preamble.rst:34
 #: ../../source/systemadministration/install-from-scratch/preamble.rst:56
 msgid "Als Ausgabe erhält man die Prüfsumme, z.B."
 msgstr "As output we get the checksum, for example"
+
+#: ../../source/systemadministration/install-from-scratch/preamble.rst:36
+msgid ""
+"1b92a278709ddc0542dd0f8514693ec073a963c5  ipfire-2.19.x86_64-full-"
+"core103.iso"
+msgstr ""
 
 #: ../../source/systemadministration/install-from-scratch/preamble.rst:40
 msgid ""
@@ -130,6 +140,15 @@ msgid ""
 msgstr ""
 "Do **not** use Ubuntu 14.04 or Ubuntu 04.16. |br| Only linxmuster.net 7 will"
 " support Ubuntu 16.04."
+
+#: ../../source/systemadministration/install-from-scratch/preamble.rst:52
+msgid "sha1sum ubuntu-12.04.5-server-amd64.iso"
+msgstr ""
+
+#: ../../source/systemadministration/install-from-scratch/preamble.rst:58
+msgid ""
+"7540ace2d6cdee264432f5ed987236d32edef798  ubuntu-12.04.5-server-amd64.iso"
+msgstr ""
 
 #: ../../source/systemadministration/install-from-scratch/preamble.rst:62
 msgid ""

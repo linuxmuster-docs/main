@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -50,6 +50,20 @@ msgstr ""
 msgid "Die Rechner sind raumweise einsortiert."
 msgstr ""
 
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:22
+msgid ""
+"#Raum;Rechnername;Imageklasse;Mac-Adresse;IP-Adresse;Subnetzmaske;;;;;\n"
+"r100;r100-ws01;qgm;C4:34:6B:7E:71:10;10.16.100.1;255.240.0.0;1;1;1;1;1\n"
+"r100;r100-ws02;qgm;64:51:06:38:B6:6F;10.16.100.2;255.240.0.0;1;1;1;1;1\n"
+"r100;r100-printer-color;printer;00:1E:0B:12:DB:78;10.16.100.101;255.240.0.0;1;1;1;1;0\n"
+"r200;r200-printer-bw;printer;00:18:FE:A3:A8:60;10.16.200.201;255.240.0.0;1;1;1;1;0\n"
+"r200;r200-ws01;qgm;64:51:06:38:B6:64;10.16.200.1;255.240.0.0;1;1;1;1;1\n"
+"r116a;r116a-ws01;sozpaed;88:AE:1D:EF:E3:3B;10.16.6.1;255.240.0.0;1;1;1;1;0\n"
+"nwt100;r110-ws01;qgm;64:51:06:43:D2:62;10.16.100.1;255.240.0.0;1;1;1;1;1\n"
+"nwt100;r110-ws02;qgm;64:51:06:43:D3:21;10.16.100.2;255.240.0.0;1;1;1;1;1\n"
+"rhm;rhm-ws01;qgm;64:51:06:38:B7:AC;10.19.111.1;255.240.0.0;1;1;1;1;1"
+msgstr ""
+
 #: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:36
 msgid "Die Workstations-Datei soll nun so umstrukturiert werden, dass später"
 msgstr ""
@@ -66,6 +80,20 @@ msgstr ""
 
 #: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:42
 msgid "Endzustand der Datei ``workstations``"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:44
+msgid ""
+"#Raum;Rechnername;Imageklasse;Mac-Adresse;IP-Adresse;Subnetzmaske;;;;;\n"
+"r100;r100-ws01;qgm;C4:34:6B:7E:71:10;10.20.100.1;;1;1;1;1;1\n"
+"r100;r100-ws02;qgm;64:51:06:38:B6:6F;10.20.100.2;;1;1;1;1;1\n"
+"r100;r100-printer-color;printer;00:1E:0B:12:DB:78;10.20.100.101;;1;1;1;1;0\n"
+"r200;r200-printer-bw;printer;00:18:FE:A3:A8:60;10.20.200.201;;1;1;1;1;0\n"
+"r200;r200-ws01;qgm;64:51:06:38:B6:64;10.20.200.1;;1;1;1;1;1\n"
+"r116a;r116a-ws01;sozpaed;88:AE:1D:EF:E3:3B;10.30.10.1;;1;1;1;1;0\n"
+"nwt100;r110-ws01;qgm;64:51:06:43:D2:62;10.30.10.2;;1;1;1;1;1\n"
+"nwt100;r110-ws02;qgm;64:51:06:43:D3:21;10.30.10.3;;1;1;1;1;1\n"
+"rhm;rhm-ws01;qgm;64:51:06:38:B7:AC;10.30.10.4;;1;1;1;1;1"
 msgstr ""
 
 #: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:58

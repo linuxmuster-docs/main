@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,55 +20,63 @@ msgstr ""
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:3
 msgid "LINBO Imageverwaltung am Client"
-msgstr ""
+msgstr "LINBO image management at the client"
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:5
 msgid "Über den Tab \"Imaging\" erhält der Administrator neue Funktionen"
-msgstr ""
+msgstr "The \"Imaging\" tab provides the administrator with new functions."
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:10
 msgid ""
 "Für jedes definierte Betriebssystem gibt es Schaltflächen für die Funktionen"
 msgstr ""
+"For each defined operating system there are buttons for the following "
+"functions"
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:14
 msgid "Image erstellen"
-msgstr ""
+msgstr "Create image"
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:16
 msgid ""
 "Es öffnet sich ein neues Dialogfenster, über das man ein neues Abbild "
 "erstellen (und hochladen) kann."
 msgstr ""
+"A new dialog window will open, where you can create (and upload) a new "
+"image."
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:21
 msgid "Image hochladen"
-msgstr ""
+msgstr "Upload Image"
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:23
 msgid ""
 "Es öffnet sich ein neues Dialogfenster, über das man das aktuelle Abbild auf"
 " den Server hochladen kann."
 msgstr ""
+"A new dialog window opens, where you can upload the current image to the "
+"server."
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:27
 msgid ""
 "Daneben können gibt es Schaltflächen für folgende administrative Funktionen"
-msgstr ""
+msgstr "There are also buttons for the following administrative functions"
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:31
 msgid "Console"
-msgstr ""
+msgstr "Console"
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:33
 msgid ""
 "Man kann eine (rudimentäre) Console öffnen, um Shell-Befehle abzusetzen und "
 "Fehler zu diagnostizieren."
 msgstr ""
+"You can open a (rudimentary) console to run shell commands and diagnose "
+"errors."
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:38
 msgid "Cache aktualisieren"
-msgstr ""
+msgstr "Update cache"
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:40
 msgid ""
@@ -76,23 +85,26 @@ msgid ""
 " Client nötigen Abbilder und postsync-Dateien werden gegebenenfalls "
 "heruntergeladen."
 msgstr ""
+"Usually, a partition on the client is set as cache. This button can be used "
+"to update the cache, i. e. all images and postsync files required for this "
+"client will be downloaded if necessary."
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:47
 msgid "Partitionieren"
-msgstr ""
+msgstr "partitioning"
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:49
 msgid "Partitioniert die gesamte Festplatte."
-msgstr ""
+msgstr "Partitioning partitions the entire hard disk."
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:53
 msgid "Registrieren"
-msgstr ""
+msgstr "registration"
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:55
 msgid ""
 "Öffnet den Registrierungdialog zur erstmaligen Aufnahme dieses Rechners."
-msgstr ""
+msgstr "opens a dialog for the first time registration."
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:58
 msgid ""
@@ -100,10 +112,12 @@ msgid ""
 "abstellen kann. Dort kann man auch über die Schaltfläche LOGOUT zurück zum "
 "Startbildschirm."
 msgstr ""
+"In addition, a timeout runs down in a small window, which can be turned off."
+" You can also use the LOGOUT button to return to the start screen."
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:63
 msgid "Dialog: Image erstellen"
-msgstr ""
+msgstr "Dialog: Create Image"
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:67
 msgid ""
@@ -112,12 +126,17 @@ msgid ""
 "demselben Namen wird auf dem Server ein Backup des vorherigen Abbilds "
 "erstellt."
 msgstr ""
+"The current name of the image is available for selection. The current image "
+"will then be overwritten when it is created. When uploading the current "
+"image with the same name, a backup of the previous image is created on the "
+"server."
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:72
 msgid ""
 "Wird ein neuer Dateiname gewählt, kann man Informationen zu dem neuen Image "
 "verfassen."
 msgstr ""
+"If a new filename is chosen, you can write information about the new image."
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:75
 msgid ""
@@ -126,22 +145,29 @@ msgid ""
 "im Cache gespeichert bleibt. Ist nicht genügend Platz  vorhanden, dann "
 "schlägt das Erstellen des Abbildes fehl."
 msgstr ""
+"If you assign a new file name, you should make sure that the cache partition"
+" has enough space, as the old image is also stored in the cache. If there is"
+" not enough space, the creation of the image fails."
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:77
 msgid ""
 "Wird \"Differentielles Image\" gewählt, dann gilt der neue Dateiname für das"
 " zu erstellende differentielle Image (mit der Dateiendung '.rsync')."
 msgstr ""
+"If \"Differential image\" is selected, then the new file name applies to the"
+" differential image to be created (with the file extension'. rsync')."
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:80
 msgid ""
 "Es gibt die beiden Optionen zum Abschluss der Aktion \"Erstellen\" oder "
 "\"Erstellen+Hochladen\" den Computer neu zu starten oder herunterzufahren."
 msgstr ""
+"There are two options to complete the Create or Create+Upload action, which "
+"allow you to restart or shut down your computer."
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:85
 msgid "Dialog: Image hochladen"
-msgstr ""
+msgstr "Dialog: Upload Image"
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:89
 msgid ""
@@ -149,10 +175,12 @@ msgid ""
 "Image hochgeladen werden und der Rechner zum Abschluss neu gestartet oder "
 "heruntergefahren werden."
 msgstr ""
+"As with the Create Image dialog, only a selected image can be uploaded and "
+"the computer can be restarted or shut down."
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:94
 msgid "Dialog: Console"
-msgstr ""
+msgstr "Dialog: Console"
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:98
 msgid ""
@@ -160,20 +188,24 @@ msgid ""
 "untere Zeile. Die Ausgabe des ausgeführten Befehls erscheint im oberen "
 "Fenster."
 msgstr ""
+"The simple console dialog allows you to enter individual commands in the "
+"lower row. The output of the executed command appears in the upper window."
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:103
 msgid "Dialog: Cache aktualisieren"
-msgstr ""
+msgstr "Dialog: Update Cache"
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:107
 msgid ""
 "Der Cache wird aktualisiert. Es werden die drei Möglichkeiten der "
 "Synchronisation zur Auswahl gegeben: Rsync, Multicast oder Bittorrent."
 msgstr ""
+"The cache is updated. There are three synchronization options: Rsync, "
+"Multicast or Bittorrent."
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:112
 msgid "Dialog: Partitionieren"
-msgstr ""
+msgstr "Dialog: Partitioning"
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:114
 msgid ""
@@ -181,10 +213,13 @@ msgid ""
 "löschen will. Danach kann man mit \"Cache aktualisieren\" aber auch wieder "
 "die Abbilder vom Server kopieren."
 msgstr ""
+"You will be asked again if you really want to delete all data on the hard "
+"disk. After that you can also copy the images from the server with \"Update "
+"cache\"."
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:119
 msgid "Dialog: Registrieren"
-msgstr ""
+msgstr "Dialog: Register"
 
 #: ../../source/clients/linbo/linbo-imagingscreen.rst:123
 msgid ""
@@ -192,3 +227,5 @@ msgid ""
 "Dafür müssen alle Eingabefelder dem Vergabeschema entsprechend ausgefüllt "
 "werden."
 msgstr ""
+"With this dialog you can register a first time user computer. All input "
+"fields must be filled in according to the allocation procedure."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -137,6 +137,10 @@ msgstr ""
 "To start a backup, go to the console of the XenServer and enter the "
 "following command:"
 
+#: ../../source/getting-started/install-on-xen/backup.rst:70
+msgid "$ /usr/share/linuxmuster-hv-tools/tools/backup.sh"
+msgstr ""
+
 #: ../../source/getting-started/install-on-xen/backup.rst:74
 msgid "und bestätigen mit ``Enter``."
 msgstr "and confirm with ``Enter``."
@@ -161,6 +165,10 @@ msgstr ""
 "To automatically perform backups at certain times, you can create a cron "
 "job. To do this, enter the command in the XenServer console"
 
+#: ../../source/getting-started/install-on-xen/backup.rst:92
+msgid "$ nano /etc/crontab"
+msgstr ""
+
 #: ../../source/getting-started/install-on-xen/backup.rst:96
 msgid "ein und bestätigen Sie mit ``Enter``."
 msgstr "and confirm with ``Enter``."
@@ -172,6 +180,10 @@ msgid ""
 msgstr ""
 "For a weekly backup that starts every Friday at 20:00, enter the following "
 "line in the file:"
+
+#: ../../source/getting-started/install-on-xen/backup.rst:104
+msgid "0 20 \\* \\* 5 /usr/share/linuxmuster-hv-tools/tools/backup.sh"
+msgstr ""
 
 #: ../../source/getting-started/install-on-xen/backup.rst:112
 msgid ""

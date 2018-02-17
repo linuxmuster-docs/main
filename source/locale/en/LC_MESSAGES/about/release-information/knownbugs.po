@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -69,6 +69,12 @@ msgid ""
 " der Linbo-GUI fehlschlagen. In dem Fall, muss man mit einem blacklist-"
 "Parameter `modprobe.blacklist=` verhindern, dass ein bestimmter "
 "Grafiktreiber geladen wird: Beispiele:"
+msgstr ""
+
+#: ../../source/about/release-information/knownbugs.rst:41
+msgid ""
+"modprobe.blacklist=radeon\n"
+"modprobe.blacklist=nvidia"
 msgstr ""
 
 #: ../../source/about/release-information/knownbugs.rst:46
