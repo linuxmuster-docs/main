@@ -10,6 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +20,7 @@ msgstr ""
 
 #: ../../source/getting-started/add-user-accounts/index.rst:3
 msgid "Erste Benutzeraufnahme"
-msgstr ""
+msgstr "First user admission"
 
 #: ../../source/getting-started/add-user-accounts/index.rst:5
 msgid ""
@@ -27,6 +28,9 @@ msgid ""
 "Benutzer angelegt werden müssen. Deshalb übernimmt diese komplexe Aufgabe "
 "bei der *linuxmuster.net* das Programm *Sophomorix*."
 msgstr ""
+"In a school, usually several hundred to several thousand students have to be"
+" created as users. Therefore, this complex task at *linuxmuster.net* is "
+"handled by the program *Sophomorix*."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:9
 msgid ""
@@ -36,6 +40,10 @@ msgid ""
 "solche mit einer neuen Klasse versetzt und nicht mehr aufgeführte Schüler "
 "aus dem System gelöscht."
 msgstr ""
+"Sophomorix reads all students from a text file, e.g. from the school "
+"administration program. All students in this list that do not yet exist in "
+"the system are then created, assigned a new class, and students that are no "
+"longer listed are deleted from the system."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:15
 msgid ""
@@ -44,48 +52,58 @@ msgid ""
 "einzelnen Schritte werden im Folgenden erläutert. Der Netzwerkbetreuer muss "
 "nur noch in Ausnahmefällen mit der Kommandozeile arbeiten."
 msgstr ""
+"The *School Console* is a web-based tool for network administrators that "
+"makes it much easier to use *Sophomorix*. The individual steps are explained"
+" below. The network administrator only has to work with the command line in "
+"exceptional cases."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:21
 msgid ""
 "Um Benutzer neu aufzunehmen müssen die folgenden Schritte nacheinander "
 "ausgeführt werden:"
 msgstr ""
+"To add new users, the following steps must be carried out one after the "
+"other:"
 
 #: ../../source/getting-started/add-user-accounts/index.rst:24
 msgid "Schüler und Lehrerliste aus dem Schulverwaltungsprogramm exportieren."
 msgstr ""
+"Export Students and Teacher List from the School Administration Program."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:25
 msgid "Die Benutzerlisten auf dem Server einlesen."
-msgstr ""
+msgstr "Import the user lists on the server."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:26
 msgid ""
 "Alle Benutzerlisten auf Fehleingaben, oder Ähnlichkeiten mit vorhandenen "
 "Benutzern prüfen."
 msgstr ""
+"Check all user lists for incorrect entries or similarities with existing "
+"users."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:27
 msgid "Danach evtl. die Benutzerlisten entsprechend korrigieren."
-msgstr ""
+msgstr "Then correct the user lists accordingly."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:28
 msgid "Benutzerdaten übernehmen, d.h. Benutzer jetzt tatsächlich anlegen"
-msgstr ""
+msgstr "Transfer user data, i.e. create users now actually"
 
 #: ../../source/getting-started/add-user-accounts/index.rst:29
 msgid ""
 "Passwortlisten bzw. Anmeldekärtchen ausdrucken (idR. durch das Lehrpersonal)"
 msgstr ""
+"Print out password lists or login cards (usually by the teaching staff)"
 
 #: ../../source/getting-started/add-user-accounts/index.rst:31
 msgid ""
 "Im folgenden wird gezeigt wie die Erstaufnahme von Schülern vonstatten geht."
-msgstr ""
+msgstr "The following shows how the first recording of students is done."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:34
 msgid "Erstaufnahme von Schülern"
-msgstr ""
+msgstr "Initial admissions of students"
 
 #: ../../source/getting-started/add-user-accounts/index.rst:35
 msgid ""
@@ -93,27 +111,34 @@ msgid ""
 "Sollte es dennoch Menschen mit der gleichen Namenskombination geben, dann "
 "ist das Zufall."
 msgstr ""
+"All the student names listed here are exemplary and fictitious. If there are"
+" people with the same name combination, then this is coincidence."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:37
 msgid ""
 "Benutzerverwaltung ist Sache des Administrators, deshalb loggt sich der "
 "Administrator in die Schulkonsole ein"
 msgstr ""
+"User administration is up to the administrator, so the administrator logs "
+"into the school console."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:41
 msgid ""
 "In der Schulkonsole wählen Sie  im Menü `Benutzer` `Schülerliste pflegen`"
 msgstr ""
+"In the school console, choose `User` `Maintain student list` from the menu."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:45
 msgid "und sehen ein leeres Fenster."
-msgstr ""
+msgstr "and see an empty window."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:49
 msgid ""
 "Prinzipiell kann man die Schülerliste per `\"Copy und Paste\"`  in das leere"
 " Fenster einfügen. Hier wird gezeigt wie man die Datei importiert."
 msgstr ""
+"In principle, the student list can be inserted into the empty window by "
+"`\"Copy and paste\"`. Shows how to import the file."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:51
 msgid ""
@@ -125,6 +150,13 @@ msgid ""
 "usw. erheblich erleichtert. Falls die Nummer nicht vorhanden ist, besteht "
 "jede Zeile nur aus den 4 Feldern."
 msgstr ""
+"The student list must be in CSV format in the form of ``\"class; surname; "
+"first name; date of birth; no.``. The last field is optional. It contains "
+"the unique student number assigned in the school administration program. If "
+"it is present, it is essential to take it with you so that it makes it much "
+"easier to identify the correct data set in the event of transfers, name "
+"changes, and so on. If the number does not exist, each line consists of only"
+" 4 fields."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:53
 msgid ""
@@ -133,10 +165,13 @@ msgid ""
 "Administrator aushändigen lassen, wenn man nicht selbst Zugang zum "
 "Schülerverwaltungsprogramm hat."
 msgstr ""
+"Student Management Programs usually have a function to export student data "
+"as a CSV file. This file must be handed over to you as an administrator if "
+"you do not have access to the Student Administration program yourself."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:55
 msgid "Nach Klick auf `Durchsuchen`"
-msgstr ""
+msgstr "After clicking on `Browse`"
 
 #: ../../source/getting-started/add-user-accounts/index.rst:59
 msgid ""
@@ -144,43 +179,55 @@ msgid ""
 "exportierte Datei liegt. Hier auf dem ``Desktop`` die Datei "
 "``schueler_aus_export.txt``."
 msgstr ""
+"navigate to the location where the file exported from the Student "
+"Administration file is located. Here on the desktop the file "
+"``schueler_aus_export. txt``."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:63
 msgid ""
 "Man wählt die Datei durch Doppelklick aus und klickt im folgenden Fenster "
 "auf Hochladen"
 msgstr ""
+"You select the file by double-clicking it and click on Upload in the "
+"following window"
 
 #: ../../source/getting-started/add-user-accounts/index.rst:67
 msgid ""
 "Je nach Anzahl der Schüler dauert es eine Weile bis im folgenden Fenster die"
 " Liste der aufzunehmenden Schüler erscheint."
 msgstr ""
+"Depending on the number of students, it may take a while for the list of "
+"students to appear in the following window."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:71
 msgid "Mit Klick auf `Änderungen speichern`"
-msgstr ""
+msgstr "Click on `Save changes`"
 
 #: ../../source/getting-started/add-user-accounts/index.rst:75
 msgid ""
 "werden die aufzunehmenden Schüler in der Datei ``schueler.txt`` auf dem "
 "Server unter ``/etc/sophomorix/user/`` abgespeichert"
 msgstr ""
+"to save the students to be recorded in the ``schueler.txt`` file on the "
+"server under ``/etc/sophomorix/user/``."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:77
 msgid ""
 "Nun muss die Datei schueler.txt überprüft werden. Dies geschieht durch "
 "Auswahl im Menü `Benutzer` `Benutzerlisten prüfen`,"
 msgstr ""
+"Now the file schueler.txt has to be checked. This is done by selecting "
+"`Check user lists` in the menu `User` `Check user lists`,"
 
 #: ../../source/getting-started/add-user-accounts/index.rst:81
 msgid "um dann auf `Benutzerlisten überprüfen` zu klicken."
-msgstr ""
+msgstr "to click on `Check user lists`."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:85
 msgid ""
 "Ist das Überprüfen beendet erhält man eine Liste ähnlich der hier gezeigten"
 msgstr ""
+"When the check is finished you will get a list similar to the one shown here"
 
 #: ../../source/getting-started/add-user-accounts/index.rst:87
 msgid ""
@@ -190,12 +237,19 @@ msgid ""
 "Geburtsdaten die nicht der Realität entprechen bzw. nicht im Zeitraum der "
 "``/etc/sophomorix/user/sophomorix.conf`` liegen."
 msgstr ""
+"Verification is necessary to detect possible errors. In at least one federal"
+" state it is possible to provide the pupil name with numbers. Sophomorix "
+"reports such errors. Birth data that do not correspond to reality or are not"
+" within the period of the ``/etc/sophomorix/user/sophomorix.conf`` are also "
+"reported."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:89
 msgid ""
 "Um Probleme zu vermeiden ist es ratsam Sonderzeichen `ä; ö; ü; ß` "
 "umzuwandeln in `ae; oe; ue; ss`."
 msgstr ""
+"To avoid problems it is advisable to convert special characters `ä; ö; ü; ß`"
+" to `ae; oe; ue; ss`."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:93
 msgid ""
@@ -203,11 +257,13 @@ msgid ""
 "der Liste Fehler gemeldet werden. Das Überarbeiten kann selbstverständlich "
 "in der Schulkonsole erfolgen."
 msgstr ""
+"You may need to rework the file schueler.txt if errors are reported in the "
+"list. Revisions can of course be done in the school console."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:97
 msgid ""
 "Sind alle Fehler beseitigt, dann klickt man auf `Benutzerdaten übernehmen`"
-msgstr ""
+msgstr "If all errors have been fixed, click on `Accept user data`."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:99
 msgid ""
@@ -216,28 +272,34 @@ msgid ""
 "Schüler angelegt, bei denen die Datensätze in Ordnung sind. Man fährt danach"
 " mit dem Schritt `Benutzerlisten überprüfen` s.O. fort."
 msgstr ""
+"You can - even if not all bugs have been fixed yet - click on `Copy user "
+"data` and `Create user`. The system then creates the students whose records "
+"are OK. You then proceed with the step `Check user lists`, see above."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:101
 msgid "Es wird erneut eine Liste der anzulegenden Schüler angezeigt"
-msgstr ""
+msgstr "A list of the students to be created is displayed again."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:105
 msgid "Unterhalb dieser Liste klickt man auf `Benutzer anlegen`."
-msgstr ""
+msgstr "Below this list you click on `Create user`."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:107
 msgid "Es folgen Statusmeldungen wie die im folgenden Bild gezeigten"
 msgstr ""
+"The following status messages are displayed as shown in the following figure"
 
 #: ../../source/getting-started/add-user-accounts/index.rst:111
 msgid ""
 "Bei einer großen Schülerzahl kann es einige Stunden dauern bis das folgende "
 "Bild das Ende des Benutzerimports anzeigt"
 msgstr ""
+"With a large number of students it can take several hours until the "
+"following picture shows the end of the user import"
 
 #: ../../source/getting-started/add-user-accounts/index.rst:115
 msgid "Damit ist die Erstaufnahme abgeschlossen."
-msgstr ""
+msgstr "This completes the first recording."
 
 #: ../../source/getting-started/add-user-accounts/index.rst:117
 msgid ""
@@ -246,3 +308,7 @@ msgid ""
 "den Schülern den Computerraum benutzen. Lehrer sollen auch die Passwörter "
 "von Schülern ändern, wenn das Passwort vergessen wurde."
 msgstr ""
+"In the sense of a reasonable division of labour, the printing of the cards "
+"with login names and passwords should be left to the teachers who use the "
+"computer room with the students. Teachers should also change students' "
+"passwords if the password is forgotten."
