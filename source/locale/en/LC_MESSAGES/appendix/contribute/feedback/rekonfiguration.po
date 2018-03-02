@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -26,6 +26,10 @@ msgid ""
 "Um die Konfiguration zu ändern oder anzupassen, etwa um die zu "
 "übermittelnden Daten zu verändern kann man alle Schritte der "
 "Paketkonfiguration durch Aufruf von"
+msgstr ""
+
+#: ../../source/appendix/contribute/feedback/rekonfiguration.rst:11
+msgid "dpkg-reconfigure linuxmuster-community-feedback"
 msgstr ""
 
 #: ../../source/appendix/contribute/feedback/rekonfiguration.rst:12

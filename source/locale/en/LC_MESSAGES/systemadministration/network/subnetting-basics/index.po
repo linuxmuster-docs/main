@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -422,6 +422,20 @@ msgstr ""
 msgid "Die Rechner sind raumweise einsortiert."
 msgstr ""
 
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:22
+msgid ""
+"#Raum;Rechnername;Imageklasse;Mac-Adresse;IP-Adresse;Subnetzmaske;;;;;\n"
+"r100;r100-ws01;qgm;C4:34:6B:7E:71:10;10.16.100.1;255.240.0.0;1;1;1;1;1\n"
+"r100;r100-ws02;qgm;64:51:06:38:B6:6F;10.16.100.2;255.240.0.0;1;1;1;1;1\n"
+"r100;r100-printer-color;printer;00:1E:0B:12:DB:78;10.16.100.101;255.240.0.0;1;1;1;1;0\n"
+"r200;r200-printer-bw;printer;00:18:FE:A3:A8:60;10.16.200.201;255.240.0.0;1;1;1;1;0\n"
+"r200;r200-ws01;qgm;64:51:06:38:B6:64;10.16.200.1;255.240.0.0;1;1;1;1;1\n"
+"r116a;r116a-ws01;sozpaed;88:AE:1D:EF:E3:3B;10.16.6.1;255.240.0.0;1;1;1;1;0\n"
+"nwt100;r110-ws01;qgm;64:51:06:43:D2:62;10.16.100.1;255.240.0.0;1;1;1;1;1\n"
+"nwt100;r110-ws02;qgm;64:51:06:43:D3:21;10.16.100.2;255.240.0.0;1;1;1;1;1\n"
+"rhm;rhm-ws01;qgm;64:51:06:38:B7:AC;10.19.111.1;255.240.0.0;1;1;1;1;1"
+msgstr ""
+
 #: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:36
 msgid "Die Workstations-Datei soll nun so umstrukturiert werden, dass später"
 msgstr ""
@@ -438,6 +452,20 @@ msgstr ""
 
 #: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:42
 msgid "Endzustand der Datei ``workstations``"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:44
+msgid ""
+"#Raum;Rechnername;Imageklasse;Mac-Adresse;IP-Adresse;Subnetzmaske;;;;;\n"
+"r100;r100-ws01;qgm;C4:34:6B:7E:71:10;10.20.100.1;;1;1;1;1;1\n"
+"r100;r100-ws02;qgm;64:51:06:38:B6:6F;10.20.100.2;;1;1;1;1;1\n"
+"r100;r100-printer-color;printer;00:1E:0B:12:DB:78;10.20.100.101;;1;1;1;1;0\n"
+"r200;r200-printer-bw;printer;00:18:FE:A3:A8:60;10.20.200.201;;1;1;1;1;0\n"
+"r200;r200-ws01;qgm;64:51:06:38:B6:64;10.20.200.1;;1;1;1;1;1\n"
+"r116a;r116a-ws01;sozpaed;88:AE:1D:EF:E3:3B;10.30.10.1;;1;1;1;1;0\n"
+"nwt100;r110-ws01;qgm;64:51:06:43:D2:62;10.30.10.2;;1;1;1;1;1\n"
+"nwt100;r110-ws02;qgm;64:51:06:43:D3:21;10.30.10.3;;1;1;1;1;1\n"
+"rhm;rhm-ws01;qgm;64:51:06:38:B7:AC;10.30.10.4;;1;1;1;1;1"
 msgstr ""
 
 #: ../../source/systemadministration/network/subnetting-basics/server-preparation.rst:58
@@ -968,8 +996,16 @@ msgstr ""
 msgid "Das Umstellen auf Subnetzbetrieb geschieht per Setuproutine mit"
 msgstr ""
 
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:7
+msgid "# linuxmuster-setup --modify"
+msgstr ""
+
 #: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:11
 msgid "oder im Falle einer Neuinstallation mit"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:13
+msgid "# linuxmuster-setup --first"
 msgstr ""
 
 #: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:17
@@ -1161,10 +1197,26 @@ msgid ""
 "``/etc/linuxmuster/subnets``:"
 msgstr ""
 
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:56
+msgid ""
+"# Raum 100\n"
+"10.20.100.0/24;10.20.100.254;10.20.100.100;10.20.100.200;0;0\n"
+"# Raum 200\n"
+"10.20.200.0/24;10.20.200.254;10.20.200.100;10.20.200.200;0;0\n"
+"# Lehrkräftenetz\n"
+"10.30.10.0/24;10.30.10.254;;;0;0\n"
+"# Gästenetz\n"
+"10.30.20.0/24;10.30.20.254;10.30.20.1;10.30.20.253;0;1"
+msgstr ""
+
 #: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:67
 msgid ""
 "Beachten Sie, dass Änderungen der Subnetzkonfiguration erst wirksam werden, "
 "wenn sie durch Ausführung des Befehls"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:69
+msgid "# import_workstations"
 msgstr ""
 
 #: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:73
@@ -1205,6 +1257,12 @@ msgid ""
 "In der Konfigurationsdatei ``/etc/linuxmuster/subnets`` lässt sich für jedes"
 " Subnetz festlegen, ob IP-Adressen aus der frei definierten Range Zugriff "
 "auf Intranet-Resourcen (Feld 5) oder Internet (Feld 6) haben. Dabei bedeuten"
+msgstr ""
+
+#: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:90
+msgid ""
+"0 = kein Zugriff\n"
+"1 = Zugriff erlaubt"
 msgstr ""
 
 #: ../../source/systemadministration/network/subnetting-basics/server-setup.rst:95

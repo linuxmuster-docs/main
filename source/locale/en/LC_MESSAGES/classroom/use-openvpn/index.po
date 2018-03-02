@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -171,6 +171,24 @@ msgstr ""
 msgid "Für Windows haben sich bislang folgende Einträge bewährt:"
 msgstr ""
 
+#: ../../source/classroom/use-openvpn/index.rst:93
+msgid ""
+"#OpenVPN Server conf\n"
+"tls-client\n"
+"client\n"
+"dev tun\n"
+"proto udp\n"
+"tun-mtu 1400\n"
+"remote <IP des Servers oder Adresse> 1194\n"
+"pkcs12 <benutzer>.p12\n"
+"cipher BF-CBC\n"
+"comp-lzo\n"
+"verb 3\n"
+"ns-cert-type server\n"
+"route-method exe\n"
+"route-delay 2"
+msgstr ""
+
 #: ../../source/classroom/use-openvpn/index.rst:94
 msgid ""
 "Testen Sie nun die Verbindung, indem Sie mit der rechten Maustaste auf das "
@@ -194,6 +212,12 @@ msgid ""
 "Befehle zur Installation an:"
 msgstr ""
 
+#: ../../source/classroom/use-openvpn/index.rst:105
+msgid ""
+"sudo apt-get update\n"
+"sudo apt-get install openvpn"
+msgstr ""
+
 #: ../../source/classroom/use-openvpn/index.rst:108
 msgid ""
 "Es kann mithilfe der grafischen Oberfläche Gnome der sog. Netzwerkmanager "
@@ -206,9 +230,19 @@ msgstr ""
 msgid "Hierzu sind folgende Befehle auf der Konsole anzugeben:"
 msgstr ""
 
+#: ../../source/classroom/use-openvpn/index.rst:116
+msgid ""
+"sudo apt-get update\n"
+"sudo apt-get install network-manager-openvpn network-manager-openvpn-gnome"
+msgstr ""
+
 #: ../../source/classroom/use-openvpn/index.rst:117
 msgid ""
 "Nach der Installation ist der Netzwerkmanager wie folgt neu zu starten:"
+msgstr ""
+
+#: ../../source/classroom/use-openvpn/index.rst:122
+msgid "sudo service network-manager restart"
 msgstr ""
 
 #: ../../source/classroom/use-openvpn/index.rst:123

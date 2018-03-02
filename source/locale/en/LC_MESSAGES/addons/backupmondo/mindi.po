@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -33,16 +33,58 @@ msgstr ""
 msgid "Das mindi-CD-Image erstellen Sie einfach mit dem Befehl"
 msgstr ""
 
+#: ../../source/addons/backupmondo/mindi.rst:8
+msgid "mindi"
+msgstr ""
+
 #: ../../source/addons/backupmondo/mindi.rst:12
 msgid ""
 "auf der Konsole. In der Folge müssen Sie zwei Fragen beantworten. Die Frage "
 "nach dem eigenen Kernel beantworten Sie mit **y**:"
 msgstr ""
 
+#: ../../source/addons/backupmondo/mindi.rst:14
+msgid ""
+"Mindi Linux mini-distro generator v2.0.4-r2045\n"
+"Latest Mindi is available from http://www.mondorescue.org\n"
+"BusyBox sources are available from http://www.busybox.net\n"
+"------------------------------------------------------------------------------\n"
+"Mindi-BusyBox v1.2.1 (2008.10.20-18:41+0000) multi-call binary\n"
+"Do you want to use your own kernel to build the boot disk ([y]/n) ?"
+msgstr ""
+
 #: ../../source/addons/backupmondo/mindi.rst:23
 msgid ""
 "Danach wird das System analysiert und das ISO-Image erstellt. Die "
 "abschließende Frage nach dem bootbaren USB Image beantworten Sie mit **n**."
+msgstr ""
+
+#: ../../source/addons/backupmondo/mindi.rst:25
+msgid ""
+"Analyzing dependency requirements       Done.\n"
+"Making complete dependency list Done.\n"
+"Analyzing your keyboard's configuration.\n"
+"Adding the following keyboard mapping tables:   Done.\n"
+"Assembling dependency files...................................Done.         ..........\n"
+"Your mountlist will look like this:\n"
+"Analyzing LVM...\n"
+"DEVICE          MOUNTPOINT      FORMAT          SIZE (MB)       LABEL/UUID\n"
+"/dev/sda6       lvm             lvm              140003\n"
+"/dev/sda1       /               ext3               9554\n"
+"/dev/mapper/vg_lml-home /home           ext3                lvm\n"
+"/dev/mapper/vg_lml-var /var            ext3                lvm\n"
+"/dev/mapper/vg_lml-var+spool+cups /var/spool/cups ext3                lvm\n"
+"/dev/sda5       swap            swap               3067\n"
+"Tarring and zipping the data content... Done.\n"
+"Making 16384KB boot disk...............udev device manager found\n"
+"WARNING: No Hardware support for ST20V10\n"
+"You may ask your manufacturer to contribute to the mindi project\n"
+"...11709 blocks\n"
+"............    Done.\n"
+"In the directory '/var/cache/mindi' you will find the images:-\n"
+"mindi-bootroot.16384.img\n"
+"Created bootable ISO image at /var/cache/mindi/mindi.iso\n"
+"Shall I make a bootable USB image ? (y/[n])"
 msgstr ""
 
 #: ../../source/addons/backupmondo/mindi.rst:52
@@ -57,6 +99,10 @@ msgid ""
 " Befehls"
 msgstr ""
 
+#: ../../source/addons/backupmondo/mindi.rst:56
+msgid "fdisk -l"
+msgstr ""
+
 #: ../../source/addons/backupmondo/mindi.rst:60
 msgid ""
 "verschaffen Sie sich einen Überblick über die gefundenen "
@@ -66,6 +112,10 @@ msgid ""
 " durch Hinzufügen des entsprechenden Treibermoduls in der "
 "Konfigurationsdatei ``/etc/mindi/mindi.conf`` unter *SCSI_MODS* oder "
 "*IDE_MODS* den Fehler eventuell beheben. Ein Vergleich der Ausgabe von"
+msgstr ""
+
+#: ../../source/addons/backupmondo/mindi.rst:62
+msgid "lsmod"
 msgstr ""
 
 #: ../../source/addons/backupmondo/mindi.rst:66
@@ -85,6 +135,10 @@ msgid ""
 "``/etc/mindi/mindi.conf`` in ein anderes Verzeichnis, zum Beispiel:"
 msgstr ""
 
+#: ../../source/addons/backupmondo/mindi.rst:72
+msgid "mv /etc/mindi/mindi.conf /root"
+msgstr ""
+
 #: ../../source/addons/backupmondo/mindi.rst:80
 msgid ""
 "Im Forum_ findet sich dieser Hinweis auf die Konfiguration der "
@@ -98,4 +152,20 @@ msgstr ""
 
 #: ../../source/addons/backupmondo/mindi.rst:84
 msgid "In der Datei ``/etc/mindi/mindi.conf`` die Parameter anpassen:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/mindi.rst:86
+msgid ""
+"#\n"
+"# Example of mindi configuration file\n"
+"#\n"
+"# $Id$\n"
+"#\n"
+"# FORCE_MODS=\"crc_ccitt crc_ccitt\"\n"
+"#\n"
+"# EXTRA_SPACE=80152             # increase if you run out of ramdisk space\n"
+"# BOOT_SIZE=32768               # size of the boot disk\n"
+"# MINDI_ADDITIONAL_BOOT_PARAMS=\"devfs=nomount noresume selinux=0 barrier=off udevtimeout=10 acpi=off\"\n"
+"EXTRA_SPACE=120000\n"
+"BOOT_SIZE=96000"
 msgstr ""

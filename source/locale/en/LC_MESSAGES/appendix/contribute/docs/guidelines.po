@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -160,10 +160,25 @@ msgstr ""
 msgid "für Konsolenbefehle nutze"
 msgstr ""
 
+#: ../../source/appendix/contribute/docs/guidelines.rst:52
+msgid ""
+".. code-block:: console\n"
+"\n"
+"   # mein kommando --force\n"
+"   output"
+msgstr ""
+
 #: ../../source/appendix/contribute/docs/guidelines.rst:59
 msgid ""
 "Für Bilder kann man image oder figure verwenden. Bei figure kann man "
 "Bildunterschriften hinzufügen"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/guidelines.rst:61
+msgid ""
+".. figure:: media/proposeChanges.png\n"
+"   :align: center\n"
+"   :alt: propose changes"
 msgstr ""
 
 #: ../../source/appendix/contribute/docs/guidelines.rst:67
@@ -175,6 +190,20 @@ msgstr ""
 msgid "Ein Kapitel kann ein Label erhalten"
 msgstr ""
 
+#: ../../source/appendix/contribute/docs/guidelines.rst:71
+msgid ""
+".. _knownbugs-label:\n"
+"\n"
+"Bekannte Fehler\n"
+"==============="
+msgstr ""
+
 #: ../../source/appendix/contribute/docs/guidelines.rst:78
 msgid "Mit diesem Sprungpunkt kann man an anderer Stelle auf ihn verweisen"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/guidelines.rst:80
+msgid ""
+"Bitte lesen Sie :ref:`hier <knownbugs-label>` nach, welche Fehler bekannt "
+"sind."
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -31,6 +31,12 @@ msgid ""
 "zuvor aber ein Backup der IPFire-Einstellungen durchgeführt werden:"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/3-hints-ipfire.rst:9
+msgid ""
+"# linuxmuster-ipfire --backup\n"
+"# dpkg-reconfigure linuxmuster-ipfire"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/keep-lmn-uptodate/3-hints-ipfire.rst:16
 msgid ""
 "Nur im Ausnahmefall anwenden. Es gehen alle eigenen "
@@ -50,6 +56,12 @@ msgstr ""
 
 #: ../../source/systemadministration/maintenance/keep-lmn-uptodate/3-hints-ipfire.rst:24
 msgid "Hierzu geben Sie nachstehende Konsolenbefehle an:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/3-hints-ipfire.rst:26
+msgid ""
+"# pakfire update\n"
+"# pakfire upgrade"
 msgstr ""
 
 #: ../../source/systemadministration/maintenance/keep-lmn-uptodate/3-hints-ipfire.rst:31

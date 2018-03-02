@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -37,6 +37,10 @@ msgstr ""
 msgid "Das Postsync-Script schreibt eine LOG-Datei, die auf dem Client unter"
 msgstr ""
 
+#: ../../source/clients/postsync/troubleshooting.rst:14
+msgid "/mnt/var/log/postsync.log abgelegt wird."
+msgstr ""
+
 #: ../../source/clients/postsync/troubleshooting.rst:15
 msgid ""
 "Auf dem linuxmuster.net Server gibt man hierzu folgendes an, um den Client "
@@ -44,8 +48,19 @@ msgid ""
 " um die Log-Datei einzusehen:"
 msgstr ""
 
+#: ../../source/clients/postsync/troubleshooting.rst:23
+msgid ""
+"linbo-remote -i <IP-Adresse des Clients> -b 5 -w 130 -c sync:1\n"
+"linbo-ssh <client-name / oder IP-Adresse>\n"
+"less /var/log/postsync.log"
+msgstr ""
+
 #: ../../source/clients/postsync/troubleshooting.rst:24
 msgid "Herunterfahren der Clients mit:"
+msgstr ""
+
+#: ../../source/clients/postsync/troubleshooting.rst:29
+msgid "linbo-remote -i <Client-name / IP-Adresse> -c halt"
 msgstr ""
 
 #: ../../source/clients/postsync/troubleshooting.rst:30

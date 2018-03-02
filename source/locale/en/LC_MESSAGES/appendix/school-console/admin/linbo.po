@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,27 +20,31 @@ msgstr ""
 
 #: ../../source/appendix/school-console/admin/linbo.rst:3
 msgid "Menü: LINBO"
-msgstr ""
+msgstr "Menu: LINBO"
 
 #: ../../source/appendix/school-console/admin/linbo.rst:8
 msgid "Gruppenkonfiguration editieren"
-msgstr ""
+msgstr "Edit group configuration"
 
 #: ../../source/appendix/school-console/admin/linbo.rst:10
 msgid "Klicken Sie auf einen Gruppennamen, um den Editor zu öffnen."
-msgstr ""
+msgstr "Click on a group name to open the editor."
 
 #: ../../source/appendix/school-console/admin/linbo.rst:12
 msgid ""
 "Beachten Sie, daß sich im Editor der Radio-Button zur Deaktivierung des "
 "Autostarts am Seitenende befindet."
 msgstr ""
+"Note that the radio button for deactivating autostart is located at the end "
+"of the page in the editor."
 
 #: ../../source/appendix/school-console/admin/linbo.rst:17
 msgid ""
 "Fehler in der Info-Beschreibung der Schulkonsole: pxelinux.cfg ist "
 "abgeschafft."
 msgstr ""
+"Error in the info-description of the school console: pxelinux.cfg is "
+"removed."
 
 #: ../../source/appendix/school-console/admin/linbo.rst:19
 msgid ""
@@ -47,22 +52,28 @@ msgid ""
 " Linbo-Startdatei unter \"pxelinux.cfg/<gruppe>\" der Eintrag \"DEFAULT "
 "reboot\" aktiviert ist und der Rechner über PXE startet."
 msgstr ""
+"Note also that in the group-specific Linbo startup file under \"pxelinux. "
+"cfg/<gruppe>\" the entry \"DEFAULT reboot\" is activated and the computer "
+"starts via PXE."
 
 #: ../../source/appendix/school-console/admin/linbo.rst:26
 msgid ""
 "Hinweis auf ein eigenes Todo, oder längere Erklärung, was welcher Eintrag "
 "bedeutet."
 msgstr ""
+"Reference to your own todo, or longer explanation of what each entry means."
 
 #: ../../source/appendix/school-console/admin/linbo.rst:30
 msgid "Gruppenkonfiguration erstellen"
-msgstr ""
+msgstr "Create group configuration"
 
 #: ../../source/appendix/school-console/admin/linbo.rst:32
 msgid ""
 "Kopieren Sie hier die Konfiguration einer bestehenden Rechnergruppe oder "
 "erstellen Sie eine neue Gruppenkonfiguration."
 msgstr ""
+"Copy the configuration of an existing computer group or create a new group "
+"configuration."
 
 #: ../../source/appendix/school-console/admin/linbo.rst:35
 msgid ""
@@ -70,6 +81,9 @@ msgid ""
 "werden. MMC steht für eine neue Art von günstigen SSD-Speichern, wie sie "
 "bisher nur in Kameras Verwendung fanden."
 msgstr ""
+"Note that as of LINBO 1.1.0, IDE disks such as SATA disks are addressed. MMC"
+" stands for a new type of low-cost SSD memory that was previously only used "
+"in cameras."
 
 #: ../../source/appendix/school-console/admin/linbo.rst:39
 msgid ""
@@ -77,44 +91,51 @@ msgid ""
 "„Gruppenkonfiguration editieren“ gegebenenfalls weitere Anpassungen an der "
 "neuen Konfiguration vornehmen."
 msgstr ""
+"Once the new group configuration has been created, you can make further "
+"adjustments to the new configuration in the submenu \"Edit group "
+"configuration\"."
 
 #: ../../source/appendix/school-console/admin/linbo.rst:44
 msgid "GRUB-Startdatei"
-msgstr ""
+msgstr "GRUB start file"
 
 #: ../../source/appendix/school-console/admin/linbo.rst:46
 msgid "GRUB-Startdateien können hier editiert werden."
-msgstr ""
+msgstr "GRUB start files can be edited here."
 
 #: ../../source/appendix/school-console/admin/linbo.rst:49
 msgid "Imageverwaltung"
-msgstr ""
+msgstr "Image management"
 
 #: ../../source/appendix/school-console/admin/linbo.rst:51
 msgid ""
 "Es können die bestehenden Abbilder umbenannt oder kopiert und Informationen "
 "oder Beschreibungen zu den Abbilder angesehen werden."
 msgstr ""
+"The existing images can be renamed or copied and information or descriptions"
+" of the images can be viewed."
 
 #: ../../source/appendix/school-console/admin/linbo.rst:54
 msgid ""
 "Zum Umbennenen und Kopieren von Images, müssen Sie einen neuen Dateinamen "
 "eingeben. Dateierweiterungen (.cloop/.rsync) können weggelassen werden."
 msgstr ""
+"To rename and copy images, you must enter a new file name. File extensions "
+"(.cloop/.rsync) can be omitted."
 
 #: ../../source/appendix/school-console/admin/linbo.rst:58
 msgid ""
 "Wenn Sie die Maus auf die Symbole bewegen, werden Hilfetexte angezeigt."
-msgstr ""
+msgstr "If you move the mouse over the symbols, help texts are displayed."
 
 #: ../../source/appendix/school-console/admin/linbo.rst:62
 msgid "Registrypatch editieren"
-msgstr ""
+msgstr "Edit registry patch"
 
 #: ../../source/appendix/school-console/admin/linbo.rst:64
 msgid ""
 "Klicken Sie auf den Namen einer Registrypatch-Datei, um sie zu editieren."
-msgstr ""
+msgstr "Click on the name of a registry patch file to edit it."
 
 #: ../../source/appendix/school-console/admin/linbo.rst:67
 msgid ""
@@ -123,21 +144,24 @@ msgid ""
 "Sie die Registrypatch-Datei aus, die als Vorlage für die neue Datei dienen "
 "soll."
 msgstr ""
+"To create a new registry patch file, first select the image file from the "
+"top drop-down menu. In the lower drop-down menu, select the registry patch "
+"file to be used as a template for the new file."
 
 #: ../../source/appendix/school-console/admin/linbo.rst:73
 msgid "Postsync-Datei editieren"
-msgstr ""
+msgstr "Edit Postsync file"
 
 #: ../../source/appendix/school-console/admin/linbo.rst:75
 msgid "Hier können Sie die postsync-Dateien der Images bearbeiten."
-msgstr ""
+msgstr "Here you can edit the postsync files of the images."
 
 #: ../../source/appendix/school-console/admin/linbo.rst:78
 msgid "Fernsteuerung"
-msgstr ""
+msgstr "Remote control"
 
 #: ../../source/appendix/school-console/admin/linbo.rst:80
 msgid ""
 "Beobachten Sie laufende Fernsteuerungsbefehle oder erstellen Sie neue "
 "Befehle."
-msgstr ""
+msgstr "Observe running remote control commands or create new commands."

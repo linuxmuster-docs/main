@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,12 +20,12 @@ msgstr ""
 
 #: ../../source/about/release-information/ipfire.rst:2
 msgid "Neuerungen zur Firewall"
-msgstr ""
+msgstr "What's New Firewall"
 
 #: ../../source/about/release-information/ipfire.rst:4
 msgid ""
 "Die Firewall IPFire wird ab der Version 6.2 vom Server aus aktualisiert."
-msgstr ""
+msgstr "The IPFire firewall is updated from the server as of version 6.2."
 
 #: ../../source/about/release-information/ipfire.rst:7
 msgid ""
@@ -35,6 +36,11 @@ msgid ""
 "genommen werden, wird das Update des IPFire vom Server aus mithilfe eines "
 "Skriptes angestossen."
 msgstr ""
+"The developers of linuxmuster.net regularly test whether the newer versions "
+"of IPFire are fully compatible with linuxmuster.net. In order to prevent new"
+" IPFire versions from being installed immediately after publication and "
+"possibly incompatibilities occur, the update of the IPFire is initiated from"
+" the server using a script."
 
 #: ../../source/about/release-information/ipfire.rst:14
 msgid ""
@@ -42,3 +48,5 @@ msgid ""
 " <../../systemadministration/maintenance/keep-lmn-uptodate/2-update-ipfire>`"
 " nach."
 msgstr ""
+"Read the new procedure in the :doc:`Step-by-step guide "
+"<../../systemadministration/maintenance/keep-lmn-uptodate/2-update-ipfire>`."

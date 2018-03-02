@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -106,6 +106,10 @@ msgid ""
 "Im Falle eines Netzwerkdruckers müssen Sie hier die IP-Adresse oder den "
 "Hostnamen und zusätzlich bei Verwendung eines Print-Servers, der über "
 "mehrere Anschlüsse verfügt, noch die Warteschlange anzugeben. Zum Beispiel:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:68
+msgid "socket://10.16.203.101/lpt1"
 msgstr ""
 
 #: ../../source/systemadministration/printer/printer/3-drucker-einrichten-cups.rst:72

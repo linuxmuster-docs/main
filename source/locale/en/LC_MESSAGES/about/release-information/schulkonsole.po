@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +20,7 @@ msgstr ""
 
 #: ../../source/about/release-information/schulkonsole.rst:2
 msgid "Neuerungen in der Schulkonsole"
-msgstr ""
+msgstr "What's New in the school console"
 
 #: ../../source/about/release-information/schulkonsole.rst:4
 msgid ""
@@ -27,6 +28,9 @@ msgid ""
 "Lehrersicht und die Schülersicht gibt es einige Neuerungen. Schließlich ist "
 "die Programmoberfläche insgesamt in Teilen überarbeitet worden."
 msgstr ""
+"Most of the new features are available for network administrators. However, "
+"there are also some innovations for teachers and pupils. Finally, the "
+"program interface has been partially reworked."
 
 #: ../../source/about/release-information/schulkonsole.rst:7
 msgid ""
@@ -34,22 +38,29 @@ msgid ""
 "jetzt erforderlich, zumindest für die Schulkonsole auf den Clients im "
 "Browser Javascript zu aktivieren."
 msgstr ""
+"For the last point javascript and jQuery was used. Therefore it is now "
+"necessary to activate Javascript on the clients in the browser at least for "
+"the school console."
 
 #: ../../source/about/release-information/schulkonsole.rst:11
 msgid "Allgemein"
-msgstr ""
+msgstr "General"
 
 #: ../../source/about/release-information/schulkonsole.rst:12
 msgid ""
 "Das Paket **linuxmuster-schulkonsole-template** ist jetzt integriert und "
 "damit in Zukunft überflüssig. Es sollte deinstalliert werden."
 msgstr ""
+"The package **linuxmuster-schulkonsole-template** is now integrated and thus"
+" not necessary in the future. It should be uninstalled."
 
 #: ../../source/about/release-information/schulkonsole.rst:15
 msgid ""
 "Das Design vieler Tabellen wurde zur besseren Übersicht um **Zeilennummern**"
 " erweitert."
 msgstr ""
+"The design of many tables has been extended with **line numbers** for a "
+"better overview."
 
 #: ../../source/about/release-information/schulkonsole.rst:17
 msgid ""
@@ -60,20 +71,26 @@ msgid ""
 " Dort ist auch erklärt, wie die Menüstruktur durch z.B. Ausblendung oder "
 "Verschiebung von Menüpunkten lokalen Gegebenheiten angepasst werden kann."
 msgstr ""
+"The rights structure has become configurable. Thus, e.g. it is possible to "
+"deprive teachers of the right to deactivate the web filter. More details can"
+" be found under `Technical documentation of the school consoles "
+"<http://www.linuxmuster.net/wiki/entwicklung:schulkonsole:sk_neue_plugin_seite>`_."
+" There it is also explained how the menu structure can be adapted by e.g. "
+"suppression or shifting of menu items to local conditions."
 
 #: ../../source/about/release-information/schulkonsole.rst:21
 msgid "Die Kodierung ist intern jetzt vollständig auf **utf8** umgestellt."
-msgstr ""
+msgstr "The encoding is internally now completely changed to **utf8**."
 
 #: ../../source/about/release-information/schulkonsole.rst:24
 msgid "Netzwerkbetreuersicht"
-msgstr ""
+msgstr "Network adminsitrator's Perspective"
 
 #: ../../source/about/release-information/schulkonsole.rst:27
 #: ../../source/about/release-information/schulkonsole.rst:129
 #: ../../source/about/release-information/schulkonsole.rst:165
 msgid "Reparaturen"
-msgstr ""
+msgstr "Repairs"
 
 #: ../../source/about/release-information/schulkonsole.rst:28
 msgid ""
@@ -81,25 +98,30 @@ msgid ""
 "wichtige Systemverzeichnisse. Diese finden sich im Menü **Reparaturen** "
 "(diese Seiten rufen *sophomorix-repair* auf)."
 msgstr ""
+"There are some repair possibilities for the home directories and other "
+"important system directories. These can be found in the menu **Repairs** "
+"(these pages call *sophomorix-repair*)."
 
 #: ../../source/about/release-information/schulkonsole.rst:32
 msgid "Einstellungen zu Reparaturen"
-msgstr ""
+msgstr "Settings for repairs"
 
 #: ../../source/about/release-information/schulkonsole.rst:33
 msgid ""
 "Es können Programmnamen mit deren Konfigurationsverzeichnissen verknüpft "
 "werden. Diese können dann auch für Reparaturen herangezogen werden."
 msgstr ""
+"Program names can be linked to their configuration directories. These can "
+"then also be used for repairs."
 
 #: ../../source/about/release-information/schulkonsole.rst:37
 msgid "Benutzerverwaltung"
-msgstr ""
+msgstr "user administration"
 
 #: ../../source/about/release-information/schulkonsole.rst:40
 #: ../../source/about/release-information/schulkonsole.rst:161
 msgid "Passwörter"
-msgstr ""
+msgstr "passwords"
 
 #: ../../source/about/release-information/schulkonsole.rst:41
 msgid ""
@@ -107,10 +129,12 @@ msgid ""
 "Passwortgüte überprüfen zu lassen. Damit werden zu einfache Passwörter der "
 "Benutzer abgelehnt."
 msgstr ""
+"Under *Settings → School console* there is the possibility to have the "
+"password quality checked. This is used to deny simple passwords."
 
 #: ../../source/about/release-information/schulkonsole.rst:44
 msgid "Einstellungen"
-msgstr ""
+msgstr "Settings"
 
 #: ../../source/about/release-information/schulkonsole.rst:45
 msgid ""
@@ -118,10 +142,12 @@ msgid ""
 "Einstellmöglichkeiten. Die wichtigste ist die Kodierung für die jeweiligen "
 "Dateien."
 msgstr ""
+"There are many other setting options on the User Management Settings page. "
+"The most important is the encoding for the respective files."
 
 #: ../../source/about/release-information/schulkonsole.rst:49
 msgid "Private Mailadresse im LDAP"
-msgstr ""
+msgstr "Private Email address in LDAP"
 
 #: ../../source/about/release-information/schulkonsole.rst:51
 msgid ""
@@ -129,10 +155,13 @@ msgid ""
 " muss der Administrator die entsprechende Funktion wie in :ref:`howto-use-"
 "mail-ldap-label` beschrieben, freischalten."
 msgstr ""
+"Private mail addresses can be managed in the LDAP attribute **mail**. To do "
+"this, the administrator must enable the corresponding function as described "
+"in :ref:`howto-use-mail-ldap-label`."
 
 #: ../../source/about/release-information/schulkonsole.rst:57
 msgid "Historie"
-msgstr ""
+msgstr "History"
 
 #: ../../source/about/release-information/schulkonsole.rst:58
 msgid ""
@@ -140,20 +169,24 @@ msgid ""
 "gezielt Passwortlisten zu einem bestimmten Zeitpunkt angelegter Benutzer "
 "herunterladen kann."
 msgstr ""
+"Under *User*, there is the new menu item **History**, which can be used to "
+"download specific password lists at a particular time."
 
 #: ../../source/about/release-information/schulkonsole.rst:61
 msgid "Anlegen, Versetzen, Löschen"
-msgstr ""
+msgstr "Create, move, delete"
 
 #: ../../source/about/release-information/schulkonsole.rst:62
 msgid ""
 "In diesem Bereich wird jetzt die log-Datei für einen laufenden Prozess "
 "automatisch angezeigt. Das erlaubt eine bessere laufende Kontrolle."
 msgstr ""
+"In this area, the log file for a running process is now displayed "
+"automatically. This allows for better ongoing control."
 
 #: ../../source/about/release-information/schulkonsole.rst:66
 msgid "Plugins"
-msgstr ""
+msgstr "Plugins"
 
 #: ../../source/about/release-information/schulkonsole.rst:68
 msgid ""
@@ -162,14 +195,17 @@ msgid ""
 "<https://www.linuxmuster.net/wiki/entwicklung:schulkonsole:sk_neue_plugin_seite>`_"
 " dokumentiert."
 msgstr ""
+"It is possible to write plugins for the school console. Writing plugins is "
+"documented on the `Technical Documenatation page of the school console  "
+"<https://www.linuxmuster.net/wiki/entwicklung:schulkonsole:sk_neue_plugin_seite>`_."
 
 #: ../../source/about/release-information/schulkonsole.rst:71
 msgid "Momentan gibt des 2 Plugins."
-msgstr ""
+msgstr "Currently there are 2 plugins."
 
 #: ../../source/about/release-information/schulkonsole.rst:74
 msgid "Druckerquotierung (Pykota)"
-msgstr ""
+msgstr "Printer quotation (Pykota)"
 
 #: ../../source/about/release-information/schulkonsole.rst:76
 msgid ""
@@ -178,10 +214,14 @@ msgid ""
 "ergänzt das Menü des Netzwerkbetreuers um einen Menüpunkt im Menü "
 "Einstellungen und ein Menü Druckquotas."
 msgstr ""
+"The plugin allows you to set and adjust the quotation via the school "
+"console. The package is called **linuxmuster-pk-schulkonsole**. It "
+"supplements the menu of the network controller by a menu point in the "
+"Settings menu and a menu Print Quotas."
 
 #: ../../source/about/release-information/schulkonsole.rst:79
 msgid "Backup mit MondoRescue"
-msgstr ""
+msgstr "Backup with MondoRescue"
 
 #: ../../source/about/release-information/schulkonsole.rst:81
 msgid ""
@@ -190,42 +230,54 @@ msgid ""
 " ergänzt das Menü des Netzwerkbetreuers um einen Menüpunkt im Menü "
 "Einstellunglen zur Konfiguration der Backups."
 msgstr ""
+"`MondoRescue <http://www.mondorescue.org>`_ is an already quite old reliable"
+" back-up program. The plugin **linuxmuster-schulkonsole-backup** supplements"
+" the menu of the network administrator by a menu point in the menu Settings "
+"to configure the backups."
 
 #: ../../source/about/release-information/schulkonsole.rst:84
 msgid "Einstellungen für Klassen und Projekte"
-msgstr ""
+msgstr "Settings for Classes and Projects"
 
 #: ../../source/about/release-information/schulkonsole.rst:85
 msgid ""
 "Für den Netzwerkbetreuer gibt es unter Einstellungen Menüpunkte für Klassen "
 "und Projekte. Dort können Standardeinstellungen festgelegt werden."
 msgstr ""
+"There are menu items for classes and projects under the Settings menu for "
+"the network administrator. There, default settings can be defined."
 
 #: ../../source/about/release-information/schulkonsole.rst:87
 msgid ""
 "Mailingliste gibt an, ob für die betreffende Gruppe eine Mailingliste "
 "angelegt wird."
 msgstr ""
+"Mailing list specifies whether a mailing list is created for the relevant "
+"group."
 
 #: ../../source/about/release-information/schulkonsole.rst:88
 msgid ""
 "Mailalias gibt an, ob die Mitglieder der betreffenden Gruppe Mailalias-"
 "Einträge nach dem vorgegebenen Muster erhalten."
 msgstr ""
+"Mailalias specifies whether members of the group receive mailalias in the "
+"specified pattern."
 
 #: ../../source/about/release-information/schulkonsole.rst:90
 msgid ""
 "WLAN gibt an, ob für die Mitglieder der betreffenden Gruppe das WLAN "
 "standardmäßig ein- oder ausgeschaltet ist."
 msgstr ""
+"WLAN indicates whether the WLAN is switched on or off by default for the "
+"members of the concerned group."
 
 #: ../../source/about/release-information/schulkonsole.rst:94
 msgid "Rechnerverwaltung"
-msgstr ""
+msgstr "Computer Administration"
 
 #: ../../source/about/release-information/schulkonsole.rst:97
 msgid "Hosts"
-msgstr ""
+msgstr "Hosts"
 
 #: ../../source/about/release-information/schulkonsole.rst:98
 msgid ""
@@ -233,6 +285,9 @@ msgid ""
 "absteigend sortiert werden. Damit ist es einfacher, z.B. freie IP-Adressen "
 "eines Raums herauszufinden."
 msgstr ""
+"The **hosts** table can be sorted in ascending or descending order by "
+"different columns. This makes it easier, for example, to find out the free "
+"IP addresses of a room."
 
 #: ../../source/about/release-information/schulkonsole.rst:99
 msgid ""
@@ -241,36 +296,46 @@ msgid ""
 "erhalten wird aber deaktiviert. Wird das Kommentarzeichen wieder entfernt, "
 "so wird die Zeile wieder aktiv."
 msgstr ""
+"The **/etc/linuxmuster/workstations** file can also contain comments. If a "
+"comment character is inserted in front of the room name, the line remains "
+"intact but is deactivated. If the comment character is removed, the line "
+"becomes active again."
 
 #: ../../source/about/release-information/schulkonsole.rst:101
 msgid ""
 "Bei einem *import_workstations*, also der Übernahme der Änderungen in das "
 "System wird die log-Datei angezeigt."
 msgstr ""
+"The log file is displayed for an *import_workstations*, that is, when the "
+"changes are transferred to the system."
 
 #: ../../source/about/release-information/schulkonsole.rst:104
 msgid "grub.cfg-Dateien"
-msgstr ""
+msgstr "grub.cfg files"
 
 #: ../../source/about/release-information/schulkonsole.rst:105
 msgid ""
 "In der Schulkonsole im Menü LINBO kann der Netzwerkbetreuer direkt grub-"
 "Startdateien einer Gruppe bearbeiten."
 msgstr ""
+"In the school console in the LINBO menu, the network administrator can edit "
+"grub startup files of a group directly."
 
 #: ../../source/about/release-information/schulkonsole.rst:108
 msgid "regpatch-Dateien"
-msgstr ""
+msgstr "Regpatch Files"
 
 #: ../../source/about/release-information/schulkonsole.rst:109
 msgid ""
 "Regpatch-Dateien können im Menü Linbo über den Eintrag Regpatch direkt "
 "bearbeitet werden."
 msgstr ""
+"Regpatch files can be edited directly in the menu Linbo via the entry "
+"Regpatch."
 
 #: ../../source/about/release-information/schulkonsole.rst:112
 msgid "start.conf"
-msgstr ""
+msgstr "start.conf"
 
 #: ../../source/about/release-information/schulkonsole.rst:113
 msgid ""
@@ -278,28 +343,35 @@ msgid ""
 "Umstellung auf grub2 und der damit einhergehenden Unterstützung von UEFI-"
 "Rechnern zu tun hat."
 msgstr ""
+"There are several extensions to the start.conf file, some of which have to "
+"do with the conversion to grub2 and the associated support of UEFI "
+"computers."
 
 #: ../../source/about/release-information/schulkonsole.rst:116
 msgid ""
 "**efi** ist ein neuer Partitionstyp, der bei UEFI-Rechnern zum Starten "
 "benötigt wird."
-msgstr ""
+msgstr "**efi** is a new partition type required for UEFI hosts to boot."
 
 #: ../../source/about/release-information/schulkonsole.rst:117
 msgid ""
 "**Systemtyp** ist ein neues Feld, das den Rechnertyp (bios, bios64, efi32, "
 "efi64) angibt."
 msgstr ""
+"System type** is a new field that specifies the computer type (bios, bios64,"
+" efi32, efi64)."
 
 #: ../../source/about/release-information/schulkonsole.rst:118
 msgid ""
 "**Label** ist ein neues Feld, in welchem man für jede Partition ein Label "
 "eintragen kann. Dieses kann z.B. zum mounten verwendet werden."
 msgstr ""
+"**Label** is a new field in which you can enter a label for each partition. "
+"This can be used e. g. for mounting."
 
 #: ../../source/about/release-information/schulkonsole.rst:122
 msgid "Linbo"
-msgstr ""
+msgstr "Linbo"
 
 #: ../../source/about/release-information/schulkonsole.rst:123
 msgid ""
@@ -307,20 +379,24 @@ msgid ""
 " Aufgaben erstellt, laufende Aufgaben überwacht und geplante Aufgaben wieder"
 " entfernt werden."
 msgstr ""
+"In the Linbo menu there is a new menu item *Linbo-Remote*. There you can "
+"create new tasks, monitor ongoing tasks and remove scheduled tasks."
 
 #: ../../source/about/release-information/schulkonsole.rst:126
 msgid "Lehrersicht"
-msgstr ""
+msgstr "Teacher's Perspective"
 
 #: ../../source/about/release-information/schulkonsole.rst:130
 msgid ""
 "Auf den Seiten Klassen und Projekte gibt es jeweils den Unterpunkt zur "
 "Reparatur der *Persönlichen Ordner* der jeweiligen Mitglieder."
 msgstr ""
+"On the Classes and Projects pages there is a submenu to repair the *personal"
+" folders* of each member."
 
 #: ../../source/about/release-information/schulkonsole.rst:133
 msgid "WLAN-Zugriff steuern"
-msgstr ""
+msgstr "Control WLAN access"
 
 #: ../../source/about/release-information/schulkonsole.rst:137
 msgid ""
@@ -328,10 +404,13 @@ msgid ""
 " den sich der WLAN-Zugriff für ausgewählte Benutzer von Projekten, Klassen "
 "zeitgesteuert ein- und ausschalten lässt."
 msgstr ""
+"In the menus for classes and projects there is a menu item **Teaching**, "
+"which allows you to enable or disable WLAN access for selected users of "
+"projects, classes, on a scheduled basis."
 
 #: ../../source/about/release-information/schulkonsole.rst:140
 msgid "Austeilen, Einsammeln, Bereitstellen"
-msgstr ""
+msgstr "Handing out, collecting, providing"
 
 #: ../../source/about/release-information/schulkonsole.rst:144
 msgid ""
@@ -340,46 +419,57 @@ msgid ""
 "Herunterladen, Hochladen und ggf. Entfernen. Das macht für Windows-Clients "
 "das Hangeln durch lange Pfade überflüssig."
 msgstr ""
+"In many places where you used to have to access the *underscore* "
+"directories, you now have buttons in the school console for downloading, "
+"uploading and possibly removing them. This eliminates the need for long "
+"paths for Windows clients."
 
 #: ../../source/about/release-information/schulkonsole.rst:147
 msgid "Projekte"
-msgstr ""
+msgstr "Projects"
 
 #: ../../source/about/release-information/schulkonsole.rst:148
 msgid ""
 "Ein Projektadministrator kann Schülerpassworte direkt im Menü Projekte "
 "ähnlich zu Schülerpassworten in Klassen ändern/anzeigen."
 msgstr ""
+"A project administrator can change/display student passwords directly from "
+"the Projects menu similar to Student passwords in classes."
 
 #: ../../source/about/release-information/schulkonsole.rst:151
 msgid "Schülersicht"
-msgstr ""
+msgstr "Student Perspective"
 
 #: ../../source/about/release-information/schulkonsole.rst:155
 msgid ""
 "Wegen des Austeilens, Einsammelns, Bereitstellens, sind neue Schülermenüs "
 "(Mein Raum, Meine Klasse, Mein Projekt) hinzugekommen."
 msgstr ""
+"New student menus (My Room, My Class, My Project) have been added due to the"
+" handing out, collecting, providing."
 
 #: ../../source/about/release-information/schulkonsole.rst:158
 msgid "Alle Benutzer"
-msgstr ""
+msgstr "All users"
 
 #: ../../source/about/release-information/schulkonsole.rst:162
 msgid ""
 "Hat der Netzwerkbetreuer die Passwortüberprüfung aktiviert, so werden neue "
 "Passwörter auf ihre Qualität überprüft."
 msgstr ""
+"If the network administrator has activated password verification, new "
+"passwords are checked for their quality."
 
 #: ../../source/about/release-information/schulkonsole.rst:166
 msgid ""
 "Auf der Startseite befindet sich ein Punkt zur Reparatur des eigenen "
 "*Persönlichen Ordners*."
 msgstr ""
+"On the start page there is a point to repair your own *personal folder*."
 
 #: ../../source/about/release-information/schulkonsole.rst:169
 msgid "Mailweiterleitung"
-msgstr ""
+msgstr "Mail Forwarding"
 
 #: ../../source/about/release-information/schulkonsole.rst:170
 msgid ""
@@ -388,10 +478,14 @@ msgid ""
 "Startseite der Schulkonsole vornehmen. Dieser Punkt ist nur vorhanden, wenn "
 "der Server auch als Mailserver eingerichtet worden ist."
 msgstr ""
+"Under *Horde* you can set up a mail forwarding address. This is awkward. "
+"This setup can now be done by any user on the home page of the school "
+"console. This item is only available if the server has also been set up as a"
+" mail server."
 
 #: ../../source/about/release-information/schulkonsole.rst:173
 msgid "Alternative Mailadresse"
-msgstr ""
+msgstr "Alternative mail address"
 
 #: ../../source/about/release-information/schulkonsole.rst:174
 msgid ""
@@ -399,52 +493,59 @@ msgid ""
 "label`) kann auf der Startseite jeder Benutzer eine vom Standard abweichende"
 " Mailadresse einrichten, die im LDAP-Attribut **mail** gespeichert wird."
 msgstr ""
+"Depending on the settings for mail (see :ref:`howto-use-mail-ldap-label`) "
+"each user can set up a different mail address on the start page, which is "
+"stored in the LDAP attribute **mail**."
 
 #: ../../source/about/release-information/schulkonsole.rst:179
 msgid "Oberfläche allgemein"
-msgstr ""
+msgstr "General Interface"
 
 #: ../../source/about/release-information/schulkonsole.rst:182
 msgid "Menü"
-msgstr ""
+msgstr "Menu"
 
 #: ../../source/about/release-information/schulkonsole.rst:186
 msgid ""
 "Das Menü ist jetzt ein 2-Ebenenmenü, das nicht mehr soviel Bildschirmplatz "
 "benötigt und intuitiver zu bedienen ist."
 msgstr ""
+"The menu is now a two-level menu that no longer requires as much screen "
+"space and is more intuitive to use."
 
 #: ../../source/about/release-information/schulkonsole.rst:189
 msgid "Dialoge"
-msgstr ""
+msgstr "Dialogs"
 
 #: ../../source/about/release-information/schulkonsole.rst:193
 msgid ""
 "Fehlerdialoge werden jetzt modal und zentriert und damit auffälliger "
 "dargestellt."
-msgstr ""
+msgstr "Error dialogs are now modal and centered, making them more visible."
 
 #: ../../source/about/release-information/schulkonsole.rst:196
 msgid "Statusmeldungen"
-msgstr ""
+msgstr "Status messages"
 
 #: ../../source/about/release-information/schulkonsole.rst:200
 msgid "Statusmeldungen erscheinen auffälliger unterhalb des Menüs."
-msgstr ""
+msgstr "Status messages appear more conspicuously below the menu."
 
 #: ../../source/about/release-information/schulkonsole.rst:203
 msgid "Schwebende Hilfe"
-msgstr ""
+msgstr "Floating Help"
 
 #: ../../source/about/release-information/schulkonsole.rst:207
 msgid ""
 "Die schwebende Hilfe blendet sich zeitgesteuert aus und es kommt dadurch "
 "nicht mehr zur Verdeckung von wichtigen Seitenelementen."
 msgstr ""
+"The floating help hides itself time-controlled and thus no longer hides "
+"important page elements."
 
 #: ../../source/about/release-information/schulkonsole.rst:210
 msgid "Verwaltung WLAN"
-msgstr ""
+msgstr "WLAN Administration"
 
 #: ../../source/about/release-information/schulkonsole.rst:212
 msgid ""
@@ -452,22 +553,111 @@ msgid ""
 " Standardmäßig heißt das Projekt **p\\_wifi**. Es wird angelegt, falls es "
 "bei der Installation nicht existiert."
 msgstr ""
+"WLAN access is managed internally via a special project. By default, the "
+"project is called **p\\_wifi**. It is created if it does not exist during "
+"the installation."
 
 #: ../../source/about/release-information/schulkonsole.rst:226
 msgid "Standardeinstellungen"
-msgstr ""
+msgstr "Default settings"
 
 #: ../../source/about/release-information/schulkonsole.rst:228
 msgid ""
 "Für die Standardeinstellungen zum **WLAN** gibt es die Datei "
 "**/etc/linuxmuster/wlan_defaults** mit dem Inhalt"
 msgstr ""
+"For the default settings for **WLAN** there is the file "
+"**/etc/linuxmuster/wlan_defaults** with the content"
+
+#: ../../source/about/release-information/schulkonsole.rst:233
+msgid ""
+"# wlan_defaults will be processed by /usr/sbin/linuxmuster-wlan-reset.\n"
+"# It defines the default wlan status for all users,classes and projects.\n"
+"#\n"
+"# Three columns have to be present:\n"
+"# Identify colum: u - user, g - class/project/unix group\n"
+"# user/class/project: user, class or project name\n"
+"# wlan status: on/off/-\n"
+"#\n"
+"# Place a \"-\" in wlan column, if you want the current\n"
+"# status not to be changed.\n"
+"#\n"
+"# There has to be one user, class or project definition per line.\n"
+"# Note: the users, classes and projects are processed in the sequence\n"
+"#       that is defined here.\n"
+"#\n"
+"# identity:user/class/project   wlan status\n"
+"#\n"
+"# Examples:\n"
+"#g:07a          off\n"
+"#g:11b          -\n"
+"#u:test         on\n"
+"#\n"
+"# next entries set the default values for users/classes/projects,\n"
+"# which are not defined explicitly.\n"
+"g:default               off\n"
+"u:default               off\n"
+"g:teachers              on"
+msgstr ""
+"# wlan_defaults will be processed by /usr/sbin/linuxmuster-wlan-reset.\n"
+"# It defines the default wlan status for all users,classes and projects.\n"
+"#\n"
+"# Three columns have to be present:\n"
+"# Identify colum: u - user, g - class/project/unix group\n"
+"# user/class/project: user, class or project name\n"
+"# wlan status: on/off/-\n"
+"#\n"
+"# Place a \"-\" in wlan column, if you want the current\n"
+"# status not to be changed.\n"
+"#\n"
+"# There has to be one user, class or project definition per line.\n"
+"# Note: the users, classes and projects are processed in the sequence\n"
+"#       that is defined here.\n"
+"#\n"
+"# identity:user/class/project   wlan status\n"
+"#\n"
+"# Examples:\n"
+"#g:07a          off\n"
+"#g:11b          -\n"
+"#u:test         on\n"
+"#\n"
+"# next entries set the default values for users/classes/projects,\n"
+"# which are not defined explicitly.\n"
+"g:default               off\n"
+"u:default               off\n"
+"g:teachers              on"
 
 #: ../../source/about/release-information/schulkonsole.rst:261
 msgid ""
 "Dort können beliebige Benutzer und Gruppen eingetragen werden. Dazu gibt es "
 "das Programm **linuxmuster-wlan-reset** mit der Syntax"
 msgstr ""
+"Any number of users and groups can be entered there. You can use the program"
+" **linuxmuster-wlan-reset** with the syntax"
+
+#: ../../source/about/release-information/schulkonsole.rst:267
+msgid ""
+"linuxmuster-wlan-reset resets wlan access to defaults\n"
+"\n"
+"Options\n"
+"-h  / --help\n"
+"--kill  terminate group sessions\n"
+"\n"
+"users/groups to work on:\n"
+"--userlist=<user1,user2,user3,...> [--kill] list of users to be processed\n"
+"--grouplist=<group1,group2,group3,...> list of groups to be processed\n"
+"--all [--kill] process all users and groups from wlan_defaults"
+msgstr ""
+"linuxmuster-wlan-reset resets wlan access to defaults\n"
+"\n"
+"Options\n"
+"-h  / --help\n"
+"--kill  terminate group sessions\n"
+"\n"
+"users/groups to work on:\n"
+"--userlist=<user1,user2,user3,...> [--kill] list of users to be processed\n"
+"--grouplist=<group1,group2,group3,...> list of groups to be processed\n"
+"--all [--kill] process all users and groups from wlan_defaults"
 
 #: ../../source/about/release-information/schulkonsole.rst:278
 msgid ""
@@ -476,6 +666,9 @@ msgid ""
 "sich in der oben beschriebenen Datei **wlan_defaults**. Die Schulkonsole "
 "verwendet diese Datei bzw. das Programm, um Einstellungen vorzunehmen."
 msgstr ""
+"It is used to reset settings for individual users/groups back to the default"
+" settings. The default settings are in the **wlan_defaults** file described "
+"above. The school console uses this file or the program to make settings."
 
 #: ../../source/about/release-information/schulkonsole.rst:282
 msgid ""
@@ -483,10 +676,13 @@ msgid ""
 " es den Lehrern möglich über WLAN und der Schulkonsole während des "
 "Unterrichts temporär Berechtigungen an Klassen oder Projekte zu vergeben."
 msgstr ""
+"If the group ``teachers`` is equipped with WLAN access, teachers can "
+"temporarily assign permissions to classes or projects via WLAN and the "
+"school console during lessons."
 
 #: ../../source/about/release-information/schulkonsole.rst:288
 msgid "Verwaltung Wlan via Schulkonsole"
-msgstr ""
+msgstr "WLAN Administration via School Console"
 
 #: ../../source/about/release-information/schulkonsole.rst:289
 msgid ""
@@ -495,11 +691,15 @@ msgid ""
 "`Einstellungen` `Klassen` oder `Einstellungen` `Projekte` auswählen welche/s"
 " Klasse/Projekt dauerhaft das Internet benutzen darf."
 msgstr ""
+"The **/etc/linuxmuster/wlan_defaults** file can also be changed via the "
+"school console. To do this you log in as an administrator and can select "
+"under `Settings` `Classes` or `Settings` `Projects` which class / project "
+"can use the Internet permanently."
 
 #: ../../source/about/release-information/schulkonsole.rst:293
 msgid "Wlan konfigurieren Klasse"
-msgstr ""
+msgstr "Configure WLAN for Class"
 
 #: ../../source/about/release-information/schulkonsole.rst:297
 msgid "Wlan konfigurieren Projekt"
-msgstr ""
+msgstr "Configure WLAN for Projects"

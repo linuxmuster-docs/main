@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -34,6 +34,10 @@ msgstr ""
 "In the package repository of Linuxmuster.net there is the package "
 "``linuxmuster-freeradius``. Install the package with"
 
+#: ../../source/systemadministration/network/radius/installation.rst:9
+msgid "$ apt-get install linuxmuster-freeradius"
+msgstr ""
+
 #: ../../source/systemadministration/network/radius/installation.rst:15
 msgid "Firewall konfigurieren"
 msgstr "Configure Firewall"
@@ -50,6 +54,12 @@ msgstr ""
 "``/etc/linuxmuster/allowed_ports`` and add the appropriate port in the line "
 "\"udp\"."
 
+#: ../../source/systemadministration/network/radius/installation.rst:19
+msgid ""
+"...\n"
+"udp domain, ... , 1182"
+msgstr ""
+
 #: ../../source/systemadministration/network/radius/installation.rst:24
 msgid ""
 "Damit die Änderungen auf der Firewall (IPFire) wirksam werden, geben Sie "
@@ -57,6 +67,10 @@ msgid ""
 msgstr ""
 "In order for the changes to be effective on the firewall (IPFire), please "
 "enter the following command:"
+
+#: ../../source/systemadministration/network/radius/installation.rst:26
+msgid "$ service linuxmuster-base restart"
+msgstr ""
 
 #: ../../source/systemadministration/network/radius/installation.rst:30
 msgid ""
@@ -78,6 +92,10 @@ msgstr ""
 "In the file ``/etc/freeradius/users`` remove the comment mark ( ``#``) in "
 "the following line."
 
+#: ../../source/systemadministration/network/radius/installation.rst:38
+msgid "steve  Cleartext-Password := \"testing\""
+msgstr ""
+
 #: ../../source/systemadministration/network/radius/installation.rst:42
 msgid ""
 "Als nächstes überprüft man, ob ``localhost`` in der Datei "
@@ -87,6 +105,14 @@ msgstr ""
 "Next, check if ``localhost`` is entered in the file "
 "``/etc/freeradius/clients``. This entry can be removed after the test."
 
+#: ../../source/systemadministration/network/radius/installation.rst:44
+msgid ""
+"client localhost {\n"
+"   ipaddr = 127.0.0.1\n"
+"   secret = testing123\n"
+"}"
+msgstr ""
+
 #: ../../source/systemadministration/network/radius/installation.rst:51
 msgid ""
 "Nun kann man, nach einem Neustart des Radius-Servers, die Authentifizierung "
@@ -95,9 +121,26 @@ msgstr ""
 "Now, after restarting the Radius server, you can test the authentication for"
 " this user."
 
+#: ../../source/systemadministration/network/radius/installation.rst:53
+msgid ""
+"$ service freeradius restart\n"
+"$ radtest steve testing 127.0.0.1:1182 10 testing123"
+msgstr ""
+
 #: ../../source/systemadministration/network/radius/installation.rst:58
 msgid "Als Ausgabe sollte man folgendes erhalten:"
 msgstr "The output should be as follows:"
+
+#: ../../source/systemadministration/network/radius/installation.rst:60
+msgid ""
+" $ radtest steve testing 127.0.0.1:1182 10 testing123\n"
+" Sending Access-Request of id 34 to 127.0.0.1 port 1182\n"
+"        User-Name = \"steve\"\n"
+"        User-Password = \"testing\"\n"
+"        NAS-IP-Address = 127.0.0.1\n"
+"        NAS-Port = 0\n"
+"rad_recv: Access-Accept packet from host 127.0.0.1 port 1182, id=34, length=20"
+msgstr ""
 
 #: ../../source/systemadministration/network/radius/installation.rst:70
 msgid ""
@@ -113,6 +156,14 @@ msgstr ""
 "To do so, the client (Access Point, Captive Portal Server, Wireless "
 "Controller) must be entered into the file ``/etc/freeradius/clients``. "
 "Please adjust the client name, the IP address and the password accordingly."
+
+#: ../../source/systemadministration/network/radius/installation.rst:72
+msgid ""
+"client captivePortal {\n"
+"   ipaddr = 10.16.1.254\n"
+"   secret = geheim\n"
+"}"
+msgstr ""
 
 #: ../../source/systemadministration/network/radius/installation.rst:80
 msgid "Radius-Server konfigurieren"
@@ -131,6 +182,22 @@ msgstr ""
 "be specified in the file ``/etc/freeradius/eap.conf``. Check the following "
 "settings and remove - if necessary - the comment marks."
 
+#: ../../source/systemadministration/network/radius/installation.rst:84
+msgid ""
+"eap {\n"
+"   ...\n"
+"   default_eap_type = peap\n"
+"   ...\n"
+"}\n"
+"\n"
+"...\n"
+"peap {\n"
+"   ...\n"
+"   default_eap_type = mschapv2\n"
+"   ...\n"
+"}"
+msgstr ""
+
 #: ../../source/systemadministration/network/radius/installation.rst:99
 msgid ""
 "MD5 kommt als Protokoll nicht in Frage, da die Passwörter nicht als MD5 im "
@@ -145,3 +212,10 @@ msgid ""
 msgstr ""
 "Also, check the ``auto_header`` parameter in the file "
 "``/etc/freeradius/radiusd.conf``."
+
+#: ../../source/systemadministration/network/radius/installation.rst:103
+msgid ""
+"pap {\n"
+"   auto_header = yes\n"
+"}"
+msgstr ""

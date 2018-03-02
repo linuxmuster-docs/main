@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -78,10 +78,18 @@ msgstr ""
 msgid "Aktualisieren Sie die Paketlisten:"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:40
+msgid "# aptitude update"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:44
 msgid ""
 "Installieren Sie nun Aktualisierungen und weitere Software-Pakete über das "
 "Internet:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:46
+msgid "# aptitude dist-upgrade"
 msgstr ""
 
 #: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:50
@@ -101,6 +109,20 @@ msgid ""
 " für \"Beibehalten\" an."
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:63
+msgid ""
+"Konfigurationsdatei »/etc/sudoers«\n"
+" ==> Geändert (von Ihnen oder von einem Skript) seit der Installation.\n"
+" ==> Paketverteiler hat eine aktualisierte Version herausgegeben.\n"
+"   Wie möchten Sie vorgehen? Ihre Wahlmöglichkeiten sind:\n"
+"    Y oder I : Die Version des Paket-Betreuers installieren\n"
+"    N oder O : Die momentan installierte Version beibehalten\n"
+"       D     : Die Unterschiede zwischen den Versionen anzeigen\n"
+"       Z     : Eine Shell starten, um die Situation zu begutachten\n"
+" Der Standardweg ist das Beibehalten der momentanen Version.\n"
+"*** sudoers (Y/I/N/O/D/Z) [Vorgabe=N] ? N"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:78
 msgid "Hinweise"
 msgstr ""
@@ -118,6 +140,12 @@ msgstr ""
 
 #: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:86
 msgid "Diese stellen sich bsp. wie folgt dar:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:93
+msgid ""
+"New release '14.04.1 LTS' available.\n"
+"Run 'do-release-upgrade' to upgrade to it."
 msgstr ""
 
 #: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:94
@@ -142,6 +170,26 @@ msgid ""
 " ein nicht mehr unterstützter Kernel gemeldet:"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:123
+msgid ""
+"Your current Hardware Enablement Stack (HWE) is no longer supported\n"
+"since 2014-08-07.  Security updates for critical parts (kernel\n"
+"and graphics stack) of your system are no longer available.\n"
+"\n"
+"For more information, please see:\n"
+"http://wiki.ubuntu.com/1204_HWE_EOL\n"
+"\n"
+"To upgrade to a supported (or longer supported) configuration:\n"
+"\n"
+"* Upgrade from Ubuntu 12.04 LTS to Ubuntu 14.04 LTS by running:\n"
+" sudo do-release-upgrade\n"
+"\n"
+"OR\n"
+"\n"
+"* Install a newer HWE version by running:\n"
+"sudo apt-get install <kernel-version>"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:126
 msgid ""
 "Führen Sie kein upgrade auf 14.04 LTS durch. Support wird von Ubuntu für "
@@ -160,8 +208,29 @@ msgid ""
 "aktualisieren, kann das Paket **linux-hwe-generic** genutzt werden:"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:136
+msgid ""
+"# apt-get install linux-hwe-generic\n"
+"Paketlisten werden gelesen...Fertig\n"
+"Abhängigkeitsbaum wird aufgebaut\n"
+"Statusinformationen werden eingelesen...Fertig\n"
+"Die folgenden zusätzlichen Pakete werden installiert:\n"
+"linux-headers-3.13.0-34 linux-headers-3.13.0-34-generic linux-headers-generic-lts-trusty\n"
+"linux-image-3.13.0-34-generic linux-image-generic-lts-trusty linux-image-hwe-generic\n"
+"Vorgeschlagene Pakete:\n"
+"fdutils linux-lts-trusty-doc-3.13.0 linux-lts-trusty-source-3.13.0 linux-lts-trusty-tools\n"
+"Die folgenden NEUEN Pakete werden installiert:\n"
+"linux-headers-3.13.0-34 linux-headers-3.13.0-34-generic linux-headers-generic-lts-trusty\n"
+"linux-hwe-generic linux-image-3.13.0-34-generic\n"
+"linux-image-generic-lts-trusty linux-image-hwe-generic"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:152
 msgid "Nach Ausführen des Befehls ist der Server neu zu starten"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:154
+msgid "# reboot"
 msgstr ""
 
 #: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:158
@@ -175,6 +244,10 @@ msgstr ""
 msgid ""
 "Sollte nach dem Neustart des Servers mit dem neu installierten Kernel "
 "dennoch die HWE-Meldung erscheinen, sollte nachstehender Befehl"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:162
+msgid "# hwe-support-status --show-all-unsupported"
 msgstr ""
 
 #: ../../source/systemadministration/maintenance/keep-lmn-uptodate/1-update-ubuntu-server.rst:166

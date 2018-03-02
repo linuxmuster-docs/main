@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,35 +20,43 @@ msgstr ""
 
 #: ../../source/clients/linbo/linbo-bootmedia.rst:3
 msgid "Boot-Abbild für USB-Sticks und CD/DVD"
-msgstr ""
+msgstr "Boot image for USB sticks and CD/DVD"
 
 #: ../../source/clients/linbo/linbo-bootmedia.rst:5
 msgid ""
 "Zum Brennen auf CD/DVD oder zum Kopieren auf einen USB-Stick kann man unter "
 "der Adresse"
 msgstr ""
+"For burning on CD/DVD or copying to a USB stick you can use the following "
+"address"
 
 #: ../../source/clients/linbo/linbo-bootmedia.rst:7
 msgid ""
 "https://server/linbo.iso das aktuelle LINBO herunterladen und auf einen USB-"
 "Stick oder eine CD/DVD kopieren."
 msgstr ""
+"https://server/linbo.iso download the current LINBO and copy it to a USB "
+"stick or CD/DVD."
 
 #: ../../source/clients/linbo/linbo-bootmedia.rst:10
 msgid ""
 "Das Booten eines Rechers mit einem Linbo-Stick/Linbo-CD/CVD kann nötig "
 "werden, wenn - in seltenen Fällen - Linbo nicht per PXE installiert wird."
 msgstr ""
+"It may be necessary to boot a computer with a Linbo-Stick/Linbo-CD/CVD if - "
+"in rare cases - Linbo is not installed via PXE."
 
 #: ../../source/clients/linbo/linbo-bootmedia.rst:12
 msgid ""
 "Bootet man einen Rechner vom Stick, oder von einer CD/DVD, dann sieht man "
 "folgendes Bild:"
 msgstr ""
+"If you boot a computer from the stick, or from a CD/DVD, you will see the "
+"following picture:"
 
 #: ../../source/clients/linbo/linbo-bootmedia.rst:16
 msgid "Mit ``Enter`` wird der Client gebootet"
-msgstr ""
+msgstr "With ``Enter`` the client is booted"
 
 #: ../../source/clients/linbo/linbo-bootmedia.rst:20
 msgid ""
@@ -55,9 +64,12 @@ msgid ""
 "der Rechner mit Linbo gestartet. Nach einem Neustart stehen alle Linbo-"
 "Funktionen zur Verfügung (Bild unten)."
 msgstr ""
+"With the selection ``First setup + restart`` Linbo is set up and the "
+"computer is started with Linbo. After a restart, all Linbo functions are "
+"available (picture below)."
 
 #: ../../source/clients/linbo/linbo-bootmedia.rst:23
 msgid ""
 "Mit der Auswahl ``Debugmodus`` wird im Textmodus nur bis zur Konsole "
 "gebootet."
-msgstr ""
+msgstr "Selecting ``Debug Mode`` will boot to the console in text mode only."

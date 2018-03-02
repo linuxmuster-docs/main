@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -37,6 +37,13 @@ msgstr ""
 msgid "Skriptaufrufe für Voll-, differentielles und inkrementelles Backup:"
 msgstr ""
 
+#: ../../source/addons/backupmondo/backup.rst:8
+msgid ""
+"linuxmuster-backup --full\n"
+"linuxmuster-backup --diff\n"
+"linuxmuster-backup --inc"
+msgstr ""
+
 #: ../../source/addons/backupmondo/backup.rst:14
 msgid ""
 "Desweiteren ist es möglich, das Skript mit allen Optionen auch über die "
@@ -49,10 +56,21 @@ msgstr ""
 msgid "Beispiele:"
 msgstr ""
 
+#: ../../source/addons/backupmondo/backup.rst:18
+msgid ""
+"linuxmuster-backup --full --includedirs=/home --isoprefix=home --backupdevice=/dev/sdc1\n"
+"linuxmuster-backup --diff --ipcop=no --verify=no\n"
+"linuxmuster-backup --inc --unmount=no --mediasize=700"
+msgstr ""
+
 #: ../../source/addons/backupmondo/backup.rst:24
 msgid ""
 "Einen Gesamtüberblick über die Kommandozeilenparameter von ``linuxmuster-"
 "backup`` liefert der Befehl:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/backup.rst:26
+msgid "linuxmuster-backup --help"
 msgstr ""
 
 #: ../../source/addons/backupmondo/backup.rst:31

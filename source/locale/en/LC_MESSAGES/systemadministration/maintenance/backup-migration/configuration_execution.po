@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -45,6 +45,14 @@ msgid ""
 "Erstellen und editieren Sie die Datei ``/etc/cron.d/backupservice``"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:19
+msgid ""
+"#cron.d/backupservice\n"
+"#\n"
+"# Jeden Tag um 1 Uhr nachts ein migrations-backup\n"
+"0 1 * * *   root       linuxmuster-migration-backup -d /srv/backup/server"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:21
 msgid "Pseudo-Vollbackups"
 msgstr ""
@@ -53,6 +61,10 @@ msgstr ""
 msgid ""
 "Mit Hilfe des Werkzeuges `rsnapshot` kann eine Versionierung des Backupziels"
 " erfolgen. Dazu installieren Sie zunächst rsnapshot:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:28
+msgid "apt-get install rsnapshot"
 msgstr ""
 
 #: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:29
@@ -72,6 +84,17 @@ msgstr ""
 msgid ""
 "Um hierfür eine Versionierung einzurichten find folgende Einträge in "
 "``/etc/rsnapshot.conf`` vorzunehmen:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:46
+msgid ""
+"snapshot_root»  /srv/backup/rsnapshot/$\n"
+"retain» »       daily»  15$\n"
+"retain» »       monthly»        12$\n"
+"###############################$\n"
+"###·BACKUP·POINTS·/·SCRIPTS·###$\n"
+"###############################$\n"
+"backup» /srv/backup/server/»     server/$"
 msgstr ""
 
 #: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:47
@@ -100,6 +123,16 @@ msgid ""
 "wäre:"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:64
+msgid ""
+"# Jeden Tag um 3.42 Uhr ein Pseudo-Vollbackup erstellen\n"
+"42 3 * * *   root        /usr/bin/rsnapshot daily > /tmp/backupdaily.$$.log 2>&1\n"
+"\n"
+"# Alle zwei wochen am 1. und 15. des Monats  um 5.42 Uhr noch ein Backup\n"
+"42 5 1 * *      root    /usr/bin/rsnapshot monthly > /tmp/backupmonthly.$$.log 2>&1\n"
+"42 5 15 * *     root    /usr/bin/rsnapshot monthly > /tmp/backupmonthly.$$.log 2>&1"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:65
 msgid ""
 "Diese Einstellung hat zur Folge, dass die täglichen Backups der letzten 15 "
@@ -110,4 +143,22 @@ msgstr ""
 msgid ""
 "Das Verzeichnis der Pseudo-Vollbackups sollte dann nach einiger Zeit "
 "folgende Struktur haben:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/configuration_execution.rst:89
+msgid ""
+"ls -lt /srv/backup/rsnapshot/\n"
+"insgesamt 64\n"
+"drwxr-xr-x 6 root root 4096 Okt  5 04:41 daily.0\n"
+"drwxr-xr-x 6 root root 4096 Okt  4 04:41 daily.1\n"
+"drwxr-xr-x 6 root root 4096 Okt  3 04:42 daily.2\n"
+"drwxr-xr-x 6 root root 4096 Okt  2 04:34 daily.3\n"
+"drwxr-xr-x 6 root root 4096 Okt  1 04:42 daily.4\n"
+"drwxr-xr-x 6 root root 4096 Okt  1 06:33 monthly.0\n"
+"drwxr-xr-x 6 root root 4096 Sep 30 04:39 daily.5\n"
+"drwxr-xr-x 6 root root 4096 Sep 29 04:41 daily.6\n"
+"drwxr-xr-x 6 root root 4096 Sep 28 04:55 daily.7\n"
+"#...\n"
+"drwxr-xr-x 6 root root 4096 Sep 22 04:44 daily.13\n"
+"drwxr-xr-x 6 root root 4096 Sep 21 04:38 daily.14"
 msgstr ""

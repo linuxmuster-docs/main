@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -95,8 +95,18 @@ msgstr ""
 msgid "Die Anmeldedaten für die Appliance sind"
 msgstr ""
 
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:56
+msgid ""
+"Benutzer: coovaadmin\n"
+"Passwort: muster"
+msgstr ""
+
 #: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:59
 msgid "Nach der ersten Anmeldung muss der Befehl"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:61
+msgid "# linuxmuster-chilli-turnkey"
 msgstr ""
 
 #: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:65
@@ -117,18 +127,38 @@ msgstr ""
 msgid "Auf dem Chilli-Server muss der Repo-Schlüssel importiert werden:"
 msgstr ""
 
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:77
+msgid ""
+"# wget -q http://pkg.linuxmuster.net/linuxmuster.net.key -O - | apt-key add "
+"-"
+msgstr ""
+
 #: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:81
 msgid ""
 "Eine neue Datei ``/etc/apt/sources.list.d/linuxmuster-chilli.list`` anlegen "
 "und die folgende Zeile eintragen:"
 msgstr ""
 
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:84
+msgid ""
+"# linuxmuster-chilli Pakete\n"
+"deb http://pkg.linuxmuster.net/ precise-chilli/"
+msgstr ""
+
 #: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:89
 msgid "Aktualisieren der Paketliste mit"
 msgstr ""
 
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:91
+msgid "# apt-get update"
+msgstr ""
+
 #: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:95
 msgid "Installation bzw. Update des Paketes mit"
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:97
+msgid "# apt-get install linuxmuster-chilli"
 msgstr ""
 
 #: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:101
@@ -149,9 +179,45 @@ msgid ""
 "folgendermaßen aus:"
 msgstr ""
 
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:113
+msgid ""
+"# This file describes the network ...\n"
+"# and how to activate them. For more information, see interfaces(5).\n"
+"#\n"
+"\n"
+"# The loopback network\n"
+"auto lo\n"
+"iface lo inet loopback\n"
+"\n"
+"# These interfaces are brought up automatically\n"
+"auto eth0\n"
+"iface eth0 inet dhcp"
+msgstr ""
+
 #: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:127
 msgid ""
 "Ebenso kann man, sofern man den :ref:`DHCP-Adressbereich <chillispot-dhcp-"
 "server-label>` geändert hat, kann man dem CoovaChilli-Server auch eine "
 "statische IP-Adresse geben, z.B."
+msgstr ""
+
+#: ../../source/systemadministration/network/coovawifi/chillispot-installation.rst:131
+msgid ""
+"# This file describes the network ...\n"
+"# and how to activate them. For more information, see interfaces(5).\n"
+"#\n"
+"\n"
+"# The loopback network\n"
+"auto lo\n"
+"iface lo inet loopback\n"
+"\n"
+"auto eth0\n"
+"iface eth0 inet static\n"
+"address 172.16.16.1\n"
+"netmask 255.255.255.0\n"
+"network 172.16.16.0\n"
+"broadcast 172.16.16.255\n"
+"gateway 172.16.16.254\n"
+"dns-nameservers 172.16.16.254\n"
+"dns-search linuxmuster-net.lokal"
 msgstr ""

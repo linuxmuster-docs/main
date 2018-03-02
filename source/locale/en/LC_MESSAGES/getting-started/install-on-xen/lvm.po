@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -47,9 +47,17 @@ msgstr ""
 "Enter the following command on the server to create and edit a repository "
 "list:"
 
+#: ../../source/getting-started/install-on-xen/lvm.rst:15
+msgid "$ nano /etc/apt/sources.list.d/netzint.list"
+msgstr ""
+
 #: ../../source/getting-started/install-on-xen/lvm.rst:23
 msgid "Schreiben Sie in die Datei folgende Zeile:"
 msgstr "Enter the following line in the file:"
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:25
+msgid "deb http://pkg.netzint.de/ precise main"
+msgstr ""
 
 #: ../../source/getting-started/install-on-xen/lvm.rst:33
 msgid ""
@@ -69,14 +77,28 @@ msgstr ""
 "Enter the following commands in the console and confirm each with `` "
 "Enter``:"
 
+#: ../../source/getting-started/install-on-xen/lvm.rst:37
+msgid ""
+"$ wget http://pkg.netzint.de/netzint.pub.key\n"
+"$ apt-key add netzint.pub.key"
+msgstr ""
+
 #: ../../source/getting-started/install-on-xen/lvm.rst:46
 #: ../../source/getting-started/install-on-xen/lvm.rst:58
 msgid "Schreiben Sie den Befehl"
 msgstr "Enter the command"
 
+#: ../../source/getting-started/install-on-xen/lvm.rst:48
+msgid "$ apt-get update"
+msgstr ""
+
 #: ../../source/getting-started/install-on-xen/lvm.rst:52
 msgid "in die Konsole und drücken ``Enter``."
 msgstr "in the console and press ``Enter``."
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:60
+msgid "$ apt-get install netzint-lmntoolbox"
+msgstr ""
 
 #: ../../source/getting-started/install-on-xen/lvm.rst:64
 msgid ""
@@ -88,10 +110,18 @@ msgstr "in the console and press ``Enter``. Continue with ``Y``."
 msgid "Erstellen Sie die Grundkonfigurationsdateien mit dem Befehl"
 msgstr "Create the basic configuration files with the command"
 
+#: ../../source/getting-started/install-on-xen/lvm.rst:72
+msgid "$ /usr/share/netzint/tools/createdefaults.sh"
+msgstr ""
+
 #: ../../source/getting-started/install-on-xen/lvm.rst:80
 #: ../../source/getting-started/install-on-xen/lvm.rst:227
 msgid "Mit dem Befehl"
 msgstr "The command"
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:82
+msgid "$ nano /usr/share/netzint/etc/main.cfg"
+msgstr ""
 
 #: ../../source/getting-started/install-on-xen/lvm.rst:86
 msgid "können Sie die Grundeinstellungen für einige Tools bearbeiten."
@@ -210,6 +240,10 @@ msgstr "Open a root console on the XenServer."
 msgid "Geben Sie den Befehl"
 msgstr "Enter the command"
 
+#: ../../source/getting-started/install-on-xen/lvm.rst:165
+msgid "$ xe vm-disk-list vm=lmn62.server"
+msgstr ""
+
 #: ../../source/getting-started/install-on-xen/lvm.rst:169
 msgid "ein und bestätigen Sie mit ``Enter``."
 msgstr "and confirm with ``Enter``."
@@ -235,6 +269,10 @@ msgstr ""
 "You must look for the Virtual Disk (VDI) thats label ends with ``..._var``. "
 "Write down the first letters of the UUID."
 
+#: ../../source/getting-started/install-on-xen/lvm.rst:186
+msgid "$ xe vdi-resize uuid=<UUID> disk-size=XXXGiB"
+msgstr ""
+
 #: ../../source/getting-started/install-on-xen/lvm.rst:190
 msgid "ein und bestätigen mit ``Enter``."
 msgstr "and confirm with ``Enter``."
@@ -255,6 +293,10 @@ msgstr "Repeat the process for the VDI ``..._home``."
 msgid "Starten Sie nun die VM mit dem Befehl"
 msgstr "Now start the VM with the command"
 
+#: ../../source/getting-started/install-on-xen/lvm.rst:203
+msgid "$ xe vm-start vm=lmn62.server"
+msgstr ""
+
 #: ../../source/getting-started/install-on-xen/lvm.rst:213
 msgid "Expandieren des LVMs auf dem Server"
 msgstr "Expanding the LVMs on the server"
@@ -266,6 +308,16 @@ msgid ""
 msgstr ""
 "Enter the following commands in the console of the server and confirm each "
 "with ``Enter``:"
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:217
+msgid ""
+"$ /usr/share/netzint/tools/resize.sh --home\n"
+"$ /usr/share/netzint/tools/resize.sh --var"
+msgstr ""
+
+#: ../../source/getting-started/install-on-xen/lvm.rst:229
+msgid "$ df –lh"
+msgstr ""
 
 #: ../../source/getting-started/install-on-xen/lvm.rst:233
 msgid "können Sie die Speichergröße überprüfen."

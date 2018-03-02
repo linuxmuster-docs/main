@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +20,7 @@ msgstr ""
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:6
 msgid "Der LINBO Startbildschirm"
-msgstr ""
+msgstr "The LINBO home screen"
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:8
 msgid ""
@@ -27,74 +28,82 @@ msgid ""
 " LINBO und zeigt folgenden Bildschirm, wenn der PC noch nicht aufgenommen / "
 "registriert wurde."
 msgstr ""
+"If the workstation computer (client PC) is booted via the network, LINBO "
+"starts and displays the following screen if the PC has not yet been recorded"
+" / registered."
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:14
 msgid "Linbo Startbildschirm eines nicht aufgenommenen Clients"
-msgstr ""
+msgstr "Linbo Startup screen of a non-registered client"
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:17
 msgid ""
 "Sobald der Client registriert wurde, zeigt der Startbildschirm weitere "
 "Optionen an."
 msgstr ""
+"Once the client is registered, the Start screen will display more options."
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:22
 msgid "Linbo Startbildschirm eines aufgenommenen Clients"
-msgstr ""
+msgstr "Linbo start screen of a registered client"
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:25
 msgid "Informationen"
-msgstr ""
+msgstr "Information"
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:27
 msgid "Im oberen Teil in LINBO werden Informationen zum Client angezeigt."
-msgstr ""
+msgstr "The upper part of LINBO displays information about the client."
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:30
 msgid "Host"
-msgstr ""
+msgstr "Host"
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:30
 msgid ""
 "Der festgelegte Hostname oder \"pxeclient\", wenn der Client nicht "
 "registriert ist."
-msgstr ""
+msgstr "The specified hostname or \"pxeclient\" if the client is not registered."
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:33
 msgid "Gruppe"
-msgstr ""
+msgstr "Group"
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:33
 msgid "Die festgelegte Hardwareklasse"
-msgstr ""
+msgstr "The specified group / hardware class"
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:37
 msgid "IP, MAC"
-msgstr ""
+msgstr "IP, MAC"
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:36
 msgid ""
 "Die festgelegten Netzwerkadressen oder \"OFFLINE\", wenn der Client ohne "
 "Netzwerkverbindung zum Server gestartet wurde."
 msgstr ""
+"The specified network addresses or \"OFFLINE\" if the client was started "
+"without a network connection to the server."
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:41
 msgid "HD, CPU, RAM"
-msgstr ""
+msgstr "HD, CPU, RAM"
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:40
 msgid ""
 "Zeigt die entsprechend verbaute Hardware des Clients an: Festplattengröße, "
 "Prozessor und Hauptspeicherinformationen"
 msgstr ""
+"Displays the corresponding hardware installed on the client: disk size, "
+"processor and main memory information."
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:44
 msgid "Cache"
-msgstr ""
+msgstr "Cache"
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:44
 msgid "Zeigt die freie/gesamte Partitionsgröße der Cache-Partition an."
-msgstr ""
+msgstr "Displays the free/total partition size of the cache partition."
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:46
 msgid ""
@@ -102,22 +111,26 @@ msgid ""
 "Teil Status- und Rückmeldungen der einzelnen Aktionen in einem scrollbaren "
 "Texftfeld angezeigt, die bei einer Fehlersuche Informationen liefern können."
 msgstr ""
+"In addition to the (probably) current time on the client, the status and "
+"feedback messages of the individual actions are displayed in a scrollable "
+"text field in the lower part of the screen, which can provide information "
+"during troubleshooting."
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:52
 msgid "Reboot"
-msgstr ""
+msgstr "Reboot"
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:57
 msgid "erzwingt einen Neustart und"
-msgstr ""
+msgstr "forces a restart and"
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:61
 msgid "lässt den Client herunterfahren."
-msgstr ""
+msgstr "shuts down the client."
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:65
 msgid "Start-Reiter"
-msgstr ""
+msgstr "Start tab"
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:67
 msgid ""
@@ -125,10 +138,13 @@ msgid ""
 "Start-Reiter ein großer Knopf und vier kleinere Knöpfe mit folgenden "
 "Bedeutungen"
 msgstr ""
+"For each fixed partition (with or without an operating system) a big button "
+"and four smaller buttons with the following meanings appear in the Start "
+"tab."
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:73
 msgid "Sync+Start Knopf"
-msgstr ""
+msgstr "Sync+Start button"
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:75
 msgid ""
@@ -137,65 +153,79 @@ msgid ""
 "Linux-Systemen werden Hostname und Rootpartition gepatcht. Falls ein neueres"
 " Abbild auf dem Server liegt, wird dies zunächst heruntergeladen."
 msgstr ""
+"synchronizes the system with the last current image. A provided registry "
+"patch file is applied to Windows systems. On Linux systems hostname and root"
+" partition are patched. If there is a newer image on the server, this will "
+"be downloaded first."
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:83
 msgid "Start Knopf"
-msgstr ""
+msgstr "Start button"
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:85
 msgid ""
 "startet das System im aktuellen Zustand, unsynchronisiert, keine Patches "
 "werden angewandt."
 msgstr ""
+"the system starts in the current state, unsynchronized, no patches are "
+"applied."
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:90
 msgid "Neu+Start Knopf"
-msgstr ""
+msgstr "New+Start button"
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:92
 msgid ""
 "formatiert die relevante Partition neu, synchronisiert das System von Grund "
 "auf mit dem aktuellen Image und startet das System wie bei \"Sync+Start\"."
 msgstr ""
+"reformats the relevant partition, synchronizes the system from scratch with "
+"the current image and starts the system like Sync+Start."
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:98
 msgid "Information"
-msgstr ""
+msgstr "Information"
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:100
 msgid "zeigt Informationen über das aktuell hinterlegte Abbild an."
-msgstr ""
+msgstr "displays information about the currently stored image."
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:104
 msgid "Standardknopf Ubuntu"
-msgstr ""
+msgstr "Standard Button Ubuntu"
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:108
 msgid "Standardknopf Windows"
-msgstr ""
+msgstr "Standard Button Windows"
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:110
 msgid "führt die Startmethode aus, die als solche definiert wurde."
-msgstr ""
+msgstr "executes the start method defined as such."
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:114
 msgid ""
 "Die einzelnen Schaltflächen für die Startmechanismen können auch ausgegraut "
 "sein, wenn der Administrator den jeweiligen Mechanismus deaktiviert hat."
 msgstr ""
+"The individual buttons for the start mechanisms can be greyed out if the "
+"administrator has deactivated the respective mechanism."
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:120
 msgid "Imaging-Reiter"
-msgstr ""
+msgstr "imaging tab"
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:122
 msgid ""
 "Hier können die Abbilder (Images) verwaltet werden. Der Bereich ist mit dem "
 "Passwort von \"LINBO\" abgesichert."
 msgstr ""
+"Here you can manage the images. The area is protected with the password of "
+"\"LINBO\"."
 
 #: ../../source/clients/linbo/linbo-mainscreen.rst:129
 msgid ""
 "Bei der Eingabe des LINBO-Passwortes werden keine Zeichen angezeigt, weder "
 "das Passwort selbst, noch Sterne."
 msgstr ""
+"When entering the LINBO password, no characters are displayed, neither the "
+"password itself nor stars."

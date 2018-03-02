@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -105,6 +105,14 @@ msgid ""
 "nachinstallieren:"
 msgstr ""
 
+#: ../../source/appendix/contribute/docs/new.rst:31
+msgid ""
+"$ sudo apt install git\n"
+"$ sudo apt install python3-pip\n"
+"$ pip3 install sphinx\n"
+"$ pip3 install sphinx_rtd_theme"
+msgstr ""
+
 #: ../../source/appendix/contribute/docs/new.rst:38
 msgid ""
 "Nachfolgende Befehle gehen davon aus, dass die virtuelle Umgebung verwendet "
@@ -121,6 +129,21 @@ msgid ""
 "offiziellen Repositorium bauen und betrachten. Öffne dazu ein Terminal, "
 "navigiere zum Ordner `linuxmuster-docs/main`, führe `make html` aus und "
 "führe `xdg-open build/html/index.html` aus, um das Ergebnis zu betrachten."
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:48
+msgid ""
+"linuxadmin@lmn-docs:~$ cd linuxmuster-docs/\n"
+"linuxadmin@lmn-docs:~/linuxmuster-docs$ cd main/\n"
+"linuxadmin@lmn-docs:~/linuxmuster-docs/main$ git pull\n"
+"...\n"
+"linuxadmin@lmn-docs:~/linuxmuster-docs/main$ make html\n"
+"sphinx-build -b html -d build/doctrees   source build/html\n"
+"Running Sphinx v1.6.5\n"
+"loading translations [de_DE]... done\n"
+"loading pickled environment... done\n"
+"...\n"
+"linuxadmin@lmn-docs:~/linuxmuster-docs/main$ xdg-open build/html/index.html"
 msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:63
@@ -147,28 +170,42 @@ msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:78
 msgid ""
-"Öffnen Sie die `linuxmuster.net Dokumentation auf Github <https://github.com"
-"/linuxmuster-docs/main>`_ und klicken Sie auf \"Fork\"."
+"Öffne  die `linuxmuster.net Dokumentation auf Github <https://github.com"
+"/linuxmuster-docs/main>`_ und klicke auf \"Fork\"."
 msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:84
 msgid ""
-"Öffnen Sie nun einen Terminal / Eingabeauffoderung (``Strg+Alt+t`` in "
-"Ubuntu) and geben Sie folgenden Befehl ein:"
+"Öffne nun ein Terminal / eine Eingabeauffoderung (``Strg+Alt+t`` in Ubuntu) "
+"and gib folgenden Befehl ein:"
 msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:87
 msgid ""
-"Nutzen Sie die URL ``git@github.com:lmn-docs-bot/main.git`` falls Sie "
-"bereits einen SSH-Schlüssel bei Github hochgeladen haben!"
+"Nutze die URL ``git@github.com:lmn-docs-bot/main.git`` falls du bereits "
+"einen SSH-Schlüssel bei Github hochgeladen hast!"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:89
+msgid ""
+"linuxadmin@lmn-docs:~$ git clone https://github.com/lmn-docs-bot/main.git my-docs\n"
+"Klone nach 'my-docs' ...\n"
+"...\n"
+"linuxadmin@lmn-docs:~$ cd my-docs"
 msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:96
-msgid "Sie können nun mit"
+msgid "Du kannst nun mit"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:98
+msgid ""
+"linuxadmin@lmn-docs:~/my-docs$ make html\n"
+"linuxadmin@lmn-docs:~/my-docs$ xdg-open build/html/index.html"
 msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:103
-msgid "die Dokumentation in HTML übersetzen und in ihrem Browser öffnen."
+msgid "die Dokumentation in HTML übersetzen und in deinem Browser öffnen."
 msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:106
@@ -178,30 +215,35 @@ msgstr ""
 #: ../../source/appendix/contribute/docs/new.rst:108
 msgid ""
 "Die Dokumentation ist in der Markupsprache \"rST\" geschrieben. `Hier "
-"<http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_ finden Sie "
+"<http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_ findest du "
 "einen guten Überblick über die am häufigsten verwendeten Elemente."
 msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:111
 msgid ""
-"Bitte beachten Sie auch unbedingt die :doc:`Leitlinien zur Dokumentation "
+"Bitte beachte auch unbedingt die :doc:`Leitlinien zur Dokumentation "
 "<guidelines>`, damit ihre Änderungen schnell eingepflegt werden könnnen!"
 msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:113
 msgid ""
 "Im Verzeichnis ``source`` und den entsprechenden Unterordnern befinden sich "
-"alle Dokumentationsdateien. Öffnen Sie einfach eine dieser Dateien und "
-"nehmen Sie die gewünschten Änderungen vor. Sie können auch eine neue "
-"Dokumentation in einem der Unterordner anlegen. Erstellen Sie dazu einfach "
-"einen Ordner mit einem passenden Namen und die notwendige ``index.rst`` "
-"Datei."
+"alle Dokumentationsdateien. Öffne einfach eine dieser Dateien und nimm die "
+"gewünschten Änderungen vor. Du kannst auch eine neue Dokumentation in einem "
+"der Unterordner anlegen. Erstelle dazu einfach einen Ordner mit einem "
+"passenden Namen und die notwendige ``index.rst`` Datei."
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:115
+msgid ""
+"$ mkdir source/howto/foobar\n"
+"$ touch source/howto/foobar/index.rst"
 msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:120
 msgid ""
-"Schauen Sie sich auch die anderen Dokumentationsdateien an, um mehr über den"
-" Aufbau und Syntax zu lernen."
+"Schaue dir auch die anderen Dokumentationsdateien an, um mehr über den "
+"Aufbau und Syntax zu lernen."
 msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:123
@@ -210,27 +252,41 @@ msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:125
 msgid ""
-"Haben Sie alle Änderungen vorgenommen, können Sie sie nun zur Überprüfung "
+"Hast du alle Änderungen vorgenommen, kannst du sie nun zur Überprüfung "
 "einreichen. Dazu sind folgende Schritte notwendig:"
 msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:129
 msgid ""
-"Überprüfen Sie bitte zuerst, ob ``make html`` ohne Fehler durchläuft! Falls "
-"nicht, beheben Sie bitte alle Fehler und Warnungen, bevor Sie Ihre "
-"Änderungen hochladen!"
+"Überprüfe bitte zuerst selbst, ob ``make clean; make html`` ohne Fehler "
+"durchläuft! Falls nicht, behebe bitte alle Fehler und Warnungen, bevor du "
+"deine Änderungen hochlädst!"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:133
+msgid "$ make clean; make html"
 msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:137
 msgid ""
-"Falls Sie neue Dateien oder Ordner erstellt haben, müssen diese noch "
+"Falls du neue Dateien oder Ordner erstellt hast, müssen diese noch "
 "hinzugefügt werden:"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:139
+msgid "$ git add source/howto/foobar"
 msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:143
 msgid ""
-"Geben Sie nun noch einen Kommentar zu Ihren Änderungen ein und laden Sie "
-"alles in Ihren Fork hoch:"
+"Gib nun noch einen Kommentar zu deinen Änderungen ein und lade alles in "
+"deinen Fork hoch:"
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:145
+msgid ""
+"$ git commit -a -m\"My great documentation update\"\n"
+"$ git push"
 msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:151
@@ -239,49 +295,64 @@ msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:153
 msgid ""
-"Erstellen Sie nun einen \"Pull-Request\" unter `<https://github.com/lmn-"
-"docs-bot/main>`_, indem Sie auf \"New Pull Request\" klicken."
+"Erstelle nun einen \"Pull-Request\" aus deinem eigenen Fork "
+"`<https://github.com/lmn-docs-bot/main>`_ (ersetze hier \"lmn-docs-bot\" "
+"durch deinen eigenen github-Namen), indem du auf \"New Pull Request\" "
+"klickst."
 msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:159
 msgid ""
-"Wenn Sie weitere Änderungen vornehmen und mit ``git commit -a -m\"My "
-"comment\"`` und ``git push`` bei Github hochladen, werden diese Änderungen "
-"automatisch dem Pull Request hinzugefügt."
+"Wenn du weitere Änderungen vornimmst und mit ``git commit -a -m\"My "
+"comment\"`` und ``git push`` bei Github hochlädst, werden diese Änderungen "
+"automatisch dem Pull Request hinzugefügt, so lange, bis der Pull Request "
+"akzeptiert wird."
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:163
-msgid "Den eigenen Fork aktualisieren"
+#: ../../source/appendix/contribute/docs/new.rst:161
+msgid ""
+"Wenn der Pull Request akzeptiert wurde: Herzlichen Glückwunsch! Falls ein "
+"\"Review\" erstellt wird und du gebeten wirst, Änderungen vorzunehmen, dann "
+"kannst du die Änderungen einfach mit \"commit\" und \"push\" ebenfalls "
+"hochladen und so den Pull Request verbessern."
 msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:165
-msgid ""
-"Um später weiter Änderungen vornehmen zu können, kann der eigene Fork bei "
-"GitHub komplett gelöscht werden und ein neuer erzeugt werden. Alternativ "
-"kann der eigene Fork auf den Stand des offiziellen Repositoriums gebracht "
-"werden:"
+msgid "Den eigenen Fork aktualisieren"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:170
+#: ../../source/appendix/contribute/docs/new.rst:167
+msgid ""
+"Um später weitere Änderungen vornehmen zu können, kann der eigene Fork bei "
+"GitHub komplett gelöscht werden und ein neuer erzeugt werden. Alternativ "
+"kann der eigene Fork auf den Stand des offiziellen Repositoriums gebracht "
+"werden. Das läuft so ab: Eigene neue Änderungen verstecken, dann einmalig "
+"die original-Quellen hinzufügen, dann die Originalversion herunterladen, "
+"dann diese Version in den eigenen Fork hochladen, dann eventuell eigene "
+"Änderungen wieder aus dem Versteck holen. Und dann kann man wie oben "
+"weitermachen."
+msgstr ""
+
+#: ../../source/appendix/contribute/docs/new.rst:172
 msgid ""
 "Verschiebe alle lokalen Änderungen mit ``git stash`` in den Hintergrund"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:176
+#: ../../source/appendix/contribute/docs/new.rst:178
 msgid "Füge (einmalig) einen remote-tracking branch hinzu:"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:182
+#: ../../source/appendix/contribute/docs/new.rst:184
 msgid "Hole und merge den aktuellen offiziellen branch:"
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:191
+#: ../../source/appendix/contribute/docs/new.rst:193
 msgid ""
 "Wenn der merge nicht in einem \"Fast-forward\" endet, sollte man besser den "
 "Fork löschen und neu erzeugen. Andernfalls kann man jetzt die offiziellen "
-"Änderungen hochladen."
+"Änderungen in seinen eigenen Fork hochladen."
 msgstr ""
 
-#: ../../source/appendix/contribute/docs/new.rst:199
+#: ../../source/appendix/contribute/docs/new.rst:201
 msgid "Jetzt kann man seine lokale Änderungen wieder hervorholen"
 msgstr ""

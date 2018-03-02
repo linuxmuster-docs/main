@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -49,8 +49,22 @@ msgstr ""
 msgid "Die Paketquelle lautet:"
 msgstr ""
 
+#: ../../source/addons/backupmondo/installation.rst:17
+msgid ""
+"# Quellen für mondorescue\n"
+"#deb ftp://ftp.mondorescue.org/ubuntu 12.04 contrib\n"
+"# deb-src ftp://ftp.mondorescue.org/ubuntu 12.04 contrib\n"
+"# Quellen für mondorescue Testversion\n"
+"deb ftp://ftp.mondorescue.org/test/ubuntu 12.04 contrib\n"
+"# deb-src ftp://ftp.mondorescue.org/test/ubuntu 12.04 contrib"
+msgstr ""
+
 #: ../../source/addons/backupmondo/installation.rst:26
 msgid "Zusätzlich muss noch ein Link gesetzt werden:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/installation.rst:28
+msgid "ln -s /sbin/parted2fdisk /usr/sbin/parted2fdisk"
 msgstr ""
 
 #: ../../source/addons/backupmondo/installation.rst:34
@@ -59,16 +73,31 @@ msgid ""
 "installiert werden:"
 msgstr ""
 
+#: ../../source/addons/backupmondo/installation.rst:36
+msgid ""
+"wget ftp://ftp.mondorescue.org/ubuntu/12.04/mondorescue.pubkey\n"
+"apt-key add mondorescue.pubkey\n"
+"rm mondorescue.pubkey"
+msgstr ""
+
 #: ../../source/addons/backupmondo/installation.rst:43
 msgid ""
 "Nun aktualisieren wir die Paketlisten, damit dem System bekannt wird, welche"
 " zusätzlichen Pakete zur Verfügung stehen:"
 msgstr ""
 
+#: ../../source/addons/backupmondo/installation.rst:45
+msgid "apt-get update"
+msgstr ""
+
 #: ../../source/addons/backupmondo/installation.rst:50
 msgid ""
 "Schließlich installieren wir das Paket, welches das Backup-Programm zur "
 "Verfügung stellt und mondo mit installiert:"
+msgstr ""
+
+#: ../../source/addons/backupmondo/installation.rst:52
+msgid "apt-get install linuxmuster-backup"
 msgstr ""
 
 #: ../../source/addons/backupmondo/installation.rst:56

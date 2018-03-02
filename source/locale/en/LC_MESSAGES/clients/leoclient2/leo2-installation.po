@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -35,12 +35,28 @@ msgstr ""
 msgid "link um Quellen einzutragen statt folgendes ..."
 msgstr ""
 
+#: ../../source/clients/leoclient2/leo2-installation.rst:12
+msgid ""
+"# wget http://pkg.linuxmuster.net/linuxmuster.net.key -O - | sudo apt-key "
+"add -"
+msgstr ""
+
 #: ../../source/clients/leoclient2/leo2-installation.rst:16
 msgid "In /etc/apt/sources.list eintragen:"
 msgstr ""
 
+#: ../../source/clients/leoclient2/leo2-installation.rst:18
+msgid "deb http://pkg.linuxmuster.net/ xenial/"
+msgstr ""
+
 #: ../../source/clients/leoclient2/leo2-installation.rst:22
 msgid "Installation der Pakete auf dem Linuxclient mit folgenden Befehlen:"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-installation.rst:24
+msgid ""
+"# sudo apt-get update\n"
+"# sudo apt-get install leoclient2-leovirtstarter-client leoclient2-vm-printer"
 msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-installation.rst:30
@@ -110,6 +126,11 @@ msgid ""
 "könnte dann wie folgt aussehen:"
 msgstr ""
 
+#: ../../source/clients/leoclient2/leo2-installation.rst:67
+msgid ""
+"*;*;*;Al0000-2400;dialout,cdrom,floppy,audio,dip,video,plugdev,scanner,vboxusers"
+msgstr ""
+
 #: ../../source/clients/leoclient2/leo2-installation.rst:71
 msgid "Lokale Benutzer"
 msgstr ""
@@ -118,6 +139,10 @@ msgstr ""
 msgid ""
 "Auch lokale Benutzer am Linuxclient (z.B. ``linuxadmin``) müssen der Gruppe "
 "``vboxusers`` hinzugefügt werden. Für lokale Benutzer erfolgt das mit"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-installation.rst:77
+msgid "# sudo adduser linuxadmin vboxusers"
 msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-installation.rst:81
@@ -156,14 +181,30 @@ msgid ""
 "client-extras`` Skripte wie folgt:"
 msgstr ""
 
+#: ../../source/clients/leoclient2/leo2-installation.rst:104
+msgid ""
+"# sudo linuxmuster-client-extras-setup --type login --on /usr/bin/run-vm-printer2-splitter\n"
+"# sudo linuxmuster-client-extras-setup --type login --on /usr/bin/run-vm-printer2-spooler"
+msgstr ""
+
 #: ../../source/clients/leoclient2/leo2-installation.rst:109
 msgid "Überprüft werden kann das mit"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-installation.rst:111
+msgid "# sudo linuxmuster-client-extras-setup --type login -i"
 msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-installation.rst:115
 msgid ""
 "Ohne den Standard-Linux-Client kann man mit folgenden Befehlen einen "
 "ähnlichen Effekt erzielen:"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-installation.rst:118
+msgid ""
+"# sudo install -oroot -groot --mode=0644 /usr/share/leovirtstarter2/desktop/leoclient2-splitter.desktop  /etc/xdg/autostart\n"
+"# sudo install -oroot -groot --mode=0644 /usr/share/leovirtstarter2/desktop/leoclient2-spooler.desktop  /etc/xdg/autostart"
 msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-installation.rst:123

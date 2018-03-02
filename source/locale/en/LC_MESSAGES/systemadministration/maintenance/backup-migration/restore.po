@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -30,6 +30,10 @@ msgid ""
 "Wurde das Backup in der Verzeichnis ``/srv/backup/server`` mit dem Befehl"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/backup-migration/restore.rst:14
+msgid "linuxmuster-migration-backup -d /srv/backup/server"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/backup-migration/restore.rst:15
 msgid ""
 "ausgeführt, dann finden sich Dateien unterhalb des Verzeichnisses "
@@ -48,6 +52,12 @@ msgid ""
 "Kopierbefehl an:"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/backup-migration/restore.rst:25
+msgid ""
+"cp -a /srv/backup/server/filesystem/home/teachers/loescher/wichtigedaten.txt"
+" /home/teachers/loescher/"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/backup-migration/restore.rst:26
 msgid ""
 "Der Befehl kopiert die Datei ``wichtigedaten.txt`` aus dem "
@@ -58,6 +68,10 @@ msgstr ""
 
 #: ../../source/systemadministration/maintenance/backup-migration/restore.rst:30
 msgid "Um alle Daten wiederherzustellen, geben Sie an:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/restore.rst:35
+msgid "cp -aR /srv/backup/server/filesystem/* /"
 msgstr ""
 
 #: ../../source/systemadministration/maintenance/backup-migration/restore.rst:36
@@ -74,6 +88,26 @@ msgstr ""
 msgid ""
 "Auf dem neuen System werden alle gesicherten Daten mithilfe des Shell-Skript"
 " ``linuxmuster-migration-restore`` wiederhergestellt"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/backup-migration/restore.rst:62
+msgid ""
+"server ~ # linuxmuster-migration-restore -h\n"
+"\n"
+"Usage: linuxmuster-migration-restore <options>\n"
+"\n"
+"Options:\n"
+"\n"
+"-c <config dir>     Path to directory with config files (optional).\n"
+"                    Per default we look in source dir for them.\n"
+"-d <source dir>     Path to source directory (mandatory,\n"
+"                    where the restore files live).\n"
+"-i <password>       Firewall root password (optional). If not given you\n"
+"                    will be asked for it.\n"
+"-t <temp dir>       Path to directory where the restore files are\n"
+"                    temporarily stored in case the source dir is on a\n"
+"                    nfs share (optional, must exist).\n"
+"-h                  Show this help."
 msgstr ""
 
 #: ../../source/systemadministration/maintenance/backup-migration/restore.rst:63

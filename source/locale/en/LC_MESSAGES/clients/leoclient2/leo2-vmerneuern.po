@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -59,6 +59,10 @@ msgstr ""
 msgid ""
 "Nach dem Aufruf des Skripts ``leoclient2-base-snapshot-renew`` mit root-"
 "Rechten"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:26
+msgid "$ sudo leoclient2-base-snapshot-renew"
 msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-vmerneuern.rst:30
@@ -121,6 +125,17 @@ msgid ""
 "-487c-a05a-e82b8918c834}.vdi``, erscheint in der Konsolenausgabe."
 msgstr ""
 
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:68
+msgid ""
+"...\n"
+"##### Processing snapshot: standard #####\n"
+"* Zipping standard:\n"
+"  * Image:   /virtual/winxp/snapshot-store/standard/{c81442ac-4e03-487c-a05a-e82b8918c834}.vdi\n"
+"  * Dir:     /virtual/winxp/snapshot-store/standard\n"
+"  * File:    {c81442ac-4e03-487c-a05a-e82b8918c834}.vdi\n"
+"..."
+msgstr ""
+
 #: ../../source/clients/leoclient2/leo2-vmerneuern.rst:79
 msgid ""
 "Vergleichen Sie den neuen Snapshot-Dateinamen und löschen Sie den alten "
@@ -128,11 +143,35 @@ msgid ""
 "/PFAD/MASCHINENNAME/{..alterSnapshot..}.vdi*``"
 msgstr ""
 
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:83
+msgid ""
+"$ ls -1 /virtual/winxp/snapshot-store/standard/\n"
+"{4a895e9c-a6e9-416d-b612-b643035c0103}.vdi\n"
+"{4a895e9c-a6e9-416d-b612-b643035c0103}.vdi.zip\n"
+"{c81442ac-4e03-487c-a05a-e82b8918c834}.vdi\n"
+"{c81442ac-4e03-487c-a05a-e82b8918c834}.vdi.zip\n"
+"filesize.vdi\n"
+"filesize.vdi.zipped\n"
+"$ sudo rm /virtual/winxp/snapshot-store/standard/{4a895e9c-a6e9-416d-b612-b643035c0103}.vdi*"
+msgstr ""
+
 #: ../../source/clients/leoclient2/leo2-vmerneuern.rst:94
 msgid ""
 "Sollten Sie weitere Snapshots zur virtuellen Maschine haben, haben diese "
 "ihre Basis verloren. Löschen Sie diese Snapshots (als root) oder erzeugen "
 "Sie sie erneut aus dem bestehenden neuen Standard-Snapshot."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:99
+msgid ""
+"$ ls -1 /virtual/winxp/snapshot-store/Software2016\n"
+"{4a895e9c-a6e9-416d-b612-b643035c0103}.vdi\n"
+"{4a895e9c-a6e9-416d-b612-b643035c0103}.vdi.zip\n"
+"filesize.vdi\n"
+"filesize.vdi.zipped\n"
+"$ sudo leoclient2-snapshot-create -m winxp -s Software2016\n"
+"  adding: {c81442ac-4e03-487c-a05a-e82b8918c834}.vdi (deflated 100%)\n"
+"  OK: Snapshot {c81442ac-4e03-487c-a05a-e82b8918c834}.vdi wurde als Software2016 gesetzt."
 msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-vmerneuern.rst:116
@@ -169,8 +208,18 @@ msgid ""
 " es ausführbar."
 msgstr ""
 
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:134
+msgid ""
+"$ sudo mv leoclient2-snapshot-create /usr/bin/\n"
+"$ sudo chmod 755 /usr/bin/leoclient2-snapshot-create"
+msgstr ""
+
 #: ../../source/clients/leoclient2/leo2-vmerneuern.rst:139
 msgid "Starten Sie als Benutzer die VM (z.B. hier winxp)"
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:141
+msgid "$ leovirtstarter2"
 msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-vmerneuern.rst:145
@@ -185,8 +234,16 @@ msgid ""
 "Snapshot neu zu setzen,"
 msgstr ""
 
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:148
+msgid "$ sudo leoclient2-snapshot-create -m winxp"
+msgstr ""
+
 #: ../../source/clients/leoclient2/leo2-vmerneuern.rst:152
 msgid "oder mit einem Argument ``-s``, um einen neuen Snapshot zu erzeugen."
+msgstr ""
+
+#: ../../source/clients/leoclient2/leo2-vmerneuern.rst:154
+msgid "$ sudo leoclient2-snapshot-create -m winxp -s Software2016"
 msgstr ""
 
 #: ../../source/clients/leoclient2/leo2-vmerneuern.rst:158

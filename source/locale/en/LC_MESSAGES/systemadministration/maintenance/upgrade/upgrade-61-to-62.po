@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -53,6 +53,14 @@ msgid ""
 "Paketquellen anzugeben:"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:25
+msgid ""
+"deb http://pkg.linuxmuster.net/ babo/\n"
+"deb-src http://pkg.linuxmuster.net/ babo/\n"
+"deb http://pkg.linuxmuster.net/ babo62/\n"
+"deb-src http://pkg.linuxmuster.net/ babo62/"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:26
 msgid "Paketquellen überprüfen"
 msgstr ""
@@ -79,6 +87,12 @@ msgstr ""
 msgid ""
 "Dazu sind auf der Eingabekonsole als Benutzer root folgende Befehle "
 "einzugeben:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:37
+msgid ""
+"# apt-get update\n"
+"# apt-get dist-upgrade"
 msgstr ""
 
 #: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:42
@@ -116,6 +130,10 @@ msgstr ""
 msgid "Führen Sie hierzu folgenden Befehl aus:"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:56
+msgid "# import_workstations"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:60
 msgid ""
 "Das Skript prüft die angegebenen Eintragungen in der Datei "
@@ -148,6 +166,11 @@ msgid ""
 "wird (und rebootet wird):"
 msgstr ""
 
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:75
+msgid ""
+"# linbo-remote -p initcache,reboot [-i <hostname>|-g <group>|-r <room>]"
+msgstr ""
+
 #: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:96
 msgid ""
 "Nach dem Upgrade sollten alle Clients wie gewohnt weiter funktionieren. Die "
@@ -168,6 +191,15 @@ msgid ""
 "gibt es keine Probleme. Erst dann, wenn Sie einen Computer neu "
 "partitionieren müssen, quittiert Windows mit einer Fehlermeldung den Dienst "
 "beim Start dieses Images:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:113
+msgid ""
+"...\n"
+"\n"
+"Status 0xc0000000e\n"
+"\n"
+"Info: The boot selection failed because a required device is inaccessible."
 msgstr ""
 
 #: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:123
@@ -209,6 +241,10 @@ msgid ""
 "Laden Sie dazu die die Datei ``linbo.iso`` von ihrem Server herunter (z.B. "
 "über 10.16.1.1/linbo.iso) und brennen Sie diese auf CD/DVD oder kopieren "
 "diese auf einen USB-Stick, z.B. mit Hilfe des Befehls"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:146
+msgid "# dd if=linbo.iso of=/dev/sdX"
 msgstr ""
 
 #: ../../source/systemadministration/maintenance/upgrade/upgrade-61-to-62.rst:150

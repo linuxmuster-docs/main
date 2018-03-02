@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 19:40+0700\n"
+"POT-Creation-Date: 2018-02-17 12:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja, 2017\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -620,6 +620,17 @@ msgstr ""
 "From the Admin PC, ping to the IP `10.16.1.254`. On Linux, the command and "
 "its answer looks as follows:"
 
+#: ../../source/systemadministration/install-from-scratch/firewall.rst:382
+msgid ""
+"linuxadmin@admin-pc:~$ ping 10.16.1.254 -c 1\n"
+"PING 10.16.1.254 (10.16.1.254) 56(84) bytes of data.\n"
+"64 bytes from 10.16.1.254: icmp_req=1 ttl=63 time=0.438 ms\n"
+"\n"
+"--- 10.16.1.254 ping statistics ---\n"
+"1 packets transmitted, 1 received, 0% packet loss, time 0ms\n"
+"rtt min/avg/max/mdev = 0.438/0.438/0.438/0.000 ms"
+msgstr ""
+
 #: ../../source/systemadministration/install-from-scratch/firewall.rst:392
 msgid ""
 "Bei keiner Antwort lautet die Rückmeldung ``Destination Host Unreachable`` "
@@ -670,6 +681,12 @@ msgstr ""
 "Login in as user `root` at the console of the IPFire with your chosen "
 "password."
 
+#: ../../source/systemadministration/install-from-scratch/firewall.rst:409
+msgid ""
+"ipfire login: root\n"
+"Password:"
+msgstr ""
+
 #: ../../source/systemadministration/install-from-scratch/firewall.rst:417
 msgid ""
 "Verbinden Sie nun eine der beiden noch nicht angeschlossenen Netzwerkkarten "
@@ -678,6 +695,11 @@ msgstr ""
 "Now connect one of the two network cards that is not connected yet to your "
 "router. Then start the network again."
 
+#: ../../source/systemadministration/install-from-scratch/firewall.rst:419
+#: ../../source/systemadministration/install-from-scratch/firewall.rst:440
+msgid "[root@ipfire ~]:# /etc/init.d/network restart"
+msgstr ""
+
 #: ../../source/systemadministration/install-from-scratch/firewall.rst:423
 msgid ""
 "Bringen Sie danach die Paketlisten auf den neuesten Stand, um die Verbindung"
@@ -685,6 +707,10 @@ msgid ""
 msgstr ""
 "Then update the package lists in order to check your connection to the "
 "Internet."
+
+#: ../../source/systemadministration/install-from-scratch/firewall.rst:425
+msgid "[root@ipfire ~]:# pakfire update"
+msgstr ""
 
 #: ../../source/systemadministration/install-from-scratch/firewall.rst:429
 msgid ""
@@ -697,6 +723,12 @@ msgstr ""
 "confirmation, the network card is located in the red network (and thus the "
 "third network is not yet wired in the blue network, which we leave like "
 "that). Continue with :ref:`ssh-config-label`. If the command returns"
+
+#: ../../source/systemadministration/install-from-scratch/firewall.rst:432
+msgid ""
+"[root@ipfire ~]:# pakfire update\n"
+"PAKFIRE ERROR: You need to be online to run pakfire!"
+msgstr ""
 
 #: ../../source/systemadministration/install-from-scratch/firewall.rst:437
 msgid ""
@@ -852,9 +884,25 @@ msgstr ""
 "``/var/ipfire/remote/settings`` with the editor ``vi``, so it has the "
 "following content. The last line does not need to be adjusted."
 
+#: ../../source/systemadministration/install-from-scratch/firewall.rst:533
+msgid ""
+"ENABLE_SSH_KEYS=on\n"
+"ENABLE_SSH_PROTOCOLL1=off\n"
+"ENABLE_SSH_PASSWORDS=on\n"
+"ENABLE_SSH_PORTFW=off\n"
+"ENABLE_SSH=on\n"
+"__CGI__=CGI=HASH(0x840b7a0)"
+msgstr ""
+
 #: ../../source/systemadministration/install-from-scratch/firewall.rst:534
 msgid "Außerdem legt man mit den Befehlen"
 msgstr "In addition, with the following commands"
+
+#: ../../source/systemadministration/install-from-scratch/firewall.rst:540
+msgid ""
+"[root@ipfire ~]:# touch /var/ipfire/remote/enablessh\n"
+"[root@ipfire ~]:# chown nobody:nobody /var/ipfire/remote/enablessh"
+msgstr ""
 
 #: ../../source/systemadministration/install-from-scratch/firewall.rst:541
 msgid ""
@@ -863,6 +911,10 @@ msgid ""
 msgstr ""
 "create the file ``enablessh`` so that you can start the SSH service. The "
 "command"
+
+#: ../../source/systemadministration/install-from-scratch/firewall.rst:546
+msgid "[root@ipfire ~]:# /etc/rc.d/init.d/sshd restart"
+msgstr ""
 
 #: ../../source/systemadministration/install-from-scratch/firewall.rst:547
 msgid ""
@@ -979,6 +1031,12 @@ msgid ""
 "angepasst."
 msgstr "First, a new folder ``acls`` is created and its rights are adapted."
 
+#: ../../source/systemadministration/install-from-scratch/firewall.rst:618
+msgid ""
+"[root@ipfire ~]:# mkdir /var/ipfire/proxy/advanced/acls\n"
+"[root@ipfire ~]:# chown nobody:nobody /var/ipfire/proxy/advanced/acls"
+msgstr ""
+
 #: ../../source/systemadministration/install-from-scratch/firewall.rst:623
 msgid ""
 "In diesem Ordner wird die Datei ``src_unrestricted_ip.acl`` erzeugt und "
@@ -987,14 +1045,28 @@ msgstr ""
 "The file ``src_unrestricted_ip.acl`` is created in this folder and its "
 "rights are adapted."
 
+#: ../../source/systemadministration/install-from-scratch/firewall.rst:625
+msgid ""
+"[root@ipfire ~]:# touch /var/ipfire/proxy/advanced/acls/src_unrestricted_ip.acl\n"
+"[root@ipfire ~]:# chown nobody:nobody /var/ipfire/proxy/advanced/acls/src_unrestricted_ip.acl"
+msgstr ""
+
 #: ../../source/systemadministration/install-from-scratch/firewall.rst:630
 msgid ""
 "In die erstellte Datei mit dem Editor ``vi`` die IP des Servers eingetragen."
 msgstr "In the created file you enter the server's IP with the editor ``vi``."
 
+#: ../../source/systemadministration/install-from-scratch/firewall.rst:635
+msgid "10.16.1.1"
+msgstr ""
+
 #: ../../source/systemadministration/install-from-scratch/firewall.rst:636
 msgid "Abschließend wird Webproxy-Dienst neu gestartet."
 msgstr "Finally, Web Proxy Service is restarted."
+
+#: ../../source/systemadministration/install-from-scratch/firewall.rst:638
+msgid "[root@ipfire ~]:# /etc/rc.d/init.d/squid restart"
+msgstr ""
 
 #: ../../source/systemadministration/install-from-scratch/firewall.rst:642
 msgid "Bei Erfolg wieder keinerlei Ausgabe erzeugt."
