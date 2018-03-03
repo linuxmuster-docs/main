@@ -65,7 +65,7 @@ kvm: Installation des KVM-Servers
 ---------------------------------
 
 .. hint::
-	Der *kvm* Server bildet das Grundgerüst für die Firewall *ipfire* und den Schulserver *server*. Da KVM im Gegensatz zu Xen oder VMWare auf die Virtualisierungsfunktionen der CPU angewiesen ist, müssen Diese natürlich vorhanden sein.
+	Der *kvm* Server bildet das Grundgerüst für die Firewall *ipfire* und den Schulserver *server*. Da KVM im Gegensatz zu Xen oder VMWare auf die Virtualisierungsfunktionen der CPU angewiesen ist, müssen diese natürlich vorhanden sein.
 
 .. image:: media/kvmserver/kvmserver-image01.png
 
