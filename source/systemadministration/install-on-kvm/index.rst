@@ -23,6 +23,5 @@ Inhalt:
    :maxdepth: 2
 
    install
-   troubleshooting
    backuprestore
    advanced

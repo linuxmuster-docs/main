@@ -18,7 +18,6 @@ Lies dennoch zunächst die Liste der Neuerungen und bekannten Probleme.
    schulkonsole
    linbo
    ipfire
-   knownbugs
 
 Release-Informationen früherer Veröffentlichungen
 

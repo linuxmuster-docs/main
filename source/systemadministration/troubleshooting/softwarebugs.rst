@@ -1,8 +1,10 @@
-Troubleshooting
-===============
+===========================
+Bekannte Software-Probleme
+===========================
 
-server: Cups startet nicht sowie LDAP Fehler bei import_workstations
---------------------------------------------------------------------
+
+Cups startet nicht sowie LDAP Fehler bei import_workstations
+============================================================
 
 Möglicherweise treten bei Dir nach der Erstinstallation, Konfiguration und Einspielen aller Updates auch folgende Probleme auf:
 
