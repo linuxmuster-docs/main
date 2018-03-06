@@ -1,9 +1,9 @@
 
 .. _knownbugs-label:
 
-===================
- Bekannte Probleme
-===================
+==========================
+Bekannte Hardware-Probleme
+==========================
 
 
 Fehlerhafte Atheros-Chipsätze
@@ -14,7 +14,7 @@ Implementationen von Atheros-Chipsätzen nicht zurecht. Dies wirkt sich
 dadurch aus, dass die Systeme beim Booten über das Netzwerk in einem
 sehr frühen Stadium hängen bleiben.
 
-Testen Sie bitte vor dem Upgrade auf Linbo 2.3.x, ob Sie Systeme mit
+Teste bitte vor dem Upgrade auf Linbo 2.3.x, ob Sie Systeme mit
 Atheros-Chipsätzen besitzen.
 
 Lösungsweg

@@ -1,6 +1,14 @@
 Weiterführende Dokumentation
 ============================
 
+Problembehebung
+---------------
+
+.. toctree::
+   :maxdepth: 2
+
+   ../troubleshooting/softwarebugs
+
 Vorlage der Netzwerkzeichnungen
 -------------------------------
 
@@ -230,3 +238,4 @@ Der Status der Verbindung kann mit Hilfe des Befehls *show etherchannel summary*
 	<p>
 	<iframe width="696" height="392" src="https://www.youtube.com/embed/XdiOdbGAGDQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 	</p>
+	
