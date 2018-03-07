@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, linuxmuster.net
+# Copyright (C) 2018, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-17 12:36+0700\n"
+"POT-Creation-Date: 2018-03-07 13:18+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,11 +20,11 @@ msgstr ""
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:2
 msgid "Installation"
-msgstr ""
+msgstr "Installation"
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:5
 msgid "adminPC: Installation"
-msgstr ""
+msgstr "The installation"
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:8
 msgid ""
@@ -31,32 +32,37 @@ msgid ""
 "dieser Variante liegt vor allen Dingen darin, dass der "
 "Virtualisierungsserver so schlank wie möglich gehalten werden kann."
 msgstr ""
+"The *adminPC* should be used to administer the KVM server. The main "
+"advantage of this variant is that the virtualization server can be kept as "
+"slim as possible."
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:12
 msgid "Die Hardware sollte folgende Mindestmerkmale aufweisen:"
-msgstr ""
+msgstr "The hardware should have the following minimum characteristics:"
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:14
 msgid "DualCore CPU"
-msgstr ""
+msgstr "DualCore CPU"
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:15
 msgid "1GB RAM"
-msgstr ""
+msgstr "1GB RAM"
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:16
 msgid "20GB HDD"
-msgstr ""
+msgstr "20GB HDD"
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:18
 msgid ""
 "Als Betriebssystem wird *Lubuntu* in der Version 16.04 LTS verwendet. Es "
 "kann auf der `Lubuntu <http://lubuntu.net/>`_ Seite heruntergeladen werden."
 msgstr ""
+"The operating system is *Lubuntu* in version 16.04 LTS. It can be downloaded"
+" from the `Lubuntu <http://lubuntu.net/>`_ page."
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:28
 msgid "adminPC: Installation der Updates"
-msgstr ""
+msgstr "adminPC: Installation of updates"
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:30
 #: ../../source/systemadministration/install-on-kvm/install.rst:179
@@ -65,6 +71,8 @@ msgid ""
 "aktuellen Stand zu bringen. Auf der Console wird dies mit folgenden Befehlen"
 " durchgeführt:"
 msgstr ""
+"After the initial installation, it makes sense to update the system to the "
+"latest version. On the console this is done with the following commands:"
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:32
 #: ../../source/systemadministration/install-on-kvm/install.rst:181
@@ -78,7 +86,7 @@ msgstr ""
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:48
 msgid "adminPC: Deaktivierung von IPv6"
-msgstr ""
+msgstr "adminPC: Deactivation of IPv6"
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:50
 #: ../../source/systemadministration/install-on-kvm/install.rst:328
@@ -86,6 +94,8 @@ msgid ""
 "Um sich später keine Gedanken um Netzwerksicherheit machen zu müssen, sollte"
 " IPv6 global deaktiviert werden."
 msgstr ""
+"IPv6 should be deactivated globally so as not to worry about network "
+"security at a later date."
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:52
 #: ../../source/systemadministration/install-on-kvm/install.rst:330
@@ -96,13 +106,13 @@ msgstr ""
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:65
 msgid "kvm: Installation des KVM-Servers"
-msgstr ""
+msgstr "kvm: KVM-Server-Installation"
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:68
 msgid ""
 "Der *kvm* Server bildet das Grundgerüst für die Firewall *ipfire* und den "
 "Schulserver *server*. Da KVM im Gegensatz zu Xen oder VMWare auf die "
-"Virtualisierungsfunktionen der CPU angewiesen ist, müssen Diese natürlich "
+"Virtualisierungsfunktionen der CPU angewiesen ist, müssen diese natürlich "
 "vorhanden sein."
 msgstr ""
 
@@ -112,31 +122,36 @@ msgid ""
 "Dinge wie VLANs, Teaming oder Raids. Diese Themen werden in zusätzlichen "
 "Anleitungen betrachtet."
 msgstr ""
+"The following instructions describe the *simplest* implementation without "
+"things like VLANs, teaming or raids. These topics are discussed in "
+"additional instructions."
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:74
 msgid ""
 ":ref:`Anleitung Netzwerksegmentierung <preface-networksegmentation-label>`"
 msgstr ""
+":ref: `Instruction manual for network segmentation <preface-"
+"networksegmentation-label>`"
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:76
 msgid "Folgende Hardware sollte der Server mindestens zur Verfügung stellen:"
-msgstr ""
+msgstr "The server should at least provide the following hardware:"
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:78
 msgid "CPU mit 4 Kernen"
-msgstr ""
+msgstr "CPU with 4 cores"
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:79
 msgid "16GB RAM"
-msgstr ""
+msgstr "16GB RAM"
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:80
 msgid "1TB HDD plus zweite HDD für ein Backup"
-msgstr ""
+msgstr "1TB HDD plus second HDD for a backup"
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:81
 msgid "2x 1GBit/s Netzwerkkarten"
-msgstr ""
+msgstr "2x 1GBit/s network cards"
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:83
 msgid ""
@@ -144,16 +159,20 @@ msgid ""
 "Es kann `hier <https://www.ubuntu.com/download/server>`_ heruntergeladen "
 "werden."
 msgstr ""
+"Ubuntu Server* in version 16.04 LTS is used as operating system. It can be "
+"downloaded `here <https://www.ubuntu.com/download/server>`_."
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:88
 msgid "kvm Tipp: Erstellen eines USB-Sticks"
-msgstr ""
+msgstr "kvm tip: Create a USB stick"
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:90
 msgid ""
 "Hilfreiche Befehle sind (Vorsicht - mit dd werden vorhandene Daten "
 "unwiderruflich zerstört):"
 msgstr ""
+"Helpful commands are (Warning - with ``dd`` existing data will be "
+"irretrievably destroyed):"
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:92
 msgid ""
@@ -163,16 +182,21 @@ msgid ""
 "Kopieren des ISOs auf den Stick\n"
 "# sudo dd if=<Name des ISOs> | sudo pv -s <Groesse des ISOs> | sudo dd of=/dev/sdX bs=1M && sync"
 msgstr ""
+"Deleting the MBR of the USB stick\n"
+"# sudo dd if=/dev/zero of=/dev/sdX bs=1M count=10\n"
+"\n"
+"Copying the ISO to the stick\n"
+"# sudo dd if=<Name des ISOs> | sudo pv -s <Groesse des ISOs> | sudo dd of=/dev/sdX bs=1M && sync"
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:100
 msgid ""
 "Natürlich können auch alle anderen gängigen Tools zur Erstellung genutzt "
 "werden."
-msgstr ""
+msgstr "Of course, all other common tools can also be used for creation."
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:110
 msgid "kvm: Installation"
-msgstr ""
+msgstr "kvm: Installation"
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:113
 msgid "Bei der Installation sind folgende Merkmale zu berücksichtigen:"

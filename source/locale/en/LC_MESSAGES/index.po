@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, linuxmuster.net
+# Copyright (C) 2018, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-17 12:36+0700\n"
+"POT-Creation-Date: 2018-03-07 13:18+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -69,22 +69,22 @@ msgstr "Getting Started"
 msgid "Systemadministration"
 msgstr "Systemadministration"
 
-#: ../../source/index.rst:40
+#: ../../source/index.rst:41
 msgid "Clientverwaltung"
 msgstr "Client Management"
 
-#: ../../source/index.rst:49
+#: ../../source/index.rst:50
 msgid "Benutzerverwaltung"
 msgstr "User Management"
 
-#: ../../source/index.rst:61
+#: ../../source/index.rst:62
 msgid "Pädagogische Funktionen"
 msgstr "Educational Features"
 
-#: ../../source/index.rst:76
+#: ../../source/index.rst:77
 msgid "Erweiterungen"
 msgstr "Addons"
 
-#: ../../source/index.rst:83
+#: ../../source/index.rst:84
 msgid "Anhang"
 msgstr "Appendix"

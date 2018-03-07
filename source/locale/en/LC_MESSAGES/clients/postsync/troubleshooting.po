@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, linuxmuster.net
+# Copyright (C) 2018, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-17 12:36+0700\n"
+"POT-Creation-Date: 2018-03-07 13:18+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,11 +20,11 @@ msgstr ""
 
 #: ../../source/clients/postsync/troubleshooting.rst:2
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Troubleshooting"
 
 #: ../../source/clients/postsync/troubleshooting.rst:4
 msgid "**Welche Möglichkeiten der Fehlersuche gibt es ?**"
-msgstr ""
+msgstr "**What troubleshooting options are there?**"
 
 #: ../../source/clients/postsync/troubleshooting.rst:6
 msgid ""
@@ -32,14 +33,18 @@ msgid ""
 " Es lassen sich so dann die Postsync-Ausgaben / Fehlermeldungen auf dem "
 "Client einsehen."
 msgstr ""
+"From the linuxmuster.net server you can log on to the client using "
+"**linbo_ssh** and activate the synchronization process. In this way, the "
+"postsync output / error messages can be viewed on the client."
 
 #: ../../source/clients/postsync/troubleshooting.rst:8
 msgid "Das Postsync-Script schreibt eine LOG-Datei, die auf dem Client unter"
 msgstr ""
+"The Postsync script writes a LOG file, which is stored on the client under"
 
 #: ../../source/clients/postsync/troubleshooting.rst:14
 msgid "/mnt/var/log/postsync.log abgelegt wird."
-msgstr ""
+msgstr "/mnt/var/log/postsync.log."
 
 #: ../../source/clients/postsync/troubleshooting.rst:15
 msgid ""
@@ -47,6 +52,8 @@ msgid ""
 "zu starten, zu synchronisieren und dann in den Linbo-Bildschirm zu gelangen,"
 " um die Log-Datei einzusehen:"
 msgstr ""
+"On the linuxmuster.net server you have to specify the following to start the"
+" client, synchronize it and then go to the Linbo screen to see the log file:"
 
 #: ../../source/clients/postsync/troubleshooting.rst:23
 msgid ""
@@ -54,25 +61,30 @@ msgid ""
 "linbo-ssh <client-name / oder IP-Adresse>\n"
 "less /var/log/postsync.log"
 msgstr ""
+"linbo-remote -i <IP-Adresse des Clients> -b 5 -w 130 -c sync:1\n"
+"linbo-ssh <client-name / oder IP-Adresse>\n"
+"less /var/log/postsync.log"
 
 #: ../../source/clients/postsync/troubleshooting.rst:24
 msgid "Herunterfahren der Clients mit:"
-msgstr ""
+msgstr "Shut down the clients with:"
 
 #: ../../source/clients/postsync/troubleshooting.rst:29
 msgid "linbo-remote -i <Client-name / IP-Adresse> -c halt"
-msgstr ""
+msgstr "linbo-remote -i <Client-name / IP-Adresse> -c halt"
 
 #: ../../source/clients/postsync/troubleshooting.rst:30
 msgid "Hinweise zu linbo-remote und linbo-ssh"
-msgstr ""
+msgstr "Notes on linbo-remote and linbo-ssh"
 
 #: ../../source/clients/postsync/troubleshooting.rst:33
 msgid ""
 "https://www.linuxmuster.net/wiki/dokumentation:handbuch:linbo:linbo.remote"
 msgstr ""
+"https://www.linuxmuster.net/wiki/dokumentation:handbuch:linbo:linbo.remote"
 
 #: ../../source/clients/postsync/troubleshooting.rst:35
 msgid ""
 "https://www.linuxmuster.net/wiki/dokumentation:handbuch51:clients:linbo:linbo_remote?s[]=linbo&s[]=ssh"
 msgstr ""
+"https://www.linuxmuster.net/wiki/dokumentation:handbuch51:clients:linbo:linbo_remote?s[]=linbo&s[]=ssh"

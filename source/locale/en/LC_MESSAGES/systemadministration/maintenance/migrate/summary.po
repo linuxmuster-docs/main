@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, linuxmuster.net
+# Copyright (C) 2018, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-17 12:36+0700\n"
+"POT-Creation-Date: 2018-03-07 13:18+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,11 +20,11 @@ msgstr ""
 
 #: ../../source/systemadministration/maintenance/migrate/summary.rst:2
 msgid "Übersicht zu den Migrationsschritten"
-msgstr ""
+msgstr "Overview of the migration steps"
 
 #: ../../source/systemadministration/maintenance/migrate/summary.rst:5
 msgid "Voraussetzungen"
-msgstr ""
+msgstr "Prerequisites"
 
 #: ../../source/systemadministration/maintenance/migrate/summary.rst:9
 msgid ""
@@ -31,10 +32,13 @@ msgid ""
 "sein. Es kann ebenfalls als Quellsystem eine sog. openML/paedML Version 5.x "
 "oder linuxmuster.net Version 6.x installiert sein."
 msgstr ""
+"The paedML version >= 4.0.6 must be installed as base system. An "
+"openML/paedML version 5. x or linuxmuster.net version 6. x can also be "
+"installed as base system."
 
 #: ../../source/systemadministration/maintenance/migrate/summary.rst:14
 msgid "Vorgehen"
-msgstr ""
+msgstr "Procedure"
 
 #: ../../source/systemadministration/maintenance/migrate/summary.rst:16
 msgid ""
@@ -43,6 +47,9 @@ msgid ""
 "Daten in ein Verzeichnis auf einer lokal angeschlossenen Festplatte oder "
 "einem NFS-Share."
 msgstr ""
+"First install the `linuxmuster-migration` package on the base system "
+"(version 4.0.6 or higher) and then backup the data to be migrated to a "
+"directory on a local hard disk or NFS share."
 
 #: ../../source/systemadministration/maintenance/migrate/summary.rst:20
 msgid ""
@@ -50,6 +57,8 @@ msgid ""
 "neu auf. Hardware und Partitionierung können von derjenigen des Quellsystems"
 " abweichen."
 msgstr ""
+"After that, the new system (linuxmuster.net 6. x with IPFire and server) is "
+"rebuilt. Hardware and partitioning may differ from the source system."
 
 #: ../../source/systemadministration/maintenance/migrate/summary.rst:23
 msgid ""
@@ -58,3 +67,6 @@ msgid ""
 "lokaler Festplatte oder NFS-Share auf dem Server bereit und spielt die Daten"
 " aus der Sicherung wieder zurück."
 msgstr ""
+"Finally, you install the linuxmuster-migration package on the new system, "
+"make the backup directory from step 1 available on the local hard disk or "
+"NFS share on the server and restore the data from the backup."

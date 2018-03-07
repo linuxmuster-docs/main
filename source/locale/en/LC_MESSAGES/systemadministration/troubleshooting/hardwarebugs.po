@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-03 11:26+0700\n"
+"POT-Creation-Date: 2018-03-07 13:18+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/about/release-information/knownbugs.rst:6
-msgid "Bekannte Probleme"
-msgstr "Known problems"
+#: ../../source/systemadministration/troubleshooting/hardwarebugs.rst:6
+msgid "Bekannte Hardware-Probleme"
+msgstr "Known Hardware Problems"
 
-#: ../../source/about/release-information/knownbugs.rst:10
+#: ../../source/systemadministration/troubleshooting/hardwarebugs.rst:10
 msgid "Fehlerhafte Atheros-Chipsätze"
 msgstr "Faulty Atheros chipsets"
 
-#: ../../source/about/release-information/knownbugs.rst:12
+#: ../../source/systemadministration/troubleshooting/hardwarebugs.rst:12
 msgid ""
 "Mit der neuen Art und Weise LINBO über PXE zu booten kommen manche "
 "Implementationen von Atheros-Chipsätzen nicht zurecht. Dies wirkt sich "
@@ -37,19 +37,19 @@ msgstr ""
 "booting LINBO over PXE. This is due to the fact that the systems get stuck "
 "at a very early stage when booting over the network."
 
-#: ../../source/about/release-information/knownbugs.rst:17
+#: ../../source/systemadministration/troubleshooting/hardwarebugs.rst:17
 msgid ""
-"Testen Sie bitte vor dem Upgrade auf Linbo 2.3.x, ob Sie Systeme mit "
-"Atheros-Chipsätzen besitzen."
+"Teste bitte vor dem Upgrade auf Linbo 2.3.x, ob Sie Systeme mit Atheros-"
+"Chipsätzen besitzen."
 msgstr ""
 "Before upgrading to Linbo 2.3.x, please check if you have systems with "
 "Atheros chipsets."
 
-#: ../../source/about/release-information/knownbugs.rst:21
+#: ../../source/systemadministration/troubleshooting/hardwarebugs.rst:21
 msgid "Lösungsweg"
 msgstr "Solution"
 
-#: ../../source/about/release-information/knownbugs.rst:23
+#: ../../source/systemadministration/troubleshooting/hardwarebugs.rst:23
 msgid ""
 "Zunächst muss im BIOS die lokale Festplatte als Bootmedium eingestellt "
 "werden. Dabei sollte man überprüfen, ob in der jeweiligen start.conf die "
@@ -59,7 +59,7 @@ msgstr ""
 "should check if the cache partition is marked as ``Bootable=yes`` in the "
 "respective start.conf."
 
-#: ../../source/about/release-information/knownbugs.rst:28
+#: ../../source/systemadministration/troubleshooting/hardwarebugs.rst:28
 msgid ""
 "Ist das System in einem unbootbaren Zustand, muss man ein CD- oder USB-"
 "Bootmedium erstellen, um die lokale LINBO-Installation wiederherzustellen. "
@@ -70,40 +70,30 @@ msgstr ""
 "drive to restore the local LINBO installation. Please read the release notes"
 " of LINBO: :ref:`release-linbo-bootmedium-label` for more information."
 
-#: ../../source/about/release-information/knownbugs.rst:36
+#: ../../source/systemadministration/troubleshooting/hardwarebugs.rst:36
 msgid "Probleme mit Grafikkarten-Treibern"
 msgstr "Problems with graphics card drivers"
 
-#: ../../source/about/release-information/knownbugs.rst:38
+#: ../../source/systemadministration/troubleshooting/hardwarebugs.rst:38
 msgid ""
 "Der Linbo-64bit-Kernel enthält ab LINBO 2.3.31 (ca. Januar 2018) "
 "modularisierte Grafiktreiber. Es könnte damit auf mancher Hardware der Start"
-" der Linbo-GUI fehlschlagen. In dem Fall, muss man mit einem blacklist-"
-"Parameter `modprobe.blacklist=` in der `start.conf.example` verhindern, dass"
-" ein bestimmter Grafiktreiber geladen wird: Beispiele:"
+" der Linbo-GUI fehlschlagen. In dem Fall sollte man den Kernelparameter "
+"`nomodeset` in der `start.conf.example` ergänzen:"
 msgstr ""
 "As of LINBO 2.3.31 (approx. January 2018), the linbo-64bit kernel contains "
 "modularized graphics drivers. This could cause the start of the Linbo GUI to"
-" fail on some hardware. In this case, you must use a blacklist parameter "
-"`modprobe.blacklist=` in your `start.conf.example`  to prevent a certain "
-"graphic driver from being loaded: Examples:"
+" fail on some hardware. In this case you should add the kernel parameter "
+"`nomodeset` in the `start.conf.example`:"
 
-#: ../../source/about/release-information/knownbugs.rst:41
+#: ../../source/systemadministration/troubleshooting/hardwarebugs.rst:42
 msgid ""
 "# /var/linbo/start.conf.example im Abschnitt [LINBO]\n"
-"KernelOptions = ... modprobe.blacklist=radeon\n"
-"# oder\n"
-"KernelOptions = ... modprobe.blacklist=nvidia"
+"[LINBO]\n"
+"...\n"
+"KernelOptions = ... nomodeset"
 msgstr ""
 "# /var/linbo/start.conf.example in section [LINBO]\n"
-"KernelOptions = ... modprobe.blacklist=radeon\n"
-"# or\n"
-"KernelOptions = ... modprobe.blacklist=nvidia"
-
-#: ../../source/about/release-information/knownbugs.rst:48
-msgid ""
-"Nähere Umstände werden im Forum hier https://ask.linuxmuster.net/t/testing-"
-"pakete-fuer-6-2/1205/11 erläutert."
-msgstr ""
-"Further details are explained in the forum here "
-"https://ask.linuxmuster.net/t/testing-pakete-fuer-6-2/1205/11"
+"[LINBO]\n"
+"...\n"
+"KernelOptions = ... nomodeset"

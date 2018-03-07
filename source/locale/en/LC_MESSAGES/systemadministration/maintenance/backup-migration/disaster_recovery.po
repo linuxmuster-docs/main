@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, linuxmuster.net
+# Copyright (C) 2018, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-17 12:36+0700\n"
+"POT-Creation-Date: 2018-03-07 13:18+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,33 +20,38 @@ msgstr ""
 
 #: ../../source/systemadministration/maintenance/backup-migration/disaster_recovery.rst:2
 msgid "Disaster recovery - Notfallplan"
-msgstr ""
+msgstr "Disaster recovery - emergency plan"
 
 #: ../../source/systemadministration/maintenance/backup-migration/disaster_recovery.rst:4
 msgid ""
 "Im Falle eines Komplettausfalls reduziert sich ein `disaster recovery` auf "
 "folgenden Ablauf:"
 msgstr ""
+"In case of a complete failure, a `disaster recovery` is reduced to the "
+"following sequence:"
 
 #: ../../source/systemadministration/maintenance/backup-migration/disaster_recovery.rst:6
 msgid "eine evtl. Neuinstallation des IPFire,"
-msgstr ""
+msgstr "a possible reinstallation of the IPFire,"
 
 #: ../../source/systemadministration/maintenance/backup-migration/disaster_recovery.rst:7
 msgid "eine Neuinstallation des Ubuntu-Servers"
-msgstr ""
+msgstr "a new installation of the Ubuntu server"
 
 #: ../../source/systemadministration/maintenance/backup-migration/disaster_recovery.rst:8
 msgid "ein einmaliges Setup des neu installierten Servers"
-msgstr ""
+msgstr "a one-time setup of the newly installed server"
 
 #: ../../source/systemadministration/maintenance/backup-migration/disaster_recovery.rst:9
 msgid ""
 "Wiederherstellung der Umgebung mittels Migrationsskript linuxmuster-"
 "migration-restore."
 msgstr ""
+"Restore the environment using migration script linuxmuster-migration-"
+"restore."
 
 #: ../../source/systemadministration/maintenance/backup-migration/disaster_recovery.rst:12
 msgid ""
 "Für den Schritt `Neuinstallation` nutzen Sie bitte das entsprechende Howto."
 msgstr ""
+"For the step `New installation` please use the corresponding documentation."

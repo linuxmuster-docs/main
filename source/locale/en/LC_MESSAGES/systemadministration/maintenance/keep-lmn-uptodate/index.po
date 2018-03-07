@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, linuxmuster.net
+# Copyright (C) 2018, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-17 12:36+0700\n"
+"POT-Creation-Date: 2018-03-07 13:18+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,14 +20,16 @@ msgstr ""
 
 #: ../../source/systemadministration/maintenance/keep-lmn-uptodate/index.rst:2
 msgid "Linuxmuster.net aktuell halten"
-msgstr ""
+msgstr "Keep linuxmuster.net up to date"
 
 #: ../../source/systemadministration/maintenance/keep-lmn-uptodate/index.rst:4
 msgid ""
 "Sicherheitskritische Aktualisierungen des Ubuntu-Betriebssystems werden von "
 "Ubuntu zeitnah bereitgestellt. Gleiches gilt auch für die Firewall IPFire."
 msgstr ""
+"Security-critical updates of the Ubuntu operating system are provided by "
+"Ubuntu. The same applies to the IPFire firewall."
 
 #: ../../source/systemadministration/maintenance/keep-lmn-uptodate/index.rst:7
 msgid "Aktualisieren Sie daher regelmäßig Ihr System."
-msgstr ""
+msgstr "Therefore, update your system regularly."

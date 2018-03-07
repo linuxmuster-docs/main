@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, linuxmuster.net
+# Copyright (C) 2018, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-17 12:36+0700\n"
+"POT-Creation-Date: 2018-03-07 13:18+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -359,12 +359,7 @@ msgid ""
 "Konfiguration des L3-Switches."
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/preface.rst:75
-msgid ""
-"Abb. ggf. anpassen, damit alle Switch-Verbindungen lila dargestellt werden."
-msgstr ""
-
-#: ../../source/systemadministration/network/subnetting-basics/preface.rst:77
+#: ../../source/systemadministration/network/subnetting-basics/preface.rst:73
 msgid ""
 "In der Abbildung wird die Verbindung zwischen beiden Switches sowie zwischen"
 " dem L3-Switch und dem VM-Server lila als Trunk (Cisco) bzw. Tagged-Port "
@@ -376,7 +371,7 @@ msgid ""
 " ihrem VLAN-Tag der jeweiligen VM zugeordnet werden."
 msgstr ""
 
-#: ../../source/systemadministration/network/subnetting-basics/preface.rst:79
+#: ../../source/systemadministration/network/subnetting-basics/preface.rst:75
 msgid ""
 "Verfügt der VM-Server über mehrere Netzwerkschnittstellen, so sollten diese "
 "gebündelt werden (je nach Hersteller werden hierfür die Begriffe NIC "

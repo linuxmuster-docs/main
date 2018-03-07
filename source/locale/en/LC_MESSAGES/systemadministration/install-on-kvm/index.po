@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, linuxmuster.net
+# Copyright (C) 2018, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-17 12:36+0700\n"
+"POT-Creation-Date: 2018-03-07 13:18+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +20,7 @@ msgstr ""
 
 #: ../../source/systemadministration/install-on-kvm/index.rst:2
 msgid "Installation mit KVM"
-msgstr ""
+msgstr "Installation with KVM"
 
 #: ../../source/systemadministration/install-on-kvm/index.rst:4
 msgid ""
@@ -27,34 +28,41 @@ msgid ""
 "Installieren der linuxmuster.net-Musterlösung in der Version 6.2 auf Basis "
 "von KVM unter Ubuntu Server 16.04.3 LTS."
 msgstr ""
+"In this document you will find \"Step by step\" instructions for installing "
+"the linuxmuster.net school server solution in version 6.2 based on KVM under"
+" Ubuntu Server 16.04.3 LTS."
 
 #: ../../source/systemadministration/install-on-kvm/index.rst:6
 msgid ""
 "Im folgenden Bild eine schematische Darstellung der einfachsten Form der "
 "Implementierung der Musterlösung:"
 msgstr ""
+"The following figure shows a schematic representation of the simplest form "
+"of implementation of the school server solution:"
 
 #: ../../source/systemadministration/install-on-kvm/index.rst:10
 msgid ""
 "Nach der Installation gemäß dieser Anleitung erhälst Du eine einsatzbereite "
 "Umgebung bestehend aus"
 msgstr ""
+"After installation according to this manual you will receive a ready-to-use "
+"environment consisting of"
 
 #: ../../source/systemadministration/install-on-kvm/index.rst:12
 msgid "einem Administrationsrechner (adminPC),"
-msgstr ""
+msgstr "an administration computer (adminPC),"
 
 #: ../../source/systemadministration/install-on-kvm/index.rst:13
 msgid "einem Virtualisierungshost (kvm),"
-msgstr ""
+msgstr "a virtualization host (kvm),"
 
 #: ../../source/systemadministration/install-on-kvm/index.rst:14
 msgid "einer Firewall (ipfire) und"
-msgstr ""
+msgstr "a firewall (ipfire) and"
 
 #: ../../source/systemadministration/install-on-kvm/index.rst:15
 msgid "eines Servers (server)."
-msgstr ""
+msgstr "a server (server)."
 
 #: ../../source/systemadministration/install-on-kvm/index.rst:18
 msgid ""
@@ -63,7 +71,11 @@ msgid ""
 "Adresse 192.168.1.1/24 besitzt. Des Weiteren ist es hilfreich, wenn er einen"
 " dynamischen DHCP-Bereich für die Installation zur Verfügung stellt."
 msgstr ""
+"As a prerequisite, a router is required which in our example provides the "
+"private network 192.168.1.0/24 and which itself has the IP address "
+"192.168.1.1/24. It is also helpful when it provides a dynamic DHCP area for "
+"installation."
 
 #: ../../source/systemadministration/install-on-kvm/index.rst:20
 msgid "Inhalt:"
-msgstr ""
+msgstr "Content"

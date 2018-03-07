@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, linuxmuster.net
+# Copyright (C) 2018, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-17 12:36+0700\n"
+"POT-Creation-Date: 2018-03-07 13:18+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -32,11 +32,11 @@ msgstr ""
 "Guide <... /... /systemadministration/maintenance/upgrade/index>`. "
 "Nevertheless, first read the list of new features and known problems."
 
-#: ../../source/about/release-information/index.rst:23
+#: ../../source/about/release-information/index.rst:22
 msgid "Release-Informationen früherer Veröffentlichungen"
 msgstr "Release notes for previous releases"
 
-#: ../../source/about/release-information/index.rst:25
+#: ../../source/about/release-information/index.rst:24
 msgid ""
 "`Release-Informationen zur linuxmuster.net 5.1, 6.0 und 6.1 "
 "<https://www.linuxmuster.net/wikiarchiv/dokumentation:handbuch:preparation:features>`_"

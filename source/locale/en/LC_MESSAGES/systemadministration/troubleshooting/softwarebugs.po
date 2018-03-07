@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net 6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-07 13:18+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja, 2018\n"
+"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:3
+msgid "Bekannte Software-Probleme"
+msgstr "Known Software Problems"
+
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:7
+msgid "Cups startet nicht sowie LDAP Fehler bei import_workstations"
+msgstr "CUPS does not start and LDAP error in `import_workstations`"
+
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:9
+msgid ""
+"Möglicherweise treten bei Dir nach der Erstinstallation, Konfiguration und "
+"Einspielen aller Updates auch folgende Probleme auf:"
+msgstr ""
+"After the initial installation, configuration and installation of all "
+"updates, you may also encounter the following problems:"
+
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:11
+msgid "Cups startet nicht und"
+msgstr "Cups does not start and"
+
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:13
+msgid ""
+"**import_workstations** bricht mit Fehlermeldung ab, dass LDAP nicht "
+"verfügbar ist."
+msgstr ""
+"`import_workstations` aborts with error message that LDAP is not available."
+
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:15
+msgid "Fatal! LDAP is not available! Is slapd running?"
+msgstr "Fatal! LDAP is not available! Is slapd running?"
+
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:19
+msgid ""
+"Darüber hinaus sind im ``/var/log/syslog`` Logfile **apparmor DENIEDs** zu "
+"finden."
+msgstr ""
+"You can also find DENIEDs in the ``/var/log/syslog`` logfile **apparmor "
+"DENIEDs**."
+
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:21
+msgid "apparmor=\"DENIED\""
+msgstr "apparmor=\"DENIED\""
+
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:25
+msgid ""
+"Für Beides sind im Forum Lösungsvorschläge zu finden: `Apparmor "
+"<https://www.linuxmuster.net/wiki/anwenderwiki:apparmor_fehler>`_, `LDAP "
+"<https://www.linuxmuster.net/forum/thread/920;?unb925sess=3fe94941ffd5a8d21766b3e5abff733a>`_."
+msgstr ""
+"Solutions for both of these problems can be found in the forum: `Apparmor "
+"<https://www.linuxmuster.net/wiki/anwenderwiki:apparmor_error>`_, `LDAP "
+"<https://www.linuxmuster.net/forum/thread/920;?unb925sess=3fe94941ffd5a8d21766b3e5abff733a>`_."
+
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:27
+msgid ""
+"Beide Probleme können auf dem **server** folgendermaßen behoben werden:"
+msgstr "Both problems can be solved on the **server** as follows:"
+
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:29
+msgid ""
+"Apparmor\n"
+"Schritt 1: Deinstallation des Dienstes\n"
+"\n"
+"# service apparmor stop\n"
+"# update-rc.d -f apparmor remove\n"
+"# apt-get --purge remove apparmor apparmor-utils libapparmor-perl libapparmor1\n"
+"# rm -rf /etc/apparmor*\n"
+"# update-initramfs -u\n"
+"\n"
+"Schritt 2: Installation des Dienstes\n"
+"\n"
+"# apt-get install apparmor apparmor-utils\n"
+"\n"
+"LDAP\n"
+"\n"
+"# sophomorix-dump-pg2ldap"
+msgstr ""
+"Apparmor\n"
+"Step 1: Deinstallation of the service\n"
+"\n"
+"# service apparmor stop\n"
+"# update-rc.d -f apparmor remove\n"
+"# apt-get --purge remove apparmor apparmor-utils libapparmor-perl libapparmor1\n"
+"# rm -rf /etc/apparmor*\n"
+"# update-initramfs -u\n"
+"\n"
+"Step 2: Installation of the service\n"
+"\n"
+"# apt-get install apparmor apparmor-utils\n"
+"\n"
+"LDAP\n"
+"\n"
+"# sophomorix-dump-pg2ldap"

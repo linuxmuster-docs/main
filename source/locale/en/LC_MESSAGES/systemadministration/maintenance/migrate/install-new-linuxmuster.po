@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, linuxmuster.net
+# Copyright (C) 2018, linuxmuster.net
 # This file is distributed under the same license as the linuxmuster.net package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-17 12:36+0700\n"
+"POT-Creation-Date: 2018-03-07 13:18+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +20,7 @@ msgstr ""
 
 #: ../../source/systemadministration/maintenance/migrate/install-new-linuxmuster.rst:2
 msgid "Neuinstallation linuxmuster.net"
-msgstr ""
+msgstr "linuxmuster.net Reinstallation"
 
 #: ../../source/systemadministration/maintenance/migrate/install-new-linuxmuster.rst:4
 msgid ""
@@ -27,9 +28,12 @@ msgid ""
 "durchgeführt wurde, kann nun die Neuinstalltion von linuxmuster.net (IPfire "
 "und Server) und die anschließende Konfiguration durchgeführt werden."
 msgstr ""
+"After performing the backup using the migration script linuxmuster-"
+"migration, you can now reinstall linuxmuster. net (IPfire and server) and "
+"perform the subsequent configuration."
 
 #: ../../source/systemadministration/maintenance/migrate/install-new-linuxmuster.rst:8
 msgid ""
 "Zum weiteren Vorgehen Siehe `Installation der linuxmuster.net von Grund "
 "auf`_."
-msgstr ""
+msgstr "See also `Manuell Installation of linuxmuster.net`_."
