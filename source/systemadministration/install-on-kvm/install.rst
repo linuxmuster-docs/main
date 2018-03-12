@@ -599,7 +599,8 @@ server: Anpassen der Linbo-Konfiguration
 
 Zum Abschuss der Installation des **servers** müssen noch zwei Konfigurationsparameter angepasst werden.
 
-**Aktivieren des Bittorrent Dienstes**
+Aktivieren des Bittorrent Dienstes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
@@ -607,7 +608,8 @@ Zum Abschuss der Installation des **servers** müssen noch zwei Konfigurationspa
 	START_BTTRACK=1
 ..
 
-**Anpassen der Startparameter des TFTP-Dienstes nach Deaktivierung von IPv6**
+Anpassen der Startparameter des TFTP-Dienstes nach Deaktivierung von IPv6
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 	
