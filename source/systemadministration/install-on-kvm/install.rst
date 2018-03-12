@@ -594,6 +594,41 @@ adminPC: Erstellen eines ssh-Aliases zum Server
 	</p>
 ..
 
+server: Anpassen der Linbo-Konfiguration
+----------------------------------------
+
+Zum Abschuss der Installation des **servers** müssen noch zwei Konfigurationsparameter angepasst werden.
+
+Aktivieren des Bittorrent Dienstes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: console
+
+	# /etc/default/bittorrent
+	START_BTTRACK=1
+..
+
+Anpassen der Startparameter des TFTP-Dienstes nach Deaktivierung von IPv6
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: console
+	
+	# /etc/default/tftpd-hpa
+	TFTP_OPTIONS="--secure -4"
+
+	Neustart des TFTPD-Dienstes
+	# service tftpd-hpa stop
+	# service tftpd-hpa start
+..
+
+.. raw:: html
+
+	<p>
+	<iframe width="696" height="392" src="https://www.youtube.com/embed/uGAqO_88yXc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</p>
+..
+
+
 kvm: Aktivieren des Autostarts der VMs
 --------------------------------------
 

@@ -4,10 +4,7 @@ Weiterführende Dokumentation
 Problembehebung
 ---------------
 
-.. toctree::
-   :maxdepth: 2
-
-   ../troubleshooting/softwarebugs
+siehe :ref:`Bekannte Software Probleme <softwarebugs-label>`
 
 Vorlage der Netzwerkzeichnungen
 -------------------------------
