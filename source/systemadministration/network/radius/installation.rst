@@ -14,12 +14,12 @@ In den Paketquellen von Linuxmuster.net gibt es das Paket ``linuxmuster-freeradi
 Firewall konfigurieren
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Nun muss die Firewall konfiguriert werden, damit die Anfragen auch auf dem Server ankommen (UDP, Port 1182). Dazu bearbeitet man die Datei ``/etc/linuxmuster/allowed_ports`` und fügt in der Zeile "udp" den entsprechenden Port hinzu.
+Nun muss die Firewall konfiguriert werden, damit die Anfragen auch auf dem Server ankommen (UDP, Port 1812). Dazu bearbeitet man die Datei ``/etc/linuxmuster/allowed_ports`` und fügt in der Zeile "udp" den entsprechenden Port hinzu.
 
 .. code-block:: console
 
    ...
-   udp domain, ... , 1182
+   udp domain, ... , 1812
 
 Damit die Änderungen auf der Firewall (IPFire) wirksam werden, geben Sie bitte folgenden Befehl ein:
 
@@ -60,12 +60,12 @@ Als Ausgabe sollte man folgendes erhalten:
 .. code-block:: console
 
    $ radtest steve testing 127.0.0.1:1182 10 testing123
-   Sending Access-Request of id 34 to 127.0.0.1 port 1182
+   Sending Access-Request of id 34 to 127.0.0.1 port 1812
           User-Name = "steve"
           User-Password = "testing"
           NAS-IP-Address = 127.0.0.1
           NAS-Port = 0
-  rad_recv: Access-Accept packet from host 127.0.0.1 port 1182, id=34, length=20
+  rad_recv: Access-Accept packet from host 127.0.0.1 port 1812, id=34, length=20
 
 Wenn man eine ähnliche Ausgabe erhält, kann nun der Zugriff auf das LDAP-Verzeichnis eingerichtet werden, damit man sich mit seinem Benutzernamen und Passwort der linuxmuster.net anmelden kann. Dazu muss der Client (Access Point, Captive Portal Server, Wireless Controller) in die Datei ``/etc/freeradius/clients`` eingetragen werden. Bitte passen Sie den Client Namen, die IP-Adresse und das Passwort entsprechend an.
 
@@ -105,4 +105,3 @@ MD5 kommt als Protokoll nicht in Frage, da die Passwörter nicht als MD5 im LDAP
    pap {
       auto_header = yes
    }
-
