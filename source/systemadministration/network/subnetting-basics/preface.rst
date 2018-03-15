@@ -70,7 +70,13 @@ Damit DHCP-Anfragen der Clients aus dem internen (grünen) Netz an den Server 10
    :alt: Struktur: Segmentiertes Netz
    :align: center
 
-In der Abbildung wird die Verbindung zwischen beiden Switches sowie zwischen dem L3-Switch und dem VM-Server lila als Trunk (Cisco) bzw. Tagged-Port (HP) gekennzeichnet. Dies bedeutet, dass der Uplink zwischen den Switches so zu konfigurieren ist, dass die VLAN-Tags weitergereicht werden. An dem L2-Switch werden die Ports dann jeweils den erforderlichen VLANs zugeordnet (port-basierte VLANs). Für den VM-Server bedeutet dies, dass der Datenverkehr aller VLANs hierin weitergeleitet wird und dann die Daten gemäß ihrem VLAN-Tag der jeweiligen VM zugeordnet werden.
+In der Abbildung wird die Verbindung zwischen beiden Switches sowie zwischen dem L3-Switch und dem VM-Server lila als Trunk (Cisco) bzw. Tagged-Port (HP) gekennzeichnet. Dies bedeutet, dass der Uplink zwischen den Switches so zu konfigurieren ist, dass die VLAN-Tags weitergereicht werden. An dem L2-Switch werden die Ports dann jeweils den erforderlichen VLANs zugeordnet (port-basierte VLANs). 
 
-Verfügt der VM-Server über mehrere Netzwerkschnittstellen, so sollten diese gebündelt werden (je nach Hersteller werden hierfür die Begriffe NIC Bonding, LinkAggregation, Etherchannel) verwendet, um den Datendurchsatz zu verbessern. Dies kann ebenfalls für die Verbindung zwischen den Switches (Uplinks) genutzt werden. In dieser Dokumentation soll die LinkAggregation am Beispiel des L3-Switches verdeutlicht werden. Es werden für 8 Ethernetschnittstellen vier Link-Aggregation Ports bestehend aus jeweils zwei Ethernetschnittstellen gebildet, die dann entsprechend konfiguriert werden.
+Für einen VM-Server bedeutet dies, dass der Datenverkehr aller VLANs hierin weitergeleitet wird und dann die Daten gemäß ihrem VLAN-Tag der jeweiligen VM zugeordnet werden.
+
+.. image:: media/vlan-infrastructure-virtual.png
+   :alt: Struktur: Segmentiertes Netz mit virtualisierten Servern
+   :align: center
+
+Verfügt der VM-Server über mehrere Netzwerkschnittstellen wie in der Abbildung dargestellt, so sollten diese gebündelt werden (je nach Hersteller werden hierfür die Begriffe NIC Bonding, LinkAggregation, Etherchannel) verwendet, um den Datendurchsatz zu verbessern. Dies kann ebenfalls für die Verbindung zwischen den Switches (Uplinks) genutzt werden. In dieser Dokumentation soll die LinkAggregation am Beispiel des L3-Switches verdeutlicht werden. Es werden für 8 Ethernetschnittstellen vier Link-Aggregation Ports bestehend aus jeweils zwei Ethernetschnittstellen gebildet, die dann entsprechend konfiguriert werden.
 
