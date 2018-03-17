@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-07 13:18+0700\n"
+"POT-Creation-Date: 2018-03-17 09:28+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +20,7 @@ msgstr ""
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:2
 msgid "Wie richte ich Drucker auf den Clients ein?"
-msgstr ""
+msgstr "How do I set up printers on the clients?"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:4
 msgid ""
@@ -28,33 +29,38 @@ msgid ""
 "funktioniert. Die URL für die Druckerverbindung wird nach folgendem Schema "
 "zusammengesetzt:"
 msgstr ""
+"On the client side, printers must be set up using the HTTP protocol so that "
+"the room-related printer access control can work through the school console."
+" The URL for the printer connection is composed as follows:"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:8
 msgid "http://<servername>:631/printers/<Druckername>"
-msgstr ""
+msgstr "http://<servername>:631/printers/<printername>"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:12
 msgid "**PDF Drucker**"
-msgstr ""
+msgstr "**PDF printer**"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:14
 msgid ""
 "Beispielhaft wird der standardmäßig eingerichtete PDF-Drucker über die URL"
-msgstr ""
+msgstr "For example, the default PDF printer is accessible via the URL"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:16
 msgid "http://server:631/printers/PDF-Printer"
-msgstr ""
+msgstr "http://server:631/printers/PDF-Printer"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:18
 msgid ""
 "angesprochen. Damit der PDF-Drucker auf dem Client genutzt werden kann, muss"
 " auf dem Client ein Standard-Postskript-Drucker eingerichtet werden."
 msgstr ""
+"For the PDF printer to be used on the client, a standard PostScript printer "
+"must be set up on the client."
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:22
 msgid "Linux Clients"
-msgstr ""
+msgstr "Linux Clients"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:24
 msgid ""
@@ -64,31 +70,40 @@ msgid ""
 "vorkonfigurierte Musterimage (Cloop) genutzt wird. Dieses gibt es für Ubuntu"
 " 14.04 (trusty) und Ubuntu 16.04 (xenial)."
 msgstr ""
+"Printer installation at the clients is done via an universal postsync-"
+"script. The only requirement is, that the printers were already setup at the"
+" server and that you use preconfigured images (cloop) as linux client. These"
+" are available for Ubuntu 14.04 (trusty) and Ubuntu 16.04 (xenial)."
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:26
 msgid ""
 "Auf dem Server existiert dann folgende Datei in einem der Verzeichnisse:"
 msgstr ""
+"The following file then exists on the server in one of the directories:"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:32
 msgid ""
 "/var/linbo/linuxmuster-client/trusty/common/etc/hosts\n"
 "/var/linbo/linuxmuster-client/xenial/common/etc/hosts"
 msgstr ""
+"/var/linbo/linuxmuster-client/trusty/common/etc/hosts\n"
+"/var/linbo/linuxmuster-client/xenial/common/etc/hosts"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:33
 msgid "Diese Datei weist nachstehende Rechte auf:"
-msgstr ""
+msgstr "This file has the following rights:"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:38
 msgid "-rw-r--r-- 1 root root 459 Jul 18 2014 hosts"
-msgstr ""
+msgstr "-rw-r--r-- 1 root root 459 Jul 18 2014 hosts"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:39
 msgid ""
 "In dieser Hosts Datei findet sich folgender Inhalt, der dann mithilfe des "
 "Postsync-Scripts rechnerspezifisch angepasst wird:"
 msgstr ""
+"This hosts file contains the following content, which is then adapted to the"
+" computer using the Postsync script:"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:52
 msgid ""
@@ -101,28 +116,37 @@ msgid ""
 "# damit CUPS zufrieden ist, muss noch diese Zeile hier dazu:\n"
 "#SERVERIP  server.lokal server.local"
 msgstr ""
+"# This file is patched by postsync. It is to be processed on the server.\n"
+"# Path: /var/linbo/linuxmuster-client/xenial/common/etc/hosts\n"
+"HOSTNAME is patched in the post sync script with the real name\n"
+"127.0.0.1 HOSTNAME\n"
+"The next line contains the host names as they are entered on the server...\n"
+"#SERVERIP server.linuxmuster.lokal server\n"
+"# For CUPS to be satisfied, you need to add this line here:\n"
+"#SERVERIP server.local server.lokal"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:53
 msgid "Das Postsync-Script liegt im Verzeichnis:"
-msgstr ""
+msgstr "The Postsync script is located in the directory:"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:58
 msgid "/var/linbo/<LinuxImagename>.cloop.postsync"
-msgstr ""
+msgstr "/var/linbo/<LinuxImagename>.cloop.postsync"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:59
 msgid "Es weist folgende Rechte auf:"
-msgstr ""
+msgstr "It has the following rights of access:"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:64
 msgid "-rw-rw---- 1 root root"
-msgstr ""
+msgstr "-rw-rw---- 1 root root"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:65
 msgid ""
 "In dem Postsync-Script finden sich folgende Eintragungen (hier für Trusty-"
 "Cloop):"
 msgstr ""
+"In the postsync-script there are records as follows (here for Trusty-Cloop):"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:157
 msgid ""
@@ -213,10 +237,96 @@ msgid ""
 "\n"
 "echo \"##### trusty-linuxmuster POSTSYNC END #####\""
 msgstr ""
+"echo \"##### trusty-linuxmuster POSTSYNC BEGIN #####\"\n"
+"\n"
+"# IP-Adresse des Server\n"
+"SERVERIP=10.16.1.1\n"
+"STARTCONF=/cache/start.conf\n"
+"\n"
+"# Raum feststellen. Dieses Skript geht davon aus\n"
+"# dass die Rechner Namen der Form\n"
+"# raumname-hostname haben, also z.B. cr01-pc18\n"
+"RAUM=${HOSTNAME%-*}\n"
+"# wenn der string leer ist, raum auf unknown setzen\n"
+"if [ \"x${RAUM}\" == \"x\" ]; then\n"
+"    RAUM=\"unknown\"\n"
+"fi\n"
+"\n"
+"# Das Verzeichnis, in dem die Serverpatches\n"
+"# local synchronisiert werden.\n"
+"PATCHCACHE=/linuxmuster-client/serverpatches\n"
+"# UVZ auf dem Server. Mit diesem Variablen kann\n"
+"# man verschiedene Images bedienen (was bei linux\n"
+"# selten nötig ist)\n"
+"PATCHCLASS=\"trusty\"\n"
+"\n"
+"echo \"\"\n"
+"echo \"Hostname:      ${HOSTNAME}\"\n"
+"echo \"Raum:          ${RAUM}\"\n"
+"echo \"Patchcache:    ${PATCHCACHE}\"\n"
+"echo \"Patchclass:    ${PATCHCLASS}\"\n"
+"echo \"\"\n"
+"if [ ! -d /cache/${PATCHCACHE}/${PATCHCLASS} ]; then\n"
+"  echo \"Patchklasse ist nicht vorhanden.\"\n"
+"  echo \"Auf dem Server mit mkdir -p /var/linbo/linuxmuster-client/${PATCHCLASS}/common/ das Grundverzeichnis anlegen und dort die gepatchten Dateien ablegen.\"\n"
+"fi\n"
+"\n"
+"# -----------------------------------------\n"
+"# Patchdateien auf das lokale Image rsyncen\n"
+"# -----------------------------------------\n"
+"echo \" - getting patchfiles\"\n"
+"\n"
+"# RAUM     -> Raumname\n"
+"# HOSTNAME -> Rechnername\n"
+"# Verzeichnis anlegen, damit es sicher existiert\n"
+"mkdir -p /cache/${PATCHCACHE}\n"
+"rsync --progress -r \"${SERVERIP}::linbo/linuxmuster-client/${PATCHCLASS}\" \"/cache/${PATCHCACHE}\"\n"
+"\n"
+"echo \" - patching local files\"\n"
+"# zuerst alles in common\n"
+"if [ -d /cache/${PATCHCACHE}/${PATCHCLASS}/common ]; then\n"
+"    cp -ar /cache/${PATCHCACHE}/${PATCHCLASS}/common/* /mnt/\n"
+"fi\n"
+"\n"
+"# dann raumspezifisch\n"
+"if [ -d /cache/${PATCHCACHE}/${PATCHCLASS}/${RAUM} ]; then\n"
+"    cp -ar /cache/${PATCHCACHE}/${PATCHCLASS}/${RAUM}/* /mnt/\n"
+"fi\n"
+"\n"
+"# dann rechnerspezifisch\n"
+"if [ -d /cache/${PATCHCACHE}/${PATCHCLASS}/${HOSTNAME} ]; then\n"
+"    cp -ar /cache/${PATCHCACHE}/${PATCHCLASS}/${HOSTNAME}/* /mnt/\n"
+"fi\n"
+"\n"
+"# -----------------------------------\n"
+"# Berechtigungen anpassen, wenn nötig\n"
+"# -----------------------------------\n"
+"echo \" - setting permissions of patched local files\"\n"
+"\n"
+"# printers.conf\n"
+"#[ -f /mnt/etc/cups/printers.conf ] && chmod 600 /mnt/etc/cups/printers.conf\n"
+"\n"
+"# .ssh verzeichnis\n"
+"#chmod 700 /mnt/root/.ssh/\n"
+"#chmod 600 /mnt/root/.ssh/authorized_keys\n"
+"\n"
+"# hostname in /etc/hosts patchen\n"
+"sed -i \"s/HOSTNAME/$HOSTNAME/g\" /mnt/etc/hosts\n"
+"sed -i \"s/#SERVERIP/$SERVERIP/g\" /mnt/etc/hosts\n"
+"\n"
+"# fstab anpassen, damit Swap-Partition stimmt\n"
+"echo \"---- hier beginnen wir mit dem debuggen:\"\n"
+"SWAPZEILENNR=$(grep -i \"^fstype\" $STARTCONF | cut -d\"#\" -f1 | grep -n -i \"swap\" | cut -d\":\" -f1)\n"
+"echo Swapzeilennummer: $SWAPZEILENNR\n"
+"SWAP=$(grep -i \"^dev\" -m $SWAPZEILENNR $STARTCONF | tail -n1 | cut -d\"=\" -f2 | tr -d [:blank:]|head -c9)\n"
+"echo Swap: $SWAP\n"
+"sed -i \"s|#dummyswap|$SWAP|g\" /mnt/etc/fstab\n"
+"\n"
+"echo \"##### trusty-linuxmuster POSTSYNC END #####\""
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:160
 msgid "**Hinweis für linuxmuster.net Version 6.2**"
-msgstr ""
+msgstr "**Note for linuxmuster.net version 6.2**"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:162
 msgid ""
@@ -227,10 +337,16 @@ msgid ""
 "Dies liegt daran, dass auf dem Server eine ältere CUPS-Version installiert "
 "ist als auf den Clients, deren CUPS-Version ab Ubuntu 14.04 aktueller ist."
 msgstr ""
+"If, when using the Postsync script on the client, a printer cannot be "
+"reached although it has been set up on the server, all so-called **CUPS-"
+"browsed** entries should still be removed on the server's CUPS service and "
+"all browse poll entries for the client's **CUPS service**. This is because "
+"an older CUPS version is installed on the server than on the clients whose "
+"CUPS version is more current as of Ubuntu 14.04."
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:168
 msgid "Die Einträge sind wie folgt zu entfernen:"
-msgstr ""
+msgstr "The entries are to be removed as follows:"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:170
 msgid ""
@@ -238,14 +354,17 @@ msgid ""
 " auskommentieren **Client-Cups: Datei /etc/cups/cupsd.conf** - alle Einträge"
 " mit BrowsePoll auskommentieren"
 msgstr ""
+"**Server cups: File /etc/cups/cupsd.conf** - comment out all entries with "
+"cups-browsed **Client cups: File /etc/cups/cupsd.conf** - comment out all "
+"entries with BrowsePoll"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:176
 msgid "https://ask.linuxmuster.net/t/netzwerkdrucker-verschwinden/181"
-msgstr ""
+msgstr "https://ask.linuxmuster.net/t/netzwerkdrucker-verschwinden/181"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:182
 msgid "Alternativ: Druckerinstallation manuell"
-msgstr ""
+msgstr "Alternatively: manual printer setup"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:184
 msgid ""
@@ -254,16 +373,22 @@ msgid ""
 "Client mit einem Browser über die URL http://localhost:631/admin als lokaler"
 " Benutzer **administrator** auf der CUPS-Administrationsseite ein."
 msgstr ""
+"The printer installation on the Linux client can be done using the CUPS web "
+"interface (like on the server). Log on to the CUPS administration page as "
+"the local user **administrator** on the client using a browser and the URL "
+"http://localhost:631/admin."
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:190
 msgid "Klicken Sie hier unter der Rubrik Drucker auf **Drucker hinzufügen**."
-msgstr ""
+msgstr "Click **Add Printer** under the heading \"Printers\"."
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:194
 msgid ""
 "Wählen Sie im nächsten Schritt als Netzwerkdrucker **Internet-Druckprotokoll"
 " (https)**."
 msgstr ""
+"At the next step as network printer choose **Internet Printing Protocol "
+"(https)**."
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:198
 msgid ""
@@ -271,40 +396,45 @@ msgid ""
 "Adresse. Wird der Netzwerkdrucker über den linuxmuster.net Server "
 "angesteuert, so ist dessen Adressen anzugeben:"
 msgstr ""
+"In the next step, select the correct address. If the network printer is "
+"controlled via the linuxmuster.net server, its addresses must be specified:"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:203
 msgid "**https://10.16.1.1/printers<druckername>**"
-msgstr ""
+msgstr "**https://10.16.1.1/printers<printername>**"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:206
 msgid ""
 "Wählen Sie danach die korrekte Druckermarke für den einzurichtenden Drucker "
 "aus."
-msgstr ""
+msgstr "Then select the correct printer model for the printer to be set up."
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:210
 msgid ""
 "Wählen Sie abschliessend das geeignete Druckermodell aus, oder wählen Sie "
 "eine eigene sog. PPD-Datei aus, die auf dem Client installiert werden soll."
 msgstr ""
+"Finally, select the appropriate printer model, or select your own PPD file "
+"to be installed on the client."
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:214
 msgid ""
 "Die weiteren Einrichuntsschritte entsprechen denen, wie sie auf dem Server "
 "bereits ausgeführt wurden."
 msgstr ""
+"The other setup steps correspond to those already executed on the server."
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:218
 msgid "Hier finden Sie die einzelnen Schritte:"
-msgstr ""
+msgstr "Here are the steps:"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:220
 msgid ":doc:`3-drucker-einrichten-cups`"
-msgstr ""
+msgstr ":doc:`3-drucker-einrichten-cups`"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:223
 msgid "Windows Clients"
-msgstr ""
+msgstr "Windows Clients"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:225
 msgid ""
@@ -314,12 +444,18 @@ msgid ""
 "Druckerinstallations-Assistenten rufen Sie wie folgt auf: ** Systemsteuerung"
 " --> Hardware und Sound --> Geräte und Drucker --> Drucker**"
 msgstr ""
+"Log on to the Windows client locally as **administrator** and call the "
+"printer installation assistant, or start the Add Printer Wizard as the user "
+"**administrator**. To open the Add Printer Wizard, proceed as follows: "
+"**Control Panel → Hardware and Sound → Devices and Printers → Printers**."
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:229
 msgid ""
 "Wählen Sie im Assistnten im Dialog **Drucker hinzufügen** die Option **Einen"
 " Netzwerk-, Drahtlos- oder Bluetoothdrucker hinzufügen**."
 msgstr ""
+"In the **Add Printer** dialog, select **Add a network, wireless or Bluetooth"
+" printer**."
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:233
 msgid ""
@@ -327,6 +463,8 @@ msgid ""
 "Schalftfläche Der gesuchte Drucker ist nicht aufgeführt zum nächsten "
 "Schritt."
 msgstr ""
+"In the following dialog box, close the printer search and go to the next "
+"screen via the button \"The desired printer is not listed\"."
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:237
 msgid ""
@@ -335,16 +473,21 @@ msgid ""
 "Druckereinrichtung in das Eingabefeld (Beispiel "
 "http://server:631/printers/Netzwerkdrucker)."
 msgstr ""
+"Select the option *Shared printer* and write the printer URL according to "
+"the specification in the printer setup section in the input field (example "
+"http://server:631/printers/networkprinter)."
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:242
 msgid ""
 "Nach Abschluss der Treiberinstallation steht der Drucker in unserem Beispiel"
 " als Netzwerkdrucker auf http://server:631 zur Verfügung."
 msgstr ""
+"After the driver installation has been completed, the printer is available "
+"in our example as a network printer on http://server:631."
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:244
 msgid "**Beispiel: PDF-Drucker**"
-msgstr ""
+msgstr "**Example: PDF printer**"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:246
 msgid ""
@@ -355,9 +498,17 @@ msgid ""
 " Verlauf des Installationsdialogs das **Druckermodell MS Publisher Color "
 "Printer**, das unter **Hersteller Generic** aufgeführt ist:"
 msgstr ""
+"A PostScript printer must be set up to use the PDF printer. Start the "
+"installation of a network printer via the printer installation wizard and "
+"enter the URL of the PDF printer as a network path (see :doc:`2-drucker-"
+"hinzufuegen`). In the further course of the installation dialog, select the "
+"**MS Publisher Color Printer** printer model, which is listed under "
+"**Generic** manufacturer:"
 
 #: ../../source/systemadministration/printer/printer/5-druckereinrichtung-clients.rst:253
 msgid ""
 "Nach Abschluss der Druckerinstallation steht der PDF-Drucker als PDF-Printer"
 " an http://server:631 zur Verfügung."
 msgstr ""
+"After the printer installation is completed, the PDF printer is available as"
+" a PDF printer at http://server:631."

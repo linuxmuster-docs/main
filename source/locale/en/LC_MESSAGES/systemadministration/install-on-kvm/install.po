@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-07 13:18+0700\n"
+"POT-Creation-Date: 2018-03-17 09:28+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -710,16 +710,51 @@ msgid "adminPC: Erstellen eines ssh-Aliases zum Server"
 msgstr ""
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:598
-msgid "kvm: Aktivieren des Autostarts der VMs"
+msgid "server: Anpassen der Linbo-Konfiguration"
 msgstr ""
 
 #: ../../source/systemadministration/install-on-kvm/install.rst:600
+msgid ""
+"Zum Abschuss der Installation des **servers** müssen noch zwei "
+"Konfigurationsparameter angepasst werden."
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:603
+msgid "Aktivieren des Bittorrent Dienstes"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:605
+msgid ""
+"# /etc/default/bittorrent\n"
+"START_BTTRACK=1"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:612
+msgid ""
+"Anpassen der Startparameter des TFTP-Dienstes nach Deaktivierung von IPv6"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:614
+msgid ""
+"# /etc/default/tftpd-hpa\n"
+"TFTP_OPTIONS=\"--secure -4\"\n"
+"\n"
+"Neustart des TFTPD-Dienstes\n"
+"# service tftpd-hpa stop\n"
+"# service tftpd-hpa start"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:633
+msgid "kvm: Aktivieren des Autostarts der VMs"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/install.rst:635
 msgid ""
 "Damit die VMs zukünftig bei einem Neustart des KVM-Servers nicht immer von "
 "Hand gestartet werden müssen, ist es sinnvoll den Autostart zu aktivieren."
 msgstr ""
 
-#: ../../source/systemadministration/install-on-kvm/install.rst:609
+#: ../../source/systemadministration/install-on-kvm/install.rst:644
 msgid ""
 "Damit ist die Erstinstallation aller Komponenten mittels KVM geschafft."
 msgstr ""

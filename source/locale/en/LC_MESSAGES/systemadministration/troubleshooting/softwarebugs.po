@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-07 13:18+0700\n"
+"POT-Creation-Date: 2018-03-17 09:28+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:3
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:5
 msgid "Bekannte Software-Probleme"
 msgstr "Known Software Problems"
 
-#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:7
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:9
 msgid "Cups startet nicht sowie LDAP Fehler bei import_workstations"
 msgstr "CUPS does not start and LDAP error in `import_workstations`"
 
-#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:9
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:11
 msgid ""
 "Möglicherweise treten bei Dir nach der Erstinstallation, Konfiguration und "
 "Einspielen aller Updates auch folgende Probleme auf:"
@@ -34,22 +34,22 @@ msgstr ""
 "After the initial installation, configuration and installation of all "
 "updates, you may also encounter the following problems:"
 
-#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:11
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:13
 msgid "Cups startet nicht und"
 msgstr "Cups does not start and"
 
-#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:13
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:15
 msgid ""
 "**import_workstations** bricht mit Fehlermeldung ab, dass LDAP nicht "
 "verfügbar ist."
 msgstr ""
 "`import_workstations` aborts with error message that LDAP is not available."
 
-#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:15
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:17
 msgid "Fatal! LDAP is not available! Is slapd running?"
 msgstr "Fatal! LDAP is not available! Is slapd running?"
 
-#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:19
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:21
 msgid ""
 "Darüber hinaus sind im ``/var/log/syslog`` Logfile **apparmor DENIEDs** zu "
 "finden."
@@ -57,11 +57,11 @@ msgstr ""
 "You can also find DENIEDs in the ``/var/log/syslog`` logfile **apparmor "
 "DENIEDs**."
 
-#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:21
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:23
 msgid "apparmor=\"DENIED\""
 msgstr "apparmor=\"DENIED\""
 
-#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:25
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:27
 msgid ""
 "Für Beides sind im Forum Lösungsvorschläge zu finden: `Apparmor "
 "<https://www.linuxmuster.net/wiki/anwenderwiki:apparmor_fehler>`_, `LDAP "
@@ -71,12 +71,12 @@ msgstr ""
 "<https://www.linuxmuster.net/wiki/anwenderwiki:apparmor_error>`_, `LDAP "
 "<https://www.linuxmuster.net/forum/thread/920;?unb925sess=3fe94941ffd5a8d21766b3e5abff733a>`_."
 
-#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:27
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:29
 msgid ""
 "Beide Probleme können auf dem **server** folgendermaßen behoben werden:"
 msgstr "Both problems can be solved on the **server** as follows:"
 
-#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:29
+#: ../../source/systemadministration/troubleshooting/softwarebugs.rst:31
 msgid ""
 "Apparmor\n"
 "Schritt 1: Deinstallation des Dienstes\n"

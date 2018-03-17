@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-07 13:18+0700\n"
+"POT-Creation-Date: 2018-03-17 09:28+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "MIME-Version: 1.0\n"
@@ -25,21 +25,25 @@ msgstr ""
 msgid "Problembehebung"
 msgstr ""
 
-#: ../../source/systemadministration/install-on-kvm/advanced.rst:13
+#: ../../source/systemadministration/install-on-kvm/advanced.rst:7
+msgid "siehe :ref:`Bekannte Software Probleme <softwarebugs-label>`"
+msgstr ""
+
+#: ../../source/systemadministration/install-on-kvm/advanced.rst:10
 msgid "Vorlage der Netzwerkzeichnungen"
 msgstr ""
 
-#: ../../source/systemadministration/install-on-kvm/advanced.rst:15
+#: ../../source/systemadministration/install-on-kvm/advanced.rst:12
 msgid ""
 "Bei Interesse kannst Du die Netzwerk-Skizzen zur eigenen Bearbeitung "
 ":download:`hier<install-on-kvm.odg>` als LibreOffice Draw herunterladen."
 msgstr ""
 
-#: ../../source/systemadministration/install-on-kvm/advanced.rst:19
+#: ../../source/systemadministration/install-on-kvm/advanced.rst:16
 msgid "kvm: Link Aggregation und VLANs"
 msgstr ""
 
-#: ../../source/systemadministration/install-on-kvm/advanced.rst:21
+#: ../../source/systemadministration/install-on-kvm/advanced.rst:18
 msgid ""
 "In der folgenden Beschreibung werden die beiden Netzwerkkarten des KVM-"
 "Servers zu einer logischen Netzwerkkarte (Bond) mit Hilfe des LACP "
@@ -49,18 +53,18 @@ msgid ""
 "Internet und WLAN auf VLANs verteilt."
 msgstr ""
 
-#: ../../source/systemadministration/install-on-kvm/advanced.rst:26
+#: ../../source/systemadministration/install-on-kvm/advanced.rst:23
 msgid "**Konfiguration des KVM-Servers**"
 msgstr ""
 
-#: ../../source/systemadministration/install-on-kvm/advanced.rst:28
+#: ../../source/systemadministration/install-on-kvm/advanced.rst:25
 msgid ""
 "Auf dem KVM-Server wird die Interfaces-Konfigurationsdatei "
 "``/etc/network/interfaces`` angepasst. Für das WLAN-Netz kommt ein weiteres "
 "Bridge-Interface dazu."
 msgstr ""
 
-#: ../../source/systemadministration/install-on-kvm/advanced.rst:30
+#: ../../source/systemadministration/install-on-kvm/advanced.rst:27
 msgid ""
 "# Bond Interfaces\n"
 "\n"
@@ -120,13 +124,13 @@ msgid ""
 "        bridge_stp off"
 msgstr ""
 
-#: ../../source/systemadministration/install-on-kvm/advanced.rst:91
+#: ../../source/systemadministration/install-on-kvm/advanced.rst:88
 msgid ""
 "Mit Hilfe von *cat /proc/net/bonding/bond0* kannst Du Dir den Status des "
 "Bond-Interfaces anschauen."
 msgstr ""
 
-#: ../../source/systemadministration/install-on-kvm/advanced.rst:93
+#: ../../source/systemadministration/install-on-kvm/advanced.rst:90
 msgid ""
 "root@kvm:~# cat /proc/net/bonding/bond0\n"
 "Ethernet Channel Bonding Driver: v3.7.1 (April 27, 2011)\n"
@@ -206,17 +210,17 @@ msgid ""
 "    port state: 61"
 msgstr ""
 
-#: ../../source/systemadministration/install-on-kvm/advanced.rst:174
+#: ../../source/systemadministration/install-on-kvm/advanced.rst:171
 msgid "**Konfiguration am Beispiel eines Cisco Switches**"
 msgstr ""
 
-#: ../../source/systemadministration/install-on-kvm/advanced.rst:176
+#: ../../source/systemadministration/install-on-kvm/advanced.rst:173
 msgid ""
 "Auf dem Switch werden 2 Ports und ein logisches Interface (EtherChannel/LAG)"
 " benötigt."
 msgstr ""
 
-#: ../../source/systemadministration/install-on-kvm/advanced.rst:178
+#: ../../source/systemadministration/install-on-kvm/advanced.rst:175
 msgid ""
 "interface Port-channel1\n"
 " description KVM-Server\n"
@@ -247,13 +251,13 @@ msgid ""
 " spanning-tree bpdufilter enable"
 msgstr ""
 
-#: ../../source/systemadministration/install-on-kvm/advanced.rst:210
+#: ../../source/systemadministration/install-on-kvm/advanced.rst:207
 msgid ""
 "Der Status der Verbindung kann mit Hilfe des Befehls *show etherchannel "
 "summary* ausgegeben werden."
 msgstr ""
 
-#: ../../source/systemadministration/install-on-kvm/advanced.rst:212
+#: ../../source/systemadministration/install-on-kvm/advanced.rst:209
 msgid ""
 "#show etherchannel summary\n"
 "Flags:  D - down        P - bundled in port-channel\n"

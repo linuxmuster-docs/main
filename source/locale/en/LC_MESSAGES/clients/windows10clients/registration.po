@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-07 13:18+0700\n"
+"POT-Creation-Date: 2018-03-17 09:28+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: zefanja, 2018\n"
 "Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
@@ -201,7 +201,7 @@ msgstr "Log on to the server as ``root`` and run the command line command"
 
 #: ../../source/clients/windows10clients/registration.rst:88
 msgid "server ~# import_workstations"
-msgstr ""
+msgstr "server ~# import_workstations"
 
 #: ../../source/clients/windows10clients/registration.rst:92
 msgid "aus."
