@@ -47,7 +47,7 @@ In der Patchklasse xenial würde eine Änderung der Datei rc.local auf allen Rec
 
 Um auf dem Server obige Verzeichnisstruktur zu erhalten, ist auf dem linuxmuster.net Server das Paket **linuxmuster-client-servertools** zu installieren. 
 
-Hierzu ist folgender Befehel anzuwenden:
+Hierzu ist folgender Befehl anzuwenden:
 
 .. code:: bash
 
