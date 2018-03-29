@@ -36,8 +36,8 @@ Probleme mit Grafikkarten-Treibern
 ==================================
 
 Der Linbo-64bit-Kernel enthält ab LINBO 2.3.31 (ca. Januar 2018) modularisierte Grafiktreiber.
-Es könnte damit auf mancher Hardware der Start der Linbo-GUI fehlschlagen. In dem Fall sollte
-man den Kernelparameter `nomodeset` in der `start.conf.example` ergänzen:
+Es könnte damit auf mancher Hardware der Start der Linbo-GUI fehlschlagen. In diesem Fall sollte
+man den Kernelparameter `nomodeset` in jeder betroffenen `start.conf.<hwk>` ergänzen:
 
 .. code-block:: console
 
@@ -45,3 +45,10 @@ man den Kernelparameter `nomodeset` in der `start.conf.example` ergänzen:
    [LINBO]
    ...
    KernelOptions = ... nomodeset
+
+Dann muss ein ``import_workstations`` ausgeführt werden, um die betroffenen Boot-Dateien (''/var/linbo/boot/grub/hwk.cfg'') zu aktualisieren. Wer letztere Dateien manuell geändert hat, muss auch die Kernelparameter manuell ergänzen oder den Automatismus unter Verlust der eigenen Änderungen wieder herstellen.
+
+.. code-block:: console
+
+   $ import_workstations
+
