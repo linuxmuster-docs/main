@@ -4,11 +4,11 @@ Installation & Konfiguration
 Radius-Server installieren
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In den Paketquellen von Linuxmuster.net gibt es das Paket ``linuxmuster-freeradius``. Installieren Sie das Paket mit
+In den Paketquellen von Linuxmuster.net gibt es das Paket ``linuxmuster-freeradius``. Installieren Sie das Paket (als root) mit
 
 .. code-block:: console
 
-   $ apt-get install linuxmuster-freeradius
+   # apt-get install linuxmuster-freeradius
 
 
 Firewall konfigurieren
@@ -25,13 +25,20 @@ Damit die Änderungen auf der Firewall (IPFire) wirksam werden, geben Sie bitte 
 
 .. code-block:: console
 
-   $ service linuxmuster-base restart
+   # service linuxmuster-base restart
 
 Falls Sie eine andere Firewall als die empfohlene Firewalllösung (IPFire) verwenden, müssen Sie die entsprechende Firewallregel selbst einrichten!
 
 
 Radius-Servers testen
 ~~~~~~~~~~~~~~~~~~~~~
+
+Das Programm ``radtest`` wird über das Paket freeradius-utils installiert:
+
+.. code-block:: console
+
+   # apt-get install linuxmuster-freeradius
+
 
 In der Datei ``/etc/freeradius/users`` in der folgenden Zeile das Kommentarzeichen (``#``) entfernen.
 
@@ -52,14 +59,14 @@ Nun kann man, nach einem Neustart des Radius-Servers, die Authentifizierung für
 
 .. code-block:: console
 
-   $ service freeradius restart
-   $ radtest steve testing 127.0.0.1:1182 10 testing123
+   # service freeradius restart
+   # radtest steve testing 127.0.0.1:1812 10 testing123
 
 Als Ausgabe sollte man folgendes erhalten:
 
 .. code-block:: console
 
-   $ radtest steve testing 127.0.0.1:1182 10 testing123
+   # radtest steve testing 127.0.0.1:1812 10 testing123
    Sending Access-Request of id 34 to 127.0.0.1 port 1812
           User-Name = "steve"
           User-Password = "testing"
