@@ -6,8 +6,8 @@
 
 Vorwort und Vorbereitungen
 ==========================
-Die linuxmuster.net 6.2 wird als Zwei-Server-Lösung (IPFire-Firewall und linuxmuster.net-Server) betrieben. Sie beginnen zunächst mit der Installation der IPFire-Firewall und fahren dann nach einer Vorkonfiguration der Firewall mit der Installation des linuxmuster.net-Servers fort.
 
+:fixme: Ins andere Kapitel verschieben!
 
 Checkliste
 ----------
@@ -16,50 +16,6 @@ Nutzen Sie die :download:`Checkliste  <./media/preamble/checklist/checklist.pdf>
 Download der Software
 ---------------------
 Laden Sie sich zunächst die benötigte Software herunter, beachten Sie dabei die Versionshinweise sorgfältig.
-
-IPFire
-``````
-Laden Sie das Iso-Image (
-`IPFire Version 2.19 - Core Update 103 (x86_64) <http://downloads.ipfire.org/releases/ipfire-2.x/2.19-core103/ipfire-2.19.x86_64-full-core103.iso>`_ ) herunter und brennen es auf eine CD.
-
-  .. warning::
-   Neuere Version des IPFire wurden noch nicht auf Kompatibilität getestet. Es wird dringend empfohlen nur getestete Versionen des IPFire einzusetzen.
-
-Um sicher zu stellen, dass die Datei richtig heruntergeladen wurde, können Sie die SHA1-Summe prüfen. Auf der Konsole eines Linuxbetriebsystems steht z.B. der Befehl ``sha1sum`` zur Verfügung:
-
-.. code-block:: console
-
-   sha1sum ipfire-2.19.x86_64-full-core103.iso
-
-Als Ausgabe erhält man die Prüfsumme, z.B.
-
-.. code-block:: console
-
-   1b92a278709ddc0542dd0f8514693ec073a963c5  ipfire-2.19.x86_64-full-core103.iso
-
-Dies so erhaltene Prüfsumme muss mit der auf der `Download-Seite <http://downloads.ipfire.org/release/ipfire-2.19-core103>`_ angegebenen übereinstimmen.
-
-Ubuntu Server
-`````````````
-Laden Sie das Iso-Image ( `Ubuntu 12.04.5 LTS 64-bit PC (AMD64) server install CD <http://releases.ubuntu.com/12.04/ubuntu-12.04.5-server-amd64.iso>`_ ) herunter und brennen es auf eine CD.
-
-  .. warning::
-   Verwenden Sie **nicht** Ubuntu 14.04 oder Ubuntu 16.04.
-   |br| Erst die Version linuxmuster.net 7 beruht voraussichtlich auf Ubuntu 16.04.
-
-Um sicher zu stellen, dass die Datei richtig heruntergeladen wurde, können Sie die SHA1-Summe prüfen. Auf der Konsole eines Linuxbetriebsystems steht z.B. der Befehl ``sha1sum`` zur Verfügung:
-
-.. code-block:: console
-
-   sha1sum ubuntu-12.04.5-server-amd64.iso
-
-Als Ausgabe erhält man die Prüfsumme, z.B.
-
-.. code-block:: console
-
-   7540ace2d6cdee264432f5ed987236d32edef798  ubuntu-12.04.5-server-amd64.iso
-
-Dies so erhalten Prüfsumme muss mit von Ubuntu zur Verfügung gestellten `Summe <http://releases.ubuntu.com/12.04/SHA1SUMS>`_ (Zeile ubuntu-12.04.5-server-amd64.iso) übereinstimmen.
 
 .. _`net-infrastructure-label`:
 
