@@ -38,17 +38,30 @@ VirtualBox als Hypervisor
 Software
 ========
 
-Download der Software
----------------------
+Download und Upgrade der Abbilder
+---------------------------------
+
 Lade dir zunächst die benötigte Software herunter, beachte dabei die Versionshinweise sorgfältig.
 
 OpnSense
 ````````
-
 :fixme: Download opnsense
 
-Ubuntu Server 18.04 LTS
-```````````````````````
+Linuxmuster
+```````````
+
+:fixme: Download Linuxmuster
+
+optional: docker und opsi
+`````````````````````````
+
+:fixme: download opsi & co
+
+	
+From scratch: Ubuntu Server 18.04 LTS
+-------------------------------------
+
+:fixme: gehört dann doch wieder zur alternativen Installation
 
 Lade dir das Iso-Image ( `Ubuntu 18.04 LTS 64-bit PC (AMD64) server install image <http://releases.ubuntu.com/bionic/ubuntu-18.04-live-server-amd64.iso>`_ ) herunter und brenne es auf eine CD oder auf einen USB-Stick
 
