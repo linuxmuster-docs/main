@@ -18,7 +18,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   :caption: Erste Schritte
 
   getting-started/prerequisites/index
-  systemadministration/install-from-scratch/index
+  getting-started/serverinstallation/index
   getting-started/add-computer/index
   getting-started/linuxclients/index
   getting-started/add-user-accounts/index

@@ -73,7 +73,7 @@ Netzwerkstruktur
 ================
 
 IP-Bereiche
-```````````
+-----------
 Die linuxmuster.net-Lösung kann mit unterschiedlichen IP-Bereiche arbeiten. Jede Zeile der folgenden Tabelle stellt eine Möglichkeit dar.
 
 +---------+-------------------+-----------------+------------+--------------+
@@ -88,10 +88,10 @@ Die linuxmuster.net-Lösung kann mit unterschiedlichen IP-Bereiche arbeiten. Jed
 | 224-239 | 10.224.0.0        | 10.239.255.255  | 10.224.1.1 | 10.224.1.254 |
 +---------+-------------------+-----------------+------------+--------------+
 
-Bei der Installation entscheiden Sie sich für einen der Bereiche. Liegen keine besonderen Anforderungen (z.B. Testbetrieb von linuxmuster.net in einem weiteren produktiv laufenden linuxmuster.net-System) vor, wird empfohlen den Bereich 16-31 zu verwenden.  |br| Dies hat auch den Vorteil, dass alle im vorliegenden Dokument enthaltenen Screenshots bei einer Installation mit diesem Bereich gemacht wurden.
+Bei der Installation entscheiden Sie sich für einen der Bereiche. Liegen keine besonderen Anforderungen (z.B. Testbetrieb von linuxmuster.net in einem weiteren produktiv laufenden linuxmuster.net-System) vor, wird empfohlen den Bereich 16-31 zu verwenden. Dies hat auch den Vorteil, dass alle im vorliegenden Dokument enthaltenen Screenshots bei einer Installation mit diesem Bereich gemacht wurden.
 
 Netzwerknamen der Firewall-Lösung IPFire
-````````````````````````````````````````
+----------------------------------------
 Linuxmuster.net ordnet den unterschiedlichen Netzwerken Farben zu:
 
 *  Das interne Netzwerk wird GRÜNES Netzwerk genannt.
@@ -106,14 +106,14 @@ Linuxmuster.net ordnet den unterschiedlichen Netzwerken Farben zu:
    Schematischer Aufbau eines Computernetzes mit linuxmuster.net.
 
 Hinweise für Profis
-```````````````````
+-------------------
 Die linuxmuster.net-Lösung unterstützt auch komplexere Netzwerkstrukturen mit
 
 * subnetting
 * VLANS
 * Bonding
 
-Siehe dazu auch :doc:`Netzsegmentierung mit linuxmuster.net <../network/subnetting-basics/index/>`
+Siehe dazu auch :doc:`Netzsegmentierung mit linuxmuster.net <../../systemadministration/network/subnetting-basics/index/>`
 
 
 Checkliste
