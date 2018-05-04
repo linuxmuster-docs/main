@@ -1,6 +1,8 @@
 Installation mit XEN
 ====================
 
+:fixme: Alles in eine Datei! Doppelungen mit install-from-scratch und prerequisites vermeiden! https://github.com/linuxmuster-docs/main/issues/129
+
 In diesem Dokument finden Sie Anleitungen zum Installieren der von
 Netzint bereitgestellten XenAppliance der linuxmuster.net-Musterlösung
 in der Version 6.2. Es werden diverse Installationsautomatismen

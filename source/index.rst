@@ -4,7 +4,7 @@
 
 Herzlich Willkommen zur Dokumentation von linuxmuster.net! Diese Dokumentation beschreibt alle wichtigen Schritte von der Installation, der Einrichtung von Windows- und Ubuntu-Rechnern, der Verwaltung von Nutzern bis hin zu individuellen Anpassungen.
 
-Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Support helfend Seite. Weiter Informationen dazu finden sie auf der `Website von Linuxmuster.net <http://linuxmuster.net/about/hilfsbereit/>`_.
+Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Support helfend Seite. Weitere Informationen dazu finden sie auf der `Website von Linuxmuster.net <http://linuxmuster.net/about/hilfsbereit/>`_.
 
 .. toctree::
   :maxdepth: 2
@@ -18,7 +18,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   :caption: Erste Schritte
 
   getting-started/prerequisites/index
-  getting-started/install-on-xen/index
+  getting-started/serverinstallation/index
   getting-started/add-computer/index
   getting-started/linuxclients/index
   getting-started/add-user-accounts/index
@@ -27,7 +27,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   :maxdepth: 2
   :caption: Systemadministration
 
-  systemadministration/install-from-scratch/index
+  getting-started/install-on-xen/index
   systemadministration/maintenance/index
   systemadministration/network/index
   systemadministration/printer/index
