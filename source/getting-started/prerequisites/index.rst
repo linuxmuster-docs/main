@@ -6,7 +6,11 @@ Linuxmuster.net wird als Zwei-Server-Lösung (Firewall und
 linuxmuster.net-Server) betrieben. Jeder der Server kann "auf dem
 Blech" installiert werden, sofern die Hardware-Voraussetzungen für die
 Firewall (standardmäßig opnsense) und den Server (Ubuntu) gegeben
-sind.
+sind. Diese Installationsmethode eignet sich auch für nicht explizit
+beschriebene Virtualisierungen.
+
+Für gängige Virtualisierungsmethoden gibt es (unterschiedliche)
+Abbilder zum Download und zum Einspielen in das Hostsystem.
 
 Hardware
 ========
@@ -19,12 +23,40 @@ Virtualisierung
 KVM/qemu als Hypervisor
 -----------------------
 
-- Proxmox als Virtualisierungslösung
+KVM
+~~~
+Der Installationsablauf ist
+
+# KVM-Host vorbereiten
+# OVA-Abbilder herunterladen, einspielen und aktualisieren
+# Anpassung der Festplattenkapazitäten an eigene Bedürfnisse
+# Start der Installation und Erstkonfiguration
+
+Proxmox
+~~~~~~~
+
+:fixme: unklar, ob Proxmox die OVAs verdauen kann
+
+Der Installationsablauf ist
+
+# Proxmox-Host vorbereiten
+# OVA-Abbilder herunterladen, einspielen und aktualisieren
+# Anpassung der Festplattenkapazitäten an eigene Bedürfnisse
+# Start der Installation und Erstkonfiguration
+
 
 Xen als Hypervisor
 ------------------
 
-- XenServer als Virtualisierungslösung
+XenServer
+~~~~~~~~~
+
+Der Installationsablauf ist
+
+# XenServer vorbereiten, XVA-VM der linuxmuster.net herunterladen
+# XenServer installieren, XVA-VMs einspielen und aktualisieren
+# Anpassung der Festplattenkapazitäten an eigene Bedürfnisse
+# Start der Installation und Erstkonfiguration
 
 :fixme: https://github.com/linuxmuster-docs/main/issues/130
 
@@ -32,8 +64,17 @@ Xen als Hypervisor
 VMWare als Hypervisor
 ---------------------
 
+:fixme: anybody?
+
 VirtualBox als Hypervisor
 -------------------------
+
+Der Installationsablauf ist
+
+# VirtualBox-Host vorbereiten
+# OVA-Abbilder herunterladen, einspielen und aktualisieren
+# Anpassung der Festplattenkapazitäten an eigene Bedürfnisse
+# Start der Installation und Erstkonfiguration
 
 Software
 ========
@@ -44,16 +85,16 @@ Download und Upgrade der Abbilder
 Lade dir zunächst die benötigte Software herunter, beachte dabei die Versionshinweise sorgfältig.
 
 OpnSense
-````````
+~~~~~~~~
 :fixme: Download opnsense
 
 Linuxmuster
-```````````
+~~~~~~~~~~~
 
 :fixme: Download Linuxmuster
 
 optional: docker und opsi
-`````````````````````````
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :fixme: download opsi & co
 
