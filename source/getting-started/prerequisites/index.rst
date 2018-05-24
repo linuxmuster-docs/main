@@ -3,11 +3,13 @@
 =================
 
 Linuxmuster.net wird als Zwei-Server-Lösung (Firewall und
-linuxmuster.net-Server) betrieben. Jeder der Server kann "auf dem
-Blech" installiert werden, sofern die Hardware-Voraussetzungen für die
-Firewall (standardmäßig opnsense) und den Server (Ubuntu) gegeben
-sind. Diese Installationsmethode eignet sich auch für nicht explizit
-beschriebene Virtualisierungen.
+linuxmuster.net-Server) betrieben. Optional können weitere Server 
+wie z.B. ein Docker-Host eingesetzt werden. Jeder der Server kann 
+auch einzeln direkt auf der Hardware installiert werden. Es müssen 
+die Hardware-Voraussetzungen erfüllt sein, die für die Firewall 
+(standardmäßig OPNsense) und den Server (Ubuntu Server 18.04 LTS) 
+ebenfalls gelten.  Diese Installationsmethode eignet sich auch für 
+nicht explizit beschriebene Virtualisierungen.
 
 Für gängige Virtualisierungsmethoden gibt es (unterschiedliche)
 Abbilder zum Download und zum Einspielen in das Hostsystem.
@@ -15,7 +17,144 @@ Abbilder zum Download und zum Einspielen in das Hostsystem.
 Hardware
 ========
 
-:fixme: https://github.com/linuxmuster-docs/main/issues/128
+Ohne Virtualisierung
+--------------------
+
+OPNsense
+~~~~~~~~
+
+OPNSense ist für x86-32 und x86-64 Bit Architekturen verfügbar und kann auf 
+SD-Karte, SSD oder HDDs installiert werden. Als Basis nutzt OPNsense das 
+Betriebssystem FreeBSD.
+
+Es wird empfohlen folgende Hardware-Anforderungen zu erfüllen, um die Mehrzahl
+der Einsatzszenarien abzudecken:
+
++---------------------+-------------------------------------+
+| Prozessor           | >= 1 GHz Multi-Core CPU (64 Bit)    |
++---------------------+-------------------------------------+
+| RAM                 | >= 1 GB                             |
++---------------------+-------------------------------------+
+|Installationsmethode | Video (VGA)                         |
++---------------------+-------------------------------------+
+|Festplatte           | 120 GB SSD                          |
++---------------------+-------------------------------------+
+|NIC                  | mind. 2 (intern + extern),          |
+|                     | oder  3 (inter + extern + WLAN)     |
++---------------------+-------------------------------------+
+
+Weitere Hinweise zu möglichen Hardwareanforderungen bei unterschiedlichen
+Einsatzszenarien finden sich hier_.
+
+.. _hier: https://wiki.opnsense.org/manual/hardware.html#hardware-requirements
+
+Hinweise zu den Anforderungen von FreeBSD bzw. zur Kompatibilität mit 
+eingesetzten Hardware-Komponenten finden sich unter der HCL - Hardware Compatability List_.
+
+.. _List: https://www.freebsd.org/releases/11.1R/hardware.html
+
+
+Ubuntu-Server lmn.v7
+~~~~~~~~~~~~~~~~~~~~
+
+Für linuxmuster.net v7 wird als Basis Ubuntu Server 18.04 LTS eingesetzt.
+
+Es wird empfohlen folgende Hardware-Anforderungen zu erfüllen:
+
++---------------------+-------------------------------------+
+| Prozessor           | >= 1 GHz Multi-Core CPU (64 Bit)    |
++---------------------+-------------------------------------+
+| RAM                 | 4 GB                                |
++---------------------+-------------------------------------+
+|Festplatte           | 250 GB - 500 GB SSD oder HDD        |
++---------------------+-------------------------------------+
+
+
+Docker-Host Ubuntu-Server
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Es wird empfohlen folgende Hardware-Anforderungen zu erfüllen:
+
++---------------------+-------------------------------------+
+| Prozessor           | >= 1 GHz Multi-Core CPU (64 Bit)    |
++---------------------+-------------------------------------+
+| RAM                 | 4 GB                                |
++---------------------+-------------------------------------+
+|Festplatte           | 120 GB SSD oder HDD                 |
++---------------------+-------------------------------------+
+
+
+OPSI auf Ubuntu-Server
+~~~~~~~~~~~~~~~~~~~~~~
+
+Es wird empfohlen folgende Hardware-Anforderungen zu erfüllen:
+
++---------------------+-------------------------------------+
+| Prozessor           | >= 1 GHz Multi-Core CPU (64 Bit)    |
++---------------------+-------------------------------------+
+| RAM                 | 4 GB                                |
++---------------------+-------------------------------------+
+|Festplatte           | 120 GB - 250 GB SSD oder HDD        |
++---------------------+-------------------------------------+
+
+
+Für Virtualisierungsumgebungen
+------------------------------
+
+In der unten aufgeführten Tabelle finden Sie die Systemvoraussetzungen
+zum Betrieb der bereitgestellten virtuellen Maschinen für linuxmuster.net v7. 
+Die Systemanforderungen für die Installation einer Virtualisierungsumgebung finden 
+Sie weiter unten_.
+
+.. _unten: #virtualisierung
+
+Die Werte in der Spalte Default sind die voreingestellten Werte der VMs
+beim Import, diese Werte bilden gleichzeitig die Mindestvoraussetzungen.
+Festplatten- und Arbeitsspeicher der VMs müssen addiert werden, um die
+Gesamtanforderung zu bestimmen.
+
+**Hinweis:**
+
+Wer mehrere Images hat, oder mehrere Sicherungen der Images vorhalten will 
+sollte beim HDD-Speicherplatz deutlich mehr veranschlagen!
+
+**Beispiel:**
+
+Drei Images mit je 30G. Von jedem Image sollen drei Kopien vorgehalten werden, dann 
+ist man schon bei 270G benötigtem HDD-Speicher. Dabei ist noch nicht berücksichtigt,
+dass auch im Verzeichnis /home Platz pro Benutzer benötigt wird. Dieser Platz ist 
+abhängig von der Anzahl der Benutzer und der Anwendungen. 
+Hier sollte man zwischen 500G und 1000G einplanen.
+
++---------------+------------+-----------------------+-----------------------+---------+----------+
+| **IP**        | **VM**     | **HDD**                                       |**RAM**             |
+|               |            +-----------------------+-----------------------+---------+----------+
+|               |            | Default               |Empfohlen              |Default  |Empfohlen |
++===============+============+=======================+=======================+=========+==========+
+| 10.0.0.1/16   | Server     | 1.: 25GB, 2.: 100GB   | 250GB+                | 4GB     | 8GB+     |
++---------------+------------+-----------------------+-----------------------+---------+----------+
+| 10.0.0.2/16   | Opsi       | 100B                  | 100GB+                | 4GB     | 4GB+     |
++---------------+------------+-----------------------+-----------------------+---------+----------+
+| 10.0.0.3/16   | Dockerhost | 20GB                  | 20GB                  | 512MB   | 512MB+   |
++---------------+------------+-----------------------+-----------------------+---------+----------+
+| 10.0.0.4/16   | XOA        | 15GB                  | 15GB                  | 1GB     | 1GB+     |
++---------------+------------+-----------------------+-----------------------+---------+----------+
+| 10.0.0.254/16 | OPNsense   | 10GB                  | 10GB+                 | 1GB     | 1GB+     |
++---------------+------------+-----------------------+-----------------------+---------+----------+
+
+**Hinweis:**
+
+Die XOA-Appliance wird nur benötigt, wenn eine Virtualisierung mit XCP-ng erfolgen soll. Mithilfe 
+von XenOrchestra kann die Virtualisierungsumgebung XCP-ng web-basiert verwaltet werden und es können
+hierüber auch sog. Enterprise-Funktionen wie z.B. Backup, Replikation etc. konfiguriert werden.
+
+Für die Virtualisierung sollte der Host mit wenigstens drei Netzwerkkarten ausgestattet sein. Zudem 
+sollte dieser mit 4 - 8 GB zusätzlichem Arbeitsspeicher und ca 20 GB weiterem Festplattenplatz 
+für den Betrieb des Hypervisors selbst ausgestattet sein.
+
+Es wird empfohlen, dass die VMs (virtuellen Maschinen) auf externen Speicher abgelegt werden (z.B. 
+NFS-Speicher oder iSCSI-Speicher), um die Virtualisierungsumgebung ggf. bei Bedarf ausbauen zu können 
+und auch ausfallsichere Szenarien leichter umsetzen zu können.
 
 Virtualisierung
 ===============
@@ -48,17 +187,20 @@ Der Installationsablauf ist
 Xen als Hypervisor
 ------------------
 
-XenServer
-~~~~~~~~~
+XCP-ng
+~~~~~~
 
 Der Installationsablauf ist
 
-# XenServer vorbereiten, XVA-VM der linuxmuster.net herunterladen
-# XenServer installieren, XVA-VMs einspielen und aktualisieren
-# Anpassung der Festplattenkapazitäten an eigene Bedürfnisse
-# Start der Installation und Erstkonfiguration
+1. XCP-ng vorbereiten: XCP-ng herunterladen, Supplemental Pack mit VMs herunterladen
+2. XCP-ng Installationsmedium erstellen
+3. XenServer installieren und zugleich Supplemental Pack installieren
+4. VMs aktualisieren und Anpassung der Festplattenkapazitäten an eigene Bedürfnisse
+5. Start Erstkonfiguration
 
-:fixme: https://github.com/linuxmuster-docs/main/issues/130
+Für weitere Installationsdetails siehe Installation XCP-ng Server_.
+
+.. _Server: ../install-on-xen/index.html
 
 
 VMWare als Hypervisor
