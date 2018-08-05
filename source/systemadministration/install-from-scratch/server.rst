@@ -506,7 +506,7 @@ Melden Sie sie nach dem Neustart mit Ihrem bei der Installation gewählten Nutze
     Passwort:
 
 Nach dem Login werden sie möglicherweise darauf hingewiesen, dass ein „neues Release 14.04.4 LTS“ zur Verfügung stehe. Führen Sie den Vorschlag „do-release-upgrade“ **keinesfalls** durch.
-Alle andere Updates sollten wie im Folgenden gezeigt eingespielt werden. Zunächst verleihen Sie sich dauerhaft ``root``-Rechte
+Alle andere Updates sollten wie im Folgenden gezeigt eingespielt werden. Zunächst verleihen Sie sich dauerhaft ``root``-Rechte.
 
 .. code-block:: console
 
@@ -514,25 +514,34 @@ Alle andere Updates sollten wie im Folgenden gezeigt eingespielt werden. Zunäch
     Password:
     server ~ #
 
+.. note::
+
+   In der Dokumentation wird die Konsoleneingabe mit ''root@server
+   <verzeichnis> #'' gekennzeichnet, sobald man root-Rechte hat, auch
+   wenn auf Ihrem Server eventuell nur ''server <verzeichnis> #'' erscheint.
+   Ansonsten bezeichnet ''lmn-admin@server:<verzeichnis>$'' dass man
+   als lokaler Benutzer arbeitet.
+
 Nun holen Sie die aktuellen Paketlisten, zuvor müssen die Domänen getauscht werden.
 
 .. code-block:: console
-    server ~ # sed -i 's/de.archive.ubuntu.com/archive.ubuntu.com/g' /etc/apt/sources.list
-    server ~ # rm -rf /var/lib/apt/lists/*
-    server ~ # apt-get clean
-    server ~ # apt-get update
+		
+    root@server ~ # sed -i 's/de.archive.ubuntu.com/archive.ubuntu.com/g' /etc/apt/sources.list
+    root@server ~ # rm -rf /var/lib/apt/lists/*
+    root@server ~ # apt-get clean
+    root@server ~ # apt-get update
 
 Spielen Sie nun alle Updates ein.
 
 .. code-block:: console
 
-    server ~ # apt-get dist-upgrade
+    root@server ~ # apt-get dist-upgrade
 
 Danach starten Sie den Server neu
 
 .. code-block:: console
 
-   server ~ # reboot
+   root@server ~ # reboot
 
 Prüfen Sie auch, ob das Sprachpaket zu der während der Installation gewählten Sprache installiert wurde. Z.B. für „Deutsch“ mit
 
@@ -579,32 +588,32 @@ Damit das System der linuxmuster.net-Quelle vertraut, muss noch der linuxmuster.
 
 .. code-block:: console
 
-    server ~ # wget http://pkg.linuxmuster.net/linuxmuster.net.key
+    root@server ~ # wget http://pkg.linuxmuster.net/linuxmuster.net.key
 
 Importieren Sie den Schlüssel in Ihre System
 
 .. code-block:: console
 
-    server ~ # apt-key add linuxmuster.net.key
+    root@server ~ # apt-key add linuxmuster.net.key
 
 Löschen Sie den nun nicht weiter benötigte Schlüsseldatei.
 
 .. code-block:: console
 
-    server ~ # rm linuxmuster.net.key
+    root@server ~ # rm linuxmuster.net.key
 
 
 Aktualisieren Sie die Paketlisten.
 
 .. code-block:: console
 
-   server ~ # apt-get update
+   root@server ~ # apt-get update
 
 Installieren Sie das Paket ``linuxmuster-base``.
 
 .. code-block:: console
 
-    server ~ # apt-get install linuxmuster-base
+    root@server ~ # apt-get install linuxmuster-base
 
 .. note::
 
@@ -614,25 +623,25 @@ Installieren Sie das Paket ``linuxmuster-base``.
 
    .. code-block:: console
 
-       server ~ # rm -rf /var/lib/apt/lists/*
+       root@server ~ # rm -rf /var/lib/apt/lists/*
 
    Entfernen Sie alle Pakete aus dem Zwischenspeicher
 
    .. code-block:: console
 
-      server ~ #  apt-get clean
+      root@server ~ #  apt-get clean
 
    Aktualisieren Sie die Paketlisten
 
    .. code-block:: console
 
-       server ~ # apt-get update
+       root@server ~ # apt-get update
 
    Spielen Sie alle Updates ein.
 
    .. code-block:: console
 
-       server ~ # apt-get dist-upgrade
+       root@server ~ # apt-get dist-upgrade
 
 Bei der ``postfix``-Konfiguration kommt evtl. die Nachfrage nach der allgemeinen Konfiguration. Wählen Sie dann „Keine Konfiguration“.
 
@@ -648,7 +657,7 @@ Starten Sie nun zur Ersteinrichtung des Systems das Setupskript:
 
 .. code-block:: console
 
-    server ~ # linuxmuster-setup --first
+    root@server ~ # linuxmuster-setup --first
 
 In der Folge werden zunächst für das Serversetup benötigte Softwarepakete heruntergeladen und installiert. Das kann - abhängig von Internetanbindung und verwendeter Hardware - einige Minuten in Anspruch nehmen.
 
@@ -814,7 +823,7 @@ Starten Sie den Server neu.
 
 .. code-block:: console
 
-    reboot
+    root@server ~ # reboot
 
 Nach dem Neustart begrüßt Sie der Login-Prompt von `linuxmuster.net 6.2.0 / Codename Babo`.
 
