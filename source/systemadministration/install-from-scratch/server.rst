@@ -514,22 +514,13 @@ Alle andere Updates sollten wie im Folgenden gezeigt eingespielt werden. Zunäch
     Password:
     server ~ #
 
-Nun holen Sie die aktuellen Paketlisten
+Nun holen Sie die aktuellen Paketlisten, zuvor müssen die Domänen getauscht werden.
 
 .. code-block:: console
-
+    server ~ # sed -i 's/de.archive.ubuntu.com/archive.ubuntu.com/g' /etc/apt/sources.list
+    server ~ # rm -rf /var/lib/apt/lists/*
+    server ~ # apt-get clean
     server ~ # apt-get update
-
-.. note::
-
-    Sollte dies nicht funktionieren (erkennbar z.B. an der Ausgabe „Fehlschlag beim Holen von ...“) führen Sie folgende Schritte aus:
-
-    .. code-block:: console
-
-        server ~ # rm -rf /var/lib/apt/lists/*
-        server ~ # apt-get clean
-        server ~ # apt-get update
-        server ~ # apt-get dist-upgrade
 
 Spielen Sie nun alle Updates ein.
 
