@@ -744,10 +744,6 @@ der komplette ursprüngliche Pfad erstellt. Kopieren Sie die gewünschten Dateie
     :height: 5.085cm
 
 
-.. |10000201000004160000011906DD661B_png| image:: media/10000201000004160000011906DD661B.png
-    :width: 14.499cm
-    :height: 3.895cm
-
 
 .. |100002010000027D0000012052390382_png| image:: media/100002010000027D0000012052390382.png
     :width: 14.499cm
