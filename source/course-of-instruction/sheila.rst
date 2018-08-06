@@ -171,7 +171,8 @@ Administratorpasswort an. Im nächsten Schritt erhält man das unten
 abgebildete Fenster. Den Timeout im kleinen *Root-* Fenster
 deaktiviert man durch Klick auf die *Timeout*-Checkbox.
 
-|100000000000031B00000256A4AB0C1A_jpg|
+.. figure:: media/linbo-empty-imaging-tab.png
+   :align: center
 
 Um den neuen Rechner im System anzumelden, wählt man die Schaltfläche
 *Registrieren* und erhält man ein Dialogfenster, in das Folgendes
@@ -204,14 +205,15 @@ Rechnergruppe
   alle) ähnlichen Rechner zusammengefasst, die eine (nahezu)
   identische Konfiguration bekommen. 
 
-|100000000000031D0000025636F8E1B7_jpg|
+.. figure:: media/linbo-fresh-registration.png
+   :align: center
 
 Nachdem die Eingaben vollständig sind, wählt man die Schaltfläche
 *Registrieren* und fährt anschließend mit *Shutdown* den Rechner
 herunter.
 
 Für jede Arbeitsstation, die Sie auf diese Weise dem Server bekannt
-machen, wird nun auf dem Server in der Datei `/etc/linuxmuster/workstations`
+machen, wird nun auf dem Server in der Datei ``/etc/linuxmuster/workstations``
 eine Zeile angefügt. So ergeben die Einträge in obiger Maske folgende Zeile:
 
 .. code-block:: console
@@ -270,35 +272,35 @@ Kommandozeile das Skript
 
 aufrufen. Durch den Skriptaufruf werden aus den Arbeitsstationsdaten
 unter anderem die Konﬁgurationsdateien des DHCP-Dienstes (im
-Verzeichnis `/etc/dhcpd3` ) ergänzt. Damit werden die Arbeitsstationen
+Verzeichnis ``/etc/dhcpd3`` ) ergänzt. Damit werden die Arbeitsstationen
 mit ihrem DNS-Namen im LAN bekannt gemacht und beim Booten mit der
 eingetragenen IP-Adresse versehen. Außerdem werden erforderliche
 Einträge in der *LINBO-* Konfiguration vorgenommen, bestimmte
 Serverdienste neu gestartet sowie Stationskonten und
 Samba-Computerkonten angelegt.
 
-Unterhalb `/var/linbo` ﬁnden Sie schließlich für jede erstellte
+Unterhalb ``/var/linbo`` ﬁnden Sie schließlich für jede erstellte
 Hardwareklasse folgende Dateien:
 
-+------------------------------------------------+-------------------------+-----------------------------------------------------------------------------------+
-| Dateiname                                      | Verzeichnis             | Bemerkung und Beispiel                                                            |
-|                                                |                         |                                                                                   |
-+------------------------------------------------+-------------------------+-----------------------------------------------------------------------------------+
-| start.conf.<Rechnergruppe>                     | /var/linbo              | start.conf.fs                                                                     |
-|                                                |                         |                                                                                   |
-+------------------------------------------------+-------------------------+-----------------------------------------------------------------------------------+
-| start.conf-<IP-Clientrechner>                  | /var/linbo              | für jede neu aufgenommene Arbeitsstation wird eine Datei angelegt,                |
-|                                                |                         | die ein Link auf `start.conf.<Rechnergruppe>` ist                                 |
-|                                                |                         | start.conf-10.16.100.1 -> start.conf.fs                                           |
-|                                                |                         |                                                                                   |
-+------------------------------------------------+-------------------------+-----------------------------------------------------------------------------------+
-| Eine Datei nur mit dem Namen der Rechnergruppe | /var/linbo/pxelinux.cfg | fs                                                                                |
-|                                                |                         |                                                                                   |
-+------------------------------------------------+-------------------------+-----------------------------------------------------------------------------------+
++------------------------------------------------+-----------------------------+-----------------------------------------------------------------------+
+| Dateiname                                      | Verzeichnis                 | Bemerkung und Beispiel                                                |
+|                                                |                             |                                                                       |
++------------------------------------------------+-----------------------------+-----------------------------------------------------------------------+
+| ``start.conf.<Rechnergruppe>``                 | ``/var/linbo``              | ``start.conf.fs``                                                     |
+|                                                |                             |                                                                       |
++------------------------------------------------+-----------------------------+-----------------------------------------------------------------------+
+| ``start.conf-<IP-Clientrechner>``              | ``/var/linbo``              | für jede neu aufgenommene Arbeitsstation wird eine Datei angelegt,    |
+|                                                |                             | die ein Link auf ``start.conf.<Rechnergruppe>`` ist:                  |
+|                                                |                             | ``start.conf-10.16.100.1 -> start.conf.fs``                           |
+|                                                |                             |                                                                       |
++------------------------------------------------+-----------------------------+-----------------------------------------------------------------------+
+| ``<Rechnergruppe>.cfg``                        | ``/var/linbo/boot/grub``    | ``fs.cfg``                                                            |
+|                                                |                             |                                                                       |
++------------------------------------------------+-----------------------------+-----------------------------------------------------------------------+
 
 Sobald von der Rechnergruppe Images erstellt wurden, kommen weitere
-Dateien je Rechnergruppe hinzu. Näheres dazu finden Sie weiter hinten
-im Kapitel.
+Dateien je Image hinzu. Näheres dazu finden Sie weiter hinten im
+Kapitel.
 
 Rechnerintegration – Sonderfälle
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -306,230 +308,199 @@ Rechnerintegration – Sonderfälle
 Für manche Rechner (z.B. das Notebook eines Kollegen) oder andere
 Netzwerkgeräte wie z.B. Drucker (Printserver) oder konfigurierbare
 (manageable) Switches würde man gerne über DHCP eine IP-Adresse und
-einen DNS-Eintrag vergeben, ohne die Geräte in *LINBO* zu
-integrieren. In diesem Fall müssen Sie für jedes Gerät von Hand eine
-Zeile nach obigem Muster in die Datei `/etc/linuxmuster/workstations`
-einfügen.
+einen DNS-Eintrag vergeben, ohne dass diese Geräte *LINBO* booten
+sollen. In diesem Fall musst Du für jedes Gerät über die Schulkonsole
+oder von Hand eine Zeile nach obigem Muster in die Datei
+``/etc/linuxmuster/workstations`` einfügen.
 
-Starten Sie dazu an einer Arbeitsstation einen Browser und rufen Sie
-mit https://server:242 die Schulkonsole auf. Melden Sie sich als
-Administrator an.
+Von Hand öffnest du mit einem Texteditor die Datei
 
-Wählen Sie die Seite *Hosts* . Als Darstellung erhalten Sie den
-aktuellen Inhalt der Datei workstations :
+.. code-block:: console
 
-|100000000000034C00000134E14E28E5_jpg|
+   root@server ~ # nano /etc/linuxmuster/workstations
 
-Füllen Sie nun für das gewünschte Gerät eine weitere Zeile aus. Also z.B. für einen netzwerkfähigen Drucker:
+und fügst eine Zeile hinzu, z.B.
 
-+-------------------+-------------------------------------------------------------------------------------------------------------------------------------+
-| **Eintrag**       | **Bedeutung**                                                                                                                       |
-|                   |                                                                                                                                     |
-+-------------------+-------------------------------------------------------------------------------------------------------------------------------------+
-| r100              | den Raum in dem der Drucker steht                                                                                                   |
-|                   |                                                                                                                                     |
-+-------------------+-------------------------------------------------------------------------------------------------------------------------------------+
-| r100drucker       | den Namen des Druckers                                                                                                              |
-|                   |                                                                                                                                     |
-+-------------------+-------------------------------------------------------------------------------------------------------------------------------------+
-| drucker           | die Rechnergruppe des Geräts (diese hat keine weitere Bedeutung, muss aber eingegeben werden, um das Zeilenformat zu gewährleisten) |
-|                   |                                                                                                                                     |
-+-------------------+-------------------------------------------------------------------------------------------------------------------------------------+
-| 00:B7:34:AA:C9:A1 | die MAC Adresse des Netzwerkgerätes                                                                                                 |
-|                   |                                                                                                                                     |
-+-------------------+-------------------------------------------------------------------------------------------------------------------------------------+
-| 10.16.100.33      | die IP Adresse des Gerätes                                                                                                          |
-|                   |                                                                                                                                     |
-+-------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+.. code-block:: console
 
-Achten Sie darauf bei diesen manuell integrierten Geräten die Option
-*PXE*
-auf
-*AUS*
-zu stellen. Dadurch werden beim Aufruf des Skripts
-import_workstations
-nur die erforderlichen Einträge in die Konfigurationsdateien der DHCP- bzw. DNS-Umgebung vorgenommen. Änderungen, wie beim Import einer Arbeitsstation, für das Imagingsystem werden dagegen nicht durchgeführt.
+   r100;r100-pc01;fs;00:0C:29:33:34:82;10.16.100.1;;;1;1;1;1
+   r100;r100-printer;printer;00:B7:34:AA:C9:A1;10.16.100.33;;;1;1;1;0
 
-Sind alle Einträge vollständig, klicken Sie auf den Schalter
-*Änderungen übernehmen*
-. Dadurch werden die geänderten Daten in die Datei
-/etc/linuxmuster/workstations
-geschrieben und das Skript
-import_workstations
-aufgerufen. Dieses nimmt alle erforderlichen Änderungen im System vor.
+Demnach steht der Drucker in Raum 'r100', bekommt den Namen
+'r100-printer', gehört (ohne weitere Bedeutung) der Rechnergruppe
+'printer' an, wird über die MAC-Adresse '00:B7:34:AA:C9:A1'
+identifiziert und bekommt die IP-Adresse '10.16.100.33'.
+
+Achte darauf, bei den manuell integrierten Geräten die elfte Option
+mit einer 0 zu versehen. Damit werden zwar DHCP- und DNS-Einträge
+erstellt, aber LINBO ist für dieses Gerät außen vor.
+		
+
+:fixme: GUI-Version fehlt
+
+..
+  |100000000000034C00000134E14E28E5_jpg|
+  Füllen Sie nun für das gewünschte Gerät eine weitere Zeile aus. Also z.B. für einen netzwerkfähigen Drucker:
+  
+  +-------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+  | **Eintrag**       | **Bedeutung**                                                                                                                       |
+  |                   |                                                                                                                                     |
+  +-------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+  | r100              | den Raum in dem der Drucker steht                                                                                                   |
+  |                   |                                                                                                                                     |
+  +-------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+  | r100drucker       | den Namen des Druckers                                                                                                              |
+  |                   |                                                                                                                                     |
+  +-------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+  | drucker           | die Rechnergruppe des Geräts (diese hat keine weitere Bedeutung, muss aber eingegeben werden, um das Zeilenformat zu gewährleisten) |
+  |                   |                                                                                                                                     |
+  +-------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+  | 00:B7:34:AA:C9:A1 | die MAC Adresse des Netzwerkgerätes                                                                                                 |
+  |                   |                                                                                                                                     |
+  +-------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+  | 10.16.100.33      | die IP Adresse des Gerätes                                                                                                          |
+  |                   |                                                                                                                                     |
+  +-------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+  
+  Achten Sie darauf bei diesen manuell integrierten Geräten die Option
+  *PXE* auf *AUS* zu stellen. Dadurch werden beim Aufruf des Skripts
+  import_workstations nur die erforderlichen Einträge in die
+  Konfigurationsdateien der DHCP- bzw. DNS-Umgebung
+  vorgenommen. Änderungen, wie beim Import einer Arbeitsstation, für das
+  Imagingsystem werden dagegen nicht durchgeführt.
+  
+  Sind alle Einträge vollständig, klicken Sie auf den Schalter
+  *Änderungen übernehmen* . Dadurch werden die geänderten Daten in die
+  Datei /etc/linuxmuster/workstations geschrieben und das Skript
+  import_workstations aufgerufen. Dieses nimmt alle erforderlichen
+  Änderungen im System vor.
 
 Übung: Integration von Arbeitsstationen in das Netz
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In dieser Übung werden Sie die Integration von Arbeitsstationen in das Netz durchführen. Dazu wurde die
-*linuxmuster.net*
-Netzwerkumgebung auf Ihrem Schulungsrechner
-in einen Zustand gebracht, in dem dem Server keinerlei Arbeitstationen bekannt sind.
+In dieser Übung werden Sie die Integration von Arbeitsstationen in das
+Netz durchführen. Dazu wurde die *linuxmuster.net* Netzwerkumgebung
+auf Ihrem Schulungsrechner in einen Zustand gebracht, in dem dem
+Server keinerlei Arbeitstationen bekannt sind.
 
 
-#.  
-    *   Starten Sie in Ihrer Schulungsumgebung die Arbeitsstation Client 1.
+#.  Starten Sie in Ihrer Schulungsumgebung die Arbeitsstation Client 1.
+#.  Melden Sie sich an der LINBO Oberfläche als Administrator an und registrieren Sie die Arbeitsstation Client 1 mit folgenden Daten:
 
+    .. code-block:: console
 
+       Raumbezeichnung:
+       r100
 
-    *   Melden Sie sich an der LINBO Oberfläche als Administrator an und registrieren Sie die Arbeitsstation Client 1 mit folgenden Daten:
+       Rechnername:
+       r100-pc01
 
-        Raumbezeichnung:
-        r100
+       IP Adresse:
+       10.16.100.1
 
-        Rechnername:
-        r100-pc01
+       Rechnergruppe:
+       fs
 
-        IP Adresse:
-        10.16.100.1
+    Fahren Sie anschliessend Client 1 wieder herunter.
+#.  Importieren Sie an einer Konsole auf dem Server die zuvor registrierte Arbeitsstation, indem Sie den Befehl:
+    
+    .. code-block:: console
+       
+       root@server ~ # import_workstations
 
-        Rechnergruppe:
-        fs
+    aufrufen. Beobachten Sie die Ausgaben auf der Konsole.
+#.  Starten Sie nun wieder Client 1. Nach dem Neustart müsste dieser
+    dem Server bekannt sein. Kontrollieren Sie die Daten am
+    Startbildschirm der Arbeitsstation, der die Konfiguration der
+    Rechnergruppe *fs* zeigen sollte.
 
-        Fahren Sie anschliessend Client 1 wieder herunter.
+    |100000000000031800000255968B44B2_jpg|
 
+    **Hinweis:** Bei der tatsächlichen Einrichtung eines
+        Computernetzes an der Schule würde sich nun die Konfiguration
+        der Rechnergruppe, Partitionierung der Festplatte der
+        Arbeitsstation, Installation des gewünschten Betriebssystems
+        und Erstellen eines Images anschließen. Für diese Übung
+        greifen wir aber während des Basiskurses auf schon vorhandene
+        Konfigurationen und Images zurück.
+#.  Starten Sie die Arbeitsstation Client 1 über Sync+Start, melden
+    Sie sich als Administrator an und starten Sie die Schulkonsole.
+#.  Im Weiteren sollen Sie nun die Integration der Arbeitsstation
+    Client 2 mit Hilfe der Schulkonsole üben. Starten Sie dazu die
+    Arbeitsstation Client 2.
+#.  Registrieren Sie Client 2 mit:
+    .. code-block:: console
 
+       Raumbezeichnung:
+       r100
 
-    *   Importieren Sie an einer Konsole auf dem Server die zuvor registrierte Arbeitsstation, indem Sie den Befehl:
+       Rechnername:
+       r100-pc02
 
-        import_workstations
-        aufrufen. Beobachten Sie die Ausgaben auf der Konsole.
+       IP Adresse:
+       10.16.100.2
 
+       Rechnergruppe:
+       fs
 
+    Fahren Sie die Arbeitsstation anschließend wieder herunter.
+#.  Wechseln Sie in das Fenster von Arbeitsstation Client 1, wo Sie
+    sich schon als Administrator in der Schulkonsole angemeldet
+    haben. Wählen Sie in der Schulkonsole die Seite Hosts.  Dort
+    erhalten Sie folgende Ansicht
+    |10000000000003580000017D49F76C85_jpg|
+#.  Importieren Sie mit `Hosts jetzt übernehmen` die Arbeitsstation
+    Client 2.
+#.  Starten und restaurieren Sie die Arbeitsstation Client 2 mit
+    Sync+Start.
 
-    *   Starten Sie nun wieder Client 1. Nach dem Neustart müsste dieser dem Server bekannt sein. Kontrollieren Sie die Daten am Startbildschirm der Arbeitsstation, der die Konfiguration der Rechnergruppe
-        *fs*
-        zeigen sollte.
+:fixme: GUI fehlt
 
-        |100000000000031800000255968B44B2_jpg|
-        **Hinweis:**
-        Bei der tatsächlichen Einrichtung eines Computernetzes an der Schule würde sich nun die Konfiguration der Rechnergruppe, Partitionierung der Festplatte der Arbeitsstation, Installation des gewünschten Betriebssystems und Erstellen eines Images anschließen. Für diese Übung greifen wir aber während des Basiskurses auf schon vorhandene Konfigurationen und Images zurück.
-
-
-
-    *   Starten Sie die Arbeitsstation Client 1 über
-        Sync+Start,
-        melden Sie sich als
-        Administrator
-        an und starten Sie die Schulkonsole.
-
-
-        Im Weiteren sollen Sie nun die Integration der Arbeitsstation Client 2 mit Hilfe der Schulkonsole üben.
-
-
-
-
-    *   Starten Sie dazu die Arbeitsstation Client 2.
-
-
-
-    *   Registrieren Sie Client 2 mit:
-        Raumbezeichnung
-        r100
-        , Rechnername
-        r
-        100-pc02
-        , IP Adresse
-        10.16.100.2
-        und
-        Rechnergruppe
-
-        fs
-        . Fahren Sie die Arbeitsstation anschließend wieder herunter.
-
-
-
-    *   Wechseln Sie in das Fenster von Arbeitsstation Client 1, wo Sie sich schon als
-        Administrator
-        in der Schulkonsole angemeldet haben. Wählen Sie in der Schulkonsole die Seite
-        Hosts.
-        Dort erhalten Sie folgende Ansicht
-
-
-
-
-
-|10000000000003580000017D49F76C85_jpg|
-
-#.  
-    *   Importieren Sie mit
-        Hosts jetzt übernehmen
-        die Arbeitsstation Client 2.
-
-
-
-    *   Starten und restaurieren Sie die Arbeitsstation Client 2 mit
-        Sync+Start
-        .
-
-
-
-
-
+    
 Konﬁguration von LINBO
 ----------------------
 
-*LINBO*
-(GNU
-**Li**
-n
-ux
-**N**
-etwork
-**bo**
-ot) ist eine Opensource Imaging-Software die vom Entwickler der Linux Live Distribution
-Knoppix
-®
-in Zusammenarbeit mit den Entwicklern der linuxmuster.net grundlegend entwickelt und vom leitenden
-Entwickler der linuxmuster.net bis zum jetzigen Stand weitergepflegt wurde. Mit
-*LINBO*
-lassen sich Computersysteme und die darauf laufenden Betriebssysteme und Anwendungen vor dem Start des Betriebssystems nahezu beliebig manipulieren lassen.
+*LINBO* (GNU/**Li**\nux **N**\etwork **bo**\ot) ist eine Opensource
+Imaging-Software die vom Entwickler der Linux Live Distribution
+Knoppix® in Zusammenarbeit mit den Entwicklern der linuxmuster.net
+grundlegend entwickelt und vom leitenden Entwickler der
+linuxmuster.net bis zum jetzigen Stand weitergepflegt wurde. Mit
+*LINBO* lassen sich Computersysteme und die darauf laufenden
+Betriebssysteme und Anwendungen vor dem Start des Betriebssystems
+nahezu beliebig manipulieren lassen.
 
-Bevor man mit
-*LINBO*
-arbeitet, muss man sich über folgende Punkte klar werden:
+Bevor man mit *LINBO* arbeitet, muss man sich über folgende Punkte
+klar werden:
 
 #.  Welche(s) Betriebssystem(e) soll(en) genutzt werden?
-
-
-
+    
 #.  Wie soll die lokale Festplatte partitioniert werden?
-
-
 
 #.  Welche Dateisysteme (Fat32, NTFS, EXT4) sollen verwendet werden?
 
-
-
-
 All dies wird für jede Rechnergruppe separat in der Datei
-start.conf.<Rechnergruppe>
-im Verzeichnis
-/var/linbo
-auf dem Server festgelegt. Eine detaillierte Beschreibung des Aufbaus und der Anpassung der LINBO-Konfiguration einer Rechnergruppe können Sie im Administratorhandbuch nachlesen
-.
+``start.conf.<Rechnergruppe>`` im Verzeichnis ``/var/linbo`` auf dem
+Server festgelegt. Eine detaillierte Beschreibung des Aufbaus und der
+Anpassung der LINBO-Konfiguration einer Rechnergruppe können Sie im
+Administratorhandbuch nachlesen.
 
-Im Folgenden werden anhand zweier Beispiele typische Vorgehensweisen dargestellt.
+:fixme: Link ins Handbuch
+
+Im Folgenden werden anhand zweier Beispiele typische Vorgehensweisen
+dargestellt.
 
 Ändern der LINBO-Konfiguration einer Rechnergruppe
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In diesem Beispiel stellen wir für das Windows-XP-System den synchronisierten Autostart ein.
 
-Melden Sie sich als
-Administrator
-an der Schulkonsole an und navigieren Sie zum
-*LINBO*
--Menü, danach ins Untermenü
-*Gruppenkonfiguration editieren*
-. Wählen Sie die Rechnergruppe
-fs
-.
+Melden Sie sich als Administrator an der Schulkonsole an und
+navigieren Sie zum *LINBO* -Menü, danach ins Untermenü
+*Gruppenkonfiguration editieren*. Wählen Sie die Rechnergruppe fs.
 
-|1000000000000230000000D2F9DF191E_jpg|
-Die Konfigurationsseite der Gruppe
-fs
-müssen Sie zunächst bis zum Windows-XP-System nach unten scrollen.
+|1000000000000230000000D2F9DF191E_jpg| Die Konfigurationsseite der
+Gruppe fs müssen Sie zunächst bis zum Windows-XP-System nach unten
+scrollen.
 
 Klicken Sie dann den Radio-Button rechts neben
 *Betriebssystem automatisch starten*
@@ -1073,10 +1044,6 @@ Der Umgang mit Images in der Schulkonsole wird im Administratorhandbuch zur linu
 
 
 
-.. |100000000000031D0000025636F8E1B7_jpg| image:: media/100000000000031D0000025636F8E1B7.jpg
-    :width: 12.001cm
-    :height: 8.991cm
-
 
 .. |100000000000031C0000025836473F3C_jpg| image:: media/100000000000031C0000025836473F3C.jpg
     :width: 12.001cm
@@ -1116,11 +1083,6 @@ Der Umgang mit Images in der Schulkonsole wird im Administratorhandbuch zur linu
 .. |1000000000000230000000D2F9DF191E_jpg| image:: media/1000000000000230000000D2F9DF191E.jpg
     :width: 12.001cm
     :height: 4.492cm
-
-
-.. |100000000000031B00000256A4AB0C1A_jpg| image:: media/100000000000031B00000256A4AB0C1A.jpg
-    :width: 12.001cm
-    :height: 9.021cm
 
 
 .. .. .. |10000000000003210000025AD4D218F7_jpg| image:: media/10000000000003210000025AD4D218F7.jpg
