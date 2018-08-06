@@ -60,6 +60,7 @@ Reboot
 
    lässt den Client herunterfahren.
 
+.. _linbo-start-tab-label:
 
 Start-Reiter
 ============

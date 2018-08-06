@@ -72,13 +72,30 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   addons/monipi/index
   addons/backupmondo/index
 
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Basiskurs
+
+   course-of-instruction/preface
+   course-of-instruction/first-steps
+   course-of-instruction/teaching-with-linuxmuster-net
+   course-of-instruction/server
+   course-of-instruction/user-management
+   course-of-instruction/sheila
+   course-of-instruction/software
+   course-of-instruction/printing
+   course-of-instruction/security-remote-access
+   course-of-instruction/backup-and-restore
+   course-of-instruction/appendix
+
+
 .. toctree::
   :maxdepth: 1
   :caption: Anhang
 
   appendix/contribute/index
   appendix/school-console/index
-  clients/linbo/index
 
 ..
    .. toctree::

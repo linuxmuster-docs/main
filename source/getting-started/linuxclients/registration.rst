@@ -24,7 +24,7 @@ Tragen Sie dort den Rechner ein mit folgender Syntax
 
    Raum;Rechnername;Gruppe;MAC;IP;;;;;;PXE-Flag;
 
-Raum
+Raumbezeichnung
   Geben Sie hier den Namen des Raums (z.B. r100 oder g1r100)
   ein. Beachten Sie bitte, dass die Bezeichnung des Raumes oder auch
   des Gebäudes mit einem Kleinbuchstaben beginnen muss. Sonderzeichen
