@@ -1,9 +1,10 @@
-Installation mit XCP-ng
-=======================
+=========================
+ Installation mit XCP-ng
+=========================
 
-XCP-ng ist eine reine OpenSource-Virtualisierungslösung, die auf Basis von XCP-ng arbeitet und alle 
+XCP-ng ist eine reine OpenSource-Virtualisierungslösung, die auf Basis von XEN arbeitet und alle 
 sog. Enterprise-Features wie Replikation, automatisierte Backups, Verschieben von VMs im laufenden Betrieb etc. 
-bietet. Daher eignet sie sich besonders für den virtuellen Betrieb von linuxmuster.net, da diese recht einfach skalierbar ist und dann sog. Ressourcen-Pools erstellt nd verwaltet werden können.
+bietet. Daher eignet sie sich besonders für den virtuellen Betrieb von linuxmuster.net, da diese recht einfach skalierbar ist und dann sog. Ressourcen-Pools erstellt und verwaltet werden können.
 
 Der Betrieb wird auf jeglicher Markenhardware unterstützt und auf einer Vielzahl an NoName-Hardware.
 linuxmuster.net hat die vorgefertigten virtuellen Maschinen in einem sog. SupplementalPack für XCP-ng zusammengefasst.
