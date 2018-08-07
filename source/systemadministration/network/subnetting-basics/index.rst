@@ -1,3 +1,5 @@
+.. _subnetting-basics-label:
+
 linuxmuster.net Netzsegmentierung Basisanleitung
 ================================================
 

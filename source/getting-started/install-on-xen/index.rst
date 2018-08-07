@@ -1,3 +1,5 @@
+.. _install-on-xen-label:
+
 =========================
  Installation mit XCP-ng
 =========================
@@ -34,7 +36,7 @@ heruntergeladen werden. Diese Anleitung bezieht sich auf die Version 7.4.1.
 
 Die ISO-Datei muss heruntergeladen und ein bootbarer USB-Stick erstellt werden.
 
-1. Herunterladen: `XCP Webseite <https://xcp-ng.org/7.4/XCP-ng_7.4.1.iso>`_)
+1. Herunterladen: `XCP Webseite <https://xcp-ng.org/7.4/XCP-ng_7.4.1.iso>`_
 2. USB-Stick erstellen: In das Download Verzeichnis Wechseln, Buchstaben für USB-Stick unter Linux ermitteln X durch den korrekten Buchstaben ersetzen und dann nachstehenden Befehl ein.
 
 
