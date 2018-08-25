@@ -222,7 +222,7 @@ Die weiteren Einrichuntsschritte entsprechen denen, wie sie auf dem Server berei
 Windows Clients
 ---------------
 
-Melden Sie sich lokal am Windows-Client als **administrator** an und rufen Sie den Druckerinstallations-Assistnten auf, oder starten Sie den Druckerinstallations-Assistenten als Benutzer **administrator**.
+Melden Sie sich lokal am Windows-Client als **administrator** an und rufen Sie den Druckerinstallations-Assistenten auf, oder starten Sie den Druckerinstallations-Assistenten als Benutzer **administrator**.
 Den Druckerinstallations-Assistenten rufen Sie wie folgt auf:
 ** Systemsteuerung --> Hardware und Sound --> Geräte und Drucker --> Drucker**
 
