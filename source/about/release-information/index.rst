@@ -8,7 +8,7 @@
 Was ist neu in 7.0?
 ===================
 
-.. sectionauthor:: Hans Wurst <fleischsalat@linuxmuster.net>
+.. sectionauthor:: T. Küchel
 
 
 Linuxmuster.net 7.0 ist in großen Teilen neu geschrieben worden. Es

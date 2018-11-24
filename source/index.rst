@@ -27,7 +27,6 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   :maxdepth: 2
   :caption: Systemadministration
 
-  getting-started/install-on-xen/index
   systemadministration/maintenance/index
   systemadministration/network/index
   systemadministration/printer/index
@@ -76,6 +75,8 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   :maxdepth: 1
   :caption: Anhang
 
+  appendix/install-on-kvm/index
+  appendix/install-on-xcp-ng/index
   appendix/contribute/index
   appendix/school-console/index
   clients/linbo/index

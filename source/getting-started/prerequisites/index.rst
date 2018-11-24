@@ -2,6 +2,8 @@
  Voraussetzungen
 =================
 
+.. sectionauthor:: C. Weikl, T. Küchel
+
 Linuxmuster.net wird als Zwei-Server-Lösung (Firewall und
 linuxmuster.net-Server) betrieben. Optional können weitere Server wie
 z.B. ein Docker-Host eingesetzt werden. Daneben gibt es mindestens
@@ -297,35 +299,19 @@ anderen Fälle, wird im folgenden der Ablauf einer Installation
 skizziert.
 
 KVM/qemu/Proxmox als Hypervisor:
-  Der Installationsablauf ist
-  
-  #. KVM/Proxmox-Host vorbereiten
-  #. OVA-Abbilder herunterladen, einspielen und aktualisieren
-  #. Anpassung der Festplattenkapazitäten an eigene Bedürfnisse
-  #. Start der Installation und Erstkonfiguration
-  
-  :fixme: unklar, ob Proxmox die OVAs verdauen kann
+  Ausführliche Informationen findest Du im Kapitel :ref:`install-on-kvm-label`.
 
 Xen als Hypervisor:
   Ausführliche Informationen findest Du im eigenen Kapitel :ref:`install-on-xen-label`.
-
-.. Der Installationsablauf ist
-   1. XCP-ng vorbereiten: XCP-ng herunterladen, Supplemental Pack mit VMs herunterladen
-   2. XCP-ng Installationsmedium erstellen
-   3. XenServer installieren und zugleich Supplemental Pack installieren
-   4. VMs aktualisieren und Anpassung der Festplattenkapazitäten an eigene Bedürfnisse
-   5. Start Erstkonfiguration
 
 VMWare als Hypervisor:
   :fixme: anybody?
 
 VirtualBox als Hypervisor:
-  Der Installationsablauf ist
-
-  #. VirtualBox-Host vorbereiten
-  #. OVA-Abbilder herunterladen, einspielen und aktualisieren
-  #. Anpassung der Festplattenkapazitäten an eigene Bedürfnisse
-  #. Start der Installation und Erstkonfiguration
+  VirtualBox wird häufig als Testsystem verwendet. Die
+  `Entwicklerdokumentation
+  <https://github.com/linuxmuster/linuxmuster-base7/wiki/Die-Appliances>`_
+  beschreibt diese Konfiguration.
 
 Software
 ========
@@ -343,7 +329,7 @@ von Grund auf innerhalb (anderer) Virtualisierungen benötigt man
 - `Ubuntu 18.04 LTS 64-bit PC (AMD64) server install image
   <http://releases.ubuntu.com/bionic/ubuntu-18.04-live-server-amd64.iso>`_
 
-- `OpnSense <TODO>`_
+- `OpnSense <https://opnsense.org/download>`_
 
 ..
    Um sicher zu stellen, dass die Datei richtig heruntergeladen wurde, kannst du die SHA1-Summe prüfen. Auf der Konsole eines Linuxbetriebsystems steht z.B. der Befehl ``sha1sum`` zur Verfügung:
