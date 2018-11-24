@@ -10,50 +10,51 @@ Was ist neu in 7.0?
 
 .. sectionauthor:: T. Küchel
 
-
 Linuxmuster.net 7.0 ist in großen Teilen neu geschrieben worden. Es
-gibt einen Upgrade-Pfad über eine Migration, da ein Update des
-Basissystems aufgrund der zahlreichen Veränderungen unter der Haube
-nicht sinnvoll ist.
-
-Die Highlights sind ein Mehrschulbetrieb, eine neue Firewall, eine
-optionale Mailserverlösung, ... ohne die bekannten Vorzüge wie LINBO,
-Opsi, usw. zu verlieren.
-
-Lesen Sie im Detail die Neuerungen in den einzelnen Teilfeldern und bekannten Probleme.
+gibt einen Upgrade-Pfad über eine Migration, da ein reguläres Update
+des Basissystems aufgrund der zahlreichen Veränderungen unter der
+Haube nicht sinnvoll ist.
 
 Installation
 ------------
 
-* Docker-Container für Mailserver und weitere externe Services
+* Standardmäßig werden zur Zwei-Serverlösung mit Firewall und Server
+  ein OPSI-Verwaltungsserver und ein Dockerhost integriert
+  installiert.
+* Die Installation erwartet eine vorkonfigurierte Umgebung, entweder
+  in der jeweiligen Virtualisierungslösung oder über ein installiertes
+  Ubuntu für den Server.
 
 
-Systemadministration
---------------------
+SELMA
+-----
 
-Linbo
-+++++
+Das zentrale Verwaltungswerkzeug wird ersetzt. SELMA
+(Schulnetz-Einstellungen für Lehrer Machbar Angezeigt) ist als moderne
+Oberfläche auch auf mobilen Geräten einsetzbar.
 
-Die größte Modernisierung hat LINBO schon mit der Version 2.3.x in
-linuxmuster.net 6.2 erfahren. Dennoch gibt es einige Neuigkeiten, die
-nur die linuxmuster.net 7.0 betreffen.
 
-...
+LINBO
+-----
+
+LINBO ist weiterhin das zentrale Softwareverteilungssystem. Die größte
+Modernisierung hat LINBO schon mit der Version 2.3.x in
+linuxmuster.net 6.2 erfahren.
 
 Firewall
-++++++++
+--------
 
 * OpnSense auf Basis von FreeBSD
-* Squid-Proxy ermöglicht Benutzerbezogene Authentifizierung, z.B. für Internetzugang, Wifizugang, etc.
+* Standardmäßige Zugangskontrolle zum Internet über einen Proxyservice
+  auf Single-Sign-On Basis
 
-...
 
 Benutzerverwaltung
 ------------------
 
 * Session-basierte Berechtigungen für die Unterrichtsteuerung:
-* Freiwählbare Gruppen, Speichern als Session, Klassen hinzufügen
-* Raumsteuerung nicht mehr so einfach (nur inkl. User)
+  * Gruppen können freiwählbar zusammengestellt werden
+* Automatische Erkennung der Kodierung der Benutzerdaten
 
 .. _knownbugs-label:
 
@@ -66,4 +67,4 @@ Release-Informationen früherer Versionen
 ----------------------------------------
 
 * `Release-Information zur linuxmuster.net 6.2 <https://docs.linuxmuster.net/de/v6.2/release-information/index.html>`_
-* `Release-Informationen zur linuxmuster.net 5.1, 6.0 und 6.1 <https://www.linuxmuster.net/wiki/dokumentation:handbuch:preparation:features>`_
+* `Release-Informationen zur linuxmuster.net 5.1, 6.0 und 6.1 <https://www.linuxmuster.net/wikiarchiv/dokumentation:handbuch:preparation:features>`_
