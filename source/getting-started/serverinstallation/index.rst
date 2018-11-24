@@ -44,7 +44,8 @@ Server-Abbildes sollte an die eigenen Bedürfnisse angepasst werden.
 Import der Firewall
 ===================
 
-Nach dem ersten Start mit `root` und `Muster!` einloggen. Es erscheint das OPNsense Konsolenmenü.
+Nach dem ersten Start mit `root` und `Muster!` einloggen. Es erscheint
+das OPNsense Konsolenmenü.
 
 Unter dem Menüpunkt `1` müssen nun die Netzwerk-Schnittstellen neu
 zugeordnet werden. Unter KVM heißen die Adapter vtnet0, vtnet1, usw.
