@@ -27,15 +27,24 @@ Storage
 - KVM-Host stellt ein LVM bereit auf dem für Server, Firewall und Daten
   Logische Volumes erstellt werden können.
 
-Download des Systems
-====================
+Download der Abbilder
+=====================
 
 - wget OVAs: Server, Firewall, Opsi, Docker
-
 
 Anpassung der Festplattenkapazitäten
 ====================================
 
+Die Festplatten der Firewall, des Opsi und des Docker-Abbildes können
+unverändert übernommen werden. Die Festplattenkapazitäten des
+Server-Abbildes sollte an die eigenen Bedürfnisse angepasst werden.
 
-Start der Installation und Erstkonfiguration
-============================================
+
+
+Import der Firewall
+===================
+
+Nach dem ersten Start mit `root` und `Muster!` einloggen. Es erscheint das OPNsense Konsolenmenü.
+
+Unter dem Menüpunkt `1` müssen nun die Netzwerk-Schnittstellen neu
+zugeordnet werden. Unter KVM heißen die Adapter vtnet0, vtnet1, usw.
