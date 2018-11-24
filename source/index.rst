@@ -76,6 +76,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   :maxdepth: 1
   :caption: Anhang
 
+  appendix/install-on-kvm/index
   appendix/contribute/index
   appendix/school-console/index
   clients/linbo/index
