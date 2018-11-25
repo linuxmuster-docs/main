@@ -15,8 +15,6 @@ betrieben werden.
 Daraus leiten sich Voraussetzungen an Hardware, Netzwerkstrukturen und
 Software ab, die in diesem Kapitel beleuchtet werden.
 
-
-
 Hardware
 ========
 
@@ -152,6 +150,8 @@ auch ausfallsichere Szenarien leichter umsetzen zu können.
 | 10.0.0.3/16   | Dockerhost | 20GB                  | 20GB                  | 512MB   | 512MB+   |
 +---------------+------------+-----------------------+-----------------------+---------+----------+
 | 10.0.0.4/16   | XOA        | 15GB                  | 15GB                  | 1GB     | 1GB+     |
++---------------+------------+-----------------------+-----------------------+---------+----------+
+| 10.0.0.10/16  | Admin-PC   | 15GB                  | 15GB                  | 1GB     | 1GB+     |
 +---------------+------------+-----------------------+-----------------------+---------+----------+
 | 10.0.0.254/16 | OPNsense   | 10GB                  | 10GB+                 | 1GB     | 1GB+     |
 +---------------+------------+-----------------------+-----------------------+---------+----------+
