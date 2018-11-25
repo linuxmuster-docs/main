@@ -8,7 +8,7 @@
 Was ist neu in 7.0?
 ===================
 
-.. sectionauthor:: Dokuteam
+.. sectionauthor:: `Das Dokuteam <https://ask.linuxmuster.net/c/weiterentwicklung/doku>`_
 
 Linuxmuster.net 7.0 ist in großen Teilen neu geschrieben worden. Es
 gibt einen Upgrade-Pfad über eine Migration, da ein reguläres Update
