@@ -1,8 +1,10 @@
 .. _install-on-xen-label:
 
-=========================
- Installation mit XCP-ng
-=========================
+============================
+ Virtualisierung mit XCP-ng
+============================
+
+.. sectionauthor:: C. Weikl
 
 XCP-ng ist eine reine OpenSource-Virtualisierungslösung, die auf Basis von XEN arbeitet und alle 
 sog. Enterprise-Features wie Replikation, automatisierte Backups, Verschieben von VMs im laufenden Betrieb etc. 
