@@ -2,6 +2,15 @@
  Migration auf linuxmuster 7.0
 ===============================
 
+.. toctree::
+  :maxdepth: 2
+
+  keep-lmn-uptodate/index
+  backup-migration/index
+
+Migration von linuxmuster.net 6.x
+=================================
+
 Es wird nur eine Migration der Benutzerinformationen (Namen, Passwort,
 Projekte) und der Computerinformationen erfolgen. Die Benutzerdaten
 (`/home`), Tauschverzeichnisse, die Geräte-Abbilder (`/var/linbo`),
@@ -9,7 +18,7 @@ evtl. Subnetze vom Netzwerkberater oder (wo möglich) von den Benuztern
 selbst umgezogen werden.
 
 Voraussetzungen
-===============
+---------------
 
 Es muss als Quellsystem linuxmuster.net in der Version 6.2 installiert
 sein. Es ist sehr wahrscheinlich, dass auch von der Version 6.1 und
@@ -25,7 +34,7 @@ Die Migration wird in die Standard-Schulinstanz `default-school` vorgenommen.
 
 
 Vorgehen
-========
+--------
 
 1. Zunächst installiert man auf dem Quellsystem (Version 6.x) das
    Paket `sophomorix-dump` installieren und die Daten exportieren

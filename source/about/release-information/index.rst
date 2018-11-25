@@ -2,58 +2,82 @@
    sphinx-quickstart on Sat Nov  7 15:29:20 2015.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
-
+   
 .. _release-information-label:
 
 Was ist neu in 7.0?
 ===================
 
-.. sectionauthor:: Hans Wurst <fleischsalat@linuxmuster.net>
-
+.. sectionauthor:: Dokuteam
 
 Linuxmuster.net 7.0 ist in großen Teilen neu geschrieben worden. Es
-gibt einen Upgrade-Pfad über eine Migration, da ein Update des
-Basissystems aufgrund der zahlreichen Veränderungen unter der Haube
-nicht sinnvoll ist.
+gibt einen Upgrade-Pfad über eine Migration, da ein reguläres Update
+des Basissystems aufgrund der zahlreichen Veränderungen unter der
+Haube nicht sinnvoll ist.
 
-Die Highlights sind ein Mehrschulbetrieb, eine neue Firewall, eine
-optionale Mailserverlösung, ... ohne die bekannten Vorzüge wie LINBO,
-Opsi, usw. zu verlieren.
+Neue Funktionalitäten
+---------------------
 
-Lesen Sie im Detail die Neuerungen in den einzelnen Teilfeldern und bekannten Probleme.
+Verbesserte Skalierbarkeit
+  * Mehrschulfähigkeit: Konsolidierung mehrerer Schulinstanzen auf einem
+    Server möglich
+  * Gruppenorientierte Abbildung der Schule und flexible, regelbasierte
+    Steuerung
+  * Moderne Bereitstellung zusätzlicher IT-Dienste der Schule innerhalb der
+    Schullösung
 
-Installation
-------------
+Moderne Steuerung
+  * Webbasierte Steuerung der pädagogischen Funktionen in responsive Design
+  * Aktuelle Betriebssysteme der Server und der vorkonfiguierten,
+    kostenlos bereitgestellten Linux-Arbeitsplätzen
 
-* Docker-Container für Mailserver und weitere externe Services
 
+Technische Neuerungen
+---------------------
+  
+Vereinfachte Installation
+  * Standardmäßig bleibt linuxmuster.net eine Zwei-Serverlösung aus
+    Firewall und Server. Optional sind ein OPSI-Verwaltungsserver und
+    ein Dockerhost vorkonfiguriert installierbar.
+  * Die Installation erwartet eine vorkonfigurierte Umgebung, entweder
+    in der jeweiligen Virtualisierungslösung oder über ein installiertes
+    Ubuntu für den Server.
 
-Systemadministration
---------------------
+Bedienung und Administration
+  * Das zentrale Verwaltungswerkzeug (Schulkonsole) wird
+    ersetzt. SELMA (Digitale Schulnetz-Einstellungen für Lehrer
+    Machbar Angezeigt) ist als moderne Oberfläche auch auf mobilen
+    Geräten einsetzbar.
+  * Die vollständige Bedienbarkeit auf der Konsole bleibt erhalten
+  * Wegfall der PostGREs-Datenbank zugunsten einheitlicher Speicherung
+    aller Daten in Samba 4 / Active Directory
 
-Linbo
-+++++
-
-Die größte Modernisierung hat LINBO schon mit der Version 2.3.x in
-linuxmuster.net 6.2 erfahren. Dennoch gibt es einige Neuigkeiten, die
-nur die linuxmuster.net 7.0 betreffen.
-
-...
-
-Firewall
-++++++++
-
-* OpnSense auf Basis von FreeBSD
-* Squid-Proxy ermöglicht Benutzerbezogene Authentifizierung, z.B. für Internetzugang, Wifizugang, etc.
-
-...
 
 Benutzerverwaltung
-------------------
+  * Automatische Erkennung der Kodierung der Benutzerdaten
+  * Session-basierte Berechtigungen für die Unterrichtsteuerung
 
-* Session-basierte Berechtigungen für die Unterrichtsteuerung:
-* Freiwählbare Gruppen, Speichern als Session, Klassen hinzufügen
-* Raumsteuerung nicht mehr so einfach (nur inkl. User)
+    * Gruppen können freiwählbar zusammengestellt werden
+    * Benutzerbezogene statt rechnerbezogene Verwaltung
+
+Netzwerkverwaltung
+  * Frei definierbar IP-Bereiche
+  * Standardmäßige Zugangskontrolle zum Internet über einen Proxyservice
+    auf Single-Sign-On Basis 
+  * OpnSense auf Basis von FreeBSD vorkonfiguriert ausgeliefert aber
+    flexibel mit anderen Firewall-Produkten einsetzbar
+      
+Was erhalten bleibt
+-------------------
+
+* LINBO ist weiterhin das zentrale Softwareverteilungssystem. Die
+  größte Modernisierung hat LINBO schon mit der Version 2.3.x in
+  linuxmuster.net 6.2 erfahren.
+
+
+
+
+  
 
 .. _knownbugs-label:
 
@@ -66,4 +90,4 @@ Release-Informationen früherer Versionen
 ----------------------------------------
 
 * `Release-Information zur linuxmuster.net 6.2 <https://docs.linuxmuster.net/de/v6.2/release-information/index.html>`_
-* `Release-Informationen zur linuxmuster.net 5.1, 6.0 und 6.1 <https://www.linuxmuster.net/wiki/dokumentation:handbuch:preparation:features>`_
+* `Release-Informationen zur linuxmuster.net 5.1, 6.0 und 6.1 <https://www.linuxmuster.net/wikiarchiv/dokumentation:handbuch:preparation:features>`_

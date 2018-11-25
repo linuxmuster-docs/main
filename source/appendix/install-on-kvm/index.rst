@@ -1,3 +1,5 @@
+.. _install-on-kvm-label:
+
 ==========================
  Virtualisierung über KVM
 ==========================
@@ -203,3 +205,4 @@ Server kommst.
 .. code-block:: console
 
    # ssh 10.0.0.254 -l root
+
