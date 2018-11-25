@@ -44,8 +44,7 @@ Ubuntu Server
 Laden Sie das Iso-Image ( `Ubuntu 12.04.5 LTS 64-bit PC (AMD64) server install CD <http://releases.ubuntu.com/12.04/ubuntu-12.04.5-server-amd64.iso>`_ ) herunter und brennen es auf eine CD.
 
   .. warning::
-   Verwenden Sie **nicht** Ubuntu 14.04 oder Ubuntu 16.04.
-   |br| Erst die Version linuxmuster.net 7 beruht voraussichtlich auf Ubuntu 16.04.
+   Verwenden Sie **nicht** aktuellere Versionen!
 
 Um sicher zu stellen, dass die Datei richtig heruntergeladen wurde, können Sie die SHA1-Summe prüfen. Auf der Konsole eines Linuxbetriebsystems steht z.B. der Befehl ``sha1sum`` zur Verfügung:
 
