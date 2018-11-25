@@ -1,10 +1,13 @@
-Rechneraufnahme mit der Webui
------------------------------
+Rechneraufnahme mit SELMA
+-------------------------
 
-Um einen Rechner mit der Webui aufzunehmen geht man wie folgt vor:
+Um einen Rechner mit SELMA aufzunehmen geht man wie folgt vor:
 
-Im Browser gibt man in der Adressleiste https://10.16.1.1:8000 gefolgt von ENTER ein. Es erscheint das abgebildete 
-Login-Fenster:
+Im Browser gibt man in der Adressleiste
+``https://server.linuxmuster.lan:8000`` gefolgt von ENTER ein.  Das
+selbst signierte Zertifikat muss akzeptiert werden.
+
+Es erscheint das abgebildete Login-Fenster:
 
 .. image:: media/Login.png
 
