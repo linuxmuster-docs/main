@@ -19,15 +19,16 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
 
   getting-started/prerequisites/index
   getting-started/serverinstallation/index
+  getting-started/add-user-accounts/index
   getting-started/add-computer/index
   getting-started/linuxclients/index
-  getting-started/add-user-accounts/index
 
 .. toctree::
   :maxdepth: 2
   :caption: Systemadministration
 
-  systemadministration/maintenance/index
+  systemadministration/maintenance/migration
+  systemadministration/maintenance/keep-lmn-uptodate/index
   systemadministration/network/index
   systemadministration/printer/index
 
