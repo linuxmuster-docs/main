@@ -4,7 +4,7 @@
  Virtualisierung über KVM
 ==========================
 
-.. sectionauthor:: N.N., T.Küchel
+.. sectionauthor:: `morbweb <https://ask.linuxmuster.net/u/morpweb>`_, `jolly-jump <https://ask.linuxmuster.net/u/jolly-jump>`_
 
 
 In diesem Dokument findest Du "Schritt für Schritt" Anleitungen zum
