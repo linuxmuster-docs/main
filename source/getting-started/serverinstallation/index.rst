@@ -3,7 +3,13 @@
 ====================================
 
 Öffne auf dem Administrations-PC mit einem Webbrowser die URL
-``http://10.16.1.1:8000``. Es erscheint automatisch der
+``http://10.0.0.1:8000``. Melde dich hier mit deinen root Logindaten an.
+
+.. figure:: media/root-login.png
+   :align: center
+   :alt: root login
+
+Es erscheint automatisch der
 Einrichtungsassistent. Die Sprache kann ausgewählt werden und die EULA
 muss akzeptiert werden.
 
