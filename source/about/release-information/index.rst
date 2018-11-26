@@ -65,7 +65,7 @@ Netzwerkverwaltung
   * Standardmäßige Zugangskontrolle zum Internet über einen Proxyservice
     auf Single-Sign-On Basis 
   * OpnSense auf Basis von FreeBSD vorkonfiguriert ausgeliefert aber
-    flexibel mit anderen Firewall-Produkten einsetzbar
+    flexibel durch andere Firewall-Produkte zu ersetzen
       
 Was erhalten bleibt
 -------------------
