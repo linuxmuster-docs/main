@@ -51,18 +51,18 @@ Appliances anzupassen und z.B. die Festplattentypen auf "virtio" zu
 stellen.
 
 Netzwerkanpassungen des KVM-Hosts
----------------------------------
+=================================
 
 
 
 Firewall
---------
+========
 
 Importiere die Firewall-Appliance `lmn7-opnsense`.
 
 .. code-block:: console
 
-   # virt-convert lmn7-opnsense-20181109.ova
+   # virt-convert lmn7-opnsense-*.ova
    ...
    Running /usr/bin/qemu-img convert -O raw lmn7-opnsense-20181109-disk1.vmdk /var/lib/libvirt/images/lmn7-opnsense-20181109-disk1.raw
    Creating guest 'lmn7-opnsense'.
@@ -73,10 +73,10 @@ Abbild nochmals kopieren und die Konfiguration editieren.
 
 .. code-block:: console
 
-   # qemu-img info /var/lib/libvirt/images/lmn7-opnsense-20181109-disk1.raw | grep virtual\ size
+   # qemu-img info /var/lib/libvirt/images/lmn7-opnsense-*disk1.raw | grep virtual\ size
    virtual size: 10G (10737418240 bytes)
    # lvcreate -L 10737418240b -n opnsense vghost
-   # qemu-img convert -O raw /var/lib/libvirt/images/lmn7-opnsense-20181109-disk1.raw /dev/vghost/opnsense
+   # qemu-img convert -O raw /var/lib/libvirt/images/lmn7-opnsense-*disk1.raw /dev/vghost/opnsense
    # virsh edit lmn7-opnsense
    ...
    <disk type='block' device='disk'>
@@ -85,7 +85,7 @@ Abbild nochmals kopieren und die Konfiguration editieren.
    ...
 
 Netzwerkanpassung der Firewall
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------
    
 Die Netzwerkkarten der Appliance werden in der Reihenfolge importiert,
 wie sie in Appliance definiert wurden:
@@ -142,7 +142,7 @@ und korrigieren kann.
 
 
 Server
-------
+======
 
 Importiere die Server-Appliance `lmn7-server`.
 
@@ -154,33 +154,103 @@ Importiere die Server-Appliance `lmn7-server`.
    Running /usr/bin/qemu-img convert -O raw lmn7-server-20181109-disk2.vmdk /var/lib/libvirt/images/lmn7-server-20181109-disk2.raw   
    Creating guest 'lmn7-server'.
 
-Auch hier muss man, wenn man als Speichermedium lieber LVM verwendet,
-weitere Anpassungen vornehmen. Hier bietet sich an, die zweite
-Festplatte an seine eigenen Bedürfnisse anzupassen und gleich passend
-zu vergrößern, das interne LVM aufzuschließen und auf die externe
-Größe zu vergrößern.
+Festplattengrößen für den Server
+--------------------------------
+   
+An dieser Stelle sollte man die Festplattengrößen an seine eigenen
+Bedürfnisse anpassen. Beispielhaft wird die zweite Festplatte und das
+darin befindliche server-LVM vergrößert, so dass ``/dev/vg_srv/linbo``
+und ``/dev/vg_srv/default-school`` auf jeweils 175G vergrößert werden.
+
+Zunächst wird der Container entsprechend (10+10+175+175 GB) vergrößert, dann der mit
+Hilfe von `kpartx` aufgeschlossen.
+
+.. code-block:: console
+
+   # qemu-img resize -f raw /var/lib/libvirt/images/lmn7-server-*disk2.raw 370G
+   Image resized.
+   # qemu-img info /var/lib/libvirt/images/lmn7-server-*disk2.raw | grep virtual\ size
+   virtual size: 370G (397284474880 bytes)
+   # kpartx -av /var/lib/libvirt/images/lmn7-server-*disk2.raw
+   # vgdisplay -s vg_srv
+   "vg_srv" <100,00 GiB [<100,00 GiB used / 0,00 GiB free]
+
+Durch kpartx wurde der Container über ein so genanntes loop-device
+geöffnet und das darin liegende LVM wurde auf dem Serverhost
+hinzugefügt. Daher kann jetzt sowohl das loop-device als `physical
+volume` vergrößert als auch die `logical volumes` vergrößert werden.
+Zu letzt muss noch das Dateisystem geprüft und erweitert werden.
+
+.. code-block:: console
+
+   # pvresize /dev/loop0 
+   Physical volume "/dev/loop0" changed
+   1 physical volume(s) resized / 0 physical volume(s) not resized
+   # vgdisplay -s vg_srv
+   "vg_srv" <370,00 GiB [<100,00 GiB used / 270,00 GiB free]
+
+   # lvresize /dev/vg_srv/default-school -L 175G
+   Size of logical volume vg_srv/default-school changed from 40,00 GiB (10240 extents) to 175,00 GiB (44800 extents).
+   Logical volume vg_srv/default-school successfully resized.
+   # e2fsck -f /dev/vg_srv/default-school
+   ...
+   linbo: 1010/2621440 Dateien (0.6% nicht zusammenhängend), 263136/10485760 Blöcke
+   # resize2fs /dev/vg_srv/default-school
+   ...
+   Das Dateisystem auf /dev/vg_srv/default-school is nun 45875200 (4k) Blöcke lang.
+
+   # lvresize /dev/vg_srv/linbo -L 175G
+     Insufficient free space: 34560 extents needed, but only 34559 available
+   # lvresize /dev/vg_srv/linbo -l +34599     
+   Size of logical volume vg_srv/linbo changed from <40,00 GiB (10239 extents) to <175,00 GiB (44799 extents).
+   Logical volume vg_srv/linbo successfully resized.
+   # e2fsck -f /dev/vg_srv/linbo
+   ...
+   default-school: 13/2621440 Dateien (0.0% nicht zusammenhängend), 242386/10484736 Blöcke
+   # resize2fs /dev/vg_srv/linbo
+   ...
+   Das Dateisystem auf /dev/vg_srv/linbo is nun 45874176 (4k) Blöcke lang.
+
+Um den Container wieder ordentlich zu schließen, muss man die `volume
+group` abmelden und mit `kpartx` abschließen.
+
+.. code-block:: console
+
+   # vgchange -a n vg_srv
+   0 logical volume(s) in volume group "vg_srv" now active
+   # kpartx -dv /var/lib/libvirt/images/lmn7-server-*disk2.raw 
+   loop deleted : /dev/loop0
+
+Auch hier muss man, wenn man als Speichermedium auf dem Host lieber
+LVM verwendet, weitere Anpassungen vornehmen.Hier habe ich auch den
+Festplattentyp auf `virtio` und die Festplattenbezeichnung daher auf
+`vdX` umgestellt.
 
 .. code-block:: console
 
    # qemu-img info /var/lib/libvirt/images/lmn7-server-*disk1.raw | grep virtual\ size
    virtual size: 25G (26843545600 bytes)
    # lvcreate -L 26843545600b -n serverroot vghost
-   # qemu-img convert -O raw /var/lib/libvirt/images/lmn7-server-20181109-disk1.raw /dev/vghost/serverroot
+   # qemu-img convert -O raw /var/lib/libvirt/images/lmn7-server-*disk1.raw /dev/vghost/serverroot
    # virsh edit lmn7-server
    ...
    <disk type='block' device='disk'>
       <driver name='qemu' type='raw'/>
       <source dev='/dev/vghost/serverroot'/>
+      <target dev='vda' bus='virtio'/>
    ...
    # qemu-img info /var/lib/libvirt/images/lmn7-server-*disk2.raw | grep virtual\ size
-   virtual size: 100G (107374182400 bytes)   
-   # lvcreate -L 350G -n serverdata vghost
+   virtual size: 370G (397284474880 bytes)
+   # lvcreate -L 397284474880b -n serverdata vghost
    ...
+   <disk type='block' device='disk'>
+      <driver name='qemu' type='raw'/>
+      <source dev='/dev/vghost/serverdata'/>
+      <target dev='vdb' bus='virtio'/>      
    ...
-
 
 Netzwerkanpassung des Servers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
    
 Es muss nur eine Netzwerkschnittstelle angepasst werden und in die
 Brücke `br-green` gestöpselt werden.
@@ -190,13 +260,13 @@ Brücke `br-green` gestöpselt werden.
    # virsh edit lmn7-server
    ...
    <interface type='bridge'>
-      <mac address='52:54:00:20:ea:70'/>
+      <mac address='52:54:00:9f:b8:af'/>
       <source bridge='br-green'/>
    ...
 
 
 Test der Verbindungen
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 Teste, ob du von deinem Admin-PC auf die Firewall mit dem
 Standardpasswort `Muster!` kommst, teste dann ob du auch auf den
@@ -205,4 +275,5 @@ Server kommst.
 .. code-block:: console
 
    # ssh 10.0.0.254 -l root
+   # ssh 10.0.0.1 -l root   
 
