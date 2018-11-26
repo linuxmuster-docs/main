@@ -2,7 +2,7 @@
  Voraussetzungen
 =================
 
-.. sectionauthor:: C. Weikl, T. Küchel
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_, `@jolly-jump <https://ask.linuxmuster.net/u/cweikl>`_
 
 Linuxmuster.net wird als Zwei-Server-Lösung (Firewall und
 linuxmuster.net-Server) betrieben. Optional können weitere Server wie

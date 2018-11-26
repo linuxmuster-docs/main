@@ -8,7 +8,7 @@
 Was ist neu in 7.0?
 ===================
 
-.. sectionauthor:: Dokuteam
+.. sectionauthor:: `Das Dokuteam <https://ask.linuxmuster.net/c/weiterentwicklung/doku>`_
 
 Linuxmuster.net 7.0 ist in großen Teilen neu geschrieben worden. Es
 gibt einen Upgrade-Pfad über eine Migration, da ein reguläres Update
@@ -65,7 +65,7 @@ Netzwerkverwaltung
   * Standardmäßige Zugangskontrolle zum Internet über einen Proxyservice
     auf Single-Sign-On Basis 
   * OpnSense auf Basis von FreeBSD vorkonfiguriert ausgeliefert aber
-    flexibel mit anderen Firewall-Produkten einsetzbar
+    flexibel durch andere Firewall-Produkte zu ersetzen
       
 Was erhalten bleibt
 -------------------
