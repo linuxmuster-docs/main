@@ -12,10 +12,10 @@ Installieren der linuxmuster.net-Musterlösung in der Version 7.0 auf
 Basis von KVM unter Ubuntu Server 18.04 LTS.
 
 Im folgenden Bild ist die einfachste Form der Implementierung der
-Musterlösung schematisch dargestellt:
+Musterlösung schematisch mit dem gewählten (Standard-)Netzwerk ``10.0.0.0/12``
+dargestellt:
 
-..
-   .. figure:: media/install-on-kvm-image01.png
+.. figure:: media/install-on-kvm-image01.png
 
 :fixme: picture redo
 
@@ -30,34 +30,41 @@ Vorbereitung für die Installation
 
 Es wird für die Installation auf dem KVM-Host ein Ubuntu Server 64bit
 in der Version 18.04 LTS angenommen, der so konfiguriert ist, dass er
-das Internet erreicht.  Ebenso sollte ein Admin-PC konfiguriert sein.
+das Internet erreicht.  Ebenso sollte ein Admin-PC konfiguriert sein,
+dessen IP-Adresse je nach gewähltem Netzwerk ``10.0.0.10``,
+``10.16.1.10`` oder entsprechend konfiguriert sein sollte. Gateway ist
+jeweils die ``254`` und Netzwerkmaske ergibt sich aus der Auswahl des
+Netzwerks.
 
-Lade auf dem KVM-Host die aktuellen OVA-Abbilder von der `Webseite
-<https://github.com/linuxmuster/linuxmuster-base7/wiki/Die-Appliances>`_
-herunter, die zu dem Adressbereich gehören, den du brauchst
-(``10.0.0.1/16`` oder ``10.16.1.1/12``)
+Download
+  Lade auf dem KVM-Host die aktuellen OVA-Abbilder von der `Webseite
+  <https://github.com/linuxmuster/linuxmuster-base7/wiki/Die-Appliances>`_
+  herunter, die zu dem Adressbereich gehören, den du brauchst
+  (``10.0.0.1/16`` oder ``10.16.1.1/12``)
 
-.. code-block:: console
+  .. code-block:: console
+     
+     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-opnsense-20181109.ova
+     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-server-20181109.ova
+     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-opsi-20181109.ova
+     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-docker-20181109.ova
 
-   # wget http://fleischsalat.linuxmuster.org/ova/lmn7-opnsense-20181109.ova
-   # wget http://fleischsalat.linuxmuster.org/ova/lmn7-server-20181109.ova
-   # wget http://fleischsalat.linuxmuster.org/ova/lmn7-opsi-20181109.ova
-   # wget http://fleischsalat.linuxmuster.org/ova/lmn7-docker-20181109.ova
+  und überprüfe die md5-Summe mit dem entsprechenden Werkzeug und
+  vergleiche mit der Webseite auf Integrität. In der weiteren Anleitung
+  wird statt der Dateien mit Datumsstempel ``20181109`` die Datei mit
+  ``*`` verwendet. Solange du nur je ein (das aktuelle) OVA-Abbild
+  vorliegen hast, funktionieren die Befehle auch mit dem ``*``.
 
-und überprüfe die md5-Summe mit dem entsprechenden Werkzeug und
-vergleiche mit der Webseite auf Integrität. In der weiteren Anleitung
-wird statt der Dateien mit Datumsstempel ``20181109`` die Datei mit
-``*`` verwendet. Solange du nur je ein (das aktuelle) OVA-Abbild
-vorliegen hast, funktionieren die Befehle auch mit dem ``*``.
-
-Nach der Integration bietet es sich an, die Hardware der importierten
-Appliances anzupassen und z.B. die Festplattentypen auf "virtio" zu
-stellen.
+KVM-Anpassungen
+  Nach der Integration bietet es sich an, die Hardware der
+  importierten Appliances anzupassen und z.B. die Festplattentypen auf
+  "virtio" zu stellen. Ebenso habe ich den Typ der "Grafikkarte" von
+  `spice` auf `vnc` gesetzt.
 
 Netzwerkanpassungen des KVM-Hosts
 =================================
 
-
+:todo: copy stuff from 6.2 docs by morpweb
 
 Firewall
 ========
@@ -95,7 +102,7 @@ Netzwerkanpassung der Firewall
 ------------------------------
    
 Die Netzwerkkarten der Appliance werden in der Reihenfolge importiert,
-wie sie in Appliance definiert wurden:
+wie sie in der Appliance definiert wurden:
 
 1. `LAN, 10.0.0.254/16`, d.h. diese Schnittstelle wird auf der
    pädagogischen Seite des Netzwerks angeschlossen
@@ -305,3 +312,6 @@ dem Standardpasswort `Muster!` kommst.
 Sollte diese Verbindung nicht gelingen, dann empfiehlt sich ein
 Admin-PC, mit dem man über das Programm `virt-manager` den VM-Host
 erreicht und über eine GUI-Verbindung den Server begutachtet.
+
+Ab jetzt ist eine Installation der Musterlösung möglich. Folge der
+:ref:`Anleitung hier <setup-using-selma-label>`.
