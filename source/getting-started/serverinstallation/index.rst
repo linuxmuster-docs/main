@@ -1,3 +1,5 @@
+.. _setup-using-selma-label:
+
 ====================================
  Installation und Erstkonfiguration
 ====================================
