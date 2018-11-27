@@ -34,7 +34,8 @@ das Internet erreicht.  Ebenso sollte ein Admin-PC konfiguriert sein.
 
 Lade auf dem KVM-Host die aktuellen OVA-Abbilder von der `Webseite
 <https://github.com/linuxmuster/linuxmuster-base7/wiki/Die-Appliances>`_
-herunter.
+herunter, die zu dem Adressbereich gehören, den du brauchst
+(``10.0.0.1/16`` oder ``10.16.1.1/12``)
 
 .. code-block:: console
 
@@ -44,7 +45,10 @@ herunter.
    # wget http://fleischsalat.linuxmuster.org/ova/lmn7-docker-20181109.ova
 
 und überprüfe die md5-Summe mit dem entsprechenden Werkzeug und
-vergleiche mit der Webseite auf Integrität.
+vergleiche mit der Webseite auf Integrität. In der weiteren Anleitung
+wird statt der Dateien mit Datumsstempel ``20181109`` die Datei mit
+``*`` verwendet. Solange du nur je ein (das aktuelle) OVA-Abbild
+vorliegen hast, funktionieren die Befehle auch mit dem ``*``.
 
 Nach der Integration bietet es sich an, die Hardware der importierten
 Appliances anzupassen und z.B. die Festplattentypen auf "virtio" zu
@@ -83,6 +87,9 @@ Abbild nochmals kopieren und die Konfiguration editieren.
       <driver name='qemu' type='raw'/>
       <source dev='/dev/vghost/opnsense'/>
    ...
+
+Falls das Abbild erfolgreich ins LVM des Hosts übertragen wurde,
+kann das Abbild in ``/var/lib/libvirt/images`` gelöscht werden.
 
 Netzwerkanpassung der Firewall
 ------------------------------
@@ -124,22 +131,35 @@ werden, allerdings an die Brücke `br-red` angeschlossen werden.
       <source bridge='br-red'/>
    ...
 
+Test der Verbindung zur Firewall
+--------------------------------
+   
 Starte die Firewall. Der Admin-PC sollte sich nach ca. 3 Minuten mit
 der Firewall verbinden lassen.
 
-
 .. code-block:: console
 
+   # virsh start lmn7-opnsense
+   Domain lmn7-opnsense started
    # ping 10.0.0.254
    PING 10.0.0.254 (10.0.0.254) 56(84) bytes of data.
    64 bytes from 10.0.0.254: icmp_seq=1 ttl=64 time=0.183 ms
    64 bytes from 10.0.0.254: icmp_seq=2 ttl=64 time=0.242 ms
+   ...
+   STRG-C
+   # ssh 10.0.0.254 -l root
+   Password for root@OPNsense.localdomain:
+   ...
+   LAN (em0)       -> v4: 10.0.0.254/16
+   WAN (em1)       -> v4/DHCP4: 192.168.1.23/16
+   ...
 
-Sollte diese Verbindung nicht gelingen, dann empfiehlt sich ein
-Admin-PC, mit dem man direkt auf der Konsole von `virt-manager` die
-Firewall erreicht und die Netzkonfiguration der opnsense überprüfen
-und korrigieren kann.
-
+Man erkennt, dass die Firewall die Netzwerkkarten für innen (LAN) und
+außen (WAN) richtig zugeordnet hat. Sollte diese Verbindung nicht
+gelingen, dann empfiehlt sich ein Admin-PC, mit dem man über das
+Programm `virt-manager` den VM-Host und damit die Firewall über eine
+GUI-Verbindung erreicht und die Netzkonfiguration der opnsense
+überprüfen und korrigieren kann.
 
 Server
 ======
@@ -148,7 +168,7 @@ Importiere die Server-Appliance `lmn7-server`.
 
 .. code-block:: console
 
-   # virt-convert lmn7-server-20181109.ova
+   # virt-convert lmn7-server-*.ova
    ...
    Running /usr/bin/qemu-img convert -O raw lmn7-server-20181109-disk1.vmdk /var/lib/libvirt/images/lmn7-server-20181109-disk1.raw
    Running /usr/bin/qemu-img convert -O raw lmn7-server-20181109-disk2.vmdk /var/lib/libvirt/images/lmn7-server-20181109-disk2.raw   
@@ -249,6 +269,9 @@ Festplattentyp auf `virtio` und die Festplattenbezeichnung daher auf
       <target dev='vdb' bus='virtio'/>      
    ...
 
+Falls die Abbilder erfolgreich ins LVM des Hosts übertragen wurden,
+können die Abbilder in ``/var/lib/libvirt/images`` gelöscht werden.
+
 Netzwerkanpassung des Servers
 -----------------------------
    
@@ -264,16 +287,21 @@ Brücke `br-green` gestöpselt werden.
       <source bridge='br-green'/>
    ...
 
+Test der Verbindung zum Server
+------------------------------
 
-Test der Verbindungen
----------------------
-
-Teste, ob du von deinem Admin-PC auf die Firewall mit dem
-Standardpasswort `Muster!` kommst, teste dann ob du auch auf den
-Server kommst.
+Starte den Server. Teste, ob du von deinem Admin-PC auf den Server mit
+dem Standardpasswort `Muster!` kommst.
 
 .. code-block:: console
 
-   # ssh 10.0.0.254 -l root
-   # ssh 10.0.0.1 -l root   
+   # virsh start lmn7-opnsense
+   Domain lmn7-opnsense started
+   # ssh 10.0.0.1 -l root
+   root@10.0.0.1's password: 
+   Welcome to Ubuntu 18.04.1 LTS (GNU/Linux 4.15.0-38-generic x86_64)
+   ...
 
+Sollte diese Verbindung nicht gelingen, dann empfiehlt sich ein
+Admin-PC, mit dem man über das Programm `virt-manager` den VM-Host
+erreicht und über eine GUI-Verbindung den Server begutachtet.
