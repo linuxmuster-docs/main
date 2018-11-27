@@ -269,6 +269,8 @@ Festplattentyp auf `virtio` und die Festplattenbezeichnung daher auf
    # qemu-img info /var/lib/libvirt/images/lmn7-server-*disk2.raw | grep virtual\ size
    virtual size: 370G (397284474880 bytes)
    # lvcreate -L 397284474880b -n serverdata vghost
+   # qemu-img convert -O raw /var/lib/libvirt/images/lmn7-server-*disk2.raw /dev/vghost/serverdata
+   # virsh edit lmn7-server
    ...
    <disk type='block' device='disk'>
       <driver name='qemu' type='raw'/>
