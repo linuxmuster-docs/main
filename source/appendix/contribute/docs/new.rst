@@ -201,4 +201,69 @@ Repositoriums gebracht werden:
      ~/my-docs$ git stash pop
 
 
+Für Fortgeschrittene: andere Zweige bearbeiten
+----------------------------------------------
 
+Unterschiedliche Versionen von linuxmuster.net werden in
+unterschiedlichen Zweigen des github-Repositoriums dokumentiert. Die
+aktuelle Version ist im Zweig ``master`` untergebracht und obige
+Abschnitte beziehen sich darauf.
+
+Will man einen anderen Zweig bearbeiten, beispielsweise den Zweig
+``v7``, dann gibt es nur Folgendes zu beachten.
+
+1. Man muss einmalig den Zweig mit ``git checkout v7`` lokal
+   initialisieren. Mit ``git branch`` sieht man, welche Zweige aktuell
+   sind.
+
+   .. code-block:: console
+
+      linuxadmin@lmn-docs:~/my-docs$ git branch -l
+      * master
+      linuxadmin@lmn-docs:~/my-docs$ git checkout v7
+      Zu Branch 'v7' gewechselt
+      Ihr Branch ist auf demselben Stand wie 'origin/v7'.
+      linuxadmin@lmn-docs:~/my-docs$ git branch
+      master
+      * v7
+
+   Man sollte also immer im Kopf haben oder nachschauen, in welchem
+   Zweig man gerade arbeitet.
+
+2. Die Abschnitte zu ``commit`` und ``push`` stimmen in jedem Zweig.
+
+3. Wird ein Pull-Request in Github erstellt, dann ist zu beachten,
+   dass auch die gleichen Zweige verglichen werden.
+
+4. Aktualisiert man den eigenen Fork über das
+   ``upstream``-Repositorium, dann muss man den Befehl zum
+   Zusammenführen anpassen. Ein Ablauf kann da so aussehen:
+
+   .. code-block:: console
+
+      linuxadmin@lmn-docs:~/my-docs$ git fetch upstream
+      remote: Enumerating objects: 15, done.
+      remote: Counting objects: 100% (15/15), done.
+      remote: Compressing objects: 100% (12/12), done.
+      remote: Total 19 (delta 4), reused 3 (delta 3), pack-reused 4
+      Entpacke Objekte: 100% (19/19), Fertig.
+      Von https://github.com/linuxmuster-docs/main
+      7d25598..2c31c06  master     -> upstream/master
+      4a27d6b..d4edde9  v7         -> upstream/v7
+      linuxadmin@lmn-docs:~/my-docs$ git branch
+      master
+      * v7
+      linuxadmin@lmn-docs:~/my-docs$ git merge upstream/v7
+      Aktualisiere d3ada10..d4edde9
+      Fast-forward
+      source/appendix/install-on-kvm/index.rst | 2 ++
+      1 file changed, 2 insertions(+)
+
+   Ein "merge" des falschen Zweiges, z.B. ``upstream/master`` hätte
+   hier zu Folge, dass alle Änderungen zwischen den Zweigen versucht
+   würde zusammenzuführen, was bei sich stark unterscheidenden Zweigen
+   nicht erfolgreich wäre.
+   
+Der ``master``-Zweig ist kein besonderer Zweig. Man kann also dorthin
+zurückkehren, wie man zu jedem Zweig wechselt, mit ``git checkout
+master``.
