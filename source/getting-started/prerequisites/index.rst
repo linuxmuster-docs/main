@@ -1,8 +1,10 @@
+.. _prerequisites-label:
+
 =================
  Voraussetzungen
 =================
 
-.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_, `@jolly-jump <https://ask.linuxmuster.net/u/cweikl>`_
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_, `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_
 
 Linuxmuster.net wird als Zwei-Server-Lösung (Firewall und
 linuxmuster.net-Server) betrieben. Optional können weitere Server wie

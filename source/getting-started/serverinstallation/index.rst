@@ -4,7 +4,8 @@
  Installation und Erstkonfiguration
 ====================================
 
-.. sectionauthor:: `WildXI <https://ask.linuxmuster.net/u/wildxi>`_, `TLeibbrand <https://ask.linuxmuster.net/u/tleibbrand>`_
+.. sectionauthor:: `@WildXI <https://ask.linuxmuster.net/u/wildxi>`_,
+		   `@TLeibbrand <https://ask.linuxmuster.net/u/tleibbrand>`_
 
 Öffne auf dem Administrations-PC mit einem Webbrowser die URL
 ``http://10.0.0.1:8000``. Melde dich hier mit deinen root Logindaten an.

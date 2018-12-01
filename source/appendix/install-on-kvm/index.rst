@@ -4,12 +4,16 @@
  Virtualisierung über KVM
 ==========================
 
-.. sectionauthor:: `morbweb <https://ask.linuxmuster.net/u/morpweb>`_, `jolly-jump <https://ask.linuxmuster.net/u/jolly-jump>`_
+.. sectionauthor:: `@morbweb <https://ask.linuxmuster.net/u/morpweb>`_,
+		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
+		   `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
 
 In diesem Dokument findest Du "Schritt für Schritt" Anleitungen zum
 Installieren der linuxmuster.net-Musterlösung in der Version 7.0 auf
-Basis von KVM unter Ubuntu Server 18.04 LTS.
+Basis von KVM unter Ubuntu Server 18.04 LTS. Lies zuerst die
+Abschnitte :ref:`release-information-label` und
+:ref:`prerequisites-label`, bevor du dieses Kapitel durcharbeitest.
 
 Im folgenden Bild ist die einfachste Form der Implementierung der
 Musterlösung schematisch mit dem gewählten (Standard-)Netzwerk ``10.0.0.0/12``
@@ -17,13 +21,16 @@ dargestellt:
 
 .. figure:: media/install-on-kvm-image01.png
 
-:fixme: picture redo
-
 Nach der Installation gemäß dieser Anleitung erhältst Du eine
 einsatzbereite Umgebung bestehend aus
 
-* einer Firewall (opnsense) und 
-* eines Servers (server)
+* einer Firewall (OPNSense) und 
+* eines Servers (linuxmuster.net)
+
+Ähnliche, nicht dokumentierte, Installationen gelten für einen
+OPSI-Server und einen Docker-Host, die dann ebenso auf dem KVM-Host
+laufen können.
+
 
 Vorbereitung für die Installation
 =================================

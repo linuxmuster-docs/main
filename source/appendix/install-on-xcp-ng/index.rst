@@ -4,7 +4,7 @@
  Virtualisierung mit XCP-ng
 ============================
 
-.. sectionauthor:: C. Weikl
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
 XCP-ng ist eine reine OpenSource-Virtualisierungslösung, die auf Basis von XEN arbeitet und alle 
 sog. Enterprise-Features wie Replikation, automatisierte Backups, Verschieben von VMs im laufenden Betrieb etc. 
