@@ -13,7 +13,7 @@ In diesem Dokument findest Du "Schritt für Schritt" Anleitungen zum
 Installieren der linuxmuster.net-Musterlösung in der Version 7.0 auf
 Basis von KVM unter Ubuntu Server 18.04 LTS. Lies zuerst die
 Abschnitte :ref:`release-information-label` und
-:ref:`prerequisites-label`, bevor du dieses Kapitel durcharbeitest.
+:ref:`prerequisites-label`, bevor Du dieses Kapitel durcharbeitest.
 
 Im folgenden Bild ist die einfachste Form der Implementierung der
 Musterlösung schematisch mit dem gewählten (Standard-)Netzwerk ``10.0.0.0/12``
@@ -36,7 +36,7 @@ Voraussetzungen
 ===============
 
 * Es wird vorausgesetzt, dass Du einen Administrationsrechner
-  (Admin-PC genannt) besitzt, den du je nach Bedarf in die
+  (Admin-PC genannt) besitzt, den Du je nach Bedarf in die
   entsprechenden Netzwerke einstecken kannst und dessen
   Netzwerkkonfiguration entsprechend vornehmen kannst. Für diese
   Anleitung reicht ein Rechner mit ssh-Software aus, empfohlen wird
@@ -100,14 +100,17 @@ Natürlich können auch alle anderen gängigen Tools zur Erstellung genutzt werd
 ..
 
 
-Installation
-------------
+Installation des KVM-Hosts
+--------------------------
 
 .. hint::
    Bei der Installation sind folgende Merkmale zu berücksichtigen:
 
+   * Erstellung eines Nutzers ``lmadmin``, der später wieder gelöscht
+     wird.
    * Auswahl des HWE Kernels
-   * Einrichtung eines LVMs auf der HDD mit 25GB für das Betriebssystem
+   * Einrichtung eines LVMs auf der HDD mit 25GB für das
+     Betriebssystem
    * Auswahl der Pakete *Virtual Machine host* und *OpenSSH server*
 
 Des Weiteren ist es (wie in den Voraussetzungen angesprochen)
@@ -188,14 +191,18 @@ Einrichten des SSH-Zugangs auf Zertifikatsbasis
 Die Remote-Administration des KVM-Hosts soll per SSH und
 Zertifikaten erfolgen. Als Benutzer wird root verwendet.
 
-Setzen des Rootpassworts und Aktivierung des SSH-Zugangs für root
+Setzen des Rootpassworts 
   .. code-block:: console
 
      # passwd
 
+Aktivierung des SSH-Zugangs für root
+  .. code-block:: console
+
      # nano /etc/ssh/sshd_config
-	
+     ...
      PermitRootLogin yes
+     ...
 
 Erstellen von SSH-Zertifikaten auf dem Admin-PC und Kopieren auf den KVM-Host
   .. code-block:: console
@@ -207,10 +214,11 @@ Deaktivierung des SSH-Zugangs für root per Passwort
   .. code-block:: console
 
      # nano /etc/ssh/sshd_config
-     
+     ...
      PermitRootLogin prohibit-password
+     ...
 
-Löschen des lmadmin Users auf dem KVM-Host
+Löschen des Users ``lmadmin`` auf dem KVM-Host
   .. code-block:: console
 
      # userdel -r lmadmin
@@ -260,7 +268,7 @@ Vorbereitungen für den Import der virtuellen Maschinen
 Download Virtuelle Maschinen
   Lade auf dem KVM-Host die aktuellen OVA-Abbilder von der `Webseite
   <https://github.com/linuxmuster/linuxmuster-base7/wiki/Die-Appliances>`_
-  herunter, die zu dem Adressbereich gehören, den du brauchst
+  herunter, die zu dem Adressbereich gehören, den Du brauchst
   (``10.0.0.1/16`` oder ``10.16.1.1/12``)
 
   .. code-block:: console
@@ -273,7 +281,7 @@ Download Virtuelle Maschinen
   und überprüfe die md5-Summe mit dem entsprechenden Werkzeug und
   vergleiche mit der Webseite auf Integrität. In der weiteren Anleitung
   wird statt der Dateien mit Datumsstempel ``20181109`` die Datei mit
-  ``*`` verwendet. Solange du nur je ein (das aktuelle) OVA-Abbild
+  ``*`` verwendet. Solange Du nur je ein (das aktuelle) OVA-Abbild
   vorliegen hast, funktionieren die Befehle auch mit dem ``*``.
 
 KVM-Anpassungen
@@ -516,7 +524,7 @@ Brücke `br-green` gestöpselt werden.
 Test der Verbindung zum Server
 ------------------------------
 
-Starte den Server. Teste, ob du von deinem Admin-PC auf den Server mit
+Starte den Server. Teste, ob Du von deinem Admin-PC auf den Server mit
 dem Standardpasswort `Muster!` kommst.
 
 .. code-block:: console
