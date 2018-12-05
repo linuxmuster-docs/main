@@ -24,6 +24,7 @@ dargestellt:
 Nach der Installation gemäß dieser Anleitung erhältst Du eine
 einsatzbereite Umgebung bestehend aus
 
+* einem Host (KVM) für alle virtuellen Maschinen, 
 * einer Firewall (OPNSense) und 
 * eines Servers (linuxmuster.net)
 
@@ -31,19 +32,232 @@ einsatzbereite Umgebung bestehend aus
 OPSI-Server und einen Docker-Host, die dann ebenso auf dem KVM-Host
 laufen können.
 
+Voraussetzungen
+===============
 
-Vorbereitung für die Installation
-=================================
+* Es wird vorausgesetzt, dass Du einen Administrationsrechner
+  (Admin-PC genannt) besitzt, den du je nach Bedarf in die
+  entsprechenden Netzwerke einstecken kannst und dessen
+  Netzwerkkonfiguration entsprechend vornehmen kannst. Für diese
+  Anleitung reicht ein Rechner mit ssh-Software aus, empfohlen wird
+  allerdings ein Ubuntu-Desktop mit der Verwaltungssoftware
+  `virt-manager`.
 
-Es wird für die Installation auf dem KVM-Host ein Ubuntu Server 64bit
-in der Version 18.04 LTS angenommen, der so konfiguriert ist, dass er
-das Internet erreicht.  Ebenso sollte ein Admin-PC konfiguriert sein,
-dessen IP-Adresse je nach gewähltem Netzwerk ``10.0.0.10``,
-``10.16.1.10`` oder entsprechend konfiguriert sein sollte. Gateway ist
-jeweils die ``254`` und Netzwerkmaske ergibt sich aus der Auswahl des
-Netzwerks.
+* Der Internetzugang des Admin-PCs und auch des späteren KVM-Hosts
+  sollte zunächst gewährleistet sein, d.h. dass beide zunächst z.B. an
+  einem Router angeschlossen werden, über den die beiden ins Internet
+  können. Sobald später die Firewall korrekt eingerichtet ist, bekommt
+  der Admin-PC und bei Bedarf auch der KVM-Host eine IP-Adresse im
+  Schulnetz.
 
-Download
+Installation des KVM-Hosts
+==========================
+
+.. hint:: 
+
+   Der KVM-Host bildet das Grundgerüst für die Firewall *OPNsense* und
+   den Schulserver *server*. Da KVM im Gegensatz zu Xen oder VMWare
+   auf die Virtualisierungsfunktionen der CPU angewiesen ist, müssen
+   diese natürlich vorhanden sein und eventuell im BIOS aktiviert
+   werden.
+
+
+Die folgende Anleitung beschreibt die *einfachste* Implementierung
+ohne Dinge wie VLANs, Teaming oder Raids. Diese Themen werden in
+zusätzlichen Anleitungen betrachtet.
+
+* :ref:`Anleitung Netzwerksegmentierung <subnetting-basics-label>` 
+
+.. _preface-usb-stick-label:
+
+Erstellen eines USB-Sticks für den KVM-Host
+-------------------------------------------
+
+Download für den KVM-Host
+  Es wird für die Installation auf dem KVM-Host ein Ubuntu Server 64bit
+  in der Version 18.04 LTS verwendet. Ein Installationsimage für
+  DVD/USB-Stick kann `hier <https://www.ubuntu.com/download/server>`_
+  heruntergeladen werden.
+
+Hilfreiche Befehle sind (Vorsicht - mit ``dd`` werden vorhandene Daten
+unwiderruflich zerstört):
+
+.. code-block:: console
+
+   Löschen des MBRs des USB-Sticks
+   # sudo dd if=/dev/zero of=/dev/sdX bs=1M count=10
+   
+   Kopieren des ISOs auf den Stick
+   # sudo dd if=<Name des ISOs> | sudo pv -s <Groesse des ISOs> | sudo dd of=/dev/sdX bs=1M && sync
+
+Natürlich können auch alle anderen gängigen Tools zur Erstellung genutzt werden. 
+
+.. raw:: html
+
+   <p>
+   <iframe width="696" height="392" src="https://www.youtube.com/embed/7NIoQpSSVQw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+   </p>
+..
+
+
+Installation
+------------
+
+.. hint::
+   Bei der Installation sind folgende Merkmale zu berücksichtigen:
+
+   * Auswahl des HWE Kernels
+   * Einrichtung eines LVMs auf der HDD mit 25GB für das Betriebssystem
+   * Auswahl der Pakete *Virtual Machine host* und *OpenSSH server*
+
+Des Weiteren ist es (wie in den Voraussetzungen angesprochen)
+sinnvoll, die erste Netzwerkkarte des Servers an den Internet-Router
+anzuschließen, um eventuell notwendige Pakete (Sprachpakete) während
+der Installation zu installieren.
+
+:todo: neues Video auf Basis von Ubuntu 18.04 LTS
+
+.. raw:: html
+
+   <p> <iframe width="696" height="392"
+   src="https://www.youtube.com/embed/ZL0e07nJI_w?rel=0"
+   frameborder="0" allow="autoplay; encrypted-media"
+   allowfullscreen></iframe> </p>
+..
+
+ 
+Netzwerkkonfiguration des KVM-Hosts
+-----------------------------------
+
+In diesem Schritt erfolgt die Anbindung des KVM-Hosts an das Schulnetz
+und an das Internet sowohl für den KVM-Host selbst, als auch für die
+virtuellen Maschinen. Dafür werden virtuelle Netzwerkswitche (so
+genannte `bridges`) eingerichtet mit denen die virtuellen Maschinen
+netzwerktechnisch verbunden werden. Der KVM-Host selbst kann auch mit
+Brücken verbunden werden, wenn er im jeweiligen Netz sichtbar sein
+soll.
+
+Herausfinden der Namen der Netzwerkkarten
+  .. code-block:: console
+     
+     # ip addr list
+
+
+Anpassen der Netzwerkkonfiguration
+  .. code-block:: console
+
+     /etc/netplan/lmn-host.yml
+
+     :todo: find netplan-config for kvm-host
+
+.. hint::
+
+   Wer seinen KVM-Host von früheren Ubuntu-Versionen updatet, bei dem
+   wird nicht automatisch `netplan` installiert, sondern `ifupdown`
+   mit der Konfigurationsdatei ``/etc/network/interfaces`` wird
+   beibehalten.
+
+Installation von Updates
+------------------------
+
+Nach der Erstinstallation ist es sinnvoll, das System erst einmal auf
+den aktuellen Stand zu bringen. Auf der Konsole wird dies mit
+folgenden Befehlen durchgeführt:
+
+.. code-block:: console
+
+   # sudo apt-get update
+   # sudo apt-get upgrade
+   # sudo apt-get dist-upgrade
+   # sudo apt-get autoremove
+   # sudo apt-get autoclean
+
+.. raw:: html
+
+   <p> <iframe width="696" height="392"
+   src="https://www.youtube.com/embed/DgMkFhBbrlY?rel=0"
+   frameborder="0" allow="autoplay; encrypted-media"
+   allowfullscreen></iframe> </p>
+..
+
+Einrichten des SSH-Zugangs auf Zertifikatsbasis
+-----------------------------------------------
+
+:todo: check/redo for 18.04
+
+Die Remote-Administration des KVM-Hosts soll per SSH und
+Zertifikaten erfolgen. Als Benutzer wird root verwendet.
+
+Setzen des Rootpassworts und Aktivierung des SSH-Zugangs für root
+  .. code-block:: console
+
+     # passwd
+
+     # nano /etc/ssh/sshd_config
+	
+     PermitRootLogin yes
+
+Erstellen von SSH-Zertifikaten auf dem Admin-PC und Kopieren auf den KVM-Host
+  .. code-block:: console
+
+     # ssh-keygen
+     # ssh-copy-id root@192.168.1.10
+
+Deaktivierung des SSH-Zugangs für root per Passwort
+  .. code-block:: console
+
+     # nano /etc/ssh/sshd_config
+     
+     PermitRootLogin prohibit-password
+
+Löschen des lmadmin Users auf dem KVM-Host
+  .. code-block:: console
+
+     # userdel -r lmadmin
+
+.. raw:: html
+
+   <p> <iframe width="696" height="392"
+   src="https://www.youtube.com/embed/AUGVGgqRkU0?rel=0"
+   frameborder="0" allow="autoplay; encrypted-media"
+   allowfullscreen></iframe> </p>
+..
+
+Einrichten der Zeit-Synchronisation
+-----------------------------------
+
+:todo: check/redo for 18.04
+
+Immer eine gute Sache ist es, z.B. in Logfiles die korrekte Zeit zu
+finden. Aus diesem Grund erfolgt die Konfiguration eines NTP-Clients.
+
+.. code-block:: console
+
+   Installieren von ntpdate
+   # apt-get install ntpdate
+
+   Einmaliges Stellen der Uhrzeit
+   # ntpdate 0.de.pool.ntp.org
+
+   Installieren des NTP-Daemons
+   # apt-get install ntp
+
+   Anzeigen der Zeitsynchronisation
+   # ntpq -p
+
+.. raw:: html
+
+	<p> <iframe width="696" height="392"
+	src="https://www.youtube.com/embed/tHqFTfS99xo?rel=0"
+	frameborder="0" allow="autoplay; encrypted-media"
+	allowfullscreen></iframe> </p>
+..
+
+
+Vorbereitungen für den Import der virtuellen Maschinen
+------------------------------------------------------
+
+Download Virtuelle Maschinen
   Lade auf dem KVM-Host die aktuellen OVA-Abbilder von der `Webseite
   <https://github.com/linuxmuster/linuxmuster-base7/wiki/Die-Appliances>`_
   herunter, die zu dem Adressbereich gehören, den du brauchst
@@ -68,13 +282,9 @@ KVM-Anpassungen
   "virtio" zu stellen. Ebenso habe ich den Typ der "Grafikkarte" von
   `spice` auf `vnc` gesetzt.
 
-Netzwerkanpassungen des KVM-Hosts
-=================================
 
-:todo: copy stuff from 6.2 docs by morpweb
-
-Firewall
-========
+Import der Firewall
+===================
 
 Importiere die Firewall-Appliance `lmn7-opnsense`.
 
@@ -175,8 +385,8 @@ Programm `virt-manager` den VM-Host und damit die Firewall über eine
 GUI-Verbindung erreicht und die Netzkonfiguration der opnsense
 überprüfen und korrigieren kann.
 
-Server
-======
+Import des Servers
+==================
 
 Importiere die Server-Appliance `lmn7-server`.
 
@@ -321,6 +531,23 @@ dem Standardpasswort `Muster!` kommst.
 Sollte diese Verbindung nicht gelingen, dann empfiehlt sich ein
 Admin-PC, mit dem man über das Programm `virt-manager` den VM-Host
 erreicht und über eine GUI-Verbindung den Server begutachtet.
+
+Abschließende Konfigurationen
+=============================
+
+Aktivieren des Autostarts der VMs
+---------------------------------
+
+Damit die VMs zukünftig bei einem Neustart des KVM-Servers nicht immer
+von Hand gestartet werden müssen, ist es sinnvoll den Autostart zu
+aktivieren.
+
+.. code-block:: console
+
+   # virsh autostart lmn7-opnsense
+   Domain lmn7-opnsense marked as autostarted
+   # virsh autostart lmn7-server
+   Domain lmn7-server marked as autostarted
 
 Ab jetzt ist eine Installation der Musterlösung möglich. Folge der
 :ref:`Anleitung hier <setup-using-selma-label>`.
