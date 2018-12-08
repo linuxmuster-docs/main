@@ -258,7 +258,7 @@ durch die Firewall-Lösung "IPFire" geprägt wurde:
 *  Optional kann z.B. für WLAN-Accesspoints ein weiteres Netzwerk aufgebaut werden (BLAU/LILA), für welches andere Zugangsberechtigungen als denen im grünen Netzwerk gelten.
 *  Ebenso optional kann eine sog. demilitarisierte Zone (DMZ) als zusätzliches Netzwerk (ORANGE) aufgebaut werden.
 
-.. figure:: media/preamble/einfaches-netz.png
+.. figure:: media/simple-network.png
    :align: center
    :alt: Schematischer Aufbau eines Computernetzes mit linuxmuster.net.
 
