@@ -205,6 +205,21 @@ Anpassen der Netzwerkkonfiguration
            search: ["meine-schule.de"]
      ...
 
+  Um im Netzwerk der äußeren Internetverbindung ``br-red``
+  beispielsweise per DHCP eine IPv4-Adresse zu erhalten, konfiguriert
+  man den entsprechenden Abschnitt so
+
+  .. code-block:: console
+
+     ...
+     bridges:
+     ...
+       br-red:
+         interfaces: [eth0]
+	 link-local: [ ]
+	 dhcp4: true
+     ...
+
 	 
 .. hint::
 
