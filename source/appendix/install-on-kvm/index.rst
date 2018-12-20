@@ -140,19 +140,72 @@ netzwerktechnisch verbunden werden. Der KVM-Host selbst kann auch mit
 Brücken verbunden werden, wenn er im jeweiligen Netz sichtbar sein
 soll.
 
-Herausfinden der Namen der Netzwerkkarten
+Herausfinden der Namen der Netzwerkkarten. Wenn du nicht gerade VLANs
+auf dem KVM-Host einrichten willst, sollten hier alle physischen
+Netzwerkkarten auftauchen. Eventuell wurden sie umbenannt ("ens3:
+renamed from eth0", usw.):
+
   .. code-block:: console
      
-     # ip addr list
-
+     # dmesg | grep eth
+     [    9.230673] e1000e 0000:06:00.0 eth0: (PCI Express:2.5GT/s:Width x4) 00:30:48:dd:ee:ff
+     [    9.273215] e1000e 0000:06:00.1 eth1: (PCI Express:2.5GT/s:Width x4) 00:30:48:aa:bb:cc
 
 Anpassen der Netzwerkkonfiguration
   .. code-block:: console
 
-     /etc/netplan/lmn-host.yml
+     /etc/netplan/50-linuxmuster.yaml
 
-     :todo: find netplan-config for kvm-host
+     network:
+       version: 2
+       renderer: networkd
+       ethernets:
+         eth0:
+	   dhcp4: no
+	   dhcp6: no
+	 eth1:
+	   dhcp4: no
+	   dhcp6: no
 
+     bridges:
+       br-red:
+         interfaces: [eth0]
+	 link-local: [ ]
+	 addresses: [ ]
+
+       br-server:
+         interfaces: [eth1]
+	 link-local: [ ]
+	 addresses: [ ]
+
+       #br-dmz:
+       #  interfaces: [eth2]
+       #  link-local: [ ]
+       #  addresses: [ ]
+
+  Mit dieser Netzwerkkonfiguration werden die Netzwerkbrücken
+  ``br-red`` und ``br-server`` erstellt, aber dem KVM-Host im
+  jeweiligen Netz keine IP-Adresse zugewiesen. Will man (zumindest
+  zeitweilig) von außen per ssh auf den KVM-Host zugreifen, muss man
+  auch im entsprechenden Netzwerk eine Netzwerkadresse festlegen,
+  z.B. im Netzwerk ``br-server`` ersetzt man obigen Abschnitt in:
+
+  .. code-block:: console
+
+     ...
+     bridges:
+     ...
+       br-server:
+         interfaces: [eth1]
+	 link-local: [ ]
+	 addresses: [10.0.0.9/16]
+	 gateway4: 10.0.0.254
+	 nameservers:
+	   addresses: [10.0.0.1]
+           search: ["meine-schule.de"]
+     ...
+
+	 
 .. hint::
 
    Wer seinen KVM-Host von früheren Ubuntu-Versionen updatet, bei dem
