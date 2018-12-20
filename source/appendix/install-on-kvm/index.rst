@@ -13,7 +13,7 @@ In diesem Dokument findest Du "Schritt für Schritt" Anleitungen zum
 Installieren der linuxmuster.net-Musterlösung in der Version 7.0 auf
 Basis von KVM unter Ubuntu Server 18.04 LTS. Lies zuerst die
 Abschnitte :ref:`release-information-label` und
-:ref:`prerequisites-label`, bevor du dieses Kapitel durcharbeitest.
+:ref:`prerequisites-label`, bevor Du dieses Kapitel durcharbeitest.
 
 Im folgenden Bild ist die einfachste Form der Implementierung der
 Musterlösung schematisch mit dem gewählten (Standard-)Netzwerk ``10.0.0.0/12``
@@ -36,7 +36,7 @@ Voraussetzungen
 ===============
 
 * Es wird vorausgesetzt, dass Du einen Administrationsrechner
-  (Admin-PC genannt) besitzt, den du je nach Bedarf in die
+  (Admin-PC genannt) besitzt, den Du je nach Bedarf in die
   entsprechenden Netzwerke einstecken kannst und dessen
   Netzwerkkonfiguration entsprechend vornehmen kannst. Für diese
   Anleitung reicht ein Rechner mit ssh-Software aus, empfohlen wird
@@ -100,14 +100,17 @@ Natürlich können auch alle anderen gängigen Tools zur Erstellung genutzt werd
 ..
 
 
-Installation
-------------
+Installation des KVM-Hosts
+--------------------------
 
 .. hint::
    Bei der Installation sind folgende Merkmale zu berücksichtigen:
 
+   * Erstellung eines Nutzers ``lmadmin``, der später wieder gelöscht
+     wird.
    * Auswahl des HWE Kernels
-   * Einrichtung eines LVMs auf der HDD mit 25GB für das Betriebssystem
+   * Einrichtung eines LVMs auf der HDD mit 25GB für das
+     Betriebssystem
    * Auswahl der Pakete *Virtual Machine host* und *OpenSSH server*
 
 Des Weiteren ist es (wie in den Voraussetzungen angesprochen)
@@ -137,19 +140,87 @@ netzwerktechnisch verbunden werden. Der KVM-Host selbst kann auch mit
 Brücken verbunden werden, wenn er im jeweiligen Netz sichtbar sein
 soll.
 
-Herausfinden der Namen der Netzwerkkarten
+Herausfinden der Namen der Netzwerkkarten. Wenn du nicht gerade VLANs
+auf dem KVM-Host einrichten willst, sollten hier alle physischen
+Netzwerkkarten auftauchen. Eventuell wurden sie umbenannt ("ens3:
+renamed from eth0", usw.):
+
   .. code-block:: console
      
-     # ip addr list
-
+     # dmesg | grep eth
+     [    9.230673] e1000e 0000:06:00.0 eth0: (PCI Express:2.5GT/s:Width x4) 00:30:48:dd:ee:ff
+     [    9.273215] e1000e 0000:06:00.1 eth1: (PCI Express:2.5GT/s:Width x4) 00:30:48:aa:bb:cc
 
 Anpassen der Netzwerkkonfiguration
   .. code-block:: console
 
-     /etc/netplan/lmn-host.yml
+     /etc/netplan/50-linuxmuster.yaml
 
-     :todo: find netplan-config for kvm-host
+     network:
+       version: 2
+       renderer: networkd
+       ethernets:
+         eth0:
+	   dhcp4: no
+	   dhcp6: no
+	 eth1:
+	   dhcp4: no
+	   dhcp6: no
 
+     bridges:
+       br-red:
+         interfaces: [eth0]
+	 link-local: [ ]
+	 addresses: [ ]
+
+       br-server:
+         interfaces: [eth1]
+	 link-local: [ ]
+	 addresses: [ ]
+
+       #br-dmz:
+       #  interfaces: [eth2]
+       #  link-local: [ ]
+       #  addresses: [ ]
+
+  Mit dieser Netzwerkkonfiguration werden die Netzwerkbrücken
+  ``br-red`` und ``br-server`` erstellt, aber dem KVM-Host im
+  jeweiligen Netz keine IP-Adresse zugewiesen. Will man (zumindest
+  zeitweilig) von außen per ssh auf den KVM-Host zugreifen, muss man
+  auch im entsprechenden Netzwerk eine Netzwerkadresse festlegen,
+  z.B. im Netzwerk ``br-server`` ersetzt man obigen Abschnitt in:
+
+  .. code-block:: console
+
+     ...
+     bridges:
+     ...
+       br-server:
+         interfaces: [eth1]
+	 link-local: [ ]
+	 addresses: [10.0.0.9/16]
+	 gateway4: 10.0.0.254
+	 nameservers:
+	   addresses: [10.0.0.1]
+           search: ["meine-schule.de"]
+     ...
+
+  Um im Netzwerk der äußeren Internetverbindung ``br-red``
+  beispielsweise per DHCP eine IPv4-Adresse zu erhalten, konfiguriert
+  man den entsprechenden Abschnitt so
+
+  .. code-block:: console
+
+     ...
+     bridges:
+     ...
+       br-red:
+         interfaces: [eth0]
+	 link-local: [ ]
+	 dhcp4: true
+     ...
+
+	 
 .. hint::
 
    Wer seinen KVM-Host von früheren Ubuntu-Versionen updatet, bei dem
@@ -188,14 +259,18 @@ Einrichten des SSH-Zugangs auf Zertifikatsbasis
 Die Remote-Administration des KVM-Hosts soll per SSH und
 Zertifikaten erfolgen. Als Benutzer wird root verwendet.
 
-Setzen des Rootpassworts und Aktivierung des SSH-Zugangs für root
+Setzen des Rootpassworts 
   .. code-block:: console
 
      # passwd
 
+Aktivierung des SSH-Zugangs für root
+  .. code-block:: console
+
      # nano /etc/ssh/sshd_config
-	
+     ...
      PermitRootLogin yes
+     ...
 
 Erstellen von SSH-Zertifikaten auf dem Admin-PC und Kopieren auf den KVM-Host
   .. code-block:: console
@@ -207,10 +282,11 @@ Deaktivierung des SSH-Zugangs für root per Passwort
   .. code-block:: console
 
      # nano /etc/ssh/sshd_config
-     
+     ...
      PermitRootLogin prohibit-password
+     ...
 
-Löschen des lmadmin Users auf dem KVM-Host
+Löschen des Users ``lmadmin`` auf dem KVM-Host
   .. code-block:: console
 
      # userdel -r lmadmin
@@ -260,7 +336,7 @@ Vorbereitungen für den Import der virtuellen Maschinen
 Download Virtuelle Maschinen
   Lade auf dem KVM-Host die aktuellen OVA-Abbilder von der `Webseite
   <https://github.com/linuxmuster/linuxmuster-base7/wiki/Die-Appliances>`_
-  herunter, die zu dem Adressbereich gehören, den du brauchst
+  herunter, die zu dem Adressbereich gehören, den Du brauchst
   (``10.0.0.1/16`` oder ``10.16.1.1/12``)
 
   .. code-block:: console
@@ -273,7 +349,7 @@ Download Virtuelle Maschinen
   und überprüfe die md5-Summe mit dem entsprechenden Werkzeug und
   vergleiche mit der Webseite auf Integrität. In der weiteren Anleitung
   wird statt der Dateien mit Datumsstempel ``20181109`` die Datei mit
-  ``*`` verwendet. Solange du nur je ein (das aktuelle) OVA-Abbild
+  ``*`` verwendet. Solange Du nur je ein (das aktuelle) OVA-Abbild
   vorliegen hast, funktionieren die Befehle auch mit dem ``*``.
 
 KVM-Anpassungen
@@ -516,7 +592,7 @@ Brücke `br-green` gestöpselt werden.
 Test der Verbindung zum Server
 ------------------------------
 
-Starte den Server. Teste, ob du von deinem Admin-PC auf den Server mit
+Starte den Server. Teste, ob Du von deinem Admin-PC auf den Server mit
 dem Standardpasswort `Muster!` kommst.
 
 .. code-block:: console
