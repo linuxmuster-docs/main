@@ -43,15 +43,15 @@ Voraussetzungen
   allerdings ein Ubuntu-Desktop mit der Verwaltungssoftware
   `virt-manager`.
 
-* Der Internetzugang des Admin-PCs und auch des späteren KVM-Hosts
-  sollte zunächst gewährleistet sein, d.h. dass beide zunächst z.B. an
-  einem Router angeschlossen werden, über den die beiden ins Internet
-  können. Sobald später die Firewall korrekt eingerichtet ist, bekommt
-  der Admin-PC und bei Bedarf auch der KVM-Host eine IP-Adresse im
-  Schulnetz.
+* Der Internetzugang des Admin-PCs und auch des KVM-Hosts sollte
+  zunächst gewährleistet sein, d.h. dass beide zunächst z.B. an einem
+  Router angeschlossen werden, über den die beiden per DHCP ins
+  Internet können. Sobald später die Firewall korrekt eingerichtet
+  ist, bekommt der Admin-PC und bei Bedarf auch der KVM-Host eine
+  IP-Adresse im Schulnetz.
 
-Installation des KVM-Hosts
-==========================
+Bereitstellen des KVM-Hosts
+===========================
 
 .. hint:: 
 
@@ -60,7 +60,6 @@ Installation des KVM-Hosts
    auf die Virtualisierungsfunktionen der CPU angewiesen ist, müssen
    diese natürlich vorhanden sein und eventuell im BIOS aktiviert
    werden.
-
 
 Die folgende Anleitung beschreibt die *einfachste* Implementierung
 ohne Dinge wie VLANs, Teaming oder Raids. Diese Themen werden in
@@ -74,23 +73,45 @@ Erstellen eines USB-Sticks für den KVM-Host
 -------------------------------------------
 
 Download für den KVM-Host
-  Es wird für die Installation auf dem KVM-Host ein Ubuntu Server 64bit
-  in der Version 18.04 LTS verwendet. Ein Installationsimage für
-  DVD/USB-Stick kann `hier <https://www.ubuntu.com/download/server>`_
-  heruntergeladen werden.
+  Es wird für die Installation auf dem
+  KVM-Host ein Ubuntu Server 64bit in der Version 18.04 LTS
+  verwendet. Es wird das alternative Installationsimage für
+  DVD/USB-Stick verwendet, welches `hier unter "Download the alternate
+  installer"
+  <https://www.ubuntu.com/download/alternative-downloads#alternate-ubuntu-server-installer>`_
+  heruntergeladen werden kann. Im Menü findet sich auch der Term
+  "traditional installer".
 
 Hilfreiche Befehle sind (Vorsicht - mit ``dd`` werden vorhandene Daten
-unwiderruflich zerstört):
+unwiderruflich zerstört) hier aufgeführt. Der Name des
+USB-Stick-Gerätes muss vorher herausgefunden werden, z.B. mit ``fdisk
+-l``, er wird aus Sicherheitsgründen hier mit ``/dev/sdX`` bezeichnet.
 
-.. code-block:: console
+Löschen des MBRs des USB-Sticks
+  .. code-block:: console
+     
+     # sudo dd if=/dev/zero of=/dev/sdX bs=1M count=10
 
-   Löschen des MBRs des USB-Sticks
-   # sudo dd if=/dev/zero of=/dev/sdX bs=1M count=10
-   
-   Kopieren des ISOs auf den Stick
-   # sudo dd if=<Name des ISOs> | sudo pv -s <Groesse des ISOs> | sudo dd of=/dev/sdX bs=1M && sync
+Größe des ISOs herausfinden
+  .. code-block:: console
+    
+     # du -b ubuntu-18.04.1-server-amd64.iso
+     749731840	ubuntu-18.04.1-server-amd64.iso
 
-Natürlich können auch alle anderen gängigen Tools zur Erstellung genutzt werden. 
+Kopieren des ISOs auf den Stick
+  .. code-block:: console
+  
+     # sudo dd if=ubuntu-18.04.1-server-amd64.iso | sudo pv -s 749731840 | sudo dd of=/dev/sdX bs=1M && sync
+     [sudo] Passwort für linuxadmin: 
+     715MiB 0:00:09 [73,1MiB/s] [====================================================================>] 100%            
+     0+168504 Datensätze ein
+     0+168504 Datensätze aus
+     749731840 bytes (750 MB, 715 MiB) copied, 9,78505 s, 76,6 MB/s
+
+Natürlich können auch alle anderen gängigen Tools zur Erstellung
+genutzt werden. Im folgenden Video ist die Prozedur anhand einer
+älteren ISO-Datei dargestellt, verläuft aber äquivalent mit jeder
+aktuellen Ubuntu-Version:
 
 .. raw:: html
 
@@ -103,206 +124,224 @@ Natürlich können auch alle anderen gängigen Tools zur Erstellung genutzt werd
 Installation des KVM-Hosts
 --------------------------
 
-.. hint::
-   Bei der Installation sind folgende Merkmale zu berücksichtigen:
+.. tip::
 
-   * Erstellung eines Nutzers ``lmadmin``, der später wieder gelöscht
-     wird.
-   * Auswahl des HWE Kernels
-   * Einrichtung eines LVMs auf der HDD mit 25GB für das
-     Betriebssystem
-   * Auswahl der Pakete *Virtual Machine host* und *OpenSSH server*
+   **Tl;dr** 
 
-Des Weiteren ist es (wie in den Voraussetzungen angesprochen)
-sinnvoll, die erste Netzwerkkarte des Servers an den Internet-Router
-anzuschließen, um eventuell notwendige Pakete (Sprachpakete) während
-der Installation zu installieren.
+   * Achte auf die Auswahl der korrekten Netzwerkschnittstelle für
+     einen Internetzugang
+   * Erstelle einen Nutzer ``linuxadmin`` mit einem sicheren
+     Passwort
+   * Richte ein LVM auf Deiner Festplatte/RAID mit ``25GB`` für das
+     Betriebssystem des KVM-Hosts ein
+   * Wähle das Pakets *OpenSSH server* 
+   * Nach Reboot, Update des Systems und Installation von ``qemu-kvm``
+     und ``libvirt-bin``
 
-:todo: neues Video auf Basis von Ubuntu 18.04 LTS
+Netzwerkeinrichtung
+  Nach Sprach- und Keyboardauswahl wird das Netzwerk eingerichtet. Es
+  muss die primäre Schnittstelle ausgewählt werden, die einen Zugang zum
+  Internet ermöglicht.
+  
+  .. figure:: media/kvmhost-install-network.png
+  
+  Sollte die Netzwerkkonfiguration nicht erfolgreich sein, wähle eine
+  andere Schnittstelle und stelle sicher, dass die richtige
+  Schnittstelle auch per DHCP eine IP-Adresse bekommen kann.
 
-.. raw:: html
+Rechnername, Benutzername, Passwort, Zeitzone
+  Es wird empfohlen wie im Beispiel ``host`` als Rechnernamen zu
+  verwenden. Der Benutzername wird im Beispiel ``linuxadmin`` genannt
+  und dazu ein sicheres Passwort vergeben. Die Zeitzone sollte bereits
+  richtig erkannt werden.
 
-   <p> <iframe width="696" height="392"
-   src="https://www.youtube.com/embed/ZL0e07nJI_w?rel=0"
-   frameborder="0" allow="autoplay; encrypted-media"
-   allowfullscreen></iframe> </p>
-..
+Festplatten partitionieren
+  Im Beispiel wird `Geführt - gesamte Platte verwenden und LVM
+  einrichten` gewählt. Wer eine Festplatte bzw. ein RAID verwendet,
+  die eine Partitionierung enthält, dem wird dementsprechend die
+  Option zur Wiederverwendung angeboten. Hat man bereits eine
+  exisitierenden Partition und ein existierendes LVM und will sie
+  `nicht` wiederverwenden, so muss dementsprechend zustimmen, dass die
+  existierenden Daten entfernt werden.
 
- 
+  Im Anschluss muss man auf alle Fälle dem Schreiben der Änderungen
+  auf die Speichergeräte zustimmen.
+
+  .. figure:: media/kvmhost-install-write-partitiontable.png
+
+  Die folgende Abfrage bezieht sich tatsächlich auf die Größe der
+  Partition die für den KVM-Host verwendet werden soll. Dies wird
+  dementsprechend niedrig, z.B. bei ``25GB`` angesetzt.
+
+  .. figure:: media/kvmhost-install-root-vg-size.png
+
+  Wenn man im nächsten Dialog das Schreiben auf die Festplatte
+  zunächst `ablehnt`,
+
+  .. figure:: media/kvmhost-install-decline-diskchanges.png
+
+  bekommt man eine Übersicht über die aktuell vorgesehene
+  Konfiguration und hat erweitertete Änderungsmöglichkeiten (RAID,
+  Verschlüsselung, etc.). 
+
+  .. figure:: media/kvmhost-install-overviewchanges.png
+
+  Über `Partitionierung beenden und Änderungen übernehmen` kann man
+  nun den zunächst abgelehnten Dialog bestätigen.
+  
+Paketmanager und Softwareauswahl
+  Der HTTP-Proxy wird leer gelassen, sofern Du freien Internetzugang
+  hast. Im nächsten Dialog sollte ``OpenSSH server`` gewählt werden.
+
+  .. figure:: media/kvmhost-install-tasksel.png
+
+  Am Ende der Installation musst Du noch die Installation von GRUB in
+  den Bootbereich bestätigen. Der KVM-Host wird rebootet.
+  
+Update und Softwareinstallation des KVM-Hosts
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Nach einem Reboot loggst Du Dich als ``linuxadmin`` ein und führst
+zunächst ein Update aus. Das ist (Stand: Dez. 2018) notwendig, damit
+die spätere Konfiguration funktioniert. Der erste Befehl zeigt Dir, ob
+Du eine IP-Adresse auf einem Netzwerk hast.
+
+.. code-block:: console
+
+   $ ip -br addr list
+   lo               UNKNOWN        127.0.0.1/8 ::1/128 
+   enp0s8           DOWN        
+   enp0s17          UP             192.168.1.2/16 fe80::ae1c:ba12:6490:f75d/64
+   $ sudo apt update
+   $ sudo apt full-upgrade -y
+
+Unter Umständen werden Dialog erneut abgefragt, die schon bei der
+Installation beantwortet wurden (z.B. Tastaturkonfiguration).
+
+Installiere danach die qemu/KVM-Software
+
+.. code-block:: console
+
+   $ sudo apt install libvirt-bin qemu-kvm
+
+Nach Installation der KVM-Software werden weitere virtuelle Netzwerk-Schnittstellen sichtbar
+
+.. code-block:: console
+
+   $ ip -br addr list
+   lo               UNKNOWN        127.0.0.1/8 ::1/128 
+   enp0s8           DOWN        
+   enp0s17          UP             192.168.1.2/16 fe80::ae1c:ba12:6490:f75d/64
+   virbr0           DOWN           192.168.122.1/24 
+   virbr0-nic       DOWN           
+
+  
 Netzwerkkonfiguration des KVM-Hosts
 -----------------------------------
 
-In diesem Schritt erfolgt die Anbindung des KVM-Hosts an das Schulnetz
-und an das Internet sowohl für den KVM-Host selbst, als auch für die
-virtuellen Maschinen. Dafür werden virtuelle Netzwerkswitche (so
-genannte `bridges`) eingerichtet mit denen die virtuellen Maschinen
-netzwerktechnisch verbunden werden. Der KVM-Host selbst kann auch mit
-Brücken verbunden werden, wenn er im jeweiligen Netz sichtbar sein
-soll.
+In diesem Schritt wird die direkte Verbindung des KVM-Hosts mit dem
+Internet ersetzt durch eine virtuelle Verkabelung über so genannte
+`bridges`.  Zunächst werden die Brücken ``br-red`` (Internetseite) und
+``br-server`` (Schulnetzseite) definiert und der KVM-Host bekommt über
+die Brücke ``br-red`` eine IP-Adresse.
 
-Herausfinden der Namen der Netzwerkkarten. Wenn du nicht gerade VLANs
-auf dem KVM-Host einrichten willst, sollten hier alle physischen
-Netzwerkkarten auftauchen. Eventuell wurden sie umbenannt ("ens3:
-renamed from eth0", usw.):
+.. hint::
+
+   Die Netzwerkkonfiguration wird seit 18.04 standardmäßig über
+   netplan realisiert. Wer seinen KVM-Host von früheren
+   Ubuntu-Versionen updatet, bei dem wird nicht automatisch `netplan`
+   installiert, sondern `ifupdown` wird mit der Konfigurationsdatei
+   ``/etc/network/interfaces`` beibehalten.
+
+Namen der Netzwerkkarten
+  Mit folgendem Befehl werden alle physischen Netzwerkkarten
+  (teilweise umbenannt) gefunden:
 
   .. code-block:: console
      
      # dmesg | grep eth
-     [    9.230673] e1000e 0000:06:00.0 eth0: (PCI Express:2.5GT/s:Width x4) 00:30:48:dd:ee:ff
-     [    9.273215] e1000e 0000:06:00.1 eth1: (PCI Express:2.5GT/s:Width x4) 00:30:48:aa:bb:cc
+     [    9.230673] e1000e 0000:08:00.0 eth0: (PCI Express:2.5GT/s:Width x4) 00:30:48:dd:ee:ff
+     [    9.273215] e1000e 0000:11:00.1 eth1: (PCI Express:2.5GT/s:Width x4) 00:30:48:aa:bb:cc
+     [    9.432342] e1000e 0000:08:00.0 enp0s8: renamed from eth0
+     [    9.654232] e1000e 0000:11:00.1 enp0s17: renamed from eth1
 
 Anpassen der Netzwerkkonfiguration
   .. code-block:: console
 
-     /etc/netplan/50-linuxmuster.yaml
+     $ sudo nano /etc/netplan/01-netcfg.yaml
+
+  Die Netzwerkkonfiguration enthält standardmäßig die Schnittstelle,
+  die bei der Installation mit dem Internet verbunden war. Diese
+  Schnittstelle wird dann auch mit der Brücke ``br-red`` verbunden. 
+     
+  .. code-block:: yaml
 
      network:
        version: 2
        renderer: networkd
        ethernets:
-         eth0:
+         enp0s8:
 	   dhcp4: no
-	   dhcp6: no
-	 eth1:
+	 enp0s17:
 	   dhcp4: no
-	   dhcp6: no
-
      bridges:
        br-red:
-         interfaces: [eth0]
-	 link-local: [ ]
-	 addresses: [ ]
-
+         interfaces: [enp0s17]
+	 dhcp4: yes
        br-server:
-         interfaces: [eth1]
-	 link-local: [ ]
+         interfaces: [enp0s8]
 	 addresses: [ ]
 
-       #br-dmz:
-       #  interfaces: [eth2]
-       #  link-local: [ ]
-       #  addresses: [ ]
-
-  Mit dieser Netzwerkkonfiguration werden die Netzwerkbrücken
-  ``br-red`` und ``br-server`` erstellt, aber dem KVM-Host im
-  jeweiligen Netz keine IP-Adresse zugewiesen. Will man (zumindest
-  zeitweilig) von außen per ssh auf den KVM-Host zugreifen, muss man
-  auch im entsprechenden Netzwerk eine Netzwerkadresse festlegen,
-  z.B. im Netzwerk ``br-server`` ersetzt man obigen Abschnitt in:
+  Diese Netzwerkkonfiguration muss nun angewandt werden.
 
   .. code-block:: console
 
-     ...
-     bridges:
-     ...
-       br-server:
-         interfaces: [eth1]
-	 link-local: [ ]
-	 addresses: [10.0.0.9/16]
-	 gateway4: 10.0.0.254
-	 nameservers:
-	   addresses: [10.0.0.1]
-           search: ["meine-schule.de"]
-     ...
+     $ sudo netplan apply
 
-  Um im Netzwerk der äußeren Internetverbindung ``br-red``
-  beispielsweise per DHCP eine IPv4-Adresse zu erhalten, konfiguriert
-  man den entsprechenden Abschnitt so
+  .. hint::
 
+     Potenzielle Fehlerquellen sind nicht konsequent eingerückte
+     Zeilen oder TABs.
+
+     .. code-block:: console
+
+	Invalid YAML at /etc/netplan/01-netcfg.yaml line 6 column 0: found character that cannot start any token
+  
+  Jetzt sollte der KVM-Host (diesselbe) IP-Adresse über die Brücke
+  bekommen haben. 
+     
   .. code-block:: console
 
-     ...
-     bridges:
-     ...
-       br-red:
-         interfaces: [eth0]
-	 link-local: [ ]
-	 dhcp4: true
-     ...
+     $ ip -br addr list
+     lo               UNKNOWN        127.0.0.1/8 ::1/128 
+     enp0s8           DOWN        
+     enp0s17          UP
+     virbr0           DOWN           192.168.122.1/24 
+     virbr0-nic       DOWN           
+     br-red           UP             192.168.1.2/16 fe80::ae1c:ba12:6490:f75d/64
+     br-server        DOWN
 
-	 
-.. hint::
 
-   Wer seinen KVM-Host von früheren Ubuntu-Versionen updatet, bei dem
-   wird nicht automatisch `netplan` installiert, sondern `ifupdown`
-   mit der Konfigurationsdatei ``/etc/network/interfaces`` wird
-   beibehalten.
-
-Installation von Updates
-------------------------
-
-Nach der Erstinstallation ist es sinnvoll, das System erst einmal auf
-den aktuellen Stand zu bringen. Auf der Konsole wird dies mit
-folgenden Befehlen durchgeführt:
-
-.. code-block:: console
-
-   # sudo apt-get update
-   # sudo apt-get upgrade
-   # sudo apt-get dist-upgrade
-   # sudo apt-get autoremove
-   # sudo apt-get autoclean
-
-.. raw:: html
-
-   <p> <iframe width="696" height="392"
-   src="https://www.youtube.com/embed/DgMkFhBbrlY?rel=0"
-   frameborder="0" allow="autoplay; encrypted-media"
-   allowfullscreen></iframe> </p>
-..
+SSH-Zugang und Zeit-Synchronisation
+-----------------------------------
 
 Einrichten des SSH-Zugangs auf Zertifikatsbasis
------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:todo: check/redo for 18.04
-
-Die Remote-Administration des KVM-Hosts soll per SSH und
-Zertifikaten erfolgen. Als Benutzer wird root verwendet.
-
-Setzen des Rootpassworts 
-  .. code-block:: console
-
-     # passwd
-
-Aktivierung des SSH-Zugangs für root
-  .. code-block:: console
-
-     # nano /etc/ssh/sshd_config
-     ...
-     PermitRootLogin yes
-     ...
+Die Remote-Administration des KVM-Hosts soll per SSH und Zertifikaten
+erfolgen. 
 
 Erstellen von SSH-Zertifikaten auf dem Admin-PC und Kopieren auf den KVM-Host
   .. code-block:: console
 
      # ssh-keygen
-     # ssh-copy-id root@192.168.1.10
+     # ssh-copy-id linuxadmin@192.168.1.2
 
-Deaktivierung des SSH-Zugangs für root per Passwort
-  .. code-block:: console
-
-     # nano /etc/ssh/sshd_config
-     ...
-     PermitRootLogin prohibit-password
-     ...
-
-Löschen des Users ``lmadmin`` auf dem KVM-Host
-  .. code-block:: console
-
-     # userdel -r lmadmin
-
-.. raw:: html
-
-   <p> <iframe width="696" height="392"
-   src="https://www.youtube.com/embed/AUGVGgqRkU0?rel=0"
-   frameborder="0" allow="autoplay; encrypted-media"
-   allowfullscreen></iframe> </p>
-..
+Ab jetzt kann jegliche Konfiguration über ein Einloggen auf dem
+KVM-Host vom Admin-PC aus erfolgen.
 
 Einrichten der Zeit-Synchronisation
------------------------------------
-
-:todo: check/redo for 18.04
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Immer eine gute Sache ist es, z.B. in Logfiles die korrekte Zeit zu
 finden. Aus diesem Grund erfolgt die Konfiguration eines NTP-Clients.
@@ -310,16 +349,16 @@ finden. Aus diesem Grund erfolgt die Konfiguration eines NTP-Clients.
 .. code-block:: console
 
    Installieren von ntpdate
-   # apt-get install ntpdate
+   $ sudo apt install ntpdate
 
    Einmaliges Stellen der Uhrzeit
-   # ntpdate 0.de.pool.ntp.org
+   $ sudo ntpdate 0.de.pool.ntp.org
 
    Installieren des NTP-Daemons
-   # apt-get install ntp
+   $ sudo apt install ntp
 
    Anzeigen der Zeitsynchronisation
-   # ntpq -p
+   $ sudo ntpq -p
 
 .. raw:: html
 
@@ -346,7 +385,7 @@ Download Virtuelle Maschinen
      # wget http://fleischsalat.linuxmuster.org/ova/lmn7-opsi-20181109.ova
      # wget http://fleischsalat.linuxmuster.org/ova/lmn7-docker-20181109.ova
 
-  und überprüfe die md5-Summe mit dem entsprechenden Werkzeug und
+  Überprüfe die `md5`-Summe mit dem entsprechenden Werkzeug und
   vergleiche mit der Webseite auf Integrität. In der weiteren Anleitung
   wird statt der Dateien mit Datumsstempel ``20181109`` die Datei mit
   ``*`` verwendet. Solange Du nur je ein (das aktuelle) OVA-Abbild
@@ -357,7 +396,6 @@ KVM-Anpassungen
   importierten Appliances anzupassen und z.B. die Festplattentypen auf
   "virtio" zu stellen. Ebenso habe ich den Typ der "Grafikkarte" von
   `spice` auf `vnc` gesetzt.
-
 
 Import der Firewall
 ===================
@@ -379,13 +417,13 @@ Abbild nochmals kopieren und die Konfiguration editieren.
 
    # qemu-img info /var/lib/libvirt/images/lmn7-opnsense-*disk1.raw | grep virtual\ size
    virtual size: 10G (10737418240 bytes)
-   # lvcreate -L 10737418240b -n opnsense vghost
-   # qemu-img convert -O raw /var/lib/libvirt/images/lmn7-opnsense-*disk1.raw /dev/vghost/opnsense
+   # lvcreate -L 10737418240b -n opnsense host-vg
+   # qemu-img convert -O raw /var/lib/libvirt/images/lmn7-opnsense-*disk1.raw /dev/host-vg/opnsense
    # virsh edit lmn7-opnsense
    ...
    <disk type='block' device='disk'>
       <driver name='qemu' type='raw'/>
-      <source dev='/dev/vghost/opnsense'/>
+      <source dev='/dev/host-vg/opnsense'/>
    ...
 
 Falls das Abbild erfolgreich ins LVM des Hosts übertragen wurde,
@@ -406,7 +444,7 @@ wie sie in der Appliance definiert wurden:
 
 Öffne die Konfiguration und editiere die erste Schnittstelle, so dass
 sie sich im Schulnetzwerk befindet, hier im Beispiel wird diese an die
-virtuelle Brücke `br-green` mit dem Stichwort `bridge` und dem Typ
+virtuelle Brücke ``br-server`` mit dem Stichwort `bridge` und dem Typ
 `bridge` angeschlossen. Die MAC-Adresse sollte bei dieser Gelegenheit
 auch (beliebig) geändert werden.
 
@@ -416,11 +454,11 @@ auch (beliebig) geändert werden.
    ...
    <interface type='bridge'>
       <mac address='52:54:00:20:ea:70'/>
-      <source bridge='br-green'/>
+      <source bridge='br-server'/>
    ...
 
 Die zweite Schnittstelle sollte genauso dem Typ `bridge` zugeordnet
-werden, allerdings an die Brücke `br-red` angeschlossen werden.
+werden, allerdings an die Brücke ``br-red`` angeschlossen werden.
 
 .. code-block:: console
 
@@ -433,7 +471,14 @@ werden, allerdings an die Brücke `br-red` angeschlossen werden.
 
 Test der Verbindung zur Firewall
 --------------------------------
-   
+
+.. todo:: 
+
+   Unlogisch. Der Admin-PC sollte erst mal ins ``br-server``-Netzwerk
+   gestöpselt werden, damit man damit auf die Adresse 10.0.0.254 der
+   Firewall kommt. Allenfalls kommt man auf die bislang unbekannte
+   Adresse die die Firewall auf dem WAN-Interface bekommt.
+
 Starte die Firewall. Der Admin-PC sollte sich nach ca. 3 Minuten mit
 der Firewall verbinden lassen.
 
@@ -550,24 +595,24 @@ Festplattentyp auf `virtio` und die Festplattenbezeichnung daher auf
 
    # qemu-img info /var/lib/libvirt/images/lmn7-server-*disk1.raw | grep virtual\ size
    virtual size: 25G (26843545600 bytes)
-   # lvcreate -L 26843545600b -n serverroot vghost
-   # qemu-img convert -O raw /var/lib/libvirt/images/lmn7-server-*disk1.raw /dev/vghost/serverroot
+   # lvcreate -L 26843545600b -n serverroot host-vg
+   # qemu-img convert -O raw /var/lib/libvirt/images/lmn7-server-*disk1.raw /dev/host-vg/serverroot
    # virsh edit lmn7-server
    ...
    <disk type='block' device='disk'>
       <driver name='qemu' type='raw'/>
-      <source dev='/dev/vghost/serverroot'/>
+      <source dev='/dev/host-vg/serverroot'/>
       <target dev='vda' bus='virtio'/>
    ...
    # qemu-img info /var/lib/libvirt/images/lmn7-server-*disk2.raw | grep virtual\ size
    virtual size: 370G (397284474880 bytes)
-   # lvcreate -L 397284474880b -n serverdata vghost
-   # qemu-img convert -O raw /var/lib/libvirt/images/lmn7-server-*disk2.raw /dev/vghost/serverdata
+   # lvcreate -L 397284474880b -n serverdata host-vg
+   # qemu-img convert -O raw /var/lib/libvirt/images/lmn7-server-*disk2.raw /dev/host-vg/serverdata
    # virsh edit lmn7-server
    ...
    <disk type='block' device='disk'>
       <driver name='qemu' type='raw'/>
-      <source dev='/dev/vghost/serverdata'/>
+      <source dev='/dev/host-vg/serverdata'/>
       <target dev='vdb' bus='virtio'/>      
    ...
 
@@ -578,7 +623,7 @@ Netzwerkanpassung des Servers
 -----------------------------
    
 Es muss nur eine Netzwerkschnittstelle angepasst werden und in die
-Brücke `br-green` gestöpselt werden.
+Brücke ``br-server`` gestöpselt werden.
 
 .. code-block:: console
 
@@ -586,7 +631,7 @@ Brücke `br-green` gestöpselt werden.
    ...
    <interface type='bridge'>
       <mac address='52:54:00:9f:b8:af'/>
-      <source bridge='br-green'/>
+      <source bridge='br-server'/>
    ...
 
 Test der Verbindung zum Server
@@ -607,6 +652,27 @@ dem Standardpasswort `Muster!` kommst.
 Sollte diese Verbindung nicht gelingen, dann empfiehlt sich ein
 Admin-PC, mit dem man über das Programm `virt-manager` den VM-Host
 erreicht und über eine GUI-Verbindung den Server begutachtet.
+
+.. warning::
+
+   Stand Dez. 2018 bekommt der importierte Server keine IP-Adresse
+   weil beim Import mit Sicherheit die Netzwerkschnittstelle einen
+   anderen Namen hat als dort, wo die Appliance erstellt
+   wurde. D.h. man muss über den `virt-manager` den KVM-Host erreichen
+   und den `server` über die GUI-Verbindung richtig konfigurieren:
+
+   .. code-block:: console
+
+      Herausfinden des Netzwerknamens
+      server~$ ip -br addr list
+      Ersetzen von `ens33` in der netplan-Konfiguration durch den richtigen Namen
+      server~$ sudo nano /etc/netplan/01-netcfg.yaml
+      Neustart des Netzwerkes
+      server~$ sudo netplan apply
+
+
+
+
 
 Abschließende Konfigurationen
 =============================
