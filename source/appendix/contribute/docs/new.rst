@@ -235,6 +235,13 @@ Will man einen anderen Zweig bearbeiten, beispielsweise den Zweig
 3. Wird ein Pull-Request in Github erstellt, dann ist zu beachten,
    dass auch die gleichen Zweige verglichen werden.
 
+   .. figure:: media/pr-wrong-branch.png
+      :align: center
+      :alt: Pull-Request mit falsch gewähltem Zweig
+
+      Ein Pull-Request mit falsch gewähltem Zweig, die sich nicht
+      automatisch zusammenführen lassen.
+
 4. Aktualisiert man den eigenen Fork über das
    ``upstream``-Repositorium, dann muss man den Befehl zum
    Zusammenführen anpassen. Ein Ablauf kann da so aussehen:
