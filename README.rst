@@ -8,13 +8,6 @@ linuxmuster.net documentation
     :target: http://docs.linuxmuster.net/de/latest/?badge=latest
     :alt: Documentation Status
 
-::
-
-  All of me, why take not all of me.
-                   -- Seymour Simons
-
-Die gesamte Dokumentation zu linuxmuster.net.
-
 The full documentation of linuxmuster.net.
 
 Installation
@@ -102,11 +95,11 @@ Instead of deleting and creating a new fork you can bring your own fork up-to-da
 
      ~/docs$ git fetch upstream
      ~/docs$ git merge upstream/master
-  
+
 * (If the merge does not end in an fast-forward result, you better delete and refork.) Push your changes into your fork.
 
   .. code:: bash
-  
+
      ~/docs$ git push
 
 * Now you can get your stashed away changes:
