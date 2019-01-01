@@ -218,11 +218,12 @@ Du eine IP-Adresse auf einem Netzwerk hast.
 Unter Umständen werden Dialog erneut abgefragt, die schon bei der
 Installation beantwortet wurden (z.B. Tastaturkonfiguration).
 
-Installiere danach die qemu/KVM-Software
+Installiere danach die qemu/KVM-Software durch Bestätigen der Nachfragen
 
 .. code-block:: console
 
-   $ sudo apt install libvirt-bin qemu-kvm
+   $ sudo apt install libvirt-bin qemu-kvm kpartx
+   $ sudo apt --no-install-recommends install virtinst
 
 Nach Installation der KVM-Software werden weitere virtuelle Netzwerk-Schnittstellen sichtbar
 
@@ -676,6 +677,19 @@ erreicht und über eine GUI-Verbindung den Server begutachtet.
 
 Abschließende Konfigurationen
 =============================
+
+Aufräumen
+---------
+
+Das Paket `virtinst` sowie dessen Abhängigkeiten können deinstalliert
+werden, so bleibt das Host-System mit weniger Paketen und weniger
+Abhängigkeiten sauberer.
+
+.. code-block:: console
+
+   # apt remove virtinst
+   # apt autoremove
+
 
 Aktivieren des Autostarts der VMs
 ---------------------------------
