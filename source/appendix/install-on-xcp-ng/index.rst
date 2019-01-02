@@ -8,7 +8,7 @@
 
 XCP-ng ist eine reine OpenSource-Virtualisierungslösung, die auf Basis von XEN arbeitet und alle 
 sog. Enterprise-Features wie Replikation, automatisierte Backups, Verschieben von VMs im laufenden Betrieb etc. 
-bietet. Daher eignet sie sich besonders für den virtuellen Betrieb von linuxmuster.net, da diese recht einfach skalierbar ist und dann sog. Ressourcen-Pools erstellt und verwaltet werden können.
+bietet. Daher eignet sie sich besonders für den virtuellen Betrieb von linuxmuster.net, da diese recht einfach skalierbar ist und dann sog. Ressource-Pools erstellt und verwaltet werden können.
 
 Der Betrieb wird auf jeglicher Markenhardware unterstützt und auf einer Vielzahl an NoName-Hardware.
 linuxmuster.net hat die vorgefertigten virtuellen Maschinen in einem sog. SupplementalPack für XCP-ng zusammengefasst.
@@ -16,35 +16,34 @@ Dieses kann sehr einfach am Ende der Installation von XCP-ng zusätzlich währen
 
 Für die Installation benötigen Sie lediglich
 
-* einen Installationsdatenträger mit XCP-ng 7.4.1 (zu finden auf `XCP Webseite <https://xcp-ng.org/7.4/XCP-ng_7.4.1.iso>`_)
-* sowie die Erweiterungs-DVD linuxmuster.net-SupplementalPack (zu finden auf `linuxmuster.net <http://www.linuxmuster.net>`_)
+* einen Installationsdatenträger mit XCP-ng 7.6.1 (zu finden auf `XCP Webseite <https://xcp-ng.org/#easy-to-install>`_)
+* sowie die Erweiterungs-DVD linuxmuster.net-SupplementalPack (zu finden auf `linuxmuster.net <http://www.linuxmuster.net>`_) 
+
+:fixme: Das SupplementalPack ist derzeit noch nicht verfügbar
 
 Nach der Installation gemäß dieser Anleitung erhalten Sie eine einsatzbereite Umgebung bestehend aus
-
-* Server,
-* Firewall (OPNsense),
+* Server
+* Firewall (OPNsense)
 * Web-Administrationsoberfläche (XOA) 
-* Docker-Host,
-* OPSI.
+* Docker-Host
+* OPSI
 
 Installation XCP-ng
 ===================
 
 Herunterladen von XCP-ng
 ------------------------
-
-Der Hypervisor kann von der Projekthomepage https://xcp-ng.org/download/
-heruntergeladen werden. Diese Anleitung bezieht sich auf die Version 7.4.1. 
+Diese Anleitung bezieht sich auf die Version 7.6.1. Für nachfolgende Versionen ist dieses Vorgehen entsprechend anzuwenden.
 
 Die ISO-Datei muss heruntergeladen und ein bootbarer USB-Stick erstellt werden.
 
-1. Herunterladen: `XCP Webseite <https://xcp-ng.org/7.4/XCP-ng_7.4.1.iso>`_
-2. USB-Stick erstellen: In das Download Verzeichnis Wechseln, Buchstaben für USB-Stick unter Linux ermitteln X durch den korrekten Buchstaben ersetzen und dann nachstehenden Befehl ein.
+1. Herunterladen: `XCP Webseite <https://xcp-ng.org/#easy-to-install>`_
+2. USB-Stick erstellen: In das Download Verzeichnis Wechseln, Buchstaben für USB-Stick unter Linux ermitteln, X durch den korrekten Buchstaben ersetzen und dann nachstehenden Befehl ein.
 
 
 .. code-block:: console
  
-   dd if=XCP-ng_7.4.1.iso of=/dev/sdX bs=8M status=progress oflag=direct
+   dd if=XCP-ng_7.6.iso of=/dev/sdX bs=8M status=progress oflag=direct
 
 
 Installieren von XCP-ng
@@ -141,7 +140,7 @@ Danach gehen Sie weiter zur Initialisierung des Servers.
 XCP-ng initialisieren
 ---------------------
 
-:fixme: Andere Abbildungen angepasst auf das zu erstellen SupplementalPack
+:fixme: Andere Abbildungen angepasst auf das zu erstellende SupplementalPack
 
 Wählen Sie auf der Konsole des XCP-ng Servers den Punkt ``Local Command Shell`` und drücken Sie ``Enter``.
 
@@ -260,9 +259,9 @@ XCP-ng Center
 
 Laden Sie sich den Windows-Client von der Seite des XCP-ng Projekts herunter:
 
-XCP-ng Center v7.4.2.7-RC3_
+XCP-ng Center v7.6.2_
 
-.. _v7.4.2.7-RC3: https://github.com/xcp-ng/xenadmin/releases/download/v7.4.2-RC3/XCP-ng_Center_7.4.2.7-RC3_Binaries.zip
+.. _v7.6.2: https://github.com/xcp-ng/xenadmin/releases/download/v7.4.2-RC3/XCP-ng_Center_7.4.2.7-RC3_Binaries.zip
 
 Entpacken Sie das ZIP-Archiv auf dem Windows-Rechner inkl. der enthaltenen Verzeichnisse. Legen Sie sich einen Link auf den Desktop, der auf die Datei ``XCP-ng Center.exe`` verweist, die sich im soeben entpackten Verzeichnis befindet.
 
