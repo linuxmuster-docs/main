@@ -14,36 +14,37 @@ Der Betrieb wird auf jeglicher Markenhardware unterstützt und auf einer Vielzah
 linuxmuster.net hat die vorgefertigten virtuellen Maschinen in einem sog. SupplementalPack für XCP-ng zusammengefasst.
 Dieses kann sehr einfach am Ende der Installation von XCP-ng zusätzlich während des Installationsprozesses installiert werden.
 
-Für die Installation benötigen Sie lediglich
+Für die Installation wird nur benötigt:
 
-* einen Installationsdatenträger mit XCP-ng 7.6.1 (zu finden auf `XCP Webseite <https://xcp-ng.org/#easy-to-install>`_)
-* sowie die Erweiterungs-DVD linuxmuster.net-SupplementalPack (zu finden auf `linuxmuster.net <http://www.linuxmuster.net>`_) 
+* ein Installationsdatenträger mit XCP-ng 7.6 (zu finden auf `XCP Webseite <https://xcp-ng.org/#easy-to-install>`_)
+* sowie das linuxmuster.net-SupplementalPack (zu finden auf `linuxmuster.net <http://www.linuxmuster.net/download/lmn7-supplementalpack-xcp-v01.iso>`_) 
 
 :fixme: Das SupplementalPack ist derzeit noch nicht verfügbar
 
 Nach der Installation gemäß dieser Anleitung erhalten Sie eine einsatzbereite Umgebung bestehend aus:
+
 * Server
 * Firewall (OPNsense)
 * Web-Administrationsoberfläche (XOA) 
 * Docker-Host
 * OPSI
 
+
 Installation XCP-ng
 ===================
 
 Herunterladen von XCP-ng
 ------------------------
-Diese Anleitung bezieht sich auf die Version 7.6.1. Für nachfolgende Versionen ist dieses Vorgehen entsprechend anzuwenden.
+Diese Anleitung bezieht sich auf die Version 7.6. Für nachfolgende Versionen ist dieses Vorgehen entsprechend anzuwenden.
 
 Die ISO-Datei muss heruntergeladen und ein bootbarer USB-Stick erstellt werden.
 
 1. Herunterladen: `XCP Webseite <https://xcp-ng.org/#easy-to-install>`_
-2. USB-Stick erstellen: In das Download Verzeichnis Wechseln, Buchstaben für USB-Stick unter Linux ermitteln, X durch den korrekten Buchstaben ersetzen und dann nachstehenden Befehl ein.
-
+2. USB-Stick erstellen: In das Download-Verzeichnis wechseln, Buchstaben für USB-Stick unter Linux ermitteln, X durch den korrekten Buchstaben ersetzen und dann nachstehenden Befehl eingeben:
 
 .. code-block:: console
  
-   dd if=XCP-ng_7.6.iso of=/dev/sdX bs=8M status=progress oflag=direct
+   dd if=XCP-ng_7.6.0.iso of=/dev/sdX bs=8M status=progress oflag=direct
 
 
 Installieren von XCP-ng
@@ -140,7 +141,7 @@ Danach gehen Sie weiter zur Initialisierung des Servers.
 XCP-ng initialisieren
 ---------------------
 
-:fixme: Andere Abbildungen angepasst auf das zu erstellende SupplementalPack
+:fixme: Andere Abbildungen für neues Supplemental pack werden benötigt. Nachstehende Doku ändert sich dann.
 
 Wählen Sie auf der Konsole des XCP-ng Servers den Punkt ``Local Command Shell`` und drücken Sie ``Enter``.
 
@@ -267,10 +268,13 @@ Führen Sie das Programm durch einen Doppelklick (MSI-Datei) auf dem Windows-Rec
 
 Starten Sie danach das Programm.
 
-:fixme: Weitere Erklärungen
+:fixme: Weitere Erklärungen fehlen
+
 
 Xen Orchestra (XOA)
 -------------------
+
+:fixme: Abb. sind anzupassen 
 
 .. note::
  Um XOA nutzen zu können, muss die xoa.lmn7 importiert sein!
@@ -307,6 +311,8 @@ Sie können nun die Virtuelle Maschine bedienen.
 
 OpenXen Manager
 ---------------
+
+:fixme: Abzuklären, ob OPenXenManager weiterhin in der angepassten Form zur Verfügung gestellt wird und unter XCP-ng 7 weiterhin so nutzbar ist
 
 Um OpenXen Manager zu verwenden müssen Sie zunächst das Paket installieren. Gehen Sie dazu wie folgt vor.
 
