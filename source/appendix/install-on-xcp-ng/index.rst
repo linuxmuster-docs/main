@@ -21,7 +21,7 @@ Für die Installation benötigen Sie lediglich
 
 :fixme: Das SupplementalPack ist derzeit noch nicht verfügbar
 
-Nach der Installation gemäß dieser Anleitung erhalten Sie eine einsatzbereite Umgebung bestehend aus
+Nach der Installation gemäß dieser Anleitung erhalten Sie eine einsatzbereite Umgebung bestehend aus:
 * Server
 * Firewall (OPNsense)
 * Web-Administrationsoberfläche (XOA) 
@@ -261,11 +261,11 @@ Laden Sie sich den Windows-Client von der Seite des XCP-ng Projekts herunter:
 
 XCP-ng Center v7.6.2_
 
-.. _v7.6.2: https://github.com/xcp-ng/xenadmin/releases/download/v7.4.2-RC3/XCP-ng_Center_7.4.2.7-RC3_Binaries.zip
+.. _v7.6.2: https://github.com/xcp-ng/xenadmin/releases/tag/v7.6.2
 
-Entpacken Sie das ZIP-Archiv auf dem Windows-Rechner inkl. der enthaltenen Verzeichnisse. Legen Sie sich einen Link auf den Desktop, der auf die Datei ``XCP-ng Center.exe`` verweist, die sich im soeben entpackten Verzeichnis befindet.
+Führen Sie das Programm durch einen Doppelklick (MSI-Datei) auf dem Windows-Rechner aus und folgen Sie den Installationshinweisen.
 
-Starten Sie das Programm
+Starten Sie danach das Programm.
 
 :fixme: Weitere Erklärungen
 
