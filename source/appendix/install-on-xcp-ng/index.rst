@@ -349,7 +349,7 @@ Wähle nun Für den XCP-ng-Host die Reiterkarte ``Networking`` aus.
    :align: center
    :alt: 4. Teil: Netzwerke einrichten
 
-Wähle das erste Netwerk ``Network 0 `` aus, prüfe die Zurdonung der Netzwerkkarte. 
+Wähle das erste Netwerk ``Network 0`` aus, prüfe die Zurdonung der Netzwerkkarte. 
 Es muss diejenige zugewiesen sein, die die Internet-Verbindung steuert. Klicke dann auf ``Properties`` 
 und ändere den Namen für das Netzwerk in ``RED``.
 
