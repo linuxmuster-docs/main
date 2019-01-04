@@ -122,13 +122,13 @@ Wir verwenden ``[querz] de``.
 Sollten Sie zusätzliche Treiber benötigen können Sie diese nun laden in dem Sie ``F9`` 
 drücken. Starten Sie das XCP-ng Setup mit ``Ok``.
 
-.. figure:: media/xcp-ng/xcp-ng-install3.png
+.. figure:: media/xcp-ng/xcp-ng-install3-new.png
    :align: center
    :alt: Schritt 3 der Installation des XCP-ng Servers
 
 Akzeptieren Sie danach die Lizenzbedingungen mit ``Accept EULA``.
 
-.. figure:: media/xcp-ng/xcp-ng-install4.png
+.. figure:: media/xcp-ng/xcp-ng-install4-new.png
    :align: center
    :alt: Schritt 4 der Installation des XCP-ng Servers
 
@@ -139,14 +139,14 @@ Sie das gewünschte Vorgehen aus. Bei einer Aktualisierung legt XCP-ng zuvor ein
 Sicherheitskopie der bereits bestehenden Installation an, um ggf. wieder auf diese Version 
 zurückkehren zu können.
 
-.. figure:: media/xcp-ng/xcp-ng-install5.png
+.. figure:: media/xcp-ng/xcp-ng-install5-new.png
    :align: center
    :alt: Schritt 5 der Installation des XCP-ng Servers
 
 Wählen Sie danach den Datenträger aus, der verwendet werden soll und setzen Sie den Haken 
 bei „Enable thin provisioning“. Bestätigen Sie mit ``Ok``.
 
-.. figure:: media/xcp-ng/xcp-ng-install6.png
+.. figure:: media/xcp-ng/xcp-ng-install6-new.png
    :align: center
    :alt: Schritt 6 der Installation des XCP-ng Servers
 
@@ -156,7 +156,7 @@ Daten erhalten.
 
 Danach werden Sie nach der Installationsquelle gefragt. 
 
-.. figure:: media/xcp-ng/xcp-ng-install7.png
+.. figure:: media/xcp-ng/xcp-ng-install7-new.png
    :align: center
    :alt: Schritt 7 der Installation des XCP-ng Servers
 
@@ -164,7 +164,7 @@ Geben Sie hier ``Local Media`` an.
 
 Danach werden Sie gefragt, ob das Installationsmedium überprüft werden soll.
 
-.. figure:: media/xcp-ng/xcp-ng-install8.png
+.. figure:: media/xcp-ng/xcp-ng-install8-new.png
    :align: center
    :alt: Schritt 8 der Installation des XCP-ng Servers
 
@@ -349,9 +349,9 @@ Wähle nun Für den XCP-ng-Host die Reiterkarte ``Networking`` aus.
    :align: center
    :alt: 4. Teil: Netzwerke einrichten
 
-Wähle das erste Netwerk ``Network 0 `` aus, prüfe die Zurdonung der Netzwerkkarte. Es muss diejenigen
-zugewiesen ein, die die Internet-Verbindung steuert. Klicke dann auf ``Properties`` und ändere den
-Namen für das Netzwerk in ``RED``.
+Wähle das erste Netwerk ``Network 0 `` aus, prüfe die Zurdonung der Netzwerkkarte. 
+Es muss diejenige zugewiesen sein, die die Internet-Verbindung steuert. Klicke dann auf ``Properties`` 
+und ändere den Namen für das Netzwerk in ``RED``.
 
 Führe diese Schritte ebenfalls für die weitere Netze aus und ändere die Namen auf ``BLUE`` und ``GREEN``.
 
