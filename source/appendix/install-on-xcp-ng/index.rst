@@ -6,28 +6,77 @@
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
-XCP-ng ist eine reine OpenSource-Virtualisierungslösung, die auf Basis von XEN arbeitet und alle 
-sog. Enterprise-Features wie Replikation, automatisierte Backups, Verschieben von VMs im laufenden Betrieb etc. 
-bietet. Daher eignet sie sich besonders für den virtuellen Betrieb von linuxmuster.net, da diese recht einfach skalierbar ist und dann sog. Ressource-Pools erstellt und verwaltet werden können.
+XCP-ng ist eine reine OpenSource-Virtualisierungslösung, die auf Basis 
+von XEN arbeitet. XCP-ng bietet sog. Enterprise-Features wie Replikation, 
+automatisierte Backups, Verschieben von VMs im laufenden Betrieb und 
+weitere Funktionen. Daher eignet sie sich besonders für den virtuellen 
+Betrieb von linuxmuster.net, da diese recht einfach skalierbar ist,
+mehrere Virtualisierungs-Hosts in einem sog. Ressource-Pool zusammengeführt
+und verwaltet werden können.
 
-Der Betrieb wird auf jeglicher Markenhardware unterstützt und auf einer Vielzahl an NoName-Hardware.
-linuxmuster.net hat die vorgefertigten virtuellen Maschinen in einem sog. SupplementalPack für XCP-ng zusammengefasst.
-Dieses kann sehr einfach am Ende der Installation von XCP-ng zusätzlich während des Installationsprozesses installiert werden.
+Der Betrieb wird auf jeglicher Markenhardware und auf einer Vielzahl an 
+NoName-Hardware unterstützt.
 
-Für die Installation wird nur benötigt:
+In diesem Dokument findest Du "Schritt für Schritt" Anleitungen zum
+Installieren der linuxmuster.net-Musterlösung in der Version 7 auf
+Basis von XCP-ng. Lies zuerst die Abschnitte :ref:`release-information-label` 
+und :ref:`prerequisites-label`, bevor Du dieses Kapitel durcharbeitest.
 
-* ein Installationsdatenträger mit XCP-ng 7.6 (zu finden auf `XCP Webseite <https://xcp-ng.org/#easy-to-install>`_)
-* sowie das linuxmuster.net-SupplementalPack (zu finden auf `linuxmuster.net <http://www.linuxmuster.net/download/lmn7-supplementalpack-xcp-v01.iso>`_) 
+Nach der Installation gemäß dieser Anleitung erhältst Du eine
+einsatzbereite Umgebung bestehend aus
 
-:fixme: Das SupplementalPack ist derzeit noch nicht verfügbar
+* einem Host (XCP-ng) für alle virtuellen Maschinen, 
+* einer Firewall (OPNSense)  
+* einem Serverm (linuxmuster.net)
+* einer VM (XOA) zur web-basierten Verwaltung des Virtualisierungs-Hosts
 
-Nach der Installation gemäß dieser Anleitung erhalten Sie eine einsatzbereite Umgebung bestehend aus:
+Ähnliche, nicht dokumentierte, Installationen gelten für einen
+OPSI-Server und einen Docker-Host, die dann ebenso auf dem XCP-ng-Host
+laufen können.
 
-* Server
-* Firewall (OPNsense)
-* Web-Administrationsoberfläche (XOA) 
-* Docker-Host
-* OPSI
+Voraussetzungen
+===============
+
+* Es wird vorausgesetzt, dass Du einen Administrationsrechner
+  (Admin-PC genannt) besitzt, den Du je nach Bedarf in die
+  entsprechenden Netzwerke einstecken kannst und dessen
+  Netzwerkkonfiguration entsprechend vornehmen kannst.
+
+* Der Internetzugang des Admin-PCs und auch des XCP-ng-Hosts sollte
+  zunächst gewährleistet sein, d.h. dass beide zunächst z.B. an einem
+  Router angeschlossen werden, über den die beiden per DHCP oder fester IP 
+  ins Internet können. Sobald später die Firewall korrekt eingerichtet
+  ist, bekommt der Admin-PC und bei Bedarf auch der XCP-ng-Host eine
+  IP-Adresse im Schulnetz.
+
+.. hint:: 
+
+   Virtualisierungs-Hosts sollten grundsätzlich niemals im gleichen Netz wie 
+   andere Geräte sein, damit dieser nicht von diesen angegriffen werden kann.
+   In dieser Dokumentation wird zur Vereinfachung der Fall dokumentiert, dass
+   der XCP-ng-Host sich im internen Schulnetz befindet.
+
+Bereitstellen des XCP-ng-Hosts
+==============================
+
+.. hint:: 
+
+   Der XCP-ng-Host bildet das Grundgerüst für die Firewall *OPNsense* und
+   den Schulserver *server*. Die Virtualisierungsfunktionen der CPU sollten 
+   zuvor im BIOS aktiviert worden sein.
+
+Die folgende Anleitung beschreibt die *einfachste* Implementierung
+ohne Dinge wie VLANs, Teaming oder Raids. Diese Themen werden in
+zusätzlichen Anleitungen betrachtet.
+
+* :ref:`Anleitung Netzwerksegmentierung <subnetting-basics-label>` 
+
+Erstellen eines USB-Sticks zur Installation des XCP-ng-Host
+-----------------------------------------------------------
+
+Für die Installation wird benötigt:
+
+* ein Installationsdatenträger mit XCP-ng
 
 
 Installation XCP-ng
@@ -35,12 +84,16 @@ Installation XCP-ng
 
 Herunterladen von XCP-ng
 ------------------------
-Diese Anleitung bezieht sich auf die Version 7.6. Für nachfolgende Versionen ist dieses Vorgehen entsprechend anzuwenden.
+Diese Anleitung bezieht sich auf die Version 7.6. Für nachfolgende Versionen ist 
+dieses Vorgehen entsprechend anzuwenden.
 
-Die ISO-Datei muss heruntergeladen und ein bootbarer USB-Stick erstellt werden.
+Die ISO-Datei muss heruntergeladen und ein bootfähiger USB-Stick erstellt werden.
 
 1. Herunterladen: `XCP Webseite <https://xcp-ng.org/#easy-to-install>`_
-2. USB-Stick erstellen: In das Download-Verzeichnis wechseln, Buchstaben für USB-Stick unter Linux ermitteln, X durch den korrekten Buchstaben ersetzen und dann nachstehenden Befehl eingeben:
+
+2. USB-Stick erstellen: In das Download-Verzeichnis wechseln, Buchstaben für 
+USB-Stick unter Linux ermitteln, X durch den korrekten Buchstaben ersetzen und 
+dann nachstehenden Befehl eingeben:
 
 .. code-block:: console
  
@@ -48,346 +101,432 @@ Die ISO-Datei muss heruntergeladen und ein bootbarer USB-Stick erstellt werden.
 
 
 Installieren von XCP-ng
---------------------------
+-----------------------
 
-Vom USB-Stick booten und dem Setup folgen:
+Vom USB-Stick booten, danach erscheint folgender Bildschirm:
 
 .. figure:: media/xcp-ng/xcp-ng-install1.png
    :align: center
    :alt: Schritt 1 der Installation des XCP-ng Servers
 
-Wählen Sie Ihr Tastaturlayout. Wir verwenden ``[querz] de``.
+Starten der Installtion mit ``ENTER``.
+
+Wählen Sie Ihr Tastaturlayout.
 
 .. figure:: media/xcp-ng/xcp-ng-install2.png
    :align: center
    :alt: Schritt 2 der Installation des XCP-ng Servers
 
-Sollten Sie zusätzliche Treiber benötigen können Sie diese nun laden in dem Sie ``F9`` drücken und
-akzeptieren Sie danach die Lizenzbedingungen mit ``Accept EULA``..
+Wir verwenden ``[querz] de``.
+
+Sollten Sie zusätzliche Treiber benötigen können Sie diese nun laden in dem Sie ``F9`` 
+drücken. Starten Sie das XCP-ng Setup mit ``Ok``.
 
 .. figure:: media/xcp-ng/xcp-ng-install3.png
    :align: center
    :alt: Schritt 3 der Installation des XCP-ng Servers
 
-XCP-ng prüft, ob bereits eine vorherige Version ggf. auch von XCP-ng installiert war und bietet an, diese zu aktualisieren oder eine Neuinstallation vorzunehmen. Wählen Sie das gewünschte Vorgehen aus.
+Akzeptieren Sie danach die Lizenzbedingungen mit ``Accept EULA``.
 
 .. figure:: media/xcp-ng/xcp-ng-install4.png
    :align: center
    :alt: Schritt 4 der Installation des XCP-ng Servers
 
-Wählen Sie danach den Datenträger aus, der verwendet werden soll und setzen Sie den Haken bei „Enable thin provisioning“. Bestätigen Sie mit ``Ok``.
-
-:fixme: Andere Abb
-
-.. figure:: media/xcp-ng/image5.png
-   :align: center
-   :alt: Schritt 5 der Installation des XCP-ng Servers
-
-
-Danach werden Sie nach der Installationsquelle gefragt. Geben Sie hier ``Local Media`` an.
-
-Danach werden Sie danach gefragt, ob Sie Zusatzpakete (SupplementalPacks) installieren möchten. Geben Sie hier ``Yes`` an. Später müssen Sie dann das entsprechende Medium auswählen, auf dem das Ihnen heruntergelade linuxmuster.net-supplemtalpack als ISO-Datei liegt.
-
-Danach werden Sie gefragt, ob das Installationsmedium überprüft werden soll, bestätigen Sie dies mit ``Yes``.
-
-Legen Sie danach das Kennwort für den Administrator (user: root) fest und bestätigen Sie dieses.
+XCP-ng prüft, ob bereits eine vorherige Version entwedern von XenServer oder ggf. auch 
+von XCP-ng installiert war. Falls ja, bietet die Installationsroutine an, die 
+bestehende Installation zu aktualisieren oder eine Neuinstallation vorzunehmen. Wählen 
+Sie das gewünschte Vorgehen aus. Bei einer Aktualisierung legt XCP-ng zuvor eine 
+Sicherheitskopie der bereits bestehenden Installation an, um ggf. wieder auf diese Version 
+zurückkehren zu können.
 
 .. figure:: media/xcp-ng/xcp-ng-install5.png
    :align: center
    :alt: Schritt 5 der Installation des XCP-ng Servers
 
-Bestätigen Sie die Frage nach der Installation von XCP-ng. Es werden für das gewählte Medium dann die Partitionen erstellt, das Dateisystem erzeugt und alle Daten auf dem Medium gelöscht.
+Wählen Sie danach den Datenträger aus, der verwendet werden soll und setzen Sie den Haken 
+bei „Enable thin provisioning“. Bestätigen Sie mit ``Ok``.
 
 .. figure:: media/xcp-ng/xcp-ng-install6.png
    :align: center
    :alt: Schritt 6 der Installation des XCP-ng Servers
 
+Bei einer Neuinstallation werden für das gewählte Medium dann die Partitionen erstellt, das 
+Dateisystem erzeugt und alle Daten auf dem Medium gelöscht. Bei einem Upgrade bleiben die 
+Daten erhalten.
 
-Danach startet die Installation
+Danach werden Sie nach der Installationsquelle gefragt. 
 
 .. figure:: media/xcp-ng/xcp-ng-install7.png
    :align: center
    :alt: Schritt 7 der Installation des XCP-ng Servers
 
-Nach erfolgreicher Installation können Sie mit ``Ok`` den Server neu starten.
+Geben Sie hier ``Local Media`` an.
+
+Danach werden Sie gefragt, ob das Installationsmedium überprüft werden soll.
 
 .. figure:: media/xcp-ng/xcp-ng-install8.png
    :align: center
    :alt: Schritt 8 der Installation des XCP-ng Servers
 
+Bestätigen Sie dies mit ``Verfy installation source``.
 
-Beim Startvorgang erscheint folgende Auswahl
+Nach Abschluss der erfolgreichen Überprüfung des Installationsmediums wird dies bestätigt.
 
 .. figure:: media/xcp-ng/xcp-ng-install9.png
    :align: center
    :alt: Schritt 9 der Installation des XCP-ng Servers
 
-und nachstehender Startbildschirm
+Legen Sie danach das Kennwort für den Administrator (user: root) fest und bestätigen Sie dieses.
 
 .. figure:: media/xcp-ng/xcp-ng-install10.png
    :align: center
    :alt: Schritt 10 der Installation des XCP-ng Servers
 
-Nach erfolgreichem Start bootet XCP-ng in folgende Konsole des Hypervisors:
+Solltest Du kein Upgrade einer bestehenden Installation durchführen, 
+so must Du noch die Netzwerkeinstellungen festlegen.
 
 .. figure:: media/xcp-ng/xcp-ng-install11.png
    :align: center
    :alt: Schritt 11 der Installation des XCP-ng Servers
 
+Vergebe hier eine statische IP-Adresse, mit der XCP-ng eine Internet-Verbindung aufbauen kann.
 
-Danach gehen Sie weiter zur Initialisierung des Servers.
+Lege die DNS-Server fest.
 
-
-XCP-ng initialisieren
----------------------
-
-:fixme: Andere Abbildungen für neues Supplemental pack werden benötigt. Nachstehende Doku ändert sich dann.
-
-Wählen Sie auf der Konsole des XCP-ng Servers den Punkt ``Local Command Shell`` und drücken Sie ``Enter``.
-
-.. figure:: media/xcp-ng/image26.png
+.. figure:: media/xcp-ng/xcp-ng-install12.png
    :align: center
-   :alt: Schritt 26 der Installation des XCP-ngs
+   :alt: Schritt 12 der Installation des XCP-ng Servers
 
-Geben Sie den Benutzer root an und das Passwort das Sie während der Installation vergeben haben.
+Lege danach die Systemzeit fest (manuelle Auswahl oder via NTP-Server).
 
-.. figure:: media/xcp-ng/image27.png
+.. figure:: media/xcp-ng/xcp-ng-install13.png
    :align: center
-   :alt: Schritt 27 der Installation des XCP-ngs
+   :alt: Schritt 13 der Installation des XCP-ng Servers
 
-Geben Sie in der Konsole den Befehl ``linuxmuster-hv-setup --first`` ein und bestätigen Sie mit Enter
+Bei manueller Angabe der Systemzeit, wähle die Zeitzone aus.
 
-.. figure:: media/xcp-ng/image28.png
+Erst die Region wählen.
+
+.. figure:: media/xcp-ng/xcp-ng-install14.png
    :align: center
-   :alt: Schritt 28 der Installation des XCP-ngs
+   :alt: Schritt 14 der Installation des XCP-ng Servers
 
-Starten Sie die Installation mit ``Ok``
+Danach die Stadt auswählen.
 
-.. figure:: media/xcp-ng/image29.png
+.. figure:: media/xcp-ng/xcp-ng-install15.png
    :align: center
-   :alt: Schritt 29 der Installation des XCP-ngs
+   :alt: Schritt 15 der Installation des XCP-ng Servers
 
-Sofern genügend Netzwerkkarten vorhanden sind erscheint diese Meldung:
+Bestätige danach die Frage nach der Installation von XCP-ng.
 
-.. figure:: media/xcp-ng/image30.png
+.. figure:: media/xcp-ng/xcp-ng-install16.png
    :align: center
-   :alt: Schritt 30 der Installation des XCP-ngs
+   :alt: Schritt 16 der Installation des XCP-ng Servers
 
-Stecken Sie alle Netzwerkkabel außer das Netzwerkkabel GREEN (internes Schulnetz) aus. Es muss eine Verbindung zwischen Switch und Server stehen. Bestätigen Sie dann mit ``Ok``.
+Danach startet die Installation
 
-.. figure:: media/xcp-ng/image31.png
+.. figure:: media/xcp-ng/xcp-ng-install17.png
    :align: center
-   :alt: Schritt 31 der Installation des XCP-ngs
+   :alt: Schritt 17 der Installation des XCP-ng Servers
 
-Verbinden Sie nun die Netzwerkkarte RED mit Ihrem Modem oder Switch für das Netz RED. Es wird die betroffene Netzwerkkarte erkannt und  konfiguriert.
+Die Frage nach INstallation eines ``Supplemental Pack`` ist mit ``No`` zu beantworten.
 
-.. figure:: media/xcp-ng/image32.png
+.. figure:: media/xcp-ng/xcp-ng-install18.png
    :align: center
-   :alt: Schritt 32 der Installation des XCP-ngs
+   :alt: Schritt 18 der Installation des XCP-ng Servers
 
-Verbinden Sie nun das Netzwerk BLUE mit dem gewünschten Interface am Server.
+Nach erfolgreicher Installation kannSt Du mit ``Ok`` den Server neu starten.
+Achte darauf, dass der USB-Stick nicht mehr für den Bootvorgang aktiv ist.
 
-.. figure:: media/xcp-ng/image33.png
+.. figure:: media/xcp-ng/xcp-ng-install19.png
    :align: center
-   :alt: Schritt 33 der Installation des XCP-ngs
+   :alt: Schritt 19 der Installation des XCP-ng Servers
 
-Legen Sie nun die CD „linuxmuster-SupplementalPack“ erneut in das Laufwerk ein und bestätigen Sie mit ``Ok``.
+Beim Startvorgang erscheint folgende Auswahl:
 
-.. figure:: media/xcp-ng/image34.png
+.. figure:: media/xcp-ng/xcp-ng-install20.png
    :align: center
-   :alt: Schritt 34 der Installation des XCP-ngs
+   :alt: Schritt 20 der Installation des XCP-ng Servers
 
-Sie werden nun der Reihe nach abgefragt welche VMs Sie importieren wollen. Wählen Sie jeweils ``Yes`` bzw. ``No`` und bestätigen mit ``Enter``.
+XCP-ng wird nach einigen Sekunden automatisch gestartet.
 
-.. figure:: media/xcp-ng/image35.png
+.. figure:: media/xcp-ng/xcp-ng-install21.png
    :align: center
-   :alt: Schritt 35 der Installation des XCP-ngs
+   :alt: Schritt 21 der Installation des XCP-ng Servers
 
-.. figure:: media/xcp-ng/image36.png
+Nach erfolgreichem Start bootet XCP-ng in folgende Konsole des Hypervisors:
+
+.. figure:: media/xcp-ng/xcp-ng-install22.png
    :align: center
-   :alt: Schritt 36 der Installation des XCP-ngs
+   :alt: Schritt 22 der Installation des XCP-ng Servers
 
-.. figure:: media/xcp-ng/image37.png
+
+Aktualisierung des XCP-ng-Hosts
+-------------------------------
+
+Wähle in dem Startbildschirm des XCP-ng Hosts den Menüpunt ``Local Command Shell``
+und drücke ``Enter``. Gebe als Benutzer ``root`` an und das Passwort das Du 
+während der Installation vergeben hast.
+
+.. figure:: media/xcp-ng/xcp-ng-install23.png
    :align: center
-   :alt: Schritt 37 der Installation des XCP-ngs
+   :alt: Schritt 23 der Installation des XCP-ng Servers
 
-Entnehmen Sie nun die CD und bestätigen Sie mit ``Ok``.
+Gebe auf der Konsole den Befehl 
 
-.. figure:: media/xcp-ng/image38.png
-   :align: center
-   :alt: Schritt 38 der Installation des XCP-ngs
+.. code-block:: console
+ 
+   yum update
 
-Sie werden nun gefragt ob Sie die Autostartfunktion nutzen wollen. Wenn Sie diese Funktion aktivieren können im Folgeschritt VMs ausgewählt werden, die beim Start des XCP-ngs automatisch gestartet werden sollen. Wählen Sie ``Yes`` oder ``No``.
+ein. XCP-ng fragt nun via Internetverbindung die Repositories ab und prüft, ob
+Aktualisierungen vorhanden sind. Falls ja, werden die zu aktualisierenden Pakete 
+angezeigt. Die Aktualisierung ist mit ``y`` zu starten.
 
-.. figure:: media/xcp-ng/image39.png
-   :align: center
-   :alt: Schritt 39 der Installation des XCP-ngs
-
-Sie werden nun der Reihe nach abgefragt welche VMs automatisch gestartet werden sollen. Wählen Sie jeweils ``Yes`` bzw. ``No`` und bestätigen Sie mit ``Enter``.
-
-.. figure:: media/xcp-ng/image40.png
-   :align: center
-   :alt: Schritt 40 der Installation des XCP-ngs
-
-.. figure:: media/xcp-ng/image41.png
-   :align: center
-   :alt: Schritt 41 der Installation des XCP-ngs
-
-.. figure:: media/xcp-ng/image41a.png
-   :align: center
-   :alt: Schritt 41a der Installation des XCP-ngs
-
-Sie können nun das System mit der Auswahl ``Yes`` neu starten.
-
-.. figure:: media/xcp-ng/image42.png
-   :align: center
-   :alt: Schritt 42 der Installation des XCP-ngs
-
-Das System fährt herunter und startet danach wieder. Die VMs, die Sie importiert haben, werden - sofern entsprechend konfiguriert - direkt gestartet und sind bereit für die Konfiguration.
+Danach ist Dein XCP-ng Host auf dem aktuellen Stand.
 
 XCP-ng: Administration
 =======================
 
-Für die Administration Ihrer virtualisierten Umgebung mit XCP-ng stehen Ihnen mehrere Möglichkeiten zur Verfügung.
-Sofern Sie einen Windows-Rechner im Netzwerk haben, können Sie das Programm ``XCP-ng Center`` verwenden.
+Für die Administration Deines XCP-ng-Hosts stehen Dir zwei Möglichkeiten zur Verfügung.
+Zunächst solltest Du Dir auf einem Windows-Rechner im Netzwerk das Programm ``XCP-ng Center`` 
+installieren. Hiermit kannst Du die gesamte Umgebund administrieren und insbesondere die 
+vorkonfigurierten VMs einfach importieren. 
 
-Für Linuxrechner gibt es einen Clone von XenCenter namens OpenXenManager.
+Zudem kann der XCP-ng-Host ebenfalls web-basiert administriert werden. Dies erfolgt mithilfe 
+der Anwendung XenOrchestra (XOA - Xen Orchestra Application). linuxmuster.net stellt hierfür 
+ebenfalls eine vorkonfigurierte VM mit einer installierten XOA App zur Verfügung. XOA wurde
+hier "from stratch" installiert und an die lmn7 angepasst wurde.
 
-Für eine web-basierte Administration können Sie, die VM „XOA.lmn7“ importieren.
+XCP-ng Center installieren
+--------------------------
 
-XCP-ng Center
--------------
+Lade Dir das Windows-Programm zur Verwaltung von der Seite des XCP-ng Projekts herunter:
 
-Laden Sie sich den Windows-Client von der Seite des XCP-ng Projekts herunter:
+XCP-ng Center AktuelleVersion_
 
-XCP-ng Center v7.6.2_
+.. _AktuelleVersion: <https://github.com/xcp-ng/xenadmin/releases>
 
-.. _v7.6.2: https://github.com/xcp-ng/xenadmin/releases/tag/v7.6.2
 
-Führen Sie das Programm durch einen Doppelklick (MSI-Datei) auf dem Windows-Rechner aus und folgen Sie den Installationshinweisen.
+Installiere das Programm durch einen Rechtsklick auf die MSI-Datei auf dem Windows-Rechner und 
+wähle dann ``Als Administrator ausführen`` aus.
 
-Starten Sie danach das Programm.
+.. figure:: media/administration/xcp-ng-admin1.png
+   :align: center
+   :alt: Installation XCP-ng Center
 
-:fixme: Weitere Erklärungen fehlen
+Bestätige die Rückfrage mit ``Ja``
+
+.. figure:: media/administration/xcp-ng-admin2.png
+   :align: center
+   :alt: 2. Teil: Installation XCP-ng Center
+
+Rufe nach erfolgreicher Installation das Programm ``XCP-ng Center`` auf.
+
+Wähle hier den Menüpunkt ``Add New Server`` und gebe Sie bei der Installation
+vergebene IP-Adresse des XCP-Hosts sowie die Benutzerdaten an.
+
+.. figure:: media/administration/xcp-ng-admin3.png
+   :align: center
+   :alt: 3. Teil: Hinzufügen des XCP-ng-Hosts
+
+
+Netzwerk einrichten
+-------------------
+
+Jetzt muss das Netzwerk eingerichtet werden. Notiere Dir hierzu die Bezeichnungen
+und MAC-Adressen der eingebauten Netzwerkkarten. Diese findest Du unter der Reiterkarte ``NICs``.
+Die Netzwerkkarte, die die Verbindung zum Internet übernehmen soll wird später dem Netzwerk ``Red``, 
+diejenige für das interne Schulungsnetz dem Netzwerk ``Green`` und die dritte Netzwerkkarte 
+für die Steuerung des WLAN dem Netzwerk ``Blue`` zugeordnet.
+
+Damit dies korrekt erfolgt, ist es wichtig zu wissen, wie NIC 0,1,2 physikalisch angeschlossen sind
+und welche MAC-Adressen diese aufweisen. Anhand der Informationen erfolgt dann im folgenden Schritt
+die Zuordnung der Netze (vSwitche).
+
+Wähle nun Für den XCP-ng-Host die Reiterkarte ``Networking`` aus.
+
+.. figure:: media/administration/xcp-ng-admin4.png
+   :align: center
+   :alt: 4. Teil: Netzwerke einrichten
+
+Wähle das erste Netwerk ``Network 0 `` aus, prüfe die Zurdonung der Netzwerkkarte. Es muss diejenigen
+zugewiesen ein, die die Internet-Verbindung steuert. Klicke dann auf ``Properties`` und ändere den
+Namen für das Netzwerk in ``RED``.
+
+Führe diese Schritte ebenfalls für die weitere Netze aus und ändere die Namen auf ``BLUE`` und ``GREEN``.
+
+
+VMs importieren
+---------------
+
+Nachdem das Netzwerk korrekt eingerichtet wurde, können nun die VMs der linuxmuster.net 
+importiert werden.
+
+Lade Dir vorher zunächst alle VMs, die Du importieren möchtest unter linuxmuster.net herunter.
+
+Danach rufe im XCP-ng Center den Menüpunkt ``File -> Import`` auf.
+
+.. figure:: media/import-vms/xcp-ng-menue-import.png
+   :align: center
+   :alt: Import aufrufen
+
+Es erscheint ein neues Fenster.
+
+.. figure:: media/import-vms/xcp-ng-import-window.png
+   :align: center
+   :alt: Import: Speicherort auswählen
+
+Gebe hier den Speicherort und den Dateinamen der zu importierenden VM an. Die VMs 
+weisen die Dateiendung ``.ova`` auf.
+
+.. figure:: media/import-vms/xcp-ng-import-filename.png
+   :align: center
+   :alt: Import: Datei mit Speicherort angeben
+
+Nach Bestätigung mit ``Ok`` erscheint nun das erste Fenster, um den Import zu steuern.
+Zunächst must Du den XCP-ng-Host festlegen, für den der Import der VM erfolgen soll.
+
+.. figure:: media/import-vms/xcp-ng-import-part1.png
+   :align: center
+   :alt: Import: Heimserver angeben
+
+Wähle danach Deinen gewünschten Speicher aus. Bestätige mit ``Next``.
+
+.. figure:: media/import-vms/xcp-ng-import-part2.png
+   :align: center
+   :alt: Import: Speicher auswählen
+
+Prüfe die Netzwerkeinstellungen, die von der zu importierenden VM stammen.
+
+.. figure:: media/import-vms/xcp-ng-import-part3.png
+   :align: center
+   :alt: Import: Netzwerkangaben prüfen
+
+Bestätige diese mit ``Next``.
+
+Für die Security settings aktiviere die Option ``Verify manifest content``.
+
+.. figure:: media/import-vms/xcp-ng-import-part4.png
+   :align: center
+   :alt: Import: Security settings
+
+Bestätige diese mit ``Next``.
+
+.. figure:: media/import-vms/xcp-ng-import-part5.png
+   :align: center
+   :alt: Import: OS Fixup Settings
+
+Bestätige die Vorauswahl mit ``Next``.
+
+.. figure:: media/import-vms/xcp-ng-import-part6.png
+   :align: center
+   :alt: Import: Transver VM Settings
+
+Bestätige das Management Network des XCP-Hosts als Transfer-Network.
+
+.. figure:: media/import-vms/xcp-ng-import-part7.png
+   :align: center
+   :alt: Import: Review import settings
+
+Prüfe nun nochmals alle Einstellungen für den Import der VM.
+Falls Änderungen erforderlich sind, gehe mit ``Previous`` zurück zur
+gewünschten Einstellung.
+
+Bestätige nun den Import mit ``Finish``.
+
+Der Import kann einige Zeit dauern. Danach solltest Du die importierte 
+VM im XCP-ng Center sehen können.
+
+.. figure:: media/import-vms/xcp-ng-imported-vms.png
+   :align: center
+   :alt: Importierte VMs in XCP-ng Center
+
+
+VMs starten und aktualisieren
+-----------------------------
+
+Wähle im XCP-ng Center links die VM aus, die Du starten möchtest.
+Klicke danach oben in der Mnüleiste das Icon ``Start`` aus.
+
+Beginne mit der Firewall Opnsense. Starte diese.
+
+.. figure:: media/import-vms/xcp-ng-install-opnsense-started.png
+   :align: center
+   :alt: Gestartete VM OPNsense
+
+Melde Dich auf der Konsole mit den Daten ``root`` und ``Muster!`` an.
+
+.. figure:: media/import-vms/xcp-ng-install-menue-opnsense.png
+   :align: center
+   :alt: Konsolenmenü OPNsense
+
+Wähle danach in dem Konsolenmenü den Punkt 12) aus, um die Firewall zu 
+aktualisieren.
+
+.. figure:: media/import-vms/xcp-ng-install-opnsense-update-started.png
+   :align: center
+   :alt: Update der VM OPNsense
+
+Bestätige diesen Vorgang mit ``y`` und warte bis die VM neu gestartet wurde.
+
+Starte die VM mit dem linuxmuster.net Server.
+Melde Dich mit o.g. Logindaten an, und aktualisiere die VM.
+
+.. figure:: media/import-vms/xcp-ng-install-update-server-vm.png
+   :align: center
+   :alt: Update der Server VM
+
+Bestätigen Sie das Update mit ``y``.
+
+.. figure:: media/import-vms/xcp-ng-install-update-server-vm.png
+   :align: center
+   :alt: Update der Server VM
+
+
+Sofern Du weitere VMs importiert hast, führe die Aktualisierungen
+analog aus.
+
+Für die weitere Einrichtung von linuxmuster.net für Deine Schule folge
+der Dokumentation unter:
+
+* :ref:`Installation und Erstkonfiguration <setup-using-selma-label>` 
 
 
 Xen Orchestra (XOA)
 -------------------
 
-:fixme: Abb. sind anzupassen 
+:fixme: Abb. und Text sind zu überarbeiten anzupassen 
 
 .. note::
  Um XOA nutzen zu können, muss die xoa.lmn7 importiert sein!
 
-Öffnen Sie einen Webbrowser und wechseln auf die Seite http://10.0.0.4. Geben Sie den User ``admin@admin.net`` mit dem Passwort ``muster`` ein und klicken Sie auf Login.
+Öffnen Sie einen Webbrowser und wechseln auf die Seite http://10.0.0.4. Geben Sie den User ``admin@admin.net`` mit dem Passwort ``Muster!`` ein und klicken Sie auf Login.
 
-.. figure:: media/administration/image48.png
+.. figure:: media/xoa/xoa-setup-part1.png
    :align: center
    :alt: XOA Schritt 1
 
 Klicken Sie auf das Kachelsymbol rechts oben und wählen Settings.
 
-.. figure:: media/administration/image49.png
+.. figure:: media/xoa/xoa-setup-part1.png
    :align: center
    :alt: XOA Schritt 2
 
 Tragen Sie links die IP-Adresse ``10.X.X.X`` ein und das Passwort, das Sie vergeben haben. Klicken Sie zum Übernehmen auf ``Save``.
 
-.. figure:: media/administration/image50.png
+.. figure:: media/xoa/xoa-setup-part1.png
    :align: center
    :alt: XOA Schritt 3
 
 Wenn Sie mit der Maus über eine VM fahren erscheinen direkt einige Schaltflächen. Klicken Sie auf VM Console um eine Maschine zu bedienen.
 
-.. figure:: media/administration/image51.png
+.. figure:: media/xoa/xoa-setup-part1.png
    :align: center
    :alt: XOA Schritt 4
 
 Sie können nun die Virtuelle Maschine bedienen.
 
-.. figure:: media/administration/image52.png
+.. figure:: media/xoa/xoa-setup-part1.png
    :align: center
    :alt: XOA Schritt 5
-
-OpenXen Manager
----------------
-
-:fixme: Abzuklären, ob OPenXenManager weiterhin in der angepassten Form zur Verfügung gestellt wird und unter XCP-ng 7 weiterhin so nutzbar ist
-
-Um OpenXen Manager zu verwenden müssen Sie zunächst das Paket installieren. Gehen Sie dazu wie folgt vor.
-
-Öffnen Sie ein Terminal und geben folgenden Befehl ein:
-
-.. code-block:: console
-
-   $ nano /etc/apt/sources.list.d/netzint.list
-
-.. figure:: media/administration/image53.png
-   :align: center
-   :alt: OpenXen Manager Schritt 1
-
-Schreiben Sie nun in die Zeile:
-
-.. code-block:: console
-
-   deb http://pkg.netzint.de/ precise main
-
-.. figure:: media/administration/image54.png
-   :align: center
-   :alt: OpenXen Manager Schritt 2
-
-Verlassen Sie den Editor in dem Sie ``Strg+x`` drücken. Sie werden gefragt ob Sie die Änderungen speichern wollen. Drücken Sie ``Y`` und bestätigen den Speicherort/Dateinamen mit ``Enter``.
-
-Schreiben Sie folgende Befehle in die Konsole und bestätigen Sie jeweils mit ``Enter``:
-
-.. code-block:: console
-
-   $ wget http://pkg.netzint.de/netzint.pub.key
-   $ apt-key add netzint.pub.key
-
-.. figure:: media/administration/image55.png
-   :align: center
-   :alt: OpenXen Manager Schritt 3
-
-Schreiben Sie den Befehl ``apt-get update`` in die Konsole und drücken Sie ``Enter``.
-
-.. code-block:: console
-
-   $ apt-get update
-
-.. figure:: media/administration/image56.png
-   :align: center
-   :alt: OpenXen Manager Schritt 4
-
-Schreiben Sie den Befehl ``apt-get install netzint-xenmanager`` in die Konsole und drücken ``Enter``. Bestätigen Sie die Abfrage fortzufahren mit ``Y``.
-
-.. code-block:: console
-
-   $ apt-get install netzint-xenmanager
-
-.. figure:: media/administration/image57.png
-   :align: center
-   :alt: OpenXen Manager Schritt 5
-
-Nach der Installation starten Sie OpenXenmanager mit dem Befehl
-
-.. code-block:: console
-
-   $ xenmanager
-
-.. figure:: media/administration/image58.png
-   :align: center
-   :alt: OpenXen Manager Schritt 6
-
-Klicken Sie auf ``Add New Server`` und geben die IP-Adresse sowie den Benutzernamen root und das Passwort ein. Bestätigen Sie mit ``Connect``.
-
-.. figure:: media/administration/image59.png
-   :align: center
-   :alt: OpenXen Manager Schritt 7
-
-Sie sehen nun die Verwaltungsoberfläche mit der Sie den XCP-ng Server administrieren können.
-
-.. figure:: media/administration/image60.png
-   :align: center
-   :alt: OpenXen Manager Schritt 8
 
