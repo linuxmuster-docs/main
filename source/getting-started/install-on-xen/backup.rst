@@ -103,7 +103,7 @@ Tragen Sie für ein wöchentliches Backup, dass jeden Freitag um 20:00 Uhr start
 
 .. code-block:: console
 
-   0 20 \* \* 5 /usr/share/linuxmuster-hv-tools/tools/backup.sh
+   0 20 \* \* 5 root /usr/share/linuxmuster-hv-tools/tools/backup.sh
 
 .. figure:: media/configuration/image127.png
    :align: center
