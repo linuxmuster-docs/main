@@ -297,14 +297,20 @@ der Anwendung XenOrchestra (XOA - Xen Orchestra Application). linuxmuster.net st
 ebenfalls eine vorkonfigurierte VM mit einer installierten XOA App zur Verfügung. XOA wurde
 hier "from stratch" installiert und an die lmn7 angepasst wurde.
 
-XCP-ng Center installieren
---------------------------
+XCP-ng Center unter Windows installieren
+----------------------------------------
 
 Lade Dir das Windows-Programm zur Verwaltung von der Seite des XCP-ng Projekts herunter:
 
 XCP-ng Center AktuelleVersion_
 
 .. _AktuelleVersion: <https://github.com/xcp-ng/xenadmin/releases>
+
+Die Installation des Programms unter Linux mithilfe von Wine und PlayOnLinux wird in der Dokumentation hier beschrieben:
+
+XCP-ng Center InstallationLinux_
+
+.. _InstallationLinux: 'XCP-ng Center unter Linux installieren'_  
 
 
 Installiere das Programm durch einen Rechtsklick auf die MSI-Datei auf dem Windows-Rechner und 
@@ -331,7 +337,7 @@ vergebene IP-Adresse des XCP-Hosts sowie die Benutzerdaten an.
 
 
 Netzwerk einrichten
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 Jetzt muss das Netzwerk eingerichtet werden. Notiere Dir hierzu die Bezeichnungen
 und MAC-Adressen der eingebauten Netzwerkkarten. Diese findest Du unter der Reiterkarte ``NICs``.
@@ -357,7 +363,7 @@ Führe diese Schritte ebenfalls für die weitere Netze aus und ändere die Namen
 
 
 VMs importieren
----------------
+~~~~~~~~~~~~~~~
 
 Nachdem das Netzwerk korrekt eingerichtet wurde, können nun die VMs der linuxmuster.net 
 importiert werden.
@@ -443,7 +449,7 @@ VM im XCP-ng Center sehen können.
 
 
 VMs starten und aktualisieren
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Wähle im XCP-ng Center links die VM aus, die Du starten möchtest.
 Klicke danach oben in der Mnüleiste das Icon ``Start`` aus.
@@ -490,6 +496,205 @@ Für die weitere Einrichtung von linuxmuster.net für Deine Schule folge
 der Dokumentation unter:
 
 * :ref:`Installation und Erstkonfiguration <setup-using-selma-label>` 
+
+
+XCP-ng Center unter Linux installieren
+--------------------------------------
+
+XCP-ng Center ist eine Anwendung zur Administration des XCP-ng Virtualisierers, 
+die für den Betrieb unter Windows programmiert wurde. Um diese Verwaltungssoftware 
+betriebssystemunabhängig einzusetzen, nutzt Du die bereits vorkonfigurierte 
+virtuelle Maschine (VM) Xen Orchestra (XOA) und iomportierst diese in XCP-ng. 
+
+Weitere Hinweise findest Du unter 'Xen Orchestra (XOA)`_
+
+Für die Installtion unter Linux sind folgende Schritte notwendig:
+
+1. Installation einer aktuellen Wine Version unter Linux
+2. Installation von PlayOnLinux
+3. INstalation der aktuellen XCP-ng Center App via PlayOnLinux Plugin
+4. Verbindung zum XCP-ng Server via Port 80
+
+
+Installation von Wine
+~~~~~~~~~~~~~~~~~~~~~
+
+Zunächst muss Wine für das jeweils genutzte Linux-Derivat installiert werden. 
+Das Projekt ``Wine`` bietet hierzu eine Reihe an Hinweisen an. 
+Diese stehen ebenfalls für die jeweiligen Linux-Derivate zur Verfügung:
+
+- https://wiki.winehq.org/Wine_Installation_and_Configuration
+- https://wiki.winehq.org/Debian
+- https://wiki.debian.org/Wine
+- https://wiki.winehq.org/Ubuntu
+
+Hast Du für Dein Linux Wine installiert, ist nun PlayOnLinux zu installieren.
+
+Installation PlayOnLinux
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Für die jeweiligen Linux-Derivate stehen fertige Pakete für die Installation zur 
+Verfügung. Diese finden sich inkl. den Installationshinweisen unter InstPlayOnLinux_:
+
+.. _InstPlayOnLinux: <https://www.playonlinux.com/en/download.html>
+
+In der Regel verfügen die Linux-Derivate bereits über eingetragene Paketquellen 
+für PlayOnLinux. Über den Download-Bereich des Projekts sind die aktuellsten Pakete 
+zu erhalten.
+
+.. hint::
+
+   Es sollte wine 4.0 (i386) mit 32-Bit Unterstützung und PlayOnLinux 4.3.4 installiert 
+   sein. PlayOnLinux soll Windows 7 simulieren.
+
+
+Installation von XCP-ng Center
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Für die Installation von XCP-ng Center must Du vorab eine XCP-ng Center Version
+herunterladen, die für die Installation mit PlayOnLinux vorbereitet wurde. Es handelt
+sich hierbei um einen PlayOnLinux Container, der XCP-ng Center mit allen Abhängigkeiten 
+(IE8, .NET Framework 2.0 SP2 und .NET Framework 4.7.2) enthält.
+
+Die aktuellste Version_ lädst Du vorab herunter:
+
+.. _Version: <https://github.com/aldebaranbm/xencenter-playonlinux/releases/tag/2019-02-05>
+
+Danach rufst Du PlayOnLinux auf. Dort gehst Du im Menü auf den 
+``Menüpunkt -> Erweiterungen (Plugins) -> Untermenü PlayOnLinux Vault``.
+
+Es erscheint dann ein neues Fenster für die weitere Installation der Anwendung.
+
+.. figure:: media/xcp-center/playonlinux1.png
+   :align: center
+   :alt: PlayOnLinux Schritt 1
+
+Klicke hier auf ``Weiter``.
+
+Du gelangst zum nächsten Fenster, in dem Du angegeben kannst, ob Du eine Anwendung installieren
+oder deinstallieren möchtest.
+
+.. figure:: media/xcp-center/playonlinux2.png
+   :align: center
+   :alt: PlayOnLinux Schritt 2
+
+Wähle hier die Option ``Restore an applications...`` 
+und gehe auf ``Weiter``.
+
+Im nächsten Schritt must Du die Anwendung angeben, die zu installieren ist. 
+
+.. figure:: media/xcp-center/playonlinux3.png
+   :align: center
+   :alt: PlayOnLinux Schritt 3
+
+Hier must Du auf ``Durchsuchen`` klicken und dann im Dateisystem den bereits
+heruntergeladenen PlayOnLinux-Container mit XCP-ng Center angeben. Die Datei 
+weist die Dateierweiterung ``.polApp`` auf.
+
+.. figure:: media/xcp-center/playonlinux4.png
+   :align: center
+   :alt: PlayOnLinux Schritt 4
+
+Danach klickst Du auf ``Weiter``.
+
+.. figure:: media/xcp-center/playonlinux5.png
+   :align: center
+   :alt: PlayOnLinux Schritt 5
+
+Es wird nochmals eine Übersicht angezeigt, mit der zu installierenden Anwendung
+und dem erforderlichen Speicherplatz.
+
+.. figure:: media/xcp-center/playonlinux5.png
+   :align: center
+   :alt: PlayOnLinux Schritt 5
+
+Klicke für die Installation auf ``Weiter``.
+
+Der Installationfortschritt wird Dir angezeigt.
+
+.. figure:: media/xcp-center/playonlinux6.png
+   :align: center
+   :alt: PlayOnLinux Schritt 6
+
+Nach erfolgreicher Installtion siehst Du folgendes Fenster:
+
+.. figure:: media/xcp-center/playonlinux7.png
+   :align: center
+   :alt: PlayOnLinux Schritt 7
+
+Gehe auf ``Weiter``. Das Fenster wird dadurch geschlossen.
+
+
+Aufruf XCP-ng Center unter PlayOnLinux
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Die zuvor installierte XCP-ng Anwendung findest Du nun unter PlayOnLinux.
+
+.. figure:: media/xcp-center/playonlinux8.png
+   :align: center
+   :alt: PlayOnLinux Schritt 8
+
+Markiere die Anwendung und gehe links im Kontextmenü auf ``Ausführen``.
+
+Das Programm startet dann.
+
+Greife nun auf XCP-ng zu, indem zu als Server die IP + Portnummer angibst.
+Es funktioniert derzeit nur der Port 80. Ein Zugriff auf Port 443 ist derzeit 
+noch nicht möglich.
+
+.. figure:: media/xcp-center/xcp-center-wine-add-server.png
+   :align: center
+   :alt: XCP-Center Server hinzufügen
+
+Gebe hier die lokale IP des XCP-Hosts dann einen Doppelpunkt und die Portnummer an. 
+Z.B. ``192.168.199.59:80``
+
+.. note::
+   Es erfolgt somit kein verschlüsselter Zugriff auf den XCP-Host. Bitte unbedingt beachten !
+
+.. figure:: media/xcp-center/xcp-center-logged-in.png
+   :align: center
+   :alt: XCP-Center Server hinzufügen
+
+Um später XCP-ng unter Linux direkt vom Desktop aus aufrufen zu können, kannst Du in PlayOnLinux
+XCP-ng als Anwendung in der rechten Hälfte des Fenster markieren und links dann im 
+Kontextmenü den Eintrag ``Eintrag erstellen`` auswählen.
+
+Danach findet sich auf dem Desktop der gewünschte Starter-Eintrag.
+
+
+Mögliche Fehler mit PlayOnLinux
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Sollte nach Aufruf des Programm mit PlayOnLinux ein Fehlerfenster erscheinen,
+so gibt es verschiedene Fehlerquellen.
+
+.. figure:: media/xcp-center/playonlinuxerror1.png
+   :align: center
+   :alt: PlayOnLinux Fehler 1
+
+Es ist häufiger der Fall, dass Wine in einer 64-Bit Umgebung installiert wurde und 
+nur 64-Bit Programme lauffähig sind. XCP-ng Center benötigt alelrdings 32-Bit 
+Laufzeitumgebungen für Wine.
+
+.. figure:: media/xcp-center/playonlinuxerror2.png
+   :align: center
+   :alt: PlayOnLinux Fehler 2
+
+In diesem Fall kannst Du einfach wine32 nachinstallieren, indem Du root 
+auf der Eingabekonsole für Debian - Derivate angibst:
+
+  sudo apt-get install wine32
+
+Sollten danach immer noch Fehler auftreten, so solltest Du
+die Wine-Istallation und die PlayOnLinux - Installation aktualisieren_.
+
+.. _aktualisieren: <http://tipsonubuntu.com/2019/02/01/install-wine-4-0-ubuntu-18-10-16-04-14-04/>
+
+Sollte es weiterhin Probleme geben, so must Du ggf. einen Rebuild erstellen. 
+Hinweise hierzu erhälst Du unter_:
+
+.. _unter: <https://github.com/aldebaranbm/xencenter-playonlinux>
 
 
 Xen Orchestra (XOA)
