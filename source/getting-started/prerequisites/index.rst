@@ -49,17 +49,15 @@ der Einsatzszenarien abzudecken:
 |Festplatte           | 120 GB SSD                          |
 +---------------------+-------------------------------------+
 |NIC                  | mind. 2 (intern + extern),          |
-|                     | oder  3 (inter + extern + WLAN)     |
+|                     | oder  3 (intern + extern + WLAN)    |
 +---------------------+-------------------------------------+
 
 Weitere Hinweise zu möglichen Hardwareanforderungen bei unterschiedlichen
-Einsatzszenarien finden sich hier_.
-
-.. _hier: https://wiki.opnsense.org/manual/hardware.html#hardware-requirements
-
+Einsatzszenarien finden sich `hier`_.
 Hinweise zu den Anforderungen von FreeBSD bzw. zur Kompatibilität mit 
 eingesetzten Hardware-Komponenten finden sich unter der `HCL - Hardware Compatibility List`_.
 
+.. _hier: https://wiki.opnsense.org/manual/hardware.html#hardware-requirements
 .. _HCL - Hardware Compatibility List: https://www.freebsd.org/releases/11.1R/hardware.html
 
 
@@ -347,13 +345,13 @@ von Grund auf innerhalb (anderer) Virtualisierungen benötigt man
       0b3490de9839c3918e35f01aa8a05c9ae286fc94 *ubuntu-18.04-live-server-amd64.iso
 
    Dies so erhalten Prüfsumme muss mit von Ubuntu zur Verfügung gestellten `Summe <http://releases.ubuntu.com/bionic/SHA1SUMS>`_ (Zeile ubuntu-18.04-live-server-amd64.iso) übereinstimmen.
-
-Checkliste
-==========
-
-Nutzen Sie die :download:`Checkliste
-<./media/preamble/checklist/checklist.pdf>`, um alle während der
-Installation gemachten Einstellungen festzuhalten. Es handelt sich um
-ein PDF-Formular, Sie können es also auch am PC ausfüllen. Halten Sie
-diese Checkliste bereit, wenn Sie den Telefon-Support in Anspruch
-nehmen wollen.
+.. 
+  Checkliste
+  ==========
+  
+  Nutzen Sie die :download:`Checkliste
+  <./media/preamble/checklist/checklist.pdf>`, um alle während der
+  Installation gemachten Einstellungen festzuhalten. Es handelt sich um
+  ein PDF-Formular, Sie können es also auch am PC ausfüllen. Halten Sie
+  diese Checkliste bereit, wenn Sie den Telefon-Support in Anspruch
+  nehmen wollen.
