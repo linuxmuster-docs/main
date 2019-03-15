@@ -27,7 +27,7 @@ einsatzbereite Umgebung bestehend aus
 
 * einem Host (XCP-ng) für alle virtuellen Maschinen, 
 * einer Firewall (OPNSense)  
-* einem Serverm (linuxmuster.net)
+* einem Server (linuxmuster.net)
 * einer VM (XOA) zur web-basierten Verwaltung des Virtualisierungs-Hosts
 
 Ähnliche, nicht dokumentierte, Installationen gelten für einen
