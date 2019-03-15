@@ -89,7 +89,9 @@ dieses Vorgehen entsprechend anzuwenden.
 
 Die ISO-Datei muss heruntergeladen und ein bootfähiger USB-Stick erstellt werden.
 
-1. Herunterladen: `XCP Webseite <https://xcp-ng.org/#easy-to-install>`_
+1. Herunterladen: XCP-Webseite_
+
+.. _XCP-Webseite: https://xcp-ng.org/#easy-to-install
 
 2. USB-Stick erstellen: In das Download-Verzeichnis wechseln, Buchstaben für 
 USB-Stick unter Linux ermitteln, X durch den korrekten Buchstaben ersetzen und 
@@ -304,7 +306,7 @@ Lade Dir das Windows-Programm zur Verwaltung von der Seite des XCP-ng Projekts h
 
 XCP-ng Center AktuelleVersion_
 
-.. _AktuelleVersion: <https://github.com/xcp-ng/xenadmin/releases>
+.. _AktuelleVersion: https://github.com/xcp-ng/xenadmin/releases
 
 Die Installation des Programms unter Linux mithilfe von Wine und PlayOnLinux wird in der Dokumentation hier beschrieben:
 
@@ -536,7 +538,7 @@ Installation PlayOnLinux
 Für die jeweiligen Linux-Derivate stehen fertige Pakete für die Installation zur 
 Verfügung. Diese finden sich inkl. den Installationshinweisen unter InstPlayOnLinux_:
 
-.. _InstPlayOnLinux: <https://www.playonlinux.com/en/download.html>
+.. _InstPlayOnLinux: https://www.playonlinux.com/en/download.html
 
 In der Regel verfügen die Linux-Derivate bereits über eingetragene Paketquellen 
 für PlayOnLinux. Über den Download-Bereich des Projekts sind die aktuellsten Pakete 
@@ -558,7 +560,7 @@ sich hierbei um einen PlayOnLinux Container, der XCP-ng Center mit allen Abhäng
 
 Die aktuellste Version_ lädst Du vorab herunter:
 
-.. _Version: <https://github.com/aldebaranbm/xencenter-playonlinux/releases/tag/2019-02-05>
+.. _Version: https://github.com/aldebaranbm/xencenter-playonlinux/releases/tag/2019-02-05
 
 Danach rufst Du PlayOnLinux auf. Dort gehst Du im Menü auf den 
 ``Menüpunkt -> Erweiterungen (Plugins) -> Untermenü PlayOnLinux Vault``.
@@ -689,49 +691,169 @@ auf der Eingabekonsole für Debian - Derivate angibst:
 Sollten danach immer noch Fehler auftreten, so solltest Du
 die Wine-Istallation und die PlayOnLinux - Installation aktualisieren_.
 
-.. _aktualisieren: <http://tipsonubuntu.com/2019/02/01/install-wine-4-0-ubuntu-18-10-16-04-14-04/>
+.. _aktualisieren: http://tipsonubuntu.com/2019/02/01/install-wine-4-0-ubuntu-18-10-16-04-14-04/
 
 Sollte es weiterhin Probleme geben, so must Du ggf. einen Rebuild erstellen. 
 Hinweise hierzu erhälst Du unter_:
 
-.. _unter: <https://github.com/aldebaranbm/xencenter-playonlinux>
+.. _unter: https://github.com/aldebaranbm/xencenter-playonlinux
 
 
-Xen Orchestra (XOA)
--------------------
+Xen Orchestra Appliance(XOA)
+----------------------------
 
-:fixme: Abb. und Text sind zu überarbeiten anzupassen 
+Xen Orchestra Appliance (XOA_) bietet die Möglichkeit, die Virtualisierungsumgebung XCP-ng webbasiert und plattformunabhängig zu administrieren. Die bereitgestellten
+Funktionen entsprechen denen des Programms XCP-ng Center für Windows und gehen hinsichtlich der Backups darüber hinaus. Es können via Borwserzugriff VMs importiert, 
+exportiert, neue VMs erstellt und verschoben werden. Zudem lassen sich so plattformunabhängig verschiedene Arten von Backups auf unterschiedlichen Datenträgern erstellen
+und Zeitpläne zur automatisierten Erstellung der Backups definieren und aktivieren. 
+
+.. _XOA: https://xen-orchestra.com
+
+Xen Orchestra wird von der französischen Firma vates_ entwickelt und supportet. Diese stellt XOA als Open Source zur Verfügung. Der Quellcode findet sich auf github_.
+
+.. _vates: https://vates.fr/
+
+.. _github: https://github.com/vatesfr/xen-orchestra
+
+linuxmuster.net hat gemäß dieser Anleitung_ eine XOA-VM zum Einsatz auf der Virtualisierungsumgebung XCP-ng auf Basis von Ubuntu 18.04 LTS mit Anpassungen für 
+linuxmuster v7 erstellt. Die VM wurde ``from the sources`` erstellt, und für den Betrieb mit linuxmuster.net auf XCP-ng angepasst.
+
+.. _Anleitung: https://xen-orchestra.com/docs/from_the_sources.html
 
 .. note::
- Um XOA nutzen zu können, muss die xoa.lmn7 importiert sein!
+ Um XOA VM nutzen zu können, muss diese zuerst unter XCP-ng importiert worden sein!
 
-Öffnen Sie einen Webbrowser und wechseln auf die Seite http://10.0.0.4. Geben Sie den User ``admin@admin.net`` mit dem Passwort ``Muster!`` ein und klicken Sie auf Login.
 
-.. figure:: media/xoa/xoa-setup-part1.png
+Import der VM
+~~~~~~~~~~~~~
+
+Lade zuerst die vorbereitete XOA-VM für linuxmuster.net als ZIP-Archiv_ herunter. Entpacke dieses Archiv lokal (ca. 6 GiB) und importiere dann die VM wie bereits zuvor 
+im Unterkapitel_ ``VMs importieren`` beschrieben.  
+
+.. _ZIP-Archiv: http://fleischsalat.linuxmuster.org/xva/lmn7-xoa-2019-03-08.zip
+
+.. _Unterkapitel: http://docs.linuxmuster.net/de/v7/appendix/install-on-xcp-ng/index.html#vms-importieren
+
+Anpassung der VM
+~~~~~~~~~~~~~~~~
+
+Einige Einstellungen der vorkonfigurierten VM sind nach dem Import auf die eigene Virtualisierungsumgebung anzupassen. Öffne hierzu einen Webbrowser und öffne die Seite 
+http://10.0.0.4 oder https://10.0.0.4. Der PC, auf dem der Browser geöffnet wird, muss sich im Netz 10.0.0.0/24 (grünes Netz - internes LAN der linuxmuster.net) befinden,
+damit eine Verbindung möglich ist. Wählst Du den verschlüsselten Zugriff, so bestätige die Zertifikatswarnung, da ein selbst erstelltes Zertifikat für XOA ertsellt und 
+konfiguriert wurde.
+
+Es erscheint folgende Anmeldemaske:
+ 
+.. figure:: media/xoa/xoa-vm-https-login.png
    :align: center
-   :alt: XOA Schritt 1
+   :alt: XOA Login - Schritt 1
 
-Klicken Sie auf das Kachelsymbol rechts oben und wählen Settings.
+Gebe hier den User ``admin@admin.net`` mit dem Passwort ``Muster!`` ein und klicke auf ``Login``.
 
-.. figure:: media/xoa/xoa-setup-part1.png
+Nach erfolgreicher Anmeldung wirst Du darauf hingewiesen, dass Du XOA ``from Sources`` nutzt und Du daher kein Support und keine Updates erhälst.
+
+.. figure:: media/xoa/xoa-login-from-sources.png
    :align: center
-   :alt: XOA Schritt 2
+   :alt: XOA Login Note - Schritt 2
 
-Tragen Sie links die IP-Adresse ``10.X.X.X`` ein und das Passwort, das Sie vergeben haben. Klicken Sie zum Übernehmen auf ``Save``.
+Bestätige dies, indem Du ``Ok`` klickst.
 
-.. figure:: media/xoa/xoa-setup-part1.png
+Danach siehst Du das ``Welcome-Fenster``. 
+
+.. figure:: media/xoa/xoa-vm-first-screen.png
    :align: center
-   :alt: XOA Schritt 3
+   :alt: XOA Welcome - Schritt 3
 
-Wenn Sie mit der Maus über eine VM fahren erscheinen direkt einige Schaltflächen. Klicken Sie auf VM Console um eine Maschine zu bedienen.
+Du must nun den XCP-ng Host oder den XCP-ng Pool angeben, damit XOA hierauf zugreifen und die Ressourcen verwalten kann.
+Wähle den Eintrag ``Add Server``.
 
-.. figure:: media/xoa/xoa-setup-part1.png
+Es erscheint dann das Einstellungs-Fenster für die Server (Settings).
+
+.. figure:: media/xoa/xoa-vm-add-xcp-ng-host.png
    :align: center
-   :alt: XOA Schritt 4
+   :alt: XOA Server Settings - Schritt 4
 
-Sie können nun die Virtuelle Maschine bedienen.
+Trage den Hostnamen, die IP-Adresse ``10.X.X.X`` ein, die Du dem XCP-ng Server gegeben hast und gebe dahinter - durch einen Doppelpunkt getrennt - den Port an.
+I.d.R. ist dies Port 443, der zu nutzen ist. XCP-ng nutzt hierbei self-signed certificates. Trage den Benutzernamen des root-Benutzers von XCP-ng sowie sein Kennwort ein.
+Setze zudem den Schiebeschalter nach rechts - auf grün -, damit nicht authorisierte Zertifikate - also self-signed certificates - akzeptiert werden.
+Klicke auf ``Connect``. Es wird nun von der XOA-VM die Verbindung zum XCP-ng Host aufgebaut und gespeichert.
 
-.. figure:: media/xoa/xoa-setup-part1.png
+.. note::
+   Falls Du einen XCP-ng Pool mit mehreren Servern und Speicherressourcen definiert hast, must Du hier nur den Pool-Master als Server eintragen. 
+   Alle weiteren Server und Ressourcen werden dann automatisch erkannt.
+
+Ändere nun das voreingestellte Kennwort für den root-Benutzer (admin@admin.net) der XOA-VM. Klicke hierzu auf der linken Menüleist ganz unten auf der Personensymbol.
+
+.. figure:: media/xoa/xoa-edit-my-settings.png
    :align: center
-   :alt: XOA Schritt 5
+   :alt: XOA Edit My Settings - Schritt 5
+
+Danach Konetxmenü für den Bentuzer, in dem Du das Kennwort ändern und weitere Einstellungen vornehmen kannst.
+
+.. figure:: media/xoa/xoa-edit-password.png
+   :align: center
+   :alt: XOA Edit Password - Schritt 6
+
+Trage das bisherige Kennwort ``Muster!`` sowie zweimal Dein neunes Kennwort ein, stelle die Sprache ein und bestätige die Änderungen mit einem Klick auf ``OK``.
+
+SSH-Verbindung zur VM
+~~~~~~~~~~~~~~~~~~~~~
+
+Um sich erstmalig mit der XOA-VM via SSH zu verbinden, gibst Du in einem Terminal ein:
+
+.. code::
+
+   ssh -p 22 muster@10.0.0.4
+
+Bestätige den fingerprint mit ``yes``und gebe das Kennwort ``Muster!`` ein.
+
+Gebe auf der Konsole ``passwd`` ein und ändere der Kennwort für den Benutzer ``muser``.
+
+Wechsle auf der Konsole zum root-Benutzer, indem Du als Benutzer ``muster`` den Befehl ``sudo su`` angibst.
+Du wirst nach dem Kennwort des Muster-Nutzers gefragt. Gebe das vorher geänderte Kennwort an. Du kannst nun als Benutzer ``root`` arbeiten.
+
+Im Verzeichnis ``/root`` findet sich eine README-Datei mit Hinweisen zur VM sowie weitere Skripte zur Aktualisierung der XOA-Installation.
+
+Update der XOA-Installation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Um die XOA-Installation zu aktualisieren, findest Du ein Skript, das Du als root-Benutzer ausführen must.
+
+Rufe das Skript ``/root/xo-update.sh`` auf. Die XOA-Installation from Sources wird aktualisiert. Hierbei wird aber die von linuxmuster.net angepasste
+Konfigurationsdatei des xo-servers wieder überschrieben. Daher must Du nach dem Update noch die angepasste Konfigurationsdatei des xo-servers wieder zurückspielen. 
+Diese Datei liegt unter ``/root/config.toml.backup`` und sollte dort niemals gelöscht werden!
+Für die Rücksicherung der Konfigurationsdatei findest Du unter ``root/restore-xo-config.sh`` ein Skript, das Du als Benutzer ``root`` ausführen must. Die angepasste 
+Konfigurationsdatei wird so an den korrekten Ort zurückgeschrieben und danach wir der xo-server neu gestartet.
+
+Weitere Hinweise findest Du unter ``root/README``.
+
+Backups: Backup NG
+~~~~~~~~~~~~~~~~~~
+
+Um mithilfe von XOA Backups zu definieren, wählst Du in der GUI der XOA-VM links im Menü den Eintrag ``Backup NG``. Dies ist der Eintrag, um Backups für XCP-ng zu erstellen.
+Der Menüeintrag ``Backup`` existiert aufgrund der Abwärtskompatibilität zu XenServer -Installationen.
+
+Grundlegende Erläuterungen zu den verschiedenen Backup-Möglichkeiten_ mit XOA findest Du im Handbuch zu XOA. Hier gibt es ebenfalls Einführungsvideos.
+
+.. _Backup-Möglichkeiten: https://xen-orchestra.com/docs/backups.html
+
+Wurden Backups definiert und wurden diese bereits ausgeführt, dann kannst Du deren Status und ggf. zusätzliche Backupinformationen aufrufen.
+
+Dies kann dann z.B. wie in folgender Abbildung aussehen:
+
+.. figure:: media/xoa/xoa-backup-ng.png
+   :align: center
+   :alt: XOA Backup NG - Status
+
+
+
+
+
+
+
+
+
+
+
+
 
