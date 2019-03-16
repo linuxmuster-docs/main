@@ -36,6 +36,14 @@ Vorgehen
 2. Danach importiert man diese Daten auf einem Zielsystem (Version
    7.x) und rekonstruiert dort Benutzer, Passwörter, Projekte und
    Geräte, etc.
+
+3. Es müssen manuell die Verzeichnisse ``/home/share``,
+   ``/home/teachers`` und ``/home/students`` im Zielsystem gemountet
+   werden (z.B. über eine externe Festplatte und bind-mount,
+   Netzwerk-mount, etc.) und importiert werden.
+
+4. Die Daten von LINBO können ebenso wie Benutzerdaten synchronisiert
+   werden.
  
 Export der Daten unter linuxmuster.net 6.x
 ==========================================
@@ -261,117 +269,136 @@ Zeige einen oder mehrere Benutzer an
    server ~ # sophomorix-user -i --user name
    server ~ # sophomorix-user -i --user na*
 
-5. Create script to add administrators to classes and run it
-------------------------------------------------------------
+5. Klassenadministratoren importieren
+-------------------------------------
+
+Wie bisher
 
 .. code-block:: console
 
-   # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --create-class-adminadd-script
-   # /root/sophomorix-vampire/sophomorix-vampire-classes-adminadd.sh
+   server ~ # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --create-class-adminadd-script
+   server ~ # /root/sophomorix-vampire/sophomorix-vampire-classes-adminadd.sh
 
-6. Create project script and run it
------------------------------------
-
-This step will create all projects.
-
-.. code-block:: console
-
-   # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --create-project-script
-   # /root/sophomorix-vampire/sophomorix-vampire-projects.sh
-
-Tests
-~~~~~
-
-Show one project or more:
-
-.. code-block:: console
-
-   # sophomorix-project -i
-   # sophomorix-project -i -p <name>/<p_name>
-   # sophomorix-project -i -p <p_na*>
-
-7. Copy configuration files into new server
--------------------------------------------
-
-This will modify some files.
-
-You must run the script TWICE! (Guess its a bug)
-
-.. code-block:: console
-
-   # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --restore-config-files
-
-You should then edit school.conf to to your liking (This is not automatically updated!)
-
-8. Do a sophomorix run to update utf8, webui-permissions and maybe more
------------------------------------------------------------------------
-
-.. code-block:: console
-
-   # sophomorix-check
-
-Verify that there are no users to be added:
-
-.. code-block:: console
-
-   # sophomorix-add -i
-
-Update user names to utf8, set sophomorixWebuiPermissionsCalculated, ... maybe more
-
-.. code-block:: console
-
-   # sophomorix-update
-
-Delete overdue users (according to your settings in school.conf)
-
-.. code-block:: console
-
-   # sophomorix-kill
-
-Tests
-~~~~~
-
-Check if special chars are imported into AD (if you have special chars in students.csv and teachers.csv):
-
-.. code-block:: console
-
-   # sophomorix-user -i -u <user_with_umlaut>
-
-9. Add the workstations
+6. Projekte importieren
 -----------------------
 
+Im nachfolgenden Schritt werden alle Projekte importiert.
+
 .. code-block:: console
 
-   # linuxmuster-import-devices --dry-run
-   # linuxmuster-import-devices
+   server ~ # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --create-project-script
+   server ~ # /root/sophomorix-vampire/sophomorix-vampire-projects.sh
 
 Tests
 ~~~~~
 
-Test if workstations are there:
+Zeige ein oder mehrere Projekte an
 
 .. code-block:: console
 
-   # sophomorix-device -d firewall -i
-   # sophomorix-device -r no-pxe -i (rooms Bug: zeigt auch hardwareclass)
+   server ~ # sophomorix-project -i
+   server ~ # sophomorix-project -i -p name | p_name
+   server ~ # sophomorix-project -i -p p_na*
 
-Test if dns works:
+7. Konfigurationsdateien importieren
+------------------------------------
+
+Mit folgendem Schritt werden wichtige Konfigurationsdateien verändert. 
+
+Das Skript muss zwei Mal ausgeführt werden.
 
 .. code-block:: console
 
-   # sophomorix-device --dns-test
+   server ~ # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --restore-config-files
+   ...
+   server ~ # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --restore-config-files
 
-10. Run some tests with users and groups
-----------------------------------------
+.. hint::
+
+   Jetzt solltest du noch die Datei ``school.conf`` bearbeiten, denn das
+   wird nicht automatisch gemacht.
+
+8. Updates diverser Einstellungen
+---------------------------------
+
+Grundsätzlicher Durchlauf von ``sophomorix-check`` muss funktionieren:
 
 .. code-block:: console
 
-   # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --verify-uid
+   server ~ # sophomorix-check
 
-11. Syncing user data with rsync
+Stelle sicher, dass keine weiteren Benutzer hinzugefügt werden müssen:
+
+.. code-block:: console
+
+   server ~ # sophomorix-add -i
+
+Mit folgendem Schritt werden
+
+- Benutzernamen in UTF-8 konvertiert (ab jetzt sind Umlaute und Sonderzeichen in Namen möglich),
+- Zugriffsrechte in SELMA gesetzt
+
+.. code-block:: console
+
+   server ~ # sophomorix-update
+
+Lösche die Benutzer, die nach deinen Einstellungen in ``school.conf`` fällig werden.
+
+.. code-block:: console
+
+   server ~ # sophomorix-kill
+
+Tests
+~~~~~
+
+So kann man überprüfen, ob Sonderzeichen in ``students.csv`` oder ``teachers.csv`` in das System übernommen wurden:
+
+.. code-block:: console
+
+   server ~ # sophomorix-user -i -u <user_with_umlaut>
+
+9. Rechner importieren
+----------------------
+
+.. code-block:: console
+
+   server ~ # linuxmuster-import-devices --dry-run
+   server ~ # linuxmuster-import-devices
+
+Tests
+~~~~~
+
+Überprüfe, ob einzelne Rechner vorhanden sind:
+
+.. code-block:: console
+
+   server ~ # sophomorix-device -d firewall -i
+   server ~ # sophomorix-device -r no-pxe -i
+
+:fixme: (rooms Bug: zeigt auch hardwareclass)
+
+Überprüfe ob die Namensauflösung funktioniert:
+
+.. code-block:: console
+
+   server ~ # sophomorix-device --dns-test
+
+10. Überprüfung von Benutzern und Gruppen
+-----------------------------------------
+
+Benutzer und Gruppen können mit folgendem Skript getestet werden:
+
+.. code-block:: console
+
+   server ~ # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --verify-uid
+
+11. Synchronisiere Benutzerdaten
 --------------------------------
 
-Mount the old server home somewhere (for example to /mnt), so you can see:
+Zunächst müssen über irgendein Verfahren die Verzeichnisse
+``/home/share``, ``/home/teachers`` und ``/home/students`` vom
+Quellsystem im Zielsystem unter einem Pfad (hier im Beispiel:
+``/mnt``) erscheinen.
 
 .. code-block:: console
 
@@ -379,51 +406,55 @@ Mount the old server home somewhere (for example to /mnt), so you can see:
    /mnt/home/students
    /mnt/home/teachers
 
-and specify your mount directory as: --path-oldserver /mnt
+:fixme: Check ob auch die Verlinkung von einer externen Festplatte funktioniert.
 
-Do some tests for a single student, teacher, class, project:
+Der Pfad im Zielsystem wird über das Kommandozeilenargument
+``--path-oldserver /mnt`` an nachfolgende Skripte übergeben.
 
-.. code-block:: console
-
-   # sophomorix-vampire --rsync-student-home <student> --path-oldserver /mnt
-   # sophomorix-vampire --rsync-teacher-home <teacher> --path-oldserver /mnt
-   # sophomorix-vampire --rsync-class-share <class> --path-oldserver /mnt
-   # sophomorix-vampire --rsync-project-share <project> --path-oldserver /mnt
-
-Sync all data of students, teachers, classe, projects:
+Für einzelne Schüler, Lehrer, Klassen und Projekte sollte man ein
+Synchronisieren testen: 
 
 .. code-block:: console
 
-   # sophomorix-vampire --rsync-all-student-homes --path-oldserver /mnt
-   # sophomorix-vampire --rsync-all-teacher-homes --path-oldserver /mnt
-   # sophomorix-vampire --rsync-all-class-shares --path-oldserver /mnt
-   # sophomorix-vampire --rsync-all-project-shares --path-oldserver /mnt
+   server ~ # sophomorix-vampire --rsync-student-home student --path-oldserver /mnt
+   server ~ # sophomorix-vampire --rsync-teacher-home teacher --path-oldserver /mnt
+   server ~ # sophomorix-vampire --rsync-class-share class --path-oldserver /mnt
+   server ~ # sophomorix-vampire --rsync-project-share project --path-oldserver /mnt
 
-12. Linbo :
------------
-
-Sync linbo data:
+Jetzt können alle Schüler, Lehrer, Klassen und Projekte in einem Schritt importiert werden
 
 .. code-block:: console
 
-   # sophomorix-vampire --rsync-linbo --path-oldserver /mnt
+   server ~ # sophomorix-vampire --rsync-all-student-homes --path-oldserver /mnt
+   server ~ # sophomorix-vampire --rsync-all-teacher-homes --path-oldserver /mnt
+   server ~ # sophomorix-vampire --rsync-all-class-shares --path-oldserver /mnt
+   server ~ # sophomorix-vampire --rsync-all-project-shares --path-oldserver /mnt
 
-Reinstall linbo to update stuff:
+12. Synchronisiere LINBO-Daten
+------------------------------
+
+Alle Daten von LINBO können ebenso wie die Benutzerdaten aus dem
+Verzeichnis ``/var/linbo`` importiert werden. Auch hier wird
+beispielsweise der Inhalt von ``/var/linbo`` in das Zielsystem nach
+``/mnt`` eingebunden.
+
+:fixme: wie funktioniert das? ``/mnt/linbo`` ? oder direkt nach ``/mnt``
 
 .. code-block:: console
 
-   # apt-get --reinstall install linuxmuster-linbo7 linuxmuster-linbo-common7
+   server ~ # sophomorix-vampire --rsync-linbo --path-oldserver /mnt
 
-13. What else to do by hand
----------------------------
+Jetzt muss LINBO erneut installiert werden, um Änderungen,
+die nur unter linuxmuster.net v7 existieren, importiert werden
 
-- add descriptions to projects
-- change role of devices
-- set quota
+.. code-block:: console
 
-Open Questions
-==============
+   server ~ # apt-get --reinstall install linuxmuster-linbo7 linuxmuster-linbo-common7
 
-- should we move quota also (sum up the + values and apply it to the school?)
-- Is there any need to import the dumped data in a certain school?
+13. Dinge, die manuell gemacht werden müssen
+--------------------------------------------
+
+- Beschreibungen zu Projekten hinzufügen
+- Die Rolle von Geräten festlegen
+- Quota für die Benutzer (neu) festlegen
 
