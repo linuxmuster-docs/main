@@ -384,7 +384,7 @@ Tests
    server ~ # sophomorix-device --dns-test
 
 10. Überprüfung von Benutzern und Gruppen
-----------------------------------------
+-----------------------------------------
 
 Benutzer und Gruppen können mit folgendem Skript getestet werden:
 
