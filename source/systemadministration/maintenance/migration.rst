@@ -113,9 +113,6 @@ mit Version 7.x. Um die exportierten Daten wieder zu löschen, führe ``sophomor
 Import der Daten unter linuxmuster.net 7.x
 ==========================================
 
-sophomorix-vampire installieren
--------------------------------
-
 Installiere die ``sophomorix-vampire``-Skripte über
 
 .. code-block:: console
@@ -129,11 +126,8 @@ die im folgenden durchgeführt werden. Beispielhaft führt das Skript
 ``sophomorix-vampire-example`` alle Schritte für eine typische Schule
 durch.
 
-Migration Schritt für Schritt
------------------------------
-
 1. Analyse der exportierten Daten
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------
 
 Die folgende Analyse zeigt
 
@@ -152,7 +146,7 @@ Die folgende Analyse zeigt
   z.B. Warnungen, welche Dateien überschrieben werden
 
 2. Migration der Klassen
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 Alle Klassen werden vor den Benutzern migriert, inklusive eventueller
 Umbenennungen der Klassennamen wie in der Analyse angezeigt. Dafür
@@ -171,7 +165,7 @@ Jetzt können die neu erstellten Klassen überprüft werden, beispielsweise
    server ~ # sophomorix-class -i --class teachers
 
 3. Migration der Benutzer
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 Zunächst muss die Passwortlängen und -komplexitätsüberprüfung von
 Samba 4 so eingestellt werden, dass bisherige einfache Passwörter
@@ -226,7 +220,210 @@ Die Aufnahme
 
 - gibt den Benutzern keinerlei Rechte für SELMA.
 
-3. Passworthashes importieren
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:fixme: Werden weiter unten jetzt Rechte gesetzt oder nicht?
 
+4. Passworthashes importieren
+-----------------------------
+
+Die mit Hash codierten Passwörter werde mit folgendem Befehl
+importiert und sollte keine Fehler erzeugen
+
+.. code-block:: console
+
+   server ~ # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --import-user-password-hashes
+   ...
+   0 ERRORS:
+
+Jetzt müssen die standardmäßig komplexen Passwörter wieder aktiviert werden
+
+.. code-block:: console
+
+   server ~ # samba-tool domain passwordsettings set --complexity=default
+   server ~ # samba-tool domain passwordsettings set --min-pwd-length=default
+
+Tests
+~~~~~
+
+:fixme: bisherigen? oder den neuen?
+	
+Abhängig von den bisherigen Passwortregeln werden nicht mehr alle
+Erstpasswörter nach den neuen Regeln funktionieren
+
+.. code-block:: console
+
+   server ~ # sophomorix-passwd --test-firstpassword
+
+Zeige einen oder mehrere Benutzer an
+
+.. code-block:: console
+
+   server ~ # sophomorix-user -i
+   server ~ # sophomorix-user -i --user name
+   server ~ # sophomorix-user -i --user na*
+
+5. Create script to add administrators to classes and run it
+------------------------------------------------------------
+
+.. code-block:: console
+
+   # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --create-class-adminadd-script
+   # /root/sophomorix-vampire/sophomorix-vampire-classes-adminadd.sh
+
+6. Create project script and run it
+-----------------------------------
+
+This step will create all projects.
+
+.. code-block:: console
+
+   # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --create-project-script
+   # /root/sophomorix-vampire/sophomorix-vampire-projects.sh
+
+Tests
+~~~~~
+
+Show one project or more:
+
+.. code-block:: console
+
+   # sophomorix-project -i
+   # sophomorix-project -i -p <name>/<p_name>
+   # sophomorix-project -i -p <p_na*>
+
+7. Copy configuration files into new server
+-------------------------------------------
+
+This will modify some files.
+
+You must run the script TWICE! (Guess its a bug)
+
+.. code-block:: console
+
+   # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --restore-config-files
+
+You should then edit school.conf to to your liking (This is not automatically updated!)
+
+8. Do a sophomorix run to update utf8, webui-permissions and maybe more
+-----------------------------------------------------------------------
+
+.. code-block:: console
+
+   # sophomorix-check
+
+Verify that there are no users to be added:
+
+.. code-block:: console
+
+   # sophomorix-add -i
+
+Update user names to utf8, set sophomorixWebuiPermissionsCalculated, ... maybe more
+
+.. code-block:: console
+
+   # sophomorix-update
+
+Delete overdue users (according to your settings in school.conf)
+
+.. code-block:: console
+
+   # sophomorix-kill
+
+Tests
+~~~~~
+
+Check if special chars are imported into AD (if you have special chars in students.csv and teachers.csv):
+
+.. code-block:: console
+
+   # sophomorix-user -i -u <user_with_umlaut>
+
+9. Add the workstations
+-----------------------
+
+.. code-block:: console
+
+   # linuxmuster-import-devices --dry-run
+   # linuxmuster-import-devices
+
+Tests
+~~~~~
+
+Test if workstations are there:
+
+.. code-block:: console
+
+   # sophomorix-device -d firewall -i
+   # sophomorix-device -r no-pxe -i (rooms Bug: zeigt auch hardwareclass)
+
+Test if dns works:
+
+.. code-block:: console
+
+   # sophomorix-device --dns-test
+
+10. Run some tests with users and groups
+----------------------------------------
+
+.. code-block:: console
+
+   # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --verify-uid
+
+11. Syncing user data with rsync
+--------------------------------
+
+Mount the old server home somewhere (for example to /mnt), so you can see:
+
+.. code-block:: console
+
+   /mnt/home/share
+   /mnt/home/students
+   /mnt/home/teachers
+
+and specify your mount directory as: --path-oldserver /mnt
+
+Do some tests for a single student, teacher, class, project:
+
+.. code-block:: console
+
+   # sophomorix-vampire --rsync-student-home <student> --path-oldserver /mnt
+   # sophomorix-vampire --rsync-teacher-home <teacher> --path-oldserver /mnt
+   # sophomorix-vampire --rsync-class-share <class> --path-oldserver /mnt
+   # sophomorix-vampire --rsync-project-share <project> --path-oldserver /mnt
+
+Sync all data of students, teachers, classe, projects:
+
+.. code-block:: console
+
+   # sophomorix-vampire --rsync-all-student-homes --path-oldserver /mnt
+   # sophomorix-vampire --rsync-all-teacher-homes --path-oldserver /mnt
+   # sophomorix-vampire --rsync-all-class-shares --path-oldserver /mnt
+   # sophomorix-vampire --rsync-all-project-shares --path-oldserver /mnt
+
+12. Linbo :
+-----------
+
+Sync linbo data:
+
+.. code-block:: console
+
+   # sophomorix-vampire --rsync-linbo --path-oldserver /mnt
+
+Reinstall linbo to update stuff:
+
+.. code-block:: console
+
+   # apt-get --reinstall install linuxmuster-linbo7 linuxmuster-linbo-common7
+
+13. What else to do by hand
+---------------------------
+
+- add descriptions to projects
+- change role of devices
+- set quota
+
+Open Questions
+==============
+
+- should we move quota also (sum up the + values and apply it to the school?)
+- Is there any need to import the dumped data in a certain school?
 
