@@ -451,16 +451,10 @@ die nur unter linuxmuster.net v7 existieren, importiert werden
 
    server ~ # apt-get --reinstall install linuxmuster-linbo7 linuxmuster-linbo-common7
 
-13. What else to do by hand
----------------------------
+13. Dinge, die manuell gemacht werden müssen
+--------------------------------------------
 
-- add descriptions to projects
-- change role of devices
-- set quota
-
-Open Questions
-==============
-
-- should we move quota also (sum up the + values and apply it to the school?)
-- Is there any need to import the dumped data in a certain school?
+- Beschreibungen zu Projekten hinzufügen
+- Die Rolle von Geräten festlegen
+- Quota für die Benutzer (neu) festlegen
 
