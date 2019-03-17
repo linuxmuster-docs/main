@@ -25,8 +25,8 @@ Nach der Installation gemäß dieser Anleitung erhältst du eine
 einsatzbereite Umgebung bestehend aus
 
 * einem Host (KVM) für alle virtuellen Maschinen, 
-* einer Firewall (OPNSense) und 
-* eines Servers (linuxmuster.net)
+* einer Firewall (OPNSense für linuxmuster.net) und 
+* einem Server (linuxmuster.net)
 
 Ähnliche, nicht dokumentierte, Installationen gelten für einen
 OPSI-Server und einen Docker-Host, die dann ebenso auf dem KVM-Host
@@ -35,21 +35,36 @@ laufen können.
 Voraussetzungen
 ===============
 
-* Es wird vorausgesetzt, dass du einen Administrationsrechner
-  (Admin-PC genannt) besitzt, den du je nach Bedarf in die
-  entsprechenden Netzwerke einstecken kannst und dessen
-  Netzwerkkonfiguration entsprechend vornehmen kannst. Für diese
-  Anleitung reicht ein Rechner mit ssh-Software aus, empfohlen wird
-  allerdings ein Ubuntu-Desktop mit der Verwaltungssoftware
-  `virt-manager`.
+* Der Internetzugang des KVM-Hosts sollte (zunächst) gewährleistet
+  sein. Entweder bekommt er von einem Router per DHCP eine externe
+  IP-Adresse, Gateway und einen DNS-Server oder man trägt eine
+  statische IP, Gateway und einen DNS-Server von Hand ein.
 
-* Der Internetzugang des Admin-PCs und auch des KVM-Hosts sollte
-  zunächst gewährleistet sein, d.h. dass beide zunächst z.B. an einem
-  Router angeschlossen werden, über den die beiden per DHCP ins
-  Internet können. Sobald später die Firewall korrekt eingerichtet
-  ist, bekommt der Admin-PC und bei Bedarf auch der KVM-Host eine
-  IP-Adresse im Schulnetz.
+* Sofern der optionale Admin-PC eingerichtet wird, sollte dieser die
+  Möglichkeit haben, sich bei Bedarf in das entsprechende Netzwerk
+  einzuklinken. Im Servernetzwerk bekommt der Admin-PC die IP-Adresse
+  ``10.0.0.10/16`` mit Gateway und DNS-Server jeweils ``10.0.0.254``.
 
+Vorgehen
+========
+
+1. Der KVM-Host wird an einen Router angeschlossen, so dass er ins
+   Internet kommt (per DHCP oder statischer IP), es wird ein
+   heruntergeladenes Ubuntu Server 64bit von einem USB-Stick auf dem
+   KVM-Host installiert.
+2. Die KVM-Software, `ssh` und `ntp` werden installiert und konfiguriert.
+3. Das virtuelle Netzwerk wird auf dem KVM-Host konfiguriert.
+4. Das heruntergeladene Abbild der Firewall wird importiert, an die
+   neue Netzwerkumgebung angepasst und die Netzwerkverbindung zur
+   Firewall getestet. In der Firewall wird optional die externe
+   Netzwerkanbindung konfiguriert.
+5. Der Server wird importiert, die Festplattengrößen an eigene
+   Bedürfnisse angepasst und die Netzwerkverbindung angepasst und
+   getestet.
+6. Abschließende Konfigurationen auf dem KVM-Host
+7. Optionale Einrichtung eines Admin-PCs, der den KVM-Host steuern
+   kann.
+  
 Bereitstellen des KVM-Hosts
 ===========================
 
@@ -62,8 +77,8 @@ Bereitstellen des KVM-Hosts
    werden.
 
 Die folgende Anleitung beschreibt die *einfachste* Implementierung
-ohne Dinge wie VLANs, Teaming oder Raids. Diese Themen werden in
-zusätzlichen Anleitungen betrachtet.
+ohne Dinge wie VLANs, Teaming/Bonding oder RAIDs. Diese Themen werden
+in zusätzlichen Anleitungen betrachtet.
 
 * :ref:`Anleitung Netzwerksegmentierung <subnetting-basics-label>` 
 
@@ -118,7 +133,6 @@ aktuellen Ubuntu-Version:
    <p>
    <iframe width="696" height="392" src="https://www.youtube.com/embed/7NIoQpSSVQw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
    </p>
-..
 
 
 Installation des KVM-Hosts
