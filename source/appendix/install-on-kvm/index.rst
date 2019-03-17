@@ -287,11 +287,13 @@ Download der virtuellen Maschinen
      # wget http://fleischsalat.linuxmuster.org/ova/lmn7-server-20190312.ova
      # wget http://fleischsalat.linuxmuster.org/ova/lmn7-opsi-20190312.ova
      # wget http://fleischsalat.linuxmuster.org/ova/lmn7-docker-20190312.ova
-  Überprüfe die `md5`-Summe mit dem entsprechenden Werkzeug und
-  vergleiche mit der Webseite auf Integrität. In der weiteren Anleitung
-  wird statt der Dateien mit Datumsstempel ``20190312`` die Datei mit
-  ``*`` verwendet. Solange du nur je ein (das aktuelle) OVA-Abbild
-  vorliegen hast, funktionieren die Befehle auch mit dem ``*``.
+
+  Überprüfe die `sha`-Summe mit dem entsprechenden Werkzeug und
+  vergleiche mit der Webseite auf Integrität. In der weiteren
+  Anleitung wird statt der Dateien mit Datumsstempel wie ``20190312``
+  die Datei mit ``*`` verwendet. Solange du nur je ein (das aktuelle)
+  OVA-Abbild vorliegen hast, funktionieren die Befehle auch mit dem
+  ``*``.
 
 .. 
  KVM-Anpassungen
