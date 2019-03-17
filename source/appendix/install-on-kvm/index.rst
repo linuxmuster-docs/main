@@ -40,10 +40,12 @@ Voraussetzungen
   IP-Adresse, Gateway und einen DNS-Server oder man trägt eine
   statische IP, Gateway und einen DNS-Server von Hand ein.
 
-* Sofern der optionale Admin-PC eingerichtet wird, sollte dieser die
-  Möglichkeit haben, sich bei Bedarf in das entsprechende Netzwerk
+* Sofern ein Admin-PC eingerichtet wird, sollte dieser die Möglichkeit
+  haben, sich bei Bedarf in das entsprechende Netzwerk
   einzuklinken. Im Servernetzwerk bekommt der Admin-PC die IP-Adresse
   ``10.0.0.10/16`` mit Gateway und DNS-Server jeweils ``10.0.0.254``.
+  Es bietet sich ein Ubuntu-Desktop mit der Software `virt-manager`
+  an.
 
 Vorgehen
 ========
@@ -52,7 +54,8 @@ Vorgehen
    Internet kommt (per DHCP oder statischer IP), es wird ein
    heruntergeladenes Ubuntu Server 64bit von einem USB-Stick auf dem
    KVM-Host installiert.
-2. Die KVM-Software, `ssh` und `ntp` werden installiert und konfiguriert.
+2. Die Software für KVM und die Zeitsynchronisation werden installiert
+   und konfiguriert.
 3. Das virtuelle Netzwerk wird auf dem KVM-Host konfiguriert.
 4. Das heruntergeladene Abbild der Firewall wird importiert, an die
    neue Netzwerkumgebung angepasst und die Netzwerkverbindung zur
@@ -62,8 +65,7 @@ Vorgehen
    Bedürfnisse angepasst und die Netzwerkverbindung angepasst und
    getestet.
 6. Abschließende Konfigurationen auf dem KVM-Host
-7. Optionale Einrichtung eines Admin-PCs, der den KVM-Host steuern
-   kann.
+
   
 Bereitstellen des KVM-Hosts
 ===========================
@@ -155,13 +157,14 @@ Installation des KVM-Hosts
 Netzwerkeinrichtung
   Nach Sprach- und Keyboardauswahl wird das Netzwerk eingerichtet. Es
   muss die primäre Schnittstelle ausgewählt werden, die einen Zugang zum
-  Internet ermöglicht.
+  Internet ermöglicht. 
   
   .. figure:: media/kvmhost-install-network.png
   
-  Sollte die Netzwerkkonfiguration nicht erfolgreich sein, wähle eine
-  andere Schnittstelle und stelle sicher, dass die richtige
-  Schnittstelle auch per DHCP eine IP-Adresse bekommen kann.
+  Sollte die automatische Netzwerkkonfiguration per DHCP nicht
+  erfolgreich sein, kannst du auch manuell IP-Adresse, Gateway und
+  DNS-Server eingestellen (z.B. für die Kunden von Belwue).
+  Wichtig ist die richtige Schnittstelle auszuwählen.
 
 Rechnername, Benutzername, Passwort, Zeitzone
   Es wird empfohlen wie im Beispiel ``host`` als Rechnernamen zu
@@ -218,7 +221,9 @@ Update und Softwareinstallation des KVM-Hosts
 Nach einem Reboot loggst du dich als ``linuxadmin`` ein und führst
 zunächst ein Update aus. Das ist (Stand: Dez. 2018) notwendig, damit
 die spätere Konfiguration funktioniert. Der erste Befehl zeigt Dir, ob
-du eine IP-Adresse auf einem Netzwerk hast.
+und welche IP-Adresse du auf einem Netzwerk hast. Im folgenden
+Beispiel wird als externe IP-Adresse immer die IP ``192.168.1.2/16``
+verwendet, die per DHCP von einem Router zugeordnet wurde.
 
 .. code-block:: console
 
@@ -239,7 +244,39 @@ Installiere danach die qemu/KVM-Software durch Bestätigen der Fragen
    $ sudo apt install libvirt-bin qemu-kvm kpartx
    $ sudo apt --no-install-recommends install virtinst
 
-Nach Installation der KVM-Software werden weitere virtuelle Netzwerk-Schnittstellen sichtbar
+Einrichten der Zeitsynchronisation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Immer eine gute Sache ist es, z.B. in Logfiles die korrekte Zeit zu
+finden. Aus diesem Grund erfolgt die Konfiguration eines NTP-Clients.
+
+.. code-block:: console
+
+   Installieren von ntpdate
+   $ sudo apt install ntpdate
+
+   Einmaliges Stellen der Uhrzeit
+   $ sudo ntpdate 0.de.pool.ntp.org
+
+   Installieren des NTP-Daemons
+   $ sudo apt install ntp
+
+   Anzeigen der Zeitsynchronisation
+   $ sudo ntpq -p
+
+.. raw:: html
+
+	<p> <iframe width="696" height="392"
+	src="https://www.youtube.com/embed/tHqFTfS99xo?rel=0"
+	frameborder="0" allow="autoplay; encrypted-media"
+	allowfullscreen></iframe> </p>
+
+  
+Netzwerkkonfiguration des KVM-Hosts
+-----------------------------------
+   
+Nach Installation der KVM-Software (``virbr0*`` wurden automatisch
+hinzugefügt) ist die Netzwerksituation folgende:
 
 .. code-block:: console
 
@@ -250,13 +287,9 @@ Nach Installation der KVM-Software werden weitere virtuelle Netzwerk-Schnittstel
    virbr0           DOWN           192.168.122.1/24 
    virbr0-nic       DOWN           
 
-  
-Netzwerkkonfiguration des KVM-Hosts
------------------------------------
-
 In diesem Schritt wird die direkte Verbindung des KVM-Hosts mit dem
-Internet ersetzt durch eine virtuelle Verkabelung über so genannte
-`bridges`.  Zunächst werden die Brücken ``br-red`` (Internetseite) und
+Internet durch eine virtuelle Verkabelung über so genannte `bridges`
+ersetzt.  Zunächst werden die Brücken ``br-red`` (Internetseite) und
 ``br-server`` (Schulnetzseite) definiert und der KVM-Host bekommt über
 die Brücke ``br-red`` eine IP-Adresse.
 
@@ -299,14 +332,28 @@ Anpassen der Netzwerkkonfiguration
 	   dhcp4: no
 	 enp0s17:
 	   dhcp4: no
-     bridges:
-       br-red:
-         interfaces: [enp0s17]
-	 dhcp4: yes
-       br-server:
-         interfaces: [enp0s8]
-	 addresses: [ ]
+       bridges:
+         br-red:
+           interfaces: [enp0s17]
+	   dhcp4: yes
+         br-server:
+           interfaces: [enp0s8]
+	   addresses: [ ]
 
+  Wer bisher einen statischen Zugang eingerichtet hatte, der kann das
+  genauso hier tun. Der entsprechende Abschnitt wäre beispielhaft
+
+  .. code-block:: yaml
+
+       bridges:
+         br-red:
+           interfaces: [enp0s17]
+	   addresses: [141.1.2.4/29]
+	   gateway4: 141.1.2.3
+	   nameservers:
+             addresses: [129.143.2.1]
+
+	 
   Diese Netzwerkkonfiguration muss nun angewandt werden.
 
   .. code-block:: console
@@ -321,9 +368,13 @@ Anpassen der Netzwerkkonfiguration
      .. code-block:: console
 
 	Invalid YAML at /etc/netplan/01-netcfg.yaml line 6 column 0: found character that cannot start any token
+
+     Bei fehlerhaften Anläufen lohnt es sich, den
+     KVM-host zu rebooten und die Netzwerkkonfiguration erneut zu
+     betrachten. 
   
   Jetzt sollte der KVM-Host (diesselbe) IP-Adresse über die Brücke
-  bekommen haben. 
+  bekommen haben. So sollte die Konfiguration aussehen:
      
   .. code-block:: console
 
@@ -335,53 +386,6 @@ Anpassen der Netzwerkkonfiguration
      virbr0-nic       DOWN           
      br-red           UP             192.168.1.2/16 fe80::ae1c:ba12:6490:f75d/64
      br-server        DOWN
-
-
-SSH-Zugang und Zeit-Synchronisation
------------------------------------
-
-Einrichten des SSH-Zugangs auf Zertifikatsbasis
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Die Remote-Administration des KVM-Hosts soll per SSH und Zertifikaten
-erfolgen. 
-
-Erstellen von SSH-Zertifikaten auf dem Admin-PC und Kopieren auf den KVM-Host
-  .. code-block:: console
-
-     # ssh-keygen
-     # ssh-copy-id linuxadmin@192.168.1.2
-
-Ab jetzt kann jegliche Konfiguration über ein Einloggen auf dem
-KVM-Host vom Admin-PC aus erfolgen.
-
-Einrichten der Zeit-Synchronisation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Immer eine gute Sache ist es, z.B. in Logfiles die korrekte Zeit zu
-finden. Aus diesem Grund erfolgt die Konfiguration eines NTP-Clients.
-
-.. code-block:: console
-
-   Installieren von ntpdate
-   $ sudo apt install ntpdate
-
-   Einmaliges Stellen der Uhrzeit
-   $ sudo ntpdate 0.de.pool.ntp.org
-
-   Installieren des NTP-Daemons
-   $ sudo apt install ntp
-
-   Anzeigen der Zeitsynchronisation
-   $ sudo ntpq -p
-
-.. raw:: html
-
-	<p> <iframe width="696" height="392"
-	src="https://www.youtube.com/embed/tHqFTfS99xo?rel=0"
-	frameborder="0" allow="autoplay; encrypted-media"
-	allowfullscreen></iframe> </p>
-..
 
 
 Vorbereitungen für den Import der virtuellen Maschinen
@@ -406,7 +410,8 @@ Download Virtuelle Maschinen
   ``*`` verwendet. Solange du nur je ein (das aktuelle) OVA-Abbild
   vorliegen hast, funktionieren die Befehle auch mit dem ``*``.
 
-KVM-Anpassungen
+.. 
+ KVM-Anpassungen
   Nach der Integration bietet es sich an, die Hardware der
   importierten Appliances anzupassen und z.B. die Festplattentypen auf
   "virtio" zu stellen. Ebenso habe ich den Typ der "Grafikkarte" von
@@ -424,9 +429,11 @@ Importiere die Firewall-Appliance `lmn7-opnsense`.
    Running /usr/bin/qemu-img convert -O raw lmn7-opnsense-20181109-disk1.vmdk /var/lib/libvirt/images/lmn7-opnsense-20181109-disk1.raw
    Creating guest 'lmn7-opnsense'.
 
-Wer als Speichermedium lieber das LVM verwendet, der muss die
-Festplattengröße ermitteln, ein logical volume erstellen, das
-Abbild nochmals kopieren und die Konfiguration editieren.
+Die virtuellen Maschinene werden in Produktivsystem auf einem LVM
+liegen. Dafür muss die Festplattengröße ermittelt, ein logical volume
+erstellt, das Abbild nochmals kopiert und die Konfiguration
+editiert. Der Bus wird auf `virtio` gestellt, dann heißt die
+Schnittstelle auch `vda`.
 
 .. code-block:: console
 
@@ -439,10 +446,15 @@ Abbild nochmals kopieren und die Konfiguration editieren.
    <disk type='block' device='disk'>
       <driver name='qemu' type='raw'/>
       <source dev='/dev/host-vg/opnsense'/>
+      <target dev='vda' bus='virtio'/>
    ...
 
-Falls das Abbild erfolgreich ins LVM des Hosts übertragen wurde,
-kann das Abbild in ``/var/lib/libvirt/images`` gelöscht werden.
+Jetzt kann das Abbild in ``/var/lib/libvirt/images`` gelöscht werden.
+
+.. code-block:: console
+
+   # rm /var/lib/libvirt/images/lmn7-opnsense-*disk1.raw
+
 
 Netzwerkanpassung der Firewall
 ------------------------------
@@ -453,15 +465,15 @@ wie sie in der Appliance definiert wurden:
 1. `LAN, 10.0.0.254/16`, d.h. diese Schnittstelle wird auf der
    pädagogischen Seite des Netzwerks angeschlossen
 2. `WAN, DHCP`, d.h. diese Schnittstelle wird auf der Internetseite
-   angeschlossen
+   angeschlossen und ist als DHCP-Client konfiguriert.
 3. `OPT1, unkonfiguriert`, d.h. diese Schnittstelle wird für optionale
    Netzwerke verwendet und muss zunächst nicht angeschlossen werden.
 
-Öffne die Konfiguration und editiere die erste Schnittstelle, so dass
-sie sich im Schulnetzwerk befindet, hier im Beispiel wird diese an die
-virtuelle Brücke ``br-server`` mit dem Stichwort `bridge` und dem Typ
-`bridge` angeschlossen. Die MAC-Adresse sollte bei dieser Gelegenheit
-auch (beliebig) geändert werden.
+Öffne die KVM-Konfiguration und editiere die erste Schnittstelle, so
+dass diese sich im Schulnetzwerk befindet, hier im Beispiel wird sie
+an die virtuelle Brücke ``br-server`` mit dem Stichwort `bridge` und
+dem Typ `bridge` angeschlossen. Die MAC-Adresse sollte bei dieser
+Gelegenheit auch (beliebig) geändert werden.
 
 .. code-block:: console
 
@@ -485,29 +497,59 @@ werden, allerdings an die Brücke ``br-red`` angeschlossen werden.
    ...
 
 Test der Verbindung zur Firewall
---------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. todo:: 
-
-   Unlogisch. Der Admin-PC sollte erst mal ins ``br-server``-Netzwerk
-   gestöpselt werden, damit man damit auf die Adresse 10.0.0.254 der
-   Firewall kommt. Allenfalls kommt man auf die bislang unbekannte
-   Adresse die die Firewall auf dem WAN-Interface bekommt.
-
-Starte die Firewall. Der Admin-PC sollte sich nach ca. 3 Minuten mit
-der Firewall verbinden lassen.
+Starte die Firewall. 
 
 .. code-block:: console
 
    # virsh start lmn7-opnsense
    Domain lmn7-opnsense started
-   # ping 10.0.0.254
+
+Um die Verbindung zur Firewall im Netzwerk ``br-server`` zu testen,
+muss ein zweiter Rechner in diesem Netzwerk konfiguriert werden. Du
+kannst wie unten beschrieben den optionalen Admin-PC anschließen und
+mit der IP ``10.0.0.10`` konfigurieren, oder zeitweilig wird der
+KVM-Host selbst als Admin-PC konfiguriert. Für letzteres wird wieder
+die netplan-Datei editiert
+
+.. code-block:: console
+
+   $ sudo nano /etc/netplan/01-netcfg.yaml
+
+Der entsprechende Block lautet dann:
+   
+.. code-block:: yaml
+
+   network:
+     ...
+     bridges:
+     ...
+       br-server:
+         interfaces: [enp0s8]
+	 addresses: [10.0.0.10/16]
+	 gateway4: 10.0.0.254
+	 nameservers:
+           addresses: [10.0.0.254]
+
+Nach der Anwendung durch ``netplan apply`` solltest du die Firewall
+vom KVM-Host (oder vom Admin-PC aus) anpingen können.
+	   
+.. code-block:: console
+
+   $ ping 10.0.0.254
    PING 10.0.0.254 (10.0.0.254) 56(84) bytes of data.
    64 bytes from 10.0.0.254: icmp_seq=1 ttl=64 time=0.183 ms
    64 bytes from 10.0.0.254: icmp_seq=2 ttl=64 time=0.242 ms
    ...
    STRG-C
-   # ssh 10.0.0.254 -l root
+
+Ebenso ist dann ein Einloggen mit dem voreingestellten Passwort
+`Muster!` möglich:
+   
+.. code-block:: console
+		
+   $ ssh 10.0.0.254 -l root
    Password for root@OPNsense.localdomain:
    ...
    LAN (em0)       -> v4: 10.0.0.254/16
@@ -515,12 +557,59 @@ der Firewall verbinden lassen.
    ...
 
 Man erkennt, dass die Firewall die Netzwerkkarten für innen (LAN) und
-außen (WAN) richtig zugeordnet hat. Sollte diese Verbindung nicht
-gelingen, dann empfiehlt sich ein Admin-PC, mit dem man über das
-Programm `virt-manager` den VM-Host und damit die Firewall über eine
-GUI-Verbindung erreicht und die Netzkonfiguration der opnsense
-überprüfen und korrigieren kann.
+außen (WAN) richtig zugeordnet hat. Falls beides fehlschlägt, hast du
+im letzten Abschnitt die falsche Netzwerkkarte mit ``br-server``
+verbunden.
 
+Optional: Externe Netzwerkanbindung der Firewall einrichten
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Wer eine statische IP-Adresse in der Firewall braucht, der muss diese
+konfigurieren. Auf Konsolenebene kannst du dich per ssh (siehe oben)
+oder über die serielle Konsole einwählen. Ein zusätzliches `Enter`
+hilft, um das ``login:`` zu sehen.
+
+.. code-block:: console
+
+   $ sudo virsh console lmn7-opnsense
+   Connected to domain lmn7-opnsense
+   Escape character is ^]
+   
+   login: root
+   Password:
+   Last login: Sun Mar 17 17:12:21 on ttyv0
+   ...
+   LAN (em0)       -> v4: 10.0.0.254/16
+   WAN (em1)       -> v4: 141.10.42.179/29
+   ...
+   0) Logout                              7) Ping host
+   1) Assign interfaces                   8) Shell
+   2) Set interface IP address            9) pfTop
+   ...
+
+Konfiguriere die WAN-Schnittstelle über ``2)`` und folge den
+Anweisungen dort, eine feste IP-Adresse einzugeben.
+Die relevanten Zeilen sind beispielhaft:
+
+.. code-block:: console
+
+   Configure IPv4 address WAN interface via DHCP? [Y/n] n
+   Enter the new WAN IPv4 address. Press <ENTER> for none:
+   > 141.1.2.4
+   Enter the new WAN IPv4 subnet bit count (1 to 32):
+   > 29
+   For a WAN, enter the new WAN IPv4 upstream gateway address.
+   > 141.1.2.3
+   Do you want to use the gateway as the IPv4 name server, too? [Y/n] n
+   Enter the IPv4 name server or press <ENTER> for none:
+   > 129.143.2.1
+   Configure IPv6 address WAN interface via DHCP6? [Y/n] n
+   Enter the new WAN IPv6 address. Press <ENTER> for none:
+   > 
+   Do you want to revert to HTTP as the web GUI protocol? [y/N] 
+
+Mit der Tastenkombination ``STRG-5`` verlässt man die serielle Konsole.
+   
 Import des Servers
 ==================
 
@@ -537,13 +626,13 @@ Importiere die Server-Appliance `lmn7-server`.
 Festplattengrößen für den Server
 --------------------------------
    
-An dieser Stelle sollte man die Festplattengrößen an seine eigenen
+An dieser Stelle muss man die Festplattengrößen an seine eigenen
 Bedürfnisse anpassen. Beispielhaft wird die zweite Festplatte und das
 darin befindliche server-LVM vergrößert, so dass ``/dev/vg_srv/linbo``
 und ``/dev/vg_srv/default-school`` auf jeweils 175G vergrößert werden.
 
-Zunächst wird der Container entsprechend (10+10+175+175 GB) vergrößert, dann der mit
-Hilfe von `kpartx` aufgeschlossen.
+Zunächst wird der Container entsprechend (auf 10+10+175+175 GB)
+vergrößert, dann der mit Hilfe von `kpartx` aufgeschlossen.
 
 .. code-block:: console
 
@@ -581,7 +670,7 @@ Zu letzt muss noch das Dateisystem geprüft und erweitert werden.
 
    # lvresize /dev/vg_srv/linbo -L 175G
      Insufficient free space: 34560 extents needed, but only 34559 available
-   # lvresize /dev/vg_srv/linbo -l +34599     
+   # lvresize /dev/vg_srv/linbo -l +34559     
    Size of logical volume vg_srv/linbo changed from <40,00 GiB (10239 extents) to <175,00 GiB (44799 extents).
    Logical volume vg_srv/linbo successfully resized.
    # e2fsck -f /dev/vg_srv/linbo
@@ -601,10 +690,9 @@ group` abmelden und mit `kpartx` abschließen.
    # kpartx -dv /var/lib/libvirt/images/lmn7-server-*disk2.raw 
    loop deleted : /dev/loop0
 
-Auch hier muss man, wenn man als Speichermedium auf dem Host lieber
-LVM verwendet, weitere Anpassungen vornehmen.Hier habe ich auch den
-Festplattentyp auf `virtio` und die Festplattenbezeichnung daher auf
-`vdX` umgestellt.
+Auch hier wird als Speichermedium auf dem Host LVM verwendet, wofür
+die selben Anpassung wie bei der Firewall nötig sind, ebenso sind die
+Schnittstellen wieder umbenannt (`vda`, `vdb`).
 
 .. code-block:: console
 
@@ -631,8 +719,11 @@ Festplattentyp auf `virtio` und die Festplattenbezeichnung daher auf
       <target dev='vdb' bus='virtio'/>      
    ...
 
-Falls die Abbilder erfolgreich ins LVM des Hosts übertragen wurden,
-können die Abbilder in ``/var/lib/libvirt/images`` gelöscht werden.
+Die ursprünglichen Abbilder in ``/var/lib/libvirt/images`` werden gelöscht.
+
+.. code-block:: console
+
+   # rm /var/lib/libvirt/images/lmn7-server-*.raw
 
 Netzwerkanpassung des Servers
 -----------------------------
@@ -652,42 +743,59 @@ Brücke ``br-server`` gestöpselt werden.
 Test der Verbindung zum Server
 ------------------------------
 
-Starte den Server. Teste, ob du von deinem Admin-PC auf den Server mit
-dem Standardpasswort `Muster!` kommst.
+Starte den Server.
 
 .. code-block:: console
 
-   # virsh start lmn7-opnsense
-   Domain lmn7-opnsense started
+   # virsh start lmn7-server
+   Domain lmn7-server started
+
+Verbinde dich mit dem Server über die serielle Schnittstelle
+
+.. code-block:: console
+		
+   # virsh console lmn7-server
+   Connected to domain lmn7-server
+   Escape character is ^]
+   
+   Ubuntu 18.04.2 LTS server ttyS0
+   
+   server login: root
+   Password: 
+   Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-46-generic x86_64)
+   ...
+
+Finde den Namen heraus, den die Netzwerkschnittstelle auf deinem System hat
+
+.. code-block:: console
+
+   server~$ ip -br addr list
+   lo               UNKNOWN        127.0.0.1/8 ::1/128 
+   ens3             DOWN
+
+Ersetzen den Namen `ens33` in der netplan-Konfiguration durch den
+richtigen Namen und starte das Netzwerk neu.
+
+.. code-block:: console
+		
+   server~$ sudo nano /etc/netplan/01-netcfg.yaml
+   server~$ sudo netplan apply
+
+Teste, ob du von (vom KVM-Host oder Admin-PC) per ssh auf
+den Server mit dem Standardpasswort `Muster!` kommst.
+
+.. code-block:: console
+		
    # ssh 10.0.0.1 -l root
    root@10.0.0.1's password: 
    Welcome to Ubuntu 18.04.1 LTS (GNU/Linux 4.15.0-38-generic x86_64)
    ...
 
-Sollte diese Verbindung nicht gelingen, dann empfiehlt sich ein
-Admin-PC, mit dem man über das Programm `virt-manager` den VM-Host
-erreicht und über eine GUI-Verbindung den Server begutachtet.
+Teste, ob du vom Server aus zur Firewall kommst:
 
-.. warning::
+.. code-block:: console
 
-   Stand Dez. 2018 bekommt der importierte Server keine IP-Adresse
-   weil beim Import mit Sicherheit die Netzwerkschnittstelle einen
-   anderen Namen hat als dort, wo die Appliance erstellt
-   wurde. D.h. man muss über den `virt-manager` den KVM-Host erreichen
-   und den `server` über die GUI-Verbindung richtig konfigurieren:
-
-   .. code-block:: console
-
-      Herausfinden des Netzwerknamens
-      server~$ ip -br addr list
-      Ersetzen von `ens33` in der netplan-Konfiguration durch den richtigen Namen
-      server~$ sudo nano /etc/netplan/01-netcfg.yaml
-      Neustart des Netzwerkes
-      server~$ sudo netplan apply
-
-
-
-
+   server~$ ping 10.0.0.254
 
 Abschließende Konfigurationen
 =============================
@@ -721,3 +829,4 @@ aktivieren.
 
 Ab jetzt ist eine Installation der Musterlösung möglich. Folge der
 :ref:`Anleitung hier <setup-using-selma-label>`.
+
