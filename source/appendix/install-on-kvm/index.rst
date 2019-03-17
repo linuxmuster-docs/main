@@ -9,11 +9,11 @@
 		   `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
 
-In diesem Dokument findest Du "Schritt für Schritt" Anleitungen zum
+In diesem Dokument findest du "Schritt für Schritt" Anleitungen zum
 Installieren der linuxmuster.net-Musterlösung in der Version 7.0 auf
 Basis von KVM unter Ubuntu Server 18.04 LTS. Lies zuerst die
 Abschnitte :ref:`release-information-label` und
-:ref:`prerequisites-label`, bevor Du dieses Kapitel durcharbeitest.
+:ref:`prerequisites-label`, bevor du dieses Kapitel durcharbeitest.
 
 Im folgenden Bild ist die einfachste Form der Implementierung der
 Musterlösung schematisch mit dem gewählten (Standard-)Netzwerk ``10.0.0.0/12``
@@ -21,7 +21,7 @@ dargestellt:
 
 .. figure:: media/install-on-kvm-image01.png
 
-Nach der Installation gemäß dieser Anleitung erhältst Du eine
+Nach der Installation gemäß dieser Anleitung erhältst du eine
 einsatzbereite Umgebung bestehend aus
 
 * einem Host (KVM) für alle virtuellen Maschinen, 
@@ -35,8 +35,8 @@ laufen können.
 Voraussetzungen
 ===============
 
-* Es wird vorausgesetzt, dass Du einen Administrationsrechner
-  (Admin-PC genannt) besitzt, den Du je nach Bedarf in die
+* Es wird vorausgesetzt, dass du einen Administrationsrechner
+  (Admin-PC genannt) besitzt, den du je nach Bedarf in die
   entsprechenden Netzwerke einstecken kannst und dessen
   Netzwerkkonfiguration entsprechend vornehmen kannst. Für diese
   Anleitung reicht ein Rechner mit ssh-Software aus, empfohlen wird
@@ -132,7 +132,7 @@ Installation des KVM-Hosts
      einen Internetzugang
    * Erstelle einen Nutzer ``linuxadmin`` mit einem sicheren
      Passwort
-   * Richte ein LVM auf Deiner Festplatte/RAID mit ``25GB`` für das
+   * Richte ein LVM auf deiner Festplatte/RAID mit ``25GB`` für das
      Betriebssystem des KVM-Hosts ein
    * Wähle das Pakets *OpenSSH server* 
    * Nach Reboot, Update des Systems und Installation von ``qemu-kvm``
@@ -190,21 +190,21 @@ Festplatten partitionieren
   nun den zunächst abgelehnten Dialog bestätigen.
   
 Paketmanager und Softwareauswahl
-  Der HTTP-Proxy wird leer gelassen, sofern Du freien Internetzugang
+  Der HTTP-Proxy wird leer gelassen, sofern du freien Internetzugang
   hast. Im nächsten Dialog sollte ``OpenSSH server`` gewählt werden.
 
   .. figure:: media/kvmhost-install-tasksel.png
 
-  Am Ende der Installation musst Du noch die Installation von GRUB in
+  Am Ende der Installation musst du noch die Installation von GRUB in
   den Bootbereich bestätigen. Der KVM-Host wird rebootet.
   
 Update und Softwareinstallation des KVM-Hosts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Nach einem Reboot loggst Du Dich als ``linuxadmin`` ein und führst
+Nach einem Reboot loggst du dich als ``linuxadmin`` ein und führst
 zunächst ein Update aus. Das ist (Stand: Dez. 2018) notwendig, damit
 die spätere Konfiguration funktioniert. Der erste Befehl zeigt Dir, ob
-Du eine IP-Adresse auf einem Netzwerk hast.
+du eine IP-Adresse auf einem Netzwerk hast.
 
 .. code-block:: console
 
@@ -215,10 +215,10 @@ Du eine IP-Adresse auf einem Netzwerk hast.
    $ sudo apt update
    $ sudo apt full-upgrade -y
 
-Unter Umständen werden Dialog erneut abgefragt, die schon bei der
+Unter Umständen werden Dialoge erneut abgefragt, die schon bei der
 Installation beantwortet wurden (z.B. Tastaturkonfiguration).
 
-Installiere danach die qemu/KVM-Software durch Bestätigen der Nachfragen
+Installiere danach die qemu/KVM-Software durch Bestätigen der Fragen
 
 .. code-block:: console
 
@@ -376,7 +376,7 @@ Vorbereitungen für den Import der virtuellen Maschinen
 Download Virtuelle Maschinen
   Lade auf dem KVM-Host die aktuellen OVA-Abbilder von der `Webseite
   <https://github.com/linuxmuster/linuxmuster-base7/wiki/Die-Appliances>`_
-  herunter, die zu dem Adressbereich gehören, den Du brauchst
+  herunter, die zu dem Adressbereich gehören, den du brauchst
   (``10.0.0.1/16`` oder ``10.16.1.1/12``)
 
   .. code-block:: console
@@ -389,7 +389,7 @@ Download Virtuelle Maschinen
   Überprüfe die `md5`-Summe mit dem entsprechenden Werkzeug und
   vergleiche mit der Webseite auf Integrität. In der weiteren Anleitung
   wird statt der Dateien mit Datumsstempel ``20181109`` die Datei mit
-  ``*`` verwendet. Solange Du nur je ein (das aktuelle) OVA-Abbild
+  ``*`` verwendet. Solange du nur je ein (das aktuelle) OVA-Abbild
   vorliegen hast, funktionieren die Befehle auch mit dem ``*``.
 
 KVM-Anpassungen
@@ -638,7 +638,7 @@ Brücke ``br-server`` gestöpselt werden.
 Test der Verbindung zum Server
 ------------------------------
 
-Starte den Server. Teste, ob Du von deinem Admin-PC auf den Server mit
+Starte den Server. Teste, ob du von deinem Admin-PC auf den Server mit
 dem Standardpasswort `Muster!` kommst.
 
 .. code-block:: console
