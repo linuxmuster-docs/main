@@ -271,6 +271,36 @@ finden. Aus diesem Grund erfolgt die Konfiguration eines NTP-Clients.
 	frameborder="0" allow="autoplay; encrypted-media"
 	allowfullscreen></iframe> </p>
 
+
+Vorbereitungen für den Import der virtuellen Maschinen
+------------------------------------------------------
+
+Download der virtuelle Maschinen
+  Lade auf dem KVM-Host die aktuellen OVA-Abbilder von der `Webseite
+  <https://github.com/linuxmuster/linuxmuster-base7/wiki/Die-Appliances>`_
+  herunter, die zu dem Adressbereich gehören, den du brauchst
+  (``10.0.0.1/16`` oder ``10.16.1.1/12``)
+
+  .. code-block:: console
+     
+     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-opnsense-20181109.ova
+     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-server-20181109.ova
+     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-opsi-20181109.ova
+     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-docker-20181109.ova
+
+  Überprüfe die `md5`-Summe mit dem entsprechenden Werkzeug und
+  vergleiche mit der Webseite auf Integrität. In der weiteren Anleitung
+  wird statt der Dateien mit Datumsstempel ``20181109`` die Datei mit
+  ``*`` verwendet. Solange du nur je ein (das aktuelle) OVA-Abbild
+  vorliegen hast, funktionieren die Befehle auch mit dem ``*``.
+
+.. 
+ KVM-Anpassungen
+  Nach der Integration bietet es sich an, die Hardware der
+  importierten Appliances anzupassen und z.B. die Festplattentypen auf
+  "virtio" zu stellen. Ebenso habe ich den Typ der "Grafikkarte" von
+  `spice` auf `vnc` gesetzt.
+
   
 Netzwerkkonfiguration des KVM-Hosts
 -----------------------------------
@@ -288,14 +318,16 @@ hinzugefügt) ist die Netzwerksituation folgende:
    virbr0-nic       DOWN           
 
 In diesem Schritt wird die direkte Verbindung des KVM-Hosts mit dem
-Internet durch eine virtuelle Verkabelung über so genannte `bridges`
-ersetzt.  Zunächst werden die Brücken ``br-red`` (Internetseite) und
-``br-server`` (Schulnetzseite) definiert und der KVM-Host bekommt über
-die Brücke ``br-red`` eine IP-Adresse.
+Internet gekappt und eine virtuelle Verkabelung über so genannte
+`bridges` erstellt.  Zunächst werden die Brücken ``br-red``
+(Internetseite) und ``br-server`` (Schulnetzseite) definiert.  Zuletzt
+kann der KVM-Host auch über die Brücke ``br-red`` eine IP-Adresse ins
+Internet bekommen, genau wie er über die Brücke ``br-server`` auch im
+pädagogischen Netzwerk auftauchen kann. Letzteres ist nicht zu empfehlen.
 
 .. hint::
 
-   Die Netzwerkkonfiguration wird seit 18.04 standardmäßig über
+   Die Netzwerkkonfiguration wird seit Ubuntu 18.04 standardmäßig über
    netplan realisiert. Wer seinen KVM-Host von früheren
    Ubuntu-Versionen updatet, bei dem wird nicht automatisch `netplan`
    installiert, sondern `ifupdown` wird mit der Konfigurationsdatei
@@ -335,25 +367,12 @@ Anpassen der Netzwerkkonfiguration
        bridges:
          br-red:
            interfaces: [enp0s17]
-	   dhcp4: yes
+	   dhcp4: no
+	   addresses: [ ]
          br-server:
            interfaces: [enp0s8]
 	   addresses: [ ]
 
-  Wer bisher einen statischen Zugang eingerichtet hatte, der kann das
-  genauso hier tun. Der entsprechende Abschnitt wäre beispielhaft
-
-  .. code-block:: yaml
-
-       bridges:
-         br-red:
-           interfaces: [enp0s17]
-	   addresses: [141.1.2.4/29]
-	   gateway4: 141.1.2.3
-	   nameservers:
-             addresses: [129.143.2.1]
-
-	 
   Diese Netzwerkkonfiguration muss nun angewandt werden.
 
   .. code-block:: console
@@ -373,50 +392,35 @@ Anpassen der Netzwerkkonfiguration
      KVM-host zu rebooten und die Netzwerkkonfiguration erneut zu
      betrachten. 
   
-  Jetzt sollte der KVM-Host (diesselbe) IP-Adresse über die Brücke
-  bekommen haben. So sollte die Konfiguration aussehen:
-     
-  .. code-block:: console
+KVM-Host auch im Internet
+  Soll später nicht nur die Firewall sondern auch der KVM-Host im
+  Internet erreichbar sein, dann muss der entsprechende Block so aussehen:
 
-     $ ip -br addr list
-     lo               UNKNOWN        127.0.0.1/8 ::1/128 
-     enp0s8           DOWN        
-     enp0s17          UP
-     virbr0           DOWN           192.168.122.1/24 
-     virbr0-nic       DOWN           
-     br-red           UP             192.168.1.2/16 fe80::ae1c:ba12:6490:f75d/64
-     br-server        DOWN
+  .. code-block:: yaml
 
+     network:
+       ...
+       bridges:
+         br-red:
+           interfaces: [enp0s17]
+	   dhcp4: yes
+         br-server:
+       ...
 
-Vorbereitungen für den Import der virtuellen Maschinen
-------------------------------------------------------
+  Wer bisher einen statischen Zugang eingerichtet hatte, der kann das
+  genauso hier tun. Der entsprechende Abschnitt wäre beispielhaft
 
-Download Virtuelle Maschinen
-  Lade auf dem KVM-Host die aktuellen OVA-Abbilder von der `Webseite
-  <https://github.com/linuxmuster/linuxmuster-base7/wiki/Die-Appliances>`_
-  herunter, die zu dem Adressbereich gehören, den du brauchst
-  (``10.0.0.1/16`` oder ``10.16.1.1/12``)
+  .. code-block:: yaml
 
-  .. code-block:: console
-     
-     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-opnsense-20181109.ova
-     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-server-20181109.ova
-     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-opsi-20181109.ova
-     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-docker-20181109.ova
+       bridges:
+         br-red:
+           interfaces: [enp0s17]
+	   addresses: [141.1.2.5/29]
+	   gateway4: 141.1.2.3
+	   nameservers:
+             addresses: [129.143.2.1]
 
-  Überprüfe die `md5`-Summe mit dem entsprechenden Werkzeug und
-  vergleiche mit der Webseite auf Integrität. In der weiteren Anleitung
-  wird statt der Dateien mit Datumsstempel ``20181109`` die Datei mit
-  ``*`` verwendet. Solange du nur je ein (das aktuelle) OVA-Abbild
-  vorliegen hast, funktionieren die Befehle auch mit dem ``*``.
-
-.. 
- KVM-Anpassungen
-  Nach der Integration bietet es sich an, die Hardware der
-  importierten Appliances anzupassen und z.B. die Festplattentypen auf
-  "virtio" zu stellen. Ebenso habe ich den Typ der "Grafikkarte" von
-  `spice` auf `vnc` gesetzt.
-
+	 
 Import der Firewall
 ===================
 
@@ -429,8 +433,8 @@ Importiere die Firewall-Appliance `lmn7-opnsense`.
    Running /usr/bin/qemu-img convert -O raw lmn7-opnsense-20181109-disk1.vmdk /var/lib/libvirt/images/lmn7-opnsense-20181109-disk1.raw
    Creating guest 'lmn7-opnsense'.
 
-Die virtuellen Maschinene werden in Produktivsystem auf einem LVM
-liegen. Dafür muss die Festplattengröße ermittelt, ein logical volume
+Die virtuellen Maschinen werden in Produktivsystemen auf einem LVM
+liegen. Dafür muss die Festplattengröße ermittelt, ein `logical volume`
 erstellt, das Abbild nochmals kopiert und die Konfiguration
 editiert. Der Bus wird auf `virtio` gestellt, dann heißt die
 Schnittstelle auch `vda`.
@@ -812,6 +816,14 @@ Abhängigkeiten sauberer.
    # apt remove virtinst
    # apt autoremove
 
+Wer seinem KVM-Host die IP-Adresse `10.0.0.1` des Admin-PCs gegeben
+hat, sollte dies rückgängig machen. Der KVM-Host sollte nicht im
+pädagogischen Netzwerk auftauchen.
+
+Wer seinen KVM-Host nicht (mehr) im Internet stehen haben will, der
+muss auch hier die Adresskonfiguration auf dem KVM-Host unter dem
+Abschnitt ``br-red`` rückgängig machen.
+   
 
 Aktivieren des Autostarts der VMs
 ---------------------------------
