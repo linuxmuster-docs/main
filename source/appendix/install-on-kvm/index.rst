@@ -275,7 +275,7 @@ finden. Aus diesem Grund erfolgt die Konfiguration eines NTP-Clients.
 Vorbereitungen für den Import der virtuellen Maschinen
 ------------------------------------------------------
 
-Download der virtuelle Maschinen
+Download der virtuellen Maschinen
   Lade auf dem KVM-Host die aktuellen OVA-Abbilder von der `Webseite
   <https://github.com/linuxmuster/linuxmuster-base7/wiki/Die-Appliances>`_
   herunter, die zu dem Adressbereich gehören, den du brauchst
@@ -283,14 +283,13 @@ Download der virtuelle Maschinen
 
   .. code-block:: console
      
-     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-opnsense-20181109.ova
-     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-server-20181109.ova
-     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-opsi-20181109.ova
-     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-docker-20181109.ova
-
+     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-opnsense-20190227.ova
+     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-server-20190312.ova
+     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-opsi-20190312.ova
+     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-docker-20190312.ova
   Überprüfe die `md5`-Summe mit dem entsprechenden Werkzeug und
   vergleiche mit der Webseite auf Integrität. In der weiteren Anleitung
-  wird statt der Dateien mit Datumsstempel ``20181109`` die Datei mit
+  wird statt der Dateien mit Datumsstempel ``20190312`` die Datei mit
   ``*`` verwendet. Solange du nur je ein (das aktuelle) OVA-Abbild
   vorliegen hast, funktionieren die Befehle auch mit dem ``*``.
 
