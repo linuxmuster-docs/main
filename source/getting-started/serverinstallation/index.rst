@@ -146,21 +146,33 @@ Einstellungen:
    dockerip = 10.0.0.3
    mailip = 10.0.0.3
    dhcprange = 10.0.0.100 10.0.0.200
-   smtprelay = mbox.belwue.de
-   smtpuser = smtp@schule.de
-   smtppw = @pAssword!
-   adminpw = @pAssword!
-   schoolname = Linuxmuster
-   location = Schönau
+   smtprelay = mbox1.belwue.de
+   smtpuser = smtpadmin
+   smtppw = Muster!pw
+   adminpw = Muster!pw
+   schoolname = Beispiel-Gesamtschule
+   location = Musterstadt
    country = DE
-   state = BW
+   state = Mecklenburg-Vorpommern
    skipfw = False
 
 Ohne Argumente konfiguriert das Skript die entsprechenden Eingaben
 über ein Konsolendialog. Es gelten die gleichen Hinweise und Warnungen
 wie bei der grafischen Installation.
 
+Login an d'SELMA als global-admin
+=================================
 
+Öffne die URL ``https://server.linuxmuster.lan:8000`` mit dem Admin-PC
+und akzeptiere beim ersten Aufruf die Ausnahme für das
+selbst-signierte Zertifikat.
 
+.. figure:: media/server-postsetup-login-cert.png
+   :align: center
+   :alt: Accept self-signed certificate 
 
+Melde dich mit dem Benutzer ``global-admin`` mit dem konfigurierten Passwort an.
 
+.. figure:: media/login-global-admin.png
+   :align: center
+   :alt: Login as global-admin
