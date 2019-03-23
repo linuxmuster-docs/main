@@ -1,3 +1,5 @@
+.. _migration-label:
+
 ===============================
  Migration auf linuxmuster 7.0
 ===============================
