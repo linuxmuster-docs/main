@@ -120,8 +120,8 @@ Zusammenfassung angezeigt.
 Zuletzt weist das Setup darauf hin, dass man sich ab sofort unter der
 URL ``https://server.linuxmuster.lan:8000`` mit dem Benutzer
 ``global-admin`` und dem konfigurierten Passwort anmelden muss.
-Allerdings wird im ersten Schritt ein selbstsigniertes Zertifikat
-verwendet, das aktzeptiert werden muss.
+Allerdings wird ein selbstsigniertes Zertifikat verwendet, das
+zuerst akzeptiert werden muss.
 
 	 
 Erstkonfiguration am Server
