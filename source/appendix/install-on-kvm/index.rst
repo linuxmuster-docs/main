@@ -16,7 +16,7 @@ Abschnitte :ref:`release-information-label` und
 :ref:`prerequisites-label`, bevor du dieses Kapitel durcharbeitest.
 
 Im folgenden Bild ist die einfachste Form der Implementierung der
-Musterlösung schematisch mit dem gewählten (Standard-)Netzwerk ``10.0.0.0/12``
+Musterlösung schematisch mit dem gewählten (Standard-)Netzwerk ``10.0.0.0/16``
 dargestellt:
 
 .. figure:: media/install-on-kvm-image01.png
