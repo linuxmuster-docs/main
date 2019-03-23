@@ -20,7 +20,7 @@ Zum einen dient die Dokumentation als Schritt-für-Schritt Anleitung für die Ei
   :caption: Erste Schritte
 
   getting-started/prerequisites/index
-  getting-started/install-on-xen/index
+  getting-started/install-on-xcp-ng/index
   getting-started/linuxclients/index
   getting-started/add-user-accounts/index
 
