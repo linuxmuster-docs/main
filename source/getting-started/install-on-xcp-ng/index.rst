@@ -326,9 +326,7 @@ XCP-ng Center AktuelleVersion_
 
 Die Installation des Programms unter Linux mithilfe von Wine und PlayOnLinux wird in der Dokumentation hier beschrieben:
 
-XCP-ng Center InstallationLinux_
-
-.. _InstallationLinux: 'XCP-ng Center unter Linux installieren'_  
+XCP-ng Center :ref:`XCP-ng Linux <XCP-ng-Center-Linux-label>`  
 
 
 Installiere das Programm durch einen Rechtsklick auf die MSI-Datei auf dem Windows-Rechner und 
@@ -472,24 +470,24 @@ VMs starten und aktualisieren
 Wähle im XCP-ng Center links die VM aus, die Du starten möchtest.
 Klicke danach oben in der Mnüleiste das Icon ``Start`` aus.
 
-Beginne mit der Firewall Opnsense. Starte diese.
+Beginne mit der Firewall IPFire. Starte diese.
 
 .. figure:: media/import-vms/xcp-ng-install-opnsense-started.png
    :align: center
-   :alt: Gestartete VM OPNsense
+   :alt: Gestartete VM IPFire
 
 Melde Dich auf der Konsole mit den Daten ``root`` und ``Muster!`` an.
 
 .. figure:: media/import-vms/xcp-ng-install-menue-opnsense.png
    :align: center
-   :alt: Konsolenmenü OPNsense
+   :alt: Konsolenmenü IPFire
 
 Wähle danach in dem Konsolenmenü den Punkt 12) aus, um die Firewall zu 
 aktualisieren.
 
 .. figure:: media/import-vms/xcp-ng-install-opnsense-update-started.png
    :align: center
-   :alt: Update der VM OPNsense
+   :alt: Update der VM IPFire
 
 Bestätige diesen Vorgang mit ``y`` und warte bis die VM neu gestartet wurde.
 
@@ -509,6 +507,8 @@ Bestätigen Sie das Update mit ``y``.
 
 Sofern Du weitere VMs importiert hast, führe die Aktualisierungen
 analog aus.
+
+.. _XCP-ng-Center-Linux-label:
 
 XCP-ng Center unter Linux installieren
 --------------------------------------
