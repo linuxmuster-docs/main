@@ -71,6 +71,25 @@ zusätzlichen Anleitungen betrachtet.
 
 * :ref:`Anleitung Netzwerksegmentierung <subnetting-basics-label>` 
 
+
+Download-Quellen
+----------------
+
+Nachstehend finden Sie eine Übersicht zu den Download-Quellen für XCP-ng, die nachstehend schrittweise 
+beschrieben werden.
+
++---------------+--------------------------+---------------------------------------------------------------------------------+
+| Programm      | Beschreibung             | Download-Link                                                                   |
++===============+==========================+=================================================================================+
+| XCP-ng        | Installationsdatenträger | `XCP-ng <https://xcp-ng.org/#easy-to-install>`_                                 |
++---------------+--------------------------+---------------------------------------------------------------------------------+
+| XCP-ng Center | Windows-Programm zur     | `XCP-ng Center <https://github.com/xcp-ng/xenadmin/releases>`_                  |
+|               | Verwaltung von XCP-ng    |                                                                                 |
++---------------+--------------------------+---------------------------------------------------------------------------------+
+| XOA           | web-basierte VM zur      | `XOA lmn V7 <http://fleischsalat.linuxmuster.org/xva/lmn7-xoa-2019-03-08.zip>`_ |
+|               | Verwaltung von XCP-ng    |                                                                                 |
++---------------+--------------------------+---------------------------------------------------------------------------------+
+
 Erstellen eines USB-Sticks zur Installation des XCP-ng-Host
 -----------------------------------------------------------
 
@@ -738,7 +757,7 @@ Anpassung der VM
 ~~~~~~~~~~~~~~~~
 
 Einige Einstellungen der vorkonfigurierten VM sind nach dem Import auf die eigene Virtualisierungsumgebung anzupassen. Öffne hierzu einen Webbrowser und öffne die Seite 
-http://10.0.0.4 oder https://10.0.0.4. Der PC, auf dem der Browser geöffnet wird, muss sich im Netz 10.0.0.0/24 (grünes Netz - internes LAN der linuxmuster.net) befinden,
+http://10.0.0.4 oder https://10.0.0.4. Der PC, auf dem der Browser geöffnet wird, muss sich im Netz 10.0.0.0/16 (grünes Netz - internes LAN der linuxmuster.net) befinden,
 damit eine Verbindung möglich ist. Wählst Du den verschlüsselten Zugriff, so bestätige die Zertifikatswarnung, da ein selbst erstelltes Zertifikat für XOA ertsellt und 
 konfiguriert wurde.
 
