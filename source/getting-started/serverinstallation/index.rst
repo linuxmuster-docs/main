@@ -117,6 +117,12 @@ Zusammenfassung angezeigt.
    Sollte die Installation anhalten oder fehlschlagen, sollte man alle
    Appliances auf den Zustand vor dem Setup zurücksetzen.
 
+Zuletzt weist das Setup darauf hin, dass man sich ab sofort unter der
+URL ``https://server.linuxmuster.lan:8000`` mit dem Benutzer
+``global-admin`` und dem konfigurierten Passwort anmelden muss.
+Allerdings wird im ersten Schritt ein selbstsigniertes Zertifikat
+verwendet, das aktzeptiert werden muss.
+
 	 
 Erstkonfiguration am Server
 ===========================
