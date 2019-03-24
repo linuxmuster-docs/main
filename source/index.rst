@@ -1,6 +1,6 @@
-===========
+============
  Einführung
-===========
+============
 
 Herzlich Willkommen zur Dokumentation von linuxmuster.net! Diese Dokumentation beschreibt alle wichtigen Schritte von der Installation, der Einrichtung von Windows- und Ubuntu-Rechnern, der Verwaltung von Nutzern bis hin zu individuellen Anpassungen.
 
@@ -12,6 +12,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
 
   about/about
   about/release-information/index
+  about/beta7
 
 .. toctree::
   :maxdepth: 2
