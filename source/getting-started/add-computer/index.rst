@@ -1,40 +1,26 @@
-Rechneraufnahme mit SELMA
--------------------------
+=============================
+ Rechneraufnahme mit d'SELMA
+=============================
 
-Um einen Rechner mit SELMA aufzunehmen geht man wie folgt vor:
+.. sectionauthor:: `@Alois <https://ask.linuxmuster.net/u/Alois>`_
+		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_
 
-Im Browser gibt man in der Adressleiste
-``https://server.linuxmuster.lan:8000`` gefolgt von ENTER ein.  Das
-selbst signierte Zertifikat muss akzeptiert werden.
+Um einen Rechner mit d'SELMA aufzunehmen geht man wie folgt vor: Melde
+dich wie es in :ref:`login-dselma-global-admin` beschrieben wird an.
 
-Es erscheint das abgebildete Login-Fenster:
+Im Menüpunkt ``GERÄTEVERWALTUNG/Geräte`` kann man nun `+ Gerät
+hinzufügen` anklicken. Standardmäßig sind die konfigurierten Server
+schon in der Liste mit der Rolle `Server` eingetragen.
 
-.. image:: media/Login.png
+.. image:: media/computer-add-add.png
 
+In die sich öffnende Zeile gibt man unter Raum den Namen des Raumes
+(hier `server`) ein. Entsprechend verfährt man mit den Spalten
+`Hostname`, `Gruppe`, `MAC`, `IP` und `Sophomorix-Rolle`. Im Feld `PXE`
+wählt man aus, ob der Rechner mit Linbo synchronisiert werden soll.
 
-Mit dem Benutzernamen administrator und dem dazu gehörenden Passwort loggt man sich ein.
-
-.. image:: media/Login2.png
-
-Die WebUI sieht dann wie abgebildet aus:
-
-.. image:: media/Webui1.png
-
-In der WebUI klickt man unter Device Management auf Geräte
-
-.. image:: media/Webui2.png
-
-und dort auf "Gerät hinzu fügen".
-
-.. image:: media/Webui3.png
-
-In die sich öffnende Zeile gibt man unter Raum den Namen des Raumes (hier r123) ein. Entsprechend verfährt man mit 
-den Spalten "Hostname"; "Gruppe"; "MAC" und IP. Im Feld PXE wählt man aus, ob der Rechner mit Linbo synchronisiert wer-
-den soll (mit Linbo entspricht PXE).
-
-.. image:: media/Webui4.png
-
-Nach der Eingabe der Daten ḱlickt man auf Speichern & Importieren
+Die Schaltfläche `SPEICHERN` überprüft die Eingabe. mit `SPEICHERN &
+IMPORTIEREN` werden die neuen Geräte imporiert.
 
 .. image:: media/Webui5.png
 
