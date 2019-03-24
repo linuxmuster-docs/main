@@ -283,10 +283,10 @@ Download der virtuellen Maschinen
 
   .. code-block:: console
      
-     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-opnsense-20190227.ova
-     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-server-20190312.ova
-     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-opsi-20190312.ova
-     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-docker-20190312.ova
+     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-opnsense-20190319.ova
+     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-server-20190320.ova
+     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-opsi-20190320.ova
+     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-docker-20190320.ova
 
   Überprüfe die `sha`-Summe mit dem entsprechenden Werkzeug und
   vergleiche mit der Webseite auf Integrität. In der weiteren
@@ -437,6 +437,9 @@ herunter und benenne sie um
    # virsh shutdown lmn7-opnsense-20190319.ovf
    Domain ... is being shutdwon
    # virsh domrename lmn7-opnsense-20190319.ovf lmn7-opnsense
+
+Festplatten in das Host-LVM importieren
+---------------------------------------
 
 Die virtuellen Maschinen werden in Produktivsystemen auf einem LVM
 liegen. Dafür muss die Festplattengröße ermittelt, ein `logical volume`
@@ -629,19 +632,23 @@ Importiere die Server-Appliance `lmn7-server`.
 
    # virt-convert lmn7-server-*.ova
    ...
-   Running /usr/bin/qemu-img convert -O raw lmn7-server-20181109-disk001.vmdk /var/lib/libvirt/images/lmn7-server-20181109-disk001.raw
-   Running /usr/bin/qemu-img convert -O raw lmn7-server-20181109-disk002.vmdk /var/lib/libvirt/images/lmn7-server-20181109-disk002.raw   
+   Running /usr/bin/qemu-img convert -O raw lmn7-server-xxxxxxxx-disk001.vmdk /var/lib/libvirt/images/lmn7-server-xxxxxxxx-disk001.raw
+   Running /usr/bin/qemu-img convert -O raw lmn7-server-xxxxxxxx-disk002.vmdk /var/lib/libvirt/images/lmn7-server-xxxxxxxx-disk002.raw   
    Creating guest 'lmn7-server-20190320.ovf'.
    # virsh shutdown lmn7-server-20190320.ovf
    # virsh domrename lmn7-server-20190320.ovf lmn7-server
    
-Festplattengrößen für den Server
---------------------------------
+Festplattengrößen für den Server anpassen
+-----------------------------------------
    
-An dieser Stelle muss man die Festplattengrößen an seine eigenen
-Bedürfnisse anpassen. Beispielhaft wird die zweite Festplatte und das
-darin befindliche server-LVM vergrößert, so dass ``/dev/vg_srv/linbo``
-und ``/dev/vg_srv/default-school`` auf jeweils 175G vergrößert werden.
+An dieser Stelle muss man die Festplattengrößen für den
+Produktiveinsatz an seine eigenen Bedürfnisse anpassen. Für einen
+Testbetrieb kann die Erweiterung ausfallen und man kann gleich mit dem
+Import in ein LVM fortsetzen.
+
+Beispielhaft wird die zweite Festplatte und das darin befindliche
+server-LVM vergrößert, so dass ``/dev/vg_srv/linbo`` und
+``/dev/vg_srv/default-school`` auf jeweils 175G vergrößert werden.
 
 Zunächst wird der Container entsprechend (auf 10+10+175+175 GB)
 vergrößert, dann der mit Hilfe von `kpartx` aufgeschlossen.
@@ -705,10 +712,13 @@ group` abmelden und mit `kpartx` abschließen, ein letztes `vgdisplay
    # vgdisplay -s
    "host-vg" < GiB [xxx GiB used / yyy free]
    
+Festplatten in das Host-LVM importieren
+---------------------------------------
 
 Auch hier wird als Speichermedium auf dem Host LVM verwendet, wofür
-die selben Anpassung wie bei der Firewall nötig sind, ebenso sind die
-Schnittstellen wieder umbenannt (`vda`, `vdb`).
+die selben Anpassung wie bei der Firewall nötig sind, ebenso werden
+die Schnittstellen mit dem Bussystem wieder umbenannt (`vda`, `vdb`,
+`virtio`).
 
 .. code-block:: console
 
