@@ -1,5 +1,6 @@
-Linux-Client - Anpassungen mit Postsync-Scripten
-================================================
+=========================================================
+ (v6.2) Linux-Client - Anpassungen mit Postsync-Scripten
+=========================================================
 
 Linux-Clients können in linuxmuster.net mithilfe sog. Postsync-Scripte an besondere Nutzungssituationen sehr variabel angepasst werden.
 

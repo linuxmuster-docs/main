@@ -1,5 +1,6 @@
-Internetrecherche
-=================
+========================
+(v6.2) Internetrecherche
+========================
 
 Um im Unterricht den Schülern eine Internet-Recherche zu ermöglichen, müssen Sie sich zunächst an der Schulkonsole als Lehrer anmelden, danach den Raum auswählen, in dem Sie unterrichten, im Raum den Unterricht beginnen und ggf. den Internet-Zugriff für die gewünschten PCs freischalten.
 

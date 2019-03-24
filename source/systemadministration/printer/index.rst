@@ -1,5 +1,5 @@
-Drucker
-=======
+(v6.2) Drucker
+==============
 
 .. toctree::
   :maxdepth: 2

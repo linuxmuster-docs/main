@@ -1,9 +1,9 @@
 
 .. _use-horde-label:
 
-===================================
-Schulinternen E-Mail-Versand nutzen
-===================================
+==========================================
+(v6.2) Schulinternen E-Mail-Versand nutzen
+==========================================
 
 
 Diese Schritt-für-Schritt-Anleitung erklärt, wie Sie im Schulnetzwerk

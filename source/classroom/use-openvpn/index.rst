@@ -1,5 +1,6 @@
-OpenVPN nutzen
-==============
+=====================
+(v6.2) OpenVPN nutzen
+=====================
 
 Externer Zugang zum Schulnetz
 -----------------------------

@@ -1,8 +1,8 @@
 .. _howto-manage-quota-label:
 
-==================================================
-Festplattenplatz für Benutzer einschränken (Quota)
-==================================================
+=========================================================
+(v6.2) Festplattenplatz für Benutzer einschränken (Quota)
+=========================================================
 
 Alle Benutzer im System dürfen Daten auf dem Server abspeichern. Es
 kann also vorkommen, dass Schüler und Lehrer so viele Daten
