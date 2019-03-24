@@ -5,7 +5,9 @@
 ===================
 
 .. sectionauthor:: `@WildXI <https://ask.linuxmuster.net/u/wildxi>`_,
-		   `@TLeibbrand <https://ask.linuxmuster.net/u/tleibbrand>`_
+		   `@TLeibbrand <https://ask.linuxmuster.net/u/tleibbrand>`_,
+		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
+		   `@RolandB <https://ask.linuxmuster.net/u/rolandb>`_
 
 .. hint::
 

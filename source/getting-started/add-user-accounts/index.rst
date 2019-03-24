@@ -1,7 +1,10 @@
 
-========================
- Erste Benutzeraufnahme
-========================
+==================
+ Benutzeraufnahme
+==================
+
+.. sectionauthor:: `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_
+		   
 
 In einer Schule müssen meist mehrere hundert bis einige tausend
 Schüler als Benutzer angelegt werden. Die Schulkonsole SELMA erlaubt
@@ -20,8 +23,9 @@ Melde dich dafür an d'SELMA als ``global-admin``, wie es in
 .. attention::
 
    Für alle beta-Tester: folgende Szenarien funktionieren in d'SELMA
-   nicht. Am besten ist es für die Aufnahme mit nicht-ASCII-Zeichen
-   die Konsole zu verwenden (undokumentiert).
+   nicht, wenn man nicht-ASCII-Zeichen verwendet. Am besten ist es
+   für die Aufnahme mit nicht-ASCII-Zeichen die Konsole zu verwenden
+   (bislang undokumentiert).
 
 
 Zeichenkodierung wählen
@@ -84,7 +88,32 @@ Schüler importieren
 ===================
 
 Wähle im Menüpunkt `LISTENVERWALTUNG/Schüler-Liste` die Schaltfläche
-`IM EDITOR ÖFFNEN`. Per "Drag & Drop" lässt sich eine richtig
-formatierte Datei nun hochladen.
+`IM EDITOR ÖFFNEN`. Eine zu importierende Datei sollte folgendes
+Format aufweisen:
 
-:fixme: Encoding unter Schuleinstellungen festlegen, wenn man noch keine Schüler im System hat.
+.. code-block:: console
+
+   10A;Testuser;Heinz;1.1.2001;
+   13A;Musterfrau;Tanja;2.1.2001;
+   5A;Hausmann;Hans;3.1.2001;   
+
+Per "Drag & Drop" lässt sich eine richtig
+formatierte Datei nun hochladen, alternativ kann die Schaltfläche `CSV
+HOCHLADEN` gewählt werden. Mit `SPEICHERN` werden eventuelle
+Konsistenzfehler überprüft.
+
+:fixme: Import über CSV im Prinzip möglich, solange momentan keine
+        UTF-8 Daten verwendet werden.
+
+.. figure:: media/user-add-students-csv.png
+   :align: center
+   :alt: User entry dialog via CSV
+
+Die Schaltfläche `SPEICHERN & PRÜFEN` zeigt nun an, wieviele Schüler
+bei `ÜBERNEHMEN` ins System übernommen werden. Ab der erfolgreichen
+Übernahme können die Schüler unter dem Menüpunkt
+`BENUTZERVERWALTUNG/Schüler` gefunden und deren Konten bearbeitet
+werden.
+
+Ausführlichere Dokumentation zur Benutzerverwaltung findet sich im
+entsprechenden Abschnitt dieser Dokumentation.
