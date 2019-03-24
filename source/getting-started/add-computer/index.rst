@@ -1,16 +1,12 @@
-Rechneraufnahme mit SELMA
--------------------------
+===========================
+ Rechneraufnahme mit SELMA
+===========================
 
-Um einen Rechner mit SELMA aufzunehmen geht man wie folgt vor:
+.. sectionauthor:: `@Alois <https://ask.linuxmuster.net/u/Alois>`_
+		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_
 
-Im Browser gibt man in der Adressleiste
-``https://server.linuxmuster.lan:8000`` gefolgt von ENTER ein.  Das
-selbst signierte Zertifikat muss akzeptiert werden.
-
-Es erscheint das abgebildete Login-Fenster:
-
-.. image:: media/Login.png
-
+Um einen Rechner mit d'SELMA aufzunehmen geht man wie folgt vor: Melde
+dich wie es in :ref:`login-dselma-global-admin` beschrieben wird an.
 
 Mit dem Benutzernamen administrator und dem dazu gehörenden Passwort loggt man sich ein.
 
