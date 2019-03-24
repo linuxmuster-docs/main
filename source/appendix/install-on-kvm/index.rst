@@ -425,14 +425,18 @@ KVM-Host auch im Internet
 Import der Firewall
 ===================
 
-Importiere die Firewall-Appliance `lmn7-opnsense`.
+Importiere die Firewall-Appliance `lmn7-opnsense`, fahre sie gleich
+herunter und benenne sie um
 
 .. code-block:: console
 
    # virt-convert lmn7-opnsense-*.ova
    ...
-   Running /usr/bin/qemu-img convert -O raw lmn7-opnsense-20181109-disk1.vmdk /var/lib/libvirt/images/lmn7-opnsense-20181109-disk1.raw
-   Creating guest 'lmn7-opnsense'.
+   Running /usr/bin/qemu-img convert -O raw lmn7-opnsense-20190319-disk001.vmdk /var/lib/libvirt/images/lmn7-opnsense-20190319-disk001.raw
+   Creating guest 'lmn7-opnsense-20190319.ovf'.
+   # virsh shutdown lmn7-opnsense-20190319.ovf
+   Domain ... is being shutdwon
+   # virsh domrename lmn7-opnsense-20190319.ovf lmn7-opnsense
 
 Die virtuellen Maschinen werden in Produktivsystemen auf einem LVM
 liegen. Dafür muss die Festplattengröße ermittelt, ein `logical volume`
@@ -442,23 +446,24 @@ Schnittstelle auch `vda`.
 
 .. code-block:: console
 
-   # qemu-img info /var/lib/libvirt/images/lmn7-opnsense-*disk1.raw | grep virtual\ size
+   # qemu-img info /var/lib/libvirt/images/lmn7-opnsense-*disk001.raw | grep virtual\ size
    virtual size: 10G (10737418240 bytes)
    # lvcreate -L 10737418240b -n opnsense host-vg
-   # qemu-img convert -O raw /var/lib/libvirt/images/lmn7-opnsense-*disk1.raw /dev/host-vg/opnsense
+   # qemu-img convert -O raw /var/lib/libvirt/images/lmn7-opnsense-*disk001.raw /dev/host-vg/opnsense
    # virsh edit lmn7-opnsense
    ...
    <disk type='block' device='disk'>
       <driver name='qemu' type='raw'/>
       <source dev='/dev/host-vg/opnsense'/>
       <target dev='vda' bus='virtio'/>
+      <address .../>           <---- delete this line, will be autocreated correctly
    ...
 
 Jetzt kann das Abbild in ``/var/lib/libvirt/images`` gelöscht werden.
 
 .. code-block:: console
 
-   # rm /var/lib/libvirt/images/lmn7-opnsense-*disk1.raw
+   # rm /var/lib/libvirt/images/lmn7-opnsense-*disk001.raw
 
 
 Netzwerkanpassung der Firewall
@@ -585,7 +590,7 @@ hilft, um das ``login:`` zu sehen.
    Last login: Sun Mar 17 17:12:21 on ttyv0
    ...
    LAN (em0)       -> v4: 10.0.0.254/16
-   WAN (em1)       -> v4: 141.10.42.179/29
+   WAN (em1)       -> v4: 141.1.2.4/29
    ...
    0) Logout                              7) Ping host
    1) Assign interfaces                   8) Shell
@@ -624,10 +629,12 @@ Importiere die Server-Appliance `lmn7-server`.
 
    # virt-convert lmn7-server-*.ova
    ...
-   Running /usr/bin/qemu-img convert -O raw lmn7-server-20181109-disk1.vmdk /var/lib/libvirt/images/lmn7-server-20181109-disk1.raw
-   Running /usr/bin/qemu-img convert -O raw lmn7-server-20181109-disk2.vmdk /var/lib/libvirt/images/lmn7-server-20181109-disk2.raw   
-   Creating guest 'lmn7-server'.
-
+   Running /usr/bin/qemu-img convert -O raw lmn7-server-20181109-disk001.vmdk /var/lib/libvirt/images/lmn7-server-20181109-disk001.raw
+   Running /usr/bin/qemu-img convert -O raw lmn7-server-20181109-disk002.vmdk /var/lib/libvirt/images/lmn7-server-20181109-disk002.raw   
+   Creating guest 'lmn7-server-20190320.ovf'.
+   # virsh shutdown lmn7-server-20190320.ovf
+   # virsh domrename lmn7-server-20190320.ovf lmn7-server
+   
 Festplattengrößen für den Server
 --------------------------------
    
@@ -641,11 +648,11 @@ vergrößert, dann der mit Hilfe von `kpartx` aufgeschlossen.
 
 .. code-block:: console
 
-   # qemu-img resize -f raw /var/lib/libvirt/images/lmn7-server-*disk2.raw 370G
+   # qemu-img resize -f raw /var/lib/libvirt/images/lmn7-server-*disk002.raw 370G
    Image resized.
-   # qemu-img info /var/lib/libvirt/images/lmn7-server-*disk2.raw | grep virtual\ size
+   # qemu-img info /var/lib/libvirt/images/lmn7-server-*disk002.raw | grep virtual\ size
    virtual size: 370G (397284474880 bytes)
-   # kpartx -av /var/lib/libvirt/images/lmn7-server-*disk2.raw
+   # kpartx -av /var/lib/libvirt/images/lmn7-server-*disk002.raw
    # vgdisplay -s vg_srv
    "vg_srv" <100,00 GiB [<100,00 GiB used / 0,00 GiB free]
 
@@ -686,14 +693,18 @@ Zu letzt muss noch das Dateisystem geprüft und erweitert werden.
    Das Dateisystem auf /dev/vg_srv/linbo is nun 45874176 (4k) Blöcke lang.
 
 Um den Container wieder ordentlich zu schließen, muss man die `volume
-group` abmelden und mit `kpartx` abschließen.
+group` abmelden und mit `kpartx` abschließen, ein letztes `vgdisplay
+-s` überprüft, ob nur noch das Host-LVM übrig geblieben ist.
 
 .. code-block:: console
 
    # vgchange -a n vg_srv
    0 logical volume(s) in volume group "vg_srv" now active
-   # kpartx -dv /var/lib/libvirt/images/lmn7-server-*disk2.raw 
+   # kpartx -dv /var/lib/libvirt/images/lmn7-server-*disk002.raw 
    loop deleted : /dev/loop0
+   # vgdisplay -s
+   "host-vg" < GiB [xxx GiB used / yyy free]
+   
 
 Auch hier wird als Speichermedium auf dem Host LVM verwendet, wofür
 die selben Anpassung wie bei der Firewall nötig sind, ebenso sind die
@@ -701,30 +712,34 @@ Schnittstellen wieder umbenannt (`vda`, `vdb`).
 
 .. code-block:: console
 
-   # qemu-img info /var/lib/libvirt/images/lmn7-server-*disk1.raw | grep virtual\ size
+   # qemu-img info /var/lib/libvirt/images/lmn7-server-*disk001.raw | grep virtual\ size
    virtual size: 25G (26843545600 bytes)
    # lvcreate -L 26843545600b -n serverroot host-vg
-   # qemu-img convert -O raw /var/lib/libvirt/images/lmn7-server-*disk1.raw /dev/host-vg/serverroot
+   # qemu-img convert -O raw /var/lib/libvirt/images/lmn7-server-*disk001.raw /dev/host-vg/serverroot
    # virsh edit lmn7-server
    ...
    <disk type='block' device='disk'>
-      <driver name='qemu' type='raw'/>
+      ...
       <source dev='/dev/host-vg/serverroot'/>
       <target dev='vda' bus='virtio'/>
+      <address ...           <- zeile löschen
    ...
-   # qemu-img info /var/lib/libvirt/images/lmn7-server-*disk2.raw | grep virtual\ size
+   # qemu-img info /var/lib/libvirt/images/lmn7-server-*disk002.raw | grep virtual\ size
    virtual size: 370G (397284474880 bytes)
    # lvcreate -L 397284474880b -n serverdata host-vg
-   # qemu-img convert -O raw /var/lib/libvirt/images/lmn7-server-*disk2.raw /dev/host-vg/serverdata
+   # qemu-img convert -O raw /var/lib/libvirt/images/lmn7-server-*disk002.raw /dev/host-vg/serverdata
    # virsh edit lmn7-server
    ...
    <disk type='block' device='disk'>
-      <driver name='qemu' type='raw'/>
+      ...
       <source dev='/dev/host-vg/serverdata'/>
       <target dev='vdb' bus='virtio'/>      
+      <address ...           <- zeile löschen
    ...
 
-Die ursprünglichen Abbilder in ``/var/lib/libvirt/images`` werden gelöscht.
+Die ursprünglichen Abbilder in ``/var/lib/libvirt/images`` können
+gelöscht werden. Eventuell kann man damit warten, ob man die Abbilder
+als Recoveryabbilder behält, bis ein Backupsystem eingerichtet ist.
 
 .. code-block:: console
 
@@ -755,37 +770,6 @@ Starte den Server.
    # virsh start lmn7-server
    Domain lmn7-server started
 
-Verbinde dich mit dem Server über die serielle Schnittstelle
-
-.. code-block:: console
-		
-   # virsh console lmn7-server
-   Connected to domain lmn7-server
-   Escape character is ^]
-   
-   Ubuntu 18.04.2 LTS server ttyS0
-   
-   server login: root
-   Password: 
-   Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-46-generic x86_64)
-   ...
-
-Finde den Namen heraus, den die Netzwerkschnittstelle auf deinem System hat
-
-.. code-block:: console
-
-   server~$ ip -br addr list
-   lo               UNKNOWN        127.0.0.1/8 ::1/128 
-   ens3             DOWN
-
-Ersetzen den Namen `ens33` in der netplan-Konfiguration durch den
-richtigen Namen und starte das Netzwerk neu.
-
-.. code-block:: console
-		
-   server~$ sudo nano /etc/netplan/01-netcfg.yaml
-   server~$ sudo netplan apply
-
 Teste, ob du von (vom KVM-Host oder Admin-PC) per ssh auf
 den Server mit dem Standardpasswort `Muster!` kommst.
 
@@ -802,6 +786,39 @@ Teste, ob du vom Server aus zur Firewall kommst:
 
    server~$ ping 10.0.0.254
 
+Für die Fehlerfindung bei der Netzwerkkonfiguration hilft es sich mit
+dem Server vom KVM-Host über die serielle Schnittstelle zu verbinden.
+
+.. code-block:: console
+		
+   # virsh console lmn7-server
+   Connected to domain lmn7-server
+   Escape character is ^]
+   
+   Ubuntu 18.04.2 LTS server ttyS0
+   
+   server login: root
+   Password: 
+   Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-46-generic x86_64)
+   ...
+
+..
+  Finde den Namen heraus, den die Netzwerkschnittstelle auf deinem System hat
+  
+  .. code-block:: console
+  
+     server~$ ip -br addr list
+     lo               UNKNOWN        127.0.0.1/8 ::1/128 
+     ens3             DOWN
+  
+  Ersetzen den Namen `ens33` in der netplan-Konfiguration durch den
+  richtigen Namen und starte das Netzwerk neu.
+  
+  .. code-block:: console
+  		
+     server~$ sudo nano /etc/netplan/01-netcfg.yaml
+     server~$ sudo netplan apply
+  
 Abschließende Konfigurationen
 =============================
 
