@@ -17,6 +17,13 @@ und per Datei-Import einige Schüler aufgenommen.
 Melde dich dafür an d'SELMA als ``global-admin``, wie es in
 :ref:`login-dselma-global-admin` beschrieben wird.
 
+.. attention::
+
+   Für alle beta-Tester: folgende Szenarien funktionieren in d'SELMA
+   nicht. Am besten ist es für die Aufnahme mit nicht-ASCII-Zeichen
+   die Konsole zu verwenden (undokumentiert).
+
+
 Zeichenkodierung wählen
 =======================
 
