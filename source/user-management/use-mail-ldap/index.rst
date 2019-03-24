@@ -3,8 +3,9 @@
 
 .. _howto-use-mail-ldap-label:
 
-Individuelle E-Mail-Adressen verwalten
-======================================
+=============================================
+(v6.2) Individuelle E-Mail-Adressen verwalten
+=============================================
 
 Zielgruppe: Netzwerkberater und Supportfirmen
 

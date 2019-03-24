@@ -1,5 +1,6 @@
-Schulkonsole
-============
+===================
+(v6.2) Schulkonsole
+===================
 
 .. toctree::
   :maxdepth: 2

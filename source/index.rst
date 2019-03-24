@@ -81,7 +81,6 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   appendix/install-on-xcp-ng/index
   appendix/contribute/index
   appendix/school-console/index
-  clients/linbo/index
 
 ..
    .. toctree::

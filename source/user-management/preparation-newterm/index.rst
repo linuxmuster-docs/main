@@ -1,5 +1,6 @@
-Vorbereitung am Schuljahresanfang
-=================================
+========================================
+(v6.2) Vorbereitung am Schuljahresanfang
+========================================
 
 Klassenliste aktualisieren
 --------------------------

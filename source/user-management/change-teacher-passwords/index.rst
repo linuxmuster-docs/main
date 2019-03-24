@@ -1,8 +1,8 @@
 .. _howto-change-teacher-passwords:
 
-=============================================
-Lehrer-Passwörter zurücksetzen und ausdrucken
-=============================================
+====================================================
+(v6.2) Lehrer-Passwörter zurücksetzen und ausdrucken
+====================================================
 
 Melden Sie sich wie im Handbuch :ref:`schulekonsole-admin-label`
 beschrieben an der Schulkonsole als ``administrator`` an.

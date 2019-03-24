@@ -1,5 +1,6 @@
-Drucken der Erstpasswortlisten
-===============================
+=====================================
+(v6.2) Drucken der Erstpasswortlisten
+=====================================
 
 Jede Lehrkraft kann z.B. zum Schuljahresanfang die Erstpasswortlisten ihrer Schülerinnen und Schüler ausdrucken.
 
