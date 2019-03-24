@@ -160,6 +160,8 @@ Ohne Argumente konfiguriert das Skript die entsprechenden Eingaben
 über ein Konsolendialog. Es gelten die gleichen Hinweise und Warnungen
 wie bei der grafischen Installation.
 
+.. _login-dselma-global-admin:
+
 Login an d'SELMA als global-admin
 =================================
 
