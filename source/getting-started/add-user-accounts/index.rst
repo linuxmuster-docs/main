@@ -1,7 +1,7 @@
 
-==================
- Benutzeraufnahme
-==================
+==============================
+ Benutzeraufnahme mit d'SELMA
+==============================
 
 .. sectionauthor:: `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_
 		   
