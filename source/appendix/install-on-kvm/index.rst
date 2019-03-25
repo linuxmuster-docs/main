@@ -868,5 +868,59 @@ aktivieren.
    Domain lmn7-server marked as autostarted
 
 Ab jetzt ist eine Installation der Musterlösung möglich. Folge der
-:ref:`Anleitung hier <setup-using-selma-label>`.
+:ref:`Anleitung hier <setup-using-selma-label>`. Es empfiehlt sich
+jedoch, die Möglichkeiten des Backups und der schnellen
+Wiederherstellung der virtuellen Maschinen, wenn man die Wiederholung
+obiger Konfigurationen bei einem Neuanfang vermeiden will.
+
+
+Backup der Festplatte-Abbilder mittels LVM2
+===========================================
+
+Mit Hilfe von LVM2 kann man sehr schnell Snapshots der aktuellen
+Festplatteabbilder erstellen. Diese Snapshots kann man dann für ein
+Backup der Daten zu diesem Zeitpunkt verwenden. Alternativ kann man
+ein später unbrauchbares Originalabbild schnell wieder auf den Stand
+des Snapshots bringen.
+
+Snapshot erstellen
+------------------
+
+.. code-block:: console
+
+   # lvcreate -s /dev/host-vg/opnsense -L 2G -n opnsense-backup
+   Using default stripesize 64,00 KiB.
+   Logical volume "opnsense-backup" created.
+   # lvcreate -s /dev/storage/serverroot -L 5G -n serverroot-backup
+   Using default stripesize 64,00 KiB.
+   Logical volume "serverroot-backup" created.
+   # lvcreate -s /dev/storage/serverdata -L 20G -n serverdata-backup
+   Using default stripesize 64,00 KiB.
+   Logical volume "serverdata-backup" created.
+   # lvs
+   LV                VG      Attr        LSize   Pool Origin   Data%  Meta%  Move Log Cpy%Sync Convert
+   opnsense          host-vg owi-aos---   10,00g                                                      
+   opnsense-backup   host-vg swi-a-s---    2,00g      opnsense 0,05                                   
+   serverdata        host-vg owi-aos---  370,00g                                                        
+   serverdata-backup host-vg swi-aos---   20,00g      serverdata 0,01                                   
+   serverroot        host-vg owi-aos---   25,00g                                                        
+   serverroot-backup host-vg swi-a-s---    5,00g      serverroot 0,00                                   
+   default-school    vg_srv  -wi-a-----  175,00g                                                        
+   global            vg_srv  -wi-a-----   10,00g                                                        
+   linbo             vg_srv  -wi-a----- <175,00g                                                        
+   var               vg_srv  -wi-a-----   10,00g                                
+
+Snapshot zurückführen
+---------------------
+
+Der Client muss gestoppt werden, dann kann das Abbild schnell auf den
+Originalzustand zurückgeführt werden. Für den Server, der zwei
+Abbilder hat, müssen natürlich alle Abbilder zurückgeführt werden,
+damit ein konsistenter Zustand hergestellt wird.
+
+.. code-block:: console
+
+   # lvconvert --merge /dev/storage/serverroot-backup 
+   Merging of volume storage/serverroot-backup started.
+   storage/serverroot: Merged: 100,00%
 
