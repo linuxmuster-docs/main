@@ -883,6 +883,23 @@ Backup der Daten zu diesem Zeitpunkt verwenden. Alternativ kann man
 ein später unbrauchbares Originalabbild schnell wieder auf den Stand
 des Snapshots bringen.
 
+Einstellung von LVM2
+--------------------
+
+Um Schaden am System im internen LVM des Servers ``vg_srv`` zu
+verhindern, sollte man das logical volume ``/dev/host-vg/serverdata``
+herausfiltern. Das geschieht in der Datei ``/etc/lvm/lvm.conf`` und
+man sucht und ersetzt die Variable ``global_filter``
+
+.. code-block:: console
+
+   ...
+   # This configuration option has an automatic default value.                                                                                                     
+   # global_filter = [ "a|.*/|" ]                                                                                                                                  
+   global_filter = [ "r|^/dev/host-vg/serverdata$|" , "a|.*/|" ]
+   ...
+
+
 Snapshot erstellen
 ------------------
 
@@ -905,10 +922,7 @@ Snapshot erstellen
    serverdata-backup host-vg swi-aos---   20,00g      serverdata 0,01                                   
    serverroot        host-vg owi-aos---   25,00g                                                        
    serverroot-backup host-vg swi-a-s---    5,00g      serverroot 0,00                                   
-   default-school    vg_srv  -wi-a-----  175,00g                                                        
-   global            vg_srv  -wi-a-----   10,00g                                                        
-   linbo             vg_srv  -wi-a----- <175,00g                                                        
-   var               vg_srv  -wi-a-----   10,00g                                
+
 
 Snapshot zurückführen
 ---------------------
@@ -920,7 +934,27 @@ damit ein konsistenter Zustand hergestellt wird.
 
 .. code-block:: console
 
-   # lvconvert --merge /dev/storage/serverroot-backup 
-   Merging of volume storage/serverroot-backup started.
-   storage/serverroot: Merged: 100,00%
+   # virsh shutdown lvm7-server
+   # lvconvert --merge /dev/host-vg/serverroot-backup 
+   Merging of volume host-vg/serverroot-backup started.
+   host-vg/serverroot: Merged: 100,00%
 
+Das logische Laufwerk ``serverdata`` hat intern wiederum ein LVM,
+welches auf dem KVM-Host sichtbar wurde. Das muss zunächst geschlossen
+werden, sonst kann der Snapshot nicht zusammengeführt werden.
+
+.. code-block:: console
+
+   # lvchange -a n /dev/vg_srv/default-school
+   # lvchange -a n /dev/vg_srv/var
+   # lvchange -a n /dev/vg_srv/linbo
+   # lvchange -a n /dev/vg_srv/global		
+   # vgchange -a n vg_srv
+   # lvconvert --merge /dev/host-vg/serverdata-backup 
+   Merging of volume host-vg/serverdata-backup started.
+   host-vg/serverdata: Merged: 100,00%
+
+Snapshot als Basis für ein Backup verwendenc
+--------------------------------------------
+
+:fixme:
