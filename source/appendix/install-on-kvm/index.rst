@@ -878,9 +878,9 @@ Backup der Festplatte-Abbilder mittels LVM2
 ===========================================
 
 Mit Hilfe von LVM2 kann man sehr schnell Snapshots der aktuellen
-Festplatteabbilder erstellen. Diese Snapshots kann man dann für ein
+Festplattenabbilder erstellen. Diese Snapshots kann man dann für ein
 Backup der Daten zu diesem Zeitpunkt verwenden. Alternativ kann man
-ein später unbrauchbares Originalabbild schnell wieder auf den Stand
+ein später unbrauchbares Laufwerk schnell wieder auf den Stand
 des Snapshots bringen.
 
 Einstellung von LVM2
@@ -888,9 +888,10 @@ Einstellung von LVM2
 
 Um Schaden am System im internen LVM des Servers ``vg_srv`` zu
 verhindern, sollte man das logical volume ``/dev/host-vg/serverdata``
-und sein Snapshot ``/dev/host-vg/serverdata-backup``
-herausfiltern. Das geschieht in der Datei ``/etc/lvm/lvm.conf`` und
-man sucht und ersetzt die Variable ``global_filter``
+und sein Snapshot ``/dev/host-vg/serverdata-backup`` aus dem Scan nach
+internen LVMs herausfiltern. Das geschieht in der Datei
+``/etc/lvm/lvm.conf`` und man sucht und ersetzt die Variable
+``global_filter``
 
 .. code-block:: console
 
@@ -905,7 +906,7 @@ Snapshot erstellen
 ------------------
 
 Ein Snapshot erstellt eine Schattenkopie zum Zeitpunkt der
-Erstellung. Alle Änderungen am originalen logical volume werden von
+Erstellung. Alle Änderungen am laufenden logical volume werden von
 dann ab im dem Snapshot gespeichert. Man muss also nur bei der
 initialen Erstellung darauf achten, wie groß der Snapshot werden
 könnte. Hier werden etwa 5% des originalen volumes gewählt.
@@ -915,10 +916,10 @@ könnte. Hier werden etwa 5% des originalen volumes gewählt.
    # lvcreate -s /dev/host-vg/opnsense -L 2G -n opnsense-backup
    Using default stripesize 64,00 KiB.
    Logical volume "opnsense-backup" created.
-   # lvcreate -s /dev/storage/serverroot -L 5G -n serverroot-backup
+   # lvcreate -s /dev/host-vg/serverroot -L 5G -n serverroot-backup
    Using default stripesize 64,00 KiB.
    Logical volume "serverroot-backup" created.
-   # lvcreate -s /dev/storage/serverdata -L 20G -n serverdata-backup
+   # lvcreate -s /dev/host-vg/serverdata -L 20G -n serverdata-backup
    Using default stripesize 64,00 KiB.
    Logical volume "serverdata-backup" created.
    # lvs
@@ -948,7 +949,7 @@ damit ein konsistenter Zustand hergestellt wird.
 .. code-block:: console
 
    # virsh shutdown lvm7-server
-   # lvconvert --merge /dev/host-vg/serverroot-backup 
+   # lvconvert --mergesnapshot /dev/host-vg/serverroot-backup 
    Merging of volume host-vg/serverroot-backup started.
    host-vg/serverroot: Merged: 100,00%
 
@@ -961,7 +962,7 @@ kann der Snapshot nicht zusammengeführt werden.
 
    # lvchange -a n /dev/vg_srv/*  --- nur für den Fall, dass der Filter nicht funktioniert hat
    # vgchange -a n vg_srv         --- nur für den Fall, dass der Filter nicht funktioniert hat
-   # lvconvert --merge /dev/host-vg/serverdata-backup 
+   # lvconvert --mergesnapshot /dev/host-vg/serverdata-backup 
    Merging of volume host-vg/serverdata-backup started.
    host-vg/serverdata: Merged: 100,00%
 
