@@ -868,5 +868,104 @@ aktivieren.
    Domain lmn7-server marked as autostarted
 
 Ab jetzt ist eine Installation der Musterlösung möglich. Folge der
-:ref:`Anleitung hier <setup-using-selma-label>`.
+:ref:`Anleitung hier <setup-using-selma-label>`. Es empfiehlt sich
+jedoch, die Möglichkeiten des Backups und der schnellen
+Wiederherstellung der virtuellen Maschinen, wenn man die Wiederholung
+obiger Konfigurationen bei einem Neuanfang vermeiden will.
 
+
+Backup der Festplatte-Abbilder mittels LVM2
+===========================================
+
+Mit Hilfe von LVM2 kann man sehr schnell Snapshots der aktuellen
+Festplatteabbilder erstellen. Diese Snapshots kann man dann für ein
+Backup der Daten zu diesem Zeitpunkt verwenden. Alternativ kann man
+ein später unbrauchbares Originalabbild schnell wieder auf den Stand
+des Snapshots bringen.
+
+Einstellung von LVM2
+--------------------
+
+Um Schaden am System im internen LVM des Servers ``vg_srv`` zu
+verhindern, sollte man das logical volume ``/dev/host-vg/serverdata``
+und sein Snapshot ``/dev/host-vg/serverdata-backup``
+herausfiltern. Das geschieht in der Datei ``/etc/lvm/lvm.conf`` und
+man sucht und ersetzt die Variable ``global_filter``
+
+.. code-block:: console
+
+   ...
+   # This configuration option has an automatic default value.                                                                                                     
+   # global_filter = [ "a|.*/|" ]                                                                                                                                  
+   global_filter = [ "r|^/dev/host-vg/serverdata.*$|" ]
+   ...
+
+
+Snapshot erstellen
+------------------
+
+Ein Snapshot erstellt eine Schattenkopie zum Zeitpunkt der
+Erstellung. Alle Änderungen am originalen logical volume werden von
+dann ab im dem Snapshot gespeichert. Man muss also nur bei der
+initialen Erstellung darauf achten, wie groß der Snapshot werden
+könnte. Hier werden etwa 5% des originalen volumes gewählt.
+
+.. code-block:: console
+
+   # lvcreate -s /dev/host-vg/opnsense -L 2G -n opnsense-backup
+   Using default stripesize 64,00 KiB.
+   Logical volume "opnsense-backup" created.
+   # lvcreate -s /dev/storage/serverroot -L 5G -n serverroot-backup
+   Using default stripesize 64,00 KiB.
+   Logical volume "serverroot-backup" created.
+   # lvcreate -s /dev/storage/serverdata -L 20G -n serverdata-backup
+   Using default stripesize 64,00 KiB.
+   Logical volume "serverdata-backup" created.
+   # lvs
+   LV                VG      Attr        LSize   Pool Origin   Data%  Meta%  Move Log Cpy%Sync Convert
+   opnsense          host-vg owi-aos---   10,00g                                                      
+   opnsense-backup   host-vg swi-a-s---    2,00g      opnsense 0,05                                   
+   serverdata        host-vg owi-aos---  370,00g                                                        
+   serverdata-backup host-vg swi-aos---   20,00g      serverdata 0,01                                   
+   serverroot        host-vg owi-aos---   25,00g                                                        
+   serverroot-backup host-vg swi-a-s---    5,00g      serverroot 0,00                                   
+
+.. hint::
+
+   Um zu testen, dass der Filter in ``/etc/lvm/lvm.conf`` erfolgreich
+   das interne LVM ``vg_srv`` ausblendet, ruft man ``lvs`` auf. In der
+   Liste der LV sollte dann kein ``vg_srv`` auftauchen.
+
+
+Snapshot zurückführen
+---------------------
+
+Der Client muss gestoppt werden, dann kann das Abbild schnell auf den
+Originalzustand zurückgeführt werden. Für den Server, der zwei
+Abbilder hat, müssen natürlich alle Abbilder zurückgeführt werden,
+damit ein konsistenter Zustand hergestellt wird.
+
+.. code-block:: console
+
+   # virsh shutdown lvm7-server
+   # lvconvert --merge /dev/host-vg/serverroot-backup 
+   Merging of volume host-vg/serverroot-backup started.
+   host-vg/serverroot: Merged: 100,00%
+
+Falls beim logische Laufwerk ``serverdata`` das interne LVM sichtbar
+wurde (``lvs`` zeigt sie an), weil z.B. der Filter nicht funktioniert,
+dann muss zunächst die internen logischen Laufwerke geschlossen, sonst
+kann der Snapshot nicht zusammengeführt werden.
+
+.. code-block:: console
+
+   # lvchange -a n /dev/vg_srv/*  --- nur für den Fall, dass der Filter nicht funktioniert hat
+   # vgchange -a n vg_srv         --- nur für den Fall, dass der Filter nicht funktioniert hat
+   # lvconvert --merge /dev/host-vg/serverdata-backup 
+   Merging of volume host-vg/serverdata-backup started.
+   host-vg/serverdata: Merged: 100,00%
+
+Snapshot als Basis für ein Backup verwendenc
+--------------------------------------------
+
+:fixme:

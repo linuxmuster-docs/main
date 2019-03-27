@@ -12,6 +12,10 @@ Projekte), Computerinformationen (``workstations``), der Benutzerdaten
 Nicht migriert werden Beschreibungen von Projekten, Quota-Tabellen und
 Rollen, die Geräte bekommen. Diese müssen von Hand angepasst werden.
 
+Ebenso werden die Dienste mrbs, openSchulPortfolio und der Mail-Server
+nicht migriert, da diese - wenn benötigt - zur Installation in einem
+Dockercontainer vorgesehen sind.
+
 Voraussetzungen
 ===============
 
@@ -228,9 +232,9 @@ Die Aufnahme
   getestet werden, was hier zu 100% funktionieren sollte. Im nächsten
   Schritt folgt der Import der aktuellen Passworthashes.
 
-- gibt den Benutzern keinerlei Rechte für SELMA.
+- gibt den Benutzern zunächst keine Rechte für SELMA. Dies folgt
+  in einem späteren Schritt.
 
-:fixme: Werden weiter unten jetzt Rechte gesetzt oder nicht?
 
 4. Passworthashes importieren
 -----------------------------
@@ -254,10 +258,9 @@ Jetzt müssen die standardmäßig komplexen Passwörter wieder aktiviert werden
 Tests
 ~~~~~
 
-:fixme: bisherigen? oder den neuen?
-	
-Abhängig von den bisherigen Passwortregeln werden nicht mehr alle
-Erstpasswörter nach den neuen Regeln funktionieren
+Jetzt sollten für Konten bei denen nicht mehr das Erstpasswort gilt,
+der folgende Test fehlschlagen. Für alle Konten mit Erstpasswörtern
+sollte er noch funktionieren.
 
 .. code-block:: console
 
@@ -377,8 +380,6 @@ Tests
    server ~ # sophomorix-device -d firewall -i
    server ~ # sophomorix-device -r no-pxe -i
 
-:fixme: (rooms Bug: zeigt auch hardwareclass)
-
 Überprüfe ob die Namensauflösung funktioniert:
 
 .. code-block:: console
@@ -407,8 +408,6 @@ Quellsystem im Zielsystem unter einem Pfad (hier im Beispiel:
    /mnt/home/share
    /mnt/home/students
    /mnt/home/teachers
-
-:fixme: Check ob auch die Verlinkung von einer externen Festplatte funktioniert.
 
 Der Pfad im Zielsystem wird über das Kommandozeilenargument
 ``--path-oldserver /mnt`` an nachfolgende Skripte übergeben.
