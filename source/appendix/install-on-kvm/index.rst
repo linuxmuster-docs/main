@@ -1028,7 +1028,7 @@ Backup-Verzeichnis) kopiert und dann wieder hochgefahren.
 
    # virsh shutdown lmn7-opnsense
    # export BDATE=$(date +%Y_%m_%d_%H_%M)
-   # qemu-img convert -O qcow2 /dev/host-vg/opnsense-backup /srv/backup/opnsense_${BDATE}.qcow2   
+   # qemu-img convert -O qcow2 /dev/host-vg/opnsense /srv/backup/opnsense_${BDATE}.qcow2   
    # ln -sf /srv/backup/opnsense_${BDATE}.qcow2 /srv/backup/opnsense_latest.qcow2
    # virsh start lmn7-opnsense
 
