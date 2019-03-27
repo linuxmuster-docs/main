@@ -874,8 +874,11 @@ Wiederherstellung der virtuellen Maschinen, wenn man die Wiederholung
 obiger Konfigurationen bei einem Neuanfang vermeiden will.
 
 
-Backup der Festplatte-Abbilder mittels LVM2
-===========================================
+Snapshot und Backup der KVM-Maschinen
+=====================================
+
+Backup der Festplatten-Abbilder mittels LVM2
+--------------------------------------------
 
 Mit Hilfe von LVM2 kann man sehr schnell Snapshots der aktuellen
 Festplattenabbilder erstellen. Diese Snapshots kann man dann für ein
@@ -884,7 +887,7 @@ ein später unbrauchbares Laufwerk schnell wieder auf den Stand
 des Snapshots bringen.
 
 Einstellung von LVM2
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 Um Schaden am System im internen LVM des Servers ``vg_srv`` zu
 verhindern, sollte man das logical volume ``/dev/host-vg/serverdata``
@@ -903,13 +906,23 @@ internen LVMs herausfiltern. Das geschieht in der Datei
 
 
 Snapshot erstellen
-------------------
+~~~~~~~~~~~~~~~~~~
 
-Ein Snapshot erstellt eine Schattenkopie zum Zeitpunkt der
-Erstellung. Alle Änderungen am laufenden logical volume werden von
-dann ab im dem Snapshot gespeichert. Man muss also nur bei der
-initialen Erstellung darauf achten, wie groß der Snapshot werden
-könnte. Hier werden etwa 5% des originalen volumes gewählt.
+Einen Snapshot kann man im laufenden Betrieb erstellen, wenn das
+Dateisystem der VM dies unterstützt. Das LVM sagt dem Dateisystem,
+sich in einen konsistenten Zustand zu bringen. Sicherheitshalber kann
+man aber für die Erstellung auch die VM herunterfahren.
+
+Ein Snapshot erstellt ein neues logical volume (LV) zum Zeitpunkt der
+Erstellung. Zunächst ist der Snapshot identisch mit dem laufenden und
+verbraucht keinen Speicherplattz. Sobald am laufenden logical volume
+Änderungen passieren, wird der alte Inhalt im dem Snapshot
+gespeichert. Man muss bei der initialen Erstellung eine Größe für den
+Snapshot wählen.  Natürlich kann die Summe aller geänderten Daten die
+Größe des Snapshots erreichen, dann funktioniert das Prinzip nicht
+mehr. Für die folgenden Zwecke werden etwa 5% des originalen volumes
+als Größe gewählt, da in einem überschaubaren Zeitraum der Snapshot
+wieder entfernt wird.
 
 .. code-block:: console
 
@@ -927,7 +940,7 @@ könnte. Hier werden etwa 5% des originalen volumes gewählt.
    opnsense          host-vg owi-aos---   10,00g                                                      
    opnsense-backup   host-vg swi-a-s---    2,00g      opnsense 0,05                                   
    serverdata        host-vg owi-aos---  370,00g                                                        
-   serverdata-backup host-vg swi-aos---   20,00g      serverdata 0,01                                   
+   serverdata-backup host-vg swi-a-s---   20,00g      serverdata 0,01                                   
    serverroot        host-vg owi-aos---   25,00g                                                        
    serverroot-backup host-vg swi-a-s---    5,00g      serverroot 0,00                                   
 
@@ -937,14 +950,26 @@ könnte. Hier werden etwa 5% des originalen volumes gewählt.
    das interne LVM ``vg_srv`` ausblendet, ruft man ``lvs`` auf. In der
    Liste der LV sollte dann kein ``vg_srv`` auftauchen.
 
+In der Tabelle sieht man bei den Attributen, welches das Original und
+welches der Snapshot ist (Spalte 1). In Spalte 6 steht, ob ein LV
+geöffnet, d.h. z.B. gemountet ist ("o") oder nicht.
+
 
 Snapshot zurückführen
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
-Der Client muss gestoppt werden, dann kann das Abbild schnell auf den
-Originalzustand zurückgeführt werden. Für den Server, der zwei
-Abbilder hat, müssen natürlich alle Abbilder zurückgeführt werden,
-damit ein konsistenter Zustand hergestellt wird.
+Der Client muss gestoppt werden, dann kann das Abbild relativ schnell
+auf den Originalzustand zurückgeführt werden.
+
+.. code-block:: console
+
+   # virsh shutdown lvm7-opnsense
+   # lvconvert --mergesnapshot /dev/host-vg/opnsense-backup 
+   Merging of volume host-vg/opnsense-backup started.
+   host-vg/opnsense: Merged: 100,00%
+
+Für den Server, der zwei Abbilder hat, müssen natürlich alle Abbilder
+zurückgeführt werden, damit ein konsistenter Zustand hergestellt wird.
 
 .. code-block:: console
 
@@ -953,10 +978,10 @@ damit ein konsistenter Zustand hergestellt wird.
    Merging of volume host-vg/serverroot-backup started.
    host-vg/serverroot: Merged: 100,00%
 
-Falls beim logische Laufwerk ``serverdata`` das interne LVM sichtbar
+Falls beim logischen Laufwerk ``serverdata`` das interne LVM sichtbar
 wurde (``lvs`` zeigt sie an), weil z.B. der Filter nicht funktioniert,
-dann muss zunächst die internen logischen Laufwerke geschlossen, sonst
-kann der Snapshot nicht zusammengeführt werden.
+dann müssen zunächst die internen logischen Laufwerke geschlossen
+werden, sonst kann der Snapshot nicht zusammengeführt werden.
 
 .. code-block:: console
 
@@ -966,7 +991,103 @@ kann der Snapshot nicht zusammengeführt werden.
    Merging of volume host-vg/serverdata-backup started.
    host-vg/serverdata: Merged: 100,00%
 
-Snapshot als Basis für ein Backup verwendenc
---------------------------------------------
+Snapshot als Basis für ein Backup verwenden
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:fixme:
+Will man den Snapshot für die Erstellung eines dateibasierten Backups
+verwenden, z.B. mit `rsync` oder `rsnapshot`, muss man das logical
+volume (LV) für das Hostsystem aufschließen, die Dateien kopieren und
+wieder zuschließen. Danach kann man den Snapshot entfernen.
+
+Am Beispiel der OpnSense wird auf ein NAS oder ein Verzeichnis
+gesynced, deren Zielverzeichnis zuvor existieren müssen.
+
+.. code-block:: console
+
+   # kpartx -av /dev/host-vg/opnsense-backup
+   # mount /dev/mapper/opnsense-backup1 /mnt
+   # rsync -aP /mnt/ user@NAS:/targetdir-opnsense/
+   oder
+   # rsync -aP /mnt/ /srv/backup/opnsense/
+   ...
+   # umount /mnt
+   # kpartx -dv /dev/host-vg/opnsense-backup
+   # lvremove /dev/host-vg/opnsense-backup
+
+:fixme: Beispiel für lmn7-server
+
+Backup kompletter Abbilder
+--------------------------
+
+Komplette Kopien für ein Backup der Festplattenabbilder kann man mit
+`qemu-img` vornehmen. Am Beispiel der OpnSense, wird zuerst die VM
+heruntergefahren, das Abbild (in ein komprimiertes Abbild in ein
+Backup-Verzeichnis) kopiert und dann wieder hochgefahren.
+
+.. code-block:: console
+
+   # virsh shutdown lmn7-opnsense
+   # export BDATE=$(date +%Y_%m_%d_%H_%M)
+   # qemu-img convert -O qcow2 /dev/host-vg/opnsense-backup /srv/backup/opnsense_${BDATE}.qcow2   
+   # ln -sf /srv/backup/opnsense_${BDATE}.qcow2 /srv/backup/opnsense_latest.qcow2
+   # virsh start lmn7-opnsense
+
+Am Beispiel des Servers
+
+.. code-block:: console
+
+   # virsh shutdown lmn7-server
+   # export BDATE=$(date +%Y_%m_%d_%H_%M)
+   # qemu-img convert -O qcow2 /dev/host-vg/serverroot /srv/backup/server_disk1_${BDATE}.qcow2
+   # qemu-img convert -O qcow2 /dev/host-vg/serverdata /srv/backup/server_disk2_${BDATE}.qcow2
+   # ln -sf /srv/backup/server_disk1_latest.qcow2 /srv/backup/server_disk1_${BDATE}.qcow2
+   # ln -sf /srv/backup/server_disk2_latest.qcow2 /srv/backup/server_disk2_${BDATE}.qcow2   
+   # virsh start lmn7-server
+
+Im Prinzip könnte auch eine komplette Kopie eines Snapshot-LVs gemacht
+werden. Andererseits möchte man so ein vollständiges Backup der VM
+besser in einem heruntergefahrenen Zustand machen. Um die Downtime zu
+minimieren, kann man ein Snapshot erstellen, die VM wieder hochfahren,
+die Snapshot-LVs mit `qemu-img` konvertieren und dann die Snapshots
+wieder löschen, beispielhaft an der OpnSense:
+
+.. code-block:: console
+
+   # virsh shutdown lmn7-opnsense
+   # lvcreate -s /dev/host-vg/opnsense -L 2G -n opnsense-backup
+   # virsh start lmn7-opnsense
+   # export BDATE=$(date +%Y_%m_%d_%H_%M)
+   # qemu-img convert -O qcow2 /dev/host-vg/opnsense-backup /srv/backup/opnsense_${BDATE}.qcow2
+   # ln -sf /srv/backup/opnsense_${BDATE}.qcow2 /srv/backup/opnsense_latest.qcow2
+   # lvremove /dev/host-vg/opnsense-backup
+
+Recovery kompletter Abbilder
+----------------------------
+
+Die Wiederherstellung kompletter Abbilder verläuft analog zum Import
+der Appliances. Der Befehl `qemu-img` muss als Ziel das logical
+volume (LV) haben, welches vorher existieren muss. Je nachdem, wie der
+Zustand des KVM-Hosts vor der Wiederherstellung ist, muss man
+
+- wenn der KVM-Host unverändert ist nur das Backup in die bestehenden
+  LVs zurückspielen.
+
+- nach einer Neuinstallation des KVM-Hosts die Volume Group und die
+  LVs erstellen, die Metadaten für die VM rekonstruieren, dann das
+  Backup zurückspielen
+
+Das reine Zurückspielen des letzten Backups in ein unverändertes
+System geht am Beispiel der OpnSense so:
+
+.. code-block:: console
+
+   # virsh shutdown lmn7-opnsense
+   # qemu-img convert -O raw  /srv/backup/opnsense_latest.qcow2 /dev/host-vg/opnsense
+   # virsh start lmn7-opnsense
+
+Entsprechend funktioniert das Zurückspielen für den Server oder andere VMs.
+
+Die Rekonstruktion der Meta-Daten sollte es genügen, das Verzeichnis
+``/etc/libvirtd/`` auf dem KVM-Host wiederherzustellen, wurde für
+diese Dokumentation noch nicht getestet. Darüberhinaus ist die
+Erstellung der volume group und die Erstellung der LVs notwendig.
