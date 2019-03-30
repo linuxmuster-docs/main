@@ -70,8 +70,8 @@ Download-Quellen
 ----------------
 
 Nachstehend finden Sie eine Übersicht zu den Download-Quellen für XCP-ng und die VMs der 
-linuxmuster.net v6.2 im XVA Format zum direkten Import in XCP-ng. Deren Installation wird nachstehend schrittweise 
-beschrieben.
+linuxmuster.net v6.2 im XVA Format zum direkten Import in XCP-ng. Deren Installation wird nachstehend 
+schrittweise beschrieben.
 
 Die VMs wurden mithilfe von ``zip`` nochmals komprimiert. Bitte dekomprimiere nach dem Download die Dateien
 lokal mithilfe von ``unzip``.
@@ -89,24 +89,24 @@ lokal mithilfe von ``unzip``.
 | Download-Link:                                                                                        |
 | `XCP-ng Center <https://github.com/xcp-ng/xenadmin/releases>`_                                        |
 +---------------+---------------------------------------------------------------------------------------+
-| lmn62.XOA     | web-basierte VM zur Verwaltung von XCP-ng angasspt an die lmn v6.2                    |
+| lmn62.XOA     | web-basierte VM zur Verwaltung von XCP-ng angepasst an die lmn v6.2                   |
 +---------------+---------------------------------------------------------------------------------------+ 
 | Download-Link:                                                                                        |
-| `XOA lmn62 <https://download.linuxmuster.org/xcp-ng/v6.2/lmn62.xoa.xva.zip>`_                         |
+| `XOA lmn62 <https://download.linuxmuster.net/xcp-ng/v6.2/lmn62.xoa.xva.zip>`_                         |
 +---------------+---------------------------------------------------------------------------------------+
 |  SHA1: ``704a4334e2f26681d34e15a065072e13af44c5ae``                                                   |
 +---------------+---------------------------------------------------------------------------------------+ 
 | lmn62.ipfire  | IPFire VM  der linuxmuster-net v6.2                                                   |                  
 +---------------+---------------------------------------------------------------------------------------+
 | Download-Link:                                                                                        |
-| `lmn62 IPFire <https://download.linuxmuster.org/xcp-ng/xcp-ng/v6.2/lmn62.ipfire.xva.zip>`_            |
+| `lmn62 IPFire <https://download.linuxmuster.net/xcp-ng/xcp-ng/v6.2/lmn62.ipfire.xva.zip>`_            |
 +---------------+---------------------------------------------------------------------------------------+
 |  SHA1: ``c197d8afd89645707caa6a63c974f9c288bb8855``                                                   |
 +---------------+---------------------------------------------------------------------------------------+
 | lmn62.server  | Server der linuxmuster.net v6.2                                                       | 
 +---------------+---------------------------------------------------------------------------------------+
 | Download-Link:                                                                                        |
-| `lmnv62 Server <https://download.linuxmuster.org/xcp-ng/xcp-ng/v6.2/lmn62.server.xva.zip>`_           |             
+| `lmnv62 Server <https://download.linuxmuster.net/xcp-ng/xcp-ng/v6.2/lmn62.server.xva.zip>`_           |             
 +---------------+---------------------------------------------------------------------------------------+
 |  SHA1: ``4eb9a78cff74ee1b3d110b27d2805ba0c9ff817c``                                                   | 
 +---------------+---------------------------------------------------------------------------------------+
@@ -120,14 +120,14 @@ und/oder zur Steuerung der Unifi WLAN Access Points und deren Anbindung an die l
 | lmn62.opsi    | OPSI VM der lmn v6.2                                                                  |
 +---------------+---------------------------------------------------------------------------------------+
 | Download-Link:                                                                                        |
-| `OPSI lmn62 <https://download.linuxmuster.org/xcp-ng/xcp-ngv6.2/lmn62.opsi.xva.zip>`_                 | 
+| `OPSI lmn62 <https://download.linuxmuster.net/xcp-ng/xcp-ngv6.2/lmn62.opsi.xva.zip>`_                 | 
 +---------------+---------------------------------------------------------------------------------------+
 |  SHA1: ``aa974eaa4e484e400aced27324db7100b57c0636``                                                   |
 +---------------+---------------------------------------------------------------------------------------+
 | lmn62.unifi   | Unifi VM der lmn v6.2                                                                 |
 +---------------+---------------------------------------------------------------------------------------+
-| Doenload-Link:                                                                                        |
-| `Download VM v6.2 Unifi <https://download.linuxmuster.org/xcp-ng/v6.2/lmn62.server.xva.zip>`_         | 
+| Download-Link:                                                                                        |
+| `Download VM v6.2 Unifi <https://download.linuxmuster.net/xcp-ng/v6.2/lmn62.server.xva.zip>`_         | 
 +---------------+---------------------------------------------------------------------------------------+
 |  SHA1: ``69ec378f9e3615f9f04e3f94a9f4ee59ba2327f6``                                                   |
 +---------------+---------------------------------------------------------------------------------------+
