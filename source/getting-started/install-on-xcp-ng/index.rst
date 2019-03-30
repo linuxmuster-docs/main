@@ -28,6 +28,7 @@ einsatzbereite Umgebung bestehend aus
 * einer Firewall (IPFire)  
 * einem Server (linuxmuster.net v6.2)
 * einer VM (XOA) zur web-basierten Verwaltung des Virtualisierungs-Hosts
+* Optional: einer VM zur Softwareverteilung für Windows-Clients OPSI
 
 Voraussetzungen
 ===============
@@ -61,30 +62,75 @@ Bereitstellen des XCP-ng-Hosts
    zuvor im BIOS aktiviert worden sein.
 
 Die folgende Anleitung beschreibt die *einfachste* Implementierung
-ohne Dinge wie VLANs, Teaming oder Raids. Diese Themen werden in
+ohne Dinge wie VLANs, Teaming oder RAIDs. Diese Themen werden in
 zusätzlichen Anleitungen betrachtet.
 
 
 Download-Quellen
 ----------------
 
-Nachstehend finden Sie eine Übersicht zu den Download-Quellen für XCP-ng, die nachstehend schrittweise 
-beschrieben werden.
+Nachstehend finden Sie eine Übersicht zu den Download-Quellen für XCP-ng und die VMs der 
+linuxmuster.net v6.2 im XVA Format zum direkten Import in XCP-ng. Deren Installation wird nachstehend schrittweise 
+beschrieben.
 
-+---------------+--------------------------+----------------------------------------------------------------------------------+
-| Programm      | Beschreibung             | Download-Link                                                                    |
-+===============+==========================+==================================================================================+
-| XCP-ng        | Installationsdatenträger | `XCP-ng <https://xcp-ng.org/#easy-to-install>`_                                  |
-+---------------+--------------------------+----------------------------------------------------------------------------------+
-| XCP-ng Center | Windows-Programm zur     | `XCP-ng Center <https://github.com/xcp-ng/xenadmin/releases>`_                   |
-|               | Verwaltung von XCP-ng    |                                                                                  |
-+---------------+--------------------------+----------------------------------------------------------------------------------+
-| XOA           | web-basierte VM zur      |                                                                                  |
-|               | Verwaltung von XCP-ng    |  `XOA lmn <http://fleischsalat.linuxmuster.org/xva/lmn62-xoa-2019-03-08.zip>`_   |
-+---------------+--------------------------+----------------------------------------------------------------------------------+ 
-|lmn v6.2 VMs   |VM linuxmuster.net v6.2   |  `Download VM v6.2 <http://linuxmuster.org>_`                                    |                  
-+---------------+--------------------------+----------------------------------------------------------------------------------+
+Die VMs wurden mithilfe von ``zip`` nochmals komprimiert. Bitte dekomprimiere nach dem Download die Dateien
+lokal mithilfe von ``unzip``.
 
++---------------+---------------------------------------------------------------------------------------+
+| Programm      | Beschreibung                                                                          | 
++===============+=======================================================================================+
+| XCP-ng        | Installationsdatenträger                                                              | 
++---------------+---------------------------------------------------------------------------------------+
+| Download-Link:                                                                                        |
+| `XCP-ng <https://xcp-ng.org/#easy-to-install>`_                                                       |
++---------------+---------------------------------------------------------------------------------------+
+| XCP-ng Center | Windows-Programm zur Verwaltung von XCP-ng                                            |                             
++---------------+---------------------------------------------------------------------------------------+
+| Download-Link:                                                                                        |
+| `XCP-ng Center <https://github.com/xcp-ng/xenadmin/releases>`_                                        |
++---------------+---------------------------------------------------------------------------------------+
+| lmn62.XOA     | web-basierte VM zur Verwaltung von XCP-ng angasspt an die lmn v6.2                    |
++---------------+---------------------------------------------------------------------------------------+ 
+| Download-Link:                                                                                        |
+| `XOA lmn62 <https://download.linuxmuster.org/xcp-ng/v6.2/lmn62.xoa.xva.zip>`_                         |
++---------------+---------------------------------------------------------------------------------------+
+|  SHA1: ``704a4334e2f26681d34e15a065072e13af44c5ae``                                                   |
++---------------+---------------------------------------------------------------------------------------+ 
+| lmn62.ipfire  | IPFire VM  der linuxmuster-net v6.2                                                   |                  
++---------------+---------------------------------------------------------------------------------------+
+| Download-Link:                                                                                        |
+| `lmn62 IPFire <https://download.linuxmuster.org/xcp-ng/xcp-ng/v6.2/lmn62.ipfire.xva.zip>`_            |
++---------------+---------------------------------------------------------------------------------------+
+|  SHA1: ``c197d8afd89645707caa6a63c974f9c288bb8855``                                                   |
++---------------+---------------------------------------------------------------------------------------+
+| lmn62.server  | Server der linuxmuster.net v6.2                                                       | 
++---------------+---------------------------------------------------------------------------------------+
+| Download-Link:                                                                                        |
+| `lmnv62 Server <https://download.linuxmuster.org/xcp-ng/xcp-ng/v6.2/lmn62.server.xva.zip>`_           |             
++---------------+---------------------------------------------------------------------------------------+
+|  SHA1: ``4eb9a78cff74ee1b3d110b27d2805ba0c9ff817c``                                                   | 
++---------------+---------------------------------------------------------------------------------------+
+
+Nachstehende VMs sind optional, sofern eine paketorientierte Softwareverteilung für Windows-Clients (OPSi) 
+und/oder zur Steuerung der Unifi WLAN Access Points und deren Anbindung an die lmn62 erfolgen soll:
+
++---------------+---------------------------------------------------------------------------------------+
+| Programm      | Beschreibung                                                                          | 
++===============+=======================================================================================+
+| lmn62.opsi    | OPSI VM der lmn v6.2                                                                  |
++---------------+---------------------------------------------------------------------------------------+
+| Download-Link:                                                                                        |
+| `OPSI lmn62 <https://download.linuxmuster.org/xcp-ng/xcp-ngv6.2/lmn62.opsi.xva.zip>`_                 | 
++---------------+---------------------------------------------------------------------------------------+
+|  SHA1: ``aa974eaa4e484e400aced27324db7100b57c0636``                                                   |
++---------------+---------------------------------------------------------------------------------------+
+| lmn62.unifi   | Unifi VM der lmn v6.2                                                                 |
++---------------+---------------------------------------------------------------------------------------+
+| Doenload-Link:                                                                                        |
+| `Download VM v6.2 Unifi <https://download.linuxmuster.org/xcp-ng/v6.2/lmn62.server.xva.zip>`_         | 
++---------------+---------------------------------------------------------------------------------------+
+|  SHA1: ``69ec378f9e3615f9f04e3f94a9f4ee59ba2327f6``                                                   |
++---------------+---------------------------------------------------------------------------------------+
 
 
 Erstellen eines USB-Sticks zur Installation des XCP-ng-Host
