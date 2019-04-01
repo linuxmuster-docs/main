@@ -276,21 +276,23 @@ Vorbereitungen für den Import der virtuellen Maschinen
 ------------------------------------------------------
 
 Download der virtuellen Maschinen
-  Lade auf dem KVM-Host die aktuellen OVA-Abbilder von der `Webseite
-  <https://github.com/linuxmuster/linuxmuster-base7/wiki/Die-Appliances>`_
-  herunter, die zu dem Adressbereich gehören, den du brauchst
-  (``10.0.0.1/16`` oder ``10.16.1.1/12``)
+  Lade auf dem KVM-Host die aktuellen OVA-Abbilder und die entsprechenden 
+  `sha1`-Summen von der Webseite herunter.
 
   .. code-block:: console
      
-     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-opnsense-20190319.ova
-     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-server-20190320.ova
-     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-opsi-20190320.ova
-     # wget http://fleischsalat.linuxmuster.org/ova/lmn7-docker-20190320.ova
+     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-opnsense-20190319.ova
+     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-opnsense-20190319.ova.sha1
+     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-server-20190320.ova
+     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-server-20190320.ova.sha1
+     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-opsi-20190320.ova
+     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-opsi-20190320.ova.sha1
+     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-docker-20190320.ova
+     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-docker-20190320.ova.sha1
 
-  Überprüfe die `sha`-Summe mit dem entsprechenden Werkzeug und
+  Überprüfe die `sha1`-Summe mit dem entsprechenden Werkzeug und
   vergleiche mit der Webseite auf Integrität. In der weiteren
-  Anleitung wird statt der Dateien mit Datumsstempel wie ``20190312``
+  Anleitung wird statt der Dateien mit Datumsstempel wie ``20190320``
   die Datei mit ``*`` verwendet. Solange du nur je ein (das aktuelle)
   OVA-Abbild vorliegen hast, funktionieren die Befehle auch mit dem
   ``*``.
