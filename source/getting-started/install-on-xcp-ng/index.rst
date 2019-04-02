@@ -120,7 +120,7 @@ und/oder zur Steuerung der Unifi WLAN Access Points und deren Anbindung an die l
 | lmn62.opsi    | OPSI VM der lmn v6.2                                                                  |
 +---------------+---------------------------------------------------------------------------------------+
 | Download-Link:                                                                                        |
-| `OPSI lmn62 <https://download.linuxmuster.net/xcp-ng/xcp-ngv6.2/lmn62.opsi.xva.zip>`_                 | 
+| `OPSI lmn62 <https://download.linuxmuster.net/xcp-ng/v6.2/lmn62.opsi.xva.zip>`_                 | 
 +---------------+---------------------------------------------------------------------------------------+
 |  SHA1: ``aa974eaa4e484e400aced27324db7100b57c0636``                                                   |
 +---------------+---------------------------------------------------------------------------------------+
