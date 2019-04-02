@@ -99,14 +99,14 @@ lokal mithilfe von ``unzip``.
 | lmn62.ipfire  | IPFire VM  der linuxmuster-net v6.2                                                   |                  
 +---------------+---------------------------------------------------------------------------------------+
 | Download-Link:                                                                                        |
-| `lmn62 IPFire <https://download.linuxmuster.net/xcp-ng/xcp-ng/v6.2/lmn62.ipfire.xva.zip>`_            |
+| `lmn62 IPFire <https://download.linuxmuster.net/xcp-ng/v6.2/lmn62.ipfire.xva.zip>`_            |
 +---------------+---------------------------------------------------------------------------------------+
 |  SHA1: ``c197d8afd89645707caa6a63c974f9c288bb8855``                                                   |
 +---------------+---------------------------------------------------------------------------------------+
 | lmn62.server  | Server der linuxmuster.net v6.2                                                       | 
 +---------------+---------------------------------------------------------------------------------------+
 | Download-Link:                                                                                        |
-| `lmnv62 Server <https://download.linuxmuster.net/xcp-ng/xcp-ng/v6.2/lmn62.server.xva.zip>`_           |             
+| `lmnv62 Server <https://download.linuxmuster.net/xcp-ng/v6.2/lmn62.server.xva.zip>`_           |             
 +---------------+---------------------------------------------------------------------------------------+
 |  SHA1: ``4eb9a78cff74ee1b3d110b27d2805ba0c9ff817c``                                                   | 
 +---------------+---------------------------------------------------------------------------------------+
