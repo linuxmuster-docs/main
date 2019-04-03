@@ -20,7 +20,7 @@ Voraussetzungen
 ===============
 
 Es muss als Quellsystem linuxmuster.net in der Version 6.2 installiert
-sein. Es ist sehr wahrscheinlich, dass auch ab Version 6.1 und 6.0
+sein. Es ist möglich, dass auch ab Version 6.1 und 6.0
 eine Migration funktioniert. Dies wurde nicht offiziell
 getestet. (Stand: Dez. 2018)
 
@@ -136,9 +136,17 @@ Installiere die ``sophomorix-vampire``-Skripte über
    ...
 
 Das Skript ``sophomorix-vampire -h`` zeigt Optionen und Schritte an,
-die im folgenden durchgeführt werden. Beispielhaft führt das Skript
-``sophomorix-vampire-example`` alle Schritte für eine typische Schule
-durch.
+die im folgenden durchgeführt werden. 
+
+Kompletter Import mit sophomorix-vampire-example
+------------------------------------------------
+
+Beispielhaft führt das Skript ``sophomorix-vampire-example`` alle
+Schritte für eine typische Schule durch. Es empfiehlt sich das Skript
+in den übertragenen Ordner ``sophomorix-dump`` zu kopieren und an die
+eigenen Bedürfnisse anzupassen. Besonders der Import der Nutzerdaten
+sollte in der folgenden Schritt-für-Schritt Anleitung genau geprüft
+werden.
 
 1. Analyse der exportierten Daten
 ---------------------------------
@@ -410,17 +418,18 @@ Quellsystem im Zielsystem unter einem Pfad (hier im Beispiel:
    /mnt/home/teachers
 
 Der Pfad im Zielsystem wird über das Kommandozeilenargument
-``--path-oldserver /mnt`` an nachfolgende Skripte übergeben.
+``--path-oldserver /mnt`` an nachfolgende Skripte übergeben und
+erwartet dann die obige Ordnerstruktur unterhalb von ``/mnt``.
 
 Für einzelne Schüler, Lehrer, Klassen und Projekte sollte man ein
 Synchronisieren testen: 
 
 .. code-block:: console
 
-   server ~ # sophomorix-vampire --rsync-student-home student --path-oldserver /mnt
-   server ~ # sophomorix-vampire --rsync-teacher-home teacher --path-oldserver /mnt
-   server ~ # sophomorix-vampire --rsync-class-share class --path-oldserver /mnt
-   server ~ # sophomorix-vampire --rsync-project-share project --path-oldserver /mnt
+   server ~ # sophomorix-vampire --rsync-student-home <studentname> --path-oldserver /mnt
+   server ~ # sophomorix-vampire --rsync-teacher-home <teachername> --path-oldserver /mnt
+   server ~ # sophomorix-vampire --rsync-class-share <classname> --path-oldserver /mnt
+   server ~ # sophomorix-vampire --rsync-project-share <projectname> --path-oldserver /mnt
 
 Jetzt können alle Schüler, Lehrer, Klassen und Projekte in einem Schritt importiert werden
 
@@ -435,11 +444,15 @@ Jetzt können alle Schüler, Lehrer, Klassen und Projekte in einem Schritt impor
 ------------------------------
 
 Alle Daten von LINBO können ebenso wie die Benutzerdaten aus dem
-Verzeichnis ``/var/linbo`` importiert werden. Auch hier wird
-beispielsweise der Inhalt von ``/var/linbo`` in das Zielsystem nach
-``/mnt`` eingebunden.
+früheren Verzeichnis ``/var/linbo`` importiert werden. 
 
-:fixme: wie funktioniert das? ``/mnt/linbo`` ? oder direkt nach ``/mnt``
+.. code-block:: console
+
+   /mnt/var/linbo
+
+Auch hier wird beispielsweise der Inhalt von ``/var/linbo`` in das
+Zielsystem nach ``/mnt`` eingebunden. Das Skript erwartet dann die
+obige Ordnerstruktur unterhalb von ``/mnt``.
 
 .. code-block:: console
 
