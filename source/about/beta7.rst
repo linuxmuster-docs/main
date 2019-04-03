@@ -14,6 +14,19 @@ wird möglichst aktuell
 - der Status vermittelt
 - Rückmeldung erwartet und dokumentiert
 
+Appliances
+==========
+
+- https://download.linuxmuster.net/ova/v7/201903/lmn7-opnsense-20190319.ova
+- https://download.linuxmuster.net/ova/v7/201903/lmn7-opnsense-20190319.ova.sha1
+- https://download.linuxmuster.net/ova/v7/201903/lmn7-server-20190320.ova
+- https://download.linuxmuster.net/ova/v7/201903/lmn7-server-20190320.ova.sha1
+- https://download.linuxmuster.net/ova/v7/201903/lmn7-docker-20190320.ova
+- https://download.linuxmuster.net/ova/v7/201903/lmn7-docker-20190320.ova.sha1
+- https://download.linuxmuster.net/ova/v7/201903/lmn7-opsi-20190320.ova
+- https://download.linuxmuster.net/ova/v7/201903/lmn7-opsi-20190320.ova.sha1
+
+Für die XVAs für XCP-ng, siehe http://docs.linuxmuster.net/de/v7/appendix/install-on-xcp-ng/index.html#download-quellen
 
 Neuinstallation
 ===============
