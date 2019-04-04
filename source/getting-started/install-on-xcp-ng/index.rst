@@ -127,7 +127,7 @@ und/oder zur Steuerung der Unifi WLAN Access Points und deren Anbindung an die l
 | lmn62.unifi   | Unifi VM der lmn v6.2                                                                 |
 +---------------+---------------------------------------------------------------------------------------+
 | Download-Link:                                                                                        |
-| `Download VM v6.2 Unifi <https://download.linuxmuster.net/xcp-ng/v6.2/lmn62.unifi.xva.zip>`_         | 
+| `Download VM v6.2 Unifi <https://download.linuxmuster.net/xcp-ng/v6.2/lmn62.unifi.xva.zip>`_          | 
 +---------------+---------------------------------------------------------------------------------------+
 |  SHA1: ``69ec378f9e3615f9f04e3f94a9f4ee59ba2327f6``                                                   |
 +---------------+---------------------------------------------------------------------------------------+
