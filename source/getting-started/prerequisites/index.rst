@@ -21,24 +21,13 @@ Software ab, die in diesem Kapitel beleuchtet werden.
 Hardware
 ========
 
-Jeder der Server kann einzeln direkt auf der Hardware installiert
-werden. Es müssen dann die Hardware-Voraussetzungen erfüllt sein, die
-für die Firewall (standardmäßig OPNsense) und den Server (Ubuntu
-Server 18.04 LTS) ebenfalls gelten.  Diese Installationsmethode eignet
-sich auch für im folgenden nicht explizit beschriebene Virtualisierungen.
-
-Ohne Virtualisierung
---------------------
-
 OPNsense
-~~~~~~~~
+--------
 
-OPNSense ist für x86-32 und x86-64 Bit Architekturen verfügbar und kann auf 
-SD-Karte, SSD oder HDDs installiert werden. Als Basis nutzt OPNsense das 
-Betriebssystem FreeBSD.
-
-Es wird empfohlen folgende Hardware-Anforderungen zu erfüllen, um die Mehrzahl
-der Einsatzszenarien abzudecken:
+OPNSense ist für x86-32 und x86-64 Bit Architekturen verfügbar und
+kann auf SD-Karte, SSD oder HDDs installiert werden. Es wird empfohlen
+folgende Hardware-Anforderungen zu erfüllen, um die Mehrzahl der
+Einsatzszenarien abzudecken:
 
 +---------------------+-------------------------------------+
 | Prozessor           | ≥ 1 GHz Multi-Core CPU (64 Bit)     |
@@ -47,165 +36,124 @@ der Einsatzszenarien abzudecken:
 +---------------------+-------------------------------------+
 |Installationsmethode | Video (VGA)                         |
 +---------------------+-------------------------------------+
-|Festplatte           | 120 GB SSD                          |
+|Festplatte           | mind. 20GB, z.B. 120 GB SSD         |
 +---------------------+-------------------------------------+
 |NIC                  | mind. 2 (intern + extern),          |
 |                     | oder  3 (intern + extern + WLAN)    |
 +---------------------+-------------------------------------+
 
-Weitere Hinweise zu möglichen Hardwareanforderungen bei unterschiedlichen
-Einsatzszenarien finden sich `hier`_.
-Hinweise zu den Anforderungen von FreeBSD bzw. zur Kompatibilität mit 
-eingesetzten Hardware-Komponenten finden sich unter der `HCL - Hardware Compatibility List`_.
+Weitere Hinweise zu möglichen Hardwareanforderungen bei
+unterschiedlichen Einsatzszenarien finden sich `hier
+<https://wiki.opnsense.org/manual/hardware.html#hardware-requirements>`_.
 
-.. _hier: https://wiki.opnsense.org/manual/hardware.html#hardware-requirements
-.. _HCL - Hardware Compatibility List: https://www.freebsd.org/releases/11.1R/hardware.html
-
-
-Ubuntu-Server lmn.v7
-~~~~~~~~~~~~~~~~~~~~
-
-Für linuxmuster.net v7 wird als Basis Ubuntu Server 18.04 LTS eingesetzt.
-
-Es wird empfohlen folgende Hardware-Anforderungen zu erfüllen:
-
-+---------------------+-------------------------------------+
-| Prozessor           | ≥ 1 GHz Multi-Core CPU (64 Bit)     |
-+---------------------+-------------------------------------+
-| RAM                 | 4 GB                                |
-+---------------------+-------------------------------------+
-|Festplatte           | 250 GB - 500 GB SSD oder HDD        |
-+---------------------+-------------------------------------+
+Als Basis nutzt OPNsense das Betriebssystem FreeBSD.  Hinweise zu den
+Anforderungen von FreeBSD bzw. zur Kompatibilität mit eingesetzten
+Hardware-Komponenten finden sich unter der `HCL - Hardware
+Compatibility List
+<https://www.freebsd.org/releases/11.1R/hardware.html>`_
 
 
-Docker-Host Ubuntu-Server
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Server linuxmuster v7
+---------------------
 
-Es wird empfohlen folgende Hardware-Anforderungen zu erfüllen:
+Für linuxmuster.net v7 wird als Basis ein Ubuntu Server 18.04 LTS
+eingesetzt. Es wird empfohlen folgende Hardware-Anforderungen zu
+erfüllen:
 
 +---------------------+-------------------------------------+
 | Prozessor           | ≥ 1 GHz Multi-Core CPU (64 Bit)     |
 +---------------------+-------------------------------------+
-| RAM                 | 4 GB                                |
+| RAM                 | ≥ 4 GB                              |
 +---------------------+-------------------------------------+
-|Festplatte           | 120 GB SSD oder HDD                 |
+|Festplatte System +  | - vorkonfiguriert sind 25GB + 100GB | 
+|Daten                | - mind. 500GB für Daten und Backup  |
+|                     | - empfohlen ≥ 1TB                   |
 +---------------------+-------------------------------------+
 
+Docker-Host bzw. OPSI-Host auf Basis eines Ubuntu-Servers
+---------------------------------------------------------
 
-OPSI auf Ubuntu-Server
-~~~~~~~~~~~~~~~~~~~~~~
-
-Es wird empfohlen folgende Hardware-Anforderungen zu erfüllen:
+Es wird empfohlen, je Server folgende Hardware-Anforderungen zu
+erfüllen:
 
 +---------------------+-------------------------------------+
 | Prozessor           | ≥ 1 GHz Multi-Core CPU (64 Bit)     |
 +---------------------+-------------------------------------+
-| RAM                 | 4 GB                                |
+| RAM                 | ≥ 4 GB (OPSI), ≥ 1 GB (Docker)      |
 +---------------------+-------------------------------------+
-|Festplatte           | 120 GB - 250 GB SSD oder HDD        |
+|Festplatte           | 100 GB+, nach Bedarf                |
 +---------------------+-------------------------------------+
 
 
-Mit Virtualisierung
--------------------
+Für eine virtuelle Installation aller obigen Maschinen müssen die
+Mindestwerte für die Hardware addiert werden.
 
-In der folgenden Tabelle finden Sie die Systemvoraussetzungen zum
-Betrieb der bereitgestellten virtuellen Maschinen (VM) für
-linuxmuster.net v7. Die Werte in der Spalte *Default* sind die
-voreingestellten Werte der VMs beim Import, diese Werte bilden
-gleichzeitig die Mindestvoraussetzungen.  Festplatten- und
-Arbeitsspeicher der VMs müssen addiert werden, um die
-Gesamtanforderung zu bestimmen.
+Festplattenspeicher
+  Der Festplattenplatz für den Server hängt stark von der Nutzerzahl und
+  der mehr oder weniger intensiven Verwendung von LINBO-Abbildern
+  ab. Ebenso muss für Backup weiterer Festplattenplatz z.B. auf einem
+  NAS eingeplant werden.
 
-.. hint::
-
-   Wer mehrere Images hat, oder mehrere Sicherungen der Images
-   vorhalten will sollte beim HDD-Speicherplatz deutlich mehr
-   veranschlagen! Daran erinnert in der Tabelle die Zeile
-   "Daten+Backup".
-
-   **Beispiel:**
-   Drei Images mit je 30G. Von jedem Image sollen drei Kopien vorgehalten werden, dann 
-   ist man schon bei 270G benötigtem HDD-Speicher. Dabei ist noch nicht berücksichtigt,
-   dass auch im Verzeichnis /home Platz pro Benutzer benötigt wird. Dieser Platz ist 
-   abhängig von der Anzahl der Benutzer und der Anwendungen. 
-   Hier sollte man zwischen 500G und 1000G einplanen.
-
-Es wird empfohlen, dass die VMs (virtuellen Maschinen) auf externen
-Speicher abgelegt werden (z.B.  NFS-Speicher oder iSCSI-Speicher), um
-die Virtualisierungsumgebung ggf. bei Bedarf ausbauen zu können und
-auch ausfallsichere Szenarien leichter umsetzen zu können.
+  Selbstverständlich können sowohl Daten als auch (bei
+  Virtualisierung) die Server auf externem Speicher abgelegt werden
+  (z.B. NFS-Speicher oder iSCSI-Speicher), um die
+  Virtualisierungsumgebung ggf. bei Bedarf ausbauen zu können und auch
+  ausfallsichere Szenarien leichter umsetzen zu können.
 
 
-+---------------+------------+-----------------------+-----------------------+---------+----------+
-| **IP**        | **VM**     | **HDD**                                       |**RAM**             |
-|               |            +-----------------------+-----------------------+---------+----------+
-|               |            | Default               |Empfohlen              |Default  |Empfohlen |
-+===============+============+=======================+=======================+=========+==========+
-| 10.0.0.1/16   | Server     | 1.: 25GB, 2.: 100GB   | 250GB+                | 4GB     | 8GB+     |
-+---------------+------------+-----------------------+-----------------------+---------+----------+
-| /             | /          | 500GB Daten+Backup    | 1000GB+               | /       | /        |
-+---------------+------------+-----------------------+-----------------------+---------+----------+
-| 10.0.0.2/16   | Opsi       | 100B                  | 100GB+                | 4GB     | 4GB+     |
-+---------------+------------+-----------------------+-----------------------+---------+----------+
-| 10.0.0.3/16   | Dockerhost | 20GB                  | 20GB                  | 512MB   | 512MB+   |
-+---------------+------------+-----------------------+-----------------------+---------+----------+
-| 10.0.0.4/16   | XOA        | 15GB                  | 15GB                  | 1GB     | 1GB+     |
-+---------------+------------+-----------------------+-----------------------+---------+----------+
-| 10.0.0.10/16  | Admin-PC   | 15GB                  | 15GB                  | 1GB     | 1GB+     |
-+---------------+------------+-----------------------+-----------------------+---------+----------+
-| 10.0.0.254/16 | OPNsense   | 10GB                  | 10GB+                 | 1GB     | 1GB+     |
-+---------------+------------+-----------------------+-----------------------+---------+----------+
-
-.. hint::
-
-   Die XenOrchestra-Appliance (XOA) wird nur benötigt, wenn eine
-   Virtualisierung mit XCP-ng erfolgen soll. Mithilfe von XenOrchestra
-   kann die Virtualisierungsumgebung XCP-ng web-basiert verwaltet
-   werden und es können hierüber auch sog. Enterprise-Funktionen wie
-   z.B. Backup, Replikation etc. konfiguriert werden.
-
-Für die Virtualisierung sollte der Host (Hypervisor) mit wenigstens
-drei Netzwerkkarten ausgestattet sein. Zudem sollte dieser mit 2-8 GB
-zusätzlichem Arbeitsspeicher und ca 20 GB weiterem Festplattenplatz
-für den Betrieb des Hypervisors selbst ausgestattet sein.
-
-Bei minimaler Ausstattung (ohne Opsi, Docker und XOA) einer mittleren
-Schule (ca. 500 Benutzer) *kann* ein kleiner Server oder ein gut
-ausgestatteter PC ausreichend sein.
+So *kann* bei minimaler Ausstattung (ohne Opsi und Docker) einer
+mittleren Schule (ca. 500 Benutzer) ein kleiner Server oder ein gut
+ausgestatteter PC ausreichend sein, selbst wenn alle Server
+virtualisiert laufen.
 
 +---------------+-----------------+-----------------------+-----------------------+---------+----------+
-| **Schule**    | **Features**    | **HDD**                                       |**RAM**             |
+| **Schule**    | **Features**    | **Festplatten**                               | **RAM**            |
 |               |                 +-----------------------+-----------------------+---------+----------+
-|               |                 | Default               |Empfohlen              |Default  |Empfohlen |
+|               |                 | Standard              |Empfohlen              |Standard |Empfohlen |
 +===============+=================+=======================+=======================+=========+==========+
 | mittelgroß    | minimal         | ~650GB                | 1500GB+               | 8GB     | 16GB+    |
 +---------------+-----------------+-----------------------+-----------------------+---------+----------+
 | groß          | normal          | ~1000GB               | 2000GB+               | 10GB    | 16GB+    |
 +---------------+-----------------+-----------------------+-----------------------+---------+----------+
 
+..
+  .. hint:: 
+  Abbilder für drei verschiedene Hardwareklassen haben ca. 40G. Von
+     jedem Image sollen drei Kopien vorgehalten werden, dann ist man
+     schon bei 120G benötigtem Festplattenplatz alleine für die
+     Arbeitsplätze.
+  
+     Auch im Verzeichnis ``/home`` oder im Cloudspeicher sollte man
+     Platz pro Benutzer einplanen. Bei 5GB für 100 Lehrer und 500MB für
+     1000 Schüler kommt man auf weitere 1000GB.
+
+
+
 .. _`net-infrastructure-label`:
 
 Netzwerkstruktur
 ================
 
-Je nach Einsatzszenario kann die Netzwerkstruktur der linuxmuster.net
-angepasst werden. Vor der Installation sollte man über den Umfang der
-eingesetzten Geräte ungefähr Bescheid wissen und dementsprechend die
-IP-Bereiche groß wählen oder mehrere Subnetze einführen.
+Je nach Einsatzszenario muss die Netzwerkstruktur der linuxmuster.net
+zu Beginn der Installation angepasst werden. Man sollte man über den
+Umfang der eingesetzten Geräte ungefähr Bescheid wissen und
+dementsprechend den IP-Bereich nicht zu klein wählen oder Subnetze
+einführen. Ebenso muss man den IP-Bereich auf die Umgebung
+(z.B. Verwaltungsnetz, extern vorgegebene Netze) abstimmen um
+Überschneidungen zu vermeiden.
 
 IP-Bereiche
 -----------
 
 Die linuxmuster.net-Lösung kann mit unterschiedlichen IP-Bereichen
 arbeiten. Standardmäßig wird das interne Netz aus dem privaten
-IPv4-Bereich 10.0.x.x mit einer 16-bit Netzmaske 255.255.0.0 eingerichtet.
+IPv4-Bereich 10.0.x.x mit der 16-bit Netzmaske 255.255.0.0 eingerichtet.
+Die virtuellen Appliances sind mit diesem Netz voreingestellt.
 
-Die virtuellen Appliances sind mit dem Netz 10.0.0.0/16
-voreingestellt.  Jedoch kann man sowohl die bisher in früheren
-Versionen von linuxmuster.net verwendeten Netze, wie 10.16.0.0/12 oder
-10.32.0.0/12, usw. weiterverwenden, als auch komplett andere private
-Adressbereiche angeben, sollten es zwingende Gründe geben.
+Jedoch kann man sowohl die bisher in früheren Versionen von
+linuxmuster.net verwendeten Netze, wie 10.16.0.0/12 oder 10.32.0.0/12,
+usw. weiterverwenden, als auch komplett andere private Adressbereiche
+angeben, sollten es zwingende Gründe geben.
 
 Jede Zeile der folgenden Tabelle stellt eine Möglichkeit dar.
 
@@ -220,42 +168,53 @@ Jede Zeile der folgenden Tabelle stellt eine Möglichkeit dar.
 +-------------------+-----------------+------------+----------------------------------+
 | ...               | ...             | ...        | ...                              |
 +-------------------+-----------------+------------+----------------------------------+
-| 10.224.0.0        | 10.239.255.255  | 10.224.1.1 | in linuxmuster.net ≤ 6.2 möglich |
-+-------------------+-----------------+------------+----------------------------------+
 | 192.168.0.0       | 192.168.255.255 | 192.168.0.1| nicht üblich                     |
 +-------------------+-----------------+------------+----------------------------------+
 
-Bei der Installation entscheiden Sie sich für einen der
-Bereiche. Liegen keine besonderen Anforderungen (z.B. Testbetrieb von
-linuxmuster.net in einem weiteren produktiv laufenden
-linuxmuster.net-System) vor, wird empfohlen den voreingestellten
-Bereich zu verwenden oder bei einer Migration den früheren Bereich zu
-behalten. Im vorliegenden Dokument enthaltene Screenshots werden immer
-mit einem der ersten beiden Bereiche gemacht.
+Bei der Neuinstallation entscheidest du dich für einen der Bereiche.
+Bei einer Migration wird empfohlen den früheren Bereich zu behalten,
+alleine schon um eine Umkonfiguration der Netzwerkswitche nicht nötig
+zu machen.
 
-Getrennte Netze und VLAN
-------------------------
+Standard IP-Adressen
+--------------------
 
-Immer häufiger (z.B. durch Vorgaben vom Kultusministerium) besteht
-Bedarf an einer weiteren Trennung des internen Netzes in mehrere
-logisch von einander relativ getrennte Netze. Linuxmuster.net erlaubt
-sehr flexibel eine beliebige Einteilung des großen pädagogischen
-Netzes in Subnetze. Darüberhinaus sind komplett getrennte Netze für
-WLAN oder eine demilitarisierte Zone (DMZ) ohne Einschränkungen möglich.
+Einige IP-Adressen sind standardmäßig für spezielle Server/Dienste
+vorgesehen. Für den Standard-Adressbereich
 
-Wer vor der Entscheidung steht, Subnetze oder VLANs einzurichten,
-sollte das Kapitel :ref:`Netzsegmentierung mit linuxmuster.net
-<subnetting-basics-label>` lesen.
++------------+---------------+--------------+
+| **Server** |**IP-Bereich** |**IP-Bereich**|
+|            |10.0.0.0/16    |10.16.0.0/12  |
++============+===============+==============+
+| OPNsense   | 10.0.0.254    | 10.16.1.254  |
++------------+---------------+--------------+
+| Server     | 10.0.0.1      | 10.16.1.1    |
++------------+---------------+--------------+
+| Opsi       | 10.0.0.2      | 10.16.1.2    |
++------------+---------------+--------------+
+| Dockerhost | 10.0.0.3      | 10.16.1.3    |
++------------+---------------+--------------+
+| XOA (*)    | 10.0.0.4      | 10.16.1.4    |
++------------+---------------+--------------+
+| Admin-PC   | 10.0.0.10     | 10.16.1.10   |
++------------+---------------+--------------+
 
+.. hint::
+
+   (*) Die XenOrchestra-Appliance (XOA) wird nur benötigt, wenn eine
+   Virtualisierung mit XCP-ng erfolgen soll. Mithilfe von XenOrchestra
+   kann die Virtualisierungsumgebung XCP-ng web-basiert verwaltet
+   werden und es können hierüber auch sog. Enterprise-Funktionen wie
+   z.B. Backup, Replikation etc. konfiguriert werden.
+
+
+
+Netz-Grundstruktur
+------------------
 
 Aus historischen und anschaulichen Gründen verwendet die
 linuxmuster.net in der Dokumentation weiterhin die Farbzuordnung, die
 durch die Firewall-Lösung "IPFire" geprägt wurde:
-
-*  Das interne Netzwerk wird GRÜNES Netzwerk genannt (davon kann es nach Netzsegmentierung mehrere geben).
-*  Das externe Netzwerk wird ROTES Netzwerk genannt, es ist über einen Router mit dem Internet verbunden.
-*  Optional kann z.B. für WLAN-Accesspoints ein weiteres Netzwerk aufgebaut werden (BLAU/LILA), für welches andere Zugangsberechtigungen als denen im grünen Netzwerk gelten.
-*  Ebenso optional kann eine sog. demilitarisierte Zone (DMZ) als zusätzliches Netzwerk (ORANGE) aufgebaut werden.
 
 .. figure:: media/simple-network.png
    :align: center
@@ -264,6 +223,31 @@ durch die Firewall-Lösung "IPFire" geprägt wurde:
    Schematischer Aufbau eines Computernetzes mit linuxmuster.net.
 
 
+* Das interne Netzwerk wird GRÜNES Netzwerk genannt 
+* Das externe Netzwerk wird ROTES Netzwerk genannt, es ist über einen Router mit dem Internet verbunden.
+* Optional kann eine sog. demilitarisierte Zone (DMZ) als zusätzliches Netzwerk (ORANGE) aufgebaut werden.
+* Optional kann z.B. für WLAN-Accesspoints ein weiteres Netzwerk
+  aufgebaut werden (BLAU/LILA), für welches andere
+  Zugangsberechtigungen als denen im grünen Netzwerk gelten.
+
+Das obige Prinzip ist bereits ein Beispiel für Netzwerksegmentierung,
+das im nächsten Abschnitt näher erläutert wird.
+
+
+Getrennte Netze und VLAN
+------------------------
+
+Immer häufiger (z.B. durch Vorgaben vom Kultusministerium oder
+Lastverteilung) besteht Bedarf an einer weiteren Trennung des internen
+Netzes in mehrere logisch von einander relativ getrennte
+Netze. Neben den relativ stark abgetrennten Netzen für WLAN oder eine
+demilitarisierte Zone (DMZ) wie oben abgebildet, erlaubt
+linuxmuster.net Lösung sehr flexibel eine beliebige Einteilung des
+Schulnetzes in Subnetze.
+
+Wer vor der Entscheidung steht, Subnetze oder VLANs einzurichten,
+sollte das Kapitel :ref:`Netzsegmentierung mit linuxmuster.net
+<subnetting-basics-label>` lesen.
 
 
 Virtualisierung
@@ -274,14 +258,15 @@ Voraussetzungen noch folgende Hinweise:
 
 - Das Netzwerk wird virtualisiert. Dadurch werden virtuelle Switche
   ("bridges") erstellt, denen die richtigen Schnittstellen zugeordnet
-  werden müssen. Mit zusätzlichem VLAN wird die Konfiguration auf dem
-  Hypervisor schnell komplex, die physikalische Verkabelung kann aber
-  einfacher werden.
+  werden müssen. Der Virtualisierungshost (Hypervisor) sollte
+  wenigstens mit drei Netzwerkkarten ausgestattet sein.  Mit
+  zusätzlichem VLAN wird die Konfiguration auf dem Hypervisor schnell
+  komplex, die physikalische Verkabelung kann aber einfacher werden.
 
 - Der Speicherplatz wird virtualisiert. Darauf muss man bei der
   Verwendung externer (iSCSI) wie interner Speichersysteme (LVM)
   achten. Dies kann auch zur Vereinfachung eines Backupverfahren
-  beitragen.
+  beitragen
 
 - Da der VM-Host die einzelnen VMs zunächst kapselt, ist es aus
   Sicherheitsgründen empfehlenswert, den VM-Host nicht ins selbe Netz
@@ -305,24 +290,18 @@ KVM/qemu/Proxmox als Hypervisor:
 Xen als Hypervisor:
   Ausführliche Informationen findest Du im eigenen Kapitel :ref:`install-on-xen-label`.
 
-VMWare als Hypervisor:
+VMware ESXi als Hypervisor:
   :fixme: anybody?
 
 VirtualBox als Hypervisor:
-  VirtualBox wird häufig als Testsystem verwendet. Die
-  `Entwicklerdokumentation
+  VirtualBox wird häufig im Testbetrieb und weniger im
+  Produktivbetrieb verwendet. Die `Entwicklerdokumentation
   <https://github.com/linuxmuster/linuxmuster-base7/wiki/Die-Appliances>`_
-  beschreibt diese Konfiguration.
+  beschreibt diese Konfiguration. Es muss mindestens die Version 6.0
+  verwendet werden.
 
 Software
 ========
-
-.. Für gängige Virtualisierungsmethoden gibt es (unterschiedliche)
-   Abbilder zum Download und zum Einspielen in das Hostsystem. 
-
-Für hier beschriebene Virtualisierungsmethoden benötigt man neben der
-Virtualisierungssoftware noch die bereitgestellten VM-Appliances
-(Abbilder).
 
 Für eine Installation direkt auf der Hardware oder einer Installation
 von Grund auf innerhalb (anderer) Virtualisierungen benötigt man
@@ -331,6 +310,27 @@ von Grund auf innerhalb (anderer) Virtualisierungen benötigt man
   <http://releases.ubuntu.com/bionic/ubuntu-18.04-live-server-amd64.iso>`_
 
 - `OpnSense <https://opnsense.org/download>`_
+
+Für die Virtualisierung benötigt man neben der
+Virtualisierungssoftware noch die bereitgestellten VM-Appliances
+(Abbilder). Links zu diesen finden sich im jeweiligen Kapitel.
+
+Vorgehen
+========
+
+Nachdem du entschieden hast, ob und wie du eine Virtualisierung
+einsetzt, beginnst du mit Installation der Virtualisierung nach einer
+der oben beschriebenen Anleitungen zu Hypervisoren im Anhang dieser
+Dokumentation.
+
+Alternativ installierst du von Grund die Serverbetriebssysteme *Ubuntu
+Server* und *OPNSense* direkt auf der Hardware oder innerhalb einer
+nicht beschriebenen Virtualisierungslösung.
+
+Jetzt kann die eigentliche Installation mit der eventuellen Anpassung
+des Netzbereiches und der Erstkonfiguration beginnen, wie sie im
+:ref:`nächsten Kapitel <setup-using-selma-label>` beschrieben wird.
+
 
 ..
    Um sicher zu stellen, dass die Datei richtig heruntergeladen wurde, kannst du die SHA1-Summe prüfen. Auf der Konsole eines Linuxbetriebsystems steht z.B. der Befehl ``sha1sum`` zur Verfügung:
