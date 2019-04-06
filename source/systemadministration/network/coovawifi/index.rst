@@ -1,6 +1,6 @@
 
-linuxmuster-chilli: Ein Captive Portal für linuxmuster.net
-==========================================================
+(v6.2) linuxmuster-chilli: Ein Captive Portal für linuxmuster.net
+=================================================================
 
 *linuxmuster-chilli* ist ein vorbereitetes Paket, das zur Installation
 auf einem **Ubuntu Server 12.04 32bit** gedacht ist und aus diesem ein
