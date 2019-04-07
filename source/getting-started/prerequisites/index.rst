@@ -180,7 +180,7 @@ Standard IP-Adressen
 --------------------
 
 Einige IP-Adressen sind standardmäßig für spezielle Server/Dienste
-vorgesehen. Für den Standard-Adressbereich
+vorgesehen.
 
 +------------+---------------+--------------+
 | **Server** |**IP-Bereich** |**IP-Bereich**|
