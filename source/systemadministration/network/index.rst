@@ -10,4 +10,5 @@
   unifiwifi/index
   radius/index
   subnetting-basics/index
+  dehydrated/index
 
