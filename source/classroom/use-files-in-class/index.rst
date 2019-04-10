@@ -1,5 +1,6 @@
-Austeilen von Dateien und weitere Funktionen
-============================================
+===================================================
+(v6.2) Austeilen von Dateien und weitere Funktionen
+===================================================
 
 Mithilfe der Schulkonsole können Sie in Ihrem Unterricht folgende Funktionen nutzen:
 

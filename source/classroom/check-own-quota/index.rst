@@ -1,6 +1,6 @@
-=====================================
- Anzeigen des eigenen Plattenplatzes
-=====================================
+==========================================
+(v6.2) Anzeigen des eigenen Plattenplatzes
+==========================================
 
 Jeder Benutzer kann sich auf der Startseite der *Schulkonsole* über
 seinen verbrauchten Speicherplatz und seine Quota (im zustehenden

@@ -5,8 +5,9 @@
 
 .. _howto-user-management:
 
-Benutzer verwalten mit der Schulkonsole
-=======================================
+==============================================
+(v6.2) Benutzer verwalten mit der Schulkonsole
+==============================================
 
 Dieses Dokument gibt Schritt-für-Schritt-Anleitungen für die
 wichtigsten Tätigkeiten, die der Netzwerkbetreuer im Hinblick auf die

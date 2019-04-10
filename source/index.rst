@@ -1,6 +1,6 @@
-===========
+============
  Einführung
-===========
+============
 
 Herzlich Willkommen zur Dokumentation von linuxmuster.net! Diese Dokumentation beschreibt alle wichtigen Schritte von der Installation, der Einrichtung von Windows- und Ubuntu-Rechnern, der Verwaltung von Nutzern bis hin zu individuellen Anpassungen.
 
@@ -12,6 +12,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
 
   about/about
   about/release-information/index
+  about/beta7
 
 .. toctree::
   :maxdepth: 2
@@ -28,6 +29,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   :caption: Systemadministration
 
   systemadministration/maintenance/migration
+  systemadministration/maintenance/keep-lmn-uptodate
   systemadministration/maintenance/keep-lmn-uptodate/index
   systemadministration/network/index
   systemadministration/printer/index
@@ -80,7 +82,6 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   appendix/install-on-xcp-ng/index
   appendix/contribute/index
   appendix/school-console/index
-  clients/linbo/index
 
 ..
    .. toctree::

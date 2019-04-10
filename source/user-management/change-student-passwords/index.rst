@@ -1,8 +1,8 @@
 .. _howto-change-student-passwords-label:
 
-==============================================
-Schüler-Passwörter zurücksetzen und ausdrucken
-==============================================
+=====================================================
+(v6.2) Schüler-Passwörter zurücksetzen und ausdrucken
+=====================================================
 
 Vergisst ein Schüler sein Passwort, kann jede Lehrkraft das Passwort des Schülers über die Schulkonsole auf das Erstpasswort [#f1]_ zurücksetzen. Dieses teilen Sie dem Schüler mit.
 

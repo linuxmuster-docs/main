@@ -1,5 +1,6 @@
-Backup und Restore mit Mondo durchführen
-========================================
+===============================================
+(v6.2) Backup und Restore mit Mondo durchführen
+===============================================
 
 Inhaltsverzeichnis:
 
@@ -17,12 +18,4 @@ Inhaltsverzeichnis:
 	restore-interactive
 	restore-nfs
 	mindi
-
-Index
------
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
 

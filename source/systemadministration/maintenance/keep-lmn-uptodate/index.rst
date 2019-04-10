@@ -1,5 +1,5 @@
-Linuxmuster.net aktuell halten
-==============================
+(v6.2) Linuxmuster.net aktuell halten
+=====================================
 
 Sicherheitskritische Aktualisierungen des Ubuntu-Betriebssystems werden von Ubuntu zeitnah bereitgestellt. Gleiches gilt auch für die Firewall IPFire.
 
