@@ -75,7 +75,7 @@ Linuxmuster Dokumentation forken
 
 Öffnen Sie die `linuxmuster.net Dokumentation auf Github <https://github.com/linuxmuster-docs/main>`_ und klicken Sie auf "Fork".
 
-.. figure:: media/fork.png
+.. figure:: media/06_new_make-a-fork.png
    :align: center
    :alt: Fork on Github
 
@@ -150,7 +150,7 @@ Pull-Request
 
 Erstellen Sie nun einen "Pull-Request" unter `<https://github.com/lmn-docs-bot/main>`_, indem Sie auf "New Pull Request" klicken.
 
-.. figure:: media/pr.png
+.. figure:: media/07_new_pull-request.png
    :align: center
    :alt: PR on Github
 
@@ -235,7 +235,7 @@ Will man einen anderen Zweig bearbeiten, beispielsweise den Zweig
 3. Wird ein Pull-Request in Github erstellt, dann ist zu beachten,
    dass auch die gleichen Zweige verglichen werden.
 
-   .. figure:: media/pr-wrong-branch.png
+   .. figure:: media/08_new_pull-request-wrong-branch.png
       :align: center
       :alt: Pull-Request mit falsch gewähltem Zweig
 
