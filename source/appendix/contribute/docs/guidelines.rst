@@ -36,7 +36,7 @@ Medien, wie Bilder, etc.:
   
   Hinzugefügte Dateien erben von der vorhergehenden Datei die Laufende-Nummer und die wird um eine neu aufsteigende Nummerierung ergänzt
 		  
-     .. figure:: media/00-01_guedelines_view-of-the-file-structure.png
+     .. figure:: media/09_guedelines_view-of-the-file-structure.png
         :align: center
         :alt: propose changes
         
@@ -62,7 +62,7 @@ Styleguide
 
   .. code-block:: rst
 		  
-     .. figure:: media/proposeChanges.png
+     .. figure:: media/04_edit-on-github_propose-changes.png
         :align: center
         :alt: propose changes
 

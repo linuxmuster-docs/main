@@ -3,7 +3,7 @@ Dokumentation in GitHub ändern
 
 Wenn Sie einen Fehler (Rechtschreibfehler, kleine inhaltliche Fehler, etc.) in der Dokumentation gefunden haben, klicken Sie einfach auf den "Edit on Github" Link am rechten oberen Rand jeder Dokumentationsseite.
 
-.. figure:: media/editGithub.png
+.. figure:: media/01_edit-on-github_button.png
    :align: center
    :alt: Edit on Github
 
@@ -13,13 +13,13 @@ Sie sich bei GitHub anmelden. Wenn Sie noch kein Konto bei Github
 haben, können Sie sich `hier eines anlegen <https://github.com/join>`_
 oder oben rechts auf "Sign up" klicken.
 
-.. figure:: media/editChapter.png
+.. figure:: media/02_edit-on-github_open-a-chapter.png
    :align: center
    :alt: Edit not signed in
 
 Die Dokumentation ist in der Auszeichnungssprache "rST" geschrieben. `Hier <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_ finden Sie einen guten Überblick über die am häufigsten verwendeten Elemente.
 
-.. figure:: media/editsignedin.png
+.. figure:: media/03_edit-on-github_edit-signed-in.png
    :align: center
    :alt: Edit signed in
 
@@ -30,7 +30,7 @@ Nachdem du alle Änderungen vorgenommen hast, gib unten einen Titel und
 einen Kommentar ein. Die Änderungen können nun mit einem Klick auf
 "Propose file changes" eingereicht werden.
 
-.. figure:: media/proposeChanges.png
+.. figure:: media/04_edit-on-github_propose-changes.png
    :align: center
    :alt: propose changes
 
@@ -48,7 +48,7 @@ beeinträchtigt wird, kannst du die Änderungen direkt einbauen
 ("Commit") oder im Zweifel einen Zweig und einen so genannten
 Pull-Request erstellen.
 
-.. figure:: media/commitchanges.png
+.. figure:: media/05_edit-on-github_commit-changes.png
    :align: center
    :alt: commit changes directly
 
