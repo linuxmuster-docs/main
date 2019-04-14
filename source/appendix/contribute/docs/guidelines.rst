@@ -7,9 +7,41 @@ Strukturguide
 
 Auf Ebene der Dateien:
 
-- Dateinamen klein schreiben, englisch Begriffe, Leerzeichen vermeiden, "-"-Bindestrich statt "_"-Unterstrich
+rst-Dateien:
+
+- Dateinamen klein schreiben, englisch Begriffe, Leerzeichen vermeiden, Bindestrich (-) statt Unterstrich (_)
 - Eine rst-Datei pro Kapitel, möglichst ein englischer Begriff, bsp: configuration.rst
-- Medien, wie Bilder, etc.: Einen Unterordner `media/` erstellen, bei vielen Bildern einen Ordner mit dem Namen der Kapiteldatei, darin Dateien abspeichern, bsp: `media/configuration/screenshot-usage.png`
+
+Medien, wie Bilder, etc.:
+
+- In einen Unterordner `media/` des Kapitles ablegen
+- Benennung der Medien-Dateien:
+
+  .. code-block:: rst
+
+     laufende-nummer_(unter)kapitelbezeichnung_beschreibung-des-dargestelltem
+  
+  -  laufende-nummer <-- Bilder ihrer Verwendung nach von oben nach unten fortlaufend durchnummeriert; eine führende Null
+  -  (unter)kapitelbezeichnung <-- Titel des Kapitels bzw. des Unterkapitels in dem die Medien-Datei verwendet wird
+  -  beschreibung-des-dargestelltem <-- Bei Fenstern zum Beispiel der Namen des Fensters
+  -  Unterstrich (_) um die drei Felder voneinander abzugrenzen
+  
+  
+  Beispiel: 
+  
+  .. code-block:: rst
+
+     ../install-on-xcp-ng/media/01_install-on-xcp-ng_network-sketch.png
+
+  
+  Hinzugefügte Dateien erben von der vorhergehenden Datei die Laufende-Nummer und die wird um eine neu aufsteigende Nummerierung ergänzt
+		  
+     .. figure:: media/00-01_guedelines_view-of-the-file-structure.png
+        :align: center
+        :alt: propose changes
+        
+        Beispiel:  ``*1`` erste Ergänzung; ``*2`` zweite Ergänzung
+  
 
 Styleguide
 ----------
