@@ -859,13 +859,13 @@ Klicke auf ``Connect``. Es wird nun von der XOA-VM die Verbindung zum XCP-ng Hos
    Falls Du einen XCP-ng Pool mit mehreren Servern und Speicherressourcen definiert hast, must Du hier nur den Pool-Master als Server eintragen. 
    Alle weiteren Server und Ressourcen werden dann automatisch erkannt.
 
-Ändere nun das voreingestellte Kennwort für den root-Benutzer (admin@admin.net) der XOA-VM. Klicke hierzu auf der linken Menüleist ganz unten auf der Personensymbol.
+Ändere nun das voreingestellte Kennwort für den root-Benutzer (admin@admin.net) der XOA-VM. Klicke hierzu auf der linken Menüleiste ganz unten auf der Personensymbol.
 
 .. figure:: media/58_xoa-vm_edit-my-settings.png
    :align: center
    :alt: XOA Edit My Settings - Schritt 5
 
-Danach Konetxmenü für den Bentuzer, in dem Du das Kennwort ändern und weitere Einstellungen vornehmen kannst.
+Danach erscheint das Kontexmenü für den Bentuzer, in dem Du das Kennwort ändern und weitere Einstellungen vornehmen kannst.
 
 .. figure:: media/59_xoa-vm_edit-password.png
    :align: center
