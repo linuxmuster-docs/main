@@ -167,7 +167,7 @@ Installieren von XCP-ng
 
 Vom USB-Stick booten, danach erscheint folgender Bildschirm:
 
-.. figure:: media/xcp-ng/01_xcp-ng-install.png
+.. figure:: media/01_xcp-ng-install.png
    :align: center
    :alt: Splash Screen
 
@@ -175,7 +175,7 @@ Starten der Installtion mit ``ENTER``.
 
 Wähle das Tastaturlayout.
 
-.. figure:: media/xcp-ng/02_xcp-ng-install_select-keymap.png
+.. figure:: media/02_xcp-ng-install_select-keymap.png
    :align: center
    :alt: Auswahl des Tastatur-Layout
 
@@ -184,31 +184,31 @@ Wir verwenden ``[querz] de``.
 Sollten zusätzliche Treiber benötigen werden können diese nun mit ``F9`` geladen werden.
 Starte das XCP-ng Setup mit ``Ok``.
 
-.. figure:: media/xcp-ng/03_xcp-ng-install_welcome.png
+.. figure:: media/03_xcp-ng-install_welcome.png
    :align: center
    :alt: Setup Begrüßunsbildschirm
 
 Akzeptiere die Lizenzbedingungen mit ``Accept EULA``.
 
-.. figure:: media/xcp-ng/04_xcp-ng-install_eula.png
+.. figure:: media/04_xcp-ng-install_eula.png
    :align: center
    :alt: End User License Agreement
 
 XCP-ng prüft die verwendete System Hardware. Eventuell wird die Nichtaktivierung der Hardware Virtualisierung beanstandet. Bestätige die Meldung und schalten die Hardware Virtualisierung später im BIOS ein.
 
-.. figure:: media/xcp-ng/05_xcp-ng-install_system-hardware.png
+.. figure:: media/05_xcp-ng-install_system-hardware.png
    :align: center
    :alt: Probleme mit der Hardware
 
 Bei einer Neuinstallation werden für das gewählte Medium dann die Partitionen erstellt und das Dateisystem erzeugt. 
 
-.. figure:: media/xcp-ng/06_xcp-ng-install_virtual-machine-storage.png
+.. figure:: media/06_xcp-ng-install_virtual-machine-storage.png
    :align: center
    :alt: Speicherplatz-Einrichtung des Virtual-Hosts
 
 Danach wird nach der Installationsquelle gefragt.
 
-.. figure:: media/xcp-ng/07_xcp-ng-install_select-installation-source.png
+.. figure:: media/07_xcp-ng-install_select-installation-source.png
    :align: center
    :alt: Installationsmedium
 
@@ -216,7 +216,7 @@ Gebe hier ``Local Media`` an.
 
 Danach wirst Du gefragt, ob das Installationsmedium überprüft werden soll.
 
-.. figure:: media/xcp-ng/08_xcp-ng-install_verify-installation-source.png
+.. figure:: media/08_xcp-ng-install_verify-installation-source.png
    :align: center
    :alt: Überprüfung des Installationsmediums
 
@@ -224,100 +224,100 @@ Bestätige dies mit ``Verfy installation source``.
 
 Nach Abschluss der erfolgreichen Überprüfung des Installationsmediums wird dies bestätigt.
 
-.. figure:: media/xcp-ng/09_xcp-ng-install_verification-sucessful.png
+.. figure:: media/09_xcp-ng-install_verification-sucessful.png
    :align: center
    :alt: Installationsmedium in Ordnung
 
 Lege danach das Kennwort für den Administrator (user: root) fest und bestätigen dieses.
 
-.. figure:: media/xcp-ng/10_xcp-ng-install_set-password.png
+.. figure:: media/10_xcp-ng-install_set-password.png
    :align: center
    :alt: Passwort des root-Accounts
 
 Nun werden die Netzwerkeinstellungen abgefragt.
 Festlegen der IP-Adresse über die der Virtualisierer im Netz erreichbar ist.
 
-.. figure:: media/xcp-ng/11_xcp-ng-install_networking.png
+.. figure:: media/11_xcp-ng-install_networking.png
    :align: center
    :alt: Netzwerk des Virtual-Hosts
 
 Hostnamen festlegen und die DNS-Server eintragen.
 
-.. figure:: media/xcp-ng/12_xcp-ng-install_hostname-and-dns-configuration.png
+.. figure:: media/12_xcp-ng-install_hostname-and-dns-configuration.png
    :align: center
    :alt: Hostname des Virtual-Hosts und die IPs der lokalen DNS
 
 Erst die Region wählen.
 
-.. figure:: media/xcp-ng/13_xcp-ng-install_select-time-zone.png
+.. figure:: media/13_xcp-ng-install_select-time-zone.png
    :align: center
    :alt: Auswahl des Standorts der Installation - Region
 
 Danach die Stadt auswählen.
 
-.. figure:: media/xcp-ng/14_xcp-ng-install15.png
+.. figure:: media/14_xcp-ng-install15.png
    :align: center
    :alt: Zeitzone des Standorts
 
 Zeit manuel eintragen auswählen
 
-.. figure:: media/xcp-ng/15_xcp-ng-install_system-time.png
+.. figure:: media/15_xcp-ng-install_system-time.png
    :align: center
    :alt: Manuelle Eingabe der Zeit
 
 
 Bestätige danach die Frage nach der Installation von XCP-ng.
 
-.. figure:: media/xcp-ng/16_xcp-ng-install_confirm-installation.png
+.. figure:: media/16_xcp-ng-install_confirm-installation.png
    :align: center
    :alt: Starten des Installation-Vorganges
 
 Danach startet die Installation
 
-.. figure:: media/xcp-ng/17_xcp-ng-install_installing-scp-ng.png
+.. figure:: media/17_xcp-ng-install_installing-scp-ng.png
    :align: center
    :alt: Vorbereiten der Installation
 
 Die Frage nach Installation eines ``Supplemental Pack`` ist mit ``No`` zu beantworten.
 
-.. figure:: media/xcp-ng/18_xcp-ng-install_supplemental_packs.png
+.. figure:: media/18_xcp-ng-install_supplemental_packs.png
    :align: center
    :alt: Keine Installation von Supplemental Packs
 
 Installation wird fortgesetzt.
 
-.. figure:: media/xcp-ng/19_xcp-ng-install_installing.png
+.. figure:: media/19_xcp-ng-install_installing.png
    :align: center
    :alt: Fertigstellung der Installation
 
 Uhrzeit und anders einstellen und mit Enter bestätigen.
 
-.. figure:: media/xcp-ng/20_xcp_ng-install_set-local-time.png
+.. figure:: media/20_xcp_ng-install_set-local-time.png
    :align: center
    :alt: Einstellen von Datum und Uhrzeit
 
 Nach erfolgreicher Installation kannSt Du mit ``Ok`` den Server neu starten.
 Achte darauf, dass der USB-Stick nicht mehr für den Bootvorgang aktiv ist.
 
-.. figure:: media/xcp-ng/21_xcp-ng-install_installation-complete.png
+.. figure:: media/21_xcp-ng-install_installation-complete.png
    :align: center
    :alt: Installation abgeschlossen
 
 Beim Startvorgang erscheint folgende Auswahl:
 
-.. figure:: media/xcp-ng/22_xcp-ng-install_grub-menu.png
+.. figure:: media/22_xcp-ng-install_grub-menu.png
    :align: center
    :alt: GRUB Start-Menu
 
 XCP-ng wird nach einigen Sekunden automatisch gestartet.
 
-.. figure:: media/xcp-ng/23_xcp-ng-install_start-screen.png
+.. figure:: media/23_xcp-ng-install_start-screen.png
    :align: center
    :alt: Splash-Screen des Virtual Hosts
 
 Nach erfolgreichem Start bootet XCP-ng in folgende Konsole des Hypervisors:
 
-.. figure:: media/xcp-ng/24_xcp-ng-install_dash.png
+.. figure:: media/24_xcp-ng-install_dash.png
    :align: center
    :alt: Konsole des Virtual Hosts
 
@@ -329,7 +329,7 @@ Wähle in dem Startbildschirm des XCP-ng Hosts den Menüpunt ``Local Command She
 und drücke ``Enter``. Gebe als Benutzer ``root`` an und das Passwort das Du 
 während der Installation vergeben hast.
 
-.. figure:: media/xcp-ng/25_xcp-ng-install_update.png
+.. figure:: media/25_xcp-ng-install_update.png
    :align: center
    :alt: Update des Virtual Hosts
 
@@ -349,6 +349,7 @@ XCP-ng: Administration
 =======================
 
 Für die Administration Deines XCP-ng-Hosts stehen Dir zwei Möglichkeiten zur Verfügung.
+
 Zunächst solltest Du Dir auf einem Windows-Rechner im Netzwerk das Programm ``XCP-ng Center`` 
 installieren. Hiermit kannst Du die gesamte Umgebund administrieren und insbesondere die 
 vorkonfigurierten VMs einfach importieren. 
@@ -374,13 +375,13 @@ XCP-ng Center :ref:`XCP-ng Linux <XCP-ng-Center-Linux-label>`
 
 Installiere das Programm durch einen Rechtsklick auf die MSI-Datei auf dem Windows-Rechner und wähle dann ``Als Administrator ausführen`` aus.
 
-.. figure:: media/administration/25_xcp-ng-admin_start.png
+.. figure:: media/26_xcp-ng-admin_start.png
    :align: center
    :alt: XCP-ng Center Installation
 
 Bestätige die Rückfrage mit ``Ja``
 
-.. figure:: media/administration/26_xcp-ng-admin_authorisation.png
+.. figure:: media/27_xcp-ng-admin_authorisation.png
    :align: center
    :alt: Windows Benutzerkonensteuerung
 
@@ -388,19 +389,19 @@ Rufe nach erfolgreicher Installation das Programm ``XCP-ng Center`` auf.
 
 Wähle hier den Menüpunkt ``Add New Server`` 
 
-.. figure:: media/administration/27_xcp-ng_open-add-server.png
+.. figure:: media/28_xcp-ng_open-add-server.png
    :align: center
    :alt: Hinzufügen des Virtual Hosts
 
 Gebe die bei der Installation vergebene IP-Adresse des XCP-Hosts sowie die Benutzerdaten an.
 
-.. figure:: media/administration/28_xcp-ng-admin_ip_and_username.png
+.. figure:: media/29_xcp-ng-admin_ip_and_username.png
    :align: center
    :alt: IP oder Name des Virtual Hosts und Benutzerdaten
 
 Das folgende Fenster kann mit Klick auf „Close“ geschlossen werden.
 
-.. figure:: media/administration/29_xcp-ng-admin_health-check.png
+.. figure:: media/30_xcp-ng-admin_health-check.png
    :align: center
    :alt: Überspringen des Checks
 
@@ -420,26 +421,26 @@ die Zuordnung der Netze (vSwitche).
 
 Wähle nun Für den XCP-ng-Host die Reiterkarte ``Networking`` aus.
 
-.. figure:: media/administration/30_xcp-ng-admin_networking.png
+.. figure:: media/31_xcp-ng-admin_networking.png
    :align: center
    :alt: Reiter Networking
 
 Wähle das erste Netwerk ``Network 0`` aus, prüfe die Zurdonung der Netzwerkkarte. 
 
-.. figure:: media/administration/31_xcp-ng-admin_network-0.png
+.. figure:: media/32_xcp-ng-admin_network-0.png
    :align: center
    :alt: Auswahl der Netzwerke
 
 Es muss diejenige zugewiesen sein, die die Internet-Verbindung steuert. Klicke dann auf ``Properties`` 
 und ändere den Namen für das Netzwerk in ``RED``.
 
-.. figure:: media/administration/32_xcp-ng-admin_network-rename.png
+.. figure:: media/33_xcp-ng-admin_network-rename.png
    :align: center
    :alt: Umbenennung der Netzwerks
 
 Führe diese Schritte ebenfalls für die weitere Netze aus und ändere die Namen auf ``BLUE`` und ``GREEN``.
 
-.. figure:: media/administration/33_xcp-ng-admin_networks-renamed.png
+.. figure:: media/34_xcp-ng-admin_networks-renamed.png
    :align: center
    :alt: Fertig eingerichtete Netzwerke
 
@@ -453,25 +454,25 @@ Lade Dir vorher zunächst alle VMs, die Du importieren möchtest unter linuxmust
 
 Danach rufe im XCP-ng Center den Menüpunkt ``File -> Import`` auf.
 
-.. figure:: media/import-vms/34_xcp-ng-import_menue-import.png
+.. figure:: media/35_xcp-ng-import_menue-import.png
    :align: center
    :alt: Menu um VMs zu importieren
 
 Es erscheint ein neues Fenster.
 
-.. figure:: media/import-vms/35_xcp-ng-import_import-window.png
+.. figure:: media/36_xcp-ng-import_import-window.png
    :align: center
    :alt: Import Source
 
 Mittels ``Browse ...`` wählst Du erst den Speicherort aus.
 
-.. figure:: media/import-vms/36_xcp-ng-import_import-browse2file.png
+.. figure:: media/37_xcp-ng-import_import-browse2file.png
    :align: center
    :alt: Auswahl des Speicherorts
 
 Dann die Datei mit der zu importierenden VM.
 
-.. figure:: media/import-vms/37_xcp-ng-import_select-importfile.png
+.. figure:: media/38_xcp-ng-import_select-importfile.png
    :align: center
    :alt: Auswahl der zu importierenden VM
 
@@ -479,25 +480,25 @@ Die VMs weisen die Dateiendung ``.xva`` auf.
 
 Nach Bestätigung mit ``Öffnen`` erscheint nun das erste Fenster, um den Import zu steuern.
 
-.. figure:: media/import-vms/38_xcp-ng-import_file2import.png
+.. figure:: media/39_xcp-ng-import_file2import.png
    :align: center
    :alt: Ausgewählte VM 
 
 Zunächst must Du den XCP-ng-Host festlegen, für den der Import der VM erfolgen soll.
 
-.. figure:: media/import-vms/39_xcp-ng-import_home-server.png
+.. figure:: media/40_xcp-ng-import_home-server.png
    :align: center
    :alt: Virtual Host für die zu importierende VM
 
 Wähle danach Deinen gewünschten Speicher aus. Bestätige mit ``Next``.
 
-.. figure:: media/import-vms/40_xcp-ng-import_storage.png
+.. figure:: media/41_xcp-ng-import_storage.png
    :align: center
    :alt: Speicher für die zu importierende VM
 
 Prüfe die Netzwerkeinstellungen, die von der zu importierenden VM stammen.
 
-.. figure:: media/import-vms/41_xcp-ng-import_networking.png
+.. figure:: media/42_xcp-ng-import_networking.png
    :align: center
    :alt: Die NEtzwerke für die zu importierende VM
 
@@ -506,7 +507,7 @@ Bestätige diese mit ``Next``.
 Prüfe nun nochmals alle Einstellungen für den Import der VM.
 Falls Änderungen erforderlich sind, gehe mit ``Previous`` zurück zur gewünschten Einstellung.
 
-.. figure:: media/import-vms/42_xcp-ng-import_finish.png
+.. figure:: media/43_xcp-ng-import_finish.png
    :align: center
    :alt: Zusammenfassung aller Import-Daten
 
@@ -515,7 +516,7 @@ Bestätige nun den Import mit ``Finish``.
 Der Import kann einige Zeit dauern. Danach solltest Du die importierte 
 VM im XCP-ng Center sehen können.
 
-.. figure:: media/import-vms/43_xcp-ng-import_imported-vms.png
+.. figure:: media/44_xcp-ng-import_imported-vms.png
    :align: center
    :alt: Übersicht über die importierten VMs
 
@@ -524,45 +525,21 @@ VMs starten und aktualisieren
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Wähle im XCP-ng Center links die VM aus, die Du starten möchtest.
-Klicke danach oben in der Mnüleiste das Icon ``Start`` aus.
+Klicke danach oben in der Menüleiste das Icon ``Start`` aus.
 
 Beginne mit der Firewall IPFire. Starte diese.
 
-.. figure:: media/import-vms/xcp-ng-install-opnsense-started.png
+.. figure:: media/45_xcp-ng-import_ipfire-started.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
-
-Melde Dich auf der Konsole mit den Daten ``root`` und ``Muster!`` an.
-
-.. figure:: media/import-vms/xcp-ng-install-menue-opnsense.png
-   :align: center
-   :alt: Picture and Text to check from v7 to v62 
-
-Wähle danach in dem Konsolenmenü den Punkt 12) aus, um die Firewall zu 
-aktualisieren.
-
-.. figure:: media/import-vms/xcp-ng-install-opnsense-update-started.png
-   :align: center
-   :alt: Picture and Text to check from v7 to v62 
-
-Bestätige diesen Vorgang mit ``y`` und warte bis die VM neu gestartet wurde.
+   :alt: IPFire - Konsole gestartet 
 
 Starte die VM mit dem linuxmuster.net Server.
-Melde Dich mit o.g. Logindaten an, und aktualisiere die VM.
 
-.. figure:: media/import-vms/xcp-ng-install-update-server-vm.png
+.. figure:: media/46_xcp-ng-import_lmn-server-started.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
+   :alt: lmn-Server - Konsole gestartet
 
-Bestätige das Update mit ``y``.
-
-.. figure:: media/import-vms/xcp-ng-install-update-server-vm.png
-   :align: center
-   :alt: Picture and Text to check from v7 to v62 
-
-
-Sofern Du weitere VMs importiert hast, führe die Aktualisierungen
-analog aus.
+Sofern Du weitere VMs importiert hast, starte diese.
 
 .. _XCP-ng-Center-Linux-label:
 
@@ -572,7 +549,7 @@ XCP-ng Center unter Linux installieren
 XCP-ng Center ist eine Anwendung zur Administration des XCP-ng Virtualisierers, 
 die für den Betrieb unter Windows programmiert wurde. Um diese Verwaltungssoftware 
 betriebssystemunabhängig einzusetzen, nutzt Du die bereits vorkonfigurierte 
-virtuelle Maschine (VM) Xen Orchestra (XOA) und iomportierst diese in XCP-ng. 
+virtuelle Maschine (VM) Xen Orchestra (XOA) und importierst diese in XCP-ng. 
 
 Weitere Hinweise findest Du unter 'Xen Orchestra (XOA)`_
 
