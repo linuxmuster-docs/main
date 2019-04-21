@@ -356,12 +356,12 @@ linuxmuster.net stellt hierfür ebenfalls eine vorkonfigurierte VM mit einer ins
 Eine Beschreibung befindet sich weiter unten in dieser Anleiltung.
 
 Die andere Möglichkeit nutzt einen Adminstrations-Rechner.
-Auf diesen installierst Du Dir auf einem Rechner im Netzwerk das Windows-Programm ``XCP-ng Center``.
+Auf diesem installierst Du Dir auf einem Rechner im Netzwerk das Windows-Programm ``XCP-ng Center``.
 Hiermit kannst Du die gesamte Umgebund administrieren und insbesondere die vorkonfigurierten VMs einfach importieren.
 Wir beschreiben hier die Installation und Benutzung unter Windows.
-Eine Anleitung für die Installation des Programms unter Linux mithilfe von Wine und PlayOnLinux wird in der Dokumentation hier beschrieben: 
 
-:ref:`XCP-ng Linux <XCP-ng-Center-Linux-label>`  
+Eine Anleitung für die Installation des Programms unter Linux mithilfe von Wine und PlayOnLinux wird unter :ref:`XCP-ng Center unter Linux installieren <XCP-ng-Center-Linux-label>` beschrieben.  
+
 
 XCP-ng Center unter Windows installieren
 ----------------------------------------
