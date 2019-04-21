@@ -348,16 +348,20 @@ Danach ist Dein XCP-ng Host auf dem aktuellen Stand.
 XCP-ng: Administration
 =======================
 
-Für die Administration Deines XCP-ng-Hosts stehen Dir zwei Möglichkeiten zur Verfügung.
+Für die Administration deines XCP-ng-Hosts stehen Dir zwei Möglichkeiten zur Verfügung.
 
-Zunächst solltest Du Dir auf einem Windows-Rechner im Netzwerk das Programm ``XCP-ng Center`` 
-installieren. Hiermit kannst Du die gesamte Umgebund administrieren und insbesondere die 
-vorkonfigurierten VMs einfach importieren. 
+Der XCP-ng-Host kann web-basiert administriert werden.
+Dies erfolgt mithilfe der Anwendung XenOrchestra (XOA - Xen Orchestra Application).
+linuxmuster.net stellt hierfür ebenfalls eine vorkonfigurierte VM mit einer installierten XOA App zur Verfügung. XOA wurde hier "from stratch" installiert und an die lmnv6.2 angepasst.
+Eine Beschreibung befindet sich weiter unten in dieser Anleiltung.
 
-Zudem kann der XCP-ng-Host ebenfalls web-basiert administriert werden. Dies erfolgt mithilfe 
-der Anwendung XenOrchestra (XOA - Xen Orchestra Application). linuxmuster.net stellt hierfür 
-ebenfalls eine vorkonfigurierte VM mit einer installierten XOA App zur Verfügung. XOA wurde
-hier "from stratch" installiert und an die lmnv6.2 angepasst.
+Die andere Möglichkeit nutzt einen Adminstrations-Rechner.
+Auf diesen installierst Du Dir auf einem Rechner im Netzwerk das Windows-Programm ``XCP-ng Center``.
+Hiermit kannst Du die gesamte Umgebund administrieren und insbesondere die vorkonfigurierten VMs einfach importieren.
+Wir beschreiben hier die Installation und Benutzung unter Windows.
+Eine Anleitung für die Installation des Programms unter Linux mithilfe von Wine und PlayOnLinux wird in der Dokumentation hier beschrieben: 
+
+:ref:`XCP-ng Linux <XCP-ng-Center-Linux-label>`  
 
 XCP-ng Center unter Windows installieren
 ----------------------------------------
@@ -367,11 +371,6 @@ Lade Dir das Windows-Programm zur Verwaltung von der Seite des XCP-ng Projekts h
 XCP-ng Center AktuelleVersion_
 
 .. _AktuelleVersion: https://github.com/xcp-ng/xenadmin/releases
-
-Die Installation des Programms unter Linux mithilfe von Wine und PlayOnLinux wird in der Dokumentation hier beschrieben:
-
-XCP-ng Center :ref:`XCP-ng Linux <XCP-ng-Center-Linux-label>`  
-
 
 Installiere das Programm durch einen Rechtsklick auf die MSI-Datei auf dem Windows-Rechner und wähle dann ``Als Administrator ausführen`` aus.
 
@@ -610,62 +609,62 @@ Danach rufst Du PlayOnLinux auf. Dort gehst Du im Menü auf den
 
 Es erscheint dann ein neues Fenster für die weitere Installation der Anwendung.
 
-.. figure:: media/xcp-center/playonlinux1.png
+.. figure:: media/47_center-on-linux_playonlinux-vault.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
+   :alt: Start der Installation mittels PlayOnLinux
 
 Klicke hier auf ``Weiter``.
 
 Du gelangst zum nächsten Fenster, in dem Du angegeben kannst, ob Du eine Anwendung installieren
 oder deinstallieren möchtest.
 
-.. figure:: media/xcp-center/playonlinux2.png
+.. figure:: media/48_center-on-linux_restore-an-application.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
+   :alt: Installieren einer Anwendung
 
 Wähle hier die Option ``Restore an applications...`` 
 und gehe auf ``Weiter``.
 
 Im nächsten Schritt must Du die Anwendung angeben, die zu installieren ist. 
 
-.. figure:: media/xcp-center/playonlinux3.png
+.. figure:: media/49_center-on-linux_choose-the-application.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
+   :alt: Suchen der Anwendung
 
 Hier must Du auf ``Durchsuchen`` klicken und dann im Dateisystem den bereits
 heruntergeladenen PlayOnLinux-Container mit XCP-ng Center angeben. Die Datei 
 weist die Dateierweiterung ``.polApp`` auf.
 
-.. figure:: media/xcp-center/playonlinux4.png
+.. figure:: media/50_center-on-linux_choose-xencenter-dot-polapp.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
+   :alt: Datei xencenter.polApp auswählen
 
 Danach klickst Du auf ``Weiter``.
 
-.. figure:: media/xcp-center/playonlinux5.png
+.. figure:: media/51_center-on-linux_data-of-the-app.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
+   :alt: Zusammenfassung der Installation 
 
 Es wird nochmals eine Übersicht angezeigt, mit der zu installierenden Anwendung
 und dem erforderlichen Speicherplatz.
 
-.. figure:: media/xcp-center/playonlinux5.png
+.. figure:: media/51_center-on-linux_data-of-the-app.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
+   :alt: Überprüfung der Installations-Daten
 
 Klicke für die Installation auf ``Weiter``.
 
 Der Installationfortschritt wird Dir angezeigt.
 
-.. figure:: media/xcp-center/playonlinux6.png
+.. figure:: media/52_center-on-linux_installation-progress.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
+   :alt: Fortschrittsanzeige
 
 Nach erfolgreicher Installtion siehst Du folgendes Fenster:
 
-.. figure:: media/xcp-center/playonlinux7.png
+.. figure:: media/53_center-on-linux_installation-successful.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
+   :alt: Installation erfolgreich
 
 Gehe auf ``Weiter``. Das Fenster wird dadurch geschlossen.
 
@@ -675,9 +674,9 @@ Aufruf XCP-ng Center unter PlayOnLinux
 
 Die zuvor installierte XCP-ng Anwendung findest Du nun unter PlayOnLinux.
 
-.. figure:: media/xcp-center/playonlinux8.png
+.. figure:: media/54_center-on-linux_is-located.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
+   :alt: Starten von XCP-ng Center 
 
 Markiere die Anwendung und gehe links im Kontextmenü auf ``Ausführen``.
 
@@ -687,9 +686,9 @@ Greife nun auf XCP-ng zu, indem zu als Server die IP + Portnummer angibst.
 Es funktioniert derzeit nur der Port 80. Ein Zugriff auf Port 443 ist derzeit 
 noch nicht möglich.
 
-.. figure:: media/xcp-center/xcp-center-wine-add-server.png
+.. figure:: media/55_center-on-linux_add-new-server.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
+   :alt: Hinzufügen des XCP-ng Hosts
 
 Gebe hier die lokale IP des XCP-Hosts dann einen Doppelpunkt und die Portnummer an. 
 Z.B. ``192.168.199.59:80``
@@ -697,9 +696,9 @@ Z.B. ``192.168.199.59:80``
 .. note::
    Es erfolgt somit kein verschlüsselter Zugriff auf den XCP-Host. Bitte unbedingt beachten !
 
-.. figure:: media/xcp-center/xcp-center-logged-in.png
+.. figure:: media/56_center-on-linux_started_xcp-ng-center.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
+   :alt: Zugriff auf den Host 
 
 Um später XCP-ng unter Linux direkt vom Desktop aus aufrufen zu können, kannst Du in PlayOnLinux
 XCP-ng als Anwendung in der rechten Hälfte des Fenster markieren und links dann im 
@@ -714,17 +713,17 @@ Mögliche Fehler mit PlayOnLinux
 Sollte nach Aufruf des Programm mit PlayOnLinux ein Fehlerfenster erscheinen,
 so gibt es verschiedene Fehlerquellen.
 
-.. figure:: media/xcp-center/playonlinuxerror1.png
+.. figure:: media/57_center-on-linux_error-message.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
+   :alt: Fehler bei Starten von XCP-ng Center unter PlayOnLinux
 
 Es ist häufiger der Fall, dass Wine in einer 64-Bit Umgebung installiert wurde und 
-nur 64-Bit Programme lauffähig sind. XCP-ng Center benötigt alelrdings 32-Bit 
+nur 64-Bit Programme lauffähig sind. XCP-ng Center benötigt allerdings 32-Bit 
 Laufzeitumgebungen für Wine.
 
-.. figure:: media/xcp-center/playonlinuxerror2.png
+.. figure:: media/58_center-on-linux_needs-32-bit.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
+   :alt: Mögliche Fehlerursache: Fehlende 32-Bit Unterstürtzung
 
 In diesem Fall kannst Du einfach wine32 nachinstallieren, indem Du root 
 auf der Eingabekonsole für Debian - Derivate angibst:
@@ -737,7 +736,7 @@ die Wine-Istallation und die PlayOnLinux - Installation aktualisieren_.
 .. _aktualisieren: http://tipsonubuntu.com/2019/02/01/install-wine-4-0-ubuntu-18-10-16-04-14-04/
 
 Sollte es weiterhin Probleme geben, so must Du ggf. einen Rebuild erstellen. 
-Hinweise hierzu erhälst Du unter_:
+Hinweise hierzu erhälst Du auf GitHub unter_
 
 .. _unter: https://github.com/aldebaranbm/xencenter-playonlinux
 
@@ -787,34 +786,34 @@ konfiguriert wurde.
 
 Es erscheint folgende Anmeldemaske:
  
-.. figure:: media/xoa/xoa-vm-https-login.png
+.. figure:: media/59_xoa_vm-https-login.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
+   :alt: Anmelde-Fenster
 
 Gebe hier den User ``admin@admin.net`` mit dem Passwort ``Muster!`` ein und klicke auf ``Login``.
 
 Nach erfolgreicher Anmeldung wirst Du darauf hingewiesen, dass Du XOA ``from Sources`` nutzt und Du daher kein Support und keine Updates erhälst.
 
-.. figure:: media/xoa/xoa-login-from-sources.png
+.. figure:: media/60_xoa_login-from-sources.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
+   :alt: XOA Hinweis aus den Quellen 
 
 Bestätige dies, indem Du ``Ok`` klickst.
 
 Danach siehst Du das ``Welcome-Fenster``. 
 
-.. figure:: media/xoa/xoa-vm-first-screen.png
+.. figure:: media/61_xoa_vm-first-screen.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
+   :alt: XOA Willkommen Bildschirm
 
 Du must nun den XCP-ng Host oder den XCP-ng Pool angeben, damit XOA hierauf zugreifen und die Ressourcen verwalten kann.
 Wähle den Eintrag ``Add Server``.
 
 Es erscheint dann das Einstellungs-Fenster für die Server (Settings).
 
-.. figure:: media/xoa/xoa-vm-add-xcp-ng-host.png
+.. figure:: media/62_xoa_add-xcp-ng-host.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
+   :alt: Hinzufügen des XCP-ng-Hosts
 
 Trage den Hostnamen, die IP-Adresse ``10.X.X.X`` ein, die Du dem XCP-ng Server gegeben hast und gebe dahinter - durch einen Doppelpunkt getrennt - den Port an.
 I.d.R. ist dies Port 443, der zu nutzen ist. XCP-ng nutzt hierbei self-signed certificates. Trage den Benutzernamen des root-Benutzers von XCP-ng sowie sein Kennwort ein.
@@ -827,15 +826,15 @@ Klicke auf ``Connect``. Es wird nun von der XOA-VM die Verbindung zum XCP-ng Hos
 
 Ändere nun das voreingestellte Kennwort für den root-Benutzer (admin@admin.net) der XOA-VM. Klicke hierzu auf der linken Menüleist ganz unten auf der Personensymbol.
 
-.. figure:: media/xoa/xoa-edit-my-settings.png
+.. figure:: media/63_xoa_edit-my-settings.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
+   :alt: Benutzer-Symbol
 
-Danach Konetxmenü für den Bentuzer, in dem Du das Kennwort ändern und weitere Einstellungen vornehmen kannst.
+Danach bist du im Kontexmenü des Benutzers, für den Du das Kennwort ändern und weitere Einstellungen vornehmen kannst.
 
-.. figure:: media/xoa/xoa-edit-password.png
+.. figure:: media/64_xoa_edit-password.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
+   :alt: Password Ämderung
 
 Trage das bisherige Kennwort ``Muster!`` sowie zweimal Dein neunes Kennwort ein, stelle die Sprache ein und bestätige die Änderungen mit einem Klick auf ``OK``.
 
@@ -884,7 +883,7 @@ Wurden Backups definiert und wurden diese bereits ausgeführt, dann kannst Du de
 
 Dies kann dann z.B. wie in folgender Abbildung aussehen:
 
-.. figure:: media/xoa/xoa-backup-ng.png
+.. figure:: media/65_xoa_backup-ng.png
    :align: center
-   :alt: Picture and Text to check from v7 to v62 
+   :alt: XOA Backup
 
