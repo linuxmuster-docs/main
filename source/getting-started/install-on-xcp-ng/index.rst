@@ -348,16 +348,20 @@ Danach ist Dein XCP-ng Host auf dem aktuellen Stand.
 XCP-ng: Administration
 =======================
 
-Für die Administration Deines XCP-ng-Hosts stehen Dir zwei Möglichkeiten zur Verfügung.
+Für die Administration deines XCP-ng-Hosts stehen Dir zwei Möglichkeiten zur Verfügung.
 
-Zunächst solltest Du Dir auf einem Windows-Rechner im Netzwerk das Programm ``XCP-ng Center`` 
-installieren. Hiermit kannst Du die gesamte Umgebund administrieren und insbesondere die 
-vorkonfigurierten VMs einfach importieren. 
+Der XCP-ng-Host kann web-basiert administriert werden.
+Dies erfolgt mithilfe der Anwendung XenOrchestra (XOA - Xen Orchestra Application).
+linuxmuster.net stellt hierfür ebenfalls eine vorkonfigurierte VM mit einer installierten XOA App zur Verfügung. XOA wurde hier "from stratch" installiert und an die lmnv6.2 angepasst.
+Eine Beschreibung befindet sich weiter unten in dieser Anleiltung.
 
-Zudem kann der XCP-ng-Host ebenfalls web-basiert administriert werden. Dies erfolgt mithilfe 
-der Anwendung XenOrchestra (XOA - Xen Orchestra Application). linuxmuster.net stellt hierfür 
-ebenfalls eine vorkonfigurierte VM mit einer installierten XOA App zur Verfügung. XOA wurde
-hier "from stratch" installiert und an die lmnv6.2 angepasst.
+Die andere Möglichkeit nutzt einen Adminstrations-Rechner.
+Auf diesen installierst Du Dir auf einem Rechner im Netzwerk das Windows-Programm ``XCP-ng Center``.
+Hiermit kannst Du die gesamte Umgebund administrieren und insbesondere die vorkonfigurierten VMs einfach importieren.
+Wir beschreiben hier die Installation und Benutzung unter Windows.
+Eine Anleitung für die Installation des Programms unter Linux mithilfe von Wine und PlayOnLinux wird in der Dokumentation hier beschrieben: 
+
+:ref:`XCP-ng Linux <XCP-ng-Center-Linux-label>`  
 
 XCP-ng Center unter Windows installieren
 ----------------------------------------
@@ -367,11 +371,6 @@ Lade Dir das Windows-Programm zur Verwaltung von der Seite des XCP-ng Projekts h
 XCP-ng Center AktuelleVersion_
 
 .. _AktuelleVersion: https://github.com/xcp-ng/xenadmin/releases
-
-Die Installation des Programms unter Linux mithilfe von Wine und PlayOnLinux wird in der Dokumentation hier beschrieben:
-
-XCP-ng Center :ref:`XCP-ng Linux <XCP-ng-Center-Linux-label>`  
-
 
 Installiere das Programm durch einen Rechtsklick auf die MSI-Datei auf dem Windows-Rechner und wähle dann ``Als Administrator ausführen`` aus.
 
