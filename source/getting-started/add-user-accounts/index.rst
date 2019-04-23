@@ -8,7 +8,7 @@
 
 In einer Schule müssen meist mehrere hundert bis einige tausend
 Schüler als Benutzer angelegt werden. Die Schulkonsole SELMA erlaubt
-das Einlesen aller Schülerdaten aus einer Text-Datei ein, die z.B. aus
+das Einlesen aller Schülerdaten aus einer Text-Datei, die z.B. aus
 dem Schulverwaltungsprogramm der Schule bezogen wurde. Anschließend
 werden Konten aller Schüler dieser Liste, die im System noch nicht
 vorhanden sind, angelegt, solche mit einer neuen Klasse versetzt und
@@ -33,7 +33,7 @@ Melde dich dafür an d'SELMA als ``global-admin``, wie es in
 Zeichenkodierung wählen
 =======================
 
-Bei einen neuen System ohne Lehrer und Schüler kann die automatische
+Bei einem neuen System ohne Lehrer und Schüler kann die automatische
 Erkennung der Zeichencodierung der Eingabe (modern "UTF-8" oder eine andere wie
 z.B. "iso8859") nicht gut funktionieren.
 
@@ -78,7 +78,7 @@ Aufnahme abgeschlossen wurde.
    :align: center
    :alt: User entry output dialog
 
-Ab jetzt können Lehrer im Menüpunkt `BENUTZERVERWALTUNG` aufgelistet,
+Ab jetzt können Lehrer, im Menüpunkt `BENUTZERVERWALTUNG` aufgelistet,
 deren Kontoinformationen abgerufen und z.B. Erstpasswörter
 (zurück-)gesetzt werden.
 
