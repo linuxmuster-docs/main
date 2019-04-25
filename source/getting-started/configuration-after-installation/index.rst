@@ -28,7 +28,7 @@ Wähle `Networking` und bestätige mit `Enter`.
    :align: center
    :alt: Netzwerk auswählen
 
-Wähle `Drivers and card assigments` und bestätigen mit `Enter`.
+Wähle `Drivers and card assigments`und bestätige mit `Enter`.
 
 .. figure:: media/03_ipfire-conf_network-configuration-menu.png
    :align: center
