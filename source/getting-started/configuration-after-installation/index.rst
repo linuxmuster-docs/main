@@ -72,7 +72,7 @@ Wähle `'root' password` und bestätige mit `Enter`.
    :align: center
    :alt: Wähle "root' password"
 
-Gebe ein neues Passwort für den Account root ein und bestätigen mit `Ok`.
+Gebe ein neues Passwort für den Account root ein und bestätige mit `Ok`.
 
 .. figure:: media/10_ipfire-conf_root-password.png
    :align: center
@@ -91,7 +91,7 @@ Führe ggf. mit dem Befehl ``reboot`` einen Neustart durch.
 Konfiguration Linuxmuster.net-Server
 ------------------------------------
 
-Gebe als Benutzername `root` ein und als Passwort `muster`. Anschließend gebe den Befehl ``aptitude update && aptitude upgrade && aptitude dist-upgrade`` ein und bestätigen mit `Enter`.
+Gebe als Benutzername `root` ein und als Passwort `muster`. Anschließend gebe den Befehl ``aptitude update && aptitude upgrade && aptitude dist-upgrade`` ein und bestätige mit `Enter`.
 
 .. figure:: media/12_lmn-server-conf_update.png
    :align: center
@@ -233,7 +233,7 @@ Schreibe in die Datei folgende Zeile: ``deb http://pkg.netzint.de/ precise main`
    :align: center
    :alt: Bearbeiten der netzint-Source-List
 
-Verlasse den Editor in dem du `Strg` + `x` drückst. Du wirst gefragt, ob du die Änderungen speichern willst. Drücke `Y` und bestätigen den Speicherort/Dateinamen mit `Enter`.
+Verlasse den Editor in dem du `Strg` + `x` drückst. Du wirst gefragt, ob du die Änderungen speichern willst. Drücke `Y` und bestätige den Speicherort/Dateinamen mit `Enter`.
 
 Schreibe folgende Befehle in die Konsole und bestätige sie jeweils mit `Enter`:
 
@@ -346,7 +346,7 @@ Notiere die ersten Zeichen der UUID.
    :align: center
    :alt: Auflistung der Festplatten-IDs
 
-Gebe den Befehl ``xe vdi-resize uuid=<UUID> disk-size=XXXGiB`` ein und bestätigen mit `Enter`.
+Gebe den Befehl ``xe vdi-resize uuid=<UUID> disk-size=XXXGiB`` ein und bestätige mit `Enter`.
 
 .. figure:: media/48_xcp-ng_resize-hard-disk.png
    :align: center
