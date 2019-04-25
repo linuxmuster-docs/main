@@ -382,7 +382,7 @@ Mit dem Befehl ``df –lh`` kannst du nun die Speichergröße überprüfen:
    :align: center
    :alt: Überprüfen der Festplattengröße
 
-Es bieten sich an, auch die Festplatte für den IPFire zu vergrößern. Im Prinzig das gleiche Vorgehen wie auch beim lmn-Server. Allerdings stehen dir auf dem IPFire nicht die netzint-multitools zur Verfügung.
+Es bietet sich an, auch die Festplatte für den IPFire zu vergrößern. Im Prinzig das gleiche Vorgehen wie auch beim lmn-Server. Allerdings stehen dir auf dem IPFire nicht die netzint-multitools zur Verfügung.
 
 1. Vergrößern der Festplatte wie oben beschrieben im XCP-ng Center.
 2. Auf der Konsole des IPFire im XCP-ng Center anmelden.
