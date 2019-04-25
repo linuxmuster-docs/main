@@ -21,6 +21,7 @@ Zum einen dient die Dokumentation als Schritt-für-Schritt Anleitung für die Ei
 
   getting-started/prerequisites/index
   getting-started/install-on-xcp-ng/index
+  getting-started/configuration-after-installation/index
   getting-started/linuxclients/index
   getting-started/add-user-accounts/index
 
