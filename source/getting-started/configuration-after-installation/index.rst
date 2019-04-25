@@ -117,7 +117,7 @@ Gebe den Befehl ``linuxmuster-setup`` --first ein und bestätige mit `Enter`.
    :align: center
    :alt: Hinweise zur Installation
 
-Gebe das Länderkürzel ein bzw. bestätigen "DE" mit `Enter`.
+Gebe das Länderkürzel ein bzw. bestätige "DE" mit `Enter`.
 
 .. figure:: media/16_lmn-server-conf_country-code.png
    :align: center
