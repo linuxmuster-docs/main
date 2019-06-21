@@ -105,7 +105,7 @@ Gebe den Befehl ``passwd`` ein um das root-passwort zu ändern.
    :align: center
    :alt: Neues root-Passwort vergeben
 
-Gebe den Befehl ``linuxmuster-setup`` --first ein und bestätige mit `Enter`.
+Gebe den Befehl ``linuxmuster-setup --first`` ein und bestätige mit `Enter`.
 
 .. figure:: media/14_lmn-server-conf_linuxmuster-setup-first.png
    :align: center
