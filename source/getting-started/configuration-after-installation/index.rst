@@ -94,7 +94,7 @@ Konfiguration Linuxmuster.net-Server
 Gebe als Benutzername `root` ein und als Passwort `muster`. 
 
 ACHTUNG vor den folgenden Schritten muss die Datei /etc/apt/sources.list.d/babo.list wie folgt geändert werden:
----------------------------------------------------------------------------------------------------------------
+----------------------------------------
 
 deb https://archive.linuxmuster.net babo62/
 
@@ -113,6 +113,8 @@ und mit
 apt-key add archive.linuxmuster.net.key
 
 aufgenommen werden!
+
+Siehe auch:https://ask.linuxmuster.net/t/infrastrukturanpassungen-neuer-paketserver-und-moegliche-folgen/
 
 Anschließend gebe den Befehl ``aptitude update && aptitude upgrade && aptitude dist-upgrade`` ein und bestätige mit `Enter`.
 
