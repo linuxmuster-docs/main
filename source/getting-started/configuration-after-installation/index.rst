@@ -93,10 +93,12 @@ Konfiguration Linuxmuster.net-Server
 
 Gebe als Benutzername `root` ein und als Passwort `muster`. 
 
-ACHTUNG: Vor den folgenden Schritten muss die Datei: 
-"/etc/apt/sources.list.d/babo.list" 
+ACHTUNG: Vor den folgenden Schritten muss die Datei:
+ 
+"/etc/apt/sources.list.d/babo.list"
+
 wie folgt geändert werden:
-------------------------------------
+
 
 deb https://archive.linuxmuster.net babo62/
 
