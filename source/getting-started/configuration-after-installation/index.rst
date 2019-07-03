@@ -91,7 +91,29 @@ Führe ggf. mit dem Befehl ``reboot`` einen Neustart durch.
 Konfiguration Linuxmuster.net-Server
 ------------------------------------
 
-Gebe als Benutzername `root` ein und als Passwort `muster`. Anschließend gebe den Befehl ``aptitude update && aptitude upgrade && aptitude dist-upgrade`` ein und bestätige mit `Enter`.
+Gebe als Benutzername `root` ein und als Passwort `muster`. 
+
+ACHTUNG vor den folgenden Schritten muss die Datei /etc/apt/sources.list.d/babo.list wie folgt geändert werden:
+---------------------------------------------------------------------------------------------------------------
+
+deb https://archive.linuxmuster.net babo62/
+deb https://archive.linuxmuster.net babo/
+
+andere Zeilen werden mit "#" am Zeilenanfang auskommentiert, oder gelöscht!
+
+Danach muss mit:
+
+wget https://archive.linuxmuster.net/archive.linuxmuster.net.key
+
+der nötige Schlüssel geholt-
+
+und mit
+
+apt-key add archive.linuxmuster.net.key
+
+aufgenommen werden!
+
+Anschließend gebe den Befehl ``aptitude update && aptitude upgrade && aptitude dist-upgrade`` ein und bestätige mit `Enter`.
 
 .. figure:: media/12_lmn-server-conf_update.png
    :align: center
