@@ -96,7 +96,7 @@ Gebe als Benutzername `root` ein und als Passwort `muster`.
 ACHTUNG: Vor den folgenden Schritten muss die Datei /etc/apt/sources.list.d/babo.list wie folgt geändert werden:
 ------------------------------------
 
-deb https://archive.linuxmuster.net babo62/ 
+deb https://archive.linuxmuster.net babo62/
 deb https://archive.linuxmuster.net babo/
 
 andere Zeilen werden mit "#" am Zeilenanfang auskommentiert, oder gelöscht!
