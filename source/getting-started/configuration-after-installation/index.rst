@@ -97,6 +97,7 @@ ACHTUNG vor den folgenden Schritten muss die Datei /etc/apt/sources.list.d/babo.
 ---------------------------------------------------------------------------------------------------------------
 
 deb https://archive.linuxmuster.net babo62/
+
 deb https://archive.linuxmuster.net babo/
 
 andere Zeilen werden mit "#" am Zeilenanfang auskommentiert, oder gelöscht!
