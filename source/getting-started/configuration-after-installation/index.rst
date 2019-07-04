@@ -117,7 +117,7 @@ Gebe als Benutzername `root` ein und als Passwort `muster`.
 
    aufgenommen werden.
 
-   Siehe auch ``https://ask.linuxmuster.net/t/infrastrukturanpassungen-neuer-paketserver-und-moegliche-folgen`
+   Siehe auch ``https://ask.linuxmuster.net/t/infrastrukturanpassungen-neuer-paketserver-und-moegliche-folgen``
 
 Anschließend gebe den Befehl ``aptitude update && aptitude upgrade && aptitude dist-upgrade`` ein und bestätige mit `Enter`.
 
