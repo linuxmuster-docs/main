@@ -561,7 +561,7 @@ Starte die VM mit dem linuxmuster.net Server.
 Melde Dich mit o.g. Logindaten an.
 
 .. important::
-   Vor den folgenden Schritten muss die Datei ``/etc/apt/sources.list.d/babo.list`` wie folgt geändert werden:
+   Vor den folgenden Schritten muss die Datei ``/etc/apt/sources.list.d/lmn7.list`` wie folgt geändert werden:
 
    .. code-block:: console
    
