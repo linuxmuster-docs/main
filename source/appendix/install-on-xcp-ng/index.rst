@@ -535,7 +535,7 @@ VMs starten und aktualisieren
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Wähle im XCP-ng Center links die VM aus, die Du starten möchtest.
-Klicke danach oben in der Mnüleiste das Icon ``Start`` aus.
+Klicke danach oben in der Menüleiste das Icon ``Start`` aus.
 
 Beginne mit der Firewall Opnsense. Starte diese.
 
@@ -549,8 +549,7 @@ Melde Dich auf der Konsole mit den Daten ``root`` und ``Muster!`` an.
    :align: center
    :alt: Konsolenmenü OPNsense
 
-Wähle danach in dem Konsolenmenü den Punkt 12) aus, um die Firewall zu 
-aktualisieren.
+Wähle danach in dem Konsolenmenü den Punkt 12) aus, um die Firewall zu aktualisieren.
 
 .. figure:: media/39_xcp-ng-install_opnsense_update-from-console.png
    :align: center
@@ -559,7 +558,35 @@ aktualisieren.
 Bestätige diesen Vorgang mit ``y`` und warte bis die VM neu gestartet wurde.
 
 Starte die VM mit dem linuxmuster.net Server.
-Melde Dich mit o.g. Logindaten an, und aktualisiere die VM.
+Melde Dich mit o.g. Logindaten an.
+
+.. important::
+   Vor den folgenden Schritten muss die Datei ``/etc/apt/sources.list.d/babo.list`` wie folgt geändert werden:
+
+   .. code-block:: console
+   
+      deb https://archive.linuxmuster.net lmn7/
+      deb https://archive.linuxmuster.net lmn7/
+
+   Andere Zeilen können gelöscht oder mit "#" am Zeilenanfang auskommentiert werden.
+   
+   Danach muss mit
+
+   .. code-block:: console
+   
+      wget https://archive.linuxmuster.net/archive.linuxmuster.net.key
+
+   der nötige Schlüssel geholt und mit
+
+   .. code-block:: console
+   
+      apt-key add archive.linuxmuster.net.key
+
+   aufgenommen werden.
+
+   Siehe auch ``https://ask.linuxmuster.net/t/infrastrukturanpassungen-neuer-paketserver-und-moegliche-folgen``
+
+Aktualisiere die VM.
 
 .. figure:: media/40_xcp-ng-install_update-server-vm.png
    :align: center
