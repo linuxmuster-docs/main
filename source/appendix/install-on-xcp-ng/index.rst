@@ -911,7 +911,7 @@ Um sich erstmalig mit der XOA-VM via SSH zu verbinden, gibst Du in einem Termina
 
 Bestätige den fingerprint mit ``yes``und gebe das Kennwort ``Muster!`` ein.
 
-Gebe auf der Konsole ``passwd`` ein und ändere der Kennwort für den Benutzer ``muser``.
+Gebe auf der Konsole ``passwd`` ein und ändere der Kennwort für den Benutzer ``muster``.
 
 Wechsle auf der Konsole zum root-Benutzer, indem Du als Benutzer ``muster`` den Befehl ``sudo su`` angibst.
 Du wirst nach dem Kennwort des Muster-Nutzers gefragt. Gebe das vorher geänderte Kennwort an. Du kannst nun als Benutzer ``root`` arbeiten.
