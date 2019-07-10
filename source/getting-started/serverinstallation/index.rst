@@ -12,7 +12,8 @@
 .. hint::
 
    Alle linuxmuster 6.x Systeme können statt einer Neuinstallation
-   über eine :ref:`migration-label` umgezogen werden.
+   über eine :ref:`migration-label` umgezogen werden, dennoch ist die
+   Erstkonfiguration hier eine notwendige Voraussetzung.
 
 .. attention::
 

@@ -8,11 +8,12 @@
 
 In einer Schule müssen meist mehrere hundert bis einige tausend
 Schüler als Benutzer angelegt werden. Die Schulkonsole SELMA erlaubt
-das Einlesen aller Schülerdaten aus einer Text-Datei ein, die z.B. aus
+das Einlesen aller Schülerdaten aus einer Text-Datei, die z.B. aus
 dem Schulverwaltungsprogramm der Schule bezogen wurde. Anschließend
-werden alle Schüler dieser Liste, die im System noch nicht vorhanden
-sind, angelegt, solche mit einer neuen Klasse versetzt und nicht mehr
-aufgeführte Schüler aus dem System gelöscht.
+werden Konten aller Schüler dieser Liste, die im System noch nicht
+vorhanden sind, angelegt, solche mit einer neuen Klasse versetzt und
+Konten nicht mehr aufgeführter Schüler schrittweise aus dem System
+entfernt.
 
 In diesen Abschnitten wird beispielhaft ein Lehrer händisch angelegt
 und per Datei-Import einige Schüler aufgenommen.
@@ -23,20 +24,21 @@ Melde dich dafür an d'SELMA als ``global-admin``, wie es in
 .. attention::
 
    Für alle beta-Tester: folgende Szenarien funktionieren in d'SELMA
-   nicht, wenn man nicht-ASCII-Zeichen verwendet. Am besten ist es
-   für die Aufnahme mit nicht-ASCII-Zeichen die Konsole zu verwenden
-   (bislang undokumentiert).
+   nicht, wenn man nicht-ASCII-Zeichen verwendet. Am besten ist es für
+   die Aufnahme mit nicht-ASCII-Zeichen die Konsole zu verwenden
+   (bislang undokumentiert) und wie im nächsten Abschnitt erwähnt die
+   Zeichenkodierung festzulegen.
 
 
 Zeichenkodierung wählen
 =======================
 
-Bei einen neuen System ohne Lehrer und Schüler kann die automatische
+Bei einem neuen System ohne Lehrer und Schüler kann die automatische
 Erkennung der Zeichencodierung der Eingabe (modern "UTF-8" oder eine andere wie
 z.B. "iso8859") nicht gut funktionieren.
 
 Die Zeichencodierung kann auch festgelegt werden unter dem Menüpunkt
-`SCHULEINSTELLUNGEN/Schuleinstellungen` im Reiter Zeichenkodierung
+`SCHULEINSTELLUNGEN/Schuleinstellungen` im Reiter `Zeichenkodierung`
 z.B. auf "UTF-8" gestellt werden.
 
 .. figure:: media/settings-settings-charencoding.png
@@ -76,7 +78,7 @@ Aufnahme abgeschlossen wurde.
    :align: center
    :alt: User entry output dialog
 
-Ab jetzt können Lehrer im Menüpunkt `BENUTZERVERWALTUNG` aufgelistet,
+Ab jetzt können Lehrer, im Menüpunkt `BENUTZERVERWALTUNG` aufgelistet,
 deren Kontoinformationen abgerufen und z.B. Erstpasswörter
 (zurück-)gesetzt werden.
 
