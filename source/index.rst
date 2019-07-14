@@ -19,6 +19,7 @@ Zum einen dient die Dokumentation als Schritt-für-Schritt Anleitung für die Ei
   :maxdepth: 2
   :caption: Erste Schritte
 
+  getting-started/downloads/index
   getting-started/prerequisites/index
   getting-started/install-on-xcp-ng/index
   getting-started/configuration-after-installation/index
