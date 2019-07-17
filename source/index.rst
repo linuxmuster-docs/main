@@ -30,7 +30,6 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
 
   systemadministration/maintenance/migration
   systemadministration/maintenance/keep-lmn-uptodate
-  systemadministration/maintenance/keep-lmn-uptodate/index
   systemadministration/network/index
   systemadministration/printer/index
 
