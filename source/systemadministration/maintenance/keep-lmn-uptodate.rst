@@ -1,10 +1,10 @@
 Linuxmuster.net aktuell halten
 ==============================
 
+.. sectionauthor:: `@toheine <https://ask.linuxmuster.net/u/toheine>`_
+
 Update des Ubuntu Servers von linuxmuster.net 
 ---------------------------------------------
-
-[Derzeit in Bearbeitung von toheine]
 
 Um die linuxmuster.net 7.x zugrunde liegende Ubuntu Version (Ubuntu Server 18.04.x LTS 64bit) zu aktualisieren, beachten Sie 
 bitte nachstehendes Vorgehen bzw. Hinweise.
@@ -32,10 +32,6 @@ Melden Sie sich stattdessen besser bei der entsprechenden
 an oder abonnieren Sie entsprechenden `RSS-Feed
 <http://www.ubuntu.com/usn/rss.xml>`_. Alle Hinweise zu
 Sicherheitsupdates von Ubuntu erhalten Sie unter http://www.ubuntu.com/usn/
-
-Zusätzlich können Sie das Paket ``apticron`` installieren. Hierbei handelt es sich um ein einfaches Shell-Skript, das automatisch
-eine Mail an eine hinterlegte Adresse sendet, sofern es neue Paket-Updates gibt. Voraussetzung hierfür ist ein konfigurierter 
-Mail-Transfer-Agent (MTA) auf dem jeweiligen Server (z. B. Postfix oder Exim4).
 
 
 Aktualisierungen einspielen
@@ -76,7 +72,7 @@ Um die Server-Installation auf den aktuellen Paketstand zu bringen, gehen Sie fo
 
 
 Aktualisierung der Firewall OPNsense
-====================================
+------------------------------------
 
 Um die Firewall OPNsense zu aktualisieren, beachten Sie bitte nachstehendes Vorgehen bzw. Hinweise.
 
