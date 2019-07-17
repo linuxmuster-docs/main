@@ -300,11 +300,14 @@ VirtualBox als Hypervisor:
   beschreibt diese Konfiguration. Es muss mindestens die Version 6.0
   verwendet werden.
 
-Software
+.. _getting-started-downloads-label:
+
+Download
 ========
 
 Für eine Installation direkt auf der Hardware oder einer Installation
-von Grund auf innerhalb (anderer) Virtualisierungen benötigt man
+von Grund auf innerhalb Virtualisierungen, die keinen OVA-Import
+ermöglichen, benötigt man
 	
 - `Ubuntu 18.04 LTS 64-bit PC (AMD64) server install image
   <http://releases.ubuntu.com/bionic/ubuntu-18.04-live-server-amd64.iso>`_
@@ -313,7 +316,34 @@ von Grund auf innerhalb (anderer) Virtualisierungen benötigt man
 
 Für die Virtualisierung benötigt man neben der
 Virtualisierungssoftware noch die bereitgestellten VM-Appliances
-(Abbilder). Links zu diesen finden sich im jeweiligen Kapitel.
+(Abbilder).
+
+Appliances OVA
+--------------
+
+- https://download.linuxmuster.net/ova/v7/201903/lmn7-opnsense-20190319.ova
+- https://download.linuxmuster.net/ova/v7/201903/lmn7-opnsense-20190319.ova.sha1
+- https://download.linuxmuster.net/ova/v7/201903/lmn7-server-20190320.ova
+- https://download.linuxmuster.net/ova/v7/201903/lmn7-server-20190320.ova.sha1
+- https://download.linuxmuster.net/ova/v7/201903/lmn7-docker-20190320.ova
+- https://download.linuxmuster.net/ova/v7/201903/lmn7-docker-20190320.ova.sha1
+- https://download.linuxmuster.net/ova/v7/201903/lmn7-opsi-20190320.ova
+- https://download.linuxmuster.net/ova/v7/201903/lmn7-opsi-20190320.ova.sha1
+
+Appliances XVA
+--------------
+
+Die VMs wurden mithilfe von ``zip`` nochmals komprimiert. Bitte
+dekomprimiere nach dem Download die Dateien lokal mithilfe von
+``unzip``.
+
+- XCP-ng: `XCP-ng <https://xcp-ng.org/#easy-to-install>`_
+- XCP-ng Center `XCP-ng Center <https://github.com/xcp-ng/xenadmin/releases>`_ 
+- lmn7.XOA - `XOA VM <https://download.linuxmuster.net/xcp-ng/v7/lmn7.xoa.xva.zip>`_  
+- lmn7.opnsense - `lmn7 OPNSense <https://download.linuxmuster.net/xcp-ng/v7/lmn7.opnsense.xva.zip>`_  
+- lmn7.server  `lmn7 Server <https://download.linuxmuster.net/xcp-ng/v7/lmn7.server.xva.zip>`_  
+- lmn7.opsi  `OPSI lmn7 <https://download.linuxmuster.net/xcp-ng/v7/lmn7.opsi.xva.zip>`_  
+- lmn7.docker `Download VM v7 Docker Host <https://download.linuxmuster.net/xcp-ng/v7/lmn7.docker.xva.zip>`_  
 
 Vorgehen
 ========
