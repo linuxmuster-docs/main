@@ -82,7 +82,7 @@ Was erhalten bleibt
 Bekannte Probleme
 -----------------
 
-* Im Beta-Test werden Probleme und Lösungen im Supportforum gesammelt und dokumentiert
+* Im Beta-Test werden Probleme und Lösungen im `Supportforum <https://ask.linuxmuster.net/t/betatest-probleme-und-loesungen>`_ gesammelt und dokumentiert
 
 
 Release-Informationen früherer Versionen
