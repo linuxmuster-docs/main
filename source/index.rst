@@ -18,8 +18,8 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   :maxdepth: 2
   :caption: Erste Schritte
 
-  getting-started/prerequisites/index
-  getting-started/serverinstallation/index
+  getting-started/prerequisites
+  getting-started/setup
   getting-started/add-user-accounts/index
   getting-started/add-computer/index
   getting-started/linuxclients/index
