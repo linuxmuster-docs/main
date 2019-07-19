@@ -22,7 +22,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   getting-started/setup
   getting-started/add-user-accounts
   getting-started/add-computer
-  getting-started/linuxclients/index
+  getting-started/linuxclient
 
 .. toctree::
   :maxdepth: 2
