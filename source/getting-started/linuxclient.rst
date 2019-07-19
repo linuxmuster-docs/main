@@ -4,6 +4,8 @@
 Linux Clients
 =============
 
+.. sectionauthor:: `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_
+
 In dieser Anleitung wird beschrieben, wie man Linux auf einer
 Musterarbeitsstation installiert.  Ein fertig vorkonfiguriertes Abbild
 liegt zum Download bei linuxmuster.net bereit und kann sofort auf alle
