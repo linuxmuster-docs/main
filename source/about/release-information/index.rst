@@ -52,18 +52,19 @@ Bedienung und Administration
   * Wegfall der PostGREs-Datenbank zugunsten einheitlicher Speicherung
     aller Daten in Samba 4 / Active Directory
 
-
 Benutzerverwaltung
-  * Automatische Erkennung der Kodierung der Benutzerdaten
-  * Session-basierte Berechtigungen für die Unterrichtsteuerung
-
+  * Automatische Erkennung der Kodierung der Benutzerdaten, Sonderzeichen in Klarnamen
+  * Klassen- und Projektmanagement bleibt erhalten
+  * Zusätzlich Session-basierte Berechtigungen für die Unterrichtsteuerung
     * Gruppen können freiwählbar zusammengestellt werden
     * Benutzerbezogene statt rechnerbezogene Verwaltung
 
 Netzwerkverwaltung
   * Frei definierbar IP-Bereiche
   * Standardmäßige Zugangskontrolle zum Internet über einen Proxyservice
-    auf Single-Sign-On Basis 
+    auf Single-Sign-On Basis statt des überwiegend obsoleten transparenten Proxys
+  * Inhaltliche Filterung fällt weg, da technologisch überholt (Belwue-DNS/OpenDNS 
+    weiterhin möglich, solange dies technologisch noch Sinn ergibt.)
   * OpnSense auf Basis von FreeBSD vorkonfiguriert ausgeliefert aber
     flexibel durch andere Firewall-Produkte zu ersetzen
       
@@ -76,15 +77,13 @@ Was erhalten bleibt
 
 
 
-
-  
-
 .. _knownbugs-label:
 
 Bekannte Probleme
 -----------------
 
-...
+* Im Beta-Test werden Probleme und Lösungen im Supportforum gesammelt und dokumentiert
+
 
 Release-Informationen früherer Versionen
 ----------------------------------------
