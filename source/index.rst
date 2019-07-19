@@ -21,7 +21,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   getting-started/prerequisites
   getting-started/setup
   getting-started/add-user-accounts
-  getting-started/add-computer/index
+  getting-started/add-computer
   getting-started/linuxclients/index
 
 .. toctree::
