@@ -60,13 +60,14 @@ Benutzerverwaltung
     * Benutzerbezogene statt rechnerbezogene Verwaltung
 
 Netzwerkverwaltung
-  * Frei definierbar IP-Bereiche
+  * Frei definierbare IP-Bereiche
   * Standardmäßige Zugangskontrolle zum Internet über einen Proxyservice
     auf Single-Sign-On Basis statt des überwiegend obsoleten transparenten Proxys
   * Inhaltliche Filterung fällt weg, da technologisch überholt (Belwue-DNS/OpenDNS 
     weiterhin möglich, solange dies technologisch noch Sinn ergibt.)
   * OpnSense auf Basis von FreeBSD vorkonfiguriert ausgeliefert aber
-    flexibel durch andere Firewall-Produkte zu ersetzen
+    flexibel durch andere Firewall-Produkte zu ersetzen, die die Regeln im 
+    Active Directory des Servers auslesen kann.
       
 Was erhalten bleibt
 -------------------
