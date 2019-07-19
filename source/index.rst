@@ -11,7 +11,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   :caption: Über
 
   about/about
-  about/release-information/index
+  about/release-information
   about/beta7
 
 .. toctree::
