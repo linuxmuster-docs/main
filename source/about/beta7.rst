@@ -8,7 +8,7 @@ Feedback
 ========
 
 Im Forum
-https://ask.linuxmuster.net/t/betatest-migrationsprobleme-und-loesungen
+https://ask.linuxmuster.net/t/betatest-probleme-und-loesungen
 wird möglichst aktuell
 
 - der Status vermittelt
