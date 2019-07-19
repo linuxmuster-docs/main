@@ -24,10 +24,10 @@ Herunterladen des Standard-Linuxclients
 
 .. hint::
 
-   Die vorliegende Dokumentation wird direkt aus der
-   `Entwicklerdokumentation
+   Die vorliegende Dokumentation wird aus der `Entwicklerdokumentation
    <https://github.com/linuxmuster/linuxmuster-client-adsso>`_
-   gespeist und eventuell finden sich dort neuere Informationen.
+   genommen und ab und zu aktualisiert und eventuell finden sich dort
+   neuere Informationen.
 
 
 Lade auf dem Server folgendes Cloop herunter und entpacke es in das Verzeichnis `/srv/linbo`:
@@ -39,9 +39,9 @@ Lade auf dem Server folgendes Cloop herunter und entpacke es in das Verzeichnis 
    # wget https://download.linuxmuster.net/client-cloops/v7/ubuntu1804basisClient.tbz
    # tar -xjf ubuntu1804basisClient.tbz -C /srv/linbo
 
-
-
-
+Standardmäßig wird eine start-Konfiguration für die Rechnergruppe
+"linux" erstellt in der das entpackte Cloop verwendet wird. Jetzt kann
+man einen ersten Arbeitsplatzrechner in die Rechnergruppe aufnehmen.
 
 .. 
   Installieren Sie auf dem Server das Paket ``linuxmuster-client-servertools``.
@@ -113,100 +113,111 @@ Lade auf dem Server folgendes Cloop herunter und entpacke es in das Verzeichnis 
   
   Nun kann man Clientrechner in die Rechnergruppe `ubuntuclient` aufnehmen.
 
-(v6.2) Computer in Netzwerk aufnehmen
-=====================================
+Computer aufnehmen
+==================
 
-Neue Rechner werden durch direkten Eintrag in die Datei
-``/etc/linuxmuster/workstations`` und anschließendem Aufruf von
-``import_workstations`` aufgenommen.
-
-Ermitteln Sie die MAC-Adresse des ersten Clients, z.B. indem Sie den
-Client per PXE booten.
-
-.. image:: ../clients/windows10clients/media/registration/linbo-empty-startpage.jpg
-
-Lesen Sie die "MAC-Adresse" im LINBO-Startbildschirm ab.
-
-Öffnen Sie die Datei ``/etc/linuxmuster/workstations`` auf dem Server.
-
-.. code-block:: console
-
-   server ~ # nano /etc/linuxmuster/workstations
-
-Tragen Sie dort den Rechner ein mit folgender Syntax
-
-.. code-block:: bash
-
-   Raum;Rechnername;Gruppe;MAC;IP;;;;;;PXE-Flag;
-
-Raum
-  Geben Sie hier den Namen des Raums (z.B. r100 oder g1r100)
-  ein. Beachten Sie bitte, dass die Bezeichnung des Raumes oder auch
-  des Gebäudes mit einem Kleinbuchstaben beginnen muss. Sonderzeichen
-  sind nicht erlaubt.
-
-Rechnername 
-  z.B. in der Form r100-pc01 (max. 15 Zeichen), (evtl. Gebäude
-  berücksichtigen g21r100-pc01) eingeben. Beachten Sie bitte, dass als
-  Zeichen nur Buchstaben und Zahlen erlaubt sind. Als Trennzeichen
-  darf nur das Minus-Zeichen ``-`` verwendet werden. Leerzeichen,
-  Unterstriche oder andere Sonderzeichen (wie z.B. Umlaute, ß oder
-  Satzzeichen) dürfen Sie hier unter keinen Umständen verwenden.
-
-IP Adresse  
-  Die IP-Adresse sollte zum Raum passen und **muss** außerhalb des
-  Bereichs für die Rechneraufnahme liegen. Abhängig von Ihren
-  Netzdaten z.B. 10.16.100.1 für diesen PC eingeben, üblicherweise
-  **nicht** zwischen 10.16.1.100 und 10.16.1.200 (Bereich für die
-  Rechneraufnahme).  
-
-Rechnergruppe 
-  In der Rechnergruppe, bspw. `xenial` werden mehrere (idealerweise
-  alle) ähnlichen Rechner zusammengefasst, die eine (nahezu)
-  identische Konfiguration bekommen. 
-
-Beispielkonfiguration.
-
-.. code-block:: bash
-
-   r100;r100-pc01;xenial;08:00:27:57:1D:C5;10.16.100.1;;;;;;1;
-
-Der registrierte Client wird nun mit dem Konsolenbefehl
-
-.. code-block:: console
-
-   server ~# import_workstations
-
-ins System aufgenommen und der Rechnergruppe `xenial` zugewiesen. Wenn
-Sie mit dem zuvor heruntergeladenen Standard-Linuxclient eine
-Rechnergruppe `xenial` erstellt haben, kann nun der Rechner fertig
-eingerichtet werden.
+Der Zielrechner wird in d'SELMA aufgenommen (z.B. `r100-pc01`) und im
+Menüpunkt LINBO der richtigen Gruppe (z.B. `linux`) zugewiesen.
 
 
-(v6.2) Clients synchronisieren
-==============================
+.. 
+  Neue Rechner werden durch direkten Eintrag in die Datei
+  ``/etc/linuxmuster/workstations`` und anschließendem Aufruf von
+  ``import_workstations`` aufgenommen.
+  
+  Ermitteln Sie die MAC-Adresse des ersten Clients, z.B. indem Sie den
+  Client per PXE booten.
+  
+  .. image:: ../clients/windows10clients/media/registration/linbo-empty-startpage.jpg
+  
+  Lesen Sie die "MAC-Adresse" im LINBO-Startbildschirm ab.
+  
+  Öffnen Sie die Datei ``/etc/linuxmuster/workstations`` auf dem Server.
+  
+  .. code-block:: console
+  
+     server ~ # nano /etc/linuxmuster/workstations
+  
+  Tragen Sie dort den Rechner ein mit folgender Syntax
+  
+  .. code-block:: bash
+  
+     Raum;Rechnername;Gruppe;MAC;IP;;;;;;PXE-Flag;
+  
+  Raum
+    Geben Sie hier den Namen des Raums (z.B. r100 oder g1r100)
+    ein. Beachten Sie bitte, dass die Bezeichnung des Raumes oder auch
+    des Gebäudes mit einem Kleinbuchstaben beginnen muss. Sonderzeichen
+    sind nicht erlaubt.
+  
+  Rechnername 
+    z.B. in der Form r100-pc01 (max. 15 Zeichen), (evtl. Gebäude
+    berücksichtigen g21r100-pc01) eingeben. Beachten Sie bitte, dass als
+    Zeichen nur Buchstaben und Zahlen erlaubt sind. Als Trennzeichen
+    darf nur das Minus-Zeichen ``-`` verwendet werden. Leerzeichen,
+    Unterstriche oder andere Sonderzeichen (wie z.B. Umlaute, ß oder
+    Satzzeichen) dürfen Sie hier unter keinen Umständen verwenden.
+  
+  IP Adresse  
+    Die IP-Adresse sollte zum Raum passen und **muss** außerhalb des
+    Bereichs für die Rechneraufnahme liegen. Abhängig von Ihren
+    Netzdaten z.B. 10.16.100.1 für diesen PC eingeben, üblicherweise
+    **nicht** zwischen 10.16.1.100 und 10.16.1.200 (Bereich für die
+    Rechneraufnahme).  
+  
+  Rechnergruppe 
+    In der Rechnergruppe, bspw. `xenial` werden mehrere (idealerweise
+    alle) ähnlichen Rechner zusammengefasst, die eine (nahezu)
+    identische Konfiguration bekommen. 
+  
+  Beispielkonfiguration.
+  
+  .. code-block:: bash
+  
+     r100;r100-pc01;xenial;08:00:27:57:1D:C5;10.16.100.1;;;;;;1;
+  
+  Der registrierte Client wird nun mit dem Konsolenbefehl
+  
+  .. code-block:: console
+  
+     server ~# import_workstations
+  
+  ins System aufgenommen und der Rechnergruppe `xenial` zugewiesen. Wenn
+  Sie mit dem zuvor heruntergeladenen Standard-Linuxclient eine
+  Rechnergruppe `xenial` erstellt haben, kann nun der Rechner fertig
+  eingerichtet werden.
 
-Um den Client erstmalig zu partitionieren, formatieren,
-synchronisieren und zu starten, führen Sie auf dem Server folgenden
-Befehl aus
+
+Masterclient synchronisieren
+============================
+
+Um den Client `r100-pc01` erstmalig zu partitionieren, formatieren,
+synchronisieren und zu starten, führe auf dem Server folgenden Befehl
+aus
 
 .. code-block:: console
 
    server ~ # linbo-remote -i r100-pc01 -p partition,format,initcache:torrent,sync:1,start:1
 
-(Re-)booten Sie nun den Client und verfolgen Sie die vollautomatische
-Einrichtung oder trinken Sie eine Tasse Ihres Lieblingsgetränks.
+(Re-)boote nun den Client und verfolge die vollautomatische
+Einrichtung oder trinke eine Tasse deines Lieblingsgetränks.
 
-Der Ubuntu-Client startet und aufgenommene Benutzer können sich nun am System anmelden.
+- linuxmuster-distupgrade
+- linuxmuster-client-adsso-setup
+- reboot
 
-Weitere Clients können unter Kenntnis der jeweiligen MAC-Adressen mit
-derselben Methode direkt in die Datei
-``/etc/linuxmuster/workstations`` aufgenommen werden.
-
-Alternativ kann jeder aufzunehmende Rechner in LINBO gestartet werden
-und über die grafische Oberfläche von LINBO registriert werden. Dabei
-werden die relevanten Werte automatisch inkrementiert. Lesen Sie dazu
-:ref:`registration-linbo-label`.
+..  
+  Der Ubuntu-Client startet und aufgenommene Benutzer können sich nun am
+  System anmelden.
+  
+  Weitere Clients können unter Kenntnis der jeweiligen MAC-Adressen mit
+  derselben Methode direkt in die Datei
+  ``/etc/linuxmuster/workstations`` aufgenommen werden.
+  
+  Alternativ kann jeder aufzunehmende Rechner in LINBO gestartet werden
+  und über die grafische Oberfläche von LINBO registriert werden. Dabei
+  werden die relevanten Werte automatisch inkrementiert. Lesen Sie dazu
+  :ref:`registration-linbo-label`.
 
 
 Weiterführende Dokumentation
