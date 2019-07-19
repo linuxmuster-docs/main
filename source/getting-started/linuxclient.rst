@@ -207,3 +207,12 @@ werden die relevanten Werte automatisch inkrementiert. Lesen Sie dazu
 :ref:`registration-linbo-label`.
 
 
+Weiterführende Dokumentation
+============================
+
+- :ref:`using-linbo-label`
+- Development Dokumentation im Supportforum: https://ask.linuxmuster.net/t/linuxclient-v7-mit-profil-zum-testen
+- Development Dokumentation: https://github.com/linuxmuster/linuxmuster-client-adsso/wiki
+- Howto: Standardclient updaten
+- Todo: are there pages in the Anwenderwiki
+- Todo: are there howtos under docs.linuxmuster.net
