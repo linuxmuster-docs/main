@@ -69,7 +69,10 @@ zusätzlichen Anleitungen betrachtet.
 Download-Quellen VMs
 --------------------
 
-Die Quellen finden Sie im Abschnitt :ref:`getting-started-downloads-label` 
+Die Quellen finden Sie im Abschnitt 
+
+:ref: `Voraussetzungen - Downloads <getting-started-downloads-label>`_ 
+
 detailliert beschrieben.
 
 Alternativ finden sich alle VMs zum Download auf der Download-Übersicht 
