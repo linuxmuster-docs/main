@@ -78,6 +78,12 @@ werden soll.
 Die VMs sind bereits alle auf die Standard-Installation für linuxmuster.net v6.2 vorbereitet und die sog.
 XCP-ng Tools sind bereits installiert.
 
+Download der XVAs unter: `Download XVAs VM v6.2 <https://download.linuxmuster.net/xcp-ng/v6.2/>`_
+
+Virtualisierungssoftware XCP-ng
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 Die Download-Links zur Installation der XCP-ng Virtualisierungssoftware finden Sie nachstehend:
 
 +--------------------+----------------------------------------------------------------------+
@@ -92,6 +98,6 @@ Die Download-Links zur Installation der XCP-ng Virtualisierungssoftware finden S
 +--------------------+----------------------------------------------------------------------+
 
 
-Download der XVAs unter: `Download XVAs VM v6.2 <https://download.linuxmuster.net/xcp-ng/v6.2/>`_
+
 
 
