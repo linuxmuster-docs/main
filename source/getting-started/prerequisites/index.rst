@@ -16,7 +16,7 @@ von der Mehrzahl der Virtualisier erfolgreich importiert werden.
 Die VMs werden in komprimierter Form angeboten. Zu den jeweiligen Download-Dateien der VMs
 werden ebenfalls die SHA1 - Werte zur Überprüfung der Datenintegrität bereitgestellt.
 
-Nachstehende Übersicht gibt eine Kurzübersicht zu den angebotenen VMs mit anschliesendem 
+Nachstehende Übersicht gibt eine Kurzübersicht zu den angebotenen VMs mit anschließendem 
 Link zur Download-Übersicht.
 
 Appliances OVA
