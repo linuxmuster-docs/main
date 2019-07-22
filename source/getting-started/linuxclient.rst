@@ -30,7 +30,8 @@ Herunterladen des Standard-Linuxclients
    neuere Informationen.
 
 
-Lade auf dem Server folgendes Cloop herunter und entpacke es in das Verzeichnis `/srv/linbo` und starte den Bittorrent-Dienst neu:
+Lade auf dem Server folgendes Cloop herunter, entpacke es in das
+Verzeichnis `/srv/linbo` und starte den Bittorrent-Dienst neu:
 
 * https://download.linuxmuster.net/client-cloops/v7/ubuntu1804basisClient.tbz mit 2.9GB, MD5: 15b2c4ac88b45ac37b35ba445b27e029
 
@@ -41,8 +42,9 @@ Lade auf dem Server folgendes Cloop herunter und entpacke es in das Verzeichnis 
    # systemctl restart linbo-bittorrent.service
 
 Standardmäßig wird eine start-Konfiguration für die Rechnergruppe
-"linux" erstellt in der das entpackte Cloop verwendet wird. Jetzt kann
-man einen ersten Arbeitsplatzrechner in die Rechnergruppe aufnehmen.
+"linux" entpackt in der das entpackte Cloop verwendet wird. Jetzt kann
+man einen ersten Arbeitsplatzrechner in diese Rechnergruppe aufnehmen
+oder eine eigene Rechnergruppe mit dem Cloop konfigurieren.
 
 .. 
   Rufen Sie die Liste aller verfügbaren Clientabbilder auf:
@@ -103,7 +105,7 @@ Computer aufnehmen
 Der Zielrechner wird in d'SELMA aufgenommen (z.B. `r100-pc01`) und im
 Menüpunkt LINBO der richtigen Gruppe (z.B. `linux`) zugewiesen, siehe
 :ref:`add-computer-label`.
-
+     
 .. 
   Neue Rechner werden durch direkten Eintrag in die Datei
   ``/etc/linuxmuster/workstations`` und anschließendem Aufruf von
@@ -172,8 +174,19 @@ Menüpunkt LINBO der richtigen Gruppe (z.B. `linux`) zugewiesen, siehe
   eingerichtet werden.
 
 
+Masterclient aufnehmen
+======================
+
+Internetverbindung ohne Proxy
+-----------------------------
+
+Zunächst muss der Masterclient ohne Proxy-Authentifizierung ins
+Internet kommen. Die empfohlene Vorgehensweise ist, die IP-Adresse des
+Masterclients (temporär) in die "No-Proxy" Zugriffsliste auf der
+Firewall aufzunehmen.
+
 Masterclient synchronisieren
-============================
+----------------------------
 
 Um den Client `r100-pc01` erstmalig zu partitionieren, formatieren,
 synchronisieren und zu starten, führe auf dem Server folgenden Befehl
@@ -188,7 +201,12 @@ Einrichtung oder trinke eine Tasse deines Lieblingsgetränks.
 
 Nach der Synchronisation und einem weiteren Reboot startet der Client
 und man meldet sich mit ``linuxadmin`` und dem Passwort ``Muster!``
-an. Dann startet man in einem Terminal zunächst ein dist-upgrade und
+an. 
+
+Masterclient in die Domäne aufnehmen
+------------------------------------
+
+Dann startet man in einem Terminal zunächst ein dist-upgrade und
 führt dann einmalig ein Setup aus.
 
 .. code-block:: console
