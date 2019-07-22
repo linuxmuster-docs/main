@@ -30,7 +30,7 @@ Herunterladen des Standard-Linuxclients
    neuere Informationen.
 
 
-Lade auf dem Server folgendes Cloop herunter und entpacke es in das Verzeichnis `/srv/linbo`:
+Lade auf dem Server folgendes Cloop herunter und entpacke es in das Verzeichnis `/srv/linbo` und starte den Bittorrent-Dienst neu:
 
 * https://download.linuxmuster.net/client-cloops/v7/ubuntu1804basisClient.tbz mit 2.9GB, MD5: 15b2c4ac88b45ac37b35ba445b27e029
 
@@ -38,29 +38,13 @@ Lade auf dem Server folgendes Cloop herunter und entpacke es in das Verzeichnis 
 
    # wget https://download.linuxmuster.net/client-cloops/v7/ubuntu1804basisClient.tbz
    # tar -xjf ubuntu1804basisClient.tbz -C /srv/linbo
+   # systemctl restart linbo-bittorrent.service
 
 Standardmäßig wird eine start-Konfiguration für die Rechnergruppe
 "linux" erstellt in der das entpackte Cloop verwendet wird. Jetzt kann
 man einen ersten Arbeitsplatzrechner in die Rechnergruppe aufnehmen.
 
 .. 
-  Installieren Sie auf dem Server das Paket ``linuxmuster-client-servertools``.
-  
-  .. code-block:: console
-  
-     server ~ # apt-get install linuxmuster-client-servertools
-     Reading package lists... Done
-     Building dependency tree       
-     Reading state information... Done
-     The following extra packages will be installed:
-       libcrypt-openssl-random-perl makepasswd
-     The following NEW packages will be installed:
-       libcrypt-openssl-random-perl linuxmuster-client-servertools makepasswd
-     0 upgraded, 3 newly installed, 0 to remove and 4 not upgraded.
-     Need to get 31.8 kB of archives.
-     After this operation, 239 kB of additional disk space will be used.
-     Do you want to continue [Y/n]? Y
-  
   Rufen Sie die Liste aller verfügbaren Clientabbilder auf:
   
   .. code-block:: console
@@ -117,8 +101,8 @@ Computer aufnehmen
 ==================
 
 Der Zielrechner wird in d'SELMA aufgenommen (z.B. `r100-pc01`) und im
-Menüpunkt LINBO der richtigen Gruppe (z.B. `linux`) zugewiesen.
-
+Menüpunkt LINBO der richtigen Gruppe (z.B. `linux`) zugewiesen, siehe
+:ref:`add-computer-label`.
 
 .. 
   Neue Rechner werden durch direkten Eintrag in die Datei
@@ -197,14 +181,21 @@ aus
 
 .. code-block:: console
 
-   server ~ # linbo-remote -i r100-pc01 -p partition,format,initcache:torrent,sync:1,start:1
+   # linbo-remote -i r100-pc01 -p partition,format,initcache:torrent,sync:1,start:1
 
-(Re-)boote nun den Client und verfolge die vollautomatische
+Reboote nun den Client und verfolge die vollautomatische
 Einrichtung oder trinke eine Tasse deines Lieblingsgetränks.
 
-- linuxmuster-distupgrade
-- linuxmuster-client-adsso-setup
-- reboot
+Nach der Synchronisation und einem weiteren Reboot startet der Client
+und man meldet sich mit ``linuxadmin`` und dem Passwort ``Muster!``
+an. Dann startet man in einem Terminal zunächst ein dist-upgrade und
+führt dann einmalig ein Setup aus.
+
+.. code-block:: console
+
+   # sudo linuxmuster-distupgrade
+   # sudo linuxmuster-client-adsso-setup
+   # reboot
 
 ..  
   Der Ubuntu-Client startet und aufgenommene Benutzer können sich nun am
