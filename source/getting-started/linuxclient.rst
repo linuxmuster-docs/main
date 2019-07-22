@@ -41,7 +41,7 @@ Verzeichnis `/srv/linbo` und starte den Bittorrent-Dienst neu:
    # tar -xjf ubuntu1804basisClient.tbz -C /srv/linbo
    # systemctl restart linbo-bittorrent.service
 
-Standardmäßig wird eine start-Konfiguration für die Rechnergruppe
+Standardmaessig wird eine start-Konfiguration für die Rechnergruppe
 "linux" entpackt in der das entpackte Cloop verwendet wird. Jetzt kann
 man einen ersten Arbeitsplatzrechner in diese Rechnergruppe aufnehmen
 oder eine eigene Rechnergruppe mit dem Cloop konfigurieren.
@@ -103,7 +103,7 @@ Computer aufnehmen
 ==================
 
 Der Zielrechner wird in d'SELMA aufgenommen (z.B. `r100-pc01`) und im
-Menüpunkt LINBO der richtigen Gruppe (z.B. `linux`) zugewiesen, siehe
+Menuepunkt LINBO der richtigen Gruppe (z.B. `linux`) zugewiesen, siehe
 :ref:`add-computer-label`.
      
 .. 
