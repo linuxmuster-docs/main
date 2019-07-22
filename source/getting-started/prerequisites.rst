@@ -153,7 +153,7 @@ Die virtuellen Appliances sind mit diesem Netz voreingestellt.
 Jedoch kann man sowohl die bisher in früheren Versionen von
 linuxmuster.net verwendeten Netze, wie 10.16.0.0/12 oder 10.32.0.0/12,
 usw. weiterverwenden, als auch komplett andere private Adressbereiche
-angeben, sollten es zwingende Gründe geben.
+angeben, sollte es zwingende Gründe geben.
 
 Jede Zeile der folgenden Tabelle stellt eine Möglichkeit dar.
 
@@ -173,8 +173,8 @@ Jede Zeile der folgenden Tabelle stellt eine Möglichkeit dar.
 
 Bei der Neuinstallation entscheidest du dich für einen der Bereiche.
 Bei einer Migration wird empfohlen den früheren Bereich zu behalten,
-alleine schon um eine Umkonfiguration der Netzwerkswitche nicht nötig
-zu machen.
+alleine schon um eine Umkonfiguration der Netzwerkswitche zu
+vermeiden.
 
 Standard IP-Adressen
 --------------------
@@ -228,7 +228,7 @@ durch die Firewall-Lösung "IPFire" geprägt wurde:
 * Optional kann eine sog. demilitarisierte Zone (DMZ) als zusätzliches Netzwerk (ORANGE) aufgebaut werden.
 * Optional kann z.B. für WLAN-Accesspoints ein weiteres Netzwerk
   aufgebaut werden (BLAU/LILA), für welches andere
-  Zugangsberechtigungen als denen im grünen Netzwerk gelten.
+  Zugangsberechtigungen als im grünen Netzwerk gelten.
 
 Das obige Prinzip ist bereits ein Beispiel für Netzwerksegmentierung,
 das im nächsten Abschnitt näher erläutert wird.
@@ -265,8 +265,8 @@ Voraussetzungen noch folgende Hinweise:
 
 - Der Speicherplatz wird virtualisiert. Darauf muss man bei der
   Verwendung externer (iSCSI) wie interner Speichersysteme (LVM)
-  achten. Dies kann auch zur Vereinfachung eines Backupverfahren
-  beitragen
+  achten. Dies kann auch zur Vereinfachung eines Backupverfahrens
+  beitragen.
 
 - Da der VM-Host die einzelnen VMs zunächst kapselt, ist es aus
   Sicherheitsgründen empfehlenswert, den VM-Host nicht ins selbe Netz
@@ -355,7 +355,7 @@ Dokumentation.
 
 Alternativ installierst du von Grund die Serverbetriebssysteme *Ubuntu
 Server* und *OPNSense* direkt auf der Hardware oder innerhalb einer
-nicht beschriebenen Virtualisierungslösung.
+der nicht beschriebenen Virtualisierungslösung.
 
 Jetzt kann die eigentliche Installation mit der eventuellen Anpassung
 des Netzbereiches und der Erstkonfiguration beginnen, wie sie im
