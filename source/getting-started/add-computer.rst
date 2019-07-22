@@ -1,3 +1,5 @@
+.. _add-computer-label:
+
 =============================
  Rechneraufnahme mit d'SELMA
 =============================
