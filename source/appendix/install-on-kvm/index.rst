@@ -47,7 +47,11 @@ Voraussetzungen
   Es bietet sich ein Ubuntu-Desktop mit der Software `virt-manager`
   an.
 
-* Download der VMs der linuxmuster.net unter: :ref:`Download OVAs <prerequisites-label>`
+* VMs der linuxmuster.net: :ref:`Beschreibung OVAs <prerequisites-label>`
+  
+* Download OVAs-v7_
+
+.. _OVAs-v7: https://download.linuxmuster.net/ova/v7/latest/
 
 Vorgehen
 ========
