@@ -109,7 +109,10 @@ Download-Quellen
 Die Download-Quellen für XCP-ng und die entsprechenden VMs der 
 linuxmuster.net v7 im XVA Format finden sich unter:
 
-:ref:`Voraussetzungen - Downloads <install-on-xen-label>`
+* :ref:`Beschreibung der VMs für v7 <prerequisites-label>`
+* Download der XVAs-v7_
+
+.. _XVAs-v7: https://download.linuxmuster.net/xcp-ng/v7/latest/
 
 
 Erstellen eines USB-Sticks zur Installation des XCP-ng-Host
