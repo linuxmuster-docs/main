@@ -318,32 +318,105 @@ Für die Virtualisierung benötigt man neben der
 Virtualisierungssoftware noch die bereitgestellten VM-Appliances
 (Abbilder).
 
+VMs - Hinweise
+--------------
+
+linuxmuster.net bietet vorgefertigte virtuelle Machinen zum direkten Import für die jeweilige 
+Virtualisierungsumgebung an, um die Ínstallations- und Konfigurationszeiten stark zu verringern.
+
+Für XCP-ng als OpenSource Virtualisierungsumgebung werden die VMs im XVA - Format zum direkten 
+Import angeboten.
+
+Für alle anderen Virtualisierer werden die VMS im OVA - Fomat bereitgestellt. Dieses kann i.d.R. 
+von der Mehrzahl der Virtualisierer erfolgreich importiert werden.
+
+Die VMs werden in komprimierter Form angeboten. Zu den jeweiligen Download-Dateien der VMs
+werden ebenfalls die SHA1 - Werte zur Überprüfung der Datenintegrität bereitgestellt.
+
+Nachstehende Übersicht gibt eine Kurzübersicht zu den angebotenen VMs mit anschließendem 
+Link zur Download-Übersicht.
+
 Appliances OVA
 --------------
 
-- https://download.linuxmuster.net/ova/v7/201903/lmn7-opnsense-20190319.ova
-- https://download.linuxmuster.net/ova/v7/201903/lmn7-opnsense-20190319.ova.sha1
-- https://download.linuxmuster.net/ova/v7/201903/lmn7-server-20190320.ova
-- https://download.linuxmuster.net/ova/v7/201903/lmn7-server-20190320.ova.sha1
-- https://download.linuxmuster.net/ova/v7/201903/lmn7-docker-20190320.ova
-- https://download.linuxmuster.net/ova/v7/201903/lmn7-docker-20190320.ova.sha1
-- https://download.linuxmuster.net/ova/v7/201903/lmn7-opsi-20190320.ova
-- https://download.linuxmuster.net/ova/v7/201903/lmn7-opsi-20190320.ova.sha1
++--------------------+----------------------------------------------------------------------+
+| Programm           | Beschreibung                                                         | 
++====================+======================================================================+
+| lmn7.opnsense      | OPNsense Firewall VM  der linuxmuster.net v7                         |                  
++--------------------+----------------------------------------------------------------------+
+| lmn7.server        | Server der linuxmuster.net v7                                        | 
++--------------------+----------------------------------------------------------------------+
+
+Nachstehende VMs sind optional, sofern eine paketorientierte Softwareverteilung für 
+Windows-Clients (OPSi), eigene Web-Services mithilfe eines sog. Docker-Hosts betrieben
+und/oder eine WLAN-Anbindung via Ubiquiti bereitgestellt werden soll.
+
++--------------------+----------------------------------------------------------------------+
+| Programm           | Beschreibung                                                         | 
++====================+======================================================================+
+| lmn7.opsi          | OPSI VM der lmn v7                                                   |
++--------------------+----------------------------------------------------------------------+
+| lmn7.docker        | Bereitstellung eigener Web-Dienste mithilfe eines Docker-Hosts       |
++--------------------+----------------------------------------------------------------------+
+| lmn7.unifi         | Controller der Ubiquiti WLAN - Lösung                                |
++--------------------+----------------------------------------------------------------------+
+
+
+Download der OVAs unter: `Download OVAs VM v7 <https://download.linuxmuster.net/ova/v7/latest/>`_   
+
+Zur Installation mit KVM: :ref:`Installation KVM <install-on-kvm-label>`
 
 Appliances XVA
 --------------
 
-Die VMs wurden mithilfe von ``zip`` nochmals komprimiert. Bitte
-dekomprimiere nach dem Download die Dateien lokal mithilfe von
-``unzip``.
++--------------------+----------------------------------------------------------------------+
+| Programm           | Beschreibung                                                         | 
++====================+======================================================================+
+| lmn7.xoa           | web-basierte VM zur Verwaltung von XCP-ng angepasst an die lmn v7    |
++--------------------+----------------------------------------------------------------------+ 
+| lmn7.opnsense      | OPNSense Firewall VM  der linuxmuster.net v7                         |                  
++--------------------+----------------------------------------------------------------------+
+| lmn7.server        | Server der linuxmuster.net v7                                        | 
++--------------------+----------------------------------------------------------------------+
 
-- XCP-ng: `XCP-ng <https://xcp-ng.org/#easy-to-install>`_
-- XCP-ng Center `XCP-ng Center <https://github.com/xcp-ng/xenadmin/releases>`_ 
-- lmn7.XOA - `XOA VM <https://download.linuxmuster.net/xcp-ng/v7/lmn7.xoa.xva.zip>`_  
-- lmn7.opnsense - `lmn7 OPNSense <https://download.linuxmuster.net/xcp-ng/v7/lmn7.opnsense.xva.zip>`_  
-- lmn7.server  `lmn7 Server <https://download.linuxmuster.net/xcp-ng/v7/lmn7.server.xva.zip>`_  
-- lmn7.opsi  `OPSI lmn7 <https://download.linuxmuster.net/xcp-ng/v7/lmn7.opsi.xva.zip>`_  
-- lmn7.docker `Download VM v7 Docker Host <https://download.linuxmuster.net/xcp-ng/v7/lmn7.docker.xva.zip>`_  
+Nachstehende VMs sind optional, sofern eine paketorientierte Softwareverteilung für 
+Windows-Clients (OPSi), eigene Web-Services mithilfe eines sog. Docker-Hosts betrieben
+und/oder eine WLAN-Anbindung via Ubiquiti bereitgestellt werden soll.
+
++--------------------+----------------------------------------------------------------------+
+| Programm           | Beschreibung                                                         | 
++====================+======================================================================+
+| lmn7.opsi          | OPSI VM der lmn v62                                                  |
++--------------------+----------------------------------------------------------------------+
+| lmn7.docker        | Bereitstellung eigener Web-Dienste mithilfe eines Docker-Hosts       |
++--------------------+----------------------------------------------------------------------+
+| lmn7.unifi         | Controller der Ubiquiti WLAN - Lösung                                |
++--------------------+----------------------------------------------------------------------+
+
+Die VMs sind bereits alle auf die Standard-Installation für linuxmuster.net v7 vorbereitet und 
+die sog. XCP-ng Tools sind bereits installiert.
+
+Download der XVAs unter: `Download XVAs VM v7 <https://download.linuxmuster.net/xcp-ng/v7/latest/>`_
+
+
+Virtualisierungssoftware XCP-ng
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Die Download-Links zur Installation der XCP-ng Virtualisierungssoftware finden Sie nachstehend:
+
++--------------------+----------------------------------------------------------------------+
+| Programm           | Beschreibung                                                         | 
++====================+======================================================================+
+| XCP-ng             | `Installationsdatenträger <https://xcp-ng.org/#easy-to-install>`_    | 
++--------------------+----------------------------------------------------------------------+
+| XCP-ng Center      | Windows - Programm zur Verwaltung von der Virtualisierungsumgebung   |                             
++--------------------+----------------------------------------------------------------------+
+| Download-Link:                                                                            |
+| `XCP-ng Center <https://github.com/xcp-ng/xenadmin/releases>`_                            |
++--------------------+----------------------------------------------------------------------+
+
+Zur Installation mit XCP-ng: :ref:`Installation XCP-ng <install-on-xen-label>`
+
 
 Vorgehen
 ========

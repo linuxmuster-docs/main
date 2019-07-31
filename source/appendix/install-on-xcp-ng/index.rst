@@ -106,71 +106,14 @@ zusätzlichen Anleitungen betrachtet.
 Download-Quellen
 ----------------
 
-Nachstehend findest Du eine Übersicht zu den Download-Quellen für XCP-ng und die VMs der 
-linuxmuster.net v7 im XVA Format zum direkten Import in XCP-ng. Deren Installation wird nachstehend 
-schrittweise beschrieben.
+Die Download-Quellen für XCP-ng und die entsprechenden VMs der 
+linuxmuster.net v7 im XVA Format finden sich unter:
 
-Die VMs wurden mithilfe von ``zip`` nochmals komprimiert. Bitte dekomprimiere nach dem Download die Dateien
-lokal mithilfe von ``unzip``.
+* :ref:`Beschreibung der VMs für v7 <prerequisites-label>`
+* Download der XVAs-v7_
 
-+---------------+---------------------------------------------------------------------------------------+
-| Programm      | Beschreibung                                                                          | 
-+===============+=======================================================================================+
-| XCP-ng        | Installationsdatenträger                                                              | 
-+---------------+---------------------------------------------------------------------------------------+
-| Download-Link:                                                                                        |
-| `XCP-ng <https://xcp-ng.org/#easy-to-install>`_                                                       |
-+---------------+---------------------------------------------------------------------------------------+
-| XCP-ng Center | Windows-Programm zur Verwaltung von XCP-ng                                            |                             
-+---------------+---------------------------------------------------------------------------------------+
-| Download-Link:                                                                                        |
-| `XCP-ng Center <https://github.com/xcp-ng/xenadmin/releases>`_                                        |
-+---------------+---------------------------------------------------------------------------------------+
-| lmn7.XOA     | web-basierte VM zur Verwaltung von XCP-ng angepasst an die lmn v7                      |
-+---------------+---------------------------------------------------------------------------------------+ 
-| Download-Link:                                                                                        |
-| `XOA VM <https://download.linuxmuster.net/xcp-ng/v7/lmn7.xoa.xva.zip>`_                               |
-+---------------+---------------------------------------------------------------------------------------+
-|  SHA1: ``6616e7c92b44c7fc5b79a6c6ad532f8af2bab54b``                                                   |
-+---------------+---------------------------------------------------------------------------------------+ 
-| lmn7.opnsense | OPNsense Firewall VM  der linuxmuster.net v7                                          |                  
-+---------------+---------------------------------------------------------------------------------------+
-| Download-Link:                                                                                        |
-| `lmn7 OPNSense <https://download.linuxmuster.net/xcp-ng/v7/lmn7.opnsense.xva.zip>`_                   |
-+---------------+---------------------------------------------------------------------------------------+
-|  SHA1: ``d8855c5cd05238fa42ae722855788f23068b5ef4``                                                   |
-+---------------+---------------------------------------------------------------------------------------+
-| lmn7.server  | Server der linuxmuster.net v7                                                          | 
-+---------------+---------------------------------------------------------------------------------------+
-| Download-Link:                                                                                        |
-| `lmn7 Server <https://download.linuxmuster.net/xcp-ng/v7/lmn7.server.xva.zip>`_                       |             
-+---------------+---------------------------------------------------------------------------------------+
-|  SHA1: ``b461db7da6af45142abb36a6ad8ad03cb85b98d5``                                                   | 
-+---------------+---------------------------------------------------------------------------------------+
+.. _XVAs-v7: https://download.linuxmuster.net/xcp-ng/v7/latest/
 
-Nachstehende VMs sind optional, sofern eine paketorientierte Softwareverteilung für Windows-Clients (OPSi) 
-und/oder ein interner MailServer als Docker Host und deren Anbindung an die lmn7 erfolgen soll:
-
-+---------------+---------------------------------------------------------------------------------------+
-| Programm      | Beschreibung                                                                          | 
-+===============+=======================================================================================+
-| lmn7.opsi    | OPSI VM der lmn v7                                                                     |
-+---------------+---------------------------------------------------------------------------------------+
-| Download-Link:                                                                                        |
-| `OPSI lmn7 <https://download.linuxmuster.net/xcp-ng/v7/lmn7.opsi.xva.zip>`_                           | 
-+---------------+---------------------------------------------------------------------------------------+
-|  SHA1: ``a5738444a5d58a47f13b3c71aee9a0e32e2766ed``                                                   |
-+---------------+---------------------------------------------------------------------------------------+
-| lmn7.docker  | Interner Docker Host der lmn v7                                                        |
-+---------------+---------------------------------------------------------------------------------------+
-| Download-Link:                                                                                        |
-| `Download VM v7 Docker Host <https://download.linuxmuster.net/xcp-ng/v7/lmn7.docker.xva.zip>`_        | 
-+---------------+---------------------------------------------------------------------------------------+
-|  SHA1: ``c9ef7cda3bf38d7807de53bf853b107795cfa272``                                                   |
-+---------------+---------------------------------------------------------------------------------------+
-
-Die VMs sind bereits alle auf die Standard-INstallation für linuxmuster.net v7 vorbereitet und die sog.
-XCP-ng Tools sind bereits installiert.
 
 Erstellen eines USB-Sticks zur Installation des XCP-ng-Host
 -----------------------------------------------------------

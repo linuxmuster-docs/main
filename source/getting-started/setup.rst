@@ -136,7 +136,7 @@ Alternativ kann die Erstkonfiguration direkt am Server über die
 Konsole ausgeführt werden.
 	     
 Melde dich als `root` mit Passwort `Muster!` auf dem Server an. Das
-Setup wird über den Befehl ``linuxmuster-setup -h`` gestartet. Es
+Setup wird über den Befehl ``linuxmuster-setup --schoolname=Beispielschule --location=Musterstadt --state=Mecklenburg-Vorpommern --country=de`` gestartet. Es
 können sämtliche Setup-Werte als Kommandozeilenparameter übergeben
 werden oder mit dem Parameter ``--config`` wird eine `ini`-Datei mit
 Setupwerten übergeben. Folgendes Beispiel zeigt die wichtigsten
@@ -157,7 +157,7 @@ Einstellungen:
    adminpw = Muster!pw
    schoolname = Beispiel-Gesamtschule
    location = Musterstadt
-   country = DE
+   country = de
    state = Mecklenburg-Vorpommern
    skipfw = False
 
