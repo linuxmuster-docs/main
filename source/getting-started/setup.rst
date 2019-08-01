@@ -17,8 +17,10 @@
 
 .. attention::
 
-   Es ist sinnvoll, zu diesem Zeitpunkt ein Snapshot/Backup der
-   virtuellen Maschinen anzufertigen, so dass bei einem
+   Die Erstkonfiguration kann nicht einfach erneut aufgerufen werden,
+   wenn ein Detail nicht simmt. Es ist daher sinnvoll, zu diesem
+   Zeitpunkt ein Snapshot/Backup von Server, Firewall und bei
+   Benutzung Dockerhost und OPSI-Host anzufertigen, so dass bei einem
    fehlgeschlagenen Setup die Maschinen einfach zurückgesetzt werden
    können.
    
@@ -36,7 +38,7 @@ anderer Netzbereich (z.B. der bisher beliebte Netzbereich
 
 Systeme, die mit Hilfe der Migration auf linuxmuster.net 7.0 migriert
 werden, behalten die bisherige Domäne und den bisherigen
-Netzbereich. Dies kann nur durch einen Neuinstallation geändert
+Netzbereich. Dies kann nur durch eine Neuinstallation geändert
 werden.
 
 Hilfe findet man in der `Entwicklerdokumentation

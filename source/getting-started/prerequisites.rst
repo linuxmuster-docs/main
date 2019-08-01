@@ -153,7 +153,7 @@ Die virtuellen Appliances sind mit diesem Netz voreingestellt.
 Jedoch kann man sowohl die bisher in früheren Versionen von
 linuxmuster.net verwendeten Netze, wie 10.16.0.0/12 oder 10.32.0.0/12,
 usw. weiterverwenden, als auch komplett andere private Adressbereiche
-angeben, sollten es zwingende Gründe geben.
+angeben, sollte es zwingende Gründe geben.
 
 Jede Zeile der folgenden Tabelle stellt eine Möglichkeit dar.
 
@@ -173,8 +173,8 @@ Jede Zeile der folgenden Tabelle stellt eine Möglichkeit dar.
 
 Bei der Neuinstallation entscheidest du dich für einen der Bereiche.
 Bei einer Migration wird empfohlen den früheren Bereich zu behalten,
-alleine schon um eine Umkonfiguration der Netzwerkswitche nicht nötig
-zu machen.
+alleine schon um eine Umkonfiguration der Netzwerkswitche zu
+vermeiden.
 
 Standard IP-Adressen
 --------------------
@@ -228,7 +228,7 @@ durch die Firewall-Lösung "IPFire" geprägt wurde:
 * Optional kann eine sog. demilitarisierte Zone (DMZ) als zusätzliches Netzwerk (ORANGE) aufgebaut werden.
 * Optional kann z.B. für WLAN-Accesspoints ein weiteres Netzwerk
   aufgebaut werden (BLAU/LILA), für welches andere
-  Zugangsberechtigungen als denen im grünen Netzwerk gelten.
+  Zugangsberechtigungen als im grünen Netzwerk gelten.
 
 Das obige Prinzip ist bereits ein Beispiel für Netzwerksegmentierung,
 das im nächsten Abschnitt näher erläutert wird.
@@ -265,8 +265,8 @@ Voraussetzungen noch folgende Hinweise:
 
 - Der Speicherplatz wird virtualisiert. Darauf muss man bei der
   Verwendung externer (iSCSI) wie interner Speichersysteme (LVM)
-  achten. Dies kann auch zur Vereinfachung eines Backupverfahren
-  beitragen
+  achten. Dies kann auch zur Vereinfachung eines Backupverfahrens
+  beitragen.
 
 - Da der VM-Host die einzelnen VMs zunächst kapselt, ist es aus
   Sicherheitsgründen empfehlenswert, den VM-Host nicht ins selbe Netz
@@ -305,16 +305,15 @@ VirtualBox als Hypervisor:
 Download
 ========
 
-Für eine Installation direkt auf der Hardware oder einer Installation
-von Grund auf innerhalb Virtualisierungen, die keinen OVA-Import
-ermöglichen, benötigt man
+Für eine Installation direkt auf der Hardware oder einer anderweitigen
+Installation von Grund auf benötigt man
 	
 - `Ubuntu 18.04 LTS 64-bit PC (AMD64) server install image
   <http://releases.ubuntu.com/bionic/ubuntu-18.04-live-server-amd64.iso>`_
 
 - `OpnSense <https://opnsense.org/download>`_
 
-Für die Virtualisierung benötigt man neben der
+Für die eine virtualisierte Installation benötigt man neben der
 Virtualisierungssoftware noch die bereitgestellten VM-Appliances
 (Abbilder).
 
@@ -324,14 +323,19 @@ VMs - Hinweise
 linuxmuster.net bietet vorgefertigte virtuelle Machinen zum direkten Import für die jeweilige 
 Virtualisierungsumgebung an, um die Ínstallations- und Konfigurationszeiten stark zu verringern.
 
-Für XCP-ng als OpenSource Virtualisierungsumgebung werden die VMs im XVA - Format zum direkten 
-Import angeboten.
+- Für XCP-ng als Opensource-Virtualisierungsumgebung werden die VMs im
+  XVA-Format zum direkten Import angeboten. Die XVA-Dateien sind
+  zusätzlich mit ZIP komprimiert worden.
+- Für andere Virtualisierer (Open Source: KVM, Proxmox, VirtualBox)
+  werden die VMs im OVA-Format bereitgestellt. Dieses kann i.d.R. von
+  der Mehrzahl der Virtualisierer erfolgreich importiert werden.
+- Für alle Virtualisierer, für die kein Import möglich ist, bietet es
+  sich entweder an, die OVA-Dateien händisch zu entpacken und die
+  Einstellungen händisch einzurichten, oder eine Installation von
+  Grund auf zu starten.
 
-Für alle anderen Virtualisierer werden die VMS im OVA - Fomat bereitgestellt. Dieses kann i.d.R. 
-von der Mehrzahl der Virtualisierer erfolgreich importiert werden.
-
-Die VMs werden in komprimierter Form angeboten. Zu den jeweiligen Download-Dateien der VMs
-werden ebenfalls die SHA1 - Werte zur Überprüfung der Datenintegrität bereitgestellt.
+Zu den jeweiligen Download-Dateien der VMs werden ebenfalls die
+SHA1-Werte zur Überprüfung der Datenintegrität bereitgestellt.
 
 Nachstehende Übersicht gibt eine Kurzübersicht zu den angebotenen VMs mit anschließendem 
 Link zur Download-Übersicht.
@@ -426,9 +430,9 @@ einsetzt, beginnst du mit Installation der Virtualisierung nach einer
 der oben beschriebenen Anleitungen zu Hypervisoren im Anhang dieser
 Dokumentation.
 
-Alternativ installierst du von Grund die Serverbetriebssysteme *Ubuntu
-Server* und *OPNSense* direkt auf der Hardware oder innerhalb einer
-nicht beschriebenen Virtualisierungslösung.
+Alternativ installierst du von Grund auf die Serverbetriebssysteme
+*Ubuntu Server* und *OPNSense* direkt auf der Hardware oder innerhalb
+einer deiner Virtualisierungslösung.
 
 Jetzt kann die eigentliche Installation mit der eventuellen Anpassung
 des Netzbereiches und der Erstkonfiguration beginnen, wie sie im
