@@ -1,6 +1,6 @@
-=======================================
- Unifi-WLAN-Lösung für linuxmuster.net
-=======================================
+============================
+ Eine WLAN-Lösung mit Unifi
+============================
 
 Eine WLAN-Lösung für Schulen sollte mindestens zwei WLAN-Netze aufspannen. 
 

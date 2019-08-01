@@ -1,8 +1,8 @@
 .. _linuxmuster-freeradius-label:
 
-==============================
- Authentifizierung mit RADIUS
-==============================
+=============================
+ Netzwerkzugriff über Radius
+=============================
 
 Viele Geräte und Anwendungen, wie z.B. Access Points, Captive Portals
 oder Wireless Controller, bieten neben einer einfachen

@@ -32,7 +32,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   systemadministration/maintenance/keep-lmn-uptodate
   systemadministration/network/default-access-rules
   systemadministration/network/radius
-  systemadministration/network/subnetting-basics
+  systemadministration/network/subnetting
   systemadministration/network/unifi
   systemadministration/printer/index
 

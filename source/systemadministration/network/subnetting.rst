@@ -1,8 +1,8 @@
 .. _subnetting-basics-label:
 
-==================================================
- linuxmuster.net Netzsegmentierung Basisanleitung
-==================================================
+=======================
+ Netzwerksegmentierung
+=======================
 
 Im `aktuellen Netzbrief
 <http://www.it.kultus-bw.de/,Lde/Startseite/IT-Sicherheit/Netztechnik+_+Netzbrief>`_
@@ -17,7 +17,7 @@ Diese Anleitung soll den einfachsten Spezialfall dokumentieren,
 das Netz in drei Segmente aufzuteilen, so dass die 
 Vorgaben des Netzbriefs erfüllt sind.
 
-Eine Erweiterug um weitere Subnetzbereiche, beispielsweise Klassenraumweise, 
+Eine Erweiterung um weitere Subnetzbereiche, beispielsweise klassenraumweise, 
 ist später ohne Schwierigkeiten möglich. 
 
 Vorbemerkungen
