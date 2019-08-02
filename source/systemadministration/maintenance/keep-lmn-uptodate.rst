@@ -6,65 +6,63 @@ Linuxmuster.net aktuell halten
 Update des Ubuntu Servers von linuxmuster.net 
 ---------------------------------------------
 
-Um die linuxmuster.net 7.x zugrunde liegende Ubuntu Version (Ubuntu Server 18.04.x LTS 64bit) zu aktualisieren, beachten Sie 
-bitte nachstehendes Vorgehen bzw. Hinweise.
+Um die linuxmuster.net 7.x zugrunde liegende Ubuntu Version (Ubuntu Server 18.04.x LTS 64bit) zu aktualisieren, beachte 
+bitte nachstehende Hinweise.
 
 .. attention::
 
-   Führen Sie Updates bitte regelmäßig manuell durch.
+   Für ein sicheres System muss regelmäßig ein Update durchgeführt werden!
 
 Keine automatischen Updates
 ---------------------------
 
-Es wird ausdrücklich davon abgeraten in Ubuntu die Option
+Es wird ausdrücklich davon abgeraten den Linuxmuster.net-Server die Option
 ``Automatische Updates`` zu aktivieren, so dass
-Paketaktualisierungen automatisch von dem Ubuntu-Server
+Paketaktualisierungen automatisch von den Ubuntu-Update-Servern
 heruntergeladen und installiert werden.
 
-Ob Sie automatische Updates aktiviert haben, überprüfen Sie, in dem
-Sie auf dem Server in der Datei ``/etc/apt/apt.conf.d/20auto-upgrades``
-überprüfen, ob die Option ``APT::Periodic::Unattended-Upgrade "1";``
-existiert. In diesem Fall, ändern Sie die ``"1"`` in eine ``"0"``.
+Automatische Updates sind in der Datei ``/etc/apt/apt.conf.d/20auto-upgrades``
+konfiguriert. Sofern darin der Eintrag ``APT::Periodic::Unattended-Upgrade "1";``
+existiert, muss die ``"1"`` in eine ``"0"`` geändert werden.
 
-Melden Sie sich stattdessen besser bei der entsprechenden
-`Mailingliste
+Melde Dich zusätzlich bei der entsprechenden `Mailingliste
 <https://lists.ubuntu.com/mailman/listinfo/ubuntu-security-announce>`_
-an oder abonnieren Sie entsprechenden `RSS-Feed
+an oder abonniere den entsprechenden `RSS-Feed
 <http://www.ubuntu.com/usn/rss.xml>`_. Alle Hinweise zu
-Sicherheitsupdates von Ubuntu erhalten Sie unter http://www.ubuntu.com/usn/
+Sicherheitsupdates von Ubuntu erhält man unter http://www.ubuntu.com/usn/
 
 
 Aktualisierungen einspielen
 ---------------------------
 
-Um die Server-Installation auf den aktuellen Paketstand zu bringen, gehen Sie folgendermaßen vor:
+Um die Server-Installation auf den aktuellen Paketstand zu bringen, gehe folgendermaßen vor:
 
-1. Loggen Sie sich als User root auf einer Serverkonsole ein.
+1. Logge Dich als User root auf einer Serverkonsole ein.
 
-2. Aktualisieren Sie die Paketlisten:
+2. Aktualisiere die Paketlisten:
 
    .. code-block:: console
 
       # apt update
 
-3. Installieren Sie nun Aktualisierungen und weitere Software-Pakete über das Internet:
+3. Installiere nun Aktualisierungen und weitere Software-Pakete über das Internet:
 
    .. code-block:: console
 
       # apt dist-upgrade  
 
 4. Es wird aufgelistet, welche Pakete aktualisiert werden. 
-   Bestätigen Sie die Aktualisierung mit der Eingabe von **Y**
+   Bestätige die Aktualisierung mit der Eingabe von **Y**
 
 5. Während des Aktualisierungsverlaufs fragen manchmal Pakete nach, ob eine neue Konfigurationsdatei 
-   installiert werden soll. Geben Sie ``N`` oder ENTER für "Beibehalten" an.
+   installiert werden soll. Gebe hier **N** oder **ENTER** für "Beibehalten" an.
    
    .. image:: media/1-dist-upgrade.png
         :alt: Keep Config
         :align: center
 
 6. Zudem kann die Frage auftauchen, ob bei Bedarf Dienste neu gestartet werden dürfen. Sofern das Update
-   eher zu Zeiten geringer Last ausgeführt werden sollten, kann diese Frage mit ``y`` beantwortet werden:
+   eher zu Zeiten geringer Last ausgeführt werden sollten, kann diese Frage mit **y** beantwortet werden:
 
    .. image:: media/2-dist-upgrade.png
         :alt: Restart Services
@@ -74,24 +72,36 @@ Um die Server-Installation auf den aktuellen Paketstand zu bringen, gehen Sie fo
 Aktualisierung der Firewall OPNsense
 ------------------------------------
 
-Um die Firewall OPNsense zu aktualisieren, beachten Sie bitte nachstehendes Vorgehen bzw. Hinweise.
+Um die Firewall OPNsense zu aktualisieren, beachte bitte Hinweise.
 
 .. attention::
 
-   Führen Sie Updates bitte regelmäßig manuell durch.
+   Führe Updates bitte regelmäßig manuell durch.
 
-Im Gegensatz zur bisherigen Firewall-Implementierung unter Linuxmuster 6.2 ist in der neuen Linuxmuster 7.x die Firewall relativ
+Im Gegensatz zur bisherigen Firewall-Implementierung unter Linuxmuster 6.2, ist in der neuen Linuxmuster 7.x die Firewall relativ
 unabhängig vom eigentlichen Server zu warten. Dementsprechend werden die Updates über die Weboberfläche der Firewall eingespielt.
 
-Verbinden Sie sich hierzu mit der Firewall über Ihren Browser. Nach der Anmeldung landen Sie auf dem Dashboard (unter Lobby). Sie 
-finden dort einen Link um direkt Updates einzuspielen.
+Verbinde Dich hierzu mit der Firewall über einen Browser. Nach der Anmeldung erscheint das Dashboard (unter Lobby). Darin befindet sich ein Link 
+um direkt Updates einzuspielen.
     
     .. image:: media/3-opnsense-update.png
-        :alt: OPNsense aktulaisieren
+        :alt: OPNsense aktualisieren
         :align: center
 
-Eine etwas ausführlichere Übersicht finden Sie unter ``System -> Firmware -> Aktualisierungen``. 
+Eine etwas ausführlichere Übersicht ist unter ``System -> Firmware -> Aktualisierungen`` zu finden. 
 
     .. image:: media/4-opnsense-update.png
         :alt: OPNsense aktualisieren
         :align: center
+
+Normale Minor-Releases können so direkt eingespielt werden. Sobald allerdings das Patch-Level erhöht wird, muss hier zuerst 
+das `Upgrade` entsperrt werden.
+
+    .. image:: media/5-opnsense-update.png
+        :alt: OPNsense aktualisieren
+        :align: center
+
+Es ist zu empfehlen solche Upgrades außerhalb der regulären Einsatzzeiten der Schule zu betreiben. Bei einem Upgrade startet 
+die Firewall mehrfach neu und unterbricht damit alle Verbindungen nach außen. Zudem kann es zu Problemen mit einzelnen Modulen kommen. 
+Vor dem Update sollte also im Hypervisor (Proxmox, XenServer, ...) unbedingt ein Snapshot erstellt werden, so dass die Maschine im Fehlerfall wieder in den Ausgangszustand
+zurückgesetzt werden kann.
