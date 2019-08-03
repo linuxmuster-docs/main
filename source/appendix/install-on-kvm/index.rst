@@ -442,11 +442,11 @@ herunter und benenne sie um
 
    # virt-convert lmn7-opnsense-*.ova
    ...
-   Running /usr/bin/qemu-img convert -O raw lmn7-opnsense-20190319-disk001.vmdk /var/lib/libvirt/images/lmn7-opnsense-20190319-disk001.raw
-   Creating guest 'lmn7-opnsense-20190319.ovf'.
-   # virsh shutdown lmn7-opnsense-20190319.ovf
+   Running /usr/bin/qemu-img convert -O raw lmn7-opnsense-20190724-disk001.vmdk /var/lib/libvirt/images/lmn7-opnsense-20190724-disk001.raw
+   Creating guest 'lmn7-opnsense-20190724.ovf'.
+   # virsh shutdown lmn7-opnsense-20190724.ovf
    Domain ... is being shutdwon
-   # virsh domrename lmn7-opnsense-20190319.ovf lmn7-opnsense
+   # virsh domrename lmn7-opnsense-20190724.ovf lmn7-opnsense
 
 Festplatten in das Host-LVM importieren
 ---------------------------------------
@@ -685,9 +685,9 @@ Importiere die Server-Appliance `lmn7-server`.
    ...
    Running /usr/bin/qemu-img convert -O raw lmn7-server-xxxxxxxx-disk001.vmdk /var/lib/libvirt/images/lmn7-server-xxxxxxxx-disk001.raw
    Running /usr/bin/qemu-img convert -O raw lmn7-server-xxxxxxxx-disk002.vmdk /var/lib/libvirt/images/lmn7-server-xxxxxxxx-disk002.raw   
-   Creating guest 'lmn7-server-20190320.ovf'.
-   # virsh shutdown lmn7-server-20190320.ovf
-   # virsh domrename lmn7-server-20190320.ovf lmn7-server
+   Creating guest 'lmn7-server-20190724.ovf'.
+   # virsh shutdown lmn7-server-20190724.ovf
+   # virsh domrename lmn7-server-20190724.ovf lmn7-server
    
 Festplattengrößen für den Server anpassen
 -----------------------------------------
