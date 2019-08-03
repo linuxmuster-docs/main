@@ -478,7 +478,6 @@ Jetzt kann das Abbild in ``/var/lib/libvirt/images`` gelöscht werden.
 
    # rm /var/lib/libvirt/images/lmn7-opnsense-*disk001.raw
 
-
 Netzwerkanpassung der Firewall
 ------------------------------
    
@@ -519,8 +518,7 @@ werden, allerdings an die Brücke ``br-red`` angeschlossen werden.
       <source bridge='br-red'/>
    ...
 
-Test der Verbindung zur Firewall
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Die dritte Schnittstelle kann zunächst gelöscht werden.
 
 Starte die Firewall. 
 
@@ -529,12 +527,102 @@ Starte die Firewall.
    # virsh start lmn7-opnsense
    Domain lmn7-opnsense started
 
+Auf Konsolenebene kannst du dich per ssh (siehe oben) oder über die
+serielle Konsole einwählen. Ein zusätzliches `Enter` hilft, um das
+``login:`` zu sehen.
+
+.. code-block:: console
+
+   $ sudo virsh console lmn7-opnsense
+   Connected to domain lmn7-opnsense
+   Escape character is ^]
+   
+   login: root
+   Password:
+   Last login: Sun Mar 17 17:12:21 on ttyv0
+   ...
+   LAN (em0)       -> v4: 10.0.0.254/16
+   WAN (em1)       -> v4: 141.1.2.4/29
+   ...
+   0) Logout                              7) Ping host
+   1) Assign interfaces                   8) Shell
+   2) Set interface IP address            9) pfTop
+   ...
+
+Mit der Tastenkombination ``STRG-5`` verlässt man die serielle Konsole.
+
+
+Optional: Externe Netzwerkanbindung der Firewall einrichten
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Wer eine statische IP-Adresse in der Firewall braucht, der muss diese
+konfigurieren. Konfiguriere die WAN-Schnittstelle über ``2)`` im
+Hauptmenü der OPNsense und folge den Anweisungen dort, eine feste
+IP-Adresse einzugeben. Die relevanten Zeilen sind beispielhaft:
+
+.. code-block:: console
+
+   Configure IPv4 address WAN interface via DHCP? [Y/n] n
+   Enter the new WAN IPv4 address. Press <ENTER> for none:
+   > 141.1.2.4
+   Enter the new WAN IPv4 subnet bit count (1 to 32):
+   > 29
+   For a WAN, enter the new WAN IPv4 upstream gateway address.
+   > 141.1.2.3
+   Do you want to use the gateway as the IPv4 name server, too? [Y/n] n
+   Enter the IPv4 name server or press <ENTER> for none:
+   > 129.143.2.4
+   Configure IPv6 address WAN interface via DHCP6? [Y/n] n
+   Enter the new WAN IPv6 address. Press <ENTER> for none:
+   > 
+   Do you want to revert to HTTP as the web GUI protocol? [y/N] 
+
+optional: Umstellung des Netzbereichs
+-------------------------------------
+
+Wer einen anderen Netzbereich als ``10.0.0.0/16`` im internen Netzwerk
+haben möchte, muss auch hier die IP-Adresse der Firewall
+ändern. Beispielhaft wird die Änderung in den beliebten bisherigen
+Netzbereich ``10.16.1.0/12`` vollzogen.
+
+Die relevanten Zeilen sind:
+
+.. code-block:: console
+
+   Available interfaces:
+   1 - LAN (em0 - static)
+   2 - WAN (em1 - dhcp, dhcp6)
+   Enter the number of the interface to configure: 1
+
+   Configure IPv4 address LAN interface via DHCP? [y/N] n
+   Enter the new LAN IPv4 address. Press <ENTER> for none:
+   > 10.16.1.254
+   ...
+   Enter the new LAN IPv4 subnet bit count (1 to 32):
+   > 12
+   For a WAN, enter the new LAN IPv4 upstream gateway address.
+   For a LAN, press <ENTER> for none:
+   >
+   Configure IPv6 address LAN interface via WAN tracking? [Y/n] n
+   Configure IPv6 address LAN interface via DHCP6? [y/N] n
+   Enter the new LAN IPv6 address. Press <ENTER> for none:
+   >
+   Do you want to enable the DHCP server on LAN? [y/N] n
+   Do you want to revert to HTTP as the web GUI protocol? [y/N] n
+   Writing configuration...done.
+   ...
+
+Test der Verbindung zur Firewall
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Um die Verbindung zur Firewall im Netzwerk ``br-server`` zu testen,
 muss ein zweiter Rechner in diesem Netzwerk konfiguriert werden. Du
 kannst wie unten beschrieben den optionalen Admin-PC anschließen und
-mit der IP ``10.0.0.10`` konfigurieren, oder zeitweilig wird der
-KVM-Host selbst als Admin-PC konfiguriert. Für letzteres wird wieder
-die netplan-Datei editiert
+mit der IP ``10.0.0.10``, Netzmaske ``16`` bzw. ``255.255.0.0`` und
+Gateway ``10.0.0.254`` konfigurieren.
+
+Alternativ kann zeitweilig der KVM-Host selbst als Admin-PC
+konfiguriert. Dafür wird wieder die netplan-Datei editiert
 
 .. code-block:: console
 
@@ -555,8 +643,10 @@ Der entsprechende Block lautet dann:
 	 nameservers:
            addresses: [10.0.0.254]
 
-Nach der Anwendung durch ``netplan apply`` solltest du die Firewall
-vom KVM-Host (oder vom Admin-PC aus) anpingen können.
+``netplan try`` und ein Enter schließt die Änderung ab.
+
+Jetzt solltest du die Firewall vom Admin-PC (oder vom KVM-Host) aus
+anpingen können.
 	   
 .. code-block:: console
 
@@ -580,58 +670,9 @@ Ebenso ist dann ein Einloggen mit dem voreingestellten Passwort
    ...
 
 Man erkennt, dass die Firewall die Netzwerkkarten für innen (LAN) und
-außen (WAN) richtig zugeordnet hat. Falls beides fehlschlägt, hast du
-im letzten Abschnitt die falsche Netzwerkkarte mit ``br-server``
-verbunden.
-
-Optional: Externe Netzwerkanbindung der Firewall einrichten
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Wer eine statische IP-Adresse in der Firewall braucht, der muss diese
-konfigurieren. Auf Konsolenebene kannst du dich per ssh (siehe oben)
-oder über die serielle Konsole einwählen. Ein zusätzliches `Enter`
-hilft, um das ``login:`` zu sehen.
-
-.. code-block:: console
-
-   $ sudo virsh console lmn7-opnsense
-   Connected to domain lmn7-opnsense
-   Escape character is ^]
-   
-   login: root
-   Password:
-   Last login: Sun Mar 17 17:12:21 on ttyv0
-   ...
-   LAN (em0)       -> v4: 10.0.0.254/16
-   WAN (em1)       -> v4: 141.1.2.4/29
-   ...
-   0) Logout                              7) Ping host
-   1) Assign interfaces                   8) Shell
-   2) Set interface IP address            9) pfTop
-   ...
-
-Konfiguriere die WAN-Schnittstelle über ``2)`` und folge den
-Anweisungen dort, eine feste IP-Adresse einzugeben.
-Die relevanten Zeilen sind beispielhaft:
-
-.. code-block:: console
-
-   Configure IPv4 address WAN interface via DHCP? [Y/n] n
-   Enter the new WAN IPv4 address. Press <ENTER> for none:
-   > 141.1.2.4
-   Enter the new WAN IPv4 subnet bit count (1 to 32):
-   > 29
-   For a WAN, enter the new WAN IPv4 upstream gateway address.
-   > 141.1.2.3
-   Do you want to use the gateway as the IPv4 name server, too? [Y/n] n
-   Enter the IPv4 name server or press <ENTER> for none:
-   > 129.143.2.1
-   Configure IPv6 address WAN interface via DHCP6? [Y/n] n
-   Enter the new WAN IPv6 address. Press <ENTER> for none:
-   > 
-   Do you want to revert to HTTP as the web GUI protocol? [y/N] 
-
-Mit der Tastenkombination ``STRG-5`` verlässt man die serielle Konsole.
+außen (WAN, hier über DHCP) richtig zugeordnet hat. Falls das
+Einloggen fehlschlägt, hast du im letzten Abschnitt die falsche
+Netzwerkkarte mit ``br-server`` verbunden.
    
 Import des Servers
 ==================
