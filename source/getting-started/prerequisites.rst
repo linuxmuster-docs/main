@@ -340,6 +340,8 @@ SHA1-Werte zur Überprüfung der Datenintegrität bereitgestellt.
 Nachstehende Übersicht gibt eine Kurzübersicht zu den angebotenen VMs mit anschließendem 
 Link zur Download-Übersicht.
 
+.. _getting-started-OVA-label:
+
 Appliances OVA
 --------------
 
@@ -369,6 +371,8 @@ und/oder eine WLAN-Anbindung via Ubiquiti bereitgestellt werden soll.
 Download der OVAs unter: `Download OVAs VM v7 <https://download.linuxmuster.net/ova/v7/latest/>`_   
 
 Zur Installation mit KVM: :ref:`Installation KVM <install-on-kvm-label>`
+
+.. _getting-started-XVA-label:
 
 Appliances XVA
 --------------

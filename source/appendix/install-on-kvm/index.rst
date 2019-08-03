@@ -39,20 +39,14 @@ Voraussetzungen
   sein. Entweder bekommt er von einem Router per DHCP eine externe
   IP-Adresse, Gateway und einen DNS-Server oder man trägt eine
   statische IP, Gateway und einen DNS-Server von Hand ein.
-
 * Sofern ein Admin-PC eingerichtet wird, sollte dieser die Möglichkeit
   haben, sich bei Bedarf in das entsprechende Netzwerk
   einzuklinken. Im Servernetzwerk bekommt der Admin-PC die IP-Adresse
   ``10.0.0.10/16`` mit Gateway und DNS-Server jeweils ``10.0.0.254``.
   Es bietet sich ein Ubuntu-Desktop mit der Software `virt-manager`
   an.
-
-* VMs der linuxmuster.net: :ref:`Beschreibung OVAs <prerequisites-label>`
+* :ref:`Beschreibung und Download-URL der OVAs <getting-started-OVA-label>`
   
-* Download OVAs-v7_
-
-.. _OVAs-v7: https://download.linuxmuster.net/ova/v7/latest/
-
 Vorgehen
 ========
 
@@ -247,7 +241,7 @@ Installiere danach die qemu/KVM-Software durch Bestätigen der Fragen
 
 .. code-block:: console
 
-   $ sudo apt install libvirt-bin qemu-kvm kpartx
+   $ sudo apt install libvirt-bin qemu-kvm kpartx qemu-utils
    $ sudo apt --no-install-recommends install virtinst
 
 Einrichten der Zeitsynchronisation
@@ -283,25 +277,33 @@ Vorbereitungen für den Import der virtuellen Maschinen
 
 Download der virtuellen Maschinen
   Lade auf dem KVM-Host die aktuellen OVA-Abbilder und die entsprechenden 
-  `sha1`-Summen von der Webseite herunter.
+  `sha`-Summen von der `Webseite <https://download.linuxmuster.net/ova/v7/latest/>`_ herunter.
+
+  Beispielhaft für die Version vom 24.7.2019:
 
   .. code-block:: console
      
-     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-opnsense-20190319.ova
-     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-opnsense-20190319.ova.sha1
-     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-server-20190320.ova
-     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-server-20190320.ova.sha1
-     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-opsi-20190320.ova
-     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-opsi-20190320.ova.sha1
-     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-docker-20190320.ova
-     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-docker-20190320.ova.sha1
+     # wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opnsense-20190724.ova
+     # wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opnsense-20190724.ova.sha
+     # wget https://download.linuxmuster.net/ova/v7/latest/lmn7-server-20190724.ova
+     # wget https://download.linuxmuster.net/ova/v7/latest/lmn7-server-20190724.ova.sha
 
-  Überprüfe die `sha1`-Summe mit dem entsprechenden Werkzeug und
-  vergleiche mit der Webseite auf Integrität. In der weiteren
-  Anleitung wird statt der Dateien mit Datumsstempel wie ``20190320``
-  die Datei mit ``*`` verwendet. Solange du nur je ein (das aktuelle)
-  OVA-Abbild vorliegen hast, funktionieren die Befehle auch mit dem
-  ``*``.
+  Überprüfe die `sha`-Summe mit dem entsprechenden Werkzeug und
+  vergleiche mit der Webseite auf Integrität.
+  
+  .. code-block:: console
+     
+     # shasum -c *.sha
+     lmn7-opnsense-20190724.ova: OK
+     lmn7-server-20190724.ova: OK
+
+.. hint:: 
+  
+   In der weiteren
+   Anleitung wird statt der Dateien mit Datumsstempel wie ``20190724``
+   die Datei mit ``*`` verwendet. Solange du nur je ein (das aktuelle)
+   OVA-Abbild vorliegen hast, funktionieren die Befehle auch mit dem
+   ``*``.
 
 .. 
  KVM-Anpassungen
@@ -382,11 +384,11 @@ Anpassen der Netzwerkkonfiguration
            interfaces: [enp0s8]
 	   addresses: [ ]
 
-  Diese Netzwerkkonfiguration muss nun angewandt werden.
+  Diese Netzwerkkonfiguration kann nun ausprobiert und angewandt werden.
 
   .. code-block:: console
 
-     $ sudo netplan apply
+     $ sudo netplan try
 
   .. hint::
 
@@ -440,11 +442,11 @@ herunter und benenne sie um
 
    # virt-convert lmn7-opnsense-*.ova
    ...
-   Running /usr/bin/qemu-img convert -O raw lmn7-opnsense-20190319-disk001.vmdk /var/lib/libvirt/images/lmn7-opnsense-20190319-disk001.raw
-   Creating guest 'lmn7-opnsense-20190319.ovf'.
-   # virsh shutdown lmn7-opnsense-20190319.ovf
+   Running /usr/bin/qemu-img convert -O raw lmn7-opnsense-20190724-disk001.vmdk /var/lib/libvirt/images/lmn7-opnsense-20190724-disk001.raw
+   Creating guest 'lmn7-opnsense-20190724.ovf'.
+   # virsh shutdown lmn7-opnsense-20190724.ovf
    Domain ... is being shutdwon
-   # virsh domrename lmn7-opnsense-20190319.ovf lmn7-opnsense
+   # virsh domrename lmn7-opnsense-20190724.ovf lmn7-opnsense
 
 Festplatten in das Host-LVM importieren
 ---------------------------------------
@@ -475,7 +477,6 @@ Jetzt kann das Abbild in ``/var/lib/libvirt/images`` gelöscht werden.
 .. code-block:: console
 
    # rm /var/lib/libvirt/images/lmn7-opnsense-*disk001.raw
-
 
 Netzwerkanpassung der Firewall
 ------------------------------
@@ -517,8 +518,7 @@ werden, allerdings an die Brücke ``br-red`` angeschlossen werden.
       <source bridge='br-red'/>
    ...
 
-Test der Verbindung zur Firewall
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Die dritte Schnittstelle kann zunächst gelöscht werden.
 
 Starte die Firewall. 
 
@@ -527,12 +527,102 @@ Starte die Firewall.
    # virsh start lmn7-opnsense
    Domain lmn7-opnsense started
 
+Auf Konsolenebene kannst du dich per ssh (siehe oben) oder über die
+serielle Konsole einwählen. Ein zusätzliches `Enter` hilft, um das
+``login:`` zu sehen.
+
+.. code-block:: console
+
+   $ sudo virsh console lmn7-opnsense
+   Connected to domain lmn7-opnsense
+   Escape character is ^]
+   
+   login: root
+   Password:
+   Last login: Sun Mar 17 17:12:21 on ttyv0
+   ...
+   LAN (em0)       -> v4: 10.0.0.254/16
+   WAN (em1)       -> v4: 141.1.2.4/29
+   ...
+   0) Logout                              7) Ping host
+   1) Assign interfaces                   8) Shell
+   2) Set interface IP address            9) pfTop
+   ...
+
+Mit der Tastenkombination ``STRG-5`` verlässt man die serielle Konsole.
+
+
+Optional: Externe Netzwerkanbindung der Firewall einrichten
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Wer eine statische IP-Adresse in der Firewall braucht, der muss diese
+konfigurieren. Konfiguriere die WAN-Schnittstelle über ``2)`` im
+Hauptmenü der OPNsense und folge den Anweisungen dort, eine feste
+IP-Adresse einzugeben. Die relevanten Zeilen sind beispielhaft:
+
+.. code-block:: console
+
+   Configure IPv4 address WAN interface via DHCP? [Y/n] n
+   Enter the new WAN IPv4 address. Press <ENTER> for none:
+   > 141.1.2.4
+   Enter the new WAN IPv4 subnet bit count (1 to 32):
+   > 29
+   For a WAN, enter the new WAN IPv4 upstream gateway address.
+   > 141.1.2.3
+   Do you want to use the gateway as the IPv4 name server, too? [Y/n] n
+   Enter the IPv4 name server or press <ENTER> for none:
+   > 129.143.2.4
+   Configure IPv6 address WAN interface via DHCP6? [Y/n] n
+   Enter the new WAN IPv6 address. Press <ENTER> for none:
+   > 
+   Do you want to revert to HTTP as the web GUI protocol? [y/N] 
+
+optional: Umstellung des Netzbereichs
+-------------------------------------
+
+Wer einen anderen Netzbereich als ``10.0.0.0/16`` im internen Netzwerk
+haben möchte, muss auch hier die IP-Adresse der Firewall
+ändern. Beispielhaft wird die Änderung in den beliebten bisherigen
+Netzbereich ``10.16.1.0/12`` vollzogen.
+
+Die relevanten Zeilen sind:
+
+.. code-block:: console
+
+   Available interfaces:
+   1 - LAN (em0 - static)
+   2 - WAN (em1 - dhcp, dhcp6)
+   Enter the number of the interface to configure: 1
+
+   Configure IPv4 address LAN interface via DHCP? [y/N] n
+   Enter the new LAN IPv4 address. Press <ENTER> for none:
+   > 10.16.1.254
+   ...
+   Enter the new LAN IPv4 subnet bit count (1 to 32):
+   > 12
+   For a WAN, enter the new LAN IPv4 upstream gateway address.
+   For a LAN, press <ENTER> for none:
+   >
+   Configure IPv6 address LAN interface via WAN tracking? [Y/n] n
+   Configure IPv6 address LAN interface via DHCP6? [y/N] n
+   Enter the new LAN IPv6 address. Press <ENTER> for none:
+   >
+   Do you want to enable the DHCP server on LAN? [y/N] n
+   Do you want to revert to HTTP as the web GUI protocol? [y/N] n
+   Writing configuration...done.
+   ...
+
+Test der Verbindung zur Firewall
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Um die Verbindung zur Firewall im Netzwerk ``br-server`` zu testen,
 muss ein zweiter Rechner in diesem Netzwerk konfiguriert werden. Du
 kannst wie unten beschrieben den optionalen Admin-PC anschließen und
-mit der IP ``10.0.0.10`` konfigurieren, oder zeitweilig wird der
-KVM-Host selbst als Admin-PC konfiguriert. Für letzteres wird wieder
-die netplan-Datei editiert
+mit der IP ``10.0.0.10``, Netzmaske ``16`` bzw. ``255.255.0.0`` und
+Gateway ``10.0.0.254`` konfigurieren.
+
+Alternativ kann zeitweilig der KVM-Host selbst als Admin-PC
+konfiguriert. Dafür wird wieder die netplan-Datei editiert
 
 .. code-block:: console
 
@@ -553,8 +643,10 @@ Der entsprechende Block lautet dann:
 	 nameservers:
            addresses: [10.0.0.254]
 
-Nach der Anwendung durch ``netplan apply`` solltest du die Firewall
-vom KVM-Host (oder vom Admin-PC aus) anpingen können.
+``netplan try`` und ein Enter schließt die Änderung ab.
+
+Jetzt solltest du die Firewall vom Admin-PC (oder vom KVM-Host) aus
+anpingen können.
 	   
 .. code-block:: console
 
@@ -578,58 +670,9 @@ Ebenso ist dann ein Einloggen mit dem voreingestellten Passwort
    ...
 
 Man erkennt, dass die Firewall die Netzwerkkarten für innen (LAN) und
-außen (WAN) richtig zugeordnet hat. Falls beides fehlschlägt, hast du
-im letzten Abschnitt die falsche Netzwerkkarte mit ``br-server``
-verbunden.
-
-Optional: Externe Netzwerkanbindung der Firewall einrichten
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Wer eine statische IP-Adresse in der Firewall braucht, der muss diese
-konfigurieren. Auf Konsolenebene kannst du dich per ssh (siehe oben)
-oder über die serielle Konsole einwählen. Ein zusätzliches `Enter`
-hilft, um das ``login:`` zu sehen.
-
-.. code-block:: console
-
-   $ sudo virsh console lmn7-opnsense
-   Connected to domain lmn7-opnsense
-   Escape character is ^]
-   
-   login: root
-   Password:
-   Last login: Sun Mar 17 17:12:21 on ttyv0
-   ...
-   LAN (em0)       -> v4: 10.0.0.254/16
-   WAN (em1)       -> v4: 141.1.2.4/29
-   ...
-   0) Logout                              7) Ping host
-   1) Assign interfaces                   8) Shell
-   2) Set interface IP address            9) pfTop
-   ...
-
-Konfiguriere die WAN-Schnittstelle über ``2)`` und folge den
-Anweisungen dort, eine feste IP-Adresse einzugeben.
-Die relevanten Zeilen sind beispielhaft:
-
-.. code-block:: console
-
-   Configure IPv4 address WAN interface via DHCP? [Y/n] n
-   Enter the new WAN IPv4 address. Press <ENTER> for none:
-   > 141.1.2.4
-   Enter the new WAN IPv4 subnet bit count (1 to 32):
-   > 29
-   For a WAN, enter the new WAN IPv4 upstream gateway address.
-   > 141.1.2.3
-   Do you want to use the gateway as the IPv4 name server, too? [Y/n] n
-   Enter the IPv4 name server or press <ENTER> for none:
-   > 129.143.2.1
-   Configure IPv6 address WAN interface via DHCP6? [Y/n] n
-   Enter the new WAN IPv6 address. Press <ENTER> for none:
-   > 
-   Do you want to revert to HTTP as the web GUI protocol? [y/N] 
-
-Mit der Tastenkombination ``STRG-5`` verlässt man die serielle Konsole.
+außen (WAN, hier über DHCP) richtig zugeordnet hat. Falls das
+Einloggen fehlschlägt, hast du im letzten Abschnitt die falsche
+Netzwerkkarte mit ``br-server`` verbunden.
    
 Import des Servers
 ==================
@@ -642,9 +685,9 @@ Importiere die Server-Appliance `lmn7-server`.
    ...
    Running /usr/bin/qemu-img convert -O raw lmn7-server-xxxxxxxx-disk001.vmdk /var/lib/libvirt/images/lmn7-server-xxxxxxxx-disk001.raw
    Running /usr/bin/qemu-img convert -O raw lmn7-server-xxxxxxxx-disk002.vmdk /var/lib/libvirt/images/lmn7-server-xxxxxxxx-disk002.raw   
-   Creating guest 'lmn7-server-20190320.ovf'.
-   # virsh shutdown lmn7-server-20190320.ovf
-   # virsh domrename lmn7-server-20190320.ovf lmn7-server
+   Creating guest 'lmn7-server-20190724.ovf'.
+   # virsh shutdown lmn7-server-20190724.ovf
+   # virsh domrename lmn7-server-20190724.ovf lmn7-server
    
 Festplattengrößen für den Server anpassen
 -----------------------------------------
