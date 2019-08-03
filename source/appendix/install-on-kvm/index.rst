@@ -39,20 +39,14 @@ Voraussetzungen
   sein. Entweder bekommt er von einem Router per DHCP eine externe
   IP-Adresse, Gateway und einen DNS-Server oder man trägt eine
   statische IP, Gateway und einen DNS-Server von Hand ein.
-
 * Sofern ein Admin-PC eingerichtet wird, sollte dieser die Möglichkeit
   haben, sich bei Bedarf in das entsprechende Netzwerk
   einzuklinken. Im Servernetzwerk bekommt der Admin-PC die IP-Adresse
   ``10.0.0.10/16`` mit Gateway und DNS-Server jeweils ``10.0.0.254``.
   Es bietet sich ein Ubuntu-Desktop mit der Software `virt-manager`
   an.
-
-* VMs der linuxmuster.net: :ref:`Beschreibung OVAs <prerequisites-label>`
+* :ref:`Beschreibung und Download-URL der OVAs <getting-started-OVA-label>`
   
-* Download OVAs-v7_
-
-.. _OVAs-v7: https://download.linuxmuster.net/ova/v7/latest/
-
 Vorgehen
 ========
 
@@ -247,7 +241,7 @@ Installiere danach die qemu/KVM-Software durch Bestätigen der Fragen
 
 .. code-block:: console
 
-   $ sudo apt install libvirt-bin qemu-kvm kpartx
+   $ sudo apt install libvirt-bin qemu-kvm kpartx qemu-utils
    $ sudo apt --no-install-recommends install virtinst
 
 Einrichten der Zeitsynchronisation
@@ -283,25 +277,33 @@ Vorbereitungen für den Import der virtuellen Maschinen
 
 Download der virtuellen Maschinen
   Lade auf dem KVM-Host die aktuellen OVA-Abbilder und die entsprechenden 
-  `sha1`-Summen von der Webseite herunter.
+  `sha`-Summen von der `Webseite <https://download.linuxmuster.net/ova/v7/latest/>`_ herunter.
+
+  Beispielhaft für die Version vom 24.7.2019:
 
   .. code-block:: console
      
-     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-opnsense-20190319.ova
-     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-opnsense-20190319.ova.sha1
-     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-server-20190320.ova
-     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-server-20190320.ova.sha1
-     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-opsi-20190320.ova
-     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-opsi-20190320.ova.sha1
-     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-docker-20190320.ova
-     # wget https://download.linuxmuster.net/ova/v7/201903/lmn7-docker-20190320.ova.sha1
+     # wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opnsense-20190724.ova
+     # wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opnsense-20190724.ova.sha
+     # wget https://download.linuxmuster.net/ova/v7/latest/lmn7-server-20190724.ova
+     # wget https://download.linuxmuster.net/ova/v7/latest/lmn7-server-20190724.ova.sha
 
-  Überprüfe die `sha1`-Summe mit dem entsprechenden Werkzeug und
-  vergleiche mit der Webseite auf Integrität. In der weiteren
-  Anleitung wird statt der Dateien mit Datumsstempel wie ``20190320``
-  die Datei mit ``*`` verwendet. Solange du nur je ein (das aktuelle)
-  OVA-Abbild vorliegen hast, funktionieren die Befehle auch mit dem
-  ``*``.
+  Überprüfe die `sha`-Summe mit dem entsprechenden Werkzeug und
+  vergleiche mit der Webseite auf Integrität.
+  
+  .. code-block:: console
+     
+     # shasum -c *.sha
+     lmn7-opnsense-20190724.ova: OK
+     lmn7-server-20190724.ova: OK
+
+.. hint:: 
+  
+   In der weiteren
+   Anleitung wird statt der Dateien mit Datumsstempel wie ``20190724``
+   die Datei mit ``*`` verwendet. Solange du nur je ein (das aktuelle)
+   OVA-Abbild vorliegen hast, funktionieren die Befehle auch mit dem
+   ``*``.
 
 .. 
  KVM-Anpassungen
@@ -382,11 +384,11 @@ Anpassen der Netzwerkkonfiguration
            interfaces: [enp0s8]
 	   addresses: [ ]
 
-  Diese Netzwerkkonfiguration muss nun angewandt werden.
+  Diese Netzwerkkonfiguration kann nun ausprobiert und angewandt werden.
 
   .. code-block:: console
 
-     $ sudo netplan apply
+     $ sudo netplan try
 
   .. hint::
 
