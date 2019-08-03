@@ -577,7 +577,7 @@ IP-Adresse einzugeben. Die relevanten Zeilen sind beispielhaft:
    > 
    Do you want to revert to HTTP as the web GUI protocol? [y/N] 
 
-optional: Umstellung des Netzbereichs
+Optional: Umstellung des Netzbereichs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Wer einen anderen Netzbereich als ``10.0.0.0/16`` im internen Netzwerk
