@@ -25,7 +25,7 @@ Nach der Installation gemäß dieser Anleitung erhältst du eine
 einsatzbereite Umgebung bestehend aus
 
 * einem Host (KVM) für alle virtuellen Maschinen, 
-* einer Firewall (OPNSense für linuxmuster.net) und 
+* einer Firewall (OPNsense für linuxmuster.net) und 
 * einem Server (linuxmuster.net)
 
 Ähnliche, nicht dokumentierte, Installationen gelten für einen
@@ -989,6 +989,9 @@ internen LVMs herausfiltern. Das geschieht in der Datei
    global_filter = [ "r|^/dev/host-vg/serverdata.*$|" ]
    ...
 
+Um zu testen, dass der Filter in ``/etc/lvm/lvm.conf`` erfolgreich das
+interne LVM ``vg_srv`` ausblendet, ruft man ``lvs`` auf. In der Liste
+der LV sollte dann kein ``vg_srv`` auftauchen.
 
 Snapshot erstellen
 ~~~~~~~~~~~~~~~~~~
@@ -1000,14 +1003,14 @@ man aber für die Erstellung auch die VM herunterfahren.
 
 Ein Snapshot erstellt ein neues logical volume (LV) zum Zeitpunkt der
 Erstellung. Zunächst ist der Snapshot identisch mit dem laufenden und
-verbraucht keinen Speicherplattz. Sobald am laufenden logical volume
-Änderungen passieren, wird der alte Inhalt im dem Snapshot
-gespeichert. Man muss bei der initialen Erstellung eine Größe für den
-Snapshot wählen.  Natürlich kann die Summe aller geänderten Daten die
-Größe des Snapshots erreichen, dann funktioniert das Prinzip nicht
-mehr. Für die folgenden Zwecke werden etwa 5% des originalen volumes
-als Größe gewählt, da in einem überschaubaren Zeitraum der Snapshot
-wieder entfernt wird.
+verbraucht keinen Speicherplatz. Sobald am laufenden LV Änderungen
+passieren, wird der alte Inhalt im dem Snapshot gespeichert. Man muss
+bei der initialen Erstellung eine Größe für den Snapshot wählen.
+Natürlich kann die Summe aller geänderten Daten die Größe des
+Snapshots erreichen, dann funktioniert das Prinzip nicht mehr. Für die
+folgenden Zwecke werden etwa 5% des originalen volumes als Größe
+gewählt, da in einem überschaubaren Zeitraum der Snapshot wieder
+entfernt wird.
 
 .. code-block:: console
 
@@ -1029,22 +1032,16 @@ wieder entfernt wird.
    serverroot        host-vg owi-aos---   25,00g                                                        
    serverroot-backup host-vg swi-a-s---    5,00g      serverroot 0,00                                   
 
-.. hint::
-
-   Um zu testen, dass der Filter in ``/etc/lvm/lvm.conf`` erfolgreich
-   das interne LVM ``vg_srv`` ausblendet, ruft man ``lvs`` auf. In der
-   Liste der LV sollte dann kein ``vg_srv`` auftauchen.
-
 In der Tabelle sieht man bei den Attributen, welches das Original und
 welches der Snapshot ist (Spalte 1). In Spalte 6 steht, ob ein LV
 geöffnet, d.h. z.B. gemountet ist ("o") oder nicht.
 
-
 Snapshot zurückführen
 ~~~~~~~~~~~~~~~~~~~~~
 
-Der Client muss gestoppt werden, dann kann das Abbild relativ schnell
-auf den Originalzustand zurückgeführt werden.
+Will man das Abbild in den Zustand vor dem Snapshot zurückführen, muss
+man den Client stoppen und dann den Snapshot "mergen". Dies geht
+relativ schnell.
 
 .. code-block:: console
 
@@ -1076,21 +1073,21 @@ werden, sonst kann der Snapshot nicht zusammengeführt werden.
    Merging of volume host-vg/serverdata-backup started.
    host-vg/serverdata: Merged: 100,00%
 
-Snapshot als Basis für ein Backup verwenden
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Snapshot als Basis für ein Datei-Backup verwenden
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Will man den Snapshot für die Erstellung eines dateibasierten Backups
 verwenden, z.B. mit `rsync` oder `rsnapshot`, muss man das logical
 volume (LV) für das Hostsystem aufschließen, die Dateien kopieren und
 wieder zuschließen. Danach kann man den Snapshot entfernen.
 
-Am Beispiel der OpnSense wird auf ein NAS oder ein Verzeichnis
+Am Beispiel der OPNsense wird auf ein NAS oder ein Verzeichnis
 gesynced, deren Zielverzeichnis zuvor existieren müssen.
 
 .. code-block:: console
 
    # kpartx -av /dev/host-vg/opnsense-backup
-   # mount /dev/mapper/opnsense-backup1 /mnt
+   # mount /dev/mapper/host--vg-opnsense--backup1 /mnt
    # rsync -aP /mnt/ user@NAS:/targetdir-opnsense/
    oder
    # rsync -aP /mnt/ /srv/backup/opnsense/
@@ -1099,13 +1096,36 @@ gesynced, deren Zielverzeichnis zuvor existieren müssen.
    # kpartx -dv /dev/host-vg/opnsense-backup
    # lvremove /dev/host-vg/opnsense-backup
 
-:fixme: Beispiel für lmn7-server
+Die Root-Platte der Server-VM kann wie im Fall der OPNsense entpackt
+und kopiert werden, wobei nur die zweite Partition die Daten enthält,
+die erste ist eine BIOS-Partition.
+
+.. code-block:: console
+		
+   # kpartx -av /dev/host-vg/serverroot-backup 
+   add map host--vg-serverroot--backup1 (253:10): 0 2048 linear 253:5 2048
+   add map host--vg-serverroot--backup2 (253:12): 0 52422656 linear 253:5 4096
+   # mount /dev/mapper/host--vg-serverroot--backup2 /mnt
+   ... --- backup der Root-Partition
+   # umount /mnt
+   # kpartx -dv /dev/host-vg/serverroot-backup
+   del devmap : host--vg-serverroot--backup2
+   del devmap : host--vg-serverroot--backup1
+   # lvremove -y /dev/host-vg/serverroot-backup
+
+Die Daten-Platte der Server-VM ist ungleich komplexer, weil ein
+weiteres LVM in der Platte ``/dev/host-vg/serverdata`` steckt, das
+freigelegt werden muss. Dafür nimmt man entweder den oben
+eingerichteten Filter heraus und LVM findet automatisch die genestete
+VG ``vg_srv`` oder man entscheidet sich für ein komplettes Backup des
+Abbildes.
+
 
 Backup kompletter Abbilder
 --------------------------
 
 Komplette Kopien für ein Backup der Festplattenabbilder kann man mit
-`qemu-img` vornehmen. Am Beispiel der OpnSense, wird zuerst die VM
+`qemu-img` vornehmen. Am Beispiel der OPNsense, wird zuerst die VM
 heruntergefahren, das Abbild (in ein komprimiertes Abbild in ein
 Backup-Verzeichnis) kopiert und dann wieder hochgefahren.
 
@@ -1134,7 +1154,7 @@ werden. Andererseits möchte man so ein vollständiges Backup der VM
 besser in einem heruntergefahrenen Zustand machen. Um die Downtime zu
 minimieren, kann man ein Snapshot erstellen, die VM wieder hochfahren,
 die Snapshot-LVs mit `qemu-img` konvertieren und dann die Snapshots
-wieder löschen, beispielhaft an der OpnSense:
+wieder löschen, beispielhaft an der OPNsense:
 
 .. code-block:: console
 
@@ -1162,7 +1182,7 @@ Zustand des KVM-Hosts vor der Wiederherstellung ist, muss man
   Backup zurückspielen
 
 Das reine Zurückspielen des letzten Backups in ein unverändertes
-System geht am Beispiel der OpnSense so:
+System geht am Beispiel der OPNsense so:
 
 .. code-block:: console
 
