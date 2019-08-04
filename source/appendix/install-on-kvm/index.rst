@@ -518,7 +518,14 @@ werden, allerdings an die Brücke ``br-red`` angeschlossen werden.
       <source bridge='br-red'/>
    ...
 
-Die dritte Schnittstelle kann zunächst gelöscht werden.
+Die dritte Schnittstelle kann zunächst gelöscht werden. Wenn später
+ein weiteres Netzwerk eingerichtet wird, z.B. ``br-dmz`` für eine so
+genannte demilitarisierte Zone, in der sich Webserver
+u.ä. befinden. Kann der Abschnitt wieder hinzugefügt werden und taucht
+in der OPNsense als ``OPT1`` wieder auf.
+
+Start und Konsolenlogin
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Starte die Firewall. 
 
@@ -533,7 +540,7 @@ serielle Konsole einwählen. Ein zusätzliches `Enter` hilft, um das
 
 .. code-block:: console
 
-   $ sudo virsh console lmn7-opnsense
+   # virsh console lmn7-opnsense
    Connected to domain lmn7-opnsense
    Escape character is ^]
    
@@ -542,13 +549,16 @@ serielle Konsole einwählen. Ein zusätzliches `Enter` hilft, um das
    Last login: Sun Mar 17 17:12:21 on ttyv0
    ...
    LAN (em0)       -> v4: 10.0.0.254/16
-   WAN (em1)       -> v4: 141.1.2.4/29
+   WAN (em1)       -> v4/DHCP4: 192.168.1.23/16
    ...
    0) Logout                              7) Ping host
    1) Assign interfaces                   8) Shell
    2) Set interface IP address            9) pfTop
    ...
 
+Man erkennt, dass die Firewall die Netzwerkkarten für innen (LAN) und
+außen (WAN, hier über DHCP) richtig zugeordnet hat.
+   
 Mit der Tastenkombination ``STRG-5`` verlässt man die serielle Konsole.
 
 
@@ -612,8 +622,8 @@ Die relevanten Zeilen sind:
    Writing configuration...done.
    ...
 
-Test der Verbindung zur Firewall
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Test der Netzwerkverbindung zur Firewall
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Um die Verbindung zur Firewall im Netzwerk ``br-server`` zu testen,
 muss ein zweiter Rechner in diesem Netzwerk konfiguriert werden. Du
@@ -626,7 +636,7 @@ konfiguriert. Dafür wird wieder die netplan-Datei editiert
 
 .. code-block:: console
 
-   $ sudo nano /etc/netplan/01-netcfg.yaml
+   # nano /etc/netplan/01-netcfg.yaml
 
 Der entsprechende Block lautet dann:
    
@@ -666,14 +676,11 @@ Ebenso ist dann ein Einloggen mit dem voreingestellten Passwort
    Password for root@OPNsense.localdomain:
    ...
    LAN (em0)       -> v4: 10.0.0.254/16
-   WAN (em1)       -> v4/DHCP4: 192.168.1.23/16
+   WAN (em1)       -> v4: 141.1.2.4/29
    ...
 
-Man erkennt, dass die Firewall die Netzwerkkarten für innen (LAN) und
-außen (WAN, hier über DHCP) richtig zugeordnet hat. Falls das
-Einloggen fehlschlägt, hast du im letzten Abschnitt die falsche
-Netzwerkkarte mit ``br-server`` verbunden.
-   
+Ausloggen mit ``exit`` oder ``STRG-D``.
+		
 Import des Servers
 ==================
 
@@ -821,8 +828,9 @@ Brücke ``br-server`` gestöpselt werden.
       <source bridge='br-server'/>
    ...
 
-Test der Verbindung zum Server
-------------------------------
+
+Start und Konsolenlogin
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Starte den Server.
 
@@ -831,24 +839,8 @@ Starte den Server.
    # virsh start lmn7-server
    Domain lmn7-server started
 
-Teste, ob du von (vom KVM-Host oder Admin-PC) per ssh auf
-den Server mit dem Standardpasswort `Muster!` kommst.
-
-.. code-block:: console
-		
-   # ssh 10.0.0.1 -l root
-   root@10.0.0.1's password: 
-   Welcome to Ubuntu 18.04.1 LTS (GNU/Linux 4.15.0-38-generic x86_64)
-   ...
-
-Teste, ob du vom Server aus zur Firewall kommst:
-
-.. code-block:: console
-
-   server~$ ping 10.0.0.254
-
-Für die Fehlerfindung bei der Netzwerkkonfiguration hilft es sich mit
-dem Server vom KVM-Host über die serielle Schnittstelle zu verbinden.
+In der bereitgestellten lmn7-server-Appliance ist der Server ebenfalls
+vom KVM-Host aus über die serielle Schnittstelle erreichbar.
 
 .. code-block:: console
 		
@@ -863,22 +855,62 @@ dem Server vom KVM-Host über die serielle Schnittstelle zu verbinden.
    Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-46-generic x86_64)
    ...
 
-..
-  Finde den Namen heraus, den die Netzwerkschnittstelle auf deinem System hat
+Optional: Umstellung des Netzbereichs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Wer einen anderen Netzbereich als ``10.0.0.0/16`` im internen Netzwerk
+haben möchte, muss auch hier die IP-Adresse des Servers
+ändern. Beispielhaft wird die Änderung in den beliebten bisherigen
+Netzbereich ``10.16.1.0/12`` vollzogen.
+
+Ersetze die Adresse ``10.0.0.1/16`` in der netplan-Konfiguration durch
+``10.16.1.1/16``, das Gateway und die Nameserver-IP-Adresse durch die
+entsprechende IP-Adresse der Firewall. Starte danach die
+Netzwerkkonfiguration neu.
   
-  .. code-block:: console
-  
-     server~$ ip -br addr list
-     lo               UNKNOWN        127.0.0.1/8 ::1/128 
-     ens3             DOWN
-  
-  Ersetzen den Namen `ens33` in der netplan-Konfiguration durch den
-  richtigen Namen und starte das Netzwerk neu.
-  
-  .. code-block:: console
+.. code-block:: console
   		
-     server~$ sudo nano /etc/netplan/01-netcfg.yaml
-     server~$ sudo netplan apply
+   # nano /etc/netplan/01-netcfg.yaml
+
+Der entsprechende Teilblock sieht dann so aus:
+
+.. code-block:: yaml
+
+   ethernets:
+     eth0:
+       dhcp4: no
+       dhcp6: no
+       addresses: [10.16.1.1/12]
+       gateway4: 10.16.1.254
+       nameservers:
+         addresses: [10.16.1.254]
+
+.. code-block:: console
+  		
+   # netplan try
+
+
+
+Test der Netzwerkverbindung zum Server
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Teste, ob du vom Admin-PC (oder als solcher konfigurierten KVM-Host)
+oder von der Firewall per ssh auf den Server mit dem Standardpasswort
+`Muster!` kommst.
+
+.. code-block:: console
+		
+   # ssh 10.0.0.1 -l root
+   root@10.0.0.1's password: 
+   Welcome to Ubuntu 18.04.1 LTS (GNU/Linux 4.15.0-38-generic x86_64)
+   ...
+
+Teste, ob du vom Server aus zur Firewall kommst:
+
+.. code-block:: console
+
+   server~$ ping 10.0.0.254
+
   
 Abschließende Konfigurationen
 =============================
@@ -895,7 +927,7 @@ Abhängigkeiten sauberer.
    # apt remove virtinst
    # apt autoremove
 
-Wer seinem KVM-Host die IP-Adresse `10.0.0.1` des Admin-PCs gegeben
+Wer seinem KVM-Host die IP-Adresse `10.0.0.10` des Admin-PCs gegeben
 hat, sollte dies rückgängig machen. Der KVM-Host sollte nicht im
 pädagogischen Netzwerk auftauchen.
 
@@ -923,7 +955,6 @@ Ab jetzt ist eine Installation der Musterlösung möglich. Folge der
 jedoch, die Möglichkeiten des Backups und der schnellen
 Wiederherstellung der virtuellen Maschinen, wenn man die Wiederholung
 obiger Konfigurationen bei einem Neuanfang vermeiden will.
-
 
 Snapshot und Backup der KVM-Maschinen
 =====================================
