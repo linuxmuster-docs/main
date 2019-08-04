@@ -1115,10 +1115,17 @@ die erste ist eine BIOS-Partition.
 
 Die Daten-Platte der Server-VM ist ungleich komplexer, weil ein
 weiteres LVM in der Platte ``/dev/host-vg/serverdata`` steckt, das
-freigelegt werden muss. Dafür nimmt man entweder den oben
-eingerichteten Filter heraus und LVM findet automatisch die genestete
-VG ``vg_srv`` oder man entscheidet sich für ein komplettes Backup des
-Abbildes.
+freigelegt werden muss. Dafür nimmt man den oben eingerichteten Filter
+heraus und LVM findet automatisch die genestete VG ``vg_srv``.  Ein
+Snapshot ist nicht möglich, weil die VG keinen freien Speicher für
+einen Snapshot zur Verfügung hat. Es ist also notwendig, die Server-VM
+zu stoppen. Dann aktiviert man die VG und kann dann direkt die LVs
+mounten. Nach dem Backup und umounten, deaktiviert man die VG, kann
+die Server-VM wieder starten und versteckt die VG wieder über die
+Filter.
+
+Alternativ entscheidet man sich für ein deutlich einfacheres
+komplettes Backup der Platten der Server-VM.
 
 
 Backup kompletter Abbilder
