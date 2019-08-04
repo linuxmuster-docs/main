@@ -914,7 +914,17 @@ Teste, ob du vom Server aus zur Firewall kommst:
 
    server~$ ping 10.0.0.254
 
+Docker und OPSI
+===============
 
+Die Installationen der bereitgestellten Docker- und OPSI-Appliances
+funktionieren nach dem gleichen Verfahren wie bei der Server-Appliance
+nur einfacher, da hier nur eine Festplatte (ohne zusätzliches LVM) zu
+importieren ist. Beide gehören mit ihren IP-Adressen in das Netz
+``br-server`` und das darunter liegende Ubuntu lässt sich wie beim
+Server auf den gewünschten Netzbereich einstellen.
+
+   
 Abschließende Konfigurationen
 =============================
 
