@@ -855,6 +855,8 @@ vom KVM-Host aus über die serielle Schnittstelle erreichbar.
    Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-46-generic x86_64)
    ...
 
+Mit der Tastenkombination ``STRG-5`` verlässt man die serielle Konsole.
+
 Optional: Umstellung des Netzbereichs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -889,8 +891,6 @@ Der entsprechende Teilblock sieht dann so aus:
   		
    # netplan try
 
-
-
 Test der Netzwerkverbindung zum Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -905,13 +905,16 @@ oder von der Firewall per ssh auf den Server mit dem Standardpasswort
    Welcome to Ubuntu 18.04.1 LTS (GNU/Linux 4.15.0-38-generic x86_64)
    ...
 
+Eventuell hilft ein Neustart der virtuellen Maschine, wenn man mehrere
+Änderungen an der Netzwerkkonfiguration vorgenommen hat.
+
 Teste, ob du vom Server aus zur Firewall kommst:
 
 .. code-block:: console
 
    server~$ ping 10.0.0.254
 
-  
+
 Abschließende Konfigurationen
 =============================
 
