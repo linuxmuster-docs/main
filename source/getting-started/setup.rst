@@ -15,15 +15,31 @@
    über eine :ref:`migration-label` umgezogen werden, dennoch ist die
    Erstkonfiguration hier eine notwendige Voraussetzung.
 
-.. attention::
+Wichtige Hinweise 
+==================
 
-   Die Erstkonfiguration kann nicht einfach erneut aufgerufen werden,
-   wenn ein Detail nicht simmt. Es ist daher sinnvoll, zu diesem
-   Zeitpunkt ein Snapshot/Backup von Server, Firewall und bei
-   Benutzung Dockerhost und OPSI-Host anzufertigen, so dass bei einem
-   fehlgeschlagenen Setup die Maschinen einfach zurückgesetzt werden
-   können.
-   
+* Nach Abschluss dieses Setups sind die Domäne und andere Details des
+  Netzwerks permanent festgelegt und nur durch Neuinstallation
+  änderbar. Es ist daher sinnvoll, zu diesem Zeitpunkt ein
+  Snapshot/Backup von Server, Firewall und bei Benutzung von
+  Dockerhost und OPSI-Host anzufertigen. Bei einem Fehlschlag müssen
+  alle diese Maschinen zurückgesetzt werden.
+* Beim Domänennamen ist zu beachten, dass der **erste** Teil der
+  Domäne nicht länger als 15 Zeichen haben darf. Der Rechnername ist
+  damit nicht gemeint. Im Beispiel ``server.linuxmuster.lan`` ist
+  ``server`` der Rechner-Kurzname und ``linuxmuster.lan`` die
+  Domäne. Dann darf ``linuxmuster`` nicht länger als 15 Zeichen sein.
+* Will man eine andere (z.B. auch extern auflösbare) Domäne haben,
+  muss man eventuell eine Subdomäne verwenden,
+  bspw. ``linuxmuster.magical-animal-school.edu`` statt
+  ``magical-animal-school.edu``. Der erste Part ``LINUXMUSTER`` wird
+  in diesem Beispiel dann als SAMBA-Domäne verwendet. Der voll Name
+  (FQHN) des Servers ist dann
+  ``server.linuxmuster.magical-animal-school.edu``.
+* Alle Hosts die im Setup konfiguriert werden sollen (docker(mail),
+  OPSI) müssen bereits laufen.
+
+
 Anpassung des Netzbereiches
 ===========================
 
@@ -57,7 +73,7 @@ Netzwerkmaske ``255.255.0.0``, dem Gateway ``10.0.0.254`` und dem DNS
 ``10.0.0.1``.
 
 Öffne auf dem Admin-PC mit einem Webbrowser die URL
-``http://10.0.0.1:8000``. Melde dich hier einmalig mit dem Benutzer
+``http://10.0.0.1``. Melde dich hier einmalig mit dem Benutzer
 `root` und dem Passwort `Muster!` an.
     
 .. figure:: media/root-login.png
@@ -78,11 +94,6 @@ Landeskürzel eingetragen bzw. ausgewählt werden.  Ebenso wird hier der
 Servername und die Domäne für das gesamte Schulnetzwerk
 festgelegt.
     
-.. attention::
-
-   Nach Abschluss des Setups ist die die Domäne des Netzwerks
-   permanent festgelegt und nur durch Neuinstallation änderbar.
-
 .. figure:: media/school-information-domain.png
    :align: center
    :alt: School information dialog
@@ -123,7 +134,7 @@ Zusammenfassung angezeigt.
    Appliances auf den Zustand vor dem Setup zurücksetzen.
 
 Zuletzt weist das Setup darauf hin, dass man sich ab sofort unter der
-URL ``https://server.linuxmuster.lan:8000`` mit dem Benutzer
+URL ``https://server.linuxmuster.lan`` mit dem Benutzer
 ``global-admin`` und dem konfigurierten Passwort anmelden muss.
 Allerdings wird ein selbstsigniertes Zertifikat verwendet, das
 zuerst akzeptiert werden muss.
@@ -136,8 +147,9 @@ Alternativ kann die Erstkonfiguration direkt am Server über die
 Konsole ausgeführt werden.
 	     
 Melde dich als `root` mit Passwort `Muster!` auf dem Server an. Das
-Setup wird über den Befehl ``linuxmuster-setup --schoolname=Beispielschule --location=Musterstadt --state=Mecklenburg-Vorpommern --country=de`` gestartet. Es
-können sämtliche Setup-Werte als Kommandozeilenparameter übergeben
+Setup wird über den Befehl ``linuxmuster-setup`` gestartet. Es können
+sämtliche Setup-Werte als Kommandozeilenparameter
+(z.B. ``--location=Musterstadt --adminpw='Muster!pw'``) übergeben
 werden oder mit dem Parameter ``--config`` wird eine `ini`-Datei mit
 Setupwerten übergeben. Folgendes Beispiel zeigt die wichtigsten
 Einstellungen:
@@ -165,12 +177,19 @@ Ohne Argumente konfiguriert das Skript die entsprechenden Eingaben
 über ein Konsolendialog. Es gelten die gleichen Hinweise und Warnungen
 wie bei der grafischen Installation.
 
+Zum Ende des Setups muss der Webservice neu gestartet werden (oder der
+Server wird rebootet):
+
+.. code-block:: console
+
+   # systemctl restart linuxmuster-webui.service
+
 .. _login-dselma-global-admin:
 
 Login an d'SELMA als global-admin
 =================================
 
-Öffne die URL ``https://server.linuxmuster.lan:8000`` mit dem Admin-PC
+Öffne die URL ``https://server.linuxmuster.lan`` mit dem Admin-PC
 und akzeptiere beim ersten Aufruf die Ausnahme für das
 selbst-signierte Zertifikat.
 
@@ -178,7 +197,7 @@ selbst-signierte Zertifikat.
    :align: center
    :alt: Accept self-signed certificate 
 
-Melde dich mit dem Benutzer ``global-admin`` mit dem konfigurierten Passwort an.
+Melde dich mit dem Benutzer ``global-admin`` und dem konfigurierten Passwort an.
 
 .. figure:: media/login-global-admin.png
    :align: center
