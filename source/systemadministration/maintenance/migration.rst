@@ -471,4 +471,7 @@ die nur unter linuxmuster.net v7 existieren, importiert werden
 - Beschreibungen zu Projekten hinzufügen
 - Die Rolle von Geräten festlegen
 - Quota für die Benutzer (neu) festlegen
-
+- Bei migrierten Subnetzen: Es muss in
+  ``/etc/linuxmuster/subnets.csv`` das Gateway für das Servernetz
+  eingetragen werden, z.B. 10.0.0.253 für einen L3-Switch. Danach muss
+  ``linuxmuster-import-subnets`` ausgeführt werden.
