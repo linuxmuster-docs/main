@@ -309,7 +309,7 @@ Für eine Installation direkt auf der Hardware oder einer anderweitigen
 Installation von Grund auf benötigt man
 	
 - `Ubuntu 18.04 LTS 64-bit PC (AMD64) server install image
-  <http://releases.ubuntu.com/bionic/ubuntu-18.04-live-server-amd64.iso>`_
+  <http://releases.ubuntu.com/bionic/>`_
 
 - `OpnSense <https://opnsense.org/download>`_
 
