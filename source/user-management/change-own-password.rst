@@ -1,0 +1,55 @@
+===============================
+ Ändern des eigenen Passwortes
+===============================
+ 
+Melde dich an d'SELMA an. Gib dafür in einem Browser https://server
+ein und melde dich mit deinem Benutzernamen (bestehend aus
+Kleinbuchstaben und event. Zahlen) und dem aktuellen Passwort an
+d'SELMA an.
+
+.. figure:: media/selma-login.png
+
+Klicke auf der Hauptseite auf "Passwort ändern"
+
+.. figure:: media/selma-dashboard.png
+
+Gib das aktuelle und zweimal ein neues Passwort ein. Beachte die
+Anforderungen an das neue Passwort, die von Schule zu Schule abweichen
+können. Informiere dafür dich bei deinem
+Netzwerkberater. Standardmäßig gibt es folgende Regeln
+
+  * Folgende Zeichen sind erlaubt:
+
+    .. code::
+
+       a-z A-Z 0-9 ! § + - @ # $ % & * ( )[ ]{ }
+
+    (D.h. Umlaute oder diakritische Zeichen sind nicht erlaubt)
+  * Die Mindestlänge des Passwortes sind 7 Zeichen. 
+  * Das Passwort muss aus Großbuchstaben, Kleinbuchstaben und entweder
+    Zahlen oder Sonderzeichen (oder beidem) bestehen.
+
+    Beispiele sind: ``Muster!`` oder ``HundKatzeMau5``  
+
+Das erfolgreiche Ändern des Passwortes wird mit einer Meldung bestätigt.
+
+.. figure:: media/selma-pw-success.png
+
+Falls die Änderung nicht erfolgreich war, erhalten Sie eine
+Fehlermeldung mit einem Hinweis auf den Fehler.
+
+.. figure:: media/selma-pw-failure.png
+
+In dieser Beispielfehlermeldung bestand das Passwort nur aus
+Kleinbuchstaben, Zahlen und Sonderzeichen. Es enthielt keine
+Großbuchstaben.
+
+Jetzt kannst du dich ausloggen. Rechts oben, wo in einem Kreis dein
+Bild oder Buchstabe steht erreicht man das persönliche Menü.
+
+.. figure:: media/selma-logout-menu.png
+
+Mit dem neuen Passwort kannst du dich an allen Diensten anmelden, die
+im Schulnetzwerk mit dem Schulkonto verbunden sind, z.B. auch die
+Anmeldung an PCs.
+

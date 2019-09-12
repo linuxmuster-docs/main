@@ -30,9 +30,9 @@ folgende Hardware-Anforderungen zu erfüllen, um die Mehrzahl der
 Einsatzszenarien abzudecken:
 
 +---------------------+-------------------------------------+
-| Prozessor           | ≥ 1 GHz Multi-Core CPU (64 Bit)     |
+| Prozessor           | >= 1 GHz Multi-Core CPU (64 Bit)    |
 +---------------------+-------------------------------------+
-| RAM                 | ≥ 1 GB                              |
+| RAM                 | >= 1 GB                             |
 +---------------------+-------------------------------------+
 |Installationsmethode | Video (VGA)                         |
 +---------------------+-------------------------------------+
@@ -61,13 +61,13 @@ eingesetzt. Es wird empfohlen folgende Hardware-Anforderungen zu
 erfüllen:
 
 +---------------------+-------------------------------------+
-| Prozessor           | ≥ 1 GHz Multi-Core CPU (64 Bit)     |
+| Prozessor           | >= 1 GHz Multi-Core CPU (64 Bit)    |
 +---------------------+-------------------------------------+
-| RAM                 | ≥ 4 GB                              |
+| RAM                 | >= 4 GB                             |
 +---------------------+-------------------------------------+
 |Festplatte System +  | - vorkonfiguriert sind 25GB + 100GB | 
 |Daten                | - mind. 500GB für Daten und Backup  |
-|                     | - empfohlen ≥ 1TB                   |
+|                     | - empfohlen >= 1TB                  |
 +---------------------+-------------------------------------+
 
 Docker-Host bzw. OPSI-Host auf Basis eines Ubuntu-Servers
@@ -77,9 +77,9 @@ Es wird empfohlen, je Server folgende Hardware-Anforderungen zu
 erfüllen:
 
 +---------------------+-------------------------------------+
-| Prozessor           | ≥ 1 GHz Multi-Core CPU (64 Bit)     |
+| Prozessor           | >= 1 GHz Multi-Core CPU (64 Bit)    |
 +---------------------+-------------------------------------+
-| RAM                 | ≥ 4 GB (OPSI), ≥ 1 GB (Docker)      |
+| RAM                 | >= 4 GB (OPSI), >= 1 GB (Docker)    |
 +---------------------+-------------------------------------+
 |Festplatte           | 100 GB+, nach Bedarf                |
 +---------------------+-------------------------------------+
@@ -162,9 +162,9 @@ Jede Zeile der folgenden Tabelle stellt eine Möglichkeit dar.
 +===================+=================+============+==================================+
 | 10.0.0.0          | 10.0.255.255    | 10.0.0.1   | voreingestellt in VMs von lmn-v7 |
 +-------------------+-----------------+------------+----------------------------------+
-| 10.16.0.0         | 10.31.255.255   | 10.16.1.1  | in linuxmuster.net ≤ 6.2 üblich  |
+| 10.16.0.0         | 10.31.255.255   | 10.16.1.1  | in linuxmuster.net < 7   üblich  |
 +-------------------+-----------------+------------+----------------------------------+
-| 10.32.0.0         | 10.47.255.255   | 10.32.1.1  | in linuxmuster.net ≤ 6.2 möglich |
+| 10.32.0.0         | 10.47.255.255   | 10.32.1.1  | in linuxmuster.net < 7   möglich |
 +-------------------+-----------------+------------+----------------------------------+
 | ...               | ...             | ...        | ...                              |
 +-------------------+-----------------+------------+----------------------------------+

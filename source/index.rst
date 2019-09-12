@@ -50,7 +50,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   :caption: Benutzerverwaltung
 
   user-management/manage-users/index
-  user-management/change-own-password/index
+  user-management/change-own-password
   user-management/change-teacher-passwords/index
   user-management/change-student-passwords/index
   user-management/manage-quota/index
