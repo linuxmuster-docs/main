@@ -509,7 +509,7 @@ Melde Dich mit o.g. Logindaten an.
    .. code-block:: console
    
       deb https://archive.linuxmuster.net lmn7/
-      deb https://archive.linuxmuster.net lmn7/
+      deb-src https://archive.linuxmuster.net lmn7/
 
    Andere Zeilen können gelöscht oder mit "#" am Zeilenanfang auskommentiert werden.
    
