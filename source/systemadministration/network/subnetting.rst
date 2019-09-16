@@ -11,7 +11,7 @@ datenschutzrechtichen Erwägungen in mindestens drei Subnetze zu untergliedern: 
 Schülernetz und Servernetz. 
 
 Sehr ausführliche Informationen, wie  dies in linuxmuster.net umgesetzt 
-werden kann finden Sie im `linuxmuster.net Wiki <http://www.linuxmuster.net/wiki/dokumentation:addons:subnetting:start>`_
+werden kann finden Sie im `linuxmuster.net Wiki <http://www.linuxmuster.net/wiki/dokumentation:addons:subnetting:start>`_ (DEAD-LINK)
 
 Diese Anleitung soll den einfachsten Spezialfall dokumentieren, 
 das Netz in drei Segmente aufzuteilen, so dass die 
@@ -40,7 +40,7 @@ sind im Lehrernetz und haben Adressen aus dem Bereich 10.17.120.x. Die Untersche
 der Räume bleibt also im 3. Oktett, die Unterscheidung der Subnetze findet im 2.
 Oktett statt.
 
-Für die Unterteilung werden auf den Switches VLANs eingerichtet, diese Anleitung Verwendet 
+Für die Unterteilung werden auf den Switches VLANs eingerichtet, diese Anleitung verwendet 
 
 * für das Servernetz die VLAN-ID 16 
 * für das Lehrernetz die VLAN-ID 17
@@ -53,6 +53,7 @@ Für die Unterteilung werden auf den Switches VLANs eingerichtet, diese Anleitun
 Im ersten Schritt werden die in der Datei ``/etc/linuxmuster/workstations``
 verwalteten Rechner so geordnet, dass Sie in weiteren Schritten automatisch  in
 das richtige Subnetz einsortiert werden.
+
 Vorbereitung der workstations-Datei
 ===================================
 
