@@ -290,5 +290,5 @@ Schritt für Schritt
 Weitere L2-Switches mit VLans anbinden
 ======================================
 
-Umstellen des Servers auif Subnetting
+Umstellen des Servers auf Subnetting
 =====================================
