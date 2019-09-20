@@ -38,6 +38,9 @@ Wichtige Hinweise
   ``server.linuxmuster.magical-animal-school.edu``.
 * Alle Hosts die im Setup konfiguriert werden sollen (docker(mail),
   OPSI) müssen bereits laufen.
+* Systeme, die mit Hilfe der Migration auf linuxmuster.net 7.0
+  migriert werden, können hier eine neue (oder die alte)
+  konfigurieren.
 
 
 Anpassung des Netzbereiches
@@ -46,20 +49,16 @@ Anpassung des Netzbereiches
 Die Standardkonfiguration wie sie über die Appliances mitgeliefert
 wird, sieht vor, dass das Schulnetz die lokale Domäne
 ``linuxmuster.lan`` bekommt und Geräte im Netzbereich ``10.0.0.0/16``
-stehen.
-
-An dieser Stelle *muss* eine Anpassung vorgenommen werden, wenn ein
-anderer Netzbereich (z.B. der bisher beliebte Netzbereich
-``10.16.0.0/12``) verwendet werden soll.
-
-Systeme, die mit Hilfe der Migration auf linuxmuster.net 7.0 migriert
-werden, behalten die bisherige Domäne und den bisherigen
-Netzbereich. Dies kann nur durch eine Neuinstallation geändert
-werden.
+stehen. Wenn ein anderer Netzbereich (z.B. der bisher beliebte
+Netzbereich ``10.16.0.0/12``) verwendet werden soll, *muss* an dieser
+Stelle eine Anpassung vorgenommen werden.
 
 Hilfe findet man in der `Entwicklerdokumentation
 <https://github.com/linuxmuster/linuxmuster-base7/wiki/Ersteinrichtung-der-Appliances#serveropsidocker>`_
 oder im Forum.
+
+Systeme, die mit Hilfe der Migration auf linuxmuster.net 7.0 migriert
+werden, sollten den bisherigen Netzbereich behalten.
 
 
 Erstkonfiguration über d'SELMA
@@ -143,16 +142,22 @@ zuerst akzeptiert werden muss.
 Erstkonfiguration am Server
 ===========================
 
-Alternativ kann die Erstkonfiguration direkt am Server über die
-Konsole ausgeführt werden.
-	     
-Melde dich als `root` mit Passwort `Muster!` auf dem Server an. Das
-Setup wird über den Befehl ``linuxmuster-setup`` gestartet. Es können
-sämtliche Setup-Werte als Kommandozeilenparameter
-(z.B. ``--location=Musterstadt --adminpw='Muster!pw'``) übergeben
-werden oder mit dem Parameter ``--config`` wird eine `ini`-Datei mit
-Setupwerten übergeben. Folgendes Beispiel zeigt die wichtigsten
-Einstellungen:
+Alternativ zu d'SELMA kann die Erstkonfiguration direkt am Server über
+die Konsole ausgeführt werden. Melde dich als `root` mit Passwort
+`Muster!` auf dem Server an.
+
+Das Setup wird über den Befehl ``linuxmuster-setup`` gestartet. Es
+*müssen* folgende Setup-Werte als Kommandozeilenparameter übergeben
+werden (in einer Zeile):
+
+.. code-block:: console
+
+   linuxmuster-setup --location=Musterstadt --schoolname="Beispiel-Gesamtschule" --country=de --state=MV
+
+weitere Parameter *können* auf der Kommandozeile angegeben werden und
+werden in einem Dialogsystem weiter abgefragt. Alternativ kann eine
+Konfigurationsdatei mit dem Parameter ``--config`` mit folgendem
+Inhalt übergeben werden.
 
 .. code-block:: console
 	
@@ -173,9 +178,9 @@ Einstellungen:
    state = Mecklenburg-Vorpommern
    skipfw = False
 
-Ohne Argumente konfiguriert das Skript die entsprechenden Eingaben
-über ein Konsolendialog. Es gelten die gleichen Hinweise und Warnungen
-wie bei der grafischen Installation.
+
+Es gelten die gleichen Hinweise und Warnungen wie bei der grafischen
+Installation.
 
 Zum Ende des Setups muss der Webservice neu gestartet werden (oder der
 Server wird rebootet):
@@ -189,16 +194,22 @@ Server wird rebootet):
 Login an d'SELMA als global-admin
 =================================
 
-Öffne die URL ``https://server.linuxmuster.lan`` mit dem Admin-PC
-und akzeptiere beim ersten Aufruf die Ausnahme für das
-selbst-signierte Zertifikat.
+Öffne die URL ``https://server.linuxmuster.lan`` mit dem Admin-PC und
+akzeptiere beim ersten Aufruf die Ausnahme für das selbst-signierte
+Zertifikat.
 
 .. figure:: media/server-postsetup-login-cert.png
    :align: center
    :alt: Accept self-signed certificate 
 
-Melde dich mit dem Benutzer ``global-admin`` und dem konfigurierten Passwort an.
+Melde dich mit dem Benutzer ``global-admin`` und dem konfigurierten
+Passwort an.
 
 .. figure:: media/login-global-admin.png
    :align: center
    :alt: Login as global-admin
+
+Herzlichen Glückwunsch. Die Erstkonfiguration ist nun
+abgeschlossen. Jetzt kann mit einer Migration von v6.2, Rechner- und
+Benutzeraufnahme fortgefahren werden.
+
