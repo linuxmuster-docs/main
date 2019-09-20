@@ -66,17 +66,17 @@ Inkonsistenzen.
 
 .. hint::
 
-   Betaversion: In der Betaversion (Stand: 17.9.2019) ist auch das
-   Geburtsdatum des Lehrers noch der Konsistenzprüfung von Schülern
-   unterzogen, weswegen man kein zu weit zurückliegendes Geburtsdatum
-   einstellen kann. Wähle doch (auch aus Datenschutzgründen) das
-   heutige Datum.
+   :fixme: Betaversion: In der Betaversion (Stand: 17.9.2019) ist auch das
+	   Geburtsdatum des Lehrers noch der Konsistenzprüfung von Schülern
+	   unterzogen, weswegen man kein zu weit zurückliegendes Geburtsdatum
+	   einstellen kann. Wähle doch (auch aus Datenschutzgründen) das
+	   heutige Datum.
 
 .. hint::
 
-   Betaversion: Nach Eingabe eines inkonsistenten Datums oder
-   ungültigen Zeichenkette solltest du die Zeile noch einmal löschen,
-   speichern und von vorne anfangen.
+   :fixme: Betaversion: Nach Eingabe eines inkonsistenten Datums oder
+	   ungültigen Zeichenkette solltest du die Zeile noch einmal löschen,
+	   speichern und von vorne anfangen.
 
 Am Ende der Eingabe aller hinzuzufügenden Lehrer drückst du `Speichern
 & Prüfen`. Der folgende Dialog zeigt in der Übersicht an, was getan
@@ -105,33 +105,66 @@ z.B. Erstpasswörter (zurück-)gesetzt werden.
 Schüler importieren
 ===================
 
-Wähle im Menüpunkt `LISTENVERWALTUNG/Schüler-Liste` die Schaltfläche
-`IM EDITOR ÖFFNEN`. Eine zu importierende Datei sollte folgendes
-Format aufweisen:
+Schüler können analog zu Lehrern einzeln hinzugefügt werden.
 
-.. code-block:: console
-
-   10A;Testuser;Heinz;1.1.2001;
-   13A;Musterfrau;Tanja;2.1.2001;
-   5A;Hausmann;Hans;3.1.2001;   
-
-Per "Drag & Drop" lässt sich eine richtig
-formatierte Datei nun hochladen, alternativ kann die Schaltfläche `CSV
-HOCHLADEN` gewählt werden. Mit `SPEICHERN` werden eventuelle
-Konsistenzfehler überprüft.
-
-:fixme: Import über CSV im Prinzip möglich, solange momentan keine
-        UTF-8 Daten verwendet werden.
+Alternativ können **alle** Schüler (alte wie neue) importiert werden.
+Wähle im Menüpunkt `BENUTZERVERWALTUNG/Listenverwaltung` (es erscheint
+automatisch die Schülerliste) die Schaltfläche `IM EDITOR
+ÖFFNEN`. 
 
 .. figure:: media/user-add-students-csv.png
    :align: center
    :alt: User entry dialog via CSV
 
-Die Schaltfläche `SPEICHERN & PRÜFEN` zeigt nun an, wieviele Schüler
-bei `ÜBERNEHMEN` ins System übernommen werden. Ab der erfolgreichen
-Übernahme können die Schüler unter dem Menüpunkt
-`BENUTZERVERWALTUNG/Schüler` gefunden und deren Konten bearbeitet
-werden.
+Eine zu importierende Datei sollte folgende Daten aufweisen:
+Klassenbezeichnung,Nachname, Vorname und Geburtsdatum (optional eine
+eindeutige ID aus einem Schulverwaltungsprogramm). Beispielsweise:
+
+.. code-block:: console
+
+   10A;Testuser;Heinz;1.1.2001;
+   13a;Musterfrau;Tanja;2.1.2001;
+   5b;Hausmann;Hans;3.1.2001;   
+
+.. attention::
+
+   Die Datei muss alle alten und neuen Schüler enthalten, sonst werden
+   alle fehlenden Schüler zur Entfernung (Versetzung aus der Schule)
+   vorgemerkt. Siehe auch :ref:`add-user-errorcorrection-label` unten.
+
+Per "Drag & Drop" lässt sich eine so formatierte Datei nun hochladen,
+alternativ kann die Schaltfläche `CSV LADEN` gewählt werden. Es wird
+abgefragt, welche Spalte welche Art von Daten enthält und du kannst
+das durch Umsortieren richtigstellen und mit ``SORTIERUNG
+AKZEPTIEREN`` abschließen.
+
+.. hint:: 
+
+   :fixme: Betaversion: Import über CSV im Prinzip möglich, solange
+           momentan keine UTF-8 Daten bei einem leeren System
+           verwendet werden.
+
+.. figure:: media/user-import-sortorder.png
+   :align: center
+   :alt: User sort order dialog of imported CSV
+
+Mit `SPEICHERN` werden eventuelle Konsistenzfehler überprüft.  Die
+Schaltfläche `SPEICHERN & PRÜFEN` zeigt nun an, wieviele Schüler bei
+`ÜBERNEHMEN` ins System übernommen, versetzt (aktualisiert) oder
+gelöscht werden. Ab der erfolgreichen Übernahme können die Schüler
+unter dem Menüpunkt `BENUTZERVERWALTUNG/Schüler` gefunden und deren
+Konten bearbeitet werden.
+
+.. _add-user-errorcorrection-label:
+
+Fehlerkorrektur
+===============
+
+Hat man einen fehlerhafte Daten in das System eingepflegt und hat sie
+noch nicht imporiert, lassen sich Schüler und Lehrerlisten aus einer
+Sicherung zurückholen. Der Knopf für die Sicherung ist rechts unten in
+der Listenverwaltung.
+
 
 Ausführlichere Dokumentation zur Benutzerverwaltung findet sich im
 entsprechenden Abschnitt dieser Dokumentation.
