@@ -22,11 +22,13 @@ d'SELMA als ``global-admin``, wie es in
 
 .. attention::
 
-   Für alle beta-Tester: folgende Szenarien funktionieren in d'SELMA
-   nicht, wenn man nicht-ASCII-Zeichen verwendet. Am besten ist es für
-   die Aufnahme mit nicht-ASCII-Zeichen die Konsole zu verwenden
-   (bislang undokumentiert) und wie im nächsten Abschnitt erwähnt die
-   Zeichenkodierung festzulegen.
+   :fixme: Für alle beta-Tester: folgende Szenarien funktionieren in
+	   d'SELMA eventuell nicht, wenn man nicht-ASCII-Zeichen
+	   verwendet. Am besten ist es für die Aufnahme mit
+	   nicht-ASCII-Zeichen die Konsole zu verwenden (bislang
+	   undokumentiert) oder wie im nächsten Abschnitt erwähnt die
+	   Zeichenkodierung festzulegen und es zu testen. Rückmeldung
+	   im Forum willkommen, wenn es ohne Probleme funktioniert.
 
 
 Zeichenkodierung wählen
