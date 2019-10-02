@@ -1,10 +1,13 @@
 .. _howto-change-student-passwords-label:
 
-=====================================================
-(v6.2) Schüler-Passwörter zurücksetzen und ausdrucken
-=====================================================
+==============================================
+Schüler-Passwörter zurücksetzen und ausdrucken
+==============================================
 
-Vergisst ein Schüler sein Passwort, kann jede Lehrkraft das Passwort des Schülers über die Schulkonsole auf das Erstpasswort [#f1]_ zurücksetzen. Dieses teilen Sie dem Schüler mit.
+Vergisst ein Schüler sein Passwort, kann jede Lehrkraft das Passwort
+des Schülers über die Schulkonsole auf das Erstpasswort [#f1]_
+zurücksetzen und dies dem Schüler mitteilen. Es besteht ebenso die
+Möglichkeit, die Passwörter eine gesamten Klasse auszudrucken.
 
 
 .. [#f1] Die Bezeichnung **Erstpasswort** bezieht sich dabei immer auf
@@ -14,10 +17,15 @@ Vergisst ein Schüler sein Passwort, kann jede Lehrkraft das Passwort des Schül
 	 Passwort, das eine Lehrperson über die Schulkonsole vergeben
 	 hat.
 
+Melde dich an der Schulkonsole an, d.h. besuche mit dem Browser die
+Webseite ``https://server.linuxmuster.lan`` oder die an deiner Schule
+äquivalent vom Administrator eingerichtete Seite und melde dich mit den Schulkontodaten an.
 
+Schüler-PAsswörter ausdrucken
+-----------------------------
 
-Dazu melden Sie sich an der Schulkonsole wie im Handbuch :ref:`schulekonsole-admin-label` beschrieben an.
-Wählen Sie unter „Klassen” den Menüpunkt „Passwörter“.
+Schüler in Unterrichtskurs aufnehmen und PAsswörter zurücksetzen.
+-----------------------------------------------------------------
 
 .. image:: media/01.png
 
