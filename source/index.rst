@@ -81,6 +81,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   :caption: Anhang
 
   appendix/install-on-kvm/index
+  appendix/install-on-proxmox/index
   appendix/install-on-xcp-ng/index
   appendix/contribute/index
   appendix/school-console/index

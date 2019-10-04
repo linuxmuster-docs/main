@@ -285,7 +285,7 @@ anderen Fälle, wird im folgenden der Ablauf einer Installation
 skizziert.
 
 KVM/qemu/Proxmox als Hypervisor:
-  Ausführliche Informationen findest Du im Kapitel :ref:`install-on-kvm-label`.
+  Ausführliche Informationen findest Du im Kapitel :ref:`install-on-kvm-label` und :ref:`install-on-proxmox-label`.
 
 Xen als Hypervisor:
   Ausführliche Informationen findest Du im eigenen Kapitel :ref:`install-on-xen-label`.
