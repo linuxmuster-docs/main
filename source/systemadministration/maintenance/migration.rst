@@ -240,7 +240,7 @@ Die Aufnahme
   getestet werden, was hier zu 100% funktionieren sollte. Im nächsten
   Schritt folgt der Import der aktuellen Passworthashes.
 
-- gibt den Benutzern zunächst keine Rechte für SELMA. Dies folgt
+- gibt den Benutzern zunächst keine Rechte für die WebUI/Schulkonsole. Dies folgt
   in einem späteren Schritt.
 
 
@@ -349,7 +349,7 @@ Stelle sicher, dass keine weiteren Benutzer hinzugefügt werden müssen:
 Mit folgendem Schritt werden
 
 - Benutzernamen in UTF-8 konvertiert (ab jetzt sind Umlaute und Sonderzeichen in Namen möglich),
-- Zugriffsrechte in SELMA gesetzt
+- Zugriffsrechte in der Schulkonsole gesetzt
 
 .. code-block:: console
 

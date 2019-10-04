@@ -1,14 +1,15 @@
 .. _add-computer-label:
 
-=============================
- Rechneraufnahme mit d'SELMA
-=============================
+======================================
+ Rechneraufnahme mit der Schulkonsole
+======================================
 
 .. sectionauthor:: `@Alois <https://ask.linuxmuster.net/u/Alois>`_
 		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_
 
-Um einen Rechner mit d'SELMA aufzunehmen geht man wie folgt vor: Melde
-dich wie es in :ref:`login-dselma-global-admin` beschrieben wird an.
+Um einen Rechner mit der Schulkonsole aufzunehmen geht man wie folgt
+vor: Melde dich wie es in :ref:`login-dselma-global-admin` beschrieben
+wird an.
 
 Im Menüpunkt ``GERÄTEVERWALTUNG/Geräte`` kann man nun `+ Gerät
 hinzufügen` anklicken. Standardmäßig sind die konfigurierten Server

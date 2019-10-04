@@ -102,9 +102,9 @@ oder eine eigene Rechnergruppe mit dem Cloop konfigurieren.
 Computer aufnehmen
 ==================
 
-Der Zielrechner wird in d'SELMA aufgenommen (z.B. `r100-pc01`) und im
-Menüpunkt LINBO der richtigen Gruppe (z.B. `linux`) zugewiesen, siehe
-:ref:`add-computer-label`.
+Der Zielrechner wird in der Schulkonsole aufgenommen
+(z.B. `r100-pc01`) und im Menüpunkt LINBO der richtigen Gruppe
+(z.B. `linux`) zugewiesen, siehe :ref:`add-computer-label`.
      
 .. 
   Neue Rechner werden durch direkten Eintrag in die Datei

@@ -45,8 +45,7 @@ Vereinfachte Installation
 
 Bedienung und Administration
   * Das zentrale Verwaltungswerkzeug (Schulkonsole) wird
-    ersetzt. SELMA (Digitale Schulnetz-Einstellungen für Lehrer
-    Machbar Angezeigt) ist als moderne Oberfläche auch auf mobilen
+    ersetzt und ist durch eine moderne Oberfläche auch auf mobilen
     Geräten einsetzbar.
   * Die vollständige Bedienbarkeit auf der Konsole bleibt erhalten
   * Wegfall der PostGREs-Datenbank zugunsten einheitlicher Speicherung
