@@ -49,10 +49,10 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   :maxdepth: 2
   :caption: Benutzerverwaltung
 
-  user-management/manage-users/index
   user-management/change-own-password
+  user-management/change-student-passwords
+  user-management/manage-users/index
   user-management/change-teacher-passwords/index
-  user-management/change-student-passwords/index
   user-management/manage-quota/index
   user-management/preparation-newterm/index
   user-management/use-mail-ldap/index

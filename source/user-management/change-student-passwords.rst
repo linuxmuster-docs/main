@@ -1,90 +1,137 @@
 .. _howto-change-student-passwords-label:
 
-==============================================
-Schüler-Passwörter zurücksetzen und ausdrucken
-==============================================
+============================
+Schülerverwaltung als Lehrer
+============================
 
-Vergisst ein Schüler sein Passwort, kann jede Lehrkraft das Passwort
-des Schülers über die Schulkonsole auf das Erstpasswort [#f1]_
-zurücksetzen und dies dem Schüler mitteilen. Es besteht ebenso die
-Möglichkeit, die Passwörter eine gesamten Klasse auszudrucken.
-
-
-.. [#f1] Die Bezeichnung **Erstpasswort** bezieht sich dabei immer auf
-	 das zeitlich neueste über die Schulkonsole vergebene
-	 Passwort, also entweder das vergebene Passwort beim Anlegen
-	 des Schülers durch den Administrator oder das aktuellste
-	 Passwort, das eine Lehrperson über die Schulkonsole vergeben
-	 hat.
+Als Lehrer hat man in der Schulkonsole mehrere pädagogische und
+verwaltungstechnische Funktionen zur Verfügung.
 
 Melde dich an der Schulkonsole an, d.h. besuche mit dem Browser die
 Webseite ``https://server.linuxmuster.lan`` oder die an deiner Schule
-äquivalent vom Administrator eingerichtete Seite und melde dich mit den Schulkontodaten an.
+äquivalent vom Administrator eingerichtete Seite und melde dich mit
+den Schulkontodaten an.
 
-Schüler-PAsswörter ausdrucken
------------------------------
+Passwörter der Schüler ausdrucken
+=================================
 
-Schüler in Unterrichtskurs aufnehmen und PAsswörter zurücksetzen.
------------------------------------------------------------------
+Unter dem Menüpunkt `KLASSENZIMMER/Passwörter drucken` wähle aus der
+Liste aller Klassen die entsprechende aus.
 
-.. image:: media/01.png
+.. figure:: media/print-passwords-class.png
 
-Wählen Sie nun Ihre Klasse aus indem Sie auf die Klassenbezeichnung klicken.
+Das resultierende PDF enthält Benutzername und Erstpasswort aller
+Schülerinnen und Schüler der Klasse und kann so ausgeteilt werden.
 
-.. note:: 
+.. figure:: media/print-passwords-example.png
 
-   Falls Ihre Klasse nicht in der oberen Liste (im Beispiel: 10b)
-   auftaucht, müssen Sie sich zunächst in die Klasse eintragen. Wählen
-   Sie dazu im Dropdown-Menü die Klasse aus und klicken anschließend
-   auf "Eintragen".
+Unterrichtskurs einrichten
+==========================
 
-   .. image:: media/02.png
+Für die folgende Anleitung musst du nicht in der Klasse eingeschrieben
+sein.  Unter ``KLASSENZIMMER/Unterricht`` klicke auf ``Neuer Kurs``
+und gib dem Kurs einen Namen. Im Kurs können sowohl Schülerinnen und
+Schüler einer Klasse als auch verschiedener Klassen zusammengestellt
+werden. Der Kurs ist auch nur für dich sichtbar und verwendbar.
 
-Setzen Sie hinter dem vergesslichen Schüler den Haken und scrollen Sie auf das Ende der Seite. 
-Unterhalb der Liste können Sie unter "Schnellauswahl" mit dem Knopf
-"An" auch alle Schüler auswählen, wenn Sie allen das Passwort
-zurücksetzen wollen.
+.. figure:: media/create-session-naming.png
 
-Klicken Sie nun ganz unten auf dieser Seite auf
+Der Kurs taucht nun in der Auflistung mittig auf. Klicke ihn an, er
+ist zunächst leer. In der ersten Zeile kannst du nun bei `Schüler
+hinzufügen` einzelne Schülernamen eingeben oder bei `Klasse
+hinzufügen` Klassennamen eingeben.
 
-Passwort auf Erstpasswort setzen
-  um das Passwort auf dessen Erstpasswort zurückzusetzen,
+Die Schulkonsole beschränkt während der Eingabe die möglichen Benutzer
+oder Gruppen des Systems und zeigt sie an. Klicke auf die angebotene
+Gruppe (z.B. hier: `10a`) um die entsprechenden Benutzer hinzuzufügen.
 
-Passwort und Erstpasswort setzen (Zufallswert)
-  um dem Schüler ein neues zufälliges Erstpasswort zuzuteilen und sein
-  Passwort darauf zu setzen,
+.. figure:: media/create-session-addclass.png
 
-Passwort und Erstpasswort setzen (Eingabewert):
-  um dem Schüler ein von Ihnen gewähltes Passwort als Erstpasswort
-  zuzuweisen.  Diese Eingabe ist nicht dafür geeignet, dass der Schüler
-  sein dauerhaftes Passwort setzt, weil das Erstpasswort nicht
-  verschlüsselt abgespeichert wird und somit nicht geheim ist.
+Die Schüler werden nun aufgelistet und können bei Bedarf über das
+Symbol des Mülleimers einzeln aus der Liste wieder entfernt werden.
 
-.. image:: media/03.png
-	   
-Die Seite wird neu geladen. Klicken Sie neben dem Schülernamen auf „Erstpasswort anzeigen“.
+Ist die Liste vollständig klicke unten rechts auf `SPEICHERN &
+ÜBERNEHMEN`.
 
-.. image:: media/04.png
+.. figure:: media/create-session-save.png
 
-Teilen Sie das angezeigte Erstpasswort dem Schüler mit der Aufforderung mit, es in der Schulkonsole zu ändern.
+Rechts oben wird das erfolgreiche Speichern mit einem grünen Haken
+zurückgemeldet.
 
-.. image:: media/05.png
+.. figure:: media/create-session-success.png
 
+Passwörter zurücksetzen
+-----------------------
 
-.. important::
+Vergisst ein Schüler sein Passwort, kann jede Lehrkraft das Passwort
+des Schülers über die Schulkonsole auf das Erstpasswort zurücksetzen
+und dies dem Schüler mitteilen. Voraussetzung für die Passwortänderung
+ist die Aufnahme des Schülers in einen Kurs. Klickst du auf das
+Zahnradsymbol in der Zeile des Schülers im Kurs, erscheinen die
+Möglichkeiten
 
-   Weder Lehrer noch Administrator können vom Schüler geänderte
-   Passwörter einsehen. Sie werden grundsätzlich verschlüsselt
+.. figure:: media/change-student-password.png
+
+.. important:: 
+
+   Das **Erstpasswort** ist ein Passwort, dass beim Anlegen des
+   Schülers durch den Administrator oder durch eine Lehrperson in der
+   Schulkonsole gesetzt wurde. Das Erstpasswort wird auch im Klartext
+   gespeichert und ist daher nicht für die dauerhafte Verwendung
+   geeignet. Die Schüler müssen es selbst ändern.
+
+   Das **Benutzerpasswort** also das geheime vom Schüler geänderte
+   Passwort kann weder von Lehrer noch Administrator eingesehen
+   werden.  Diese Passwörter werden grundsätzlich nur verschlüsselt
    gespeichert.
 
+Klicke auf
+	  
+Erstpasswort anzeigen
+  um das aktuelle Erstpasswort anzuzeigen
 
-Die kompletten Anmeldekärtchen der Klasse können als *PDF*-Datei ausgedruckt oder als *CSV*-Datei heruntergeladen und mit einem 
-Tabellenkalkulationsprogramm weiterverarbeitet werden. 
+Erstpasswort wiederherstellen
+  um das Passwort des Schülers (wieder) auf das Erstpasswort
+  zurückzusetzen
+
+Erstpasswort zufällig festlegen
+  um dem Schüler ein zufälliges neues Erstpasswort zu erzeugen und zu
+  setzen
+
+Erstpasswort benutzerdefiniert festlegen
+  um dem Schüler ein selbstgewähltes neues Erstpasswort zu erzeugen
+  und zu setzen. Der folgende Dialog enthält einen Hinweis auf die
+  Komplexitätsregeln des Passworts.
+
+Benutzerpasswort festlegen
+  um direkt das Passwort des Schülers festzulegen. Das Erstpasswort
+  wird dabei nicht geändert. Diese Option bietet sich an, wenn der
+  Schüler selbst hier sein geheimes Passwort eingeben kann. Der
+  folgende Dialog enthält einen Hinweis auf die Komplexitätsregeln des
+  Passworts.
 
 
-Weiterführende Informationen
-============================
+Nach Setzen des Erst- oder Benutzerpasswortes muss nicht mit
+`SPEICHERN & ÜBERNEHMEN` abgeschlossen werden.
 
-Weitere Informationen zum Thema finden Sie
+Zugriff auf WLAN, Internet und Drucker regeln
+---------------------------------------------
 
-  * im Handbuch zur Schulkonsole im Abschnitt :ref:`schulkonsole-teacher-user-label` 
+In einem Kurs kann einzelnen Personen oder dem gesamten Kurs die
+Berechtigung zu Drucken oder der Zugriff auf WLAN und Internet gegeben
+oder genommen werden. Sobald der Kurs eingerichtet und abgespeichert
+kannst du über die Auswahlfelder des jeweiligen Schülers oder über das
+Auswahlfeld oberhalb des ersten Schülers alle Schüler gemeinsam über
+diese Zugriffsrechte bestimmen.
+
+.. figure:: media/change-student-access.png
+
+
+Änderungen werden gelb hinterlegt bis sie mit `SPEICHERN & ÜBERNEHMEN`
+übernommen wurden.
+
+
+Austeilen und Einsammeln
+========================
+
+:fixme:
