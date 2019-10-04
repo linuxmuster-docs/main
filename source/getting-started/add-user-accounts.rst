@@ -1,34 +1,34 @@
 
-==============================
- Benutzeraufnahme mit d'SELMA
-==============================
+=======================================
+ Benutzeraufnahme mit der Schulkonsole
+=======================================
 
 .. sectionauthor:: `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_
 		   
 
 In einer Schule müssen meist mehrere hundert bis einige tausend
-Schüler als Benutzer angelegt werden. Die Schulkonsole SELMA erlaubt
-das Einlesen aller Schülerdaten aus einer Text-Datei, die z.B. aus
-dem Schulverwaltungsprogramm der Schule bezogen wurde. Anschließend
-werden Konten aller Schüler dieser Liste, die im System noch nicht
-vorhanden sind, angelegt, solche mit einer neuen Klasse versetzt und
-Konten nicht mehr aufgeführter Schüler schrittweise aus dem System
-entfernt.
+Schüler als Benutzer angelegt werden. Die Schulkonsole (WebUI) erlaubt
+das Einlesen aller Schülerdaten aus einer Text-Datei, die z.B. aus dem
+Schulverwaltungsprogramm der Schule bezogen wurde. Anschließend werden
+Konten aller Schüler dieser Liste, die im System noch nicht vorhanden
+sind, angelegt, solche mit einer neuen Klasse versetzt und Konten
+nicht mehr aufgeführter Schüler schrittweise aus dem System entfernt.
 
 In diesen Abschnitten wird beispielhaft ein Lehrer händisch angelegt
 und per Datei-Import einige Schüler aufgenommen. Melde dich dafür an
-d'SELMA als ``global-admin``, wie es in
+der Schulkonsole als ``global-admin``, wie es in
 :ref:`login-dselma-global-admin` beschrieben wird.
 
 .. attention::
 
    :fixme: Für alle beta-Tester: folgende Szenarien funktionieren in
-	   d'SELMA eventuell nicht, wenn man nicht-ASCII-Zeichen
-	   verwendet. Am besten ist es für die Aufnahme mit
-	   nicht-ASCII-Zeichen die Konsole zu verwenden (bislang
-	   undokumentiert) oder wie im nächsten Abschnitt erwähnt die
-	   Zeichenkodierung festzulegen und es zu testen. Rückmeldung
-	   im Forum willkommen, wenn es ohne Probleme funktioniert.
+	   der Schulkonsole eventuell nicht, wenn man
+	   nicht-ASCII-Zeichen verwendet. Am besten ist es für die
+	   Aufnahme mit nicht-ASCII-Zeichen die Konsole zu verwenden
+	   (bislang undokumentiert) oder wie im nächsten Abschnitt
+	   erwähnt die Zeichenkodierung festzulegen und es zu
+	   testen. Rückmeldung im Forum willkommen, wenn es ohne
+	   Probleme funktioniert.
 
 
 Zeichenkodierung wählen

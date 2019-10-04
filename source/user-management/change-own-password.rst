@@ -2,10 +2,13 @@
  Ändern des eigenen Passwortes
 ===============================
  
-Melde dich an d'SELMA an. Gib dafür in einem Browser https://server
-ein und melde dich mit deinem Benutzernamen (bestehend aus
-Kleinbuchstaben und event. Zahlen) und dem aktuellen Passwort an
-d'SELMA an.
+Melde dich an der Schulkonsole an, d.h. besuche mit dem Browser die
+Webseite ``https://server.linuxmuster.lan`` oder die an deiner Schule
+äquivalent vom Administrator eingerichtete Seite und melde dich mit
+den Schulkontodaten an.
+
+.. hint:: Dein Benutzername besteht nur aus Kleinbuchstaben und
+          eventuell Zahlen.
 
 .. figure:: media/selma-login.png
 

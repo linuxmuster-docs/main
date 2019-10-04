@@ -15,8 +15,8 @@
    über eine :ref:`migration-label` umgezogen werden, dennoch ist die
    Erstkonfiguration hier eine notwendige Voraussetzung.
 
-Wichtige Hinweise 
-==================
+Wichtige Hinweise
+=================
 
 * Nach Abschluss dieses Setups sind die Domäne und andere Details des
   Netzwerks permanent festgelegt und nur durch Neuinstallation
@@ -61,11 +61,11 @@ Systeme, die mit Hilfe der Migration auf linuxmuster.net 7.0 migriert
 werden, sollten den bisherigen Netzbereich behalten.
 
 
-Erstkonfiguration über d'SELMA
-==============================
+Erstkonfiguration über die Schulkonsole
+=======================================
 
-Die Weboberfläche (d'SELMA) erreicht man über einen Browser eines
-Gerätes (im folgenden Admin-PC genannt) im Servernetzwerk. Dafür
+Die Weboberfläche (WebUI/Schulkonsole) erreicht man über einen Browser
+eines Gerätes (im folgenden Admin-PC genannt) im Servernetzwerk. Dafür
 konfiguriert man den Admin-PC mit der festen IP-Adresse ``10.0.0.10``
 (entsprechend ``x.x.x.10`` in jeder anderen Netzwerkkonfiguration) der
 Netzwerkmaske ``255.255.0.0``, dem Gateway ``10.0.0.254`` und dem DNS
@@ -142,9 +142,9 @@ zuerst akzeptiert werden muss.
 Erstkonfiguration am Server
 ===========================
 
-Alternativ zu d'SELMA kann die Erstkonfiguration direkt am Server über
-die Konsole ausgeführt werden. Melde dich als `root` mit Passwort
-`Muster!` auf dem Server an.
+Alternativ zur Schulkonsole kann die Erstkonfiguration direkt am
+Server über die Konsole ausgeführt werden. Melde dich als `root` mit
+Passwort `Muster!` auf dem Server an.
 
 Das Setup wird über den Befehl ``linuxmuster-setup`` gestartet. Es
 *müssen* folgende Setup-Werte als Kommandozeilenparameter übergeben
@@ -191,8 +191,8 @@ Server wird rebootet):
 
 .. _login-dselma-global-admin:
 
-Login an d'SELMA als global-admin
-=================================
+Login an der Schulkonsole als global-admin
+==========================================
 
 Öffne die URL ``https://server.linuxmuster.lan`` mit dem Admin-PC und
 akzeptiere beim ersten Aufruf die Ausnahme für das selbst-signierte
