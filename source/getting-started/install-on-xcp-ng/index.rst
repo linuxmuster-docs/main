@@ -69,11 +69,10 @@ zusätzlichen Anleitungen betrachtet.
 Download-Quellen VMs
 --------------------
 
-Die Quellen finden Sie im Abschnitt 
+Die Quellen finden Sie im Abschnitt Voraussetzungen_ detailliert beschrieben.
 
-:ref: `Voraussetzungen - Downloads <getting-started-downloads-label>`_ 
+.. _Voraussetzungen: http://docs.linuxmuster.net/de/latest/getting-started/prerequisites/index.html
 
-detailliert beschrieben.
 
 Alternativ finden sich alle VMs zum Download auf der Download-Übersicht 
 XCP-Übersicht-v6.2_:
