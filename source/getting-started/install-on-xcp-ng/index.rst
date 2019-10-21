@@ -551,7 +551,7 @@ sich hierbei um einen PlayOnLinux Container, der XCP-ng Center mit allen Abhäng
 
 Die aktuellste Version_ lädst Du vorab herunter:
 
-.. _Version: https://github.com/aldebaranbm/xencenter-playonlinux/releases/tag/2019-02-05
+.. _Version: https://github.com/aldebaranbm/xencenter-playonlinux/
 
 Danach rufst Du PlayOnLinux auf. Dort gehst Du im Menü auf den 
 ``Menüpunkt -> Erweiterungen (Plugins) -> Untermenü PlayOnLinux Vault``.
