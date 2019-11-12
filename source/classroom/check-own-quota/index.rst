@@ -3,7 +3,7 @@
 =====================================
 
 Jeder Benutzer kann sich auf der Startseite der *Schulkonsole* über
-seinen verbrauchten Speicherplatz und seine Quota (im zustehenden
+seinen verbrauchten Speicherplatz und seine Quota (ihm zustehenden
 Anteil) informieren. 
 
 Melden Sie sich in der Schulkonsole an.
