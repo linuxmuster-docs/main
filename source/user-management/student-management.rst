@@ -140,13 +140,24 @@ zurückgemeldet.
 
 .. figure:: media/create-session-success.png
 
+Der Kurs kann später an dieser Stelle auch umbenannt oder gelöscht
+werden.
+
+
 Passwörter zurücksetzen
 -----------------------
 
 Vergisst ein Schüler sein Passwort, kann jede Lehrkraft das Passwort
 des Schülers über die Schulkonsole auf das Erstpasswort zurücksetzen
 und dies dem Schüler mitteilen. Voraussetzung für die Passwortänderung
-ist die Aufnahme des Schülers in einen Kurs. Klickst du auf das
+ist die Aufnahme des Schülers in einen Kurs. 
+
+Öffne in der Schulkonsole unter ``KLASSENZIMMER/Unterricht`` den
+angelegten Kurs.
+
+.. figure:: media/webui-teacher-sessions-overview.png
+
+Die Liste mit Schülern des Kurses wird angezeigt. Klickst du auf das
 Zahnradsymbol in der Zeile des Schülers im Kurs, erscheinen die
 Möglichkeiten
 
@@ -198,19 +209,29 @@ Zugriff auf WLAN, Internet und Drucker regeln
 
 In einem Kurs kann einzelnen Personen oder dem gesamten Kurs die
 Berechtigung zu Drucken oder der Zugriff auf WLAN und Internet gegeben
-oder genommen werden. Sobald der Kurs eingerichtet und abgespeichert
-kannst du über die Auswahlfelder des jeweiligen Schülers oder über das
-Auswahlfeld oberhalb des ersten Schülers alle Schüler gemeinsam über
-diese Zugriffsrechte bestimmen.
+oder genommen werden. Voraussetzung für diese Funktionen ist die
+Aufnahme des Schülers in einen Kurs.
+
+Öffne in der Schulkonsole unter ``KLASSENZIMMER/Unterricht`` den
+angelegten Kurs.
+
+.. figure:: media/webui-teacher-sessions-overview.png
+
+Die Liste mit Schülern des Kurses wird angezeigt. Es gibt
+Auswahlfelder bei den Schülern und oberhalb des ersten Schülers für
+alle Schüler für
+
+- den Prüfungsmodus (siehe nächstes Kapitel)
+- WLAN-Zugang
+- Internetzugang
+- Druckerzugriff
 
 .. figure:: media/change-student-access.png
 
-
 Änderungen werden gelb hinterlegt bis sie mit `SPEICHERN & ÜBERNEHMEN`
-übernommen wurden.
+übernommen werden.
+
+Prüfungsmodus und austeilen und einsammeln
+------------------------------------------
 
 
-Austeilen und Einsammeln
-========================
-
-:fixme:
