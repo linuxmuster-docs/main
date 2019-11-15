@@ -12,11 +12,44 @@ Webseite ``https://server.linuxmuster.lan`` oder die an deiner Schule
 äquivalent vom Administrator eingerichtete Seite und melde dich mit
 den Schulkontodaten an.
 
+Klassen, Projekte, Kurse - Einführung
+=====================================
+
+In der linuxmuster.net v7 gibt es zwei Kategorien von
+Gruppierungen. Klassen und Projekte sind Gruppierungen,
+
+- denen Schüler automatisch angehören (Klassen) oder denen sie
+  angehören durch Anlegen eines Lehrers (Projekte)
+- die einen Tauschordner besitzen
+- über die eine Zuordnung auch außerhalb der lmn7 möglich ist (z.B. Nextcloud, Moodle)
+
+Kurse dagegen sind Gruppierungen,
+
+- die jeder Lehrer selbst anlegt
+- die für Unterrichtsfunktionen wie Teilen/Einsammeln/Klassenarbeit verwendet werden
+- die zum Zurücksetzen der Passwörter durch Lehrer verwendet werden
+
+Es werden meist beide Kategorien für den täglichen Umgang benötigt. 
+
+.. figure:: media/webui-teacher-overview.png
+
+Solange ein Lehrer nur den automatisch angelegten Tauschordner der
+Klasse verwenden will, muss er keine Kurse einrichten. Die
+Konfiguration findet sich unter `KLASSENZIMMER/Einschreiben`.
+
+Sobald ein Lehrer die Unterrichtsfunktionen verwenden will, die über
+einen Tauschordner hinausgehen, muss er einen Kurs anlegen und die
+gewünschten Schüler hinzufügen. Die Konfiguration findet sich unter
+`KLASSENZIMMER/Unterricht`.
+
+
 Passwörter der Schüler ausdrucken
 =================================
 
-Unter dem Menüpunkt `KLASSENZIMMER/Passwörter drucken` wähle aus der
-Liste aller Klassen die entsprechende aus.
+Für ein klassenweises Ausdrucken der Erstpasswörter gibt es einen
+zusätzlichen Menüpunkt in der Schulkonsole. Unter dem Menüpunkt
+`KLASSENZIMMER/Passwörter drucken` wähle aus der Liste aller Klassen
+die entsprechende aus.
 
 .. figure:: media/print-passwords-class.png
 
@@ -25,13 +58,57 @@ Schülerinnen und Schüler der Klasse und kann so ausgeteilt werden.
 
 .. figure:: media/print-passwords-example.png
 
+In Klassen einschreiben und Projekte anlegen
+============================================
+
+Die folgende Anleitung brauchst du dann, wenn du mit einer gesamten
+Schulklasse oder einem Teilnehmer einer Teilgruppe von Schülern
+Dateien über einen gemeinsamen Ordner bearbeiten willst oder diese
+Gruppierung in einer externen Anwendung gemeinsam ansprechen willst
+(z.B. Nextcloudgruppe oder Moodlegruppe). Für alle
+Unterrichtsfunktionen benötigst du dagegen einen Kurs, siehe nächsten
+Abschnitt.
+
+In Klassen einschreiben
+-----------------------
+
+Unter ``KLASSENZIMMER/Einschreiben`` klicke auf die Klasse, der du
+angehören willst. Die Veränderung wird gelb hinterlegt
+angezeigt. Bestätige alle Änderungen mit ``ÜBERNEHMEN``, das sich am
+unteren Ende der Seite befindet.
+
+.. figure:: media/webui-teacher-subscribe.png
+
+Das Austragen aus einer Klasse funktioniert analog mit Entfernen des
+Hakens und Übernehmen der Änderung.
+
+Projekte erstellen und beitreten
+--------------------------------
+
+Unter ``KLASSENZIMMER/Einschreiben`` klicke in der oberen Leiste auf
+``Neues Projekt``.
+
+.. figure:: media/webui-teacher-project-new.png
+
+In dem sich öffnenden Eingabefeld kann der Projektname mit kleinen
+Buchstaben (a-z, keine Umlaute oder Sonderzeichen) und Zahlen (0-9)
+festgelegt werden. Die Schulkonsole meldet zurück, wenn das Projekt
+erfolgreich erstellt wurde und es erscheint in der Liste der Projekte.
+
+.. figure:: media/webui-teacher-project-new-name.png
+
+:fixme: Rest der Erstellung der Projekte
+
 Unterrichtskurs einrichten
 ==========================
 
-Für die folgende Anleitung musst du nicht in der Klasse eingeschrieben
-sein.  Unter ``KLASSENZIMMER/Unterricht`` klicke auf ``Neuer Kurs``
-und gib dem Kurs einen Namen. Im Kurs können sowohl Schülerinnen und
-Schüler einer Klasse als auch verschiedener Klassen zusammengestellt
+Die folgende Anleitung brauchst du für alle Unterrichtsfunktionen
+(außer Tauschordner) und dafür musst du nicht in der Klasse
+eingeschrieben sein.
+
+Unter ``KLASSENZIMMER/Unterricht`` klicke auf ``Neuer Kurs`` und gib
+dem Kurs einen Namen. Im Kurs können sowohl Schülerinnen und Schüler
+einer Klasse als auch verschiedener Klassen zusammengestellt
 werden. Der Kurs ist auch nur für dich sichtbar und verwendbar.
 
 .. figure:: media/create-session-naming.png
