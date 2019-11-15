@@ -1,8 +1,8 @@
 .. _howto-change-student-passwords-label:
 
-============================
-Schülerverwaltung als Lehrer
-============================
+==============================
+ Schülerverwaltung als Lehrer
+==============================
 
 Als Lehrer hat man in der Schulkonsole mehrere pädagogische und
 verwaltungstechnische Funktionen zur Verfügung.
@@ -99,12 +99,15 @@ erfolgreich erstellt wurde und es erscheint in der Liste der Projekte.
 
 :fixme: Rest der Erstellung der Projekte
 
-Unterrichtskurs einrichten
-==========================
+Unterrichtsfunktionen nutzen
+============================
 
 Die folgende Anleitung brauchst du für alle Unterrichtsfunktionen
 (außer Tauschordner) und dafür musst du nicht in der Klasse
 eingeschrieben sein.
+
+Unterrichtskurs einrichten
+--------------------------
 
 Unter ``KLASSENZIMMER/Unterricht`` klicke auf ``Neuer Kurs`` und gib
 dem Kurs einen Namen. Im Kurs können sowohl Schülerinnen und Schüler
@@ -187,8 +190,7 @@ Benutzerpasswort festlegen
   folgende Dialog enthält einen Hinweis auf die Komplexitätsregeln des
   Passworts.
 
-
-Nach Setzen des Erst- oder Benutzerpasswortes muss nicht mit
+Nach Setzen des Erst- oder Benutzerpasswortes muss *nicht* mit
 `SPEICHERN & ÜBERNEHMEN` abgeschlossen werden.
 
 Zugriff auf WLAN, Internet und Drucker regeln
