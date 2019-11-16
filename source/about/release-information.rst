@@ -87,6 +87,9 @@ Was es so nicht mehr gibt
 
 - OpenVPN Zugänge für Lehrer und Schüler (unklar)
 
+- Druckerquotierung (pykota)
+
+
 .. _knownbugs-label:
 
 Bekannte Probleme
