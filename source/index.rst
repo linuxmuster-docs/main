@@ -61,11 +61,8 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   :maxdepth: 2
   :caption: Pädagogische Funktionen
 
-  classroom/use-internet-in-class/index
-  classroom/use-files-in-class/index
-  classroom/use-horde/index
-  classroom/use-openvpn/index
-  classroom/print-student-passwords/index
+  classroom/access-control
+  classroom/exam-and-transfer
   classroom/check-own-quota/index
   classroom/check-student-quota/index
 
