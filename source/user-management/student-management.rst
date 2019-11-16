@@ -4,6 +4,8 @@
  Schülerverwaltung als Lehrer
 ==============================
 
+.. sectionauthor:: `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
+
 Als Lehrer hat man in der Schulkonsole mehrere pädagogische und
 verwaltungstechnische Funktionen zur Verfügung.
 
