@@ -83,9 +83,9 @@ Was es so nicht mehr gibt
   aktuellen Schüler in einem Unterrichtskurs, dessen Zugriff auf
   Internet, WLAN und Drucker gesteuert wird.
 
-- Internet E-Mail-Versand
+- Internet E-Mail-Versand (möglich, aber nicht dokumentiert)
 
-- OpenVPN Zugänge für Lehrer und Schüler
+- OpenVPN Zugänge für Lehrer und Schüler (unklar)
 
 .. _knownbugs-label:
 
