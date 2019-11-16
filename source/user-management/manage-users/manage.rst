@@ -67,7 +67,7 @@ Dabei ist das letzte Feld optional. Es enthält die im Schulverwaltungsprogramm 
 
 Auch wenn Ihr Schulverwaltungsprogramm keine direkte Ausgabe für die Musterlösung vorsieht, können die Daten meist unter Angabe der benötigten Felder und mit dem Semikolon als Trennzeichen exportiert werden.
 
-Wichtig ist noch, die Kodierung zu wissen, da man diese in der Schulkonsole unter :ref:`schulkonsole-einstellungen` **vor dem ersten Import** einstellen muss. [#f1]_
+Wichtig ist noch, die Kodierung zu wissen, da man diese in der Schulkonsole **vor dem ersten Import** einstellen muss. [#f1]_
 
 Pflege der Schülerdatei
 """""""""""""""""""""""

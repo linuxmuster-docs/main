@@ -4,6 +4,9 @@
  Migration auf linuxmuster 7.0
 ===============================
 
+.. sectionauthor:: `@jeffbeck <https://ask.linuxmuster.net/u/jeffbeck>`_,
+		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
+
 Es wird eine Migration der Benutzerinformationen (Namen, Passwort,
 Projekte), Computerinformationen (``workstations``), der Benutzerdaten
 (``/home``), Tausch- und Projektverzeichnisse und der Geräte-Abbilder

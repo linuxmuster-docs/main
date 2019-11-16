@@ -33,7 +33,6 @@ Weitere Informationen
 ---------------------
 
 - `Hintergrundinformationen zum Thema dieses Kapitels <http://www.linuxmuster.net/flyspray/task/508>`_
-- :ref:`use-horde-label`
 - `Hintergrundinformationen zur Nutzung des internen Webmailers <https://www.linuxmuster.net/wiki/dokumentation:techsheets:hordeconfiguration>`_
 - `Hintergrundinformationen zum Betrieb eines Mailservers <https://www.linuxmuster.net/wiki/dokumentation:techsheets:mailserver>`_
 - `Hintergrundinformationen zur Änderung der Domain <https://www.linuxmuster.net/wiki/dokumentation:techsheets:linuxmustersetup>`_

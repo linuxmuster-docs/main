@@ -1,7 +1,11 @@
+.. _howto-change-own-passwords-label:
+
 ===============================
  Ändern des eigenen Passwortes
 ===============================
- 
+
+.. sectionauthor:: `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
+
 Melde dich an der Schulkonsole an, d.h. besuche mit dem Browser die
 Webseite ``https://server.linuxmuster.lan`` oder die an deiner Schule
 äquivalent vom Administrator eingerichtete Seite und melde dich mit

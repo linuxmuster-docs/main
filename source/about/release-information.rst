@@ -75,7 +75,17 @@ Was erhalten bleibt
   größte Modernisierung hat LINBO schon mit der Version 2.3.x in
   linuxmuster.net 6.2 erfahren.
 
+Was es so nicht mehr gibt
+-------------------------
 
+- Die Unterrichtssteuerung fällt weg, momentan muss man keinen
+  Unterricht starten oder beenden. Stattdessen befinden sich die
+  aktuellen Schüler in einem Unterrichtskurs, dessen Zugriff auf
+  Internet, WLAN und Drucker gesteuert wird.
+
+- Internet E-Mail-Versand (möglich, aber nicht dokumentiert)
+
+- OpenVPN Zugänge für Lehrer und Schüler (unklar)
 
 .. _knownbugs-label:
 
