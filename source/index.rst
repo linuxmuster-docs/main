@@ -7,6 +7,10 @@ Dokumentation beschreibt alle wichtigen Schritte von der Installation,
 der Einrichtung von Windows- und Ubuntu-Rechnern, der Verwaltung von
 Nutzern bis hin zu individuellen Anpassungen.
 
+.. hint::
+
+   Suchst du die Dokumentation zur Version linuxmuster.net 6.2?
+   Die findest du unter http://docs.linuxmuster.net/de/latest.
 
 
 Neben dieser Dokumentation steht Ihnen unsere Community und unser
