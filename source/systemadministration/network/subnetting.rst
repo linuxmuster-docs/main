@@ -1,8 +1,8 @@
 .. _subnetting-basics-label:
 
-=======================
- Netzwerksegmentierung
-=======================
+=============================
+(v6.2)  Netzwerksegmentierung
+=============================
 
 Im `aktuellen Netzbrief
 <http://www.it.kultus-bw.de/,Lde/Startseite/IT-Sicherheit/Netztechnik+_+Netzbrief>`_

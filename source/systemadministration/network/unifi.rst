@@ -1,6 +1,6 @@
-============================
- Eine WLAN-Lösung mit Unifi
-============================
+==================================
+(v6.2)  Eine WLAN-Lösung mit Unifi
+==================================
 
 Eine WLAN-Lösung für Schulen sollte mindestens zwei WLAN-Netze aufspannen. 
 
