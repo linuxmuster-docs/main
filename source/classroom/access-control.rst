@@ -18,7 +18,7 @@ Die Liste mit Schülern des Kurses wird angezeigt. Es gibt
 Auswahlfelder bei den Schülern und oberhalb des ersten Schülers für
 alle Schüler für
 
-- den Prüfungsmodus (siehe nächstes Kapitel)
+- den Prüfungsmodus (siehe :ref:`nächstes Kapitel<exam-and-transfer-label>`)
 - WLAN-Zugang
 - Internetzugang
 - Druckerzugriff
