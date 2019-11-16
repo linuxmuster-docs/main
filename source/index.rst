@@ -2,9 +2,17 @@
  Einführung
 ============
 
-Herzlich Willkommen zur Dokumentation von linuxmuster.net! Diese Dokumentation beschreibt alle wichtigen Schritte von der Installation, der Einrichtung von Windows- und Ubuntu-Rechnern, der Verwaltung von Nutzern bis hin zu individuellen Anpassungen.
+Herzlich Willkommen zur Dokumentation von linuxmuster.net v7! Diese
+Dokumentation beschreibt alle wichtigen Schritte von der Installation,
+der Einrichtung von Windows- und Ubuntu-Rechnern, der Verwaltung von
+Nutzern bis hin zu individuellen Anpassungen.
 
-Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Support helfend Seite. Weitere Informationen dazu finden sie auf der `Website von Linuxmuster.net <http://linuxmuster.net/about/hilfsbereit/>`_.
+
+
+Neben dieser Dokumentation steht Ihnen unsere Community und unser
+Telefon-Support helfend Seite. Weitere Informationen dazu finden sie
+auf der `Website von Linuxmuster.net
+<http://linuxmuster.net/about/hilfsbereit/>`_.
 
 .. toctree::
   :maxdepth: 2
