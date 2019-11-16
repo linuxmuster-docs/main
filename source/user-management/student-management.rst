@@ -14,6 +14,8 @@ Webseite ``https://server.linuxmuster.lan`` oder die an deiner Schule
 äquivalent vom Administrator eingerichtete Seite und melde dich mit
 den Schulkontodaten an.
 
+.. _student-management-overview-label:
+
 Klassen, Projekte, Kurse - Einführung
 =====================================
 
@@ -44,6 +46,7 @@ einen Tauschordner hinausgehen, muss er einen Kurs anlegen und die
 gewünschten Schüler hinzufügen. Die Konfiguration findet sich unter
 `KLASSENZIMMER/Unterricht`.
 
+.. _password-printing-label:
 
 Passwörter der Schüler ausdrucken
 =================================
@@ -59,6 +62,8 @@ Das resultierende PDF enthält Benutzername und Erstpasswort aller
 Schülerinnen und Schüler der Klasse und kann so ausgeteilt werden.
 
 .. figure:: media/print-passwords-example.png
+
+.. _class-and-projectmanagement-label:
 
 In Klassen einschreiben und Projekte anlegen
 ============================================
