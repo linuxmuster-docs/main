@@ -2,11 +2,27 @@
  linuxmuster.net 6.2 Dokumentation
 ===================================
 
-Herzlich Willkommen zur Dokumentation von linuxmuster.net! Diese Dokumentation beschreibt alle wichtigen Schritte von der Installation, der Einrichtung von Windows- und Ubuntu-Rechnern, der Verwaltung von Nutzern bis hin zu individuellen Anpassungen.
+Herzlich Willkommen zur Dokumentation von linuxmuster.net v6.2! Diese
+Dokumentation beschreibt alle wichtigen Schritte von der Installation,
+der Einrichtung von Windows- und Ubuntu-Rechnern, der Verwaltung von
+Nutzern bis hin zu individuellen Anpassungen.
 
-Neben dieser Dokumentation steht dir unsere Community und unser Telefon-Support helfend zur Seite. Weitere Informationen dazu findest du auf der `Website von linuxmuster.net <http://linuxmuster.net/about/hilfsbereit/>`_.
+.. hint::
 
-Zum einen dient die Dokumentation als Schritt-für-Schritt Anleitung für die Einrichtungs- und Administrationsaufgaben, zum anderen als Referenz für die Möglichkeiten der freien Musterlösung linuxmuster.net. Für Lehrkräfte und Schüler*innen werden die pädagogischen Funktionen für den Unterricht und darüberhinaus beschrieben.
+   Suchst du die Dokumentation zur Version linuxmuster.net 7.0 (beta)?
+   Die findest du unter http://docs.linuxmuster.net/de/v7.
+
+Neben dieser Dokumentation steht dir unsere Community und unser
+Telefon-Support helfend zur Seite. Weitere Informationen dazu findest
+du auf der `Website von linuxmuster.net
+<http://linuxmuster.net/about/hilfsbereit/>`_.
+
+Zum einen dient die Dokumentation als Schritt-für-Schritt Anleitung
+für die Einrichtungs- und Administrationsaufgaben, zum anderen als
+Referenz für die Möglichkeiten der freien Musterlösung
+linuxmuster.net. Für Lehrkräfte und Schüler*innen werden die
+pädagogischen Funktionen für den Unterricht und darüberhinaus
+beschrieben.
 
 .. toctree::
   :maxdepth: 2
@@ -14,6 +30,7 @@ Zum einen dient die Dokumentation als Schritt-für-Schritt Anleitung für die Ei
 
   about/about
   about/release-information/index
+  about/newest-release
 
 .. toctree::
   :maxdepth: 2
