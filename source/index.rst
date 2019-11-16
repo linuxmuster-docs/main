@@ -61,8 +61,9 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   :maxdepth: 2
   :caption: Pädagogische Funktionen
 
-  classroom/access-control
+  classroom/webui-basics/index
   classroom/exam-and-transfer
+  classroom/access-control
   classroom/check-own-quota/index
   classroom/check-student-quota/index
 
