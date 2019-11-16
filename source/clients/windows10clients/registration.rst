@@ -75,8 +75,7 @@ Registrierung übernehmen
 ------------------------
 
 Sobald alle Rechner registriert wurden, müssen Sie die Aufnahme der
-Clients entweder in der `Schulkonsole` (:doc:`Bedienungsanleitung Schulkonsole
-<../../appendix/school-console/admin/index>`) oder an der Konsole starten!
+Clients entweder in der `Schulkonsole`  oder an der Konsole starten!
 
 Da der Zugriff auf die Schulkonsole nur von ins System aufgenommenen
 Rechnern erlaubt ist, muss zumindest der erste Rechner händisch importiert werden.

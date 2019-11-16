@@ -11,8 +11,7 @@ https://server:242 in einen Browser als ``administrator`` an. Die
 meisten der Festlegungen können in der *Schulkonsole* im Menü unter
 *Einstellungen* -> *Benutzerverwaltung* gemacht werden.
 
-Lesen Sie die Bedienungsanleitung unter
-:ref:`manual-sk-admin-settings-user-label`, um folgende Einstellungen
+Lesen Sie die Bedienungsanleitung, um folgende Einstellungen
 vorzunehmen:
 
 * Legen Sie fest, ob die Passwortgüte überprüft wird und welche
