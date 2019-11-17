@@ -1,13 +1,13 @@
 .. _install-linux-clients-label:
 
-=====================
-:fixme: Linux Clients
-=====================
+===============
+ Linux Clients
+===============
 
 .. sectionauthor:: `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_
 
 In dieser Anleitung wird beschrieben, wie man Linux auf einer
-Musterarbeitsstation installiert.  Ein fertig vorkonfiguriertes Abbild
+Musterarbeitsstation installiert. Ein fertig vorkonfiguriertes Abbild
 liegt zum Download bei linuxmuster.net bereit und kann sofort auf alle
 Arbeitsstationen verteilt werden.
 
@@ -19,93 +19,75 @@ werden an einer Serverkonsole erledigt.
 
 .. _download-default-cloop:
 
-Herunterladen des Standard-Linuxclients
-=======================================
+Einrichten eines Linuxclients
+=============================
 
-.. hint::
+Mit dem Befehl ``linuxmuster-client`` aus dem Paket
+``linuxmuster-client-servertools`` wird von linuxmuster.net ein Paket
+heruntergeladen, das eine Image-Datei (``cloop-Datei``) und weitere
+dazugehörige Daten enthält. 
 
-   Die vorliegende Dokumentation wird aus der `Entwicklerdokumentation
-   <https://github.com/linuxmuster/linuxmuster-client-adsso>`_
-   genommen und ab und zu aktualisiert und eventuell finden sich dort
-   neuere Informationen.
+Rufe die Liste aller verfügbaren Clientabbilder auf:
+  
+.. code-block:: console
+   
+   server ~ # linuxmuster-client list-available
+   Hole Liste der verfügbaren cloops...OK
+   
+   Imagename                 Info
+   -----------------------------------------------
+   xenial-qgm                Ubuntu 16.04 LTS 64Bit
+   xenial916                 Ubuntu 16.04 LTS 64Bit
+   bionic (empfohlen)        Official Ubuntu 18.04 64bit
+   bionic-qgm                Xubuntu 18.04 64bit (Quenstedt)
+   -----------------------------------------------
 
-
-Lade auf dem Server folgendes Cloop herunter, entpacke es in das
-Verzeichnis `/srv/linbo` und starte den Bittorrent-Dienst neu:
-
-* https://download.linuxmuster.net/client-cloops/v7/ubuntu1804basisClient.tbz mit 2.9GB, MD5: 15b2c4ac88b45ac37b35ba445b27e029
+Lade das Abbild deiner Wahl (hier: `bionic`) herunter mit
 
 .. code-block:: console
 
-   # wget https://download.linuxmuster.net/client-cloops/v7/ubuntu1804basisClient.tbz
-   # tar -xjf ubuntu1804basisClient.tbz -C /srv/linbo
-   # systemctl restart linbo-bittorrent.service
+   server ~ # linuxmuster-client download -c bionic
 
-Standardmäßig wird eine start-Konfiguration für die Rechnergruppe
-"linux" entpackt in der das entpackte Cloop verwendet wird. Jetzt kann
-man einen ersten Arbeitsplatzrechner in diese Rechnergruppe aufnehmen
-oder eine eigene Rechnergruppe mit dem Cloop konfigurieren.
+Es wird geprüft, ob Dateien mit diesem Namen schon existieren, weil
+selbst schon eine Rechnergruppe mit dem Namen angelegt wurde, oder man
+dieses Image zum wiederholten Mal herunterlädt. Dann hat man die
+Möglichkeit die Dateien zu überschreiben oder abzubrechen.
 
-.. 
-  Rufen Sie die Liste aller verfügbaren Clientabbilder auf:
-  
-  .. code-block:: console
-     
-     server ~ # linuxmuster-client -a list-available
-     Hole Liste der verfügbaren cloops...OK
-     
-     Imagename                 Info
-     -----------------------------------------------
-     xenial-qgm                          Ubuntu 16.04 LTS 64Bit
-     trusty714                          Ubuntu 14.04 LTS 64Bit
-     xenial916                          Ubuntu 16.04 LTS 64Bit
-     -----------------------------------------------
-  
-  Laden Sie das Abbild Ihrer Wahl (hier: `xenial916`) herunter mit
-  
-  .. code-block:: console
-  
-     server ~ # linuxmuster-client -a auto -c xenial916 -H xenial
-  
-  Es wird die Rechnergruppe (Hardwareklasse) `xenial` angelegt und mehrere Dateien werden erzeugt. Die wichtigsten sind
-  
-  .. code-block:: bash
-  
-     /var/linbo/start.conf.xenial
-     /var/linbo/xenial916.cloop
-     /var/linbo/xenial916.cloop.postsync
-     /var/linbo/linuxmuster-client/xenial/...
-  
-  Nun kann man Clientrechner in die Rechnergruppe `xenial` aufnehmen. 
-  
-  .. note::
-  
-     Wenn eine Datei bereits existiert, bricht das Programm zunächst
-     ab. Mit der Option ``-f`` wird ein angebrochener Download
-     fortgesetzt und bestehende Dateien werden überschrieben, dabei
-     werden von `/var/linbo/start.conf.xenial` und
-     `/var/linbo/linuxmuster-client/xenial` jeweils automatisch Backups
-     erstellt.
-  
-  Abbild zur Synchronisation einrichten
-  -------------------------------------
-  
-  Der folgende Befehl erzeugt alle nötigen Konfigurationen, so dass das Abbild `xenial` im lokalen Netz einsatzfähig wird:
-  
-  .. code-block:: console
-  
-     server ~ # linuxmuster-client -a configure -h ubuntuclient -p ubuntu1404 -c ubuntuclient.cloop
-  
-  
-  Nun kann man Clientrechner in die Rechnergruppe `ubuntuclient` aufnehmen.
+Die wichtigsten Dateien, die angelegt werden sind
 
-Computer aufnehmen
-==================
+.. code-block:: bash
 
-Der Zielrechner wird in der Schulkonsole aufgenommen
-(z.B. `r100-pc01`) und im Menüpunkt LINBO der richtigen Gruppe
-(z.B. `linux`) zugewiesen, siehe :ref:`add-computer-label`.
-     
+   /var/linbo/start.conf.bionic
+   /var/linbo/bionic.cloop
+   /var/linbo/bionic.cloop.postsync
+   /var/linbo/linuxmuster-client/bionic/common/postsync.d/*
+   
+Ändern des Passworts des Vorlagenbenutzers
+------------------------------------------
+
+Der Vorlagenbenutzer heißt "linuxadmin". Mit folgendem Befehl legt man
+das Passwort des Vorlagenbenutzers im später gestarteten Linuxclient
+fest.
+
+.. code-block:: console
+   
+   server ~ # linuxmuster-client setpassword -c bionic
+   Setze das Passwort des Vorlagenbenutzers "linuxadmin"
+
+
+Abbild zur Synchronisation einrichten
+-------------------------------------
+
+Der folgende Befehl erzeugt alle nötigen Konfigurationen, so dass das
+Abbild `bionic` im lokalen Netz einsatzfähig wird:
+
+.. code-block:: console
+
+   server ~ # linuxmuster-client configure 
+   ... kopieren der ssh-keys des servers ...
+   ... anpassen einiger skripte? ...
+
+
 .. 
   Neue Rechner werden durch direkten Eintrag in die Datei
   ``/etc/linuxmuster/workstations`` und anschließendem Aufruf von
@@ -177,12 +159,19 @@ Der Zielrechner wird in der Schulkonsole aufgenommen
 Masterclient aufnehmen
 ======================
 
+Der erste Arbeitsplatzrechner (hier: Masterclient genannt) kann
+jetzt in die Rechnergruppe "bionic" aufgenommen werden.
+
+Der Zielrechner wird in der Schulkonsole aufgenommen
+(z.B. `r100-pc01`) und im Menüpunkt LINBO der richtigen Gruppe
+(z.B. `bionic`) zugewiesen, siehe :ref:`add-computer-label`.
+     
 Internetverbindung ohne Proxy
 -----------------------------
 
 Zunächst muss der Masterclient ohne Proxy-Authentifizierung ins
 Internet kommen. Die empfohlene Vorgehensweise ist, die IP-Adresse des
-Masterclients (temporär) in die "No-Proxy" Zugriffsliste auf der
+Masterclients (temporär) in die "NoProxy" Zugriffsliste auf der
 Firewall aufzunehmen.
 
 Masterclient synchronisieren
@@ -200,20 +189,36 @@ Reboote nun den Client und verfolge die vollautomatische
 Einrichtung oder trinke eine Tasse deines Lieblingsgetränks.
 
 Nach der Synchronisation und einem weiteren Reboot startet der Client
-und man meldet sich mit ``linuxadmin`` und dem Passwort ``Muster!``
-an. 
+und man meldet sich mit ``linuxadmin`` und selbst gewählten Passwort an.
 
-Masterclient in die Domäne aufnehmen
-------------------------------------
-
-Dann startet man in einem Terminal zunächst ein dist-upgrade und
-führt dann einmalig ein Setup aus.
+Ebenso ist eine Anmeldung per ssh vom Server aus möglich und sinnvoll:
 
 .. code-block:: console
 
-   # sudo linuxmuster-distupgrade
-   # sudo linuxmuster-client-adsso-setup
-   # reboot
+   server~# ssh r100-pc01
+   ...
+   root@r100-pc01~# 
+
+Masterclient erstmalig aufnehmen
+--------------------------------
+
+Man startet in einem Terminal (oder über ssh vom Server aus) den
+Befehl ``sudo linuxmuster-cloop-turnkey``, der das System aktualisiert
+und einmalig die Domänenaufnahme vornimmt.
+
+.. code-block:: console
+
+   # sudo linuxmuster-cloop-turnkey
+
+Neues Image erstellen
+---------------------
+
+Es ist nun notwendig, den Masterclient neu zu starten und von dessen
+Installation ein neues Image zu erstellen.
+
+
+
+
 
 ..  
   Der Ubuntu-Client startet und aufgenommene Benutzer können sich nun am
@@ -232,9 +237,11 @@ führt dann einmalig ein Setup aus.
 Weiterführende Dokumentation
 ============================
 
+- `Entwicklerdokumentation  <https://github.com/linuxmuster/linuxmuster-client-adsso>`_
+- Dokumentation im Supportforum: https://ask.linuxmuster.net/t/linuxclient-v7-mit-profil-zum-testen
 - :ref:`using-linbo-label`
-- Development Dokumentation im Supportforum: https://ask.linuxmuster.net/t/linuxclient-v7-mit-profil-zum-testen
-- Development Dokumentation: https://github.com/linuxmuster/linuxmuster-client-adsso/wiki
 - Howto: Standardclient updaten
 - Todo: are there pages in the Anwenderwiki
 - Todo: are there howtos under docs.linuxmuster.net
+
+
