@@ -35,6 +35,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   systemadministration/network/subnetting
   systemadministration/network/unifi
   systemadministration/printer/index
+  systemadministration/schoolconsole/index
 
 .. toctree::
   :maxdepth: 2
