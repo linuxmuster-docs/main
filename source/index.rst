@@ -47,6 +47,7 @@ auf der `Website von Linuxmuster.net
   systemadministration/network/subnetting
   systemadministration/network/unifi
   systemadministration/printer/index
+  systemadministration/schoolconsole/index
 
 .. toctree::
   :maxdepth: 2
@@ -73,8 +74,9 @@ auf der `Website von Linuxmuster.net
   :maxdepth: 2
   :caption: Pädagogische Funktionen
 
-  classroom/access-control
+  classroom/webui-basics/index
   classroom/exam-and-transfer
+  classroom/access-control
   classroom/check-own-quota/index
   classroom/check-student-quota/index
 
