@@ -53,13 +53,16 @@ stehen. Wenn ein anderer Netzbereich (z.B. der bisher beliebte
 Netzbereich ``10.16.0.0/12``) verwendet werden soll, *muss* an dieser
 Stelle eine Anpassung vorgenommen werden.
 
-Hilfe findet man in der `Entwicklerdokumentation
-<https://github.com/linuxmuster/linuxmuster-base7/wiki/Ersteinrichtung-der-Appliances#serveropsidocker>`_
-oder im Forum.
-
 Systeme, die mit Hilfe der Migration auf linuxmuster.net 7.0 migriert
-werden, sollten den bisherigen Netzbereich behalten.
+werden, sollten den bisherigen Netzbereich behalten. Für die Beibehaltung
+des bisherigen Standards der v6.2 mit einem ``10.16.0.0./12`` Netz gibt
+es den Begriff ``do-it-like-babo``.
 
+.. hint::
+
+   Die Anpassungen zur Netzkonfiguration sind vor der Ausführung der 
+   Erstkonfiguration durchzuführen. Zur Durchführung der Anpassungen
+   folge bitte dem Kapitel :ref:`modify-net-label`.
 
 Erstkonfiguration über die Schulkonsole
 =======================================

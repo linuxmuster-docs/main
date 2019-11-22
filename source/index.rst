@@ -29,10 +29,11 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   :caption: Systemadministration
 
   systemadministration/maintenance/migration
+  systemadministration/network/preliminarysettings/index
+  systemadministration/network/subnetting
   systemadministration/maintenance/keep-lmn-uptodate
   systemadministration/network/default-access-rules
   systemadministration/network/radius
-  systemadministration/network/subnetting
   systemadministration/network/unifi
   systemadministration/printer/index
   systemadministration/schoolconsole/index
