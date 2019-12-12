@@ -261,7 +261,7 @@ Betriebssystem Windows 10 installieren
    :align: center
    :alt: Win10 Choose Second Key Layout
 
-15. Mit Netzwerk verbninden.
+15. Mit Netzwerk verbinden.
 
 .. figure:: media/24_windows-10-clients_connect-network.png
    :align: center
@@ -340,7 +340,8 @@ Betriebssystem Windows 10 installieren
 Global-Registry für Windows 10
 ------------------------------
 
-Die Global-Registry-Patch-Datei ist wichtig für Windows-Maschinen und sollte dort ein Mal ausgeführt worden sein.
+.. attention:: 
+Die Global-Registry-Patch-Datei ist wichtig für Windows-Maschinen und *muss* einmal ausgeführt worden sein.
 
 1. die Global Registry liegt als Vorlage auf der Server-VM in ``\\server\srv\linbo\examples`` und heißt
 ``win10.global.reg`` und muss nach ``\\srv\samba\global\management\global-admin`` kopiert werden, um Sie
