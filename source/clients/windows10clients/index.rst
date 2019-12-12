@@ -340,8 +340,7 @@ Betriebssystem Windows 10 installieren
 Global-Registry für Windows 10
 ------------------------------
 
-.. attention:: 
-Die Global-Registry-Patch-Datei ist wichtig für Windows-Maschinen und *muss* einmal ausgeführt worden sein.
+.. ATTENTION:: Die Global-Registry-Patch-Datei ist wichtig für Windows-Maschinen und **muss** einmal ausgeführt worden sein.
 
 1. die Global Registry liegt als Vorlage auf der Server-VM in ``\\server\srv\linbo\examples`` und heißt
 ``win10.global.reg`` und muss nach ``\\srv\samba\global\management\global-admin`` kopiert werden, um Sie
