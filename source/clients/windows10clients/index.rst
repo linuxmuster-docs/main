@@ -337,7 +337,7 @@ Betriebssystem Windows 10 installieren
 
 29. Installation abschließen.
 
-30. Rechner **nicht herunterfahren**, sondern unbedingt den nächsten Schritt Global Registry-Patch einspielen ausführen.
+30. Rechner **nicht herunterfahren**, sondern unbedingt den nächsten Schritt Global Registry-Patch einspielen ausführen, ansonsten funktioniert Windows nicht mehr und muss neu installiert werden!!
 
 Global-Registry für Windows 10
 ------------------------------
