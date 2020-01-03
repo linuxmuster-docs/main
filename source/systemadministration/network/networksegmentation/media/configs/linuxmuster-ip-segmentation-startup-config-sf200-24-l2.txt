@@ -1,0 +1,175 @@
+config-file-header
+SF200-24-L2-Room200
+v1.4.11.2 / R800_NIK_1_4_216_022
+CLI v1.0
+set system 
+file SSD indicator plaintext
+@
+vlan database
+vlan 5,10,20,30,40,100,200 
+exit
+voice vlan oui-table add 0001e3 Siemens_AG_phone________
+voice vlan oui-table add 00036b Cisco_phone_____________
+voice vlan oui-table add 00096e Avaya___________________
+voice vlan oui-table add 000fe2 H3C_Aolynk______________
+voice vlan oui-table add 0060b9 Philips_and_NEC_AG_phone
+voice vlan oui-table add 00d01e Pingtel_phone___________
+voice vlan oui-table add 00e075 Polycom/Veritel_phone___
+voice vlan oui-table add 00e0bb 3Com_phone______________
+hostname SF200-24-L2-Room200
+ip http authentication aaa login-authentication https local 
+no passwords complexity enable 
+username cisco password encrypted e15d5b7c1818860e2c2a9de7dab6654c0f01da2c privilege 15 
+snmp-server server
+!
+interface vlan 1
+ ip address 192.168.1.250 255.255.255.0 
+ no ip address dhcp 
+!
+interface vlan 5
+ name Internet 
+!
+interface vlan 10
+ name Server 
+!
+interface vlan 20
+ name WLAN-LuL 
+!
+interface vlan 30
+ name WLAN-SuS 
+!
+interface vlan 40
+ name Lehrer 
+!
+interface vlan 100
+ name "Raum 100" 
+!
+interface vlan 200
+ name "Raum 200" 
+!
+interface fastethernet1
+ description "Port VLAN 200 - Raum200"
+ switchport mode access 
+ switchport access vlan 200 
+!
+interface fastethernet2
+ description "Port VLAN 200 - Raum200"
+ switchport mode access 
+ switchport access vlan 200 
+!
+interface fastethernet3
+ description "Port VLAN 200 - Raum200"
+ switchport mode access 
+ switchport access vlan 200 
+!
+interface fastethernet4
+ description "Port VLAN 200 - Raum200"
+ switchport mode access 
+ switchport access vlan 200 
+!
+interface fastethernet5
+ description "Port VLAN 200 - Raum200"
+ switchport mode access 
+ switchport access vlan 200 
+!
+interface fastethernet6
+ description "Port VLAN 200 - Raum200"
+ switchport mode access 
+ switchport access vlan 200 
+!
+interface fastethernet7
+ description "Port VLAN 200 - Raum200"
+ switchport mode access 
+ switchport access vlan 200 
+!
+interface fastethernet8
+ description "Port VLAN 200 - Raum200"
+ switchport mode access 
+ switchport access vlan 200 
+!
+interface fastethernet9
+ description "Port VLAN 200 - Raum200"
+ switchport mode access 
+ switchport access vlan 200 
+!
+interface fastethernet10
+ description "Port VLAN 200 - Raum200"
+ switchport mode access 
+ switchport access vlan 200 
+!
+interface fastethernet11
+ description "Port VLAN 200 - Raum200"
+ switchport mode access 
+ switchport access vlan 200 
+!
+interface fastethernet12
+ description "Port VLAN 200 - Raum200"
+ switchport mode access 
+ switchport access vlan 200 
+!
+interface fastethernet13
+ description "Port VLAN 200 - Raum200"
+ switchport mode access 
+ switchport access vlan 200 
+!
+interface fastethernet14
+ description "Port VLAN 200 - Raum200"
+ switchport mode access 
+ switchport access vlan 200 
+!
+interface fastethernet15
+ description "Port VLAN 200 - Raum200"
+ switchport mode access 
+ switchport access vlan 200 
+!
+interface fastethernet16
+ description "Port VLAN 200 - Raum200"
+ switchport mode access 
+ switchport access vlan 200 
+!
+interface fastethernet17
+ description "Port VLAN 200 - Raum200"
+ switchport mode access 
+ switchport access vlan 200 
+!
+interface fastethernet18
+ description "Port VLAN 200 - Raum200"
+ switchport mode access 
+ switchport access vlan 200 
+!
+interface fastethernet19
+ description "Port VLAN 200 - Raum200"
+ switchport mode access 
+ switchport access vlan 200 
+!
+interface fastethernet20
+ description "Port VLAN 200 - Raum200"
+ switchport mode access 
+ switchport access vlan 200 
+!
+interface fastethernet21
+ switchport mode access 
+!
+interface fastethernet22
+ switchport mode access 
+!
+interface fastethernet23
+ switchport mode access 
+!
+interface fastethernet24
+ description "Port VLAN 1 - Management"
+ switchport mode access 
+!
+interface gigabitethernet1
+ description "Uplink-Trunk within LAP1"
+ channel-group 1 mode auto 
+!
+interface gigabitethernet2
+ description "Uplink-Trunk within LAP1"
+ channel-group 1 mode auto 
+!
+interface Port-channel1
+ description "Uplink Trunk"
+ switchport trunk allowed vlan add 5,10,20,30,40,100,200 
+!
+exit
