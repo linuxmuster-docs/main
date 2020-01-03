@@ -42,7 +42,7 @@ auf der `Website von Linuxmuster.net
 
   systemadministration/maintenance/migration
   systemadministration/network/preliminarysettings/index
-  systemadministration/network/subnetting
+  systemadministration/network/networksegmentation/index
   systemadministration/maintenance/keep-lmn-uptodate
   systemadministration/network/default-access-rules
   systemadministration/network/radius
