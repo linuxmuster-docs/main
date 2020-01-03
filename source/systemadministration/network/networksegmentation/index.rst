@@ -36,8 +36,7 @@ Sollte z.B. WLAN zum Einsatz kommen oder sollen weitere Anforderungen erfüllt w
 Diese Dokumentation greift den Fall einer **Unterteilung des pädagogischen Netzes in sieben Subnetze** auf. Eine Erweiterung/Anpassung um weitere Subnetzbereiche, ist später analog zu dem in dieser Dokumentation beschriebenen Vorgehen möglich. Die Umsetzung der Segmentierung 
 erfordert managebare L2- und L3-Switche, die VLANs verwalten können. Hierzu können Switche beliebiger Hersteller genutzt werden.
 
-Die Konfigurationsschritte für den L3-Switch werden anhand eines Cisco SG300-300-28 und einem Cisco Catalyst (3750) L3-Switch dargstellt. Für die Konfiguration der L2-Switche werden die Schritte anhand eines HP2650 sowie eines Cisco Catalyst 2960 verdeutlicht. Bei dem Einsatz anderer
-Switche sind die dargestellten Konfigurationsschritte entsprechend anzupassen.
+Die Konfigurationsschritte für den L3-Switch werden anhand eines Cisco SG300-300-28 dargstellt. Für die Konfiguration der L2-Switche werden die Schritte anhand eines Cisco SF200-24 verdeutlicht. Bei dem Einsatz anderer Switche sind die dargestellten Konfigurationsschritte entsprechend anzupassen.
 
 Geplante Netzwerkstruktur
 =========================
@@ -246,7 +245,7 @@ Einspielen der vordefinierten Konfiguration
   Für die Aktualisierung ist wesentlich, welche aktuelle FW-Version und welche Boot Version genutzt werden. Bei älteren Versionen
   ist eine Aktualisierung nur über Zwischenschritte möglich. So muss z.B. von FW 1.1.2.0 via 1.3.7.18 via 1.4.75 via 1.4.11.2 aktualisiert 
   werden. Um die die Boot Version zu aktualisieren, ist via TFTP schrittweise die jeweilige rfb-Datei des FW-Images hochzuladen und danach ist 
-  das Gerät jeweils erneut zu starten. Hier der Lnk zur aktuellen Firmware - FW_
+  das Gerät jeweils erneut zu starten. Hier der Link zur aktuellen Firmware - FW_
   
   .. _FW: https://software.cisco.com/download/home/283019617/type/282463181/release/1.4.11.02
 
@@ -496,73 +495,145 @@ Vorbereitung der Switches im Netzwerk
 
 Das genaue Vorgehen kann hier nicht umfassend dokumentiert werden, da es auch von Art und Hersteller der Switche abhängt. 
 
-Exemplarisch erfolgt die Darstellung zur Einrichtung der VLANS auf L2-Switches anhand des Modells Hewlett Packard HP 2650. Für andere Modelle sind die Konfigurationsschritte entsprechend anzupassen.
+Exemplarisch erfolgt die Darstellung zur Einrichtung der VLANS auf L2-Switches anhand des Modells Cisco SF200-24. Für andere Modelle sind die Konfigurationsschritte entsprechend anzupassen.
 
-Hewlett Packard HP2650
-----------------------
+SF200-24 Startup-Config
+-----------------------
 
-.. image:: media/hp2650-01.png
-   :alt: VLANs HP2650
+Für das hier dokumentierte Netzwerkszenario wurde ein Switch des o.g. Model für Raum 200 vorkonfiguriert,
+um das Vorgehen zur Konfiguration der L2-Switche besser darstellen zu können. Die Konfiguration wird zur schnelleren Umsetzung des Szenarios unten bereitgestellt.
+
+   :download:`Startup-config-SF200-24-L2-Raum200 <./media/configs/linuxmuster-ip-segmentation-startup-config-sf200-24-l2.txt>`.
+
+.. hint::
+
+   Die Firmware des Cisco L2-Switches ist vorab auf die aktuellste Version (hier: 1.4.11.2) zu aktualisieren. Ist eine ältere FW-Version noch installiert, so kann es erforderlich sein, die Aktualisierung in Etappen vorzunehmen (z.B. 1.1.2.0 -> 1.3.7.18 -> 1.4.7.5 -> 1.4.11.2). Um die Boot Version zu aktualisieren, ist die RTB-Datei desFW-Images via TFTP auf den Switch zu laden und dieses jeweils neu zu starten. Im Auslieferungszustand ist der Switch via IP 192.168.1.254/24 erreichbar. Login ist im Auslieferungszustand cisco mit dem Kennwort cisco.
+
+.. image:: media/sf200/001_sf200-24_system_summary.png
+   :alt: System Summary SF200-24
    :align: right
 
-Einige HP-Switches haben eine textbasierte "Menükonsole", hier geht man prinzipiell folgendermaßen vor:
+Die heruntergeladene Konfigurationsdatei ist nun auf den Switch zu laden und dieser ist dann neu zu starten.
 
-* Mit telnet/ssh auf die Switchkonsole verbinden 
-* Das Konfigurationsmenü öffnen
-* Nach  ``Switch-Konfiguration``, ``VLAN Menu``, ``VLAN Names`` wechseln und
-  dort die VLans mit den IDs ``5``, ``10``, ``20``, ``30``, ``40``, ``100``, und ``200`` anlegen.
+.. hint::
 
-.. important::
+   Im Auslieferungszustand kann auf den Switch mit der IP 192.168.1.254/24 zugegriffen werden. Login und Kennwort sind cisco.
 
-   Bilder sind noch anzupassen !!
+Im Menü ``Administration --> File Management --> Download/Backup Config`` ist zu Konfigurationsdatei mit ``Durchsuchen`` auszuwählen. Als Ziel ist ``Startup Configuration file`` anzugeben.
 
-.. image:: media/hp2650-02.png
-   :alt: VLANs HP2650
-   :align: center
+.. image:: media/sf200/002_sf200-24_upload_configuration.png
+   :alt: Download Config File SF200-24
+   :align: right
 
-.. image:: media/hp2650-03.png
-   :alt: VLANs HP2650
-   :align: center
+Der erfolgreiche Upload der Konfigurationsdatei wird im Fenster bestätigt.
 
-.. image:: media/hp2650-04.png
-   :alt: VLANs HP2650
-   :align: center
+.. image:: media/sf200/003_sf200-24_upload_configuration_finished.png
+   :alt: Download Config File SF200-24
+   :align: right
 
+Danach ist der Switch neu zu starten (siehe Hinweise wie bei Cisco L3-Switch).
+Nach dem Neustart sind nachstehende Hinweise zur weiteren Konfiguration des Switches zu beachten.
 
-Als VLAN Name ist auf allen Switches ein identischer Name - also z.B. VLAN Server, VLAN WLAN, VLAN DMZ, VLAN Lehrer,
-VLAN Gaeste, VLAN Raum100, VLAN Raum200 - für das jeweilige VLAN anzugeben.
+.. hint::
+   Der Switch weist im VLAN 1 (Access Port 24) die IP 192.168.1.250/24 auf. Benutzer ist ``cisco`` und PW ist ``ciscocisco``. Die ``Ports 25 & 26`` wurden als ``LACP-Bond`` konfiguriert. Dieser arbeitet als Trunk und tagged die Pakete für die VLANs ``5,10,20,30,40,100,200``. In dem dokumentierten Szenario sind die Ports 25&26 des L3-Switches mit den Ports 25 & 26 des L2-Switches zu verbinden.
+
+Durch den Import der Konfigurationsdatei sind bereits alle Konfigurationseinstellungen für den Switch eingetragen, der als einen PC-Raum im VLAN 200 bedeinen soll.
+
+Nachstehend dargestellte Konfigurationsschritte visualisieren die jeweiligen Einstellungen, die so auch manuell eingestellt werden können.
+
+Zunächst sind die VLANs mit identischen IDs und Bezeichnungen auf allen L2 - Switchen analog zum L3-Switch anzulegen.
+
+.. image:: media/sf200/004_sf200-24_vlan_settings.png
+   :alt: VLANs SF200-24
+   :align: right
+
+Danach ist der LACP-Bond bestehend aus den Ports 25 & 26 zu definieren.
+
+.. image:: media/sf200/005_sf200-24_lag_mgmt.png
+   :alt: LACP-Bond SF200-24
+   :align: right
+
+Die Nutzung der jeweiligen Ports wird in der Beschreibung pro Port dokumentiert. 
+
+.. image:: media/sf200/006_sf200-24_port_settings.png
+   :alt: Port Settings SF200-24
+   :align: right
+
+Die VLAN - Nutzung der Ports (Access, Trunk) ist festzulegen.
+
+.. image:: media/sf200/007_sf200-24_vlan_mgmt_port_settings.png
+   :alt: Access, Trunk Ports SF200-24
+   :align: right
+
+Die Ports sind den VLANs zuzuordnen in denen diese arbeiten sollen. So soll der Switch die Ports 1-20 als Access Ports im VLAN 200 nutzen.
+
+.. image:: media/sf200/008_sf200-24_vlan_ports_for_vlan200.png
+   :alt: VLAN Ports VLAn 200 SF200-24
+   :align: right
+
+Die Darstellung der Zuordnung kann pro VLAN kontrolliert werden. Hier als Beispiel die Darstellung für das VLAN 5.
+
+.. image:: media/sf200/009_sf200-24_vlan_lag_vlan5_tagged_examle.png
+   :alt: Tagged Ports VLAN 200 SF200-24
+   :align: right
+
+Die Zuordnun der Ports zu den VLANs inkl. Darstellung deren Funtkion ist im Menü ``VLAn Management --> Port VLAn Membership`` dargestellt.
+
+.. image:: media/sf200/010_sf200-24_vlan_port-to-vlan-membership.png
+   :alt: Port VLAN Membership SF200-24
+   :align: right
+
+Sind alle Ports wie gewünscht konfiguriert, ist die Konfiguration zu speichern (Kopie der running-config auf die startup-config), eine Sicherungskopie anzulegen und abschliessend ist der Switch neu zu starten.
 
 .. important::
 
    Es ist immer das Protokoll 802.1q für die Definition der VLANs anzuwenden. 
    Dies ist ein genormtes Netzwerkprotokoll, das es ermöglicht, sog. tagged VLANs zu definieren.
 
-
   
 Geräte den Subnetzen zuweisen
 =============================
 
-In der Datei ``/etc/linuxmuster/sophomorix/default-school/devices.csv`` sind alle Geräte eingetragen.
-Gemäß der neuen Netzstruktur sind die IP-Adressen entsprechend anzupassen.
-Für die Geräte 
+Auf dem linuxmuster.net Server sind in der Datei ``/etc/linuxmuster/sophomorix/default-school/devices.csv`` alle Geräte eingetragen.
+Gemäß der neuen Netzstruktur sind die IP-Adressen entsprechend anzupassen und danach mit dem Import-Befehl zu übernehmen.
 
-.. :fixme::
+Nachstehende Eintragungen sollen verdeutlichen, wie Geräte den VLANs dieses hier dokumentierten Netzszenarios zugeordnet werden:
 
 .. code::
 
    #Raum;Hostname;Linbo-Klasse;MAC-Adresse;IP-Adresse;;;;Arte des Geraetes;;
-   r100;r100-pc01;win10-efi;00:50:56:3E:A5:7C;10.0.100.1;;;;computer;;2
+   #Raum R200
+   r200;r200-pc01;win10-efi;00:50:56:3E:A5:7A;10.2.200.1;;;;computer;;2
+   r200;r200-pc02;win10-efi;00:50:56:3E:A5:7B;10.2.200.1;;;;computer;;2
+   r200;r200-pc03;win10-efi;00:50:56:3E:A5:7C;10.2.200.1;;;;computer;;2
+   r200;r200-pc04;win10-efi;00:50:56:3E:A5:7D;10.2.200.1;;;;computer;;2
+   # PC im VLAN der Lehrer, PCs stehen im Raum L001
+   l001;l001-pc01;ubu18;01:60:66:3F:A6:1A;10.1.0.1;;;;computer;;2
+   l001;l001-pc02;ubu18;01:60:66:3F:A6:1B;10.1.0.1;;;;computer;;2
+   l001;l001-pc03;ubu18;01:60:66:3F:A6:1C;10.1.0.1;;;;computer;;2
 
-**via GUI ?**
+Die Anpassungen in der Datei sind nun zu speichern. Danach sind die so angepassten Geräte abschliessend mithilfe des nachstehenden 
+Befehls in das System zu übernehmen:
 
+.. code::
+
+   linuxmuster-import-devices
+
+Danach können die Test duchgeführt werden. 
 
 Testen der neuen Netzstruktur
 =============================
 
-.. :fixme::
+Grundsätzlich gilt, dass die einzelnen konfigurierten Netzbereiche unmittelbar zu testen sind. 
+Wurde der L3-Switch konfiguriert der Hypervisor mit den VMs und wurde die geignete Verkabelung hergestellt, so ist zunächst zu testen,
+ob sich alle VMs im Servrntz untereinander erreichen und ob diese Intrenet-Zugriff haben.
 
-   Still to be written
+Die durchzuführenden Tests sind in dem Testszenario in folgende Bereiche zu unterteilen:
 
-
-
+- Verbindung VMs des Hypervisors untereinander via L3-Switch
+- Verbindung zwischen den Switches über das Management VLAN - in diesem Beispiel VLAN 1
+- Verbindung von Endgeräten eines VLANs auf L2 Switch 1 zu linuxmuster.net Server und Verbindung zum Internet
+- Verbindung von Endgeräten von L2 Switch1 via L3 Switch zu Endgeräten des identischen VLANs auf L2 Switch2
+- Linbo-Start der Clients in einem Fachraum (wird den Geräten eine IP über die Netzgrenzen hinweg erfolgreich zugewiesen ?)
+- vom Server aus sind WOL-Pakete an einen Client zu senden, um diesen aufzuwekcen und mit Linbo zu synchronisieren.
 
