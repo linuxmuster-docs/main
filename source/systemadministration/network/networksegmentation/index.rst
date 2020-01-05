@@ -145,7 +145,7 @@ Als Bsp. zur Nutzung des Konsolenbefehls pro virtueller Maschine wird nachstehen
 
 .. code::
   
-   lmn7-appliance -p server -n 10.0.0.1/24 -d meineschule.de -f 10.0.0.254
+   linuxmuster-prepare -p server -n 10.0.0.1/24 -d meineschule.de -f 10.0.0.254
 
 Richtet das Server-Profil wie folgt ein:
  - Hostname server,
@@ -182,13 +182,13 @@ Für o.g. Netzstruktur müsste die Datei folgende Eintragungen aufweisen:
    # Lehrernetz
    10.1.0.0/24;10.1.0.254;10.1.0.1;10.1.0.253;SETUP
    # Schuelernetz Raum 101
-   10.2.101.0/24;10.2.101.254;10.2.101.1;10.2.102.253;SETUP
+   10.2.100.0/24;10.2.100.254;10.2.100.1;10.2.100.253;SETUP
    # Schuelernetz Raum 202
-   10.2.202.0/24;10.2.202.254;10.2.202.1;10.2.202.253;SETUP
+   10.2.200.0/24;10.2.200.254;10.2.200.1;10.2.200.253;SETUP
    # WLAN-Lehrer
-   10.3.0.0/24;10.3.0.254;10.3.0.1;10.3.0.253;SETUP
+   10.3.0.0/24;10.3.0.253;10.3.0.1;10.3.0.252;SETUP
    # WLAN-Schueler
-   10.4.0.0/24;10.4.0.254;10.4.0.1;10.4.0.253;SETUP
+   10.4.0.0/24;10.4.0.253;10.4.0.1;10.4.0.252;SETUP
 
 **Hinweise**:
 
