@@ -73,10 +73,9 @@ Nachstehend soll daher das **Vorgehen zur Vorbereitung einer Segmentierung mit k
 | ``Raum200``  | Zugriff mit Schulungsgeräten im Raum 200     | 10.2.200.0/24               |
 +--------------+----------------------------------------------+-----------------------------+
 
-Für die Unterteilung sind auf **allen** Switches entsprechende VLANs in gleicher Weise einzurichten. Die Verbindungen zwischen den Switches werden als Trunks (bzw. Tagged-Ports) definiert, die über Gerätegrenzen hinweg die Daten den VLANs zuordnen. Die Ports auf den Switches sind jeweils den gewünschten VLANs zuzuordnen (port-basierte VLANs), so dass die an den Ports angeschlossenen Geräte ihre Daten in das zugeordnete VLAN schicken.
+Für die Unterteilung sind auf **allen** Switches entsprechende VLANs in gleicher Weise einzurichten. Die Verbindungen zwischen den Switches werden als Trunks (bzw. Tagged-Ports) definiert, die über Gerätegrenzen hinweg die Daten der VLANs weiterleiten. Die Ports auf den Switches sind i.d.R. als untagged ports zu konfigurieren und den gewünschten VLANs zuzuordnen (port-basierte VLANs), so dass die an den Ports angeschlossenen Geräte ihre Daten in das zugeordnete VLAN schicken.
 
-Der L3-Switch erhält in jedem VLAN die letzte nutzbare IP-Adresse -
-also z.B. für das ``VLAN Lehrer`` die IP `10.1.0.254`, außer dort,
+Der L3-Switch erhält in jedem VLAN die letzte nutzbare IP-Adresse - also z.B. für das ``VLAN Lehrer`` die IP `10.1.0.254`, außer dort,
 wo die Firewall im jeweiligen Subnetz bereits diese IP-Adresse nutzt.
 
 VLAN IDs und Gateway-IPs
@@ -87,7 +86,7 @@ In dieser Dokumentation werden folgende VLAN-IDs und Gateway-IPs verwendet:
 +-------------------+---------+------------------------------------------------------------+
 | VLAN Name         | VLAN ID | Gateway-IP  (+ Firewall-IP )                               |
 +===================+=========+============================================================+
-| ``VLAN Internet`` |     5   | IP aus dem Netz der Firewall an der Schnittstelle WAN [1]_ |
+| ``VLAN Internet`` |     5   | IP aus dem Netz der Firewall an der Schnittstelle WAN      |
 +-------------------+---------+------------------------------------------------------------+
 | ``VLAN Server``   |    10   |  10.0.0.253 (Firewall: 10.0.0.254)                         |
 +-------------------+---------+------------------------------------------------------------+
@@ -102,128 +101,63 @@ In dieser Dokumentation werden folgende VLAN-IDs und Gateway-IPs verwendet:
 | ``VLAN Raum200``  |   200   |  10.2.200.254                                              |
 +-------------------+---------+------------------------------------------------------------+
 
-.. [1] z.B. GW-IP: 192.168.10.14/28 + FW-IP: 192.168.10.2/28 und IP des DSL-Routers: 192.168.10.1/28
+Damit DHCP-Anfragen der Clients aus dem internen Netz an den Server 10.0.0.1 weitergeleitet werden, muss auf dem L3-Switch ein 
+DHCP-Relay-Agent konfiguriert werden. Entsprechende Hinweise finden sich hierzu bei der Dokumentation zur Konfiguration des L3-Switches. 
 
-
-Damit DHCP-Anfragen der Clients aus dem internen Netz an den Server 10.0.0.1 weitergeleitet werden, muss auf dem L3-Switch ein DHCP-Relay-Agent konfiguriert werden. Entsprechende Hinweise finden sich dann bei der Konfiguration des L3-Switches. 
-
-.. image:: media/02_vlan_infrastructure_presets.png
+.. image:: media/01_v7_vlan_infrastructure_virtual.png
    :alt: Struktur: Segmentiertes Netz
    :align: center
 
-.. hint::
- 
-   Grafik ist der neuen Netzstruktur noch anzupassen.
+In der Abbildung wird die Verbindung zwischen dem L3-Switch, dem VM-Host (Hypervisor) und zwei weiteren L2-Switchs dargestellt. 
+Die Verbindungen zwischen dem L3-Switch und dem VM-Host sowie zwischen dem L3-Switch und den beiden L2-Switchen sind **lila als Trunk** (Cisco) bzw. Tagged-Port (HP) gekennzeichnet. Dies bedeutet, dass die Uplinks zwischen den Switchen bzw. zwischen Switch und Hypervisor so zu konfigurieren sind, dass diese als Trunks arbeiten und o.g. VLANs als ``allowed VLANs`` aufweisen, so dass die Daten der VLANs über diese Verbindungen weitergereicht werden. An den L2-Switchen werden die benötigten Ports z.B. für die Computer in einem Fachraum als 
+**untagged ports** definiert und dem jeweiligen VLAN zugeordnet (z.B. für Raum 200 dem VLAN 200). 
 
-In der Abbildung wird die Verbindung zwischen beiden Switches sowie zwischen dem L3-Switch und dem VM-Server lila als Trunk (Cisco) bzw. Tagged-Port (HP) gekennzeichnet. Dies bedeutet, dass der Uplink zwischen den Switches so zu konfigurieren ist, dass die VLAN-Tags weitergereicht werden. An dem L2-Switch werden die Ports dann jeweils den erforderlichen VLANs zugeordnet (port-basierte VLANs). 
+Verfügt der VM-Server über mehrere Netzwerkschnittstellen, so sollten diese gebündelt werden (je nach Hersteller werden hierfür die Begriffe NIC Bonding, LinkAggregation, Etherchannel) verwendet, um den Datendurchsatz zu verbessern. Zudem können so die VMs recht flexibel den einzelnen VLANs zugeordnet werden. Die Bündelung von Ports kann ebenfalls für die Verbindung zwischen den Switches (Uplinks) genutzt werden. In dieser Dokumentation soll die LinkAggregation am Beispiel des L3-Switches verdeutlicht werden. Es werden für 12 Ethernetschnittstellen drei Link-Aggregation Ports bestehend aus jeweils vier Ethernetschnittstellen gebildet, die dann entsprechend konfiguriert werden.
 
-Für einen VM-Server bedeutet dies, dass der Datenverkehr aller VLANs hierin weitergeleitet wird und dann die Daten gemäß ihrem VLAN-Tag der jeweiligen VM zugeordnet werden.
+Überblick zum Vorgehen
+======================
 
-.. image:: media/03_vlan_infrastructure_virtual.png
-   :alt: Struktur: Segmentiertes Netz mit virtualisierten Servern
-   :align: center
+Nachstehende Auflistung gibt einen Überblick zu den erforderlichen Schritten zur Umsetzung der Netzsegmentierung bei einer neu zu installierenden linuxmuster v7. 
 
-.. hint::
- 
-   Grafik ist der neuen Netzstruktur noch anzupassen.
+1) L3-Switch und L2-Switche gemäß nachstehender Anleitung konfigurieren und testen.
 
-Verfügt der VM-Server über mehrere Netzwerkschnittstellen wie in der Abbildung dargestellt, so sollten diese gebündelt werden (je nach Hersteller werden hierfür die Begriffe NIC Bonding, LinkAggregation, Etherchannel) verwendet, um den Datendurchsatz zu verbessern. Dies kann ebenfalls für die Verbindung zwischen den Switches (Uplinks) genutzt werden. In dieser Dokumentation soll die LinkAggregation am Beispiel des L3-Switches verdeutlicht werden. Es werden für 8 Ethernetschnittstellen vier Link-Aggregation Ports bestehend aus jeweils zwei Ethernetschnittstellen gebildet, die dann entsprechend konfiguriert werden.
+2) Hypervisor: LACP-Bonds konfigurieren, VLAN Bridges konfigurieren.
 
-Vorbereitungen
-==============
+3) VMs importieren.
 
-Netzanpassung VMs
------------------
+4) Netzwerkkarten (NICs) der importierten VMs den korrekten VLAN Bridges zuordnen, ggf. weitere NICs hinzufügen und diese den korrekten VLAN Bridges zuordnen
 
-Auf den virtuellen Maschinen (Server, Docker-Host, OPSI und ggf. XOA) sind zunächst die Adressen für das Servernetz mithilfe des Befehls ``linuxmuster-prepare`` auf die gewünschte Struktur anzupassen. 
+5) OPNSense VM starten, und nach dem Login die Netzwerkkarten korrekt zuordnen (MAC-Adressen und VLAn Bridges helfen dabei die richtige Bezeichnung zu identiizieren). 
 
-.. hint::
+6) OPSense VM: Korrekte IPs den NICs zuordnen (LAN: 10.0.0.254/24, WAN: DHCPv4, OPT1: 10.3.0.254/24, OPT2: 10.4.0.254/24, kein Upstream Gateway eintragen)
 
-   siehe zur ausführlichen Darstellung von linuxmuster-prepare :ref:`modify-net-label`
+7) Update OPNSense, danach Reboot
 
-Als Bsp. zur Nutzung des Konsolenbefehls pro virtueller Maschine wird nachstehend die Anpassung des Servers erklärt:
+8) lmn7 Server: NIC - VLAN Brdige für VLAN 10 zuordnen, VM starten, danach apt update && apt dist-upgrade, reboot
 
-.. code::
-  
-   linuxmuster-prepare -p server -n 10.0.0.1/24 -d meineschule.de -f 10.0.0.254
+9) lmn7 Server: Adressbereich anpassen: ``linuxmuster-prepare -s -u -p server -n 10.0.0.1/24 -f 10.0.0.254``
 
-Richtet das Server-Profil wie folgt ein:
- - Hostname server,
- - IP/Bitmask 10.0.0.1/24,
- - Domänenname meineschule.de,
- - Gateway/DNS 10.0.0.254
+10) wie unter 9) gleiches Vorgehen für Opsi-VM und Docker-VM - Achtung: abweichende IPs und profile
 
-Wurde dies für alle verwendeten VMs durchgeführt, ist zu prüfen, ob die VMs im Servernetz sich untereinander erreichen können.
+11) Zugriffs vom Server aus zu Firewall, OPSI und Docker via SSH sicherstellen. Danach alle VMs herunterfahren.
 
-Vom Server aus ist die Erreichbarkeit der Firewall, des Docker-Hosts, der OPSI VM und ggf. der XOA-VM zu prüfen.
+12) Den Konfigurationsstand vier VMs mithilfe von Sanpshots sichern. Danach alle vier VMs starten.
 
-.. code::
+13) linuxmuster-setup auf dem Servr ausführen - muss erfolgreih durchlaufen, alle VMs werden neu gestartet
 
-   ping 10.0.0.254
-   ping 10.0.0.2
-   ping 10.0.0.3
-   ping 10.0.0.4
+14) Erreichbarkeit der VMs und Internet-Zugriff testen, danach wieder snapshots erstellen.
 
-Sofern erfolgreich Antwortpakete zu sehen sind, kann mit dem nächsten Schritt die Einrichtung fortgesetzt werden.
+15) In der Datei subnets.csv die Netzsegmentierung eintragen und speichern.
 
-Weitere Subnetze definieren
----------------------------
+16) Die Segmentierung mithilfe des Befehls linuxmuster-import-subnets übernehmen.
 
-Weitere Subnetze ergänzt man nach dem Setup in der Datei ``/etc/linuxmuster/subnets.csv``.
+17) Kontrolle der Eintragungen in der /etc/netplan/01-netcfg.yaml (siehe Eintragungen später bei der detaillierten Beschreibung)
 
-Für o.g. Netzstruktur müsste die Datei folgende Eintragungen aufweisen:
+18) Tests zur Erreichbarkeit der VMs
 
-.. code::
+19) devices.csv: Weitere Computer in den verschiedenen Netzen eintragen und mit linuxmuster-import-devices übernehmen.
 
-   # Network/Prefix;Router-IP (last available IP);1. Range-IP;Last-Range-IP;SETUP-Flag
-   # Servernetz;VLAN-GW nicht FW IP
-   10.0.0.0/24;10.0.0.253;;;SETUP
-   # add your subnets below
-   # Lehrernetz
-   10.1.0.0/24;10.1.0.254;10.1.0.1;10.1.0.253;SETUP
-   # Schuelernetz Raum 101
-   10.2.100.0/24;10.2.100.254;10.2.100.1;10.2.100.253;SETUP
-   # Schuelernetz Raum 202
-   10.2.200.0/24;10.2.200.254;10.2.200.1;10.2.200.253;SETUP
-   # WLAN-Lehrer
-   10.3.0.0/24;10.3.0.253;10.3.0.1;10.3.0.252;SETUP
-   # WLAN-Schueler
-   10.4.0.0/24;10.4.0.253;10.4.0.1;10.4.0.252;SETUP
-
-**Hinweise**:
-
-* Im zweiten Feld der Zeile steht die IP-Adresse des Subnetz-Gateways, die auf dem Layer-3-Switch für das entsprechende VLAN-Interface konfiguriert werden muss (s.u.).
-
-* Optional können im dritten und vierten Feld Anfangs- und Endadressen für eine freie DHCP-Range angegeben werden.
-
-* Wichtig ist darüberhinaus, dass auf dem Switch für das Servernetz ebenfalls ein VLAN-Interface mit einer IP-Adresse aus dem Subnetz (z.B. 10.0.0.253) als Gateway eingerichtet werden muss.
-
-* Diese IP muss anstatt der Firewall-IP als Router-IP in die Servernetz-Zeile in subnets.csv eingetragen werden.
-
-Subnetze importieren
---------------------
-
-Die geänderte Subnetz-Konfiguration wird mit dem Befehl ``linuxmuster-import-subnets`` übernommen.
-Dabei werden die Subnetze in die DHCP-Server-Konfiguration eingetragen. Außerdem richtet das Skript statische Routen 
-in die Subnetze über die definierten Gateway-Adressen auf Server-, Firewall-, Opsi- und Docker-VMs ein. 
-
-**Firewall-Beispiel**
-
-.. image:: media/04_fw_static_routes.png
-   :alt: Firewall: Routes for subnets
-   :align: center
-
-Auf der Firewall werden zusätzlich ausgehende NAT-Regeln für jedes Subnetz angelegt:
-
-.. image:: media/05_fw_nat_rules.png
-   :alt: Firewall: NAT rules
-   :align: center
-
-und das LAN-Gateway angepasst. 
-
-.. image:: media/06_fw_lan_gateway.png
-   :alt: Firewall: LAN Gateway
-   :align: center
+20) PCs, die in der devices.csv definiert wurden, an die entsprechenden Ports nschliessen und prüfen, ob diese eine IP aus dem gewünschten Bereicherhalten. Erreichbarkeit des Servers, der Firewall und des Internets von Clients aus testen.
 
 Konfiguration des L3-Switches
 =============================
@@ -231,9 +165,9 @@ Konfiguration des L3-Switches
 Konfigurationsschritte auf dem Layer-3-Switch:
 
    * VLANs für jedes Subnetz definieren
-   * VLANs Ports zuordnen
+   * VLANs den Ports zuordnen
    * DHCP-Relaying einrichten (damit DHCP-Broadcasts in alle Subnetze geroutet werden)
-   * UDP-Relaying einrichten (damit WOL über Subnetzgrenzen hinweg funktionier)
+   * UDP-Relaying einrichten (damit WOL über Subnetzgrenzen hinweg funktioniert)
    * Access Listen definieren (Zugriffe in Subnetze werden unterbunden mit Ausnahme des Servernetzes, das aus allen Subnetzen heraus erreicht werden muss)
 
 Einspielen der vordefinierten Konfiguration
@@ -315,22 +249,17 @@ Nach dem Neustart melden Sie sich erneut an dem L3-Switch an und kontrollieren n
 Allgemeine Hinweise zur Konfiguration der Switch-Ports
 ------------------------------------------------------
 
-Für jeden Switchport muss festgelegt werden, ob das VLAN mit der VLAN-ID x ausgeschlossen, getaggt akzeptiert oder Datenpakete, die mit der VLAN-ID x getaggt sind, ungetaggt weitergeleitet werden.
+Für jeden Switchport muss festgelegt werden, in welchem (VLAN-)Modus dieser arbeitet (Access, Trunk, allgemein u.a.) und welche Mitgliedschaft diese im VLAN X aufweist (verboten, aktuell ausgschlossen, Mitglied tagged oder untagged). Bei der Mitgliedschaft werden die Daten mit oder ohne Tag weitergeleitet. Je nach Fall kann es also sein, dass ein Tag hinzugefügt oder gelöscht wird.
 
 * ``Ausgeschlossen``:	Datenpakete, die mit der VLAN-ID x getaggt sind, werden verworfen.
-* ``Getaggt``:		Datenpakete, die mit der VLAN-ID x getaggt sind, werden weitergeleitet.
-* ``Ungetaggt``:	Von Datenpaketen, die mit der VLAN-ID x getaggt sind, wird die VLAN-ID entfernt und zum Client weitergeleitet. Die meisten Clients können mit getaggten Datenpaketen nichts anfangen.
+* ``tagged``:		Datenpakete, die mit der VLAN-ID x getaggt sind, werden weitergeleitet.
+* ``untagged``:	        Von Datenpaketen, die mit der VLAN-ID x getaggt sind, wird die VLAN-ID entfernt und zum Client weitergeleitet. Die meisten Clients können mit getaggten Datenpaketen nichts anfangen.
 * ``PVID``:		Bei einem Port, der mit der PVID x markiert ist, werden alle ungetaggten Datenpakete des Clients mit der VLAN-ID x getaggt.
 
 Anwendung auf das Ausgangsbeispiel
 ----------------------------------
 
 Nachstehende Ausführungen, dienen dazu, die eingespielte Konfiguration zu prüfen oder ggf. Anpassungen für abweichend eingesetzte Hadrware zu erstellen.
-
-.. important::
-
-   Abb. fehlt, die die Nutzung der Ports zu den Uplinks darstellt
-
 
 Definition der Link Aggregation Ports
 -------------------------------------
@@ -577,7 +506,7 @@ Die Darstellung der Zuordnung kann pro VLAN kontrolliert werden. Hier als Beispi
    :alt: Tagged Ports VLAN 200 SF200-24
    :align: right
 
-Die Zuordnun der Ports zu den VLANs inkl. Darstellung deren Funtkion ist im Menü ``VLAn Management --> Port VLAn Membership`` dargestellt.
+Die Zuordnun der Ports zu den VLANs inkl. Darstellung deren Funtkion ist im Menü ``VLAN Management --> Port VLAN Membership`` dargestellt.
 
 .. image:: media/sf200/010_sf200-24_vlan_port-to-vlan-membership.png
    :alt: Port VLAN Membership SF200-24
@@ -590,6 +519,261 @@ Sind alle Ports wie gewünscht konfiguriert, ist die Konfiguration zu speichern 
    Es ist immer das Protokoll 802.1q für die Definition der VLANs anzuwenden. 
    Dies ist ein genormtes Netzwerkprotokoll, das es ermöglicht, sog. tagged VLANs zu definieren.
 
+Netzkonfiguration VM-Host
+=========================
+
+Bonds erstellen
+---------------
+
+Stehen auf dem VM-Host mehrere Netzwerkkarten zur Verfügung, so bietet es sich an, diese als Bonds (Link Aggregation) zu bündeln.
+Auf dem Hypervisor sind dann zudem VLAN Bridges anzulegen.
+
+In dem hier dokumentierten Netzszenario werden vier Netzwerkkarten zu einem Bond zusammengefasst und dann die VLANs eingerichtet. 
+Dies Abbildung der VLANs erfolgt auf dem Hypervisor mithilfe von VLAN Bridges. Eine Netzwerkkarte, die an ein VLAN Bridge angeschlossen wird, erhält den jeweiligen VLAN-TAG.
+
+Auf diese Weise können VMs flexibel den VLANs zugeordnet werden.
+
+Nachstehend wird die Konfiguration des Hypervisors in der Übersicht mithilfe von Proxmox v6 dargestellt. Für andere Hypervisor müssen die Einstellungen entsprechend angepasst werden.
+
+Übersicht der VM-Host Netzwerkkonfiguration
+-------------------------------------------
+
+Nachstehende Abb. zeigt die Netzwerkeinstellungen des Proxmox-Hosts in der Übersicht:   
+
+.. image:: media/02_proxmox_overview_network_configuration.png
+   :alt: Proxmox Network Config Overview
+   :align: right
+
+Diese Konfiguration können entweder durch Eintragungen in der Proxmox-GUI erfolgen, oder durch Ergänzung der Datei ``/etc/network/interfaces`` 
+
+
+.. code::
+
+   auto lo
+   iface lo inet loopback
+  
+   iface enp7s0 inet manual
+
+   iface enp4s0 inet manual
+
+   iface enp5s0 inet manual
+
+   iface enp6s0 inet manual
+
+   auto bond0
+   iface bond0 inet manual
+         bond-slaves enp4s0 enp5s0 enp6s0
+         bond-miimon 100
+         bond-mode 802.3ad
+         bond-xmit-hash-policy layer2+3
+   # 3-port Bond for all VLANs - LACP-Modus
+
+   auto vmbr0
+   iface vmbr0 inet static
+         address 192.168.1.10 # Managment IP Proxmox
+         netmask 255.255.255.0
+         gateway 192.168.1.254
+         bridge-ports enp7s0
+         bridge-stp off
+         bridge-fd 0
+         bridge_maxage 0
+         brdige_ageing 0
+         bridge_maxwait 0
+  #Bridge für 3-fach Bond
+
+  auto vmbr5
+  iface vmbr5 inet manual
+         bridge-ports bond0.5
+         bridge-stp off
+         bridge-fd 0
+         bridge_maxage 0
+         brdige_ageing 0
+         bridge_maxwait 0
+  #VLAN 5 Internet / WAN
+ 
+  auto vmbr10
+  iface vmbr10 inet manual
+         bridge-ports bond0.10
+         bridge-stp off
+         bridge-fd 0
+         bridge_maxage 0
+         brdige_ageing 0
+         bridge_maxwait 0
+  #VLAN 10 Servernetz
+
+  auto vmbr20
+  iface vmbr20 inet manual
+         bridge-ports bond0.20
+         bridge-stp off
+         bridge-fd 0
+         bridge_maxage 0
+         brdige_ageing 0
+         bridge_maxwait 0
+  #VLAN 20 WLAN LuL
+
+  auto vmbr30
+  iface vmbr30 inet manual
+         bridge-ports bond0.30
+         bridge-stp off
+         bridge-fd 0
+         bridge_maxage 0
+         brdige_ageing 0
+         bridge_maxwait 0
+  #VLAN 30 WLAN SuS
+
+  auto vmbr40
+  iface vmbr40 inet manual
+         bridge-ports bond0.40
+         bridge-stp off
+         bridge-fd 0
+         bridge_maxage 0
+         brdige_ageing 0
+         bridge_maxwait 0
+  #VLAN 40 Lehrernetz
+
+  auto vmbr100
+  iface vmbr100 inet manual
+         bridge-ports bond0.100
+         bridge-stp off
+         bridge-fd 0
+         bridge_maxage 0
+         brdige_ageing 0
+         bridge_maxwait 0
+  #VLAN 100 Raum 100
+
+  auto vmbr200
+  iface vmbr200 inet manual
+         bridge-ports bond0.200
+         bridge-stp off
+         bridge-fd 0
+         bridge_maxage 0
+         brdige_ageing 0
+         bridge_maxwait 0
+  #VLAN 200 Raum 200
+
+
+Nach einem Neustart sind die VLAN Bridges nutzbar.
+
+Nach dem Import der VMs sind nun deren Netzwerkkarten den richtigen VLAN Bridges zuzuordnen. Diese muss für alle VMs erfolgen.
+
+Die Anpassung sieht unter Proxmox für OPSense wie folgt aus:
+
+.. image:: media/03_vm_opnsense_vlans_nics.png
+   :alt: Proxmox OPNSense NICS VLAN Bridges
+   :align: right
+
+Netzanpassung VMs
+=================
+
+Zunächst sind in der OPNSense VM die Netzwerkkarten korrekt den VLAN Bridges des Hypervisors zuzuordnen. Danach sind den Netzwerkkarten die korrekten IPs (FW: 10.0.0.254/24, OPT1: 10.3.0.254/24, OPT2: 10.4.0.0.0/24, WAN: DHCPv4) zuzuordnen. Danach ist die VM neu zu starten. 
+
+Danach sind auf den virtuellen Maschinen (Server, Docker-Host, OPSI und ggf. XOA) zunächst die Adressen für das Servernetz mithilfe des Befehls ``linuxmuster-prepare`` auf die gewünschte Struktur anzupassen. 
+
+.. hint::
+
+   siehe zur ausführlichen Darstellung von linuxmuster-prepare :ref:`modify-net-label`
+
+Als Bsp. zur Nutzung des Konsolenbefehls pro virtueller Maschine wird nachstehend die Anpassung des Servers erklärt:
+
+.. code::
+  
+   linuxmuster-prepare -p server -n 10.0.0.1/24 -d meineschule.de -f 10.0.0.254
+   linuxmuster-prepare -p opsi -n 10.0.0.2/24 -d meineschule.de -f 10.0.0.254
+   linuxmuster-prepare -p docker -n 10.0.0.3/24 -d meineschule.de -f 10.0.0.254
+
+Richtet das Server-Profil wie folgt ein (übersetzt für die erste Code-Zeile):
+ - Hostname server,
+ - IP/Bitmask 10.0.0.1/24,
+ - Domänenname meineschule.de,
+ - Gateway/DNS 10.0.0.254
+
+Wurde dies für alle verwendeten VMs durchgeführt, ist zu prüfen, ob die VMs im Servernetz sich untereinander erreichen können.
+
+Vom Server aus ist die Erreichbarkeit der Firewall, des Docker-Hosts, der OPSI VM und ggf. der XOA-VM zu prüfen.
+
+.. code::
+
+   ping 10.0.0.254
+   ping 10.0.0.2
+   ping 10.0.0.3
+   ping 10.0.0.4
+
+Sofern erfolgreich Antwortpakete zu sehen sind, kann mit dem nächsten Schritt die Einrichtung fortgesetzt werden.
+
+Weitere Subnetze definieren
+---------------------------
+
+Weitere Subnetze ergänzt man nach dem Setup in der Datei ``/etc/linuxmuster/subnets.csv``.
+
+Für o.g. Netzstruktur müsste die Datei folgende Eintragungen aufweisen:
+
+.. code::
+
+   # Network/Prefix;Router-IP (last available IP);1. Range-IP;Last-Range-IP;SETUP-Flag
+   # Servernetz;VLAN-GW nicht FW IP
+   10.0.0.0/24;10.0.0.253;10.0.0.100;10.0.0.200;SETUP
+   # add your subnets below
+   # Lehrernetz
+   10.1.0.0/24;10.1.0.254;10.1.0.1;10.1.0.253;SETUP
+   # Schuelernetz Raum 100
+   10.2.100.0/24;10.2.100.254;10.2.100.1;10.2.100.253;SETUP
+   # Schuelernetz Raum 200
+   10.2.200.0/24;10.2.200.254;10.2.200.1;10.2.200.253;SETUP
+   # WLAN-Lehrer
+   10.3.0.0/24;10.3.0.253;10.3.0.1;10.3.0.252;SETUP
+   # WLAN-Schueler
+   10.4.0.0/24;10.4.0.253;10.4.0.1;10.4.0.252;SETUP
+
+**Hinweise**:
+
+* Im zweiten Feld der Zeile steht die IP-Adresse des Subnetz-Gateways, die auf dem Layer-3-Switch für das entsprechende VLAN-Interface konfiguriert werden muss (s.o. - bereits auf dem L3-Swich erfolgt).
+
+* Optional können im dritten und vierten Feld Anfangs- und Endadressen für eine freie DHCP-Range angegeben werden.
+
+* Wichtig ist darüberhinaus, dass auf dem Switch für das Servernetz ebenfalls ein VLAN-Interface mit einer IP-Adresse aus dem Subnetz (z.B. 10.0.0.253) als Gateway eingerichtet werden muss.
+
+* Diese IP muss anstatt der Firewall-IP als Router-IP in die Servernetz-Zeile in subnets.csv eingetragen werden.
+
+Subnetze importieren
+--------------------
+
+Die geänderte Subnetz-Konfiguration wird mit dem Befehl ``linuxmuster-import-subnets`` übernommen.
+Dabei werden die Subnetze in die DHCP-Server-Konfiguration eingetragen. Außerdem richtet das Skript statische Routen 
+in die Subnetze über die definierten Gateway-Adressen auf Server-, Firewall-, Opsi- und Docker-VMs ein. 
+
+**Firewall-Beispiel**
+
+.. image:: media/04_fw_static_routes.png
+   :alt: Firewall: Routes for subnets
+   :align: center
+
+Auf der Firewall werden zusätzlich ausgehende NAT-Regeln für jedes Subnetz angelegt:
+
+.. image:: media/05_fw_nat_rules.png
+   :alt: Firewall: NAT rules
+   :align: center
+
+und das LAN-Gateway angepasst. 
+
+.. image:: media/06_fw_lan_gateway.png
+   :alt: Firewall: LAN Gateway
+   :align: center
+
+netplan auf VMs prüfen
+----------------------
+
+Der Import ändert die Netzwerkeintragungen der VMs. Nach einem Neustart der VMs ist für den Server-, OPSI- und Docker-VM zu prüfen, 
+ob die Eintragungen in der Datei ``/etc/netplan/01-netcfg.yaml`` den nachstehenden Eintragungen entsprechen:
+
+.. image:: media/07_netplan_01-netcfg_yaml_server_subnets.png
+   :alt: Netplan Network Config
+   :align: center
+
+Wichtig ist, dass die Routen zu den jeweileigen Netzen via der IP 10.0.0.253 (IP des VLAN 10 auf dem L3-Switch) geleitet werden. Das Standard-Gateway bleibt hingegen die Firewall 10.0.0.254.
+
+Sollten hier Abweichungen festgestellt werden, so sind diese so anzupassen, dass die o.g. Eintragungen vorhanden sind. Die Änderungen werden dann mit dem Befehl ``netplan apply`` angewendet.
+
+Es sollte nun die Erreichbarkeit der Server im Servernetz und der Zugrff der Server-VMs auf das Internet getestet werden. Sollte dies funktionieren, so können nun die Geräte eingetragen werden.
   
 Geräte den Subnetzen zuweisen
 =============================
@@ -602,15 +786,20 @@ Nachstehende Eintragungen sollen verdeutlichen, wie Geräte den VLANs dieses hie
 .. code::
 
    #Raum;Hostname;Linbo-Klasse;MAC-Adresse;IP-Adresse;;;;Arte des Geraetes;;
+   # Servernetz;
+   server;server;nopxe;aa:bb:cc:dd:ee:11;10.0.0.1;;;;server;;0;;;;SETUP;
+   server;firewall;nopxe;11:11:11:22:22:22;10.0.0.254;;;;server;;0;;;;SETUP;
+   server;opsi;nopxe;33:22:11:AA:BB:CC;10.0.0.2;;;;server;;0;;;;SETUP;   
+   server;docker;nopxe;D2:31:22:11:A1:22:33;10.0.0.3;;;;server;;0;;;;SETUP;
    #Raum R200
    r200;r200-pc01;win10-efi;00:50:56:3E:A5:7A;10.2.200.1;;;;computer;;2
-   r200;r200-pc02;win10-efi;00:50:56:3E:A5:7B;10.2.200.1;;;;computer;;2
-   r200;r200-pc03;win10-efi;00:50:56:3E:A5:7C;10.2.200.1;;;;computer;;2
-   r200;r200-pc04;win10-efi;00:50:56:3E:A5:7D;10.2.200.1;;;;computer;;2
+   r200;r200-pc02;win10-efi;00:50:56:3E:A5:7B;10.2.200.2;;;;computer;;2
+   r200;r200-pc03;win10-efi;00:50:56:3E:A5:7C;10.2.200.13;;;computer;;2
+   r200;r200-pc04;win10-efi;00:50:56:3E:A5:7D;10.2.200.1;4;;computer;;2
    # PC im VLAN der Lehrer, PCs stehen im Raum L001
    l001;l001-pc01;ubu18;01:60:66:3F:A6:1A;10.1.0.1;;;;computer;;2
-   l001;l001-pc02;ubu18;01:60:66:3F:A6:1B;10.1.0.1;;;;computer;;2
-   l001;l001-pc03;ubu18;01:60:66:3F:A6:1C;10.1.0.1;;;;computer;;2
+   l001;l001-pc02;ubu18;01:60:66:3F:A6:1B;10.1.0.2;;;;computer;;2
+   l001;l001-pc03;ubu18;01:60:66:3F:A6:1C;10.1.0.3;;;;computer;;2
 
 Die Anpassungen in der Datei sind nun zu speichern. Danach sind die so angepassten Geräte abschliessend mithilfe des nachstehenden 
 Befehls in das System zu übernehmen:
@@ -619,14 +808,20 @@ Befehls in das System zu übernehmen:
 
    linuxmuster-import-devices
 
-Danach können die Test duchgeführt werden. 
+Danach müssen Clients in Raum 200 und im Lehrernetz angeschlossen werden. Diese müssen o.g. IP erhalten. ist dies der Fall, kann ein Linbo-Image erstellt und weitere Tests (Anmeldung, Zugriff auf den Server, Internet-Zugriff etc.) ausgeführt werden.
+
+Erhält ein Client die korrekte IP so ist dies unter Linbo wie folgt zu erkennen:
+
+.. image:: media/08_lmn7_pxe_client_ip_raum200.png
+   :alt: IP PXE Client 
+   :align: center
 
 Testen der neuen Netzstruktur
 =============================
 
 Grundsätzlich gilt, dass die einzelnen konfigurierten Netzbereiche unmittelbar zu testen sind. 
-Wurde der L3-Switch konfiguriert der Hypervisor mit den VMs und wurde die geignete Verkabelung hergestellt, so ist zunächst zu testen,
-ob sich alle VMs im Servrntz untereinander erreichen und ob diese Intrenet-Zugriff haben.
+Wurde der L3-Switch und der Hypervisor mit den VMs konfiguriert und wurde die geignete Verkabelung hergestellt, so ist zunächst zu testen,
+ob sich alle VMs im Servernetz untereinander erreichen und ob diese Internet-Zugriff haben.
 
 Die durchzuführenden Tests sind in dem Testszenario in folgende Bereiche zu unterteilen:
 
@@ -635,5 +830,5 @@ Die durchzuführenden Tests sind in dem Testszenario in folgende Bereiche zu unt
 - Verbindung von Endgeräten eines VLANs auf L2 Switch 1 zu linuxmuster.net Server und Verbindung zum Internet
 - Verbindung von Endgeräten von L2 Switch1 via L3 Switch zu Endgeräten des identischen VLANs auf L2 Switch2
 - Linbo-Start der Clients in einem Fachraum (wird den Geräten eine IP über die Netzgrenzen hinweg erfolgreich zugewiesen ?)
-- vom Server aus sind WOL-Pakete an einen Client zu senden, um diesen aufzuwekcen und mit Linbo zu synchronisieren.
+- vom Server aus sind WOL-Pakete an einen Client zu senden, um diesen aufzuwecken und mit Linbo zu synchronisieren.
 
