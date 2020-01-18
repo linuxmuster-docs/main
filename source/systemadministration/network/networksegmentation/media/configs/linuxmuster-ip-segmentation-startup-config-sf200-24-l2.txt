@@ -5,8 +5,10 @@ CLI v1.0
 set system 
 file SSD indicator plaintext
 @
+no cdp run 
+spanning-tree loopback-guard
 vlan database
-vlan 5,10,20,30,40,100,200 
+vlan 3,5,10,20,30,40,100,200 
 exit
 voice vlan oui-table add 0001e3 Siemens_AG_phone________
 voice vlan oui-table add 00036b Cisco_phone_____________
@@ -16,13 +18,17 @@ voice vlan oui-table add 0060b9 Philips_and_NEC_AG_phone
 voice vlan oui-table add 00d01e Pingtel_phone___________
 voice vlan oui-table add 00e075 Polycom/Veritel_phone___
 voice vlan oui-table add 00e0bb 3Com_phone______________
+no boot host auto-config 
+no boot host auto-update 
 hostname SF200-24-L2-Room200
 ip http authentication aaa login-authentication https local 
 no passwords complexity enable 
-username cisco password encrypted e15d5b7c1818860e2c2a9de7dab6654c0f01da2c privilege 15 
+username cisco password encrypted 7af78c911d5b48bea1dc2449d9d89513abeb4be5 privilege 15 
 snmp-server server
+no ip domain lookup
 !
-interface vlan 1
+interface vlan 3
+ name "Management VLAN" 
  ip address 192.168.1.250 255.255.255.0 
  no ip address dhcp 
 !
@@ -151,14 +157,19 @@ interface fastethernet21
  switchport mode access 
 !
 interface fastethernet22
+ description "VLAN10 Server"
  switchport mode access 
+ switchport access vlan 10 
 !
 interface fastethernet23
+ description "VLAN 10 Server"
  switchport mode access 
+ switchport access vlan 10 
 !
 interface fastethernet24
- description "Port VLAN 1 - Management"
+ description "Port VLAN 3 - Management"
  switchport mode access 
+ switchport access vlan 3 
 !
 interface gigabitethernet1
  description "Uplink-Trunk within LAP1"
@@ -171,5 +182,6 @@ interface gigabitethernet2
 interface Port-channel1
  description "Uplink Trunk"
  switchport trunk allowed vlan add 5,10,20,30,40,100,200 
+ switchport trunk native vlan 3 
 !
 exit
