@@ -100,6 +100,11 @@ In dieser Dokumentation werden folgende VLAN-IDs und Gateway-IPs verwendet:
 | ``VLAN Raum200``  |   200   |  10.2.200.254                                              |
 +-------------------+---------+------------------------------------------------------------+
 
+.. hint::
+   Das VLAN 3 wird auf den Switchen zusätzlich eingerichtet und als Management VLAN für die Netzkomponenten genutzt.
+   Das Default VLAN 1 wird hingegen deaktiviert. In diesem VLAN 3 wird das Netz 192.168.1.0/24 genutzt. Der L3-Switch
+   erhält die Adresse 192.168.1.254/24, der L2-Switch die Adresse 192.168.1.250/24.
+
 Damit DHCP-Anfragen der Clients aus dem internen Netz an den Server 10.0.0.1 weitergeleitet werden, muss auf dem L3-Switch ein 
 DHCP-Relay-Agent konfiguriert werden. Entsprechende Hinweise finden sich hierzu bei der Dokumentation zur Konfiguration des L3-Switches. 
 
@@ -203,8 +208,8 @@ Upload der Konfiguration: Schritt für Schritt
 .. hint::
 
    Im Auslieferungszustand kann auf den Cisco Switch mit der IP 192.168.1.254/24 zugegriffen werden. Diese IP wird in 
-   dieser Konfiguration dem VLAN 1 (Management) zugewiesen, so dass nach Einspielen der Konfiguration und dem Reboot 
-   weiterhin mit dieser Adresse die Konfiguration angepasst werden kann.
+   dieser Konfiguration dem VLAN 3 (Management) zugewiesen, so dass nach Einspielen der Konfiguration und dem Reboot 
+   weiterhin mit dieser Adresse die Konfiguration über den access port 24 angepasst werden kann.
 
 .. image:: media/sg300/002_sg300_login.png
    :alt: 
@@ -282,6 +287,8 @@ Definition der Access Ports (port-based VLAN)
 
 * ``Port 7``: Port wird dem VLAN 5 (Internet VLAN) zugeordnet (untagged / PVID 5).
 * ``Port 19``: Port wird dem VLAN 5 (Internet VLAN) zugeordnet (untagged / PVID 5).
+* ``Port 24``: Port wird dem VLAN 3 (Management VLAN) zugeordnet (untagged / PVID 3).
+
 
 Werden auf dem Switch weitere Ports z.B. für Testzwecke im Server VLAN benötigt, so sind diese unter ``VLAN Management --> Interface Settings`` als Access-Ports und unter ``Port-to-VLAN`` dem korrekten VLAN zuzordnen. Nachstehende Abbildungen stellen die Zuordnung zu VLAN 1 dar. 
 
@@ -297,10 +304,12 @@ Werden auf dem Switch weitere Ports z.B. für Testzwecke im Server VLAN benötig
 Definition / Zuordnung der VLANs
 --------------------------------
 
-* ``LAG1 (Port 1,2,13,14)``: Der Hypervisor ist über vier Netzwerkkabel mit Port 1,2,13,14 des Switches verbunden. Auf der Seite des Hypervisor sind ebenfalls vier Ports durch LinkAggregation definiert. LAG1 ist getaggtes Mitglied der VLANs 5,10,20,30,40,100,200.
-* ``LAG2 (Port 3,4,15,16)``: Der zweite Hypervisor ist über vier Netzwerkkabel mit Port 3,4,15,16 des Switches verbunden. Auf der Seite des Hypervisor sind ebenfalls vier Ports durch LinkAggregation definiert. LAG1 ist getaggtes Mitglied der VLANs 5,10,20,30,40,100,200.
-* ``LAG3 (Port 25 - 28)``: Uplink zu anderen L2-Switches via vier Ports. Auf den L2-Switches sind ebenfalls vier Ports durch LinkAggregation definiert. LA32 ist getaggtes Mitglied der VLANs 5, 10,20,30,40,100,200.
+* ``LAG1 (Port 1,2,13,14)``: Der Hypervisor ist über vier Netzwerkkabel mit Port 1,2,13,14 des Switches verbunden. Auf der Seite des Hypervisor sind ebenfalls vier Ports durch LinkAggregation definiert. LAG1 ist getaggtes Mitglied der VLANs 3,5,10,20,30,40,100,200.
+* ``LAG2 (Port 3,4,15,16)``: Der zweite Hypervisor ist über vier Netzwerkkabel mit Port 3,4,15,16 des Switches verbunden. Auf der Seite des Hypervisor sind ebenfalls vier Ports durch LinkAggregation definiert. LAG1 ist getaggtes Mitglied der VLANs 3,5,10,20,30,40,100,200.
+* ``LAG3 (Port 25 - 28)``: Uplink zu anderen L2-Switches via vier Ports. Auf den L2-Switches sind ebenfalls vier Ports durch LinkAggregation definiert. LA32 ist getaggtes Mitglied der VLANs 3,5,10,20,30,40,100,200.
 * ``Port 7,19``: Ports werden dem VLAN 5 (Internet VLAN) zugeordnet (untagged / PVID 5).
+* ``Port 24``: Port wird dem VLAN 3 (Management VLAN) zugeordnet (untagged / PVID 3).
+
 
 .. image:: media/sg300/011_sg300_ports_vlan_membership_overview_part1.png
    :alt: 
@@ -314,11 +323,11 @@ Definition / Zuordnung der VLANs
    :alt: 
    :align: center
 
-.. image:: media/sg300/014_sg300_vlan_interface_settings.png
+.. image:: media/sg300/015_sg300_vlan_interface_IP_settings.png
    :alt: 
    :align: center
 
-.. image:: media/sg300/015_sg300_vlan_interface_IP_settings.png
+.. image:: media/sg300/014_sg300_vlan_interface_settings.png
    :alt: 
    :align: center
 
@@ -394,18 +403,24 @@ Um Wake-on-LAN über Subnetze hinweg zu nutzen, muss ein sog. UDP-Relaying einge
    :alt: 
    :align: center
 
+Für das DHCP-Relaying/Snooping muss zudem die Option 82 aktiviert werden.
+
+.. image:: media/sg300/023_sg300_dhcp_snooping_properties.png
+   :alt: 
+   :align: center
+
 Nachdem Sie alle Einstellungen kontrolliert und ggf. angepasst haben, speichern Sie die aktuelle Konfiguration. Dies erledigen Sie bei dem Cisco-Switch dadruch, dass Sie die Konfiguration aus dem RAM (running-config) auf die NVRAM-Konfiguration kopieren (startup-config).
 
 Weitere L2-Switches mit VLANs anbinden
 ======================================
 
 In Vorbereitung auf das Subnetting sind auf allen Switches im Netzwerk (in allen Gebäuden)
-die VLANs mit den IDs ``5``, ``10``, ``20``, ``30``, ``40``, ``100``, und ``200`` anzulegen, damit später
+die VLANs mit den IDs ``3``, ``5``, ``10``, ``20``, ``30``, ``40``, ``100``, und ``200`` anzulegen, damit später
 die Portkonfiguration aller Switches angepasst werden kann.
 
 In der hier dargestellten Konfiguration des L3-Switches gibt es drei LAG-Ports. Ein LAG-Port (25-28) ist dazu gedacht, eine Anbindung zu weiteren L2-Switches zu ermöglichen, die ebenfalls für die Nutzung der VLANs zu konfigurieren sind. Dieser LAG-Port ist als Trunk konfiguriert. 
 
-Wesentlich ist, dass alle VLANs, die auf dem L3-Switch eingerichtet wurden, ebenfalls auf allen L2-Switches erstellt werden. Danach muss eine LinkAggregation mit vier Ports erstellt werden, die die Anbindung zum LAG-Port des L3-Switches zur Verfügung stellt. Dieser LAG-Port auf dem L2-Switch ist dann als Trunk zu definieren, der alle VLANs (5,10,20,40,100,200) tagged.
+Wesentlich ist, dass alle VLANs, die auf dem L3-Switch eingerichtet wurden, ebenfalls auf allen L2-Switches erstellt werden. Danach muss eine LinkAggregation mit vier Ports erstellt werden, die die Anbindung zum LAG-Port des L3-Switches zur Verfügung stellt. Dieser LAG-Port auf dem L2-Switch ist dann als Trunk zu definieren, der alle VLANs (3,5,10,20,40,100,200) tagged.
 
 Danach werden die einzelnen Ports auf den jeweiligen L2-Switches als untagged ports einem der gewünschten VLANs zugeordnet (port-based VLANs). Die Clients sind dann entsprechend auf den gewünschten VLAN-Port anzuschliessen.
 
@@ -456,19 +471,17 @@ Im Menü ``Administration --> File Management --> Download/Backup Config`` ist z
 
 Der erfolgreiche Upload der Konfigurationsdatei wird im Fenster bestätigt.
 
-
 .. image:: media/sf200/003_sf200-24_upload_configuration_finished.png
    :alt: Download Config File SF200-24
    :align: right
-
 
 Danach ist der Switch neu zu starten (siehe Hinweise wie bei Cisco L3-Switch).
 Nach dem Neustart sind nachstehende Hinweise zur weiteren Konfiguration des Switches zu beachten.
 
 .. hint::
-   Der Switch weist im VLAN 1 (Access Port 24) die IP 192.168.1.250/24 auf. Benutzer ist ``cisco`` und PW ist ``ciscocisco``. Die ``Ports 25 & 26`` wurden als ``LACP-Bond`` konfiguriert. Dieser arbeitet als Trunk und tagged die Pakete für die VLANs ``5,10,20,30,40,100,200``. In dem dokumentierten Szenario sind die Ports 25&26 des L3-Switches mit den Ports 25 & 26 des L2-Switches zu verbinden.
+   Der Switch weist im VLAN 3 (access port 24) die IP 192.168.1.250/24 auf. Benutzer ist ``cisco`` und PW ist ``cisco``. Die ``Ports 25 & 26`` wurden als ``LACP-Bond`` konfiguriert. Dieser arbeitet als Trunk und tagged die Pakete für die VLANs ``3,5,10,20,30,40,100,200``. In dem dokumentierten Szenario sind die Ports 25&26 des L3-Switches mit den Ports 25 & 26 des L2-Switches zu verbinden.
 
-Durch den Import der Konfigurationsdatei sind bereits alle Konfigurationseinstellungen für den Switch eingetragen, der als einen PC-Raum im VLAN 200 bedeinen soll.
+Durch den Import der Konfigurationsdatei sind bereits alle Konfigurationseinstellungen für den Switch eingetragen, der als Raum-Switch für Raum 200 (VLAN 200) für einen PC-Raum dienen soll.
 
 Nachstehend dargestellte Konfigurationsschritte visualisieren die jeweiligen Einstellungen, die so auch manuell eingestellt werden können.
 
@@ -498,11 +511,9 @@ Die VLAN - Nutzung der Ports (Access, Trunk) ist festzulegen.
 
 Die Ports sind den VLANs zuzuordnen in denen diese arbeiten sollen. So soll der Switch die Ports 1-20 als Access Ports im VLAN 200 nutzen.
 
-
 .. image:: media/sf200/008_sf200-24_vlan_ports_for_vlan200.png
    :alt: VLAN Ports VLAn 200 SF200-24
    :align: right
-
 
 Die Darstellung der Zuordnung kann pro VLAN kontrolliert werden. Hier als Beispiel die Darstellung für das VLAN 5.
 
