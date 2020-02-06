@@ -33,7 +33,7 @@ Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-Suppor
   systemadministration/network/networksegmentation/index
   systemadministration/maintenance/keep-lmn-uptodate
   systemadministration/network/default-access-rules
-  systemadministration/network/radius
+  systemadministration/network/radius/index
   systemadministration/network/unifi
   systemadministration/printer/index
   systemadministration/schoolconsole/index
