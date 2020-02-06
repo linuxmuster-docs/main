@@ -45,7 +45,7 @@ auf der `Website von Linuxmuster.net
   systemadministration/network/networksegmentation/index
   systemadministration/maintenance/keep-lmn-uptodate
   systemadministration/network/default-access-rules
-  systemadministration/network/radius
+  systemadministration/network/radius/index
   systemadministration/network/unifi
   systemadministration/printer/index
   systemadministration/schoolconsole/index

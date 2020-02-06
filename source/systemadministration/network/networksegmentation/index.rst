@@ -25,11 +25,17 @@ Im **pädagogischen Schulnetz dürfen grundsätzlich keine personenbezogenen Dat
 
 In dieser Dokumentation geht es im Folgenden **ausschließlich um den Betrieb des pädagogischen Netzes**.
 
-Es wird empfohlen, das pädagogische Netz wiederum in mindestens drei Bereiche / Subnetze zu unterteilen: 
+Es wird empfohlen, das **pädagogische Netz** wiederum in mindestens drei Bereiche / Subnetze zu unterteilen: 
 
 * Lehrernetz
 * Schülernetz
 * Servernetz
+
+.. hint::
+ 
+   Das Lehrernetz im pädagogischen Netz besitzt aufgrund von Firewallregeln keine eingehenden Verbindungen vom Schülernetz aus. Es 
+   besteht aufgrund des Zugangsschutzes ein Sonderstatus. Ein Verarbeitung von **personenbezogenen Daten** in diesem Segment darf 
+   im pädagogischen Netz **nicht erfolgen!**
 
 Sollte z.B. WLAN zum Einsatz kommen oder sollen weitere Anforderungen erfüllt werden, so werden weitere Subnetze empfohlen.
 
