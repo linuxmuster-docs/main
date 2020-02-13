@@ -523,11 +523,9 @@ Linuxmuster.net sieht vor, dass **Programminstallationen von "global-admin"** du
 .. attention::
               Der Neustart ist notwenig, da das Profil des "global-admin" ansonsten nicht kopiert werden kann bzw. die Registry-Zweige für den global-admin freizugeben.
 
-2. Melden Sie sich als lokaler User mit Admin-Rechten an dem Rechner an
-3. Kopieren Sie die Datei https://www.forensit.com/Downloads/Support/DefProf.zip und entpacken sie nach ``C:\Windows\system32\Defprof.exe``. Befindet sich Defprof.exe schon in ``C:\Windows\system32\`` geht es mit Schritt 4. weiter.
-4. Führen Sie den Befehl ``C:>defprof global-admin`` aus. Die Nachfrage bei der Ausführung ist zu bejahen.
+2. Melden Sie sich als ``lokaler User mit Admin-Rechten`` an dem Rechner an
+3. Laden Sie die Datei https://www.forensit.com/Downloads/Support/DefProf.msi herunter. Führen Sie diese aus. Das Programm DefProf.exe befindet sich dann in entpackter Form in Ihrem Download-Verzeichnis. Kopieren Sie dieses Programm in das Verzeichnis: ``C:\Windows\system32\``. 
+4. Führen Sie unter Win10 die PowerShell als Admin aus. Wechseln Sie auf Laufwerk C:\ und führen Sie den Befehl ``C:\> defprof global-admin`` aus. Die Nachfrage bei der Ausführung ist zu bejahen.
 5. Melden Sie sich als lokaler User ab und als global-admin an
 6. Fahren Sie den Rechner herunter
 7. Starten Sie den Rechner neu und erstellen ein neues Image mit linbo
-
-
