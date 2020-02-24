@@ -1,32 +1,31 @@
-.. Installationsleitfaden documentation master file, created by
-   sphinx-quickstart on Sat Nov  7 15:29:20 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 .. _howto-user-management:
 
-==============================================
-(v6.2) Benutzer verwalten mit der Schulkonsole
-==============================================
+=======================================
+Benutzer verwalten mit der Schulkonsole
+=======================================
 
-Dieses Dokument gibt Schritt-für-Schritt-Anleitungen für die
-wichtigsten Tätigkeiten, die der Netzwerkbetreuer im Hinblick auf die
-Benutzer mit der *Schulkonsole* durchführt.
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
-In der Schulkonsole werden grundlegende Einstellungen vorgenommen, die
-Benutzerlisten gepflegt und geprüft sowie Benutzer angelegt, versetzt
-und gelöscht, außerdem die Passwörter und der Plattenplatz (Quotas)
-für alle Benutzer und Gruppen verwaltet. Nur Passwörter von
-Schülern/innen sowie Projekte können auch von Personen mit normalen
-Lehrer-Rechten verwaltet werden.
+In dieser Dokumentation erhalten Sie einen Überblick über den ``workflow`` zur Benutzerveraltung 
+in der aktuellen linuxmuster.net. Neben den Möglichkeiten zur Konfiguration der Benutzereinstellungen,
+über das Einlesen der Benutzer via CSV-Datei und die Änderung einzelner Nutzer werden die wichtigsten 
+Tätigkeiten zur Benutzerverwaltung erläutert.
 
+Die Benutzerverwaltung in der aktuellen linuxmuster.net Version erfolgt grundsätzlich grafisch 
+unterstützt mithilfe eines Browsers der sog. ``Schulkonsole``. In der Schulkonsole (WebUI) werden 
+grundlegende Einstellungen vorgenommen, die für die Benutzerveraltung relevant sind, wie z.B. die 
+Mindestanzahl an Zeichen für Nach- und Vorname. Zudem werden hier die Benutzerlisten gepflegt, 
+geprüft sowie Benutzer angelegt, versetzt und gelöscht. Die Passwörter und der Plattenplatz (Quotas) 
+werden hier für alle Benutzer, Klassen und Gruppen verwaltet. 
+
+Grundsätzlich nimmt der Benutzer ``global-admin`` die Einstellungen für die Benutzerverwaltung vor.
+Benutzer mit Lehrer-Rechten können danach Passwörter für Schüler und Schülerinnen sowie Projekte verwalten.
 
 .. toctree::
    :maxdepth: 2
    :caption: Inhalt
 
-   usergroups
-   configuration
-   manage
-   weiteres
+   commonworkflow
+   managewebui
+   sophomorix4
 
