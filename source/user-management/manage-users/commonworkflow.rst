@@ -10,22 +10,21 @@ mithilfe der Schulkonsole. Diese wiederum greift auf dem Server auf die
 Benutzervwaltung sophomorix4 zu, die konsolenorientiert das Benutzermanagement 
 mithilfe von geeigneten Befehlen durchführt. Das Zusammenspiel folgt einem 
 ausgearbeiteten Workflow. Dieser kann unter nachstehendem Link mit allen 
-Details nachvollzeogen werden: https://github.com/linuxmuster/sophomorix4/wiki/Workflows
+Details nachvollzogen werden: https://github.com/linuxmuster/sophomorix4/wiki/Workflows
 
-Nachfolgend beschränken sich Ausführungen auf die Grundlagen, die zum Verständnis 
-und Durchführung der Benutzerverwaltung erforderlich sind.
+Nachfolgend beschränken sich die Ausführungen auf die Grundlagen, die zum Verständnis 
+und Durchführung der Benutzerverwaltung mithilfe der Schulkonsole erforderlich sind.
 
-Der Ablauf zur Einrichtung von Benutzer verläuft wie folgt:
+Der Ablauf zur Einrichtung von Benutzern verläuft wie folgt:
 
 1) Hochladen einer CSV-Datei mit den Benutzern via Schulkonsole.
 2) Speichern & prüfen der CSV-Datei.
 3) Die Schulkonsole legt eine temporäre CSV-Datei an, die dann
    anhand von Kriterien geprüft wird. 
 4) Verläuft der Prüfvorgang erfolgreich, so werden die Benutzer übernommen und
-   es wird eine CSV-Datei geschrieben, die danach in der chulkonsole im Editor 
+   es wird eine CSV-Datei geschrieben, die danach in der Schulkonsole im Editor 
    aufgerufen und geändert werden kann. Schritte 2 - 4 sind nach den Änderungen 
    erneut auszuführen.
-
 
 Benutzergruppen in der linuxmuster.net
 --------------------------------------
@@ -43,32 +42,31 @@ Benutzergruppen zusammenzufassen. In der *linuxmuster.net* gibt es,
 angepasst auf Schulbedürfnisse, die folgenden Hauptbenutzergruppen 
 (Schulkonsole):
 
-Schüler:
- Schüler sind Benutzer mit (halb)privatem Datenbereich. Es dürfen keinerlei
- Systemdateien modifiziert werden.
+*Schüler:*
+Schüler sind Benutzer mit (halb)privatem Datenbereich. Es dürfen keinerlei
+Systemdateien modifiziert werden.
 
-Lehrer:
- Lehrer sind Benutzer mit privatem Datenbereich. Es dürfen keine
- Systemdateien modifiziert werden. Zusätzlich hat der Lehrer Zugriff
- auf alle Klassentauschverzeichnisse und lesenden Zugriff auf die
- Schüler-Homeverzeichnisse. Alle Lehrer können über die Schulkonsole
- pädagogisch notwendige Aufgaben auf dem Server ausführen
- (z. B. Dateien austeilen, Internetzugang abschalten)
+*Lehrer:*
+Lehrer sind Benutzer mit privatem Datenbereich. Es dürfen keine
+Systemdateien modifiziert werden. Zusätzlich hat der Lehrer Zugriff
+auf alle Klassentauschverzeichnisse und lesenden Zugriff auf die
+Schüler-Homeverzeichnisse. Alle Lehrer können über die Schulkonsole
+pädagogisch notwendige Aufgaben auf dem Server ausführen
+(z. B. Dateien austeilen, Internetzugang abschalten)
 
-Schul-Administratoren:
- Dürfen alle für den reinen Schulbetrieb wichtigen Aufgaben am Server
- durchführen. Diese Gruppe ist dann relevant, wenn ein Mehr-Schulbetrieb erfolgt,
- da es dann pro Schule einen oder mehrere Administratoren gibt, die Vorgaben 
- bzw. administrative Aufgaben getrennt nach Schule wahrnehmen.
+*Schul-Administratoren:*
+Dürfen alle für den reinen Schulbetrieb wichtigen Aufgaben am Server
+durchführen. Diese Gruppe ist dann relevant, wenn ein Mehr-Schulbetrieb erfolgt,
+da es dann pro Schule einen oder mehrere Administratoren gibt, die Vorgaben 
+bzw. administrative Aufgaben getrennt nach Schule wahrnehmen.
 
-Globale Administratoren:
- Dürfen ohne Einschränkungen alle Aufgaben am Server via Schulkonsole
- durchführen. Erfolgt kein Mehr-Schulbetrieb, so ist dies der eigentliche 
- Administrator, der alle Einstellungen und administrative Tätigkeiten durchführt.
+*Globale Administratoren:*
+Dürfen ohne Einschränkungen alle Aufgaben am Server via Schulkonsole
+durchführen. Erfolgt kein Mehr-Schulbetrieb, so ist dies der eigentliche 
+Administrator, der alle Einstellungen und administrative Tätigkeiten durchführt.
 
-=====================================================
- Konfigurationseinstellungen vor der Benutzeraufnahme
-=====================================================
+Konfigurationseinstellungen vor der Benutzeraufnahme
+----------------------------------------------------
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
@@ -97,7 +95,7 @@ Hier legen Sie fest, welche Vorgaben für den Listenimport von Benutzern mithilf
 von CSV-Dateien angewendet werden sollen. 
 
 Für Schüler, Lehrer und Extra-Schüler können die Vorgaben getrennt eingestellt werden.
-So können die Mindestanzahl an Zeichen für den NAchnamen, Vornamen und das Password 
+So können die Mindestanzahl an Zeichen für den Nachnamen, Vornamen und das Password 
 vorgegeben werden.
 
 Es kann festgelegt werden, ob beim Import ein Zufallskennwort pro Benutzer erstellt wird, 
@@ -144,11 +142,4 @@ diese im Menü  ``Einstellungen -> Schuleinstellungen -> Druck-Daten`` gesetzt w
    :alt: Einstellungen für das Drucken Benutzerdaten
 
 Die Anpassungen sind mit ``Speichern`` zu übernehmen.
-
-
-
-
-
-
-
 

@@ -5,11 +5,12 @@ In der aktuellen Version der *linuxmuster.net* wird die Benutzerverwaltung mit H
 Für alle zuvor beschriebenen Vorgänge zur Benutzerveraltung mit der Schulkonsole stellt sophomorix4 Konsolenbefehle auf dem 
 linuxmuster.net Server bereit.
 
-Optional besteht also die Möglichkeit, die Benutzerverwaltung in bestimmten Fällen auch auf der Konsole auf dem Server durchzuführen.
+Optional besteht also die Möglichkeit, die Benutzerverwaltung in bestimmten Fällen auch auf der Konsole auf dem Server durchzuführen,
+oder bestimmte Vorgänge mithilfe von Skripten zu automatisieren.
 
-Sophomorix4 bietet sogar eine Schnittstelle, um eigene Skripte hieran anzubinden.
+Sophomorix4 bietet hierfür eine Schnittstelle, um eigene Skripte hieran anzubinden.
 
-Für weitergehende Informationen sei an dieser Stelle auf die Entwicklerdokumentation verweisen:
+Für weitergehende Informationen sei an dieser Stelle auf die Entwicklerdokumentation verwiesen:
 
 https://github.com/linuxmuster/sophomorix4/wiki/
 
@@ -21,7 +22,7 @@ Auf dem Server lassen sich die Befehle wie folgt ausgeben:
 
   ``sophomorix-<tab>``
 
-Die Optionn eines Befehls können dann wie folgt ausgegeben werden:
+Die Optionn eines Befehls können dann anhand der Hilfsoption ausgegeben werden:
 
 .. code::
 

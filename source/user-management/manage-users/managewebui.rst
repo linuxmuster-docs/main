@@ -14,17 +14,17 @@ werden soll.
 Für eine Schule ist dieses Vorgehen nicht praktikabel, da meist
 mehrere hundert bis einige tausend Schüler als Benutzer angelegt
 werden müssen. Deshalb übernimmt bei der *linuxmuster.net* das
-Programm *Sophomorix4* diese Aufgabe.
+Programm *sophomorix4* diese Aufgabe.
 
 *Sophomorix4* liest alle Schüler aus Text-Dateien ein, die aus dem
 Schulverwaltungsprogramm der Schule bezogen oder von Hand mit Hilfe
 eines Editors erstellt wurden. Anschließend werden alle Schüler dieser
-Liste, die im System noch nicht vorhanden sind, angelegt, solche mit
-einer neuen Klasse versetzt und nicht mehr aufgeführte Schüler im
-System gelöscht.
+Liste, die im System noch nicht vorhanden sind, *angelegt*, solche mit
+einer neuen Klasse *versetzt* und nicht mehr aufgeführte Schüler im
+System *gelöscht*.
 
 Mit der *Schulkonsole* gibt es für den Netzwerkbetreuer ein
-webbasiertes Werkzeug, das ihm die Bedienung von *Sophomorix4* sehr
+webbasiertes Werkzeug, das ihm die Bedienung von *sophomorix4* sehr
 erleichtert. Die einzelnen Schritte werden im Folgenden erläutert. Der
 Netzwerkbetreuer muss nur noch in Ausnahmefällen mit der Kommandozeile
 arbeiten.
@@ -46,7 +46,7 @@ folgenden Schritte nacheinander ausgeführt werden:
 
 
 Änderung von Benutzerdaten
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""
 
 Sind Sie an der *Schulkonsole* als ``global-admin`` angemeldet, erhalten Sie unter der Rubrik *Benutzerverwaltung* die folgenden Menüpunkte:
 
@@ -93,7 +93,7 @@ Es erscheinen dann schrittweise folgende Eingabefenster:
    :align: center
    :alt: Load csv
 
-Es ercheint eine Warnmeldng, da der Upload einer neuen students.csv die bisherige Datei und damit deren Einträge überschreibt.
+Es ercheint eine Warnmeldung, da der Upload einer neuen students.csv die bisherige Datei und damit deren Einträge überschreibt.
 
 .. figure:: media/07_schoolconsole_import-students-upload-csv-file-warning.png
    :align: center
@@ -115,7 +115,7 @@ Falls erforderlich kann hier die Reihenfolge der Spalteneinträge noch angepasst
 eine Schüler-ID verwendet.
 
 Nach der Bestätigung der Sortierreihenfolge werden die Benutzer temporär importiert. Das Ergebnis wird Ihnen wie in der nachstehenden
-Abildung angezeigt.
+Abbildung angezeigt.
 
 .. figure:: media/10_schoolconsole_import-students-upload-csv-file-imported.png
    :align: center
@@ -135,7 +135,7 @@ Imports sehen Sie im dargestellten Konsolenfenster einen Eintrag wie ``4 users a
    :align: center
    :alt: students imported
 
-Die CSV-Dateien finden sich auf dem Server un folgendem Verzeichnis: ``/etc/linuxmuster/sophomorix/default-school``
+Die CSV-Dateien finden sich auf dem Server in folgendem Verzeichnis: ``/etc/linuxmuster/sophomorix/default-school``
 
 Es gibt dort drei verschiedene CSV-Dateien:
 
@@ -146,7 +146,7 @@ Es gibt dort drei verschiedene CSV-Dateien:
 Haben Sie die Benutzer angelegt, so können Sie später Änderungen auch direkt via Schulkonsle in der CSV-Datei vornehmen.
 Wählen Sie hierzu im Menü ``Benutzerverwaltung -> Listenverwaltung -> Schüler -> Im Editor öffnen`` 
 
-Es erscheint dann im Browser die CSV-Datei im Editiermodus, so dass dass Sie Ihre Anpassungen vornehmen können, diese 
+Es erscheint dann im Browser die CSV-Datei im Editiermodus, so dass Sie Ihre Anpassungen vornehmen können, diese 
 speichern und danach auf ``speichern & prüfen`` gehen.
 
 .. figure:: media/13_schoolconsole_edit-students-list-csv.png
@@ -157,13 +157,13 @@ speichern und danach auf ``speichern & prüfen`` gehen.
 Pflege der Lehrerdatei
 """"""""""""""""""""""
 
-Für die Lehrer besteht die Möglichkeit einen Wunschlogin-Namen anzugeben. Der Datensatz aus dem Schulverwaltungsprogramm wird also um ein Feld ergänzt. In der CSV-Datei muss kein Klassenname angegeben werden. Es wird automatisch ein Import in die Gruppe Lehrer vorgenommen.
+Für die Lehrer besteht die Möglichkeit, einen Wunschlogin-Namen anzugeben. Der Datensatz aus dem Schulverwaltungsprogramm wird also um ein Feld ergänzt. In der CSV-Datei muss kein Klassenname angegeben werden. Es wird automatisch ein Import in die Gruppe ``Lehrer`` vorgenommen.
 
 Das Format der Datei ``teachers.csv`` stellt sich wie folgt dar:
 
 ``Nachname;Vorname;Geburtsdatum;Wunschlogin;;;;;``
 
-Von *Sophomorix* noch die für einzelne Lehrer gesondert eingegebenen Quotas hinten angehängt.
+Von *sophomorix* werden noch die für einzelne Lehrer gesondert eingegebenen Quotas angehängt.
 
 Aus diesem Grund macht es keinen Sinn, eine vorhandene Lehrerdatei mit derjenigen aus dem Schulverwaltungsprogramm zu überspielen, da Sie dann für alle Lehrer *Wunschlogin* und *Sonderquota* wieder neu eingeben müssten.
 
@@ -175,14 +175,14 @@ Rufen Sie im Menü unter der Benutzerverwaltung den Eintrag ``Listenverwaltung -
    :align: center
    :alt: Upload teachers.csv warning
 
-Danach qählen Sie den dort und den Dateinamen der hochzuladenden CSV-Datei aus.
+Danach wählen Sie dort den Dateinamen der hochzuladenden CSV-Datei aus.
 
 .. figure:: media/15_schoolconsole_import-teachers-upload-csv-file-folder.png
    :align: center
    :alt: Upload teachers.csv folder 
 
 Die Einträge werden nun geprüft und das Prüfergebnis wird Ihnen angezeigt. Hier können Sie bereits falsche Spaltenzuordnungen oder eine
-abweichende Spaltenreihenfole erkennen. Stimmt das dargestellte Ergebnis, so übernehmen Sie Sortierreihenfolge.
+abweichende Spaltenreihenfole erkennen. Stimmt das dargestellte Ergebnis, so übernehmen Sie die Sortierreihenfolge.
 
 .. figure:: media/16_schoolconsole_import-teachers-upload-csv-file-check-list.png
    :align: center
@@ -202,7 +202,7 @@ Lehrer hinzugefügt, versetzt oder gelöscht werden.
    :align: center
    :alt: check & save teachers to be imported
 
-Nach der Bestätigung finden sich die Lehrer nun dauerhaft im System und werden wie folg dargestellt: 
+Nach der Bestätigung finden sich die Lehrer nun dauerhaft im System und werden wie folgt dargestellt: 
 
 .. figure:: media/19_schoolconsole_import-teachers-imported.png
    :align: center
@@ -212,7 +212,7 @@ Nach der Bestätigung finden sich die Lehrer nun dauerhaft im System und werden 
 Pflege der Extraschüler
 """""""""""""""""""""""
 
-Zur Verwaltung von Schülern, die nicht im Schulverwaltungsprogramm aufgenommen sind, gibt es in der *Schulkonsole* unter der Rubrik *Benutzerverwaltung* in der *Listenverwaltung* dien Reiterkarte *Extra-Schüler*:
+Zur Verwaltung von Schülern, die nicht im Schulverwaltungsprogramm aufgenommen sind, gibt es in der *Schulkonsole* unter der Rubrik *Benutzerverwaltung* in der *Listenverwaltung* die Reiterkarte *Extra-Schüler*:
 
 Im Bereich *Im Editor öffnen* können Schüler von Kooperationsschulen oder Austausch- bzw. Gastschüler eingegeben werden. 
 Die Syntax ist wie bei der Schülerdatei, ergänzt um ein Feld für einen Wunschanmeldenamen:
@@ -223,7 +223,7 @@ Der Name für die Klasse ist frei wählbar, z.B: *koop* (für Kooperation) oder 
 
 Analog zu dem Import der CSV-Dateien für die Schüler und Lehrer erfolgt auh für die Extra-Schüler der Upload bzw. die Bearbeitung der Datei extrastudents.csv.
 
-Die Benutzer werden wiederum mit ``Speichern & prüefen`` übernommen. Hierbei wird Ihnen wiederum das Prüfergebnis angezeigt:
+Die Benutzer werden wiederum mit ``Speichern & prüfen`` übernommen. Hierbei wird Ihnen wiederum das Prüfergebnis angezeigt:
 
 .. figure:: media/20_schoolconsole_import-extrastudents-list-checked.png
    :align: center
