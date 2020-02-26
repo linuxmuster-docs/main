@@ -15,7 +15,7 @@ Um dies zu verhindern, sollten Sie als Netzwerkbetreuer die Nutzung des
 Festplattenplatz durch einzelnen Nutzer oder Gruppen kontrollieren und beschränken.
 
 Hierzu werden auf dem linuxmuster.net Server die sog. Quotas aktiviert. Dies erfolgt
-bei der Ersteinrichtung automatisch. Für jede Partition auf der Quotas angewendet werden,
+bei der Ersteinrichtung automatisch. Für jede Partition auf die Quotas angewendet werden,
 finden sich folgende Dateien:
 
 .. code::
@@ -76,7 +76,7 @@ für die Sie Quotas kontrollieren möchten.
 
 Haben Sie z.B. für die Lehrer eine neue Quota-Richtlinie angewendet, so wählen Sie im Menü ``Lehrer`` aus und
 klicken für einen exemplarischen Benutzer den Eintrag ``Benutzereinstellungen -> Benutzerinformationen``.
-Es erscheint eine Fenster, in dem Informationen zum Benutzer dargestellt werden. Am unteren Rand des Fensters
+Es erscheint ein Fenster, in dem Informationen zum Benutzer dargestellt werden. Am unteren Rand des Fensters
 werden ebenfalls die Cloud- und die Mail-Quotas, die für diesen Benutzer greifen, dargestellt. 
 
 .. figure:: media/04-teacher-information-quota.png
@@ -127,7 +127,7 @@ Schüler
 """""""
 
 Haben Sie die Reiterkarte ``Schüler`` gewählt, klicken Sie unten auf ``Search & add user``. Es erscheint ein
-Konsolenfenster, in dem Sie einen Suchbegriff eingeben sollen, so dass passende Shüler gefunden werden.
+Konsolenfenster, in dem Sie einen Suchbegriff eingeben sollen, so dass passende Schüler gefunden werden.
 
 .. figure:: media/08-extra-quota-add-students.png
    :align: center
