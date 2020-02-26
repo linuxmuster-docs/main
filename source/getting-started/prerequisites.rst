@@ -321,7 +321,7 @@ VMs - Hinweise
 --------------
 
 linuxmuster.net bietet vorgefertigte virtuelle Machinen zum direkten Import für die jeweilige 
-Virtualisierungsumgebung an, um die Ínstallations- und Konfigurationszeiten stark zu verringern.
+Virtualisierungsumgebung an, um die Installations- und Konfigurationszeiten stark zu verringern.
 
 - Für XCP-ng als Opensource-Virtualisierungsumgebung werden die VMs im
   XVA-Format zum direkten Import angeboten. Die XVA-Dateien sind
