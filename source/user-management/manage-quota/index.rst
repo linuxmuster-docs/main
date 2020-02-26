@@ -4,6 +4,8 @@
 Festplattenplatz für Benutzer einschränken (Quota)
 ==================================================
 
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
+
 Alle Benutzer im System dürfen Daten auf dem Server abspeichern. Es
 kann also vorkommen, dass Schüler und Lehrer so viele Daten
 abspeichern, dass der Festplattenplatz des Servers aufgebraucht ist, was
