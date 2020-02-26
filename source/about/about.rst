@@ -5,7 +5,7 @@ Was ist linuxmuster.net?
 
 Schulnetz - Komplett - Anpassbar!
 
-* Schulnetz: Schulische IT-Infrasruktur wird mit einer
+* Schulnetz: Schulische IT-Infrastruktur wird mit einer
   vollintegrierten Open Source Lösung abgebildet. Die Lösung ist
   unabhängig von der eingesetzten Hardware.
 * Komplett: Es werden folgende Basisdienste bereitgestellt: Benutzer-,
