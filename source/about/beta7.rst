@@ -57,7 +57,7 @@ und moodle einfach angepasst (ein neues openLML-enrol script ist in
 Arbeit). Natürlich darf man die Portweiterleitungen in der OPNSense
 nicht vergessen.
 
-Es ist also ratsam die Migration durch gezieltes Auslagern von Diensten,
+Es ist also ratsam die Migration durch gezieltes auslagern von Diensten,
 die in der lmn 62 noch auf dem Server laufen, vorzubereiten.
 Hat man das getan ist die eigentliche Migration mehr ein Zeitproblem als
 ein Komplexitätsproblem.
