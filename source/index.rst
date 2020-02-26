@@ -79,7 +79,6 @@ auf der `Website von Linuxmuster.net
   classroom/exam-and-transfer
   classroom/access-control
   classroom/check-own-quota/index
-  classroom/check-student-quota/index
 
 .. toctree::
   :maxdepth: 1
