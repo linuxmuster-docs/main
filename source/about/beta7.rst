@@ -24,7 +24,7 @@ Neuinstallation
 ===============
 
 Die wichtigsten Schritte sind natürlich die Neuerungen und
-Vorraussetzungen durchzulesen.
+Voraussetzungen durchzulesen.
 
 - :ref:`install-on-kvm-label`
 - :ref:`install-on-xen-label`
