@@ -50,10 +50,10 @@ Dockerhost (in Rot) zu migrieren. Hat man dann auf die lmn 7 migriert,
 so kann man einfach das dem Dockercontainer zugrunde liegende Image
 gegen das für die lmn7 austauschen.
 
-Ein anderes Beispiel sind moodle und nextcloud.  Diese Dienste laufen
+Ein anderes Beispiel sind Moodle und Nextcloud. Diese Dienste laufen
 normalerweise auf eigenen Servern und sind nur per LDAP an die lmn
 angebunden. Nach der Migration werden die LDAP Angaben in Nextcloud
-und moodle einfach angepasst (ein neues openLML-enrol script ist in
+und Moodle einfach angepasst (ein neues openLML-enrol script ist in
 Arbeit). Natürlich darf man die Portweiterleitungen in der OPNSense
 nicht vergessen.
 
