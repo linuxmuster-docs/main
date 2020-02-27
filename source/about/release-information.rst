@@ -28,8 +28,8 @@ Verbesserte Skalierbarkeit
 
 Moderne Steuerung
   * Webbasierte Steuerung der pädagogischen Funktionen in responsive Design
-  * Aktuelle Betriebssysteme der Server und der vorkonfiguierten,
-    kostenlos bereitgestellten Linux-Arbeitsplätzen
+  * Aktuelle Betriebssysteme der Server und der vorkonfigurierten,
+    kostenlos bereitgestellten Linux-Arbeitsplätze
 
 
 Technische Neuerungen
