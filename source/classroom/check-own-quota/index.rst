@@ -33,7 +33,7 @@ der zugeordneten Schule relevant. In der eigenen Schule - hier ``default-school`
 Daten bis zur definierten Obergrenze auf dieser Freigabe gespeichert werden.
 
 2. **linuxmuster-global**: Dieser Plattenplatz in MiB wird auf dem Server auf dem share 
-``/srv/samba/global`` geprüft. Diese Freigabe (share GLOBAL) ist für alle Benutzer aller beteiligten 
+``/srv/samba/global`` geprüft. Diese Freigabe (share GLOBAL) ist für alle Benutzer der beteiligten 
 Schulen (Mehr-Schulbetrieb) relevant, um schulübergreifend Dateien zu tauschen (linuxmuster-global).
 
 3. **Cloudquota**: Bezeichnet die Quota der eigenen Schule - ein anderer Name für die unter 1.) 
