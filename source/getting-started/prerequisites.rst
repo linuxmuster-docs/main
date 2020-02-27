@@ -239,7 +239,7 @@ Getrennte Netze und VLAN
 
 Immer häufiger (z.B. durch Vorgaben vom Kultusministerium oder
 Lastverteilung) besteht Bedarf an einer weiteren Trennung des internen
-Netzes in mehrere logisch von einander relativ getrennte
+Netzes in mehrere logisch voneinander relativ getrennte
 Netze. Neben den relativ stark abgetrennten Netzen für WLAN oder eine
 demilitarisierte Zone (DMZ) wie oben abgebildet, erlaubt
 linuxmuster.net Lösung sehr flexibel eine beliebige Einteilung des
