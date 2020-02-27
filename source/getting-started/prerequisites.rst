@@ -11,7 +11,7 @@ Linuxmuster.net wird als Zwei-Server-Lösung (Firewall und
 linuxmuster.net-Server) betrieben. Optional können weitere Server wie
 z.B. ein Docker-Host eingesetzt werden. Daneben gibt es mindestens
 eine Trennung in zwei logische Netzwerke, meist sind aber drei oder
-mehr Netzwerke gefordert (WLAN, DMZ, Lehrernetz).  Zuguterletzt kann
+mehr Netzwerke gefordert (WLAN, DMZ, Lehrernetz). Zu guter Letzt kann
 die linuxmuster.net bequem virtualisiert oder ohne Virtualisierung
 betrieben werden.
 
