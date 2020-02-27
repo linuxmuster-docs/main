@@ -320,7 +320,7 @@ Virtualisierungssoftware noch die bereitgestellten VM-Appliances
 VMs - Hinweise
 --------------
 
-linuxmuster.net bietet vorgefertigte virtuelle Machinen zum direkten Import für die jeweilige 
+linuxmuster.net bietet vorgefertigte virtuelle Maschinen zum direkten Import für die jeweilige 
 Virtualisierungsumgebung an, um die Installations- und Konfigurationszeiten stark zu verringern.
 
 - Für XCP-ng als Opensource-Virtualisierungsumgebung werden die VMs im
