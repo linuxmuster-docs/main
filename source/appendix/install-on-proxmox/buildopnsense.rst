@@ -165,7 +165,7 @@ Melde dich wieder mit root und dem Passwort Muster! an.
 
 DHCP abschalten
 ---------------
-Jetzt msst du den DHCP-Service der Firewall abschalten. Der wird ja später vom Server übernommen. 
+Jetzt musst du den DHCP-Service der Firewall abschalten. Der wird ja später vom Server übernommen. 
 
 .. figure:: media/OPNS25.png
 
