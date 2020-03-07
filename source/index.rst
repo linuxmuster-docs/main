@@ -28,7 +28,7 @@ auf der `Website von Linuxmuster.net
 
 .. toctree::
   :maxdepth: 2
-  :caption: Erste Schritte
+  :caption: Installation
 
   getting-started/prerequisites
   getting-started/setup
@@ -46,7 +46,6 @@ auf der `Website von Linuxmuster.net
   systemadministration/maintenance/keep-lmn-uptodate
   systemadministration/network/default-access-rules
   systemadministration/network/radius/index
-  systemadministration/network/unifi
   systemadministration/printer/index
   systemadministration/schoolconsole/index
 
@@ -69,7 +68,6 @@ auf der `Website von Linuxmuster.net
   user-management/change-teacher-passwords/index
   user-management/manage-quota/index
   user-management/preparation-newterm/index
-  user-management/use-mail-ldap/index
 
 .. toctree::
   :maxdepth: 2
@@ -79,13 +77,6 @@ auf der `Website von Linuxmuster.net
   classroom/exam-and-transfer
   classroom/access-control
   classroom/check-own-quota/index
-
-.. toctree::
-  :maxdepth: 1
-  :caption: Erweiterungen
-
-  addons/monipi/index
-  addons/backupmondo/index
 
 .. toctree::
   :maxdepth: 1
