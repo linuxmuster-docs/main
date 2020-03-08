@@ -30,11 +30,21 @@ auf der `Website von Linuxmuster.net
   :maxdepth: 2
   :caption: Installation
 
+  getting-started/overview
   getting-started/prerequisites
   getting-started/setup
   getting-started/add-user-accounts
   getting-started/add-computer
   getting-started/linuxclient
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Installationsoptionen
+
+  getting-started/installoptions/install-on-proxmox/index
+  getting-started/installoptions/install-on-kvm/index
+  getting-started/installoptions/install-on-xcp-ng/index
+  getting-started/installoptions/install-from-scratch/index
 
 .. toctree::
   :maxdepth: 2
@@ -80,24 +90,6 @@ auf der `Website von Linuxmuster.net
 
 .. toctree::
   :maxdepth: 1
-  :caption: Anhang
+  :caption: Linuxmuster.net helfen
 
-  appendix/install-on-kvm/index
-  appendix/install-on-proxmox/index
-  appendix/install-on-xcp-ng/index
   appendix/contribute/index
-
-..
-   .. toctree::
-     :maxdepth: 1
-     :caption: Handbuch für Lehrkräfte
-
-     user-management/change-own-password/index
-
-
-   .. toctree::
-     :maxdepth: 1
-     :caption: Handbuch für Schüler
-
-     user-management/change-own-password/index
-     classroom/check-own-quota/index
