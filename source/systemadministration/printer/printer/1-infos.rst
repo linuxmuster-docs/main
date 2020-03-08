@@ -1,8 +1,10 @@
 Welche Informationen benötige ich vorab?
 ========================================
 
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
+
 Um mit linuxmuster.net mit Druckern zu arbeiten, ist es erforderlich, dass Netzwerkdrucker zur Verfügung stehen.
-Es können entweder Drucker mit eingebauen Netzwerkkarten (Printservern) eingesetzt, oder bisherige Drucker mit einer geeigneten  sog. "Printserver-Box" in das Netzwerk eingebunden werden.
+Es können entweder Drucker mit eingebauen Netzwerkkarten (Printservern) eingesetzt, oder bisherige Drucker mit einer geeigneten sog. "Printserver-Box" in das Netzwerk eingebunden werden.
 
 Vor dem Hinzufügen und Einrichten von Druckern in linuxmuster.net ist es sehr hilfreich, vorab nachstehende Informationen zu erfassen:
 
@@ -12,13 +14,8 @@ Vor dem Hinzufügen und Einrichten von Druckern in linuxmuster.net ist es sehr h
 - Raum / Standort des Druckers
 - IP-Adresse gemäß des genutzen Adressschema
 
-Die meisten Netzwerkdrucker sind bei Auslieferung so eingestellt, dass diese eine IP-Adresse via DHCP beziehen. Die IP-Adresse für den Drucker kann dann einfach in der Schulkonsole gesetzt werden.
+Die meisten Netzwerkdrucker sind bei Auslieferung so eingestellt, dass diese eine IP-Adresse via DHCP beziehen. Die IP-Adresse für den Drucker muss in der Schulkonsole gesetzt werden.
 
-.. caution::
-
-   Im folgenden Skript werden Änderungen an der Schulkonsole
-   vorgenommen. Alternativ können Änderungen meist auch über ein
-   Terminal direkt in den Konfigurationsdateien auf dem Server
-   vorgenommen werden. Das Mischen beider Verfahren ist zu vermeiden
-   und Fachkundigen zu überlassen.
-
+Um eine Steuerung der Drucker via Schulkonsole zu ermöglichen, müssen die Drucker zentral auf dem Server als Geräte eingetragen und
+auf dem Server in CUPS konfiguriert werden. CUPS arbeitet als "zentraler Printserver" und hält für alle dort eingerichteten Drucker
+entsprechende Druckwarteschlangen vor. 

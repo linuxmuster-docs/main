@@ -10,5 +10,4 @@ Drucker auf dem Server und Clients einrichten
    1-infos
    2-drucker-hinzufuegen
    3-drucker-einrichten-cups
-   4-drucker-zugriffssteuerung
-   5-druckereinrichtung-clients
+   4-drucker-auf-clients-einrichten

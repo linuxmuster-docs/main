@@ -1,147 +1,89 @@
 Wie richte ich Drucker am Server ein?
 =====================================
 
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
+
 Um die eingesetzten Netzwerkdrucker serverseitig einzurichten, sind diese mithilfe eines Browsers hinzuzufügen und einzurichten.
 
-.. note::
+Starten Sie auf einem Rechner einen Browser, um das sog. CUPS-Webinterface des Servers zur weiteren Einrichtung der Drucker 
+aufzurufen. Hierzu fügen Sie nachstehenden URL in der Adresszeile Ihres Browsers ein
 
-   Auf dem Server ist automatisch ein PDF-Drucker eingerichtet. Auf den PDF-Drucker kann aus beliebigen Anwendungen heraus gedruckt werden. Die "gedruckte" PDF-Datei wird im Heimatverzeichnis des jeweiligen Benutzers im Ordner PDF abgelegt. Wird dieser später als Standard-Drucker festgelegt, so wird versehentliches Drucken auf einen nicht gewünschten Drucker unterbunden.
+https://10.0.0.1:631
 
-Starten Sie auf einem Rechner einen Browser, um das sog. CUPS-Webinterface zur weiteren Einrichtung der Drucker aufzurufen. Hierzu fügen Sie nachstehenden URL in der Adresszeile Ihres Browsers ein
+Da meist nur ein selbst-signiertes Zertifikat auf dem Server installiert ist, ist i.d.R. erforderlich, dem benutzten Browser 
+die sichere Kommunikation ausnahmsweise zu erlauben (SSL-Zertifikat akzeptieren).
 
-https://server:631
+.. image:: media/05-printer-cups-setup.png
+   :alt: CUPS aufrufen
+   :align: center
 
-Da meist nur ein selbst-signiertes Zertifikat auf dem Server installiert ist, ist es sicher nötig, dem benutzen Browser die sichere Kommunikation ausnahmsweise zu erlauben (SSL-Zertifikat akzeptieren).
+Es erscheint die Login-Aufforderungvon CUPS auf dem Server:
+
+.. image:: media/06-printer-cups-login.png
+   :alt: CUPS: Anmeldung
+   :align: center
+
+Melden Sie sich als ``root`` dort an.
 
 Drucker hinzufügen
 ------------------
 
-Rufen Sie zunächst die **Reiterkarte Verwaltung** auf. Es erscheint
-nachstehende Maske:
+Nach der Anmeldung an CUPS wählen Sie den Menüpunkt ``Verwaltung`` aus.
 
-.. image:: ./media/drucker-einrichten-cups/cups-server1.png
+.. image:: media/07-printers-cups-add-printer.png
+   :alt: CUPS: Drucker hinzufügen
+   :align: center
 
-..
-   Aktivieren Sie eventuell die nötigen Kontrollkästchen. DAs
-   Kontrollkästchen "Erlaube Benutzern jeden Auftrag abzubrechen" ist in
-   manchen Situation hilfreich, da Lehrer oder Schüler "hängen
-   gebliebene" Druckaufträge löschen können.
+Rufen Sie den Untermenüpunkt ``Drucker hinzufügen`` aus.
+Es erscheint nachstehende Maske. Wählen Sie als Netzwerkdrucker i.d.R. LPD/LPR-Host aus und klicken Sie
+auf ``weiter``.
 
-   Danach haben Sie über verschiedene Reiterkarten die Möglichkeit,
-   Drucker zu verwalten (hinzufügen, konfigurieren, Drcukaufträge
-   verwalten, Druckerklassen definieren, Druckerstatus abzufragen).
+.. image:: media/08-printer-cups-add-printer-01.png
+   :alt: Drucker: hinzufügen 1/5
+   :align: center
 
+Geben Sie als Verbindung die IP-Adresse, den Port des LPD-Druckers wie in der Abb. an:
 
-.. warning::
+.. image:: media/09-printer-add-printer-02.png
+   :alt: Drucker: hinzufügen 2/5
+   :align: center
 
-   Ändern Sie keine Konfiguration auf dieser Seite, das bleibt den
-   Skripten von linuxmuster.net und einer manuellen Konfiguration in
-   den Textdateien auf dem Server vorbehalten.
+Klicken Sie auf ``weiter``. Wählen Sie nun den geeigneten Druckertreiber für Ihren Drucker aus:
 
-Klicken Sie auf der Maske unter **Drucker** --> **Drucker hinzufügen**.
-Es erscheint nachstehende Maske:
+.. image:: media/10-printer-add-printer-02.png
+   :alt: Drucker: hinzufügen 3/5
+   :align: center
 
-.. image:: ./media/drucker-einrichten-cups/cups-server3.png
+Hierzu wählen Sie den Hersteller aus, dann erscheint eine Liste mit den verfügbaren Druckertreibern. Wählen
+Sie in der Liste den korrekten Drucker aus. Sollte dieser in der Liste nicht enthalten sein, so klicken Sie auf 
+``PPD-Datei bereitstellen - Durchsuchen``. Wählen Sie nun die PPD-Datei mit dem korrekten Druckertreiber aus, den Sie zuvor 
+von der Website des Herstellers heruntergeladen haben.
 
-In diesem Dialog müssen Sie angeben, auf welche Weise der Drucker mit
-dem Server verbunden ist. Unter Umständen werden Netzwerkdrucker
-erkannt (im Beispiel "HP Officejet").
-
-Bei nicht erkannten Netzwerkdruckern ist im Normalfall die Option
-"AppSocket/HP JetDirect" korrekt. Sind Sie unsicher, schauen Sie im
-Handbuch des Druckers / Printservers nach, welche Option für Ihren
-Drucker zutrifft.
-
-
-Klicken Sie auf **Weiter**, um zum nächsten Dialog zu gelangen.  Wurde
-eine Option unter "Andere Netzwerkdrucker" ausgewählt, so muss die
-genaue Verbindung manuell angegeben werden und es folgt folgender
-Dialog, andernfalls wird folgender Dialog übersprungen:
-
-.. image:: ./media/drucker-einrichten-cups/cups-server4.png
-
-Im Falle eines Netzwerkdruckers müssen Sie hier die IP-Adresse oder
-den Hostnamen und zusätzlich bei Verwendung eines Print-Servers, der
-über mehrere Anschlüsse verfügt, noch die Warteschlange anzugeben. Zum
-Beispiel:
-
-.. code-block:: bash
-
-   socket://10.16.203.101/lpt1
-
-Im Zweifelsfall sollte auch hier die Bedienungsanleitung des
-Printservers weiterhelfen. Klicken Sie auf **Weiter**, um zum nächsten
-Dialog zu gelangen.
-
-.. image:: ./media/drucker-einrichten-cups/cups-server2.png
-
-In dieser Maske muss für den Drucker ein Name vergeben werden (zum
-Beispiel *r203-pr01* oder *h109drucker*). Der hier vergebene Name gilt
-zugleich als Freigabename für Linux- und für Windows-Clients. Die
-restlichen Angaben sind zwar optional, sollten aber eingegeben werden,
-um die Zuordnung nachvollziehbar zu halten.
-
-Klicken Sie auf **Weiter**, um zur Auswahl des Druckermodells zu gelangen.
-
-.. image:: ./media/drucker-einrichten-cups/cups-server5.png
-
-Wählen Sie in Liste Ihr Druckermodell aus. Mit **Weiter** werden
-Treiber zur Auswahl angeboten. Stehen für Ihr Modell mehrere Treiber
-zur Auswahl stehen, wählen Sie den empfohlenen Treiber (recommended)
-aus. Sollte Ihr Modell nicht in der Liste erscheinen, laden Sie
-über den Button **Durchsuchen** die sog. PPD-Datei für Ihren Drucker
-hoch. Die PPD-Datei ist beinhaltet einen Treiber für den Drucker für
-Linux. Diese Treiber erhalten Sie auf der Seite Ihres
-Druckerherstellers. Laden Sie diese lokal herunter. Danach können Sie
-die PPD-Datei auf den linuxmuster.net Server mit o.g. Dialog
-hochladen.
-
-.. image:: ./media/drucker-einrichten-cups/cups-server6.png
-
-Eventuell kann Ihr Drucker auch mit der Marke "Generic" und einem
-entsprechenden Treiber (z.B. "Generic PCL 5e ... (recommended)")
-bereits drucken.
-
-Mit Klick auf **Drucker hinzufügen** schließen Sie die
-Druckerinstallation. Dafür benötigt das CUPS-Webinterface die
-Authentifizierung als **administrator**.
-
-.. image:: ./media/drucker-einrichten-cups/cups-server-anmeldung.png
-
-Danach gelangen Sie zur Einstellungsseite des
-Druckers.
+.. image:: media/11-printer-add-printer-05.png
+   :alt: Drucker: hinzufügen 4/5
+   :align: center
 
 Drucker konfigurieren
 ---------------------
 
-.. image:: ./media/drucker-einrichten-cups/cups-server7.png
+Danach erscheinen die Standardeinstellungen für den hinzugefügten Drucker. Wählen Sie hier die gewünschten Einstellungen aus
+und speichern Sie diese als ``Standardeinstellungen festlegen``. Geben Sie unter "Fehlerbehandlung"  **abort-job** an, um sicherzustellen, dass CUPS im Fehlerfall den Druckjob löscht.
 
-Hier können Sie abhängig vom Druckermodell verschiedene Einstellungen für das Standardverhalten des Druckertreibers vornehmen (zum Beispiel die Seitengröße auf A4 einstellen, Duplexdruck etc., falls dies nicht standardmäßig vorgesehen ist).
+.. image:: media/12-printer-define-standard-printing-options.png
+   :alt: Drucker: hinzufügen 5/5
+   :align: center
 
-Klicken Sie im Dialog für die Standardeinstellungen auf den Menüpunkt **Richtlinien**, um hier das Verhalten des Druckers im Fehlerfall festzulegen.
+Danach findet sich der neue Drucker in der Druckerliste in CUPS.
 
-.. image:: ./media/drucker-einrichten-cups/cups-server7a.png
-
-Geben Sie unter "Fehlerbehandlung"  **abort-job** an, um sicherzustellen, dass CUPS im Fehlerfall den Druckjob löscht.
-
-Über den Knopf **Standardeinstellungen festlegen** werden Sie schließlich zur Verwaltungsseite des neu eingerichteten Druckers weitergeleitet:
-
-.. image:: ./media/drucker-einrichten-cups/cups-server8.png
-
-Hier können Sie
-
-- eine Testseite ausdrucken lassen,
-- den Drucker (die Ausführung von Druckaufträgen) stoppen und wieder starten,
-- die Entgegennahme von Druckaufträgen sperren und wieder freischalten,
-- die Druckereinrichtung wiederholen, um IP-Adresse oder Druckertreiber zu ändern,
-- die Druckereinstellungen anpassen oder
-- erlaubte Benutzer festlegen.
+.. image:: media/13-printer-added-printers-list.png
+   :alt: Drucker: hinzufügen
+   :align: center
 
 Nun ist Ihr Netzwerkdrucker betriebsbereit und kann auf den Arbeitsstationen eingerichtet werden.
 
 Angesprochen wird obiger Drucker über den URL:
 
-http://server:631/printers/r203-pr01
+http://10.0.0.1:631/printers/r200-HP-LJ-P2055DN
 
 
 PDF-Drucker aktivieren
@@ -149,7 +91,7 @@ PDF-Drucker aktivieren
 
 Der standardmäßig eingerichtete PDF-Drucker wird über den URL
 
-http://server:631/printers/PDF-Printer
+http://10.0.0.1:631/printers/PDF
 
 angesprochen. Jetzt kann auch über den PDF-Drucker in eine PDF-Datei gedruckt werden, die auf dem Server im Homeverzeichnis des Benutzers im Unterverzeichnis PDF abgelegt wird.
 
