@@ -1,8 +1,8 @@
 
 .. _howto-install-printer:
 
-Drucker auf dem Server und Clients einrichten
-=============================================
+Drucker auf dem Server und den Clients einrichten
+=================================================
 
 .. toctree::
    :maxdepth: 1
