@@ -1,0 +1,21 @@
+xcp-ng.pdf
+ - Bildernummerierung
+   + Bild 1 nicht richtig benannt.
+ - Kommentare zu den Bildern
+
+
+Was mir bei meiner Arbeit auffiel:
+
+Wir sollten für die Dokumentation Vorgaben machen für:
+
+- Namen der Maschinen
+  + lmn Server --> lmn7-server
+  + Firewall --> lmn7-opnsense
+  + ...
+- Bildernamen (wie im Mailing an diskutiert)
+- 
+
+Ich habe die Dateien umbenannt wie besprochen. Titel blieb fast wie von dir gewählt.
+
+[nummer]_[unterkapitel]_[bezeichnung_des_aktiven_fensters_bzw_der_gezeigten_aktion].png
+
