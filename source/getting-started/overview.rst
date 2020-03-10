@@ -66,7 +66,7 @@ Nachstehend können Sie den Installationsablauf als Übersicht im PDF-Format her
 
 Nächste Schritte
 ----------------
-PDF
+
 Um die Planung der Installation stärker auf Ihre Bedürfnise hin abstimmen zu können, finden Sie im Kapitel
 Vorüberlegungen entsprechende Hilfestellungen.
 
