@@ -20,7 +20,7 @@ Erster Teil der Installation
 
 Im ersten Abschnitt geht es darum, die eigene Installation gemäß den eigenen Anforderungen 
 und Rahmenbedingungen zu planen, den geeigneten Hypervisor auszusuchen und diesen zu installieren 
-bzw. sich ggf. für eine Installation direkt auf der Hardware zu entscheidne. Bei der
+bzw. sich ggf. für eine Installation direkt auf der Hardware zu entscheiden. Bei der
 Installation eines Hypervisors geht diese Dokumentation davon aus, dass Sie für den
 jeweiligen Hypervisor die vorbereiteten virtuellen Machinen (VMs) importieren und danach
 das Setup initiieren.
@@ -42,9 +42,7 @@ auf die eigenen Anforderungen anzupassen und im Netz umzusetzen.
 Dritter Teil der Installation
 -----------------------------
 
-Im dritten Abschnitt der Installation ist die Erstkonfiguration der Firewall und des Servrs oder alternativ 
-die Migration einer bestehenden v6.2 Installation durchzuführen. Danach sind Benutzer anzulegen und
-letzte Anpassungen vorzunehmen.
+Im dritten Abschnitt der Installation ist die Erstkonfiguration der Firewall und des Servers oder eventuell die Migration einer bestehenden v6.2 Installation durchzuführen. Danach sind Benutzer anzulegen und letzte Anpassungen vorzunehmen.
 
 .. figure:: media/installation-process-part3.png
    :align: center
