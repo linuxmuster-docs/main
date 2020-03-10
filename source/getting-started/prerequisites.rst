@@ -1,8 +1,8 @@
 .. _prerequisites-label:
 
-=================
- Voraussetzungen
-=================
+==================
+ Vorüberlegungen
+==================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
 		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_
