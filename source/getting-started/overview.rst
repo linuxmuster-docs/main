@@ -42,7 +42,9 @@ auf die eigenen Anforderungen anzupassen und im Netz umzusetzen.
 Dritter Teil der Installation
 -----------------------------
 
-Im dritten Abschnitt der Installation ist die Erstkonfiguration der Firewall und des Servers oder eventuell die Migration einer bestehenden v6.2 Installation durchzuführen. Danach sind Benutzer anzulegen und letzte Anpassungen vorzunehmen.
+Im dritten Abschnitt der Installation ist die Erstkonfiguration der Firewall und des
+Servers oder eventuell die Migration einer bestehenden v6.2 Installation durchzuführen. 
+Danach sind Benutzer anzulegen und letzte Anpassungen vorzunehmen.
 
 .. figure:: media/installation-process-part3.png
    :align: center
@@ -65,8 +67,8 @@ Nachstehend können Sie den Installationsablauf als Übersicht im PDF-Format her
 Nächste Schritte
 ----------------
 
-Um die Planung der Installation stärker auf Ihre Bedürfnise hin abstimmen zu können, finden Sie im Kapitel
-Vorüberlegungen entsprechende Hilfestellungen.
+Um die Planung der Installation stärker auf Ihre Bedürfnisse hin abstimmen zu können, finden Sie im ``Kapitel
+Vorüberlegungen`` entsprechende Hilfestellungen.
 
 :ref:`Vorüberlegungen zur Installation von linuxmuster.net v7 <prerequisites-label>`
 
