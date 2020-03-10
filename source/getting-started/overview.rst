@@ -20,7 +20,7 @@ Erster Teil der Installation
 
 Im ersten Abschnitt geht es darum, die eigene Installation gemäß den eigenen Anforderungen 
 und Rahmenbedingungen zu planen, den geeigneten Hypervisor auszusuchen und diesen zu installieren 
-bzw. sich ggf. für eine Installation direkt auf der Hardware zu entscheidne. Bei der
+bzw. sich ggf. für eine Installation direkt auf der Hardware zu entscheiden. Bei der
 Installation eines Hypervisors geht diese Dokumentation davon aus, dass Sie für den
 jeweiligen Hypervisor die vorbereiteten virtuellen Machinen (VMs) importieren und danach
 das Setup initiieren.
@@ -42,7 +42,7 @@ auf die eigenen Anforderungen anzupassen und im Netz umzusetzen.
 Dritter Teil der Installation
 -----------------------------
 
-Im dritten Abschnitt der Installation ist die Erstkonfiguration der Firewall und des Servrs oder alternativ 
+Im dritten Abschnitt der Installation ist die Erstkonfiguration der Firewall und des Servers oder alternativ 
 die Migration einer bestehenden v6.2 Installation durchzuführen. Danach sind Benutzer anzulegen und
 letzte Anpassungen vorzunehmen.
 
@@ -66,9 +66,9 @@ Nachstehend können Sie den Installationsablauf als Übersicht im PDF-Format her
 
 Nächste Schritte
 ----------------
-PDF
-Um die Planung der Installation stärker auf Ihre Bedürfnise hin abstimmen zu können, finden Sie im Kapitel
-Vorüberlegungen entsprechende Hilfestellungen.
+
+Um die Planung der Installation stärker auf Ihre Bedürfnisse hin abstimmen zu können, finden Sie im ``Kapitel
+Vorüberlegungen`` entsprechende Hilfestellungen.
 
 :ref:`Vorüberlegungen zur Installation von linuxmuster.net v7 <prerequisites-label>`
 
