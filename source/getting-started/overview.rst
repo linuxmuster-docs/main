@@ -42,9 +42,9 @@ auf die eigenen Anforderungen anzupassen und im Netz umzusetzen.
 Dritter Teil der Installation
 -----------------------------
 
-Im dritten Abschnitt der Installation ist die Erstkonfiguration der Firewall und des Servers oder alternativ 
-die Migration einer bestehenden v6.2 Installation durchzuführen. Danach sind Benutzer anzulegen und
-letzte Anpassungen vorzunehmen.
+Im dritten Abschnitt der Installation ist die Erstkonfiguration der Firewall und des
+Servers oder eventuell die Migration einer bestehenden v6.2 Installation durchzuführen. 
+Danach sind Benutzer anzulegen und letzte Anpassungen vorzunehmen.
 
 .. figure:: media/installation-process-part3.png
    :align: center
