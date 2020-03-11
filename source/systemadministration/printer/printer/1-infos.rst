@@ -3,9 +3,9 @@ Welche Informationen benötige ich vorab?
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
-Um mit linuxmuster.net mit Druckern zu arbeiten, ist es erforderlich, dass Netzwerkdrucker zur Verfügung stehen.
-Es können entweder Drucker mit eingebauten Netzwerkkarten (Printservern), oder bisherige Drucker mit einer 
-geeigneten sog. "Printserver-Box" in das Netzwerk eingebunden werden.
+Um in linuxmuster.net mit Druckern zu arbeiten, ist es erforderlich, dass Netzwerkdrucker zur Verfügung stehen.
+Es können entweder Drucker mit eingebauten Netzwerkkarten (Printservern) eingesetzt, oder bisherige Drucker mit 
+einer geeigneten sog. "Printserver-Box" in das Netzwerk eingebunden werden.
 
 Vor dem Hinzufügen und Einrichten von Druckern in linuxmuster.net ist es sehr hilfreich, vorab nachstehende 
 Informationen zu erfassen:
