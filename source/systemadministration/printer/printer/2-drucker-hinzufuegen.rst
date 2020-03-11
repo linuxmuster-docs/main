@@ -3,14 +3,14 @@ Wie füge ich Drucker hinzu?
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
-Viele Printserver und Netzwerkdrucker sind in der Lage Ihre IP-Adresse von einem DHCP-Server zu beziehen.
+Viele Printserver und Netzwerkdrucker sind in der Lage, Ihre IP-Adresse von einem DHCP-Server zu beziehen.
 Zuerst muss der Drucker am Server mithilfe der Schulkonsole hinzugefügt werden.
 Hierbei wird dem Drucker ein Name sowie eine IP-Adresse zugewiesen.
 
 Für das folgende Beispiel nehmen wir an, der Drucker stehe in Raum
-"R203", bekomme den Namen "r203-pr01", habe die MAC-Adresse
+"r200", bekomme den Namen "r203-pr01", habe die MAC-Adresse
 "00:11:22:33:44:55" und bekomme entsprechend einem IP-Adressschema die
-IP-Adresse 10.16.203.101.
+IP-Adresse 10.2.200.101.
 
 Melden Sie sich als **global-admin** in der `Schulkonsole (https://10.0.0.1) <https://10.0.0.1>`_ an.
 Wählen Sie dort links im Menü ``Geräteverwaltung`` das Untermenü ``Geräte`` aus.
