@@ -9,7 +9,7 @@ Schulnetz - Komplett - Anpassbar!
 
 **Schulnetz**
 
-Schulische IT-Infrastruktur wird mit einer vollintegrierten Open Source Lösung abgebildet.
+Schulische IT wird mit einer vollintegrierten Open Source Lösung abgebildet. Dieses umfasst alle Bereiche die ...
 Die Lösung ist unabhängig von der eingesetzten Hardware.
 
   .. figure:: media/about_01_structure_of_version_7_simple_web.svg
@@ -25,12 +25,33 @@ Es werden folgende Basisdienste bereitgestellt:
    :alt:      box-server
    :height:   40px
 
-* Benutzer- und Gruppenverwaltung
-* Unterrichtssteuerung
-* Klassenarbeitsmodus
-* Dateiverwaltung und -verteilung
-* schulinterne E-Mail-Korrespodenz
+* Benutzer- und Gruppenverwaltung  
+  
+  Die Benutzer- und Gruppenverwaltung orientiert sich an den Bedürfnissen, die der Schulbetrieb vorgibt.
+  
+    * Schülerinnen und Schüler bekommen mit der Einschulung ihren persönlichen Benutzer-Account.
+    * Dieser bleibt ihnen bis zum Ende ihrer Laufbahn an der Schule erhalten.
+    * Die Gruppenzugehörigkeit der einzelnen Schülerinnen und Schüler werden in Klassen, Kursen und Projekten abgebildet. 
+    * Zu Beginn eines Schuljahres können diese Daten und Abhängigkeiten aus der Schulverwaltung mittels Import der Daten eingespielt bzw. fortgeschrieben werden.
+      Gleiches gilt selbstverständlich auch für Veränderungen während eines laufenden Schuljahres.
+    * Für Lehrerinnen und Lehrer gilt oben genanntes in gleichem Maße.
 
+
+* Unterrichtssteuerung
+
+  Vielfältige Möglichkeiten stehen den Lehrkräften zur Verfügung um zum Beispiel ...
+  
+    * Internet - An/Aus
+    * Intranet - An/Aus
+    * WIFI - An/Aus
+    * Drucker - An/Aus
+
+
+* Klassenarbeitsmodus
+
+* Dateiverwaltung und -verteilung
+
+* schulinterne E-Mail-Korrespodenz
 
 .. image::    media/about_03_client-integration.png
    :name:     box-client-integration
