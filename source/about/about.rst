@@ -93,4 +93,4 @@ Beschreibung Firewall ... zu ergänzen
 
 Anbindung externer Dienste ... zu ergänzen
 
-:download:`Übersicht als PDF <media/structure_of_version_7_simple.pdf>`
+:download:`Übersicht als PDF <media/about_10_structure_of_version_7_simple.pdf>`
