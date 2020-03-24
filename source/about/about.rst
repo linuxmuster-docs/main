@@ -71,7 +71,9 @@ Es werden folgende Basisdienste bereitgestellt:
 * Selbstheilende Arbeitsstationen durch LINBO
 
     Unterricht ist einfacher in einer für alle gleichen Umgebung zu geben. Dieses lässt sich dadurch erreichen, dass die Nutzung der Rechner so weit eingeschränkt wird, dass nur freigegebene Teilbereich nutzbar sind.
+
     **Diesen Ansatz verfolgt unsere Lösung nicht!**
+
     Wir ermöglicht es jedem Benutzer beim Start das System auf den Standard zurückzusetzen. Selbst ein Formatieren der Festplatte durch den vorherigen Nutzer lässt sich so wieder beheben. Das ist das was wir unter selbstheilende Arbeitsstationen (SheilA) verstehen.
 
     Die Funktionsweise in ein paar Worten beschrieben: (eventuell mittels einer Grafik erklären)
