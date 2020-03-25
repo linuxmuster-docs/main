@@ -102,16 +102,16 @@ festgelegt.
    :alt: School information dialog
 
 Der nächste Dialog legt das Passwort des globalen Administrators 
-``global-admin`` und das von `root` fest. Die Einschränkungen zur
+``global-admin`` und das von ``root`` fest. Die Einschränkungen zur
 Passwortsicherheit sind dem Hilfetext zu entnehmen.
 
 .. figure:: media/global-password.png
    :align: center
    :alt: School information dialog
 
-.. hint::
+.. important::
 
-   Nach dem erfolgreichen Abschluss der Erstkonfiguration gilt für root das neu
+   Nach dem erfolgreichen Abschluss der Erstkonfiguration gilt für ``root`` das neu
    gesetzte Passwort.
 
 Der letzte Dialog fragt nach den offiziell unterstützenden externen
