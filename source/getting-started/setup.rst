@@ -8,6 +8,7 @@
 		   `@TLeibbrand <https://ask.linuxmuster.net/u/tleibbrand>`_,
 		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
 		   `@RolandB <https://ask.linuxmuster.net/u/rolandb>`_
+		   `@MachtDochNix <https://ask.linuxmuster.net/u/machtdochnix>`_
 
 .. hint::
 
@@ -100,13 +101,18 @@ festgelegt.
    :align: center
    :alt: School information dialog
 
-Der nächste Dialog legt das Passwort des globalen Administrators
-``global-admin`` fest. Die Einschränkungen zur Passwortsicherheit sind
-dem Hilfetext zu entnehmen.
+Der nächste Dialog legt das Passwort des globalen Administrators 
+``global-admin`` und das von `root` fest. Die Einschränkungen zur
+Passwortsicherheit sind dem Hilfetext zu entnehmen.
 
 .. figure:: media/global-password.png
    :align: center
    :alt: School information dialog
+
+.. hint::
+
+   Nach dem erfolgreichen Abschluss der Erstkonfiguration gilt für root das neu
+   gesetzte Passwort.
 
 Der letzte Dialog fragt nach den offiziell unterstützenden externen
 Diensten, die vorbereitet werden sollen. Darunter sind die Dienste
