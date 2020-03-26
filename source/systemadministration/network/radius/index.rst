@@ -5,17 +5,19 @@ Netzwerkzugriff über Radius
 ===========================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
-                   `@thomas <https://ask.linuxmuster.net/u/thomas>`_
+                   `@thomas <https://ask.linuxmuster.net/u/thomas>`_,
+                   `@foer <https://ask.linuxmuster.net/u/foer>`_
+  
 
 RADIUS (Remote Authentification Dial-In User Service) ist ein Client-Server Protokoll, 
 das zur Authentifizierng, Autorisierung und für das Accounting (Triple A) von Benutzern in 
 einem Netzwerk dient.
 
-Der RADIUS-Server dient als zentraler Authentifizierungsserver, an den sich verschie
+Der RADIUS-Server dient als zentraler Authentifizierungsserver, an den sich verschiedene
 IT-Dienste für die Authentifizierung wenden können. RADIUS bietet sich an, um in grossen 
 Netzen sicherzustellen, dass ausschliesslich berechtigte Nutzer Zugriff haben. Der Zugriff 
 kann zudem auch auf bestimmte Endgeräte beschränkt werden. Um die Authentifizierungs-Daten
-zu übertragen wird oftmals dasProtokoll EAP (Extensible Authentification Protocol) genutzt.
+zu übertragen wird oftmals das Protokoll EAP (Extensible Authentification Protocol) genutzt.
 
 Viele Geräte und Anwendungen, wie z.B. Access Points, Captive Portals oder Wireless 
 Controller, bieten neben einer einfachen Benutzerauthentifizierung auch eine Überprüfung 
@@ -27,12 +29,13 @@ FreeRADIUS: Einsatz lmn
 =======================
 
 FreeRadius ist ein Open-Source RADIUS-Server, der in der linuxmuster.net v7 zum Einsatz kommt.
-Dieser RADIUS-Server wird auf der Firewall (OPNSense) als Dienst aktiviert und so konfiguriert, 
-dass die Benutzerauthentifizierung anhnad der Daten im ActiveDirectory (AD) des linuxmuster.net 
-Servers erfolgt, die vom RADIUS-Server via LDAP abgefragt werden.
+Dieser RADIUS-Server kann auf der Firewall (OPNSense), auf dem lmn-Server oder auf dem Docker-Host
+installiert, als Dienst aktiviert und so konfiguriert, dass die Benutzerauthentifizierung 
+anhand der Daten im ActiveDirectory (AD) des linuxmuster.net  Servers erfolgt, die vom 
+RADIUS-Server via LDAP abgefragt werden.
 
-FreeRADIUS einrichten & testen
-==============================
+FreeRADIUS auf der OPNSense einrichten & testen
+===============================================
 
 Erweiterung OPNSense
 --------------------
@@ -205,6 +208,192 @@ Verlaufen diese Testes erfolgreich, so ist der RADIUS - Dienst in lmn vollständ
 Die APs, WLAN-Controller oder Captive Portal Lösungen sind nun so zu konfigurieren, dass diese 
 den FreeRadius der lmn nutzen.
 
+FreeRADIUS auf dem lmn-Server einrichten & testen
+=================================================
+
+Freeradius installieren und aktivieren
+--------------------------------------
+
+.. code::
+
+   #apt install freeradius
+   #systemctl enable freeradius.service
+
+ntlm_auth in samba erlauben
+---------------------------
+
+In der Datei ``/etc/samba/smb.conf`` ist folgende Zeile einzufügen:
+
+.. code::
+
+   ntlm auth = yes
+
+Danach muss der samba-ad-dc Dienst neu gestartet werden:
+
+.. code::
+
+   #systemctl restart samba-ad-dc.service
+
+Radius konfigurieren
+--------------------
+
+Dem Freeradius-Dient muss Zugriff auf ``winbind`` gegeben werden:
+
+.. code::
+
+   #usermod -a -G winbindd_priv freerad
+   #chown root:winbindd_priv /var/lib/samba/winbindd_privileged/
+
+In dem Verzeichnis ``/etc/freeradius/3.0/sites-enabled`` in die Dateien 
+``default`` und ``inner-tunnel`` ganz am Anfang unter authenticate ist
+ntlm_auth einzufügen.
+
+.. code::
+
+      authenticate {
+          ntlm_auth
+          # ab hier geht es weiter
+
+Die Datei ``/etc/freeradius/3.0/mods-enabled/mschap`` sind im Abschnitt
+mschap zwei Teilen zu ergänten:
+
+.. code::
+
+      mschap {
+              use_mppe = yes
+              with_ntdomain_hack = yes
+              # hier geht es weiter
+
+Anpassen des Abschnitts ``ntlm_auth`` weiter unten. Zuerst das Kommentarzeichen # entfernen, dann 
+die Zeile folgendermaßen anpassen:
+
+.. code::
+
+    # eine Zeile
+    ntlm_auth = "/usr/bin/ntlm_auth --request-nt-key --domain=DOMÄNE --require-membership-of=DOMÄNE\wifi --username=%{%{Stripped-User-Name}:-%{%{User-Name}:-None}} --challenge=%{%{mschap:Challenge}:-00} --nt-response=%{%{mschap:NT-Response}:-00}"
+
+Dabei muss ``DOMÄNE`` durch den eigenen Domänennamen (Samba-Domäne) ersetzt werden. 
+Die Option ``–require-membership-of=…`` lässt nur Mitglieder der Gruppe wifi zu. 
+So funktioniert die WLAN-Steuerung über die WebUI.
+
+Danach ist die Datei ``/etc/freeradius/3.0/mods-enabled/ntlm_auth`` noch anzupassen. Zuerst ist das Kommentarzeichen # zu 
+entfernen. Danach ist die Zeile wie folgt anzupassen:
+
+.. code::
+
+    exec ntlm_auth {
+    wait = yes
+    # eine Zeile
+    program = "/usr/bin/ntlm_auth --request-nt-key --domain=DOMÄNE --require-membership-of=DOMÄNE\wifi --username=%{mschap:User-Name} --password=%{User-Password}"
+    }
+
+Dabei muss ``DOMÄNE`` durch den eigenen Domänennamen (Samba-Domäne) ersetzt werden.
+
+In der Datei ``/etc/freeradius/3.0/users`` ist ganz oben nachstehende Zeile einzufügen.
+
+.. code::
+
+    DEFAULT     Auth-Type = ntlm_auth
+
+Nun ist der Freeradius-Dienst neuzustarten:
+
+.. code::
+
+    #systemctl restart freeradius.service
+
+.. note::
+   
+   Das Defaultverhalten der lmn7 ist, dass ein neu angelegter ``User`` immer in der Gruppe ``wifi`` ist, 
+   d.h. auch alle Schüler dürfen zunächst in das WLAN 
+
+Die Steuerung der Gruppenzugehörigkeit kann auf der Konsole wie folgt gesetzt werden:
+
+.. code::
+
+   #sophomorix-managementgroup --nowifi/--wifi user1,user2,...
+
+Um alle Schüler aus der Gruppe wifi zu nehmen, läßt man sich alle User des Systems auflisten und schreibt diese in eine Datei.
+Dies kann wie folgt erledigt werden:
+
+.. code::
+
+   #samba-tool user list > user.txt
+
+Jetzt entfernt man alle User aus der Liste, die immer ins Wlan dürfen sollen. Danach baut man die Liste zu einer Kommazeile um mit:
+
+.. code::
+
+   #less user |  tr '\n' ',' > usermitkomma.txt
+
+Die Datei kann jetzt an den o.g. Sophomorix-Befehl übergeben werden:
+
+.. code::
+
+   #sophomorix-managementgroup --nowifi $(less usermitkomma.txt)
+
+
+Firewallregeln anpassen
+-----------------------
+
+Auf dem lmn-Server ist in der Datei ``/etc/linuxmuster/allowed_ports`` der Radiusport ``1812`` einzutragen:
+
+.. code::
+
+    udp domain,netbios-ns,netbios-dgm,9000:9100,1812
+
+Danach ist der lmn-Server neu zu starten.
+
+Auf der Firewall OPNSense muss je nach eigenen Voraussetzungen dafür gesorgt werden, dass die AP’s aus dem 
+Wlan-Netz den Server auf dem Port 1812 via udp erreichen können. Es ist darauf zu achten, dass die IP des Servers
+den eigenen Netzvorgaben entspricht (also z.B. 10.0.0.1/16 oder /24 oder 10.16.1.1/16 oder /24)
+
+Die Regel auf der OPNSense hierzu könnten, wie nachstehend abgebildet, eingetragen werden.
+
+.. image:: media/10-fw-opnsense-rule-for-radius.png
+   :alt: FW Rule fpr Radius Service
+   :align: center
+
+Jetzt sollte die Authentifizierung per WPA2-Enterprise funktionieren, sofern der Testuser in der Gruppe wifi ist. 
+Ein Zertifikat ist nicht erforderlich.
+
+Sollte das nicht funktionieren, hält man den Freeradius-Dienst an und startet ihn im Debugmodus.
+
+.. code::
+
+   # service freeradius stop
+   # service freeradius debug
+
+Jetzt sieht man alle Vorgänge während man sich versucht, mit einem Device zu verbinden.
+
+APs im Freeradius eintragen
+---------------------------
+
+Die APs müssen im Freeradius noch in der Datei ``/etc/freeradius/3.0/clients.conf`` 
+eingetragen werden. Dies erfolgt wie in nachstehendem Schema dargestellt:
+
+.. code::
+
+   client server {
+   ipaddr = 10.0.0.1
+   secret = GeHeim
+   }
+
+   client opnsense {
+   ipaddr = 10.0.0.254
+   secret = GeHeim
+   }
+
+   client uni fi {
+   ipaddr = 10.0.0.10
+   secret = GeHeim
+   }
+
+Um den APs feste IPs zuzuweisen, sollten diese auf dem lmn-Server in der Datei 
+``/etc/linuxmuster/sophomorix/default-school/devices.csv``. 
+
+Je nachdem, ob in jedem (Sub)-netz die APs angeschlossen werden, ist die zuvor dargestellte Firewall-Regel
+anzupassen. Der Radius-Port in der OPNSense müsste dann z.B. von Subnetz A (blau) zu Subnetz B 
+(grün Servernetz) geöffnet werden, damit alle APs Zugriff auf den Radius-Diensterhalten. 
 
 
 
