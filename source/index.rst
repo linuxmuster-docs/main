@@ -89,6 +89,12 @@ auf der `Website von Linuxmuster.net
   classroom/check-own-quota/index
 
 .. toctree::
+  :maxdepth: 2
+  :caption: Externe Dienste
+
+  external-services/moodle/index
+
+.. toctree::
   :maxdepth: 1
   :caption: Linuxmuster.net helfen
 
