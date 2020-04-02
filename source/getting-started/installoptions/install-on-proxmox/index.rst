@@ -424,7 +424,7 @@ VM Templates herunterladen
 
 Fertige VM-Snapshots für Proxmox haben wir für Sie erstellt und sind auf der Übersichtsseite 
 der Proxmox 7.0 Aplliance unter https://www.netzint.de/education/downloads/education-proxmox70 bereitgestellt. Die virtuelle Maschine für eine linuxmuster.net v7 Umgebung ist die Server-VM 
-lmn70-server_xcp-ng_2019-08.xva. Zudem wird als Firewall-VM lmn70-opnsense_xcp-ng.xva für Sie bereitgestellt. 
+lmn70-server_proxmox_2019-08.xva. Zudem wird als Firewall-VM lmn70-opnsense_proxmox.xva für Sie bereitgestellt. 
 
 Optional ist zusätzlich eine OPSI-VM und eine Docker-VM für Ihre linuxmuster.net-Umgebung 
 verfügbar. Um die Maschinen also importieren zu können, müsssen diese zuerst auf den 
@@ -480,13 +480,13 @@ andere MAC-Addresse, als im Template exportiert.
 +-------------+-----------------------------------------------------------------------------+
 | VM          | Import-Befehl                                                               |
 +=============+=============================================================================+
-| server-VM   |  qmrestore lmn70-server_2019-08.vma.lzo 701 –storage local-lvm -unique 1    |
+| server-VM   |  qmrestore lmn70-server_2019-08.vma.lzo 701 -–storage local-lvm -unique 1    |
 +-------------+-----------------------------------------------------------------------------+
-| opsi-VM     |  qmrestore lmn70-opsi_2019-08.vma.lzo 702 –storage local-lvm -unique 1      |
+| opsi-VM     |  qmrestore lmn70-opsi_2019-08.vma.lzo 702 -–storage local-lvm -unique 1      |
 +-------------+-----------------------------------------------------------------------------+
-| docker-VM   |  qmrestore lmn70-docker_2019-08.vma.lzo 703 –storage local-lvm -unique 1    |
+| docker-VM   |  qmrestore lmn70-docker_2019-08.vma.lzo 703 -–storage local-lvm -unique 1    |
 +-------------+-----------------------------------------------------------------------------+
-| opnsense-VM |  qmrestore lmn70-opnsense_2019-08.vma.lzo 745 –storage local-lvm -unique 1  |
+| opnsense-VM |  qmrestore lmn70-opnsense_2019-08.vma.lzo 745 -–storage local-lvm -unique 1  |
 +-------------+-----------------------------------------------------------------------------+
 
 1. Hier wird als Beispiel der Server-Snapshot mit der ID 701 auf dem local-lvm-Storage über 
