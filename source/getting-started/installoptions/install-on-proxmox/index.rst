@@ -480,13 +480,13 @@ andere MAC-Addresse, als im Template exportiert.
 +-------------+-----------------------------------------------------------------------------+
 | VM          | Import-Befehl                                                               |
 +=============+=============================================================================+
-| server-VM   |  qmrestore lmn70-server_2019-08.vma.lzo 701 -–storage local-lvm -unique 1    |
+| server-VM   |  qmrestore lmn70-server_2019-08.vma.lzo 701 - –storage local-lvm -unique 1    |
 +-------------+-----------------------------------------------------------------------------+
-| opsi-VM     |  qmrestore lmn70-opsi_2019-08.vma.lzo 702 -–storage local-lvm -unique 1      |
+| opsi-VM     |  qmrestore lmn70-opsi_2019-08.vma.lzo 702 - –storage local-lvm -unique 1      |
 +-------------+-----------------------------------------------------------------------------+
-| docker-VM   |  qmrestore lmn70-docker_2019-08.vma.lzo 703 -–storage local-lvm -unique 1    |
+| docker-VM   |  qmrestore lmn70-docker_2019-08.vma.lzo 703 - –storage local-lvm -unique 1    |
 +-------------+-----------------------------------------------------------------------------+
-| opnsense-VM |  qmrestore lmn70-opnsense_2019-08.vma.lzo 745 -–storage local-lvm -unique 1  |
+| opnsense-VM |  qmrestore lmn70-opnsense_2019-08.vma.lzo 745 - –storage local-lvm -unique 1  |
 +-------------+-----------------------------------------------------------------------------+
 
 1. Hier wird als Beispiel der Server-Snapshot mit der ID 701 auf dem local-lvm-Storage über 
