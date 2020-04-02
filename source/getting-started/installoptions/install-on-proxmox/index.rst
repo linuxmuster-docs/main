@@ -469,7 +469,7 @@ VM Templates importieren
 Liegen die VMs auf Proxmox, können die Abbilder als neue virtuelle Maschinen in der Shell über das qmrestore-Tool eingefügt werden. Dafür für jede zu importierende Maschine den Befehl anpassen und ausführen. Dabei sollte man sich im selben Verzeichnis befinden, in welchem die Abbilder liegen 
 oder im Befehl den Pfad zur Datei mitangeben.
 
-Der Befehl sollte mit dem Prinzip ``qmrestore <vmname.vma.lzo> <VM-ID> - -storage <storage-name> -
+Der Befehl sollte mit dem Prinzip ``qmrestore <vmname.vma.lzo> <VM-ID> --storage <storage-name> -
 unique 1`` (Beachten Sie die zwei Bindestriche vor dem Wort „storage“) angewendet werden.
 
 <vmname.vma.lzo> entspricht dem Dateinamen der TemplateVM. Mit <VM-ID> übergeben Sie der VM 
@@ -477,17 +477,17 @@ eine ID, wie beispielsweise „101“ oder „701“. <storage-name> ist etwa lo
 einer zweiten virtuellen Disk, wie im obigen Beipiel „vd-ssd-1700“-unique 1 generiert eine 
 andere MAC-Addresse, als im Template exportiert.
 
-+-------------+-----------------------------------------------------------------------------+
-| VM          | Import-Befehl                                                               |
-+=============+=============================================================================+
-| server-VM   |  qmrestore lmn70-server_2019-08.vma.lzo 701 - –storage local-lvm -unique 1    |
-+-------------+-----------------------------------------------------------------------------+
-| opsi-VM     |  qmrestore lmn70-opsi_2019-08.vma.lzo 702 - –storage local-lvm -unique 1      |
-+-------------+-----------------------------------------------------------------------------+
-| docker-VM   |  qmrestore lmn70-docker_2019-08.vma.lzo 703 - –storage local-lvm -unique 1    |
-+-------------+-----------------------------------------------------------------------------+
-| opnsense-VM |  qmrestore lmn70-opnsense_2019-08.vma.lzo 745 - –storage local-lvm -unique 1  |
-+-------------+-----------------------------------------------------------------------------+
++-------------+----------------------------------------------------------------------------------+
+| VM          | Import-Befehl                                                                    |
++=============+==================================================================================+
+| server-VM   |  ``qmrestore lmn70-server_2019-08.vma.lzo 701 -–storage local-lvm -unique 1``    |
++-------------+----------------------------------------------------------------------------------+
+| opsi-VM     |  ``qmrestore lmn70-opsi_2019-08.vma.lzo 702 -–storage local-lvm -unique 1``      |
++-------------+----------------------------------------------------------------------------------+
+| docker-VM   |  ``qmrestore lmn70-docker_2019-08.vma.lzo 703 -–storage local-lvm -unique 1``    |
++-------------+----------------------------------------------------------------------------------+
+| opnsense-VM |  ``qmrestore lmn70-opnsense_2019-08.vma.lzo 745 -–storage local-lvm -unique 1``  |
++-------------+----------------------------------------------------------------------------------+
 
 1. Hier wird als Beispiel der Server-Snapshot mit der ID 701 auf dem local-lvm-Storage über 
 den Befehl qmrestore lmn70-server_proxmox_2019-08.vma.lzo 701 –storage local-lvm -unique 1 
