@@ -150,6 +150,14 @@ Als alternatives System zu LINBO zur Software-Verteilung. ... zu ergänzen
 
 Es können so in einfacher Form eigene IT-Dienste bereitgestellt und integriert werden.
 
+.. note::
+   Die bis hier vorgestellten Bestandteile werden vom Verein linuxmuster.net e. V. entwickelt und unterstützt. Diese Unterstützung wird durch die telefonische Hotline `<https://www.linuxmuster.net/de/support-de/hotline/>`_ und durch das Hilfe-Forum `<https://www.linuxmuster.net/de/support-de/discourse-forum/>`_ geleistet.
+    
+   All diese Leistungen sind nicht von einer Mitgliedschaft im Verein abhängig.
+
+   Die im nachfolgenden beschriebenen Elemente werden durch die Community über das Hilfeforum bereitgestellt und unterstützt.
+
+
 Alternativ
 ++++++++++
 
