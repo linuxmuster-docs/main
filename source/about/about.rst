@@ -81,7 +81,9 @@ Unterricht ist einfacher in einer für alle gleichen Umgebung zu geben. Dieses l
 
 Wir ermöglicht es jedem Benutzer beim Start das System auf den Standard zurückzusetzen. Selbst ein Formatieren der Festplatte durch den vorherigen Nutzer lässt sich so wieder beheben. Das ist das was wir unter selbstheilende Arbeitsstationen (SheilA) verstehen.
 
-Die Funktionsweise in ein paar Worten beschrieben: (eventuell mittels einer Grafik erklären)
+Die Funktionsweise in ein paar Worten beschrieben: 
+
+.. TODO:: Eventuell mittels einer zu erstellenden Grafik erklären.
 
     * Auf dem Server liegt ein Abbild der Festplatte mit dem Betriebssystem des Clients.
     * Nach dem Einschalten des Clients überprüft dieser, ob ein für ihn aktuelleres Festplattenabbild auf dem Server vorhanden ist.
