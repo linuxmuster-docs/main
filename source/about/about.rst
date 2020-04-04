@@ -12,7 +12,7 @@ Schulnetz
 
 Schulische IT wird mit einer vollintegrierten Open-Source-Lösung abgebildet. Dieses umfasst alle Bereiche, die in einer Bildungseinrichtung anzutreffen sind.
 
-Ein Augenmerk liegt dabei auf der Unabhängigkeit von der eingesetzten Hard- und Software. Dieses wird zum Beispiel erkennbar an dem Umfang der unterstützten Betriebssysteme (BS) für die Arbeitsstationen. Selbstredend ist für uns das Open-SourceBS Linux erste Wahl, welches wir mit einem Muster-Client zur Verfügung stellen. BS anderer Hersteller lassen sich aber ebenso in unsere Infrastruktur integrieren.
+Ein Augenmerk liegt dabei auf der Unabhängigkeit von der eingesetzten Hard- und Software. Dieses wird zum Beispiel erkennbar an dem Umfang der unterstützten Betriebssysteme (BS) für die Arbeitsstationen. Selbstredend ist für uns das Open-Source-BS Linux erste Wahl, welches wir mit einem Muster-Client zur Verfügung stellen. BS anderer Hersteller, z.B. Microsoft©, lassen sich aber ebenso leicht in unsere Infrastruktur integrieren.
 
   .. figure:: media/about_01_structure_of_version_7_simple_web.svg
      :align: center
