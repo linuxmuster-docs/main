@@ -128,7 +128,7 @@ Für weitergehende Informationen `siehe opnsense.org <https://opnsense.org/>`_ .
 Anpassbar
 ---------
 
-Basisdienste werden vorkonfiguriert bereitgestellt, bleiben aber frei anpass- und erweiterbar.
+Alle bisher vorgestellten Basisdienste werden vorkonfiguriert bereitgestellt, bleiben aber frei anpass- und erweiterbar.
 
 
 .. image::    media/about_05_optionale-server.png
@@ -136,7 +136,7 @@ Basisdienste werden vorkonfiguriert bereitgestellt, bleiben aber frei anpass- un
    :alt:      box-optionale-server
    :height:   40px
 
-Integraler Bestandteil sind die optional verwendbaren Server.
+Integraler Bestandteil sind für weitergehende Anpassungen die optional verwendbaren Server.
 
 Docker
 ++++++
@@ -146,7 +146,11 @@ Docker
    :alt:      box-docker
    :height:   80px
 
-Als Plattform um über die Basisdienste hinausgehende Server-Dienste zu integrieren. ... zu ergänzen
+Ein Docker-Server steht zur Installation bereit, um über die Basisdienste hinausgehende Server zu integrieren.  
+
+Docker ist ein Open-Source-Projekt zur automatisierten Anwendungsverteilung.
+Durch Container, die alle benötigten Pakete mitbringen, vereinfacht sich so die Bereitstellung und Verteilung. Außerdem gewährleisten sie die Trennung und Verwaltung der auf dem Docker-Server genutzten Ressourcen.
+Für weitergehende Informationen `siehe die Docker-Homepage <https://www.docker.com/>`_ .
 
 OPSI
 ++++
