@@ -138,7 +138,7 @@ Alle bisher vorgestellten Basisdienste werden vorkonfiguriert bereitgestellt, bl
 
 Integraler Bestandteil sind für weitergehende Anpassungen die optional verwendbaren Server. Sie dienen als Basis für eine Erweiterung an die Bedürfnisse der Bildungseinrichtung. 
 
-Docker
+docker
 ++++++
 
 .. image::    media/about_06_docker.png
@@ -146,14 +146,14 @@ Docker
    :alt:      box-docker
    :height:   80px
 
-Ein Docker-Server steht zur Installation bereit, um über die Basisdienste hinausgehende Server zu integrieren.  
-Docker ist ein Open-Source-Projekt zur automatisierten Anwendungsverteilung.
+Ein docker-Server steht zur Installation bereit, um über die Basisdienste hinausgehende Server zu integrieren.  
+docker ist ein Open-Source-Projekt zur automatisierten Anwendungsverteilung.
 
 Durch Container, die alle benötigten Pakete mitbringen, vereinfacht sich so die Bereitstellung und Verteilung. Außerdem gewährleisten sie die Trennung und Verwaltung der auf dem Docker-Server genutzten Ressourcen. [#FN1]_
 
 Für weitergehende Informationen `siehe die Docker-Homepage <https://www.docker.com/>`_ .
 
-OPSI
+opsi
 ++++
 
 .. image::    media/about_07_opsi.png
@@ -161,9 +161,11 @@ OPSI
    :alt:      box-opsi
    :height:   80px
 
-Als alternatives System zu LINBO zur Software-Verteilung.  [#FN1]_
+opsi (Open PC Server Integration) ist ein Clientmanagement-System zur Verwaltung von Windows- und Linux-Clients. Die Kernkomponenten von opsi sind Open-Source.
 
-Für weitergehende Informationen `siehe die OPSI-Homepage <https://www.XXXXX.com/>`_ 
+Es steht als alternatives System oder als Ergänzung zu LINBO zur Verfügung. So lassen sich zum Beispiel opsi-Pakete auf einem Musterclient installieren um sie anschließend mittels LINBO auszurollen. [#FN1]_
+
+Für weitergehende Informationen `siehe die OPSI-Homepage <https://uib.de>`_ 
 
 
 .. note::
@@ -171,7 +173,7 @@ Für weitergehende Informationen `siehe die OPSI-Homepage <https://www.XXXXX.com
     
    All diese Leistungen sind nicht von einer Mitgliedschaft im Verein abhängig.
 
-   .. [#FN1] Die gekenntzeichneten und die nachfolgenden beschriebenen Elemente werden durch die Community über das Hilfeforum bereitgestellt und unterstützt.
+   .. [#FN1] Die gekennzeichneten und die nachfolgenden beschriebenen Elemente werden durch die Community über das Hilfeforum bereitgestellt und unterstützt.
 
 
 Alternativ
