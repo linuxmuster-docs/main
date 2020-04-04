@@ -10,9 +10,9 @@ Schulnetz - Komplett - Anpassbar!
 Schulnetz
 ---------
 
-Schulische IT wird mit einer vollintegrierten Open Source Lösung abgebildet. Dieses umfasst alle Bereiche, die in einer Bildungseinrichtung anzutreffen sind.
+Schulische IT wird mit einer vollintegrierten Open-Source-Lösung abgebildet. Dieses umfasst alle Bereiche, die in einer Bildungseinrichtung anzutreffen sind.
 
-Ein Augenmerk liegt dabei auf der Unabhängigkeit von der eingesetzten Hard- und Software. Dieses wird zum Beispiel erkennbar an dem Umfang der unterstützten Betriebssysteme (BS) für die Arbeitsstationen. Selbstredend ist für uns das Open Source BS Linux erste Wahl, welches wir mit einem Muster-Client zur Verfügung stellen. BS anderer Hersteller lassen sich aber ebenso in unsere Infrastruktur integrieren.
+Ein Augenmerk liegt dabei auf der Unabhängigkeit von der eingesetzten Hard- und Software. Dieses wird zum Beispiel erkennbar an dem Umfang der unterstützten Betriebssysteme (BS) für die Arbeitsstationen. Selbstredend ist für uns das Open-SourceBS Linux erste Wahl, welches wir mit einem Muster-Client zur Verfügung stellen. BS anderer Hersteller lassen sich aber ebenso in unsere Infrastruktur integrieren.
 
   .. figure:: media/about_01_structure_of_version_7_simple_web.svg
      :align: center
@@ -118,12 +118,12 @@ Firewall
    :alt:      box-firewall
    :height:   40px
 
-Als Standard ist die open-source Firewall OPNSense ® Gegenstand der Auslieferung.
+Als Standard ist die Firewall OPNSense® Gegenstand der Auslieferung.
 
 Durch die Integration an den AD DS (Active Directory Domain Services) des Servers (Samba4) werden sämtliche Benutzer-Zugriffe der Nutzer auf das Internet geregelt.
 
-Sämtliche verfügbaren Bausteine dieser open-source-Firewall stehen selbstverständlich zur Verfügung. 
-Für weitergehende Informationen `siehe opnsense.org <https://opnsense.org/>`_ .
+Sämtliche verfügbaren Bausteine dieser Open-Source-Firewall stehen selbstverständlich zur Verfügung. [#FN1]_
+Für weitergehende Informationen `siehe opnsense.org <https://opnsense.org/>`_. 
 
 Anpassbar
 ---------
@@ -136,7 +136,7 @@ Alle bisher vorgestellten Basisdienste werden vorkonfiguriert bereitgestellt, bl
    :alt:      box-optionale-server
    :height:   40px
 
-Integraler Bestandteil sind für weitergehende Anpassungen die optional verwendbaren Server.
+Integraler Bestandteil sind für weitergehende Anpassungen die optional verwendbaren Server. Sie dienen als Basis für eine Erweiterung an die Bedürfnisse der Bildungseinrichtung. 
 
 Docker
 ++++++
@@ -147,9 +147,10 @@ Docker
    :height:   80px
 
 Ein Docker-Server steht zur Installation bereit, um über die Basisdienste hinausgehende Server zu integrieren.  
-
 Docker ist ein Open-Source-Projekt zur automatisierten Anwendungsverteilung.
-Durch Container, die alle benötigten Pakete mitbringen, vereinfacht sich so die Bereitstellung und Verteilung. Außerdem gewährleisten sie die Trennung und Verwaltung der auf dem Docker-Server genutzten Ressourcen.
+
+Durch Container, die alle benötigten Pakete mitbringen, vereinfacht sich so die Bereitstellung und Verteilung. Außerdem gewährleisten sie die Trennung und Verwaltung der auf dem Docker-Server genutzten Ressourcen. [#FN1]_
+
 Für weitergehende Informationen `siehe die Docker-Homepage <https://www.docker.com/>`_ .
 
 OPSI
@@ -160,16 +161,17 @@ OPSI
    :alt:      box-opsi
    :height:   80px
 
-Als alternatives System zu LINBO zur Software-Verteilung. ... zu ergänzen
+Als alternatives System zu LINBO zur Software-Verteilung.  [#FN1]_
 
-Es können so in einfacher Form eigene IT-Dienste bereitgestellt und integriert werden.
+Für weitergehende Informationen `siehe die OPSI-Homepage <https://www.XXXXX.com/>`_ 
+
 
 .. note::
    Die bis hier vorgestellten Bestandteile werden vom Verein linuxmuster.net e. V. entwickelt und unterstützt. Diese Unterstützung wird durch die telefonische Hotline `<https://www.linuxmuster.net/de/support-de/hotline/>`_ und durch das Hilfe-Forum `<https://www.linuxmuster.net/de/support-de/discourse-forum/>`_ geleistet.
     
    All diese Leistungen sind nicht von einer Mitgliedschaft im Verein abhängig.
 
-   Die im nachfolgenden beschriebenen Elemente werden durch die Community über das Hilfeforum bereitgestellt und unterstützt.
+   .. [#FN1] Die gekenntzeichneten und die nachfolgenden beschriebenen Elemente werden durch die Community über das Hilfeforum bereitgestellt und unterstützt.
 
 
 Alternativ
