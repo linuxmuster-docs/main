@@ -151,7 +151,7 @@ docker ist ein Open-Source-Projekt zur automatisierten Anwendungsverteilung.
 
 Durch Container, die alle benötigten Pakete mitbringen, vereinfacht sich so die Bereitstellung und Verteilung. Außerdem gewährleisten sie die Trennung und Verwaltung der auf dem Docker-Server genutzten Ressourcen. [#FN1]_
 
-Für weitergehende Informationen `siehe die Docker-Homepage <https://www.docker.com/>`_ .
+Für weitergehende Informationen `siehe die Docker-Homepage <https://www.docker.com/>`_. 
 
 opsi
 ++++
@@ -163,19 +163,19 @@ opsi
 
 opsi (Open PC Server Integration) ist ein Clientmanagement-System zur Verwaltung von Windows- und Linux-Clients. Die Kernkomponenten von opsi sind Open-Source.
 
-Es steht als alternatives System oder als Ergänzung zu LINBO zur Verfügung. So lassen sich zum Beispiel opsi-Pakete auf einem Musterclient installieren um sie anschließend mittels LINBO auszurollen. [#FN1]_
+Es steht als alternatives System oder als Ergänzung zu LINBO zur Verfügung. So lassen sich zum Beispiel opsi-Pakete auf einem Musterclient installieren, um sie anschließend mittels LINBO auszurollen. [#FN1]_ [#FN2]_
 
-Für weitergehende Informationen `siehe die OPSI-Homepage <https://uib.de>`_ 
+Für weitergehende Informationen `siehe die OPSI-Homepage <https://uib.de>`_. 
 
 
 .. note::
    Die bis hier vorgestellten Bestandteile werden vom Verein linuxmuster.net e. V. entwickelt und unterstützt. Diese Unterstützung wird durch die telefonische Hotline `<https://www.linuxmuster.net/de/support-de/hotline/>`_ und durch das Hilfe-Forum `<https://www.linuxmuster.net/de/support-de/discourse-forum/>`_ geleistet.
-    
+
    All diese Leistungen sind nicht von einer Mitgliedschaft im Verein abhängig.
 
-   .. [#FN1] Die gekennzeichneten und die nachfolgenden beschriebenen Elemente werden durch die Community über das Hilfeforum bereitgestellt und unterstützt.
+   Aufgrund der großen Spannweite möglicher Einsatzszenarien umfasst der telefonische Support nicht die mit [#FN1]_ und [#FN2]_ gekennzeichneten Elemente. Berät aber gerne und zeigt Möglichkeiten auf.
 
-
+   
 Alternativ
 ++++++++++
 
@@ -184,9 +184,9 @@ Alternativ
    :alt:      box-alternativ
    :height:   40px
 
-... zu ergänzen
+Weitere Server mit ihren Diensten lassen sich in der lokalen Infrastruktur bereitstellen. Wenn diese über die Möglichkeit einer Anbindung an den Samba des linuxmuster.net-Servers mittels LDAP verfügen, dann lassen sich auch auf ihnen alle aufgezeigten Vorteile nutzen. [#FN1]_
 
-Beschreibung am Beispiel einer alternativen Firewall ... zu ergänzen
+Beispielhaft ist hier eine alternative Firewall als Hardware-Appliance gezeigt, die den Internetverkehr regelt. [#FN2]_
 
 Extra
 +++++
@@ -197,6 +197,11 @@ Extra
    :height:   40px
 
 
-Anbindung externer Dienste ... zu ergänzen
+Verschiedenste externe Dienste lassen sich ebenso anbinden, wie die unter "Alternativ" genannten.
+
+Exemplarisch seien hier Services der Kultusministerien lanis, mebis u. a. aufgeführt. Auch extern gehostete Server wie zum Beispiel nextcloud, moodle, hpi-schulcloud oder Videokonferenzsysteme lassen sich integrieren. Weitere mögliche Dienste sind der Übersicht zu entnehmen. [#FN1]_ :sup:`und/oder` [#FN2]_
 
 :download:`Übersicht als PDF <media/about_10_structure_of_version_7_simple.pdf>`
+
+.. [#FN1] Die gekennzeichneten Elemente werden durch die Community über das `Hilfeforum <https://ask.linuxmuster.net/>`_ bereitgestellt und unterstützt.
+.. [#FN2] Die gekennzeichneten Elemente werden durch deren Hersteller/Dienstleister unterstützt. 
