@@ -110,12 +110,20 @@ Integration unterschiedlicher Geräte (BYOD)
 
 Da sich alle Steuerungsfunktionen in unserer Lösung an den Benutzern orientieren, ist es unerheblich an welchem Gerät sie sich befinden. Das Gleiche gilt auch für mitgebrachte Geräte, mit denen sie sich mit dem Intranet via WLAN verbinden.
 
+Firewall
+++++++++
+
 .. image::    media/about_04_firewall.png
    :name:     box-firewall
    :alt:      box-firewall
    :height:   40px
 
-* ... zu ergänzen
+Als Standard ist die open-source Firewall OPNSense ® Gegenstand der Auslieferung.
+
+Durch die Integration an den AD DS (Active Directory Domain Services) des Servers (Samba4) werden sämtliche Benutzer-Zugriffe der Nutzer auf das Internet geregelt.
+
+Sämtliche verfügbaren Bausteine dieser open-source-Firewall stehen selbstverständlich zur Verfügung. 
+Für weitergehende Informationen `siehe opnsense.org <https://opnsense.org/>`_ .
 
 Anpassbar
 ---------
