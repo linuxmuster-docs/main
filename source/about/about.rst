@@ -17,7 +17,7 @@ Unser Anspruch liegt dabei auf der Bereitstellung eines Systems, das folgende Pu
     * schnelle Installation.
     * Anpassbarkeit an die vorhandene Infrastruktur.
     * bestehend aus Server, Firewall und vorkonfigurierten Arbeitsstationen.
-    * mehrstufige ausbau- und anpassbar Infrastruktur mit heterogenen Clients und unterschiedlichsten Diensten bzw. Cloud-Lösungen.
+    * mehrstufige ausbau- und anpassbare Struktur mit heterogenen Clients und unterschiedlichsten Diensten bzw. Cloud-Lösungen.
 
 Ein Augenmerk liegt dabei auf der Unabhängigkeit von der eingesetzten Hard- und Software. 
 
