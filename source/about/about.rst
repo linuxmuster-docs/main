@@ -12,16 +12,38 @@ Schulnetz
 
 Schulische IT wird mit einer vollintegrierten Open-Source-Lösung abgebildet. Dieses umfasst alle Bereiche, die in einer Bildungseinrichtung anzutreffen sind.
 
-Ein Augenmerk liegt dabei auf der Unabhängigkeit von der eingesetzten Hard- und Software. Dieses wird zum Beispiel erkennbar an dem Umfang der unterstützten Betriebssysteme (BS) für die Arbeitsstationen. Selbstredend ist für uns das Open-Source-BS Linux erste Wahl, welches wir mit einem Muster-Client zur Verfügung stellen. BS anderer Hersteller, z.B. Microsoft©, lassen sich aber ebenso leicht in unsere Infrastruktur integrieren.
+Unser Anspruch liegt dabei auf der Bereitstellung eines Systems, das folgende Punkte erfüllt ...
+
+    * schnelle Installation.
+    * Anpassbarkeit an die vorhandene Infrastruktur.
+    * bestehend aus Server, Firewall und vorkonfigurierten Arbeitsstationen.
+    * mehrstufige ausbau- und anpassbar Infrastruktur mit heterogenen Clients und unterschiedlichsten Diensten bzw. Cloud-Lösungen.
+
+Ein Augenmerk liegt dabei auf der Unabhängigkeit von der eingesetzten Hard- und Software. 
+
+Dieses wird zum Beispiel erkennbar an dem Umfang der unterstützten Betriebssysteme (BS) für die Arbeitsstationen. 
+
+Proprietäre BS, z.B. aus dem Hause Microsoft©, können aufgrund der Lizenzpolitik der Hersteller nicht von uns vorbereitet mit ausgeliefert werden. Lassen sich aber ebenso leicht in unsere Infrastruktur integrieren, wie solche die als Open-Source erhältlich sind. 
+
+Auf der Basis von Linux stellen wir ein Open-Source-BS zur Verfügung, dass folgende Vorteile bietet:
+
+    * entwickelt von Praktikern für den täglichen Einsatz an Schulen.
+    * mit hilfreichen Schulfunktionen für den Unterrichtseinsatz.
+    * in einfacher Form anpass- und erweiterbar an die eigenen Bedürfnisse.
+    * keine Lizenzkosten
+
+Im Zusammenspiel der Clients mit dem Server und einer Firewall entsteht so die grundlegende Infrastruktur. Diese lässt sich aufgrund des modularen Aufbaues weiter an die darüber hinausgehenden Anforderungen erweitern.
+
+Komplett
+--------
+
+Die volle Funktionsfähig des Systems wird durch die Interaktion der verschieden Server miteinander und mit den Clients erreicht. Dieses wird in der Grafik durch das blaue Band dargestellt. Es symbolisiert den Datenaustausch zwischen ihnen.
 
   .. figure:: media/about_01_structure_of_version_7_simple_web.svg
      :align: center
      :alt: Übersicht der Komponenten
 
-Komplett
---------
-
-Es werden folgende Basisdienste bereitgestellt:
+Die Basisdienste des links abgebildeten Servers sind für die Funktion des ganzen Systems verantwortlich:
 
 .. image::    media/about_02_server.png
    :name:     box-server
@@ -75,30 +97,26 @@ Diese Funktionalität lässt sich bei Bedarf an die Bedürfnisse der Bildungsein
 Selbstheilende Arbeitsstationen durch LINBO
 +++++++++++++++++++++++++++++++++++++++++++
 
-Unterricht ist einfacher in einer für alle gleichen Umgebung zu geben. Dieses lässt sich dadurch erreichen, dass die Nutzung der Rechner so weit eingeschränkt wird, dass nur freigegebene Teilbereiche nutzbar sind.
+Das Konzept der Selbstheilenden Arbeitsstationen (SheilA) ermöglicht einheitliche identische Schulungssysteme. Diese können bei jedem Start der Rechner in einen vorher definierten Zustand zurückgesetzt werden. Dieser standardmäßige Standard wird durch die letzte Veränderung oder Installation festgelegt, in dem ein Abbild des BS auf dem Server gespeichert wird. Weitere Vorteile sind ...
 
-**Diesen Ansatz verfolgt unsere Lösung nicht!**
-
-Wir ermöglicht es jedem Benutzer beim Start das System auf den Standard zurückzusetzen. Selbst ein Formatieren der Festplatte durch den vorherigen Nutzer lässt sich so wieder beheben. Das ist das was wir unter selbstheilende Arbeitsstationen (SheilA) verstehen.
+    * vorhalten von verschiedenen BS auf den Clients.
+    * schnelle Erst- oder Neueinrichtung.
+    * keine Einschränkung der Nutzer durch Benutzerrechte nötig.
+    * einfache Wiederherstellung der Clients ist jedem Benutzer möglich.
+    * einfache Softwareverteilung durch Installation auf einem Client. Keine gesonderten Kenntnisse erforderlich bei demjenigen der die Software-Installation betreut.
+    * Möglichkeit der zeit- und/oder ferngesteuerten Aktualisierung der Clients.
+    * mit sogenannten Postsync-Scripten kann der Administrator für einzelne, raumweite oder für alle Geräte notwendige Konfigurationsänderung beim Systemstart einpflegen.
 
 Die Funktionsweise in ein paar Worten beschrieben: 
 
-.. TODO:: Eventuell mittels einer zu erstellenden Grafik erklären.
+.. TODO:: Durch eine zu erstellenden Grafik die Funktionsweise erklären. (In Bearbeitung)
 
     * Auf dem Server liegt ein Abbild der Festplatte mit dem Betriebssystem des Clients.
     * Nach dem Einschalten des Clients überprüft dieser, ob ein für ihn aktuelleres Festplattenabbild auf dem Server vorhanden ist.
     * Ist dieses der Fall, lädt er sich dieses in einen speziellen Bereich auf seine lokale Festplatte. 
     * Dieses Abbild ist dann der Master für das lokale Betriebssystem.
     * Diese wird dann im letzten Schritt gestartet.
-
-Daraus ergeben sich folgende Vorteile:
-
-    * Software-Installation durch Kopieren des Clients auf den Server. Keine gesonderten Kenntnisse erforderlich bei demjenigen der die Software-Installation betreut.
-    * Vorhalten mehrere verschiedene Betriebssysteme auf den Clients.
-    * Möglichkeit der zeit- und/oder ferngesteuerten Aktualisierung der Clients.
-    * Mit sogenannten Postsync-Scripten kann der Administrator für einzelne, raumweite oder für alle Geräte notwendige Konfigurationsänderung beim Systemstart einpflegen. 
-    * Einfache Wiederherstellung der Clients ist jedem Benutzer möglich.
-    * Keine Einschränkung der Benutzerrechte auf den Clients nötig.
+    
 
 Vorkonfigurierter Linux-Client
 ++++++++++++++++++++++++++++++
@@ -120,7 +138,7 @@ Firewall
 
 Als Standard ist die Firewall OPNSense® Gegenstand der Auslieferung.
 
-Durch die Integration an den AD DS (Active Directory Domain Services) des Servers (Samba4) werden sämtliche Benutzer-Zugriffe der Nutzer auf das Internet geregelt.
+Durch die Integration an den AD DS (Active Directory Domain Services) des Servers (Samba4) werden sämtliche Benutzer-Zugriffe der Nutzer mittels Single-Sign-On auf das Internet geregelt.
 
 Sämtliche verfügbaren Bausteine dieser Open-Source-Firewall stehen selbstverständlich zur Verfügung. [#FN1]_
 Für weitergehende Informationen `siehe opnsense.org <https://opnsense.org/>`_. 
@@ -169,13 +187,28 @@ Für weitergehende Informationen `siehe die OPSI-Homepage <https://uib.de>`_.
 
 
 .. note::
-   Die bis hier vorgestellten Bestandteile werden vom Verein linuxmuster.net e. V. entwickelt und unterstützt. Diese Unterstützung wird durch die telefonische Hotline `<https://www.linuxmuster.net/de/support-de/hotline/>`_ und durch das Hilfe-Forum `<https://www.linuxmuster.net/de/support-de/discourse-forum/>`_ geleistet.
-
-   All diese Leistungen sind nicht von einer Mitgliedschaft im Verein abhängig.
-
-   Aufgrund der großen Spannweite möglicher Einsatzszenarien umfasst der telefonische Support nicht die mit [#FN1]_ und [#FN2]_ gekennzeichneten Elemente. Berät aber gerne und zeigt Möglichkeiten auf.
-
+   Die bis hier vorgestellten Bestandteile werden vom Verein   
+   **linuxmuster.net e. V. entwickelt und unterstützt**.
    
+   Diese Unterstützung wird geleistet durch die 
+   
+   **telefonische Hotline** `<https://www.linuxmuster.net/de/support-de/hotline/>`_ 
+   
+   und das
+    
+   **Hilfe-Forum** `<https://www.linuxmuster.net/de/support-de/discourse-forum/>`_ geleistet.
+
+   **All diese Leistungen sind nicht von einer Mitgliedschaft im Verein abhängig.**
+
+   Aufgrund der großen Spannweite möglicher Einsatzszenarien umfasst der telefonische Support alle beschriebenen Absätze die nicht mit [#FN1]_ und [#FN2]_ gekennzeichneten sind.
+
+   [#FN1]_ sind Elemente die aus der Community hervorgegangen sind und auch von ihr im Hilfe-Forum supportet werden.
+
+   [#FN2]_ sind Elemente von externen Anbietern (Hersteller und Dienstleister).
+
+   **Das Support-Team berät aber gerne und zeigt alle Möglichkeiten und Alternativen auf.**
+
+
 Alternativ
 ++++++++++
 
@@ -199,7 +232,7 @@ Extra
 
 Verschiedenste externe Dienste lassen sich ebenso anbinden, wie die unter "Alternativ" genannten.
 
-Exemplarisch seien hier Services der Kultusministerien lanis, mebis u. a. aufgeführt. Auch extern gehostete Server wie zum Beispiel nextcloud, moodle, hpi-schulcloud oder Videokonferenzsysteme lassen sich integrieren. Weitere mögliche Dienste sind der Übersicht zu entnehmen. [#FN1]_ :sup:`und/oder` [#FN2]_
+Exemplarisch seien hier Services der Kultusministerien wie zum Beispiel lanis, mebis u. a. aufgeführt. Auch extern gehostete Server wie zum Beispiel nextcloud, moodle, hpi-schulcloud oder Videokonferenzsysteme lassen sich integrieren. Weitere mögliche Dienste sind der Übersicht zu entnehmen. [#FN1]_ :sup:`und/oder` [#FN2]_
 
 :download:`Übersicht als PDF <media/about_10_structure_of_version_7_simple.pdf>`
 
