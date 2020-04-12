@@ -107,16 +107,21 @@ Das Konzept der Selbstheilenden Arbeitsstationen (SheilA) ermöglicht einheitlic
     * Möglichkeit der zeit- und/oder ferngesteuerten Aktualisierung der Clients.
     * mit sogenannten Postsync-Scripten kann der Administrator für einzelne, raumweite oder für alle Geräte notwendige Konfigurationsänderung beim Systemstart einpflegen.
 
-Die Funktionsweise in ein paar Worten beschrieben: 
+Die Funktionsweise am Beispiel eines Clients beschrieben.
+Auf dem Server sind dessen zwei Betriebssysteme komprimiert gespeichert. 
 
-.. TODO:: Durch eine zu erstellenden Grafik die Funktionsweise erklären. (In Bearbeitung)
+.. image::    ..//clients/linbo/media/linbo_functionality_detail.svg
+   :name:     linbo-functionality
+   :alt:      linbo-functionality
+   :height:    150px
 
-    * Auf dem Server liegt ein Abbild der Festplatte mit dem Betriebssystem des Clients.
-    * Nach dem Einschalten des Clients überprüft dieser, ob ein für ihn aktuelleres Festplattenabbild auf dem Server vorhanden ist.
-    * Ist dieses der Fall, lädt er sich dieses in einen speziellen Bereich auf seine lokale Festplatte. 
-    * Dieses Abbild ist dann der Master für das lokale Betriebssystem.
-    * Diese wird dann im letzten Schritt gestartet.
-    
+* Der Benutzer wählt das erste BS zum synchronisierten Start aus.
+* Der Client überprüft, ob sein lokal gespeichertes Systemabbild identisch ist mit dem auf dem Server. (1.)
+* Dieses ist der Fall und der Client entpackt das erste BS auf die eigentliche System-Partition und startet das System anschließend. (3.)
+
+  Wäre das nicht der Fall gewesen hätte er zuerst das Systemabbild vom Server heruntergeladen (2.) um dann mit (3.) fortzufahren.
+
+Der hier aufgezeigte Fall ist einer von vielen Einsatzszenarien und dient der Veranschaulichung. Nähere Information sind im Kapitel "Linbo nutzen" beschrieben.
 
 Vorkonfigurierter Linux-Client
 ++++++++++++++++++++++++++++++
