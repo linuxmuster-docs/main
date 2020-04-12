@@ -18,12 +18,14 @@ Unser Anspruch liegt dabei auf der Bereitstellung eines Systems, das folgende Pu
     * Anpassbarkeit an die vorhandene Infrastruktur.
     * bestehend aus Server, Firewall und vorkonfigurierten Arbeitsstationen.
     * mehrstufige ausbau- und anpassbare Struktur mit heterogenen Clients und unterschiedlichsten Diensten bzw. Cloud-Lösungen.
+    * einen freien Zugang zu einer umfänglichen Dokumentation.
+    * letzter Punkt ergänzt um das frei zugängliche `Community-Wiki <https://wiki.linuxmuster.net/community/>`_ mit Anleitungen vielfältigster Erweiterungen aus dem Umfeld der Unterstützer von linuxmster.net. [#FN1]_
 
 Ein Augenmerk liegt dabei auf der Unabhängigkeit von der eingesetzten Hard- und Software. 
 
 Dieses wird zum Beispiel erkennbar an dem Umfang der unterstützten Betriebssysteme (BS) für die Arbeitsstationen. 
 
-Proprietäre BS, z.B. aus dem Hause Microsoft©, können aufgrund der Lizenzpolitik der Hersteller nicht von uns vorbereitet mit ausgeliefert werden. Lassen sich aber ebenso leicht in unsere Infrastruktur integrieren, wie solche die als Open-Source erhältlich sind. 
+Proprietäre BS, z.B. aus dem Hause Microsoft©, können aufgrund der Lizenzpolitik der Hersteller nicht von uns vorbereitet ausgeliefert werden. Lassen sich aber ebenso leicht in unsere Infrastruktur integrieren, wie solche die als Open-Source erhältlich sind. 
 
 Auf der Basis von Linux stellen wir ein Open-Source-BS zur Verfügung, dass folgende Vorteile bietet:
 
@@ -37,11 +39,17 @@ Im Zusammenspiel der Clients mit dem Server und einer Firewall entsteht so die g
 Komplett
 --------
 
-Die volle Funktionsfähig des Systems wird durch die Interaktion der verschieden Server miteinander und mit den Clients erreicht. Dieses wird in der Grafik durch das blaue Band dargestellt. Es symbolisiert den Datenaustausch zwischen ihnen.
+Die vier unter der blauen Überschrift "linuxmuster.net - Version 7" veranschaulichten Bereiche zeigen die Kern-Komponenten. Für dieses Grundsystem halten wir vorgefertigte Virtuelle Maschinen zum Download bereit.
+
+Damit stellen wir sicher, dass sowohl ein schulischer Administrator, die IT-Abteilung eines Schulträgers oder ein Dienstleister von Arbeit im Vorfeld entlastet wird.
+
+Zu jedem Zeitpunkt der Projektierung (Planung, Installation und Betrieb) steht unser Telefon-Support und unser Hilfeforum beratend zu Seite.
 
   .. figure:: media/about_01_structure_of_version_7_simple_web.svg
      :align: center
      :alt: Übersicht der Komponenten
+
+Die volle Funktionsfähig des Systems wird durch die Interaktion der verschieden Server miteinander und den Clients erreicht. Dieses wird in der Grafik durch das untere blaue Band dargestellt. Es symbolisiert den Datenaustausch zwischen ihnen. Darüber hinaus aber auch zu externen Diensten.
 
 Die Basisdienste des links abgebildeten Servers sind für die Funktion des ganzen Systems verantwortlich:
 
