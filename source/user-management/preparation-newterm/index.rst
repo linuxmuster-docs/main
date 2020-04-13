@@ -1,33 +1,47 @@
-========================================
-(v6.2) Vorbereitung am Schuljahresanfang
-========================================
+.. _linuxmuster-preparation-newterm-label:
+
+=================================
+Vorbereitung am Schuljahresanfang
+=================================
+
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
+
 
 Klassenliste aktualisieren
 --------------------------
 
-Zu Schuljahresbeginn müssen Sie als Lehrer einmalig die Klassenliste aktualisieren. Sie fügen neue Klassen, die Sie unterrichten, hinzu und tragen Klassen aus, die Sie abgegeben haben.
+Zu Schuljahresbeginn muss jeder Lehrer seine Klassenliste aktualisieren. Neu zu unterrichtende Klassen sind hinzuzufügen und nicht mehr unterrichtete Klassen sind auszutragen. Voraussetzung für die Zuordnung neuer Klassen ist, dass diese im linuxmuster.net System bereits existieren. Ihr Schuladministrator muss daher alle neuen Klassen- und Schülerdaten bereits aus der Schulverwaltung exportiert und in linuxmuster.net importiert haben.
 
-Um die Klassenliste zu aktualisieren, melden Sie sich zunächst als Lehrer an der Schulkonsole an.
+Um die Klassenliste als Lehrer zu aktualisieren, erfolgt zunächst die Anmeldung in der Schulkonsoleals Lehrer.
 
-.. image:: media/logon-schulkonsole.png
+.. image:: media/1-preparation-newterm-login-as-teacher.png
+   :alt: Login as a tacher
+   :align: center
 
 Klassenliste auswählen
 ----------------------
 
-Nach erfolgreicher Anmeldung in der Schulkonsole für Lehrer, wählen Sie aus dem Menü `Klassen` und danach den Unterpunkt `Klassenliste` aus.
+Um Klassenlisten zu aktualisieren, ist nach erfolgreicher Anmeldung als Lehrer das Menü ``Klassenzimmer -> Einschreiben`` auszuwählen. 
 
-.. image:: media/menue-class.png
+.. image:: media/2-preparation-newterm-enrole.png
+   :alt: choose enrole
+   :align: center
 
-Sie sehen dann die bereits zugeordneten Klassen.
+Jede Klasse, die dem Leher zugeordnet ist, ist mit einem Auswahlhäkchen markiert. Für Klassen, die nun dem Lehrer 
+neu hinzugefügt werden sollen, ist das Häkchen vor der betreffenden Klasse zu setzen. Für Klassen, die im neuen 
+Schuljahr nicht mehr dem Lehrer zugeordnet sein sollen, ist das Häkchen zu deaktivieren.
 
-.. image:: media/classoverview.png
+.. image:: media/3-preparation-newterm-change-class-enrolement.png
+   :alt: change class enrolement
+   :align: center
 
-Unter den bereits zugeordneten Klassen finden Sie ein Drop-down Menü, in dem Sie diejenigen Klassen finden, die Sie sich noch zuordnen können.
+Danach sind die Änderungen unten auf der Seite mit ``Übernehmen`` dauerhaft anzuwenden.
 
-.. image:: media/getclasses.png
+Dies Änderungen stellen sich dann wie folgt dar:
 
-Wählen Sie aus dieser Liste nun diejenige Klasse aus, die Sie hinzufügen möchten und klicken auf den Button `eintragen`.
-Benötigen Sie mehrere neue Klasse, so fügen Sie diese nacheinander hinzu.
+.. image:: media/4-preparation-newterm-class-enrolement-controlled.png
+   :alt: control of new class enrolement
+   :align: center
 
 Neue Anmeldung
 --------------
