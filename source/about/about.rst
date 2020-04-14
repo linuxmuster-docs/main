@@ -19,11 +19,9 @@ Unser Anspruch liegt dabei auf der Bereitstellung eines Systems, das folgende Pu
     * bestehend aus Server, Firewall und vorkonfigurierten Arbeitsstationen.
     * mehrstufige ausbau- und anpassbare Struktur mit heterogenen Clients und unterschiedlichsten Diensten bzw. Cloud-Lösungen.
     * einen freien Zugang zu einer umfänglichen Dokumentation.
-    * letzter Punkt ergänzt um das frei zugängliche `Community-Wiki <https://wiki.linuxmuster.net/community/>`_ mit Anleitungen vielfältigster Erweiterungen aus dem Umfeld der Unterstützer von linuxmster.net. [#FN1]_
+    * letzter Punkt ergänzt um das frei zugängliche `Community-Wiki <https://wiki.linuxmuster.net/community/>`_ mit Anleitungen vielfältigster Erweiterungen aus dem Umfeld der Unterstützer von linuxmuster.net. [#FN1]_
 
-Ein Augenmerk liegt dabei auf der Unabhängigkeit von der eingesetzten Hard- und Software. 
-
-Dieses wird zum Beispiel erkennbar an dem Umfang der unterstützten Betriebssysteme (BS) für die Arbeitsstationen. 
+Ein Augenmerk liegt dabei auf der Unabhängigkeit von der eingesetzten Hard- und Software. Dieses wird zum Beispiel erkennbar an dem Umfang der unterstützten Betriebssysteme (BS) für die Arbeitsstationen. 
 
 Proprietäre BS, z.B. aus dem Hause Microsoft©, können aufgrund der Lizenzpolitik der Hersteller nicht von uns vorbereitet ausgeliefert werden. Lassen sich aber ebenso leicht in unsere Infrastruktur integrieren, wie solche die als Open-Source erhältlich sind. 
 
@@ -34,14 +32,14 @@ Auf der Basis von Linux stellen wir ein Open-Source-BS zur Verfügung, dass folg
     * in einfacher Form anpass- und erweiterbar an die eigenen Bedürfnisse.
     * keine Lizenzkosten
 
-Im Zusammenspiel der Clients mit dem Server und einer Firewall entsteht so die grundlegende Infrastruktur. Diese lässt sich aufgrund des modularen Aufbaues weiter an die darüber hinausgehenden Anforderungen erweitern.
+Im Zusammenspiel der Clients mit dem Server und einer Firewall entsteht so die grundlegende Infrastruktur. Diese lässt sich aufgrund des modularen Aufbaus weiter an die darüber hinausgehenden Anforderungen erweitern.
 
 Komplett
 --------
 
-Die vier unter der blauen Überschrift "linuxmuster.net - Version 7" veranschaulichten Bereiche zeigen die Kern-Komponenten. Für dieses Grundsystem halten wir vorgefertigte Virtuelle Maschinen zum Download bereit.
+Die vier unter der blauen Überschrift "linuxmuster.net - Version 7" veranschaulichten Bereiche zeigen die Kern-Komponenten. Für dieses Grundsystem halten wir vorgefertigte virtuelle Maschinen zum Download bereit.
 
-Damit stellen wir sicher, dass sowohl ein schulischer Administrator, die IT-Abteilung eines Schulträgers oder ein Dienstleister von Arbeit im Vorfeld entlastet wird.
+Damit stellen wir sicher, dass sowohl ein schulischer Administrator, die IT-Abteilung eines Schulträgers oder ein Dienstleister im Vorfeld von Arbeit entlastet wird.
 
 Zu jedem Zeitpunkt der Projektierung (Planung, Installation und Betrieb) steht unser Telefon-Support und unser Hilfeforum beratend zu Seite.
 
@@ -49,7 +47,7 @@ Zu jedem Zeitpunkt der Projektierung (Planung, Installation und Betrieb) steht u
      :align: center
      :alt: Übersicht der Komponenten
 
-Die volle Funktionsfähig des Systems wird durch die Interaktion der verschieden Server miteinander und den Clients erreicht. Dieses wird in der Grafik durch das untere blaue Band dargestellt. Es symbolisiert den Datenaustausch zwischen ihnen. Darüber hinaus aber auch zu externen Diensten.
+Die volle Funktionsfähigkeit des Systems wird durch die Interaktion der verschiedenen Server miteinander und den Clients erreicht. Dieses wird in der Grafik durch das untere blaue Band dargestellt. Es symbolisiert den Datenaustausch zwischen ihnen. Darüber hinaus aber auch zu externen Diensten.
 
 Die Basisdienste des links abgebildeten Servers sind für die Funktion des ganzen Systems verantwortlich:
 
@@ -90,10 +88,10 @@ Dateiverwaltung und -verteilung
 
 Jeder Nutzer besitzt einen eigenen Bereich auf dem Netzwerkspeicher. Darüber hinaus steht ein solcher den Gruppen für den Austausch ihrer gemeinschaftlichen Arbeit zur Verfügung.
 
-schulinterne E-Mail-Korrespodenz
-++++++++++++++++++++++++++++++++
+Schulinterne E-Mail-Korrespondenz
++++++++++++++++++++++++++++++++++
 
-Von den einigen Kultusministerien wird eine Grundkompetenz in der Nutzung von E-Mail gefordert. Um diesem Anspruch gerecht zu werden ist ein E-Mail-Server Bestandteil von linuxmuster.net. Jeder Nutzer des Systems hat eine eigene Mail-Adresse, die es ihm ermöglicht schulintern zu kommunizieren.
+Von den einigen Kultusministerien wird eine Grundkompetenz in der Nutzung von E-Mail gefordert. Um diesem Anspruch gerecht zu werden, ist ein E-Mail-Server Bestandteil von linuxmuster.net. Jeder Nutzer des Systems hat eine eigene Mail-Adresse, die es ihm ermöglicht schulintern zu kommunizieren.
 
 Diese Funktionalität lässt sich bei Bedarf an die Bedürfnisse der Bildungseinrichtung anpassen bzw. weiterausbauen. linuxmuster.net bringt dafür verschiedene Alternativen mit.
 
@@ -115,8 +113,8 @@ Das Konzept der Selbstheilenden Arbeitsstationen (SheilA) ermöglicht einheitlic
     * Möglichkeit der zeit- und/oder ferngesteuerten Aktualisierung der Clients.
     * mit sogenannten Postsync-Scripten kann der Administrator für einzelne, raumweite oder für alle Geräte notwendige Konfigurationsänderung beim Systemstart einpflegen.
 
-Die Funktionsweise am Beispiel eines Clients beschrieben.
-Auf dem Server sind dessen zwei Betriebssysteme komprimiert gespeichert. 
+Die Funktionsweise wird am Beispiel eines Clients (rechts im Bild) beschrieben.
+Auf dem Server (links im Bild) sind zwei Betriebssysteme für Clients dieses Typs komprimiert gespeichert. 
 
 .. image::    ..//clients/linbo/media/linbo_functionality_detail.svg
    :name:     linbo-functionality
@@ -124,10 +122,8 @@ Auf dem Server sind dessen zwei Betriebssysteme komprimiert gespeichert.
    :height:    150px
 
 * Der Benutzer wählt das erste BS zum synchronisierten Start aus.
-* Der Client überprüft, ob sein lokal gespeichertes Systemabbild identisch ist mit dem auf dem Server. (1.)
-* Dieses ist der Fall und der Client entpackt das erste BS auf die eigentliche System-Partition und startet das System anschließend. (3.)
-
-  Wäre das nicht der Fall gewesen hätte er zuerst das Systemabbild vom Server heruntergeladen (2.) um dann mit (3.) fortzufahren.
+* Der Client überprüft, ob sein lokal gespeichertes Systemabbild identisch ist mit dem auf dem Server (1.).
+* Dieses ist der Fall und der Client entpackt das erste BS auf die eigentliche System-Partition und startet das System anschließend (3.). Wäre das nicht der Fall gewesen hätte er zuerst das Systemabbild vom Server heruntergeladen (2.) um dann mit (3.) fortzufahren.
 
 Der hier aufgezeigte Fall ist einer von vielen Einsatzszenarien und dient der Veranschaulichung. Nähere Information sind im Kapitel "Linbo nutzen" beschrieben.
 
@@ -167,7 +163,7 @@ Alle bisher vorgestellten Basisdienste werden vorkonfiguriert bereitgestellt, bl
    :alt:      box-optionale-server
    :height:   40px
 
-Integraler Bestandteil sind für weitergehende Anpassungen die optional verwendbaren Server. Sie dienen als Basis für eine Erweiterung an die Bedürfnisse der Bildungseinrichtung. 
+Integraler Bestandteil für weitergehende Anpassungen sind die optional verwendbaren Server. Sie dienen als Basis für eine Erweiterung an die Bedürfnisse der Bildungseinrichtung. 
 
 docker
 ++++++
