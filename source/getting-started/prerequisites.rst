@@ -264,7 +264,7 @@ Voraussetzungen noch folgende Hinweise:
   komplex, die physikalische Verkabelung kann aber einfacher werden.
 
 - Der Speicherplatz wird virtualisiert. Darauf muss man bei der
-  Verwendung externer (iSCSI) wie interner Speichersysteme (LVM)
+  Verwendung externer (iSCSI/NFS) wie interner Speichersysteme (LVM)
   achten. Dies kann auch zur Vereinfachung eines Backupverfahrens
   beitragen.
 
@@ -289,9 +289,6 @@ KVM/qemu/Proxmox als Hypervisor:
 
 Xen als Hypervisor:
   Ausführliche Informationen findest Du im eigenen Kapitel :ref:`install-on-xen-label`.
-
-VMware ESXi als Hypervisor:
-  :fixme: anybody?
 
 VirtualBox als Hypervisor:
   VirtualBox wird häufig im Testbetrieb und weniger im
@@ -368,7 +365,7 @@ und/oder eine WLAN-Anbindung via Ubiquiti bereitgestellt werden soll.
 +--------------------+----------------------------------------------------------------------+
 
 
-Download der OVAs unter: `Download OVAs VM v7 <https://download.linuxmuster.net/ova/v7/latest/>`_   
+``Download der OVAs`` unter: `Download OVAs VM v7 <https://download.linuxmuster.net/ova/v7/latest/>`_   
 
 Zur Installation mit KVM: :ref:`Installation KVM <install-on-kvm-label>`
 
@@ -404,7 +401,7 @@ und/oder eine WLAN-Anbindung via Ubiquiti bereitgestellt werden soll.
 Die VMs sind bereits alle auf die Standard-Installation für linuxmuster.net v7 vorbereitet und 
 die sog. XCP-ng Tools sind bereits installiert.
 
-Download der XVAs unter: `Download XVAs VM v7 <https://download.linuxmuster.net/xcp-ng/v7/latest/>`_
+``Download der XVAs`` unter: `Download XVAs VM v7 <https://download.linuxmuster.net/xcp-ng/v7/latest/>`_
 
 
 Virtualisierungssoftware XCP-ng
@@ -431,12 +428,11 @@ Vorgehen
 
 Nachdem du entschieden hast, ob und wie du eine Virtualisierung
 einsetzt, beginnst du mit Installation der Virtualisierung nach einer
-der oben beschriebenen Anleitungen zu Hypervisoren im Anhang dieser
-Dokumentation.
+der oben beschriebenen Anleitungen zu Hypervisoren in dieser Dokumentation.
 
 Alternativ installierst du von Grund auf die Serverbetriebssysteme
 *Ubuntu Server* und *OPNSense* direkt auf der Hardware oder innerhalb
-einer deiner Virtualisierungslösung.
+deiner Virtualisierungslösung.
 
 Jetzt kann die eigentliche Installation mit der eventuellen Anpassung
 des Netzbereiches und der Erstkonfiguration beginnen, wie sie im

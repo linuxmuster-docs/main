@@ -7,21 +7,23 @@ Unter
 
 .. code:: bash
 
-   /var/linbo/linuxmuster-client/
+   /srv/linbo/linuxmuster-client/
 
-Dort finden sich weitere Unterverzeichnisse. Diese stellen die sog. Patchklasse dar. Wird also z.B. der Linuxmuster-Client 14.04 (trusty = Name der Patchklasse) verwendet, so sind alle weiteren Patches für 14.04er-Clients in diesem Verzeichnis abzulegen. 
+Dort finden sich weitere Unterverzeichnisse. Diese stellen die sog. Patchklasse dar. 
+Wird also z.B. der Linuxmuster-Client 18.04 (bionic = Name der Patchklasse) verwendet, 
+so sind alle weiteren Patches für 18.04er-Clients in diesem Verzeichnis abzulegen. 
 
 Die Anpassungen finden sich also unter:
 
 .. code:: bash
 
-   /var/linbo/linuxmuster-client/trusty/
+   /srv/linbo/linuxmuster-client/bionic/
 
-Bei Linuxmuster-Clients 16.04 (Xenial) wäre dies z.B. das Verzeichnis:
+Bei Linuxmuster-Clients 20.04 (Focal Fossa) wäre dies z.B. das Verzeichnis:
 
 .. code:: bash
 
-   /var/linbo/linuxmuster-client/xenial/
+   /srv/linbo/linuxmuster-client/focalfossa/
 
 Diese Patches werden nach folgendem Schema angewendet:
 
@@ -31,36 +33,41 @@ Diese Patches werden nach folgendem Schema angewendet:
    im Unterverzeichnis  .../r100 liegende Patches erhalten nur die Rechner in Raum r100
    im Unterverzeichnis .../r100-pc01 liegende Patches erhält nur der PC01 in Raum r100 die Dateien.
 
-Unterhalb dieser Verzeichnisse sind alle Anpassungen so abzulegen, wie diese dann auf den betreffenden Clients angewendet werden sollen - bsp.:
+Unterhalb dieser Verzeichnisse sind alle Anpassungen so abzulegen, wie diese dann auf 
+den betreffenden Clients angewendet werden sollen - bsp.:
 
 .. code:: bash
 
    .../common/etc/cups/cups.conf
 
-Auf diese Weise würde die Datei cups.conf im Verzeichnis /etc/cups auf allen Clients der Patchklasse angepasst werden.
+Auf diese Weise würde die Datei cups.conf im Verzeichnis /etc/cups auf allen Clients der 
+Patchklasse angepasst werden.
 
-In der Patchklasse xenial würde eine Änderung der Datei rc.local auf allen Rechnern in folgendem Verzeichnis abgelegt:
+In der Patchklasse ``focalfossa`` würde eine Änderung der Datei rc.local auf allen Rechnern 
+in folgendem Verzeichnis abgelegt:
 
 .. code:: bash
 
-   /var/linbo/linuxmuster-client/xenial/common/etc/rc.local
+   /srv/linbo/linuxmuster-client/focalfossa/common/etc/rc.local
 
-Um auf dem Server obige Verzeichnisstruktur zu erhalten, ist auf dem linuxmuster.net Server das Paket **linuxmuster-client-servertools** zu installieren. 
+Um auf dem Server obige Verzeichnisstruktur zu erhalten, ist auf dem linuxmuster.net 
+Server das Paket **linuxmuster-client-servertools** zu installieren. 
 
 Hierzu ist folgender Befehel anzuwenden:
 
 .. code:: bash
 
-   sudo apt-get install linuxmuster-client-servertools
+   sudo apt install linuxmuster-client-servertools
 
 
-Dieses Paket liefert ein sog. universelles Postsync-Script mit, das weiter angepasst und auf die Cloops angewendet werden kann. 
+Dieses Paket liefert ein sog. universelles Postsync-Script mit, das weiter angepasst und 
+auf die Cloops angewendet werden kann. 
 
-Dieses Script ist zur Anwendung auf ein Cloop entsprechend zu kopieren nach:
+Dieses Script ist zur Anwendung auf ein Cloop entsprechend zu kopieren:
 
 .. code:: bash
 
-   /var/linbo/<LinuxImagename>.cloop.postsync
+   /srv/linbo/<LinuxImagename>.cloop.postsync
 
 Die Vorlage des universellen Postsync-Scriptes liegt in folgendem Verzeichnis: 
 
@@ -68,13 +75,16 @@ Die Vorlage des universellen Postsync-Scriptes liegt in folgendem Verzeichnis:
 
    /usr/lib/linuxmuster-client-servertools/generic.postsync
 
-Dieses Script ist so aufgebaut, dass auch noch weitere Scripte ausgeführt werden (z.B. solche, die nur in Raum r100 ausgeführt werden sollen). Scripte, die abgearbeitet werden sollen, müssen in dem jeweiligen Unterverzeichnis postsync.d liegen.
+Dieses Script ist so aufgebaut, dass auch noch weitere Scripte ausgeführt werden 
+(z.B. solche, die nur in Raum r100 ausgeführt werden sollen). Scripte, die abgearbeitet 
+werden sollen, müssen in dem jeweiligen Unterverzeichnis postsync.d liegen.
 
-Sollen Scripte für die Patchklasse xenial und dann nur auf PCs im Raum r100 angewendet werden, so müssen die Scripte in folgendem Verzeichnis liegen:
+Sollen Scripte für die Patchklasse focalfossa und dann nur auf PCs im Raum r100 angewendet 
+werden, so müssen die Scripte in folgendem Verzeichnis liegen:
 
 .. code:: bash
 
-   /var/linbo/linuxmuster-client/xenial/r100/postsync.d/
+   /srv/linbo/linuxmuster-client/focalfossa/r100/postsync.d/
 
 Die Skripte müssen Sh-Scripte sein, da Linbo keine BASH als Shell kennt.
 
@@ -121,7 +131,7 @@ Zudem wird für den raum1 alles unterhalb von ./raum1 angewendet und schließlic
 
 .. code:: bash
 
-   19:06/0 server /var/linbo/linuxmuster-client/xenial # ls -ld $(find .)
+   19:06/0 server /srv/linbo/linuxmuster-client/focalfossa # ls -ld $(find .)
    drwxr-xr-x 7 root root 4096 Nov 20 10:25 .
    drwxr-xr-x 3 root root 4096 Apr 22  2016 ./common
    drwxr-xr-x 3 root root 4096 Mär 17 12:54 ./common/etc
@@ -195,7 +205,7 @@ Das universelle Postsync-Script weist derzeit folgenden Inhalt auf:
    # ein eigenes Patchklassenverzeichnis auf dem Server.
    # Damit kann man verschiedene Patchklassen mit derselben cloop-Datei
    # bedienen, wenn man das benötigt.
-   PATCHCLASS="trusty"
+   PATCHCLASS="focalfossa"
    
    # Das Verzeichnis, in dem die Serverpatches
    # im lokalen Clientcache synchronisiert werden.

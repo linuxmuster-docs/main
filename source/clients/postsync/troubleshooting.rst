@@ -3,7 +3,10 @@ Troubleshooting
 
 **Welche Möglichkeiten der Fehlersuche gibt es ?**
 
-Vom linuxmuster.net Server aus kann man sich auf dem Client mithilfe von **linbo_ssh** anmelden und dort z.B. den Synchronisationsvorgang aktivieren. Es lassen sich so dann die Postsync-Ausgaben / Fehlermeldungen auf dem Client einsehen.
+Vom linuxmuster.net Server aus kann man sich auf dem Client mithilfe 
+von **linbo_ssh** anmelden und dort z.B. den Synchronisationsvorgang 
+aktivieren. Es lassen sich so dann die Postsync-Ausgaben / Fehlermeldungen 
+auf dem Client einsehen.
 
 Das Postsync-Script schreibt eine LOG-Datei, die auf dem Client unter 
 
@@ -12,7 +15,9 @@ Das Postsync-Script schreibt eine LOG-Datei, die auf dem Client unter
     /mnt/var/log/postsync.log abgelegt wird.
 
 
-Auf dem linuxmuster.net Server gibt man hierzu folgendes an, um den Client zu starten, zu synchronisieren und dann in den Linbo-Bildschirm zu gelangen, um die Log-Datei einzusehen:
+Auf dem linuxmuster.net Server gibt man hierzu folgendes an, um den Client 
+zu starten, zu synchronisieren und dann in den Linbo-Bildschirm zu gelangen, 
+um die Log-Datei einzusehen:
 
 .. code:: bash
    

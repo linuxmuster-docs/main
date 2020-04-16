@@ -90,16 +90,8 @@ Was es so nicht mehr gibt
 - Druckerquotierung (pykota)
 
 
-.. _knownbugs-label:
-
-Bekannte Probleme
------------------
-
-* Im Beta-Test werden Probleme und Lösungen im `Supportforum <https://ask.linuxmuster.net/t/betatest-probleme-und-loesungen>`_ gesammelt und dokumentiert
-
-
 Release-Informationen früherer Versionen
 ----------------------------------------
 
-* `Release-Information zur linuxmuster.net 6.2 <https://docs.linuxmuster.net/de/v6.2/release-information/index.html>`_
+* `Release-Information zur linuxmuster.net 6.2 <https://docs.linuxmuster.net/de/v6/release-information/index.html>`_
 * `Release-Informationen zur linuxmuster.net 5.1, 6.0 und 6.1 <https://www.linuxmuster.net/wikiarchiv/dokumentation:handbuch:preparation:features>`_
