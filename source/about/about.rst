@@ -196,7 +196,7 @@ Für weitergehende Informationen `siehe die OPSI-Homepage <https://uib.de>`_.
      :align: center
      :alt: Übersicht der Komponenten
      
-Alle bis hier gemachten Ausführungen bezogen auf die vier linken Teilbereiche. Sie bilden die Grundlage auf denen die freie Erweiter- und Anpassbarkeit beruht.      
+Alle bis hier gemachten Ausführungen bezogen sich auf die vier linken Teilbereiche. Sie bilden die Grundlage auf denen die freie Erweiter- und Anpassbarkeit beruht.      
      
 .. note::
    Die vorgestellten Bestandteile werden vom Verein   
