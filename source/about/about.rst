@@ -15,11 +15,11 @@ Schulische IT wird mit einer vollintegrierten Open-Source-Lösung abgebildet. Di
 Unser Anspruch liegt dabei auf der Bereitstellung eines Systems, das folgende Punkte erfüllt:
 
     * schnelle Installation
-    * Anpassbarkeit an die vorhandene Infrastruktur
+    * einfache Integration in vorhandene Infrastruktur
     * bestehend aus Server, Firewall und vorkonfigurierten Arbeitsstationen
     * mehrstufige ausbau- und anpassbare Struktur mit heterogenen Clients und unterschiedlichsten Diensten bzw. Cloud-Lösungen
     * einen freien Zugang zu einer umfänglichen Dokumentation
-    * letzter Punkt ergänzt um das frei zugängliche `Community-Wiki <https://wiki.linuxmuster.net/community/>`_ mit Anleitungen vielfältigster Erweiterungen aus dem Umfeld der Unterstützer von linuxmuster.net. [#FN1]_
+    * letzter Punkt ergänzt um das frei zugängliche `Community-Wiki <https://wiki.linuxmuster.net/community/>`_ mit Anleitungen vielfältigster Erweiterungen aus dem Umfeld der Unterstützer von linuxmuster.net [#FN1]_
 
 Ein Augenmerk liegt dabei auf der Unabhängigkeit von der eingesetzten Hard- und Software. Dieses wird zum Beispiel erkennbar an dem Umfang der unterstützten Betriebssysteme (BS) für die Arbeitsstationen. 
 
@@ -92,8 +92,6 @@ Schulinterne E-Mail-Korrespondenz
 +++++++++++++++++++++++++++++++++
 
 Von einigen Kultusministerien der Länder wird eine Grundkompetenz in der Nutzung von E-Mail gefordert. Um diesem Anspruch gerecht zu werden, ist ein E-Mail-Server Bestandteil von linuxmuster.net. Jeder Nutzer des Systems hat eine eigene Mail-Adresse, die es ihm ermöglicht ``schulintern`` zu kommunizieren.
-
-Diese Funktionalität lässt sich bei Bedarf an die Bedürfnisse der Bildungseinrichtung anpassen bzw. weiter ausbauen. linuxmuster.net bringt dafür verschiedene Alternativen mit.
 
 .. image::    media/about_03_client-integration.png
    :name:     box-client-integration
@@ -194,9 +192,14 @@ Es steht als alternatives System oder als Ergänzung zu LINBO zur Verfügung. So
 
 Für weitergehende Informationen `siehe die OPSI-Homepage <https://uib.de>`_. 
 
-
+.. figure:: media/about_01_structure_of_version_7_simple_web.svg
+     :align: center
+     :alt: Übersicht der Komponenten
+     
+Alle bis hier gemachten Ausführungen bezogen auf die vier linken Teilbereiche. Sie bilden die Grundlage auf denen die freie Erweiter- und Anpassbarkeit beruht.      
+     
 .. note::
-   Die bis hier vorgestellten Bestandteile werden vom Verein   
+   Die vorgestellten Bestandteile werden vom Verein   
    **linuxmuster.net e. V. entwickelt und unterstützt**.
    
    Diese Unterstützung wird geleistet durch die 
@@ -217,6 +220,7 @@ Für weitergehende Informationen `siehe die OPSI-Homepage <https://uib.de>`_.
 
    **Das Support-Team berät aber gerne und zeigt alle Möglichkeiten und Alternativen auf.**
 
+Es folgt die Beschreibung der letzten zwei Bausteine die linuxmuster.net zu einer Komplettlösung machen.
 
 Alternativ
 ++++++++++
