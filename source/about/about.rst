@@ -12,27 +12,27 @@ Schulnetz
 
 Schulische IT wird mit einer vollintegrierten Open-Source-Lösung abgebildet. Dieses umfasst alle Bereiche, die in einer Bildungseinrichtung anzutreffen sind.
 
-Unser Anspruch liegt dabei auf der Bereitstellung eines Systems, das folgende Punkte erfüllt ...
+Unser Anspruch liegt dabei auf der Bereitstellung eines Systems, das folgende Punkte erfüllt:
 
-    * schnelle Installation.
-    * Anpassbarkeit an die vorhandene Infrastruktur.
-    * bestehend aus Server, Firewall und vorkonfigurierten Arbeitsstationen.
-    * mehrstufige ausbau- und anpassbare Struktur mit heterogenen Clients und unterschiedlichsten Diensten bzw. Cloud-Lösungen.
-    * einen freien Zugang zu einer umfänglichen Dokumentation.
+    * schnelle Installation
+    * Anpassbarkeit an die vorhandene Infrastruktur
+    * bestehend aus Server, Firewall und vorkonfigurierten Arbeitsstationen
+    * mehrstufige ausbau- und anpassbare Struktur mit heterogenen Clients und unterschiedlichsten Diensten bzw. Cloud-Lösungen
+    * einen freien Zugang zu einer umfänglichen Dokumentation
     * letzter Punkt ergänzt um das frei zugängliche `Community-Wiki <https://wiki.linuxmuster.net/community/>`_ mit Anleitungen vielfältigster Erweiterungen aus dem Umfeld der Unterstützer von linuxmuster.net. [#FN1]_
 
 Ein Augenmerk liegt dabei auf der Unabhängigkeit von der eingesetzten Hard- und Software. Dieses wird zum Beispiel erkennbar an dem Umfang der unterstützten Betriebssysteme (BS) für die Arbeitsstationen. 
 
-Proprietäre BS, z.B. aus dem Hause Microsoft©, können aufgrund der Lizenzpolitik der Hersteller nicht von uns vorbereitet ausgeliefert werden. Lassen sich aber ebenso leicht in unsere Infrastruktur integrieren, wie solche die als Open-Source erhältlich sind. 
+Proprietäre BS, z.B. aus dem Hause Microsoft©, können aufgrund der Lizenzpolitik der Hersteller nicht von uns vorbereitet ausgeliefert werden. Diese lassen sich aber ebenso leicht in unsere Infrastruktur integrieren, wie solche die als Open-Source erhältlich sind. 
 
-Auf der Basis von Linux stellen wir ein Open-Source-BS zur Verfügung, dass folgende Vorteile bietet:
+Auf der Basis von Linux stellen wir ein Open-Source-BS zur Verfügung, das folgende Vorteile bietet:
 
-    * entwickelt von Praktikern für den täglichen Einsatz an Schulen.
-    * mit hilfreichen Schulfunktionen für den Unterrichtseinsatz.
-    * in einfacher Form anpass- und erweiterbar an die eigenen Bedürfnisse.
+    * entwickelt von Praktikern für den täglichen Einsatz an Schulen
+    * mit hilfreichen Schulfunktionen für den Unterrichtseinsatz
+    * in einfacher Form anpass- und erweiterbar an die eigenen Bedürfnisse
     * keine Lizenzkosten
 
-Im Zusammenspiel der Clients mit dem Server und einer Firewall entsteht so die grundlegende Infrastruktur. Diese lässt sich aufgrund des modularen Aufbaus weiter an die darüber hinausgehenden Anforderungen erweitern.
+Im Zusammenspiel der Clients mit dem Server und einer Firewall entsteht so die grundlegende Infrastruktur. Diese lässt sich aufgrund des modularen Aufbaus weiter an die darüber hinausgehenden Anforderungen erweitern und anpassen.
 
 Komplett
 --------
@@ -41,7 +41,7 @@ Die vier unter der blauen Überschrift "linuxmuster.net - Version 7" veranschaul
 
 Damit stellen wir sicher, dass sowohl ein schulischer Administrator, die IT-Abteilung eines Schulträgers oder ein Dienstleister im Vorfeld von Arbeit entlastet wird.
 
-Zu jedem Zeitpunkt der Projektierung (Planung, Installation und Betrieb) steht unser Telefon-Support und unser Hilfeforum beratend zu Seite.
+Zu jedem Zeitpunkt der Projektierung (Planung, Installation und Betrieb) steht unser Telefon-Support und unser Hilfeforum beratend zur Seite.
 
   .. figure:: media/about_01_structure_of_version_7_simple_web.svg
      :align: center
@@ -71,7 +71,7 @@ Die Benutzer- und Gruppenverwaltung orientiert sich an den Bedürfnissen, die de
 Unterrichtssteuerung
 ++++++++++++++++++++
 
-Vielfältige Möglichkeiten stehen den Lehrkräften zur Verfügung um Einfluss auf die Rechner der zu Unterrichtenden zu nehmen.
+Vielfältige Möglichkeiten stehen den Lehrkräften zur Verfügung, um Einfluss auf die Rechner der zu Unterrichtenden zu nehmen.
 
     * Internet - An/Aus
     * Intranet - An/Aus
@@ -81,7 +81,7 @@ Vielfältige Möglichkeiten stehen den Lehrkräften zur Verfügung um Einfluss a
 Klassenarbeitsmodus
 +++++++++++++++++++
 
-In Prüfungssituationen wie Abitur, Klassenarbeiten und andere Leistungsüberprüfungen kann die Lehrkraft mit einfachen Mitteln die Nutzung des Systems für die Prüfungsgruppe einschränken. Das Spektrum umfasst dabei alle Möglichkeiten der Unterrichtssteuerung plus die Sperrung des persönlichen Speicherbereiches.
+In Prüfungssituationen wie Abitur, Klassenarbeiten und andere Leistungsüberprüfungen kann die Lehrkraft mit einfachen Mitteln die Nutzung des Systems für die Prüfungsgruppe einschränken. Das Spektrum umfasst dabei alle Möglichkeiten der Unterrichtssteuerung plus die Sperrung des persönlichen Speicherbereichs.
 
 Dateiverwaltung und -verteilung
 +++++++++++++++++++++++++++++++
@@ -91,9 +91,9 @@ Jeder Nutzer besitzt einen eigenen Bereich auf dem Netzwerkspeicher. Darüber hi
 Schulinterne E-Mail-Korrespondenz
 +++++++++++++++++++++++++++++++++
 
-Von den einigen Kultusministerien wird eine Grundkompetenz in der Nutzung von E-Mail gefordert. Um diesem Anspruch gerecht zu werden, ist ein E-Mail-Server Bestandteil von linuxmuster.net. Jeder Nutzer des Systems hat eine eigene Mail-Adresse, die es ihm ermöglicht schulintern zu kommunizieren.
+Von einigen Kultusministerien der Länder wird eine Grundkompetenz in der Nutzung von E-Mail gefordert. Um diesem Anspruch gerecht zu werden, ist ein E-Mail-Server Bestandteil von linuxmuster.net. Jeder Nutzer des Systems hat eine eigene Mail-Adresse, die es ihm ermöglicht ``schulintern`` zu kommunizieren.
 
-Diese Funktionalität lässt sich bei Bedarf an die Bedürfnisse der Bildungseinrichtung anpassen bzw. weiterausbauen. linuxmuster.net bringt dafür verschiedene Alternativen mit.
+Diese Funktionalität lässt sich bei Bedarf an die Bedürfnisse der Bildungseinrichtung anpassen bzw. weiter ausbauen. linuxmuster.net bringt dafür verschiedene Alternativen mit.
 
 .. image::    media/about_03_client-integration.png
    :name:     box-client-integration
@@ -103,13 +103,13 @@ Diese Funktionalität lässt sich bei Bedarf an die Bedürfnisse der Bildungsein
 Selbstheilende Arbeitsstationen durch LINBO
 +++++++++++++++++++++++++++++++++++++++++++
 
-Das Konzept der Selbstheilenden Arbeitsstationen (SheilA) ermöglicht einheitliche identische Schulungssysteme. Diese können bei jedem Start der Rechner in einen vorher definierten Zustand zurückgesetzt werden. Dieser standardmäßige Standard wird durch die letzte Veränderung oder Installation festgelegt, in dem ein Abbild des BS auf dem Server gespeichert wird. Weitere Vorteile sind ...
+Das Konzept der Selbstheilenden Arbeitsstationen (SheilA) ermöglicht einheitliche identische Schulungssysteme. Diese können bei jedem Start der Rechner in einen vorher definierten Zustand zurückgesetzt werden. Dieser Standard wird durch die letzte Veränderung oder Installation festgelegt, in dem ein Abbild des BS auf dem Server gespeichert wird. Weitere Vorteile sind:
 
-    * vorhalten von verschiedenen BS auf den Clients.
-    * schnelle Erst- oder Neueinrichtung.
-    * keine Einschränkung der Nutzer durch Benutzerrechte nötig.
-    * einfache Wiederherstellung der Clients ist jedem Benutzer möglich.
-    * einfache Softwareverteilung durch Installation auf einem Client. Keine gesonderten Kenntnisse erforderlich bei demjenigen der die Software-Installation betreut.
+    * verschiedenen BS auf den Clients möglich
+    * schnelle Erst- oder Neueinrichtung
+    * keine Einschränkung der Nutzer durch Benutzerrechte auf den Clients nötig
+    * einfache Wiederherstellung der Clients ist jedem Benutzer möglich
+    * einfache Softwareverteilung durch Installation auf einem Client - keine gesonderten Kenntnisse erforderlich, bei demjenigen der die Software-Installation betreut.
     * Möglichkeit der zeit- und/oder ferngesteuerten Aktualisierung der Clients.
     * mit sogenannten Postsync-Scripten kann der Administrator für einzelne, raumweite oder für alle Geräte notwendige Konfigurationsänderung beim Systemstart einpflegen.
 
@@ -123,7 +123,7 @@ Auf dem Server (links im Bild) sind zwei Betriebssysteme für Clients dieses Typ
 
 * Der Benutzer wählt das erste BS zum synchronisierten Start aus.
 * Der Client überprüft, ob sein lokal gespeichertes Systemabbild identisch ist mit dem auf dem Server (1.).
-* Dieses ist der Fall und der Client entpackt das erste BS auf die eigentliche System-Partition und startet das System anschließend (3.). Wäre das nicht der Fall gewesen hätte er zuerst das Systemabbild vom Server heruntergeladen (2.) um dann mit (3.) fortzufahren.
+* Dieses ist der Fall und der Client entpackt das erste BS auf die eigentliche System-Partition und startet das System anschließend (3.). Wäre das nicht der Fall gewesen, hätte dieser zuerst das Systemabbild vom Server heruntergeladen (2.), um dann mit (3.) fortzufahren.
 
 Der hier aufgezeigte Fall ist einer von vielen Einsatzszenarien und dient der Veranschaulichung. Nähere Information sind im Kapitel "Linbo nutzen" beschrieben.
 
@@ -145,7 +145,7 @@ Firewall
    :alt:      box-firewall
    :height:   40px
 
-Als Standard ist die Firewall OPNSense® Gegenstand der Auslieferung.
+Als Standard wird die Firewall OPNSense® ausgeliefert.
 
 Durch die Integration an den AD DS (Active Directory Domain Services) des Servers (Samba4) werden sämtliche Benutzer-Zugriffe der Nutzer mittels Single-Sign-On auf das Internet geregelt.
 
@@ -173,8 +173,8 @@ docker
    :alt:      box-docker
    :height:   80px
 
-Ein docker-Server steht zur Installation bereit, um über die Basisdienste hinausgehende Server zu integrieren.  
-docker ist ein Open-Source-Projekt zur automatisierten Anwendungsverteilung.
+Ein Docker-Server steht zur Installation bereit, um über die Basisdienste hinausgehende Server zu integrieren.  
+``Docker`` ist ein Open-Source-Projekt zur automatisierten Anwendungsverteilung.
 
 Durch Container, die alle benötigten Pakete mitbringen, vereinfacht sich so die Bereitstellung und Verteilung. Außerdem gewährleisten sie die Trennung und Verwaltung der auf dem Docker-Server genutzten Ressourcen. [#FN1]_
 
@@ -226,7 +226,7 @@ Alternativ
    :alt:      box-alternativ
    :height:   40px
 
-Weitere Server mit ihren Diensten lassen sich in der lokalen Infrastruktur bereitstellen. Wenn diese über die Möglichkeit einer Anbindung an den Samba des linuxmuster.net-Servers mittels LDAP verfügen, dann lassen sich auch auf ihnen alle aufgezeigten Vorteile nutzen. [#FN1]_
+Weitere Server mit ihren Diensten lassen sich in der lokalen Infrastruktur bereitstellen. Wenn diese über die Möglichkeit einer Anbindung an den Samba des linuxmuster.net-Servers mittels LDAP verfügen, können diese alle aufgezeigten Vorteile nutzen. [#FN1]_
 
 Beispielhaft ist hier eine alternative Firewall als Hardware-Appliance gezeigt, die den Internetverkehr regelt. [#FN2]_
 

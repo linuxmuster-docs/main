@@ -2,21 +2,22 @@
  Einführung
 ============
 
-Herzlich Willkommen zur Dokumentation von linuxmuster.net v7! Diese
-Dokumentation beschreibt alle wichtigen Schritte von der Installation,
+Herzlich Willkommen zur Dokumentation von linuxmuster.net v7! 
+
+Diese Dokumentation beschreibt alle wichtigen Schritte von der Installation,
 der Einrichtung von Windows- und Ubuntu-Rechnern, der Verwaltung von
 Nutzern bis hin zu individuellen Anpassungen.
 
 .. hint::
 
    Suchst du die Dokumentation zur Version linuxmuster.net 6.2?
-   Die findest du unter http://docs.linuxmuster.net/de/latest.
+   Die findest du unter http://docs.linuxmuster.net/de/v6.
 
 
-Neben dieser Dokumentation steht Ihnen unsere Community und unser
-Telefon-Support helfend Seite. Weitere Informationen dazu finden sie
+Neben dieser Dokumentation steht Ihnen unsere Community und unser kostenfreier
+Telefon-Support helfend zur Seite. Weitere Informationen dazu finden Sie
 auf der `Website von Linuxmuster.net
-<http://linuxmuster.net/about/hilfsbereit/>`_.
+<http://www.linuxmuster.net/de/support-de/>`_.
 
 .. toctree::
   :maxdepth: 2
@@ -24,7 +25,6 @@ auf der `Website von Linuxmuster.net
 
   about/about
   about/release-information
-  about/beta7
 
 .. toctree::
   :maxdepth: 2

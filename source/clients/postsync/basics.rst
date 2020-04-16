@@ -14,7 +14,7 @@ Das Postsync-Script liegt im Verzeichnis:
 
 .. code:: bash
 
-   /var/linbo/<LinuxImagename>.cloop.postsync
+   /srv/linbo/<LinuxImagename>.cloop.postsync
    
 Es weist folgende Rechte auf:
 
