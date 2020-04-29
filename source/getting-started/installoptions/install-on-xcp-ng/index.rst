@@ -609,9 +609,10 @@ herunterladen, die für die Installation mit PlayOnLinux vorbereitet wurde. Es h
 sich hierbei um einen PlayOnLinux Container, der XCP-ng Center mit allen Abhängigkeiten 
 (IE8, .NET Framework 2.0 SP2 und .NET Framework 4.7.2) enthält.
 
-Die aktuellste Version_ lädst Du vorab herunter:
+.. Note::
 
-.. _Version: https://github.com/aldebaranbm/xencenter-playonlinux/releases/tag/2019-02-05
+   Die aktuellste Version lädst Du vorab herunter: https://github.com/aldebaranbm/xencenter-playonlinux/releases/
+
 
 Danach rufst Du PlayOnLinux auf. Dort gehst Du im Menü auf den 
 ``Menüpunkt -> Erweiterungen (Plugins) -> Untermenü PlayOnLinux Vault``.
