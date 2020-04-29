@@ -423,18 +423,23 @@ VM Templates herunterladen
 --------------------------
 
 Fertige VM-Snapshots für Proxmox haben wir für Sie erstellt und sind auf der Übersichtsseite 
-der Proxmox 7.0 Aplliance unter https://www.netzint.de/education/downloads/education-proxmox70 bereitgestellt. Die virtuelle Maschine für eine linuxmuster.net v7 Umgebung ist die Server-VM 
-lmn70-server_proxmox_2019-08.xva. Zudem wird als Firewall-VM lmn70-opnsense_proxmox.xva für Sie bereitgestellt. 
+der Proxmox 7.0 Aplliance unter https://www.netzint.de/education/downloads/proxmox-appliance-7-0 bereitgestellt. 
+Für eine linuxmuster.net v7 Umgebung werden die Server-VM lmn70.server_proxmox_2020-04.vma.lzo und als 
+Firewall die VM lmn70.opnsense_proxmox_2020-04.vma.lzo für Sie bereitgestellt. 
 
 Optional ist zusätzlich eine OPSI-VM und eine Docker-VM für Ihre linuxmuster.net-Umgebung 
-verfügbar. Um die Maschinen also importieren zu können, müsssen diese zuerst auf den 
+verfügbar. Um die Maschinen importieren zu können, müsssen diese zuerst auf den 
 Hypervisor geladen werden und anschließend importiert werden.
 Heruntergeladen werden können diese z.B. über die Shell von Proxmox mit dem wget-Befehl. 
-Für die OPSI-VM wäre es der Befehl 
+
+Für die VMs wären es folgende Befehle: 
 
 .. code::
 
-   wget https://www.netzint.de/lmnvmrepo/lmn70-opsi_proxmox_2019-08.vma.lzo
+   wget https://www.netzint.de/lmnvmrepo/lmn70.server_proxmox_2020-04.vma.lzo
+   wget https://www.netzint.de/lmnvmrepo/lmn70.opnsense_proxmox_2020-04.vma.lzo
+   wget https://www.netzint.de/lmnvmrepo/lmn70.opsi_proxmox_2020-04.vma.lzo
+   wget https://www.netzint.de/lmnvmrepo/lmn70.docker_proxmox_2020-04.vma.lzo
 
 .. figure:: media/image_16.png
    :align: center
@@ -445,23 +450,23 @@ Dateien auf Proxmox kopiert werden:
 
 .. code::
 
-    scp lmn70-docker_proxmox_2019-08.vma.lzo root@10.0.0.10:~
+    scp lmn70.docker_proxmox_2020-04.vma.lzo root@10.0.0.10:~
 
 +------------+------------------------------------------------------------------------------+
 | VM         | Download-Befehl                                                              |
 +============+==============================================================================+
-|server-VM   | wget https://www.netzint.de/lmnvmrepo/lmn70-server_proxmox_2019-08.vma.lzo   |
+|server-VM   | wget https://www.netzint.de/lmnvmrepo/lmn70.server_proxmox_2020-04.vma.lzo   |
 +------------+------------------------------------------------------------------------------+
-|opsi-VM     | wget https://www.netzint.de/lmnvmrepo/lmn70-opsi_proxmox_2019-08.vma.lzo     |
+|opsi-VM     | wget https://www.netzint.de/lmnvmrepo/lmn70.opsi_proxmox_2020-04.vma.lzo     |
 +------------+------------------------------------------------------------------------------+
-|docker-VM   | wget https://www.netzint.de/lmnvmrepo/lmn70-download_proxmox_2019-08.vma.lzo |
+|docker-VM   | wget https://www.netzint.de/lmnvmrepo/lmn70.docker_proxmox_2020-04.vma.lzo   |
 +------------+------------------------------------------------------------------------------+
-|opnsense-VM | wget https://www.netzint.de/lmnvmrepo/lmn70-opnsense_proxmox_2019-08.vma.lzo |
+|opnsense-VM | wget https://www.netzint.de/lmnvmrepo/lmn70.opnsense_proxmox_2020-04.vma.lzo |
 +------------+------------------------------------------------------------------------------+
 
 Alternativ können Sie die Imagedateien lokal über die jeweilgen Download-Button auf der 
-Übersichtsseite https://www.netzint.de/education/downloads/education-proxmox70 auf Ihren PC herunterladen und anschließend über das „scp“-Tool (Grundkenntnisse notwendig) 
-z.B: mit scp lmn70-server_proxmox_2019-08.vma.lzo root@10.0.0.10:~ auf den Hypervisor übertragen.
+Übersichtsseite https://www.netzint.de/education/downloads/proxmox-appliance-7-0 auf Ihren PC herunterladen und anschließend über das „scp“-Tool (Grundkenntnisse notwendig) 
+z.B: mit scp lmn70.server_proxmox_2020-04.vma.lzo root@10.0.0.10:~ auf den Hypervisor übertragen.
 
 VM Templates importieren
 ========================
@@ -477,20 +482,20 @@ eine ID, wie beispielsweise „101“ oder „701“. <storage-name> ist etwa lo
 einer zweiten virtuellen Disk, wie im obigen Beipiel „vd-ssd-1700“-unique 1 generiert eine 
 andere MAC-Addresse, als im Template exportiert.
 
-+-------------+----------------------------------------------------------------------------------+
-| VM          | Import-Befehl                                                                    |
-+=============+==================================================================================+
-| server-VM   |  ``qmrestore lmn70-server_2019-08.vma.lzo 701 -–storage local-lvm -unique 1``    |
-+-------------+----------------------------------------------------------------------------------+
-| opsi-VM     |  ``qmrestore lmn70-opsi_2019-08.vma.lzo 702 -–storage local-lvm -unique 1``      |
-+-------------+----------------------------------------------------------------------------------+
-| docker-VM   |  ``qmrestore lmn70-docker_2019-08.vma.lzo 703 -–storage local-lvm -unique 1``    |
-+-------------+----------------------------------------------------------------------------------+
-| opnsense-VM |  ``qmrestore lmn70-opnsense_2019-08.vma.lzo 745 -–storage local-lvm -unique 1``  |
-+-------------+----------------------------------------------------------------------------------+
++-------------+------------------------------------------------------------------------------------------+
+| VM          | Import-Befehl                                                                            |
++=============+==========================================================================================+
+| server-VM   |  ``qmrestore lmn70.server_proxmox_2020-04.vma.lzo 701 -–storage local-lvm -unique 1``    |
++-------------+------------------------------------------------------------------------------------------+
+| opsi-VM     |  ``qmrestore lmn70.opsi_proxmox_2020-04.vma.lzo 702 -–storage local-lvm -unique 1``      |
++-------------+------------------------------------------------------------------------------------------+
+| docker-VM   |  ``qmrestore lmn70.docker_proxmox_2020-04.vma.lzo 703 -–storage local-lvm -unique 1``    |
++-------------+------------------------------------------------------------------------------------------+
+| opnsense-VM |  ``qmrestore lmn70.opnsense_proxmox_2020-04.vma.lzo 704 -–storage local-lvm -unique 1``  |
++-------------+------------------------------------------------------------------------------------------+
 
 1. Hier wird als Beispiel der Server-Snapshot mit der ID 701 auf dem local-lvm-Storage über 
-den Befehl qmrestore lmn70-server_proxmox_2019-08.vma.lzo 701 –storage local-lvm -unique 1 
+den Befehl ``qmrestore lmn70.server_proxmox_2020-04.vma.lzo 701 –storage local-lvm -unique 1`` 
 hochgeladen. Beachten Sie die zwei Bindestriche vor dem Wort „storage“:
 
 .. figure:: media/image_17.png
