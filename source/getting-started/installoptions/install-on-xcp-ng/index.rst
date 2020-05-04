@@ -114,6 +114,12 @@ linuxmuster.net v7 im XVA Format finden sich unter:
 
 .. _XVAs-v7: https://download.linuxmuster.net/xcp-ng/v7/latest/
 
+.. hint::
+   Die XVAs für die v7 wurden mit XCP-ng v8.1 erstellt. Zudem wurden die xcp-ng
+   Tools für die v8.1 pro VM installiert. Ein Import für eine XCP-ng 7.6 Version 
+   scheitert und bricht mit einem Fehler ab. Daher bitte sicherstellen, dass 
+   eine aktuelle XCP-ng v8.1 gentutz wird. 
+
 
 Erstellen eines USB-Sticks zur Installation des XCP-ng-Host
 -----------------------------------------------------------
@@ -128,7 +134,7 @@ Installation XCP-ng
 
 Herunterladen von XCP-ng
 ------------------------
-Diese Anleitung bezieht sich auf die Version 7.6 von XCP-ng. Für nachfolgende Versionen ist 
+Diese Anleitung bezieht sich auf die Version 8.1 von XCP-ng. Für nachfolgende Versionen ist 
 dieses Vorgehen entsprechend anzuwenden.
 
 Die ISO-Datei muss heruntergeladen und ein bootfähiger USB-Stick erstellt werden.
@@ -143,7 +149,7 @@ dann nachstehenden Befehl eingeben:
 
 .. code-block:: console
  
-   dd if=XCP-ng_7.6.0.iso of=/dev/sdX bs=8M status=progress oflag=direct
+   dd if=XCP-ng_8.1.0-2.iso of=/dev/sdX bs=8M status=progress oflag=direct
 
 
 Installieren von XCP-ng
@@ -275,7 +281,7 @@ Danach startet die Installation
    :align: center
    :alt: Schritt 17 der Installation des XCP-ng Servers
 
-Die Frage nach INstallation eines ``Supplemental Pack`` ist mit ``No`` zu beantworten.
+Die Frage nach Installation eines ``Supplemental Pack`` ist mit ``No`` zu beantworten.
 
 .. figure:: media/19_install-on-xcp-ng_supplemental-packs.png
    :align: center
@@ -300,7 +306,9 @@ XCP-ng wird nach einigen Sekunden automatisch gestartet.
    :align: center
    :alt: Schritt 21 der Installation des XCP-ng Servers
 
-Nach erfolgreichem Start bootet XCP-ng in folgende Konsole des Hypervisors:
+Nach erfolgreichem Start bootet XCP-ng in folgende Konsole des Hypervisors, 
+in der dann der Hinweis auf die installierte Version 8.1 erscheinen sollte 
+(im Bild noch 7.6):
 
 .. figure:: media/23_xcp-ng-konsole_hypervisor.png
    :align: center
@@ -309,6 +317,12 @@ Nach erfolgreichem Start bootet XCP-ng in folgende Konsole des Hypervisors:
 
 Aktualisierung des XCP-ng-Hosts
 -------------------------------
+
+Um en XCP-ng Host zu aktualisieren, benötigt der Hypervisor eine funktionierende 
+Internet-Verbindung. Dies ist zum jetzigen Zeitpunkt der INstallation nicht der Fall, 
+wenn der Host die IP 10.0.0.200 erhalten haben sollte. 
+Es müssten dann erst die VMs importiert, das Setup durchgeführt werden. Erst danach kann 
+der Hypervisor aktualisiert werden, wie nachstehend beschrieben.
 
 Wähle in dem Startbildschirm des XCP-ng Hosts den Menüpunt ``Local Command Shell``
 und drücke ``Enter``. Gebe als Benutzer ``root`` an und das Passwort das Du 
@@ -352,12 +366,8 @@ XCP-ng Center AktuelleVersion_
 
 .. _AktuelleVersion: https://github.com/xcp-ng/xenadmin/releases
 
-Die Installation des Programms unter Linux mithilfe von Wine und PlayOnLinux wird in der Dokumentation hier beschrieben:
-
-XCP-ng Center InstallationLinux_
-
-.. _InstallationLinux: 'XCP-ng Center unter Linux installieren'_  
-
+Die Installation des Programms unter Linux mithilfe von Wine und PlayOnLinux wird in der Dokumentation 
+weiter unten beschrieben.
 
 Installiere das Programm durch einen Rechtsklick auf die MSI-Datei auf dem Windows-Rechner und 
 wähle dann ``Als Administrator ausführen`` aus.
@@ -401,7 +411,7 @@ Wähle nun Für den XCP-ng-Host die Reiterkarte ``Networking`` aus.
    :align: center
    :alt: 4. Teil: Netzwerke einrichten
 
-Wähle das erste Netwerk ``Network 0`` aus, prüfe die Zurdonung der Netzwerkkarte. 
+Wähle das erste Netwerk ``Network 0`` aus, prüfe die Zuordnung der Netzwerkkarte. 
 Es muss diejenige zugewiesen sein, die die Internet-Verbindung steuert. Klicke dann auf ``Properties`` 
 und ändere den Namen für das Netzwerk in ``RED``.
 
@@ -750,37 +760,36 @@ Hinweise hierzu erhälst Du unter_:
 Xen Orchestra Appliance(XOA)
 ----------------------------
 
-Xen Orchestra Appliance (XOA_) bietet die Möglichkeit, die Virtualisierungsumgebung XCP-ng webbasiert und plattformunabhängig zu administrieren. Die bereitgestellten
-Funktionen entsprechen denen des Programms XCP-ng Center für Windows und gehen hinsichtlich der Backups darüber hinaus. Es können via Borwserzugriff VMs importiert, 
-exportiert, neue VMs erstellt und verschoben werden. Zudem lassen sich so plattformunabhängig verschiedene Arten von Backups auf unterschiedlichen Datenträgern erstellen
-und Zeitpläne zur automatisierten Erstellung der Backups definieren und aktivieren. 
+Xen Orchestra Appliance (XOA_) bietet die Möglichkeit, die Virtualisierungsumgebung XCP-ng webbasiert 
+und plattformunabhängig zu administrieren. Die bereitgestellten Funktionen entsprechen denen des 
+Programms XCP-ng Center für Windows und gehen hinsichtlich der Backups darüber hinaus. 
+Es können via Borwserzugriff VMs importiert, exportiert, neue VMs erstellt und verschoben werden. 
+Zudem lassen sich so plattformunabhängig verschiedene Arten von Backups auf unterschiedlichen 
+Datenträgern erstellen und Zeitpläne zur automatisierten Erstellung der Backups definieren und aktivieren. 
 
 .. _XOA: https://xen-orchestra.com
 
-Xen Orchestra wird von der französischen Firma vates_ entwickelt und supportet. Diese stellt XOA als Open Source zur Verfügung. Der Quellcode findet sich auf github_.
+Xen Orchestra wird von der französischen Firma vates_ entwickelt und supportet. Diese stellt XOA als Open 
+Source zur Verfügung. Der Quellcode findet sich auf github_.
 
 .. _vates: https://vates.fr/
 
 .. _github: https://github.com/vatesfr/xen-orchestra
 
-linuxmuster.net hat gemäß dieser Anleitung_ eine XOA-VM zum Einsatz auf der Virtualisierungsumgebung XCP-ng auf Basis von Ubuntu 18.04 LTS mit Anpassungen für 
-linuxmuster v7 erstellt. Die VM wurde ``from the sources`` erstellt, und für den Betrieb mit linuxmuster.net auf XCP-ng angepasst.
-
-.. _Anleitung: https://xen-orchestra.com/docs/from_the_sources.html
+linuxmuster.net hat gemäß dieser eine XOA-VM zum Einsatz auf der Virtualisierungsumgebung XCP-ng auf Basis von Ubuntu 18.04 LTS mit Anpassungen für linuxmuster v7 erstellt. Die VM wurde ``from the sources`` erstellt, und für den Betrieb mit linuxmuster.net auf XCP-ng angepasst.
 
 .. note::
- Um XOA VM nutzen zu können, muss diese zuerst unter XCP-ng importiert worden sein!
+  
+   Um XOA VM nutzen zu können, muss diese zuerst unter XCP-ng importiert worden sein!
 
 
 Import der VM
 ~~~~~~~~~~~~~
 
 Lade zuerst die vorbereitete XOA-VM für linuxmuster.net als ZIP-Archiv_ herunter. Entpacke dieses Archiv lokal (ca. 6 GiB) und importiere dann die VM wie bereits zuvor 
-im Unterkapitel_ ``VMs importieren`` beschrieben.  
+im Unterkapitel ``VMs importieren`` beschrieben.  
 
-.. _ZIP-Archiv: https://download.linuxmuster.net/xcp-ng/v7/lmn7.xoa.xva.zip
-
-.. _Unterkapitel: http://docs.linuxmuster.net/de/v7/appendix/install-on-xcp-ng/index.html#vms-importieren
+.. _ZIP-Archiv: https://download.linuxmuster.net/xcp-ng/v7/latest/
 
 Anpassung der VM
 ~~~~~~~~~~~~~~~~
