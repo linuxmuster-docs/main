@@ -9,9 +9,9 @@
 
 Linuxmuster.net wird als Zwei-Server-Lösung (Firewall und
 linuxmuster.net-Server) betrieben. Optional können weitere Server wie
-z.B. ein Docker-Host eingesetzt werden. Daneben gibt es mindestens
+z. B. ein Docker-Host eingesetzt werden. Daneben gibt es mindestens
 eine Trennung in zwei logische Netzwerke, meist sind aber drei oder
-mehr Netzwerke gefordert (WLAN, DMZ, Lehrernetz). Zu guter Letzt kann
+mehr davon gefordert (WLAN, DMZ, Lehrernetz). Zu guter Letzt kann
 die linuxmuster.net bequem virtualisiert oder ohne Virtualisierung
 betrieben werden.
 
@@ -57,7 +57,7 @@ Server linuxmuster v7
 ---------------------
 
 Für linuxmuster.net v7 wird als Basis ein Ubuntu Server 18.04 LTS
-eingesetzt. Es wird empfohlen folgende Hardware-Anforderungen zu
+eingesetzt. Es wird empfohlen folgende Hardware-Mindestanforderungen zu
 erfüllen:
 
 +---------------------+-------------------------------------+
@@ -84,27 +84,17 @@ erfüllen:
 |Festplatte           | 100 GB+, nach Bedarf                |
 +---------------------+-------------------------------------+
 
-
 Für eine virtuelle Installation aller obigen Maschinen müssen die
 Mindestwerte für die Hardware addiert werden.
 
 Festplattenspeicher
-  Der Festplattenplatz für den Server hängt stark von der Nutzerzahl und
-  der mehr oder weniger intensiven Verwendung von LINBO-Abbildern
-  ab. Ebenso muss für Backup weiterer Festplattenplatz z.B. auf einem
-  NAS eingeplant werden.
+-------------------
 
-  Selbstverständlich können sowohl Daten als auch (bei
-  Virtualisierung) die Server auf externem Speicher abgelegt werden
-  (z.B. NFS-Speicher oder iSCSI-Speicher), um die
-  Virtualisierungsumgebung ggf. bei Bedarf ausbauen zu können und auch
-  ausfallsichere Szenarien leichter umsetzen zu können.
+Der Festplattenplatz für den Server hängt stark von der Nutzerzahl und der intensiven Verwendung von LINBO-Abbildern ab. Ebenso muss für Backup weiterer Festplattenplatz z. B. auf einem NAS eingeplant werden.
 
+Selbstverständlich können sowohl Daten als auch (bei Virtualisierung) die Server auf externem Speicher abgelegt werden (z. B. NFS-Speicher oder iSCSI-Speicher), um die Virtualisierungsumgebung ggf. bei Bedarf ausbauen zu können und auch ausfallsichere Szenarien leichter umsetzen zu können.
 
-So *kann* bei minimaler Ausstattung (ohne Opsi und Docker) einer
-mittleren Schule (ca. 500 Benutzer) ein kleiner Server oder ein gut
-ausgestatteter PC ausreichend sein, selbst wenn alle Server
-virtualisiert laufen.
+So *kann* bei minimaler Ausstattung (ohne Opsi und Docker) einer mittleren Schule (ca. 500 Benutzer) ein kleiner Server oder ein gut ausgestatteter PC ausreichend sein, selbst wenn alle Server virtualisiert laufen.
 
 +---------------+-----------------+-----------------------+-----------------------+---------+----------+
 | **Schule**    | **Features**    | **Festplatten**                               | **RAM**            |
@@ -123,10 +113,9 @@ virtualisiert laufen.
      schon bei 120G benötigtem Festplattenplatz alleine für die
      Arbeitsplätze.
   
-     Auch im Verzeichnis ``/home`` oder im Cloudspeicher sollte man
+     Auch im Verzeichnis ``/home`` oder im Cloud-Speicher sollte man
      Platz pro Benutzer einplanen. Bei 5GB für 100 Lehrer und 500MB für
      1000 Schüler kommt man auf weitere 1000GB.
-
 
 
 .. _`net-infrastructure-label`:
@@ -134,13 +123,9 @@ virtualisiert laufen.
 Netzwerkstruktur
 ================
 
-Je nach Einsatzszenario muss die Netzwerkstruktur der linuxmuster.net
-zu Beginn der Installation angepasst werden. Man sollte man über den
-Umfang der eingesetzten Geräte ungefähr Bescheid wissen und
-dementsprechend den IP-Bereich nicht zu klein wählen oder Subnetze
-einführen. Ebenso muss man den IP-Bereich auf die Umgebung
-(z.B. Verwaltungsnetz, extern vorgegebene Netze) abstimmen um
-Überschneidungen zu vermeiden.
+In Abhängigkeit vom Einsatzszenario muss die Netzwerkstruktur der linuxmuster.net
+zu Beginn der Installation angepasst werden. Man sollte über den
+Umfang der eingesetzten Geräte Bescheid wissen. Dementsprechend den IP-Bereich nicht zu klein wählen oder Subnetze einführen. Ebenso muss man den IP-Bereich auf die Umgebung (z. B. Verwaltungsnetz, extern vorgegebene Netze) abstimmen, damit keine Überschneidungen auftreten.
 
 IP-Bereiche
 -----------
@@ -151,9 +136,11 @@ IPv4-Bereich 10.0.x.x mit der 16-bit Netzmaske 255.255.0.0 eingerichtet.
 Die virtuellen Appliances sind mit diesem Netz voreingestellt.
 
 Jedoch kann man sowohl die bisher in früheren Versionen von
-linuxmuster.net verwendeten Netze, wie 10.16.0.0/12 oder 10.32.0.0/12,
-usw. weiterverwenden, als auch komplett andere private Adressbereiche
-angeben, sollte es zwingende Gründe geben.
+linuxmuster.net verwendeten Netze (10.16.0.0/12 oder 10.32.0.0/12 
+usw.) weiterverwenden. 
+
+Sollten es zwingende Gründe erfordern, sind auch komplett andere private Adressbereiche
+realisierbar.
 
 Jede Zeile der folgenden Tabelle stellt eine Möglichkeit dar.
 
@@ -173,7 +160,7 @@ Jede Zeile der folgenden Tabelle stellt eine Möglichkeit dar.
 
 Bei der Neuinstallation entscheidest du dich für einen der Bereiche.
 Bei einer Migration wird empfohlen den früheren Bereich zu behalten,
-alleine schon um eine Umkonfiguration der Netzwerkswitche zu
+alleine schon um eine erneute Konfiguration der Netzwerkswitche zu
 vermeiden.
 
 Standard IP-Adressen
@@ -225,10 +212,17 @@ durch die Firewall-Lösung "IPFire" geprägt wurde:
 
 * Das interne Netzwerk wird GRÜNES Netzwerk genannt 
 * Das externe Netzwerk wird ROTES Netzwerk genannt, es ist über einen Router mit dem Internet verbunden.
-* Optional kann eine sog. demilitarisierte Zone (DMZ) als zusätzliches Netzwerk (ORANGE) aufgebaut werden.
 * Optional kann z.B. für WLAN-Accesspoints ein weiteres Netzwerk
   aufgebaut werden (BLAU/LILA), für welches andere
   Zugangsberechtigungen als im grünen Netzwerk gelten.
+* Optional kann eine sog. demilitarisierte Zone (DMZ) als zusätzliches Netzwerk (ORANGE) aufgebaut werden.
+
+Daraus ergeben sich folgende Mindestvoraussetzungen für einen Virtualisierungshost:
+* mindestens zwei Netzwerk-Interfaces (rotes und grünes Netz)
+* bei WLAN-Nutzung eine Netzwerkkarte zusätzlich (blaues Netz)
+* sollen Serverdienste im Internet von außen zugänglich sein, empfehlen wir diese in die DMZ auszulagern. Dafür wird eine weiteres Netzwerk-Interface benötigt (oranges Netz)
+
+Durch die fortschreitende Digitalisierung in der Bildung ist der Auf- bzw. Ausbau einer funktionalen WLAN-Infrastruktur für jede Schule eine gute Entscheidung. Daraus ergibt sich aus unserer Sicht die Empfehlung zu mindestens drei Netzwerkkarten. Willst du für alle möglichen Einsatzszenarien gut gerüstet sein, empfiehlt sich allerdings gleich den Virtualisierungshost mit vier Netzwerk-Interfaces auszulegen.
 
 Das obige Prinzip ist bereits ein Beispiel für Netzwerksegmentierung,
 das im nächsten Abschnitt näher erläutert wird.
@@ -237,7 +231,7 @@ das im nächsten Abschnitt näher erläutert wird.
 Getrennte Netze und VLAN
 ------------------------
 
-Immer häufiger (z.B. durch Vorgaben vom Kultusministerium oder
+Immer häufiger (z. B. durch Vorgaben vom Kultusministerium oder
 Lastverteilung) besteht Bedarf an einer weiteren Trennung des internen
 Netzes in mehrere logisch voneinander relativ getrennte
 Netze. Neben den relativ stark abgetrennten Netzen für WLAN oder eine
@@ -256,22 +250,13 @@ Virtualisierung
 Wenn man linuxmuster.net virtualisiert betreibt, gelten zu den obigen
 Voraussetzungen noch folgende Hinweise:
 
-- Das Netzwerk wird virtualisiert. Dadurch werden virtuelle Switche
-  ("bridges") erstellt, denen die richtigen Schnittstellen zugeordnet
-  werden müssen. Der Virtualisierungshost (Hypervisor) sollte
-  wenigstens mit drei Netzwerkkarten ausgestattet sein.  Mit
-  zusätzlichem VLAN wird die Konfiguration auf dem Hypervisor schnell
-  komplex, die physikalische Verkabelung kann aber einfacher werden.
+* Das Netzwerk wird virtualisiert. Dadurch werden virtuelle Switche ("bridges") erstellt, denen die richtigen Schnittstellen zugeordnet werden müssen.
+  Wird kein Layer3-Switch eingesetzt, sollte der Virtualisierungshost (Hypervisor) wenigstens mit der obengenannten Anzahl von Netzwerkkarten ausgestattet sein.
+  Mit dem Einsatz eines Layer3-Switches wird die Konfiguration auf dem Hypervisor schnell komplex, die physikalische Verkabelung kann dadurch aber einfacher werden. So lassen sich auch etwaige neue Anforderungen durch zusätzliche VLANs realisieren.
 
-- Der Speicherplatz wird virtualisiert. Darauf muss man bei der
-  Verwendung externer (iSCSI/NFS) wie interner Speichersysteme (LVM)
-  achten. Dies kann auch zur Vereinfachung eines Backupverfahrens
-  beitragen.
+* Der Speicherplatz wird virtualisiert. Darauf muss man bei der Verwendung externer (iSCSI/NFS) wie interner Speichersysteme (LVM) achten. Dies kann auch zur Vereinfachung eines Backupverfahrens beitragen.
 
-- Da der VM-Host die einzelnen VMs zunächst kapselt, ist es aus
-  Sicherheitsgründen empfehlenswert, den VM-Host nicht ins selbe Netz
-  seiner VMs einzubinden. Außerdem wird der Zugriff auf die Daten
-  eventuell erschwert.
+* Da der VM-Host die einzelnen VMs zunächst kapselt, ist es aus Sicherheitsgründen empfehlenswert, den VM-Host nicht ins selbe Netz seiner VMs einzubinden. Außerdem wird der Zugriff auf die Daten eventuell erschwert.
 
 Hypervisoren
 ------------
