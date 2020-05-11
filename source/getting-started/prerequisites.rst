@@ -218,9 +218,11 @@ durch die Firewall-Lösung "IPFire" geprägt wurde:
 * Optional kann eine sog. demilitarisierte Zone (DMZ) als zusätzliches Netzwerk (ORANGE) aufgebaut werden.
 
 Daraus ergeben sich folgende Mindestvoraussetzungen für einen Virtualisierungshost:
+
 * mindestens zwei Netzwerk-Interfaces (rotes und grünes Netz)
 * bei WLAN-Nutzung eine Netzwerkkarte zusätzlich (blaues Netz)
-* sollen Serverdienste im Internet von außen zugänglich sein, empfehlen wir diese in die DMZ auszulagern. Dafür wird eine weiteres Netzwerk-Interface benötigt (oranges Netz)
+* sollen Serverdienste im Internet von außen zugänglich sein, empfehlen wir diese in die DMZ auszulagern. Dafür wird eine weiteres 
+  Netzwerk-Interface benötigt (oranges Netz)
 
 Durch die fortschreitende Digitalisierung in der Bildung ist der Auf- bzw. Ausbau einer funktionalen WLAN-Infrastruktur für jede Schule eine gute Entscheidung. Daraus ergibt sich aus unserer Sicht die Empfehlung zu mindestens drei Netzwerkkarten. Willst du für alle möglichen Einsatzszenarien gut gerüstet sein, empfiehlt sich allerdings gleich den Virtualisierungshost mit vier Netzwerk-Interfaces auszulegen.
 
@@ -265,52 +267,19 @@ Die Voraussetzungen für einen virtualisierten Betrieb besteht
 natürlich darin, vorab den Hypervisor/den VM-Host installiert zu haben
 und Zugriff auf dessen Verwaltung zu haben. Wo es uns möglich ist,
 haben wir eine Anleitung dazu geschrieben, um auf die Besonderheiten
-der Schulnetzumgebung an geeigneter Stelle hinzuweisen. Für alle
-anderen Fälle, wird im folgenden der Ablauf einer Installation
-skizziert.
-
-KVM/qemu/Proxmox als Hypervisor:
-  Ausführliche Informationen findest Du im Kapitel :ref:`install-on-kvm-label` und :ref:`install-on-proxmox-label`.
-
-Xen als Hypervisor:
-  Ausführliche Informationen findest Du im eigenen Kapitel :ref:`install-on-xen-label`.
-
-VirtualBox als Hypervisor:
-  VirtualBox wird häufig im Testbetrieb und weniger im
-  Produktivbetrieb verwendet. Die `Entwicklerdokumentation
-  <https://github.com/linuxmuster/linuxmuster-base7/wiki/Die-Appliances>`_
-  beschreibt diese Konfiguration. Es muss mindestens die Version 6.0
-  verwendet werden.
-
-.. _getting-started-downloads-label:
-
-Download
-========
-
-Für eine Installation direkt auf der Hardware oder einer anderweitigen
-Installation von Grund auf benötigt man
-	
-- `Ubuntu 18.04 LTS 64-bit PC (AMD64) server install image
-  <http://releases.ubuntu.com/bionic/>`_
-
-- `OpnSense <https://opnsense.org/download>`_
-
-Für die eine virtualisierte Installation benötigt man neben der
-Virtualisierungssoftware noch die bereitgestellten VM-Appliances
-(Abbilder).
+der Schulnetzumgebung an geeigneter Stelle hinzuweisen.
 
 VMs - Hinweise
 --------------
 
-linuxmuster.net bietet vorgefertigte virtuelle Maschinen zum direkten Import für die jeweilige 
-Virtualisierungsumgebung an, um die Installations- und Konfigurationszeiten stark zu verringern.
+linuxmuster.net bietet vorgefertigte virtuelle Maschinen zum direkten Import für die jeweilige Virtualisierungsumgebung an, um die Installations- und Konfigurationszeiten stark zu verringern.
 
+- Für die Virtualisierer KVM, Proxmox, VirtualBox:
+  werden die VMs im OVA-Format bereitgestellt. Dieses Format kann i.d.R. auch von
+  anderen Virtualisierern erfolgreich importiert werden.
 - Für XCP-ng als Opensource-Virtualisierungsumgebung werden die VMs im
   XVA-Format zum direkten Import angeboten. Die XVA-Dateien sind
   zusätzlich mit ZIP komprimiert worden.
-- Für andere Virtualisierer (Open Source: KVM, Proxmox, VirtualBox)
-  werden die VMs im OVA-Format bereitgestellt. Dieses kann i.d.R. von
-  der Mehrzahl der Virtualisierer erfolgreich importiert werden.
 - Für alle Virtualisierer, für die kein Import möglich ist, bietet es
   sich entweder an, die OVA-Dateien händisch zu entpacken und die
   Einstellungen händisch einzurichten, oder eine Installation von
@@ -319,129 +288,62 @@ Virtualisierungsumgebung an, um die Installations- und Konfigurationszeiten star
 Zu den jeweiligen Download-Dateien der VMs werden ebenfalls die
 SHA1-Werte zur Überprüfung der Datenintegrität bereitgestellt.
 
-Nachstehende Übersicht gibt eine Kurzübersicht zu den angebotenen VMs mit anschließendem 
-Link zur Download-Übersicht.
+Installations-Alternativen
+==========================
 
-.. _getting-started-OVA-label:
+Für eine Installation direkt auf der Hardware oder einer anderweitigen
+Installation von Grund auf benötigt man:
 
-Appliances OVA
---------------
+- `Ubuntu 18.04 LTS 64-bit PC (AMD64) server install image
+  <http://releases.ubuntu.com/bionic/>`_
 
-+--------------------+----------------------------------------------------------------------+
-| Programm           | Beschreibung                                                         | 
-+====================+======================================================================+
-| lmn7.opnsense      | OPNsense Firewall VM  der linuxmuster.net v7                         |                  
-+--------------------+----------------------------------------------------------------------+
-| lmn7.server        | Server der linuxmuster.net v7                                        | 
-+--------------------+----------------------------------------------------------------------+
+- `OpnSense <https://opnsense.org/download>`_
 
-Nachstehende VMs sind optional, sofern eine paketorientierte Softwareverteilung für 
-Windows-Clients (OPSi), eigene Web-Services mithilfe eines sog. Docker-Hosts betrieben
-und/oder eine WLAN-Anbindung via Ubiquiti bereitgestellt werden soll.
+Das dafür nötige Vorgehen kann auch der Entwicklerdokumentation entnommen werden.
+Dort ist auch das Vorgehen um VirtualBox als Hypervisor einzusetzen beschrieben.
 
-+--------------------+----------------------------------------------------------------------+
-| Programm           | Beschreibung                                                         | 
-+====================+======================================================================+
-| lmn7.opsi          | OPSI VM der lmn v7                                                   |
-+--------------------+----------------------------------------------------------------------+
-| lmn7.docker        | Bereitstellung eigener Web-Dienste mithilfe eines Docker-Hosts       |
-+--------------------+----------------------------------------------------------------------+
-| lmn7.unifi         | Controller der Ubiquiti WLAN - Lösung                                |
-+--------------------+----------------------------------------------------------------------+
+VirtualBox wird häufig im Testbetrieb und weniger im Produktivbetrieb verwendet. Die `Entwicklerdokumentation <https://github.com/linuxmuster/linuxmuster-base7/wiki/Die-Appliances>`_ beschreibt diese Konfiguration. Es muss mindestens die Virtualbox-Version 6.0 verwendet werden.
 
-
-``Download der OVAs`` unter: `Download OVAs VM v7 <https://download.linuxmuster.net/ova/v7/latest/>`_   
-
-Zur Installation mit KVM: :ref:`Installation KVM <install-on-kvm-label>`
-
-.. _getting-started-XVA-label:
-
-Appliances XVA
---------------
-
-+--------------------+----------------------------------------------------------------------+
-| Programm           | Beschreibung                                                         | 
-+====================+======================================================================+
-| lmn7.xoa           | web-basierte VM zur Verwaltung von XCP-ng angepasst an die lmn v7    |
-+--------------------+----------------------------------------------------------------------+ 
-| lmn7.opnsense      | OPNSense Firewall VM  der linuxmuster.net v7                         |                  
-+--------------------+----------------------------------------------------------------------+
-| lmn7.server        | Server der linuxmuster.net v7                                        | 
-+--------------------+----------------------------------------------------------------------+
-
-Nachstehende VMs sind optional, sofern eine paketorientierte Softwareverteilung für 
-Windows-Clients (OPSi), eigene Web-Services mithilfe eines sog. Docker-Hosts betrieben
-und/oder eine WLAN-Anbindung via Ubiquiti bereitgestellt werden soll.
-
-+--------------------+----------------------------------------------------------------------+
-| Programm           | Beschreibung                                                         | 
-+====================+======================================================================+
-| lmn7.opsi          | OPSI VM der lmn v62                                                  |
-+--------------------+----------------------------------------------------------------------+
-| lmn7.docker        | Bereitstellung eigener Web-Dienste mithilfe eines Docker-Hosts       |
-+--------------------+----------------------------------------------------------------------+
-| lmn7.unifi         | Controller der Ubiquiti WLAN - Lösung                                |
-+--------------------+----------------------------------------------------------------------+
-
-Die VMs sind bereits alle auf die Standard-Installation für linuxmuster.net v7 vorbereitet und 
-die sog. XCP-ng Tools sind bereits installiert.
-
-``Download der XVAs`` unter: `Download XVAs VM v7 <https://download.linuxmuster.net/xcp-ng/v7/latest/>`_
-
-
-Virtualisierungssoftware XCP-ng
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Die Download-Links zur Installation der XCP-ng Virtualisierungssoftware finden Sie nachstehend:
-
-+--------------------+----------------------------------------------------------------------+
-| Programm           | Beschreibung                                                         | 
-+====================+======================================================================+
-| XCP-ng             | `Installationsdatenträger <https://xcp-ng.org/#easy-to-install>`_    | 
-+--------------------+----------------------------------------------------------------------+
-| XCP-ng Center      | Windows - Programm zur Verwaltung von der Virtualisierungsumgebung   |                             
-+--------------------+----------------------------------------------------------------------+
-| Download-Link:                                                                            |
-| `XCP-ng Center <https://github.com/xcp-ng/xenadmin/releases>`_                            |
-+--------------------+----------------------------------------------------------------------+
-
-Zur Installation mit XCP-ng: :ref:`Installation XCP-ng <install-on-xen-label>`
-
-
-Vorgehen
-========
+Das weitere Vorgehen
+====================
 
 Nachdem du entschieden hast, ob und wie du eine Virtualisierung
 einsetzt, beginnst du mit Installation der Virtualisierung nach einer
-der oben beschriebenen Anleitungen zu Hypervisoren in dieser Dokumentation.
+der oben beschriebenen Anforderungen der einzelnen Hypervisoren in dieser Dokumentation.
+
+Zur Installation mit Proxmox: :ref:`Installationsoptionen - Virtualisierung mit Proxmox <install-on-proxmox-label>`
+
+Zur Installation mit XCP-ng: :ref:`Installationsoptionen - Virtualisierung über XCP-ng <install-on-xen-label>`
+
+Zur Installation mit KVM: :ref:`Installationsoptionen - Virtualisierung mit KVM <install-on-kvm-label>`
+
 
 Alternativ installierst du von Grund auf die Serverbetriebssysteme
 *Ubuntu Server* und *OPNSense* direkt auf der Hardware oder innerhalb
 deiner Virtualisierungslösung.
 
-Jetzt kann die eigentliche Installation mit der eventuellen Anpassung
-des Netzbereiches und der Erstkonfiguration beginnen, wie sie im
-:ref:`nächsten Kapitel <setup-using-selma-label>` beschrieben wird.
 
+Zu der alternativen Installation: :ref:`Installationsoptionen - Install from Scratch <install-from-scratch-label>`
 
 ..
-   Um sicher zu stellen, dass die Datei richtig heruntergeladen wurde, kannst du die SHA1-Summe prüfen. Auf der Konsole eines Linuxbetriebsystems steht z.B. der Befehl ``sha1sum`` zur Verfügung:
+  Um sicher zu stellen, dass die Datei richtig heruntergeladen wurde, kannst du die SHA1-Summe prüfen. Auf der Konsole eines Linuxbetriebsystems steht z.B. der Befehl ``sha1sum`` zur Verfügung:
 
-   .. code-block:: console
+  .. code-block:: console
 
-      sha1sum ubuntu-18.04-live-server-amd64.iso
+        sha1sum ubuntu-18.04-live-server-amd64.iso
 
-   Als Ausgabe erhält man die Prüfsumme, z.B.
+  Als Ausgabe erhält man die Prüfsumme, z.B.
 
-   .. code-block:: console
+  .. code-block:: console
 
-      0b3490de9839c3918e35f01aa8a05c9ae286fc94 *ubuntu-18.04-live-server-amd64.iso
+        0b3490de9839c3918e35f01aa8a05c9ae286fc94 *ubuntu-18.04-live-server-amd64.iso
 
-   Dies so erhalten Prüfsumme muss mit von Ubuntu zur Verfügung gestellten `Summe <http://releases.ubuntu.com/bionic/SHA1SUMS>`_ (Zeile ubuntu-18.04-live-server-amd64.iso) übereinstimmen.
-.. 
+  Dies so erhalten Prüfsumme muss mit von Ubuntu zur Verfügung gestellten `Summe <http://releases.ubuntu.com/bionic/SHA1SUMS>`_ (Zeile ubuntu-18.04-live-server-amd64.iso) übereinstimmen.
+
+..
   Checkliste
   ==========
-  
+
   Nutzen Sie die :download:`Checkliste
   <./media/preamble/checklist/checklist.pdf>`, um alle während der
   Installation gemachten Einstellungen festzuhalten. Es handelt sich um
