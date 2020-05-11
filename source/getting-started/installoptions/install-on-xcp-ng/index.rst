@@ -103,14 +103,24 @@ zusätzlichen Anleitungen betrachtet.
 
 * :ref:`Anleitung Netzwerksegmentierung <subnetting-basics-label>` 
 
-Download-Quellen
-----------------
+Download der Appliances und der Virtualisierungssoftware XCP-ng
+---------------------------------------------------------------
 
-Die Download-Quellen für XCP-ng und die entsprechenden VMs der 
+Die Download-Links zur Installation der XCP-ng Virtualisierungssoftware finden Sie nachstehend:
+
++--------------------+----------------------------------------------------------------------+
+| Programm           | Beschreibung                                                         | 
++====================+======================================================================+
+| XCP-ng             | `Installationsdatenträger <https://xcp-ng.org/#easy-to-install>`_    | 
++--------------------+----------------------------------------------------------------------+
+| XCP-ng Center      | Windows - Programm zur Verwaltung von der Virtualisierungsumgebung   |                             
++--------------------+----------------------------------------------------------------------+
+| Download-Link:                                                                            |
+| `XCP-ng Center <https://github.com/xcp-ng/xenadmin/releases>`_                            |
++--------------------+----------------------------------------------------------------------+
+
+Die Download-Quellen für die entsprechenden VMs der 
 linuxmuster.net v7 im XVA Format finden sich unter:
-
-* :ref:`Beschreibung der VMs für v7 <prerequisites-label>`
-* Download der XVAs-v7_
 
 .. _XVAs-v7: https://download.linuxmuster.net/xcp-ng/v7/latest/
 

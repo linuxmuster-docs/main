@@ -98,8 +98,31 @@ zusätzlichen Anleitungen betrachtet.
 
 * :ref:`Anleitung Netzwerksegmentierung <subnetting-basics-label>` 
 
-Download-Quellen
-----------------
+Download der Appliances OVA
+===========================
+
++--------------------+----------------------------------------------------------------------+
+| Programm           | Beschreibung                                                         |
++====================+======================================================================+
+| lmn7.opnsense      | OPNsense Firewall VM  der linuxmuster.net v7                         |
++--------------------+----------------------------------------------------------------------+
+| lmn7.server        | Server der linuxmuster.net v7                                        |
++--------------------+----------------------------------------------------------------------+
+
+Nachstehende VMs sind optional, sofern eine paketorientierte Softwareverteilung für Windows-Clients (OPSi), eigene Web-Services mithilfe eines sog. Docker-Hosts betrieben und/oder eine WLAN-Anbindung via Ubiquiti bereitgestellt werden soll.
+
++--------------------+----------------------------------------------------------------------+
+| Programm           | Beschreibung                                                         |
++====================+======================================================================+
+| lmn7.opsi          | OPSI VM der lmn v7                                                   |
++--------------------+----------------------------------------------------------------------+
+| lmn7.docker        | Bereitstellung eigener Web-Dienste mithilfe eines Docker-Hosts       |
++--------------------+----------------------------------------------------------------------+
+| lmn7.unifi         | Controller der Ubiquiti WLAN - Lösung                                |
++--------------------+----------------------------------------------------------------------+
+
+
+``Download der OVAs`` unter: `Download OVAs VM v7 <https://download.linuxmuster.net/ova/v7/latest/>`_
 
 Die Download-Quellen für den Proxmox-Host selbst finden sich hier:
 
@@ -107,7 +130,7 @@ https://www.proxmox.com/de/downloads
 
 Dort findet sich das ISO-Image zur Installation von Proxmox (derzeit Version 6.1-1).
 
-Laden Sie dieses Image herunter und erstellen Sie einen bootfähigen USB-Stick zur weiteren installation.
+Laden Sie dieses Image herunter und erstellen Sie einen bootfähigen USB-Stick zur weiteren Installation.
 
 Die Proxmox-VMs finden Sie als ``vma.lzo`` Dateien zum direkten Import in Proxmox unter nachstehendem Link:
 
