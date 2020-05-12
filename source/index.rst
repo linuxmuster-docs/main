@@ -14,8 +14,8 @@ Nutzern bis hin zu individuellen Anpassungen.
    Die findest du unter http://docs.linuxmuster.net/de/v6.
 
 
-Neben dieser Dokumentation steht Ihnen unsere Community und unser kostenfreier
-Telefon-Support helfend zur Seite. Weitere Informationen dazu finden Sie
+Neben dieser Dokumentation steht dir unsere Community und unser kostenfreier
+Telefon-Support helfend zur Seite. Weitere Informationen dazu findest du
 auf der `Website von Linuxmuster.net
 <http://www.linuxmuster.net/de/support-de/>`_.
 

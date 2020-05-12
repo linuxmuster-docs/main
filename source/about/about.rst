@@ -103,7 +103,7 @@ Selbstheilende Arbeitsstationen durch LINBO
 
 Das Konzept der Selbstheilenden Arbeitsstationen (SheilA) ermöglicht einheitliche identische Schulungssysteme. Diese können bei jedem Start der Rechner in einen vorher definierten Zustand zurückgesetzt werden. Dieser Standard wird durch die letzte Veränderung oder Installation festgelegt, in dem ein Abbild des Betriebssytems auf dem Server gespeichert wird. Weitere Vorteile sind:
 
-    * verschiedenen Betriebssyteme auf den Clients möglich
+    * verschiedene Betriebssyteme auf jedem Client möglich
     * schnelle Erst- oder Neueinrichtung
     * keine Einschränkung der Nutzer durch Benutzerrechte auf den Clients nötig
     * einfache Wiederherstellung der Clients ist jedem Benutzer möglich
@@ -202,13 +202,15 @@ Alle bis hier gemachten Ausführungen bezogen sich auf die vier linken Teilberei
    Diese vorgestellten Bestandteile werden vom Verein   
    **linuxmuster.net e. V. entwickelt und unterstützt**.
    
-   Diese Unterstützung wird geleistet durch die 
+   Diese Unterstützung wird durch das
+    
+   **Hilfe-Forum** `<https://www.linuxmuster.net/de/support-de/discourse-forum/>`_
+
+   und die 
    
    **telefonische Hotline** `<https://www.linuxmuster.net/de/support-de/hotline/>`_ 
    
-   und das
-    
-   **Hilfe-Forum** `<https://www.linuxmuster.net/de/support-de/discourse-forum/>`_ geleistet.
+   geleistet.
 
    **All diese Leistungen sind nicht von einer Mitgliedschaft im Verein abhängig.**
 
