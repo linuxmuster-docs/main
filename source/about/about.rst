@@ -251,5 +251,7 @@ Exemplarisch seien hier Services der Kultusministerien wie zum Beispiel lanis, m
 
 :download:`Übersicht als PDF <media/about_10_structure_of_version_7_simple.pdf>`
 
+Im nächsten Kapitel  wird beschrieben, welche Neuerungen es zur Vorgängerversion gibt. Sollte diese Information für dich nicht von Interesse sein, kannst du sie hier direkt überspringen: :ref:`Vorüberlegungen für die Installation <prerequisites-label>`
+
 .. [#FN1] Die gekennzeichneten Elemente werden durch die Community über das `Hilfeforum <https://ask.linuxmuster.net/>`_ bereitgestellt und unterstützt.
 .. [#FN2] Die gekennzeichneten Elemente werden durch deren Hersteller/Dienstleister unterstützt. 
