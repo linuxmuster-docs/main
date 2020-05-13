@@ -31,140 +31,85 @@ Rufe die Liste aller verfügbaren Clientabbilder auf:
   
 .. code-block:: console
    
-   server ~ # linuxmuster-client list-available
+   server ~ # linuxmuster-client list
    Hole Liste der verfügbaren cloops...OK
+   +++ Auflistung +++
    
    Imagename                 Info
-   -----------------------------------------------
-   xenial-qgm                Ubuntu 16.04 LTS 64Bit
-   xenial916                 Ubuntu 16.04 LTS 64Bit
-   bionic (empfohlen)        Official Ubuntu 18.04 64bit
-   bionic-qgm                Xubuntu 18.04 64bit (Quenstedt)
-   -----------------------------------------------
+   -----------------------------------------------------
+   ubuntu_vanilla            Ubuntu 18.04.4, ssh enabled, login linuxadmin (Muster!)
+   lmn-bionic-200507         Ubuntu 18.04..4 LTS default
+   ------------------------------------------------------
 
-Lade das Abbild deiner Wahl (hier: `bionic`) herunter mit
+Lade das Abbild deiner Wahl (hier: `lmn-bionic-200507`) herunter 
+und lasse alle benötigten Dateien einrichten (z.B. Patchklasse für die Hardwareklasse,
+das Postsync-Script etc.):
 
 .. code-block:: console
 
-   server ~ # linuxmuster-client download -c bionic
+   server ~ # linuxmuster-client -r lmn-bionic-200507 auto
 
 Es wird geprüft, ob Dateien mit diesem Namen schon existieren, weil
 selbst schon eine Rechnergruppe mit dem Namen angelegt wurde, oder man
-dieses Image zum wiederholten Mal herunterlädt. Dann hat man die
-Möglichkeit die Dateien zu überschreiben oder abzubrechen.
+dieses Image zum wiederholten Mal herunterlädt. 
+
+Liegt das Image schon vor, ist ein Download nicht mehr erfordelich, so dass dann nur noch 
+die Integrität der cloop-Datei geprüft wird und alle Dateien entpackt werden.
+
+Ist ein Überschreiben der cloop-Datei oder der Dateien der Patchklasse für Linbo 
+erforderlich oder gewünscht, so ist mit o.g. Befehl die Option -f (force) 
+anzugeben.
 
 Die wichtigsten Dateien, die angelegt werden sind
 
 .. code-block:: bash
 
-   /var/linbo/start.conf.bionic
-   /var/linbo/bionic.cloop
-   /var/linbo/bionic.cloop.postsync
-   /var/linbo/linuxmuster-client/bionic/common/postsync.d/*
+   /srv/linbo/start.conf.lmn-bionic-200507
+   /srv/linbo/lmn-bionic-200507.cloop
+   /srv/linbo/lmn-bionic-200507.cloop.postsync
+   /srv/linbo/linuxmuster-client/lmn-bionic-200507/common/postsync.d/*
    
 Ändern des Passworts des Vorlagenbenutzers
 ------------------------------------------
 
-Der Vorlagenbenutzer heißt "linuxadmin". Mit folgendem Befehl legt man
-das Passwort des Vorlagenbenutzers im später gestarteten Linuxclient
-fest.
+Lädt man die Vorlagen herunter so heißt der Vorlagenbenutzer ``linuxadmin``. Dem Nutzer
+wurde in der Vorlage das Kennwort ``Muster!`` zugewiesen. Hiermit können Sie sich nach dem 
+Startvorgang am Linux-Client lokal anmelden und Anpassungen vornehmen bzw. ebenfalls das 
+Kennwort ändern.
+
+Sie können das Kennwort das Vorlagenbenutzers aber auch direkt vom Server aus ändern.
+Mit folgendem Befehl legt man das Passwort des Vorlagenbenutzers im später gestarteten 
+Linuxclient fest.
 
 .. code-block:: console
    
-   server ~ # linuxmuster-client setpassword -c bionic
-   Setze das Passwort des Vorlagenbenutzers "linuxadmin"
+   server ~ # linuxmuster-client -p <pw> -l <localname> setpw
 
+``<pw>`` - hier können Sie ein Kennwort angebene, dann wird dieses für den Vorlagenbenutzer direkt gesetzt.
 
-Abbild zur Synchronisation einrichten
--------------------------------------
+``<localname>`` - dies entspricht der Patchklasse für Linbo - also hier z.B. lmn-bionic-200507
 
-Der folgende Befehl erzeugt alle nötigen Konfigurationen, so dass das
-Abbild `bionic` im lokalen Netz einsatzfähig wird:
+Das Kennwort für den Vorlagenbenutzer wird in der Patchklasse hier abgelegt:
 
-.. code-block:: console
-
-   server ~ # linuxmuster-client configure 
-   ... kopieren der ssh-keys des servers ...
-   ... anpassen einiger skripte? ...
-
-
-.. 
-  Neue Rechner werden durch direkten Eintrag in die Datei
-  ``/etc/linuxmuster/workstations`` und anschließendem Aufruf von
-  ``import_workstations`` aufgenommen.
-  
-  Ermitteln Sie die MAC-Adresse des ersten Clients, z.B. indem Sie den
-  Client per PXE booten.
-  
-  .. image:: ../clients/windows10clients/media/registration/linbo-empty-startpage.jpg
-  
-  Lesen Sie die "MAC-Adresse" im LINBO-Startbildschirm ab.
-  
-  Öffnen Sie die Datei ``/etc/linuxmuster/workstations`` auf dem Server.
-  
-  .. code-block:: console
-  
-     server ~ # nano /etc/linuxmuster/workstations
-  
-  Tragen Sie dort den Rechner ein mit folgender Syntax
-  
-  .. code-block:: bash
-  
-     Raum;Rechnername;Gruppe;MAC;IP;;;;;;PXE-Flag;
-  
-  Raum
-    Geben Sie hier den Namen des Raums (z.B. r100 oder g1r100)
-    ein. Beachten Sie bitte, dass die Bezeichnung des Raumes oder auch
-    des Gebäudes mit einem Kleinbuchstaben beginnen muss. Sonderzeichen
-    sind nicht erlaubt.
-  
-  Rechnername 
-    z.B. in der Form r100-pc01 (max. 15 Zeichen), (evtl. Gebäude
-    berücksichtigen g21r100-pc01) eingeben. Beachten Sie bitte, dass als
-    Zeichen nur Buchstaben und Zahlen erlaubt sind. Als Trennzeichen
-    darf nur das Minus-Zeichen ``-`` verwendet werden. Leerzeichen,
-    Unterstriche oder andere Sonderzeichen (wie z.B. Umlaute, ß oder
-    Satzzeichen) dürfen Sie hier unter keinen Umständen verwenden.
-  
-  IP Adresse  
-    Die IP-Adresse sollte zum Raum passen und **muss** außerhalb des
-    Bereichs für die Rechneraufnahme liegen. Abhängig von Ihren
-    Netzdaten z.B. 10.16.100.1 für diesen PC eingeben, üblicherweise
-    **nicht** zwischen 10.16.1.100 und 10.16.1.200 (Bereich für die
-    Rechneraufnahme).  
-  
-  Rechnergruppe 
-    In der Rechnergruppe, bspw. `xenial` werden mehrere (idealerweise
-    alle) ähnlichen Rechner zusammengefasst, die eine (nahezu)
-    identische Konfiguration bekommen. 
-  
-  Beispielkonfiguration.
-  
-  .. code-block:: bash
-  
-     r100;r100-pc01;xenial;08:00:27:57:1D:C5;10.16.100.1;;;;;;1;
-  
-  Der registrierte Client wird nun mit dem Konsolenbefehl
-  
-  .. code-block:: console
-  
-     server ~# import_workstations
-  
-  ins System aufgenommen und der Rechnergruppe `xenial` zugewiesen. Wenn
-  Sie mit dem zuvor heruntergeladenen Standard-Linuxclient eine
-  Rechnergruppe `xenial` erstellt haben, kann nun der Rechner fertig
-  eingerichtet werden.
-
+``/srv/linbo/linuxmuster-client/lmn-bionic-200507/common/passwords``
 
 Masterclient aufnehmen
 ======================
 
 Der erste Arbeitsplatzrechner (hier: Masterclient genannt) kann
-jetzt in die Rechnergruppe "bionic" aufgenommen werden.
+jetzt in die Rechnergruppe "lmn-bionic-200507" aufgenommen werden.
 
 Der Zielrechner wird in der Schulkonsole aufgenommen
-(z.B. `r100-pc01`) und im Menüpunkt LINBO der richtigen Gruppe
-(z.B. `bionic`) zugewiesen, siehe :ref:`add-computer-label`.
+(z.B. `r10001`) und im Menüpunkt LINBO der richtigen Gruppe
+(z.B. `lmn-bionic-200507`) zugewiesen, siehe :ref:`add-computer-label`.
+
+.. hint::
+
+   In der start.conf.lmn-bionic-200507 finden Sie die Paritionsgrößen. 
+   In der vorgefertigsten start.conf wird davon ausgegangen, dass Sie eine
+   Festplatte mit mind. 70 GB einsetzen. Wünschen Sie andere Größen, passen 
+   Sie diese in der Datei zuvor an und führen den nachstehenden Befehl zum Import 
+   des Gerätes aus.
      
 Internetverbindung ohne Proxy
 -----------------------------
@@ -174,35 +119,58 @@ Internet kommen. Die empfohlene Vorgehensweise ist, die IP-Adresse des
 Masterclients (temporär) in die "NoProxy" Zugriffsliste auf der
 Firewall aufzunehmen.
 
+Masterclient als neues Device
+-----------------------------
+
+Sie müssen nun einem Gerät in Ihrem Netz die neue Hardwareklasse ``lmn-bionic-200507``
+zuweisen, so dass das Gerät mit der neuen Vorlage startet, Sie Anpassungen vornehmen können 
+abschließend das Geräte in die Domäne aufnehmen und eine neue cloop-Datei erstellen, 
+die Sie an alle gewünschten Geräte verteilen.
+
+Editieren Sie hierzu die Datei ``/etc/linuxmuster/sophomorix/default-school/devices.csv``.
+
+Tragen Sie das Gerät mit der neuen Hardwareklasse wie folgt ein:
+
+.. code-block:: bash
+
+   r100;r10001;lmn-bionic-200507;AA:AA:BB:12:34:56;10.2.100.1;;;;classroom-studentcomputer;;1;;;;;
+
+Speichern Sie die Änderungen ab und importieren Sie das neue Gerät mit:
+
+.. code-block:: console
+
+   server # linuxmuster-import-devices
+
+
 Masterclient synchronisieren
 ----------------------------
 
-Um den Client `r100-pc01` erstmalig zu partitionieren, formatieren,
-synchronisieren und zu starten, führe auf dem Server folgenden Befehl
+Um den Client `r10001` erstmalig zu partitionieren, formatieren,
+synchronisieren und zu starten, führen Sie auf dem Server folgenden Befehl
 aus
 
 .. code-block:: console
 
-   # linbo-remote -i r100-pc01 -p partition,format,initcache:torrent,sync:1,start:1
+   # linbo-remote -i r10001 -p partition,format,initcache:torrent,sync:1,start:1
 
-Reboote nun den Client und verfolge die vollautomatische
-Einrichtung oder trinke eine Tasse deines Lieblingsgetränks.
+Starten Sie nun den Client und verfolgen Sie die vollautomatische Einrichtung. 
 
-Nach der Synchronisation und einem weiteren Reboot startet der Client
-und man meldet sich mit ``linuxadmin`` und selbst gewählten Passwort an.
+Sollte der PC nicht starten, so sind die Wake-on-LAN Funktionen nicht korrekt konfiguriert.
+Dann müssen Sie den PC von Hand booten. Der PC bootet in die Linbo-Umgebung, dort müssen Sie 
+diesen dann partitionieren, den Cache befüllen und den Linux-Client synchronisiert starten.
 
-Ebenso ist eine Anmeldung per ssh vom Server aus möglich und sinnvoll:
+Nachdem der Linux-Client gestaretet wurde, melden Sie sich mit ``linuxadmin`` und dem 
+Vorlagenkennwort am Client an.
 
-.. code-block:: console
-
-   server~# ssh r100-pc01
-   ...
-   root@r100-pc01~# 
+Sollten Sie sich mit dem Vorlagenbenutzer nicht anmelden können, so führen Sie auf dem Server
+o.g. Befehl zur Vergabe eines neuen Kennworts für den Vorlagenbenutzer mit Ihrem gewünschten Kennwort aus. 
+Danach starten Sie den Client erneut, so dass der Vorlagenbenutzer ``linuxadmin`` sich danach mit dem 
+neu vergebenen Kennwort anmelden kann.
 
 Masterclient erstmalig aufnehmen
 --------------------------------
 
-Man startet in einem Terminal (oder über ssh vom Server aus) den
+Man startet in einem Terminal (oder über ssh vom Server aus) auf dem Linux-Client den
 Befehl ``sudo linuxmuster-cloop-turnkey``, der das System aktualisiert
 und einmalig die Domänenaufnahme vornimmt.
 
@@ -210,38 +178,31 @@ und einmalig die Domänenaufnahme vornimmt.
 
    # sudo linuxmuster-cloop-turnkey
 
+Erhalten Sie einen Hinweis, dass der Vorgang abgeschlossen wurde, starten Sie den PC neu und 
+wählen Sie nach dem Reboot in Linbo die Reiterkarte ``Imageing``.
+
 Neues Image erstellen
 ---------------------
 
-Es ist nun notwendig, den Masterclient neu zu starten und von dessen
-Installation ein neues Image zu erstellen.
+Erstellen Sie nun ein neues Image, indem Sie auf ``Image erstellen`` klicken, eine Beschreibung zum Image 
+angeben und dann den Vorgang mit ``erstellen+hochladen`` ausführen.
 
+Wurde das Image erfolgreich erstellt, so wurde die cloop-Datei auf dem Server neu erstellt und die bisherige
+cloop-Datei findet sich mit Angabe eines Zeitstempels im Dateinamen weiterhin auf dem Server unter 
+``/srv/linbo/``. Hier finden Sie aich eine Datei mit dem Namen ``lml-bionic-200507.cloop.macc``. 
+Ist diese Datei vorhanden so wurde dieses Cloop / der PC in die Domäne aufgenommen.
 
+Starten Sie den Client nun erneut synchronisiert, so können Sie sich nun am System anmelden.
 
-
-
-..  
-  Der Ubuntu-Client startet und aufgenommene Benutzer können sich nun am
-  System anmelden.
-  
-  Weitere Clients können unter Kenntnis der jeweiligen MAC-Adressen mit
-  derselben Methode direkt in die Datei
-  ``/etc/linuxmuster/workstations`` aufgenommen werden.
-  
-  Alternativ kann jeder aufzunehmende Rechner in LINBO gestartet werden
-  und über die grafische Oberfläche von LINBO registriert werden. Dabei
-  werden die relevanten Werte automatisch inkrementiert. Lesen Sie dazu
-  :ref:`registration-linbo-label`.
-
+Die cloop-Vorlage beinhaltet schon eine Reihe an Anpassungen und vorinstallierten Programmen, die Sie mithilfe
+des Vorlagenbenutzers ``linuxadmin`` an ihre Bedürfnisse anpassen können. Mach den erfolgten Anpassungen
+erstellen Sie erneut ein neues Image / eine neue cloop-Datei.
 
 Weiterführende Dokumentation
 ============================
 
 - `Entwicklerdokumentation  <https://github.com/linuxmuster/linuxmuster-client-adsso>`_
-- Dokumentation im Supportforum: https://ask.linuxmuster.net/t/linuxclient-v7-mit-profil-zum-testen
+- `Supportforum: <https://ask.linuxmuster.net/t/linuxclient-v7-mit-profil-zum-testen>`_
 - :ref:`using-linbo-label`
-- Howto: Standardclient updaten
-- Todo: are there pages in the Anwenderwiki
-- Todo: are there howtos under docs.linuxmuster.net
-
+- `Hinweise im Anwenderwiki <https://wiki.linuxmuster.net/community/>`_
 
