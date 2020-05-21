@@ -34,9 +34,13 @@ Herunterfahren der Clients mit:
 
 .. important:: Hinweise zu linbo-remote und linbo-ssh
 
+   `linbo im Community-Wiki<https://wiki.linuxmuster.net/community/anwenderwiki:linbo:start?s[]=linbo&s[]=remote>`_
    
+   
+..
    https://www.linuxmuster.net/wiki/dokumentation:handbuch:linbo:linbo.remote
   
+..  
    https://www.linuxmuster.net/wiki/dokumentation:handbuch51:clients:linbo:linbo_remote?s[]=linbo&s[]=ssh
 
 
