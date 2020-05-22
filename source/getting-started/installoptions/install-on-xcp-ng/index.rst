@@ -122,7 +122,7 @@ Die Download-Links zur Installation der XCP-ng Virtualisierungssoftware finden S
 Die Download-Quellen für die entsprechenden VMs der 
 linuxmuster.net v7 im XVA Format finden sich unter:
 
-.. _XVAs-v7: https://download.linuxmuster.net/xcp-ng/v7/latest/
+`XVAs-v7<https://download.linuxmuster.net/xcp-ng/v7/latest/>`_ 
 
 .. hint::
    Die XVAs für die v7 wurden mit XCP-ng v8.1 erstellt. Zudem wurden die xcp-ng
