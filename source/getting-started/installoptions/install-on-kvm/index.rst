@@ -45,8 +45,33 @@ Voraussetzungen
   ``10.0.0.10/16`` mit Gateway und DNS-Server jeweils ``10.0.0.254``.
   Es bietet sich ein Ubuntu-Desktop mit der Software `virt-manager`
   an.
-* :ref:`Beschreibung und Download-URL der OVAs <getting-started-OVA-label>`
-  
+
+Download der Appliances OVA
+===========================
+
++--------------------+----------------------------------------------------------------------+
+| Programm           | Beschreibung                                                         |
++====================+======================================================================+
+| lmn7.opnsense      | OPNsense Firewall VM  der linuxmuster.net v7                         |
++--------------------+----------------------------------------------------------------------+
+| lmn7.server        | Server der linuxmuster.net v7                                        |
++--------------------+----------------------------------------------------------------------+
+
+Nachstehende VMs sind optional, sofern eine paketorientierte Softwareverteilung für Windows-Clients (OPSi), eigene Web-Services mithilfe eines sog. Docker-Hosts betrieben und/oder eine WLAN-Anbindung via Ubiquiti bereitgestellt werden soll.
+
++--------------------+----------------------------------------------------------------------+
+| Programm           | Beschreibung                                                         |
++====================+======================================================================+
+| lmn7.opsi          | OPSI VM der lmn v7                                                   |
++--------------------+----------------------------------------------------------------------+
+| lmn7.docker        | Bereitstellung eigener Web-Dienste mithilfe eines Docker-Hosts       |
++--------------------+----------------------------------------------------------------------+
+| lmn7.unifi         | Controller der Ubiquiti WLAN - Lösung                                |
++--------------------+----------------------------------------------------------------------+
+
+
+``Download der OVAs`` unter: `Download OVAs VM v7 <https://download.linuxmuster.net/ova/v7/latest/>`_
+
 Vorgehen
 ========
 
@@ -66,11 +91,11 @@ Vorgehen
    getestet.
 6. Abschließende Konfigurationen auf dem KVM-Host
 
-  
+
 Bereitstellen des KVM-Hosts
 ===========================
 
-.. hint:: 
+.. hint::
 
    Der KVM-Host bildet das Grundgerüst für die Firewall *OPNsense* und
    den Schulserver *server*. Da KVM im Gegensatz zu Xen oder VMWare
@@ -106,21 +131,21 @@ USB-Stick-Gerätes muss vorher herausgefunden werden, z.B. mit ``fdisk
 
 Löschen des MBRs des USB-Sticks
   .. code-block:: console
-     
+
      # sudo dd if=/dev/zero of=/dev/sdX bs=1M count=10
 
 Größe des ISOs herausfinden
   .. code-block:: console
-    
+
      # du -b ubuntu-18.04.1-server-amd64.iso
      749731840	ubuntu-18.04.1-server-amd64.iso
 
 Kopieren des ISOs auf den Stick
   .. code-block:: console
-  
+
      # sudo dd if=ubuntu-18.04.1-server-amd64.iso | sudo pv -s 749731840 | sudo dd of=/dev/sdX bs=1M && sync
      [sudo] Passwort für linuxadmin: 
-     715MiB 0:00:09 [73,1MiB/s] [====================================================================>] 100%            
+     715MiB 0:00:09 [73,1MiB/s] [====================================================================>] 100%
      0+168504 Datensätze ein
      0+168504 Datensätze aus
      749731840 bytes (750 MB, 715 MiB) copied, 9,78505 s, 76,6 MB/s
