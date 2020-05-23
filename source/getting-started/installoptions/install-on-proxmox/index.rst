@@ -440,6 +440,19 @@ unique 1`` (Beachte die zwei Bindestriche vor dem Wort „storage“) angewendet
 
 <vmname.vma.lzo> entspricht dem Dateinamen der TemplateVM. Mit <VM-ID> übergibst du der VM eine ID, wie beispielsweise „101“ oder „701“. <storage-name> ist etwa local oder der Name einer zweiten virtuellen Disk, wie im obigen Beipiel „vd-ssd-1700“-unique 1 generiert eine andere MAC-Addresse, als im Template exportiert.
 
+.. note::
+
+  Sollte ein Proxmox-Host mit der Verion 6.2 zum Einsatz kommen, sind die einzelnen Datei nach folgendem Muster umzubennen und bei qmrestore anzupassen:
+  
+  vzdump-qemu-xxx-yyyy_mm_dd-hh_mi_ss.vma.lzo
+  xxx --> ID
+  yyyy --> Jahr
+  mm --> Tag
+  hh --> Stunde
+  mi --> Minute
+  ss --> Sekunde
+  Alle Werte können der Phantasie entnommen werden (getestet mit vzdump-qemu-701-2020_04_20-12_20_00.vma.lzo)
+
 +-------------+------------------------------------------------------------------------------------------+
 | VM          | Import-Befehl                                                                            |
 +=============+==========================================================================================+
