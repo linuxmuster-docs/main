@@ -445,12 +445,19 @@ unique 1`` (Beachte die zwei Bindestriche vor dem Wort „storage“) angewendet
   Sollte ein Proxmox-Host mit der Verion 6.2 zum Einsatz kommen, sind die einzelnen Datei nach folgendem Muster umzubennen und bei qmrestore anzupassen:
   
   vzdump-qemu-xxx-yyyy_mm_dd-hh_mi_ss.vma.lzo
+  
   xxx --> ID
+  
   yyyy --> Jahr
+  
   mm --> Tag
+  
   hh --> Stunde
+  
   mi --> Minute
+  
   ss --> Sekunde
+  
   Alle Werte können der Phantasie entnommen werden (getestet mit vzdump-qemu-701-2020_04_20-12_20_00.vma.lzo)
 
 +-------------+------------------------------------------------------------------------------------------+
