@@ -120,6 +120,12 @@ OPSI, Docker und der (interne) Mailserver, wobei die konventionellen
 IP-Adressen hinterlegt sind.  Für den Mailserver sollte ein SMTP-Relay
 mit Benutzername und Passwort angegeben werden.
 
+.. attention::
+
+   Wenn die Diensteserver ausgewählt werden, müssen sie auch während
+   der dann angestoßenen Installation erreichbar sein, also bei der 
+   Vorbereitung importiert bzw. installiert worden sein.
+
 .. figure:: media/external-services.png
    :align: center
    :alt: External services dialog
@@ -130,11 +136,6 @@ Zusammenfassung angezeigt.
 .. figure:: media/summary.png
    :align: center
    :alt: External services dialog
-
-.. attention::
-
-   Wenn die Diensteserver ausgewählt werden, müssen sie auch während
-   der dann angestoßenen Installation erreichbar sein.
 
 .. hint::
 
