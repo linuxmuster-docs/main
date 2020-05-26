@@ -326,21 +326,6 @@ deiner Virtualisierungslösung.
 Zu der alternativen Installation: :ref:`Installationsoptionen - Install from Scratch <install-from-scratch-label>`
 
 ..
-  Um sicher zu stellen, dass die Datei richtig heruntergeladen wurde, kannst du die SHA1-Summe prüfen. Auf der Konsole eines Linuxbetriebsystems steht z.B. der Befehl ``sha1sum`` zur Verfügung:
-
-  .. code-block:: console
-
-        sha1sum ubuntu-18.04-live-server-amd64.iso
-
-  Als Ausgabe erhält man die Prüfsumme, z.B.
-
-  .. code-block:: console
-
-        0b3490de9839c3918e35f01aa8a05c9ae286fc94 *ubuntu-18.04-live-server-amd64.iso
-
-  Dies so erhalten Prüfsumme muss mit von Ubuntu zur Verfügung gestellten `Summe <http://releases.ubuntu.com/bionic/SHA1SUMS>`_ (Zeile ubuntu-18.04-live-server-amd64.iso) übereinstimmen.
-
-..
   Checkliste
   ==========
 
