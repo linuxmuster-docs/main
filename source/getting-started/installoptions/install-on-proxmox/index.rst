@@ -76,51 +76,19 @@ zusätzlichen Anleitungen betrachtet.
 
 * :ref:`Anleitung Netzwerksegmentierung <subnetting-basics-label>` 
 
-Download der Appliances OVA
-===========================
-
-+--------------------+----------------------------------------------------------------------+
-| Programm           | Beschreibung                                                         |
-+====================+======================================================================+
-| lmn7.opnsense      | OPNsense Firewall VM  der linuxmuster.net v7                         |
-+--------------------+----------------------------------------------------------------------+
-| lmn7.server        | Server der linuxmuster.net v7                                        |
-+--------------------+----------------------------------------------------------------------+
-
-Nachstehende VMs sind optional, sofern eine paketorientierte Softwareverteilung für Windows-Clients (OPSi), eigene Web-Services mithilfe eines sog. Docker-Hosts betrieben und/oder eine WLAN-Anbindung via Ubiquiti bereitgestellt werden soll.
-
-+--------------------+----------------------------------------------------------------------+
-| Programm           | Beschreibung                                                         |
-+====================+======================================================================+
-| lmn7.opsi          | OPSI VM der lmn v7                                                   |
-+--------------------+----------------------------------------------------------------------+
-| lmn7.docker        | Bereitstellung eigener Web-Dienste mithilfe eines Docker-Hosts       |
-+--------------------+----------------------------------------------------------------------+
-| lmn7.unifi         | Controller der Ubiquiti WLAN - Lösung                                |
-+--------------------+----------------------------------------------------------------------+
-
-
-``Download der OVAs`` unter: `Download OVAs VM v7 <https://download.linuxmuster.net/ova/v7/latest/>`_
-
 Die Download-Quellen für den Proxmox-Host selbst finden sich hier:
 
 https://www.proxmox.com/de/downloads
 
 Dort findet sich das ISO-Image zur Installation von Proxmox (derzeit basiert unsere Beschreibung noch auf der Version 6.1).
 
-Laden dir dieses Image herunter und erstelle dir einen bootfähigen USB-Stick zur weiteren Installation.
-
-Die Proxmox-VMs findest du als ``vma.lzo`` Dateien zum direkten Import in Proxmox unter nachstehendem Link:
-
-https://www.netzint.de/education/downloads/education-proxmox70
-
-Laden dir dort die gewünschten VMs herunter.
+Lade dir dort dieses Image herunter und erstelle dir einen bootfähigen USB-Stick zur weiteren Installation.
 
 
 Erstellen eines USB-Sticks zur Installation des Proxmox-Host
 ------------------------------------------------------------
 
-USB-Stick erstellen: Nachdem du die ISO-Datei für Proxmox heruntergeladen hast,
+Nachdem du die ISO-Datei für Proxmox heruntergeladen hast,
 wechsel in das Download-Verzeichnis. Ermittel den korrekten Buchstaben für den USB-Stick unter Linux. X ist durch den korrekten Buchstaben zu ersetzen und dann ist nachstehender Befehl einzugeben:
 
 .. code-block:: console
@@ -237,7 +205,7 @@ Internetzugriff einrichten
 Für eine funktionierende Umgebung sollten zwei Netzwerkschnittstellen auf dem Hypervisor eingerichtet sein. Eine für das interne Netz (green, 10.0.0.0/16) und eine für das externe Netz und den Internetzugriff (red, externes Netz). An diesem Punkt ist auf dem Hypervisor lediglich die interne Netzwerkschnittstelle (green), welche bei der Installation eingerichtet wurde. Daher muss nun die zweite Schnittstelle eingerichtet werden, um eine Internetverbindung aufbauen zu können.
 
 Zweite Netzwerkbrücke hinzufügen
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++++
 
 Bislang ist nur eine Bridge für das interne Netz vorhanden. Um von Proxmox externen Internetzugriff zu erhalten, muss eine zweite Bridge erstellt werden. Dazu das Menü hv01 > Network > Create > Linux Bridge wählen:
 
@@ -260,7 +228,7 @@ Anschließend Proxmox über den Button ``Reboot`` oben rechts neu starten, um di
 Der Firewall müssen dann später beide Interfaces zugeordnet werden
 
 Zweiten Datenträger als Speicher einbinden
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++++++++++++++
 
 In diesem Schritt wird die zweite Festplatte in Proxmox eingebunden, um diese als Storage für die virtuellen Maschinen zu nutzen.
 
@@ -269,7 +237,7 @@ In diesem Schritt wird die zweite Festplatte in Proxmox eingebunden, um diese al
    Die folgenden Schritte nur dann ausführen, wenn vorher eine zweite virtuelle Disk für die virtuellen Maschinen vorbereitet wurde und nicht auf einem einzigen Volume eingerichtet werden soll!
 
 local-lvm(hv01)-Partition entfernen und Speicher freigeben
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Während der Proxmox-Installation wurden die Storages „local“ und „local-lvm“ automatisch auf der ersten virtuellen Festplatte erstellt. Da anfangs für die Linuxmuster-Maschinen eine zweite virtuelle Festplatte als „Storage“ eingerichtet wurde, wird „local-lvm“ nicht benötigt. Deshalb wird nun „local-lvm“ entfernt und „local“ durch den freigewordenen Speicher vergrößert:
 
@@ -316,7 +284,7 @@ Während der Proxmox-Installation wurden die Storages „local“ und „local-l
    :alt: Schritt 14-7
 
 Zweiten Datenträger vorbereiten
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++
 
 Die zweite virtuelle Festplatte heißt hier sdb und ersetzt die pve-data-Partition, die im vorigen Schritt entfernt wurde. Um diese für Proxmox vorzubereiten, stellt man über Konsolenbefehle einige Konfigurationen ein. Falls die Shell noch nicht geöffnet ist, wie oben beschrieben, öffnen und folgende Befehle eingeben:
 
@@ -360,7 +328,7 @@ erstellten virtual group als „thin-pool“ (Beachte die zwei Bindestriche vor 
    :alt: Schritt 14-12
 
 Datenträger graphisch als Storage in Proxmox anbinden
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 1. Im Menü ``Datacenter > Storage > Add`` wählt man „LVM-Thin“ aus. Im ID-Feld wird der Name des virtuellen Datenträgers angegeben. In diesem Fall ist es eine SSD mit 1.70TB Speicherkapazität, weshalb die Bezeichnung vd-ssd-1700 gewählt wird. Unter Volume Group die erstellte virtuelle Gruppe auswählen, welche hier vg-ssd-1700 ist:
 
@@ -386,15 +354,129 @@ Datenträger graphisch als Storage in Proxmox anbinden
    :align: center
    :alt: Schritt 15-4
 
-VM Import
-=========
+Importieren der Virtuellen Maschinen
+====================================
 
-VM Templates herunterladen
---------------------------
+Nachdem du den Host für die virtuellen Maschinen fertiggestellt hast, müssen diese nun importiert werden.
 
-Fertige VM-Snapshots für Proxmox haben wir für dich erstellt und sind auf der Übersichtsseite der Proxmox 7.0 Aplliance unter https://www.netzint.de/education/downloads/proxmox-appliance-7-0 bereitgestellt. Für eine linuxmuster.net v7 Umgebung werden die Server-VM lmn70.server_proxmox_2020-04.vma.lzo und als Firewall die VM lmn70.opnsense_proxmox_2020-04.vma.lzo benötigt.
+Dazu gibt es zwei Wege, die wir dir der Vollständigkeitshalber auch beide aufzeigen wollen.
+
+1. Import mittels OVA Dateien
+2. Import mittels VM Templates
+
+Welche du verwendest, bleibt dir überlassen. Lese am besten beide Beschreibung bis zum Ende durch und entscheide dann selbst.
+Gegenüberstellung von 1 und 2: Vorteile der OVA-Dateien ist deren geringere Größe mit dem Nachteil eines Mehraufwands bei der Installation.
+
+1. OVA Dateien
+--------------
+
+Download der Appliances OVA
++++++++++++++++++++++++++++
+
++--------------------+----------------------------------------------------------------------+
+| Programm           | Beschreibung                                                         |
++====================+======================================================================+
+| lmn7.opnsense      | OPNsense Firewall VM  der linuxmuster.net v7                         |
++--------------------+----------------------------------------------------------------------+
+| lmn7.server        | Server der linuxmuster.net v7                                        |
++--------------------+----------------------------------------------------------------------+
+
+Nachstehende VMs sind optional, sofern eine paketorientierte Softwareverteilung für Windows-Clients (OPSI-Server), eigene Web-Services mithilfe eines sog. Docker-Hosts betrieben und/oder eine WLAN-Anbindung via Ubiquiti bereitgestellt werden soll. 
+Stelle dir folgende Fragen:
+
+    Wird ein OPSI-Server definitiv nie gebraucht?
+    Wird ein Docker-Host definitinv nie gebraucht?
+    Wird ein Unifi-Controller von Ubiquiti nie gebraucht?
+
+Sollte deine Antwort auf eine dieser Fragen nicht ein klares "Ja, wird nie gebraucht!" sein, dann raten wir dir diese virtuelle Maschine mitzuinstallieren.
+
++--------------------+----------------------------------------------------------------------+
+| Programm           | Beschreibung                                                         |
++====================+======================================================================+
+| lmn7.opsi          | OPSI VM der lmn v7                                                   |
++--------------------+----------------------------------------------------------------------+
+| lmn7.docker        | Bereitstellung eigener Web-Dienste mithilfe eines Docker-Hosts       |
++--------------------+----------------------------------------------------------------------+
+| lmn7.unifi         | Controller der Ubiquiti WLAN - Lösung                                |
++--------------------+----------------------------------------------------------------------+
+
+
+``Download der OVAs`` unter: `Download OVAs VM v7 <https://download.linuxmuster.net/ova/v7/latest/>`_
+
+Herunterladen der benötigten OVAs kannst du sie direkt über die Shell von Proxmox mit dem wget-Befehl. 
+
+Für die VMs wären es folgende Befehle: 
+
+.. code::
+
+    wget https://download.linuxmuster.net/ova/v7/latest/lmn7-docker-20200421.ova
+    wget https://download.linuxmuster.net/ova/v7/latest/lmn7-docker-20200421.ova.sha256
+    wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opnsense-20200421.ova
+    wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opnsense-20200421.ova.sha256
+    wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opsi-20200421.ova
+    wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opsi-20200421.ova.sha256
+    wget https://download.linuxmuster.net/ova/v7/latest/lmn7-server-20200421.ova
+    wget https://download.linuxmuster.net/ova/v7/latest/lmn7-server-20200421.ova.sha256
+
+Um sicherzustellen, dass die Dateien richtig heruntergeladen wurden, solltest du die SHA256-Summe prüfen. 
+
+Dazu lädst du dir die Dateien mit der Endung sha256 ebenfalls herunter.
+Auf der Konsole eines Linuxbetriebsystems steht dir z.B. der Befehl ``sha256sum`` zur Verfügung.
+
+Eine Überprüfung hier Beispielhaft für den lmn7.server:
+
+.. code::
+
+    sha256sum -c lmn7-server-20200421.ova.sha256
+    
+Als Ausgabe erhältst du wenn der Download korrekt war ein OK!
+
+.. code::
+
+    lmn7-server-20200421.ova: OK
+
+Entpacken des OVA Templates
++++++++++++++++++++++++++++
+
+Ein OVA Template ist ein tar Archiv, das mehrere Dateien enthält. Es beinhaltet beispielsweise eine Datei für jede virtuelle Disk sowie mehrere Dateien zur Beschreibung der VM Konfiguration. Du benötigst die .ovf Datei, weil sie die Eckdaten der virtuellen Maschine liefert sowie den Verweis auf die virtuellen Festplatten. Um die ovf-Datei und die Disk Images zu erhalten, musst du die .ova Datei mit dem Befehl tar entpacken. Beispielhaft hier für den lmn7.server
+
+.. code::
+
+    tar xvf lmn7-server-20200421.ova
+
+Danach hast du die folgenden Dateien:
+
+lmn7-server.ovf
+lmn7-server-disk001.vmdk
+lmn7-server-disk002.vmdk
+lmn7-server.mf
+
+Import der ovf Datei und erstellen der virtuellen Maschine
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Nun kannst du mit Hilfe von "qm" und der ovf Datei eine entsprechende VM erstellen und die virtuelle Disk importieren lassen. Zusätzlich benötigst du für jede VM eine freie VM ID, in dem gewählten Beispiel ist es die "701" für den lmn-Server.
+
+Außerdem erwartet qm die Angabe eines Speichers, auf den das Disk Image importiert werden soll. Als Speicherort für unsere VM ist "local-lmv" dafür vorgesehen.
+
+.. code::
+
+    qm importovf 701 lmn7-server-20200421.ovf local-zfs
+
+Konfiguration der VM anpassen
++++++++++++++++++++++++++++++
+
+Nun kann über die GUI die neu erstellte VM eingesehen und die Parameter wie Speicher, Anzahl CPUs verändert werden. 
+
+Dies beschriebene Vorgehen ist für alle gewünschten Virtuellen Maschinen angepasst zu wiederholen.
+
+
+2. VM Templates
+---------------
+
+Fertige VM-Snapshots für Proxmox hat die Firma netzint für uns erstellt und sind auf der `Übersichtsseite der Proxmox 7.0 Aplliance <https://www.netzint.de/education/downloads/proxmox-appliance-7-0>`_ bereitgestellt. Für eine linuxmuster.net v7 Umgebung werden die Server-VM lmn70.server_proxmox_2020-04.vma.lzo und als Firewall die VM lmn70.opnsense_proxmox_2020-04.vma.lzo benötigt.
 
 Optional ist zusätzlich eine OPSI-VM und eine Docker-VM für deine linuxmuster.net-Umgebung verfügbar. Um die Maschinen importieren zu können, müsssen diese zuerst auf den Hypervisor geladen werden und anschließend importiert werden.
+
 Heruntergeladen werden können diese z.B. über die Shell von Proxmox mit dem wget-Befehl. 
 
 Für die VMs wären es folgende Befehle: 
