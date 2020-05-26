@@ -421,7 +421,7 @@ Für die VMs wären es folgende Befehle:
 Um sicherzustellen, dass die Dateien richtig heruntergeladen wurden, solltest du die SHA256-Summe prüfen. 
 
 Dazu lädst du dir die Dateien mit der Endung sha256 ebenfalls herunter.
-Auf der Konsole eines Linuxbetriebsystems steht dir z.B. der Befehl ``sha256sum`` zur Verfügung.
+In der Shell des Proxmox-Hosts steht dir der Befehl ``sha256sum`` zur Verfügung.
 
 Eine Überprüfung hier Beispielhaft für den lmn7.server:
 
@@ -429,7 +429,7 @@ Eine Überprüfung hier Beispielhaft für den lmn7.server:
 
     sha256sum -c lmn7-server-20200421.ova.sha256
     
-Als Ausgabe erhältst du wenn der Download korrekt war ein OK!
+Als Ausgabe erhältst du, wenn der Download korrekt war, ein OK!
 
 .. code::
 
