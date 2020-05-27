@@ -28,7 +28,7 @@ Install sphinx, e.g. under Ubuntu 16.04, do
 for Ubuntu 20.04, do
 
 .. code:: bash
-  ~$ sudo apt install git python3-sphinx python3-stemmer python3-sphinx-rtd-them texlive texlive-latex-extra texlive-lang-german
+  ~$ sudo apt install git python3-sphinx python3-stemmer python3-sphinx-rtd-theme texlive texlive-latex-extra texlive-lang-german
 
 Make a local copy of your documentation using
 
