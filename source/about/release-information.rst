@@ -85,7 +85,7 @@ Was es so nicht mehr gibt
 
 - Internet E-Mail-Versand (möglich, aber noch nicht dokumentiert)
 
-- OpenVPN Zugänge für Lehrer und Schüler (eventuell ersatz dure wireguard, noch nicht abschließend entschieden und von daher auch noch nicht dokumentiert.)
+- OpenVPN Zugänge für Lehrer und Schüler (eventuell Ersatz durch wireguard, noch nicht abschließend entschieden und von daher auch noch nicht dokumentiert.)
 
 - Druckerquotierung (pykota)
 
