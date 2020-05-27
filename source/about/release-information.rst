@@ -83,9 +83,9 @@ Was es so nicht mehr gibt
   aktuellen Schüler in einem Unterrichtskurs, dessen Zugriff auf
   Internet, WLAN und Drucker gesteuert wird.
 
-- Internet E-Mail-Versand (möglich, aber nicht dokumentiert)
+- Internet E-Mail-Versand (möglich, aber noch nicht dokumentiert)
 
-- OpenVPN Zugänge für Lehrer und Schüler (unklar)
+- OpenVPN Zugänge für Lehrer und Schüler (eventuell ersatz dure wireguard, noch nicht abschließend entschieden und von daher auch noch nicht dokumentiert.)
 
 - Druckerquotierung (pykota)
 
