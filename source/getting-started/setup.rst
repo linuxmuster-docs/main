@@ -76,7 +76,7 @@ Netzwerkmaske ``255.255.0.0``, dem Gateway ``10.0.0.254`` und dem DNS
 ``10.0.0.1``.
 
 Öffne auf dem Admin-PC mit einem Webbrowser die URL
-``http://10.0.0.1``. Melde dich hier einmalig mit dem Benutzer
+``http://10.0.0.1:8000``. Melde dich hier einmalig mit dem Benutzer
 `root` und dem Passwort `Muster!` an.
     
 .. figure:: media/root-login.png
