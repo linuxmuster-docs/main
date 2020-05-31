@@ -585,7 +585,7 @@ Nach dem ersten Start der Server-VM laufen diverse automatische Anpassungen ab, 
 
 Bevor du fortfährst warte ab, bis die Auslastung zurückgegangen ist. 
 
-Nachdem dein Hypervisor läuft und die VM erfolgreich gestartet sind wurden, muss dass Setup deiner
+Nachdem dein Hypervisor läuft und die VM erfolgreich gestartet sind, muss dass Setup deiner
 linuxmuster.net-Installation durchgeführt werden. 
 
 Weiter geht es mit dem Kapitel :ref:`Erstkonfiguration <setup-using-selma-label>`.
