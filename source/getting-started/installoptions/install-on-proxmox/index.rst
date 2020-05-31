@@ -418,7 +418,7 @@ Für die VMs wären es folgende Befehle:
     wget https://download.linuxmuster.net/ova/v7/latest/lmn7-server-20200421.ova
     wget https://download.linuxmuster.net/ova/v7/latest/lmn7-server-20200421.ova.sha256
 
-Um sicherzustellen, dass die Dateien richtig heruntergeladen wurden, solltest du die SHA256-Summe prüfen. 
+Um sicherzustellen, dass die Dateien richtig heruntergeladen wurden, solltest du sie anahnd ihrer SHA256-Summe prüfen. 
 
 Dazu lädst du dir die Dateien mit der Endung sha256 ebenfalls herunter.
 In der Shell des Proxmox-Hosts steht dir der Befehl ``sha256sum`` zur Verfügung.
@@ -572,8 +572,23 @@ Netzwerkkarten überprüfen/anpassen
 
 Standardmäßig ist nach der Installation von Proxmox nur eine Netzwerkbrücke eingerichtet, um an ein externes Netz angebunden zu sein. Da die importierten Maschinen untereinander in dem eigenen internen Netz laufen werden, sollte kontrolliert werden, dass den VMs Server, OPSI und Docker die Netzwerkbrücke für das interne Netz (green) zugewiesen ist. Die Netzwerkbrücken der Firewall-VM OPNSense sollten richtig zugeordnet sein ``net0 ⇒ green; net1 ⇒ red``.
 
-Nachdem dein Hypervisor läuft und die VM erfolgreich importiert wurden, muss dass Setup deiner
-linuxmuster.net-Installation durchgeführt werden. Weiter geht es mit dem Kapitel :ref:`Erstkonfiguration <setup-using-selma-label>`.
+Virtuelle Maschinen starten
+===========================
+
+Die Firewall sollte die erste Maschine sein die läuft, anschließend startest du die anderen.
+
+Nach dem ersten Start der Server-VM laufen diverse automatische Anpassungen ab, wie die Auslastung der CPU zeigt: 
+
+.. figure:: media/image_19_cpu-workload.png
+   :align: center
+   :alt: CPU-Auslastung
+
+Bevor du fortfährst warte ab, bis die Auslastung zurückgegangen ist. 
+
+Nachdem dein Hypervisor läuft und die VM erfolgreich gestartet sind wurden, muss dass Setup deiner
+linuxmuster.net-Installation durchgeführt werden. 
+
+Weiter geht es mit dem Kapitel :ref:`Erstkonfiguration <setup-using-selma-label>`.
 
 
 
