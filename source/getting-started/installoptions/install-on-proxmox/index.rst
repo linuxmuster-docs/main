@@ -370,6 +370,8 @@ Gegen√ºberstellung von 1 und 2: Vorteile der OVA-Dateien ist deren geringere Gr√
 1. OVA Dateien
 --------------
 
+.. note:: Momentan gibt es ein Problem mit der Beschreibung der Installation mittels OVA. Bitte nutze die zweite Beschreibung Import mittels VM Templates
+
 Download der Appliances OVA
 +++++++++++++++++++++++++++
 
