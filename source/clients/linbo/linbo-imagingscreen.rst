@@ -124,3 +124,4 @@ Mit diesem Dialog kann ein erstmalig genutzer Rechner registriert
 werden. Dafür müssen alle Eingabefelder dem Vergabeschema entsprechend
 ausgefüllt werden.
 
+.. note:: Bekannten Problem an dem gearbeitet wird. Beim Eintrag der Rechnergruppe ist hier die Verwendung von Bindestrichen "-" noch nicht möglich. Mittels der Rechneraufnahme an WebUI/Schulkonsole besteht diese Möglichkeit!
