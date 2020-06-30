@@ -10,69 +10,74 @@ Netzwerkzugriff über Radius
   
 
 RADIUS (Remote Authentification Dial-In User Service) ist ein Client-Server Protokoll, 
-das zur Authentifizierng, Autorisierung und für das Accounting (Triple A) von Benutzern in 
+das zur Authentifizierung, Autorisierung und für das Accounting (Triple A) von Benutzern in 
 einem Netzwerk dient.
 
 Der RADIUS-Server dient als zentraler Authentifizierungsserver, an den sich verschiedene
 IT-Dienste für die Authentifizierung wenden können. RADIUS bietet sich an, um in grossen 
-Netzen sicherzustellen, dass ausschliesslich berechtigte Nutzer Zugriff haben. Der Zugriff 
-kann zudem auch auf bestimmte Endgeräte beschränkt werden. Um die Authentifizierungs-Daten
+Netzen sicherzustellen, dass ausschließlich berechtigte Nutzer Zugriff haben. Der Zugriff 
+kann zudem auch auf bestimmte Endgeräte beschränkt werden. Um die Authentifizierungsdaten
 zu übertragen wird oftmals das Protokoll EAP (Extensible Authentification Protocol) genutzt.
 
 Viele Geräte und Anwendungen, wie z.B. Access Points, Captive Portals oder Wireless 
-Controller, bieten neben einer einfachen Benutzerauthentifizierung auch eine Überprüfung 
+Controller bieten neben einer einfachen Benutzerauthentifizierung auch eine Überprüfung 
 mit Hilfe eines RADIUS-Servers an (WPA-Enterprise, 802.1X). Werden die Geräte so konfiguriert,
 dass diese zur Authentifizierung den RADIUS-Server nutzen, so kann sichergestellt werden,
-das nur brechtigte Benutzer Zugriff auf z.B. das WLAN haben.
+das nur berechtigte Benutzer Zugriff auf z.B. das WLAN haben.
 
-FreeRADIUS: Einsatz lmn
-=======================
+FreeRADIUS: Einsatz in linuxmuster.net
+======================================
 
 FreeRadius ist ein Open-Source RADIUS-Server, der in der linuxmuster.net v7 zum Einsatz kommt.
 Dieser RADIUS-Server kann auf der Firewall (OPNSense), auf dem lmn-Server oder auf dem Docker-Host
-installiert, als Dienst aktiviert und so konfiguriert, dass die Benutzerauthentifizierung 
+installiert, als Dienst aktiviert und so konfiguriert werden, dass die Benutzerauthentifizierung 
 anhand der Daten im ActiveDirectory (AD) des linuxmuster.net  Servers erfolgt, die vom 
-RADIUS-Server via LDAP abgefragt werden.
+RADIUS-Server via LDAP oder direkt abgefragt werden.
 
 .. hint::
 
    Derzeit wird empfohlen, den RADIUS Server auf dem lmn-Server zu installieren.
 
-FreeRADIUS auf dem lmn-Server einrichten & testen
-=================================================
+FreeRADIUS auf dem Server einrichten & testen
+=============================================
 
 Freeradius installieren und aktivieren
 --------------------------------------
 
-.. code::
+.. code:: console
 
-   #apt install freeradius
-   #systemctl enable freeradius.service
+   server ~ # apt install freeradius
+   server ~ # systemctl enable freeradius.service
 
-ntlm_auth in samba erlauben
----------------------------
+NTLM Authentifizierung in Samba erlauben
+----------------------------------------
 
-In der Datei ``/etc/samba/smb.conf`` ist folgende Zeile einzufügen:
-
-.. code::
-
-   ntlm auth = yes
-
-Danach muss der samba-ad-dc Dienst neu gestartet werden:
+In der Datei ``/etc/samba/smb.conf`` ist in der Rubrik ``[global]`` folgende Zeile einzufügen:
 
 .. code::
 
-   #systemctl restart samba-ad-dc.service
+   [global]
+   ...
+   ntlm auth = mschapv2-and-ntlmv2-only
+
+Danach muss der Samba-Dienst neu gestartet werden:
+
+.. code:: console
+
+   server ~ # systemctl restart samba-ad-dc.service
 
 Radius konfigurieren
 --------------------
 
-Dem Freeradius-Dient muss Zugriff auf ``winbind`` gegeben werden:
+Dem Freeradius-Dienst muss Zugriff auf den lokalen `winbind`-Dienst gegeben werden. 
 
 .. code::
 
-   #usermod -a -G winbindd_priv freerad
-   #chown root:winbindd_priv /var/lib/samba/winbindd_privileged/
+   server ~ # usermod -a -G winbindd_priv freerad
+
+..
+   ist bereits auf dem Server so, braucht man also nicht:
+   server ~ # chown root:winbindd_priv /var/lib/samba/winbindd_privileged/
 
 In dem Verzeichnis ``/etc/freeradius/3.0/sites-enabled`` in die Dateien 
 ``default`` und ``inner-tunnel`` ganz am Anfang unter authenticate ist
@@ -84,8 +89,8 @@ ntlm_auth einzufügen.
           ntlm_auth
           # ab hier geht es weiter
 
-Die Datei ``/etc/freeradius/3.0/mods-enabled/mschap`` sind im Abschnitt
-mschap zwei Teilen zu ergänten:
+Die Datei ``/etc/freeradius/3.0/mods-enabled/mschap`` ist im Abschnitt
+``mschap`` mit zwei Zeilen zu ergänzen:
 
 .. code::
 
@@ -94,30 +99,34 @@ mschap zwei Teilen zu ergänten:
               with_ntdomain_hack = yes
               # hier geht es weiter
 
-Anpassen des Abschnitts ``ntlm_auth`` weiter unten. Zuerst das Kommentarzeichen # entfernen, dann 
-die Zeile folgendermaßen anpassen:
+Im selben Abschnitt ist auch die Variable ``ntlm_auth`` weiter unten
+anzupassen. Zuerst das Kommentarzeichen ``#`` entfernen, dann die
+Zeile folgendermaßen anpassen:
 
 .. code::
 
     # eine Zeile
-    ntlm_auth = "/usr/bin/ntlm_auth --request-nt-key --domain=DOMÄNE --require-membership-of=DOMÄNE\wifi --username=%{%{Stripped-User-Name}:-%{%{User-Name}:-None}} --challenge=%{%{mschap:Challenge}:-00} --nt-response=%{%{mschap:NT-Response}:-00}"
+    ntlm_auth = "/usr/bin/ntlm_auth --allow-mschapv2 --request-nt-key --domain=DOMÄNE --require-membership-of=DOMÄNE\wifi --username=%{%{Stripped-User-Name}:-%{%{User-Name}:-None}} --challenge=%{%{mschap:Challenge}:-00} --nt-response=%{%{mschap:NT-Response}:-00}"
 
-Dabei muss ``DOMÄNE`` durch den eigenen Domänennamen (Samba-Domäne) ersetzt werden. 
-Die Option ``–require-membership-of=…`` lässt nur Mitglieder der Gruppe wifi zu. 
-So funktioniert die WLAN-Steuerung über die WebUI.
+Dabei muss ``DOMÄNE`` an beiden Stellen durch den eigenen Domänennamen
+(Samba-Domäne) ersetzt werden.  Die Option
+``--require-membership-of=...`` lässt nur Mitglieder der Gruppe wifi
+zu.  So funktioniert die WLAN-Steuerung über die WebUI.
 
-Danach ist die Datei ``/etc/freeradius/3.0/mods-enabled/ntlm_auth`` noch anzupassen. Zuerst ist das Kommentarzeichen # zu 
-entfernen. Danach ist die Zeile wie folgt anzupassen:
+Danach ist die Datei ``/etc/freeradius/3.0/mods-enabled/ntlm_auth`` noch
+anzupassen. Zuerst ist das Kommentarzeichen ``#`` zu entfernen. Danach ist
+die Zeile wie folgt anzupassen:
 
 .. code::
 
     exec ntlm_auth {
-    wait = yes
-    # eine Zeile
-    program = "/usr/bin/ntlm_auth --request-nt-key --domain=DOMÄNE --require-membership-of=DOMÄNE\wifi --username=%{mschap:User-Name} --password=%{User-Password}"
+            wait = yes
+            # eine Zeile
+            program = "/usr/bin/ntlm_auth --allow-mschapv2 --request-nt-key --domain=DOMÄNE --require-membership-of=DOMÄNE\wifi --username=%{mschap:User-Name} --password=%{User-Password}"
     }
 
-Dabei muss ``DOMÄNE`` durch den eigenen Domänennamen (Samba-Domäne) ersetzt werden.
+Dabei muss auch hier ``DOMÄNE`` beides Mal durch den eigenen
+Domänennamen (Samba-Domäne) ersetzt werden.
 
 In der Datei ``/etc/freeradius/3.0/users`` ist ganz oben nachstehende Zeile einzufügen.
 
@@ -127,39 +136,43 @@ In der Datei ``/etc/freeradius/3.0/users`` ist ganz oben nachstehende Zeile einz
 
 Nun ist der Freeradius-Dienst neuzustarten:
 
-.. code::
+.. code:: console
 
-    #systemctl restart freeradius.service
+   server ~ # systemctl restart freeradius.service
 
+Zugehörigkeit zur Gruppe `wifi` einmalig festlegen
+--------------------------------------------------
+   
 .. note::
    
-   Das Defaultverhalten der lmn7 ist, dass ein neu angelegter ``User`` immer in der Gruppe ``wifi`` ist, 
-   d.h. auch alle Schüler dürfen zunächst in das WLAN 
+   Das Standardverhalten der linuxmuster.net ist, dass ein neu
+   angelegter ``User`` immer in der Gruppe ``wifi`` ist, d.h. auch
+   alle Schüler dürfen zunächst in das WLAN
 
 Die Steuerung der Gruppenzugehörigkeit kann auf der Konsole wie folgt gesetzt werden:
 
-.. code::
+.. code:: console
 
-   #sophomorix-managementgroup --nowifi/--wifi user1,user2,...
+   server ~ # sophomorix-managementgroup --nowifi/--wifi user1,user2,...
 
-Um alle Schüler aus der Gruppe wifi zu nehmen, läßt man sich alle User des Systems auflisten und schreibt diese in eine Datei.
+Um alle Schüler aus der Gruppe wifi zu nehmen, lässt man sich alle User des Systems auflisten und schreibt diese in eine Datei.
 Dies kann wie folgt erledigt werden:
 
 .. code::
 
-   #samba-tool user list > user.txt
+   server ~ # samba-tool user list > user.txt
 
-Jetzt entfernt man alle User aus der Liste, die immer ins Wlan dürfen sollen. Danach baut man die Liste zu einer Kommazeile um mit:
+Jetzt entfernt man alle User aus dieser Liste, die immer ins WLAN dürfen sollen. Danach baut man die Liste zu einer Kommazeile um mit:
 
 .. code::
 
-   #less user |  tr '\n' ',' > usermitkomma.txt
+   server ~ # cat user.txt | tr '\n' ',' > usermitkomma.txt
 
 Die Datei kann jetzt an den o.g. Sophomorix-Befehl übergeben werden:
 
 .. code::
 
-   #sophomorix-managementgroup --nowifi $(less usermitkomma.txt)
+   server ~ # sophomorix-managementgroup --nowifi $(cat usermitkomma.txt)
 
 
 Firewallregeln anpassen
@@ -174,7 +187,7 @@ Auf dem lmn-Server ist in der Datei ``/etc/linuxmuster/allowed_ports`` der Radiu
 Danach ist der lmn-Server neu zu starten.
 
 Auf der Firewall OPNSense muss je nach eigenen Voraussetzungen dafür gesorgt werden, dass die AP’s aus dem 
-Wlan-Netz den Server auf dem Port 1812 via udp erreichen können. Es ist darauf zu achten, dass die IP des Servers
+WLAN-Netz den Server auf dem Port 1812 via udp erreichen können. Es ist darauf zu achten, dass die IP des Servers
 den eigenen Netzvorgaben entspricht (also z.B. 10.0.0.1/16 oder /24 oder 10.16.1.1/16 oder /24)
 
 Die Regel auf der OPNSense hierzu könnten, wie nachstehend abgebildet, eingetragen werden.
@@ -193,7 +206,7 @@ Sollte das nicht funktionieren, hält man den Freeradius-Dienst an und startet i
    # service freeradius stop
    # service freeradius debug
 
-Jetzt sieht man alle Vorgänge während man sich versucht, mit einem Device zu verbinden.
+Jetzt sieht man alle Vorgänge während man versucht, sich mit einem Device zu verbinden.
 
 APs im Freeradius eintragen
 ---------------------------
@@ -213,26 +226,29 @@ eingetragen werden. Dies erfolgt wie in nachstehendem Schema dargestellt:
    secret = GeHeim
    }
 
-   client uni fi {
+   client unifi {
    ipaddr = 10.0.0.10
    secret = GeHeim
    }
 
 Um den APs feste IPs zuzuweisen, sollten diese auf dem lmn-Server in der Datei 
-``/etc/linuxmuster/sophomorix/default-school/devices.csv``. 
+``/etc/linuxmuster/sophomorix/default-school/devices.csv`` eingetragen sein. 
 
-Je nachdem, ob in jedem (Sub)-netz die APs angeschlossen werden, ist die zuvor dargestellte Firewall-Regel
-anzupassen. Der Radius-Port in der OPNSense müsste dann z.B. von Subnetz A (blau) zu Subnetz B 
-(grün Servernetz) geöffnet werden, damit alle APs Zugriff auf den Radius-Diensterhalten. 
-
+Je nachdem ob in jedem (Sub)-netz die APs angeschlossen werden, ist
+die zuvor dargestellte Firewall-Regel anzupassen. Der Radius-Port in
+der OPNSense müsste dann z.B. von Subnetz A (blau) zu Subnetz B (grün
+Servernetz) geöffnet werden, damit alle APs Zugriff auf den
+Radius-Dienst erhalten.
 
 FreeRADIUS auf der OPNSense einrichten & testen
 ===============================================
 
 .. hint::
    
-   Bei Tests hat sich bislang herausgestellt, dass eine Authentifizierung via WLAN APs noch Probleme bereitet. Es ist davon 
-   auszugehen, dass mit voranschreitender Implementierung in der OPNSense diese Probelem behoben sein werden.
+   Bei Tests hat sich bislang herausgestellt, dass eine
+   Authentifizierung via WLAN den APs von unifi noch Probleme
+   bereitet. Es ist davon auszugehen, dass mit voranschreitender
+   Implementierung in der OPNSense diese Probelem behoben sein werden.
 
 Erweiterung OPNSense
 --------------------
