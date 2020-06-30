@@ -9,8 +9,8 @@ Nutzern bis hin zu individuellen Anpassungen.
 
 .. hint::
 
-   Suchst du die Dokumentation zur Version linuxmuster.net 7.0 (beta)?
-   Die findest du unter http://docs.linuxmuster.net/de/v7.
+   Suchst du die Dokumentation zur Version linuxmuster.net 7.0 ?
+   Die findest du unter http://docs.linuxmuster.net/de/.
 
 Neben dieser Dokumentation steht dir unsere Community und unser
 Telefon-Support helfend zur Seite. Weitere Informationen dazu findest
