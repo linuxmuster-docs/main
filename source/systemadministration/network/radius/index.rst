@@ -60,19 +60,19 @@ Um alle Schüler aus der Gruppe wifi zu nehmen, lässt man sich alle
 User des Systems auflisten und schreibt diese in eine Datei.  Dies
 kann wie folgt erledigt werden:
 
-.. code::
+.. code:: console
 
    server ~ # samba-tool user list > user.txt
 
 Jetzt entfernt man alle User aus dieser Liste, die immer ins WLAN dürfen sollen. Danach baut man die Liste zu einer Kommazeile um mit:
 
-.. code::
+.. code:: console
 
    server ~ # cat user.txt | tr '\n' ',' > usermitkomma.txt
 
 Die Datei kann jetzt an den o.g. Sophomorix-Befehl übergeben werden:
 
-.. code::
+.. code:: console
 
    server ~ # sophomorix-managementgroup --nowifi $(cat usermitkomma.txt)
 
@@ -113,7 +113,7 @@ Radius konfigurieren
 
 Dem Freeradius-Dienst muss Zugriff auf den lokalen `winbind`-Dienst gegeben werden. 
 
-.. code::
+.. code:: console
 
    server ~ # usermod -a -G winbindd_priv freerad
 
@@ -209,10 +209,10 @@ Ein Zertifikat ist nicht erforderlich.
 
 Sollte das nicht funktionieren, hält man den Freeradius-Dienst an und startet ihn im Debugmodus.
 
-.. code::
+.. code:: console
 
-   # service freeradius stop
-   # service freeradius debug
+   server ~ # service freeradius stop
+   server ~ # service freeradius debug
 
 Jetzt sieht man alle Vorgänge während man versucht, sich mit einem Device zu verbinden.
 
@@ -371,17 +371,17 @@ Testen der RADIUS-Konfiguration
 
 Auf dem lmn-Server ist das Paket ``freeradius-utils`` zu installieren. Dies kann mit folgendem Befehl erfolgen:
 
-.. code::
+.. code:: console
 
-   apt install freeradius-utils
+   server ~ # apt install freeradius-utils
 
 Es kann auf dem lmn-Server mithilfe des Tools ``radclient`` nun getestet werden, ob die Authentifizierung 
 funktioniert. Hierzu muss ein Benutzer mit seinem Kennwort angegeben werden, der der Gruppe ``wifi`` 
 angehört - also z.B. ein Lehrer.
 
-.. code::
+.. code:: console
 
-   echo "User-Name=zell,User-Password=Muster!" | radclient -x -P udp -s 10.0.0.254:1812 auth "$(cat /etc/linuxmuster/.secret/radiussecret)"  
+   server ~ # echo "User-Name=zell,User-Password=Muster!" | radclient -x -P udp -s 10.0.0.254:1812 auth "$(cat /etc/linuxmuster/.secret/radiussecret)"  
 
 Anstelle des Befehls zum Auslesen des RADIUS-Secrets kann dieses auch direkt zwichen die Hochkommata eingefügt werden.
 
@@ -403,15 +403,15 @@ Kann der Benutzer sich erfolgreich via RADIUS authentifizieren, ist eine Rückme
 
 Nimmt man nun den Benutzer aus der Gruppe ``wifi``, so sollte die Authentifizierung fehlschlagen.
 
-.. code::
+.. code:: console
 
-   sophomorix-managementgroup --nowifi zell
+   server ~ # sophomorix-managementgroup --nowifi zell
 
 Bei einem erneuten test mit o.g. Befehl mithilfe des radclient sollte dann eine Fehlermeldung erscheinen:
 
 .. code::
   
-   echo "User-Name=zell,User-Password=Muster!" | radclient -x -P udp -s 10.0.0.254:1812 auth "Muster!"
+   server ~ # echo "User-Name=zell,User-Password=Muster!" | radclient -x -P udp -s 10.0.0.254:1812 auth "Muster!"
    Sent Access-Request Id 10 from 0.0.0.0:34707 to 10.0.0.254:1812 length 44
    User-Name = "zell"
    User-Password = "Muster!"
