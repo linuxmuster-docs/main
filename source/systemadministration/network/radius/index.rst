@@ -38,6 +38,48 @@ RADIUS-Server via LDAP oder direkt abgefragt werden.
 
    Derzeit wird empfohlen, den RADIUS Server auf dem lmn-Server zu installieren.
 
+Über die Schulkonsole soll der Zugriff gesteuert werden. Dafür werden
+Benutzer einer speziellen Gruppe `wifi` hinzugefügt oder daraus entfernt.
+
+.. note::
+   
+   Das Standardverhalten der linuxmuster.net ist, dass ein neu
+   angelegter ``User`` immer in der Gruppe ``wifi`` ist, d.h. auch
+   alle Schüler dürfen zunächst in das WLAN
+
+Zugehörigkeit zur Gruppe `wifi` einmalig festlegen
+--------------------------------------------------
+   
+Die Steuerung der Gruppenzugehörigkeit kann auf der Konsole wie folgt gesetzt werden:
+
+.. code:: console
+
+   server ~ # sophomorix-managementgroup --nowifi/--wifi user1,user2,...
+
+Um alle Schüler aus der Gruppe wifi zu nehmen, lässt man sich alle
+User des Systems auflisten und schreibt diese in eine Datei.  Dies
+kann wie folgt erledigt werden:
+
+.. code::
+
+   server ~ # samba-tool user list > user.txt
+
+Jetzt entfernt man alle User aus dieser Liste, die immer ins WLAN dürfen sollen. Danach baut man die Liste zu einer Kommazeile um mit:
+
+.. code::
+
+   server ~ # cat user.txt | tr '\n' ',' > usermitkomma.txt
+
+Die Datei kann jetzt an den o.g. Sophomorix-Befehl übergeben werden:
+
+.. code::
+
+   server ~ # sophomorix-managementgroup --nowifi $(cat usermitkomma.txt)
+
+
+
+   
+
 FreeRADIUS auf dem Server einrichten & testen
 =============================================
 
@@ -139,40 +181,6 @@ Nun ist der Freeradius-Dienst neuzustarten:
 .. code:: console
 
    server ~ # systemctl restart freeradius.service
-
-Zugehörigkeit zur Gruppe `wifi` einmalig festlegen
---------------------------------------------------
-   
-.. note::
-   
-   Das Standardverhalten der linuxmuster.net ist, dass ein neu
-   angelegter ``User`` immer in der Gruppe ``wifi`` ist, d.h. auch
-   alle Schüler dürfen zunächst in das WLAN
-
-Die Steuerung der Gruppenzugehörigkeit kann auf der Konsole wie folgt gesetzt werden:
-
-.. code:: console
-
-   server ~ # sophomorix-managementgroup --nowifi/--wifi user1,user2,...
-
-Um alle Schüler aus der Gruppe wifi zu nehmen, lässt man sich alle User des Systems auflisten und schreibt diese in eine Datei.
-Dies kann wie folgt erledigt werden:
-
-.. code::
-
-   server ~ # samba-tool user list > user.txt
-
-Jetzt entfernt man alle User aus dieser Liste, die immer ins WLAN dürfen sollen. Danach baut man die Liste zu einer Kommazeile um mit:
-
-.. code::
-
-   server ~ # cat user.txt | tr '\n' ',' > usermitkomma.txt
-
-Die Datei kann jetzt an den o.g. Sophomorix-Befehl übergeben werden:
-
-.. code::
-
-   server ~ # sophomorix-managementgroup --nowifi $(cat usermitkomma.txt)
 
 
 Firewallregeln anpassen
