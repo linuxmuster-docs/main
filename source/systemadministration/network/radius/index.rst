@@ -180,19 +180,14 @@ Nun ist der Freeradius-Dienst neuzustarten:
 Firewallregeln anpassen
 -----------------------
 
-Auf dem lmn-Server ist in der Datei ``/etc/linuxmuster/allowed_ports`` der Radiusport ``1812`` einzutragen:
+Auf der Firewall OPNSense muss je nach eigenen Voraussetzungen dafür
+gesorgt werden, dass die AP’s aus dem WLAN-Netz den Server auf dem
+Port 1812 via udp erreichen können. Es ist darauf zu achten, dass die
+IP des Servers den eigenen Netzvorgaben entspricht (also
+z.B. 10.0.0.1/16 oder /24 oder 10.16.1.1/16 oder /24)
 
-.. code::
-
-    udp domain,netbios-ns,netbios-dgm,9000:9100,1812
-
-Danach ist der lmn-Server neu zu starten.
-
-Auf der Firewall OPNSense muss je nach eigenen Voraussetzungen dafür gesorgt werden, dass die AP’s aus dem 
-WLAN-Netz den Server auf dem Port 1812 via udp erreichen können. Es ist darauf zu achten, dass die IP des Servers
-den eigenen Netzvorgaben entspricht (also z.B. 10.0.0.1/16 oder /24 oder 10.16.1.1/16 oder /24)
-
-Die Regel auf der OPNSense hierzu könnten, wie nachstehend abgebildet, eingetragen werden.
+Die Regel auf der OPNSense hierzu könnten, wie nachstehend abgebildet,
+in den Firewall-Regeln für `LAN` eingetragen werden.
 
 .. image:: media/10-fw-opnsense-rule-for-radius.png
    :alt: FW Rule fpr Radius Service
