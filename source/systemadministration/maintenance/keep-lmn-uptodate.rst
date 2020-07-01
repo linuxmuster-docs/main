@@ -57,7 +57,7 @@ Um die Server-Installation auf den aktuellen Paketstand zu bringen, gehe folgend
 5. Während des Aktualisierungsverlaufs fragen manchmal Pakete nach, ob eine neue Konfigurationsdatei 
    installiert werden soll. Gebe hier **N** oder **ENTER** für "Beibehalten" an.
    
-   .. image:: media/1-dist-upgrade.png
+   .. image:: media/01-dist-upgrade.png
         :alt: Keep Config
         :align: center
 
@@ -65,14 +65,14 @@ Um die Server-Installation auf den aktuellen Paketstand zu bringen, gehe folgend
    die Nachfrage stellen, ob die jeweilige Konfigurationsdatei automatisch erstellen sollen. hier
    lautet die Antwort grundsätzlich "nein" (z. B. Samba)
 
-   .. image:: media/2-dist-upgrade.png
+   .. image:: media/02-dist-upgrade.png
          :alt: Say NO for autoconfig
          :align: center
 
 7. Zudem kann die Frage auftauchen, ob bei Bedarf Dienste neu gestartet werden dürfen. Sofern das Update
    eher zu Zeiten geringer Last ausgeführt werden sollten, kann diese Frage mit **y** beantwortet werden:
 
-   .. image:: media/3-dist-upgrade.png
+   .. image:: media/03-dist-upgrade.png
         :alt: Restart Services
         :align: center
 
@@ -92,20 +92,20 @@ unabhängig vom eigentlichen Server zu warten. Dementsprechend werden die Update
 Verbinde Dich hierzu mit der Firewall über einen Browser. Nach der Anmeldung erscheint das Dashboard (unter Lobby). Darin befindet sich ein Link 
 um direkt Updates einzuspielen.
     
-    .. image:: media/4-opnsense-update.png
+    .. image:: media/04-opnsense-update.png
         :alt: OPNsense aktualisieren
         :align: center
 
 Eine etwas ausführlichere Übersicht ist unter ``System -> Firmware -> Aktualisierungen`` zu finden. 
 
-    .. image:: media/5-opnsense-update.png
+    .. image:: media/05-opnsense-update.png
         :alt: OPNsense aktualisieren
         :align: center
 
 Normale Minor-Releases können so direkt eingespielt werden. Sobald allerdings das Patch-Level erhöht wird, muss hier zuerst 
 das `Upgrade` entsperrt werden.
 
-    .. image:: media/6-opnsense-update.png
+    .. image:: media/06-opnsense-update.png
         :alt: OPNsense aktualisieren
         :align: center
 
