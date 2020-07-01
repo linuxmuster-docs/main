@@ -44,8 +44,9 @@ Benutzer einer speziellen Gruppe `wifi` hinzugefügt oder daraus entfernt.
 .. note::
    
    Das Standardverhalten der linuxmuster.net ist, dass ein neu
-   angelegter ``User`` immer in der Gruppe ``wifi`` ist, d.h. auch
-   alle Schüler dürfen zunächst in das WLAN
+   angelegter Benutzer immer in der Gruppe `wifi` ist, d.h. auch alle
+   Schüler dürfen zunächst in das WLAN, sobald ein WLAN-Zugriff auf
+   Basis dieser Gruppe `wifi` erstellt wurde.
 
 Zugehörigkeit zur Gruppe `wifi` einmalig festlegen
 --------------------------------------------------
