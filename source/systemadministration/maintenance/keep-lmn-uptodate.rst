@@ -61,7 +61,15 @@ Um die Server-Installation auf den aktuellen Paketstand zu bringen, gehe folgend
         :alt: Keep Config
         :align: center
 
-6. Zudem kann die Frage auftauchen, ob bei Bedarf Dienste neu gestartet werden dürfen. Sofern das Update
+6. Insbesondere bei einem ersten Update innerhalb eines Ubuntu-Server-Releases, können Dienste 
+   die Nachfrage stellen, ob die jeweilige Konfigurationsdatei automatisch erstellen sollen. hier
+   lautet die Antwort grundsätzlich "nein" (z. B. Samba)
+
+   .. image:: media/dist-upgrade-smb.png
+         :alt: Say NO for autoconfig
+         :align: center
+
+7. Zudem kann die Frage auftauchen, ob bei Bedarf Dienste neu gestartet werden dürfen. Sofern das Update
    eher zu Zeiten geringer Last ausgeführt werden sollten, kann diese Frage mit **y** beantwortet werden:
 
    .. image:: media/2-dist-upgrade.png
