@@ -50,34 +50,27 @@ Benutzer einer speziellen Gruppe `wifi` hinzugefügt oder daraus entfernt.
 Zugehörigkeit zur Gruppe `wifi` einmalig festlegen
 --------------------------------------------------
    
-Die Steuerung der Gruppenzugehörigkeit kann auf der Konsole wie folgt gesetzt werden:
+Die Steuerung der Gruppenzugehörigkeit kann auf der Konsole wie folgt
+gesetzt werden.  Wenn man z.B. nur die Gruppe der Lehrer und der
+Schüler der Oberstufenklassen "k1" und "k2" für WLAN-Zugang
+konfigurieren will, erstellt man eine Vorlage und setzt die
+wifi-Gruppe dann
 
 .. code:: console
 
-   server ~ # sophomorix-managementgroup --nowifi/--wifi user1,user2,...
+   server ~ # cat << EOF > /etc/linuxmuster/sophomorix/default-school/wifi.teachers_and_oberstufe.conf
+   MEMBER_ROLE=teacher,globaladministrator
+   MEMBER_CLASS=teachers,k1,k2
+   EOF
 
-Um alle Schüler aus der Gruppe wifi zu nehmen, lässt man sich alle
-User des Systems auflisten und schreibt diese in eine Datei.  Dies
-kann wie folgt erledigt werden:
+   server ~ # sophomorix-managementgroup --set-wifi teachers_and_oberstufe
 
-.. code:: console
-
-   server ~ # samba-tool user list > user.txt
-
-Jetzt entfernt man alle User aus dieser Liste, die immer ins WLAN dürfen sollen. Danach baut man die Liste zu einer Kommazeile um mit:
+Um noch weitere einzelne Schüler hinzuzunehmen oder zu entfernen, nutzt man danach die Funktion ``--wifi`` bzw. ``--nowifi`` mit von Komma getrennten Benutzernamen.
 
 .. code:: console
 
-   server ~ # cat user.txt | tr '\n' ',' > usermitkomma.txt
-
-Die Datei kann jetzt an den o.g. Sophomorix-Befehl übergeben werden:
-
-.. code:: console
-
-   server ~ # sophomorix-managementgroup --nowifi $(cat usermitkomma.txt)
-
-
-
+   server ~ # sophomorix-managementgroup --nowifi lempel,fauli
+   server ~ # sophomorix-managementgroup --wifi schlaubi,torti
    
 
 FreeRADIUS auf dem Server einrichten & testen
