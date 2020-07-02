@@ -105,7 +105,9 @@ Danach muss der Samba-Dienst neu gestartet werden:
 Radius konfigurieren
 --------------------
 
-Dem Freeradius-Dienst muss Zugriff auf den lokalen `winbind`-Dienst gegeben werden. 
+Radius wird für das Protokoll `PEAP/MSChapv2``konfiguriert. Dem
+Freeradius-Dienst muss Zugriff auf den lokalen `winbind`-Dienst
+gegeben werden.
 
 .. code:: console
 
@@ -181,22 +183,24 @@ Firewallregeln anpassen
 -----------------------
 
 Auf der Firewall OPNSense muss je nach eigenen Voraussetzungen dafür
-gesorgt werden, dass die AP’s aus dem WLAN-Netz den Server auf dem
+gesorgt werden, dass die APs aus dem WLAN-Netz den Server auf dem
 Port 1812 via udp erreichen können. Es ist darauf zu achten, dass die
 IP des Servers den eigenen Netzvorgaben entspricht (also
-z.B. 10.0.0.1/16 oder /24 oder 10.16.1.1/16 oder /24)
+z.B. ``10.0.0.1`` oder ``10.16.1.1``)
 
-Die Regel auf der OPNSense hierzu könnten, wie nachstehend abgebildet,
+Die Regel auf der OPNSense hierzu könnte, wie nachstehend abgebildet,
 in den Firewall-Regeln für `LAN` eingetragen werden.
 
 .. image:: media/10-fw-opnsense-rule-for-radius.png
-   :alt: FW Rule fpr Radius Service
+   :alt: FW Rule for Radius Service
    :align: center
 
-Jetzt sollte die Authentifizierung per WPA2-Enterprise funktionieren, sofern der Testuser in der Gruppe wifi ist. 
-Ein Zertifikat ist nicht erforderlich.
+Jetzt sollte die Authentifizierung per WPA2-Enterprise funktionieren,
+sofern der Testuser in der Gruppe `wifi` ist. Ein Zertifikat ist bei
+Verwendung von `PEAP/MSChapv2` nicht erforderlich.
 
-Sollte das nicht funktionieren, hält man den Freeradius-Dienst an und startet ihn im Debugmodus.
+Sollte das nicht funktionieren, hält man den Freeradius-Dienst an und
+startet ihn im Debugmodus.
 
 .. code:: console
 
