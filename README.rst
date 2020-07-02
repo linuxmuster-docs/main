@@ -145,4 +145,4 @@ Further reading
 
 See the documentation on linuxmuster.net_.
 
-.. _linuxmuster.net: http://www.linuxmuster.net/wiki/dokumentation:sphinx
+.. _linuxmuster.net: https://docs.linuxmuster.net/de/latest/appendix/contribute/index.html
