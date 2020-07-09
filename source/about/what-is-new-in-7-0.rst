@@ -3,6 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
    
+.. _`what-is-new-label`:
+
 Was ist neu in 7.0?
 ===================
 
@@ -86,5 +88,19 @@ Was es so nicht mehr gibt
 - OpenVPN Zugänge für Lehrer und Schüler (eventuell Ersatz durch wireguard, noch nicht abschließend entschieden und von daher auch noch nicht dokumentiert.)
 
 
+Release-Informationen und Fehlerkorrekturen
+-------------------------------------------
+
+.. hint::
+
+   * Release-Informationen werden im Forum im Thread `Neue Pakete für lmn7 <https://ask.linuxmuster.net/t/neue-pakete-fuer-lmn7/5237/13>`_ veröffentlicht.
+   * Fehler und deren Korrekturen, die ein manuelles Eingreifen erfordern werden im Abschnitt :ref:`bugfixes-label` dokumentiert und aktualisiert.
+
+
+Release-Informationen früherer Versionen
+----------------------------------------
+
+* `Release-Information zur linuxmuster.net 6.2 <https://docs.linuxmuster.net/de/v6/release-information/index.html>`_
+* `Release-Informationen zur linuxmuster.net 5.1, 6.0 und 6.1 <https://www.linuxmuster.net/wikiarchiv/dokumentation:handbuch:preparation:features>`_
 
 

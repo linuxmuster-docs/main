@@ -12,7 +12,7 @@
 In diesem Dokument findest du "Schritt für Schritt" Anleitungen zum
 Installieren der linuxmuster.net-Musterlösung in der Version 7.0 auf
 Basis von KVM unter Ubuntu Server 18.04 LTS. Lies zuerst die
-Abschnitte :ref:`release-information-label` und
+Abschnitte :ref:`what-is-new-label` und
 :ref:`prerequisites-label`, bevor du dieses Kapitel durcharbeitest.
 
 Im folgenden Bild ist die einfachste Form der Implementierung der

@@ -47,7 +47,7 @@ Die Werte sind die voreingestellten Werte der VMs beim Import und bilden gleichz
 
 Bevor du dieses Kapitel durcharbeitest, lese bitte zuerst die Abschnitte
   + :ref:`what-is-linuxmuster.net`,
-  + (:ref:`release-information-label`),
+  + (:ref:`what-is-new-label`),
   +  :ref:`install-overview-label` und
   +  :ref:`prerequisites-label`.
 

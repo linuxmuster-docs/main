@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
    
-.. _release-information-label:
+.. _bugfixes-label:
 
 Fehlerkorrekturen
 =================
@@ -44,11 +44,5 @@ werden diese aufgelistet und auf die nötigen Schritte verwiesen:
 
      server ~ # systemctl restart samba-ad-dc.service
 
-
-Release-Informationen früherer Versionen
-----------------------------------------
-
-* `Release-Information zur linuxmuster.net 6.2 <https://docs.linuxmuster.net/de/v6/release-information/index.html>`_
-* `Release-Informationen zur linuxmuster.net 5.1, 6.0 und 6.1 <https://www.linuxmuster.net/wikiarchiv/dokumentation:handbuch:preparation:features>`_
 
 

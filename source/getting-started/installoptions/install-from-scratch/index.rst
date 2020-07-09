@@ -9,7 +9,7 @@ Install from Scratch
 
 In diesem Dokument findest du eine "Schritt für Schritt" Anleitungen zum
 Installieren der linuxmuster.net-Musterlösung direkt auf der Hardware.
-Lies zuerst die Abschnitte :ref:`release-information-label` und
+Lies zuerst die Abschnitte :ref:`what-is-new-label` und
 :ref:`prerequisites-label`, bevor du dieses Kapitel durcharbeitest.
 
 Voraussetzungen
