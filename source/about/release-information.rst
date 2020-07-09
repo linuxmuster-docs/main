@@ -96,19 +96,34 @@ Release-Informationen früherer Versionen
 * `Release-Information zur linuxmuster.net 6.2 <https://docs.linuxmuster.net/de/v6/release-information/index.html>`_
 * `Release-Informationen zur linuxmuster.net 5.1, 6.0 und 6.1 <https://www.linuxmuster.net/wikiarchiv/dokumentation:handbuch:preparation:features>`_
 
+
+.. _found-and-fixed-problems-label:
+  
 Gefundene und behobene Probleme
 -------------------------------
 
-Manche Aktualisierungen erfordern einen manuellen Eingriff, hier werden diese aufgelistet und auf die nötigen Schritte verwiesen:
+Manche Aktualisierungen erfordern einen manuellen Eingriff, hier
+werden diese aufgelistet und auf die nötigen Schritte verwiesen:
 
-* LINBO auf v7.0.72: Bearbeite nach dem Update die Datei ``/etc/samba/smb.conf`` und ergänze im Abschnitt `[global]` die Zeilen, so dass folgende Zeilen dabei sind:
+* Juli 2020, LINBO auf v7.0.72: Bearbeite nach dem Update die Datei
+  ``/etc/samba/smb.conf`` und ergänze im Abschnitt `[global]` die
+  Zeilen, so dass folgende Zeilen dabei sind:
 
-.. code:: console
+  .. code:: console
 
-   ...
-   rpc_server:spoolss = external
-   rpc_daemon:spoolssd = fork
-   spoolss:architecture = Windows x64
-   printing = cups
-   printcap name = cups
-   ...
+     server ~ # nano /etc/samba/smb.conf
+     [global]
+     ...
+     rpc_server:spoolss = external
+     rpc_daemon:spoolssd = fork
+     spoolss:architecture = Windows x64
+     printing = cups
+     printcap name = cups
+     ...
+
+  Starte dann Samba/AD neu:
+
+  .. code:: console
+
+     server ~ # systemctl restart samba-ad-dc.service
+     
