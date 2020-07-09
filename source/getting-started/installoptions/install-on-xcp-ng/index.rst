@@ -5,7 +5,7 @@
 ============================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
-            `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
+		   `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
 XCP-ng ist eine reine OpenSource-Virtualisierungslösung, die auf Basis 
 von XEN arbeitet. XCP-ng bietet sog. Enterprise-Features wie Replikation, 
@@ -51,7 +51,7 @@ der IPs zu den VMs bzw. genutzten Hosts.
 | XCP-ng Host  | 10.0.0.200/16      |
 +--------------+--------------------+
 
-Lies zuerst die Abschnitte :ref:`release-information-label` 
+Lies zuerst die Abschnitte :ref:`what-is-new-label` 
 und :ref:`prerequisites-label`, bevor Du dieses Kapitel durcharbeitest.
 
 Nach der Installation gemäß dieser Anleitung erhältst Du eine

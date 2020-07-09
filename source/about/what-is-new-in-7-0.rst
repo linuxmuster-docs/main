@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
    
-.. _release-information-label:
+.. _`what-is-new-label`:
 
 Was ist neu in 7.0?
 ===================
@@ -67,13 +67,11 @@ Netzwerkverwaltung
   * OpnSense auf Basis von FreeBSD vorkonfiguriert ausgeliefert aber
     flexibel durch andere Firewall-Produkte zu ersetzen, die die Regeln im 
     Active Directory des Servers auslesen kann.
-      
-Was erhalten bleibt
--------------------
-
-* LINBO ist weiterhin das zentrale Softwareverteilungssystem. Die
-  größte Modernisierung hat LINBO schon mit der Version 2.3.x in
-  linuxmuster.net 6.2 erfahren.
+ 
+Selbstheilende Arbeitsstationen
+  * LINBO ist weiterhin das zentrale Softwareverteilungssystem. Die
+    größte Modernisierung hat LINBO schon mit der Version 2.3.x in
+    linuxmuster.net 6.2 erfahren.
 
 Was es so nicht mehr gibt
 -------------------------
@@ -83,11 +81,20 @@ Was es so nicht mehr gibt
   aktuellen Schüler in einem Unterrichtskurs, dessen Zugriff auf
   Internet, WLAN und Drucker gesteuert wird.
 
-- Internet E-Mail-Versand (möglich, aber noch nicht dokumentiert)
+- Druckerquotierung (pykota)
+
+- Interner E-Mail-Versand (möglich, aber noch nicht dokumentiert)
 
 - OpenVPN Zugänge für Lehrer und Schüler (eventuell Ersatz durch wireguard, noch nicht abschließend entschieden und von daher auch noch nicht dokumentiert.)
 
-- Druckerquotierung (pykota)
+
+Release-Informationen und Fehlerkorrekturen
+-------------------------------------------
+
+.. hint::
+
+   * Release-Informationen werden im Forum im Thread `Neue Pakete für lmn7 <https://ask.linuxmuster.net/t/neue-pakete-fuer-lmn7/5237/13>`_ veröffentlicht.
+   * Fehler und deren Korrekturen, die ein manuelles Eingreifen erfordern werden im Abschnitt :ref:`bugfixes-label` dokumentiert und aktualisiert.
 
 
 Release-Informationen früherer Versionen
@@ -97,33 +104,3 @@ Release-Informationen früherer Versionen
 * `Release-Informationen zur linuxmuster.net 5.1, 6.0 und 6.1 <https://www.linuxmuster.net/wikiarchiv/dokumentation:handbuch:preparation:features>`_
 
 
-.. _found-and-fixed-problems-label:
-  
-Gefundene und behobene Probleme
--------------------------------
-
-Manche Aktualisierungen erfordern einen manuellen Eingriff, hier
-werden diese aufgelistet und auf die nötigen Schritte verwiesen:
-
-* Juli 2020, LINBO auf v7.0.72: Bearbeite nach dem Update die Datei
-  ``/etc/samba/smb.conf`` und ergänze im Abschnitt `[global]` die
-  Zeilen, so dass folgende Zeilen dabei sind:
-
-  .. code:: console
-
-     server ~ # nano /etc/samba/smb.conf
-     [global]
-     ...
-     rpc_server:spoolss = external
-     rpc_daemon:spoolssd = fork
-     spoolss:architecture = Windows x64
-     printing = cups
-     printcap name = cups
-     ...
-
-  Starte dann Samba/AD neu:
-
-  .. code:: console
-
-     server ~ # systemctl restart samba-ad-dc.service
-     
