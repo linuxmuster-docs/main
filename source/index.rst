@@ -54,7 +54,7 @@ auf der `Website von Linuxmuster.net
   systemadministration/network/preliminarysettings/index
   systemadministration/network/networksegmentation/index
   systemadministration/maintenance/keep-lmn-uptodate
-  about/release-information
+  systemadministration/maintenance/bugfixes-and-workarounds.rst
   systemadministration/network/default-access-rules
   systemadministration/network/radius/index
   systemadministration/printer/index
