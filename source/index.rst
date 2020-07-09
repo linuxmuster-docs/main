@@ -25,7 +25,6 @@ auf der `Website von Linuxmuster.net
 
   about/about
   about/what-is-new-in-7-0
-  about/release-information
 
 .. toctree::
   :maxdepth: 2
@@ -55,6 +54,7 @@ auf der `Website von Linuxmuster.net
   systemadministration/network/preliminarysettings/index
   systemadministration/network/networksegmentation/index
   systemadministration/maintenance/keep-lmn-uptodate
+  about/release-information
   systemadministration/network/default-access-rules
   systemadministration/network/radius/index
   systemadministration/printer/index

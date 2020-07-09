@@ -5,8 +5,8 @@
    
 .. _release-information-label:
 
-Release-Informationen
-=====================
+Fehlerkorrekturen
+=================
 
 .. sectionauthor:: `Das Dokuteam <https://ask.linuxmuster.net/c/weiterentwicklung/doku>`_
 
