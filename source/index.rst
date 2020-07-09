@@ -24,6 +24,7 @@ auf der `Website von Linuxmuster.net
   :caption: Über
 
   about/about
+  about/what-is-new-in-7-0
   about/release-information
 
 .. toctree::
