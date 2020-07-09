@@ -76,7 +76,17 @@ Um die Server-Installation auf den aktuellen Paketstand zu bringen, gehe folgend
         :alt: Restart Services
         :align: center
 
+Gefundene und behobene Probleme beachten
+----------------------------------------
 
+Manchmal gibt es Aktualisierungen, die händische Eingriffe erfordern,
+die werden gesondert gesammelt und müssen :ref:`an dieser Stelle
+<found-and-fixed-problems-label>` überprüft werden, ob sie für
+das eigene System zutreffen.
+
+
+
+		
 Aktualisierung der Firewall OPNsense
 ------------------------------------
 
