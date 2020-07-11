@@ -22,6 +22,7 @@ auf der `Website von Linuxmuster.net
 .. toctree::
   :maxdepth: 2
   :caption: Über
+  :hidden:
 
   about/about
   about/what-is-new-in-7-0
@@ -29,6 +30,7 @@ auf der `Website von Linuxmuster.net
 .. toctree::
   :maxdepth: 2
   :caption: Installation
+  :hidden:
 
   getting-started/overview
   getting-started/prerequisites
@@ -40,6 +42,7 @@ auf der `Website von Linuxmuster.net
 .. toctree::
   :maxdepth: 2
   :caption: Installationsoptionen
+  :hidden:
 
   getting-started/installoptions/install-on-proxmox/index
   getting-started/installoptions/install-on-kvm/index
@@ -49,6 +52,7 @@ auf der `Website von Linuxmuster.net
 .. toctree::
   :maxdepth: 2
   :caption: Systemadministration
+  :hidden:
 
   systemadministration/maintenance/migration
   systemadministration/network/preliminarysettings/index
@@ -63,6 +67,7 @@ auf der `Website von Linuxmuster.net
 .. toctree::
   :maxdepth: 2
   :caption: Clientverwaltung
+  :hidden:
 
   clients/windows10clients/index
   clients/leoclient2/index
@@ -72,6 +77,7 @@ auf der `Website von Linuxmuster.net
 .. toctree::
   :maxdepth: 2
   :caption: Benutzerverwaltung
+  :hidden:
 
   user-management/change-own-password
   user-management/student-management
@@ -83,6 +89,7 @@ auf der `Website von Linuxmuster.net
 .. toctree::
   :maxdepth: 2
   :caption: Pädagogische Funktionen
+  :hidden:
 
   classroom/webui-basics/index
   classroom/exam-and-transfer
@@ -92,11 +99,13 @@ auf der `Website von Linuxmuster.net
 .. toctree::
   :maxdepth: 2
   :caption: Externe Dienste
+  :hidden:
 
   external-services/moodle/index
 
 .. toctree::
   :maxdepth: 1
   :caption: Linuxmuster.net helfen
-
+  :hidden:
+  
   appendix/contribute/index
