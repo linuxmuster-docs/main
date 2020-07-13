@@ -115,7 +115,7 @@ Quota
 In der Schulkonsole können im Menü ``Einstellungen -> Schuleinstellungen -> Quota Vorgaben`` zur zulässigen 
 Festplattenbelegung getrennt nach den Gruppen Schüler, Lehrer und Extra-Schüler vorgenommen werden. 
 Hierdurch wird definiert, bis zu welcher Obergrenze ein Benutzer der jeweiligen Gruppen Dateien auf dem 
-Server ablegen darf. Sollte diese Obergrenze erreiht werden, so werden weitere Speicervorgänge des Benutzers 
+Server ablegen darf. Sollte diese Obergrenze erreiht werden, so werden weitere Speichervorgänge des Benutzers 
 verhindert. Erst nachdem dieser Dateien und Verzeichnisse gelöscht hat, kann dieser weiter Daten auf dem 
 Server ablegen. 
 
