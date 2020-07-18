@@ -7,12 +7,12 @@ Strukturguide
 
 Auf Ebene der Dateien:
 
-rst-Dateien:
+**rst-Dateien**
 
 - Dateinamen klein schreiben, englisch Begriffe, Leerzeichen vermeiden, Bindestrich (-) statt Unterstrich (_)
 - Eine rst-Datei pro Kapitel, möglichst ein englischer Begriff, bsp: configuration.rst
 
-Medien, wie Bilder, etc.:
+**Medien, wie Bilder, etc.**
 
 - In einen Unterordner `media/` des Kapitles ablegen
 - Benennung der Medien-Dateien:
@@ -41,7 +41,13 @@ Medien, wie Bilder, etc.:
         :alt: propose changes
         
         Beispiel:  ``*1`` erste Ergänzung; ``*2`` zweite Ergänzung
+
+**Medien und Bilder, die in der Dokumentation mehrfach genutzt werden.**
+
+  Sie sollten von diesem Schema abweichen. Zwar müssen sie ebenfalls in dem Ordner media des ausrufenden Kapitels vorhanden sein, aber nicht mit einer laufenden Nummer und Kapitelbezeichnung benannt sein. Beispiel wäre die SVG-Grafik follow_arrow.svg in media des root-Verzeichnis der Dokumentation.
   
+  Hintergund: sphinx legt für jede Grafik beim ``./makeinstall`` im build Verzeichnis eine Kopie im Unterversichnis images an. So wird vermieden, das ein und dieselbe Grafik mehrmals vorhanden ist.
+
 
 Styleguide
 ----------
