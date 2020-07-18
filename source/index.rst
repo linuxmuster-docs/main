@@ -7,10 +7,10 @@ Herzlich Willkommen zur Dokumentation von linuxmuster.net v7!
 
 Diese beschreibt alle wichtigen Schritte ...
 
-  | ... von der Installation.
-  | ... der Einrichtung von Windows- und Linux-Rechnern als Clients.
-  | ... der Systemadministration mit.
-  | ... der Verwaltung von Nutzern.
+  | ... von der Installation,
+  | ... der Einrichtung von Windows- und Linux-Rechnern als Clients,
+  | ... der Systemadministration,
+  | ... der Verwaltung von Nutzern,
   | ... bis hin zu individuellen Anpassungen.
 
 Wie es bei einem Projekt ist, dessen Entwicklungsgeschichte mittlerweile auf das Jahr 1999 zurückblickt, ist dein Einstieg in die Beschreibung unseres Systems sicherlich verschieden gelagert.
