@@ -25,6 +25,7 @@ auf der `Website von Linuxmuster.net
 
   about/about
   about/what-is-new-in-7-0
+  systemadministration/maintenance/bugfixes-and-workarounds.rst
 
 .. toctree::
   :maxdepth: 2
@@ -54,7 +55,6 @@ auf der `Website von Linuxmuster.net
   systemadministration/network/preliminarysettings/index
   systemadministration/network/networksegmentation/index
   systemadministration/maintenance/keep-lmn-uptodate
-  systemadministration/maintenance/bugfixes-and-workarounds.rst
   systemadministration/network/default-access-rules
   systemadministration/network/radius/index
   systemadministration/printer/index
