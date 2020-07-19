@@ -83,15 +83,16 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   getting-started/installoptions/install-on-kvm/index
   getting-started/installoptions/install-on-xcp-ng/index
   getting-started/installoptions/install-from-scratch/index
-
+  getting-started/network/preliminarysettings/index
+  getting-started/network/networksegmentation/index   
+  getting-started/migration/index
+  
+  
 .. toctree::
   :maxdepth: 2
   :caption: Systemadministration
   :hidden:
 
-  systemadministration/maintenance/migration
-  systemadministration/network/preliminarysettings/index
-  systemadministration/network/networksegmentation/index
   systemadministration/maintenance/keep-lmn-uptodate
   systemadministration/maintenance/bugfixes-and-workarounds.rst
   systemadministration/network/default-access-rules
