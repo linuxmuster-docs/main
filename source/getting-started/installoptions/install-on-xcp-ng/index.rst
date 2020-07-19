@@ -1,3 +1,5 @@
+.. include:: /guided_inst.subst
+
 .. _install-on-xen-label:
 
 ============================
@@ -929,3 +931,6 @@ Dies kann dann z.B. wie in folgender Abbildung aussehen:
 
 
 
+======================================== =================
+Weiter geht es mit der Erstkonfiguration |follow_me2setup|
+======================================== =================

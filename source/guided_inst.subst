@@ -8,8 +8,6 @@
 
    Necessary adjustments are, apart from the naming, those of the jump target under :target: with relative path specifications, starting from the page where the call is made.
    
-   The graphic itself must always be available in the media folder of the chapter. See also the style guide regarding graphics which is used throughout the documentation can be used.
-   
 ..    
    Diese Datei enthält alle Platzhalter für die link_arrow-Grafiken
    um eine zentrale Anlaufstelle bei eventuellen Änderungen sicher zu stellen.
@@ -23,33 +21,47 @@
    Nötige Anpassungen sind außer der Benennung, die des Sprungzieles unter :target:
    mit relativen Pfasdangaben, ausgehend von der Seite wo der Aufruf erfolgt.
    
-   Die Grafik selber muss immer im media-Ordner des Kapitel vorhanden sein. Siehe
-   dazu auch den Styleguide bezüglich Grafik die in der gesamten Dokumentation
-   verwendet werden.
-
-
-.. |follow_me2proxmox| image:: media/link_arrow.svg
+.. |follow_me2proxmox| image:: /media/link_arrow.svg
    :target: installoptions/install-on-proxmox/index.html
    :width: 200 px
    :align: middle
    
-.. |follow_me2xcp-ng| image:: media/link_arrow.svg
-   :target: installoptions/install-on-xcp-ng/index.html
-   :width: 200 px
-   :align: middle
-
-.. |follow_me2kvm| image:: media/link_arrow.svg
+.. |follow_me2kvm| image:: /media/link_arrow.svg
    :target: installoptions/install-on-kvm/index.html
    :width: 200 px
    :align: middle
 
-.. |follow_me2scratch| image:: media/link_arrow.svg
+.. |follow_me2xcp-ng| image:: /media/link_arrow.svg
+   :target: installoptions/install-on-xcp-ng/index.html
+   :width: 200 px
+   :align: middle
+
+.. |follow_me2scratch| image:: /media/link_arrow.svg
    :target: installoptions/install-from-scratch/index.html
    :width: 200 px
    :align: middle
 
-.. |follow_me2setup| image:: media/link_arrow.svg
+.. |follow_me2network-area| image:: /media/link_arrow.svg
    :target: ../../setup.html
    :width: 200 px
    :align: middle
-   
+
+.. |follow_me2setup| image:: /media/link_arrow.svg
+   :target: ../../setup.html
+   :width: 200 px
+   :align: middle
+
+.. |follow_me2user-creation| image:: /media/link_arrow.svg
+   :target: add-user-accounts.html
+   :width: 200 px
+   :align: middle
+
+.. |follow_me2migration| image:: /media/link_arrow.svg
+   :target: ../systemadministration/maintenance/migration.html
+   :width: 200 px
+   :align: middle
+
+.. |follow_me2linux-clients| image:: /media/link_arrow.svg
+   :target: /getting-started/linuxclient.html
+   :width: 200 px
+   :align: middle   

@@ -1,3 +1,5 @@
+.. include:: /guided_inst.subst
+
 .. _install-on-kvm-label:
 
 ==========================
@@ -1238,3 +1240,7 @@ Die Rekonstruktion der Meta-Daten sollte es genügen, das Verzeichnis
 ``/etc/libvirtd/`` auf dem KVM-Host wiederherzustellen, wurde für
 diese Dokumentation noch nicht getestet. Darüberhinaus ist die
 Erstellung der volume group und die Erstellung der LVs notwendig.
+
+======================================== =================
+Weiter geht es mit der Erstkonfiguration |follow_me2setup|
+======================================== =================

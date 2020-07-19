@@ -315,7 +315,7 @@ der oben beschriebenen Anforderungen der einzelnen Hypervisoren in dieser Dokume
 
 =========================== ===================
 Virtualisierung mit Proxmox |follow_me2proxmox|
-Virtualisierung mit XCP-ng |follow_me2xcp-ng|
+Virtualisierung mit XCP-ng  |follow_me2xcp-ng|
 Virtualisierung mit KVM     |follow_me2kvm|
 =========================== ===================
 
@@ -323,6 +323,7 @@ Alternativ installierst du von Grund auf die Serverbetriebssysteme
 *Ubuntu Server* und *OPNSense* direkt auf der Hardware oder innerhalb
 deiner Virtualisierungslösung.
 
+<<<<<<< Updated upstream
 =========================== ===================
 Alternative Installationen  |follow_me2scratch|
 =========================== ===================

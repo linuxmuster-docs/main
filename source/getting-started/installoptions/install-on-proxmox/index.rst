@@ -1,3 +1,5 @@
+.. include:: /guided_inst.subst
+
 .. _install-on-proxmox-label:
 
 ============================
@@ -590,17 +592,6 @@ Bevor du fortfährst warte ab, bis die Auslastung zurückgegangen ist.
 Nachdem dein Hypervisor läuft und die VM erfolgreich gestartet sind, muss dass Setup deiner
 linuxmuster.net-Installation durchgeführt werden. 
 
-Weiter geht es mit dem Kapitel :ref:`Erstkonfiguration <setup-using-selma-label>`.
-
-
-
-
-
-
-
-
-
-
-
-
-
+======================================== =================
+Weiter geht es mit der Erstkonfiguration |follow_me2setup|
+======================================== =================

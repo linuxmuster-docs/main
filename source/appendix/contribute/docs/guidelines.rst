@@ -44,11 +44,8 @@ Auf Ebene der Dateien:
 
 **Medien und Bilder, die in der Dokumentation mehrfach genutzt werden.**
 
-  Sie sollten von diesem Schema abweichen. Zwar müssen sie ebenfalls in dem Ordner media des ausrufenden Kapitels vorhanden sein, aber nicht mit einer laufenden Nummer und Kapitelbezeichnung benannt sein. Beispiel wäre die SVG-Grafik follow_arrow.svg in media des root-Verzeichnis der Dokumentation.
+  Sie sollten von diesem Schema abweichen, da sie nur in dem root-Verzeichnis vorhanden sein müssen. Indem auf die laufenden Nummer und Kapitelbezeichnung verzichtet wird, werden sie als solche kenntlich gemacht. Beispiel wäre die SVG-Grafik follow_arrow.svg die dann mit /media/follow_arrow.svg in der Datei /guided_inst.subst eingebunden wird.
   
-  Hintergund: sphinx legt für jede Grafik beim ``./makeinstall`` im build Verzeichnis eine Kopie im Unterversichnis images an. So wird vermieden, das ein und dieselbe Grafik mehrmals vorhanden ist.
-
-
 Styleguide
 ----------
 
@@ -91,3 +88,27 @@ Styleguide
   .. code-block:: rst
 
      Bitte lesen Sie :ref:`hier <knownbugs-label>` nach, welche Fehler bekannt sind.
+
+- Um eine Tabelle
+     
+  =========== ============ ==================
+  Spalte A    Spalte B     Spalte C
+  =========== ============ ==================
+  Bla         Balbla       Blablabla
+  Blub        Blubblub     Blubblubblub
+  Rababa      Rababarababa Rabararabararabara
+  =========== ============ ==================
+  
+  einzustellen, nutze folgende einfache Syntax
+  
+  .. code-block:: rst
+
+     =========== ============ ==================
+     Überschrift Überschrift  Überschrift 
+     Spalte A    Spalte B     Spalte C
+     =========== ============ ==================
+     Bla         Balbla       Blablabla
+     Blub        Blubblub     Blubblubblub
+     Rababa      Rababarababa Rabararabararabara
+     =========== ============ ==================
+
