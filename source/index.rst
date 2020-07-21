@@ -61,6 +61,7 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
 
   about/about
   about/what-is-new-in-7-0
+  about/bugfixes-and-workarounds
 
 .. toctree::
   :maxdepth: 2
@@ -94,7 +95,6 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   :hidden:
 
   systemadministration/maintenance/keep-lmn-uptodate
-  systemadministration/maintenance/bugfixes-and-workarounds.rst
   systemadministration/network/default-access-rules
   systemadministration/network/radius/index
   systemadministration/printer/index
