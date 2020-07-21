@@ -20,6 +20,16 @@ Release-Informationen früherer Versionen
 * `Release-Information zur linuxmuster.net 6.2 <https://docs.linuxmuster.net/de/v6/release-information/index.html>`_
 * `Release-Informationen zur linuxmuster.net 5.1, 6.0 und 6.1 <https://www.linuxmuster.net/wikiarchiv/dokumentation:handbuch:preparation:features>`_
 
+Wartungsplan
+------------
+
++---------+------------------------+----------------+
+| Version | Veröffentlichungsdatum | Supportende    |
++=========+========================+================+
+|  7.0    | 17.04.2020             | nicht in Sicht |
++---------+------------------------+----------------+
+|  6.2    | irgendwann 2016        | t.b.a.         |
++---------+------------------------+----------------+
 
 .. _bugfixes-label:
 
