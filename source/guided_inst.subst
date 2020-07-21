@@ -1,0 +1,67 @@
+.. 
+   This file contains all placeholders for the link_arrow graphics to ensure a central point of contact for any changes.
+   To use these placeholders, the rst files that are to contain such a link must contain the include directive:
+   
+   .. include:: /guided_inst.subst
+   
+   The naming of the placeholders should follow the pattern |follow_me2<TARGET>|.
+
+   Necessary adjustments are, apart from the naming, those of the jump target under :target: with relative path specifications, starting from the page where the call is made.
+   
+..    
+   Diese Datei enthält alle Platzhalter für die link_arrow-Grafiken
+   um eine zentrale Anlaufstelle bei eventuellen Änderungen sicher zu stellen.
+   
+   Um diese Platzhalter nutzen zu können, müssen die rst-Dateien die einen
+   solchen Link enthalten sollen die include-Directive enthalten:
+   
+   .. include:: /guided_inst.subst
+   
+   Die Benennung der Platzhalter sollte dem Muster |follow_me2<ZIEL>| folgen.
+   Nötige Anpassungen sind außer der Benennung, die des Sprungzieles unter :target:
+   mit relativen Pfasdangaben, ausgehend von der Seite wo der Aufruf erfolgt.
+   
+.. |follow_me2proxmox| image:: /media/link_arrow.svg
+   :target: installoptions/install-on-proxmox/index.html
+   :width: 200 px
+   :align: middle
+   
+.. |follow_me2kvm| image:: /media/link_arrow.svg
+   :target: installoptions/install-on-kvm/index.html
+   :width: 200 px
+   :align: middle
+
+.. |follow_me2xcp-ng| image:: /media/link_arrow.svg
+   :target: installoptions/install-on-xcp-ng/index.html
+   :width: 200 px
+   :align: middle
+
+.. |follow_me2scratch| image:: /media/link_arrow.svg
+   :target: installoptions/install-from-scratch/index.html
+   :width: 200 px
+   :align: middle
+
+.. |follow_me2network-area| image:: /media/link_arrow.svg
+   :target: ../../setup.html
+   :width: 200 px
+   :align: middle
+
+.. |follow_me2setup| image:: /media/link_arrow.svg
+   :width: 200 px
+   :align: middle
+   :target: :ref:`setup`
+
+.. |follow_me2user-creation| image:: /media/link_arrow.svg
+   :target: add-user-accounts.html
+   :width: 200 px
+   :align: middle
+
+.. |follow_me2migration| image:: /media/link_arrow.svg
+   :target: ../systemadministration/maintenance/migration.html
+   :width: 200 px
+   :align: middle
+
+.. |follow_me2linux-clients| image:: /media/link_arrow.svg
+   :target: /getting-started/linuxclient.html
+   :width: 200 px
+   :align: middle   

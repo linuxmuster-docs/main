@@ -1,3 +1,5 @@
+.. include:: /guided_inst.subst
+
 .. _install-on-kvm-label:
 
 ==========================
@@ -988,9 +990,7 @@ aktivieren.
    # virsh autostart lmn7-server
    Domain lmn7-server marked as autostarted
 
-Ab jetzt ist eine Installation der Musterlösung möglich. Folge der
-:ref:`Anleitung hier <setup-using-selma-label>`. Es empfiehlt sich
-jedoch, die Möglichkeiten des Backups und der schnellen
+Es empfiehl sich nun, die Möglichkeiten des Backups und der schnellen
 Wiederherstellung der virtuellen Maschinen, wenn man die Wiederholung
 obiger Konfigurationen bei einem Neuanfang vermeiden will.
 
@@ -1238,3 +1238,7 @@ Die Rekonstruktion der Meta-Daten sollte es genügen, das Verzeichnis
 ``/etc/libvirtd/`` auf dem KVM-Host wiederherzustellen, wurde für
 diese Dokumentation noch nicht getestet. Darüberhinaus ist die
 Erstellung der volume group und die Erstellung der LVs notwendig.
+
+======================================== =================
+Weiter geht es mit der Erstkonfiguration |follow_me2setup|
+======================================== =================

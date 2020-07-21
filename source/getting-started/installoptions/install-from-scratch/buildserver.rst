@@ -1,3 +1,5 @@
+.. include:: /guided_inst.subst
+
 Anlegen und Installieren des Servers
 ====================================
 
@@ -89,6 +91,6 @@ Das Skript lmn7-appliance installiert für dich das Paket linuxmuster-base7 mit 
 
 .. hint:: Falls Du dich für das Netz der linuxmuster.net V6.2 entschieden hast, führst du statt ``./lmn7-appliance -p server -u -l /dev/sdb`` ``./lmn7-appliance -p server -u -l /dev/sdb -n 10.16.1.1/12 -f 10.16.1.254`` aus.
 
-Weiter geht's mit :ref:`Installation und Erstkonfiguration <setup-using-selma-label>`
-
- 
+======================================== ===================
+Weiter geht es mit der Erstkonfiguration  |follow_me2setup|
+======================================== ===================
