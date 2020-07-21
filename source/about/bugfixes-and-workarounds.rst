@@ -11,7 +11,7 @@ Release-Informationen und Fehlerkorrekturen
 .. hint::
 
    * Release-Informationen werden im Forum im Thread `Neue Pakete für lmn7 <https://ask.linuxmuster.net/t/neue-pakete-fuer-lmn7/5237/13>`_ veröffentlicht.
-   * Fehler und deren Korrekturen, die ein manuelles Eingreifen erfordern werden im Abschnitt :ref:`bugfixes-label` dokumentiert und aktualisiert.
+   * Fehler und deren Korrekturen, die ein manuelles Eingreifen erfordern werden hier im Abschnitt :ref:`bugfixes-label` dokumentiert und aktualisiert.
 
 
 Release-Informationen früherer Versionen
@@ -30,7 +30,7 @@ Fehlerkorrekturen
 .. _found-and-fixed-problems-label:
   
 Gefundene und behobene Probleme
--------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Manche Aktualisierungen erfordern einen manuellen Eingriff, hier
 werden diese aufgelistet und auf die nötigen Schritte verwiesen:

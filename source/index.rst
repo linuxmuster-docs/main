@@ -61,7 +61,7 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
 
   about/about
   about/what-is-new-in-7-0
-  systemadministration/maintenance/bugfixes-and-workarounds.rst
+  about/bugfixes-and-workarounds
 
 .. toctree::
   :maxdepth: 2
