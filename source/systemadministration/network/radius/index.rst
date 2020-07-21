@@ -155,14 +155,10 @@ Ist das System mit der Standarddomäne linuxmuster.lan aufgesetzt, lauten die en
    Bindungsnutzer  CN=global-binduser,OU=Management,OU=GLOBAL,DC=linuxmuster,DC=lan
    Bind Passwort   ****************
    Basis DN        OU=SCHOOLS,DC=linuxmuster,DC=lan
-   Benutzerfilter  (&(objectClass=person)(sAMAccountName=%{%{Stripped-User-Name}:-%{User-Name}})(memberOf=CN=wifi,OU=Management,OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan))
+   Benutzerfilter  (&(objectClass=person)(sAMAccountName=%{%{Stripped-User-Name}:-%{User-Name}})(memberOf=CN=wifi,OU=Management,OU=*))
    Gruppenfilter   (objectClass=group)
 
 Im Benutzerfilter wird sichergestellt, dass der Benutzer Mitglied der Gruppe ``wifi`` ist.
-
-.. hint::
-
-   Der Benutzerfilter ist auf die eigene Domain anzupassen.
 
 **LDAP Konfiguration**
 
