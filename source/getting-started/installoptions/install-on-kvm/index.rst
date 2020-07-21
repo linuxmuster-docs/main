@@ -990,9 +990,7 @@ aktivieren.
    # virsh autostart lmn7-server
    Domain lmn7-server marked as autostarted
 
-Ab jetzt ist eine Installation der Musterlösung möglich. Folge der
-:ref:`Anleitung hier <setup-using-selma-label>`. Es empfiehlt sich
-jedoch, die Möglichkeiten des Backups und der schnellen
+Es empfiehl sich nun, die Möglichkeiten des Backups und der schnellen
 Wiederherstellung der virtuellen Maschinen, wenn man die Wiederholung
 obiger Konfigurationen bei einem Neuanfang vermeiden will.
 

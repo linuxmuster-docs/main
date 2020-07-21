@@ -1,10 +1,8 @@
 .. include:: /guided_inst.subst
 
-.. _setup-using-selma-label:
-
-===================
- Erstkonfiguration
-===================
+.. _setup:
+Erstkonfiguration
+=================
 
 .. sectionauthor:: `@WildXI <https://ask.linuxmuster.net/u/wildxi>`_,
 		   `@TLeibbrand <https://ask.linuxmuster.net/u/tleibbrand>`_,

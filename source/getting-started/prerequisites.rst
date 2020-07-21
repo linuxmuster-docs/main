@@ -323,7 +323,6 @@ Alternativ installierst du von Grund auf die Serverbetriebssysteme
 *Ubuntu Server* und *OPNSense* direkt auf der Hardware oder innerhalb
 deiner Virtualisierungslösung.
 
-<<<<<<< Updated upstream
 =========================== ===================
 Alternative Installationen  |follow_me2scratch|
 =========================== ===================

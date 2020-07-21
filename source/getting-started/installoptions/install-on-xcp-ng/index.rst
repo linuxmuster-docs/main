@@ -575,9 +575,6 @@ analog aus.
 Für die weitere Einrichtung von linuxmuster.net für Deine Schule folge
 der Dokumentation unter:
 
-* :ref:`Installation und Erstkonfiguration <setup-using-selma-label>` 
-
-
 XCP-ng Center unter Linux installieren
 --------------------------------------
 
