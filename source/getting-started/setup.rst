@@ -1,6 +1,7 @@
 .. include:: /guided_inst.subst
 
 .. _setup:
+
 Erstkonfiguration
 =================
 
