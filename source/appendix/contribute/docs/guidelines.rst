@@ -7,12 +7,12 @@ Strukturguide
 
 Auf Ebene der Dateien:
 
-rst-Dateien:
+**rst-Dateien**
 
 - Dateinamen klein schreiben, englisch Begriffe, Leerzeichen vermeiden, Bindestrich (-) statt Unterstrich (_)
 - Eine rst-Datei pro Kapitel, möglichst ein englischer Begriff, bsp: configuration.rst
 
-Medien, wie Bilder, etc.:
+**Medien, wie Bilder, etc.**
 
 - In einen Unterordner `media/` des Kapitles ablegen
 - Benennung der Medien-Dateien:
@@ -41,8 +41,11 @@ Medien, wie Bilder, etc.:
         :alt: propose changes
         
         Beispiel:  ``*1`` erste Ergänzung; ``*2`` zweite Ergänzung
-  
 
+**Medien und Bilder, die in der Dokumentation mehrfach genutzt werden.**
+
+  Sie sollten von diesem Schema abweichen, da sie nur in dem root-Verzeichnis vorhanden sein müssen. Indem auf die laufenden Nummer und Kapitelbezeichnung verzichtet wird, werden sie als solche kenntlich gemacht. Beispiel wäre die SVG-Grafik follow_arrow.svg die dann mit /media/follow_arrow.svg in der Datei /guided_inst.subst eingebunden wird.
+  
 Styleguide
 ----------
 
@@ -85,3 +88,27 @@ Styleguide
   .. code-block:: rst
 
      Bitte lesen Sie :ref:`hier <knownbugs-label>` nach, welche Fehler bekannt sind.
+
+- Um eine Tabelle
+     
+  =========== ============ ==================
+  Spalte A    Spalte B     Spalte C
+  =========== ============ ==================
+  Bla         Balbla       Blablabla
+  Blub        Blubblub     Blubblubblub
+  Rababa      Rababarababa Rabararabararabara
+  =========== ============ ==================
+  
+  einzustellen, nutze folgende einfache Syntax
+  
+  .. code-block:: rst
+
+     =========== ============ ==================
+     Überschrift Überschrift  Überschrift 
+     Spalte A    Spalte B     Spalte C
+     =========== ============ ==================
+     Bla         Balbla       Blablabla
+     Blub        Blubblub     Blubblubblub
+     Rababa      Rababarababa Rabararabararabara
+     =========== ============ ==================
+
