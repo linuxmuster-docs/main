@@ -47,9 +47,9 @@
    :align: middle
 
 .. |follow_me2setup| image:: /media/link_arrow.svg
+   :target: ../../setup.html
    :width: 200 px
    :align: middle
-   :target: :ref:`setup`
 
 .. |follow_me2user-creation| image:: /media/link_arrow.svg
    :target: add-user-accounts.html
