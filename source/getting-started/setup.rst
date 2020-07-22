@@ -2,8 +2,9 @@
 
 .. _setup:
 
-Erstkonfiguration
-=================
+===================
+ Erstkonfiguration
+===================
 
 .. sectionauthor:: `@WildXI <https://ask.linuxmuster.net/u/wildxi>`_,
 		   `@TLeibbrand <https://ask.linuxmuster.net/u/tleibbrand>`_,
@@ -222,7 +223,7 @@ Passwort an.
 
 Herzlichen Glückwunsch. Die Erstkonfiguration ist nun abgeschlossen. Nun musst du dich entscheiden:
 
-========================================================== =========================
-Weiter der Benutzer-Aufnahme                               |follow_me2user-creation|
-Weiter der Migration von einer linuxmuster.net Version 6.2 |follow_me2migration|
-========================================================== =========================
+============================================================== =========================
+Weiter mit der Benutzer-Aufnahme                               |follow_me2user-creation|
+Weiter mit der Migration von einer linuxmuster.net Version 6.2 |follow_me2migration|
+============================================================== =========================
