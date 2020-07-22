@@ -1,3 +1,5 @@
+.. include:: /guided_inst.subst
+
 .. _prerequisites-label:
 
 ==================
@@ -311,19 +313,19 @@ Nachdem du entschieden hast, ob und wie du eine Virtualisierung
 einsetzt, beginnst du mit Installation der Virtualisierung nach einer
 der oben beschriebenen Anforderungen der einzelnen Hypervisoren in dieser Dokumentation.
 
-Zur Installation mit Proxmox: :ref:`Installationsoptionen - Virtualisierung mit Proxmox <install-on-proxmox-label>`
-
-Zur Installation mit XCP-ng: :ref:`Installationsoptionen - Virtualisierung über XCP-ng <install-on-xen-label>`
-
-Zur Installation mit KVM: :ref:`Installationsoptionen - Virtualisierung mit KVM <install-on-kvm-label>`
-
+=========================== ===================
+Virtualisierung mit Proxmox |follow_me2proxmox|
+Virtualisierung mit XCP-ng  |follow_me2xcp-ng|
+Virtualisierung mit KVM     |follow_me2kvm|
+=========================== ===================
 
 Alternativ installierst du von Grund auf die Serverbetriebssysteme
 *Ubuntu Server* und *OPNSense* direkt auf der Hardware oder innerhalb
 deiner Virtualisierungslösung.
 
-
-Zu der alternativen Installation: :ref:`Installationsoptionen - Install from Scratch <install-from-scratch-label>`
+=========================== ===================
+Alternative Installationen  |follow_me2scratch|
+=========================== ===================
 
 ..
   Checkliste

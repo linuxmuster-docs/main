@@ -1,3 +1,5 @@
+.. include:: /guided_inst.subst
+
 .. _install-on-xen-label:
 
 ============================
@@ -573,9 +575,6 @@ analog aus.
 Für die weitere Einrichtung von linuxmuster.net für Deine Schule folge
 der Dokumentation unter:
 
-* :ref:`Installation und Erstkonfiguration <setup-using-selma-label>` 
-
-
 XCP-ng Center unter Linux installieren
 --------------------------------------
 
@@ -929,3 +928,6 @@ Dies kann dann z.B. wie in folgender Abbildung aussehen:
 
 
 
+======================================== =================
+Weiter geht es mit der Erstkonfiguration |follow_me2setup|
+======================================== =================

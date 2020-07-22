@@ -1,4 +1,6 @@
-.. _setup-using-selma-label:
+.. include:: /guided_inst.subst
+
+.. _setup:
 
 ===================
  Erstkonfiguration
@@ -219,7 +221,9 @@ Passwort an.
    :align: center
    :alt: Login as global-admin
 
-Herzlichen Glückwunsch. Die Erstkonfiguration ist nun
-abgeschlossen. Jetzt kann mit einer Migration von v6.2, Rechner- und
-Benutzeraufnahme fortgefahren werden.
+Herzlichen Glückwunsch. Die Erstkonfiguration ist nun abgeschlossen. Nun musst du dich entscheiden:
 
+============================================================== =========================
+Weiter mit der Benutzer-Aufnahme                               |follow_me2user-creation|
+Weiter mit der Migration von einer linuxmuster.net Version 6.2 |follow_me2migration|
+============================================================== =========================
