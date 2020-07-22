@@ -9,7 +9,7 @@ Diese beschreibt alle wichtigen Schritte ...
 
   | ... von der Installation,
   | ... der Einrichtung von Windows- und Linux-Rechnern als Clients,
-  | ... der Systemadministration,
+  | ... der Systemadministration mit,
   | ... der Verwaltung von Nutzern,
   | ... bis hin zu individuellen Anpassungen.
 
