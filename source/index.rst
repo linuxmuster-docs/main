@@ -61,7 +61,7 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
 
   about/about
   about/what-is-new-in-7-0
-  about/bugfixes-and-workarounds
+  about/release-info-and-bugfixes
 
 .. toctree::
   :maxdepth: 2
