@@ -55,7 +55,7 @@ Bevor du dieses Kapitel durcharbeitest, lese bitte zuerst die Abschnitte
 
 Für den Betrieb des Hypervisors selbst (Proxmox VE) sollten ca. 2 bis 6 GB Arbeitsspeicher eingeplant werden. Um nach Anleitung installieren zu können, sollte der Server mit mindestens 2 Netzwerkkarten bestückt sein. Durch VLANs kann der Betrieb aber auch bereits mit nur einer NIC erfolgen, bsp. 10 Gbit-Karte an einem Core-VLAN-Switch (L3).
 
-Für die Basis dieser Installationsanleitung werden auf dem verfügbaren Speicherplatz des Proxmox-Servers zwei Festplatten eingerichtet. Eine mit 120 GB (SSD) Speichergröße für die Hypervisorinstallation selbst und eine zweite mit dem restlich verfügbaren Speicherplatz (hier 1 TB - HDD als zweite Festplatte) als Speicher für die virtuellen Maschinen. Eine Aufteilung auf zwei Disks wird empfohlen, wenn vor allem viel Speicher für Bakup-, Schuldaten usw. benötigt wird. Eine einzelne Disk kann aber je nach Anforderung für die linuxmuster-Umgebung ebenfalls ausreichend sein.
+Für die Basis dieser Installationsanleitung werden auf dem verfügbaren Speicherplatz des Proxmox-Servers zwei Festplatten eingerichtet. Eine mit 120 GB (SSD) Speichergröße für die Hypervisorinstallation selbst und eine zweite mit dem restlich verfügbaren Speicherplatz (hier 1 TiB - HDD als zweite Festplatte) als Speicher für die virtuellen Maschinen. Eine Aufteilung auf zwei Disks wird empfohlen, wenn vor allem viel Speicher für Bakup-, Schuldaten usw. benötigt wird. Eine einzelne Disk kann aber je nach Anforderung für die linuxmuster-Umgebung ebenfalls ausreichend sein.
 
 Der Proxmox-Host sollte gemäß o.g. Minimalanforderungen folgende Merkmale aufweisen - sofern alle VMs eingesetzt werden:
 * RAM gesamt: mind. 16 GiB (besser: 32 GiB)
@@ -94,7 +94,7 @@ Verkabelungshinweise
 --------------------
 
 Es ist für linuxmuster.net ein internes Netz (grün) und ein externes Netz (rot) am Proxmox-Host zu unterscheiden. 
-Sind zwei Netzwerkkarten im Proxmox-Host vorhanden, so ist die erste Netzwerkkarte (z.B. eth0 oder enp7s0), die zu 
+Sind zwei Netzwerkkarten im Proxmox-Host vorhanden, so ist die erste Netzwerkkarte (z.B. eth0, eno1 oder enp7s0), die zu 
 Beginn eine IP aus dem bestehenden lokalen Netz (z.B. via DSL-Router) erhalten soll, mit dem Switch zu verbinden, der an den (DSL-)Router angeschlossen ist.
 
 Die zweite Netzwerkkarte (z.B. eth1 oder enp7s1) ist dann an einen eigenen Switch anzuschliessen, ebenso wie alle Clients, die im internen Netz eingesetzt werden. 
@@ -234,14 +234,16 @@ Netzwerkbrücken einrichten
 
 Für eine funktionierende Umgebung sollten zwei Netzwerkschnittstellen auf dem Hypervisor eingerichtet sein. Eine für das 
 interne Netz (green, 10.0.0.0/16) und eine für das externe Netz und den Internetzugriff (red, externes Netz). Nach der
-Erstinstallation von Proxmox wurde bislang nur eine sog. Bridge (vmbr0) eingerichtet, die für das externe Netz (red) genutzt wird.
+Erstinstallation von Proxmox wurde bislang nur eine sog. Bridge (vmbr0) eingerichtet, die zu Beginn für das externe Netz (red) genutzt wird. 
+
 Verlief der vorherige Befehl zur Aktualisierung von Proxmox erfolgreich, so weist du, dass diese bereits funktioniert.
 
 Diese Schnittstelle ist mit der ersten Netzwerkschnittstelle verbunden, die mit einem Ethernet-Kabel mit dem (DSL)-Router 
 verbunden ist. Daher muss nun die zweite Schnittstelle eingerichtet werden, um später mit den noch zu importierenden VMs 
 arbeiten zu können.
 
-Bislang ist nur eine Bridge für das externe Netz vorhanden. Für das interne Netz der VMs ist eine zweite Bridge zu erstellen, die an die zweite Netzwerkkarte direkt gebunden wird.
+Bislang ist nur eine Bridge für das externe Netz vorhanden. Für das interne Netz der VMs ist eine zweite Bridge 
+zu erstellen, die an die zweite Netzwerkkarte direkt gebunden wird. Dieser wird allerdings keine IP-Adresse zugeordnet. 
 
 Ausgangspunkt: *Host hv01 -> Network*
 
@@ -643,11 +645,11 @@ Die OPNSense VM weist zwei Netzwerkkarten auf, wie nachstehend dargestellt:
    :align: center
    :alt: Schritt 23
 
-Die Netzwerkkarte ``net0`` ist hier mit der Bridge ``vmbr0`` verbunden. Diese ist für das rote Netz zuständig. Die Netzwerkkarte mit der angegebenen MAC-Adresse muss später bei der Ersteinrichtung für das WAN konfiguriert werden.
+Die Netzwerkkarte ``net0`` ist hier mit der Bridge ``vmbr0`` verbunden. Diese ist derzeit noch für das rote Netz / externes Netz zuständig. Im nächsten Schritt wird dies geändert, so dass die VMs mit der internen Schnittstelle an die Bridge ``vmbr0`` und die externe Schnittstelle der OPNSense-VM auf die dann externe Bridge ``vmbr1`` anzuschliessen ist.
 
-Die Netzwerkkarte ``net1`` ist hier mit der Bridge ``vmbr5`` verbunden, die wir bislang gar nicht haben. Diese Netzwerkkarte muss nun mit unserer Bridge für das interne Netz `vmbr1`` verbunden werden.
+Die Netzwerkkarte ``net1`` ist hier mit der Bridge ``vmbr5`` verbunden, die wir bislang gar nicht haben. Diese Netzwerkkarte muss nun mit unserer Bridge für das externe Netz ``vmbr1`` - Anpassungen siehe nächster Schritt - verbunden werden.
 
-Wähle hierzu die Netzwerkarte ``net1`` aus und klicke auf ``Edit``. Es erscheint ein Fenster mit den Einstellungen der Netzwrkkarte.
+Wähle hierzu die Netzwerkarte ``net1`` aus und klicke auf ``Edit``. Es erscheint ein Fenster mit den Einstellungen der Netzwerkkarte.
 Ändere den Eintrag für die Bridge auf ``vmbr1`` wie in der Abb. zu sehen ist:
 
 .. figure:: media/image_24.png
@@ -661,17 +663,24 @@ Danach müssen für die OPNSense-VM die Netzwerkeintragungen wie folgt aussehen:
    :alt: Schritt 25
 
 Für die VMs ``server, opsi, docker`` müssen die Einstellungen für die Netzzwerkkarte ebenfalls überprüft werden.
-Alle müssen mit der ``Bridge vmbr1 (internes Netz)`` verbunden werden. Dies erfolgt wie zuvor dargestellt.
+Alle müssen mit der ``Bridge vmbr0 (internes Netz)`` - siehe nächster Schritt - verbunden werden. Dies erfolgt wie zuvor dargestellt.
 
 Proxmox - Host: Zugriff von außen unterbinden
 =============================================
 
-Um nach der Erstinstallation und -konfiguration den Zugriff auf den Proxmox - Host von außen zu unterbinden, ist nun die Netzwerkschnittstelle und die IP für den Proxmox-Host zu ändern.
+Um nach der Erstinstallation und -konfiguration den Zugriff auf den Proxmox - Host von außen zu unterbinden, ist nun die Netzwerkschnittstelle und die IP für den Proxmox-Host zu ändern. Zudem ist die Verkabelung zu ändern.
+
+Das Management-Interface (WebUI) des Proxmox-Host ist immer auf ``vmbr0`` festgelegt. Daher müssen nun die IP-Einstellungen, 
+die DNS-Auflösung und der Hostname an mehreren Stellen geändert werden.
+
+Dies erledigst du mit folgenden drei Konfigurationsschritten:
+
+**1. Ändern der sog. interfaces**
 
 Du öffnest wie zuvor beschrieben die Shell des Proxmox-Host.
-Dann editierst Du die Datei ``/etc/network/interfaces`` und speicherst diese Änderungen.
+Dann editierst Du die Datei ``/etc/network/interfaces`` und speicherst die Änderungen.
 
-Mit in der Dokumentation zuvor angegebenen Adressen änderst Du die Eintragungen wie folgt:
+Mit den in der Dokumentation zuvor angegebenen Adressen änderst Du die Eintragungen wie folgt:
 
 .. code::
 
@@ -679,36 +688,57 @@ Mit in der Dokumentation zuvor angegebenen Adressen änderst Du die Eintragungen
   iface lo inet loopback
   
   iface eno1 inet manual
+  
   iface eno2 inet manual
 
   auto vmbr0
-  iface vmbr0 inet manual # externe NIC 
-        bridge-ports eno1 # erste NIC an vmbr0 gebunden
-        bridge-stp off
-        bridge-fd 0
-  #Bridge red / extern
-
-  auto vmbr1
-  iface vmbr1 inet manual
+  iface vmbr0 inet static # externe NIC 
         address 10.0.0.20 #IP aus dem internen / gruenen Netz - IP des Proxmox-Host
         netmask 255.255.0.0  # Subnetzmaske 16 = 255.255.0.0
         gateway 10.0.0.254  #IP der OPNSense Firewall
-        bridge-ports eno2 # Bridge an zweite NIC gebunden 
+        bridge-ports eno1 # erste NIC an vmbr0 gebunden
         bridge-stp off
         bridge-fd 0
   #Bridge green / intern
 
-Physikalisch ist die erste Netzwerkkarte mit dem (DSL-)Router und die zweite Netzwerkkarte mit dem Switch zu verbinden, der für das interne Netz genutzt wird - wie zuvor beschrieben, hier ändert sich nichts.
+  auto vmbr1
+  iface vmbr1 inet manual
+        bridge-ports eno2 # Bridge an zweite NIC gebunden 
+        bridge-stp off
+        bridge-fd 0
+  #Bridge red / extern
+
+Physikalisch ist bislang die erste Netzwerkkarte mit dem (DSL-)Router und die zweite Netzwerkkarte mit dem Switch zu verbinden, der für das interne Netz genutzt wird - wie zuvor beschrieben. Dies ändert sich nun. Die Netzwerkkarte ``eno1`` wird auf den ``internen Switch`` verkabelt und die Netzwerkkarte ``eno2`` wird auf den ``externen -Swicth / (DSL-)Router`` verkabelt.
+
+**2. Ändern des hostname**
+
+Öffne die Datei ``/etc/hosts/`` und ändere diese wie folgt:
+
+.. code::
+
+   127.0.0.1 localhost.localdomain localhost
+   10.0.0.20 hv01.linuxmuster.lan hv01
+
+IPv6 - Einträge mit ``::1`` oder mit ``fe`` und ``ff`` beginnend können so bleiben.
+
+**3. Ändern der DNS-Auflösung**
+
+Öffne die Datei ``/etc/resolv.conf`` und ändere diese wie folgt:
+
+.. code::
+
+   search linuxmuster.lan
+   nameserver 10.0.0.254
+
+Dies ist die interne IP-Adresse der OPNSense Firewall.
 
 Zur Übernahme der Einstellungen ist der Proxmox-Host neu zu starten (``Reboot``).
 
 .. attention::
 
-   Nach dem Neustart kannst du nicht mehr mit dem Laptop, der auf dem Switch für das externe Netz steckt ud eine IP aus dem Bereich 
-   192.168.199.x/24 hat, mit der Proxmox-GUI verbinden. Schliesse die zweite Netzwerkkarte des Servers und den Admin-Laptop auf den 
-   internen Switch an und konfiguriere diesen mit der IP 10.0.0.10/16, Gateway & DNS 10.0.0.254
+   Nach dem Neustart kannst du nicht mehr mit dem Laptop, der bislang auf dem Switch für das externe Netz steckt und eine IP aus dem Bereich 192.168.199.x/24 hat, mit der Proxmox-GUI verbinden. Schließe die erste Netzwerkkarte (eno1) des Servers und den Admin-Laptop auf den internen Switch an und konfiguriere den Laptop mit der IP 10.0.0.10/16, Gateway & DNS 10.0.0.254. Stecke das Netzwerkkabel der zweiten Netzwerkkarte (eno2) auf den externen Switch / (DSL-)Router).
 
-Die WebUI des Proxmox-Host erreichst du jetzt mit der Adresse ``https://10.0.0.20:8006``.
+Die WebUI des Proxmox-Host erreichst du über den Laptop mit der IP ``10.0.0.10/16``, der am internen Switch angeschlossen ist, mit der Adresse ``https://10.0.0.20:8006``.
 
 Virtuelle Maschinen starten
 ===========================
@@ -729,6 +759,8 @@ linuxmuster.net-Installation durchgeführt werden.
 
 Konfiguriere zuerst die Firewall, indem Du dort die Netzwerschnittstellen korrekt zuweist und die IP-Adressen zuordnest. 
 Diese sorgt nun dafür, dass das gesamte System Zugriff auf exterene Netze / das Internet hat.
+
+Zum jetzigen Zeitpunkt hat dein Proxmox-Host keine Internet-Verbindung. Diese erhält dieser erst wieder, wenn die OPNSense-VM eingerichtet wurde.
 
 ======================================== =================
 Weiter geht es mit der Erstkonfiguration |follow_me2setup|
