@@ -138,6 +138,7 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   :hidden:
 
   external-services/moodle/index
+  external-services/nextcloud/index
 
 .. toctree::
   :maxdepth: 1
