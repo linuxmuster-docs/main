@@ -1,3 +1,5 @@
+.. _new-label:
+
 Dokumentation lokal bearbeiten und veröffentlichen
 ==================================================
 

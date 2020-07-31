@@ -1,3 +1,5 @@
+.. _guidelines-label:
+
 Leitlinien zur Dokumentation
 ============================
 

@@ -1,3 +1,5 @@
+.. _edit-on-github-label:
+
 Dokumentation in GitHub ändern
 ------------------------------
 
