@@ -29,7 +29,7 @@ das Setup initiierst.
 Zweiter Teil der Installation
 =============================
 
-Im zweiten Abschnitt sind die Festplatten des Hypervisor den eigenen Anforderungen anzupassen. Diese hängen im Großen und Ganzen von der Größe der Schule ab. Maßgebend sind hier vor allem die Anzahl der Nutzer und der verschiedenen Hardware-Klassen der Client Systeme und deren Betriebssysteme.
+Im zweiten Abschnitt sind die Festplatten des Hypervisor an die eigenen Anforderungen anzupassen. Diese hängen im Großen und Ganzen von der Größe der Schule ab. Maßgebend sind hier vor allem die Anzahl der Nutzer und der verschiedenen Hardware-Klassen der Client Systeme und deren Betriebssysteme.
 
 .. figure:: media/overview-installation-process_02_part2.svg
    :align: center
