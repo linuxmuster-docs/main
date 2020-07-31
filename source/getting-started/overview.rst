@@ -5,7 +5,7 @@
 =========================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
-                   `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
+                   `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
 Nachstehend findest du nach Installationsabschnitten gegliedert eine Übersicht zur Installation der 
 linuxmuster.net v7 mit möglichen Installationsoptionen. Die Menüführung folgt diesem Ablauf.
