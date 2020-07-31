@@ -1,3 +1,5 @@
+.. _guidelines-label:
+
 Leitlinien zur Dokumentation
 ============================
 
@@ -19,10 +21,10 @@ Auf Ebene der Dateien:
 
   .. code-block:: rst
 
-     laufende-nummer_(unter)kapitelbezeichnung_beschreibung-des-dargestelltem
+     (unter)kapitelbezeichnung_laufende-nummer_beschreibung-des-dargestelltem
   
-  -  laufende-nummer <-- Bilder ihrer Verwendung nach von oben nach unten fortlaufend durchnummeriert; eine führende Null
   -  (unter)kapitelbezeichnung <-- Titel des Kapitels bzw. des Unterkapitels in dem die Medien-Datei verwendet wird
+  -  laufende-nummer <-- Bilder ihrer Verwendung nach von oben nach unten fortlaufend durchnummeriert; eine führende Null
   -  beschreibung-des-dargestelltem <-- Bei Fenstern zum Beispiel der Namen des Fensters
   -  Unterstrich (_) um die drei Felder voneinander abzugrenzen
   
@@ -31,10 +33,10 @@ Auf Ebene der Dateien:
   
   .. code-block:: rst
 
-     ../install-on-xcp-ng/media/01_install-on-xcp-ng_network-sketch.png
+     ../install-on-xcp-ng/media/install-on-xcp-ng_01_network-sketch.png
 
   
-  Hinzugefügte Dateien erben von der vorhergehenden Datei die Laufende-Nummer und die wird um eine neu aufsteigende Nummerierung ergänzt
+  Hinzugefügte Dateien erben von der vorhergehenden Datei die Laufende-Nummer und die wird um eine neu aufsteigende Nummerierung ergänzt.
 		  
      .. figure:: media/09_guedelines_view-of-the-file-structure.png
         :align: center
@@ -74,7 +76,7 @@ Styleguide
 
 - Ein Kapitel sollte einen toctree enthalten, wenn es mehrere Dateien gibt
 
-- Ein Kapitel kann ein Label erhalten
+- Ein Kapitel kann ein Label erhalten bzw. muss eines erhalten wenn es als Sprungziel dienen könnte. 
 
   .. code-block:: rst
 
@@ -82,6 +84,8 @@ Styleguide
 
      Bekannte Fehler
      ===============
+
+  Bennungen dieser Sprungpunkte sollen immer mit ``-label`` enden   
 
 - Mit diesem Sprungpunkt kann man an anderer Stelle auf ihn verweisen
 

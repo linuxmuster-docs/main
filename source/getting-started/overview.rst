@@ -5,7 +5,7 @@
 =========================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
-                   `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
+                   `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
 Nachstehend findest du nach Installationsabschnitten gegliedert eine Übersicht zur Installation der 
 linuxmuster.net v7 mit möglichen Installationsoptionen. Die Menüführung folgt diesem Ablauf.
@@ -22,28 +22,37 @@ Installation eines Hypervisors geht diese Dokumentation davon aus, dass du die f
 jeweiligen Hypervisor die vorbereiteten virtuellen Machinen (VMs) importierst und danach
 das Setup initiierst.
 
-.. figure:: media/installation-process-part1.svg
+.. figure:: media/overview-installation-process_01_part1.svg
    :align: center
-   :alt: Übersicht zum Installationsablauf
+   :alt: Installationsvorbereitung und Start der Durchführung
 
 Zweiter Teil der Installation
 =============================
 
-Im zweiten Abschnitt der Installation sind die Netzbereiche (IP-Adressen oder / und Netzsegmentierung)
-auf die eigenen Anforderungen anzupassen und im Netz umzusetzen.
+Im zweiten Abschnitt sind die Festplatten des Hypervisor den eigenen Anforderungen anzupassen. Diese hängen im Großen und Ganzen von der Größe der Schule ab. Maßgebend sind hier vor allem die Anzahl der Nutzer und der verschiedenen Hardware-Klassen der Client Systeme und deren Betriebssysteme.
 
-.. figure:: media/installation-process-part2.svg
+.. figure:: media/overview-installation-process_02_part2.svg
    :align: center
-   :alt: Installation: Abschnitt 2
+   :alt: Vergrößerung der Festplatten bei virtuellen Maschinen
 
 Dritter Teil der Installation
 =============================
 
-Im dritten Abschnitt der Installation ist die Erstkonfiguration der Firewall und des
-Servers oder eventuell die Migration einer bestehenden v6.2 Installation durchzuführen. 
-Danach sind Benutzer anzulegen und letzte Anpassungen vorzunehmen.
+Im dritte Abschnitt der Installation sind die Netzbereiche (IP-Adressen oder / und Netzsegmentierung)
+auf die eigenen Anforderungen anzupassen und im Netz umzusetzen.
 
-.. figure:: media/installation-process-part3.svg
+.. figure:: media/overview-installation-process_03_part3.svg
+   :align: center
+   :alt: Installation: Abschnitt 2
+
+Vierter Teil der Installation
+=============================
+
+Im vierten Abschnitt der Installation ist die Erstkonfiguration der Firewall und des
+Servers vorzunehmen und Benutzer und Geräte anzulegen oder eventuell die Migration einer bestehenden v6.2 Installation durchzuführen. 
+Abschließend sind letzte Anpassungen u.a. Aufnahme der Arbeitsstationen vorzunehmen.
+
+.. figure:: media/overview-installation-process_04_part4.svg
    :align: center
    :alt: Installation: Abschnitt 3
 
@@ -60,6 +69,20 @@ Nachstehend kannst du den Installationsablauf als Übersicht im PDF-Format herun
 
 :download:`Übersicht als PDF-Datei <media/overview-installation-process.pdf>`
 
+Führung durch die Installation
+==============================
+
+Um dich durch die Installation zu führen, stehen dir unten auf den einzelnen Seiten jeweils die ``Next`` und ``Previous``- Buttons zur Verfügung. Diese werden automatisch von der von uns eingesetzten Dokumentationssoftware erstellt und folgen immer dem Aufbau des linken Menüs.
+
+* Daraus ergibt sich, das ``Ǹext`` dich zum nächsten Schritt der Installation führt.
+* Aber der ``Previous`` dich nicht immer zur zuletzt gesehenen Seite. Benutze besser den Zurück-Button deines Browsers.
+
+  .. image:: /media/link_arrow.svg
+     :width: 200 px
+     :align: center
+     :alt: Follow_me_Button
+
+Dieser Pfeil wird dich durch die Installation führen, wenn es zu einer Verzweigung bzw. Zusammenführung im Ablaufplan kommt. Nutze ansonsten immer den ``Next``- Button. 
 
 Nächste Schritte
 ================
@@ -67,20 +90,5 @@ Nächste Schritte
 Um die Planung der Installation stärker auf deine Bedürfnisse hin
 abstimmen zu können, findest du im Kapitel `Vorüberlegungen` 
 entsprechende Hilfestellungen.
-
-- :ref:`Vorüberlegungen zur Installation von linuxmuster.net v7 <prerequisites-label>`
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
