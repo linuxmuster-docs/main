@@ -1,8 +1,7 @@
 .. _install-overview-label:
 
-=========================
- Installation: Übersicht
-=========================
+Installation: Übersicht
+=======================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
                    `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_
@@ -13,7 +12,7 @@ linuxmuster.net v7 mit möglichen Installationsoptionen. Die Menüführung folgt
 Am Ende des Kapitels findest du den Gesamtablauf nochmals als Gesamtübersicht - auch zum Download.
 
 Erster Teil der Installation
-============================
+++++++++++++++++++++++++++++
 
 Im ersten Abschnitt geht es darum, die eigene Installation gemäß den eigenen Anforderungen 
 und Rahmenbedingungen zu planen, den geeigneten Hypervisor auszusuchen und diesen zu installieren 
@@ -27,7 +26,7 @@ das Setup initiierst.
    :alt: Installationsvorbereitung und Start der Durchführung
 
 Zweiter Teil der Installation
-=============================
++++++++++++++++++++++++++++++
 
 Im zweiten Abschnitt sind die Festplatten des Hypervisor an die eigenen Anforderungen anzupassen. Diese hängen im Großen und Ganzen von der Größe der Schule ab. Maßgebend sind hier vor allem die Anzahl der Nutzer und der verschiedenen Hardware-Klassen der Client Systeme und deren Betriebssysteme.
 
@@ -36,7 +35,7 @@ Im zweiten Abschnitt sind die Festplatten des Hypervisor an die eigenen Anforder
    :alt: Vergrößerung der Festplatten bei virtuellen Maschinen
 
 Dritter Teil der Installation
-=============================
++++++++++++++++++++++++++++++
 
 Im dritte Abschnitt der Installation sind die Netzbereiche (IP-Adressen oder / und Netzsegmentierung)
 auf die eigenen Anforderungen anzupassen und im Netz umzusetzen.
@@ -46,7 +45,7 @@ auf die eigenen Anforderungen anzupassen und im Netz umzusetzen.
    :alt: Installation: Abschnitt 2
 
 Vierter Teil der Installation
-=============================
++++++++++++++++++++++++++++++
 
 Im vierten Abschnitt der Installation ist die Erstkonfiguration der Firewall und des
 Servers vorzunehmen und Benutzer und Geräte anzulegen oder eventuell die Migration einer bestehenden v6.2 Installation durchzuführen. 
@@ -57,7 +56,7 @@ Abschließend sind letzte Anpassungen u.a. Aufnahme der Arbeitsstationen vorzune
    :alt: Installation: Abschnitt 3
 
 Installationsübersicht
-======================
+++++++++++++++++++++++
 
 Nachstehende Grafik bietet dir einen Gesamtüberblick über den Installationablauf der linuxmuster.net v7.
 
@@ -70,7 +69,7 @@ Nachstehend kannst du den Installationsablauf als Übersicht im PDF-Format herun
 :download:`Übersicht als PDF-Datei <media/overview-installation-process.pdf>`
 
 Führung durch die Installation
-==============================
+++++++++++++++++++++++++++++++
 
 Um dich durch die Installation zu führen, stehen dir unten auf den einzelnen Seiten jeweils die ``Next`` und ``Previous``- Buttons zur Verfügung. Diese werden automatisch von der von uns eingesetzten Dokumentationssoftware erstellt und folgen immer dem Aufbau des linken Menüs.
 
@@ -85,7 +84,7 @@ Um dich durch die Installation zu führen, stehen dir unten auf den einzelnen Se
 Dieser Pfeil wird dich durch die Installation führen, wenn es zu einer Verzweigung bzw. Zusammenführung im Ablaufplan kommt. Nutze ansonsten immer den ``Next``- Button. 
 
 Nächste Schritte
-================
+++++++++++++++++
 
 Um die Planung der Installation stärker auf deine Bedürfnisse hin
 abstimmen zu können, findest du im Kapitel `Vorüberlegungen` 

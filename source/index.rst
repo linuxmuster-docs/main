@@ -1,7 +1,5 @@
-
-============
- Einführung
-============
+Einführung
+==========
 
 Herzlich Willkommen zur Dokumentation von linuxmuster.net v7! 
 
@@ -17,7 +15,7 @@ Wie es bei einem Projekt ist, dessen Entwicklungsgeschichte mittlerweile auf das
 
 Kennst du linuxmuster.net noch nicht, dann empfehlen wir dir das Kapitel
 
-  "Was ist linuxmuster.net?".
+  :ref:`what-is-linuxmuster.net-label`
 
 Hattest du schon Kontakt mit einer Installation von
 
@@ -25,9 +23,9 @@ Hattest du schon Kontakt mit einer Installation von
   | openML ( bzw. paedML-Linux) oder
   | linuxmuster.net Version 6?
 
-Dann ist das Kapitel "Was ist neu in 7.0?" für dich von Interesse.
+Dann ist das Kapitel :ref:`what-is-new-label` für dich von Interesse.
 
-Wobei wir aber sagen müssen, dass mit der Version 7 sich vieles grundlegend geändert hat. Das zuvor genannte Kapitel "Was ist linuxmuster.net?" geht auf diese Neuerungen detailliert ein. Ein Blick lohnt auf alle Fälle.
+Wobei wir aber sagen müssen, dass mit der Version 7 sich vieles grundlegend geändert hat. Das zuvor genannte Kapitel :ref:`what-is-linuxmuster.net-label` geht auf diese Neuerungen detailliert ein. Ein Blick lohnt auf alle Fälle.
 
 Neben dieser Dokumentation steht dir unsere Community in unserem Hilfeforum und unser kostenfreier Telefon-Support helfend zur Seite.
 

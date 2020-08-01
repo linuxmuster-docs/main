@@ -1,13 +1,12 @@
+.. _what-is-linuxmuster.net-label:
+
 ========================
 Was ist linuxmuster.net?
 ========================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_, `@MachtDochNix <https://ask.linuxmuster.net/u/machtdochnix>`_
 
-.. _what-is-linuxmuster.net:
-
-Schulnetz - Komplett - Anpassbar!
-=================================
+**Schulnetz - Komplett - Anpassbar!**
 
 Schulnetz
 ---------
