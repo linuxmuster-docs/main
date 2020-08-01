@@ -48,7 +48,7 @@ Die Festplattengröße sowie der genutzte RAM der jeweiligen VMs kann nach deren
 später einfach an die Bedürfnisse der Schule angepasst werden. 
 
 Bevor du dieses Kapitel durcharbeitest, lese bitte zuerst die Abschnitte
-  + :ref:`what-is-linuxmuster.net`,
+  + :ref:`what-is-linuxmuster.net-label`,
   + (:ref:`what-is-new-label`),
   +  :ref:`install-overview-label` und
   +  :ref:`prerequisites-label`.
