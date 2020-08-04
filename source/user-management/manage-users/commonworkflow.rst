@@ -7,7 +7,7 @@ Workflow zur Benutzerverwaltung
 
 Die Benutzerverwaltung erfolgt in der aktuellen linuxmuster.net Version
 mithilfe der Schulkonsole. Diese wiederum greift auf dem Server auf die 
-Benutzervwaltung sophomorix4 zu, die konsolenorientiert das Benutzermanagement 
+Benutzerverwaltung `sophomorix4` zu, die konsolenorientiert das Benutzermanagement 
 mithilfe von geeigneten Befehlen durchführt. Das Zusammenspiel folgt einem 
 ausgearbeiteten Workflow. Dieser kann unter nachstehendem Link mit allen 
 Details nachvollzogen werden: https://github.com/linuxmuster/sophomorix4/wiki/Workflows
@@ -70,10 +70,10 @@ Konfigurationseinstellungen vor der Benutzeraufnahme
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
-Nach Installation des Servers sollten Sie einige Konfigurationseinstellungen 
-für Ihre Schule festlegen.
+Nach Installation des Servers solltest du einige Konfigurationseinstellungen 
+für deine Schule festlegen.
 
-Melden Sie sich an der *Schulkonsole* durch Eingabe von
+Melde dich an der *Schulkonsole* durch Eingabe von
 https://10.0.0.1 in einen Browser als ``global-admin`` an. 
 
 .. figure:: media/01_schoolconsole_login.png
@@ -83,7 +83,7 @@ https://10.0.0.1 in einen Browser als ``global-admin`` an.
 Listenimport
 ------------
 
-Die für das Benutzermanegement relevanten Einstellungen können in der 
+Die für das Benutzermanagement relevanten Einstellungen können in der 
 *Schulkonsole* im Menü unter *Einstellungen* -> *Schuleinstellungen* vorgenommen 
 werden.
 
@@ -91,11 +91,11 @@ werden.
    :align: center
    :alt: Einstellngen für die Benutzerverwaltung
 
-Hier legen Sie fest, welche Vorgaben für den Listenimport von Benutzern mithilfe
+Hier legst du fest, welche Vorgaben für den Listenimport von Benutzern mithilfe
 von CSV-Dateien angewendet werden sollen. 
 
 Für Schüler, Lehrer und Extra-Schüler können die Vorgaben getrennt eingestellt werden.
-So können die Mindestanzahl an Zeichen für den Nachnamen, Vornamen und das Password 
+So können die Mindestanzahl an Zeichen für den Nachnamen, Vornamen und das Passwort 
 vorgegeben werden.
 
 Es kann festgelegt werden, ob beim Import ein Zufallskennwort pro Benutzer erstellt wird, 
@@ -106,8 +106,8 @@ in gesonderten Gruppen geführt und falls notwendig auch wieder reaktiviert werd
 
 Zudem kann hier die Listenkodierung für die drei CSV-Dateien festgelegt werden, die genutzt
 werden, um die Benutzer Schüler, Lehrer und Extra-Schüler aufzunehmen. Mit der Einstellung ``auto`` 
-ist es möglich, dass die Schulkonsole das sog. encoding der Datei ermittelt und entsprechend anwendet.
-Eine Ändeurung der Voreinstellung ist nur in besonderen Fällen erforderlich.
+ist es möglich, dass die Schulkonsole das Kodierung (`encoding`) der Datei ermittelt und entsprechend anwendet.
+Eine Änderung der Voreinstellung ist nur in besonderen Fällen erforderlich.
 
 Quota
 -----
@@ -115,12 +115,12 @@ Quota
 In der Schulkonsole können im Menü ``Einstellungen -> Schuleinstellungen -> Quota Vorgaben`` zur zulässigen 
 Festplattenbelegung getrennt nach den Gruppen Schüler, Lehrer und Extra-Schüler vorgenommen werden. 
 Hierdurch wird definiert, bis zu welcher Obergrenze ein Benutzer der jeweiligen Gruppen Dateien auf dem 
-Server ablegen darf. Sollte diese Obergrenze erreiht werden, so werden weitere Speichervorgänge des Benutzers 
+Server ablegen darf. Sollte diese Obergrenze erreicht werden, so werden weitere Speichervorgänge des Benutzers 
 verhindert. Erst nachdem dieser Dateien und Verzeichnisse gelöscht hat, kann dieser weiter Daten auf dem 
 Server ablegen. 
 
 Zur Ermittlung des belegten Speicherplatzes werden alle Dateien des Benutzers über alle sog. Partitionen
-hinweg gezählt. Dies bedeutet, dass der belegegte Speicherplatz aller Dateien des Benutzers im Verzeichnis 
+hinweg gezählt. Dies bedeutet, dass der belegte Speicherplatz aller Dateien des Benutzers im Verzeichnis 
 der Klasse oder Schule als auch Dateien in seinem eigenen Home-Laufwerk, das ebenfalls auf dem Server liegt,
 ermittelt wird.
 
@@ -134,7 +134,7 @@ Druck-Daten
 -----------
 
 Für Klassen können PDF-Drucker erstellt werden, um den Schülerinnen und Schülern Login-Karteikarten
-ausgebenn zu können. Um festzulegen, welche Rahmendaten der Schule mitgedruckt werden sollen, können
+ausgeben zu können. Um festzulegen, welche Rahmendaten der Schule mitgedruckt werden sollen, können
 diese im Menü  ``Einstellungen -> Schuleinstellungen -> Druck-Daten`` gesetzt werden.
 
 .. figure:: media/04_schoolconsole_school-settings-password-print-settings.png
