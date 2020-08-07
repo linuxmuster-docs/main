@@ -1,3 +1,5 @@
+.. include:: /guided_inst.subst
+
 .. _modify-net-label:
 
 ====================
@@ -30,6 +32,17 @@ Bei der Installation from Scratch:
 * Die Ubuntu VMs können nun mithilfe des linuxmuster-prepare Skripts
   (https://github.com/linuxmuster/linuxmuster-prepare) für den gewünschten neuen Netzbereich (z.B. 10.17.0.0/16) 
   vorbereitet werden.
+
+Das Skript lmn7-appliance
+-------------------------
+
+Das Skript lmn7-appliance installiert für dich das Paket linuxmuster-base7 mit all seinen Abhängigkeiten und es richtet die zweite Festplatte für den Serverbetrieb     ein.
+
+* Lade dazu das Skript mit ``wget https://archive.linuxmuster.net/lmn7/lmn7-appliance`` herunter.
+* Mach es mit ``chmod +x lmn7-appliance`` ausführbar und
+* führe ``./lmn7-appliance -p server -u -l /dev/sdb`` aus.
+
+.. hint:: Falls Du dich für das Netz der linuxmuster.net V6.2 entschieden hast, führst du statt ``./lmn7-appliance -p server -u -l /dev/sdb`` ``./lmn7-appliance -p     server -u -l /dev/sdb -n 10.16.1.1/12 -f 10.16.1.254`` aus.
 
 Im Anschluss kann das Setup ausgeführt werden, das dann den Netzbereich ausliest und für die weitere 
 Einrichtung verwendet. 
@@ -340,5 +353,8 @@ O.g. Anpassungsschritte sind für die Docker- und OPSI-Appliance in gleicher Wei
 
 Danach kann das Setup mit der WebUI oder auf der Konsole auf dem Server aufgerufen werden.
 
-Weiter zur :ref:`setup`
+======================================== ===================
+Weiter geht es mit der Erstkonfiguration  |follow_me2setup|
+======================================== ===================
+
 

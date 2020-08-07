@@ -80,17 +80,3 @@ Schlüssel importieren
 * Dann lädst du den key mit ``wget http://pkg.linuxmuster.net/archive.linuxmuster.net.key`` herunter.
 * Jetzt fügst du den Schlüssel mit ``apt-key add archive.linuxmuster.net.key`` hinzu.
 
-Das Skript lmn7-appliance
--------------------------
-
-Das Skript lmn7-appliance installiert für dich das Paket linuxmuster-base7 mit all seinen Abhängigkeiten und es richtet die zweite Festplatte für den Serverbetrieb ein.
-
-* Lade dazu das Skript mit ``wget https://archive.linuxmuster.net/lmn7/lmn7-appliance`` herunter.
-* Mach es mit ``chmod +x lmn7-appliance`` ausführbar und
-* führe ``./lmn7-appliance -p server -u -l /dev/sdb`` aus.
-
-.. hint:: Falls Du dich für das Netz der linuxmuster.net V6.2 entschieden hast, führst du statt ``./lmn7-appliance -p server -u -l /dev/sdb`` ``./lmn7-appliance -p server -u -l /dev/sdb -n 10.16.1.1/12 -f 10.16.1.254`` aus.
-
-======================================== ===================
-Weiter geht es mit der Erstkonfiguration  |follow_me2setup|
-======================================== ===================
