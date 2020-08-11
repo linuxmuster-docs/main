@@ -2,7 +2,7 @@
    This file contains all placeholders for the link_arrow graphics to ensure a central point of contact for any changes.
    To use these placeholders, the rst files that are to contain such a link must contain the include directive:
    
-   .. include:: /guided_inst.subst
+   .. include:: /guided-inst.subst
    
    The naming of the placeholders should follow the pattern |follow_me2<TARGET>|.
 
@@ -22,22 +22,22 @@
    mit relativen Pfasdangaben, ausgehend von der Seite wo der Aufruf erfolgt.
    
 .. |follow_me2proxmox| image:: /media/link_arrow.svg
-   :target: installoptions/install-on-proxmox/index.html
+   :target: install-on-proxmox/index.html
    :width: 200 px
    :align: middle
    
 .. |follow_me2kvm| image:: /media/link_arrow.svg
-   :target: installoptions/install-on-kvm/index.html
+   :target: install-on-kvm/index.html
    :width: 200 px
    :align: middle
 
 .. |follow_me2xcp-ng| image:: /media/link_arrow.svg
-   :target: installoptions/install-on-xcp-ng/index.html
+   :target: install-on-xcp-ng/index.html
    :width: 200 px
    :align: middle
 
 .. |follow_me2scratch| image:: /media/link_arrow.svg
-   :target: installoptions/install-from-scratch/index.html
+   :target: install-from-scratch/index.html
    :width: 200 px
    :align: middle
 
@@ -62,6 +62,39 @@
    :align: middle
 
 .. |follow_me2linux-clients| image:: /media/link_arrow.svg
-   :target: /getting-started/linuxclient.html
+   :target: getting-started/linuxclient.html
    :width: 200 px
    :align: middle   
+
+.. |follow_me2linux-adjusting_hard_drive_size| image:: /media/link_arrow.svg
+   :target: ../../harddisk/index.html
+   :width: 200 px
+   :align: middle   
+
+.. |follow_me2linux-modify_net| image:: /media/link_arrow.svg
+   :target: ../../network/preliminarysettings/index.html
+   :width: 200 px
+   :align: middle
+
+
+.. |follow_me2proxmox-hd| image:: /media/link_arrow.svg
+   :target: hard-drive-size-proxmox.html
+   :width: 200 px
+   :align: middle
+
+.. |follow_me2xcp-ng-hd| image:: /media/link_arrow.svg
+   :target: hard-drive-size-xcp-ng.html
+   :width: 200 px
+   :align: middle
+
+.. |follow_me2kvm-hd| image:: /media/link_arrow.svg
+   :target: hard-drive-size-kvm.html
+   :width: 200 px
+   :align: middle
+
+.. |follow_me2vm-hd| image:: /media/link_arrow.svg
+   :target: hard-drive-size-vm.html
+   :width: 200 px
+   :align: middle
+
+

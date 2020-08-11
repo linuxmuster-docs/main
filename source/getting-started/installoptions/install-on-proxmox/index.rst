@@ -1,4 +1,4 @@
-.. include:: /guided_inst.subst
+.. include:: /guided-inst.subst
 
 .. _install-on-proxmox-label:
 
@@ -762,7 +762,7 @@ Diese sorgt nun dafür, dass das gesamte System Zugriff auf exterene Netze / das
 
 Zum jetzigen Zeitpunkt hat dein Proxmox-Host keine Internet-Verbindung. Diese erhält dieser erst wieder, wenn die OPNSense-VM eingerichtet wurde.
 
-======================================== =================
-Weiter geht es mit der Erstkonfiguration |follow_me2setup|
-======================================== =================
+================================================ ===========================================
+Weiter geht es mit der Anpassung der Festplatten |follow_me2linux-adjusting_hard_drive_size|
+================================================ ===========================================
 

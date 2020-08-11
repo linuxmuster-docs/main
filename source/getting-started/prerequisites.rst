@@ -1,4 +1,4 @@
-.. include:: /guided_inst.subst
+.. include:: /guided-inst.subst
 
 .. _prerequisites-label:
 
@@ -306,26 +306,27 @@ Dort ist auch das Vorgehen um VirtualBox als Hypervisor einzusetzen beschrieben.
 
 VirtualBox wird häufig im Testbetrieb und weniger im Produktivbetrieb verwendet. Die `Entwicklerdokumentation <https://github.com/linuxmuster/linuxmuster-base7/wiki/Die-Appliances>`_ beschreibt diese Konfiguration. Es muss mindestens die Virtualbox-Version 6.0 verwendet werden.
 
-Das weitere Vorgehen
-====================
+..
+  Das weitere Vorgehen
+  ====================
 
-Nachdem du entschieden hast, ob und wie du eine Virtualisierung
-einsetzt, beginnst du mit Installation der Virtualisierung nach einer
-der oben beschriebenen Anforderungen der einzelnen Hypervisoren in dieser Dokumentation.
+  Nachdem du entschieden hast, ob und wie du eine Virtualisierung
+  einsetzt, beginnst du mit Installation der Virtualisierung nach einer
+  der oben beschriebenen Anforderungen der einzelnen Hypervisoren in dieser Dokumentation.
 
-=========================== ===================
-Virtualisierung mit Proxmox |follow_me2proxmox|
-Virtualisierung mit XCP-ng  |follow_me2xcp-ng|
-Virtualisierung mit KVM     |follow_me2kvm|
-=========================== ===================
+  =========================== ===================
+  Virtualisierung mit Proxmox |follow_me2proxmox|
+  Virtualisierung mit XCP-ng  |follow_me2xcp-ng|
+  Virtualisierung mit KVM     |follow_me2kvm|
+  =========================== ===================
 
-Alternativ installierst du von Grund auf die Serverbetriebssysteme
-*Ubuntu Server* und *OPNSense* direkt auf der Hardware oder innerhalb
-deiner Virtualisierungslösung.
+  Alternativ installierst du von Grund auf die Serverbetriebssysteme
+  *Ubuntu Server* und *OPNSense* direkt auf der Hardware oder innerhalb
+  deiner Virtualisierungslösung.
 
-=========================== ===================
-Alternative Installationen  |follow_me2scratch|
-=========================== ===================
+  =========================== ===================
+  Alternative Installationen  |follow_me2scratch|
+  =========================== ===================
 
 ..
   Checkliste

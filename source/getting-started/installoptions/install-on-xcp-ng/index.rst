@@ -1,4 +1,4 @@
-.. include:: /guided_inst.subst
+.. include:: /guided-inst.subst
 
 .. _install-on-xen-label:
 
@@ -916,18 +916,6 @@ Dies kann dann z.B. wie in folgender Abbildung aussehen:
    :align: center
    :alt: XOA Backup NG - Status
 
-
-
-
-
-
-
-
-
-
-
-
-
-======================================== =================
-Weiter geht es mit der Erstkonfiguration |follow_me2setup|
-======================================== =================
+================================================ ===========================================
+Weiter geht es mit der Anpassung der Festplatten |follow_me2linux-adjusting_hard_drive_size|
+================================================ ===========================================
