@@ -166,7 +166,7 @@ Nutzungshinweise
 Zugriff auf die Schulkonsole
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Haben Sie von den Tunnel aufgebaut, haben Sie Zugriff zum Schulnetzwerk. Sie könne somit nun uach auf die Schulkonsole zugreifen. Geben Sie dann in Ihrem Browser die gleichen Adressen wie in der Schule ein:
+Haben Sie von den Tunnel aufgebaut, haben Sie Zugriff zum Schulnetzwerk. Sie könne somit nun auch auf die Schulkonsole zugreifen. Geben Sie dann in Ihrem Browser die gleichen Adressen wie in der Schule ein:
 
 Für die Schulkonsole (evtl. kommt eine Sicherheitszertifikatsabfrage, einfach annehmen):
 
