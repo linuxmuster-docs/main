@@ -99,13 +99,73 @@ Trage dort folgenden Wert ein:
 
 .. code::
 
-   sambaccountname
+   samaccountname
 
 Funktionstests
 ==============
 
 In dem Konfigurationsmenü von Nextcloud können pro Tab / Reiterkarte die Einstellungem schrittweise getestet werden. 
 Führe diese Tests jeweils bei dein einzelnen Konfigurationsschritten aus, um so sukzessive die Fehler zu beheben.
+
+Nextcloud mit weiteren Gruppen
+===============================
+
+Soll Nextcloud nicht nur von Lehrern genutzt werden können, sondern auch von anderen Gruppen, so sind zwei Dinge erforderlich:
+
+1. Aktivierung eingebundener Gruppen
+2. LDAP-Gruppenfilter
+
+Aktivierung eingebundener Gruppen
+---------------------------------
+
+Um eingebundene Gruppen zu aktivieren, gehe auf ``LDAP /AD Integration --> Fortgeschritten --> Ordnereinstellungen --> Eingebundene Gruppen`` und aktiviere diese Funktion.
+
+LDAP-Gruppenfilter
+------------------
+
+Einstellungen: Gruppen
+""""""""""""""""""""""
+
+Unter ``LDAP / AD Integration --> Gruppen`` ist ein Gruppenfilter als LDAP-Abfrage, so zu definieren, dass die gewünschten Gruppen im AD gefunden werden.
+
+Nachstehendes Beispiel stellt eine Abfrage dar, die es ermöglicht, Klassen, Projekt, Students und Teachers als Gruppen auszuwählen. Die Gruppen Wificlass und Attic werden hierbei ausgeschlossen:
+
+.. code::
+
+   (&(|(objectclass=group))(!(|(cn=attic)(cn=wificlass)))(|(cn=teachers)(cn=students)(|(memberof=CN=students,OU=Students,OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan)(|(sophomorixType=project)))))
+
+
+Einstellungen: Benutzer
+"""""""""""""""""""""""
+
+Um Lehrer und Schüler zu erhalten, ist bei der LDAP-AD Integration unter Benutzer ein angepasster LDAP-Filter einzutragen. Nachstehender Filter liefert alle Lehrer und Schüler:
+
+.. code::
+
+  (&(|(objectclass=user))(|(|(memberof=CN=teachers,OU=Teachers,OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan)(primaryGroupID=1111))(|(memberof=CN=role-student,OU=Groups,OU=GLOBAL,DC=linuxmuster,DC=lan))))
+
+Einstellungen: Fortgeschritten
+""""""""""""""""""""""""""""""
+
+Bei der LDAP / AD Integration ist im Menüpuntk ``Forgeschritten`` (oben rechts) anzugeben, wie die Verbindung zwischen Gruppen und Benutzern zu behandeln ist. Zur Orientierung findest du nachstehend geeignete Einstellungen.
+
+.. hint::
+
+   Die Angaben zu DC=fz und DC=lan sind durch die Eintragungen für deine Domain zu ersetzen.
+
+.. image:: media/image_6.png
+   :alt: Fortgeschritten - Verbindungseinstellungenr
+   :align: center
+
+.. image:: media/image_7.png
+   :alt: Fortgeschritten - Ordnereinstellungen
+   :align: center
+
+.. image:: media/image_8.png
+   :alt: Fortgeschritten - spezeille Eigenschaften
+   :align: center
+
+
 
 
 
