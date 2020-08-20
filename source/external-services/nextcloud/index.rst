@@ -149,12 +149,9 @@ Einstellungen: Fortgeschritten
 
 Bei der LDAP / AD Integration ist im Menüpuntk ``Forgeschritten`` (oben rechts) anzugeben, wie die Verbindung zwischen Gruppen und Benutzern zu behandeln ist. Zur Orientierung findest du nachstehend geeignete Einstellungen.
 
-.. hint::
-
-   Die Angaben zu DC=fz und DC=lan sind durch die Eintragungen für deine Domain zu ersetzen.
 
 .. image:: media/image_6.png
-   :alt: Fortgeschritten - Verbindungseinstellungenr
+   :alt: Fortgeschritten - Verbindungseinstellungen
    :align: center
 
 .. image:: media/image_7.png
