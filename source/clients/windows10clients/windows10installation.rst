@@ -100,6 +100,9 @@ Es müssen einige essenzielle Einstellungen vorgenommen werden um Windows 10 ben
 Öffnen Sie den Windows Explorer und tragen in der Navigationsleiste den UNC-Pfad ``\\server\pgmadmin`` ein, um das
 Heimatverzeichnis des Benutzers *pgmadmin* auf dem Server zugreifen zu können.
 
+Hinweis: Um auf die Domäne zugreifen zu können muss auf dem Windows 10 Client SMB 1.0 nachinstalliert werden. 
+Siehe: https://ask.linuxmuster.net/t/windows-10-1709-laesst-sich-nicht-in-domain-aufnehemen/1402 
+
 |100000000000040900000309AD122632_png|
 
 Geben Sie die Benutzerdaten für den user pgmadmin ein und bestätigen Sie mit ``OK``.
