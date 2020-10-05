@@ -120,6 +120,12 @@ Aktivierung eingebundener Gruppen
 
 Um eingebundene Gruppen zu aktivieren, gehe auf ``LDAP /AD Integration --> Fortgeschritten --> Ordnereinstellungen --> Eingebundene Gruppen`` und aktiviere diese Funktion.
 
+.. hint::
+  
+   Dies ist dann erforderlich, wenn als Gruppenfilter ``cn=students`` angegeben wurde. ``cn=students`` beinhaltet nur Gruppen und 
+   keine Benutzer!
+   
+
 LDAP-Gruppenfilter
 ------------------
 
@@ -132,7 +138,12 @@ Nachstehendes Beispiel stellt eine Abfrage dar, die es ermöglicht, Klassen, Pro
 
 .. code::
 
-   (&(|(objectclass=group))(!(|(cn=attic)(cn=wificlass)))(|(cn=teachers)(cn=students)(|(memberof=CN=students,OU=Students,OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan)(|(sophomorixType=project)))))
+   (&(|(objectclass=group))(!(|(cn=attic)(cn=wificlass)))(|(cn=teachers)(cn=role-student)(|(memberof=CN=students,OU=Students,OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan)(|(sophomorixType=project)))))
+
+.. hint::
+
+   ``cn=role-student`` wählt die Gruppe mit Schülern aus, die sich im AD im GLOBAL Teil befindet. Sollte ein Mehr-Schulen-Betrieb erfolgen, ist dies
+   anzupassen.
 
 
 Einstellungen: Benutzer
@@ -142,7 +153,7 @@ Um Lehrer und Schüler zu erhalten, ist bei der LDAP-AD Integration unter Benutz
 
 .. code::
 
-  (&(|(objectclass=user))(|(|(memberof=CN=teachers,OU=Teachers,OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan)(primaryGroupID=1111))(|(memberof=CN=role-student,OU=Groups,OU=GLOBAL,DC=linuxmuster,DC=lan))))
+  (&(|(objectclass=group))(|(|(memberof=CN=teachers,OU=Teachers,OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan)(primaryGroupID=1111))(|(memberof=CN=role-student,OU=Groups,OU=GLOBAL,DC=linuxmuster,DC=lan))))
 
 Einstellungen: Fortgeschritten
 """"""""""""""""""""""""""""""
@@ -158,9 +169,17 @@ Bei der LDAP / AD Integration ist im Menüpuntk ``Forgeschritten`` (oben rechts)
    :alt: Fortgeschritten - Ordnereinstellungen
    :align: center
 
+.. hint::
+
+   Sollte die Gruppe der Schüler in den Filtereinstellungen genutzt werden, dann ist in Nextcloud 
+   bei den LDAP-Einstellungen -> Fortgeschritten als Basis-Gruppenbaum ``OU=GLOBAL,DC=linuxmuster,DC=lan``
+   einzutragen.
+
 .. image:: media/image_8.png
-   :alt: Fortgeschritten - spezeille Eigenschaften
+   :alt: Fortgeschritten - spezielle Eigenschaften
    :align: center
+
+ 
 
 
 
