@@ -171,7 +171,7 @@ Bei der LDAP / AD Integration ist im Menüpuntk ``Forgeschritten`` (oben rechts)
 
 .. hint::
 
-   Sollte die Gruppe der Schüler in den Filtereinstellungen genutzt werden, dann ist in Nextcloud 
+   Sollte die Gruppe der Schüler ``cn=role-student`` in den Filtereinstellungen genutzt werden, dann ist in Nextcloud 
    bei den LDAP-Einstellungen -> Fortgeschritten als Basis-Gruppenbaum ``OU=GLOBAL,DC=linuxmuster,DC=lan``
    einzutragen.
 
