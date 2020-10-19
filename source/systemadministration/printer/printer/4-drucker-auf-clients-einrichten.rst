@@ -198,5 +198,27 @@ Klicke unterhalb von `Tests und Wartungen` den Button `Testseite drucken` aus.
 
 Führe das Verfahren aus allen Räumen und von allen PCs durch, für die du vorher spezielle ACLs festgelegt hast.
 
+Apple Mac OS X -Clients
+------------------------
 
+Bei der Standardkonfiguration kann es passieren, dass die Kommunikation mit dem Drucker nicht funktioniert und zum Beispiel nach der Installation jeder Druck auf einen Fehler läuft:
+
+.. code::
+
+  Waiting for Authentication...
+
+Wenn man einen Drucker unter MacOS mit dem Drucker-Dialog hinzufügt, kann man nur das IPP Protokoll auswählen (Reiter "IP"). 
+Bei "Address" trägt man ``10.16.1.1:631`` ein und unten bei "Queue" ``/printers/printer-name`` (z.B. /printers/lz-drucker).
+
+Bei uns hat das trotzdem nicht richtig funktioniert, daher haben wir zunächst die Weboberfläche von CUPS aktiviert (localhost:631) und anschließend dort den Drucker per IPP-Protokol und http://10.16.1.1:631/printers/printer-name hinzugefügt.
+
+Jetzt könnte das Drucken schon klappen.
+
+.. hint::
+
+   Bei einem Drucker gab es auch ein Treiberproblem und der Drucker druckte nur Kauderwelsch.  Statt den generischen Postscript-Treiber kann es helfen den generischen PCL Treiber nehmen. Oder in einem anderen Fall half nur die Installation der Originaltreiber (in dem Fall von Kyocera).
+
+.. hint::
+
+   Ein ähnliches Problem mit dem Drucker und MacOS X siehe https://ask.linuxmuster.net/t/mac-os-x-clients-an-cups/1176
 
