@@ -126,6 +126,12 @@ mit dem Passwort von "LINBO" abgesichert.
 
 .. attention::
 
-   Bei der Eingabe des LINBO-Passwortes werden keine Zeichen
-   angezeigt, weder das Passwort selbst, noch Sterne.
+   Bei der Eingabe des LINBO-Passwortes werden keine Zeichen angezeigt, weder das Passwort selbst, noch Sterne.
+ 
+Passwort für "LINBO" ändern
+===========================
+ 
+Das Passwort steht im Klartext auf dem Server in der Datei ``/etc/rsync.secret`` und kann einfach mit einem Editor geändert werden.
+ 
+Nach einer Änderung wird das Passwort mit den nächsten Sync, bzw. Netzwerkboot aktualisiert.
 
