@@ -1,31 +1,22 @@
 Patchklassen für Postsync-Scripte
 =================================
 
+Die Bereiche, für die Anpassungen vorgenommen werden sollen, heißen Patchklassen.
+
 **Wo müssen die Anpassungen (Patches) abgelegt werden ?**
 
-Unter 
-
-.. code:: bash
-
-   /srv/linbo/linuxmuster-client/
-
-Dort finden sich weitere Unterverzeichnisse. Diese stellen die sog. Patchklasse dar. 
-Wird also z.B. der Linuxmuster-Client 18.04 (bionic = Name der Patchklasse) verwendet, 
-so sind alle weiteren Patches für 18.04er-Clients in diesem Verzeichnis abzulegen. 
-
-Die Anpassungen finden sich also unter:
+Unter ``/srv/linbo/linuxmuster-client/`` finden sich weitere Unterverzeichnisse, welche die sog. Patchklassen darstellen.
+In er ersten Ebene wird nach dem verwendeten Image (cloop-Datei) unterschieden.
+Beim Einsatz des Linuxmuster-Client 18.04 (bionic = Name der Patchklasse) sind
+alle weiteren Patches für die 18.04er-Clients in dem Verzeichnis ``bionic`` abzulegen.
+Bei Linuxmuster-Clients 20.04 (Focal Fossa) wäre dies z.B. das Verzeichnis ``focalfossa``:
 
 .. code:: bash
 
    /srv/linbo/linuxmuster-client/bionic/
-
-Bei Linuxmuster-Clients 20.04 (Focal Fossa) wäre dies z.B. das Verzeichnis:
-
-.. code:: bash
-
    /srv/linbo/linuxmuster-client/focalfossa/
 
-Diese Patches werden nach folgendem Schema angewendet:
+In der nächsetn Ebene können weiter Unterscheidungen nach folgendem Schema angewendet werden:
 
 .. code:: bash
 
@@ -33,51 +24,28 @@ Diese Patches werden nach folgendem Schema angewendet:
    im Unterverzeichnis  .../r100 liegende Patches erhalten nur die Rechner in Raum r100
    im Unterverzeichnis .../r100-pc01 liegende Patches erhält nur der PC01 in Raum r100 die Dateien.
 
-Unterhalb dieser Verzeichnisse sind alle Anpassungen so abzulegen, wie diese dann auf 
-den betreffenden Clients angewendet werden sollen - bsp.:
+Unterhalb dieser Verzeichnisse sind alle Anpassungen so abzulegen, dass sie mit der Verzeichnisstruktur
+der betreffenden Clients identisch ist. So wird z.B. beim Anlgegen der Datei auf dem Server:
 
 .. code:: bash
 
    .../common/etc/cups/cups.conf
 
-Auf diese Weise würde die Datei cups.conf im Verzeichnis /etc/cups auf allen Clients der 
-Patchklasse angepasst werden.
+die cups.conf im Verzeichnis /etc/cups auf allen Clients der Patchklasse angepasst werden.
 
 In der Patchklasse ``focalfossa`` würde eine Änderung der Datei rc.local auf allen Rechnern 
-in folgendem Verzeichnis abgelegt:
+in folgendem Server-Verzeichnis abgelegt werden:
 
 .. code:: bash
 
    /srv/linbo/linuxmuster-client/focalfossa/common/etc/rc.local
 
-Um auf dem Server obige Verzeichnisstruktur zu erhalten, ist auf dem linuxmuster.net 
-Server das Paket **linuxmuster-client-servertools** zu installieren. 
 
-Hierzu ist folgender Befehel anzuwenden:
+**Weitere Skripte ausführen**
 
-.. code:: bash
-
-   sudo apt install linuxmuster-client-servertools
-
-
-Dieses Paket liefert ein sog. universelles Postsync-Script mit, das weiter angepasst und 
-auf die Cloops angewendet werden kann. 
-
-Dieses Script ist zur Anwendung auf ein Cloop entsprechend zu kopieren:
-
-.. code:: bash
-
-   /srv/linbo/<LinuxImagename>.cloop.postsync
-
-Die Vorlage des universellen Postsync-Scriptes liegt in folgendem Verzeichnis: 
-
-.. code:: bash
-
-   /usr/lib/linuxmuster-client-servertools/generic.postsync
-
-Dieses Script ist so aufgebaut, dass auch noch weitere Scripte ausgeführt werden 
-(z.B. solche, die nur in Raum r100 ausgeführt werden sollen). Scripte, die abgearbeitet 
-werden sollen, müssen in dem jeweiligen Unterverzeichnis postsync.d liegen.
+Das universelle Postsync-Script ist so aufgebaut, dass auch noch weiter Scripte ausgeführt werden können.
+So können z.B. spezielle Anpassungen von PC in einem bestimmten Raum vorgenommen werden.
+Alle abzuarbeitenden Scripte müssen im Verzeichnis postsync.d liegen.
 
 Sollen Scripte für die Patchklasse focalfossa und dann nur auf PCs im Raum r100 angewendet 
 werden, so müssen die Scripte in folgendem Verzeichnis liegen:
@@ -87,14 +55,7 @@ werden, so müssen die Scripte in folgendem Verzeichnis liegen:
    /srv/linbo/linuxmuster-client/focalfossa/r100/postsync.d/
 
 Die Skripte müssen Sh-Scripte sein, da Linbo keine BASH als Shell kennt.
-
-In diesen Scripten ist der Shebang
-
-.. code:: bash
-
-   #!/bin/sh
-
-voranzustellen.
+In diesen Scripten ist der Shebang ``#!/bin/sh`` voranzustellen.
 
 Beipiele für solche Scripte finden sich im Verzeichnis
 
