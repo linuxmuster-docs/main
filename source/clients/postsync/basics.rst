@@ -6,13 +6,16 @@ Funktionsweise und Grundlagen der Postsync-Scripte
 .. attention:: 
    TODO - der originale Text beschreibt, dass es zwei Postsyncskripte gibt. Eines das quasi nach dem synchonisieren mit dem Server angewendet wird und ein "universelles" Postsyncscritp. Stimmt das? Ich kenne nämlich nur das Imagename.cloop.postsync
    
-Nachdem der Linux-Client mit Linbo seinen lokalen Cache mit dem Cloop (ist ein Client-Image) auf dem Server synchronisiert hat, kann ein für diesen Cloop definiertes Postsync-Script angewendet werden. Dieses ermöglicht es z.B. spezifische Anpassungen (sogenannte Patches) vorzunehmen und die PCs somit auf deren Einsatzumgebung anzupassen. Hierdurch können z.B. spezielle Anpassungen für Lehrer – PCs, oder für PCs in speziellen Räumen, oder für alle zu nutzenden Drucker bereitgestellt werden.
+Nachdem mit Hilfe von LINBO der Linux-Client die Imagedatei (cloop-Datei) vom Server geholt und auf den Client synchronisiert hat,
+kann ein für dieses Image definiertes Postsync-Script angewendet werden.
+Dieses ermöglicht es spezifische Anpassungen (sogenannte Patches) vorzunehmen und die PCs somit auf deren Einsatzumgebung anzupassen.
+Hierdurch können z.B. spezielle Anpassungen für Lehrer-PCs, für PCs in speziellen Räumen, oder für alle zu nutzenden Drucker bereitgestellt werden.
 
 **Voraussetzungen für die Nutzung der Scripte**
 
 Die Skripte funktionieren im Prinzip ohne die Installation weiterer Pakete. Wer sich das manuelle Anlegen von Ordnern ersparen möchte, sollte sich auf dem linuxmuster.net-Server das Paket **linuxmuster-client-servertools** installieren:
 
-.. code:: bash
+.. code-block:: console
 
    sudo apt install linuxmuster-client-servertools
 
@@ -24,7 +27,10 @@ auf die Cloops angewendet werden kann.
 
 **Wo liegt das Postsync-Script ?**
 
-Das Postsync-Script liegt im Verzeichnis ``/srv/linbo/``. Der Name wird zusammengeetzt aus dem Name der cloop-Datei, mit welchem das Skript zusammen arbeitet, gefolgt von der Endung ``.postsync``:
+Das Postsync-Script liegt im Verzeichnis ``/srv/linbo/``. Der Name wird zusammengesetzt aus
+
+  #. dem Name der cloop-Datei, mit welchem das Skript zusammen arbeitet
+  #. gefolgt von der Endung ``.postsync``:
 
 .. code:: bash
 

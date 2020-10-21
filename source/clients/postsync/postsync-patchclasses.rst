@@ -6,7 +6,7 @@ Die Bereiche, für die Anpassungen vorgenommen werden sollen, heißen Patchklass
 **Wo müssen die Anpassungen (Patches) abgelegt werden ?**
 
 Unter ``/srv/linbo/linuxmuster-client/`` finden sich weitere Unterverzeichnisse, welche die sog. Patchklassen darstellen.
-In er ersten Ebene wird nach dem verwendeten Image (cloop-Datei) unterschieden.
+In der ersten Ebene wird nach dem verwendeten Image (cloop-Datei) unterschieden.
 Beim Einsatz des Linuxmuster-Client 18.04 (bionic = Name der Patchklasse) sind
 alle weiteren Patches für die 18.04er-Clients in dem Verzeichnis ``bionic`` abzulegen.
 Bei Linuxmuster-Clients 20.04 (Focal Fossa) wäre dies z.B. das Verzeichnis ``focalfossa``:
@@ -25,7 +25,7 @@ In der nächsetn Ebene können weiter Unterscheidungen nach folgendem Schema ang
    im Unterverzeichnis .../r100-pc01 liegende Patches erhält nur der PC01 in Raum r100 die Dateien.
 
 Unterhalb dieser Verzeichnisse sind alle Anpassungen so abzulegen, dass sie mit der Verzeichnisstruktur
-der betreffenden Clients identisch ist. So wird z.B. beim Anlgegen der Datei auf dem Server:
+der betreffenden Clients identisch ist. So wird z.B. beim Anlegen der Datei auf dem Server:
 
 .. code:: bash
 
