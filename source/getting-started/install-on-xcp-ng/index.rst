@@ -721,9 +721,9 @@ Import der VM
 Lade zuerst die vorbereitete XOA-VM für linuxmuster.net als ZIP-Archiv_ herunter. Entpacke dieses Archiv lokal (ca. 6 GiB) und importiere dann die VM wie bereits zuvor 
 im Unterkapitel_ ``VMs importieren`` beschrieben.  
 
-.. _ZIP-Archiv: http://fleischsalat.linuxmuster.org/xva/lmn7-xoa-2019-03-08.zip
+.. _ZIP-Archiv: https://download.linuxmuster.net/xcp-ng/v6.2/lmn62.xoa.xva.zip
 
-.. _Unterkapitel: http://docs.linuxmuster.net/de/v7/appendix/install-on-xcp-ng/index.html#vms-importieren
+.. _Unterkapitel: https://docs.linuxmuster.net/de/v6/getting-started/install-on-xcp-ng/index.html#vms-importieren
 
 Anpassung der VM
 ~~~~~~~~~~~~~~~~
@@ -773,7 +773,7 @@ Klicke auf ``Connect``. Es wird nun von der XOA-VM die Verbindung zum XCP-ng Hos
    Falls Du einen XCP-ng Pool mit mehreren Servern und Speicherressourcen definiert hast, must Du hier nur den Pool-Master als Server eintragen. 
    Alle weiteren Server und Ressourcen werden dann automatisch erkannt.
 
-Ändere nun das voreingestellte Kennwort für den root-Benutzer (admin@admin.net) der XOA-VM. Klicke hierzu auf der linken Menüleist ganz unten auf der Personensymbol.
+Ändere nun das voreingestellte Kennwort für den root-Benutzer (admin@admin.net) der XOA-VM. Klicke hierzu auf der linken Menüleiste ganz unten auf das Personensymbol.
 
 .. figure:: media/63_xoa_edit-my-settings.png
    :align: center
@@ -785,7 +785,7 @@ Danach bist du im Kontexmenü des Benutzers, für den Du das Kennwort ändern un
    :align: center
    :alt: Password Ämderung
 
-Trage das bisherige Kennwort ``Muster!`` sowie zweimal Dein neunes Kennwort ein, stelle die Sprache ein und bestätige die Änderungen mit einem Klick auf ``OK``.
+Trage das bisherige Kennwort ``Muster!`` sowie zweimal Dein neues Kennwort ein, stelle die Sprache ein und bestätige die Änderungen mit einem Klick auf ``OK``.
 
 SSH-Verbindung zur VM
 ~~~~~~~~~~~~~~~~~~~~~
