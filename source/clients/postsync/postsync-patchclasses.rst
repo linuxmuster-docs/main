@@ -16,7 +16,7 @@ Bei Linuxmuster-Clients 20.04 (Focal Fossa) wäre dies z.B. das Verzeichnis ``fo
    /srv/linbo/linuxmuster-client/bionic/
    /srv/linbo/linuxmuster-client/focalfossa/
 
-In der nächsetn Ebene können weiter Unterscheidungen nach folgendem Schema angewendet werden:
+In der nächsten Ebene können weiter Unterscheidungen nach folgendem Schema angewendet werden:
 
 .. code:: bash
 
@@ -44,7 +44,7 @@ in folgendem Server-Verzeichnis abgelegt werden:
 **Weitere Skripte ausführen**
 
 Das universelle Postsync-Script ist so aufgebaut, dass auch noch weiter Scripte ausgeführt werden können.
-So können z.B. spezielle Anpassungen von PC in einem bestimmten Raum vorgenommen werden.
+So können z.B. spezielle Anpassungen von PCs in einem bestimmten Raum vorgenommen werden.
 Alle abzuarbeitenden Scripte müssen im Verzeichnis postsync.d liegen.
 
 Sollen Scripte für die Patchklasse focalfossa und dann nur auf PCs im Raum r100 angewendet 
@@ -87,7 +87,7 @@ Das allgemeine Postsync-Script arbeitet nach folgendem Schema:
 
 **Beispiel**
 
-Nachstehender Verzeichnisbaum verdeutlicht, dass für Linuxmuster-Clients für alle PCs der Patchklasse xenial alles unterhalb von ./common angewendet wird. 
+Nachstehender Verzeichnisbaum verdeutlicht, dass für Linuxmuster-Clients für alle PCs der Patchklasse focalfossa alles unterhalb von ./common angewendet wird. 
 Zudem wird für den raum1 alles unterhalb von ./raum1 angewendet und schließlich wird für den Lehrer-PC in raum1 alles unterhalb von ./raum1-lehrer-pc angewendet.
 
 .. code:: bash
