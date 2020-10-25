@@ -93,7 +93,7 @@ Die Datei muss folgenden Inhalt aufweisen:
 
 .. code::
 
-  ServerName 10.16.1.1
+  ServerName 10.0.0.1
 
 Danach ist ein neues Cloop des Linux-Clients zu erstellen.
 
@@ -113,7 +113,7 @@ Hier legst Du ein Unterverzeichnis `cups` an. In dem Unterverzeichnis erstellst 
 
 .. code::
 
-  ServerName 10.16.1.1
+  ServerName 10.0.0.1
 
 Speichere die Änderungen ab.
 
@@ -153,22 +153,22 @@ Nachstehend findest du die Ergänzungen für zwei Beispieldrucker. Diese definie
     Allow From 10.17.102.*
     Allow From 10.17.155.*
     Allow From 10.17.145.*
-    Allow From 10.16.1.*
-   Allow From 10.16.1.1
+    Allow From 10.0.0.*
+   Allow From 10.0.0.1
   </Location>
   <Location /printers/r102p1>
     Order Deny,Allow
     Deny From All
     Allow From 127.0.0.1
-    Allow From 10.16.1.*
+    Allow From 10.0.0.*
     Allow From 10.17.101.*
     Allow From 10.17.102.*
-    Allow From 10.16.1.1
+    Allow From 10.0.0.1
   </Location>
 
-Die Angaben `Allow From` definieren, aus welchem IP-Netz oder von welcher IP auf den Drucker zugegriffen werden darf. Dies ist isnbesondere bei Subenetting wichtig.
+Die Angaben `Allow From` definieren, aus welchem IP-Netz oder von welcher IP auf den Drucker zugegriffen werden darf. Dies ist insbesondere bei Subnetting wichtig.
 
-Es sollte das Servernetz - hier: `10.16.1.*` -, der Localhost `127.0.0.1`, der Server `10.16.1.1` und ggf. weitere Subnetze angegeben werden, aus denen ebenfalls auf den Drucker zugegriffen werden soll.
+Es sollte das Servernetz - hier: `10.0.0.*` -, der Localhost `127.0.0.1`, der Server `10.0.0.1` und ggf. weitere Subnetze angegeben werden, aus denen ebenfalls auf den Drucker zugegriffen werden soll.
 
 In o.g. Beispiel kann aus allen Subnetzen auf den Default-Drucker `PDF-Printer` zugegriffen werden. Bei dem zweiten Drucker `r102p1` kann nur aus bestimmten Subnetzen zugegriffen werden.
 
@@ -198,5 +198,19 @@ Klicke unterhalb von `Tests und Wartungen` den Button `Testseite drucken` aus.
 
 Führe das Verfahren aus allen Räumen und von allen PCs durch, für die du vorher spezielle ACLs festgelegt hast.
 
+Apple Mac OS X -Clients
+------------------------
 
+Bei der Standardkonfiguration kann es passieren, dass die Kommunikation mit dem Drucker nicht funktioniert und zum Beispiel nach der Installation jeder Druck auf einen Fehler läuft:
+
+.. code::
+
+  Waiting for Authentication...
+
+Wenn ein Drucker unter MacOS mit dem Drucker-Dialog hinzufügt wird, kann nur das IPP-Protokoll ausgewählt (Reiter "IP") werden. 
+Bei "Address" ist dann die Server-IP mit dem CUPS-Port ``10.0.0.1:631`` einzutragen. Bei "Queue" ``/printers/printer-name`` ist der Druckername anzugeben (z.B. /printers/lz-drucker).
+
+.. hint::
+
+   Sollte dies nicht funktionieren, ist zunächst die Weboberfläche von CUPS local auf dem Mac zu aktivieren (localhost:631) und anschließend dort der Drucker per IPP-Protokol und http://10.0.0.1:631/printers/printer-name hinzuzufügen. Gibt es Treiberprobleme und der Drucker druckte nur Kauderwelsch, kann es helfen, statt den generischen Postscript-Treiber den generischen PCL-Treiber auszuwählen, oder ggf. die Installation der Originaltreiber (in dem Fall von Kyocera) auszuführen. Ein ähnliches Problem mit dem Drucker und MacOS X wird hier veschrieben: https://ask.linuxmuster.net/t/mac-os-x-clients-an-cups/1176
 
