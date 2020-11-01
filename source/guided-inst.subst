@@ -7,7 +7,7 @@
    The naming of the placeholders should follow the pattern |follow_me2<TARGET>|.
 
    Necessary adjustments are, apart from the naming, those of the jump target under :target: with relative path specifications, starting from the page where the call is made.
-   
+   This file assumes that our basic directory is getting-started/installoptions/
 ..    
    Diese Datei enthält alle Platzhalter für die link_arrow-Grafiken
    um eine zentrale Anlaufstelle bei eventuellen Änderungen sicher zu stellen.
@@ -76,7 +76,6 @@
    :width: 200 px
    :align: middle
 
-
 .. |follow_me2proxmox-hd| image:: /media/link_arrow.svg
    :target: hard-drive-size-proxmox.html
    :width: 200 px
@@ -94,6 +93,11 @@
 
 .. |follow_me2vm-hd| image:: /media/link_arrow.svg
    :target: hard-drive-size-vm.html
+   :width: 200 px
+   :align: middle
+
+.. |follow_me2installoptions| image:: /media/link_arrow.svg
+   :target: ../installoptions/index.html
    :width: 200 px
    :align: middle
 
