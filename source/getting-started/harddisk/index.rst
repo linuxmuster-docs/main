@@ -6,48 +6,32 @@
 Anpassen der Festplattengröße
 =============================
 
-Template für den Inhalt einer noch leeren Seite
+.. hint::
 
-Sicherlich ist der Inhalt dieser Seite nicht das was du gesucht und erwartest hast. Dieser Part der Dokumentation ist leider noch nicht mit Informationen gefüllt.
+   Achtung: Dies ist noch eine Platzhalterseite, die noch mit Inhalt gefüllt wird.
+   Bitte vorerst mit dem Setup der Installation folgen.
 
-Eventuell kannst du uns helfen dieses zu ändern. Es gibt verschiedene Möglichkeiten uns zu unterstützen:
+===================== ==========================
+Installationsoptionen |follow_me2installoptions|
+===================== ==========================
 
-* Du weißt, was hier stehen müsste und könntest uns Text und/oder Screenshots liefern.
 
-    Schicke deinen unformatierten Text oder die Bilder an dokumentation(et)linuxmuster.net oder einfach in unser Forum `<https://ask.linuxmuster.net/c/weiterentwicklung/doku>`_.
 
-* Du hast schon Erfahrung mit der vereinfachten Auszeichnugssprache RST (reStructuredText) oder willst sie erlernen.
+.. 
+   =================================== ======================
+   Vorbereiten der Proxmox-Festplatten |follow_me2proxmox-hd|
+   Vorbereiten der XCP-ng-Festplatten  |follow_me2xcp-ng-hd|
+   Vorbereiten der KVM-Festplatten     |follow_me2kvm-hd|
+   =================================== ======================
 
-    Unsere :ref:`guidelines-label` zeigen dir welche Absprachen wir diesbezüglich getroffen haben. Schicke uns deinen Inhalt für diese Seite an eine der zuvor genannten Adressen.
-
-* Hast du eventuell schon einen git-hub-Account oder wolltest dich schon immer mit git befassen.
- 
-    Wir nutzen für die Organisation unserer Dokumentation git. Aus dem in github gehosteten RST-Files werden automatisch via ReadTheDocs (Sqhinx) diese Seiten hier erzeugt. 
- 
-    So hättest du direkt die Möglichkeit unsere Dokumentation zu verbessern. Dafür gibt es den Button der sich immer oben rechts auf den Seiten befindet: **Edit on GitHub**. Eine Beschreibung findest du hier: :ref:`edit-on-github-label`
-
-* Du willst git auf deinem Rechner einsetzen um dort lokal arbeiten zu können.
-
-    Auch dafür stehen wir dir hilfreich zur Seite, wie das geht haben wir hier :ref:`new-label` beschrieben.
-  
-Also wir würden uns freuen, wenn du uns unterstützen würdest. 
-
-Wie immer bei linuxmuster.net niemand ist bei uns allein.
-Für Fragen einfach einen Post an die im ersten Punkt genannten Adressen. (E-Mail oder Forum) 
-
-=================================== ======================
-Vorbereiten der Proxmox-Festplatten |follow_me2proxmox-hd|
-Vorbereiten der XCP-ng-Festplatten  |follow_me2xcp-ng-hd|
-Vorbereiten der KVM-Festplatten     |follow_me2kvm-hd|
-=================================== ======================
 
 .. toctree::
-  :maxdepth: 2
-  :caption:  Festplatten-Anpassung
-  :hidden:  
+   :maxdepth: 2
+   :caption:  Festplatten-Anpassung
+   :hidden:  
 
-  hard-drive-size-proxmox
-  hard-drive-size-xcp-ng
-  hard-drive-size-kvm
-  hard-drive-size-vm
+   hard-drive-size-proxmox
+   hard-drive-size-xcp-ng
+   hard-drive-size-kvm
+   hard-drive-size-vm
 
