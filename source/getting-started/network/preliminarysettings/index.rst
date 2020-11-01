@@ -6,7 +6,7 @@
 Netzbereich anpassen
 ====================
 
-.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
 Sollte es erforderlich sein, dass der Netzbereich von den Vorgaben im Setup (``10.0.0.0/16``) abweicht, dann 
 sind nachstehende Schritte zur Anpassung vor Aufruf des Setups mit der WebUI oder des Setups auf der Konsole 
@@ -17,21 +17,13 @@ auf dem Server auszuführen.
    sind bereits auf den voreingestellten Netzbereich konfiguriert, so dass jede dieser VMs mithilfe des Skript
    ``linuxmuster-prepare`` an den gewünschten Netzbereich vorab anzupassen ist.
 
-Je nach Installationsweg (**from Scratch** oder mittel **Import der VMs**) sind folgende Schritte zur Anpassung erforderlich:
-
 Vorgehen
 ========
 
-Installation from Scratch
--------------------------
-
-Bei der Installation from Scratch: 
-
-* Ubuntu installieren und in ein Subnetz einhängen mit Internetzugriff (OPNsense)
-* OPNsense installieren und als Geteway im gewünschten Zielnetz einrichten (z.B. 10.17.0.254/16)
-* Die Ubuntu VMs können nun mithilfe des linuxmuster-prepare Skripts
-  (https://github.com/linuxmuster/linuxmuster-prepare) für den gewünschten neuen Netzbereich (z.B. 10.17.0.0/16) 
-  vorbereitet werden.
+Die OPNSense ist im gewünschten Zielnetz einzurichten (z.B. 10.17.0.256/16). 
+Diese muss in allen Ubuntu VMs als Gateway angegeben worden sein. Die Ubuntu VMs können nun mithilfe 
+des linuxmuster-prepare Skripts (https://github.com/linuxmuster/linuxmuster-prepare) für den gewünschten 
+neuen Netzbereich (z.B. 10.17.0.0/16) vorbereitet werden.
 
 Das Skript lmn7-appliance
 -------------------------
