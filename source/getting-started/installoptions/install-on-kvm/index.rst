@@ -1239,6 +1239,12 @@ Die Rekonstruktion der Meta-Daten sollte es genügen, das Verzeichnis
 diese Dokumentation noch nicht getestet. Darüberhinaus ist die
 Erstellung der volume group und die Erstellung der LVs notwendig.
 
-================================================ ===========================================
-Weiter geht es mit der Anpassung der Festplatten |follow_me2linux-adjusting_hard_drive_size|
-================================================ ===========================================
+============================ =================
+Weiter geht es mit dem Setup |follow_me2setup|
+============================ =================
+
+..
+   ================================================ ===========================================
+   Weiter geht es mit der Anpassung der Festplatten |follow_me2linux-adjusting_hard_drive_size|
+   ================================================ ===========================================
+

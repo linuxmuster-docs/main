@@ -916,6 +916,6 @@ Dies kann dann z.B. wie in folgender Abbildung aussehen:
    :align: center
    :alt: XOA Backup NG - Status
 
-================================================ ===========================================
-Weiter geht es mit der Anpassung der Festplatten |follow_me2linux-adjusting_hard_drive_size|
-================================================ ===========================================
+============================ =================
+Weiter geht es mit dem Setup |follow_me2setup|
+============================ =================
