@@ -1,4 +1,4 @@
-.. include:: /guided_inst.subst
+.. include:: /guided-inst.subst
 
 Anlegen und Installieren des Servers
 ====================================
@@ -80,3 +80,6 @@ Schlüssel importieren
 * Dann lädst du den key mit ``wget http://pkg.linuxmuster.net/archive.linuxmuster.net.key`` herunter.
 * Jetzt fügst du den Schlüssel mit ``apt-key add archive.linuxmuster.net.key`` hinzu.
 
+=============================================== ============================
+Weiter geht es mit der Anpassung des Netzwerkes |follow_me2linux-modify_net|
+=============================================== ============================

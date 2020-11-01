@@ -1,4 +1,4 @@
-.. include:: /guided_inst.subst
+.. include:: /guided-inst.subst
 
 .. _modify-net-label:
 

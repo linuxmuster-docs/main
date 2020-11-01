@@ -68,25 +68,19 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
 
   getting-started/overview
   getting-started/prerequisites
+  getting-started/installoptions/index
+  getting-started/harddisk/index
+  getting-started/network/preliminarysettings/index
+  getting-started/network/networksegmentation/index   
+  getting-started/migration/index
+
+
+
   getting-started/setup
   getting-started/add-user-accounts
   getting-started/add-computer
   getting-started/linuxclient
 
-.. toctree::
-  :maxdepth: 2
-  :caption: Installationsoptionen
-  :hidden:
-
-  getting-started/installoptions/install-on-proxmox/index
-  getting-started/installoptions/install-on-kvm/index
-  getting-started/installoptions/install-on-xcp-ng/index
-  getting-started/installoptions/install-from-scratch/index
-  getting-started/network/preliminarysettings/index
-  getting-started/network/networksegmentation/index   
-  getting-started/migration/index
-  
-  
 .. toctree::
   :maxdepth: 2
   :caption: Systemadministration
