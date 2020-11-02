@@ -26,9 +26,9 @@ Inhalt:
    :maxdepth: 2
 
    installation
-   rekonfiguration
-   kommandozeile
-   technik
+   reconfiguration
+   commandline
+   technology
    faq
 
 

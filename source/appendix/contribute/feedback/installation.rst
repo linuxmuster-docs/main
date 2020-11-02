@@ -26,38 +26,38 @@ Wird hier mit ``Nein`` geantwortet, ist die Konfiguration des Pakets damit beend
 keine weiteren Änderungen am System vorgenommen und keinerlei Daten an 
 linuxmuster.net übermittelt. 
 
-.. image:: media/1.png
+.. image:: media/feedback_01_agreement.png
    :alt: Sollen statistische Daten übermittelt werden oder nicht?
    :align: center
 
 
 Wenn Statistiken übermittelt werden sollen, wird zunächst erfragt, in welchem Umfeld die linuxmuster.net-Installation zum Einsatz kommt.
 
-.. image:: media/2.png
+.. image:: media/feedback_02_purpose.png
    :alt: Einsatzzweck von linuxmuster.net?
    :align: center
 
 Anschließend geben Sie bitte an, ob und wie die Installation von linuxmuster.net virtualisiert ist.
 
-.. image:: media/virtualisiert.png
+.. image:: media/feedback_03_virtualization.png
    :alt: Ist die Installation virtualisiert, wenn ja, wie?
    :align: center
 
 Wird die linuxmuster.net Installation ganz oder teilweise durch einen Dienstleister betreut oder liegen Installation und Pflege des Systems alleine an der Schule?
 
-.. image:: media/3a.png
+.. image:: media/feedback_04_support.png
    :alt: Dienstleister?
    :align: center
 
 Wo wird Ihre linuxmuster.net Installation eingesetzt? wenn Sie ``Nicht in Deutschland`` auswählen, können Sie im nächsten Schritt eine freie Angabe zum Einsatzort machen.
 
-.. image:: media/4.png
+.. image:: media/feedback_05_location.png
    :alt: Einsatzort: Bundesland in Deutschland
    :align: center
 
 Diese Eingabemöglichkeit gibt es nur bei der Auswahl ``Nicht in Deutschland`` im vorigen Schritt:
 
-.. image:: media/4a.png
+.. image:: media/feedback_06_country.png
    :alt: Einsatzort: Freie Eingabe für das Ausland
    :align: center
 
@@ -67,7 +67,7 @@ antworten, ermittelt das Feedback-Paket aus den Dateien "schueler.txt" und
 "lehrer.txt" die Anzahl der Schüler beziehungsweise der Lehrer. Dabei werden
 keine personenbezogenen Daten erhoben.
 
-.. image:: media/5.png
+.. image:: media/feedback_07_agree_number_of_users.png
    :alt: Soll die Zahl der Benutzeraccounts übermittelt werden?
    :align: center
 
@@ -80,7 +80,7 @@ mit linbo, mit linbo und opsi mit opsi oder als IP-Host verwaltet wird.
 Weitere Informtionen zu den Clients wie Namen, Hardware Adresse, Hersteller
 o.ä. werden weder ermittelt, noch übertragen.
 
-.. image:: media/6.png
+.. image:: media/feedback_08_agree_number_of_computers.png
    :alt: Sollen die Clientzahlen übermittelt werden?
    :align: center
 
@@ -92,33 +92,33 @@ Schulname auf der Karte dargestellt werden soll.
 
 Der Schulname wird darüberhinaus nicht automatisiert veröffentlicht.
 
-.. image:: media/7.png
+.. image:: media/feedback_09_agree_name_of_school.png
    :alt: Soll der Schulname übermittelt werden?
    :align: center
 
 Der Schulname wird nur dann erfragt, wenn man im vorherigen Schritt der Übermittlung zugestimmt hat:
 
-.. image:: media/8.png
-   :alt: Schulname, wenn dieser übermittelt werden soll.
+.. image:: media/feedback_10_enter_school_name.png
+   :alt: Eingabe des Schulnames, wenn dieser übermittelt werden soll.
    :align: center
 
-Darf Ihre Installation auf der Nutzerkarte erscheinen? Wenn ja, müssen Sie anschließende die Postleitzahl angeben.
+Darf Ihre Installation auf der Nutzerkarte erscheinen? Wenn ja, müssen Sie anschließend die Postleitzahl angeben.
 
-.. image:: media/9.png
-   :alt: Installation auf der Nutzerkarte anzeigen?
+.. image:: media/feedback_11_agree_publish_school_name.png
+   :alt: Zustimmung Veröffentlichung auf der Nutzerliste erlauben?
    :align: center
 
 Die Postleitzahl muss nur angegeben werden, wenn ein Eintrag auf der Karte gewünscht ist:
 
-.. image:: media/10.png
+.. image:: media/feedback_12_enter_postcode.png
    :alt: Postleitzahl für die Kartendarstellung
    :align: center
 
 Soll der Name am Kartenpin angezeigt werden? Diese Frage erscheint nur, 
 wenn zuvor der Schulname angegeben wurde.
 
-.. image:: media/11.png
-   :alt: Installation 
+.. image:: media/feedback_13_agree_show_school_name_on_map.png
+   :alt: Zustimmung Veröffentlichung auf der Nutzerkarte erlauben?
    :align: center
 
 Am Ende der Konfiguration wird eine Übersicht angezeigt, welche Daten 
@@ -126,8 +126,8 @@ an linuxmuster.net übertragen werden. Die dargestellten Informationen sind
 dabei exakt der Inhalt der Datei, die später an den 
 Projektserver übermittelt wird.
 
-.. image:: media/12.png
-   :alt: Installation 
+.. image:: media/feedback_14_overview_transmit_data.png
+   :alt: Übersicht der Daten die übermittelt werden.
    :align: center
 
 Bestätigung der Anfrage überträgt die Daten wie dargestellt zum linuxmuster.net Server und 
@@ -141,7 +141,7 @@ Beispielkonfiguration: Minimale Angaben
 
 Der folgende Screenshot zeigt den minimalen Datensatz, der als Feedback übertragen wird:
 
-.. image:: media/minimal.png
+.. image:: media/feedback_15_minimal_data.png
    :alt: Minimaler Datensatz
    :align: center
 
@@ -172,7 +172,7 @@ Beispielkonfiguration: Maximale Angaben
 
 Der folgende Screenshot zeigt den maximalen Datensatz, der als Feedback übertragen wird:
 
-.. image:: media/maximal.png
+.. image:: media/feedback_16_maximal_data.png
    :alt: Maximaler Datensatz
    :align: center
 
