@@ -19,11 +19,11 @@ Clone the repository "main" using git
    ~$ git clone https://github.com/linuxmuster-docs/main.git  # if you have no ssh-key within github
    ~$ git clone git@github.com:linuxmuster-docs/main.git # if you have a ssh-key within github
 
-Install sphinx, e.g. under Ubuntu 16.04, do
+Install sphinx, e.g. under Ubuntu 20.04, do
 
 .. code:: bash
 
-   ~$  sudo aptitude -R install git python3-sphinx texlive texlive-latex-extra texlive-lang-german
+   ~$  sudo apt install git python3-sphinx texlive texlive-latex-extra texlive-lang-german
 
 Make a local copy of your documentation using
 
@@ -83,7 +83,7 @@ Instead of deleting and creating a new fork you can bring your own fork up-to-da
 
      ~/docs$ git stash
 
-* Add a remote tracking branch:
+* Add a remote tracking branch once:
 
   .. code:: bash
 
@@ -108,6 +108,10 @@ Instead of deleting and creating a new fork you can bring your own fork up-to-da
 
      ~/docs$ git stash pop
 
+Guidelines for documentation
+++++++++++++++++++++++++++++
+
+The structure guide and style guide provide information on the design of our documentation. See [https://docs.linuxmuster.net/de/latest/appendix/contribute/docs/guidelines.html](https://docs.linuxmuster.net/de/latest/appendix/contribute/docs/guidelines.html)
 
 Translation
 +++++++++++
