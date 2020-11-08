@@ -111,7 +111,7 @@ Instead of deleting and creating a new fork you can bring your own fork up-to-da
 Guidelines for documentation
 ++++++++++++++++++++++++++++
 
-The structure guide and style guide provide information on the design of our documentation. See [Guidelines](https://docs.linuxmuster.net/de/latest/appendix/contribute/docs/guidelines.html)
+The structure guide and style guide provide information on the design of our documentation. See [ttps://docs.linuxmuster.net/de/latest/appendix/contribute/docs/guidelines.html]()
 
 Translation
 +++++++++++
