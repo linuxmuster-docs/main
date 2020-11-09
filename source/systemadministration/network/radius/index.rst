@@ -180,9 +180,7 @@ Sollte das nicht funktionieren, hält man den Freeradius-Dienst an und startet i
 
 Jetzt sieht man alle Vorgänge während man versucht, sich mit einem Device zu verbinden.
 
-.. _APs-im-Freeradius-eintragen:
-
-
+Weiter geht es mit :ref:`APs-im-Freeradius-eintragen`
    
 FreeRADIUS auf dem lmn-Server einrichten & testen (workaround)
 ==============================================================
@@ -202,8 +200,8 @@ Freeradius installieren und aktivieren
 
 .. code::
 
-   #apt install freeradius
-   #systemctl enable freeradius.service
+   # apt install freeradius
+   # systemctl enable freeradius.service
 
 ntlm_auth in samba erlauben
 ---------------------------
@@ -212,13 +210,16 @@ In der Datei /etc/samba/smb.conf ist folgende Zeile einzufügen:
 
 .. code::
 
-   ntlm auth = yes
+  [global]
+  
+  ...
+  ntlm auth = mschapv2-and-ntlmv2-only
 
 Danach muss der samba-ad-dc Dienst neu gestartet werden:
 
 .. code::
 
-   #systemctl restart samba-ad-dc.service
+   # systemctl restart samba-ad-dc.service
 
 Radius konfigurieren
 --------------------
@@ -227,10 +228,11 @@ Dem Freeradius-Dient muss Zugriff auf winbind gegeben werden:
 
 .. code::
 
-   #usermod -a -G winbindd_priv freerad
-   #chown root:winbindd_priv /var/lib/samba/winbindd_privileged/
+   # usermod -a -G winbindd_priv freerad
+   # chown root:winbindd_priv /var/lib/samba/winbindd_privileged/
 
-In dem Verzeichnis /etc/freeradius/3.0/sites-enabled in die Dateien default und inner-tunnel ganz am Anfang unter authenticate ist ntlm_auth einzufügen.
+In dem Verzeichnis ``/etc/freeradius/3.0/sites-enabled`` in die Dateien ``default`` und ``inner-tunnel`` 
+ganz am Anfang unter authenticate ist ntlm_auth einzufügen.
 
 .. code::
 
@@ -238,7 +240,7 @@ In dem Verzeichnis /etc/freeradius/3.0/sites-enabled in die Dateien default und 
       ntlm_auth
       # ab hier geht es weiter
 
-Die Datei /etc/freeradius/3.0/mods-enabled/mschap sind im Abschnitt mschap zwei Teilen zu ergänten:
+Die Datei ``/etc/freeradius/3.0/mods-enabled/mschap`` sind im Abschnitt mschap zwei Einträge zu ergänzen:
 
 .. code::
 
@@ -252,22 +254,24 @@ Anpassen des Abschnitts ntlm_auth weiter unten. Zuerst das Kommentarzeichen # en
 .. code::
   
    # eine Zeile
-   ntlm_auth = "/usr/bin/ntlm_auth --request-nt-key --domain=DOMÄNE --require-membership-of=DOMÄNE\wifi --username=%{%{Stripped-User-Name}:-%{%{User-Name}:-None}} --challenge=%{%{mschap:Challenge}:-00} --nt-response=%{%{mschap:NT-Response}:-00}"
+   ntlm_auth = "/usr/bin/ntlm_auth --allow-mschapv2 --request-nt-key --domain=DOMÄNE --require-membership-of=DOMÄNE\wifi --username=%{%{Stripped-User-Name}:-%{%{User-Name}:-None}} --challenge=%{%{mschap:Challenge}:-00} --nt-response=%{%{mschap:NT-Response}:-00}"
 
 Dabei muss DOMÄNE durch den eigenen Domänennamen (Samba-Domäne) ersetzt werden. Die Option –require-membership-of=… lässt nur Mitglieder der Gruppe wifi zu. So funktioniert die WLAN-Steuerung über die WebUI.
 
-Danach ist die Datei /etc/freeradius/3.0/mods-enabled/ntlm_auth noch anzupassen. Zuerst ist das Kommentarzeichen # zu entfernen. Danach ist die Zeile wie folgt anzupassen:
+Danach ist die Datei ``/etc/freeradius/3.0/mods-enabled/ntlm_auth`` noch anzupassen. Zuerst ist das Kommentarzeichen # zu entfernen. 
+Danach ist die Zeile wie folgt anzupassen:
 
 .. code::
    
    exec ntlm_auth {
-      wait = yes
-      program = "/usr/bin/ntlm_auth --request-nt-key --domain=DOMÄNE --require-membership-of=DOMÄNE\wifi --username=%{mschap:User-Name} --password=%{User-Password}" 
+     wait = yes
+        # eine Zeile
+        program = "/usr/bin/ntlm_auth --allow-mschapv2 --request-nt-key --domain=DOMÄNE --require-membership-of=DOMÄNE\wifi --username=%{mschap:User-Name} --password=%{User-Password}"
    }
 
 Dabei muss DOMÄNE durch den eigenen Domänennamen (Samba-Domäne) ersetzt werden.
 
-In der Datei /etc/freeradius/3.0/users ist ganz oben nachstehende Zeile einzufügen.
+In der Datei ``/etc/freeradius/3.0/users`` ist ganz oben nachstehende Zeile einzufügen.
 
 .. code::
    
@@ -277,24 +281,25 @@ Nun ist der Freeradius-Dienst neuzustarten:
 
 .. code::
 
-   #systemctl restart freeradius.service
+   # systemctl restart freeradius.service
 
 
 .. hint::
 
-   Das Defaultverhalten der lmn7 ist, dass ein neu angelegter User immer in der Gruppe wifi ist, d.h. auch alle Schüler dürfen zunächst in das WLAN.
+   Das Defaultverhalten der lmn7 ist, dass ein neu angelegter User immer in der Gruppe wifi ist, d.h. auch alle Schüler dürfen 
+   zunächst in das WLAN.
   
 Die Steuerung der Gruppenzugehörigkeit kann auf der Konsole wie folgt gesetzt werden:
 
 .. code::
 
-    #sophomorix-managementgroup --nowifi/--wifi user1,user2,...
+    # sophomorix-managementgroup --nowifi/--wifi user1,user2,...
 
 Um alle Schüler aus der Gruppe wifi zu nehmen, läßt man sich alle User des Systems auflisten und schreibt diese in eine Datei. Dies kann wie folgt erledigt werden:
 
 .. code::
    
-   #samba-tool user list > user.txt
+   # samba-tool user list > user.txt
 
 Jetzt entfernt man alle User aus der Liste, die immer ins Wlan dürfen sollen. Danach baut man die Liste zu einer Kommazeile um mit:
 
@@ -306,7 +311,7 @@ Die Datei kann jetzt an den o.g. Sophomorix-Befehl übergeben werden:
 
 .. code::
 
-   #sophomorix-managementgroup --nowifi $(less usermitkomma.txt)
+   # sophomorix-managementgroup --nowifi $(less usermitkomma.txt)
 
 Firewallregeln anpassen
 -----------------------
@@ -498,7 +503,7 @@ Weiter geht es mit :ref:`APs-im-Freeradius-eintragen`
 
 	Verlaufen diese Testes erfolgreich, so ist der RADIUS - Dienst in lmn vollständig eingerichtet. Die APs, WLAN-Controller oder Captive Portal Lösungen sind nun so zu konfigurieren, dass diese den FreeRadius der lmn nutzen.
 
-	:ref:`APs-im-Freeradius-eintragen`
+.. _APs-im-Freeradius-eintragen:
 
 APs im Freeradius eintragen
 ===========================
