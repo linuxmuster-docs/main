@@ -11,9 +11,9 @@ Vorbereiten der XCP-ng Festplatten
    Achtung: Dies ist noch eine Platzhalterseite, die noch mit Inhalt gefüllt wird.
    Bitte vorerst mit dem Setup der Installation folgen.
 
-===================== ==========================
-Installationsoptionen |follow_me2installoptions|
-===================== ==========================
+================= =================
+VM Größe anpassen |follow_me2vm-hd|
+================= =================
 
 
 
