@@ -17,7 +17,7 @@ Nachdem die Drucker auf dem Server eingerichtet wurden, sind diese auf Windows-C
    :align: center
 
 Die Treiber sind nun über die Microsoft Management Console (MMC) hinzuzufügen.
-Dies erfolgt in der MMC im Menü `Druckerverwaltung` -> `hinzufügen`. 
+Dies erfolgt in der MMC im Menü `Druckverwaltung` -> `hinzufügen`. 
 
 .. hint::
    Zuerst sind Treiber hochzuladen. Es können ausschließlich v3 Druckertreiber verwendet werden. V4 Druckertreiber 
@@ -31,7 +31,7 @@ Hierzu sind die eingerichteten Drucker auf dem Server zunächst auszugeben:
 
 .. code::
 
-   rppclient 10.0.0.1 -U "LINUXMUSTER\global-admin" -c "enumdrivers 3"
+   rpcclient 10.0.0.1 -U "LINUXMUSTER\global-admin" -c "enumdrivers 3"
 
 LINUXMUSTER stellt den Namen der eigenen Samba-Domäne dar, global-admin ist der Administrator auf dem Server, 
 10.0.0.1 ist die IP des Server.
@@ -42,13 +42,13 @@ der Druckertreiber `HP Universal Printing PS`:
 
 .. code::
 
-   rppclient 10.0.0.1 -U "LINUXMUSTER\global-admin" -c 'setdriver "DemoPrinter" "HP Universal Printing PS"'
+   rpcclient 10.0.0.1 -U "LINUXMUSTER\global-admin" -c 'setdriver "DemoPrinter" "HP Universal Printing PS"'
 
 Das Ergebnis kann mit dem zuvor genannten Befehl kontrolliert werden:
 
 .. code::
 
-   rppclient 10.0.0.1 -U "LINUXMUSTER\global-admin" -c "enumdrivers 3"
+   rpcclient 10.0.0.1 -U "LINUXMUSTER\global-admin" -c "enumdrivers 3"
 
 Danach ist der Druck zu testen. Funktioniert der Drucker wie gewünscht ist ein neues Image für den Windows-Client zu erstellen.
 
