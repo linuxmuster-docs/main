@@ -239,14 +239,6 @@ nun deinen wünschen tatsächlich entsprechen.
    tmpfs                               1,2G       0  1,2G    0% /run/user/0
 
 
-
-
-===================== ==========================
-Installationsoptionen |follow_me2installoptions|
-===================== ==========================
-
-
-
 .. 
    =================================== ======================
    Vorbereiten der Proxmox-Festplatten |follow_me2proxmox-hd|
