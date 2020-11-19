@@ -79,6 +79,7 @@ Geben Sie unter ``Erlaubte Benutzer festlegen`` die Gruppe ``@printing`` an.
 
 .. image:: media/15-printer-define-allowed-users.png
    :alt: Drucker: erlaubte Benutzer
+   :width: 200
    :align: center
 
 Danach findet sich der neue Drucker in der Druckerliste in CUPS.
