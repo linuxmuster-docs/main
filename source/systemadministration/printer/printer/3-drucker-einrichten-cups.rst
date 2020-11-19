@@ -75,7 +75,7 @@ Einstellungen aus und speichern Sie diese als ``Standardeinstellungen festlegen`
    :align: center
 
 Damit der Drucker nur von berechtigten Nutzern verwendet werden kann, muss noch der Kreis der erlaubten Benutzer festgelegt werden:
-Geben Sie unter ``Erlaubte Benutzer festlegen`` die Gruppe ``@printing`` an. Bei Schülern wird die Zugehörigkeit über die Spalte "Drucken" in der Schulkonsole gesteuert.
+Geben Sie unter ``Erlaubte Benutzer festlegen`` die Gruppe ``@printing`` an. Lehrer sind standardmäßig in der Gruppe. Bei Schülern wird die Zugehörigkeit über die Spalte "Drucken" in der Schulkonsole gesteuert.
 
 .. image:: media/15-printer-define-allowed-users.png
    :alt: Drucker: erlaubte Benutzer
