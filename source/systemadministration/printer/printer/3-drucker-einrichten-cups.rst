@@ -74,6 +74,14 @@ Einstellungen aus und speichern Sie diese als ``Standardeinstellungen festlegen`
    :alt: Drucker: hinzufügen 5/5
    :align: center
 
+Damit der Drucker nur von berechtigten Nutzern verwendet werden kann, muss noch der Kreis der erlaubten Benutzer festgelegt werden:
+Geben Sie unter ``Erlaubte Benutzer festlegen`` die Gruppe ``@printing`` an. Lehrer sind standardmäßig in der Gruppe. Bei Schülern wird die Zugehörigkeit über die Spalte "Drucken" in der Schulkonsole gesteuert.
+
+.. image:: media/15-printer-define-allowed-users.png
+   :alt: Drucker: erlaubte Benutzer
+   :width: 200
+   :align: center
+
 Danach findet sich der neue Drucker in der Druckerliste in CUPS.
 
 .. image:: media/13-printer-added-printers-list.png
