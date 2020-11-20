@@ -63,7 +63,7 @@ Der Proxmox-Host sollte gemäß o.g. Minimalanforderungen folgende Merkmale aufw
   * Erste HDD: mind 100 GiB für Proxmox selbst
   * Zweite HDD: für die VMs mit mind. 500 GB Kapazität (besser: 1 TiB oder 2 TiB)
   * Zwei Netzwerkkarten
-  * Der Internetzugang des Proxmox-Hosts sollte zunächst gewährleistet sein, d.h. dieser wird z.B. an einen (DSL-)Router angeschlossen, der den Internet-Zugang sicherstellt. Sobald spalles eingerichtet ist, bekommt der Proxmox-Host eine IP-Adresse im Schulnetz und die Firewall OPNSense stellt den Internet-Zugang für alle VMs und den Proxmox-Host bereit.
+  * Der Internetzugang des Proxmox-Hosts sollte zunächst gewährleistet sein, d.h. dieser wird z.B. an einen (DSL-)Router angeschlossen, der den Internet-Zugang sicherstellt. Sobald alles eingerichtet ist, bekommt der Proxmox-Host eine IP-Adresse im Schulnetz und die Firewall OPNSense stellt den Internet-Zugang für alle VMs und den Proxmox-Host bereit.
 
 .. hint:: 
 
@@ -91,6 +91,15 @@ Dort findet sich das ISO-Image zur Installation von Proxmox (derzeit basiert uns
 
 Lade dir dort dieses Image herunter und erstelle dir einen bootfähigen USB-Stick zur weiteren Installation.
 
+Erstellen eines USB-Sticks zur Installation des Proxmox-Host
+------------------------------------------------------------
+
+Nachdem du die ISO-Datei für Proxmox heruntergeladen hast, wechselst Du in das Download-Verzeichnis. Danach ermittelsu Du den korrekten Buchstaben für den USB-Stick unter Linux. X ist durch den korrekten Buchstaben zu ersetzen und dann ist nachstehender Befehl als Benutzer *root* oder mit einem *sudo* vorangestellt einzugeben:
+
+.. code-block:: console
+ 
+   dd if=proxmox-ve_6.2-1.iso of=/dev/sdX bs=1M status=progress conv=fdatasync
+
 Verkabelungshinweise
 --------------------
 
@@ -101,17 +110,6 @@ Beginn eine IP aus dem bestehenden lokalen Netz (z.B. via DSL-Router) erhalten s
 Die zweite Netzwerkkarte (z.B. eth1 oder enp7s1) ist dann an einen eigenen Switch anzuschliessen, ebenso wie alle Clients, die im internen Netz eingesetzt werden. 
 
 Um zu Beginn den Proxmox-Host zu administrieren, ist ein Laptop mit dem Switch zu verbinden, der an den lokalen (DSL-)Router angeschlossen ist. Der Laptop erhält ebenfalls eine IP aus dem lokalen (DSL-)Netz und kann sich dann auf die zu Beginn eingerichtete IP-Adresse des Proxmox-Host auf die grafische Verwaltungsoberfläche verbinden. 
-
-
-Erstellen eines USB-Sticks zur Installation des Proxmox-Host
-------------------------------------------------------------
-
-Nachdem du die ISO-Datei für Proxmox heruntergeladen hast, wechselst Du in das Download-Verzeichnis. Danach ermittelsu Du den korrekten Buchstaben für den USB-Stick unter Linux. X ist durch den korrekten Buchstaben zu ersetzen und dann ist nachstehender Befehl als Benutzer *root* oder mit einem *sudo* vorangestellt einzugeben:
-
-.. code-block:: console
- 
-   dd if=proxmox-ve_6.2-1.iso of=/dev/sdX bs=1M status=progress conv=fdatasync
-
 
 Installieren von Proxmox
 ========================
