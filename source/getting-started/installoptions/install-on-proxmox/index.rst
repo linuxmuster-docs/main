@@ -203,13 +203,13 @@ Im Fenster ``No valid subscription`` ``OK`` wählen oder Fenster schließen:
 Updates ermöglichen
 -------------------
 
-Um Proxmox Updates installieren zu können, müssen in der Shell
+Um Proxmox Updates installieren zu können, müssen in der Shell des Nodes hv01 folgende Änderungen an den Repositories vorgenommen werden. Dafür den Node im Datacenter auswählen und eine Shell öffnen.
 
 .. figure:: media/image_11.png
    :align: center
    :alt: Schritt 11
 
-folgende Befehle der Reihe nach ausgeführt werden:
+Folgende Befehle der Reihe nach ausgeführt werden:
 
 .. code::
 
@@ -231,18 +231,15 @@ Die Konsole kann nach dem erfolgreichen Update geschlossen werden.
 Netzwerkbrücken einrichten
 --------------------------
 
-Für eine funktionierende Umgebung sollten zwei Netzwerkschnittstellen auf dem Hypervisor eingerichtet sein. Eine für das 
-interne Netz (green, 10.0.0.0/16) und eine für das externe Netz und den Internetzugriff (red, externes Netz). Nach der
-Erstinstallation von Proxmox wurde bislang nur eine sog. Bridge (vmbr0) eingerichtet, die zu Beginn für das externe Netz (red) genutzt wird. 
+Für eine funktionierende Umgebung müssen zwei Netzwerkschnittstellen auf dem Hypervisor eingerichtet sein. 
 
-Verlief der vorherige Befehl zur Aktualisierung von Proxmox erfolgreich, so weist du, dass diese bereits funktioniert.
+Eine für das interne Netz (green, 10.0.0.0/16) und eine für das externe Netz (red, externes Netz, Internetzugriff). 
 
-Diese Schnittstelle ist mit der ersten Netzwerkschnittstelle verbunden, die mit einem Ethernet-Kabel mit dem (DSL)-Router 
-verbunden ist. Daher muss nun die zweite Schnittstelle eingerichtet werden, um später mit den noch zu importierenden VMs 
-arbeiten zu können.
+Nach der Erstinstallation von Proxmox wurde bislang nur eine sogenannte Bridge (vmbr0) eingerichtet. Diese ist mit der ersten Netzwerkschnittstelle des Proxmox-Hosts verbunden. Über deren Ethernet-Kabel der (DSL)-Router angeschlossen ist. Verlief der vorherige Befehl zur Aktualisierung von Proxmox erfolgreich, so weist du, dass diese bereits funktioniert und für die weitere Nutzung für das externe Netz (red) genutzt werden kann.  
 
-Bislang ist nur eine Bridge für das externe Netz vorhanden. Für das interne Netz der VMs ist eine zweite Bridge 
-zu erstellen, die an die zweite Netzwerkkarte direkt gebunden wird. Dieser wird allerdings keine IP-Adresse zugeordnet. 
+Daher muss nun die zweite Schnittstelle eingerichtet werden, um später mit den noch zu importierenden VMs arbeiten zu können.
+
+Für das interne Netz der VMs ist also ine zweite Bridge zu erstellen, die an die zweite Netzwerkkarte direkt gebunden wird. Dieser wird allerdings keine IP-Adresse zugeordnet. 
 
 Ausgangspunkt: *Host hv01 -> Network*
 
