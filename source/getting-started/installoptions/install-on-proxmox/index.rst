@@ -13,9 +13,6 @@ Proxmox ist eine OpenSource-Virtualisierungsplattform. Diese kombiniert KVM- und
 
 Das web-basierte Verwaltungs-Interface läuft direkt auf dem Server. Zudem kann die Virtualisierungsumgebung via SSH administriert werden.
 
-Diese Dokumentation stellt eine Schritt-für-Schritt" Anleitung für die Installation der linuxmuster.net-Musterlösung 
-in der Version 7 auf Basis von Proxmox dar.
-
 Proxmox VE eignet sich für den virtuellen Betrieb von linuxmuster.net besonders, da dieser Hypervisor dem OpenSource-Konzept entspricht. Der Einsatz wird auf jeglicher Markenhardware unterstützt und es gibt zahlreiche professionelle 3rd-Party Software für Backup-Lösungen und andere Features. „NoName-Hardware“ kann hiermit ebenfalls meist verwendet werden.
 
 Diese Anleitung beinhaltet Angaben zu den notwendigen Systemanforderungen und Festplattenkonfigurationen, der Proxmoxinstallation und -integration sowie der anschließenden Hypervisorinstallation und -integration von Proxmox.
@@ -119,19 +116,19 @@ Basis-Installation
 
 Vom USB-Stick booten, danach erscheint folgender Bildschirm:
 
-.. figure:: media/install-on-proxmox_01_.png
+.. figure:: media/install-on-proxmox_01_boot-menu.png
    :align: center
    :alt: Schritt 1 
 
 Wähle `Install Proxmox VE` und starte die Installation mit `ENTER`.
 
-.. figure:: media/install-on-proxmox_02_.png
+.. figure:: media/install-on-proxmox_02_eula.png
    :align: center
    :alt: Schritt 2
 
 Bestätige das `End-User Agreement` mit `Enter`.
 
-.. figure:: media/install-on-proxmox_03_.png
+.. figure:: media/install-on-proxmox_03_target-harddisk.png
    :align: center
    :alt: Schritt 3
 
@@ -140,14 +137,14 @@ Wähle die gewünschte Festplatte auf dem Server zur Installation aus. Hast du m
 
 Nun bei den Location- and Time-Settings `Next` wählen:
 
-.. figure:: media/install-on-proxmox_04_.png
+.. figure:: media/install-on-proxmox_04_location-and-time-zone.png
    :align: center
    :alt: Schritt 4
 
 Lege ein Kennwort für den Administrator des Proxmox-Host und eine E-Mail
 Adresse fest. Klicke auf `Weiter`.
 
-.. figure:: media/install-on-proxmox_05_.png
+.. figure:: media/install-on-proxmox_05_admin-passord.png
    :align: center
    :alt: Schritt 5
 
@@ -164,19 +161,19 @@ anzugeben.
 
 Hier wurde die interne IP-Adresse `192.168.199.20/24` festgelegt.
 
-.. figure:: media/install-on-proxmox_06_.png
+.. figure:: media/install-on-proxmox_06_network-configuration.png
    :align: center
    :alt: Schritt 6
 
 Überprüfe auf der Übersichtsseite, dass alle Angaben korrekt sind und fahre anschließend fort.
 
-.. figure:: media/install-on-proxmox_07_.png
+.. figure:: media/install-on-proxmox_07_install-summary.png
    :align: center
    :alt: Schritt 7
 
 Warte den Abschluss der Installation ab.
 
-.. figure:: media/install-on-proxmox_08_.png
+.. figure:: media/install-on-proxmox_08_install-success.png
    :align: center
    :alt: Schritt 8
 
@@ -190,13 +187,13 @@ Nach dem Neustart von Proxmox kannst du dich über einen PC, welcher sich im sel
 graphische Webinterface auf https://192.168.199.20:8006 mit `root` als `User name` und dem vorher gesetzten Passwort 
 über Login anmelden:
 
-.. figure:: media/install-on-proxmox_09_.png
+.. figure:: media/install-on-proxmox_09_proxmox-login.png
    :align: center
    :alt: Schritt 9
 
 Im Fenster `No valid subscription` `OK` wählen oder Fenster schließen:
 
-.. figure:: media/install-on-proxmox_10_.png
+.. figure:: media/install-on-proxmox_10_no-valid-subscription.png
    :align: center
    :alt: Schritt 10
 
@@ -205,7 +202,7 @@ Updates ermöglichen
 
 Um Proxmox Updates installieren zu können, müssen in der Shell des Nodes hv01 folgende Änderungen an den Repositories vorgenommen werden. Dafür den Node im Datacenter auswählen und eine Shell öffnen.
 
-.. figure:: media/install-on-proxmox_11_.png
+.. figure:: media/install-on-proxmox_11_open-shell.png
    :align: center
    :alt: Schritt 11
 
@@ -245,7 +242,7 @@ Ausgangspunkt: `Host hv01` -> `Network`
 
 Die bisherige Netzwerkkonfiguration stellt sich wie folgt dar:
 
-.. figure:: media/install-on-proxmox_12_.png
+.. figure:: media/install-on-proxmox_12_network.png
    :align: center
    :alt: Schritt 12
 
@@ -273,7 +270,7 @@ Nun erstellst Du die zweite Bridge:
 
 Dazu wähle das Menü `Datacenter` -> `hv01`-> `Network`-> `Create` -> `Linux Bridge`
 
-.. figure:: media/install-on-proxmox_13_.png
+.. figure:: media/install-on-proxmox_13_network-add-bridge.png
    :align: center
    :alt: Schritt 13
 
@@ -288,7 +285,7 @@ Comment      green
 
 Mit `Create` wird die Brücke erstellen.
 
-.. figure:: media/install-on-proxmox_14_.png
+.. figure:: media/install-on-proxmox_14_create-linux-bridge.png
    :align: center
    :alt: Schritt 14
 
@@ -296,7 +293,7 @@ Mit `Create` wird die Brücke erstellen.
 
 Anschließend Proxmox über den Button `Reboot` oben rechts neu starten, um die neuen Networking-Konfigurationen zu laden - Node hv01 muss dafür im Menü `Datacenter` links ausgewählt sein:
 
-.. figure:: media/install-on-proxmox_14-01_.png
+.. figure:: media/install-on-proxmox_14-01_reboot.png
    :align: center
    :alt: Schritt 14-1
 
@@ -352,13 +349,13 @@ Festplatte der gesamte Speicher dem Hypervisor zur Verfügung steht:
 
 1. auf hv01 oben rechts Shell anklicken:
 
-.. figure:: media/install-on-proxmox_11_.png
+.. figure:: media/install-on-proxmox_11_open-shell.png
    :align: center
    :alt: Shell aufrufen
 
 2. lsblk eingeben und mit der Enter-Taste bestätigen; folgende Ausgabe sollte erscheinen:
 
-.. figure:: media/install-on-proxmox_14-02_.png
+.. figure:: media/install-on-proxmox_14-02_console-lsblk-default.png
    :align: center
    :alt: Schritt 14-2
 
@@ -368,31 +365,31 @@ Dieser Bereich wird im Folgenden nun gelöscht und der frei werdende PLatz auf `
 
 3. lvremove /dev/pve/data entfernt local-lvm:
 
-.. figure:: media/install-on-proxmox_14-03-01_.png
+.. figure:: media/install-on-proxmox_14-03-01_console-lvremote-question.png
    :align: center
    :alt: Schritt 14-3-1
 
 Bestätige die Nachfrage mit `y`
 
-.. figure:: media/install-on-proxmox_14-03-02_.png
+.. figure:: media/install-on-proxmox_14-03-02_console-lvremote-success.png
    :align: center
    :alt: Schritt 14-3-2
 
 4. lvresize -l +100%FREE /dev/pve/root erweitert den Speicherbereich von local-lvm:
 
-.. figure:: media/install-on-proxmox_14-04_.png
+.. figure:: media/install-on-proxmox_14-04_console-lvresiz-success.png
    :align: center
    :alt: Schritt 14-4
 
 5. mit resize2fs /dev/mapper/pve-root das Filesystem anpassen:
 
-.. figure:: media/install-on-proxmox_14-05_.png
+.. figure:: media/install-on-proxmox_14-05_console-resize2fs.png
    :align: center
    :alt: Schritt 14-5
 
 6. über lsblk sollte nun zu sehen sein, dass pve-data-Partitionen entfernt wurden:
 
-.. figure:: media/install-on-proxmox_14-06_.png
+.. figure:: media/install-on-proxmox_14-06_console-lsblk-ready.png
    :align: center
    :alt: Schritt 14-6
 
@@ -400,13 +397,13 @@ Es ist zu erkennen, dass auf `/dev/sdb3` nur noch `pve-swap` und `pve-root` vorh
 
 7. Auf der Weboberfläche von Proxmox ist der local-lvm Eintrag noch über `Datacenter → Storage local-lvm (hv01)` mit dem `Remove`-Button graphisch zu entfernen:
 
-.. figure:: media/install-on-proxmox_14-07-01_.png
+.. figure:: media/install-on-proxmox_14-07-01_storage-default.png
    :align: center
    :alt: Schritt 14-7-1
 
 Danach findest Du noch folgenden Speicher:
 
-.. figure:: media/install-on-proxmox_14-07-02_.png
+.. figure:: media/install-on-proxmox_14-07-02_storage-after-remove.png
    :align: center
    :alt: Schritt 14-7-2
 
@@ -426,7 +423,7 @@ Die erste Festplatte heißt hier sda und ersetzt die pve-data-Partition, die im 
 1. Datenträger vorher partitionieren z.B mit ``fdisk /dev/sda → , g → n → w`` (über lsblk den richtigen
 Datenträgernamen herausfinden; in diesem Fall sda)
 
-.. figure:: media/install-on-proxmox_14-08_.png
+.. figure:: media/install-on-proxmox_14-08_console-fdisk.png
    :align: center
    :alt: Schritt 14-8
 
@@ -434,7 +431,7 @@ Datenträgernamen herausfinden; in diesem Fall sda)
 
 Beispiel: pvcreate /dev/sda1 und anschließend mit y bestätigen:
 
-.. figure:: media/install-on-proxmox_14-09_.png
+.. figure:: media/install-on-proxmox_14-09_console-pvcreate.png
    :align: center
    :alt: Schritt 14-9
 
@@ -442,7 +439,7 @@ Beispiel: pvcreate /dev/sda1 und anschließend mit y bestätigen:
 
 Beispiel: vgcreate vg-hdd-1000 /dev/sda1 eine virtuelle Gruppe auf sda erstellen:
 
-.. figure:: media/install-on-proxmox_14-10_.png
+.. figure:: media/install-on-proxmox_14-10_console-vgcreate.png
    :align: center
    :alt: Schritt 14-10
 
@@ -451,7 +448,7 @@ Hier ist die virtuelle Festplatte eine HDD mit 1 TiB Speicher, weshalb die Namen
 
 Beispiel: lvcreate -l 99%VG -n lv-hdd-1000 vg-hdd-1000:
 
-.. figure:: media/install-on-proxmox_14-11_.png
+.. figure:: media/install-on-proxmox_14-11_console-lvcreate.png
    :align: center
    :alt: Schritt 14-11
 
@@ -460,7 +457,7 @@ Beispiel: lvcreate -l 99%VG -n lv-hdd-1000 vg-hdd-1000:
 Beispiel: lvconvert --type thin-pool vg-hdd-1000/lv-hdd-1000 konvertiert den Speicherbereich der
 erstellten virtual group als „thin-pool“ (Beachte die zwei Bindestriche vor dem Wort „type“):
 
-.. figure:: media/install-on-proxmox_14-12_.png
+.. figure:: media/install-on-proxmox_14-12_console-lvconvert.png
    :align: center
    :alt: Schritt 14-12
 
@@ -469,13 +466,13 @@ Datenträger graphisch als Storage in Proxmox anbinden
 
 1. Im Menü `Datacenter > Storage > Add` wählt man „LVM-Thin“ aus. Im ID-Feld wird der Name des virtuellen Datenträgers angegeben. In diesem Fall ist es eine HDD mit 1 TiB Speicherkapazität, weshalb die Bezeichnung vd-hdd-1000 gewählt wird. Unter Volume Group die erstellte virtuelle Gruppe auswählen, welche hier vg-hdd-1000 ist:
 
-.. figure:: media/install-on-proxmox_15-01_.png
+.. figure:: media/install-on-proxmox_15-01_add-lvm-thin.png
    :align: center
    :alt: Schritt 15-1
 
 2. Nun sollte im linken Menü der zweite Storage zu sehen sein, auf welchem die Maschinen für Linuxmuster installiert werden können:
 
-.. figure:: media/install-on-proxmox_15-02_.png
+.. figure:: media/install-on-proxmox_15-02_storage-ready.png
    :align: center
    :alt: Schritt 15-2
 
@@ -510,7 +507,7 @@ Für die VMs wären folgende Befehle anzugeben:
    wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-202-2020_07_20-15_37_19.vma.lzo 
    wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-203-2020_07_20-16_08_54.vma.lzo
 
-.. figure:: media/install-on-proxmox_16_.png
+.. figure:: media/install-on-proxmox_16_console-ls-downloaded-lzo.png
    :align: center
    :alt: Schritt 16
 
@@ -569,7 +566,7 @@ ocker-VM    203   `qmrestore vzdump-qemu-203-2020_07_20-16_08_54.vma.lzo 203 --s
 
 1. Hier wird als Beispiel der Server-Snapshot mit der ID 200 (lmn7-opnsense auf dem vd-hdd-1000 Storage über den Befehl ``qmrestore vzdump-qemu-201-2020_07_21-18_05_35.vma.lzo 201 --storage vd-hdd-1000 -unique 1`` hochgeladen. (Beachte die zwei Bindestriche vor dem Wort „storage“):
 
-.. figure:: media/install-on-proxmox_17_.png
+.. figure:: media/install-on-proxmox_17_console-qmrestore.png
    :align: center
    :alt: Schritt 17
 
@@ -577,7 +574,7 @@ ocker-VM    203   `qmrestore vzdump-qemu-203-2020_07_20-16_08_54.vma.lzo 203 --s
 erfolgreich importiert, sollten diese auf der Weboberfläche von Proxmox (derzeit - https://192.168.199.20:8006) 
 links aufgelistet zu sehen sein.
 
-.. figure:: media/install-on-proxmox_18_.png
+.. figure:: media/install-on-proxmox_18_vm-imported.png
    :align: center
    :alt: Schritt 18
 
@@ -600,7 +597,7 @@ Am Beispiel der OPNSense VM werden die Anpassungen nachstehend erläutert.
 
 Ausgangssituation:
 
-.. figure:: media/install-on-proxmox_19_.png
+.. figure:: media/install-on-proxmox_19_vm-overview.png
    :align: center
    :alt: Schritt 19
 
@@ -613,7 +610,7 @@ Eintrag `Hardware` aus.
 
 2. Rechts werden nun die Hardware-Komponenten der VM aufgelistet. Markiere den Eintrag `Hard disk`.
 
-.. figure:: media/install-on-proxmox_20_.png
+.. figure:: media/install-on-proxmox_20_vm-select-hdd.png
    :align: center
    :alt: Schritt 21
 
@@ -625,13 +622,13 @@ Eintrag `Hardware` aus.
 
 4. Es erscheint ein neues Fenster, in dem du angeben must, um wieviel GiB du die Festplatte vergrößern willst. 
 
-.. figure:: media/install-on-proxmox_21_.png
+.. figure:: media/install-on-proxmox_21_vm-hdd-resize.png
    :align: center
    :alt: Schritt 21
 
 5. In dem Beispiel sind 10 GiB gegeben, um auf 50 GiB zu kommen, trägst Du nun 40 GiB ein. Danach siehst Du folgenden Eintrag:
 
-.. figure:: media/install-on-proxmox_22_.png
+.. figure:: media/install-on-proxmox_22_vm-hdd-status.png
    :align: center
    :alt: Schritt 22
 
@@ -642,7 +639,7 @@ VM Netzwerkeinstellungen prüfen
 
 Die OPNSense VM weist zwei Netzwerkkarten auf, wie nachstehend dargestellt:
 
-.. figure:: media/install-on-proxmox_23_.png
+.. figure:: media/install-on-proxmox_23_vm-network-overview.png
    :align: center
    :alt: Schritt 23
 
@@ -653,13 +650,13 @@ Die Netzwerkkarte `net1` ist hier mit der Bridge `vmbr5` verbunden, die wir bisl
 Wähle hierzu die Netzwerkarte `net1` aus und klicke auf `Edit`. Es erscheint ein Fenster mit den Einstellungen der Netzwerkkarte.
 Ändere den Eintrag für die Bridge auf `vmbr1` wie in der Abb. zu sehen ist:
 
-.. figure:: media/install-on-proxmox_24_.png
+.. figure:: media/install-on-proxmox_24_vm-network-edit.png
    :align: center
    :alt: Schritt 24
 
 Danach müssen für die OPNSense-VM die Netzwerkeintragungen wie folgt aussehen:
 
-.. figure:: media/install-on-proxmox_25_.png
+.. figure:: media/install-on-proxmox_25_vm-network-status.png
    :align: center
    :alt: Schritt 25
 
@@ -749,7 +746,7 @@ Anschließend startest du die anderen VMs.
 
 Nach dem ersten Start der Server-VM laufen diverse automatische Anpassungen ab, wie die Auslastung der CPU zeigt: 
 
-.. figure:: media/install-on-proxmox_26_.png
+.. figure:: media/install-on-proxmox_26_cpu-utilization.png
    :align: center
    :alt: CPU-Auslastung
 
