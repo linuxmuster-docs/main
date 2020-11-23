@@ -27,19 +27,15 @@ In der unten aufgeführten Tabelle findest du die Systemvoraussetzungen zum Betr
 Die Werte sind die voreingestellten Werte der VMs beim Import und bilden gleichzeitig die Mindestvoraussetzungen. Für die Installation mit Proxmox und linuxmuster v7 wird der 
 `IP-Bereich 10.0.0.0/16` genutzt.
 
-+--------------+--------------------+-------------------+--------+
-| VM           | IP                 | HDD               | RAM    |
-+==============+====================+===================+========+
-| OPNsense     | 10.0.0.254/16      | 10 GiB            | 4 GiB  |
-+--------------+--------------------+-------------------+--------+
-| Server       | 10.0.0.1/16        | 25 GiB u 100 GiB  | 4 GiB  |
-+--------------+--------------------+-------------------+--------+
-| OPSI         | 10.0.0.2/16        | 100 GiB           | 2 GiB  |
-+--------------+--------------------+-------------------+--------+
-| Docker-VM    | 10.0.0.3/16        | 100 GiB           | 2 GiB  |
-+--------------+--------------------+-------------------+--------+
-| Proxmox-Host | 10.0.0.10/16       | 100 GiB           | 4 GiB  |
-+--------------+--------------------+-------------------+--------+
+============ ============= ================ =====
+VM           IP            HDD              RAM 
+============ ============= ================ =====
+OPNsense     10.0.0.254/16 10 GiB           4 GiB
+Server       10.0.0.1/16   25 GiB u 100 GiB 4 GiB
+OPSI         10.0.0.2/16   100 GiB          2 GiB
+Docker-VM    10.0.0.3/16   100 GiB          2 GiB
+Proxmox-Host 10.0.0.10/16  100 GiB          4 GiB
+============ ============= ================ =====
 
 Die Festplattengröße sowie der genutzte RAM der jeweiligen VMs kann nach deren Import
 später einfach an die Bedürfnisse der Schule angepasst werden. 
