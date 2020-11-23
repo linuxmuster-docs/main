@@ -498,10 +498,10 @@ Für die VMs wären folgende Befehle anzugeben:
 
 .. code::
 
-   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-200-2020_07_20-18_20_16.vma.lzo 
-   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-201-2020_07_21-18_05_35.vma.lzo
-   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-202-2020_07_20-15_37_19.vma.lzo 
-   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-203-2020_07_20-16_08_54.vma.lzo
+   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-200-2020_11_22-21_52_36.vma.lzo
+   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-201-2020_11_22-21_42_16.vma.lzo
+   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-202-2020_11_22-21_35_56.vma.lzo
+   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-203-2020_11_22-21_31_19.vma.lzo
 
 .. figure:: media/install-on-proxmox_16_console-ls-downloaded-lzo.png
    :align: center
@@ -510,10 +510,10 @@ Für die VMs wären folgende Befehle anzugeben:
 =========== ===================================================================================================
 VM          Download-Befehl                                                                                   
 =========== ===================================================================================================
-opnsense-VM wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-200-2020_07_20-18_20_16.vma.lzo
-server-VM   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-201-2020_07_21-18_05_35.vma.lzo
-opsi-VM     wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-202-2020_07_20-15_37_19.vma.lzo
-docker-VM   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-203-2020_07_20-16_08_54.vma.lzo
+opnsense-VM wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-200-2020_11_22-21_52_36.vma.lzo
+server-VM   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-201-2020_11_22-21_42_16.vma.lzo
+opsi-VM     wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-202-2020_11_22-21_35_56.vma.lzo
+docker-VM   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-203-2020_11_22-21_31_19.vma.lzo
 =========== ===================================================================================================
 
 Die Besonderheiten zu den Archiv-Namen der VMs sind in nachstehendem Hinweis erläutert.
@@ -554,13 +554,13 @@ Der Befehl sollte mit dem Prinzip ``qmrestore <vmname.vma.lzo> <VM-ID> --storage
 =========== ===== ===========================================================================================
 VM          VM-ID Import-Befehl                                                                             
 =========== ===== ===========================================================================================
-opnsense-VM 200   `qmrestore vzdump-qemu-200-2020_07_20-18_20_16.vma.lzo 200 --storage vd-hdd-1000 -unique 1` 
-server-VM   201   `qmrestore vzdump-qemu-201-2020_07_21-18_05_35.vma.lzo 201 --storage vd-hdd-1000 -unique 1` 
-opsi-VM     202   `qmrestore vzdump-qemu-202-2020_07_20-15_37_19.vma.lzo 202 --storage vd-hdd-1000 -unique 1` 
-ocker-VM    203   `qmrestore vzdump-qemu-203-2020_07_20-16_08_54.vma.lzo 203 --storage vd-hdd-1000 -unique 1` 
+opnsense-VM 200   `qmrestore vzdump-qemu-200-2020_11_22-21_52_36.vma.lzo 200 --storage vd-hdd-1000 -unique 1` 
+server-VM   201   `qmrestore vzdump-qemu-201-2020_11_22-21_42_16.vma.lzo 201 --storage vd-hdd-1000 -unique 1` 
+opsi-VM     202   `qmrestore vzdump-qemu-202-2020_11_22-21_35_56.vma.lzo 202 --storage vd-hdd-1000 -unique 1` 
+ocker-VM    203   `qmrestore vzdump-qemu-203-2020_11_22-21_31_19.vma.lzo 203 --storage vd-hdd-1000 -unique 1` 
 =========== ===== ===========================================================================================
 
-1. Hier wird als Beispiel der Server-Snapshot mit der ID 200 (lmn7-opnsense auf dem vd-hdd-1000 Storage über den Befehl ``qmrestore vzdump-qemu-201-2020_07_21-18_05_35.vma.lzo 201 --storage vd-hdd-1000 -unique 1`` hochgeladen. (Beachte die zwei Bindestriche vor dem Wort „storage“):
+1. Hier wird als Beispiel der Server-Snapshot mit der ID 200 (lmn7-opnsense auf dem vd-hdd-1000 Storage über den Befehl ``qmrestore vzdump-qemu-201-2020_11_22-21_42_16.vma.lzo 201 --storage vd-hdd-1000 -unique 1`` hochgeladen. (Beachte die zwei Bindestriche vor dem Wort „storage“):
 
 .. figure:: media/install-on-proxmox_17_console-qmrestore.png
    :align: center
