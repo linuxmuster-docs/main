@@ -349,7 +349,7 @@ Festplatte der gesamte Speicher dem Hypervisor zur Verfügung steht:
    :align: center
    :alt: Shell aufrufen
 
-2. lsblk eingeben und mit der Enter-Taste bestätigen; folgende Ausgabe sollte erscheinen:
+2. ``lsblk`` eingeben und mit der Enter-Taste bestätigen; folgende Ausgabe sollte erscheinen:
 
 .. figure:: media/install-on-proxmox_14-02_console-lsblk-default.png
    :align: center
@@ -359,31 +359,43 @@ Es ist zu sehen, dass die Festplatten sda (931.5G) und sdb (111.8G) vorhanden si
 
 Dieser Bereich wird im Folgenden nun gelöscht und der frei werdende PLatz auf `sdb` wird vollständig dem Proxmox-Host zugeordnet. Danach wird die Festplatte `sda` als LVM für die VM eingerichtet.
 
-3. lvremove /dev/pve/data entfernt local-lvm:
+3. Vorhandene local-lvm entfernen:
+
+.. code::
+
+   lvremove /dev/pve/data
 
 .. figure:: media/install-on-proxmox_14-03-01_console-lvremote-question.png
    :align: center
    :alt: Schritt 14-3-1
 
-Bestätige die Nachfrage mit `y`
+Bestätige die Nachfrage mit ``y``
 
 .. figure:: media/install-on-proxmox_14-03-02_console-lvremote-success.png
    :align: center
    :alt: Schritt 14-3-2
 
-4. lvresize -l +100%FREE /dev/pve/root erweitert den Speicherbereich von local-lvm:
+4. Speicherbereich von local erweitern:
+
+.. code::
+
+   lvresize -l +100%FREE /dev/pve/root
 
 .. figure:: media/install-on-proxmox_14-04_console-lvresiz-success.png
    :align: center
    :alt: Schritt 14-4
 
-5. mit resize2fs /dev/mapper/pve-root das Filesystem anpassen:
+5. Filesystem anpassen:
+
+.. code::
+
+   resize2fs /dev/mapper/pve-root
 
 .. figure:: media/install-on-proxmox_14-05_console-resize2fs.png
    :align: center
    :alt: Schritt 14-5
 
-6. über lsblk sollte nun zu sehen sein, dass pve-data-Partitionen entfernt wurden:
+6. über ``lsblk`` sollte nun zu sehen sein, dass pve-data-Partitionen entfernt wurden:
 
 .. figure:: media/install-on-proxmox_14-06_console-lsblk-ready.png
    :align: center
@@ -422,34 +434,51 @@ Die erste Festplatte heißt hier sda und ersetzt die pve-data-Partition, die im 
    :align: center
    :alt: Schritt 14-8
 
-2. Jetzt eine neue Partition auf der Festplatte anlegen - pvcreate /dev/sd<xy>1
+2. Jetzt eine neue Partition auf der Festplatte anlegen - ``pvcreate /dev/sd<xy>1``
 
-Beispiel: ``pvcreate /dev/sda1`` und anschließend mit ``y`` bestätigen:
+Beispiel: 
+
+.. code::
+
+   pvcreate /dev/sda1
+
+und anschließend mit ``y`` bestätigen:
 
 .. figure:: media/install-on-proxmox_14-09_console-pvcreate.png
    :align: center
    :alt: Schritt 14-9
 
-3. Nun wird eine virtuelle Gruppe auf der ersten Partition der zweiten Festplatte eingerichtet: vgcreate vg-<disk>-<size> /dev/sd<xy>1
+3. Nun wird eine virtuelle Gruppe auf der ersten Partition der zweiten Festplatte eingerichtet: ``vgcreate vg-<disk>-<size> /dev/sd<xy>1``
 
-Beispiel: ``vgcreate vg-hdd-1000 /dev/sda1`` eine virtuelle Gruppe auf sda erstellen:
+Beispiel:
+
+.. code::
+
+   vgcreate vg-hdd-1000 /dev/sda1
 
 .. figure:: media/install-on-proxmox_14-10_console-vgcreate.png
    :align: center
    :alt: Schritt 14-10
 
-4. mit lvcreate -l 99%VG -n lv-<disk>-<size> vg-<disk>-<size> nun das logical volume erstellen. Hier ist die virtuelle Festplatte eine HDD mit 1 TiB Speicher, weshalb die Namen im Befehl so angepasst werden: 
+4. mit ``lvcreate -l 99%VG -n lv-<disk>-<size> vg-<disk>-<size>`` nun das logical volume erstellen. Hier ist die virtuelle Festplatte eine HDD mit 1 TiB Speicher, weshalb die Namen im Befehl so angepasst werden: 
 
-Beispiel: ``lvcreate -l 99%VG -n lv-hdd-1000 vg-hdd-1000``:
+Beispiel: 
+
+.. code:: 
+
+   lvcreate -l 99%VG -n lv-hdd-1000 vg-hdd-1000
 
 .. figure:: media/install-on-proxmox_14-11_console-lvcreate.png
    :align: center
    :alt: Schritt 14-11
 
-5. lvconvert --type thin-pool vg-<disk>-<size>/lv-<disk>-<size>
+5. ``lvconvert --type thin-pool vg-<disk>-<size>/lv-<disk>-<size>`` konvertiert den Speicherbereich der erstellten virtual group als „thin-pool“:
 
-Beispiel: ``lvconvert --type thin-pool vg-hdd-1000/lv-hdd-1000`` konvertiert den Speicherbereich der
-erstellten virtual group als „thin-pool“ (Beachte die zwei Bindestriche vor dem Wort „type“):
+Beispiel: 
+
+.. code:: 
+
+   lvconvert --type thin-pool vg-hdd-1000/lv-hdd-1000
 
 .. figure:: media/install-on-proxmox_14-12_console-lvconvert.png
    :align: center
@@ -544,8 +573,7 @@ VM Templates importieren
 
 Liegen die VMs auf Proxmox, können die Abbilder als neue virtuelle Maschinen in der Shell über das `qmrestore-Tool` eingefügt werden. Für jede zu importierende Maschine ist der nachstehende Befehl anzupassen und auszuführen. Dabei sollte man sich im selben Verzeichnis befinden, in welchem die Abbilder liegen oder im Befehl den Pfad zur Datei angeben.
 
-Der Befehl sollte mit dem Prinzip ``qmrestore <vmname.vma.lzo> <VM-ID> --storage <storage-name> -unique 1`` 
-(Beachte die zwei Bindestriche vor dem Wort „storage“) angewendet werden.
+Der Befehl sollte mit dem Prinzip ``qmrestore <vmname.vma.lzo> <VM-ID> --storage <storage-name> -unique 1`` angewendet werden.
 
 <vmname.vma.lzo> entspricht dem Dateinamen der Template-VM. Mit <VM-ID> übergibst du der VM eine ID, wie beispielsweise „101“ oder „701“. <storage-name> ist etwa `local` oder der Name eines anderen Volumes, wie im obigen Beipiel `vd-hdd-100`- und `unique 1` generiert eine andere MAC-Addresse, als im Template exportiert.
 
@@ -558,7 +586,11 @@ opsi-VM     202   `qmrestore vzdump-qemu-202-2020_11_22-21_35_56.vma.lzo 202 --s
 ocker-VM    203   `qmrestore vzdump-qemu-203-2020_11_22-21_31_19.vma.lzo 203 --storage vd-hdd-1000 -unique 1` 
 =========== ===== ===========================================================================================
 
-1. Hier wird als Beispiel der Server-Snapshot mit der ID 200 (lmn7-opnsense auf dem vd-hdd-1000 Storage über den Befehl ``qmrestore vzdump-qemu-201-2020_11_22-21_42_16.vma.lzo 201 --storage vd-hdd-1000 -unique 1`` hochgeladen. (Beachte die zwei Bindestriche vor dem Wort „storage“):
+1. Hier wird als Beispiel der Server-Snapshot mit der ID 200 (lmn7-opnsense) auf dem vd-hdd-1000 Storage über folgenden Befehl hochgeladen:
+
+.. code::
+
+   qmrestore vzdump-qemu-201-2020_11_22-21_42_16.vma.lzo 201 --storage vd-hdd-1000 -unique 1
 
 .. figure:: media/install-on-proxmox_17_console-qmrestore.png
    :align: center
