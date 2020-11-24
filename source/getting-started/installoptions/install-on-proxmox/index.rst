@@ -416,8 +416,7 @@ Die erste Festplatte heißt hier sda und ersetzt die pve-data-Partition, die im 
   entsprechend anpassen, die folgenden Grafiken dienen zur Orientierung: `vg-hdd-1000` eignet sich 
   beispielsweise für ein Volume aus einer HDD mit 1 TiB Kapazität.
 
-1. Datenträger vorher partitionieren z.B mit ``fdisk /dev/sda → , g → n → w`` (über lsblk den richtigen
-Datenträgernamen herausfinden; in diesem Fall sda)
+1. Datenträger vorher partitionieren z.B mit ``fdisk /dev/sda → , g → n → w`` (über lsblk den richtigen Datenträgernamen herausfinden; in diesem Fall sda)
 
 .. figure:: media/install-on-proxmox_14-08_console-fdisk.png
    :align: center
@@ -425,7 +424,7 @@ Datenträgernamen herausfinden; in diesem Fall sda)
 
 2. Jetzt eine neue Partition auf der Festplatte anlegen - pvcreate /dev/sd<xy>1
 
-Beispiel: pvcreate /dev/sda1 und anschließend mit y bestätigen:
+Beispiel: ``pvcreate /dev/sda1`` und anschließend mit ``y`` bestätigen:
 
 .. figure:: media/install-on-proxmox_14-09_console-pvcreate.png
    :align: center
@@ -433,16 +432,15 @@ Beispiel: pvcreate /dev/sda1 und anschließend mit y bestätigen:
 
 3. Nun wird eine virtuelle Gruppe auf der ersten Partition der zweiten Festplatte eingerichtet: vgcreate vg-<disk>-<size> /dev/sd<xy>1
 
-Beispiel: vgcreate vg-hdd-1000 /dev/sda1 eine virtuelle Gruppe auf sda erstellen:
+Beispiel: ``vgcreate vg-hdd-1000 /dev/sda1`` eine virtuelle Gruppe auf sda erstellen:
 
 .. figure:: media/install-on-proxmox_14-10_console-vgcreate.png
    :align: center
    :alt: Schritt 14-10
 
-4. mit lvcreate -l 99%VG -n lv-<disk>-<size> vg-<disk>-<size> nun das logical volume erstellen 
-Hier ist die virtuelle Festplatte eine HDD mit 1 TiB Speicher, weshalb die Namen im Befehl so angepasst werden: 
+4. mit lvcreate -l 99%VG -n lv-<disk>-<size> vg-<disk>-<size> nun das logical volume erstellen. Hier ist die virtuelle Festplatte eine HDD mit 1 TiB Speicher, weshalb die Namen im Befehl so angepasst werden: 
 
-Beispiel: lvcreate -l 99%VG -n lv-hdd-1000 vg-hdd-1000:
+Beispiel: ``lvcreate -l 99%VG -n lv-hdd-1000 vg-hdd-1000``:
 
 .. figure:: media/install-on-proxmox_14-11_console-lvcreate.png
    :align: center
@@ -450,7 +448,7 @@ Beispiel: lvcreate -l 99%VG -n lv-hdd-1000 vg-hdd-1000:
 
 5. lvconvert --type thin-pool vg-<disk>-<size>/lv-<disk>-<size>
 
-Beispiel: lvconvert --type thin-pool vg-hdd-1000/lv-hdd-1000 konvertiert den Speicherbereich der
+Beispiel: ``lvconvert --type thin-pool vg-hdd-1000/lv-hdd-1000`` konvertiert den Speicherbereich der
 erstellten virtual group als „thin-pool“ (Beachte die zwei Bindestriche vor dem Wort „type“):
 
 .. figure:: media/install-on-proxmox_14-12_console-lvconvert.png
@@ -601,8 +599,7 @@ Die OPNSense VM wurde mit dem Namen `lmn7-opnsense` under `VM-ID: 200` angelegt.
 eine Festplatte mit einer Größe von 10 GiB eingerichtet wurde. 
 Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sein. Die Festplattengrößße kannst du nun wie folgt anpassen:
 
-1. Wähle links im Menü die gewünschte VM aus und wähle dann in der Spalte daneben (Kontextmenü der VM) den 
-Eintrag `Hardware` aus.
+1. Wähle links im Menü die gewünschte VM aus und wähle dann in der Spalte daneben (Kontextmenü der VM) den Eintrag `Hardware` aus.
 
 2. Rechts werden nun die Hardware-Komponenten der VM aufgelistet. Markiere den Eintrag `Hard disk`.
 
@@ -704,9 +701,9 @@ Mit den in der Dokumentation zuvor angegebenen Adressen änderst Du die Eintragu
 
 Physikalisch ist bislang die erste Netzwerkkarte mit dem (DSL-)Router und die zweite Netzwerkkarte mit dem Switch zu verbinden, der für das interne Netz genutzt wird - wie zuvor beschrieben. Dies ändert sich nun. Die Netzwerkkarte `eno1` wird auf den `internen Switch` verkabelt und die Netzwerkkarte `eno2` wird auf den `externen -Swicth / (DSL-)Router` verkabelt.
 
-**2. Ändern des hostname**
+**2. Ändern des Hostnames**
 
-Öffne die Datei ``/etc/hosts/`` und ändere diese wie folgt:
+Öffne die Datei ``/etc/hosts`` und ändere diese wie folgt:
 
 .. code::
 
