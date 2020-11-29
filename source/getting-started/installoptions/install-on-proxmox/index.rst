@@ -577,14 +577,14 @@ Der Befehl sollte mit dem Prinzip ``qmrestore <vmname.vma.lzo> <VM-ID> --storage
 
 <vmname.vma.lzo> entspricht dem Dateinamen der Template-VM. Mit <VM-ID> übergibst du der VM eine ID, wie beispielsweise „101“ oder „701“. <storage-name> ist etwa `local` oder der Name eines anderen Volumes, wie im obigen Beipiel `vd-hdd-100`- und `unique 1` generiert eine andere MAC-Addresse, als im Template exportiert.
 
-=========== ===== ===========================================================================================
+=========== ===== =============================================================================================
 VM          VM-ID Import-Befehl                                                                             
-=========== ===== ===========================================================================================
-opnsense-VM 200   `qmrestore vzdump-qemu-200-2020_11_22-21_52_36.vma.lzo 200 --storage vd-hdd-1000 -unique 1` 
-server-VM   201   `qmrestore vzdump-qemu-201-2020_11_22-21_42_16.vma.lzo 201 --storage vd-hdd-1000 -unique 1` 
-opsi-VM     202   `qmrestore vzdump-qemu-202-2020_11_22-21_35_56.vma.lzo 202 --storage vd-hdd-1000 -unique 1` 
-ocker-VM    203   `qmrestore vzdump-qemu-203-2020_11_22-21_31_19.vma.lzo 203 --storage vd-hdd-1000 -unique 1` 
-=========== ===== ===========================================================================================
+=========== ===== =============================================================================================
+opnsense-VM 200   ``qmrestore vzdump-qemu-200-2020_11_22-21_52_36.vma.lzo 200 --storage vd-hdd-1000 -unique 1`` 
+server-VM   201   ``qmrestore vzdump-qemu-201-2020_11_22-21_42_16.vma.lzo 201 --storage vd-hdd-1000 -unique 1`` 
+opsi-VM     202   ``qmrestore vzdump-qemu-202-2020_11_22-21_35_56.vma.lzo 202 --storage vd-hdd-1000 -unique 1``
+docker-VM   203   ``qmrestore vzdump-qemu-203-2020_11_22-21_31_19.vma.lzo 203 --storage vd-hdd-1000 -unique 1``
+=========== ===== =============================================================================================
 
 1. Hier wird als Beispiel der Server-Snapshot mit der ID 200 (lmn7-opnsense) auf dem vd-hdd-1000 Storage über folgenden Befehl hochgeladen:
 
