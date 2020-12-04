@@ -16,8 +16,25 @@ Ab Version 1809 sind die RSAT ein optionales Feature. Die Installation erfolgt �
 Verwendung der Gruppenrichtlinienverwaltung
 -------------------------------------------
 Starten Sie die Gruppenrichtlinienverwaltung durch Eingabe von ``gpmc.mmc``.
-.. image:: media/01-gpmc.png
+
+.. image:: media/01-gpmc.PNG
   :alt: GPMC
    :align: center
    
+Mittels Rechtsklick auf ``sophomorix:school:default-school`` und ``Bearbeiten`` öffnet sich der Gruppenrichtlinienverwaltungs-Editor:
 
+.. image:: media/02-Gruppenrichtlinienverwaltungs-Editor.PNG
+  :alt: GPMC
+   :align: center
+
+Im Gruppenrichtlinienverwaltungs-Editor können nun Anpassungen der GPO vorgenommen werden:
+
+Beispiel für Änderung der Laufwerksbeschriftung
+-----------------------------------------------
+
+Die Netzlaufwerke unter Windows werden mit Ausnahme des Homelaufwerks per GPO eingebunden. Wenn statt die Beschriftung deutsch statt englisch sein soll oder der Laufwerksbuchstabe geändert werden soll kann das unter ``Benutzerkonfiguration`` -> ``Einstellungen`` -> ``Laufwerkszuordnungen`` geändert werden:
+
+.. image:: media/03-share-umbenennen.PNG
+  :alt: GPMC
+   :align: center
+   
