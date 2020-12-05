@@ -293,8 +293,6 @@ Anschließend Proxmox über den Button `Reboot` oben rechts neu starten, um die 
    :align: center
    :alt: Schritt 14-1
 
-.. todo hier weiter 
-
 Die Netzwerkkonfiguration des Proxmox-Host kannst du mit ``cat /etc/network/interfaces`` wie oben gezeigt in der Konsole überprüfen.
 Die Datei sollte nachstehende Eintragungen aufweisen. Die angezeigte IP für die Bridge `vmbr0` muss der entsprechen, die bei Installation eingetragenen wurde.
 
@@ -510,11 +508,11 @@ Unter Proxmox ist ein Import einer VM, die zuvor unter Proxmox als Backup gesich
 VM Templates herunterladen
 --------------------------
 
-Fertige VM-Snapshots für Proxmox stellt linuxmuster.net auf dem eigenen Download-Server bereit. ``https://download.linuxmuster.net/proxmox/v7/latest/``
+Fertige VM-Snapshots für Proxmox stellt linuxmuster.net auf dem eigenen Download-Server bereit. https://download.linuxmuster.net/proxmox/v7/latest/
 
 Für eine linuxmuster.net v7 Umgebung werden die Server-VM und als Firewall die OPNSense-VM benötigt. Optional sind zusätzlich eine OPSI-VM und eine Docker-VM für deine linuxmuster.net-Umgebung verfügbar. 
 
-Um die Maschinen importieren zu können, müsssen diese zuerst auf den Hypervisor geladen werden. Die VMs können über die Shell von Proxmox mit dem wget-Befehl auf den Proxmox-Host direkt heruntergeladen werden. 
+Um die Maschinen importieren zu können, müsssen diese zuerst auf den Hypervisor geladen werden. Die VMs können über die Shell von Proxmox mit dem wget-Befehl direkt heruntergeladen werden. 
 
 Für die VMs wären folgende Befehle anzugeben: 
 
@@ -555,8 +553,6 @@ Die Besonderheiten zu den Archiv-Namen der VMs sind in nachstehendem Hinweis erl
    ss –> Sekunde
 
    Der Befehl qmrestore erwartet ab Proxmox 6.2 einen solchen Archivnamen.
-
-Danach kannst Du die VMs importieren. 
 
 VM Templates importieren
 ------------------------
@@ -609,20 +605,17 @@ docker-VM   203   ``qmrestore vzdump-qemu-203-2020_11_22-21_31_19.vma.lzo 203 --
    :align: center
    :alt: Schritt 18
 
-In der Übersicht in Proxmox erkennst Du die importierten VMs mit ihren IDs und Namen. Vor dem Start der VMs sollten die Festplattengrößen auf die eigenen Bedürfnisse angepasst und die Netzwerkeinstellungen kontrolliert werden.
+In der Übersicht in Proxmox erkennst Du die importierten VMs mit ihren IDs und Namen. 
 
-Anpassung der VM-Einstellungen
-==============================
+Anpassung der VM-Einstellungen vor dem ersten Starten
+=====================================================
 
-Die VMs können nun vor dem Start recht einfach auf die eigenen Bedürfnisse und Anforderungen angepasst werden.
-So dürften z.B. die Größen für die Festplatten für größere Schulen zu klein sein, so dass diese vor dem ersten Start 
-angepasst werden können. Zudem sind die Netzwerkeinstellungen zu prüfen und ggf. anzupassen.
+Die VMs können nun vor dem Start recht einfach auf die eigenen Bedürfnisse und Anforderungen angepasst werden. So dürften z. B. die Größen für die Festplatten für größere Schulen zu klein sein, sodass diese angepasst werden müssen. Zudem sind die Netzwerkeinstellungen zu prüfen und ggf. anzupassen.
+
+Diese Anpassungen können in der WebUI des Proxmox-Host recht einfach vorgenommen werden. Für nachstehende Änderungen müssen die VMs heruntergefahren sein, so wie dies direkt nach dem Import der Fall ist.
 
 VM Festplattengrösse anpassen
 -----------------------------
-
-Diese Anpassungen können in der WebUI des Proxmox-Host recht einfach vorgenommen werden. Für nachstehende Änderungen 
-müssen die VMs heruntergefahren sein, so wie dies direkt nach dem Import der Fall ist.
 
 Am Beispiel der OPNSense VM werden die Anpassungen nachstehend erläutert.
 
