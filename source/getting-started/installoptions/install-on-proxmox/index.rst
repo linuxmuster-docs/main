@@ -510,29 +510,13 @@ Unter Proxmox ist ein Import einer VM, die zuvor unter Proxmox als Backup gesich
 VM Templates herunterladen
 --------------------------
 
-Fertige VM-Snapshots für Proxmox stellt linuxmuster.net auf dem eigenen Download-Server bereit. 
-Für eine linuxmuster.net v7 Umgebung werden die Server-VM und als Firewall die OPNSense-VM benötigt.
+Fertige VM-Snapshots für Proxmox stellt linuxmuster.net auf dem eigenen Download-Server bereit. ``https://download.linuxmuster.net/proxmox/v7/latest/``
 
-Optional ist zusätzlich eine OPSI-VM und eine Docker-VM für deine linuxmuster.net-Umgebung verfügbar. Um die Maschinen importieren zu können, müsssen diese zuerst auf den Hypervisor geladen werden.
+Für eine linuxmuster.net v7 Umgebung werden die Server-VM und als Firewall die OPNSense-VM benötigt. Optional sind zusätzlich eine OPSI-VM und eine Docker-VM für deine linuxmuster.net-Umgebung verfügbar. 
 
-Die Proxmox VMs finden sich hier: 
-
-https://download.linuxmuster.net/proxmox/v7/latest/
-
-Die VMs können z.B. über die Shell von Proxmox mit dem wget-Befehl auf den Proxmox-Host direkt heruntergeladen werden. 
+Um die Maschinen importieren zu können, müsssen diese zuerst auf den Hypervisor geladen werden. Die VMs können über die Shell von Proxmox mit dem wget-Befehl auf den Proxmox-Host direkt heruntergeladen werden. 
 
 Für die VMs wären folgende Befehle anzugeben: 
-
-.. code::
-
-   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-200-2020_11_22-21_52_36.vma.lzo
-   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-201-2020_11_22-21_42_16.vma.lzo
-   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-202-2020_11_22-21_35_56.vma.lzo
-   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-203-2020_11_22-21_31_19.vma.lzo
-
-.. figure:: media/install-on-proxmox_16_console-ls-downloaded-lzo.png
-   :align: center
-   :alt: Schritt 16
 
 =========== ===================================================================================================
 VM          Download-Befehl                                                                                   
@@ -542,6 +526,12 @@ server-VM   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-
 opsi-VM     wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-202-2020_11_22-21_35_56.vma.lzo
 docker-VM   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-203-2020_11_22-21_31_19.vma.lzo
 =========== ===================================================================================================
+
+Nach dem Herunterladen der Backup-Dateien sollten sich diese mittels ``ls -lh`` in der Proxmox-Shell anzeigen lassen.
+
+.. figure:: media/install-on-proxmox_16_console-ls-downloaded-lzo.png
+   :align: center
+   :alt: Schritt 16
 
 Die Besonderheiten zu den Archiv-Namen der VMs sind in nachstehendem Hinweis erläutert.
 
@@ -575,7 +565,24 @@ Liegen die VMs auf Proxmox, können die Abbilder als neue virtuelle Maschinen in
 
 Der Befehl sollte mit dem Prinzip ``qmrestore <vmname.vma.lzo> <VM-ID> --storage <storage-name> -unique 1`` angewendet werden.
 
-<vmname.vma.lzo> entspricht dem Dateinamen der Template-VM. Mit <VM-ID> übergibst du der VM eine ID, wie beispielsweise „101“ oder „701“. <storage-name> ist etwa `local` oder der Name eines anderen Volumes, wie im obigen Beipiel `vd-hdd-100`- und `unique 1` generiert eine andere MAC-Addresse, als im Template exportiert.
+Dabei gilt:
+
+*  Festvorgegeben:
+
+   `<vmname.vma.lzo>` entspricht einem der Dateinamen in der obigen Tabelle im Abschnitt "VM Templates herunterladen".
+
+*  Anzupassen an deine Umgebung:
+
+   Mit `<VM-ID>` gibst du der VM eine ID, in unserer Beschreibung beispielsweise "200", "201", "202" und "203". (Dieser Vorgabe musst du nicht folgen, kannst sie also nach eigenen Vorgaben wählen.)
+
+   `<storage-name>` ist der Name des Volumes, welchen du zuvor bei "Datenträger graphisch als Storage in Proxmox anbinden" vergeben hast. Hier in der Anleitung "vd-hdd-1000".
+
+*  Weiterer Parameter:
+
+   `-unique 1` generiert eine andere MAC-Addresse, als im Template exportiert.
+
+Übersicht der Import-Befehle
+----------------------------
 
 =========== ===== =============================================================================================
 VM          VM-ID Import-Befehl                                                                             
@@ -586,7 +593,7 @@ opsi-VM     202   ``qmrestore vzdump-qemu-202-2020_11_22-21_35_56.vma.lzo 202 --
 docker-VM   203   ``qmrestore vzdump-qemu-203-2020_11_22-21_31_19.vma.lzo 203 --storage vd-hdd-1000 -unique 1``
 =========== ===== =============================================================================================
 
-1. Hier wird als Beispiel der Server-Snapshot mit der ID 200 (lmn7-opnsense) auf dem vd-hdd-1000 Storage über folgenden Befehl hochgeladen:
+1. Hier wird als Beispiel der Server-Snapshot mit der ID 200 (lmn7-opnsense) auf dem vd-hdd-1000 Storage über folgenden Befehl importiert:
 
 .. code::
 
@@ -596,9 +603,7 @@ docker-VM   203   ``qmrestore vzdump-qemu-203-2020_11_22-21_31_19.vma.lzo 203 --
    :align: center
    :alt: Schritt 17
 
-2. Als VM-IDs kann ebenso 101, 102, 103 etc. gewählt werden. Wurden die gewünschten Maschinen
-erfolgreich importiert, sollten diese auf der Weboberfläche von Proxmox (derzeit - https://192.168.199.20:8006) 
-links aufgelistet zu sehen sein.
+2. Wurden die gewünschten Maschinen erfolgreich importiert, sollten diese auf der Weboberfläche von Proxmox (derzeit - https://192.168.199.20:8006) links aufgelistet zu sehen sein.
 
 .. figure:: media/install-on-proxmox_18_vm-imported.png
    :align: center
