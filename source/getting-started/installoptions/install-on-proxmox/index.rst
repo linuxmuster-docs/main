@@ -599,13 +599,12 @@ docker-VM   203   ``qmrestore vzdump-qemu-203-2020_11_22-21_31_19.vma.lzo 203 --
    :align: center
    :alt: Schritt 17
 
-2. Wurden die gewünschten Maschinen erfolgreich importiert, sollten diese auf der Weboberfläche von Proxmox (derzeit - https://192.168.199.20:8006) links aufgelistet zu sehen sein.
+2. Wurden die gewünschten Maschinen erfolgreich importiert, sollten diese mit ihren IDs und Namen auf der Weboberfläche von Proxmox links aufgelistet zu sehen sein.
 
 .. figure:: media/install-on-proxmox_18_vm-imported.png
    :align: center
    :alt: Schritt 18
 
-In der Übersicht in Proxmox erkennst Du die importierten VMs mit ihren IDs und Namen. 
 
 Anpassung der VM-Einstellungen vor dem ersten Starten
 =====================================================
@@ -613,6 +612,8 @@ Anpassung der VM-Einstellungen vor dem ersten Starten
 Die VMs können nun vor dem Start recht einfach auf die eigenen Bedürfnisse und Anforderungen angepasst werden. So dürften z. B. die Größen für die Festplatten für größere Schulen zu klein sein, sodass diese angepasst werden müssen. Zudem sind die Netzwerkeinstellungen zu prüfen und ggf. anzupassen.
 
 Diese Anpassungen können in der WebUI des Proxmox-Host recht einfach vorgenommen werden. Für nachstehende Änderungen müssen die VMs heruntergefahren sein, so wie dies direkt nach dem Import der Fall ist.
+
+.. Auslagerung Kapitel Festplatten-Vergrößerung Beginn 
 
 VM Festplattengrösse anpassen
 -----------------------------
@@ -627,7 +628,7 @@ Ausgangssituation:
 
 Die OPNSense VM wurde mit dem Namen `lmn7-opnsense` under `VM-ID: 200` angelegt. In der Übersicht erkennst du, dass derzeit
 eine Festplatte mit einer Größe von 10 GiB eingerichtet wurde. 
-Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sein. Die Festplattengrößße kannst du nun wie folgt anpassen:
+Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sein. Die Festplattengröße kannst du nun wie folgt anpassen:
 
 1. Wähle links im Menü die gewünschte VM aus und wähle dann in der Spalte daneben (Kontextmenü der VM) den Eintrag `Hardware` aus.
 
@@ -649,13 +650,17 @@ Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sei
    :align: center
    :alt: Schritt 21
 
-5. In dem Beispiel sind 10 GiB gegeben, um auf 50 GiB zu kommen, trägst Du nun 40 GiB ein. Danach siehst Du folgenden Eintrag:
+5. In dem Beispiel sind 10 GByte gegeben, um auf 50 GByte zu kommen, trägst Du nun 40 GByte ein. Danach siehst Du folgenden Eintrag:
 
 .. figure:: media/install-on-proxmox_22_vm-hdd-status.png
    :align: center
    :alt: Schritt 22
 
-Für die anderen VMs werden die Festplatten in gleicher Weise vergrößert. Bei der Server-VM ist zu beachten, dass diese über zwei Festplatten verfügt. Die kleine Festplatte weist zu Beginn 25 GiB die größere 100 GiB auf. Beide sind zu vergrößern. Hierbei ist auf eine ausreichende Größe zu achten, da auf dem Server neben den Nutzer- und Klassendaten auch die Linbo-Images abgelegt werden.
+Für die anderen VMs werden die Festplatten in gleicher Weise vergrößert. 
+
+Bei der Server-VM ist zu beachten, dass diese über zwei Festplatten verfügt. Die kleine Festplatte weist zu Beginn 25 GByte die größere 100 GByte auf. Beide sind zu vergrößern. Hierbei ist auf eine ausreichende Größe zu achten, da auf dem Server neben den Nutzer- und Klassendaten auch die von Linbo gespeicherten Festplattenabbilder der Clients abgelegt werden.
+
+.. Auslagerung Kapitel Festplatten-Vergrößerung Ende
 
 VM Netzwerkeinstellungen prüfen
 -------------------------------
@@ -665,6 +670,9 @@ Die OPNSense VM weist zwei Netzwerkkarten auf, wie nachstehend dargestellt:
 .. figure:: media/install-on-proxmox_23_vm-network-overview.png
    :align: center
    :alt: Schritt 23
+
+.. todo:: hier weiter
+   Erklärung bezüglich vmbr5 immer noch nötig?
 
 Die Netzwerkkarte `net0` ist hier mit der Bridge `vmbr0` verbunden. Diese ist derzeit noch für das rote Netz / externes Netz zuständig. Im nächsten Schritt wird dies geändert, so dass die VMs mit der internen Schnittstelle an die Bridge `vmbr0` und die externe Schnittstelle der OPNSense-VM auf die dann externe Bridge `vmbr1` anzuschliessen ist.
 
