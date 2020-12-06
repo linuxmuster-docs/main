@@ -599,13 +599,12 @@ docker-VM   203   ``qmrestore vzdump-qemu-203-2020_11_22-21_31_19.vma.lzo 203 --
    :align: center
    :alt: Schritt 17
 
-2. Wurden die gewünschten Maschinen erfolgreich importiert, sollten diese auf der Weboberfläche von Proxmox (derzeit - https://192.168.199.20:8006) links aufgelistet zu sehen sein.
+2. Wurden die gewünschten Maschinen erfolgreich importiert, sollten diese mit ihren IDs und Namen auf der Weboberfläche von Proxmox links aufgelistet zu sehen sein.
 
 .. figure:: media/install-on-proxmox_18_vm-imported.png
    :align: center
    :alt: Schritt 18
 
-In der Übersicht in Proxmox erkennst Du die importierten VMs mit ihren IDs und Namen. 
 
 Anpassung der VM-Einstellungen vor dem ersten Starten
 =====================================================
@@ -665,6 +664,9 @@ Die OPNSense VM weist zwei Netzwerkkarten auf, wie nachstehend dargestellt:
 .. figure:: media/install-on-proxmox_23_vm-network-overview.png
    :align: center
    :alt: Schritt 23
+
+.. todo:: hier weiter
+   Erklärung bezüglich vmbr5 immer noch nötig?
 
 Die Netzwerkkarte `net0` ist hier mit der Bridge `vmbr0` verbunden. Diese ist derzeit noch für das rote Netz / externes Netz zuständig. Im nächsten Schritt wird dies geändert, so dass die VMs mit der internen Schnittstelle an die Bridge `vmbr0` und die externe Schnittstelle der OPNSense-VM auf die dann externe Bridge `vmbr1` anzuschliessen ist.
 
