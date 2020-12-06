@@ -671,9 +671,6 @@ Die OPNSense VM weist zwei Netzwerkkarten auf, wie nachstehend dargestellt:
    :align: center
    :alt: Schritt 23
 
-.. todo:: hier weiter
-   Erklärung bezüglich vmbr5 immer noch nötig?
-
 Die Netzwerkkarte `net0` ist hier mit der Bridge `vmbr0` verbunden. Diese ist derzeit noch für das rote Netz / externes Netz zuständig. Im nächsten Schritt wird dies geändert, so dass die VMs mit der internen Schnittstelle an die Bridge `vmbr0` und die externe Schnittstelle der OPNSense-VM auf die dann externe Bridge `vmbr1` anzuschliessen ist.
 
 Die Netzwerkkarte `net1` ist hier mit der Bridge `vmbr5` verbunden, die wir bislang gar nicht haben. Diese Netzwerkkarte muss nun mit unserer Bridge für das externe Netz `vmbr1` - Anpassungen siehe nächster Schritt - verbunden werden.
