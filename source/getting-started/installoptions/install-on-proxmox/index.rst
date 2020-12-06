@@ -626,7 +626,7 @@ Ausgangssituation:
 
 Die OPNSense VM wurde mit dem Namen `lmn7-opnsense` under `VM-ID: 200` angelegt. In der Übersicht erkennst du, dass derzeit
 eine Festplatte mit einer Größe von 10 GiB eingerichtet wurde. 
-Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sein. Die Festplattengrößße kannst du nun wie folgt anpassen:
+Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sein. Die Festplattengröße kannst du nun wie folgt anpassen:
 
 1. Wähle links im Menü die gewünschte VM aus und wähle dann in der Spalte daneben (Kontextmenü der VM) den Eintrag `Hardware` aus.
 
