@@ -613,6 +613,8 @@ Die VMs können nun vor dem Start recht einfach auf die eigenen Bedürfnisse und
 
 Diese Anpassungen können in der WebUI des Proxmox-Host recht einfach vorgenommen werden. Für nachstehende Änderungen müssen die VMs heruntergefahren sein, so wie dies direkt nach dem Import der Fall ist.
 
+.. Auslagerung Kapitel Festplatten-Vergrößerung Beginn 
+
 VM Festplattengrösse anpassen
 -----------------------------
 
@@ -648,13 +650,17 @@ Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sei
    :align: center
    :alt: Schritt 21
 
-5. In dem Beispiel sind 10 GiB gegeben, um auf 50 GiB zu kommen, trägst Du nun 40 GiB ein. Danach siehst Du folgenden Eintrag:
+5. In dem Beispiel sind 10 GByte gegeben, um auf 50 GByte zu kommen, trägst Du nun 40 GByte ein. Danach siehst Du folgenden Eintrag:
 
 .. figure:: media/install-on-proxmox_22_vm-hdd-status.png
    :align: center
    :alt: Schritt 22
 
-Für die anderen VMs werden die Festplatten in gleicher Weise vergrößert. Bei der Server-VM ist zu beachten, dass diese über zwei Festplatten verfügt. Die kleine Festplatte weist zu Beginn 25 GiB die größere 100 GiB auf. Beide sind zu vergrößern. Hierbei ist auf eine ausreichende Größe zu achten, da auf dem Server neben den Nutzer- und Klassendaten auch die Linbo-Images abgelegt werden.
+Für die anderen VMs werden die Festplatten in gleicher Weise vergrößert. 
+
+Bei der Server-VM ist zu beachten, dass diese über zwei Festplatten verfügt. Die kleine Festplatte weist zu Beginn 25 GByte die größere 100 GByte auf. Beide sind zu vergrößern. Hierbei ist auf eine ausreichende Größe zu achten, da auf dem Server neben den Nutzer- und Klassendaten auch die von Linbo gespeicherten Festplattenabbilder der Clients abgelegt werden.
+
+.. Auslagerung Kapitel Festplatten-Vergrößerung Ende
 
 VM Netzwerkeinstellungen prüfen
 -------------------------------
