@@ -91,6 +91,7 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   systemadministration/network/radius/index
   systemadministration/printer/index
   systemadministration/schoolconsole/index
+  systemadministration/gpo/gpo
 
 .. toctree::
   :maxdepth: 2
