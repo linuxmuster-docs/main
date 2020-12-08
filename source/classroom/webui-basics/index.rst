@@ -331,52 +331,6 @@ Auflistungsrichtung).
    :align: center
    :alt: WebUI Project View
 
-Projekte
---------
-
-Hier werden alle Projekte aufgelistet.
-
-Projekt anlegen: Über
-
-.. figure:: media/35_webui-basics_new-project-icon.png
-   :align: center
-   :alt: WebUI Project Overview
-
-im rechten oberen Bereich, können Sie ein neues Projekt benennen und mit OK erstellen
-
-.. figure:: media/36_webui-basics_add-new-project.png
-   :align: center
-   :alt: WebUI Add New Project
-
-**Projektmitglieder verwalten**: Durch Anklicken eines bestimmten Projektes, werden weitere Informationen
-angezeigt, wie etwa die dazugehörigen Mitglieder und Administratoren:
-
-.. figure:: media/37_webui-basics_manage-project-members.png
-   :align: center
-   :alt: WebUI Manage Project Members
-
-Mitglieder können hier über die ``Mitglieder bearbeiten``-Funktion gleichzeitig auch hinzugefügt oder entfernt
-werden. Zur Einfachheit eventuell Filter anwenden.
-
-.. figure:: media/38_webui-basics_edit-project-members.png
-   :align: center
-   :alt: WebUI Edit Project Members
-
-Haben Sie alle Projektschüler aus- oder abgewählt, unten über ``Speichern`` die Auswahl übernehmen.
-
-.. figure:: media/39_webui-basics_save-project-users.png
-   :align: center
-   :alt: WebUI Save Project Users
-
-**Projektansicht**: Für eine übersichtlichere Ansicht, gibt es die Möglichkeit, über den Objektfilter die
-Objektekategorie auszuwählen, welche angezeigt werden soll. Daneben können Sie die Sortierweise auf
-Gruppenname oder Mitgliedschaft anwenden (bei nochmaligem Auswählen der selben Kategorie ändert sich die
-Auflistungsrichtung).
-
-.. figure:: media/40_webui-basics_object-filter.png
-   :align: center
-   :alt: WebUI Object Filter
-
 Passwörter drucken
 ------------------
 
