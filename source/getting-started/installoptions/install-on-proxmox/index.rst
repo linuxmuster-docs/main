@@ -510,26 +510,50 @@ VM Templates herunterladen
 
 Fertige VM-Snapshots für Proxmox stellt linuxmuster.net auf dem eigenen Download-Server bereit. https://download.linuxmuster.net/proxmox/v7/latest/
 
-Für eine linuxmuster.net v7 Umgebung werden die Server-VM und als Firewall die OPNSense-VM benötigt. Optional sind zusätzlich eine OPSI-VM und eine Docker-VM für deine linuxmuster.net-Umgebung verfügbar. 
-
 Um die Maschinen importieren zu können, müsssen diese zuerst auf den Hypervisor geladen werden. Die VMs können über die Shell von Proxmox mit dem wget-Befehl direkt heruntergeladen werden. 
 
-Für die VMs wären folgende Befehle anzugeben: 
+Für eine linuxmuster.net v7 Umgebung werden die Server-VM und als Firewall die OPNSense-VM benötigt. Optional sind zusätzlich eine OPSI-VM und eine Docker-VM für deine linuxmuster.net-Umgebung verfügbar. 
+
+Für die VMs wären folgende Befehle in der Shell von hv01 einzugeben: 
 
 =========== ===================================================================================================
 VM          Download-Befehl                                                                                   
 =========== ===================================================================================================
-opnsense-VM wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-200-2020_11_22-21_52_36.vma.lzo
-server-VM   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-201-2020_11_22-21_42_16.vma.lzo
-opsi-VM     wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-202-2020_11_22-21_35_56.vma.lzo
-docker-VM   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-203-2020_11_22-21_31_19.vma.lzo
+opnsense-VM wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-200-2020_12_19-19_23_00.vma.lzo
+server-VM   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-201-2020_12_19-19_31_29.vma.lzo
+opsi-VM     wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-202-2020_12_19-19_37_48.vma.lzo
+docker-VM   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-203-2020_12_19-19_43_09.vma.lzo
 =========== ===================================================================================================
 
+Beispiel für die opensense-VM:
+
+.. code::
+
+   root@hv01:~# wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-200-2020_12_19-19_23_00.vma.lzo
+   --2020-12-20 12:01:46--  https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-200-2020_12_19-19_23_00.vma.lzo
+   Resolving download.linuxmuster.net (download.linuxmuster.net)... 95.217.39.154
+   Connecting to download.linuxmuster.net (download.linuxmuster.net)|95.217.39.154|:443... connected.
+   HTTP request sent, awaiting response... 200 OK
+   Length: 3838493301 (3.6G)
+   Saving to: ‘vzdump-qemu-200-2020_12_19-19_23_00.vma.lzo’
+
+   20_12_19-19_23_00.vma   5%[>                       ] 186.40M  10.4MB/s
+   
 Nach dem Herunterladen der Backup-Dateien sollten sich diese mittels ``ls -lh`` in der Proxmox-Shell anzeigen lassen.
 
-.. figure:: media/install-on-proxmox_16_console-ls-downloaded-lzo.png
+.. 
+   figure:: media/install-on-proxmox_16_console-ls-downloaded-lzo.png
    :align: center
    :alt: Schritt 16
+
+.. code::
+
+   root@hv01:~# ls -lh
+   total 15G
+   -rw-r--r-- 1 root root 3.6G Dez 19 23:30 vzdump-qemu-200-2020_12_19-19_23_00.vma.lzo
+   -rw-r--r-- 1 root root 4.1G Dez 19 23:51 vzdump-qemu-201-2020_12_19-19_31_29.vma.lzo
+   -rw-r--r-- 1 root root 4.0G Dez 19 23:54 vzdump-qemu-202-2020_12_19-19_37_48.vma.lzo
+   -rw-r--r-- 1 root root 4.1G Dez 19 23:59 vzdump-qemu-203-2020_12_19-19_43_09.vma.lzo
 
 Die Besonderheiten zu den Archiv-Namen der VMs sind in nachstehendem Hinweis erläutert.
 
@@ -583,21 +607,36 @@ Dabei gilt:
 =========== ===== =============================================================================================
 VM          VM-ID Import-Befehl                                                                             
 =========== ===== =============================================================================================
-opnsense-VM 200   ``qmrestore vzdump-qemu-200-2020_11_22-21_52_36.vma.lzo 200 --storage vd-hdd-1000 -unique 1`` 
-server-VM   201   ``qmrestore vzdump-qemu-201-2020_11_22-21_42_16.vma.lzo 201 --storage vd-hdd-1000 -unique 1`` 
-opsi-VM     202   ``qmrestore vzdump-qemu-202-2020_11_22-21_35_56.vma.lzo 202 --storage vd-hdd-1000 -unique 1``
-docker-VM   203   ``qmrestore vzdump-qemu-203-2020_11_22-21_31_19.vma.lzo 203 --storage vd-hdd-1000 -unique 1``
+opnsense-VM 200   ``qmrestore vzdump-qemu-200-2020_12_19-19_23_00.vma.lzo 200 --storage vd-hdd-1000 -unique 1`` 
+server-VM   201   ``qmrestore vzdump-qemu-201-2020_12_19-19_31_29.vma.lzo 201 --storage vd-hdd-1000 -unique 1`` 
+opsi-VM     202   ``qmrestore vzdump-qemu-202-2020_12_19-19_37_48.vma.lzo 202 --storage vd-hdd-1000 -unique 1``
+docker-VM   203   ``qmrestore vzdump-qemu-203-2020_12_19-19_43_09.vma.lzo 203 --storage vd-hdd-1000 -unique 1``
 =========== ===== =============================================================================================
 
-1. Hier wird als Beispiel der Server-Snapshot mit der ID 200 (lmn7-opnsense) auf dem vd-hdd-1000 Storage über folgenden Befehl importiert:
+1. Hier wird als Beispiel der opensense-Snapshot mit der ID 200 (lmn7-opnsense) auf dem vd-hdd-1000 Storage über folgenden Befehl importiert:
 
 .. code::
 
-   qmrestore vzdump-qemu-201-2020_11_22-21_42_16.vma.lzo 201 --storage vd-hdd-1000 -unique 1
+   qmrestore vzdump-qemu-200-2020_12_19-19_23_00.vma.lzo 200 --storage vd-hdd-1000 -unique 1
 
-.. figure:: media/install-on-proxmox_17_console-qmrestore.png
+.. 
+   figure:: media/install-on-proxmox_17_console-qmrestore.png
    :align: center
    :alt: Schritt 17
+
+.. code::
+
+   root@hv01:~# qmrestore vzdump-qemu-200-2020_12_19-19_23_00.vma.lzo 200 --storage vd-hdd-1000 -unique 1
+   restore vma archive: lzop -d -c /root/vzdump-qemu-200-2020_12_19-19_23_00.vma.lzo | vma extract -v -r /var/tmp/vzdumptmp19171.fifo - /var/tmp/vzdumptmp19171
+   CFG: size: 442 name: qemu-server.conf
+   DEV: dev_id=1 size: 10737418240 devname: drive-scsi1
+   CTIME: Sat Dec 19 19:23:01 2020
+   new volume ID is 'vd-hdd-1000:vm-200-disk-0'
+   map 'drive-scsi1' to '/dev/vd-hdd-1000/vm-200-disk-0' (write zeros = 0)
+   progress 1% (read 107413504 bytes, duration 1 sec)
+   progress 2% (read 214761472 bytes, duration 1 sec)
+   progress 3% (read 322174976 bytes, duration 2 sec)
+   progress 4% (read 429522944 bytes, duration 3 sec)
 
 2. Wurden die gewünschten Maschinen erfolgreich importiert, sollten diese mit ihren IDs und Namen auf der Weboberfläche von Proxmox links aufgelistet zu sehen sein.
 
