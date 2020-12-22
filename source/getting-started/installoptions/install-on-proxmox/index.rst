@@ -652,54 +652,15 @@ Die VMs können nun vor dem Start recht einfach auf die eigenen Bedürfnisse und
 
 Diese Anpassungen können in der WebUI des Proxmox-Host recht einfach vorgenommen werden. Für nachstehende Änderungen müssen die VMs heruntergefahren sein, so wie dies direkt nach dem Import der Fall ist.
 
-.. Auslagerung Kapitel Festplatten-Vergrößerung Beginn 
+VM HDD anpassen
+---------------
 
-VM Festplattengrösse anpassen
------------------------------
+Um die Größe der Festplatten der importierten VMs anzupassen sind mehrere Schritte erforderlich.
+Nachstehender Link führt dich zur Anpassung der HDD Größe der VMs für Proxmox.
 
-Am Beispiel der OPNSense VM werden die Anpassungen nachstehend erläutert.
-
-Ausgangssituation:
-
-.. figure:: media/install-on-proxmox_19_vm-overview.png
-   :align: center
-   :alt: Schritt 19
-
-Die OPNSense VM wurde mit dem Namen `lmn7-opnsense` under `VM-ID: 200` angelegt. In der Übersicht erkennst du, dass derzeit
-eine Festplatte mit einer Größe von 10 GiB eingerichtet wurde. 
-Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sein. Die Festplattengröße kannst du nun wie folgt anpassen:
-
-1. Wähle links im Menü die gewünschte VM aus und wähle dann in der Spalte daneben (Kontextmenü der VM) den Eintrag `Hardware` aus.
-
-2. Rechts werden nun die Hardware-Komponenten der VM aufgelistet. Markiere den Eintrag `Hard disk`.
-
-.. figure:: media/install-on-proxmox_20_vm-select-hdd.png
-   :align: center
-   :alt: Schritt 21
-
-3. Klicke danach auf den Button `Resize Disk`, um die Festplatte der VM zu vergrößern.
-
-.. hint:: 
-
-   Auf diesem Wege ist nur eine Vergrößerung des Plattenplatzes möglich, eine Verkleinerung hingegen nicht!
-
-4. Es erscheint ein neues Fenster, in dem du angeben must, um wieviel GiB du die Festplatte vergrößern willst. 
-
-.. figure:: media/install-on-proxmox_21_vm-hdd-resize.png
-   :align: center
-   :alt: Schritt 21
-
-5. In dem Beispiel sind 10 GByte gegeben, um auf 50 GByte zu kommen, trägst Du nun 40 GByte ein. Danach siehst Du folgenden Eintrag:
-
-.. figure:: media/install-on-proxmox_22_vm-hdd-status.png
-   :align: center
-   :alt: Schritt 22
-
-Für die anderen VMs werden die Festplatten in gleicher Weise vergrößert. 
-
-Bei der Server-VM ist zu beachten, dass diese über zwei Festplatten verfügt. Die kleine Festplatte weist zu Beginn 25 GByte die größere 100 GByte auf. Beide sind zu vergrößern. Hierbei ist auf eine ausreichende Größe zu achten, da auf dem Server neben den Nutzer- und Klassendaten auch die von Linbo gespeicherten Festplattenabbilder der Clients abgelegt werden.
-
-.. Auslagerung Kapitel Festplatten-Vergrößerung Ende
+=================================== ==============================
+Vorbereiten der Proxmox-Festplatten |follow_me2proxmox-hd-chapter|
+=================================== ==============================
 
 VM Netzwerkeinstellungen prüfen
 -------------------------------

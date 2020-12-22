@@ -36,6 +36,21 @@
    :width: 200 px
    :align: middle
 
+.. |follow_me2xcp-ng-backhd| image:: /media/link_arrow.svg
+   :target: ../installoptions/install-on-xcp-ng/index.html
+   :width: 200 px
+   :align: middle
+
+.. |follow_me2proxmox-backhd| image:: /media/link_arrow.svg
+   :target: ../installoptions/install-on-proxmox/index.html
+   :width: 200 px
+   :align: middle
+   
+.. |follow_me2kvm-backhd| image:: /media/link_arrow.svg
+   :target: ../installoptions/install-on-kvm/index.html
+   :width: 200 px
+   :align: middle
+
 .. |follow_me2scratch| image:: /media/link_arrow.svg
    :target: install-from-scratch/index.html
    :width: 200 px
@@ -80,6 +95,11 @@
    :target: hard-drive-size-proxmox.html
    :width: 200 px
    :align: middle
+   
+.. |follow_me2proxmox-hd-chapter| image:: /media/link_arrow.svg
+   :target: ../../harddisk/hard-drive-size-proxmox.html
+   :width: 200 px
+   :align: middle   
 
 .. |follow_me2xcp-ng-hd| image:: /media/link_arrow.svg
    :target: hard-drive-size-xcp-ng.html
