@@ -673,6 +673,39 @@ Im nächsten Schritt wird dies geändert, so dass die VMs mit ihrer Verbindung i
 Für die VMs `server, opsi, docker` müssen die Einstellungen für die Netzwerkkarte ebenfalls überprüft werden.
 Alle sollten mit ihrem `Network Device net0` mit der `bridge=vmbr0` verbunden sein.
 
+.. Beschreibung der mountpoints für die Serverplatten 25GB und 100GB einfügen, um zu veranschaulichen welche HDD-Größe anzustreben sind!
+
+Für die endgültige Verwendung kommentierst du jetzt am besten die Netzwerk-Schnittstellen deines Promox-Host entsprechend.
+
+Wechsele auf deinen Host `hv01`, wähle unter `Network` die Bridge `vmbr0` aus und betätige den Edit-Button.
+
+.. figure:: media/install-on-proxmox_25-01_edit-network-devices.png
+   :align: center
+   :alt: Schritt 25-1
+
+Dann fügst du den Kommentar in das entsprechende Feld ein.
+Die Felder `IPv4/CIDR` und `Gateway (IPv4)` sind unerheblich.
+
+.. figure:: media/install-on-proxmox_25-02_vm-network-bridge-vmbr0-comment.png
+   :align: center
+   :alt: Schritt 25-2
+
+Ebenso verfährst du der Brigde `vmbr1`.
+
+.. figure:: media/install-on-proxmox_25-03_vm-network-bridge-vmbr1-comment.png
+   :align: center
+
+Die Netzwerkkarte `net0` ist mit der Bridge `vmbr0` verbunden. Diese ist derzeit noch für die Verbinndung ins Intranet zuständig. Die Netzwerkkarte `net1` ist mit der Bridge `vmbr1` verbunden.
+
+.. figure:: media/install-on-proxmox_25_vm-network-status.png
+   :align: center
+   :alt: Schritt 25
+
+Im nächsten Schritt wird dies geändert, so dass die VMs mit ihrer Verbindung ins Intranet (grünes Netz) an die Bridge `vmbr0` und die externe Schnittstelle der OPNSense-VM auf die dann externe Bridge `vmbr1` angeschlossen sein wird.
+
+Für die VMs `server, opsi, docker` müssen die Einstellungen für die Netzwerkkarte ebenfalls überprüft werden.
+Alle sollten mit ihrem `Network Device net0` mit der `bridge=vmbr0` verbunden sein.
+
 Für die endgültige Verwendung kommentierst du jetzt am besten die Netzwerk-Schnittstellen deines Promox-Host entsprechend.
 
 Wechsele auf deinen Host `hv01`, wähle unter `Network` die Bridge `vmbr0` aus und betätige den Edit-Button.
