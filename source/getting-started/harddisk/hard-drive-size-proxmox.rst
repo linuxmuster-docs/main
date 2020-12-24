@@ -2,14 +2,63 @@
 
 .. _hard_drive_size_proxmox-label:
 
-===================================
-Vorbereiten der PROXMOX Festplatten
-===================================
-
-1. Schritt VM anpassen
-----------------------
-
 Am Beispiel der OPNSense VM werden die Anpassungen nachstehend erläutert.
+
+===============================
+1. Snapshots der VMs anfertigen
+===============================
+
+Wähle, als Erstes die VM aus die geklont werden soll.
+
+.. figure:: media/hdd-preparation-on-proxmox_0_1_vm-overview.png
+   :align: center
+   :alt: Snapshot Schritt 1
+
+Unter ``More`` findest du den Button zum Starten des Klon-Vorganges
+
+.. figure:: media/hdd-preparation-on-proxmox_0_2_vm-overview.png
+   :align: center
+   :alt: Snapshot Schritt 2
+
+In dem sich öffnen Fenster siehst du welche VM geklont werden wird und deren neuer ID.
+
+Im Feld `Name` kannst du einen eigenen angeben, ansonsten wird einer nach dem Muster "Copy of VM ..." verwendet.
+
+.. figure:: media/hdd-preparation-on-proxmox_0_3_vm-overview.png
+   :align: center
+   :alt: Snapshot Schritt 3
+
+Der Klon-Vorgang wird mit `Clone` gestartet.
+
+Das wird sichtbar daran, dass die VM mit der neuen ID in der linken Übersicht mit einem Schloss erscheint.
+
+.. figure:: media/hdd-preparation-on-proxmox_0_4_vm-overview.png
+  :align: center
+  :alt: Snapshot Schritt 4
+
+Das Schloss zeigt an, dass das Kopieren der VM gestartet ist. Dieses siehst du auch in den `Tasks` am unteren Bildschirmrand.
+
+.. figure:: media/hdd-preparation-on-proxmox_0_5_vm-overview.png
+   :align: center
+   :alt: Snapshot Schritt 5
+
+Dort erkennst du, wann der Vorgang abgeschlossen ist.
+
+.. figure:: media/hdd-preparation-on-proxmox_0_6_vm-overview.png
+   :align: center
+   :alt: Snapshot Schritt 6
+
+Bei der neuen VM ist das Schloss verschwunden und der Name wird in der Übersicht der VMs angezeigt.
+
+.. figure:: media/hdd-preparation-on-proxmox_0_7_vm-overview.png
+   :align: center
+   :alt: Snapshot Schritt 7
+
+Diesen Ablauf musst du für alle Virtuellen Maschinen, deren Festplatte du vergrößern möchtest, wiederholen.
+
+======================================
+2. Vorbereiten der PROXMOX Festplatten
+======================================
 
 Ausgangssituation:
 
@@ -17,11 +66,11 @@ Ausgangssituation:
    :align: center
    :alt: Schritt 1
 
-Die OPNSense VM wurde mit dem Namen `lmn7-opnsense` under `VM-ID: 200` angelegt. In der Übersicht erkennst du, dass derzeit
+Die OPNSense VM wurde mit dem Namen `lmn7-opnsense` und der `VM-ID: 200` angelegt. In der Übersicht erkennst du, dass derzeit
 eine Festplatte mit einer Größe von 10 GiB eingerichtet wurde. 
 Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sein. Die Festplattengröße kannst du nun wie folgt anpassen:
 
-1. Wähle links im Menü die gewünschte VM aus und wähle dann in der Spalte daneben (Kontextmenü der VM) den Eintrag `Hardware` aus.
+1. Wähle links im Menü die gewünschte VM aus und dann in der Spalte daneben (Kontextmenü der VM) den Eintrag `Hardware` aus.
 
 2. Rechts werden nun die Hardware-Komponenten der VM aufgelistet. Markiere den Eintrag `Hard disk`.
 
@@ -49,10 +98,11 @@ Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sei
 
 Für die anderen VMs werden die Festplatten in gleicher Weise vergrößert. 
 
-Bei der Server-VM ist zu beachten, dass diese über zwei Festplatten verfügt. Die kleine Festplatte weist zu Beginn 25 GByte die größere 100 GByte auf. Beide sind zu vergrößern. Hierbei ist auf eine ausreichende Größe zu achten, da auf dem Server neben den Nutzer- und Klassendaten auch die von Linbo gespeicherten Festplattenabbilder der Clients abgelegt werden.
+Bei der Server-VM ist zu beachten, dass diese über zwei Festplatten verfügt. Die kleine Festplatte weist zu Beginn 25 GByte die größere 100 GByte auf. Beide sind zu vergrößern. Hierbei ist auf eine ausreichende Größe zu achten, da auf dem Server neben den Nutzer- und Klassendaten auch die von Linbo gespeicherten Festplattenabbilder der Clients abgelegt werden. Siehe Einleitung dieses Abschnittes.
 
-2. Schritt: HDD-Größe anpassen
-------------------------------
+==============================
+3. Schritt: HDD-Größe anpassen
+==============================
 
 Nachdem im Virtualisierungs-Host die HDD der VM vergrößert wurde, muss die tatsächlich genutzt Größe angepasst werden.
 Bitte der Ableitung mit dem Link folgen.

@@ -48,9 +48,7 @@ Folgender Ablauf zur Anpassung der Festplattengrößen ist einzuhalten:
 1. In der Virtualisierungsumgebung ein Snapshot der VM ausführen. Auf diesen Stand
    kannst du zurückkehren, sofern bei den nachfolgenden Schritten etwas nicht funktioniert.
 2. In der Virtualisierungsumgebung die HDDs der VM erweitern.
-3. In der jeweiligen VM das LVM mit ``lvextend`` erweitern.
-4. In der jeweiligen VM die Partitionsgrößen mit ``resize2fs`` anpassen.
-5. Reboot der jeweiligen VM und Größen erneut überprüfen.
+3. Größenänderung in den VMs bekannt machen.
 
 .. hint::
 
