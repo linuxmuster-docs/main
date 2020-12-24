@@ -82,11 +82,10 @@ Vorbereiten der KVM-Festplatten     |follow_me2kvm-hd|
    hard-drive-size-xcp-ng
    hard-drive-size-kvm
    
+.. Anpassung VMs
+   -------------
 
-Anpassung VMs
--------------
-
-Passe nun die Größe der Festplatten in den VMs selbst wie nachstehend beschrieben an.
+   Passe nun die Größe der Festplatten in den VMs selbst wie nachstehend beschrieben an.
    
 .. toctree::
    :maxdepth: 2

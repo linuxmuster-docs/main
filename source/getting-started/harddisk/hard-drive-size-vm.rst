@@ -238,21 +238,3 @@ nun deinen wünschen tatsächlich entsprechen.
    /dev/mapper/vg_srv-linbo            433G     40G  376G   10% /srv/linbo
    tmpfs                               1,2G       0  1,2G    0% /run/user/0
 
-
-Fortsetzung des Setups 
-----------------------
-
-=========================== ==========================
-Virtualisierung mit Proxmox |follow_me2proxmox-backhd|
-Virtualisierung mit XCP-ng  |follow_me2xcp-ng-backhd|
-Virtualisierung mit KVM     |follow_me2kvm-backhd|
-=========================== ==========================
-
-
-.. 
-   =================================== ======================
-   Vorbereiten der Proxmox-Festplatten |follow_me2proxmox-hd|
-   Vorbereiten der XCP-ng-Festplatten  |follow_me2xcp-ng-hd|
-   Vorbereiten der KVM-Festplatten     |follow_me2kvm-hd|
-   =================================== ======================
-

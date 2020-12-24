@@ -8,9 +8,7 @@ Aktualisieren der Festplattengrößen der OPNSense VM
 
 .. hint::
 
-   Achtung: Diese Dokumentation ist noch nicht ganz fertig und muss weiter getestet werden
-   Diesen Abschnitt must du nur ausführen, sofern du in deinem Hypervisor die HDD-Größe der OPNSense bereits vergrößert hast.
-   Ansonsten kannst Du bei der Einrichtung mit dem Kapitel ``Netzbereich anpassen`` fortgahren.
+   Achtung: Diese Dokumentation ist noch nicht ganz fertig und muss weiter getestet werden. Diesen Abschnitt must du nur ausführen, sofern du in deinem Hypervisor die HDD-Größe der OPNSense bereits vergrößert hast. Ansonsten kannst Du bei der Einrichtung mit dem Kapitel ``Netzbereich anpassen`` fortfahren.
    
 ==================== ======================
 Netzbereich anpassen |follow_me2modify-net|
@@ -115,16 +113,11 @@ Es ist zu erkennen, dass die Vergrßerung letztendlich durchgeführt wurde:
 
 Weiterführende Erklärungen zu FreeBSD zu diesem Thema findest du hier: 
 
-  https://unix.stackexchange.com/questions/117023/expanding-the-disk-size-on-pfsense-under-vmware-esxi
-      
- 
+https://unix.stackexchange.com/questions/117023/expanding-the-disk-size-on-pfsense-under-vmware-esxi
 
-
-
-.. 
-   =================================== ======================
-   Vorbereiten der Proxmox-Festplatten |follow_me2proxmox-hd|
-   Vorbereiten der XCP-ng-Festplatten  |follow_me2xcp-ng-hd|
-   Vorbereiten der KVM-Festplatten     |follow_me2kvm-hd|
-   =================================== ======================
+=========================== ==========================
+Virtualisierung mit Proxmox |follow_me2proxmox-backhd|
+Virtualisierung mit XCP-ng  |follow_me2xcp-ng-backhd|
+Virtualisierung mit KVM     |follow_me2kvm-backhd|
+=========================== ==========================
 
