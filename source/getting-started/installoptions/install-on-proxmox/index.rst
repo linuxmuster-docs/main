@@ -272,20 +272,11 @@ Dazu wähle das Menü `Datacenter` -> `hv01`-> `Network`-> `Create` -> `Linux Br
 
 Darauf öffent sich ein neues Fenster. Dort sind folgende Einträge nötig: 
 
-============ ======
-Feld         Inhalt
-============ ======
-Bridge ports eno2
-Comment      green
-============ ======
-
-Mit `Create` wird die Brücke erstellen.
-
 .. figure:: media/install-on-proxmox_14_create-linux-bridge.png
    :align: center
    :alt: Schritt 14
 
-.. Bild muss ausgetauscht werden.
+Mit `Create` wird die Brücke erstellen.
 
 Anschließend Proxmox über den Button `Reboot` oben rechts neu starten, um die neuen Networking-Konfigurationen zu laden - Node hv01 muss dafür im Menü `Datacenter` links ausgewählt sein:
 
@@ -320,8 +311,6 @@ Die Datei sollte nachstehende Eintragungen aufweisen. Die angezeigte IP für die
         bridge-stp off
         bridge-fd 0
   #green
-
-Der Firewall müssen dann später beide Interfaces zugeordnet werden.
 
 (Optional) Festplatten anpassen
 -------------------------------
@@ -656,11 +645,13 @@ VM HDD anpassen
 ---------------
 
 Um die Größe der Festplatten der importierten VMs anzupassen sind mehrere Schritte erforderlich.
-Nachstehender Link führt dich zur Anpassung der HDD Größe der VMs für Proxmox.
+Nachstehender Link führt dich zur Anpassung der HDD Größe der VMs.
 
-=================================== ==============================
-Vorbereiten der Proxmox-Festplatten |follow_me2proxmox-hd-chapter|
-=================================== ==============================
+=================================== =====================
+Vorbereiten der Proxmox-Festplatten |follow_me2hd-resize|
+=================================== =====================
+
+.. _install-on-proxmox-network-config-label:
 
 VM Netzwerkeinstellungen prüfen
 -------------------------------
@@ -671,42 +662,103 @@ Die OPNSense VM weist zwei Netzwerkkarten auf, wie nachstehend dargestellt:
    :align: center
    :alt: Schritt 23
 
-Die Netzwerkkarte `net0` ist hier mit der Bridge `vmbr0` verbunden. Diese ist derzeit noch für das rote Netz / externes Netz zuständig. Im nächsten Schritt wird dies geändert, so dass die VMs mit der internen Schnittstelle an die Bridge `vmbr0` und die externe Schnittstelle der OPNSense-VM auf die dann externe Bridge `vmbr1` anzuschliessen ist.
-
-Die Netzwerkkarte `net1` ist hier mit der Bridge `vmbr5` verbunden, die wir bislang gar nicht haben. Diese Netzwerkkarte muss nun mit unserer Bridge für das externe Netz `vmbr1` - Anpassungen siehe nächster Schritt - verbunden werden.
-
-Wähle hierzu die Netzwerkarte `net1` aus und klicke auf `Edit`. Es erscheint ein Fenster mit den Einstellungen der Netzwerkkarte.
-Ändere den Eintrag für die Bridge auf `vmbr1` wie in der Abb. zu sehen ist:
-
-.. figure:: media/install-on-proxmox_24_vm-network-edit.png
-   :align: center
-   :alt: Schritt 24
-
-Danach müssen für die OPNSense-VM die Netzwerkeintragungen wie folgt aussehen:
+Die Netzwerkkarte `net0` ist mit der Bridge `vmbr0` verbunden. Diese ist derzeit noch für die Verbinndung ins Intranet zuständig. Die Netzwerkkarte `net1` ist mit der Bridge `vmbr1` verbunden.
 
 .. figure:: media/install-on-proxmox_25_vm-network-status.png
    :align: center
    :alt: Schritt 25
 
-Für die VMs `server, opsi, docker` müssen die Einstellungen für die Netzzwerkkarte ebenfalls überprüft werden.
-Alle müssen mit der `Bridge vmbr0 (internes Netz)` - siehe nächster Schritt - verbunden werden. Dies erfolgt wie zuvor dargestellt.
+Im nächsten Schritt wird dies geändert, so dass die VMs mit ihrer Verbindung ins Intranet (grünes Netz) an die Bridge `vmbr0` und die externe Schnittstelle der OPNSense-VM auf die dann externe Bridge `vmbr1` angeschlossen sein wird.
+
+Für die VMs `server, opsi, docker` müssen die Einstellungen für die Netzwerkkarte ebenfalls überprüft werden.
+Alle sollten mit ihrem `Network Device net0` mit der `bridge=vmbr0` verbunden sein.
+
+.. Beschreibung der mountpoints für die Serverplatten 25GB und 100GB einfügen, um zu veranschaulichen welche HDD-Größe anzustreben sind!
+
+Für die endgültige Verwendung kommentierst du jetzt am besten die Netzwerk-Schnittstellen deines Promox-Host entsprechend.
+
+Wechsele auf deinen Host `hv01`, wähle unter `Network` die Bridge `vmbr0` aus und betätige den Edit-Button.
+
+.. figure:: media/install-on-proxmox_25-01_edit-network-devices.png
+   :align: center
+   :alt: Schritt 25-1
+
+Dann fügst du den Kommentar in das entsprechende Feld ein.
+Die Felder `IPv4/CIDR` und `Gateway (IPv4)` sind unerheblich.
+
+.. figure:: media/install-on-proxmox_25-02_vm-network-bridge-vmbr0-comment.png
+   :align: center
+   :alt: Schritt 25-2
+
+Ebenso verfährst du der Brigde `vmbr1`.
+.. Beschreibung der mountpoints für die Serverplatten 25GB und 100GB einfügen, um zu veranschaulichen welche HDD-Größe anzustreben sind!
+
+.. Auslagerung Kapitel Festplatten-Vergrößerung Ende
+
+.. figure:: media/install-on-proxmox_25-03_vm-network-bridge-vmbr1-comment.png
+   :align: center
+
+Die Netzwerkkarte `net0` ist mit der Bridge `vmbr0` verbunden. Diese ist derzeit noch für die Verbinndung ins Intranet zuständig. Die Netzwerkkarte `net1` ist mit der Bridge `vmbr1` verbunden.
+
+.. figure:: media/install-on-proxmox_25_vm-network-status.png
+   :align: center
+   :alt: Schritt 25
+
+Im nächsten Schritt wird dies geändert, so dass die VMs mit ihrer Verbindung ins Intranet (grünes Netz) an die Bridge `vmbr0` und die externe Schnittstelle der OPNSense-VM auf die dann externe Bridge `vmbr1` angeschlossen sein wird.
+
+Für die VMs `server, opsi, docker` müssen die Einstellungen für die Netzwerkkarte ebenfalls überprüft werden.
+Alle sollten mit ihrem `Network Device net0` mit der `bridge=vmbr0` verbunden sein.
+
+Für die endgültige Verwendung kommentierst du jetzt am besten die Netzwerk-Schnittstellen deines Promox-Host entsprechend.
+
+Wechsele auf deinen Host `hv01`, wähle unter `Network` die Bridge `vmbr0` aus und betätige den Edit-Button.
+
+Die Netzwerkkarte `net0` ist mit der Bridge `vmbr0` verbunden. Diese ist derzeit noch für die Verbinndung ins Intranet zuständig. Die Netzwerkkarte `net1` ist mit der Bridge `vmbr1` verbunden.
+
+.. figure:: media/install-on-proxmox_25_vm-network-status.png
+   :align: center
+   :alt: Schritt 25
+
+Im nächsten Schritt wird dies geändert, so dass die VMs mit ihrer Verbindung ins Intranet (grünes Netz) an die Bridge `vmbr0` und die externe Schnittstelle der OPNSense-VM auf die dann externe Bridge `vmbr1` angeschlossen sein wird.
+
+Für die VMs `server, opsi, docker` müssen die Einstellungen für die Netzwerkkarte ebenfalls überprüft werden.
+Alle sollten mit ihrem `Network Device net0` mit der `bridge=vmbr0` verbunden sein.
+
+Für die endgültige Verwendung kommentierst du jetzt am besten die Netzwerk-Schnittstellen deines Promox-Host entsprechend.
+
+Wechsele auf deinen Host `hv01`, wähle unter `Network` die Bridge `vmbr0` aus und betätige den Edit-Button.
+
+.. figure:: media/install-on-proxmox_25-01_edit-network-devices.png
+   :align: center
+   :alt: Schritt 25-1
+
+Dann fügst du den Kommentar in das entsprechende Feld ein.
+Die Felder `IPv4/CIDR` und `Gateway (IPv4)` sind unerheblich.
+
+.. figure:: media/install-on-proxmox_25-02_vm-network-bridge-vmbr0-comment.png
+   :align: center
+   :alt: Schritt 25-2
+
+Ebenso verfährst du der Brigde `vmbr1`.
+
+.. figure:: media/install-on-proxmox_25-03_vm-network-bridge-vmbr1-comment.png
+   :align: center
+   :alt: Schritt 25-3
+  
 
 Proxmox - Host: Zugriff von außen unterbinden
 =============================================
 
-Um nach der Erstinstallation und -konfiguration den Zugriff auf den Proxmox - Host von außen zu unterbinden, ist nun die Netzwerkschnittstelle und die IP für den Proxmox-Host zu ändern. Zudem ist die Verkabelung zu ändern.
+Das Management-Interface (WebUI) des Proxmox-Host ist immer auf `vmbr0` festgelegt. 
 
-Das Management-Interface (WebUI) des Proxmox-Host ist immer auf `vmbr0` festgelegt. Daher müssen nun die IP-Einstellungen, 
-die DNS-Auflösung und der Hostname an mehreren Stellen geändert werden.
+Um nach der Erstinstallation und -konfiguration den Zugriff auf den Proxmox-Host von außen zu unterbinden, ist die Netzwerkschnittstelle, die IP für den Proxmox-Host und die Verkabelung zu ändern.
 
 Dies erledigst du mit folgenden drei Konfigurationsschritten:
 
-**1. Ändern der sog. interfaces**
+**1. Ändern der Interfaces**
 
-Du öffnest wie zuvor beschrieben die Shell des Proxmox-Host.
-Dann editierst Du die Datei ``/etc/network/interfaces`` und speicherst die Änderungen.
-
-Mit den in der Dokumentation zuvor angegebenen Adressen änderst Du die Eintragungen wie folgt:
+Du öffnest wie zuvor beschrieben die Shell des Proxmox-Host hv01.
+Darin editierst Du die Datei ``/etc/network/interfaces`` änderst Du die Eintragungen wie folgt:
 
 .. code::
 
@@ -717,24 +769,22 @@ Mit den in der Dokumentation zuvor angegebenen Adressen änderst Du die Eintragu
   
   iface eno2 inet manual
 
+  #Bridge green / intern
   auto vmbr0
-  iface vmbr0 inet static # externe NIC 
-        address 10.0.0.20 #IP aus dem internen / gruenen Netz - IP des Proxmox-Host
-        netmask 255.255.0.0  # Subnetzmaske 16 = 255.255.0.0
-        gateway 10.0.0.254  #IP der OPNSense Firewall
-        bridge-ports eno1 # erste NIC an vmbr0 gebunden
+  iface vmbr0 inet static
+        address 10.0.0.20   # IP aus dem internen Netzwerkes (gruen) - IP des Proxmox-Host
+        netmask 255.255.0.0 # Subnetzmaske 16 = 255.255.0.0
+        gateway 10.0.0.254  # IP der OPNSense Firewall
+        bridge-ports eno1   # erste NIC an vmbr0 gebunden
         bridge-stp off
         bridge-fd 0
-  #Bridge green / intern
 
+  #Bridge red / extern
   auto vmbr1
   iface vmbr1 inet manual
-        bridge-ports eno2 # Bridge an zweite NIC gebunden 
+        bridge-ports eno2   # zweite NIC an vmbr1 gebunden 
         bridge-stp off
         bridge-fd 0
-  #Bridge red / extern
-
-Physikalisch ist bislang die erste Netzwerkkarte mit dem (DSL-)Router und die zweite Netzwerkkarte mit dem Switch zu verbinden, der für das interne Netz genutzt wird - wie zuvor beschrieben. Dies ändert sich nun. Die Netzwerkkarte `eno1` wird auf den `internen Switch` verkabelt und die Netzwerkkarte `eno2` wird auf den `externen -Swicth / (DSL-)Router` verkabelt.
 
 **2. Ändern des Hostnames**
 
@@ -762,9 +812,13 @@ Zur Übernahme der Einstellungen ist der Proxmox-Host neu zu starten. (`Reboot`)
 
 .. attention::
 
-   Nach dem Neustart kannst du nicht mehr mit dem Laptop, der bislang auf dem Switch für das externe Netz steckt und eine IP aus dem Bereich 192.168.199.x/24 hat, mit der Proxmox-GUI verbinden. Schließe die erste Netzwerkkarte (eno1) des Servers und den Admin-Laptop auf den internen Switch an und konfiguriere den Laptop mit der IP 10.0.0.10/16, Gateway & DNS 10.0.0.254. Stecke das Netzwerkkabel der zweiten Netzwerkkarte (eno2) auf den externen Switch / (DSL-)Router).
+   Nach dem Neustart kannst du nicht mehr mit dem Laptop, der bislang auf mit dem Switch für das externe Netzwerk verbunden ist und eine IP aus dem Bereich 192.168.199.x/24 hat, mit der Proxmox-GUI verbinden. Um mit der Installation fortfahren zu können musst du ...
+      * die erste physikalische Netzwerkkarte (eno1) des Servers und den Admin-Laptop an dem Switch anschließen, den du für das interne Netz vorgesehen hast.
+      * die Konfiguration deines Laptops auf IP 10.0.0.10/16 und des Gateway & DNS 10.0.0.254 ändern.
+      * das Netzwerkkabel der zweiten Netzwerkkarte (eno2) deines Servers mit deinem externen Switch / (DSL-)Router) verbinden.
 
-Die WebUI des Proxmox-Host erreichst du über den Laptop mit der IP `10.0.0.10/16`, der am internen Switch angeschlossen ist, mit der Adresse `https://10.0.0.20:8006`.
+
+Die WebUI des Proxmox-Host erreichst du über die Adresse `https://10.0.0.20:8006`.
 
 Virtuelle Maschinen starten
 ===========================
@@ -791,9 +845,3 @@ Zum jetzigen Zeitpunkt hat dein Proxmox-Host keine Internet-Verbindung. Diese er
 ============================ =================
 Weiter geht es mit dem Setup |follow_me2setup|
 ============================ =================
-
-..
-   ================================================ ===========================================
-   Weiter geht es mit der Anpassung der Festplatten |follow_me2linux-adjusting_hard_drive_size|
-   ================================================ ===========================================
-
