@@ -107,16 +107,11 @@ Bei der Server-VM ist zu beachten, dass diese über zwei Festplatten verfügt. D
 Nachdem im Virtualisierungs-Host die HDD der VM vergrößert wurde, muss die tatsächlich genutzt Größe angepasst werden.
 Bitte der Ableitung mit dem Link folgen.
 
-================= =================
-VM Größe anpassen |follow_me2vm-hd|
-================= =================
+=================================== ======================
+Vorbereiten der Proxmox-Festplatten |follow_me2vm-hd|
+=================================== ======================
 
-
-
-.. 
-   =================================== ======================
-   Vorbereiten der Proxmox-Festplatten |follow_me2proxmox-hd|
-   Vorbereiten der XCP-ng-Festplatten  |follow_me2xcp-ng-hd|
+.. Vorbereiten der XCP-ng-Festplatten  |follow_me2xcp-ng-hd|
    Vorbereiten der KVM-Festplatten     |follow_me2kvm-hd|
    =================================== ======================
 
