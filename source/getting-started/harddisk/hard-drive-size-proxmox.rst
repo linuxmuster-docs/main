@@ -61,7 +61,7 @@ Bei der neuen VM ist das Schloss verschwunden und der Name wird in der Übersich
    :align: center
    :alt: Snapshot Schritt 7
 
-Diesen Ablauf musst du für alle Virtuellen Maschinen, deren Festplatte du vergrößern möchtest, wiederholen.
+.. hint:: Diesen Ablauf musst du für alle Virtuellen Maschinen, deren Festplatte du vergrößern möchtest, wiederholen.
 
 ======================================
 2. Vorbereiten der PROXMOX Festplatten
@@ -103,9 +103,11 @@ Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sei
    :align: center
    :alt: Schritt 4
 
-Für die anderen VMs werden die Festplatten in gleicher Weise vergrößert. 
+.. hint:: Für die anderen VMs werden die Festplatten in gleicher Weise vergrößert. 
 
-Bei der Server-VM ist zu beachten, dass diese über zwei Festplatten verfügt. Die kleine Festplatte weist zu Beginn 25 GByte die größere 100 GByte auf. Beide sind zu vergrößern. Hierbei ist auf eine ausreichende Größe zu achten, da auf dem Server neben den Nutzer- und Klassendaten auch die von Linbo gespeicherten Festplattenabbilder der Clients abgelegt werden. Siehe Einleitung dieses Abschnittes.
+   Bei der Server-VM ist zu beachten, dass diese über zwei Festplatten verfügt. Die kleine Festplatte weist zu Beginn 25 GByte die größere 100 GByte auf. Beide sind zu vergrößern.
+  
+   Hierbei ist auf eine ausreichende Größe zu achten, da auf dem Server neben den Nutzer- und Klassendaten auch die von Linbo gespeicherten Festplattenabbilder der Clients abgelegt werden. Siehe Einleitung dieses Abschnittes: :ref:`adjusting_hard_drive_size-label` 
 
 =========================================================
 3. Schritt: HDD-Größe n den Virtuellen Maschinen anpassen
