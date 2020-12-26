@@ -10,9 +10,17 @@ Aktualisieren der Festplattengrößen der OPNSense VM
 
    Achtung: Diese Dokumentation ist noch nicht ganz fertig und muss weiter getestet werden. Diesen Abschnitt must du nur ausführen, sofern du in deinem Hypervisor die HDD-Größe der OPNSense bereits vergrößert hast. Ansonsten kannst Du bei der Einrichtung mit dem Kapitel ``Netzbereich anpassen`` fortfahren.
    
-==================== ======================
-Netzbereich anpassen |follow_me2modify-net|
-==================== ======================
+..
+   ==================== ======================
+   Netzbereich anpassen |follow_me2modify-net|
+   ==================== ======================
+
+=========================== ==========================
+Virtualisierung mit Proxmox |follow_me2proxmox-backhd|
+Virtualisierung mit XCP-ng  |follow_me2xcp-ng-backhd|
+Virtualisierung mit KVM     |follow_me2kvm-backhd|
+=========================== ==========================
+
    
 Überblick
 ---------

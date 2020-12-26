@@ -7,6 +7,7 @@
 ============================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
+                   `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_,
                    `@maurice <https://ask.linuxmuster.net/u/Maurice>`_
 
 Proxmox ist eine OpenSource-Virtualisierungsplattform. Diese kombiniert KVM- und Container-basierte Virtualisierung und verwaltet virtuelle Maschinen, Container, Storage, virtuelle Netzwerke und Hochverfügbarkeits-Cluster übersichtlich über die zentrale Managmentkonsole.

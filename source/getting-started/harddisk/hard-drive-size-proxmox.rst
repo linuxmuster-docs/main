@@ -2,11 +2,18 @@
 
 .. _hard_drive_size_proxmox-label:
 
-Am Beispiel der OPNSense VM werden die Anpassungen nachstehend erläutert.
-
 ===============================
 1. Snapshots der VMs anfertigen
 ===============================
+
+.. sectionauthor:: `@toheine <https://ask.linuxmuster.net/u/toheine>`_,
+                   `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_,
+                   `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
+.. hint::
+
+   Achtung: Dies ist noch eine unvollständige Beschreibung. Findest du Fehler oder kannst zur Verbesserung beitragen, dann wende dich bitte an einen der Autoren des Abschnittes.
+
+Am Beispiel der OPNSense VM werden die Anpassungen nachstehend erläutert.
 
 Wähle, als Erstes die VM aus die geklont werden soll.
 
@@ -100,11 +107,14 @@ Für die anderen VMs werden die Festplatten in gleicher Weise vergrößert.
 
 Bei der Server-VM ist zu beachten, dass diese über zwei Festplatten verfügt. Die kleine Festplatte weist zu Beginn 25 GByte die größere 100 GByte auf. Beide sind zu vergrößern. Hierbei ist auf eine ausreichende Größe zu achten, da auf dem Server neben den Nutzer- und Klassendaten auch die von Linbo gespeicherten Festplattenabbilder der Clients abgelegt werden. Siehe Einleitung dieses Abschnittes.
 
-==============================
-3. Schritt: HDD-Größe anpassen
-==============================
+=========================================================
+3. Schritt: HDD-Größe n den Virtuellen Maschinen anpassen
+=========================================================
 
 Nachdem im Virtualisierungs-Host die HDD der VM vergrößert wurde, muss die tatsächlich genutzt Größe angepasst werden.
+
+a. Die VMs gestarten
+
 Bitte der Ableitung mit dem Link folgen.
 
 =================================== ======================
