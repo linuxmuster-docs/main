@@ -26,7 +26,7 @@ deutlich mehr HDD-Speicher für die Server VM zuzuordnen.
 
 
 +---------------+-----------------+-----------------------+-------------+
-| **VM**        | **Anzhal HDDs** | **Festplatten**                     |
+| VM            | Anzahl HDDs     | Festplatten                         |
 |               |                 +-----------------------+-------------+
 |               |                 | Standard/Default (VM) | Empfohlen   |
 +===============+=================+=======================+=============+
