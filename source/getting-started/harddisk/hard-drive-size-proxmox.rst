@@ -19,13 +19,13 @@ Wähle, als Erstes die VM aus die geklont werden soll.
 
 .. figure:: media/hdd-preparation-on-proxmox_0_1_vm-overview.png
    :align: center
-   :alt: Snapshot Schritt 1
+   :alt: Snapshot Schritt 1.1
 
 Unter ``More`` findest du den Button zum Starten des Klon-Vorganges
 
 .. figure:: media/hdd-preparation-on-proxmox_0_2_vm-overview.png
    :align: center
-   :alt: Snapshot Schritt 2
+   :alt: Snapshot Schritt 1.2
 
 In dem sich öffnen Fenster siehst du welche VM geklont werden wird und deren neuer ID.
 
@@ -33,7 +33,7 @@ Im Feld `Name` kannst du einen eigenen angeben, ansonsten wird einer nach dem Mu
 
 .. figure:: media/hdd-preparation-on-proxmox_0_3_vm-overview.png
    :align: center
-   :alt: Snapshot Schritt 3
+   :alt: Snapshot Schritt 1.3
 
 Der Klon-Vorgang wird mit `Clone` gestartet.
 
@@ -41,25 +41,25 @@ Das wird sichtbar daran, dass die VM mit der neuen ID in der linken Übersicht m
 
 .. figure:: media/hdd-preparation-on-proxmox_0_4_vm-overview.png
   :align: center
-  :alt: Snapshot Schritt 4
+  :alt: Snapshot Schritt 1.4
 
 Das Schloss zeigt an, dass das Kopieren der VM gestartet ist. Dieses siehst du auch in den `Tasks` am unteren Bildschirmrand.
 
 .. figure:: media/hdd-preparation-on-proxmox_0_5_vm-overview.png
    :align: center
-   :alt: Snapshot Schritt 5
+   :alt: Snapshot Schritt 1.5
 
 Dort erkennst du, wann der Vorgang abgeschlossen ist.
 
 .. figure:: media/hdd-preparation-on-proxmox_0_6_vm-overview.png
    :align: center
-   :alt: Snapshot Schritt 6
+   :alt: Snapshot Schritt 1.6
 
 Bei der neuen VM ist das Schloss verschwunden und der Name wird in der Übersicht der VMs angezeigt.
 
 .. figure:: media/hdd-preparation-on-proxmox_0_7_vm-overview.png
    :align: center
-   :alt: Snapshot Schritt 7
+   :alt: Snapshot Schritt 1.7
 
 .. hint:: Diesen Ablauf musst du für alle Virtuellen Maschinen, deren Festplatte du vergrößern möchtest, wiederholen.
 
@@ -71,7 +71,7 @@ Ausgangssituation:
 
 .. figure:: media/hdd-preparation-on-proxmox_1_vm-overview.png
    :align: center
-   :alt: Schritt 1
+   :alt: Schritt 2.1
 
 Die OPNSense VM wurde mit dem Namen `lmn7-opnsense` und der `VM-ID: 200` angelegt. In der Übersicht erkennst du, dass derzeit
 eine Festplatte mit einer Größe von 10 GiB eingerichtet wurde. 
@@ -83,7 +83,7 @@ Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sei
 
 .. figure:: media/hdd-preparation-on-proxmox_2_vm-select-hdd.png
    :align: center
-   :alt: Schritt 2
+   :alt: Schritt 2.2
 
 3. Klicke danach auf den Button `Resize Disk`, um die Festplatte der VM zu vergrößern.
 
@@ -95,13 +95,13 @@ Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sei
 
 .. figure:: media/hdd-preparation-on-proxmox_3_vm-hdd-resize.png
    :align: center
-   :alt: Schritt 3
+   :alt: Schritt 2.4
 
 5. In dem Beispiel sind 10 GByte gegeben, um auf 50 GByte zu kommen, trägst Du nun 40 GByte ein. Danach siehst Du folgenden Eintrag:
 
 .. figure:: media/hdd-preparation-on-proxmox_4_vm-hdd-status.png
    :align: center
-   :alt: Schritt 4
+   :alt: Schritt 2.5
 
 .. hint:: Für die anderen VMs werden die Festplatten in gleicher Weise vergrößert. 
 
@@ -110,20 +110,25 @@ Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sei
    Hierbei ist auf eine ausreichende Größe zu achten, da auf dem Server neben den Nutzer- und Klassendaten auch die von Linbo gespeicherten Festplattenabbilder der Clients abgelegt werden. Siehe Einleitung dieses Abschnittes: :ref:`adjusting_hard_drive_size-label` 
 
 =========================================================
-3. Schritt: HDD-Größe n den Virtuellen Maschinen anpassen
+3. Schritt: HDD-Größen der Virtuellen Maschinen anpassen
 =========================================================
 
-Nachdem im Virtualisierungs-Host die HDD der VM vergrößert wurde, muss die tatsächlich genutzt Größe angepasst werden.
+Nachdem im Virtualisierungs-Host die HDD der VM vergrößert wurde, muss die tatsächlich genutzte Größe angepasst werden.
 
-a. Die VMs gestarten
+3.1. Virtuelle Maschinen starten
 
-Bitte der Ableitung mit dem Link folgen.
+.. figure:: media/hdd-preparation-on-proxmox_5_vm-start.png
+   :align: center
+   :alt: Schritt 3.1
+
+Wähle links im Menü die gewünschte VM aus. Exemplarisch ist der Start der Server-VM dargestellt. 
+
+Nach der Auswahl betätgist du den Button `Start`.
+
+Wiederhole dieses Vorgehen für alle VMs deren Festplatten du angepasst hast.
+
 
 =================================== ======================
 Vorbereiten der Proxmox-Festplatten |follow_me2vm-hd|
 =================================== ======================
-
-.. Vorbereiten der XCP-ng-Festplatten  |follow_me2xcp-ng-hd|
-   Vorbereiten der KVM-Festplatten     |follow_me2kvm-hd|
-   =================================== ======================
 
