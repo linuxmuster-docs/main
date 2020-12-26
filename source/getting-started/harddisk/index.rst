@@ -5,10 +5,12 @@
 =============================
 Anpassen der Festplattengröße
 =============================
-
+.. sectionauthor:: `@toheine <https://ask.linuxmuster.net/u/toheine>`_,
+                   `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_,
+                   `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 .. hint::
 
-   Achtung: Dies ist noch eine unvollständige Beschreibung
+   Achtung: Dies ist noch eine unvollständige Beschreibung. Findest du Fehler oder kannst zur Verbesserung beitragen, dann wende dich bitte an einen der Autoren des Abschnittes.
    
    
 Hast du die vorbereiteten VMs in die jeweilige Virtualisierungsplattform importiert, so 
@@ -24,7 +26,7 @@ deutlich mehr HDD-Speicher für die Server VM zuzuordnen.
 
 
 +---------------+-----------------+-----------------------+-------------+
-| **VM**        | **Anzhal HDDs** | **Festplatten**                     |
+| VM            | Anzahl HDDs     | Festplatten                         |
 |               |                 +-----------------------+-------------+
 |               |                 | Standard/Default (VM) | Empfohlen   |
 +===============+=================+=======================+=============+

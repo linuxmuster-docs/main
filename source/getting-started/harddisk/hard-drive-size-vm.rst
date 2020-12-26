@@ -6,115 +6,216 @@
 Aktualisieren der Server-Festplattengrößen
 ==========================================
 
+.. sectionauthor:: `@toheine <https://ask.linuxmuster.net/u/toheine>`_,
+                   `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_,
+                   `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 .. hint::
 
-   Achtung: Dies ist noch eine zu weiter zu testende Beschreibung
+   Achtung: Dies ist noch eine unvollständige Beschreibung. Findest du Fehler oder kannst zur Verbesserung beitragen, dann wende dich bitte an einen der Autoren des Abschnittes.
 
-Vorgehen
---------
+Voraussetzung:
+--------------
 
-1. Starten der VM
-2. Prüfen, ob die neuen HDD-Größen an die VM durchgereicht werden.
-3. Partitionsgrößen prüfen
-4. HDD1 anpassen
-5. HDD2 mit dem LVM anpassen
-6. Reboot
-7. Tests durchführen
+1. Starten der VM wie zuvor beschrieben ist erfolgt.
 
-1. Viruelle Maschine starten
-----------------------------
+Weiteres Vorgehen:
+------------------
 
-2. HDD-Größen prüfen
---------------------
+3.2. Prüfen, ob die neuen HDD-Größen an die VM durchgereicht werden.
+
+3.3. Partitionsgrößen prüfen
+
+3.4. HDD1 anpassen
+
+3.5. HDD2 mit dem LVM anpassen
+
+3.6. Reboot
+
+3.7. Tests durchführen
+
+3.2. HDD-Größen prüfen
+----------------------
 
 Auf der Konsole der Server-VM prüfst du zuerst, welche Festplatten des Hypervisor auch
 in der VM durchgereicht werden und welche Bezeichnung diese haben. 
 Die im Hypervisor geänderten Größen werden hier bereits angezeigt, aber die Partitionen wurden noch nicht auf 
 die neuen Größen angepasst.
 
-Gebe hierzu folgenden Befehl ein:
+Öffne die Konsole wie schon in einem vorherigen Abschnitt gezeigt, nachdem du in der Übersicht links den Server `lmn-server` ausgewählt hast.
+
+Für den Login benötigst du folgende Informationen:
+
+* Login: root
+* Passwort: Muster!
+
+.. hint:: Dieses Daten dürfen bis zur Aufruf des Installationsscriptes nicht verändert werden!
+
+
+In der geöffneten Konsole gebe folgenden Befehl ein:
 
 .. code::
-   
+
+  lsblk
+
+Du solltest jetzt die geänderten Größen angezeigt bekommen.
+
+.. code::
+
    root@server:~# lsblk
-   NAME                  MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
-   sr0                    11:0    1 1024M  0 rom  
-   xvda                  202:0    0  155G  0 disk 
-   ├─xvda1               202:1    0    1M  0 part 
-   └─xvda2               202:2    0   24G  0 part /
-   xvdb                  202:16   0 1000G  0 disk 
-   ├─vg_srv-var          253:0    0  9,8G  0 lvm  /var
-   ├─vg_srv-linbo        253:1    0   40G  0 lvm  /srv/linbo
-   ├─vg_srv-global       253:2    0  9,8G  0 lvm  /srv/samba/global
-   └─vg_srv-default--school
-                         253:3    0   40G  0 lvm  /srv/samba/schools/default-school
+   NAME                     MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+   sr0                       11:0    1 1024M  0 rom  
+   xvda                     202:0    0  155G  0 disk 
+   ├─xvda1                  202:1    0    1M  0 part 
+   └─xvda2                  202:2    0   24G  0 part /
+   xvdb                     202:16   0 1000G  0 disk 
+   ├─vg_srv-var             253:0    0  9,8G  0 lvm  /var
+   ├─vg_srv-linbo           253:1    0   40G  0 lvm  /srv/linbo
+   ├─vg_srv-global          253:2    0  9,8G  0 lvm  /srv/samba/global
+   └─vg_srv-default--school 253:3    0   40G  0 lvm  /srv/samba/schools/default-school
    
-Die Bezeichnung ``xvda`` steht in XCP-ng für die 1. HDD der VM, ``xvdb`` für die 2. HDD der VM. 
-``xvda1``ist dann die 1. Parition auf der 1. HDD der VM in XCP-ng, ``vg-*`` steht dann für ein LVM auf der 
-jeweils zugeordneten Festplatte, in obigem Beispiel befindet sich das LVM auf der 2. Festplatte (xvdb).
+In Abhängigkeit deiner Virtualisierungs-Umgebung werden die Festplatten unterschiedlich benannt. Wir zeigen das hier an einem Beispiel mittels mit XCP-ng. Es kann also in deiner Konfiguration Abweichnungen in der Bezeichnung geben. Passe diese bei den folgenden Befehlen dementsprechend an.
+
+Die Bezeichnung `xvda` steht in XCP-ng für die 1. Festplatte der VM, `xvdb` für die 2. Festplatte der VM.
+
+* `xvda1` ist dann die 1. Partition auf der 1. Festplatte der VM
+* `xvda2` die 2. Partition auf der 1. Festplatte 
+
+`vg-*` steht für ein LVM auf der jeweils zugeordneten Festplatte. Im obigem Beispiel befindet sich das LVM auf der 2. Festplatte (xvdb).
 
 3. Dateisystem prüfen
 ---------------------
 
-Lasse dir nun dien aktuellen Größen des Dateisystems  ausgeben.
+Lasse dir nun die aktuellen Größen des Dateisystems ausgeben.
+
+.. code::
+
+   df -h
 
 .. code::
 
    root@server: ~# df
-
-    Dateisystem Größe Benutzt Verf. Verw% Eingehängt auf
-    udev 5,9G 0 5,9G 0% /dev
-    tmpfs 1,2G 7,7M 1,2G 1% /run
-    /dev/xvda2 25G 5,7G 18G 25% /
-    tmpfs 5,9G 0 5,9G 0% /dev/shm
-    tmpfs 5,0M 0 5,0M 0% /run/lock
-    tmpfs 5,9G 0 5,9G 0% /sys/fs/cgroup
-    /dev/mapper/vg_srv-global 9,8G 37M 9,3G 1% /srv/samba/global
-    /dev/mapper/vg_srv-linbo 40G 347M 37G 1% /srv/linbo
-    /dev/mapper/vg_srv-default–school 40G 74M 38G 1% /srv/samba/schools/default-school
-    /dev/mapper/vg_srv-var 9,8G 1,2G 8,1G 13% /var
-    tmpfs 1,2G 0 1,2G 0% /run/user/0
+   Dateisystem                       Größe Benutzt Verf. Verw% Eingehängt auf
+   udev                               5,9G       0  5,9G    0% /dev        
+   tmpfs                              1,2G    7,7M  1,2G    1% /run
+   /dev/xvda2                          25G    5,7G   18G   25% /
+   tmpfs                              5,9G       0  5,9G    0% /dev/shm
+   tmpfs                              5,0M       0  5,0M    0% /run/lock
+   tmpfs                              5,9G       0  5,9G    0% /sys/fs/cgroup
+   /dev/mapper/vg_srv-global          9,8G     37M  9,3G    1% /srv/samba/global
+   /dev/mapper/vg_srv-linbo            40G    347M   37G    1% /srv/linbo
+   /dev/mapper/vg_srv-default–school   40G     74M   38G    1% /srv/samba/schools/default-school
+   /dev/mapper/vg_srv-var             9,8G    1,2G  8,1G   13% /var
+   tmpfs                              1,2G       0  1,2G    0% /run/user/0
     
 Hier werden noch die alten Partitionsgrößen angegeben.   
 
 4. HDD1 anpassen
 ----------------
 
-Partitionen auf der 1. HDD **prüfen**:
+Partitionen auf der 1. HDD prüfen:
 
 .. code::
 
    fdisk /dev/xvda
+
+Sollte eine derartige Meldung
+
+.. code::
    
    Warning: GPT - PMBR Größenunterschied (52428799 != 304087039) wird durch write korrigiert.
    
-In diesem Fall fdisk wieder ohne Schreibvorgang verlassen und dieses Problem zunächst lösen.
+durch den Befehl ausgegeben werden, dann fdisk wieder ohne Schreibvorgang verlassen mit `q`. 
 
-Rufe auf der Eingabekonsole das Programm ``parted`` auf.
+Dieses Problem gilt es zunächst zu lösen.
+
+Rufe dazu auf der Eingabekonsole das Programm `parted` auf.
+
+.. code:: 
+
+   parted /dev/xvda
+
+Das Programm wartet dann auf eine Eingabe von dir.
 
 .. code::
 
    root@server: ~# parted /dev/xvda
-   
-   print
+   GNU Parted 3.2
+   /dev/sda wird verwendet
+   Willkommen zu GNU Parted! Rufen Sie >>help<< auf, um eine Liste der verfügbaren Befehle zu erhalten.
+   (parted)
+
+Gebe `print` ein.
    
 Es wird dann ein Größenproblem für die 1. HDD angezeigt und parted bietet eine Auswahloption an, um dieses
-Problem zu beheben. Wähle nun diese Options aus, damit das Größenproblem gelöst wird und verlasse dann parted wieder
-durch Angabe des Befehls ``quit``.
+Problem zu beheben. 
 
-Danach erneut ``fdisk`` aufrufen, die 2. Partition löschen und neu mit neuer Größe anlegen.
+Anmerkung zu den Platzhaltern `xx`, diese stehen für die ausgewählten Vorgaben deiner Installation.
+
+.. code::
+
+   Warnung: Nicht der gesamte verfügbare Platz von /dev/xvda scheint belegt zu sein. Sie können die GPT reparieren, damit der gesamte Platz verwendet wird (zusätzlich xxx Blöcke) oder Sie können mit den aktuellen Einstellungen fortfahren.
+  Reparieren/Fix/Ignoiren/Ignore? 
+
+Gebe nun `Reparieren` ein, damit das Größenproblem gelöst wird und verlasse dann parted wieder
+durch Angabe des Befehls `quit`.
+
+Danach erneut `fdisk` aufrufen, die 2. Partition löschen und neu mit neuer Größe anlegen. Dazu musst du die angegebenen Befehle der Reihe nach abarbeiten.
 
 .. code::
 
    fdisk /dev/xvda
-   
-   p (print - zeigt Partitionen an)
 
-   d (delete - danach Partitionsnr. angeben)
+.. code::    
+
+   p 
    
-   n (new - neue Partition anlegen, gleicher Startpunkt wie zuvor, Ende = verbleibende HDD-Größe)
+`p` (print) zeigt dir die vorhanden Partitionen an
+
+.. code::
+
+   d 
    
-   w (write - schreibt die Änderungen auf die 1. HDD.)
+`d` bietet dir die Auswahl der zu löschen den Partitonen durch die Angabe einer Nummer an. Hier also die 2
+
+.. code::
+
+   2
+
+Nun gilt es die Partition neu anzulegen, das erreichst du mit `n`: 
+
+.. code::
+  
+   n 
+  
+Die folgenden 3 Vorgaben kannst du einfach mit `Enter` übernehmen.
+
+.. code::
+
+   Partionsnummer (2-128, Vorgabe 2): 2
+   Erster Sektor (4096-xxx, Vorgabe 4096):
+   Letzter Sektor, +Sektoren oder +Größe{K,M,G,T,P} (4096-xxx, Vorgabe xxx):
+
+Darauf wird dir folgende Frage gestellt:
+
+.. code::
+
+   Eine neue Partition 2 des Typs "Linux filesystem" und der Größe xxx GiB wurde erstellt
+   Partition #2 enthält eine ext4-Signatur.
+
+   Wollen Sie die Signatur entfernen? [J]a/[N]ein:
+
+Gebe ein `N` ein 
+
+Zum Beenden von fdisk verwendest du nun `w` damit deine Änderungen auf die Festplatte geschrieben werden.
+
+.. code::
+
+   Wollen Sie die Signatur entfernen? [J]a/[N]ein:
+
+   Befehl (m für Hilfe): w
+
+   Die Partitionstabelle wurde verändert.
+   Festplatten werden synchronisiert.
    
 Nun muss die Partition noch auf die neue Größe erweitert werden. Gebe in der Konsole nun an:
 
@@ -122,13 +223,13 @@ Nun muss die Partition noch auf die neue Größe erweitert werden. Gebe in der K
 
    resize2fs /dev/xvda2
    
-Danach wird nun die neue Größe gauf der 1. HDD gentutzt.
+Danach wird nun die neue Größe auf der 1. HDD genutzt.
 
 
 5. HDD2 mit dem LVM anpassen
 ----------------------------
  
-In o.g. VM auf XCP-ng befindet sich auf der 2. HDD ``/dev/xvdb`` ein LVM.
+In o.g. VM auf XCP-ng befindet sich auf der 2. HDD `/dev/xvdb` ein LVM.
 
 Folgende Begriffe sind hierbei relevant:
 
@@ -158,44 +259,66 @@ b) LV-Größen anpassen
 .. code:: 
 
    lvextend -L+100G /dev/mapper/vg_srv-var
+
+Der Befehl liefert folgende Ausgabe:
+
+.. code:: 
+
+   lvextend -L+100G /dev/mapper/vg_srv-var
+   Size of logical volume vg_srv/var changed from 10,00 Gib (2560 extents) to xx,xx GiB (xxxxx extents).
+   Logical volume vg_srv/var successfully resized.
+
+Diesen Befehl wiederholst du für die anderen Logical Volumes
+
+.. code::
+
    lvextend -L+200G /dev/mapper/vg_srv-linbo
    lvextend -L+100G /dev/mapper/vg_srv-global
-   lvextend -l +100%FREE /dev/mapper/vg_srv-default–school
+   lvextend -l +100%FREE /dev/mapper/vg_srv-default–-school
 
 c) Dateisystem an die neuen Größen anpassen:
 
 .. code::
 
    resize2fs /dev/mapper/vg_srv-var
-   resize2fs /dev/mapper/vg_srv-linbo
-   resize2fs /dev/mapper/vg_srv-global
-   resize2fs /dev/mapper/vg_srv-default–school
 
-   Beispielausgabe:
+Beispiel der Befehlsausgabe:
+
+.. code::
+   
    resize2fs 1.44.1 (24-Mar-2018)
    Dateisystem bei /dev/mapper/vg_srv-var ist auf /var eingehängt; Online-Größenänderung ist
    erforderlich
    old_desc_blocks = 2, new_desc_blocks = 14
    Das Dateisystem auf /dev/mapper/vg_srv-var is nun 28835840 (4k) Blöcke lang.
 
+Wiederhole auch diesen Befehl für die anderen Logical Volumes
+
+.. code::
+   
+   resize2fs /dev/mapper/vg_srv-linbo
+   resize2fs /dev/mapper/vg_srv-global
+   resize2fs /dev/mapper/vg_srv-default--school
+
+
 d) Ergebnis prüfen
 
 .. code::
 
-   root@server: ~# df
+   root@server: ~# df -h
 
-   Dateisystem Größe Benutzt Verf. Verw% Eingehängt auf
-   udev 5,9G 0 5,9G 0% /dev
-   tmpfs 1,2G 7,7M 1,2G 1% /run
-   /dev/xvda2 25G 5,7G 18G 25% /
-   tmpfs 5,9G 0 5,9G 0% /dev/shm
-   tmpfs 5,0M 0 5,0M 0% /run/lock
-   tmpfs 5,9G 0 5,9G 0% /sys/fs/cgroup
-   /dev/mapper/vg_srv-global 207G 59M 199G 1% /srv/samba/global
-   /dev/mapper/vg_srv-linbo 433G 368M 415G 1% /srv/linbo
-   /dev/mapper/vg_srv-default–school 236G 85M 226G 1% /srv/samba/schools/default-school
-   /dev/mapper/vg_srv-var 109G 1,2G 103G 2% /var
-   tmpfs 1,2G 0 1,2G 0% /run/user/0
+   Dateisystem                      Größe Benutzt Verf. Verw% Eingehängt auf
+   udev                              5,9G       0  5,9G    0% /dev
+   tmpfs                             1,2G    7,7M  1,2G    1% /run
+   /dev/xvda2                         25G    5,7G   18G   25% /
+   tmpfs                             5,9G       0  5,9G    0% /dev/shm
+   tmpfs                             5,0M       0  5,0M    0% /run/lock
+   tmpfs                             5,9G       0  5,9G    0% /sys/fs/cgroup
+   /dev/mapper/vg_srv-global         207G     59M  199G    1% /srv/samba/global
+   /dev/mapper/vg_srv-linbo          433G    368M  415G    1% /srv/linbo
+   /dev/mapper/vg_srv-default–school 236G     85M  226G    1% /srv/samba/schools/default-school
+   /dev/mapper/vg_srv-var            109G    1,2G  103G    2% /var
+   tmpfs                             1,2G       0  1,2G    0% /run/user/0
 
 5. Reboot
 ---------
@@ -210,7 +333,7 @@ Starte nun die Server-VM neu, um zu prüfen, ob die vorgenommenen Größenanpass
 --------------------
 
 Nachdem die VM wieder gestart ist, melde dich an der Konsole an und prüfe mithilfe nachstehender Befehle, ob die Platten- und Partitionsgrößen
-nun deinen wünschen tatsächlich entsprechen.
+nun deinen Wünschen tatsächlich entsprechen.
 
 .. code::
 
@@ -241,4 +364,10 @@ nun deinen wünschen tatsächlich entsprechen.
    /dev/mapper/vg_srv-var              109G    3,5G  101G    4% /var
    /dev/mapper/vg_srv-linbo            433G     40G  376G   10% /srv/linbo
    tmpfs                               1,2G       0  1,2G    0% /run/user/0
+
+.. hint::
+
+   Dieses Vorgehen musst du nun für die optionalen Server `docker` und `opsi` wiederholen, wenn du auch deren Festplattengröße verndert hast!
+
+Im folgenden wirst du nun die Festplatten der opnSense anpassen.
 
