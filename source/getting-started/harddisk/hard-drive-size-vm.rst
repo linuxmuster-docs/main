@@ -23,18 +23,18 @@ Weiteres Vorgehen:
 
 3.2. Prüfen, ob die neuen HDD-Größen an die VM durchgereicht werden.
 
-3.3. Partitionsgrößen prüfen
+3.3. Partitionsgrößen prüfen.
 
-3.4. HDD1 anpassen
+3.4. HDD1 anpassen.
 
-3.5. HDD2 mit dem LVM anpassen
+3.5. HDD2 mit dem LVM anpassen.
 
 3.6. Reboot
 
-3.7. Tests durchführen
+3.7. Tests durchführen.
 
-3.2. HDD-Größen prüfen
-----------------------
+3.2. HDD-Größen überprüfen.
+---------------------------
 
 Auf der Konsole der Server-VM prüfst du zuerst, welche Festplatten des Hypervisor auch
 in der VM durchgereicht werden und welche Bezeichnung diese haben. 
@@ -48,7 +48,7 @@ Für den Login benötigst du folgende Informationen:
 * Login: root
 * Passwort: Muster!
 
-.. hint:: Dieses Daten dürfen bis zur Aufruf des Installationsscriptes nicht verändert werden!
+.. hint:: Diese Daten dürfen bis zum Aufruf des Installationsskriptes nicht verändert werden!
 
 
 In der geöffneten Konsole gebe folgenden Befehl ein:
@@ -73,17 +73,17 @@ Du solltest jetzt die geänderten Größen angezeigt bekommen.
    ├─vg_srv-global          253:2    0  9,8G  0 lvm  /srv/samba/global
    └─vg_srv-default--school 253:3    0   40G  0 lvm  /srv/samba/schools/default-school
    
-In Abhängigkeit deiner Virtualisierungs-Umgebung werden die Festplatten unterschiedlich benannt. Wir zeigen das hier an einem Beispiel mittels mit XCP-ng. Es kann also in deiner Konfiguration Abweichnungen in der Bezeichnung geben. Passe diese bei den folgenden Befehlen dementsprechend an.
+In Abhängigkeit deiner Virtualisierungs-Umgebung werden die Festplatten unterschiedlich benannt. Wir zeigen das hier an einem Beispiel mittels mit XCP-ng. Es kann also in deiner Konfiguration Abweichungen in der Bezeichnung geben. Passe diese bei den folgenden Befehlen dementsprechend an.
 
 Die Bezeichnung `xvda` steht in XCP-ng für die 1. Festplatte der VM, `xvdb` für die 2. Festplatte der VM.
 
 * `xvda1` ist dann die 1. Partition auf der 1. Festplatte der VM
 * `xvda2` die 2. Partition auf der 1. Festplatte 
 
-`vg-*` steht für ein LVM auf der jeweils zugeordneten Festplatte. Im obigem Beispiel befindet sich das LVM auf der 2. Festplatte (xvdb).
+`vg-*` steht für ein LVM auf der jeweils zugeordneten Festplatte. Im obigen Beispiel befindet sich das LVM auf der 2. Festplatte (xvdb).
 
-3. Dateisystem prüfen
----------------------
+3.3. Dateisystem prüfen
+-----------------------
 
 Lasse dir nun die aktuellen Größen des Dateisystems ausgeben.
 
@@ -109,8 +109,8 @@ Lasse dir nun die aktuellen Größen des Dateisystems ausgeben.
     
 Hier werden noch die alten Partitionsgrößen angegeben.   
 
-4. HDD1 anpassen
-----------------
+3.4. HDD1 anpassen
+------------------
 
 Partitionen auf der 1. HDD prüfen:
 
@@ -156,10 +156,10 @@ Anmerkung zu den Platzhaltern `xx`, diese stehen für die ausgewählten Vorgaben
    Warnung: Nicht der gesamte verfügbare Platz von /dev/xvda scheint belegt zu sein. Sie können die GPT reparieren, damit der gesamte Platz verwendet wird (zusätzlich xxx Blöcke) oder Sie können mit den aktuellen Einstellungen fortfahren.
   Reparieren/Fix/Ignoiren/Ignore? 
 
-Gebe nun `Reparieren` ein, damit das Größenproblem gelöst wird und verlasse dann parted wieder
+Gebe `Reparieren` ein, damit das Größenproblem gelöst wird und verlasse dann parted wieder
 durch Angabe des Befehls `quit`.
 
-Danach erneut `fdisk` aufrufen, die 2. Partition löschen und neu mit neuer Größe anlegen. Dazu musst du die angegebenen Befehle der Reihe nach abarbeiten.
+Danach erneut `fdisk` aufrufen, die 2. Partition löschen und neu mit neuer Größe anlegen. Die angegebenen Befehle musst du der Reihe nach abarbeiten.
 
 .. code::
 
@@ -175,7 +175,7 @@ Danach erneut `fdisk` aufrufen, die 2. Partition löschen und neu mit neuer Grö
 
    d 
    
-`d` bietet dir die Auswahl der zu löschen den Partitonen durch die Angabe einer Nummer an. Hier also die 2
+`d` bietet dir die Auswahl der zu löschen Partitionen durch die Angabe einer Nummer an. Hier also die 2
 
 .. code::
 
@@ -195,7 +195,7 @@ Die folgenden 3 Vorgaben kannst du einfach mit `Enter` übernehmen.
    Erster Sektor (4096-xxx, Vorgabe 4096):
    Letzter Sektor, +Sektoren oder +Größe{K,M,G,T,P} (4096-xxx, Vorgabe xxx):
 
-Darauf wird dir folgende Frage gestellt:
+Dir wird darauf die folgende Frage gestellt:
 
 .. code::
 
@@ -223,11 +223,11 @@ Nun muss die Partition noch auf die neue Größe erweitert werden. Gebe in der K
 
    resize2fs /dev/xvda2
    
-Danach wird nun die neue Größe auf der 1. HDD genutzt.
+Ab nun wird die neue Größe für der 1. HDD genutzt.
 
 
-5. HDD2 mit dem LVM anpassen
-----------------------------
+3.5. HDD2 mit dem LVM anpassen
+------------------------------
  
 In o.g. VM auf XCP-ng befindet sich auf der 2. HDD `/dev/xvdb` ein LVM.
 
@@ -292,7 +292,7 @@ Beispiel der Befehlsausgabe:
    old_desc_blocks = 2, new_desc_blocks = 14
    Das Dateisystem auf /dev/mapper/vg_srv-var is nun 28835840 (4k) Blöcke lang.
 
-Wiederhole auch diesen Befehl für die anderen Logical Volumes
+Wiederhole diesen Befehl für die anderen Logical Volumes.
 
 .. code::
    
@@ -320,8 +320,8 @@ d) Ergebnis prüfen
    /dev/mapper/vg_srv-var            109G    1,2G  103G    2% /var
    tmpfs                             1,2G       0  1,2G    0% /run/user/0
 
-5. Reboot
----------
+3.6. Reboot
+-----------
 
 Starte nun die Server-VM neu, um zu prüfen, ob die vorgenommenen Größenanpassungen funktionsfähig sind und der Reboot korrekt ausgeführt wird.
 
@@ -329,10 +329,10 @@ Starte nun die Server-VM neu, um zu prüfen, ob die vorgenommenen Größenanpass
 
    root@server: ~# reboot
    
-6. Tests durchführen
---------------------
+3.7. Tests durchführen
+----------------------
 
-Nachdem die VM wieder gestart ist, melde dich an der Konsole an und prüfe mithilfe nachstehender Befehle, ob die Platten- und Partitionsgrößen
+Nachdem die VM wieder gestartet ist, melde dich an der Konsole an und prüfe mithilfe nachstehender Befehle, ob die Platten- und Partitionsgrößen
 nun deinen Wünschen tatsächlich entsprechen.
 
 .. code::
@@ -367,7 +367,7 @@ nun deinen Wünschen tatsächlich entsprechen.
 
 .. hint::
 
-   Dieses Vorgehen musst du nun für die optionalen Server `docker` und `opsi` wiederholen, wenn du auch deren Festplattengröße verndert hast!
+   Dieses Vorgehen musst du für die optionalen Server `docker` und `opsi` wiederholen, wenn du auch deren Festplattengröße verändert hast!
 
-Im folgenden wirst du nun die Festplatten der opnSense anpassen.
+Im Folgenden wirst du die Festplatten der OPNSense® anpassen.
 
