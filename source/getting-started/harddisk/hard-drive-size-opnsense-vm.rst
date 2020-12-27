@@ -2,13 +2,13 @@
 
 .. _hard_drive_size_opnsense_vm-label:
 
-===================================================
-Aktualisieren der Festplattengrößen der OPNSense VM
-===================================================
+====================================================
+Aktualisieren der Festplattengrößen der OPNSense® VM
+====================================================
 
 .. hint::
 
-   Achtung: Diese Dokumentation ist noch nicht ganz fertig und muss weiter getestet werden. Diesen Abschnitt must du nur ausführen, sofern du in deinem Hypervisor die HDD-Größe der OPNSense bereits vergrößert hast. Ansonsten kannst Du bei der Einrichtung mit dem Kapitel ``Netzbereich anpassen`` fortfahren.
+   Achtung: Diese Dokumentation ist noch nicht ganz fertig und muss weiter getestet werden. Diesen Abschnitt must du nur ausführen, sofern du in deinem Hypervisor die HDD-Größe der OPNSense® bereits vergrößert hast. Ansonsten kannst Du bei der Einrichtung mit dem Kapitel ``Netzbereich anpassen`` fortfahren.
    
 ..
    ==================== ======================
@@ -24,13 +24,13 @@ KVM     - Netzbereich anpassen |follow_me2kvm-backhd|
    
 Überblick
 ---------
-OPNSense basiert auf FreeBSD, so dass die Erweiterung der Festplattengröße von dem Vorgehen der
+OPNSense® basiert auf FreeBSD, so dass die Erweiterung der Festplattengröße von dem Vorgehen der
 Server-VM abweicht. Gleich bleibt, dass zu Beginn ein Snapshot erstelt werden sollte und die 
 Virtuelle Disk im Hypervisor vergrößert werden muss.
 
 ..
    =================================== ======================
-   Um die Festplattengröße für die OPNsense zu erweitern ist wie folgt vorzugehen:
+   Um die Festplattengröße für die OPNsense® zu erweitern ist wie folgt vorzugehen:
    0.  Zuerst ein Snapshot der OPNsense VM erstellen. Auf diesen Stand kannst Du zurückkehren, falls bei den nachstehenden Schritten Fehler auftreten.  
    1.  Im Hypervisor die Größe für die Festplatte der OPNSense erweitern (im ausgeschalteten Zustand).
    2.  VM starten.
