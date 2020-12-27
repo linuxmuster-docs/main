@@ -15,11 +15,11 @@ Aktualisieren der Festplattengrößen der OPNSense VM
    Netzbereich anpassen |follow_me2modify-net|
    ==================== ======================
 
-=========================== ==========================
-Virtualisierung mit Proxmox |follow_me2proxmox-backhd|
-Virtualisierung mit XCP-ng  |follow_me2xcp-ng-backhd|
-Virtualisierung mit KVM     |follow_me2kvm-backhd|
-=========================== ==========================
+============================== ==========================
+Proxmox - Netzbereich anpassen |follow_me2proxmox-backhd|
+XCP-ng  - Netzbereich anpassen |follow_me2xcp-ng-backhd|
+KVM     - Netzbereich anpassen |follow_me2kvm-backhd|
+============================== ==========================
 
    
 Überblick
@@ -123,9 +123,9 @@ Weiterführende Erklärungen zu FreeBSD zu diesem Thema findest du hier:
 
 https://unix.stackexchange.com/questions/117023/expanding-the-disk-size-on-pfsense-under-vmware-esxi
 
-=========================== ==========================
-Virtualisierung mit Proxmox |follow_me2proxmox-backhd|
-Virtualisierung mit XCP-ng  |follow_me2xcp-ng-backhd|
-Virtualisierung mit KVM     |follow_me2kvm-backhd|
-=========================== ==========================
+============================== ==========================
+Proxmox - Netzbereich anpassen |follow_me2proxmox-backhd|
+XCP-ng  - Netzbereich anpassen |follow_me2xcp-ng-backhd|
+KVM     - Netzbereich anpassen |follow_me2kvm-backhd|
+============================== ==========================
 
