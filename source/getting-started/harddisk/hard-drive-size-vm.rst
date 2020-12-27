@@ -369,5 +369,5 @@ nun deinen Wünschen tatsächlich entsprechen.
 
    Dieses Vorgehen musst du nun für die optionalen Server `docker` und `opsi` wiederholen, wenn du auch deren Festplattengröße verndert hast!
 
-Im folgenden wirst du nun die Festplatten der OPNSense(R) anpassen.
+Im folgenden wirst du nun die Festplatten der OPNSense® anpassen.
 
