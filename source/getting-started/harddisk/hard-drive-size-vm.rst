@@ -82,8 +82,8 @@ Die Bezeichnung `xvda` steht in XCP-ng für die 1. Festplatte der VM, `xvdb` fü
 
 `vg-*` steht für ein LVM auf der jeweils zugeordneten Festplatte. Im obigem Beispiel befindet sich das LVM auf der 2. Festplatte (xvdb).
 
-3. Dateisystem prüfen
----------------------
+3.3. Dateisystem prüfen
+-----------------------
 
 Lasse dir nun die aktuellen Größen des Dateisystems ausgeben.
 
@@ -109,8 +109,8 @@ Lasse dir nun die aktuellen Größen des Dateisystems ausgeben.
     
 Hier werden noch die alten Partitionsgrößen angegeben.   
 
-4. HDD1 anpassen
-----------------
+3.4. HDD1 anpassen
+------------------
 
 Partitionen auf der 1. HDD prüfen:
 
@@ -226,8 +226,8 @@ Nun muss die Partition noch auf die neue Größe erweitert werden. Gebe in der K
 Danach wird nun die neue Größe auf der 1. HDD genutzt.
 
 
-5. HDD2 mit dem LVM anpassen
-----------------------------
+3.5. HDD2 mit dem LVM anpassen
+------------------------------
  
 In o.g. VM auf XCP-ng befindet sich auf der 2. HDD `/dev/xvdb` ein LVM.
 
@@ -320,8 +320,8 @@ d) Ergebnis prüfen
    /dev/mapper/vg_srv-var            109G    1,2G  103G    2% /var
    tmpfs                             1,2G       0  1,2G    0% /run/user/0
 
-5. Reboot
----------
+3.6. Reboot
+-----------
 
 Starte nun die Server-VM neu, um zu prüfen, ob die vorgenommenen Größenanpassungen funktionsfähig sind und der Reboot korrekt ausgeführt wird.
 
@@ -329,8 +329,8 @@ Starte nun die Server-VM neu, um zu prüfen, ob die vorgenommenen Größenanpass
 
    root@server: ~# reboot
    
-6. Tests durchführen
---------------------
+3.7. Tests durchführen
+----------------------
 
 Nachdem die VM wieder gestart ist, melde dich an der Konsole an und prüfe mithilfe nachstehender Befehle, ob die Platten- und Partitionsgrößen
 nun deinen Wünschen tatsächlich entsprechen.
@@ -369,5 +369,5 @@ nun deinen Wünschen tatsächlich entsprechen.
 
    Dieses Vorgehen musst du nun für die optionalen Server `docker` und `opsi` wiederholen, wenn du auch deren Festplattengröße verndert hast!
 
-Im folgenden wirst du nun die Festplatten der opnSense anpassen.
+Im folgenden wirst du nun die Festplatten der OPNSense(R) anpassen.
 
