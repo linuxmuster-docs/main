@@ -132,6 +132,7 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
 
   external-services/moodle/index
   external-services/nextcloud/index
+  external-services/unifiwlan/index
 
 .. toctree::
   :maxdepth: 1
