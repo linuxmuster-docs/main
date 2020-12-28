@@ -26,7 +26,7 @@ und kann so den Internetzugriff erfragen.
 
 linuxmuster.net verwendet hier standardmäßig das
 Kerberos-Ticketsystem. Dieses SSO-Verfahren ist auf der Firewall
-OPNsense aktiviert und muss auf den Arbeitsplatzrechnern eingerichtet
+OPNsense® aktiviert und muss auf den Arbeitsplatzrechnern eingerichtet
 werden.
 
 Zugriff ohne Proxy

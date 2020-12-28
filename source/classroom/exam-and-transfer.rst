@@ -44,7 +44,7 @@ Home-Laufwerk (``Home_auf_Server`` bzw. ``H:\\``). Der Internetzugang, der
 WLAN-Zugang und der Druckerzugriff sind standardmäßig zunächst
 deaktiviert.
 
-:fixme: Internetsperrung funktioniert momentan nicht mit der Firewall OpnSense.
+:fixme: Internetsperrung funktioniert momentan nicht mit der Firewall OPNsense®.
 
 
 Austeilen und Einsammeln

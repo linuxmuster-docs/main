@@ -38,7 +38,7 @@ der IPs zu den VMs bzw. genutzten Hosts.
 +--------------+--------------------+
 | VM           | IP                 | 
 +==============+====================+
-| OPNsense     | 10.0.0.254/16      |
+| OPNsense®    | 10.0.0.254/16      |
 +--------------+--------------------+
 | Server       | 10.0.0.1/16        | 
 +--------------+--------------------+
@@ -60,7 +60,7 @@ Nach der Installation gemäß dieser Anleitung erhältst Du eine
 einsatzbereite Umgebung bestehend aus
 
 * einem Host (XCP-ng) für alle virtuellen Maschinen, 
-* einer Firewall (OPNsense)  
+* einer Firewall (OPNsense®)  
 * einem Server (linuxmuster.net)
 * einer VM (XOA) zur web-basierten Verwaltung des Virtualisierungs-Hosts
 
@@ -95,7 +95,7 @@ Bereitstellen des XCP-ng-Hosts
 
 .. hint:: 
 
-   Der XCP-ng-Host bildet das Grundgerüst für die Firewall *OPNsense* und
+   Der XCP-ng-Host bildet das Grundgerüst für die Firewall *OPNsense®* und
    den Schulserver *server*. Die Virtualisierungsfunktionen der CPU sollten 
    zuvor im BIOS aktiviert worden sein.
 
@@ -511,19 +511,19 @@ Beginne mit der Firewall Opnsense. Starte diese.
 
 .. figure:: media/37_xcp-ng-install_opnsense_started.png
    :align: center
-   :alt: Gestartete VM OPNsense
+   :alt: Gestartete VM OPNsense®
 
 Melde Dich auf der Konsole mit den Daten ``root`` und ``Muster!`` an.
 
 .. figure:: media/38_xcp-ng-install_opnsense_console-menue.png
    :align: center
-   :alt: Konsolenmenü OPNsense
+   :alt: Konsolenmenü OPNsense®
 
 Wähle danach in dem Konsolenmenü den Punkt 12) aus, um die Firewall zu aktualisieren.
 
 .. figure:: media/39_xcp-ng-install_opnsense_update-from-console.png
    :align: center
-   :alt: Update der VM OPNsense
+   :alt: Update der VM OPNsense®
 
 Bestätige diesen Vorgang mit ``y`` und warte bis die VM neu gestartet wurde.
 

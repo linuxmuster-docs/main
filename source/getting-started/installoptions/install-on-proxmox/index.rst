@@ -31,7 +31,7 @@ Die Werte sind die voreingestellten Werte der VMs beim Import und bilden gleichz
 ============ ============= ================ =====
 VM           IP            HDD              RAM 
 ============ ============= ================ =====
-OPNsense     10.0.0.254/16 10 GiB           4 GiB
+OPNsense®    10.0.0.254/16 10 GiB           4 GiB
 Server       10.0.0.1/16   25 GiB u 100 GiB 4 GiB
 OPSI         10.0.0.2/16   100 GiB          2 GiB
 Docker-VM    10.0.0.3/16   100 GiB          2 GiB
@@ -57,18 +57,18 @@ Der Proxmox-Host sollte gemäß o.g. Minimalanforderungen folgende Merkmale aufw
   * Erste HDD: mind 100 GiB für Proxmox selbst
   * Zweite HDD: für die VMs mit mind. 500 GB Kapazität (besser: 1 TiB oder 2 TiB)
   * Zwei Netzwerkkarten
-  * Der Internetzugang des Proxmox-Hosts sollte zunächst gewährleistet sein, d.h. dieser wird z.B. an einen (DSL-)Router angeschlossen, der den Internet-Zugang sicherstellt. Sobald spalles eingerichtet ist, bekommt der Proxmox-Host eine IP-Adresse im Schulnetz und die Firewall OPNSense stellt den Internet-Zugang für alle VMs und den Proxmox-Host bereit.
+  * Der Internetzugang des Proxmox-Hosts sollte zunächst gewährleistet sein, d.h. dieser wird z.B. an einen (DSL-)Router angeschlossen, der den Internet-Zugang sicherstellt. Sobald spalles eingerichtet ist, bekommt der Proxmox-Host eine IP-Adresse im Schulnetz und die Firewall OPNsense® stellt den Internet-Zugang für alle VMs und den Proxmox-Host bereit.
 
 .. hint:: 
 
-   Virtualisierungs-Hosts sollten grundsätzlich niemals im gleichen Netz wie andere Geräte sein, damit dieser nicht von diesen angegriffen werden kann. In dieser Dokumentation wird zur Vereinfachung der Fall dokumentiert, dass der Proxmox-Host zu Beginn im externen Netz mit Internet-Zugriff und nach Abschluss der Installation im internen Schulnetz mit Internet-Zugriff via OPNSense- Firewall befindet. 
+   Virtualisierungs-Hosts sollten grundsätzlich niemals im gleichen Netz wie andere Geräte sein, damit dieser nicht von diesen angegriffen werden kann. In dieser Dokumentation wird zur Vereinfachung der Fall dokumentiert, dass der Proxmox-Host zu Beginn im externen Netz mit Internet-Zugriff und nach Abschluss der Installation im internen Schulnetz mit Internet-Zugriff via OPNsense®-Firewall befindet. 
 
 Bereitstellen des Proxmox-Hosts
 ===============================
 
 .. hint:: 
 
-   Der Proxmox-Host bildet das Grundgerüst für die Firewall *OPNsense* und
+   Der Proxmox-Host bildet das Grundgerüst für die Firewall *OPNsense®* und
    den Schulserver *server*. Die Virtualisierungsfunktionen der CPU sollten 
    zuvor im BIOS aktiviert worden sein.
 
@@ -502,7 +502,7 @@ Fertige VM-Snapshots für Proxmox stellt linuxmuster.net auf dem eigenen Downloa
 
 Um die Maschinen importieren zu können, müsssen diese zuerst auf den Hypervisor geladen werden. Die VMs können über die Shell von Proxmox mit dem wget-Befehl direkt heruntergeladen werden. 
 
-Für eine linuxmuster.net v7 Umgebung werden die Server-VM und als Firewall die OPNSense-VM benötigt. Optional sind zusätzlich eine OPSI-VM und eine Docker-VM für deine linuxmuster.net-Umgebung verfügbar. 
+Für eine linuxmuster.net v7 Umgebung werden die Server-VM und als Firewall die OPNsense®-VM benötigt. Optional sind zusätzlich eine OPSI-VM und eine Docker-VM für deine linuxmuster.net-Umgebung verfügbar. 
 
 Für die VMs wären folgende Befehle in der Shell von hv01 einzugeben: 
 
@@ -657,7 +657,7 @@ Vorbereiten der Proxmox-Festplatten |follow_me2hd-resize|
 VM Netzwerkeinstellungen prüfen
 -------------------------------
 
-Die OPNSense VM weist zwei Netzwerkkarten auf, wie nachstehend dargestellt:
+Die OPNsense®-VM weist zwei Netzwerkkarten auf, wie nachstehend dargestellt:
 
 .. figure:: media/install-on-proxmox_23_vm-network-overview.png
    :align: center
@@ -669,7 +669,7 @@ Die Netzwerkkarte `net0` ist mit der Bridge `vmbr0` verbunden. Diese ist derzeit
    :align: center
    :alt: Schritt 25
 
-Im nächsten Schritt wird dies geändert, so dass die VMs mit ihrer Verbindung ins Intranet (grünes Netz) an die Bridge `vmbr0` und die externe Schnittstelle der OPNSense-VM auf die dann externe Bridge `vmbr1` angeschlossen sein wird.
+Im nächsten Schritt wird dies geändert, so dass die VMs mit ihrer Verbindung ins Intranet (grünes Netz) an die Bridge `vmbr0` und die externe Schnittstelle der OPNsense®-VM auf die dann externe Bridge `vmbr1` angeschlossen sein wird.
 
 Für die VMs `server, opsi, docker` müssen die Einstellungen für die Netzwerkkarte ebenfalls überprüft werden.
 Alle sollten mit ihrem `Network Device net0` mit der `bridge=vmbr0` verbunden sein.
@@ -705,7 +705,7 @@ Die Netzwerkkarte `net0` ist mit der Bridge `vmbr0` verbunden. Diese ist derzeit
    :align: center
    :alt: Schritt 25
 
-Im nächsten Schritt wird dies geändert, so dass die VMs mit ihrer Verbindung ins Intranet (grünes Netz) an die Bridge `vmbr0` und die externe Schnittstelle der OPNSense-VM auf die dann externe Bridge `vmbr1` angeschlossen sein wird.
+Im nächsten Schritt wird dies geändert, so dass die VMs mit ihrer Verbindung ins Intranet (grünes Netz) an die Bridge `vmbr0` und die externe Schnittstelle der OPNsense®-VM auf die dann externe Bridge `vmbr1` angeschlossen sein wird.
 
 Für die VMs `server, opsi, docker` müssen die Einstellungen für die Netzwerkkarte ebenfalls überprüft werden.
 Alle sollten mit ihrem `Network Device net0` mit der `bridge=vmbr0` verbunden sein.
@@ -720,7 +720,7 @@ Die Netzwerkkarte `net0` ist mit der Bridge `vmbr0` verbunden. Diese ist derzeit
    :align: center
    :alt: Schritt 25
 
-Im nächsten Schritt wird dies geändert, so dass die VMs mit ihrer Verbindung ins Intranet (grünes Netz) an die Bridge `vmbr0` und die externe Schnittstelle der OPNSense-VM auf die dann externe Bridge `vmbr1` angeschlossen sein wird.
+Im nächsten Schritt wird dies geändert, so dass die VMs mit ihrer Verbindung ins Intranet (grünes Netz) an die Bridge `vmbr0` und die externe Schnittstelle der OPNsense®-VM auf die dann externe Bridge `vmbr1` angeschlossen sein wird.
 
 Für die VMs `server, opsi, docker` müssen die Einstellungen für die Netzwerkkarte ebenfalls überprüft werden.
 Alle sollten mit ihrem `Network Device net0` mit der `bridge=vmbr0` verbunden sein.
@@ -775,7 +775,7 @@ Darin editierst Du die Datei ``/etc/network/interfaces`` änderst Du die Eintrag
   iface vmbr0 inet static
         address 10.0.0.20   # IP aus dem internen Netzwerkes (gruen) - IP des Proxmox-Host
         netmask 255.255.0.0 # Subnetzmaske 16 = 255.255.0.0
-        gateway 10.0.0.254  # IP der OPNSense Firewall
+        gateway 10.0.0.254  # IP der OPNsense® Firewall
         bridge-ports eno1   # erste NIC an vmbr0 gebunden
         bridge-stp off
         bridge-fd 0
@@ -807,7 +807,7 @@ IPv6 - Einträge mit `::1` oder mit `fe` und `ff` beginnend können so bleiben.
    search linuxmuster.lan
    nameserver 10.0.0.254
 
-Dies ist die interne IP-Adresse der OPNSense Firewall.
+Dies ist die interne IP-Adresse der OPNsense® Firewall.
 
 Zur Übernahme der Einstellungen ist der Proxmox-Host neu zu starten. (`Reboot`)
 
@@ -824,7 +824,7 @@ Die WebUI des Proxmox-Host erreichst du über die Adresse `https://10.0.0.20:800
 Virtuelle Maschinen starten
 ===========================
 
-Nachdem du dich mit dem Proxmox-Host neu verbunden hast, starte zunächst die Firewall-VM (OPNSense). 
+Nachdem du dich mit dem Proxmox-Host neu verbunden hast, starte zunächst die Firewall-VM (OPNsense®). 
 Anschließend startest du die anderen VMs.
 
 Nach dem ersten Start der Server-VM laufen diverse automatische Anpassungen ab, wie die Auslastung der CPU zeigt: 
@@ -841,7 +841,7 @@ linuxmuster.net-Installation durchgeführt werden.
 Konfiguriere zuerst die Firewall, indem Du dort die Netzwerschnittstellen korrekt zuweist und die IP-Adressen zuordnest. 
 Diese sorgt nun dafür, dass das gesamte System Zugriff auf exterene Netze / das Internet hat.
 
-Zum jetzigen Zeitpunkt hat dein Proxmox-Host keine Internet-Verbindung. Diese erhält dieser erst wieder, wenn die OPNSense-VM eingerichtet wurde.
+Zum jetzigen Zeitpunkt hat dein Proxmox-Host keine Internet-Verbindung. Diese erhält dieser erst wieder, wenn die OPNsense®-VM eingerichtet wurde.
 
 ============================ =================
 Weiter geht es mit dem Setup |follow_me2setup|

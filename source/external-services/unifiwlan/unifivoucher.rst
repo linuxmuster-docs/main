@@ -46,20 +46,20 @@ In der `Zugriffskontrolle` musst Du den Zugriff auf den Unifi-Kontroller noch vo
 
 Gehe auf `ÄNDERUNGEN ANWENDEN`. Damit werden die Änderungen gespeichert und auf die APs ausgerollt.
 
-Firewall-Regeln für die OpnSense
---------------------------------
+Firewall-Regeln für die OPNsense®
+---------------------------------
 
 Damit die Clients überhaupt auf den Unifi-Kontroller zugreifen können, muss eine neue Firewallregel für den IPFire angelegt werden:
 
 Schritt für Schritt
 -------------------
 
-Öffne die OpnSense `<https://firewall.linuxmuster.lan>`_ und melde dich an.
+Öffne die OPNsense® `<https://firewall.linuxmuster.lan>`_ und melde dich an.
 
 Gehe auf `Firewall`->`Regeln`->`WLAN` und wähle `Hinzufügen`.
 
 .. figure:: media/os01.png
-   :alt: OpnSense-Regel 8880
+   :alt: OPNsense®-Regel 8880
 
 Mache die folgenden Eingaben:
 

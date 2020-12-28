@@ -14,7 +14,7 @@ Virtualisierung mit KVM     |follow_me2kvm|
 =========================== ===================
 
 Alternativ installierst du von Grund auf die Serverbetriebssysteme
-*Ubuntu Server* und *OPNSense* direkt auf der Hardware oder innerhalb
+*Ubuntu Server* und *OPNsense®* direkt auf der Hardware oder innerhalb
 deiner Virtualisierungslösung.
 
 =========================== ===================

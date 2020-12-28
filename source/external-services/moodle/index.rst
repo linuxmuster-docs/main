@@ -17,7 +17,7 @@ Hierzu sind einige Konfigurationsschritte erforderlich, die nachstehend beschrie
 Firewalleinstellungen
 =====================
 
-Die OPNsense-Firewall muss so konfiguriert werden, dass Anfragen über den ``LDAPS-Port 636`` an den
+Die Firewall (OPNsense®) muss so konfiguriert werden, dass Anfragen über den ``LDAPS-Port 636`` an den
 Server weitergeleitet werden. 
 
 In der Konfigurationsoberfläche ist unter ``Firewall -> NAT -> Portweiterleitung``

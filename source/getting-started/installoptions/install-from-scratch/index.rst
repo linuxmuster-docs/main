@@ -29,9 +29,9 @@ Natürlich kann der Admin PC auch ein normaler Laptop mit Linux oder Windows als
 Vorgehensweise
 ==============
 
-* Zunächst installieren wir die Firewall OPNSense.
+* Zunächst installieren wir die Firewall OPNsense®.
 * Dann Integrieren wir den Admin PC ins Schulnetz.
-* Jetzt konfigurieren wir die OPNSense über das Webinterface.
+* Jetzt konfigurieren wir die OPNsense® über das Webinterface.
 * Schließlich installieren wir den Ubuntu-Server und richten linuxmuster.net ein.
 
 .. toctree::
