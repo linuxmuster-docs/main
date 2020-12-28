@@ -47,7 +47,7 @@ In der `Zugriffskontrolle` musst Du den Zugriff auf den Unifi-Kontroller noch vo
 Gehe auf `ÄNDERUNGEN ANWENDEN`. Damit werden die Änderungen gespeichert und auf die APs ausgerollt.
 
 Firewall-Regeln für die OPNsense®
---------------------------------
+---------------------------------
 
 Damit die Clients überhaupt auf den Unifi-Kontroller zugreifen können, muss eine neue Firewallregel für den IPFire angelegt werden:
 

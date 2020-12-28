@@ -85,7 +85,7 @@ Um die Server-Installation auf den aktuellen Paketstand zu bringen, gehe folgend
 
 		
 Aktualisierung der Firewall OPNSense®
-------------------------------------
+-------------------------------------
 
 Um die Firewall OPNSense® zu aktualisieren, beachte bitte Hinweise.
 

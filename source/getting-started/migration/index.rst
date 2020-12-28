@@ -65,7 +65,7 @@ diese Subnetze mit umstellen, dann ist nachstehendes Vorgehen unbedingt bereits
 beim Erstsetup der VMs der V7 zu beachten.
 
 Ablauf
-^^^^^^
+------
 
 1. VMs importieren
 2. VMs starten
@@ -77,7 +77,7 @@ Ablauf
 8. Erst-Setup durchführen
 
 IPs OPNsense® anpassen
-^^^^^^^^^^^^^^^^^^^^^
+----------------------
 
 Die IP der externen Schnittstelle (WAN) der OPNsense® ist ggf. anzupassen. Diese ist in der Erstauslieferung so konfiguriert, das diese eine IP via DHCP erhalten würde. Sollte die OPNsense® Firewall hinter einem Router arbeiten, so kann eine Anpassung für eine statische IP erforderlich sein.
 

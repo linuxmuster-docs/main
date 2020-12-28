@@ -208,7 +208,7 @@ Anwendung auf die Appliances
 Zuerst ist die OPNsense® Firewall anzupassen.
 
 OPNsense® Firewall
------------------
+------------------
 
 Nach dem ersten Start als Benutzer ``root`` mit dem Passwort ``Muster!`` anmelden. Danach erscheint 
 nachstehendes Konsolenmenü der OPNsense®:

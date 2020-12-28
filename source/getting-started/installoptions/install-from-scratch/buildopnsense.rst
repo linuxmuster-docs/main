@@ -2,7 +2,7 @@ Anlegen und Installieren der Firewall
 =====================================
 
 Installation der OPNsense®
--------------------------
+--------------------------
 
 Starte die VM mit dem ``Start``-Knopf und öffne mit dem ``>_ Konsole``-Knopf die Konsole der VM.
 
@@ -44,7 +44,7 @@ Wenn alles geklappt hat, ist folgendes zu sehen:
 Für die Konfiguration der OPNsense® brauchst du einen Rechner mit Webbrowser im LAN-Bereich der OPNsense®. Das kann ein Laptop mit Linux oder Windows sein. Achte darauf, dass sie mit dem LAN-Adapter der OPNsense® verbunden ist.
 
 Konfiguration der OPNsense®
---------------------------
+---------------------------
 
 Gehe mit einem Webbrowser auf ``https://192.168.1.1``.
 

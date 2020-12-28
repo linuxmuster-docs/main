@@ -24,7 +24,7 @@ Hardware
 ========
 
 OPNsense®
---------
+---------
 
 OPNsense® ist für x86-32 und x86-64 Bit Architekturen verfügbar und
 kann auf SD-Karte, SSD oder HDDs installiert werden. Es wird empfohlen
