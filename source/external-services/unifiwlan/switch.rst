@@ -8,11 +8,11 @@ Grundsätzliches
 
 Bei vielen Switches ist es unmöglich, sich komplett auszusperren. Der SG300 hat die Konfigurationsspeicher `Ausgeführte Konfiguration` und `Startkonfiguration`. 
 
-In die `Ausgeführte Konfiguration` werden alle Einstellungen gespeichert, die Du vornimmst. Bei einem Neustart wird als erstes die `Startkonfiguration` in die `Ausgeführte Konfiguration` kopiert und dann die `Ausgeführte Konfiguration` ausgeführt.
+In die `Ausgeführte Konfiguration` werden alle Einstellungen gespeichert, die du vornimmst. Bei einem Neustart wird als erstes die `Startkonfiguration` in die `Ausgeführte Konfiguration` kopiert und dann die `Ausgeführte Konfiguration` ausgeführt.
 
-Wenn Du sich also mit einer Einstellung ausgeschlossen hast, starte den Switch einfach neu und Du hast den zuletzt in die `Startkonfiguration` gespeicherten Stand.
+Wenn du sich also mit einer Einstellung ausgeschlossen hast, starte den Switch einfach neu und du hast den zuletzt in die `Startkonfiguration` gespeicherten Stand.
 
-Sobald Du eine Einstellung vorgenommen hast, die Dich nicht aussperrt, siehst Du oben neben dem Benutzernamen einen Link zum Speichern der `Aktuellen Konfiguration` in die `Startkonfiguration`.
+Sobald du eine Einstellung vorgenommen hast, die Dich nicht aussperrt, siehst du oben neben dem Benutzernamen einen Link zum Speichern der `Aktuellen Konfiguration` in die `Startkonfiguration`.
 
 .. figure:: media/ciscospeichern.png
    :alt: Konfiguartion speichern
@@ -27,7 +27,7 @@ Das VLAN für den Internetzugang hat die VLAN-ID 2, das Schüler-WLAN die VLAN-I
 
 Wähle VLAN-Verwaltung -> VLAN-Einstellungen und klicken auf `Hinzufügen`.
 
-Es öffnet sich ein Dialogfenster, mit dem Du die VLANs hinzufügen kannst.
+Es öffnet sich ein Dialogfenster, mit dem du die VLANs hinzufügen kannst.
 
 .. figure:: media/vlanadd.png
    :alt: VLAN-Hinzufügen
@@ -109,7 +109,7 @@ Jetzt ist VLAN 10 an der Reihe.
 .. figure:: media/portvlan03.png
    :alt: VLAN10
 
-Für die Ports 1 bis 5 wählst Du getaggt.
+Für die Ports 1 bis 5 wählst du getaggt.
 
 Und schließlich noch VLAN 16.
 

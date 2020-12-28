@@ -8,7 +8,7 @@ Schritt für Schritt
 
 Öffne von einem Rechner im Schulnetz mit einem Browser `<https://unifi:8443>`_ (falls der Unificontroller in der Datei `workstations` unifi heißt).
 
-Da der Unifi-Kontroller mit einem selbstzertifizierten Zertifikat arbeitet, wirst Du eine Zertifikatswarnung erhalten. 
+Da der Unifi-Kontroller mit einem selbstzertifizierten Zertifikat arbeitet, wirst du eine Zertifikatswarnung erhalten. 
 
 .. figure:: media/u07.png
    :alt: Sprachenauswahl
@@ -18,12 +18,12 @@ Wähle Germany als Land und klicke auf `weiter`.
 .. figure:: media/u08.png
    :alt: Geräteauswahl
 
-Wähle die Geräte aus, die Du mit dem Unifi-Kontroller managen wöchtest (also alle) und klicke auf `WEITER`.
+Wähle die Geräte aus, die du mit dem Unifi-Kontroller managen wöchtest (also alle) und klicke auf `WEITER`.
 
 .. figure:: media/u09.png
    :alt: SSID einrichten
 
-An dieser Stelle überspringst Du die Einrichtung eines WLANs. Das wird später ausführlich beschrieben.
+An dieser Stelle überspringst du die Einrichtung eines WLANs. Das wird später ausführlich beschrieben.
 
 .. figure:: media/u10.png
    :alt: admin

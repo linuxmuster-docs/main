@@ -4,7 +4,7 @@
 Externe Authentifizierung - Nextcloud
 =====================================
 
-.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_ , `@rettich <https://ask.linuxmuster.net/u/rettich>`_
                    
 Eine Nextcloud-Instanz kann extern oder intern betrieben werden. Hierbei kann diese so konfiguriert werden, dass
 das Active Directory (AD) der linuxmuster.net 7 als zentrale Authentifizierungsinstanz genutzt wird. 
@@ -39,25 +39,42 @@ Für den ``binduser`` ist die Domäne anzupassen, so dass mit o.g. Beispiel die 
 In der Zeile darunter ist das Kennwort des ``binduser`` einzutragen. Dieses Passwort findest du auf dem LMN-Server unter
 ``/etc/linuxmuster/.secret/global-binduser`` und trägst es hier ein.
 
-Als ``Base-DN`` trägst du ``OU=SCHOOLS`` gefolgt von deiner Domain (z.B. DC=schule,DC=meineschule,DC=de) ein.
+Als ``Base-DN`` trägst du ``OU=default-school,OU=SCHOOLS,`` gefolgt von deiner Domain (z.B. DC=schule,DC=meineschule,DC=de) ein.
 
-Einstellungen: Benutzer (Lehrer)
-================================
+Einstellungen: Benutzer
+=======================
 
-Um den Zugriff auf die Nextcloud auf Lehrer zu begrenzen, ist unter ``Benutzer`` eine LDAP-Abfrage einzutragen.
+Wenn du mit einem Tool wie Apache Directory Studio die Attribute eines Lehrer-Accounts anschaust, siehst du, dass du sie an zwei Attributen erkennst:
+``objectClass=person`` und ``sophomorixRole=teacher``.
+
+Bei Schüler-Accounts ist ``sophomorixRole=student``.
+
+Daraus ergibt sich die Filterregel:
+
+.. image:: media/FR01.png
+   :alt: Benutzer - Einstellungen
+   :align: center
+
+Trage also unter Benutzer in die LDAP-Abfrage folgendes ein:
+
+.. code::
+
+   (&(objectClass=person)(|(sophomorixRole=teacher)(sophomorixRole=student)))
+
+Um den Zugriff auf die Nextcloud auf Lehrer zu begrenzen, ist unter ``Benutzer`` diese LDAP-Abfrage einzutragen.
+
+.. code::
+
+   (&(objectClass=person)(sophomorixRole=teacher))
 
 .. image:: media/image_2.png
    :alt: Benutzer (Lehrer) - Einstellungen
    :align: center
 
-Nachstende Abfrage muss auf die eigene Domain angepasst werden:
+Anmelde-Attribute
+=================
 
-.. code::
-
-   (&(|(objectclass=person))(|(|(memberof=CN=teachers,OU=Teachers,OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan)(primaryGroupID=1111))))
-
-Anmelde-Attribute (Lehrer)
-==========================
+Bei der Anmeldung suchen wir den Eintrag, bei dem zusätzlich ``samaccountname=%uid`` gilt. In dem Fall ist ``%uid`` der Benutzername, den wir bei der Anmeldung eingeben.
 
 Nehme folgende Einstellungen vor:
 
@@ -65,14 +82,18 @@ Nehme folgende Einstellungen vor:
    :alt: Anmelde-Attribute
    :align: center
 
-Die nachstehende Abfrage bezieht sich auf die Gruppe der Lehrer:
-
 .. code::
 
-   (&(&(|(objectclass=person))(|(|(memberof=CN=teachers,OU=Teachers,OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan)(primaryGroupID=1111))))(samaccountname=%uid))
+   (&(objectClass=person)(sAMAccountName=%uid))
 
-Einstellungen: Gruppe (Lehrer)
+Einstellungen: Gruppe
 ==============================
+
+Wir wollen nicht die Gruppen ``attic`` und ``wificlass``. Aber wir wollen Schüler, Lehrer, Projekte und alle Untergruppen der Gruppe ``students``.
+
+.. image:: media/FR02.png
+   :alt: Filterregel Gruppe
+   :align: center
 
 Nehme folgende Einstellungen vor:
 
@@ -80,11 +101,15 @@ Nehme folgende Einstellungen vor:
    :alt: Einstellungen Gruppe Lehrer
    :align: center
 
-Die nachstehende Abfrage bezieht sich auf die Gruppe der Lehrer:
+.. code::
+
+  (&(objectclass=group)(!(|(cn=attic)(cn=wificlass)))(|(cn=teachers)(cn=role-student)(memberof=CN=students,OU=Students,OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan)(sophomorixType=project)))
+
+Die nachstehende Abfrage liefert nur die Gruppe der Lehrer:
 
 .. code::
 
-   (&(|(objectclass=group))(|(cn=teachers)))
+   (&(objectclass=group)(cn=teachers))
 
 Einstellungen Experte
 =====================
@@ -92,7 +117,7 @@ Einstellungen Experte
 Klicke in dem Einstellungsmenü oben rechts auf den Eintrag ``Experte`` und trage nachstehende Werte ein:
 
 .. image:: media/image_5.png
-   :alt: Einstellungen Gruppe Lehrer
+   :alt: Einstellungen Experte
    :align: center
 
 Trage dort folgenden Wert ein:
@@ -101,95 +126,58 @@ Trage dort folgenden Wert ein:
 
    samaccountname
 
-Funktionstests
-==============
-
-In dem Konfigurationsmenü von Nextcloud können pro Tab / Reiterkarte die Einstellungem schrittweise getestet werden. 
-Führe diese Tests jeweils bei dein einzelnen Konfigurationsschritten aus, um so sukzessive die Fehler zu beheben.
-
-Nextcloud mit weiteren Gruppen
-===============================
-
-Soll Nextcloud nicht nur von Lehrern genutzt werden können, sondern auch von anderen Gruppen, so sind zwei Dinge erforderlich:
-
-1. Aktivierung eingebundener Gruppen
-2. LDAP-Gruppenfilter
-
-Aktivierung eingebundener Gruppen
----------------------------------
-
-Um eingebundene Gruppen zu aktivieren, gehe auf ``LDAP /AD Integration --> Fortgeschritten --> Ordnereinstellungen --> Eingebundene Gruppen`` und aktiviere diese Funktion.
-
-.. hint::
-  
-   Dies ist dann erforderlich, wenn als Gruppenfilter ``cn=students`` angegeben wurde. ``cn=students`` beinhaltet nur Gruppen und 
-   keine Benutzer!
-   
-
-LDAP-Gruppenfilter
-------------------
-
-Einstellungen: Gruppen
-""""""""""""""""""""""
-
-Unter ``LDAP / AD Integration --> Gruppen`` ist ein Gruppenfilter als LDAP-Abfrage, so zu definieren, dass die gewünschten Gruppen im AD gefunden werden.
-
-Nachstehendes Beispiel stellt eine Abfrage dar, die es ermöglicht, Klassen, Projekt, Students und Teachers als Gruppen auszuwählen. Die Gruppen Wificlass und Attic werden hierbei ausgeschlossen:
-
-.. code::
-
-   (&(|(objectclass=group))(!(|(cn=attic)(cn=wificlass)))(|(cn=teachers)(cn=role-student)(|(memberof=CN=students,OU=Students,OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan)(|(sophomorixType=project)))))
-
-.. hint::
-
-   ``cn=role-student`` wählt die Gruppe mit Schülern aus, die sich im AD im GLOBAL Teil befindet. Sollte ein Mehr-Schulen-Betrieb erfolgen, ist dies
-   anzupassen.
-
-
-Einstellungen: Benutzer
-"""""""""""""""""""""""
-
-Um Lehrer und Schüler zu erhalten, ist bei der LDAP-AD Integration unter Benutzer ein angepasster LDAP-Filter einzutragen. Nachstehender Filter liefert alle Lehrer und Schüler:
-
-.. code::
-
-  (&(|(objectclass=group))(|(|(memberof=CN=teachers,OU=Teachers,OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan)(primaryGroupID=1111))(|(memberof=CN=role-student,OU=Groups,OU=GLOBAL,DC=linuxmuster,DC=lan))))
-
-Einstellungen: Fortgeschritten
-""""""""""""""""""""""""""""""
-
-Bei der LDAP / AD Integration ist im Menüpuntk ``Forgeschritten`` (oben rechts) anzugeben, wie die Verbindung zwischen Gruppen und Benutzern zu behandeln ist. Zur Orientierung findest du nachstehend geeignete Einstellungen.
-
+Einstellungen Fortgeschritten
+=============================
 
 .. image:: media/image_6.png
-   :alt: Fortgeschritten - Verbindungseinstellungen
+   :alt: Verbindungseinstellungen
    :align: center
+
+Setze eine Häkchen bei ``Konfiguartion aktiv`` und, falls dein Server mit einem selbstsigniertem Zertifikat arbeitet, auch bei ``Schalten Sie die SSL-Zertifikatsprüfung aus``.
 
 .. image:: media/image_7.png
-   :alt: Fortgeschritten - Ordnereinstellungen
+   :alt: Ordnereinstellungen
    :align: center
 
-.. hint::
-
-   Sollte die Gruppe der Schüler ``cn=role-student`` in den Filtereinstellungen genutzt werden, dann ist in Nextcloud 
-   bei den LDAP-Einstellungen -> Fortgeschritten als Basis-Gruppenbaum ``OU=GLOBAL,DC=linuxmuster,DC=lan``
-   einzutragen.
+In ``Benutzersucheigenschaften`` gibst du ``sn`` und ``givenName`` ein. So können Benutzer über ihren Vor- und Nachnamen gefunden werden.
 
 .. image:: media/image_8.png
-   :alt: Fortgeschritten - spezielle Eigenschaften
+   :alt: Spezielle Eigenschaften
    :align: center
 
- 
+Im Feld ``Standard-Kontingent`` wird festgelegt, wie viel Speicher dem Benutzer auf der Nextcloud zur Verfügung steht. Da die Benutzer ihre Daten eigentlich auf dem Schulserver und nicht auf der Nextcloud speichern sollen, hälst du diesen Wert eher klein. 
 
+Das ``"$home"Platzhalter-Feld`` brauchst du, wenn du die Home-Verzeichnisse auch in der Nextcloud zur Verfügung stellen möchtest.
 
+So, das war's. Sicherheitshalber gehst du nochmal auf den Reiter ``Experte`` und klicks auf  ``Lösche LDAP-Benutzernamenzuordung`` und ``Lösche LDAP-Gruppennamenzuordung``.
 
+Serververzeichnisse einbinden
+=============================
 
+Als erstes musst du die App ``External storage support`` aktiviert werden.
 
+.. image:: media/SMB01.png
+   :alt: +Apps
+   :align: center
+   
+Gehe dazu auf A -> + Apps. Auf der Seite ganz unten findest du die deaktivierten App. Aktiviere ``External storage support``.
+   
+.. image:: media/SMB02.png
+   :alt: Externer Speicher
+   :align: center
 
+In den Einstellungen von ``Externer Speicher`` kannst du jetzt, wie oben im Bild zu sehen ist, die Tauschverzeichnisse und das Home-Verzeichnis der Benutzer einbinden. 
 
+.. image:: media/SMB03.png
+   :alt: Anmeldedaten
+   :align: center
 
+Achte darauf, dass du ``Anmeldedaten in Datenbank speichern`` wählst.
 
+.. image:: media/SMB04.png
+   :alt: Vorschau aktivieren
+   :align: center
+   
+Ob du die Vorschau aktivierst oder nicht hängt vom Standort der Nextcloud ab. Ist die Nextcloud nicht in der Schule gehostet und ist deine Internet-Verbindung eher langsam, so ist es besser, wenn du den Haken bei ``Vorschau aktivieren`` nicht setzt.
 
-
-
-
+Am Anfang scheint der Server noch langsam zu sein. Das liegt daran, dass die External Storage App einen Datei-Index aufbaut. Bei mir an der Schule hat das ca. 12 Stunden gedauert. Danach läuft die Nextcloud flott. 

@@ -43,7 +43,7 @@ Wähle `vollständige Festplatte verwenden` und bestätige die Partitionierung.
 .. figure:: media/u04.png
    :alt: Vollständige Festplatte
 
-Es ist zu empfehlen, `keine automatischen Aktualisierungen` zu wählen, da Du dann nicht von unerwarteten Aktualisierungen überrascht wirst.
+Es ist zu empfehlen, `keine automatischen Aktualisierungen` zu wählen, da du dann nicht von unerwarteten Aktualisierungen überrascht wirst.
 
 .. figure:: media/u05.png
    :alt: Keine Updates
@@ -63,7 +63,7 @@ Der Rechner muss upgedatet, die Paketquellen müssen ergänzt und das Unifi-Pake
 Schritt für Schritt
 -------------------
 
-Die englische Anleitung von Unifi findest Du `hier <https://help.ubnt.com/hc/en-us/articles/220066768-UniFi-How-to-Install-Update-via-APT-on-Debian-or-Ubuntu>`_.
+Die englische Anleitung von Unifi findest du `hier <https://help.ubnt.com/hc/en-us/articles/220066768-UniFi-How-to-Install-Update-via-APT-on-Debian-or-Ubuntu>`_.
 
 Melde dich an.
 

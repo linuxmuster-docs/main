@@ -1,6 +1,8 @@
 Unifi-WLAN-Lösung für linuxmuster.net 
 =====================================
 
+.. sectionauthor:: `@rettich <https://ask.linuxmuster.net/u/rettich>`_
+
 Eine WLAN-Lösung für Schulen sollte mindestens zwei WLAN-Netze aufspannen. 
 
 - Das Lehrernetz für schuleigene Geräte, wie Beamer, Laptops oder Chromecasts, und für private Geräte der Lehrer, die auf Beamer und Chromecasts zugreifen wollen.

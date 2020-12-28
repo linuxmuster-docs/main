@@ -21,7 +21,7 @@ Fülle die Felder des Dialogfensters aus und speichere deine Eingabe.
 .. figure:: media/voucher07.png
    :alt: Voucherbeispiel
 
-In dieser Ansicht siehst Du alle gültigen Gutscheine. 
+In dieser Ansicht siehst du alle gültigen Gutscheine. 
 
 Du hast die Möglichkeit, einzelne Gutscheine, alle nicht benutzten Gutscheine oder alle Gutscheine, die an einem bestimmten Zeitpunkt erstellt wurden, zu drucken.
 
