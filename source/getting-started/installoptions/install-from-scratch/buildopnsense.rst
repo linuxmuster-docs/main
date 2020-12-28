@@ -1,12 +1,12 @@
 Anlegen und Installieren der Firewall
 =====================================
 
-Installation der OPNSense
+Installation der OPNsense®
 -------------------------
 
 Starte die VM mit dem ``Start``-Knopf und öffne mit dem ``>_ Konsole``-Knopf die Konsole der VM.
 
-OPNSense startet von DVD (dem iso-Image). Melde dich als ``installer`` mit dem Passwort ``opnsense`` an.
+OPNsense® startet von DVD (dem iso-Image). Melde dich als ``installer`` mit dem Passwort ``opnsense`` an.
 
 Bestätige den Willkommensbildschirm mit Enter.
 
@@ -22,7 +22,7 @@ Wähle die deutsche Tastatur ``< de.kbd >`` und akzeptiere jetzt mit ``< Accept 
 
 Wähle ``< Guided installation >``.
 
-Bestätige die Festplatte und wähle ``< MBR mode>``. Jetzt wird OPNSense auf der Festplatte installiert.
+Bestätige die Festplatte und wähle ``< MBR mode>``. Jetzt wird OPNsense® auf der Festplatte installiert.
 
 .. figure:: media/OPNS15.png
 
@@ -30,7 +30,7 @@ Bestätige die Festplatte und wähle ``< MBR mode>``. Jetzt wird OPNSense auf de
 
    An dieser Stelle muss Muster! als root-Passwort eingegeben werden, da später der lmn-Server beim Einrichten der Firewall davon ausgeht, dass das root-Passwort Muster! ist!!!
 
-Reboote OPNSense.
+Reboote OPNsense®.
 
 Der Boot-Vorgang kann schon eine Weile dauern. Vor allem, wenn der Router kein DHCP anbietet.  
 
@@ -41,14 +41,14 @@ Wenn alles geklappt hat, ist folgendes zu sehen:
 * Die erste Netzwerkkarte (LAN) ist mit dem pädagogischen Netz verbunden. Allerdings noch mit den falschen Netzwerkeinstellungen.
 * Die zweite Netzwerkkarte (WAN) ist mit dem Router verbunden. In einer Schulumgebung wird der Router keinen DHCP-Service anbieten. 
 
-Für die Konfiguration der OPNSense brauchst du einen Rechner mit Webbrowser im LAN-Bereich der OPNSense. Das kann ein Laptop mit Linux oder Windows sein. Achte darauf, dass sie mit dem LAN-Adapter der OPNSense verbunden ist.
+Für die Konfiguration der OPNsense® brauchst du einen Rechner mit Webbrowser im LAN-Bereich der OPNsense®. Das kann ein Laptop mit Linux oder Windows sein. Achte darauf, dass sie mit dem LAN-Adapter der OPNsense® verbunden ist.
 
-Konfiguration der OPNSense
+Konfiguration der OPNsense®
 --------------------------
 
 Gehe mit einem Webbrowser auf ``https://192.168.1.1``.
 
-Du erhältst zunächst eine Zertifikatswarnung, was klar ist, da OPNSense ja ganz frisch installiert ist. 
+Du erhältst zunächst eine Zertifikatswarnung, was klar ist, da OPNsense® ja ganz frisch installiert ist. 
 
 .. figure:: media/OPNS17.png
 
@@ -129,7 +129,7 @@ Unter ``Schnittstellen -> [OPT1]`` kannst du diese Einstellungen vornehmen. Der 
 ssh erlauben
 ------------
 
-Damit der Server Zugriff auf die OPNSense hat, musst du einen ssh-Zugriff erlauben. Gehe dafür auf ``System -> Einstellungen -> Verwaltung``.
+Damit der Server Zugriff auf die OPNsense® hat, musst du einen ssh-Zugriff erlauben. Gehe dafür auf ``System -> Einstellungen -> Verwaltung``.
 
 .. figure:: media/OPNS28.png
 

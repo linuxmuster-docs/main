@@ -69,23 +69,23 @@ Ablauf
 
 1. VMs importieren
 2. VMs starten
-3. IPs der OPNSense auf die bisher verwendeten IPs/Netze anpassen
+3. IPs der OPNsense® auf die bisher verwendeten IPs/Netze anpassen
 4. VMs (server, opsi,docker) mit netplan die IPs so ändern, dass diese die korrekte IP im internen (grünen) Netz haben wie bisher
 5. VMs vor dem Setup auf die neue Netzstruktur vorbereiten (linuxmuster-prepare)
 6. Erreichbarkeit der VMs im internen Netz testen.
 7. Update der VMs
 8. Erst-Setup durchführen
 
-IPs OPNSense anpassen
+IPs OPNsense® anpassen
 ^^^^^^^^^^^^^^^^^^^^^
 
-Die IP der externen Schnittstelle (WAN) der OPNSense ist ggf. anzupassen. Diese ist in der Erstauslieferung so konfiguriert, das diese eine IP via DHCP erhalten würde. Sollte die OPNSense Firewall hinter einem Router arbeiten, so kann eine Anpassung für eine statische IP erforderlich sein.
+Die IP der externen Schnittstelle (WAN) der OPNsense® ist ggf. anzupassen. Diese ist in der Erstauslieferung so konfiguriert, das diese eine IP via DHCP erhalten würde. Sollte die OPNsense® Firewall hinter einem Router arbeiten, so kann eine Anpassung für eine statische IP erforderlich sein.
 
-Hierzu rufst Du auf der Konsole in der OPNSense, nachdem du dich als `root` angemeldet hast, den Punkt `2) Set interface IP address` auf. Solle eine DHCP-Konfiguration in deinem Netz hier nicht möglich sein,  wählst du zunächst die WAN-Schnittstelle aus und trägst die IP Adresse aus deinem lokalen Netz mit korrekter Subnetzmaske, Gateway und DNS ein.
+Hierzu rufst Du auf der Konsole in der OPNsense®, nachdem du dich als `root` angemeldet hast, den Punkt `2) Set interface IP address` auf. Solle eine DHCP-Konfiguration in deinem Netz hier nicht möglich sein,  wählst du zunächst die WAN-Schnittstelle aus und trägst die IP Adresse aus deinem lokalen Netz mit korrekter Subnetzmaske, Gateway und DNS ein.
 
 Danach wählst du die `LAN-Schnittstelle` aus und konfigurierst die bisherige IP, die im IPFire bereits genutzt wurde.
 Hast du z.B. ein Subnetting für das Server-Netz in der v6.2 genutzt, das im "grünen" Netz den Bereich 10.16.1.0/24 vorsieht, 
-so vergibst du hier auf der LAN-Schnittstelle der OPNSense die IP 10.16.1.254/24 (Subnetmask 255.255.255.0 = 24 Bit).
+so vergibst du hier auf der LAN-Schnittstelle der OPNsense® die IP 10.16.1.254/24 (Subnetmask 255.255.255.0 = 24 Bit).
 
 Bei vorhandener Subnettierung dürfte für o.g. bsp. der L3-Switch im Server - VLAN die IP 10.16.1.253 haben. Zudem ist darauf zu achten, dass auf der Virtualisierungsumgebung die korrekten Bridges für das jeweilige VLAN den Schnittstellen der VMs korrekt zugeordnet wurden.
 
@@ -133,7 +133,7 @@ Jetzt meldest du dich auf der Eingabekonsole an den VMs server, opsi und docker 
 Du bereitest diese VMs für der Erstsetup vor, indem du die korrekten Angaben zur gewünschten IP der VM und der Firewall mit linuxmuster-prepare angibst.
 
 Gehen wir davon aus, dass Du für die Server VM im vorangegangenen Schritt die IP `10.16.1.1/24` und für die 
-OPNSense als Firewall die IP `10.16.1.254/24` zugeordnet hast. Zudem nehmen wir an, dass Deine zukunftige Schuldomäne den Namen `schuldomaene` erhalten wird und deine Domain `meineschule`.`de` lautet.
+OPNsense® als Firewall die IP `10.16.1.254/24` zugeordnet hast. Zudem nehmen wir an, dass Deine zukunftige Schuldomäne den Namen `schuldomaene` erhalten wird und deine Domain `meineschule`.`de` lautet.
 
 Mit diesen Vorgaben bereitest du die Server-VM nun mit folgendem Befehl auf das Setup vor:
 

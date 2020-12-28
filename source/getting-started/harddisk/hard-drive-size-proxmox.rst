@@ -13,7 +13,7 @@
 
    Achtung: Dies ist noch eine unvollständige Beschreibung. Findest du Fehler oder kannst zur Verbesserung beitragen, dann wende dich bitte an einen der Autoren des Abschnittes.
 
-Am Beispiel der OPNSense VM werden die Anpassungen nachstehend erläutert.
+Am Beispiel der OPNsense®-VM werden die Anpassungen nachstehend erläutert.
 
 Wähle, als Erstes die VM aus die geklont werden soll.
 
@@ -73,7 +73,7 @@ Ausgangssituation:
    :align: center
    :alt: Schritt 2.1
 
-Die OPNSense VM wurde mit dem Namen `lmn7-opnsense` und der `VM-ID: 200` angelegt. In der Übersicht erkennst du, dass derzeit
+Die OPNsense®-VM wurde mit dem Namen `lmn7-opnsense` und der `VM-ID: 200` angelegt. In der Übersicht erkennst du, dass derzeit
 eine Festplatte mit einer Größe von 10 GiB eingerichtet wurde. 
 Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sein. Die Festplattengröße kannst du nun wie folgt anpassen:
 

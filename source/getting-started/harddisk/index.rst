@@ -38,7 +38,7 @@ deutlich mehr HDD-Speicher für die Server VM zuzuordnen.
 +---------------+-----------------+-----------------------+-------------+
 | opsi lmn7     | 1 HDD           |       100GB           |  500GB+     |
 +---------------+-----------------+-----------------------+-------------+
-| OPNSense lmn7 | 1 HDD           |        10GB           |  200GB+     |
+| opnsense lmn7 | 1 HDD           |        10GB           |  200GB+     |
 +---------------+-----------------+-----------------------+-------------+
 
 
@@ -54,7 +54,7 @@ Folgender Ablauf zur Anpassung der Festplattengrößen ist einzuhalten:
 
 .. hint::
 
-   Die VM der OPNSense benötigt bei der Anpassung ein etwas anderes Vorgehen, da hier ein 
+   Die VM der OPNsense® benötigt bei der Anpassung ein etwas anderes Vorgehen, da hier ein 
    BSD Linux zum Einsatz kommt. Die entsprechenden Hinweise finden sich im entsprechenden Abschnitt 
 
 Anpassung Hypervisor

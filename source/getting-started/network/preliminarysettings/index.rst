@@ -20,7 +20,7 @@ auf dem Server auszuführen.
 Vorgehen
 ========
 
-Die OPNSense ist im gewünschten Zielnetz einzurichten (z.B. 10.17.0.256/16). 
+Die OPNsense® ist im gewünschten Zielnetz einzurichten (z.B. 10.17.0.256/16). 
 Diese muss in allen Ubuntu VMs als Gateway angegeben worden sein. Die Ubuntu VMs können nun mithilfe 
 des linuxmuster-prepare Skripts (https://github.com/linuxmuster/linuxmuster-prepare) für den gewünschten 
 neuen Netzbereich (z.B. 10.17.0.0/16) vorbereitet werden.
@@ -205,17 +205,17 @@ Beispiele für Skriptaufrufe siehe oben.
 Anwendung auf die Appliances
 ============================
 
-Zuerst ist die OPNSense Firewall anzupassen.
+Zuerst ist die OPNsense® Firewall anzupassen.
 
-OPNSense Firewall
+OPNsense® Firewall
 -----------------
 
 Nach dem ersten Start als Benutzer ``root`` mit dem Passwort ``Muster!`` anmelden. Danach erscheint 
-nachstehendes Konsolenmenü der OPNSense:
+nachstehendes Konsolenmenü der OPNsense®:
 
 .. figure:: media/01_opnsense-menue.png
    :align: center
-   :alt: OPNSense Menue
+   :alt: OPNsense® Menue
 
 Zunächst müssen die Netzwerk-Interfaces unter Mneüpunkt 1 neu zugordnet werden. Je nach Hypervisor
 werden unterschiedliche Namen für die Netzwerkinterfaces verwendet - z.B. em0 / vtnet0 
@@ -229,12 +229,12 @@ Beispiel wird das LAN-Interface auf die IP-Adresse 10.16.1.254/12 (``do-it-like-
 
 .. figure:: media/02_opnsense-lan-interface.png
    :align: center
-   :alt: OPNSense LAN Interface
+   :alt: OPNsense® LAN Interface
 
-Der DHCP-Dient auf der OPNSense sollte in jedem Fall ausgeschaltet bleiben. Sollte der Domänenname 
-geändert werden, kann dies später via OPNSense-GUI erfolgen. 
+Der DHCP-Dient auf der OPNsense® sollte in jedem Fall ausgeschaltet bleiben. Sollte der Domänenname 
+geändert werden, kann dies später via OPNsense®-GUI erfolgen. 
 
-Anschließend muss die OPNSense neu gestartet werden.
+Anschließend muss die OPNsense® neu gestartet werden.
 
 Im zweiten Schritt muss der Netzbereich der Server-Appliance angepasst werden.
 
@@ -243,7 +243,7 @@ Server-Applicance
 
 Nach dem ersten Start der Server-Appliance als ``root`` einloggen (Passwort: Muster!).
 Danach ist die Netzwerkverbindung für den gewünschten Bereich anzupassen. Das Netzwerkinterface des Server muss sich 
-im gleichen Netzsegment wie die LAN-Schnittstelle der OPNSense befinden. 
+im gleichen Netzsegment wie die LAN-Schnittstelle der OPNsense® befinden. 
 
 .. code::
 

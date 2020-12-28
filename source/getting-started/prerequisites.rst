@@ -23,10 +23,10 @@ Software ab, die in diesem Kapitel beleuchtet werden.
 Hardware
 ========
 
-OPNsense
+OPNsense®
 --------
 
-OPNSense ist für x86-32 und x86-64 Bit Architekturen verfügbar und
+OPNsense® ist für x86-32 und x86-64 Bit Architekturen verfügbar und
 kann auf SD-Karte, SSD oder HDDs installiert werden. Es wird empfohlen
 folgende Hardware-Anforderungen zu erfüllen, um die Mehrzahl der
 Einsatzszenarien abzudecken:
@@ -48,7 +48,7 @@ Weitere Hinweise zu möglichen Hardwareanforderungen bei
 unterschiedlichen Einsatzszenarien finden sich `hier
 <https://wiki.opnsense.org/manual/hardware.html#hardware-requirements>`_.
 
-Als Basis nutzt OPNsense das Betriebssystem FreeBSD.  Hinweise zu den
+Als Basis nutzt OPNsense® das Betriebssystem FreeBSD.  Hinweise zu den
 Anforderungen von FreeBSD bzw. zur Kompatibilität mit eingesetzten
 Hardware-Komponenten finden sich unter der `HCL - Hardware
 Compatibility List
@@ -175,7 +175,7 @@ vorgesehen.
 | **Server** |**IP-Bereich** |**IP-Bereich**|
 |            |10.0.0.0/16    |10.16.0.0/12  |
 +============+===============+==============+
-| OPNsense   | 10.0.0.254    | 10.16.1.254  |
+| OPNsense®  | 10.0.0.254    | 10.16.1.254  |
 +------------+---------------+--------------+
 | Server     | 10.0.0.1      | 10.16.1.1    |
 +------------+---------------+--------------+
@@ -321,7 +321,7 @@ VirtualBox wird häufig im Testbetrieb und weniger im Produktivbetrieb verwendet
   =========================== ===================
 
   Alternativ installierst du von Grund auf die Serverbetriebssysteme
-  *Ubuntu Server* und *OPNSense* direkt auf der Hardware oder innerhalb
+  *Ubuntu Server* und *OPNsense®* direkt auf der Hardware oder innerhalb
   deiner Virtualisierungslösung.
 
   =========================== ===================

@@ -60,7 +60,7 @@ Netzwerkverwaltung
     auf Single-Sign-On Basis statt des überwiegend obsoleten transparenten Proxys
   * Inhaltliche Filterung fällt weg, da technologisch überholt (Belwue-DNS/OpenDNS 
     weiterhin möglich, solange dies technologisch noch Sinn ergibt.)
-  * OpnSense auf Basis von FreeBSD vorkonfiguriert ausgeliefert aber
+  * OPNsense® auf Basis von FreeBSD vorkonfiguriert ausgeliefert aber
     flexibel durch andere Firewall-Produkte zu ersetzen, die die Regeln im 
     Active Directory des Servers auslesen kann.
  

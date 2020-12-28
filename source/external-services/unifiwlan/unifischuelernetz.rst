@@ -1,7 +1,7 @@
 Einrichtung des Schüler-WLANs
 =============================
 
-Im Schüler-WLAN sind die Geräte der Schüler. Es liegt im blauen Netz der OpnSense. Der Netzwerk-Schlüssel des Schüler-WLANs basiert auf ihrem Benutzernamen und ihrem Kennwort.
+Im Schüler-WLAN sind die Geräte der Schüler. Es liegt im blauen Netz der OPNsense®. Der Netzwerk-Schlüssel des Schüler-WLANs basiert auf ihrem Benutzernamen und ihrem Kennwort.
 
 Schritt für Schritt
 -------------------
@@ -32,7 +32,7 @@ Sicherheit ist `WPA Enterprise`.
 
 Wähle das vorher definierte Radius-Profil.
 
-Da das blaue Netz der OpnSense als getaggtes VLAN mit der VLAN-ID 10 zu den APs kommt, setze ein Häkchen bei VLAN und gib als VLAN-ID 10 ein.
+Da das blaue Netz der OPNsense® als getaggtes VLAN mit der VLAN-ID 10 zu den APs kommt, setze ein Häkchen bei VLAN und gib als VLAN-ID 10 ein.
 
 Speichere die Enstellungen.
 

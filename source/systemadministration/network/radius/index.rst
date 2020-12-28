@@ -34,8 +34,8 @@ RADIUS-Server via LDAP oder direkt abgefragt werden.
 .. hint::
 
    Es wird grundsätzlich empfohlen, zusätzliche Dienste **nicht** auf dem lmn-Server zu installieren.
-   Diese sollten auf dem Docker-Host (Vm) installiert werden. Die OPNSense verfügt über ein Freeradius - Plugin. Allerdings
-   unterstützt OPNSense bislang N I C H T die Radius <-- --> AD Kommunikation mithilkfe von auth_ntlm. 
+   Diese sollten auf dem Docker-Host (Vm) installiert werden. Die OPNsense® verfügt über ein Freeradius - Plugin. Allerdings
+   unterstützt OPNsense® bislang N I C H T die Radius <-- --> AD Kommunikation mithilkfe von auth_ntlm. 
 
 Der Zugriff soll über die Schulkonsole gesteuert werden. Dafür werden Benutzer einer speziellen Gruppe `wifi` hinzugefügt 
 oder daraus entfernt.
@@ -161,9 +161,9 @@ Nun ist der Freeradius-Dienst neuzustarten:
 Firewallregeln anpassen
 -----------------------
 
-Auf der Firewall OPNSense muss je nach eigenen Voraussetzungen dafür gesorgt werden, dass die APs aus dem WLAN-Netz den Server auf dem Port 1812 via udp erreichen können. Es ist darauf zu achten, dass die IP des Servers den eigenen Netzvorgaben entspricht (also z.B. ``10.0.0.1`` oder ``10.16.1.1``)
+Auf der Firewall OPNsense® muss je nach eigenen Voraussetzungen dafür gesorgt werden, dass die APs aus dem WLAN-Netz den Server auf dem Port 1812 via udp erreichen können. Es ist darauf zu achten, dass die IP des Servers den eigenen Netzvorgaben entspricht (also z.B. ``10.0.0.1`` oder ``10.16.1.1``)
 
-Die Regel auf der OPNSense hierzu könnte, wie nachstehend abgebildet, in den Firewall-Regeln für `LAN` eingetragen werden.
+Die Regel auf der OPNsense® hierzu könnte, wie nachstehend abgebildet, in den Firewall-Regeln für `LAN` eingetragen werden.
 
 .. image:: media/10-fw-opnsense-rule-for-radius.png
    :alt: FW Rule for Radius Service
@@ -324,9 +324,9 @@ Auf dem lmn-Server ist in der Datei /etc/linuxmuster/allowed_ports der Radiuspor
 
 Danach ist der lmn-Server neu zu starten.
 
-Auf der Firewall OPNSense muss je nach eigenen Voraussetzungen dafür gesorgt werden, dass die AP’s aus dem Wlan-Netz den Server auf dem Port 1812 via udp erreichen können. Es ist darauf zu achten, dass die IP des Servers den eigenen Netzvorgaben entspricht (also z.B. 10.0.0.1/16 oder /24 oder 10.16.1.1/16 oder /24)
+Auf der Firewall OPNsense® muss je nach eigenen Voraussetzungen dafür gesorgt werden, dass die AP’s aus dem Wlan-Netz den Server auf dem Port 1812 via udp erreichen können. Es ist darauf zu achten, dass die IP des Servers den eigenen Netzvorgaben entspricht (also z.B. 10.0.0.1/16 oder /24 oder 10.16.1.1/16 oder /24)
 
-Die Regel auf der OPNSense hierzu könnten, wie nachstehend abgebildet, eingetragen werden.
+Die Regel auf der OPNsense® hierzu könnten, wie nachstehend abgebildet, eingetragen werden.
 
 .. image:: media/10-fw-opnsense-rule-for-radius.png 
 	   :alt: FW Rule für Radius Service
@@ -346,17 +346,17 @@ Jetzt sieht man alle Vorgänge während man versucht, sich mit einem Device zu v
 Weiter geht es mit :ref:`APs-im-Freeradius-eintragen`
 
 
-.. FreeRADIUS auf der OPNSense einrichten & testen
+.. FreeRADIUS auf der OPNsense® einrichten & testen
    ===============================================
 
-   Erweiterung OPNSense
+   Erweiterung OPNsense®
    --------------------
 
-	Auf aktuellen lmn-Systemen (linuxmuster-base >= 7.0.41) ist der RADIUS-Dienst für das LAN auf der Firewall OPNSense bereits automatisch eingerichtet. Sollte ein aktuelles System zum Einsatz kommen, so sind beim Einsatz der Netzsegmentierung lediglich weitere Subnetze zu berücksichtigen, indem sog. Clients in FreeRADIUS definiert werden.
+	Auf aktuellen lmn-Systemen (linuxmuster-base >= 7.0.41) ist der RADIUS-Dienst für das LAN auf der Firewall OPNsense® bereits automatisch eingerichtet. Sollte ein aktuelles System zum Einsatz kommen, so sind beim Einsatz der Netzsegmentierung lediglich weitere Subnetze zu berücksichtigen, indem sog. Clients in FreeRADIUS definiert werden.
 
 	Nachfolgende Schritte dokumentieren, die manuelle Einrichtung des RADIUS-Dienstes.
 
-	Zunächst ist die Erweiterung (plugin) **os-freeradius** auf der OPNSense zu installieren. Diese ist unter ``System -> Firmware-> Plugins`` zu installieren. Ist diese nicht in der Liste der Erweiterungen zu sehen, so ist mithilfe der Schaltfläche ``+`` die Erweiterung zu installieren.
+	Zunächst ist die Erweiterung (plugin) **os-freeradius** auf der OPNsense® zu installieren. Diese ist unter ``System -> Firmware-> Plugins`` zu installieren. Ist diese nicht in der Liste der Erweiterungen zu sehen, so ist mithilfe der Schaltfläche ``+`` die Erweiterung zu installieren.
 
 	.. image:: media/01-activate-freeradius.png
 	   :alt: Plugin: FreeRADIUS
@@ -531,6 +531,6 @@ eingetragen werden. Dies erfolgt wie in nachstehendem Schema dargestellt:
 Um den APs feste IPs zuzuweisen, sollten diese auf dem lmn-Server in der Datei 
 ``/etc/linuxmuster/sophomorix/default-school/devices.csv`` eingetragen sein. 
 
-Je nachdem ob in jedem (Sub)-netz die APs angeschlossen werden, ist die zuvor dargestellte Firewall-Regel anzupassen. Der Radius-Port in der OPNSense müsste dann z.B. von Subnetz A (blau) zu Subnetz B (grün Servernetz) geöffnet werden, damit alle APs Zugriff auf den Radius-Dienst erhalten.
+Je nachdem ob in jedem (Sub)-netz die APs angeschlossen werden, ist die zuvor dargestellte Firewall-Regel anzupassen. Der Radius-Port in der OPNsense® müsste dann z.B. von Subnetz A (blau) zu Subnetz B (grün Servernetz) geöffnet werden, damit alle APs Zugriff auf den Radius-Dienst erhalten.
 
 

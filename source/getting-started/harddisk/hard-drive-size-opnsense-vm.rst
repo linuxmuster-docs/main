@@ -3,7 +3,7 @@
 .. _hard_drive_size_opnsense_vm-label:
 
 ====================================================
-Aktualisieren der Festplattengrößen der OPNSense® VM
+Aktualisieren der Festplattengrößen der OPNSense®-VM
 ====================================================
 
 .. sectionauthor:: `@toheine <https://ask.linuxmuster.net/u/toheine>`_,
@@ -49,7 +49,7 @@ Anmeldung als `root` mit dem bekannten Passwort.
      
 .. figure:: media/hard-drive-size-opnsense-vm_02_start-opnsense-console.png
    :align: center
-   :alt: open OPNSense shell
+   :alt: open OPNSense® shell
 
 Öffnen einer Shell mit der Taste `8`. 
    

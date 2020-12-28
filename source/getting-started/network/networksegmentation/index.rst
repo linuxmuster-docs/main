@@ -139,11 +139,11 @@ Nachstehende Auflistung gibt einen Überblick zu den erforderlichen Schritten zu
 
 4) Netzwerkkarten (NICs) der importierten VMs den korrekten VLAN Bridges zuordnen, ggf. weitere NICs hinzufügen und diese den korrekten VLAN Bridges zuordnen.
 
-5) OPNSense VM starten und nach dem Login die Netzwerkkarten korrekt zuordnen (MAC-Adressen und VLAN Bridges helfen dabei die richtige Bezeichnung zu identiizieren). 
+5) OPNsense®-VM starten und nach dem Login die Netzwerkkarten korrekt zuordnen (MAC-Adressen und VLAN Bridges helfen dabei die richtige Bezeichnung zu identiizieren). 
 
 6) OPSense VM: Korrekte IPs den NICs zuordnen (LAN: 10.0.0.254/24, WAN: DHCPv4, OPT1: 10.3.0.254/24, OPT2: 10.4.0.254/24, kein Upstream Gateway eintragen)
 
-7) Update OPNSense, danach Reboot.
+7) Update OPNsense®, danach Reboot.
 
 8) lmn7 Server: NIC - VLAN Brdige für VLAN 10 zuordnen, VM starten, danach ``apt update && apt dist-upgrade``, reboot.
 
@@ -680,13 +680,13 @@ Nach dem Import der VMs sind nun deren Netzwerkkarten den richtigen VLAN Bridges
 Die Anpassung sieht unter Proxmox für OPSense wie folgt aus:
 
 .. image:: media/03_vm_opnsense_vlans_nics.png
-   :alt: Proxmox OPNSense NICS VLAN Bridges
+   :alt: Proxmox OPNsense® NICS VLAN Bridges
    :align: right
 
 Netzanpassung VMs
 =================
 
-Zunächst sind in der OPNSense VM die Netzwerkkarten korrekt den VLAN Bridges des Hypervisors zuzuordnen. Danach sind den Netzwerkkarten die korrekten IPs (FW: 10.0.0.254/24, OPT1: 10.3.0.254/24, OPT2: 10.4.0.0.0/24, WAN: DHCPv4) zuzuordnen. Danach ist die VM neu zu starten. 
+Zunächst sind in der OPNsense®-VM die Netzwerkkarten korrekt den VLAN Bridges des Hypervisors zuzuordnen. Danach sind den Netzwerkkarten die korrekten IPs (FW: 10.0.0.254/24, OPT1: 10.3.0.254/24, OPT2: 10.4.0.0.0/24, WAN: DHCPv4) zuzuordnen. Danach ist die VM neu zu starten. 
 
 Die virtuellen Maschinen (Server, Docker-Host, OPSI und ggf. XOA) sind mithilfe des Befehls ``linuxmuster-prepare`` auf die gewünschte Struktur anzupassen, so dass diese die korrekten Adressen aus dem Servernetz zugewiesen bekommen. 
 
