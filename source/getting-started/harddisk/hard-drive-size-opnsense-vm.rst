@@ -33,13 +33,24 @@ KVM     - Netzbereich anpassen |follow_me2kvm-backhd|
 OPNSense® basiert auf FreeBSD, sodass die Erweiterung der Festplattengröße von dem Vorgehen der
 Server-VM abweicht. 
 
-Voraussetzung:
---------------
+Die Erweiterung der Festplattengröße folgt folgendem Ablauf:
+
+1. Starten der VM.
+2. Prüfen, ob die neue HDD-Größe an die VM durchgereicht wurde.
+3. Partitionsgrößen prüfen.
+4. Festplatte ad0 anpassen.
+5. Partition ad0s1 anpassen.
+6. Änderungen anwenden.
+7. Tests durchführen.
+8. Reboot
 
 Gleich bleibt, dass zu Beginn ein Snapshot erstellt werden sollte und die 
 Virtuelle Disk im Hypervisor wie beschrieben vergrößert sein muss.
 
-4.1. Starten der VM und öffnen einer Konsole für diese ist wie zuvor beschrieben erfolgt.
+4.1 Starten der VM 
+------------------
+
+Starten der VM und öffnen einer Konsole für diese ist wie zuvor beschrieben erfolgt.
 
 .. figure:: media/hard-drive-size-opnsense-vm_01_console-login.png
    :align: center
@@ -52,27 +63,12 @@ Anmeldung als `root` mit dem bekannten Passwort.
    :alt: open OPNSense® shell
 
 Öffnen einer Shell mit der Taste `8`. 
-   
-
-Weiteres Vorgehen:   
-------------------
-
-4.2. Prüfen, ob die neue HDD-Größe an die VM durchgereicht wurde.
-
-4.3. Partitionsgrößen prüfen.
-
-4.4. Festplatte ad0 anpassen.
-
-4.5. Partition ad0s1 anpassen.
-
-4.6. Änderungen anwenden.
-
-4.7. Tests durchführen.
-
-4.8. Reboot
  
-4.2. Prüfen, ob die neue HDD-Größe an die VM durchgereicht wurde.
------------------------------------------------------------------
+ 
+4.2 HDD-Größe prüfen 
+--------------------
+
+Prüfen, ob die neue HDD-Größe an die VM durchgereicht wurde.
 
 Nach der Vergrößerung der virtuellen Platte und dem Systemstart wird überprüft, ob die
 Änderung vom System erkannt wird.
@@ -93,9 +89,15 @@ Ausgabe des Befehls liefert:
   =>       0  20964762  da0s1  BSD  (10G)
            0        16         - free -  (8.0K)
           16  20964746      1  freebsd-ufs  (10G)
+          
+          
+.. attention::
 
-4.3. Partitionsgrößen prüfen.
------------------------------
+   Unter XCP-ng kann die Bezeichnung der Festplatte abweichen. Hier wird in der OPNSense-VM für die 1. HDD die Bezeichnung ``ada0`` verwendet.
+   Die 1. Partition wird dann mit ``ada0s1`` bezeichnet. Die Angaben sind daher dann entsprechend anzupassen.
+
+4.3 Partitionsgrößen prüfen
+---------------------------
 
 .. code::
 
@@ -114,8 +116,8 @@ Die Ausgabe zeigt dir an, dass derzeit nur der bisher verwendete Platz zu Verfü
 
 Es ist zu erkennen, dass die Platte `da0` nur 10 GByte nutzt. Aus 4.2. wurde ersichtlich das weitere 40 GByte zur Verfügung stehen.
 
-4.4. Festplate ad0 anpassen.
-----------------------------
+4.4 Festplate da0/ada0 anpassen
+-------------------------------
 
 .. code::
 
@@ -127,8 +129,8 @@ Ausgabe des Befehls:
 
    growfs: requested size 10GB is not larger than the current filesystem size 10GB
 
-4.5. Partition ad0s1 anpassen.
-------------------------------
+4.5 Partition da0s1/ada0s1 anpassen
+-----------------------------------
 
 .. code::
 
@@ -140,8 +142,9 @@ Ausgabe des Befehls:
 
    growfs: superblock not recognized 
 
-4.6. Änderungen anwenden:
--------------------------   
+4.6 Änderungen anwenden
+-----------------------
+
 .. code::
 
    service growfs onestart
@@ -150,8 +153,8 @@ Ausgabe des Befehls:
     :align: center
     :alt: Output from service growfs onestart
 
-4.7. Tests durchführen.
------------------------
+4.7 Tests durchführen
+---------------------
 
 Mittels `df -h`, `gpart show` und `gpart status` kannst du überprüfen, ob die von dir gewünschte Größenänderung erfolgreich übernommen wurden.
 
@@ -181,8 +184,11 @@ Mittels `df -h`, `gpart show` und `gpart status` kannst du überprüfen, ob die 
     da0s1      OK  da0
    da0s1a      OK  da0s1
 
-4.8. Reboot
------------
+4.8 Reboot
+----------
+
+Führe nun einen Reboot der VM aus.
+
 
 Weiterführende Erklärungen zu FreeBSD zu diesem Thema findest du hier: 
 

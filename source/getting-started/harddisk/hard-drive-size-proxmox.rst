@@ -2,9 +2,12 @@
 
 .. _hard_drive_size_proxmox-label:
 
-===============================
+===================================
+Vorbereiten der Proxmox Festplatten
+===================================
+
 1. Snapshots der VMs anfertigen
-===============================
+-------------------------------
 
 .. sectionauthor:: `@toheine <https://ask.linuxmuster.net/u/toheine>`_,
                    `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_,
@@ -63,9 +66,8 @@ Bei der neuen VM ist das Schloss verschwunden und der Name wird in der Übersich
 
 .. hint:: Diesen Ablauf musst du für alle Virtuellen Maschinen, deren Festplatte du vergrößern möchtest, wiederholen.
 
-======================================
 2. Vorbereiten der PROXMOX Festplatten
-======================================
+--------------------------------------
 
 Ausgangssituation:
 
@@ -95,13 +97,13 @@ Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sei
 
 .. figure:: media/hdd-preparation-on-proxmox_3_vm-hdd-resize.png
    :align: center
-   :alt: Schritt 2.4
+   :alt: Schritt 2.3
 
 5. In dem Beispiel sind 10 GByte gegeben, um auf 50 GByte zu kommen, trägst Du nun 40 GByte ein. Danach siehst Du folgenden Eintrag:
 
 .. figure:: media/hdd-preparation-on-proxmox_4_vm-hdd-status.png
    :align: center
-   :alt: Schritt 2.5
+   :alt: Schritt 2.4
 
 .. hint:: Für die anderen VMs werden die Festplatten in gleicher Weise vergrößert. 
 
@@ -109,13 +111,13 @@ Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sei
   
    Hierbei ist auf eine ausreichende Größe zu achten, da auf dem Server neben den Nutzer- und Klassendaten auch die von Linbo gespeicherten Festplattenabbilder der Clients abgelegt werden. Siehe Einleitung dieses Abschnittes: :ref:`adjusting_hard_drive_size-label` 
 
-========================================================
 3. Schritt: HDD-Größen der Virtuellen Maschinen anpassen
-========================================================
+--------------------------------------------------------
 
 Nachdem im Virtualisierungs-Host die HDD der VM vergrößert wurde, muss die tatsächlich genutzte Größe angepasst werden.
 
-3.1. Virtuelle Maschinen starten
+3.1 Virtuelle Maschinen starten
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: media/hdd-preparation-on-proxmox_5_vm-start.png
    :align: center
@@ -126,6 +128,12 @@ Wähle links im Menü die gewünschte VM aus. Exemplarisch ist der Start der Ser
 Nach der Auswahl betätgist du den Button `Start`.
 
 Wiederhole dieses Vorgehen für alle VMs deren Festplatten du angepasst hast.
+
+3.2 Vergrößern der Server Festplatten
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In der gestarteten VM musst du nun den Festplattenplatz anpassen.
+Folge hierzu der Beschreibung mit nachstehendem Link.
 
 
 ================================= =================
