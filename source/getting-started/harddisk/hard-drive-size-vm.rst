@@ -13,28 +13,25 @@ Aktualisieren der Server-Festplattengrößen
 
    Achtung: Dies ist noch eine unvollständige Beschreibung. Findest du Fehler oder kannst zur Verbesserung beitragen, dann wende dich bitte an einen der Autoren des Abschnittes.
 
-Voraussetzung:
---------------
+Überblick
+---------
 
 1. Starten der VM wie zuvor beschrieben ist erfolgt.
+2. Prüfen, ob die neuen HDD-Größen an die VM durchgereicht werden.
+3. Partitionsgrößen prüfen.
+4. HDD1 anpassen.
+5. HDD2 mit dem LVM anpassen.
+6. Reboot
+7. Tests durchführen.
 
-Weiteres Vorgehen:
+3.1 Starten der VM
 ------------------
 
-3.2. Prüfen, ob die neuen HDD-Größen an die VM durchgereicht werden.
+Starte die VM wie zuvor beschrieben.
 
-3.3. Partitionsgrößen prüfen.
 
-3.4. HDD1 anpassen.
-
-3.5. HDD2 mit dem LVM anpassen.
-
-3.6. Reboot
-
-3.7. Tests durchführen.
-
-3.2. HDD-Größen überprüfen.
----------------------------
+3.2 HDD-Größen überprüfen
+-------------------------
 
 Auf der Konsole der Server-VM prüfst du zuerst, welche Festplatten des Hypervisor auch
 in der VM durchgereicht werden und welche Bezeichnung diese haben. 
@@ -82,8 +79,13 @@ Die Bezeichnung `xvda` steht in XCP-ng für die 1. Festplatte der VM, `xvdb` fü
 
 `vg-*` steht für ein LVM auf der jeweils zugeordneten Festplatte. Im obigen Beispiel befindet sich das LVM auf der 2. Festplatte (xvdb).
 
-3.3. Dateisystem prüfen
------------------------
+.. hint::
+
+   Unter Proxmox oder KVM werden in der VM hingegen die Festplattenbezeichnungen sda für die 1. HDD und sdb für die 2. HDD des Systems verwendet. 
+   Die Nummerierung für die Partitionen bleibt erhalten. Die angeben sind je nach eingesetztem System ensprechend anzupassen.
+
+3.3 Dateisystem prüfen
+----------------------
 
 Lasse dir nun die aktuellen Größen des Dateisystems ausgeben.
 
@@ -109,8 +111,8 @@ Lasse dir nun die aktuellen Größen des Dateisystems ausgeben.
     
 Hier werden noch die alten Partitionsgrößen angegeben.   
 
-3.4. HDD1 anpassen
-------------------
+3.4 HDD1 anpassen
+-----------------
 
 Partitionen auf der 1. HDD prüfen:
 
@@ -226,8 +228,8 @@ Nun muss die Partition noch auf die neue Größe erweitert werden. Gebe in der K
 Ab nun wird die neue Größe für der 1. HDD genutzt.
 
 
-3.5. HDD2 mit dem LVM anpassen
-------------------------------
+3.5 HDD2 mit dem LVM anpassen
+-----------------------------
  
 In o.g. VM auf XCP-ng befindet sich auf der 2. HDD `/dev/xvdb` ein LVM.
 
@@ -320,8 +322,8 @@ d) Ergebnis prüfen
    /dev/mapper/vg_srv-var            109G    1,2G  103G    2% /var
    tmpfs                             1,2G       0  1,2G    0% /run/user/0
 
-3.6. Reboot
------------
+3.6 Reboot
+----------
 
 Starte nun die Server-VM neu, um zu prüfen, ob die vorgenommenen Größenanpassungen funktionsfähig sind und der Reboot korrekt ausgeführt wird.
 
@@ -329,8 +331,8 @@ Starte nun die Server-VM neu, um zu prüfen, ob die vorgenommenen Größenanpass
 
    root@server: ~# reboot
    
-3.7. Tests durchführen
-----------------------
+3.7 Tests durchführen
+---------------------
 
 Nachdem die VM wieder gestartet ist, melde dich an der Konsole an und prüfe mithilfe nachstehender Befehle, ob die Platten- und Partitionsgrößen
 nun deinen Wünschen tatsächlich entsprechen.
