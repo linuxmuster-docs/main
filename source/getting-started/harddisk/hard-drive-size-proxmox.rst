@@ -128,7 +128,7 @@ Nach der Auswahl betätgist du den Button `Start`.
 Wiederhole dieses Vorgehen für alle VMs deren Festplatten du angepasst hast.
 
 
-=============================== =================
-Anpassen der Server-Festplatten |follow_me2vm-hd|
-=============================== =================
+================================= =================
+Vergrößern der Server-Festplatten |follow_me2vm-hd|
+================================= =================
 
