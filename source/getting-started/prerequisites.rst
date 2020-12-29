@@ -299,7 +299,7 @@ Installation von Grund auf benötigt man:
 - `Ubuntu 18.04 LTS 64-bit PC (AMD64) server install image
   <http://releases.ubuntu.com/bionic/>`_
 
-- `OpnSense <https://opnsense.org/download>`_
+- `OPNsense® <https://opnsense.org/download>`_
 
 Das dafür nötige Vorgehen kann auch der Entwicklerdokumentation entnommen werden.
 Dort ist auch das Vorgehen um VirtualBox als Hypervisor einzusetzen beschrieben.
