@@ -109,9 +109,9 @@ Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sei
   
    Hierbei ist auf eine ausreichende Größe zu achten, da auf dem Server neben den Nutzer- und Klassendaten auch die von Linbo gespeicherten Festplattenabbilder der Clients abgelegt werden. Siehe Einleitung dieses Abschnittes: :ref:`adjusting_hard_drive_size-label` 
 
-=========================================================
+========================================================
 3. Schritt: HDD-Größen der Virtuellen Maschinen anpassen
-=========================================================
+========================================================
 
 Nachdem im Virtualisierungs-Host die HDD der VM vergrößert wurde, muss die tatsächlich genutzte Größe angepasst werden.
 
@@ -128,7 +128,7 @@ Nach der Auswahl betätgist du den Button `Start`.
 Wiederhole dieses Vorgehen für alle VMs deren Festplatten du angepasst hast.
 
 
-=================================== ======================
-Vorbereiten der Proxmox-Festplatten |follow_me2vm-hd|
-=================================== ======================
+================================= =================
+Vergrößern der Server-Festplatten |follow_me2vm-hd|
+================================= =================
 
