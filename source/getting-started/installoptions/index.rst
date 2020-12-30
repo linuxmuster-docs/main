@@ -37,7 +37,7 @@ Alternative Installationen  |follow_me2scratch|
   :caption:  Installation-Optionen
   :hidden:
 
-  install-on-xcp-ng/index
   install-on-proxmox/index
+  install-on-xcp-ng/index
   install-on-kvm/index
   install-from-scratch/index
