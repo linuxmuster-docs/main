@@ -4,9 +4,9 @@ Anlegen und Installieren der Firewall
 Installation der OPNsense®
 --------------------------
 
-Starte die VM mit dem ``Start``-Knopf und öffne mit dem ``>_ Konsole``-Knopf die Konsole der VM.
+Lade dir die iso-Datei der OPNSense® von der OPNSense®-Seite https://opnsense.org herunter, brenne davon eine DVD und die starte OPNsense® von DVD.
 
-OPNsense® startet von DVD (dem iso-Image). Melde dich als ``installer`` mit dem Passwort ``opnsense`` an.
+Melde dich als ``installer`` mit dem Passwort ``opnsense`` an.
 
 Bestätige den Willkommensbildschirm mit Enter.
 
@@ -22,7 +22,7 @@ Wähle die deutsche Tastatur ``< de.kbd >`` und akzeptiere jetzt mit ``< Accept 
 
 Wähle ``< Guided installation >``.
 
-Bestätige die Festplatte und wähle ``< MBR mode>``. Jetzt wird OPNsense® auf der Festplatte installiert.
+Bestätige die Festplatte und wähle ``< GPT/UEFI mode>``. Jetzt wird OPNsense® auf der Festplatte installiert.
 
 .. figure:: media/OPNS15.png
 
@@ -41,7 +41,7 @@ Wenn alles geklappt hat, ist folgendes zu sehen:
 * Die erste Netzwerkkarte (LAN) ist mit dem pädagogischen Netz verbunden. Allerdings noch mit den falschen Netzwerkeinstellungen.
 * Die zweite Netzwerkkarte (WAN) ist mit dem Router verbunden. In einer Schulumgebung wird der Router keinen DHCP-Service anbieten. 
 
-Für die Konfiguration der OPNsense® brauchst du einen Rechner mit Webbrowser im LAN-Bereich der OPNsense®. Das kann ein Laptop mit Linux oder Windows sein. Achte darauf, dass sie mit dem LAN-Adapter der OPNsense® verbunden ist.
+Für die Konfiguration der OPNsense® brauchst du einen Rechner mit Webbrowser im LAN-Bereich der OPNsense®. Das kann ein Laptop mit Linux oder Windows sein. Achte darauf, dass er mit dem LAN-Adapter der OPNsense® verbunden ist.
 
 Konfiguration der OPNsense®
 ---------------------------
@@ -80,8 +80,6 @@ Falls dein Router eine private IP hat, musst du den Haken bei ``Private RFC1918-
 .. figure:: media/OPNS22.png
 
 Die IP-Adresse und die Subnetzmaske des Schulnetzes sind hier einzutragen.
-
-.. hint:: Standardmäßig wird das interne Netz aus dem privaten IPv4-Bereich 10.0.x.x mit der 16-bit Netzmaske 255.255.0.0 eingerichtet. Möchtest du jedoch später eine Datenmigration durchführen, solltest du das Netz der bisherigen linuxmuster.net V6.2 wählen. Also Lan-IP-Adresse 10.16.1.254 und Subnetzmaske 12.
  
 .. figure:: media/OPNS23.png
 
@@ -91,7 +89,7 @@ Die IP-Adresse und die Subnetzmaske des Schulnetzes sind hier einzutragen.
 
 .. figure:: media/OPNS24.png
 
-Nachdem du die Einstellungen übernommen hast, haben sich auch die Einstellungen für des LAN-Netzwerks geändert.
+Nachdem du die Einstellungen übernommen hast, haben sich auch die Einstellungen für das LAN-Netzwerks geändert.
 
 Jetzt solltest du deinem Admin PC die IP-Adresse 10.0.0.10/16, DNS: 10.0.0.254 und den Gateway: 10.0.0.254 geben.
 

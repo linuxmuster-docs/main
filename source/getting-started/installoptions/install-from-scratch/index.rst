@@ -8,23 +8,21 @@ Install from Scratch
 
 
 In diesem Dokument findest du eine "Schritt für Schritt" Anleitungen zum
-Installieren der linuxmuster.net-Musterlösung direkt auf der Hardware.
+Installieren der linuxmuster.net-Musterlösung direkt auf der Hardware. Falls du die linuxmuster.net doch virtualisiert aufsetzen möchtest, aber lieber alles selbst installierts, bist du in dieser Anleitung auch richtig.
+
 Lies zuerst die Abschnitte :ref:`what-is-new-label` und
 :ref:`prerequisites-label`, bevor du dieses Kapitel durcharbeitest.
 
 Voraussetzungen
 ===============
 
-* Es steht zwei Hardware-Server und eine funktionierende Netzwerkverbindung zur Verfügung.
-
 Nach der Installation gemäß dieser Anleitung erhältst du eine
 einsatzbereite Umgebung bestehend aus
  
-* einer Firewall (OPNsense für linuxmuster.net), 
-* einem Server (linuxmuster.net) und
-* einem Admin PC ebenfalls als VM. 
+* einer Firewall (OPNsense® für linuxmuster.net), 
+* und einem Server (linuxmuster.net).
 
-Natürlich kann der Admin PC auch ein normaler Laptop mit Linux oder Windows als Betriebssystem sein. 
+Im Laufe der Installation brauchst du einen Admin PC. Das kann ein normaler Laptop mit Linux oder Windows als Betriebssystem sein. 
 
 Vorgehensweise
 ==============

@@ -3,7 +3,7 @@
 Anlegen und Installieren des Servers
 ====================================
 
-Starte den Server via Ubuntu 18.04.1 Server ISO-Image (USB-Stick oder CD-ROM).
+Starte den Server via Ubuntu 18.04 Server ISO-Image (USB-Stick oder CD-ROM).
 
 Es erscheint das erste Installationsfenster mit der Abfrage zur gewünschten Sprache.
 
@@ -31,8 +31,6 @@ Gib die Netzwerkkonfiguration, wie im oberen Bild, ein.
 
 .. hint:: Bedenke, dass das deutsche Tastaturlayout noch nicht aktiv ist. Den ``/``, den du für die Eingabe des Subnetzes brauchst, bekommst du mit der ``-``-Taste!
 
-.. hint:: Falls Du dich für das Netz der linuxmuster.net V6.2 entschieden hast, konfigurierst du das Subnet 10.16.0.0/12, die Adresse 10.16.1.1, den Gateway 10.16.1.254 und den Name server 10.16.1.254. 
-
 .. figure:: media/server15.png
 
 Lass die Proxy-Adresszeile leer.
@@ -58,14 +56,14 @@ Nenne den Server ``server``. Der Benutzername und das Passwort sind frei wählba
 
 Installiere OpenSSH **nicht**.
 
-Wenn die Installation abgeschlossen ist und der Server neu gestartet ist, meldest du dich als linuxadmin (Passwort Muster!) an.
+Wenn die Installation abgeschlossen und der Server neu gestartet ist, meldest du dich an.
 
 Automatische Updates abschalten
 -------------------------------
 
 Der frisch installierte Ubuntu-Server hat automatische Updates aktivieret. Das solltest du abschalten.
 
-Werde mit ``sudo -i`` root und editiere beispielsweise mit nano die Datei ``/etc/apt/apt.conf.d/20auto-upgrades``:
+Werde mit ``sudo -i`` root und editiere, beispielsweise mit nano, die Datei ``/etc/apt/apt.conf.d/20auto-upgrades``:
 
 ``nano /etc/apt/apt.conf.d/20auto-upgrades``
 
