@@ -7,10 +7,10 @@ Installation der OPNsense®
 Lade dir die iso-Datei der OPNSense® von der OPNSense®-Seite https://opnsense.org/download/ herunter.
 
 Nutze als Architecture ``amd64`` und als image type ``dvd`` und einen Mirror, der in deiner Nähe ist.
-Du erhälst dann eine mit bz2 komprimiertes ISO-Image. Entpacke diesi die heruntergeladene Datei.
+Du erhältst dann eine mit bz2 komprimiertes ISO-Image. Entpacke diese die heruntergeladene Datei.
 Unter Windows kannst du dies z.B. mit 7-Zip durchführen.
 
-Unter linux gibst du auf der Eingabekonsole folgenden Befehl an, der dir die Datei im gleichen Ordner entpackt:
+Unter Linux gibst du auf der Eingabekonsole folgenden Befehl an, der dir die Datei im gleichen Ordner entpackt:
 
 .. code::
 
@@ -59,12 +59,11 @@ Bestätige die Festplatte und wähle ``< GPT/UEFI mode>``. Jetzt wird OPNsense®
    An dieser Stelle muss als root-Passwort ``Muster!`` eingegeben werden, da später der lmn-Server beim Einrichten 
    der Firewall davon ausgeht, dass das root-Passwort ``Muster!`` ist!
 
-Starte OPNsense® zum Abschluß neu und werfe die CD aus. In der VM ändere vor dem Neustart die Boot-Reihenfolge, so 
-dass die VM direkt von der Festplatte gestartet wird.
+Starte OPNsense® zum Abschluss neu und werfe die CD aus. In der VM ändere vor dem Neustart die Boot-Reihenfolge, so dass die VM direkt von der Festplatte gestartet wird.
 
 Der Boot-Vorgang kann schon eine Weile dauern. Vor allem, wenn der Router kein DHCP anbietet.  
 
-Wenn alles geklappt hat, ist folgendes zu sehen:
+Wenn alles geklappt hat, ist Folgendes zu sehen:
 
 .. figure:: media/OPNS16.png
 
@@ -99,7 +98,7 @@ Akzeptiere und fahre fort.
 
 .. figure:: media/OPNS18.png
 
-Melde dich mit root und dem Passwort Muster! an. Und starte den General Setup Wizard mit dem ``Next``-Knopf.
+Melde dich mit root und dem Passwort Muster! an. Starte den General Setup Wizard mit dem ``Next``-Knopf.
 
 .. figure:: media/OPNS19.png
 
@@ -167,12 +166,12 @@ Wie das geht, siehst du im Folgenden:
 
 .. figure:: media/OPNS26.png
 
-Bei ``Schnittstellen -> Zuweisungen`` drückst du ``+`` um die dritte Schnittstelle deinem System hinzuzufügen. Diese dritte Schnittstelle ist dann als ``OPT1`` im System bekannt. OPT1 muss nur noch aktiviert und es muss ihr noch eine IP-Adresse zugewiesen werden. 
+Bei ``Schnittstellen -> Zuweisungen`` drückst du ``+``, um die dritte Schnittstelle deinem System hinzuzufügen. Diese dritte Schnittstelle ist dann als ``OPT1`` im System bekannt. OPT1 muss nur noch aktiviert und es muss ihr noch eine IP-Adresse zugewiesen werden. 
 
 .. figure:: media/OPNS27.png
 
 Unter ``Schnittstellen -> [OPT1]`` kannst du diese Einstellungen vornehmen. Der Screenshot zeigt ein Beispiel. 
-Für weitere Netzwerkkarten verfährst du entsprechend. OPT1 wird dann hochgezahlt zu OPT2 etc.
+Für weitere Netzwerkkarten verfährst du entsprechend. OPT1 wird dann hochgezählt zu OPT2 etc.
 
 ssh erlauben
 ------------
@@ -206,7 +205,7 @@ Danach werden die Aktualisierungen heruntergeladen und angewendet.
 
 .. figure:: media/OPNS31.png
 
-Zum Abschluß erfolgt der Neustart automatisch.
+Zum Abschluss erfolgt der Neustart automatisch.
 
 .. figure:: media/OPNS32.png
 
@@ -215,9 +214,5 @@ Nach dem Neustart ist die OPNsense® soweit vorbereitet.
 .. hint::
 
    Installierst du die OPNsense® in einer VM, so solltest du nun noch die Tools der gewählten Virtualisierungsumgebung installieren, damit die VM komfortabel gesteuert werden kann.
-   Für XCP-ng findets du nachstehend die Hinweise: https://xcp-ng.org/docs/guides.html#pfsense-opnsense-vm
-
-
-
-
+   Für XCP-ng findest du nachstehend die Hinweise: https://xcp-ng.org/docs/guides.html#pfsense-opnsense-vm
 
