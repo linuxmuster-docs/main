@@ -33,6 +33,7 @@ Das Skript lmn7-appliance installiert für dich das Paket linuxmuster-base7 mit 
 * Lade dazu das Skript mit ``wget https://archive.linuxmuster.net/lmn7/lmn7-appliance`` herunter.
 * Mach es mit ``chmod +x lmn7-appliance`` ausführbar und
 * führe ``./lmn7-appliance -p server -u -l /dev/sdb`` aus.
+* hast du ein LVM auf dem Server eingerichtet (from scratch INstallation) dann gibst Du dieses wie folgt an: ``./lmn7-appliance -p server -u -l /dev/vg_server`` an.
 
 .. hint:: Falls Du dich für das Netz der linuxmuster.net V6.2 entschieden hast, führst du statt ``./lmn7-appliance -p server -u -l /dev/sdb`` ``./lmn7-appliance -p     server -u -l /dev/sdb -n 10.16.1.1/12 -f 10.16.1.254`` aus.
 

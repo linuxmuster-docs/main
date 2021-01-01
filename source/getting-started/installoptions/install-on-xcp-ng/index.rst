@@ -20,9 +20,12 @@ sog. ``Resource-Pool`` zusammengeführt und verwaltet werden können.
 Der Betrieb wird auf jeglicher Markenhardware und auf einer Vielzahl an 
 NoName-Hardware unterstützt.
 
-In diesem Dokument findest Du "Schritt für Schritt" Anleitungen für die
+Diese Dokumentation ist eine "Schritt für Schritt" Anleitung für die
 Installation der linuxmuster.net-Musterlösung in der Version 7 auf
 Basis von XCP-ng. 
+
+Übersicht
+=========
 
 In nachstehender Abbildung wird der schematische Netzaufbau der
 anstehenden v7-Installation unter XCP-ng dargestellt.
@@ -54,25 +57,24 @@ der IPs zu den VMs bzw. genutzten Hosts.
 +--------------+--------------------+
 
 Lies zuerst die Abschnitte :ref:`what-is-new-label` 
-und :ref:`prerequisites-label`, bevor Du dieses Kapitel durcharbeitest.
+und :ref:`prerequisites-label`, bevor du dieses Kapitel durcharbeitest.
 
-Nach der Installation gemäß dieser Anleitung erhältst Du eine
+Nach der Installation gemäß dieser Anleitung erhältst du eine
 einsatzbereite Umgebung bestehend aus
 
-* einem Host (XCP-ng) für alle virtuellen Maschinen, 
+* einem Host (XCP-ng Hypervisor) für alle virtuellen Maschinen, 
 * einer Firewall (OPNsense®)  
 * einem Server (linuxmuster.net)
 * einer VM (XOA) zur web-basierten Verwaltung des Virtualisierungs-Hosts
 
-Ähnliche, nicht dokumentierte, Installationen gelten für einen
-OPSI-Server und einen Docker-Host, die dann ebenso auf dem XCP-ng-Host
-laufen können.
+Die Einbindung der VMs für den OPSI-Server und den Docker-Host werden hier nicht weiter beschrieben.
+Diese sind analog zum Import und Anpassung der Server-VM durchzuführen.
 
 Voraussetzungen
 ===============
 
-* Es wird vorausgesetzt, dass Du einen Administrationsrechner
-  (Admin-PC genannt) besitzt, den Du je nach Bedarf in die
+* Es wird vorausgesetzt, dass du einen Administrationsrechner
+  (Admin-PC genannt) besitzt, den du je nach Bedarf in die
   entsprechenden Netzwerke einstecken kannst und dessen
   Netzwerkkonfiguration entsprechend vornehmen kannst.
 
@@ -80,8 +82,7 @@ Voraussetzungen
   zunächst gewährleistet sein, d.h. dass beide zunächst z.B. an einem
   Router angeschlossen werden, über den die beiden per DHCP oder fester IP 
   ins Internet können. Sobald später die Firewall korrekt eingerichtet
-  ist, bekommt der Admin-PC und bei Bedarf auch der XCP-ng-Host eine
-  IP-Adresse im Schulnetz.
+  ist, bekommt der Admin-PC und der XCP-ng-Host eine IP-Adresse im Schulnetz.
 
 .. hint:: 
 
@@ -99,11 +100,13 @@ Bereitstellen des XCP-ng-Hosts
    den Schulserver *server*. Die Virtualisierungsfunktionen der CPU sollten 
    zuvor im BIOS aktiviert worden sein.
 
-Die folgende Anleitung beschreibt die *einfachste* Implementierung
-ohne Dinge wie VLANs, Teaming oder RAID. Diese Themen werden in
+Die folgende Anleitung beschreibt die *einfachste* Installation. 
+Komplexere Einsatzszenarien, die VLANs, Teaming oder RAID berücksichtigen, werden in
 zusätzlichen Anleitungen betrachtet.
 
-* :ref:`Anleitung Netzwerksegmentierung <subnetting-basics-label>` 
+.. hint::
+
+   :ref:`Anleitung Netzwerksegmentierung <subnetting-basics-label>` 
 
 Download der Appliances und der Virtualisierungssoftware XCP-ng
 ---------------------------------------------------------------
@@ -115,62 +118,58 @@ Die Download-Links zur Installation der XCP-ng Virtualisierungssoftware finden S
 +====================+======================================================================+
 | XCP-ng             | `Installationsdatenträger <https://xcp-ng.org/#easy-to-install>`_    | 
 +--------------------+----------------------------------------------------------------------+
-| XCP-ng Center      | Windows - Programm zur Verwaltung von der Virtualisierungsumgebung   |                             
+| XCP-ng Center      | Windows-Programm zur Verwaltung der Virtualisierungsumgebung         |                             
 +--------------------+----------------------------------------------------------------------+
-| Download-Link:                                                                            |
-| `XCP-ng Center <https://github.com/xcp-ng/xenadmin/releases>`_                            |
+| Download-Link:     | XCP-ngCenter_ für XCP-ng ab v8.2 LTS                                 |
++--------------------+----------------------------------------------------------------------+
+| XVA VMs            | VM der lmn v7 für XCP-ng im XVA-Format zum direkten Import           |                             
++--------------------+----------------------------------------------------------------------+
+|  Download-Link:    | Download der XVAs-v7_                                                |
++--------------------+----------------------------------------------------------------------+
+| Beschreibung VMs   | :ref:`Beschreibung der VMs für v7 <prerequisites-label>`             |                             
 +--------------------+----------------------------------------------------------------------+
 
-Die Download-Quellen für die entsprechenden VMs der 
-linuxmuster.net v7 im XVA Format finden sich unter:
-
-* Download der XVAs-v7_
+.. _XCP-ngCenter: https://github.com/cocoon/xenadmin/releases/download/20.11.00.3/XCP-ng-Center_20.11.00.3.msi
 
 .. _XVAs-v7: https://download.linuxmuster.net/xcp-ng/v7/latest/
 
-
-* :ref:`Beschreibung der VMs für v7 <prerequisites-label>`
-
 .. hint::
-   Die XVAs für die v7 wurden mit XCP-ng v8.1 erstellt. Zudem wurden die xcp-ng
-   Tools für die v8.1 pro VM installiert. Ein Import für eine XCP-ng 7.6 Version 
+
+   Die XVAs für die v7 wurden mit XCP-ng v8.2 LTS erstellt. Zudem wurden die xcp-ng
+   Tools für die v8.2 pro VM installiert. Ein Import für eine XCP-ng 7.6 Version 
    scheitert und bricht mit einem Fehler ab. Daher bitte sicherstellen, dass 
-   eine aktuelle XCP-ng v8.1 genutzt wird. 
+   eine aktuelle XCP-ng v8.2 genutzt wird. 
 
 
 Erstellen eines USB-Sticks zur Installation des XCP-ng-Host
 -----------------------------------------------------------
 
-Für die Installation wird benötigt:
-
-* ein Installationsdatenträger mit XCP-ng
-
-
-Installation XCP-ng
-===================
-
 Herunterladen von XCP-ng
-------------------------
-Diese Anleitung bezieht sich auf die Version 8.1 von XCP-ng. Für nachfolgende Versionen ist 
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Diese Anleitung bezieht sich auf die Version 8.2 von XCP-ng. Für nachfolgende Versionen ist 
 dieses Vorgehen entsprechend anzuwenden.
 
 Die ISO-Datei muss heruntergeladen und ein bootfähiger USB-Stick erstellt werden.
 
-1. Herunterladen: XCP-Webseite_
+Herunterladen: XCP-Webseite_
 
 .. _XCP-Webseite: https://xcp-ng.org/#easy-to-install
 
-2. USB-Stick erstellen: In das Download-Verzeichnis wechseln, Buchstaben für 
+Erstellen des Boot-Sticks
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+USB-Stick erstellen: In das Download-Verzeichnis wechseln, Buchstaben für 
 USB-Stick unter Linux ermitteln, X durch den korrekten Buchstaben ersetzen und 
 dann nachstehenden Befehl eingeben:
 
 .. code-block:: console
  
-   dd if=XCP-ng_8.1.0-2.iso of=/dev/sdX bs=8M status=progress oflag=direct
+   dd if=XCP-ng_8.2.0.iso of=/dev/sdX bs=8M status=progress oflag=direct
 
 
-Installieren von XCP-ng
------------------------
+Installation XCP-ng
+===================
 
 Vom USB-Stick booten, danach erscheint folgender Bildschirm:
 
@@ -213,7 +212,7 @@ zurückkehren zu können.
    :alt: Schritt 5 der Installation des XCP-ng Servers
 
 Wählen Sie danach den Datenträger aus, der verwendet werden soll und setzen Sie den Haken 
-bei „Enable thin provisioning“. Bestätigen Sie mit ``Ok``.
+bei ``Enable thin provisioning``. Bestätigen Sie mit ``Ok``.
 
 .. figure:: media/07_install-on-xcp-ng_virtual-machine-storage.png
    :align: center
@@ -251,22 +250,21 @@ Legen Sie danach das Kennwort für den Administrator (user: root) fest und best�
    :align: center
    :alt: Schritt 10 der Installation des XCP-ng Servers
 
-Solltest Du kein Upgrade einer bestehenden Installation durchführen, 
-so must Du noch die Netzwerkeinstellungen festlegen.
+Solltest du kein Upgrade einer bestehenden Installation durchführen, 
+so must du noch die Netzwerkeinstellungen festlegen.
 
 .. figure:: media/12_xcp-ng-install_networking.png
    :align: center
    :alt: Schritt 11 der Installation des XCP-ng Servers
 
-Vergebe hier eine statische IP-Adresse, mit der XCP-ng eine Internet-Verbindung aufbauen kann.
-
-Lege die DNS-Server fest.
+Vergebe hier eine statische IP-Adresse aus dem internen Netz (z.B. 10.0.0.200/16).
+Lege die DNS-Server und Gateway-IP (beides 10.0.0.254) fest.
 
 .. figure:: media/13_xcp-ng-install_host_and_dns_konfiguration.png
    :align: center
    :alt: Schritt 12 der Installation des XCP-ng Servers
 
-Lege danach die Systemzeit fest (manuelle Auswahl oder via NTP-Server).
+Lege danach die Systemzeit fest (manuelle Auswahl oder via NTP-Server (10.0.0.254).
 
 .. figure:: media/14_install-on-xcp-ng_system-time.png
    :align: center
@@ -304,7 +302,7 @@ Die Frage nach Installation eines ``Supplemental Pack`` ist mit ``No`` zu beantw
    :align: center
    :alt: Schritt 18 der Installation des XCP-ng Servers
 
-Nach erfolgreicher Installation kannSt Du mit ``Ok`` den Server neu starten.
+Nach erfolgreicher Installation kannSt du mit ``Ok`` den Server neu starten.
 Achte darauf, dass der USB-Stick nicht mehr für den Bootvorgang aktiv ist.
 
 .. figure:: media/20_install-on-xcp-ng_installation-completion.png
@@ -332,61 +330,25 @@ in der dann der Hinweis auf die installierte Version 8.1 erscheinen sollte
    :alt: Schritt 22 der Installation des XCP-ng Servers
 
 
-Aktualisierung des XCP-ng-Hosts
--------------------------------
-
-Um en XCP-ng Host zu aktualisieren, benötigt der Hypervisor eine funktionierende 
-Internet-Verbindung. Dies ist zum jetzigen Zeitpunkt der INstallation nicht der Fall, 
-wenn der Host die IP 10.0.0.200 erhalten haben sollte. 
-Es müssten dann erst die VMs importiert, das Setup durchgeführt werden. Erst danach kann 
-der Hypervisor aktualisiert werden, wie nachstehend beschrieben.
-
-Wähle in dem Startbildschirm des XCP-ng Hosts den Menüpunt ``Local Command Shell``
-und drücke ``Enter``. Gebe als Benutzer ``root`` an und das Passwort das Du 
-während der Installation vergeben hast.
-
-.. figure:: media/24_install-on-xcp-ng_update-xcp-ng-host.png
-   :align: center
-   :alt: Schritt 23 der Installation des XCP-ng Servers
-
-Gebe auf der Konsole den Befehl 
-
-.. code-block:: console
- 
-   yum update
-
-ein. XCP-ng fragt nun via Internetverbindung die Repositories ab und prüft, ob
-Aktualisierungen vorhanden sind. Falls ja, werden die zu aktualisierenden Pakete 
-angezeigt. Die Aktualisierung ist mit ``y`` zu starten.
-
-Danach ist Dein XCP-ng Host auf dem aktuellen Stand.
-
 XCP-ng: Administration
 =======================
 
 Für die Administration Deines XCP-ng-Hosts stehen Dir zwei Möglichkeiten zur Verfügung.
-Zunächst solltest Du Dir auf einem Windows-Rechner im Netzwerk das Programm ``XCP-ng Center`` 
-installieren. Hiermit kannst Du die gesamte Umgebund administrieren und insbesondere die 
-vorkonfigurierten VMs einfach importieren. 
+Zunächst solltest du Dir auf einem Windows-Rechner im Netzwerk das Programm ``XCP-ng Center`` 
+installieren. Hiermit kannst du die gesamte Virtualisierungsumgebung administrieren 
+und insbesondere die vorkonfigurierten VMs einfach importieren. 
 
-Zudem kann der XCP-ng-Host ebenfalls web-basiert administriert werden. Dies erfolgt mithilfe 
-der Anwendung XenOrchestra (XOA - Xen Orchestra Application). linuxmuster.net stellt hierfür 
+Zudem kann der XCP-ng-Host ebenfalls ``web-basiert administriert`` werden. Dies erfolgt mithilfe 
+der Anwendung ``XenOrchestra (XOA - Xen Orchestra Application)``. linuxmuster.net stellt hierfür 
 ebenfalls eine vorkonfigurierte VM mit einer installierten XOA App zur Verfügung. XOA wurde
-hier "from stratch" installiert und an die lmn7 angepasst wurde.
+hier "from stratch" installiert und an die lmn7 angepasst. Die Nutzung von XOA ist der von 
+XCP-ng empfohle Weg der Administration und bietet im Produktivbetrieb viele Vorteile wie z.B.
+die Eirichtung und Automatisierung von Backups / Snapshots.
 
 XCP-ng Center unter Windows installieren
 ----------------------------------------
 
-Lade Dir das Windows-Programm zur Verwaltung von der Seite des XCP-ng Projekts herunter:
-
-XCP-ng Center AktuelleVersion_
-
-.. _AktuelleVersion: https://github.com/xcp-ng/xenadmin/releases
-
-Die Installation des Programms unter Linux mithilfe von Wine und PlayOnLinux wird in der Dokumentation 
-weiter unten beschrieben.
-
-Installiere das Programm durch einen Rechtsklick auf die MSI-Datei auf dem Windows-Rechner und 
+Installiere das Programm (siehe ``Downloads-Links``) durch einen Rechtsklick auf die MSI-Datei auf dem Windows-Rechner und 
 wähle dann ``Als Administrator ausführen`` aus.
 
 .. figure:: media/25_xcp-ng-admin_execute-as-administrator.png
@@ -410,11 +372,11 @@ vergebene IP-Adresse des XCP-Hosts sowie die Benutzerdaten an.
 
 
 Netzwerk einrichten
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 
 Jetzt muss das Netzwerk eingerichtet werden. Notiere Dir hierzu die Bezeichnungen
-und MAC-Adressen der eingebauten Netzwerkkarten. Diese findest Du unter der Reiterkarte ``NICs``.
-Die Netzwerkkarte, die die Verbindung zum Internet übernehmen soll wird später dem Netzwerk ``Red``, 
+und MAC-Adressen der eingebauten Netzwerkkarten. Diese findest du unter der Reiterkarte ``NICs``.
+Die Netzwerkkarte, die die Verbindung zum Internet übernehmen soll, wird später dem Netzwerk ``Red``, 
 diejenige für das interne Schulungsnetz dem Netzwerk ``Green`` und die dritte Netzwerkkarte 
 für die Steuerung des WLAN dem Netzwerk ``Blue`` zugeordnet.
 
@@ -422,26 +384,30 @@ Damit dies korrekt erfolgt, ist es wichtig zu wissen, wie NIC 0,1,2 physikalisch
 und welche MAC-Adressen diese aufweisen. Anhand der Informationen erfolgt dann im folgenden Schritt
 die Zuordnung der Netze (vSwitche).
 
-Wähle nun Für den XCP-ng-Host die Reiterkarte ``Networking`` aus.
+Wähle nun für den XCP-ng-Host die Reiterkarte ``Networking`` aus.
 
 .. figure:: media/28_xcp-ng-host_networking.png
    :align: center
    :alt: 4. Teil: Netzwerke einrichten
 
 Wähle das erste Netwerk ``Network 0`` aus, prüfe die Zuordnung der Netzwerkkarte. 
-Es muss diejenige zugewiesen sein, die die Internet-Verbindung steuert. Klicke dann auf ``Properties`` 
-und ändere den Namen für das Netzwerk in ``RED``.
+Es sollte diejenige zugewiesen werden, die die Verbindung in das interne Netz steuert.
+Klicke dann auf ``Properties`` und ändere den Namen für das Netzwerk in ``GREEN``.
 
-Führe diese Schritte ebenfalls für die weitere Netze aus und ändere die Namen auf ``BLUE`` und ``GREEN``.
+Führe diese Schritte ebenfalls für die weiteren Netze (BLUE - WLAN Netz und RED - externes Netz) 
+aus und ändere die Namen auf ``BLUE`` und ``GREEN``.
 
 
 VMs importieren
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 Nachdem das Netzwerk korrekt eingerichtet wurde, können nun die VMs der linuxmuster.net 
 importiert werden.
 
-Lade Dir vorher zunächst alle VMs, die Du importieren möchtest unter linuxmuster.net herunter.
+Lade dir vorher zunächst alle VMs, die du importieren möchtest unter linuxmuster.net auf 
+deinen Client herunter (siehe obigen Download-Link: XVAs-v7_ ). Die heruntergeladenen VMs
+sind als ZIP-Archiv komprimiert und können nach dem Download mit dem SHA256 HASH-Wert geprüft werden.
+Entpacke die ZIP-Dateien, so dass du alle VMs als XVA-Dateien  vorliegen hast.
 
 Danach rufe im XCP-ng Center den Menüpunkt ``File -> Import`` auf.
 
@@ -457,13 +423,13 @@ importierenden VM an. Die VMs weisen die Dateiendung ``.xva`` auf.
    :alt: Import: Datei mit Speicherort angeben
 
 Nach Bestätigung mit ``Ok`` erscheint nun das erste Fenster, um den Import zu steuern.
-Zunächst must Du den XCP-ng-Host festlegen, für den der Import der VM erfolgen soll.
+Zunächst must du den XCP-ng-Host festlegen, für den der Import der VM erfolgen soll.
 
 .. figure:: media/31_xcp-ng-import_home_server.png
    :align: center
    :alt: Import: Heimserver angeben
 
-Wähle danach Deinen gewünschten Speicher aus. Bestätige mit ``Next``.
+Wähle danach deinen gewünschten Speicher aus. Bestätige mit ``Next``.
 
 .. figure:: media/32_xcp-ng-import_storage.png
    :align: center
@@ -493,7 +459,7 @@ gewünschten Einstellung.
 
 Bestätige nun den Import mit ``Finish``.
 
-Der Import kann einige Zeit dauern. Danach solltest Du die importierte 
+Der Import kann einige Zeit dauern. Danach solltest du die importierte 
 VM im XCP-ng Center sehen können.
 
 .. figure:: media/36_xcp-ng-imported_vms.png
@@ -502,12 +468,12 @@ VM im XCP-ng Center sehen können.
 
 
 VMs starten und aktualisieren
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Wähle im XCP-ng Center links die VM aus, die Du starten möchtest.
+Wähle im XCP-ng Center links die VM aus, die du starten möchtest.
 Klicke danach oben in der Menüleiste das Icon ``Start`` aus.
 
-Beginne mit der Firewall Opnsense. Starte diese.
+Beginne mit der Firewall OPNsense®. Starte diese.
 
 .. figure:: media/37_xcp-ng-install_opnsense_started.png
    :align: center
@@ -528,9 +494,10 @@ Wähle danach in dem Konsolenmenü den Punkt 12) aus, um die Firewall zu aktuali
 Bestätige diesen Vorgang mit ``y`` und warte bis die VM neu gestartet wurde.
 
 Starte die VM mit dem linuxmuster.net Server.
-Melde Dich mit o.g. Logindaten an.
+Melde Dich mit o.g. Login-Daten an.
 
 .. important::
+ 
    Vor den folgenden Schritten muss die Datei ``/etc/apt/sources.list.d/lmn7.list`` wie folgt geändert werden:
 
    .. code-block:: console
@@ -569,210 +536,18 @@ Bestätigen Sie das Update mit ``y``.
    :alt: Update der Server VM
 
 
-Sofern Du weitere VMs importiert hast, führe die Aktualisierungen
+Sofern du weitere VMs importiert hast, führe die Aktualisierungen
 analog aus.
-
-Für die weitere Einrichtung von linuxmuster.net für Deine Schule folge
-der Dokumentation unter:
-
-XCP-ng Center unter Linux installieren
---------------------------------------
-
-XCP-ng Center ist eine Anwendung zur Administration des XCP-ng Virtualisierers, 
-die für den Betrieb unter Windows programmiert wurde. Um diese Verwaltungssoftware 
-betriebssystemunabhängig einzusetzen, nutzt Du die bereits vorkonfigurierte 
-virtuelle Maschine (VM) Xen Orchestra (XOA) und iomportierst diese in XCP-ng. 
-
-Weitere Hinweise findest Du unter 'Xen Orchestra (XOA)`_
-
-Für die Installtion unter Linux sind folgende Schritte notwendig:
-
-1. Installation einer aktuellen Wine Version unter Linux
-2. Installation von PlayOnLinux
-3. INstalation der aktuellen XCP-ng Center App via PlayOnLinux Plugin
-4. Verbindung zum XCP-ng Server via Port 80
-
-
-Installation von Wine
-~~~~~~~~~~~~~~~~~~~~~
-
-Zunächst muss Wine für das jeweils genutzte Linux-Derivat installiert werden. 
-Das Projekt ``Wine`` bietet hierzu eine Reihe an Hinweisen an. 
-Diese stehen ebenfalls für die jeweiligen Linux-Derivate zur Verfügung:
-
-- https://wiki.winehq.org/Wine_Installation_and_Configuration
-- https://wiki.winehq.org/Debian
-- https://wiki.debian.org/Wine
-- https://wiki.winehq.org/Ubuntu
-
-Hast Du für Dein Linux Wine installiert, ist nun PlayOnLinux zu installieren.
-
-Installation PlayOnLinux
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-Für die jeweiligen Linux-Derivate stehen fertige Pakete für die Installation zur 
-Verfügung. Diese finden sich inkl. den Installationshinweisen unter InstPlayOnLinux_:
-
-.. _InstPlayOnLinux: https://www.playonlinux.com/en/download.html
-
-In der Regel verfügen die Linux-Derivate bereits über eingetragene Paketquellen 
-für PlayOnLinux. Über den Download-Bereich des Projekts sind die aktuellsten Pakete 
-zu erhalten.
 
 .. hint::
 
-   Es sollte wine 4.0 (i386) mit 32-Bit Unterstützung und PlayOnLinux 4.3.4 installiert 
-   sein. PlayOnLinux soll Windows 7 simulieren.
+    Für die weitere Einrichtung von linuxmuster.net für deine Schule folge
+    der Dokumentation unter: 
+    :ref:`Linuxmuster Setup <setup>` 
 
 
-Installation von XCP-ng Center
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Für die Installation von XCP-ng Center must Du vorab eine XCP-ng Center Version
-herunterladen, die für die Installation mit PlayOnLinux vorbereitet wurde. Es handelt
-sich hierbei um einen PlayOnLinux Container, der XCP-ng Center mit allen Abhängigkeiten 
-(IE8, .NET Framework 2.0 SP2 und .NET Framework 4.7.2) enthält.
-
-.. Note::
-
-   Die aktuellste Version lädst Du vorab herunter: https://github.com/aldebaranbm/xencenter-playonlinux/releases/
-
-
-Danach rufst Du PlayOnLinux auf. Dort gehst Du im Menü auf den 
-``Menüpunkt -> Erweiterungen (Plugins) -> Untermenü PlayOnLinux Vault``.
-
-Es erscheint dann ein neues Fenster für die weitere Installation der Anwendung.
-
-.. figure:: media/42_xcp-center-linux_installation-play-on-linux.png
-   :align: center
-   :alt: PlayOnLinux Schritt 1
-
-Klicke hier auf ``Weiter``.
-
-Du gelangst zum nächsten Fenster, in dem Du angegeben kannst, ob Du eine Anwendung installieren
-oder deinstallieren möchtest.
-
-.. figure:: media/43_xcp-center-linux_installation-play-on-linux-assistant.png
-   :align: center
-   :alt: PlayOnLinux Schritt 2
-
-Wähle hier die Option ``Restore an applications...`` 
-und gehe auf ``Weiter``.
-
-Im nächsten Schritt must Du die Anwendung angeben, die zu installieren ist. 
-
-.. figure:: media/44_xcp-center-linux_installation-play-on-linux-choose-application.png
-   :align: center
-   :alt: PlayOnLinux Schritt 3
-
-Hier must Du auf ``Durchsuchen`` klicken und dann im Dateisystem den bereits
-heruntergeladenen PlayOnLinux-Container mit XCP-ng Center angeben. Die Datei 
-weist die Dateierweiterung ``.polApp`` auf.
-
-.. figure:: media/45_xcp-center-linux_installation-play-on-linux-xenxenter-polapp.png
-   :align: center
-   :alt: PlayOnLinux Schritt 4
-
-Danach klickst Du auf ``Weiter``.
-
-.. figure:: media/46_xcp-center-linux_installation-play-on-linux-installation-overview.png
-   :align: center
-   :alt: PlayOnLinux Schritt 5
-
-Es wird nochmals eine Übersicht angezeigt, mit der zu installierenden Anwendung
-und dem erforderlichen Speicherplatz.
-
-.. figure:: media/47_xcp-center-linux_installation-play-on-linux-restoring-progress.png
-   :align: center
-   :alt: PlayOnLinux Schritt 5
-
-Klicke für die Installation auf ``Weiter``.
-
-Der Installationfortschritt wird Dir angezeigt.
-
-Nach erfolgreicher Installtion siehst Du folgendes Fenster:
-
-.. figure:: media/48_xcp-center-linux_installation-play-on-linux-finished.png
-   :align: center
-   :alt: PlayOnLinux Schritt 7
-
-Gehe auf ``Weiter``. Das Fenster wird dadurch geschlossen.
-
-
-Aufruf XCP-ng Center unter PlayOnLinux
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Die zuvor installierte XCP-ng Anwendung findest Du nun unter PlayOnLinux.
-
-.. figure:: media/49_xcp-center-linux_installation-play-on-linux-center-installed.png
-   :align: center
-   :alt: PlayOnLinux Schritt 8
-
-Markiere die Anwendung und gehe links im Kontextmenü auf ``Ausführen``.
-
-Das Programm startet dann.
-
-Greife nun auf XCP-ng zu, indem zu als Server die IP + Portnummer angibst.
-Es funktioniert derzeit nur der Port 80. Ein Zugriff auf Port 443 ist derzeit 
-noch nicht möglich.
-
-.. figure:: media/50_xcp-center-linux_installation-play-on-linux-add-xcp-host.png
-   :align: center
-   :alt: XCP-Center Server hinzufügen
-
-Gebe hier die lokale IP des XCP-Hosts dann einen Doppelpunkt und die Portnummer an. 
-Z.B. ``10.0.0.200:80``
-
-.. note::
-   Es erfolgt somit kein verschlüsselter Zugriff auf den XCP-Host. Bitte unbedingt beachten !
-
-.. figure:: media/51_xcp-center-linux_logged-in.png
-   :align: center
-   :alt: XCP-Center Server hinzufügen
-
-Um später XCP-ng unter Linux direkt vom Desktop aus aufrufen zu können, kannst Du in PlayOnLinux
-XCP-ng als Anwendung in der rechten Hälfte des Fenster markieren und links dann im 
-Kontextmenü den Eintrag ``Eintrag erstellen`` auswählen.
-
-Danach findet sich auf dem Desktop der gewünschte Starter-Eintrag.
-
-
-Mögliche Fehler mit PlayOnLinux
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Sollte nach Aufruf des Programm mit PlayOnLinux ein Fehlerfenster erscheinen,
-so gibt es verschiedene Fehlerquellen.
-
-.. figure:: media/52_xcp-center-linux_possible-error.png
-   :align: center
-   :alt: PlayOnLinux Fehler 1
-
-Es ist häufiger der Fall, dass Wine in einer 64-Bit Umgebung installiert wurde und 
-nur 64-Bit Programme lauffähig sind. XCP-ng Center benötigt alelrdings 32-Bit 
-Laufzeitumgebungen für Wine.
-
-.. figure:: media/53_xcp-center-linux_possible-error-2nd.png
-   :align: center
-   :alt: PlayOnLinux Fehler 2
-
-In diesem Fall kannst Du einfach wine32 nachinstallieren, indem Du root 
-auf der Eingabekonsole für Debian - Derivate angibst:
-
-  sudo apt-get install wine32
-
-Sollten danach immer noch Fehler auftreten, so solltest Du
-die Wine-Istallation und die PlayOnLinux - Installation aktualisieren_.
-
-.. _aktualisieren: http://tipsonubuntu.com/2019/02/01/install-wine-4-0-ubuntu-18-10-16-04-14-04/
-
-Sollte es weiterhin Probleme geben, so must Du ggf. einen Rebuild erstellen. 
-Hinweise hierzu erhälst Du unter_:
-
-.. _unter: https://github.com/aldebaranbm/xencenter-playonlinux
-
-
-Xen Orchestra Appliance(XOA)
-----------------------------
+Xen Orchestra Appliance (XOA)
+-----------------------------
 
 Xen Orchestra Appliance (XOA_) bietet die Möglichkeit, die Virtualisierungsumgebung XCP-ng webbasiert 
 und plattformunabhängig zu administrieren. Die bereitgestellten Funktionen entsprechen denen des 
@@ -796,21 +571,20 @@ linuxmuster.net hat gemäß dieser eine XOA-VM zum Einsatz auf der Virtualisieru
   
    Um XOA VM nutzen zu können, muss diese zuerst unter XCP-ng importiert worden sein!
 
-
 Import der VM
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^
 
-Lade zuerst die vorbereitete XOA-VM für linuxmuster.net als ZIP-Archiv_ herunter. Entpacke dieses Archiv lokal (ca. 6 GiB) und importiere dann die VM wie bereits zuvor 
+Lade zuerst die vorbereitete XOA-VM für linuxmuster.net als ZIP-Archiv_ herunter. Entpacke dieses Archiv lokal und importiere dann die VM wie bereits zuvor 
 im Unterkapitel ``VMs importieren`` beschrieben.  
 
 .. _ZIP-Archiv: https://download.linuxmuster.net/xcp-ng/v7/latest/
 
 Anpassung der VM
-~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^
 
 Einige Einstellungen der vorkonfigurierten VM sind nach dem Import auf die eigene Virtualisierungsumgebung anzupassen. Öffne hierzu einen Webbrowser und öffne die Seite 
 http://10.0.0.4 oder https://10.0.0.4. Der PC, auf dem der Browser geöffnet wird, muss sich im Netz 10.0.0.0/16 (grünes Netz - internes LAN der linuxmuster.net) befinden,
-damit eine Verbindung möglich ist. Wählst Du den verschlüsselten Zugriff, so bestätige die Zertifikatswarnung, da ein selbst erstelltes Zertifikat für XOA ertsellt und 
+damit eine Verbindung möglich ist. Wählst du den verschlüsselten Zugriff, so bestätige die Zertifikatswarnung, da ein selbst erstelltes Zertifikat für XOA ertsellt und 
 konfiguriert wurde.
 
 Es erscheint folgende Anmeldemaske:
@@ -819,17 +593,17 @@ Es erscheint folgende Anmeldemaske:
    :align: center
    :alt: XOA Login - Schritt 1
 
-Gebe hier den User ``admin@admin.net`` mit dem Passwort ``Muster!`` ein und klicke auf ``Login``.
+Gebe hier den User ``admin@admin.net`` mit dem Passwort ``Muster!`` ein und klicke auf ``Sign in``.
 
-Nach erfolgreicher Anmeldung wirst Du darauf hingewiesen, dass Du XOA ``from Sources`` nutzt und Du daher kein Support und keine Updates erhälst.
+Nach erfolgreicher Anmeldung wirst du darauf hingewiesen, dass du XOA ``from Sources`` nutzt und du daher kein Support und keine Updates erhälst.
 
 .. figure:: media/55_xoa-vm_login-from-sources.png
    :align: center
    :alt: XOA Login Note - Schritt 2
 
-Bestätige dies, indem Du ``Ok`` klickst.
+Bestätige dies, indem du ``Ok`` klickst.
 
-Danach siehst Du das ``Welcome-Fenster``. 
+Danach siehst du das ``Welcome-Fenster``. 
 
 .. figure:: media/56_xoa-vm_first-screen.png
    :align: center
@@ -844,13 +618,13 @@ Es erscheint dann das Einstellungs-Fenster für die Server (Settings).
    :align: center
    :alt: XOA Server Settings - Schritt 4
 
-Trage den Hostnamen, die IP-Adresse ``10.0.0.200`` ein, die Du dem XCP-ng Server gegeben hast und gebe dahinter - durch einen Doppelpunkt getrennt - den Port an.
+Trage den Hostnamen, die IP-Adresse ``10.0.0.200`` ein, die du dem XCP-ng Server gegeben hast und gebe dahinter - durch einen Doppelpunkt getrennt - den Port an.
 I.d.R. ist dies Port 443, der zu nutzen ist. XCP-ng nutzt hierbei self-signed certificates. Trage den Benutzernamen des root-Benutzers von XCP-ng sowie sein Kennwort ein.
 Setze zudem den Schiebeschalter nach rechts - auf grün -, damit nicht authorisierte Zertifikate - also self-signed certificates - akzeptiert werden.
 Klicke auf ``Connect``. Es wird nun von der XOA-VM die Verbindung zum XCP-ng Host aufgebaut und gespeichert.
 
 .. note::
-   Falls Du einen XCP-ng Pool mit mehreren Servern und Speicherressourcen definiert hast, must Du hier nur den Pool-Master als Server eintragen. 
+   Falls du einen XCP-ng Pool mit mehreren Servern und Speicherressourcen definiert hast, must du hier nur den Pool-Master als Server eintragen. 
    Alle weiteren Server und Ressourcen werden dann automatisch erkannt.
 
 Ändere nun das voreingestellte Kennwort für den root-Benutzer (admin@admin.net) der XOA-VM. Klicke hierzu auf der linken Menüleiste ganz unten auf der Personensymbol.
@@ -859,18 +633,19 @@ Klicke auf ``Connect``. Es wird nun von der XOA-VM die Verbindung zum XCP-ng Hos
    :align: center
    :alt: XOA Edit My Settings - Schritt 5
 
-Danach erscheint das Kontexmenü für den Bentuzer, in dem Du das Kennwort ändern und weitere Einstellungen vornehmen kannst.
+Danach erscheint das Kontexmenü für den Bentuzer: Hier kannst du das Kennwort ändern und weitere Einstellungen vornehmen.
 
 .. figure:: media/59_xoa-vm_edit-password.png
    :align: center
    :alt: XOA Edit Password - Schritt 6
 
-Trage das bisherige Kennwort ``Muster!`` sowie zweimal Dein neunes Kennwort ein, stelle die Sprache ein und bestätige die Änderungen mit einem Klick auf ``OK``.
+Trage das bisherige Kennwort ``Muster!`` sowie zweimal dein neues Kennwort ein. 
+Stelle die Sprache ein und bestätige die Änderungen mit einem Klick auf ``OK``.
 
 SSH-Verbindung zur VM
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^
 
-Um sich erstmalig mit der XOA-VM via SSH zu verbinden, gibst Du in einem Terminal ein:
+Um sich erstmalig mit der XOA-VM via SSH zu verbinden, gibst du in einem Terminal ein:
 
 .. code::
 
@@ -880,41 +655,80 @@ Bestätige den fingerprint mit ``yes``und gebe das Kennwort ``Muster!`` ein.
 
 Gebe auf der Konsole ``passwd`` ein und ändere der Kennwort für den Benutzer ``muster``.
 
-Wechsle auf der Konsole zum root-Benutzer, indem Du als Benutzer ``muster`` den Befehl ``sudo su`` angibst.
-Du wirst nach dem Kennwort des Muster-Nutzers gefragt. Gebe das vorher geänderte Kennwort an. Du kannst nun als Benutzer ``root`` arbeiten.
+Wechsle auf der Konsole zum root-Benutzer, indem du als Benutzer ``muster`` den Befehl ``sudo su`` angibst.
+Du wirst nach dem Kennwort des Muster-Nutzers gefragt. Gebe das vorher geänderte Kennwort an, danach kannst du nun als Benutzer ``root`` arbeiten.
 
 Im Verzeichnis ``/root`` findet sich eine README-Datei mit Hinweisen zur VM sowie weitere Skripte zur Aktualisierung der XOA-Installation.
 
 Update der XOA-Installation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Um die XOA-Installation zu aktualisieren, findest Du ein Skript, das Du als root-Benutzer ausführen must.
+Um die XOA-Installation zu aktualisieren, findest du ein Skript, das du als root-Benutzer ausführen must.
 
-Rufe das Skript ``/root/xo-update.sh`` auf. Die XOA-Installation from Sources wird aktualisiert. Hierbei wird aber die von linuxmuster.net angepasste
-Konfigurationsdatei des xo-servers wieder überschrieben. Daher must Du nach dem Update noch die angepasste Konfigurationsdatei des xo-servers wieder zurückspielen. 
-Diese Datei liegt unter ``/root/config.toml.backup`` und sollte dort niemals gelöscht werden!
-Für die Rücksicherung der Konfigurationsdatei findest Du unter ``root/restore-xo-config.sh`` ein Skript, das Du als Benutzer ``root`` ausführen must. Die angepasste 
-Konfigurationsdatei wird so an den korrekten Ort zurückgeschrieben und danach wir der xo-server neu gestartet.
+Rufe das Skript ``/root/xo-update.sh`` auf. Die XOA-Installation from Sources wird aktualisiert. 
+Weitere Hinweise huerzu findest du unter ``/root/README``.
 
-Weitere Hinweise findest Du unter ``root/README``.
+.. 
+   Hierbei wird aber die von linuxmuster.net angepasste
+   Konfigurationsdatei des xo-servers wieder überschrieben. Daher must du nach dem Update noch die angepasste Konfigurationsdatei des xo-servers wieder zurückspielen. 
+   Diese Datei liegt unter ``/root/config.toml.backup`` und sollte dort niemals gelöscht werden!
+   Für die Rücksicherung der Konfigurationsdatei findest du unter ``root/restore-xo-config.sh`` ein Skript, das du als Benutzer ``root`` ausführen must. Die angepasste 
+   Konfigurationsdatei wird so an den korrekten Ort zurückgeschrieben und danach wir der xo-server neu gestartet.
 
 Backups: Backup NG
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
-Um mithilfe von XOA Backups zu definieren, wählst Du in der GUI der XOA-VM links im Menü den Eintrag ``Backup NG``. Dies ist der Eintrag, um Backups für XCP-ng zu erstellen.
-Der Menüeintrag ``Backup`` existiert aufgrund der Abwärtskompatibilität zu XenServer -Installationen.
+Um mithilfe von XOA Backups zu definieren, wählst du in der GUI der XOA-VM links im Menü den Eintrag ``Backup NG``. Dies ist der Eintrag, um Backups für XCP-ng zu erstellen.
+Der Menüeintrag ``Backup`` existiert aufgrund der Abwärtskompatibilität zu XenServer - Installationen.
 
-Grundlegende Erläuterungen zu den verschiedenen Backup-Möglichkeiten_ mit XOA findest Du im Handbuch zu XOA. Hier gibt es ebenfalls Einführungsvideos.
+Grundlegende Erläuterungen zu den verschiedenen Backup-Möglichkeiten_ mit XOA findest du im Handbuch zu XOA. Hier gibt es ebenfalls Einführungsvideos.
 
 .. _Backup-Möglichkeiten: https://xen-orchestra.com/docs/backups.html
 
-Wurden Backups definiert und wurden diese bereits ausgeführt, dann kannst Du deren Status und ggf. zusätzliche Backupinformationen aufrufen.
+Wurden Backups definiert und wurden diese bereits ausgeführt, dann kannst du deren Status und ggf. zusätzliche Backupinformationen aufrufen.
 
 Dies kann dann z.B. wie in folgender Abbildung aussehen:
 
 .. figure:: media/60_xoa-vm_ackup-ng.png
    :align: center
    :alt: XOA Backup NG - Status
+   
+Aktualisierung des XCP-ng-Hosts
+===============================
+
+Nachdem du o.g. Installationsschritte sowie den Import der VMs erfolgreich ausgeführt hast, kann der XCP-ng Host
+über die Firewall eine Internet-Verbindung aufbauen.
+Um den XCP-ng Host zu aktualisieren, benötigt der Hypervisor eine funktionierende 
+Internet-Verbindung. Dies sollte nunmehr der Fall sein.
+
+Wähle in dem Startbildschirm des XCP-ng Hosts den Menüpunt ``Local Command Shell``
+und drücke ``Enter``. Gebe als Benutzer ``root`` an und das Passwort das du 
+während der Installation vergeben hast.
+
+Danach teste zuerst, ob die Verbindung zum Internet funktioniert: 
+
+.. code::
+
+   ping 8.8.8.8
+   ping www.linuxmuster.net
+
+Erhälst Du hierauf erfolgreich Antworten, so funktioniert die Verbindung vom XCP-ng Host zum Internet sowie die Namensauflösung.
+
+Gebe nun auf der Konsole den Befehl 
+
+.. code-block:: console
+ 
+   yum update
+
+ein. XCP-ng fragt nun via Internetverbindung die Repositories ab und prüft, ob
+Aktualisierungen vorhanden sind. Falls ja, werden die zu aktualisierenden Pakete 
+angezeigt. Die Aktualisierung ist mit ``y`` zu starten.
+
+.. figure:: media/24_install-on-xcp-ng_update-xcp-ng-host.png
+   :align: center
+   :alt: Schritt 23 der Installation des XCP-ng Servers
+
+Danach ist Dein XCP-ng Host auf dem aktuellen Stand.
 
 ============================ =================
 Weiter geht es mit dem Setup |follow_me2setup|
