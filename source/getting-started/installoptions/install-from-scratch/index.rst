@@ -8,7 +8,7 @@ Install from Scratch
 
 
 In diesem Dokument findest du eine "Schritt-für-Schritt" Anleitung zur Installation der linuxmuster.net Musterlösung direkt auf der Hardware. 
-Falls du die linuxmuster.net doch virtualisiert aufsetzen möchtest, aber lieber alles selbst installierts, bist du in dieser Anleitung ebenfalls richtig.
+Falls du die linuxmuster.net doch virtualisiert aufsetzen möchtest, aber lieber alles selbst installierst, bist du in dieser Anleitung ebenfalls richtig.
 
 Lies zuerst die Abschnitte :ref:`what-is-new-label` und
 :ref:`prerequisites-label`, bevor du dieses Kapitel durcharbeitest.

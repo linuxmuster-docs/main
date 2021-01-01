@@ -4,10 +4,11 @@ Anlegen und Installieren der Firewall
 Installation der OPNsense®
 --------------------------
 
-Lade dir die iso-Datei der OPNSense® von der OPNSense®-Seite https://opnsense.org/download/ herunter.
+Lade dir die iso-Datei der OPNSense® von der Seite https://opnsense.org/download/ herunter.
 
 Nutze als Architecture ``amd64`` und als image type ``dvd`` und einen Mirror, der in deiner Nähe ist.
-Du erhältst dann eine mit bz2 komprimiertes ISO-Image. Entpacke diese die heruntergeladene Datei.
+Du erhälst dann ein mit bz2 komprimiertes ISO-Image. Entpacke die heruntergeladene Datei.
+
 Unter Windows kannst du dies z.B. mit 7-Zip durchführen.
 
 Unter Linux gibst du auf der Eingabekonsole folgenden Befehl an, der dir die Datei im gleichen Ordner entpackt:
@@ -15,8 +16,6 @@ Unter Linux gibst du auf der Eingabekonsole folgenden Befehl an, der dir die Dat
 .. code::
 
    tar -xjf <opnsense-dateiname>.iso.bz2
-      
-   
    tar -xjf OPNsense-20.7-OpenSSL-dvd-amd64.iso.bz2
 
 Brenne die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren USB-Stick an.
@@ -26,12 +25,13 @@ Starte dann OPNsense® auf dem Rechner oder in der neu angelegten VM von DVD ode
 .. hint::
 
    Willst du in einer VM installieren, so must du für die neue VM folgende Mindesteinstellungen angeben:
-   template - other install media, installation from ISO library, Boot-Mode - UEFI (Achtung: xcp-ng: MBR), 
+   Template - other install media, installation from ISO library, Boot-Mode - UEFI (Achtung: xcp-ng: Boot/MBR), 
    1 vCPU, 2 GiB RAM, storage 10 GiB, 2 NIC mit Zuordnung zu vSwitch red, green. 
    
    Achtung unter XCP-ng bricht die Installation mit o.g. Einstellungen beim Punkt ``guided installation`` ab,
-   wenn UEFI als Boot-Mode angegeben wurde. Es ist als Boot - Mode in der VM MBR auszuwählen. Bei der weiteren Installation 
+   wenn UEFI als Boot-Mode angegeben wurde. Es ist als Boot-Mode in der VM Boot/MBR auszuwählen. Bei der weiteren Installation 
    kann dann hingegen GPT/UEFI mode angegeben werden.
+   
    vgl. hierzu auch: https://xcp-ng.org/docs/guides.html#pfsense-opnsense-vm
 
 Melde dich als ``installer`` mit dem Passwort ``opnsense`` an.
@@ -59,7 +59,9 @@ Bestätige die Festplatte und wähle ``< GPT/UEFI mode>``. Jetzt wird OPNsense®
    An dieser Stelle muss als root-Passwort ``Muster!`` eingegeben werden, da später der lmn-Server beim Einrichten 
    der Firewall davon ausgeht, dass das root-Passwort ``Muster!`` ist!
 
-Starte OPNsense® zum Abschluss neu und werfe die CD aus. In der VM ändere vor dem Neustart die Boot-Reihenfolge, so dass die VM direkt von der Festplatte gestartet wird.
+Starte OPNsense® zum Abschluß neu und werfe die DVD / den USB Stcik aus. 
+Ändere in der VM vor dem Neustart die Boot-Reihenfolge, so 
+dass die VM direkt von der Festplatte gestartet wird.
 
 Der Boot-Vorgang kann schon eine Weile dauern. Vor allem, wenn der Router kein DHCP anbietet.  
 
@@ -72,25 +74,27 @@ Wenn alles geklappt hat, ist Folgendes zu sehen:
 
 Für die Konfiguration der OPNsense® brauchst du einen Rechner mit Webbrowser im LAN-Bereich der OPNsense®. Das kann ein Laptop mit Linux oder Windows sein. Achte darauf, dass er mit dem LAN-Adapter der OPNsense® verbunden ist.
 
-Prüfe je nachdem, ob du OPNsense® in eine VM oder direkt auf der Hardware (bare metal) installiert hast, ob die Zuordnung der Netzwerkkarten korrekt ist. Sollte diese nicht stimmen,
-kannst du auf der Konsole dies nach der Anmeldung mit dem Menüeintrag ``1) Assign interfaces`` anpassen.
+.. hint::
 
-Hast du auf der Konsole diesen Eintrag aufgerufen, werden dir die gefundenen Netzwerkkarten mit deren MAC-Adressen angezeigt. Achte nun darauf, dass die Netzwerkkarte mit der 
-dargestellten MAC-Adresse und der geeigneten physikalischen Verkabelung korrekt zugeordnet werden. 
+   Prüfe je nachdem, ob du OPNsense® in eine VM oder direkt auf der Hardware (bare metal) installiert hast, ob die Zuordnung der Netzwerkkarten korrekt ist. Sollte diese nicht 
+   stimmen, kannst du auf der Konsole dies nach der Anmeldung mit dem Menüeintrag ``1) Assign interfaces`` anpassen.
 
-Internes Netz  - green muss unter OPNsense® als LAN, das externe Netz - red unter OPNsense® als WAN und die weitere Netzwerkkarte z.B. für das WLAN - blau unter OPNsense® als Opt1 
-angegeben werden. Das WAN-Interface - also die externe rote Schnittstelle - wird hierbei zuerst abgefragt, danach die interne - LAN - green und danach blue / Opt1.
-
-Die Zuordnung wird auf der Konsole nochmals angezeigt und diese ist dann mit ``y`` zu bestätigen.
-
-Fahre dann wie nachstehend beschrieben mit der Konfiguration der IP-Adressen fort.
+   Hast du auf der Konsole diesen Eintrag aufgerufen, werden dir die gefundenen Netzwerkkarten mit deren MAC-Adressen angezeigt. Achte nun darauf, dass die Netzwerkkarte mit 
+   der dargestellten MAC-Adresse und der geeigneten physikalischen Verkabelung korrekt zugeordnet werden. 
+   
+   Internes Netz  - GREEN muss unter OPNsense® als LAN, das externe Netz - RED unter OPNsense® als WAN und die weitere Netzwerkkarte z.B. für das WLAN - BLUE unter 
+   OPNsense® als OPT1 angegeben werden. Das WAN-Interface - also die externe rote Schnittstelle - wird hierbei zuerst abgefragt, danach die interne - LAN - green 
+   und danach blue / Opt1.
+   
+   Die Zuordnung wird auf der Konsole nochmals angezeigt und diese ist dann mit ``y`` zu bestätigen.
+   Fahre dann wie nachstehend beschrieben mit der Konfiguration der IP-Adressen fort.
 
 Konfiguration der OPNsense®
 ---------------------------
 
 Gehe mit einem Webbrowser auf ``https://192.168.1.1``.
 
-Du erhältst zunächst eine Zertifikatswarnung, was klar ist, da OPNsense® ja ganz frisch installiert ist. 
+Du erhältst zunächst eine Zertifikatswarnung, da OPNsense® ja ganz frisch installiert ist und ein selbst erstelltes Zertifikat nutzt. 
 
 .. figure:: media/OPNS17.png
 
@@ -98,7 +102,7 @@ Akzeptiere und fahre fort.
 
 .. figure:: media/OPNS18.png
 
-Melde dich mit root und dem Passwort Muster! an. Starte den General Setup Wizard mit dem ``Next``-Knopf.
+Melde dich mit ``root`` und dem Passwort ``Muster!`` an. Starte den General Setup Wizard mit dem ``Next``-Knopf.
 
 .. figure:: media/OPNS19.png
 
@@ -192,11 +196,11 @@ Es werden dir dann wie in nachstehender Abbildung zu aktualisierende Pakete ange
 
 .. hint::
 
-   Falls du nicht ins Internet kommst, kann es an der Gateway-Einstellung liegen. Gehe auf ``System -> Gateways -> Einzeln`` und editiere deinen Gateway (WANGW).
+   Falls du nicht ins Internet kommst, kann es an der Gateway-Einstellung liegen. Gehe auf ``System -> Gateways -> Einzeln`` und editiere dein Gateway (WANGW).
    Setze einen Haken bei ``Deaktiviere Gatewayüberwachung``, speichere die Einstellung und übernimm die Änderung. Jetzt ist dein Gateway online und du kommst ins Internet.
-   Erstaunlicherweise kannst du die Gatewayüberwachung wieder aktivieren, ohne dass der Gateway offline geht.
+   Erstaunlicherweise kannst du die Gatewayüberwachung wieder aktivieren, ohne dass das Gateway offline geht.
 
-Um nun zu Aktualisierungen klicke in o.g. Fenster ``Jetzt aktualisieren``. Je nach gefundenen Aktualisierungen kann ein Neustart erforderlich sein. 
+Um nun zu aktualisieren, klicke in o.g. Fenster ``Jetzt aktualisieren``. Je nach gefundenen Aktualisierungen kann ein Neustart erforderlich sein. 
 Dies wird vor dem Update abgefragt und ist zu bestätigen.
 
 .. figure:: media/OPNS30.png
