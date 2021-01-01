@@ -12,6 +12,8 @@ Sollte es erforderlich sein, dass der Netzbereich von den Vorgaben im Setup (``1
 sind nachstehende Schritte zur Anpassung vor Aufruf des Setups mit der WebUI oder des Setups auf der Konsole 
 auf dem Server auszuführen.
 
+Dies ist ebenfalls der Fall, wenn du eine ``from scratch`` Installation durchgeführt hast.
+
 .. hint::
    Die Anpassung des Netzbereichs ist vor Aufruf des eigentlichen Setups auszuführen. Die ausgelieferten VMs
    sind bereits auf den voreingestellten Netzbereich konfiguriert, so dass jede dieser VMs mithilfe des Skript
@@ -21,9 +23,11 @@ Vorgehen
 ========
 
 Die OPNsense® ist im gewünschten Zielnetz einzurichten (z.B. 10.17.0.256/16). 
-Diese muss in allen Ubuntu VMs als Gateway angegeben worden sein. Die Ubuntu VMs können nun mithilfe 
+Diese muss für alle Server / Ubuntu-VMs als Gateway angegeben werden. Dies kann mithilfe 
 des linuxmuster-prepare Skripts (https://github.com/linuxmuster/linuxmuster-prepare) für den gewünschten 
 neuen Netzbereich (z.B. 10.17.0.0/16) vorbereitet werden.
+
+Gleiches gilt für die Vorbereitung der ``from scratch`` installierten Server.
 
 Das Skript lmn7-appliance
 -------------------------
@@ -32,10 +36,15 @@ Das Skript lmn7-appliance installiert für dich das Paket linuxmuster-base7 mit 
 
 * Lade dazu das Skript mit ``wget https://archive.linuxmuster.net/lmn7/lmn7-appliance`` herunter.
 * Mach es mit ``chmod +x lmn7-appliance`` ausführbar und
-* führe ``./lmn7-appliance -p server -u -l /dev/sdb`` aus.
-* hast du ein LVM auf dem Server eingerichtet (from scratch INstallation) dann gibst Du dieses wie folgt an: ``./lmn7-appliance -p server -u -l /dev/vg_server`` an.
+* führe ``./lmn7-appliance -p server -u -l /dev/sdb`` aus. Hierbei wird auf dem angegebenen Device ein LVM eingerichtet.
+* hast du ein LVM auf dem Server bereits eingerichtet (from scratch Installation) und dieses bereits gemountet, dann gibst du zur Installation an:
+  ``./lmn7-appliance -p server -u``
+* für weitere Hinweise zum linuxmuster-prepare Skript siehe: https://github.com/linuxmuster/linuxmuster-prepare
 
-.. hint:: Falls Du dich für das Netz der linuxmuster.net V6.2 entschieden hast, führst du statt ``./lmn7-appliance -p server -u -l /dev/sdb`` ``./lmn7-appliance -p     server -u -l /dev/sdb -n 10.16.1.1/12 -f 10.16.1.254`` aus.
+.. hint:: 
+
+   Falls Du dich für das Netz der linuxmuster.net V6.2 entschieden hast, führst du statt 
+   ``./lmn7-appliance -p server -u -l /dev/sdb`` Folgendes aus: ``./lmn7-appliance -p     server -u -l /dev/sdb -n 10.16.1.1/12 -f 10.16.1.254``
 
 Im Anschluss kann das Setup ausgeführt werden, das dann den Netzbereich ausliest und für die weitere 
 Einrichtung verwendet. 
