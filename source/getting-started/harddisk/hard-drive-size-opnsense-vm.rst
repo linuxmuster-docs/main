@@ -12,8 +12,6 @@ Aktualisieren der Festplattengrößen der OPNSense®-VM
 
 .. hint::
 
-   Diese Dokumentation ist noch nicht ganz fertig und muss getestet werden. Feedback bitte an `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_
-   
    Diesen Abschnitt musst du nur ausführen, sofern du in deinem Hypervisor die HDD-Größe der OPNSense® bereits vergrößert hast. Ansonsten kannst du bei der Einrichtung mit dem Kapitel ``Netzbereich anpassen`` fortfahren.
    
 ..
