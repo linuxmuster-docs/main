@@ -13,9 +13,6 @@ Falls du die linuxmuster.net doch virtualisiert aufsetzen möchtest, aber lieber
 Lies zuerst die Abschnitte :ref:`what-is-new-label` und
 :ref:`prerequisites-label`, bevor du dieses Kapitel durcharbeitest.
 
-Voraussetzungen
-===============
-
 Nach der Installation gemäß dieser Anleitung erhältst du eine
 einsatzbereite Umgebung bestehend aus
  
