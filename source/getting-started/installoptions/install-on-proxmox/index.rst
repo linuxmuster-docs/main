@@ -10,13 +10,13 @@
                    `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_,
                    `@maurice <https://ask.linuxmuster.net/u/Maurice>`_
 
-Proxmox ist eine OpenSource-Virtualisierungsplattform. Diese kombiniert KVM- und Container-basierte Virtualisierung und verwaltet virtuelle Maschinen, Container, Storage, virtuelle Netzwerke und Hochverfügbarkeits-Cluster übersichtlich über die zentrale Managmentkonsole.
+Proxmox ist eine OpenSource-Virtualisierungsplattform. Diese kombiniert KVM- und Container-basierte Virtualisierung und verwaltet virtuelle Maschinen, Container, Storage, virtuelle Netzwerke und Hochverfügbarkeit-Cluster übersichtlich über die zentrale Managementkonsole.
 
 Das web-basierte Verwaltungs-Interface läuft direkt auf dem Server. Zudem kann die Virtualisierungsumgebung via SSH administriert werden.
 
-Proxmox VE eignet sich für den virtuellen Betrieb von linuxmuster.net besonders, da dieser Hypervisor dem OpenSource-Konzept entspricht. Der Einsatz wird auf jeglicher Markenhardware unterstützt und es gibt zahlreiche professionelle 3rd-Party Software für Backup-Lösungen und andere Features. „NoName-Hardware“ kann hiermit ebenfalls meist verwendet werden.
+Proxmox VE eignet sich für den virtuellen Betrieb von linuxmuster.net besonders, da dieser Hypervisor dem OpenSource-Konzept entspricht. Der Einsatz wird auf jeglicher Markenhardware unterstützt und es gibt zahlreiche professionelle 3rd-Party Software für Backup-Lösungen und andere Features. „No-Name-Hardware“ kann hiermit ebenfalls meist verwendet werden.
 
-Diese Anleitung beinhaltet Angaben zu den notwendigen Systemanforderungen und Festplattenkonfigurationen, der Proxmoxinstallation und -integration sowie der anschließenden Hypervisorinstallation und -integration von Proxmox.
+Diese Anleitung beinhaltet Angaben zu den notwendigen Systemanforderungen und Festplattenkonfigurationen, der Proxmoxinstallation sowie der anschließenden Installation von Proxmox.
 
 Zusätzlich sind Beschreibungen enthalten, wie du von uns bereitgestellte Vorlagen für virtuelle Maschinen der linuxmuster-Komponenten importieren kannst.
 
@@ -101,11 +101,11 @@ Es ist für linuxmuster.net ein internes Netz (grün) und ein externes Netz (rot
 Sind zwei Netzwerkkarten im Proxmox-Host vorhanden, so ist die erste Netzwerkkarte (z.B. eth0, eno1 oder enp7s0), die zu 
 Beginn eine IP aus dem bestehenden lokalen Netz (z.B. via DSL-Router) erhalten soll, mit dem Switch zu verbinden, der an den (DSL-)Router angeschlossen ist.
 
-Die zweite Netzwerkkarte (z.B. eth1 oder enp7s1) ist dann an einen eigenen Switch anzuschliessen, ebenso wie alle Clients, die im internen Netz eingesetzt werden. 
+Die zweite Netzwerkkarte (z.B. eth1 oder enp7s1) ist dann an einen eigenen Switch anzuschließen, ebenso wie alle Clients, die im internen Netz eingesetzt werden. 
 
 Um zu Beginn den Proxmox-Host zu administrieren, ist ein Laptop mit dem Switch zu verbinden, der an den lokalen (DSL-)Router angeschlossen ist. Der Laptop erhält ebenfalls eine IP aus dem lokalen (DSL-)Netz und kann sich dann auf die zu Beginn eingerichtete IP-Adresse des Proxmox-Host auf die grafische Verwaltungsoberfläche verbinden. 
 
-.. figure:: media/install_on_proxmox-00-network_4_proxmoc_installation.png
+.. figure:: media/install-on-proxmox_00_network-4-proxmoc-installation.svg
    :align: center
    :alt: Netzwerk für die Proxmox-Installation
 
@@ -150,7 +150,7 @@ Adresse fest. Klicke auf `Weiter`.
    :alt: Schritt 5
 
 Lege die IP-Adresse des Proxmox-Host im internen Netz fest. Solltest Du intern z.B. auf dem (DSL-)Router einen
-DHCP-Server laufen haben, dann erhälst Du hier bereits eine vorausgefüllte Konfigurationsseite. Passe diese Werte nun den 
+DHCP-Server laufen haben, dann erhältst du hier bereits eine vorausgefüllte Konfigurationsseite. Passe diese Werte nun den 
 gewünschten Werten an. Der Hostname des Proxmox-Host ist hier in gewünschter Form - hier `hv01.linuxmuster.lan` -
 anzugeben.
 
@@ -178,7 +178,7 @@ Warte den Abschluss der Installation ab.
    :align: center
    :alt: Schritt 8
 
-Nach erfolgreicher Installation lasse Proxmox über `Reboot` neustarten.
+Nach erfolgreicher Installation lasse Proxmox über `Reboot` neu starten.
 
 
 Proxmox Einrichtung
@@ -201,7 +201,7 @@ Im Fenster `No valid subscription` `OK` wählen oder Fenster schließen:
 Updates ermöglichen
 -------------------
 
-Um Proxmox Updates installieren zu können, müssen in der Shell des Nodes hv01 folgende Änderungen an den Repositories vorgenommen werden. Dafür den Node im Datacenter auswählen und eine Shell öffnen.
+Um Proxmox Updates installieren zu können, müssen in der Shell des Nodes hv01 folgende Änderungen an den Repositorien vorgenommen werden. Dafür den Node im Datacenter auswählen und eine Shell öffnen.
 
 .. figure:: media/install-on-proxmox_11_open-shell.png
    :align: center
@@ -247,7 +247,7 @@ Die bisherige Netzwerkkonfiguration stellt sich wie folgt dar:
    :align: center
    :alt: Schritt 12
 
-Für die folgende Überprüfung öffnet du nochmals die Konsole auf dem Hypervisor hv01 (wie oben beschrieben) und lässt dir den Inhalt der Konfigurationdatei mittels `cat /etc/network/interfaces` anzeigen. Dort finden sich bisher folgende Eintragungen:
+Für die folgende Überprüfung öffnet du nochmals die Konsole auf dem Hypervisor hv01 (wie oben beschrieben) und lässt dir den Inhalt der Konfigurationsdatei mittels `cat /etc/network/interfaces` anzeigen. Dort finden sich bisher folgende Eintragungen:
 
 .. code::
 
@@ -317,6 +317,12 @@ Die Datei sollte nachstehende Eintragungen aufweisen. Die angezeigte IP für die
         bridge-fd 0
   #green
 
+Zur Veranschaulichung eine Grafik, die den Status der Konfiguration zeigt.
+
+.. figure:: media/install-on-proxmox_14-01-01_network-eno2.svg
+   :align: center
+   :alt: eno2 Schnittstelle hinzugefügt
+
 (Optional) Festplatten anpassen
 -------------------------------
 
@@ -347,7 +353,7 @@ Festplatte der gesamte Speicher dem Hypervisor zur Verfügung steht:
    :align: center
    :alt: Schritt 14-2
 
-Es ist zu sehen, dass die Festplatten sda (931.5G) und sdb (111.8G) vorhanden sind. Die erste Festplatte sda ist eine HDD mit 1TB Kapazität und soll nun für die VMs genutzt werden. Die zweite Fstplatte ist eine SSD auf der Proxmox selbst installiert wurde. Von dieser zweiten Platte startet dieses System automatisch Proxmox. Zudem findet sich auf `sdb3` ein sog. `LVM`. Bei der Erstinstallation wurde hier automatisch ein Bereich für die VMs eingerichtet.
+Es ist zu sehen, dass die Festplatten sda (931.5G) und sdb (111.8G) vorhanden sind. Die erste Festplatte sda ist eine HDD mit 1 TByte Kapazität und soll nun für die VMs genutzt werden. Die zweite Fstplatte ist eine SSD auf der Proxmox selbst installiert wurde. Von dieser zweiten Platte startet dieses System automatisch Proxmox. Zudem findet sich auf `sdb3` ein sog. `LVM`. Bei der Erstinstallation wurde hier automatisch ein Bereich für die VMs eingerichtet.
 
 Dieser Bereich wird im Folgenden nun gelöscht und der frei werdende PLatz auf `sdb` wird vollständig dem Proxmox-Host zugeordnet. Danach wird die Festplatte `sda` als LVM für die VM eingerichtet.
 
@@ -407,7 +413,7 @@ Danach findest Du noch folgenden Speicher:
    :align: center
    :alt: Schritt 14-7-2
 
-Die SSD `/dev/sdb` steht nun ganz für den Proxmox-Host selbst zur Verfügung.
+Die SSD `/dev/sdb` steht für den Proxmox-Host  zur Verfügung.
 
 Zweiten Datenträger vorbereiten
 +++++++++++++++++++++++++++++++
@@ -418,7 +424,7 @@ Die erste Festplatte heißt hier sda und ersetzt die pve-data-Partition, die im 
 
   Für folgende Schritte: Die Bezeichnungen vg-xxx & lv-xxx Namen solltest du an deine Festplattengrößen 
   entsprechend anpassen, die folgenden Grafiken dienen zur Orientierung: `vg-hdd-1000` eignet sich 
-  beispielsweise für ein Volume aus einer HDD mit 1 TiB Kapazität.
+  beispielsweise für ein Volume aus einer HDD mit 1 TByte Kapazität.
 
 1. Datenträger vorher partitionieren z.B mit ``fdisk /dev/sda → , g → n → w`` (über lsblk den richtigen Datenträgernamen herausfinden; in diesem Fall sda)
 
@@ -452,7 +458,7 @@ Beispiel:
    :align: center
    :alt: Schritt 14-10
 
-4. mit ``lvcreate -l 99%VG -n lv-<disk>-<size> vg-<disk>-<size>`` nun das logical volume erstellen. Hier ist die virtuelle Festplatte eine HDD mit 1 TiB Speicher, weshalb die Namen im Befehl so angepasst werden: 
+4. mit ``lvcreate -l 99%VG -n lv-<disk>-<size> vg-<disk>-<size>`` nun das logical volume erstellen. Hier ist die virtuelle Festplatte eine HDD mit 1 TByte Speicher, weshalb die Namen im Befehl so angepasst werden: 
 
 Beispiel: 
 
@@ -479,7 +485,7 @@ Beispiel:
 Datenträger graphisch als Storage in Proxmox anbinden
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-1. Im Menü `Datacenter > Storage > Add` wählt man „LVM-Thin“ aus. Im ID-Feld wird der Name des virtuellen Datenträgers angegeben. In diesem Fall ist es eine HDD mit 1 TiB Speicherkapazität, weshalb die Bezeichnung vd-hdd-1000 gewählt wird. Unter Volume Group die erstellte virtuelle Gruppe auswählen, welche hier vg-hdd-1000 ist:
+1. Im Menü `Datacenter > Storage > Add` wählt man „LVM-Thin“ aus. Im ID-Feld wird der Name des virtuellen Datenträgers angegeben. In diesem Fall ist es eine HDD mit 1 TByte Speicherkapazität, weshalb die Bezeichnung vd-hdd-1000 gewählt wird. Unter Volume Group die erstellte virtuelle Gruppe auswählen, welche hier vg-hdd-1000 ist:
 
 .. figure:: media/install-on-proxmox_15-01_add-lvm-thin.png
    :align: center
@@ -504,7 +510,7 @@ VM Templates herunterladen
 
 Fertige VM-Snapshots für Proxmox stellt linuxmuster.net auf dem eigenen Download-Server bereit. https://download.linuxmuster.net/proxmox/v7/latest/
 
-Um die Maschinen importieren zu können, müsssen diese zuerst auf den Hypervisor geladen werden. Die VMs können über die Shell von Proxmox mit dem wget-Befehl direkt heruntergeladen werden. 
+Um die Maschinen importieren zu können, müssen diese zuerst auf den Hypervisor geladen werden. Die VMs können über die Shell von Proxmox mit dem wget-Befehl direkt heruntergeladen werden. 
 
 Für eine linuxmuster.net v7 Umgebung werden die Server-VM und als Firewall die OPNsense®-VM benötigt. Optional sind zusätzlich eine OPSI-VM und eine Docker-VM für deine linuxmuster.net-Umgebung verfügbar. 
 
@@ -553,7 +559,7 @@ Die Besonderheiten zu den Archiv-Namen der VMs sind in nachstehendem Hinweis erl
 
 .. hint::
 
-   Sollte ein Proxmox-Host mit der Verion 6.2 zum Einsatz kommen, sind die einzelnen Sicherungen der VMs
+   Sollte ein Proxmox-Host mit der Version 6.2 zum Einsatz kommen, sind die einzelnen Sicherungen der VMs
    nach folgendem Muster aufgebaut:
 
    vzdump-qemu-xxx-yyyy_mm_dd-hh_mi_ss.vma.lzo
@@ -613,11 +619,6 @@ docker-VM   203   ``qmrestore vzdump-qemu-203-2020_12_19-19_43_09.vma.lzo 203 --
 
    qmrestore vzdump-qemu-200-2020_12_19-19_23_00.vma.lzo 200 --storage vd-hdd-1000 -unique 1
 
-.. 
-   figure:: media/install-on-proxmox_17_console-qmrestore.png
-   :align: center
-   :alt: Schritt 17
-
 .. code::
 
    root@hv01:~# qmrestore vzdump-qemu-200-2020_12_19-19_23_00.vma.lzo 200 --storage vd-hdd-1000 -unique 1
@@ -638,11 +639,16 @@ docker-VM   203   ``qmrestore vzdump-qemu-203-2020_12_19-19_43_09.vma.lzo 203 --
    :align: center
    :alt: Schritt 18
 
+Zur Veranschaulichung eine Grafik, die den Status nach dem Import der VM zeigt.
+
+.. figure:: media/install-on-proxmox_19-01_network-after-import.svg
+   :align: center
+   :alt: Status Netzwerk nach dem Importieren
 
 Anpassung der VM-Einstellungen vor dem ersten Starten
 =====================================================
 
-Die VMs können nun vor dem Start recht einfach auf die eigenen Bedürfnisse und Anforderungen angepasst werden. So dürften z. B. die Größen für die Festplatten für größere Schulen zu klein sein, sodass diese angepasst werden müssen. Zudem sind die Netzwerkeinstellungen zu prüfen und ggf. anzupassen.
+Die VMs können nun vor dem Start recht einfach auf die eigenen Bedürfnisse und Anforderungen angepasst werden. So dürften z. B. die Größen für die Festplatten für größere Schulen zu klein sein. Zudem sind die Netzwerkeinstellungen zu prüfen und gegebenenfalls zu berichtigen.
 
 Diese Anpassungen können in der WebUI des Proxmox-Host recht einfach vorgenommen werden. Für nachstehende Änderungen müssen die VMs heruntergefahren sein, so wie dies direkt nach dem Import der Fall ist.
 
@@ -661,15 +667,18 @@ Vorbereiten der Proxmox-Festplatten |follow_me2hd-resize|
 VM Netzwerkeinstellungen prüfen
 -------------------------------
 
-.. todo:: Grafik einfügen
+.. figure:: media/install-on-proxmox_19-01_network-after-import.svg
+   :align: center
+   :alt: Status Netzwerk nach dem Importieren
 
-Die OPNsense®-VM weist zwei Netzwerkkarten auf, wie nachstehend dargestellt:
+Die OPNsense®-VM weist zwei Netzwerkkarten auf, wie in der Grafik dargestellt.
+In der Verwaltungs-Oberfläche von Proxmox stellt sich das nachstehend dargestellt auf.
 
 .. figure:: media/install-on-proxmox_23_vm-network-overview.png
    :align: center
    :alt: Schritt 23
 
-Die Netzwerkkarte `net0` ist mit der Bridge `vmbr0` verbunden. Diese ist derzeit noch für die Verbinndung ins Intranet zuständig.
+Die Netzwerkkarte `net0` ist mit der Bridge `vmbr0` verbunden. Diese ist derzeit noch für die Verbindung ins Intranet zuständig.
 
 Die Netzwerkkarte `net1` ist mit der Bridge `vmbr1` verbunden.
 
@@ -679,7 +688,7 @@ Die Netzwerkkarte `net1` ist mit der Bridge `vmbr1` verbunden.
 
 Im nächsten Schritt wird dies geändert, so dass die VMs mit ihrer Verbindung ins Intranet (grünes Netz) an die Bridge `vmbr0` und die externe Schnittstelle der OPNsense®-VM auf die dann externe Bridge `vmbr1` angeschlossen sein wird.
 
-Für die VMs `server, opsi, docker` müssen die Einstellungen für die Netzwerkkarte ebenfalls überprüft werden.
+Für die VMs `server (opsi, docker)` müssen die Einstellungen für die Netzwerkkarte ebenfalls überprüft werden.
 Alle sollten mit ihrem `Network Device net0` mit der `bridge=vmbr0` verbunden sein.
 
 Für die endgültige Verwendung kommentierst du jetzt am besten die Netzwerk-Schnittstellen deines Promox-Host entsprechend.
@@ -712,10 +721,10 @@ Um nach der Erstinstallation und -konfiguration den Zugriff auf den Proxmox-Host
 
 Dies erledigst du mit folgenden Konfigurationsschritten:
 
-1. Ändern der Interfaces
+1. Ändern der Interfaces.
 
    Du öffnest wie zuvor beschrieben die Shell des Proxmox-Host hv01.
-   Darin editierst Du die Datei ``/etc/network/interfaces`` änderst Du die Eintragungen wie folgt:
+   Darin editierst Du die Datei ``/etc/network/interfaces`` änderst du die Eintragungen wie folgt:
 
    .. code::
 
@@ -743,7 +752,7 @@ Dies erledigst du mit folgenden Konfigurationsschritten:
             bridge-stp off
             bridge-fd 0
 
-2. Ändern des Hostnames
+2. Ändern des Hostnames.
 
    Öffne die Datei ``/etc/hosts`` und ändere diese wie folgt:
 
@@ -754,7 +763,7 @@ Dies erledigst du mit folgenden Konfigurationsschritten:
 
    IPv6 - Einträge mit `::1` oder mit `fe` und `ff` beginnend können so bleiben.
 
-3. Ändern der DNS-Auflösung
+3. Ändern der DNS-Auflösung.
 
    Öffne die Datei ``/etc/resolv.conf`` und ändere diese wie folgt:
 
@@ -765,15 +774,17 @@ Dies erledigst du mit folgenden Konfigurationsschritten:
 
    Dies ist die interne IP-Adresse der OPNsense® Firewall.
 
-4. Proxmox-Host anhalten
+4. Proxmox-Host anhalten.
 
    Zur Übernahme der Einstellungen ist der Proxmox-Host anzuhalten. (`Shutdown`)
 
 5. Die physischen Netzwerkkabel an den Netzwerk-Schnittstellen tauschen.
 
-   .. todo:: Grafik einfügen
+.. figure:: media/install-on-proxmox_25-04_network-ready.svg
+   :align: center
+   :alt: Status Netzwerk nach dem Importieren
 
-6. Client Netzwerkeinstellungen ändern
+6. Client Netzwerkeinstellungen ändern.
 
   Der Client mit dem du die Konfiguration vornimmst muss an dem Switch angeschlossen sein, den für das interne Netz (`grün`) vorgesehen hast. Die Netzwerkkonfiguration deines Clients muss du ändern:
 
@@ -781,7 +792,7 @@ Dies erledigst du mit folgenden Konfigurationsschritten:
   * MASK 255.255.0.0
   * GATEWAY & DNS 10.0.0.254
 
-Die WebUI des Proxmox-Host erreichst du absofort nun über die Adresse `https://10.0.0.20:8006`.
+Die WebUI des Proxmox-Host erreichst du ab sofort nun über die Adresse `https://10.0.0.20:8006`.
 
 Virtuelle Maschinen starten
 ===========================
@@ -800,7 +811,7 @@ Bevor du fortfährst warte ab, bis die Auslastung zurückgegangen ist.
 Nachdem dein Hypervisor läuft und die VM erfolgreich gestartet sind, muss das Setup deiner
 linuxmuster.net-Installation durchgeführt werden. 
 
-Konfiguriere zuerst die Firewall, indem Du dort die Netzwerschnittstellen korrekt zuweist und die IP-Adressen zuordnest. 
+Konfiguriere zuerst die Firewall, indem du dort die Netzwerschnittstellen korrekt zuweist und die IP-Adressen zuordnest. 
 Diese sorgt nun dafür, dass das gesamte System Zugriff auf exterene Netze / das Internet hat.
 
 Zum jetzigen Zeitpunkt hat dein Proxmox-Host keine Internet-Verbindung. Diese erhält dieser erst wieder, wenn die OPNsense®-VM eingerichtet wurde.
