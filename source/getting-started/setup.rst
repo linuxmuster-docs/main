@@ -137,7 +137,7 @@ Zusammenfassung angezeigt.
 
 .. figure:: media/summary.png
    :align: center
-   :alt: External services dialog
+   :alt: Summary
 
 .. hint::
 
@@ -149,6 +149,10 @@ URL ``https://server.linuxmuster.lan`` mit dem Benutzer
 ``global-admin`` und dem konfigurierten Passwort anmelden muss.
 Allerdings wird ein selbstsigniertes Zertifikat verwendet, das
 zuerst akzeptiert werden muss.
+
+.. figure:: media/webui7.png
+   :align: center
+   :alt: Installation Successfull
 
 	 
 Erstkonfiguration am Server
