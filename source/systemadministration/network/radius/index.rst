@@ -50,8 +50,8 @@ Analog zur Nutzung des Mail-Containers als Docker-Container ist hierzu ein FreeR
    
 .. attention::
    
-   Wenn du mithelfen möchtest diesen zu erstellen und zu betreuen, würden wir uns freuen, wenn Du Dich in unserem Forum einen Zugang erstellst und 
-   Deine Mithlfe hier anbietest: https://ask.linuxmuster.net
+   Wenn du mithelfen möchtest diesen Dpcker-Container zu erstellen und zu betreuen, würden wir uns freuen, wenn du dir in unserem Forum einen Zugang erstellst und 
+   Deine Mithilfe hier anbietest: https://ask.linuxmuster.net
    
 
 
