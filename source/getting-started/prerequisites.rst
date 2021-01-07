@@ -31,18 +31,14 @@ kann auf SD-Karte, SSD oder HDDs installiert werden. Es wird empfohlen
 folgende Hardware-Anforderungen zu erfüllen, um die Mehrzahl der
 Einsatzszenarien abzudecken:
 
-+---------------------+-------------------------------------+
-| Prozessor           | >= 1 GHz Multi-Core CPU (64 Bit)    |
-+---------------------+-------------------------------------+
-| RAM                 | >= 1 GB                             |
-+---------------------+-------------------------------------+
-|Installationsmethode | Video (VGA)                         |
-+---------------------+-------------------------------------+
-|Festplatte           | mind. 20GB, z.B. 120 GB SSD         |
-+---------------------+-------------------------------------+
-|NIC                  | mind. 2 (intern + extern),          |
-|                     | oder  3 (intern + extern + WLAN)    |
-+---------------------+-------------------------------------+
+==================== ==================================
+Prozessor            >= 1 GHz Multi-Core CPU (64 Bit)
+RAM                  >= 1 GByte
+Installationsmethode Video (VGA)
+Festplatte           mind. 20 GByte, z.B. 120 GByte SSD
+NIC                  - mind. 2 (intern + extern)
+                     - oder  3 (intern + extern + WLAN)
+==================== ==================================
 
 Weitere Hinweise zu möglichen Hardwareanforderungen bei
 unterschiedlichen Einsatzszenarien finden sich `hier
@@ -62,15 +58,13 @@ Für linuxmuster.net v7 wird als Basis ein Ubuntu Server 18.04 LTS
 eingesetzt. Es wird empfohlen folgende Hardware-Mindestanforderungen zu
 erfüllen:
 
-+---------------------+-------------------------------------+
-| Prozessor           | >= 1 GHz Multi-Core CPU (64 Bit)    |
-+---------------------+-------------------------------------+
-| RAM                 | >= 4 GB                             |
-+---------------------+-------------------------------------+
-|Festplatte System +  | - vorkonfiguriert sind 25GB + 100GB | 
-|Daten                | - mind. 500GB für Daten und Backup  |
-|                     | - empfohlen >= 1TB                  |
-+---------------------+-------------------------------------+
+========================= ===========================================
+Prozessor                 >= 1 GHz Multi-Core CPU (64 Bit)
+RAM                       >= 4 GByte
+Festplatte System + Daten - vorkonfiguriert sind 25 GByte + 100 GByte
+                          - mind. 500 GByte für Daten und Backup
+                          - empfohlen >= 1 TByte
+========================= ===========================================
 
 Docker-Host bzw. OPSI-Host auf Basis eines Ubuntu-Servers
 ---------------------------------------------------------
@@ -78,13 +72,11 @@ Docker-Host bzw. OPSI-Host auf Basis eines Ubuntu-Servers
 Es wird empfohlen, je Server folgende Hardware-Anforderungen zu
 erfüllen:
 
-+---------------------+-------------------------------------+
-| Prozessor           | >= 1 GHz Multi-Core CPU (64 Bit)    |
-+---------------------+-------------------------------------+
-| RAM                 | >= 4 GB (OPSI), >= 1 GB (Docker)    |
-+---------------------+-------------------------------------+
-|Festplatte           | 100 GB+, nach Bedarf                |
-+---------------------+-------------------------------------+
+========== ======================================
+Prozessor  >= 1 GHz Multi-Core CPU (64 Bit)
+RAM        >= 4 GByte (OPSI), >= 1 GByte (Docker)
+Festplatte 100 GB+, nach Bedarf
+========== ======================================
 
 Für eine virtuelle Installation aller obigen Maschinen müssen die
 Mindestwerte für die Hardware addiert werden.
@@ -98,15 +90,14 @@ Selbstverständlich können sowohl Daten als auch (bei Virtualisierung) die Serv
 
 So *kann* bei minimaler Ausstattung (ohne Opsi und Docker) einer mittleren Schule (ca. 500 Benutzer) ein kleiner Server oder ein gut ausgestatteter PC ausreichend sein, selbst wenn alle Server virtualisiert laufen.
 
-+---------------+-----------------+-----------------------+-----------------------+---------+----------+
-| **Schule**    | **Features**    | **Festplatten**                               | **RAM**            |
-|               |                 +-----------------------+-----------------------+---------+----------+
-|               |                 | Standard              |Empfohlen              |Standard |Empfohlen |
-+===============+=================+=======================+=======================+=========+==========+
-| mittelgroß    | minimal         | ~650GB                | 1500GB+               | 8GB     | 16GB+    |
-+---------------+-----------------+-----------------------+-----------------------+---------+----------+
-| groß          | normal          | ~1000GB               | 2000GB+               | 10GB    | 16GB+    |
-+---------------+-----------------+-----------------------+-----------------------+---------+----------+
+========== ======== ========== =========== ======== =========
+\                          Festplatten            RAM        
+---------- -------- ---------------------- ------------------
+Schule     Features Standard   Empfohlen   Standard Empfohlen
+========== ======== ========== =========== ======== =========
+mittelgroß minimal  ~650 GByte 1500+ GByte 8 GByte  16+ GByte
+groß       normal   ~1000GB    2000GB+     10GB     16GB+    
+========== ======== ========== =========== ======== =========
 
 ..
   .. hint:: 
@@ -132,61 +123,45 @@ Umfang der eingesetzten Geräte Bescheid wissen. Dementsprechend den IP-Bereich 
 IP-Bereiche
 -----------
 
-Die linuxmuster.net-Lösung kann mit unterschiedlichen IP-Bereichen
-arbeiten. Standardmäßig wird das interne Netz aus dem privaten
-IPv4-Bereich 10.0.x.x mit der 16-bit Netzmaske 255.255.0.0 eingerichtet.
-Die virtuellen Appliances sind mit diesem Netz voreingestellt.
+Die linuxmuster.net-Lösung kann mit unterschiedlichen IP-Bereichen arbeiten. Standardmäßig wird das interne Netz aus dem privaten IPv4-Bereich 10.0.x.x mit der 16-bit Netzmaske 255.255.0.0 eingerichtet. Die virtuellen Appliances sind mit diesem Netz voreingestellt.
 
-Jedoch kann man sowohl die bisher in früheren Versionen von
-linuxmuster.net verwendeten Netze (10.16.0.0/12 oder 10.32.0.0/12 
-usw.) weiterverwenden. 
+Jedoch kann man sowohl die bisher in früheren Versionen von linuxmuster.net verwendeten Netze (10.16.0.0/12 oder 10.32.0.0/12 usw.) weiterverwenden. 
 
-Sollten es zwingende Gründe erfordern, sind auch komplett andere private Adressbereiche
-realisierbar.
+Sollten es zwingende Gründe erfordern, sind auch komplett andere private Adressbereiche realisierbar.
 
 Jede Zeile der folgenden Tabelle stellt eine Möglichkeit dar.
 
-+-------------------+-----------------+------------+----------------------------------+
-| Beginn IP-Bereich | Ende IP-Bereich | Server-IP  | Üblich in                        |
-+===================+=================+============+==================================+
-| 10.0.0.0          | 10.0.255.255    | 10.0.0.1   | voreingestellt in VMs von lmn-v7 |
-+-------------------+-----------------+------------+----------------------------------+
-| 10.16.0.0         | 10.31.255.255   | 10.16.1.1  | in linuxmuster.net < 7   üblich  |
-+-------------------+-----------------+------------+----------------------------------+
-| 10.32.0.0         | 10.47.255.255   | 10.32.1.1  | in linuxmuster.net < 7   möglich |
-+-------------------+-----------------+------------+----------------------------------+
-| ...               | ...             | ...        | ...                              |
-+-------------------+-----------------+------------+----------------------------------+
-| 192.168.0.0       | 192.168.255.255 | 192.168.0.1| nicht üblich                     |
-+-------------------+-----------------+------------+----------------------------------+
+================== ================ =========== ================================
+Beginn IP-Bereich  Ende IP-Bereich  Server-IP                                   
+================== ================ =========== ================================
+10.0.0.0           10.0.255.255     10.0.0.1    voreingestellt in VMs von lmn-v7
+10.16.0.0          10.31.255.255    10.16.1.1   in linuxmuster.net < 7   üblich  
+10.32.0.0          10.47.255.255    10.32.1.1   in linuxmuster.net < 7   möglich
+...                ...              ...         ...                             
+192.168.0.0        192.168.255.255  192.168.0.1 nicht üblich                    
+================== ================ =========== ================================
 
 Bei der Neuinstallation entscheidest du dich für einen der Bereiche.
-Bei einer Migration wird empfohlen den früheren Bereich zu behalten,
-alleine schon um eine erneute Konfiguration der Netzwerkswitche zu
+
+Bei einer Migration wird empfohlen den früheren Bereich zu behalten, alleine schon um eine erneute Konfiguration der Netzwerkswitche zu
 vermeiden.
 
 Standard IP-Adressen
 --------------------
 
-Einige IP-Adressen sind standardmäßig für spezielle Server/Dienste
-vorgesehen.
+Einige IP-Adressen sind standardmäßig für spezielle Server/Dienste vorgesehen.
 
-+------------+---------------+--------------+
-| **Server** |**IP-Bereich** |**IP-Bereich**|
-|            |10.0.0.0/16    |10.16.0.0/12  |
-+============+===============+==============+
-| OPNsense®  | 10.0.0.254    | 10.16.1.254  |
-+------------+---------------+--------------+
-| Server     | 10.0.0.1      | 10.16.1.1    |
-+------------+---------------+--------------+
-| Opsi       | 10.0.0.2      | 10.16.1.2    |
-+------------+---------------+--------------+
-| Dockerhost | 10.0.0.3      | 10.16.1.3    |
-+------------+---------------+--------------+
-| XOA (*)    | 10.0.0.4      | 10.16.1.4    |
-+------------+---------------+--------------+
-| Admin-PC   | 10.0.0.10     | 10.16.1.10   |
-+------------+---------------+--------------+
+========== =========== ============
+Server     IP-Bereich  IP-Bereich
+           10.0.0.0/16 10.16.0.0/12
+========== =========== ============
+OPNsense®  10.0.0.254  10.16.1.254
+Server     10.0.0.1    10.16.1.1
+Opsi       10.0.0.2    10.16.1.2
+Dockerhost 10.0.0.3    10.16.1.3
+XOA (*)    10.0.0.4    10.16.1.4
+Admin-PC   10.0.0.10   10.16.1.10
+========== =========== ============
 
 .. hint::
 
@@ -265,11 +240,11 @@ Voraussetzungen noch folgende Hinweise:
 Hypervisoren
 ------------
 
-Die Voraussetzungen für einen virtualisierten Betrieb besteht
-natürlich darin, vorab den Hypervisor/den VM-Host installiert zu haben
-und Zugriff auf dessen Verwaltung zu haben. Wo es uns möglich ist,
-haben wir eine Anleitung dazu geschrieben, um auf die Besonderheiten
-der Schulnetzumgebung an geeigneter Stelle hinzuweisen.
+Die Voraussetzungen für einen virtualisierten Betrieb besteht natürlich darin, vorab den Hypervisor/den VM-Host installiert zu haben und Zugriff auf dessen Verwaltung zu haben. 
+
+Wo es uns möglich ist, haben wir eine Anleitung dazu geschrieben, um auf die Besonderheiten der Schulnetzumgebung an geeigneter Stelle hinzuweisen.
+
+Solltest du einen anderen Hypervisor bevorzugen, dann solltest du der Installation "from scratch" folgen.
 
 VMs - Hinweise
 --------------
