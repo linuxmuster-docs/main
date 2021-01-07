@@ -21,7 +21,7 @@ Installation eines Hypervisors geht diese Dokumentation davon aus, dass du die f
 jeweiligen Hypervisor die vorbereiteten virtuellen Machinen (VMs) importierst und danach
 das Setup initiierst.
 
-.. figure:: media/overview-installation-process_01_part1.svg
+.. figure:: media/overview-installation-process_part_01.svg
    :align: center
    :alt: Installationsvorbereitung und Start der Durchführung
 
@@ -30,7 +30,7 @@ Zweiter Teil der Installation
 
 Im zweiten Abschnitt sind die Festplatten des Hypervisor an die eigenen Anforderungen anzupassen. Diese hängen im Großen und Ganzen von der Größe der Schule ab. Maßgebend sind hier vor allem die Anzahl der Nutzer und der verschiedenen Hardware-Klassen der Client Systeme und deren Betriebssysteme.
 
-.. figure:: media/overview-installation-process_02_part2.svg
+.. figure:: media/overview-installation-process_part_02.svg
    :align: center
    :alt: Vergrößerung der Festplatten bei virtuellen Maschinen
 
@@ -40,7 +40,7 @@ Dritter Teil der Installation
 Im dritte Abschnitt der Installation sind die Netzbereiche (IP-Adressen oder / und Netzsegmentierung)
 auf die eigenen Anforderungen anzupassen und im Netz umzusetzen.
 
-.. figure:: media/overview-installation-process_03_part3.svg
+.. figure:: media/overview-installation-process_part_03.svg
    :align: center
    :alt: Installation: Abschnitt 2
 
@@ -51,7 +51,7 @@ Im vierten Abschnitt der Installation ist die Erstkonfiguration der Firewall und
 Servers vorzunehmen und Benutzer und Geräte anzulegen oder eventuell die Migration einer bestehenden v6.2 Installation durchzuführen. 
 Abschließend sind letzte Anpassungen u.a. Aufnahme der Arbeitsstationen vorzunehmen.
 
-.. figure:: media/overview-installation-process_04_part4.svg
+.. figure:: media/overview-installation-process_part_04.svg
    :align: center
    :alt: Installation: Abschnitt 3
 
