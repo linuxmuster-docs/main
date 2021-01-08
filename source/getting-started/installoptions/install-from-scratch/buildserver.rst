@@ -98,7 +98,7 @@ Wenn die Installation abgeschlossen und der Server neu gestartet ist, meldest du
    dass die VM direkt von HDD bootet.
    
 LVM - Besonderheiten
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 Hast du zuvor für die 2. HDD ein LVM eingerichtet, dann sind zur Vorbereitung noch nachstehende Schritte auszuführen:
 
@@ -228,14 +228,33 @@ Es müssen in den Paketquellen die linuxmuster.net Sources eingetragen und der S
 * Dann lädst du den key mit ``wget http://pkg.linuxmuster.net/archive.linuxmuster.net.key`` herunter.
 * Jetzt fügst du den Schlüssel mit ``apt-key add archive.linuxmuster.net.key`` hinzu.
 
-Weiteres Vorgehen
------------------
+Server auf lmn7 vorbereiten
+===========================
 
-Bei einer Installation ``from scratch`` musst du nun mit dem Skript linuxmuster-prepare alle gewünschten VMs (Server, OPSI, Docker etc.) vor dem 
-ersten Setup vorbereiten.
+Bei einer Installation ``from scratch`` musst du nun mit dem Skript ``linuxmuster-prepare`` den soeben installierten und vorbereiteten Ubuntu-Server sowie ggf. alle gewünschten VMs (OPSI, Docker) vor dem ersten Setup für linuxmuster v7 vorbereiten.
 
-Du musst also nun den Server mit linuxmuster-prepare vorbereiten und danach das Setup aufrufen.
+.. hint::
+   Die Anpassung des Netzbereichs / des Profils ist vor Aufruf des eigentlichen Setups auszuführen.
 
-=============================================== ============================
-Weiter geht es mit der Anpassung des Netzwerkes |follow_me2linux-modify_net|
-=============================================== ============================
+Das Skript lmn7-appliance
+-------------------------
+
+Das Skript lmn7-appliance installiert für dich das Paket linuxmuster-base7 mit all seinen Abhängigkeiten und es richtet die zweite Festplatte für den Serverbetrieb ein.
+
+* Lade dazu das Skript mit ``wget https://archive.linuxmuster.net/lmn7/lmn7-appliance`` herunter.
+* Mach es mit ``chmod +x lmn7-appliance`` ausführbar und
+* führe ``./lmn7-appliance -p server -u -l /dev/sdb`` aus. Hierbei wird auf dem angegebenen Device (hier also 2. Festplatte) ein LVM eingerichtet.
+
+.. hint:: 
+
+   Hast du wie zuvor beschreiben bereits ein LVM auf dem Server eingerichtet und dieses bereits gemountet, dann gibst du zur Installation    
+   folgendes an:  ``./lmn7-appliance -p server -u``
+
+Für weitere Hinweise zum linuxmuster-prepare Skript siehe: https://github.com/linuxmuster/linuxmuster-prepare
+
+Im Anschluss kann das Setup ausgeführt werden, das dann den Netzbereich ausliest und diesen für die weitere 
+Einrichtung verwendet. 
+
+======================================== ===================
+Weiter geht es mit der Erstkonfiguration  |follow_me2setup|
+======================================== ===================
