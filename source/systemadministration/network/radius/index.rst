@@ -4,7 +4,7 @@
 Netzwerkzugriff über Radius (help wanted)
 =========================================
 
-.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
 RADIUS (Remote Authentification Dial-In User Service) ist ein Client-Server Protokoll, das zur Authentifizierung, Autorisierung und 
 für das Accounting (Triple A) von Benutzern in einem Netzwerk dient.
@@ -36,22 +36,22 @@ Einsatz auf der OPNSense®
 -------------------------
 
 Derzeit unterstützt das OPNsense® - Plugin die ``Radius <-- --> AD`` Kommunikation mithilfe von ``auth_ntlm`` N I C H T. 
-Daher kann derzeit hierzu keine Dokumentation erstellt werden.
+Eine Dokumentation zur Einrichtung von Freeradius auf der OPNsense® kann daher derzeit nicht erstellt werden.
 
 Einsatz auf dem Docker-Host
 ---------------------------
 
-linuxmuster.net stellt einen (optionalen) Docker-Host bereit. Dieser ist zu installieren, wenn Freeradius auf dem Docker-Host genutzt werden soll.
+linuxmuster.net stellt einen (optionalen) Docker-Host bereit. Dieser ist vorab zu installieren, wenn Freeradius dann als Docker-Container auf dem Docker-Host genutzt werden soll.
 Analog zur Nutzung des Mail-Containers als Docker-Container ist hierzu ein FreeRADIUS-Container zu installieren.
 
 .. hint::
 
-   Diese FreeRADIUS - Container gibt es derzeit nicht.
+   Diesen FreeRADIUS - Container gibt es derzeit leider noch nicht.
    
 .. attention::
    
-   Wenn du mithelfen möchtest diesen Dpcker-Container zu erstellen und zu betreuen, würden wir uns freuen, wenn du dir in unserem Forum einen Zugang erstellst und 
-   Deine Mithilfe hier anbietest: https://ask.linuxmuster.net
+   Wenn du mithelfen möchtest diesen Docker-Container zu erstellen und zu betreuen, würden wir uns freuen, wenn du dir in unserem Forum einen Zugang einrichtest und 
+   deine Mithilfe anbietest: https://ask.linuxmuster.net
    
 
 

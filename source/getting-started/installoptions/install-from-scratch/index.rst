@@ -21,8 +21,7 @@ einsatzbereite Umgebung bestehend aus
 
 Im Laufe der Installation brauchst du einen Admin-PC. Das kann ein normaler Laptop mit Linux oder Windows als Betriebssystem sein. 
 
-Vorgehensweise
-==============
+**Vorgehensweise**
 
 * Zunächst installieren wir die Firewall OPNsense®.
 * Dann integrieren wir den Admin-PC in das Schulnetz.

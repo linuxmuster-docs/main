@@ -32,13 +32,12 @@ Gleiches gilt für die Vorbereitung der ``from scratch`` installierten Server.
 Das Skript lmn7-appliance
 -------------------------
 
-Das Skript lmn7-appliance installiert für dich das Paket linuxmuster-base7 mit all seinen Abhängigkeiten und es richtet die zweite Festplatte für den Serverbetrieb     ein.
+Das Skript lmn7-appliance installiert für dich das Paket linuxmuster-base7 mit all seinen Abhängigkeiten und es 
+richtet die zweite Festplatte für den Serverbetrieb ein.
 
 * Lade dazu das Skript mit ``wget https://archive.linuxmuster.net/lmn7/lmn7-appliance`` herunter.
 * Mach es mit ``chmod +x lmn7-appliance`` ausführbar und
 * führe ``./lmn7-appliance -p server -u -l /dev/sdb`` aus. Hierbei wird auf dem angegebenen Device ein LVM eingerichtet.
-* hast du ein LVM auf dem Server bereits eingerichtet (from scratch Installation) und dieses bereits gemountet, dann gibst du zur Installation an:
-  ``./lmn7-appliance -p server -u``
 * für weitere Hinweise zum linuxmuster-prepare Skript siehe: https://github.com/linuxmuster/linuxmuster-prepare
 
 .. hint:: 
@@ -89,16 +88,16 @@ Optionen
 |          |                                       | Bei "ubuntu" muss mit -n eine                    |
 |          |                                       | Adresse/Bitmaske angegeben werden.               |
 +----------+---------------------------------------+--------------------------------------------------+
-| -l,      | --pvdevice=<device> 	           | Pfad zum LVM-Device (nur bei Serverprofil).      |
+| -l,      | --pvdevice=<device>                   | Pfad zum LVM-Device (nur bei Serverprofil).      |
 +----------+---------------------------------------+--------------------------------------------------+
-| -f,      | --firewall=<ip> 	                   | Firewall-/Gateway-/Nameserver-Adresse            |
+| -f,      | --firewall=<ip>                       | Firewall-/Gateway-/Nameserver-Adresse            |
 |          |                                       | (Standard x.x.x 254).                            |
 +----------+---------------------------------------+--------------------------------------------------+
 | -d,      | --domain= <domain>                    | Domänenname (Standard: linuxmuster.lan).         |
 +----------+---------------------------------------+--------------------------------------------------+
-| -u,      | --unattended 	 	           | Keine Abfragen, verwende Standardwerte.          |
+| -u,      | --unattended                          | Keine Abfragen, verwende Standardwerte.          |
 +----------+---------------------------------------+--------------------------------------------------+
-| -h,      | --help 	                           | Hilfe anzeigen.                                  |
+| -h,      | --help                                | Hilfe anzeigen.                                  |
 +----------+---------------------------------------+--------------------------------------------------+
 
 Profilvorgaben
@@ -112,17 +111,17 @@ und wird der Parameter ``-l, --pvdevice=<device>`` angegeben, wird diese wie fol
 Für das LV default-school wird immer der verbleibende Rest genommen. 
 Festplattengröße muss daher mindestens 70G betragen.):
 
-+---------------+----------------------------+---------------------------+-----+ 
-|LV Name 	| LV Pfad                    | Mountpoint 	         |Größe|
-+===============+============================+===========================+=====+
-|var            | /dev/vg_srv/var 	     | /var                      | 10G |
-+---------------+----------------------------+---------------------------+-----+
-|linbo 	        | /dev/vg_srv/linbo          | /srv/linbo                | 40G |
-+---------------+----------------------------+---------------------------+-----+
-|global 	| /dev/vg_srv/global         | /srv/samba/global         | 10G |
-+---------------+----------------------------+---------------------------+-----+
-|default-school | /dev/vg_srv/default-school | /srv/samba/default-school | 40G |
-+---------------+----------------------------+---------------------------+-----+
++---------------+----------------------------+---------------------------+-------+ 
+| LV Name       | LV Pfad                    | Mountpoint                | Größe |
++===============+============================+===========================+=======+
+|var            | /dev/vg_srv/var            | /var                      |  10G  |
++---------------+----------------------------+---------------------------+-------+
+|linbo          | /dev/vg_srv/linbo          | /srv/linbo                |  40G  |
++---------------+----------------------------+---------------------------+-------+
+|global 	| /dev/vg_srv/global         | /srv/samba/global         |  10G  |
++---------------+----------------------------+---------------------------+-------+
+|default-school | /dev/vg_srv/default-school | /srv/samba/default-school |  40G  |
++---------------+----------------------------+---------------------------+-------+
 
 **opsi:** 
 
