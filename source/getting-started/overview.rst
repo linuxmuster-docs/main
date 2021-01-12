@@ -21,9 +21,10 @@ Installation eines Hypervisors geht diese Dokumentation davon aus, dass du die f
 jeweiligen Hypervisor die vorbereiteten virtuellen Machinen (VMs) importierst und danach
 das Setup initiierst.
 
-.. figure:: media/overview-installation-process_part_01.svg
+.. image:: media/overview-installation-process_part_01.svg
    :align: center
    :alt: Installationsvorbereitung und Start der Durchführung
+   :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process_part_01.svg
 
 Zweiter Teil der Installation
 +++++++++++++++++++++++++++++
@@ -33,6 +34,7 @@ Im zweiten Abschnitt sind die Festplatten des Hypervisor an die eigenen Anforder
 .. figure:: media/overview-installation-process_part_02.svg
    :align: center
    :alt: Vergrößerung der Festplatten bei virtuellen Maschinen
+   :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process_part_02.svg
 
 Dritter Teil der Installation
 +++++++++++++++++++++++++++++
@@ -43,6 +45,7 @@ auf die eigenen Anforderungen anzupassen und im Netz umzusetzen.
 .. figure:: media/overview-installation-process_part_03.svg
    :align: center
    :alt: Installation: Abschnitt 2
+   :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process_part_03.svg
 
 Vierter Teil der Installation
 +++++++++++++++++++++++++++++
@@ -54,6 +57,7 @@ Abschließend sind letzte Anpassungen u.a. Aufnahme der Arbeitsstationen vorzune
 .. figure:: media/overview-installation-process_part_04.svg
    :align: center
    :alt: Installation: Abschnitt 3
+   :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process_part_04.svg
 
 Installationsübersicht
 ++++++++++++++++++++++
@@ -63,6 +67,7 @@ Nachstehende Grafik bietet dir einen Gesamtüberblick über den Installationabla
 .. figure:: media/overview-installation-process.svg
    :align: center
    :alt: Installation: Übersicht
+   :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process.svg
 
 Nachstehend kannst du den Installationsablauf als Übersicht im PDF-Format herunterladen:
 
