@@ -19,17 +19,6 @@ und per Datei-Import einige Schüler aufgenommen. Melde dich dafür an
 der Schulkonsole als ``global-admin``, wie es in
 :ref:`login-dselma-global-admin` beschrieben wird.
 
-.. attention::
-
-   :fixme: Für alle beta-Tester: folgende Szenarien funktionieren in
-	   der Schulkonsole eventuell nicht, wenn man
-	   nicht-ASCII-Zeichen verwendet. Am besten ist es für die
-	   Aufnahme mit nicht-ASCII-Zeichen die Konsole zu verwenden
-	   (bislang undokumentiert) oder wie im nächsten Abschnitt
-	   erwähnt die Zeichenkodierung festzulegen und es zu
-	   testen. Rückmeldung im Forum willkommen, wenn es ohne
-	   Probleme funktioniert.
-
 
 Zeichenkodierung wählen
 =======================
@@ -125,12 +114,6 @@ alternativ kann die Schaltfläche `CSV LADEN` gewählt werden. Es wird
 abgefragt, welche Spalte welche Art von Daten enthält und du kannst
 das durch Umsortieren richtigstellen und mit ``SORTIERUNG
 AKZEPTIEREN`` abschließen.
-
-.. hint:: 
-
-   :fixme: Betaversion: Import über CSV im Prinzip möglich, solange
-           momentan keine UTF-8 Daten bei einem leeren System
-           verwendet werden.
 
 .. figure:: media/user-import-sortorder.png
    :align: center
