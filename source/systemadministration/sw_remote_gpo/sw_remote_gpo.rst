@@ -14,7 +14,7 @@ Zunächst sollte die Software auf einem UNC-Pfad abgelegt werden, von dem aus di
 Neue GPO erzeugen
 -----------------
 
-Melde dich an einem PC mit ``global-admin`` an und starte die ``Gruppenrichtlinienverwaltung``.
+Melde dich an einem PC mit ``global-admin`` an und starte die ``Gruppenrichtlinienverwaltung``. Mache einen Rechtsklick auf den gewünschten Raum und wähle ``Gruppenrichtlinienobjekt hier erstellen und verknüpfen``.
 
 Klappe den Baum auf bis zum gewünschten Raum. 
 
@@ -22,7 +22,6 @@ Klappe den Baum auf bis zum gewünschten Raum.
         :alt: Gruppenrichtlinienverwaltung
         :align: center
         
-Mache einen Rechtsklick auf den gewünschten Raum und wähle ``Gruppenrichtlinienobjekt hier erstellen und verknüpfen``.
 Im folgenden Fenster einen sinnvollen Namen vergeben (z.B. Software für Raum X) und mit ``OK`` bestätigen.
 
    .. image:: media/02-gpmc.png
