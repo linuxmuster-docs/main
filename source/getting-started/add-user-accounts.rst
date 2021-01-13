@@ -40,7 +40,7 @@ eine andere wie z.B. "iso8859") nicht gut funktionieren.
 
 Die Zeichencodierung kann daher festgelegt werden, wenn man die
 Kodierung der Eingabedatei kennt. Unter dem Menüpunkt
-`EINSTELLUNGEN/Schuleinstellungen` im Reiter `Zeichenkodierung` ist im
+`EINSTELLUNGEN/Schuleinstellungen` im Reiter `Listenimport` unterhalb von `Zeichenkodierung` ist im
 Beispiel auf "UTF-8" gestellt worden.
 
 .. figure:: media/settings-settings-charencoding.png
