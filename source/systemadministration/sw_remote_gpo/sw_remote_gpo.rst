@@ -40,8 +40,8 @@ Damit die neue GPO am Ziel-PC greift, muss dieser neu gestartet werden.
 bekannte Probleme:
 ------------------
 
- - Hibernate / Fastboot nicht deaktiviert
- - Netzwerk zu schnell -> LOKALE Richtlinie „auf Netzwerk warten“ setzen
+1. Hibernate / Fastboot nicht deaktiviert
 
-
+2. Die GPO wird nicht übernommen, weil die Verbindung zu schnell ist.
+In diesem Fall auf dem Ziel-PC mittels ``gpedit.msc`` die lokale GPO aktivieren: ``Computerkonfiguration\Administrative Vorlagen\System\Anmelden``
 
