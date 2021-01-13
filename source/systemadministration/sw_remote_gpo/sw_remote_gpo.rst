@@ -5,9 +5,14 @@ Softwareinstallation via GPO
 
 Voraussetzung: Windows-PC mit installierten RSAT-Tools. Siehe: https://docs.linuxmuster.net/de/latest/systemadministration/gpo/gpo.html#installation-der-rsat-remote-server-administration-tools
 
-Über GPOs können Sie drei Arten von Paketen installieren: Windows-Installationspakete mit der Dateiendung .MSI, Transformationsdateien mit der Dateiendung .MST und Patch-Dateien, die auf .MSP enden.
+Über GPOs können drei Arten von Paketen installiert werden: Windows-Installationspakete mit der Dateiendung .MSI, Transformationsdateien mit der Dateiendung .MST und Patch-Dateien, die auf .MSP enden.
 
 Software kann an Computer oder User verteilt werden. In diesem Beispiel erfolgt die Verteilung an die Computer in einem bestimmten Raum.
+
+Zunächst sollte die Software auf einem UNC-Pfad abgelegt werden, von dem aus die Installation ausgeführt werden kann. Das Server-Share ``\\server\default-school\program`` ist ungeeignet. Besser: ``\\server\sysvol\domänenname\``. Hier einen Unterordner ``Software```erstellen und die MSI-Pakete ablegen.
+
+Neue GPO erzeugen
+-----------------
 
 Melde dich an einem PC mit ``global-admin`` an und starte die ``Gruppenrichtlinienverwaltung``.
 
