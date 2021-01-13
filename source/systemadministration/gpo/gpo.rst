@@ -1,7 +1,7 @@
 Nutzung der Remote Server Administration Tools zum Anpassen der GPO
 ===================================================================
 
-.. sectionauthor:: @michael_kohls <https://ask.linuxmuster.net/u/michael_kohls>
+.. sectionauthor:: `@michael_kohls <https://ask.linuxmuster.net/u/michael_kohls>`_
 
 Das Anpassen der vom SAMBA-Server bereitgestellten GPO erfolgt von einem Windows-PC aus.
 
