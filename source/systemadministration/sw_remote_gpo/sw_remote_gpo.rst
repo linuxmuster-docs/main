@@ -52,10 +52,5 @@ bekannte Probleme:
 Software erneut verteilen
 -------------------------
 
-Wurde die Software absichtlich oder unabsichtlich mit einem lokalen Administrator auf dem Ziel-PC gelöscht, kann diese erneut verteilt werden. Dazu im Gruppenrichtlinienverwaltungs-Editor unter ``Computerkonfiguration`` -> ``Richtlinien`` -> ``Softwareeinstellungen`` -> ``Softwareinstallation`` einen Rechtsklick auf die Software machen und ``Alle Aufgaben -> Anwendung erneut bereitstellen`` auswählen.
-
-
-   .. image:: media/04-gpmc-edit.png
-        :alt: Gruppenrichtlinienverwaltungs-Editor
-        :align: center
+Wurde die Software absichtlich oder unabsichtlich mit einem lokalen Administrator auf dem Ziel-PC gelöscht, muss das Paket neu verteilt werden. Dazu im Gruppenrichtlinienverwaltungs-Editor unter ``Computerkonfiguration`` -> ``Richtlinien`` -> ``Softwareeinstellungen`` -> ``Softwareinstallation`` einen Rechtsklick auf die Software machen und ``Alle Aufgaben -> Entfernen`` wählen. Anschließend das Paket wieder neu hinzufügen.
 
