@@ -66,20 +66,6 @@ Der Knopf `Speichern` am unteren Ende des Fensters fügt die Lehrer
 noch nicht hinzu, testet aber auf eventuelle Eingabefehler und
 Inkonsistenzen. 
 
-.. hint::
-
-   :fixme: Betaversion: In der Betaversion (Stand: 17.9.2019) ist auch das
-	   Geburtsdatum des Lehrers noch der Konsistenzprüfung von Schülern
-	   unterzogen, weswegen man kein zu weit zurückliegendes Geburtsdatum
-	   einstellen kann. Wähle doch (auch aus Datenschutzgründen) das
-	   heutige Datum.
-
-.. hint::
-
-   :fixme: Betaversion: Nach Eingabe eines inkonsistenten Datums oder
-	   ungültigen Zeichenkette solltest du die Zeile noch einmal löschen,
-	   speichern und von vorne anfangen.
-
 Am Ende der Eingabe aller hinzuzufügenden Lehrer drückst du `Speichern
 & Prüfen`. Der folgende Dialog zeigt in der Übersicht an, was getan
 wird und kann im Reiter `Hinzuzufügen` überprüft werden, welche Lehrer
