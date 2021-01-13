@@ -20,14 +20,14 @@ Melde dich an einem PC mit ``global-admin`` an und starte die ``Gruppenrichtlini
         :alt: Gruppenrichtlinienverwaltung
         :align: center
         
-Nun muss die neue GPO noch bearbeitet werden. Mache dazu einen Rrchtsklick darauf und wähle ``Bearbeiten``. Der Gruppenrichtlinienverwaltungs-Editor öffnet sich.
+Nun muss die neue GPO noch bearbeitet werden. Mache dazu einen Rerchtsklick darauf und wähle ``Bearbeiten``.
 
    .. image:: media/02-gpmc.png
         :alt: Gruppenrichtlinienverwaltung
         :align: center
 
 
-Gehe zu: ``Computerkonfiguration`` -> ``Richtlinien`` -> ``Softwareeinstellungen`` -> ``Softwareinstallation``
+Der Gruppenrichtlinienverwaltungs-Editor öffnet sich. Gehe zu: ``Computerkonfiguration`` -> ``Richtlinien`` -> ``Softwareeinstellungen`` -> ``Softwareinstallation``
 
    .. image:: media/03-gpmc-edit.png
         :alt: Gruppenrichtlinienverwaltungs-Editor
