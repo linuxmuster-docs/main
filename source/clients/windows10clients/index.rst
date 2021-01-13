@@ -377,7 +377,7 @@ f) um die Datei nun in den richtigen Ordner zu kopieren, den Befehl ``mv /srv/li
 
 g) mit Enter bestätigen; nun wurde die Datei übertragen
 
-h) Putty schließen Windows 10 LINBO Basis Image
+h) Putty schließen 
 
 2. auf dem PC im Explorer nun das Netzlaufwerk des Servers öffnen, indem Sie in der Leiste oben ``\\server`` eingeben:
 
