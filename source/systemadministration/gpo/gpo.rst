@@ -15,7 +15,7 @@ Ab Version 1809 sind die RSAT ein optionales Feature. Die Installation erfolgt �
 
 Verwendung der Gruppenrichtlinienverwaltung
 -------------------------------------------
-Starten Sie die Gruppenrichtlinienverwaltung durch Eingabe von ``gpmc.mmc``.
+Falls noch nicht geschehen, melden Sie sich mit einem Domänenbenutzerkonto, welches zur Gruppe der Administratoren gehört, am Computer an. Zum Beispiel als global-admin. Starten Sie die Gruppenrichtlinienverwaltung durch Eingabe von ``gpmc.mmc``.
 
 .. image:: media/01-gpmc.png
   :alt: GPMC
