@@ -32,7 +32,7 @@ Im Gruppenrichtlinienverwaltungs-Editor können nun Anpassungen der GPO vorgenom
 Beispiel für Änderung der Laufwerksbeschriftung
 -----------------------------------------------
 
-Die Netzlaufwerke unter Windows werden mit Ausnahme des Homelaufwerks per GPO eingebunden. Wenn statt die Beschriftung deutsch statt englisch sein soll oder der Laufwerksbuchstabe geändert werden soll kann das unter ``Benutzerkonfiguration`` -> ``Einstellungen`` -> ``Laufwerkszuordnungen`` geändert werden:
+Die Netzlaufwerke unter Windows werden mit Ausnahme des Homelaufwerks per GPO eingebunden. Wenn z.B. die Beschriftung deutsch statt englisch sein soll oder der Laufwerksbuchstabe geändert werden soll kann das unter ``Benutzerkonfiguration`` -> ``Einstellungen`` -> ``Laufwerkszuordnungen`` geändert werden:
 
 .. image:: media/03-share-umbenennen.png
   :alt: GPMC
