@@ -49,3 +49,13 @@ bekannte Probleme:
 
 2) Die GPO wird nicht übernommen, weil die Verbindung zu schnell ist. In diesem Fall auf dem Ziel-PC mittels ``gpedit.msc`` die lokale GPO aktivieren: ``Computerkonfiguration\Administrative Vorlagen\System\Anmelden``
 
+Software erneut verteilen
+-------------------------
+
+Wurde die Software absichtlich oder unabsichtlich mit einem lokalen Administrator auf dem Ziel-PC gelöscht, kann diese erneut verteilt werden. Dazu im Gruppenrichtlinienverwaltungs-Editor unter ``Computerkonfiguration`` -> ``Richtlinien`` -> ``Softwareeinstellungen`` -> ``Softwareinstallation`` einen Rechtsklick auf die Software machen und ``Alle Aufgaben -> Anwendung erneut bereitstellen`` auswählen.
+
+
+   .. image:: media/04-gpmc-edit.png
+        :alt: Gruppenrichtlinienverwaltungs-Editor
+        :align: center
+
