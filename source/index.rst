@@ -92,6 +92,7 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   systemadministration/printer/index
   systemadministration/schoolconsole/index
   systemadministration/gpo/gpo
+  systemadministration/sw-remote-gpo/sw-remote-gpo
 
 .. toctree::
   :maxdepth: 2

@@ -19,17 +19,6 @@ und per Datei-Import einige Schüler aufgenommen. Melde dich dafür an
 der Schulkonsole als ``global-admin``, wie es in
 :ref:`login-dselma-global-admin` beschrieben wird.
 
-.. attention::
-
-   :fixme: Für alle beta-Tester: folgende Szenarien funktionieren in
-	   der Schulkonsole eventuell nicht, wenn man
-	   nicht-ASCII-Zeichen verwendet. Am besten ist es für die
-	   Aufnahme mit nicht-ASCII-Zeichen die Konsole zu verwenden
-	   (bislang undokumentiert) oder wie im nächsten Abschnitt
-	   erwähnt die Zeichenkodierung festzulegen und es zu
-	   testen. Rückmeldung im Forum willkommen, wenn es ohne
-	   Probleme funktioniert.
-
 
 Zeichenkodierung wählen
 =======================
@@ -40,7 +29,7 @@ eine andere wie z.B. "iso8859") nicht gut funktionieren.
 
 Die Zeichencodierung kann daher festgelegt werden, wenn man die
 Kodierung der Eingabedatei kennt. Unter dem Menüpunkt
-`EINSTELLUNGEN/Schuleinstellungen` im Reiter `Zeichenkodierung` ist im
+`EINSTELLUNGEN/Schuleinstellungen` im Reiter `Listenimport` unterhalb von `Zeichenkodierung` ist im
 Beispiel auf "UTF-8" gestellt worden.
 
 .. figure:: media/settings-settings-charencoding.png
@@ -65,20 +54,6 @@ aufgenommen werden.
 Der Knopf `Speichern` am unteren Ende des Fensters fügt die Lehrer
 noch nicht hinzu, testet aber auf eventuelle Eingabefehler und
 Inkonsistenzen. 
-
-.. hint::
-
-   :fixme: Betaversion: In der Betaversion (Stand: 17.9.2019) ist auch das
-	   Geburtsdatum des Lehrers noch der Konsistenzprüfung von Schülern
-	   unterzogen, weswegen man kein zu weit zurückliegendes Geburtsdatum
-	   einstellen kann. Wähle doch (auch aus Datenschutzgründen) das
-	   heutige Datum.
-
-.. hint::
-
-   :fixme: Betaversion: Nach Eingabe eines inkonsistenten Datums oder
-	   ungültigen Zeichenkette solltest du die Zeile noch einmal löschen,
-	   speichern und von vorne anfangen.
 
 Am Ende der Eingabe aller hinzuzufügenden Lehrer drückst du `Speichern
 & Prüfen`. Der folgende Dialog zeigt in der Übersicht an, was getan
@@ -139,12 +114,6 @@ alternativ kann die Schaltfläche `CSV LADEN` gewählt werden. Es wird
 abgefragt, welche Spalte welche Art von Daten enthält und du kannst
 das durch Umsortieren richtigstellen und mit ``SORTIERUNG
 AKZEPTIEREN`` abschließen.
-
-.. hint:: 
-
-   :fixme: Betaversion: Import über CSV im Prinzip möglich, solange
-           momentan keine UTF-8 Daten bei einem leeren System
-           verwendet werden.
 
 .. figure:: media/user-import-sortorder.png
    :align: center
