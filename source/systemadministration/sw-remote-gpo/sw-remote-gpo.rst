@@ -9,7 +9,7 @@ Voraussetzung: Windows-PC mit installierten RSAT-Tools. Siehe: https://docs.linu
 
 Software kann an Computer oder User verteilt werden. In diesem Beispiel erfolgt die Verteilung an die Computer in einem bestimmten Raum.
 
-Zunächst sollte die Software auf einem UNC-Pfad abgelegt werden, von dem aus die Installation ausgeführt werden kann. Das Server-Share ``\\server\default-school\program`` ist ungeeignet. Besser: ``\\server\sysvol\domänenname\``. Hier einen Unterordner ``Software```erstellen und die MSI-Pakete ablegen.
+Zunächst sollte die Software auf einem UNC-Pfad abgelegt werden, von dem aus die Installation ausgeführt werden kann. Das Server-Share ``\\server\default-school\program`` ist ungeeignet. Besser: ``\\server\sysvol\domänenname\``. Hier einen Unterordner ``Software`` erstellen und die MSI-Pakete ablegen.
 
 Neue GPO erzeugen
 -----------------
