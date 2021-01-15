@@ -66,7 +66,7 @@ Daten auswählen und  das Austeilen anstoßen.
 .. figure:: media/webui-teacher-session-upload.png
 
 Die ausgeteilten Daten landen nun als Kopien im Ordner
-``transfer\Lehrername-Kursname``der entsprechenden Schüler.
+``transfer\Lehrername-Kursname`` der entsprechenden Schüler.
 
 Die Schüler speichern ihre Daten ebenso im Ordner ``transfer\Lehrername-Kursname``.
 
