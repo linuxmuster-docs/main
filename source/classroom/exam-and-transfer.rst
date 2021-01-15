@@ -72,7 +72,7 @@ Die Schüler speichern ihre Daten ebenso im Ordner ``transfer\Lehrername-Kursnam
 
 Der Lehrer hat nun während dieser Phase die Möglichkeit die Daten
 einzusammeln. Dabei gibt es die Variante, die Daten zu kopieren oder
-einzusammeln (und damit auf Benutzerseite zu löschen). Die eingesammelten Daten findet man im Ordner ``transfer\collected\Zeitstempel-Kursname```
+einzusammeln (und damit auf Benutzerseite zu löschen). Die eingesammelten Daten findet man im Ordner ``transfer\collected\Zeitstempel-Kursname``.
 
 .. figure:: media/webui-teacher-session-collect.png
 
