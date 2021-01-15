@@ -65,14 +65,14 @@ Daten auswählen und  das Austeilen anstoßen.
 
 .. figure:: media/webui-teacher-session-upload.png
 
-Die ausgeteilten Daten landen nun als Kopien im
-``transfer``-Verzeichnis der entsprechenden Schüler.
+Die ausgeteilten Daten landen nun als Kopien im Ordner
+``transfer\Lehrername-Kursname``der entsprechenden Schüler.
 
-Die Schüler speichern ihre Daten ebenso im ``transfer``-Ordner.
+Die Schüler speichern ihre Daten ebenso im Ordner ``transfer\Lehrername-Kursname``.
 
 Der Lehrer hat nun während dieser Phase die Möglichkeit die Daten
 einzusammeln. Dabei gibt es die Variante, die Daten zu kopieren oder
-einzusammeln (und damit auf Benutzerseite zu löschen).
+einzusammeln (und damit auf Benutzerseite zu löschen). Die eingesammelten Daten findet man im Ordner ``transfer\collected\Zeitstempel-Kursname```
 
 .. figure:: media/webui-teacher-session-collect.png
 
