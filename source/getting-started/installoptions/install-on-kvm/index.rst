@@ -620,7 +620,7 @@ Optional: Umstellung des Netzbereichs
 Wer einen anderen Netzbereich als ``10.0.0.0/16`` im internen Netzwerk
 haben möchte, muss auch hier die IP-Adresse der Firewall
 ändern. Beispielhaft wird die Änderung in den beliebten bisherigen
-Netzbereich ``10.16.1.0/12`` vollzogen.
+Netzbereich ``10.16.0.0/12`` vollzogen.
 
 Die relevanten Zeilen sind:
 
@@ -890,7 +890,7 @@ Optional: Umstellung des Netzbereichs
 Wer einen anderen Netzbereich als ``10.0.0.0/16`` im internen Netzwerk
 haben möchte, muss auch hier die IP-Adresse des Servers
 ändern. Beispielhaft wird die Änderung in den beliebten bisherigen
-Netzbereich ``10.16.1.0/12`` vollzogen.
+Netzbereich ``10.16.0.0/12`` vollzogen.
 
 Ersetze die Adresse ``10.0.0.1/16`` in der netplan-Konfiguration durch
 ``10.16.1.1/16``, das Gateway und die Nameserver-IP-Adresse durch die
