@@ -171,11 +171,11 @@ Richtet Dockerhostprofil wie folgt ein:
  
 .. code::  
 
-   lmn7-appliance -p ubuntu -t testhost -n 10.16.1.10/12
+   lmn7-appliance -p ubuntu -t testhost -n 10.16.0.10/12
 
 Richtet die Appliance wie folgt ein:
  - Hostname testhost,
- - IP/Bitmask 10.16.1.10/12,
+ - IP/Bitmask 10.16.0.10/12,
  - Domänenname linuxmuster.lan,
  - Gateway/DNS 10.16.1.254
 
