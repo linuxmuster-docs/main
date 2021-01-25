@@ -22,7 +22,7 @@ Dies ist ebenfalls der Fall, wenn du eine ``from scratch`` Installation durchgef
 Vorgehen
 ========
 
-Die OPNsense® ist im gewünschten Zielnetz einzurichten (z.B. 10.17.0.256/16). 
+Die OPNsense® ist im gewünschten Zielnetz einzurichten (z.B. 10.17.0.254/16). 
 Diese muss für alle Server / Ubuntu-VMs als Gateway angegeben werden. Dies kann mithilfe 
 des linuxmuster-prepare Skripts (https://github.com/linuxmuster/linuxmuster-prepare) für den gewünschten 
 neuen Netzbereich (z.B. 10.17.0.0/16) vorbereitet werden.
