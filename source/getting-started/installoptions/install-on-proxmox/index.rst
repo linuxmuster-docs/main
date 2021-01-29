@@ -212,7 +212,7 @@ Folgende Befehle müssen der Reihe nach ausgeführt werden:
 .. code::
 
    sed -i -e 's/^/#/' /etc/apt/sources.list.d/pve-enterprise.list
-   echo deb http://download.proxmox.com/debian buster pve-no-subscription" >> /etc/apt/sources.list.d/pve-no-subscription.list
+   echo "deb http://download.proxmox.com/debian buster pve-no-subscription" >> /etc/apt/sources.list.d/pve-no-subscription.list
 
 
 .. hint:
