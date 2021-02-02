@@ -374,11 +374,11 @@ vergebene IP-Adresse des XCP-Hosts sowie die Benutzerdaten an.
 Netzwerk einrichten
 ^^^^^^^^^^^^^^^^^^^
 
-Jetzt muss das Netzwerk eingerichtet werden. Notiere Dir hierzu die Bezeichnungen
+Jetzt muss das Netzwerk eingerichtet werden. Notiere dir hierzu die Bezeichnungen
 und MAC-Adressen der eingebauten Netzwerkkarten. Diese findest du unter der Reiterkarte ``NICs``.
 Die Netzwerkkarte, die die Verbindung zum Internet übernehmen soll, wird später dem Netzwerk ``Red``, 
 diejenige für das interne Schulungsnetz dem Netzwerk ``Green`` und die dritte Netzwerkkarte 
-für die Steuerung des WLAN dem Netzwerk ``Blue`` zugeordnet.
+für die Steuerung des WLAN dem Netzwerk ``Blue`` zugeordnet - sofern diese überhaupt vorhanden ist.
 
 Damit dies korrekt erfolgt, ist es wichtig zu wissen, wie NIC 0,1,2 physikalisch angeschlossen sind
 und welche MAC-Adressen diese aufweisen. Anhand der Informationen erfolgt dann im folgenden Schritt
@@ -390,12 +390,12 @@ Wähle nun für den XCP-ng-Host die Reiterkarte ``Networking`` aus.
    :align: center
    :alt: 4. Teil: Netzwerke einrichten
 
-Wähle das erste Netwerk ``Network 0`` aus, prüfe die Zuordnung der Netzwerkkarte. 
-Es sollte diejenige zugewiesen werden, die die Verbindung in das interne Netz steuert.
-Klicke dann auf ``Properties`` und ändere den Namen für das Netzwerk in ``GREEN``.
+Wähle das erste Netwerk ``Network 0`` aus, prüfe die Zuordnung der Netzwerkkarte (MAC-Adresse und physikalische Verkabelung beachten). 
+Es sollte diejenige NIC diesem vSwitch zugewiesen sein, die die Verbindung in das interne Netz steuert. In der Abb. ist dies NIC0, die dem Network0 zugeordnet ist. Der Name des vSwitches Network0 wird nun geändert. 
+Klicke dazu auf ``Properties`` und ändere den Namen für das Netzwerk in ``Green``.
 
 Führe diese Schritte ebenfalls für die weiteren Netze (BLUE - WLAN Netz und RED - externes Netz) 
-aus und ändere die Namen auf ``BLUE`` und ``GREEN``.
+aus und ändere die Namen auf ``BLUE`` und ``RED``. In der Abb. ist NIC1 dem vSwitch Network1 zugeordnet und so verkabelt, dass hiermit das WLAN angesteuert wird, so dass dieses nun mit dem Namen ``Blue`` anzugeben ist. Network2 wird in diesem Beispiel dann zu ``Red``.
 
 
 VMs importieren
