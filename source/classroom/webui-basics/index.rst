@@ -267,12 +267,12 @@ Hier werden alle Drucker aufgelistet. Durch Anklicken werden weitere Information
 Projekte
 --------
 
-Hier werden alle Projekte aufgelistet. 
-Projekte unterscheiden sich von Kursen: 
-- Mehrere Lehrer können in eine Projektgruppe aufgenommen werden. 
-- Projekte verfügen über eigene Tauschverzeichnisse
-- Projekte können wiederverwendet werden.
-- Unterrichtssteuerung (Passwörter ändern, Internet sprerren, etc.) sind nicht möglich
+Hier werden alle Projekte aufgelistet. Projekte unterscheiden sich von Kursen: 
+
+* Mehrere Lehrer können in eine Projektgruppe aufgenommen werden. 
+* Projekte verfügen über eigene Tauschverzeichnisse
+* Projekte können wiederverwendet werden.
+* Unterrichtssteuerung (Passwörter ändern, Internet sprerren, etc.) ist nicht möglich
 
 **Projekt anlegen**: Über
 
