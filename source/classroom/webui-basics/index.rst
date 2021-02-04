@@ -262,12 +262,17 @@ dazugehörigen Schüler.
 Drucker
 -------
 
-Hier werden alle Drucker aufgelistet. Durch Anklicken werden weitere Informationen angezeigt.
+Hier werden alle Drucker aufgelistet. Durch Anklicken werden weitere Informationen angezeigt. Ein Auswählen ist nur erforderlich, wenn man den Drucker auch außerhalb des zugehörigen Raumes nutzen möchte.
 
 Projekte
 --------
 
-Hier werden alle Projekte aufgelistet.
+Hier werden alle Projekte aufgelistet. 
+Projekte unterscheiden sich von Kursen: 
+- Mehrere Lehrer können in eine Projektgruppe aufgenommen werden. 
+- Projekte verfügen über eigene Tauschverzeichnisse
+- Projekte können wiederverwendet werden.
+- Unterrichtssteuerung (Passwörter ändern, Internet sprerren, etc.) sind nicht möglich
 
 **Projekt anlegen**: Über
 
