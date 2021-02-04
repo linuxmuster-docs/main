@@ -3,7 +3,8 @@
 ============================
 
 .. sectionauthor:: `@Thomas <https://ask.linuxmuster.net/u/Thomas>`_,
-		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_
+		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
+		   `@michael_kohls <https://ask.linuxmuster.net/u/michael_kohls>`_
 
 
 Zugriff über einen Proxy
@@ -50,3 +51,9 @@ z.B. für einen Admin-PC oder für einen Masterclient verwendet werden.
    :align: center
    :alt: Edit the alias NoProxy
 
+Entfernen nicht benötigter IP
+=============================
+
+Während der Installation wurde das "NoProxy"-Alias automatisch mit den IP-Adressen ``10.0.0.1 - 10.0.0.10`` bzw. bei ``do-it-like-babo`` mit den IP-Adressen ``10.16.1.1 - 10.16.1.3`` und ``10.16.0.1 - 10.16.0.10`` angelegt. Normalerweise werden nicht alle für den Server, die Dockerhosts und evtl. Admin-PC benötigt.
+
+Als letzter Schritt vor dem Installationsende empfiehlt es sich, alle nicht dauerhaft benötigten IP-Adressen aus dem "NoProxy"-Alias zu entfernen. Hintergrund: Der Internetzugriff wird grundsätzlich über den Proxy geregelt. Gibt es unbenutzte IP-Adressen im "NoProxy"-Alias könnten diese unbefugt verwendet werden, um permanenten und ungefilterten Internetzugang zu erlangen.
