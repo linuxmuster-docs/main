@@ -3,7 +3,8 @@
 ============================
 
 .. sectionauthor:: `@Thomas <https://ask.linuxmuster.net/u/Thomas>`_,
-		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_
+		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
+		   `@michael_kohls <https://ask.linuxmuster.net/u/michael_kohls>`_
 
 
 Zugriff über einen Proxy
