@@ -1,8 +1,10 @@
 linuxmuster.net documentation
 #############################
 
-.. image:: https://travis-ci.org/linuxmuster-docs/main.svg?branch=master
-    :target: https://travis-ci.org/linuxmuster-docs/main
+.. image:: https://github.com/linuxmuster-docs/main/workflows/VerifyDocs/badge.svg
+    :target: https://github.com/linuxmuster-docs/main/workflows/VerifyDocs/badge.svg
+    :alt: Documentation Build Status
+
 
 .. image:: http://readthedocs.org/projects/linuxmuster/badge/?version=latest
     :target: http://docs.linuxmuster.net/de/latest/?badge=latest
