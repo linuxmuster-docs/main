@@ -341,7 +341,7 @@ und insbesondere die vorkonfigurierten VMs einfach importieren.
 Zudem kann der XCP-ng-Host ebenfalls ``web-basiert administriert`` werden. Dies erfolgt mithilfe 
 der Anwendung ``XenOrchestra (XOA - Xen Orchestra Application)``. linuxmuster.net stellt hierfür 
 ebenfalls eine vorkonfigurierte VM mit einer installierten XOA App zur Verfügung. XOA wurde
-hier "from stratch" installiert und an die lmn7 angepasst. Die Nutzung von XOA ist der von 
+hier "from scratch" installiert und an die lmn7 angepasst. Die Nutzung von XOA ist der von 
 XCP-ng empfohle Weg der Administration und bietet im Produktivbetrieb viele Vorteile wie z.B.
 die Eirichtung und Automatisierung von Backups / Snapshots.
 
