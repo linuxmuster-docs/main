@@ -1,4 +1,6 @@
- .. include:: /guided-inst.subst
+.. include:: /guided-inst.subst
+
+.. _getting-started-label: 
 
 Das weitere Vorgehen
 ====================
@@ -7,19 +9,21 @@ Nachdem du entschieden hast, ob und wie du eine Virtualisierung
 einsetzt, beginnst du mit Installation der Virtualisierung nach einer
 der oben beschriebenen Anforderungen der einzelnen Hypervisoren in dieser Dokumentation.
 
-=========================== ===================
-Virtualisierung mit Proxmox |follow_me2proxmox|
-Virtualisierung mit XCP-ng  |follow_me2xcp-ng|
-Virtualisierung mit KVM     |follow_me2kvm|
-=========================== ===================
++--------------------------------------------------------------------+-------------------------------------------+
+| Virtualisierung mit Proxmox                                        | |follow_me2proxmox|                       |
++--------------------------------------------------------------------+-------------------------------------------+
+| Virtualisierung mit KVM                                            | |follow_me2kvm|                           |
++--------------------------------------------------------------------+-------------------------------------------+
+| Virtualisierung mit XCP-ng                                         | |follow_me2xcp-ng|                        |
++--------------------------------------------------------------------+-------------------------------------------+
 
 Alternativ installierst du von Grund auf die Serverbetriebssysteme
 *Ubuntu Server* und *OPNsense®* direkt auf der Hardware oder innerhalb
 deiner Virtualisierungslösung.
 
-=========================== ===================
-Alternative Installationen  |follow_me2scratch|
-=========================== ===================
++--------------------------------------------------------------------+-------------------------------------------+
+| Alternative Installationen                                         | |follow_me2scratch|                       |
++--------------------------------------------------------------------+-------------------------------------------+
 
 ..
   Checkliste

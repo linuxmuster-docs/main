@@ -1,12 +1,25 @@
-.. _sitename-label:
+.. include:: /guided-inst.subst
+
+.. _sitename-template-label:
 
 ==================
 Kapitelüberschrift
 ==================
 
+.. sectionauthor:: `@Name des Autors in ask <https://ask.linuxmuster.net/u/Dein_Name>`_
+
+.. hint:: Bemerkungen zum Inhalt der Seite
+
+   * ...
+
+.. todo:: Inhalt ergänzen
+          ...
+          Wenn fertig hint und todo entfernen
+
+...
 
 Template für den Inhalt einer noch leeren Seite
-----------------------------------------------------------------
+-----------------------------------------------
 
 Sicherlich ist der Inhalt dieser Seite nicht das was du gesucht und erwartest hast. Dieser Part der Dokumentation ist leider noch nicht mit Informationen gefüllt.
 
@@ -35,3 +48,27 @@ Also wir würden uns freuen, wenn du uns unterstützen würdest.
 Wie immer bei linuxmuster.net niemand ist bei uns allein.
 Für Fragen einfach einen Post an die im ersten Punkt genannten Adressen. (E-Mail oder Forum) 
 
+Muster für Tabelle:
+
+====== ===== ===== =======
+\          XOR
+--------------------------
+\      Input       Output
+------ ----------- -------
+Lfd-Nr A     B     A xor B     
+====== ===== ===== =======
+1      0     0     0
+2      0     1     1
+3      1     0     1
+4      1     1     0
+====== ===== ===== =======
+
+Muster für Verlinkung:
+
++--------------------------------------------------------------------+-------------------------------------------+
+| Virtualisierung mit Proxmox                                        | |follow_me2proxmox|                       |
++--------------------------------------------------------------------+-------------------------------------------+
+| Virtualisierung mit XCP-ng                                         | |follow_me2xcp-ng|                        |
++--------------------------------------------------------------------+-------------------------------------------+
+| Virtualisierung mit KVM                                            | |follow_me2kvm|                           |
++--------------------------------------------------------------------+-------------------------------------------+

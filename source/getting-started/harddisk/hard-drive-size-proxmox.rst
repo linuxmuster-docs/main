@@ -109,7 +109,7 @@ Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sei
 
    Bei der Server-VM ist zu beachten, dass diese über zwei Festplatten verfügt. Die kleine Festplatte weist zu Beginn 25 GByte die größere 100 GByte auf. Beide sind zu vergrößern.
   
-   Hierbei ist auf eine ausreichende Größe zu achten, da auf dem Server neben den Nutzer- und Klassendaten auch die von Linbo gespeicherten Festplattenabbilder der Clients abgelegt werden. Siehe Einleitung dieses Abschnittes: :ref:`adjusting_hard_drive_size-label` 
+   Hierbei ist auf eine ausreichende Größe zu achten, da auf dem Server neben den Nutzer- und Klassendaten auch die von Linbo gespeicherten Festplattenabbilder der Clients abgelegt werden. Siehe Einleitung dieses Abschnittes: :ref:`harddisk-label` 
 
 3. Schritt: HDD-Größen der Virtuellen Maschinen anpassen
 --------------------------------------------------------
@@ -135,8 +135,6 @@ Wiederhole dieses Vorgehen für alle VMs deren Festplatten du angepasst hast.
 In der gestarteten VM musst du nun den Festplattenplatz anpassen.
 Folge hierzu der Beschreibung mit nachstehendem Link.
 
-
-================================= =================
-Vergrößern der Server-Festplatten |follow_me2vm-hd|
-================================= =================
-
++--------------------------------------------------------------------+-------------------------------------------+
+| Vergrößern der Server-Festplatten                                  | |follow_me2vm-hd|                         |
++--------------------------------------------------------------------+-------------------------------------------+

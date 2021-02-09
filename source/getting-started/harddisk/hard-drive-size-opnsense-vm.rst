@@ -14,16 +14,17 @@ Aktualisieren der Festplattengrößen der OPNSense®-VM
 
    Diesen Abschnitt musst du nur ausführen, sofern du in deinem Hypervisor die HDD-Größe der OPNSense® bereits vergrößert hast. Ansonsten kannst du bei der Einrichtung mit dem Kapitel ``Netzbereich anpassen`` fortfahren.
    
-..
-   ==================== ======================
-   Netzbereich anpassen |follow_me2modify-net|
-   ==================== ======================
++--------------------------------------------------------------------+-------------------------------------------+
+| Netzbereich anpassen                                               | |follow_me2network_a|                     |
++--------------------------------------------------------------------+-------------------------------------------+
 
-============================== ==========================
-Proxmox - Netzbereich anpassen |follow_me2proxmox-backhd|
-XCP-ng  - Netzbereich anpassen |follow_me2xcp-ng-backhd|
-KVM     - Netzbereich anpassen |follow_me2kvm-backhd|
-============================== ==========================
+.. +--------------------------------------------------------------------+-------------------------------------------+
+   | Proxmox - Netzbereich anpassen                                     | |follow_me2proxmox-backhd|                |
+   +--------------------------------------------------------------------+-------------------------------------------+
+   | XCP-ng  - Netzbereich anpassen                                     | |follow_me2xcp-ng-backhd|                 |
+   +--------------------------------------------------------------------+-------------------------------------------+
+   | KVM     - Netzbereich anpassen                                     | |follow_me2kvm-backhd|                    
+   +--------------------------------------------------------------------+-------------------------------------------+
 
    
 Überblick
@@ -194,9 +195,6 @@ https://www.digitalocean.com/community/questions/freebsd-growfs-operation-not-pe
 
 Weiter geht es mit der Anpassung des Netzwerkes. 
 
-============================== ==========================
-Proxmox - Netzbereich anpassen |follow_me2proxmox-backhd|
-XCP-ng  - Netzbereich anpassen |follow_me2xcp-ng-backhd|
-KVM     - Netzbereich anpassen |follow_me2kvm-backhd|
-============================== ==========================
-
++--------------------------------------------------------------------+-------------------------------------------+
+| Netzbereich anpassen                                               | |follow_me2network_a|                     |
++--------------------------------------------------------------------+-------------------------------------------+

@@ -11,17 +11,16 @@ Vorbereiten der KVM Festplatten
    Achtung: Dies ist noch eine Platzhalterseite, die noch mit Inhalt gefüllt wird.
    Bitte vorerst mit dem Setup der Installation folgen.
 
-================= =================
-VM Größe anpassen |follow_me2vm-hd|
-================= =================
-
++--------------------------------------------------------------------+-------------------------------------------+
+| VM Größe anpassen                                                  | |follow_me2vm-hd|                         |
++--------------------------------------------------------------------+-------------------------------------------+
 
 
 .. 
-   =================================== ======================
-   Vorbereiten der Proxmox-Festplatten |follow_me2proxmox-hd|
-   Vorbereiten der XCP-ng-Festplatten  |follow_me2xcp-ng-hd|
-   Vorbereiten der KVM-Festplatten     |follow_me2kvm-hd|
-   =================================== ======================
-
-
+   +--------------------------------------------------------------------+-------------------------------------------+
+   | Vorbereiten der Proxmox-Festplatten                                | |follow_me2proxmox-hd|                    |
+   +--------------------------------------------------------------------+-------------------------------------------+
+   | Vorbereiten der XCP-ng-Festplatten                                 | |follow_me2xcp-ng-hd|                     |
+   +--------------------------------------------------------------------+-------------------------------------------+
+   | Vorbereiten der KVM-Festplatten                                    | |follow_me2kvm-hd|                        |
+   +--------------------------------------------------------------------+-------------------------------------------+

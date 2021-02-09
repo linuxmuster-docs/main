@@ -1,3 +1,5 @@
+.. include:: /guided-inst.subst
+
 .. _install-windows10-clients-label:
 
 ==================
@@ -531,3 +533,11 @@ Linuxmuster.net sieht vor, dass **Programminstallationen von "global-admin"** du
 5. Melden Sie sich als lokaler User ab und als global-admin an
 6. Fahren Sie den Rechner herunter
 7. Starten Sie den Rechner neu und erstellen ein neues Image mit linbo
+
+.. hint:: Falls du zu dieser Seite von der Beschreibung einer Installation gekommen bist, dann folgende dem Pfeil!
+
++--------------------------------------------------------------------+-------------------------------------------+
+| Installation eines Linux-Clients                                   | |follow_me2linux-clients_b|               |
++--------------------------------------------------------------------+-------------------------------------------+
+| Abschluss der Installation                                         | |follow_me2finish-install|                |
++--------------------------------------------------------------------+-------------------------------------------+
