@@ -354,8 +354,6 @@ O.g. Anpassungsschritte sind für die Docker- und OPSI-Appliance in gleicher Wei
 
 Danach kann das Setup mit der WebUI oder auf der Konsole auf dem Server aufgerufen werden.
 
-======================================== ===================
-Weiter geht es mit der Erstkonfiguration  |follow_me2setup|
-======================================== ===================
-
-
++--------------------------------------------------------------------+-------------------------------------------+
+| Weiter geht es mit der Erstkonfiguration                           | |follow_me2setup|                         |
++--------------------------------------------------------------------+-------------------------------------------+

@@ -1,16 +1,17 @@
 .. include:: /guided-inst.subst
 
-.. _sitename-template-label:
+.. _import-xcp-ng-vms-label:
 
-==================
-Kapitelüberschrift
-==================
+====================================
+Importieren der Virtuellen Maschinen
+====================================
 
 .. sectionauthor:: `@Name des Autors in ask <https://ask.linuxmuster.net/u/Dein_Name>`_
 
 .. hint:: Bemerkungen zum Inhalt der Seite
 
-   * ...
+   *  Übernahme des Inhalt aus der vorausgehenden Seite
+   *  ...
 
 .. todo:: Inhalt ergänzen
           ...

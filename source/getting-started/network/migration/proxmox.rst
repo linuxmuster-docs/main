@@ -1,22 +1,25 @@
 .. include:: /guided-inst.subst
 
-.. _sitename-template-label:
+.. _migration-proxmox-label:
 
-==================
-Kapitelüberschrift
-==================
+=====================
+Migration bei Proxmox
+=====================
 
 .. sectionauthor:: `@Name des Autors in ask <https://ask.linuxmuster.net/u/Dein_Name>`_
 
-.. hint:: Bemerkungen zum Inhalt der Seite
+.. hint:: Beschreibung der Anpassumgen bei Proxmox 
 
-   * ...
-
-.. todo:: Inhalt ergänzen
+.. todo:: Inhalte einfügen
           ...
-          Wenn fertig hint und todo entfernen
+          Nichtgenutze Template-Teile entfernen
 
 ...
+
++--------------------------------------------------------------------+-------------------------------------------+
+| Absicherung der Proxmox UI                                         | |follow_me2proxmox-ui-protection_b|       |
++--------------------------------------------------------------------+-------------------------------------------+
+
 
 Template für den Inhalt einer noch leeren Seite
 -----------------------------------------------
@@ -65,10 +68,3 @@ Lfd-Nr A     B     A xor B
 
 Muster für Verlinkung:
 
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit Proxmox                                        | |follow_me2proxmox|                       |
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit XCP-ng                                         | |follow_me2xcp-ng|                        |
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit KVM                                            | |follow_me2kvm|                           |
-+--------------------------------------------------------------------+-------------------------------------------+

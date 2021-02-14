@@ -1,22 +1,24 @@
 .. include:: /guided-inst.subst
 
-.. _sitename-template-label:
+.. _without-segmentation-label:
 
-==================
-Kapitelüberschrift
-==================
+====================
+Netzbereichanpassung
+====================
 
 .. sectionauthor:: `@Name des Autors in ask <https://ask.linuxmuster.net/u/Dein_Name>`_
 
-.. hint:: Bemerkungen zum Inhalt der Seite
+.. hint:: Inhalt:
 
-   * ...
-
-.. todo:: Inhalt ergänzen
-          ...
-          Wenn fertig hint und todo entfernen
+   * Beschreibung der Netzbereichanpassung ohne Sebmentierung
 
 ...
+
++--------------------------------------------------------------------+-------------------------------------------+
+| Netzwerk-Anpassung mit Proxmox                                     | |follow_me2net-config-proxmox|            |
++--------------------------------------------------------------------+-------------------------------------------+
+| Netzwerk-Anpassung mit KVM oder XCP-ng                             | |follow_me2net-config-kvm-xcp-ng|         |
++--------------------------------------------------------------------+-------------------------------------------+
 
 Template für den Inhalt einer noch leeren Seite
 -----------------------------------------------
@@ -62,13 +64,3 @@ Lfd-Nr A     B     A xor B
 3      1     0     1
 4      1     1     0
 ====== ===== ===== =======
-
-Muster für Verlinkung:
-
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit Proxmox                                        | |follow_me2proxmox|                       |
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit XCP-ng                                         | |follow_me2xcp-ng|                        |
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit KVM                                            | |follow_me2kvm|                           |
-+--------------------------------------------------------------------+-------------------------------------------+

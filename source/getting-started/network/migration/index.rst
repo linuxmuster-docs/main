@@ -1,22 +1,31 @@
 .. include:: /guided-inst.subst
 
-.. _sitename-template-label:
+.. _network4migration-label:
 
-==================
-Kapitelüberschrift
-==================
+==========================
+Vorbereitung der Migration
+==========================
 
 .. sectionauthor:: `@Name des Autors in ask <https://ask.linuxmuster.net/u/Dein_Name>`_
 
-.. hint:: Bemerkungen zum Inhalt der Seite
+.. hint:: Inhalt:
 
-   * ...
+   * Beschreibung der Migration
 
-.. todo:: Inhalt ergänzen
+   * Massnahmen bei den verschiedenen Virtualisier
+
+.. todo:: Inhalte ergänzen
           ...
-          Wenn fertig hint und todo entfernen
 
 ...
+
++--------------------------------------------------------------------+-------------------------------------------+
+| Migration mit Proxmox                                              | |follow_me2migration-proxmox|             |
++--------------------------------------------------------------------+-------------------------------------------+
+| Migration mit KVM                                                  | |follow_me2migration-kvm|                 |
++--------------------------------------------------------------------+-------------------------------------------+
+| Migration mit XCP-ng                                               | |follow_me2migration-xcp-ng|              | 
++--------------------------------------------------------------------+-------------------------------------------+
 
 Template für den Inhalt einer noch leeren Seite
 -----------------------------------------------
@@ -65,10 +74,13 @@ Lfd-Nr A     B     A xor B
 
 Muster für Verlinkung:
 
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit Proxmox                                        | |follow_me2proxmox|                       |
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit XCP-ng                                         | |follow_me2xcp-ng|                        |
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit KVM                                            | |follow_me2kvm|                           |
-+--------------------------------------------------------------------+-------------------------------------------+
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Migration
+  :hidden:
+
+  kvm
+  proxmox
+  xcp-ng
+

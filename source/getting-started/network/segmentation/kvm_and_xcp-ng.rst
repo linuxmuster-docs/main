@@ -1,22 +1,19 @@
 .. include:: /guided-inst.subst
 
-.. _sitename-template-label:
+.. _segmantation-kvm-ans-xcp-ng-label:
 
-==================
-Kapitelüberschrift
-==================
+=================================
+Segmentierung mit KVM oder XCP-ng 
+=================================
 
 .. sectionauthor:: `@Name des Autors in ask <https://ask.linuxmuster.net/u/Dein_Name>`_
 
-.. hint:: Bemerkungen zum Inhalt der Seite
-
-   * ...
-
-.. todo:: Inhalt ergänzen
-          ...
-          Wenn fertig hint und todo entfernen
-
 ...
+
++--------------------------------------------------------------------+-------------------------------------------+
+| Netzwerk-Test                                                      | |follow_me2network-test_b|                |
++--------------------------------------------------------------------+-------------------------------------------+
+
 
 Template für den Inhalt einer noch leeren Seite
 -----------------------------------------------
@@ -62,13 +59,3 @@ Lfd-Nr A     B     A xor B
 3      1     0     1
 4      1     1     0
 ====== ===== ===== =======
-
-Muster für Verlinkung:
-
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit Proxmox                                        | |follow_me2proxmox|                       |
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit XCP-ng                                         | |follow_me2xcp-ng|                        |
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit KVM                                            | |follow_me2kvm|                           |
-+--------------------------------------------------------------------+-------------------------------------------+

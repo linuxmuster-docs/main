@@ -1,22 +1,53 @@
 .. include:: /guided-inst.subst
 
-.. _sitename-template-label:
+.. _network-label:
 
-==================
-Kapitelüberschrift
-==================
+===============================
+Anpassung des Netzwerkbereiches
+===============================
 
 .. sectionauthor:: `@Name des Autors in ask <https://ask.linuxmuster.net/u/Dein_Name>`_
 
-.. hint:: Bemerkungen zum Inhalt der Seite
+.. hint:: Verlinkung der Unterabschnitte:
 
-   * ...
+   * Für die Migration
+
+   * Netzbereich abweichend von 10.0.0.0/16 ohne Segmentierung
+
+   * Netzbereich abweichend von 10.0.0.0/16 mit Segementierung 
+
 
 .. todo:: Inhalt ergänzen
           ...
-          Wenn fertig hint und todo entfernen
+
+Default-Netzbereich verwenden
+-----------------------------
 
 ...
+
++--------------------------------------------------------------------+-------------------------------------------+
+| Absicherung der Proxmox UI                                         | |follow_me2proxmox-ui-protection_a|       |
++--------------------------------------------------------------------+-------------------------------------------+
+
+Migration
+---------
+
+...
+
++--------------------------------------------------------------------+-------------------------------------------+
+| Migration                                                          | |follow_me2network-migration|             |
++--------------------------------------------------------------------+-------------------------------------------+
+
+Netzbereich-Anpassung
+---------------------
+
+...
+
++--------------------------------------------------------------------+-------------------------------------------+
+| Netzbereich-Anpassung mit Segmentierung                            | |follow_me2network-with-segmentation|     |
++--------------------------------------------------------------------+-------------------------------------------+
+| Netzbereich-Anpassung ohne Segmentierung                           | |follow_me2network-without-segmentation|  | 
++--------------------------------------------------------------------+-------------------------------------------+
 
 Template für den Inhalt einer noch leeren Seite
 -----------------------------------------------
@@ -65,10 +96,15 @@ Lfd-Nr A     B     A xor B
 
 Muster für Verlinkung:
 
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit Proxmox                                        | |follow_me2proxmox|                       |
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit XCP-ng                                         | |follow_me2xcp-ng|                        |
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit KVM                                            | |follow_me2kvm|                           |
-+--------------------------------------------------------------------+-------------------------------------------+
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Netzwerk Anpassungen
+  :hidden:
+  
+  migration/index
+  preliminarysettings/index
+  networksegmentation/index
+  segmentation/index
+  proxmox-ui-protection
+  network-test

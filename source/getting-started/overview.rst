@@ -81,12 +81,12 @@ Um dich durch die Installation zu führen, stehen dir unten auf den einzelnen Se
 * Daraus ergibt sich, das ``Ǹext`` dich zum nächsten Schritt der Installation führt.
 * Aber der ``Previous`` dich nicht immer zur zuletzt gesehenen Seite. Benutze besser den Zurück-Button deines Browsers.
 
-  .. image:: /media/link_arrow.svg
+  .. figure:: /media/link_arrow.svg
      :width: 200 px
      :align: center
      :alt: Follow_me_Button
 
-Dieser Pfeil wird dich durch die Installation führen, wenn es zu einer Verzweigung bzw. Zusammenführung im Ablaufplan kommt. Nutze ansonsten immer den ``Next``- Button. 
+Dieser Pfeil wird dich durch die Installation führen, wenn es zu einer Verzweigung bzw. Zusammenführung im Ablaufplan kommt. Nutze den ``Next``- Button also nur wenn es keinen ``Follow me``-Pfeil gibt. 
 
 Nächste Schritte
 ++++++++++++++++

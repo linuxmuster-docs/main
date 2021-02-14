@@ -70,22 +70,17 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   getting-started/prerequisites
   getting-started/installoptions/index
   getting-started/harddisk/index
-  getting-started/network/preliminarysettings/index
-  getting-started/network/networksegmentation/index   
+  getting-started/network/index
+  getting-started/setup/index   
   getting-started/migration/index
-
-
-
-  getting-started/setup
-  getting-started/add-user-accounts
-  getting-started/add-computer
-  getting-started/linuxclient
+  getting-started/finish-install
 
 .. toctree::
   :maxdepth: 2
   :caption: Systemadministration
   :hidden:
 
+  systemadministration/user-management/add-user-accounts
   systemadministration/maintenance/keep-lmn-uptodate
   systemadministration/network/default-access-rules
   systemadministration/network/radius/index
@@ -98,7 +93,9 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   :maxdepth: 2
   :caption: Clientverwaltung
   :hidden:
-
+  
+  clients/add-computer
+  clients/linux-clients/index
   clients/windows10clients/index
   clients/leoclient2/index
   clients/linbo/index

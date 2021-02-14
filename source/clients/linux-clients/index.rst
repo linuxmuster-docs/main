@@ -1,3 +1,5 @@
+.. include:: /guided-inst.subst
+
 .. _install-linux-clients-label:
 
 ===============
@@ -205,4 +207,14 @@ Weiterführende Dokumentation
 - `Supportforum: <https://ask.linuxmuster.net/t/linuxclient-v7-mit-profil-zum-testen>`_
 - :ref:`using-linbo-label`
 - `Hinweise im Anwenderwiki <https://wiki.linuxmuster.net/community/>`_
+
+
+.. hint:: Falls du zu dieser Seite von der Beschreibung einer Installation gekommen bist, dann folgende dem Pfeil!
+
++--------------------------------------------------------------------+-------------------------------------------+
+| Installation eines Windows-Clients                                 | |follow_me2windows-clients_b|             |
++--------------------------------------------------------------------+-------------------------------------------+
+| Abschluss der Installation                                         | |follow_me2finish-install|                |
++--------------------------------------------------------------------+-------------------------------------------+
+
 

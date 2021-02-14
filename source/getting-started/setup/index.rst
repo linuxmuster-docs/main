@@ -1,22 +1,25 @@
 .. include:: /guided-inst.subst
 
-.. _sitename-template-label:
+.. _setup-label:
 
-==================
-Kapitelüberschrift
-==================
+=================
+Erstkonfiguration
+=================
 
 .. sectionauthor:: `@Name des Autors in ask <https://ask.linuxmuster.net/u/Dein_Name>`_
 
-.. hint:: Bemerkungen zum Inhalt der Seite
+.. hint:: Vorstellung der zwei Möglichkeiten der Erstinbetriebnahme
 
-   * ...
-
-.. todo:: Inhalt ergänzen
+.. todo:: 
+          Inhalte einfügen
           ...
-          Wenn fertig hint und todo entfernen
+          Nicht benötigte Template entfernen
 
-...
++--------------------------------------------------------------------+-------------------------------------------+
+| Web-UI                                                             | |follow_me2setup-with-web-ui|             |
++--------------------------------------------------------------------+-------------------------------------------+
+| lmn-Server-Konsole                                                 | |follow_me2setup-on-server-konsole|       |
++--------------------------------------------------------------------+-------------------------------------------+
 
 Template für den Inhalt einer noch leeren Seite
 -----------------------------------------------
@@ -63,12 +66,10 @@ Lfd-Nr A     B     A xor B
 4      1     1     0
 ====== ===== ===== =======
 
-Muster für Verlinkung:
-
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit Proxmox                                        | |follow_me2proxmox|                       |
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit XCP-ng                                         | |follow_me2xcp-ng|                        |
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit KVM                                            | |follow_me2kvm|                           |
-+--------------------------------------------------------------------+-------------------------------------------+
+.. toctree::
+   :maxdepth: 1
+   :caption: Linuxmuster.net helfen
+   :hidden:
+  
+   with-web-ui
+   at-server-konsole

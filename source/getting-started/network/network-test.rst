@@ -1,22 +1,25 @@
 .. include:: /guided-inst.subst
 
-.. _sitename-template-label:
+.. _network-test-label:
 
-==================
-Kapitelüberschrift
-==================
+==============
+Netzwerk-Tests
+==============
 
 .. sectionauthor:: `@Name des Autors in ask <https://ask.linuxmuster.net/u/Dein_Name>`_
 
-.. hint:: Bemerkungen zum Inhalt der Seite
+.. hint:: Beschreibung verschiedener Test um Verbindung zwischen den Servern und dem Internet sicher zu stellen.
 
-   * ...
-
-.. todo:: Inhalt ergänzen
+.. todo:: Inhalte einfügen
           ...
-          Wenn fertig hint und todo entfernen
+          Nicht benutzte Template entfernen
 
 ...
+
+..
+  +--------------------------------------------------------------------+-------------------------------------------+
+  | Weiter mit der Erstinbetriebnahme                                  | |follow_me2setup|                         |
+  +--------------------------------------------------------------------+-------------------------------------------+
 
 Template für den Inhalt einer noch leeren Seite
 -----------------------------------------------
@@ -63,12 +66,3 @@ Lfd-Nr A     B     A xor B
 4      1     1     0
 ====== ===== ===== =======
 
-Muster für Verlinkung:
-
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit Proxmox                                        | |follow_me2proxmox|                       |
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit XCP-ng                                         | |follow_me2xcp-ng|                        |
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit KVM                                            | |follow_me2kvm|                           |
-+--------------------------------------------------------------------+-------------------------------------------+

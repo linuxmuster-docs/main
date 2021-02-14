@@ -255,6 +255,6 @@ Für weitere Hinweise zum linuxmuster-prepare Skript siehe: https://github.com/l
 Im Anschluss kann das Setup ausgeführt werden, das dann den Netzbereich ausliest und diesen für die weitere 
 Einrichtung verwendet. 
 
-======================================== ===================
-Weiter geht es mit der Erstkonfiguration  |follow_me2setup|
-======================================== ===================
++--------------------------------------------------------------------+-------------------------------------------+
+| Weiter geht es mit der Erstkonfiguration                           | |follow_me2setup|                         |
++--------------------------------------------------------------------+-------------------------------------------+

@@ -1,22 +1,29 @@
 .. include:: /guided-inst.subst
 
-.. _sitename-template-label:
+.. _setup-on-server-konsole-label:
 
-==================
-Kapitelüberschrift
-==================
+=======================================
+Erstkonfiguration an der Server-Konsole
+=======================================
 
 .. sectionauthor:: `@Name des Autors in ask <https://ask.linuxmuster.net/u/Dein_Name>`_
 
-.. hint:: Bemerkungen zum Inhalt der Seite
+.. hint:: Vorstellung der zwei Möglichkeiten der Erstinbetriebnahme
 
-   * ...
-
-.. todo:: Inhalt ergänzen
+.. todo:: 
+          Inhalte einfügen
           ...
-          Wenn fertig hint und todo entfernen
+          Nicht benötigte Template entfernen
 
 ...
+
++--------------------------------------------------------------------+-------------------------------------------+
+| Weiter mit der Benutzer-Aufnahme                                   | |follow_me2user-creation|                 |
++--------------------------------------------------------------------+-------------------------------------------+
+| Weiter mit der Migration von einer                                 |                                           |
+|                                                                    | |follow_me2migration_b|                   |
+| linuxmuster.net Version 6.2                                        |                                           |
++--------------------------------------------------------------------+-------------------------------------------+
 
 Template für den Inhalt einer noch leeren Seite
 -----------------------------------------------

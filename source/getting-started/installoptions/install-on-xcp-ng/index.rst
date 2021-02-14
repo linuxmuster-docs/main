@@ -9,6 +9,8 @@
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
 		   `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
+.. todo:: Verschieben der Inhalte wie durch den Ablaufplan vorgegeben
+
 XCP-ng ist eine reine OpenSource-Virtualisierungslösung, die auf Basis 
 von XEN arbeitet. XCP-ng bietet sog. Enterprise-Features wie Replikation, 
 automatisierte Backups, Verschieben von VMs im laufenden Betrieb und 
@@ -329,6 +331,11 @@ in der dann der Hinweis auf die installierte Version 8.1 erscheinen sollte
    :align: center
    :alt: Schritt 22 der Installation des XCP-ng Servers
 
+.. todo:: Sollte der folgende Inhalt Administartion nicht besser ausgelagert werden?
+          
+        * Auflistung der Vor- und Nachteile der verschiedenen Möglichkeiten
+
+        * Sprungmarken zu den verschiedenen Punkte
 
 XCP-ng: Administration
 =======================
@@ -543,7 +550,7 @@ analog aus.
 
     Für die weitere Einrichtung von linuxmuster.net für deine Schule folge
     der Dokumentation unter: 
-    :ref:`Linuxmuster Setup <setup>` 
+    :ref:`Linuxmuster Setup <setup-label>` 
 
 
 Xen Orchestra Appliance (XOA)
@@ -730,6 +737,13 @@ angezeigt. Die Aktualisierung ist mit ``y`` zu starten.
 
 Danach ist Dein XCP-ng Host auf dem aktuellen Stand.
 
-============================ =================
-Weiter geht es mit dem Setup |follow_me2setup|
-============================ =================
++--------------------------------------------------------------------+-------------------------------------------+
+| Weiter geht es mit dem Setup                                       | |follow_me2setup|                         |
++--------------------------------------------------------------------+-------------------------------------------+
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Install on XCP-ng
+  :hidden:
+
+  import-xcp-ng-vms

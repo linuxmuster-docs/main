@@ -1,22 +1,12 @@
 .. include:: /guided-inst.subst
 
-.. _sitename-template-label:
+.. _finish-install-label:
 
-==================
-Kapitelüberschrift
-==================
+==========================
+Abschluss der Installation
+==========================
 
 .. sectionauthor:: `@Name des Autors in ask <https://ask.linuxmuster.net/u/Dein_Name>`_
-
-.. hint:: Bemerkungen zum Inhalt der Seite
-
-   * ...
-
-.. todo:: Inhalt ergänzen
-          ...
-          Wenn fertig hint und todo entfernen
-
-...
 
 Template für den Inhalt einer noch leeren Seite
 -----------------------------------------------
@@ -63,12 +53,3 @@ Lfd-Nr A     B     A xor B
 4      1     1     0
 ====== ===== ===== =======
 
-Muster für Verlinkung:
-
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit Proxmox                                        | |follow_me2proxmox|                       |
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit XCP-ng                                         | |follow_me2xcp-ng|                        |
-+--------------------------------------------------------------------+-------------------------------------------+
-| Virtualisierung mit KVM                                            | |follow_me2kvm|                           |
-+--------------------------------------------------------------------+-------------------------------------------+

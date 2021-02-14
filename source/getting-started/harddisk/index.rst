@@ -1,6 +1,6 @@
 .. include:: /guided-inst.subst
 
-.. _adjusting_hard_drive_size-label:
+.. _harddisk-label:
 
 =============================
 Anpassen der Festplattengröße
@@ -63,15 +63,13 @@ Anpassung Hypervisor
 Starte nun mit Punkt 1, indem du nachstehend deine eingesetzte Virtualisierungsumgebung auswählst und
 gemäß der Dokumentation die Festplattengröße deiner VMs im Hypervisor anpasst.
 
-=================================== ======================
-Vorbereiten der Proxmox-Festplatten |follow_me2proxmox-hd|
-Vorbereiten der XCP-ng-Festplatten  |follow_me2xcp-ng-hd|
-Vorbereiten der KVM-Festplatten     |follow_me2kvm-hd|
-=================================== ======================
-
-.. ===================== ==========================
-   Installationsoptionen |follow_me2installoptions|
-   ===================== ==========================
++--------------------------------------------------------------------+-------------------------------------------+
+| Vorbereiten der Proxmox-Festplatten                                | |follow_me2proxmox-hd|                    |
++--------------------------------------------------------------------+-------------------------------------------+
+| Vorbereiten der XCP-ng-Festplatten                                 | |follow_me2xcp-ng-hd|                     |
++--------------------------------------------------------------------+-------------------------------------------+
+| Vorbereiten der KVM-Festplatten                                    | |follow_me2kvm-hd|                        |
++--------------------------------------------------------------------+-------------------------------------------+
 
 .. toctree::
    :maxdepth: 2
@@ -81,17 +79,6 @@ Vorbereiten der KVM-Festplatten     |follow_me2kvm-hd|
    hard-drive-size-proxmox
    hard-drive-size-xcp-ng
    hard-drive-size-kvm
-   
-.. Anpassung VMs
-   -------------
-
-   Passe nun die Größe der Festplatten in den VMs selbst wie nachstehend beschrieben an.
-   
-.. toctree::
-   :maxdepth: 2
-   :caption:  Festplatten-Anpassung
-   :hidden:  
-   
    hard-drive-size-vm
    hard-drive-size-opnsense-vm
 
