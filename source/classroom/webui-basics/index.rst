@@ -159,8 +159,8 @@ Dateien-Übertragungs-Funktion
 -----------------------------
 
 Eine nützliche Funktion für Unterrichtsarbeit mit Dateien bietet linuxmuster.net mit der ``Aus- & Einsammeln-Funktion``.
-Auf der Kursseite finden Sie im unteren Bereich die ``SHARE`` und ``COLLECT`` Funktionen, welche sich auf alle
-Kursteilnehmer beziehen. Neben jedem Benutzer selbst gibt es ``Teilen und Einsammeln`` Funktionen, welche auf
+Auf der Kursseite finden Sie im unteren Bereich die ``Teilen`` und ``Einsammeln`` Funktionen, welche sich auf alle
+Kursteilnehmer beziehen. Neben jedem Benutzer selbst gibt es ``Teilen`` und ``Einsammeln`` Funktionen, welche auf
 einzelne Benutzer angewendet werden. 
 
 TEILEN
