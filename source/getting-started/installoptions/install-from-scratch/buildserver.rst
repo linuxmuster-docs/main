@@ -1,7 +1,15 @@
 .. include:: /guided-inst.subst
 
+.. _install-from-scratch-buildserver.rst-label:
+
 Anlegen und Installieren des Servers
 ====================================
+
+.. sectionauthor:: `@Name des Autors in ask <https://ask.linuxmuster.net/u/Dein_Name>`_
+
+.. todo:: Autor ergänzen
+          ...
+          Wenn fertig todo entfernen
 
 .. hint::
 
