@@ -1,5 +1,16 @@
+.. include:: /guided-inst.subst
+
+.. _install-from-scratch-buildopnsense-label:
+
+=====================================
 Anlegen und Installieren der Firewall
 =====================================
+
+.. sectionauthor:: `@Name des Autors in ask <https://ask.linuxmuster.net/u/Dein_Name>`_
+
+.. todo:: Autor anpassen
+          ...
+          Wenn fertig todo entfernen
 
 Installation der OPNsense®
 --------------------------

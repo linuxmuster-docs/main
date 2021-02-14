@@ -6,6 +6,8 @@
 Segmentierung
 =============
 
+.. sectionauthor:: `@Name des Autors in ask <https://ask.linuxmuster.net/u/Dein_Name>`_
+
 .. hint:: Inhalt
 
    * Allgemeiner Teil 
@@ -16,7 +18,10 @@ Segmentierung
 
    * Verweis auf die Änderungen für die Verschiedenen Virtualisierungen
 
-.. sectionauthor:: `@Name des Autors in ask <https://ask.linuxmuster.net/u/Dein_Name>`_
+
+.. todo:: Inhalt ergänzen
+          ...
+          Wenn fertig hint und todo entfernen
 
 ...
 
