@@ -8,7 +8,7 @@ Migration bei Proxmox
 
 .. sectionauthor:: `@Name des Autors in ask <https://ask.linuxmuster.net/u/Dein_Name>`_
 
-.. hint:: Beschreibung der Anpassumgen bei Proxmox 
+.. hint:: Beschreibung der Anpassungen bei Proxmox 
 
 .. todo:: Inhalte einfügen
           ...
