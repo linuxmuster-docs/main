@@ -6,11 +6,8 @@
 Anlegen und Installieren der Firewall
 =====================================
 
-.. sectionauthor:: `@Name des Autors in ask <https://ask.linuxmuster.net/u/Dein_Name>`_
+.. sectionauthor:: `@rettich <https://ask.linuxmuster.net/u/rettich>`_
 
-.. todo:: Autor anpassen
-          ...
-          Wenn fertig todo entfernen
 
 Installation der OPNsense®
 --------------------------

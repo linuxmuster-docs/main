@@ -9,7 +9,6 @@
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
 		   `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
-.. todo:: Verschieben der Inhalte wie durch den Ablaufplan vorgegeben
 
 XCP-ng ist eine reine OpenSource-Virtualisierungslösung, die auf Basis 
 von XEN arbeitet. XCP-ng bietet sog. Enterprise-Features wie Replikation, 
@@ -26,8 +25,8 @@ Diese Dokumentation ist eine "Schritt für Schritt" Anleitung für die
 Installation der linuxmuster.net-Musterlösung in der Version 7 auf
 Basis von XCP-ng. 
 
-Übersicht
-=========
+Systemvoraussetzungen
+=====================
 
 In nachstehender Abbildung wird der schematische Netzaufbau der
 anstehenden v7-Installation unter XCP-ng dargestellt.
@@ -40,26 +39,44 @@ Für die Installation mit XCP-ng und linuxmuster v7 wird der
 ``IP-Bereich 10.0.0.0/16`` genutzt. Es gilt nachstehende Zuordnung
 der IPs zu den VMs bzw. genutzten Hosts.
 
-+--------------+--------------------+
-| VM           | IP                 | 
-+==============+====================+
-| OPNsense®    | 10.0.0.254/16      |
-+--------------+--------------------+
-| Server       | 10.0.0.1/16        | 
-+--------------+--------------------+
-| OPSI         | 10.0.0.2/16        | 
-+--------------+--------------------+
-| Dockerhost   | 10.0.0.3/16        |
-+--------------+--------------------+
-| XOA          | 10.0.0.4/16        |
-+--------------+--------------------+
-| Admin-PC     | 10.0.0.10/16       |
-+--------------+--------------------+
-| XCP-ng Host  | 10.0.0.200/16      |
-+--------------+--------------------+
+In der unten aufgeführten Tabelle findest du die Systemvoraussetzungen zum Betrieb der von uns bereitgestellten virtuellen Maschinen. Die Systemanforderungen für die Installation von XCP.ng selbst finden sich im Web unter https://xcp-ng.org/docs/requirements.html#xcp-ng-system-requirements. 
 
-Lies zuerst die Abschnitte :ref:`what-is-new-label` 
-und :ref:`prerequisites-label`, bevor du dieses Kapitel durcharbeitest.
+Die Werte sind die voreingestellten Werte der VMs beim Import und bilden gleichzeitig die Mindestvoraussetzungen. Für die Installation mit XCP-ng und linuxmuster v7 wird der 
+`IP-Bereich 10.0.0.0/16` genutzt.
+
+============ ============= ================ =====
+VM           IP            HDD              RAM 
+============ ============= ================ =====
+OPNsense®    10.0.0.254/16 10 GiB           4 GiB
+Server       10.0.0.1/16   25 GiB u 100 GiB 4 GiB
+OPSI         10.0.0.2/16   100 GiB          2 GiB
+Docker-VM    10.0.0.3/16   100 GiB          2 GiB
+XOA	     10.0.0.4/16   20 GiB           4 GiB
+Admin-PC     10.0.0.10/16  
+XCP-ng-Host  10.0.0.200/16 100 GiB          4 GiB
+============ ============= ================ =====
+
+Die Festplattengröße sowie der genutzte RAM der jeweiligen VMs kann nach deren Import
+später einfach an die Bedürfnisse der Schule angepasst werden. 
+
+Der Admin-PC wird benötigt, da XCP-ng nicht direkt mit einer Administrationsoberfläche ausgeliefert wird (WebUI).
+Entweder kann XCP-ng mithilfe eines Windows-Programms von einem Admin-PC oder mithilfe der VM XOA web-basiert verwaltet werden.
+Zur Ersteinrichtung ist der Admin-PC mit dem zu installierenden Windows-Programm XCP-ng Center zu nutzen. 
+
+Bevor du dieses Kapitel durcharbeitest, lese bitte zuerst die Abschnitte
+  + :ref:`what-is-linuxmuster.net-label`,
+  + (:ref:`what-is-new-label`),
+  +  :ref:`install-overview-label` und
+  +  :ref:`prerequisites-label`.
+
+Für den Betrieb des Hypervisors selbst (XCP-ng) sollten ca. 2 GiB bis 6 GiB Arbeitsspeicher eingeplant werden. Um nach Anleitung installieren zu können, sollte der Server mit mindestens 2 Netzwerkkarten bestückt sein. Durch VLANs kann der Betrieb aber auch bereits mit nur einer NIC erfolgen, bsp. 10 Gbit-Karte an einem Core-VLAN-Switch (L3).
+
+Der XCP-ng sollte gemäß o.g. Minimalanforderungen folgende Merkmale aufweisen - sofern alle VMs eingesetzt werden:
+
+  * RAM gesamt: mind. 16 GiB (besser: 32 GiB)
+  * HDDs: Gesamtkapazität mind. 1 TiB oder 2 TiB
+  * Zwei Netzwerkkarten
+  * Internetzugang für den Admin-PC. Sobald alles eingerichtet ist, bekommt der XCP-ng-Host eine IP-Adresse im Schulnetz und die Firewall OPNsense® stellt den Internet-Zugang für alle VMs und den XCP-ng-Host bereit.
 
 Nach der Installation gemäß dieser Anleitung erhältst du eine
 einsatzbereite Umgebung bestehend aus
@@ -71,20 +88,6 @@ einsatzbereite Umgebung bestehend aus
 
 Die Einbindung der VMs für den OPSI-Server und den Docker-Host werden hier nicht weiter beschrieben.
 Diese sind analog zum Import und Anpassung der Server-VM durchzuführen.
-
-Voraussetzungen
-===============
-
-* Es wird vorausgesetzt, dass du einen Administrationsrechner
-  (Admin-PC genannt) besitzt, den du je nach Bedarf in die
-  entsprechenden Netzwerke einstecken kannst und dessen
-  Netzwerkkonfiguration entsprechend vornehmen kannst.
-
-* Der Internetzugang des Admin-PCs und auch des XCP-ng-Hosts sollte
-  zunächst gewährleistet sein, d.h. dass beide zunächst z.B. an einem
-  Router angeschlossen werden, über den die beiden per DHCP oder fester IP 
-  ins Internet können. Sobald später die Firewall korrekt eingerichtet
-  ist, bekommt der Admin-PC und der XCP-ng-Host eine IP-Adresse im Schulnetz.
 
 .. hint:: 
 
@@ -109,6 +112,9 @@ zusätzlichen Anleitungen betrachtet.
 .. hint::
 
    :ref:`Anleitung Netzwerksegmentierung <subnetting-basics-label>` 
+
+
+.. _xcp-ng-downloads-label:
 
 Download der Appliances und der Virtualisierungssoftware XCP-ng
 ---------------------------------------------------------------
@@ -170,8 +176,11 @@ dann nachstehenden Befehl eingeben:
    dd if=XCP-ng_8.2.0.iso of=/dev/sdX bs=8M status=progress oflag=direct
 
 
-Installation XCP-ng
-===================
+Installieren von XCP-ng
+=======================
+
+Basis-Installation
+------------------
 
 Vom USB-Stick booten, danach erscheint folgender Bildschirm:
 
@@ -331,31 +340,18 @@ in der dann der Hinweis auf die installierte Version 8.1 erscheinen sollte
    :align: center
    :alt: Schritt 22 der Installation des XCP-ng Servers
 
-.. todo:: Sollte der folgende Inhalt Administartion nicht besser ausgelagert werden?
-          
-        * Auflistung der Vor- und Nachteile der verschiedenen Möglichkeiten
 
-        * Sprungmarken zu den verschiedenen Punkte
+XCP-ng Einrichtung
+------------------
 
-XCP-ng: Administration
-=======================
-
-Für die Administration Deines XCP-ng-Hosts stehen Dir zwei Möglichkeiten zur Verfügung.
-Zunächst solltest du Dir auf einem Windows-Rechner im Netzwerk das Programm ``XCP-ng Center`` 
-installieren. Hiermit kannst du die gesamte Virtualisierungsumgebung administrieren 
+Für die Ersteinrichtung deines XCP-ng-Hosts must du auf deinem Admin-PC zunächst das Windows-Programm ``XCP-ng Center`` 
+herunterladen und installieren. Hiermit kannst du die gesamte Virtualisierungsumgebung administrieren 
 und insbesondere die vorkonfigurierten VMs einfach importieren. 
 
-Zudem kann der XCP-ng-Host ebenfalls ``web-basiert administriert`` werden. Dies erfolgt mithilfe 
-der Anwendung ``XenOrchestra (XOA - Xen Orchestra Application)``. linuxmuster.net stellt hierfür 
-ebenfalls eine vorkonfigurierte VM mit einer installierten XOA App zur Verfügung. XOA wurde
-hier "from scratch" installiert und an die lmn7 angepasst. Die Nutzung von XOA ist der von 
-XCP-ng empfohle Weg der Administration und bietet im Produktivbetrieb viele Vorteile wie z.B.
-die Eirichtung und Automatisierung von Backups / Snapshots.
+XCP-ng Center installieren
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-XCP-ng Center unter Windows installieren
-----------------------------------------
-
-Installiere das Programm (siehe ``Downloads-Links``) durch einen Rechtsklick auf die MSI-Datei auf dem Windows-Rechner und 
+Installiere das Programm (siehe :ref:`xcp-ng-downloads-label`) durch einen Rechtsklick auf die MSI-Datei auf dem Windows-Rechner und 
 wähle dann ``Als Administrator ausführen`` aus.
 
 .. figure:: media/25_xcp-ng-admin_execute-as-administrator.png
@@ -398,7 +394,8 @@ Wähle nun für den XCP-ng-Host die Reiterkarte ``Networking`` aus.
    :alt: 4. Teil: Netzwerke einrichten
 
 Wähle das erste Netwerk ``Network 0`` aus, prüfe die Zuordnung der Netzwerkkarte (MAC-Adresse und physikalische Verkabelung beachten). 
-Es sollte diejenige NIC diesem vSwitch zugewiesen sein, die die Verbindung in das interne Netz steuert. In der Abb. ist dies NIC0, die dem Network0 zugeordnet ist. Der Name des vSwitches Network0 wird nun geändert. 
+Es sollte diejenige NIC diesem vSwitch zugewiesen sein, die die Verbindung in das interne Netz steuert. In der Abb. ist dies NIC0, die dem Network0 zugeordnet ist. 
+Der Name des vSwitches Network0 wird nun geändert. 
 Klicke dazu auf ``Properties`` und ändere den Namen für das Netzwerk in ``Green``.
 
 Führe diese Schritte ebenfalls für die weiteren Netze (BLUE - WLAN Netz und RED - externes Netz) 
@@ -414,7 +411,7 @@ importiert werden.
 Lade dir vorher zunächst alle VMs, die du importieren möchtest unter linuxmuster.net auf 
 deinen Client herunter (siehe obigen Download-Link: XVAs-v7_ ). Die heruntergeladenen VMs
 sind als ZIP-Archiv komprimiert und können nach dem Download mit dem SHA256 HASH-Wert geprüft werden.
-Entpacke die ZIP-Dateien, so dass du alle VMs als XVA-Dateien  vorliegen hast.
+Entpacke die ZIP-Dateien, so dass du alle VMs als XVA-Dateien vorliegen hast.
 
 Danach rufe im XCP-ng Center den Menüpunkt ``File -> Import`` auf.
 
@@ -502,33 +499,6 @@ Bestätige diesen Vorgang mit ``y`` und warte bis die VM neu gestartet wurde.
 
 Starte die VM mit dem linuxmuster.net Server.
 Melde Dich mit o.g. Login-Daten an.
-
-.. important::
- 
-   Vor den folgenden Schritten muss die Datei ``/etc/apt/sources.list.d/lmn7.list`` wie folgt geändert werden:
-
-   .. code-block:: console
-   
-      deb https://archive.linuxmuster.net lmn7/
-      deb-src https://archive.linuxmuster.net lmn7/
-
-   Andere Zeilen können gelöscht oder mit "#" am Zeilenanfang auskommentiert werden.
-   
-   Danach muss mit
-
-   .. code-block:: console
-   
-      wget https://archive.linuxmuster.net/archive.linuxmuster.net.key
-
-   der nötige Schlüssel geholt und mit
-
-   .. code-block:: console
-   
-      apt-key add archive.linuxmuster.net.key
-
-   aufgenommen werden.
-
-   Siehe auch ``https://ask.linuxmuster.net/t/infrastrukturanpassungen-neuer-paketserver-und-moegliche-folgen``
 
 Aktualisiere die VM.
 

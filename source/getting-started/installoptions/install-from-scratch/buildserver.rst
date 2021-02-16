@@ -5,11 +5,8 @@
 Anlegen und Installieren des Servers
 ====================================
 
-.. sectionauthor:: `@Name des Autors in ask <https://ask.linuxmuster.net/u/Dein_Name>`_
-
-.. todo:: Autor ergänzen
-          ...
-          Wenn fertig todo entfernen
+.. sectionauthor:: `@rettich <https://ask.linuxmuster.net/u/rettich>`_,
+                   `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
 .. hint::
 
