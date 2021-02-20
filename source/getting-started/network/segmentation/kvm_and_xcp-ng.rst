@@ -9,12 +9,14 @@ Segmentierung mit KVM oder XCP-ng
 .. sectionauthor:: `@Name des Autors in ask <https://ask.linuxmuster.net/u/Dein_Name>`_
 
 .. hint:: Bemerkungen zum Inhalt der Seite
-
+   
    * ...
 
 .. todo:: Inhalt ergänzen
-          ...
-          Wenn fertig hint und todo entfernen
+
+   * ...
+          
+   * Wenn fertig hint und todo entfernen
 
 ...
 
