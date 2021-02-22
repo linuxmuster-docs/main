@@ -8,7 +8,7 @@
 
 .. sectionauthor:: `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_
 
-In dieser Anleitung wird beschrieben, wie man Linux auf einer Musterarbeitsstation installiert. Ein fertig vorkonfiguriertes Abbild liegt zum Download bei linuxmuster.net bereit und kann sofort auf alle Arbeitsstationen verteilt werden.
+In dieser Anleitung wird beschrieben, wie du Linux auf einer Musterarbeitsstation installiert. Ein fertig vorkonfiguriertes Abbild liegt zum Download bei linuxmuster.net bereit und kann sofort auf alle Arbeitsstationen verteilt werden.
 
 Arbeitsstationen ("Clients") werden in der linuxmuster.net über die Software LINBO ("GNU/Linux Network Boot") installiert.
 
@@ -47,7 +47,7 @@ Liegt das Image schon vor, ist ein Download nicht mehr erfordelich, so dass dann
 
 Ist ein Überschreiben der cloop-Datei oder der Dateien der Patchklasse für Linbo erforderlich oder gewünscht, so ist mit o.g. Befehl die Option -f (force) anzugeben.
 
-Die wichtigsten Dateien, die angelegt werden sind
+Die wichtigsten Dateien, die angelegt werden sind:
 
 .. code-block:: bash
 
@@ -59,15 +59,15 @@ Die wichtigsten Dateien, die angelegt werden sind
 Ändern des Passworts des Vorlagenbenutzers
 ------------------------------------------
 
-Lädt man die Vorlagen herunter so heißt der Vorlagenbenutzer ``linuxadmin``. Dem Nutzer wurde in der Vorlage das Kennwort ``Muster!`` zugewiesen. Hiermit können Sie sich nach dem Startvorgang am Linux-Client lokal anmelden und Anpassungen vornehmen bzw. ebenfalls das Kennwort ändern.
+Lädt man die Vorlagen herunter so heißt der Vorlagenbenutzer ``linuxadmin``. Dem Nutzer wurde in der Vorlage das Kennwort ``Muster!`` zugewiesen. Hiermit kannst du dich nach dem Startvorgang am Linux-Client lokal anmelden und Anpassungen vornehmen bzw. ebenfalls das Kennwort ändern.
 
-Sie können das Kennwort das Vorlagenbenutzers aber auch direkt vom Server aus ändern. Mit folgendem Befehl legt man das Passwort des Vorlagenbenutzers im später gestarteten Linuxclient fest.
+Du kannst das Kennwort das Vorlagenbenutzers aber auch direkt vom Server aus ändern. Mit folgendem Befehl legt man das Passwort des Vorlagenbenutzers im später gestarteten Linuxclient fest.
 
 .. code-block:: console
    
    server ~ # linuxmuster-client -p <pw> -l <localname> setpw
 
-``<pw>`` - hier können Sie ein Kennwort angebene, dann wird dieses für den Vorlagenbenutzer direkt gesetzt.
+``<pw>`` - hier musst du das neuen Kennwort angeben, das wird dann für den Vorlagenbenutzer direkt gesetzt.
 
 ``<localname>`` - dies entspricht der Patchklasse für Linbo - also hier z.B. lmn-bionic-200507
 
@@ -84,27 +84,29 @@ Der Zielrechner wird in der Schulkonsole aufgenommen (z.B. `r10001`) und im Men�
 
 .. hint::
 
-   In der start.conf.lmn-bionic-200507 finden Sie die Paritionsgrößen. In der vorgefertigsten start.conf wird davon ausgegangen, dass Sie eine Festplatte mit mind. 70 GB einsetzen. Wünschen Sie andere Größen, passe diese in der Datei zuvor an und führen den nachstehenden Befehl zum Import des Gerätes aus.
+   In der start.conf.lmn-bionic-200507 findst du die Paritionsgrößen. In der vorgefertigsten start.conf wird davon ausgegangen, dass du eine Festplatte mit mind. 70 GB einsetzt. Wünschst du eine andere Größe, passe diese in der Datei zuvor an und führen den nachstehenden Befehl zum Import des Gerätes aus.
      
 Internetverbindung ohne Proxy
 -----------------------------
 
 Zunächst muss der Masterclient ohne Proxy-Authentifizierung ins Internet kommen. Die empfohlene Vorgehensweise ist, die IP-Adresse des Masterclients (temporär) in die "NoProxy" Zugriffsliste auf der Firewall aufzunehmen.
 
+.. todo:: Sollte dieses näher beschrieben werden? (Bzw. ref)
+
 Masterclient als neues Device
 -----------------------------
 
-Sie müssen nun einem Gerät in Ihrem Netz die neue Hardwareklasse ``lmn-bionic-200507`` zuweisen, so dass das Gerät mit der neuen Vorlage startet, Sie Anpassungen vornehmen können abschließend das Geräte in die Domäne aufnehmen und eine neue cloop-Datei erstellen, die Sie an alle gewünschten Geräte verteilen.
+Du musst nun einem Gerät in deinem Netz die neue Hardwareklasse ``lmn-bionic-200507`` zuweisen, so dass das Gerät mit der neuen Vorlage startet. Du kannst dann Anpassungen vornehmen, das Geräte in die Domäne aufnehmen und eine neue cloop-Datei erstellen. Diese kannst du an alle gewünschten Geräte verteilen.
 
-Editieren Sie hierzu die Datei ``/etc/linuxmuster/sophomorix/default-school/devices.csv``.
+Editiere hierzu die Datei ``/etc/linuxmuster/sophomorix/default-school/devices.csv``.
 
-Tragen Sie das Gerät mit der neuen Hardwareklasse wie folgt ein:
+Tragen das Gerät mit der neuen Hardwareklasse wie folgt ein:
 
 .. code-block:: bash
 
    r100;r10001;lmn-bionic-200507;AA:AA:BB:12:34:56;10.2.100.1;;;;classroom-studentcomputer;;1;;;;;
 
-Speichern Sie die Änderungen ab und importieren Sie das neue Gerät mit:
+Speichere die Änderungen ab und importiere das neue Gerät mit:
 
 .. code-block:: console
 
@@ -114,24 +116,26 @@ Speichern Sie die Änderungen ab und importieren Sie das neue Gerät mit:
 Masterclient synchronisieren
 ----------------------------
 
-Um den Client `r10001` erstmalig zu partitionieren, formatieren, synchronisieren und zu starten, führen Sie auf dem Server folgenden Befehl aus 
+Um den Client `r10001` erstmalig zu partitionieren, formatieren, synchronisieren und zu starten, führe auf dem Server folgenden Befehl aus 
 
 .. code-block:: console
 
    # linbo-remote -i r10001 -p partition,format,initcache:torrent,sync:1,start:1
 
-Starten Sie nun den Client und verfolgen Sie die vollautomatische Einrichtung. 
+Starte nun den Client und verfolge die vollautomatische Einrichtung. 
 
-Sollte der PC nicht starten, so sind die Wake-on-LAN Funktionen nicht korrekt konfiguriert. Dann müssen Sie den PC von Hand booten. Der PC bootet in die Linbo-Umgebung, dort müssen Sie diesen dann partitionieren, den Cache befüllen und den Linux-Client synchronisiert starten.
+.. todo:: Nächsten Absatz (Sätze 1 und 2) überarbeiten. Ist das zielführend im Zusammenhang mit dem zuvor genannten -p ohne -w?
 
-Nachdem der Linux-Client gestaretet wurde, melden Sie sich mit ``linuxadmin`` und dem Vorlagenkennwort am Client an.
+Sollte der PC nicht starten, so sind die Wake-on-LAN Funktionen nicht korrekt konfiguriert. Dann musst du den PC von Hand booten. Der PC bootet in die Linbo-Umgebung, dort musst du diesen dann partitionieren, den Cache befüllen und den Linux-Client synchronisiert starten.
 
-Sollten Sie sich mit dem Vorlagenbenutzer nicht anmelden können, so führen Sie auf dem Server o.g. Befehl zur Vergabe eines neuen Kennworts für den Vorlagenbenutzer mit Ihrem gewünschten Kennwort aus. Danach starten Sie den Client erneut, so dass der Vorlagenbenutzer ``linuxadmin`` sich danach mit dem neu vergebenen Kennwort anmelden kann.
+Nachdem der Linux-Client gestartet wurde, melde dich mit ``linuxadmin`` und dem Vorlagenkennwort am Client an.
+
+Solltest du dich mit dem Vorlagenbenutzer nicht anmelden können, so führe auf dem Server o.g. Befehl zur Vergabe eines neuen Kennworts für den Vorlagenbenutzer mit deinem gewünschten Kennwort aus. Danach starte den Client erneut, so dass der Vorlagenbenutzer ``linuxadmin`` sich danach mit dem neu vergebenen Kennwort anmelden kann.
 
 Masterclient erstmalig aufnehmen
 --------------------------------
 
-Man startet in einem Terminal (oder über ssh vom Server aus) auf dem Linux-Client den Befehl ``sudo linuxmuster-cloop-turnkey``, der das System aktualisiert und einmalig die Domänenaufnahme vornimmt.
+Starte in einem Terminal (oder über ssh vom Server aus) auf dem Linux-Client den Befehl ``sudo linuxmuster-cloop-turnkey``, der das System aktualisiert und einmalig die Domänenaufnahme vornimmt.
 
 .. code-block:: console
 
@@ -142,14 +146,18 @@ Man startet in einem Terminal (oder über ssh vom Server aus) auf dem Linux-Clie
 Neues Image erstellen
 ---------------------
 
-Erstellen Sie nun ein neues Image, indem Sie auf ``Image erstellen`` klicken, eine Beschreibung zum Image angeben und dann den Vorgang mit ``erstellen+hochladen`` ausführen.
+Erstelle nun ein neues Image, indem du auf ``Image erstellen`` klickst. Gebe eine Beschreibung zum Image ein und starte die Image-Erstellung mit ``erstellen+hochladen``.
 
 Wurde das Image erfolgreich erstellt, so wurde die cloop-Datei auf dem Server neu erstellt und die bisherige cloop-Datei findet sich mit Angabe eines Zeitstempels im Dateinamen weiterhin auf dem Server unter 
-``/srv/linbo/``. Hier finden Sie aich eine Datei mit dem Namen ``lml-bionic-200507.cloop.macc``. Ist diese Datei vorhanden so wurde dieses Cloop / der PC in die Domäne aufgenommen.
+``/srv/linbo/``. Hier findst du auch eine Datei mit dem Namen ``lml-bionic-200507.cloop.macc``. Ist diese Datei vorhanden so wurde dieses Cloop / der PC in die Domäne aufgenommen.
 
-Starten Sie den Client nun erneut synchronisiert, so können Sie sich nun am System anmelden.
+.. todo:: Sollte hier eine Hinweis-Box aufgenommen werden, die darauf verweist, dass dieser Client auf keine Umstände gelöscht werden darf. Da sonst die Vertrauensstellung vorloren geht. Siehe Foren-Beiträge zu der Problematik
 
-Die cloop-Vorlage beinhaltet schon eine Reihe an Anpassungen und vorinstallierten Programmen, die Sie mithilfe des Vorlagenbenutzers ``linuxadmin`` an ihre Bedürfnisse anpassen können. Mach den erfolgten Anpassungen erstellen Sie erneut ein neues Image / eine neue cloop-Datei.
+Reboote den Client und starte ihn synchronisiert. Du kannst dich jetzt mit deinen User-Account am System anmelden.
+
+Die cloop-Vorlage beinhaltet schon eine Reihe an Anpassungen und vorinstallierten Programmen, die du mithilfe des Vorlagenbenutzers ``linuxadmin`` an die Bedürfnisse deiner Schule anpassen kannst. Nach den erfolgten Anpassungen erstelle erneut ein neues Image du erhälst dadurch eine neue cloop-Datei. Die vorherige Version wird mit einem Zeitstempel versehen und verbleibt im System bis sie von dir gelöscht wird.
+
+.. hint:: Bevor du mit der Anpassung für ein neues Images beginnst, solltest du immer mit einer zuvor frisch synchroniserten Version des bestehenden Abbildes arbeiten. So vermeidest du, dass vorherige Veränderungen an dem System, die eventuell nicht von dir gewollt sind, in der neuen Version landen. 
 
 Weiterführende Dokumentation
 ============================
