@@ -13,7 +13,9 @@ Kapitelüberschrift
    * ...
 
 .. todo:: Inhalt ergänzen
+
           ...
+
           Wenn fertig hint und todo entfernen
 
 ...
@@ -47,6 +49,24 @@ Also wir würden uns freuen, wenn du uns unterstützen würdest.
 
 Wie immer bei linuxmuster.net niemand ist bei uns allein.
 Für Fragen einfach einen Post an die im ersten Punkt genannten Adressen. (E-Mail oder Forum) 
+
+**Ab hier Templates für rst**
+
+Muster für Hinweis-Boxen:
+
+.. hint:: Text eingeben
+
+.. note:: Text eingeben
+
+.. attention:: Text eingeben
+
+.. warning:: Text eingeben
+
+.. error:: Text eingeben
+
+.. todo:: Text eingeben
+
+.. seealso:: Text eingeben
 
 Muster für Tabelle:
 
