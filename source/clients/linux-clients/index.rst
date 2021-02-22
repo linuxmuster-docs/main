@@ -8,26 +8,18 @@
 
 .. sectionauthor:: `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_
 
-In dieser Anleitung wird beschrieben, wie man Linux auf einer
-Musterarbeitsstation installiert. Ein fertig vorkonfiguriertes Abbild
-liegt zum Download bei linuxmuster.net bereit und kann sofort auf alle
-Arbeitsstationen verteilt werden.
+In dieser Anleitung wird beschrieben, wie man Linux auf einer Musterarbeitsstation installiert. Ein fertig vorkonfiguriertes Abbild liegt zum Download bei linuxmuster.net bereit und kann sofort auf alle Arbeitsstationen verteilt werden.
 
-Arbeitsstationen ("Clients") werden in der linuxmuster.net über die
-Software LINBO ("GNU/Linux Network Boot") installiert.
+Arbeitsstationen ("Clients") werden in der linuxmuster.net über die Software LINBO ("GNU/Linux Network Boot") installiert.
 
-Alle Arbeitsschritte, die Änderungen am Server benötigen,
-werden an einer Serverkonsole erledigt.
+Alle Arbeitsschritte, die Änderungen am Server benötigen, werden an einer Serverkonsole erledigt.
 
 .. _download-default-cloop:
 
 Einrichten eines Linuxclients
 =============================
 
-Mit dem Befehl ``linuxmuster-client`` aus dem Paket
-``linuxmuster-client-servertools`` wird von linuxmuster.net ein Paket
-heruntergeladen, das eine Image-Datei (``cloop-Datei``) und weitere
-dazugehörige Daten enthält. 
+Mit dem Befehl ``linuxmuster-client`` aus dem Paket ``linuxmuster-client-servertools`` wird von linuxmuster.net ein Paket heruntergeladen, das eine Image-Datei (``cloop-Datei``) und weitere dazugehörige Daten enthält. 
 
 Rufe die Liste aller verfügbaren Clientabbilder auf:
   
@@ -43,24 +35,17 @@ Rufe die Liste aller verfügbaren Clientabbilder auf:
    lmn-bionic-200507         Ubuntu 18.04..4 LTS default
    ------------------------------------------------------
 
-Lade das Abbild deiner Wahl (hier: `lmn-bionic-200507`) herunter 
-und lasse alle benötigten Dateien einrichten (z.B. Patchklasse für die Hardwareklasse,
-das Postsync-Script etc.):
+Lade das Abbild deiner Wahl (hier: `lmn-bionic-200507`) herunter und lasse alle benötigten Dateien einrichten (z.B. Patchklasse für die Hardwareklasse, das Postsync-Script etc.):
 
 .. code-block:: console
 
    server ~ # linuxmuster-client -r lmn-bionic-200507 auto
 
-Es wird geprüft, ob Dateien mit diesem Namen schon existieren, weil
-selbst schon eine Rechnergruppe mit dem Namen angelegt wurde, oder man
-dieses Image zum wiederholten Mal herunterlädt. 
+Es wird geprüft, ob Dateien mit diesem Namen schon existieren, weil selbst schon eine Rechnergruppe mit dem Namen angelegt wurde, oder man dieses Image zum wiederholten Mal herunterlädt. 
 
-Liegt das Image schon vor, ist ein Download nicht mehr erfordelich, so dass dann nur noch 
-die Integrität der cloop-Datei geprüft wird und alle Dateien entpackt werden.
+Liegt das Image schon vor, ist ein Download nicht mehr erfordelich, so dass dann nur noch die Integrität der cloop-Datei geprüft wird und alle Dateien entpackt werden.
 
-Ist ein Überschreiben der cloop-Datei oder der Dateien der Patchklasse für Linbo 
-erforderlich oder gewünscht, so ist mit o.g. Befehl die Option -f (force) 
-anzugeben.
+Ist ein Überschreiben der cloop-Datei oder der Dateien der Patchklasse für Linbo erforderlich oder gewünscht, so ist mit o.g. Befehl die Option -f (force) anzugeben.
 
 Die wichtigsten Dateien, die angelegt werden sind
 
@@ -74,14 +59,9 @@ Die wichtigsten Dateien, die angelegt werden sind
 Ändern des Passworts des Vorlagenbenutzers
 ------------------------------------------
 
-Lädt man die Vorlagen herunter so heißt der Vorlagenbenutzer ``linuxadmin``. Dem Nutzer
-wurde in der Vorlage das Kennwort ``Muster!`` zugewiesen. Hiermit können Sie sich nach dem 
-Startvorgang am Linux-Client lokal anmelden und Anpassungen vornehmen bzw. ebenfalls das 
-Kennwort ändern.
+Lädt man die Vorlagen herunter so heißt der Vorlagenbenutzer ``linuxadmin``. Dem Nutzer wurde in der Vorlage das Kennwort ``Muster!`` zugewiesen. Hiermit können Sie sich nach dem Startvorgang am Linux-Client lokal anmelden und Anpassungen vornehmen bzw. ebenfalls das Kennwort ändern.
 
-Sie können das Kennwort das Vorlagenbenutzers aber auch direkt vom Server aus ändern.
-Mit folgendem Befehl legt man das Passwort des Vorlagenbenutzers im später gestarteten 
-Linuxclient fest.
+Sie können das Kennwort das Vorlagenbenutzers aber auch direkt vom Server aus ändern. Mit folgendem Befehl legt man das Passwort des Vorlagenbenutzers im später gestarteten Linuxclient fest.
 
 .. code-block:: console
    
@@ -98,36 +78,23 @@ Das Kennwort für den Vorlagenbenutzer wird in der Patchklasse hier abgelegt:
 Masterclient aufnehmen
 ======================
 
-Der erste Arbeitsplatzrechner (hier: Masterclient genannt) kann
-jetzt in die Rechnergruppe "lmn-bionic-200507" aufgenommen werden.
+Der erste Arbeitsplatzrechner (hier: Masterclient genannt) kann jetzt in die Rechnergruppe "lmn-bionic-200507" aufgenommen werden.
 
-Der Zielrechner wird in der Schulkonsole aufgenommen
-(z.B. `r10001`) und im Menüpunkt LINBO der richtigen Gruppe
-(z.B. `lmn-bionic-200507`) zugewiesen, siehe :ref:`add-computer-label`.
+Der Zielrechner wird in der Schulkonsole aufgenommen (z.B. `r10001`) und im Menüpunkt LINBO der richtigen Gruppe (z.B. `lmn-bionic-200507`) zugewiesen, siehe :ref:`add-computer-label`.
 
 .. hint::
 
-   In der start.conf.lmn-bionic-200507 finden Sie die Paritionsgrößen. 
-   In der vorgefertigsten start.conf wird davon ausgegangen, dass Sie eine
-   Festplatte mit mind. 70 GB einsetzen. Wünschen Sie andere Größen, passen 
-   Sie diese in der Datei zuvor an und führen den nachstehenden Befehl zum Import 
-   des Gerätes aus.
+   In der start.conf.lmn-bionic-200507 finden Sie die Paritionsgrößen. In der vorgefertigsten start.conf wird davon ausgegangen, dass Sie eine Festplatte mit mind. 70 GB einsetzen. Wünschen Sie andere Größen, passe diese in der Datei zuvor an und führen den nachstehenden Befehl zum Import des Gerätes aus.
      
 Internetverbindung ohne Proxy
 -----------------------------
 
-Zunächst muss der Masterclient ohne Proxy-Authentifizierung ins
-Internet kommen. Die empfohlene Vorgehensweise ist, die IP-Adresse des
-Masterclients (temporär) in die "NoProxy" Zugriffsliste auf der
-Firewall aufzunehmen.
+Zunächst muss der Masterclient ohne Proxy-Authentifizierung ins Internet kommen. Die empfohlene Vorgehensweise ist, die IP-Adresse des Masterclients (temporär) in die "NoProxy" Zugriffsliste auf der Firewall aufzunehmen.
 
 Masterclient als neues Device
 -----------------------------
 
-Sie müssen nun einem Gerät in Ihrem Netz die neue Hardwareklasse ``lmn-bionic-200507``
-zuweisen, so dass das Gerät mit der neuen Vorlage startet, Sie Anpassungen vornehmen können 
-abschließend das Geräte in die Domäne aufnehmen und eine neue cloop-Datei erstellen, 
-die Sie an alle gewünschten Geräte verteilen.
+Sie müssen nun einem Gerät in Ihrem Netz die neue Hardwareklasse ``lmn-bionic-200507`` zuweisen, so dass das Gerät mit der neuen Vorlage startet, Sie Anpassungen vornehmen können abschließend das Geräte in die Domäne aufnehmen und eine neue cloop-Datei erstellen, die Sie an alle gewünschten Geräte verteilen.
 
 Editieren Sie hierzu die Datei ``/etc/linuxmuster/sophomorix/default-school/devices.csv``.
 
@@ -147,9 +114,7 @@ Speichern Sie die Änderungen ab und importieren Sie das neue Gerät mit:
 Masterclient synchronisieren
 ----------------------------
 
-Um den Client `r10001` erstmalig zu partitionieren, formatieren,
-synchronisieren und zu starten, führen Sie auf dem Server folgenden Befehl
-aus
+Um den Client `r10001` erstmalig zu partitionieren, formatieren, synchronisieren und zu starten, führen Sie auf dem Server folgenden Befehl aus 
 
 .. code-block:: console
 
@@ -157,48 +122,34 @@ aus
 
 Starten Sie nun den Client und verfolgen Sie die vollautomatische Einrichtung. 
 
-Sollte der PC nicht starten, so sind die Wake-on-LAN Funktionen nicht korrekt konfiguriert.
-Dann müssen Sie den PC von Hand booten. Der PC bootet in die Linbo-Umgebung, dort müssen Sie 
-diesen dann partitionieren, den Cache befüllen und den Linux-Client synchronisiert starten.
+Sollte der PC nicht starten, so sind die Wake-on-LAN Funktionen nicht korrekt konfiguriert. Dann müssen Sie den PC von Hand booten. Der PC bootet in die Linbo-Umgebung, dort müssen Sie diesen dann partitionieren, den Cache befüllen und den Linux-Client synchronisiert starten.
 
-Nachdem der Linux-Client gestaretet wurde, melden Sie sich mit ``linuxadmin`` und dem 
-Vorlagenkennwort am Client an.
+Nachdem der Linux-Client gestaretet wurde, melden Sie sich mit ``linuxadmin`` und dem Vorlagenkennwort am Client an.
 
-Sollten Sie sich mit dem Vorlagenbenutzer nicht anmelden können, so führen Sie auf dem Server
-o.g. Befehl zur Vergabe eines neuen Kennworts für den Vorlagenbenutzer mit Ihrem gewünschten Kennwort aus. 
-Danach starten Sie den Client erneut, so dass der Vorlagenbenutzer ``linuxadmin`` sich danach mit dem 
-neu vergebenen Kennwort anmelden kann.
+Sollten Sie sich mit dem Vorlagenbenutzer nicht anmelden können, so führen Sie auf dem Server o.g. Befehl zur Vergabe eines neuen Kennworts für den Vorlagenbenutzer mit Ihrem gewünschten Kennwort aus. Danach starten Sie den Client erneut, so dass der Vorlagenbenutzer ``linuxadmin`` sich danach mit dem neu vergebenen Kennwort anmelden kann.
 
 Masterclient erstmalig aufnehmen
 --------------------------------
 
-Man startet in einem Terminal (oder über ssh vom Server aus) auf dem Linux-Client den
-Befehl ``sudo linuxmuster-cloop-turnkey``, der das System aktualisiert
-und einmalig die Domänenaufnahme vornimmt.
+Man startet in einem Terminal (oder über ssh vom Server aus) auf dem Linux-Client den Befehl ``sudo linuxmuster-cloop-turnkey``, der das System aktualisiert und einmalig die Domänenaufnahme vornimmt.
 
 .. code-block:: console
 
    # sudo linuxmuster-cloop-turnkey
 
-.. hint:: Erhalten Sie einen Hinweis, dass der Vorgang abgeschlossen wurde, starten Sie den PC neu und 
-**wählen Sie nach dem Reboot in Linbo die Reiterkarte ``Imageing``**.
+.. hint:: Erhalten Sie einen Hinweis, dass der Vorgang abgeschlossen wurde, starten Sie den PC neu und **wählen Sie nach dem Reboot in Linbo die Reiterkarte ``Imageing``**.
 
 Neues Image erstellen
 ---------------------
 
-Erstellen Sie nun ein neues Image, indem Sie auf ``Image erstellen`` klicken, eine Beschreibung zum Image 
-angeben und dann den Vorgang mit ``erstellen+hochladen`` ausführen.
+Erstellen Sie nun ein neues Image, indem Sie auf ``Image erstellen`` klicken, eine Beschreibung zum Image angeben und dann den Vorgang mit ``erstellen+hochladen`` ausführen.
 
-Wurde das Image erfolgreich erstellt, so wurde die cloop-Datei auf dem Server neu erstellt und die bisherige
-cloop-Datei findet sich mit Angabe eines Zeitstempels im Dateinamen weiterhin auf dem Server unter 
-``/srv/linbo/``. Hier finden Sie aich eine Datei mit dem Namen ``lml-bionic-200507.cloop.macc``. 
-Ist diese Datei vorhanden so wurde dieses Cloop / der PC in die Domäne aufgenommen.
+Wurde das Image erfolgreich erstellt, so wurde die cloop-Datei auf dem Server neu erstellt und die bisherige cloop-Datei findet sich mit Angabe eines Zeitstempels im Dateinamen weiterhin auf dem Server unter 
+``/srv/linbo/``. Hier finden Sie aich eine Datei mit dem Namen ``lml-bionic-200507.cloop.macc``. Ist diese Datei vorhanden so wurde dieses Cloop / der PC in die Domäne aufgenommen.
 
 Starten Sie den Client nun erneut synchronisiert, so können Sie sich nun am System anmelden.
 
-Die cloop-Vorlage beinhaltet schon eine Reihe an Anpassungen und vorinstallierten Programmen, die Sie mithilfe
-des Vorlagenbenutzers ``linuxadmin`` an ihre Bedürfnisse anpassen können. Mach den erfolgten Anpassungen
-erstellen Sie erneut ein neues Image / eine neue cloop-Datei.
+Die cloop-Vorlage beinhaltet schon eine Reihe an Anpassungen und vorinstallierten Programmen, die Sie mithilfe des Vorlagenbenutzers ``linuxadmin`` an ihre Bedürfnisse anpassen können. Mach den erfolgten Anpassungen erstellen Sie erneut ein neues Image / eine neue cloop-Datei.
 
 Weiterführende Dokumentation
 ============================
@@ -216,5 +167,3 @@ Weiterführende Dokumentation
 +--------------------------------------------------------------------+-------------------------------------------+
 | Abschluss der Installation                                         | |follow_me2finish-install|                |
 +--------------------------------------------------------------------+-------------------------------------------+
-
-
