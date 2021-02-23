@@ -143,6 +143,10 @@ Starte in einem Terminal (oder über ssh vom Server aus) auf dem Linux-Client de
 
 .. hint:: Erhalten Sie einen Hinweis, dass der Vorgang abgeschlossen wurde, starten Sie den PC neu und **wählen Sie nach dem Reboot in Linbo die Reiterkarte ``Imageing``**.
 
+.. attention:: Der so in die Domäne aufgenomme Client muss momentan immer in der device.csv vorhanden bleiben! Darf also weder umbenannt oder gelöscht werden! 
+
+   Hintergrund: Aufgrund eines Problems mit den ausgestellten Kerberos-Tickets verlieren alle Clients, die das gleiche Image verwenden wie der gerade aufgenommene, die Vertrauensstellung mit der Domäne. Das Problem ist bekannt und wird bearbeitet.
+
 Neues Image erstellen
 ---------------------
 
@@ -150,8 +154,6 @@ Erstelle nun ein neues Image, indem du auf ``Image erstellen`` klickst. Gebe ein
 
 Wurde das Image erfolgreich erstellt, so wurde die cloop-Datei auf dem Server neu erstellt und die bisherige cloop-Datei findet sich mit Angabe eines Zeitstempels im Dateinamen weiterhin auf dem Server unter 
 ``/srv/linbo/``. Hier findst du auch eine Datei mit dem Namen ``lml-bionic-200507.cloop.macc``. Ist diese Datei vorhanden so wurde dieses Cloop / der PC in die Domäne aufgenommen.
-
-.. todo:: Sollte hier eine Hinweis-Box aufgenommen werden, die darauf verweist, dass dieser Client auf keine Umstände gelöscht werden darf. Da sonst die Vertrauensstellung vorloren geht. Siehe Foren-Beiträge zu der Problematik
 
 Reboote den Client und starte ihn synchronisiert. Du kannst dich jetzt mit deinen User-Account am System anmelden.
 
