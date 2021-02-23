@@ -42,6 +42,6 @@ deiner Virtualisierungslösung.
   :hidden:
 
   install-on-proxmox/index
-  install-on-xcp-ng/index
   install-on-kvm/index
+  install-on-xcp-ng/index
   install-from-scratch/index
