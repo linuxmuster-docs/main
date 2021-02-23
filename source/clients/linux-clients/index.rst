@@ -141,7 +141,7 @@ Starte in einem Terminal (oder über ssh vom Server aus) auf dem Linux-Client de
 
    # sudo linuxmuster-cloop-turnkey
 
-.. hint:: Erhalten Sie einen Hinweis, dass der Vorgang abgeschlossen wurde, starten Sie den PC neu und **wählen Sie nach dem Reboot in Linbo die Reiterkarte ``Imageing``**.
+.. hint:: Erhalten Sie einen Hinweis, dass der Vorgang abgeschlossen wurde, starten Sie den PC neu und **wählen Sie nach dem Reboot in Linbo die Reiterkarte ``Imaging``**.
 
 .. attention:: Der so in die Domäne aufgenomme Client muss momentan immer in der device.csv vorhanden bleiben! Darf also weder umbenannt oder gelöscht werden! 
 
