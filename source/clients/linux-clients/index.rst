@@ -181,7 +181,9 @@ und einmalig die Domänenaufnahme vornimmt.
    # sudo linuxmuster-cloop-turnkey
 
 .. hint:: Erhalten Sie einen Hinweis, dass der Vorgang abgeschlossen wurde, starten Sie den PC neu und 
+
 **wählen Sie nach dem Reboot in Linbo die Reiterkarte ``Imageing``**.
+
 
 Neues Image erstellen
 ---------------------

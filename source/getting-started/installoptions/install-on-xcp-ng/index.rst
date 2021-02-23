@@ -10,7 +10,7 @@
 		   `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
 
-XCP-ng ist eine reine OpenSource-Virtualisierungslösung, die auf Basis 
+XCP-ng ist eine OpenSource-Virtualisierungslösung, die auf Basis 
 von XEN arbeitet. XCP-ng bietet sog. Enterprise-Features wie Replikation, 
 automatisierte Backups, Verschieben von VMs im laufenden Betrieb und 
 weitere Funktionen. Daher eignet sie sich besonders für den virtuellen 
