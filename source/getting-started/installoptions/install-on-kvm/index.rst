@@ -2,9 +2,9 @@
 
 .. _install-kvm-label:
 
-==========================
- Virtualisierung über KVM
-==========================
+=======================
+Virtualisierung mit KVM
+=======================
 
 .. sectionauthor:: `@morbweb <https://ask.linuxmuster.net/u/morpweb>`_,
 		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
@@ -47,32 +47,6 @@ Voraussetzungen
   ``10.0.0.10/16`` mit Gateway und DNS-Server jeweils ``10.0.0.254``.
   Es bietet sich ein Ubuntu-Desktop mit der Software `virt-manager`
   an.
-
-Download der Appliances OVA
-===========================
-
-+--------------------+----------------------------------------------------------------------+
-| Programm           | Beschreibung                                                         |
-+====================+======================================================================+
-| lmn7.opnsense      | OPNsense Firewall VM  der linuxmuster.net v7                         |
-+--------------------+----------------------------------------------------------------------+
-| lmn7.server        | Server der linuxmuster.net v7                                        |
-+--------------------+----------------------------------------------------------------------+
-
-Nachstehende VMs sind optional, sofern eine paketorientierte Softwareverteilung für Windows-Clients (OPSi), eigene Web-Services mithilfe eines sog. Docker-Hosts betrieben und/oder eine WLAN-Anbindung via Ubiquiti bereitgestellt werden soll.
-
-+--------------------+----------------------------------------------------------------------+
-| Programm           | Beschreibung                                                         |
-+====================+======================================================================+
-| lmn7.opsi          | OPSI VM der lmn v7                                                   |
-+--------------------+----------------------------------------------------------------------+
-| lmn7.docker        | Bereitstellung eigener Web-Dienste mithilfe eines Docker-Hosts       |
-+--------------------+----------------------------------------------------------------------+
-| lmn7.unifi         | Controller der Ubiquiti WLAN - Lösung                                |
-+--------------------+----------------------------------------------------------------------+
-
-
-``Download der OVAs`` unter: `Download OVAs VM v7 <https://download.linuxmuster.net/ova/v7/latest/>`_
 
 Vorgehen
 ========
@@ -243,7 +217,7 @@ Paketmanager und Softwareauswahl
   den Bootbereich bestätigen. Der KVM-Host wird rebootet.
   
 Update und Softwareinstallation des KVM-Hosts
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------------
 
 Nach einem Reboot loggst du dich als ``linuxadmin`` ein und führst
 zunächst ein Update aus. Das ist (Stand: Dez. 2018) notwendig, damit
@@ -272,7 +246,7 @@ Installiere danach die qemu/KVM-Software durch Bestätigen der Fragen
    $ sudo apt --no-install-recommends install virtinst
 
 Einrichten der Zeitsynchronisation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------
 
 Immer eine gute Sache ist es, z.B. in Logfiles die korrekte Zeit zu
 finden. Aus diesem Grund erfolgt die Konfiguration eines NTP-Clients.

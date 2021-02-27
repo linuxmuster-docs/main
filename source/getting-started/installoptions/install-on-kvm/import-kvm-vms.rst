@@ -2,62 +2,112 @@
 
 .. _import-kvm-vms-label:
 
-==========================
- Virtualisierung über KVM
-==========================
+====================================
+Importieren der Virtuellen Maschinen
+====================================
 
 .. sectionauthor:: `@morbweb <https://ask.linuxmuster.net/u/morpweb>`_,
 		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
-		   `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
+		   `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
-Vorbereitungen für den Import der virtuellen Maschinen
-======================================================
+Nachdem du den Host für die virtuellen Maschinen fertiggestellt hast, müssen diese nun importiert werden.
 
-Download der virtuellen Maschinen
-  Lade auf dem KVM-Host die aktuellen OVA-Abbilder und die entsprechenden 
-  `sha`-Summen von der `Webseite <https://download.linuxmuster.net/ova/v7/latest/>`_ herunter.
+VM Templates herunterladen
+==========================
 
-  Beispielhaft für die Version vom 24.7.2019:
+Fertige VM-Snapshots für KVM stellt linuxmuster.net auf dem eigenen Download-Server bereit. https://download.linuxmuster.net/ova/v7/latest/
+ 
+Um die Maschinen importieren zu können, müssen diese zuerst auf den Hypervisor geladen werden. Die VMs können direkt an der Shell des KVM-Host mit dem wget-Befehl direkt heruntergeladen werden. 
 
-  .. code-block:: console
-     
-     # wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opnsense-20190724.ova
-     # wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opnsense-20190724.ova.sha
-     # wget https://download.linuxmuster.net/ova/v7/latest/lmn7-server-20190724.ova
-     # wget https://download.linuxmuster.net/ova/v7/latest/lmn7-server-20190724.ova.sha
+Für eine linuxmuster.net v7 Umgebung werden die Server-VM und als Firewall die OPNsense®-VM benötigt. Optional sind zusätzlich eine OPSI-VM und eine Docker-VM für deine linuxmuster.net-Umgebung verfügbar. 
 
-  Überprüfe die `sha`-Summe mit dem entsprechenden Werkzeug und
-  vergleiche mit der Webseite auf Integrität.
+Für die VMs wären folgende Befehle in der Shell einzugeben. Jeweils pro Server zwei Dateien: 
+
+================== =====================================================================================
+VM                 Download-Befehl
+================== =====================================================================================
+opnsense-VM        wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opnsense-20200421.ova 
+opensense (sha256) wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opnsense-20200421.ova.sha256
+server-VM          wget https://download.linuxmuster.net/ova/v7/latest/lmn7-server-20200421.ova
+server (sha256)    wget https://download.linuxmuster.net/ova/v7/latest/lmn7-server-20200421.ova.sha256
+opsi-VM            wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opsi-20200421.ova
+opsi (sha256)      wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opsi-20200421.ova.sha256
+docker-VM          wget https://download.linuxmuster.net/ova/v7/latest/lmn7-docker-20200421.ova
+docker-VM (sha256) wget https://download.linuxmuster.net/ova/v7/latest/lmn7-docker-20200421.ova.sha256
+================== =====================================================================================
+
+
+.. todo::
+
+   Gab es die mal oder kommen sie wieder?
+   
+   +------------------+----------------------------------------------------------------------+
+   | lmn7.unifi         | Controller der Ubiquiti WLAN - Lösung                              |
+   +--------------------+--------------------------------------------------------------------+
+
+Beispiel für die opensense-VM:
+
+.. code::
+ 
+    root@hv01:~# wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opnsense-20200421.ova
+    --2020-12-20 12:01:46--  https://download.linuxmuster.net/ova/v7/latest/lmn7-opnsense-20200421.ova
+    Resolving download.linuxmuster.net (download.linuxmuster.net)... 95.217.39.154
+    Connecting to download.linuxmuster.net (download.linuxmuster.net)|95.217.39.154|:443... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 3838493301 (3.6G)
+    Saving to: ‘lmn7-opnsense-20200421.ova‘
+ 
+    lmn7-opnsense-20200421.ova   5%[>                       ] 186.40M  10.4MB/s
+
+.. code::
+ 
+    root@hv01:~# wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opnsense-20200421.ova.sha256
+    --2020-12-20 12:01:46--  https://download.linuxmuster.net/ova/v7/latest/lmn7-opnsense-20200421.ova.sh256
+    Resolving download.linuxmuster.net (download.linuxmuster.net)... 95.217.39.154
+    Connecting to download.linuxmuster.net (download.linuxmuster.net)|95.217.39.154|:443... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 3838493301 (3.6G)
+    Saving to: ‘lmn7-opnsense-20200421.ova.sha256‘
+ 
+    lmn7-opnsense-20200421.ova.sha256  100%[=================================================================================>]      93  --.-KB/s    in 0s      
+
+    --2020-12-20 12:0148 (6,81 MB/s) - »lmn7-opnsense-20200421.ova.sha256« gespeichert [93/93] 
+
+.. hint:: Solltest du einen ``FEHLER 404: File not found`` erhalten, musst du die Dateinamen anpassen. Die neuen Dateinamen (aktualisierten) musst du dem oben genannten Link entnehmen und bei allen Nennungen in der Dokumentation verwenden.
+
+Nach dem Herunterladen der Backup-Dateien sollten sich diese mittels ``ls -lh`` in der Shell anzeigen lassen.
+
+.. code::
+
+   Ist noch anzupassen!
+
+Überprüfe die `sha`-Summe mit dem entsprechenden Werkzeug.
   
-  .. code-block:: console
-     
-     # shasum -c *.sha
-     lmn7-opnsense-20190724.ova: OK
-     lmn7-server-20190724.ova: OK
+.. code::
+   
+   shasum -c \*.sha256
+   lmn7-opnsense-20200421.ova: OK
+   lmn7-server-20200421.ova: OK
 
-.. hint:: 
-  
-   In der weiteren
-   Anleitung wird statt der Dateien mit Datumsstempel wie ``20190724``
-   die Datei mit ``*`` verwendet. Solange du nur je ein (das aktuelle)
-   OVA-Abbild vorliegen hast, funktionieren die Befehle auch mit dem
-   ``*``.
+.. todo:: Backslahs in shasum zuvor muss entfernt werden, dient nur des Syntax-Hilghlighting in vim
 
-.. 
- KVM-Anpassungen
-  Nach der Integration bietet es sich an, die Hardware der
-  importierten Appliances anzupassen und z.B. die Festplattentypen auf
-  "virtio" zu stellen. Ebenso habe ich den Typ der "Grafikkarte" von
-  `spice` auf `vnc` gesetzt.
+.. hint:: In der weiteren Anleitung wird statt des Datumsstempels wie ``20200421`` im Dateinamen, die Datei mit ``*`` verwendet. Solange du nur je ein (das aktuelle) OVA-Abbild vorliegen hast, funktionieren die Befehle auch mit dem ``*``.
 
-  
+.. todo::  Hier gilt es weiter zu machen. Der nächste Absatz war auskommentiert. Ob der weg kann ist zu klären.
+   
+   KVM-Anpassungen
+
+   Nach der Integration bietet es sich an, die Hardware der importierten Appliances anzupassen und z.B. die Festplattentypen auf "virtio" zu stellen. Ebenso habe ich den Typ der "Grafikkarte" von `spice` auf `vnc` gesetzt.
+
+
+.. todo:: Dieser Teil müsste vor den Import da noch zur Bereitstellung des Hosts gehörend.
+   
 Netzwerkkonfiguration des KVM-Hosts
 ===================================
    
-Nach Installation der KVM-Software (``virbr0*`` wurden automatisch
-hinzugefügt) ist die Netzwerksituation folgende:
+Nach Installation der KVM-Software (``virbr0*`` wurden automatisch hinzugefügt) ist die Netzwerksituation folgende:
 
-.. code-block:: console
+.. code::
 
    $ ip -br addr list
    lo               UNKNOWN        127.0.0.1/8 ::1/128 
@@ -66,117 +116,100 @@ hinzugefügt) ist die Netzwerksituation folgende:
    virbr0           DOWN           192.168.122.1/24 
    virbr0-nic       DOWN           
 
-In diesem Schritt wird die direkte Verbindung des KVM-Hosts mit dem
-Internet gekappt und eine virtuelle Verkabelung über so genannte
-`bridges` erstellt.  Zunächst werden die Brücken ``br-red``
-(Internetseite) und ``br-server`` (Schulnetzseite) definiert.  Zuletzt
-kann der KVM-Host auch über die Brücke ``br-red`` eine IP-Adresse ins
-Internet bekommen, genau wie er über die Brücke ``br-server`` auch im
-pädagogischen Netzwerk auftauchen kann. Letzteres ist nicht zu empfehlen.
+In diesem Schritt wird die direkte Verbindung des KVM-Hosts mit dem Internet gekappt und eine virtuelle Verkabelung über so genannte `bridges` erstellt.  Zunächst werden die Brücken ``br-red`` (Internetseite) und ``br-server`` (Schulnetzseite) definiert.  Zuletzt kann der KVM-Host auch über die Brücke ``br-red`` eine IP-Adresse ins Internet bekommen, genau wie er über die Brücke ``br-server`` auch im pädagogischen Netzwerk auftauchen kann. Letzteres ist nicht zu empfehlen.
 
 .. hint::
 
-   Die Netzwerkkonfiguration wird seit Ubuntu 18.04 standardmäßig über
-   netplan realisiert. Wer seinen KVM-Host von früheren
-   Ubuntu-Versionen updatet, bei dem wird nicht automatisch `netplan`
-   installiert, sondern `ifupdown` wird mit der Konfigurationsdatei
-   ``/etc/network/interfaces`` beibehalten.
+   Die Netzwerkkonfiguration wird seit Ubuntu 18.04 standardmäßig über netplan realisiert. Wer seinen KVM-Host von früheren Ubuntu-Versionen updatet, bei dem wird nicht automatisch `netplan` installiert, sondern `ifupdown` wird mit der Konfigurationsdatei ``/etc/network/interfaces`` beibehalten.
 
-Namen der Netzwerkkarten
-  Mit folgendem Befehl werden alle physischen Netzwerkkarten
-  (teilweise umbenannt) gefunden:
+Namen der Netzwerkkarten:
 
-  .. code-block:: console
+Mit folgendem Befehl werden alle physischen Netzwerkkarten (teilweise umbenannt) angezeigt:
+
+.. code::
      
-     # dmesg | grep eth
-     [    9.230673] e1000e 0000:08:00.0 eth0: (PCI Express:2.5GT/s:Width x4) 00:30:48:dd:ee:ff
-     [    9.273215] e1000e 0000:11:00.1 eth1: (PCI Express:2.5GT/s:Width x4) 00:30:48:aa:bb:cc
-     [    9.432342] e1000e 0000:08:00.0 enp0s8: renamed from eth0
-     [    9.654232] e1000e 0000:11:00.1 enp0s17: renamed from eth1
+   # dmesg | grep eth
+   [    9.230673] e1000e 0000:08:00.0 eth0: (PCI Express:2.5GT/s:Width x4) 00:30:48:dd:ee:ff
+   [    9.273215] e1000e 0000:11:00.1 eth1: (PCI Express:2.5GT/s:Width x4) 00:30:48:aa:bb:cc
+   [    9.432342] e1000e 0000:08:00.0 enp0s8: renamed from eth0
+   [    9.654232] e1000e 0000:11:00.1 enp0s17: renamed from eth1
 
-Anpassen der Netzwerkkonfiguration
-  .. code-block:: console
+Anpassen der Netzwerkkonfiguration im Editor deiner Wahl. Hier am Beispiel nano
 
-     $ sudo nano /etc/netplan/01-netcfg.yaml
+.. code::
 
-  Die Netzwerkkonfiguration enthält standardmäßig die Schnittstelle,
-  die bei der Installation mit dem Internet verbunden war. Diese
-  Schnittstelle wird dann auch mit der Brücke ``br-red`` verbunden. 
+  $ sudo nano /etc/netplan/01-netcfg.yaml
+
+Die Netzwerkkonfiguration enthält standardmäßig die Schnittstelle, die bei der Installation mit dem Internet verbunden war. Diese Schnittstelle wird dann auch mit der Brücke ``br-red`` verbunden. 
      
-  .. code-block:: yaml
+.. code::
 
-     network:
-       version: 2
-       renderer: networkd
-       ethernets:
-         enp0s8:
-	   dhcp4: no
-	 enp0s17:
-	   dhcp4: no
+   network:
+     version: 2
+     renderer: networkd
+     ethernets:
+       enp0s8:
+         dhcp4: no
+         enp0s17:
+         dhcp4: no
        bridges:
          br-red:
            interfaces: [enp0s17]
-	   dhcp4: no
-	   addresses: [ ]
+           dhcp4: no
+           addresses: [ ]
          br-server:
            interfaces: [enp0s8]
-	   addresses: [ ]
+           addresses: [ ]
 
-  Diese Netzwerkkonfiguration kann nun ausprobiert und angewandt werden.
+Diese Netzwerkkonfiguration kann nun ausprobiert und angewandt werden.
 
-  .. code-block:: console
+.. code::
 
-     $ sudo netplan try
+   $ sudo netplan try
 
-  .. hint::
+.. hint:: Potenzielle Fehlerquellen sind nicht konsequent eingerückte Zeilen oder TABs.
 
-     Potenzielle Fehlerquellen sind nicht konsequent eingerückte
-     Zeilen oder TABs.
+.. code::
 
-     .. code-block:: console
+   Invalid YAML at /etc/netplan/01-netcfg.yaml line 6 column 0: found character that cannot start any token
 
-	Invalid YAML at /etc/netplan/01-netcfg.yaml line 6 column 0: found character that cannot start any token
-
-     Bei fehlerhaften Anläufen lohnt es sich, den
-     KVM-host zu rebooten und die Netzwerkkonfiguration erneut zu
-     betrachten. 
+Bei fehlerhaften Anläufen lohnt es sich, den KVM-host zu rebooten und die Netzwerkkonfiguration erneut zu betrachten. 
   
 KVM-Host auch im Internet
-  Soll später nicht nur die Firewall sondern auch der KVM-Host im
-  Internet erreichbar sein, dann muss der entsprechende Block so aussehen:
 
-  .. code-block:: yaml
+Soll später nicht nur die Firewall sondern auch der KVM-Host im Internet erreichbar sein, dann muss der entsprechende Block so aussehen:
 
-     network:
-       ...
-       bridges:
-         br-red:
+.. code::
+
+   network:
+     ...
+     bridges:
+       br-red:
            interfaces: [enp0s17]
-	   dhcp4: yes
-         br-server:
-       ...
+           dhcp4: yes
+       br-server:
+     ...
 
-  Wer bisher einen statischen Zugang eingerichtet hatte, der kann das
-  genauso hier tun. Der entsprechende Abschnitt wäre beispielhaft
+Wer bisher einen statischen Zugang eingerichtet hatte, der kann das genauso hier tun. Der entsprechende Abschnitt wäre beispielhaft
 
-  .. code-block:: yaml
+.. code::
 
-       bridges:
-         br-red:
-           interfaces: [enp0s17]
-	   addresses: [141.1.2.5/29]
-	   gateway4: 141.1.2.3
-	   nameservers:
+     bridges:
+       br-red:
+         interfaces: [enp0s17]
+           addresses: [141.1.2.5/29]
+           gateway4: 141.1.2.3
+            nameservers:
              addresses: [129.143.2.1]
 
+.. todo:: Bleibt hier!
 	 
 Import der Firewall
 ===================
 
-Importiere die Firewall-Appliance `lmn7-opnsense`, fahre sie gleich
-herunter und benenne sie um
+Importiere die Firewall-Appliance `lmn7-opnsense`, fahre sie gleich herunter und benenne sie um
 
-.. code-block:: console
+.. code::
 
    # virt-convert lmn7-opnsense-*.ova
    ...
@@ -186,16 +219,14 @@ herunter und benenne sie um
    Domain ... is being shutdwon
    # virsh domrename lmn7-opnsense-20190724.ovf lmn7-opnsense
 
+.. todo:: Müsste in den Abschnitt Festplatten-Vergrößerung
+
 Festplatten in das Host-LVM importieren
----------------------------------------
+=======================================
 
-Die virtuellen Maschinen werden in Produktivsystemen auf einem LVM
-liegen. Dafür muss die Festplattengröße ermittelt, ein `logical volume`
-erstellt, das Abbild nochmals kopiert und die Konfiguration
-editiert. Der Bus wird auf `virtio` gestellt, dann heißt die
-Schnittstelle auch `vda`.
+Die virtuellen Maschinen werden in Produktivsystemen auf einem LVM liegen. Dafür muss die Festplattengröße ermittelt, ein `logical volume` erstellt, das Abbild nochmals kopiert und die Konfiguration editiert. Der Bus wird auf `virtio` gestellt, dann heißt die Schnittstelle auch `vda`.
 
-.. code-block:: console
+.. code::
 
    # qemu-img info /var/lib/libvirt/images/lmn7-opnsense-*disk001.raw | grep virtual\ size
    virtual size: 10G (10737418240 bytes)
@@ -212,30 +243,26 @@ Schnittstelle auch `vda`.
 
 Jetzt kann das Abbild in ``/var/lib/libvirt/images`` gelöscht werden.
 
-.. code-block:: console
+.. code::
 
    # rm /var/lib/libvirt/images/lmn7-opnsense-*disk001.raw
 
+.. todo:: Müsste in den Abschnitt Netzwerk-Anpassung
+
 Netzwerkanpassung der Firewall
-------------------------------
+==============================
    
-Die Netzwerkkarten der Appliance werden in der Reihenfolge importiert,
-wie sie in der Appliance definiert wurden:
+Die Netzwerkkarten der Appliance werden in der Reihenfolge importiert, wie sie in der Appliance definiert wurden:
 
-1. `LAN, 10.0.0.254/16`, d.h. diese Schnittstelle wird auf der
-   pädagogischen Seite des Netzwerks angeschlossen
-2. `WAN, DHCP`, d.h. diese Schnittstelle wird auf der Internetseite
-   angeschlossen und ist als DHCP-Client konfiguriert.
-3. `OPT1, unkonfiguriert`, d.h. diese Schnittstelle wird für optionale
-   Netzwerke verwendet und muss zunächst nicht angeschlossen werden.
+1. `LAN, 10.0.0.254/16`, d.h. diese Schnittstelle wird auf der pädagogischen Seite des Netzwerks angeschlossen 
 
-Öffne die KVM-Konfiguration und editiere die erste Schnittstelle, so
-dass diese sich im Schulnetzwerk befindet, hier im Beispiel wird sie
-an die virtuelle Brücke ``br-server`` mit dem Stichwort `bridge` und
-dem Typ `bridge` angeschlossen. Die MAC-Adresse sollte bei dieser
-Gelegenheit auch (beliebig) geändert werden.
+2. `WAN, DHCP`, d.h. diese Schnittstelle wird auf der Internetseite angeschlossen und ist als DHCP-Client konfiguriert.
 
-.. code-block:: console
+3. `OPT1, unkonfiguriert`, d.h. diese Schnittstelle wird für optionale Netzwerke verwendet und muss zunächst nicht angeschlossen werden.
+
+Öffne die KVM-Konfiguration und editiere die erste Schnittstelle, so dass diese sich im Schulnetzwerk befindet, hier im Beispiel wird sie an die virtuelle Brücke ``br-server`` mit dem Stichwort `bridge` und dem Typ `bridge` angeschlossen. Die MAC-Adresse sollte bei dieser Gelegenheit auch (beliebig) geändert werden.
+
+.. code::
 
    # virsh edit lmn7-opnsense
    ...
@@ -244,10 +271,9 @@ Gelegenheit auch (beliebig) geändert werden.
       <source bridge='br-server'/>
    ...
 
-Die zweite Schnittstelle sollte genauso dem Typ `bridge` zugeordnet
-werden, allerdings an die Brücke ``br-red`` angeschlossen werden.
+Die zweite Schnittstelle sollte genauso dem Typ `bridge` zugeordnet werden, allerdings an die Brücke ``br-red`` angeschlossen werden.
 
-.. code-block:: console
+.. code::
 
    # virsh edit lmn7-opnsense
    ...
@@ -256,27 +282,21 @@ werden, allerdings an die Brücke ``br-red`` angeschlossen werden.
       <source bridge='br-red'/>
    ...
 
-Die dritte Schnittstelle kann zunächst gelöscht werden. Wenn später
-ein weiteres Netzwerk eingerichtet wird, z.B. ``br-dmz`` für eine so
-genannte demilitarisierte Zone, in der sich Webserver
-u.ä. befinden. Kann der Abschnitt wieder hinzugefügt werden und taucht
-in der OPNsense als ``OPT1`` wieder auf.
+Die dritte Schnittstelle kann zunächst gelöscht werden. Wenn später ein weiteres Netzwerk eingerichtet wird, z.B. ``br-dmz`` für eine so genannte demilitarisierte Zone, in der sich Webserver u.ä. befinden. Kann der Abschnitt wieder hinzugefügt werden und taucht in der OPNsense als ``OPT1`` wieder auf.
 
 Start und Konsolenlogin
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
 
 Starte die Firewall. 
 
-.. code-block:: console
+.. code::
 
    # virsh start lmn7-opnsense
    Domain lmn7-opnsense started
 
-Auf Konsolenebene kannst du dich per ssh (siehe oben) oder über die
-serielle Konsole einwählen. Ein zusätzliches `Enter` hilft, um das
-``login:`` zu sehen.
+Auf Konsolenebene kannst du dich per ssh (siehe oben) oder über die serielle Konsole einwählen. Ein zusätzliches `Enter` hilft, um das ``login:`` zu sehen.
 
-.. code-block:: console
+.. code::
 
    # virsh console lmn7-opnsense
    Connected to domain lmn7-opnsense
@@ -294,21 +314,17 @@ serielle Konsole einwählen. Ein zusätzliches `Enter` hilft, um das
    2) Set interface IP address            9) pfTop
    ...
 
-Man erkennt, dass die Firewall die Netzwerkkarten für innen (LAN) und
-außen (WAN, hier über DHCP) richtig zugeordnet hat.
+Man erkennt, dass die Firewall die Netzwerkkarten für innen (LAN) und außen (WAN, hier über DHCP) richtig zugeordnet hat.
    
 Mit der Tastenkombination ``STRG-5`` verlässt man die serielle Konsole.
 
 
 Optional: Externe Netzwerkanbindung der Firewall einrichten
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------------------------------
 
-Wer eine statische IP-Adresse in der Firewall braucht, der muss diese
-konfigurieren. Konfiguriere die WAN-Schnittstelle über ``2)`` im
-Hauptmenü der OPNsense und folge den Anweisungen dort, eine feste
-IP-Adresse einzugeben. Die relevanten Zeilen sind beispielhaft:
+Wer eine statische IP-Adresse in der Firewall braucht, der muss diese konfigurieren. Konfiguriere die WAN-Schnittstelle über ``2)`` im Hauptmenü der OPNsense und folge den Anweisungen dort, eine feste IP-Adresse einzugeben. Die relevanten Zeilen sind beispielhaft:
 
-.. code-block:: console
+.. code::
 
    Configure IPv4 address WAN interface via DHCP? [Y/n] n
    Enter the new WAN IPv4 address. Press <ENTER> for none:
@@ -326,16 +342,13 @@ IP-Adresse einzugeben. Die relevanten Zeilen sind beispielhaft:
    Do you want to revert to HTTP as the web GUI protocol? [y/N] 
 
 Optional: Umstellung des Netzbereichs
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 
-Wer einen anderen Netzbereich als ``10.0.0.0/16`` im internen Netzwerk
-haben möchte, muss auch hier die IP-Adresse der Firewall
-ändern. Beispielhaft wird die Änderung in den beliebten bisherigen
-Netzbereich ``10.16.0.0/12`` vollzogen.
+Wer einen anderen Netzbereich als ``10.0.0.0/16`` im internen Netzwerk haben möchte, muss auch hier die IP-Adresse der Firewall ändern. Beispielhaft wird die Änderung in den beliebten bisherigen Netzbereich ``10.16.0.0/12`` vollzogen.
 
 Die relevanten Zeilen sind:
 
-.. code-block:: console
+.. code::
 
    Available interfaces:
    1 - LAN (em0 - static)
@@ -361,24 +374,19 @@ Die relevanten Zeilen sind:
    ...
 
 Test der Netzwerkverbindung zur Firewall
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------------
 
-Um die Verbindung zur Firewall im Netzwerk ``br-server`` zu testen,
-muss ein zweiter Rechner in diesem Netzwerk konfiguriert werden. Du
-kannst wie unten beschrieben den optionalen Admin-PC anschließen und
-mit der IP ``10.0.0.10``, Netzmaske ``16`` bzw. ``255.255.0.0`` und
-Gateway ``10.0.0.254`` konfigurieren.
+Um die Verbindung zur Firewall im Netzwerk ``br-server`` zu testen, muss ein zweiter Rechner in diesem Netzwerk konfiguriert werden. Du kannst wie unten beschrieben den optionalen Admin-PC anschließen und mit der IP ``10.0.0.10``, Netzmaske ``16`` bzw. ``255.255.0.0`` und Gateway ``10.0.0.254`` konfigurieren.
 
-Alternativ kann zeitweilig der KVM-Host selbst als Admin-PC
-konfiguriert. Dafür wird wieder die netplan-Datei editiert
+Alternativ kann zeitweilig der KVM-Host selbst als Admin-PC konfiguriert. Dafür wird wieder die netplan-Datei editiert 
 
-.. code-block:: console
+.. code::
 
    # nano /etc/netplan/01-netcfg.yaml
 
 Der entsprechende Block lautet dann:
    
-.. code-block:: yaml
+.. code::
 
    network:
      ...
@@ -393,10 +401,9 @@ Der entsprechende Block lautet dann:
 
 ``netplan try`` und ein Enter schließt die Änderung ab.
 
-Jetzt solltest du die Firewall vom Admin-PC (oder vom KVM-Host) aus
-anpingen können.
+Jetzt solltest du die Firewall vom Admin-PC (oder vom KVM-Host) aus anpingen können.
 	   
-.. code-block:: console
+.. code:: 
 
    $ ping 10.0.0.254
    PING 10.0.0.254 (10.0.0.254) 56(84) bytes of data.
@@ -408,7 +415,7 @@ anpingen können.
 Ebenso ist dann ein Einloggen mit dem voreingestellten Passwort
 `Muster!` möglich:
    
-.. code-block:: console
+.. code::
 		
    $ ssh 10.0.0.254 -l root
    Password for root@OPNsense.localdomain:
@@ -424,7 +431,7 @@ Import des Servers
 
 Importiere die Server-Appliance `lmn7-server`.
 
-.. code-block:: console
+.. code::
 
    # virt-convert lmn7-server-*.ova
    ...
@@ -433,23 +440,19 @@ Importiere die Server-Appliance `lmn7-server`.
    Creating guest 'lmn7-server-20190724.ovf'.
    # virsh shutdown lmn7-server-20190724.ovf
    # virsh domrename lmn7-server-20190724.ovf lmn7-server
-   
+
+.. todo:: Müsste in den Bereich Festplatten-Anpassung
+
 Festplattengrößen für den Server anpassen
 -----------------------------------------
    
-An dieser Stelle muss man die Festplattengrößen für den
-Produktiveinsatz an seine eigenen Bedürfnisse anpassen. Für einen
-Testbetrieb kann die Erweiterung ausfallen und man kann gleich mit dem
-Import in ein LVM fortsetzen.
+An dieser Stelle muss man die Festplattengrößen für den Produktiveinsatz an seine eigenen Bedürfnisse anpassen. Für einen Testbetrieb kann die Erweiterung ausfallen und man kann gleich mit dem Import in ein LVM fortsetzen.
 
-Beispielhaft wird die zweite Festplatte und das darin befindliche
-server-LVM vergrößert, so dass ``/dev/vg_srv/linbo`` und
-``/dev/vg_srv/default-school`` auf jeweils 175G vergrößert werden.
+Beispielhaft wird die zweite Festplatte und das darin befindliche server-LVM vergrößert, so dass ``/dev/vg_srv/linbo`` und ``/dev/vg_srv/default-school`` auf jeweils 175G vergrößert werden.
 
-Zunächst wird der Container entsprechend (auf 10+10+175+175 GB)
-vergrößert, dann der mit Hilfe von `kpartx` aufgeschlossen.
+Zunächst wird der Container entsprechend (auf 10+10+175+175 GB) vergrößert, dann der mit Hilfe von `kpartx` aufgeschlossen.
 
-.. code-block:: console
+.. code::
 
    # qemu-img resize -f raw /var/lib/libvirt/images/lmn7-server-*disk002.raw 370G
    Image resized.
@@ -459,13 +462,9 @@ vergrößert, dann der mit Hilfe von `kpartx` aufgeschlossen.
    # vgdisplay -s vg_srv
    "vg_srv" <100,00 GiB [<100,00 GiB used / 0,00 GiB free]
 
-Durch kpartx wurde der Container über ein so genanntes loop-device
-geöffnet und das darin liegende LVM wurde auf dem Serverhost
-hinzugefügt. Daher kann jetzt sowohl das loop-device als `physical
-volume` vergrößert als auch die `logical volumes` vergrößert werden.
-Zu letzt muss noch das Dateisystem geprüft und erweitert werden.
+Durch kpartx wurde der Container über ein so genanntes loop-device geöffnet und das darin liegende LVM wurde auf dem Serverhost hinzugefügt. Daher kann jetzt sowohl das loop-device als `physical volume` vergrößert als auch die `logical volumes` vergrößert werden. Zu letzt muss noch das Dateisystem geprüft und erweitert werden.
 
-.. code-block:: console
+.. code::
 
    # pvresize /dev/loop0 
    Physical volume "/dev/loop0" changed
@@ -495,11 +494,9 @@ Zu letzt muss noch das Dateisystem geprüft und erweitert werden.
    ...
    Das Dateisystem auf /dev/vg_srv/linbo is nun 45874176 (4k) Blöcke lang.
 
-Um den Container wieder ordentlich zu schließen, muss man die `volume
-group` abmelden und mit `kpartx` abschließen, ein letztes `vgdisplay
--s` überprüft, ob nur noch das Host-LVM übrig geblieben ist.
+Um den Container wieder ordentlich zu schließen, muss man die `volume group` abmelden und mit `kpartx` abschließen, ein letztes `vgdisplay -s` überprüft, ob nur noch das Host-LVM übrig geblieben ist.
 
-.. code-block:: console
+.. code::
 
    # vgchange -a n vg_srv
    0 logical volume(s) in volume group "vg_srv" now active
@@ -511,12 +508,9 @@ group` abmelden und mit `kpartx` abschließen, ein letztes `vgdisplay
 Festplatten in das Host-LVM importieren
 ---------------------------------------
 
-Auch hier wird als Speichermedium auf dem Host LVM verwendet, wofür
-die selben Anpassung wie bei der Firewall nötig sind, ebenso werden
-die Schnittstellen mit dem Bussystem wieder umbenannt (`vda`, `vdb`,
-`virtio`).
+Auch hier wird als Speichermedium auf dem Host LVM verwendet, wofür die selben Anpassung wie bei der Firewall nötig sind, ebenso werden die Schnittstellen mit dem Bussystem wieder umbenannt (`vda`, `vdb`, `virtio`).
 
-.. code-block:: console
+.. code::
 
    # qemu-img info /var/lib/libvirt/images/lmn7-server-*disk001.raw | grep virtual\ size
    virtual size: 25G (26843545600 bytes)
@@ -543,21 +537,20 @@ die Schnittstellen mit dem Bussystem wieder umbenannt (`vda`, `vdb`,
       <address ...           <- zeile löschen
    ...
 
-Die ursprünglichen Abbilder in ``/var/lib/libvirt/images`` können
-gelöscht werden. Eventuell kann man damit warten, ob man die Abbilder
-als Recoveryabbilder behält, bis ein Backupsystem eingerichtet ist.
+Die ursprünglichen Abbilder in ``/var/lib/libvirt/images`` können gelöscht werden. Eventuell kann man damit warten, ob man die Abbilder als Recoveryabbilder behält, bis ein Backupsystem eingerichtet ist.
 
-.. code-block:: console
+.. code::
 
    # rm /var/lib/libvirt/images/lmn7-server-*.raw
+
+.. todo:: Müsste in den Bereich Netzwerk-Anpassung
 
 Netzwerkanpassung des Servers
 -----------------------------
    
-Es muss nur eine Netzwerkschnittstelle angepasst werden und in die
-Brücke ``br-server`` gestöpselt werden.
+Es muss nur eine Netzwerkschnittstelle angepasst werden und in die Brücke ``br-server`` gestöpselt werden.
 
-.. code-block:: console
+.. code::
 
    # virsh edit lmn7-server
    ...
@@ -567,20 +560,20 @@ Brücke ``br-server`` gestöpselt werden.
    ...
 
 
+
 Start und Konsolenlogin
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 Starte den Server.
 
-.. code-block:: console
+.. code::
 
    # virsh start lmn7-server
    Domain lmn7-server started
 
-In der bereitgestellten lmn7-server-Appliance ist der Server ebenfalls
-vom KVM-Host aus über die serielle Schnittstelle erreichbar.
+In der bereitgestellten lmn7-server-Appliance ist der Server ebenfalls vom KVM-Host aus über die serielle Schnittstelle erreichbar.
 
-.. code-block:: console
+.. code::
 		
    # virsh console lmn7-server
    Connected to domain lmn7-server
@@ -595,26 +588,22 @@ vom KVM-Host aus über die serielle Schnittstelle erreichbar.
 
 Mit der Tastenkombination ``STRG-5`` verlässt man die serielle Konsole.
 
+.. todo:: Müsste in den Bereich ?
+
 Optional: Umstellung des Netzbereichs
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=====================================
 
-Wer einen anderen Netzbereich als ``10.0.0.0/16`` im internen Netzwerk
-haben möchte, muss auch hier die IP-Adresse des Servers
-ändern. Beispielhaft wird die Änderung in den beliebten bisherigen
-Netzbereich ``10.16.0.0/12`` vollzogen.
+Wer einen anderen Netzbereich als ``10.0.0.0/16`` im internen Netzwerk haben möchte, muss auch hier die IP-Adresse des Servers ändern. Beispielhaft wird die Änderung in den beliebten bisherigen Netzbereich ``10.16.0.0/12`` vollzogen.
 
-Ersetze die Adresse ``10.0.0.1/16`` in der netplan-Konfiguration durch
-``10.16.1.1/16``, das Gateway und die Nameserver-IP-Adresse durch die
-entsprechende IP-Adresse der Firewall. Starte danach die
-Netzwerkkonfiguration neu.
+Ersetze die Adresse ``10.0.0.1/16`` in der netplan-Konfiguration durch ``10.16.1.1/16``, das Gateway und die Nameserver-IP-Adresse durch die entsprechende IP-Adresse der Firewall. Starte danach die Netzwerkkonfiguration neu.
   
-.. code-block:: console
+.. code::
   		
    # nano /etc/netplan/01-netcfg.yaml
 
 Der entsprechende Teilblock sieht dann so aus:
 
-.. code-block:: yaml
+.. code:: yaml
 
    ethernets:
      eth0:
@@ -625,42 +614,38 @@ Der entsprechende Teilblock sieht dann so aus:
        nameservers:
          addresses: [10.16.1.254]
 
-.. code-block:: console
+.. code::
   		
    # netplan try
 
+.. todo:: Müsste in den Bereich Netzwerktests
+
 Test der Netzwerkverbindung zum Server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+======================================
 
-Teste, ob du vom Admin-PC (oder als solcher konfigurierten KVM-Host)
-oder von der Firewall per ssh auf den Server mit dem Standardpasswort
-`Muster!` kommst.
+Teste, ob du vom Admin-PC (oder als solcher konfigurierten KVM-Host) oder von der Firewall per ssh auf den Server mit dem Standardpasswort `Muster!` kommst.
 
-.. code-block:: console
+.. code::
 		
    # ssh 10.0.0.1 -l root
    root@10.0.0.1's password: 
    Welcome to Ubuntu 18.04.1 LTS (GNU/Linux 4.15.0-38-generic x86_64)
    ...
 
-Eventuell hilft ein Neustart der virtuellen Maschine, wenn man mehrere
-Änderungen an der Netzwerkkonfiguration vorgenommen hat.
+Eventuell hilft ein Neustart der virtuellen Maschine, wenn man mehrere Änderungen an der Netzwerkkonfiguration vorgenommen hat.
 
 Teste, ob du vom Server aus zur Firewall kommst:
 
-.. code-block:: console
+.. code::
 
    server~$ ping 10.0.0.254
+
+.. todo:: Bleibt hier
 
 Docker und OPSI
 ===============
 
-Die Installationen der bereitgestellten Docker- und OPSI-Appliances
-funktionieren nach dem gleichen Verfahren wie bei der Server-Appliance
-nur einfacher, da hier nur eine Festplatte (ohne zusätzliches LVM) zu
-importieren ist. Beide gehören mit ihren IP-Adressen in das Netz
-``br-server`` und das darunter liegende Ubuntu lässt sich wie beim
-Server auf den gewünschten Netzbereich einstellen.
+Die Installationen der bereitgestellten Docker- und OPSI-Appliances funktionieren nach dem gleichen Verfahren wie bei der Server-Appliance nur einfacher, da hier nur eine Festplatte (ohne zusätzliches LVM) zu importieren ist. Beide gehören mit ihren IP-Adressen in das Netz ``br-server`` und das darunter liegende Ubuntu lässt sich wie beim Server auf den gewünschten Netzbereich einstellen.
 
    
 Abschließende Konfigurationen
@@ -669,41 +654,33 @@ Abschließende Konfigurationen
 Aufräumen
 ---------
 
-Das Paket `virtinst` sowie dessen Abhängigkeiten können deinstalliert
-werden, so bleibt das Host-System mit weniger Paketen und weniger
-Abhängigkeiten sauberer.
+Das Paket `virtinst` sowie dessen Abhängigkeiten können deinstalliert werden, so bleibt das Host-System mit weniger Paketen und weniger Abhängigkeiten sauberer.
 
-.. code-block:: console
+.. code::
 
    # apt remove virtinst
    # apt autoremove
 
-Wer seinem KVM-Host die IP-Adresse `10.0.0.10` des Admin-PCs gegeben
-hat, sollte dies rückgängig machen. Der KVM-Host sollte nicht im
-pädagogischen Netzwerk auftauchen.
+Wer seinem KVM-Host die IP-Adresse `10.0.0.10` des Admin-PCs gegeben hat, sollte dies rückgängig machen. Der KVM-Host sollte nicht im pädagogischen Netzwerk auftauchen.
 
-Wer seinen KVM-Host nicht (mehr) im Internet stehen haben will, der
-muss auch hier die Adresskonfiguration auf dem KVM-Host unter dem
-Abschnitt ``br-red`` rückgängig machen.
+Wer seinen KVM-Host nicht (mehr) im Internet stehen haben will, der muss auch hier die Adresskonfiguration auf dem KVM-Host unter dem Abschnitt ``br-red`` rückgängig machen.
    
 
 Aktivieren des Autostarts der VMs
 ---------------------------------
 
-Damit die VMs zukünftig bei einem Neustart des KVM-Servers nicht immer
-von Hand gestartet werden müssen, ist es sinnvoll den Autostart zu
-aktivieren.
+Damit die VMs zukünftig bei einem Neustart des KVM-Servers nicht immer von Hand gestartet werden müssen, ist es sinnvoll den Autostart zu aktivieren.
 
-.. code-block:: console
+.. code::
 
    # virsh autostart lmn7-opnsense
    Domain lmn7-opnsense marked as autostarted
    # virsh autostart lmn7-server
    Domain lmn7-server marked as autostarted
 
-Es empfiehl sich nun, die Möglichkeiten des Backups und der schnellen
-Wiederherstellung der virtuellen Maschinen, wenn man die Wiederholung
-obiger Konfigurationen bei einem Neuanfang vermeiden will.
+Es empfiehl sich nun, die Möglichkeiten des Backups und der schnellen Wiederherstellung der virtuellen Maschinen, wenn man die Wiederholung obiger Konfigurationen bei einem Neuanfang vermeiden will.
+
+.. todo:: Sollte in ein neues Systemadministration Unterkapitel Backup
 
 Snapshot und Backup der KVM-Maschinen
 =====================================
@@ -711,23 +688,15 @@ Snapshot und Backup der KVM-Maschinen
 Backup der Festplatten-Abbilder mittels LVM2
 --------------------------------------------
 
-Mit Hilfe von LVM2 kann man sehr schnell Snapshots der aktuellen
-Festplattenabbilder erstellen. Diese Snapshots kann man dann für ein
-Backup der Daten zu diesem Zeitpunkt verwenden. Alternativ kann man
-ein später unbrauchbares Laufwerk schnell wieder auf den Stand
+Mit Hilfe von LVM2 kann man sehr schnell Snapshots der aktuellen Festplattenabbilder erstellen. Diese Snapshots kann man dann für ein Backup der Daten zu diesem Zeitpunkt verwenden. Alternativ kann man ein später unbrauchbares Laufwerk schnell wieder auf den Stand
 des Snapshots bringen.
 
 Einstellung von LVM2
 ^^^^^^^^^^^^^^^^^^^^
 
-Um Schaden am System im internen LVM des Servers ``vg_srv`` zu
-verhindern, sollte man das logical volume ``/dev/host-vg/serverdata``
-und sein Snapshot ``/dev/host-vg/serverdata-backup`` aus dem Scan nach
-internen LVMs herausfiltern. Das geschieht in der Datei
-``/etc/lvm/lvm.conf`` und man sucht und ersetzt die Variable
-``global_filter``
+Um Schaden am System im internen LVM des Servers ``vg_srv`` zu verhindern, sollte man das logical volume ``/dev/host-vg/serverdata`` und sein Snapshot ``/dev/host-vg/serverdata-backup`` aus dem Scan nach internen LVMs herausfiltern. Das geschieht in der Datei ``/etc/lvm/lvm.conf`` und man sucht und ersetzt die Variable ``global_filter``
 
-.. code-block:: console
+.. code::
 
    ...
    # This configuration option has an automatic default value.                                                                                                     
@@ -735,30 +704,16 @@ internen LVMs herausfiltern. Das geschieht in der Datei
    global_filter = [ "r|^/dev/host-vg/serverdata.*$|" ]
    ...
 
-Um zu testen, dass der Filter in ``/etc/lvm/lvm.conf`` erfolgreich das
-interne LVM ``vg_srv`` ausblendet, ruft man ``lvs`` auf. In der Liste
-der LV sollte dann kein ``vg_srv`` auftauchen.
+Um zu testen, dass der Filter in ``/etc/lvm/lvm.conf`` erfolgreich das interne LVM ``vg_srv`` ausblendet, ruft man ``lvs`` auf. In der Liste der LV sollte dann kein ``vg_srv`` auftauchen.
 
 Snapshot erstellen
 ^^^^^^^^^^^^^^^^^^
 
-Einen Snapshot kann man im laufenden Betrieb erstellen, wenn das
-Dateisystem der VM dies unterstützt. Das LVM sagt dem Dateisystem,
-sich in einen konsistenten Zustand zu bringen. Sicherheitshalber kann
-man aber für die Erstellung auch die VM herunterfahren.
+Einen Snapshot kann man im laufenden Betrieb erstellen, wenn das Dateisystem der VM dies unterstützt. Das LVM sagt dem Dateisystem, sich in einen konsistenten Zustand zu bringen. Sicherheitshalber kann man aber für die Erstellung auch die VM herunterfahren.
 
-Ein Snapshot erstellt ein neues logical volume (LV) zum Zeitpunkt der
-Erstellung. Zunächst ist der Snapshot identisch mit dem laufenden und
-verbraucht keinen Speicherplatz. Sobald am laufenden LV Änderungen
-passieren, wird der alte Inhalt im dem Snapshot gespeichert. Man muss
-bei der initialen Erstellung eine Größe für den Snapshot wählen.
-Natürlich kann die Summe aller geänderten Daten die Größe des
-Snapshots erreichen, dann funktioniert das Prinzip nicht mehr. Für die
-folgenden Zwecke werden etwa 5% des originalen volumes als Größe
-gewählt, da in einem überschaubaren Zeitraum der Snapshot wieder
-entfernt wird.
+Ein Snapshot erstellt ein neues logical volume (LV) zum Zeitpunkt der Erstellung. Zunächst ist der Snapshot identisch mit dem laufenden und verbraucht keinen Speicherplatz. Sobald am laufenden LV Änderungen passieren, wird der alte Inhalt im dem Snapshot gespeichert. Man muss bei der initialen Erstellung eine Größe für den Snapshot wählen. Natürlich kann die Summe aller geänderten Daten die Größe des Snapshots erreichen, dann funktioniert das Prinzip nicht mehr. Für die folgenden Zwecke werden etwa 5% des originalen volumes als Größe gewählt, da in einem überschaubaren Zeitraum der Snapshot wieder entfernt wird.
 
-.. code-block:: console
+.. code::
 
    # lvcreate -s /dev/host-vg/opnsense -L 2G -n opnsense-backup
    Using default stripesize 64,00 KiB.
@@ -778,40 +733,32 @@ entfernt wird.
    serverroot        host-vg owi-aos---   25,00g                                                        
    serverroot-backup host-vg swi-a-s---    5,00g      serverroot 0,00                                   
 
-In der Tabelle sieht man bei den Attributen, welches das Original und
-welches der Snapshot ist (Spalte 1). In Spalte 6 steht, ob ein LV
-geöffnet, d.h. z.B. gemountet ist ("o") oder nicht.
+In der Tabelle sieht man bei den Attributen, welches das Original und welches der Snapshot ist (Spalte 1). In Spalte 6 steht, ob ein LV geöffnet, d.h. z.B. gemountet ist ("o") oder nicht.
 
 Snapshot zurückführen
 ^^^^^^^^^^^^^^^^^^^^^
 
-Will man das Abbild in den Zustand vor dem Snapshot zurückführen, muss
-man den Client stoppen und dann den Snapshot "mergen". Dies geht
-relativ schnell.
+Will man das Abbild in den Zustand vor dem Snapshot zurückführen, muss man den Client stoppen und dann den Snapshot "mergen". Dies geht relativ schnell.
 
-.. code-block:: console
+.. code::
 
    # virsh shutdown lvm7-opnsense
    # lvconvert --mergesnapshot /dev/host-vg/opnsense-backup 
    Merging of volume host-vg/opnsense-backup started.
    host-vg/opnsense: Merged: 100,00%
 
-Für den Server, der zwei Abbilder hat, müssen natürlich alle Abbilder
-zurückgeführt werden, damit ein konsistenter Zustand hergestellt wird.
+Für den Server, der zwei Abbilder hat, müssen natürlich alle Abbilder zurückgeführt werden, damit ein konsistenter Zustand hergestellt wird.
 
-.. code-block:: console
+.. code::
 
    # virsh shutdown lvm7-server
    # lvconvert --mergesnapshot /dev/host-vg/serverroot-backup 
    Merging of volume host-vg/serverroot-backup started.
    host-vg/serverroot: Merged: 100,00%
 
-Falls beim logischen Laufwerk ``serverdata`` das interne LVM sichtbar
-wurde (``lvs`` zeigt sie an), weil z.B. der Filter nicht funktioniert,
-dann müssen zunächst die internen logischen Laufwerke geschlossen
-werden, sonst kann der Snapshot nicht zusammengeführt werden.
+Falls beim logischen Laufwerk ``serverdata`` das interne LVM sichtbar wurde (``lvs`` zeigt sie an), weil z.B. der Filter nicht funktioniert, dann müssen zunächst die internen logischen Laufwerke geschlossen werden, sonst kann der Snapshot nicht zusammengeführt werden.
 
-.. code-block:: console
+.. code::
 
    # lvchange -a n /dev/vg_srv/*  --- nur für den Fall, dass der Filter nicht funktioniert hat
    # vgchange -a n vg_srv         --- nur für den Fall, dass der Filter nicht funktioniert hat
@@ -822,15 +769,11 @@ werden, sonst kann der Snapshot nicht zusammengeführt werden.
 Snapshot als Basis für ein Datei-Backup verwenden
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Will man den Snapshot für die Erstellung eines dateibasierten Backups
-verwenden, z.B. mit `rsync` oder `rsnapshot`, muss man das logical
-volume (LV) für das Hostsystem aufschließen, die Dateien kopieren und
-wieder zuschließen. Danach kann man den Snapshot entfernen.
+Will man den Snapshot für die Erstellung eines dateibasierten Backups verwenden, z.B. mit `rsync` oder `rsnapshot`, muss man das logical volume (LV) für das Hostsystem aufschließen, die Dateien kopieren und wieder zuschließen. Danach kann man den Snapshot entfernen. 
 
-Am Beispiel der OPNsense wird auf ein NAS oder ein Verzeichnis
-gesynced, deren Zielverzeichnis zuvor existieren müssen.
+Am Beispiel der OPNsense wird auf ein NAS oder ein Verzeichnis gesynced, deren Zielverzeichnis zuvor existieren müssen.
 
-.. code-block:: console
+.. code::
 
    # kpartx -av /dev/host-vg/opnsense-backup
    # mount /dev/mapper/host--vg-opnsense--backup1 /mnt
@@ -842,11 +785,9 @@ gesynced, deren Zielverzeichnis zuvor existieren müssen.
    # kpartx -dv /dev/host-vg/opnsense-backup
    # lvremove /dev/host-vg/opnsense-backup
 
-Die Root-Platte der Server-VM kann wie im Fall der OPNsense entpackt
-und kopiert werden, wobei nur die zweite Partition die Daten enthält,
-die erste ist eine BIOS-Partition.
+Die Root-Platte der Server-VM kann wie im Fall der OPNsense entpackt und kopiert werden, wobei nur die zweite Partition die Daten enthält, die erste ist eine BIOS-Partition.
 
-.. code-block:: console
+.. code::
 		
    # kpartx -av /dev/host-vg/serverroot-backup 
    add map host--vg-serverroot--backup1 (253:10): 0 2048 linear 253:5 2048
@@ -859,30 +800,17 @@ die erste ist eine BIOS-Partition.
    del devmap : host--vg-serverroot--backup1
    # lvremove -y /dev/host-vg/serverroot-backup
 
-Die Daten-Platte der Server-VM ist ungleich komplexer, weil ein
-weiteres LVM in der Platte ``/dev/host-vg/serverdata`` steckt, das
-freigelegt werden muss. Dafür nimmt man den oben eingerichteten Filter
-heraus und LVM findet automatisch die genestete VG ``vg_srv``.  Ein
-Snapshot ist nicht möglich, weil die VG keinen freien Speicher für
-einen Snapshot zur Verfügung hat. Es ist also notwendig, die Server-VM
-zu stoppen. Dann aktiviert man die VG und kann dann direkt die LVs
-mounten. Nach dem Backup und umounten, deaktiviert man die VG, kann
-die Server-VM wieder starten und versteckt die VG wieder über die
-Filter.
+Die Daten-Platte der Server-VM ist ungleich komplexer, weil ein weiteres LVM in der Platte ``/dev/host-vg/serverdata`` steckt, das freigelegt werden muss. Dafür nimmt man den oben eingerichteten Filter heraus und LVM findet automatisch die genestete VG ``vg_srv``.  Ein Snapshot ist nicht möglich, weil die VG keinen freien Speicher für einen Snapshot zur Verfügung hat. Es ist also notwendig, die Server-VM zu stoppen. Dann aktiviert man die VG und kann dann direkt die LVs mounten. Nach dem Backup und umounten, deaktiviert man die VG, kann die Server-VM wieder starten und versteckt die VG wieder über die Filter.
 
-Alternativ entscheidet man sich für ein deutlich einfacheres
-komplettes Backup der Platten der Server-VM.
+Alternativ entscheidet man sich für ein deutlich einfacheres komplettes Backup der Platten der Server-VM.
 
 
 Backup kompletter Abbilder
 --------------------------
 
-Komplette Kopien für ein Backup der Festplattenabbilder kann man mit
-`qemu-img` vornehmen. Am Beispiel der OPNsense, wird zuerst die VM
-heruntergefahren, das Abbild (in ein komprimiertes Abbild in ein
-Backup-Verzeichnis) kopiert und dann wieder hochgefahren.
+Komplette Kopien für ein Backup der Festplattenabbilder kann man mit `qemu-img` vornehmen. Am Beispiel der OPNsense, wird zuerst die VM heruntergefahren, das Abbild (in ein komprimiertes Abbild in ein Backup-Verzeichnis) kopiert und dann wieder hochgefahren.
 
-.. code-block:: console
+.. code::
 
    # virsh shutdown lmn7-opnsense
    # export BDATE=$(date +%Y_%m_%d_%H_%M)
@@ -892,7 +820,7 @@ Backup-Verzeichnis) kopiert und dann wieder hochgefahren.
 
 Am Beispiel des Servers
 
-.. code-block:: console
+.. code::
 
    # virsh shutdown lmn7-server
    # export BDATE=$(date +%Y_%m_%d_%H_%M)
@@ -902,14 +830,9 @@ Am Beispiel des Servers
    # ln -sf /srv/backup/server_disk2_latest.qcow2 /srv/backup/server_disk2_${BDATE}.qcow2   
    # virsh start lmn7-server
 
-Im Prinzip könnte auch eine komplette Kopie eines Snapshot-LVs gemacht
-werden. Andererseits möchte man so ein vollständiges Backup der VM
-besser in einem heruntergefahrenen Zustand machen. Um die Downtime zu
-minimieren, kann man ein Snapshot erstellen, die VM wieder hochfahren,
-die Snapshot-LVs mit `qemu-img` konvertieren und dann die Snapshots
-wieder löschen, beispielhaft an der OPNsense:
+Im Prinzip könnte auch eine komplette Kopie eines Snapshot-LVs gemacht werden. Andererseits möchte man so ein vollständiges Backup der VM besser in einem heruntergefahrenen Zustand machen. Um die Downtime zu minimieren, kann man ein Snapshot erstellen, die VM wieder hochfahren, die Snapshot-LVs mit `qemu-img` konvertieren und dann die Snapshots wieder löschen, beispielhaft an der OPNsense:
 
-.. code-block:: console
+.. code::
 
    # virsh shutdown lmn7-opnsense
    # lvcreate -s /dev/host-vg/opnsense -L 2G -n opnsense-backup
@@ -922,22 +845,14 @@ wieder löschen, beispielhaft an der OPNsense:
 Recovery kompletter Abbilder
 ----------------------------
 
-Die Wiederherstellung kompletter Abbilder verläuft analog zum Import
-der Appliances. Der Befehl `qemu-img` muss als Ziel das logical
-volume (LV) haben, welches vorher existieren muss. Je nachdem, wie der
-Zustand des KVM-Hosts vor der Wiederherstellung ist, muss man
+Die Wiederherstellung kompletter Abbilder verläuft analog zum Import der Appliances. Der Befehl `qemu-img` muss als Ziel das logical volume (LV) haben, welches vorher existieren muss. Je nachdem, wie der Zustand des KVM-Hosts vor der Wiederherstellung ist, muss man 
 
-- wenn der KVM-Host unverändert ist nur das Backup in die bestehenden
-  LVs zurückspielen.
+  - wenn der KVM-Host unverändert ist nur das Backup in die bestehenden LVs zurückspielen.
+  - nach einer Neuinstallation des KVM-Hosts die Volume Group und die LVs erstellen, die Metadaten für die VM rekonstruieren, dann das Backup zurückspielen
 
-- nach einer Neuinstallation des KVM-Hosts die Volume Group und die
-  LVs erstellen, die Metadaten für die VM rekonstruieren, dann das
-  Backup zurückspielen
+Das reine Zurückspielen des letzten Backups in ein unverändertes System geht am Beispiel der OPNsense so:
 
-Das reine Zurückspielen des letzten Backups in ein unverändertes
-System geht am Beispiel der OPNsense so:
-
-.. code-block:: console
+.. code::
 
    # virsh shutdown lmn7-opnsense
    # qemu-img convert -O raw  /srv/backup/opnsense_latest.qcow2 /dev/host-vg/opnsense
@@ -945,10 +860,7 @@ System geht am Beispiel der OPNsense so:
 
 Entsprechend funktioniert das Zurückspielen für den Server oder andere VMs.
 
-Die Rekonstruktion der Meta-Daten sollte es genügen, das Verzeichnis
-``/etc/libvirtd/`` auf dem KVM-Host wiederherzustellen, wurde für
-diese Dokumentation noch nicht getestet. Darüberhinaus ist die
-Erstellung der volume group und die Erstellung der LVs notwendig.
+Die Rekonstruktion der Meta-Daten sollte es genügen, das Verzeichnis ``/etc/libvirtd/`` auf dem KVM-Host wiederherzustellen, wurde für diese Dokumentation noch nicht getestet. Darüberhinaus ist die Erstellung der volume group und die Erstellung der LVs notwendig.
 
 +--------------------------------------------------------------------+-------------------------------------------+
 | Weiter geht es mit dem Setup                                       | |follow_me2setup|                         |
