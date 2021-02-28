@@ -272,6 +272,106 @@ finden. Aus diesem Grund erfolgt die Konfiguration eines NTP-Clients.
 	frameborder="0" allow="autoplay; encrypted-media"
 	allowfullscreen></iframe> </p>
 
+Netzwerkkonfiguration des KVM-Hosts
+===================================
+   
+Nach Installation der KVM-Software (``virbr0*`` wurden automatisch hinzugefügt) ist die Netzwerksituation folgende:
+
+.. code::
+
+   $ ip -br addr list
+   lo               UNKNOWN        127.0.0.1/8 ::1/128 
+   enp0s8           DOWN        
+   enp0s17          UP             192.168.1.2/16 fe80::ae1c:ba12:6490:f75d/64
+   virbr0           DOWN           192.168.122.1/24 
+   virbr0-nic       DOWN           
+
+In diesem Schritt wird die direkte Verbindung des KVM-Hosts mit dem Internet gekappt und eine virtuelle Verkabelung über so genannte `bridges` erstellt.  Zunächst werden die Brücken ``br-red`` (Internetseite) und ``br-server`` (Schulnetzseite) definiert.  Zuletzt kann der KVM-Host auch über die Brücke ``br-red`` eine IP-Adresse ins Internet bekommen, genau wie er über die Brücke ``br-server`` auch im pädagogischen Netzwerk auftauchen kann. Letzteres ist nicht zu empfehlen.
+
+.. hint::
+
+   Die Netzwerkkonfiguration wird seit Ubuntu 18.04 standardmäßig über netplan realisiert. Wer seinen KVM-Host von früheren Ubuntu-Versionen updatet, bei dem wird nicht automatisch `netplan` installiert, sondern `ifupdown` wird mit der Konfigurationsdatei ``/etc/network/interfaces`` beibehalten.
+
+Namen der Netzwerkkarten:
+
+Mit folgendem Befehl werden alle physischen Netzwerkkarten (teilweise umbenannt) angezeigt:
+
+.. code::
+     
+   # dmesg | grep eth
+   [    9.230673] e1000e 0000:08:00.0 eth0: (PCI Express:2.5GT/s:Width x4) 00:30:48:dd:ee:ff
+   [    9.273215] e1000e 0000:11:00.1 eth1: (PCI Express:2.5GT/s:Width x4) 00:30:48:aa:bb:cc
+   [    9.432342] e1000e 0000:08:00.0 enp0s8: renamed from eth0
+   [    9.654232] e1000e 0000:11:00.1 enp0s17: renamed from eth1
+
+Anpassen der Netzwerkkonfiguration im Editor deiner Wahl. Hier am Beispiel nano
+
+.. code::
+
+  $ sudo nano /etc/netplan/01-netcfg.yaml
+
+Die Netzwerkkonfiguration enthält standardmäßig die Schnittstelle, die bei der Installation mit dem Internet verbunden war. Diese Schnittstelle wird dann auch mit der Brücke ``br-red`` verbunden. 
+     
+.. code::
+
+   network:
+     version: 2
+     renderer: networkd
+     ethernets:
+       enp0s8:
+         dhcp4: no
+         enp0s17:
+         dhcp4: no
+       bridges:
+         br-red:
+           interfaces: [enp0s17]
+           dhcp4: no
+           addresses: [ ]
+         br-server:
+           interfaces: [enp0s8]
+           addresses: [ ]
+
+Diese Netzwerkkonfiguration kann nun ausprobiert und angewandt werden.
+
+.. code::
+
+   $ sudo netplan try
+
+.. hint:: Potenzielle Fehlerquellen sind nicht konsequent eingerückte Zeilen oder TABs.
+
+.. code::
+
+   Invalid YAML at /etc/netplan/01-netcfg.yaml line 6 column 0: found character that cannot start any token
+
+Bei fehlerhaften Anläufen lohnt es sich, den KVM-host zu rebooten und die Netzwerkkonfiguration erneut zu betrachten. 
+  
+KVM-Host auch im Internet
+
+Soll später nicht nur die Firewall sondern auch der KVM-Host im Internet erreichbar sein, dann muss der entsprechende Block so aussehen:
+
+.. code::
+
+   network:
+     ...
+     bridges:
+       br-red:
+           interfaces: [enp0s17]
+           dhcp4: yes
+       br-server:
+     ...
+
+Wer bisher einen statischen Zugang eingerichtet hatte, der kann das genauso hier tun. Der entsprechende Abschnitt wäre beispielhaft
+
+.. code::
+
+     bridges:
+       br-red:
+         interfaces: [enp0s17]
+           addresses: [141.1.2.5/29]
+           gateway4: 141.1.2.3
+            nameservers:
+             addresses: [129.143.2.1]
+
 Weiter geht es mit dem Import der Virtuellen Maschinen.
 
 .. toctree::
