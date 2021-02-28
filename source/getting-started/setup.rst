@@ -21,8 +21,8 @@
 .. hint::
    
    Es gibt 2 Möglichkeiten die Erstkonfiguration durchzuführen: 
-   1.: :ref:`Erstkonfiguration-Webui-label` (Webui)
-   2.: :ref:`Erstkonfiguration-Terminal-label`
+   1.: :ref:`erstkonfiguration-webui-label` (Webui)
+   2.: :ref:`erstkonfiguration-terminal-label`
    Lies zunächst alle wichtigen Hinweise am Beginn dieses Kapitels und mache dann entweder auf der Schulkonsole oder im Terminal weiter!
    
 
