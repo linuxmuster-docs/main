@@ -17,6 +17,14 @@
    Alle linuxmuster 6.x Systeme können statt einer Neuinstallation
    über eine :ref:`migration-label` umgezogen werden, dennoch ist die
    Erstkonfiguration hier eine notwendige Voraussetzung.
+   
+.. hint::
+   
+   Es gibt 2 Möglichkeiten die Erstkonfiguration durchzuführen: 
+   1.: `Erstkonfiguration über die Schulkonsole`_ (Webui)
+   2.: `Erstkonfiguration im Terminal`_
+   Lies zunächst alle wichtigen Hinweise am Beginn dieses Kapitels und mache dann entweder auf der Schulkonsole oder im Terminal weiter!
+   
 
 Wichtige Hinweise
 =================
@@ -153,10 +161,9 @@ zuerst akzeptiert werden muss.
 .. figure:: media/webui7.png
    :align: center
    :alt: Installation Successfull
-
 	 
-Erstkonfiguration am Server
-===========================
+Erstkonfiguration im Terminal
+=============================
 
 Alternativ zur Schulkonsole kann die Erstkonfiguration direkt am
 Server über die Konsole ausgeführt werden. Melde dich als `root` mit
