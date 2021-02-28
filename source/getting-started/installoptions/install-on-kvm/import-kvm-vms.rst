@@ -115,6 +115,37 @@ Importiere die Firewall-Appliance `lmn7-opnsense`, fahre sie gleich herunter und
    Domain ... is being shutdwon
    # virsh domrename lmn7-opnsense-20190724.ovf lmn7-opnsense
 
+Import des Servers
+==================
+
+Importiere die Server-Appliance `lmn7-server`.
+
+.. code::
+
+   # virt-convert lmn7-server-*.ova
+   ...
+   Running /usr/bin/qemu-img convert -O raw lmn7-server-xxxxxxxx-disk001.vmdk /var/lib/libvirt/images/lmn7-server-xxxxxxxx-disk001.raw
+   Running /usr/bin/qemu-img convert -O raw lmn7-server-xxxxxxxx-disk002.vmdk /var/lib/libvirt/images/lmn7-server-xxxxxxxx-disk002.raw   
+   Creating guest 'lmn7-server-20190724.ovf'.
+   # virsh shutdown lmn7-server-20190724.ovf
+   # virsh domrename lmn7-server-20190724.ovf lmn7-server
+
+VM HDD anpassen
+---------------
+
+Um die Größe der Festplatten der importierten VMs anzupassen sind mehrere Schritte erforderlich.
+Nachstehender Link führt dich zur Anpassung der HDD Größe der VMs.
+
++--------------------------------------------------------------------+-------------------------------------------+
+| Vorbereiten der Festplatten-Anpassung                              | |follow_me2hd-resize|                     |
++--------------------------------------------------------------------+-------------------------------------------+
+
+Solltest du mit den vorgegebenen Festplattengrößen weitermachen wollen, zum Beispiel weil du eine Probeinstallations vornimmst, dann kannst du diesen Anpassung der Festplattengröße überspringen
+
++--------------------------------------------------------------------+-------------------------------------------+
+| Weiter mit der Netzwerk-Anpassung                                  | |follow_me2network_b|                     |
++--------------------------------------------------------------------+-------------------------------------------+
+
 .. todo:: Müsste in den Abschnitt Netzwerk-Anpassung
 
 Netzwerkanpassung der Firewall
@@ -294,23 +325,6 @@ Ebenso ist dann ein Einloggen mit dem voreingestellten Passwort
 
 Ausloggen mit ``exit`` oder ``STRG-D``.
 		
-Import des Servers
-==================
-
-Importiere die Server-Appliance `lmn7-server`.
-
-.. code::
-
-   # virt-convert lmn7-server-*.ova
-   ...
-   Running /usr/bin/qemu-img convert -O raw lmn7-server-xxxxxxxx-disk001.vmdk /var/lib/libvirt/images/lmn7-server-xxxxxxxx-disk001.raw
-   Running /usr/bin/qemu-img convert -O raw lmn7-server-xxxxxxxx-disk002.vmdk /var/lib/libvirt/images/lmn7-server-xxxxxxxx-disk002.raw   
-   Creating guest 'lmn7-server-20190724.ovf'.
-   # virsh shutdown lmn7-server-20190724.ovf
-   # virsh domrename lmn7-server-20190724.ovf lmn7-server
-
-
-
 .. todo:: Müsste in den Bereich Netzwerk-Anpassung
 
 Netzwerkanpassung des Servers
