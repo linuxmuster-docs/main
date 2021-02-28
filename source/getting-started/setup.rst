@@ -21,8 +21,8 @@
 .. hint::
    
    Es gibt 2 Möglichkeiten die Erstkonfiguration durchzuführen: 
-   1.: erstkonfiguration-webui-label_ (Webui)
-   2.: erstkonfiguration-terminal-label_
+   1.: `Erstkonfiguration über die Schulkonsole`_ (Webui)
+   2.: `Erstkonfiguration im Terminal`_
    Lies zunächst alle wichtigen Hinweise am Beginn dieses Kapitels und mache dann entweder auf der Schulkonsole oder im Terminal weiter!
    
 
@@ -75,7 +75,6 @@ es den Begriff ``do-it-like-babo``.
    Erstkonfiguration durchzuführen. Zur Durchführung der Anpassungen
    folge bitte dem Kapitel :ref:`modify-net-label`.
 
-.. _erstkonfiguration-webui-label:
 Erstkonfiguration über die Schulkonsole
 =======================================
 
@@ -162,8 +161,7 @@ zuerst akzeptiert werden muss.
 .. figure:: media/webui7.png
    :align: center
    :alt: Installation Successfull
-
-.. _erstkonfiguration-terminal-label:	 
+	 
 Erstkonfiguration im Terminal
 =============================
 
