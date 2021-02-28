@@ -49,7 +49,9 @@ Beispiel für die opensense-VM:
    Saving to: ‘vzdump-qemu-200-2020_12_19-19_23_00.vma.lzo’
 
    20_12_19-19_23_00.vma   5%[>                       ] 186.40M  10.4MB/s
-   
+
+.. hint:: Solltest du einen ``FEHLER 404: File not found`` erhalten, musst du die Dateinamen anpassen. Die neuen Dateinamen (aktualisierten) musst du dem oben genannten Link entnehmen und bei allen Nennungen in der Dokumentation verwenden.
+
 Nach dem Herunterladen der Backup-Dateien sollten sich diese mittels ``ls -lh`` in der Proxmox-Shell anzeigen lassen.
 
 .. code::
