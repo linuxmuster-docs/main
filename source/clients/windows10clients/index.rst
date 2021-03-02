@@ -488,8 +488,8 @@ Image in LINBO erstellen
    halbautomatisch über LINBO gemacht werden.
 
 
-Imageübertragung auf den PC
----------------------------
+Imageübertragung auf weiteren PC
+--------------------------------
 
 1. Starten Sie den PC, auf den das Image übertragen werden soll, über das Netzwerk bis er in LINBO gebootet hat.
 Nun öffnen Sie den Imaging Reiter, wie im ersten Kapitel 
