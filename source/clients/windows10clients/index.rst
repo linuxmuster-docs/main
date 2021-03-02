@@ -491,15 +491,14 @@ Image in LINBO erstellen
 Imageübertragung auf den PC
 ---------------------------
 
-1. Starten Sie den PC, auf den das Image übertragen werden soll, über das Netzlaufwerk bis er in LINBO gebootet hat.
+1. Starten Sie den PC, auf den das Image übertragen werden soll, über das Netzwerk bis er in LINBO gebootet hat.
 Nun öffnen Sie den Imaging Reiter, wie im ersten Kapitel 
 
 * :ref:`Computer in linuxmuster.net aufnehmenn <install-windows10-clients-label>` 
 
  → ``Client lokal registrieren`` beschrieben wird.
 
-2. Als nächstes partitionieren und formatieren Sie den PC über den lilanen Botton Partitionieren nachdem Sie mit ``Ja``
-   bestätigt haben, wie im Kapitel``Optional Betriebssystem erst lokal installieren`` unter 
+2. Als nächstes partitionieren und formatieren Sie den PC über den lilanen Button Partitionieren, wie im Kapitel``Optional Betriebssystem erst lokal installieren`` unter
    ``Festplatte vorbereiten - partitionieren, formatieren`` gezeigt wird.
 
 .. figure:: media/48_windows-10-clients_linbo-creating-partitions.png
@@ -513,7 +512,7 @@ Nun öffnen Sie den Imaging Reiter, wie im ersten Kapitel
    :align: center
    :alt: Linbo Start Imaging
 
-4. Wenn das Image vollständig heruntergeladen ist, startet Windows automatisch.
+4. Wenn das Image vollständig heruntergeladen ist, beginnt der Cloneprozess. Danach startet Windows automatisch.
 
 Default Profil kopieren
 =======================
