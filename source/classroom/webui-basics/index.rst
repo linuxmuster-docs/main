@@ -105,17 +105,13 @@ Bei Kursen unter "Meine Klassen" kann unter 2 Button gewählt werden:
    :align: center
    :alt: start session unchanged button
 
-Es handelt sich hier um den aktuellen Stand der Schüler wie er im AD zu finden ist. Das erstellen dauert einen Moment länger.
-
 * Sitzung neu erstellen
 
 .. figure:: media/44_webui-basics_start-new-session.png
    :align: center
    :alt: start new session button
 
-Die Sitzung wird wie vorgefunden gestartet. Es kann also sein, dass hier Schüler, die nicht mehr in diese Klasse gehören, noch angezeigt werden oder hinzugekommene fehlen. Man kann Schüler aus anderen Klassen hinzufügen und entfernen. Das bleibt dann solange, bis die Sitzung neu erstellt wird.
-
-Unterhalb von "Meine Kurse" finden Sie ihre selbst erstellten Kurse.
+Unterhalb von "Meine Kurse" finden Sie selbst erstellte Kurse.
 
 
 Kurse erstellen
@@ -177,24 +173,6 @@ WLAN-Symbol für jeden Benutzer des aktuellen Kurses der WLAN-Zugang gesperrt.
 .. figure:: media/17_webui-basics_example-denied-wlan-access.png
    :align: center
    :alt: WebUI Example Denied WLAN Access
-
-* Einstellungen (Zahnrad)
-
-.. figure:: media/45_webui-basics_gearwheel-button.png
-   :align: center
-   :alt: Settings Button
-
-Unter Einstellungen sind verschiedene Optionen zum Passwort des Benutzers zu finden.
-
-* Löschen (Mülleimer)
-
-.. figure:: media/46_webui-basics_trash-button.png
-   :align: center
-   :alt: Trash Button
-
-Mit Hilfe des Löschen Button können einzelne Schüler aus dem Kurs entfernt werden. Dies gilt, bis die Sitzung neu erstellt wird.
-
-Sämtliche Änderungen müssen mit ``Speichern & Übernehmen`` übernommen werden!
 
 Dateien-Übertragungs-Funktion
 -----------------------------
