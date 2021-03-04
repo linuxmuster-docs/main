@@ -421,7 +421,7 @@ Manueller Domänen Join für Windows
 ----------------------------------
 
 1. Über ``Systemsteuerung → System und Sicherheit → System → Einstellungen Ändern → Ändern → Computernamen`` 
-   vergeben (übereinstimmend mit Namen in dern Geräteliste!) und unter Mitglied von als Domäne linuxmuster.lan
+   vergeben (übereinstimmend mit Namen in der Geräteliste devices.csv!) und unter Mitglied von als Domäne linuxmuster.lan
    angeben. Mit ``global-admin`` und Ihrem beim Setup vergebenen Passwort bestätigen:
 
 .. figure:: media/43_windows-10-clients_login-as-global-admin.png
