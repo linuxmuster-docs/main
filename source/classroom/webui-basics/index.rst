@@ -95,6 +95,25 @@ Kurse, in denen Sie Mitglied sind, werden hier aufgelistet.
    :align: center
    :alt: WebUI My Classes
 
+Der Kurs "Dieser Raum" wird dynamisch zusammengestellt mit angemeldeten Nutzern in einem Raum. Nur der Button zum neu starten der Sitzung ist auswählbar.
+
+Bei Kursen unter "Meine Klassen" kann unter 2 Button gewählt werden:
+
+* Sitzung unverändert starten
+
+.. figure:: media/43_webui-basics_start-session-unchanged.png
+   :align: center
+   :alt: start session unchanged button
+
+* Sitzung neu erstellen
+
+.. figure:: media/44_webui-basics_start-new-session.png
+   :align: center
+   :alt: start new session button
+
+Unterhalb von "Meine Kurse" finden Sie selbst erstellte Kurse.
+
+
 Kurse erstellen
 ---------------
 
