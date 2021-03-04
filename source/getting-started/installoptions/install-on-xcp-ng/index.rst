@@ -711,9 +711,6 @@ Danach ist Dein XCP-ng Host auf dem aktuellen Stand.
 | Weiter geht es mit dem Setup                                       | |follow_me2setup|                         |
 +--------------------------------------------------------------------+-------------------------------------------+
 
-.. toctree::
-  :maxdepth: 2
-  :caption: Install on XCP-ng
-  :hidden:
 
-  import-xcp-ng-vms
+
+
