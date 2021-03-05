@@ -82,10 +82,10 @@ gebooteten LINBO Oberfläche die MAC-Addresse auslesen.
 2. Dazu über + Gerät hinzufügen und alle Felder ausfüllen. Zeilen können auch kopiert werden.
 3. Anschließend Speichern & Importieren, um die Einträge zu übernehmen.
 
-LINBO-Image auf Computer übetragen
-----------------------------------
+LINBO-Image für eine Hardwareklasse vorbereiten
+-----------------------------------------------
 
-Da ein Gerät einer Hardwareklasse (Gruppe) zugeordnet ist und der Hardwareklasse ein Image angegeben wird, sollte der
+Da ein Gerät einer Hardwareklasse (Gruppe) zugeordnet ist und für die Hardwareklasse ein Image angegeben wird, muss der
 PC einer Hardwareklasse zugeordnet sein, um das Image auf diesen übertragen zu können. Um ein Image letztendlich auf
 einen PC im internen Netzwerk übertragen zu können, müssen folgende Voraussetzungen erfüllt sein:
 
@@ -157,9 +157,10 @@ Für die Windowsinstallation sollte der Rechner, auf welchem Windows installiert
 sein und einer Hardwareklasse zugeordnet sein, welche ein Partitionsschema enthält. In den Kapiteln Computer
 über LINBO aufnehmen und Hardwareklasse erstellen werden die Vorgänge beschrieben.
 
-1. auf der Schulkonsole unter Gräte den Rechner eintragen
+1. auf der Schulkonsole unter Geräte den Rechner eintragen
+
 2. Zum Beispiel kann auf der Schulkonsole über LINBO ⇒ Gruppen ⇒ +ERSTLLEN die Vorlage ``start.conf.win10``
-   verwendet werden.
+   verwendet werden
 
 .. figure:: media/10_windows-10-clients_school-console-create-group.png
    :align: center
@@ -414,7 +415,7 @@ Domänenanbindung
 ================
 
 Feste „Clienten“ der linuxmuster.net-Umgebung können nun in der der Domäne aufgenommen werden. Um Geräte richtig in das AD einzuordnen,
-sollten diese, wie weiter oben erklärt, zuerst in linuxmuster.net über die MAC mit richtigen Einstellungen aufgenommen
+müssen diese, wie weiter oben erklärt, zuerst in linuxmuster.net über die MAC mit richtigen Einstellungen aufgenommen
 worden sein.
 
 Manueller Domänen Join für Windows
@@ -424,46 +425,60 @@ Manueller Domänen Join für Windows
    vergeben (übereinstimmend mit Namen in der Geräteliste devices.csv! Im Beispiel ist der Rechnername "admin-pc") und unter Mitglied von als Domäne "linuxmuster.lan"
    angeben. Mit ``global-admin`` und Ihrem beim Setup vergebenen Passwort bestätigen:
 
-.. figure:: media/43_windows-10-clients_login-as-global-admin.png
-   :align: center
-   :alt: Win10 Login As Global-Admin
+   .. figure:: media/43_windows-10-clients_login-as-global-admin.png
+      :align: center
+      :alt: Win10 Login As Global-Admin
 
-2. OK → OK → Neustarten
-3. unter der Benutzeranmeldung ``Weitere Benutzer`` müsste man sich nun als global-admin anmelden können:
+2. OK → OK → Neustarten!
 
-.. figure:: media/44_windows-10-clients_reconnect-as-global-admin.png
-   :align: center
-   :alt: Win10 Reconnect As Global-Admin
+3. Mit Linbo ein Image erstellen und hochladen (siehe nächster Abschnitt)
 
-LINBO-Image mit Domänenbeitritt
-===============================
+   .. hint::
+    Achtung: Nachdem eine Template-Maschine frisch der Domain beigetreten ist, darf vor dem Image Upload nicht aus linbo neugestartet
+    werden, da sonst das durch den DomainJoin neu erstellte Maschinenpasswort in der AD für diese Maschine durch ein falsches aus einer
+    eventuell bestehenden alten .macct-Datei ersetzt wird. Durch den Image-Upload wird das neue Passwort ausgelesen und in die .macct geschrieben.
 
-Um nicht bei jedem PC einzeln einen Domain-Join durchführen zu müssen, kann ein LINBO-Image vorbereitet werden,
-welches bereits der Domäne beigetreten ist.
+4. Windows starten - unter der Benutzeranmeldung ``Weitere Benutzer`` müsste man sich nun als global-admin anmelden können:
 
-1. Wird ein LINBO-Image von einem Rechner, der schon der Domäne gejoined ist, auf andere Maschinen übertragen,
-   sollten diese schon automatisch in der Domöne angebunden sein (nicht mit anderen Domainjoines kompatibel)
-
-2. Notwenig ist dann eine Image Registry, die den Namen der PCs jeweils anpasst, da sonst jeder PC, der das Image
-   kopiert, den selben Rechnernamen hätte.
-
-.. hint::
-
-   Achtung: Nachdem eine Template-Maschine frisch der Domain gejoined ist, darf diese vor dem Upload nicht neugestartet
-   werden, da sonst das durch den DomainJoin neu erstellte Maschinenpasswort in der AD für diese Maschine durch eine
-   eventuell bestehende alte .macct-Datei mit falschem Maschinenpasswort ersetzt wird. Durch den Image-Upload wird das
-   neue Passwort ausgelesen und in die .macct geschrieben.
+   .. figure:: media/44_windows-10-clients_reconnect-as-global-admin.png
+      :align: center
+      :alt: Win10 Reconnect As Global-Admin
 
 
-Image in LINBO erstellen
-------------------------
+   Sollte es dabei zu Problemen mit der Anmeldung kommen, dann überprüft man auf der neuen Maschine:
+   Systemzeit, Rechnernamen und Domänennamen. Rechnernamen und Domänennamen werden über die .reg Datei reingepatched:
+   also kontrolliert man auch deren Inhalt (auf dem Server /srv/linbo/imagename.cloop.reg)
+
+   Ist die Anmeldung erfolgreich, können weitere Programme installiert und das Default Profil kopiert werden.
+
+
+Default Profil kopieren
+=======================
+
+Linuxmuster.net sieht vor, dass **Programminstallationen von "global-admin"** durchgeführt werden. Damit alle User die bei der Installation vorgenommenen Änderungen bekommen, muss das Profil des "global-admin" nach "Default" kopiert werden. Um das Profil zu kopieren, ist wie folgt vorzugehen:
+
+1. Starten Sie den Rechner nach der Installation von Programmen neu ohne Synchronisation
+
+.. attention::
+              Der Neustart ist notwenig, da das Profil des "global-admin" ansonsten nicht kopiert werden kann bzw. die Registry-Zweige für den global-admin freizugeben.
+
+2. Melden Sie sich als ``lokaler User mit Admin-Rechten`` an dem Rechner an
+3. Laden Sie die Datei https://www.forensit.com/Downloads/Support/DefProf.msi herunter. Führen Sie diese aus. Das Programm DefProf.exe befindet sich dann in entpackter Form in Ihrem Download-Verzeichnis. Kopieren Sie dieses Programm in das Verzeichnis: ``C:\Windows\system32\``.
+4. Führen Sie unter Win10 die PowerShell als Admin aus. Wechseln Sie auf Laufwerk C:\ und führen Sie den Befehl ``C:\> defprof global-admin`` aus. Die Nachfrage bei der Ausführung ist zu bejahen.
+5. Melden Sie sich als lokaler User ab und als global-admin an
+6. Fahren Sie den Rechner herunter
+7. Starten Sie den Rechner neu und erstellen ein neues Image mit linbo
+
+
+Image in LINBO erstellen und RegPatch zuordnen
+==============================================
 
 1. Jetzt wieder in LINBO starten und von dem aktuellem Stand ein Image erstellen (dafür wieder ``Imaging-Bereich`` und
    ``Image erstellen`` wählen und ``Namen vergeben``:
 
-.. figure:: media/45_windows-10-clients_linbo-create-image.png
-   :align: center
-   :alt: Linbo Create Image
+   .. figure:: media/45_windows-10-clients_linbo-create-image.png
+      :align: center
+      :alt: Linbo Create Image
 
 2. Mit Erstellen + Hochladen hochladen
 
@@ -471,25 +486,31 @@ Image in LINBO erstellen
    Falls der Gruppe anfangs kein Basisimage zugeordnet war, sollte das unter 
    ``Groups → <gruppenname> → Partitions → Windows 10 → OS → Basisimage`` nachgeholt werden. Speichern nicht vergessen.
 
-.. figure:: media/46_windows-10-clients_linbo-upload-image.png
-   :align: center
-   :alt: Linbo Upload Image
+   .. figure:: media/46_windows-10-clients_linbo-upload-image.png
+      :align: center
+      :alt: Linbo Upload Image
 
 4. Einem Image muss ein Registry Patch angeben werden: 
    ``Image auswählen → Registry patch → Copy from → Richtiges auswählen``
 
-.. figure:: media/47_windows-10-clients_linbo-indicate-registry-patch.png
-   :align: center
-   :alt: Linbo Indicate Registry Patch
+   .. figure:: media/47_windows-10-clients_linbo-indicate-registry-patch.png
+      :align: center
+      :alt: Linbo Indicate Registry Patch
+
+   Der Registry Patch wird benötigt, um den Namen der PCs jeweils anzupassen, da sonst jeder PC, auf den das Image
+   übertragen wird, den selben Rechnernamen hätte.
 
 5. Alternativ in der Server-Shell aus ``/srv/linbo/exmaples`` die richtige Vorlage in ``/srv/linbo`` kopieren.
 
-6. Hier SCHULE durch LINUXMUSTER.LAN ersetzen! Geräte sollten nun der Domäne beitreten. Dies kann manuell oder 
-   halbautomatisch über LINBO gemacht werden.
+6. Hier ``SCHULE`` an zwei Stellen durch eigenen ``Domänenname`` ersetzen!
 
 
 Imageübertragung auf weiteren PC
 --------------------------------
+
+.. hint:
+   Wird ein LINBO-Image von einem Rechner, welcher schon der Domäne beigetreten ist, erstellt und auf eine andere Maschine übertragen,
+   dann ist auch diese Maschine in der Domäne.
 
 1. Starten Sie den PC, auf den das Image übertragen werden soll, über das Netzwerk bis er in LINBO gebootet hat.
 Nun öffnen Sie den Imaging Reiter, wie im ersten Kapitel 
@@ -513,19 +534,4 @@ Nun öffnen Sie den Imaging Reiter, wie im ersten Kapitel
 
 4. Wenn das Image vollständig heruntergeladen ist, beginnt der Cloneprozess. Danach startet Windows automatisch.
 
-Default Profil kopieren
-=======================
 
-Linuxmuster.net sieht vor, dass **Programminstallationen von "global-admin"** durchgeführt werden. Damit alle User die bei der Installation vorgenommenen Änderungen bekommen, muss das Profil des "global-admin" nach "Default" kopiert werden. Um das Profil zu kopieren, ist wie folgt vorzugehen:
-
-1. Starten Sie den Rechner nach der Installation von Programmen neu ohne Synchronisation
-
-.. attention::
-              Der Neustart ist notwenig, da das Profil des "global-admin" ansonsten nicht kopiert werden kann bzw. die Registry-Zweige für den global-admin freizugeben.
-
-2. Melden Sie sich als ``lokaler User mit Admin-Rechten`` an dem Rechner an
-3. Laden Sie die Datei https://www.forensit.com/Downloads/Support/DefProf.msi herunter. Führen Sie diese aus. Das Programm DefProf.exe befindet sich dann in entpackter Form in Ihrem Download-Verzeichnis. Kopieren Sie dieses Programm in das Verzeichnis: ``C:\Windows\system32\``. 
-4. Führen Sie unter Win10 die PowerShell als Admin aus. Wechseln Sie auf Laufwerk C:\ und führen Sie den Befehl ``C:\> defprof global-admin`` aus. Die Nachfrage bei der Ausführung ist zu bejahen.
-5. Melden Sie sich als lokaler User ab und als global-admin an
-6. Fahren Sie den Rechner herunter
-7. Starten Sie den Rechner neu und erstellen ein neues Image mit linbo
