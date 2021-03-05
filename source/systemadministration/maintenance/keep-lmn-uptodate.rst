@@ -37,7 +37,7 @@ Aktualisierungen einspielen
 
 Um die Server-Installation auf den aktuellen Paketstand zu bringen, gehe folgendermaßen vor:
 
-1. Logge Dich als User root auf einer Serverkonsole ein.
+1. Logge Dich als Benutzer root auf einer Serverkonsole ein.
 
 2. Aktualisiere die Paketlisten:
 
