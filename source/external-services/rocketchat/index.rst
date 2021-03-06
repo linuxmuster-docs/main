@@ -6,12 +6,12 @@ Externe Authentifizierung - Rocket Chat
 
 .. sectionauthor:: `@dorian <https://ask.linuxmuster.net/u/dorian>`_, Ergänzungen `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
-Die Open-Source Kommunikationsplattform `rocket.chat <https://rocket.chat/de/>` bietet u.a. die Möglichkeit, einen flexiblen, datenschutzkonformen Sofort-Nachrichten-Dienst anzubieten.
+Die Open-Source Kommunikationsplattform `rocket.chat <https://rocket.chat/de/>`_ bietet u.a. die Möglichkeit, einen flexiblen, datenschutzkonformen Sofort-Nachrichten-Dienst anzubieten.
 
 Für die Installation eines eigenen rocket.chat Servers werden verschiende Möglichkeiten angeboten.
-Die Dokumentation zur Installation des Servers unter Ubuntu findet sich hier: `Rocket.Cchat in Ubuntu <https://docs.rocket.chat/installation/manual-installation/ubuntu>`
+Die Dokumentation zur Installation des Servers unter Ubuntu findet sich hier: `Rocket.Chat in Ubuntu <https://docs.rocket.chat/installation/manual-installation/ubuntu>`_
 
-Zur Nutzung stehen sowohl `Desktop Apps als auch Mobile-Apps <https://rocket.chat/de/install/>` für Linux/Android, Windows und Apple Geräte / OS zur Verfügung.
+Zur Nutzung stehen sowohl `Desktop Apps als auch Mobile-Apps <https://rocket.chat/de/install/>`_ für Linux/Android, Windows und Apple Geräte / OS zur Verfügung.
 
 Voraussetzungen
 ===============
