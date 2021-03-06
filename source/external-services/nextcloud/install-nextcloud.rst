@@ -40,7 +40,7 @@ Erstelle mit ``mkdir -p /srv/docker/nextcloud`` das Verzeichnis, in das alle Nex
 
 Erzeuge die Datei nextcloud.nginx.conf.
 
-.. code-block:: console
+.. code::
 
   server {
     listen 80;
@@ -106,7 +106,7 @@ Melde dich wieder als root auf dem Dockerhost an und gehe mit ``cd /srv/docker/n
 Die Datei Dockerfile
 --------------------
 
-.. code-block:: console
+.. code::
 
   FROM nextcloud:stable
   RUN apt-get update && apt-get install -y smbclient libsmbclient-dev && pecl install smbclient && docker-php-ext-enable smbclient && rm -rf /var/lib/apt/lists/*
@@ -118,7 +118,7 @@ Mit der zweiten Zeile werden die Vorbereitungen für die Einbindungen der Home-V
 Die Datei db.env
 ----------------
 
-.. code-block:: console
+.. code::
 
   MYSQL_ROOT_PASSWORD=geheim
   MYSQL_PASSWORD=geheim
@@ -130,7 +130,7 @@ Hier sind die Zugangsdaten für die Datenbank hinterlegt.
 Die Datei docker-compose.yml
 ----------------------------
 
-.. code-block:: console
+.. code::
 
     version: '3'
 
@@ -198,7 +198,7 @@ Jetzt must du mit einem Browser die Startseite `https://nextcloud.meine-schule.d
 
 Da die Nextcloud hinter dem nginx-Proxy liegt und nicht weiß, ob die Benutzer die Nextcloud über http oder https aufrufen, wird eine Anmeldung über eine Nextcloud-Client-App scheitern. Mit einem Eintrag in `/srv/docker/nextcloud/nextcloud/config/config.php` kannst du das Problem lösen:
 
-.. code-block:: console
+.. code::
 
   ...
     'ldapProviderFactory' => 'OCA\\User_LDAP\\LDAPProviderFactory',
