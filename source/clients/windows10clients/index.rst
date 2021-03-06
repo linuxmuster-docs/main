@@ -5,7 +5,7 @@ Windows 10 Clients
 ==================
 
 .. sectionauthor:: `@maurice <https://ask.linuxmuster.net/u/Maurice>`_, `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
-            `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
+            `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_, `@michael_kohls <https://ask.linuxmuster.net/u/michael_kohls>`_
 
 LINBO
 =====

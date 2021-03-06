@@ -222,7 +222,7 @@ cloud-init abschalten
 Schlüssel importieren
 ---------------------
 
-Es müssen in den Paketquellen die linuxmuster.net Sources eingetragen und der Schlüüssel des Paketserver importiert werden.
+Es müssen in den Paketquellen die linuxmuster.net Sources eingetragen und der Schlüssel des Paketserver importiert werden.
 
 * Zunächst wirst du wieder root mit ``sudo -i``.
 * Dann lädst du den key mit ``wget http://pkg.linuxmuster.net/archive.linuxmuster.net.key`` herunter.
