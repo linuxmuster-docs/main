@@ -28,7 +28,9 @@ Passwort:
 Manuelle Installation (Ubuntu)
 ------------------------------
 
-Wer die virtuelle Appliance nicht nutzen will, kann mit folgenden Befehlen unter aktuellen (ab 16.04) Ubuntu-Distributionen git, python und sphinx nachinstallieren:
+Wer die virtuelle Appliance nicht nutzen will, kann mit folgenden Befehlen unter aktuellen Ubuntu-Distributionen git, python und sphinx nachinstallieren:
+
+- Ubuntu 16:
 
 .. code-block:: console
 
@@ -36,6 +38,21 @@ Wer die virtuelle Appliance nicht nutzen will, kann mit folgenden Befehlen unter
    $ sudo apt install python3-pip
    $ pip3 install sphinx 
    $ pip3 install sphinx_rtd_theme
+
+- Ubuntu 18/20:
+
+.. code-block:: console
+
+   $ sudo apt install git
+   $ sudo apt install sphinx
+   $ sudo apt install python3-sphinx python3-sphinx-rtd-theme
+
+Zusätzlich bei Ubuntu 20:
+
+.. code-block:: console
+
+   $ sudo apt install python3-stemmer
+
 
 Nachfolgende Befehle gehen davon aus, dass die virtuelle Umgebung verwendet wird.
 
