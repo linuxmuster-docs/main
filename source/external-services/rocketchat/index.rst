@@ -120,9 +120,11 @@ Hierdurch werden alle Schüler den Channels „info“ und „news“ hinzugefü
 
    Jetzt noch NICHT auf „Execute Synchonization Now“ klicken, das geht schief!
 
-21. Timeouts: Standardwerte
-22. User Search:
-23. Filter: Damit Schüler und Lehrer sich anmelden können:
+Timeouts: Standardwerte
+-----------------------
+
+1. User Search:
+2. Filter: Damit Schüler und Lehrer sich anmelden können:
 
 .. code::
 
@@ -136,12 +138,15 @@ Damit sich nur Lehrer anmelden können:
 
 ``Global Admins`` können sich immer anmelden.
 
-24. Scope: sub
-25. Search Field: sAMAccountName
-26. Rest: Standardwerte
-27. User Search (Group Validation):
-28. Enable LDAP User Group Filter: NEIN
-29. Rest: leer lassen
+3. Scope: sub
+4. Search Field: sAMAccountName
+5. Rest: Standardwerte
+
+User Search (Group Validation)
+------------------------------
+
+1. Enable LDAP User Group Filter: NEIN
+2. Rest: leer lassen
 
 .. important::
 
@@ -156,14 +161,14 @@ User Group Filter
 
 .. code::
 
-  (&
+   (&
     (sAMAccountName=#{username})
     (|
-      (memberOf:1.2.840.113556.1.4.1941:=CN=#{groupName},OU=Projects,OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan)
-    (memberOf:1.2.840.113556.1.4.1941:=CN=#{groupName},OU=Groups,OU=GLOBAL,DC=linuxmuster,DC=lan)
-    (memberOf:1.2.840.113556.1.4.1941:=CN=#{groupName},OU=#{groupName},OU=Students,OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan)
-  )
-  )
+     (memberOf:1.2.840.113556.1.4.1941:=CN=#{groupName},OU=Projects,OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan)
+     (memberOf:1.2.840.113556.1.4.1941:=CN=#{groupName},OU=Groups,OU=GLOBAL,DC=linuxmuster,DC=lan)
+     (memberOf:1.2.840.113556.1.4.1941:=CN=#{groupName},OU=#{groupName},OU=Students,OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan)
+    )
+   )
 
 Die Implementierung der Nutzergruppenzuordnung von Rocket.Chat ist schwer nachzuvollziehen.
 Bei der Zuordnung von Usern zu Gruppen "durchläuft" Rocket.chat jeden Nutzer:
