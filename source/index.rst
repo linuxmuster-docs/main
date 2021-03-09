@@ -78,7 +78,7 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
 
   getting-started/setup
   getting-started/add-user-accounts
-  getting-started/add-computer
+  getting-started/devices/index
   getting-started/linuxclient
 
 .. toctree::
