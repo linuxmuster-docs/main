@@ -126,7 +126,18 @@ Die nachstehende Abb. gibt diese Einstellungen wieder.
 
 Für die Zuorndung der Attribute und die Anwendung der Filter gebe bitte folgende Werte ein:
 
-6.  User Data Field Map: {"displayName":"name", "mail":"email"} - dies muss im JSON-Format angegeben werden, bei Syntaxfehlern funktioniert der Sync nicht mehr.
+6.  User Data Field Map: 
+
+.. code::
+    
+   {"displayName":"name","mail":"email"} 
+
+Dies muss im JSON-Format angegeben werden, bei Syntaxfehlern funktioniert der Sync nicht mehr.
+
+.. attention::
+
+   Hinter und vor der geschweiften Klammer und den Doppelpunkten darf kein Leerzeichen vorhanden sein.
+
 7.  Sync LDAP Groups: JA
 8.  Auto Remove User Roles: JA
 9.   User Group Filter:
@@ -147,10 +158,15 @@ Für die Zuorndung der Attribute und die Anwendung der Filter gebe bitte folgend
 .. code::
 
   {
-    "role-student": "schueler",
-    "role-teacher": "lehrer",
-    "role-globaladministrator": "admin"
+    'role-student': 'schueler',
+    'role-teacher': 'lehrer',
+    'role-globaladministrator': 'Admin'
   }
+
+
+.. attention::
+
+  Diese Rollen müssen vorher unter ``Permissions/Berechtigungen`` angelegt werden. Die Rolle ``Admin`` existiert in einer neu aufgesetzten Rocket-Chat Instanz bereits. Die Rollen ``lehrer`` und ``schueler`` müssen noch angelegt werden. Die Zuordnung erfolgt nach  dem Prinzip "LDAP-Group -im-LDAP-lmn": "Rolle in Rocket.Chat". Es sind einfache Anführungszeichen zu verwenden.
 
 Die nachstehende Abb. verdeutlicht diese Einstellungen:
 
@@ -167,15 +183,15 @@ Auch Klassen und Projekte können hier verwendet werden:
 .. code::
 
   {
-    "role-student": "schueler",
-    "role-teacher": "lehrer",
-    "role-globaladministrator": "admin",
-    "p_nwt": "nwt",
-    "5a": "klasse5",
-    "5b": "klasse5"
+    'role-student': 'schueler',
+    'role-teacher': 'lehrer',
+    'role-globaladministrator': 'admin',
+    'p_nwt': 'nwt'
+    '5a': 'klasse5',
+    '5b': 'klasse5'
   }
 
-Die ``User data group map`` muss im JSON-Format angegeben werden, bei Syntaxfehlern funktioniert der Sync nicht mehr.
+Die ``User data group map`` muss im JSON-Format angegeben werden, bei Syntaxfehlern funktioniert der Sync nicht mehr. Die Zuordnung erfolgt nach  dem Prinzip "LDAP-Group -im-LDAP-lmn": "Rolle in Rocket.Chat". Es sind einfache Anführungszeichen zu verwenden.
 
 12. Auto Sync LDAP Groups to Channels: JA
 13. Channel Admin: rocket.cat
@@ -184,19 +200,19 @@ Die ``User data group map`` muss im JSON-Format angegeben werden, bei Syntaxfehl
 
 .. code::
 
-  {
-    "role-globaladministrator": "admintalk",
-    "role-student": [
-      "info",
-      "news"
-    ]
+   {
+    'role-globaladministrator': 'admintalk',
+    'role-student': [
+      'info',
+      'news'
+     ]
   }
 
 Hierdurch werden alle Schüler den Channels „info“ und „news“ hinzugefügt.
-Die ``LDAP Group Channel Map`` muss im JSON-Format angegeben werden, bei Syntaxfehlern funktioniert der Sync nicht mehr.
+Die ``LDAP Group Channel Map`` muss im JSON-Format angegeben werden, bei Syntaxfehlern funktioniert der Sync nicht mehr. Es sind einfache Anführungszeichen zu verwenden.
 
 .. hint::
-   Es ist möglich, Channels so einzustellen, dass sie nur lesbar sind. Man kann so einen Channel erstellen, in dem nur Lehrer schreiben können, indem man der entsprechenden Rocket.Chat Rolle, die man role-teacher zuordnet, in den Berechtigungseinstellungen von Rocket.Chat die Berechtigung erteilt, in schreibgeschützte Channels zu schreiben. Man kann so auch einfach Channels für bestimmte Stufen erstellen, indem man alle Klassen der Stufe diesem Channel zuordnet
+   Es ist möglich, Channels so einzustellen, dass sie nur lesbar sind. Man kann so einen Channel erstellen, in dem nur Lehrer schreiben können, indem man der entsprechenden Rocket.Chat Rolle, die man role-teacher zuordnet, in den Berechtigungseinstellungen von Rocket.Chat die Berechtigung erteilt, in schreibgeschützte Channels zu schreiben. Man kann so auch einfach Channels für bestimmte Stufen erstellen, indem man alle Klassen der Stufe diesem Channel zuordnet werden.
 
 15. Auto remove user from channels: JA
 
@@ -300,11 +316,21 @@ Sollte nach erolgter Synchronisation eine Anmeldung mit LDAP-Usern scheitern, so
    :alt: LDAP-Synchronisation: Check logs
    :align: center
 
-Sind dort Fehler wie nachstehender bsp. zu finden, so ist vermutlich der Syntax und/oder die Eintragungen der Zuordnungen ``Gruppe zu Rollen`` und ``Gruppen zu Channels`` die Ursache.
+Sind dort **Fehler** wie nachstehender beispielweise. zu finden, so ist vermutlich der Syntax und/oder die Eintragungen der Zuordnungen ``Gruppe zu Rollen`` und ``Gruppen zu Channels`` die Ursache.
+
+Fehlerbeispiel:
 
 .. code::
 
    Exception in callback of async function: SyntaxError: Unexpected token „ in JSON at position 1 at JSON.parse () at   getDataToSyncUserData (app/ldap/server/sync.js:116:25) at addLdapUser (app/ldap/server/sync.js:447:19) at app/ldap/server/sync.js:538:5 at Array.forEach () at app/ldap/server/sync.js:505:13 at runWithEnvironment (packages/meteor.js:1286:24)
+
+Rocket.Chat hat in einer neu aufgesetzten Instanz für die Benutzerkonten die Zwei-Faktor-Authentifizierung automatisch aktiviert. Wenn du auf deinem linuxmuster.net Server keine real genutzten E-Mail Adressen eingetragen hast, schalte die Zwei-Faktor-Authentifizierung vor den Test zur Überprüfung der Anmeldung von LDAP-Benutzern aus.
+
+Hierzu wähle als Administrator in dem Bereich ``Einstellungen`` den Bereich ``Konten`` und rechts im Kontextmenü ``Zwei-Faktor-Authentifizierung`` und deaktiviere diese dort, wie nachstehend dargestellt.
+
+.. image:: media/20-two-factor-authentification-deaktivate.png
+   :alt: LDAP-Synchronisation: Check logs
+   :align: center
 
 
 User Group Filter
