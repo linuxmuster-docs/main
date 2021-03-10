@@ -159,7 +159,7 @@ Sollte der PC nicht starten, so sind die Wake-on-LAN Funktionen nicht korrekt ko
 Dann müssen Sie den PC von Hand booten. Der PC bootet in die Linbo-Umgebung, dort müssen Sie 
 diesen dann partitionieren, den Cache befüllen und den Linux-Client synchronisiert starten.
 
-Nachdem der Linux-Client gestaretet wurde, melden Sie sich mit ``linuxadmin`` und dem 
+Nachdem der Linux-Client gestartet wurde, melden Sie sich mit ``linuxadmin`` und dem 
 Vorlagenkennwort am Client an.
 
 Sollten Sie sich mit dem Vorlagenbenutzer nicht anmelden können, so führen Sie auf dem Server
