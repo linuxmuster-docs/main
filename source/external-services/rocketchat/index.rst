@@ -24,7 +24,44 @@ LDAP-Anbindung
 Verbindungseinstellungen
 ------------------------
 
-.. hier fehlen noch Erklärungen
+Melde dich an Rocket.Chat mit der Administrator-Berechtigung an.
+
+.. image:: media/01-login-rocketchat.png
+   :alt: Login Rocket.Chat
+   :align: center
+
+Klicke danach oben links auf das icon für dein Profil.
+
+.. image:: media/02-admin-profile.png
+   :alt: Admin Profile
+   :align: center
+
+Danach siehst du das Kontextmenü deines Profils.
+
+.. image:: media/03-admin-profile-menue.png
+   :alt: Admin Profile Konetxtmenü
+   :align: center
+
+Klicke hier auf ``Administration``. Danach siehst du links im Fenster eine sehr lange Menüliste.
+Diese unterteilt sich in die Abschnitte ``Administration``
+
+.. image:: media/04-administration-sidebar.png
+   :alt: Admininistrations-Menü
+   :align: center
+
+etwas weiter darunter findest du links den Abschnitt ``Einstellungen``.
+
+.. image:: media/05-settings-sidebar.png
+   :alt: Administrations-Menü: Einstellungen
+   :align: center
+
+Im Abschnitt ``Einstellungen`` wählst du den Eintrag ``LDAP`` aus.
+
+.. image:: media/06-ldap-settings-sidebar.png
+   :alt: Menü: Settings - LDAP
+   :align: center
+
+Setze die Einstellungen für LDAP wie folgt:
 
 1.  Enable: JA
 2.  Login Fallback: JA
@@ -33,28 +70,63 @@ Verbindungseinstellungen
 5.  Port: 636
 6.  Reconnect: JA
 7.  Encryption: SSL/LDAPS
+
+Die nachstehende Abb. entspricht diesen Einstellungen:
+
+.. image:: media/07-ldap-connection-settings-part1.png
+   :alt: LDAP - Verbindungseinstellungen
+   :align: center
+
 8.  CA Cert: Inhalt der Datei /etc/linuxmuster/ssl/cacert.pem
 9.  Reject Unauthorized: JA (Kann zum Testen aber auf nein gesetzt werden)
 10. Base DN: DC=linuxmuster,DC=lan
 
+.. image:: media/08-ldap-connection-settings-ca-cert-part2.png
+   :alt: LDAP: Zertifikatseinstellungen
+   :align: center
+
+.. attention::
+
+   Verwendest du ein self-signed certificate, so must Du die Option ``Unberechtigte ablehnen`` auf NEIN setzen bzw.   deaktivieren, sonst kommt keine Verbindung zustande. 
+
+
 Authentication
 --------------
 
+Setze für die Athentifizierung die Einstellungen wie folgt:
+
 1.  Enable: JA
-2.  User DN: CN=global-binduser,OU=Management,OU=GLOBAL,DC=linuxmuster,DC=lan
+2.  User DN: CN=global-binduser,OU=Management,OU=GLOBAL,DC=linuxmuster,DC=lan (DC - muss der eigenen BaseDN entsprechen)
 3.  Password: steht in /etc/linuxmuster/.secret/global-binduser
+
+Die nachstehende Abb. verdeutlich die Einstellungen:
+
+.. image:: media/09-ldap-connection-settings-authentification-part3.png
+   :alt: LDAP: User DN
+   :align: center
 
 Danach oben auf „Test Connection“ clicken. Wenn eine Fehlermeldung erscheint, Einstellungen und Verbindung zum Server testen.
 
 Sync / Import
 -------------
 
+Für die Synchronisation der Benutzer-Accounts nimmst du folgende Einstellungen vor:
+
 1.  Username Fiels: sAMAccountName
 2.  Unique Identifier Field: sAMAccountName
 3.  Default Domain: leer
 4.  Merge Existing Users: JA
 5.  Sync User Data: JA
-6.  User Data Field Map: {"displayName":"name", "mail":"email"}
+
+Die nachstehende Abb. gibt diese Einstellungen wieder.
+
+.. image:: media/10-ldap-connection-settings-synchronisation-part4.png
+   :alt: LDAP: Sync Settings
+   :align: center
+
+Für die Zuorndung der Attribute und die Anwendung der Filter gebe bitte folgende Werte ein:
+
+6.  User Data Field Map: {"displayName":"name", "mail":"email"} - dies muss im JSON-Format angegeben werden, bei Syntaxfehlern funktioniert der Sync nicht mehr.
 7.  Sync LDAP Groups: JA
 8.  Auto Remove User Roles: JA
 9.   User Group Filter:
@@ -63,6 +135,10 @@ Sync / Import
 
     (&(sAMAccountName=#{username})(|(memberOf:1.2.840.113556.1.4.1941:=CN=#{groupName},OU=Projects,OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan)(memberOf:1.2.840.113556.1.4.1941:=CN=#{groupName},OU=Groups,OU=GLOBAL,DC=linuxmuster,DC=lan)(memberOf:1.2.840.113556.1.4.1941:=CN=#{groupName},OU=#{groupName},OU=Students,OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan)))
 
+
+.. attention::
+
+   Achte darauf, dass die DC-Eintragungen in dem Filter durch die deiner BaseDN ersetzt werden. In dem hier gezeigten Filter also an drei Stellen.
 
 10. LDAP Group BaseDN: DC=linuxmuster,DC=lan -> eigener BaseDN ist einzutragen
 11. User data Group Map:
@@ -76,6 +152,16 @@ Sync / Import
     "role-globaladministrator": "admin"
   }
 
+Die nachstehende Abb. verdeutlicht diese Einstellungen:
+
+.. image:: media/11-ldap-connection-settings-synchronisation-part5.png
+   :alt: LDAP: Sync Settings
+   :align: center
+
+.. attention::
+
+   In der Abb. wurden zu Beginn zwei geschweifte Klammern gesetzt. Dies würde zu Fehlern im Sync führen. Also unbedingt - wie vorher im Code-Block angegeben - die Zuordnung eintragen.
+
 Auch Klassen und Projekte können hier verwendet werden:
 
 .. code::
@@ -88,6 +174,8 @@ Auch Klassen und Projekte können hier verwendet werden:
     "5a": "klasse5",
     "5b": "klasse5"
   }
+
+Die ``User data group map`` muss im JSON-Format angegeben werden, bei Syntaxfehlern funktioniert der Sync nicht mehr.
 
 12. Auto Sync LDAP Groups to Channels: JA
 13. Channel Admin: rocket.cat
@@ -105,11 +193,20 @@ Auch Klassen und Projekte können hier verwendet werden:
   }
 
 Hierdurch werden alle Schüler den Channels „info“ und „news“ hinzugefügt.
+Die ``LDAP Group Channel Map`` muss im JSON-Format angegeben werden, bei Syntaxfehlern funktioniert der Sync nicht mehr.
 
 .. hint::
    Es ist möglich, Channels so einzustellen, dass sie nur lesbar sind. Man kann so einen Channel erstellen, in dem nur Lehrer schreiben können, indem man der entsprechenden Rocket.Chat Rolle, die man role-teacher zuordnet, in den Berechtigungseinstellungen von Rocket.Chat die Berechtigung erteilt, in schreibgeschützte Channels zu schreiben. Man kann so auch einfach Channels für bestimmte Stufen erstellen, indem man alle Klassen der Stufe diesem Channel zuordnet
 
 15. Auto remove user from channels: JA
+
+Nachstehende Abb. spiegelt diese Einstellungen wieder:
+
+.. image:: media/12-ldap-connection-settings-synchronisation-part6.png
+   :alt: LDAP: Sync Settings
+   :align: center
+
+
 16. Sync user avatar: NEIN
 17. Background Sync: JA
 18. Background Sync Interval: Beliebig
@@ -119,6 +216,12 @@ Hierdurch werden alle Schüler den Channels „info“ und „news“ hinzugefü
 .. attention::
 
    Jetzt noch NICHT auf „Execute Synchonization Now“ klicken, das geht schief!
+
+Nachstehende Abb. spiegelt diese Einstellungen wieder:
+
+.. image:: media/13-ldap-connection-settings-synchronisation-part7.png
+   :alt: LDAP: Sync Settings
+   :align: center
 
 Timeouts: Standardwerte
 -----------------------
@@ -138,22 +241,70 @@ Damit sich nur Lehrer anmelden können:
 
 ``Global Admins`` können sich immer anmelden.
 
+.. attention::
+
+   Achte darauf, dass du die DC-Einträge durch die deiner BaseDN ersetzt.
+
 3. Scope: sub
 4. Search Field: sAMAccountName
+
+Nachstehende Abb. spiegelt diese Einstellungen wieder:
+
+.. image:: media/14-ldap-connection-settings-timeouts-filter-part8.png
+   :alt: LDAP: Sync Settings
+   :align: center
+
 5. Rest: Standardwerte
 
 User Search (Group Validation)
 ------------------------------
 
 1. Enable LDAP User Group Filter: NEIN
-2. Rest: leer lassen
+2. Rest: leer lassen - btw. kann dann auch nicht mehr gewählt / gesetzt werden.
+
+Nachstehende Abb. spiegelt diese Einstellungen wieder:
+
+.. image:: media/15-ldap-connection-settings-user-group-filter-part9.png
+   :alt: LDAP: Sync Settings
+   :align: center
 
 .. important::
 
    Jetzt kann gespeichert werden.
 
 
-Im Anschluss unter **Sync / Import** auf ``Execute Synchronization Now`` clicken und damit den Sync starten.
+Das Speichern der Einstellungen ist mit dem Admin-Kennwort zu bestätigen.
+
+.. image:: media/16-ldap-connection-settings-save.png
+   :alt: LDAP - Settings: Save
+   :align: center
+
+Führe jetzt den Test der LDAP verbindung im Abschnitt LDAP-Connection aus (Klick auf den Button).
+Oben rechts wird der erfolgreiche verbindungsaufbau bestätigt.
+
+.. image:: media/17-ldap-connection-test.png
+   :alt: LDAP - Connection: Test
+   :align: center
+
+Sollte hier ein Fehler angezeigt werden, dann kann dies u.a. an den Zertifikatseinstellungen, dem Port, der Wahl SSL/TLS oder an Firewallregeln liegen.
+
+Wurde die LDAP-Verbindung erfolgreich getestet, im Anschluss unter **Sync / Import** auf ``Execute Synchronization Now`` klicken und damit den Sync starten.
+
+.. image:: media/18-ldap-synchronise-test.png
+   :alt: Start LDAP-Synchronisation
+   :align: center
+
+Sollte nach erolgter Synchronisation eine Anmeldung mit LDAP-Usern scheitern, so sollte im Administrations-Menü unter dem Punkt ``Logs anzeigen`` die Eintragungen beobachtet werden, um Hinweise auf mögliche Fehler zu erhalten.
+
+.. image:: media/19-ldap-synchronisation-check-logs.png
+   :alt: LDAP-Synchronisation: Check logs
+   :align: center
+
+Sind dort Fehler wie nachstehender bsp. zu finden, so ist vermutlich der Syntax und/oder die Eintragungen der Zuordnungen ``Gruppe zu Rollen`` und ``Gruppen zu Channels`` die Ursache.
+
+.. code::
+
+   Exception in callback of async function: SyntaxError: Unexpected token „ in JSON at position 1 at JSON.parse () at   getDataToSyncUserData (app/ldap/server/sync.js:116:25) at addLdapUser (app/ldap/server/sync.js:447:19) at app/ldap/server/sync.js:538:5 at Array.forEach () at app/ldap/server/sync.js:505:13 at runWithEnvironment (packages/meteor.js:1286:24)
 
 
 User Group Filter
