@@ -101,7 +101,7 @@ jetzt in die Rechnergruppe "lmn-bionic-200507" aufgenommen werden.
 
 Der Zielrechner wird in der Schulkonsole aufgenommen
 (z.B. `r10001`) und im Menüpunkt LINBO der richtigen Gruppe
-(z.B. `lmn-bionic-200507`) zugewiesen, siehe :ref:`add-computer-label`.
+(z.B. `lmn-bionic-200507`) zugewiesen, siehe :ref:`add-devices-label`.
 
 .. hint::
 

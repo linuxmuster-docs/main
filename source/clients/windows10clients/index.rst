@@ -14,73 +14,9 @@ Auf einer linuxmuster.net-Umgebung mit erfolgreich ausgeführtem Setup gibt es d
 LINBO erstellte Systemabbilder von einem Gerät als Vorlage hochzuladen und mit definierten Partitionen auf andere Geräte
 zu übertragen.
 
-Computer über LINBO aufnehmen
------------------------------
 
-Alle Geräte sollten in linuxmuster.net eingetragen werden, um die Funktionen der Schulserverlösung anwenden zu
-können. Das Eintragen ist entweder lokal über einen einzelen Client-PC möglich oder zentral auf der Schulkonsole über die
-MACs der Clientrechner. Haben Sie eine Liste von MAC-Addressen parat, bietet sich die zentrale Variante an. Falls Sie die
-MAC-Addressen erst herausfinden müssen, stellt die lokale Registrierung den leichteren Weg dar. Dort können Sie auf der
-gebooteten LINBO Oberfläche die MAC-Addresse auslesen.
+Alle Geräte müssen bereits im Server eingetragen sein. Siehe: :ref:`add-devices-label`
 
-Über Clientrechner lokal
-------------------------
-
-1. Der Clientrechner sollte im Schulnetzwerk angebunden sein und den Server ereichen können.
-2. Um LINBO zu starten, den PC über das Netzwerk booten (PXE). Dazu entweder im BIOS-Setup in der Bootreihenfolge PXE-Boot 
-   als Erstes Bootmedium einstellen oder über das Bootmenü PXE-Boot auswählen. Dies gelingt je nach Rechner meistens 
-   über die Tasten F2, F10, F12, usw. oder als virtueller Rechner auf einem Hypervisor unter 
-   ``VMxyz ⇒ Options ⇒ Bootorder``
-
-3. Folgende Ansicht sollte erscheinen.
-
-.. figure:: media/01_windows-10-clients_linbo-start.png
-   :align: center
-   :alt: Linbo starten
-
-4. Nachdem LINBO gestartet ist, den Reiter Imaging auswählen und das Passwort eingeben und mit ``Enter`` bestätigen.
-   welches bei der linuxmuster.net-Installation im Setup vergeben wurde (Zeichen werden bei der Eingabe nicht
-   angezeigt):
-
-.. figure:: media/02_windows-10-clients_linbo-password.png
-   :align: center
-   :alt: Linbo Password
-
-5. Die Imaging-Seite sollte nun erscheinen.
-
-.. figure:: media/03_windows-10-clients_linbo-imaging-menue.png
-   :align: center
-   :alt: Linbo Imaging
-
-6. Haken bei Time-Out entfernen und die Option Registrieren auswählen
-7. Alle Felder ausfüllen. (Beispiel: PC 02 im Raum 123 als r123-02 benennen und IP als 10.0.123.2) und über
-   Registrieren bestätigen.
-
-.. figure:: media/04_windows-10-clients_linbo-pc-registration.png
-   :align: center
-   :alt: Linbo PC Registration
-
-8. Wenn alle PCs lokal registriert wurden, muss die **Schulkonsole** ``NEU`` geöffnet werden und über ``Geräte → „Speichern & Importieren`` 
-   die registrierten PCs übernommen werden.
-
-.. figure:: media/05_windows-10-clients_school-console-devices-import.png
-   :align: center
-   :alt: School Cosnole Device Import
-
-9. Bei dem nächsten Neustart eines Clientrechner in LINBO, wird dieser in der neuen Gruppe mit zuvor vergebenem
-   Namen und IP zu sehen sein.
-
-Über die Schulkonsole zentral
------------------------------
-
-1. Auf der Schulkonsole unter Geräte können neue Geräte eingetragen werden:
-
-.. figure:: media/06_windows-10-clients_school-console-new-device.png
-   :align: center
-   :alt: School Console New Device
-
-2. Dazu über + Gerät hinzufügen und alle Felder ausfüllen. Zeilen können auch kopiert werden.
-3. Anschließend Speichern & Importieren, um die Einträge zu übernehmen.
 
 LINBO-Image für eine Hardwareklasse vorbereiten
 -----------------------------------------------
@@ -104,7 +40,7 @@ jewelige Computergruppe noch keine Hardwareklasse vorhanden ist, auf der Schulko
 Geräteklasse anlegen:
 
 1. Im Browser unter ``https://10.0.0.1:8000`` auf der Schulkonsole anmelden und über 
-``Geräteverwaltung → LINBO → Gruppen`` eine neue Hardwareklasse über ``Create`` anlegen:
+``Geräteverwaltung → LINBO → Gruppen`` eine neue Hardwareklasse über ``Erstellen`` anlegen:
 
 2. eine passende Vorlage wählen und anpassen. (Alternativ kann unter der Geräteübersicht beim Anlegen eines
 Gerätes automatisch eine neue Geräteklasse beim Angeben des Gruppennamens erstellte werden - Speichern
