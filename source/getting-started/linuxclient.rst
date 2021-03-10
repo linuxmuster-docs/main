@@ -119,28 +119,6 @@ Internet kommen. Die empfohlene Vorgehensweise ist, die IP-Adresse des
 Masterclients (temporär) in die "NoProxy" Zugriffsliste auf der
 Firewall aufzunehmen.
 
-Masterclient als neues Device
------------------------------
-
-Sie müssen nun einem Gerät in Ihrem Netz die neue Hardwareklasse ``lmn-bionic-200507``
-zuweisen, so dass das Gerät mit der neuen Vorlage startet, Sie Anpassungen vornehmen können 
-abschließend das Geräte in die Domäne aufnehmen und eine neue cloop-Datei erstellen, 
-die Sie an alle gewünschten Geräte verteilen.
-
-Editieren Sie hierzu die Datei ``/etc/linuxmuster/sophomorix/default-school/devices.csv``.
-
-Tragen Sie das Gerät mit der neuen Hardwareklasse wie folgt ein:
-
-.. code-block:: bash
-
-   r100;r10001;lmn-bionic-200507;AA:AA:BB:12:34:56;10.2.100.1;;;;classroom-studentcomputer;;1;;;;;
-
-Speichern Sie die Änderungen ab und importieren Sie das neue Gerät mit:
-
-.. code-block:: console
-
-   server # linuxmuster-import-devices
-
 
 Masterclient synchronisieren
 ----------------------------
@@ -167,7 +145,7 @@ o.g. Befehl zur Vergabe eines neuen Kennworts für den Vorlagenbenutzer mit Ihre
 Danach starten Sie den Client erneut, so dass der Vorlagenbenutzer ``linuxadmin`` sich danach mit dem 
 neu vergebenen Kennwort anmelden kann.
 
-Masterclient erstmalig aufnehmen
+Masterclient in Domäne aufnehmen
 --------------------------------
 
 Man startet in einem Terminal (oder über ssh vom Server aus) auf dem Linux-Client den
