@@ -17,7 +17,7 @@ Informationen zu erfassen:
 - IP-Adresse gemäß des genutzen Adressschema
 
 Die meisten Netzwerkdrucker sind bei Auslieferung so eingestellt, dass diese eine IP-Adresse via DHCP beziehen. 
-Die IP-Adresse für den Drucker muss in der Schulkonsole gesetzt werden.
+Die IP-Adresse für den Drucker muss daher in der Schulkonsole gesetzt werden.
 
 Um eine Steuerung der Drucker via Schulkonsole zu ermöglichen, müssen die Drucker zentral auf dem Server 
 als Geräte eingetragen und auf dem Server in CUPS konfiguriert werden. 
