@@ -455,7 +455,7 @@ Nun öffnen Sie den Imaging Reiter, wie im ersten Kapitel
 
  → ``Client lokal registrieren`` beschrieben wird.
 
-2. Als nächstes partitionieren und formatieren Sie den PC über den lilanen Button Partitionieren, wie bereits im Abschnitt ``Festplatte vorbereiten - partitionieren, formatieren`` gezeigt wurde.
+2. Als nächstes partitionieren und formatieren Sie den PC über den lila Button Partitionieren, wie bereits im Abschnitt ``Festplatte vorbereiten - partitionieren, formatieren`` gezeigt wurde.
 
 .. figure:: media/48_windows-10-clients_linbo-creating-partitions.png
    :align: center
