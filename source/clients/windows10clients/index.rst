@@ -116,7 +116,7 @@ wie in diesem Beispiel.
    :alt: School Console Save Group
 
 Um auf diesen Rechner das eingestellte Partitionsschema der Hardwareklasse zu übernehmen, diesen über LINBO 
-starten und anschließend im Imaging-Bereich partitionieren (``lilaner Button ⇒ mit Ja`` bestätigen ).
+starten und anschließend im Imaging-Bereich partitionieren (``lila Button ⇒ mit Ja`` bestätigen ).
 
 .. figure:: media/13_windows-10-clients_linbo-create-partitions.png
    :align: center
