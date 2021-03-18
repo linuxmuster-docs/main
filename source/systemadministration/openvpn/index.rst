@@ -51,7 +51,7 @@ Unter ``System`` --> ``Zugang`` --> ``Server`` einen Server hinzufügen (oben re
 DC-Werte wie unter 8. auf den eigenen Bind anpassen.
 
 8. Basis-DN: ``DC=linuxmuster,DC=lan``
-9. Authentifizierungscontainer: ``OU=GLOBAL,DC=linuxmuster,DC=lan;OU=SCHOOLS,DC=linuxmuster,DC=lan``
+9. Authentifizierungscontainer: ``DC=linuxmuster,DC=lan``
 
 DC-Werte wie unter 8. auf den eigenen Bind anpassen.
 
@@ -65,15 +65,15 @@ Nachstehende Abb. verdeutlicht die Anwendung der o.g. Einstellungen:
 
 .. code::
 
-   &(objectClass=organizationalPerson)(memberof=CN=role-student,OU=Groups,OU=GLOBAL,DC=linuxmuster,DC=lan)(memberof=CN=role-teacher,OU=Groups,OU=GLOBAL,DC=linuxmuster,DC=lan)
+   |(memberof=CN=role-student,OU=Groups,OU=GLOBAL,DC=linuxmuster,DC=lan)(memberof=CN=role-teacher,OU=Groups,OU=GLOBAL,DC=linuxmuster,DC=lan)
 
-O  D E R
+O D E R
 
 Erweiterte Abfrage: ``Nur Lehrer``:
 
 .. code::
 
-  &(objectClass=organizationalPerson)(memberof=CN=role-teacher,OU=Groups,OU=GLOBAL,DC=linuxmuster,DC=lan)
+  (memberof=CN=role-teacher,OU=Groups,OU=GLOBAL,DC=linuxmuster,DC=lan)
 
 11. Benutzerbennenungsattribut: ``sAMAccountName``
 
@@ -94,7 +94,7 @@ Der OpenVPN Server braucht eine CA, um das Serverzertifikat zu erstellen. Man ka
 
 CA erstellen
 ------------
-Unter ``System`` --> ``Zugang`` --> ``Sicherheit`` --> ``Aussteller`` 
+Unter ``System`` --> ``Zugang`` --> ``Sicherheit`` --> ``Aussteller``
 
 .. image:: media/05-create-ca-menue-item.png
    :alt: System-Security-CA: Menue item
