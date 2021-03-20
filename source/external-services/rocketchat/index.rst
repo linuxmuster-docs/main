@@ -158,15 +158,15 @@ Dies muss im JSON-Format angegeben werden, bei Syntaxfehlern funktioniert der Sy
 .. code::
 
   {
-    'role-student': 'schueler',
-    'role-teacher': 'lehrer',
-    'role-globaladministrator': 'Admin'
+    "role-student": "schueler",
+    "role-teacher": "lehrer",
+    "role-globaladministrator": "Admin"
   }
 
 
 .. attention::
 
-  Diese Rollen müssen vorher unter ``Permissions/Berechtigungen`` angelegt werden. Die Rolle ``Admin`` existiert in einer neu aufgesetzten Rocket-Chat Instanz bereits. Die Rollen ``lehrer`` und ``schueler`` müssen noch angelegt werden. Die Zuordnung erfolgt nach  dem Prinzip "LDAP-Group -im-LDAP-lmn": "Rolle in Rocket.Chat". Es sind einfache Anführungszeichen zu verwenden.
+  Diese Rollen müssen vorher unter ``Permissions/Berechtigungen`` angelegt werden. Die Rolle ``Admin`` existiert in einer neu aufgesetzten Rocket-Chat Instanz bereits. Die Rollen ``lehrer`` und ``schueler`` müssen noch angelegt werden. Die Zuordnung erfolgt nach  dem Prinzip "LDAP-Group -> LDAP-lmn": "Rolle in Rocket.Chat". Es sind doppelte Anführungszeichen zu verwenden.
 
 Die nachstehende Abb. verdeutlicht diese Einstellungen:
 
@@ -183,15 +183,19 @@ Auch Klassen und Projekte können hier verwendet werden:
 .. code::
 
   {
-    'role-student': 'schueler',
-    'role-teacher': 'lehrer',
-    'role-globaladministrator': 'admin',
-    'p_nwt': 'nwt'
-    '5a': 'klasse5',
-    '5b': 'klasse5'
+    "role-student": "schueler",
+    "role-teacher": "lehrer",
+    "role-globaladministrator": "admin",
+    "p_nwt": "nwt",
+    "5a": "klasse5a",
+    "5b": "klasse5b"
   }
 
-Die ``User data group map`` muss im JSON-Format angegeben werden, bei Syntaxfehlern funktioniert der Sync nicht mehr. Die Zuordnung erfolgt nach  dem Prinzip "LDAP-Group -im-LDAP-lmn": "Rolle in Rocket.Chat". Es sind einfache Anführungszeichen zu verwenden.
+Die ``User data group map`` muss im JSON-Format angegeben werden, bei Syntaxfehlern funktioniert der Sync nicht mehr. Die Zuordnung erfolgt nach  dem Prinzip "LDAP-Group -> LDAP-lmn": "Rolle in Rocket.Chat". Es sind doppelte Anführungszeichen zu verwenden.
+
+.. hint::
+
+  Die Bezeichnungen für die Klassen müssen so eintragen werden, wie sie im LDAP stehen. Dies kann von der Anzeige in der Schulkonsole abweichen. Steht z.B. in der Schulkonsole „R 5b“, wird im LDAP daraus „r5b“. Dies lässt sich aber mit ldapsearch für Klassen (wie im Wiki beschrieben) herausfinden. Vor dem Import solltest du dir die Struktur in Rocketchat genau überlegen, da "Nacharebiten" mit vielen Einzelschritten verbunden sein kann.
 
 12. Auto Sync LDAP Groups to Channels: JA
 13. Channel Admin: rocket.cat
@@ -201,10 +205,10 @@ Die ``User data group map`` muss im JSON-Format angegeben werden, bei Syntaxfehl
 .. code::
 
    {
-    'role-globaladministrator': 'admintalk',
-    'role-student': [
-      'info',
-      'news'
+    "role-globaladministrator": "admintalk",
+    "role-student": [
+      "info",
+      "news"'
      ]
   }
 
