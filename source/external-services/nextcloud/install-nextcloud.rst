@@ -86,7 +86,7 @@ Erzeuge die Datei nextcloud.nginx.conf.
     }
   }
 
-Diese conf-Datei geht davon aus, dass deine Nextcloud auf localhost:7770 erreichbar sein wird. Den Prot 7770 kannst du natürlich frei wählen. 
+Diese conf-Datei geht davon aus, dass deine Nextcloud auf localhost:7770 erreichbar sein wird. Den Port 7770 kannst du natürlich frei wählen. 
 
 Jetzt musst du noch im Verzeichnis ``/etc/nginx/sites-enabled`` einen Link auf deine ``nextcloud.nginx.conf`` anlegen und nginx neu starten.
 
