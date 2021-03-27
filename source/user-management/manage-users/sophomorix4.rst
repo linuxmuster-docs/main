@@ -2,7 +2,7 @@ Weiterführendes zu Sophomorix4
 ------------------------------
 
 In der aktuellen Version der *linuxmuster.net* wird die Benutzerverwaltung mit Hilfe des Programms *Sophomorix4* durchgeführt. 
-Für alle zuvor beschriebenen Vorgänge zur Benutzerveraltung mit der Schulkonsole stellt sophomorix4 Konsolenbefehle auf dem 
+Für alle zuvor beschriebenen Vorgänge zur Benutzerverwaltung mit der Schulkonsole stellt sophomorix4 Konsolenbefehle auf dem 
 linuxmuster.net Server bereit.
 
 Optional besteht also die Möglichkeit, die Benutzerverwaltung in bestimmten Fällen auch auf der Konsole auf dem Server durchzuführen,
