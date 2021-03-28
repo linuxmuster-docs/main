@@ -28,7 +28,7 @@ Mittels Rechtsklick auf ``sophomorix:school:default-school`` und ``Bearbeiten`` 
    :align: center
    
 .. hint::
-  Sollte die Standard-GPO "sophomorix:school:default-school" nicht vorhanden sein, dann kann diese auf dem Server erzeugt werden durch Eingabe von: ``sophomorix-school --gpo-create default-school``. Diese übernimmt die Zuordnung der Netzlaufwerke (außer dem Home-Laufwerk).
+  Sollte die Standard-GPO "sophomorix:school:default-school" nicht vorhanden sein, dann kann diese auf dem Server erzeugt werden durch Eingabe von: ``sophomorix-school --gpo-create default-school``.
 
 Im Gruppenrichtlinienverwaltungs-Editor können nun Anpassungen der GPO vorgenommen werden:
 
