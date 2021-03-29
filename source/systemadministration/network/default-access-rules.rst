@@ -15,7 +15,9 @@ das Internet bekommen, wenn sie sich ausweisen können
 ("authentication"). Dies geschieht über einen Webproxy, der in der
 Firewall läuft und der wiederum auf den Schulgeräten als Proxy
 eingetragen sein muss.
+
 .. hint::
+
 	Der Proxy muss als FQDN angegeben werden! Z.B. ``firewall.linuxmuster.local``, Port: ``3128``
 
 Single-Sign-On am Proxy
