@@ -18,7 +18,7 @@ eingetragen sein muss.
 
 .. hint::
 
-	Der Proxy muss als FQDN angegeben werden! Z.B. ``firewall.linuxmuster.local``, Port: ``3128``
+	Der Proxy muss als FQDN angegeben werden! Z.B. ``firewall.linuxmuster.lan``, Port: ``3128``
 
 Single-Sign-On am Proxy
 =======================
