@@ -317,14 +317,14 @@ Schuleinstellungen
 
 Allgemeine Informationen, Einstellungen zum Linstenimport, Quotalimits und Druck-Daten-Werte können in der Schuleinstellungen verwaltet werden.
 
-Unter ``Allgemein`` generelle Schuleinstellungen wie Namen oder E-Mail-Domönen für jeweilige Rollen angegeben und änderbar.
+Unter ``Allgemein`` werden generelle Schuleinstellungen wie Namen oder E-Mail-Domänen für jeweilige Rollen angegeben und geändert.
 
 .. figure:: media/31_school-console_school-settings.png
    :align: center
    :alt: WebUI School Settings
 
 Änderungen über Speichern & Prüfen und anschließend Übernehmen anwenden.
-Unter Listenimport können Standawerte festgelegt wrden, die beim Import einer CSV-Datei angewendet werden. Wird ein Haken unter der Fumktion Nachname und Vorname im Benutzernamen umkehren für eine jeweilige Rolle, werden die Benutzernamen zuerst aus dem Vornamen und dann aus Nachnamen generiert. Wie viele Zeichen aus den jeweiligen Namen genommen werden, wird in den unteren Werten Nachname Zeichen und Vornamen Zeichen angegeben. Ältere Sicherungen könne über das Symbol
+Unter Listenimport können Standardwerte festgelegt werden, die beim Import einer CSV-Datei angewendet werden. Wird ein Haken unter der Funktion Nachname und Vorname im Benutzernamen umkehren für eine jeweilige Rolle, werden die Benutzernamen zuerst aus dem Vornamen und dann aus Nachnamen generiert. Wie viele Zeichen aus den jeweiligen Namen genommen werden, wird in den unteren Werten Nachname Zeichen und Vornamen Zeichen angegeben. Ältere Sicherungen könne über das Symbol
 
 .. figure:: media/32_school-console_backup-icon.png
    :align: center
