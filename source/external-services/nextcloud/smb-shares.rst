@@ -23,7 +23,7 @@ Einbindung der Home- und Tauschverzeichnisse
 ============================================
    
 Sollte der Nextloud-Server extern betrieben werden, so muss die OPNsense®-Firewall so konfiguriert werden, dass Anfragen 
-über die SMB-Ports 139 und 445 an den Server weitergeleitet werden. 
+über die SMB-Ports 139 und 445 an den Server weitergeleitet werden. Siehe :ref:`Firewallregeln <nextcloud-firewall-label>`. 
 
 In der Konfigurationsoberfläche ist unter ``Firewall -> NAT -> Portweiterleitung``
 eine entsprechende Regel anzulegen.   
@@ -37,6 +37,10 @@ In den Einstellungen von ``Externer Speicher`` kannst du jetzt, wie oben im Bild
  .. warning::
     Das Share ``/`` ist das Wurzelverzeichnis der Benutzer. Wenn sich ein Benutzer nicht am Schulserver anmelden kann, kann er sich auch nicht an der Nextcloud anmelden. Und das trifft für den Admin der Nextcloud zu!!!
     Für den Share ``/`` müssen also die Gruppen angegeben werden, die Zugriff auf ein Home-Verzeichnis haben sollen. Sonst kann sich der Admin an der Nextcloud nicht mehr anmelden!!!
+    
+.. important::
+   Du solltest das Share Tausch nicht für Schüler freigeben. Die Nextcloud registriert Änderungen nur dann, wenn ein Benutzer seine Dateien ändert oder wenn die Nextcloud selbst teilt. Wenn Schüler oder Schülerinnen an Dateien oder Verzeichnissen Änderungen vornehmen, wird die Desktop-App diese Änderungen bei anderen Benutzern nicht aktualisieren. 
+   Das passiert nicht, wenn du als Lehrer über die Nextcloud diese Tauschverzeichnisse mit den Schülern/Gruppen teilst. Dann arbeitet die Desktop-App einwandfrei. 
 
 .. image:: media/SMB03.png
    :alt: Anmeldedaten
