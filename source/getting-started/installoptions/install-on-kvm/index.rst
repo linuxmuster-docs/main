@@ -87,7 +87,7 @@ Kopieren des ISOs auf den Stick
   .. code-block:: console
 
      # sudo dd if=uubuntu-18.04.5-live-server-amd64.iso | sudo pv -s 749731840 | sudo dd of=/dev/sdX bs=1M && sync
-     [sudo] Passwort für linuxadmin: 
+     [sudo] Passwort für admin: 
      715MiB 0:00:09 [73,1MiB/s] [====================================================================>] 100%
      0+168504 Datensätze ein
      0+168504 Datensätze aus
@@ -107,11 +107,9 @@ Installation des KVM-Hosts
 
 .. tip::
 
-   **Tl;dr** 
-
    * Achte auf die Auswahl der korrekten Netzwerkschnittstelle für
      einen Internetzugang
-   * Erstelle einen Nutzer ``linuxadmin`` mit einem sicheren
+   * Erstelle einen Nutzer ``admin`` mit einem sicheren
      Passwort
    * Richte ein LVM auf deiner Festplatte/RAID mit ``25GB`` für das
      Betriebssystem des KVM-Hosts ein
@@ -131,7 +129,7 @@ Sollte die automatische Netzwerkkonfiguration per DHCP nicht erfolgreich sein, k
 
 Rechnername, Benutzername, Passwort, Zeitzone
 
-Es wird empfohlen wie im Beispiel ``host`` als Rechnernamen zu verwenden. Der Benutzername wird im Beispiel ``linuxadmin`` genannt und dazu ein sicheres Passwort vergeben. Die Zeitzone sollte bereits richtig erkannt werden.
+Es wird empfohlen wie im Beispiel ``host`` als Rechnernamen zu verwenden. Der Benutzername wird im Beispiel ``admin`` genannt und dazu ein sicheres Passwort vergeben. Die Zeitzone sollte bereits richtig erkannt werden.
 
 Festplatten partitionieren
 
@@ -166,7 +164,7 @@ Am Ende der Installation musst du noch die Installation von GRUB in den Bootbere
 Update und Softwareinstallation des KVM-Hosts
 ---------------------------------------------
 
-Nach einem Reboot loggst du dich als ``linuxadmin`` ein und führst zunächst ein Update aus. Das ist (Stand: Dez. 2018) notwendig, damit die spätere Konfiguration funktioniert. Der erste Befehl zeigt Dir, ob und welche IP-Adresse du auf einem Netzwerk hast. Im folgenden Beispiel wird als externe IP-Adresse immer die IP ``192.168.1.2/16`` verwendet, die per DHCP von einem Router zugeordnet wurde.
+Nach einem Reboot loggst du dich als ``admin`` ein und führst zunächst ein Update aus. Das ist (Stand: Dez. 2018) notwendig, damit die spätere Konfiguration funktioniert. Der erste Befehl zeigt Dir, ob und welche IP-Adresse du auf einem Netzwerk hast. Im folgenden Beispiel wird als externe IP-Adresse immer die IP ``192.168.1.2/16`` verwendet, die per DHCP von einem Router zugeordnet wurde.
 
 .. code-block:: console
 
@@ -228,6 +226,8 @@ Nach Installation der KVM-Software (``virbr0*`` wurden automatisch hinzugefügt)
 
 In diesem Schritt wird die direkte Verbindung des KVM-Hosts mit dem Internet gekappt und eine virtuelle Verkabelung über so genannte `bridges` erstellt.  Zunächst werden die Brücken ``br-red`` (Internetseite) und ``br-server`` (Schulnetzseite) definiert.  Zuletzt kann der KVM-Host auch über die Brücke ``br-red`` eine IP-Adresse ins Internet bekommen, genau wie er über die Brücke ``br-server`` auch im pädagogischen Netzwerk auftauchen kann. Letzteres ist nicht zu empfehlen.
 
+.. todo:: Das ist so keine Schritt für Schritt-Anleitung, sondern Mist. Anleitung muss schnell zum Ergebnis wie gewünscht führen. Also IP-Adressen anpassen an die zuvor genannten Vorgaben.
+
 .. hint::
 
    Die Netzwerkkonfiguration wird seit Ubuntu 18.04 standardmäßig über netplan realisiert. Wer seinen KVM-Host von früheren Ubuntu-Versionen updatet, bei dem wird nicht automatisch `netplan` installiert, sondern `ifupdown` wird mit der Konfigurationsdatei ``/etc/network/interfaces`` beibehalten.
@@ -260,16 +260,16 @@ Die Netzwerkkonfiguration enthält standardmäßig die Schnittstelle, die bei de
      ethernets:
        enp0s8:
          dhcp4: no
-         enp0s17:
+       enp0s17:
          dhcp4: no
-       bridges:
-         br-red:
-           interfaces: [enp0s17]
-           dhcp4: no
-           addresses: [ ]
-         br-server:
-           interfaces: [enp0s8]
-           addresses: [ ]
+     bridges:
+       br-red:
+         interfaces: [enp0s17]
+         dhcp4: no
+         addresses: [ ]
+       br-server:
+         interfaces: [enp0s8]
+         addresses: [ ]
 
 Diese Netzwerkkonfiguration kann nun ausprobiert und angewandt werden.
 
@@ -278,6 +278,8 @@ Diese Netzwerkkonfiguration kann nun ausprobiert und angewandt werden.
    $ sudo netplan try
 
 .. hint:: Potenzielle Fehlerquellen sind nicht konsequent eingerückte Zeilen oder TABs.
+
+.. error:: Wie beschrieben ist die Einrichtung nun richtig. Führt allerdings zum Verlust der Verbindung.
 
 .. code::
 
