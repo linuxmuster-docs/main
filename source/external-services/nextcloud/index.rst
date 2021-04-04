@@ -14,7 +14,7 @@ Vorüberlegungen zum Standort des Nextcloud-Services
 .. image:: media/index-01.png
    :align: center
 
-In der Grafik ist der Nextcloud-Service auf dem Dockerhost der Schule. 
+In der Grafik ist der Nextcloud-Service auf dem Dockerhost der Schule. Da der Dockerhost Web-Services wie das Medien- und Raumbuchungssystem und die Nextcloud zur Verfügung stellt, ist er ein völlig eigenständiger Server, der außerhalb der linuxmuster.net steht. Er sollte also direkt an den Router angeschlossen sein und eine eigene IP-Adresse haben. 
 
 Greift ein Gerät in der Schule, z.B. ein Tablett oder ein Handy, über die Nextcloud auf Daten auf dem Schulserver zu, müssen die Daten nicht über das Internet. Hier ist der Datenzugriff schnell.
 
@@ -39,6 +39,7 @@ Inhalt:
 .. toctree::
    :maxdepth: 2
 
+   nc-firewall
    install-nextcloud
    authentication
    smb-shares

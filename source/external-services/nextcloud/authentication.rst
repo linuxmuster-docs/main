@@ -15,7 +15,7 @@ Einstellungen: Server
 =====================
 
 Sollte der Nextloud-Server extern betrieben werden, so muss die OPNsense®-Firewall so konfiguriert werden, dass Anfragen 
-über den ``LDAPs-Port 636`` an den Server weitergeleitet werden. 
+über den ``LDAPs-Port 636`` an den Server weitergeleitet werden. Siehe :ref:`Firewallregeln <nextcloud-firewall-label>`. 
 
 In der Konfigurationsoberfläche ist unter ``Firewall -> NAT -> Portweiterleitung``
 eine entsprechende Regel anzulegen.
