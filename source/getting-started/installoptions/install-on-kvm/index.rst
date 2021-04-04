@@ -61,7 +61,9 @@ Erstellen eines USB-Sticks für den KVM-Host
 
 Download für den KVM-Host
 
-Es wird für die Installation auf dem KVM-Host ein Ubuntu Server 64bit in der Version 18.04 LTS verwendet. Es wird das alternative Installationsimage für DVD/USB-Stick verwendet, welches `hier unter "Server install image" <https://releases.ubuntu.com/18.04.5/`_ heruntergeladen werden kann. 
+.. _heruntergeladen: https://releases.ubuntu.com/18.04.5/
+
+Es wird für die Installation auf dem KVM-Host ein Ubuntu Server 64bit in der Version 18.04 LTS verwendet. Es wird das alternative Installationsimage für DVD/USB-Stick verwendet, welches hier unter "Server install image"  heruntergeladen_ werden kann. 
 
 .. hint:: Benötigte Programme für die Herstellung des USB-Sticks:
    
@@ -116,6 +118,8 @@ Installation des KVM-Hosts
    * Wähle das Pakets *OpenSSH server* 
    * Nach Reboot, Update des Systems und Installation von ``qemu-kvm``
      und ``libvirt-bin``
+
+.. todo:: Screenshots der Installation sind nicht mehr up-to-date 
 
 Netzwerkeinrichtung
 
