@@ -15,14 +15,8 @@ Erstkonfiguration an der Server-Konsole
           ...
           Nicht benötigte Template entfernen
 
-...
-
 +--------------------------------------------------------------------+-------------------------------------------+
-| Weiter mit der Benutzer-Aufnahme                                   | |follow_me2user-creation|                 |
-+--------------------------------------------------------------------+-------------------------------------------+
-| Weiter mit der Migration von einer                                 |                                           |
-|                                                                    | |follow_me2migration_b|                   |
-| linuxmuster.net Version 6.2                                        |                                           |
+| Weiter mit Abschluss der Installation                              | |follow_me2finish-install|                |
 +--------------------------------------------------------------------+-------------------------------------------+
 
 Template für den Inhalt einer noch leeren Seite

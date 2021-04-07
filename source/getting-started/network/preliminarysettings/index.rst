@@ -8,6 +8,11 @@ Netzbereich anpassen
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
+.. todo::
+
+   Prüfen, was mit diesem Abschnitt passieren soll.
+
+
 Sollte es erforderlich sein, dass der Netzbereich von den Vorgaben im Setup (``10.0.0.0/16``) abweicht, dann 
 sind nachstehende Schritte zur Anpassung vor Aufruf des Setups mit der WebUI oder des Setups auf der Konsole 
 auf dem Server auszuführen.

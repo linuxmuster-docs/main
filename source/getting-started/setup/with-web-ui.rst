@@ -229,5 +229,5 @@ Passwort an.
 Herzlichen Glückwunsch. Die Erstkonfiguration ist nun abgeschlossen. Nun musst du dich entscheiden:
 
 +--------------------------------------------------------------------+-------------------------------------------+
-| Weiter mit der Benutzer-Aufnahme                                   | |follow_me2user-creation|                 |
+| Weiter mit Abschluss der Installation                              | |follow_me2finish-install|                |
 +--------------------------------------------------------------------+-------------------------------------------+
