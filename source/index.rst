@@ -71,9 +71,9 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   getting-started/installoptions/index
   getting-started/harddisk/index
   getting-started/network/index
-  getting-started/setup/index   
-  getting-started/migration/index
+  getting-started/setup/index
   getting-started/finish-install
+  getting-started/migration/index
 
 .. toctree::
   :maxdepth: 2
