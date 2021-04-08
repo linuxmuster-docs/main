@@ -89,6 +89,7 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   systemadministration/gpo/gpo
   systemadministration/sw-remote-gpo/sw-remote-gpo
   systemadministration/openvpn/index
+  systemadministration/segmentation/index
 
 
 .. toctree::

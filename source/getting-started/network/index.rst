@@ -6,57 +6,94 @@
 Anpassung des Netzwerkbereiches
 ===============================
 
-.. sectionauthor:: `@Name des Autors in ask <https://ask.linuxmuster.net/u/Dein_Name>`_
-
-.. hint:: Verlinkung der Unterabschnitte:
-
-   * Für die Migration
-
-   * Netzbereich abweichend von 10.0.0.0/16 ohne Segmentierung
-
-   * Netzbereich abweichend von 10.0.0.0/16 mit Segementierung 
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
 
-.. todo:: Inhalt ergänzen
-          ...
+Voreingestellten Netzbereich verwenden
+--------------------------------------
 
-Default-Netzbereich verwenden
------------------------------
+Allgemeine Hinweise
+^^^^^^^^^^^^^^^^^^^
 
-...
+Die linuxmuster.net-Lösung kann mit unterschiedlichen IP-Bereichen arbeiten. Standardmäßig wird das interne Netz aus dem privaten IPv4-Bereich 10.0.x.x mit der 16-bit Netzmaske 255.255.0.0 eingerichtet. Die virtuellen Appliances sind mit diesem Netz voreingestellt.
+
+Jedoch kann man sowohl die bisher in früheren Versionen von linuxmuster.net verwendeten Netze (10.16.0.0/12 oder 10.32.0.0/12 usw.) weiterverwenden.
+
+Sollten es zwingende Gründe erfordern, sind auch komplett andere private Adressbereiche realisierbar.
+
+Bei einer Migration wird empfohlen, den früheren IP-Bereich zu behalten.
+
+Standard IP-Adressen
+^^^^^^^^^^^^^^^^^^^^
+
+Hast du die VMs imporiert und nimmst keinerlei Änderungen vor, dann weisen diese folgende voreingestellten IP-Adressen auf.
+
+========== ===========
+Server     IP-Bereich 
+           10.0.0.0/16
+========== ===========
+OPNsense®  10.0.0.254 
+Server     10.0.0.1   
+Opsi       10.0.0.2   
+Dockerhost 10.0.0.3   
+XOA (*)    10.0.0.4   
+Admin-PC   10.0.0.10  
+========== ===========
+
+.. hint::
+
+   (*) Die XenOrchestra-Appliance (XOA) wird nur benötigt, wenn eine Virtualisierung mit XCP-ng erfolgen soll. Mithilfe von XenOrchestra kann die Virtualisierungsumgebung XCP-ng web-basiert verwaltet werden werden.
+
+Proxmox - Besonderheiten
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Nach der beschriebenen Installation und Einrichtung des Proxmox-Host und dem Import der VMs muss der Proxmox - Host noch in ein anderes Netz gebracht werden, damit dieser nicht im externen Netz erreichbar ist.
+
+Die erforderlichen Schritte sind in nachstehend verlinktem Kapitel beschrieben.
 
 +--------------------------------------------------------------------+-------------------------------------------+
 | Absicherung der Proxmox UI                                         | |follow_me2proxmox-ui-protection_a|       |
 +--------------------------------------------------------------------+-------------------------------------------+
 
+.. toctree::
+  :maxdepth: 3
+  :caption: Voreingestellten Netzbereich verwenden
+  :hidden:
+
+  proxmox-ui-protection
 
 Netzbereich-Anpassung
 ---------------------
 
-Ablauf
-------
+Die Umstellung auf einen anderen Netzbereich als dem zuvor dargestellten Standard-Netzbereich ist immer vor Aufruf des Erst-Setups druchzuführen. Dazu sind einige Schritte in der nachstehend dargestellten Reihenfolge durchzuführen.
 
-1. VMs importieren
-2. VMs starten
-3. IPs der OPNsense® auf die bisher verwendeten IPs/Netze anpassen
-4. VMs (server, opsi,docker) mit netplan die IPs so ändern, dass diese die korrekte IP im internen (grünen) Netz haben wie bisher
-5. VMs vor dem Setup auf die neue Netzstruktur vorbereiten (linuxmuster-prepare)
-6. Erreichbarkeit der VMs im internen Netz testen.
-7. Update der VMs
-8. Erst-Setup durchführen
+Ablauf
+^^^^^^
+
+Voraussetzung: Die imporierten VMs wurden gestartet
+
+  1. IPs der OPNsense® auf die bisher verwendeten bzw. die gewünschten IPs/Netze anpassen
+  2. VMs (server, opsi, docker, ggf. XOA): Mit ``netplan`` die IPs so ändern, dass diese die korrekte IP im internen (grünen) Netz nach neuer Struktur oder nach früherer Struktur (Migration) haben.
+  3. VMs vor dem Erst-Setup auf die neue Netzstruktur vorbereiten (linuxmuster-prepare)
+  4. Erreichbarkeit der VMs im internen Netz testen.
+  5. Update der VMs
+  6. Erst-Setup durchführen
 
 IPs OPNsense® anpassen
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
-Die IP der externen Schnittstelle (WAN) der OPNsense® ist ggf. anzupassen. Diese ist in der Erstauslieferung so konfiguriert, das diese eine IP via DHCP erhalten würde. Sollte die OPNsense® Firewall hinter einem Router arbeiten, so kann eine Anpassung für eine statische IP erforderlich sein.
+Die IP der externen Schnittstelle (WAN) der OPNsense® ist ggf. anzupassen. Diese ist in der Erstauslieferung so konfiguriert, das diese eine IP via DHCP erhalten würde. Sollte die OPNsense® Firewall hinter einem Router arbeiten, so sollte eine Anpassung erfolgen und eine statische IP eingetragen werden.
 
-Hierzu rufst Du auf der Konsole in der OPNsense®, nachdem du dich als `root` angemeldet hast, den Punkt `2) Set interface IP address` auf. Solle eine DHCP-Konfiguration in deinem Netz hier nicht möglich sein,  wählst du zunächst die WAN-Schnittstelle aus und trägst die IP Adresse aus deinem lokalen Netz mit korrekter Subnetzmaske, Gateway und DNS ein.
+Hierzu rufst du auf der Konsole in der OPNsense®, nachdem du dich als ``root`` angemeldet hast, den Punkt ``2) Set interface IP address`` auf. Wähle zunächst die WAN-Schnittstelle aus und träge die IP-Adresse aus deinem lokalen Netz mit korrekter Subnetzmaske, Gateway und DNS ein.
 
-Danach wählst du die `LAN-Schnittstelle` aus und konfigurierst die bisherige IP, die im IPFire bereits genutzt wurde.
-Hast du z.B. ein Subnetting für das Server-Netz in der v6.2 genutzt, das im "grünen" Netz den Bereich 10.16.1.0/24 vorsieht, 
+Danach wählst du die ``LAN-Schnittstelle`` aus und konfigurierst die neue IP. Bei einer Migration ist dies die IP, die im IPFire bereits genutzt wurde.
+Hast du z.B. ein Subnetting für das Server-Netz in der v6.2 genutzt, das im "grünen" Netz den Bereich 10.16.1.0/24 vorsieht,
 so vergibst du hier auf der LAN-Schnittstelle der OPNsense® die IP 10.16.1.254/24 (Subnetmask 255.255.255.0 = 24 Bit).
 
 Bei vorhandener Subnettierung dürfte für o.g. bsp. der L3-Switch im Server - VLAN die IP 10.16.1.253 haben. Zudem ist darauf zu achten, dass auf der Virtualisierungsumgebung die korrekten Bridges für das jeweilige VLAN den Schnittstellen der VMs korrekt zugeordnet wurden.
+
+Wählst du einen neuen IP-Bereich, so weise der LAN-Schnittstelle die letzte nutzbare IP des gewünschten Netzes zu.
+Sollte du z.B. für das interne / grüne Netz mit 10.1.1.0/24 verwenden, so konfigurierst du hier die IP: 10.1.1.254/24
 
 VMs vorbereiten
 ^^^^^^^^^^^^^^^
@@ -64,10 +101,11 @@ VMs vorbereiten
 netplan
 """""""
 
-Die VMs server, opsi und docker müssen nun `vor dem Erst-Setup` vorbereitet werden.
+Die VMs server, opsi, docker und ggf. xoa müssen nun ``vor dem Erst-Setup`` vorbereitet werden.
 
-In der Datei `/etc/netplan/01-meine-netzconfig.yaml` - Name bitte auf dein System anpassen - sind die Netzwerkeinstellungen 
-wie folgt zu ändern (**Hinweis:** nachstehende Angaben greifen o.g. Beispiel hier nur für die Server-VM auf):
+In der Datei ``/etc/netplan/01-meine-netzconfig.yaml`` - Name bitte auf dein System anpassen - sind die Netzwerkeinstellungen 
+wie folgt zu ändern 
+(**Hinweis:** nachstehende Angaben greifen o.g. Beispiel hier nur für die Server-VM auf):
 
 .. code::
 
@@ -90,19 +128,23 @@ Danach speicherst du die Änderungen und wendest diese mit folgendem Befehl an u
   netplan apply
   ping 10.16.1.254
 
-Erhälst du erfolgreich Pakete zurück, so kanst du die Firewall erreichen. Diese Schritte wiederholst du dann mit den VMs opsi und docker. Hierbei gibst du dann die jeweils korrekten IPs (abweichend zu o.g. Beispiel) an.
+Erhälst du erfolgreich Pakete zurück, so kannst du die Firewall erreichen. Diese Schritte wiederholst du dann mit den VMs opsi, docker und ggf. xoa. Hierbei gibst du dann die jeweils korrekten IPs (abweichend zu o.g. Beispiel) an.
 
-Können alle VMs im internen Netz sich untereinander via ping erreichen, bereitest du die VMs mit linuxmuster-prepare vor.
+Können alle VMs im internen Netz sich untereinander via ping erreichen, bereitest du die VMs mit ``linuxmuster-prepare`` vor.
 
 linuxmuster-prepare
 """""""""""""""""""
 
-Jetzt meldest du dich auf der Eingabekonsole an den VMs server, opsi und docker an.
+.. hint::
 
-Du bereitest diese VMs für der Erstsetup vor, indem du die korrekten Angaben zur gewünschten IP der VM und der Firewall mit linuxmuster-prepare angibst.
+   Detailliertere Informationen zu linuxmuster-prepare sind hier dokumentiert :ref:`modify-net-label`
 
-Gehen wir davon aus, dass Du für die Server VM im vorangegangenen Schritt die IP `10.16.1.1/24` und für die 
-OPNsense® als Firewall die IP `10.16.1.254/24` zugeordnet hast. Zudem nehmen wir an, dass Deine zukunftige Schuldomäne den Namen `schuldomaene` erhalten wird und deine Domain `meineschule`.`de` lautet.
+Jetzt meldest du dich auf der Eingabekonsole an den VMs server, opsi, docker und ggf. xoa an.
+
+Du bereitest diese VMs für das Erst-Setup vor, indem du die korrekten Angaben zur gewünschten IP der VM und der Firewall mit linuxmuster-prepare angibst.
+
+Gehen wir davon aus, dass du für die Server-VM im vorangegangenen Schritt die IP ``10.16.1.1/24`` und für die 
+OPNsense® als Firewall die IP ``10.16.1.254/24`` zugeordnet hast. Zudem nehmen wir an, dass Deine zukunftige Schuldomäne den Namen ``schuldomaene`` erhalten wird und deine Domain ``meineschule``.``de`` lautet.
 
 Mit diesen Vorgaben bereitest du die Server-VM nun mit folgendem Befehl auf das Setup vor:
 
@@ -110,8 +152,8 @@ Mit diesen Vorgaben bereitest du die Server-VM nun mit folgendem Befehl auf das 
 
    linuxmuster-prepare -s -u -d schuldomaene.meineschule.de -n 10.16.1.1/24 -f 10.16.1.254
 
-Gleiches Vorgehen wählst du zur Vorbereitung der VMs opsi und docker, aber mit abweichender IP für die Option `-n`.
-Starte nach den Anpassungen jede der VMs neu mit 'reboot'.
+Gleiches Vorgehen wählst du zur Vorbereitung der VMs opsi, docker und ggf. xoa, aber mit abweichender IP für die Option ``-n``.
+Starte nach den Anpassungen jede der VMs neu mit ``reboot``.
 
 Tests & Setup
 """""""""""""
@@ -124,6 +166,7 @@ Teste nun die Erreichbarkeit der VMs im internen Netz mit folgenden Befehlen (an
    ping 10.16.1.1
    ping 10.16.1.2
    ping 10.16.1.3
+   ping 10.16.1.4
 
 Funktioniert dies von allen VMs aus korrekt, so kann jetzt die Aktualisierung aller VMs erfolgen.
 
@@ -136,83 +179,27 @@ Aktualisiere jede VM mit folgendem Befehl:
 
 Starte danach alle VMs neu.
 
-Nach dem Neustart meldest du dich an der Server-VM als Benutzer `root` an und rufst das Setup mit folgendem 
-Befehl auf:
+Nach dem Neustart meldest du dich an der Server-VM als Benutzer ``root`` an und rufst das Setup auf:
 
 +--------------------------------------------------------------------+-------------------------------------------+
 | linuxmuster-setup                                                  | |follow_me2setup|                         |
 +--------------------------------------------------------------------+-------------------------------------------+
 
-Nach erfolgreichem Setup durchläuft du die nachstehend dargestellten schritte zur Migration.
 
-
-Migration
----------
-
-...
-
-+--------------------------------------------------------------------+-------------------------------------------+
-| Migration                                                          | |follow_me2network-migration|             |
-+--------------------------------------------------------------------+-------------------------------------------+
-
-
-
-Template für den Inhalt einer noch leeren Seite
------------------------------------------------
-
-Sicherlich ist der Inhalt dieser Seite nicht das was du gesucht und erwartest hast. Dieser Part der Dokumentation ist leider noch nicht mit Informationen gefüllt.
-
-Eventuell kannst du uns helfen dieses zu ändern. Es gibt verschiedene Möglichkeiten uns zu unterstützen:
-
-* Du weißt, was hier stehen müsste und könntest uns Text und/oder Screenshots liefern.
-
-    Schicke deinen unformatierten Text oder die Bilder an dokumentation(et)linuxmuster.net oder einfach in unser Forum `<https://ask.linuxmuster.net/c/weiterentwicklung/doku>`_.
-
-* Du hast schon Erfahrung mit der vereinfachten Auszeichnugssprache RST (reStructuredText) oder willst sie erlernen.
-
-    Unsere :ref:`guidelines-label` zeigen dir welche Absprachen wir diesbezüglich getroffen haben. Schicke uns deinen Inhalt für diese Seite an eine der zuvor genannten Adressen.
-
-* Hast du eventuell schon einen git-hub-Account oder wolltest dich schon immer mit git befassen.
- 
-    Wir nutzen für die Organisation unserer Dokumentation git. Aus dem in github gehosteten RST-Files werden automatisch via ReadTheDocs (Sqhinx) diese Seiten hier erzeugt. 
- 
-    So hättest du direkt die Möglichkeit unsere Dokumentation zu verbessern. Dafür gibt es den Button der sich immer oben rechts auf den Seiten befindet: **Edit on GitHub**. Eine Beschreibung findest du hier: :ref:`edit-on-github-label`
-
-* Du willst git auf deinem Rechner einsetzen um dort lokal arbeiten zu können.
-
-    Auch dafür stehen wir dir hilfreich zur Seite, wie das geht haben wir hier :ref:`new-label` beschrieben.
-  
-Also wir würden uns freuen, wenn du uns unterstützen würdest. 
-
-Wie immer bei linuxmuster.net niemand ist bei uns allein.
-Für Fragen einfach einen Post an die im ersten Punkt genannten Adressen. (E-Mail oder Forum) 
-
-Muster für Tabelle:
-
-====== ===== ===== =======
-\          XOR
---------------------------
-\      Input       Output
------- ----------- -------
-Lfd-Nr A     B     A xor B     
-====== ===== ===== =======
-1      0     0     0
-2      0     1     1
-3      1     0     1
-4      1     1     0
-====== ===== ===== =======
-
-Muster für Verlinkung:
-
+Willst Du eine Migration durchführen, durchläufst du die nachstehend dargestellten Schritte nach der erfolgreichen Durchführung des Setups.
 
 .. toctree::
-  :maxdepth: 1
-  :caption: Netzwerk Anpassungen
+  :maxdepth: 3
+  :caption: Netzbereich anpassen
   :hidden:
-  
-  migration/index
+
   preliminarysettings/index
-  networksegmentation/index
-  segmentation/index
-  proxmox-ui-protection
-  network-test
+
+
+Hinweise zur Migration
+""""""""""""""""""""""
+
+.. hint::
+
+   Möchtest du eine Migration durchführen, so must du nach Anpassung des Netzbereichs zunächst das Erst-Setup durchführen.
+
