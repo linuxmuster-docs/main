@@ -8,10 +8,6 @@ Netzbereich anpassen
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
-.. todo::
-
-   Prüfen, was mit diesem Abschnitt passieren soll.
-
 
 Sollte es erforderlich sein, dass der Netzbereich von den Vorgaben im Setup (``10.0.0.0/16``) abweicht, dann 
 sind nachstehende Schritte zur Anpassung vor Aufruf des Setups mit der WebUI oder des Setups auf der Konsole 
@@ -123,7 +119,7 @@ Festplattengröße muss daher mindestens 70G betragen.):
 +---------------+----------------------------+---------------------------+-------+
 |linbo          | /dev/vg_srv/linbo          | /srv/linbo                |  40G  |
 +---------------+----------------------------+---------------------------+-------+
-|global 	| /dev/vg_srv/global         | /srv/samba/global         |  10G  |
+|global         | /dev/vg_srv/global         | /srv/samba/global         |  10G  |
 +---------------+----------------------------+---------------------------+-------+
 |default-school | /dev/vg_srv/default-school | /srv/samba/default-school |  40G  |
 +---------------+----------------------------+---------------------------+-------+

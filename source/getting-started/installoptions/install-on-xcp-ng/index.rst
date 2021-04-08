@@ -333,7 +333,7 @@ XCP-ng wird nach einigen Sekunden automatisch gestartet.
    :alt: Schritt 21 der Installation des XCP-ng Servers
 
 Nach erfolgreichem Start bootet XCP-ng in folgende Konsole des Hypervisors, 
-in der dann der Hinweis auf die installierte Version 8.1 erscheinen sollte 
+in der dann der Hinweis auf die installierte Version 8.2 erscheinen sollte 
 (im Bild noch 7.6):
 
 .. figure:: media/23_xcp-ng-konsole_hypervisor.png
@@ -344,8 +344,7 @@ in der dann der Hinweis auf die installierte Version 8.1 erscheinen sollte
 XCP-ng Einrichtung
 ------------------
 
-Für die Ersteinrichtung deines XCP-ng-Hosts must du auf deinem Admin-PC zunächst das Windows-Programm ``XCP-ng Center`` 
-herunterladen und installieren. Hiermit kannst du die gesamte Virtualisierungsumgebung administrieren 
+Für die Ersteinrichtung deines XCP-ng-Hosts must du auf deinem Admin-PC zunächst das Windows-Programm ``XCP-ng Center`` herunterladen und installieren. Hiermit kannst du die gesamte Virtualisierungsumgebung administrieren 
 und insbesondere die vorkonfigurierten VMs einfach importieren. 
 
 XCP-ng Center installieren
@@ -366,7 +365,7 @@ Bestätige die Rückfrage mit ``Ja``
 
 Rufe nach erfolgreicher Installation das Programm ``XCP-ng Center`` auf.
 
-Wähle hier den Menüpunkt ``Add New Server`` und gebe Sie bei der Installation
+Wähle hier den Menüpunkt ``Add New Server`` und gebe die bei der Installation
 vergebene IP-Adresse des XCP-Hosts sowie die Benutzerdaten an.
 
 .. figure:: media/27_xcp-ng-admin_add_new_server.png
@@ -403,7 +402,7 @@ aus und ändere die Namen auf ``BLUE`` und ``RED``. In der Abb. ist NIC1 dem vSw
 
 
 VMs importieren
-^^^^^^^^^^^^^^^
+---------------
 
 Nachdem das Netzwerk korrekt eingerichtet wurde, können nun die VMs der linuxmuster.net 
 importiert werden.
@@ -529,7 +528,7 @@ Xen Orchestra Appliance (XOA)
 Xen Orchestra Appliance (XOA_) bietet die Möglichkeit, die Virtualisierungsumgebung XCP-ng webbasiert 
 und plattformunabhängig zu administrieren. Die bereitgestellten Funktionen entsprechen denen des 
 Programms XCP-ng Center für Windows und gehen hinsichtlich der Backups darüber hinaus. 
-Es können via Borwserzugriff VMs importiert, exportiert, neue VMs erstellt und verschoben werden. 
+Es können via Browserzugriff VMs importiert, exportiert, neue VMs erstellt und verschoben werden. 
 Zudem lassen sich so plattformunabhängig verschiedene Arten von Backups auf unterschiedlichen 
 Datenträgern erstellen und Zeitpläne zur automatisierten Erstellung der Backups definieren und aktivieren. 
 
@@ -561,8 +560,7 @@ Anpassung der VM
 
 Einige Einstellungen der vorkonfigurierten VM sind nach dem Import auf die eigene Virtualisierungsumgebung anzupassen. Öffne hierzu einen Webbrowser und öffne die Seite 
 http://10.0.0.4 oder https://10.0.0.4. Der PC, auf dem der Browser geöffnet wird, muss sich im Netz 10.0.0.0/16 (grünes Netz - internes LAN der linuxmuster.net) befinden,
-damit eine Verbindung möglich ist. Wählst du den verschlüsselten Zugriff, so bestätige die Zertifikatswarnung, da ein selbst erstelltes Zertifikat für XOA ertsellt und 
-konfiguriert wurde.
+damit eine Verbindung möglich ist. Wählst du den verschlüsselten Zugriff, so bestätige die Zertifikatswarnung, da ein selbst erstelltes Zertifikat für XOA erstellt und konfiguriert wurde.
 
 Es erscheint folgende Anmeldemaske:
  
@@ -652,11 +650,11 @@ Weitere Hinweise huerzu findest du unter ``/root/README``.
    Für die Rücksicherung der Konfigurationsdatei findest du unter ``root/restore-xo-config.sh`` ein Skript, das du als Benutzer ``root`` ausführen must. Die angepasste 
    Konfigurationsdatei wird so an den korrekten Ort zurückgeschrieben und danach wir der xo-server neu gestartet.
 
-Backups: Backup NG
-^^^^^^^^^^^^^^^^^^
+Backups: Backup
+^^^^^^^^^^^^^^^
 
-Um mithilfe von XOA Backups zu definieren, wählst du in der GUI der XOA-VM links im Menü den Eintrag ``Backup NG``. Dies ist der Eintrag, um Backups für XCP-ng zu erstellen.
-Der Menüeintrag ``Backup`` existiert aufgrund der Abwärtskompatibilität zu XenServer - Installationen.
+Um mithilfe von XOA Backups zu definieren, wählst du in der GUI der XOA-VM links im Menü den Eintrag ``Backup (NG)``. Dies ist der Eintrag, um Backups für XCP-ng zu erstellen.
+Der Menüeintrag ``Backup`` existiert aufgrund der Abwärtskompatibilität zu XenServer - Installationen. In der aktuellsten XOA gibt es nur noch den Eintrag ``Backup``.
 
 Grundlegende Erläuterungen zu den verschiedenen Backup-Möglichkeiten_ mit XOA findest du im Handbuch zu XOA. Hier gibt es ebenfalls Einführungsvideos.
 
@@ -676,7 +674,7 @@ Aktualisierung des XCP-ng-Hosts
 Nachdem du o.g. Installationsschritte sowie den Import der VMs erfolgreich ausgeführt hast, kann der XCP-ng Host
 über die Firewall eine Internet-Verbindung aufbauen.
 Um den XCP-ng Host zu aktualisieren, benötigt der Hypervisor eine funktionierende 
-Internet-Verbindung. Dies sollte nunmehr der Fall sein.
+Internet-Verbindung. Dies sollte nunmehr der Fall sein. Hierzu muss die OPNsense® - VM gestartet sein und Internet-Zugriff haben. Die XOA-VM muss wiederum Zugriff auf die interne Schnittstelle der OPNsense®  haben - grünes Netz / internes Netz.
 
 Wähle in dem Startbildschirm des XCP-ng Hosts den Menüpunt ``Local Command Shell``
 und drücke ``Enter``. Gebe als Benutzer ``root`` an und das Passwort das du 
@@ -689,7 +687,7 @@ Danach teste zuerst, ob die Verbindung zum Internet funktioniert:
    ping 8.8.8.8
    ping www.linuxmuster.net
 
-Erhälst Du hierauf erfolgreich Antworten, so funktioniert die Verbindung vom XCP-ng Host zum Internet sowie die Namensauflösung.
+Erhälst du hierauf erfolgreich Antworten, so funktioniert die Verbindung vom XCP-ng Host zum Internet sowie die Namensauflösung.
 
 Gebe nun auf der Konsole den Befehl 
 
@@ -705,12 +703,36 @@ angezeigt. Die Aktualisierung ist mit ``y`` zu starten.
    :align: center
    :alt: Schritt 23 der Installation des XCP-ng Servers
 
-Danach ist Dein XCP-ng Host auf dem aktuellen Stand.
+Danach ist dein XCP-ng Host auf dem aktuellen Stand.
+
+
+Anpassung der VM-Einstellungen vor dem ersten Starten
+=====================================================
+
+Die VMs können nun vor dem Start recht einfach auf die eigenen Bedürfnisse und Anforderungen angepasst werden. So dürften z. B. die Größen für die Festplatten für größere Schulen zu klein sein. Zudem sind die Netzwerkeinstellungen zu prüfen und gegebenenfalls zu berichtigen.
+
+Diese Anpassungen können mithilfe von XOA oder mit XCPCenter recht einfach vorgenommen werden. Für nachstehende Änderungen müssen die VMs heruntergefahren sein, so wie dies direkt nach dem Import der Fall ist.
+
+VM HDD anpassen
+---------------
+
+Um die Größe der Festplatten der importierten VMs anzupassen sind mehrere Schritte erforderlich.
+Nachstehender Link führt dich zur Anpassung der HDD Größe der VMs.
 
 +--------------------------------------------------------------------+-------------------------------------------+
-| Weiter geht es mit dem Setup                                       | |follow_me2setup|                         |
+| Vorbereiten der Festplatten-Anpassung                              | |follow_me2hd-resize|                     |
 +--------------------------------------------------------------------+-------------------------------------------+
 
+Solltest du mit den vorgegebenen Festplattengrößen weitermachen wollen, zum Beispiel weil du eine Probeinstallation vornimmst, dann kannst du die Anpassung der Festplattengröße überspringen
+
+Weitere Konfiguration
+---------------------
+
+Rufe nun das nächste Kapitel mit nachstehendem Link auf:
+
++--------------------------------------------------------------------+-------------------------------------------+
+| Weiter mit der Netzwerk-Anpassung                                  | |follow_me2network_b|                     |
++--------------------------------------------------------------------+-------------------------------------------+
 
 
 
