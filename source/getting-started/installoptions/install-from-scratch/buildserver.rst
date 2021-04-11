@@ -32,6 +32,7 @@ Wähle das Tastaturlayout Deutsch und bestätige dies mit ``Erledigt``.
 .. hint:: Das Tastaturlayout wirkt sich während der Installation noch nicht aus! 
 
 Konfiguriere danach Deine Netzwerkkarte.
+
 .. figure:: media/server12.png
 
 In der Voreinstellung ist die Netzwerkkarte auf DHCP eingestellt. Das klappt natürlich nicht, da der DHCP-Service der Firewall deaktiviert wurde. 
