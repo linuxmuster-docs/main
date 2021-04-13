@@ -8,10 +8,11 @@ Virtualisierung mit KVM
 
 .. sectionauthor:: `@morbweb <https://ask.linuxmuster.net/u/morpweb>`_,
 		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
-		   `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
+		   `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
+In diesem Dokument findest du unsere "Schritt für Schritt" Anleitungen um linuxmuster.net unter KVM zu installieren. Als Basis dient ein Ubuntu Server 18.04.5 LTS.
 
-In diesem Dokument findest du "Schritt für Schritt" Anleitungen zum Installieren der linuxmuster.net-Musterlösung in der Version 7.0 auf Basis von KVM unter Ubuntu Server 18.04 LTS. Lies zuerst die Abschnitte :ref:`what-is-new-label` und :ref:`prerequisites-label`, bevor du dieses Kapitel durcharbeitest.
+Wir setzen voraus, dass du die Abschnitte :ref:`what-is-new-label` und :ref:`prerequisites-label` gelesen hast, bevor du dieses Kapitel durcharbeitest.
 
 Im folgenden Bild ist die einfachste Form der Implementierung der Musterlösung schematisch mit dem gewählten (Standard-)Netzwerk ``10.0.0.0/16`` dargestellt:
 
@@ -19,51 +20,66 @@ Im folgenden Bild ist die einfachste Form der Implementierung der Musterlösung 
 
 Nach der Installation gemäß dieser Anleitung erhältst du eine einsatzbereite Umgebung bestehend aus
 
-* einem Host (KVM) für alle virtuellen Maschinen, 
-* einer Firewall (OPNsense für linuxmuster.net) und 
-* einem Server (linuxmuster.net)
+ * einem Host (KVM) für alle virtuellen Maschinen,
+ * einer Firewall (OPNsense für linuxmuster.net) und
+ * einem Server (linuxmuster.net)
 
-Ähnliche, nicht dokumentierte, Installationen gelten für einen OPSI-Server und einen Docker-Host, die dann ebenso auf dem KVM-Host laufen können.
+Ähnliche, hier nicht dokumentierte, Installationen gelten für einen OPSI-Server und einen Docker-Host, die dann ebenso auf dem KVM-Host laufen können.
 
 Voraussetzungen
 ===============
 
-* Der Internetzugang des KVM-Hosts sollte (zunächst) gewährleistet sein. Entweder bekommt er von einem Router per DHCP eine externe IP-Adresse, Gateway und einen DNS-Server oder man trägt eine statische IP, Gateway und einen DNS-Server von Hand ein.
-* Sofern ein Admin-PC eingerichtet wird, sollte dieser die Möglichkeit haben, sich bei Bedarf in das entsprechende Netzwerk einzuklinken. Im Servernetzwerk bekommt der Admin-PC die IP-Adresse ``10.0.0.10/16`` mit Gateway und DNS-Server jeweils ``10.0.0.254``. Es bietet sich ein Ubuntu-Desktop mit der Software `virt-manager`
-  an.
+* Der Internetzugang des KVM-Hosts muss gewährleistet sein.
+ 
+  Entweder bekommt er von einem Router per DHCP eine IP-Adresse, Gateway- und DNS-Server oder man trägt diese Daten von Hand ein.
+
+* Sofern ein Admin-PC eingerichtet wird, sollte dieser für die Installation die Möglichkeit haben, sich bei Bedarf mit dem entsprechende Netzwerk zu verbinden. Im letztendlichen linuxmuster.net-Intranet erhält dieser dann die folgenden Einstellungen:
+
+  * IP-Adresse:  ``10.0.0.10/16``
+  * Gateway und DNS-Server jeweils: ``10.0.0.254``
+
+  Für solch einen Administrations-Rechner bietet sich ein Ubuntu-Desktop mit der Software `virt-manager` an.
 
 Vorgehen
 ========
 
-1. Der KVM-Host wird an einen Router angeschlossen, so dass er ins Internet kommt (per DHCP oder statischer IP), es wird ein heruntergeladenes Ubuntu Server 64bit von einem USB-Stick auf dem KVM-Host installiert.
-2. Die Software für KVM und die Zeitsynchronisation werden installiert und konfiguriert.
-3. Das virtuelle Netzwerk wird auf dem KVM-Host konfiguriert.
-4. Das heruntergeladene Abbild der Firewall wird importiert, an die neue Netzwerkumgebung angepasst und die Netzwerkverbindung zur Firewall getestet. In der Firewall wird optional die externe Netzwerkanbindung konfiguriert.
-5. Der Server wird importiert, die Festplattengrößen an eigene Bedürfnisse angepasst und die Netzwerkverbindung angepasst und getestet.
-6. Abschließende Konfigurationen auf dem KVM-Host
+1. Der KVM-Host wird an einen Router angeschlossen, sodass er ins Internet kommt. Es wird ein heruntergeladenes "Server install image 64bit" von einem Boot-Medium auf dem KVM-Host installiert.
 
+2. Die Software für KVM und die Zeitsynchronisation werden installiert, aktualisiert und konfiguriert.
+
+3. Das virtuelle Netzwerk wird auf dem KVM-Host konfiguriert.
+
+4. Das heruntergeladene Abbild der Firewall wird importiert, an die neue Netzwerkumgebung angepasst und die Netzwerkverbindung zur Firewall getestet. 
+
+ .. todo:: zu klären: "In der Firewall wird optional die externe Netzwerkanbindung konfiguriert."   
+
+5. Der linuxmuster.net-Server wird importiert, dessen Festplattengrößen und die Netzwerkverbindung angepasst und getestet.
+
+6. Abschließende Konfigurationen auf dem KVM-Host.
 
 Bereitstellen des KVM-Hosts
 ===========================
 
 .. hint::
 
-   Der KVM-Host bildet das Grundgerüst für die Firewall *OPNsense* und den Schulserver *server*. Da KVM im Gegensatz zu Xen oder VMWare auf die Virtualisierungsfunktionen der CPU angewiesen ist, müssen diese natürlich vorhanden sein und eventuell im BIOS aktiviert werden.
+   Der KVM-Host bildet die Grundlage für die Firewall *OPNsense®* und den Schulserver *server*. Da KVM im Gegensatz zu Xen oder VMWare auf die Virtualisierungsfunktionen der CPU angewiesen ist, müssen diese natürlich hardwareseitig vorhanden und im BIOS aktiviert sein.
 
-Die folgende Anleitung beschreibt die *einfachste* Implementierung ohne Dinge wie VLANs, Teaming/Bonding oder RAIDs. Diese Themen werden in zusätzlichen Anleitungen betrachtet.
-
-* :ref:`Anleitung Netzwerksegmentierung <subnetting-basics-label>` 
+Die folgende Anleitung beschreibt die einfachste Implementierung ohne Dinge wie VLANs, Teaming/Bonding oder RAIDs. Diese Themen werden in zusätzlichen Abschnitten im Kapitel "SYSTEMADMINISTRATION" betrachtet.
 
 .. _preface-usb-stick-label:
 
-Erstellen eines USB-Sticks für den KVM-Host
--------------------------------------------
+Erstellen eines Installationsmediums
+------------------------------------
 
-Download für den KVM-Host
+.. _Download: https://releases.ubuntu.com/18.04.5/
 
-.. _heruntergeladen: https://releases.ubuntu.com/18.04.5/
+Es wird für die Installation des KVM-Hosts ein Ubuntu Server 64bit in der Version 18.04 LTS verwendet. Welches du unter "Server install image" auf der Ubuntu-Seite zum Download_ findest. Diese iso-Datei muss auf ein Bootmedium so kopiert werden, dass sich der zukünftige KVM-Host von diesem Medium starten lässt.
 
-Es wird für die Installation auf dem KVM-Host ein Ubuntu Server 64bit in der Version 18.04 LTS verwendet. Es wird das alternative Installationsimage für DVD/USB-Stick verwendet, welches hier unter "Server install image"  heruntergeladen_ werden kann. 
+.. _unetboot: https://unetbootin.github.io/
+
+Neben dem "Brennen" auf einer DVD, stehen dir zum Erzeugen eines USB-Boot-Sticks diverse Anleitung im Internet bereit. Schaue dir zum Beispiel das Programm unetboot_ an. Dieses hat den Vorteil, dass es die Erstellung unter verschiedenen Betriebssystemen (Linux, Windows und macOS) ermöglicht.
+
+.. todo:: Hier weiter!
 
 .. hint:: Benötigte Programme für die Herstellung des USB-Sticks:
    
