@@ -123,7 +123,7 @@ Netzwerkeinrichtung
 
 Nach Sprach- und Keyboardauswahl wird das Netzwerk eingerichtet. Es muss die primäre Schnittstelle ausgewählt werden, die einen Zugang zum Internet ermöglicht. 
   
-  .. figure:: media/kvmhost-install-network.png
+  .. figure:: ../media/ubuntu-installation_011_network-interface-selection.png 
   
 Sollte die automatische Netzwerkkonfiguration per DHCP nicht erfolgreich sein, kannst du auch manuell IP-Adresse, Gateway und DNS-Server eingestellen (z.B. für die Kunden von Belwue). Wichtig ist die richtige Schnittstelle auszuwählen.
 
