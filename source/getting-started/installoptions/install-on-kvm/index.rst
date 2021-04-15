@@ -75,48 +75,49 @@ Erstellen eines Installationsmediums
 
 Es wird für die Installation des KVM-Hosts ein Ubuntu Server 64bit in der Version 18.04 LTS verwendet. Welches du unter "Server install image" auf der Ubuntu-Seite zum Download_ findest. Diese iso-Datei muss auf ein Bootmedium so kopiert werden, dass sich der zukünftige KVM-Host von diesem Medium starten lässt.
 
-.. _unetboot: https://unetbootin.github.io/
+.. _heruntergeladen: https://unetbootin.github.io/
 
-Neben dem "Brennen" auf einer DVD, stehen dir zum Erzeugen eines USB-Boot-Sticks diverse Anleitung im Internet bereit. Schaue dir zum Beispiel das Programm unetboot_ an. Dieses hat den Vorteil, dass es die Erstellung unter verschiedenen Betriebssystemen (Linux, Windows und macOS) ermöglicht.
+Neben dem "Brennen" auf einer DVD, stehen dir zum Erzeugen eines USB-Boot-Sticks diverse Anleitung im Internet bereit. Da diese immer von deinem verwendeten Betriebssystem abhängen, zeigen wir dir dieses an dem Programm UNetbootin. Dieses hat für uns den Vorteil, dass es die Erstellung unter verschiedenen Betriebssystemen (Linux, Windows und macOS) ermöglicht und die Erkläung davon unabhängig bleibt.
 
-.. todo:: Hier weiter!
+Installiere das Programm nachdem du es dir hier  heruntergeladen_ hast. Vor dem Start des Programms verbinde deinen USB-Stick mit dem Rechner.
 
-.. hint:: Benötigte Programme für die Herstellung des USB-Sticks:
+Nachdem du es gestartet hast, begrüßt dich dieser Bildschirm. Eventuell musstest du vorher die erweiterten Rechte für den Programmstart erlauben. Diese sind für den Zugriff auf den USB-Stick nötig. 
+
+.. figure:: ../media/unetbootin_001_open-program.png
+   :align: center
+   :alt: Das geöffnete Programm
+
+Zwar bietet UNetbootin für viele Livesystem die Möglichkeit diese direkt herunterzuladen. Leider aber nicht für den benötigten Ubuntu Server. Aber da du die iso-Datei ja zuvor schon auf deinem Rechner geladen hast, wählst du sie mit dem nächsten Schritt aus. Dazu klickst du auf den gezeigten Button ``...``.
+
+.. figure:: ../media/unetbootin_002_select-iso.png
+   :align: center
+   :alt: Auswahl der iso-Datei 
+
+Wähle die iso-Datei und bestätige sie mit ``Open``.
+
+.. figure:: ../media/unetbootin_003_start-copy.png
+   :align: center
+   :alt: Starten der USB-Stick-Erstellung
+
+Überprüfe ob ``Typ`` und ``Laufwerk`` den von dir gewünschten USB-Stick beschreiben.
+
+.. Attention:: Sollte da nicht das richtige Medium ausgewählt sein, würde der nächste Schritt diesen unwiederbringbar zerstören!
+
+Mit ``OK`` startest du die Erstellung
+
+.. figure:: ../media/unetbootin_004_copy-progress.png
+   :align: center
+   :alt: Fortschritt der USB-Stick-Erstellung
+
+Warte den Fortschritt des Installationsprozesses ab, bis ...
+
+.. figure:: ../media/unetbootin_005_finish.png
+   :align: center
+   :alt: Erfolgreiche Beendigung des Vorganges
    
-   * dd
-   * pv  
-  
-Hilfreiche Befehle sind (Vorsicht - mit ``dd`` werden vorhandene Daten unwiderruflich zerstört) hier aufgeführt. Der Name des USB-Stick-Gerätes muss vorher herausgefunden werden, z.B. mit ``fdisk -l``, er wird aus Sicherheitsgründen hier mit ``/dev/sdX`` bezeichnet.
+... er erfolgreich abgeschlossen wurde.
 
-Löschen des MBRs des USB-Sticks
-  .. code-block:: console
-
-     # sudo dd if=/dev/zero of=/dev/sdX bs=1M count=10
-
-Größe des ISOs herausfinden
-  .. code-block:: console
-
-     # du -b ubuntu-18.04.5-live-server-amd64.iso
-     749731840	ubuntu-18.04.5-live-server-amd64.iso
-
-Kopieren des ISOs auf den Stick
-  .. code-block:: console
-
-     # sudo dd if=uubuntu-18.04.5-live-server-amd64.iso | sudo pv -s 749731840 | sudo dd of=/dev/sdX bs=1M && sync
-     [sudo] Passwort für admin: 
-     715MiB 0:00:09 [73,1MiB/s] [====================================================================>] 100%
-     0+168504 Datensätze ein
-     0+168504 Datensätze aus
-     749731840 bytes (750 MB, 715 MiB) copied, 9,78505 s, 76,6 MB/s
-
-Natürlich können auch alle anderen gängigen Tools zur Erstellung genutzt werden. Im folgenden Video ist die Prozedur anhand einer älteren ISO-Datei dargestellt, verläuft aber äquivalent mit jeder aktuellen Ubuntu-Version:
-
-.. raw:: html
-
-   <p>
-   <iframe width="696" height="392" src="https://www.youtube.com/embed/7NIoQpSSVQw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-   </p>
-
+.. todo:: Hier weiter 
 
 Installation des KVM-Hosts
 --------------------------
