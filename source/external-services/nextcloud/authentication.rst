@@ -11,8 +11,25 @@ das Active Directory (AD) der linuxmuster.net 7 als zentrale Authentifizierungsi
 
 Nachstehende Konfigurationsschritte sind auf der Nextcloud-Instanz auszuführen.
 
+App installieren
+================
+
+Um via LDAP eine Authentifizierung vornehmen zu können, musst du zuerst oben rechts als admin auf Dein ``Profil-Icon`` klicken, dann auf ``Apps``.
+Es erscheinen links im Menü die Einträge ``Deine Apps, Aktive Apps, Deaktivierte Apps, App-Pakete``. Klicke auf ``deaktiverte Apps`` und wähle
+dort die App ``LDAP user and group backend`` aus und aktiviere diese.
+
+Danach klickst du wieder oben rechts als admin auf Dein ``Profil-Icon`` und klickst danach auf Einstellungen.
+Danach klickst Du links im Menü ``Verwaltung`` den Eintrag  ``LDAP/AD Integration``.
+
+Die nachstehenden Schritte führst Du dann dort entsprechend aus.
+
+
 Einstellungen: Server
 =====================
+
+.. hint::
+
+   Die Einstellungen kannst du schrittweise testen (z.B. Base-DN testen). Hier musst du ggf. mehrfach den Test durchführen, bevor eine erfolgreiche Bestätigung erfolgt. Z.T. werden vier Versuche - trotz korrekter Einstellungen - benötigt.
 
 Sollte der Nextloud-Server extern betrieben werden, so muss die OPNsense®-Firewall so konfiguriert werden, dass Anfragen 
 über den ``LDAPs-Port 636`` an den Server weitergeleitet werden. Siehe :ref:`Firewallregeln <nextcloud-firewall-label>`. 
@@ -40,6 +57,8 @@ In der Zeile darunter ist das Kennwort des ``binduser`` einzutragen. Dieses Pass
 ``/etc/linuxmuster/.secret/global-binduser`` und trägst es hier ein.
 
 Als ``Base-DN`` trägst du ``OU=default-school,OU=SCHOOLS,`` gefolgt von deiner Domain (z.B. DC=schule,DC=meineschule,DC=de) ein.
+
+Solltest du auf deinem Sever ein self-signed certificate verwenden, so sind die Einstellungen unter ``Fortgeschritten -> Verbindungseinstellungen`` wichtig, die später in dieser Dokumentation dargestellt werden.
 
 Einstellungen: Benutzer
 =======================

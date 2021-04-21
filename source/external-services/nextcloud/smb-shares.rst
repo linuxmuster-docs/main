@@ -34,7 +34,7 @@ eine entsprechende Regel anzulegen.
 
 In den Einstellungen von ``Externer Speicher`` kannst du jetzt, wie oben im Bild zu sehen ist, die Tauschverzeichnisse und das Home-Verzeichnis ``/`` der Benutzer einbinden.
 
- .. warning::
+.. warning::
     Das Share ``/`` ist das Wurzelverzeichnis der Benutzer. Wenn sich ein Benutzer nicht am Schulserver anmelden kann, kann er sich auch nicht an der Nextcloud anmelden. Und das trifft für den Admin der Nextcloud zu!!!
     Für den Share ``/`` müssen also die Gruppen angegeben werden, die Zugriff auf ein Home-Verzeichnis haben sollen. Sonst kann sich der Admin an der Nextcloud nicht mehr anmelden!!!
     

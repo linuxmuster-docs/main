@@ -4,11 +4,11 @@ Das Online-Office Collabora
 
 .. sectionauthor:: `@rettich <https://ask.linuxmuster.net/u/rettich>`_
 
-Collabora Online ist eine angepasste Version von LibreOffice Online, einem Online-Office, welches sich auf dem Dockerhost betreiben lässt. 
+Collabora Online ist eine angepasste Version von LibreOffice Online, einem Online-Office, welches sich auf dem Docker-Host betreiben lässt.
 
-Mit Collabora können beispielsweise in Moodle und Nextcloud gleichzeitig mehrer Benutzer an einem Dokument arbeiten. Mit Collabora hat man so auch auf Tabletts oder Handys ein Office-Paket zur Verfügung. 
+Mit Collabora können beispielsweise in Moodle und Nextcloud gleichzeitig mehrer Benutzer an einem Dokument arbeiten. Mit Collabora hat man so auch auf Tablets oder Handys ein Office-Paket zur Verfügung.
 
-Um Collabora auf dem Dockerhost zu installieren sind die gleichen Schritte wie bei der Nextcloud-Installation notwendig. 
+Um Collabora auf dem Docker-Host zu installieren, sind die identischen Schritte wie bei der Nextcloud-Installation notwendig.
 
 #. Erstellen eines Let's Encrypt - Zertifikats.
 #. Erstellen einer Site für die Collabora in nginx.
@@ -19,22 +19,22 @@ Um Collabora auf dem Dockerhost zu installieren sind die gleichen Schritte wie b
 Erstellung des Zertifikats
 ==========================
 
-Zuerst musst du dir Dienstenamen ausdenken und SSL-Zertifikat besorgen. Also z.B. office.meine-schule.de. 
+Zuerst musst du dir einen Dienstenamen ausdenken, den DNS Eintrag dazu setzen und SSL-Zertifikat besorgen. Also z.B. office.meine-schule.de. 
 
-Dazu legst du einen DNS Eintrag für deine Dockerapp, z.B. office.meine-schule.de, der auf die IP des Dockerhosts zeigt an. Das darf auch ein CNAME sein.
+Dazu legst du einen DNS Eintrag für deine Dockerapp, z.B. office.meine-schule.de, der auf die IP des Docker-Hosts zeigt an. Das darf auch ein CNAME sein.
 
 Trage diesen Host in die Datei ``/etc/dehydrated/domains.txt`` ein.
 
-Führe den Befehl ``dehydrated -c`` aus. Jetzt hast du die Zertifikate im Verzeichnis ``/var/lib/dehydrated/certs/`` zur Verfügung, der Docker Host aktualisiert diese per Cronjpb.
+Führe den Befehl ``dehydrated -c`` aus. Jetzt hast du die Zertifikate im Verzeichnis ``/var/lib/dehydrated/certs/`` zur Verfügung, der Docker-Host aktualisiert diese per Cronjob.
 
 Erstellen einer Site für Collabora in nginx
 ===========================================
 
-Melde dich als root auf deinem Dockerhost an.
+Melde dich als root auf deinem Docker-Host an.
 
-Erstelle mit ``mkdir -p /srv/docker/office`` das Verzeichnis, in das alle Collabora-Dateien abgelegt werden.
+Erstelle mit ``mkdir -p /srv/docker/collabora`` das Verzeichnis, in das alle Collabora-Dateien abgelegt werden.
 
-Erzeuge die Datei office.nginx.conf.
+Erzeuge die Datei ``office.nginx.conf`` im Verzeichnis ``srv/docker/collabora``.
 
 .. code-block:: console
 
@@ -99,22 +99,22 @@ Erzeuge die Datei office.nginx.conf.
     }
   }
 
-Diese conf-Datei geht davon aus, dass dein Collabora auf localhost:9980 erreichbar sein wird. Den Port 9980 kannst du natürlich wieder frei wählen. 
+Diese conf-Datei geht davon aus, dass dein Collabora auf localhost:9980 erreichbar sein wird. Den Port 9980 kannst du wieder frei wählen. Der Port muss mit dem Port übereinstimmen, der in der docker-compose.yml später für collabora angegeben wird. 
 
 Jetzt musst du noch im Verzeichnis ``/etc/nginx/sites-enabled`` einen Link auf deine ``office.nginx.conf`` anlegen und nginx neu starten.
 
-Melde dich wieder als root am Dockerhost an und lege mit ``ln -s /srv/docker/collabora/office.nginx.conf /etc/nginx/sites-enabled/office.meine-schule.de`` den Link an.
+Melde dich wieder als root am Docker-Host an und lege mit ``ln -s /srv/docker/collabora/office.nginx.conf /etc/nginx/sites-enabled/office.meine-schule.de`` den Link an.
 
 So, jetzt musst du nur noch mit ``systemctl restart nginx.service`` nginx neu starten.
 
 Collabora mit docker-compose einrichten und starten
 ===================================================
 
-Das Meiste ist bereits getan. Du musst nur noch eine Datei angelegen, die docker-compose sagt, was es machen soll.
+Du legst jetzt noch eine Datei docker-compose.yml an.
 
-Alles was wir jetzt machen, spielt sich im Verzeichnis `/srv/docker/collabora` ab.
+Alle Schritte sind jetzt im Verzeichnis ``/srv/docker/collabora`` duchzuführen.
 
-Melde dich wieder als root auf dem Dockerhost an und gehe mit ``cd /srv/docker/collabora`` in das Verzeichnis `/srv/docker/collabora`.
+Melde dich wieder als root auf dem Docker-Host an und gehe mit ``cd /srv/docker/collabora`` in das Verzeichnis `/srv/docker/collabora`.
 
 Die Datei docker-compose.yml
 ============================
@@ -151,11 +151,15 @@ Wenn du im Verzeichnis `/srv/docker/collabora` bist, startest du Collabora mit `
 Collabora in der Nextcloud nutzen
 =================================
 
-Als erstes musst du die App ``Collabora Online`` aktiviereen. Gehe dazu auf A -> + Apps. Auf der Seite ganz unten findest du die deaktivierten Apps. Aktiviere ``Collabora Online``.
+Als erstes musst du die App ``Collabora Online`` aktivieren. Gehe dazu auf ``A -> + Apps``. Auf der Seite ganz unten findest du die deaktivierten Apps. Aktiviere ``Collabora Online``.
 
-Navigiere zu Einstellungen -> Collabora Online Development Edition und trage dort die URL deines Collabora-Services ein.
+Navigiere links zu ``Verwaltung -> Einstellungen -> Collabora Online Development Edition`` und trage dort unter ``Verwende Deinen eigenen Server`` die URL deines Collabora-Services ein.
 
 .. image:: media/collabora-01.png   
    :align: center
 
-Fertig.
+.. hint::
+
+   Achte darauf, dass du deine https://<deineurl> angibst, damit Collabora auch via https erreichbar ist.
+
+Damit ist die Einrichtung abgeschlossen und du kannst Nextcloud für deine Schule weiter anpassen.
