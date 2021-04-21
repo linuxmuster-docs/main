@@ -8,10 +8,11 @@ Virtualisierung mit KVM
 
 .. sectionauthor:: `@morbweb <https://ask.linuxmuster.net/u/morpweb>`_,
 		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
-		   `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
+		   `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
+In diesem Dokument findest du unsere "Schritt für Schritt" Anleitungen um linuxmuster.net unter KVM zu installieren. Als Basis dient ein Ubuntu Server 18.04.5 LTS.
 
-In diesem Dokument findest du "Schritt für Schritt" Anleitungen zum Installieren der linuxmuster.net-Musterlösung in der Version 7.0 auf Basis von KVM unter Ubuntu Server 18.04 LTS. Lies zuerst die Abschnitte :ref:`what-is-new-label` und :ref:`prerequisites-label`, bevor du dieses Kapitel durcharbeitest.
+Wir setzen voraus, dass du die Abschnitte :ref:`what-is-new-label` und :ref:`prerequisites-label` gelesen hast, bevor du dieses Kapitel durcharbeitest.
 
 Im folgenden Bild ist die einfachste Form der Implementierung der Musterlösung schematisch mit dem gewählten (Standard-)Netzwerk ``10.0.0.0/16`` dargestellt:
 
@@ -19,88 +20,239 @@ Im folgenden Bild ist die einfachste Form der Implementierung der Musterlösung 
 
 Nach der Installation gemäß dieser Anleitung erhältst du eine einsatzbereite Umgebung bestehend aus
 
-* einem Host (KVM) für alle virtuellen Maschinen, 
-* einer Firewall (OPNsense für linuxmuster.net) und 
-* einem Server (linuxmuster.net)
+ * einem Host (KVM) für alle virtuellen Maschinen,
+ * einer Firewall (OPNsense für linuxmuster.net) und
+ * einem Server (linuxmuster.net)
 
-Ähnliche, nicht dokumentierte, Installationen gelten für einen OPSI-Server und einen Docker-Host, die dann ebenso auf dem KVM-Host laufen können.
+Ähnliche, hier nicht dokumentierte, Installationen gelten für einen OPSI-Server und einen Docker-Host, die dann ebenso auf dem KVM-Host laufen können.
 
 Voraussetzungen
 ===============
 
-* Der Internetzugang des KVM-Hosts sollte (zunächst) gewährleistet sein. Entweder bekommt er von einem Router per DHCP eine externe IP-Adresse, Gateway und einen DNS-Server oder man trägt eine statische IP, Gateway und einen DNS-Server von Hand ein.
-* Sofern ein Admin-PC eingerichtet wird, sollte dieser die Möglichkeit haben, sich bei Bedarf in das entsprechende Netzwerk einzuklinken. Im Servernetzwerk bekommt der Admin-PC die IP-Adresse ``10.0.0.10/16`` mit Gateway und DNS-Server jeweils ``10.0.0.254``. Es bietet sich ein Ubuntu-Desktop mit der Software `virt-manager`
-  an.
+* Der Internetzugang des KVM-Hosts muss gewährleistet sein.
+ 
+  Entweder bekommt er von einem Router per DHCP eine IP-Adresse, Gateway- und DNS-Server oder man trägt diese Daten von Hand ein.
+
+* Sofern ein Admin-PC eingerichtet wird, sollte dieser für die Installation die Möglichkeit haben, sich bei Bedarf mit dem entsprechende Netzwerk zu verbinden. Im letztendlichen linuxmuster.net-Intranet erhält dieser dann die folgenden Einstellungen:
+
+  * IP-Adresse:  ``10.0.0.10/16``
+  * Gateway und DNS-Server jeweils: ``10.0.0.254``
+
+  Für solch einen Administrations-Rechner bietet sich ein Ubuntu-Desktop mit der Software `virt-manager` an.
 
 Vorgehen
 ========
 
-1. Der KVM-Host wird an einen Router angeschlossen, so dass er ins Internet kommt (per DHCP oder statischer IP), es wird ein heruntergeladenes Ubuntu Server 64bit von einem USB-Stick auf dem KVM-Host installiert.
-2. Die Software für KVM und die Zeitsynchronisation werden installiert und konfiguriert.
-3. Das virtuelle Netzwerk wird auf dem KVM-Host konfiguriert.
-4. Das heruntergeladene Abbild der Firewall wird importiert, an die neue Netzwerkumgebung angepasst und die Netzwerkverbindung zur Firewall getestet. In der Firewall wird optional die externe Netzwerkanbindung konfiguriert.
-5. Der Server wird importiert, die Festplattengrößen an eigene Bedürfnisse angepasst und die Netzwerkverbindung angepasst und getestet.
-6. Abschließende Konfigurationen auf dem KVM-Host
+1. Der KVM-Host wird an einen Router angeschlossen, sodass er ins Internet kommt. Es wird ein heruntergeladenes "Server install image 64bit" von einem Boot-Medium auf dem KVM-Host installiert.
 
+2. Die Software für KVM und die Zeitsynchronisation werden installiert, aktualisiert und konfiguriert.
+
+3. Das virtuelle Netzwerk wird auf dem KVM-Host konfiguriert.
+
+4. Das heruntergeladene Abbild der Firewall wird importiert, an die neue Netzwerkumgebung angepasst und die Netzwerkverbindung zur Firewall getestet. 
+
+ .. todo:: zu klären: "In der Firewall wird optional die externe Netzwerkanbindung konfiguriert."   
+
+5. Der linuxmuster.net-Server wird importiert, dessen Festplattengrößen und die Netzwerkverbindung angepasst und getestet.
+
+6. Abschließende Konfigurationen auf dem KVM-Host.
 
 Bereitstellen des KVM-Hosts
 ===========================
 
 .. hint::
 
-   Der KVM-Host bildet das Grundgerüst für die Firewall *OPNsense* und den Schulserver *server*. Da KVM im Gegensatz zu Xen oder VMWare auf die Virtualisierungsfunktionen der CPU angewiesen ist, müssen diese natürlich vorhanden sein und eventuell im BIOS aktiviert werden.
+   Der KVM-Host bildet die Grundlage für die Firewall *OPNsense®* und den Schulserver *server*. Da KVM im Gegensatz zu Xen oder VMWare auf die Virtualisierungsfunktionen der CPU angewiesen ist, müssen diese natürlich hardwareseitig vorhanden und im BIOS aktiviert sein.
 
-Die folgende Anleitung beschreibt die *einfachste* Implementierung ohne Dinge wie VLANs, Teaming/Bonding oder RAIDs. Diese Themen werden in zusätzlichen Anleitungen betrachtet.
+Die folgende Anleitung beschreibt die einfachste Implementierung ohne Dinge wie VLANs, Teaming/Bonding oder RAIDs. Diese Themen werden in zusätzlichen Abschnitten im Kapitel "SYSTEMADMINISTRATION" betrachtet.
 
-* :ref:`Anleitung Netzwerksegmentierung <subnetting-basics-label>` 
+Wir beschreiben hier die Installation von dem Erstellen eines Bootmediums bis zum fertigen Ubuntu-Server. Sollte das für dich ein alter Hut sein, kannst du das überspringen und mit der Installtion von der Pakete für `Installation der KVM-Pakete`_ fortfahren 
 
 .. _preface-usb-stick-label:
 
-Erstellen eines USB-Sticks für den KVM-Host
--------------------------------------------
+Erstellen eines Installationsmediums
+------------------------------------
 
-Download für den KVM-Host
+.. _Download: https://releases.ubuntu.com/18.04.5/
 
-.. _heruntergeladen: https://releases.ubuntu.com/18.04.5/
+Es wird für die Installation des KVM-Hosts ein Ubuntu Server 64bit in der Version 18.04 LTS verwendet. Welches du unter "Server install image" auf der Ubuntu-Seite zum Download_ findest. Diese iso-Datei muss auf ein Bootmedium so kopiert werden, dass sich der zukünftige KVM-Host von diesem Medium starten lässt.
 
-Es wird für die Installation auf dem KVM-Host ein Ubuntu Server 64bit in der Version 18.04 LTS verwendet. Es wird das alternative Installationsimage für DVD/USB-Stick verwendet, welches hier unter "Server install image"  heruntergeladen_ werden kann. 
+.. _heruntergeladen: https://unetbootin.github.io/
 
-.. hint:: Benötigte Programme für die Herstellung des USB-Sticks:
+Neben dem "Brennen" auf einer DVD, stehen dir zum Erzeugen eines USB-Boot-Sticks diverse Anleitung im Internet bereit. Da diese immer von deinem verwendeten Betriebssystem abhängen, zeigen wir dir dieses an dem Programm UNetbootin. Dieses hat für uns den Vorteil, dass es die Erstellung unter verschiedenen Betriebssystemen (Linux, Windows und macOS) ermöglicht und die Erkläung davon unabhängig bleibt.
+
+Installiere das Programm nachdem du es dir hier heruntergeladen_ hast. Vor dem Start des Programms verbinde deinen USB-Stick mit dem Rechner.
+
+Nachdem du es gestartet hast, begrüßt dich dieser Bildschirm. Eventuell musstest du vorher die erweiterten Rechte für den Programmstart erlauben. Diese sind für den Zugriff auf den USB-Stick nötig. 
+
+.. figure:: ../media/unetbootin_001_open-program.png
+   :align: center
+   :alt: Das geöffnete Programm
+
+Zwar bietet UNetbootin für viele Livesystem die Möglichkeit diese direkt herunterzuladen. Leider aber nicht für den benötigten Ubuntu Server. Aber da du die iso-Datei ja zuvor schon auf deinem Rechner geladen hast, wählst du sie mit dem nächsten Schritt aus. Dazu klickst du auf den gezeigten Button ``...``.
+
+.. figure:: ../media/unetbootin_002_select-iso.png
+   :align: center
+   :alt: Auswahl der iso-Datei 
+
+Wähle die iso-Datei und bestätige sie mit ``Open``.
+
+.. figure:: ../media/unetbootin_003_start-copy.png
+   :align: center
+   :alt: Starten der USB-Stick-Erstellung
+
+Überprüfe ob ``Typ`` und ``Laufwerk`` den von dir gewünschten USB-Stick beschreiben.
+
+.. Attention:: Sollte da nicht das richtige Medium ausgewählt sein, würde der nächste Schritt das falsch ausgewählte Medium unwiederbringbar löschen!
+
+Mit ``OK`` startest du die Erstellung
+
+.. figure:: ../media/unetbootin_004_copy-progress.png
+   :align: center
+   :alt: Fortschritt der USB-Stick-Erstellung
+
+Warte den Fortschritt des Installationsprozesses ab, bis ...
+
+.. figure:: ../media/unetbootin_005_finish.png
+   :align: center
+   :alt: Erfolgreiche Beendigung des Vorganges
    
-   * dd
-   * pv  
-  
-Hilfreiche Befehle sind (Vorsicht - mit ``dd`` werden vorhandene Daten unwiderruflich zerstört) hier aufgeführt. Der Name des USB-Stick-Gerätes muss vorher herausgefunden werden, z.B. mit ``fdisk -l``, er wird aus Sicherheitsgründen hier mit ``/dev/sdX`` bezeichnet.
+... er erfolgreich abgeschlossen wurde.
 
-Löschen des MBRs des USB-Sticks
-  .. code-block:: console
+Installation des KVM-Hosts
+--------------------------
 
-     # sudo dd if=/dev/zero of=/dev/sdX bs=1M count=10
+Nachdem du deinen zukünftigen KVM-Host von deinem zuvor erstellten Boot-Medium gestaret hast, beginn die eigentlichen Installation.
 
-Größe des ISOs herausfinden
-  .. code-block:: console
+.. todo:: Installation KVM
 
-     # du -b ubuntu-18.04.5-live-server-amd64.iso
-     749731840	ubuntu-18.04.5-live-server-amd64.iso
+.. figure:: ../media/ubuntu-installation_001_select-language.png
+   :align: center
+   :alt: Auswahl der Sprache für die Installation
 
-Kopieren des ISOs auf den Stick
-  .. code-block:: console
+Nach einiger Zeit wird dich der Installer von Ubuntu nach der Sprache für die Installattion fragen. Markiere deine gewünschte Sprache und wähle sie mir `Enter` aus. 
 
-     # sudo dd if=uubuntu-18.04.5-live-server-amd64.iso | sudo pv -s 749731840 | sudo dd of=/dev/sdX bs=1M && sync
-     [sudo] Passwort für admin: 
-     715MiB 0:00:09 [73,1MiB/s] [====================================================================>] 100%
-     0+168504 Datensätze ein
-     0+168504 Datensätze aus
-     749731840 bytes (750 MB, 715 MiB) copied, 9,78505 s, 76,6 MB/s
+.. figure:: ../media/ubuntu-installation_002_without-actualisation.png
+   :align: center
+   :alt: Überspringe die Auswahl der Aktualisierung
 
-Natürlich können auch alle anderen gängigen Tools zur Erstellung genutzt werden. Im folgenden Video ist die Prozedur anhand einer älteren ISO-Datei dargestellt, verläuft aber äquivalent mit jeder aktuellen Ubuntu-Version:
+Die nächste Frage bezieht sich auf den aktualisierten Installer. Dieses Frage kannst du mit `Ohne Aktualisierung fortfahren` und `Enter` überspringen.
 
-.. raw:: html
+.. figure:: ../media/ubuntu-installation_003_keyboard-configuration.png
+   :align: center
+   :alt: Auswahl des Tastaturlayouts 
 
-   <p>
-   <iframe width="696" height="392" src="https://www.youtube.com/embed/7NIoQpSSVQw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-   </p>
+Wir beschreiben die Funktion `Tastatur erkennen` solltest du Belegung und Variante kennen, kannst du das hier direkt auswählen und mit `Enter` `weiter voranschreiten`_ : 
 
+.. figure:: ../media/ubuntu-installation_004_keyboard-autodetection.png
+   :align: center
+   :alt: Einleitung der Tastatur-Autoerkennung
+
+Der Text in der Grafik erklärt das weitere Vorgehen. Folge einfach den dargestellten Bildern und beachte den dargestellten Mauszeiger bzw. den grünen oder grauen Auswahlmöglichkeiten.
+
+.. figure:: ../media/ubuntu-installation_005_select-key.png
+   :align: center
+   :alt: 
+
+.. figure:: ../media/ubuntu-installation_006_question4key.png
+   :align: center
+   :alt: 
+
+.. figure:: ../media/ubuntu-installation_007_press-key.png
+   :align: center
+   :alt: 
+
+.. figure:: ../media/ubuntu-installation_008_question4key.png
+   :align: center
+   :alt: 
+
+.. figure:: ../media/ubuntu-installation_009_keyboard-pre-confirmation.png
+   :align: center
+   :alt: 
+
+.. figure:: ../media/ubuntu-installation_010_keyboard-confirmation.png
+   :align: center
+   :alt: 
+
+.. _`weiter voranschreiten`:
+
+Als nächstes geht es an die Einrichtung der Netzwerkschnittstelle. Das nachfolgende Bild veranschaulicht die momentane Netzwerkanbindung für die Installation.
+
+.. todo:: Grafik überarbeiten - Proxmox ersetzen durch (Virtualisierungs)-Host.
+
+.. figure:: ../media/install_01_network-4-installation.svg
+   :align: center
+   :alt: Netzwerkstruktur zur Einrichtung
+   
+Also dein Host ist an dem selben Switch angeschlossen wie dein Router.
+
+Wir gehen davon aus das dein Router IP-Adressen via DHCP vergibt.
+
+Wenn dein Host momentan nur mit einer Schnittstelle angeschlossen ist, solltest du ein fast identisches Bild erhalten.
+
+.. figure:: ../media/ubuntu-installation_011_network-interface-selection.png
+   :align: center
+   :alt: Auswahl der Netzwerk-Schnittstelle
+
+Einzige Abweichung können die Bezeichnung `ens18` und die erhaltene Adresse sein. Solltest du solch eine Abweichung feststellen, dann wirst du die Konfiguration manuel ausführen müssen. Dafür benötigst du die IP-Adresse, das Gateway und den DNS-Server (z.B. für die Kunden von Belwue). 
+
+Wichtig ist dabei, dass du die richige Schnittstelle ausgewählt hast, die mit deinem Switch/Router verbunden ist.
+
+.. figure:: ../media/ubuntu-installation_012_proxy-konfiguration.png
+   :align: center
+   :alt: Eingabe einer eventuellen Proxy-Adresse für den Internet-Zugriff
+
+Eventuell brauchst du für den Internetzugang in deiner Infrastruktur einen Proxy-Server. Dessen Daten müsstest du wie in der letzten Zeile "http://..." beschrieben eingeben. Mit `Erledigt` geht es weiter.
+
+.. figure:: ../media/ubuntu-installation_013_update-server.png
+   :align: center
+   :alt: Auswahl eines alternativen Spiegelservers
+
+Solltest du wissen, das deine Internet-Verbindung über einen bestimmten Spiegelserver schneller ist, dann könntest du ihn hier angeben. Ist in aller Regel aber nicht notwendig.
+
+.. figure:: ../media/ubuntu-installation_014_hdd-konfiguration.png
+   :align: center
+   :alt: Konfiguration der Festplatten
+
+Nun geht es daran die Festplatte(n) einzurichten.
+
+.. todo:: Hier weier. Es muss überprüft werden inwieweit Zwischenschritte nötig sind. Festplattengröße???
+
+Im Beispiel wird `Geführt - gesamte Platte verwenden und LVM einrichten` gewählt. Wer eine Festplatte bzw. ein RAID verwendet, die eine Partitionierung enthält, dem wird dementsprechend die Option zur Wiederverwendung angeboten. Hat man bereits eine exisitierenden Partition und ein existierendes LVM und will sie `nicht` wiederverwenden, so muss dementsprechend zustimmen, dass die existierenden Daten entfernt werden.
+
+Im Anschluss muss man auf alle Fälle dem Schreiben der Änderungen auf die Speichergeräte zustimmen.
+
+.. figure:: ../media/ubuntu-installation_015_summary-hdd-configuration.png
+   :align: center
+   :alt: 
+
+.. figure:: ../media/ubuntu-installation_016_hdd-configuration-confirm.png
+   :align: center
+   :alt: 
+
+.. figure:: ../media/ubuntu-installation_017_user-registration.png
+   :align: center
+   :alt: 
+
+.. figure:: ../media/ubuntu-installation_018_install-openssh.png
+   :align: center
+   :alt: 
+
+.. figure:: ../media/ubuntu-installation_019_optional-software.png
+   :align: center
+   :alt: 
+
+.. figure:: ../media/ubuntu-installation_020_finish-installation.png
+   :align: center
+   :alt: 
+
+.. figure:: ../media/
+   :align: center
+   :alt: 
+
+
+
+.. todo:: Hier weiter 
 
 Installation des KVM-Hosts
 --------------------------
@@ -119,13 +271,7 @@ Installation des KVM-Hosts
 
 .. todo:: Screenshots der Installation sind nicht mehr up-to-date 
 
-Netzwerkeinrichtung
-
-Nach Sprach- und Keyboardauswahl wird das Netzwerk eingerichtet. Es muss die primäre Schnittstelle ausgewählt werden, die einen Zugang zum Internet ermöglicht. 
-  
-  .. figure:: media/kvmhost-install-network.png
-  
-Sollte die automatische Netzwerkkonfiguration per DHCP nicht erfolgreich sein, kannst du auch manuell IP-Adresse, Gateway und DNS-Server eingestellen (z.B. für die Kunden von Belwue). Wichtig ist die richtige Schnittstelle auszuwählen.
+.. hint:: ALter Text
 
 Rechnername, Benutzername, Passwort, Zeitzone
 
@@ -178,6 +324,9 @@ Nach einem Reboot loggst du dich als ``admin`` ein und führst zunächst ein Upd
 Unter Umständen werden Dialoge erneut abgefragt, die schon bei der Installation beantwortet wurden (z.B. Tastaturkonfiguration).
 
 Installiere danach die qemu/KVM-Software durch Bestätigen der Fragen
+
+Installation der KVM-Pakete
+---------------------------
 
 .. code-block:: console
 
