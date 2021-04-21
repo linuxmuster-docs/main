@@ -174,10 +174,6 @@ Die nachstehende Abb. verdeutlicht diese Einstellungen:
    :alt: LDAP: Sync Settings
    :align: center
 
-.. attention::
-
-   In der Abb. wurden zu Beginn zwei geschweifte Klammern gesetzt. Dies würde zu Fehlern im Sync führen. Also unbedingt - wie vorher im Code-Block angegeben - die Zuordnung eintragen.
-
 Auch Klassen und Projekte können hier verwendet werden:
 
 .. code::
@@ -206,6 +202,9 @@ Die ``User data group map`` muss im JSON-Format angegeben werden, bei Syntaxfehl
 
    {
     "role-globaladministrator": "admintalk",
+    "role-teacher": "Lehrertalk",
+    "5a": "Talk-5a",
+    "5b": "Talk-5b",
     "role-student": [
       "info",
       "news"'
@@ -213,10 +212,10 @@ Die ``User data group map`` muss im JSON-Format angegeben werden, bei Syntaxfehl
   }
 
 Hierdurch werden alle Schüler den Channels „info“ und „news“ hinzugefügt.
-Die ``LDAP Group Channel Map`` muss im JSON-Format angegeben werden, bei Syntaxfehlern funktioniert der Sync nicht mehr. Es sind einfache Anführungszeichen zu verwenden.
+Die ``LDAP Group Channel Map`` muss im JSON-Format angegeben werden, bei Syntaxfehlern funktioniert der Sync nicht mehr.
 
 .. hint::
-   Es ist möglich, Channels so einzustellen, dass sie nur lesbar sind. Man kann so einen Channel erstellen, in dem nur Lehrer schreiben können, indem man der entsprechenden Rocket.Chat Rolle, die man role-teacher zuordnet, in den Berechtigungseinstellungen von Rocket.Chat die Berechtigung erteilt, in schreibgeschützte Channels zu schreiben. Man kann so auch einfach Channels für bestimmte Stufen erstellen, indem man alle Klassen der Stufe diesem Channel zuordnet werden.
+   Es ist möglich, Channels so einzustellen, dass sie nur lesbar sind. Man kann einen Channel erstellen, in dem nur Lehrer schreiben können, indem man der entsprechenden Rocket.Chat Rolle, die man role-teacher zuordnet, in den Berechtigungseinstellungen von Rocket.Chat die Berechtigung erteilt, in schreibgeschützte Channels zu schreiben. Man kann so auch einfach Channels für bestimmte Stufen erstellen, indem man alle Klassen der Stufe diesem Channel zuordnet werden.
 
 15. Auto remove user from channels: JA
 
