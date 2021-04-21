@@ -401,18 +401,43 @@ Führe diese Schritte ebenfalls für die weiteren Netze (BLUE - WLAN Netz und RE
 aus und ändere die Namen auf ``BLUE`` und ``RED``. In der Abb. ist NIC1 dem vSwitch Network1 zugeordnet und so verkabelt, dass hiermit das WLAN angesteuert wird, so dass dieses nun mit dem Namen ``Blue`` anzugeben ist. Network2 wird in diesem Beispiel dann zu ``Red``.
 
 
-VMs importieren
----------------
+Importieren der Virtuellen Maschinen
+====================================
 
 Nachdem das Netzwerk korrekt eingerichtet wurde, können nun die VMs der linuxmuster.net 
 importiert werden.
 
 Lade dir vorher zunächst alle VMs, die du importieren möchtest unter linuxmuster.net auf 
-deinen Client herunter (siehe obigen Download-Link: XVAs-v7_ ). Die heruntergeladenen VMs
-sind als ZIP-Archiv komprimiert und können nach dem Download mit dem SHA256 HASH-Wert geprüft werden.
+deinen Client herunter. Der Import erfolgt dann mithilfe des XCP-ng Center Verwaltungsprogramms.
+
+
+VM Templates herunterladen
+--------------------------
+
+Fertige VM-Snapshots für XCP-ng stellt linuxmuster.net auf dem eigenen Download-Server bereit. 
+https://download.linuxmuster.net/xcp-ng/v7/latest/
+
+Die heruntergeladenen VMs sind als ZIP-Archiv komprimiert und können nach dem Download mit dem 
+SHA256 HASH-Wert geprüft werden.
 Entpacke die ZIP-Dateien, so dass du alle VMs als XVA-Dateien vorliegen hast.
 
-Danach rufe im XCP-ng Center den Menüpunkt ``File -> Import`` auf.
+Solltest du alle VMs heruntergeladen und entpackt haben, liegen nun folgende XVA-Dateien auf deinem Client:
+
+============ =================== 
+VM           Dateiname           
+============ =================== 
+OPNsense®    lmn7-opnsense.xva   
+Server       lmn7-server.xva    
+OPSI         lmn7-opsi.xva
+Docker-VM    lmn7-docker.xva
+XOA	         lmn7-xoa.xva
+============ =================== 
+
+
+VM Templates importieren
+------------------------
+
+Danach rufe auf dem Client im ``XCP-ng Center`` den Menüpunkt ``File -> Import`` auf.
 
 .. figure:: media/29_xcp-ng-menue-import.png
    :align: center
