@@ -15,60 +15,6 @@
 .. todo:: 
           Inhalte überarbeiten
 
-.. hint::
-
-   Alle linuxmuster 6.x Systeme können statt einer Neuinstallation
-   über eine :ref:`migration-label` umgezogen werden, dennoch ist die
-   Erstkonfiguration hier eine notwendige Voraussetzung.
-
-Wichtige Hinweise
-=================
-
-* Nach Abschluss dieses Setups sind die Domäne und andere Details des
-  Netzwerks permanent festgelegt und nur durch Neuinstallation
-  änderbar. Es ist daher sinnvoll, zu diesem Zeitpunkt ein
-  Snapshot/Backup von Server, Firewall und bei Benutzung von
-  Dockerhost und OPSI-Host anzufertigen. Bei einem Fehlschlag müssen
-  alle diese Maschinen zurückgesetzt werden.
-* Beim Domänennamen ist zu beachten, dass der **erste** Teil der
-  Domäne nicht länger als 15 Zeichen haben darf. Der Rechnername ist
-  damit nicht gemeint. Im Beispiel ``server.linuxmuster.lan`` ist
-  ``server`` der Rechner-Kurzname und ``linuxmuster.lan`` die
-  Domäne. Dann darf ``linuxmuster`` nicht länger als 15 Zeichen sein.
-* Will man eine andere (z.B. auch extern auflösbare) Domäne haben,
-  muss man eventuell eine Subdomäne verwenden,
-  bspw. ``linuxmuster.magical-animal-school.edu`` statt
-  ``magical-animal-school.edu``. Der erste Part ``LINUXMUSTER`` wird
-  in diesem Beispiel dann als SAMBA-Domäne verwendet. Der voll Name
-  (FQHN) des Servers ist dann
-  ``server.linuxmuster.magical-animal-school.edu``.
-* Alle Hosts die im Setup konfiguriert werden sollen (docker(mail),
-  OPSI) müssen bereits laufen.
-* Systeme, die mit Hilfe der Migration auf linuxmuster.net 7.0
-  migriert werden, können hier eine neue (oder die alte)
-  konfigurieren.
-
-
-Anpassung des Netzbereiches
-===========================
-
-Die Standardkonfiguration wie sie über die Appliances mitgeliefert
-wird, sieht vor, dass das Schulnetz die lokale Domäne
-``linuxmuster.lan`` bekommt und Geräte im Netzbereich ``10.0.0.0/16``
-stehen. Wenn ein anderer Netzbereich (z.B. der bisher beliebte
-Netzbereich ``10.16.0.0/12``) verwendet werden soll, *muss* an dieser
-Stelle eine Anpassung vorgenommen werden.
-
-Systeme, die mit Hilfe der Migration auf linuxmuster.net 7.0 migriert
-werden, sollten den bisherigen Netzbereich behalten. Für die Beibehaltung
-des bisherigen Standards der v6.2 mit einem ``10.16.0.0./12`` Netz gibt
-es den Begriff ``do-it-like-babo``.
-
-.. hint::
-
-   Die Anpassungen zur Netzkonfiguration sind vor der Ausführung der 
-   Erstkonfiguration durchzuführen. Zur Durchführung der Anpassungen
-   folge bitte dem Kapitel :ref:`modify-net-label`.
 
 Erstkonfiguration über die Schulkonsole
 =======================================
