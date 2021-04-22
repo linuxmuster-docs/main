@@ -246,12 +246,6 @@ Im Anschluss muss man auf alle Fälle dem Schreiben der Änderungen auf die Spei
    :align: center
    :alt: 
 
-.. figure:: ../media/
-   :align: center
-   :alt: 
-
-
-
 .. todo:: Hier weiter 
 
 Installation des KVM-Hosts
