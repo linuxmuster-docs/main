@@ -14,33 +14,32 @@ Als erstes musst du die App ``External storage support`` aktivieren.
 .. image:: media/SMB01.png
    :alt: +Apps
    :align: center
-   
+
 Gehe dazu auf A -> + Apps. Auf der Seite ganz unten findest du die deaktivierten Apps. Aktiviere ``External storage support``.
 
 
-   
 Einbindung der Home- und Tauschverzeichnisse
 ============================================
-   
+ 
 Sollte der Nextloud-Server extern betrieben werden, so muss die OPNsense®-Firewall so konfiguriert werden, dass Anfragen 
 über die SMB-Ports 139 und 445 an den Server weitergeleitet werden. Siehe :ref:`Firewallregeln <nextcloud-firewall-label>`. 
 
 In der Konfigurationsoberfläche ist unter ``Firewall -> NAT -> Portweiterleitung``
-eine entsprechende Regel anzulegen.   
-   
+eine entsprechende Regel anzulegen.
+
 .. image:: media/SMB02.png
    :alt: Externer Speicher
    :align: center
 
 In den Einstellungen von ``Externer Speicher`` kannst du jetzt, wie oben im Bild zu sehen ist, die Tauschverzeichnisse und das Home-Verzeichnis ``/`` der Benutzer einbinden.
 
-.. warning::
-    Das Share ``/`` ist das Wurzelverzeichnis der Benutzer. Wenn sich ein Benutzer nicht am Schulserver anmelden kann, kann er sich auch nicht an der Nextcloud anmelden. Und das trifft für den Admin der Nextcloud zu!!!
-    Für den Share ``/`` müssen also die Gruppen angegeben werden, die Zugriff auf ein Home-Verzeichnis haben sollen. Sonst kann sich der Admin an der Nextcloud nicht mehr anmelden!!!
-    
+.. attention::
+
+   Das Share ``/`` ist das Wurzelverzeichnis der Benutzer. Wenn sich ein Benutzer nicht am Schulserver anmelden kann, kann er sich auch nicht an der Nextcloud anmelden. Und das trifft für den Admin der Nextcloud zu!!! Für den Share ``/`` müssen also die Gruppen angegeben werden, die Zugriff auf ein Home-Verzeichnis haben sollen. Sonst kann sich der Admin an der Nextcloud nicht mehr anmelden!!!
+
 .. important::
-   Du solltest das Share Tausch nicht für Schüler freigeben. Die Nextcloud registriert Änderungen nur dann, wenn ein Benutzer seine Dateien ändert oder wenn die Nextcloud selbst teilt. Wenn Schüler oder Schülerinnen an Dateien oder Verzeichnissen Änderungen vornehmen, wird die Desktop-App diese Änderungen bei anderen Benutzern nicht aktualisieren. 
-   Das passiert nicht, wenn du als Lehrer über die Nextcloud diese Tauschverzeichnisse mit den Schülern/Gruppen teilst. Dann arbeitet die Desktop-App einwandfrei. 
+
+  Du solltest das Share ``Tausch`` nicht für Schüler freigeben. Die Nextcloud registriert Änderungen nur dann, wenn ein Benutzer seine Dateien ändert, oder wenn die Nextcloud selbst teilt. Wenn Schüler oder Schülerinnen an Dateien oder Verzeichnissen Änderungen vornehmen, wird die Desktop-App diese Änderungen bei anderen Benutzern nicht aktualisieren. Das passiert nicht, wenn du als Lehrer über die Nextcloud diese Tauschverzeichnisse mit den Schülern/Gruppen teilst. Dann arbeitet die Desktop-App einwandfrei.
 
 .. image:: media/SMB03.png
    :alt: Anmeldedaten
@@ -48,12 +47,14 @@ In den Einstellungen von ``Externer Speicher`` kannst du jetzt, wie oben im Bild
 
 Achte darauf, dass du ``Anmeldedaten in Datenbank speichern`` wählst.
 
+.. attention::
+
+   Bei Auswahl dieser Option ist zu beachten, dass die Anmeldedaten in der Datenbank symmetrisch verschlüsselt werden. Der Schlüssel dazu wird in der config.php hinterlegt. Dies kann ein Sicherheitsrisiko darstellen, wenn der Server kompromittiert worden sein sollte. Der bessere Weg wäre, die Option **Anmeldedaten in Sitzung speichern** dies hat aber andere Nebeneffekte, so dass die Einbindung nicht erfolgreich funktioniert.
+
+Ob du die Vorschau aktivierst oder nicht hängt vom Standort der Nextcloud ab. Ist die Nextcloud nicht in der Schule gehostet und ist deine Internet-Verbindung eher langsam, so ist es besser, wenn du den Haken bei ``Vorschau aktivieren`` nicht setzt.
+
 .. image:: media/SMB04.png
    :alt: Vorschau aktivieren
    :align: center
-   
-Ob du die Vorschau aktivierst oder nicht hängt vom Standort der Nextcloud ab. Ist die Nextcloud nicht in der Schule gehostet und ist deine Internet-Verbindung eher langsam, so ist es besser, wenn du den Haken bei ``Vorschau aktivieren`` nicht setzt.
 
 Am Anfang scheint der Server noch langsam zu sein. Das liegt daran, dass die External Storage App einen Datei-Index aufbaut. Bei mir an der Schule hat das ca. 12 Stunden gedauert. Danach läuft die Nextcloud flott.
-
-
