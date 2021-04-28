@@ -159,15 +159,228 @@ Rufe nun das Setup für den linuxmuster Linux-Client wie folgt auf:
    sudo linuxmuster-lunuxclient7 setup
    sudo systemctl daemon-reload
 
-Sollten Fehler ausgegeben werden ...
+Sollten Fehler ausgegeben werden, kannst du dies beheben:
+
+.. code::
+
+  sudo mkdir -p /var/lib/samba/private/tls
+  sudo linuxmuster-lunuxclient7 setup
+
+Für den Domänenbeitritt wird dann das Kennwort des Domänen-Admins ``global-admin`` abgefragt.
+
+Am Ende des Domänen-Beitritts erfolgt eine Bestätigung, dass diese erfolgreich durchlaufen wurde.
+
+Image vorbereiten
+-----------------
+
+Der Linux-Client muss nun für die Erstellung des Images vorbereitet werden.
+Rufe hierzu den Befehl auf:
+
+.. code::
+
+   sudo linuxmuster-linuxclient7 prepare-image
+
+Der Client erhält Aktualisierungen und es werden einige Dateien (journalctl & apt-caches) vor der Image-Erstellung aufgeräumt.
+
+Die Home-Laufwerke der AD user auf dem Client werden ebenfalls geleert.
+
+Image erstellen
+---------------
+
+Führe einen Reboot des Linux-Client durch, so dass die VM via PXE in Linbo bootet.
+
+Nun erstellst du in Linbo über die Reiterkarte ``Imaging`` und dem Button ``Image erstellen`` das Image des neuen Muster-Linux-Image. 
+
+.. figure:: media/10-linux-client-ubu-install-step10.png
+   :align: center
+   :alt: Linux-Client: Create image
 
 
+Wähle den Imagenamen oder vergebe einen neuen Namen und klicke den Button ``Erstellen + Hochladen``.
+
+.. figure:: media/11-linux-client-ubu-install-step11.png
+   :align: center
+   :alt: Linux-Client: Create image & upload
+
+Dieser Vorgang dauert eine Zeit.
+
+.. figure:: media/12-linux-client-ubu-install-step12.png
+   :align: center
+   :alt: Linux-Client: Image upload
+
+Wurde der Vorgang erfolgreich beendet, kannst du nun unter der Reiterkarte ``Start`` den vorbereiteten Linux-Client synchronisiert starten und sich als Benutzer der Domäne anmelden.
+
+Update des Client
+=================
+
+Um den Linux-Client als Mustervorlage zu aktualisieren, Anpassungen vorzunehmen,
+startest du die VM synchronisiert und meldest dich lokal am Linux-Client mit dem Benutzer ``linuxadmin`` an.
+
+Danach installierst Du die benötigte Software und nimmst die gewünschten Einstellungen vor.
+
+Beispielsweise installierst Du auf dem Linux-Client zuerst Libre-Office:
+
+..code::
+
+   sudo apt update
+   sudo apt install libreoffice
+
+Hast du alle Anpassungen vorgenommen, must du noch den Linux-Client zur Erstellung des Imaging vorbereiten.
+
+Diese Arbeiten werden mit folgendem Befehl durchgeführt:
+
+.. code::
+
+ sudo linuxmuster-linuxclient7 prepare-image
+
+.. hint::
+
+  Sollte während des Updates oder der Image-Vorbereitung die Meldung kommen, dass lokale Änderungen der PAM-Konfiguration außer Kraft gesetzt werden sollen, wähle hier immer ``Nein`` (siehe Abb.), da sonst der konfigurierte Login nicht mehr funktioniert.
+
+.. figure:: media/13-linux-client-ubu-update-pam.png
+   :align: center
+   :alt: Linux-Client: Update - PAM Settings
+
+Solltest du versehentlich auf ``ja`` geklickt haben, kannst du dies mit folgendem Befehl reparieren:
+
+.. code::
+
+  sudo linuxmuster-linuxclient7 upgrade
+
+Nach der Vorbereitung des Image bootest du den Linux-Client erneut und erstellst wiederum, wie zuvor beschrieben, ein neues Image.
 
 
+Serverseitige Anpassungen
+=========================
+
+Damit der Linux-Client die Drucker automatisch ermittelt und der Proxy korrekt angesteuert wird, ist es erforderlich, dass auf dem linuxmuster.net Server einige Anpassungen vorgenommen werden.
 
 
+Proxy-Einstellungen
+-------------------
+
+Bei der Anmeldung vom Linux-Client werden sog. Hook-Skripte aufgerufen und ausgeführt.
+
+Diese finden sich auf dem linuxmuster.net Server im Verzeichnis: ``/var/lib/samba/sysvol/$server.$domain/scripts/$schoolname/custom/linux/``
+
+Hier findet sich das Skript ``logon.sh``, das immer dann ausgefüßhrt wird, ein Benutzer sich am Linux-Client anmeldet.
+
+Auf dem Server sind im Logon-Skript Einstellungen für den zu verwenden Proxy-Server zu verwenden, sofern dieser von den Linux-Clients zwingend mit SSO verwendet werden soll.
+
+Editiere die Datei ``/var/lib/samba/sysvol/$server.$domain/scripts/$schoolname/custom/linux/logon.sh`` und füge folgende Zeilen hinzu. Passe die ``Proxy_Domain`` für dein Einsatzszenario an.
+
+.. code::
+
+  PROXY_DOMAIN=linuxmuster.lan #change it to your DOMAIN
+  PROXY_HOST=http://firewall.$PROXY_DOMAIN
+  PROXY_PORT=3128
+
+  # set proxy via env (for Firefox)
+  lmn-export no_proxy=127.0.0.0/8,10.0.0.0/8,192.168.0.0/16,172.16.0.0/12,localhost,.local,.$PROXY_DOMAIN
+  lmn-export http_proxy=$PROXY_HOST:$PROXY_PORT
+  lmn-export ftp_proxy==$PROXY_HOST:$PROXY_PORT
+  lmn-export https_proxy==$PROXY_HOST:$PROXY_PORT
+
+  # set proxy gconf (for Chrome)
+  gsettings set org.gnome.system.proxy ignore-hosts "['127.0.0.0/8','10.0.0.0/8','192.168.0.0/16','172.16.0.0/12','localhost','.local','.$PROXY_DOMAIN']"
+  gsettings set org.gnome.system.proxy mode "manual"
+  gsettings set org.gnome.system.proxy.http port "$PROXY_PORT"
+  gsettings set org.gnome.system.proxy.http host "$PROXY_HOST"
+  gsettings set org.gnome.system.proxy.https port "$PROXY_PORT"
+  gsettings set org.gnome.system.proxy.https host "$PROXY_HOST"
+  gsettings set org.gnome.system.proxy.ftp port "$PROXY_PORT"
+  gsettings set org.gnome.system.proxy.ftp host "$PROXY_HOST"
 
 
+Drucker vorbereiten
+-------------------
+
+Damit Drucker automatisch gefunden werden und via GPO administriert werden können, ist es erforderlich, dass auf dem Server unter CUPS die Drucker einen identischen Namen aufweisen, so wie diese als Geräte in der ``/etc/linuxmuster/sophomorix/default-school/devices.csv`` eingetragen wurden.
+
+Drucker können im Active Directory Gruppen zugeordnet werden.
+
+Um ein Suchen nach Drucker auf den Clients zu unterbinden, so dass nur die Drucker zugeordnet werden, wie diese in den GPOs für die Gruppen definiert wurden, muss auf dem Server in der Datei ``etc/cups/cupsd.conf`` der Eintrag ``Browsing On`` auf ``Browsing Off`` umgestellt werden.
+
+
+Migration eines bestehenden Linux-Clients
+=========================================
+
+Wird ein Ubuntu 20.04 Linux-Client eingesetzt, der mit den bisherigen linuxmuster-client-servertools und dem Befehl linuxmuster-client eingerichtet wurde, so kann dieser vorbereitete Client migriert werden, so dass die aktuell gepflegten Pakete für linuxmuster-linuxclient7 genutzt werden können.
+
+Vorgehen
+--------
+
+1. VM anlegen und vorbereiten wie unter :ref:`add-computer-label` beschrieben.
+2. Für Linbo die start.conf der Hardwareklasse anpassen, so dass das bisherige Image angegeben wird.
+3. Start VM via PXE
+4. Anmelden als Benutzer ``linuxadmin``
+5. ggf. Backup der eigenen Skripte unter ``/etc/linuxmuster-client`` - diese werden automatisch gelöscht!
+6. entferne den alten Linux-Client vollständig
+7. Entferne das ale Proxy-Skript auf dem Client
+8. Entferne lightdm als Anmeldemanager
+9. Installiere gdm3 als Anmeldemanager
+10. Führe das Setup des neuen Pakets linuxmuster-linuxlient7 aus wie zuvor beschrieben
+11. Erstelle ein neues Image.
+
+
+.. attention:: Du musst als Benutzer linuxadmin angemeldet bleiben, solange bis das Setup des neuen Pakets linuxmuster-linuxclient7 vollständig abgeschlossen ist!
+
+Zu den Schritten 6. bis 10. findest du nachstehend Hinweise zur Umsetzung.
+
+Entferne die alten Linux-Client Pakete
+--------------------------------------
+
+Hast du den alten Linux-Client in der VM erfolgreich gestartet, meldest du dich als Benutzer ``linuxadmin`` an.
+
+Entferne danach die alten Linux-Client Pakete mit folgendem Befehl:
+
+.. code::
+
+   sudo apt purge linuxmuster-client-adsso
+
+Entferne der Verzeichnis ``linuxmuster-client`` mit folgendem Befehl:
+
+.. code::
+
+   sudo rm -r /etc/linuxmuster-client
+
+Entferne anschliessend das Proxy-Setup-Skript auf dem alten Linux-Client mit:
+
+.. code::
+
+  sudo rm /etc/profile.d/linuxmuster-proxy.sh
+
+
+Anmeldemanager wechseln
+-----------------------
+
+Das neue Paket linuxmuster-linuxclient7 benötigt als Anmeldemanager gdm3 und Gnome, so dass zuerst der bisherige Anmeldemanager zu deinstallieren ist. Die Dokumentation geht hier dabei davon aus, dass lightdm zu deinstallierenn ist. Ggf. must du das auf deinen genutzten Anmeldemanager anpassen.
+
+Lösche den Anmeldemanager ``lightdm`` mit dem Befehl:
+
+.. code::
+
+   sudo apt purge lightdm
+
+Danach installierst du ``gdm3`` mit:
+
+.. code:: 
+
+   sudo apt install --reinstall gdm3
+
+Räume danach die Pakete im Apt-cache auf mit:
+
+.. code::
+
+   sudo apt autoremove
+
+.. attention::
+
+   Bleibe weiterhin als Benutzer linuxadmin angemeldet, solange bis du das Setup des neuen Paketes linuxmuster-linuxclient7 abgeschlossen hast.
+
+Führe nun alle Schritte zur  Installation und zum Setup des neuens linuxmuster-linuxclient7 Pakets aus.
+
+Nach Abschluss des Setups erstellst du ein neues Image.
 
 
 Weiterführende Dokumentation
