@@ -12,21 +12,57 @@ Rechneraufnahme mit der Schulkonsole
 .. sectionauthor:: `@Alois <https://ask.linuxmuster.net/u/Alois>`_,
 		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_
 
-Um einen Rechner mit der Schulkonsole aufzunehmen geht man wie folgt vor: Melde dich an der Web-UI an.
+Um einen Rechner mit der Schulkonsole aufzunehmen geht man wie folgt vor: Melde dich als Benutzer ``global-admin`` an der Web-UI an.
 
-Im Menüpunkt ``GERÄTEVERWALTUNG/Geräte`` kann man nun `+ Gerät hinzufügen` anklicken. Standardmäßig sind die konfigurierten Server schon in der Liste mit der Rolle `Server` eingetragen.
+.. figure:: media/01-webui-login.png
+   :align: center
+   :alt: WebUI login
 
-.. image:: media/computer-add-add.png
+Wähle nach der Anmeldung links im Menü unter ``Geräteverwaltung --> Geräte``.
 
-In die sich öffnende Zeile gibt man unter Raum den Namen des Raumes (hier `server`) ein. Entsprechend verfährt man mit den Spalten `Hostname`, `Gruppe`, `MAC`, `IP` und `Sophomorix-Rolle`. Im Feld `PXE` wählt man aus, ob der Rechner mit Linbo synchronisiert werden soll. 
+.. figure:: media/02-webui-menue-devices.png
+   :align: center
+   :alt: WebUI menue devices
+ 
+Du siehst nun rechts im Hauptfenster die Eintragungen für die Geräte.
 
-Die Schaltfläche `SPEICHERN` überprüft die Eingabe. mit `SPEICHERN & IMPORTIEREN` werden die neuen Geräte imporiert.
+Als Spaltenköpfe werden u.a. der Raum, der Hostname etc. angegeben.
 
-.. image:: media/Webui5.png
+.. figure:: media/03-webui-devices-header.png
+   :align: center
+   :alt: WebUI devices column header
 
-Im folgenden erscheinen einige Log-Meldungen und - wenn der Import erfolgreich war - "Import abgeschlossen"
+Die konfigurierten Geräte werden hier alle angezeigt. Nachstehend sind die bereits konfigurierten Server in der Liste mit der Rolle ``Server`` eingetragen.
 
-.. image:: media/Webui6.png
+.. figure:: media/04-webui-devices-rows.png
+   :align: center
+   :alt: WebUI devices indicated - examples
+
+Um neue Geräte hinzuzufügen, klicke unten links auf den Eintrag ``Geräte hinzufügen``.
+
+.. figure:: media/05-webui-add-new-device.png
+   :align: center
+   :alt: WebUI menue item add devices
+
+Es wird eine neue Leerzeile hinzugefügt.
+
+.. figure:: media/06-webui-new-device.png
+   :align: center
+   :alt: WebUI add devices
+
+In die sich öffnende Zeile gibst du unter Raum den Namen des Raumes (hier ``server``) ein. Entsprechend verfährst du mit den Spalten Hostname, Gruppe, MAC, IP und Sophomorix-Rolle. Im Feld ``PXE`` wählst du aus, ob der Rechner beim Start mit Linbo synchronisiert werden soll.
+
+Die Schaltfläche ``SPEICHERN`` überprüft die Eingabe. Mit ``SPEICHERN & IMPORTIEREN`` werden die neuen Geräte imporiert.
+
+.. figure:: media/07-webui-save-and-add-devices.png
+   :align: center
+   :alt: WebUI add devices
+
+Danach erscheinen einige Log-Meldungen und - wenn der Import erfolgreich war - ``Import abgeschlossen``
+
+.. figure:: media/08-webui-add-devices-log.png
+   :align: center
+   :alt: WebUI add devices
 
 Aufnahme der Muster-Clients
 ===========================
@@ -41,34 +77,38 @@ Ziel ist es, dass alle PCs mit einem vordefinierten ``Muster-Image`` für Linux 
 
   Der Eintrag für den Muster-PC, der das Image pro Betriebssystem inkl. Domänenbeitritt erstellt hat, darf niemals aus der Liste der Geräte gelöscht werden.
 
-Empfehlung
-----------
+Vorgehen
+--------
 
-Es wird daher empfohlen, dass diese Muster-PCs vorab als virtuelle Maschinen (VM) für jedes Betriebssystem aufgebaut und für die weiteren Aktualisierungen genutzt werden. So wird sichergestellt, dass auch bei Austausch vorhandener Hardware der Muster-PC bestehen bleibt und somit für alle PCs die Anmeldung an der Domäne weiterhin korrekt funktioniert.
+Prinzipiell kann jeder PC genutzt werden, um für das jeweilige Betriebssystem als Muster-PC vorbereitet zu werden. Besonder flexibel ist es, den Muster-Client vorab als virtuelle Maschinen (VM) für jedes Betriebssystem aufzubauen und für die weiteren Aktualisierungen zu nutzen.
 
 Sollten verschiedene Betriebssysteme pro Rechner gestartet werden können, so wird jeweils ein anderes Image genutzt. Für jedes Image muss ein eigener Domänen-Beitritt ausgeführt worden sein. Startet man die verschiedenen Betriebssysteme auf dem Client im Wechsel, so würde der Domänenbeitritt falsch erkannt, wenn nicht jedes Betriebssystem mit einem eigenen Rechner und Muster-Image angelegt und gepflegt werden würde.
 
-Es wird daher empfohlen, pro genutzem Client-Betriebssystem eine eigene VM anzulegen, gewünschte Anpassungen vorzunehmen, den Domänenbeitritt auszuführen und das Image für das jeweilige Betriebssystem unter Linbo zu erstellen und für alle anderen PCs bereitzustellen. Diese VMs dürfen nicht aus der Liste Geräte entfernt werden. Dies ist wichtig, damit für die clients eine Domänenanmeldung weiterhin funktioniert. Alternativ könnten diese Images auch auch "echjter" Hardware erstellt werden, es darf dann allerdings kein alternativer Startvorgang eines anderen, in die Domäne eingebundenen, Betriebssystems erfolgen.
+Es wird daher empfohlen, pro genutzem Client-Betriebssystem einen eigene Muster-Client (ggf. als VM) anzulegen, gewünschte Anpassungen vorzunehmen, den Domänenbeitritt auszuführen und das Image für das jeweilige Betriebssystem unter Linbo zu erstellen und für alle anderen PCs bereitzustellen. Diese VMs dürfen nicht aus der Liste Geräte entfernt werden. Dies ist wichtig, damit für die clients eine Domänenanmeldung weiterhin funktioniert. 
 
-Entsprechend wird nachstehend das Vorgehen zur Aufnahme des Muster-Clients als VM dargestellt und die Schritte zum Aufbau eines Muster-Images.
+Entsprechend wird nachstehend das Vorgehen zur Aufnahme des Muster-Clients dargestellt und die Schritte zum Aufbau eines Muster-Images. An einigen Stellen werden ergänzende Hinweise zum Aufbau des Muster-Clients als VM gegeben, da je nach Virtualisierungsumgebung ein paar Besonderheiten zu beachten sind.
 
 Die Schritte sind wie folgt:
 
-1. VM anlegen
-2. VM als Rechner aufnehmen
-3. VM starten
+1. PC im Netz anschließen / VM anlegen und geeignete Netzwerkverbindung definieren
+2. PC/VM als Rechner aufnehmen
+3. PC/VM starten
 4. Client OS installieren
 5. Erstimage erstellen
 6. Domänenbeitritt ausführen
 7. Image erstellen
 
-Da für beide Client-Betriebssysteme die ersten Schritte identisch sind, werden diese für beide nachstehend beschrieben. Die Besonderheiten zur Einbindung der Clients je Betriebssystem werden anschliessend in den jeweiligen Kapiteln ``Linux-Clients`` und ``Windows-Clients`` beschrieben.
+Für beide Client-Betriebssysteme sind die ersten Schritte identisch. Diese sind nachstehend beschrieben. Die Besonderheiten zur Einbindung der Clients je Betriebssystem werden anschliessend in den Kapiteln ``Linux-Clients`` und ``Windows-Clients`` beschrieben.
 
 
-VM anlegen
-----------
+PC anschliessen / VM anlegen
+----------------------------
 
-Für die Muster-VM des Client Betriebssystems ist im jeweiligen Virtualisierer eine VM Maschine mit bsp. folgenden Rahmendaten anzulegen:
+Der PC, der als Hardware zum Aufbau des Muster-Clients genutzt werden soll, ist via Kabel im Netzwerk anzuschliessen.
+
+Alternativ kann für den Aufbau des Muster-Clients eine VM für das Client-Betriebssystems im jeweiligen Virtualisierer angelegt werden.
+
+NAchstehende Angaben geben ein Beispiel für die Rahmendaten einer solchen VM:
 
  * 4GB vRAM
  * mind. 1 vCPU mit 2 Kernen
@@ -79,25 +119,24 @@ Für die Muster-VM des Client Betriebssystems ist im jeweiligen Virtualisierer e
  * 50GB HDD (20GB OS + 20GB Cache + ggf. SWAP oder andere Partitionen)
 
 
-VM als Rechner aufnehmen
-------------------------
+PC / VM als Rechner aufnehmen
+-----------------------------
 
-Wie zuvor für PCs beschrieben, ist die VM mit der MAC-Adresse via Web-UI als Gerät hinzuzufügen.
+Wie zuvor für PCs beschrieben, ist nun der PC / die VM mit der MAC-Adresse via Web-UI als Gerät hinzuzufügen, so dass im Feld PXE ein Eintrag auf die Synchronisation mit Linbo hinweist.
 
-Dies kann auf dem Server auch alternativ via Konsole erfolgen. Hierzu ist die Datei ``/etc/linuxmuster/sophomorix/default-school/devices.csv`` anzupassen, so dass die VM mit der Hardwareklasse, MAC-Adresse und IP-Adresse und dem Linbo-Boot festgelegt werden.
+Hinweise zur VM
+^^^^^^^^^^^^^^^
 
-Dies kann z.B. wie nachstehend angegeben, erfolgen:
+.. attention::
 
-.. code::
+   Die nachstehnden Hinweise sind nur in Ausnahmefällen anzugeben. Durch diese Änderungen werden zudem Anpassungen in der Boot-Loader Konfiguration von Linbo für die Hardwareklasse nicht mehr bei einem ``linuxmuster-import-devices`` angewendet. 
 
-  client;vmubumuster;20210426_focalfossa_base;30:00:11:22:33:33;10.0.0.30;---;---;1;classroom-studentcomputer;---;1;;;;;1
- 
-
-Danach ist noch der Befehl ``linuxmuster-import-devices`` auszuführen. Jetzt fehlen für diese neue Hardware-Klasse (20210426_focalfossa_base) noch die Anpassungen in der Konfigurationsdatei ``start.conf.20210426_focalfossa_base``. Zudem sollten für die VM die VGA-Einstellungen sehr gering eingestellt werden, da die Anzeige in der Virtualisierungsumgebung sonst ggf. Probleme bereiten könnte.
+Sollte der Muster-Client als VM aufgebaut werden, so ist je nach eingesetzter Virtualisierungssoftware darauf zu achten, dass die VGA-Einstellungen eine geringe Auflösung und eine geringe Farbteife aufweisen.
 
 **VGA anpassen**
 
-Rufe auf dem Server die Datei ``/srv/linbo/boot/grub# vi 20210426_focalfossa_base.cfg`` auf.
+Unter XCP-ng 8.2 sind nachstehende Anpassungen erforderlich, da sonst während des Linbo Boot-Vorgangs ein Hinweis erscheint, dass die Farbtiefe nicht dargestellt werden kann. 
+Rufe auf dem Server die Datei ``/srv/linbo/boot/grub/20210426_focalfossa_base.cfg`` auf.
 
 Ersetze dort den Eintrag
 
@@ -118,14 +157,63 @@ durch die Angabe für die Bildschirmauflösung und Farbtiefe:
   set gfxmode=800x600x16
   set gfxpayload=keep
 
-Die Kommentarzeile ``  # ### managed by linuxmuster.net ###`` muss entfernt werden, damit beim nächsten linuxmuster-import-devices diese CFG-Datei nicht überschrieben wird.
+Die Kommentarzeile ``# ### managed by linuxmuster.net ###`` muss entfernt werden, damit beim nächsten ``linuxmuster-import-devices`` diese CFG-Datei nicht überschrieben wird.
 
 
-**start.conf erstellen**
+start.conf erstellen
+--------------------
 
-Für die Hardwareklasse (hier: 20210426_focalfossa_base) ist nun die Konfigurationsdatei ``/srv/linbo/start.conf.20210426_focalfossa_base`` anzupassen. Beispiele für die Linbo-Konfiguration für die gewünschten Clients finden sich ebenfalls auf dem Server unter ``/srv/linbo/examples``.
+Für die bei dem Hinzufügen des neuen Gerätes angegebene Hardwareklasse ist nun in der WebUI links im Menü ``Geräteverwaltung --> Linbo`` auszuwählen.
 
-Nachstehende Konfiguration gibt ein mögliches Beispiel für eine Linux-VM zur Vorbereitung des Muster-Clients an. Hierbei wird von einem Legacy-BIOS und BIOS als Betriebssystem ausgegangen:
+.. figure:: media/09-webui-menue-linbo.png
+   :align: center
+   :alt: WebUI menue linbo
+
+Um nun für den Muster-Client eine neue Hardwaregruppe für Linbo mit Startvorgaben zu erstellen, klickst du unten links auf ``+ERSTELLEN``.
+
+Es öffnet sich ein Kontextmenü und du kannst entweder ein ganz leere start.conf hierfür nutzen, oder eine bereits vordefinierte für dein gewünschtes Betriebssystem auswählen und dann anpassen.
+
+.. figure:: media/10-webui-menue-linbo-create-start-template.png
+   :align: center
+   :alt: WebUI menue linbo create start template
+
+Es öffnet sich ein fenster, in dem du die Namen der Hardwareklasse angibst, den du bereits beim Hinzufügen des Geräts festgelegt hattest.
+
+.. figure:: media/11-webui-menue-linbo-name-for-start-conf.png
+   :align: center
+   :alt: WebUI menue linbo hwc group name
+
+Danach gelangst du zu den Einstellungen der Hardwareklasse. Du kannst die Reiterkarten ``Allgmein`` und  ``Partitionen`` oben auswählen.
+
+Unter ``Allgemein`` legst Du die IP des Servers fest und gibst das Startverhalten und ggf. Kernel-Optionen für den Boot bei besonderer Hardware.
+
+.. figure:: media/12-webui-linbo-edit-new-group.png
+   :align: center
+   :alt: WebUI linbo edit new hwc group
+
+Unter ``Partitionen`` legst Du fest, welche Partitionen auf der Festplatte für welche Betriebssysteme oder zu welchem Zweck vorgesehen werden sollen.
+
+.. figure:: media/13-webui-linbo-edit-new-group-partition-scheme.png
+   :align: center
+   :alt: WebUI linbo edit new hwc group - partition scheme
+
+Löscht Du dort z.B. die Partitionen ``swap`` und ``data`` so sieht Deine Partitionierung wie folgt aus:
+
+.. figure:: media/14-webui-linbo-edit-new-group-partition-scheme-edited.png
+   :align: center
+   :alt: WebUI linbo edit new hwc group - partition scheme edited
+
+Um Einstellungen für das Betriebssystem vorzunehmen, klickst du auf das Stift-Icon (hier für ubuntu) und es öffnet sich ein weiteres Fenster, um Einstellungen für das Betriebssyystem vorzunehmen.
+
+.. figure:: media/15-webui-linbo-edit-new-group-os-infos-edited.png
+   :align: center
+   :alt: WebUI linbo edit new hwc group - os edited
+
+Unter der Reiterkarte ``OS`` legst du für das Betriebssystem (OS) die gewünschten Icons, die Start-Optionen und u.a. auch den Namen für das Basisimage fest. Zu Beginn bleibt hier der Eintrag ``None`` noch stehen, da du erst das Image für den Muster-Client erstellen willst.
+
+Auf dem linuxmuster.net Server werden die start.conf-Dateien im Verzeichnis ``/srv/linbo`` abgelegt. Jede Hardwareklasse hat eine eigene start.conf-Datei. Für die neu angelegte Hardware-Klasse des Muster-Clients wurde dort nun eine Datei ``start.conf.<name-der-hwk>`` erstellt.
+
+Nachstehende Konfiguration gibt ein mögliches Beispiel für die Konsolenausgabe einer ``start.conf.20210426_focalfossa_base`` einer Hardwareklasse 20210426_focalfossa_base (hier als Linux-Client) wieder. Hierbei wird von einem Legacy-BIOS und Linux als Betriebssystem ausgegangen:
 
 .. code::
 
@@ -159,26 +247,10 @@ Nachstehende Konfiguration gibt ein mögliches Beispiel für eine Linux-VM zur V
   [Partition]
   Dev = /dev/sda2
   Label = cache
-  Size = 20G
+  Size =        # verbleibender Plattenplatz wird als Cache genutzt
   Id = 83
   FSType = ext4
   Bootable = yes
-  
-  [Partition]
-  Dev = /dev/sda3
-  Label = swap
-  Size = 4G
-  Id = 82
-  FSType = swap
-  Bootable = no
-
-  [Partition]
-  Label = data
-  Dev = /dev/sda4
-  Size =
-  Id = 83
-  FSType = ext4
-  Bootable = no
   
   [OS]
   Name = Ubuntu 20.04 LTS
@@ -202,31 +274,50 @@ Nachstehende Konfiguration gibt ein mögliches Beispiel für eine Linux-VM zur V
   ForceOpsiSetup =
   Hidden = yes
 
-Danach ist wieder der Befehl ``linuxmuster-import-devices`` anzugeben.
+Nach Anlage der start.conf ist in der WebUI unter ``Geräteverwaltung --> Geräte`` erneut ``Speichern & Importieren`` auszuwählen, damit diese Einstellungen angwendet werden.
 
-VM starten
-----------
+Alternativ kann auf dem Server in der Konsole als Benutzer ``root`` der Befehl ``linuxmuster-import-devices`` angegeben werden.
 
-Mit o.g. Einstellungen wird die VM gestartet. Während des Boot-Vorgangs erhält die VM via PXE eine IP-Adresse und es wird Linbo geladen. Nachdem Linbo gestartet wurde melde dich als Root-Benutzer an und paritioniere und formatiert die Festplatte mit dem Button ``Imaging -> Partitionieren``. Danach beende die VM wieder.
-
-Client OS installieren
-----------------------
-
-Gebe in der VM nun an, dass von dem gewünschten ISO-Image gestartet werden soll, um das zu installierende Betriebssystem (OS) zu booten und zu installieren. Hierbei ist darauf zu achten, dass die Boot-Reihenfolge so geändert wird, dass zuerst von dem ISO-Image gestartet wird.
-
-Die VM ist mit den neuen Einstellungen nun zu starten und danach ist die Installation des Betriebssystems wie gewünscht durchzuführen.
-
-Image erstellen
+PC / VM starten
 ---------------
 
-Danach ist die VM herunterzufahren, die Boot Reihenfolge ist wieder zu ändern, so dass via PXE Linbo gebootet wird. Abschließend wird die VM neu gebootet und unter Linbo wird für das installierte Betriebssystem ein erstes Image erstellt.
+Mit o.g. Einstellungen wird nun der PC / die VM gestartet. Während des Boot-Vorgangs erhält die VM via PXE eine IP-Adresse und es wird Linbo geladen.
 
+Der Boot-Vorgang wird wie folgt angezeigt:
 
-.. hint::
+.. figure:: media/16-linbo-start-screen.png
+   :align: center
+   :alt: Linbo start screen
 
-   Je nach Virtualisierungsumgebung kann es erforderlich sein Linbo-Booteinstellungen in der start.conf bzw. in der CFG-Datei anzupassen. Wichtig ist, dass die VM neu gestartet und via PXE gebootet wird. Hierbei wird dieser eine IP zugeordnet und danach wird Linbo gestartet. Unter Linbo wird dann die Festplatte partitioniert, formatiert und danach wird erneut von dem ISO-Image gebootet, um das Betriebssystem zu installieren. Um ein Linbo-Image für den Client zu erstellen, muss die VM zuvor immer mit Linbo formatiert worden sein.
+Wurde in der start.conf kein ``Autostart`` gewählt, dann startet Linbo mit der  Linbo-Webui in folgenden Start-Bildschirm:
 
-.. hint:: Falls du zu dieser Seite von der Beschreibung einer Installation gekommen bist, dann folgende dem Pfeil!
+.. figure:: media/17-linbo-webui-start-screen.png
+   :align: center
+   :alt: Linbo WebUI start screen
+
+Klicke nun rechts auf das Icon für Einstellungen / Tools. Es erscheint ein neuer Bildschirm und du wirst aufgefordert das Kennwort für den Benutzer ``root`` anzugeben, um zu den weiteren Einstellungen zu gelangen.
+
+.. figure:: media/18-linbo-webui-root-login.png
+   :align: center
+   :alt: Linbo WebUI root login
+
+Gebe das Kennwort an. Die eingegebenen Ziffern werden hierbei nicht angezeigt. Klicke dann auf ``anmelden``.
+
+Danach erscheint der Bildschirm für die Linbo - Einstellungen:
+
+.. figure:: media/19-linbo-webui-settings.png
+   :align: center
+   :alt: Linbo WebUI settings
+
+Klicke nun auf den Menüeintrag ``Festplatte partitionieren``. Es öffnet sich ein neues Fenster mit der Rückfrage, ob wirklich partitioniert werden soll.
+
+.. figure:: media/20-linbo-webui-partitioning.png
+   :align: center
+   :alt: Linbo WebUI paritioning
+
+Bestätige die Paritionierung und Formatierung mit: ``ja``
+
+Fahre danach den PC / die VM über das Icon ``Herunterfahren`` (unten rechts) herunter.
 
 Setze die Installation des Muster-Client je nach gewünschtem Betriebssystem für Linux oder Windows durch Auswahl einer der nachstehnden Links entsprechend fort.
 
