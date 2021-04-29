@@ -20,18 +20,25 @@ Voraussetzung
 =============
 
 Du hast bereits:
-  - eine VM definiert,
+  - einen PC angeschlossen / eine VM definiert,
   - diese als Gerät in linuxmuster eingebunden,
-  - einen PXE Start der VM mit Linbo ausgeführt,
-  - mit Linbo die Festplatte partioniert und formatiert,
-  - die VM mit dem Ubuntu 20.04 ISO-Image gebootet.
+  - einen PXE Start für den PC / die VM mit Linbo ausgeführt,
+  - mit Linbo die Festplatte partioniert und formatiert.
 
 Falls dies noch nicht so ist, starte zuerst mit den Schritten, die im Kapiel :ref:`add-computer-label` beschrieben wurden und führe danach die, in dieser Anleitung beschriebenen Schritte durch.
 
 Einrichten eines Linux-Clients
 ==============================
 
-Nachdem du in der VM mit dem Ubuntu ISO-Image den Start ausgeführt hast, wählst Du auf dem Erstbildschirm aus, dass du Ubuntu installieren möchtest.
+Client OS installieren
+----------------------
+
+Gebe im PC / der VM nun an, dass von dem gewünschten ISO-Image gestartet werden soll, um das zu installierende Betriebssystem (OS) zu booten und zu installieren. Hierbei ist darauf zu achten, dass die Boot-Reihenfolge so geändert wird, dass zuerst von dem ISO-Image gestartet wird.
+
+Stelle also beim PC im BIOS die Bootreihenfolge so um, dass von CD oder USB-Stick das Ubuntu ISO-Image gestartet wird. Ändere in der VM bei den Einstellungen die Bootreihenfolge. Achte darauf, dass als CD/Boot-Image das gewünschte Ubuntu 20.04 Image eingehangen wurde und definiere dieses als Startmedium. Speichere die Einstellungen der VM.
+
+Starte nun den PC/die VM mit den neuen Einstellungen und führe danach die Installation des Betriebssystems wie gewünscht durch.
+Nachdem der Start vom Ubuntu ISO-Image ausgeführt wurde, wähle auf dem Erstbildschirm aus, dass du Ubuntu installieren möchtest.
 
 Installation Ubuntu
 -------------------
