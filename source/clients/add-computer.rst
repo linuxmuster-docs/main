@@ -86,17 +86,18 @@ Entsprechend wird nachstehend das Vorgehen zur Aufnahme des Muster-Clients darge
 
 Die Schritte sind wie folgt:
 
-1. PC im Netz anschließen / VM anlegen und geeignete Netzwerkverbindung definieren
-2. PC/VM als Rechner aufnehmen
-3. PC/VM via PXE mit Linbo starten
-4. Festplatte mit Linbo partitionieren/formatieren
-5. PC/VM vom ISO-Image booten
-6. Client OS installieren
-7. Erstimage erstellen
-8. Domänenbeitritt ausführen
-9. Image erstellen
+1.  PC im Netz anschließen / VM anlegen und geeignete Netzwerkverbindung definieren
+2.  Hardwareklasse für den PC/die VM konfigurieren
+3.  PC/VM als Rechner aufnehmen
+4.  PC/VM via PXE mit Linbo starten
+5.  Festplatte mit Linbo partitionieren/formatieren
+6.  PC/VM vom ISO-Image booten
+7.  Client OS installieren
+8.  Erstimage erstellen
+9.  Domänenbeitritt ausführen
+10. Image erstellen
 
-Für beide Client-Betriebssysteme sind die Schritte 1-3 identisch. Diese sind nachstehend beschrieben. Die Besonderheiten zur Einbindung der Clients je Betriebssystem werden anschliessend in den Kapiteln ``Linux-Clients`` und ``Windows-Clients`` beschrieben.
+Für beide Client-Betriebssysteme sind die Schritte 1-6 identisch. Diese sind nachstehend beschrieben. Die Besonderheiten zur Einbindung der Clients je Betriebssystem werden anschliessend in den Kapiteln ``Linux-Clients`` und ``Windows-Clients`` beschrieben.
 
 
 PC anschliessen / VM anlegen
