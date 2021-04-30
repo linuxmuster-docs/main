@@ -2,30 +2,27 @@
 
 .. _install-linux-clients-current-label:
 
-===============
- Linux-Clients
-===============
+===========================
+Muster-Clients installieren
+===========================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_, 
                    `@dorian <https://ask.linuxmuster.net/u/dorian>`_
 
+linuxmuster.net stellt für Ubuntu-Clients ein Paket ``linuxmuster-linuxclient7`` bereit, das den korrekten Domänenbeitritt durchführt und es ermöglicht, das Management beider Client-Betriebssystemen (Linux und Windows) durch Auslesen der GPO-Konfigurationen im Active Directory zu vereinheitlichen.
 
-In dieser Anleitung wird beschrieben, wie du Ubuntu - Linux auf einer Musterarbeitsstation installierst und den Domänenbeitritt ausführst, um das Image allen Linux-Clients zur Verfügung zu stellen.
-
-Die Beschreibung bezieht sich auf Ubuntu Desktop 20.04 LTS. Es sind aber auch andere Ubuntu clients mit GDM3 und Gnome Desktop denkbar.
-
-linuxmuster.net stellt für Ubuntu - Clients ein Paket ``linuxmuster-linuxclient7`` bereit, das den korrekten Domänenbeitritt durchführt und es ermöglicht, das Management beider Client-Betriebssystemen (Linux und Windows) durch Auslesen der GPO-Konfigurationen im Active Directory zu vereinheitlichen.
+Es werden ein Ubuntu Desktop 20.04 LTS sowie Ubuntu Distributionen mit GDM3 und Gnome Desktop unterstützt.
 
 Voraussetzung
 =============
 
 Du hast bereits:
   - einen PC angeschlossen / eine VM definiert,
-  - diese als Gerät in linuxmuster eingebunden,
-  - einen PXE Start für den PC / die VM mit Linbo ausgeführt,
+  - diese(n) als Gerät in linuxmuster eingebunden,
+  - einen PXE Start des PCs / der VM mit Linbo ausgeführt,
   - mit Linbo die Festplatte partioniert und formatiert.
 
-Falls dies noch nicht so ist, starte zuerst mit den Schritten, die im Kapiel :ref:`add-computer-label` beschrieben wurden und führe danach die, in dieser Anleitung beschriebenen Schritte durch.
+Falls dies noch nicht so ist, starte zuerst mit den Schritten, die im Kapitel :ref:`add-computer-label` beschrieben wurden und führe danach die, in dieser Anleitung beschriebenen Schritte durch.
 
 Einrichten eines Linux-Clients
 ==============================
@@ -33,12 +30,11 @@ Einrichten eines Linux-Clients
 Client OS installieren
 ----------------------
 
-Gebe im PC / der VM nun an, dass von dem gewünschten ISO-Image gestartet werden soll, um das zu installierende Betriebssystem (OS) zu booten und zu installieren. Hierbei ist darauf zu achten, dass die Boot-Reihenfolge so geändert wird, dass zuerst von dem ISO-Image gestartet wird.
+Gebe im PC / der VM nun an, dass von dem gewünschten ISO-Image gestartet werden soll. Hierbei ist darauf zu achten, dass die Boot-Reihenfolge so geändert wird, dass zuerst von dem ISO-Image gestartet wird.
 
-Stelle also beim PC im BIOS die Bootreihenfolge so um, dass von CD oder USB-Stick das Ubuntu ISO-Image gestartet wird. Ändere in der VM bei den Einstellungen die Bootreihenfolge. Achte darauf, dass als CD/Boot-Image das gewünschte Ubuntu 20.04 Image eingehangen wurde und definiere dieses als Startmedium. Speichere die Einstellungen der VM.
+Stelle also beim PC im BIOS die Bootreihenfolge so um, dass von CD oder USB-Stick das Ubuntu ISO-Image gestartet wird. Ändere in der VM bei den VM-Einstellungen die Bootreihenfolge. Achte darauf, dass als CD/Boot-Image das gewünschte Ubuntu 20.04 Image eingehangen wurde und definiere dieses als erstes Startmedium. Speichere die Einstellungen der VM.
 
-Starte nun den PC/die VM mit den neuen Einstellungen und führe danach die Installation des Betriebssystems wie gewünscht durch.
-Nachdem der Start vom Ubuntu ISO-Image ausgeführt wurde, wähle auf dem Erstbildschirm aus, dass du Ubuntu installieren möchtest.
+Starte nun den PC/die VM mit den neuen Einstellungen, so dass Ubuntu vom ISO-Image startet. Nachdem der Start ausgeführt wurde und der erste Ubuntu Desktop erscheint, wähle auf dem Erstbildschirm aus, dass du Ubuntu installieren möchtest.
 
 Installation Ubuntu
 -------------------
@@ -51,7 +47,7 @@ Bei der ``Installationsart`` wählst du ``Etwas Anderes`` aus.
    :align: center
    :alt: Ubuntu Installation Method
 
-Du hattest mit Linbo ja bereits die Festplatte partitioniert und formatiert, so dass du nun für die Installation die hierfür vorgesehene Partition auswählen musst und zugleich das Root-Verzeichnis ``/`` hier einhängen musst.
+Du hattest mit Linbo ja bereits die Festplatte partitioniert und formatiert, so dass du nun für die Installation die hierfür vorgesehene Partition auswählen und zugleich das Root-Verzeichnis ``/`` hier einhängen musst.
 
 Es werden dir die bereits vorhandenen Partitionen und Dateisysteme angezeigt. Je nach genutzter Virtualisierungsumgebung können die Festplattenbezeichnungen hier auch als ``/dev/sda`` und die Partionen als ``/dev/sda1`` etc. angezeigt werden.
 
@@ -77,7 +73,7 @@ Klicke auf ``ok`` und es werden dir die Einstellungen nochmals angezeigt (siehe 
 
 Stimmen diese Einstellungen nun für die Installation von Ubuntu, so setze diese mit dem Button ``Jetzt installieren`` fort.
 
-Im Verlaufe der Installation wirst du nach dem Benutzer und dem Kennwort gefragt. Gebe hier als Benutzer ``linuxadmin`` ein und passe den Namen des Rechners auf den der VM an, wie dieser in der Gerätekonfiguration der linuxmuster.net steht.
+Im Verlaufe der Installation wirst du nach dem Benutzer und dem Kennwort gefragt. Gebe hier als Benutzer ``linuxadmin`` ein und passe den Namen des Rechners auf den des PC / der VM an, wie dieser in der Gerätekonfiguration des linuxmuster.net Server steht.
 
 .. figure:: media/05-linux-client-ubu-install-step5.png
    :align: center
@@ -88,13 +84,13 @@ Am Ende der Installation wirst du aufgefordert, den Rechner neu zu starten. Fahr
 Erstimage estellen
 ------------------
 
-Passe die Boot-Reihenfolge für die VM so an, dass diese wieder via PXE Linbo bootet. In Linbo klicke auf die Reiterkarte ``Imaging``. Dort findest Du nun für Ubuntu 20.04 LTS einen Eintrag. Klicke hier nun auf den Button ``Image erstellen`` und lasse ein Erstimage für Ubuntu auf dem Server für die Hardware-Klasse der VM erstellen und lass es auf den Server hochladen.
+Passe die Boot-Reihenfolge für den PC / die VM jetzt so an, dass diese wieder via PXE Linbo bootet. In Linbo klicke auf die Reiterkarte ``Imaging``. Dort findest Du nun für Ubuntu 20.04 LTS einen Eintrag. Klicke hier nun auf den Button ``Image erstellen`` und lasse ein Erstimage für Ubuntu auf dem Server für die Hardware-Klasse der VM erstellen und lass es auf den Server hochladen.
 
 .. figure:: media/06-linux-client-ubu-install-step6.png
    :align: center
    :alt: Ubuntu Installation: Create first image
 
-Erscheint unten die Meldung, dass das Image erfolgreich hochgeladen werden konnte, so starte Ubuntu mit Linbo für das größe Icon, so dass eine Synchronsiation mit dem Image im Cache erfolgt.
+Erscheint unten die Meldung, dass das Image erfolgreich hochgeladen werden konnte, so starte Ubuntu via Linbo mit dem großen Icon, so dass eine Synchronsiation mit dem Image im Cache erfolgt.
 
 .. figure:: media/07-linux-client-ubu-install-step7.png
    :align: center
@@ -103,7 +99,7 @@ Erscheint unten die Meldung, dass das Image erfolgreich hochgeladen werden konnt
 Packet linuxmuster-linuxclient7 installieren
 --------------------------------------------
 
-Melde dich auf dem gestartenen Ubuntu 20.04 der VM als Benutzer ``linuxadmin`` an, der sudo - Berechtigungen hat.
+Melde dich an dem gestarteten Ubuntu 20.04 als Benutzer ``linuxadmin`` an, der sudo - Berechtigungen hat.
 
 .. figure:: media/08-linux-client-ubu-install-step8.png
    :align: center
@@ -118,9 +114,9 @@ Installiere das Paket ``linuxmuster-linuxclient7.deb`` wie folgt:
 1. Schritt
 ^^^^^^^^^^
 
-Öffen ein Terminal unter Ubuntu mit ``strg+t``, klicke unten links auf die Kackeln und gebe in der Suchzeile für Anwendungen ``Terminal`` ein.
+Öffen ein Terminal unter Ubuntu mit ``strg+t`` oder klicke unten links auf die Kacheln und gebe in der Suchzeile für Anwendungen ``Terminal`` ein.
 
-Im Terminal erstelle die Datei lmn7-client.list, um das Repository für den linuxmuster-client einzubinden. Rufe hierzu für den Editor Nano folgenden FBefehl auf: ``sudo nano /etc/apt/sources.list.de/lmn7-client.list`` und trage folgendes Repository ein:
+Im Terminal erstelle die Datei ``lmn7-client.list``, um das Repository für den linuxmuster-client einzubinden. Rufe hierzu für den Editor Nano mit folgendem Befehl zur Anlage der neuen Datei auf: ``sudo nano /etc/apt/sources.list.de/lmn7-client.list`` und trage folgendes Repository ein:
 
 .. code::
 
@@ -130,7 +126,7 @@ Im Terminal erstelle die Datei lmn7-client.list, um das Repository für den linu
 ^^^^^^^^^^
 
 Aktualisiere die Paketinformationen mit ``sudo apt update``.
-Laden den Schlüssel des Archivs herunter und füge diesen apt hinzu:
+Lade den Schlüssel des Archivs herunter und füge diesen apt hinzu:
 
 .. code::
 
@@ -163,19 +159,15 @@ Rufe nun das Setup für den linuxmuster Linux-Client wie folgt auf:
 
 .. code::
 
-   sudo linuxmuster-lunuxclient7 setup
-   sudo systemctl daemon-reload
-
-Sollten Fehler ausgegeben werden, kannst du dies beheben:
-
-.. code::
-
-  sudo mkdir -p /var/lib/samba/private/tls
-  sudo linuxmuster-lunuxclient7 setup
+   sudo linuxmuster-linuxclient7 setup
 
 Für den Domänenbeitritt wird dann das Kennwort des Domänen-Admins ``global-admin`` abgefragt.
 
-Am Ende des Domänen-Beitritts erfolgt eine Bestätigung, dass diese erfolgreich durchlaufen wurde.
+Am Ende des Domänen-Beitritts erfolgt eine Bestätigung, dass dieser erfolgreich durchgeführt wurde. Falls nicht, muss das Setup für linuxmuster-linuxclient7 erneut durchlaufen werden.
+
+.. hint::
+
+   Danach sollte unbedingt S O F O R T ein neues Image mit Linbo erstellt werden. Beim Neustart via PXE darf Ubuntu N I C H T mit dem Synchronisations-Button gestartet werden. Nachstehende Abschnitte beschreiben das Vorgehen.
 
 Image vorbereiten
 -----------------
@@ -189,10 +181,14 @@ Rufe hierzu den Befehl auf:
 
 Der Client erhält Aktualisierungen und es werden einige Dateien (journalctl & apt-caches) vor der Image-Erstellung aufgeräumt.
 
-Die Home-Laufwerke der AD user auf dem Client werden ebenfalls geleert.
+Die Home-Laufwerke der AD-user auf dem Client werden ebenfalls geleert.
 
 Image erstellen
 ---------------
+
+.. hint::
+
+    ggf. anpassen
 
 Führe einen Reboot des Linux-Client durch, so dass die VM via PXE in Linbo bootet.
 
