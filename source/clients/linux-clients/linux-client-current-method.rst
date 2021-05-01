@@ -126,20 +126,26 @@ Erscheint die Meldung, dass das Image erfolgreich hochgeladen werden konnte, so 
 Imagenamen eintragen (HWK)
 --------------------------
 
-Nachdem du nun das Image erstellt hast, musst du es noch deiner Hardwareklasse zuzuweisen. Denn zu Beginn hattest du bei der Rechneraufnahme für das Basisimage noch ``None`` eingetragen, bzw. stehen gelassen.
+Nachdem du nun das Image erstellt hast, musst du es noch deiner Hardwareklasse zuweisen. Denn zu Beginn hattest du bei der Rechneraufnahme für das Basisimage noch ``None`` eingetragen, bzw. stehen gelassen.
 
-Gehe dazu in der WebUI auf ``Geräteverwaltung -> Linbo -> <hwk auswählen>``. Wähle hier für dein Betriebssystem (Reiterkarte ``OS``) unter ``Basisimage`` den Namen deines erstellten Images aus (vgl. hierzu auch das Vorgehen unter :ref:`add-computer-label`). 
+Gehe dazu in der WebUI auf ``Geräteverwaltung -> Linbo -> Gruppen -> <hwk auswählen>``. Wähle hier unter ``Partitionen`` dein Betriebssystem (Reiterkarte ``OS``) aus und klicke das Stift-Icon. Klicke in dem sich öffnenden Fenster die Reiterkarte unter ``OS`` und klicke unter dem Eintrag ``Basisimage`` auf die Drop-down Liste und wähle das erstellte Image aus. (vgl. hierzu auch das Vorgehen unter :ref:`add-computer-label`).
 
-Klicke danach auf ``SPEICHEN & IMPORTIEREN``.
+.. figure:: media/12-linux-client-ubu-install.png
+   :align: center
+   :alt: Ubuntu Installation: indicate image name
 
-Starte dann den Client erneut mit Linbo und klicke nun das große Festplattensymbol, bzw. das Sybol welches du ausgewählt hast, um Ubuntu synchronisiert zu starten.
+Übernehme die Eintragungen jeweils mit ``SPEICHERN``.
+
+Klicke in der WebUI unter der ``Geräteverwaltung ->  Speichern & Importieren``.
+
+Starte danach den Client erneut mit Linbo und klicke nun das große Festplattensymbol bzw. das Symbol, welches du ausgewählt hast, um Ubuntu synchronisiert zu starten.
 
 Paket linuxmuster-linuxclient7 installieren
 --------------------------------------------
 
 Melde dich an dem gestarteten Ubuntu 20.04 als Benutzer ``linuxadmin`` an.
 
-.. figure:: media/12-linux-client-ubu-install.png
+.. figure:: media/13-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Setup: Login as linuxadmin
 
@@ -173,7 +179,7 @@ Aktualisiere die Paketinformationen mit ``sudo apt update``.
 
 Es kann sein, dass du den Hinweis erhältst, dass es GPG-Fehler gibt:
 
-.. figure:: media/13-linux-client-ubu-install.png
+.. figure:: media/14-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Setup: GPG errors
 
@@ -253,7 +259,7 @@ Das machst du mit folgendem Befehl:
 
   Sollte während des Updates oder der Image-Vorbereitung die Meldung erscheinen, dass lokale Änderungen der PAM-Konfiguration außer Kraft gesetzt werden sollen, wähle hier immer ``Nein`` (siehe Abb.), da sonst der konfigurierte Login nicht mehr funktioniert.
 
-.. figure:: media/14-linux-client-ubu-update-pam.png
+.. figure:: media/15-linux-client-ubu-update-pam.png
    :align: center
    :alt: Linux-Client: Update - PAM Settings
 
