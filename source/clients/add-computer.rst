@@ -58,7 +58,7 @@ Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM 
  * 50GB HDD (20GB OS + 20GB Cache + ggf. SWAP oder andere Partitionen)
 
 Hardwareklasse (HWK) / start.conf erstellen
---------------------------
+-------------------------------------------
 
 Melde dich als Benutzer ``global-admin`` an der Web-UI an.
 
@@ -222,7 +222,7 @@ Es wird eine neue Leerzeile hinzugefügt.
    :align: center
    :alt: WebUI add devices
 
-In diese neue Zeile gibst du unter Raum den Namen des Raumes (hier ``server``) ein. Entsprechend verfährst du mit den Spalten Hostname, MAC, IP und Sophomorix-Rolle.  Im Feil ``Gruppe`` trägst du den Namen deiner Hardwareklasse ein und im Feld ``PXE`` wählst du ``Linbo PXE`` aus.
+In diese neue Zeile gibst du unter Raum den Namen des Raumes (hier ``server``) ein. Entsprechend verfährst du mit den Spalten Hostname, MAC, IP und Sophomorix-Rolle.  Im Feld ``Gruppe`` trägst du den Namen deiner Hardwareklasse ein und im Feld ``PXE`` wählst du ``Linbo PXE`` aus.
 
 Die Schaltfläche ``SPEICHERN`` überprüft die Eingabe. Mit ``SPEICHERN & IMPORTIEREN`` werden die neuen Geräte importiert.
 
@@ -251,7 +251,7 @@ Sollte der Muster-Client als VM aufgebaut werden, so ist je nach eingesetzter Vi
 
    Nachstehende Hinweise gelten nur für eine VM unter XCP-ng.
 
-Unter XCP-ng 8.2 sind nachstehende Anpassungen erforderlich, da sonst während des Linbo Boot-Vorgangs ein Hinweis erscheint, dass die Farbtiefe nicht dargestellt werden kann. Rufe auf dem Server die Datei ``/srv/linbo/boot/grub/20210426_focalfossa_base.cfg`` auf.
+Unter XCP-ng 8.2 sind nachstehende Anpassungen erforderlich, da sonst während des Linbo Boot-Vorgangs ein Hinweis erscheint, dass die Farbtiefe nicht dargestellt werden kann. Rufe auf dem Server die Datei Grub-Datei deiner Hardwareklasse z.B. ``/srv/linbo/boot/grub/20210426_focalfossa_base.cfg`` auf.
 
 Ersetze dort den Eintrag
 
