@@ -10,7 +10,7 @@
 
 .. attention::
 
-  Das hier beschriebene Verfahren basiert auf der bereitstellung eines vorkonfigurierten Linux-Clients und dessen Einbindung in die Domäne mithilfe eines nicht weiter gepflegten Linux-Pakets für Ubuntu. Es gibt hierzu keine Unterstützung durch die Entwickler und es wurden immer wieder Probleme mit dem Domänenbeitritt berichtet. Es wird empfohlen, auf das aktuelle Verfahren zu wechseln.
+  Das hier beschriebene Verfahren basiert auf der Bereitstellung eines vorkonfigurierten Linux-Clients und dessen Einbindung in die Domäne mithilfe eines nicht weiter gepflegten Linux-Pakets für Ubuntu. Es gibt hierzu keine Unterstützung durch die Entwickler und es wurden immer wieder Probleme mit dem Domänenbeitritt berichtet. Es wird empfohlen, auf das aktuelle Verfahren zu wechseln.
 
 In dieser Anleitung wird beschrieben, wie du Linux auf einer Musterarbeitsstation installiert. Ein fertig vorkonfiguriertes Abbild liegt zum Download bei linuxmuster.net bereit und kann sofort auf alle Arbeitsstationen verteilt werden.
 

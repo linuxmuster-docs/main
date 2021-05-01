@@ -11,7 +11,7 @@
 
 In dieser Anleitung wird beschrieben, wie du Linux auf einer Musterarbeitsstation installierst und den Domänenbeitritt ausführst, um das Image allen Linux-Clients zur Verfügung zu stellen.
 
-Die Beschreibung bezieht sich auf Ubuntu Desktop 20.04 LTS. Es sind aber auch andere Ubuntu-Clients mit GDM3 und Gnome Desktop möglich.
+Offiziell wird aktuell nur Ubuntu 20.04 mit gdm3 und Gnome unterstzützt. Andere Ubuntu-basierte Distributionen mit gdm3 und Gnome könnten aber auch funktionieren.
 
 
 .. toctree::
