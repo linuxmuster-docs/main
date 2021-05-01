@@ -18,13 +18,13 @@ Ziel ist es, dass alle PCs mit einem vordefinierten ``Muster-Image`` für Linux 
 Vorgehen
 --------
 
-Prinzipiell kann jeder PC genutzt werden, um für das jeweilige Betriebssystem als Muster-PC vorbereitet zu werden. Besonder flexibel ist es, den Muster-Client vorab als virtuelle Maschinen (VM) für jedes Betriebssystem aufzubauen und für die weiteren Aktualisierungen zu nutzen.
+Prinzipiell kann jeder PC genutzt werden, um für das jeweilige Betriebssystem als Muster-PC vorbereitet zu werden. Besonder flexibel ist es, den Muster-Client vorab als virtuelle Maschine (VM) für jedes Betriebssystem aufzubauen und für die weiteren Aktualisierungen zu nutzen.
 
 Sollten verschiedene Betriebssysteme pro Rechner gestartet werden können, so wird jeweils ein anderes Image genutzt. Für jedes Image muss ein eigener Domänen-Beitritt ausgeführt worden sein. Startet man die verschiedenen Betriebssysteme auf dem Client im Wechsel, so würde der Domänenbeitritt falsch erkannt, wenn nicht jedes Betriebssystem mit einem eigenen Rechner und Muster-Image angelegt und gepflegt werden würde.
 
-Es wird daher empfohlen, pro genutzem Client-Betriebssystem einen eigene Muster-Client (ggf. als VM) anzulegen, gewünschte Anpassungen vorzunehmen, den Domänenbeitritt auszuführen und das Image für das jeweilige Betriebssystem unter Linbo zu erstellen und für alle anderen PCs bereitzustellen. Diese VMs dürfen nicht aus der Liste Geräte entfernt werden. Dies ist wichtig, damit für die clients eine Domänenanmeldung weiterhin funktioniert.
+Es wird daher empfohlen, pro genutzem Client-Betriebssystem einen eigenen Muster-Client (ggf. als VM) anzulegen, gewünschte Anpassungen vorzunehmen, den Domänenbeitritt auszuführen und das Image für das jeweilige Betriebssystem unter Linbo zu erstellen und für alle anderen PCs bereitzustellen. Diese VMs dürfen nicht aus der Liste Geräte entfernt werden. Dies ist wichtig, damit für die Clients eine Domänenanmeldung weiterhin funktioniert.
 
-Entsprechend wird nachstehend das Vorgehen zur Aufnahme des Muster-Clients dargestellt und die Schritte zum Aufbau eines Muster-Images. An einigen Stellen werden ergänzende Hinweise zum Aufbau des Muster-Clients als VM gegeben, da je nach Virtualisierungsumgebung ein paar Besonderheiten zu beachten sind.
+Entsprechend wird nachstehend das Vorgehen zur Vorbereitung und Aufnahme des Muster-Clients dargestellt und die Schritte zum Aufbau eines Muster-Images beschrieben. An einigen Stellen werden ergänzende Hinweise zum Aufbau des Muster-Clients als VM gegeben, da je nach Virtualisierungsumgebung ein paar Besonderheiten zu beachten sind.
 
 Die Schritte sind wie folgt:
 
@@ -42,25 +42,25 @@ Die Schritte sind wie folgt:
 Für beide Client-Betriebssysteme sind die Schritte 1-6 identisch. Diese sind nachstehend beschrieben. Die Besonderheiten zur Einbindung der Clients je Betriebssystem werden anschliessend in den Kapiteln ``Linux-Clients`` und ``Windows-Clients`` beschrieben.
 
 
-PC anschliessen / VM anlegen
+PC anschließen / VM anlegen
 ----------------------------
 
 Der PC, der als Hardware zum Aufbau des Muster-Clients genutzt werden soll, ist via Kabel im Netzwerk anzuschliessen.
 
 Alternativ kann für den Aufbau des Muster-Clients eine VM für das Client-Betriebssystems im jeweiligen Virtualisierer angelegt werden.
 
-Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM:
+Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM dar:
 
- * 4GB vRAM
+ * 4 GB vRAM
  * mind. 1 vCPU mit 2 Kernen
  * VGA mit 16GB Speicher
  * 1x vNIC (ggf. im "richtigen" VLAN)
  * PXE-Boot einstellen
- * Boot firmware: BIOS oder UEFI (je nach später genutzten PCs) - Achtung: start.conf von linbo anpassen -> siehe Hinweise bei den Client-Systemen
+ * Boot Firmware: BIOS oder UEFI (je nach später genutzten PCs) - Achtung: start.conf von linbo ggf. anpassen -> siehe Hinweise bei den Client-Systemen
  * 50GB HDD (20GB OS + 20GB Cache + ggf. SWAP oder andere Partitionen)
 
 HWK / start.conf erstellen
----------------------------
+--------------------------
 
 Melde dich als Benutzer ``global-admin`` an der Web-UI an.
 
@@ -76,7 +76,7 @@ Du erstellst nun die Konfiguration für die Hardwareklasse (HWK), die du vorher 
 
 Um für den Muster-Client eine neue Hardwaregruppe für Linbo mit Startvorgaben zu erstellen, klickst du unten links auf ``+ERSTELLEN``.
 
-Es öffnet sich ein Kontextmenü und du kannst entweder ein ganz leere start.conf hierfür nutzen, oder eine bereits vordefinierte für dein gewünschtes Betriebssystem auswählen und dann anpassen.
+Es öffnet sich ein Kontextmenü und du kannst entweder ein leere start.conf hierfür nutzen, oder eine bereits vordefinierte für dein gewünschtes Betriebssystem auswählen und anpassen.
 
 .. figure:: media/03-webui-menue-linbo-create-start-template.png
    :align: center
@@ -90,13 +90,13 @@ Es öffnet sich ein Fenster, in dem du die Namen der Hardwareklasse angibst, den
 
 Danach gelangst du zu den Einstellungen der Hardwareklasse. Du kannst die Reiterkarten ``Allgmein`` und  ``Partitionen`` oben auswählen.
 
-Unter ``Allgemein`` legst Du die IP des Servers fest und gibst das Startverhalten und ggf. Kernel-Optionen für den Boot bei besonderer Hardware an.
+Unter ``Allgemein`` legst du die IP des Servers fest und gibst das Startverhalten und ggf. Kernel-Optionen für den Boot bei besonderer Hardware an.
 
 .. figure:: media/05-webui-linbo-edit-new-group.png
    :align: center
    :alt: WebUI linbo edit new hwc group
 
-Unter ``Partitionen`` legst Du fest, welche Partitionen auf der Festplatte für welche Betriebssysteme oder zu welchem Zweck vorgesehen werden sollen.
+Unter ``Partitionen`` legst du fest, welche Partitionen auf der Festplatte für welche Betriebssysteme oder zu welchem Zweck vorgesehen werden sollen.
 
 .. figure:: media/06-webui-linbo-edit-new-group-partition-scheme.png
    :align: center
@@ -183,7 +183,7 @@ Nachstehende Konfiguration gibt ein mögliches Beispiel für die Konsolenausgabe
 PC / VM als Rechner aufnehmen
 -----------------------------
 
-Nachdem du nun die Eintragungen für die Hardwareklasse vorgenommen hast, musst du noch den PC / die VM mit der MAC-Adresse via Web-UI als Gerät hinzufügen, dieses der erstellten Hardwareklasse hinzufügen und im Feld PXE den Eintrag auf die Synchronisation mit Linbo setzen.
+Nachdem du nun die Eintragungen für die Hardwareklasse vorgenommen hast, musst du noch den PC / die VM mit der MAC-Adresse via Web-UI als Gerät hinzufügen, dieses der erstellten Hardwareklasse hinzufügen und im Feld PXE den Eintrag auf die Synchronisation mit Linbo setzen. Das Vorgehen dazu wird nachstehend beschrieben.
 
 Rechneraufnahme mit der Schulkonsole
 ====================================
@@ -284,15 +284,15 @@ Alternativ kann auf dem Server in der Konsole als Benutzer ``root`` der Befehl `
 PC / VM starten
 ---------------
 
-Mit o.g. Einstellungen startest du nun den PC / die VM. Während des Boot-Vorgangs erhält die VM via PXE eine IP-Adresse und es wird Linbo geladen.
+Mit o.g. Einstellungen startest du nun den PC / die VM. Während des Boot-Vorgangs erhält der PC / die VM via PXE eine IP-Adresse und es wird Linbo geladen.
 
-Der Boot-Vorgang wird wie folgt angezeigt:
+Der Boot-Vorgang sieht wie folgt aus:
 
 .. figure:: media/16-linbo-start-screen.png
    :align: center
    :alt: Linbo start screen
 
-Wurde in der start.conf kein ``Autostart`` gewählt, dann startet Linbo mit der  Linbo-Webui in folgenden Start-Bildschirm:
+Wurde in der start.conf kein ``Autostart`` gewählt, dann startet Linbo mit der Linbo-Webui in folgenden Start-Bildschirm:
 
 .. figure:: media/17-linbo-webui-start-screen.png
    :align: center
