@@ -1,5 +1,5 @@
 
-.. _howto-install-printer:
+.. _howto-install-printer-label:
 
 Drucker auf dem Server und den Clients einrichten
 =================================================
