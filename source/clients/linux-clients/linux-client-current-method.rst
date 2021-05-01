@@ -9,7 +9,7 @@ Linux-Client installieren
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_, 
                    `@dorian <https://ask.linuxmuster.net/u/dorian>`_
 
-linuxmuster.net stellt für Ubuntu-Clients das Paket ``linuxmuster-linuxclient7`` bereit, das automatisiert den Domänenbeitritt durchführt und das Management von Liux- und Windowsclients, durch Auslesen der GPO-Konfigurationen im Active Directory, vereinheitlicht.
+linuxmuster.net stellt für Ubuntu-Clients das Paket ``linuxmuster-linuxclient7`` bereit. Es führt automatisiert den Domänenbeitritt aus und das vereinheitlicht das Management von Liux- und Windowsclients durch Auslesen der GPO-Konfigurationen im Active Directory.
 
 Offiziell wird aktuell nur Ubuntu 20.04 mit gdm3 und Gnome unterstzützt. Andere Ubuntu-basierte Distributionen mit gdm3 und Gnome könnten aber auch funktionieren.
 
@@ -17,12 +17,13 @@ Voraussetzung
 =============
 
 Du hast bereits:
-  - einen PC angeschlossen / eine VM definiert,
-  - diese(n) als Gerät in linuxmuster eingebunden,
-  - einen PXE Start des PCs / der VM mit Linbo ausgeführt,
-  - mit Linbo die Festplatte partioniert und formatiert.
+   1.  PC im Netz angeschlossen / VM angelegt und geeignete Netzwerkverbindung definiert
+   2.  Eine Hardwareklasse für den PC/die VM konfiguriert
+   3.  PC/VM als Rechner augfenommen
+   4.  PC/VM via PXE mit Linbo gestartet
+   5.  Die Festplatte mit Linbo partitioniert und formatiert
 
-Falls dies noch nicht so ist, starte zuerst mit den Schritten, die im Kapitel :ref:`add-computer-label` beschrieben wurden und führe danach die in dieser Anleitung beschriebenen Schritte durch.
+Falls du das noch nicht getan hast, starte zuerst mit den Schritten, die im Kapitel :ref:`add-computer-label` beschrieben werden und mache erst danach hier weiter.
 
 Einrichten eines Linux-Clients
 ==============================
@@ -30,16 +31,14 @@ Einrichten eines Linux-Clients
 Client OS installieren
 ----------------------
 
-Gib im PC / der VM nun an, dass von dem gewünschten ISO-Image gestartet werden soll. Hierbei ist darauf zu achten, dass die Boot-Reihenfolge so geändert wird, dass zuerst von dem ISO-Image gestartet wird.
+Gib im PC / in der VM nun an, dass von dem gewünschten ISO-Image / der Installations-DVD gestartet werden soll. Hierbei musst du darauf achten, die Boot-Reihenfolge so zu ändern, dass nicht mehr vom Netzwerk, sondern von der ISO-Datei / der Installations-DVD gebootet wird.
 
-Stelle also beim PC im BIOS die Bootreihenfolge so um, dass von CD oder USB-Stick das Ubuntu ISO-Image gestartet wird. Ändere in der VM bei den VM-Einstellungen die Bootreihenfolge. Achte darauf, dass als CD/Boot-Image das gewünschte Ubuntu 20.04 Image eingehangen wurde und definiere dieses als erstes Startmedium. Speichere die Einstellungen der VM.
-
-Starte nun den PC/die VM mit den neuen Einstellungen, so dass Ubuntu vom ISO-Image startet. Nachdem der Start ausgeführt wurde und der erste Ubuntu Desktop erscheint, wähle auf dem Erstbildschirm aus, dass du Ubuntu installieren möchtest.
+Starte nun den PC/die VM mit den neuen Einstellungen, sodass Ubuntu vom ISO-Image / von der Installations-DVD startet. Nachdem der Start ausgeführt wurde, wähle auf dem ersten Bildschirm aus, dass du Ubuntu installieren möchtest.
 
 Installation Ubuntu
 -------------------
 
-Du gibst in den ersten Schritten der Installation die gewünschte Sprache und Tastaturbelegung an.
+Gib in den ersten Schritten der Installation die gewünschte Sprache und Tastaturbelegung an.
 
 Bei der ``Installationsart`` wählst du ``Etwas Anderes`` aus.
 
@@ -47,17 +46,17 @@ Bei der ``Installationsart`` wählst du ``Etwas Anderes`` aus.
    :align: center
    :alt: Ubuntu Installation Method
 
-Du hattest mit Linbo ja bereits die Festplatte partitioniert und formatiert, so dass du nun für die Installation die hierfür vorgesehene Partition auswählen und zugleich das Root-Verzeichnis ``/`` hier einhängen musst.
+Du hattest mit Linbo ja bereits die Festplatte partitioniert und formatiert.
 
-Es werden dir die bereits vorhandenen Partitionen und Dateisysteme angezeigt. Je nach genutzter Virtualisierungsumgebung können die Festplattenbezeichnungen hier auch als ``/dev/sda`` und die Partionen als ``/dev/sda1`` etc. angezeigt werden.
+Es werden dir also die bereits vorhandenen Partitionen und Dateisysteme angezeigt. Je nach genutzter Virtualisierungsumgebung / Hardware können die Festplattenbezeichnungen hier auch als ``/dev/sda`` und die Partionen als ``/dev/sda1`` etc. angezeigt werden.
 
-Wähle, wie in der nachstehenden Abb. zu sehen ist, die Partition aus, auf der Ubuntu installiert werden soll.
+Wähle, wie in der nachstehenden Abb. zu sehen, die Partition aus, auf der Ubuntu installiert werden soll.
 
 .. figure:: media/02-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Installation Method - Partitions
 
-Klicke nun auf ``Ändern`` und es erscheint nachstehendes Fenster:
+Klicke nun auf ``Ändern`` und es erscheint das nächste Fenster:
 
 .. figure:: media/03-linux-client-ubu-install.png
    :align: center
@@ -65,26 +64,26 @@ Klicke nun auf ``Ändern`` und es erscheint nachstehendes Fenster:
 
 Belasse die angezeigte Größe und das Dateisystem. Setze den Haken bei ``Partition formatieren`` und wähle als ``Einbindungspunkt`` das Root-Verzeichnis ``/`` aus.
 
-Klicke auf ``ok`` und es werden dir die Einstellungen nochmals angezeigt (siehe nachstehende Abb.):
+Klicke auf ``ok`` und es werden nochmals alle Einstellungen angezeigt:
 
 .. figure:: media/04-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Installation Method - Partitions Overview
 
-Stimmen diese Einstellungen nun für die Installation von Ubuntu, so setze diese mit dem Button ``Jetzt installieren`` fort.
+Sind diese Einstellungen korrekt, so setze die Installation mit dem Button ``Jetzt installieren`` fort.
 
-Im Verlaufe der Installation wirst du nach dem Benutzer und dem Kennwort gefragt. Gebe hier als Benutzer ``linuxadmin`` ein und passe den Namen des Rechners auf den des PC / der VM an, wie dieser in der Gerätekonfiguration des linuxmuster.net Server steht.
+Im Verlauf der Installation wirst du nach dem Namen für den Computer und dem Benutzername und Kennwort für den neuen Administrator gefragt. Gib hier als Benutzername ``linuxadmin`` ein. Beim Namen des Rechners musst du den Namen des PCs / der VM angeben, wie du ihn in der Gerätekonfiguration des festgelegt hast.
 
 .. figure:: media/05-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Installation: linuxadmin user
 
-Am Ende der Installation wirst du aufgefordert, den Rechner neu zu starten. Fahre die VM herunter und werfe das ISO-Image aus.
+Am Ende der Installation wirst du aufgefordert, den Rechner neu zu starten. Fahre die VM herunter und werfe das ISO-Image / die Installations-DVD aus.
 
 Erstimage erstellen
 -------------------
 
-Passe die Boot-Reihenfolge für den PC / die VM jetzt so an, dass diese wieder via PXE Linbo bootet. Du siehst Dann die Startoptionen in Linbo für das installierte Ubuntu 20.04.
+Passe die Boot-Reihenfolge für den PC / die VM jetzt so an, dass diese wieder via PXE bootet. Du siehst dann die Startoptionen in Linbo für das installierte Ubuntu 20.04.
 
 .. figure:: media/06-linux-client-ubu-install.png
    :align: center
@@ -108,7 +107,7 @@ Klicke dann auf ``anmelden`` und du gelangst zu folgender Ansicht:
    :align: center
    :alt: Ubuntu Installation: linbo menue for imaging
 
-Klicke auf das große Festplatten-Icon, das in der Ecke rechts unten farblich markiert ist, um nun ein Image zu erstellen.
+Klicke auf das große Festplatten-Icon, das in der Ecke rechts unten farblich markiert ist, um nun ein Image zu erstellen. Anstatt des Festplatten-Icons wird bei dir eventuell das Icon des Betriebssystems angezeigt, dass du in der WebUI festgelegt hast.
 
 Es wird ein neues Fenster geöffnet:
 
@@ -116,9 +115,9 @@ Es wird ein neues Fenster geöffnet:
    :align: center
    :alt: Ubuntu Installation: linbo imaging
 
-Wähle aus, dass du ein neues Image erstellen möchtest, gebe einen Namen für das Image an und klicke auf ``erstellen + hochladen``.
+Wähle aus, dass du ein neues Image erstellen möchtest, gib einen Namen für das Image an und klicke auf ``erstellen + hochladen``.
 
-Erscheint die Meldung, dass das Image erfolgreich hochgeladen werden konnte, so klicke unten rechts auf das oberste Symbol, um dich bei den Tools von Linbo abzumelden. 
+Erscheint die Meldung, dass das Image erfolgreich hochgeladen werden konnte, so klicke unten rechts auf das oberste Symbol, um dich abzumelden. 
 
 .. figure:: media/11-linux-client-ubu-install.png
    :align: center
@@ -127,18 +126,18 @@ Erscheint die Meldung, dass das Image erfolgreich hochgeladen werden konnte, so 
 Imagenamen eintragen (HWK)
 --------------------------
 
-Nachdem du nun das Image erstellt hast, trage nun noch den von dir festgelegten Namen für das Image in der Hardwareklasse für deinen Muster-Client ein. Zu Beginn bei der Rechneraufnahme hattes du für das Basisimage noch ``None`` eingetragen bzw. stehen gelassen.
+Nachdem du nun das Image erstellt hast, musst du es noch deiner Hardwareklasse zuzuweisen. Denn zu Beginn hattest du bei der Rechneraufnahme für das Basisimage noch ``None`` eingetragen, bzw. stehen gelassen.
 
-Gehe dazu in der WebUI auf ``Geräteverwaltung -> Linbo -> <hwk auswählen>``. Wähle hier für dein Betriebssystem (Reiterkarte ``OS``) unter ``Basisimage`` den Namen deines erstellten Images aus (vgl. hierzu auch das Vorgehen unter :ref:`add-computer-label`. 
+Gehe dazu in der WebUI auf ``Geräteverwaltung -> Linbo -> <hwk auswählen>``. Wähle hier für dein Betriebssystem (Reiterkarte ``OS``) unter ``Basisimage`` den Namen deines erstellten Images aus (vgl. hierzu auch das Vorgehen unter :ref:`add-computer-label`). 
 
 Klicke danach auf ``SPEICHEN & IMPORTIEREN``.
 
-Starte dann den Client erneut mit Linbo und klicke nun das große Festplattensymbol, um Ubuntu synchronisiert zu starten.
+Starte dann den Client erneut mit Linbo und klicke nun das große Festplattensymbol, bzw. das Sybol welches du ausgewählt hast, um Ubuntu synchronisiert zu starten.
 
-Packet linuxmuster-linuxclient7 installieren
+Paket linuxmuster-linuxclient7 installieren
 --------------------------------------------
 
-Melde dich an dem gestarteten Ubuntu 20.04 als Benutzer ``linuxadmin`` an, der sudo - Berechtigungen hat.
+Melde dich an dem gestarteten Ubuntu 20.04 als Benutzer ``linuxadmin`` an.
 
 .. figure:: media/12-linux-client-ubu-install.png
    :align: center
@@ -155,7 +154,7 @@ Installiere das Paket ``linuxmuster-linuxclient7`` wie folgt:
 
 Öffne ein Terminal unter Ubuntu mit ``strg+t`` oder klicke unten links auf die Kacheln und gebe in der Suchzeile als Anwendung ``Terminal`` ein.
 
-Erstelle im Terminal die Datei ``lmn7-client.list``, um das Repository für den linuxmuster-client einzubinden. Rufe hierzu für den Editor Nano mit folgendem Befehl zur Anlage der neuen Datei auf: ``sudo nano /etc/apt/sources.list.de/lmn7-client.list`` und trage folgendes Repository ein:
+Erstelle im Terminal die Datei ``lmn7-client.list``, um das Repository für den linuxmuster-client einzubinden. Rufe hierzu für den Editor Nano mit folgendem Befehl auf: ``sudo nano /etc/apt/sources.list.de/lmn7-client.list`` und trage folgende Zeile ein:
 
 .. code::
 
@@ -164,7 +163,7 @@ Erstelle im Terminal die Datei ``lmn7-client.list``, um das Repository für den 
 2. Schritt
 ^^^^^^^^^^
 
-Lade den Schlüssel des Archivs herunter und füge diesen den apt-sources hinzu:
+Lade den Schlüssel des Archivs herunter und installiere ihn:
 
 .. code::
 
@@ -172,36 +171,36 @@ Lade den Schlüssel des Archivs herunter und füge diesen den apt-sources hinzu:
 
 Aktualisiere die Paketinformationen mit ``sudo apt update``.
 
-Es kann sein, dass du den Hinweis erhälst, dass es GPG-Fehler gibt.
+Es kann sein, dass du den Hinweis erhältst, dass es GPG-Fehler gibt:
 
 .. figure:: media/13-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Setup: GPG errors
 
-Diese Fehler kannst du beheben, indem du nachstehenden Befehl angibst.
+Diesen Fehler kannst du beheben, indem du folgenden Befehl ausführst:
 
 .. code::
 
    sudo apt -o Acquire::AllowInsecureRepositories=true -o Acquire::AllowDowngradeToInsecureRepositories=true update
 
-Der Fehler wird zwar weiterhin angezeigt. Du kannst nun aber das linuxmuster-linuxlcient7 - Paket installieren.
+Der Fehler wird zwar weiterhin angezeigt, du kannst nun aber das linuxmuster-linuxlcient7 - Paket installieren.
 
 3. Schritt
 ^^^^^^^^^^
-Führe die Installation des linuxclient7 - Pakets mit ``sudo apt install linuxmuster-linuxclient7 -y`` durch.
+Führe die Installation des Pakets mit ``sudo apt install linuxmuster-linuxclient7 -y`` durch.
 
 Setup
 -----
 
-Rufe nun das Setup für den linuxmuster Linux-Client wie folgt auf:
+Um den Domänenbeitritt auszuführen, rufe das Setup des linuxmuster-linuxclient7 auf:
 
 .. code::
 
    sudo linuxmuster-linuxclient7 setup
 
-Für den Domänenbeitritt wird dann das Kennwort des Domänen-Admins ``global-admin`` abgefragt.
+Für den Domänenbeitritt wird das Kennwort des Domänen-Admins ``global-admin`` abgefragt.
 
-Am Ende des Domänen-Beitritts erfolgt eine Bestätigung, dass dieser erfolgreich durchgeführt wurde. Falls nicht, musst du das Setup für linuxmuster-linuxclient7 erneut durchlaufen.
+Am Ende des Domänenbeitritts erfolgt eine Bestätigung, dass dieser erfolgreich durchgeführt wurde. Falls nicht, musst du das Setup für den linuxmuster-linuxclient7 erneut durchlaufen.
 
 Image vorbereiten
 -----------------
@@ -211,29 +210,27 @@ Rufe hierzu den Befehl auf:
 
 .. code::
 
-   sudo linuxmuster-linuxclient7 prepare-image
+   sudo linuxmuster-linuxclient7 prepare-image -y
 
-Der Client erhält Aktualisierungen und es werden einige Dateien (journalctl & apt-caches) vor der Image-Erstellung aufgeräumt.
-
-Die Home-Laufwerke der AD-user werden auf dem Client ebenfalls geleert.
+Der Client erhält daruch Aktualisierungen und es werden einige Dateien (journalctl & apt-caches) aufgeräumt, um Speicherplatz im Image zu sparen.
 
 .. hint::
 
-   Danach sollte unbedingt S O F O R T ein neues Image mit Linbo erstellt werden. Beim Neustart via PXE darf Ubuntu N I C H T gestartet werden. Nachstehende Abschnitte beschreiben das Vorgehen.
+   Danach sollte unbedingt S O F O R T ein neues Image mit Linbo erstellt werden. Beim Neustart via PXE darf Ubuntu N I C H T gestartet werden.
 
 Image erstellen
 ---------------
 
-Führe einen Reboot des Linux-Client durch, so dass die VM via PXE in Linbo bootet.
+Führe einen Neustart des Linux-Client durch, sodass die VM via PXE in Linbo bootet.
 
-Nun erstellst du in Linbo - genauso wie zuvor unter **Erstimage erstellen** beschrieben - das Image des neuen Muster-Clients für Linux.
+Nun erstellst du in Linbo - genauso wie zuvor unter **Erstimage erstellen** beschrieben - das Image des neuen Muster-Clients für Linux. Achte hierbei darauf, dass du diese Mal NICHT ``neues Image erstellen``, sondern ``aktuelles Image ersetzen`` auswählst.
 
-Wurde der Vorgang erfolgreich beendet, kannst du nun unter der Reiterkarte ``Start`` den vorbereiteten Linux-Client synchronisiert starten und dich als Benutzer an der Domäne anmelden.
+Wurde der Vorgang erfolgreich beendet, kannst du dich wieder abmelden und den vorbereiteten Linux-Client synchronisiert starten. Nun sollte die Anmeldung mit jedem in der Schulkonsole eingetragenen Benutzer funktionieren.
 
 Eigene Anpassungen im Image
 ===========================
 
-Um den Linux-Client als Mustervorlage zu aktualisieren und Anpassungen vorzunehmen, startest du die VM synchronisiert und meldest dich lokal am Linux-Client mit dem Benutzer ``linuxadmin`` an.
+Um den Linux-Client als Mustervorlage zu aktualisieren und Anpassungen vorzunehmen, startest du den Client synchronisiert und meldest dich mit dem Benutzer ``linuxadmin`` an.
 
 Danach installierst du die benötigte Software und nimmst die gewünschten Einstellungen vor.
 
@@ -244,9 +241,9 @@ Beispielsweise installierst du auf dem Linux-Client zuerst Libre-Office:
    sudo apt update
    sudo apt install libreoffice
 
-Hast du alle Anpassungen vorgenommen, musst du noch den Linux-Client zur Erstellung des Images vorbereiten.
+Hast du alle Anpassungen vorgenommen, musst du den Linux-Client noch zur Erstellung des Images vorbereiten.
 
-Diese Arbeiten werden mit folgendem Befehl durchgeführt:
+Das machst du mit folgendem Befehl:
 
 .. code::
 
@@ -254,25 +251,25 @@ Diese Arbeiten werden mit folgendem Befehl durchgeführt:
 
 .. hint::
 
-  Sollte während des Updates oder der Image-Vorbereitung die Meldung kommen, dass lokale Änderungen der PAM-Konfiguration außer Kraft gesetzt werden sollen, wähle hier immer ``Nein`` (siehe Abb.), da sonst der konfigurierte Login nicht mehr funktioniert.
+  Sollte während des Updates oder der Image-Vorbereitung die Meldung erscheinen, dass lokale Änderungen der PAM-Konfiguration außer Kraft gesetzt werden sollen, wähle hier immer ``Nein`` (siehe Abb.), da sonst der konfigurierte Login nicht mehr funktioniert.
 
 .. figure:: media/14-linux-client-ubu-update-pam.png
    :align: center
    :alt: Linux-Client: Update - PAM Settings
 
-Solltest du versehentlich auf ``ja`` geklickt haben, kannst du dies mit folgendem Befehl reparieren:
+Solltest du versehentlich auf ``ja`` ausgewählt haben, kannst du die Anmeldung mit folgendem Befehl reparieren:
 
 .. code::
 
   sudo linuxmuster-linuxclient7 upgrade
 
-Nach der Vorbereitung des Image bootest du den Linux-Client erneut und erstellst wiederum, wie zuvor beschrieben, ein neues Image.
+Im Anschluss startest Linux-Client neu und erstellst wiederum, wie zuvor beschrieben, ein neues Image. Auch hier: wählie NICH ``neues Image erstellen``, sondern ``aktuelles Image ersetzen`` aus.
 
 
 Serverseitige Anpassungen
 =========================
 
-Damit der Linux-Client die Drucker automatisch ermittelt und der Proxy korrekt angesteuert wird, ist es erforderlich, dass auf dem linuxmuster.net Server einige Anpassungen vorgenommen werden.
+Damit der Linux-Client die Drucker automatisch ermittelt und der Proxy korrekt eingerichtet wird, ist es erforderlich, dass auf dem linuxmuster Server einige Anpassungen vorgenommen werden.
 
 
 Proxy-Einstellungen
@@ -280,17 +277,17 @@ Proxy-Einstellungen
 
 Bei der Anmeldung vom Linux-Client werden sog. Hook-Skripte ausgeführt.
 
-Diese finden sich auf dem linuxmuster.net Server im Verzeichnis: ``/var/lib/samba/sysvol/linuxmuster.lan/scripts/default-school/custom/linux/``
+Diese finden sich auf dem linuxmuster Server im Verzeichnis: ``/var/lib/samba/sysvol/linuxmuster.lan/scripts/default-school/custom/linux/``.
 
 .. hint::
 
-   Ersetze ``linuxmuster.lan`` durch den von dir beim setup festgelegten Domänennamen.
+   Ersetze ``linuxmuster.lan`` durch den von dir beim Setup festgelegten Domänennamen.
 
-Hier findet sich das Skript ``logon.sh``, das immer dann ausgeführt wird, wenn sich ein Benutzer am Linux-Client anmeldet.
+Hier findet sich das Logon-Skript (``logon.sh``). Es wird immer dann ausgeführt, wenn sich ein Benutzer am Linux-Client anmeldet.
 
-Auf dem Server musst du im Logon-Skript die Einstellungen für den zu verwenden Proxy-Server festlegen, sofern dieser von den Linux-Clients zwingend mit SSO verwendet werden soll.
+In diesem Logon-Skript musst du die Einstellungen für den zu verwenden Proxy-Server festlegen, sofern dieser von den Linux-Clients verwendet werden soll.
 
-Editiere die Datei ``/var/lib/samba/sysvol/linuxmuster.lan/scripts/default-school/custom/linux/logon.sh`` und füge folgende Zeilen hinzu. Passe die ``Proxy_Domain`` für dein Einsatzszenario an.
+Editiere die Datei ``/var/lib/samba/sysvol/linuxmuster.lan/scripts/default-school/custom/linux/logon.sh`` und füge folgende Zeilen hinzu. Passe die ``PROXY_DOMAIN`` für dein Einsatzszenario an.
 
 .. code::
 
@@ -320,13 +317,13 @@ Drucker vorbereiten
 
 .. hint:: 
 
-   Dies sind nur kurze allgemeine Hinweise. Im Kapitel :ref:`howto-install-printer-label` finden sich ausführliche Hinweise.
+   Dies sind nur kurze allgemeine Hinweise. Im Kapitel :ref:`howto-install-printer-label` findet sich eine ausführliche Anleitung.
 
-Damit Drucker automatisch gefunden werden und via GPO administriert werden können, ist es erforderlich, dass auf dem Server unter CUPS die Drucker den gleichen Namen haben, wie ihr Hostname in der Geräteverwaltung eingetragen wurden.
+Damit die Drucker richtig gefunden und via GPO administriert werden können, ist es erforderlich, dass jeder Drucker im CUPS-Server als Namen exat seinen Hostnamen aus der Geräteverwaltung bekommt.
 
-Drucker können im Active Directory Gruppen zugeordnet werden.
+Die Zuordnung von Druckern zu Computern geschieht auf Basis von Gruppen im Active Directory. Im Kapitel :ref:`howto-install-printer-label` gibt es weiter Informationen dazu.
 
-Damit nur die Drucker zugeordnet werden, die in den GPOs für die Gruppen definiert wurden, muss auf dem Server in der Datei ``etc/cups/cupsd.conf`` der Eintrag ``Browsing On`` auf ``Browsing Off`` umgestellt werden. Tut man dies nicht, findet der Client ALLE Drucker, nicht nur die ihm zugeteilten.
+Damit auf jedem Rechner nur die Drucker angezeigt werden, die ihm auch zugeordnet wurden, muss auf dem Server in der Datei ``/etc/cups/cupsd.conf`` der Eintrag ``Browsing On`` auf ``Browsing Off`` umgestellt werden. Tut man dies nicht, werden auf jedem Rechner ALLE Drucker angezeigt, nicht nur die ihm zugeteilten.
 
 Weiterführende Dokumentation
 ============================

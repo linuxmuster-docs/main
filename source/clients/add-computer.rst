@@ -30,7 +30,7 @@ Die nötigen Schritte dafür sind hier beschrieben und lassen sich folgendermaß
 2.  Hardwareklasse für den PC/die VM konfigurieren
 3.  PC/VM als Rechner aufnehmen
 4.  PC/VM via PXE mit Linbo starten
-5.  Festplatte mit Linbo partitionieren/formatieren
+5.  Festplatte mit Linbo partitionieren und formatieren
 6.  PC/VM vom ISO-Image booten
 7.  Client OS installieren
 8.  Erstimage erstellen
