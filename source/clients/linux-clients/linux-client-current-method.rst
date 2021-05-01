@@ -22,7 +22,7 @@ Du hast bereits:
   - einen PXE Start des PCs / der VM mit Linbo ausgeführt,
   - mit Linbo die Festplatte partioniert und formatiert.
 
-Falls dies noch nicht so ist, starte zuerst mit den Schritten, die im Kapitel :ref:`add-computer-label` beschrieben wurden und führe danach die, in dieser Anleitung beschriebenen Schritte durch.
+Falls dies noch nicht so ist, starte zuerst mit den Schritten, die im Kapitel :ref:`add-computer-label` beschrieben wurden und führe danach die in dieser Anleitung beschriebenen Schritte durch.
 
 Einrichten eines Linux-Clients
 ==============================
@@ -124,7 +124,16 @@ Erscheint die Meldung, dass das Image erfolgreich hochgeladen werden konnte, so 
    :align: center
    :alt: Ubuntu Installation: leave tools menue
 
-Klicke nun das große Festplattensymbol, um Ubuntu synchronisiert zu starten.
+Imagenamen eintragen (HWK)
+--------------------------
+
+Nachdem du nun das Image erstellt hast, trage nun noch den von dir festgelegten Namen für das Image in der Hardwareklasse für deinen Muster-Client ein. Zu Beginn bei der Rechneraufnahme hattes du für das Basisimage noch ``None`` eingetragen bzw. stehen gelassen.
+
+Gehe dazu in der WebUI auf ``Geräteverwaltung -> Linbo -> <hwk auswählen>``. Wähle hier für dein Betriebssystem (Reiterkarte ``OS``) unter ``Basisimage`` den Namen deines erstellten Images aus (vgl. hierzu auch das Vorgehen unter :ref:`add-computer-label`. 
+
+Klicke danach auf ``SPEICHEN & IMPORTIEREN``.
+
+Starte dann den Client erneut mit Linbo und klicke nun das große Festplattensymbol, um Ubuntu synchronisiert zu starten.
 
 Packet linuxmuster-linuxclient7 installieren
 --------------------------------------------
@@ -144,9 +153,9 @@ Installiere das Paket ``linuxmuster-linuxclient7`` wie folgt:
 1. Schritt
 ^^^^^^^^^^
 
-Öffen ein Terminal unter Ubuntu mit ``strg+t`` oder klicke unten links auf die Kacheln und gebe in der Suchzeile für Anwendungen ``Terminal`` ein.
+Öffne ein Terminal unter Ubuntu mit ``strg+t`` oder klicke unten links auf die Kacheln und gebe in der Suchzeile als Anwendung ``Terminal`` ein.
 
-Im Terminal erstelle die Datei ``lmn7-client.list``, um das Repository für den linuxmuster-client einzubinden. Rufe hierzu für den Editor Nano mit folgendem Befehl zur Anlage der neuen Datei auf: ``sudo nano /etc/apt/sources.list.de/lmn7-client.list`` und trage folgendes Repository ein:
+Erstelle im Terminal die Datei ``lmn7-client.list``, um das Repository für den linuxmuster-client einzubinden. Rufe hierzu für den Editor Nano mit folgendem Befehl zur Anlage der neuen Datei auf: ``sudo nano /etc/apt/sources.list.de/lmn7-client.list`` und trage folgendes Repository ein:
 
 .. code::
 
@@ -155,13 +164,13 @@ Im Terminal erstelle die Datei ``lmn7-client.list``, um das Repository für den 
 2. Schritt
 ^^^^^^^^^^
 
-Lade den Schlüssel des Archivs herunter und füge diesen apt hinzu:
+Lade den Schlüssel des Archivs herunter und füge diesen den apt-sources hinzu:
 
 .. code::
 
    wget https://archive.linuxmuster.net/archive.linuxmuster.net.key | sudo apt-add key -
 
-Aktualisiere die Paketinformationen mit ``sudo apt update``. 
+Aktualisiere die Paketinformationen mit ``sudo apt update``.
 
 Es kann sein, dass du den Hinweis erhälst, dass es GPG-Fehler gibt.
 
@@ -192,7 +201,7 @@ Rufe nun das Setup für den linuxmuster Linux-Client wie folgt auf:
 
 Für den Domänenbeitritt wird dann das Kennwort des Domänen-Admins ``global-admin`` abgefragt.
 
-Am Ende des Domänen-Beitritts erfolgt eine Bestätigung, dass dieser erfolgreich durchgeführt wurde. Falls nicht, muss das Setup für linuxmuster-linuxclient7 erneut durchlaufen werden.
+Am Ende des Domänen-Beitritts erfolgt eine Bestätigung, dass dieser erfolgreich durchgeführt wurde. Falls nicht, musst du das Setup für linuxmuster-linuxclient7 erneut durchlaufen.
 
 Image vorbereiten
 -----------------
@@ -206,7 +215,7 @@ Rufe hierzu den Befehl auf:
 
 Der Client erhält Aktualisierungen und es werden einige Dateien (journalctl & apt-caches) vor der Image-Erstellung aufgeräumt.
 
-Die Home-Laufwerke der AD-user auf dem Client werden ebenfalls geleert.
+Die Home-Laufwerke der AD-user werden auf dem Client ebenfalls geleert.
 
 .. hint::
 
@@ -217,9 +226,9 @@ Image erstellen
 
 Führe einen Reboot des Linux-Client durch, so dass die VM via PXE in Linbo bootet.
 
-Nun erstellst du in Linbo genauso wie zuvor unter **Erstimage erstellen** das Image des neuen Muster-Clients für Linux.
+Nun erstellst du in Linbo - genauso wie zuvor unter **Erstimage erstellen** beschrieben - das Image des neuen Muster-Clients für Linux.
 
-Wurde der Vorgang erfolgreich beendet, kannst du nun unter der Reiterkarte ``Start`` den vorbereiteten Linux-Client synchronisiert starten und dich als Benutzer der Domäne anmelden.
+Wurde der Vorgang erfolgreich beendet, kannst du nun unter der Reiterkarte ``Start`` den vorbereiteten Linux-Client synchronisiert starten und dich als Benutzer an der Domäne anmelden.
 
 Eigene Anpassungen im Image
 ===========================
@@ -230,7 +239,7 @@ Danach installierst du die benötigte Software und nimmst die gewünschten Einst
 
 Beispielsweise installierst du auf dem Linux-Client zuerst Libre-Office:
 
-..code::
+.. code::
 
    sudo apt update
    sudo apt install libreoffice

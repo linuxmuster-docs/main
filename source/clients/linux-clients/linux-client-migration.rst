@@ -15,18 +15,20 @@ Vorgehen
 
 1. VM anlegen und vorbereiten wie unter :ref:`add-computer-label` beschrieben.
 2. Für Linbo die start.conf der Hardwareklasse anpassen, so dass das bisherige Image angegeben wird.
-3. Start VM via PXE
+3. Start der VM via PXE
 4. Anmelden als Benutzer ``linuxadmin``
 5. ggf. Backup der eigenen Skripte unter ``/etc/linuxmuster-client`` - diese werden automatisch gelöscht!
-6. entferne den alten Linux-Client vollständig
+6. Entferne den alten Linux-Client vollständig
 7. Entferne das ale Proxy-Skript auf dem Client
 8. Entferne lightdm als Anmeldemanager
 9. Installiere gdm3 als Anmeldemanager
-10. Führe das Setup des neuen Pakets linuxmuster-linuxlient7 aus wie zuvor beschrieben
+10. Führe das Setup des neuen Pakets linuxmuster-linuxlient7 aus (:ref:`install-linux-clients-current-label`)
 11. Erstelle ein neues Image.
 
 
-.. attention:: Du musst als Benutzer linuxadmin angemeldet bleiben, solange bis das Setup des neuen Pakets linuxmuster-linuxclient7 vollständig abgeschlossen ist!
+.. attention:: 
+
+   Du musst als Benutzer ``linuxadmin`` angemeldet bleiben, solange bis das Setup des neuen Pakets linuxmuster-linuxclient7 vollständig abgeschlossen ist!
 
 Zu den Schritten 6. bis 10. findest du nachstehend Hinweise zur Umsetzung.
 
@@ -40,19 +42,6 @@ Entferne danach die alten Linux-Client Pakete mit folgendem Befehl:
 .. code::
 
    sudo apt purge linuxmuster-client-adsso
-
-Entferne der Verzeichnis ``linuxmuster-client`` mit folgendem Befehl:
-
-.. code::
-
-   sudo rm -r /etc/linuxmuster-client
-
-Entferne anschliessend das Proxy-Setup-Skript auf dem alten Linux-Client mit:
-
-.. code::
-
-  sudo rm /etc/profile.d/linuxmuster-proxy.sh
-
 
 Anmeldemanager wechseln
 -----------------------
@@ -71,7 +60,7 @@ Danach installierst du ``gdm3`` mit:
 
    sudo apt install --reinstall gdm3
 
-Räume danach die Pakete im Apt-cache auf mit:
+Räume danach die Pakete im apt-cache auf:
 
 .. code::
 
@@ -81,6 +70,6 @@ Räume danach die Pakete im Apt-cache auf mit:
 
    Bleibe weiterhin als Benutzer linuxadmin angemeldet, solange bis du das Setup des neuen Paketes linuxmuster-linuxclient7 abgeschlossen hast.
 
-Führe nun alle Schritte zur  Installation und zum Setup des neuens linuxmuster-linuxclient7 Pakets aus.
+Führe nun alle Schritte zur Installation und zum Setup des neuen linuxmuster-linuxclient7 Pakets aus wie diese im Kapitel :ref:`install-linux-clients-current-label` beschrieben sind.
 
 Nach Abschluss des Setups erstellst du ein neues Image.
