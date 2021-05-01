@@ -23,6 +23,13 @@ Die Beschreibung bezieht sich auf Ubuntu Desktop 20.04 LTS. Es sind aber auch an
 
 .. toctree::
   :maxdepth: 2
+  :caption: Linux-Client: Migration
+  :hidden:
+
+  linux-client-migration
+
+.. toctree::
+  :maxdepth: 2
   :caption: (old) Linux-Client
   :hidden:
 

@@ -2,70 +2,12 @@
 
 .. _add-computer-label:
 
-===================================
- Rechneraufnahme und Muster-Clients
-===================================
+==================================
+Muster-Clients und Rechneraufnahme
+==================================
 
-Rechneraufnahme mit der Schulkonsole
-====================================
-
-.. sectionauthor:: `@Alois <https://ask.linuxmuster.net/u/Alois>`_,
-		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_
-
-Um einen Rechner mit der Schulkonsole aufzunehmen gehst du wie folgt vor: Melde dich als Benutzer ``global-admin`` an der Web-UI an.
-
-.. figure:: media/01-webui-login.png
-   :align: center
-   :alt: WebUI login
-
-Wähle nach der Anmeldung links im Menü unter ``Geräteverwaltung --> Geräte``.
-
-.. figure:: media/02-webui-menue-devices.png
-   :align: center
-   :alt: WebUI menue devices
- 
-Du siehst nun rechts im Hauptfenster die Eintragungen für die Geräte.
-
-Als Spaltenköpfe siehst du u.a. den Raum, den Hostnamen, ..., PXE.
-
-.. figure:: media/03-webui-devices-header.png
-   :align: center
-   :alt: WebUI devices column header
-
-Die konfigurierten Geräte werden dir hier alle angezeigt. Nachstehend sind die bereits konfigurierten Server in der Liste mit der Rolle ``Server`` eingetragen.
-
-.. figure:: media/04-webui-devices-rows.png
-   :align: center
-   :alt: WebUI devices indicated - examples
-
-Um neue Geräte hinzuzufügen, klicke unten links auf den Eintrag ``Gerät hinzufügen``.
-
-.. figure:: media/05-webui-add-new-device.png
-   :align: center
-   :alt: WebUI menue item add devices
-
-Es wird eine neue Leerzeile hinzugefügt.
-
-.. figure:: media/06-webui-new-device.png
-   :align: center
-   :alt: WebUI add devices
-
-In die sich öffnende Zeile gibst du unter Raum den Namen des Raumes (hier ``server``) ein. Entsprechend verfährst du mit den Spalten Hostname, Gruppe, MAC, IP und Sophomorix-Rolle. Im Feld ``PXE`` wählst du aus, ob der Rechner beim Start mit Linbo synchronisiert werden soll.
-
-Die Schaltfläche ``SPEICHERN`` überprüft die Eingabe. Mit ``SPEICHERN & IMPORTIEREN`` werden die neuen Geräte imporiert.
-
-.. figure:: media/07-webui-save-and-add-devices.png
-   :align: center
-   :alt: WebUI add devices
-
-Danach erscheinen einige Log-Meldungen und - wenn der Import erfolgreich war - ``Import abgeschlossen``
-
-.. figure:: media/08-webui-add-devices-log.png
-   :align: center
-   :alt: WebUI add devices
-
-Aufnahme der Muster-Clients
-===========================
+Muster-Client vorbereiten
+=========================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`__
 
@@ -80,7 +22,7 @@ Prinzipiell kann jeder PC genutzt werden, um für das jeweilige Betriebssystem a
 
 Sollten verschiedene Betriebssysteme pro Rechner gestartet werden können, so wird jeweils ein anderes Image genutzt. Für jedes Image muss ein eigener Domänen-Beitritt ausgeführt worden sein. Startet man die verschiedenen Betriebssysteme auf dem Client im Wechsel, so würde der Domänenbeitritt falsch erkannt, wenn nicht jedes Betriebssystem mit einem eigenen Rechner und Muster-Image angelegt und gepflegt werden würde.
 
-Es wird daher empfohlen, pro genutzem Client-Betriebssystem einen eigene Muster-Client (ggf. als VM) anzulegen, gewünschte Anpassungen vorzunehmen, den Domänenbeitritt auszuführen und das Image für das jeweilige Betriebssystem unter Linbo zu erstellen und für alle anderen PCs bereitzustellen. Diese VMs dürfen nicht aus der Liste Geräte entfernt werden. Dies ist wichtig, damit für die clients eine Domänenanmeldung weiterhin funktioniert. 
+Es wird daher empfohlen, pro genutzem Client-Betriebssystem einen eigene Muster-Client (ggf. als VM) anzulegen, gewünschte Anpassungen vorzunehmen, den Domänenbeitritt auszuführen und das Image für das jeweilige Betriebssystem unter Linbo zu erstellen und für alle anderen PCs bereitzustellen. Diese VMs dürfen nicht aus der Liste Geräte entfernt werden. Dies ist wichtig, damit für die clients eine Domänenanmeldung weiterhin funktioniert.
 
 Entsprechend wird nachstehend das Vorgehen zur Aufnahme des Muster-Clients dargestellt und die Schritte zum Aufbau eines Muster-Images. An einigen Stellen werden ergänzende Hinweise zum Aufbau des Muster-Clients als VM gegeben, da je nach Virtualisierungsumgebung ein paar Besonderheiten zu beachten sind.
 
@@ -117,13 +59,18 @@ Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM:
  * Boot firmware: BIOS oder UEFI (je nach später genutzten PCs) - Achtung: start.conf von linbo anpassen -> siehe Hinweise bei den Client-Systemen
  * 50GB HDD (20GB OS + 20GB Cache + ggf. SWAP oder andere Partitionen)
 
-
 HWK / start.conf erstellen
 ---------------------------
 
-Bevor du das neue Geräte hinzufügst, erstellst du zuerst die Hwardwareklasse (HWK), die du zuordnen möchtest. Um die Hardwareklasse nun in der WebUI anzulegen, klickst du links im Menü den Eintrag ``Geräteverwaltung --> Linbo``.
+Melde dich als Benutzer ``global-admin`` an der Web-UI an.
 
-.. figure:: media/09-webui-menue-linbo.png
+.. figure:: media/01-webui-login.png
+   :align: center
+   :alt: WebUI login
+
+Du erstellst nun die Konfiguration für die Hardwareklasse (HWK), die du vorher für das Gerät zugeordnet hast. Um die Hardwareklasse nun in der WebUI anzulegen, klickst du links im Menü den Eintrag ``Geräteverwaltung --> Linbo``.
+
+.. figure:: media/02-webui-menue-linbo.png
    :align: center
    :alt: WebUI menue linbo
 
@@ -131,13 +78,13 @@ Um für den Muster-Client eine neue Hardwaregruppe für Linbo mit Startvorgaben 
 
 Es öffnet sich ein Kontextmenü und du kannst entweder ein ganz leere start.conf hierfür nutzen, oder eine bereits vordefinierte für dein gewünschtes Betriebssystem auswählen und dann anpassen.
 
-.. figure:: media/10-webui-menue-linbo-create-start-template.png
+.. figure:: media/03-webui-menue-linbo-create-start-template.png
    :align: center
    :alt: WebUI menue linbo create start template
 
 Es öffnet sich ein Fenster, in dem du die Namen der Hardwareklasse angibst, den du bereits beim Hinzufügen des Geräts festgelegt hattest.
 
-.. figure:: media/11-webui-menue-linbo-name-for-start-conf.png
+.. figure:: media/04-webui-menue-linbo-name-for-start-conf.png
    :align: center
    :alt: WebUI menue linbo hwc group name
 
@@ -145,25 +92,25 @@ Danach gelangst du zu den Einstellungen der Hardwareklasse. Du kannst die Reiter
 
 Unter ``Allgemein`` legst Du die IP des Servers fest und gibst das Startverhalten und ggf. Kernel-Optionen für den Boot bei besonderer Hardware an.
 
-.. figure:: media/12-webui-linbo-edit-new-group.png
+.. figure:: media/05-webui-linbo-edit-new-group.png
    :align: center
    :alt: WebUI linbo edit new hwc group
 
 Unter ``Partitionen`` legst Du fest, welche Partitionen auf der Festplatte für welche Betriebssysteme oder zu welchem Zweck vorgesehen werden sollen.
 
-.. figure:: media/13-webui-linbo-edit-new-group-partition-scheme.png
+.. figure:: media/06-webui-linbo-edit-new-group-partition-scheme.png
    :align: center
    :alt: WebUI linbo edit new hwc group - partition scheme
 
 Löscht du dort z.B. die Partitionen ``swap`` und ``data`` so sieht deine Partitionierung wie folgt aus:
 
-.. figure:: media/14-webui-linbo-edit-new-group-partition-scheme-edited.png
+.. figure:: media/07-webui-linbo-edit-new-group-partition-scheme-edited.png
    :align: center
    :alt: WebUI linbo edit new hwc group - partition scheme edited
 
 Um Einstellungen für das Betriebssystem vorzunehmen, klickst du auf das Stift-Icon (hier für ubuntu) und es öffnet sich ein weiteres Fenster, um Einstellungen für das Betriebssyystem vorzunehmen.
 
-.. figure:: media/15-webui-linbo-edit-new-group-os-infos-edited.png
+.. figure:: media/08-webui-linbo-edit-new-group-os-infos-edited.png
    :align: center
    :alt: WebUI linbo edit new hwc group - os edited
 
@@ -232,17 +179,69 @@ Nachstehende Konfiguration gibt ein mögliches Beispiel für die Konsolenausgabe
   ForceOpsiSetup =
   Hidden = yes
 
+
 PC / VM als Rechner aufnehmen
 -----------------------------
 
-Nachdem du nun die Eintragungen für die Hardwareklasse vorgenommen hast, musst du noch den PC / die VM mit der MAC-Adresse via Web-UI als Gerät hinzufügen, dieses der erstellten Hadrwareklasse hinzufügen und im Feld PXE den Eintrag auf die Synchronisation mit Linbo setzen.
+Nachdem du nun die Eintragungen für die Hardwareklasse vorgenommen hast, musst du noch den PC / die VM mit der MAC-Adresse via Web-UI als Gerät hinzufügen, dieses der erstellten Hardwareklasse hinzufügen und im Feld PXE den Eintrag auf die Synchronisation mit Linbo setzen.
+
+Rechneraufnahme mit der Schulkonsole
+====================================
+
+Um einen Rechner mit der Schulkonsole aufzunehmen gehst du wie folgt vor: 
+
+Wähle nach der Anmeldung links im Menü unter ``Geräteverwaltung --> Geräte``.
+
+.. figure:: media/09-webui-menue-devices.png
+   :align: center
+   :alt: WebUI menue devices
+ 
+Du siehst nun rechts im Hauptfenster die Eintragungen für die Geräte.
+
+Als Spaltenköpfe siehst du u.a. den Raum, den Hostnamen, ..., PXE.
+
+.. figure:: media/10-webui-devices-header.png
+   :align: center
+   :alt: WebUI devices column header
+
+Die konfigurierten Geräte werden dir hier alle angezeigt. Nachstehend sind die bereits konfigurierten Server in der Liste mit der Rolle ``Server`` eingetragen.
+
+.. figure:: media/11-webui-devices-rows.png
+   :align: center
+   :alt: WebUI devices indicated - examples
+
+Um neue Geräte hinzuzufügen, klicke unten links auf den Eintrag ``Gerät hinzufügen``.
+
+.. figure:: media/12-webui-add-new-device.png
+   :align: center
+   :alt: WebUI menue item add devices
+
+Es wird eine neue Leerzeile hinzugefügt.
+
+.. figure:: media/13-webui-new-device.png
+   :align: center
+   :alt: WebUI add devices
+
+In die sich öffnende Zeile gibst du unter Raum den Namen des Raumes (hier ``server``) ein. Entsprechend verfährst du mit den Spalten Hostname, Gruppe, MAC, IP und Sophomorix-Rolle. Im Feld ``PXE`` wählst du aus, ob der Rechner beim Start mit Linbo synchronisiert werden soll.
+
+Die Schaltfläche ``SPEICHERN`` überprüft die Eingabe. Mit ``SPEICHERN & IMPORTIEREN`` werden die neuen Geräte imporiert.
+
+.. figure:: media/14-webui-save-and-add-devices.png
+   :align: center
+   :alt: WebUI add devices
+
+Danach erscheinen einige Log-Meldungen und - wenn der Import erfolgreich war - ``Import abgeschlossen``
+
+.. figure:: media/15-webui-add-devices-log.png
+   :align: center
+   :alt: WebUI add devices
 
 Hinweise zur VM
-^^^^^^^^^^^^^^^
+---------------
 
 .. attention::
 
-   Die nachstehenden Hinweise sind nur in Ausnahmefällen anzugeben. Durch diese Änderungen werden zudem Anpassungen in der Boot-Loader Konfiguration von Linbo für die Hardwareklasse nicht mehr bei einem ``linuxmuster-import-devices`` angewendet. 
+   Die nachstehenden Hinweise sind nur in Ausnahmefällen bei Nutzung einer VM anzugeben. Durch diese Änderungen werden zudem Anpassungen in der Boot-Loader Konfiguration von Linbo für die Hardwareklasse nicht mehr bei einem ``linuxmuster-import-devices`` angewendet. 
 
 Sollte der Muster-Client als VM aufgebaut werden, so ist je nach eingesetzter Virtualisierungssoftware darauf zu achten, dass die VGA-Einstellungen eine geringe Auflösung und eine geringe Farbteife aufweisen.
 
@@ -250,7 +249,7 @@ Sollte der Muster-Client als VM aufgebaut werden, so ist je nach eingesetzter Vi
 
 .. attention::
 
-   Nachstehende Hinweise gelten nur eine VM unter XCP-ng.
+   Nachstehende Hinweise gelten nur für eine VM unter XCP-ng.
 
 Unter XCP-ng 8.2 sind nachstehende Anpassungen erforderlich, da sonst während des Linbo Boot-Vorgangs ein Hinweis erscheint, dass die Farbtiefe nicht dargestellt werden kann. Rufe auf dem Server die Datei ``/srv/linbo/boot/grub/20210426_focalfossa_base.cfg`` auf.
 
@@ -278,7 +277,7 @@ Die Kommentarzeile ``# ### managed by linuxmuster.net ###`` muss entfernt werden
 Gerät importieren
 -----------------
 
-Hast du alle Einstellungen für die Geräte vorgenommen, klickst du in der WebUI unter ``Geräteverwaltung --> Geräte`` erneut ``Speichern & Importieren``, damit diese Einstellungen angewendet werden.
+Hast du alle Einstellungen für die Geräte bzw. erneute Änderungen hier vorgenommen, klickst du in der WebUI unter ``Geräteverwaltung --> Geräte`` erneut ``Speichern & Importieren``, damit diese Einstellungen angewendet werden.
 
 Alternativ kann auf dem Server in der Konsole als Benutzer ``root`` der Befehl ``linuxmuster-import-devices`` angegeben werden.
 
