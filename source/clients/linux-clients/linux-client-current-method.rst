@@ -33,7 +33,7 @@ Client OS installieren
 Gib im PC / der VM nun an, dass von dem gewünschten ISO-Image gestartet werden soll. Hierbei ist darauf zu achten, dass die Boot-Reihenfolge so geändert wird, dass zuerst von dem ISO-Image gestartet wird.
 
 Stelle also beim PC im BIOS die Bootreihenfolge so um, dass von CD oder USB-Stick das Ubuntu ISO-Image gestartet wird. Ändere in der VM bei den VM-Einstellungen die Bootreihenfolge. Achte darauf, dass als CD/Boot-Image das gewünschte Ubuntu 20.04 Image eingehangen wurde und definiere dieses als erstes Startmedium. Speichere die Einstellungen der VM.
-gdm3 und Gnome
+
 Starte nun den PC/die VM mit den neuen Einstellungen, so dass Ubuntu vom ISO-Image startet. Nachdem der Start ausgeführt wurde und der erste Ubuntu Desktop erscheint, wähle auf dem Erstbildschirm aus, dass du Ubuntu installieren möchtest.
 
 Installation Ubuntu
