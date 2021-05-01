@@ -9,9 +9,9 @@ Linux-Client installieren
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_, 
                    `@dorian <https://ask.linuxmuster.net/u/dorian>`_
 
-linuxmuster.net stellt für Ubuntu-Clients ein Paket ``linuxmuster-linuxclient7`` bereit, das den korrekten Domänenbeitritt durchführt und es ermöglicht, das Management beider Client-Betriebssystemen (Linux und Windows) durch Auslesen der GPO-Konfigurationen im Active Directory zu vereinheitlichen.
+linuxmuster.net stellt für Ubuntu-Clients das Paket ``linuxmuster-linuxclient7`` bereit, das automatisiert den Domänenbeitritt durchführt und das Management von Liux- und Windowsclients, durch Auslesen der GPO-Konfigurationen im Active Directory, vereinheitlicht.
 
-Es werden ein Ubuntu Desktop 20.04 LTS sowie Ubuntu Distributionen mit GDM3 und Gnome Desktop unterstützt.
+Offiziell wird aktuell nur Ubuntu 20.04 mit gdm3 und Gnome unterstzützt. Andere Ubuntu-basierte Distributionen mit gdm3 und Gnome könnten aber auch funktionieren.
 
 Voraussetzung
 =============
@@ -30,7 +30,7 @@ Einrichten eines Linux-Clients
 Client OS installieren
 ----------------------
 
-Gebe im PC / der VM nun an, dass von dem gewünschten ISO-Image gestartet werden soll. Hierbei ist darauf zu achten, dass die Boot-Reihenfolge so geändert wird, dass zuerst von dem ISO-Image gestartet wird.
+Gib im PC / der VM nun an, dass von dem gewünschten ISO-Image gestartet werden soll. Hierbei ist darauf zu achten, dass die Boot-Reihenfolge so geändert wird, dass zuerst von dem ISO-Image gestartet wird.
 
 Stelle also beim PC im BIOS die Bootreihenfolge so um, dass von CD oder USB-Stick das Ubuntu ISO-Image gestartet wird. Ändere in der VM bei den VM-Einstellungen die Bootreihenfolge. Achte darauf, dass als CD/Boot-Image das gewünschte Ubuntu 20.04 Image eingehangen wurde und definiere dieses als erstes Startmedium. Speichere die Einstellungen der VM.
 
@@ -39,7 +39,7 @@ Starte nun den PC/die VM mit den neuen Einstellungen, so dass Ubuntu vom ISO-Ima
 Installation Ubuntu
 -------------------
 
-Die gibst in den ersten Schritten der Installation die gewünschte Sprache und Tastaturbelegung an.
+Du gibst in den ersten Schritten der Installation die gewünschte Sprache und Tastaturbelegung an.
 
 Bei der ``Installationsart`` wählst du ``Etwas Anderes`` aus.
 
@@ -96,7 +96,7 @@ Klicke nun unten rechts auf das Werkzeug-Icon, um zum Menü für die Imageerstel
    :align: center
    :alt: Ubuntu Installation: Menue Tools
 
-Du wirst nach nach dem Passwort des Benutzers ``root`` gefragt. Gebe dieses ein. Deine Eingabe wird hierbei nicht angeziegt.
+Du wirst nach nach dem Linbo-Passwort gefragt. Gebe dieses ein. Deine Eingabe wird hierbei nicht angeziegt.
 
 .. figure:: media/08-linux-client-ubu-install.png
    :align: center
@@ -108,7 +108,7 @@ Klicke dann auf ``anmelden`` und du gelangst zu folgender Ansicht:
    :align: center
    :alt: Ubuntu Installation: linbo menue for imaging
 
-Klicke auf das große Festplatten-Icon, da in der Ecke rechts unten farblich markiert ist, um nun ein Image zu erstellen.
+Klicke auf das große Festplatten-Icon, das in der Ecke rechts unten farblich markiert ist, um nun ein Image zu erstellen.
 
 Es wird ein neues Fenster geöffnet:
 
@@ -118,7 +118,7 @@ Es wird ein neues Fenster geöffnet:
 
 Wähle aus, dass du ein neues Image erstellen möchtest, gebe einen Namen für das Image an und klicke auf ``erstellen + hochladen``.
 
-Erscheint die Meldung, dass das Image erfolgreich hochgeladen werden konnte, so klicke unten rechts, das oberste Symbol, um dich auf den Tools von Linbo abzumelden. 
+Erscheint die Meldung, dass das Image erfolgreich hochgeladen werden konnte, so klicke unten rechts auf das oberste Symbol, um dich bei den Tools von Linbo abzumelden. 
 
 .. figure:: media/11-linux-client-ubu-install.png
    :align: center
@@ -135,7 +135,7 @@ Melde dich an dem gestarteten Ubuntu 20.04 als Benutzer ``linuxadmin`` an, der s
    :align: center
    :alt: Ubuntu Setup: Login as linuxadmin
 
-Installiere das Paket ``linuxmuster-linuxclient7.deb`` wie folgt:
+Installiere das Paket ``linuxmuster-linuxclient7`` wie folgt:
 
 1. Trage das linuxmuster.net Repository ein
 2. Trage den GPG Schlüssel hierfür ein
@@ -155,14 +155,13 @@ Im Terminal erstelle die Datei ``lmn7-client.list``, um das Repository für den 
 2. Schritt
 ^^^^^^^^^^
 
-Aktualisiere die Paketinformationen mit ``sudo apt update``.
 Lade den Schlüssel des Archivs herunter und füge diesen apt hinzu:
 
 .. code::
 
    wget https://archive.linuxmuster.net/archive.linuxmuster.net.key | sudo apt-add key -
 
-Aktualisiere die Paketinformationen mit ``sudo apt update`` erneut. 
+Aktualisiere die Paketinformationen mit ``sudo apt update``. 
 
 Es kann sein, dass du den Hinweis erhälst, dass es GPG-Fehler gibt.
 
@@ -180,7 +179,7 @@ Der Fehler wird zwar weiterhin angezeigt. Du kannst nun aber das linuxmuster-lin
 
 3. Schritt
 ^^^^^^^^^^
-Führe die Installation der linuxclient7 - Pakets mit ``sudo apt install linuxmuster-linuxclient7 -y`` durch.
+Führe die Installation des linuxclient7 - Pakets mit ``sudo apt install linuxmuster-linuxclient7 -y`` durch.
 
 Setup
 -----
@@ -194,10 +193,6 @@ Rufe nun das Setup für den linuxmuster Linux-Client wie folgt auf:
 Für den Domänenbeitritt wird dann das Kennwort des Domänen-Admins ``global-admin`` abgefragt.
 
 Am Ende des Domänen-Beitritts erfolgt eine Bestätigung, dass dieser erfolgreich durchgeführt wurde. Falls nicht, muss das Setup für linuxmuster-linuxclient7 erneut durchlaufen werden.
-
-.. hint::
-
-   Danach sollte unbedingt S O F O R T ein neues Image mit Linbo erstellt werden. Beim Neustart via PXE darf Ubuntu N I C H T mit dem Synchronisations-Button gestartet werden. Nachstehende Abschnitte beschreiben das Vorgehen.
 
 Image vorbereiten
 -----------------
@@ -213,14 +208,18 @@ Der Client erhält Aktualisierungen und es werden einige Dateien (journalctl & a
 
 Die Home-Laufwerke der AD-user auf dem Client werden ebenfalls geleert.
 
+.. hint::
+
+   Danach sollte unbedingt S O F O R T ein neues Image mit Linbo erstellt werden. Beim Neustart via PXE darf Ubuntu N I C H T gestartet werden. Nachstehende Abschnitte beschreiben das Vorgehen.
+
 Image erstellen
 ---------------
 
 Führe einen Reboot des Linux-Client durch, so dass die VM via PXE in Linbo bootet.
 
-Nun erstellst du in Linbo genauso wie zuvor unter **Erstimage erstellen** das Image des neuen Muster-Clients für Linux
+Nun erstellst du in Linbo genauso wie zuvor unter **Erstimage erstellen** das Image des neuen Muster-Clients für Linux.
 
-Wurde der Vorgang erfolgreich beendet, kannst du nun unter der Reiterkarte ``Start`` den vorbereiteten Linux-Client synchronisiert starten und sich als Benutzer der Domäne anmelden.
+Wurde der Vorgang erfolgreich beendet, kannst du nun unter der Reiterkarte ``Start`` den vorbereiteten Linux-Client synchronisiert starten und dich als Benutzer der Domäne anmelden.
 
 Eigene Anpassungen im Image
 ===========================
@@ -236,7 +235,7 @@ Beispielsweise installierst du auf dem Linux-Client zuerst Libre-Office:
    sudo apt update
    sudo apt install libreoffice
 
-Hast du alle Anpassungen vorgenommen, must du noch den Linux-Client zur Erstellung des Imaging vorbereiten.
+Hast du alle Anpassungen vorgenommen, musst du noch den Linux-Client zur Erstellung des Images vorbereiten.
 
 Diese Arbeiten werden mit folgendem Befehl durchgeführt:
 
@@ -270,17 +269,17 @@ Damit der Linux-Client die Drucker automatisch ermittelt und der Proxy korrekt a
 Proxy-Einstellungen
 -------------------
 
-Bei der Anmeldung vom Linux-Client werden sog. Hook-Skripte aufgerufen und ausgeführt.
+Bei der Anmeldung vom Linux-Client werden sog. Hook-Skripte ausgeführt.
 
 Diese finden sich auf dem linuxmuster.net Server im Verzeichnis: ``/var/lib/samba/sysvol/linuxmuster.lan/scripts/default-school/custom/linux/``
 
 .. hint::
 
-   Ersetze ``linuxmuster.net`` durch den von dir beim setup festgelegten Domänennamen und ersetze ggf. ``default-school`` ebenfalls durch den von dir festgelegten Namen.
+   Ersetze ``linuxmuster.lan`` durch den von dir beim setup festgelegten Domänennamen.
 
 Hier findet sich das Skript ``logon.sh``, das immer dann ausgeführt wird, wenn sich ein Benutzer am Linux-Client anmeldet.
 
-Auf dem Server sind im Logon-Skript Einstellungen für den zu verwenden Proxy-Server zu verwenden, sofern dieser von den Linux-Clients zwingend mit SSO verwendet werden soll.
+Auf dem Server musst du im Logon-Skript die Einstellungen für den zu verwenden Proxy-Server festlegen, sofern dieser von den Linux-Clients zwingend mit SSO verwendet werden soll.
 
 Editiere die Datei ``/var/lib/samba/sysvol/linuxmuster.lan/scripts/default-school/custom/linux/logon.sh`` und füge folgende Zeilen hinzu. Passe die ``Proxy_Domain`` für dein Einsatzszenario an.
 
@@ -314,11 +313,11 @@ Drucker vorbereiten
 
    Dies sind nur kurze allgemeine Hinweise. Im Kapitel :ref:`howto-install-printer-label` finden sich ausführliche Hinweise.
 
-Damit Drucker automatisch gefunden werden und via GPO administriert werden können, ist es erforderlich, dass auf dem Server unter CUPS die Drucker einen identischen Namen aufweisen, so wie diese als Geräte in der ``/etc/linuxmuster/sophomorix/default-school/devices.csv`` eingetragen wurden.
+Damit Drucker automatisch gefunden werden und via GPO administriert werden können, ist es erforderlich, dass auf dem Server unter CUPS die Drucker den gleichen Namen haben, wie ihr Hostname in der Geräteverwaltung eingetragen wurden.
 
 Drucker können im Active Directory Gruppen zugeordnet werden.
 
-Um ein Suchen nach Druckern auf den Clients zu unterbinden, so dass nur die Drucker zugeordnet werden, wie diese in den GPOs für die Gruppen definiert wurden, muss auf dem Server in der Datei ``etc/cups/cupsd.conf`` der Eintrag ``Browsing On`` auf ``Browsing Off`` umgestellt werden.
+Damit nur die Drucker zugeordnet werden, die in den GPOs für die Gruppen definiert wurden, muss auf dem Server in der Datei ``etc/cups/cupsd.conf`` der Eintrag ``Browsing On`` auf ``Browsing Off`` umgestellt werden. Tut man dies nicht, findet der Client ALLE Drucker, nicht nur die ihm zugeteilten.
 
 Weiterführende Dokumentation
 ============================

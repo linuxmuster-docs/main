@@ -32,6 +32,7 @@ Make a local copy of your documentation using
 .. code:: bash
 
    ~$ cd main
+   ~/main$ pip3 install sphinx_rtd_theme PyStemmer
    ~/main$ make clean
    ~/main$ make html
 
