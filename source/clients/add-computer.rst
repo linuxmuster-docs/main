@@ -39,7 +39,6 @@ Die nötigen Schritte dafür sind hier beschrieben und lassen sich folgendermaß
 
 Die Schritte 1-6 sind für Windows und Linux identisch, sie sind nachstehend beschrieben. Die Besonderheiten von Windows und Linux werden anschliessend in den Kapiteln ``Windows-Clients`` und ``Linux-Clients`` beschrieben.
 
-
 PC anschließen / VM anlegen
 ----------------------------
 
