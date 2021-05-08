@@ -73,13 +73,10 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   getting-started/network/preliminarysettings/index
   getting-started/network/networksegmentation/index   
   getting-started/migration/index
-
-
-
   getting-started/setup
   getting-started/add-user-accounts
   getting-started/devices/index
-  getting-started/linuxclient
+  
 
 .. toctree::
   :maxdepth: 2
@@ -100,6 +97,8 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   :caption: Clientverwaltung
   :hidden:
 
+  clients/add-computer
+  clients/linux-clients/index
   clients/windows10clients/index
   clients/leoclient2/index
   clients/linbo/index
