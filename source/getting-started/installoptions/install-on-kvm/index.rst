@@ -210,127 +210,76 @@ Eventuell brauchst du für den Internetzugang in deiner Infrastruktur einen Prox
 
 Solltest du wissen, das deine Internet-Verbindung über einen bestimmten Spiegelserver schneller ist, dann könntest du ihn hier angeben. Ist in aller Regel aber nicht notwendig.
 
+Nun geht es daran die Festplatte(n) einzurichten.
+
 .. figure:: ../media/ubuntu-installation_014_hdd-konfiguration.png
    :align: center
    :alt: Konfiguration der Festplatten
 
-Nun geht es daran die Festplatte(n) einzurichten.
-
-.. todo:: Hier weier. Es muss überprüft werden inwieweit Zwischenschritte nötig sind. Festplattengröße???
-
-Im Beispiel wird `Geführt - gesamte Platte verwenden und LVM einrichten` gewählt. Wer eine Festplatte bzw. ein RAID verwendet, die eine Partitionierung enthält, dem wird dementsprechend die Option zur Wiederverwendung angeboten. Hat man bereits eine exisitierenden Partition und ein existierendes LVM und will sie `nicht` wiederverwenden, so muss dementsprechend zustimmen, dass die existierenden Daten entfernt werden.
-
-Im Anschluss muss man auf alle Fälle dem Schreiben der Änderungen auf die Speichergeräte zustimmen.
+Im Beispiel wird `Geführt - gesamte Platte verwenden und LVM einrichten` gewählt. Wer eine Festplatte bzw. ein RAID verwendet, die eine Partitionierung enthält, dem wird dementsprechend die Option zur Wiederverwendung angeboten. Hast du bereits eine exisitierenden Partition und ein existierendes LVM und willst sie `nicht` wiederverwenden, so muss du dementsprechend zustimmen, dass die existierenden Daten entfernt werden.
 
 .. figure:: ../media/ubuntu-installation_015_summary-hdd-configuration.png
    :align: center
    :alt: 
 
+Bevor die von dir vorgenommenen Änderungen auf die Festplatte geschrieben werden, wird dir eine Übersicht deiner getroffenen Auswahl angezeigt. Mit `Erledigt` verlässt du diese Ansicht.  
+
 .. figure:: ../media/ubuntu-installation_016_hdd-configuration-confirm.png
    :align: center
    :alt: 
+
+Im Anschluss musst du auf alle Fälle dem Schreiben der Änderungen auf die Speichergeräte mit `Fortfahren` zustimmen.
 
 .. figure:: ../media/ubuntu-installation_017_user-registration.png
    :align: center
    :alt: 
 
+In dieser Maske gibst du deinem Systembenutzer ebenso einen passenden Namen wie deinem Host. Es wird empfohlen wie im Beispiel ``host``, als Rechnernamen zu verwenden. Der Benutzername wird im Beispiel ``administrator`` genannt und für dessen Zugang solltest du ein sicheres Passwort vergeben. Deine Eingaben übernimmst du mit `Erledigt`. Sollten die Passwörter nicht identisch sein, wirst du darauf hingewiesen.
+
 .. figure:: ../media/ubuntu-installation_018_install-openssh.png
    :align: center
    :alt: 
+
+Den OpenSSH-Server musst du für die weitere Verwendung auf alle Fälle aktivieren. Die Frage nach der SSH-Identität kannst du verneinen.
 
 .. figure:: ../media/ubuntu-installation_019_optional-software.png
    :align: center
    :alt: 
 
+Von den vorgeschlagenien Programmen brauchst du keine. Mit `Erledigt` beginnt der eigentliche Installationsvorgang über dessen Stand dich dann die folgende Ansicht informiert. Dieses erkennst du in dem oberen Feld daran das dort "Installation des Grundsystemes" steht.
+
+Danach wechselt die Ansicht zwar nach "Installation komplett", aber es werden Sicherheits-Aktualisierungen nachgeladen und installiert. Diesen Vorgang solltest du nicht mit `Aktualisierung abbrechen und neustarten` unterbrechen.  
+
 .. figure:: ../media/ubuntu-installation_020_finish-installation.png
    :align: center
    :alt: 
 
-.. todo:: Hier weiter 
+Nach Abschluss der Aktualisierung erkennbar an `Installation komplett!` startest du deinen Host neu. Nach dem Neustart meldest du dich an der Konsole mit deinen Zugangsdaten das erste Mal an.
 
-Installation des KVM-Hosts
---------------------------
+.. figure:: ../media/ubuntu-installation_021_first-login.png
+   :align: center
+   :alt: 
 
-.. tip::
+Dort erkennst du das noch Updates ausstehen. Diese installierst du als Erstes mit
 
-   * Achte auf die Auswahl der korrekten Netzwerkschnittstelle für
-     einen Internetzugang
-   * Erstelle einen Nutzer ``admin`` mit einem sicheren
-     Passwort
-   * Richte ein LVM auf deiner Festplatte/RAID mit ``25GB`` für das
-     Betriebssystem des KVM-Hosts ein
-   * Wähle das Pakets *OpenSSH server* 
-   * Nach Reboot, Update des Systems und Installation von ``qemu-kvm``
-     und ``libvirt-bin``
+.. code::
 
-.. todo:: Screenshots der Installation sind nicht mehr up-to-date 
-
-.. hint:: ALter Text
-
-Rechnername, Benutzername, Passwort, Zeitzone
-
-Es wird empfohlen wie im Beispiel ``host`` als Rechnernamen zu verwenden. Der Benutzername wird im Beispiel ``admin`` genannt und dazu ein sicheres Passwort vergeben. Die Zeitzone sollte bereits richtig erkannt werden.
-
-Festplatten partitionieren
-
-Im Beispiel wird `Geführt - gesamte Platte verwenden und LVM einrichten` gewählt. Wer eine Festplatte bzw. ein RAID verwendet, die eine Partitionierung enthält, dem wird dementsprechend die Option zur Wiederverwendung angeboten. Hat man bereits eine exisitierenden Partition und ein existierendes LVM und will sie `nicht` wiederverwenden, so muss dementsprechend zustimmen, dass die existierenden Daten entfernt werden.
-
-Im Anschluss muss man auf alle Fälle dem Schreiben der Änderungen auf die Speichergeräte zustimmen.
-
-.. figure:: media/kvmhost-install-write-partitiontable.png
-
-Die folgende Abfrage bezieht sich tatsächlich auf die Größe der Partition die für den KVM-Host verwendet werden soll. Dies wird dementsprechend niedrig, z.B. bei ``25GB`` angesetzt.
-
-.. figure:: media/kvmhost-install-root-vg-size.png
-
-Wenn man im nächsten Dialog das Schreiben auf die Festplatte zunächst `ablehnt`,
-
-.. figure:: media/kvmhost-install-decline-diskchanges.png
-
-bekommt man eine Übersicht über die aktuell vorgesehene Konfiguration und hat erweitertete Änderungsmöglichkeiten (RAID, Verschlüsselung, etc.). 
-
-.. figure:: media/kvmhost-install-overviewchanges.png
-
-Über `Partitionierung beenden und Änderungen übernehmen` kann man nun den zunächst abgelehnten Dialog bestätigen.
-  
-Paketmanager und Softwareauswahl
-
-Der HTTP-Proxy wird leer gelassen, sofern du freien Internetzugang hast. Im nächsten Dialog sollte ``OpenSSH server`` gewählt werden.
-
-.. figure:: media/kvmhost-install-tasksel.png
-
-Am Ende der Installation musst du noch die Installation von GRUB in den Bootbereich bestätigen. Der KVM-Host wird rebootet.
-  
-Update und Softwareinstallation des KVM-Hosts
----------------------------------------------
-
-Nach einem Reboot loggst du dich als ``admin`` ein und führst zunächst ein Update aus. Das ist (Stand: Dez. 2018) notwendig, damit die spätere Konfiguration funktioniert. Der erste Befehl zeigt Dir, ob und welche IP-Adresse du auf einem Netzwerk hast. Im folgenden Beispiel wird als externe IP-Adresse immer die IP ``192.168.1.2/16`` verwendet, die per DHCP von einem Router zugeordnet wurde.
-
-.. code-block:: console
-
-   $ ip -br addr list
-   lo               UNKNOWN        127.0.0.1/8 ::1/128 
-   enp0s8           DOWN        
-   enp0s17          UP             192.168.1.2/16 fe80::ae1c:ba12:6490:f75d/64
-   $ sudo apt update
-   $ sudo apt full-upgrade -y
-
-Unter Umständen werden Dialoge erneut abgefragt, die schon bei der Installation beantwortet wurden (z.B. Tastaturkonfiguration).
-
-Installiere danach die qemu/KVM-Software durch Bestätigen der Fragen
+  sudo apt update && sudo apt upgrade
 
 Installation der KVM-Pakete
 ---------------------------
 
-.. code-block:: console
+Die qemu/KVM-Software installierst du mit den folgenden Befehlen durch das Bestätigen der jeweiligen Fragen.
 
-   $ sudo apt install libvirt-bin qemu-kvm kpartx qemu-utils
-   $ sudo apt --no-install-recommends install virtinst
+.. code::
+
+   sudo apt install libvirt-bin qemu-kvm kpartx qemu-utils
+   sudo apt --no-install-recommends install virtinst
 
 Einrichten der Zeitsynchronisation
 ----------------------------------
 
-Immer eine gute Sache ist es, z.B. in Logfiles die korrekte Zeit zu finden. Aus diesem Grund erfolgt die Konfiguration eines NTP-Clients.
+In dem Intranet, welches du ja einrichtest, sollten alle Systemuhren die gleiche Zeitbasis verwenden. Aus diesem Grund richtest du jetzt auf deinem Virtualisierungshost einen Zeitserver-Dienst ein. Außerdem wird bei der Analyse von Logdateien so die Suche vereinfacht.
 
 .. code-block:: console
 
@@ -346,17 +295,10 @@ Immer eine gute Sache ist es, z.B. in Logfiles die korrekte Zeit zu finden. Aus 
    Anzeigen der Zeitsynchronisation
    $ sudo ntpq -p
 
-.. raw:: html
-
-	<p> <iframe width="696" height="392"
-	src="https://www.youtube.com/embed/tHqFTfS99xo?rel=0"
-	frameborder="0" allow="autoplay; encrypted-media"
-	allowfullscreen></iframe> </p>
-
 Netzwerkkonfiguration des KVM-Hosts
 ===================================
    
-Nach Installation der KVM-Software (``virbr0*`` wurden automatisch hinzugefügt) ist die Netzwerksituation folgende:
+Nach der Installation der KVM-Software (``virbr0*`` wurden automatisch hinzugefügt) ist die Netzwerksituation folgende:
 
 .. code::
 
@@ -367,17 +309,22 @@ Nach Installation der KVM-Software (``virbr0*`` wurden automatisch hinzugefügt)
    virbr0           DOWN           192.168.122.1/24 
    virbr0-nic       DOWN           
 
-In diesem Schritt wird die direkte Verbindung des KVM-Hosts mit dem Internet gekappt und eine virtuelle Verkabelung über so genannte `bridges` erstellt.  Zunächst werden die Brücken ``br-red`` (Internetseite) und ``br-server`` (Schulnetzseite) definiert.  Zuletzt kann der KVM-Host auch über die Brücke ``br-red`` eine IP-Adresse ins Internet bekommen, genau wie er über die Brücke ``br-server`` auch im pädagogischen Netzwerk auftauchen kann. Letzteres ist nicht zu empfehlen.
+Im nächsten Schritt wird die direkte Verbindung des KVM-Hosts mit dem Internet gekappt und eine virtuelle Verkabelung über sogenannte `bridges` erstellt.
 
-.. todo:: Das ist so keine Schritt für Schritt-Anleitung, sondern Mist. Anleitung muss schnell zum Ergebnis wie gewünscht führen. Also IP-Adressen anpassen an die zuvor genannten Vorgaben.
+ *  Zunächst werden die Brücken ``br-red`` (Internetseite) und ``br-server`` (Schulnetzseite) definiert.
+    
+ *  Zuletzt kann der KVM-Host auch über die Brücke ``br-red`` eine IP-Adresse ins Internet bekommen, genau wie er über die Brücke ``br-server`` auch im pädagogischen Netzwerk auftauchen kann. Letzteres ist nicht zu empfehlen.
+
+    .. hint:: Komplett raus? Tests erforderlich
 
 .. hint::
 
    Die Netzwerkkonfiguration wird seit Ubuntu 18.04 standardmäßig über netplan realisiert. Wer seinen KVM-Host von früheren Ubuntu-Versionen updatet, bei dem wird nicht automatisch `netplan` installiert, sondern `ifupdown` wird mit der Konfigurationsdatei ``/etc/network/interfaces`` beibehalten.
 
-Namen der Netzwerkkarten:
+Namen der Netzwerkkarten
+------------------------
 
-Mit folgendem Befehl werden alle physischen Netzwerkkarten (teilweise umbenannt) angezeigt:
+Mit dem folgenden Befehl werden alle physischen Netzwerkkarten angezeigt:
 
 .. code::
      
@@ -387,14 +334,20 @@ Mit folgendem Befehl werden alle physischen Netzwerkkarten (teilweise umbenannt)
    [    9.432342] e1000e 0000:08:00.0 enp0s8: renamed from eth0
    [    9.654232] e1000e 0000:11:00.1 enp0s17: renamed from eth1
 
-Anpassen der Netzwerkkonfiguration im Editor deiner Wahl. Hier am Beispiel nano
+Anpassen der Netzwerkkonfiguration mit einem Editor deiner Wahl. (Hier am Beispiel nano)
 
 .. code::
 
   $ sudo nano /etc/netplan/01-netcfg.yaml
 
-Die Netzwerkkonfiguration enthält standardmäßig die Schnittstelle, die bei der Installation mit dem Internet verbunden war. Diese Schnittstelle wird dann auch mit der Brücke ``br-red`` verbunden. 
-     
+Die Netzwerkkonfiguration enthält standardmäßig die Schnittstelle, die bei der Installation mit dem Internet verbunden war. 
+
+.. todo:: Vorherige Konfiguration abbilden.
+
+.. todo:: Einfügen der bridges beschreiben.
+
+Diese Schnittstelle wird dann auch mit der Brücke ``br-red`` verbunden. 
+
 .. code::
 
    network:
@@ -408,55 +361,81 @@ Die Netzwerkkonfiguration enthält standardmäßig die Schnittstelle, die bei de
      bridges:
        br-red:
          interfaces: [enp0s17]
-         dhcp4: no
-         addresses: [ ]
+         dhcp4: yes
        br-server:
          interfaces: [enp0s8]
          addresses: [ ]
 
-Diese Netzwerkkonfiguration kann nun ausprobiert und angewandt werden.
+.. hint:: Als Hinweis für die Syntax merke dir:
+
+   * Jede Zeile besteht aus einem Wertepaar ``Schlüssel: Wert``
+   * Ist der Schlüssel im Singular, dann folgt der dazugehörende Wert
+   * Ist der Schlüssel im Plural und es folgt kein in Klammern ``[]`` gesetzteŕ Wert, dann beziehen sich die nächsten Zeilen auf diesen Schlüssel 
+     Dessen Zeilen müssen durchgehend um die gleichen Anzahl von identischen Zeichen eingerückt sein 
+     
+   Potenzielle Fehlerquellen sind also nicht konsequent eingerückte Zeilen (Leerzeichen, TABs). 
+
+Diese Netzwerkkonfiguration kann nun ausprobiert und angewandt werden. 
+
+Nach dem Aufruf von 
 
 .. code::
 
-   $ sudo netplan try
+   sudo netplan try
 
-.. hint:: Potenzielle Fehlerquellen sind nicht konsequent eingerückte Zeilen oder TABs.
+hast du 120 Sekunden Zeit die gemachten Einstellungen zu übergrüfen. Der Befehl 
 
-.. error:: Wie beschrieben ist die Einrichtung nun richtig. Führt allerdings zum Verlust der Verbindung.
+.. code:: 
 
-.. code::
+   sudo ip address
 
-   Invalid YAML at /etc/netplan/01-netcfg.yaml line 6 column 0: found character that cannot start any token
+sollte dir jetzt deine Konfiguration anzeigen.
 
-Bei fehlerhaften Anläufen lohnt es sich, den KVM-host zu rebooten und die Netzwerkkonfiguration erneut zu betrachten. 
+.. todo:: richtige Konfiguraton zeigen
+
+Zur Übernahme der Konfiguration gibt du folgenden Befehl ein:
+
+.. code:: 
+
+   sudo netplan apply
+
+.. .. error:: Wie beschrieben ist die Einrichtung nun richtig. Führt allerdings zum Verlust der Verbindung.
+
+   .. code::
+
+     Invalid YAML at /etc/netplan/01-netcfg.yaml line 6 column 0: found character that cannot start any token
+
+  Bei fehlerhaften Anläufen lohnt es sich, den KVM-host zu rebooten und die Netzwerkkonfiguration erneut zu betrachten. 
   
-KVM-Host auch im Internet
+  .. hint:: Soll das wirklich so beschrieben werden?
 
-Soll später nicht nur die Firewall sondern auch der KVM-Host im Internet erreichbar sein, dann muss der entsprechende Block so aussehen:
+     KVM-Host auch im Internet
 
-.. code::
+     Soll später nicht nur die Firewall sondern auch der KVM-Host im Internet erreichbar sein, dann muss der entsprechende Block so aussehen:
 
-   network:
-     ...
-     bridges:
-       br-red:
-           interfaces: [enp0s17]
-           dhcp4: yes
-       br-server:
-     ...
+     .. code::
 
-Wer bisher einen statischen Zugang eingerichtet hatte, der kann das genauso hier tun. Der entsprechende Abschnitt wäre beispielhaft
+        network:
+          ...
+          bridges:
+            br-red:
+              interfaces: [enp0s17]
+              dhcp4: yes
+            br-server:
+              ...
 
-.. code::
+     Wer bisher einen statischen Zugang eingerichtet hatte, der kann das genauso hier tun. Der entsprechende Abschnitt wäre beispielhaft
 
-     bridges:
-       br-red:
-         interfaces: [enp0s17]
-           addresses: [141.1.2.5/29]
-           gateway4: 141.1.2.3
-            nameservers:
-             addresses: [129.143.2.1]
+     .. code::
 
+        bridges:
+          br-red:
+            interfaces: [enp0s17]
+              addresses: [141.1.2.5/29]
+              gateway4: 141.1.2.3
+              nameservers:
+                addresses: [129.143.2.1]
+     
 Weiter geht es mit dem Import der Virtuellen Maschinen.
 
 .. toctree::
