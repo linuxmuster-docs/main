@@ -210,41 +210,67 @@ Eventuell brauchst du für den Internetzugang in deiner Infrastruktur einen Prox
 
 Solltest du wissen, das deine Internet-Verbindung über einen bestimmten Spiegelserver schneller ist, dann könntest du ihn hier angeben. Ist in aller Regel aber nicht notwendig.
 
+Nun geht es daran die Festplatte(n) einzurichten.
+
 .. figure:: ../media/ubuntu-installation_014_hdd-konfiguration.png
    :align: center
    :alt: Konfiguration der Festplatten
 
-Nun geht es daran die Festplatte(n) einzurichten.
-
-.. todo:: Hier weier. Es muss überprüft werden inwieweit Zwischenschritte nötig sind. Festplattengröße???
-
-Im Beispiel wird `Geführt - gesamte Platte verwenden und LVM einrichten` gewählt. Wer eine Festplatte bzw. ein RAID verwendet, die eine Partitionierung enthält, dem wird dementsprechend die Option zur Wiederverwendung angeboten. Hat man bereits eine exisitierenden Partition und ein existierendes LVM und will sie `nicht` wiederverwenden, so muss dementsprechend zustimmen, dass die existierenden Daten entfernt werden.
-
-Im Anschluss muss man auf alle Fälle dem Schreiben der Änderungen auf die Speichergeräte zustimmen.
+Im Beispiel wird `Geführt - gesamte Platte verwenden und LVM einrichten` gewählt. Wer eine Festplatte bzw. ein RAID verwendet, die eine Partitionierung enthält, dem wird dementsprechend die Option zur Wiederverwendung angeboten. Hast du bereits eine exisitierenden Partition und ein existierendes LVM und willst sie `nicht` wiederverwenden, so muss du dementsprechend zustimmen, dass die existierenden Daten entfernt werden.
 
 .. figure:: ../media/ubuntu-installation_015_summary-hdd-configuration.png
    :align: center
    :alt: 
 
+Bevor die von dir vorgenommenen Änderungen auf die Festplatte geschrieben werden, wird dir eine Übersicht deiner getroffenen Auswahl angezeigt. Mit `Erledigt` verlässt du diese Ansicht.  
+
 .. figure:: ../media/ubuntu-installation_016_hdd-configuration-confirm.png
    :align: center
    :alt: 
+
+Im Anschluss muss du auf alle Fälle dem Schreiben der Änderungen auf die Speichergeräte mit `Fortfahren` zustimmen.
 
 .. figure:: ../media/ubuntu-installation_017_user-registration.png
    :align: center
    :alt: 
 
+In dieser Maske Gibst du deinem Systembenutzer ebenso einen passenden Namen wie deinem Host. Es wird empfohlen wie im Beispiel ``host`` als Rechnernamen zu verwenden. Der Benutzername wird im Beispiel ``administrator`` genannt und für dessen Zugan solltest du ein sicheres Passwort vergeben. Deine Eingaben übenrimmst du mit `Erledigt`. Sollten die Passwörter nicht identisch sein, wirst du darauf hingewiesen.
+
 .. figure:: ../media/ubuntu-installation_018_install-openssh.png
    :align: center
    :alt: 
+
+Den OpenSSH-Server musst du für die weitere Verwendung auf alle Fälle aktivieren. Die Frage nach der SSH-Identität kannst du verneinen.
 
 .. figure:: ../media/ubuntu-installation_019_optional-software.png
    :align: center
    :alt: 
 
+Von den vorgeschlagen Programmen brauchst du keine. Mit `Erledigt` beginnt der eigentliche Installationsvorgang über dessen Stand dich dann die folgende Ansicht informiert. Dieses erkennst du in dem oberen Feld daran das dort "Installation des Grundsystemes" steht.
+
+Danach wechselt die Ansicht zwar nach "Installation komplett", aber es werden Sicherheits-Aktualisierungen nachgeladen und installiert. Diesen Vorgang solltest du nicht mit `Aktualisierung abbrechen und neustarten` unterbrechen.  
+
 .. figure:: ../media/ubuntu-installation_020_finish-installation.png
    :align: center
    :alt: 
+
+Nach Abschluss der Aktualisierung erkennbar an `Installation komplett!` startest du deinen Host neu. Nachdem Neustart meldest dich an der Konsole mit deinen Zugangsdaten das erstemal an.
+
+.. figure:: ../media/ubuntu-installation_021_first-login.png
+   :align: center
+   :alt: 
+
+Dort erkennst du das noch Updates ausstehen. Diese installierst du als erstes mit
+
+.. code::
+
+  sudo apt update && sudo apt upgrade
+
+
+
+
+
+
 
 .. todo:: Hier weiter 
 
@@ -269,30 +295,7 @@ Installation des KVM-Hosts
 
 Rechnername, Benutzername, Passwort, Zeitzone
 
-Es wird empfohlen wie im Beispiel ``host`` als Rechnernamen zu verwenden. Der Benutzername wird im Beispiel ``admin`` genannt und dazu ein sicheres Passwort vergeben. Die Zeitzone sollte bereits richtig erkannt werden.
 
-Festplatten partitionieren
-
-Im Beispiel wird `Geführt - gesamte Platte verwenden und LVM einrichten` gewählt. Wer eine Festplatte bzw. ein RAID verwendet, die eine Partitionierung enthält, dem wird dementsprechend die Option zur Wiederverwendung angeboten. Hat man bereits eine exisitierenden Partition und ein existierendes LVM und will sie `nicht` wiederverwenden, so muss dementsprechend zustimmen, dass die existierenden Daten entfernt werden.
-
-Im Anschluss muss man auf alle Fälle dem Schreiben der Änderungen auf die Speichergeräte zustimmen.
-
-.. figure:: media/kvmhost-install-write-partitiontable.png
-
-Die folgende Abfrage bezieht sich tatsächlich auf die Größe der Partition die für den KVM-Host verwendet werden soll. Dies wird dementsprechend niedrig, z.B. bei ``25GB`` angesetzt.
-
-.. figure:: media/kvmhost-install-root-vg-size.png
-
-Wenn man im nächsten Dialog das Schreiben auf die Festplatte zunächst `ablehnt`,
-
-.. figure:: media/kvmhost-install-decline-diskchanges.png
-
-bekommt man eine Übersicht über die aktuell vorgesehene Konfiguration und hat erweitertete Änderungsmöglichkeiten (RAID, Verschlüsselung, etc.). 
-
-.. figure:: media/kvmhost-install-overviewchanges.png
-
-Über `Partitionierung beenden und Änderungen übernehmen` kann man nun den zunächst abgelehnten Dialog bestätigen.
-  
 Paketmanager und Softwareauswahl
 
 Der HTTP-Proxy wird leer gelassen, sofern du freien Internetzugang hast. Im nächsten Dialog sollte ``OpenSSH server`` gewählt werden.
