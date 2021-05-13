@@ -246,17 +246,25 @@ Den OpenSSH-Server musst du für die weitere Verwendung auf alle Fälle aktivier
    :align: center
    :alt: 
 
-Von den vorgeschlagenien Programmen brauchst du keine. Mit `Erledigt` beginnt der eigentliche Installationsvorgang über dessen Stand dich dann die folgende Ansicht informiert. Dieses erkennst du in dem oberen Feld daran das dort "Installation des Grundsystemes" steht.
+Von den vorgeschlagenien Programmen brauchst du keine. Mit `Erledigt` beginnt der eigentliche Installationsvorgang über dessen Stand dich dann die folgende Ansicht informiert. Dieses erkennst du in dem oberen Feld daran, dass dort "Installation des Grundsystemes" steht.
 
-Danach wechselt die Ansicht zwar nach "Installation komplett", aber es werden Sicherheits-Aktualisierungen nachgeladen und installiert. Diesen Vorgang solltest du nicht mit `Aktualisierung abbrechen und neustarten` unterbrechen.  
+Die Ansicht wechselt zwar irgendwann nach "Installation komplett", aber es werden noch Sicherheits-Aktualisierungen nachgeladen und installiert.
 
-.. figure:: ../media/ubuntu-installation_020_finish-installation.png
+.. figure:: ../media/ubuntu-installation_020_first-update.png
    :align: center
    :alt: 
 
-Nach Abschluss der Aktualisierung erkennbar an `Installation komplett!` startest du deinen Host neu. Nach dem Neustart meldest du dich an der Konsole mit deinen Zugangsdaten das erste Mal an.
+Diesen Vorgang solltest du nicht mit `Aktualisierung abbrechen und neustarten` unterbrechen.  
 
-.. figure:: ../media/ubuntu-installation_021_first-login.png
+.. figure:: ../media/ubuntu-installation_021_finish-installation.png
+   :align: center
+   :alt: 
+
+Nach Abschluss der Aktualisierung, erkennbar daran, dass dir nur noch `Neustart` als Auswahlmöglichkeit angeboten wird, startest du deinen Host neu. 
+
+Nach dem Neustart meldest du dich an der Konsole mit deinen Zugangsdaten das erste Mal an.
+
+.. figure:: ../media/ubuntu-installation_022_first-login.png
    :align: center
    :alt: 
 
@@ -274,6 +282,13 @@ Die qemu/KVM-Software installierst du mit den folgenden Befehlen durch das Best�
 .. code::
 
    sudo apt install libvirt-bin qemu-kvm kpartx qemu-utils
+
+Weitere benötigte Programme und Bibliotheken werden automatisch aufgelöst und dir zur Ansicht gebracht. Diese Auswahl musst du mit ``Y`` bestätigen.
+
+Nach der Abarbeitung des letzten Befehls schließt der folgende Befehl die Installation der KVM-Pakete ab.
+
+.. code::
+
    sudo apt --no-install-recommends install virtinst
 
 Einrichten der Zeitsynchronisation
@@ -295,109 +310,136 @@ In dem Intranet, welches du ja einrichtest, sollten alle Systemuhren die gleiche
    Anzeigen der Zeitsynchronisation
    $ sudo ntpq -p
 
-Netzwerkkonfiguration des KVM-Hosts
-===================================
+Weiter geht es mit dem Import der Virtuellen Maschinen.
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Externe Dienste
+  :hidden:
+
+  import-kvm-vms
+
+.. todo::
+
+   Nachfolgende auskommentierte Zeilen im rst-Filei müssen entfernt werden, wenn das Kapitel redigiert ist.
+
+.. Netzwerkkonfiguration des KVM-Hosts
+   ===================================
    
-Nach der Installation der KVM-Software (``virbr0*`` wurden automatisch hinzugefügt) ist die Netzwerksituation folgende:
+   Nach der Installation der KVM-Software (``virbr0*`` wurden automatisch hinzugefügt) ist die Netzwerksituation folgende:
 
-.. code::
+   .. code::
 
-   $ ip -br addr list
-   lo               UNKNOWN        127.0.0.1/8 ::1/128 
-   enp0s8           DOWN        
-   enp0s17          UP             192.168.1.2/16 fe80::ae1c:ba12:6490:f75d/64
-   virbr0           DOWN           192.168.122.1/24 
-   virbr0-nic       DOWN           
+      $ ip -br addr list
+      lo               UNKNOWN        127.0.0.1/8 ::1/128 
+      enp0s8           DOWN        
+      enp0s17          UP             192.168.1.2/16 fe80::ae1c:ba12:6490:f75d/64
+      virbr0           DOWN           192.168.122.1/24 
+      virbr0-nic       DOWN           
 
-Im nächsten Schritt wird die direkte Verbindung des KVM-Hosts mit dem Internet gekappt und eine virtuelle Verkabelung über sogenannte `bridges` erstellt.
+   Im nächsten Schritt wird die direkte Verbindung des KVM-Hosts mit dem Internet gekappt und eine virtuelle Verkabelung über sogenannte `bridges` erstellt.
 
- *  Zunächst werden die Brücken ``br-red`` (Internetseite) und ``br-server`` (Schulnetzseite) definiert.
+    *  Zunächst werden die Brücken ``br-red`` (Internetseite) und ``br-server`` (Schulnetzseite) definiert.
     
- *  Zuletzt kann der KVM-Host auch über die Brücke ``br-red`` eine IP-Adresse ins Internet bekommen, genau wie er über die Brücke ``br-server`` auch im pädagogischen Netzwerk auftauchen kann. Letzteres ist nicht zu empfehlen.
+    *  Zuletzt kann der KVM-Host auch über die Brücke ``br-red`` eine IP-Adresse ins Internet bekommen, genau wie er über die Brücke ``br-server`` auch im pädagogischen Netzwerk auftauchen kann. Letzteres ist nicht zu empfehlen.
 
     .. hint:: Komplett raus? Tests erforderlich
 
-.. hint::
+   .. hint::
 
-   Die Netzwerkkonfiguration wird seit Ubuntu 18.04 standardmäßig über netplan realisiert. Wer seinen KVM-Host von früheren Ubuntu-Versionen updatet, bei dem wird nicht automatisch `netplan` installiert, sondern `ifupdown` wird mit der Konfigurationsdatei ``/etc/network/interfaces`` beibehalten.
+      Die Netzwerkkonfiguration wird seit Ubuntu 18.04 standardmäßig über netplan realisiert. Wer seinen KVM-Host von früheren Ubuntu-Versionen updatet, bei dem wird nicht automatisch `netplan` installiert, sondern `ifupdown` wird mit der Konfigurationsdatei ``/etc/network/interfaces`` beibehalten.
 
-Namen der Netzwerkkarten
-------------------------
+   Namen der Netzwerkkarten
+   ------------------------
 
-Mit dem folgenden Befehl werden alle physischen Netzwerkkarten angezeigt:
+   .. todo:: Ändere enp0s18 in enp0s8
 
-.. code::
+   Mit dem folgenden Befehl 
+
+   .. code::
+      
+      dmesg | grep eth
+  
+   werden dir alle physischen Netzwerkkarten angezeigt:
+
+   .. code::
+
+      [    9.432342] e1000e 0000:08:00.0 enp0s18: renamed from eth0
+      [    9.654232] e1000e 0000:11:00.1 enp0s17: renamed from eth1
+
+   Die Netzwerkkonfiguration enthält standardmäßig die Schnittstelle, die bei der Installation mit dem Internet verbunden war. 
+
+   .. code:: 
+
+      cat /etc/netplan/00-installer-config.yaml
+
+   .. code::
+
+      # This is the network config written by 'subiquity'
+      network:
+        ethernets:
+          enp0s18:
+            dhcp4: true
+      version: 2
+   
+   Damit hast du nun alle Informationen gesammelt um die Netzwerkkonfiguration mit einem Editor deiner Wahl zu erstellen. (Hier am Beispiel nano)
+
+   .. code::
+
+     $ sudo nano /etc/netplan/01-netcfg.yaml
+
+   Diese Schnittstelle wird dann auch mit der Brücke ``br-red`` verbunden. 
+
+   .. code::
+
+      network:
+        version: 2
+        renderer: networkd
+        ethernets:
+          enp0s8:
+            dhcp4: no
+          enp0s17:
+            dhcp4: no
+        bridges:
+          br-red:
+            interfaces: [enp0s18]
+            dhcp4: yes
+          br-server:
+            interfaces: [enp0s17]
+            addresses: [ ]
+
+   .. hint:: Als Hinweis für die Syntax merke dir:
+
+      * Jede Zeile besteht aus einem Wertepaar ``Schlüssel: Wert``
+      * Ist der Schlüssel im Singular, dann folgt der dazugehörende Wert
+      * Ist der Schlüssel im Plural und es folgt kein in Klammern ``[]`` gesetzteŕ Wert, dann beziehen sich die nächsten Zeilen auf diesen Schlüssel 
+        Dessen Zeilen müssen durchgehend um die gleichen Anzahl von identischen Zeichen eingerückt sein 
      
-   # dmesg | grep eth
-   [    9.230673] e1000e 0000:08:00.0 eth0: (PCI Express:2.5GT/s:Width x4) 00:30:48:dd:ee:ff
-   [    9.273215] e1000e 0000:11:00.1 eth1: (PCI Express:2.5GT/s:Width x4) 00:30:48:aa:bb:cc
-   [    9.432342] e1000e 0000:08:00.0 enp0s8: renamed from eth0
-   [    9.654232] e1000e 0000:11:00.1 enp0s17: renamed from eth1
+      Potenzielle Fehlerquellen sind also nicht konsequent eingerückte Zeilen (Leerzeichen, TABs). 
 
-Anpassen der Netzwerkkonfiguration mit einem Editor deiner Wahl. (Hier am Beispiel nano)
+   Diese Netzwerkkonfiguration kann nun ausprobiert und angewandt werden. 
 
-.. code::
+   Nach dem Aufruf von 
 
-  $ sudo nano /etc/netplan/01-netcfg.yaml
+   .. code::
 
-Die Netzwerkkonfiguration enthält standardmäßig die Schnittstelle, die bei der Installation mit dem Internet verbunden war. 
+      sudo netplan try
+   
+   hast du 120 Sekunden Zeit die gemachten Einstellungen zu übergrüfen. Der Befehl 
 
-.. todo:: Vorherige Konfiguration abbilden.
-
-.. todo:: Einfügen der bridges beschreiben.
-
-Diese Schnittstelle wird dann auch mit der Brücke ``br-red`` verbunden. 
-
-.. code::
-
-   network:
-     version: 2
-     renderer: networkd
-     ethernets:
-       enp0s8:
-         dhcp4: no
-       enp0s17:
-         dhcp4: no
-     bridges:
-       br-red:
-         interfaces: [enp0s17]
-         dhcp4: yes
-       br-server:
-         interfaces: [enp0s8]
-         addresses: [ ]
-
-.. hint:: Als Hinweis für die Syntax merke dir:
-
-   * Jede Zeile besteht aus einem Wertepaar ``Schlüssel: Wert``
-   * Ist der Schlüssel im Singular, dann folgt der dazugehörende Wert
-   * Ist der Schlüssel im Plural und es folgt kein in Klammern ``[]`` gesetzteŕ Wert, dann beziehen sich die nächsten Zeilen auf diesen Schlüssel 
-     Dessen Zeilen müssen durchgehend um die gleichen Anzahl von identischen Zeichen eingerückt sein 
-     
-   Potenzielle Fehlerquellen sind also nicht konsequent eingerückte Zeilen (Leerzeichen, TABs). 
-
-Diese Netzwerkkonfiguration kann nun ausprobiert und angewandt werden. 
-
-Nach dem Aufruf von 
-
-.. code::
-
-   sudo netplan try
-
-hast du 120 Sekunden Zeit die gemachten Einstellungen zu übergrüfen. Der Befehl 
-
-.. code:: 
+   .. code:: 
 
    sudo ip address
 
-sollte dir jetzt deine Konfiguration anzeigen.
+   sollte dir jetzt deine Konfiguration anzeigen.
 
-.. todo:: richtige Konfiguraton zeigen
+   .. todo:: richtige Konfiguraton zeigen
 
-Zur Übernahme der Konfiguration gibt du folgenden Befehl ein:
+   Zur Übernahme der Konfiguration gibt du folgenden Befehl ein:
 
-.. code:: 
+   .. code:: 
 
-   sudo netplan apply
+      sudo netplan apply
 
 .. .. error:: Wie beschrieben ist die Einrichtung nun richtig. Führt allerdings zum Verlust der Verbindung.
 
@@ -436,11 +478,3 @@ Zur Übernahme der Konfiguration gibt du folgenden Befehl ein:
               nameservers:
                 addresses: [129.143.2.1]
      
-Weiter geht es mit dem Import der Virtuellen Maschinen.
-
-.. toctree::
-  :maxdepth: 2
-  :caption: Externe Dienste
-  :hidden:
-
-  import-kvm-vms
