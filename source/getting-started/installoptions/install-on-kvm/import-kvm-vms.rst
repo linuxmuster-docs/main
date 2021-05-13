@@ -21,77 +21,68 @@ Um die Maschinen importieren zu können, müssen diese zuerst auf den Hypervisor
 
 Für eine linuxmuster.net v7 Umgebung werden die Server-VM und als Firewall die OPNsense®-VM benötigt. Optional sind zusätzlich eine OPSI-VM und eine Docker-VM für deine linuxmuster.net-Umgebung verfügbar. 
 
-Für die VMs wären folgende Befehle in der Shell einzugeben. Jeweils pro Server zwei Dateien: 
+Für die VMs wären folgende Befehle in der Shell einzugeben.
 
 ================== =====================================================================================
 VM                 Download-Befehl
 ================== =====================================================================================
-opnsense-VM        wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opnsense-20200421.ova 
-opensense (sha256) wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opnsense-20200421.ova.sha256
-server-VM          wget https://download.linuxmuster.net/ova/v7/latest/lmn7-server-20200421.ova
-server (sha256)    wget https://download.linuxmuster.net/ova/v7/latest/lmn7-server-20200421.ova.sha256
-opsi-VM            wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opsi-20200421.ova
-opsi (sha256)      wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opsi-20200421.ova.sha256
-docker-VM          wget https://download.linuxmuster.net/ova/v7/latest/lmn7-docker-20200421.ova
-docker-VM (sha256) wget https://download.linuxmuster.net/ova/v7/latest/lmn7-docker-20200421.ova.sha256
+opnsense-VM        wget -A \*opnsense\* -m https://download.linuxmuster.net/ova/v7/latest 
+server-VM          wget -A \*server\* -m https://download.linuxmuster.net/ova/v7/latest 
+opsi-VM            wget -A \*opsi\* -m https://download.linuxmuster.net/ova/v7/latest 
+docker-VM          wget -A \*docker\* -m https://download.linuxmuster.net/ova/v7/latest 
 ================== =====================================================================================
 
+Für die beiden erforderlichen virtuellen Maschinen Server und OPNSense lassen sich die erforderlichen Dateien wie folgt auf einmal herunterladen.
 
-.. todo::
+.. code::
+ 
+    wget -A *opnsense*,*server* -m https://download.linuxmuster.net/ova/v7/latest
 
-   Gab es die mal oder kommen sie wieder?
+.. hint:: 
+
+   Solltest du zusätzlich die optionalen VMs herunterladen wollen, musst du die kommaseparierte Liste ``-A \*opnsense\*,\*server\*`` um die Namen der VMs ergänzen:
+
+   * \*opsi\*
+   * \*docker\*
+    
+Nach dem Herunterladen der Dateien sollten sich diese mittels ``ls -lh`` in der Shell anzeigen lassen. Wechsel dazu erst in das Download-Verzeichnis
+
+.. code::
+
+   cd ~/download.linuxmuster.net/ova/v7/latest/
+
+und lasse dir dessen Inhalt anzeigen.
+
+.. code::
+
+   ls -lh
+
+.. code::
+
+   total 5.1G
+   -rw-rw-r-- 1 administrator administrator 2.1G Apr 15  2020 lmn7-opnsense-20200421.ova
+   -rw-rw-r-- 1 administrator administrator   93 Apr 21  2020 lmn7-opnsense-20200421.ova.sha256
+   -rw-rw-r-- 1 administrator administrator 3.0G Apr 21  2020 lmn7-server-20200421.ova
+   -rw-rw-r-- 1 administrator administrator   91 Apr 21  2020 lmn7-server-20200421.ova.sha256
+
+.. hint::
+
+   * Alle Dateien tragen in ihrem Namen einen Zeitstempel. In der weiteren Anleitung wird dieser ``20200421`` durch ein ``*`` ersetzt. Solange du nur je ein (das aktuelle) OVA-Abbild vorliegen hast, funktionieren die Befehle auch mit dem ``*``. Ansonsten musst du den richtigen Zeitstempel einfügen.
+   *  Wie du siehst hast du mit dem obigen Befehl auch die Checksummen der Dateien heruntergeladen. 
+
+Es folgt die Überprüfung ob die heruntergeladenen Dateien in Ordnung sind. Dafür nutzt den folgeden Befehl: 
    
-   +------------------+----------------------------------------------------------------------+
-   | lmn7.unifi         | Controller der Ubiquiti WLAN - Lösung                              |
-   +--------------------+--------------------------------------------------------------------+
+.. code:: 
 
-Beispiel für die opensense-VM:
-
-.. code::
- 
-    root@hv01:~# wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opnsense-20200421.ova
-    --2020-12-20 12:01:46--  https://download.linuxmuster.net/ova/v7/latest/lmn7-opnsense-20200421.ova
-    Resolving download.linuxmuster.net (download.linuxmuster.net)... 95.217.39.154
-    Connecting to download.linuxmuster.net (download.linuxmuster.net)|95.217.39.154|:443... connected.
-    HTTP request sent, awaiting response... 200 OK
-    Length: 3838493301 (3.6G)
-    Saving to: ‘lmn7-opnsense-20200421.ova‘
- 
-    lmn7-opnsense-20200421.ova   5%[>                       ] 186.40M  10.4MB/s
-
-.. code::
- 
-    root@hv01:~# wget https://download.linuxmuster.net/ova/v7/latest/lmn7-opnsense-20200421.ova.sha256
-    --2020-12-20 12:01:46--  https://download.linuxmuster.net/ova/v7/latest/lmn7-opnsense-20200421.ova.sh256
-    Resolving download.linuxmuster.net (download.linuxmuster.net)... 95.217.39.154
-    Connecting to download.linuxmuster.net (download.linuxmuster.net)|95.217.39.154|:443... connected.
-    HTTP request sent, awaiting response... 200 OK
-    Length: 3838493301 (3.6G)
-    Saving to: ‘lmn7-opnsense-20200421.ova.sha256‘
- 
-    lmn7-opnsense-20200421.ova.sha256  100%[=================================================================================>]      93  --.-KB/s    in 0s      
-
-    --2020-12-20 12:0148 (6,81 MB/s) - »lmn7-opnsense-20200421.ova.sha256« gespeichert [93/93] 
-
-.. hint:: Solltest du einen ``FEHLER 404: File not found`` erhalten, musst du die Dateinamen anpassen. Die neuen Dateinamen (aktualisierten) musst du dem oben genannten Link entnehmen und bei allen Nennungen in der Dokumentation verwenden.
-
-Nach dem Herunterladen der Backup-Dateien sollten sich diese mittels ``ls -lh`` in der Shell anzeigen lassen.
+   shasum -c *.sha256
 
 .. code::
 
-   Ist noch anzupassen!
-
-Überprüfe die `sha`-Summe mit dem entsprechenden Werkzeug.
-  
-.. code::
-   
-   shasum -c \*.sha256
    lmn7-opnsense-20200421.ova: OK
    lmn7-server-20200421.ova: OK
 
-.. todo:: Backslahs in shasum zuvor muss entfernt werden, dient nur des Syntax-Hilghlighting in vim
+Erhälst du nicht für jede Datei ein OK, dann musst du den Download für die fehlerhafte wiederholen.
 
-.. hint:: In der weiteren Anleitung wird statt des Datumsstempels wie ``20200421`` im Dateinamen, die Datei mit ``*`` verwendet. Solange du nur je ein (das aktuelle) OVA-Abbild vorliegen hast, funktionieren die Befehle auch mit dem ``*``.
 
 .. todo::  Hier gilt es weiter zu machen. Der nächste Absatz war auskommentiert. Ob der weg kann ist zu klären.
    
