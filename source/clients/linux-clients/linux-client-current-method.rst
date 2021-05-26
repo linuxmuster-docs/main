@@ -173,7 +173,7 @@ Lade den Schlüssel des Archivs herunter und installiere ihn:
 
 .. code::
 
-   wget https://archive.linuxmuster.net/archive.linuxmuster.net.key | sudo apt-add key -
+   wget -O https://archive.linuxmuster.net/archive.linuxmuster.net.key | sudo apt-add key -
 
 Aktualisiere die Paketinformationen mit ``sudo apt update``.
 
