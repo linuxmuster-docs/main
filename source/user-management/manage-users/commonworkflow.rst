@@ -128,7 +128,7 @@ ermittelt wird.
    :align: center
    :alt: Einstellungen für die Benutzer-Quotas
 
-Werden die Quota-Einstellngen geändert, so sind diese mit ``Speichern & Quota übernehmen`` anzuwenden.
+Werden die Quota-Einstellungen geändert, so sind diese mit ``Speichern & Quota übernehmen`` anzuwenden.
 
 Druck-Daten
 -----------
