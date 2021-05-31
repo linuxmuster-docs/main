@@ -123,7 +123,7 @@ Kurse erstellen
 ---------------
 
 Unter Kurse können Sie über die Funktion oben rechts ``Neuer Kurs`` einen neuen Kurs anlegen. Geben Sie dazu den
-Kursnamen ein und bestötigen mit OK.
+Kursnamen ein und bestätigen mit OK.
 
 .. figure:: media/11_webui-basics_new-class.png
    :align: center
