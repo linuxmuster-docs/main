@@ -171,7 +171,7 @@ Erstelle im Terminal die Datei ``lmn7-client.list``, um das Repository für den 
 
 Lade den Schlüssel des Archivs herunter und installiere ihn:
 
-.. code-block::
+.. code::
 
    wget -O https://archive.linuxmuster.net/archive.linuxmuster.net.key | sudo apt-add key -
 
