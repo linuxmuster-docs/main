@@ -12,50 +12,71 @@ Virtualisierung mit KVM
 
 In diesem Dokument findest du unsere "Schritt für Schritt" Anleitungen um linuxmuster.net unter KVM zu installieren. Als Basis dient ein Ubuntu Server 18.04.5 LTS.
 
-Wir setzen voraus, dass du die Abschnitte :ref:`what-is-new-label` und :ref:`prerequisites-label` gelesen hast, bevor du dieses Kapitel durcharbeitest.
+Bevor du dieses Kapitel durcharbeitest, lese bitte zuerst die Abschnitte
+  + :ref:`what-is-linuxmuster.net-label`,
+  + (:ref:`what-is-new-label`),
+  +  :ref:`install-overview-label` und
+  +  :ref:`prerequisites-label`.
 
 Im folgenden Bild ist die einfachste Form der Implementierung der Musterlösung schematisch mit dem gewählten (Standard-)Netzwerk ``10.0.0.0/16`` dargestellt:
 
 .. figure:: media/install-on-kvm-image01.png
 
+.. todo:: Admin-PC muss an Switch gebunden werden.
+
 Nach der Installation gemäß dieser Anleitung erhältst du eine einsatzbereite Umgebung bestehend aus
 
  * einem Host (KVM) für alle virtuellen Maschinen,
- * einer Firewall (OPNsense für linuxmuster.net) und
+ * einer Firewall (OPNsense® für linuxmuster.net) und
  * einem Server (linuxmuster.net)
 
 Ähnliche, hier nicht dokumentierte, Installationen gelten für einen OPSI-Server und einen Docker-Host, die dann ebenso auf dem KVM-Host laufen können.
 
-Voraussetzungen
-===============
+Systemvoraussetzungen
+=====================
 
-* Der Internetzugang des KVM-Hosts muss gewährleistet sein.
- 
-  Entweder bekommt er von einem Router per DHCP eine IP-Adresse, Gateway- und DNS-Server oder man trägt diese Daten von Hand ein.
+In der unten aufgeführten Tabelle findest du die Systemvoraussetzungen zum Betrieb der von uns bereitgestellten virtuellen Maschinen.
 
-* Sofern ein Admin-PC eingerichtet wird, sollte dieser für die Installation die Möglichkeit haben, sich bei Bedarf mit dem entsprechende Netzwerk zu verbinden. Im letztendlichen linuxmuster.net-Intranet erhält dieser dann die folgenden Einstellungen:
+Die Werte sind die voreingestellten Werte der VMs beim Import und bilden gleichzeitig die Mindestvoraussetzungen. Für die Installation mit KVM und linuxmuster wird der IP-Bereich 10.0.0.0/16 genutzt.
+
+============ ============= ================ =====
+VM           IP            HDD              RAM 
+============ ============= ================ =====
+OPNsense®    10.0.0.254/16 10 GiB           4 GiB
+Server       10.0.0.1/16   25 GiB u 100 GiB 4 GiB
+OPSI         10.0.0.2/16   100 GiB          2 GiB
+Docker-VM    10.0.0.3/16   100 GiB          2 GiB
+============ ============= ================ =====
+
+Die Festplattengröße sowie der genutzte RAM der jeweiligen VMs kann nach deren Import später einfach an die Bedürfnisse der Schule angepasst werden. 
+
+Für den Betrieb des Hypervisors selbst (KVM) sollten ca. 2 bis 6 GB Arbeitsspeicher eingeplant werden. 
+
+Um nach Anleitung installieren zu können, sollte der Server mit mindestens 2 Netzwerkkarten bestückt sein.
+
+.. hint: Durch VLANs kann der Betrieb aber auch bereits mit nur einer NIC erfolgen, beispielsweiser mit einer 10 Gbit-Karte an einem Core-VLAN-Switch (L3). Dieser Anwendugnsfall ist aber nicht Bestandteil der Anleitung.
+
+Die Basis dieser Installationsanleitung bilden zwei Festplatten für den KVM-Host. Eine mit einer Kapazität von mindestens 50 GB für den Hypervisor selbst und eine zweite als Speicher für die virtuellen Maschinen. Eine Aufteilung auf zwei Disks wird empfohlen, wenn vor allem viel Speicher für Backup-, Client-Immages, Schuldaten usw. benötigt wird. Eine einzelne Disk kann aber je nach Anforderung der Schulumgebung für linuxmuster ebenfalls ausreichend sein.
+
+Der KVM-Host sollte zusammengefasst gemäß o.g. Minimalanforderungen folgende Merkmale aufweisen:
+
+  * RAM gesamt: mind. 16 GiB
+  * Erste HDD: mind 25 GiB für KVM selbst
+  * Zweite HDD: mind. 150 GB Kapazität für die VMs von Server und OPNsense
+    Für die alternative Docker- bzw. OPSI-VM muss dieser Wert gegebenenfalls angepasst werden
+  * Zwei Netzwerkkarten
+  * Der Internetzugang des KVM-Hosts sollte zunächst gewährleistet sein, d.h. dieser wird z.B. direkt an einen (DSL-)Router angeschlossen, der den Internet-Zugang sicherstellt
+    Entweder bekommt er von einem Router per DHCP eine IP-Adresse, Gateway- und DNS-Server oder man trägt diese Daten von Hand ein
+    Sobald alles eingerichtet ist, bekommt der KVM-Host eine IP-Adresse im Schulnetz und die Firewall OPNsense® stellt den Internet-Zugang für alle VMs und den KVM-Host bereit
+
+  .. hint:: Virtualisierungs-Hosts sollten wie andere Infrastrukturgeräte (Switche usw.) grundsätzlich niemals im gleichen Netz wie Geräte sein, auf denen nicht adminsistrative Nutzer zugriff haben. So wirdsichergestellt, dass diese nicht von ihnen angegriffen werden können. In dieser Dokumentation wird zur Vereinfachung der Fall dokumentiert, dass der KVM-Host zu Beginn im externen Netz mit Internet-Zugriff und nach Abschluss der Installation im internen Schulnetz mit Internet-Zugriff via OPNsense®-Firewall befindet. Für den letztendlichen Einsatz sollte dieses bedacht und entsprechend angepasst werden.
+
+Ein PC/Laptop der als Adminstrations-Zugang eingerichtet wird, muss für die Installation mit dem entsprechende Netzwerk verbunden sein. Im letztendlichen linuxmuster.net-Intranet kann dieser dann für die Pflege der Virtuellen Maschinen eingesetzt werden. Dieser erhält dann die folgenden Einstellungen in dieser Beschreibung:
 
   * IP-Adresse:  ``10.0.0.10/16``
   * Gateway und DNS-Server jeweils: ``10.0.0.254``
 
-  Für solch einen Administrations-Rechner bietet sich ein Ubuntu-Desktop mit der Software `virt-manager` an.
-
-Vorgehen
-========
-
-1. Der KVM-Host wird an einen Router angeschlossen, sodass er ins Internet kommt. Es wird ein heruntergeladenes "Server install image 64bit" von einem Boot-Medium auf dem KVM-Host installiert.
-
-2. Die Software für KVM und die Zeitsynchronisation werden installiert, aktualisiert und konfiguriert.
-
-3. Das virtuelle Netzwerk wird auf dem KVM-Host konfiguriert.
-
-4. Das heruntergeladene Abbild der Firewall wird importiert, an die neue Netzwerkumgebung angepasst und die Netzwerkverbindung zur Firewall getestet. 
-
- .. todo:: zu klären: "In der Firewall wird optional die externe Netzwerkanbindung konfiguriert."   
-
-5. Der linuxmuster.net-Server wird importiert, dessen Festplattengrößen und die Netzwerkverbindung angepasst und getestet.
-
-6. Abschließende Konfigurationen auf dem KVM-Host.
+ Für solch einen Administrations-Rechner bietet sich ein Linux-Desktop mit der Software `virt-manager` an. In dieser Beschreibung beschreiben wir die Installation dieser Software auf einem Ubuntu-Rechner. 
 
 Bereitstellen des KVM-Hosts
 ===========================
@@ -66,12 +87,12 @@ Bereitstellen des KVM-Hosts
 
 Die folgende Anleitung beschreibt die einfachste Implementierung ohne Dinge wie VLANs, Teaming/Bonding oder RAIDs. Diese Themen werden in zusätzlichen Abschnitten im Kapitel "SYSTEMADMINISTRATION" betrachtet.
 
-Wir beschreiben hier die Installation von dem Erstellen eines Bootmediums bis zum fertigen Ubuntu-Server. Sollte das für dich ein alter Hut sein, kannst du das überspringen und mit der Installtion von der Pakete für `Installation der KVM-Pakete`_ fortfahren 
+Wir beschreiben hier die Installation von dem Erstellen eines Bootmediums bis zum fertigen Ubuntu-Server. Sollte das für dich ein alter Hut sein, kannst du das überspringen und mit der Installtion von den Pakete für `Installation der KVM-Pakete`_ fortfahren. 
 
 .. _preface-usb-stick-label:
 
-Erstellen eines Installationsmediums
-------------------------------------
+Erstellen eines USB-Sticks zur Installation des KVM-Host 
+--------------------------------------------------------
 
 .. _Download: https://releases.ubuntu.com/18.04.5/
 
@@ -119,10 +140,18 @@ Warte den Fortschritt des Installationsprozesses ab, bis ...
    
 ... er erfolgreich abgeschlossen wurde.
 
-Installation des KVM-Hosts
---------------------------
+Verkabelungshinweise
+--------------------
 
-Nachdem du deinen zukünftigen KVM-Host von deinem zuvor erstellten Boot-Medium gestaret hast, beginn die eigentlichen Installation.
+Es ist für linuxmuster.net ein internes Netz (grün) und ein externes Netz (rot) am KVM-Host zu unterscheiden. Sind zwei Netzwerkkarten im KVM-Host vorhanden, so ist die erste Netzwerkkarte (z.B. eth0, eno1 oder enp7s0), die zu Beginn eine IP aus dem bestehenden lokalen Netz (z.B. via DSL-Router) benötigt, mit dem (DSL-)Router zu verbinden.
+
+Die zweite Netzwerkkarte (z.B. eth1, eno2 oder enp7s1) ist dann an einen eigenen Switch anzuschließen, ebenso wie alle Clients, die im internen Netz eingesetzt werden.
+
+
+Installation des KVM-Hosts
+==========================
+
+Nachdem du deinen zukünftigen KVM-Host von deinem zuvor erstellten Boot-Medium gestartet hast, beginn die eigentlichen Installation.
 
 .. todo:: Installation KVM
 
@@ -216,33 +245,63 @@ Nun geht es daran die Festplatte(n) einzurichten.
    :align: center
    :alt: Konfiguration der Festplatten
 
-Im Beispiel wird `Geführt - gesamte Platte verwenden und LVM einrichten` gewählt. Wer eine Festplatte bzw. ein RAID verwendet, die eine Partitionierung enthält, dem wird dementsprechend die Option zur Wiederverwendung angeboten. Hast du bereits eine exisitierenden Partition und ein existierendes LVM und willst sie `nicht` wiederverwenden, so muss du dementsprechend zustimmen, dass die existierenden Daten entfernt werden.
+Im Beispiel wird der einfachheitshalber `Geführt - gesamte Platte verwenden und LVM einrichten` gewählt. Wer eine Festplatte bzw. ein RAID verwendet, die eine Partitionierung enthält, dem wird dementsprechend die Option zur Wiederverwendung angeboten. Hast du bereits eine existierende Partition und ein existierendes LVM und willst sie `nicht` wiederverwenden, so musst du dementsprechend zustimmen, dass die existierenden Daten entfernt werden.
+
+Im Beispiel wird der einfachheitshalber `Geführt - gesamte Platte verwenden und LVM einrichten` gewählt. Wer eine Festplatte bzw. ein RAID verwendet, die eine Partitionierung enthält, dem wird dementsprechend die Option zur Wiederverwendung angeboten. Hast du bereits eine exisitierenden Partition und ein existierendes LVM und willst sie `nicht` wiederverwenden, so muss du dementsprechend zustimmen, dass die existierenden Daten entfernt werden.
 
 .. figure:: ../media/ubuntu-installation_015_summary-hdd-configuration.png
    :align: center
    :alt: 
 
-Bevor die von dir vorgenommenen Änderungen auf die Festplatte geschrieben werden, wird dir eine Übersicht deiner getroffenen Auswahl angezeigt. Mit `Erledigt` verlässt du diese Ansicht.  
+Die der Installationsroutine getroffene Auswahl musst du noch anpassen, dazu wählst du `Datenträgergruppe (LVM) anlegen`.
 
-.. figure:: ../media/ubuntu-installation_016_hdd-configuration-confirm.png
+.. figure:: ../media/ubuntu-installation_016_lvm-vg-creation.png
+   :align: center
+   :alt: 
+
+Für die virtuellen Maschinen erstellst du nun eine neue Volumengruppe, die mit der zweiten Festplatte verbunden ist. 
+
+.. figure:: ../media/ubuntu-installation_017_lvm-vg-created.png
+   :align: center
+   :alt: 
+
+Unter verfügbare Geräte erstellst du in der neuen Volumengruppe ein logisches Volume.
+
+.. figure:: ../media/ubuntu-installation_018_create-logical-volume.png
+   :align: center
+   :alt: 
+
+.. figure:: ../media/ubuntu-installation_019_adding-lv2vm-vg.png
+   :align: center
+   :alt: 
+
+Unter `Mount` wählst du `Andere` und gibst dort dann wie gezeigt `/var/lib/libvirt/images` ein. Das ist der Speicherort für die Festplattenabbilder der virtuellen Maschine.
+
+.. figure:: ../media/ubuntu-installation_020_summary-memory-configuration.png
+   :align: center
+   :alt: 
+
+Bevor die von dir vorgenommenen Änderungen auf die Festplatte geschrieben werden, wird dir eine Übersicht deiner getroffenen Auswahl angezeigt. Mit `Erledigt` akzeptierst du von dir gemachten Einstallungen nach einer letzten Überprüfung.
+
+.. figure:: ../media/ubuntu-installation_021_hdd-configuration-confirm.png
    :align: center
    :alt: 
 
 Im Anschluss musst du auf alle Fälle dem Schreiben der Änderungen auf die Speichergeräte mit `Fortfahren` zustimmen.
 
-.. figure:: ../media/ubuntu-installation_017_user-registration.png
+.. figure:: ../media/ubuntu-installation_022_admin-registration.png
    :align: center
    :alt: 
 
-In dieser Maske gibst du deinem Systembenutzer ebenso einen passenden Namen wie deinem Host. Es wird empfohlen wie im Beispiel ``host``, als Rechnernamen zu verwenden. Der Benutzername wird im Beispiel ``administrator`` genannt und für dessen Zugang solltest du ein sicheres Passwort vergeben. Deine Eingaben übernimmst du mit `Erledigt`. Sollten die Passwörter nicht identisch sein, wirst du darauf hingewiesen.
+In dieser Maske gibst du deinem Systembenutzer ebenso einen passenden Namen wie deinem Host. Es wird empfohlen wie im Beispiel ``host``, als Rechnernamen zu verwenden. Der Benutzername wird im Beispiel ``lmnadmin`` genannt und für dessen Zugang solltest du ein sicheres Passwort vergeben. Deine Eingaben übernimmst du mit `Erledigt`. Sollten die Passwörter nicht identisch sein, wirst du darauf hingewiesen.
 
-.. figure:: ../media/ubuntu-installation_018_install-openssh.png
+.. figure:: ../media/ubuntu-installation_023_install-openssh.png
    :align: center
    :alt: 
 
 Den OpenSSH-Server musst du für die weitere Verwendung auf alle Fälle aktivieren. Die Frage nach der SSH-Identität kannst du verneinen.
 
-.. figure:: ../media/ubuntu-installation_019_optional-software.png
+.. figure:: ../media/ubuntu-installation_024_optional-software.png
    :align: center
    :alt: 
 
@@ -250,13 +309,13 @@ Von den vorgeschlagenien Programmen brauchst du keine. Mit `Erledigt` beginnt de
 
 Die Ansicht wechselt zwar irgendwann nach "Installation komplett", aber es werden noch Sicherheits-Aktualisierungen nachgeladen und installiert.
 
-.. figure:: ../media/ubuntu-installation_020_first-update.png
+.. figure:: ../media/ubuntu-installation_025_first-update.png
    :align: center
    :alt: 
 
 Diesen Vorgang solltest du nicht mit `Aktualisierung abbrechen und neustarten` unterbrechen.  
 
-.. figure:: ../media/ubuntu-installation_021_finish-installation.png
+.. figure:: ../media/ubuntu-installation_026_finish-installation.png
    :align: center
    :alt: 
 
@@ -264,7 +323,7 @@ Nach Abschluss der Aktualisierung, erkennbar daran, dass dir nur noch `Neustart`
 
 Nach dem Neustart meldest du dich an der Konsole mit deinen Zugangsdaten das erste Mal an.
 
-.. figure:: ../media/ubuntu-installation_022_first-login.png
+.. figure:: ../media/ubuntu-installation_027_first-login.png
    :align: center
    :alt: 
 
@@ -310,7 +369,209 @@ In dem Intranet, welches du ja einrichtest, sollten alle Systemuhren die gleiche
    Anzeigen der Zeitsynchronisation
    $ sudo ntpq -p
 
-Weiter geht es mit dem Import der Virtuellen Maschinen.
+Bereitstellen des Virtual Managers
+==================================
+
+Wie weiter oben beschrieben, beschreiben wir die Bereitstellung von Virtual Manager auf einem Ubuntu-System. Das Vorgehen für andere Linux-Betriebssysteme sollte aber ähnlich vonstattengehen.
+
+.. hint:: Solltest du es unter Windows 10 nutzen wollen, ist dieses auch möglich wenn du WSL (Windows 10 Subsystem for Linux) aktiviert hast und darin Ubuntu 20.04 oder 18.04 läuft.
+
+   Für weitergehende Hinweise siehe z. B. https://www.how2shout.com/linux/how-to-install-and-use-virt-manager-on-windows-10/
+
+Auf einem Ubuntu-Rechner installierst du das Programm in einem Terminal-Fenster wie folgt:
+
+.. code:: 
+
+   sudo apt install virt-manager 
+
+Die fehlenden Abhängigkeiten werden automatisch aufgelöst ... 
+
+.. code-block:: console
+   
+   $ sudo apt install virt-manager 
+   Reading package lists... Done
+   Building dependency tree       
+   Reading state information... Done
+   The following additional packages will be installed:
+     cpu-checker dmeventd gir1.2-appindicator3-0.1 gir1.2-gstreamer-1.0 gir1.2-gtk-vnc-2.0 gir1.2-gtksource-4 gir1.2-libosinfo-1.0 gir1.2-libvirt-glib-1.0 gir1.2-spiceclientglib-2.0 gir1.2-spiceclientgtk-3.0 gir1.2-vte-2.91 ibverbs-providers ipxe-qemu ipxe-qemu-256k-compat-efi-roms libaio1 libappindicator3-1 libboost-iostreams1.71.0 libboost-thread1.71.0 libbrlapi0.7 libcacard0 libdevmapper-event1.02.1 libfdt1 libgovirt-common libgovirt2 libgtk-vnc-2.0-0 libgtksourceview-4-0 libgtksourceview-4-common libgvnc-1.0-0 libibverbs1 libiscsi7 liblvm2cmd2.03 libnss-mymachines libosinfo-1.0-0 libphodav-2.0-0 libphodav-2.0-common libpmem1 librados2 librbd1 librdmacm1 libreadline5 libslirp0 libspice-client-glib-2.0-8 libspice-client-gtk-3.0-5 libspice-server1 libusbredirhost1 libusbredirparser1 libvirglrenderer1 libvirt-clients libvirt-daemon libvirt-daemon-driver-qemu libvirt-daemon-driver-storage-rbd libvirt-daemon-system libvirt-daemon-system-systemd libvirt-glib-1.0-0 libvirt0 libvte-2.91-0 libvte-2.91-common libyajl2 lvm2 msr-tools osinfo-db ovmf python3-distutils python3-gi-cairo python3-lib2to3 python3-libvirt python3-libxml2 qemu-block-extra qemu-kvm qemu-system-common qemu-system-data qemu-system-gui qemu-system-x86 qemu-utils seabios sharutils spice-client-glib-usb-acl-helper systemd-container thin-provisioning-tools virt-viewer virtinst
+   Suggested packages:
+     indicator-application libosinfo-l10n libvirt-daemon-driver-lxc libvirt-daemon-driver-vbox libvirt-daemon-driver-xen libvirt-daemon-driver-storage-gluster libvirt-daemon-driver-storage-zfs numad auditd nfs-common open-iscsi pm-utils radvd systemtap zfsutils samba vde2 debootstrap sharutils-doc bsd-mailx | mailx gnome-keyring python3-guestfs 
+   The following NEW packages will be installed:
+     cpu-checker dmeventd gir1.2-appindicator3-0.1 gir1.2-gstreamer-1.0 gir1.2-gtk-vnc-2.0 gir1.2-gtksource-4 gir1.2-libosinfo-1.0 gir1.2-libvirt-glib-1.0 gir1.2-spiceclientglib-2.0 gir1.2-spiceclientgtk-3.0 gir1.2-vte-2.91 ibverbs-providers ipxe-qemu ipxe-qemu-256k-compat-efi-roms libaio1 libappindicator3-1 libboost-iostreams1.71.0 libboost-thread1.71.0 libbrlapi0.7 libcacard0 libdevmapper-event1.02.1 libfdt1 libgovirt-common libgovirt2 libgtk-vnc-2.0-0 libgtksourceview-4-0 libgtksourceview-4-common libgvnc-1.0-0 libibverbs1 libiscsi7 liblvm2cmd2.03 libnss-mymachines libosinfo-1.0-0 libphodav-2.0-0 libphodav-2.0-common libpmem1 librados2 librbd1 librdmacm1 libreadline5 libslirp0 libspice-client-glib-2.0-8 libspice-client-gtk-3.0-5 libspice-server1 libusbredirhost1 libusbredirparser1 libvirglrenderer1 libvirt-clients libvirt-daemon libvirt-daemon-driver-qemu libvirt-daemon-driver-storage-rbd libvirt-daemon-system libvirt-daemon-system-systemd libvirt-glib-1.0-0 libvirt0 libvte-2.91-0 libvte-2.91-common libyajl2 lvm2 msr-tools osinfo-db ovmf python3-distutils python3-gi-cairo python3-lib2to3 python3-libvirt python3-libxml2 qemu-block-extra qemu-kvm qemu-system-common qemu-system-data qemu-system-gui qemu-system-x86 qemu-utils seabios sharutils spice-client-glib-usb-acl-helper systemd-container thin-provisioning-tools virt-manager virt-viewer virtinst
+   0 upgraded, 82 newly installed, 0 to remove and 0 not upgraded.
+   Need to get 29,3 MB of archives.
+   After this operation, 135 MB of additional disk space will be used.
+   Do you want to continue? [Y/n] 
+
+... und mit ``Y`` startest du die Installation.
+
+Anschließend startest du es dort einfach mit
+
+.. code::
+   
+   virt-manager
+
+.. todo:: Bild vom virt-manager einfügen
+
+Einrichten des Netzwerkes
+=========================
+
+.. todo:: Einrichten der Bridges
+
+Importieren der Virtual Machine
+===============================
+
+VM Templates herunterladen
+--------------------------
+
+Fertige VM-Snapshots für KVM stellt linuxmuster.net auf dem eigenen Download-Server bereit. https://download.linuxmuster.net/ova/v7/latest/
+ 
+Um die Maschinen importieren zu können, müssen diese zuerst auf den Hypervisor geladen werden. Die VMs können direkt an der Shell des KVM-Host mit dem wget-Befehl heruntergeladen werden. 
+
+Für eine linuxmuster.net v7 Umgebung werden die Server-VM und als Firewall die OPNsense®-VM benötigt. Optional sind zusätzlich eine OPSI-VM und eine Docker-VM für deine linuxmuster.net-Umgebung verfügbar. 
+
+Für die VMs wären folgende Befehle in der Shell einzugeben.
+
+================== =====================================================================================
+VM                 Download-Befehl
+================== =====================================================================================
+opnsense-VM        wget -A \*opnsense\* -m https://download.linuxmuster.net/ova/v7/latest 
+server-VM          wget -A \*server\* -m https://download.linuxmuster.net/ova/v7/latest 
+opsi-VM            wget -A \*opsi\* -m https://download.linuxmuster.net/ova/v7/latest 
+docker-VM          wget -A \*docker\* -m https://download.linuxmuster.net/ova/v7/latest 
+================== =====================================================================================
+
+Für die beiden erforderlichen virtuellen Maschinen Server und OPNSense lassen sich die erforderlichen Dateien wie folgt auf einmal herunterladen.
+
+.. code::
+ 
+    wget -A *opnsense*,*server* -m https://download.linuxmuster.net/ova/v7/latest
+
+.. hint:: 
+
+   Solltest du zusätzlich eine der optionalen VMs herunterladen wollen, musst du die kommaseparierte Liste ``-A \*opnsense\*,\*server\*`` um den Namen der VMs ergänzen:
+
+   * \*opsi\*
+   * \*docker\*
+
+   Solltest du alle vier Maschinen herunterladen wollen, erledigst du das mit folgender Zeile
+
+   wget -m https://download.linuxmuster.net/ova/v7/latest
+    
+Nach dem Herunterladen der Dateien sollten sich diese mittels ``ls -lh`` in der Shell anzeigen lassen. Wechsel dazu erst in das Download-Verzeichnis
+
+.. code::
+
+   cd ~/download.linuxmuster.net/ova/v7/latest/
+
+und lasse dir dessen Inhalt anzeigen.
+
+.. code::
+
+   ls -lh
+
+.. todo:: Dateinamen müssen eventuell angepasst werden.
+
+.. code::
+
+   total 5.1G
+   -rw-rw-r-- 1 administrator administrator 2.1G Apr 15  2020 lmn7-opnsense-20200421.ova
+   -rw-rw-r-- 1 administrator administrator   93 Apr 21  2020 lmn7-opnsense-20200421.ova.sha256
+   -rw-rw-r-- 1 administrator administrator 3.0G Apr 21  2020 lmn7-server-20200421.ova
+   -rw-rw-r-- 1 administrator administrator   91 Apr 21  2020 lmn7-server-20200421.ova.sha256
+
+.. hint::
+
+   * Alle Dateien tragen in ihrem Namen einen Zeitstempel. In der weiteren Anleitung wird dieser ``20200421`` durch ein ``*`` ersetzt. Solange du nur je ein (das aktuelle) OVA-Abbild vorliegen hast, funktionieren die Befehle auch mit dem ``*``. Ansonsten musst du den richtigen Zeitstempel einfügen.
+   *  Wie du siehst hast du mit dem obigen Befehl auch die Checksummen der Dateien heruntergeladen. 
+
+Es folgt die Überprüfung ob die heruntergeladenen Dateien in Ordnung sind. Dafür nutzt den folgeden Befehl: 
+   
+.. code:: 
+
+   shasum -c *.sha256
+
+.. code::
+
+   lmn7-opnsense-20200421.ova: OK
+   lmn7-server-20200421.ova: OK
+
+.. attention:: Erhälst du nicht für jede Datei ein OK, dann musst du den Download für die fehlerhafte ova-Datei wiederholen.
+
+VM Templates importieren
+------------------------
+
+Für die nächsten Schritte benötigst du erweiterte Rechte, also mache dich zu `root`:
+
+.. code::
+
+   sudo -s
+
+Import der Firewall
++++++++++++++++++++
+
+Importiere die Firewall-Appliance `lmn7-opnsense`:
+
+.. code::
+
+   virt-convert lmn7-opnsense-*.ova
+   
+.. code::
+
+   Running /usr/bin/qemu-img convert -O raw lmn7-opnsense-20190724-disk001.vmdk /var/lib/libvirt/images/lmn7-opnsense-20190724-disk001.raw
+   Creating guest 'lmn7-opnsense-20190724.ovf'.
+   
+Die virtuelle Maschine wird sofort gestartet, aber da sich deren Namen aus dem importieren ova-Datei gebildet wurde, benennst du sie am besten gleich um. Dafür benötigst du den vollständigen Namen der in der letzten Zeile angezeigt wurde. Zuerst hälst du die VM an:
+
+.. code::   
+   
+   virsh shutdown lmn7-opnsense-20190724.ovf
+
+.. code::
+
+   Domain ... is being shutdown
+
+Mit folgenden Befehl kannst du überprüfen, ob dieser Status erreicht ist:
+
+.. code::
+
+   virsh list
+   
+Das ist der Falli, wenn sie dir nicht mehr angezeigt wird.    
+
+.. code::
+   
+   Id    Name                           State
+   ----------------------------------------------------
+   2     lmn7-opnsense-20200414.ovf     running
+
+Die Umbenennung wird mit dem folgenden Befehl erreicht. Der Zeitstempel ist gegebenfalls anzupasssen.
+
+.. code::
+
+   virsh domrename lmn7-opnsense-20190724.ovf lmn7-opnsense
+
+Import des Servers
+++++++++++++++++++
+
+Ebenso verfährst du mit der Server-Appliance `lmn7-server-*.ova`.
+   
+.. code::
+   
+   Running /usr/bin/qemu-img convert -O raw lmn7-server-xxxxxxxx-disk001.vmdk /var/lib/libvirt/images/lmn7-server-xxxxxxxx-disk001.raw
+   Running /usr/bin/qemu-img convert -O raw lmn7-server-xxxxxxxx-disk002.vmdk /var/lib/libvirt/images/lmn7-server-xxxxxxxx-disk002.raw   
+   Creating guest 'lmn7-server-20190724.ovf'.
+   # virsh shutdown lmn7-server-20190724.ovf
+   # virsh domrename lmn7-server-20190724.ovf lmn7-server
+
+.. todo::  Hier gilt es weiter zu machen. Der nächste Absatz war auskommentiert. Ob der weg kann ist zu klären.
+   
+   KVM-Anpassungen
+
+   Nach der Integration bietet es sich an, die Hardware der importierten Appliances anzupassen und z.B. die Festplattentypen auf "virtio" zu stellen. Ebenso habe ich den Typ der "Grafikkarte" von `spice` auf `vnc` gesetzt.
+
+Übersicht der Import-Befehle
+----------------------------
 
 .. toctree::
   :maxdepth: 2
