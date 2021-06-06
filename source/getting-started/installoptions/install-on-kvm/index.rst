@@ -153,8 +153,6 @@ Installation des KVM-Hosts
 
 Nachdem du deinen zukünftigen KVM-Host von deinem zuvor erstellten Boot-Medium gestartet hast, beginn die eigentlichen Installation.
 
-.. todo:: Installation KVM
-
 .. figure:: ../media/ubuntu-installation_001_select-language.png
    :align: center
    :alt: Auswahl der Sprache für die Installation
@@ -325,7 +323,7 @@ Nach dem Neustart meldest du dich an der Konsole mit deinen Zugangsdaten das ers
 
 .. figure:: ../media/ubuntu-installation_027_first-login.png
    :align: center
-   :alt: 
+   :alt: first login 
 
 Dort erkennst du das noch Updates ausstehen. Diese installierst du als Erstes mit
 
@@ -372,11 +370,18 @@ In dem Intranet, welches du ja einrichtest, sollten alle Systemuhren die gleiche
 Bereitstellen des Virtual Managers
 ==================================
 
-Wie weiter oben beschrieben, beschreiben wir die Bereitstellung von Virtual Manager auf einem Ubuntu-System. Das Vorgehen für andere Linux-Betriebssysteme sollte aber ähnlich vonstattengehen.
+Wie weiter oben beschrieben, nutzen wir für die weitere Installation auf einem Adminstartions-Rechenr den Virtual Manager auf einem Ubuntu-System. Das Vorgehen für andere Linux-Betriebssysteme sollte aber ähnlich vonstattengehen.
+
+.. figure:: media/vm-install_000_logo-virtual-machine-manager.png
+   :align: center
+   :alt: Logo Virtual Maschine Manager 
 
 .. hint:: Solltest du es unter Windows 10 nutzen wollen, ist dieses auch möglich wenn du WSL (Windows 10 Subsystem for Linux) aktiviert hast und darin Ubuntu 20.04 oder 18.04 läuft.
 
    Für weitergehende Hinweise siehe z. B. https://www.how2shout.com/linux/how-to-install-and-use-virt-manager-on-windows-10/
+
+  
+Solltest du das Programm schon kennen bzw. einsetzen dann kannst du diesen Abschnitt hier überspringen und mit dem `Einrichten des Netzwerkes`_ weitermachen.
 
 Auf einem Ubuntu-Rechner installierst du das Programm in einem Terminal-Fenster wie folgt:
 
@@ -405,18 +410,77 @@ Die fehlenden Abhängigkeiten werden automatisch aufgelöst ...
 
 ... und mit ``Y`` startest du die Installation.
 
-Anschließend startest du es dort einfach mit
+Anschließend startest du es dort einfach mit:
 
 .. code::
    
    virt-manager
 
-.. todo:: Bild vom virt-manager einfügen
+Darauf sieht du im Fenster des Virtual Machine Managers noch keine möglichen Verbindungen.
+
+.. figure:: media/vm-install_001_first-run.png
+   :align: center
+   :alt: Virtual Maschine Manager erster Start 
+
+Diese gilt es jetzt einzurichten.
+
+Erste Verbindung mit dem KVM-Host herstellen
+============================================
+
+Dafür öffnest du den Menüpunkt ``+ Verbindung ...`` unter ``Datei`` wie gezeigt:
+
+.. figure:: media/vm-install_002_add-connection.png
+   :align: center
+   :alt: Hinzufügen der Verbindung zum Host 
+
+Die von dir gewählten Verbindungsdaten gibst du wie gezeigt ein, nachdem du die Checkbox ``Connect to remotehost over SSH`` aktiviert hast. Slebstverständlich musst du bei ``Rechnernamen`` die IP-Adresse deines KVM-Host eintragen:
+
+.. figure:: media/vm-install_003_enter-connection-data.png
+   :align: center
+   :alt: Eingabe der Verbindungsdaten
+
+Somit steht dir dein KVM-Host in der Übersicht der möglichen Verbinungen nun zur Verfügung:
+
+.. figure:: media/vm-install_004_connection-is-added.png
+   :align: center
+   :alt: Übersicht der hinzugefügten Verbindung
+
+Nachdem du diesen markiert hast ...
+
+.. figure:: media/vm-install_005_open-connection-with-double-click.png
+   :align: center
+   :alt: Öffnen der Verbindung mit einem Doppelklick
+
+... startest du den Verbindungsaufbau mit einem Doppelklick. Nach einer Passwort-Abfrage erhälst du die folgende Übersicht:
+
+.. figure:: media/vm-install_006_overview.png
+   :align: center
+   :alt: Übersicht des lmn-Hosts
+
+Dort hast du die Möglichkeit der Verbindung einen passenden Namen zu geben:
+
+.. figure:: media/vm-install_007_rename-connection.png
+   :align: center
+   :alt: Umbenennen der Verbindung 
+
+Unter den zwei anderen Reitern findest du Informationen zu
+
+.. figure:: media/vm-install_008_overview-memory-host.png
+   :align: center
+   :alt: Übersicht über den verfügbaren Speichplatz des Hosts
+
+dem verfügbaren Speicherplatz für die virtuellen Maschinen ...
+
+.. figure:: media/vm-install_009_overview-host-virtual-networks.png
+   :align: center
+   :alt: 
+
+und den virtuellen Netzwerken, die der KVM-Host bereithält. Diese gilt es als nächstest einzurichten.
 
 Einrichten des Netzwerkes
 =========================
 
-.. todo:: Einrichten der Bridges
+.. todo:: Hier weiter machen! - Einrichten der Bridges
 
 Importieren der Virtual Machine
 ===============================
