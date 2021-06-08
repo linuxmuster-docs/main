@@ -138,7 +138,7 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
 
 .. toctree::
   :maxdepth: 1
-  :caption: Linuxmuster.net helfen
+  :caption: linuxmuster.net helfen
   :hidden:
 
   appendix/contribute/index
