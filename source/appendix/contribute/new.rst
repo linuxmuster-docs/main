@@ -10,67 +10,47 @@ Wenn du die Dokumentation erweitern willst, z.B. mit einem eigenen HowTo, ein fe
 - Die Software `sphinx <http://www.sphinx-doc.org>`_ (zum Übersetzen und Testen der Quelldateien), die wiederum python voraussetzt
 - optional: SSH-Schlüssel bei Github `hochladen <https://help.github.com/articles/generating-an-ssh-key/>`_ (erleichtert die Arbeit mit git)
 
-Virtualbox-Appliance verwenden
-------------------------------
+Lokale Installation (Ubuntu)
+----------------------------
 
-Um den Umgang mit rST/sphinx, git und github zu erleichtern, wird von uns eine virtuelle Umgebung angeboten.
+Mit folgenden Befehlen kannst du unter einer aktuellen (ab 16.04) Ubuntu-Distributionen git, python und sphinx nachinstallieren:
 
-- Installiere VirtualBox (mind. 5.2.2) von hier https://www.virtualbox.org/wiki/Downloads inklusive des Extension Packs
-- Lade dir die neueste virtuelle Umgebung von hier herunter: http://www.lehrer.uni-karlsruhe.de/~za3966/lmn/
-- Importiere die heruntergeladene OVA-Datei und starte die virtuelle Umgebung
-
-Benutzername: 
-  linuxadmin (angezeigt wird: Linux Admin)
-
-Passwort:
-  linuxmuster
-
-Manuelle Installation (Ubuntu)
-------------------------------
-
-Wer die virtuelle Appliance nicht nutzen will, kann mit folgenden Befehlen unter aktuellen (ab 16.04) Ubuntu-Distributionen git, python und sphinx nachinstallieren:
-
-.. code-block:: console
+.. code::
 
    $ sudo apt install git
    $ sudo apt install python3-pip
    $ pip3 install sphinx 
    $ pip3 install sphinx_rtd_theme
 
-Nachfolgende Befehle gehen davon aus, dass die virtuelle Umgebung verwendet wird.
-
 Erste Schritte: Offizielle Dokumentation kompilieren
 ----------------------------------------------------
 
-Jetzt kannst du bereits die bereits heruntergeladene Dokumentation aus
-dem offiziellen Repositorium bauen und betrachten. Öffne dazu ein
-Terminal, navigiere zum Ordner `linuxmuster-docs/main`, führe `make
-html` aus und führe `xdg-open build/html/index.html` aus, um das Ergebnis zu betrachten.
+Jetzt kannst du bereits die bereits heruntergeladene Dokumentation aus dem offiziellen Repository bauen und betrachten. 
 
-.. code-block:: console
+Öffne dazu ein Terminal, navigiere zum Ordner `linuxmuster-docs/main`, führe `make clean && make html` aus und rufe die Datei `linuxmuster-docs/main/build/html/index.html` z.B. mit dem Browser Firefox auf, um das Ergebnis zu betrachten.
+
+.. code::
 
    linuxadmin@lmn-docs:~$ cd linuxmuster-docs/
    linuxadmin@lmn-docs:~/linuxmuster-docs$ cd main/
-   linuxadmin@lmn-docs:~/linuxmuster-docs/main$ make html
+   linuxadmin@lmn-docs:~/linuxmuster-docs/main$ make celan && make html
    sphinx-build -b html -d build/doctrees   source build/html
    Running Sphinx v1.6.5
    loading translations [de_DE]... done
    loading pickled environment... done
    ...
-   linuxadmin@lmn-docs:~/linuxmuster-docs/main$ xdg-open build/html/index.html
+   linuxadmin@lmn-docs:~/linuxmuster-docs/main$ firefox build/html/index.html
 
 GitHub Konto erstellen
 ----------------------
 
-Spätestens jetzt sollte ein Konto bei GitHub erstellt werden:
-https://github.com/join. Verifziere deine E-Mail-Adresse. Natürlich
-kannst du die Dokumentation zu GitHub durchlesen. Weiter geht es dann
-unter https://github.com/linuxmuster-docs/main
+Spätestens jetzt solltest du ein Konto bei GitHub erstellen: https://github.com/join. 
+
+Verifziere deine E-Mail-Adresse. Natürlich kannst du die Dokumentation zu GitHub durchlesen. Weiter geht es dann unter https://github.com/linuxmuster-docs/main
 
 .. hint::
 
-   Im folgenden wird das Konto "lmn-docs-bot" verwendet. Überall wo
-   dieser auftaucht, ersetze ihn durch dein Kontonamen bei GitHub.
+   Im folgenden wird das Konto "lmn-docs-bot" verwendet. Überall wo dieser auftaucht, ersetze ihn durch dein Kontonamen bei GitHub.
 
 Linuxmuster Dokumentation forken
 --------------------------------
@@ -81,26 +61,27 @@ Linuxmuster Dokumentation forken
    :align: center
    :alt: Fork on Github
 
-Öffnen Sie nun einen Terminal / Eingabeauffoderung (``Strg+Alt+t`` in Ubuntu) and geben Sie folgenden Befehl ein:
+Öffne nun einen Terminal / Eingabeauffoderung (``Strg+Alt+t`` in Ubuntu) and gebe folgenden Befehl ein:
 
 .. note::
-   Nutzen Sie die URL ``git@github.com:lmn-docs-bot/main.git`` falls Sie bereits einen SSH-Schlüssel bei Github hochgeladen haben!
 
-.. code-block:: console
+   Nutze die URL ``git@github.com:lmn-docs-bot/main.git`` falls du bereits einen SSH-Schlüssel bei Github hochgeladen hast!
+
+.. code::
 
    linuxadmin@lmn-docs:~$ git clone https://github.com/lmn-docs-bot/main.git my-docs
    Klone nach 'my-docs' ...
    ...
    linuxadmin@lmn-docs:~$ cd my-docs
 
-Sie können nun mit
+Du kannst nun mit
 
-.. code-block:: console
+.. code::
 
-   linuxadmin@lmn-docs:~/my-docs$ make html
-   linuxadmin@lmn-docs:~/my-docs$ xdg-open build/html/index.html
+   linuxadmin@lmn-docs:~/my-docs$ make clean && make html
+   linuxadmin@lmn-docs:~/my-docs$ firefox build/html/index.html
 
-die Dokumentation in HTML übersetzen und in ihrem Browser öffnen.
+die Dokumentation in HTML übersetzen und diese lokal in deinem Browser öffnen.
 
 Dokumentation ändern oder neu erstellen
 ---------------------------------------
@@ -117,30 +98,28 @@ Im Verzeichnis ``source`` und den entsprechenden Unterordnern befinden sich alle
    $ mkdir source/howto/foobar
    $ touch source/howto/foobar/index.rst
 
-Schauen Sie sich auch die anderen Dokumentationsdateien an, um mehr über den Aufbau und Syntax zu lernen.
+Schaue dir auch die anderen Dokumentationsdateien an, um mehr über den Aufbau und Syntax zu lernen.
 
 Commit und push
 ~~~~~~~~~~~~~~~
 
-Haben Sie alle Änderungen vorgenommen, können Sie sie nun zur Überprüfung einreichen. Dazu sind folgende Schritte notwendig:
+Hast du alle Änderungen vorgenommen, kannst du diese nun zur Überprüfung einreichen. Dazu sind folgende Schritte notwendig:
 
 .. important::
 
-   Überprüfen Sie bitte zuerst, ob ``make html`` ohne Fehler
-   durchläuft! Falls nicht, beheben Sie bitte alle Fehler und
-   Warnungen, bevor Sie Ihre Änderungen hochladen!
+   Überprüfe bitte zuerst, ob ``make clean && make html`` ohne Fehler durchläuft! Falls nicht, behebe bitte alle Fehler und Warnungen, bevor du deine Änderungen hochlädst!
 
-.. code-block:: console
+.. code::
 
    $ make html
 
 Falls Sie neue Dateien oder Ordner erstellt haben, müssen diese noch hinzugefügt werden:
 
-.. code-block:: console
+.. code::
 
    $ git add source/howto/foobar
 
-Geben Sie nun noch einen Kommentar zu Ihren Änderungen ein und laden Sie alles in Ihren Fork hoch:
+Gebe nun noch einen Kommentar zu deinen Änderungen ein und lade alles in deinen Fork hoch:
 
 .. code-block:: console
 
@@ -150,22 +129,20 @@ Geben Sie nun noch einen Kommentar zu Ihren Änderungen ein und laden Sie alles 
 Pull-Request
 ~~~~~~~~~~~~
 
-Erstellen Sie nun einen "Pull-Request" unter `<https://github.com/lmn-docs-bot/main>`_, indem Sie auf "New Pull Request" klicken.
+Erstelle nun einen "Pull-Request" unter `<https://github.com/lmn-docs-bot/main>`_, indem du auf "New Pull Request" klickst.
 
 .. figure:: media/07_new_pull-request.png
    :align: center
    :alt: PR on Github
 
-Wenn Sie weitere Änderungen vornehmen und mit ``git commit -a -m"My comment"`` und ``git push`` bei Github hochladen, werden diese Änderungen automatisch dem Pull Request hinzugefügt.
+Wenn du weitere Änderungen vornehmen möchtest und diese mit ``git commit -a -m"My comment"`` und ``git push`` bei Github hochlädst, werden diese Änderungen automatisch dem Pull Request hinzugefügt.
 
 
-Den eigenen Fork aktualisieren
-------------------------------
+Eigenen Fork aktualisieren
+--------------------------
 
-Um später weiter Änderungen vornehmen zu können, kann der eigene Fork
-bei GitHub komplett gelöscht werden und ein neuer erzeugt werden.
-Alternativ kann der eigene Fork auf den Stand des offiziellen
-Repositoriums gebracht werden:
+Um später weiter Änderungen vornehmen zu können, kann der eigene Fork bei GitHub komplett gelöscht werden und ein neuer erzeugt werden. Alternativ kann der eigene Fork auf den Stand des offiziellen
+Repository gebracht werden:
 
 * Verschiebe alle lokalen Änderungen mit ``git stash`` in den Hintergrund
 
@@ -206,19 +183,13 @@ Repositoriums gebracht werden:
 Für Fortgeschrittene: andere Zweige bearbeiten
 ----------------------------------------------
 
-Unterschiedliche Versionen von linuxmuster.net werden in
-unterschiedlichen Zweigen des github-Repositoriums dokumentiert. Die
-aktuelle Version ist im Zweig ``master`` untergebracht und obige
-Abschnitte beziehen sich darauf.
+Unterschiedliche Versionen von linuxmuster.net werden in unterschiedlichen Zweigen des github-Repository dokumentiert. Die aktuelle Version ist im Zweig ``master`` untergebracht und obige Abschnitte beziehen sich darauf.
 
-Will man einen anderen Zweig bearbeiten, beispielsweise den Zweig
-``v7``, dann gibt es nur Folgendes zu beachten.
+Will man einen anderen Zweig bearbeiten, beispielsweise den Zweig ``v7``, dann gibt es nur Folgendes zu beachten:
 
-1. Man muss einmalig den Zweig mit ``git checkout v7`` lokal
-   initialisieren. Mit ``git branch`` sieht man, welche Zweige aktuell
-   sind.
+1. Man muss einmalig den Zweig mit ``git checkout v7`` lokal initialisieren. Mit ``git branch`` sieht man, welche Zweige aktuell sind.
 
-   .. code-block:: console
+   .. code::
 
       linuxadmin@lmn-docs:~/my-docs$ git branch -l
       * master
@@ -229,26 +200,21 @@ Will man einen anderen Zweig bearbeiten, beispielsweise den Zweig
       master
       * v7
 
-   Man sollte also immer im Kopf haben oder nachschauen, in welchem
-   Zweig man gerade arbeitet.
+   Man sollte also immer nachschauen, in welchem Zweig man gerade arbeitet.
 
 2. Die Abschnitte zu ``commit`` und ``push`` stimmen in jedem Zweig.
 
-3. Wird ein Pull-Request in Github erstellt, dann ist zu beachten,
-   dass auch die gleichen Zweige verglichen werden.
+3. Wird ein Pull-Request in Github erstellt, dann ist zu beachten, dass auch die gleichen Zweige verglichen werden.
 
    .. figure:: media/08_new_pull-request-wrong-branch.png
       :align: center
       :alt: Pull-Request mit falsch gewähltem Zweig
 
-      Ein Pull-Request mit falsch gewähltem Zweig, die sich nicht
-      automatisch zusammenführen lassen.
+      Ein Pull-Request mit falsch gewähltem Zweig, die sich nicht automatisch zusammenführen lassen.
 
-4. Aktualisiert man den eigenen Fork über das
-   ``upstream``-Repositorium, dann muss man den Befehl zum
-   Zusammenführen anpassen. Ein Ablauf kann da so aussehen:
+4. Aktualisiert man den eigenen Fork über das ``upstream``-Repository, dann muss man den Befehl zum Zusammenführen anpassen. Ein Ablauf kann da so aussehen:
 
-   .. code-block:: console
+   .. code::
 
       linuxadmin@lmn-docs:~/my-docs$ git fetch upstream
       remote: Enumerating objects: 15, done.
@@ -268,11 +234,8 @@ Will man einen anderen Zweig bearbeiten, beispielsweise den Zweig
       source/appendix/install-on-kvm/index.rst | 2 ++
       1 file changed, 2 insertions(+)
 
-   Ein "merge" des falschen Zweiges, z.B. ``upstream/master`` hätte
-   hier zu Folge, dass alle Änderungen zwischen den Zweigen versucht
-   würde zusammenzuführen, was bei sich stark unterscheidenden Zweigen
+   Ein "merge" des falschen Zweiges, z.B. ``upstream/master`` hätte hier zu Folge, dass alle Änderungen zwischen den Zweigen versucht würde zusammenzuführen, was bei sich stark unterscheidenden Zweigen
    nicht erfolgreich wäre.
    
-Der ``master``-Zweig ist kein besonderer Zweig. Man kann also dorthin
-zurückkehren, wie man zu jedem Zweig wechselt, mit ``git checkout
-master``.
+Der ``master``-Zweig ist kein besonderer Zweig. Man kann also dorthin zurückkehren, wie man zu jedem Zweig wechselt, mit ``git checkout master``.
+
