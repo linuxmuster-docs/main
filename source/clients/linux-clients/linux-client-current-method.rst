@@ -23,7 +23,7 @@ Du hast bereits:
    4.  PC/VM via PXE mit Linbo gestartet
    5.  Die Festplatte mit Linbo partitioniert und formatiert
 
-Falls du das noch nicht getan hast, starte zuerst mit den Schritten, die im Kapitel :ref:`add-computer-label` beschrieben werden und mache erst danach hier weiter.
+Falls du das noch nicht getan hast, starte zuerst mit den Schritten, die im Kapitel :ref:`configure-printers-label` beschrieben werden und mache erst danach hier weiter.
 
 Einrichten eines Linux-Clients
 ==============================
@@ -173,7 +173,7 @@ Lade den Schlüssel des Archivs herunter und installiere ihn:
 
 .. code::
 
-   wget https://archive.linuxmuster.net/archive.linuxmuster.net.key | sudo apt-add key -
+   wget -O - https://archive.linuxmuster.net/archive.linuxmuster.net.key | sudo apt-key add -
 
 Aktualisiere die Paketinformationen mit ``sudo apt update``.
 
@@ -189,7 +189,7 @@ Diesen Fehler kannst du beheben, indem du folgenden Befehl ausführst:
 
    sudo apt -o Acquire::AllowInsecureRepositories=true -o Acquire::AllowDowngradeToInsecureRepositories=true update
 
-Der Fehler wird zwar weiterhin angezeigt, du kannst nun aber das linuxmuster-linuxlcient7 - Paket installieren.
+Der Fehler wird zwar weiterhin angezeigt, du kannst nun aber das linuxmuster-linuxclient7 - Paket installieren.
 
 3. Schritt
 ^^^^^^^^^^
@@ -229,7 +229,7 @@ Image erstellen
 
 Führe einen Neustart des Linux-Client durch, sodass die VM via PXE in Linbo bootet.
 
-Nun erstellst du in Linbo - genauso wie zuvor unter **Erstimage erstellen** beschrieben - das Image des neuen Muster-Clients für Linux. Achte hierbei darauf, dass du diese Mal NICHT ``neues Image erstellen``, sondern ``aktuelles Image ersetzen`` auswählst.
+Nun erstellst du in Linbo - genauso wie zuvor unter **Erstimage erstellen** beschrieben - das Image des neuen Muster-Clients für Linux. Achte hierbei darauf, dass du dieses Mal NICHT ``neues Image erstellen``, sondern ``aktuelles Image ersetzen`` auswählst.
 
 Wurde der Vorgang erfolgreich beendet, kannst du dich wieder abmelden und den vorbereiteten Linux-Client synchronisiert starten. Nun sollte die Anmeldung mit jedem in der Schulkonsole eingetragenen Benutzer funktionieren.
 
@@ -263,13 +263,13 @@ Das machst du mit folgendem Befehl:
    :align: center
    :alt: Linux-Client: Update - PAM Settings
 
-Solltest du versehentlich auf ``ja`` ausgewählt haben, kannst du die Anmeldung mit folgendem Befehl reparieren:
+Solltest du versehentlich ``ja`` ausgewählt haben, kannst du die Anmeldung mit folgendem Befehl reparieren:
 
 .. code::
 
   sudo linuxmuster-linuxclient7 upgrade
 
-Im Anschluss startest Linux-Client neu und erstellst wiederum, wie zuvor beschrieben, ein neues Image. Auch hier: wählie NICH ``neues Image erstellen``, sondern ``aktuelles Image ersetzen`` aus.
+Im Anschluss startest Linux-Client neu und erstellst wiederum, wie zuvor beschrieben, ein neues Image. Auch hier: wähle NICHT ``neues Image erstellen``, sondern ``aktuelles Image ersetzen`` aus.
 
 
 Serverseitige Anpassungen
@@ -323,11 +323,11 @@ Drucker vorbereiten
 
 .. hint:: 
 
-   Dies sind nur kurze allgemeine Hinweise. Im Kapitel :ref:`howto-install-printer-label` findet sich eine ausführliche Anleitung.
+   Dies sind nur kurze allgemeine Hinweise. Im Kapitel :ref:`configure-printers-label` findet sich eine ausführliche Anleitung.
 
-Damit die Drucker richtig gefunden und via GPO administriert werden können, ist es erforderlich, dass jeder Drucker im CUPS-Server als Namen exat seinen Hostnamen aus der Geräteverwaltung bekommt.
+Damit die Drucker richtig gefunden und via GPO administriert werden können, ist es erforderlich, dass jeder Drucker im CUPS-Server als Namen exakt seinen Hostnamen aus der Geräteverwaltung bekommt.
 
-Die Zuordnung von Druckern zu Computern geschieht auf Basis von Gruppen im Active Directory. Im Kapitel :ref:`howto-install-printer-label` gibt es weiter Informationen dazu.
+Die Zuordnung von Druckern zu Computern geschieht auf Basis von Gruppen im Active Directory. Im Kapitel :ref:`configure-printers-label` gibt es weitere Informationen dazu.
 
 Damit auf jedem Rechner nur die Drucker angezeigt werden, die ihm auch zugeordnet wurden, muss auf dem Server in der Datei ``/etc/cups/cupsd.conf`` der Eintrag ``Browsing On`` auf ``Browsing Off`` umgestellt werden. Tut man dies nicht, werden auf jedem Rechner ALLE Drucker angezeigt, nicht nur die ihm zugeteilten.
 
