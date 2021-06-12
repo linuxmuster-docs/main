@@ -370,15 +370,17 @@ In dem Intranet, welches du ja einrichtest, sollten alle Systemuhren die gleiche
 Bereitstellen des Virtual Managers
 ==================================
 
-Wie weiter oben beschrieben, nutzen wir für die weitere Installation auf einem Adminstartions-Rechenr den Virtual Manager auf einem Ubuntu-System. Das Vorgehen für andere Linux-Betriebssysteme sollte aber ähnlich vonstattengehen.
-
 .. figure:: media/vm-install_000_logo-virtual-machine-manager.png
    :align: center
    :alt: Logo Virtual Maschine Manager 
 
+Wie weiter oben beschrieben, nutzen wir für die weitere Installation auf einem Adminstartions-Rechner den Virtual Manager auf einem Ubuntu-System. Das Vorgehen für andere Linux-Betriebssysteme sollte aber ähnlich vonstattengehen.
+
 .. hint:: Solltest du es unter Windows 10 nutzen wollen, ist dieses auch möglich wenn du WSL (Windows 10 Subsystem for Linux) aktiviert hast und darin Ubuntu 20.04 oder 18.04 läuft.
 
-   Für weitergehende Hinweise siehe z. B. https://www.how2shout.com/linux/how-to-install-and-use-virt-manager-on-windows-10/
+   Für weitergehende Hinweise siehe z. B.
+  
+   https://www.how2shout.com/linux/how-to-install-and-use-virt-manager-on-windows-10/
 
   
 Solltest du das Programm schon kennen bzw. einsetzen dann kannst du diesen Abschnitt hier überspringen und mit dem `Einrichten des Netzwerkes`_ weitermachen.
@@ -422,7 +424,7 @@ Darauf sieht du im Fenster des Virtual Machine Managers noch keine möglichen Ve
    :align: center
    :alt: Virtual Maschine Manager erster Start 
 
-Diese gilt es jetzt einzurichten.
+Diese gilt es jetzt für den KVM-Host einzurichten.
 
 Erste Verbindung mit dem KVM-Host herstellen
 ============================================
@@ -433,13 +435,13 @@ Dafür öffnest du den Menüpunkt ``+ Verbindung ...`` unter ``Datei`` wie gezei
    :align: center
    :alt: Hinzufügen der Verbindung zum Host 
 
-Die von dir gewählten Verbindungsdaten gibst du wie gezeigt ein, nachdem du die Checkbox ``Connect to remotehost over SSH`` aktiviert hast. Slebstverständlich musst du bei ``Rechnernamen`` die IP-Adresse deines KVM-Host eintragen:
+Die von dir gewählten Verbindungsdaten gibst du wie unten gezeigt ein, nachdem du die Checkbox ``Connect to remotehost over SSH`` aktiviert hast. Selbstverständlich musst du bei ``Rechnernamen`` die IP-Adresse deines KVM-Host eintragen:
 
 .. figure:: media/vm-install_003_enter-connection-data.png
    :align: center
    :alt: Eingabe der Verbindungsdaten
 
-Somit steht dir dein KVM-Host in der Übersicht der möglichen Verbinungen nun zur Verfügung:
+Somit steht dir dein KVM-Host in der Übersicht der möglichen Verbindungen nun zur Verfügung:
 
 .. figure:: media/vm-install_004_connection-is-added.png
    :align: center
@@ -457,7 +459,7 @@ Nachdem du diesen markiert hast ...
    :align: center
    :alt: Übersicht des lmn-Hosts
 
-Dort hast du die Möglichkeit der Verbindung einen passenden Namen zu geben:
+Dort hast du die Möglichkeit der Verbindung einen passenden Namen zu geben. Tragen diesen einfach in das Feld ``Name:`` ein:
 
 .. figure:: media/vm-install_007_rename-connection.png
    :align: center
@@ -477,8 +479,162 @@ dem verfügbaren Speicherplatz für die virtuellen Maschinen ...
 
 und den virtuellen Netzwerken, die der KVM-Host bereithält. Diese gilt es als nächstest einzurichten.
 
+.. todo:: Wenn Test erfolgreich dann erst die IMages heurnterladen und importieren.
+
 Einrichten des Netzwerkes
 =========================
+
+Nach der Installation der KVM-Software ist die Netzwerksituation folgende: ``virbr0*`` wurde automatisch hinzugefügt und so auch in dem zuvor gezeigten Screenshot zu erkennen.
+
+.. code::
+
+   $ ip -br addr list
+   lo               UNKNOWN        127.0.0.1/8 ::1/128 
+   enp0s8           DOWN        
+   enp0s17          UP             192.168.1.2/16 fe80::ae1c:ba12:6490:f75d/64
+   virbr0           DOWN           192.168.122.1/24 
+   virbr0-nic       DOWN           
+
+Im nächsten Schritt wird die direkte Verbindung des KVM-Hosts mit dem Internet gekappt und eine virtuelle Verkabelung über sogenannte `bridges` erstellt.
+
+    *  Zunächst werden die Brücken ``br-red`` (Internetseite) und ``br-server`` (Schulnetzseite) definiert.
+    
+    *  Zuletzt kann der KVM-Host auch über die Brücke ``br-red`` eine IP-Adresse ins Internet bekommen, genau wie er über die Brücke ``br-server`` auch im pädagogischen Netzwerk auftauchen kann. Letzteres ist nicht zu empfehlen.
+
+.. hint:: Komplett raus? Tests erforderlich
+
+.. hint::
+
+   Die Netzwerkkonfiguration wird seit Ubuntu 18.04 standardmäßig über netplan realisiert. Wer seinen KVM-Host von früheren Ubuntu-Versionen updatet, bei dem wird nicht automatisch `netplan` installiert, sondern `ifupdown` wird mit der Konfigurationsdatei ``/etc/network/interfaces`` beibehalten.
+
+Namen der Netzwerkkarten
+------------------------
+
+.. todo:: Ändere enp0s18 in enp0s8
+
+Mit dem folgenden Befehl 
+
+.. code::
+      
+   dmesg | grep eth
+  
+werden dir alle physischen Netzwerkkarten angezeigt:
+
+.. code::
+
+   [    9.432342] e1000e 0000:08:00.0 enp0s18: renamed from eth0
+   [    9.654232] e1000e 0000:11:00.1 enp0s17: renamed from eth1
+
+Die Netzwerkkonfiguration enthält standardmäßig die Schnittstelle, die bei der Installation mit dem Internet verbunden war. 
+
+.. code:: 
+
+   cat /etc/netplan/00-installer-config.yaml
+
+.. code::
+
+   # This is the network config written by 'subiquity'
+   network:
+     ethernets:
+       enp0s18:
+         dhcp4: true
+   version: 2
+   
+Damit hast du nun alle Informationen gesammelt um die Netzwerkkonfiguration mit einem Editor deiner Wahl zu erstellen. (Hier am Beispiel nano)
+
+.. code::
+
+   $ sudo nano /etc/netplan/01-netcfg.yaml
+
+Diese Schnittstelle wird dann auch mit der Brücke ``br-red`` verbunden. 
+
+.. code::
+
+   network:
+     version: 2
+     renderer: networkd
+     ethernets:
+       enp0s8:
+         dhcp4: no
+       enp0s17:
+         dhcp4: no
+     bridges:
+       br-red:
+         interfaces: [enp0s18]
+         dhcp4: yes
+       br-server:
+         interfaces: [enp0s17]
+         addresses: [ ]
+
+.. hint:: Als Hinweis für die Syntax merke dir:
+
+   * Jede Zeile besteht aus einem Wertepaar ``Schlüssel: Wert``
+   * Ist der Schlüssel im Singular, dann folgt der dazugehörende Wert
+   * Ist der Schlüssel im Plural und es folgt kein in Klammern ``[]`` gesetzteŕ Wert, dann beziehen sich die nächsten Zeilen auf diesen Schlüssel 
+     Dessen Zeilen müssen durchgehend um die gleichen Anzahl von identischen Zeichen eingerückt sein 
+     
+   Potenzielle Fehlerquellen sind also nicht konsequent eingerückte Zeilen (Leerzeichen, TABs). 
+
+Diese Netzwerkkonfiguration kann nun ausprobiert und angewandt werden. 
+
+Nach dem Aufruf von 
+
+.. code::
+
+   sudo netplan try
+   
+hast du 120 Sekunden Zeit die gemachten Einstellungen zu übergrüfen. Der Befehl 
+
+.. code:: 
+
+   sudo ip address
+
+sollte dir jetzt deine Konfiguration anzeigen.
+
+.. todo:: richtige Konfiguraton zeigen
+
+Zur Übernahme der Konfiguration gibt du folgenden Befehl ein:
+
+.. code:: 
+
+   sudo netplan apply
+
+.. error:: Wie beschrieben ist die Einrichtung nun richtig. Führt allerdings zum Verlust der Verbindung.
+
+.. code::
+
+   Invalid YAML at /etc/netplan/01-netcfg.yaml line 6 column 0: found character that cannot start any token
+
+Bei fehlerhaften Anläufen lohnt es sich, den KVM-host zu rebooten und die Netzwerkkonfiguration erneut zu betrachten. 
+  
+.. hint:: Soll das wirklich so beschrieben werden?
+
+KVM-Host auch im Internet
+
+Soll später nicht nur die Firewall sondern auch der KVM-Host im Internet erreichbar sein, dann muss der entsprechende Block so aussehen:
+
+.. code::
+
+   network:
+     ...
+     bridges:
+       br-red:
+         interfaces: [enp0s17]
+         dhcp4: yes
+       br-server:
+         ...
+
+Wer bisher einen statischen Zugang eingerichtet hatte, der kann das genauso hier tun. Der entsprechende Abschnitt wäre beispielhaft
+
+.. code::
+
+   bridges:
+     br-red:
+      interfaces: [enp0s17]
+         addresses: [141.1.2.5/29]
+         gateway4: 141.1.2.3
+         nameservers:
+           addresses: [129.143.2.1]
 
 .. todo:: Hier weiter machen! - Einrichten der Bridges
 
@@ -644,162 +800,3 @@ Ebenso verfährst du mit der Server-Appliance `lmn7-server-*.ova`.
 
   import-kvm-vms
 
-.. todo::
-
-   Nachfolgende auskommentierte Zeilen im rst-Filei müssen entfernt werden, wenn das Kapitel redigiert ist.
-
-.. Netzwerkkonfiguration des KVM-Hosts
-   ===================================
-   
-   Nach der Installation der KVM-Software (``virbr0*`` wurden automatisch hinzugefügt) ist die Netzwerksituation folgende:
-
-   .. code::
-
-      $ ip -br addr list
-      lo               UNKNOWN        127.0.0.1/8 ::1/128 
-      enp0s8           DOWN        
-      enp0s17          UP             192.168.1.2/16 fe80::ae1c:ba12:6490:f75d/64
-      virbr0           DOWN           192.168.122.1/24 
-      virbr0-nic       DOWN           
-
-   Im nächsten Schritt wird die direkte Verbindung des KVM-Hosts mit dem Internet gekappt und eine virtuelle Verkabelung über sogenannte `bridges` erstellt.
-
-    *  Zunächst werden die Brücken ``br-red`` (Internetseite) und ``br-server`` (Schulnetzseite) definiert.
-    
-    *  Zuletzt kann der KVM-Host auch über die Brücke ``br-red`` eine IP-Adresse ins Internet bekommen, genau wie er über die Brücke ``br-server`` auch im pädagogischen Netzwerk auftauchen kann. Letzteres ist nicht zu empfehlen.
-
-    .. hint:: Komplett raus? Tests erforderlich
-
-   .. hint::
-
-      Die Netzwerkkonfiguration wird seit Ubuntu 18.04 standardmäßig über netplan realisiert. Wer seinen KVM-Host von früheren Ubuntu-Versionen updatet, bei dem wird nicht automatisch `netplan` installiert, sondern `ifupdown` wird mit der Konfigurationsdatei ``/etc/network/interfaces`` beibehalten.
-
-   Namen der Netzwerkkarten
-   ------------------------
-
-   .. todo:: Ändere enp0s18 in enp0s8
-
-   Mit dem folgenden Befehl 
-
-   .. code::
-      
-      dmesg | grep eth
-  
-   werden dir alle physischen Netzwerkkarten angezeigt:
-
-   .. code::
-
-      [    9.432342] e1000e 0000:08:00.0 enp0s18: renamed from eth0
-      [    9.654232] e1000e 0000:11:00.1 enp0s17: renamed from eth1
-
-   Die Netzwerkkonfiguration enthält standardmäßig die Schnittstelle, die bei der Installation mit dem Internet verbunden war. 
-
-   .. code:: 
-
-      cat /etc/netplan/00-installer-config.yaml
-
-   .. code::
-
-      # This is the network config written by 'subiquity'
-      network:
-        ethernets:
-          enp0s18:
-            dhcp4: true
-      version: 2
-   
-   Damit hast du nun alle Informationen gesammelt um die Netzwerkkonfiguration mit einem Editor deiner Wahl zu erstellen. (Hier am Beispiel nano)
-
-   .. code::
-
-     $ sudo nano /etc/netplan/01-netcfg.yaml
-
-   Diese Schnittstelle wird dann auch mit der Brücke ``br-red`` verbunden. 
-
-   .. code::
-
-      network:
-        version: 2
-        renderer: networkd
-        ethernets:
-          enp0s8:
-            dhcp4: no
-          enp0s17:
-            dhcp4: no
-        bridges:
-          br-red:
-            interfaces: [enp0s18]
-            dhcp4: yes
-          br-server:
-            interfaces: [enp0s17]
-            addresses: [ ]
-
-   .. hint:: Als Hinweis für die Syntax merke dir:
-
-      * Jede Zeile besteht aus einem Wertepaar ``Schlüssel: Wert``
-      * Ist der Schlüssel im Singular, dann folgt der dazugehörende Wert
-      * Ist der Schlüssel im Plural und es folgt kein in Klammern ``[]`` gesetzteŕ Wert, dann beziehen sich die nächsten Zeilen auf diesen Schlüssel 
-        Dessen Zeilen müssen durchgehend um die gleichen Anzahl von identischen Zeichen eingerückt sein 
-     
-      Potenzielle Fehlerquellen sind also nicht konsequent eingerückte Zeilen (Leerzeichen, TABs). 
-
-   Diese Netzwerkkonfiguration kann nun ausprobiert und angewandt werden. 
-
-   Nach dem Aufruf von 
-
-   .. code::
-
-      sudo netplan try
-   
-   hast du 120 Sekunden Zeit die gemachten Einstellungen zu übergrüfen. Der Befehl 
-
-   .. code:: 
-
-   sudo ip address
-
-   sollte dir jetzt deine Konfiguration anzeigen.
-
-   .. todo:: richtige Konfiguraton zeigen
-
-   Zur Übernahme der Konfiguration gibt du folgenden Befehl ein:
-
-   .. code:: 
-
-      sudo netplan apply
-
-.. .. error:: Wie beschrieben ist die Einrichtung nun richtig. Führt allerdings zum Verlust der Verbindung.
-
-   .. code::
-
-     Invalid YAML at /etc/netplan/01-netcfg.yaml line 6 column 0: found character that cannot start any token
-
-  Bei fehlerhaften Anläufen lohnt es sich, den KVM-host zu rebooten und die Netzwerkkonfiguration erneut zu betrachten. 
-  
-  .. hint:: Soll das wirklich so beschrieben werden?
-
-     KVM-Host auch im Internet
-
-     Soll später nicht nur die Firewall sondern auch der KVM-Host im Internet erreichbar sein, dann muss der entsprechende Block so aussehen:
-
-     .. code::
-
-        network:
-          ...
-          bridges:
-            br-red:
-              interfaces: [enp0s17]
-              dhcp4: yes
-            br-server:
-              ...
-
-     Wer bisher einen statischen Zugang eingerichtet hatte, der kann das genauso hier tun. Der entsprechende Abschnitt wäre beispielhaft
-
-     .. code::
-
-        bridges:
-          br-red:
-            interfaces: [enp0s17]
-              addresses: [141.1.2.5/29]
-              gateway4: 141.1.2.3
-              nameservers:
-                addresses: [129.143.2.1]
-     
