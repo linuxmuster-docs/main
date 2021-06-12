@@ -8,7 +8,7 @@ Drucker einbinden
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
-Zur Einrichtung der Drucker ist folgendes Vorgehen einzuhalten.
+Zur Einrichtung der Drucker sollte folgendes Vorgehen eingehalten werden:
 
 1. Infos zu allen Druckern zusammentragen
 2. Drucker via Schulkonsole als Geräte hinzufügen
