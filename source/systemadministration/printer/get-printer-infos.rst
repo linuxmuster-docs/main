@@ -1,5 +1,5 @@
-Welche Informationen benötige ich vorab?
-========================================
+Drucker Informationen
+=====================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
