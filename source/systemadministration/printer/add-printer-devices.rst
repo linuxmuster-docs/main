@@ -1,5 +1,5 @@
-Wie füge ich Drucker hinzu?
-===========================
+Drucker via Schulkonsole hinzufügen
+===================================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
@@ -12,14 +12,14 @@ Für das folgende Beispiel nehmen wir an, der Drucker stehe in Raum
 "00:11:22:33:44:55" und bekomme entsprechend einem IP-Adressschema die
 IP-Adresse 10.2.200.101.
 
-Melden Sie sich als **global-admin** in der `Schulkonsole (https://10.0.0.1) <https://10.0.0.1>`_ an.
-Wählen Sie dort links im Menü ``Geräteverwaltung`` das Untermenü ``Geräte`` aus.
+Melde dich als ``global-admin`` in der `Schulkonsole (https://10.0.0.1) <https://10.0.0.1>`_ an.
+Wähle dort links im Menü ``Geräteverwaltung`` das Untermenü ``Geräte`` aus.
 
 .. image:: media/01-printer-devices.png
-   :alt: Schulkonsole Geräte
+   :alt: Schulkonsole devices
    :align: center
 
-Klicken Sie unterhalb der Geräteliste auf den Eintrag ``Gerät hinzufügen``.
+Klicke unterhalb der Geräteliste auf den Eintrag ``Gerät hinzufügen``.
 
 Es wird eine leere Zeile zur Liste hinzugefügt.
 
@@ -27,7 +27,7 @@ Es wird eine leere Zeile zur Liste hinzugefügt.
    :alt: Schulkonsole neuer Drucker
    :align: center
 
-Die Option PXE ist zu deaktivieren, da die Drucker nicht via PXE starten. Als Gruppe ist nopxe einzutragen.
+Die Option PXE ist zu deaktivieren, da die Drucker nicht via PXE starten. Als Gruppe ist ``nopxe`` einzutragen.
 
 Für o.g. Beispieldrucker stellt sich der Eintrag wie folgt dar:
 
@@ -35,7 +35,7 @@ Für o.g. Beispieldrucker stellt sich der Eintrag wie folgt dar:
    :alt: Schulkonsole Eintragungen für den Beispieldrucker
    :align: center
 
-Bestätigen Sie den Eintrag mit ``speichern & importieren``.
+Bestätige den Eintrag mit ``speichern & importieren``.
 
 Es erscheint ein Fenster, in dem der Vorgang bestätigt wird.
 

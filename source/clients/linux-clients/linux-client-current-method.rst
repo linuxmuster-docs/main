@@ -23,7 +23,7 @@ Du hast bereits:
    4.  PC/VM via PXE mit Linbo gestartet
    5.  Die Festplatte mit Linbo partitioniert und formatiert
 
-Falls du das noch nicht getan hast, starte zuerst mit den Schritten, die im Kapitel :ref:`add-computer-label` beschrieben werden und mache erst danach hier weiter.
+Falls du das noch nicht getan hast, starte zuerst mit den Schritten, die im Kapitel :ref:`configure-printers-label` beschrieben werden und mache erst danach hier weiter.
 
 Einrichten eines Linux-Clients
 ==============================
@@ -323,11 +323,11 @@ Drucker vorbereiten
 
 .. hint:: 
 
-   Dies sind nur kurze allgemeine Hinweise. Im Kapitel :ref:`howto-install-printer-label` findet sich eine ausführliche Anleitung.
+   Dies sind nur kurze allgemeine Hinweise. Im Kapitel :ref:`configure-printers-label` findet sich eine ausführliche Anleitung.
 
 Damit die Drucker richtig gefunden und via GPO administriert werden können, ist es erforderlich, dass jeder Drucker im CUPS-Server als Namen exakt seinen Hostnamen aus der Geräteverwaltung bekommt.
 
-Die Zuordnung von Druckern zu Computern geschieht auf Basis von Gruppen im Active Directory. Im Kapitel :ref:`howto-install-printer-label` gibt es weitere Informationen dazu.
+Die Zuordnung von Druckern zu Computern geschieht auf Basis von Gruppen im Active Directory. Im Kapitel :ref:`configure-printers-label` gibt es weitere Informationen dazu.
 
 Damit auf jedem Rechner nur die Drucker angezeigt werden, die ihm auch zugeordnet wurden, muss auf dem Server in der Datei ``/etc/cups/cupsd.conf`` der Eintrag ``Browsing On`` auf ``Browsing Off`` umgestellt werden. Tut man dies nicht, werden auf jedem Rechner ALLE Drucker angezeigt, nicht nur die ihm zugeteilten.
 
