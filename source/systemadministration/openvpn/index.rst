@@ -37,7 +37,7 @@ Unter ``System`` --> ``Zugang`` --> ``Server`` einen Server hinzufügen (oben re
 
 1. Beschreibender Name: ``Linuxmuster VPN Zugang``
 2. Typ: LDAP
-3. Hostname oder IP-Adresse: ``server.linuxmuster.lan`` <hier sollte die externe URL der OPNsense® angegeben werden>
+3. Hostname oder IP-Adresse: ``server.linuxmuster.lan``
 4. Port-Wert: 636
 5. Transport: SSL - Verschlüsselt
 6. Protokollversion: 3
