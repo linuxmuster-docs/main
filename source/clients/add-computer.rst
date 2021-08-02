@@ -115,7 +115,7 @@ Unter der Reiterkarte ``OS`` legst du für das Betriebssystem (OS) die gewünsch
 
 Auf dem linuxmuster.net Server werden die start.conf-Dateien im Verzeichnis ``/srv/linbo`` abgelegt. Jede Hardwareklasse hat eine eigene start.conf-Datei. Für die neu angelegte Hardwareklasse des Muster-Clients wurde dort nun eine Datei ``start.conf.<name-der-hwk>`` erstellt.
 
-Diese Datei muss normalerweise nicht händsch editiert werden, da sich alle nötigen Einstellungen in der WebUI vornehmen lassen. Das folgende Beispiel dient nur dazu, zu zeigen, was "unter der Decke" passiert.
+Diese Datei muss normalerweise nicht händisch editiert werden, da sich alle nötigen Einstellungen in der WebUI vornehmen lassen. Das folgende Beispiel dient nur dazu, zu zeigen, was "unter der Decke" passiert.
 
 Folgende Konfiguration zeigt ein mögliches Beispiel für die Hardwareklasse 20210426_focalfossa_base (hier als Linux-Client). Diese würde sich in der Datei ``/srv/linbo/start.conf.20210426_focalfossa_base`` befinden. Hierbei wird von einem Legacy-BIOS und Linux als Betriebssystem ausgegangen:
 
@@ -240,7 +240,7 @@ Hinweise zur VM
 
 .. attention::
 
-   Die nachstehenden Hinweise sind nur in Ausnahmefällen bei Nutzung einer VM relevnt. Durch diese Änderungen werden zudem Anpassungen in der Boot-Loader Konfiguration von Linbo für die Hardwareklasse nicht mehr bei einem ``linuxmuster-import-devices`` angewendet. Folge diesen Schritten NUR wenn du XCP-ng als Virtualisierungsumgebung verwendest und den Muster-Client in ein er VM anlegst.
+   Die nachstehenden Hinweise sind nur in Ausnahmefällen bei Nutzung einer VM relevant. Durch diese Änderungen werden zudem Anpassungen in der Boot-Loader Konfiguration von Linbo für die Hardwareklasse nicht mehr bei einem ``linuxmuster-import-devices`` angewendet. Folge diesen Schritten NUR wenn du XCP-ng als Virtualisierungsumgebung verwendest und den Muster-Client in einer VM anlegst.
 
 Sollte der Muster-Client als VM aufgebaut werden, so ist je nach eingesetzter Virtualisierungssoftware darauf zu achten, dass die VGA-Einstellungen eine geringe Auflösung und eine geringe Farbteife aufweisen.
 
