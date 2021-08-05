@@ -6,7 +6,7 @@ OpenVPN konfigurieren
 
 .. sectionauthor:: `@dorian <https://ask.linuxmuster.net/u/dorian>`_, Ergänzungen `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
-Um Schülern und Lehrern die Möglichkeit zu geben, sich via VPN in das Schulnetz "einzuwählen", beschreibt diese Dokumentation die Einrichtung des OpenVPN-Dienstes auf der Firewall OPNsense®. Für die Anmeldung via LDAP über den linuxmuster Server erfolgen.
+Um Schülern und Lehrern die Möglichkeit zu geben, sich via VPN in das Schulnetz "einzuwählen", beschreibt diese Dokumentation die Einrichtung des OpenVPN-Dienstes auf der Firewall OPNsense®. Sowie die Anmeldung via LDAP über den linuxmuster Server.
 
 Voraussetzungen
 ===============
@@ -22,7 +22,7 @@ Melde Dich an der GUI der OPNsense® als Benutzer ``root`` an.
    :alt: Login OPNsense®
    :align: center
 
-Wähle links im Menü unter dem Eintrag ``System`` --> ``Zugang`` --> ``Server`` , um einen neuen Server-Eintrag für die LDAP-Authentifizierung hinzuzzufügen.
+Wähle links im Menü unter dem Eintrag ``System`` --> ``Zugang`` --> ``Server`` , um einen neuen Server-Eintrag für die LDAP-Authentifizierung hinzuzufügen.
 
 .. image:: media/02-menue-system-access-server.png
    :alt: Menue System - Access - Server
@@ -300,8 +300,8 @@ Diese Konfigurationseinstellungen kannst du nun allen Nutzern (z.B. Lehrern und 
 mit VPN verbinden
 =================
 
-Bevor du nun die Verbindung mit einem Client zum VPN-Server testest, überprüfe zuerst, ob der Dinest läuft.
-In der GUI der OPNsense® klickst Du links auf den Mnüeintrag ``Lobby`` und siehst rechts alle Dienste mit ihrem Status aufgelistet. Hier muss für OpenVPN Server ein ``grünes`` Dreick zu sehen sein. Dies weist daraufhin, dass der Dienst läuft.
+Bevor du nun die Verbindung mit einem Client zum VPN-Server testest, überprüfe zuerst, ob der Dienst läuft.
+In der GUI der OPNsense® klickst Du links auf den Menüeintrag ``Lobby`` und siehst rechts alle Dienste mit ihrem Status aufgelistet. Hier muss für OpenVPN Server ein ``grünes`` Dreieck zu sehen sein. Dies weist daraufhin, dass der Dienst läuft.
 
 .. image:: media/20-vpn-server-check-service.png
    :alt: VPN-Server: Check Status
@@ -310,7 +310,7 @@ In der GUI der OPNsense® klickst Du links auf den Mnüeintrag ``Lobby`` und sie
 OpenVPN Client
 --------------
 
-Installiere dir auf deinem Gerät (PC, Tablet, Smartphone) den OpenVPN Client.Die heruntergeladene Datei muss nun auf das Endgerät heruntergeladen und dort in die App OpenVPN Connect (für alle Plattformen) importiert werden. Nach dem Import kann durch Eingabe von Benutzername und Passwort eine VPN-Verbindung hergestellt werden.
+Installiere dir auf deinem Gerät (PC, Tablet, Smartphone) den OpenVPN Client. Die heruntergeladene Datei muss nun auf das Endgerät heruntergeladen und dort in die App OpenVPN Connect (für alle Plattformen) importiert werden. Nach dem Import kann durch Eingabe von Benutzername und Passwort eine VPN-Verbindung hergestellt werden.
 
 
 Auf der OPNsense® kannst du den Verbindungsstatus der VPN-Verbindungen unter ``VPN`` --> ``OpenVPN`` --> ``Verbindungsstatus`` überprüfen.
@@ -319,7 +319,7 @@ Auf der OPNsense® kannst du den Verbindungsstatus der VPN-Verbindungen unter ``
    :alt: VPN: Check connection status - menue item
    :align: center
 
-Hier werden dann die Benutzer mit den zugeordneten VPN-BVerbindungen angezeigt:
+Hier werden dann die Benutzer mit den zugeordneten VPN-Verbindungen angezeigt:
 
 .. image:: media/22-vpn-check-connection-status.png
    :alt: VPN: Check connection status
@@ -331,10 +331,9 @@ Troubleshooting
 Sollte die Verbindung nicht erfolgreich aufgebaut werden können, prüfe Folgendes ab:
 
 1. Ist die OPNsense® von extern via URL erreichbar ?
-2. Antwort die OPNsense® auf dem eingestellten VPN Port ?
+2. Antwortet die OPNsense® auf dem eingestellten VPN Port ?
 3. Kommen die VPN - Pakete (ggf. Prot-Forwarding) auf der OPNsense® an?
 4. Werden die VPN-Pakete auf der WAN-Schnittstelle zugelassen (siehe Live-Logs)?
-5. ...
 
 
 
