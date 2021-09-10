@@ -37,7 +37,7 @@ Wähle **nicht** Gastrichtlinie. Im Schulnetz möchtest du keine Gäste!
 
 Wenn du möchtest, verbirg die SSID. Was Schüler nicht sehen, macht sie nicht neugierig.
 
-Speiche die Einstellungen.
+Speichere die Einstellungen.
 
 Das Lehrernetz ist nun eingerichtet und wird auf alle APs ausgerollt.
 
