@@ -279,7 +279,7 @@ Unter `Mount` wählst du `Andere` und gibst dort dann wie gezeigt `/var/lib/libv
    :align: center
    :alt: 
 
-Bevor die von dir vorgenommenen Änderungen auf die Festplatte geschrieben werden, wird dir eine Übersicht deiner getroffenen Auswahl angezeigt. Mit `Erledigt` akzeptierst du von dir gemachten Einstallungen nach einer letzten Überprüfung.
+Bevor die von dir vorgenommenen Änderungen auf die Festplatte geschrieben werden, wird dir eine Übersicht deiner getroffenen Auswahl angezeigt. Mit `Erledigt` akzeptierst du von dir gemachten Einstellungen nach einer letzten Überprüfung.
 
 .. figure:: ../media/ubuntu-installation_021_hdd-configuration-confirm.png
    :align: center
