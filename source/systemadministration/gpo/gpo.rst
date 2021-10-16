@@ -5,6 +5,8 @@ Nutzung der Remote Server Administration Tools zum Anpassen der GPO
 
 Das Anpassen der vom SAMBA-Server bereitgestellten GPO erfolgt von einem Windows-PC aus.
 
+.. _install-RSAT-label:
+
 Installation der RSAT (Remote Server Administration Tools)
 ----------------------------------------------------------
 Zur Verwaltung des Active Directory (AD) benötigt man die Microsoft Remote Server Administration Tools (RSAT). Diese werden von Microsoft bereitgestellt. (Home-Versionen von Windows werden nicht unterstützt!)
