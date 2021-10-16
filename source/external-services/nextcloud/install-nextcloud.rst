@@ -110,8 +110,8 @@ Die Datei Dockerfile
 .. code::
 
   FROM nextcloud:stable
-  RUN apt-get update && apt-get install -y smbclient libsmbclient-dev imagemagick libmagickcore-6.q16-6-extra php-imagick && pecl install smbclient && docker-php-ext-enable smbclient && rm -rf /var/lib/apt/lists/*
-
+  RUN apt-get update && apt-get install -y smbclient libsmbclient-dev imagemagick && pecl install smbclient && docker-php-ext-enable smbclient && rm -rf /var/lib/apt/lists/*
+  
  
 Wenn du experimentierfreudig bist, kannst du statt ``stable`` auch ``latest`` schreiben.
 

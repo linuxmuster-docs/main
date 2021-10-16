@@ -1,10 +1,7 @@
 Drucker am Windows - Client
 ===========================
 
-.. attention::
-
-   linuxmuster.net v7 bietet im AD Gruppen für Drucker. Diese werden für Windows-Clients mithilfe von Gruppenrichtlinien bestimmten Nutzern und Räumen zugewiesen.
-   siehe hierzu auch: https://ask.linuxmuster.net/t/frage-zu-den-gruppenrichtlinien/5918
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_, `@rettich <https://ask.linuxmuster.net/u/rettich>`_
 
 Nachdem die Drucker auf dem Server eingerichtet wurden, sind diese auf Windows-Clients nun als Freigaben sichtbar.
 
@@ -12,12 +9,125 @@ Nachdem die Drucker auf dem Server eingerichtet wurden, sind diese auf Windows-C
    :alt: Windows: Printer-Share
    :align: center
 
-Die Treiber sind nun über die Microsoft Management Console (MMC) hinzuzufügen. Dies erfolgt in der MMC im Menü `Druckverwaltung` -> `hinzufügen`.
+Die Treiber sind nun über die Microsoft Management Console (MMC) hinzuzufügen. 
+
+Dem global-admin die nötigen Rechte einräumen
+---------------------------------------------
+
+Bevor es losgehen kann, müssen wir dem `global-admin` noch die nötigen Rechte auf dem Server einräumen. Melde dich dazu als `root` auf dem Server an und führen Sie die folgenden Befehle aus:
+
+.. code::
+ 
+   net rpc rights grant "LINUXMUSTER\Domain Admins" SePrintOperatorPrivilege -U "LINUXMUSTER\global-admin"
+   chgrp -R "LINUXMUSTER\Domain Admins" /var/lib/samba/printers/
+   chmod -R 2775 /var/lib/samba/printers/
+
+Dem Server vertrauen
+--------------------
+
+Seit Juli 2016 hat Windows10 ein neues Sicherheitsfeature. Es muss über GPOs festgelegt werden, dass die Windows-Clients unserem Server vertrauen. Dazu gehen wir wie folgt vor:
+
+Melde dich als global-admin am Windows-Client an und starte die Gruppenrichtlinienverwaltung (Wie du sie installierts kannst du :ref:`hier<install-RSAT-label>` nachlesen). 
+Navigiere zur Default Domain Policy von linuxmuster.lan. 
+
+.. image:: media/printers-windows-clients-01.png
+   :alt: Default-Domain-Policy
+   :align: center
+   
+Wähle mit einem Rechtsklick ``Bearbeiten``. Es öffnet sich der Gruppenrichtlinien-Editor.
+Navigiere zu ``Computerkonfiguration → Richtlinien → Administrative Vorlagen → Drucker``.
+
+.. image:: media/printers-windows-clients-02.png
+   :alt: RSAT-Printer
+   :align: center
+
+Doppelkilicke auf ``Point and Print Einschränkungen``, aktiviere die Richtlinie und setzen folgende Einstellungen:
+
+.. image:: media/printers-windows-clients-03.png
+   :alt: Point and Print Einschränkungen
+   :align: center
+
+       
+Setze einen Haken bei ``Benutzer können Point and Print für Pakete – Genehmigte Server verwenden``.
+Gib die FQDN des Servers bei ``Vollqualifizierte Servernamen`` ein und
+wähle bei ``Beim Installieren von Treibern für eine neue Verbindung`` und bei ``Beim Aktualisieren von Treibern für eine vorhandene Verbindung`` die Einstellung ``Warnung oder Anhebungsaufforderung nicht anzeigen``.
+
+Bestätige mit OK.
+
+Doppelklicke auf ``Point and Print für Pakete – Genehmigte Server`` und aktiviere die Richtlinie.
+
+.. image:: media/printers-windows-clients-04.png
+   :alt: Print and Point gen. Server
+   :align: center
+       
+Aktiviere die Richtlinie, klicken auf ``Anzeigen…`` und gib den FQDN des Servers ein.
+
+Bestätige zwei mal mit OK.
+
+Schließe den Gruppenrichtlinien-Editor und die Gruppenrichtlinien-Verwaltung
+
+Starte den Rechner neu.
+
+Druckertreiber auf dem Server installieren
+------------------------------------------
 
 .. hint::
-   Zuerst sind Treiber hochzuladen. Es können ausschließlich v3 Druckertreiber verwendet werden. V4 Druckertreiber werden Stand Samba 4.7 (September 2019) noch nicht unterstützt.
+   Es können ausschließlich v3 Druckertreiber verwendet werden. V4 Druckertreiber werden Stand Samba 4.7 (September 2019) noch nicht unterstützt.
 
-Falls o.g. Weg nicht funktionieren sollte, ist der Treiber manuell auf Windows Client zu installieren. Anschließend ist der Druckertreiber dem Drucker auf dem Server zuzuweisen.
+Jetzt können wir die Druckertreiber auf dem Server installieren.
+
+Öffnen als global-admin das Programm mmc.exe, wähle ``Datei → snapin hinzufügen/entfernen`` und füge die Druckerverwaltung hinzu.
+
+.. image:: media/printers-windows-clients-06.png
+   :alt: mmc.exe
+   :align: center
+   
+Trage den Server ein, klicke auf ``zur Liste hinzufügen`` und anschließend auf ``Fertigstellen`` und ``OK``.
+
+Wie man sieht, sind die Drucker dem Systems bekannt. Du musst nur noch die Druckertreiber installieren. 
+
+.. image:: media/printers-windows-clients-05.png
+   :alt: mmc.exe
+   :align: center
+
+Mache einen Rechtsklick auf ``Treiber`` und wählen ``Treiber hinzufügen``.
+Gehe zu ``Weiter → Weiter → Datenträger… Durchsuchen → Ok`` und wählen den richtigen Druckertreiber. Es werden nur Microsoft zertifizierte Treiber akzeptiert. Falls du mit einem Treiber Probleme haben solltest, versuche es eventuell mit einem etwas älteren Treiber. Die werden sehr oft akzeptiert. 
+
+Klicken abschließend auf ``Fertigstellen``.
+
+Einem Drucker einen Druckertreiber zuweisen
+-------------------------------------------
+
+Jetzt müssen wir nur noch den Druckern die Druckertreiber zuweisen.
+
+Öffne als global-admin das Programm ``mmc.exe`` und navigiere zu ``Drucker``.
+
+.. image:: media/printers-windows-clients-05.png
+   :alt: mmc.exe
+   :align: center
+
+Mache einen Rechtsklick auf den Drucker, dem du einen Druckertreiber zuweisen möchtest und wähle ``Eigenschaften…``
+Falls du gefragt wirst, ob du einen Druckertreiber lokal installieren möchtest, antworte mit Nein.
+
+Gehe zum Reiter ``Erweitert``, wähle bei Treiber den passenden Treiber für den Drucker und bestätigen Sie mit ``OK``.
+
+.. image:: media/printers-windows-clients-07.png
+   :alt: Eigenschaften von
+   :align: center
+
+Leider ändert Windows den Namen des Drucker in den Namen des Druckertreibers. Um wieder den richtigen Namen zu setzen, machst du einen Rechtsklick in mmc.exe den Drucker und wählst ``Eigenschaften…``
+
+Ändere unter dem Reiter ``Allgemein`` auf den Namen des Druckers auf den Namen, den er in CUPS hat und bestätige mit ``OK``.
+
+.. image:: media/printers-windows-clients-08.png
+   :alt: Eigenschaften Allgemein
+   :align: center
+
+Wenn alles geklappt hat, installieren sich die Druckertreiber auf den Windows-Clients beim Systemstart automatiasch. Wie du die Drucker-Raumzuweisung machst, kannst du :ref:`hier<add-ad-group-label>` nachlesen.
+
+Hat ein Lehrer in der Schulkonsole bei einem Drucker einen Haken gesetzt, wird der Drucker bei der Anmeldung des Lehrers zusätzlich installiert. 
+
+Falls o.g. Weg nicht funktionieren sollte, ist der Treiber manuell auf dem Windows Client zu installieren. Anschließend ist der Druckertreiber dem Drucker auf dem Server zuzuweisen.
 
 Hierzu sind die eingerichteten Drucker auf dem Server zunächst auszugeben:
 
