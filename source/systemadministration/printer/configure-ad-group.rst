@@ -10,9 +10,9 @@ Drucker einzelnen Räumen zuweisen
    Sobald diese Funktion in der Schulkonsole zur Verfügung steht, wird dieser Teil der Dokumentation ergänzt.
    
 Für die Raumzuweisung von Druckern eignet sich am besten das `Apache Directory Studio`. Das `Apache Direktory Studio` braucht das Java Development Kit. Lade dafür von 
-`hier <https://www.oracle.com/de/java/technologies/javase-downloads.html>`_
+`www.oracle.com <https://www.oracle.com/de/java/technologies/javase-downloads.html>`_
 die Installationsdatei und installiere sie.
-Lade anschließend von `hier <https://directory.apache.org/studio/>`_ die aktuelle Version des `Apache Direktory Studios` herunter und installiere sie ebenfalls.
+Lade anschließend von `directory.apache.org <https://directory.apache.org/studio/>`_ die aktuelle Version des `Apache Direktory Studios` herunter und installiere sie ebenfalls.
 
 .. hint::
 
