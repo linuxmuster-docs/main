@@ -54,7 +54,7 @@ Als Bind DN trägst du ``CN=global-admin,OU=Management,OU=GLOBAL,`` gefolgt von 
 
 .. hint::
 
-   Du nutzt hier den global-admin, weil du Schreibrechte brauchst. Sicherheitshalber kannst du vor deiner Arbeit einen Snapshot des Servers machen. 
+   Du nutzt hier den global-admin, weil du Schreibrechte brauchst. Sicherheitshalber solltest du vor deiner Arbeit einen Snapshot des Servers machen. 
      
 Klicke auf ``Anwenden und Schließen``.
 
