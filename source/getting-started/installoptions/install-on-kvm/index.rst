@@ -94,7 +94,7 @@ Wir beschreiben hier die Installation von dem Erstellen eines Bootmediums bis zu
 Erstellen eines USB-Sticks zur Installation des KVM-Host 
 --------------------------------------------------------
 
-.. _Download: https://releases.ubuntu.com/18.04.5/
+.. _Download: https://releases.ubuntu.com/18.04.6/
 
 Es wird für die Installation des KVM-Hosts ein Ubuntu Server 64bit in der Version 18.04 LTS verwendet. Welches du unter "Server install image" auf der Ubuntu-Seite zum Download_ findest. Diese iso-Datei muss auf ein Bootmedium so kopiert werden, dass sich der zukünftige KVM-Host von diesem Medium starten lässt.
 
