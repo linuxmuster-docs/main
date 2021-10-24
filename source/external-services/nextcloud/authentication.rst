@@ -37,6 +37,34 @@ Sollte der Nextloud-Server extern betrieben werden, so muss die OPNsense®-Firew
 In der Konfigurationsoberfläche ist unter ``Firewall -> NAT -> Portweiterleitung``
 eine entsprechende Regel anzulegen.
 
+Bind-User
+---------
+
+.. attention::
+
+   Grundsätzlich sollten alle externen Dienste, die via LDAP an das AD angebunden werden, mit einem eigens dafür angelegten Bind-User genutzt werden. Für Nextcloud sollte so z.B. ein Benutzer ``nextcloud-binduser`` angelegt werden, der für die Verbindung zum AD genutzt wird. Hinweise hierzu findest Du unter https://github.com/linuxmuster/sophomorix4/wiki/bindusers 
+
+**Vorgehen zur Anlage eines neuen Bind-Users**
+
+1. Auf dem linuxmuster.net Server folgenden Befehl in der Konsole als Benutzer root absetzen, um einen neuen Benutzer (``nextcloud-binduser``) für den Bind-Zugriff zu definieren. Das zufällig erzeugte Kennwort wird in einer Datei auf dem Server hinterlegt.
+
+.. code::
+  
+   # sophomorix-admin --create-school-binduser nextcloud-binduser --school default-school --random-passwd-save
+
+2. Gebe für den neu angelegten Benutzer einen Kommentar an, um später einen Hinweis zu erhalten, für welchen Zweck der Benutzer genutzt wird.
+
+.. code::
+
+   # sophomorix-user -u nextcloud-binduser --comment "AD access from nextcloud"
+
+3. Lasse nun die Daten für den neu angelegten Benutzer anzeigen, die dann in den Nextcloud-Einstellungen als bind-user einzutragen sind.
+
+.. code::
+
+   # sophomorix-admin -i -a nextcloud-binduser
+
+4. Trage auf dem Nextcloud-Server im Konfigurationsmenü die Daten wie in nachstehender Abb. ein. Ändere dabei aber den Bind-User von global-binduser in den neu angelegten Bind-User z.B. ``nextcloud-binduser``:
 
 Trage auf dem Nextcloud-Server im Konfigurationsmenü folgende Werte ein:
 
@@ -44,17 +72,16 @@ Trage auf dem Nextcloud-Server im Konfigurationsmenü folgende Werte ein:
    :alt: Server - Einstellungen
    :align: center
 
-Sollte der Nextcloud Server extern betrieben werden, so ist als URL für den LDAP-Server eine Adresse nach diesem Schema anzugeben: ``ldaps://hostename.subdomain.domain.topleveldomain`` - z.B. ldaps://nextcloud.schule.meineschule.de. 
+Sollte der Nextcloud Server extern betrieben werden, so ist als URL für den LDAP-Server eine Adresse nach diesem Schema anzugeben: ``ldaps://hostname.subdomain.domain.topleveldomain`` - z.B. ldaps://nextcloud.schule.meineschule.de. 
 Als ``Port`` ist dann ``636`` einzutragen, um eine gesicherte Verbindung aufzubauen. 
 
 Für den ``binduser`` ist die Domäne anzupassen, so dass mit o.g. Beispiel die Eintragungen dort wie folgt aussehen könnten:
 
 .. code::
 
-   CN=global-binduser,OU=Management,OU=GLOBAL,DC=schule,DC=meineschule,DC=de
+   CN=nextcloud-binduser,OU=Management,OU=GLOBAL,DC=schule,DC=meineschule,DC=de
 
-In der Zeile darunter ist das Kennwort des ``binduser`` einzutragen. Dieses Passwort findest du auf dem LMN-Server unter
-``/etc/linuxmuster/.secret/global-binduser`` und trägst es hier ein.
+In der Zeile darunter ist das Kennwort des ``binduser`` einzutragen. Dieses Passwort des neuen Bind-Users erhälst du mit dem Befehl unter 3., den du auf dem linuxmuster.net Server absetzen musst. Dass Passwort trägst du hier ein.
 
 Als ``Base-DN`` trägst du ``OU=default-school,OU=SCHOOLS,`` gefolgt von deiner Domain (z.B. DC=schule,DC=meineschule,DC=de) ein.
 

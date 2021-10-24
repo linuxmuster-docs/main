@@ -64,18 +64,45 @@ Nicht aufgeführte Optionen sollten auf der Standard-Einstellung bleiben bzw. le
 | LDAP-Codierung | utf-8                                                                          |
 +----------------+--------------------------------------------------------------------------------+
 
-**Bind-Einstellungen** 
+Bind-Einstellungen
+------------------
+
+.. attention::
+
+   Grundsätzlich sollten alle externen Dienste, die via LDAP an das AD angebunden werden, mit einem eigens dafür angelegten Bind-User genutzt werden. Für Moodle sollte so z.B. ein Benutzer ``moodle-binduser`` angelegt werden, der für die Verbindung zum AD genutzt wird. Hinweise hierzu findest Du unter https://github.com/linuxmuster/sophomorix4/wiki/bindusers 
+
+**Vorgehen zur Anlage eines neuen Bind-Users**
+
+1. Auf dem linuxmuster.net Server folgenden Befehl in der Konsole als Benutzer root absetzen, um einen neuen Benutzer (``moodle-binduser``) für den Bind-Zugriff zu definieren. Das zufällig erzeugte Kennwort wird in einer Datei auf dem Server hinterlegt.
+
+.. code::
+  
+   # sophomorix-admin --create-school-binduser moodle-binduser --school default-school --random-passwd-save
+
+2. Gebe für den neu angelegten Benutzer einen Kommentar an, um später einen Hinweis zu erhalten, für welchen Zweck der Benutzer genutzt wird.
+
+.. code::
+
+   # sophomorix-user -u moodle-binduser --comment "AD access from moodle"
+
+3. Lasse nun die Daten für den neu angelegten Benutzer anzeigen, die dann in Moodle als bind-user einzutragen sind.
+
+.. code::
+
+   # sophomorix-admin -i -a moodle-binduser
+
+4. Trage in Moodle die unter 3. angezeigten Daten in Moodle für den Bind-User nach dem nachstehenden Schema ein:
 
 +----------------+--------------------------------------------------------------------------------+
-| Anmeldename    | CN=global-binduser,OU=Management,OU=GLOBAL,DC=linuxmuster,DC=lan               |
+| Anmeldename    | CN=moodle-binduser,OU=Management,OU=GLOBAL,DC=linuxmuster,DC=lan               |
 +----------------+--------------------------------------------------------------------------------+
 |                | DC=linuxmuster,DC=lan sind mit den Angaben der eigenen Domäne zu ersetzen.     |
 +----------------+--------------------------------------------------------------------------------+
-| Kennwort       | geheim                                                                         |
+| Kennwort       | geheim (angezeigtes Kennwort, das in der datei hinterlegt wurde)               |
 +----------------+--------------------------------------------------------------------------------+
-|                | Das Kennwort des Bind-Users findet sich auf dem Server in der Datei:           |
+|                | Kennwort des Bind-Users wurde unter 1. in einer Datei auf dem Server abgelegt. |
 +----------------+--------------------------------------------------------------------------------+
-|                | /etc/linuxmuster/.secret/global-binduser (root-Rechte erforderlich)            |
+|                | zur Anzeige ist der Befehl unter 3. erforderlich                               |
 +----------------+--------------------------------------------------------------------------------+
 | Nutzertyp      | MS ActiveDirectory                                                             |
 +----------------+--------------------------------------------------------------------------------+
@@ -85,6 +112,10 @@ Nicht aufgeführte Optionen sollten auf der Standard-Einstellung bleiben bzw. le
 +----------------+--------------------------------------------------------------------------------+
 | Subkontexte    | Ja                                                                             |
 +----------------+--------------------------------------------------------------------------------+
+
+
+Weitere Einstellungen
+----------------------
 
 **Kennwortänderung fordern**
 
