@@ -490,7 +490,7 @@ Nach der Installation der KVM-Software ist die Netzwerksituation folgende: ``vir
 
    $ ip -br addr list
    lo               UNKNOWN        127.0.0.1/8 ::1/128 
-   enp0s8           DOWN        
+   enp0s18          DOWN        
    enp0s17          UP             192.168.1.2/16 fe80::ae1c:ba12:6490:f75d/64
    virbr0           DOWN           192.168.122.1/24 
    virbr0-nic       DOWN           
@@ -509,8 +509,6 @@ Im nächsten Schritt wird die direkte Verbindung des KVM-Hosts mit dem Internet 
 
 Namen der Netzwerkkarten
 ------------------------
-
-.. todo:: Ändere enp0s18 in enp0s8
 
 Mit dem folgenden Befehl 
 
@@ -554,7 +552,7 @@ Diese Schnittstelle wird dann auch mit der Brücke ``br-red`` verbunden.
      version: 2
      renderer: networkd
      ethernets:
-       enp0s8:
+       enp0s18:
          dhcp4: no
        enp0s17:
          dhcp4: no
