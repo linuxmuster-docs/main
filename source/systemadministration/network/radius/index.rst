@@ -41,6 +41,8 @@ Eine Dokumentation zur Einrichtung von Freeradius auf der OPNsense® kann daher 
 Einsatz auf dem lmn-Server
 --------------------------
 
+Führe nachstehende Schritte durch.
+
 Zugehörigkeit zur Gruppe wifi
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
