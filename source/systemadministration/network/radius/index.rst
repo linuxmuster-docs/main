@@ -7,7 +7,7 @@ Netzwerkzugriff über Radius
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
 RADIUS (Remote Authentification Dial-In User Service) ist ein Client-Server Protokoll, das zur Authentifizierung, Autorisierung und 
-für das Accounting (Triple A) von Benutzern in einem Netzwerk dient.
+für das Accounting (Triple A - AAA) von Benutzern in einem Netzwerk dient.
 
 Der RADIUS-Server dient als zentraler Authentifizierungsserver, an den sich verschiedene IT-Dienste für die Authentifizierung wenden 
 können. RADIUS bietet sich an, um in grossen Netzen sicherzustellen, dass ausschließlich berechtigte Nutzer Zugriff haben. 
