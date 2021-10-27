@@ -30,7 +30,7 @@ FreeRadius ist ein Open-Source RADIUS-Server, der in der linuxmuster.net v7 eing
 
 Dieser RADIUS-Server kann prinzipiell auf der OPNsense®, dem lmn-Server oder auf einem Docker-Host genutzt werden.
 
-Die Benutzerauthentifizierung erfolgt anhand der Daten im ActiveDirectory (AD) des linuxmuster.net Servers, die vom RADIUS-Server via LDAP oder direkt abgefragt werden.
+Die Benutzerauthentifizierung erfolgt anhand der Daten im ActiveDirectory (AD) des lmn-Servers, die vom RADIUS-Server via LDAP oder direkt abgefragt werden.
 
 Einsatz auf der OPNSense®
 -------------------------
