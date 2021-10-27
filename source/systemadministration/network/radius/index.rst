@@ -35,7 +35,8 @@ Die Benutzerauthentifizierung erfolgt anhand der Daten im ActiveDirectory (AD) d
 Einsatz auf der OPNSense®
 -------------------------
 
-Derzeit unterstützt das OPNsense® - Plugin die ``Radius <-- --> AD`` Kommunikation mithilfe von ``auth_ntlm`` N I C H T. 
+Derzeit unterstützt das OPNsense® - Plugin die ``Radius <-- --> AD`` Kommunikation mithilfe von ``auth_ntlm`` N I C H T.
+
 Eine Dokumentation zur Einrichtung von Freeradius auf der OPNsense® kann daher derzeit nicht erstellt werden.
 
 Einsatz auf dem lmn-Server
