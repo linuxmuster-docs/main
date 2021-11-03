@@ -13,11 +13,15 @@ Diese beschreibt alle wichtigen Schritte ...
 
 Wie es bei einem Projekt ist, dessen Entwicklungsgeschichte mittlerweile auf das Jahr 1999 zurückblickt, ist dein Einstieg in die Beschreibung unseres Systems sicherlich verschieden gelagert.
 
-Kennst du linuxmuster.net noch nicht, dann empfehlen wir dir das Kapitel
+Kennst du linuxmuster.net noch nicht,
+-------------------------------------
+
+dann empfehlen wir dir das Kapitel
 
   :ref:`what-is-linuxmuster.net-label`
 
 Hattest du schon Kontakt mit einer Installation von
+---------------------------------------------------
 
   | "Linux-Muster für Schulnetze",
   | openML ( bzw. paedML-Linux) oder
@@ -26,6 +30,19 @@ Hattest du schon Kontakt mit einer Installation von
 Dann ist das Kapitel :ref:`what-is-new-label` für dich von Interesse.
 
 Wobei wir aber sagen müssen, dass mit der Version 7 sich vieles grundlegend geändert hat. Das zuvor genannte Kapitel :ref:`what-is-linuxmuster.net-label` geht auf diese Neuerungen detailliert ein. Ein Blick lohnt auf alle Fälle.
+
+Du hast schon eine Installation der Version 7.0 durchgeführt.
+-------------------------------------------------------------
+
+Du weißt was du machen musst und benötigst nur die aktuellen Virtuellen Maschinen für weitere Installationen!
+Hier kannst du sie direkt herunterladen:
+
+  | OVAs: `<https://download.linuxmuster.net/ova/v7/latest/>`_
+  | 
+  | XVAs: `<https://download.linuxmuster.net/xcp-ng/v7/latest/>`_
+
+Weitere Hilfe
+-------------
 
 Neben dieser Dokumentation steht dir unsere Community in unserem Hilfeforum und unser kostenfreier Telefon-Support helfend zur Seite.
 
