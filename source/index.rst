@@ -7,7 +7,7 @@ Diese beschreibt alle wichtigen Schritte ...
 
   | ... von der Installation,
   | ... der Einrichtung von Windows- und Linux-Rechnern als Clients,
-  | ... der Systemadministration mit,
+  | ... der Systemadministration,
   | ... der Verwaltung von Nutzern,
   | ... bis hin zu individuellen Anpassungen.
 
@@ -29,12 +29,12 @@ Hattest du schon Kontakt mit einer Installation von
 
 Dann ist das Kapitel :ref:`what-is-new-label` für dich von Interesse.
 
-Wobei wir aber sagen müssen, dass mit der Version 7 sich vieles grundlegend geändert hat. Das zuvor genannte Kapitel :ref:`what-is-linuxmuster.net-label` geht auf diese Neuerungen detailliert ein. Ein Blick lohnt auf alle Fälle.
+Mit der Version 7 sich vieles grundlegend geändert. Das zuvor genannte Kapitel :ref:`what-is-linuxmuster.net-label` geht auf diese Neuerungen detailliert ein. Ein Blick lohnt sich daher auf alle Fälle.
 
-Du hast schon eine Installation der Version 7.0 durchgeführt.
--------------------------------------------------------------
+Du hast schon eine Installation der Version 7 durchgeführt.
+-----------------------------------------------------------
 
-Du weißt was du machen musst und benötigst nur die aktuellen Virtuellen Maschinen für weitere Installationen!
+Du weißt, was du machen musst und benötigst nur die aktuellen Virtuellen Maschinen für weitere Installation!
 Hier kannst du sie direkt herunterladen:
 
   | OVAs: `<https://download.linuxmuster.net/ova/v7/latest/>`_
@@ -55,7 +55,7 @@ Neben dieser Dokumentation steht dir unsere Community in unserem Hilfeforum und 
 
    Suchst du die Dokumentation zur Version linuxmuster.net 6.2 oder die Möglichkeit unsere Dokumentation herunterzuladen?
 
-Dann schaue an das untere Ende der Menuleiste.
+Dann schaue an das untere Ende der Menüleiste.
 
 .. figure:: media/01_intro_read-the-docs-closed.png
    :align: center
