@@ -81,7 +81,7 @@ Die Download-Quellen für den Proxmox-Host selbst finden sich hier:
 
 https://www.proxmox.com/de/downloads/category/iso-images-pve/
 
-Dort findet sich das ISO-Image zur Installation von Proxmox (derzeit basiert unsere Beschreibung auf der Proxmox-Version 6.2).
+Dort findet sich das ISO-Image zur Installation von Proxmox (derzeit basiert unsere Beschreibung auf der Proxmox-Version 7.0).
 
 Lade dir dort dieses Image herunter und erstelle dir einen bootfähigen USB-Stick zur weiteren Installation.
 
@@ -92,7 +92,7 @@ Nachdem du die ISO-Datei für Proxmox heruntergeladen hast, wechselst Du in das 
 
 .. code-block:: console
  
-   dd if=proxmox-ve_6.2-1.iso of=/dev/sdX bs=1M status=progress conv=fdatasync
+   dd if=proxmox-ve_7.0-2.iso of=/dev/sdX bs=1M status=progress conv=fdatasync
    
 Verkabelungshinweise
 --------------------
@@ -212,7 +212,7 @@ Folgende Befehle müssen der Reihe nach ausgeführt werden:
 .. code::
 
    sed -i -e 's/^/#/' /etc/apt/sources.list.d/pve-enterprise.list
-   echo "deb http://download.proxmox.com/debian buster pve-no-subscription" >> /etc/apt/sources.list.d/pve-no-subscription.list
+   echo "deb http://download.proxmox.com/debian bullseye pve-no-subscription" >> /etc/apt/sources.list.d/pve-no-subscription.list
 
 
 .. hint:
@@ -233,7 +233,7 @@ Für eine funktionierende Umgebung müssen zwei Netzwerkschnittstellen auf dem H
 
 Eine für das interne Netz (green, 10.0.0.0/16) und eine für das externe Netz (red, externes Netz, Internetzugriff). 
 
-Nach der Erstinstallation von Proxmox wurde bislang nur eine sogenannte Bridge (vmbr0) eingerichtet. Diese ist mit der ersten Netzwerkschnittstelle des Proxmox-Hosts verbunden. Über deren Ethernet-Kabel der (DSL)-Router angeschlossen ist. Verlief der vorherige Befehl zur Aktualisierung von Proxmox erfolgreich, so weist du, dass diese bereits funktioniert und für die weitere Nutzung für das externe Netz (red) genutzt werden kann.  
+Nach der Erstinstallation von Proxmox wurde bislang nur eine sogenannte Bridge (vmbr0) eingerichtet. Diese ist mit der ersten Netzwerkschnittstelle des Proxmox-Hosts verbunden. Über deren Ethernet-Kabel der (DSL)-Router angeschlossen ist. Verlief der vorherige Befehl zur Aktualisierung von Proxmox erfolgreich, so weißt du, dass diese bereits funktioniert und für die weitere Nutzung für das externe Netz (red) genutzt werden kann.  
 
 Daher muss nun die zweite Schnittstelle eingerichtet werden, um später mit den noch zu importierenden VMs arbeiten zu können.
 
@@ -525,7 +525,7 @@ opsi-VM     wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-
 docker-VM   wget https://download.linuxmuster.net/proxmox/v7/latest/vzdump-qemu-203-2020_12_19-19_43_09.vma.lzo
 =========== ===================================================================================================
 
-Beispiel für die opensense-VM:
+Beispiel für die opnsense-VM:
 
 .. code::
 
@@ -608,7 +608,7 @@ opsi-VM     202   ``qmrestore vzdump-qemu-202-2020_12_19-19_37_48.vma.lzo 202 --
 docker-VM   203   ``qmrestore vzdump-qemu-203-2020_12_19-19_43_09.vma.lzo 203 --storage vd-hdd-1000 -unique 1``
 =========== ===== =============================================================================================
 
-1. Hier wird als Beispiel der opensense-Snapshot mit der ID 200 (lmn7-opnsense) auf dem vd-hdd-1000 Storage über folgenden Befehl importiert:
+1. Hier wird als Beispiel der OpnSense-Snapshot mit der ID 200 (lmn7-opnsense) auf dem vd-hdd-1000 Storage über folgenden Befehl importiert:
 
 .. code::
 
