@@ -1,3 +1,5 @@
+.. _nextcloud-start-label:
+
 =============================
 Nextcloud für linuxmuster.net
 =============================
