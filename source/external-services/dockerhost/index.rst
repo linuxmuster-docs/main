@@ -6,9 +6,9 @@ Installation eines Dockerhosts
 
 .. sectionauthor:: `@rettich <https://ask.linuxmuster.net/u/rettich>`_
 
-Ein Docker-Host vereinfacht die Bereitstellung von Anwendungen, weil Anwendungen virtualisiert in einem Container, der alle nötigen Pakete enthält, leicht als Datei transportiert und intalliert werden kann. 
+Ein Docker-Host vereinfacht die Bereitstellung von Anwendungen, weil Anwendungen virtualisiert in einem Container, der alle nötigen Pakete enthält, leicht als Datei transportiert und intalliert werden können. 
 
-Wenn wir an einer Schule eine Nextcloud, ein MRBS, eine Website und eventuell noch ein OpenSchulPortfolio betreiben wollen. Und wenn jeder dieser Anwendungen eine Weboberfläche (Port 80 und 443) anbieten soll, braucht wir entweder 5 öffentliche IP-Adressen oder einen Reverse Proxy, wie nginx.
+Angenommen wir möchten an einer Schule eine Nextcloud, ein MRBS, eine Website und eventuell noch ein OpenSchulPortfolio betreiben und jeder dieser Anwendungen soll eine Weboberfläche (Port 80 und 443) anbieten. Dann bräuchten wir entweder 5 öffentliche IP-Adressen oder einen Reverse Proxy, wie nginx, der alle Anfragen für verschiedene Domänen / Subdomänen über eine IP stellvertretend entgegennimmt und an die Anwendungen verteilt.
 
 .. image:: media/dockerhost01.png
    :alt: Reverse-Proxy
