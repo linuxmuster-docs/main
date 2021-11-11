@@ -148,6 +148,7 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   :caption: Externe Dienste
   :hidden:
 
+  external-services/dockerhost/index
   external-services/moodle/index
   external-services/nextcloud/index
   external-services/rocketchat/index

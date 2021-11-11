@@ -23,7 +23,7 @@ sys.path.insert(0, os.path.abspath('.'))
 
 # > Sphinx v1.6.1
 def setup(app):
-    app.add_stylesheet("theme_overrides.css")
+    app.add_css_file("theme_overrides.css")
 
 # -- General configuration ------------------------------------------------
 

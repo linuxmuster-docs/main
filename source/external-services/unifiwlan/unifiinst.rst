@@ -12,89 +12,42 @@ Hardwareanforderungen
 Die Grundinstallation
 ---------------------
 
-Bevor die Installation begonnen werden kann, muss ein Ubuntu-Server 16.04 64-Bit auf dem späteren Unifi-Kontroller installiert werden.
+Für die Installation brauchen wir einen Dockerhost ohne nginx und dehydrated (siehe :ref:`Installation eines Dockerhosts <dockerhost-install-label>`).
 
-Schritt für Schritt
--------------------
+Unifi-Controller mit docker-compose einrichten und starten
+==========================================================
 
-Starte vom Installationsmedium und wähle die Sprache.
+Melde dich auf dem Docker-Host an, werde mit ``sudo -i`` `root` und lege mit ``mkdir -p /srv/docker/unifi`` das Verzeichnis `/srv/docker/unifi` an. 
 
-.. figure:: media/u01.png
-   :alt: Sprachenauswahl
+Gehe mit ``cd /srv/docker/unifi`` in das neue Verzeichnis und lege die Datei docker-compose.yml an mit folgendem Inhalt an:
 
-Wähle `Ubuntu Server installieren`.
+.. code-block:: console
 
-Bestätige die Installation in der gewählten Sprache.
+   version: "2.1"
+  services:
+  unifi-controller:
+    image: ghcr.io/linuxserver/unifi-controller
+    container_name: unifi-controller
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - MEM_LIMIT=1024M #optional
+    volumes:
+      - ./data:/config
+    ports:
+      - 3478:3478/udp
+      - 10001:10001/udp
+      - 8080:8080
+      - 8443:8443
+      - 1900:1900/udp #optional
+      - 8843:8843 #optional
+      - 8880:8880 #optional
+      - 6789:6789 #optional
+      - 5514:5514 #optional
+    restart: unless-stopped
+     
+Starte den Unifi-Controller mit ``docker-compose up -d``.
 
-Ist der Rechner bereits in `/etc/linuxmuster/sophomorix/default-school/devices.csv`, so ist der Rechnername bereits in der Eingabemaske eingetragen.
-
-.. figure:: media/u02.png
-   :alt: Rechnername
-
-Wähle einen Benutzer, seinen Benutzernamen und das Passwort.
-
-Verschlüssle Deinen persönlichen Ordner **nicht**!
-
-.. figure:: media/u03.png
-   :alt: Home verschlüsseln
-
-Wähle `vollständige Festplatte verwenden` und bestätige die Partitionierung.
-
-.. figure:: media/u04.png
-   :alt: Vollständige Festplatte
-
-Es ist zu empfehlen, `keine automatischen Aktualisierungen` zu wählen, da du dann nicht von unerwarteten Aktualisierungen überrascht wirst.
-
-.. figure:: media/u05.png
-   :alt: Keine Updates
-
-An Software gibt es nichts Besonderes zu wählen.
-
-.. figure:: media/u06.png
-   :alt: Softwareauswahl
-
-Beende die Installation und starte den Rechner neu.
-
-Die Installation der Unifi-Pakete
----------------------------------
-
-Der Rechner muss upgedatet, die Paketquellen müssen ergänzt und das Unifi-Paket installiert werden.
-
-Schritt für Schritt
--------------------
-
-Die englische Anleitung von Unifi findest du `hier <https://help.ubnt.com/hc/en-us/articles/220066768-UniFi-How-to-Install-Update-via-APT-on-Debian-or-Ubuntu>`_.
-
-Melde dich an.
-
-öffne eine root-shell mit `sudo -i`
-
-Update den Rechner mit
-
-::
-
-  apt-get update
-  apt-get dist-upgrade
-
-Editiere die Datei `/etc/apt/sources.list` und füge die folgende Zeile hinzu:
-
-
-::
-
-  deb http://www.ubnt.com/downloads/unifi/debian stable ubiquiti
-
-Füge den GPG-key hinzu:
-
-::
-
-  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 06E85760C0A52C50
-
-Nochmal updaten, unifi installieren und neu starten:
-
-::
-
-  sudo apt-get update
-  sudo apt-get install unifi
-  reboot
-
+.. hint::
+   Zur Zeit wird die Unifi-Controller-Version 6.4.54 installiert. Möchtest du eine frühere Version installieren, musst du das in Zeile 4 angeben. Beispiel: ``image: ghcr.io/linuxserver/unifi-controller:LTS-version-5.6.42``. Welche Versionen es gibt, siehst du `hier <https://hub.docker.com/r/linuxserver/unifi-controller/tags?page=1>`_ .
 

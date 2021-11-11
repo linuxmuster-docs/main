@@ -76,7 +76,7 @@ Druckertreiber auf dem Server installieren
 
 Jetzt können wir die Druckertreiber auf dem Server installieren.
 
-Öffnen als global-admin das Programm mmc.exe, wähle ``Datei → snapin hinzufügen/entfernen`` und füge die Druckerverwaltung hinzu.
+Öffne als global-admin das Programm mmc.exe, wähle ``Datei → snapin hinzufügen/entfernen`` und füge die Druckerverwaltung hinzu.
 
 .. image:: media/printers-windows-clients-06.png
    :alt: mmc.exe
@@ -90,10 +90,10 @@ Wie man sieht, sind die Drucker dem Systems bekannt. Du musst nur noch die Druck
    :alt: mmc.exe
    :align: center
 
-Mache einen Rechtsklick auf ``Treiber`` und wählen ``Treiber hinzufügen``.
-Gehe zu ``Weiter → Weiter → Datenträger… Durchsuchen → Ok`` und wählen den richtigen Druckertreiber. Es werden nur Microsoft zertifizierte Treiber akzeptiert. Falls du mit einem Treiber Probleme haben solltest, versuche es eventuell mit einem etwas älteren Treiber. Die werden sehr oft akzeptiert. 
+Mache einen Rechtsklick auf ``Treiber`` und wähle ``Treiber hinzufügen``.
+Gehe zu ``Weiter → Weiter → Datenträger… Durchsuchen → Ok`` und wähle den richtigen Druckertreiber. Es werden nur Microsoft zertifizierte Treiber akzeptiert. Falls du mit einem Treiber Probleme haben solltest, versuche es eventuell mit einem etwas älteren Treiber. Die werden sehr oft akzeptiert. 
 
-Klicken abschließend auf ``Fertigstellen``.
+Klicke abschließend auf ``Fertigstellen``.
 
 Einem Drucker einen Druckertreiber zuweisen
 -------------------------------------------
@@ -109,23 +109,47 @@ Jetzt müssen wir nur noch den Druckern die Druckertreiber zuweisen.
 Mache einen Rechtsklick auf den Drucker, dem du einen Druckertreiber zuweisen möchtest und wähle ``Eigenschaften…``
 Falls du gefragt wirst, ob du einen Druckertreiber lokal installieren möchtest, antworte mit Nein.
 
-Gehe zum Reiter ``Erweitert``, wähle bei Treiber den passenden Treiber für den Drucker und bestätigen Sie mit ``OK``.
+Gehe zum Reiter ``Erweitert``, wähle bei Treiber den passenden Treiber für den Drucker und bestätige mit ``OK``.
 
 .. image:: media/printers-windows-clients-07.png
    :alt: Eigenschaften von
    :align: center
 
-Leider ändert Windows den Namen des Drucker in den Namen des Druckertreibers. Um wieder den richtigen Namen zu setzen, machst du einen Rechtsklick in mmc.exe den Drucker und wählst ``Eigenschaften…``
+Leider ändert Windows den Namen des Drucker in den Namen des Druckertreibers. Um wieder den richtigen Namen zu setzen, machst du in mmc.exe einen Rechtsklick auf den Drucker und wählst ``Eigenschaften…``
 
-Ändere unter dem Reiter ``Allgemein`` auf den Namen des Druckers auf den Namen, den er in CUPS hat und bestätige mit ``OK``.
+Ändere unter dem Reiter ``Allgemein`` den Namen des Druckers auf den Namen, den er in CUPS hat und bestätige mit ``OK``.
 
 .. image:: media/printers-windows-clients-08.png
    :alt: Eigenschaften Allgemein
    :align: center
 
-Wenn alles geklappt hat, installieren sich die Druckertreiber auf den Windows-Clients beim Systemstart automatiasch. Wie du die Drucker-Raumzuweisung machst, kannst du :ref:`hier<add-ad-group-label>` nachlesen.
+Benutzern erlauben einen Druckertreiber zu installieren
+-------------------------------------------------------
 
-Hat ein Lehrer in der Schulkonsole bei einem Drucker einen Haken gesetzt, wird der Drucker bei der Anmeldung des Lehrers zusätzlich installiert. 
+Die Windows-Clients erlauben normalen Benutzern nicht, einen Druckertreiber zu installieren. Das müssen wir ändern, da sonst normale Benutzer nicht drucken können. Am einfachsten geht das mit folgendem Registry-Eintrag:
+
+.. code::
+
+  HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Printers\PointAndPrint
+  RestrictDriverInstallationToAdministrators=0 (DWORD)
+
+Erzeuge den Eintrag mit dem Registrierungs-Editor direkt in die Registry oder lege dir die Datei ``win10.printer.reg`` mit folgendem Inhalt an:
+
+.. code::
+
+  Windows Registry Editor Version 5.00
+  ; linuxmuster.net 7 version
+  ; notwendig, damit Druckertreiber installieret werden können
+  [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Printers\PointAndPrint]
+  "RestrictDriverInstallationToAdministrators"=dword:00000000
+
+Und doppelklicke als `global-admin` ``win10.printer.reg``.
+
+Jetzt muss nur noch ein neues Image erzeugt und verteilt werden, damit die Firewall-Einstellungen und der Registry-Eintrag auf die Windows-Clients verteilt werden. 
+
+Wenn alles geklappt hat, installieren sich die Druckertreiber auf den Windows-Clients sobald sich ein Benutzer anmeldet. Wie du die Drucker-Raumzuweisung machst, kannst du :ref:`hier<add-ad-group-label>` nachlesen.
+
+Hat ein Lehrer in der Schulkonsole bei einem Drucker einen Haken gesetzt, wird der Drucker bei der Anmeldung des Lehrers zusätzlich installiert. Das ist dann sinnvoll, wenn beispielsweise ein Lehrer oft in der Nähe des Physik-Drucker unterrichtet. Dann kann er auch von jedem Laptop aus auf dem Physik-Drucker ausdrucken.     
 
 Falls o.g. Weg nicht funktionieren sollte, ist der Treiber manuell auf dem Windows Client zu installieren. Anschließend ist der Druckertreiber dem Drucker auf dem Server zuzuweisen.
 

@@ -40,55 +40,6 @@ Falls du bereits einen Nextcloud-Service hast, kannst du das erste Kapitel über
 Voraussetzung: Docker-Host
 ==========================
 
-Um den Nextcloud-Service in der hier beschriebenen Form zu betreiben, ist die Installation eines Docker-Hosts erforderlich.
-Hierzu ist ein dedizierter oder als VM entsprechend leistungsstarker Linux-Server mit Ubuntu 18.04 oder 20.04 LTS zu installieren. Auf dem Server ist dann der Docker-Host einzurichten.
+Um den Nextcloud-Service in der hier beschriebenen Form zu betreiben, ist die Installation eines Docker-Hosts erforderlich. 
+Hierzu ist ein dedizierter oder als VM entsprechend leistungsstarker Linux-Server mit Ubuntu 20.04 LTS zu installieren. Auf dem Server ist dann der Docker-Host einzurichten. Wie das geht siehst du im Kaptitel :ref:`Installation eines Dockerhosts <dockerhost-install-label>`
 
-Auf dem Docker-Host müssen die Dienste ufw, dehydrated, nginx u.a. installiert und eingerichtet sein. Dies lässt sich wie folgt erreichen:
-
-Docker vorbereiten
-------------------
-
-.. hint::
-
-   Hinweise und vordefinierte Rollen zur Installation des Docker-Hosts findest Du unter `linuxuster-docker <https://github.com/linuxmuster/linuxmuster-docker/tree/master/create-dockerhost>`_.
-
-Docker: 1. Schritt
-------------------
-
-Auf dem Linux-Server sind die Pakete ``git`` und ``ansible`` zu installieren. Danach ist ein ``sudo-Benutzer`` anzulegen. Für diesen Benutzer ist der öffentliche Teil des ssh-keys in der Datei ``/home/<benutzer>/.ssh/authorized_keys`` zu ergänzen.
-
-Nachdem ein ssh-key erstellt wurde findet sich der öffentliche Teil des Schlüssel des Benutzers unter ``~/.ssh/id_rsa.pub``.
-
-Dieser kann mit folgendem Befehl auf den Server übertragen werden:
-
-.. code::
-
-  ssh-copy-id -i ~/.sshd/id_rsa.pub user@nextcloudserverurl
-
-Der Key wurde nun in der Datei ``authorized_keys`` ergänzt.
-
-Der ssh-Zugang sollte danach für den Benutzer gestestet werden (``ssh -i user@nextcloudserverurl``).
-
-Docker: 2. Schritt
-------------------
-
-- mit sudo-Benutzer auf dem Linux-Server anmelden.
-- DNS Eintrag für den Nextcloud-Server vornehmen. Es wird bei der Einrichtung ein Lets' encrypt Zertifikat erstellt.
-- Repo klonen: ``git clone https://github.com/linuxmuster/linuxmuster-docker.git``
-- ins Verzeichnis wechseln: ``cd linuxmuster-docker/create-dockerhost``
-- hosts-Datei kopieren: ``cp hosts.ex hosts``
-- in hosts-Datei IP-Adresse oder FQDN des Remotehosts eintragen.
-- Playbook-Datei kopieren: cp dockerhost.yml.ex dockerhost.yml
-- Playbook anpassen (siehe Zeilen mit "### anpassen"):
-   - remote_user: Name des Remote-Users auf dem Docker-Host,
-   - hostname: Name des Docker-Hosts,
-   - user: Name des SSH-Users auf dem Docker-Host (i.d.R. identisch zu obigem remote_user) und
-   - key: Pfad zum eigenen öffentlichen SSH-Key.
-- ansible: in ``/etc/ansible/hosts`` -> URL und IP des nextcloud hosts eintragen (zusätzlich zur hosts-Datei im github Verzeichnis)
-- ansible: in ``/etc/ansible/ansible.cfg`` -> host_key_checking = true setzen.
-- Docker-Host ausrollen: ``ansible-playbook -i hosts -k -K dockerhost.yml`` - Passwort des Users wird zweimal abgefragt (für SSH & Sudo).
-
-Docker: 3. Schritt
-------------------
-
-Danach steht der Docker-Host zur Verfügung. Der Benutzer kann sich via ssh nur via key anmelden. Die Firewall ufw auf dem Linux-Server lässt nur die Ports 22, 80 und 443 zu.
