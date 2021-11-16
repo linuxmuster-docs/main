@@ -94,21 +94,6 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   getting-started/add-user-accounts
   getting-started/devices/index
   
-
-.. toctree::
-  :maxdepth: 2
-  :caption: Systemadministration
-  :hidden:
-
-  systemadministration/maintenance/keep-lmn-uptodate
-  systemadministration/network/default-access-rules
-  systemadministration/network/radius/index
-  systemadministration/printer/index
-  systemadministration/schoolconsole/index
-  systemadministration/gpo/gpo
-  systemadministration/sw-remote-gpo/sw-remote-gpo
-  systemadministration/openvpn/index
-
 .. toctree::
   :maxdepth: 2
   :caption: Clientverwaltung
@@ -142,6 +127,20 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   classroom/exam-and-transfer
   classroom/access-control
   classroom/check-own-quota/index
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Systemadministration
+  :hidden:
+
+  systemadministration/maintenance/keep-lmn-uptodate
+  systemadministration/network/default-access-rules
+  systemadministration/network/radius/index
+  systemadministration/printer/index
+  systemadministration/schoolconsole/index
+  systemadministration/gpo/gpo
+  systemadministration/sw-remote-gpo/sw-remote-gpo
+  systemadministration/openvpn/index
 
 .. toctree::
   :maxdepth: 2
