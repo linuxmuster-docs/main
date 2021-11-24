@@ -20,15 +20,11 @@ sog. ``Resource-Pool`` zusammengeführt und verwaltet werden können.
 Der Betrieb wird auf jeglicher Markenhardware und auf einer Vielzahl an 
 NoName-Hardware unterstützt.
 
-Diese Dokumentation ist eine "Schritt für Schritt" Anleitung für die
-Installation der linuxmuster.net-Musterlösung in der Version 7 auf
-Basis von XCP-ng. 
-
 Übersicht
 =========
 
 In nachstehender Abbildung wird der schematische Netzaufbau der
-anstehenden v7-Installation unter XCP-ng dargestellt.
+anstehenden v7.1-Installation unter XCP-ng dargestellt.
 
 .. figure:: media/01_install-on-xcp-ng_network-sketch.png
    :align: center
@@ -45,12 +41,6 @@ der IPs zu den VMs bzw. genutzten Hosts.
 +--------------+--------------------+
 | Server       | 10.0.0.1/16        | 
 +--------------+--------------------+
-| OPSI         | 10.0.0.2/16        | 
-+--------------+--------------------+
-| Dockerhost   | 10.0.0.3/16        |
-+--------------+--------------------+
-| XOA          | 10.0.0.4/16        |
-+--------------+--------------------+
 | Admin-PC     | 10.0.0.10/16       |
 +--------------+--------------------+
 | XCP-ng Host  | 10.0.0.200/16      |
@@ -58,17 +48,6 @@ der IPs zu den VMs bzw. genutzten Hosts.
 
 Lies zuerst die Abschnitte :ref:`what-is-new-label` 
 und :ref:`prerequisites-label`, bevor du dieses Kapitel durcharbeitest.
-
-Nach der Installation gemäß dieser Anleitung erhältst du eine
-einsatzbereite Umgebung bestehend aus
-
-* einem Host (XCP-ng Hypervisor) für alle virtuellen Maschinen, 
-* einer Firewall (OPNsense®)  
-* einem Server (linuxmuster.net)
-* einer VM (XOA) zur web-basierten Verwaltung des Virtualisierungs-Hosts
-
-Die Einbindung der VMs für den OPSI-Server und den Docker-Host werden hier nicht weiter beschrieben.
-Diese sind analog zum Import und Anpassung der Server-VM durchzuführen.
 
 Voraussetzungen
 ===============
@@ -108,10 +87,11 @@ zusätzlichen Anleitungen betrachtet.
 
    :ref:`Anleitung Netzwerksegmentierung <subnetting-basics-label>` 
 
-Download der Appliances und der Virtualisierungssoftware XCP-ng
----------------------------------------------------------------
+Download der Verwaltungssoftware
+--------------------------------
 
-Die Download-Links zur Installation der XCP-ng Virtualisierungssoftware finden Sie nachstehend:
+Um XCP-ng nach Erstinstallation zu verwalten, benötigst du zuerst das sog. XCP-ng Center, ein Windows Programm, das du z.B.
+auf einem Laptop mit dem Betriebssystem Windows installierst.
 
 +--------------------+----------------------------------------------------------------------+
 | Programm           | Beschreibung                                                         | 
@@ -120,26 +100,8 @@ Die Download-Links zur Installation der XCP-ng Virtualisierungssoftware finden S
 +--------------------+----------------------------------------------------------------------+
 | XCP-ng Center      | Windows-Programm zur Verwaltung der Virtualisierungsumgebung         |                             
 +--------------------+----------------------------------------------------------------------+
-| Download-Link:     | XCP-ngCenter_ für XCP-ng ab v8.2 LTS                                 |
-+--------------------+----------------------------------------------------------------------+
-| XVA VMs            | VM der lmn v7 für XCP-ng im XVA-Format zum direkten Import           |                             
-+--------------------+----------------------------------------------------------------------+
-|  Download-Link:    | Download der XVAs-v7_                                                |
-+--------------------+----------------------------------------------------------------------+
-| Beschreibung VMs   | :ref:`Beschreibung der VMs für v7 <prerequisites-label>`             |                             
-+--------------------+----------------------------------------------------------------------+
 
 .. _XCP-ngCenter: https://github.com/cocoon/xenadmin/releases/download/20.11.00.3/XCP-ng-Center_20.11.00.3.msi
-
-.. _XVAs-v7: https://download.linuxmuster.net/xcp-ng/v7/latest/
-
-.. hint::
-
-   Die XVAs für die v7 wurden mit XCP-ng v8.2 LTS erstellt. Zudem wurden die xcp-ng
-   Tools für die v8.2 pro VM installiert. Ein Import für eine XCP-ng 7.6 Version 
-   scheitert und bricht mit einem Fehler ab. Daher bitte sicherstellen, dass 
-   eine aktuelle XCP-ng v8.2 genutzt wird. 
-
 
 Erstellen eines USB-Sticks zur Installation des XCP-ng-Host
 -----------------------------------------------------------
@@ -340,7 +302,7 @@ und insbesondere die vorkonfigurierten VMs einfach importieren.
 
 Zudem kann der XCP-ng-Host ebenfalls ``web-basiert administriert`` werden. Dies erfolgt mithilfe 
 der Anwendung ``XenOrchestra (XOA - Xen Orchestra Application)``. linuxmuster.net stellt hierfür 
-ebenfalls eine vorkonfigurierte VM mit einer installierten XOA App zur Verfügung. XOA wurde
+eine vorkonfigurierte VM mit einer installierten XOA App zur Verfügung. XOA wurde
 hier "from scratch" installiert und an die lmn7 angepasst. Die Nutzung von XOA ist der von 
 XCP-ng empfohle Weg der Administration und bietet im Produktivbetrieb viele Vorteile wie z.B.
 die Eirichtung und Automatisierung von Backups / Snapshots.
@@ -398,16 +360,14 @@ Führe diese Schritte ebenfalls für die weiteren Netze (BLUE - WLAN Netz und RE
 aus und ändere die Namen auf ``BLUE`` und ``RED``. In der Abb. ist NIC1 dem vSwitch Network1 zugeordnet und so verkabelt, dass hiermit das WLAN angesteuert wird, so dass dieses nun mit dem Namen ``Blue`` anzugeben ist. Network2 wird in diesem Beispiel dann zu ``Red``.
 
 
-VMs importieren
-^^^^^^^^^^^^^^^
+XOA VM importieren
+^^^^^^^^^^^^^^^^^^
 
-Nachdem das Netzwerk korrekt eingerichtet wurde, können nun die VMs der linuxmuster.net 
-importiert werden.
+Nachdem das Netzwerk korrekt eingerichtet wurde, kann nun die XOA-VM importiert werden.
 
-Lade dir vorher zunächst alle VMs, die du importieren möchtest unter linuxmuster.net auf 
-deinen Client herunter (siehe obigen Download-Link: XVAs-v7_ ). Die heruntergeladenen VMs
-sind als ZIP-Archiv komprimiert und können nach dem Download mit dem SHA256 HASH-Wert geprüft werden.
-Entpacke die ZIP-Dateien, so dass du alle VMs als XVA-Dateien  vorliegen hast.
+Lade dir vorher zunächst diese auf deinen Client herunter. Die heruntergeladene VM
+ist als ZIP-Archiv komprimiert und kann nach dem Download mit dem SHA256 HASH-Wert geprüft werden.
+Entpacke die ZIP-Datei, so dass du diese als XVA-Datei vorliegen hast.
 
 Danach rufe im XCP-ng Center den Menüpunkt ``File -> Import`` auf.
 
@@ -492,59 +452,6 @@ Wähle danach in dem Konsolenmenü den Punkt 12) aus, um die Firewall zu aktuali
    :alt: Update der VM OPNsense®
 
 Bestätige diesen Vorgang mit ``y`` und warte bis die VM neu gestartet wurde.
-
-Starte die VM mit dem linuxmuster.net Server.
-Melde Dich mit o.g. Login-Daten an.
-
-.. important::
- 
-   Vor den folgenden Schritten muss die Datei ``/etc/apt/sources.list.d/lmn7.list`` wie folgt geändert werden:
-
-   .. code-block:: console
-   
-      deb https://archive.linuxmuster.net lmn7/
-      deb-src https://archive.linuxmuster.net lmn7/
-
-   Andere Zeilen können gelöscht oder mit "#" am Zeilenanfang auskommentiert werden.
-   
-   Danach muss mit
-
-   .. code-block:: console
-   
-      wget https://archive.linuxmuster.net/archive.linuxmuster.net.key
-
-   der nötige Schlüssel geholt und mit
-
-   .. code-block:: console
-   
-      apt-key add archive.linuxmuster.net.key
-
-   aufgenommen werden.
-
-   Siehe auch ``https://ask.linuxmuster.net/t/infrastrukturanpassungen-neuer-paketserver-und-moegliche-folgen``
-
-Aktualisiere die VM.
-
-.. figure:: media/40_xcp-ng-install_update-server-vm.png
-   :align: center
-   :alt: Update der Server VM
-
-Bestätigen Sie das Update mit ``y``.
-
-.. figure:: media/41_xcp-ng-install-updating-server-vm.png
-   :align: center
-   :alt: Update der Server VM
-
-
-Sofern du weitere VMs importiert hast, führe die Aktualisierungen
-analog aus.
-
-.. hint::
-
-    Für die weitere Einrichtung von linuxmuster.net für deine Schule folge
-    der Dokumentation unter: 
-    :ref:`Linuxmuster Setup <setup>` 
-
 
 Xen Orchestra Appliance (XOA)
 -----------------------------
@@ -729,7 +636,3 @@ angezeigt. Die Aktualisierung ist mit ``y`` zu starten.
    :alt: Schritt 23 der Installation des XCP-ng Servers
 
 Danach ist Dein XCP-ng Host auf dem aktuellen Stand.
-
-============================ =================
-Weiter geht es mit dem Setup |follow_me2setup|
-============================ =================

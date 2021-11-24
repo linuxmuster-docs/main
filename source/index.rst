@@ -1,7 +1,7 @@
 Einführung
 ==========
 
-Herzlich Willkommen zur Dokumentation von linuxmuster.net v7! 
+Herzlich Willkommen zur Dokumentation von linuxmuster.net v7.1!
 
 Diese beschreibt alle wichtigen Schritte ...
 
@@ -23,32 +23,25 @@ dann empfehlen wir dir das Kapitel
 Hattest du schon Kontakt mit einer Installation von
 ---------------------------------------------------
 
-  | "Linux-Muster für Schulnetze",
-  | openML ( bzw. paedML-Linux) oder
-  | linuxmuster.net Version 6?
+  | linuxmuster.net Version 7?
 
 Dann ist das Kapitel :ref:`what-is-new-label` für dich von Interesse.
 
-Mit der Version 7 sich vieles grundlegend geändert. Das zuvor genannte Kapitel :ref:`what-is-linuxmuster.net-label` geht auf diese Neuerungen detailliert ein. Ein Blick lohnt sich daher auf alle Fälle.
+Mit der Version 7.1 gibt es einige Neuerungen. Das zuvor genannte Kapitel :ref:`what-is-linuxmuster.net-label` geht auf diese Neuerungen detailliert ein. Ein Blick lohnt sich daher auf alle Fälle.
 
-Du hast schon eine Installation der Version 7 durchgeführt.
------------------------------------------------------------
+Installation from Scratch
+-------------------------
 
-Du weißt, was du machen musst und benötigst nur die aktuellen Virtuellen Maschinen für weitere Installation!
-Hier kannst du sie direkt herunterladen:
-
-  | OVAs: `<https://download.linuxmuster.net/ova/v7/latest/>`_
-  | 
-  | XVAs: `<https://download.linuxmuster.net/xcp-ng/v7/latest/>`_
+Diese Dokumentation führt dich durch die Vorbereitung der Virtualisierungslösungen Proxmox, KVM und XCP-ng, um linuxmuster.net 7.1 installieren zu können. Hierzu gehört die spezifische Einrichtung des Netzwerks sowie die Vorbereitung der Virtuellen Maschinen.
 
 Weitere Hilfe
 -------------
 
 Neben dieser Dokumentation steht dir unsere Community in unserem Hilfeforum und unser kostenfreier Telefon-Support helfend zur Seite.
 
-    Das Forum findest du unter `<https://ask.linuxmuster.net>`_.
-    
-    Informationen zum Telefon-Support gibt es auf unser Projektseite `<https://www.linuxmuster.net/de/support-de/>`_.
+Das Forum findest du unter `<https://ask.linuxmuster.net>`_.
+
+Informationen zum Telefon-Support gibt es auf unser Projektseite `<https://www.linuxmuster.net/de/support-de/>`_.
 
 
 .. hint::
@@ -75,36 +68,48 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   :hidden:
 
   about/about
-  about/what-is-new-in-7-0
-  about/release-info-and-bugfixes
+  about/what-is-new-in-7-1
+  about/release-info
 
 .. toctree::
   :maxdepth: 2
   :caption: Installation
   :hidden:
 
-  getting-started/overview
-  getting-started/prerequisites
-  getting-started/installoptions/index
-  getting-started/harddisk/index
-  getting-started/network/preliminarysettings/index
-  getting-started/network/networksegmentation/index   
-  getting-started/migration/index
-  getting-started/setup
-  getting-started/add-user-accounts
-  getting-started/devices/index
-  
+  installation/overview
+  installation/prerequisites
+  installation/preparation-of-hypervisor/index
+  installation/install-from-scratch/index
+  installation/network/preliminarysettings/index
+ 
+.. toctree::
+  :maxdepth: 2
+  :caption: Ersteinrichtung
+  :hidden:
+
+  setup/setup
+  setup/add-user-accounts
+  setup/devices/index
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Migration
+  :hidden:
+
+  migration/index
+
 .. toctree::
   :maxdepth: 2
   :caption: Clientverwaltung
   :hidden:
 
   clients/add-computer
+  clients/linbo/index
+  clients/postsync/index
   clients/linux-clients/index
   clients/windows10clients/index
   clients/leoclient2/index
-  clients/linbo/index
-  clients/postsync/index
+  
 
 .. toctree::
   :maxdepth: 2
@@ -135,7 +140,9 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
 
   systemadministration/maintenance/keep-lmn-uptodate
   systemadministration/network/default-access-rules
+  systemadministration/harddisk/index
   systemadministration/network/radius/index
+  systemadministration/network/networksegmentation/index
   systemadministration/printer/index
   systemadministration/schoolconsole/index
   systemadministration/gpo/gpo

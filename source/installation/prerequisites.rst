@@ -9,9 +9,9 @@
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
 		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_
 
-Linuxmuster.net wird als Zwei-Server-Lösung (Firewall und linuxmuster.net-Server) betrieben. Optional können weitere Server wie z. B. ein Docker-Host eingesetzt werden. Daneben gibt es mindestens eine Trennung in zwei logische Netzwerke, meist sind aber drei oder mehr davon gefordert (WLAN, DMZ, Lehrernetz). Zu guter Letzt kann die linuxmuster.net bequem virtualisiert oder ohne Virtualisierung betrieben werden.
+Linuxmuster.net wird als Zwei-Server-Lösung (Firewall und linuxmuster.net-Server) betrieben. Optional können weitere Server wie z. B. ein Docker-Host eingesetzt werden. Daneben gibt es mindestens eine Trennung in zwei logische Netzwerke, meist sind aber drei oder mehr davon gefordert (WLAN, DMZ, Lehrernetz). linuxmuster.net kann virtualisiert oder ohne Virtualisierung betrieben werden.
 
-Daraus leiten sich Voraussetzungen an Hardware, Netzwerkstrukturen und Software ab, die in diesem Kapitel beleuchtet werden.
+Daraus leiten sich Voraussetzungen an Hardware, Netzwerkstrukturen und Software ab, die in diesem Kapitel benannt werden.
 
 Hardware
 ========
@@ -22,8 +22,8 @@ OPNsense®
 OPNsense® ist für x86-32 und x86-64 Bit Architekturen verfügbar und kann auf SD-Karte, SSD oder HDDs installiert werden. Es wird empfohlen folgende Hardware-Anforderungen zu erfüllen, um die Mehrzahl der Einsatzszenarien abzudecken:
 
 ==================== ==================================
-Prozessor            >= 1 GHz Multi-Core CPU (64 Bit)
-RAM                  >= 1 GByte
+Prozessor            >= 1.5 GHz Multi-Core CPU (64 Bit)
+RAM                  >= 4 GiB
 Installationsmethode Video (VGA)
 Festplatte           mind. 20 GByte, z.B. 120 GByte SSD
 NIC                  - mind. 2 (intern + extern)
@@ -35,40 +35,27 @@ Weitere Hinweise zu möglichen Hardwareanforderungen bei unterschiedlichen Einsa
 Als Basis nutzt OPNsense® das Betriebssystem FreeBSD.  Hinweise zu den Anforderungen von FreeBSD bzw. zur Kompatibilität mit eingesetzten Hardware-Komponenten finden sich unter der `HCL - Hardware Compatibility List <https://www.freebsd.org/releases/11.1R/hardware.html>`_
 
 
-Server linuxmuster v7
----------------------
+Server linuxmuster v7.1
+-----------------------
 
-Für linuxmuster.net v7 wird als Basis ein Ubuntu Server 18.04 LTS eingesetzt. Es wird empfohlen folgende Hardware-Mindestanforderungen zu erfüllen:
+Für linuxmuster.net v7.1 wird als Basis ein Ubuntu Server 18.04 LTS eingesetzt. Es wird empfohlen folgende Hardware-Mindestanforderungen zu erfüllen:
 
 ========================= ===========================================
-Prozessor                 >= 1 GHz Multi-Core CPU (64 Bit)
+Prozessor                 >= 2 GHz Multi-Core CPU (64 Bit)
 RAM                       >= 4 GByte
-Festplatte System + Daten - vorkonfiguriert sind 25 GByte + 100 GByte
-                          - mind. 500 GByte für Daten und Backup
-                          - empfohlen >= 1 TByte
+Festplatte System + Daten - mind. 25 GiB + 100 GiB
+                          - mind. 500 GiB für Daten und Backup
+                          - empfohlen >= 1 TiB
 ========================= ===========================================
-
-Docker-Host bzw. OPSI-Host auf Basis eines Ubuntu-Servers
----------------------------------------------------------
-
-Es wird empfohlen, je Server folgende Hardware-Anforderungen zu erfüllen:
-
-========== ======================================
-Prozessor  >= 1 GHz Multi-Core CPU (64 Bit)
-RAM        >= 4 GByte (OPSI), >= 1 GByte (Docker)
-Festplatte 100 GB+, nach Bedarf
-========== ======================================
-
-Für eine virtuelle Installation aller obigen Maschinen müssen die Mindestwerte für die Hardware addiert werden.
 
 Festplattenspeicher
 -------------------
 
-Der Festplattenplatz für den Server hängt stark von der Nutzerzahl und der intensiven Verwendung von LINBO-Abbildern ab. Ebenso muss für Backup weiterer Festplattenplatz z. B. auf einem NAS eingeplant werden.
+Der Festplattenplatz für den Server hängt stark von der Nutzerzahl und der intensiven Verwendung von LINBO-Abbildern ab. Ebenso muss für Backups weiterer Festplattenplatz z.B. auf einem NAS eingeplant werden.
 
 Selbstverständlich können sowohl Daten als auch (bei Virtualisierung) die Server auf externem Speicher abgelegt werden (z. B. NFS-Speicher oder iSCSI-Speicher), um die Virtualisierungsumgebung ggf. bei Bedarf ausbauen zu können und auch ausfallsichere Szenarien leichter umsetzen zu können.
 
-So *kann* bei minimaler Ausstattung (ohne Opsi und Docker) einer mittleren Schule (ca. 500 Benutzer) ein kleiner Server oder ein gut ausgestatteter PC ausreichend sein, selbst wenn alle Server virtualisiert laufen.
+So *kann* bei minimaler Ausstattung einer mittleren Schule (ca. 500 Benutzer) ein kleiner Server oder ein gut ausgestatteter PC ausreichend sein, selbst wenn alle Server virtualisiert laufen.
 
 ========== ======== ========== =========== ======== =========
 \                          Festplatten            RAM        
@@ -96,27 +83,22 @@ In Abhängigkeit vom Einsatzszenario muss die Netzwerkstruktur der linuxmuster.n
 IP-Bereiche
 -----------
 
-Die linuxmuster.net-Lösung kann mit unterschiedlichen IP-Bereichen arbeiten. Standardmäßig wird das interne Netz aus dem privaten IPv4-Bereich 10.0.x.x mit der 16-bit Netzmaske 255.255.0.0 eingerichtet. Die virtuellen Appliances sind mit diesem Netz voreingestellt.
+Die linuxmuster.net-Lösung kann mit unterschiedlichen IP-Bereichen arbeiten. Standardmäßig wird das interne Netz aus dem privaten IPv4-Bereich 10.0.x.x mit der
+16-Bit Netzmaske 255.255.0.0 (/16) eingerichtet.
 
-Jedoch kann man sowohl die bisher in früheren Versionen von linuxmuster.net verwendeten Netze (10.16.0.0/12 oder 10.32.0.0/12 usw.) weiterverwenden. 
-
-Sollten es zwingende Gründe erfordern, sind auch komplett andere private Adressbereiche realisierbar.
+Jedoch kann man sowohl die bisher in früheren Versionen von linuxmuster.net verwendeten Netze (10.16.0.0/12 oder 10.32.0.0/12 usw.) weiterverwenden, oder auch komplett andere private Adressbereiche realisieren.
 
 Jede Zeile der folgenden Tabelle stellt eine Möglichkeit dar.
 
-================== ================ =========== ================================
-Beginn IP-Bereich  Ende IP-Bereich  Server-IP                                   
-================== ================ =========== ================================
-10.0.0.0           10.0.255.255     10.0.0.1    voreingestellt in VMs von lmn-v7
-10.16.0.0          10.31.255.255    10.16.1.1   in linuxmuster.net < 7   üblich  
-10.32.0.0          10.47.255.255    10.32.1.1   in linuxmuster.net < 7   möglich
-...                ...              ...         ...                             
-192.168.0.0        192.168.255.255  192.168.0.1 nicht üblich                    
-================== ================ =========== ================================
+================== ================ ===========
+Beginn IP-Bereich  Ende IP-Bereich  Server-IP
+================== ================ ===========
+10.0.0.0           10.0.255.255     10.0.0.1
+10.16.0.0          10.31.255.255    10.16.1.1
+10.32.0.0          10.47.255.255    10.32.1.1
+================== ================ ===========
 
 Bei der Neuinstallation entscheidest du dich für einen der Bereiche.
-
-Bei einer Migration wird empfohlen den früheren Bereich zu behalten, alleine schon um eine erneute Konfiguration der Netzwerkswitche zu vermeiden.
 
 Standard IP-Adressen
 --------------------
@@ -129,8 +111,6 @@ Server     IP-Bereich  IP-Bereich
 ========== =========== ============
 OPNsense®  10.0.0.254  10.16.1.254
 Server     10.0.0.1    10.16.1.1
-Opsi       10.0.0.2    10.16.1.2
-Dockerhost 10.0.0.3    10.16.1.3
 XOA (*)    10.0.0.4    10.16.1.4
 Admin-PC   10.0.0.10   10.16.0.10
 ========== =========== ============
@@ -200,42 +180,4 @@ Die Voraussetzungen für einen virtualisierten Betrieb besteht natürlich darin,
 
 Wo es uns möglich ist, haben wir eine Anleitung dazu geschrieben, um auf die Besonderheiten der Schulnetzumgebung an geeigneter Stelle hinzuweisen.
 
-Solltest du einen anderen Hypervisor bevorzugen, dann solltest du der Installation "from scratch" folgen.
-
-VMs - Hinweise
---------------
-
-linuxmuster.net bietet vorgefertigte virtuelle Maschinen zum direkten Import für die jeweilige Virtualisierungsumgebung an, um die Installations- und Konfigurationszeiten stark zu verringern.
-
-* Für die Virtualisierer KVM, Proxmox, VirtualBox werden die VMs im OVA-Format bereitgestellt. Dieses Format kann i.d.R. auch von anderen Virtualisierern erfolgreich importiert werden.
-
-* Für XCP-ng als Open-Source-Virtualisierungsumgebung werden die VMs im XVA-Format zum direkten Import angeboten. Die XVA-Dateien sind zusätzlich mit ZIP komprimiert worden.
-
-* Für alle anderen Virtualisierer gibt es zwei Alternativen:
-  
-    *  Eine Installation von Grund auf.
-    *  Die OVA-Dateien zu entpacken und die Einstellungen händisch einzurichten.
-  
-  Wir empfehlen aber das zuerst genannte, welches wir unter "from Scratch" beschreiben!
-
-Zu den jeweiligen Download-Dateien der VMs werden ebenfalls die SHA1-Werte zur Überprüfung der Datenintegrität bereitgestellt.
-
-Installations-Alternativen
-==========================
-
-Für eine Installation direkt auf der Hardware oder einer anderweitigen Installation von Grund auf benötigt man:
-
-- `Ubuntu 18.04 LTS 64-bit PC (AMD64) server install image
-  <http://releases.ubuntu.com/bionic/>`_
-
-- `OPNsense® <https://opnsense.org/download>`_
-
-Das nötige Vorgehen kann neben der Anleitung "from Scratch" auch der Entwicklerdokumentation entnommen werden. Dort ist ebenfalls eine Beschreibung um VirtualBox als Hypervisor einzusetzen zu finden.
-
-VirtualBox wird häufig im Testbetrieb und weniger im Produktivbetrieb verwendet. Die `Entwicklerdokumentation <https://github.com/linuxmuster/linuxmuster-base7/wiki/Die-Appliances>`_ beschreibt diese Konfiguration. Es muss mindestens die Virtualbox-Version 6.0 verwendet werden.
-
-..
-  Checkliste
-  ==========
-
-  Nutzen Sie die :download:`Checkliste <./media/preamble/checklist/checklist.pdf>`, um alle während der Installation gemachten Einstellungen festzuhalten. Es handelt sich um ein PDF-Formular, Sie können es also auch am PC ausfüllen. Halten Sie diese Checkliste bereit, wenn Sie den Telefon-Support in Anspruch nehmen wollen.
+Solltest du einen anderen Hypervisor bevorzugen, kannst du dich an den Hinweisen orientieren und dann mit dem Setup fortfahren.
