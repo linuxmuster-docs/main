@@ -114,8 +114,6 @@ So, jetzt musst du nur noch mit ``systemctl restart nginx.service`` nginx neu st
 Collabora mit docker-compose einrichten und starten
 ===================================================
 
-.. hint:: Die hier vorgestellet Datei ``office.nginx.conf`` ist für die aktuelle Version von Collabora konzipiert. Ältere Images von Collabora arbeiten mit dieser Version nicht.  
-
 Du legst jetzt noch eine Datei docker-compose.yml an.
 
 Alle Schritte sind jetzt im Verzeichnis ``/srv/docker/collabora`` duchzuführen.
