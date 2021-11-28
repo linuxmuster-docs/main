@@ -152,6 +152,13 @@ Möchtest du, dass nur nextcloud.meine-schule.de Zugriff auf den Collabora-Servi
 
 Wenn du im Verzeichnis `/srv/docker/collabora` bist, startest du Collabora mit ``docker-compose up -d``. 
 
+Collabora updaten
+=================
+
+Fall du feststellst, dass die Collabora-Version, die du gerade benutzt, nicht mehr aktuell ist, meldest du dich wieder als root auf dem Docker-Host an und gehst mit ``cd /srv/docker/collabora`` in das Verzeichnis `/srv/docker/collabora`.
+Dann beendest du mit ``docker-compose down`` Collabora. Mit ``docker-compose pull`` holst du dir das aktuelle Image und mit ``docker-compose up -d`` startest du dein aktualisiertes Collabora wieder.
+
+
 Collabora in der Nextcloud nutzen
 =================================
 
