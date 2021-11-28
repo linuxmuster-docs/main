@@ -56,48 +56,52 @@ Erzeuge die Datei ``office.nginx.conf`` im Verzeichnis ``srv/docker/collabora``.
     ssl_certificate /var/lib/dehydrated/certs/office.meine-schule.de/fullchain.pem;
     ssl_certificate_key /var/lib/dehydrated/certs/office.meine-schule.de/privkey.pem;
   
-    # static files
-    location ^~ /loleaflet {
-        proxy_pass https://localhost:9980;
-        proxy_set_header Host $http_host;
-    }
-  
-    # WOPI discovery URL
-    location ^~ /hosting/discovery {
-        proxy_pass https://localhost:9980;
-        proxy_set_header Host $http_host;
-    }
-  
-    # Capabilities
-    location ^~ /hosting/capabilities {
-        proxy_pass https://localhost:9980;
-        proxy_set_header Host $http_host;
-    }
-  
-    # main websocket
-    location ~ ^/lool/(.*)/ws$ {
-        proxy_pass https://localhost:9980;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "Upgrade";
-        proxy_set_header Host $http_host;
-        proxy_read_timeout 36000s;
-    }
-  
-    # download, presentation and image upload
-    location ~ ^/lool {
-        proxy_pass https://localhost:9980;
-        proxy_set_header Host $http_host;
-    }
-  
-    # Admin Console websocket
-    location ^~ /lool/adminws {
-        proxy_pass https://localhost:9980;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "Upgrade";
-        proxy_set_header Host $http_host;
-        proxy_read_timeout 36000s;
-    }
+ # static files
+  location ^~ /browser {
+    proxy_pass https://127.0.0.1:9980;
+    proxy_set_header Host $http_host;
   }
+
+ # WOPI discovery URL
+  location ^~ /hosting/discovery {
+    proxy_pass https://127.0.0.1:9980;
+    proxy_set_header Host $http_host;
+  }
+
+
+ # Capabilities
+  location ^~ /hosting/capabilities {
+    proxy_pass https://127.0.0.1:9980;
+    proxy_set_header Host $http_host;
+  }
+
+
+ # main websocket
+  location ~ ^/cool/(.*)/ws$ {
+    proxy_pass https://127.0.0.1:9980;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "Upgrade";
+    proxy_set_header Host $http_host;
+    proxy_read_timeout 36000s;
+  }
+
+
+ # download, presentation and image upload
+  location ~ ^/(c|l)ool {
+    proxy_pass https://127.0.0.1:9980;
+    proxy_set_header Host $http_host;
+  }
+
+
+ # Admin Console websocket
+  location ^~ /cool/adminws {
+    proxy_pass https://127.0.0.1:9980;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "Upgrade";
+    proxy_set_header Host $http_host;
+    proxy_read_timeout 36000s;
+  } 
+ }
 
 Diese conf-Datei geht davon aus, dass dein Collabora auf localhost:9980 erreichbar sein wird. Den Port 9980 kannst du wieder frei wählen. Der Port muss mit dem Port übereinstimmen, der in der docker-compose.yml später für collabora angegeben wird. 
 
@@ -135,7 +139,7 @@ Die Datei docker-compose.yml
         - domain=[a-z]*+.meine-schule.de
         - username=admin
         - password=Stgy3431
-        - VIRTUAL_HOST=office.staufer-gymnasium.de
+        - VIRTUAL_HOST=office.meine-schule.de
         - VIRTUAL_NETWORK=proxy-ssl
         - VIRTUAL_PORT=9980
         - VIRTUAL_PROTO=https
@@ -163,3 +167,6 @@ Navigiere links zu ``Verwaltung -> Einstellungen -> Collabora Online Development
    Achte darauf, dass du deine https://<deineurl> angibst, damit Collabora auch via https erreichbar ist.
 
 Damit ist die Einrichtung abgeschlossen und du kannst Nextcloud für deine Schule weiter anpassen.
+
+Unter https://office.meine-schule.de/browser/dist/admin/admin.html erreichst du die Monitoring-Oberfläche von Collabora.
+ 
