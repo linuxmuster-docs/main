@@ -6,8 +6,7 @@ Linuxmuster.net aktuell halten
 Update des Ubuntu Servers von linuxmuster.net 
 ---------------------------------------------
 
-Um die linuxmuster.net 7.x zugrunde liegende Ubuntu Version (Ubuntu Server 18.04.x LTS 64bit) zu aktualisieren, beachte 
-bitte nachstehende Hinweise.
+Um die linuxmuster.net 7.x zugrunde liegende Ubuntu Version (Ubuntu Server 18.04.x LTS 64bit) zu aktualisieren, beachte bitte nachstehende Hinweise.
 
 .. attention::
 

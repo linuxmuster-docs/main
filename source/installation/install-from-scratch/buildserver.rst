@@ -106,9 +106,12 @@ Hast du zuvor für die 2. HDD ein LVM eingerichtet, dann sind zur Vorbereitung n
 Weiter mit Punkt 3.
 
 1. Hattest du zuvor ein LBM angelegt, gebe auf der Konsole ``sudo vgscan --mknodes`` ein. Es wird dir dann die sog. ``volume group "vg_server"``, die du während der Installation auf der 2. HDD angelegt hast angezeigt.
+
 2. Führe ``sudo vgchange -ay`` aus, um das Volume zu aktivieren.
+
 3. Gebe ``sudo pvdisplay`` an, um Informationen zu der Logical Volume Group auszugeben. PV = physical volume = hdd, vg = volume group = vg_server.
 Du kannst für Kurzinformationen auch ``sudo pvs`` angeben. Die vg - volume group sollte schon vorhanden sein und wie zuvor angegeben hier ``vg_server`` heißen.
+
 4. Lege nun logical volumes an. Wir gehen von 100G für die HHD aus:
 
 .. code::
@@ -119,6 +122,7 @@ Du kannst für Kurzinformationen auch ``sudo pvs`` angeben. Die vg - volume grou
    lvcreate -L 38G -n /dev/vg_server/default-school vg_server
    
 5. Um zu prüfen, ob die logical volumes angelegt wurden, gebe den Befehl ``sudo lvs`` an.
+
 6. Aktiviere nun diese logical volumes wie folgt:
 
 .. code::
