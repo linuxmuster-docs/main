@@ -27,6 +27,7 @@ Wähle das Tastaturlayout Deutsch und bestätige dies mit ``Erledigt``.
 .. hint:: Das Tastaturlayout wirkt sich während der Installation noch nicht aus! 
 
 Konfiguriere danach Deine Netzwerkkarte.
+
 .. figure:: media/server12.png
 
 In der Voreinstellung ist die Netzwerkkarte auf DHCP eingestellt. Das klappt natürlich nicht, da der DHCP-Service der Firewall deaktiviert wurde. 
@@ -54,18 +55,10 @@ Lass die Proxy-Adresszeile leer.
 
 Die Mirror-Adresse übernimmst du.
 
-.. figure:: media/server17.png
-
-Danach sind die Festplaten einzurichten. Bei einer bare metal Installation hast du zwei physikalische Festplatten installiert (also /dev/sda und /dev/sdb) 
+Jetzt must du die Festplattten einrichten. Bei einer bare metal Installation hast du zwei physikalische Festplatten installiert (also /dev/sda und /dev/sdb) 
 alternativ richtest du zwei Partitionen ein. Die erste Partition mit mind. 25 GiB (/dev/sda1) und die zweite mit der restlichen Größe der Festplatte (/dev/sda2).
 
-.. figure:: media/server18.png
-
-Bei einer VM hast du die beiden Festplatten bereits angelegt und der VM zugewiesen.
-
-Wähl nun zur Einrichtung der Festplatten ``Custom Storage Layout`` aus. Es werden dir dann die verfügbaren Geräte angezeigt.
-Wähle die erste Festplatte bzw. die erste Partition aus. Es wird ein Kontextmenü angezeigt, bei der du eine GPT/Partition erstellen musst. 
-Wähle den gesamten Festplattenplatz und formatiere diesen mit dem ext4-Dateiformat und weise diese dem ``Mount Point /`` zu.
+Wähle nun zur Einrichtung der Festplatten ``Custom Storage Layout`` aus. Es werden dir dann die verfügbaren Geräte angezeigt. Wähle die erste Festplatte bzw. die erste Partition aus. Es wird ein Kontextmenü angezeigt, bei der du eine ``GPT/Partition`` erstellen musst. Wähle den gesamten Festplattenplatz und formatiere diesen mit dem ext4-Dateiformat und weise diese dem ``Mount Point /`` zu.
 
 Gehe auf ``Erstellen``.
 
@@ -102,11 +95,20 @@ LVM - Besonderheiten
 
 Hast du zuvor für die 2. HDD ein LVM eingerichtet, dann sind zur Vorbereitung noch nachstehende Schritte auszuführen:
 
-1. Gebe auf der Konsole ``sudo vgscan --mknodes`` ein. Es wird dir dann die sog. ``volume group "vg_server"``, die du während der Installation auf der 2. HDD angelegt hast angezeigt.
+0. Hast du zuvor noch kein LVM eingerichtet, sondern auf der 2. HDD nur eine GPT-Partitionstabelle erstellt, legst du zunächst ein volume an:
+
+.. code::
+
+   sudo pvcreate /dev/sdb1
+   sudo vgcreate vg_server /dev/sdb1
+   sudo vgchange -ay
+
+Weiter mit Punkt 3.
+
+1. Hattest du zuvor ein LBM angelegt, gebe auf der Konsole ``sudo vgscan --mknodes`` ein. Es wird dir dann die sog. ``volume group "vg_server"``, die du während der Installation auf der 2. HDD angelegt hast angezeigt.
 2. Führe ``sudo vgchange -ay`` aus, um das Volume zu aktivieren.
-3. Gebe ``pvdisplay`` an, um Informationen zu der Logical Volume Group auszugeben. 
-   PV = physical volume = hdd, vg = volume group = vg_server. 
-   Du kannst für Kurzinformationen auch ``pvs`` angeben. Die vg - volume group sollte schon vorhanden sein und wie zuvor angegeben hier ``vg_server`` heißen.
+3. Gebe ``sudo pvdisplay`` an, um Informationen zu der Logical Volume Group auszugeben. PV = physical volume = hdd, vg = volume group = vg_server.
+Du kannst für Kurzinformationen auch ``sudo pvs`` angeben. Die vg - volume group sollte schon vorhanden sein und wie zuvor angegeben hier ``vg_server`` heißen.
 4. Lege nun logical volumes an. Wir gehen von 100G für die HHD aus:
 
 .. code::
@@ -116,41 +118,41 @@ Hast du zuvor für die 2. HDD ein LVM eingerichtet, dann sind zur Vorbereitung n
    lvcreate -L 10G -n /dev/vg_server/global vg_server
    lvcreate -L 38G -n /dev/vg_server/default-school vg_server
    
-5. Um zu prüfen, ob die logical volumes angelegt wurden, gebe den Befehl ``lvs`` an.
+5. Um zu prüfen, ob die logical volumes angelegt wurden, gebe den Befehl ``sudo lvs`` an.
 6. Aktiviere nun diese logical volumes wie folgt:
 
 .. code::
 
-   lvchange -ay /dev/vg_server/var
-   lvchange -ay /dev/vg_server/linbo
-   lvchange -ay /dev/vg_server/global
-   lvchange -ay /dev/vg_server/default-school
+   sudo lvchange -ay /dev/vg_server/var
+   sudo lvchange -ay /dev/vg_server/linbo
+   sudo lvchange -ay /dev/vg_server/global
+   sudo lvchange -ay /dev/vg_server/default-school
    
 7. Formatiere die Verzeichnisse in den neu angelegten logical volume groups wie folgt:
 
 .. code::
 
-   mkfs.ext4 /dev/vg_server/var
-   mkfs.ext4 /dev/vg_server/linbo
-   mkfs.ext4 /dev/vg_server/global
-   mkfs.ext4 /dev/vg_server/default-school
+   sudo mkfs.ext4 /dev/vg_server/var
+   sudo mkfs.ext4 /dev/vg_server/linbo
+   sudo mkfs.ext4 /dev/vg_server/global
+   v mkfs.ext4 /dev/vg_server/default-school
    
 8. Lege nachstehende Verzeichnisse an, die wir danach auf die logical volumes mounten:
    
 .. code:: 
 
-   mkdir /srv/linbo
-   mkdir /srv/samba
-   mkdir /srv/samba/global
-   mkdir /srv/samba/schools
-   mkdir /srv/samba/schools/default-school
+   sudo mkdir /srv/linbo
+   sudo mkdir /srv/samba
+   sudo mkdir /srv/samba/global
+   sudo mkdir /srv/samba/schools
+   sudo mkdir /srv/samba/schools/default-school
  
 9. Kopiere den Inhalt von ``/var`` zunächst in einen neuen Ordner. Das Verzecihnis ``/var`` soll später auf das LVM gemountet werden.
 
 .. code:: 
 
-   mkdir /savevar
-   cp -R /var /savevar
+   sudo mkdir /savevar
+   sudo cp -R /var /savevar
 
 10. Rufe die Datei ``/etc/fstab`` mit dem Editor nano auf und ergänze den bisherigen Eintrag für die 1. HDD um nachstehenden Eintragungen:
 
@@ -159,7 +161,7 @@ Hast du zuvor für die 2. HDD ein LVM eingerichtet, dann sind zur Vorbereitung n
    /dev/vg_server/var              /var ext4 defaults 0 1
    /dev/vg_server/linbo            /srv/linbo ext4 defaults 0 1
    /dev/vg_server/global           /srv/samba/global ext4 user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1 0 1
-   /deb/vg_server/default-school   /srv/samba/schools/default-school ext4 user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1 0 1
+   /dev/vg_server/default-school   /srv/samba/schools/default-school ext4 user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1 0 1
 
 Speichere die Einstellung mit ``Strg+w`` und verlasse den Editor mit ``Strg+x``. 
 
@@ -170,8 +172,8 @@ Speichere die Einstellung mit ``Strg+w`` und verlasse den Editor mit ``Strg+x``.
 
 .. code::
 
-   cd /savevar/var
-   cp -R * /var  
+   sudo cd /savevar/var
+   sudo cp -R * /var  
 
 13. Boote danach den Server neu. Startet dieser ohne Fehlermeldungen durch, kannst du nun das Verzeichnis ``savevar`` wieder löschen mit ``rm -R /savevar``.
 
@@ -203,7 +205,7 @@ cloud-init abschalten
 
 .. code::
 
-      dpkg-reconfigure cloud-init
+      sudo dpkg-reconfigure cloud-init
 
 3. Deinstalliere alle Pakete und Ordner, auch wenn o.g. Befehl nicht ausgeführt werden konnte !
 
@@ -219,19 +221,24 @@ cloud-init abschalten
 
       sudo reboot
 
+Server auf lmn7.1 vorbereiten
+=============================
+
 Schlüssel importieren
 ---------------------
 
-Es müssen in den Paketquellen die linuxmuster.net Sources eingetragen und der Schlüssel des Paketserver importiert werden.
+Es müssen in den Paketquellen die ``linuxmuster.net sources`` eingetragen und der Schlüssel des Paketserver importiert werden.
 
 * Zunächst wirst du wieder root mit ``sudo -i``.
-* Dann lädst du den key mit ``wget http://pkg.linuxmuster.net/archive.linuxmuster.net.key`` herunter.
-* Jetzt fügst du den Schlüssel mit ``apt-key add archive.linuxmuster.net.key`` hinzu.
+* Dann lädst du den key für das repository für lmn71 mit ``wget -qO - "https://deb.linuxmuster.net/pub.gpg" | sudo apt-key add -`` herunter.
+* Jetzt fügst du das linuxmuster 7.1 repository hinzu und aktualisierst: 
 
-Server auf lmn7 vorbereiten
-===========================
+.. code::
 
-Bei einer Installation ``from scratch`` musst du nun mit dem Skript ``linuxmuster-prepare`` den soeben installierten und vorbereiteten Ubuntu-Server sowie ggf. alle gewünschten VMs (OPSI, Docker) vor dem ersten Setup für linuxmuster v7 vorbereiten.
+   sudo sh -c 'echo "deb https://deb.linuxmuster.net/ lmn71 main" > /etc/apt/sources.list.d/lmn71.list'
+   sudo apt update
+
+Bei einer Installation ``from scratch`` musst du nun mit dem Skript ``linuxmuster-prepare`` den soeben installierten und vorbereiteten Ubuntu-Server vor dem ersten Setup für linuxmuster v7.1 vorbereiten.
 
 .. hint::
    Die Anpassung des Netzbereichs / des Profils ist vor Aufruf des eigentlichen Setups auszuführen.
@@ -239,22 +246,22 @@ Bei einer Installation ``from scratch`` musst du nun mit dem Skript ``linuxmuste
 Das Skript lmn7-appliance
 -------------------------
 
-Das Skript lmn7-appliance installiert für dich das Paket linuxmuster-base7 mit all seinen Abhängigkeiten und es richtet die zweite Festplatte für den Serverbetrieb ein.
+Das Skript lmn71-appliance installiert für dich das Paket linuxmuster-base7 mit all seinen Abhängigkeiten und es richtet die zweite Festplatte für den Serverbetrieb ein.
 
-* Lade dazu das Skript mit ``wget https://archive.linuxmuster.net/lmn7/lmn7-appliance`` herunter.
-* Mach es mit ``chmod +x lmn7-appliance`` ausführbar und
-* führe ``./lmn7-appliance -p server -u -l /dev/sdb`` aus. Hierbei wird auf dem angegebenen Device (hier also 2. Festplatte) ein LVM eingerichtet.
+* Lade dazu das Skript mit ``wget https://raw.githubusercontent.com/linuxmuster/linuxmuster-prepare/master/lmn71-appliance`` herunter.
+* Mach es mit ``chmod +x lmn71-appliance`` ausführbar und
+* führe ``./lmn71-appliance -p server -u -l /dev/sdb`` aus. Hierbei wird auf dem angegebenen Device (hier also 2. Festplatte) ein LVM eingerichtet.
 
 .. hint:: 
 
    Hast du wie zuvor beschreiben bereits ein LVM auf dem Server eingerichtet und dieses bereits gemountet, dann gibst du zur Installation    
-   folgendes an:  ``./lmn7-appliance -p server -u``
+   folgendes an:  ``./lmn71-appliance -p server -u``
+
+.. attention::
+
+   package lmn71-appliance ist im repro noch nicht verfügbar. Auch fehlt noch sophomorix-samba ...
+
 
 Für weitere Hinweise zum linuxmuster-prepare Skript siehe: https://github.com/linuxmuster/linuxmuster-prepare
 
-Im Anschluss kann das Setup ausgeführt werden, das dann den Netzbereich ausliest und diesen für die weitere 
-Einrichtung verwendet. 
-
-======================================== ===================
-Weiter geht es mit der Erstkonfiguration  |follow_me2setup|
-======================================== ===================
+Im Anschluss kann das Setup ausgeführt werden, das dann den Netzbereich ausliest und diesen für die weitere Einrichtung verwendet.
