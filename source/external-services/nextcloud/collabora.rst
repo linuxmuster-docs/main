@@ -114,6 +114,8 @@ So, jetzt musst du nur noch mit ``systemctl restart nginx.service`` nginx neu st
 Collabora mit docker-compose einrichten und starten
 ===================================================
 
+.. hint:: Die hier vorgestellet Datei ``office.nginx.conf`` ist für die aktuelle Version von Collabora konzipiert. Ältere Images von Collabora arbeiten mit dieser Version nicht.  
+
 Du legst jetzt noch eine Datei docker-compose.yml an.
 
 Alle Schritte sind jetzt im Verzeichnis ``/srv/docker/collabora`` duchzuführen.
@@ -151,6 +153,13 @@ Der Eintrag ``- domain=[a-z]*+.meine-schule.de`` bewirkt, dass alle Rechner in d
 Möchtest du, dass nur nextcloud.meine-schule.de Zugriff auf den Collabora-Service hat, muss der Eintrag ``- domain=nextcloud.meine-schule.de`` lauten.
 
 Wenn du im Verzeichnis `/srv/docker/collabora` bist, startest du Collabora mit ``docker-compose up -d``. 
+
+Collabora updaten
+=================
+
+Fall du feststellst, dass die Collabora-Version, die du gerade benutzt, nicht mehr aktuell ist, meldest du dich wieder als root auf dem Docker-Host an und gehst mit ``cd /srv/docker/collabora`` in das Verzeichnis `/srv/docker/collabora`.
+Dann beendest du mit ``docker-compose down`` Collabora. Mit ``docker-compose pull`` holst du dir das aktuelle Image und mit ``docker-compose up -d`` startest du dein aktualisiertes Collabora wieder.
+
 
 Collabora in der Nextcloud nutzen
 =================================
