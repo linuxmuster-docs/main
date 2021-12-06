@@ -58,7 +58,18 @@ Die Mirror-Adresse übernimmst du.
 Jetzt must du die Festplattten einrichten. Bei einer bare metal Installation hast du zwei physikalische Festplatten installiert (also /dev/sda und /dev/sdb) 
 alternativ richtest du zwei Partitionen ein. Die erste Partition mit mind. 25 GiB (/dev/sda1) und die zweite mit der restlichen Größe der Festplatte (/dev/sda2).
 
-Wähle nun zur Einrichtung der Festplatten ``Custom Storage Layout`` aus. Es werden dir dann die verfügbaren Geräte angezeigt. Wähle die erste Festplatte bzw. die erste Partition aus. Es wird ein Kontextmenü angezeigt, bei der du eine ``GPT/Partition`` erstellen musst. Wähle den gesamten Festplattenplatz und formatiere diesen mit dem ext4-Dateiformat und weise diese dem ``Mount Point /`` zu.
+Wähle nun zur Einrichtung der Festplatten ``Custom Storage Layout`` aus. Es werden dir dann die verfügbaren Geräte angezeigt. 
+
+.. figure:: media/lmn71-additional/custom-storage-layout-create-partition-table.png
+
+
+Wähle die erste Festplatte bzw. die erste Partition aus. Es wird ein Kontextmenü angezeigt, bei der du eine ``GPT/Partition`` erstellen musst. 
+
+.. figure:: media/lmn71-additional/custom-storage-layout-create-partition-table2.png
+
+Wähle den gesamten Festplattenplatz und formatiere diesen mit dem ext4-Dateiformat und weise diese dem ``Mount Point /`` zu.
+
+.. figure:: media/lmn71-additional/custom-storage-layout-create-partition-table3.png
 
 Gehe auf ``Erstellen``.
 
@@ -66,11 +77,31 @@ Danach gelangst Du zu nachstehendem Bildschirm.
 
 .. figure:: media/server19.png
 
-Wähle danach die zweite Festplatte / Partition aus. Du kannst auf der gesamten 2. HDD ein LVM einrichten und gibst hier einen eigenen Namen an (z.B. vg_server). 
-Ohne LVM sind die Mount Points ``/var`` und ``/srv`` auf die 2. HDD zu legen. Die Zuordnung der Mount Points zum LVM wird später detailliert beschrieben.
+Wähle danach die zweite Festplatte / Partition aus. Lege eine GPT-Paritionstabelle an und lasse die HDD uneingebunden.
 
-Als Installationsziel für Ubuntu 18.04 LTS Server ist die 1. HDD auszuwählen.
-Bestätige die Rückfrage zur "destruktiven Aktion (Partitionierung und fotrmatierung der Festplatten)" mit ``Fortfahren``.
+.. figure:: media/lmn71-additional/custom-storage-layout-create-partition-table4.png
+
+Du kannst auf der gesamten 2. HDD ein LVM einrichten.
+
+.. figure:: media/lmn71-additional/custom-storage-layout-create-partition-table-lvm-hdb-5.png
+
+Hier gibst du einen eigenen Namen für die LVM Volume Group an (z.B. vg_server oder vg0).
+
+.. figure:: media/lmn71-additional/custom-storage-layout-create-partition-table-lvm-6.png
+
+Zum Abschluss werden dir die Partitionsierungseinstellungen angezeigt. 
+
+.. figure:: media/lmn71-additional/custom-storage-layout-create-partition-table-overview.png
+
+Stimmen diese mit den gewünschten überein, so wähle ``Weiter`` aus.
+
+Danach erhälst du die Rückfrage, ob die Installation fortgesetzt werden soll und die Daten auf der Festplatte gelöscht werden sollen.
+
+Bestätige dies.
+
+.. hint::
+
+   Ohne LVM sind die Mount Points ``/var`` und ``/srv`` auf die 2. HDD zu legen. Die Zuordnung der Mount Points zum LVM wird später detailliert beschrieben.
 
 .. figure:: media/server20.png
 
@@ -95,7 +126,7 @@ LVM - Besonderheiten
 
 Hast du zuvor für die 2. HDD ein LVM eingerichtet, dann sind zur Vorbereitung noch nachstehende Schritte auszuführen:
 
-0. Hast du zuvor noch kein LVM eingerichtet, sondern auf der 2. HDD nur eine GPT-Partitionstabelle erstellt, legst du zunächst ein volume an:
+0. Hast du zuvor noch kein LVM eingerichtet, sondern auf der 2. HDD nur eine GPT-Partitionstabelle erstellt, legst du zunächst ein Volume an:
 
 .. code::
 
@@ -105,7 +136,7 @@ Hast du zuvor für die 2. HDD ein LVM eingerichtet, dann sind zur Vorbereitung n
 
 Weiter mit Punkt 3.
 
-1. Hattest du zuvor ein LBM angelegt, gebe auf der Konsole ``sudo vgscan --mknodes`` ein. Es wird dir dann die sog. ``volume group "vg_server"``, die du während der Installation auf der 2. HDD angelegt hast angezeigt.
+1. Hattest du zuvor ein LVM angelegt, gebe auf der Konsole ``sudo vgscan --mknodes`` ein. Es wird dir dann die sog. ``volume group "vg_server"`` angezeigt, die du während der Installation auf der 2. HDD angelegt hast.
 
 2. Führe ``sudo vgchange -ay`` aus, um das Volume zu aktivieren.
 

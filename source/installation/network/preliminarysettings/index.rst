@@ -15,9 +15,7 @@ auf dem Server auszuführen.
 Dies ist ebenfalls der Fall, wenn du eine ``from scratch`` Installation durchgeführt hast.
 
 .. hint::
-   Die Anpassung des Netzbereichs ist vor Aufruf des eigentlichen Setups auszuführen. Die ausgelieferten VMs
-   sind bereits auf den voreingestellten Netzbereich konfiguriert, so dass jede dieser VMs mithilfe des Skript
-   ``linuxmuster-prepare`` an den gewünschten Netzbereich vorab anzupassen ist.
+   Die Anpassung des Netzbereichs ist vor Aufruf des eigentlichen Setups auszuführen. Dies erfolgt mit dem Paket ``linuxmuster-prepare``.
 
 Vorgehen
 ========
@@ -32,36 +30,25 @@ Gleiches gilt für die Vorbereitung der ``from scratch`` installierten Server.
 Das Skript lmn7-appliance
 -------------------------
 
-Das Skript lmn7-appliance installiert für dich das Paket linuxmuster-base7 mit all seinen Abhängigkeiten und es 
+Das Skript lmn7-appliance installiert für dich das Paket linuxmuster-base71 mit all seinen Abhängigkeiten und es 
 richtet die zweite Festplatte für den Serverbetrieb ein.
 
-* Lade dazu das Skript mit ``wget https://archive.linuxmuster.net/lmn7/lmn7-appliance`` herunter.
-* Mach es mit ``chmod +x lmn7-appliance`` ausführbar und
-* führe ``./lmn7-appliance -p server -u -l /dev/sdb`` aus. Hierbei wird auf dem angegebenen Device ein LVM eingerichtet.
-* für weitere Hinweise zum linuxmuster-prepare Skript siehe: https://github.com/linuxmuster/linuxmuster-prepare
+* Vorbereitung: Lade das Skript hier herunter: ``wget https://raw.githubusercontent.com/linuxmuster/linuxmuster-prepare/master/lmn71-appliance``.
+* Mach das Sktipt nun ausführbar: ``chmod +x lmn71-appliance`` ausführbar
+* Starte das Skript als Benutzer ``root`` mit: ``./lmn71-appliance -p server -u -l /dev/sdb``. Hierbei wird auf dem angegebenen Device/ der HDD ein LVM eingerichtet.
+* Für weitere Hinweise zum linuxmuster-prepare Skript siehe: https://github.com/linuxmuster/linuxmuster-prepare
 
 .. hint:: 
 
    Falls Du dich für das Netz der linuxmuster.net V6.2 entschieden hast, führst du statt 
-   ``./lmn7-appliance -p server -u -l /dev/sdb`` Folgendes aus: ``./lmn7-appliance -p     server -u -l /dev/sdb -n 10.16.1.1/12 -f 10.16.1.254``
+   ``./lmn71-appliance -p server -u -l /dev/sdb`` Folgendes aus: ``./lmn71-appliance -p server -u -l /dev/sdb -n 10.16.1.1/12 -f 10.16.1.254``
 
-Im Anschluss kann das Setup ausgeführt werden, das dann den Netzbereich ausliest und für die weitere 
-Einrichtung verwendet. 
+Im Anschluss kann das Setup ausgeführt werden, das dann den Netzbereich ausliest und für die weitere Einrichtung verwendet.
 
-Download/Import der VMs
------------------------
-
-Folgendes Vorgehen ist zu wählen:
-
-* Templates herunterladen
-* Maschinen importieren und einschalten
-* mithilfe des linuxmuster-prepare Skripts, das bereits in den VMs enthalten ist, den gewünschten Netzbereich anpassen. 
-
-
-linuxmuster-prepare
+Hinweise zum Skript
 ===================
 
-Das Skript lmn7-appliance bereitet eine Applicance (VM) für das Rollout vor:
+Das Skript ``lmn71-appliance`` bereitet eine Applicance (VM) für die linuxmuster v7.1 vor:
 
 * Es bringt das Betriebssystem auf den aktuellen Stand,
 * installiert das Paket linuxmuster-prepare und
@@ -82,11 +69,9 @@ Optionen
 | -n,      | --ipnet= <ip/bitmask>                 | IP-Adresse und Bitmaske des Hosts (Standardwert  |
 |          |                                       | ist 10.0.0.[1,2,3]/16, abhängig vom Profil).     |
 +----------+---------------------------------------+--------------------------------------------------+
-| -p,      | --profile=<server,opsi,docker,ubuntu> | appliance-Profil, wurde -n nicht angegeben, wird |
+| -p,      | --profile=<server>                    | appliance-Profil, wurde -n nicht angegeben, wird |
 |          |                                       | die IP-Adresse automatisch gesetzt:              |
-|          |                                       | server 10.0.0.1, opsi 10.0.0.2, docker 10.0.0.3. |
-|          |                                       | Bei "ubuntu" muss mit -n eine                    |
-|          |                                       | Adresse/Bitmaske angegeben werden.               |
+|          |                                       | server 10.0.0.1                                  |
 +----------+---------------------------------------+--------------------------------------------------+
 | -l,      | --pvdevice=<device>                   | Pfad zum LVM-Device (nur bei Serverprofil).      |
 +----------+---------------------------------------+--------------------------------------------------+
@@ -111,37 +96,24 @@ und wird der Parameter ``-l, --pvdevice=<device>`` angegeben, wird diese wie fol
 Für das LV default-school wird immer der verbleibende Rest genommen. 
 Festplattengröße muss daher mindestens 70G betragen.):
 
-+---------------+----------------------------+---------------------------+-------+ 
++---------------+----------------------------+---------------------------+-------+
 | LV Name       | LV Pfad                    | Mountpoint                | Größe |
 +===============+============================+===========================+=======+
 |var            | /dev/vg_srv/var            | /var                      |  10G  |
 +---------------+----------------------------+---------------------------+-------+
 |linbo          | /dev/vg_srv/linbo          | /srv/linbo                |  40G  |
 +---------------+----------------------------+---------------------------+-------+
-|global 	| /dev/vg_srv/global         | /srv/samba/global         |  10G  |
+|global         | /dev/vg_srv/global         | /srv/samba/global         |  10G  |
 +---------------+----------------------------+---------------------------+-------+
 |default-school | /dev/vg_srv/default-school | /srv/samba/default-school |  40G  |
 +---------------+----------------------------+---------------------------+-------+
-
-**opsi:** 
-
-Das Paket linuxmuster-opsi mit allen seinen Abhängigkeiten wird installiert.
-
-**docker:**
-
-Die Pakete docker und docker-compose werden mit allen ihren Abhängigkeiten installiert.
-
-**ubuntu:**
-
-Es werden keine zusätzliche Pakete installiert, Hostname mit Parameter ``-t, --hostname=<hostname>`` und 
-``IP/Netzmaske mit -n, --ipnet=<ip/bitmask>`` müssen zwingend angegeben werden.
 
 Beispiele
 ---------
 
 .. code::
 
-   lmn7-appliance -u -p server -l /dev/sdb
+   lmn71-appliance -u -p server -l /dev/sdb
 
 Richtet Serverprofil mit LVM auf 2. Festplatte mit Standardwerten ein:
  - Hostname server,
@@ -149,35 +121,6 @@ Richtet Serverprofil mit LVM auf 2. Festplatte mit Standardwerten ein:
  - Domänenname linuxmuster.lan
  - Gateway/DNS 10.0.0.254
 
-.. code::  
-
-   lmn7-appliance -p opsi -u
-        
-Richtet Opsiprofil mit Defaultwerten ein:
- - Hostname: opsi
- - IP/Bitmask: 10.0.0.2/16
- - Domänenname linuxmuster.lan
- - Gateway/DNS 10.0.0.254
-
-.. code::  
-
-   lmn7-appliance -p docker -n 10.16.1.3/12 -d meineschule.de -u
-  
-Richtet Dockerhostprofil wie folgt ein:
-  - Hostname docker,
-  - IP/Bitmask 10.16.1.3/12,
-  - Domänenname meineschule.de,
-  - Gateway/DNS 10.16.1.254
- 
-.. code::  
-
-   lmn7-appliance -p ubuntu -t testhost -n 10.16.0.10/12
-
-Richtet die Appliance wie folgt ein:
- - Hostname testhost,
- - IP/Bitmask 10.16.0.10/12,
- - Domänenname linuxmuster.lan,
- - Gateway/DNS 10.16.1.254
 
 Server-Appliance vorbereiten
 ----------------------------
@@ -193,22 +136,21 @@ Appliance mit 2 Festplatten einrichten, zum Beispiel:
   
 .. code::
 
-   # wget https://archive.linuxmuster.net/lmn7/lmn7-appliance
+   # wget https://raw.githubusercontent.com/linuxmuster/linuxmuster-prepare/master/lmn71-appliance
     
-   * Skript ausführbar machen und starten:
+   * Skript ausführbar machen
+
+.. code::
+
+   # chmod +x lmn71-appliance
+
+   *  und starten:
 
 .. code::    
 
-   ./lmn7-appliance.py -p server -u -l /dev/sdb
+   ./lmn71-appliance -p server -u -l /dev/sdb
     
    * Appliance herunterfahren und Snapshot erstellen.
-
-Weitere Appliances vorbereiten
-------------------------------
-
-Opsi-, Docker- und weitere Appliances werden mit jeweils nur einer Festplatte erstellt. 
-Die Vorgehensweise ist ansonsten analog zu derjenigen des Servers. 
-Beispiele für Skriptaufrufe siehe oben.
 
 
 Anwendung auf die Appliances
@@ -319,8 +261,6 @@ Minimaler Aufruf, wenn die Standard-Netzwerkeinstellungen (10.0.0.0/12) verwende
 
 Gesetzt wird damit:
  * Server: IP 10.0.0.1, Hostname server
- * OPSI: IP 10.0.0.2, Hostname opsi
- * Docker: IP 10.0.0.3, Hostname docker
  * Firewall-IP: 10.0.0.254, Hostname firewall
  * Domänename: linuxmuster.lan
   
@@ -332,8 +272,6 @@ Minimaler Aufruf, wenn die Netzwerkeinstellungen wie beim ``Babo-Release (10.16.
   
 Gesetzt wird damit:
  * Server: IP 10.16.1.1, Hostname server
- * OPSI: IP 10.16.1.2, Hostname opsi
- * Docker: IP 10.16.1.3, Hostname docker
  * Firewall-IP: 10.16.1.254, Hostname firewall
  * Domänename: linuxmuster.lan
 
@@ -341,7 +279,7 @@ Einen Überblick über alle Optionen erhält man mit dem Parameter -h.
 
 .. hint::
 
-   Das Default-Rootpasswort Muster! darf nicht geändert werden, da die Setuproutine dieses voraussetzt.
+   Das Default-Rootpasswort ``Muster!`` darf nicht geändert werden, da die Setuproutine dieses voraussetzt.
    Nach der Vorbereitung mit linuxmuster-prepare muss die Appliance neu gestartet werden.
    
 Im letzten Vorbereitungsschritt muss die Appliance noch aktualisiert werden:
@@ -350,12 +288,6 @@ Im letzten Vorbereitungsschritt muss die Appliance noch aktualisiert werden:
 
     # apt update && apt -y dist-upgrade
 
-O.g. Anpassungsschritte sind für die Docker- und OPSI-Appliance in gleicher Weise durchzuführen.
-
 Danach kann das Setup mit der WebUI oder auf der Konsole auf dem Server aufgerufen werden.
-
-======================================== ===================
-Weiter geht es mit der Erstkonfiguration  |follow_me2setup|
-======================================== ===================
 
 
