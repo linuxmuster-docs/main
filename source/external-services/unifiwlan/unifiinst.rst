@@ -12,11 +12,11 @@ Hardwareanforderungen
 Die Grundinstallation
 ---------------------
 
-Für die Installation brauchen wir einen ``Dockerhost ohne nginx und dehydrated (siehe :ref:`Installation eines Dockerhosts <dockerhost-install-label>`)``.
+Für die Installation brauchen wir einen ``Dockerhost ohne nginx und dehydrated`` (siehe :ref:`Installation eines Dockerhosts <dockerhost-install-label>`).
 
 .. hint::
 
-   Es kann hierzu jeder bereits bestehende Dokcer-Host verwendet werden, sofern die u.g. Ports nicht bereits belegt sind.
+   Es kann hierzu jeder bereits bestehende Docker-Host verwendet werden, sofern die u.g. Ports nicht bereits belegt sind.
 
 Unifi-Controller mit docker-compose einrichten und starten
 ==========================================================
