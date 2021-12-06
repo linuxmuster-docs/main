@@ -43,7 +43,7 @@ Bestätige schließlich Deine Einstellungen.
 Einstellungen zur Aufnahme der APs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Damit der Unificontroller die angeschlossenen Access Points (APs) aufnehnmen kann und
+Damit der Unificontroller die angeschlossenen Access Points (APs) aufnehmen kann und
 mit diesen kommuniziert, sind noch folgende Einstellungen zu treffen:
 
 1. Wähle ``Settings → System Settings → Controller/Application Configuration``
