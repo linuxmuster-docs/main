@@ -187,14 +187,7 @@ Inhalt übergeben werden.
    [setup]
    servername = server
    domainname = linuxmuster.lan
-   opsiip = 10.0.0.2
-   dockerip = 10.0.0.3
-   mailip = 10.0.0.3
    dhcprange = 10.0.0.100 10.0.0.200
-   smtprelay = mbox1.belwue.de
-   smtpuser = smtpadmin
-   smtppw = Muster!pw
-   adminpw = Muster!pw
    schoolname = Beispiel-Gesamtschule
    location = Musterstadt
    country = de
@@ -234,7 +227,3 @@ Passwort an.
 
 Herzlichen Glückwunsch. Die Erstkonfiguration ist nun abgeschlossen. Nun musst du dich entscheiden:
 
-============================================================== =========================
-Weiter mit der Benutzer-Aufnahme                               |follow_me2user-creation|
-Weiter mit der Migration von einer linuxmuster.net Version 6.2 |follow_me2migration|
-============================================================== =========================

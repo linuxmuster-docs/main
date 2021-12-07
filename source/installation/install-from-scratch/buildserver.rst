@@ -18,7 +18,7 @@ Wähle deine bevorzugte Sprache.
 Beantworte danach die Frage, ob auf einen neuen Installer (für 20.04) aktualisiert werden soll, mit
 ``Ohne Aktualisierung fortfahren``.
 
-Danach wähle Dein Tastaturlayout.
+Danach wähle dein Tastaturlayout.
 
 .. figure:: media/server11.png
 
@@ -26,7 +26,7 @@ Wähle das Tastaturlayout Deutsch und bestätige dies mit ``Erledigt``.
 
 .. hint:: Das Tastaturlayout wirkt sich während der Installation noch nicht aus! 
 
-Konfiguriere danach Deine Netzwerkkarte.
+Konfiguriere danach deine Netzwerkkarte.
 
 .. figure:: media/server12.png
 
@@ -259,10 +259,52 @@ cloud-init abschalten
 Server auf lmn7.1 vorbereiten
 =============================
 
-Schlüssel importieren
----------------------
+Bei einer Installation ``from scratch`` musst du vorab mit dem Skript ``lmn71-appliance`` den soeben installierten und vorbereiteten Ubuntu-Server vor dem ersten Setup für linuxmuster v7.1 vorbereiten.
 
-Es müssen in den Paketquellen die ``linuxmuster.net sources`` eingetragen und der Schlüssel des Paketserver importiert werden.
+.. hint::
+   
+   Die Anpassung des Netzbereichs / des Profils ist vor Aufruf des eigentlichen Setups auszuführen.
+
+Das Skript lmn71-appliance
+--------------------------
+
+Das Skript lmn71-appliance ...
+
+- bringt das Betriebssystem auf den aktuellen Stand,
+- installiert das Paket linuxmuster-prepare und
+- startet dann das Vorbereitungsskript linuxmuster-prepare,
+- das die für das jeweilige Appliance-Profil benötigten Pakete installiert,
+- das Netzwerk konfiguriert,
+- das root-Passwort auf Muster! setzt und
+- im Falle des Serverprofils LVM einrichtet.
+
+Melde dich am neu installierten Ubuntu 18.04 Server an und werde root mit ``sudo -i``.
+Führe danach folgende Befehle in der Eingabekonsole aus:
+
+.. code::
+   
+   # wget https://raw.githubusercontent.com/linuxmuster/linuxmuster-prepare/master/lmn71-appliance
+   # chmod +x lmn71-appliance
+   # ./lmn71-appliance -p server -u
+
+.. hint:: 
+
+   Hast du nicht wie zuvor beschreiben bereits ein LVM auf dem Server eingerichtet und dieses bereits gemountet, dann gibst du zur Installation    
+   folgendes an: ``./lmn71-appliance -p server -u -l /dev/sdb`` aus. Hierbei wird auf dem angegebenen Device (hier also 2. Festplatte) ein LVM eingerichtet.
+
+
+Für weitere Hinweise zum linuxmuster-prepare Skript siehe: https://github.com/linuxmuster/linuxmuster-prepare
+
+Fahre den Server herunter und erstelle einen Snapshot in der Virtualisierungsumgebung. Starte danach den server wieder und führe dann das Setup für die lmn v7.1 aus.
+
+
+Paketquellen lmn71
+------------------
+
+Die Paketquellen, die für die lmn71 eingebunden werden müssen, werden von o.g. Skript lmn71-applicance bereits korrekt eingetragen.
+Es wurden somit in den Paketquellen die ``linuxmuster.net sources`` eingetragen und der Schlüssel des Paketserver importiert.
+
+Solltest du diesen Vorgang manuell müssen, gehst du wie folgt vor:
 
 * Zunächst wirst du wieder root mit ``sudo -i``.
 * Dann lädst du den key für das repository für lmn71 mit ``wget -qO - "https://deb.linuxmuster.net/pub.gpg" | sudo apt-key add -`` herunter.
@@ -271,32 +313,6 @@ Es müssen in den Paketquellen die ``linuxmuster.net sources`` eingetragen und d
 .. code::
 
    sudo sh -c 'echo "deb https://deb.linuxmuster.net/ lmn71 main" > /etc/apt/sources.list.d/lmn71.list'
-   sudo apt update
+   sudo apt-get update
+   sudo apt-get dist-upgrade
 
-Bei einer Installation ``from scratch`` musst du nun mit dem Skript ``linuxmuster-prepare`` den soeben installierten und vorbereiteten Ubuntu-Server vor dem ersten Setup für linuxmuster v7.1 vorbereiten.
-
-.. hint::
-   Die Anpassung des Netzbereichs / des Profils ist vor Aufruf des eigentlichen Setups auszuführen.
-
-Das Skript lmn7-appliance
--------------------------
-
-Das Skript lmn71-appliance installiert für dich das Paket linuxmuster-base7 mit all seinen Abhängigkeiten und es richtet die zweite Festplatte für den Serverbetrieb ein.
-
-* Lade dazu das Skript mit ``wget https://raw.githubusercontent.com/linuxmuster/linuxmuster-prepare/master/lmn71-appliance`` herunter.
-* Mach es mit ``chmod +x lmn71-appliance`` ausführbar und
-* führe ``./lmn71-appliance -p server -u -l /dev/sdb`` aus. Hierbei wird auf dem angegebenen Device (hier also 2. Festplatte) ein LVM eingerichtet.
-
-.. hint:: 
-
-   Hast du wie zuvor beschreiben bereits ein LVM auf dem Server eingerichtet und dieses bereits gemountet, dann gibst du zur Installation    
-   folgendes an:  ``./lmn71-appliance -p server -u``
-
-.. attention::
-
-   package lmn71-appliance ist im repro noch nicht verfügbar. Auch fehlt noch sophomorix-samba ...
-
-
-Für weitere Hinweise zum linuxmuster-prepare Skript siehe: https://github.com/linuxmuster/linuxmuster-prepare
-
-Im Anschluss kann das Setup ausgeführt werden, das dann den Netzbereich ausliest und diesen für die weitere Einrichtung verwendet.
