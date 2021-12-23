@@ -62,7 +62,6 @@ Wähle nun zur Einrichtung der Festplatten ``Custom Storage Layout`` aus. Es wer
 
 .. figure:: media/lmn71-additional/custom-storage-layout-create-partition-table.png
 
-
 Wähle die erste Festplatte bzw. die erste Partition aus. Es wird ein Kontextmenü angezeigt, bei der du eine ``GPT/Partition`` erstellen musst. 
 
 .. figure:: media/lmn71-additional/custom-storage-layout-create-partition-table2.png
@@ -77,13 +76,11 @@ Danach gelangst Du zu nachstehendem Bildschirm.
 
 .. figure:: media/server19.png
 
-Wähle danach die zweite Festplatte / Partition aus. Lege eine GPT-Paritionstabelle an und lasse die HDD uneingebunden.
-
-.. figure:: media/lmn71-additional/custom-storage-layout-create-partition-table4.png
-
-Du kannst auf der gesamten 2. HDD ein LVM einrichten.
+Richte nun auf der 2. HDD ein LVM ein.
 
 .. figure:: media/lmn71-additional/custom-storage-layout-create-partition-table-lvm-hdb-5.png
+
+Wähle den Eintrag ``datenträgergruppe (LVM) anlegen`` aus.  
 
 Hier gibst du einen eigenen Namen für die LVM Volume Group an (z.B. vg_server oder vg0).
 
@@ -143,14 +140,14 @@ Weiter mit Punkt 3.
 3. Gebe ``sudo pvdisplay`` an, um Informationen zu der Logical Volume Group auszugeben. PV = physical volume = hdd, vg = volume group = vg_server.
 Du kannst für Kurzinformationen auch ``sudo pvs`` angeben. Die vg - volume group sollte schon vorhanden sein und wie zuvor angegeben hier ``vg_server`` heißen.
 
-4. Lege nun logical volumes an. Wir gehen von 100G für die HHD aus:
+4. Lege nun logical volumes an. Wir gehen von 100G für die HDD aus:
 
 .. code::
 
-   lvcreate -L 10G -n /dev/vg_server/var vg_server
-   lvcreate -L 40G -n /dev/vg_server/linbo vg_server
-   lvcreate -L 10G -n /dev/vg_server/global vg_server
-   lvcreate -L 38G -n /dev/vg_server/default-school vg_server
+   sudo lvcreate -L 10G -n /dev/vg_server/var vg_server
+   sudo lvcreate -L 40G -n /dev/vg_server/linbo vg_server
+   sudo lvcreate -L 10G -n /dev/vg_server/global vg_server
+   sudo lvcreate -L 38G -n /dev/vg_server/default-school vg_server
    
 5. Um zu prüfen, ob die logical volumes angelegt wurden, gebe den Befehl ``sudo lvs`` an.
 
@@ -207,10 +204,10 @@ Speichere die Einstellung mit ``Strg+w`` und verlasse den Editor mit ``Strg+x``.
 
 .. code::
 
-   sudo cd /savevar/var
+   cd /savevar/var
    sudo cp -R * /var  
 
-13. Boote danach den Server neu. Startet dieser ohne Fehlermeldungen durch, kannst du nun das Verzeichnis ``savevar`` wieder löschen mit ``rm -R /savevar``.
+13. Boote danach den Server neu mit ``sudo reboot``. Startet dieser ohne Fehlermeldungen durch, kannst du nun das Verzeichnis ``savevar`` wieder löschen mit ``rm -R /savevar``.
 
 
 Automatische Updates abschalten
@@ -259,7 +256,7 @@ cloud-init abschalten
 Server auf lmn7.1 vorbereiten
 =============================
 
-Bei einer Installation ``from scratch`` musst du vorab mit dem Skript ``lmn71-appliance`` den soeben installierten und vorbereiteten Ubuntu-Server vor dem ersten Setup für linuxmuster v7.1 vorbereiten.
+Nachdem du ``from scratch`` installiert hast, musst du vorab mit dem Skript ``lmn71-appliance`` den soeben installierten und vorbereiteten Ubuntu-Server vor dem ersten Setup für linuxmuster v7.1 vorbereiten.
 
 .. hint::
    
@@ -304,7 +301,7 @@ Paketquellen lmn71
 Die Paketquellen, die für die lmn71 eingebunden werden müssen, werden von o.g. Skript lmn71-applicance bereits korrekt eingetragen.
 Es wurden somit in den Paketquellen die ``linuxmuster.net sources`` eingetragen und der Schlüssel des Paketserver importiert.
 
-Solltest du diesen Vorgang manuell müssen, gehst du wie folgt vor:
+Solltest du diesen Vorgang manuell durchführen müssen, gehst du wie folgt vor:
 
 * Zunächst wirst du wieder root mit ``sudo -i``.
 * Dann lädst du den key für das repository für lmn71 mit ``wget -qO - "https://deb.linuxmuster.net/pub.gpg" | sudo apt-key add -`` herunter.

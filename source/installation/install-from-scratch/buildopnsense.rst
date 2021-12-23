@@ -4,7 +4,7 @@ Anlegen und Installieren der Firewall
 Installation der OPNsense®
 --------------------------
 
-Lade dir die iso-Datei der OPNSense® von der Seite https://opnsense.org/download/ herunter.
+Lade dir die ISO-Datei der OPNSense® von der Seite https://opnsense.org/download/ herunter.
 
 Nutze als Architecture ``amd64`` und als image type ``dvd`` und einen Mirror, der in deiner Nähe ist.
 Du erhälst dann ein mit bz2 komprimiertes ISO-Image. Entpacke die heruntergeladene Datei.
@@ -16,11 +16,11 @@ Unter Linux gibst du auf der Eingabekonsole folgenden Befehl an, der dir die Dat
 .. code::
 
    tar -xjf <opnsense-dateiname>.iso.bz2
-   tar -xjf OPNsense-20.7-OpenSSL-dvd-amd64.iso.bz2
+   tar -xjf OPNsense-21.7.1-OpenSSL-dvd-amd64.iso.bz2
 
 Brenne die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren USB-Stick an.
 
-Starte dann OPNsense® auf dem Rechner oder in der neu angelegten VM von DVD oder dem erstellten USB-Stick.
+Starte dann OPNsense® auf dem Rechner oder in der neu angelegten VM von DVD oder dem erstellten USB-Stick. Je nach Virtualisierungsumgebung hast du ggf. die ISO-Datei bereits auf den ISO-Datenspeicher des Hypervisors abgelegt.Boote dann die VM hierüber.
 
 .. hint::
 
@@ -34,40 +34,94 @@ Starte dann OPNsense® auf dem Rechner oder in der neu angelegten VM von DVD ode
    
    vgl. hierzu auch: https://xcp-ng.org/docs/guides.html#pfsense-opnsense-vm
 
-Melde dich als ``installer`` mit dem Passwort ``opnsense`` an.
+Am Ende des Boot-Vorgangs der OPNSense® gelangst du zu folgendem Bildschirm:
 
-Bestätige den Willkommensbildschirm mit Enter.
+.. figure:: media/OPNS10.png
+   :align: center
+   :alt: OPNSense: First boot
+
+Melde dich als Benutzer ``installer`` mit dem Passwort ``opnsense`` an.
+
+Du gelangst direkt zum Installer und kannst das Layout der Tastatur festlegen.
+
+.. figure:: media/OPNS11.png
+   :align: center
+   :alt: OPNSense: Installer keymap
+
+Standardmäßig ist ein amerikanisches Tastaturlayout voreingestellt. 
+Gehe mit den Pfeiltasten auf den Eintrag ``( ) German``. Wählen diesen mit ``<Select>`` aus.
+
+Teste danach das Tastaturlayout:
 
 .. figure:: media/OPNS12.png
+   :align: center
+   :alt: OPNSense: Test keymap
 
-Standardmäßig ist ein amerikanisches Tastaturlayout voreingestellt. Gehe auf ``Change Keymap``.
+Bei der deutschen Tastatur werden die Umlaute im Test noch nicht korrekt wiedergegeben.
+
+Wähle nun die eingestellte deutsche Tastatur aus:
 
 .. figure:: media/OPNS13.png
+   :align: center
+   :alt: OPNSense: continue with keymap
 
-Wähle die deutsche Tastatur ``< de.kbd >`` und akzeptiere jetzt mit ``< Accept these Settings >``.
+Wähle ``<Select>``.
+
+Installiere nun OPNsense via ``Install (UFS)``.
 
 .. figure:: media/OPNS14.png
+   :align: center
+   :alt: OPNSense: Install (UFS)
 
-Wähle ``< Guided installation >``.
+Bestätige die Festplatte und wähle ``Install (UFS) UFS GPR/UEFI Hybrid``. 
 
-Bestätige die Festplatte und wähle ``< GPT/UEFI mode>``. Jetzt wird OPNsense® auf der Festplatte installiert.
+Jetzt wird OPNsense® auf der Festplatte installiert. Zuvor musst du diese noch auswählen.
 
 .. figure:: media/OPNS15.png
+   :align: center
+   :alt: OPNSense: UFS Configuration
+
+Bestätige diesen Vorgang:
+
+.. figure:: media/OPNS16.png
+   :align: center
+   :alt: OPNSense: UFS Configuration 2
+
+Warte nun bis die Installation abgeschlossen ist.
+
+.. figure:: media/OPNS16a.png
+   :align: center
+   :alt: OPNSense: UFS Configuration 2
+
+Zum Abschluss der Konfiguration musst du das Kennwort für den Benutzer ``root`` neu setzen.
+
+.. figure:: media/OPNS16b.png
+   :align: center
+   :alt: OPNSense: Final Configuration
 
 .. hint:: 
 
-   An dieser Stelle muss als root-Passwort ``Muster!`` eingegeben werden, da später der lmn-Server beim Einrichten 
-   der Firewall davon ausgeht, dass das root-Passwort ``Muster!`` ist!
+   An dieser Stelle muss als root-Passwort ``Muster!`` eingegeben werden, da später der lmn-Server beim Einrichten der Firewall davon ausgeht, dass das root-Passwort ``Muster!`` ist!
 
-Starte OPNsense® zum Abschluß neu und werfe die DVD / den USB Stcik aus. 
-Ändere in der VM vor dem Neustart die Boot-Reihenfolge, so 
-dass die VM direkt von der Festplatte gestartet wird.
+Bestätige diese Kennwort.
 
-Der Boot-Vorgang kann schon eine Weile dauern. Vor allem, wenn der Router kein DHCP anbietet.  
+.. figure:: media/OPNS16c.png
+   :align: center
+   :alt: OPNSense: Final Configuration
+
+Wähle danach die Option ``Exit Apply configuration and exit installer`` aus.
+
+Starte OPNsense® zum Abschluß neu und werfe die DVD / den USB Stick aus. 
+
+Hast du OPNsense® in eine VM installiert, so werfe die CD aus und ändere die Boot-Reihenfolge, so dass direkt von der Festplatte gestartet wird.
+
+Der Boot-Vorgang kann dann eine Weile dauern. Vor allem, wenn der Router kein DHCP anbieten sollte.
 
 Wenn alles geklappt hat, ist Folgendes zu sehen:
 
-.. figure:: media/OPNS16.png
+.. figure:: media/OPNS16d.png
+   :align: center
+   :alt: OPNSense: Final Configuration
 
 * Die erste Netzwerkkarte (LAN) ist mit dem pädagogischen Netz verbunden. Allerdings noch mit den falschen Netzwerkeinstellungen.
 * Die zweite Netzwerkkarte (WAN) ist mit dem Router verbunden. In einer Schulumgebung wird der Router keinen DHCP-Service anbieten. 
@@ -76,15 +130,11 @@ Für die Konfiguration der OPNsense® brauchst du einen Rechner mit Webbrowser i
 
 .. hint::
 
-   Prüfe je nachdem, ob du OPNsense® in eine VM oder direkt auf der Hardware (bare metal) installiert hast, ob die Zuordnung der Netzwerkkarten korrekt ist. Sollte diese nicht 
-   stimmen, kannst du auf der Konsole dies nach der Anmeldung mit dem Menüeintrag ``1) Assign interfaces`` anpassen.
+   Prüfe je nachdem, ob du OPNsense® in eine VM oder direkt auf der Hardware (bare metal) installiert hast, ob die Zuordnung der Netzwerkkarten korrekt ist. Sollte diese nicht stimmen, kannst du auf der Konsole dies nach der Anmeldung mit dem Menüeintrag ``1) Assign interfaces`` anpassen.
 
-   Hast du auf der Konsole diesen Eintrag aufgerufen, werden dir die gefundenen Netzwerkkarten mit deren MAC-Adressen angezeigt. Achte nun darauf, dass die Netzwerkkarte mit 
-   der dargestellten MAC-Adresse und der geeigneten physikalischen Verkabelung korrekt zugeordnet werden. 
+   Hast du auf der Konsole diesen Eintrag aufgerufen, werden dir die gefundenen Netzwerkkarten mit deren MAC-Adressen angezeigt. Achte nun darauf, dass die Netzwerkkarte mit der dargestellten MAC-Adresse und der geeigneten physikalischen Verkabelung korrekt zugeordnet werden. 
    
-   Internes Netz  - GREEN muss unter OPNsense® als LAN, das externe Netz - RED unter OPNsense® als WAN und die weitere Netzwerkkarte z.B. für das WLAN - BLUE unter 
-   OPNsense® als OPT1 angegeben werden. Das WAN-Interface - also die externe rote Schnittstelle - wird hierbei zuerst abgefragt, danach die interne - LAN - green 
-   und danach blue / Opt1.
+   Internes Netz  - GREEN muss unter OPNsense® als LAN, das externe Netz - RED unter OPNsense® als WAN und die weitere Netzwerkkarte z.B. für das WLAN - BLUE unter OPNsense® als OPT1 angegeben werden. Das WAN-Interface - also die externe rote Schnittstelle - wird hierbei zuerst abgefragt, danach die interne - LAN - green und danach blue / Opt1.
    
    Die Zuordnung wird auf der Konsole nochmals angezeigt und diese ist dann mit ``y`` zu bestätigen.
    Fahre dann wie nachstehend beschrieben mit der Konfiguration der IP-Adressen fort.
@@ -92,7 +142,22 @@ Für die Konfiguration der OPNsense® brauchst du einen Rechner mit Webbrowser i
 Konfiguration der OPNsense®
 ---------------------------
 
-Gehe mit einem Webbrowser auf ``https://192.168.1.1``.
+Gehe auf der Konsole der OPNsense® auf den Eintrag ``2) Set interface IP address`` und wähle die Netzwerkkarte für das LAN aus. Gebe dieser die IPv4 Adresse 10.0.0.254/16, verneine alle Rückfragen zu IPv6.
+
+Danach erhälst du den Hinweis, dass du dich mit der LAN IP auf die GUI der OPNsense® aufschalten kannst.
+
+.. figure:: media/OPNS16e.png
+   :align: center
+   :alt: OPNSense: GUI IP
+
+Aktualisiere vorab nochmals die OPNsense® in der Konsole, indem du den Punkt ``12) Update from console`` aufrufst und die Rückfrage mit ``Y`` bestätigst.
+
+.. hint::
+
+  Sollte hierbei keine Verbindung zu den externen Update-Servern möglich sein, dann stimmt deine Netzwerkkartenzuordnung noch nicht. Ändere dies, bevor du fortfährst.
+
+Klappt das Update nun wird die OPNsense neu gestartet.
+Verbinde dein Laptop mit einer internen Netzwerkkarte, rufe den Browser auf und gebe folgen URL für den ZUgriff auf die GUI der OPNsense an: ``https://10.0.0.254``.
 
 Du erhältst zunächst eine Zertifikatswarnung, da OPNsense® ja ganz frisch installiert ist und ein selbst erstelltes Zertifikat nutzt. 
 
@@ -102,7 +167,9 @@ Akzeptiere und fahre fort.
 
 .. figure:: media/OPNS18.png
 
-Melde dich mit ``root`` und dem Passwort ``Muster!`` an. Starte den General Setup Wizard mit dem ``Next``-Knopf.
+Melde dich mit ``root`` und dem Passwort ``Muster!`` an. 
+
+Starte den General Setup Wizard mit dem ``Next``-Knopf.
 
 .. figure:: media/OPNS19.png
 
