@@ -23,7 +23,7 @@ Systemvoraussetzungen
 In der unten aufgeführten Tabelle findest du die Systemvoraussetzungen zum Betrieb der von uns bereitgestellten virtuellen Maschinen. Die Systemanforderungen für die Installation von Proxmox selbst finden sich im Web unter https://www.proxmox.com/de/proxmox-ve/systemanforderungen. 
 
 Die Werte bilden die Mindestvoraussetzungen zur Ploanung. Für die Installation mit Proxmox und linuxmuster v7.1 wird als Standard der 
-`IP-Bereich 10.0.0.0/16` genutzt.
+``IP-Bereich 10.0.0.0/16`` genutzt.
 
 ============ ============= ================ =====
 VM           IP            HDD              RAM 
@@ -33,8 +33,7 @@ Server       10.0.0.1/16   25 GiB u 100 GiB 4 GiB
 Proxmox-Host 10.0.0.10/16  100 GiB          4 GiB
 ============ ============= ================ =====
 
-Die Festplattengröße sowie der genutzte RAM der jeweiligen VMs kann nach deren Import
-später einfach an die Bedürfnisse der Schule angepasst werden.
+Die Festplattengröße sowie der genutzte RAM der jeweiligen VMs kann ggf- vor deren Einrichtung einfach an die Bedürfnisse der Schule angepasst werden.
 
 Bevor du dieses Kapitel durcharbeitest, lese bitte zuerst die Abschnitte
   + :ref:`what-is-linuxmuster.net-label`,
@@ -205,7 +204,7 @@ Folgende Befehle müssen der Reihe nach ausgeführt werden:
 .. code::
 
    sed -i -e 's/^/#/' /etc/apt/sources.list.d/pve-enterprise.list
-   echo "deb http://download.proxmox.com/debian buster pve-no-subscription" >> /etc/apt/sources.list.d/pve-no-subscription.list
+   echo "deb http://download.proxmox.com/debian/pve bullseye pve-no-subscription" >> /etc/apt/sources.list.d/pve-no-subscription.list
 
 
 .. hint:
@@ -222,17 +221,15 @@ Die Konsole kann nach dem erfolgreichen Update geschlossen werden.
 Netzwerkbrücken einrichten
 --------------------------
 
-Für eine funktionierende Umgebung müssen zwei Netzwerkbrücken/Bridge (vSwitch) auf dem Hypervisor eingerichtet sein. 
+Für eine funktionierende Umgebung müssen ``zwei Netzwerkbrücken/Bridge (vSwitch)`` auf dem Hypervisor eingerichtet werden.
 
-Eine für das interne Netz (green, 10.0.0.0/16) und eine für das externe Netz (red, externes Netz, Internetzugriff). 
+Eine für das ``interne Netz (green, 10.0.0.0/16)`` und eine für das ``externe Netz (red, externes Netz, Internetzugriff)``. 
 
-Nach der Erstinstallation von Proxmox wurde bislang nur eine sogenannte Bridge (vmbr0) eingerichtet. Diese ist mit der ersten Netzwerkschnittstelle des Proxmox-Hosts verbunden. Über deren Ethernet-Kabel der (DSL)-Router angeschlossen ist. Verlief der vorherige Befehl zur Aktualisierung von Proxmox erfolgreich, so weist du, dass diese bereits funktioniert und für die weitere Nutzung für das externe Netz (red) genutzt werden kann.  
-
-Daher muss nun die zweite Schnittstelle eingerichtet werden, um später mit den noch zu importierenden VMs arbeiten zu können.
+Nach der zuvor beschriebenen Erstinstallation von Proxmox wurde bislang nur eine sogenannte Bridge (vmbr0) eingerichtet. Diese ist mit der ersten Netzwerkschnittstelle (NIC) des Proxmox-Hosts verbunden. Das Ethernet-Kabel der 1. NIC ist mit dem (DSL)-Router verbunden. Verlief der vorherige Befehl zur Aktualisierung von Proxmox erfolgreich, so weist du, dass diese Bridge bereits funktioniert und für die weitere Nutzung für das ``externe Netz (red) - vmbr0`` genutzt werden kann.
 
 Für die internen virtuellen Netze ist also eine zweite Bridge zu erstellen, die an die zweite Netzwerkkarte direkt gebunden wird. Dieser wird allerdings keine IP-Adresse zugeordnet. 
 
-Ausgangspunkt: `Host hv01` -> `Network`
+Ausgangspunkt: ``Host hv01 -> Network``
 
 Die bisherige Netzwerkkonfiguration stellt sich wie folgt dar:
 
@@ -240,7 +237,7 @@ Die bisherige Netzwerkkonfiguration stellt sich wie folgt dar:
    :align: center
    :alt: Proxmox-Übersicht hv01 - Network
 
-Für die folgende Überprüfung öffnet du nochmals die Konsole auf dem Hypervisor hv01 (wie oben beschrieben) und lässt dir den Inhalt der Konfigurationsdatei mittels `cat /etc/network/interfaces` anzeigen. Dort finden sich bisher folgende Eintragungen:
+Für die folgende Überprüfung öffnet du nochmals die Konsole auf dem Hypervisor hv01 (wie oben beschrieben) und lässt dir den Inhalt der Konfigurationsdatei mittels ``cat /etc/network/interfaces`` anzeigen. Dort finden sich bisher folgende Eintragungen:
 
 .. code::
 
@@ -260,15 +257,19 @@ Für die folgende Überprüfung öffnet du nochmals die Konsole auf dem Hypervis
 
   iface eno2 inet manual
 
-Nun erstellst Du die zweite Bridge:
+.. hint::
 
-Dazu wähle das Menü `Datacenter` -> `hv01`-> `Network`-> `Create` -> `Linux Bridge`
+   Die Bezeichnungen für die Netzwerkkarten eno1, eno2 können je nach eingesetztem System von der dargestellten Bezeichnung abweichen.
+
+Nun erstellst Du die ``zweite Bridge - vmbr0``:
+
+Dazu wähle das Menü ``Datacenter -> hv01 -> Network ->  Create -> Linux Bridge``
 
 .. figure:: media/install-on-proxmox_14_network-add-bridge.png
    :align: center
    :alt: Proxmox-Übersicht hv01 - Network - Create - Linux Bridge
 
-Darauf öffent sich ein neues Fenster. Dort sind folgende Einträge nötig: 
+Es öffent sich ein neues Fenster. Dort sind folgende Einträge nötig:
 
 .. figure:: media/install-on-proxmox_15_create-linux-bridge.png
    :align: center
@@ -276,14 +277,15 @@ Darauf öffent sich ein neues Fenster. Dort sind folgende Einträge nötig:
 
 Mit `Create` wird die Brücke erstellen.
 
-Anschließend Proxmox über den Button `Reboot` oben rechts neu starten, um die neuen Networking-Konfigurationen zu laden - Node hv01 muss dafür im Menü `Datacenter` links ausgewählt sein:
+Anschließend Proxmox über den Button ``Reboot`` oben rechts neu starten, um die neue Netwerklonfiguration zu laden.
+Node hv01 muss dafür im Menü ``Datacenter`` links ausgewählt sein:
 
 .. figure:: media/install-on-proxmox_16_reboot.png
    :align: center
    :alt: Proxmox reboot
 
 Die Netzwerkkonfiguration des Proxmox-Host kannst du mit ``cat /etc/network/interfaces`` wie oben gezeigt in der Konsole überprüfen.
-Die Datei sollte nachstehende Eintragungen aufweisen. Die angezeigte IP für die Bridge `vmbr0` muss der entsprechen, die bei Installation eingetragenen wurde.
+Die Datei sollte nachstehende Eintragungen aufweisen. Die angezeigte IP für die Bridge ``vmbr0`` muss der IP-Adresse entsprechen, die bei Installation eingetragenen wurde.
 
 .. code::
 
@@ -326,13 +328,12 @@ In diesem Schritt wird die zweite Festplatte in Proxmox eingebunden, um diese al
 
 .. note::
 
-   Die folgenden Schritte nur dann ausführen, wenn nicht auf einem einzigen Volume eingerichtet werden soll!
+   Die folgenden Schritte bitte nur dann ausführen, wenn nicht auf einem einzigen Volume Proxmox eingerichtet werden soll!
 
 local-lvm(hv01)-Partition entfernen und Speicher freigeben
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Während der Proxmox-Installation wurden die Storages „local“ und „local-lvm“ automatisch auf der ersten Festplatte erstellt. Da anfangs für die Linuxmuster-Maschinen eine zweite Festplatte als „Storage“ eingerichtet wurde, wird „local-lvm“ nicht benötigt. Deshalb wird nun „local-lvm“ entfernt und „local“ durch den freigewordenen Speicher vergrößert, so dass auf der ersten 
-Festplatte der gesamte Speicher dem Hypervisor zur Verfügung steht:
+Während der Proxmox-Installation wurden die Storages „local“ und „local-lvm“ automatisch auf der ersten Festplatte erstellt. Da anfangs für die Linuxmuster-Maschinen eine zweite Festplatte als „Storage“ eingerichtet wurde, wird „local-lvm“ nicht benötigt. Deshalb wird nun „local-lvm“ entfernt und „local“ durch den freigewordenen Speicher vergrößert, so dass auf der ersten Festplatte der gesamte Speicher dem Hypervisor zur Verfügung steht:
 
 1. auf hv01 oben rechts Shell anklicken:
 
@@ -386,15 +387,15 @@ Bestätige die Nachfrage mit ``y``
    :align: center
    :alt: Proxmox Konsole Output  
 
-6. über ``lsblk`` sollte nun zu sehen sein, dass pve-data-Partitionen entfernt wurden:
+6. Über ``lsblk`` sollte nun zu sehen sein, dass pve-data-Partitionen entfernt wurden:
 
 .. figure:: media/install-on-proxmox_23_console-lsblk-ready.png
    :align: center
    :alt: Proxmox Konsole Output lsblk 
 
-Es ist zu erkennen, dass auf `/dev/sdb3` nur noch `pve-swap` und `pve-root` vorhanden sind. 
+Es ist zu erkennen, dass auf ``/dev/sdb3`` nur noch ``pve-swap`` und ``pve-root`` vorhanden sind. 
 
-7. Auf der Weboberfläche von Proxmox ist der local-lvm Eintrag noch über `Datacenter → Storage local-lvm (hv01)` mit dem `Remove`-Button graphisch zu entfernen:
+7. Auf der Weboberfläche von Proxmox ist der local-lvm Eintrag noch über ``Datacenter → Storage local-lvm (hv01)`` mit dem ``Remove``-Button graphisch zu entfernen:
 
 .. figure:: media/install-on-proxmox_24_storage-default.png
    :align: center
@@ -406,7 +407,7 @@ Danach findest Du noch folgenden Speicher:
    :align: center
    :alt: Proxmox-Übersicht nach Löschung local-lvm
 
-Die SSD `/dev/sdb` steht für den Proxmox-Host  zur Verfügung.
+Die SSD ``/dev/sdb`` steht für den Proxmox-Host zur Verfügung.
 
 Zweiten Datenträger vorbereiten
 +++++++++++++++++++++++++++++++
@@ -490,10 +491,247 @@ Datenträger graphisch als Storage in Proxmox anbinden
    :align: center
    :alt: Proxmox-Übersicht hv01 zweite Festplatte
 
+Vorbereiten des ISO-Speichers
+=============================
+
+Um die v7.1 zu installieren, müssen zwei virtuelle Maschinen angelegt werden. OPNSense und Ubuntu Server 18.04 LTS werden in die VMs installiert.
+Dazu ist es erforderlich, dass du die ISO-Images für OPNSense und Ubuntu Server 18.04 LTS auf den Proxmox-Hypervisor in den Datenspeicher für ISO-Images lädst.
+
+Gehe dazu auf ``Datacenter --> <proxmox-host> --> Datenspeicher (z.B. local oder zfsfile)``
+
+Im Kontextmenü klickst du auf ``ISO Images`` und dann auf ``Download from URL``.
+
+.. figure:: media/proxmox-upload-iso-images-01.png
+   :align: center
+   :alt: Proxmox ISO Images
+
+Es erscheint ein Fenster, in dem du die URL zum Download der jeweiligen ISO-Datei eintragen musst.
+
+.. figure:: media/proxmox-upload-iso-images-02.png
+   :align: center
+   :alt: Proxmox ISO Images URL
+
+Trage zunächst die ``URL für OPNSense`` ein: 
+
+  https://mirror.informatik.hs-fulda.de/opnsense/releases/21.7/OPNsense-21.7.1-OpenSSL-dvd-amd64.iso.bz2
+
+Als Prüfsumme kannst Du folgende nutzen:
+
+.. code:: 
+
+   OPNsense-21.7.1-OpenSSL-dvd-amd64.iso.bz2 (SHA256) : d9062d76a944792577d32cdb35dd9eb9cec3d3ed756e3cfaa0bf25506c72a67b
+
+Lade nun Ubuntu Server auf den ISO-Datenspeicher von Proxmox. Rufe wie oben das Fenster auf und rrage nun als URL für Ubuntu Server 18.04.6 LTS folgende ein:
+
+ https://releases.ubuntu.com/bionic/ubuntu-18.04.6-live-server-amd64.iso
+
+Als Prüfsumme kannst Du folgende nutzen:
+
+.. code:: 
+
+   (SHA256) 6c647b1ab4318e8c560d5748f908e108be654bad1e165f7cf4f3c1fc43995934 *ubuntu-18.04.6-live-server-amd64.iso
+
+Sind beide ISO Images auf den ISO-Speicher in Proxmox verfügbar, richtest du nun die VMs ein.
 
 Vorbereiten der Virtuellen Maschinen
 ====================================
 
-.. todo::
+Anlegen der VM für OPNsense
+---------------------------
 
-   to be written
+Um für die OPNsense Firewall eine VM anzulegen, wählst du in der Proxmox - Verwaltungsoberfläche den Button ``Create VM``.
+
+.. figure:: media/proxmox-create-vm.png
+   :align: center
+   :alt: Proxmox Create VM
+
+Es erscheint nun das Fenster zur Anlage der neuen VM. Trage hier einen Namen für die VM ein, anhand der du Version und Funktion erkennst.
+
+.. figure:: media/proxmox-create-vm-opnsense-01.png
+   :align: center
+   :alt: Proxmox Create VM
+
+Klicke dann auf ``Next``.
+
+Wähle nun den ISO-Datenspeicher unter ``Storage`` aus. Das ist der Speicher, auf den du vorher die ISO-Images abgelegt hast.
+Wähle dann das ISO image der OPNsense aus.
+
+.. figure:: media/proxmox-create-vm-opnsense-02.png
+   :align: center
+   :alt: Proxmox Create VM: ISO image
+
+Klicke dann auf ``Next``.
+
+Belasse hier zunächst alle Voreinstellungen für Grafikkarte und Festplatten-Controller wie angezeigt.
+
+.. figure:: media/proxmox-create-vm-opnsense-03.png
+   :align: center
+   :alt: Proxmox Create VM: System
+
+Klicke dann auf ``Next``.
+
+Wähle nun hier unter ``Storage`` den geeigneten Datenspeicher auf, um die Festplatte der VM dort abzulegen. In der Abb. wird der Datenspeicher ``Dataset`` verwendet.
+In dem Drop-down Menü siehst du alle in deinem System verfügbaren Datenspeicher.
+
+.. figure:: media/proxmox-create-vm-opnsense-04.png
+   :align: center
+   :alt: Proxmox Create VM: Disks
+
+Klicke dann auf ``Next``.
+
+Gebe nun für die CPU Sockel und Kerne an.
+
+.. figure:: media/proxmox-create-vm-opnsense-05.png
+   :align: center
+   :alt: Proxmox Create VM: CPU
+
+Klicke dann auf ``Next``.
+
+Gebe nun für die Firewall die gewünschte Größe des Arbeitsspeichers an.
+
+.. figure:: media/proxmox-create-vm-opnsense-06.png
+   :align: center
+   :alt: Proxmox Create VM: RAM
+
+Klicke dann auf ``Next``.
+
+Gebe danach die Bridge vmbr0 für die einzurichtende Netzwerkkarte an. Die zweite Netzwerkkarte fügst du nach Anlage der VM hinzu. Dies muss noch vor der eigentlichen Installation erfolgen.
+
+.. figure:: media/proxmox-create-vm-opnsense-07.png
+   :align: center
+   :alt: Proxmox Create VM: NIC
+
+Klicke dann auf ``Next``.
+
+Zum Abschluss siehst du nochmals alle Einstellungen für die VM. Überprüfe diese. Solltest du Änderungen vornehmen wollen, kannst du auf die entsprechende Reiterkarte klicken, Änderungen durchführen und wieder zur Reiterkarte ``Confirm`` wechseln.
+
+.. figure:: media/proxmox-create-vm-opnsense-08.png
+   :align: center
+   :alt: Proxmox Create VM: Confirm
+
+Achte darauf, dass die Option ``Start after created`` unbedingt ``deaktiviert`` ist. 
+
+Klicke dann auf ``Next``.
+
+Nachdem die VM angelegt wurde, wähle diese aus und klicke auf den Eintrag ``Hardware``.
+
+.. figure:: media/proxmox-create-vm-opnsense-09.png
+   :align: center
+   :alt: Proxmox Create VM: Hardware
+
+Füge nun die zweite Netzwerkkarte hinzu oder ggf. weitere NICs.
+Klicke hierzu oben auf die Reiterkarte ``Add``. Es erscheint ein Drop-down Menü. Wähle hier den Eintrag ``Network Device``.
+
+.. figure:: media/proxmox-create-vm-opnsense-10.png
+   :align: center
+   :alt: Proxmox Create VM: Add 2nd NIC
+
+Wähle als Bridge die zweite zuvor eingerichtete Bridge - hier ``vmbr1``. 
+
+Achte für die weitere Installation darauf, wie du die Bridges zugeordnet hast:
+
+1. vmbr 0 - externes Netzwerk: red
+2. vmbr 1 - internes Netzwerk: green
+
+Klicke auf ``Add`` und kontrolliere dann nochmals alle Einstellungen der neu angelegten VM.
+
+Die eigentliche Installation von OPNsense in der VM folgt später und ist hier dokumentiert :ref:`install-from-scratch-label`
+
+
+Anlegen der VM für linuxmuster server
+-------------------------------------
+
+Um für die den linuxmuster.net Server v7.1 eine VM anzulegen, wählst du in der Proxmox - Verwaltungsoberfläche den Button ``Create VM``.
+
+.. figure:: media/proxmox-create-vm.png
+   :align: center
+   :alt: Proxmox Create VM
+
+Es erscheint nun das Fenster zur Anlage der neuen VM. Trage hier einen Namen für die VM ein, anhand der du Version und Funktion erkennst.
+
+.. figure:: media/proxmox-create-vm-ubuntu-server-01.png
+   :align: center
+   :alt: Proxmox Create VM
+
+Klicke dann auf ``Next``.
+
+Wähle nun den ISO-Datenspeicher unter Storage aus. Das ist der Speicher auf den du vorher die ISO-Images abgelegt hast.
+Wähle dann das ISO image der OPNsense aus.
+
+.. figure:: media/proxmox-create-vm-ubuntu-server-02.png
+   :align: center
+   :alt: Proxmox Create VM: ISO image
+
+Klicke dann auf ``Next``.
+
+Belasse hier zunächst alle Voreinstellungen für Grafikkarte und Festplatten-Controller wie angezeigt.
+
+.. figure:: media/proxmox-create-vm-ubuntu-server-03.png
+   :align: center
+   :alt: Proxmox Create VM: System
+
+Klicke dann auf ``Next``.
+
+Wähle nun hier unter ``Storage`` den geeigneten Datenspeicher aus, um die Festplatte der VM dort abzulegen. In der Abb. wird der Datenspeicher ``Dataset`` verwendet.
+In dem Drop-down Menü siehst du alle in deinem System verfügbaren Datenspeicher.
+
+.. figure:: media/proxmox-create-vm-ubuntu-server-04.png
+   :align: center
+   :alt: Proxmox Create VM: Disks
+
+Für die erste Festplatte wählst du wie in obiger Abb. z.B. 25 GiB.
+
+Füge dann mit dem Button unten links ``Add`` eine weitere Festplatte hinzu. Wähle hierbei wieder den geeigneten Datenspeicher aus und gebe nun die Größe z.B. 100 GiB, oder direkt für deine Schule die gewünschte Größe z.B. 500 GiB aus.
+
+.. figure:: media/proxmox-create-vm-ubuntu-server-05.png
+   :align: center
+   :alt: Proxmox Create VM: Disks
+
+Klicke dann auf ``Next``.
+
+Gebe nun für die CPU Sockel und Kerne an.
+
+.. figure:: media/proxmox-create-vm-ubuntu-server-06.png
+   :align: center
+   :alt: Proxmox Create VM: CPU
+
+Klicke dann auf ``Next``.
+
+Gebe nun für den Server die gewünschte Größe des Arbeitsspeichers an.
+
+.. figure:: media/proxmox-create-vm-ubuntu-server-07.png
+   :align: center
+   :alt: Proxmox Create VM: RAM
+
+Klicke dann auf ``Next``.
+
+Gebe danach die Bridge vmbr1 für die einzurichtende Netzwerkkarte an. Dies muss die Bridge für das interne Netz (green) sein.
+
+.. figure:: media/proxmox-create-vm-ubuntu-server-08.png
+   :align: center
+   :alt: Proxmox Create VM: NIC
+
+Klicke dann auf ``Next``.
+
+Zum Abschluss siehst du nochmals alle getroffenen Einstellungen. Überprüfe diese. Solltest du Änderungen vornehmen wollen, kannst du auf die entsprechende Reiterkarte klicken, Änderungen durchführen und wieder zur Reiterkarte ``Confirm`` wechseln.
+
+.. figure:: media/proxmox-create-vm-ubuntu-server-09.png
+   :align: center
+   :alt: Proxmox Create VM: Confirm
+
+Achte darauf, dass die Option ``Start after created`` unbedingt ``deaktiviert`` ist. 
+
+Klicke dann auf ``Next``.
+
+Nachdem die VM angelegt wurde, siehst du diese links im Verzeichnisbaum deines Proxmox-Host, in dem alle VMs dargestellt werden.
+
+Die eigentliche Installation des Servers in der VM folgt später und ist hier dokumentiert :ref:`install-from-scratch-label`
+
+
+
+
+
+
+
+
+
