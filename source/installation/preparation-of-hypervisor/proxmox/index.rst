@@ -84,7 +84,7 @@ Nachdem du die ISO-Datei für Proxmox heruntergeladen hast, wechselst Du in das 
 
 .. code-block:: console
  
-   dd if=proxmox-ve_7.1-1.iso of=/dev/sdX bs=1M status=progress conv=fdatasync
+   dd if=proxmox-ve_7.1-2.iso of=/dev/sdX bs=1M status=progress conv=fdatasync
    
 Verkabelungshinweise
 --------------------
@@ -176,9 +176,11 @@ Nach erfolgreicher Installation lasse Proxmox über `Reboot` neu starten.
 Proxmox Einrichtung
 -------------------
 
-Nach dem Neustart von Proxmox kannst du dich über einen PC, welcher sich im selben Netz befindet, über das
-graphische Webinterface auf https://192.168.199.20:8006 mit `root` als `User name` und dem vorher gesetzten Passwort 
-über Login anmelden:
+Nach dem Neustart von Proxmox kannst du dich über einen PC, welcher sich im selben Netz befindet, via Browser auf das graphische Webinterface zur Verwaltung des Proxmox-Hosts aufschalten. Hierzu gibst Du als URL https://192.168.199.20:8006 ein. Du erhälst eine Warning, da ein mögliches Sicherheitsrisiko erkannt wurde. Dies ist auf das selbst ausgestellte SSL-zertifikat des Proxmos-Hiost zurückzuführen. 
+
+Klicke auf ``Erweitert...``, es erscheint ein weiterer Hinweis auf das self-signed certificate. Dieses nimmst du nun mit dem Button ``Risiko akzeptieren und fortfahren`` an.
+
+Es erscheint die Anmeldemaske des Proxmox-Webinterface. Melde dich mit `root` als `User name` und dem vorher gesetzten Passwort an:
 
 .. figure:: media/install-on-proxmox_10_proxmox-login.png
    :align: center
@@ -497,6 +499,10 @@ Vorbereiten des ISO-Speichers
 Um die v7.1 zu installieren, müssen zwei virtuelle Maschinen angelegt werden. OPNSense und Ubuntu Server 18.04 LTS werden in die VMs installiert.
 Dazu ist es erforderlich, dass du die ISO-Images für OPNSense und Ubuntu Server 18.04 LTS auf den Proxmox-Hypervisor in den Datenspeicher für ISO-Images lädst.
 
+
+OPNsense
+--------
+
 Gehe dazu auf ``Datacenter --> <proxmox-host> --> Datenspeicher (z.B. local oder zfsfile)``
 
 Im Kontextmenü klickst du auf ``ISO Images`` und dann auf ``Download from URL``.
@@ -505,31 +511,77 @@ Im Kontextmenü klickst du auf ``ISO Images`` und dann auf ``Download from URL``
    :align: center
    :alt: Proxmox ISO Images
 
-Es erscheint ein Fenster, in dem du die URL zum Download der jeweiligen ISO-Datei eintragen musst.
+Es erscheint ein Fenster, in dem du die URL zum Download der jeweiligen ISO-Datei eintragen musst. 
+
+.. hint::
+
+  Der Download funktioniert aber nur für ISO-Dateien. OPNsense bietet das ISO-Image allerdings im bz2 Format in komprimierter Form an. 
+
+Lade daher die Datei zunächst auf deinen PC/Laptop herunter, entpacke die Datei und lade diese ann auf den ISO-Datenspeicher von Proxmox hoch.
+
+Lade ``OPNSense`` herunter und entpacke die Datei: 
+
+.. code::
+
+  wget https://mirror.informatik.hs-fulda.de/opnsense/releases/21.7/OPNsense-21.7.1-OpenSSL-dvd-amd64.iso.bz2
+
+Als Prüfsumme kannst du zur Überprüfung nach dem Download folgenden Befehl nutzen:
+
+.. code:: 
+
+   sha256sum OPNsense-21.7.1-OpenSSL-dvd-amd64.iso
+
+Es muss folgende SHA256-Prüfsumme errechnet werden:
+
+.. code::
+
+  d9062d76a944792577d32cdb35dd9eb9cec3d3ed756e3cfaa0bf25506c72a67b
+
+Stimmen diese überein, entpackst du die bz2 Datei mit folgendem Befehl:
+
+.. code::
+
+   tar xfvj OPNsense-21.7.1-OpenSSL-dvd-amd64.iso.bz2
+
+Lade die entpackte OPNsense ISO-Datei nun auf den Proxmiox ISO-Datenspeicher.
+
+Klicke auf ``ISO Images --> Upload`` und wähle die entpackte ISO-Datei für OPNsense aus.
 
 .. figure:: media/proxmox-upload-iso-images-02.png
    :align: center
-   :alt: Proxmox ISO Images URL
+   :alt: ISO Image OPNsense
 
-Trage zunächst die ``URL für OPNSense`` ein: 
 
-  https://mirror.informatik.hs-fulda.de/opnsense/releases/21.7/OPNsense-21.7.1-OpenSSL-dvd-amd64.iso.bz2
+Ubuntu Server
+-------------
 
-Als Prüfsumme kannst Du folgende nutzen:
+Lade nun Ubuntu Server auf den ISO-Datenspeicher von Proxmox.
 
-.. code:: 
+Lade dazu zuerst die ISO-Datei für Ubuntu Server 18.04.6 LTS lokal auf deinen PC/Laptop:
 
-   OPNsense-21.7.1-OpenSSL-dvd-amd64.iso.bz2 (SHA256) : d9062d76a944792577d32cdb35dd9eb9cec3d3ed756e3cfaa0bf25506c72a67b
+.. code::
+   
+   wget https://releases.ubuntu.com/bionic/ubuntu-18.04.6-live-server-amd64.iso
 
-Lade nun Ubuntu Server auf den ISO-Datenspeicher von Proxmox. Rufe wie oben das Fenster auf und rrage nun als URL für Ubuntu Server 18.04.6 LTS folgende ein:
-
- https://releases.ubuntu.com/bionic/ubuntu-18.04.6-live-server-amd64.iso
-
-Als Prüfsumme kannst Du folgende nutzen:
+Nach dem Download überprüfst du die SHA256-Prüfsumme:
 
 .. code:: 
 
-   (SHA256) 6c647b1ab4318e8c560d5748f908e108be654bad1e165f7cf4f3c1fc43995934 *ubuntu-18.04.6-live-server-amd64.iso
+   sha256sum ubuntu-18.04.6-live-server-amd64.iso
+
+Es muss folgende SHA256-Prüfsumme errechnet werden:
+
+.. code::
+
+  6c647b1ab4318e8c560d5748f908e108be654bad1e165f7cf4f3c1fc43995934
+
+Stimmen diese überein, lädst du nun die ISO-Datei für Ubuntu Server auf den ISO-Datenspeicher von Proxmox.
+
+Rufe wie oben das Fenster auf und gebe doe ISO-Datei für Ubuntu Server 18.04.6 LTS ein:
+
+.. figure:: media/proxmox-upload-iso-images-03.png
+   :align: center
+   :alt: ISO Image Ubuntu Server
 
 Sind beide ISO Images auf den ISO-Speicher in Proxmox verfügbar, richtest du nun die VMs ein.
 
@@ -595,7 +647,7 @@ Gebe nun für die Firewall die gewünschte Größe des Arbeitsspeichers an.
 
 Klicke dann auf ``Next``.
 
-Gebe danach die Bridge vmbr0 für die einzurichtende Netzwerkkarte an. Die zweite Netzwerkkarte fügst du nach Anlage der VM hinzu. Dies muss noch vor der eigentlichen Installation erfolgen.
+Gebe danach die ``Bridge vmbr0`` für die einzurichtende Netzwerkkarte an. Die zweite Netzwerkkarte fügst du nach Anlage der VM hinzu. Dies muss noch vor der eigentlichen Installation erfolgen.
 
 .. figure:: media/proxmox-create-vm-opnsense-07.png
    :align: center
@@ -725,7 +777,41 @@ Klicke dann auf ``Next``.
 
 Nachdem die VM angelegt wurde, siehst du diese links im Verzeichnisbaum deines Proxmox-Host, in dem alle VMs dargestellt werden.
 
+.. figure:: media/proxmox-create-vm-ubuntu-server-10.png
+   :align: center
+   :alt: Proxmox VMs: Overview
+
 Die eigentliche Installation des Servers in der VM folgt später und ist hier dokumentiert :ref:`install-from-scratch-label`
+
+Boot-Optionen
+-------------
+
+Um bei der from Scratch Installation von CD zu starten, wählst du die VM aus, klickst auf ``Options`` und klickst oben auf den Menüeintrag ``Edit``.
+
+.. figure:: media/proxmox-vm-boot-order-01.png
+   :align: center
+   :alt: Proxmox VM: Boot order
+
+Markiere mit der Maus den Eintrag ide2 (CD) und ziehe diesen an Position 1.
+
+vorher:
+
+.. figure:: media/proxmox-vm-boot-order-02.png
+   :align: center
+   :alt: Proxmox VM: Boot order start
+
+nachher:
+
+.. figure:: media/proxmox-vm-boot-order-03.png
+   :align: center
+   :alt: Proxmox VM: Boot order changed
+
+Dies führst du für die OPNsense VM und für die Ubuntu Server VM durch.
+
+Nach abgeschlossender Installation musst du daran denken, die CD wieder auszuwerfen und in den VMs die Boot_Reihenfolge wieder so zuändern, dass zuerst von Festplatte gebootet wird.
+
+Installiere nun gemäß der Anleitung: :ref:`install-from-scratch-label`
+
 
 
 
