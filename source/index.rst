@@ -88,6 +88,8 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   :hidden:
 
   setup/setup
+  setup/setup-gui
+  setup/setup-console
   setup/add-user-accounts
   setup/devices/index
 
@@ -97,6 +99,8 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   :hidden:
 
   migration/index
+  migration/linbo
+  migration/upgrade
 
 .. toctree::
   :maxdepth: 2
