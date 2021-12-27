@@ -26,12 +26,9 @@ gebooteten LINBO Oberfläche die MAC-Addresse auslesen.
 Aufnahme über die Schulkonsole
 ------------------------------
 
-Um einen Rechner mit der Schulkonsole aufzunehmen geht man wie folgt
-vor: Melde dich wie es in :ref:`login-dselma-global-admin` beschrieben
-wird an.
+Um einen Rechner mit der Schulkonsole aufzunehmen geht man wie folgt vor: Melde dich als ``global-admin`` an der Schulkonsole an.
 
-Im Menüpunkt ``GERÄTEVERWALTUNG/Geräte`` kann man nun ``+ Gerät
-hinzufügen`` anklicken. Standardmäßig sind die konfigurierten Server
+Im Menüpunkt ``GERÄTEVERWALTUNG/Geräte`` kann man nun ``+ Gerät hinzufügen`` anklicken. Standardmäßig sind die konfigurierten Server
 schon in der Liste mit der Rolle `Server` eingetragen.
 
 .. image:: media/06_devices_computer-add.png

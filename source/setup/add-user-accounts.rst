@@ -16,8 +16,7 @@ nicht mehr aufgeführter Schüler schrittweise aus dem System entfernt.
 
 In diesen Abschnitten wird beispielhaft ein Lehrer händisch angelegt
 und per Datei-Import einige Schüler aufgenommen. Melde dich dafür an
-der Schulkonsole als ``global-admin``, wie es in
-:ref:`login-dselma-global-admin` beschrieben wird.
+der Schulkonsole als ``global-admin`` an.
 
 
 Zeichenkodierung wählen
