@@ -1,3 +1,4 @@
+.. _add-user-accounts-label:
 
 =======================================
  Benutzeraufnahme mit der Schulkonsole

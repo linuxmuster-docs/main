@@ -5,7 +5,7 @@
 =================
 
 .. sectionauthor:: `@Alois <https://ask.linuxmuster.net/u/Alois>`_ ,
-		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
+		           `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
                    `@michael_kohls <https://ask.linuxmuster.net/u/michael_kohls>`_
 
 Es gibt mehrere Varianten Geräte im Schulserver aufzunehmen:
