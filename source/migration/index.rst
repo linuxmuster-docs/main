@@ -7,11 +7,10 @@
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster,net/u/cweikl>`_ 
 
 
-Um auf die linuxmuster 7.1 zu migrieren, können zwei Wege genutzt werden.
+Um auf die linuxmuster 7.1 zu migrieren, können zwei Wege genutzt werden: 
 
-Wird bereits linuxmuster 7.0 eingesetzt, ist die Migration auf linuxmuster 7.1 nur ein Upgrade ohne weitergehende Eingriffe und Anpassungen.
-
-Sollte noch eine linuxmuster 6.2 genutzt werden, ist die Migration deutlich aufwändiger.
+1. Sollte noch eine linuxmuster 6.2 genutzt werden, so ist eine vollständige die Migration durchzuführen. Diese ist deutlich aufwändiger.
+2. Wird bereits linuxmuster 7.0 eingesetzt, besteht die Migration auf linuxmuster 7.1 in einem einfachen Upgrade des Servers und einer anschliessenden Migration der bisherigen Linbo 2.4 Images auf Linbo 4.
 
 Folge je nach gegebenen Voraussetzungen deinem Migrationspfad.
 
@@ -20,7 +19,8 @@ Folge je nach gegebenen Voraussetzungen deinem Migrationspfad.
   :caption: Migration
   :hidden:
 
-  migrate-from-7-0-to-7-1
   migrate-from-6-2-to-7-1
+  migrate-from-7-0-to-7-1
+
 
 

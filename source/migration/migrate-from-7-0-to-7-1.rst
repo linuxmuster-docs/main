@@ -56,7 +56,10 @@ Hat alles erfolgreich funktioniert wirst Du nach der Anmeldung auf der Konsole d
 
 .. figure:: media/01-console-welcome-lmn71.png
 
-Danach kannst Du wir bisher auch weiterarbeiten.
+Danach musst du noch deine Linbo 2.4 Images auf Linbo 4 migrieren. Führe dies wie hier :ref:`migration-linbo-label` beschrieben durch.
+
+Danach ist dein Update auf linuxmuster v7.1 abgeschlosse und du kannst wie bisher auch weiterarbeiten.
+
 
 
 

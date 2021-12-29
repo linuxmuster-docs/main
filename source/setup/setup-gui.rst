@@ -62,9 +62,20 @@ Der nächste Dialog legt das Passwort des globalen Administrators ``global-admin
 
    Nach dem erfolgreichen Abschluss der Erstkonfiguration gilt für ``root`` das neu gesetzte Passwort.
 
+.. hint::
+
+   * Das beim Setup eingegebene Adminpasswort wird für folgende administrativen User gesetzt:
+      * root auf dem Server
+      * root auf der Firewall
+      * global-admin (AD)
+      * pgmadmin (AD)
+      * linbo (/etc/rsyncd.secrets)
+   * Es sollten die Passwörter der o.g. User nach dem Setup geändert werden, sodass jeder User ein eigenes Password hat.
+
+
 Danach klickst du auf ``Weiter/Next``. 
 
-Du erhälst die Rückfrage, ob die Firewall ggf. nicht konfiguriert werden soll. Sofern du das System zusammen mit der OPNsense als Firewall neu einrichtest, setz du keinen Haken und klickst du auf ``Weiter/Next``.
+Du erhälst die Rückfrage, ob die Firewall ggf. nicht konfiguriert werden soll. Sofern du das System zusammen mit der OPNsense als Firewall neu einrichtest, setzt du keinen Haken und klickst du auf ``Weiter/Next``.
 
 .. figure:: media/newsetup/lmn-setup-gui-05.png
    :align: center
@@ -132,5 +143,30 @@ Nach erfolgreicher Anmeldung gelangst du zur Hauptseite der Schulkonsole.
 .. figure:: media/newsetup/lmn-setup-gui-12.png
    :align: center
    :alt: WebUI: Hauptseite
+
+Berechtigungen der Log-Dateien anpassen
+=======================================
+
+Nach dem erfolgreichen Setup verbindest du dich via ssh auf den Server. 
+
+Zum Abschluss sind noch die Dateiberechtigung für die linuxmuster Log-Dateien anzupassen.
+
+Setze die Berechtigungen nun mit folgendem Befehl als Benutzer ``root``:
+
+.. code::
+
+  chmod 600 /var/log/linuxmuster/setup.*.log 
+
+Lasse dir den Inhalt des Verzeichnisses danach ausgeben und kontrollieren, ob Besitzer und Gruppe root sind und diese lesen und schreiben dürfen. 
+
+.. code::
+
+   ls -alh /var/log/linuxmuster/
+
+Der Inhalt des Verzeichnisses sollte sich wie folgt darstellen:
+
+.. figure:: media/newsetup/lmn-setup-permissions-log-files.png
+   :align: center
+   :alt: directory listing log files
 
 Setze die Ersteinrichtung fort, indem du :ref:`add-user-accounts-label` und :ref:`add-devices-label` aufrufst.
