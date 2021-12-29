@@ -99,8 +99,8 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   :hidden:
 
   migration/index
-  migration/linbo
   migration/upgrade
+  migration/linbo-migration-to-4
 
 .. toctree::
   :maxdepth: 2
