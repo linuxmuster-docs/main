@@ -91,7 +91,7 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   setup/setup-gui
   setup/setup-console
   setup/add-user-accounts
-  setup/devices/index
+  setup/add-devices
 
 .. toctree::
   :maxdepth: 2
@@ -111,9 +111,8 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   clients/linbo/index
   clients/postsync/index
   clients/linux-clients/index
-  clients/windows10clients/index
   clients/leoclient2/index
-  
+  clients/windows10clients/index
 
 .. toctree::
   :maxdepth: 2

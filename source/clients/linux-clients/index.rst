@@ -27,10 +27,3 @@ Offiziell wird aktuell nur Ubuntu 20.04 mit gdm3 und Gnome unterstzützt. Andere
   :hidden:
 
   linux-client-migration
-
-.. toctree::
-  :maxdepth: 2
-  :caption: (old) Linux-Client
-  :hidden:
-
-  linux-clients-former-method
