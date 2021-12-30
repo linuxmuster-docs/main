@@ -45,6 +45,7 @@ Benutzerverwaltung
   * Automatische Erkennung der Kodierung der Benutzerdaten, Sonderzeichen in Klarnamen
   * Klassen- und Projektmanagement bleibt erhalten
   * Zusätzlich Session-basierte Berechtigungen für die Unterrichtsteuerung
+    
     * Gruppen können freiwählbar zusammengestellt werden
     * Benutzerbezogene statt rechnerbezogene Verwaltung
 
