@@ -45,6 +45,7 @@ Benutzerverwaltung
   * Automatische Erkennung der Kodierung der Benutzerdaten, Sonderzeichen in Klarnamen
   * Klassen- und Projektmanagement bleibt erhalten
   * Zusätzlich Session-basierte Berechtigungen für die Unterrichtsteuerung
+    
     * Gruppen können freiwählbar zusammengestellt werden
     * Benutzerbezogene statt rechnerbezogene Verwaltung
 
@@ -56,5 +57,8 @@ Netzwerkverwaltung
 Selbstheilende Arbeitsstationen
   * LINBO ist weiterhin das zentrale Softwareverteilungssystem.
   * Es erfolgt ein Major Release Update auf LINBO 4.
+
+    * Umstellung der Images-Abbilder auf das qcow2 Format
+    * Neues User-Interface für die Steuerung an den Clients 
 
 
