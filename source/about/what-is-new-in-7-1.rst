@@ -58,4 +58,7 @@ Selbstheilende Arbeitsstationen
   * LINBO ist weiterhin das zentrale Softwareverteilungssystem.
   * Es erfolgt ein Major Release Update auf LINBO 4.
 
+    * Umstellung der Images-Abbilder auf das qcow2 Format
+    * Neues User-Interface für die Steuerung an den Clients 
+
 
