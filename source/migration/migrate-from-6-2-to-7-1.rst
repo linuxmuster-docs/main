@@ -6,16 +6,11 @@
 		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
                    `@cweikl <https://ask.linuxmuster,net/u/cweikl>`_ (Voraussetzungen)
 
-Es wird eine Migration der Benutzerinformationen (Namen, Passwort,
-Projekte), Computerinformationen (``workstations``), der Benutzerdaten
-(``/home``), Tausch- und Projektverzeichnisse und der Geräte-Abbilder
-(``/var/linbo``) unterstützt.
+Es wird eine Migration der Benutzerinformationen (Namen, Passwort, Projekte), Computerinformationen (``workstations``), der Benutzerdaten (``/home``), Tausch- und Projektverzeichnisse und der Geräte-Abbilder (``/var/linbo``) unterstützt.
 
-Nicht migriert werden Beschreibungen von Projekten, Quota-Tabellen und
-Rollen, die Geräte bekommen. Diese müssen von Hand angepasst werden.
+Nicht migriert werden Beschreibungen von Projekten, Quota-Tabellen und Rollen, die Geräte bekommen. Diese müssen von Hand angepasst werden.
 
-Ebenso werden die Dienste mrbs, openSchulPortfolio und der Mail-Server
-nicht migriert, da diese - wenn benötigt - zur Installation in einem
+Ebenso werden die Dienste mrbs, openSchulPortfolio und der Mail-Server nicht migriert, da diese - wenn benötigt - zur Installation in einem
 Dockercontainer vorgesehen sind.
 
 Voraussetzungen
@@ -24,28 +19,16 @@ Voraussetzungen
 Bestehendes System
 ------------------
 
-Es muss als Quellsystem linuxmuster.net in der Version 6.2 installiert
-sein. Es ist möglich, dass auch ab Version 6.1 und 6.0
-eine Migration funktioniert. Dies wurde nicht offiziell
-getestet. (Stand: Dez. 2018)
+Es muss als Quellsystem linuxmuster.net in der Version 6.2 installiert sein. Es ist möglich, dass auch ab Version 6.1 und 6.0 eine Migration funktioniert. Dies wurde nicht offiziell getestet.
 
-Wer eine alte paedML Linux (zwischen Version 4.0.6 und 5.1.0) besitzt,
-für den kann der `Upgradepfad
-<http://docs.linuxmuster.net/de/v62/systemadministration/migration/index.html>`_
-über eine Migration zu einer linuxmuster.net 6.2 eine Option sein.
+Neues v7.1 System
+-----------------
 
-Neues v7 System
----------------
+Es wird davon ausgegangen, dass die VMs der Version 7.1 in der Virtualisierungsumegbung importiert und das Setup ausgeführt wurden. Nach der Installation wurden keine zusätzlichen Benutzer, Gruppen und Projekte angelegt. Als Schulinstanz wurde, wie beim Erstsetup vorgegeben, ``default-school`` beibehalten.
 
-Es wird davon ausgegangen, dass die VMs der Version 7 in der Virtualisierungsumegbung 
-importiert und das Setup ausgeführt wurden. Nch der Installation wurden keine zusätzlichen
-Benutzer, Gruppen und Projekte angelegt. Als Schulinstanz wurde, wie beim Erst-Setup vorgegeben,  
-`default-school` beibehalten. 
+Das Standard-Setup der v7.1 geht zunächst davon aus, dass keinerlei Netzbereichs-/Adressanpassungen und Netzsegmentierungen (Subnetting) durchgeführt wurden.
 
-Das Standard-Setup der v7 geht zunächst davon aus, dass keinerlei
-Netzbereichs-/Adressanpassungen und Netzsegmentierungen (Subnetting) durchgeführt wurden.
-
-- Die Migration wird in die Standard-Schulinstanz `default-school` vorgenommen.
+- Die Migration wird in die Standard-Schulinstanz ``default-school`` vorgenommen.
 - Das Zielsystem darf außer den standardmäßig angelegten Benutzern des
   Setups keine zusätzlichen Benutzer, Gruppen oder Projekte haben.
 
@@ -57,35 +40,30 @@ Netzbereichs-/Adressanpassungen und Netzsegmentierungen (Subnetting) durchgefüh
 System mit Netzanpassungen
 --------------------------
 
-Solltest du in der linuxmuster.net v6.2 andere Netzbereiche konfiguriert haben, die jetzt weiter 
-genutzt werden sollen, oder hast Du das Netz in Subnetze aufgeteilt und möchtest bei der Migration 
-diese Subnetze mit umstellen, dann ist nachstehendes Vorgehen unbedingt bereits 
-beim Erstsetup der VMs der V7 zu beachten.
+Solltest du in der linuxmuster.net v6.2 andere Netzbereiche konfiguriert haben, die jetzt weiter genutzt werden sollen, oder hast Du das Netz in Subnetze aufgeteilt und möchtest bei der Migration diese Subnetze mit umstellen, dann ist nachstehendes Vorgehen unbedingt bereits beim Erstsetup der VMs der v7.1 zu beachten.
 
 Ablauf
 ------
 
-1. VMs importieren
+1. VMs erstellen (:ref:`install-from-scratch-label`)
 2. VMs starten
 3. IPs der OPNsense® auf die bisher verwendeten IPs/Netze anpassen
-4. VMs (server, opsi,docker) mit netplan die IPs so ändern, dass diese die korrekte IP im internen (grünen) Netz haben wie bisher
-5. VMs vor dem Setup auf die neue Netzstruktur vorbereiten (linuxmuster-prepare)
+4. ServerVM mit netplan die IPs so ändern, dass diese die korrekte IP im internen (grünen) Netz haben wie bisher
+5. VMs vor dem Setup auf die neue Netzstruktur vorbereiten (:ref:`modify-net-label`)
 6. Erreichbarkeit der VMs im internen Netz testen.
-7. Update der VMs
-8. Erst-Setup durchführen
+7. Update der VMs druchführen
+8. Erstsetup durchführen (:ref:`setup-label`)
 
 IPs OPNsense® anpassen
 ----------------------
 
 Die IP der externen Schnittstelle (WAN) der OPNsense® ist ggf. anzupassen. Diese ist in der Erstauslieferung so konfiguriert, das diese eine IP via DHCP erhalten würde. Sollte die OPNsense® Firewall hinter einem Router arbeiten, so kann eine Anpassung für eine statische IP erforderlich sein.
 
-Hierzu rufst Du auf der Konsole in der OPNsense®, nachdem du dich als `root` angemeldet hast, den Punkt `2) Set interface IP address` auf. Solle eine DHCP-Konfiguration in deinem Netz hier nicht möglich sein,  wählst du zunächst die WAN-Schnittstelle aus und trägst die IP Adresse aus deinem lokalen Netz mit korrekter Subnetzmaske, Gateway und DNS ein.
+Hierzu rufst Du auf der Konsole in der OPNsense®, nachdem du dich als ``root`` angemeldet hast, den Punkt ``2) Set interface IP address`` auf. Solle eine DHCP-Konfiguration in deinem Netz hier nicht möglich sein,  wählst du zunächst die WAN-Schnittstelle aus und trägst die IP Adresse aus deinem lokalen Netz mit korrekter Subnetzmaske, Gateway und DNS ein.
 
-Danach wählst du die `LAN-Schnittstelle` aus und konfigurierst die bisherige IP, die im IPFire bereits genutzt wurde.
-Hast du z.B. ein Subnetting für das Server-Netz in der v6.2 genutzt, das im "grünen" Netz den Bereich 10.16.1.0/24 vorsieht, 
-so vergibst du hier auf der LAN-Schnittstelle der OPNsense® die IP 10.16.1.254/24 (Subnetmask 255.255.255.0 = 24 Bit).
+Danach wählst du die `LAN-Schnittstelle` aus und konfigurierst die bisherige IP, die im IPFire bereits genutzt wurde. Hast du z.B. ein Subnetting für das Server-Netz in der v6.2 genutzt, das im "grünen" Netz den Bereich 10.16.1.0/24 vorsieht, so vergibst du hier auf der LAN-Schnittstelle der OPNsense® die IP 10.16.1.254/24 (Subnetmask 255.255.255.0 = 24 Bit).
 
-Bei vorhandener Subnettierung dürfte für o.g. bsp. der L3-Switch im Server - VLAN die IP 10.16.1.253 haben. Zudem ist darauf zu achten, dass auf der Virtualisierungsumgebung die korrekten Bridges für das jeweilige VLAN den Schnittstellen der VMs korrekt zugeordnet wurden.
+Bei vorhandener Subnettierung dürfte für o.g. Besipiel der L3-Switch im Server - VLAN die IP 10.16.1.253 haben. Zudem ist darauf zu achten, dass auf der Virtualisierungsumgebung die korrekten Bridges für das jeweilige VLAN den Schnittstellen der VMs korrekt zugeordnet wurden.
 
 VMs vorbereiten
 ^^^^^^^^^^^^^^^
@@ -93,10 +71,9 @@ VMs vorbereiten
 netplan
 """""""
 
-Die VMs server, opsi und docker müssen nun `vor dem Erst-Setup` vorbereitet werden.
+Die Server-VM muss nun vorbereitet werden.
 
-In der Datei `/etc/netplan/01-meine-netzconfig.yaml` - Name bitte auf dein System anpassen - sind die Netzwerkeinstellungen 
-wie folgt zu ändern (**Hinweis:** nachstehende Angaben greifen o.g. Beispiel hier nur für die Server-VM auf):
+In der Datei `/etc/netplan/01-meine-netzconfig.yaml` - Name bitte auf dein System anpassen - sind die Netzwerkeinstellungen wie folgt zu ändern (**Hinweis:** nachstehende Angaben greifen o.g. Beispiel hier nur für die Server-VM auf):
 
 .. code::
 
@@ -119,28 +96,26 @@ Danach speicherst du die Änderungen und wendest diese mit folgendem Befehl an u
   netplan apply
   ping 10.16.1.254
 
-Erhälst du erfolgreich Pakete zurück, so kanst du die Firewall erreichen. Diese Schritte wiederholst du dann mit den VMs opsi und docker. Hierbei gibst du dann die jeweils korrekten IPs (abweichend zu o.g. Beispiel) an.
+Erhälst du erfolgreich Pakete zurück, so kanst du die Firewall erreichen.
 
-Können alle VMs im internen Netz sich untereinander via ping erreichen, bereitest du die VMs mit linuxmuster-prepare vor.
+Können alle VMs im internen Netz sich untereinander via ping erreichen, bereitest du die VMs mit linuxmuster-prepare vor. siehe: :ref:`modify-net-label`
 
 linuxmuster-prepare
 """""""""""""""""""
 
-Jetzt meldest du dich auf der Eingabekonsole an den VMs server, opsi und docker an.
+Jetzt meldest du dich auf der Eingabekonsole an der Server-VM an.
 
-Du bereitest diese VMs für der Erstsetup vor, indem du die korrekten Angaben zur gewünschten IP der VM und der Firewall mit linuxmuster-prepare angibst.
+Du bereitest diese VMs für der Erstsetup vor, indem du die korrekten Angaben zur gewünschten IP der VM und der Firewall mit linuxmuster-prepare (siehe: :ref:`modify-net-label`) angibst.
 
-Gehen wir davon aus, dass Du für die Server VM im vorangegangenen Schritt die IP `10.16.1.1/24` und für die 
-OPNsense® als Firewall die IP `10.16.1.254/24` zugeordnet hast. Zudem nehmen wir an, dass Deine zukunftige Schuldomäne den Namen `schuldomaene` erhalten wird und deine Domain `meineschule`.`de` lautet.
+Gehen wir davon aus, dass Du für die Server VM im vorangegangenen Schritt die IP `10.16.1.1/24` und für die OPNsense® als Firewall die IP `10.16.1.254/24` zugeordnet hast. Zudem nehmen wir an, dass Deine zukunftige Schuldomäne den Namen `schuldomaene` erhalten wird und deine Domain `meineschule`.`de` lautet.
 
 Mit diesen Vorgaben bereitest du die Server-VM nun mit folgendem Befehl auf das Setup vor:
 
 .. code::
 
-   linuxmuster-prepare -s -u -d schuldomaene.meineschule.de -n 10.16.1.1/24 -f 10.16.1.254
+   ./lmn71-appliance -s -u -d schuldomaene.meineschule.de -n 10.16.1.1/24 -f 10.16.1.254
 
-Gleiches Vorgehen wählst du zur Vorbereitung der VMs opsi und docker, aber mit abweichender IP für die Option `-n`.
-Starte nach den Anpassungen jede der VMs neu mit 'reboot'.
+Starte nach den Anpassungen die VM neu mit ``reboot``.
 
 Tests & Setup
 """""""""""""
@@ -151,28 +126,25 @@ Teste nun die Erreichbarkeit der VMs im internen Netz mit folgenden Befehlen (an
 
    ping 10.16.1.254
    ping 10.16.1.1
-   ping 10.16.1.2
-   ping 10.16.1.3
 
-Funktioniert dies von allen VMs aus korrekt, so kann jetzt die Aktualisierung aller VMs erfolgen.
+Funktioniert dies korrekt, so kann jetzt die Aktualisierung der VM erfolgen.
 
-Aktualisiere jede VM mit folgendem Befehl:
+Aktualisiere die VM mit folgendem Befehl:
 
 .. code::
 
    apt update
    apt dist-upgrade
 
-Starte danach alle VMs neu.
+Starte danach die VM neu.
 
-Nach dem Neustart meldest du dich an der Server-VM als Benutzer `root` an und rufst das Setup mit folgendem 
-Befehl auf:
+Nach dem Neustart meldest du dich an der Server-VM als Benutzer `root` an und rufst das Setup mit folgendem Befehl auf:
 
 .. code::
 
    linuxmuster-setup
 
-Nach erfolgreichem Setup durchläuft du die nachstehend dargestellten schritte zur Migration.
+Nach erfolgreichem Setup :ref:`setup-label` durchläuft du die nachstehend dargestellten Schritte zur Migration.
   
 
 Vorgehen zur Migration
@@ -185,9 +157,9 @@ Vorgehen zur Migration
    7.x) und rekonstruiert dort Benutzer, Passwörter, Projekte und
    Geräte, etc.
 
-3. Es müssen manuell die Verzeichnisse ``/home/share``,
-   ``/home/teachers`` und ``/home/students`` im Zielsystem gemountet
-   werden (z.B. über eine externe Festplatte und bind-mount,
+3. Es müssen manuell die Verzeichnisse ``/home/share``, ``/home/teachers`` 
+   und ``/home/students`` im Zielsystem gemountet werden 
+   (z.B. über eine externe Festplatte und bind-mount,
    Netzwerk-mount, etc.) und importiert werden.
 
 4. Die Daten von LINBO können ebenso wie Benutzerdaten synchronisiert
@@ -268,6 +240,10 @@ mit Version 7.x. Um die exportierten Daten wieder zu löschen, führe ``sophomor
 
 Import der Daten unter linuxmuster.net 7.x
 ==========================================
+
+.. attention::
+
+   es ist zu klären wie in der v7.1 mit dem Skript sophomorix-vampire verfahren wird.
 
 Installiere die ``sophomorix-vampire``-Skripte über
 

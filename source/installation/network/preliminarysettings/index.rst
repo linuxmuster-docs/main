@@ -1,4 +1,3 @@
-.. include:: /guided-inst.subst
 
 .. _modify-net-label:
 
