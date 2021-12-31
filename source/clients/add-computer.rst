@@ -1,4 +1,3 @@
-.. include:: /guided-inst.subst
 
 .. _add-computer-label:
 
@@ -56,8 +55,8 @@ Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM 
  * Boot Firmware: BIOS oder UEFI (je nach später genutzten PCs) - Achtung: start.conf von linbo ggf. anpassen -> siehe Hinweise bei den Client-Systemen
  * 50GB HDD (20GB OS + 20GB Cache + ggf. SWAP oder andere Partitionen)
 
-Hardwareklasse (HWK) / start.conf erstellen
--------------------------------------------
+Hardwareklasse (HWK) / Gruppe erstellen
+----------------------------------------
 
 Melde dich als Benutzer ``global-admin`` an der Web-UI an.
 
@@ -65,7 +64,7 @@ Melde dich als Benutzer ``global-admin`` an der Web-UI an.
    :align: center
    :alt: WebUI login
 
-Erstelle nun die Konfiguration für die neue Hardwareklasse. Dafür klickst du links im Menü den Eintrag ``Geräteverwaltung --> Linbo``.
+Erstelle nun die Konfiguration für die neue Hardwareklasse. Dafür klickst du links im Menü den Eintrag ``Geräteverwaltung --> Linbo4``.
 
 .. figure:: media/02-webui-menue-linbo.png
    :align: center
@@ -285,12 +284,6 @@ PC / VM starten
 
 Mit o.g. Einstellungen startest du nun den PC / die VM. Während des Boot-Vorgangs erhält der PC / die VM via PXE eine IP-Adresse und Linbo wird geladen.
 
-Der Boot-Vorgang sieht wie folgt aus:
-
-.. figure:: media/16-linbo-start-screen.png
-   :align: center
-   :alt: Linbo start screen
-
 Wurde in der start.conf kein ``Autostart`` gewählt, startet Linbo mit folgendem Start-Bildschirm:
 
 .. figure:: media/17-linbo-webui-start-screen.png
@@ -319,12 +312,17 @@ Klicke nun auf den Menüeintrag ``Festplatte partitionieren``. Es öffnet sich e
 
 Bestätige die Paritionierung und Formatierung mit: ``ja``
 
-Fahre danach den PC / die VM über das Icon ``Herunterfahren`` (unten rechts) herunter.
+Nach erfolgreicher Formatierung siehst du diese Bestätigung:
 
-Nun kannst du mit der Installation des gewünschtem Betriebssystems (Linux oder Windows) durch Auswahl einer der nachstehnden Links fortfahren.
+.. figure:: media/21-linbo-webui-partitioned.png
+   :align: center
+   :alt: Linbo WebUI paritioned
 
-+--------------------------------------------------------------------+-------------------------------------------+
-| Installation von Linux-Clients                                     | |follow_me2linux-clients_a|               |
-+--------------------------------------------------------------------+-------------------------------------------+
-| Installation von Windows-Clients                                   | |follow_me2windows-clients_a|             |
-+--------------------------------------------------------------------+-------------------------------------------+
+Klicke auf das Zeichen ``<`` und fahre danach den PC / die VM über das Icon ``Herunterfahren`` (unten rechts) herunter.
+
+.. figure:: media/22-linbo-webui-shutdown.png
+   :align: center
+   :alt: Linbo WebUI shutdown.
+
+Nun kannst du mit der Installation des gewünschtem Betriebssystems (Linux oder Windows) fortfahren. Wähle für die entsprechenden Anleitungen links im Menü die entsprechenden Einträge aus.
+

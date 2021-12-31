@@ -9,7 +9,7 @@ Linux-Client installieren
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_, 
                    `@dorian <https://ask.linuxmuster.net/u/dorian>`_
 
-linuxmuster.net stellt für Ubuntu-Clients das Paket ``linuxmuster-linuxclient7`` bereit. Es führt automatisiert den Domänenbeitritt aus und das vereinheitlicht das Management von Liux- und Windowsclients durch Auslesen der GPO-Konfigurationen im Active Directory.
+linuxmuster.net stellt für Ubuntu-Clients das Paket ``linuxmuster-linuxclient7`` bereit. Es führt automatisiert den Domänenbeitritt aus und vereinheitlicht das Management von Liux- und Windows-Clients durch Auslesen der GPO-Konfigurationen im Active Directory.
 
 Offiziell wird aktuell nur Ubuntu 20.04 mit gdm3 und Gnome unterstzützt. Andere Ubuntu-basierte Distributionen mit gdm3 und Gnome könnten aber auch funktionieren.
 
@@ -23,7 +23,7 @@ Du hast bereits:
    4.  PC/VM via PXE mit Linbo gestartet
    5.  Die Festplatte mit Linbo partitioniert und formatiert
 
-Falls du das noch nicht getan hast, starte zuerst mit den Schritten, die im Kapitel :ref:`configure-printers-label` beschrieben werden und mache erst danach hier weiter.
+Falls du das noch nicht getan hast, starte zuerst mit den Schritten, die im Kapitel :ref:`add-computer-label` beschrieben werden und mache erst danach hier weiter.
 
 Einrichten eines Linux-Clients
 ==============================
@@ -117,28 +117,48 @@ Es wird ein neues Fenster geöffnet:
 
 Wähle aus, dass du ein neues Image erstellen möchtest, gib einen Namen für das Image an und klicke auf ``erstellen + hochladen``.
 
-Erscheint die Meldung, dass das Image erfolgreich hochgeladen werden konnte, so klicke unten rechts auf das oberste Symbol, um dich abzumelden. 
+Während des Vorgangs siehst Du nachstehenden Bildschirm:
 
 .. figure:: media/11-linux-client-ubu-install.png
    :align: center
-   :alt: Ubuntu Installation: leave tools menue
+   :alt: Ubuntu Installation: image upload
+
+Zum Abschluss erscheint die Meldung, dass das Image erfolgreich hochgeladen wurde.
+
+.. figure:: media/11a-linux-client-ubu-install.png
+   :align: center
+   :alt: Ubuntu Installation: image uploaded successfully
+
+Gehe durch einen Klick auf das Zeichen ``<`` zurück und klicke im nächsten Bildschirm das obere Icon von den drei Icsons ganz rechts, um sich abzumelden.
+
+Du siehst nun drei Start-Icons. Der grosse Icons started das Image sychronisiert, während das grüne Icon das locale Image started.
+
+.. figure:: media/11b-linux-client-ubu-install.png
+   :align: center
+   :alt: Ubuntu Installation: image uploaded - new menue icons
+
+Bevor du nun das Image startest, musst du zuerst noch die Hardwareklasse anpassen.
 
 Imagenamen eintragen (HWK)
 --------------------------
 
 Nachdem du nun das Image erstellt hast, musst du es noch deiner Hardwareklasse zuweisen. Denn zu Beginn hattest du bei der Rechneraufnahme für das Basisimage noch ``None`` eingetragen, bzw. stehen gelassen.
 
-Gehe dazu in der WebUI auf ``Geräteverwaltung -> Linbo -> Gruppen -> <hwk auswählen>``. Wähle hier unter ``Partitionen`` dein Betriebssystem (Reiterkarte ``OS``) aus und klicke das Stift-Icon. Klicke in dem sich öffnenden Fenster die Reiterkarte unter ``OS`` und klicke unter dem Eintrag ``Basisimage`` auf die Drop-down Liste und wähle das erstellte Image aus. (vgl. hierzu auch das Vorgehen unter :ref:`add-computer-label`).
+Gehe dazu in der WebUI auf ``Geräteverwaltung -> Linbo 4 -> Gruppen -> <hwk auswählen>``. Klicke für die gewünschte HWK das Stift-Symbol, um die Einstellungen anzupassen.Es öffnet sich das Fenster mit den Einstellungen für die HWK. Wähle hier unter ``Partitionen`` dein Betriebssystem (Reiterkarte ``OS``) aus und klicke das Stift-Icon. Klicke in dem sich öffnenden Fenster die Reiterkarte unter ``OS`` und klicke unter dem Eintrag ``Basisimage`` auf die Drop-down Liste und wähle das erstellte Image aus. (vgl. hierzu auch das Vorgehen unter :ref:`add-computer-label`).
 
 .. figure:: media/12-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Installation: indicate image name
 
-Übernehme die Eintragungen jeweils mit ``SPEICHERN``.
+Übernehme die Eintragungen jeweils mit ``SPEICHERN``. Danach wird automatisch ein Import der Geräte ausgeführt, um diese Einstellungen für alle Geräte der HWK zu übernehmen.
 
-Klicke in der WebUI unter der ``Geräteverwaltung ->  Speichern & Importieren``.
+Alternativ kannst du in der WebUI unter der ``Geräteverwaltung ->  Speichern & Importieren`` klicken.
 
 Starte danach den Client erneut mit Linbo und klicke nun das große Festplattensymbol bzw. das Symbol, welches du ausgewählt hast, um Ubuntu synchronisiert zu starten.
+
+.. hint::
+
+   Das neue Image befindet sich auf dem Server unter ``/srv/linbo/images/<os>/`` - also z.B. /srv/linbo/images/ubuntu/ubuntu.qcow2
 
 Paket linuxmuster-linuxclient7 installieren
 --------------------------------------------
@@ -160,11 +180,11 @@ Installiere das Paket ``linuxmuster-linuxclient7`` wie folgt:
 
 Öffne ein Terminal unter Ubuntu mit ``strg+t`` oder klicke unten links auf die Kacheln und gebe in der Suchzeile als Anwendung ``Terminal`` ein.
 
-Erstelle im Terminal die Datei ``lmn7-client.list``, um das Repository für den linuxmuster-client einzubinden. Rufe hierzu für den Editor Nano mit folgendem Befehl auf: ``sudo nano /etc/apt/sources.list.de/lmn7-client.list`` und trage folgende Zeile ein:
+Erstelle im Terminal die Datei ``lmn7-client.list``, um das Repository für den linuxmuster-client einzubinden. Rufe hierzu für den Editor Nano mit folgendem Befehl auf: ``sudo nano /etc/apt/sources.list.d/lmn71.list`` und trage folgende Zeile ein:
 
 .. code::
 
-   deb [trusted=yes] https://archive.linuxmuster.net  focal/
+   deb [trusted=yes] https://deb.linuxmuster.net/ lmn71 main
 
 2. Schritt
 ^^^^^^^^^^
@@ -173,23 +193,10 @@ Lade den Schlüssel des Archivs herunter und installiere ihn:
 
 .. code::
 
-   wget -O - https://archive.linuxmuster.net/archive.linuxmuster.net.key | sudo apt-key add -
+   wget -qO - "https://deb.linuxmuster.net/pub.gpg" | sudo apt-key add -
 
 Aktualisiere die Paketinformationen mit ``sudo apt update``.
 
-Es kann sein, dass du den Hinweis erhältst, dass es GPG-Fehler gibt:
-
-.. figure:: media/14-linux-client-ubu-install.png
-   :align: center
-   :alt: Ubuntu Setup: GPG errors
-
-Diesen Fehler kannst du beheben, indem du folgenden Befehl ausführst:
-
-.. code::
-
-   sudo apt -o Acquire::AllowInsecureRepositories=true -o Acquire::AllowDowngradeToInsecureRepositories=true update
-
-Der Fehler wird zwar weiterhin angezeigt, du kannst nun aber das linuxmuster-linuxclient7 - Paket installieren.
 
 3. Schritt
 ^^^^^^^^^^
