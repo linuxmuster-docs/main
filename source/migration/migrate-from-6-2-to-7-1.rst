@@ -173,7 +173,7 @@ d.h. der Befehl auf der Konsole ``sophomorix-check`` darf keine
 hinzuzufügenden oder zu verändernden Benutzer anzeigen.
 Dafür führt man folgende Schritte als `root` nacheinander aus:
 
-.. code-block:: console
+.. code::
 
    # sophomorix-check
    ...
@@ -190,10 +190,10 @@ wollen.
 sophomorix-dump installieren
 ----------------------------
 
-Installiere jetzt ``sophomorix-dump`` aus dem babo-Repository oder
+**Installiere** jetzt ``sophomorix-dump`` aus dem babo-Repository oder
 lade das entsprechende Debian-Paket von der Webseite herunter
 
-.. code-block:: console
+.. code::
 
    server ~ # apt-get update
    server ~ # apt-get install sophomorix-dump
@@ -205,7 +205,7 @@ einbinden kannst) unter http://pkg.linuxmuster.net/babo/ die
 neueste Version `sophomorix-dump_u.v.w-z_all.deb` herausfinden,
 herunterladen und installieren:
 
-.. code-block:: console
+.. code::
 
    server ~ # wget http://pkg.linuxmuster.net/babo/sophomorix-dump_3.63.2-1_all.deb
    server ~ # dpkg -i sophomorix-dump_3.63.2-1_all.deb
@@ -217,7 +217,7 @@ Daten exportieren
 
 Führe das Skript ``sophomorix-dump`` aus
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-dump
    ...
@@ -241,37 +241,27 @@ mit Version 7.x. Um die exportierten Daten wieder zu löschen, führe ``sophomor
 Import der Daten unter linuxmuster.net 7.x
 ==========================================
 
-.. attention::
+**Installiere** die ``sophomorix-vampire``-Skripte über
 
-   es ist zu klären wie in der v7.1 mit dem Skript sophomorix-vampire verfahren wird.
-
-Installiere die ``sophomorix-vampire``-Skripte über
-
-.. code-block:: console
+.. code::
 
    server ~ # apt update
    server ~ # apt install sophomorix-vampire
    ...
 
-Das Skript ``sophomorix-vampire -h`` zeigt Optionen und Schritte an,
-die im folgenden durchgeführt werden. 
+Das Skript ``sophomorix-vampire -h`` zeigt Optionen und Schritte an, die im folgenden durchgeführt werden.
 
 Kompletter Import mit sophomorix-vampire-example
 ------------------------------------------------
 
-Beispielhaft führt das Skript ``sophomorix-vampire-example`` alle
-Schritte für eine typische Schule durch. Es empfiehlt sich das Skript
-in den übertragenen Ordner ``sophomorix-dump`` zu kopieren und an die
-eigenen Bedürfnisse anzupassen. Besonders der Import der Nutzerdaten
-sollte in der folgenden Schritt-für-Schritt Anleitung genau geprüft
-werden.
+Beispielhaft führt das Skript ``sophomorix-vampire-example`` alle Schritte für eine typische Schule durch. Es empfiehlt sich das Skript in den übertragenen Ordner ``sophomorix-dump`` zu kopieren und an die eigenen Bedürfnisse anzupassen. Besonders der Import der Nutzerdaten sollte in der folgenden Schritt-für-Schritt Anleitung genau geprüft werden.
 
 1. Analyse der exportierten Daten
 ---------------------------------
 
 Die folgende Analyse zeigt
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --analyze
 
@@ -288,18 +278,17 @@ Die folgende Analyse zeigt
 2. Migration der Klassen
 ------------------------
 
-Alle Klassen werden vor den Benutzern migriert, inklusive eventueller
-Umbenennungen der Klassennamen wie in der Analyse angezeigt. Dafür
+Alle Klassen werden vor den Benutzern migriert, inklusive eventueller Umbenennungen der Klassennamen wie in der Analyse angezeigt. Dafür
 erstellt man zunächst das Klassenskript und führt es danach aus
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --create-class-script
    server ~ # /root/sophomorix-vampire/sophomorix-vampire-classes.sh
 
 Jetzt können die neu erstellten Klassen überprüft werden, beispielsweise
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-class -i
    server ~ # sophomorix-class -i --class teachers
@@ -307,20 +296,18 @@ Jetzt können die neu erstellten Klassen überprüft werden, beispielsweise
 3. Migration der Benutzer
 -------------------------
 
-Zunächst muss die Passwortlängen und -komplexitätsüberprüfung von
-Samba 4 so eingestellt werden, dass bisherige einfache Passwörter
+Zunächst muss die Passwortlängen und -komplexitätsüberprüfung von Samba 4 so eingestellt werden, dass bisherige einfache Passwörter
 erlaubt sind.
 
-.. code-block:: console
+.. code::
 
    server ~ # samba-tool domain passwordsettings set --complexity=off
    server ~ # samba-tool domain passwordsettings set --min-pwd-length=1
 
-Jetzt wird aus den exportierten Daten eine Datei ``sophomorix.add``
-erzeugt, die an die richtige Stelle im System kopiert werden muss, um
+Jetzt wird aus den exportierten Daten eine Datei ``sophomorix.add`` erzeugt, die an die richtige Stelle im System kopiert werden muss, um
 danach die Benutzer regulär aufzunehmen.
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --create-add-file
    server ~ # cp /root/sophomorix-vampire/sophomorix.add /var/lib/sophomorix/check-result/sophomorix.add
@@ -330,7 +317,7 @@ Folgender Schritt informiert vorab mit ``ERRORS`` und ``WARNINGS``
 sollten manuell in der Datei
 ``/var/lib/sophomorix/check-result/sophomorix.add`` korrigiert werden.
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-add -i
    ...
@@ -341,7 +328,7 @@ sollten manuell in der Datei
 Die Aufnahme der Benutzer wird ca. 1 Sekunde Zeit pro Benutzer in
 Anspruch nehmen, Zeit einen Tee zu trinken.
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-add 
    ...
@@ -350,7 +337,7 @@ Die Aufnahme
 
 - nimmt die Benutzer mit ihren Erstpasswörtern auf, dies kann mit
 
-  .. code-block:: console
+  .. code::
 
      server ~ # sophomorix-passwd --test-firstpassword
      ...
@@ -368,7 +355,7 @@ Die Aufnahme
 Die mit Hash codierten Passwörter werde mit folgendem Befehl
 importiert und sollte keine Fehler erzeugen
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --import-user-password-hashes
    ...
@@ -376,7 +363,7 @@ importiert und sollte keine Fehler erzeugen
 
 Jetzt müssen die standardmäßig komplexen Passwörter wieder aktiviert werden
 
-.. code-block:: console
+.. code::
 
    server ~ # samba-tool domain passwordsettings set --complexity=default
    server ~ # samba-tool domain passwordsettings set --min-pwd-length=default
@@ -388,13 +375,13 @@ Jetzt sollten für Konten bei denen nicht mehr das Erstpasswort gilt,
 der folgende Test fehlschlagen. Für alle Konten mit Erstpasswörtern
 sollte er noch funktionieren.
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-passwd --test-firstpassword
 
 Zeige einen oder mehrere Benutzer an
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-user -i
    server ~ # sophomorix-user -i --user name
@@ -405,7 +392,7 @@ Zeige einen oder mehrere Benutzer an
 
 Wie bisher
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --create-class-adminadd-script
    server ~ # /root/sophomorix-vampire/sophomorix-vampire-classes-adminadd.sh
@@ -415,7 +402,7 @@ Wie bisher
 
 Im nachfolgenden Schritt werden alle Projekte importiert.
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --create-project-script
    server ~ # /root/sophomorix-vampire/sophomorix-vampire-projects.sh
@@ -425,7 +412,7 @@ Tests
 
 Zeige ein oder mehrere Projekte an
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-project -i
    server ~ # sophomorix-project -i -p name | p_name
@@ -434,11 +421,11 @@ Zeige ein oder mehrere Projekte an
 7. Konfigurationsdateien importieren
 ------------------------------------
 
-Mit folgendem Schritt werden wichtige Konfigurationsdateien verändert. 
+Mit folgendem Schritt werden wichtige Konfigurationsdateien verändert.
 
 Das Skript muss zwei Mal ausgeführt werden.
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --restore-config-files
    ...
@@ -454,13 +441,13 @@ Das Skript muss zwei Mal ausgeführt werden.
 
 Grundsätzlicher Durchlauf von ``sophomorix-check`` muss funktionieren:
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-check
 
 Stelle sicher, dass keine weiteren Benutzer hinzugefügt werden müssen:
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-add -i
 
@@ -469,13 +456,13 @@ Mit folgendem Schritt werden
 - Benutzernamen in UTF-8 konvertiert (ab jetzt sind Umlaute und Sonderzeichen in Namen möglich),
 - Zugriffsrechte in der Schulkonsole gesetzt
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-update
 
 Lösche die Benutzer, die nach deinen Einstellungen in ``school.conf`` fällig werden.
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-kill
 
@@ -484,14 +471,14 @@ Tests
 
 So kann man überprüfen, ob Sonderzeichen in ``students.csv`` oder ``teachers.csv`` in das System übernommen wurden:
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-user -i -u <user_with_umlaut>
 
 9. Rechner importieren
 ----------------------
 
-.. code-block:: console
+.. code::
 
    server ~ # linuxmuster-import-devices --dry-run
    server ~ # linuxmuster-import-devices
@@ -501,14 +488,14 @@ Tests
 
 Überprüfe, ob einzelne Rechner vorhanden sind:
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-device -d firewall -i
    server ~ # sophomorix-device -r no-pxe -i
 
 Überprüfe ob die Namensauflösung funktioniert:
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-device --dns-test
 
@@ -517,32 +504,26 @@ Tests
 
 Benutzer und Gruppen können mit folgendem Skript getestet werden:
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --verify-uid
 
 11. Synchronisiere Benutzerdaten
 --------------------------------
 
-Zunächst müssen über irgendein Verfahren die Verzeichnisse
-``/home/share``, ``/home/teachers`` und ``/home/students`` vom
-Quellsystem im Zielsystem unter einem Pfad (hier im Beispiel:
-``/mnt``) erscheinen.
+Zunächst müssen über irgendein Verfahren die Verzeichnisse ``/home/share``, ``/home/teachers`` und ``/home/students`` vom Quellsystem im Zielsystem unter einem Pfad (hier im Beispiel: ``/mnt``) erscheinen.
 
-.. code-block:: console
+.. code::
 
    /mnt/home/share
    /mnt/home/students
    /mnt/home/teachers
 
-Der Pfad im Zielsystem wird über das Kommandozeilenargument
-``--path-oldserver /mnt`` an nachfolgende Skripte übergeben und
-erwartet dann die obige Ordnerstruktur unterhalb von ``/mnt``.
+Der Pfad im Zielsystem wird über das Kommandozeilenargument ``--path-oldserver /mnt`` an nachfolgende Skripte übergeben und erwartet dann die obige Ordnerstruktur unterhalb von ``/mnt``.
 
-Für einzelne Schüler, Lehrer, Klassen und Projekte sollte man ein
-Synchronisieren testen: 
+Für einzelne Schüler, Lehrer, Klassen und Projekte sollte man eine Synchronisation testen: 
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-vampire --rsync-student-home <studentname> --path-oldserver /mnt
    server ~ # sophomorix-vampire --rsync-teacher-home <teachername> --path-oldserver /mnt
@@ -551,7 +532,7 @@ Synchronisieren testen:
 
 Jetzt können alle Schüler, Lehrer, Klassen und Projekte in einem Schritt importiert werden
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-vampire --rsync-all-student-homes --path-oldserver /mnt
    server ~ # sophomorix-vampire --rsync-all-teacher-homes --path-oldserver /mnt
@@ -561,25 +542,22 @@ Jetzt können alle Schüler, Lehrer, Klassen und Projekte in einem Schritt impor
 12. Synchronisiere LINBO-Daten
 ------------------------------
 
-Alle Daten von LINBO können ebenso wie die Benutzerdaten aus dem
-früheren Verzeichnis ``/var/linbo`` importiert werden. 
+Alle Daten von LINBO können ebenso wie die Benutzerdaten aus dem früheren Verzeichnis ``/var/linbo`` importiert werden.
 
-.. code-block:: console
+.. code::
 
    /mnt/var/linbo
 
-Auch hier wird beispielsweise der Inhalt von ``/var/linbo`` in das
-Zielsystem nach ``/mnt`` eingebunden. Das Skript erwartet dann die
+Auch hier wird beispielsweise der Inhalt von ``/var/linbo`` in das Zielsystem nach ``/mnt`` eingebunden. Das Skript erwartet dann die
 obige Ordnerstruktur unterhalb von ``/mnt``.
 
-.. code-block:: console
+.. code::
 
    server ~ # sophomorix-vampire --rsync-linbo --path-oldserver /mnt
 
-Jetzt muss LINBO erneut installiert werden, um Änderungen,
-die nur unter linuxmuster.net v7 existieren, importiert werden
+Jetzt muss LINBO erneut installiert werden, um Änderungen, die nur unter linuxmuster.net v7 existieren, importiert werden
 
-.. code-block:: console
+.. code::
 
    server ~ # apt-get --reinstall install linuxmuster-linbo7 linuxmuster-linbo-common7
 
@@ -589,7 +567,5 @@ die nur unter linuxmuster.net v7 existieren, importiert werden
 - Beschreibungen zu Projekten hinzufügen
 - Die Rolle von Geräten festlegen
 - Quota für die Benutzer (neu) festlegen
-- Bei migrierten Subnetzen: Es muss in
-  ``/etc/linuxmuster/subnets.csv`` das Gateway für das Servernetz
-  eingetragen werden, z.B. 10.0.0.253 für einen L3-Switch. Danach muss
-  ``linuxmuster-import-subnets`` ausgeführt werden.
+- Bei migrierten Subnetzen: Es muss in ``/etc/linuxmuster/subnets.csv`` das Gateway für das Servernetz eingetragen werden, z.B. 10.0.0.253 für einen L3-Switch. Danach muss ``linuxmuster-import-subnets`` ausgeführt werden.
+
