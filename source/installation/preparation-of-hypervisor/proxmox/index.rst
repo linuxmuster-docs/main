@@ -20,17 +20,16 @@ Diese Anleitung beinhaltet Angaben zu den notwendigen Systemanforderungen und Fe
 Systemvoraussetzungen
 =====================
 
-In der unten aufgeführten Tabelle findest du die Systemvoraussetzungen zum Betrieb der von uns bereitgestellten virtuellen Maschinen. Die Systemanforderungen für die Installation von Proxmox selbst finden sich im Web unter https://www.proxmox.com/de/proxmox-ve/systemanforderungen. 
+In der unten aufgeführten Tabelle findest du die Systemvoraussetzungen zum Betrieb der virtuellen Maschinen. Die Systemanforderungen für die Installation von Proxmox selbst finden sich im Web unter https://www.proxmox.com/de/proxmox-ve/systemanforderungen. 
 
-Die Werte bilden die Mindestvoraussetzungen zur Ploanung. Für die Installation mit Proxmox und linuxmuster v7.1 wird als Standard der 
-``IP-Bereich 10.0.0.0/16`` genutzt.
+Die Werte bilden die Mindestvoraussetzungen zur Planung. Für die Installation mit Proxmox und linuxmuster v7.1 wird als Standard der ``IP-Bereich 10.0.0.0/16`` genutzt.
 
 ============ ============= ================ =====
 VM           IP            HDD              RAM 
 ============ ============= ================ =====
 OPNsense®    10.0.0.254/16 10 GiB           4 GiB
 Server       10.0.0.1/16   25 GiB u 100 GiB 4 GiB
-Proxmox-Host 10.0.0.10/16  100 GiB          4 GiB
+Proxmox-Host 10.0.0.10/16  500 GiB          4 GiB
 ============ ============= ================ =====
 
 Die Festplattengröße sowie der genutzte RAM der jeweiligen VMs kann ggf- vor deren Einrichtung einfach an die Bedürfnisse der Schule angepasst werden.
@@ -577,7 +576,7 @@ Es muss folgende SHA256-Prüfsumme errechnet werden:
 
 Stimmen diese überein, lädst du nun die ISO-Datei für Ubuntu Server auf den ISO-Datenspeicher von Proxmox.
 
-Rufe wie oben das Fenster auf und gebe doe ISO-Datei für Ubuntu Server 18.04.6 LTS ein:
+Rufe wie oben das Fenster auf und gebe die ISO-Datei für Ubuntu Server 18.04.6 LTS ein:
 
 .. figure:: media/proxmox-upload-iso-images-03.png
    :align: center
@@ -688,7 +687,6 @@ Achte für die weitere Installation darauf, wie du die Bridges zugeordnet hast:
 Klicke auf ``Add`` und kontrolliere dann nochmals alle Einstellungen der neu angelegten VM.
 
 Die eigentliche Installation von OPNsense in der VM folgt später und ist hier dokumentiert :ref:`install-from-scratch-label`
-
 
 Anlegen der VM für linuxmuster server
 -------------------------------------
