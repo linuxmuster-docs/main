@@ -160,7 +160,7 @@ Installiere das Paket ``linuxmuster-linuxclient7`` wie folgt:
 
 Öffne ein Terminal unter Ubuntu mit ``strg+t`` oder klicke unten links auf die Kacheln und gebe in der Suchzeile als Anwendung ``Terminal`` ein.
 
-Erstelle im Terminal die Datei ``lmn7-client.list``, um das Repository für den linuxmuster-client einzubinden. Rufe hierzu für den Editor Nano mit folgendem Befehl auf: ``sudo nano /etc/apt/sources.list.de/lmn7-client.list`` und trage folgende Zeile ein:
+Erstelle im Terminal die Datei ``lmn7-client.list``, um das Repository für den linuxmuster-client einzubinden. Rufe hierzu für den Editor Nano mit folgendem Befehl auf: ``sudo nano /etc/apt/sources.list.d/lmn7-client.list`` und trage folgende Zeile ein:
 
 .. code::
 
