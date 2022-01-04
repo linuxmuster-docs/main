@@ -4,7 +4,8 @@
 Install from Scratch
 ====================
 
-.. sectionauthor:: `@rettich <https://ask.linuxmuster.net/u/rettich>`_
+.. sectionauthor:: `@rettich <https://ask.linuxmuster.net/u/rettich>`_,
+                   `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
 
 
 In diesem Dokument findest du eine "Schritt-für-Schritt" Anleitung zur Installation der linuxmuster.net Musterlösung direkt auf der Hardware. 
