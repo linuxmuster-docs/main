@@ -1,4 +1,3 @@
-.. include:: /guided-inst.subst
 
 .. _install-on-proxmox-label:
 
