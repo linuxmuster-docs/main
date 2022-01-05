@@ -119,6 +119,10 @@ Der Boot-Vorgang kann dann eine Weile dauern. Vor allem, wenn der Router kein DH
 
 Wenn alles geklappt hat, ist Folgendes zu sehen:
 
+.. hint::
+
+   Nachstehend dargestellte IPs und Netze können bei dir auch andere sein. Intern verwendet im LAN weist OPNsense nach der Erstinstallation immer die IP 192.168.1.1/24 auf, die noch zu ändern ist. Auf der WAN-Schnittstelle hängt die IP davon ab, welche IPs via DHCP von deinem DSL_Router verteilt werden.
+
 .. figure:: media/OPNS16d.png
    :align: center
    :alt: OPNSense: Final Configuration
