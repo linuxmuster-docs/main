@@ -113,8 +113,8 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
 
   clients/add-computer
   clients/linbo/index
-  clients/postsync/index
   clients/linux-clients/index
+  clients/postsync/index
   clients/leoclient2/index
   clients/windows10clients/index
 

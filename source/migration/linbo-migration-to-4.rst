@@ -16,12 +16,13 @@ Hast du auf die v7.1 umgestellt, musst du nun noch die bisherigen Images, die im
 
 Linbo4 weist einige Besonderheiten auf:
 
-* Für Images wird nur noch das Format qcow2 unterstützt. Der Name des Basis-Images muss daher in der übernommenen start.conf angepasst werden (z.B. image.qcow2).
+* Für neue Images wird nur noch das Format qcow2 unterstützt. Der Name des Basis-Images muss daher in der übernommenen start.conf angepasst werden (z.B. image.qcow2).
 * Die Bennenung der zusätzlichen Image-Dateien postsync, prestart and reg ändert sich, so dass diese nur noch ohne dem Image-Format angegeben werden (z.B. image.postsync, image.prestart and image.reg, früher: image.cloop.postsync etc.).
 * qemu-img wird nun genutzt, um die Erstellung und Wiederherstellung der qcow2 Images durchzuführen.
-* Es wird nur noch 64bit Client hardware unterstützt.
+* Es wird nur noch 64 Bit Client-Hardware unterstützt.
 * linuxmuster.net <=6.2 wird nicht mehr unterstützt.
-* Es gibt jetzt keine differentielle Images mehr.
+* Es gibt jetzt keine differentielle Images mehr. Differentielle Images werden voraussichtlich erst wieder ab Linbo v4.1 unterstützt.
+* Imagename erst anpassen, wenn man ein neues Image erstellt oder ein altes konvertiert hat. vorerst kann cloop weitergenutzt werden.
 
 Konvertiere die linbo 2.4 Images
 ================================
