@@ -581,7 +581,7 @@ Lege nun die VM für OPNsense wie folgt an. Dies ist ein einzeiliger Befehl.
 
 .. hint::
 
-   Nach dem Anlegen der VM startet direkt die Installation der VM und die Ausgabe wird auf den virt-viewer im Konsolenfenster umgelenkt. :ref:`install-from-scratch-label`
+   Nach dem Anlegen der VM startet direkt die Installation der VM und die Ausgabe wird auf den virt-viewer im Konsolenfenster umgelenkt.
 
 
 Anlegen der VM für linuxmuster server
