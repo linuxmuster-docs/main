@@ -56,14 +56,9 @@ Bereitstellen des KVM-Hosts
 
 .. hint:: 
 
-   Der KVM-Host bildet das Grundgerüst für die Firewall *OPNsense®* und
-   den Schulserver *server*. Die Virtualisierungsfunktionen der CPU sollten
-   zuvor im BIOS aktiviert worden sein.
+   Der KVM-Host bildet das Grundgerüst für die Firewall *OPNsense®* und den Schulserver *server*. Die Virtualisierungsfunktionen der CPU sollten zuvor im BIOS aktiviert worden sein.
 
 Die folgende Anleitung beschreibt die *einfachste* Implementierung ohne Dinge wie VLANs, Teaming oder RAID. Diese Themen werden in zusätzlichen Anleitungen betrachtet.
-
-Die folgende Anleitung beschreibt die *einfachste* Implementierung ohne Dinge wie VLANs, Teaming oder RAID. Diese Themen 
-werden in zusätzlichen Anleitungen betrachtet.
 
 * :ref:`Anleitung Netzwerksegmentierung <subnetting-basics-label>` 
 
@@ -105,8 +100,7 @@ Es können auch alle anderen gängigen Tools zur Erstellung genutzt werden.
 Verkabelungshinweise
 --------------------
 
-Es ist für linuxmuster.net ein internes Netz (grün) und ein externes Netz (rot) am KVM-Host zu unterscheiden. Sind zwei Netzwerkkarten im Proxmox-Host vorhanden, so ist die erste Netzwerkkarte (z.B. eth0, eno1 oder enp7s0), die zu 
-Beginn eine IP aus dem bestehenden lokalen Netz (z.B. via DSL-Router) erhalten soll, mit dem Switch zu verbinden, der an den (DSL-)Router angeschlossen ist.
+Es ist für linuxmuster.net ein internes Netz (grün) und ein externes Netz (rot) am KVM-Host zu unterscheiden. Sind zwei Netzwerkkarten im Proxmox-Host vorhanden, so ist die erste Netzwerkkarte (z.B. eth0, eno1 oder enp7s0), die zu Beginn eine IP aus dem bestehenden lokalen Netz (z.B. via DSL-Router) erhalten soll, mit dem Switch zu verbinden, der an den (DSL-)Router angeschlossen ist.
 
 Die zweite Netzwerkkarte (z.B. eth1 oder enp7s1) ist dann an einen eigenen Switch anzuschließen, ebenso wie alle Clients, die im internen Netz eingesetzt werden.
 
@@ -146,8 +140,7 @@ Wähle danach das Tastatur-Layout aus.
    :align: center
    :alt: select keyboard
 
-Danach musst du die Netzwerk-Verbindung konfigurieren. Sollte die automatische Netzwerkkonfiguration per DHCP nicht
-erfolgreich sein, kannst du auch manuell IP-Adresse, Gateway und DNS-Server eingestellen. Wichtig ist die richtige Schnittstelle auszuwählen.
+Danach musst du die Netzwerk-Verbindung konfigurieren. Sollte die automatische Netzwerkkonfiguration per DHCP nicht erfolgreich sein, kannst du auch manuell IP-Adresse, Gateway und DNS-Server einstellen. Wichtig ist die richtige Schnittstelle auszuwählen.
 
 .. figure:: media/install-on-kvm-image-04.png
    :align: center
@@ -179,7 +172,7 @@ Danach werden dir die Schritte zur Einrichtung der Festplatte in der Übersicht 
 
 Bestätige zur anschliessenden Einrichtung dieses mit ``Done``. 
 
-du erhälst erneut eine Rückfrage, ob dies so durchgeführt werden soll, da der Inhalt der gesamten HDD gelöscht wird.
+du erhältst erneut eine Rückfrage, ob dies so durchgeführt werden soll, da der Inhalt der gesamten HDD gelöscht wird.
 
 .. figure:: media/install-on-kvm-image-09.png
    :align: center
@@ -244,7 +237,7 @@ Prüfe nun, ob KVM auf dem System aktiv ist.
    INFO: /dev/kvm exists
    KVM acceleration can be used
 
-Damit ein normaler Benutzer die libvirt-Werkzeuge nutzen kann, musst du diesen den Gruppen kvm und livirt hinzufügen.
+Damit ein normaler Benutzer die libvirt-Werkzeuge nutzen kann, musst du diesen den Gruppen kvm und libvirt hinzufügen.
 
 .. code::
 
@@ -255,7 +248,7 @@ Damit ein normaler Benutzer die libvirt-Werkzeuge nutzen kann, musst du diesen d
 Automatische Updates abschalten
 -------------------------------
 
-Der frisch installierte Ubuntu-Server hat automatische Updates aktivieret. Das solltest du abschalten.
+Der frisch installierte Ubuntu-Server, hat das automatische Update aktiviert. Das solltest du abschalten.
 
 Werde mit ``sudo -i`` root und editiere, beispielsweise mit nano, die Datei ``/etc/apt/apt.conf.d/20auto-upgrades``:
 
@@ -268,7 +261,7 @@ Jetzt kannst du den Server mit ``apt-get update`` und anschließendem ``apt-get 
 cloud-init abschalten
 ---------------------
 
-1. Erstelle eine leere Datei um den Dienst am Start zu hindern.
+1. Erstelle eine leere Datei, um den Dienst am Start zu hindern.
 
 .. code::
 
@@ -298,7 +291,7 @@ cloud-init abschalten
 NTP-Client einrichten
 ---------------------
 
-Um die korrekte Zeit auf dem KVM-Host sicherzstellen, erfolgt die Konfiguration eines NTP-Clients.
+Um die korrekte Zeit auf dem KVM-Host sicherzustellen, erfolgt die Konfiguration eines NTP-Clients.
 
 .. code::
 
@@ -344,7 +337,7 @@ Nach Installation der KVM-Software wurde eine sog. Bridge hinzugefügt, die eine
    virbr0           DOWN           192.168.122.1/24 
    virbr0-nic       DOWN           
 
-In diesem Schritt wird die direkte Verbindung des KVM-Hosts mit dem Internet gekappt und eine virtuelle Verkabelung über so genannte ``bridges`` erstellt.  Zunächst werden die Brücken ``br-red`` (Internetseite) und ``br-green`` (Schulnetzseite) definiert.  Zuletzt kann der KVM-Host auch über die Brücke ``br-red`` eine IP-Adresse in das Internet bekommen.
+In diesem Schritt wird die direkte Verbindung des KVM-Hosts mit dem Internet gekappt und eine virtuelle Verkabelung über sogenannte ``bridges`` erstellt. Zunächst werden die Brücken ``br-red`` (Internetseite) und ``br-green`` (Schulnetzseite) definiert. Zuletzt kann der KVM-Host auch über die Brücke ``br-red`` eine IP-Adresse in das Internet bekommen.
 
 Mit folgendem Befehl werden alle Netzwerkkarten (auch nicht-physische) gefunden:
 
@@ -352,7 +345,7 @@ Mit folgendem Befehl werden alle Netzwerkkarten (auch nicht-physische) gefunden:
      
      # ip -brief link show
 
-Notiere dir die Bezeichnung der physischen Netzwerkkarten und deren MAC-Adressen. Dies können z.B. folgende sein:
+Notiere dir die Bezeichnung der physischen Netzwerkkarten und deren MAC-Adressen. Dies können z. B. folgende sein:
 
 .. code::
 
@@ -398,7 +391,7 @@ Diese Netzwerkkonfiguration kann nun ausprobiert und angewandt werden.
 
    Invalid YAML at /etc/netplan/01-installer-config.yaml line 6 column 0: found character that cannot start any token
 
-Bei fehlerhaften Versuchen lohnt es sich, den KVM-Host neu zustarten und die Netzwerkkonfiguration erneut zu testen.
+Bei fehlerhaften Versuchen lohnt es sich, den KVM-Host neu zu starten und die Netzwerkkonfiguration erneut zu testen.
 
 Wirft o.g. Test keine Fehler aus, so kann die Konfiguration mit folgendem Befehl übernommen werden:
 
@@ -453,7 +446,7 @@ Nun stellst du die IP der br-red auf eine statische IP um, gibst Gateway und DNS
            - to: default
              via: 10.0.0.254
 
-Führe einen Reboot des KVM-Hosts durch. Lassedir danach die Netzwerkkonfiguration und die Routen des KVM-Hosts ausgeben mit:
+Führe einen Reboot des KVM-Hosts durch. Lasse dir danach die Netzwerkkonfiguration und die Routen des KVM-Hosts ausgeben mit:
 
 .. code::
 
@@ -472,7 +465,7 @@ Dazu ist es erforderlich, dass du die ISO-Images für OPNSense und Ubuntu Server
 OPNsense
 --------
 
-Lade daher die Datei zunächst auf deinen PC/Laptop herunter, entpacke die Datei und lade diese ann auf den ISO-Datenspeicher von Proxmox hoch.
+Lade daher die Datei zunächst auf deinen PC/Laptop herunter, entpacke die Datei und lade diese dann auf den ISO-Datenspeicher von Proxmox hoch.
 
 Lade ``OPNSense`` herunter und entpacke die Datei: 
 
@@ -620,13 +613,12 @@ Um für die den linuxmuster.net Server v7.1 ein VM anzulegen, gibst du folgenden
 Appendix: Videos als Hilfestellung
 ==================================
 
-Nachstehend findest du einige Videos, die Bestandteile der Anleitung als Kurzvideos z.T. für ältere Versionen darstellen. Diese dienen als ergänzende Hilfestelung.
+Nachstehend findest du einige Videos, die Bestandteile der Anleitung als Kurzvideos z.T. für ältere Versionen darstellen. Diese dienen als ergänzende Hilfestellung.
 
 USB-Stick erstellen
 -------------------
 
-Im folgenden Video ist die Prozedur anhand einer älteren ISO-Datei dargestellt, verläuft aber äquivalent mit jeder
-aktuellen Ubuntu-Version:
+Im folgenden Video ist die Prozedur anhand einer älteren ISO-Datei dargestellt, verläuft aber äquivalent mit jeder aktuellen Ubuntu-Version:
 
 .. raw:: html
 
