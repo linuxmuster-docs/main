@@ -1,4 +1,3 @@
-.. include:: /guided-inst.subst
 
 .. _prerequisites-label:
 
@@ -86,40 +85,21 @@ IP-Bereiche
 Die linuxmuster.net-Lösung kann mit unterschiedlichen IP-Bereichen arbeiten. Standardmäßig wird das interne Netz aus dem privaten IPv4-Bereich 10.0.x.x mit der
 16-Bit Netzmaske 255.255.0.0 (/16) eingerichtet.
 
-Jedoch kann man sowohl die bisher in früheren Versionen von linuxmuster.net verwendeten Netze (10.16.0.0/12 oder 10.32.0.0/12 usw.) weiterverwenden, oder auch komplett andere private Adressbereiche realisieren.
-
-Jede Zeile der folgenden Tabelle stellt eine Möglichkeit dar.
-
-================== ================ ===========
-Beginn IP-Bereich  Ende IP-Bereich  Server-IP
-================== ================ ===========
-10.0.0.0           10.0.255.255     10.0.0.1
-10.16.0.0          10.31.255.255    10.16.1.1
-10.32.0.0          10.47.255.255    10.32.1.1
-================== ================ ===========
-
-Bei der Neuinstallation entscheidest du dich für einen der Bereiche.
+Andere private Adressbereiche sid prinzipiell möglich, müssen aber händisch vorbereitet werden. :ref:`modify-net-label`
 
 Standard IP-Adressen
 --------------------
 
 Einige IP-Adressen sind standardmäßig für spezielle Server/Dienste vorgesehen.
 
-========== =========== ============
-Server     IP-Bereich  IP-Bereich
-           10.0.0.0/16 10.16.0.0/12
-========== =========== ============
-OPNsense®  10.0.0.254  10.16.1.254
-Server     10.0.0.1    10.16.1.1
-XOA (*)    10.0.0.4    10.16.1.4
-Admin-PC   10.0.0.10   10.16.0.10
-========== =========== ============
-
-.. hint::
-
-   (*) Die XenOrchestra-Appliance (XOA) wird nur benötigt, wenn eine Virtualisierung mit XCP-ng erfolgen soll. Mithilfe von XenOrchestra kann die Virtualisierungsumgebung XCP-ng web-basiert verwaltet werden und es können hierüber auch sog. Enterprise-Funktionen wie z.B. Backup, Replikation etc. konfiguriert werden.
-
-
+========== ===========
+Server     IP-Bereich 
+           10.0.0.0/16 
+========== ===========
+OPNsense®  10.0.0.254 
+Server     10.0.0.1   
+Admin-PC   10.0.0.10  
+========== =========== 
 
 Netz-Grundstruktur
 ------------------

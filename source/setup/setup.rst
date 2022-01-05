@@ -28,7 +28,7 @@ Wichtige Hinweise
 
 * Nach Abschluss dieses Setups sind die Domäne und andere Details des Netzwerks permanent festgelegt und nur durch Neuinstallation änderbar. Es ist daher wichtig, zu diesem Zeitpunkt ein **Snapshot/Backup von Server und Firewall** anzufertigen. Sollte es beim Setup Fehler geben, oder Einstellungen nochmals geändert werden müssen, sind die virtuellen Maschinen auf den Stand des Snapshots zurückzusetzen und das Setup muss erneut aufgerufen werden.
 * Beim Domänennamen ist zu beachten, dass der **erste** Teil der Domäne nicht länger als 15 Zeichen sein darf! Dies ergibt sich aus den Samba/AD-Vorgaben. Im Beispiel ``server.linuxmuster.lan`` ist ``server`` der Rechnername und ``linuxmuster.lan`` die Domäne. Die Domäne ``linuxmuster`` darf nicht länger als **15 Zeichen** sein.
-* Will man eine Domäne nutzen, die auch extern auflösbar ist, sollte zusätzlich eine Subdomäne verwendet werden. Zum Beispiel``linuxmuster.meineschule.de`` statt ``meineschule.de``. Der erste Part ``linuxmuster`` wird in diesem Beispiel dann als SAMBA-Domäne verwendet. Der voll Name(FQHN) des Servers ist dann ``server.linuxmuster.meineschule.de``.
+* Will man eine Domäne nutzen, die auch extern auflösbar ist, sollte zusätzlich eine Subdomäne verwendet werden. Zum Beispiel``linuxmuster.meineschule.de`` statt ``meineschule.de``. Der erste Part ``linuxmuster`` wird in diesem Beispiel dann als SAMBA-Domäne verwendet. Der volle Name(FQDN) des Servers ist dann ``server.linuxmuster.meineschule.de``.
 * Alle Hosts die im Setup konfiguriert werden, müssen bereits laufen (OPNsense und Server). Diese müssen sich im internen LAN gegenseitig erreichen.
 * v6.x Systeme, die mit Hilfe der Migration auf linuxmuster.net 7.1 migriert werden, können eine neue (oder die alte) Domäne konfigurieren.
 
@@ -36,10 +36,9 @@ Anpassung des Netzbereichs
 ==========================
 
 Die Standardkonfiguration, sieht vor, dass das Schulnetz die lokale Domäne ``linuxmuster.lan`` bekommt und Geräte im Netzbereich ``10.0.0.0/16``
-stehen. Wenn ein anderer Netzbereich (z.B. der Netzbereich ``10.16.0.0/12``) verwendet werden soll, *muss* an dieser Stelle eine Anpassung vorgenommen werden.
+sind. Wenn ein anderer Netzbereich verwendet werden soll, *muss* an dieser Stelle eine Anpassung vorgenommen werden.
 
-v6.x Systeme, die mit Hilfe der Migration auf linuxmuster.net 7.1 migriert werden, sollten den bisherigen Netzbereich behalten. Für die Beibehaltung
-des bisherigen Standards der v6.2 mit einem ``10.16.0.0./12`` Netz gibt es den Begriff ``do-it-like-babo``.
+v6.x Systeme, die mit Hilfe der Migration auf linuxmuster.net 7.1 migriert werden, sollten den bisherigen Netzbereich behalten.
 
 .. hint::
 

@@ -80,7 +80,7 @@ Richte nun auf der 2. HDD ein LVM ein.
 
 .. figure:: media/lmn71-additional/custom-storage-layout-create-partition-table-lvm-hdb-5.png
 
-Wähle den Eintrag ``datenträgergruppe (LVM) anlegen`` aus.  
+Wähle den Eintrag ``Datenträgergruppe (LVM) anlegen`` aus.  
 
 Hier gibst du einen eigenen Namen für die LVM Volume Group an (z.B. vg_server oder vg0).
 
@@ -120,6 +120,11 @@ Wenn die Installation abgeschlossen und der Server neu gestartet ist, meldest du
    
 LVM - Besonderheiten
 --------------------
+
+.. hint::
+
+   Nutzt du später das Skript lmn71-appliance, um den Server vorzubereiten, dann musst du nur einen Server mit 2 HDDs haben und Ubuntu 18.04 auf der ersten HDD installieren. Die zweite HDD bleibt frei. Alles weitere wird dann später vom Skript lmn71-appliance erledigt.
+
 
 Hast du zuvor für die 2. HDD ein LVM eingerichtet, dann sind zur Vorbereitung noch nachstehende Schritte auszuführen:
 
