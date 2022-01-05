@@ -32,11 +32,6 @@ Das Skript lmn71-appliance installiert für dich das Paket linuxmuster-prepare m
 * Starte das Skript als Benutzer ``root`` mit: ``./lmn71-appliance -p server -u -l /dev/sdb``. Hierbei wird auf dem angegebenen Device/ der HDD ein LVM eingerichtet.
 * Für weitere Hinweise zum linuxmuster-prepare Skript siehe: https://github.com/linuxmuster/linuxmuster-prepare
 
-.. hint:: 
-
-   Falls Du dich für das Netz der linuxmuster.net V6.2 entschieden hast, führst du statt 
-   ``./lmn71-appliance -p server -u -l /dev/sdb`` Folgendes aus: ``./lmn71-appliance -p server -u -l /dev/sdb -n 10.16.1.1/12 -f 10.16.1.254``
-
 Im Anschluss kann das Setup ausgeführt werden, das dann den Netzbereich ausliest und für die weitere Einrichtung verwendet.
 
 Hinweise zum Skript
@@ -206,7 +201,7 @@ Mithilfe eines Ping-Test wird zuerst geprüft, ob der Server das Gateway erreich
 
 .. code::
 
-   ping 10.16.1.254
+   ping 10.0.0.254
 
 Ist dies erfolgreich, muss die Appliance mit dem Skript ``lmn71-appliance`` für das Setup vorbereitet werden. Netzwerkadressen und Domänenname werden damit gesetzt. 
 
@@ -235,7 +230,7 @@ Das alles kann **in einem Schritt** erfolgen:
 
    ./lmn71-appliance -s -u -d schule.lan -n 192.168.0.1/16 -f 192.168.0.10
 
-Minimaler Aufruf, wenn die Standard-Netzwerkeinstellungen (10.0.0.0/12) verwendet werden sollen:
+Minimaler Aufruf, wenn die Standard-Netzwerkeinstellungen (10.0.0.0/16) verwendet werden sollen:
 
 .. code::
 
