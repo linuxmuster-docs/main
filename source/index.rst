@@ -99,11 +99,18 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
 
 .. toctree::
   :maxdepth: 2
+  :caption: Upgrade
+  :hidden:
+
+  migration/upgrade
+  migration/linbo-migration-to-4
+
+.. toctree::
+  :maxdepth: 2
   :caption: Migration
   :hidden:
 
   migration/index
-  migration/upgrade
   migration/linbo-migration-to-4
 
 .. toctree::

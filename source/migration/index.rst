@@ -20,7 +20,6 @@ Folge je nach gegebenen Voraussetzungen deinem Migrationspfad.
   :hidden:
 
   migrate-from-6-2-to-7-1
-  migrate-from-7-0-to-7-1
 
 
 
