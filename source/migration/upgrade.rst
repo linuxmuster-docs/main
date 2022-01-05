@@ -6,9 +6,6 @@ Upgrade v7.0 auf v7.1
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster,net/u/cweikl>`_
 
-Voraussetzungen
-===============
-
 Bestehendes System
 ------------------
 
@@ -18,7 +15,6 @@ Vom Server aus hast du Internet-Zugriff.
 
 Aktualisierung der Apt-Sources
 ------------------------------
-
 
 Es müssen in den Paketquellen die ``linuxmuster.net sources`` für die neue lmn 7.1 eingetragen und der Schlüssel des Paketservers importiert werden.
 
