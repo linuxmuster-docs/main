@@ -82,7 +82,7 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
 
   installation/overview
   installation/prerequisites
-  installation/preparation-of-hypervisor/index
+  installation/proxmox/index
   installation/install-from-scratch/index
   installation/network/preliminarysettings/index
  

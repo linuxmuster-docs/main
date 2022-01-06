@@ -40,4 +40,34 @@ An dieser Stelle wird ein Administrator-Zugang angelegt.
 
 Bestätige schließlich Deine Einstellungen.
 
+Einstellungen zur Aufnahme der APs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Damit der Unificontroller die angeschlossenen Access Points (APs) aufnehmen kann und
+mit diesen kommuniziert, sind noch folgende Einstellungen zu treffen:
+
+1. Wähle ``Settings → System Settings → Controller/Application Configuration``
+2. Gebe dort bei der Option ``Host to inform`` die IP-Adresse des Dockerhosts, den FQDN oder ein CNAME als FQDN ein.
+3. Teste die Aufnahme, indem du einen AP anschließt. Nachdem dieser gestartet ist, siehst du im Controller den AP in der Phase ``Adopting``.
+   Diese muss erfolgreich beendet worden sein. Sollte dies nicht der Fall sein, so solltest du in den log files des Unifi Controllers nach Fehlern suchen.
+
+Die Einstellungen sehen in der alten UI des Unifi Controllers wie folgt aus:
+
+.. figure:: media/u12-a.png
+   :alt: Override inform host - old ui
+
+In der neuen UI des Unifi Controllers entspricht dies folgender Einstellung:
+
+.. figure:: media/u12-b.png
+   :alt: Override inform host - new ui
+
+
+
+
+
+
+
+
+
+
 

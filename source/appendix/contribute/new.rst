@@ -22,10 +22,10 @@ Mit folgenden Befehlen kannst du unter einer aktuellen (ab 16.04) Ubuntu-Distrib
    $ pip3 install sphinx 
    $ pip3 install sphinx_rtd_theme
 
-Erste Schritte: Offizielle Dokumentation kompilieren
-----------------------------------------------------
+Offizielle Dokumentation kompilieren
+------------------------------------
 
-Jetzt kannst du bereits die bereits heruntergeladene Dokumentation aus dem offiziellen Repository bauen und betrachten. 
+Hast du bereits bereits eine heruntergeladene Dokumentation aus dem offiziellen Repository, dann könntest du nun eine lokale Version der Dokumentation bauen und betrachten. Ansonsten mach mit dem nächsten Punkt weiter: `GitHub Konto erstellen`_ 
 
 Öffne dazu ein Terminal, navigiere zum Ordner `linuxmuster-docs/main`, führe `make clean && make html` aus und rufe die Datei `linuxmuster-docs/main/build/html/index.html` z.B. mit dem Browser Firefox auf, um das Ergebnis zu betrachten.
 
