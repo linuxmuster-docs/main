@@ -1,16 +1,32 @@
+.. include:: /guided-inst.subst
 
 .. _install-on-proxmox-label:
 
-============================
- Virtualisierung mit Proxmox
-============================
+===================
+Proxmox vorbereiten
+===================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
                    `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
+Hinweise
+--------
+
+Nachdem du dich entschieden hast, **Proxmox als Virtualisierunglösung einzusetzen**, beginnst du mit der Installation der Virtualisierung nach den nachstehend  beschriebenen Anforderungen.
+
+Alternativ installierst du von Grund auf die Serverbetriebssysteme
+*Ubuntu Server* und *OPNsense®* direkt auf der Hardware oder innerhalb
+deiner Virtualisierungslösung. Hinweise auf andere Virtualisierungslösungen finden sich im Anwenderwiki von linuxmuster.net:
+
+1. XCP-ng: https://wiki.linuxmuster.net/community/anwenderwiki:virtualisierung:xcpng:xcpng4lmn71
+2. KVM:  https://wiki.linuxmuster.net/community/anwenderwiki:virtualisierung:kvm:kvm4lmn71
+
 Proxmox ist eine OpenSource-Virtualisierungsplattform. Diese kombiniert KVM- und Container-basierte Virtualisierung und verwaltet virtuelle Maschinen, Container, Storage, virtuelle Netzwerke und Hochverfügbarkeit-Cluster übersichtlich über die zentrale Managementkonsole.
 
 Das web-basierte Verwaltungs-Interface läuft direkt auf dem Server. Zudem kann die Virtualisierungsumgebung via SSH administriert werden.
+
+Proxmox
+-------
 
 Proxmox VE eignet sich für den virtuellen Betrieb von linuxmuster.net besonders, da dieser Hypervisor dem OpenSource-Konzept entspricht. Der Einsatz wird auf jeglicher Markenhardware unterstützt und es gibt zahlreiche professionelle 3rd-Party Software für Backup-Lösungen und andere Features. „No-Name-Hardware“ kann hiermit ebenfalls meist verwendet werden.
 
@@ -321,8 +337,8 @@ Zur Veranschaulichung eine Grafik, die den Status der Konfiguration zeigt.
 (Optional) Festplatten anpassen
 -------------------------------
 
-Zweiten Datenträger als Speicher einbinden
-++++++++++++++++++++++++++++++++++++++++++
+*Zweiten Datenträger als Speicher einbinden*
+
 
 In diesem Schritt wird die zweite Festplatte in Proxmox eingebunden, um diese als Storage für die virtuellen Maschinen zu nutzen.
 
@@ -330,8 +346,8 @@ In diesem Schritt wird die zweite Festplatte in Proxmox eingebunden, um diese al
 
    Die folgenden Schritte bitte nur dann ausführen, wenn nicht auf einem einzigen Volume Proxmox eingerichtet werden soll!
 
-local-lvm(hv01)-Partition entfernen und Speicher freigeben
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*local-lvm(hv01)-Partition entfernen und Speicher freigeben*
+
 
 Während der Proxmox-Installation wurden die Storages „local“ und „local-lvm“ automatisch auf der ersten Festplatte erstellt. Da anfangs für die Linuxmuster-Maschinen eine zweite Festplatte als „Storage“ eingerichtet wurde, wird „local-lvm“ nicht benötigt. Deshalb wird nun „local-lvm“ entfernt und „local“ durch den freigewordenen Speicher vergrößert, so dass auf der ersten Festplatte der gesamte Speicher dem Hypervisor zur Verfügung steht:
 
@@ -409,8 +425,7 @@ Danach findest Du noch folgenden Speicher:
 
 Die SSD ``/dev/sdb`` steht für den Proxmox-Host zur Verfügung.
 
-Zweiten Datenträger vorbereiten
-+++++++++++++++++++++++++++++++
+*Zweiten Datenträger vorbereiten*
 
 Die erste Festplatte heißt hier sda und ersetzt die pve-data-Partition, die im vorigen Schritt entfernt wurde. Um diese für Proxmox vorzubereiten, stellt man über Konsolenbefehle einige Konfigurationen ein. Falls die Shell noch nicht geöffnet ist, wie oben beschrieben, öffnen und folgende Befehle eingeben:
 
@@ -476,8 +491,7 @@ Beispiel:
    :align: center
    :alt: Proxmox Konsole Output lvconvert
 
-Datenträger graphisch als Storage in Proxmox anbinden
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+*Datenträger graphisch als Storage in Proxmox anbinden*
 
 1. Im Menü `Datacenter > Storage > Add` wählt man „LVM-Thin“ aus. Im ID-Feld wird der Name des virtuellen Datenträgers angegeben. In diesem Fall ist es eine HDD mit 1 TByte Speicherkapazität, weshalb die Bezeichnung vd-hdd-1000 gewählt wird. Unter Volume Group die erstellte virtuelle Gruppe auswählen, welche hier vg-hdd-1000 ist:
 
