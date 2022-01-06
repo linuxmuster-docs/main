@@ -31,8 +31,8 @@ Zudem haben wir Dokumentationsleitlinien erstellt. Diese sollten von allen Mitar
   :caption: Mitarbeit
   :hidden:
 
-  edit-on-github
   translate
+  edit-on-github
   new
   guidelines
 
