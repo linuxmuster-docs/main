@@ -6,6 +6,10 @@ Was ist linuxmuster.net?
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_, `@MachtDochNix <https://ask.linuxmuster.net/u/machtdochnix>`_
 
+.. todo:: Grafiken sind anzupassen
+          
+          Text ist zu überprüfen
+
 **Schulnetz - Komplett - Anpassbar!**
 
 Schulnetz
