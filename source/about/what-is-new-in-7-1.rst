@@ -61,4 +61,11 @@ Selbstheilende Arbeitsstationen
     * Umstellung der Images-Abbilder auf das qcow2 Format
     * Neues User-Interface für die Steuerung an den Clients 
 
+Hinweise
+--------
+
+.. hint::
+
+   * Release-Informationen werden im Forum im Thread `Neue Pakete für lmn7.1 <https://ask.linuxmuster.net/t/linuxmuster-net-7-1-testing/8265/7>`_ veröffentlicht.
+
 

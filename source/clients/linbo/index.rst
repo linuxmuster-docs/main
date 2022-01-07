@@ -5,8 +5,10 @@
 
 .. _using-linbo-label:
 
-LINBO nutzen
-============
+LINBO4 nutzen
+=============
+
+.. todo:: Dieses Kapitel muss noch vollständig überarbeitet werden. Alter Stand -> auf Linbo 4 anpassen, neue Bilder etc.
 
 LINBO steht für GNU/\ **Li**\ nux **N**\ etwork **Bo**\ ot. Es wurde
 im Auftrag des Landesmedienzentrums Baden-Württemberg von der Firma
