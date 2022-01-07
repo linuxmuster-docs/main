@@ -2,6 +2,8 @@
 Linux-Client - Anpassungen mit Postsync-Scripten
 ================================================
 
+.. todo:: Dieses Kapitel sollte nochmals mit Blick auf Linbo 4 überarbeitet werden.
+
 Linux-Clients können in linuxmuster.net mithilfe sogenannter Postsync-Scripte an besondere 
 Nutzungssituationen sehr variabel angepasst werden.
 

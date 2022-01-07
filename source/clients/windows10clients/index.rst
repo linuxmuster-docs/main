@@ -9,6 +9,9 @@ Windows 10 Clients
 .. sectionauthor:: `@maurice <https://ask.linuxmuster.net/u/Maurice>`_, `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
             `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
+.. todo:: Dieses Kapitel sollte nochmals mit Blick auf Linbo 4 überarbeitet werden.
+
+
 LINBO
 =====
 
