@@ -11,34 +11,26 @@ Linuxmuster.net 7.1 ist das Release-Update der linuxmuster.net v7.0. Es erfolgt 
 Neue Funktionalitäten
 ---------------------
 
-.. todo::
-   
-   to be rewritten
-
 Verbesserte Skalierbarkeit
-  * Mehrschulfähigkeit: Konsolidierung mehrerer Schulinstanzen auf einem
-    Server möglich
-  * Gruppenorientierte Abbildung der Schule und flexible, regelbasierte
-    Steuerung
-  * Moderne Bereitstellung zusätzlicher IT-Dienste der Schule innerhalb der
-    Schullösung
+  * Mehrschulfähigkeit: Konsolidierung mehrerer Schulinstanzen auf einem Server möglich
+  * Gruppenorientierte Abbildung der Schule und flexible, regelbasierte Steuerung
+  * Moderne Bereitstellung zusätzlicher IT-Dienste der Schule innerhalb der Schullösung
 
 Moderne Steuerung
   * Webbasierte Steuerung der pädagogischen Funktionen in responsive Design
-  * Aktuelle Betriebssysteme der Server und der vorkonfigurierten,
-    kostenlos bereitgestellten Linux-Arbeitsplätze
-
+  * Aktuelle Betriebssysteme der Server und der vorkonfigurierten, kostenlos bereitgestellten Linux-Arbeitsplätze
+  * Mit LINBO 4 neues User-Interface für die Steuerung an den Clients
+  * Die WebUI bietet nun viele der administrativen Möglichkeiten, die zuvor nur an der Server-Konsole zu erreichen waren
 
 Technische Neuerungen
 ---------------------
   
 Vereinfachte Installation
-  * Standardmäßig bleibt linuxmuster.net eine Zwei-Serverlösung aus
-    Firewall und Server. Optional können weitere Server / Docker-Instanzen angebunden werden.
-  * Die Installation erwartet eine vorkonfigurierte Virtualisierungslösung oder kann auf direkt auf zwei Hardware-Maschinen installiert werden.
+  * Standardmäßig bleibt linuxmuster.net eine Zwei-Serverlösung aus Firewall und Server. Optional können weitere Server / Docker-Instanzen angebunden werden
+  * Die Installation erwartet eine vorkonfigurierte Virtualisierungslösung oder kann auf direkt auf zwei Hardware-Maschinen installiert werden
 
 Bedienung und Administration
-  * Die WebUI als Verwaltungswerkzeug zur Administration und zur Steuerung von Unterricht weist viele zusätzliche Funktionen auf.
+  * Die WebUI als Verwaltungswerkzeug zur Administration und zur Steuerung von Unterricht weist viele zusätzliche Funktionen auf
   * Die vollständige Bedienbarkeit auf der Konsole bleibt erhalten
 
 Benutzerverwaltung
