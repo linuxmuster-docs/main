@@ -6,9 +6,7 @@ Was ist linuxmuster.net?
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_, `@MachtDochNix <https://ask.linuxmuster.net/u/machtdochnix>`_
 
-.. todo:: Grafiken sind anzupassen
-          
-          Text ist zu überprüfen
+.. todo:: Text ist zu überarbeiten und Grafiken sind einzubinden
 
 **Schulnetz - Komplett - Anpassbar!**
 
@@ -16,6 +14,56 @@ Schulnetz
 ---------
 
 Schulische IT wird mit einer vollintegrierten Open-Source-Lösung abgebildet. Dieses umfasst alle Bereiche, die in einer Bildungseinrichtung anzutreffen sind.
+
+.. image::    media/structure_of_version_7.svg
+   :name:     structure-over-all 
+   :alt:      Struktur über alles
+   :height:   40px
+
+.. image::    media/structure_of_version_7_lmn.svg
+   :name:     structure-basic-components
+   :alt:      Struktur der Basis Komponenten
+   :height:   20px
+
+.. image::    media/structure_of_version_7_community.svg
+   :name:     structure-community-components
+   :alt:      Struktur der Erweiterungen (Community)
+   :height:   20px
+
+.. image::    media/structure_of_version_7_server.svg
+   :name:     structure-lmn-server
+   :alt:      Struktur der Basis-Komponente LMN-Server
+   :height:   20px
+
+.. image::    media/structure_of_version_7_client.svg
+   :name:     structure-linbo-client-management
+   :alt:      Struktur des LINBO (Client-Managements)
+   :height:   20px
+
+.. image::    media/structure_of_version_7_firewall.svg
+   :name:     structure-firewall
+   :alt:      Struktur der Basis-Komponente Firewall 
+   :height:   20px
+
+.. image::    media/structure_of_version_7_alternate.svg
+   :name:     structure-alternativ-firewall
+   :alt:      Struktur der Einbindung einer alternaiven Firewall
+   :height:   20px
+
+.. image::    media/structure_of_version_7_optional.svg
+   :name:     structure-option-server
+   :alt:      Struktur der Einbindung optionaler lokaler Server
+   :height:   20px
+
+.. image::    media/structure_of_version_7_extra.svg
+   :name:     structure-extra-server-and-services
+   :alt:      Struktur der Einbindung externer Server und Dienste
+   :height:   20px
+
+.. image::    media/structure_of_version_7_simple.svg
+   :name:     structure-complete-inkscape-svg
+   :alt:      Download der kompletten Struktur
+   :height:   20px
 
 Unser Anspruch liegt dabei auf der Bereitstellung eines Systems, das folgende Punkte erfüllt:
 
@@ -41,11 +89,6 @@ Im Zusammenspiel der Clients mit dem Server und einer Firewall entsteht so die g
 
 
 Die Basisdienste des links abgebildeten Servers sind für die Funktion des ganzen Systems verantwortlich:
-
-.. image::    media/about_02_server.svg
-   :name:     box-server
-   :alt:      box-server
-   :height:   40px
 
 Benutzer- und Gruppenverwaltung
 +++++++++++++++++++++++++++++++
@@ -82,11 +125,6 @@ Jeder Nutzer besitzt einen eigenen Bereich auf dem Netzwerkspeicher. Darüber hi
 Selbstheilende Arbeitsstationen durch LINBO 4
 +++++++++++++++++++++++++++++++++++++++++++++
 
-.. image::    media/about_03_client-integration.svg
-   :name:     box-client-integration
-   :alt:      box-client-integration
-   :height:   40px
-
 Das Konzept der Selbstheilenden Arbeitsstationen (SheilA) ermöglicht einheitliche identische Schulungssysteme. Diese können bei jedem Start der Rechner in einen vorher definierten Zustand zurückgesetzt werden. Dieser Standard wird durch die letzte Veränderung oder Installation festgelegt, in dem ein Abbild des Betriebssytems auf dem Server gespeichert wird. Weitere Vorteile sind:
 
     * verschiedene Betriebssyteme auf jedem Client möglich
@@ -119,11 +157,6 @@ Da sich alle Steuerungsfunktionen in unserer Lösung an den Benutzern orientiere
 Firewall
 ++++++++
 
-.. image::    media/about_04_firewall.svg
-   :name:     box-firewall
-   :alt:      box-firewall
-   :height:   40px
-
 Als Standard wird die Firewall OPNSense® ausgeliefert.
 
 Durch die Integration an den AD DS (Active Directory Domain Services) des Servers (Samba4) werden sämtliche Benutzer-Zugriffe der Nutzer mittels Single-Sign-On auf das Internet geregelt.
@@ -136,11 +169,6 @@ Anpassbar
 
 Alle bisher vorgestellten Basisdienste werden mithilfe des Setups konfiguriert, bleiben aber frei anpass- und erweiterbar.
 
-
-.. image::    media/about_05_optional-servers.svg
-   :name:     box-optionale-server
-   :alt:      box-optionale-server
-   :height:   40px
 
 .. note::
    Diese vorgestellten Bestandteile werden vom Verein
@@ -166,12 +194,6 @@ Es folgt die Beschreibung der letzten zwei Bausteine die linuxmuster.net zu eine
 
 Extra
 +++++
-
-.. image::    media/about_10_extra.svg
-   :name:     box-extra
-   :alt:      box-extra
-   :height:   40px
-
 
 Verschiedenste externe Dienste lassen sich ebenso an die linuxmuster.net Lösung anbinden, so dass eine einheitliche Authentifizierung erfolgt.
 
