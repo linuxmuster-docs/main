@@ -7,7 +7,7 @@ Install-from-Scratch
 ====================
 
 .. sectionauthor:: `@rettich <https://ask.linuxmuster.net/u/rettich>`_,
-                   `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
+                   `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
 
 In diesem Dokument findest du eine "Schritt-für-Schritt" Anleitung zur Installation der linuxmuster.net Musterlösung direkt auf der Hardware. 
@@ -496,7 +496,7 @@ Du kannst für Kurzinformationen auch ``sudo pvs`` angeben. Die vg - volume grou
    sudo mkfs.ext4 /dev/vg_server/var
    sudo mkfs.ext4 /dev/vg_server/linbo
    sudo mkfs.ext4 /dev/vg_server/global
-   v mkfs.ext4 /dev/vg_server/default-school
+   sudo mkfs.ext4 /dev/vg_server/default-school
    
 8. Lege nachstehende Verzeichnisse an, die wir danach auf die logical volumes mounten:
    
@@ -546,7 +546,9 @@ Der frisch installierte Ubuntu-Server hat automatische Updates aktivieret. Das s
 
 Werde mit ``sudo -i`` root und editiere, beispielsweise mit nano, die Datei ``/etc/apt/apt.conf.d/20auto-upgrades``:
 
-``nano /etc/apt/apt.conf.d/20auto-upgrades``
+.. code::
+
+  nano /etc/apt/apt.conf.d/20auto-upgrades
 
 Ersetze bei ``APT::Periodic::Unattended-Upgrade`` die ``"1";`` durch ``"0";``. Mit ``<Strg>+o`` speicherst du die Änderung ab. Und mit ``<Strg>+x`` verlässt du nano wieder.
 
