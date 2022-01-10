@@ -36,7 +36,7 @@ Hast Du auf v7.1 umgestellt, musst du jetzt noch deine bisherigen linbo 2.4 Imag
    cd /srv/linbo 
    linbo-cloop2qcow2 ubu20.cloop
 
-Das Cloop-Image wird dadurch in das qcow2-Format konvertiert und im Verzeichnis ``/srv/linbo/images/ubu20/`` als Datei ``ubu20.qcow`` abgelegt.
+Das Cloop-Image wird dadurch in das qcow2-Format konvertiert und im Verzeichnis ``/srv/linbo/images/ubu20/`` als Datei ``ubu20.qcow2`` abgelegt.
 
 .. hint::
 
