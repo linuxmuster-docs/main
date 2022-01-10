@@ -22,7 +22,7 @@ Linbo4 weist einige Besonderheiten auf:
 * Es wird nur noch 64 Bit Client-Hardware unterstützt.
 * linuxmuster.net <=6.2 wird nicht mehr unterstützt.
 * Es gibt jetzt keine differentielle Images mehr. Differentielle Images werden voraussichtlich erst wieder ab Linbo v4.1 unterstützt.
-* Imagename erst anpassen, wenn man ein neues Image erstellt oder ein altes konvertiert hat. vorerst kann cloop weitergenutzt werden.
+* Bisherige Images im cloop Format bitte direkt in das neue qcow2 Format komvertieren - wie unten beschrieben.
 
 Konvertiere die linbo 2.4 Images
 ================================
@@ -34,20 +34,21 @@ Hast Du auf v7.1 umgestellt, musst du jetzt noch deine bisherigen linbo 2.4 Imag
 .. code::
 
    cd /srv/linbo 
-   linbo-cloop2qcow2 ubu20.cloop /srv/images/ubuntu/
+   linbo-cloop2qcow2 ubu20.cloop
 
-In dem angegebenen Verzeichnis wird das konvertierte Image mit dem Namen ubu20.qcow abgelegt.
+Das Cloop-Image wird dadurch in das qcow2-Format konvertiert und im Verzeichnis ``/srv/linbo/images/ubu20/`` als Datei ``ubu20.qcow`` abgelegt.
 
 .. hint::
 
-   Images von Windows-Systemen könnten nach der Konvertierung ggf. nicht so funktionieren wie vorgesehen - dies gilt insbesondere für UEFI-Systeme. In diesem fall ist es notwendig ein neues Image zu erstellen.
+   Images von Windows-Systemen könnten nach der Konvertierung ggf. nicht so funktionieren wie vorgesehen - dies gilt insbesondere für UEFI-Systeme. In diesem Fall ist es notwendig, ein neues Image zu erstellen.
 
 2. Ändere den Namen des Images in the start.conf der jeweiligen Hardwareklasse/Gruppe.
-3. Starte die Dienste zur Image-Verteilung neu mit: ``linbo-torrent|linbo-multicast restart``.
+3. Starte die Dienste zur Image-Verteilung neu mit: ``systemctl restart linbo-torrent.service``.
 
 .. important::
 
    Start alle Clients 2x, um sicherzustellen, dass Linbo v2 auf v4 aktualisiert wurde.
+
 
 4. Zum Schluss starte das Skript ``linuxmuster-import-devices``. Dieses löscht die nun nicht mehr benötigten start.conf links.
 5. Ab jetzt kannst du Images wieder wie gewohnt erstellen und verteilen.
@@ -55,7 +56,7 @@ In dem angegebenen Verzeichnis wird das konvertierte Image mit dem Namen ubu20.q
 Zusätzliche Hinweise
 ====================
 
-1. Neu hochgeladene Images werden in Unterverzeichnis unterhalb von ``/srv/linbo/images`` abgelegt.
+1. Neu hochgeladene Images werden in einem Unterverzeichnis unterhalb von ``/srv/linbo/images`` abgelegt.
 2. Backups von Images werden jetzt nach ``/srv/linbo/images/<imagename>/backups/<timestamp>`` verschoben.
 
 

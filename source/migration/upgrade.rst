@@ -48,12 +48,26 @@ Aktualisiere die Paketquellen auf dem Server und migriere / aktualisiere deinen 
    sudo apt update && apt-dist-upgrade
    
 Bestätige die Rückfragen zur Installation mit y / j.
+
+.. hint::
+
+   Sollte die Rückfrage kommen, ob die ``smb.conf`` ersetzt werden soll, antworte unbedingt mit ``nein``!
+
+
 Nach Abschluss der Aktualisierung starte das System einmal neu mit ``sudo reboot``.
 
 Hat alles erfolgreich funktioniert wirst Du nach der Anmeldung auf der Konsole des Servers mit folgendem Bildschirm begrüßt:
 
 .. figure:: media/01-console-welcome-lmn71.png
 
+Solltest du in den Log-Dateien oder bei der Installation folgenden Hinweis finden, kannst du wie beschrieben das Update entsprechend ausführen:
+
+.. code::
+
+   Checking for python3-reconfigure ... WARNING: You are using pip version 20.0.2; however, version 21.3.1 is available.
+   You should consider upgrading via the '/usr/bin/python3 -m pip install --upgrade pip' command.
+
+
 Danach musst du noch deine Linbo 2.4 Images auf Linbo 4 migrieren. Führe dies wie hier :ref:`migration-linbo-label` beschrieben durch.
 
-Danach ist dein Update auf linuxmuster v7.1 abgeschlosse und du kannst wie bisher auch weiterarbeiten.
+Danach ist dein Update auf linuxmuster v7.1 abgeschlossen und du kannst wie bisher auch weiterarbeiten.
