@@ -138,7 +138,7 @@ Die Datei docker-compose.yml
 
   services:
     db2:
-      image: mariadb
+      image: mariadb:10.5
       command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
       restart: always
       volumes:
