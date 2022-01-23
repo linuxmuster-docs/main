@@ -203,13 +203,13 @@ Da sich alle Steuerungsfunktionen in unserer Lösung an den Benutzern orientiere
 Firewall
 ++++++++
 
-.. image::    media/structure_of_version_7_firewall.svg
-   :name:     structure-firewall
-   :alt:      Struktur der Basis-Komponente - Firewall 
-   :height:   40px
-   :align:    left
-
 :OPNSense |reg|: wird als Standard-Firewall ausgeliefert.
+
+   .. image::    media/structure_of_version_7_firewall.svg
+      :name:     structure-firewall
+      :alt:      Struktur der Basis-Komponente - Firewall 
+      :height:   40px
+      :align:    left
 
    Durch die Integration an den AD DS (Active Directory Domain Services) des Servers (Samba4) werden sämtliche Benutzer-Zugriffe der Nutzer mittels Single-Sign-On auf das Internet geregelt.
 
