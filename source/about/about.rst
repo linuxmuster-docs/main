@@ -204,10 +204,10 @@ Firewall
 ++++++++
 
 .. image::    media/structure_of_version_7_firewall.svg
-      :name:     structure-firewall
-      :alt:      Struktur der Basis-Komponente - Firewall 
-      :height:   40px
-      :align:    left
+   :name:     structure-firewall
+   :alt:      Struktur der Basis-Komponente - Firewall 
+   :height:   40px
+   :align:    left
 
 :OPNSense |reg|: wird als Standard-Firewall ausgeliefert.
 
@@ -215,7 +215,7 @@ Firewall
 
    Sämtliche verfügbaren Bausteine dieser Open-Source-Firewall stehen selbstverständlich zur Verfügung.
 
-   Für weitergehende Informationen `siehe opnsense.org <https://opnsense.org/>`_.
+Für weitergehende Informationen `siehe opnsense.org <https://opnsense.org/>`_.
 
 
 .. note::
