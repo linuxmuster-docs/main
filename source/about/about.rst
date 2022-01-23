@@ -35,7 +35,7 @@ Im Prinzip gibt es vier große Merkmale die auffallen:
 |  50  | 50 || 500  | 50 |
 +------+----++------+----+
 
-2. Die Zusammensetzung von Usern in den Abteilungen  
+2. Die Zusammensetzung von Usern in  Abteilungen  
 
 .. tabularcolumns:: |c|c|c|c|
 
@@ -69,7 +69,7 @@ Im Prinzip gibt es vier große Merkmale die auffallen:
 
 4. Der Umgang mit den Arbeitsmitteln
 
-   Aufgrund der Tatsache die im 1. Punkt dargelegt wurde, teilen sich Schüler und Schülerinnen ein und das selbe Arbeitsmittel im schulischen Alltag. Dabei ist es für die nächste Unterrichtseinheit unablässig, dass zum Start immer eine einheitliche Umgebung auf den den Rechner vorhanden ist. Die zeitliche Taktung zwischen den Wechseln kann sehr kurz sein.
+   Aufgrund der Tatsache die im 1. Punkt dargelegt wurde, teilen sich Schüler und Schülerinnen ein und dasselbe Arbeitsmittel im schulischen Alltag. Dabei ist es für die nächste Unterrichtseinheit unablässig, dass zum Start immer eine einheitliche Umgebung auf den Rechner vorhanden ist. Die zeitliche Taktung zwischen den Wechseln kann sehr kurz sein.
    
    Dies ist in einer Firma so nicht gegeben. Wenn ein User seinen Rechner verlässt, findet er ihn der Regel immer genauso wieder.
 
@@ -98,9 +98,9 @@ Unser Anspruch liegt dabei auf der Bereitstellung eines Systems, das folgende Pu
 
 Ein Augenmerk liegt dabei auf der Unabhängigkeit von der eingesetzten Hard- und Software. Dieses wird zum Beispiel erkennbar an dem Umfang der unterstützten Betriebssysteme für die Arbeitsstationen.
 
-Proprietäre Betriebssyteme, |zb| aus dem Hause Microsoft |reg|, können aufgrund der Lizenzpolitik der Hersteller nicht von uns vorbereitet ausgeliefert werden. Diese lassen sich aber ebenso leicht in unsere Infrastruktur integrieren, wie solche die als Open-Source erhältlich sind.
+Proprietäre Betriebssysteme, |zb| aus dem Hause Microsoft |reg|, können aufgrund der Lizenzpolitik der Hersteller nicht von uns vorbereitet ausgeliefert werden. Diese lassen sich aber ebenso leicht in unsere Infrastruktur integrieren, wie solche die als Open-Source erhältlich sind.
 
-Auf der Basis von Linux stellen wir ein Open-Source-Betriebssytem zur Verfügung, das folgende Vorteile bietet:
+Auf der Basis von Linux stellen wir ein Open-Source-Betriebssystem zur Verfügung, das folgende Vorteile bietet:
 
     * entwickelt von Praktikern für den täglichen Einsatz an Schulen
     * mit hilfreichen Schulfunktionen für den Unterrichtseinsatz
@@ -170,9 +170,9 @@ Selbstheilende Arbeitsstationen durch LINBO 4
    :height:   40px
    :align:    left 
 
-Das Konzept der Selbstheilenden Arbeitsstationen (SheilA) ermöglicht einheitliche identische Schulungssysteme. Diese können bei jedem Start der Rechner in einen vorher definierten Zustand zurückgesetzt werden. Dieser Standard wird durch die letzte Veränderung oder Installation festgelegt, in dem ein Abbild des Betriebssytems auf dem Server gespeichert wird. Weitere Vorteile sind:
+Das Konzept der Selbstheilenden Arbeitsstationen (SheilA) ermöglicht einheitliche identische Schulungssysteme. Diese können bei jedem Start der Rechner in einen vorher definierten Zustand zurückgesetzt werden. Dieser Standard wird durch die letzte Veränderung oder Installation festgelegt, in dem ein Abbild des Betriebssystems auf dem Server gespeichert wird. Weitere Vorteile sind:
 
-    * verschiedene Betriebssyteme auf jedem Client möglich
+    * verschiedene Betriebssysteme auf jedem Client möglich
     * schnelle Erst- oder Neueinrichtung
     * keine Einschränkung der Nutzer durch Benutzerrechte auf den Clients nötig
     * einfache Wiederherstellung der Clients ist jedem Benutzer möglich
@@ -189,9 +189,9 @@ Auf dem Server (links im Bild) sind zwei Betriebssysteme für Clients dieses Typ
    :height:   150px
    :align:    center
 
-* Der Benutzer wählt das erste Betriebssytem zum synchronisierten Start aus.
+* Der Benutzer wählt das erste Betriebssystem zum synchronisierten Start aus.
 * Der Client überprüft, ob sein lokal gespeichertes Systemabbild identisch ist mit dem auf dem Server (1.).
-* Dieses ist der Fall und der Client entpackt das erste Betriebssytem auf die eigentliche System-Partition und startet das System anschließend (3.). Wäre das nicht der Fall gewesen, hätte dieser zuerst das Systemabbild vom Server heruntergeladen (2.), um dann mit (3.) fortzufahren.
+* Dieses ist der Fall und der Client entpackt das erste Betriebssystem auf die eigentliche System-Partition und startet das System anschließend (3.). Wäre das nicht der Fall gewesen, hätte dieser zuerst das Systemabbild vom Server heruntergeladen (2.), um dann mit (3.) fortzufahren.
 
 Der hier aufgezeigte Fall ist einer von vielen Einsatzszenarien und dient der Veranschaulichung. Nähere Information sind im Kapitel "Linbo nutzen" beschrieben.
 
@@ -200,22 +200,23 @@ Integration unterschiedlicher Geräte (BYOD)
 
 Da sich alle Steuerungsfunktionen in unserer Lösung an den Benutzern orientieren, ist es unerheblich an welchem Gerät sie sich befinden. Das Gleiche gilt auch für mitgebrachte Geräte, mit denen sie sich mit dem Intranet via WLAN verbinden.
 
-
-.. image::    media/structure_of_version_7_firewall.svg
-   :name:     structure-firewall
-   :alt:      Struktur der Basis-Komponente - Firewall 
-   :height:   40px
-   :align:    left
-
 Firewall
 ++++++++
 
-Als Standard wird die Firewall OPNSense |reg| ausgeliefert.
+.. image::    media/structure_of_version_7_firewall.svg
+      :name:     structure-firewall
+      :alt:      Struktur der Basis-Komponente - Firewall 
+      :height:   40px
+      :align:    left
 
-Durch die Integration an den AD DS (Active Directory Domain Services) des Servers (Samba4) werden sämtliche Benutzer-Zugriffe der Nutzer mittels Single-Sign-On auf das Internet geregelt.
+:OPNSense |reg|: wird als Standard-Firewall ausgeliefert.
 
-Sämtliche verfügbaren Bausteine dieser Open-Source-Firewall stehen selbstverständlich zur Verfügung.
-Für weitergehende Informationen `siehe opnsense.org <https://opnsense.org/>`_.
+   Durch die Integration an den AD DS (Active Directory Domain Services) des Servers (Samba4) werden sämtliche Benutzer-Zugriffe der Nutzer mittels Single-Sign-On auf das Internet geregelt.
+
+   Sämtliche verfügbaren Bausteine dieser Open-Source-Firewall stehen selbstverständlich zur Verfügung.
+
+   Für weitergehende Informationen `siehe opnsense.org <https://opnsense.org/>`_.
+
 
 .. note::
    Diese vorgestellten Bestandteile werden vom Verein
@@ -252,15 +253,15 @@ Alle bisher vorgestellten Basisdienste werden mithilfe des Setups konfiguriert, 
 
    Hilfe-Forum https://www.linuxmuster.net/de/support-de/discourse-forum/
 
-   Die detailierte Beschreibung ist nicht Gegenstand dieser Dokumentation, sondern wird durch die Community in derem Wiki festgehalten.
+   Die detaillierte Beschreibung ist nicht Gegenstand dieser Dokumentation, sondern wird durch die Community in deren Wiki festgehalten.
 
    Community-Wiki: https://wiki.linuxmuster.net/community/
 
-:Alternative Firewall: Einsatzszenarien, die mit einer anderen Firewall als OPNsense |reg| ausgesattet sein sollen, bietet linuxmuster.net eine Möglichkeit der Umsetzung.
+:Alternative Firewall: Einsatzszenarien, die mit einer anderen Firewall als OPNsense |reg| ausgestattet sein sollen, bietet linuxmuster.net eine Möglichkeit der Umsetzung.
 
    .. image::    media/structure_of_version_7_alternate.svg
       :name:     structure-alternativ-firewall
-      :alt:      Struktur der Einbindung einer alternaiven Firewall
+      :alt:      Struktur der Einbindung einer alternativen Firewall
       :width:    150px
       :align:    right
 
@@ -276,9 +277,9 @@ Alle bisher vorgestellten Basisdienste werden mithilfe des Setups konfiguriert, 
 
   In der Darstellung ist zum Beispiel ein Docker-Server als Erweiterung an die Bedürfnisse der Bildungseinrichtung eingebunden. Docker ist ein Open-Source-Projekt zur automatisierten Anwendungsverteilung durch Container, die alle benötigten Pakete mitbringen. So vereinfacht sich die Bereitstellung und Verteilung. Außerdem gewährleisten sie die Trennung und Verwaltung der auf dem Docker-Server genutzten Ressourcen.
 
- Für weitergehende Informationen siehe die Docker-Homepage. https://www.docker.com
+ Für weitergehende Informationen siehe die Docker-Homepage: https://www.docker.com
 
-:Extra: Verschiedenste externe Dienste lassen sich an die linuxmuster.net Lösung anbinden, so dass eine einheitliche Authentifizierung erfolgt. 
+:Extra: Verschiedenste externe Dienste lassen sich an die linuxmuster.net Lösung anbinden, sodass eine einheitliche Authentifizierung erfolgt. 
 
    .. image::    media/structure_of_version_7_extra.svg
       :name:     structure-extra-server-and-services
@@ -288,4 +289,4 @@ Alle bisher vorgestellten Basisdienste werden mithilfe des Setups konfiguriert, 
 
    Es können z.B. extern gehostete Server wie zum Beispiel nextcloud, moodle oder Konferenzsysteme integriert werden.
 
-:download:`Komplette Struktur als Inkkscape SVG <media/structure_of_version_7_simple.svg>`
+:download:`Komplette Struktur als Inkscape SVG <media/structure_of_version_7_simple.svg>`
