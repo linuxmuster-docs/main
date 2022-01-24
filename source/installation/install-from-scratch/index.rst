@@ -508,11 +508,14 @@ Du kannst für Kurzinformationen auch ``sudo pvs`` angeben. Die vg - volume grou
    sudo mkdir /srv/samba/schools
    sudo mkdir /srv/samba/schools/default-school
  
-9. Kopiere den Inhalt von ``/var`` zunächst in einen neuen Ordner. Das Verzecihnis ``/var`` soll später auf das LVM gemountet werden.
+9. Kopiere den Inhalt von ``/var`` zunächst in einen neuen Ordner ``/savevar``. Das Verzeichnis ``/var`` soll später auf das LVM gemountet werden.
+   Hierbei ist darauf zu achten, dass das virtuelle Dateisystem unterhalb von /var, das für die LX-Container genutzt wird, zunächst ausgehangen und der entsprechende    
+   Dienst ``lxcfs.service`` beendet wird.
 
 .. code:: 
 
    sudo mkdir /savevar
+   sudo systemctl stop lxcfs.service
    sudo cp -R /var /savevar
 
 10. Rufe die Datei ``/etc/fstab`` mit dem Editor nano auf und ergänze den bisherigen Eintrag für die 1. HDD um nachstehenden Eintragungen:
@@ -529,14 +532,22 @@ Speichere die Einstellung mit ``Strg+w`` und verlasse den Editor mit ``Strg+x``.
 11. Lade die Eintragungen aus der Datei ``/etc/fstab`` neu mit ``mount -a``. Ggf. erkennst Du auch noch Fehler, die sich aufgrund von Tippfehlern in der Datrei /etc/fstab ergeben.
     Behebe diese zuerst bevor du fortfährst.
 
-12. Kopiere dann die gesicherten Inhalte wieder in das Verzeichnis ``/var``, das jetzt auf dem LVM gemountet ist und noch keinen Inhalt hat.
+12. Kopiere dann die gesicherten Inhalte wieder in das Verzeichnis ``/var``, das jetzt auf dem LVM gemountet ist und noch keinen Inhalt hat. Start danach das wieder 
+    das virtuelle Dateisystem oder gehe direkt zu Punkt 13, da beim Neustart dieses wieder eingehangen wird.
 
 .. code::
 
    cd /savevar/var
    sudo cp -R * /var  
+   sudo systemctl stop lxcfs.service
 
 13. Boote danach den Server neu mit ``sudo reboot``. Startet dieser ohne Fehlermeldungen durch, kannst du nun das Verzeichnis ``savevar`` wieder löschen mit ``rm -R /savevar``.
+
+.. hint::
+
+   Solltest Du beim Kopieren des Inhalts von ``var`` Fehler angezeigt bekommen, so hast du das virtuelle Dateisystem zuvor nicht ausgehangen. Gehe dann wie unter 8. vor.
+
+
 
 
 Automatische Updates abschalten
