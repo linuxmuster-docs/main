@@ -404,13 +404,13 @@ Richte nun auf der 2. HDD ein LVM ein.
 
 .. figure:: media/lmn71-additional/custom-storage-layout-create-partition-table-lvm-hdb-5.png
 
-Wähle den Eintrag ``Datenträgergruppe (LVM) anlegen`` aus.  
+Wähle den Eintrag ``Datenträgergruppe (LVM) anlegen`` aus.
 
-Hier gibst du einen eigenen Namen für die LVM Volume Group an (z.B. vg_server oder vg0).
+Hier gibst du einen eigenen Namen für die LVM Volume Group an (z.B. vg0).
 
 .. figure:: media/lmn71-additional/custom-storage-layout-create-partition-table-lvm-6.png
 
-Zum Abschluss werden dir die Partitionsierungseinstellungen angezeigt. 
+Zum Abschluss werden dir die Partitionsierungseinstellungen angezeigt.
 
 .. figure:: media/lmn71-additional/custom-storage-layout-create-partition-table-overview.png
 
@@ -426,13 +426,13 @@ Bestätige dies.
 
 .. figure:: media/server20.png
 
-Nenne den Server ``server``. Der Benutzername und das Passwort sind frei wählbar - wie in der Abb. dargestellt. 
+Nenne den Server ``server``. Der Benutzername und das Passwort sind frei wählbar - wie in der Abb. dargestellt.
 
 .. figure:: media/server21.png
 
 Installiere OpenSSH **nicht** und installiere keine weiteren optionalen Pakete. Bestätige die Installation mit ``Fortfahren``.
 
-Zum Abschluß der Installation wird automatisch versucht updates zu installieren und danach den server neu zu starten. 
+Zum Abschluß der Installation wird automatisch versucht updates zu installieren und danach den server neu zu starten.
 Bei laufender und wie zuvor beschriebener Einrichtung der OPNsense® sollte dies erfolgreich verlaufen.
 
 Wenn die Installation abgeschlossen und der Server neu gestartet ist, meldest du dich mit den zuvor angegeben Login-Daten an.
@@ -441,7 +441,7 @@ Wenn die Installation abgeschlossen und der Server neu gestartet ist, meldest du
 
    Bei einer Installation in eine VM achte vor dem Neustart darauf, dass du die ISO-Datei / DVD ausgeworfen hast und die Boot-Reihenfolge so unmgestellt hast,
    dass die VM direkt von HDD bootet.
-   
+
 LVM - Besonderheiten
 --------------------
 
@@ -456,27 +456,27 @@ Hast du zuvor für die 2. HDD ein LVM eingerichtet, dann sind zur Vorbereitung n
 
 .. code::
 
-   sudo pvcreate /dev/sdb1
-   sudo vgcreate vg_server /dev/sdb1
+   sudo pvcreate /dev/sdb1       # Achtung: unter XCP-ng wäre die Bezeichnung xvdb1
+   sudo vgcreate vg0 /dev/sdb1   # vg0 entspricht dem zuvor gewählten Namen für das LVM
    sudo vgchange -ay
 
 Weiter mit Punkt 3.
 
-1. Hattest du zuvor ein LVM angelegt, gebe auf der Konsole ``sudo vgscan --mknodes`` ein. Es wird dir dann die sog. ``volume group "vg_server"`` angezeigt, die du während der Installation auf der 2. HDD angelegt hast.
+1. Hattest du zuvor ein LVM angelegt, gebe auf der Konsole ``sudo vgscan --mknodes`` ein. Es wird dir dann die sog. ``volume group "vg0"`` angezeigt, die du während der Installation auf der 2. HDD angelegt hast.
 
 2. Führe ``sudo vgchange -ay`` aus, um das Volume zu aktivieren.
 
-3. Gebe ``sudo pvdisplay`` an, um Informationen zu der Logical Volume Group auszugeben. PV = physical volume = hdd, vg = volume group = vg_server.
-Du kannst für Kurzinformationen auch ``sudo pvs`` angeben. Die vg - volume group sollte schon vorhanden sein und wie zuvor angegeben hier ``vg_server`` heißen.
+3. Gebe ``sudo pvdisplay`` an, um Informationen zu der Logical Volume Group auszugeben. PV = physical volume = hdd, vg = volume group = .
+Du kannst für Kurzinformationen auch ``sudo pvs`` angeben. Die vg - volume group sollte schon vorhanden sein und wie zuvor angegeben hier ``vg0`` heißen.
 
 4. Lege nun logical volumes an. Wir gehen von 100G für die HDD aus:
 
 .. code::
 
-   sudo lvcreate -L 10G -n /dev/vg_server/var vg_server
-   sudo lvcreate -L 40G -n /dev/vg_server/linbo vg_server
-   sudo lvcreate -L 10G -n /dev/vg_server/global vg_server
-   sudo lvcreate -L 38G -n /dev/vg_server/default-school vg_server
+   sudo lvcreate -L 10G -n /dev/vg0/var vg0
+   sudo lvcreate -L 40G -n /dev/vg0/linbo vg0
+   sudo lvcreate -L 10G -n /dev/vg0/global vg0
+   sudo lvcreate -L 38G -n /dev/vg0/default-school vg0
    
 5. Um zu prüfen, ob die logical volumes angelegt wurden, gebe den Befehl ``sudo lvs`` an.
 
@@ -484,19 +484,19 @@ Du kannst für Kurzinformationen auch ``sudo pvs`` angeben. Die vg - volume grou
 
 .. code::
 
-   sudo lvchange -ay /dev/vg_server/var
-   sudo lvchange -ay /dev/vg_server/linbo
-   sudo lvchange -ay /dev/vg_server/global
-   sudo lvchange -ay /dev/vg_server/default-school
+   sudo lvchange -ay /dev/vg0/var
+   sudo lvchange -ay /dev/vg0/linbo
+   sudo lvchange -ay /dev/vg0/global
+   sudo lvchange -ay /dev/vg0/default-school
    
 7. Formatiere die Verzeichnisse in den neu angelegten logical volume groups wie folgt:
 
 .. code::
 
-   sudo mkfs.ext4 /dev/vg_server/var
-   sudo mkfs.ext4 /dev/vg_server/linbo
-   sudo mkfs.ext4 /dev/vg_server/global
-   sudo mkfs.ext4 /dev/vg_server/default-school
+   sudo mkfs.ext4 /dev/vg0/var
+   sudo mkfs.ext4 /dev/vg0/linbo
+   sudo mkfs.ext4 /dev/vg0/global
+   sudo mkfs.ext4 /dev/vg0/default-school
    
 8. Lege nachstehende Verzeichnisse an, die wir danach auf die logical volumes mounten:
    
@@ -522,30 +522,30 @@ Du kannst für Kurzinformationen auch ``sudo pvs`` angeben. Die vg - volume grou
 
 .. code::
 
-   /dev/vg_server/var              /var ext4 defaults 0 1
-   /dev/vg_server/linbo            /srv/linbo ext4 defaults 0 1
-   /dev/vg_server/global           /srv/samba/global ext4 user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1 0 1
-   /dev/vg_server/default-school   /srv/samba/schools/default-school ext4 user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1 0 1
+   /dev/vg0/var              /var ext4 defaults 0 1
+   /dev/vg0/linbo            /srv/linbo ext4 defaults 0 1
+   /dev/vg0/global           /srv/samba/global ext4 user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1 0 1
+   /dev/vg0/default-school   /srv/samba/schools/default-school ext4 user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1 0 1
 
 Speichere die Einstellung mit ``Strg+w`` und verlasse den Editor mit ``Strg+x``. 
 
 11. Lade die Eintragungen aus der Datei ``/etc/fstab`` neu mit ``mount -a``. Ggf. erkennst Du auch noch Fehler, die sich aufgrund von Tippfehlern in der Datrei /etc/fstab ergeben.
     Behebe diese zuerst bevor du fortfährst.
 
-12. Kopiere dann die gesicherten Inhalte wieder in das Verzeichnis ``/var``, das jetzt auf dem LVM gemountet ist und noch keinen Inhalt hat. Start danach das wieder 
+12. Kopiere dann die gesicherten Inhalte wieder in das Verzeichnis ``/var``, das jetzt auf dem LVM gemountet ist und noch keinen Inhalt hat. Starte danach wieder   
     das virtuelle Dateisystem oder gehe direkt zu Punkt 13, da beim Neustart dieses wieder eingehangen wird.
 
 .. code::
 
    cd /savevar/var
-   sudo cp -R * /var  
-   sudo systemctl stop lxcfs.service
+   sudo cp -R * /var
+   sudo systemctl start lxcfs.service
 
 13. Boote danach den Server neu mit ``sudo reboot``. Startet dieser ohne Fehlermeldungen durch, kannst du nun das Verzeichnis ``savevar`` wieder löschen mit ``rm -R /savevar``.
 
 .. hint::
 
-   Solltest Du beim Kopieren des Inhalts von ``var`` Fehler angezeigt bekommen, so hast du das virtuelle Dateisystem zuvor nicht ausgehangen. Gehe dann wie unter 8. vor.
+   Solltest Du beim Kopieren des Inhalts von ``var`` Fehler angezeigt bekommen, so hast du das virtuelle Dateisystem zuvor nicht ausgehangen. Gehe dann wie unter 9. vor.
 
 
 
