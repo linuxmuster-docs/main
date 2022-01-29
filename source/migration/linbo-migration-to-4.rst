@@ -21,8 +21,8 @@ Linbo4 weist einige Besonderheiten auf:
 * qemu-img wird nun genutzt, um die Erstellung und Wiederherstellung der qcow2 Images durchzuführen.
 * Es wird nur noch 64 Bit Client-Hardware unterstützt.
 * linuxmuster.net <=6.2 wird nicht mehr unterstützt.
-* Es gibt jetzt keine differentielle Images mehr. Differentielle Images werden voraussichtlich erst wieder ab Linbo v4.1 unterstützt.
-* Bisherige Images im cloop Format bitte direkt in das neue qcow2 Format komvertieren - wie unten beschrieben.
+* Es gibt jetzt derzeit differentiellen Images mehr. Differentielle Images werden voraussichtlich erst wieder ab Linbo v4.1 unterstützt.
+* Bisherige Images im cloop Format sind bitte direkt in das neue qcow2 Format zu konvertieren - wie unten beschrieben.
 
 Konvertiere die linbo 2.4 Images
 ================================

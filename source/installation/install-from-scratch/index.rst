@@ -176,6 +176,23 @@ Für die Konfiguration der OPNsense® brauchst du einen Rechner mit Webbrowser i
    Die Zuordnung wird auf der Konsole nochmals angezeigt und diese ist dann mit ``y`` zu bestätigen.
    Fahre dann wie nachstehend beschrieben mit der Konfiguration der IP-Adressen fort.
 
+
+.. hint::
+
+   Sollte nach dem Neustart in der Konsole der OPNsense® die Tastaturbelegung immer noch falsch sein, stelle diese dauerhaft wie nachstehend beschrieben um:
+
+Melde dich als Benutzer ``root`` in der Konsole an und wähle 8) aus. Danach gibst du folgende Befehle an (für ein deutsches Tastaturlayout):
+
+.. code::
+
+   cd /usr/share/syscons/keymaps
+   ls german.iso.kbd # list das deutsche Tastaturlayout auf, sofern vorhanden
+   kbdcontrol -l german.iso.kbd # (-l = Language) stelle temporär auf das neue Layout um - teste, ob es dem gewünschten Layout entspricht
+   echo "keymap='de'">>/etc/rc.conf # füge die Wahl des Tastaturlayouts dauerhaft hinzu
+   less /etc/rc.conf #kontrolliere, ob der Eintrag vorhanden ist
+   reboot # Neustart - kontrolliere danach, ob das gewünschte Layout angewendet wurde
+
+
 Konfiguration der OPNsense®
 ---------------------------
 
@@ -293,7 +310,7 @@ Setze einen Haken bei ``Aktiviere Secure Shell``, ``Erlaube Anmeldung mit dem ro
 Update der OPNsense®
 --------------------
 
-Aktualisiere nun die OPNsense®, indem du unter ``System -> Firmware -> Aktualisierungen -> Auf Aktualisierungen prüfen`` klickst.
+Aktualisiere nun die OPNsense®, indem du unter ``System -> Firmware -> Aktualisierungen -> TAB Status --> Auf Aktualisierungen prüfen`` klickst.
 Es werden dir dann wie in nachstehender Abbildung zu aktualisierende Pakete angezeigt.
 
 .. figure:: media/OPNS29.png
