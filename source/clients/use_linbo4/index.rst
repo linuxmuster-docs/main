@@ -323,7 +323,7 @@ Der gebootete LINBO-Kernel erscheint als ASCII-Art.
 
    LINBO-Kernelboot ASCII-Art
 
-Die Grub-Konfiguration wird ggf aktualisiert, danach erascheint der reguläre ``LINBO Startbildschirm``.
+Die Grub-Konfiguration wird ggf aktualisiert, danach erscheint der reguläre ``LINBO Startbildschirm``.
 
 Boot-Abbild für USB-Sticks und CD/DVD
 -------------------------------------
@@ -364,7 +364,6 @@ Mit ``Enter`` wird der Client gebootet
  
 .. image:: media/linbo_screen2.png
 
-Mit der Auswahl ``Ersteinrichtung + Neustart`` wird Linbo eingerichtet und der Rechner mit Linbo gestartet.
-Nach einem Neustart stehen alle Linbo-Funktionen zur Verfügung.
+Mit der Auswahl durch die Pfeiltasten der Tastatur ``Ersteinrichtung + Neustart`` wird Linbo eingerichtet und der Rechner mit Linbo gestartet. Nach dem Neustart stehen alle Linbo-Funktionen zur Verfügung.
 
 
