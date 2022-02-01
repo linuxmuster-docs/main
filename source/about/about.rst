@@ -15,7 +15,8 @@
 Was ist linuxmuster.net?
 ========================
 
-.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_, `@MachtDochNix <https://ask.linuxmuster.net/u/machtdochnix>`_
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
+                   `@MachtDochNix <https://ask.linuxmuster.net/u/machtdochnix>`_
 
 **Schulnetzwerk vs. "normales" Netzwerk**
 
@@ -180,20 +181,7 @@ Das Konzept der Selbstheilenden Arbeitsstationen (SheilA) ermöglicht einheitlic
     * Möglichkeit der zeit- und/oder ferngesteuerten Aktualisierung der Clients.
     * mit sogenannten Postsync-Scripten kann der Administrator für einzelne, raumweite oder für alle Geräte notwendige Konfigurationsänderung beim Systemstart einpflegen.
 
-Die Funktionsweise wird am Beispiel eines Clients (rechts im Bild) beschrieben.
-Auf dem Server (links im Bild) sind zwei Betriebssysteme für Clients dieses Typs komprimiert gespeichert. 
-
-.. image::    ..//clients/linbo/media/linbo_functionality_detail.svg
-   :name:     linbo-functionality
-   :alt:      linbo-functionality
-   :height:   150px
-   :align:    center
-
-* Der Benutzer wählt das erste Betriebssystem zum synchronisierten Start aus.
-* Der Client überprüft, ob sein lokal gespeichertes Systemabbild identisch ist mit dem auf dem Server (1.).
-* Dieses ist der Fall und der Client entpackt das erste Betriebssystem auf die eigentliche System-Partition und startet das System anschließend (3.). Wäre das nicht der Fall gewesen, hätte dieser zuerst das Systemabbild vom Server heruntergeladen (2.), um dann mit (3.) fortzufahren.
-
-Der hier aufgezeigte Fall ist einer von vielen Einsatzszenarien und dient der Veranschaulichung. Nähere Information sind im Kapitel "Linbo nutzen" beschrieben.
+Nähere Information sind im Kapitel "CLIENTVERWALTUNG" beschrieben.
 
 Integration unterschiedlicher Geräte (BYOD)
 +++++++++++++++++++++++++++++++++++++++++++

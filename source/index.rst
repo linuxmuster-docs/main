@@ -113,16 +113,16 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   migration/linbo-migration-to-4
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 3
   :caption: Clientverwaltung
   :hidden:
 
-  clients/add-computer
-  clients/linbo/index
+  clients/linbo
+  clients/windows10clients/index
   clients/linux-clients/index
   clients/postsync/index
   clients/leoclient2/index
-  clients/windows10clients/index
+  clients/use_linbo4/index
 
 .. toctree::
   :maxdepth: 2
