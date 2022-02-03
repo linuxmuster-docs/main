@@ -311,8 +311,8 @@ Editiere die Datei ``/var/lib/samba/sysvol/linuxmuster.lan/scripts/default-schoo
   # set proxy via env (for Firefox)
   lmn-export no_proxy=127.0.0.0/8,10.0.0.0/8,192.168.0.0/16,172.16.0.0/12,localhost,.local,.$PROXY_DOMAIN
   lmn-export http_proxy=$PROXY_HOST:$PROXY_PORT
-  lmn-export ftp_proxy==$PROXY_HOST:$PROXY_PORT
-  lmn-export https_proxy==$PROXY_HOST:$PROXY_PORT
+  lmn-export ftp_proxy=$PROXY_HOST:$PROXY_PORT
+  lmn-export https_proxy=$PROXY_HOST:$PROXY_PORT
 
   # set proxy gconf (for Chrome)
   gsettings set org.gnome.system.proxy ignore-hosts "['127.0.0.0/8','10.0.0.0/8','192.168.0.0/16','172.16.0.0/12','localhost','.local','.$PROXY_DOMAIN']"
