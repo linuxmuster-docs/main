@@ -191,6 +191,11 @@ Dies erfolgt in der Datei ``/etc/netplan/01-netcfg.yaml`` (z.B. ens33):
             ens33:
               ...
 
+.. hint::
+
+  ggf. kann die YAML-Datei auch einen anderen Namen nach der Erstinstallation aufweisen. Zu Beginn findet sich nur eine YAML-Datei in dem Verzeichnis.
+
+
 Änderungen in der Datei speichern und danach wie folgt übernehmen:
 
 .. code::
@@ -209,32 +214,32 @@ Eine eigene IP-/Netzwerkonfiguration übergibt man mit dem Parameter -n:
 
 .. code::
 
-   ./lmn71-appliance -s -u -n 192.168.0.1/16 oder
-   ./lmn71-appliance -s -u -n 192.168.0.1/255.255.0.0
+   ./lmn71-appliance -u -n 192.168.0.1/16 oder
+   ./lmn71-appliance -u -n 192.168.0.1/255.255.0.0
 
 Einen eigenen Domänennamen übergibt man mit -d:
 
 .. code::
 
-   ./lmn71-appliance -s -u -d schule.lan
+   ./lmn71-appliance -u -d schule.lan
 
 Eine abweichende Firewall-IP setzt man mit -f:
 
 .. code::
 
-   ./lmn71-appliance -s -u -f 192.168.0.10
+   ./lmn71-appliance -u -f 192.168.0.10
 
 Das alles kann **in einem Schritt** erfolgen:
 
 .. code::
 
-   ./lmn71-appliance -s -u -d schule.lan -n 192.168.0.1/16 -f 192.168.0.10
+   ./lmn71-appliance -u -d schule.lan -n 192.168.0.1/16 -f 192.168.0.10
 
 Minimaler Aufruf, wenn die Standard-Netzwerkeinstellungen (10.0.0.0/16) verwendet werden sollen:
 
 .. code::
 
-   ./lmn71-appliance -e|--default -p <Profil>
+   ./lmn71-appliance --default -p <Profil>
 
 Gesetzt wird damit:
  * Server: IP 10.0.0.1, Hostname server
