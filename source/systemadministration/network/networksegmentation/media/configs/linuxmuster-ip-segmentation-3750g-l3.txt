@@ -1,0 +1,368 @@
+
+!
+version 12.2
+no service pad
+service timestamps debug datetime localtime
+service timestamps log datetime localtime
+service password-encryption
+!
+hostname c3750-L3-linuxmuster-docu
+!
+boot-start-marker
+boot-end-marker
+!
+!
+username muster password 7 09615B1A0D000553
+!
+!
+macro global description cisco-global
+aaa new-model
+!
+!
+aaa authentication login default local
+aaa authorization exec default local 
+!
+!
+!
+aaa session-id common
+clock timezone MET 1
+clock summer-time MEST recurring last Sun Mar 2:00 last Sun Oct 3:00
+switch 1 provision ws-c3750g-24ts-1u
+system mtu routing 1500
+vtp mode off
+udld aggressive
+
+ip routing
+no ip domain-lookup
+!
+!
+!
+mls qos map cos-dscp 0 8 16 24 32 46 46 56
+!
+crypto pki trustpoint TP-self-signed-2644216448
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-2644216448
+ revocation-check none
+ rsakeypair TP-self-signed-2644216448
+!
+!
+crypto pki certificate chain TP-self-signed-2644216448
+ certificate self-signed 01 nvram:IOS-Self-Sig#3838.cer
+!
+!
+!
+errdisable recovery cause bpduguard
+errdisable recovery cause link-flap
+errdisable recovery interval 60
+!
+spanning-tree mode rapid-pvst
+spanning-tree loopguard default
+spanning-tree portfast bpduguard default
+spanning-tree extend system-id
+spanning-tree vlan 3,5,10,20,30,40,100,200 priority 24576
+!
+vlan internal allocation policy ascending
+!
+vlan 3
+ name management
+!
+vlan 5
+ name internet
+!
+vlan 10
+ name wlan-lul
+!
+vlan 30
+ name wlan-sus
+!
+vlan 40
+ name lehrer
+!
+vlan 100
+ name Raum100
+!
+vlan 200
+ name Raum200
+!
+ip ssh time-out 90
+ip ssh authentication-retries 2
+ip ssh version 2
+ip scp server enable
+!
+!
+interface Port-channel1
+ description "Port 1,2,13,14 Trunk-SRV, VLANs 3,5,10,20,30,40,100,200"
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3,5,10,20,30,40,100,200
+ switchport mode trunk
+ storm-control broadcast level 50.00
+!
+interface Port-channel2
+ description "Port 3,4,15,16 als Trunk / Server, VLANs 3,5,10,20,30,40,100,200"
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3,5,10,20,30,40,100,200
+ switchport mode trunk
+ storm-control broadcast level 50.00
+!
+interface Port-channel3
+ description Ports 25-28 Uplink-Trunk / L2-SW, VLANs 3,5,10,20,30,40,100,200
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3,5,10,20,30,40,100,200
+ switchport mode trunk
+ storm-control broadcast level 50.00
+!
+interface GigabitEthernet1/0/1
+ description Trunk Ports 1-2,13,14
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3,5,10,20,30,40,100,200
+ switchport mode trunk
+ storm-control broadcast level 50.00
+ no cdp enable
+ channel-group 1 mode active
+ spanning-tree portfast disable
+!
+interface GigabitEthernet1/0/2
+ description Trunk Ports 1-2,13,14
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3,5,10,20,30,40,100,200
+ switchport mode trunk
+ storm-control broadcast level 50.00
+ no cdp enable
+ channel-group 1 mode active
+ spanning-tree portfast disable
+!
+interface GigabitEthernet1/0/3
+ description "Port 3,4,15,16 als Trunk / Server, VLANs 3,5,10,20,30,40,100,200"
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3,5,10,20,30,40,100,200
+ switchport mode trunk
+ storm-control broadcast level 50.00
+ no cdp enable
+ channel-group 2 mode active
+ spanning-tree portfast disable
+!
+interface GigabitEthernet1/0/4
+ description "Port 3,4,15,16 als Trunk / Server, VLANs 3,5,10,20,30,40,100,200"
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3,5,10,20,30,40,100,200
+ switchport mode trunk
+ storm-control broadcast level 50.00
+ no cdp enable
+ channel-group 2 mode active
+ spanning-tree portfast disable
+!
+interface GigabitEthernet1/0/5
+ shutdown
+!
+interface GigabitEthernet1/0/6
+ shutdown
+!
+interface GigabitEthernet1/0/7
+ description Access Ports VLAN 5 - Internet Ports 7,19
+ switchport access vlan 5
+ switchport mode access
+ no cdp enable
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/8
+ shutdown
+!
+interface GigabitEthernet1/0/9
+ shutdown
+!
+interface GigabitEthernet1/0/10
+ shutdown
+!
+interface GigabitEthernet1/0/11
+ shutdown
+!
+interface GigabitEthernet1/0/12
+ shutdown
+!
+interface GigabitEthernet1/0/13
+ description Trunk Ports 1-2,13,14
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3,5,10,20,30,40,100,200
+ switchport mode trunk
+ storm-control broadcast level 50.00
+ no cdp enable
+ channel-group 1 mode active
+ spanning-tree portfast disable
+!
+interface GigabitEthernet1/0/14
+ description Trunk Ports 1-2,13,14
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3,5,10,20,30,40,100,200
+ switchport mode trunk
+ storm-control broadcast level 50.00
+ no cdp enable
+ channel-group 1 mode active
+ spanning-tree portfast disable
+!
+interface GigabitEthernet1/0/15
+ description "Port 3,4,15,16 als Trunk / Server, VLANs 3,5,10,20,30,40,100,200"
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3,5,10,20,30,40,100,200
+ switchport mode trunk
+ storm-control broadcast level 50.00
+ no cdp enable
+ channel-group 2 mode active
+ spanning-tree portfast disable
+!
+interface GigabitEthernet1/0/16
+ description "Port 3,4,15,16 als Trunk / Server, VLANs 3,5,10,20,30,40,100,200"
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3,5,10,20,30,40,100,200
+ switchport mode trunk
+ storm-control broadcast level 50.00
+ no cdp enable
+ channel-group 2 mode active
+ spanning-tree portfast disable
+!
+interface GigabitEthernet1/0/17
+ shutdown
+!
+interface GigabitEthernet1/0/18
+ shutdown
+!
+interface GigabitEthernet1/0/19
+ description Access Ports VLAN 5 - Internet Ports 7,19
+ switchport access vlan 5
+ switchport mode access
+ no cdp enable
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/20
+ shutdown
+!
+interface GigabitEthernet1/0/21
+ shutdown
+!
+interface GigabitEthernet1/0/22
+ shutdown
+!
+interface GigabitEthernet1/0/23
+ description Access Ports VLAN 10 - Server Netz
+ switchport access vlan 10
+ switchport mode access
+ no cdp enable
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/24
+ description Access Ports VLAN 3 - Mgmt Port 24
+ switchport access vlan 3
+ switchport mode access
+ no cdp enable
+ spanning-tree portfast disable
+!
+interface GigabitEthernet1/0/25
+ description Ports 25-28 Uplink-Trunk / L2-SW, VLANs 3,5,10,20,30,40,100,200
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3,5,10,20,30,40,100,200
+ switchport mode trunk
+ storm-control broadcast level 50.00
+ channel-group 3 mode active
+ spanning-tree portfast disable
+!
+interface GigabitEthernet1/0/26
+ description Ports 25-28 Uplink-Trunk / L2-SW, VLANs 3,5,10,20,30,40,100,200
+ switchport trunk encapsulation dot1q
+ storm-control broadcast level 50.00
+ channel-group 3 mode active
+ spanning-tree portfast disable
+!
+interface GigabitEthernet1/0/27
+ description Ports 25-28 Uplink-Trunk / L2-SW, VLANs 3,5,10,20,30,40,100,200
+ switchport trunk encapsulation dot1q
+ storm-control broadcast level 50.00
+ channel-group 3 mode active
+ spanning-tree portfast disable
+!
+interface GigabitEthernet1/0/28
+ description Ports 25-28 Uplink-Trunk / L2-SW, VLANs 3,5,10,20,30,40,100,200
+ switchport trunk encapsulation dot1q
+ storm-control broadcast level 50.00
+ channel-group 3 mode active
+ spanning-tree portfast disable
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan3
+ description management
+ ip address 192.168.1.200 255.255.255.0
+!
+interface Vlan5
+ no ip address
+!
+interface Vlan10
+ ip address 10.0.0.253 255.255.255.0
+ ip helper-address 10.1.0.255
+ ip helper-address 10.2.100.255
+ ip helper-address 10.2.200.255
+ ip helper-address 10.3.0.255
+ ip helper-address 10.4.0.255
+!
+interface Vlan20
+ ip address 10.3.0.253 255.255.255.0
+ ip helper-address 10.0.0.1
+ ip directed-broadcast 101
+!
+interface Vlan30
+ ip address 10.4.0.253 255.255.255.0
+ ip helper-address 10.0.0.1
+ ip directed-broadcast 101
+!
+interface Vlan40
+ ip address 10.1.0.254 255.255.255.0
+ ip access-group LEHRKRAEFTE in
+ ip helper-address 10.0.0.1
+ ip directed-broadcast 101
+!
+interface Vlan100
+ ip address 10.2.100.254 255.255.255.0
+ ip access-group KLASSENRAEUME in
+ ip helper-address 10.0.0.1
+ ip directed-broadcast 101
+!
+interface Vlan200
+ ip address 10.2.200.254 255.255.255.0
+ ip access-group KLASSENRAEUME in
+ ip helper-address 10.0.0.1
+ ip directed-broadcast 101
+!
+ip default-gateway 10.0.0.254
+ip classless
+ip forward-protocol udp discard
+ip route 0.0.0.0 0.0.0.0 10.0.0.254
+ip http server
+ip http secure-server
+!
+ip access-list extended KLASSENRAEUME
+ permit ip any 10.0.0.0 0.0.0.255
+ deny   ip any 10.0.0.0 0.255.255.255
+ permit ip any any
+ip access-list extended LEHRKRAEFTE
+ permit ip any any
+ permit ip any 10.0.0.0 0.0.0.255
+ deny   ip any 10.0.0.0 0.255.255.255
+!
+access-list 101 permit udp host 10.0.0.1 any eq discard
+!
+vstack
+!
+line con 0
+ exec-timeout 5 0
+ password 7 03294E18120A330D
+ logging synchronous
+line vty 0 4
+ exec-timeout 5 0
+ password 7 062B1A32584B1B58
+ length 0
+ transport input ssh
+line vty 5 15
+ exec-timeout 5 0
+ password 7 062B1A32584B1B58
+!
+end

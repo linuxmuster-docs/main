@@ -29,7 +29,7 @@ Das Skript lmn71-appliance installiert für dich das Paket linuxmuster-prepare m
 
 * Vorbereitung: Lade das Skript hier herunter: ``wget https://raw.githubusercontent.com/linuxmuster/linuxmuster-prepare/master/lmn71-appliance``.
 * Mach das Sktipt nun ausführbar: ``chmod +x lmn71-appliance`` ausführbar
-* Starte das Skript als Benutzer ``root`` mit: ``./lmn71-appliance -p server -u -l /dev/sdb``. Hierbei wird auf dem angegebenen Device/ der HDD ein LVM eingerichtet.
+* Starte das Skript als Benutzer ``root`` mit: ``./lmn71-appliance -p server -l /dev/sdb``. Hierbei wird auf dem angegebenen Device/ der HDD ein LVM eingerichtet.
 * Für weitere Hinweise zum linuxmuster-prepare Skript siehe: https://github.com/linuxmuster/linuxmuster-prepare
 
 Im Anschluss kann das Setup ausgeführt werden, das dann den Netzbereich ausliest und für die weitere Einrichtung verwendet.
@@ -69,8 +69,6 @@ Optionen
 +----------+---------------------------------------+--------------------------------------------------+
 | -d,      | --domain= <domain>                    | Domänenname (Standard: linuxmuster.lan).         |
 +----------+---------------------------------------+--------------------------------------------------+
-| -u,      | --unattended                          | Keine Abfragen, verwende Standardwerte.          |
-+----------+---------------------------------------+--------------------------------------------------+
 | -h,      | --help                                | Hilfe anzeigen.                                  |
 +----------+---------------------------------------+--------------------------------------------------+
 
@@ -98,7 +96,7 @@ Beispiele
 
 .. code::
 
-   ./lmn71-appliance -u -p server -l /dev/sdb
+   ./lmn71-appliance -p server -l /dev/sdb
 
 Richtet Serverprofil mit LVM auf 2. Festplatte mit Standardwerten ein:
  - Hostname server,
@@ -133,7 +131,7 @@ Appliance mit 2 Festplatten einrichten, zum Beispiel:
 
 .. code::
 
-   ./lmn71-appliance -p server -u -l /dev/sdb
+   ./lmn71-appliance -p server -l /dev/sdb
 
    * Appliance herunterfahren und Snapshot erstellen.
 
@@ -214,26 +212,26 @@ Eine eigene IP-/Netzwerkonfiguration übergibt man mit dem Parameter -n:
 
 .. code::
 
-   ./lmn71-appliance -u -n 192.168.0.1/16 oder
-   ./lmn71-appliance -u -n 192.168.0.1/255.255.0.0
+   ./lmn71-appliance -n 192.168.0.1/16 oder
+   ./lmn71-appliance -n 192.168.0.1/255.255.0.0
 
 Einen eigenen Domänennamen übergibt man mit -d:
 
 .. code::
 
-   ./lmn71-appliance -u -d schule.lan
+   ./lmn71-appliance -d schule.lan
 
 Eine abweichende Firewall-IP setzt man mit -f:
 
 .. code::
 
-   ./lmn71-appliance -u -f 192.168.0.10
+   ./lmn71-appliance -f 192.168.0.10
 
 Das alles kann **in einem Schritt** erfolgen:
 
 .. code::
 
-   ./lmn71-appliance -u -d schule.lan -n 192.168.0.1/16 -f 192.168.0.10
+   ./lmn71-appliance -d schule.lan -n 192.168.0.1/16 -f 192.168.0.10
 
 Minimaler Aufruf, wenn die Standard-Netzwerkeinstellungen (10.0.0.0/16) verwendet werden sollen:
 

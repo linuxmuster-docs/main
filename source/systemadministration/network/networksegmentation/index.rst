@@ -42,12 +42,14 @@ Sollte z.B. WLAN zum Einsatz kommen oder sollen weitere Anforderungen erfüllt w
 Diese Dokumentation greift den Fall einer **Unterteilung des pädagogischen Netzes in sieben Subnetze** auf. Eine Erweiterung/Anpassung um weitere Subnetzbereiche, ist später analog zu dem in dieser Dokumentation beschriebenen Vorgehen möglich. Die Umsetzung der Segmentierung 
 erfordert managebare L2- und L3-Switche, die VLANs verwalten können. Hierzu können Switche beliebiger Hersteller genutzt werden.
 
-Die Konfigurationsschritte für den L3-Switch werden anhand eines Cisco SG300-300-28 dargstellt. Für die Konfiguration der L2-Switche werden die Schritte anhand eines Cisco SF200-24 verdeutlicht. Bei dem Einsatz anderer Switche sind die dargestellten Konfigurationsschritte entsprechend anzupassen.
+Die Konfigurationsschritte für den L3-Switch werden anhand eines ``Cisco SG300-300-28`` besipielhaft dargstellt. Für die Konfiguration der L2-Switche werden die Schritte anhand eines ``Cisco SF200-24`` exemplarisch verdeutlicht. Bei dem Einsatz anderer Switche sind die dargestellten Konfigurationsschritte entsprechend anzupassen.
+
+Am Ende des Kapitels findest du weitere Konfigurationen für andere L3-Switche, die du zur Anpassung auf dein Netzszenario nutzen kannst.
 
 Geplante Netzwerkstruktur
 =========================
 
-Bei dem Standard-Setup des linuxmuster.net Servers (v7) wird das Netz ``10.0.0.0/16`` zur Einrichtung vorgesehen. Eine Unterteilung kann bereits in der Form erfolgen, dass im 2. Oktett weitere Netzsegemente genutzt werden. 
+Bei dem Standard-Setup des linuxmuster.net Servers (v7.1) wird das Netz ``10.0.0.0/16`` zur Einrichtung vorgesehen. Eine Unterteilung kann bereits in der Form erfolgen, dass im 2. Oktett weitere Netzsegemente genutzt werden. 
 
 Beispiel:
 
@@ -129,7 +131,7 @@ Verfügt der VM-Server über mehrere Netzwerkschnittstellen, so sollten diese ge
 Überblick zum Vorgehen
 ======================
 
-Nachstehende Auflistung gibt einen Überblick zu den erforderlichen Schritten zur Umsetzung der o.g. Netzsegmentierung bei einer neu zu installierenden linuxmuster v7. 
+Nachstehende Auflistung gibt einen Überblick zu den erforderlichen Schritten zur Umsetzung der o.g. Netzsegmentierung bei einer neu zu installierenden linuxmuster v7.1. 
 
 1) L3-Switch und L2-Switche gemäß nachstehender Anleitung konfigurieren und testen.
 
@@ -205,7 +207,7 @@ Für den L3-Switch Cisco SG300-28 steht die vorbereitete Konfigurationsdatei zur
 
 **Download**
 
-* :download:`Konfiguration für v7 mit Server-IP 10.0.0.1/24 <./media/configs/linuxmuster-ip-segmentation-sg300-28-l3.txt>`.
+* :download:`Konfiguration für v7.1 mit Server-IP 10.0.0.1/24 <./media/configs/linuxmuster-ip-segmentation-sg300-28-l3.txt>`.
 
 
 Upload der Konfiguration: Schritt für Schritt
@@ -853,3 +855,23 @@ Die durchzuführenden Tests sind in folgende Bereiche zu unterteilen:
 - Linbo-Start der Clients in einem Fachraum. Prüfen, ob den Geräten eine IP über die Netzgrenzen hinweg - wie in der devices.csv angegeben - erfolgreich zugewiesen wird.
 - vom Server aus sind WOL-Pakete an einen Client zu senden, um diesen aufzuwecken und mit Linbo zu synchronisieren.
 
+Download L3-Configs
+===================
+
+Nachstehend werden dir einige Konfigurationsdateien für L3-Switche angeboten, die du an dein Netzszenario anpassen kannst.
+
+Für den L3-Switch Cisco SG300-28 steht die vorbereitete Konfigurationsdatei zur Verfügung, die die Konfiguration auf dem L3-Switch so einspielt, wie diese in dieser Dokumentation beschrieben wird.
+
++--------------+--------------------------+-----------------------------------------------------------------------------------------+
+| Hersteller   | L3 - Switch Modell       |  Download                                                                               |
++==============+==========================+=========================================================================================+
+| Cisco        | SG-300-28                |:download:`Config SG300-28 <./media/configs/linuxmuster-ip-segmentation-sg300-28-l3.txt>`|
++--------------+--------------------------+-----------------------------------------------------------------------------------------+
+| Cisco        | 3750G  (IOS 12.2)        |:download:`Config 3750G <./media/configs/linuxmuster-ip-segmentation-3750g-l3.txt>`      |
++--------------+--------------------------+-----------------------------------------------------------------------------------------+
+| D-Link       | DGS-1510-28x             |``Config DGS1510-28x still missing``                                                     |
++--------------+--------------------------+-----------------------------------------------------------------------------------------+
+
+.. hint::
+
+   Die Liste wird schrittweise erweitert. D-Link fehlt noch.
