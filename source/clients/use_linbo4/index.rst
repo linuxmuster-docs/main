@@ -151,7 +151,7 @@ Der Bereich ist mit dem Passwort von "LINBO" abgesichert. Dies entspricht dem Li
 Passwort für "LINBO" ändern
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
  
-Das Passwort steht im Klartext auf dem Server in der Datei ``/etc/rsync.secret`` und kann einfach mit einem Editor geändert werden.
+Das Passwort steht im Klartext auf dem Server in der Datei ``/etc/rsyncd.secrets`` und kann einfach mit einem Editor geändert werden.
 
 .. code::
  
