@@ -39,6 +39,11 @@ Installation der OPNsense®
 
 Lade dir die ISO-Datei der OPNSense® von der Seite https://opnsense.org/download/ herunter.
 
+.. hint::
+
+   Die zuletzt freigegeben OPNsense Version für das Setup von linuxmuster.net v7.1 ist die Version 22.1. 
+   https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-22.1-OpenSSL-dvd-amd64.iso.bz2
+
 Nutze als Architecture ``amd64`` und als image type ``dvd`` und einen Mirror, der in deiner Nähe ist.
 Du erhälst dann ein mit bz2 komprimiertes ISO-Image. Entpacke die heruntergeladene Datei.
 
@@ -49,17 +54,21 @@ Unter Linux gibst du auf der Eingabekonsole folgenden Befehl an, der dir die Dat
 .. code::
 
    tar -xjf <opnsense-dateiname>.iso.bz2
-   tar -xjf OPNsense-21.7.1-OpenSSL-dvd-amd64.iso.bz2
+   tar -xjf OPNsense-22.1-OpenSSL-dvd-amd64.iso.bz2
 
-Brenne die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren USB-Stick an.
+Brenne die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren USB-Stick an. In einer Virtualisierungsumgebung lädst du die ISO-Datei auf den ISP-Speicher.
 
 Starte dann OPNsense® auf dem Rechner oder in der neu angelegten VM von DVD oder dem erstellten USB-Stick. Je nach Virtualisierungsumgebung hast du ggf. die ISO-Datei bereits auf den ISO-Datenspeicher des Hypervisors abgelegt.Boote dann die VM hierüber.
 
 .. hint::
 
    Willst du in einer VM installieren, so must du für die neue VM folgende Mindesteinstellungen angeben:
-   Template - other install media, installation from ISO library, Boot-Mode - UEFI (Achtung: xcp-ng: Boot/MBR), 
-   1 vCPU, 2 GiB RAM, storage 10 GiB, 2 NIC mit Zuordnung zu vSwitch red, green. 
+   - template - other install media, installation from ISO library,
+   - Boot-Mode - UEFI (Achtung: xcp-ng: Boot/MBR),
+   - 1 vCPU
+   - 2 GiB RAM
+   - storage 10 GiB
+   - 2 NIC mit Zuordnung zu vSwitch red, green.
    
    Achtung unter XCP-ng bricht die Installation mit o.g. Einstellungen beim Punkt ``guided installation`` ab,
    wenn UEFI als Boot-Mode angegeben wurde. Es ist als Boot-Mode in der VM Boot/MBR auszuwählen. Bei der weiteren Installation 
@@ -81,7 +90,7 @@ Du gelangst direkt zum Installer und kannst das Layout der Tastatur festlegen.
    :align: center
    :alt: OPNSense: Installer keymap
 
-Standardmäßig ist ein amerikanisches Tastaturlayout voreingestellt. 
+Standardmäßig ist ein amerikanisches Tastaturlayout voreingestellt.
 Gehe mit den Pfeiltasten auf den Eintrag ``( ) German``. Wählen diesen mit ``<Select>`` aus.
 
 Teste danach das Tastaturlayout:
@@ -307,6 +316,10 @@ Damit der Server Zugriff auf die OPNsense® hat, musst du einen ssh-Zugriff erla
 
 Setze einen Haken bei ``Aktiviere Secure Shell``, ``Erlaube Anmeldung mit dem root-Benutzer`` und ``Anmeldung mit Passwort erlauben``. Speichere die Einstellungen.
 
+.. hint::
+
+   Diese Einstellung ist entscheidend, damit zwischen Server und Firewall eine SSH-Verbindung erfolgreich hergestellt werden kann. Diese ist vor dem Setup von beiden Seiten zu testen.
+
 Update der OPNsense®
 --------------------
 
@@ -347,8 +360,13 @@ Anlegen und Installieren des Servers
 .. hint::
 
    Willst du in einer VM installieren, so must du für die neue VM folgende Mindesteinstellungen angeben:
-   Template - Ubuntu Bionic Beaver 18.04, installation from ISO library, Boot-Mode - BIOS Boot / MBR, 
-   2 vCPU, 3 GiB RAM, storage -> hdd1: 25 GiB -> hdd2: 100 GiB, 1 NIC mit Zuordnung zu vSwitch green. 
+   - Template - Ubuntu Bionic Beaver 18.04, installation from ISO library, 
+   - Boot-Mode - BIOS Boot / MBR, 
+   - 2 vCPU, 
+   - 3 GiB RAM, 
+   - storage -> hdd1: 25 GiB -> hdd2: 100 GiB, 
+   - 1 NIC mit Zuordnung zu vSwitch green.
+   
    Achte darauf, dass vor dem Start der VM beide Festplatten der VM zugewiesen wurden.
 
 Starte den Server via Ubuntu 18.04 Server ISO-Image (USB-Stick oder CD-ROM).
@@ -449,7 +467,7 @@ Nenne den Server ``server``. Der Benutzername und das Passwort sind frei wählba
 
 Installiere OpenSSH **nicht** und installiere keine weiteren optionalen Pakete. Bestätige die Installation mit ``Fortfahren``.
 
-Zum Abschluß der Installation wird automatisch versucht updates zu installieren und danach den server neu zu starten.
+Zum Abschluß der Installation wird automatisch versucht, Updates zu installieren und danach den Server neu zu starten.
 Bei laufender und wie zuvor beschriebener Einrichtung der OPNsense® sollte dies erfolgreich verlaufen.
 
 Wenn die Installation abgeschlossen und der Server neu gestartet ist, meldest du dich mit den zuvor angegeben Login-Daten an.
@@ -464,8 +482,7 @@ LVM - Besonderheiten
 
 .. hint::
 
-   Nutzt du später das Skript lmn71-appliance, um den Server vorzubereiten, dann musst du nur einen Server mit 2 HDDs haben und Ubuntu 18.04 auf der ersten HDD installieren. Die zweite HDD bleibt frei. Alles weitere wird dann später vom Skript lmn71-appliance erledigt.
-
+   Nutzt du später das Skript lmn71-appliance, um den Server vorzubereiten, dann musst du nur einen Server mit 2 HDDs haben und Ubuntu 18.04 auf der ersten HDD installieren. Die zweite HDD bleibt frei - auch kein LVM wie zuvor in der Abb. dargestellt, angeben. Alles weitere wird dann später vom Skript lmn71-appliance erledigt.
 
 Hast du zuvor für die 2. HDD ein LVM eingerichtet, dann sind zur Vorbereitung noch nachstehende Schritte auszuführen:
 
@@ -476,6 +493,10 @@ Hast du zuvor für die 2. HDD ein LVM eingerichtet, dann sind zur Vorbereitung n
    sudo pvcreate /dev/sdb1       # Achtung: unter XCP-ng wäre die Bezeichnung xvdb1
    sudo vgcreate vg0 /dev/sdb1   # vg0 entspricht dem zuvor gewählten Namen für das LVM
    sudo vgchange -ay
+
+.. hint::
+
+   Sollte dies nicht möglich sein, so rufst du ``fdisk /dev/sdb`` auf, legst eine GPT-Partitionstabelle an und erstellst eine primäre Partition, die den gesamten Platz von sdb nutzt.
 
 Weiter mit Punkt 3.
 
@@ -646,7 +667,7 @@ Führe danach folgende Befehle in der Eingabekonsole aus:
 .. hint:: 
 
    Hast du nicht wie zuvor beschreiben bereits ein LVM auf dem Server eingerichtet und dieses bereits gemountet, dann gibst du zur Installation    
-   folgendes an: ``./lmn71-appliance -p server -u -l /dev/sdb`` aus. Hierbei wird auf dem angegebenen Device (hier also 2. Festplatte) ein LVM eingerichtet.
+   folgendes an: ``./lmn71-appliance -p server -l /dev/sdb`` aus. Hierbei wird auf dem angegebenen Device (hier also 2. Festplatte) ein LVM eingerichtet.
 
 
 Für weitere Hinweise zum linuxmuster-prepare Skript siehe: https://github.com/linuxmuster/linuxmuster-prepare
