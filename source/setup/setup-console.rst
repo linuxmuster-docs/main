@@ -170,4 +170,6 @@ Der Inhalt des Verzeichnisses sollte sich wie folgt darstellen:
    :align: center
    :alt: directory listing log files
 
-Setze die Ersteinrichtung fort, indem du :ref:`add-user-accounts-label` und :ref:`add-devices-label` aufrufst.
+.. todo: :ref:Ziel muss gesetzt werden, nächster Satz 
+
+Setze die Ersteinrichtung fort, indem du :ref:`add-user-accounts-label` und ref:`add-devices-label` aufrufst.

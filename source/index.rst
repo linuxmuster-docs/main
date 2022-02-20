@@ -86,7 +86,7 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   installation/network/preliminarysettings/index
  
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 4
   :caption: Ersteinrichtung
   :hidden:
 
@@ -94,7 +94,8 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   setup/setup-gui
   setup/setup-console
   setup/add-user-accounts
-  setup/add-devices
+  clients/client_templates/index
+..  setup/add-devices
 
 .. toctree::
   :maxdepth: 2
@@ -111,18 +112,21 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
 
   migration/index
   migration/linbo-migration-to-4
+  migration/linux-client-migration
 
 .. toctree::
-  :maxdepth: 3
+  :maxdepth: 4
   :caption: Clientverwaltung
   :hidden:
 
-  clients/linbo
-  clients/windows10clients/index
-  clients/linux-clients/index
+  clients/index
+  clients/client_templates/index
+  clients/use_linbo4/index
   clients/postsync/index
   clients/leoclient2/index
-  clients/use_linbo4/index
+..  clients/linbo/index
+..  clients/windows10clients/index
+..  clients/linux-clients/index
 
 .. toctree::
   :maxdepth: 2
