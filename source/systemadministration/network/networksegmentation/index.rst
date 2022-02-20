@@ -11,7 +11,7 @@ Netzwerksegmentierung
 Vorbemerkungen
 ==============
 
-Aus datenschutzrechtichen Überlegungen ist ein schulisches Netzwerk in drei Bereiche mit unterschiedlichen Absicherungen und Berechtigungsstufen zur Verarbeitung und Speicherung von personenbezogenen Daten zu unterteilen: 
+Aus datenschutzrechtichen Überlegungen ist ein schulisches Netzwerk in drei Bereiche mit unterschiedlichen Absicherungen und Berechtigungsstufen zur Verarbeitung und Speicherung von personenbezogenen Daten zu unterteilen:
 
 * Verwaltungsnetz (Veraltungsprogramme, dienstliche Beurteilungen etc.)
 * Lehrernetz (Stundenplan, Kompetenzen, Noten, etc.)
@@ -223,7 +223,7 @@ Upload der Konfiguration: Schritt für Schritt
    :alt: 
    :align: center
 
-Melden Sie sich als Benutzer ``cisco`` mit dem Kennwort ``cisco`` (Voreinstellungen) an.
+Meldest du dich als Benutzer ``cisco`` mit dem Kennwort ``cisco`` (Voreinstellungen) an.
 
 .. image:: media/sg300/003_sg300_change_pw.png
    :alt: 
@@ -254,7 +254,7 @@ Ist der Upload erfolgreich verlaufen, so muss der Switch neu gestartet werden, u
 
 Der Neustart ist über das Menü ``Administration --> File Management --> Reboot`` durchzuführen.
 
-Nach dem Neustart melden Sie sich erneut an dem L3-Switch an und kontrollieren nochmals die Switch-Ports. Hierbei ist zwischen Access-Ports (port-basierte VLANs) und Trunk-Ports zu unterscheiden.
+Nach dem Neustart meldest du dich erneut an dem L3-Switch an und kontrollieren nochmals die Switch-Ports. Hierbei ist zwischen Access-Ports (port-basierte VLANs) und Trunk-Ports zu unterscheiden.
 
 .. hint::
 
@@ -362,13 +362,13 @@ Es sind Zwei ACL anzulegen: Lehrkraefte und Klassenraume. Dies erfolgt im Menü 
 **ACEs hinzufügen**
 
 Für die zuvor genannten ACLs sind jetzt sog. Entries (Einträge) anzulegen.
-Hierfür wählen Sie im Menü:  Zugriffssteuerung --> IPv4 basiertes ACE --> <Name der ACL aus Liste auswählen - hier Lehrkraefte> --> Hinzufügen
+Hierfür wählst du im Menü:  Zugriffssteuerung --> IPv4 basiertes ACE --> <Name der ACL aus Liste auswählen - hier Lehrkraefte> --> Hinzufügen
 
 .. image:: media/sg300/017_sg300_access_control_ipv4_based_acl.png
-   :alt: 
+   :alt: ACLs
    :align: center
 
-Sie geben dann folgende Werte an:
+Du gibst dann folgende Werte an:
 
 *    Priorität: 20
 *    Aktion: Zulassen (permit)
@@ -378,13 +378,13 @@ Sie geben dann folgende Werte an:
 *    Wert der Ziel-IP-Adresse: 10.16.1.0 (Servernetz-IP)
 *    Ziel-IP-Platzhaltermaske: 0.0.0.255 (invertierte Netzmaske)
 
-Danach legen sie eine zweite ACE für die ACL Lehrkraefte an. Im Ergebnis sollten Sie für die Lehrkraefte dann nachstehenden Einträge haben:
+Danach legst du eine zweite ACE für die ACL Lehrkraefte an. Im Ergebnis solltest du für die Lehrkraefte dann nachstehenden Einträge haben:
 
 .. image:: media/sg300/018_sg300_ipv4_based_ace_lehrer.png
-   :alt: 
+   :alt: ACE for teachers
    :align: center
 
-Danach legen Sie ACEs für die ACL Klassenraeume an. Danach sollten Sie nachstehende Einträge haben:
+Danach lest du ACEs für die ``ACL Klassenraeume`` an. Danach solltest du nachstehende Einträge haben:
 
 .. image:: media/sg300/019_sg300_ipv4_based_ace_klassenraeume.png
    :alt: 
@@ -394,13 +394,16 @@ Schliesslich müssen die definierten ACLs noch an die VLANs gebunden werden, dam
 Die Zuordnung sollte für das hier gewählte Beispiel wie folgt aussehen:
 
 .. image:: media/sg300/020_sg300_acl_binding.png
-   :alt: 
+   :alt: ACL Bindings
    :align: center
+
+DHCP-Relay konfigurieren
+------------------------
 
 Die Einstellungen für das DHCP-Relaying sollten wie folgt aussehen:
 
 .. image:: media/sg300/021_sg300_dhcp_relaying.png
-   :alt: 
+   :alt: DHCP Relay
    :align: center
 
 Hierdurch wird sichergestellt, dass DHCP-Anfragen aus den genannten VLANs auch beim linuxmuster.net Server ankommen und bedient werden können.
@@ -408,16 +411,22 @@ Hierdurch wird sichergestellt, dass DHCP-Anfragen aus den genannten VLANs auch b
 Um Wake-on-LAN über Subnetze hinweg zu nutzen, muss ein sog. UDP-Relaying eingerichtet werden. Hierdruch können dann z.B. Clients via ``linbo-remote`` aufgeweckt werden.
 
 .. image:: media/sg300/022_sg300_UDP_relay.png
-   :alt: 
+   :alt: UDP Relay
    :align: center
 
 Für das DHCP-Relaying/Snooping muss zudem die Option 82 aktiviert werden.
 
 .. image:: media/sg300/023_sg300_dhcp_snooping_properties.png
-   :alt: 
+   :alt: DHCP Snooping
    :align: center
 
-Nachdem Sie alle Einstellungen kontrolliert und ggf. angepasst haben, speichern Sie die aktuelle Konfiguration. Dies erledigen Sie bei dem Cisco-Switch dadruch, dass Sie die Konfiguration aus dem RAM (running-config) auf die NVRAM-Konfiguration kopieren (startup-config).
+Abschliessend trägst du noch die VLANs ein, die für das DHCP Relay aktiv sein sollen. 
+
+.. image:: media/sg300/024_sg300_dhcp_relay_vlans.png
+   :alt: DHCP Relay: VLANs
+   :align: center
+
+Nachdem du alle Einstellungen kontrolliert und ggf. angepasst haben, speicherst du die aktuelle Konfiguration. Dies erledigst du bei dem Cisco-Switch dadurch, dass du die Konfiguration aus dem RAM (running-config) auf die NVRAM-Konfiguration kopierst (startup-config).
 
 Weitere L2-Switches mit VLANs anbinden
 ======================================
