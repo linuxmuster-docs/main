@@ -64,7 +64,7 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
    :align: center
    :alt: Read The Docs Menu - opened
 
-
+.. todo:: Auskommentiere Zeilen im toctree entfernen, wenn defenitiv getestet das überflüssig.
 
 .. toctree::
   :maxdepth: 2
@@ -95,6 +95,7 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   setup/setup-console
   setup/add-user-accounts
   clients/client_templates/index
+
 ..  setup/add-devices
 
 .. toctree::
@@ -124,6 +125,7 @@ Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
   clients/use_linbo4/index
   clients/postsync/index
   clients/leoclient2/index
+
 ..  clients/linbo/index
 ..  clients/windows10clients/index
 ..  clients/linux-clients/index
