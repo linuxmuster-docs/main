@@ -20,15 +20,17 @@ Betriebssysteme installieren
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
                    `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
-.. todo:: Allgemeiner Text zu den Betriebssystemen ergänzen
+Mit LINBO kannst du mehrere Betriebssysteme auf einem Client verwalten und als Muster-Clients bereistellen und ausrollen. Du kannst so flexibel verschiedene Anforderungen in PC-Räumen (z.B. Linux mit Virtualisierungs-Partition ohne Synchronisation oder unterschiedliche Images in einem Raum für den Lehrer-PC und die Pcs der Sus) abbilden. linuxmuster.net ist darauf ausgelegt, als durchgängige Linux-Lösung genutzt zu werden. Hierzu wurden f?r den Linux-Client speziell angepasste Ubuntu - Pakete entwickelt, die eine Aufnahme in die Domäne, das Einbinden der Freigaben etc. übernehmen. Windows|ltrim| Betriebssysteme können ebenfalls als Clients vollständig genutzt werden.
 
-Das Partitionierungsschema hast du mit den Schritten in :ref:`hardware-category-label` festgelegt und im darauf aufbauenden Kapitel :ref:`hardware-registration-label` deinem Client zugewiesen. Solltest du das noch nicht gemacht haben, dann wäre jetzt der Zeitpunkt dieses nachzuholen.
-
-.. todo:: Attention-Box mit Hinweisen zu Abhängigkeiten ergänzen.
+Das Partitionierungsschema für die Clients einer Hardwareklasse hast du mit den Schritten in :ref:`hardware-category-label` festgelegt und im darauf aufbauenden Kapitel :ref:`hardware-registration-label` deinem Client zugewiesen. Solltest du das noch nicht gemacht haben, dann hole dies jetzt nach.
 
 .. attention:: Folgende Punkte sind sicherzustellen:
 
-   Keine Zeitdifferenz zwischen dem Client und dem linuxmuster.net-Server 
+   - Es darf keine Zeitdifferenz zwischen dem Client und dem linuxmuster.net-Server bestehen.
+   - Der Client muss via Kabel am Netzwerk angeschlossen sein.
+   - Die Botreihenfolge des Clients ist so eingestellt, dass dieser via Netzwerkkarte (PXE) zuerst bootet.
+   - Der Client erreicht den Server im gleichen Netzwerk und erhält so eine IP_Adresse.
+   - Die Hardwareklasse wurde angelegt und der PC wurde als Gerät in der Schulkonsole oder der devices.csv aufgenommen/importiert.
 
 **Festplatte mit LINBO vorbereiten**
 
@@ -36,9 +38,12 @@ Bevor du mit der eigentlichen Installation des Client-Betriebssystem beginnen ka
 
 **Betriebssysteme installieren**
 
-:ref:`install-linux-clients-current-label` installieren
+Danach kannst du das gewünschte Betriebssystem auf dem Client installieren. Das vorgehen hierzu wird ausführlich für 
 
-:ref:`install-windows10-clients-label` installieren
+1. :ref:`install-linux-clients-current-label`
+2. :ref:`install-windows10-clients-label` 
+
+beschrieben.
 
 .. toctree::
    :maxdepth: 3
