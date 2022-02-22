@@ -6,251 +6,82 @@
 Windows 10 Clients
 ==================
 
-.. sectionauthor:: `@maurice <https://ask.linuxmuster.net/u/Maurice>`_, `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
             `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
-.. todo:: Dieses Kapitel sollte nochmals mit Blick auf Linbo 4 überarbeitet werden.
-
-          Die nicht benötigten Punkte sind auskommentiert und können entfernt werden, wenn Tests ergeben haben das sie nicht mehr benötigt werden.
-
-
-.. LINBO
-.. =====
-.. 
-.. .. Auf einer linuxmuster.net-Umgebung mit erfolgreich ausgeführtem Setup gibt es die Möglichkeit, über das Imagingtool
-.. LINBO erstellte Systemabbilder von einem Gerät als Vorlage hochzuladen und mit definierten Partitionen auf andere Geräte
-.. zu übertragen.
-.. 
-.. Computer über LINBO aufnehmen
-.. -----------------------------
-.. 
-.. Alle Geräte sollten in linuxmuster.net eingetragen werden, um die Funktionen der Schulserverlösung anwenden zu
-.. können. Das Eintragen ist entweder lokal über einen einzelen Client-PC möglich oder zentral auf der Schulkonsole über die
-.. MACs der Clientrechner. Haben Sie eine Liste von MAC-Addressen parat, bietet sich die zentrale Variante an. Falls Sie die
-.. MAC-Addressen erst herausfinden müssen, stellt die lokale Registrierung den leichteren Weg dar. Dort können Sie auf der
-.. gebooteten LINBO Oberfläche die MAC-Addresse auslesen.
-.. 
-.. Über Clientrechner lokal
-.. ------------------------
-.. 
-.. 1. Der Clientrechner sollte im Schulnetzwerk angebunden sein und den Server ereichen können.
-.. 2. Um LINBO zu starten, den PC über das Netzwerk booten (PXE). Dazu entweder im BIOS-Setup in der Bootreihenfolge PXE-Boot 
-..    als Erstes Bootmedium einstellen oder über das Bootmenü PXE-Boot auswählen. Dies gelingt je nach Rechner meistens 
-..    über die Tasten F2, F10, F12, usw. oder als virtueller Rechner auf einem Hypervisor unter 
-..    ``VMxyz ⇒ Options ⇒ Bootorder``
-.. 
-.. 3. Folgende Ansicht sollte erscheinen.
-.. 
-.. .. figure:: media/01_windows-10-clients_linbo-start.png
-..    :align: center
-..    :alt: Linbo starten
-.. 
-.. 4. Nachdem LINBO gestartet ist, den Reiter Imaging auswählen und das Passwort eingeben und mit ``Enter`` bestätigen.
-..    welches bei der linuxmuster.net-Installation im Setup vergeben wurde (Zeichen werden bei der Eingabe nicht
-..    angezeigt):
-.. 
-.. .. figure:: media/02_windows-10-clients_linbo-password.png
-..    :align: center
-..    :alt: Linbo Password
-.. 
-.. 5. Die Imaging-Seite sollte nun erscheinen.
-.. 
-.. .. figure:: media/03_windows-10-clients_linbo-imaging-menue.png
-..    :align: center
-..    :alt: Linbo Imaging
-.. 
-.. 6. Haken bei Time-Out entfernen und die Option Registrieren auswählen
-.. 7. Alle Felder ausfüllen. (Beispiel: PC 02 im Raum 123 als r123-02 benennen und IP als 10.0.123.2) und über
-..    Registrieren bestätigen.
-.. 
-.. .. figure:: media/04_windows-10-clients_linbo-pc-registration.png
-..    :align: center
-..    :alt: Linbo PC Registration
-.. 
-.. 8. Wenn alle PCs lokal registriert wurden, muss die **Schulkonsole** ``NEU`` geöffnet werden und über ``Geräte → „Speichern & Importieren`` 
-..    die registrierten PCs übernommen werden.
-.. 
-.. .. figure:: media/05_windows-10-clients_school-console-devices-import.png
-..    :align: center
-..    :alt: School Cosnole Device Import
-.. 
-.. 9. Bei dem nächsten Neustart eines Clientrechner in LINBO, wird dieser in der neuen Gruppe mit zuvor vergebenem
-..    Namen und IP zu sehen sein.
-.. 
-.. Über die Schulkonsole zentral
-.. -----------------------------
-.. 
-.. 1. Auf der Schulkonsole unter Geräte können neue Geräte eingetragen werden:
-.. 
-.. .. figure:: media/06_windows-10-clients_school-console-new-device.png
-..    :align: center
-..    :alt: School Console New Device
-.. 
-.. 2. Dazu über + Gerät hinzufügen und alle Felder ausfüllen. Zeilen können auch kopiert werden.
-.. 3. Anschließend Speichern & Importieren, um die Einträge zu übernehmen.
-.. 
-.. LINBO-Image auf Computer übetragen
-.. ----------------------------------
-.. 
-.. Da ein Gerät einer Hardwareklasse (Gruppe) zugeordnet ist und der Hardwareklasse ein Image angegeben wird, sollte der
-.. PC einer Hardwareklasse zugeordnet sein, um das Image auf diesen übertragen zu können. Um ein Image letztendlich auf
-.. einen PC im internen Netzwerk übertragen zu können, müssen folgende Voraussetzungen erfüllt sein:
-.. 
-.. 1. eine Hardwareklasse vorhanden,
-.. 2. Image einer Hardwareklasse zugeordnet,
-.. 3. Gerät einer Hardwareklasse zugeordnet,
-.. 
-.. Alle Schritte werden im Folgenden am Beispiel mit Windows10 erklärt:
-.. 
-.. Hardwareklasse erstellen
-.. ------------------------
-.. 
-.. Da ein Gerät einer Hardwareklasse (Gruppe) zugeordnet ist und der Hardwareklasse ein Image angegeben wird,
-.. sollte der PC einer Hardwareklasse zugeordnet sein, um das Image auf diesen übertragen zu können. Falls für eine
-.. jewelige Computergruppe noch keine Hardwareklasse vorhanden ist, auf der Schulkonsole in LINBO eine neue
-.. Geräteklasse anlegen:
-.. 
-.. 1. Im Browser unter ``https://10.0.0.1:8000`` auf der Schulkonsole anmelden und über 
-.. ``Geräteverwaltung → LINBO → Gruppen`` eine neue Hardwareklasse über ``Create`` anlegen:
-.. 
-.. 2. eine passende Vorlage wählen und anpassen. (Alternativ kann unter der Geräteübersicht beim Anlegen eines
-.. Gerätes automatisch eine neue Geräteklasse beim Angeben des Gruppennamens erstellte werden - Speichern
-.. nicht vergessen!). Diese dann ebenfalls unter Gruppen anpassen.
-.. 
-.. 3. beim Anklicken der neuen Klasse unter Partitions die Partitionen auf passende Größen einstellen. Hier eignet
-.. sich 45 GB für Windows 10 (die Festplattengröße eines Gerätes, auf welches das Image übertragen wird,
-.. sollte etwas mehr Speicher haben als für die Partitionen angegeben wird) und der Rest für Cache (``Size-Feld``
-.. leer lassen). Die data-Partition löschen. Dann sollte es so aussehen:
-.. 
-.. .. figure:: media/07_windows-10-clients_school-console-create-partitions.png
-..    :align: center
-..    :alt: School Console Create Partitions
-.. 
-.. Image einer Hardwareklasse zuordnen
-.. -----------------------------------
-.. 
-.. Wenn das gewünschte Image in ``/srv/linbo/`` hochgeladen und falls notwendig entpackt wurde, kann dieses unter 
-.. ``Partitions → Bearbeitungssymbol der Betriebssystem-Partition → OS → Basis Image`` als Basis-Image ausgewählt werden, 
-.. wie in dem nachstehenden Beispiel das win10-1809.cloop:
-.. 
-.. .. figure:: media/08_windows-10-clients_school-console-hardware-class.png
-..    :align: center
-..    :alt: School Console Hardware Class
-.. 
-.. Gerät der Hardwareklasse zuordnen
-.. ---------------------------------
-.. 
-.. Ist eine Hardwareklasse mit zugeordnetem Image vorhanden, kann ein PC in solch eine eingetragen werden, um
-.. anschließend das Image übertragen zu können. Dafür gehen Sie auf der Schulkonsole im Bereich Geräteverwaltung
-.. in das Menü und tragen für das gewünschte Gerät/die gewünschte Gerätegruppe unter Gruppe die richtige Gruppe
-.. ein:
-.. 
-.. .. figure:: media/09_windows-10-clients_school-console-matching-device.png
-..    :align: center
-..    :alt: School Console Hardware Class Matching Device
-.. 
-.. Win 10 lokal installieren
-.. =========================
-.. 
-.. Möchten Sie keine fertige Image-Vorlage verwenden oder eigene Windows-Maschinen erstellen, können Sie eine eigene
-.. Image-Vorlage in LINBO erstellen. Dafür sollten Sie vor der Windows-Installation die Festplatte vorbereiten, indem ein in
-.. LINBO erstelltes Partitionsschema angewendet wird. Nach der Installation soll eine Global-Registry-Datei auf dem frischen
-.. Windows eingerichtet werden.
-.. 
-.. Festplatte vorbereiten - partitionieren, formatieren
-.. ----------------------------------------------------
-.. 
-.. Für die Windowsinstallation sollte der Rechner, auf welchem Windows installiert werden soll, in LINBO eingetragen
-.. sein und einer Hardwareklasse zugeordnet sein, welche ein Partitionsschema enthält. In den Kapiteln Computer
-.. über LINBO aufnehmen und Hardwareklasse erstellen werden die Vorgänge beschrieben.
-.. 
-.. 1. auf der Schulkonsole unter Gräte den Rechner eintragen
-.. 2. Zum Beispiel kann auf der Schulkonsole über LINBO ⇒ Gruppen ⇒ +ERSTLLEN die Vorlage ``start.conf.win10``
-..    verwendet werden.
-.. 
-.. .. figure:: media/10_windows-10-clients_school-console-create-group.png
-..    :align: center
-..    :alt: School Console Create Group
-.. 
-.. 3. und die Partitionen nach folgendem Schema aufteilen.
-.. 
-.. .. figure:: media/11_windows-10-clients_school-console-partition-scheme.png
-..    :align: center
-..    :alt: School Console Partition Scheme
-.. 
-.. 4. nach Speichern und Übernehmen sollte nun der Rechner mit der zugehörigen Gruppe eingetragen sein,
-.. wie in diesem Beispiel.
-.. 
-.. .. figure:: media/12_windows-10-clients_school-console-save-group.png
-..    :align: center
-..    :alt: School Console Save Group
-.. 
-.. Um auf diesen Rechner das eingestellte Partitionsschema der Hardwareklasse zu übernehmen, diesen über LINBO 
-.. starten und anschließend im Imaging-Bereich partitionieren (``lilaner Button ⇒ mit Ja`` bestätigen ).
-.. 
-.. .. figure:: media/13_windows-10-clients_linbo-create-partitions.png
-..    :align: center
-..    :alt: Linbo Create Partitions
-.. 
-.. Ist das Partitionieren und Formatieren fertig durchlaufen, den PC neu starten, um in den nächsten Schritten das
-.. Betriebssystem zu installieren.
 
 Betriebssystem Windows 10 installieren
 --------------------------------------
 
-1. Der PC sollte nun über CD booten und nicht über LINBO. Daher z. B. über das Bootmenü die CD als Bootmedium
-   auswählen oder auf dem Hypervisor die jeweilige ``VM ⇒ Options ⇒ Bootorder`` ``CD als erstes Medium auswählen``.
-2. Windows Installation beginnen.
-3. Spracheinstellungen auswählen und auf Weiter:
+1. Du hast den PC wie zuvor beschrieben über CD/USB-Stick gebootet. Dieser wurde zudem zuvor mit LINBO partioniert und formatiert.
+2. Drücke während des Boot-Vorgangs nach Aufforderung eine Taste, damit von dem Windows-Installationsmedium tatsächlich gebootet wird.
+3. Danach siehst du zu Beginn der Installation die Spracheinstellungen. Wähle die gewünschten Einstellungen aus und klicke auf ``Weiter``:
 
 .. figure:: media/14_windows-10-clients_choose-language.png
    :align: center
    :alt: Win10 Choose Clients
 
-4. Jetzt installieren wählen.
+4. ``Jetzt installieren`` wählen.
 
 .. figure:: media/15_windows-10-clients_choose-install.png
    :align: center
    :alt: Win10 Choose Install
 
-5. gewünschtes Betriebssystem auswählen, z.B. Windows 10 Education.
+5. Es wird das Setup gestartet. Es erscheint zuerst der Hinweis auf die Windows-Aktivierung. Hier kannst du zum jetzigen Zeitpunkt die Option 
+   ``Ich habe keinen Product Key`` wählen. Die Aktivierung mit der vorhandenen Lizenz erfolgt dann später in anderer Form.
+
+6. Wähle dann das gewünschte Betriebssystem aus, für das die Lizenz vorliegt, z.B. Windows 10 Pro Education N.
 
 .. figure:: media/16_windows-10-clients_choose-os.png
    :align: center
    :alt: Choose OS
 
-6. Haken zum Akzeptieren der Lizenzbedingungen setzen und auf Weiter.
+6. Haken zum Akzeptieren der Lizenzbedingungen setzen und auf ``Weiter``.
 
 .. figure:: media/17_windows-10-clients_accept-license-agreement.png
    :align: center
    :alt: Accept License Agreement
 
-7. Benutzderfinierte Installation wählen.
+7. ``Benutzderfinierte Installation`` wählen.
 
 .. figure:: media/18_windows-10-clients_choose-individual-installation.png
    :align: center
    :alt: Win10 Choose Individual Installation
 
-8. im Menü der Festplattenauswahl sollte nun eine Partition vorhanden sein, die von LINBO vorbereitet wurde und 
+8. Im Menü der Festplattenauswahl sollte nun eine Partition vorhanden sein, die von LINBO vorbereitet wurde und 
    auf welcher Windows 10 installiert werden soll.
 
 .. figure:: media/19_windows-10-clients_choose-partition.png
    :align: center
    :alt: Win10 Choose Partition
 
-9.  Weiter um die Installation abzuschließen.
+In der Abb. wurde ein UEFI-System vorbereitet. Partition 3 wurde für Windows 10 vorbereitet und Partition 4 ist die Cache-Parition. Wähle nun die richtige Parition (hier: Parition 3: windows) aus und klicke auf ``Weiter``.
 
-10. Windows startet automatisch neu. Um jedoch das installierte Windows nun wieder über LINBO zu starten, sollte
-    gegebenenfalls der Bootorder so umgestellt sein, dass als erstes vom Netzwerk (PXE) gebootet wird und nicht über
-    ein anderes Medium gebootet wird.
+9.  Warte bis die Installation von Windows abgeschlossen wurde.
 
-11. Im LINBO-Menü nun Windows unsynchronisiert über den GRÜNEN Startknopf starten (nicht rot oder orange):
+.. figure:: media/19a_windows-10-installation-process.png
+   :align: center
+   :alt: Win10 installing os components
+
+10. Starte Windows neu.
+
+.. hint:: 
+
+    Es ist jetzt wichtig, dass der PC in LINBO gebootet wird. Stelle daher die Boot-Reihenfolge wieder so um, dass via PXE LINBO gebootet wird. Du gelangst dann wieder wie zuvor in den Linbo Startbildschirm.
+
+11. Starte im LINBO-Menü nun Windows unsynchronisiert über den kleinen GRÜNEN Startknopf neu (!!!nicht rot oder orange!!!):
 
 .. figure:: media/20_windows-10-clients_linbo-start-os-unsynchronised.png
    :align: center
-   :alt: Linbp Start OS Unsynchronised
+   :alt: Linbo Start OS Unsynchronised
 
-12. Region auswählen.
+.. hint::
+
+   Sollte du hier Probleme haben und ein UEFI-System als Client eingerichtet habe, so versuche den client auf den Legacy-Modus umzustellen und die Hardwareklasse in der Schulkonsole ebenfalls so anzupassen, dass BIOS64 genutzt wird. Importiere die Geräte neu, formatiere den client mit Linbo neu, installiere Windows erneut und boote das installierte Windows aus dem lokalen Cache - wie zuvor beschrieben.
+
+12. Nachdem Windows nun aus dem, lokalen LINBO-Cache bootet, wird die Installation fortgeführt. Windows richtet Dienste ein und startet dann erneut. Du gelangst wieder in LINBO und startest Windows wieder unsynchronisiert mit der grünen Pfeiltaste.
+
+Wähle die Region aus.
 
 .. figure:: media/21_windows-10-clients_choose-region.png
    :align: center
@@ -286,7 +117,7 @@ Betriebssystem Windows 10 installieren
    :align: center
    :alt: Win10 Create Admin User
 
-18. Kennwort festlegen:
+18. Kennwort festlegen und die Sicherheitsfragen beantworten:
 
 .. figure:: media/27_windows-10-clients_create-admin-password.png
    :align: center
@@ -337,8 +168,8 @@ Betriebssystem Windows 10 installieren
 26. Restliche Einrichtungsschritte vornehmen; in der Netzwerk-Option auf ``Ich habe kein Internet`` und dann 
     ``Mit eingeschänktem Setup weitermachen``
 
-27. Als Nutzer ``admin`` anlegen und Kennwort leer lassen oder ein bestimmtes setzen; die nächsten Einstellungen
-    ablehnen
+27. Als Nutzer ``admin`` anlegen und Kennwort leer lassen oder ein bestimmtes setzen. Die nächsten Einstellungen
+    ablehnen.
 
 28. Weitere gewünschte Einrichtungen ausführen (Programme, Hintergründe, usw.)
 

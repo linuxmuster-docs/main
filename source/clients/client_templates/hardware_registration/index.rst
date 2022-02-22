@@ -19,7 +19,7 @@ Rechneraufnahme
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
                    `@Alois <https://ask.linuxmuster.net/u/Alois>`_ ,
-	           `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
+	               `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
                    `@michael_kohls <https://ask.linuxmuster.net/u/michael_kohls>`_
 
 Der PC, der als Hardware zum Aufbau des Muster-Clients genutzt werden soll, ist via Kabel mit dem Netzwerk zu verbinden.
@@ -28,15 +28,15 @@ Alternativ kann für den Aufbau des Muster-Clients eine VM in der Virtualisierun
 
 Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM dar:
 
- * 4 GB vRAM
+ * 4 GiB vRAM
  * mind. 1 vCPU mit 2 Kernen
- * VGA mit 16GB Speicher
+ * VGA mit 16 MiB Speicher
  * 1x vNIC (ggf. im "richtigen" VLAN)
- * PXE-Boot einstellen
+ * PXE-Boot einstellen (Bootreihenfolge: NIC first)
  * Boot Firmware: BIOS oder UEFI (je nach später genutzten PCs) - Achtung: start.conf von linbo ggf. anpassen -> siehe Hinweise bei den Client-Systemen
- * 50GB HDD (20GB OS + 20GB Cache + ggf. SWAP oder andere Partitionen)
+ * z.B. 50 GiB HDD (20 GiB OS + 20 GiB Cache + ggf. SWAP oder andere Partitionen)
 
-.. todo:: In der kompletten Dokumentation gab es zwei verschiedene Beschreibungen der Aufnahme mittels der WebUI. Beide vorläufig hier zusammengeführt bis zur Entscheidungsfindung welche es sein soll. Nach Abprache mit @cweikl habe ich es ersteinmal auskommentiert. Zeilen 39 - 205 könnten gelöscht werden, wenn sie keine weitere Verwendung sollten.
+.. todo:: In der kompletten Dokumentation gab es zwei verschiedene Beschreibungen der Aufnahme mittels der WebUI. Beide vorläufig hier zusammengeführt bis zur Entscheidungsfindung, welche es sein soll. Nach Abprache mit @cweikl habe ich es ersteinmal auskommentiert. Zeilen 39 - 205 könnten gelöscht werden, wenn sie keine weitere Verwendung sollten.
 .. 
 .. ... mit der WebUI (v1)
 .. ======================
@@ -231,7 +231,7 @@ In der neuen Zeile gibst du nun folgenes an:
 
 1. Raum: Name des Raums (Achtung: keine Binde- und Unterstriche verwenden, keine Umlaute,  max. 10 Zeichen)
 2. Hostname: Name des Geräts (Achtung: Keine Unterstriche verwenden, max. 15 Zeichen)
-3. Gruppe: Bezeichnung der Linbo-Hardwareklasse. Gleiche Bezeichnungen für Raum und Gruppe sind unzulässig. Reservierte Wörter, wie "con" und "man", dürfen nich verwendet werden.
+3. Gruppe: Bezeichnung der Linbo-Hardwareklasse. ``Gleiche Bezeichnungen für Raum und Gruppe sind unzulässig``. Reservierte Wörter, wie "con" und "man", dürfen nicht verwendet werden.
 4. MAC: Media Access Control - Hardware-Adresse des Netzwerkadapters. Trage 12 Hexadezimalzahlen mit einem Doppelpunkt als Trennzeichen nach zwei Ziffern ein.
 5. IP: Gebe eine IP-Adresse für das Gerät an, das diesem automatisch zugewiesen werden soll. Z.B. Raum 202 im Gebäude G erhält den Bereich 10.0.202.x/16 und PC01 erhält die UP 10.0.202.1
 6. Sophomorix-Rolle: Hier gibst du an, welche Art von Gerät du einbindest. Für PCs im Fachraum gibst du z.B. Schüler-PC im Klassenzimmer an.
@@ -247,7 +247,7 @@ Die o.g. Zeile könnte ausgefüllt wie folgt aussehen:
    :align: center
    :alt: Device Management: Add New Device Settings
 
-Die Schaltfläche ``SPEICHERN`` überprüft die Eingabe, ``SPEICHERN & IMPORTIEREN`` werden die neuen Geräte importiert. Mit dem Button ``Im Editor öffnen`` wird die Datei devices.csv im Editor geöffnet und kann bearbeitet werden.
+Die Schaltfläche ``SPEICHERN`` überprüft die Eingabe, ``SPEICHERN & IMPORTIEREN`` werden die neuen Geräte importiert. Mit dem Button ``Im Editor öffnen`` wird die Datei ``/etc/linuxmuster/sophomorix/default-school/devices.csv`` im Editor geöffnet und kann bearbeitet werden.
 
 .. figure:: media/add-devices/05-device-management-buttons.png
    :align: center
@@ -274,7 +274,7 @@ Um weitere Geräte hinzuzufügen, wiederholst du den beschriebenen Vorgang in de
 ... mittels der Datei devices.csv
 =================================
 
-Wenn du sehr viele Geräte hinzufügen möchtest, deren MAC-Adressen du bereits kennst, dann ist die o.g. Option ``Im editor öffnen`` eine Möglichkeit, die Datei devices.csv direkt zu editieren.
+Wenn du sehr viele Geräte hinzufügen möchtest, deren MAC-Adressen du bereits kennst, dann ist die o.g. Option ``Im Editor öffnen`` eine Möglichkeit, die Datei devices.csv direkt zu editieren.
 
 .. figure:: media/add-devices/07-device-management-edit-file.png
    :align: center

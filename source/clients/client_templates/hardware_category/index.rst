@@ -17,6 +17,9 @@
 Hardwareklasse (HWK) / Gruppe erstellen
 =======================================
 
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
+                   `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
+
 Melde dich als Benutzer ``global-admin`` an der Web-UI an.
 
 .. figure:: media/01-webui-login.png
@@ -31,19 +34,31 @@ Erstelle nun die Konfiguration für die neue Hardwareklasse. Dafür klickst du l
 
 Nun klickst du unten links auf ``+ERSTELLEN``.
 
-Es öffnet sich ein Kontextmenü. Du kannst entweder ein leere start.conf nutzen, oder ein bereits vordefiniertes Template für dein gewünschtes Betriebssystem auswählen.
+Es öffnet sich ein Kontextmenü. Du kannst entweder ein leere ``start.conf`` nutzen, oder ein bereits vordefiniertes Template für dein gewünschtes Betriebssystem auswählen. Hierbei kannst Du Templates für ein oder mehrere Betriebssysteme mit oder ohne UEFI-BIOS auswählen und diese ggf. nach deinen Vorstellungen anpassen.
 
 .. figure:: media/03-webui-menue-linbo-create-start-template.png
    :align: center
    :alt: WebUI menue linbo create start template
 
-Es öffnet sich ein Fenster, in dem du die Namen der neuen Hardwareklasse angibst. Diesen wirst du später brauchen um Geräte dieser Hardwareklasse zuzuweisen.
+Es öffnet sich ein Fenster, in dem du die Namen der neuen Hardwareklasse angibst. Diesen wirst du später benötigen, um Geräte dieser Hardwareklasse zuzuweisen.
 
 .. figure:: media/04-webui-menue-linbo-name-for-start-conf.png
    :align: center
    :alt: WebUI menue linbo hwc group name
 
-Danach gelangst du zu den Einstellungen der Hardwareklasse. Dort gibt es die Reiterkarten ``Allgmein`` und  ``Partitionen``.
+.. hint::
+
+   Die neu angelegte Hardwareklasse wird nicht direkt in der Übersicht mit allen eingerichteten Klassen angezeigt. Hierzu musst du zunächst mit ``F5`` die Webseite neu laden.
+
+Die Liste der angelegten Hardwareklassen kann dann - z.B. wie nachstehend dargestellt - aussehen (andere Namen für die HWK verwendet):
+
+.. figure:: media/04a-webui-menue-linbo-list-of-hwc.png
+   :align: center
+   :alt: WebUI menue linbo hwc list
+
+Du rufst nun die Einstellungen der zuvor angelegten Hardwareklasse auf, indem du das ``Stift-Symbol`` rechts daneben aufrufst.
+
+Es erscheint ein Fenster mit den Einstellungen der Hardwareklasse. Dort gibt es die Reiterkarten ``Allgmein`` und  ``Partitionen``.
 
 Unter ``Allgemein`` legst du die IP des Servers fest, gibst das Startverhalten und ggf. Kernel-Optionen für den Boot bei besonderer Hardware an.
 
@@ -71,58 +86,78 @@ Um Einstellungen für das Betriebssystem vorzunehmen, klickst du auf das Stift-I
 
 Unter der Reiterkarte ``OS`` legst du für das Betriebssystem (OS) die gewünschten Icons, die Start-Optionen und u.a. auch den Namen für das Basisimage fest. Zu Beginn bleibt hier der Eintrag ``None`` noch stehen und auch bei ``Start Optionen`` muss ``Autostart`` deaktiviert bleiben, da du erst das Image für den Muster-Client erstellen musst.
 
-Auf dem linuxmuster.net Server werden die start.conf-Dateien im Verzeichnis ``/srv/linbo`` abgelegt. Jede Hardwareklasse hat eine eigene start.conf-Datei. Für die neu angelegte Hardwareklasse des Muster-Clients wurde dort nun eine Datei ``start.conf.<name-der-hwk>`` erstellt.
+Auf dem linuxmuster.net Server werden die start.conf-Dateien im Verzeichnis ``/srv/linbo`` abgelegt. Jede Hardwareklasse hat eine eigene start.conf-Datei. Für die neu angelegte Hardwareklasse des Muster-Clients wurde dort nun eine Datei ``start.conf.<name-der-hwk>`` erstellt (z.B. start.conf.ubu20efi).
 
 Diese Datei muss normalerweise nicht händisch editiert werden, da sich alle nötigen Einstellungen in der WebUI vornehmen lassen. Das folgende Beispiel dient nur dazu, zu zeigen, was "unter der Decke" passiert.
 
-Folgende Konfiguration zeigt ein mögliches Beispiel für die Hardwareklasse 20210426_focalfossa_base (hier als Linux-Client). Diese würde sich in der Datei ``/srv/linbo/start.conf.20210426_focalfossa_base`` befinden. Hierbei wird von einem Legacy-BIOS und Linux als Betriebssystem ausgegangen:
+Folgende Konfiguration zeigt ein mögliches Beispiel für die ``Hardwareklasse ubu20efi`` (hier als Linux-Client). Diese würde sich in der Datei ``/srv/linbo/start.conf.ubu20efi`` befinden. Hierbei wird von einem UEFI-BIOS und Linux als Betriebssystem ausgegangen:
 
 .. code::
 
   [LINBO]
    Server = 10.0.0.1
-   Group = 20210426_focalfossa_base            #Hardwareklasse
-   Cache = /dev/sda2
+   Group = ubu20efi            #Hardwareklasse
+   Cache = /dev/sda3
    RootTimeout = 600
    AutoPartition = no
    AutoFormat = no
    AutoInitCache = no
-   DownloadType = torrent
    GuiDisabled = no                    # disable gui <yes|no>
    UseMinimalLayout = no               # gui layout style <yes|no>
-   Locale = de-de                      # gui locale <de-de|en-gb|fr-fr|es-es>
-   BackgroundColor = 394f5e            # hex code for gui background color
-   BackgroundFontColor = white         # font color of status section (default: white)
-   ConsoleFontColorStdout = lightgreen # console font color (default: white)
-   ConsoleFontColorStderr = orange     # console error font color (default: red)
-   SystemType = bios64
-   KernelOptions = quiet splash
+   Locale = de-DE                      # gui locale <de-de|en-gb|fr-fr|es-es>
+   DownloadType = torrent
+   SystemType = efi64                  # UEFI-BIOS
+   KernelOptions = quiet splash        # hier muessen bei speuieller Hardware ggf. Kernel-Parameter angegeben werden
   
    [Partition]
    Dev = /dev/sda1
-   Label = ubuntu
-   Size = 30G
-   Id = 83
-   FSType = ext4
+   Label = efi
+   Size = 200M
+   Id = ef
+   FSType = vfat
    Bootable = yes
-  
+
    [Partition]
    Dev = /dev/sda2
-   Label = cache
-   Size =        # verbleibender Plattenplatz wird als Cache genutzt
+   Label = ubuntu
+   Size = 12G
    Id = 83
    FSType = ext4
-   Bootable = yes
+   Bootable = no
+  
+   [Partition]
+   Dev = /dev/sda3
+   Label = cache
+   Size = 12G
+   Id = 83
+   FSType = ext4
+   Bootable = no
+
+   [Partition]
+   Dev = /dev/sda4
+   Label = swap
+   Size = 2G
+   Id = 82
+   FSType = swap
+   Bootable = no
+
+   [Partition]
+   Dev = /dev/sda5
+   Label = data
+   Size =            # verbleibender Plattenplatz wird der Partition zugewiesen
+   Id = 83
+   FSType = ext4
+   Bootable = no
    
    [OS]
-   Name = Ubuntu 20.04 LTS
-   Version = 20
+   Name = Ubuntu
+   Version = 20.04 LTS
    Description = Ubuntu 20.04
-   IconName = ubuntu.png
+   IconName = ubuntu.svg
    Image =
-   BaseImage = 20210426_focalfossa_base.cloop
-   Boot = /dev/sda1
-   Root = /dev/sda1
+   BaseImage = ubuntu.qcow2
+   Boot = /dev/sda2
+   Root = /dev/sda2
    Kernel = /boot/vmlinuz
    Initrd = /boot/initrd.img
    Append = ro splash
@@ -130,8 +165,9 @@ Folgende Konfiguration zeigt ein mögliches Beispiel für die Hardwareklasse 202
    SyncEnabled = yes
    NewEnabled = yes
    Autostart = no
-   AutostartTimeout = 4
+   AutostartTimeout = 5
    DefaultAction = sync
    RestoreOpsiState = no
    ForceOpsiSetup =
    Hidden = yes
+

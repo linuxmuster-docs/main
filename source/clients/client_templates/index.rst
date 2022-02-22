@@ -20,39 +20,37 @@ Muster-Client aufsetzen
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
                    `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
-Wie du schon an den Unterkapiteln erkennen kannst, muss du für den Muster-Client drei Schritte durchlaufen.
+Clients sollen mithilfe von LINBO automatisiert verwaltet werden. Hierbei kann ein Betriebssystem oder es können auch mehrere Multi-Boot Betriebssysteme auf dem Client installiert werden. Mithilfe von LINBO erfolgt so ein automatischens Ausrollen der Clients im Netzwerk oder das Verteilen zusätzlich installierter Software.
+
+Die Nutzung von LINBO erfordert die Einrichtung eines Muster-Clients. Dies erfordert nachstehende ``drei Installationsschritte``:
 
 **Hardwareklasse erstellen**
 
-Mittels der Hardwareklasse teilst du LINBO mit, wie die Konfiguration für die Geräte aussieht. Diese Beschreibung umfasst:
+Mittels der Hardwareklasse teilst du LINBO mit, welche Konfiguration für die Geräte anzuwenden ist. Dies umfasst:
 
   * Name der Hardwareklasse
 
   * Allgemeine Informationen
       
-     + IP des TFTP-Servers der das Image vorhält
+     + IP des TFTP-Servers, der das Image vorhält.
      + Startoptionen des Clients
-     + eventuell benötigte Kernel-Optionen für den Boot
+     + eventuell benötigte Kernel-Optionen für den Start-Vorgang
 
   * Angaben zu der Partitionierung des Clients
 
 **Rechneraufnahme**
 
-Bei der Rechneraufnahme legst du fest welche Konfigurationen für jede einzelne Arbeitsstation gelten sollen. Das sind:
+Bei der Rechneraufnahme legst du fest, welche Konfigurationen für jede einzelne Arbeitsstation gelten sollen. Das sind:
 
   * Raum in dem sich der Rechner befindet
   * Name des Rechners
-  * Name der Hardwareklasse, welcher der Rechner angehören soll
+  * Name der Hardwareklasse, welcher der Rechner angehören soll.
   * MAC-Adresse des Rechners
-  * IP-Adresse, die der Rechner erhalten soll
+  * IP-Adresse, die der Rechner erhalten soll.
   * Art des Gerätes
   * Aktivierung von LINBO
 
-Wie du aus den letzten beiden Punkten erkennen könntest, ist die Aktivierung von LINBO nicht für jedes Gerät zwingend notwendig. 
-
-Zum Beispiel braucht ein Netzwerk-Drucker kein eigenes Image, aber eine IP. Des Weiteren ist seine Aufnahme notwendig, damit er im Active Directory des ``Samba`` vom linuxmuster.net-Server aufgenommen wird und somit dem System bekannt ist.
-
-.. todo:: letzter Absatz ist auf Richtigkeit zu überprüfen.
+Wie du aus den letzten beiden Punkten erkennen kannst, ist die Aktivierung von LINBO nicht für jedes Gerät zwingend notwendig. So benötigt z.B. ein Netzwerk-Drucker kein eigenes Image. Dieser benötigt nur eine IP und eine Raumzuordnung. Des Weiteren ist seine Aufnahme notwendig, damit er im Active Directory des ``Samba`` vom linuxmuster.net-Server aufgenommen wird und somit dem System bekannt ist.
 
 Es gibt drei Möglichkeiten die Rechneraufnahme durchzuführen, welche das sind, wird dir im Kapitel :ref:`hardware-registration-label` gezeigt.
 
