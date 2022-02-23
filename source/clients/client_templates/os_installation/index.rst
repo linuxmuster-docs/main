@@ -45,6 +45,31 @@ Danach kannst du das gewünschte Betriebssystem auf dem Client installieren. Das
 
 beschrieben.
 
+**Muster-Client als NoProxy Gerät**
+
+Für den Zeitraum der Installation und Aktualisierung des Muster-Clients ist es wichtig, dass dieser Internet-Zugriff hat, um Aktualisierungen laden zu können.
+Dazu ist es erforderlich, dass nachdem der Client als Gerät importiert wurde, du die IP-Adresse des Gerätes in der sog. ``NoProxy`` Gruppe in der Firewall der OPNsense aufnimmst.
+
+Dazu meldet du dich an der OPNsense als Benutzer ``root`` an und wählst links im Menü unter ``Firewall -> Aliase`` aus.
+
+Du siehst dann anchstehende Firewall: Aliase.
+
+.. figure:: media/08-opnsense-alias-definition.png
+   :align: center
+   :alt: OPNsense Alias definition
+
+Klicke rechts neben dem Eintrag der Alias-Gruppe ``NoProxy`` das Stift-Symbol zum Editieren der Gruppe. Trage hier im Feld ``Inhalt`` nun die IP-Adresse des Muster-Clients ein. 
+
+.. figure:: media/09-opnsense-alias-added.png
+   :align: center
+   :alt: OPNsense Alias definition
+
+
+Bestätige die IP mit ENTER, so dass der Eintrag grau hinterlegt wird. Klicke zum Abschluss auf ``Speichern``, um die Einstellungen zu übernehmen.
+
+Nach Abschluss der Installation und Konfiguration  des Muster-Clients kannst du diesen wieder aus der NoProxy - Gruppe entfernen. Es sei denn, du nutzt exklusiv immer den identischen Client zur Weiterentwicklung des Muster-Clients.
+
+
 .. toctree::
    :maxdepth: 3
    :caption: Musterclients
