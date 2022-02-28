@@ -178,8 +178,8 @@ Melde dich an dem gestarteten Ubuntu 20.04 als Benutzer ``linuxadmin`` an.
 
 Installiere das Paket ``linuxmuster-linuxclient7`` wie folgt:
 
-1. Trage das linuxmuster.net Repository ein
-2. Trage den GPG Schlüssel hierfür ein
+1. Importiere den GPG-Schlüssel des linuxmuster.net Respository.
+2. Trage das linuxmuster.net 7.1 Repository ein.
 3. Installiere das Paket
 
 1. Schritt
@@ -187,26 +187,28 @@ Installiere das Paket ``linuxmuster-linuxclient7`` wie folgt:
 
 Öffne ein Terminal unter Ubuntu mit ``strg+t`` oder klicke unten links auf die Kacheln und gebe in der Suchzeile als Anwendung ``Terminal`` ein.
 
-Erstelle im Terminal die Datei ``lmn7-client.list``, um das Repository für den linuxmuster-client einzubinden. Rufe hierzu für den Editor Nano mit folgendem Befehl auf: ``sudo nano /etc/apt/sources.list.d/lmn7-client.list`` und trage folgende Zeile ein:
-
-.. code::
-
-   deb [trusted=yes] https://deb.linuxmuster.net/ lmn71 main
-
-2. Schritt
-^^^^^^^^^^
-
-Lade den Schlüssel des Archivs herunter und installiere ihn:
+Importiere nun den GPG-Schlüssel des linuxmuster.net 7.1 Repository:
 
 .. code::
 
    wget -qO - "https://deb.linuxmuster.net/pub.gpg" | sudo apt-key add -
+
+
+2. Schritt
+^^^^^^^^^^
+
+Trage das linuxmuster.net 7.1 Repository in die Paketquellen des Clients ein:
+
+.. code::
+
+   sudo sh -c 'echo "deb https://deb.linuxmuster.net/ lmn71 main" > /etc/apt/sources.list.d/lmn71.list'
 
 Aktualisiere die Paketinformationen mit ``sudo apt update``.
 
 
 3. Schritt
 ^^^^^^^^^^
+
 Führe die Installation des Pakets mit ``sudo apt install linuxmuster-linuxclient7 -y`` durch.
 
 Setup
