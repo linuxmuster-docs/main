@@ -369,8 +369,11 @@ Anlegen und Installieren des Servers
    
    Achte darauf, dass vor dem Start der VM beide Festplatten der VM zugewiesen wurden.
 
-Starte den Server via Ubuntu 18.04 Server ISO-Image (USB-Stick oder CD-ROM).
-Es erscheint das erste Installationsfenster mit der Abfrage zur gewünschten Sprache.
+.. hint::
+
+   Bei der Einrichtung des Servers musst du nur einen Server mit 2 HDDs haben und Ubuntu 18.04 auf der ersten HDD installieren. Die zweite HDD bleibt frei. Auf dieser 2. HDD richtest du - wie nachstehend beschrieben -  ein LVM ein.
+
+Starte den Server via Ubuntu 18.04 Server ISO-Image (USB-Stick oder CD-ROM). Es erscheint das erste Installationsfenster mit der Abfrage zur gewünschten Sprache.
 
 Wähle deine bevorzugte Sprache.
 
@@ -480,27 +483,7 @@ Wenn die Installation abgeschlossen und der Server neu gestartet ist, meldest du
 LVM - Besonderheiten
 --------------------
 
-.. hint::
-
-   Nutzt du später das Skript lmn71-appliance, um den Server vorzubereiten, dann musst du nur einen Server mit 2 HDDs haben und Ubuntu 18.04 auf der ersten HDD installieren. Die zweite HDD bleibt frei - auch kein LVM wie zuvor in der Abb. dargestellt, angeben. Alles weitere wird dann später vom Skript lmn71-appliance erledigt.
-
-Hast du zuvor für die 2. HDD ein LVM eingerichtet, dann sind zur Vorbereitung noch nachstehende Schritte auszuführen:
-
-0. Hast du zuvor noch kein LVM eingerichtet, sondern auf der 2. HDD nur eine GPT-Partitionstabelle erstellt, legst du zunächst ein Volume an:
-
-.. code::
-
-   sudo pvcreate /dev/sdb1       # Achtung: unter XCP-ng wäre die Bezeichnung xvdb1
-   sudo vgcreate vg0 /dev/sdb1   # vg0 entspricht dem zuvor gewählten Namen für das LVM
-   sudo vgchange -ay
-
-.. hint::
-
-   Sollte dies nicht möglich sein, so rufst du ``fdisk /dev/sdb`` auf, legst eine GPT-Partitionstabelle an und erstellst eine primäre Partition, die den gesamten Platz von sdb nutzt.
-
-Weiter mit Punkt 3.
-
-1. Hattest du zuvor ein LVM angelegt, gebe auf der Konsole ``sudo vgscan --mknodes`` ein. Es wird dir dann die sog. ``volume group "vg0"`` angezeigt, die du während der Installation auf der 2. HDD angelegt hast.
+1. Hast du wie zuvor beschrieben ein LVM angelegt, gebe auf der Konsole ``sudo vgscan --mknodes`` ein. Es wird dir dann die sog. ``volume group "vg0"`` angezeigt, die du während der Installation auf der 2. HDD angelegt hast.
 
 2. Führe ``sudo vgchange -ay`` aus, um das Volume zu aktivieren.
 
