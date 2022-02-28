@@ -205,7 +205,7 @@ Melde dich als Benutzer ``root`` in der Konsole an und wähle 8) aus. Danach gib
 Konfiguration der OPNsense®
 ---------------------------
 
-Gehe auf der Konsole der OPNsense® auf den Eintrag ``2) Set interface IP address`` und wähle die Netzwerkkarte für das LAN aus. Gebe dieser die IPv4 Adresse 10.0.0.254/16, verneine alle Rückfragen zu IPv6.
+Gehe auf der Konsole der OPNsense® auf den Eintrag ``2) Set interface IP address`` und wähle die Netzwerkkarte für das LAN aus. Gib dieser die IPv4 Adresse 10.0.0.254/16, verneine alle Rückfragen zu IPv6.
 
 Danach erhälst du den Hinweis, dass du dich mit der LAN IP auf die GUI der OPNsense® aufschalten kannst.
 
@@ -220,7 +220,7 @@ Aktualisiere vorab nochmals die OPNsense® in der Konsole, indem du den Punkt ``
   Sollte hierbei keine Verbindung zu den externen Update-Servern möglich sein, dann stimmt deine Netzwerkkartenzuordnung noch nicht. Ändere dies, bevor du fortfährst.
 
 Klappt das Update nun wird die OPNsense neu gestartet.
-Verbinde dein Laptop mit einer internen Netzwerkkarte, rufe den Browser auf und gebe folgen URL für den ZUgriff auf die GUI der OPNsense an: ``https://10.0.0.254``.
+Verbinde dein Laptop mit einer internen Netzwerkkarte, rufe den Browser auf und gib folgende URL für den ZUgriff auf die GUI der OPNsense an: ``https://10.0.0.254``.
 
 Du erhältst zunächst eine Zertifikatswarnung, da OPNsense® ja ganz frisch installiert ist und ein selbst erstelltes Zertifikat nutzt. 
 
@@ -238,7 +238,7 @@ Starte den General Setup Wizard mit dem ``Next``-Knopf.
 
 .. hint:: 
 
-   Gebe als Primary DNS, die neue IP des Upstream Gateway der externen WAN-Schnittstelle an und deaktiviere Override DNS.
+   Gib als Primary DNS, die neue IP des Upstream Gateway der externen WAN-Schnittstelle an und deaktiviere Override DNS.
    Die Länge des ersten Teils der Domäne darf maximal 15 Zeichen betragen. Die Domäne ``muster-gymnasium.de`` ist um ein Zeichen zu lang, da muster-gymnasium 16 Zeichen lang ist. 
    Eine gute Wahl ist beispielsweise ``linuxmuster.lan``. Beim späteren Setup von linuxmuster.net wird diese ggf. für alle Server-Dienste angepasst.
 
@@ -483,12 +483,11 @@ Wenn die Installation abgeschlossen und der Server neu gestartet ist, meldest du
 LVM - Besonderheiten
 --------------------
 
-1. Hast du wie zuvor beschrieben ein LVM angelegt, gebe auf der Konsole ``sudo vgscan --mknodes`` ein. Es wird dir dann die sog. ``volume group "vg0"`` angezeigt, die du während der Installation auf der 2. HDD angelegt hast.
+1. Hast du wie zuvor beschrieben ein LVM angelegt, gib auf der Konsole ``sudo vgscan --mknodes`` ein. Es wird dir dann die sog. ``volume group "vg0"`` angezeigt, die du während der Installation auf der 2. HDD angelegt hast.
 
 2. Führe ``sudo vgchange -ay`` aus, um das Volume zu aktivieren.
 
-3. Gebe ``sudo pvdisplay`` an, um Informationen zu der Logical Volume Group auszugeben. PV = physical volume = hdd, vg = volume group = .
-Du kannst für Kurzinformationen auch ``sudo pvs`` angeben. Die vg - volume group sollte schon vorhanden sein und wie zuvor angegeben hier ``vg0`` heißen.
+3. Gib ``sudo pvdisplay`` an, um Informationen zu der Logical Volume Group auszugeben. PV = physical volume = hdd, vg = volume group. Du kannst für Kurzinformationen auch ``sudo pvs`` angeben. Die vg - volume group sollte schon vorhanden sein und wie zuvor angegeben hier ``vg0`` heißen.
 
 4. Lege nun logical volumes an. Wir gehen von 100G für die HDD aus:
 
@@ -499,7 +498,7 @@ Du kannst für Kurzinformationen auch ``sudo pvs`` angeben. Die vg - volume grou
    sudo lvcreate -L 10G -n /dev/vg0/global vg0
    sudo lvcreate -L 38G -n /dev/vg0/default-school vg0
    
-5. Um zu prüfen, ob die logical volumes angelegt wurden, gebe den Befehl ``sudo lvs`` an.
+5. Um zu prüfen, ob die logical volumes angelegt wurden, gib den Befehl ``sudo lvs`` an.
 
 6. Aktiviere nun diese logical volumes wie folgt:
 
