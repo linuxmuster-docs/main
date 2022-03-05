@@ -158,5 +158,3 @@ Hypervisoren
 Die Voraussetzungen für einen virtualisierten Betrieb besteht natürlich darin, vorab den Hypervisor/den VM-Host installiert zu haben und Zugriff auf dessen Verwaltung zu haben.
 
 Wo es uns möglich ist, haben wir eine Anleitung dazu geschrieben, um auf die Besonderheiten der Schulnetzumgebung an geeigneter Stelle hinzuweisen.
-
-Solltest du einen anderen Hypervisor bevorzugen, kannst du dich an den Hinweisen orientieren und dann mit dem Setup fortfahren.
