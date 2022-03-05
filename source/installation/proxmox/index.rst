@@ -12,7 +12,7 @@ Proxmox vorbereiten
 Hinweise
 --------
 
-Nachdem du dich entschieden hast, **Proxmox als Virtualisierunglösung einzusetzen**, beginnst du mit der Installation der Virtualisierung nach den nachstehend  beschriebenen Anforderungen.
+Für diese Anleitung haben wir uns entschieden, Proxmox als Virtualisierungslösung einzusetzen.
 
 Alternativ installierst du von Grund auf die Serverbetriebssysteme
 *Ubuntu Server* und *OPNsense®* direkt auf der Hardware oder innerhalb
