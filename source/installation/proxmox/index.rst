@@ -792,7 +792,7 @@ Nachdem die VM angelegt wurde, siehst du diese links im Verzeichnisbaum deines P
    :align: center
    :alt: Proxmox VMs: Overview
 
-Die eigentliche Installation des Servers in der VM folgt später und ist hier dokumentiert :ref:`install-from-scratch-label`
+Die eigentliche Installation des Servers in der VM folgt später.
 
 Boot-Optionen
 -------------
