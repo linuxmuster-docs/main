@@ -699,7 +699,7 @@ Achte für die weitere Installation darauf, wie du die Bridges zugeordnet hast:
 
 Klicke auf ``Add`` und kontrolliere dann nochmals alle Einstellungen der neu angelegten VM.
 
-Die eigentliche Installation von OPNsense in der VM folgt später und ist hier dokumentiert :ref:`install-from-scratch-label`
+Die eigentliche Installation von OPNsense in der VM folgt später.
 
 Anlegen der VM für linuxmuster server
 -------------------------------------
