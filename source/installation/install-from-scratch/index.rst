@@ -11,7 +11,7 @@ Install-from-Scratch
 
 
 In diesem Dokument findest du eine "Schritt-für-Schritt" Anleitung zur Installation der linuxmuster.net Musterlösung direkt auf der Hardware. 
-Zugleich nutzt du diese Anleitung zur Installation in die vorbereiteten VMs.
+Zugleich nutzt du diese Anleitung zur Installation in vorbereitete VMs.
 
 Lies zuerst die Abschnitte :ref:`what-is-new-label` und
 :ref:`prerequisites-label`, bevor du dieses Kapitel durcharbeitest.
@@ -30,6 +30,8 @@ Im Laufe der Installation brauchst du einen Admin-PC. Das kann ein normaler Lapt
 * Dann integrieren wir den Admin-PC in das Schulnetz.
 * Jetzt konfigurieren wir die OPNsense® über das Webinterface.
 * Schließlich installieren wir den Ubuntu-Server und richten linuxmuster.net ein.
+
+ Bist du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst du fortfahren mit `Erster Start der OPNsense®`_
 
 Anlegen und Installieren der Firewall
 =====================================
@@ -57,6 +59,9 @@ Unter Linux gibst du auf der Eingabekonsole folgenden Befehl an, der dir die Dat
    tar -xjf OPNsense-22.1-OpenSSL-dvd-amd64.iso.bz2
 
 Brenne die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren USB-Stick an. In einer Virtualisierungsumgebung lädst du die ISO-Datei auf den ISP-Speicher.
+
+Erster Start der OPNsense®
+--------------------------
 
 Starte dann OPNsense® auf dem Rechner oder in der neu angelegten VM von DVD oder dem erstellten USB-Stick. Je nach Virtualisierungsumgebung hast du ggf. die ISO-Datei bereits auf den ISO-Datenspeicher des Hypervisors abgelegt.Boote dann die VM hierüber.
 
