@@ -31,7 +31,7 @@ Im Laufe der Installation brauchst du einen Admin-PC. Das kann ein normaler Lapt
 * Jetzt konfigurieren wir die OPNsense® über das Webinterface.
 * Schließlich installieren wir den Ubuntu-Server und richten linuxmuster.net ein.
 
- Bist du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst du fortfahren mit `Erster Start der OPNsense®`_
+Bist du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst du fortfahren mit `Erster Start der OPNsense®`_
 
 Anlegen und Installieren der Firewall
 =====================================
@@ -60,12 +60,7 @@ Unter Linux gibst du auf der Eingabekonsole folgenden Befehl an, der dir die Dat
 
 Brenne die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren USB-Stick an. In einer Virtualisierungsumgebung lädst du die ISO-Datei auf den ISP-Speicher.
 
-Erster Start der OPNsense®
---------------------------
-
-Starte dann OPNsense® auf dem Rechner oder in der neu angelegten VM von DVD oder dem erstellten USB-Stick. Je nach Virtualisierungsumgebung hast du ggf. die ISO-Datei bereits auf den ISO-Datenspeicher des Hypervisors abgelegt.Boote dann die VM hierüber.
-
-.. hint::
+.. hint:: 
 
    Willst du in einer VM installieren, so must du für die neue VM folgende Mindesteinstellungen angeben:
    - template - other install media, installation from ISO library,
@@ -80,6 +75,11 @@ Starte dann OPNsense® auf dem Rechner oder in der neu angelegten VM von DVD ode
    kann dann hingegen GPT/UEFI mode angegeben werden.
    
    vgl. hierzu auch: https://xcp-ng.org/docs/guides.html#pfsense-opnsense-vm
+
+Erster Start der OPNsense®
+--------------------------
+
+Starte dann OPNsense® auf dem Rechner oder in der neu angelegten VM von DVD oder dem erstellten USB-Stick. Je nach Virtualisierungsumgebung hast du ggf. die ISO-Datei bereits auf den ISO-Datenspeicher des Hypervisors abgelegt. Boote dann die VM hierüber.
 
 Am Ende des Boot-Vorgangs der OPNSense® gelangst du zu folgendem Bildschirm:
 
