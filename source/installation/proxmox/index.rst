@@ -675,7 +675,7 @@ Zum Abschluss siehst du nochmals alle Einstellungen für die VM. Überprüfe die
 
 Achte darauf, dass die Option ``Start after created`` unbedingt ``deaktiviert`` ist. 
 
-Klicke dann auf ``Next``.
+Klicke dann auf ``Finish``.
 
 Nachdem die VM angelegt wurde, wähle diese aus und klicke auf den Eintrag ``Hardware``.
 
@@ -784,7 +784,7 @@ Zum Abschluss siehst du nochmals alle getroffenen Einstellungen. Überprüfe die
 
 Achte darauf, dass die Option ``Start after created`` unbedingt ``deaktiviert`` ist. 
 
-Klicke dann auf ``Next``.
+Klicke dann auf ``Finish``.
 
 Nachdem die VM angelegt wurde, siehst du diese links im Verzeichnisbaum deines Proxmox-Host, in dem alle VMs dargestellt werden.
 
