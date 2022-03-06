@@ -541,7 +541,7 @@ Als Prüfsumme kannst du zur Überprüfung nach dem Download folgenden Befehl nu
 
 .. code:: 
 
-   sha256sum OPNsense-21.7.1-OpenSSL-dvd-amd64.iso
+   sha256sum OPNsense-21.7.1-OpenSSL-dvd-amd64.iso.bz2
 
 Es muss folgende SHA256-Prüfsumme errechnet werden:
 
