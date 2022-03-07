@@ -225,7 +225,7 @@ Aktualisiere vorab nochmals die OPNsense® in der Konsole, indem du den Punkt ``
   Sollte hierbei keine Verbindung zu den externen Update-Servern möglich sein, dann stimmt deine Netzwerkkartenzuordnung noch nicht. Ändere dies, bevor du fortfährst.
 
 Klappt das Update nun wird die OPNsense neu gestartet.
-Verbinde dein Laptop mit einer internen Netzwerkkarte, rufe den Browser auf und gib folgende URL für den ZUgriff auf die GUI der OPNsense an: ``https://10.0.0.254``.
+Verbinde dein Laptop mit einer internen Netzwerkkarte, rufe den Browser auf und gib folgende URL für den Zugriff auf die GUI der OPNsense an: ``https://10.0.0.254``.
 
 Du erhältst zunächst eine Zertifikatswarnung, da OPNsense® ja ganz frisch installiert ist und ein selbst erstelltes Zertifikat nutzt. 
 
