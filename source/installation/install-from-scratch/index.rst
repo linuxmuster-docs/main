@@ -2,7 +2,10 @@
   
 .. |ua| unicode:: u. U+00A0 a. .. und andere
 
-.. |_| unicode:: U+202F
+.. |_| unicode:: U+202F .. geschütztes Leerzeichen
+   :trim:
+
+.. |...| unicode:: U+2026 .. Auslassungszeichen
    :trim:
 
 .. |copy| unicode:: 0xA9 .. Copyright-Zeichen
@@ -26,8 +29,8 @@ Install-from-Scratch
 In diesem Dokument findest du eine "Schritt-für-Schritt" Anleitung zur Installation der linuxmuster.net Musterlösung direkt auf der Hardware. 
 Zugleich nutzt du diese Anleitung zur Installation in vorbereitete VMs.
 
-Lies zuerst die Abschnitte :ref:`what-is-new-label` und
-:ref:`prerequisites-label`, bevor du dieses Kapitel durcharbeitest.
+Lies zuerst die Abschnitte ":ref:`what-is-new-label`" und
+":ref:`prerequisites-label`", bevor du dieses Kapitel durcharbeitest.
 
 Nach der Installation gemäß dieser Anleitung erhältst du eine
 einsatzbereite Umgebung bestehend aus
@@ -59,7 +62,7 @@ Lade dir die ISO-Datei der OPNSense® von der Seite https://opnsense.org/downloa
    Die zuletzt freigegeben OPNsense Version für das Setup von linuxmuster.net v7.1 ist die Version 22.1. 
    https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-22.1-OpenSSL-dvd-amd64.iso.bz2
 
-Nutze als Architecture ``amd64`` und als image type ``dvd`` und einen Mirror, der in deiner Nähe ist.
+Nutze als Architektur ``amd64`` und als "image type" ``dvd`` und einen Mirror, der in deiner Nähe ist.
 Du erhälst dann ein mit bz2 komprimiertes ISO-Image. Entpacke die heruntergeladene Datei.
 
 Unter Windows kannst du dies z.B. mit 7-Zip durchführen.
@@ -71,11 +74,16 @@ Unter Linux gibst du auf der Eingabekonsole folgenden Befehl an, der dir die Dat
    tar -xjf <opnsense-dateiname>.iso.bz2
    tar -xjf OPNsense-22.1-OpenSSL-dvd-amd64.iso.bz2
 
+   Alternativ:
+
+   bunzip OPNsense-22.1-OpenSSL-dvd-amd64.iso.bz2
+
+
 Brenne die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren USB-Stick an. In einer Virtualisierungsumgebung lädst du die ISO-Datei auf den ISP-Speicher.
 
 .. hint:: 
 
-   Willst du in einer VM installieren, so must du für die neue VM folgende Mindesteinstellungen angeben:
+   Willst du in einer VM installieren, so musst du für die neue VM folgende Mindesteinstellungen angeben:
    - template - other install media, installation from ISO library,
    - Boot-Mode - UEFI (Achtung: xcp-ng: Boot/MBR),
    - 1 vCPU
@@ -83,7 +91,7 @@ Brenne die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren U
    - storage 10 GiB
    - 2 NIC mit Zuordnung zu vSwitch red, green.
    
-   Achtung unter XCP-ng bricht die Installation mit o.g. Einstellungen beim Punkt ``guided installation`` ab,
+   Achtung, unter XCP-ng bricht die Installation mit o.g. Einstellungen beim Punkt ``guided installation`` ab,
    wenn UEFI als Boot-Mode angegeben wurde. Es ist als Boot-Mode in der VM Boot/MBR auszuwählen. Bei der weiteren Installation 
    kann dann hingegen GPT/UEFI mode angegeben werden.
    
@@ -147,7 +155,7 @@ Bestätige diesen Vorgang:
    :align: center
    :alt: OPNSense: UFS Configuration 2
 
-Warte nun bis die Installation abgeschlossen ist.
+Warte nun, bis die Installation abgeschlossen ist.
 
 .. figure:: media/OPNS16a.png
    :align: center
@@ -163,7 +171,7 @@ Zum Abschluss der Konfiguration musst du das Kennwort für den Benutzer ``root``
 
    An dieser Stelle muss als root-Passwort ``Muster!`` eingegeben werden, da später der lmn-Server beim Einrichten der Firewall davon ausgeht, dass das root-Passwort ``Muster!`` ist!
 
-Bestätige diese Kennwort.
+Bestätige dieses Kennwort.
 
 .. figure:: media/OPNS16c.png
    :align: center
@@ -171,9 +179,9 @@ Bestätige diese Kennwort.
 
 Wähle danach die Option ``Exit Apply configuration and exit installer`` aus.
 
-Starte OPNsense® zum Abschluß neu und werfe die DVD / den USB Stick aus. 
+Starte OPNsense® zum Abschluss neu und werfe die DVD / den USB-Stick aus. 
 
-Hast du OPNsense® in eine VM installiert, so werfe die CD aus und ändere die Boot-Reihenfolge, so dass direkt von der Festplatte gestartet wird.
+Hast du OPNsense® in eine VM installiert, so werfe die CD aus und ändere die Boot-Reihenfolge, sodass direkt von der Festplatte gestartet wird.
 
 Der Boot-Vorgang kann dann eine Weile dauern. Vor allem, wenn der Router kein DHCP anbieten sollte.
 
@@ -187,7 +195,7 @@ Wenn alles geklappt hat, ist Folgendes zu sehen:
 
    Die dargestellte IPs und Netze können bei deiner OPNsense |reg| andere sein.
 
-Die erste Netzwerkkarte (LAN) ist mit dem pädagogischen Netz verbunden. Allerdings noch mit den falschen Netzwerkeinstellungen, da die Installationsroutine der OPNsene® immer die IP 192.168.1.1/24 zuweist. Diese gilt es noch zu ändern.
+Die erste Netzwerkkarte (LAN) ist mit dem pädagogischen Netz verbunden. Allerdings noch mit den falschen Netzwerkeinstellungen, da die Installationsroutine der OPNsense® immer die IP 192.168.1.1/24 zuweist. Diese gilt es noch zu ändern.
 
 Die zweite Netzwerkkarte (WAN) ist mit dem Router verbunden. Die IP hängt davon ab, welche IPs via DHCP von deinem DSL_Router verteilt werden. In einer Schulumgebung kann es sein, dass der Router keinen DHCP-Service anbieten. In diesem Fall musst du dafür sorgen, dass sich sowohl das Interface (WAN) der OPNsense |reg| als auch der Router im gleichen Netzwerk befinden.
 
@@ -199,11 +207,11 @@ Melde dich als ``root`` mit dem Passwort ``Muster!`` an der OPNsense |reg| an.
 Tastaturbelegung
 ^^^^^^^^^^^^^^^^
 
-Zuerst überprüfe ob die Tastaturbelegung richtig ist. Dazu wähle den Punkt 8) aus. Auf der Konsole kannst du dann die Umlaute und Sonderzeichen der deutschen Tastaturbelegung testen. Sollte sie korrekt sein, verlässt du mit ``exit`` die Konsole und bist wieder im Auswahl-Bildschirm. Fahre mit `Überprüfung der Zuordnung der Netzwerkkarten`_ fort, ansonsten ...
+Zuerst überprüfe, ob die Tastaturbelegung richtig ist. Dazu wähle den Punkt 8) aus. Auf der Konsole kannst du dann die Umlaute und Sonderzeichen der deutschen Tastaturbelegung testen. Sollte sie korrekt sein, verlässt du mit ``exit`` die Konsole und bist wieder im Auswahl-Bildschirm. Fahre mit `Überprüfung der Zuordnung der Netzwerkkarten`_ fort, ansonsten ...
 
 .. hint::
 
-   Solltet du feststellen, das nach dem Neustart in der Konsole der OPNsense® die Tastaturbelegung immer noch falsch ist, stelle diese dauerhaft wie nachstehend beschrieben um:
+   Solltest du feststellen, dass nach dem Neustart in der Konsole der OPNsense® die Tastaturbelegung immer noch falsch ist, stelle diese dauerhaft wie nachstehend beschrieben um:
 
    .. code::
 
@@ -212,7 +220,7 @@ Zuerst überprüfe ob die Tastaturbelegung richtig ist. Dazu wähle den Punkt 8)
      ls german.iso.kbd                # listet das deutsche Tastaturlayout auf, sofern vorhanden
     
      kbdcontrol -l german.iso.kbd     # (-l = Language; "-" zu finden unter "?" ;-) stelle temporär auf das neue Layout um
-                                      ' - teste, ob es dem gewünschten Layout entspricht
+                                      # - teste, ob es dem gewünschten Layout entspricht
      
      echo "keymap='de'">>/etc/rc.conf # die Wahl des Tastaturlayouts dauerhaft hinzufügen  
      
@@ -225,7 +233,7 @@ Zuerst überprüfe ob die Tastaturbelegung richtig ist. Dazu wähle den Punkt 8)
 
 .. hint:: 
 
-   Prüfe ob die Zuordnung der Netzwerkkarten, in Abhängigkeit der Installationsart die du gewählt hast, korrekt ist. Also ob du OPNsense® in eine VM oder direkt auf der Hardware (bare metal) installiert hast. Sollte diese nicht stimmen, kannst du an der Konsole dies nach der Anmeldung mit dem Menüeintrag ``1) Assign interfaces`` anpassen.
+   Prüfe, ob die Zuordnung der Netzwerkkarten, in Abhängigkeit der Installationsart, die du gewählt hast, korrekt ist. Also ob du OPNsense® in eine VM oder direkt auf der Hardware (bare metal) installiert hast. Sollte diese nicht stimmen, kannst du an der Konsole dies nach der Anmeldung mit dem Menüeintrag ``1) Assign interfaces`` anpassen.
 
    Hast du auf der Konsole diesen Eintrag aufgerufen, werden dir die gefundenen Netzwerkkarten mit deren MAC-Adressen angezeigt. Achte nun darauf, dass die Netzwerkkarte mit der dargestellten MAC-Adresse und der geeigneten physikalischen Verkabelung korrekt zugeordnet werden. 
    
@@ -233,7 +241,7 @@ Zuerst überprüfe ob die Tastaturbelegung richtig ist. Dazu wähle den Punkt 8)
 
    * das externe Netz - RED unter OPNsense® als WAN und
    
-   * weitere Netzwerkkarte z.B. für das WLAN - BLUE unter OPNsense® als OPT1 angegeben werden.
+   * weitere Netzwerkkarte |zB| für das WLAN - BLUE unter OPNsense® als OPT1 angegeben werden.
   
    Das WAN-Interface - also die externe Schnittstelle (RED) - wird hierbei zuerst abgefragt, danach das LAN-Interface für das lokale Netz (GREEN) und danach Opt1 für BLUE.
    
@@ -244,7 +252,7 @@ Zuerst überprüfe ob die Tastaturbelegung richtig ist. Dazu wähle den Punkt 8)
 IP-Adressen zuweisen
 ^^^^^^^^^^^^^^^^^^^^
 
-Solltest du in deiner Netzwerkkonfiguration von unserem Muster abweichen, musst du bei den nachfolgenden Schritten diese nach deiner Festlegung anpassen.
+Solltest du in deiner Netzwerkkonfiguration von unserem Muster abweichen, musst du bei nachfolgenden Schritten eben deiner Festlegung folgen.
 
 .. figure:: media/OPNS16d1a.png
    :align: center
@@ -256,7 +264,7 @@ Wähle an der Konsole der OPNsense® den Eintrag ``2) Set interface IP address``
    :align: center
    :alt: OPNSense: GUI - LAN auswählen
 
-Wähle ``1 - LAN (...)`` für die nächsten Schritte.
+Wähle ``1 - LAN (`` |...| ``)`` für die nächsten Schritte.
 
 .. figure:: media/OPNS16d2.png
    :align: center
@@ -268,7 +276,7 @@ Bestätige die Nachfrage mit ``N`` und ``ENTER``. (Alternativ wäre auch nur ``E
    :align: center
    :alt: OPNSense: GUI - Eingabe der IP
 
-Gib die IPv4 Adresse ``10.0.0.254`` ein, unter der die OPNsense |reg| im lokalen Netz zuereichen sein wird.
+Gib die IPv4 Adresse ``10.0.0.254`` ein, unter der die OPNsense |reg| im lokalen Netz zu erreichen sein wird.
 
 .. figure:: media/OPNS16d4.png
    :align: center
@@ -286,7 +294,7 @@ Da keine Eingabe eines Upstream-Gateways nötig ist, einfach ``ENTER``
    :align: center
    :alt: OPNSense: GUI - keine IPv6 via WAN tracking nötig
 
-Gib ein ``n`` ein.
+.. attention:: Gib ein ``n`` ein.
 
 .. figure:: media/OPNS16d7.png
    :align: center
@@ -304,7 +312,7 @@ Da keine IPv6-Adresse benötigt wird: ``ENTER``
    :align: center
    :alt: OPNSense: GUI - keine Aktivierung eines DHCP-Servers auf LAN
 
-Diese und die nächsten drei Fragen ebenfalls jeweils ``N`` und ``ENTER`` bzw. nur ein ``ENTER`` beantworten. 
+Diese und die nächsten drei Fragen ebenfalls jeweils ``N`` und ``ENTER`` bzw. nur ``ENTER`` beantworten. 
 
 .. figure:: media/OPNS16d11.png
    :align: center
@@ -324,7 +332,7 @@ Nach der letzten Eingabe startet die Übernahme in das System.
    :align: center
    :alt: OPNSense: GUI IP
 
-Nach erfolgreichen Aktualisierung erhälst du den Hinweis, dass du dich mit der LAN IP auf die GUI der OPNsense® aufschalten könntest.
+Nach erfolgreicher Übernahme erhältst du den Hinweis, dass du dich mit der LAN IP auf die GUI der OPNsense® aufschalten könntest.
 
 .. figure:: media/OPNS16e.png
    :align: center
@@ -332,8 +340,8 @@ Nach erfolgreichen Aktualisierung erhälst du den Hinweis, dass du dich mit der 
 
 Bevor du das aber machst, erfolgt ein letzter Test:
 
-Aktuallisierung der OPNsense |reg|
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Aktualisierung der OPNsense |reg|
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Aktualisiere die OPNsense® in der Konsole, indem du den Punkt ``12) Update from console`` aufrufst und die Rückfrage mit ``Y`` bestätigst.
 
@@ -341,7 +349,7 @@ Aktualisiere die OPNsense® in der Konsole, indem du den Punkt ``12) Update from
 
   Sollte hierbei keine Verbindung zu den externen Update-Servern möglich sein, dann stimmt deine Netzwerkkartenzuordnung noch nicht. Ändere dies, bevor du fortfährst.
 
-Klappt das Update startet du die OPNsense neu, wenn du die Nachfrage mit ``y`` beantwortest.
+Klappt das Update, startest du die OPNsense neu. Dazu beantwortest du die Nachfrage mit ``y``.
 
 .. todo:: Weiter hier: Benennung der Medien-Files und der Bearbeitung der weiteren Beschreibung
 
