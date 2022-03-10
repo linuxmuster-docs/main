@@ -6,10 +6,10 @@ Installation: Übersicht
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
                    `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
-Nachstehend findest du nach Installationsabschnitten gegliedert eine Übersicht zur Installation der 
+Nachstehend findest Du nach Installationsabschnitten gegliedert eine Übersicht zur Installation der 
 linuxmuster.net v7 mit möglichen Installationsoptionen. Die Menüführung folgt diesem Ablauf.
 
-Am Ende des Kapitels findest du den Gesamtablauf nochmals als Gesamtübersicht - auch zum Download.
+Am Ende des Kapitels findest Du den Gesamtablauf nochmals als Gesamtübersicht - auch zum Download.
 
 Erster Teil der Installation
 ++++++++++++++++++++++++++++
