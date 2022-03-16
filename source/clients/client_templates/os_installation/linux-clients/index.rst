@@ -185,7 +185,7 @@ Installiere das Paket ``linuxmuster-linuxclient7`` wie folgt:
 1. Schritt
 ^^^^^^^^^^
 
-Öffne ein Terminal unter Ubuntu mit ``strg+t`` oder klicke unten links auf die Kacheln und gebe in der Suchzeile als Anwendung ``Terminal`` ein.
+Öffne ein Terminal unter Ubuntu mit ``strg`` + ``T`` oder klicke unten links auf die Kacheln und gebe in der Suchzeile als Anwendung ``Terminal`` ein.
 
 Importiere nun den GPG-Schlüssel des linuxmuster.net 7.1 Repository:
 
@@ -236,16 +236,16 @@ Rufe hierzu den Befehl auf:
 
 Der Client erhält daruch Aktualisierungen und es werden einige Dateien (journalctl & apt-caches) aufgeräumt, um Speicherplatz im Image zu sparen.
 
-.. hint::
+.. attention::
 
-   Danach sollte unbedingt S O F O R T ein neues Image mit Linbo erstellt werden. Beim Neustart via PXE darf Ubuntu N I C H T gestartet werden.
+   Danach unbedingt S O F O R T ein neues Image mit Linbo erstellen. Beim Neustart via PXE darf Ubuntu N I C H T gestartet werden.
 
 Image erstellen
 ---------------
 
 Führe einen Neustart des Linux-Client durch, sodass die VM via PXE in Linbo bootet.
 
-Nun erstellst du in Linbo - genauso wie zuvor unter **Erstimage erstellen** beschrieben - das Image des neuen Muster-Clients für Linux. Achte hierbei darauf, dass du dieses Mal NICHT ``neues Image erstellen``, sondern ``aktuelles Image ersetzen`` auswählst.
+Nun erstellst du in Linbo - genauso wie zuvor unter **Erstimage erstellen** beschrieben - das Image des neuen Muster-Clients für Linux. Achte hierbei darauf, dass du dieses Mal ``aktuelles Image ersetzen`` auswählst.
 
 Wurde der Vorgang erfolgreich beendet, kannst du dich wieder abmelden und den vorbereiteten Linux-Client synchronisiert starten. Nun sollte die Anmeldung mit jedem in der Schulkonsole eingetragenen Benutzer funktionieren.
 
@@ -271,9 +271,11 @@ Das machst du mit folgendem Befehl:
 
  sudo linuxmuster-linuxclient7 prepare-image
 
-.. hint::
+.. attention::
 
-  Sollte während des Updates oder der Image-Vorbereitung die Meldung erscheinen, dass lokale Änderungen der PAM-Konfiguration außer Kraft gesetzt werden sollen, wähle hier immer ``Nein`` (siehe Abb.), da sonst der konfigurierte Login nicht mehr funktioniert.
+   Falls du die history deines Terminals nutzt um Befehle wieder zu nutzen, dann achte darauf das du den Parameter ``-y`` entfernst.
+   
+Sollte während des Updates oder der Image-Vorbereitung die Meldung erscheinen, dass lokale Änderungen der PAM-Konfiguration außer Kraft gesetzt werden sollen, wähle hier immer ``Nein`` (siehe Abb.), da sonst der konfigurierte Login nicht mehr funktioniert.
 
 .. figure:: media/15-linux-client-ubu-update-pam.png
    :align: center
@@ -285,7 +287,7 @@ Solltest du versehentlich ``ja`` ausgewählt haben, kannst du die Anmeldung mit 
 
   sudo linuxmuster-linuxclient7 upgrade
 
-Im Anschluss startest Linux-Client neu und erstellst wiederum, wie zuvor beschrieben, ein neues Image. Auch hier: wähle NICHT ``neues Image erstellen``, sondern ``aktuelles Image ersetzen`` aus.
+Im Anschluss startest du deinen Linux-Client neu und erstellst wiederum, wie zuvor beschrieben, ein neues Image. Auch hier: ``aktuelles Image ersetzen`` auswählen.
 
 
 Serverseitige Anpassungen
