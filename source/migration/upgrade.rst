@@ -45,7 +45,7 @@ Aktualisiere die Paketquellen auf dem Server und migriere / aktualisiere deinen 
 
 .. code::
 
-   sudo apt update && apt-dist-upgrade
+   sudo apt update && apt dist-upgrade
    
 Bestätige die Rückfragen zur Installation mit y / j.
 
