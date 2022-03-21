@@ -26,6 +26,8 @@ Netzwerkmaske ``255.255.0.0``, dem Gateway ``10.0.0.254`` und dem DNS-Eintrag ``
    
    Sollte das nicht möglich sein, überprüfe das hier geschriebene: https://ask.linuxmuster.net/t/lmn-7-1-linuxmuster-prepare-webui-laeuft-nicht/8655/15
 
+.. todo:: Workaround entfernen nach Überprüfung.
+
 Es erscheint der Hinweis, dass du das Webinterface nicht als Benutzer root benutzen sollst, es sei denn, du verwendest dieses das erste Mal.
 
 .. figure:: media/newsetup/lmn-setup-gui-01.png
