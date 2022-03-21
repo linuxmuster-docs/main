@@ -794,7 +794,9 @@ Führe danach folgende Befehle in der Eingabekonsole aus:
 
 Für weitere Hinweise zum linuxmuster-prepare Skript siehe: https://github.com/linuxmuster/linuxmuster-prepare
 
-Fahre den Server herunter und erstelle einen Snapshot in der Virtualisierungsumgebung. Starte danach den server wieder und führe dann das Setup für die lmn v7.1 aus.
+.. todo:: Überprüfen ob der nächste momentan kommentierte Absatz raus kann. siehe auch https://ask.linuxmuster.net/t/lmn-7-1-linuxmuster-prepare-webui-laeuft-nicht/8655/13?u=machtdochnix
+
+.. Fahre den Server herunter und erstelle einen Snapshot in der Virtualisierungsumgebung. Starte danach den server wieder und führe dann das Setup für die lmn v7.1 aus.
 
 
 Paketquellen lmn71
