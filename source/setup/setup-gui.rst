@@ -22,7 +22,7 @@ Netzwerkmaske ``255.255.0.0``, dem Gateway ``10.0.0.254`` und dem DNS-Eintrag ``
     
 .. hint::
 
-   Achte darauf, dass vor dem Setup die Verbindung zur Schulkonsole via URL nocht unverschlüsselt mit HTTP erfolgt.
+   Achte darauf, dass vor dem Setup die Verbindung zur Schulkonsole via URL noch unverschlüsselt mit HTTP erfolgt.
 
 Es erscheint der Hinweis, dass du das Webinterface nicht als Benutzer root benutzen sollst, es sei denn, du verwendest dieses das erste Mal.
 
