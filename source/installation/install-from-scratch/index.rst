@@ -463,8 +463,13 @@ Setze einen Haken bei ``Aktiviere Secure Shell``, ``Erlaube Anmeldung mit dem ro
 Update der OPNsense |reg|
 -------------------------
 
-Aktualisiere nun die OPNsense |reg|, indem du unter ``System -> Firmware -> Aktualisierungen -> TAB Status --> Auf Aktualisierungen prüfen`` klickst.
-Es werden dir dann wie in nachstehender Abbildung zu aktualisierende Pakete angezeigt.
+Aktualisiere nun die OPNsense |reg|, indem du unter 
+
+.. figure:: media/OPNS28_1.png
+
+``System`` ``->`` ``Firmware`` ``-->`` ``Aktualisierungen`` ``--->`` ``Status`` ``----> `` ``Auf Aktualisierungen prüfen`` klickst.
+
+Es werden dir dann wie in nachstehender Abbildung unter dem Reiter ``Aktualisierungen`` die zu aktualisierenden Pakete angezeigt.
 
 .. figure:: media/OPNS29.png
 
