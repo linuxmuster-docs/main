@@ -366,7 +366,7 @@ Du erhältst zunächst eine Zertifikatswarnung, da OPNsense |reg| ja ganz frisch
 
 .. figure:: media/OPNS17.png
 
-Akzeptiere und fahre fort.
+``Erweitert`` und anschließend ``Risiko akzeptieren und fortfahren`` bringt dich auf die Login-Seite.
 
 .. figure:: media/OPNS18.png
 
