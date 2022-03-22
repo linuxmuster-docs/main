@@ -25,7 +25,7 @@ Linbo4 weist einige Besonderheiten auf:
 * Bisherige Images im cloop Format sind bitte direkt in das neue qcow2 Format zu konvertieren - wie unten beschrieben.
 
 Konvertieren der linbo 2.4 Images
-================================
+=================================
 
 Hast Du auf v7.1 umgestellt, musst du jetzt noch deine bisherigen linbo 2.4 Images konvertieren, so dass diese mit linbo4 nutzbar sind.
 
