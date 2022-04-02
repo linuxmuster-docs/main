@@ -190,7 +190,7 @@ Nach erfolgreicher Installation lasse Proxmox über `Reboot` neu starten.
 Proxmox Einrichtung
 -------------------
 
-Nach dem Neustart von Proxmox kannst du dich über einen PC, welcher sich im selben Netz befindet, via Browser auf das graphische Webinterface zur Verwaltung des Proxmox-Hosts aufschalten. Hierzu gibst Du als URL https://192.168.199.20:8006 ein. Du erhälst eine Warning, da ein mögliches Sicherheitsrisiko erkannt wurde. Dies ist auf das selbst ausgestellte SSL-zertifikat des Proxmos-Hiost zurückzuführen. 
+Nach dem Neustart von Proxmox kannst du dich über einen PC, welcher sich im selben Netz befindet, via Browser auf das graphische Webinterface zur Verwaltung des Proxmox-Hosts aufschalten. Hierzu gibst Du als URL https://192.168.199.20:8006 ein. Du erhälst eine Warning, da ein mögliches Sicherheitsrisiko erkannt wurde. Dies ist auf das selbst ausgestellte SSL-zertifikat des Proxmos-Host zurückzuführen. 
 
 Klicke auf ``Erweitert...``, es erscheint ein weiterer Hinweis auf das self-signed certificate. Dieses nimmst du nun mit dem Button ``Risiko akzeptieren und fortfahren`` an.
 
