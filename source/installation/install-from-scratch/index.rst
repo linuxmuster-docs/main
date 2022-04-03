@@ -458,9 +458,11 @@ ssh erlauben
 
 Setze einen Haken bei ``Aktiviere Secure Shell``, ``Erlaube Anmeldung mit dem root-Benutzer`` und ``Anmeldung mit Passwort erlauben``. Speichere die Einstellungen.
 
-.. hint::
+.. attention::
 
-   Diese Einstellung ist entscheidend, damit zwischen Server und Firewall eine SSH-Verbindung erfolgreich hergestellt werden kann. Diese ist vor dem Setup von beiden Seiten zu testen.
+   Diese Einstellung ist entscheidend, damit zwischen Server und Firewall eine SSH-Verbindung erfolgreich hergestellt werden kann. 
+   
+   Diese ist vor Aufruf des linuxmuster-Setup-Skritpes von beiden Seiten zu testen. Dazu später mehr |...|
 
 Update der OPNsense |reg|
 -------------------------
