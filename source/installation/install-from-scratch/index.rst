@@ -376,11 +376,11 @@ Starte den General Setup Wizard mit dem ``Next``-Knopf.
 
 .. figure:: media/OPNS19.png
 
-.. hint:: 
-
-   Gib als Primary DNS, die neue IP des Upstream Gateway der externen WAN-Schnittstelle an und deaktiviere Override DNS.
+.. attention::
    Die Länge des ersten Teils der Domäne darf maximal 15 Zeichen betragen. Die Domäne ``muster-gymnasium.de`` ist um ein Zeichen zu lang, da muster-gymnasium 16 Zeichen lang ist. 
    Eine gute Wahl ist beispielsweise ``linuxmuster.lan``. Beim späteren Setup von linuxmuster.net wird diese ggf. für alle Server-Dienste angepasst.
+
+.. hint:: Gib als Primary DNS, die neue IP des Upstream Gateway der externen WAN-Schnittstelle an und deaktiviere Override DNS.
 
 .. figure:: media/OPNS20.png
 
