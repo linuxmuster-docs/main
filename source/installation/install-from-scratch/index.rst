@@ -117,7 +117,7 @@ Du gelangst direkt zum Installer und kannst das Layout der Tastatur festlegen.
    :alt: OPNSense: Installer keymap
 
 Standardmäßig ist ein amerikanisches Tastaturlayout voreingestellt.
-Gehe mit den Pfeiltasten auf den Eintrag ``( ) German``. Wählen diesen mit ``<Select>`` aus.
+Gehe mit den Pfeiltasten auf den Eintrag ``( ) German (no accent keys)``. Wählen diesen mit ``<Select>`` aus.
 
 Teste danach das Tastaturlayout:
 
@@ -502,21 +502,25 @@ Nach dem Neustart ist die OPNsense |reg| soweit vorbereitet.
 Anlegen und Installieren des Servers
 ====================================
 
+Bist du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst du fortfahren mit `Erster Start des Servers`_.
+
 .. hint::
 
    Willst du in einer VM installieren, so must du für die neue VM folgende Mindesteinstellungen angeben:
-   - Template - Ubuntu Bionic Beaver 18.04, installation from ISO library, 
-   - Boot-Mode - BIOS Boot / MBR, 
-   - 2 vCPU, 
-   - 3 GiB RAM, 
-   - storage -> hdd1: 25 GiB -> hdd2: 100 GiB, 
-   - 1 NIC mit Zuordnung zu vSwitch green.
+     
+     - Template - Ubuntu Bionic Beaver 18.04, installation from ISO library, 
+     - Boot-Mode - BIOS Boot / MBR, 
+     - 2 vCPU, 
+     - 3 GiB RAM, 
+     - storage -> hdd1: 25 GiB -> hdd2: 100 GiB, 
+     - 1 NIC mit Zuordnung zu vSwitch green.
    
    Achte darauf, dass vor dem Start der VM beide Festplatten der VM zugewiesen wurden.
 
-.. hint::
-
    Bei der Einrichtung des Servers musst du nur einen Server mit 2 HDDs haben und Ubuntu 18.04 auf der ersten HDD installieren. Die zweite HDD bleibt frei. Auf dieser 2. HDD richtest du - wie nachstehend beschrieben -  ein LVM ein.
+
+Erster Start des Servers
+------------------------
 
 Starte den Server via Ubuntu 18.04 Server ISO-Image (USB-Stick oder CD-ROM). Es erscheint das erste Installationsfenster mit der Abfrage zur gewünschten Sprache.
 
@@ -527,7 +531,7 @@ Beantworte danach die Frage, ob auf einen neuen Installer (für 20.04) aktualisi
 
 Danach wähle dein Tastaturlayout.
 
-.. figure:: media/server11.png
+.. figure:: media/server01.png
 
 Wähle das Tastaturlayout Deutsch und bestätige dies mit ``Erledigt``.
 
@@ -535,67 +539,83 @@ Wähle das Tastaturlayout Deutsch und bestätige dies mit ``Erledigt``.
 
 Konfiguriere danach deine Netzwerkkarte.
 
-.. figure:: media/server12.png
+.. figure:: media/server02.png
 
 In der Voreinstellung ist die Netzwerkkarte auf DHCP eingestellt. Das klappt natürlich nicht, da der DHCP-Service der Firewall deaktiviert wurde. 
 Du musst also die Konfiguration von Hand einstellen.
 
 Gehe dazu auf die Netzwerkkarte und wähle ``Edit IPv4``.
 
-.. figure:: media/server13.png
+.. figure:: media/server03.png
 
-Wähle ``Manual``.
+Wähle ``Manual`` aus.
 
-.. figure:: media/server14.png
+.. figure:: media/server04.png
 
-Gib die Netzwerkkonfiguration, wie im oberen Bild, ein.
+Gib die Netzwerkkonfiguration, wie im oberen Bild, ein und übernehme sie mit ``Speichern``.
 
 .. hint:: 
 
    Bedenke, dass das deutsche Tastaturlayout noch nicht aktiv ist. Den ``/``, den du für die Eingabe des Subnetzes brauchst, bekommst du mit der ``-``-Taste!
 
-.. figure:: media/server15.png
+.. figure:: media/server05.png
 
-Lass die Proxy-Adresszeile leer.
+Mit ``Èrledigt`` geht es weiter.
 
-.. figure:: media/server16.png
+.. figure:: media/server06.png
 
-Die Mirror-Adresse übernimmst du.
+Lass die Proxy-Adresszeile leer. Auch diese Anfrage verlässt du mit ``Erledigt``.
+
+.. figure:: media/server07.png
+
+Die Mirror-Adresse übernimmst du ebenfalls mit ``Erledigt``.
+
+.. figure:: media/server08_new-installer.png
+
+Bei der angebotene Aktualisierung des Installers wählst du ``Ohne Akualisierungi fortfahren``.
 
 Jetzt must du die Festplattten einrichten. Bei einer bare metal Installation hast du zwei physikalische Festplatten installiert (also /dev/sda und /dev/sdb) 
 alternativ richtest du zwei Partitionen ein. Die erste Partition mit mind. 25 GiB (/dev/sda1) und die zweite mit der restlichen Größe der Festplatte (/dev/sda2).
 
-Wähle nun zur Einrichtung der Festplatten ``Custom Storage Layout`` aus. Es werden dir dann die verfügbaren Geräte angezeigt. 
+.. figure:: media/server09_custom-storage-layout.png
 
-.. figure:: media/lmn71-additional/custom-storage-layout-create-partition-table.png
+Wähle nun zur Einrichtung der Festplatten ``Custom Storage Layout`` aus.
+
+.. figure:: media/server10_custom-storage-layout-create-partition-table.png
+
+Es werden dir dann die verfügbaren Geräte angezeigt. 
 
 Wähle die erste Festplatte bzw. die erste Partition aus. Es wird ein Kontextmenü angezeigt, bei der du eine ``GPT/Partition`` erstellen musst. 
 
-.. figure:: media/lmn71-additional/custom-storage-layout-create-partition-table2.png
+.. figure:: media/server11_custom-storage-layout-create-partition-table2.png
 
 Wähle den gesamten Festplattenplatz und formatiere diesen mit dem ext4-Dateiformat und weise diese dem ``Mount Point /`` zu.
 
-.. figure:: media/lmn71-additional/custom-storage-layout-create-partition-table3.png
+.. figure:: media/server12_custom-storage-layout-create-partition-table3.png
 
 Gehe auf ``Erstellen``.
 
 Danach gelangst Du zu nachstehendem Bildschirm.
 
-.. figure:: media/server19.png
+.. .. figure:: media/server13.png
+
+.. figure:: media/server14_custom-storage-layout-create-partition-table-lvm-hdb-5.png
+
+.. todo:: Irgendwie passen die Bilder nicht zum Ablauf bzw. zur v7.0
 
 Richte nun auf der 2. HDD ein LVM ein.
 
-.. figure:: media/lmn71-additional/custom-storage-layout-create-partition-table-lvm-hdb-5.png
+
 
 Wähle den Eintrag ``Datenträgergruppe (LVM) anlegen`` aus.
 
 Hier gibst du einen eigenen Namen für die LVM Volume Group an (z.B. vg0).
 
-.. figure:: media/lmn71-additional/custom-storage-layout-create-partition-table-lvm-6.png
+.. figure:: media/server15_custom-storage-layout-create-partition-table-lvm-6.png
 
 Zum Abschluss werden dir die Partitionsierungseinstellungen angezeigt.
 
-.. figure:: media/lmn71-additional/custom-storage-layout-create-partition-table-overview.png
+.. figure:: media/server16_custom-storage-layout-create-partition-table-overview.png
 
 Stimmen diese mit den gewünschten überein, so wähle ``Weiter`` aus.
 
@@ -607,11 +627,11 @@ Bestätige dies.
 
    Ohne LVM sind die Mount Points ``/var`` und ``/srv`` auf die 2. HDD zu legen. Die Zuordnung der Mount Points zum LVM wird später detailliert beschrieben.
 
-.. figure:: media/server20.png
+.. figure:: media/server17.png
 
 Nenne den Server ``server``. Der Benutzername und das Passwort sind frei wählbar - wie in der Abb. dargestellt.
 
-.. figure:: media/server21.png
+.. figure:: media/server17.png
 
 Installiere OpenSSH **nicht** und installiere keine weiteren optionalen Pakete. Bestätige die Installation mit ``Fortfahren``.
 
