@@ -382,6 +382,8 @@ Starte den General Setup Wizard mit dem ``Next``-Knopf.
 
 .. hint:: Gib als Primary DNS, die neue IP des Upstream Gateway der externen WAN-Schnittstelle an und deaktiviere Override DNS.
 
+Weiter geht es mit ``Next``
+
 .. figure:: media/OPNS20.png
 
 Die Angaben zum Time Server übernimmst du. Danach kommst du zu den Einstellungen für die WAN-Schnittstelle.
