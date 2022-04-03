@@ -452,7 +452,7 @@ Für weitere Netzwerkkarten verfährst du entsprechend. OPT1 wird dann hochgezä
 ssh erlauben
 ------------
 
-Damit der Server Zugriff auf die OPNsense |reg| hat, musst du einen ssh-Zugriff erlauben. Gehe dafür auf ``System -> Einstellungen -> Verwaltung``.
+.. attention:: Damit der Server Zugriff auf die OPNsense |reg| hat, musst du einen ssh-Zugriff erlauben. Gehe dafür auf ``System -> Einstellungen -> Verwaltung``.
 
 .. figure:: media/OPNS28.png
 
