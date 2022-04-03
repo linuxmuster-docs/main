@@ -386,7 +386,7 @@ Weiter geht es mit ``Next``
 
 .. figure:: media/OPNS20.png
 
-Die Angaben zum Time Server übernimmst du. Danach kommst du zu den Einstellungen für die WAN-Schnittstelle.
+Die Angaben zum Time Server übernimmst du ebenfalls mit ``Next``. Danach kommst du zu den Einstellungen für die WAN-Schnittstelle.
 Nutzt du hier DHCP z.B. eines vorgelagerten DSL-Routers so gibst du hier DHCP an, ansonsten ändere diese bitte auf ``Static``.
 
 .. figure:: media/OPNS21.png
