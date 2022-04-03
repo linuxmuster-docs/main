@@ -167,7 +167,7 @@ Zum Abschluss der Konfiguration musst du das Kennwort für den Benutzer ``root``
    :align: center
    :alt: OPNSense: Final Configuration
 
-.. hint:: 
+.. attention:: 
 
    An dieser Stelle muss als root-Passwort ``Muster!`` eingegeben werden, da später der lmn-Server beim Einrichten der Firewall davon ausgeht, dass das root-Passwort ``Muster!`` ist!
 
