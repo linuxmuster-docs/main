@@ -231,6 +231,18 @@ Zuerst überprüfe, ob die Tastaturbelegung richtig ist. Dazu wähle den Punkt 8
 Überprüfung der Zuordnung der Netzwerkkarten
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. todo:: Tests genauer beschreiben:
+
+   * optische Zuordnung der Schnittstellen 
+   * ping-test auf 8.8.8.8
+   * ping test auf internet-Seite z.b. heise.de
+   
+   wenn alles i.O. dann Sprung zu `IP-Adressen zuweisen`_
+
+   Richtig einstellen beschreiben
+
+   Neustart
+
 .. hint:: 
 
    Prüfe, ob die Zuordnung der Netzwerkkarten, in Abhängigkeit der Installationsart, die du gewählt hast, korrekt ist. Also ob du OPNsense |reg| in eine VM oder direkt auf der Hardware (bare metal) installiert hast. Sollte diese nicht stimmen, kannst du an der Konsole dies nach der Anmeldung mit dem Menüeintrag ``1) Assign interfaces`` anpassen.
@@ -397,6 +409,7 @@ Falls deine Firewall eine statische IP-Adresse hat, die nicht über DHCP erteilt
 
 Falls dein Router eine private IP hat, musst du den Haken bei ``Private RFC1918-Netzwerke blockieren`` entfernen.
 
+Mit ``Weiter`` übernimmst du die von dir gemachten Einstellungen
 
 .. figure:: media/OPNS22.png
 
@@ -503,6 +516,8 @@ Nach dem Neustart ist die OPNsense |reg| soweit vorbereitet.
    Installierst du die OPNsense |reg| in einer VM, so solltest du nun noch die Tools der gewählten Virtualisierungsumgebung installieren, damit die VM komfortabel gesteuert werden kann.
    Für XCP-ng findest du nachstehend die Hinweise: https://xcp-ng.org/docs/guides.html#pfsense-opnsense-vm
 
+.. todo:: Time do snapshot
+
 Anlegen und Installieren des Servers
 ====================================
 
@@ -530,8 +545,7 @@ Starte den Server via Ubuntu 18.04 Server ISO-Image (USB-Stick oder CD-ROM). Es 
 
 Wähle deine bevorzugte Sprache.
 
-Beantworte danach die Frage, ob auf einen neuen Installer (für 20.04) aktualisiert werden soll, mit
-``Ohne Aktualisierung fortfahren``.
+.. Beantworte danach die Frage, ob auf einen neuen Installer (für 20.04) aktualisiert werden soll, mit ``Ohne Aktualisierung fortfahren``.
 
 Danach wähle dein Tastaturlayout.
 
@@ -607,10 +621,21 @@ Danach gelangst Du zu nachstehendem Bildschirm.
 
 .. todo:: Irgendwie passen die Bilder nicht zum Ablauf bzw. zur v7.0
 
+.. hint:: Solltest du unserere Standard Einteilung für das lvm nutzen wollen, dann kannst du den nächsten Abschnitt überspringen. Die Standardvorgabe ist wie folgt:
+
+============== ========================== ========================= =====
+LV Name        LV Pfad                    Mountpoint                Größe
+============== ========================== ========================= =====
+var            /dev/sg_srv/var            /var                      10G
+linbo          /dev/sg_srv/linbo          /srv/linbo                40G
+global         /dev/sg_srv/global         /srv/samba/global         10G
+default-school /dev/sg_srv/default-school /srv/samba/default-school 40G
+============== ========================== ========================= =====
+
+   Für kleine Schulen oder eine Test-Installation sollten diese Vorgaben passen, ansonsten:
+
 Richte nun auf der 2. HDD ein LVM ein.
-
-
-
+   
 Wähle den Eintrag ``Datenträgergruppe (LVM) anlegen`` aus.
 
 Hier gibst du einen eigenen Namen für die LVM Volume Group an (z.B. vg0).
@@ -621,7 +646,7 @@ Zum Abschluss werden dir die Partitionsierungseinstellungen angezeigt.
 
 .. figure:: media/server16_custom-storage-layout-create-partition-table-overview.png
 
-Stimmen diese mit den gewünschten überein, so wähle ``Weiter`` aus.
+Stimmen diese mit den gewünschten überein, so wähle ``Erledigt`` aus.
 
 Danach erhälst du die Rückfrage, ob die Installation fortgesetzt werden soll und die Daten auf der Festplatte gelöscht werden sollen.
 
@@ -633,13 +658,28 @@ Bestätige dies.
 
 .. figure:: media/server17.png
 
-Nenne den Server ``server``. Der Benutzername und das Passwort sind frei wählbar - wie in der Abb. dargestellt.
+Nenne den Server ``server``. Der Benutzername (lmnadmin) und das Passwort (Muster!) sind frei wählbar - wie in der Abb. dargestellt.
 
-.. figure:: media/server17.png
+.. todo:: Bild fehlt .. figure:: media/_server_001.png
 
-Installiere OpenSSH **nicht** und installiere keine weiteren optionalen Pakete. Bestätige die Installation mit ``Fortfahren``.
+Installiere OpenSSH **nicht**
 
-Zum Abschluß der Installation wird automatisch versucht, Updates zu installieren und danach den Server neu zu starten.
+.. figure:: media/_server_002.png
+
+und installiere keine weiteren optionalen Pakete.
+
+.. figure:: media/_server_003.png
+
+Bestätige die Installation mit ``Fortfahren``.
+
+Zum Abschluß der Installation wird automatisch versucht, Updates zu installieren
+
+.. figure:: media/_server_004.png
+
+und danach den Server neu zu starten.
+
+.. figure:: media/_server_005.png
+
 Bei laufender und wie zuvor beschriebener Einrichtung der OPNsense |reg| sollte dies erfolgreich verlaufen.
 
 Wenn die Installation abgeschlossen und der Server neu gestartet ist, meldest du dich mit den zuvor angegeben Login-Daten an.
@@ -648,6 +688,8 @@ Wenn die Installation abgeschlossen und der Server neu gestartet ist, meldest du
 
    Bei einer Installation in eine VM achte vor dem Neustart darauf, dass du die ISO-Datei / DVD ausgeworfen hast und die Boot-Reihenfolge so unmgestellt hast,
    dass die VM direkt von HDD bootet.
+
+.. todo:: Time to do snapshot
 
 LVM - Besonderheiten
 --------------------
@@ -736,13 +778,10 @@ Speichere die Einstellung mit ``Strg+w`` und verlasse den Editor mit ``Strg+x``.
 
    Solltest Du beim Kopieren des Inhalts von ``var`` Fehler angezeigt bekommen, so hast du das virtuelle Dateisystem zuvor nicht ausgehangen. Gehe dann wie unter 9. vor.
 
-
-
-
 Automatische Updates abschalten
 -------------------------------
 
-Der frisch installierte Ubuntu-Server hat automatische Updates aktivieret. Das solltest du abschalten.
+Der frisch installierte Ubuntu-Server hat automatische Updates aktiviert. Das solltest du abschalten.
 
 Werde mit ``sudo -i`` root und editiere, beispielsweise mit nano, die Datei ``/etc/apt/apt.conf.d/20auto-upgrades``:
 
@@ -845,4 +884,10 @@ Solltest du diesen Vorgang manuell durchführen müssen, gehst du wie folgt vor:
    sudo sh -c 'echo "deb https://deb.linuxmuster.net/ lmn71 main" > /etc/apt/sources.list.d/lmn71.list'
    sudo apt-get update
    sudo apt-get dist-upgrade
+
+.. todo:: Verbindungscheck zur OPNsense einfügen
+   
+   ssh root@opnsense
+
+   Key akzeptieren
 
