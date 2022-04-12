@@ -6,7 +6,6 @@
    :trim:
 
 .. |...| unicode:: U+2026 .. Auslassungszeichen
-   :trim:
 
 .. |copy| unicode:: 0xA9 .. Copyright-Zeichen
    :ltrim:
@@ -40,7 +39,7 @@ Anlegen und Installieren des Servers
    Bei der Einrichtung des Servers musst du nur einen Server mit 2 HDDs haben und Ubuntu 18.04 auf der ersten HDD installieren. Die zweite HDD bleibt frei. Auf dieser 2. HDD richtest du - wie nachstehend beschrieben -  ein LVM ein.
 
 Erster Start des Servers
-------------------------
+========================
 
 Starte den Server via Ubuntu 18.04 Server ISO-Image (USB-Stick oder CD-ROM). Es erscheint das erste Installationsfenster mit der Abfrage zur gewünschten Sprache.
 
@@ -110,7 +109,7 @@ Wähle die erste Festplatte bzw. die erste Partition aus. Es wird ein Kontextmen
 
 .. figure:: media/basis_server_012_custom-storage-layout-create-partition-table2.png
 
-Wähle den gesamten Festplattenplatz und formatiere diesen mit dem ext4-Dateiformat und weise diese dem ``Mount Point /`` zu.
+Wähle den gesamten Festplattenplatz und formatiere diesen mit dem ext4-Dateiformat und weise diese dem Mount Point ``/`` zu.
 
 .. figure:: media/basis_server_013_custom-storage-layout-create-partition-table3.png
 
@@ -118,28 +117,24 @@ Gehe auf ``Erstellen``.
 
 Danach gelangst Du zu nachstehendem Bildschirm.
 
-.. .. figure:: media/basis_server_014.png
-
 .. figure:: media/basis_server_014_custom-storage-layout-create-partition-table-lvm-hdb-5.png
 
-.. todo:: Irgendwie passen die Bilder nicht zum Ablauf bzw. zur v7.0
+Für das Setup werden noch weitere Partitionen benötigt. Dafür haben wir uns für folgende Größenvorgabe entschieden. 
 
-.. todo:: Folgende Beschreibung sollte umgestellt geschrieben werden, dass Sprung über LVM Konf möglich ist
+.. hint:: Für kleine Schulen oder eine Test-Installation sollten diese Vorgaben passen. 
+   
+   ============== ========================== ========================= =====
+   LV Name        LV Pfad                    Mountpoint                Größe
+   ============== ========================== ========================= =====
+   var            /dev/sg_srv/var            /var                      10G
+   linbo          /dev/sg_srv/linbo          /srv/linbo                40G
+   global         /dev/sg_srv/global         /srv/samba/global         10G
+   default-school /dev/sg_srv/default-school /srv/samba/default-school 40G
+   ============== ========================== ========================= =====
 
-.. hint:: Solltest du unserere Standard Einteilung für das lvm nutzen wollen, dann kannst du den nächsten Abschnitt überspringen. Die Standardvorgabe ist wie folgt:
+Wenn du für deine Installation unsere Vorgaben nutzen willst, dann kannst du den nächsten Punkt überspringen. Unser Installationscript nimmt dir die nötigen vorbereitenden Aktionen ab. Für dich geht es weiter mit `Übernahme der Partitionierung`_, ansonsten hier weiter mit der |...|
 
-============== ========================== ========================= =====
-LV Name        LV Pfad                    Mountpoint                Größe
-============== ========================== ========================= =====
-var            /dev/sg_srv/var            /var                      10G
-linbo          /dev/sg_srv/linbo          /srv/linbo                40G
-global         /dev/sg_srv/global         /srv/samba/global         10G
-default-school /dev/sg_srv/default-school /srv/samba/default-school 40G
-============== ========================== ========================= =====
-
-Für kleine Schulen oder eine Test-Installation sollten diese Vorgaben passen, ansonsten:
-
-Richte nun auf der 2. HDD ein LVM ein.
+|...| Einrichtung eines LVM auf der 2. HDD nach deinen Vorgaben.
    
 Wähle den Eintrag ``Datenträgergruppe (LVM) anlegen`` aus.
 
@@ -147,7 +142,13 @@ Hier gibst du einen eigenen Namen für die LVM Volume Group an (z.B. vg0).
 
 .. figure:: media/basis_server_015_custom-storage-layout-create-partition-table-lvm-6.png
 
-Zum Abschluss werden dir die Partitionsierungseinstellungen angezeigt.
+.. hint::
+
+   Ohne LVM sind die Mount Points ``/var`` und ``/srv`` auf die 2. HDD zu legen. Die Zuordnung der Mount Points zum LVM wird später detailliert beschrieben.
+
+.. _Übernahme der Partitionierung: 
+
+Zum Abschluss werden dir die Partitionsierungseinstellungen gemäß deiner Eingaben angezeigt.
 
 .. figure:: media/basis_server_016_custom-storage-layout-create-partition-table-overview.png
 
@@ -156,10 +157,6 @@ Stimmen diese mit den gewünschten überein, so wähle ``Erledigt`` aus.
 Danach erhälst du die Rückfrage, ob die Installation fortgesetzt werden soll und die Daten auf der Festplatte gelöscht werden sollen.
 
 Bestätige dies.
-
-.. hint::
-
-   Ohne LVM sind die Mount Points ``/var`` und ``/srv`` auf die 2. HDD zu legen. Die Zuordnung der Mount Points zum LVM wird später detailliert beschrieben.
 
 .. figure:: media/basis_server_017.png
 
@@ -185,17 +182,16 @@ und danach den Server neu zu starten.
 
 Bei laufender und wie zuvor beschriebener Einrichtung der OPNsense |reg| sollte dies erfolgreich verlaufen.
 
-Wenn die Installation abgeschlossen und der Server neu gestartet ist, meldest du dich mit den zuvor angegeben Login-Daten an.
-
 .. hint::
 
-   Bei einer Installation in eine VM achte vor dem Neustart darauf, dass du die ISO-Datei / DVD ausgeworfen hast und die Boot-Reihenfolge so unmgestellt hast,
-   dass die VM direkt von HDD bootet.
+   Bei einer Installation in eine VM achte vor dem Neustart darauf, dass du die ISO-Datei / DVD ausgeworfen hast und die Boot-Reihenfolge so unmgestellt hast, dass die VM direkt von HDD bootet.
 
-.. todo:: Time to do snapshot
+Wenn die Installation abgeschlossen und der Server neu gestartet ist, meldest du dich mit den zuvor angegeben Login-Daten an.
 
-LVM - Besonderheiten
---------------------
+LVM - Einrichtung 
+-----------------
+
+Solltest du bei der Installtion unserem Partitionerungs-Vorschlag gefolgt sein, dann kannst du direkt mit `Automatische Updates abschalten`_ fortfahren.
 
 1. Hast du wie zuvor beschrieben ein LVM angelegt, gib auf der Konsole ``sudo vgscan --mknodes`` ein. Es wird dir dann die sog. ``volume group "vg0"`` angezeigt, die du während der Installation auf der 2. HDD angelegt hast.
 
@@ -325,76 +321,4 @@ cloud-init abschalten
 .. code::
 
       sudo reboot
-
-Server auf lmn7.1 vorbereiten
-=============================
-
-Nachdem du ``from scratch`` installiert hast, musst du vorab mit dem Skript ``lmn71-appliance`` den soeben installierten und vorbereiteten Ubuntu-Server vor dem ersten Setup für linuxmuster v7.1 vorbereiten.
-
-.. hint::
-   
-   Die Anpassung des Netzbereichs / des Profils ist vor Aufruf des eigentlichen Setups auszuführen.
-
-Das Skript lmn71-appliance
---------------------------
-
-Das Skript lmn71-appliance ...
-
-- bringt das Betriebssystem auf den aktuellen Stand,
-- installiert das Paket linuxmuster-prepare und
-- startet dann das Vorbereitungsskript linuxmuster-prepare,
-- das die für das jeweilige Appliance-Profil benötigten Pakete installiert,
-- das Netzwerk konfiguriert,
-- das root-Passwort auf Muster! setzt und
-- im Falle des Serverprofils LVM einrichtet.
-
-Melde dich am neu installierten Ubuntu 18.04 Server an und werde root mit ``sudo -i``.
-Führe danach folgende Befehle in der Eingabekonsole aus:
-
-.. code::
-
-   sudo sh -c 'echo "deb https://deb.linuxmuster.net/ lmn71 main" > /etc/apt/sources.list.d/lmn71.list'
-   sudo apt-get update
-   sudo apt-get dist-upgrade
-
-.. todo:: Check des Repros bei Release
-
-.. code::
-   
-   # wget https://raw.githubusercontent.com/linuxmuster/linuxmuster-prepare/master/lmn71-appliance
-   # chmod +x lmn71-appliance
-   # ./lmn71-appliance -p server -u
-
-.. hint:: 
- bei Release
-
-   
-   Hast du nicht wie zuvor beschreiben bereits ein LVM auf dem Server eingerichtet und dieses bereits gemountet, dann gibst du zur Installation    
-   folgendes an: ``./lmn71-appliance -p server -l /dev/sdb`` aus. Hierbei wird auf dem angegebenen Device (hier also 2. Festplatte) ein LVM eingerichtet.
-
-
-Für weitere Hinweise zum linuxmuster-prepare Skript siehe: https://github.com/linuxmuster/linuxmuster-prepare
-
-.. todo:: Überprüfen ob der nächste momentan kommentierte Absatz raus kann. siehe auch https://ask.linuxmuster.net/t/lmn-7-1-linuxmuster-prepare-webui-laeuft-nicht/8655/13?u=machtdochnix
-
-.. Fahre den Server herunter und erstelle einen Snapshot in der Virtualisierungsumgebung. Starte danach den server wieder und führe dann das Setup für die lmn v7.1 aus.
-
-
-Paketquellen lmn71
-------------------
-
-Die Paketquellen, die für die lmn71 eingebunden werden müssen, werden von o.g. Skript lmn71-applicance bereits korrekt eingetragen.
-Es wurden somit in den Paketquellen die ``linuxmuster.net sources`` eingetragen und der Schlüssel des Paketserver importiert.
-
-Solltest du diesen Vorgang manuell durchführen müssen, gehst du wie folgt vor:
-
-* Zunächst wirst du wieder root mit ``sudo -i``.
-* Dann lädst du den key für das repository für lmn71 mit ``wget -qO - "https://deb.linuxmuster.net/pub.gpg" | sudo apt-key add -`` herunter.
-* Jetzt fügst du das linuxmuster 7.1 repository hinzu und aktualisierst: 
-
-.. todo:: Verbindungscheck zur OPNsense einfügen
-   
-   ssh root@opnsense
-
-   Key akzeptieren
 
