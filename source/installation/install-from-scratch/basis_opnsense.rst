@@ -342,8 +342,6 @@ Aktualisiere die OPNsense |reg| in der Konsole, indem du den Punkt ``12) Update 
 
 Klappt das Update, startest du die OPNsense neu. Dazu beantwortest du die Nachfrage mit ``y``.
 
-.. todo:: Weiter hier: Benennung der Medien-Files und der Bearbeitung der weiteren Beschreibung
-
 Konfiguration der OPNsense |reg|
 --------------------------------
 
