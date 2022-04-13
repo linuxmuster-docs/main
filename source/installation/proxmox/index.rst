@@ -511,11 +511,59 @@ Vorbereiten des ISO-Speichers
 Um die v7.1 zu installieren, müssen zwei virtuelle Maschinen angelegt werden. OPNSense und Ubuntu Server 18.04 LTS werden in die VMs installiert.
 Dazu ist es erforderlich, dass du die ISO-Images für OPNSense und Ubuntu Server 18.04 LTS auf den Proxmox-Hypervisor in den Datenspeicher für ISO-Images lädst.
 
+.. figure:: media/proxmox-download-iso-01.png
+   :align: center
+   :alt: Proxmox ISO Images
+
+Gehe dazu auf ``Datacenter`` --> ``<proxmox-host>`` --> ``Datenspeicher (z.B. local oder zfsfile)`` --> ``ISO Images`` --> ``Download from URL``
+
+Ubuntu Server
+-------------
+
+In dem nun geöffneten Fenster trägst du die URL
+
+.. code::
+   
+   https://releases.ubuntu.com/bionic/ubuntu-18.04.6-live-server-amd64.iso
+
+ein (copy&paste)t, betätigst dann den Buttom ``Query URL``.
+
+.. figure:: media/proxmox-iso-download-ubuntu_01.png
+   :align: center
+   :alt: Proxmox ISO Images
+
+Wenn die Abfrage der URL positiv war, sollten sich die Felder ausgefüllt haben.
+
+Zum Überprüfen der Datei-Integrität aktiviere ``Verify certificates``.
+
+Wähle wie dargestellt: ``SHA-256`` und trage die Checksumme ein
+
+.. code:: 
+  
+  6c647b1ab4318e8c560d5748f908e108be654bad1e165f7cf4f3c1fc43995934
+
+Das Herunterladen des ISOs beginnt mit ``Download``.
+
+.. figure:: media/proxmox-iso-download-ubuntu_02.png
+   :align: center
+   :alt: Proxmox ISO Images
+
+Zum Abschluß erfolgt die Überprüfung der Checksumme, die mit ``OK, checksum verified`` enden muss.
+
+.. figure:: media/proxmox-iso-download-ubuntu_03.png
+   :align: center
+   :alt: Proxmox ISO Images
+
+Nach dem Schließen des Fenstern,
+
+.. figure:: media/proxmox-iso-download-ubuntu_04.png
+   :align: center
+   :alt: Proxmox ISO Images
+
+befindet sich das heruntergeladene Ubuntu-ISO nun in dem ``ISO Images`` und steht dir für die weitere Verwendung zur Verfügung.
 
 OPNsense
 --------
-
-Gehe dazu auf ``Datacenter --> <proxmox-host> --> Datenspeicher (z.B. local oder zfsfile)``
 
 Im Kontextmenü klickst du auf ``ISO Images`` und dann auf ``Download from URL``.
 
@@ -562,38 +610,6 @@ Klicke auf ``ISO Images --> Upload`` und wähle die entpackte ISO-Datei für OPN
 .. figure:: media/proxmox-upload-iso-images-02.png
    :align: center
    :alt: ISO Image OPNsense
-
-
-Ubuntu Server
--------------
-
-Lade nun Ubuntu Server auf den ISO-Datenspeicher von Proxmox.
-
-Lade dazu zuerst die ISO-Datei für Ubuntu Server 18.04.6 LTS lokal auf deinen PC/Laptop:
-
-.. code::
-   
-   wget https://releases.ubuntu.com/bionic/ubuntu-18.04.6-live-server-amd64.iso
-
-Nach dem Download überprüfst du die SHA256-Prüfsumme:
-
-.. code:: 
-
-   sha256sum ubuntu-18.04.6-live-server-amd64.iso
-
-Es muss folgende SHA256-Prüfsumme errechnet werden:
-
-.. code::
-
-  6c647b1ab4318e8c560d5748f908e108be654bad1e165f7cf4f3c1fc43995934
-
-Stimmen diese überein, lädst du nun die ISO-Datei für Ubuntu Server auf den ISO-Datenspeicher von Proxmox.
-
-Rufe wie oben das Fenster auf und gebe die ISO-Datei für Ubuntu Server 18.04.6 LTS ein:
-
-.. figure:: media/proxmox-upload-iso-images-03.png
-   :align: center
-   :alt: ISO Image Ubuntu Server
 
 Sind beide ISO Images auf den ISO-Speicher in Proxmox verfügbar, richtest du nun die VMs ein.
 
@@ -822,13 +838,4 @@ Dies führst du für die OPNsense VM und für die Ubuntu Server VM durch.
 Nach abgeschlossender Installation musst du daran denken, die CD wieder auszuwerfen und in den VMs die Boot_Reihenfolge wieder so zuändern, dass zuerst von Festplatte gebootet wird.
 
 Installiere nun gemäß der Anleitung: :ref:`install-from-scratch-label`
-
-
-
-
-
-
-
-
-
 
