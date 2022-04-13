@@ -161,7 +161,7 @@ Setze die Berechtigungen nun mit folgendem Befehl als Benutzer ``root``:
 
   chmod 600 /var/log/linuxmuster/setup.*.log 
 
-Lasse dir den Inhalt des Verzeichnisses danach ausgeben und kontrollieren, ob Besitzer und Gruppe root sind und diese lesen und schreiben dürfen. 
+Lasse dir den Inhalt des Verzeichnisses danach ausgeben und kontrollieren, ob Besitzer und Gruppe root sind und der Benutzer root lesen und schreiben darf. 
 
 .. code::
 
