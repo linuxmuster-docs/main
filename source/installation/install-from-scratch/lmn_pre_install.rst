@@ -54,7 +54,7 @@ Die erste Zeile fügt das linuxmuster 7.1 Repository hinzu. Die nächsten beiden
    
    sudo apt install linuxmuster-prepare
 
-Lädt das Skript lmn71-appliance auf den Server, das |...|
+Lädt das Skript lmn71-prepare auf den Server, dass |...|
 
    - die benötigten linuxmuster-Pakete und die von ihnen benötigten anderen Pakete installiert,
    - das Betriebssystem des Servers nochmals auf den aktuellen Stand bringt,
@@ -88,6 +88,6 @@ Nach dem das Skript abgearbeitet ist, es dauert schon eine Weile, steht dem Setu
 Installation mit deinem vorbereiteten LVM
 
 Hast du nicht wie zuvor beschreiben bereits ein LVM auf dem Server eingerichtet und dieses bereits gemountet, dann gibst du zur Installation    
-   folgendes an: ``./lmn71-appliance -p server -l /dev/sdb`` aus. Hierbei wird auf dem angegebenen Device (hier also 2. Festplatte) ein LVM eingerichtet.
+   folgendes an: ``./lmn71-prepare -p server -l /dev/sdb`` aus. Hierbei wird auf dem angegebenen Device (hier also 2. Festplatte) ein LVM eingerichtet.
 
 Für weitere Hinweise zum linuxmuster-prepare Skript siehe: https://github.com/linuxmuster/linuxmuster-prepare
