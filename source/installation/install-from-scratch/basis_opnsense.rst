@@ -493,7 +493,7 @@ Nach dem Neustart ist die OPNsense |reg| soweit vorbereitet.
    Installierst du die OPNsense |reg| in einer VM, so solltest du nun noch die Tools der gewählten Virtualisierungsumgebung installieren, damit die VM komfortabel gesteuert werden kann.
    Für XCP-ng findest du nachstehend die Hinweise: https://xcp-ng.org/docs/guides.html#pfsense-opnsense-vm
 
-.. todo:: Time do snapshot
+.. todo:: Bei Release nachfolgende Zeilen 497-879 (auskommentiert) löschen. Altlast Sicherheitshalber noch vorhalten.
 
 .. 
 
