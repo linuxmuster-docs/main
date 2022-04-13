@@ -290,7 +290,12 @@ Werde mit ``sudo -i`` root und editiere, beispielsweise mit nano, die Datei ``/e
 
 Ersetze bei ``APT::Periodic::Unattended-Upgrade`` die ``"1";`` durch ``"0";``. Mit ``<Strg>+o`` speicherst du die Änderung ab. Und mit ``<Strg>+x`` verlässt du nano wieder.
 
-Jetzt kannst du den Server mit ``apt-get update`` und anschließendem ``apt-get dist-upgrade`` updaten. 
+Jetzt kannst du den Server mit ``apt-get update`` und anschließendem ``apt-get dist-upgrade`` updaten.
+
+
+.. hint::
+
+   Es kann passieren, das sonst durch ein Update zur Unzeit unvorgesehene Probleme auftreten.
 
 cloud-init abschalten
 ---------------------
@@ -312,7 +317,6 @@ cloud-init abschalten
 
 .. code::
 
-      sudo dpkg-reconfigure cloud-init
       sudo apt-get purge cloud-init
       sudo rm -rf /etc/cloud/ && sudo rm -rf /var/lib/cloud/
 
