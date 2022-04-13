@@ -83,6 +83,8 @@ Installation mit unseren Standardvorgaben
 Nach dem das Skript abgearbeitet ist, es dauert schon eine Weile, steht dem Setup nicht mehr im Wege:
 :ref:`setup-label`
 
+.. todo:: Nächstes Kapitel: Anpassung der Netze! LVM weiter unten: verwirrt.
+
 .. todo:: Ab hier ???? Anfrage bei den Entwicklern läuft ob das überhaupt möglich ist.
 
 Installation mit deinem vorbereiteten LVM
