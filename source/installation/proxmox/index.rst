@@ -1,3 +1,19 @@
+.. |zB| unicode:: z. U+00A0 B. .. Zum Beispiel 
+  
+.. |ua| unicode:: u. U+00A0 a. .. und andere
+
+.. |_| unicode:: U+202F .. geschütztes Leerzeichen
+   :trim:
+
+.. |...| unicode:: U+2026 .. Auslassungszeichen
+   :trim:
+
+.. |copy| unicode:: 0xA9 .. Copyright-Zeichen
+   :ltrim:
+
+.. |reg| unicode:: U+00AE .. Trademark
+   :ltrim:
+
 .. include:: /guided-inst.subst
 
 .. _install-on-proxmox-label:
@@ -511,91 +527,142 @@ Vorbereiten des ISO-Speichers
 Um die v7.1 zu installieren, müssen zwei virtuelle Maschinen angelegt werden. OPNSense und Ubuntu Server 18.04 LTS werden in die VMs installiert.
 Dazu ist es erforderlich, dass du die ISO-Images für OPNSense und Ubuntu Server 18.04 LTS auf den Proxmox-Hypervisor in den Datenspeicher für ISO-Images lädst.
 
-
-OPNsense
---------
-
-Gehe dazu auf ``Datacenter --> <proxmox-host> --> Datenspeicher (z.B. local oder zfsfile)``
-
-Im Kontextmenü klickst du auf ``ISO Images`` und dann auf ``Download from URL``.
-
-.. figure:: media/proxmox-upload-iso-images-01.png
+.. figure:: media/proxmox-download-iso_01.png
    :align: center
-   :alt: Proxmox ISO Images
+   :alt: Proxmox way to folder ISO Images
 
-Es erscheint ein Fenster, in dem du die URL zum Download der jeweiligen ISO-Datei eintragen musst. 
-
-.. hint::
-
-  Der Download funktioniert aber nur für ISO-Dateien. OPNsense bietet das ISO-Image allerdings im bz2 Format in komprimierter Form an. 
-
-Lade daher die Datei zunächst auf deinen PC/Laptop herunter, entpacke die Datei und lade diese ann auf den ISO-Datenspeicher von Proxmox hoch.
-
-Lade ``OPNSense`` herunter und entpacke die Datei: 
-
-.. code::
-
-  wget https://mirror.informatik.hs-fulda.de/opnsense/releases/21.7/OPNsense-21.7.1-OpenSSL-dvd-amd64.iso.bz2
-
-Als Prüfsumme kannst du zur Überprüfung nach dem Download folgenden Befehl nutzen:
-
-.. code:: 
-
-   sha256sum OPNsense-21.7.1-OpenSSL-dvd-amd64.iso.bz2
-
-Es muss folgende SHA256-Prüfsumme errechnet werden:
-
-.. code::
-
-  d9062d76a944792577d32cdb35dd9eb9cec3d3ed756e3cfaa0bf25506c72a67b
-
-Stimmen diese überein, entpackst du die bz2 Datei mit folgendem Befehl:
-
-.. code::
-
-   tar xfvj OPNsense-21.7.1-OpenSSL-dvd-amd64.iso.bz2
-
-Lade die entpackte OPNsense ISO-Datei nun auf den Proxmiox ISO-Datenspeicher.
-
-Klicke auf ``ISO Images --> Upload`` und wähle die entpackte ISO-Datei für OPNsense aus.
-
-.. figure:: media/proxmox-upload-iso-images-02.png
-   :align: center
-   :alt: ISO Image OPNsense
-
+Gehe dazu auf ``Datacenter`` --> ``<proxmox-host>`` --> ``Datenspeicher (z.B. local oder zfsfile)`` --> ``ISO Images`` --> ``Download from URL``
 
 Ubuntu Server
 -------------
 
-Lade nun Ubuntu Server auf den ISO-Datenspeicher von Proxmox.
-
-Lade dazu zuerst die ISO-Datei für Ubuntu Server 18.04.6 LTS lokal auf deinen PC/Laptop:
+In dem nun geöffneten Fenster trägst du die URL
 
 .. code::
    
-   wget https://releases.ubuntu.com/bionic/ubuntu-18.04.6-live-server-amd64.iso
+   https://releases.ubuntu.com/bionic/ubuntu-18.04.6-live-server-amd64.iso
 
-Nach dem Download überprüfst du die SHA256-Prüfsumme:
+ein (copy&paste), anschleißend betätigst dann den Buttom ``Query URL``.
+
+.. figure:: media/proxmox-iso-download-ubuntu_01.png
+   :align: center
+   :alt: Proxmox Download from URL
+
+Wenn die Abfrage der URL positiv war, sollten sich die Felder ausgefüllt haben.
+
+Zum Überprüfen der Datei-Integrität aktiviere ``Verify certificates``.
+
+Wähle wie dargestellt: ``SHA-256`` und trage die Checksumme ein
 
 .. code:: 
+  
+  6c647b1ab4318e8c560d5748f908e108be654bad1e165f7cf4f3c1fc43995934
 
-   sha256sum ubuntu-18.04.6-live-server-amd64.iso
+Das Herunterladen des ISOs beginnt mit ``Download``.
 
-Es muss folgende SHA256-Prüfsumme errechnet werden:
+.. figure:: media/proxmox-iso-download-ubuntu_02.png
+   :align: center
+   :alt: Proxmox download status
+
+Zum Abschluß erfolgt die Überprüfung der Checksumme, die mit ``OK, checksum verified`` enden muss.
+
+.. figure:: media/proxmox-iso-download-ubuntu_03.png
+   :align: center
+   :alt: Proxmox ISO Images verified
+
+Nach dem Schließen des Fensters,
+
+.. figure:: media/proxmox-iso-download-ubuntu_04.png
+   :align: center
+   :alt: Proxmox ISO Images folfer view
+
+befindet sich das heruntergeladene Ubuntu-ISO nun in dem ``ISO Images`` und steht dir für die weitere Verwendung zur Verfügung.
+
+OPNsense
+--------
+
+Die zuvor gezeigte Möglichkeit des einfachen Importes mittels den Bordmitteln von PROXMOX steht dir vür die OPNSense |reg| leider nicht zur Verfügung da nur der Download eines bz2-Dateien möglich ist. Dir steht der Weg des Downloads auf einen lokalen PCs, der Umwandlung des bz2-File in eine iso-Datei und dann der Upload über den dir im Abschnitt Ubuntu frei. Dabei wählst du dann nicht ``URL`` sondern ``Upload``.
+
+Um dir den Upload zu ersparen, beschreiben wir hier den Weg um die benötigten Dateinen direkt in deine Proxmox-Maschine zu bringen:
+
+Als erstes startest du die Konsole ``xterm.js`` wie dargestellt
+
+.. figure:: media/proxmox-shell-xterm_01_start.png
+   :align: center
+   :alt: Proxmox open xterm shell
+
+Mit ihr hast du jetzt die Möglichkeit mit Copy&Paste die folgenden bash-Zeilen direkt zu übernehmen.
+
+.. figure:: media/proxmox-shell-xterm_02_open_shell.png
+   :align: center
+   :alt: Proxmox xterm shell
+
+Als erstes musst du in das Verzeichnis wechseln, wo PROMOX die ISO-Dateien sucht. Dazu kopierst du diesteZeile in das gezeigte Fenster. 
 
 .. code::
 
-  6c647b1ab4318e8c560d5748f908e108be654bad1e165f7cf4f3c1fc43995934
+   cd /var/lib/vz/template/iso
 
-Stimmen diese überein, lädst du nun die ISO-Datei für Ubuntu Server auf den ISO-Datenspeicher von Proxmox.
+Mit ``[Enter]`` wechselt du dann in das Verzeichnis.
 
-Rufe wie oben das Fenster auf und gebe die ISO-Datei für Ubuntu Server 18.04.6 LTS ein:
+Dann musst du die folgenden vier Dateien herunterladen:
+   
+Prüfsummendatei (<filename>.sha256)
 
-.. figure:: media/proxmox-upload-iso-images-03.png
+.. code::
+
+   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/22.1/OPNsense-22.1.2-OpenSSL-checksums-amd64.sha256
+
+Signatur Datei (<filename>.sig)
+	
+.. code:: 
+
+   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/22.1/OPNsense-22.1.2-OpenSSL-dvd-amd64.iso.bz2.sig
+
+Der öffentliche Schlüssel von OPNSense |reg| (<filename>.pub)
+
+.. code::
+
+   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/22.1/OPNsense-22.1.pub
+
+Die komprimierte ISO Datei (<filename>.iso.bz2)
+
+.. code::
+
+   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/22.1/OPNsense-22.1.2-OpenSSL-dvd-amd64.iso.bz2
+
+Überprüfen der heruntergeladenen Dateien auf Integratität:
+
+.. code::
+   
+   openssl base64 -d -in OPNsense-22.1.2-OpenSSL-dvd-amd64.iso.bz2.sig -out /tmp/image.sig
+
+
+.. code::
+
+   openssl dgst -sha256 -verify OPNsense-22.1.pub -signature /tmp/image.sig OPNsense-22.1.2-OpenSSL-dvd-amd64.iso.bz2
+
+Der letzte Befehl sollte dir ein ``Verified OK`` liefern.
+
+Nun gilt es die ISO-Datei auszupacken. Das machst du mit folgendem Befehl:
+
+.. code::
+
+   bunzip2 OPNsense-22.1.2-OpenSSL-dvd-amd64.iso.bz2
+
+Das Entpacken kann einige Zeit in Anspruch nehmen. Anschließend sollte sich in dem Verzeichnis die OPNSense-ISO-Datei befinden. Die daneben befindlichen anderen OPNsense-Datei kansst du nun wieder löschen.
+
+.. code::
+
+   rm OPNsense*.sha256 OPNsense*.pub OPNsense*.sig
+
+Somit hast du nun alle nötigen ISO-Dateien für die weitere Installation zusammen.
+
+.. figure:: media/proxmox-download-iso_02.png
    :align: center
-   :alt: ISO Image Ubuntu Server
+   :alt: Proxmox ISO Images folder view
 
-Sind beide ISO Images auf den ISO-Speicher in Proxmox verfügbar, richtest du nun die VMs ein.
+Es sind  beide ISO Images auf den ISO-Speicher in Proxmox verfügbar, du richtest nun die VMs ein.
 
 Vorbereiten der Virtuellen Maschinen
 ====================================
@@ -819,16 +886,8 @@ nachher:
 
 Dies führst du für die OPNsense VM und für die Ubuntu Server VM durch.
 
-Nach abgeschlossender Installation musst du daran denken, die CD wieder auszuwerfen und in den VMs die Boot_Reihenfolge wieder so zuändern, dass zuerst von Festplatte gebootet wird.
+.. hint:: 
+   
+   Nach abgeschlossender Installation musst du daran denken, die CD wieder auszuwerfen und in den VMs die Boot_Reihenfolge wieder so zu ändern, dass zuerst von Festplatte gebootet wird.
 
 Installiere nun gemäß der Anleitung: :ref:`install-from-scratch-label`
-
-
-
-
-
-
-
-
-
-

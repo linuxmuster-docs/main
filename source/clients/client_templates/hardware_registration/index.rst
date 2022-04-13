@@ -230,7 +230,7 @@ Klicke unterhalb der Liste auf den Button ``+ Gerät hinzufügen``, um ein neues
 In der neuen Zeile gibst du nun folgenes an:
 
 1. Raum: Name des Raums (Achtung: keine Binde- und Unterstriche verwenden, keine Umlaute,  max. 10 Zeichen)
-2. Hostname: Name des Geräts (Erlaubte Zeichen ``[a-z]`` ``[A-Z]`` ``[0-9]`` ``[-]``; Achtung: Keine Unterstriche verwenden; max. 15 Zeichen)
+2. Hostname: Name des Geräts (Erlaubte Zeichen ``a-z`` ``A-Z`` ``0-9`` ``-``; Achtung: Keine Unterstriche verwenden; max. 15 Zeichen)
 3. Gruppe: Bezeichnung der Linbo-Hardwareklasse. ``Gleiche Bezeichnungen für Raum und Gruppe sind unzulässig``. Reservierte Wörter, wie "con" und "man", dürfen nicht verwendet werden.
 4. MAC: Media Access Control - Hardware-Adresse des Netzwerkadapters. Trage 12 Hexadezimalzahlen mit einem Doppelpunkt als Trennzeichen nach zwei Ziffern ein.
 5. IP: Gebe eine IP-Adresse für das Gerät an, das diesem automatisch zugewiesen werden soll. Z.B. Raum 202 im Gebäude G erhält den Bereich 10.0.202.x/16 und PC01 erhält die UP 10.0.202.1
