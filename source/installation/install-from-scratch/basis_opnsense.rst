@@ -141,17 +141,29 @@ Zum Abschluss der Konfiguration musst du das Kennwort für den Benutzer ``root``
 
 .. figure:: media/basis_opnsense_009.png
    :align: center
-   :alt: OPNsense: Final Configuration
+   :alt: OPNsense: Root Password
 
 .. attention:: 
 
    An dieser Stelle muss als root-Passwort ``Muster!`` eingegeben werden, da später der lmn-Server beim Einrichten der Firewall davon ausgeht, dass das root-Passwort ``Muster!`` ist!
 
-Bestätige dieses Kennwort.
+Gebe das neue Passwort für root ein.
 
-.. figure:: media/basis_opnsense_010.png
+.. figure:: media/basis_opnsense_010_a.png
    :align: center
-   :alt: OPNsense: Final Configuration
+   :alt: OPNsense: Type new root password
+
+Gebe dieses Kennwort erneut ein.
+
+.. figure:: media/basis_opnsense_010_b.png
+   :align: center
+   :alt: OPNsense: Retype new root password
+
+Setze es mit ``OK``
+
+.. figure:: media/basis_opnsense_010_c.png
+   :align: center
+   :alt: OPNsense: Type new root password
 
 Wähle danach die Option ``Exit Apply configuration and exit installer`` aus.
 
