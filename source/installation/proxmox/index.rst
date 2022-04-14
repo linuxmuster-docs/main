@@ -888,6 +888,8 @@ Dies führst du für die OPNsense VM und für die Ubuntu Server VM durch.
 
 .. hint:: 
    
-   Nach abgeschlossender Installation musst du daran denken, die CD wieder auszuwerfen und in den VMs die Boot_Reihenfolge wieder so zu ändern, dass zuerst von Festplatte gebootet wird.
+   Nach abgeschlossender Installation musst du daran denken, die CD wieder auszuwerfen und in den VMs die Boot-Reihenfolge wieder so zu ändern, dass zuerst von Festplatte gebootet wird.
+
+######
 
 Installiere nun gemäß der Anleitung: :ref:`install-from-scratch-label`
