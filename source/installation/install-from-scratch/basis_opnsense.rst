@@ -103,7 +103,7 @@ Teste danach das Tastaturlayout:
 
 Bei der deutschen Tastatur werden die Umlaute im Test noch nicht korrekt wiedergegeben.
 
-Wähle nun die eingestellte deutsche Tastatur aus:
+Wähle trotzdem die eingestellte deutsche Tastatur aus:
 
 .. figure:: media/basis_opnsense_004.png
    :align: center
