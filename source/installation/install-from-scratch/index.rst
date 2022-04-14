@@ -38,14 +38,17 @@ einsatzbereite Umgebung bestehend aus
 * einer Firewall (OPNsense |reg| für linuxmuster.net),
 * und einem Server (linuxmuster.net).
 
-Im Laufe der Installation brauchst du einen Admin-PC. Das kann ein normaler Laptop mit Linux oder Windows als Betriebssystem sein. 
+Im Laufe der Installation brauchst du einen Admin-PC. Das kann ein einfacher Laptop mit einem beliebigen Betriebssystem sein.  
 
 **Vorgehensweise**
 
-* Zunächst installieren wir die Firewall OPNsense |reg|.
-* Dann integrieren wir den Admin-PC in das Schulnetz.
-* Jetzt konfigurieren wir die OPNsense |reg| über das Webinterface.
-* Schließlich installieren wir den Ubuntu-Server und richten linuxmuster.net ein.
+* Zunächst installierst du die Firewall OPNsense |reg|.
+* Gefolgt von der Installation des Ubuntu-Servers.
+* Schließlich richtest du linuxmuster.net ein.
+
+.. todo::
+
+   Bei Release nachfolgende Zeilen 62-911 (auskommentiert) löschen. Altlast Sicherheitshalber noch vorgehalten.
 
 .. toctree::
   :maxdepth: 1
