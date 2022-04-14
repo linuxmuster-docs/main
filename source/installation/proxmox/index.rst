@@ -771,7 +771,7 @@ Die eigentliche Installation von OPNsense in der VM folgt später.
 Anlegen der VM für linuxmuster server
 -------------------------------------
 
-Um für die den linuxmuster.net Server v7.1 eine VM anzulegen, wählst du in der Proxmox - Verwaltungsoberfläche den Button ``Create VM``.
+Um für den linuxmuster.net Server v7.1 die VM anzulegen, wählst du erneut in der Proxmox - Verwaltungsoberfläche den Button ``Create VM``.
 
 .. figure:: media/proxmox-create-vm.png
    :align: center
