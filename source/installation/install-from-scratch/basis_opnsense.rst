@@ -59,6 +59,7 @@ Brenne die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren U
 .. hint:: 
 
    Willst du in einer VM installieren, so musst du für die neue VM folgende Mindesteinstellungen angeben:
+   
    - template - other install media, installation from ISO library,
    - Boot-Mode - UEFI (Achtung: xcp-ng: Boot/MBR),
    - 1 vCPU
