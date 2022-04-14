@@ -76,7 +76,7 @@ Brenne die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren U
 Erster Start der Firewall
 -------------------------
 
-Starte dann OPNsense |reg| auf dem Rechner oder in der neu angelegten VM von DVD oder dem erstellten USB-Stick. Je nach Virtualisierungsumgebung hast du ggf. die ISO-Datei bereits auf den ISO-Datenspeicher des Hypervisors abgelegt. Boote dann die VM hierüber.
+Starte dann OPNsense |reg| auf dem Rechner oder in der neu angelegten VM von deinem Installationsmedium. Je nach Virtualisierungsumgebung hast du ggf. die ISO-Datei bereits auf den ISO-Datenspeicher des Hypervisors abgelegt. Boote dann die VM hierüber.
 
 Am Ende des Boot-Vorgangs der OPNsense® gelangst du zu folgendem Bildschirm:
 
