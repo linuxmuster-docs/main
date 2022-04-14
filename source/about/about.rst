@@ -191,7 +191,7 @@ Da sich alle Steuerungsfunktionen in unserer Lösung an den Benutzern orientiere
 Firewall
 ++++++++
 
-:OPNSense |reg|: wird als Standard-Firewall ausgeliefert.
+OPNsense |reg|: wird als Standard-Firewall ausgeliefert.
 
    .. image::    media/structure_of_version_7_firewall.svg
       :name:     structure-firewall

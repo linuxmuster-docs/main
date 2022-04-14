@@ -371,5 +371,5 @@ nun deinen Wünschen tatsächlich entsprechen.
 
    Dieses Vorgehen musst du für die optionalen Server `docker` und `opsi` wiederholen, wenn du auch deren Festplattengröße verändert hast!
 
-Im Folgenden wirst du die Festplatten der OPNSense® anpassen.
+Im Folgenden wirst du die Festplatten der OPNsense® anpassen.
 

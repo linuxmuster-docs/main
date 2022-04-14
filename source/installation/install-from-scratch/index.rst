@@ -67,7 +67,7 @@ Im Laufe der Installation brauchst du einen Admin-PC. Das kann ein einfacher Lap
   Installation der OPNsense |reg|
   -------------------------------
 
-  Lade dir die ISO-Datei der OPNSense® von der Seite https://opnsense.org/download/ herunter.
+  Lade dir die ISO-Datei der OPNsense® von der Seite https://opnsense.org/download/ herunter.
     
   .. hint::
 
@@ -114,11 +114,11 @@ Im Laufe der Installation brauchst du einen Admin-PC. Das kann ein einfacher Lap
     
   Starte dann OPNsense |reg| auf dem Rechner oder in der neu angelegten VM von DVD oder dem erstellten USB-Stick. Je nach Virtualisierungsumgebung hast du ggf. die ISO-Datei bereits auf den ISO-Datenspeicher des Hypervisors abgelegt. Boote dann die VM hierüber.
   
-  Am Ende des Boot-Vorgangs der OPNSense® gelangst du zu folgendem Bildschirm:
+  Am Ende des Boot-Vorgangs der OPNsense® gelangst du zu folgendem Bildschirm:
   
   .. figure:: media/OPNS10.png
      :align: center
-     :alt: OPNSense: First boot
+     :alt: OPNsense: First boot
   
   Melde dich als Benutzer ``installer`` mit dem Passwort ``opnsense`` an.
   
@@ -126,7 +126,7 @@ Im Laufe der Installation brauchst du einen Admin-PC. Das kann ein einfacher Lap
   
   .. figure:: media/OPNS11.png
      :align: center
-     :alt: OPNSense: Installer keymap
+     :alt: OPNsense: Installer keymap
   
   Standardmäßig ist ein amerikanisches Tastaturlayout voreingestellt.
   Gehe mit den Pfeiltasten auf den Eintrag ``( ) German (no accent keys)``. Wählen diesen mit ``<Select>`` aus.
@@ -135,7 +135,7 @@ Im Laufe der Installation brauchst du einen Admin-PC. Das kann ein einfacher Lap
   
   .. figure:: media/OPNS12.png
      :align: center
-     :alt: OPNSense: Test keymap
+     :alt: OPNsense: Test keymap
   
   Bei der deutschen Tastatur werden die Umlaute im Test noch nicht korrekt wiedergegeben.
   
@@ -143,7 +143,7 @@ Im Laufe der Installation brauchst du einen Admin-PC. Das kann ein einfacher Lap
   
   .. figure:: media/OPNS13.png
      :align: center
-     :alt: OPNSense: continue with keymap
+     :alt: OPNsense: continue with keymap
   
   Wähle ``<Select>``.
   
@@ -151,7 +151,7 @@ Im Laufe der Installation brauchst du einen Admin-PC. Das kann ein einfacher Lap
   
   .. figure:: media/OPNS14.png
      :align: center
-     :alt: OPNSense: Install (UFS)
+     :alt: OPNsense: Install (UFS)
   
   Bestätige die Festplatte und wähle ``Install (UFS) UFS GPR/UEFI Hybrid``. 
   
@@ -159,25 +159,25 @@ Im Laufe der Installation brauchst du einen Admin-PC. Das kann ein einfacher Lap
   
   .. figure:: media/OPNS15.png
      :align: center
-     :alt: OPNSense: UFS Configuration
+     :alt: OPNsense: UFS Configuration
   
   Bestätige diesen Vorgang:
   
   .. figure:: media/OPNS16.png
      :align: center
-     :alt: OPNSense: UFS Configuration 2
+     :alt: OPNsense: UFS Configuration 2
   
   Warte nun, bis die Installation abgeschlossen ist.
   
   .. figure:: media/OPNS16a.png
      :align: center
-     :alt: OPNSense: UFS Configuration 2
+     :alt: OPNsense: UFS Configuration 2
   
   Zum Abschluss der Konfiguration musst du das Kennwort für den Benutzer ``root`` neu setzen.
   
   .. figure:: media/OPNS16b.png
      :align: center
-     :alt: OPNSense: Final Configuration
+     :alt: OPNsense: Final Configuration
   
   .. attention:: 
   
@@ -187,7 +187,7 @@ Im Laufe der Installation brauchst du einen Admin-PC. Das kann ein einfacher Lap
   
   .. figure:: media/OPNS16c.png
      :align: center
-     :alt: OPNSense: Final Configuration
+     :alt: OPNsense: Final Configuration
   
   Wähle danach die Option ``Exit Apply configuration and exit installer`` aus.
   
@@ -201,7 +201,7 @@ Im Laufe der Installation brauchst du einen Admin-PC. Das kann ein einfacher Lap
   
   .. figure:: media/OPNS16d.png
      :align: center
-     :alt: OPNSense: Final Configuration
+     :alt: OPNsense: Final Configuration
   
   .. hint::
   
@@ -280,87 +280,87 @@ Im Laufe der Installation brauchst du einen Admin-PC. Das kann ein einfacher Lap
   
   .. figure:: media/OPNS16d1a.png
      :align: center
-     :alt: OPNSense: GUI - Set interfaces IP address 
+     :alt: OPNsense: GUI - Set interfaces IP address 
   
   Wähle an der Konsole der OPNsense |reg| den Eintrag ``2) Set interface IP address`` aus.
   
   .. figure:: media/OPNS16d1b.png
      :align: center
-     :alt: OPNSense: GUI - LAN auswählen
+     :alt: OPNsense: GUI - LAN auswählen
   
   Wähle ``1 - LAN (`` |...| ``)`` für die nächsten Schritte.
   
   .. figure:: media/OPNS16d2.png
      :align: center
-     :alt: OPNSense: GUI - Nicht via DHCP zuweisen lassen
+     :alt: OPNsense: GUI - Nicht via DHCP zuweisen lassen
   
   Bestätige die Nachfrage mit ``N`` und ``ENTER``. (Alternativ wäre auch nur ``ENTER`` möglich, da der großgeschriebene Buchstabe in der Auswahlmöglichkeit darauf hinweist, was die default Einstellung ist.)
   
    .. figure:: media/OPNS16d3.png
      :align: center
-     :alt: OPNSense: GUI - Eingabe der IP
+     :alt: OPNsense: GUI - Eingabe der IP
   
   Gib die IPv4 Adresse ``10.0.0.254`` ein, unter der die OPNsense |reg| im lokalen Netz zu erreichen sein wird.
   
   .. figure:: media/OPNS16d4.png
      :align: center
-     :alt: OPNSense: GUI - Eingabe der Netzwerkmaske in CIDR
+     :alt: OPNsense: GUI - Eingabe der Netzwerkmaske in CIDR
   
   Gib ``16`` für die Netzwerkmaske ein
   
   .. figure:: media/OPNS16d5.png
      :align: center
-     :alt: OPNSense: GUI - Keine Eingabe nötig, also Enter
+     :alt: OPNsense: GUI - Keine Eingabe nötig, also Enter
   
   Da keine Eingabe eines Upstream-Gateways nötig ist, einfach ``ENTER``
   
   .. figure:: media/OPNS16d6.png
      :align: center
-     :alt: OPNSense: GUI - keine IPv6 via WAN tracking nötig
+     :alt: OPNsense: GUI - keine IPv6 via WAN tracking nötig
   
   .. attention:: Gib ein ``n`` ein.
   
   .. figure:: media/OPNS16d7.png
      :align: center
-     :alt: OPNSense: GUI - keine IPv6 Adresse via DHCP6 
+     :alt: OPNsense: GUI - keine IPv6 Adresse via DHCP6 
   
   Gib ein ``N`` ein.
   
   .. figure:: media/OPNS16d9.png
      :align: center
-     :alt: OPNSense: GUI - keine manuelle IPv6 
+     :alt: OPNsense: GUI - keine manuelle IPv6 
   
   Da keine IPv6-Adresse benötigt wird: ``ENTER``
   
   .. figure:: media/OPNS16d10.png
      :align: center
-     :alt: OPNSense: GUI - keine Aktivierung eines DHCP-Servers auf LAN
+     :alt: OPNsense: GUI - keine Aktivierung eines DHCP-Servers auf LAN
   
   Diese und die nächsten drei Fragen ebenfalls jeweils ``N`` und ``ENTER`` bzw. nur ``ENTER`` beantworten. 
   
   .. figure:: media/OPNS16d11.png
      :align: center
-     :alt: OPNSense: GUI - ändern von Protokolls von https auf http verneinen
+     :alt: OPNsense: GUI - ändern von Protokolls von https auf http verneinen
   
   .. figure:: media/OPNS16d12.png
      :align: center
-     :alt: OPNSense: GUI - Erstellung eines neuen Zertifikates für die GUI verneinen
+     :alt: OPNsense: GUI - Erstellung eines neuen Zertifikates für die GUI verneinen
   
   .. figure:: media/OPNS16d13.png
      :align: center
-     :alt: OPNSense: GUI - Wiederherstellung der GUI Zutrittsberechtigungen
+     :alt: OPNsense: GUI - Wiederherstellung der GUI Zutrittsberechtigungen
   
   Nach der letzten Eingabe startet die Übernahme in das System.
   
   .. figure:: media/OPNS16d14.png
      :align: center
-     :alt: OPNSense: GUI IP
+     :alt: OPNsense: GUI IP
   
   Nach erfolgreicher Übernahme erhältst du den Hinweis, dass du dich mit der LAN IP auf die GUI der OPNsense |reg| aufschalten könntest.
   
   .. figure:: media/OPNS16e.png
      :align: center
-     :alt: OPNSense: GUI IP
+     :alt: OPNsense: GUI IP
   
   Bevor du das aber machst, erfolgt ein letzter Test:
   

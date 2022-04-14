@@ -524,8 +524,8 @@ Beispiel:
 Vorbereiten des ISO-Speichers
 =============================
 
-Um die v7.1 zu installieren, müssen zwei virtuelle Maschinen angelegt werden. OPNSense und Ubuntu Server 18.04 LTS werden in die VMs installiert.
-Dazu ist es erforderlich, dass du die ISO-Images für OPNSense und Ubuntu Server 18.04 LTS auf den Proxmox-Hypervisor in den Datenspeicher für ISO-Images lädst.
+Um die v7.1 zu installieren, müssen zwei virtuelle Maschinen angelegt werden. OPNsense und Ubuntu Server 18.04 LTS werden in die VMs installiert.
+Dazu ist es erforderlich, dass du die ISO-Images für OPNsense und Ubuntu Server 18.04 LTS auf den Proxmox-Hypervisor in den Datenspeicher für ISO-Images lädst.
 
 .. figure:: media/proxmox-download-iso_01.png
    :align: center
@@ -581,7 +581,7 @@ befindet sich das heruntergeladene Ubuntu-ISO nun in dem ``ISO Images`` und steh
 OPNsense
 --------
 
-Die zuvor gezeigte Möglichkeit des einfachen Importes mittels den Bordmitteln von PROXMOX steht dir vür die OPNSense |reg| leider nicht zur Verfügung da nur der Download eines bz2-Dateien möglich ist. Dir steht der Weg des Downloads auf einen lokalen PCs, der Umwandlung des bz2-File in eine iso-Datei und dann der Upload über den dir im Abschnitt Ubuntu frei. Dabei wählst du dann nicht ``URL`` sondern ``Upload``.
+Die zuvor gezeigte Möglichkeit des einfachen Importes mittels den Bordmitteln von PROXMOX steht dir vür die OPNsense |reg| leider nicht zur Verfügung da nur der Download eines bz2-Dateien möglich ist. Dir steht der Weg des Downloads auf einen lokalen PCs, der Umwandlung des bz2-File in eine iso-Datei und dann der Upload über den dir im Abschnitt Ubuntu frei. Dabei wählst du dann nicht ``URL`` sondern ``Upload``.
 
 Um dir den Upload zu ersparen, beschreiben wir hier den Weg um die benötigten Dateinen direkt in deine Proxmox-Maschine zu bringen:
 
@@ -619,7 +619,7 @@ Signatur Datei (<filename>.sig)
 
    wget https://mirror.informatik.hs-fulda.de/opnsense/releases/22.1/OPNsense-22.1.2-OpenSSL-dvd-amd64.iso.bz2.sig
 
-Der öffentliche Schlüssel von OPNSense |reg| (<filename>.pub)
+Der öffentliche Schlüssel von OPNsense |reg| (<filename>.pub)
 
 .. code::
 
@@ -650,7 +650,7 @@ Nun gilt es die ISO-Datei auszupacken. Das machst du mit folgendem Befehl:
 
    bunzip2 OPNsense-22.1.2-OpenSSL-dvd-amd64.iso.bz2
 
-Das Entpacken kann einige Zeit in Anspruch nehmen. Anschließend sollte sich in dem Verzeichnis die OPNSense-ISO-Datei befinden. Die daneben befindlichen anderen OPNsense-Datei kansst du nun wieder löschen.
+Das Entpacken kann einige Zeit in Anspruch nehmen. Anschließend sollte sich in dem Verzeichnis die OPNsense-ISO-Datei befinden. Die daneben befindlichen anderen OPNsense-Datei kansst du nun wieder löschen.
 
 .. code::
 

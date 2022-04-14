@@ -3,7 +3,7 @@
 .. _hard_drive_size_opnsense_vm-label:
 
 ====================================================
-Aktualisieren der Festplattengrößen der OPNSense®-VM
+Aktualisieren der Festplattengrößen der OPNsense®-VM
 ====================================================
 
 .. sectionauthor:: `@toheine <https://ask.linuxmuster.net/u/toheine>`_,
@@ -12,7 +12,7 @@ Aktualisieren der Festplattengrößen der OPNSense®-VM
 
 .. hint::
 
-   Diesen Abschnitt musst du nur ausführen, sofern du in deinem Hypervisor die HDD-Größe der OPNSense® bereits vergrößert hast. Ansonsten kannst du bei der Einrichtung mit dem Kapitel ``Netzbereich anpassen`` fortfahren.
+   Diesen Abschnitt musst du nur ausführen, sofern du in deinem Hypervisor die HDD-Größe der OPNsense® bereits vergrößert hast. Ansonsten kannst du bei der Einrichtung mit dem Kapitel ``Netzbereich anpassen`` fortfahren.
    
 ..
    ==================== ======================
@@ -28,7 +28,7 @@ KVM     - Netzbereich anpassen |follow_me2kvm-backhd|
    
 Überblick
 ---------
-OPNSense® basiert auf FreeBSD, sodass die Erweiterung der Festplattengröße von dem Vorgehen der
+OPNsense® basiert auf FreeBSD, sodass die Erweiterung der Festplattengröße von dem Vorgehen der
 Server-VM abweicht. 
 
 Die Erweiterung der Festplattengröße folgt folgendem Ablauf:
@@ -58,7 +58,7 @@ Anmeldung als `root` mit dem bekannten Passwort.
      
 .. figure:: media/hard-drive-size-opnsense-vm_02_start-opnsense-console.png
    :align: center
-   :alt: open OPNSense® shell
+   :alt: open OPNsense® shell
 
 Öffnen einer Shell mit der Taste `8`. 
  
@@ -91,7 +91,7 @@ Ausgabe des Befehls liefert:
           
 .. attention::
 
-   Unter XCP-ng kann die Bezeichnung der Festplatte abweichen. Hier wird in der OPNSense-VM für die 1. HDD die Bezeichnung ``ada0`` verwendet.
+   Unter XCP-ng kann die Bezeichnung der Festplatte abweichen. Hier wird in der OPNsense-VM für die 1. HDD die Bezeichnung ``ada0`` verwendet.
    Die 1. Partition wird dann mit ``ada0s1`` bezeichnet. Die Angaben sind daher dann entsprechend anzupassen.
 
 4.3 Partitionsgrößen prüfen
