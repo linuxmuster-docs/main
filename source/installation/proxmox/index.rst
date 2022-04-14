@@ -261,7 +261,7 @@ Nach der zuvor beschriebenen Erstinstallation von Proxmox wurde bislang nur eine
 
 Für die internen virtuellen Netze ist also eine zweite Bridge zu erstellen, die an die zweite Netzwerkkarte direkt gebunden wird. Dieser wird allerdings keine IP-Adresse zugeordnet. 
 
-Ausgangspunkt: ``Host hv01 -> Network``
+Ausgangspunkt: ``Host hv01`` --> ``Network``
 
 Die bisherige Netzwerkkonfiguration stellt sich wie folgt dar:
 
@@ -293,9 +293,26 @@ Für die folgende Überprüfung öffnet du nochmals die Konsole auf dem Hypervis
 
    Die Bezeichnungen für die Netzwerkkarten eno1, eno2 können je nach eingesetztem System von der dargestellten Bezeichnung abweichen.
 
-Nun erstellst Du die ``zweite Bridge - vmbr0``:
+Für das weitere Vorgehen, ist es hilfreich die Funktion der Kommentierung der Netzwerkbrücken zu nutzen.
+Diese ist für die vmbr0 bisher noch nicht gesetzt.
 
-Dazu wähle das Menü ``Datacenter -> hv01 -> Network ->  Create -> Linux Bridge``
+.. figure:: media/install-on-proxmox_13_network-vmbr0.png
+   :align: center
+   :alt: Proxmox-Übersicht hv01 - Network-vmbr0-edit
+
+Markiere wie gezeigt ``vmbr0`` und betätige den ``Edit``-Button um das Konfigurationsfenster zu öffnen. 
+
+.. figure:: media/install-on-proxmox_13_network-vmbr0-comment.png
+   :align: center
+   :alt: Proxmox-Übersicht hv01 - Network-vmbr0-comment
+
+Trage unter ``Comment`` einen Kommentar ein der veranschaulich, dass diese Brücke die Verbindung zum Internet stellt. Zum Beispiel wie hier gezeigt ``red``, den bei uns historisch gewachsenen Begriff für dieses Interface.
+
+####
+
+Nun erstellst Du die zweite Bridge ``vmbr1``:
+
+Dazu wähle das Menü ``Datacenter`` --> ``hv01`` --> ``Network`` -->  ``Create`` --> ``Linux Bridge``
 
 .. figure:: media/install-on-proxmox_14_network-add-bridge.png
    :align: center
@@ -542,7 +559,7 @@ In dem nun geöffneten Fenster trägst du die URL
    
    https://releases.ubuntu.com/bionic/ubuntu-18.04.6-live-server-amd64.iso
 
-ein (copy&paste), anschleißend betätigst dann den Buttom ``Query URL``.
+ein (copy&paste). Anschließend betätigst du dann den Buttom ``Query URL``.
 
 .. figure:: media/proxmox-iso-download-ubuntu_01.png
    :align: center
