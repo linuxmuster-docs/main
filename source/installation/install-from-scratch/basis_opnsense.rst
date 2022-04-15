@@ -28,7 +28,7 @@ Anlegen und Installieren der Firewall
 Bist du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst du fortfahren mit `Erster Start der Firewall`_
 
 Installation der OPNsense |reg|
--------------------------------
+===============================
 
 Lade dir die ISO-Datei der OPNsense® von der Seite https://opnsense.org/download/ herunter.
 
@@ -74,7 +74,7 @@ Brenne die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren U
    vgl. hierzu auch: https://xcp-ng.org/docs/guides.html#pfsense-opnsense-vm
 
 Erster Start der Firewall
--------------------------
+=========================
 
 Starte dann OPNsense |reg| auf dem Rechner oder in der neu angelegten VM von deinem Installationsmedium. Je nach Virtualisierungsumgebung hast du ggf. die ISO-Datei bereits auf den ISO-Datenspeicher des Hypervisors abgelegt. Boote dann die VM hierüber.
 
@@ -184,12 +184,12 @@ Wenn alles geklappt hat, ist Folgendes zu sehen:
    Die dargestellte IPs und Netze können bei deiner OPNsense |reg| andere sein.
 
 Basis-Konfiguration der OPNsense |reg|
---------------------------------------
+======================================
 
 Melde dich als ``root`` mit dem Passwort ``Muster!`` an der OPNsense |reg| an.
 
 Tastaturbelegung
-^^^^^^^^^^^^^^^^
+----------------
 
 .. figure:: media/basis_opnsense_012.png
    :align: center
@@ -217,7 +217,7 @@ Zuerst überprüfe, ob die Tastaturbelegung richtig ist. Dazu wähle den Punkt 8
      exit                             # Konsole verlassen
 
 Überprüfung der Zuordnung der Netzwerkkarten
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------
 
 .. figure:: media/basis_opnsense_011.png
    :align: center
@@ -301,7 +301,7 @@ Die Zuordnung des WAN Interfaces ist nun richtig.
 WAN Zugang testen
 ^^^^^^^^^^^^^^^^^
 
-Um zwei erste Tests durchzuführen, wechsele mit ``8) Shell`` auf die Kommandozeile und gebe dort folgende Befehle ein.
+Um zwei erste Tests durchzuführen, wechsel mit ``8) Shell`` auf die Kommandozeile und gebe dort folgende Befehle ein.
 
 .. code::
 
@@ -322,9 +322,9 @@ Die Ausgabe sollte wie folgt aussehen:
    :alt: OPNsense: GUI - Assign unterfaces 
 
 IP-Adressen zuweisen
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
-Solltest du in deiner Netzwerkkonfiguration von unserem Muster abweichen, musst du bei nachfolgenden Schritten eben deiner Festlegung folgen.
+Solltest du in deiner Netzwerkkonfiguration von unserem Muster abweichen, musst du bei nachfolgenden Schritten deiner Festlegung folgen.
 
 .. figure:: media/basis_opnsense_013_z.png
    :align: center
@@ -413,7 +413,7 @@ Nach erfolgreicher Übernahme erhältst du den Hinweis, dass du dich mit der LAN
 Bevor du das aber machst, erfolgt ein letzter Test:
 
 Aktualisierung der OPNsense |reg|
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------
 
 Aktualisiere die OPNsense |reg| in der Konsole, indem du den Punkt ``12) Update from console`` aufrufst und die Rückfrage mit ``Y`` bestätigst.
 
@@ -424,7 +424,7 @@ Aktualisiere die OPNsense |reg| in der Konsole, indem du den Punkt ``12) Update 
 Klappt das Update, startest du die OPNsense neu. Dazu beantwortest du die Nachfrage mit ``y``.
 
 Konfiguration der OPNsense |reg|
---------------------------------
+================================
 
 Für die Konfiguration der OPNsense |reg| brauchst du einen Rechner mit Webbrowser im LAN-Bereich der OPNsense |reg|. Das kann ein Laptop mit Linux oder einem anderen Betriebssystem sein. Wichtig ist nur, dass er mit dem LAN-Adapter der OPNsense |reg| verbunden ist und sich im gleichen Netzwerk wie die OPNsense |reg| befindet. In unserer Beschreibung gehen wir davon aus, dass seine manuell zugewiesene IP-Adresse 10.0.0.10 ist.
 
