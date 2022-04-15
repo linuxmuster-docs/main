@@ -30,7 +30,7 @@ Bist du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst du fortfa
 Installation der OPNsense |reg|
 ===============================
 
-Lade dir die ISO-Datei der OPNsense® von der Seite https://opnsense.org/download/ herunter.
+Lade dir die ISO-Datei der OPNsense |reg| von der Seite https://opnsense.org/download/ herunter.
 
 .. hint::
 
@@ -78,7 +78,7 @@ Erster Start der Firewall
 
 Starte dann OPNsense |reg| auf dem Rechner oder in der neu angelegten VM von deinem Installationsmedium. Je nach Virtualisierungsumgebung hast du ggf. die ISO-Datei bereits auf den ISO-Datenspeicher des Hypervisors abgelegt. Boote dann die VM hierüber.
 
-Am Ende des Boot-Vorgangs der OPNsense® gelangst du zu folgendem Bildschirm:
+Am Ende des Boot-Vorgangs der OPNsense |reg| gelangst du zu folgendem Bildschirm:
 
 .. figure:: media/basis_opnsense_001.png
    :align: center
@@ -111,7 +111,7 @@ Wähle trotzdem die eingestellte deutsche Tastatur aus:
 
 Wähle ``<Select>``.
 
-Installiere nun OPNsense via ``Install (UFS)``.
+Installiere nun OPNsense |reg| via ``Install (UFS)``.
 
 .. figure:: media/basis_opnsense_005.png
    :align: center
@@ -149,33 +149,32 @@ Zum Abschluss der Konfiguration musst du das Kennwort für den Benutzer ``root``
 
 Gebe das neue Passwort für root ein.
 
-.. figure:: media/basis_opnsense_010_a.png
+.. figure:: media/basis_opnsense_010.png
    :align: center
    :alt: OPNsense: Type new root password
 
 Gebe dieses Kennwort erneut ein.
 
-.. figure:: media/basis_opnsense_010_b.png
+.. figure:: media/basis_opnsense_011.png
    :align: center
    :alt: OPNsense: Retype new root password
 
 Setze es mit ``OK``
 
-.. figure:: media/basis_opnsense_010_c.png
+.. figure:: media/basis_opnsense_012.png
    :align: center
    :alt: OPNsense: Type new root password
 
-Wähle danach die Option ``Exit Apply configuration and exit installer`` aus.
+Wähle danach die Option ``Exit and reboot`` aus.
 
 Starte OPNsense |reg| zum Abschluss neu und werfe die DVD / den USB-Stick aus. 
-
 Hast du OPNsense |reg| in eine VM installiert, so werfe die CD aus und ändere die Boot-Reihenfolge, sodass direkt von der Festplatte gestartet wird.
 
 Der Boot-Vorgang kann dann eine Weile dauern. Vor allem, wenn der Router kein DHCP anbieten sollte.
 
 Wenn alles geklappt hat, ist Folgendes zu sehen:
 
-.. figure:: media/basis_opnsense_011.png
+.. figure:: media/basis_opnsense_013.png
    :align: center
    :alt: OPNsense: Final Configuration
 
@@ -191,7 +190,7 @@ Melde dich als ``root`` mit dem Passwort ``Muster!`` an der OPNsense |reg| an.
 Tastaturbelegung
 ----------------
 
-.. figure:: media/basis_opnsense_012.png
+.. figure:: media/basis_opnsense_014.png
    :align: center
    :alt: OPNsense: Final Configuration
 
@@ -219,13 +218,17 @@ Zuerst überprüfe, ob die Tastaturbelegung richtig ist. Dazu wähle den Punkt 8
 Überprüfung der Zuordnung der Netzwerkkarten
 --------------------------------------------
 
-.. figure:: media/basis_opnsense_011.png
+.. figure:: media/basis_opnsense_013.png
    :align: center
    :alt: OPNsense: Final Configuration
 
 Die erste Netzwerkkarte (LAN) ist mit dem pädagogischen Netz verbunden. Allerdings noch mit den falschen Netzwerkeinstellungen, da die Installationsroutine der OPNsense |reg| immer die IP 192.168.1.1/24 zuweist. Diese gilt es noch zu ändern.
 
-Die zweite Netzwerkkarte (WAN) ist mit dem Router verbunden. Die IP hängt davon ab, welche IPs via DHCP von deinem DSL_Router verteilt werden. In einer Schulumgebung kann es sein, dass der Router keinen DHCP-Service anbieten. In diesem Fall musst du dafür sorgen, dass sich sowohl das Interface (WAN) der OPNsense |reg| als auch der Router im gleichen Netzwerk befinden. In unserem Beispiel hat die Zuordnung der Netzwerkkarten nicht geklappt, der Router sollte 192.168.21.212 der OPNsense zuweisen.
+Die zweite Netzwerkkarte (WAN) ist mit dem Router verbunden. Die IP hängt davon ab, welche IPs via DHCP von deinem DSL_Router verteilt werden.
+
+In einer Schulumgebung kann es sein, dass der Router keinen DHCP-Service anbieten. In diesem Fall musst du dafür sorgen, dass sich sowohl das Interface (WAN) der OPNsense |reg| als auch der Router im gleichen Netzwerk befinden. 
+
+iHier in unserem Beispiel hat die Zuordnung der Netzwerkkarten nicht geklappt, der Router sollte 192.168.21.212 der OPNsense |reg| zuweisen.
 
 Sollte bei dem WAN Interface keine, eine IP-Adresse nach dem Muster 0.0.0.0/8 oder eine andere als die von dir erwartete erscheinen, dann muss die Zuordnung der Netwerkkarte überprüft werden. Hier beispielhaft anhand unserer Proxmox-Umgebung.
 
@@ -234,19 +237,19 @@ Anpassung der Zuordnung der Netzwerkkarten
 
 Rufe dazu den Menüeintrag ``1) Assign interfaces`` auf. Die Nachfragen bezüglich LAGGs und VLAN verneinst du.
 
-.. figure:: media/basis_opnsense_013_a.png
+.. figure:: media/basis_opnsense_015.png
    :align: center
    :alt: OPNsense: GUI - LAGGs an VLANs no 
 
 Dann gilt es die MAC-Adressen zwischen denen der Virtuellen Maschine hier vtnet0 und vtnet1
 
-.. figure:: media/basis_opnsense_013_b.png
+.. figure:: media/basis_opnsense_016.png
    :align: center
    :alt: OPNsense: GUI - Valid Interfaces 
 
 und denen der Netzwerkbrücken vmbr0 und vmbr1 zu überprüfen: 
 
-.. figure:: media/basis_opnsense_013_c.png
+.. figure:: media/basis_opnsense_017.png
    :align: center
    :alt: Proxmox: GUI -s Network Devices 
 
@@ -265,37 +268,37 @@ green       vmbr1   DA:97:1B:E1:35:9C  <->  da:97:1b:E1:35:9c  vtnet1      LAN
 
 Aus diesem Wissen und dem Vergleich erkennst du, |...|
 
-.. figure:: media/basis_opnsense_013_d.png
+.. figure:: media/basis_opnsense_018.png
    :align: center
    :alt: OPNsense: GUI - WAN connect to vtnet0 
 
 |...| dass WAN zum Interface vtnet0 zugeordnet gehört.
 
-.. figure:: media/basis_opnsense_013_e.png
+.. figure:: media/basis_opnsense_019.png
    :align: center
    :alt: OPNsense: GUI - 
 
 |...| dass LAN zum Interface vtnet1 ghört.
 
-.. figure:: media/basis_opnsense_013_f.png
+.. figure:: media/basis_opnsense_020.png
    :align: center
    :alt: OPNsense: GUI - Assign unterfaces 
 
 Hast du kein weiteres Interface dann ``Enter``
 
-.. figure:: media/basis_opnsense_013_g.png
+.. figure:: media/basis_opnsense_021.png
    :align: center
    :alt: OPNsense: GUI - Assign unterfaces 
 
 Diese Zuordnung ist nun richtig, also weiter mit ``y``, |...|
 
-.. figure:: media/basis_opnsense_013_h.png
+.. figure:: media/basis_opnsense_022.png
    :align: center
    :alt: OPNsense: GUI - Assign unterfaces 
 
 |...| welches dann die Konfiguration startet.
 
-.. figure:: media/basis_opnsense_013_i.png
+.. figure:: media/basis_opnsense_023.png
    :align: center
    :alt: OPNsense: GUI - Assign unterfaces 
 
@@ -312,7 +315,7 @@ Um zwei erste Tests durchzuführen, wechsel mit ``8) Shell`` auf die Kommandozei
 
 Die Ausgabe sollte wie folgt aussehen:
 
-.. figure:: media/basis_opnsense_013_j.png
+.. figure:: media/basis_opnsense_024.png
    :align: center
    :alt: OPNsense: GUI - Assign unterfaces 
 
@@ -320,7 +323,7 @@ Die Ausgabe sollte wie folgt aussehen:
 
    ping -c 3 linuxmuster.net
 
-.. figure:: media/basis_opnsense_013_k.png
+.. figure:: media/basis_opnsense_025.png
    :align: center
    :alt: OPNsense: GUI - Assign unterfaces 
 
@@ -329,87 +332,87 @@ IP-Adressen zuweisen
 
 Solltest du in deiner Netzwerkkonfiguration von unserem Muster abweichen, musst du bei nachfolgenden Schritten deiner Festlegung folgen.
 
-.. figure:: media/basis_opnsense_013_z.png
+.. figure:: media/basis_opnsense_026.png
    :align: center
    :alt: OPNsense: GUI - Set interfaces IP address 
 
 Wähle an der Konsole der OPNsense |reg| den Eintrag ``2) Set interface IP address`` aus.
 
-.. figure:: media/basis_opnsense_014.png
+.. figure:: media/basis_opnsense_027.png
    :align: center
    :alt: OPNsense: GUI - LAN auswählen
 
 Wähle ``1 - LAN (`` |...| ``)`` für die nächsten Schritte.
 
-.. figure:: media/basis_opnsense_015.png
+.. figure:: media/basis_opnsense_028.png
    :align: center
    :alt: OPNsense: GUI - Nicht via DHCP zuweisen lassen
 
 Bestätige die Nachfrage mit ``N`` und ``ENTER``. (Alternativ wäre auch nur ``ENTER`` möglich, da der großgeschriebene Buchstabe in der Auswahlmöglichkeit darauf hinweist, was die default Einstellung ist.)
 
- .. figure:: media/basis_opnsense_016.png
+ .. figure:: media/basis_opnsense_029.png
    :align: center
    :alt: OPNsense: GUI - Eingabe der IP
 
 Gib die IPv4 Adresse ``10.0.0.254`` ein, unter der die OPNsense |reg| im lokalen Netz zu erreichen sein wird.
 
-.. figure:: media/basis_opnsense_017.png
+.. figure:: media/basis_opnsense_030.png
    :align: center
    :alt: OPNsense: GUI - Eingabe der Netzwerkmaske in CIDR
 
 Gib ``16`` für die Netzwerkmaske ein
 
-.. figure:: media/basis_opnsense_018.png
+.. figure:: media/basis_opnsense_031.png
    :align: center
    :alt: OPNsense: GUI - Keine Eingabe nötig, also Enter
 
 Da keine Eingabe eines Upstream-Gateways nötig ist, einfach ``ENTER``
 
-.. figure:: media/basis_opnsense_019.png
+.. figure:: media/basis_opnsense_032.png
    :align: center
    :alt: OPNsense: GUI - keine IPv6 via WAN tracking nötig
 
 .. attention:: Gib ein ``n`` ein.
 
-.. figure:: media/basis_opnsense_020.png
+.. figure:: media/basis_opnsense_033.png
    :align: center
    :alt: OPNsense: GUI - keine IPv6 Adresse via DHCP6 
 
 Gib ein ``N`` ein.
 
-.. figure:: media/basis_opnsense_021.png
+.. figure:: media/basis_opnsense_034.png
    :align: center
    :alt: OPNsense: GUI - keine manuelle IPv6 
 
 Da keine IPv6-Adresse benötigt wird: ``ENTER``
 
-.. figure:: media/basis_opnsense_022.png
+.. figure:: media/basis_opnsense_035.png
    :align: center
    :alt: OPNsense: GUI - keine Aktivierung eines DHCP-Servers auf LAN
 
 Diese und die nächsten drei Fragen ebenfalls jeweils ``N`` und ``ENTER`` bzw. nur ``ENTER`` beantworten. 
 
-.. figure:: media/basis_opnsense_023.png
+.. figure:: media/basis_opnsense_036.png
    :align: center
    :alt: OPNsense: GUI - ändern von Protokolls von https auf http verneinen
 
-.. figure:: media/basis_opnsense_024.png
+.. figure:: media/basis_opnsense_037.png
    :align: center
    :alt: OPNsense: GUI - Erstellung eines neuen Zertifikates für die GUI verneinen
 
-.. figure:: media/basis_opnsense_025.png
+.. figure:: media/basis_opnsense_038.png
    :align: center
    :alt: OPNsense: GUI - Wiederherstellung der GUI Zutrittsberechtigungen
 
 Nach der letzten Eingabe startet die Übernahme in das System.
 
-.. figure:: media/basis_opnsense_026.png
+.. figure:: media/basis_opnsense_039.png
    :align: center
    :alt: OPNsense: GUI IP
 
 Nach erfolgreicher Übernahme erhältst du den Hinweis, dass du dich mit der LAN IP auf die GUI der OPNsense |reg| aufschalten könntest.
 
-.. figure:: media/basis_opnsense_027.png
+.. figure:: media/basis_opnsense_040.png
    :align: center
    :alt: OPNsense: GUI IP
 
@@ -424,9 +427,9 @@ Aktualisiere die OPNsense |reg| in der Konsole, indem du den Punkt ``12) Update 
 
   Sollte hierbei keine Verbindung zu den externen Update-Servern möglich sein, dann stimmt deine Netzwerkkartenzuordnung noch nicht. Ändere dies, bevor du fortfährst.
 
-Klappt das Update, startest du die OPNsense neu nachdem du dich erneut eingeloggt hast.
+Klappt das Update, startest du die OPNsense |reg| neu nachdem du dich erneut eingeloggt hast.
 
-.. figure:: media/basis_opnsense_013_i.png
+.. figure:: media/basis_opnsense_023.png
    :align: center
    :alt: OPNsense: GUI - Assign unterfaces
 
@@ -439,23 +442,26 @@ Konfiguration der OPNsense |reg|
 
 Für die nachfolgende Konfiguration der OPNsense |reg| brauchst du einen Rechner mit Webbrowser im LAN-Bereich der OPNsense |reg|. Das kann ein Laptop mit einem beliebigen Betriebssystem sein. Wichtig ist nur, dass er mit dem LAN-Adapter der OPNsense |reg| verbunden ist und sich im gleichen Netzwerk wie die OPNsense |reg| befindet. In unserer Beschreibung gehen wir davon aus, dass seine manuell zugewiesene IP-Adresse 10.0.0.10 ist.
 
-Nachdem der Browser gestartet ist, gib folgende URL für den Zugriff auf die GUI der OPNsense ein:
+Nachdem der Browser gestartet ist, gib folgende URL für den Zugriff auf die GUI der OPNsense |reg| ein:
 
 ``https://10.0.0.254``
 
 Du erhältst zunächst eine Zertifikatswarnung, da OPNsense |reg| ja ganz frisch installiert ist und ein selbst erstelltes Zertifikat nutzt. 
 
-.. figure:: media/basis_opnsense_028.png
+.. figure:: media/basis_opnsense_041.png
 
 ``Erweitert`` und anschließend ``Risiko akzeptieren und fortfahren`` bringt dich auf die Login-Seite.
 
-.. figure:: media/basis_opnsense_029.png
+.. figure:: media/basis_opnsense_042.png
 
 Melde dich mit ``root`` und dem Passwort ``Muster!`` an. 
 
 Starte den General Setup Wizard mit dem ``Next``-Knopf. "Er" wird dich durch die Konfiguration führen, wobei schon einiges richtig durch die zuvor erfolgte Basis-Konfiguration eingerichtet wurde.  
 
-.. figure:: media/basis_opnsense_030.png
+System: Assistent: Allgemeine Information
+-----------------------------------------
+
+.. figure:: media/basis_opnsense_043.png
 
 .. attention::
    Die Länge des ersten Teils der Domäne darf maximal 15 Zeichen betragen. Die Domäne ``muster-gymnasium.de`` ist um ein Zeichen zu lang, da muster-gymnasium 16 Zeichen lang ist. 
@@ -465,45 +471,65 @@ Starte den General Setup Wizard mit dem ``Next``-Knopf. "Er" wird dich durch die
 
 Weiter geht es mit ``Next``
 
-.. figure:: media/basis_opnsense_031.png
+System: Assistent: Zeitserverinformation
+-----------------------------------------
 
-Die Angaben zum Time Server übernimmst du ebenfalls mit ``Next``. Danach kommst du zu den Einstellungen für die WAN-Schnittstelle.
+.. figure:: media/basis_opnsense_044.png
+
+Die Angaben zum Time Server übernimmst du ebenfalls mit ``Next``.
+
+System: Assistent: Konfiguriere WAN-Schnittstelle
+-------------------------------------------------
+
+Danach kommst du zu den Einstellungen für die WAN-Schnittstelle.
 Nutzt du hier DHCP z.B. eines vorgelagerten DSL-Routers so gibst du hier DHCP an, ansonsten ändere diese bitte auf ``Static``.
 
-.. figure:: media/basis_opnsense_032.png
+.. figure:: media/basis_opnsense_045.png
 
 Falls deine Firewall eine statische IP-Adresse hat, die nicht über DHCP erteilt wird, trägst du sie hier ein.
 
-.. figure:: media/basis_opnsense_033.png
+.. figure:: media/basis_opnsense_046.png
 
-Falls dein Router eine private IP hat, musst du den Haken bei ``Private RFC1918-Netzwerke blockieren`` entfernen.
+Falls dein Router eine private IP hat, musst du den Haken bei ``Private RFC1918-Netzwerke blockieren`` entfernen. Diesen Eintrag findest du ganz unten auf der Seite, nachdem du runtergescrollt hast.
 
 Mit ``Weiter`` übernimmst du die von dir gemachten Einstellungen
 
-.. figure:: media/basis_opnsense_034.png
+System: Assistent: Konfiguriere LAN-Schnittstelle
+-------------------------------------------------
 
-Die IP-Adresse und die Subnetzmaske des Schulnetzes sind hier einzutragen.
- 
-.. figure:: media/basis_opnsense_035.png
+.. figure:: media/basis_opnsense_047.png
+
+Die IP-Adresse und die Subnetzmaske des Schulnetzes sollte hier eingetragen sein. Sollte dies nicht der Fall sein, ändere das nun.
+
+System: Assistent: Setze Root-Passwort 
+--------------------------------------
+
+.. figure:: media/basis_opnsense_048.png
 
 .. hint:: 
 
    An dieser Stelle muss als root-Passwort ``Muster!`` eingegeben werden, da später der lmn-Server beim Einrichten der Firewall davon ausgeht, dass das root-Passwort ``Muster!`` ist!
 
-.. figure:: media/basis_opnsense_036.png
+System: Assistent: Konfiguration neu laden
+------------------------------------------
 
-Nachdem du die Einstellungen übernommen hast, haben sich auch die Einstellungen des LAN-Netzwerks geändert.
+.. figure:: media/basis_opnsense_049.png
 
-Jetzt solltest du deinem Admin PC die IP-Adresse 10.0.0.10/16, DNS: 10.0.0.254 und den Gateway: 10.0.0.254 geben.
+Nachdem du die Einstellungen übernommen hast, können sich auch die Einstellungen des LAN-Netzwerks geänderthaben. Dann wirst du nicht über die erfolgreiche Konfiguration informiert |...|
 
-Gehe mit einem Webbrowser auf ``https://10.0.0.254``.
+.. figure:: media/basis_opnsense_050.png
+
+... sondern musst deinem Admin PC die IP-Adresse 10.0.0.10/16, DNS: 10.0.0.254 und den Gateway: 10.0.0.254 geben. (hier exemplarisch für unseren Standard-LAN-Bereich)
+
+Gehe dann mit einem Webbrowser auf ``https://10.0.0.254``.
 
 .. hint:: 
 
-   Falls du dich für das Netz der linuxmuster.net v6.2 entschieden hast, solltest du die IP-Adresse 10.16.0.10/12, DNS: 10.16.1.254 und das 
-   Gateway 10.16.1.254 verwenden. Du solltest dann auch mit einem Webbrowser auf https://10.16.1.254 gehen.
+   Falls du dich für das Netz der linuxmuster.net v6.2 entschieden hast, solltest du die IP-Adresse 10.16.0.10/12, DNS: 10.16.1.254 und das Gateway 10.16.1.254 verwenden.
+  
+   Du solltest dann auch mit einem Webbrowser auf https://10.16.1.254 gehen.
 
-Du erhältst wieder eine Zertifikatswarnung. Akzeptiere und fahre fort.
+Du erhältst eventuell wieder eine Zertifikatswarnung. Akzeptiere diese und fahre fort.
 
 Melde dich wieder mit ``root`` und dem Passwort ``Muster!`` an.
 
@@ -511,460 +537,96 @@ DHCP abschalten
 ---------------
 Jetzt musst du den DHCP-Service der Firewall abschalten. Der wird ja später vom Server übernommen. 
 
-.. figure:: media/basis_opnsense_037.png
+.. figure:: media/basis_opnsense_051.png
 
-Gehe auf ``Dienste -> DHCPv4 -> [LAN]`` und lösche den Haken bei ``Aktivieren``. Speichere deine Einstellungen.
+Gehe auf ``Dienste -> DHCPv4 -> [LAN]`` und lösche den Haken bei ``Aktivieren`` wenn gesetzt. ``Speichern`` lässt dich deine Einstellungen unten auf der Seite.
 
-Zusätzliche Netzwerkkarte hinzufügen
-------------------------------------
+Zusätzliche Netzwerkkarte hinzufügen (Optinal)
+----------------------------------------------
 
 Die linuxmuster.net v7 läuft bereits mit zwei Netzwerkkarten. Möchtest du allerdings ein WLAN oder in einer DMZ einen Webserver betreiben, brauchst du noch weitere Netzwerkkarten.
 
 Wie das geht, siehst du im Folgenden:
 
-.. figure:: media/basis_opnsense_038.png
+.. figure:: media/basis_opnsense_052.png
 
 Bei ``Schnittstellen -> Zuweisungen`` drückst du ``+``, um die dritte Schnittstelle deinem System hinzuzufügen. Diese dritte Schnittstelle ist dann als ``OPT1`` im System bekannt. OPT1 muss nur noch aktiviert und es muss ihr noch eine IP-Adresse zugewiesen werden. 
 
-.. figure:: media/basis_opnsense_039.png
+.. figure:: media/basis_opnsense_053.png
 
-Unter ``Schnittstellen -> [OPT1]`` kannst du diese Einstellungen vornehmen. Der Screenshot zeigt ein Beispiel. 
-Für weitere Netzwerkkarten verfährst du entsprechend. OPT1 wird dann hochgezählt zu OPT2 etc.
+Unter ``Schnittstellen -> [OPT1]`` kannst du diese Einstellungen vornehmen. Der Screenshot zeigt ein Beispiel. Für weitere Netzwerkkarten verfährst du entsprechend. OPT1 wird dann hochgezählt zu OPT2 etc.
 
 ssh erlauben
 ------------
 
-.. attention:: Damit der Server Zugriff auf die OPNsense |reg| hat, musst du einen ssh-Zugriff erlauben. Gehe dafür auf ``System -> Einstellungen -> Verwaltung``.
+.. attention:: Damit der Server für das weitere Setup Zugriff auf die OPNsense |reg| hat, musst du den ssh-Zugriff erlauben. Gehe dafür auf ``System -> Einstellungen -> Verwaltung``.
 
-.. figure:: media/basis_opnsense_040.png
+.. figure:: media/basis_opnsense_054.png
 
-Setze einen Haken bei ``Aktiviere Secure Shell``, ``Erlaube Anmeldung mit dem root-Benutzer`` und ``Anmeldung mit Passwort erlauben``. Speichere die Einstellungen.
+Setze jeweils den Haken bei ``Aktiviere Secure Shell``, ``Erlaube Anmeldung mit dem root-Benutzer`` und ``Anmeldung mit Passwort erlauben``.
 
-.. attention::
-
-   Diese Einstellung ist entscheidend, damit zwischen Server und Firewall eine SSH-Verbindung erfolgreich hergestellt werden kann. 
-   
-   Diese ist vor Aufruf des linuxmuster-Setup-Skritpes von beiden Seiten zu testen. Dazu später mehr |...|
+Diese Einstellungen wieder ``Speichern``.
 
 Update der OPNsense |reg|
 -------------------------
 
 Aktualisiere nun die OPNsense |reg|, indem du unter 
 
-.. figure:: media/basis_opnsense_041.png
+.. figure:: media/basis_opnsense_055.png
 
 ``System`` ``->`` ``Firmware`` ``-->`` ``Aktualisierungen`` ``--->`` ``Status`` ``----> `` ``Auf Aktualisierungen prüfen`` klickst.
 
-Es werden dir dann wie in nachstehender Abbildung unter dem Reiter ``Aktualisierungen`` die zu aktualisierenden Pakete angezeigt.
+Wenn keine Aktualisierung verfügbar sind erhälst du folgende Meldung |...|
 
-.. figure:: media/basis_opnsense_042.png
+.. figure:: media/basis_opnsense_056.png
+
+|...| und kannst zum abschließenden Schritt `Logout`_ gehen.
+
+Sollten dir wie in nachstehender Abbildung unter dem Reiter ``Aktualisierungen`` zu aktualisierenden Pakete angezeigt werden |...|
+
+.. figure:: media/basis_opnsense_057.png
 
 .. hint::
 
-   Falls du nicht ins Internet kommst, kann es an der Gateway-Einstellung liegen. Gehe auf ``System -> Gateways -> Einzeln`` und editiere dein Gateway (WANGW).
-   Setze einen Haken bei ``Deaktiviere Gatewayüberwachung``, speichere die Einstellung und übernimm die Änderung. Jetzt ist dein Gateway online und du kommst ins Internet.
-   Erstaunlicherweise kannst du die Gatewayüberwachung wieder aktivieren, ohne dass das Gateway offline geht.
+   Falls du nicht ins Internet kommst, kann es an der Gateway-Einstellung liegen. Gehe auf ``System`` --> ``Gateways`` --> ``Einzeln`` und editiere dein Gateway (WANGW).
 
-Um jetzt zu aktualisieren, klicke in o.g. Fenster ``Jetzt aktualisieren``. Je nach gefundenen Aktualisierungen, kann ein Neustart erforderlich sein. 
-Dies wird vor dem Update abgefragt und ist zu bestätigen.
+   Setze einen Haken bei ``Deaktiviere Gatewayüberwachung``, speichere die Einstellung und übernimm die Änderung. Jetzt ist dein Gateway online und du kommst ins Internet. Erstaunlicherweise kannst du die Gatewayüberwachung wieder aktivieren, ohne dass das Gateway offline geht.
 
-.. figure:: media/basis_opnsense_043.png
+dann klicke in o.g. Fenster ``Jetzt aktualisieren``. 
+
+Je nach gefundenen Aktualisierungen, kann ein Neustart erforderlich sein. Dies wird vor dem Update abgefragt und ist zu bestätigen.
+
+.. figure:: media/basis_opnsense_058.png
 
 Danach werden die Aktualisierungen heruntergeladen und angewendet.
 
-.. figure:: media/basis_opnsense_044.png
+.. figure:: media/basis_opnsense_059.png
 
 Zum Abschluss erfolgt der Neustart automatisch.
 
-.. figure:: media/basis_opnsense_045.png
+.. figure:: media/basis_opnsense_060.png
 
 Nach dem Neustart ist die OPNsense |reg| soweit vorbereitet.
 
-.. hint::
+Logout
+------
+
+.. figure:: media/basis_opnsense_061.png
+
+.. todo:: Unterstehende offnene Fragen klären
+
+.. hint:: 
 
    Installierst du die OPNsense |reg| in einer VM, so solltest du nun noch die Tools der gewählten Virtualisierungsumgebung installieren, damit die VM komfortabel gesteuert werden kann.
-   Für XCP-ng findest du nachstehend die Hinweise: https://xcp-ng.org/docs/guides.html#pfsense-opnsense-vm
-
-.. todo:: Bei Release nachfolgende Zeilen 497-879 (auskommentiert) löschen. Altlast Sicherheitshalber noch vorhalten.
-
-.. 
-
-.. Anlegen und Installieren des Servers
-.. ====================================
-
-.. Bist du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst du fortfahren mit `Erster Start des Servers`_.
-
-.. .. hint::
-
-   Willst du in einer VM installieren, so must du für die neue VM folgende Mindesteinstellungen angeben:
-     
-     - Template - Ubuntu Bionic Beaver 18.04, installation from ISO library, 
-     - Boot-Mode - BIOS Boot / MBR, 
-     - 2 vCPU, 
-     - 3 GiB RAM, 
-     - storage -> hdd1: 25 GiB -> hdd2: 100 GiB, 
-     - 1 NIC mit Zuordnung zu vSwitch green.
+   Für XCP-ng findest du nachstehend die Hinweise: https://xcp-ng.org/docs/guides.html#pfsense-opnsense-vmi
    
-   Achte darauf, dass vor dem Start der VM beide Festplatten der VM zugewiesen wurden.
+   - Kann diese hint-Box ganz raus, da verschoben ins Wiki?
 
-   Bei der Einrichtung des Servers musst du nur einen Server mit 2 HDDs haben und Ubuntu 18.04 auf der ersten HDD installieren. Die zweite HDD bleibt frei. Auf dieser 2. HDD richtest du - wie nachstehend beschrieben -  ein LVM ein.
+   Ich habe keine Guest-Tools für OPNsense |reg| gefunden.
+   dafür aber weitere Konfigurationen:
 
-.. Erster Start des Servers
-.. ------------------------
+   https://pfstore.com.au/blogs/guides/run-opnsense-in-proxmox
 
-.. Starte den Server via Ubuntu 18.04 Server ISO-Image (USB-Stick oder CD-ROM). Es erscheint das erste Installationsfenster mit der Abfrage zur gewünschten Sprache.
+   - Könnte da für uns etwas dabei sein?
 
-.. Wähle deine bevorzugte Sprache.
-
-.. Beantworte danach die Frage, ob auf einen neuen Installer (für 20.04) aktualisiert werden soll, mit ``Ohne Aktualisierung fortfahren``.
-
-.. Danach wähle dein Tastaturlayout.
-
-.. .. figure:: media/server01.png
-
-.. Wähle das Tastaturlayout Deutsch und bestätige dies mit ``Erledigt``.
-
-.. .. hint:: Das Tastaturlayout wirkt sich während der Installation noch nicht aus! 
-
-.. Konfiguriere danach deine Netzwerkkarte.
-
-.. .. figure:: media/server02.png
-
-.. In der Voreinstellung ist die Netzwerkkarte auf DHCP eingestellt. Das klappt natürlich nicht, da der DHCP-Service der Firewall deaktiviert wurde. 
-.. Du musst also die Konfiguration von Hand einstellen.
-
-.. Gehe dazu auf die Netzwerkkarte und wähle ``Edit IPv4``.
-
-.. .. figure:: media/server03.png
-
-.. Wähle ``Manual`` aus.
-
-.. .. figure:: media/server04.png
-
-.. Gib die Netzwerkkonfiguration, wie im oberen Bild, ein und übernehme sie mit ``Speichern``.
-
-.. .. hint:: 
-
-   Bedenke, dass das deutsche Tastaturlayout noch nicht aktiv ist. Den ``/``, den du für die Eingabe des Subnetzes brauchst, bekommst du mit der ``-``-Taste!
-
-.. .. figure:: media/server05.png
-
-.. Mit ``Èrledigt`` geht es weiter.
-
-.. .. figure:: media/server06.png
-
-.. Lass die Proxy-Adresszeile leer. Auch diese Anfrage verlässt du mit ``Erledigt``.
-
-.. .. figure:: media/server07.png
-
-.. Die Mirror-Adresse übernimmst du ebenfalls mit ``Erledigt``.
-
-.. .. figure:: media/server08_new-installer.png
-
-.. Bei der angebotene Aktualisierung des Installers wählst du ``Ohne Akualisierungi fortfahren``.
-
-.. Jetzt must du die Festplattten einrichten. Bei einer bare metal Installation hast du zwei physikalische Festplatten installiert (also /dev/sda und /dev/sdb) 
-.. alternativ richtest du zwei Partitionen ein. Die erste Partition mit mind. 25 GiB (/dev/sda1) und die zweite mit der restlichen Größe der Festplatte (/dev/sda2).
-
-.. .. figure:: media/server09_custom-storage-layout.png
-
-.. Wähle nun zur Einrichtung der Festplatten ``Custom Storage Layout`` aus.
-
-.. .. figure:: media/server10_custom-storage-layout-create-partition-table.png
-
-.. Es werden dir dann die verfügbaren Geräte angezeigt. 
-
-.. Wähle die erste Festplatte bzw. die erste Partition aus. Es wird ein Kontextmenü angezeigt, bei der du eine ``GPT/Partition`` erstellen musst. 
-
-.. .. figure:: media/server11_custom-storage-layout-create-partition-table2.png
-
-.. Wähle den gesamten Festplattenplatz und formatiere diesen mit dem ext4-Dateiformat und weise diese dem ``Mount Point /`` zu.
-
-.. .. figure:: media/server12_custom-storage-layout-create-partition-table3.png
-
-.. Gehe auf ``Erstellen``.
-
-.. Danach gelangst Du zu nachstehendem Bildschirm.
-
-.. .. .. figure:: media/server13.png
-
-.. .. figure:: media/server14_custom-storage-layout-create-partition-table-lvm-hdb-5.png
-
-.. .. todo:: Irgendwie passen die Bilder nicht zum Ablauf bzw. zur v7.0
-
-.. .. todo:: Folgende Beschreibung sollte umgestellt geschrieben werden, dass Sprung über LVM Konf möglich ist
-
-.. .. hint:: Solltest du unserere Standard Einteilung für das lvm nutzen wollen, dann kannst du den nächsten Abschnitt überspringen. Die Standardvorgabe ist wie folgt:
-
-.. ============== ========================== ========================= =====
-.. LV Name        LV Pfad                    Mountpoint                Größe
-.. ============== ========================== ========================= =====
-.. var            /dev/sg_srv/var            /var                      10G
-.. linbo          /dev/sg_srv/linbo          /srv/linbo                40G
-.. global         /dev/sg_srv/global         /srv/samba/global         10G
-.. default-school /dev/sg_srv/default-school /srv/samba/default-school 40G
-.. ============== ========================== ========================= =====
-
-.. Für kleine Schulen oder eine Test-Installation sollten diese Vorgaben passen, ansonsten:
-
-.. Richte nun auf der 2. HDD ein LVM ein.
-   
-.. Wähle den Eintrag ``Datenträgergruppe (LVM) anlegen`` aus.
-
-.. Hier gibst du einen eigenen Namen für die LVM Volume Group an (z.B. vg0).
-
-.. .. figure:: media/server15_custom-storage-layout-create-partition-table-lvm-6.png
-
-.. Zum Abschluss werden dir die Partitionsierungseinstellungen angezeigt.
-
-.. .. figure:: media/server16_custom-storage-layout-create-partition-table-overview.png
-
-.. Stimmen diese mit den gewünschten überein, so wähle ``Erledigt`` aus.
-
-.. Danach erhälst du die Rückfrage, ob die Installation fortgesetzt werden soll und die Daten auf der Festplatte gelöscht werden sollen.
-
-.. Bestätige dies.
-
-.. .. hint::
-
-   Ohne LVM sind die Mount Points ``/var`` und ``/srv`` auf die 2. HDD zu legen. Die Zuordnung der Mount Points zum LVM wird später detailliert beschrieben.
-
-.. .. figure:: media/server17.png
-
-.. Nenne den Server ``server``. Der Benutzername (lmnadmin) und das Passwort (Muster!) sind frei wählbar - wie in der Abb. dargestellt.
-
-.. .. todo:: Bild fehlt .. figure:: media/_server_001.png
-
-.. Installiere OpenSSH **nicht**
-
-.. .. figure:: media/_server_002.png
-
-.. und installiere keine weiteren optionalen Pakete.
-
-.. .. figure:: media/_server_003.png
-
-.. Bestätige die Installation mit ``Fortfahren``.
-
-.. Zum Abschluß der Installation wird automatisch versucht, Updates zu installieren
-
-.. .. figure:: media/_server_004.png
-
-.. und danach den Server neu zu starten.
-
-.. .. figure:: media/_server_005.png
-
-.. Bei laufender und wie zuvor beschriebener Einrichtung der OPNsense |reg| sollte dies erfolgreich verlaufen.
-
-.. Wenn die Installation abgeschlossen und der Server neu gestartet ist, meldest du dich mit den zuvor angegeben Login-Daten an.
-
-.. .. hint::
-
-..    Bei einer Installation in eine VM achte vor dem Neustart darauf, dass du die ISO-Datei / DVD ausgeworfen hast und die Boot-Reihenfolge so unmgestellt hast,
-..    dass die VM direkt von HDD bootet.
-
-.. .. todo:: Time to do snapshot
-
-.. LVM - Besonderheiten
-.. --------------------
-
-.. 1. Hast du wie zuvor beschrieben ein LVM angelegt, gib auf der Konsole ``sudo vgscan --mknodes`` ein. Es wird dir dann die sog. ``volume group "vg0"`` angezeigt, die du während der Installation auf der 2. HDD angelegt hast.
-
-.. 2. Führe ``sudo vgchange -ay`` aus, um das Volume zu aktivieren.
-
-.. 3. Gib ``sudo pvdisplay`` an, um Informationen zu der Logical Volume Group auszugeben. PV = physical volume = hdd, vg = volume group. Du kannst für Kurzinformationen auch ``sudo pvs`` angeben. Die vg - volume group sollte schon vorhanden sein und wie zuvor angegeben hier ``vg0`` heißen.
-
-.. 4. Lege nun logical volumes an. Wir gehen von 100G für die HDD aus:
-
-.. .. code::
-
-   sudo lvcreate -L 10G -n /dev/vg0/var vg0
-   sudo lvcreate -L 40G -n /dev/vg0/linbo vg0
-   sudo lvcreate -L 10G -n /dev/vg0/global vg0
-   sudo lvcreate -L 38G -n /dev/vg0/default-school vg0
-   
-.. 5. Um zu prüfen, ob die logical volumes angelegt wurden, gib den Befehl ``sudo lvs`` an.
-
-.. 6. Aktiviere nun diese logical volumes wie folgt:
-
-.. .. code::
-
-   sudo lvchange -ay /dev/vg0/var
-   sudo lvchange -ay /dev/vg0/linbo
-   sudo lvchange -ay /dev/vg0/global
-   sudo lvchange -ay /dev/vg0/default-school
-   
-.. 7. Formatiere die Verzeichnisse in den neu angelegten logical volume groups wie folgt:
-
-.. .. code::
-
-   sudo mkfs.ext4 /dev/vg0/var
-   sudo mkfs.ext4 /dev/vg0/linbo
-   sudo mkfs.ext4 /dev/vg0/global
-   sudo mkfs.ext4 /dev/vg0/default-school
-   
-.. 8. Lege nachstehende Verzeichnisse an, die wir danach auf die logical volumes mounten:
-   
-.. .. code:: 
-
-   sudo mkdir /srv/linbo
-   sudo mkdir /srv/samba
-   sudo mkdir /srv/samba/global
-   sudo mkdir /srv/samba/schools
-   sudo mkdir /srv/samba/schools/default-school
- 
-.. 9. Kopiere den Inhalt von ``/var`` zunächst in einen neuen Ordner ``/savevar``. Das Verzeichnis ``/var`` soll später auf das LVM gemountet werden.
-   Hierbei ist darauf zu achten, dass das virtuelle Dateisystem unterhalb von /var, das für die LX-Container genutzt wird, zunächst ausgehangen und der entsprechende    
-   Dienst ``lxcfs.service`` beendet wird.
-
-.. .. code:: 
-
-   sudo mkdir /savevar
-   sudo systemctl stop lxcfs.service
-   sudo cp -R /var /savevar
-
-.. 10. Rufe die Datei ``/etc/fstab`` mit dem Editor nano auf und ergänze den bisherigen Eintrag für die 1. HDD um nachstehenden Eintragungen:
-
-.. .. code::
-
-   /dev/vg0/var              /var ext4 defaults 0 1
-   /dev/vg0/linbo            /srv/linbo ext4 defaults 0 1
-   /dev/vg0/global           /srv/samba/global ext4 user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1 0 1
-   /dev/vg0/default-school   /srv/samba/schools/default-school ext4 user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1 0 1
-
-.. Speichere die Einstellung mit ``Strg+w`` und verlasse den Editor mit ``Strg+x``. 
-
-.. 11. Lade die Eintragungen aus der Datei ``/etc/fstab`` neu mit ``mount -a``. Ggf. erkennst Du auch noch Fehler, die sich aufgrund von Tippfehlern in der Datrei /etc/fstab ergeben.
-    Behebe diese zuerst bevor du fortfährst.
-
-.. 12. Kopiere dann die gesicherten Inhalte wieder in das Verzeichnis ``/var``, das jetzt auf dem LVM gemountet ist und noch keinen Inhalt hat. Starte danach wieder   
-    das virtuelle Dateisystem oder gehe direkt zu Punkt 13, da beim Neustart dieses wieder eingehangen wird.
-
-.. .. code::
-
-   cd /savevar/var
-   sudo cp -R * /var
-   sudo systemctl start lxcfs.service
-
-.. 13. Boote danach den Server neu mit ``sudo reboot``. Startet dieser ohne Fehlermeldungen durch, kannst du nun das Verzeichnis ``savevar`` wieder löschen mit ``rm -R /savevar``.
-
-.. .. hint::
-
-   Solltest Du beim Kopieren des Inhalts von ``var`` Fehler angezeigt bekommen, so hast du das virtuelle Dateisystem zuvor nicht ausgehangen. Gehe dann wie unter 9. vor.
-
-.. Automatische Updates abschalten
-.. -------------------------------
-
-.. Der frisch installierte Ubuntu-Server hat automatische Updates aktiviert. Das solltest du abschalten.
-
-.. Werde mit ``sudo -i`` root und editiere, beispielsweise mit nano, die Datei ``/etc/apt/apt.conf.d/20auto-upgrades``:
-
-.. .. code::
-
-  nano /etc/apt/apt.conf.d/20auto-upgrades
-
-.. Ersetze bei ``APT::Periodic::Unattended-Upgrade`` die ``"1";`` durch ``"0";``. Mit ``<Strg>+o`` speicherst du die Änderung ab. Und mit ``<Strg>+x`` verlässt du nano wieder.
-
-.. Jetzt kannst du den Server mit ``apt-get update`` und anschließendem ``apt-get dist-upgrade`` updaten. 
-
-.. cloud-init abschalten
-.. ---------------------
-
-.. 1. Erstelle eine leere Datei um den Dienst am Start zu hindern.
-
-.. .. code::
-
-      sudo touch /etc/cloud/cloud-init.disabled
-
-
-.. 2. Deaktiviere alle Dienste.
-
-.. .. code::
-
-      sudo dpkg-reconfigure cloud-init
-
-.. 3. Deinstalliere alle Pakete und Ordner, auch wenn o.g. Befehl nicht ausgeführt werden konnte !
-
-.. .. code::
-
-      sudo dpkg-reconfigure cloud-init
-      sudo apt-get purge cloud-init
-      sudo rm -rf /etc/cloud/ && sudo rm -rf /var/lib/cloud/
-
-.. 4. Starte den Server neu.
-
-.. .. code::
-
-      sudo reboot
-
-.. Server auf lmn7.1 vorbereiten
-.. =============================
-
-.. Nachdem du ``from scratch`` installiert hast, musst du vorab mit dem Skript ``lmn71-appliance`` den soeben installierten und vorbereiteten Ubuntu-Server vor dem ersten Setup für linuxmuster v7.1 vorbereiten.
-
-.. .. hint::
-   
-   Die Anpassung des Netzbereichs / des Profils ist vor Aufruf des eigentlichen Setups auszuführen.
-
-.. Das Skript lmn71-appliance
-.. --------------------------
-
-.. Das Skript lmn71-appliance ...
-
-.. - bringt das Betriebssystem auf den aktuellen Stand,
-.. - installiert das Paket linuxmuster-prepare und
-.. - startet dann das Vorbereitungsskript linuxmuster-prepare,
-.. - das die für das jeweilige Appliance-Profil benötigten Pakete installiert,
-.. - das Netzwerk konfiguriert,
-.. - das root-Passwort auf Muster! setzt und
-.. - im Falle des Serverprofils LVM einrichtet.
-
-.. Melde dich am neu installierten Ubuntu 18.04 Server an und werde root mit ``sudo -i``.
-.. Führe danach folgende Befehle in der Eingabekonsole aus:
-
-.. .. code::
-
-   sudo sh -c 'echo "deb https://deb.linuxmuster.net/ lmn71 main" > /etc/apt/sources.list.d/lmn71.list'
-   sudo apt-get update
-   sudo apt-get dist-upgrade
-
-.. .. todo:: Check des Repros bei Release
-
-   .. code::
-   
-   # wget https://raw.githubusercontent.com/linuxmuster/linuxmuster-prepare/master/lmn71-appliance
-   # chmod +x lmn71-appliance
-   # ./lmn71-appliance -p server -u
-
-.. .. hint:: 
- bei Release
-
-   
-   Hast du nicht wie zuvor beschreiben bereits ein LVM auf dem Server eingerichtet und dieses bereits gemountet, dann gibst du zur Installation    
-   folgendes an: ``./lmn71-appliance -p server -l /dev/sdb`` aus. Hierbei wird auf dem angegebenen Device (hier also 2. Festplatte) ein LVM eingerichtet.
-
-
-.. Für weitere Hinweise zum linuxmuster-prepare Skript siehe: https://github.com/linuxmuster/linuxmuster-prepare
-
-.. .. todo:: Überprüfen ob der nächste momentan kommentierte Absatz raus kann. siehe auch https://ask.linuxmuster.net/t/lmn-7-1-linuxmuster-prepare-webui-laeuft-nicht/8655/13?u=machtdochnix
-
-.. .. Fahre den Server herunter und erstelle einen Snapshot in der Virtualisierungsumgebung. Starte danach den server wieder und führe dann das Setup für die lmn v7.1 aus.
-
-
-.. Paketquellen lmn71
-.. ------------------
-
-.. Die Paketquellen, die für die lmn71 eingebunden werden müssen, werden von o.g. Skript lmn71-applicance bereits korrekt eingetragen.
-.. Es wurden somit in den Paketquellen die ``linuxmuster.net sources`` eingetragen und der Schlüssel des Paketserver importiert.
-
-.. Solltest du diesen Vorgang manuell durchführen müssen, gehst du wie folgt vor:
-
-.. * Zunächst wirst du wieder root mit ``sudo -i``.
-.. * Dann lädst du den key für das repository für lmn71 mit ``wget -qO - "https://deb.linuxmuster.net/pub.gpg" | sudo apt-key add -`` herunter.
-.. * Jetzt fügst du das linuxmuster 7.1 repository hinzu und aktualisierst: 
-
-.. .. todo:: Verbindungscheck zur OPNsense einfügen
-   
-..    ssh root@opnsense
-
-..    Key akzeptieren
-
+   Timezone: Warum Etc/UTC? 
