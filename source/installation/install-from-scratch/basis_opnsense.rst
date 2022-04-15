@@ -229,6 +229,9 @@ Die zweite Netzwerkkarte (WAN) ist mit dem Router verbunden. Die IP hängt davon
 
 Sollte bei dem WAN Interface keine, eine IP-Adresse nach dem Muster 0.0.0.0/8 oder eine andere als die von dir erwartete erscheinen, dann muss die Zuordnung der Netwerkkarte überprüft werden. Hier beispielhaft anhand unserer Proxmox-Umgebung.
 
+Anpassung der Zuordnung der Netzwerkkarten
+------------------------------------------
+
 Rufe dazu den Menüeintrag ``1) Assign interfaces`` auf. Die Nachfragen bezüglich LAGGs und VLAN verneinst du.
 
 .. figure:: media/basis_opnsense_013_a.png
@@ -421,12 +424,20 @@ Aktualisiere die OPNsense |reg| in der Konsole, indem du den Punkt ``12) Update 
 
   Sollte hierbei keine Verbindung zu den externen Update-Servern möglich sein, dann stimmt deine Netzwerkkartenzuordnung noch nicht. Ändere dies, bevor du fortfährst.
 
-Klappt das Update, startest du die OPNsense neu. Dazu beantwortest du die Nachfrage mit ``y``.
+Klappt das Update, startest du die OPNsense neu nachdem du dich erneut eingeloggt hast.
+
+.. figure:: media/basis_opnsense_013_i.png
+   :align: center
+   :alt: OPNsense: GUI - Assign unterfaces
+
+``6) Reboot`` dessen Nachfrage du mit ``y`` beantwortest .
+
+.. todo:: Benennung der Bilder aktualisieren
 
 Konfiguration der OPNsense |reg|
 ================================
 
-Für die Konfiguration der OPNsense |reg| brauchst du einen Rechner mit Webbrowser im LAN-Bereich der OPNsense |reg|. Das kann ein Laptop mit Linux oder einem anderen Betriebssystem sein. Wichtig ist nur, dass er mit dem LAN-Adapter der OPNsense |reg| verbunden ist und sich im gleichen Netzwerk wie die OPNsense |reg| befindet. In unserer Beschreibung gehen wir davon aus, dass seine manuell zugewiesene IP-Adresse 10.0.0.10 ist.
+Für die nachfolgende Konfiguration der OPNsense |reg| brauchst du einen Rechner mit Webbrowser im LAN-Bereich der OPNsense |reg|. Das kann ein Laptop mit einem beliebigen Betriebssystem sein. Wichtig ist nur, dass er mit dem LAN-Adapter der OPNsense |reg| verbunden ist und sich im gleichen Netzwerk wie die OPNsense |reg| befindet. In unserer Beschreibung gehen wir davon aus, dass seine manuell zugewiesene IP-Adresse 10.0.0.10 ist.
 
 Nachdem der Browser gestartet ist, gib folgende URL für den Zugriff auf die GUI der OPNsense ein:
 
@@ -442,7 +453,7 @@ Du erhältst zunächst eine Zertifikatswarnung, da OPNsense |reg| ja ganz frisch
 
 Melde dich mit ``root`` und dem Passwort ``Muster!`` an. 
 
-Starte den General Setup Wizard mit dem ``Next``-Knopf.
+Starte den General Setup Wizard mit dem ``Next``-Knopf. "Er" wird dich durch die Konfiguration führen, wobei schon einiges richtig durch die zuvor erfolgte Basis-Konfiguration eingerichtet wurde.  
 
 .. figure:: media/basis_opnsense_030.png
 
