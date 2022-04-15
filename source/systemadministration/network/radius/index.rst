@@ -32,7 +32,7 @@ Dieser RADIUS-Server kann prinzipiell auf der OPNsense®, dem lmn-Server oder au
 
 Die Benutzerauthentifizierung erfolgt anhand der Daten im ActiveDirectory (AD) des lmn-Servers, die vom RADIUS-Server via LDAP oder direkt abgefragt werden.
 
-Einsatz auf der OPNSense®
+Einsatz auf der OPNsense®
 -------------------------
 
 Derzeit unterstützt das OPNsense® - Plugin die ``Radius <-- --> AD`` Kommunikation mithilfe von ``auth_ntlm`` N I C H T.

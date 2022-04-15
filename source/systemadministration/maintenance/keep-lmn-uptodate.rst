@@ -75,10 +75,10 @@ Um die Server-Installation auf den aktuellen Paketstand zu bringen, gehe folgend
         :alt: Restart Services
         :align: center
 		
-Aktualisierung der Firewall OPNSense®
+Aktualisierung der Firewall OPNsense®
 -------------------------------------
 
-Um die Firewall OPNSense® zu aktualisieren, beachte bitte Hinweise.
+Um die Firewall OPNsense® zu aktualisieren, beachte bitte Hinweise.
 
 .. attention::
 
@@ -91,20 +91,20 @@ Verbinde Dich hierzu mit der Firewall über einen Browser. Nach der Anmeldung er
 um direkt Updates einzuspielen.
     
     .. image:: media/04-opnsense-update.png
-        :alt: OPNSense® aktualisieren
+        :alt: OPNsense® aktualisieren
         :align: center
 
 Eine etwas ausführlichere Übersicht ist unter ``System -> Firmware -> Aktualisierungen`` zu finden. 
 
     .. image:: media/05-opnsense-update.png
-        :alt: OPNSense® aktualisieren
+        :alt: OPNsense® aktualisieren
         :align: center
 
 Normale Minor-Releases können so direkt eingespielt werden. Sobald allerdings das Patch-Level erhöht wird, muss hier zuerst 
 das `Upgrade` entsperrt werden.
 
     .. image:: media/06-opnsense-update.png
-        :alt: OPNSense® aktualisieren
+        :alt: OPNsense® aktualisieren
         :align: center
 
 Es ist zu empfehlen solche Upgrades außerhalb der regulären Einsatzzeiten der Schule zu betreiben. Bei einem Upgrade startet 

@@ -261,7 +261,7 @@ Nach der zuvor beschriebenen Erstinstallation von Proxmox wurde bislang nur eine
 
 Für die internen virtuellen Netze ist also eine zweite Bridge zu erstellen, die an die zweite Netzwerkkarte direkt gebunden wird. Dieser wird allerdings keine IP-Adresse zugeordnet. 
 
-Ausgangspunkt: ``Host hv01 -> Network``
+Ausgangspunkt: ``Host hv01`` --> ``Network``
 
 Die bisherige Netzwerkkonfiguration stellt sich wie folgt dar:
 
@@ -293,9 +293,26 @@ Für die folgende Überprüfung öffnet du nochmals die Konsole auf dem Hypervis
 
    Die Bezeichnungen für die Netzwerkkarten eno1, eno2 können je nach eingesetztem System von der dargestellten Bezeichnung abweichen.
 
-Nun erstellst Du die ``zweite Bridge - vmbr0``:
+Für das weitere Vorgehen, ist es hilfreich die Funktion der Kommentierung der Netzwerkbrücken zu nutzen.
+Diese ist für die vmbr0 bisher noch nicht gesetzt.
 
-Dazu wähle das Menü ``Datacenter -> hv01 -> Network ->  Create -> Linux Bridge``
+.. figure:: media/install-on-proxmox_13_network-vmbr0.png
+   :align: center
+   :alt: Proxmox-Übersicht hv01 - Network-vmbr0-edit
+
+Markiere wie gezeigt ``vmbr0`` und betätige den ``Edit``-Button um das Konfigurationsfenster zu öffnen. 
+
+.. figure:: media/install-on-proxmox_13_network-vmbr0-comment.png
+   :align: center
+   :alt: Proxmox-Übersicht hv01 - Network-vmbr0-comment
+
+Trage unter ``Comment`` einen Kommentar ein der veranschaulich, dass diese Brücke die Verbindung zum Internet stellt. Zum Beispiel wie hier gezeigt ``red``, den bei uns historisch gewachsenen Begriff für dieses Interface.
+
+####
+
+Nun erstellst Du die zweite Bridge ``vmbr1``:
+
+Dazu wähle das Menü ``Datacenter`` --> ``hv01`` --> ``Network`` -->  ``Create`` --> ``Linux Bridge``
 
 .. figure:: media/install-on-proxmox_14_network-add-bridge.png
    :align: center
@@ -524,8 +541,8 @@ Beispiel:
 Vorbereiten des ISO-Speichers
 =============================
 
-Um die v7.1 zu installieren, müssen zwei virtuelle Maschinen angelegt werden. OPNSense und Ubuntu Server 18.04 LTS werden in die VMs installiert.
-Dazu ist es erforderlich, dass du die ISO-Images für OPNSense und Ubuntu Server 18.04 LTS auf den Proxmox-Hypervisor in den Datenspeicher für ISO-Images lädst.
+Um die v7.1 zu installieren, müssen zwei virtuelle Maschinen angelegt werden. OPNsense und Ubuntu Server 18.04 LTS werden in die VMs installiert.
+Dazu ist es erforderlich, dass du die ISO-Images für OPNsense und Ubuntu Server 18.04 LTS auf den Proxmox-Hypervisor in den Datenspeicher für ISO-Images lädst.
 
 .. figure:: media/proxmox-download-iso_01.png
    :align: center
@@ -542,7 +559,7 @@ In dem nun geöffneten Fenster trägst du die URL
    
    https://releases.ubuntu.com/bionic/ubuntu-18.04.6-live-server-amd64.iso
 
-ein (copy&paste), anschleißend betätigst dann den Buttom ``Query URL``.
+ein (copy&paste). Anschließend betätigst du dann den Buttom ``Query URL``.
 
 .. figure:: media/proxmox-iso-download-ubuntu_01.png
    :align: center
@@ -581,7 +598,7 @@ befindet sich das heruntergeladene Ubuntu-ISO nun in dem ``ISO Images`` und steh
 OPNsense
 --------
 
-Die zuvor gezeigte Möglichkeit des einfachen Importes mittels den Bordmitteln von PROXMOX steht dir vür die OPNSense |reg| leider nicht zur Verfügung da nur der Download eines bz2-Dateien möglich ist. Dir steht der Weg des Downloads auf einen lokalen PCs, der Umwandlung des bz2-File in eine iso-Datei und dann der Upload über den dir im Abschnitt Ubuntu frei. Dabei wählst du dann nicht ``URL`` sondern ``Upload``.
+Die zuvor gezeigte Möglichkeit des einfachen Importes mittels den Bordmitteln von PROXMOX steht dir vür die OPNsense |reg| leider nicht zur Verfügung da nur der Download eines bz2-Dateien möglich ist. Dir steht der Weg des Downloads auf einen lokalen PCs, der Umwandlung des bz2-File in eine iso-Datei und dann der Upload über den dir im Abschnitt Ubuntu frei. Dabei wählst du dann nicht ``URL`` sondern ``Upload``.
 
 Um dir den Upload zu ersparen, beschreiben wir hier den Weg um die benötigten Dateinen direkt in deine Proxmox-Maschine zu bringen:
 
@@ -619,7 +636,7 @@ Signatur Datei (<filename>.sig)
 
    wget https://mirror.informatik.hs-fulda.de/opnsense/releases/22.1/OPNsense-22.1.2-OpenSSL-dvd-amd64.iso.bz2.sig
 
-Der öffentliche Schlüssel von OPNSense |reg| (<filename>.pub)
+Der öffentliche Schlüssel von OPNsense |reg| (<filename>.pub)
 
 .. code::
 
@@ -650,7 +667,7 @@ Nun gilt es die ISO-Datei auszupacken. Das machst du mit folgendem Befehl:
 
    bunzip2 OPNsense-22.1.2-OpenSSL-dvd-amd64.iso.bz2
 
-Das Entpacken kann einige Zeit in Anspruch nehmen. Anschließend sollte sich in dem Verzeichnis die OPNSense-ISO-Datei befinden. Die daneben befindlichen anderen OPNsense-Datei kansst du nun wieder löschen.
+Das Entpacken kann einige Zeit in Anspruch nehmen. Anschließend sollte sich in dem Verzeichnis die OPNsense-ISO-Datei befinden. Die daneben befindlichen anderen OPNsense-Datei kansst du nun wieder löschen.
 
 .. code::
 
@@ -771,7 +788,7 @@ Die eigentliche Installation von OPNsense in der VM folgt später.
 Anlegen der VM für linuxmuster server
 -------------------------------------
 
-Um für die den linuxmuster.net Server v7.1 eine VM anzulegen, wählst du in der Proxmox - Verwaltungsoberfläche den Button ``Create VM``.
+Um für den linuxmuster.net Server v7.1 die VM anzulegen, wählst du erneut in der Proxmox - Verwaltungsoberfläche den Button ``Create VM``.
 
 .. figure:: media/proxmox-create-vm.png
    :align: center
@@ -888,6 +905,8 @@ Dies führst du für die OPNsense VM und für die Ubuntu Server VM durch.
 
 .. hint:: 
    
-   Nach abgeschlossender Installation musst du daran denken, die CD wieder auszuwerfen und in den VMs die Boot_Reihenfolge wieder so zu ändern, dass zuerst von Festplatte gebootet wird.
+   Nach abgeschlossender Installation musst du daran denken, die CD wieder auszuwerfen und in den VMs die Boot-Reihenfolge wieder so zu ändern, dass zuerst von Festplatte gebootet wird.
+
+######
 
 Installiere nun gemäß der Anleitung: :ref:`install-from-scratch-label`
