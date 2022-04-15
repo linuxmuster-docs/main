@@ -183,10 +183,6 @@ Wenn alles geklappt hat, ist Folgendes zu sehen:
 
    Die dargestellte IPs und Netze können bei deiner OPNsense |reg| andere sein.
 
-Die erste Netzwerkkarte (LAN) ist mit dem pädagogischen Netz verbunden. Allerdings noch mit den falschen Netzwerkeinstellungen, da die Installationsroutine der OPNsense |reg| immer die IP 192.168.1.1/24 zuweist. Diese gilt es noch zu ändern.
-
-Die zweite Netzwerkkarte (WAN) ist mit dem Router verbunden. Die IP hängt davon ab, welche IPs via DHCP von deinem DSL_Router verteilt werden. In einer Schulumgebung kann es sein, dass der Router keinen DHCP-Service anbieten. In diesem Fall musst du dafür sorgen, dass sich sowohl das Interface (WAN) der OPNsense |reg| als auch der Router im gleichen Netzwerk befinden.
-
 Basis-Konfiguration der OPNsense |reg|
 --------------------------------------
 
@@ -223,42 +219,114 @@ Zuerst überprüfe, ob die Tastaturbelegung richtig ist. Dazu wähle den Punkt 8
 Überprüfung der Zuordnung der Netzwerkkarten
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. todo:: Tests genauer beschreiben:
+.. figure:: media/basis_opnsense_011.png
+   :align: center
+   :alt: OPNsense: Final Configuration
 
-   * optische Zuordnung der Schnittstellen 
-   * ping-test auf 8.8.8.8
-   * ping test auf internet-Seite z.b. heise.de
-   
-   wenn alles i.O. dann Sprung zu `IP-Adressen zuweisen`_
+Die erste Netzwerkkarte (LAN) ist mit dem pädagogischen Netz verbunden. Allerdings noch mit den falschen Netzwerkeinstellungen, da die Installationsroutine der OPNsense |reg| immer die IP 192.168.1.1/24 zuweist. Diese gilt es noch zu ändern.
 
-   Richtig einstellen beschreiben
+Die zweite Netzwerkkarte (WAN) ist mit dem Router verbunden. Die IP hängt davon ab, welche IPs via DHCP von deinem DSL_Router verteilt werden. In einer Schulumgebung kann es sein, dass der Router keinen DHCP-Service anbieten. In diesem Fall musst du dafür sorgen, dass sich sowohl das Interface (WAN) der OPNsense |reg| als auch der Router im gleichen Netzwerk befinden. In unserem Beispiel hat die Zuordnung der Netzwerkkarten nicht geklappt, der Router sollte 192.168.21.212 der OPNsense zuweisen.
 
-   Neustart
+Sollte bei dem WAN Interface keine, eine IP-Adresse nach dem Muster 0.0.0.0/8 oder eine andere als die von dir erwartete erscheinen, dann muss die Zuordnung der Netwerkkarte überprüft werden. Hier beispielhaft anhand unserer Proxmox-Umgebung.
 
-.. hint:: 
+Rufe dazu den Menüeintrag ``1) Assign interfaces`` auf. Die Nachfragen bezüglich LAGGs und VLAN verneinst du.
 
-   Prüfe, ob die Zuordnung der Netzwerkkarten, in Abhängigkeit der Installationsart, die du gewählt hast, korrekt ist. Also ob du OPNsense |reg| in eine VM oder direkt auf der Hardware (bare metal) installiert hast. Sollte diese nicht stimmen, kannst du an der Konsole dies nach der Anmeldung mit dem Menüeintrag ``1) Assign interfaces`` anpassen.
+.. figure:: media/basis_opnsense_013_a.png
+   :align: center
+   :alt: OPNsense: GUI - LAGGs an VLANs no 
 
-   Hast du auf der Konsole diesen Eintrag aufgerufen, werden dir die gefundenen Netzwerkkarten mit deren MAC-Adressen angezeigt. Achte nun darauf, dass die Netzwerkkarte mit der dargestellten MAC-Adresse und der geeigneten physikalischen Verkabelung korrekt zugeordnet werden. 
-   
-   * Internes Netz - GREEN muss unter OPNsense |reg| als LAN,
+Dann gilt es die MAC-Adressen zwischen denen der Virtuellen Maschine hier vtnet0 und vtnet1
 
-   * das externe Netz - RED unter OPNsense |reg| als WAN und
-   
-   * weitere Netzwerkkarte |zB| für das WLAN - BLUE unter OPNsense |reg| als OPT1 angegeben werden.
-  
-   Das WAN-Interface - also die externe Schnittstelle (RED) - wird hierbei zuerst abgefragt, danach das LAN-Interface für das lokale Netz (GREEN) und danach Opt1 für BLUE.
-   
-   Die Zuordnung wird auf der Konsole nochmals angezeigt und diese ist dann mit ``y`` zu bestätigen.
+.. figure:: media/basis_opnsense_013_b.png
+   :align: center
+   :alt: OPNsense: GUI - Valid Interfaces 
 
-    reboot # Neustart - kontrolliere danach, ob das gewünschte Layout angewendet wurde
+und denen der Netzwerkbrücken vmbr0 und vmbr1 zu überprüfen: 
+
+.. figure:: media/basis_opnsense_013_c.png
+   :align: center
+   :alt: Proxmox: GUI -s Network Devices 
+
+``hv01`` --> ``VM100`` --> ``Hardware`` --> ``Network Device (net`` 
+
+Unter ``hv01`` unter ``Network`` kannst du dir jetzt mittels dem Kommentarfeld wieder die Zuordnung ins Gedächtnis rufen.
+
+==========  ======  =================  ===  =================  ==========  ===
+Bridge des Virtualisierers             <->  Virtuelle Machine
+-------------------------------------  ---  ----------------------------------
+Kommtentar  Brücke  MAC                     MAC                Interfaces  Typ
+==========  ======  =================  ===  =================  ==========  ===
+red         vmbr0   0E:76:8B:51:85:15  <->  0e:76:8b:51:85:15  vtnet0      WAN
+green       vmbr1   DA:97:1B:E1:35:9C  <->  da:97:1b:E1:35:9c  vtnet1      LAN
+==========  ======  =================  ===  =================  ==========  ===
+
+Aus diesem Wissen und dem Vergleich erkennst du, |...|
+
+.. figure:: media/basis_opnsense_013_d.png
+   :align: center
+   :alt: OPNsense: GUI - WAN connect to vtnet0 
+
+|...| dass WAN zum Interface vtnet0 zugeordnet gehört.
+
+.. figure:: media/basis_opnsense_013_e.png
+   :align: center
+   :alt: OPNsense: GUI - 
+
+|...| dass LAN zum Interface vtnet1 ghört.
+
+.. figure:: media/basis_opnsense_013_f.png
+   :align: center
+   :alt: OPNsense: GUI - Assign unterfaces 
+
+Hast du kein weiteres Interface dann ``Enter``
+
+.. figure:: media/basis_opnsense_013_g.png
+   :align: center
+   :alt: OPNsense: GUI - Assign unterfaces 
+
+Diese Zuordnung ist nun richtig, also weiter mit ``y``, |...|
+
+.. figure:: media/basis_opnsense_013_h.png
+   :align: center
+   :alt: OPNsense: GUI - Assign unterfaces 
+
+|...| welches dann die Konfiguration startet.
+
+.. figure:: media/basis_opnsense_013_i.png
+   :align: center
+   :alt: OPNsense: GUI - Assign unterfaces 
+
+Die Zuordnung des WAN Interfaces ist nun richtig.
+
+WAN Zugang testen
+^^^^^^^^^^^^^^^^^
+
+Um zwei erste Tests durchzuführen, wechsele mit ``8) Shell`` auf die Kommandozeile und gebe dort folgende Befehle ein.
+
+.. code::
+
+   ping -c 3 8.8.8.8
+
+Die Ausgabe sollte wie folgt aussehen:
+
+.. figure:: media/basis_opnsense_013_j.png
+   :align: center
+   :alt: OPNsense: GUI - Assign unterfaces 
+
+.. code::
+
+   ping -c 3 linuxmuster.net
+
+.. figure:: media/basis_opnsense_013_k.png
+   :align: center
+   :alt: OPNsense: GUI - Assign unterfaces 
 
 IP-Adressen zuweisen
 ^^^^^^^^^^^^^^^^^^^^
 
 Solltest du in deiner Netzwerkkonfiguration von unserem Muster abweichen, musst du bei nachfolgenden Schritten eben deiner Festlegung folgen.
 
-.. figure:: media/basis_opnsense_013.png
+.. figure:: media/basis_opnsense_013_z.png
    :align: center
    :alt: OPNsense: GUI - Set interfaces IP address 
 
