@@ -123,30 +123,49 @@ Für das Setup werden noch weitere Partitionen benötigt. Dafür haben wir uns f
 
 .. hint:: Für kleine Schulen oder eine Test-Installation sollten diese Vorgaben passen. 
    
-   ============== ========================== ========================= =====
+   ============== ========================== ========================= ==========
    LV Name        LV Pfad                    Mountpoint                Größe
-   ============== ========================== ========================= =====
+   ============== ========================== ========================= ==========
    var            /dev/sg_srv/var            /var                      10G
    linbo          /dev/sg_srv/linbo          /srv/linbo                40G
    global         /dev/sg_srv/global         /srv/samba/global         10G
-   default-school /dev/sg_srv/default-school /srv/samba/default-school 40G
-   ============== ========================== ========================= =====
+   default-school /dev/sg_srv/default-school /srv/samba/default-school 40G [#f1]_
+   ============== ========================== ========================= ==========
 
-Wenn du für deine Installation unsere Vorgaben nutzen willst, dann kannst du den nächsten Punkt überspringen. Unser Installationscript nimmt dir die nötigen vorbereitenden Aktionen ab. Für dich geht es weiter mit `Übernahme der Partitionierung`_, ansonsten hier weiter mit der |...|
+.. [#f1] Sollte deine Festplatte größer sein als die vorgeschlagene Mindestgröße so wird für diese Partition der maximal übrige freie Platz mit verwendet.
 
-|...| Einrichtung eines LVM auf der 2. HDD nach deinen Vorgaben.
-   
+.. todo:: Der Fakt [#f1]_ ist noch bei einer Probe-Installation zu überprüfen!
+
+Unser Installationscript nimmt dir dann die nötigen vorbereitenden Aktionen ab. 
+
+Wenn du es für deine Installation nutzen willst, dann kannst du die nächsten Punkte überspringen mit `Speicherplatzkonfiguration übernehmen`_
+
+Ansonsten hängt dein weiteres Vorgehen davon ab, wie du weiter verfahren willst |...|
+
+`... Einrichtung ohne LVM auf HDD nach deinen Vorgaben`_ oder
+
+|...| Einrichtung eines LVM auf der 2. HDD nach deinen Vorgaben
+---------------------------------------------------------------
+
 Wähle den Eintrag ``Datenträgergruppe (LVM) anlegen`` aus.
 
 Hier gibst du einen eigenen Namen für die LVM Volume Group an (z.B. vg0).
 
 .. figure:: media/basis_server_015_custom-storage-layout-create-partition-table-lvm-6.png
 
-.. hint::
+.. todo:: Beschreibung anhand der ubuntu-Installationsmaske einfügen wenn das möglich sein sollte.
 
-   Ohne LVM sind die Mount Points ``/var`` und ``/srv`` auf die 2. HDD zu legen. Die Zuordnung der Mount Points zum LVM wird später detailliert beschrieben.
+Weiter mit der `Speicherplatzkonfiguration übernehmen`_
 
-.. _Übernahme der Partitionierung: 
+|...| Einrichtung ohne LVM auf HDD nach deinen Vorgaben
+-------------------------------------------------------
+
+Ohne LVM sind die Mount Points ``/var``, ``/srv/linbo``, ``/srv/damba/global`` und ``/srv/samba/default-school`` auf die HDD(s) zu legen.
+
+.. todo:: Beschreibung wäre hier zu erstellen. Original Text "Die Zuordnung der Mount Points zum LVM wird später detailliert beschrieben" und der beschreibene Text in den Zeilen 203 bis 291 könnte dann entfallen, da die Erklärung hier stehen würde.
+
+Speicherplatzkonfiguration übernehmen
+-------------------------------------
 
 Zum Abschluss werden dir die Partitionsierungseinstellungen gemäß deiner Eingaben angezeigt.
 
@@ -156,7 +175,9 @@ Stimmen diese mit den gewünschten überein, so wähle ``Erledigt`` aus.
 
 Danach erhälst du die Rückfrage, ob die Installation fortgesetzt werden soll und die Daten auf der Festplatte gelöscht werden sollen.
 
-Bestätige dies.
+.. figure:: media/basis_server_016_d.png
+
+Bestätige dies mit ``Fortfahren``.
 
 .. figure:: media/basis_server_017.png
 
@@ -164,19 +185,19 @@ Nenne den Server ``server``. Der Benutzername (linuxadmin) und das Passwort (Mus
 
 .. figure:: media/basis_server_018.png
 
-Installiere OpenSSH **nicht**
-
-und installiere keine weiteren optionalen Pakete.
+Solltest du eine Möglichkeit für einen Fernzugang zu dem Server wünschen, aktiviere ``OpenSSH-Server installieren``. Wenn du dies machst, mache dir auch Gedanken wie du diesen Zugang absichern kannst. Wir empfehlen das PublickKey-Verfahren. https://wiki.ubuntuusers.de/SSH/#Publickey-Authentifizierung (externer Link)
 
 .. figure:: media/basis_server_019.png
 
-Bestätige die Installation mit ``Fortfahren``.
+Installiere keine weiteren optionalen Pakete.
+
+Bestätige die den Start des Installationsvorganges mit ``Erledigt``.
 
 Zum Abschluß der Installation wird automatisch versucht, Updates zu installieren
 
 .. figure:: media/basis_server_020.png
 
-und danach den Server neu zu starten.
+und danach gilt es den Server neu zu starten. Das veranlasst du mit ``Jetzt neustarten``, wenn es dir angeboten wird
 
 .. figure:: media/basis_server_021.png
 
@@ -186,10 +207,25 @@ Bei laufender und wie zuvor beschriebener Einrichtung der OPNsense |reg| sollte 
 
    Bei einer Installation in eine VM achte vor dem Neustart darauf, dass du die ISO-Datei / DVD ausgeworfen hast und die Boot-Reihenfolge so unmgestellt hast, dass die VM direkt von HDD bootet.
 
-Wenn die Installation abgeschlossen und der Server neu gestartet ist, meldest du dich mit den zuvor angegeben Login-Daten an.
+Wann die Installation abgeschlossen ist, erkennst du daran das die Anzeige von
+
+
+.. figure:: media/basis_server_022.png
+
+auf
+
+.. figure:: media/basis_server_023.png
+
+gewechselt ist, starte den Server neu. Melde dich dann mit den zuvor angegeben Login-Daten an.
+
+weiter mit `Automatische Updates abschalten`_
+
+################
 
 LVM - Einrichtung 
 -----------------
+
+.. todo:: Hinweis in der obigen Hinweisbox beachten. Dann würde dieses hier anders gelöst sein.
 
 Solltest du bei der Installtion unserem Partitionerungs-Vorschlag gefolgt sein, dann kannst du direkt mit `Automatische Updates abschalten`_ fortfahren.
 
@@ -277,10 +313,12 @@ Speichere die Einstellung mit ``Strg+w`` und verlasse den Editor mit ``Strg+x``.
 
    Solltest Du beim Kopieren des Inhalts von ``var`` Fehler angezeigt bekommen, so hast du das virtuelle Dateisystem zuvor nicht ausgehangen. Gehe dann wie unter 9. vor.
 
+################
+
 Automatische Updates abschalten
 -------------------------------
 
-Der frisch installierte Ubuntu-Server hat automatische Updates aktiviert. Das solltest du abschalten.
+Der frisch installierte Ubuntu-Server hat automatische Updates aktiviert. Das solltest du abschalten, denn nur so kannst du sichern sein, dass Updates nicht während der Unterrichtszeit in deiner Einrichtung durchgeführt werden und zu eventuellen Problemen im Schulalltag führen.
 
 Werde mit ``sudo -i`` root und editiere, beispielsweise mit nano, die Datei ``/etc/apt/apt.conf.d/20auto-upgrades``:
 
@@ -290,12 +328,11 @@ Werde mit ``sudo -i`` root und editiere, beispielsweise mit nano, die Datei ``/e
 
 Ersetze bei ``APT::Periodic::Unattended-Upgrade`` die ``"1";`` durch ``"0";``. Mit ``<Strg>+o`` speicherst du die Änderung ab. Und mit ``<Strg>+x`` verlässt du nano wieder.
 
-Jetzt kannst du den Server mit ``apt-get update`` und anschließendem ``apt-get dist-upgrade`` updaten.
+Jetzt kannst du den Server mit ``apt update && apt dist-upgrade`` updaten. Nachdem dir neue Pakete zur Anzeige gebracht wurden, startest du den Upgrade-Prozess mit ``j``.
 
+.. attention::
 
-.. hint::
-
-   Es kann passieren, das sonst durch ein Update zur Unzeit unvorgesehene Probleme auftreten.
+   Durch das Deaktiveren der automatischen Updates liegt jetzt natürlich die Veranwortung des zeitnahen Einspielen von Updates bei dir bzw. der Person die für die Administration verantwortlich zeichnet!
 
 cloud-init abschalten
 ---------------------
@@ -306,18 +343,14 @@ cloud-init abschalten
 
       sudo touch /etc/cloud/cloud-init.disabled
 
-
-2. Deaktiviere alle Dienste.
-
-.. code::
-
-      sudo dpkg-reconfigure cloud-init
-
-3. Deinstalliere alle Pakete und Ordner, auch wenn o.g. Befehl nicht ausgeführt werden konnte !
+2. Deinstalliere alle Pakete und Ordner dieses Dienstes.
 
 .. code::
 
-      sudo apt-get purge cloud-init
+      sudo apt purge cloud-init
+
+.. code::
+
       sudo rm -rf /etc/cloud/ && sudo rm -rf /var/lib/cloud/
 
 4. Starte den Server neu.
@@ -326,3 +359,33 @@ cloud-init abschalten
 
       sudo reboot
 
+Test der Verbindung zur Firewall
+--------------------------------
+
+Es folgt ein letzter Test um sicherzustellen, das die SSH-Verbindung zwischen dem Server und der Firewall funktioniert. Diese ist für das weitere Vorgehen entscheidend.
+
+Nach dem erneuten Einloggen rufst du folgende Zeile an der Konsole des Servers auf: 
+
+.. code::
+
+   ssh root@10.0.0.254
+
+Da es die erste Kontaktaufnahme zwischen dem Server und der Firewall ist,
+
+.. figure:: media/basis_server_024.png
+
+ist es notwendig das du den Key akzeptierst. 
+
+Anschließend wiederholst du deinen Loginversuch nochmals,
+
+.. code::
+
+   ssh root@10.0.0.254
+
+der diesmal nach der Eingabe des Passwortes ``Muster!`` erfolgreich sein sollte.
+
+.. figure:: media/basis_server_025.png
+
+Mit ``0) Logout`` beendest du die Verbindung.
+
+Weiter geht es jetzt mit :ref:`lmn_pre_install-label`
