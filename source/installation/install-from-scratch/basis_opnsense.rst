@@ -24,6 +24,7 @@ Anlegen und Installieren der Firewall
 
 .. sectionauthor:: `@rettich <https://ask.linuxmuster.net/u/rettich>`_,
                    `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
+                   `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
 
 Bist du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst du fortfahren mit `Erster Start der Firewall`_
 
