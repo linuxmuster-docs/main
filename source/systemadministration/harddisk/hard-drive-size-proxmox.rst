@@ -12,13 +12,10 @@ Vorbereiten der Proxmox Festplatten
 .. sectionauthor:: `@toheine <https://ask.linuxmuster.net/u/toheine>`_,
                    `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_,
                    `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
-.. hint::
-
-   Achtung: Dies ist noch eine unvollständige Beschreibung. Findest du Fehler oder kannst zur Verbesserung beitragen, dann wende dich bitte an einen der Autoren des Abschnittes.
 
 Am Beispiel der OPNsense®-VM werden die Anpassungen nachstehend erläutert.
 
-Wähle, als Erstes die VM aus die geklont werden soll.
+Wähle als Erstes die VM aus, die geklont werden soll.
 
 .. figure:: media/hdd-preparation-on-proxmox_0_1_vm-overview.png
    :align: center

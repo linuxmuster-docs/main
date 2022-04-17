@@ -12,19 +12,7 @@ Aktualisieren der Festplattengrößen der OPNsense®-VM
 
 .. hint::
 
-   Diesen Abschnitt musst du nur ausführen, sofern du in deinem Hypervisor die HDD-Größe der OPNsense® bereits vergrößert hast. Ansonsten kannst du bei der Einrichtung mit dem Kapitel ``Netzbereich anpassen`` fortfahren.
-   
-..
-   ==================== ======================
-   Netzbereich anpassen |follow_me2modify-net|
-   ==================== ======================
-
-============================== ==========================
-Proxmox - Netzbereich anpassen |follow_me2proxmox-backhd|
-XCP-ng  - Netzbereich anpassen |follow_me2xcp-ng-backhd|
-KVM     - Netzbereich anpassen |follow_me2kvm-backhd|
-============================== ==========================
-
+   Diesen Abschnitt musst du nur ausführen, sofern du in deinem Hypervisor die HDD-Größe der OPNsense® bereits vergrößert hast.
    
 Überblick
 ---------
@@ -87,12 +75,7 @@ Ausgabe des Befehls liefert:
   =>       0  20964762  da0s1  BSD  (10G)
            0        16         - free -  (8.0K)
           16  20964746      1  freebsd-ufs  (10G)
-          
-          
-.. attention::
 
-   Unter XCP-ng kann die Bezeichnung der Festplatte abweichen. Hier wird in der OPNsense-VM für die 1. HDD die Bezeichnung ``ada0`` verwendet.
-   Die 1. Partition wird dann mit ``ada0s1`` bezeichnet. Die Angaben sind daher dann entsprechend anzupassen.
 
 4.3 Partitionsgrößen prüfen
 ---------------------------
@@ -138,7 +121,7 @@ Ausgabe des Befehls:
 
 .. code::
 
-   growfs: superblock not recognized 
+   growfs: superblock not recognized
 
 4.6 Änderungen anwenden
 -----------------------
@@ -191,12 +174,4 @@ Führe nun einen Reboot der VM aus.
 Weiterführende Erklärungen zu FreeBSD zu diesem Thema findest du hier: 
 
 https://www.digitalocean.com/community/questions/freebsd-growfs-operation-not-permitted-aka-enlarge-your-partition
-
-Weiter geht es mit der Anpassung des Netzwerkes. 
-
-============================== ==========================
-Proxmox - Netzbereich anpassen |follow_me2proxmox-backhd|
-XCP-ng  - Netzbereich anpassen |follow_me2xcp-ng-backhd|
-KVM     - Netzbereich anpassen |follow_me2kvm-backhd|
-============================== ==========================
 
