@@ -17,7 +17,7 @@
 
 .. _basis_server-label:
 
-Bist du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst du fortfahren mit `Erster Start des Servers`_.
+Bist du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst du fortfahren mit `Erster Start des Servers vom Installationsmedium`_.
 
 ====================================
 Anlegen und Installieren des Servers
@@ -38,8 +38,8 @@ Anlegen und Installieren des Servers
 
    Bei der Einrichtung des Servers musst du nur einen Server mit 2 HDDs haben und Ubuntu 18.04 auf der ersten HDD installieren. Die zweite HDD bleibt frei. Auf dieser 2. HDD richtest du - wie nachstehend beschrieben -  ein LVM ein.
 
-Erster Start des Servers
-========================
+Erster Start des Servers vom Installationsmedium
+================================================
 
 Starte den Server via Ubuntu 18.04 Server ISO-Image (USB-Stick oder CD-ROM). Es erscheint das erste Installationsfenster mit der Abfrage zur gewünschten Sprache.
 
@@ -216,9 +216,9 @@ auf
 
 .. figure:: media/basis_server_023.png
 
-gewechselt ist, starte den Server neu. Melde dich dann mit den zuvor angegeben Login-Daten an.
+gewechselt ist, starte den Server neu.
 
-weiter mit `Automatische Updates abschalten`_
+weiter mit `Basis-Konfiguration des Servers`_
 
 ################
 
@@ -315,20 +315,55 @@ Speichere die Einstellung mit ``Strg+w`` und verlasse den Editor mit ``Strg+x``.
 
 ################
 
+Basis-Konfiguration des Servers
+===============================
+
+xterm.js für die Konsolenutzung in Proxmox aktivieren
+-----------------------------------------------------
+
+Nachdem du dich erneut als ``root`` an der ``noVNC`` Konsole angemeldet hast, gebe diese zwei Zeilen Code nacheinander ein:
+
+.. code::
+
+   sudo systemctl enable serial-getty@ttyS0.service
+
+.. code::
+
+   sudo systemctl start serial-getty@ttyS0.service
+
+Jetzt melde dich an der ``noVNC``-Konsole ab und an der ``xterm.js`` an.
+
+Auch wenn du keinen Prompt siehst, einfach deinen Login eingeben. Nach dem ``Enter`` wirst du zur Eingabe deines Passwortes aufegfordert.
+
+Danach kannst du die folgenden Codezeilen einfach zwischen der Anleitung und dem Server übertragen.
+
 Automatische Updates abschalten
 -------------------------------
 
 Der frisch installierte Ubuntu-Server hat automatische Updates aktiviert. Das solltest du abschalten, denn nur so kannst du sichern sein, dass Updates nicht während der Unterrichtszeit in deiner Einrichtung durchgeführt werden und zu eventuellen Problemen im Schulalltag führen.
 
-Werde mit ``sudo -i`` root und editiere, beispielsweise mit nano, die Datei ``/etc/apt/apt.conf.d/20auto-upgrades``:
+Werde mit |...| 
+
+.. code::
+
+  sudo -i
+ 
+|...| zum Nutzer ``root`` und editiere, beispielsweise mit nano, die Datei |...|
 
 .. code::
 
   nano /etc/apt/apt.conf.d/20auto-upgrades
 
-Ersetze bei ``APT::Periodic::Unattended-Upgrade`` die ``"1";`` durch ``"0";``. Mit ``<Strg>+o`` speicherst du die Änderung ab. Und mit ``<Strg>+x`` verlässt du nano wieder.
+Ersetze bei ``APT::Periodic::Unattended-Upgrade`` die ``"1";`` durch ``"0";``.
+Mit ``<Strg>+o`` speicherst du die Änderung ab. Und mit ``<Strg>+x`` verlässt du nano wieder.
 
-Jetzt kannst du den Server mit ``apt update && apt dist-upgrade`` updaten. Nachdem dir neue Pakete zur Anzeige gebracht wurden, startest du den Upgrade-Prozess mit ``j``.
+Jetzt kannst du den Server updaten mit |...|
+
+.. code:: 
+
+   apt update && apt dist-upgrade
+   
+Nachdem dir neue Pakete zur Anzeige gebracht wurden, startest du den Upgrade-Prozess mit ``j``.
 
 .. attention::
 

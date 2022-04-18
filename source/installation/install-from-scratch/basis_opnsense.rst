@@ -566,6 +566,8 @@ ssh erlauben
 
 Setze jeweils den Haken bei ``Aktiviere Secure Shell``, ``Erlaube Anmeldung mit dem root-Benutzer`` und ``Anmeldung mit Passwort erlauben``.
 
+Bei dem Punkt ``Sekundäre Konsole`` wähle die Serial-Konsole aus. Mit dieser Auswahl wird die Nutzbarmachung der xterm.js-Konsole innerhalb von Proxmox abgeschlossen. (Zur Erinnerung :ref:`xterm-label` )
+
 Diese Einstellungen wieder ``Speichern``.
 
 Update der OPNsense |reg|
