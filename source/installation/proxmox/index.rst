@@ -761,6 +761,9 @@ Achte darauf, dass die Option ``Start after created`` unbedingt ``deaktiviert`` 
 
 Klicke dann auf ``Finish``.
 
+Hinzufügen einer weiteren Netzwerkbrücke
+----------------------------------------
+
 Nachdem die VM angelegt wurde, wähle diese aus und klicke auf den Eintrag ``Hardware``.
 
 .. figure:: media/proxmox-create-vm-opnsense-09.png
@@ -781,7 +784,41 @@ Achte für die weitere Installation darauf, wie du die Bridges zugeordnet hast:
 1. vmbr 0 - externes Netzwerk: red
 2. vmbr 1 - internes Netzwerk: green
 
+Klicke auf ``Add``.
+
+.. _xterm-label:
+
+Hinzufügen einer Seriellen Schnittstelle
+----------------------------------------
+
+Damit dir copy&paste in der Oberfläche von Proxmox bei der Auswahl unter ``Console`` zur Verfügung steht, muss du die Nutzung von xterm.js ermöglichen.
+
+.. figure:: media/xterm-opnsense_001.png
+   :align: center
+   :alt: xterm.js before activation
+
+Das ist der Zustand vor der Aktivierung.
+
+.. figure:: media/xterm-opnsense_002.png
+   :align: center
+   :alt: xterm.js before activation
+
+Gehe auf ``hv01`` --> ``lmn71-opnsense`` --> ``Hardware`` --> ``Serial Port``
+
+.. figure:: media/xterm-opnsense_003.png
+   :align: center
+   :alt: xterm.js before activation
+
+Lege einen Seriellen Port mit der Bezeichnung ``0`` an.
+
+.. figure:: media/xterm-opnsense_004.png
+   :align: center
+   :alt: xterm.js before activation
+
 Klicke auf ``Add`` und kontrolliere dann nochmals alle Einstellungen der neu angelegten VM.
+
+.. hint:: Für die weitere Nutzung von xterm.js ist allerdings noch eine Anpassung bei der laufenden OPNsense |reg| nötig. Die nehmen wir zu einen geeigneten Zeitspunkt vor.
+
 
 Die eigentliche Installation von OPNsense in der VM folgt später.
 
@@ -876,7 +913,36 @@ Nachdem die VM angelegt wurde, siehst du diese links im Verzeichnisbaum deines P
    :align: center
    :alt: Proxmox VMs: Overview
 
+Hinzufügen einer Seriellen Schnittstelle
+----------------------------------------
+
+Damit dir copy&paste ebenfalls für den Server zur Verfügung steht, muss du die Nutzung von xterm.js auch für ihn wie oben beschrieben ermöglichen. Hier nochmal die Beschreibung
+
+.. figure:: media/xterm-server_001.png
+   :align: center
+   :alt: xterm.js before activation
+
+Das ist der Zustand vor der Aktivierung.
+
+.. figure:: media/xterm-server_002.png
+   :align: center
+   :alt: xterm.js before activation
+
+Gehe auf ``hv01`` --> ``lmn71-server`` --> ``Hardware`` --> ``Serial Port``
+
+.. figure:: media/xterm-opnsense_003.png
+   :align: center
+   :alt: xterm.js before activation
+
+Lege einen Seriellen Port mit der Bezeichnung ``0`` an.
+
+.. figure:: media/xterm-opnsense_004.png
+   :align: center
+   :alt: xterm.js before activation
+
 Die eigentliche Installation des Servers in der VM folgt später.
+
+Klicke auf ``Add`` und kontrolliere dann nochmals alle Einstellungen der neu angelegten VM.
 
 Boot-Optionen
 -------------

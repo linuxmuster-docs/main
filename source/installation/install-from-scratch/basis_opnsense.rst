@@ -24,6 +24,7 @@ Anlegen und Installieren der Firewall
 
 .. sectionauthor:: `@rettich <https://ask.linuxmuster.net/u/rettich>`_,
                    `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
+                   `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
 
 Bist du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst du fortfahren mit `Erster Start der Firewall`_
 
@@ -564,6 +565,8 @@ ssh erlauben
 .. figure:: media/basis_opnsense_054.png
 
 Setze jeweils den Haken bei ``Aktiviere Secure Shell``, ``Erlaube Anmeldung mit dem root-Benutzer`` und ``Anmeldung mit Passwort erlauben``.
+
+Bei dem Punkt ``Sekundäre Konsole`` wähle die Serial-Konsole aus. Mit dieser Auswahl wird die Nutzbarmachung der xterm.js-Konsole innerhalb von Proxmox abgeschlossen. (Zur Erinnerung :ref:`xterm-label` )
 
 Diese Einstellungen wieder ``Speichern``.
 
