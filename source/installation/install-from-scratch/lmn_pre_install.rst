@@ -59,7 +59,7 @@ Damit ist die Vorbereitung abgeschlossen und du startest mit der Installation.
    
    sudo apt install linuxmuster-prepare
 
-Lädt das Skript lmn71-prepare auf den Server, dass |...|
+Nachdem du den Befehl mit ``J`` bestätigt hast, lädt er das Skript lmn71-prepare auf den Server, dass |...|
 
    - die benötigten linuxmuster-Pakete und die von ihnen benötigten anderen Pakete installiert,
    - das Betriebssystem des Servers nochmals auf den aktuellen Stand bringt,
