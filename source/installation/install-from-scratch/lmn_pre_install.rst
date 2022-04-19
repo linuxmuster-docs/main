@@ -47,17 +47,11 @@ Die nächste Zeile fügt das linuxmuster 7.1 Repository hinzu.
 
    sudo sh -c 'echo "deb https://deb.linuxmuster.net/ lmn71 main" > /etc/apt/sources.list.d/lmn71.list'
 
-Die nächsten beiden aktualisieren die Softwareliste des Servers |...|
+Aktualisiere die Softwareliste des Servers mittels
 
 .. code::
    
    sudo apt update
-
-|...| und bringen des System auf den aktuellen Stand.
-
-.. code::
-   
-   sudo apt dist-upgrade
 
 Damit ist die Vorbereitung abgeschlossen und du startest mit der Installation.
 
