@@ -40,7 +40,7 @@ Führe danach folgende Befehle in der Eingabekonsole aus:
 
 .. hint:: -qO --> [-][q][Großbuchstabe O]
 
-Damit installierst du den Key für das Repository von linuxmuster.net und aktivierst ihn
+Damit installierst du den Key für das Repository von linuxmuster.net und aktivierst ihn.
 
 .. code::
 
