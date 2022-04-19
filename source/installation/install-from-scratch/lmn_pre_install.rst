@@ -30,7 +30,7 @@ Das Skript lmn71-prepare
    
    Check des Repros zum Release-Datums! Anm. des Autors
 
-Wenn du nicht mehr an deinem Server eingeloggt bist, melde dich erneut an und werde root mit ``sudo -i``.
+Wenn du nicht mehr an deinem Server eingeloggt bist, melde dich erneut an.
 
 Führe danach folgende Befehle in der Eingabekonsole aus:
 
