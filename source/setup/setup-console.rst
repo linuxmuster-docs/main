@@ -10,7 +10,9 @@ Setup im Terminal
 Setup via Terminal
 ==================
 
-Alternativ zur Schulkonsole kann die Erstkonfiguration direkt am Server über die Konsole ausgeführt werden. Melde dich via SSH als Benutzer ``root`` mit dem Passwort ``Muster!`` auf dem Server an.
+Melde dich als Benutzer ``root`` mit dem Passwort ``Muster!`` auf dem Server an.
+
+Für diese Anmeldung kannst du die xterm.js Konsole von Proxmox verwenden, wenn du unserer Anleitung gefolgt bist. Alternativ kannst du dich via ssh von einem anderen Rechner mit dem Server 10.0.0.1 verbinden, wenn er sich im gleichen Netzwerksegment befindet.
 
 Im Terminal wirst du mit dem Erstbildschirm von linuxmuster.net v7.1 begrüsst.
 
@@ -18,32 +20,58 @@ Im Terminal wirst du mit dem Erstbildschirm von linuxmuster.net v7.1 begrüsst.
    :align: center
    :alt: Terminal after login
 
-Das Setup wird über den Befehl ``linuxmuster-setup`` gestartet. Es *müssen* folgende Setup-Parameter als Kommandozeilenparameter übergeben werden (in einer Zeile) - die angegebene Werte sind nur Beispielwerte:
+Das Setup wird über den Befehl ``linuxmuster-setup`` gestartet. 
+
+Erfolgt der Aufruf direkt mittels ``linuxmuster-setup`` *müssen* mindestens folgende Setup-Parameter als Kommandozeilenparameter übergeben werden (in einer Zeile) - die angegebene Werte nach dem Gleichheitszeichen sind selbstverständlich nur Beispielwerte:
 
 .. code:: console
 
-   linuxmuster-setup --location="Bad Hönningen" --schoolname="Berthold-Brecht-Gesamtschule" --country=de --state=RLP
+   linuxmuster-setup --location="Bad Tuxhausen" --schoolname="Linus-Benedict-Gesamtschule" --country=de --state=SH
 
-Weitere Parameter *können* auf der Kommandozeile angegeben werden und werden in einem Dialogsystem weiter abgefragt. 
-Alternativ kann eine Konfigurationsdatei mit dem Parameter ``--config`` mit folgendem Inhalt (Achtung: Beispielwerte - bitte anpassen) übergeben werden:
+Weitere Parameter *können* auf der Kommandozeile angegeben werden. Werden aber auch in einem Dialogsystem abgefragt. Alle Parameter sind:
+
+.. code::
+  
+   root@server:~# linuxmuster-setup --help
+   Usage: linuxmuster-setup [options]
+   [options] may be:
+   -n <hostname>,   --servername=<hostname>   : Set server hostname.
+   -d <domainname>, --domainname=<domainname> : Set domainname.
+   -r <dhcprange>,  --dhcprange=<dhcprange>   : Set dhcp range.
+   -a <adminpw>,    --adminpw=<adminpw>       : Set admin password.
+   -e <schoolname>, --schoolname=<schoolname> : Set school name.
+   -l <location>,   --location=<location>     : Set school location.
+   -z <country>,    --country=<country>       : Set school country.
+   -v <state>,      --state=<state>           : Set school state.
+   -c <file>,       --config=<file>           : path to ini file with setup values
+   -u,              --unattended              : unattended mode, do not ask questions
+   -s,              --skip-fw                 : skip firewall setup per ssh
+   -h,              --help                    : print this help
+
+
+Alternativ kannst du eine Konfigurationsdatei mit dem Parameter ``--config`` übergeben.
+
+Willst du diese Möglichkeit nutzen, lege eine ``config.txt`` mittels des nächsten Befehls an:
+
+.. code:: 
+
+   echo -e "[setup] \nservername = \ndomainname = \ndhcprange = \nschoolname = \nlocation = \ncountry = \nstate = \nskipfw = False" > ~/config.txt
+   
+Diese Datei musst du noch mit deinen Angaben füllen. Hier bespielhaft mit dem Editor nano gezeigt
 
 .. code:: console
 	
-   [setup]
-   servername = server
-   domainname = gshoennigen.linuxmuster.lan
-   dhcprange = 10.0.0.100 10.0.0.200
-   schoolname = Berthold-Brecht-Gesamtschule
-   location = Bad Hönningen
-   country = de
-   state = Rheinland Pfalz
-   skipfw = False
+   nano ~/config.txt
 
-Hast du eine Textdatei mit o.g. Einträgen unter ``/root/setup.txt`` erstellt, so kannst du das Setup mit folgendem Befehl aufrufen:
+.. figure:: media/newsetup/lmn-setup-terminal-02a.png
+   :align: center
+   :alt: Terminal Setup: Editor nano config.txt
+
+Hast du diese Textdatei mit o.g. Einträgen gespeichert ``[Strg]+[X]`` --> ``[Y]`` --> ``[Enter]``, kannst du das Setup mit folgendem Befehl aufrufen:
 
 .. code::
 
-   linuxmuster-setup --config =/root/config.txt
+   linuxmuster-setup --config /root/config.txt
 
 Hast du das Setup aufgerufen, erscheinen in der Konsole nach und nach nochmals relevante Parameter. Hattest du diese bereits festgelegt, so siehst du deine Werte, hast du diese nicht festgelegt, so siehst du die vorbelegten Werte. Prüfe alle Parameter und passe deren Werte ggf. an. Klicke jeweils auf ``< OK >``, um zum nächsten Schritt zu gelangen.
 
@@ -103,18 +131,25 @@ Nach Abschluss des Setups siehst du im Terminal, dass das Setup beendet wurde.
    :align: center
    :alt: Terminal Setup finished
 
-Danach muss noch der Dienst für die WebUI/Schulkonsole neu gestartet oder der Server neu gestartet werden:
+Danach muss noch der Dienst für die WebUI/Schulkonsole oder der Server neu gestartet werden.
 
 .. code::
 
    # systemctl restart linuxmuster-webui.service
 
-   alternativ
+alternativ
+
+.. code::
 
    # reboot
 
+Das erste Verfahren hat den Vorteil, dass du nicht die Zeit des Neustarts abwarten, dich erneut verbinden und anmelden musst.
 
-Nach abgeschlossenem Setup und Neustart des Servers kannst du dich nun mit einem PC, der im internen LAN eingebunden ist, dich via Browser an der Schulkonsole von linuxmuster.net v7.1 anmelden.
+.. todo:: Frage?
+  
+   Muss der PC aus dem Bereich 10.0.0.10 ... sein
+
+Nach abgeschlossenem Setup und eventuellen Neustart des Servers, kannst du dich mit einem PC via Browser an der Schulkonsole von linuxmuster.net v7.1 anmelden. Dafür muss sich der Rechner im internen LAN eingebunden sein.
 
 Anmeldung an der Schulkonsole als global-admin
 ==============================================
@@ -170,6 +205,4 @@ Der Inhalt des Verzeichnisses sollte sich wie folgt darstellen:
    :align: center
    :alt: directory listing log files
 
-.. todo: :ref:Ziel muss gesetzt werden, nächster Satz 
-
-Setze die Ersteinrichtung fort, indem du :ref:`add-user-accounts-label` und ref:`add-devices-label` aufrufst.
+Setze die Ersteinrichtung fort, indem du :ref:`add-user-accounts-label` und :ref:`masterclient-template-label` aufrufst.
