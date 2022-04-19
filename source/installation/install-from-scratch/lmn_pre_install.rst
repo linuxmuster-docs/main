@@ -97,8 +97,10 @@ Installation mit unseren Standardvorgaben
 
    lmn71-prepare -i -u -p server
 
-Nach dem das Skript abgearbeitet ist, es dauert schon eine Weile, steht dem Setup nicht mehr im Wege:
+Nach dem das Skript abgearbeitet ist, es dauert schon eine Weile, steht dem Setup nichst mehr im Wege:
 :ref:`setup-label`
+
+#####
 
 .. todo:: Nächstes Kapitel: Anpassung der Netze! LVM weiter unten: verwirrt.
 
