@@ -333,7 +333,7 @@ Nachdem du dich erneut als ``root`` an der ``noVNC`` Konsole angemeldet hast, ge
 
 Jetzt melde dich an der ``noVNC``-Konsole ab und an der ``xterm.js`` an.
 
-Auch wenn du keinen Prompt siehst, einfach deinen Login eingeben. Nach dem ``Enter`` wirst du zur Eingabe deines Passwortes aufegfordert.
+Auch wenn du keinen Prompt siehst, einfach deinen Login eingeben. Nach dem ``Enter`` wirst du zur Eingabe deines Passwortes aufgefordert.
 
 Danach kannst du die folgenden Codezeilen einfach zwischen der Anleitung und dem Server übertragen.
 
