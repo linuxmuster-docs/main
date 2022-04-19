@@ -30,7 +30,7 @@ Das Skript lmn71-prepare
    
    Check des Repros zum Release-Datums! Anm. des Autors
 
-Wenn du nicht mehr an deinem Server eingeloggt bist, melde dich erneut an und werde root mit ``sudo -i``.
+Wenn du nicht mehr an deinem Server eingeloggt bist, melde dich erneut an.
 
 Führe danach folgende Befehle in der Eingabekonsole aus:
 
@@ -40,21 +40,26 @@ Führe danach folgende Befehle in der Eingabekonsole aus:
 
 .. hint:: -qO --> [-][q][Großbuchstabe O]
 
-Damit installierst du den Key für das Repository von linuxmuster.net und aktivierst ihn
+Damit installierst du den Key für das Repository von linuxmuster.net und aktivierst ihn.
+Die nächste Zeile fügt das linuxmuster 7.1 Repository hinzu. 
 
 .. code::
 
    sudo sh -c 'echo "deb https://deb.linuxmuster.net/ lmn71 main" > /etc/apt/sources.list.d/lmn71.list'
-   sudo apt update
-   sudo apt dist-upgrade
 
-Die erste Zeile fügt das linuxmuster 7.1 Repository hinzu. Die nächsten beiden aktualisieren die Softwareliste des Servers und bringen des System auf den aktuellen Stand.
+Aktualisiere die Softwareliste des Servers mittels
+
+.. code::
+   
+   sudo apt update
+
+Damit ist die Vorbereitung abgeschlossen und du startest mit der Installation.
 
 .. code::
    
    sudo apt install linuxmuster-prepare
 
-Lädt das Skript lmn71-prepare auf den Server, dass |...|
+Nachdem du den Befehl mit ``J`` bestätigt hast, lädt er das Skript lmn71-prepare auf den Server, dass |...|
 
    - die benötigten linuxmuster-Pakete und die von ihnen benötigten anderen Pakete installiert,
    - das Betriebssystem des Servers nochmals auf den aktuellen Stand bringt,
@@ -74,14 +79,21 @@ Du solltest dich danach auf den Konsole der OPNsense |reg| wiederfinden. Eventue
 
 Sollte dieser Test erfolgreich sein, steht der abschließenden Vorbereitung nichts mehr im Wege:
 
+Wechsele deinen Login und werde ``root``:
+
+.. code::
+ 
+   sudo -i
+
 Installation mit unseren Standardvorgaben
 
 .. code::
 
    lmn71-prepare -i -u -p server
+Jetzt ist es an der Zeit, dass du dich zurücklehnst und den Verlauf beobchtest.
+Nach dem das Skript abgearbeitet ist, steht dem :ref:`setup-label` nichst mehr im Wege.
 
-Nach dem das Skript abgearbeitet ist, es dauert schon eine Weile, steht dem Setup nicht mehr im Wege:
-:ref:`setup-label`
+#####
 
 .. todo:: Nächstes Kapitel: Anpassung der Netze! LVM weiter unten: verwirrt.
 
