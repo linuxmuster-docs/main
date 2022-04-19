@@ -90,9 +90,8 @@ Installation mit unseren Standardvorgaben
 .. code::
 
    lmn71-prepare -i -u -p server
-
-Nach dem das Skript abgearbeitet ist, es dauert schon eine Weile, steht dem Setup nichst mehr im Wege:
-:ref:`setup-label`
+Jetzt ist es an der Zeit, dass du dich zurücklehnst und den Verlauf beobchtest.
+Nach dem das Skript abgearbeitet ist, steht dem :ref:`setup-label` nichst mehr im Wege.
 
 #####
 
