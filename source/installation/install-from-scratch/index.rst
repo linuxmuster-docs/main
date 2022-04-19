@@ -24,7 +24,7 @@ Install-from-Scratch
 
 .. sectionauthor:: `@rettich <https://ask.linuxmuster.net/u/rettich>`_,
                    `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
-
+                   `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
 
 In diesem Dokument findest du eine "Schritt-für-Schritt" Anleitung zur Installation der linuxmuster.net Musterlösung direkt auf der Hardware. 
 Zugleich nutzt du diese Anleitung zur Installation in vorbereitete VMs.

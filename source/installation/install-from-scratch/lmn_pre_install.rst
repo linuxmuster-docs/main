@@ -21,6 +21,10 @@
 Server auf lmn7.1 vorbereiten
 =============================
 
+.. sectionauthor:: `@rettich <https://ask.linuxmuster.net/u/rettich>`_,
+                   `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
+                   `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
+
 Nachdem du die Firewall und den Server wie beschrieben installiert hast, müssen beide Maschinen fertig konfiguriert werden. Um dieses zu vereinfachen stellen wir dir das Skript ``lmn71-prepare`` zur Verfügung.
 
 Das Skript lmn71-prepare
@@ -90,6 +94,7 @@ Installation mit unseren Standardvorgaben
 .. code::
 
    lmn71-prepare -i -u -p server
+
 Jetzt ist es an der Zeit, dass du dich zurücklehnst und den Verlauf beobchtest.
 Nach dem das Skript abgearbeitet ist, steht dem :ref:`setup-label` nichst mehr im Wege.
 
