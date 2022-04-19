@@ -41,14 +41,23 @@ Führe danach folgende Befehle in der Eingabekonsole aus:
 .. hint:: -qO --> [-][q][Großbuchstabe O]
 
 Damit installierst du den Key für das Repository von linuxmuster.net und aktivierst ihn.
+Die nächste Zeile fügt das linuxmuster 7.1 Repository hinzu. 
 
 .. code::
 
    sudo sh -c 'echo "deb https://deb.linuxmuster.net/ lmn71 main" > /etc/apt/sources.list.d/lmn71.list'
+
+Die nächsten beiden aktualisieren die Softwareliste des Servers |...|
+
+.. code::
    sudo apt update
+
+|...| und bringen des System auf den aktuellen Stand.
+
+.. code::
    sudo apt dist-upgrade
 
-Die erste Zeile fügt das linuxmuster 7.1 Repository hinzu. Die nächsten beiden aktualisieren die Softwareliste des Servers und bringen des System auf den aktuellen Stand.
+Damit ist die Vorbereitung abgeschlossen und du startest mit der Installation.
 
 .. code::
    
