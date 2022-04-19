@@ -369,30 +369,32 @@ Nachdem dir neue Pakete zur Anzeige gebracht wurden, startest du den Upgrade-Pro
 
    Durch das Deaktiveren der automatischen Updates liegt jetzt natürlich die Veranwortung des zeitnahen Einspielen von Updates bei dir bzw. der Person die für die Administration verantwortlich zeichnet!
 
-cloud-init abschalten
----------------------
+.. Nächstes Kapitel herausgenommen, da dieses Vorgehen Fehler bei lmn71-prepare erzeugt. Speicherung eines init-Scriptes network nicht möglich.
+   
+.. cloud-init abschalten
+.. ---------------------
 
-1. Erstelle eine leere Datei um den Dienst am Start zu hindern.
+.. 1. Erstelle eine leere Datei um den Dienst am Start zu hindern.
 
-.. code::
+.. .. code::
 
-      sudo touch /etc/cloud/cloud-init.disabled
+..       sudo touch /etc/cloud/cloud-init.disabled
 
-2. Deinstalliere alle Pakete und Ordner dieses Dienstes.
+.. 2. Deinstalliere alle Pakete und Ordner dieses Dienstes.
 
-.. code::
+.. .. code::
 
-      sudo apt purge cloud-init
+..       sudo apt purge cloud-init
 
-.. code::
+.. .. code::
 
-      sudo rm -rf /etc/cloud/ && sudo rm -rf /var/lib/cloud/
+..       sudo rm -rf /etc/cloud/ && sudo rm -rf /var/lib/cloud/
 
-4. Starte den Server neu.
+.. 4. Starte den Server neu.
 
-.. code::
+.. .. code::
 
-      sudo reboot
+..       sudo reboot
 
 Test der Verbindung zur Firewall
 --------------------------------
