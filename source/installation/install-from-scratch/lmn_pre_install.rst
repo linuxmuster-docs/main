@@ -85,6 +85,12 @@ Du solltest dich danach auf den Konsole der OPNsense |reg| wiederfinden. Eventue
 
 Sollte dieser Test erfolgreich sein, steht der abschließenden Vorbereitung nichts mehr im Wege:
 
+Wechsele deinen Login und werde ``root``:
+
+.. code::
+ 
+   sudo -i
+
 Installation mit unseren Standardvorgaben
 
 .. code::
