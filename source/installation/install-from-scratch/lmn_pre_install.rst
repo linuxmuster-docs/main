@@ -50,11 +50,13 @@ Die nächste Zeile fügt das linuxmuster 7.1 Repository hinzu.
 Die nächsten beiden aktualisieren die Softwareliste des Servers |...|
 
 .. code::
+   
    sudo apt update
 
 |...| und bringen des System auf den aktuellen Stand.
 
 .. code::
+   
    sudo apt dist-upgrade
 
 Damit ist die Vorbereitung abgeschlossen und du startest mit der Installation.
