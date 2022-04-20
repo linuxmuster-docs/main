@@ -308,6 +308,8 @@ Markiere wie gezeigt ``vmbr0`` und betätige den ``Edit``-Button um das Konfigur
 
 Trage unter ``Comment`` einen Kommentar ein der veranschaulich, dass diese Brücke die Verbindung zum Internet stellt. Zum Beispiel wie hier gezeigt ``red``, den bei uns historisch gewachsenen Begriff für dieses Interface.
 
+Mit `OK` wird der Kommentar übernommen.
+
 ####
 
 Nun erstellst du die zweite Bridge ``vmbr1``:
