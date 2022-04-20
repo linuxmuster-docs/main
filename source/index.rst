@@ -36,7 +36,9 @@ Mit der Version 7.1 gibt es einige Neuerungen. Das zuvor genannte Kapitel :ref:`
 Installation from Scratch
 -------------------------
 
-Diese Dokumentation führt dich durch die Vorbereitung der Virtualisierungslösungen Proxmox, KVM und XCP-ng, um linuxmuster.net 7.1 installieren zu können. Hierzu gehört die spezifische Einrichtung des Netzwerks sowie die Vorbereitung der Virtuellen Maschinen.
+Diese Dokumentation führt dich durch die Vorbereitung der Virtualisierungslösungen Proxmox, um linuxmuster.net 7.1 installieren zu können. Hierzu gehört die spezifische Einrichtung des Netzwerks sowie die Vorbereitung der Virtuellen Maschinen.
+
+.. todo:: Verweis auf die Hypervisoren im Wiki einfügen.
 
 Weitere Hilfe
 -------------
