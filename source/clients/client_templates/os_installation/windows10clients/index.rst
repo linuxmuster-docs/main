@@ -354,7 +354,9 @@ Klicke nun unten auf die Drop-down Liste ``Copy from -> win10.image.reg``. Es wi
 
    :setzt den Domänennamen richtig
    [HKEY_LOCAL_MACHINE\System\ControlSet001\Services\Tcpip\Parameters]
-   "Domain" = "<SAMBADOMAIN>"
+   "Domain"="<SAMBADOMAIN>"
+   [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+   "DefaultLogonDomain"="<SAMBADOMAIN>"
 
 Hier <SAMBADOMAIN> durch den zuvor festgelegten Namen der Samba_Domäne ersetzen. Hattest du z.B. während der Installation gshoenningen.linuxmuster.lan gewählt, so gibst du hier nur gshoeningen an. Übernehme die Eintragungen mit ``Speichern``.
 
