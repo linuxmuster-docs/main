@@ -10,24 +10,24 @@ Migration Linbo 2.4 zu 4.0
 Hinweise zu Linbo4
 ==================
 
-In der linuxmuster v7.1 löst linbo4 das bisherige linbo 2.4 ab. Ab v7.1 gibt es nur noch ein Paket für linbo7, das nur noch linbo7 enthält.
+In der linuxmuster v7.1 löst LINBO 4 das bisherige LINBO 2.4 ab. Ab v7.1 gibt es nur noch ein Debian-Paket für LINBO (`linuxmuster-linbo7`) und eines für die grafische Oberfläche (``linuxmuster-linbo-gui7``), die nur noch LINBO 4 und eine grafische Oberfläche enthält.
 
-Hast du auf die v7.1 umgestellt, musst du nun noch die bisherigen Images, die im Cloop-Format zur Verfügung standen für linbo4 migrieren.
+Hast du auf die v7.1 umgestellt, musst du nun noch die bisherigen Images, die im Cloop-Format zur Verfügung standen für LINBO 4 migrieren.
 
-Linbo4 weist einige Besonderheiten auf:
+LINBO 4 weist einige Besonderheiten auf:
 
 * Für neue Images wird nur noch das Format qcow2 unterstützt. Der Name des Basis-Images muss daher in der übernommenen start.conf angepasst werden (z.B. image.qcow2).
 * Die Bennenung der zusätzlichen Image-Dateien postsync, prestart and reg ändern sich, so dass das Image-Format nicht mehr in den Dateinamen mit angegeben wird (z.B. image.postsync statt image.cloop.postsync oder image.prestart statt image.cloop.prestart).
 * qemu-img wird nun genutzt, um die Erstellung und Wiederherstellung der qcow2 Images durchzuführen.
 * Es wird nur noch 64 Bit Client-Hardware unterstützt.
 * linuxmuster.net <=6.2 wird nicht mehr unterstützt.
-* Es gibt jetzt derzeit differentiellen Images mehr. Differentielle Images werden voraussichtlich erst wieder ab Linbo v4.1 unterstützt.
+* Es gibt jetzt derzeit differentiellen Images mehr. Differentielle Images werden voraussichtlich erst wieder ab LINBO v4.1 unterstützt.
 * Bisherige Images im cloop Format sind bitte direkt in das neue qcow2 Format zu konvertieren - wie unten beschrieben.
 
-Konvertieren der linbo 2.4 Images
+Konvertieren der LINBO 2.4 Images
 =================================
 
-Hast Du auf v7.1 umgestellt, musst du jetzt noch deine bisherigen linbo 2.4 Images konvertieren, so dass diese mit linbo4 nutzbar sind.
+Hast Du auf v7.1 umgestellt, musst du jetzt noch deine bisherigen LINBO 2.4 Images konvertieren, so dass diese mit linbo4 nutzbar sind.
 
 1. Konvertiere deine Cloop-Images in das qcow2 Format mithilfe von linbo-cloop2qcow2. Wechsele dazu in das Linbo-verzeichnis und rufe den Befehl mit dem zu konvertierenden Image auf:
 
@@ -47,7 +47,7 @@ Das Cloop-Image wird dadurch in das qcow2-Format konvertiert und im Verzeichnis 
 
 .. important::
 
-   Start alle Clients 2x, um sicherzustellen, dass Linbo v2 auf v4 aktualisiert wurde.
+   Start alle Clients 2x, um sicherzustellen, dass LINBO v2 auf v4 aktualisiert wurde.
 
 
 4. Zum Schluss starte das Skript ``linuxmuster-import-devices``. Dieses löscht die nun nicht mehr benötigten start.conf links.
