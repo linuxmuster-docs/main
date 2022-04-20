@@ -110,7 +110,7 @@ Lade dir dort das aktuellste Image herunter und erstelle dir einen bootfähigen 
 Erstellen eines USB-Sticks zur Installation des Proxmox-Host
 ------------------------------------------------------------
 
-Nachdem du die ISO-Datei für Proxmox heruntergeladen hast, wechselst Du in das Download-Verzeichnis. Danach ermittel Du den korrekten Buchstaben für den USB-Stick unter Linux. X ist durch den korrekten Buchstaben zu ersetzen und dann ist nachstehender Befehl als Benutzer *root* oder mit einem *sudo* vorangestellt einzugeben:
+Nachdem du die ISO-Datei für Proxmox heruntergeladen hast, wechselst du in das Download-Verzeichnis. Danach ermittel du den korrekten Buchstaben für den USB-Stick unter Linux. X ist durch den korrekten Buchstaben zu ersetzen und dann ist nachstehender Befehl als Benutzer *root* oder mit einem *sudo* vorangestellt einzugeben:
 
 .. code-block:: console
  
@@ -171,7 +171,7 @@ Adresse fest. Klicke auf `Weiter`.
    :align: center
    :alt: Proxmox Installation Admin-Passwort
 
-Lege die IP-Adresse des Proxmox-Host im internen Netz fest. Solltest Du intern z.B. auf dem (DSL-)Router einen
+Lege die IP-Adresse des Proxmox-Host im internen Netz fest. Solltest du intern z.B. auf dem (DSL-)Router einen
 DHCP-Server laufen haben, dann erhältst du hier bereits eine vorausgefüllte Konfigurationsseite. Passe diese Werte nun den 
 gewünschten Werten an. Der Hostname des Proxmox-Host ist hier in gewünschter Form - hier `hv01.linuxmuster.lan` -
 anzugeben.
@@ -206,17 +206,17 @@ Nach erfolgreicher Installation lasse Proxmox über `Reboot` neu starten.
 Proxmox Einrichtung
 -------------------
 
-Nach dem Neustart von Proxmox kannst du dich über einen PC, welcher sich im selben Netz befindet, via Browser auf das graphische Webinterface zur Verwaltung des Proxmox-Hosts aufschalten. Hierzu gibst Du als URL https://192.168.199.20:8006 ein. Du erhälst eine Warning, da ein mögliches Sicherheitsrisiko erkannt wurde. Dies ist auf das selbst ausgestellte SSL-zertifikat des Proxmos-Host zurückzuführen. 
+Nach dem Neustart von Proxmox kannst du dich über einen PC, welcher sich im selben Netz befindet, via Browser auf das grafische Webinterface zur Verwaltung des Proxmox-Hosts aufschalten. Hierzu gibst du als URL https://192.168.199.20:8006 ein. Du erhältst ein "Warning", da ein mögliches Sicherheitsrisiko erkannt wurde. Dies ist auf das selbst ausgestellte SSL-Zertifikat des Proxmox-Host zurückzuführen. 
 
-Klicke auf ``Erweitert...``, es erscheint ein weiterer Hinweis auf das self-signed certificate. Dieses nimmst du nun mit dem Button ``Risiko akzeptieren und fortfahren`` an.
+Klicke auf ``Erweitert ...``, es erscheint ein weiterer Hinweis auf das "self-signed certificate". Dieses nimmst du nun mit dem Button ``Risiko akzeptieren und fortfahren`` an.
 
-Es erscheint die Anmeldemaske des Proxmox-Webinterface. Melde dich mit `root` als `User name` und dem vorher gesetzten Passwort an:
+Es erscheint die Anmeldemaske des Proxmox-Webinterface. Melde dich als User ``root`` und dem vorher gesetzten Passwort an:
 
 .. figure:: media/install-on-proxmox_10_proxmox-login.png
    :align: center
    :alt: Proxmox Web-UI Login
 
-Im Fenster `No valid subscription` `OK` wählen oder Fenster schließen:
+Im Fenster `No valid subscription` wählst du `OK` um das Fenster schließen:
 
 .. figure:: media/install-on-proxmox_11_no-valid-subscription.png
    :align: center
@@ -310,7 +310,7 @@ Trage unter ``Comment`` einen Kommentar ein der veranschaulich, dass diese Brüc
 
 ####
 
-Nun erstellst Du die zweite Bridge ``vmbr1``:
+Nun erstellst du die zweite Bridge ``vmbr1``:
 
 Dazu wähle das Menü ``Datacenter`` --> ``hv01`` --> ``Network`` -->  ``Create`` --> ``Linux Bridge``
 
@@ -450,7 +450,7 @@ Es ist zu erkennen, dass auf ``/dev/sdb3`` nur noch ``pve-swap`` und ``pve-root`
    :align: center
    :alt:  Proxmox-Übersicht Festplatten default
 
-Danach findest Du noch folgenden Speicher:
+Danach findest du noch folgenden Speicher:
 
 .. figure:: media/install-on-proxmox_25_storage-after-remove.png
    :align: center
