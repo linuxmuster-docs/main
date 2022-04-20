@@ -1,14 +1,14 @@
 .. _migration-linbo-label:
 
 ==========================
-Migration Linbo 2.4 zu 4.0
+Migration LINBO 2.4 zu 4.0
 ==========================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
 
-Hinweise zu Linbo4
-==================
+Hinweise zu LINBO 4
+===================
 
 In der linuxmuster v7.1 löst LINBO 4 das bisherige LINBO 2.4 ab. Ab v7.1 gibt es nur noch ein Debian-Paket für LINBO (`linuxmuster-linbo7`) und eines für die grafische Oberfläche (``linuxmuster-linbo-gui7``), die nur noch LINBO 4 und eine grafische Oberfläche enthält.
 
