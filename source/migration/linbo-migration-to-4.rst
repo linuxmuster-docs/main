@@ -17,7 +17,7 @@ Hast du auf linuxmuster v7.1 umgestellt, musst du nun noch die bisherigen LINBO 
 LINBO 4 weist einige Besonderheiten auf:
 
 * Für neue Images wird nur noch das Format `qcow2` unterstützt. 
-* Bisherige Images im `cloop`-Format sind bitte direkt in das neue `qcow2`-Format zu konvertieren - wie unten beschrieben.
+* Bisherige Images im `cloop`-Format müssen in das neue `qcow2`-Format konvertiert werden - wie unten beschrieben.
 * Der Name des Basis-Images muss aufgrund des Formatwechsels daher in der übernommenen start.conf angepasst werden (z.B. `image.qcow2`).
 * Die Benennung der zusätzlichen Image-Dateien ``*.postsync``, ``*.prestart`` and ``*.reg`` ändern sich, so dass das Image-Format nicht mehr in den Dateinamen mit angegeben wird (z.B. ``image.postsync`` statt ``image.cloop.postsync`` oder ``image.prestart`` statt ``image.cloop.prestart``).
 * `qemu-img` wird nun genutzt, um die Erstellung und Wiederherstellung der `qcow2`-Images durchzuführen.
