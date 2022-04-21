@@ -168,6 +168,8 @@ Setze es mit ``OK``
 
 Wähle danach die Option ``Exit and reboot`` aus.
 
+.. hint:: Nutze nicht den Reboot sondern breche den Prozess ab um dann manuel herunterzufahren. So hast du mehr Zeit um das Installationsmedium zu entfernen.
+
 Starte OPNsense |reg| zum Abschluss neu und werfe die DVD / den USB-Stick aus. 
 Hast du OPNsense |reg| in eine VM installiert, so werfe die CD aus und ändere die Boot-Reihenfolge, sodass direkt von der Festplatte gestartet wird.
 
