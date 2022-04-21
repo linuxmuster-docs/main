@@ -12,7 +12,7 @@ Hinweise zu LINBO 4
 
 In der linuxmuster v7.1 löst LINBO 4 das bisherige LINBO 2.4 ab. Ab v7.1 gibt es nur noch ein Debian-Paket für LINBO (`linuxmuster-linbo7`) und eines für die grafische Oberfläche (`linuxmuster-linbo-gui7`), die nur noch LINBO 4 und eine grafische Oberfläche enthalten.
 
-Hast du auf die v7.1 umgestellt, musst du nun noch die bisherigen Images, die im Cloop-Format zur Verfügung standen für LINBO 4 migrieren.
+Hast du auf linuxmuster v7.1 umgestellt, musst du nun noch die bisherigen LINBO 2.4 Cloop-Images konvertieren, um sie mit LINBO 4 verwenden zu können.
 
 LINBO 4 weist einige Besonderheiten auf:
 
@@ -26,8 +26,6 @@ LINBO 4 weist einige Besonderheiten auf:
 
 Konvertieren der LINBO 2.4 Images
 =================================
-
-Hast Du auf v7.1 umgestellt, musst du jetzt noch deine bisherigen LINBO 2.4 Images konvertieren, so dass diese mit linbo4 nutzbar sind.
 
 1. Konvertiere deine Cloop-Images in das qcow2 Format mithilfe von linbo-cloop2qcow2. Wechsele dazu in das Linbo-verzeichnis und rufe den Befehl mit dem zu konvertierenden Image auf:
 
