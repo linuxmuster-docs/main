@@ -10,7 +10,7 @@ Migration LINBO 2.4 zu 4.0
 Hinweise zu LINBO 4
 ===================
 
-In der linuxmuster v7.1 löst LINBO 4 das bisherige LINBO 2.4 ab. Ab v7.1 gibt es nur noch ein Debian-Paket für LINBO (`linuxmuster-linbo7`) und eines für die grafische Oberfläche (``linuxmuster-linbo-gui7``), die nur noch LINBO 4 und eine grafische Oberfläche enthält.
+In der linuxmuster v7.1 löst LINBO 4 das bisherige LINBO 2.4 ab. Ab v7.1 gibt es nur noch ein Debian-Paket für LINBO (`linuxmuster-linbo7`) und eines für die grafische Oberfläche (`linuxmuster-linbo-gui7`), die nur noch LINBO 4 und eine grafische Oberfläche enthalten.
 
 Hast du auf die v7.1 umgestellt, musst du nun noch die bisherigen Images, die im Cloop-Format zur Verfügung standen für LINBO 4 migrieren.
 
