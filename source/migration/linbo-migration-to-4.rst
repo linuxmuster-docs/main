@@ -29,28 +29,28 @@ LINBO 4 weist einige Besonderheiten auf:
 Konvertieren der LINBO 2.4 Images
 =================================
 
-1. Konvertiere deine Cloop-Images in das qcow2 Format mithilfe von linbo-cloop2qcow2. Wechsele dazu in das Linbo-verzeichnis und rufe den Befehl mit dem zu konvertierenden Image auf:
+1. Konvertiere deine Cloop-Images in das qcow2 Format mithilfe von ``linbo-cloop2qcow2``. Wechsle dazu in das Linbo-Verzeichnis und rufe den Befehl mit dem zu konvertierenden Dateinamen auf:
 
 .. code::
 
    cd /srv/linbo 
-   linbo-cloop2qcow2 ubu20.cloop
+   linbo-cloop2qcow2 ubu22.cloop
 
-Das Cloop-Image wird dadurch in das qcow2-Format konvertiert und im Verzeichnis ``/srv/linbo/images/ubu20/`` als Datei ``ubu20.qcow2`` abgelegt.
+Das Cloop-Image wird dadurch in das `qcow2`-Format konvertiert und im Verzeichnis ``/srv/linbo/images/ubu22/`` als Datei ``ubu22.qcow2`` abgelegt.
 
 .. hint::
 
    Images von Windows-Systemen könnten nach der Konvertierung ggf. nicht so funktionieren wie vorgesehen - dies gilt insbesondere für UEFI-Systeme. In diesem Fall ist es notwendig, ein neues Image zu erstellen.
 
-2. Ändere den Namen des Images in the start.conf der jeweiligen Hardwareklasse/Gruppe.
+2. Ändere den Dateinamen des Images in the start.conf der jeweiligen Hardwareklasse/Gruppe. Das Ablageverzeichnis des Images wird dabei nicht genannt, obiges Beispiel: ``BaseImage = ubu22.qcow2``
 3. Starte die Dienste zur Image-Verteilung neu mit: ``systemctl restart linbo-torrent.service``.
 
 .. important::
 
-   Start alle Clients 2x, um sicherzustellen, dass LINBO v2 auf v4 aktualisiert wurde.
+   Starte alle Clients zweimal, um sicherzustellen, dass LINBO v2 auf v4 aktualisiert wurde.
 
 
-4. Zum Schluss starte das Skript ``linuxmuster-import-devices``. Dieses löscht die nun nicht mehr benötigten start.conf links.
+4. Zum Schluss starte das Skript ``linuxmuster-import-devices``. Dieses löscht die nun nicht mehr benötigten start.conf-Links.
 5. Ab jetzt kannst du Images wieder wie gewohnt erstellen und verteilen.
 
 Zusätzliche Hinweise
