@@ -152,7 +152,18 @@ Zum Abschluss werden dir die Partitionsierungseinstellungen gemäß deiner Einga
 
 Wenn du es für deine Installation nutzen willst, dann kannst du die nächsten Punkte überspringen mit `Speicherplatzkonfiguration übernehmen`_
 
-Solltest du dich für eine andere Größeneinteilung entscheiden oder für eine Einrichtung auf reelen Festplatten dann müsstest du hier weiter machen. Wir beschreiben hier das Vorgehen für die ...
+Solltest du dich für eine andere Größeneinteilung entscheiden oder für eine Einrichtung auf realen Festplatten dann müsstest du hier weiter machen.
+
+   ============== ========================== ========================= ==========
+   LV Name        LV Pfad                    Mountpoint                Größe
+   ============== ========================== ========================= ==========
+   var            /dev/sg_srv/var            /var                      20G
+   linbo          /dev/sg_srv/linbo          /srv/linbo                80G
+   global         /dev/sg_srv/global         /srv/samba/global         20G
+   default-school /dev/sg_srv/default-school /srv/samba/default-school 80G
+   ============== ========================== ========================= ==========
+
+ Wir beschreiben hier das Vorgehen für die Größen aus der obigen Tabelle für die ...
 
 |...| Einrichtung eines LVM auf der 2. HDD nach deinen Vorgaben
 ---------------------------------------------------------------
@@ -161,9 +172,13 @@ Wähle den Eintrag ``Datenträgergruppe (LVM) anlegen`` aus.
 
 Hier gibst du einen eigenen Namen für die LVM Volume Group an (z.B. vg0).
 
-.. figure:: media/basis_server_015_custom-storage-layout-create-partition-table-lvm-6.png
+.. .. figure:: media/basis_server_015_custom-storage-layout-create-partition-table-lvm-6.png
 
 .. figure:: media/basis_server_016_lvm_001.png
+
+Zuerst musst du ein LVM 
+
+.. todo:: Hier weiter beschreiben
 
 .. figure:: media/basis_server_016_lvm_002.png
 
