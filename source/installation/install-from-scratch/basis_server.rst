@@ -58,6 +58,16 @@ Danach wähle dein Tastaturlayout.
 
 Wähle das Tastaturlayout Deutsch und bestätige dies mit ``Erledigt``.
 
+.. tip:: Wenn du dir nicht sicher bist, vor welcher Tastatur du gerade sitzt:
+
+   Wähle nacheinander 
+  
+   ``Tastatur erkennen`` --> ``OK`` --> ``y`` --> ``Ja`` --> ``ö`` --> ``Nein`` --> ``OK``
+
+   Da sollte zumindest für eine deutsche Tastatur das richtige Layout finden.
+   Für andere einfach den Abfragen folgen
+
+   
 .. hint:: Das Tastaturlayout wirkt sich während der Installation noch nicht aus! 
 
 Konfiguriere danach deine Netzwerkkarte.
