@@ -12,18 +12,33 @@ Hinweise zu LINBO 4
 
 In der linuxmuster v7.1 löst LINBO 4 das bisherige LINBO 2.4 ab. Ab v7.1 gibt es nur noch ein Debian-Paket für LINBO (`linuxmuster-linbo7`) und eines für die grafische Oberfläche (`linuxmuster-linbo-gui7`), die nur noch LINBO 4 und eine grafische Oberfläche enthalten.
 
-Hast du auf linuxmuster v7.1 umgestellt, musst du nun noch die bisherigen LINBO 2.4 Cloop-Images konvertieren, um sie mit LINBO 4 verwenden zu können.
+Hast du auf linuxmuster v7.1 umgestellt, ist es sinnvoll, die bisherigen LINBO 2.4 Cloop-Images zu konvertieren.
 
 LINBO 4 weist einige Besonderheiten auf:
 
-* Für neue Images wird nur noch das Format `qcow2` unterstützt. 
-* Bisherige Images im `cloop`-Format müssen in das neue `qcow2`-Format konvertiert werden - wie unten beschrieben.
-* Der Name des Basis-Images muss aufgrund des Formatwechsels daher in der übernommenen start.conf angepasst werden (z.B. `image.qcow2`).
-* Die Benennung der zusätzlichen Image-Dateien ``*.postsync``, ``*.prestart`` and ``*.reg`` ändern sich, so dass das Image-Format nicht mehr in den Dateinamen mit angegeben wird (z.B. ``image.postsync`` statt ``image.cloop.postsync`` oder ``image.prestart`` statt ``image.cloop.prestart``).
-* `qemu-img` wird nun genutzt, um die Erstellung und Wiederherstellung der `qcow2`-Images durchzuführen.
+* neues Image-Format mit Abwärtskompatibilität zum alten Format für eine einfach Migration
+* Änderungen an der Namensgebung und des Speicherortes der zum Image zugehörigen Dateien
 * Es wird nur noch 64-Bit Client-Hardware unterstützt.
 * LINBO 4 kann nicht mit linuxmuster v6.2 und kleiner verwendet werden.
 * Es gibt derzeit *keine* differentiellen Images. Differentielle Images werden voraussichtlich erst wieder ab LINBO v4.1 unterstützt.
+
+
+Neues Image-Format
+------------------
+
+Das neue Image-Format heißt `qcow2`. `qemu-img` wird nun genutzt, um die Erstellung und Wiederherstellung der `qcow2`-Images durchzuführen.
+
+* Für neue Images wird nur noch das Format `qcow2` unterstützt. 
+* Images im `cloop`-Format werden aber weiterhin an Clients ausgeliefert.
+* Bisherige Images im `cloop`-Format können in das neue `qcow2`-Format einfach konvertiert werden.
+
+Folgende Änderungen sollte man auch beachten:
+
+* Der Name des Basis-Images muss aufgrund des Formatwechsels in der übernommenen start.conf angepasst werden (z.B. `image.qcow2` statt `image.cloop`).
+* Die Benennung der zusätzlichen Image-Dateien ``*.postsync``, ``*.prestart`` and ``*.reg`` ändern sich, so dass das Image-Format nicht mehr in den Dateinamen mit angegeben wird (z.B. ``image.postsync`` statt ``image.cloop.postsync`` oder ``image.prestart`` statt ``image.cloop.prestart``).
+* Der Ablageort der neuen Images und der zugehörigen zusätzlichen Dateien ist ``/srv/linbo/images/<imagename>/``. Diese Verzeichnisstruktur wird aber nicht in der start.conf angegeben.
+* Backups von Images werden jetzt nach ``/srv/linbo/images/<imagename>/backups/<timestamp>`` verschoben.
+
 
 
 Konvertieren der LINBO 2.4 Images
@@ -52,13 +67,6 @@ Das Cloop-Image wird dadurch in das `qcow2`-Format konvertiert und im Verzeichni
 
 4. Zum Schluss starte das Skript ``linuxmuster-import-devices``. Dieses löscht die nun nicht mehr benötigten start.conf-Links.
 5. Ab jetzt kannst du Images wieder wie gewohnt erstellen und verteilen.
-
-Zusätzliche Hinweise
-====================
-
-1. Neu hochgeladene Images werden in einem Unterverzeichnis unterhalb von ``/srv/linbo/images`` abgelegt.
-2. Backups von Images werden jetzt nach ``/srv/linbo/images/<imagename>/backups/<timestamp>`` verschoben.
-
 
 
 
