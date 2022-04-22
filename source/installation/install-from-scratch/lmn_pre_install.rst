@@ -89,14 +89,99 @@ Wechsele deinen Login und werde ``root``:
  
    sudo -i
 
+Für die weitere Konfiguration nutzt du unser lmn71-prepare Script. Hilfe erhälst du mittels
+
+.. code::
+
+   lmn-prepare -h
+
+Hier ein Auszug mit denen benötigten Optionen die du gleich anwenden wirst.
+
+.. code::
+
+   Usage: lmn71-prepare [options]
+
+   [options] are:
+
+   -x, --force                 : Force run on an already configured system.
+   -i, --initial               : Prepare the appliance initially for rollout.
+   -s, --setup                 : Further appliance setup (network, swapsize).
+                                 Note: You have to use either -i or -s.
+   -t, --hostname=<hostname>   : Hostname to apply (optional, works only with
+                                 server profile).
+   -n, --ipnet=<ip/bitmask>    : Ip address and bitmask assigned to the host
+                                 (optional, default is 10.0.0.x/16, depending
+   ...                            on the profile).
+   -p, --profile=<profile>     : Host profile to apply, mandatory. Expected
+   ...                           values are "server" or "ubuntu".
+                                 Profile name is also used as hostname, except for
+                                 "server" if set with -t.
+   -c, --createcert            : Create self signed server cert (to be used only
+                                 in setup mode and with ubuntu profile).
+   -l, --pvdevice=<device>     : Initially sets up lmv on the given device
+                                 (server profile only).
+   -f, --firewall=<ip>         : Firewall ip address (default *.*.*.254).
+   -g, --gateway=<ip>          : Gateway ip address (default is firewall ip).
+   -d, --domain=<domainname>   : Domainname (default linuxmuster.lan).
+   -r, --serverip=<serverip>   : Ip address of the server (unattended mode only).
+   -w, --swapsize=<size>       : Swapfile size in GB (default "2").
+   -a, --rootpw=<password>     : Set root password (only with -s).
+   -b, --reboot                : Reboots finally (only in unattended mode).
+   ...
+   -u, --unattended            : Unattended mode, do not ask, use defaults.
+   -e, --default               : Sets default (10.0.0.0/16) network addresses,
+                                 triggers setup and unattended modes, needs profile
+                                 (uses saved profile from initial run).
+   -o, --do-it-like-babo       : Like above, but uses babo (10.16.0.0/12) network
+                                 addresses.
+   -j, --no-keys               : Do not create ssh keys
+                                 (only in setup mode and together with -x).
+   -k, --no-pw                 : Do not set admin password
+                                 (only in setup mode and together with -x).
+   -h, --help                  : Print this help.
+   
+
+
 Installation mit unseren Standardvorgaben
 
 .. code::
 
    lmn71-prepare -i -u -p server
 
-Jetzt ist es an der Zeit, dass du dich zurücklehnst und den Verlauf beobchtest.
+Jetzt ist es an der Zeit, dass du dich zurücklehnst und den Verlauf beobachtest.
 Nach dem das Skript abgearbeitet ist, steht dem :ref:`setup-label` nichst mehr im Wege.
+
+#####
+
+Installation mit deinen Vorgaben:
+
+.. code::
+
+   lmn71-prepare -i -x -p server
+
+Ausgabe des Befehls und deine Eingaben
+
+.. code::
+
+   ### lmn71-prepare
+   ## Force is given, skipping test for configured system.
+   ## Profile
+   Enter host profile [server, ubuntu] [server]: [ENTER]
+
+   ## Network
+   Enter network interface to use ['ens18']: [ENTER]
+
+   Enter ip address with net or bitmask [10.0.0.1/16]: [ENTER]
+  alternative Eingabe möglich
+
+   Enter firewall ip address [10.112.0.254]:
+  wird automatisch angepasst
+   Enter hostname [server]: [ENTER]
+
+   Enter domainname [linuxmuster.lan]: verw-gymlue.lan
+  deine Wahl
+   Enter physical device to use for LVM []: [ENTER]
+  Hier einfach Enter übernimmt die von dir gemachten LVMs
 
 #####
 
