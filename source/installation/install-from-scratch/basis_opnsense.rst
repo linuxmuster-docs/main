@@ -168,8 +168,6 @@ Setze es mit ``OK``
 
 Wähle danach die Option ``Exit and reboot`` aus.
 
-.. hint:: Nutze nicht den Reboot sondern breche den Prozess ab um dann manuel herunterzufahren. So hast du mehr Zeit um das Installationsmedium zu entfernen.
-
 Starte OPNsense |reg| zum Abschluss neu und werfe die DVD / den USB-Stick aus. 
 Hast du OPNsense |reg| in eine VM installiert, so werfe die CD aus und ändere die Boot-Reihenfolge, sodass direkt von der Festplatte gestartet wird.
 
@@ -330,6 +328,12 @@ Die Ausgabe sollte wie folgt aussehen:
    :align: center
    :alt: OPNsense: GUI - Assign unterfaces 
 
+.. todo:: hint box näher beschreiben
+
+``exit`` um wieder zum dashboard zurück zu kommen
+
+.. hint:: ``11) Reload all services`` bei Problemen mit der Verbindung zum Internet
+
 IP-Adressen zuweisen
 --------------------
 
@@ -425,6 +429,8 @@ Aktualisierung der OPNsense |reg|
 ---------------------------------
 
 Aktualisiere die OPNsense |reg| in der Konsole, indem du den Punkt ``12) Update from console`` aufrufst und die Rückfrage mit ``Y`` bestätigst.
+
+.. todo:: hint box um ``11) Reload all services`` ergänzen; Wenn Update funktionierte dann startet opnsense automatisch neu wenn das so angegeben wurde. Vorhergehender Satz.
 
 .. hint::
 
