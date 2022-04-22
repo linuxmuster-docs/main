@@ -146,11 +146,13 @@ Für das Setup werden noch weitere Partitionen benötigt. Dafür haben wir uns f
 
 Unser Installationscript nimmt dir dann die nötigen vorbereitenden Aktionen ab. 
 
+Zum Abschluss werden dir die Partitionsierungseinstellungen gemäß deiner Eingaben angezeigt.
+
+.. figure:: media/basis_server_016_custom-storage-layout-create-partition-table-overview.png
+
 Wenn du es für deine Installation nutzen willst, dann kannst du die nächsten Punkte überspringen mit `Speicherplatzkonfiguration übernehmen`_
 
-Ansonsten hängt dein weiteres Vorgehen davon ab, wie du weiter verfahren willst |...|
-
-`... Einrichtung ohne LVM auf HDD nach deinen Vorgaben`_ oder
+Solltest du dich für eine andere Größeneinteilung entscheiden oder für eine Einrichtung auf reelen Festplatten dann müsstest du hier weiter machen. Wir beschreiben hier das Vorgehen für die ...
 
 |...| Einrichtung eines LVM auf der 2. HDD nach deinen Vorgaben
 ---------------------------------------------------------------
@@ -161,6 +163,28 @@ Hier gibst du einen eigenen Namen für die LVM Volume Group an (z.B. vg0).
 
 .. figure:: media/basis_server_015_custom-storage-layout-create-partition-table-lvm-6.png
 
+.. figure:: media/basis_server_016_lvm_001.png
+
+.. figure:: media/basis_server_016_lvm_002.png
+
+.. figure:: media/basis_server_016_lvm_003.png
+
+.. figure:: media/basis_server_016_lvm_004.png
+
+.. figure:: media/basis_server_016_lvm_005.png
+
+.. figure:: media/basis_server_016_lvm_006.png
+
+.. figure:: media/basis_server_016_lvm_007.png
+
+.. figure:: media/basis_server_016_lvm_008.png
+
+.. figure:: media/basis_server_016_lvm_009.png
+
+.. figure:: media/basis_server_016_lvm_010.png
+
+.. figure:: media/basis_server_016_lvm_011.png
+
 .. todo:: Beschreibung anhand der ubuntu-Installationsmaske einfügen wenn das möglich sein sollte.
 
 Weiter mit der `Speicherplatzkonfiguration übernehmen`_
@@ -168,16 +192,12 @@ Weiter mit der `Speicherplatzkonfiguration übernehmen`_
 |...| Einrichtung ohne LVM auf HDD nach deinen Vorgaben
 -------------------------------------------------------
 
-Ohne LVM sind die Mount Points ``/var``, ``/srv/linbo``, ``/srv/damba/global`` und ``/srv/samba/default-school`` auf die HDD(s) zu legen.
+Ohne LVM sind die Mount Points ``/var``, ``/srv/linbo``, ``/srv/samba/global`` und ``/srv/samba/default-school`` auf die HDD(s) zu legen.
 
 .. todo:: Beschreibung wäre hier zu erstellen. Original Text "Die Zuordnung der Mount Points zum LVM wird später detailliert beschrieben" und der beschreibene Text in den Zeilen 203 bis 291 könnte dann entfallen, da die Erklärung hier stehen würde.
 
 Speicherplatzkonfiguration übernehmen
 -------------------------------------
-
-Zum Abschluss werden dir die Partitionsierungseinstellungen gemäß deiner Eingaben angezeigt.
-
-.. figure:: media/basis_server_016_custom-storage-layout-create-partition-table-overview.png
 
 Stimmen diese mit den gewünschten überein, so wähle ``Erledigt`` aus.
 
@@ -421,13 +441,7 @@ Da es die erste Kontaktaufnahme zwischen dem Server und der Firewall ist,
 
 ist es notwendig das du den Key akzeptierst. 
 
-Anschließend wiederholst du deinen Loginversuch nochmals,
-
-.. code::
-
-   ssh root@10.0.0.254
-
-der diesmal nach der Eingabe des Passwortes ``Muster!`` erfolgreich sein sollte.
+Anschließend sollte der Login nach der Eingabe des Passwortes ``Muster!`` erfolgreich sein.
 
 .. figure:: media/basis_server_025.png
 
