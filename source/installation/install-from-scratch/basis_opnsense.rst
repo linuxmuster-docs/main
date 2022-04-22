@@ -428,13 +428,15 @@ Bevor du das aber machst, erfolgt ein letzter Test:
 Aktualisierung der OPNsense |reg|
 ---------------------------------
 
-Aktualisiere die OPNsense |reg| in der Konsole, indem du den Punkt ``12) Update from console`` aufrufst und die Rückfrage mit ``Y`` bestätigst.
+Aktualisiere die OPNsense |reg| in der Konsole, indem du den Punkt ``12) Update from console`` aufrufst und die Rückfrage mit ``y`` bestätigst.
 
 .. todo:: hint box um ``11) Reload all services`` ergänzen; Wenn Update funktionierte dann startet opnsense automatisch neu wenn das so angegeben wurde. Vorhergehender Satz.
 
 .. hint::
 
-  Sollte hierbei keine Verbindung zu den externen Update-Servern möglich sein, dann stimmt deine Netzwerkkartenzuordnung noch nicht. Ändere dies, bevor du fortfährst.
+  Sollte hierbei keine Verbindung zu den externen Update-Servern möglich sein, dann stimmt deine Netzwerkkarteneinstellungen noch nicht. 
+
+  Zuerst nutze nochmals ``11) Reload all services`` und anschließend starte nochmals das Update mit ``12) Update fron console``
 
 Klappt das Update, startest du die OPNsense |reg| neu nachdem du dich erneut eingeloggt hast.
 
