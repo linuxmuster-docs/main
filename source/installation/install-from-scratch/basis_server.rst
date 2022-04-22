@@ -67,9 +67,6 @@ Wähle das Tastaturlayout Deutsch und bestätige dies mit ``Erledigt``.
    Da sollte zumindest für eine deutsche Tastatur das richtige Layout finden.
    Für andere einfach den Abfragen folgen
 
-   
-.. hint:: Das Tastaturlayout wirkt sich während der Installation noch nicht aus! 
-
 Konfiguriere danach deine Netzwerkkarte.
 
 .. figure:: media/basis_server_003.png
@@ -87,9 +84,7 @@ Wähle ``Manual`` aus.
 
 Gib die Netzwerkkonfiguration, wie im oberen Bild, ein und übernehme sie mit ``Speichern``.
 
-.. hint:: 
-
-   Bedenke, dass das deutsche Tastaturlayout noch nicht aktiv ist. Den ``/``, den du für die Eingabe des Subnetzes brauchst, bekommst du mit der ``-``-Taste!
+.. hint:: todo:: Namensraumbeschränkung beschreiben
 
 .. figure:: media/basis_server_006.png
 
