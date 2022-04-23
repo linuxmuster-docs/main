@@ -110,13 +110,13 @@ Für die weitere Installation um aus einem Ubuntu-Server einen linuxmuster.net-S
 
 Dabei ist es egal ob es sich dabei um |...| 
 
-   * |...| eine reale Festplatte mit zwei Partionen.
-   * |...| zwei reale Festplatten.
-   * |...| zwei virtuelle Festplatten handelt.
+* |...| eine reale Festplatte mit zwei Partionen.
+* |...| zwei reale Festplatten.
+* |...| zwei virtuelle Festplatten handelt.
 
 In dieser Anleitung beschreiben wir die Installation auf Basis unserer Mindestanforderungen, also |...|
 
-* |...| 25G Speichermedium für das System
+* |...| 25G Speichermedium für das System und
 * |...| 100G Speichermedium für Daten
 
 Wähle nun zur Einrichtung der Festplatten ``Custom Storage Layout`` aus, wie in obigen Bild dargestellt.
@@ -125,7 +125,7 @@ Es werden dir dann die verfügbaren Geräte angezeigt.
 
 .. figure:: media/basis_server_011_custom-storage-layout-create-partition-table.png
 
-Wähle die erste Festplatte bzw. die erste Partition aus, auf der du das System des Servers unterbringen möchtest. Es wird ein Kontextmenü angezeigt, bei der du eine ``GPT/Partition`` erstellen musst. 
+Wähle die erste Festplatte bzw. die erste Partition aus, auf der du das System des Servers unterbringen möchtest. Es wird ein Kontextmenü angezeigt, bei dem du mit ``Add GPT Partition`` diese erstellen musst. 
 
 .. figure:: media/basis_server_012_custom-storage-layout-create-partition-table2.png
 
@@ -164,7 +164,7 @@ Wenn du es für deine Installation nutzen willst, dann kannst du die nächsten P
 
 #####
 
-Solltest du dich für eine andere Größeneinteilung entscheiden oder für eine Einrichtung auf realen Festplatten dann müsstest du hier weiter machen.
+Solltest du dich für eine andere Größeneinteilung entscheiden oder für eine Einrichtung auf realen Festplatten entschieden haben, dann geht es hier für dich weiter.
 
    ============== ========================== ========================= ==========
    LV Name        LV Pfad                    Mountpoint                Größe
@@ -175,20 +175,18 @@ Solltest du dich für eine andere Größeneinteilung entscheiden oder für eine 
    default-school /dev/sg_srv/default-school /srv/samba/default-school 80G
    ============== ========================== ========================= ==========
 
- Wir beschreiben hier das Vorgehen für die Größen aus der obigen Tabelle für die ...
+ Wir beschreiben hier exemplarisch das Vorgehen für die Größen aus der obigen Tabelle für die ...
 
 |...| Einrichtung eines LVM auf der 2. HDD nach deinen Vorgaben
 ---------------------------------------------------------------
 
 Wähle den Eintrag ``Datenträgergruppe (LVM) anlegen`` aus.
 
+.. figure:: media/basis_server_016_lvm_001.png
+
 Hier gibst du einen Namen für die LVM Volume Group an (z.B. sg_srv).
 
 .. .. figure:: media/basis_server_015_custom-storage-layout-create-partition-table-lvm-6.png
-
-.. figure:: media/basis_server_016_lvm_001.png
-
-Zuerst musst du ein LVM 
 
 .. todo:: Hier weiter beschreiben
 
@@ -226,9 +224,9 @@ Ohne LVM sind die Mount Points ``/var``, ``/srv/linbo``, ``/srv/samba/global`` u
 Speicherplatzkonfiguration übernehmen
 -------------------------------------
 
-Stimmen diese mit den gewünschten überein, so wähle ``Erledigt`` aus.
+Stimmen diese mit den gewünschten überein, so wähle ``Erledigt`` wie in dem zuletzt gesehen Bild aus.
 
-Danach erhälst du die Rückfrage, ob die Installation fortgesetzt werden soll und die Daten auf der Festplatte gelöscht werden sollen.
+Danach erhälst du die Rückfrage, ob die Installation fortgesetzt werden soll und das die Daten auf der Festplatte debei gelöscht werden.
 
 .. figure:: media/basis_server_016_d.png
 
