@@ -100,35 +100,32 @@ Die Mirror-Adresse übernimmst du ebenfalls mit ``Erledigt``.
 
 .. figure:: media/basis_server_009_new-installer.png
 
-Bei der angebotene Aktualisierung des Installers wählst du ``Ohne Akualisierungi fortfahren``.
+Bei der angebotene Aktualisierung des Installers wählst du ``Ohne Akualisierung fortfahren``.
 
-Jetzt must du die Speichermedien einrichten.
+Jetzt musst du die Speichermedien einrichten.
 
 .. figure:: media/basis_server_010_custom-storage-layout.png
 
-Für die weitere Installation um aus einem Ubuntu-Server einen linuxmuster.net-Serer zu machen, benötigst du weißt zwei2 unterschiedliche Speichermedien in deinem Server.
+Für die weitere Installation um aus einem Ubuntu-Server einen linuxmuster.net-Serer zu machen, benötigst du zwei unterschiedliche Speichermedien in deinem Server.
 
 Dabei ist es egal ob es sich dabei um |...| 
 
-   |...| eine reale Festplatte mit zwei Partionen.
-   |...| zwei reale Festplatten.
-   |...| oder zwei virtuelle Festplatten handelt.
+   * |...| eine reale Festplatte mit zwei Partionen.
+   * |...| zwei reale Festplatten.
+   * |...| zwei virtuelle Festplatten handelt.
 
 In dieser Anleitung beschreiben wir die Installation auf Basis unserer Mindestanforderungen, also |...|
 
-   |...| 25G Speichermedium für das System
-   |...| 100G Speichermedium für Daten
+* |...| 25G Speichermedium für das System
+* |...| 100G Speichermedium für Daten
 
-
-
-
-Wähle nun zur Einrichtung der Festplatten ``Custom Storage Layout`` aus.
-
-.. figure:: media/basis_server_011_custom-storage-layout-create-partition-table.png
+Wähle nun zur Einrichtung der Festplatten ``Custom Storage Layout`` aus, wie in obigen Bild dargestellt.
 
 Es werden dir dann die verfügbaren Geräte angezeigt. 
 
-Wähle die erste Festplatte bzw. die erste Partition aus. Es wird ein Kontextmenü angezeigt, bei der du eine ``GPT/Partition`` erstellen musst. 
+.. figure:: media/basis_server_011_custom-storage-layout-create-partition-table.png
+
+Wähle die erste Festplatte bzw. die erste Partition aus, auf der du das System des Servers unterbringen möchtest. Es wird ein Kontextmenü angezeigt, bei der du eine ``GPT/Partition`` erstellen musst. 
 
 .. figure:: media/basis_server_012_custom-storage-layout-create-partition-table2.png
 
@@ -157,15 +154,15 @@ Für das Setup werden noch weitere Partitionen benötigt. Dafür haben wir uns f
 
 .. [#f1] Sollte deine Festplatte größer sein als die vorgeschlagene Mindestgröße so wird für diese Partition der maximal übrige freie Platz mit verwendet.
 
-.. todo:: Der Fakt [#f1]_ ist noch bei einer Probe-Installation zu überprüfen!
-
-Unser Installationscript nimmt dir dann die nötigen vorbereitenden Aktionen ab. 
+Unser Installationscript nimmt dir die nötigen vorbereitenden Aktionen ab. Du läßt also das zweite Speichermeddium unkonfiguriert.
 
 Zum Abschluss werden dir die Partitionsierungseinstellungen gemäß deiner Eingaben angezeigt.
 
 .. figure:: media/basis_server_016_custom-storage-layout-create-partition-table-overview.png
 
-Wenn du es für deine Installation nutzen willst, dann kannst du die nächsten Punkte überspringen mit `Speicherplatzkonfiguration übernehmen`_
+Wenn du es für deine Installation nutzen willst, dann kannst du die nächsten Punkte überspringen und mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
+
+#####
 
 Solltest du dich für eine andere Größeneinteilung entscheiden oder für eine Einrichtung auf realen Festplatten dann müsstest du hier weiter machen.
 
@@ -185,7 +182,7 @@ Solltest du dich für eine andere Größeneinteilung entscheiden oder für eine 
 
 Wähle den Eintrag ``Datenträgergruppe (LVM) anlegen`` aus.
 
-Hier gibst du einen eigenen Namen für die LVM Volume Group an (z.B. vg0).
+Hier gibst du einen Namen für die LVM Volume Group an (z.B. sg_srv).
 
 .. .. figure:: media/basis_server_015_custom-storage-layout-create-partition-table-lvm-6.png
 
