@@ -102,10 +102,25 @@ Die Mirror-Adresse übernimmst du ebenfalls mit ``Erledigt``.
 
 Bei der angebotene Aktualisierung des Installers wählst du ``Ohne Akualisierungi fortfahren``.
 
-Jetzt must du die Festplattten einrichten. Bei einer bare metal Installation hast du zwei physikalische Festplatten installiert (also /dev/sda und /dev/sdb) 
-alternativ richtest du zwei Partitionen ein. Die erste Partition mit mind. 25 GiB (/dev/sda1) und die zweite mit der restlichen Größe der Festplatte (/dev/sda2).
+Jetzt must du die Speichermedien einrichten.
 
 .. figure:: media/basis_server_010_custom-storage-layout.png
+
+Für die weitere Installation um aus einem Ubuntu-Server einen linuxmuster.net-Serer zu machen, benötigst du weißt zwei2 unterschiedliche Speichermedien in deinem Server.
+
+Dabei ist es egal ob es sich dabei um |...| 
+
+   |...| eine reale Festplatte mit zwei Partionen.
+   |...| zwei reale Festplatten.
+   |...| oder zwei virtuelle Festplatten handelt.
+
+In dieser Anleitung beschreiben wir die Installation auf Basis unserer Mindestanforderungen, also |...|
+
+   |...| 25G Speichermedium für das System
+   |...| 100G Speichermedium für Daten
+
+
+
 
 Wähle nun zur Einrichtung der Festplatten ``Custom Storage Layout`` aus.
 
