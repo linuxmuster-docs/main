@@ -175,26 +175,37 @@ Solltest du dich für eine andere Größeneinteilung entscheiden oder für eine 
    default-school /dev/sg_srv/default-school /srv/samba/default-school 80G
    ============== ========================== ========================= ==========
 
- Wir beschreiben hier exemplarisch das Vorgehen für die Größen aus der obigen Tabelle für die ...
+Wir beschreiben hier exemplarisch das Vorgehen für die Größen aus der obigen Tabelle für die ...
 
 |...| Einrichtung eines LVM auf der 2. HDD nach deinen Vorgaben
 ---------------------------------------------------------------
 
-Wähle den Eintrag ``Datenträgergruppe (LVM) anlegen`` aus.
-
 .. figure:: media/basis_server_016_lvm_001.png
 
-Hier gibst du einen Namen für die LVM Volume Group an (z.B. sg_srv).
+Wähle den Eintrag ``Datenträgergruppe (LVM) anlegen`` aus.
+
+.. figure:: media/basis_server_016_lvm_002.png
+
+Hier gibst du einen Namen für die LVM Volume Group an (z.B. sg_srv) und wählst das Gerät aus wo es erstellt werden soll. ``Erstellen`` schließt dieses Fenster.
+
+.. figure:: media/basis_server_016_lvm_003.png
+
+Bei ``VERFÜGBARE GERÄTE`` gilt es nun in die angelegte "LVM volume group" die benötigten "Logical Volume" anzulegen.
+
+.. figure:: media/basis_server_016_lvm_004.png
+
+Dafür entnimmts du dir die benötigten Daten aus der obigen Tabelle:
+
+========== === ===============================
+``Name``   --> LV Name
+``Size``   --> Größe
+``Format`` --> wie in der Grafik gezeigt "ext4"
+``Mount``  --> Mountpoint
+========== === ===============================
 
 .. .. figure:: media/basis_server_015_custom-storage-layout-create-partition-table-lvm-6.png
 
 .. todo:: Hier weiter beschreiben
-
-.. figure:: media/basis_server_016_lvm_002.png
-
-.. figure:: media/basis_server_016_lvm_003.png
-
-.. figure:: media/basis_server_016_lvm_004.png
 
 .. figure:: media/basis_server_016_lvm_005.png
 
