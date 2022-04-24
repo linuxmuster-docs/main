@@ -164,7 +164,7 @@ Wenn du es für deine Installation nutzen willst, dann kannst du die nächsten P
 
 #####
 
-Solltest du dich für eine andere Größeneinteilung entscheiden oder für eine Einrichtung auf realen Festplatten entschieden haben, dann geht es hier für dich weiter.
+Solltest du dich für eine andere Größeneinteilung oder für eine Einrichtung auf realen Festplatten entschieden haben, dann geht es hier für dich weiter.
 
    ============== ========================== ========================= ==========
    LV Name        LV Pfad                    Mountpoint                Größe
@@ -188,42 +188,62 @@ Wähle den Eintrag ``Datenträgergruppe (LVM) anlegen`` aus.
 
 Hier gibst du einen Namen für die LVM Volume Group an (z.B. sg_srv) und wählst das Gerät aus wo es erstellt werden soll. ``Erstellen`` schließt dieses Fenster.
 
-.. figure:: media/basis_server_016_lvm_003.png
+#####
 
 Bei ``VERFÜGBARE GERÄTE`` gilt es nun in die angelegte "LVM volume group" die benötigten "Logical Volume" anzulegen.
 
+.. figure:: media/basis_server_016_lvm_003.png
+
+Bei ``VERFÜGBARE GERÄTE`` findest du die von dir zuvor angelegte "LVM volume group". Diese markierst du , um dann ``Create Logical Volume`` auszuwählen.
+
 .. figure:: media/basis_server_016_lvm_004.png
 
-Dafür entnimmts du dir die benötigten Daten aus der obigen Tabelle:
+Die benötigten Daten entnimmst du aus der obigen Tabelle.
+Die Zuordnung ist folgende:
 
 ========== === ===============================
 ``Name``   --> LV Name
 ``Size``   --> Größe
-``Format`` --> wie in der Grafik gezeigt "ext4"
 ``Mount``  --> Mountpoint
 ========== === ===============================
 
-.. .. figure:: media/basis_server_015_custom-storage-layout-create-partition-table-lvm-6.png
+Bei ``Format`` wählst du, wie in der Grafik gezeigt "ext4".
 
-.. todo:: Hier weiter beschreiben
+Wieder schließt du diese Aktion mit ``[Èrstellen]`` ab.
+
+#####
+
+Die letzten zwei Schritte wiederholst du für die anderen Positionen der Tabelle |...|
+
+|...| linbo:
 
 .. figure:: media/basis_server_016_lvm_005.png
 
 .. figure:: media/basis_server_016_lvm_006.png
 
+#####
+
+|...| global:
+
 .. figure:: media/basis_server_016_lvm_007.png
 
 .. figure:: media/basis_server_016_lvm_008.png
+
+#####
+
+|...| default-school:
 
 .. figure:: media/basis_server_016_lvm_009.png
 
 .. figure:: media/basis_server_016_lvm_010.png
 
+######
+
+Zum Abschluss werden dir die Partitionsierungseinstellungen gemäß deiner Eingaben angezeigt.
+
 .. figure:: media/basis_server_016_lvm_011.png
 
-.. todo:: Beschreibung anhand der ubuntu-Installationsmaske einfügen wenn das möglich sein sollte.
-
-Weiter mit der `Speicherplatzkonfiguration übernehmen`_
+Wenn du es für deine Installation nutzen willst, dann kannst du die nächsten Punkte überspringen und mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
 
 |...| Einrichtung ohne LVM auf HDD nach deinen Vorgaben
 -------------------------------------------------------
@@ -237,7 +257,7 @@ Speicherplatzkonfiguration übernehmen
 
 Stimmen diese mit den gewünschten überein, so wähle ``Erledigt`` wie in dem zuletzt gesehen Bild aus.
 
-Danach erhälst du die Rückfrage, ob die Installation fortgesetzt werden soll und das die Daten auf der Festplatte debei gelöscht werden.
+Danach erhälst du die Rückfrage, ob die Installation fortgesetzt werden soll und das die Daten auf der Festplatte dabei gelöscht werden.
 
 .. figure:: media/basis_server_016_d.png
 
@@ -249,19 +269,24 @@ Nenne den Server ``server``. Der Benutzername (linuxadmin) und das Passwort (Mus
 
 .. figure:: media/basis_server_018.png
 
-Solltest du eine Möglichkeit für einen Fernzugang zu dem Server wünschen, aktiviere ``OpenSSH-Server installieren``. Wenn du dies machst, mache dir auch Gedanken wie du diesen Zugang absichern kannst. Wir empfehlen das PublickKey-Verfahren. https://wiki.ubuntuusers.de/SSH/#Publickey-Authentifizierung (externer Link)
+Solltest du eine Möglichkeit für einen Fernzugang zu dem Server wünschen, aktiviere ``OpenSSH-Server installieren``. 
+
+.. attention:: Wenn du dies machst, mache dir auch Gedanken wie du diesen Zugang absichern kannst.
+   
+   Wir empfehlen das PublicKey-Verfahren.
+   https://wiki.ubuntuusers.de/SSH/#Publickey-Authentifizierung (externer Link)
 
 .. figure:: media/basis_server_019.png
 
 Installiere keine weiteren optionalen Pakete.
 
-Bestätige die den Start des Installationsvorganges mit ``Erledigt``.
+Bestätige den Start des Installationsvorganges mit ``Erledigt``.
 
 Zum Abschluß der Installation wird automatisch versucht, Updates zu installieren
 
 .. figure:: media/basis_server_020.png
 
-und danach gilt es den Server neu zu starten. Das veranlasst du mit ``Jetzt neustarten``, wenn es dir angeboten wird
+und danach gilt es den Server neu zu starten. Das veranlasst du mit ``Jetzt neustarten``, wenn es dir angeboten wird.
 
 .. figure:: media/basis_server_021.png
 
@@ -271,8 +296,7 @@ Bei laufender und wie zuvor beschriebener Einrichtung der OPNsense |reg| sollte 
 
    Bei einer Installation in eine VM achte vor dem Neustart darauf, dass du die ISO-Datei / DVD ausgeworfen hast und die Boot-Reihenfolge so unmgestellt hast, dass die VM direkt von HDD bootet.
 
-Wann die Installation abgeschlossen ist, erkennst du daran das die Anzeige von
-
+Wann die Installation abgeschlossen ist, erkennst du daran das die Anzeige am unteren Bildschirmrand von
 
 .. figure:: media/basis_server_022.png
 
@@ -280,104 +304,111 @@ auf
 
 .. figure:: media/basis_server_023.png
 
-gewechselt ist, starte den Server neu.
+gewechselt ist, dann starte den Server neu.
 
-weiter mit `Basis-Konfiguration des Servers`_
+.. ################
+.. 
+.. .. figure:: media/basis_server_016_custom-storage-layout-create-partition-table-overview.png
+.. 
+.. 
+.. .. todo:: Beschreibung anhand der ubuntu-Installationsmaske einfügen wenn das möglich sein sollte.
+.. 
+.. .. .. figure:: media/basis_server_015_custom-storage-layout-create-partition-table-lvm-6.png
+.. 
+.. .. todo:: Hier weiter beschreiben
+..
+.. LVM - Einrichtung 
+.. -----------------
+.. 
+.. .. todo:: Hinweis in der obigen Hinweisbox beachten. Dann würde dieses hier anders gelöst sein.
+.. 
+.. Solltest du bei der Installtion unserem Partitionerungs-Vorschlag gefolgt sein, dann kannst du direkt mit `Automatische Updates abschalten`_ fortfahren.
+.. 
+.. 1. Hast du wie zuvor beschrieben ein LVM angelegt, gib auf der Konsole ``sudo vgscan --mknodes`` ein. Es wird dir dann die sog. ``volume group "vg0"`` angezeigt, die du während der Installation auf der 2. HDD angelegt hast.
+.. 
+.. 2. Führe ``sudo vgchange -ay`` aus, um das Volume zu aktivieren.
+.. 
+.. 3. Gib ``sudo pvdisplay`` an, um Informationen zu der Logical Volume Group auszugeben. PV = physical volume = hdd, vg = volume group. Du kannst für Kurzinformationen auch ``sudo pvs`` angeben. Die vg - volume group sollte schon vorhanden sein und wie zuvor angegeben hier ``vg0`` heißen.
+.. 
+.. 4. Lege nun logical volumes an. Wir gehen von 100G für die HDD aus:
+.. 
+.. .. code::
+.. 
+..    sudo lvcreate -L 10G -n /dev/vg0/var vg0
+..    sudo lvcreate -L 40G -n /dev/vg0/linbo vg0
+..    sudo lvcreate -L 10G -n /dev/vg0/global vg0
+..    sudo lvcreate -L 38G -n /dev/vg0/default-school vg0
+..    
+.. 5. Um zu prüfen, ob die logical volumes angelegt wurden, gib den Befehl ``sudo lvs`` an.
+.. 
+.. 6. Aktiviere nun diese logical volumes wie folgt:
+.. 
+.. .. ode::
+.. 
+..    sudo lvchange -ay /dev/vg0/var
+..    sudo lvchange -ay /dev/vg0/linbo
+..    sudo lvchange -ay /dev/vg0/global
+..    sudo lvchange -ay /dev/vg0/default-school
+..    
+.. 7. Formatiere die Verzeichnisse in den neu angelegten logical volume groups wie folgt:
 
-################
+.. .. code::
 
-LVM - Einrichtung 
------------------
-
-.. todo:: Hinweis in der obigen Hinweisbox beachten. Dann würde dieses hier anders gelöst sein.
-
-Solltest du bei der Installtion unserem Partitionerungs-Vorschlag gefolgt sein, dann kannst du direkt mit `Automatische Updates abschalten`_ fortfahren.
-
-1. Hast du wie zuvor beschrieben ein LVM angelegt, gib auf der Konsole ``sudo vgscan --mknodes`` ein. Es wird dir dann die sog. ``volume group "vg0"`` angezeigt, die du während der Installation auf der 2. HDD angelegt hast.
-
-2. Führe ``sudo vgchange -ay`` aus, um das Volume zu aktivieren.
-
-3. Gib ``sudo pvdisplay`` an, um Informationen zu der Logical Volume Group auszugeben. PV = physical volume = hdd, vg = volume group. Du kannst für Kurzinformationen auch ``sudo pvs`` angeben. Die vg - volume group sollte schon vorhanden sein und wie zuvor angegeben hier ``vg0`` heißen.
-
-4. Lege nun logical volumes an. Wir gehen von 100G für die HDD aus:
-
-.. code::
-
-   sudo lvcreate -L 10G -n /dev/vg0/var vg0
-   sudo lvcreate -L 40G -n /dev/vg0/linbo vg0
-   sudo lvcreate -L 10G -n /dev/vg0/global vg0
-   sudo lvcreate -L 38G -n /dev/vg0/default-school vg0
-   
-5. Um zu prüfen, ob die logical volumes angelegt wurden, gib den Befehl ``sudo lvs`` an.
-
-6. Aktiviere nun diese logical volumes wie folgt:
-
-.. code::
-
-   sudo lvchange -ay /dev/vg0/var
-   sudo lvchange -ay /dev/vg0/linbo
-   sudo lvchange -ay /dev/vg0/global
-   sudo lvchange -ay /dev/vg0/default-school
-   
-7. Formatiere die Verzeichnisse in den neu angelegten logical volume groups wie folgt:
-
-.. code::
-
-   sudo mkfs.ext4 /dev/vg0/var
-   sudo mkfs.ext4 /dev/vg0/linbo
-   sudo mkfs.ext4 /dev/vg0/global
-   sudo mkfs.ext4 /dev/vg0/default-school
-   
-8. Lege nachstehende Verzeichnisse an, die wir danach auf die logical volumes mounten:
-   
-.. code:: 
-
-   sudo mkdir /srv/linbo
-   sudo mkdir /srv/samba
-   sudo mkdir /srv/samba/global
-   sudo mkdir /srv/samba/schools
-   sudo mkdir /srv/samba/schools/default-school
- 
-9. Kopiere den Inhalt von ``/var`` zunächst in einen neuen Ordner ``/savevar``. Das Verzeichnis ``/var`` soll später auf das LVM gemountet werden.
-   Hierbei ist darauf zu achten, dass das virtuelle Dateisystem unterhalb von /var, das für die LX-Container genutzt wird, zunächst ausgehangen und der entsprechende    
-   Dienst ``lxcfs.service`` beendet wird.
-
-.. code:: 
-
-   sudo mkdir /savevar
-   sudo systemctl stop lxcfs.service
-   sudo cp -R /var /savevar
-
-10. Rufe die Datei ``/etc/fstab`` mit dem Editor nano auf und ergänze den bisherigen Eintrag für die 1. HDD um nachstehenden Eintragungen:
-
-.. code::
-
-   /dev/vg0/var              /var ext4 defaults 0 1
+..    sudo mkfs.ext4 /dev/vg0/var
+..    sudo mkfs.ext4 /dev/vg0/linbo
+..    sudo mkfs.ext4 /dev/vg0/global
+..    sudo mkfs.ext4 /dev/vg0/default-school
+..    
+.. 8. Lege nachstehende Verzeichnisse an, die wir danach auf die logical volumes mounten:
+..    
+.. .. code:: 
+.. 
+..    sudo mkdir /srv/linbo
+..    sudo mkdir /srv/samba
+..    sudo mkdir /srv/samba/global
+..    sudo mkdir /srv/samba/schools
+..    sudo mkdir /srv/samba/schools/default-school
+..  
+.. 9. Kopiere den Inhalt von ``/var`` zunächst in einen neuen Ordner ``/savevar``. Das Verzeichnis ``/var`` soll später auf das LVM gemountet werden.
+..    Hierbei ist darauf zu achten, dass das virtuelle Dateisystem unterhalb von /var, das für die LX-Container genutzt wird, zunächst ausgehangen und der entsprechende    
+..    Dienst ``lxcfs.service`` beendet wird.
+.. 
+.. .. code:: 
+.. 
+..    sudo mkdir /savevar
+..    sudo systemctl stop lxcfs.service
+..    sudo cp -R /var /savevar
+.. 
+.. 10. Rufe die Datei ``/etc/fstab`` mit dem Editor nano auf und ergänze den bisherigen Eintrag für die 1. HDD um nachstehenden Eintragungen:
+.. 
+.. .. code::
+.. 
+..    /dev/vg0/var              /var ext4 defaults 0 1
    /dev/vg0/linbo            /srv/linbo ext4 defaults 0 1
    /dev/vg0/global           /srv/samba/global ext4 user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1 0 1
    /dev/vg0/default-school   /srv/samba/schools/default-school ext4 user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1 0 1
+.. 
+.. Speichere die Einstellung mit ``Strg+w`` und verlasse den Editor mit ``Strg+x``. 
+.. 
+.. 11. Lade die Eintragungen aus der Datei ``/etc/fstab`` neu mit ``mount -a``. Ggf. erkennst Du auch noch Fehler, die sich aufgrund von Tippfehlern in der Datrei /etc/fstab ergeben.
+..     Behebe diese zuerst bevor du fortfährst.
+.. 
+.. 12. Kopiere dann die gesicherten Inhalte wieder in das Verzeichnis ``/var``, das jetzt auf dem LVM gemountet ist und noch keinen Inhalt hat. Starte danach wieder   
+..     das virtuelle Dateisystem oder gehe direkt zu Punkt 13, da beim Neustart dieses wieder eingehangen wird.
+.. 
+.. .. code::
+.. 
+..    cd /savevar/var
+..    sudo cp -R * /var
+..    sudo systemctl start lxcfs.service
+.. 
+.. 13. Boote danach den Server neu mit ``sudo reboot``. Startet dieser ohne Fehlermeldungen durch, kannst du nun das Verzeichnis ``savevar`` wieder löschen mit ``rm -R /savevar``.
+.. 
+.. .. hint::
+.. 
+..    Solltest Du beim Kopieren des Inhalts von ``var`` Fehler angezeigt bekommen, so hast du das virtuelle Dateisystem zuvor nicht ausgehangen. Gehe dann wie unter 9. vor.
 
-Speichere die Einstellung mit ``Strg+w`` und verlasse den Editor mit ``Strg+x``. 
-
-11. Lade die Eintragungen aus der Datei ``/etc/fstab`` neu mit ``mount -a``. Ggf. erkennst Du auch noch Fehler, die sich aufgrund von Tippfehlern in der Datrei /etc/fstab ergeben.
-    Behebe diese zuerst bevor du fortfährst.
-
-12. Kopiere dann die gesicherten Inhalte wieder in das Verzeichnis ``/var``, das jetzt auf dem LVM gemountet ist und noch keinen Inhalt hat. Starte danach wieder   
-    das virtuelle Dateisystem oder gehe direkt zu Punkt 13, da beim Neustart dieses wieder eingehangen wird.
-
-.. code::
-
-   cd /savevar/var
-   sudo cp -R * /var
-   sudo systemctl start lxcfs.service
-
-13. Boote danach den Server neu mit ``sudo reboot``. Startet dieser ohne Fehlermeldungen durch, kannst du nun das Verzeichnis ``savevar`` wieder löschen mit ``rm -R /savevar``.
-
-.. hint::
-
-   Solltest Du beim Kopieren des Inhalts von ``var`` Fehler angezeigt bekommen, so hast du das virtuelle Dateisystem zuvor nicht ausgehangen. Gehe dann wie unter 9. vor.
-
-################
+######
 
 Basis-Konfiguration des Servers
 ===============================
@@ -484,3 +515,8 @@ Anschließend sollte der Login nach der Eingabe des Passwortes ``Muster!`` erfol
 Mit ``0) Logout`` beendest du die Verbindung.
 
 Weiter geht es jetzt mit :ref:`lmn_pre_install-label`
+
+.. todo:: Hinweis des zum Releade-Termin zur erledigen Aufgaben.
+   
+   * Zeilen 309-410 und 467-492 in rst-File löschen, wenn das Verfahren an Ort und Stelle für gut befunden wurde.
+   * Grafiken /media sind zu überprüfen ob noch benötigt und alle Benennungen den Absprache entsprechen. 
