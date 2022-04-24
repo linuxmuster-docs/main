@@ -17,8 +17,6 @@
 
 .. _basis_server-label:
 
-Bist du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst du fortfahren mit `Erster Start des Servers vom Installationsmedium`_.
-
 ====================================
 Anlegen und Installieren des Servers
 ====================================
@@ -26,6 +24,9 @@ Anlegen und Installieren des Servers
 .. sectionauthor:: `@rettich <https://ask.linuxmuster.net/u/rettich>`_,
                    `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
+
+Bist du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst du fortfahren mit `Erster Start des Servers vom Installationsmedium`_.
+
 .. hint::
 
    Willst du in einer VM installieren, so must du für die neue VM folgende Mindesteinstellungen angeben:

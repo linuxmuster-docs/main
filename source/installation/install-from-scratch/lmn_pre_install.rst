@@ -34,11 +34,14 @@ Das Skript lmn71-prepare
    
    Check des Repros zum Release-Datums! Anm. des Autors
 
+Installtions des Pakets ``linuxmuster-prepare``
+-----------------------------------------------
+
 Wenn du nicht mehr an deinem Server eingeloggt bist, melde dich erneut an.
 
 Führe danach folgende Befehle in der Eingabekonsole aus:
 
-.. code::
+.. code-block:: Bash
 
    wget -qO - "https://deb.linuxmuster.net/pub.gpg" | sudo apt-key add -
 
@@ -47,19 +50,19 @@ Führe danach folgende Befehle in der Eingabekonsole aus:
 Damit installierst du den Key für das Repository von linuxmuster.net und aktivierst ihn.
 Die nächste Zeile fügt das linuxmuster 7.1 Repository hinzu. 
 
-.. code::
+.. code-block:: Bash
 
    sudo sh -c 'echo "deb https://deb.linuxmuster.net/ lmn71 main" > /etc/apt/sources.list.d/lmn71.list'
 
 Aktualisiere die Softwareliste des Servers mittels
 
-.. code::
+.. code-block:: Bash
    
    sudo apt update
 
-Damit ist die Vorbereitung abgeschlossen und du startest mit der Installation.
+Damit ist die Vorbereitung abgeschlossen und du installierst das Paket "linuxmuster-prepare".
 
-.. code::
+.. code-block:: Bash
    
    sudo apt install linuxmuster-prepare
 
@@ -71,11 +74,20 @@ Nachdem du den Befehl mit ``J`` bestätigt hast, lädt er das Skript lmn71-prepa
    - das Netzwerk konfiguriert,
    - im Falle des Serverprofils das LVM einrichtet.
 
-.. attention:: Wichtgier Hinweis, schon jetzt! Solltest du mit deiner Konfiguration von unseren Vorgaben bei den beiden zuletzt genannten Punkten abweichen, müssen deine Einstellungen unbedingt vor dem Aufruf des Skiptes lmn71-prepare gemäß der Anleitung eingearbeitet sein!
+.. attention:: Wichtiger Hinweis, schon jetzt! 
+
+   Solltest du mit deiner Konfiguration von unseren Standard-Vorgaben bei dem zuletzt genannten Punkt abweichen, müssen deine Einstellungen unbedingt vor dem Aufruf des Skiptes lmn71-prepare eingearbeitet sein!
+
+   :ref:`basis_opnsense`
+   
+   :ref:`basis_server-label`
+
+Letzter Test vor Anwendung des Skriptes "lmn71-prepare"
+-------------------------------------------------------
 
 Als letzte Überprüfung bevor du das Skript einsetzt, verbinde dich vom Server aus mit der Firewall via ssh.
 
-.. code::
+.. code-block:: Bash
 
    ssh root@10.0.0.254
 
@@ -85,19 +97,19 @@ Sollte dieser Test erfolgreich sein, steht der abschließenden Vorbereitung nich
 
 Wechsele deinen Login und werde ``root``:
 
-.. code::
+.. code-block:: Bash
  
    sudo -i
 
 Für die weitere Konfiguration nutzt du unser lmn71-prepare Script. Hilfe erhälst du mittels
 
-.. code::
+.. code-block:: Bash
 
-   lmn-prepare -h
+   lmn71-prepare -h
 
-Hier ein Auszug mit denen benötigten Optionen die du gleich anwenden wirst.
+Hier ein Auszug mit den benötigten Optionen die du gleich anwenden wirst.
 
-.. code::
+.. code-block:: Bash
 
    Usage: lmn71-prepare [options]
 
@@ -106,92 +118,88 @@ Hier ein Auszug mit denen benötigten Optionen die du gleich anwenden wirst.
    -x, --force                 : Force run on an already configured system.
    -i, --initial               : Prepare the appliance initially for rollout.
    -s, --setup                 : Further appliance setup (network, swapsize).
-                                 Note: You have to use either -i or -s.
-   -t, --hostname=<hostname>   : Hostname to apply (optional, works only with
-                                 server profile).
-   -n, --ipnet=<ip/bitmask>    : Ip address and bitmask assigned to the host
-                                 (optional, default is 10.0.0.x/16, depending
-   ...                            on the profile).
+                                 on the profile).
+   |...|
    -p, --profile=<profile>     : Host profile to apply, mandatory. Expected
-   ...                           values are "server" or "ubuntu".
-                                 Profile name is also used as hostname, except for
-                                 "server" if set with -t.
-   -c, --createcert            : Create self signed server cert (to be used only
-                                 in setup mode and with ubuntu profile).
-   -l, --pvdevice=<device>     : Initially sets up lmv on the given device
-                                 (server profile only).
-   -f, --firewall=<ip>         : Firewall ip address (default *.*.*.254).
-   -g, --gateway=<ip>          : Gateway ip address (default is firewall ip).
-   -d, --domain=<domainname>   : Domainname (default linuxmuster.lan).
-   -r, --serverip=<serverip>   : Ip address of the server (unattended mode only).
-   -w, --swapsize=<size>       : Swapfile size in GB (default "2").
-   -a, --rootpw=<password>     : Set root password (only with -s).
-   -b, --reboot                : Reboots finally (only in unattended mode).
-   ...
+                                 values are "server" or "ubuntu".
+   |...|
    -u, --unattended            : Unattended mode, do not ask, use defaults.
-   -e, --default               : Sets default (10.0.0.0/16) network addresses,
-                                 triggers setup and unattended modes, needs profile
-                                 (uses saved profile from initial run).
-   -o, --do-it-like-babo       : Like above, but uses babo (10.16.0.0/12) network
-                                 addresses.
-   -j, --no-keys               : Do not create ssh keys
-                                 (only in setup mode and together with -x).
-   -k, --no-pw                 : Do not set admin password
-                                 (only in setup mode and together with -x).
-   -h, --help                  : Print this help.
-   
+   |...|
 
+#####
 
 Installation mit unseren Standardvorgaben
+-----------------------------------------
 
-.. code::
+.. code-block:: Bash
 
    lmn71-prepare -i -u -p server
 
 Jetzt ist es an der Zeit, dass du dich zurücklehnst und den Verlauf beobachtest.
+
 Nach dem das Skript abgearbeitet ist, steht dem :ref:`setup-label` nichst mehr im Wege.
 
 #####
 
 Installation mit deinen Vorgaben:
+---------------------------------
 
-.. code::
+.. code-block:: Bash
 
    lmn71-prepare -i -x -p server
 
 Ausgabe des Befehls und deine Eingaben
 
-.. code::
+.. code-block:: Bash
 
    ### lmn71-prepare
    ## Force is given, skipping test for configured system.
    ## Profile
-   Enter host profile [server, ubuntu] [server]: [ENTER]
+   Enter host profile [server, ubuntu] [server]:
+
+Das vorausgewählte Profile "server" kannst du mit ``[ENTER]`` übernehmen, da du ja den Server einrichten willst.
+
+.. code-block:: Bash
 
    ## Network
-   Enter network interface to use ['ens18']: [ENTER]
+   Enter network interface to use ['ens18']:
+  
+Das Netzwerk-Interface sollte richtig erkannt sein, da du ja nur eines für den Server eingerichtet hast. Also wieder mit ``[ENTER]`` bestätigen.
 
-   Enter ip address with net or bitmask [10.0.0.1/16]: [ENTER]
-  alternative Eingabe möglich
+.. code-block:: Bash
+
+   Enter ip address with net or bitmask [10.0.0.1/16]:
+  
+An dieser Stelle ist die Eingabe eines abweichenden Netzwerk-Bereichs möglich, dafür müsstest du den IP-Bereich und die zuverwendente Netzwerkmaske eingeben. Gibst du keine ein, übernimmst du unsere Standardvorgabe mit `` [ENTER]``
+
+.. code-block:: Bash
 
    Enter firewall ip address [10.112.0.254]:
-  wird automatisch angepasst
-   Enter hostname [server]: [ENTER]
 
-   Enter domainname [linuxmuster.lan]: verw-gymlue.lan
-  deine Wahl
+Die Adresse der Firewall wird automatisch deiner zuvor gemachten Eingabe angepasst. Alternativ könntest du sie anpassen, wenn die Firewall eine andere als die angezeigte haben sollte. Weiter mit ``[ENTER]`` 
+
+.. code-block:: Bash
+
+   Enter hostname [server]: 
+
+Auch hier gilt Übernahme der Vorgabe mit ``[ENTER]``, Änderungen möglich.
+
+.. code-block:: Bash
+
+   Enter domainname [linuxmuster.lan]:
+
+Auch hier sind idivuelle Anpassung möglich, wenn du nicht unsere Standardvorgabe nutzen willst. Dabei gilt aber zu beachten das ...
+
+.. todo:: Hint-Box mit Anmerkungen zu dem Namensraum ergänzen
+
+.. code-block:: Bash
+
    Enter physical device to use for LVM []: [ENTER]
-  Hier einfach Enter übernimmt die von dir gemachten LVMs
+
+Da du das LVM, wie von dir zuvor bei der Ubuntu-Servers-Installation festgelegt, verwenden willst musst du an dieser Stelle einfach nur die ``[Enter]``-Taste drücken. Die bei Aufruf des Installationsscripts übergebene Option ``-x`` veranlasst, dass es so eingerichtet wird.
 
 #####
 
-.. todo:: Nächstes Kapitel: Anpassung der Netze! LVM weiter unten: verwirrt.
+Jetzt ist es an der Zeit, dass du dich zurücklehnst und den Verlauf beobachtest.
 
-.. todo:: Ab hier ???? Anfrage bei den Entwicklern läuft ob das überhaupt möglich ist.
-
-Installation mit deinem vorbereiteten LVM
-
-Hast du nicht wie zuvor beschreiben bereits ein LVM auf dem Server eingerichtet und dieses bereits gemountet, dann gibst du zur Installation    
-   folgendes an: ``./lmn71-prepare -p server -l /dev/sdb`` aus. Hierbei wird auf dem angegebenen Device (hier also 2. Festplatte) ein LVM eingerichtet.
-
-Für weitere Hinweise zum linuxmuster-prepare Skript siehe: https://github.com/linuxmuster/linuxmuster-prepare
+Nach dem das Skript abgearbeitet ist, steht dem :ref:`setup-label` nichst mehr im Wege.

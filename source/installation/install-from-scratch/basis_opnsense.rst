@@ -16,7 +16,7 @@
 
 .. include:: /guided-inst.subst
 
-.. basis_opnsense:
+.. _basis_opnsense:
 
 =====================================
 Anlegen und Installieren der Firewall
@@ -167,6 +167,10 @@ Setze es mit ``OK``
    :alt: OPNsense: Type new root password
 
 Wähle danach die Option ``Exit and reboot`` aus.
+
+.. todo:: hint-box näher beschreiben: countdown screenshot
+
+.. hint:: Nutze nicht den Reboot sondern breche den Prozess ab um dann manuel herunterzufahren. So hast du mehr Zeit um das Installationsmedium zu entfernen.
 
 Starte OPNsense |reg| zum Abschluss neu und werfe die DVD / den USB-Stick aus. 
 Hast du OPNsense |reg| in eine VM installiert, so werfe die CD aus und ändere die Boot-Reihenfolge, sodass direkt von der Festplatte gestartet wird.
@@ -332,7 +336,7 @@ Die Ausgabe sollte wie folgt aussehen:
 
 ``exit`` um wieder zum dashboard zurück zu kommen
 
-.. hint:: ``11) Reload all services`` bei Problemen mit der Verbindung zum Internet
+.. hint:: 11) reload aller Servicesi bei Problemmen mit der Verbindung zum Internet
 
 IP-Adressen zuweisen
 --------------------
@@ -428,15 +432,13 @@ Bevor du das aber machst, erfolgt ein letzter Test:
 Aktualisierung der OPNsense |reg|
 ---------------------------------
 
-Aktualisiere die OPNsense |reg| in der Konsole, indem du den Punkt ``12) Update from console`` aufrufst und die Rückfrage mit ``y`` bestätigst.
+Aktualisiere die OPNsense |reg| in der Konsole, indem du den Punkt ``12) Update from console`` aufrufst und die Rückfrage mit ``Y`` bestätigst.
 
 .. todo:: hint box um ``11) Reload all services`` ergänzen; Wenn Update funktionierte dann startet opnsense automatisch neu wenn das so angegeben wurde. Vorhergehender Satz.
 
 .. hint::
 
-  Sollte hierbei keine Verbindung zu den externen Update-Servern möglich sein, dann stimmt deine Netzwerkkarteneinstellungen noch nicht. 
-
-  Zuerst nutze nochmals ``11) Reload all services`` und anschließend starte nochmals das Update mit ``12) Update fron console``
+  Sollte hierbei keine Verbindung zu den externen Update-Servern möglich sein, dann stimmt deine Netzwerkkartenzuordnung noch nicht. Ändere dies, bevor du fortfährst.
 
 Klappt das Update, startest du die OPNsense |reg| neu nachdem du dich erneut eingeloggt hast.
 
