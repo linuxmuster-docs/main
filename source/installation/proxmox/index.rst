@@ -304,13 +304,13 @@ Diese ist für die vmbr0 bisher noch nicht gesetzt.
    :align: center
    :alt: Proxmox-Übersicht hv01 - Network-vmbr0-edit
 
-Markiere wie gezeigt ``vmbr0`` und betätige den ``Edit``-Button um das Konfigurationsfenster zu öffnen. 
+Markiere wie gezeigt ``vmbr0`` und betätige den ``Edit``-Button, um das Konfigurationsfenster zu öffnen. 
 
 .. figure:: media/install-on-proxmox_13_network-vmbr0-comment.png
    :align: center
    :alt: Proxmox-Übersicht hv01 - Network-vmbr0-comment
 
-Trage unter ``Comment`` einen Kommentar ein der veranschaulich, dass diese Brücke die Verbindung zum Internet stellt. Zum Beispiel wie hier gezeigt ``red``, den bei uns historisch gewachsenen Begriff für dieses Interface.
+Trage unter ``Comment`` einen Kommentar ein, der veranschaulicht, dass diese Brücke die Verbindung zum Internet stellt. Zum Beispiel wie hier gezeigt ``red``, den bei uns historisch gewachsenen Begriff für dieses Interface.
 
 Mit `OK` wird der Kommentar übernommen.
 
@@ -324,7 +324,7 @@ Dazu wähle das Menü ``Datacenter`` --> ``hv01`` --> ``Network`` -->  ``Create`
    :align: center
    :alt: Proxmox-Übersicht hv01 - Network - Create - Linux Bridge
 
-Es öffent sich ein neues Fenster. Dort sind folgende Einträge nötig:
+Es öffnet sich ein neues Fenster. Dort sind folgende Einträge nötig:
 
 .. figure:: media/install-on-proxmox_15_create-linux-bridge.png
    :align: center
@@ -332,15 +332,15 @@ Es öffent sich ein neues Fenster. Dort sind folgende Einträge nötig:
 
 Mit `Create` wird die Brücke erstellen.
 
-Anschließend Proxmox über den Button ``Reboot`` oben rechts neu starten, um die neue Netzwerkonfiguration zu laden.
-Node hv01 muss dafür im Menü ``Datacenter`` links ausgewählt sein:
+Anschließend Proxmox über den Button ``Reboot`` oben rechts neu starten, um die neue Netzwerkkonfiguration zu laden. Node hv01 muss dafür im Menü ``Datacenter`` links ausgewählt sein:
 
 .. figure:: media/install-on-proxmox_16_reboot.png
    :align: center
    :alt: Proxmox reboot
 
 Die Netzwerkkonfiguration des Proxmox-Host kannst du mit ``cat /etc/network/interfaces`` wie oben gezeigt in der Konsole überprüfen.
-Die Datei sollte nachstehende Eintragungen aufweisen. Die angezeigte IP für die Bridge ``vmbr0`` muss der IP-Adresse entsprechen, die bei Installation eingetragenen wurde.
+
+Dort sollten sich nun nachstehende Eintragungen befinden. Bei der Bridge ``vmbr0`` muss die IP-Adresse derjenigen entsprechen, die bei der Installation eingetragenen wurde.
 
 .. code::
 
