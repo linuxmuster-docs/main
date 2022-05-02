@@ -37,7 +37,7 @@ deiner Virtualisierungslösung. Hinweise auf andere Virtualisierungslösungen fi
 1. XCP-ng: https://wiki.linuxmuster.net/community/anwenderwiki:virtualisierung:xcpng:xcpng4lmn71
 2. KVM:  https://wiki.linuxmuster.net/community/anwenderwiki:virtualisierung:kvm:kvm4lmn71
 
-Proxmox ist eine OpenSource-Virtualisierungsplattform. Diese kombiniert KVM- und Container-basierte Virtualisierung und verwaltet virtuelle Maschinen, Container, Storage, virtuelle Netzwerke und Hochverfügbarkeit-Cluster übersichtlich über die zentrale Managementkonsole.
+Proxmox ist eine Open Source-Virtualisierungsplattform. Diese kombiniert KVM- und Container-basierte Virtualisierung und verwaltet virtuelle Maschinen, Container, Storage, virtuelle Netzwerke und Hochverfügbarkeit-Cluster übersichtlich über die zentrale Managementkonsole.
 
 Das web-basierte Verwaltungs-Interface läuft direkt auf dem Server. Zudem kann die Virtualisierungsumgebung via SSH administriert werden.
 
@@ -247,8 +247,6 @@ Folgende Befehle müssen der Reihe nach ausgeführt werden:
 
    apt update
    apt upgrade -y
-
-Die Konsole kann nach dem erfolgreichen Update geschlossen werden.
    
 Netzwerkbrücken einrichten
 --------------------------
@@ -328,7 +326,7 @@ Es öffent sich ein neues Fenster. Dort sind folgende Einträge nötig:
 
 Mit `Create` wird die Brücke erstellen.
 
-Anschließend Proxmox über den Button ``Reboot`` oben rechts neu starten, um die neue Netwerklonfiguration zu laden.
+Anschließend Proxmox über den Button ``Reboot`` oben rechts neu starten, um die neue Netzwerkonfiguration zu laden.
 Node hv01 muss dafür im Menü ``Datacenter`` links ausgewählt sein:
 
 .. figure:: media/install-on-proxmox_16_reboot.png
