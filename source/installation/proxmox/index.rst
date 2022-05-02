@@ -267,7 +267,7 @@ Die bisherige Netzwerkkonfiguration stellt sich wie folgt dar:
    :align: center
    :alt: Proxmox-Übersicht hv01 - Network
 
-Für die folgende Überprüfung öffnet du nochmals die Konsole auf dem Hypervisor hv01 (wie oben beschrieben) und lässt dir den Inhalt der Konfigurationsdatei mittels ``cat /etc/network/interfaces`` anzeigen. Dort finden sich bisher folgende Eintragungen:
+Für die folgende Überprüfung öffnet du nochmals die Konsole auf dem Hypervisor hv01, falls sie nicht geöffnet sein sollte wie oben beschrieben und lässt dir den Inhalt der Konfigurationsdatei mittels ``cat /etc/network/interfaces`` anzeigen. Dort finden sich bisher folgende Eintragungen:
 
 .. code::
 
