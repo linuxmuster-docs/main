@@ -267,7 +267,13 @@ Die bisherige Netzwerkkonfiguration stellt sich wie folgt dar:
    :align: center
    :alt: Proxmox-Übersicht hv01 - Network
 
-Für die folgende Überprüfung öffnest du nochmals die Konsole auf dem Hypervisor hv01, falls sie nicht geöffnet sein sollte, wie oben beschrieben und lässt dir den Inhalt der Konfigurationsdatei mittels ``cat /etc/network/interfaces`` anzeigen. Dort finden sich bisher folgende Eintragungen:
+Für die folgende Überprüfung öffnest du nochmals die Konsole auf dem Hypervisor hv01, falls sie nicht geöffnet sein sollte, wie oben beschrieben und lässt dir den Inhalt der Konfigurationsdatei anzeigen mittels:
+
+.. code:: 
+
+   cat /etc/network/interfaces
+   
+Dort befinden sich bisher folgende Eintragungen:
 
 .. code::
 
@@ -291,7 +297,7 @@ Für die folgende Überprüfung öffnest du nochmals die Konsole auf dem Hypervi
 
    Die Bezeichnungen für die Netzwerkkarten eno1, eno2 können je nach eingesetztem System von der dargestellten Bezeichnung abweichen.
 
-Für das weitere Vorgehen, ist es hilfreich die Funktion der Kommentierung der Netzwerkbrücken zu nutzen.
+Für das weitere Vorgehen, ist es hilfreich, die Funktion der Kommentierung der Netzwerkbrücken zu nutzen.
 Diese ist für die vmbr0 bisher noch nicht gesetzt.
 
 .. figure:: media/install-on-proxmox_13_network-vmbr0.png
