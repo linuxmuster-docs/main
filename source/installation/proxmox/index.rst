@@ -1,3 +1,5 @@
+.. |-| unicode:: U+2013 .. Gedankenstrich
+
 .. |zB| unicode:: z. U+00A0 B. .. Zum Beispiel
 
 .. |dh| unicode:: d. U+00A0 h. .. das heisst
@@ -172,8 +174,7 @@ Lege ein Kennwort für den Administrator des Proxmox-Host und eine E-Mail-Adress
    :alt: Proxmox Installation Admin-Passwort
 
 Lege die IP-Adresse des Proxmox-Host im internen Netz fest. Solltest du intern |zb| auf dem (DSL-)Router einen
-DHCP-Server laufen haben, dann erhältst du hier bereits eine vorausgefüllte Konfigurationsseite. Passe diese Werte nun den gewünschten Werten an. Der Hostname des Proxmox-Host ist hier in gewünschter Form - hier `hv01.linuxmuster.lan` -
-anzugeben.
+DHCP-Server laufen haben, dann erhältst du hier bereits eine vorausgefüllte Konfigurationsseite. Passe diese Werte nun den gewünschten Werten an. Der Hostname des Proxmox-Host ist hier in gewünschter Form |-| hier `hv01.linuxmuster.lan` |-| anzugeben.
 
 .. hint::
 
@@ -230,11 +231,14 @@ Um Proxmox Updates installieren zu können, müssen in der Shell des Nodes hv01 
    :align: center
    :alt: Proxmox Open Shell
 
-Folgende Befehle müssen der Reihe nach ausgeführt werden:
+Folgende vier Befehle müssen der Reihe nach ausgeführt werden:
 
 .. code::
 
    sed -i -e 's/^/#/' /etc/apt/sources.list.d/pve-enterprise.list
+
+.. code::
+
    echo "deb http://download.proxmox.com/debian/pve bullseye pve-no-subscription" >> /etc/apt/sources.list.d/pve-no-subscription.list
 
 
@@ -245,6 +249,9 @@ Folgende Befehle müssen der Reihe nach ausgeführt werden:
 .. code::
 
    apt update
+
+.. code::
+
    apt upgrade -y
    
 Netzwerkbrücken einrichten
@@ -337,7 +344,7 @@ Anschließend Proxmox über den Button ``Reboot`` oben rechts neu starten, um di
    :align: center
    :alt: Proxmox reboot
 
-Die Netzwerkkonfiguration des Proxmox-Host kannst du mit ``cat /etc/network/interfaces`` wie oben gezeigt in der Konsole überprüfen.
+Die Netzwerkkonfiguration des Proxmox-Host kannst du, nach dem Neustart mit ``cat /etc/network/interfaces`` wie oben gezeigt in der Konsole überprüfen.
 
 Dort sollten sich nun nachstehende Eintragungen befinden. Bei der Bridge ``vmbr0`` muss die IP-Adresse derjenigen entsprechen, die bei der Installation eingetragenen wurde.
 
@@ -377,12 +384,11 @@ Zur Veranschaulichung eine Grafik, die den Status der Konfiguration zeigt.
 
 *Zweiten Datenträger als Speicher einbinden*
 
-
 In diesem Schritt wird die zweite Festplatte in Proxmox eingebunden, um diese als Storage für die virtuellen Maschinen zu nutzen.
 
 .. note::
 
-   Die folgenden Schritte bitte nur dann ausführen, wenn nicht auf einem einzigen Volume Proxmox eingerichtet werden soll!
+   Die folgenden Schritte bitte dann ausführen, wenn nicht auf einem einzigen Volume Proxmox eingerichtet werden soll! In diesem Fall geht es hier weiter: `Vorbereiten des ISO-Speichers`_
 
 *local-lvm(hv01)-Partition entfernen und Speicher freigeben*
 
@@ -572,9 +578,9 @@ ein (copy&paste). Anschließend betätigst du dann den Button ``Query URL``.
 
 Wenn die Abfrage der URL positiv war, sollten sich die Felder ausgefüllt haben.
 
-Zum Überprüfen der Datei-Integrität aktiviere ``Verify certificates``.
+Zum Überprüfen der Datei-Integrität aktiviere ``Verify certificates``, das sich unter den ``Advanced`` Optionen befindet.
 
-Wähle wie dargestellt: ``SHA-256`` und trage die Checksumme ein
+Wähle wie dargestellt: ``SHA-256`` und trage die Checksumme ein:
 
 .. code:: 
   
@@ -603,17 +609,17 @@ befindet sich das heruntergeladene Ubuntu-ISO nun in dem ``ISO Images`` und steh
 OPNsense
 --------
 
-Die zuvor gezeigte Möglichkeit des einfachen Importes mittels den Bordmitteln von Proxmox steht dir für die OPNsense |reg| leider nicht zur Verfügung, da nur der Download einer bz2-Datei möglich ist. Dir steht der Weg des Downloads auf einen lokalen PC, der Umwandlung des bz2-File in eine iso-Datei und dann der Upload über den dir im Abschnitt Ubuntu frei. Dabei wählst du dann nicht ``URL``, sondern ``Upload``.
+Die zuvor gezeigte Möglichkeit des einfachen Importes mittels den Bordmitteln von Proxmox steht dir für die OPNsense |reg| leider nicht zur Verfügung, da nur der Download einer bz2-Datei möglich ist. Dir steht der Weg des Downloads auf einen lokalen PC, der Umwandlung des bz2-File in eine iso-Datei und dann der Upload über den dir im Abschnitt Ubuntu aufgezeigten Ablauf frei. Dabei wählst du dann nicht ``URL``, sondern ``Upload``.
 
 Um dir den Upload zu ersparen, beschreiben wir hier den Weg, um die benötigten Dateien direkt in deine Proxmox-Maschine zu bringen:
 
-Als Erstes startest du die Konsole ``xterm.js`` wie dargestellt
+Als Erstes startest du die Konsole ``xterm.js`` wie dargestellt, falls sie nicht sowieso gestartet ist.
 
 .. figure:: media/proxmox-shell-xterm_01_start.png
    :align: center
    :alt: Proxmox open xterm shell
 
-Mit ihr hast du jetzt die Möglichkeit, mit Copy&Paste die folgenden Bash-Zeilen direkt zu übernehmen.
+Mit ihr hast du jetzt die Möglichkeit, mit Copy&Paste die folgenden bash-Zeilen direkt zu übernehmen.
 
 .. figure:: media/proxmox-shell-xterm_02_open_shell.png
    :align: center
@@ -726,6 +732,8 @@ Klicke dann auf ``Next``.
 Wähle nun hier unter ``Storage`` den geeigneten Datenspeicher auf, um die Festplatte der VM dort abzulegen. In der Abb. wird der Datenspeicher ``Dataset`` verwendet.
 In dem Drop-down Menü siehst du alle in deinem System verfügbaren Datenspeicher.
 
+.. hint:: Folgende Größenangaben beziehen sich, wie schon geschrieben, auf eine Testumgebung. Für andere Einsatzszenarien solltest du dich unbedingt mit den `Hardware-Anforderungen <https://docs.opnsense.org/manual/hardware.html#hardware-requirements>`_ gemäß der OPNsense |reg| -Dokumentation auseinandersetzen.
+
 .. figure:: media/proxmox-create-vm-opnsense-04.png
    :align: center
    :alt: Proxmox Create VM: Disks
@@ -782,7 +790,7 @@ Klicke hierzu oben auf die Reiterkarte ``Add``. Es erscheint ein Drop-down Menü
    :align: center
    :alt: Proxmox Create VM: Add 2nd NIC
 
-Wähle als Bridge die zweite zuvor eingerichtete Bridge - hier ``vmbr1``. 
+Wähle als Bridge die zweite zuvor eingerichtete Bridge |-| hier ``vmbr1``. 
 
 Achte für die weitere Installation darauf, wie du die Bridges zugeordnet hast:
 
@@ -800,32 +808,31 @@ Damit dir copy&paste in der Oberfläche von Proxmox bei der Auswahl unter ``Cons
 
 .. figure:: media/xterm-opnsense_001.png
    :align: center
-   :alt: xterm.js before activation
+   :alt: Console menu before xterm.js activation
 
-Das ist der Zustand vor der Aktivierung.
+Das obige Bildschirmfoto zeigt den Zustand vor der Aktivierung.
 
 .. figure:: media/xterm-opnsense_002.png
    :align: center
-   :alt: xterm.js before activation
+   :alt: Description of how to open the Add menu
 
 Gehe auf ``hv01`` --> ``lmn71-opnsense`` --> ``Hardware`` --> ``Serial Port``
 
 .. figure:: media/xterm-opnsense_003.png
    :align: center
-   :alt: xterm.js before activation
+   :alt: Add serial port 0
 
 Lege einen Seriellen Port mit der Bezeichnung ``0`` an.
 
 .. figure:: media/xterm-opnsense_004.png
    :align: center
-   :alt: xterm.js before activation
+   :alt: Console menu after activation of xterm.js
 
-Klicke auf ``Add`` und kontrolliere dann nochmals alle Einstellungen der neu angelegten VM.
+Klicke auf ``Add``, anschließend sollte der gezeigte Menüpunkt nicht mehr ausgegraut sein.
 
-.. hint:: Für die weitere Nutzung von xterm.js ist allerdings noch eine Anpassung bei der laufenden OPNsense |reg| nötig. Die nehmen wir zu einem geeigneten Zeitpunkt vor.
+.. hint:: Für die weitere Nutzung von xterm.js ist allerdings noch eine Anpassung bei der laufenden OPNsense |reg| nötig. Die nehmen wir zu einem geeigneten, späteren Zeitpunkt vor. (Stichwort: Sekundäre Konsole)
 
-
-Die eigentliche Installation von OPNsense in der VM folgt später.
+Kontrolliere nochmals alle Einstellungen der neu angelegten VM.
 
 Anlegen der VM für linuxmuster server
 -------------------------------------
@@ -925,29 +932,29 @@ Damit dir copy&paste ebenfalls für den Server zur Verfügung steht, muss du die
 
 .. figure:: media/xterm-server_001.png
    :align: center
-   :alt: xterm.js before activation
+   :alt: Console menu before xterm.js activation
 
 Das ist der Zustand vor der Aktivierung.
 
 .. figure:: media/xterm-server_002.png
    :align: center
-   :alt: xterm.js before activation
+   :alt: Description of how to open the Add menu  
 
 Gehe auf ``hv01`` --> ``lmn71-server`` --> ``Hardware`` --> ``Serial Port``
 
 .. figure:: media/xterm-opnsense_003.png
    :align: center
-   :alt: xterm.js before activation
+   :alt: Add serial port 0
 
 Lege einen Seriellen Port mit der Bezeichnung ``0`` an.
 
 .. figure:: media/xterm-opnsense_004.png
    :align: center
-   :alt: xterm.js before activation
-
-Die eigentliche Installation des Servers in der VM folgt später.
+   :alt: Console menu after activation of xterm.js 
 
 Klicke auf ``Add`` und kontrolliere dann nochmals alle Einstellungen der neu angelegten VM.
+
+Die eigentliche Installation des Servers in der VM folgt später.
 
 Boot-Optionen
 -------------
