@@ -230,11 +230,14 @@ Um Proxmox Updates installieren zu können, müssen in der Shell des Nodes hv01 
    :align: center
    :alt: Proxmox Open Shell
 
-Folgende Befehle müssen der Reihe nach ausgeführt werden:
+Folgende vier Befehle müssen der Reihe nach ausgeführt werden:
 
 .. code::
 
    sed -i -e 's/^/#/' /etc/apt/sources.list.d/pve-enterprise.list
+
+.. code::
+
    echo "deb http://download.proxmox.com/debian/pve bullseye pve-no-subscription" >> /etc/apt/sources.list.d/pve-no-subscription.list
 
 
@@ -245,6 +248,9 @@ Folgende Befehle müssen der Reihe nach ausgeführt werden:
 .. code::
 
    apt update
+
+.. code::
+
    apt upgrade -y
    
 Netzwerkbrücken einrichten
