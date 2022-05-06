@@ -126,11 +126,19 @@ Jetzt wird OPNsense |reg| auf der Festplatte installiert. Zuvor musst du diese n
    :align: center
    :alt: OPNsense: UFS Configuration
 
-Bestätige diesen Vorgang:
+Mit ``ÒK`` übernimmst du deine Auswahl.
+
+.. figure:: media/basis_opnsense_007a.png
+   :align: center
+   :alt: OPNsense: Question about the use of a swap file
+
+Akzeptiere die Frage nach der empfohlenen Auslagerungsdatei.
 
 .. figure:: media/basis_opnsense_007.png
    :align: center
    :alt: OPNsense: UFS Configuration 2
+
+Bestätige diesen Vorgang um die Installation zu starten.
 
 Warte jetzt, bis die Installation abgeschlossen ist.
 
