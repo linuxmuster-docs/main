@@ -1,3 +1,5 @@
+.. |-| unicode:: U+2013 .. Gedankenstrich
+
 .. |zB| unicode:: z. U+00A0 B. .. Zum Beispiel
 
 .. |dh| unicode:: d. U+00A0 h. .. das heisst
@@ -172,8 +174,7 @@ Lege ein Kennwort für den Administrator des Proxmox-Host und eine E-Mail-Adress
    :alt: Proxmox Installation Admin-Passwort
 
 Lege die IP-Adresse des Proxmox-Host im internen Netz fest. Solltest du intern |zb| auf dem (DSL-)Router einen
-DHCP-Server laufen haben, dann erhältst du hier bereits eine vorausgefüllte Konfigurationsseite. Passe diese Werte nun den gewünschten Werten an. Der Hostname des Proxmox-Host ist hier in gewünschter Form - hier `hv01.linuxmuster.lan` -
-anzugeben.
+DHCP-Server laufen haben, dann erhältst du hier bereits eine vorausgefüllte Konfigurationsseite. Passe diese Werte nun den gewünschten Werten an. Der Hostname des Proxmox-Host ist hier in gewünschter Form |-| hier `hv01.linuxmuster.lan` |-| anzugeben.
 
 .. hint::
 
@@ -618,7 +619,7 @@ Als Erstes startest du die Konsole ``xterm.js`` wie dargestellt, falls sie nicht
    :align: center
    :alt: Proxmox open xterm shell
 
-Mit ihr hast du jetzt die Möglichkeit, mit Copy&Paste die folgenden Bash-Zeilen direkt zu übernehmen.
+Mit ihr hast du jetzt die Möglichkeit, mit Copy&Paste die folgenden bash-Zeilen direkt zu übernehmen.
 
 .. figure:: media/proxmox-shell-xterm_02_open_shell.png
    :align: center
@@ -789,7 +790,7 @@ Klicke hierzu oben auf die Reiterkarte ``Add``. Es erscheint ein Drop-down Menü
    :align: center
    :alt: Proxmox Create VM: Add 2nd NIC
 
-Wähle als Bridge die zweite zuvor eingerichtete Bridge - hier ``vmbr1``. 
+Wähle als Bridge die zweite zuvor eingerichtete Bridge |-| hier ``vmbr1``. 
 
 Achte für die weitere Installation darauf, wie du die Bridges zugeordnet hast:
 
