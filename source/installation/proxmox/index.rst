@@ -343,7 +343,7 @@ Anschließend Proxmox über den Button ``Reboot`` oben rechts neu starten, um di
    :align: center
    :alt: Proxmox reboot
 
-Die Netzwerkkonfiguration des Proxmox-Host kannst du mit ``cat /etc/network/interfaces`` wie oben gezeigt in der Konsole überprüfen.
+Die Netzwerkkonfiguration des Proxmox-Host kannst du, nach dem Neustart mit ``cat /etc/network/interfaces`` wie oben gezeigt in der Konsole überprüfen.
 
 Dort sollten sich nun nachstehende Eintragungen befinden. Bei der Bridge ``vmbr0`` muss die IP-Adresse derjenigen entsprechen, die bei der Installation eingetragenen wurde.
 
