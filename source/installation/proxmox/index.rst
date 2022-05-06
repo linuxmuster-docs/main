@@ -579,7 +579,7 @@ Wenn die Abfrage der URL positiv war, sollten sich die Felder ausgefüllt haben.
 
 Zum Überprüfen der Datei-Integrität aktiviere ``Verify certificates``, das sich unter den ``Advanced`` Optionen befindet.
 
-Wähle wie dargestellt: ``SHA-256`` und trage die Checksumme ein
+Wähle wie dargestellt: ``SHA-256`` und trage die Checksumme ein:
 
 .. code:: 
   
