@@ -829,7 +829,7 @@ Lege einen Seriellen Port mit der Bezeichnung ``0`` an.
 
 Klicke auf ``Add``, anschließend sollte der gezeigte Menüpunkt nicht mehr ausgegraut sein.
 
-.. hint:: Für die weitere Nutzung von xterm.js ist allerdings noch eine Anpassung bei der laufenden OPNsense |reg| nötig. Die nehmen wir zu einem geeigneten, späteren Zeitpunkt vor.
+.. hint:: Für die weitere Nutzung von xterm.js ist allerdings noch eine Anpassung bei der laufenden OPNsense |reg| nötig. Die nehmen wir zu einem geeigneten, späteren Zeitpunkt vor. (Stichwort: Sekundäre Konsole)
 
 Kontrolliere nochmals alle Einstellungen der neu angelegten VM.
 
