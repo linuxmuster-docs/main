@@ -153,8 +153,8 @@ Zum Abschluss der Konfiguration musst du das Kennwort für den Benutzer ``root``
    :alt: OPNsense: Root Password
 
 .. attention:: 
-
-   An dieser Stelle muss als root-Passwort ``Muster!`` eingegeben werden, da später der lmn-Server beim Einrichten der Firewall davon ausgeht, dass das root-Passwort ``Muster!`` ist!
+   
+   An dieser Stelle muss als root-Passwort ``Muster!`` eingegeben werden, da später der lmn-Server beim Einrichten der Firewall davon ausgeht, dass das root-Passwort ``Muster!`` ist! Sollte dieses anders lauten, wird die komplette weitere Installation scheitern!
 
 Gebe das neue Passwort für root ein.
 
@@ -176,12 +176,9 @@ Setze es mit ``OK``
 
 Wähle danach die Option ``Exit and reboot`` aus.
 
-.. todo:: hint-box näher beschreiben: countdown screenshot
+.. hint::
 
-.. hint:: Nutze nicht den Reboot, sondern breche den Prozess ab, um dann manuell herunterzufahren. So hast du mehr Zeit, um das Installationsmedium zu entfernen.
-
-Starte OPNsense |reg| zum Abschluss neu und werfe die DVD / den USB-Stick aus. 
-Hast du OPNsense |reg| in eine VM installiert, so werfe die CD aus und ändere die Boot-Reihenfolge, sodass direkt von der Festplatte gestartet wird.
+   Solltest du nicht zum Entfernen, das Installationsmedium aufgefordert werden, fahre deine neue Firewall herunter (schalte sie aus). Ansonsten gerätst du eventuell in eine erneute Installation. Starte sie neu, nachdem du das Installationsmedium ausgeworfen hast und fahre mit der Installation fort.
 
 Der Boot-Vorgang kann dann eine Weile dauern. Vor allem, wenn der Router kein DHCP anbieten sollte.
 
@@ -322,6 +319,10 @@ WAN Zugang testen
 
 Um zwei erste Tests durchzuführen, wechsel mit ``8) Shell`` auf die Kommandozeile und gebe dort folgende Befehle ein.
 
+.. hint:: 
+
+   Sollte einer der Tests scheitern, dann verlasse die Konsole mittels ``exit`` und nutze den Auswahlpunkt ``11) reload all Services``.
+
 .. code::
 
    ping -c 3 8.8.8.8
@@ -340,11 +341,7 @@ Die Ausgabe sollte wie folgt aussehen:
    :align: center
    :alt: OPNsense: GUI - Assign interfaces 
 
-.. todo:: hint box näher beschreiben
-
-``exit`` um wieder zum dashboard zurückzukommen
-
-.. hint:: 11) reload aller Services bei Problemen mit der Verbindung zum Internet
+``exit`` um wieder zum dashboard zurückzukommen.
 
 IP-Adressen zuweisen
 --------------------
