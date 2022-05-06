@@ -827,12 +827,11 @@ Lege einen Seriellen Port mit der Bezeichnung ``0`` an.
    :align: center
    :alt: xterm.js before activation
 
-Klicke auf ``Add`` und kontrolliere dann nochmals alle Einstellungen der neu angelegten VM.
+Klicke auf ``Add``, anschließend sollte der gezeigte Menüpunkt nicht mehr ausgegraut sein.
 
-.. hint:: Für die weitere Nutzung von xterm.js ist allerdings noch eine Anpassung bei der laufenden OPNsense |reg| nötig. Die nehmen wir zu einem geeigneten Zeitpunkt vor.
+.. hint:: Für die weitere Nutzung von xterm.js ist allerdings noch eine Anpassung bei der laufenden OPNsense |reg| nötig. Die nehmen wir zu einem geeigneten, späteren Zeitpunkt vor.
 
-
-Die eigentliche Installation von OPNsense in der VM folgt später.
+Kontrolliere nochmals alle Einstellungen der neu angelegten VM.
 
 Anlegen der VM für linuxmuster server
 -------------------------------------
