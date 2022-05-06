@@ -608,11 +608,11 @@ befindet sich das heruntergeladene Ubuntu-ISO nun in dem ``ISO Images`` und steh
 OPNsense
 --------
 
-Die zuvor gezeigte Möglichkeit des einfachen Importes mittels den Bordmitteln von Proxmox steht dir für die OPNsense |reg| leider nicht zur Verfügung, da nur der Download einer bz2-Datei möglich ist. Dir steht der Weg des Downloads auf einen lokalen PC, der Umwandlung des bz2-File in eine iso-Datei und dann der Upload über den dir im Abschnitt Ubuntu frei. Dabei wählst du dann nicht ``URL``, sondern ``Upload``.
+Die zuvor gezeigte Möglichkeit des einfachen Importes mittels den Bordmitteln von Proxmox steht dir für die OPNsense |reg| leider nicht zur Verfügung, da nur der Download einer bz2-Datei möglich ist. Dir steht der Weg des Downloads auf einen lokalen PC, der Umwandlung des bz2-File in eine iso-Datei und dann der Upload über den dir im Abschnitt Ubuntu aufgezeigten Ablauf frei. Dabei wählst du dann nicht ``URL``, sondern ``Upload``.
 
 Um dir den Upload zu ersparen, beschreiben wir hier den Weg, um die benötigten Dateien direkt in deine Proxmox-Maschine zu bringen:
 
-Als Erstes startest du die Konsole ``xterm.js`` wie dargestellt
+Als Erstes startest du die Konsole ``xterm.js`` wie dargestellt, falls sie nicht sowieso gestartet ist.
 
 .. figure:: media/proxmox-shell-xterm_01_start.png
    :align: center
