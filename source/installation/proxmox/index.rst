@@ -807,13 +807,13 @@ Damit dir copy&paste in der Oberfläche von Proxmox bei der Auswahl unter ``Cons
 
 .. figure:: media/xterm-opnsense_001.png
    :align: center
-   :alt: console menu before xterm.js activation
+   :alt: Console menu before xterm.js activation
 
 Das obige Bildschirmfoto zeigt den Zustand vor der Aktivierung.
 
 .. figure:: media/xterm-opnsense_002.png
    :align: center
-   :alt: Description of how to open the Add menu.
+   :alt: Description of how to open the Add menu
 
 Gehe auf ``hv01`` --> ``lmn71-opnsense`` --> ``Hardware`` --> ``Serial Port``
 
@@ -931,29 +931,29 @@ Damit dir copy&paste ebenfalls für den Server zur Verfügung steht, muss du die
 
 .. figure:: media/xterm-server_001.png
    :align: center
-   :alt: xterm.js before activation
+   :alt: Console menu before xterm.js activation
 
 Das ist der Zustand vor der Aktivierung.
 
 .. figure:: media/xterm-server_002.png
    :align: center
-   :alt: xterm.js before activation
+   :alt: Description of how to open the Add menu  
 
 Gehe auf ``hv01`` --> ``lmn71-server`` --> ``Hardware`` --> ``Serial Port``
 
 .. figure:: media/xterm-opnsense_003.png
    :align: center
-   :alt: xterm.js before activation
+   :alt: Add serial port 0
 
 Lege einen Seriellen Port mit der Bezeichnung ``0`` an.
 
 .. figure:: media/xterm-opnsense_004.png
    :align: center
-   :alt: xterm.js before activation
-
-Die eigentliche Installation des Servers in der VM folgt später.
+   :alt: Console menu after activation of xterm.js 
 
 Klicke auf ``Add`` und kontrolliere dann nochmals alle Einstellungen der neu angelegten VM.
+
+Die eigentliche Installation des Servers in der VM folgt später.
 
 Boot-Optionen
 -------------
