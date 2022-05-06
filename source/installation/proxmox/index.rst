@@ -383,12 +383,11 @@ Zur Veranschaulichung eine Grafik, die den Status der Konfiguration zeigt.
 
 *Zweiten Datenträger als Speicher einbinden*
 
-
 In diesem Schritt wird die zweite Festplatte in Proxmox eingebunden, um diese als Storage für die virtuellen Maschinen zu nutzen.
 
 .. note::
 
-   Die folgenden Schritte bitte nur dann ausführen, wenn nicht auf einem einzigen Volume Proxmox eingerichtet werden soll!
+   Die folgenden Schritte bitte dann ausführen, wenn nicht auf einem einzigen Volume Proxmox eingerichtet werden soll! In diesem Fall geht es hier weiter: `Vorbereiten des ISO-Speichers`_
 
 *local-lvm(hv01)-Partition entfernen und Speicher freigeben*
 
