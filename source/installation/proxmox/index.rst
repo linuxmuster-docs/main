@@ -731,6 +731,8 @@ Klicke dann auf ``Next``.
 Wähle nun hier unter ``Storage`` den geeigneten Datenspeicher auf, um die Festplatte der VM dort abzulegen. In der Abb. wird der Datenspeicher ``Dataset`` verwendet.
 In dem Drop-down Menü siehst du alle in deinem System verfügbaren Datenspeicher.
 
+.. hint:: Folgende Größenangaben beziehen sich, wie schon geschrieben, auf eine Testumgebung. Für andere Einsatzszenarien solltest du dich unbedingt mit den `Hardware-Anforderungen <https://docs.opnsense.org/manual/hardware.html#hardware-requirements>`_ gemäß der OPNsense |reg| -Dokumentation auseinandersetzen.
+
 .. figure:: media/proxmox-create-vm-opnsense-04.png
    :align: center
    :alt: Proxmox Create VM: Disks
@@ -807,7 +809,7 @@ Damit dir copy&paste in der Oberfläche von Proxmox bei der Auswahl unter ``Cons
    :align: center
    :alt: xterm.js before activation
 
-Das ist der Zustand vor der Aktivierung.
+Das obige Bildschirmfoto zeigt den Zustand vor der Aktivierung.
 
 .. figure:: media/xterm-opnsense_002.png
    :align: center
