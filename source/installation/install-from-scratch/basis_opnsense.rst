@@ -35,13 +35,13 @@ Lade dir die ISO-Datei der OPNsense |reg| von der Seite https://opnsense.org/dow
 
 .. hint::
 
-   Die zuletzt freigegeben OPNsense Version für das Setup von linuxmuster.net v7.1 ist die Version 22.1. 
+   Die zuletzt freigegeben OPNsense Version für das Set-up von linuxmuster.net v7.1 ist die Version 22.1. 
    https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-22.1-OpenSSL-dvd-amd64.iso.bz2
 
 Nutze als Architektur ``amd64`` und als "image type" ``dvd`` und einen Mirror, der in deiner Nähe ist.
 Du erhältst dann ein mit bz2 komprimiertes ISO-Image. Entpacke die heruntergeladene Datei.
 
-Unter Windows kannst du dies z.B. mit 7-Zip durchführen.
+Unter Windows kannst du dies z.B. mit 7-ZIP durchführen.
 
 Unter Linux gibst du auf der Eingabekonsole folgenden Befehl an, der dir die Datei im gleichen Ordner entpackt:
 
@@ -126,7 +126,7 @@ Jetzt wird OPNsense |reg| auf der Festplatte installiert. Zuvor musst du diese n
    :align: center
    :alt: OPNsense: UFS Configuration
 
-Mit ``ÒK`` übernimmst du deine Auswahl.
+Mit ``OK`` übernimmst du deine Auswahl.
 
 .. figure:: media/basis_opnsense_007a.png
    :align: center
@@ -138,7 +138,7 @@ Akzeptiere die Frage nach der empfohlenen Auslagerungsdatei.
    :align: center
    :alt: OPNsense: UFS Configuration 2
 
-Bestätige diesen Vorgang um die Installation zu starten.
+Bestätige diesen Vorgang, um die Installation zu starten.
 
 Warte jetzt, bis die Installation abgeschlossen ist.
 
@@ -364,7 +364,7 @@ Wähle ``1 - LAN (`` |...| ``)`` für die nächsten Schritte.
    :align: center
    :alt: OPNsense: GUI - Nicht via DHCP zuweisen lassen
 
-Bestätige die Nachfrage mit ``N`` und ``ENTER``. (Alternativ wäre auch nur ``ENTER`` möglich, da der großgeschriebene Buchstabe in der Auswahlmöglichkeit darauf hinweist, was die default Einstellung ist.)
+Bestätige die Nachfrage mit ``N`` und ``ENTER``. (Alternativ wäre auch nur ``ENTER`` möglich, da der großgeschriebene Buchstabe in der Auswahlmöglichkeit darauf hinweist, was die Standard-Einstellung ist.)
 
  .. figure:: media/basis_opnsense_029.png
    :align: center
@@ -439,13 +439,13 @@ Aktualisierung der OPNsense |reg|
 
 Aktualisiere die OPNsense |reg| in der Konsole, indem du den Punkt ``12) Update from console`` aufrufst und die Rückfrage mit ``Y`` bestätigst.
 
-.. todo:: hint box um ``11) Reload all services`` ergänzen. Wenn Update funktionierte dann startet opnsense automatisch neu wenn das so angegeben wurde. Vorhergehender Satz.
+.. hint:: 
 
-.. hint::
-   
- 11) Reload all services ergänzen, wenn das Update funktionierte, dann startet opnsense automatisch neu, wenn das so angegeben wurde. Vorhergehender Satz.
+   Sollte hierbei keine Verbindung zu den externen Update-Servern möglich sein, dann stimmt etwas mit der Netzwerkkartenzuordnung nicht.
 
- Sollte hierbei keine Verbindung zu den externen Update-Servern möglich sein, dann stimmt deine Netzwerkkartenzuordnung noch nicht. Ändere dies, bevor du fortfährst.
+   Als Erstes probiere es mit dem Neustart aller Netzwerk-Dienste. Dazu wählst du den Punkt ``11) Reload all services``. Danach wiederholst du das Upgrade nochmals mit dem Punkt ``12) Update from console``.
+
+   Sollte die Aktualisierung immer noch nicht erfolgreich durchgeführt werden, dann überprüfe deine vorherige Netzwerk-Konfiguration auf Fehler.
 
 Klappt das Update, startest du die OPNsense |reg| neu, nachdem du dich erneut eingeloggt hast.
 
@@ -470,7 +470,7 @@ Du erhältst zunächst eine Zertifikatswarnung, da OPNsense |reg| ja ganz frisch
 
 .. figure:: media/basis_opnsense_041.png
 
-``Erweitert`` und anschließend ``Risiko akzeptieren und fortfahren`` bringt dich auf die Login-Seite.
+``Erweitert`` und anschließend ``Risiko akzeptieren und fortfahren`` bringt dich auf die Log-in-Seite.
 
 .. figure:: media/basis_opnsense_042.png
 
@@ -485,7 +485,7 @@ System: Assistent: Allgemeine Information
 
 .. attention::
    Die Länge des ersten Teils der Domäne darf maximal 15 Zeichen betragen. Die Domäne ``muster-gymnasium.de`` ist um ein Zeichen zu lang, da muster-gymnasium 16 Zeichen lang ist. 
-   Eine gute Wahl ist beispielsweise ``linuxmuster.lan``. Beim späteren Setup von linuxmuster.net wird diese ggf. für alle Server-Dienste angepasst.
+   Eine gute Wahl ist beispielsweise ``linuxmuster.lan``. Beim späteren Set-up von linuxmuster.net wird diese ggf. für alle Server-Dienste angepasst.
 
 .. hint:: Gib als Primary DNS, die neue IP des Upstream Gateway der externen WAN-Schnittstelle an und deaktiviere Override DNS.
 
@@ -579,7 +579,7 @@ Unter ``Schnittstellen -> [OPT1]`` kannst du diese Einstellungen vornehmen. Der 
 ssh erlauben
 ------------
 
-.. attention:: Damit der Server für das weitere Setup Zugriff auf die OPNsense |reg| hat, musst du den ssh-Zugriff erlauben. Gehe dafür auf ``System -> Einstellungen -> Verwaltung``.
+.. attention:: Damit der Server für das weitere Set-up Zugriff auf die OPNsense |reg| hat, musst du den ssh-Zugriff erlauben. Gehe dafür auf ``System -> Einstellungen -> Verwaltung``.
 
 .. figure:: media/basis_opnsense_054.png
 
@@ -598,9 +598,10 @@ Aktualisiere nun die OPNsense |reg|, indem du unter
 
 ``System`` ``->`` ``Firmware`` ``-->`` ``Aktualisierungen`` ``--->`` ``Status`` ``----> `` ``Auf Aktualisierungen prüfen`` klickst.
 
-Wenn keine Aktualisierung verfügbar sind, erhältst du folgende Meldung |...|
+Wenn keine Aktualisierungen verfügbar sind, erhältst du folgende Meldung |...|
 
 .. figure:: media/basis_opnsense_056.png
+
 
 |...| und kannst zum abschließenden Schritt `Logout`_ gehen.
 
@@ -616,7 +617,7 @@ Sollten dir wie in nachstehender Abbildung unter dem Reiter ``Aktualisierungen``
 
 |...| dann klicke in o.g. Fenster ``Jetzt aktualisieren``. 
 
-Je nach gefundenen Aktualisierungen kann ein Neustart erforderlich sein. Dies wird vor dem Update abgefragt und ist zu bestätigen.
+Je nach gefundenen Aktualisierungen, kann ein Neustart erforderlich sein. Dies wird vor dem Update abgefragt und ist zu bestätigen.
 
 .. figure:: media/basis_opnsense_058.png
 
@@ -651,4 +652,5 @@ Logout
 
    - Könnte da für uns etwas dabei sein?
 
-   - Timezone: Warum Etc/UTC? 
+   - Timezone: warum Etc/UTC? 
+
