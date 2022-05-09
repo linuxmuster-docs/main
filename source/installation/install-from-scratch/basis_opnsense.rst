@@ -665,6 +665,3 @@ Logout
    https://pfstore.com.au/blogs/guides/run-opnsense-in-proxmox
 
    - Könnte da für uns etwas dabei sein?
-
-   - Timezone: warum Etc/UTC? 
-
