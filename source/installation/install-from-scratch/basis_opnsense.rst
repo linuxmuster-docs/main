@@ -549,11 +549,11 @@ System: Assistent: Konfiguration neu laden
 
 .. figure:: media/basis_opnsense_049.png
 
-Nachdem du die Einstellungen übernommen hast, können sich auch die Einstellungen des LAN-Netzwerks geändert haben. Dann wirst du nicht über die erfolgreiche Konfiguration informiert |...|
+Nachdem du die Einstellungen übernommen hast, können sich auch die Einstellungen des LAN-Netzwerks geändert haben. Dann wirst du nicht wie im nächsten Bild zu sehen über die erfolgreiche Konfiguration informiert.
 
 .. figure:: media/basis_opnsense_050.png
 
-... musst du deinem Admin PC die IP-Adresse 10.0.0.10/16, DNS: 10.0.0.254 und das Gateway: 10.0.0.254 geben. (hier exemplarisch für unseren Standard-LAN-Bereich)
+Sollte das bei dir der Fall sein, musst du deinem Admin PC die passende IP-Adresse 10.0.0.10/16, DNS: 10.0.0.254und das Gateway: 10.0.0.254 manuell geben. (hier exemplarisch für unseren Standard-LAN-Bereich)
 
 Gehe dann mit einem Webbrowser auf ``https://10.0.0.254``.
 
