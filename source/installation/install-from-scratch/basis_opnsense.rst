@@ -510,7 +510,7 @@ System: Assistent: Zeitserverinformation
 
 .. figure:: media/basis_opnsense_044.png
 
-Die Angaben zum Time Server übernimmst du ebenfalls mit ``Next``.
+Die Angaben zum Time Server übernimmst du mit ``Next``.
 
 System: Assistent: Konfiguriere WAN-Schnittstelle
 -------------------------------------------------
