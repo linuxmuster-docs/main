@@ -341,7 +341,19 @@ Die Ausgabe sollte wie folgt aussehen:
    :align: center
    :alt: OPNsense: GUI - Assign interfaces 
 
-``exit`` um wieder zum dashboard zurückzukommen.
+``exit`` um wieder zum Dashboard zurückzukommen.
+
+.. figure:: media/basis_opnsense_023.png
+   :align: center
+   :alt: OPNsense: GUI - Assign interfaces 
+
+.. hint:: 
+
+   Sollte einer der Test nicht erfolgreich verlaufen, dann stimmt etwas mit der Netzwerkkartenzuordnung nicht.
+
+   Als Erstes probiere es mit dem Neustart aller Netzwerk-Dienste. Dazu wählst du den Punkt ``11) Reload all services``. Danach wiederholst du das Upgrade nochmals mit dem Punkt ``12) Update from console``.
+
+   Sollte die Aktualisierung immer noch nicht erfolgreich durchgeführt werden, dann überprüfe deine vorherige Netzwerk-Konfiguration auf Fehler.
 
 IP-Adressen zuweisen
 --------------------
@@ -437,7 +449,7 @@ Bevor du das aber machst, erfolgt ein letzter Test:
 Aktualisierung der OPNsense |reg|
 ---------------------------------
 
-Aktualisiere die OPNsense |reg| in der Konsole, indem du den Punkt ``12) Update from console`` aufrufst und die Rückfrage mit ``Y`` bestätigst.
+Aktualisiere die OPNsense |reg| in der Konsole, indem du den Punkt ``12) Update from console`` aufrufst und die Rückfrage mit ``y`` bestätigst.
 
 .. hint:: 
 
