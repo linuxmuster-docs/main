@@ -83,9 +83,13 @@ Wähle ``Manual`` aus.
 
 .. figure:: media/basis_server_005.png
 
-Gib die Netzwerkkonfiguration, wie im oberen Bild, ein und übernehme sie mit ``Speichern``.
+.. attention::
 
-.. hint:: todo:: Namensraumbeschränkung beschreiben
+   Die Länge des ersten Teils der Domäne darf maximal 15 Zeichen betragen. Die Domäne "muster-gymnasium.de" überschreitet diese Grenze um ein Zeichen, da "muster-gymnasium" 16 Zeichen lang ist.
+ 
+   Eine gute Wahl ist beispielsweise ``linuxmuster.lan``. Beim späteren Set-up von linuxmuster.net wird diese ggf. für alle Server-Dienste angepasst.
+
+Gib die Netzwerkkonfiguration, wie im oberen Bild ein beziehungsweise passe sie deinen Bedürfnissen an und übernehme sie mit ``Speichern``. 
 
 .. figure:: media/basis_server_006.png
 
@@ -107,7 +111,7 @@ Jetzt musst du die Speichermedien einrichten.
 
 .. figure:: media/basis_server_010_custom-storage-layout.png
 
-Für die weitere Installation um aus einem Ubuntu-Server einen linuxmuster.net-Serer zu machen, benötigst du zwei unterschiedliche Speichermedien in deinem Server.
+Für die weitere Installation um aus einem Ubuntu-Server einen linuxmuster.net-Server zu machen, benötigst du zwei unterschiedliche Speichermedien in deinem Server.
 
 Dabei ist es egal ob es sich dabei um |...| 
 
