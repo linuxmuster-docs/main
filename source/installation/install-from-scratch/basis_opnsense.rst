@@ -495,13 +495,13 @@ System: Assistent: Allgemeine Information
 
 .. attention::
 
-   Die Länge des ersten Teils der Domäne darf maximal 15 Zeichen betragen. Die Domäne ``muster-gymnasium.de`` ist um ein Zeichen zu lang, da muster-gymnasium 16 Zeichen lang ist. 
+   Die Länge des ersten Teils der Domäne darf maximal 15 Zeichen betragen. Die Domäne "muster-gymnasium.de" überschreitet diese Grenze um ein Zeichen, da "muster-gymnasium" 16 Zeichen lang ist.
 
    Eine gute Wahl ist beispielsweise ``linuxmuster.lan``. Beim späteren Set-up von linuxmuster.net wird diese ggf. für alle Server-Dienste angepasst.
 
 .. figure:: media/basis_opnsense_043.png
 
-.. hint:: Gib als Primary DNS, die neue IP des Upstream Gateway der externen WAN-Schnittstelle an und deaktiviere Override DNS.
+Gib als ``Primary DNS``, die neue IP des Upstream Gateway der externen WAN-Schnittstelle an und deaktiviere die Checkbox ``Override DNS``.
 
 Weiter geht es mit ``Next``
 
