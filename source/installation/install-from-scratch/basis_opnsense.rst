@@ -341,7 +341,19 @@ Die Ausgabe sollte wie folgt aussehen:
    :align: center
    :alt: OPNsense: GUI - Assign interfaces 
 
-``exit`` um wieder zum dashboard zurückzukommen.
+``exit`` um wieder zum Dashboard zurückzukommen.
+
+.. figure:: media/basis_opnsense_023.png
+   :align: center
+   :alt: OPNsense: GUI - Assign interfaces 
+
+.. hint:: 
+
+   Sollte einer der Test nicht erfolgreich verlaufen, dann stimmt etwas mit der Netzwerkkartenzuordnung nicht.
+
+   Als Erstes probiere es mit dem Neustart aller Netzwerk-Dienste. Dazu wählst du den Punkt ``11) Reload all services``. Danach wiederholst du das Upgrade nochmals mit dem Punkt ``12) Update from console``.
+
+   Sollte die Aktualisierung immer noch nicht erfolgreich durchgeführt werden, dann überprüfe deine vorherige Netzwerk-Konfiguration auf Fehler.
 
 IP-Adressen zuweisen
 --------------------
@@ -437,7 +449,7 @@ Bevor du das aber machst, erfolgt ein letzter Test:
 Aktualisierung der OPNsense |reg|
 ---------------------------------
 
-Aktualisiere die OPNsense |reg| in der Konsole, indem du den Punkt ``12) Update from console`` aufrufst und die Rückfrage mit ``Y`` bestätigst.
+Aktualisiere die OPNsense |reg| in der Konsole, indem du den Punkt ``12) Update from console`` aufrufst und die Rückfrage mit ``y`` bestätigst.
 
 .. hint:: 
 
@@ -481,13 +493,15 @@ Starte den General Setup Wizard mit dem ``Next``-Knopf. "Er" wird dich durch die
 System: Assistent: Allgemeine Information
 -----------------------------------------
 
-.. figure:: media/basis_opnsense_043.png
-
 .. attention::
-   Die Länge des ersten Teils der Domäne darf maximal 15 Zeichen betragen. Die Domäne ``muster-gymnasium.de`` ist um ein Zeichen zu lang, da muster-gymnasium 16 Zeichen lang ist. 
+
+   Die Länge des ersten Teils der Domäne darf maximal 15 Zeichen betragen. Die Domäne "muster-gymnasium.de" überschreitet diese Grenze um ein Zeichen, da "muster-gymnasium" 16 Zeichen lang ist.
+
    Eine gute Wahl ist beispielsweise ``linuxmuster.lan``. Beim späteren Set-up von linuxmuster.net wird diese ggf. für alle Server-Dienste angepasst.
 
-.. hint:: Gib als Primary DNS, die neue IP des Upstream Gateway der externen WAN-Schnittstelle an und deaktiviere Override DNS.
+.. figure:: media/basis_opnsense_043.png
+
+Gib als ``Primary DNS``, die neue IP des Upstream Gateway der externen WAN-Schnittstelle an und deaktiviere die Checkbox ``Override DNS``.
 
 Weiter geht es mit ``Next``
 
@@ -496,7 +510,7 @@ System: Assistent: Zeitserverinformation
 
 .. figure:: media/basis_opnsense_044.png
 
-Die Angaben zum Time Server übernimmst du ebenfalls mit ``Next``.
+Die Angaben zum Time Server übernimmst du mit ``Next``.
 
 System: Assistent: Konfiguriere WAN-Schnittstelle
 -------------------------------------------------
@@ -535,11 +549,11 @@ System: Assistent: Konfiguration neu laden
 
 .. figure:: media/basis_opnsense_049.png
 
-Nachdem du die Einstellungen übernommen hast, können sich auch die Einstellungen des LAN-Netzwerks geändert haben. Dann wirst du nicht über die erfolgreiche Konfiguration informiert |...|
+Nachdem du die Einstellungen übernommen hast, können sich auch die Einstellungen des LAN-Netzwerks geändert haben. Dann wirst du nicht wie im nächsten Bild zu sehen über die erfolgreiche Konfiguration informiert.
 
 .. figure:: media/basis_opnsense_050.png
 
-... musst du deinem Admin PC die IP-Adresse 10.0.0.10/16, DNS: 10.0.0.254 und das Gateway: 10.0.0.254 geben. (hier exemplarisch für unseren Standard-LAN-Bereich)
+Sollte das bei dir der Fall sein, musst du deinem Admin PC die passende IP-Adresse 10.0.0.10/16, DNS: 10.0.0.254und das Gateway: 10.0.0.254 manuell geben. (hier exemplarisch für unseren Standard-LAN-Bereich)
 
 Gehe dann mit einem Webbrowser auf ``https://10.0.0.254``.
 
@@ -651,6 +665,3 @@ Logout
    https://pfstore.com.au/blogs/guides/run-opnsense-in-proxmox
 
    - Könnte da für uns etwas dabei sein?
-
-   - Timezone: warum Etc/UTC? 
-

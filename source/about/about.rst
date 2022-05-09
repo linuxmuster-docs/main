@@ -22,7 +22,7 @@ Was ist linuxmuster.net?
 
 Warum unterscheiden wir eigentlich zwischen einer IT in einer Firma und einer Schule?
 
-Im Prinzip gibt es vier große Merkmale die auffallen:
+Im Prinzip gibt es vier große Merkmale, die auffallen:
 
 1. Das Verhältnis von der Anzahl von Usern zu den Arbeitsmitteln
 
@@ -66,11 +66,11 @@ Im Prinzip gibt es vier große Merkmale die auffallen:
 
    Zum Schuljahreswechsel verlässt eine große Anzahl an Schüler und Schülerinnen die Einrichtung und neue müssen in das System eingepflegt werden. Die Zusammensetzung der Klassen, Kurse und Arbeitsgruppen werden zu großen Teilen neu formiert.
   
-   Solch einen administrativen Aufwand finden man in einer Firma äußerst selten.
+   Solch einen administrativen Aufwand finden man in einer Firma fast nie.
 
 4. Der Umgang mit den Arbeitsmitteln
 
-   Aufgrund der Tatsache die im 1. Punkt dargelegt wurde, teilen sich Schüler und Schülerinnen ein und dasselbe Arbeitsmittel im schulischen Alltag. Dabei ist es für die nächste Unterrichtseinheit unablässig, dass zum Start immer eine einheitliche Umgebung auf den Rechner vorhanden ist. Die zeitliche Taktung zwischen den Wechseln kann sehr kurz sein.
+   Aufgrund der Tatsache, die im 1. Punkt dargelegt wurde, teilen sich Schüler und Schülerinnen ein und dasselbe Arbeitsmittel im schulischen Alltag. Dabei ist es für die nächste Unterrichtseinheit unablässig, dass zum Start immer eine einheitliche Umgebung auf den Rechnern vorhanden ist. Die zeitliche Taktung zwischen den Wechseln kann sehr kurz sein.
    
    Dies ist in einer Firma so nicht gegeben. Wenn ein User seinen Rechner verlässt, findet er ihn der Regel immer genauso wieder.
 
@@ -97,9 +97,9 @@ Unser Anspruch liegt dabei auf der Bereitstellung eines Systems, das folgende Pu
    :alt:      Struktur über alles
    :height:   40px
 
-Ein Augenmerk liegt dabei auf der Unabhängigkeit von der eingesetzten Hard- und Software. Dieses wird zum Beispiel erkennbar an dem Umfang der unterstützten Betriebssysteme für die Arbeitsstationen.
+Ein Augenmerk liegt dabei auf der Unabhängigkeit von der eingesetzten Hard- und Software. Dieses wird unter anderem erkennbar an dem Umfang der unterstützten Betriebssysteme für die Arbeitsstationen.
 
-Proprietäre Betriebssysteme, |zb| aus dem Hause Microsoft |reg|, können aufgrund der Lizenzpolitik der Hersteller nicht von uns vorbereitet ausgeliefert werden. Diese lassen sich aber ebenso leicht in unsere Infrastruktur integrieren, wie solche die als Open-Source erhältlich sind.
+Proprietäre Betriebssysteme, |zb| aus dem Hause Microsoft |reg|, können aufgrund der Lizenzpolitik der Hersteller nicht von uns vorbereitet ausgeliefert werden. Diese lassen sich aber ebenso leicht in unsere Infrastruktur integrieren, wie solche, die als Open-Source erhältlich sind.
 
 Auf der Basis von Linux stellen wir ein Open-Source-Betriebssystem zur Verfügung, das folgende Vorteile bietet:
 
@@ -110,11 +110,13 @@ Auf der Basis von Linux stellen wir ein Open-Source-Betriebssystem zur Verfügun
 
 .. image::    media/structure_of_version_7_lmn.svg
    :name:     structure-basic-components
-   :alt:      Struktur der Basis Komponenten
+   :alt:      Struktur der Basis-Komponenten
    :width:    500px
    :align:    center
 
-Im Zusammenspiel der Clients mit dem Server und einer Firewall entsteht so die grundlegende Infrastruktur. Diese lässt sich aufgrund des modularen Aufbaus weiter an die darüber hinausgehenden Anforderungen erweitern und anpassen.
+Im Zusammenspiel der Clients mit dem Server und einer Firewall entsteht so die grundlegende professionelle Infrastruktur zur zentralen Administration der Schülergeräte und der Verwaltung des pädagogischen Schulnetzwerkes.
+
+Dieses lässt sich aufgrund des modularen Aufbaus weiter an die darüber hinausgehenden Anforderungen, unter anderem einer schulweiten WLAN-Verfügbarkeit erweitern und anpassen.
 
 .. image::    media/structure_of_version_7_server.svg
    :name:     structure-lmn-server
@@ -149,7 +151,7 @@ Vielfältige Möglichkeiten stehen den Lehrkräften zur Verfügung, um Einfluss 
 
     * Internet - An/Aus
     * Intranet - An/Aus
-    * WIFI - An/Aus
+    * Wi-Fi - An/Aus
     * Drucker - An/Aus
 
 Klassenarbeitsmodus
@@ -160,7 +162,7 @@ In Prüfungssituationen wie Abitur, Klassenarbeiten und andere Leistungsüberpr�
 Dateiverwaltung und -verteilung
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Jeder Nutzer besitzt einen eigenen Bereich auf dem Netzwerkspeicher. Darüber hinaus steht ein solcher den Gruppen für den Austausch ihrer gemeinschaftlichen Arbeit zur Verfügung.
+Jeder Nutzer besitzt einen eigenen Bereich auf dem Netzwerkspeicher. Ebenso steht ein solcher den Gruppen für den Austausch ihrer gemeinschaftlichen Arbeit zur Verfügung.
 
 Selbstheilende Arbeitsstationen durch LINBO 4
 +++++++++++++++++++++++++++++++++++++++++++++
@@ -171,17 +173,17 @@ Selbstheilende Arbeitsstationen durch LINBO 4
    :height:   40px
    :align:    left 
 
-Das Konzept der Selbstheilenden Arbeitsstationen (SheilA) ermöglicht einheitliche identische Schulungssysteme. Diese können bei jedem Start der Rechner in einen vorher definierten Zustand zurückgesetzt werden. Dieser Standard wird durch die letzte Veränderung oder Installation festgelegt, in dem ein Abbild des Betriebssystems auf dem Server gespeichert wird. Weitere Vorteile sind:
+Das Konzept der Selbstheilenden Arbeitsstationen (SheilA) ermöglicht einheitliche, identische Schulungssysteme. Diese können bei jedem Start der Rechner in einen vorher definierten Zustand zurückgesetzt werden. Dieser Standard wird durch die letzte Veränderung oder Installation festgelegt, in dem ein Abbild des Betriebssystems auf dem Server gespeichert wird. Weitere Vorteile sind:
 
     * verschiedene Betriebssysteme auf jedem Client möglich
     * schnelle Erst- oder Neueinrichtung
     * keine Einschränkung der Nutzer durch Benutzerrechte auf den Clients nötig
     * einfache Wiederherstellung der Clients ist jedem Benutzer möglich
-    * einfache Softwareverteilung durch Installation auf einem Client - keine gesonderten Kenntnisse erforderlich, bei demjenigen der die Software-Installation betreut.
+    * einfache Softwareverteilung durch Installation auf einem Client - keine gesonderten Kenntnisse erforderlich, bei demjenigen, der die Software-Installation betreut.
     * Möglichkeit der zeit- und/oder ferngesteuerten Aktualisierung der Clients.
     * mit sogenannten Postsync-Scripten kann der Administrator für einzelne, raumweite oder für alle Geräte notwendige Konfigurationsänderung beim Systemstart einpflegen.
 
-Nähere Information sind im Kapitel "CLIENTVERWALTUNG" beschrieben.
+Nähere Information sind im Kapitel "Clientverwaltung" beschrieben.
 
 Integration unterschiedlicher Geräte (BYOD)
 +++++++++++++++++++++++++++++++++++++++++++
@@ -208,7 +210,7 @@ Für weitergehende Informationen `siehe opnsense.org <https://opnsense.org/>`_.
 
 .. note::
    Diese vorgestellten Bestandteile werden vom Verein
-   **linuxmuster.net e. V. entwickelt und unterstützt**.
+   **linuxmuster.net e. V. entwickelt und unterstützt**.
 
    Diese Unterstützung wird durch das
 
@@ -229,7 +231,7 @@ Für weitergehende Informationen `siehe opnsense.org <https://opnsense.org/>`_.
 Anpassbar
 ---------
 
-Alle bisher vorgestellten Basisdienste werden mithilfe des Setups konfiguriert, bleiben aber frei anpass- und erweiterbar. Es folgt eine einführende Beschreibung der letzten drei Bausteine die linuxmuster.net zu der Komplettlösung machen.
+Alle bisher vorgestellten Basisdienste werden mithilfe des Set-ups konfiguriert, bleiben aber frei anpass- und erweiterbar. Es folgt eine einführende Beschreibung der letzten drei Bausteine, die linuxmuster.net zu der Komplettlösung machen.
 
 .. image::    media/structure_of_version_7_community.svg
    :name:     structure-community-components
@@ -255,7 +257,7 @@ Alle bisher vorgestellten Basisdienste werden mithilfe des Setups konfiguriert, 
 
    Wenn diese über die Möglichkeit einer Anbindung an den Samba des linuxmuster.net-Servers verfügen, können diese alle aufgezeigten Vorteile nutzen.
 
-:Optionale Server: Für weitergehende Anpassungen besteht die Möglichkeit optionale Server einzubinden.
+:Optionale Server: Für weitergehende Anpassungen besteht die Möglichkeit, optionale Server einzubinden.
 
    .. image::    media/structure_of_version_7_optional.svg
       :name:     structure-option-server
@@ -263,7 +265,7 @@ Alle bisher vorgestellten Basisdienste werden mithilfe des Setups konfiguriert, 
       :width:    150px
       :align:    right 
 
-  In der Darstellung ist zum Beispiel ein Docker-Server als Erweiterung an die Bedürfnisse der Bildungseinrichtung eingebunden. Docker ist ein Open-Source-Projekt zur automatisierten Anwendungsverteilung durch Container, die alle benötigten Pakete mitbringen. So vereinfacht sich die Bereitstellung und Verteilung. Außerdem gewährleisten sie die Trennung und Verwaltung der auf dem Docker-Server genutzten Ressourcen.
+  In der Darstellung ist etwa ein Docker-Server als Erweiterung an die Bedürfnisse der Bildungseinrichtung eingebunden. Docker ist ein Open-Source-Projekt zur automatisierten Anwendungsverteilung durch Container, die alle benötigten Pakete mitbringen. So vereinfacht sich die Bereitstellung und Verteilung. Außerdem gewährleisten sie die Trennung und Verwaltung der auf dem Docker-Server genutzten Ressourcen.
 
  Für weitergehende Informationen siehe die Docker-Homepage: https://www.docker.com
 
@@ -275,6 +277,9 @@ Alle bisher vorgestellten Basisdienste werden mithilfe des Setups konfiguriert, 
       :width:   150px
       :align:    right
 
-   Es können z.B. extern gehostete Server wie zum Beispiel nextcloud, moodle oder Konferenzsysteme integriert werden.
+   Es können z.B. extern gehostete Server wie Nextcloud, Moodle oder Konferenzsysteme integriert werden.
 
 :download:`Komplette Struktur als Inkscape SVG <media/structure_of_version_7_simple.svg>`
+
+
+

@@ -83,9 +83,13 @@ Wähle ``Manual`` aus.
 
 .. figure:: media/basis_server_005.png
 
-Gib die Netzwerkkonfiguration, wie im oberen Bild, ein und übernehme sie mit ``Speichern``.
+.. attention::
 
-.. hint:: todo:: Namensraumbeschränkung beschreiben
+   Die Länge des ersten Teils der Domäne darf maximal 15 Zeichen betragen. Die Domäne "muster-gymnasium.de" überschreitet diese Grenze um ein Zeichen, da "muster-gymnasium" 16 Zeichen lang ist.
+ 
+   Eine gute Wahl ist beispielsweise ``linuxmuster.lan``. Beim späteren Set-up von linuxmuster.net wird diese ggf. für alle Server-Dienste angepasst.
+
+Gib die Netzwerkkonfiguration, wie im oberen Bild ein beziehungsweise passe sie deinen Bedürfnissen an und übernehme sie mit ``Speichern``. 
 
 .. figure:: media/basis_server_006.png
 
@@ -107,7 +111,7 @@ Jetzt musst du die Speichermedien einrichten.
 
 .. figure:: media/basis_server_010_custom-storage-layout.png
 
-Für die weitere Installation um aus einem Ubuntu-Server einen linuxmuster.net-Serer zu machen, benötigst du zwei unterschiedliche Speichermedien in deinem Server.
+Für die weitere Installation um aus einem Ubuntu-Server einen linuxmuster.net-Server zu machen, benötigst du zwei unterschiedliche Speichermedien in deinem Server.
 
 Dabei ist es egal ob es sich dabei um |...| 
 
@@ -115,7 +119,7 @@ Dabei ist es egal ob es sich dabei um |...|
 * |...| zwei reale Festplatten.
 * |...| zwei virtuelle Festplatten handelt.
 
-In dieser Anleitung beschreiben wir die Installation auf Basis unserer Mindestanforderungen, also |...|
+In dieser Anleitung beschreiben wir zunächst die Installation auf Basis unserer Mindestanforderungen, also |...|
 
 * |...| 25G Speichermedium für das System und
 * |...| 100G Speichermedium für Daten
@@ -130,7 +134,7 @@ Wähle die erste Festplatte bzw. die erste Partition aus, auf der du das System 
 
 .. figure:: media/basis_server_012_custom-storage-layout-create-partition-table2.png
 
-Wähle den gesamten Festplattenplatz und formatiere diesen mit dem ext4-Dateiformat und weise diese dem Mount Point ``/`` zu.
+Wähle den gesamten Festplattenplatz (einfach das Eingabefeld leer lassen) und formatiere diesen mit dem ext4-Dateiformat und weise diese dem Mount Point ``/`` zu.
 
 .. figure:: media/basis_server_013_custom-storage-layout-create-partition-table3.png
 
@@ -244,7 +248,7 @@ Zum Abschluss werden dir die Partitionsierungseinstellungen gemäß deiner Einga
 
 .. figure:: media/basis_server_016_lvm_011.png
 
-Wenn du es für deine Installation nutzen willst, dann kannst du die nächsten Punkte überspringen und mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
+Wenn du es für deine Installation nutzen willst, dann kanst du mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
 
 |...| Einrichtung ohne LVM auf HDD nach deinen Vorgaben
 -------------------------------------------------------
@@ -306,6 +310,12 @@ auf
 .. figure:: media/basis_server_023.png
 
 gewechselt ist, dann starte den Server neu.
+
+.. tip::
+
+   Alternative zum ``Jetzt Neustarten`` gehe zum Punkt ``Hilfe`` oben rechts. Dort wählst du den Menüpunkt ``Enter Shell`` aus, wo du dann den Server gezielt mit ``init 0`` herunterfährst. Es folgt noch ein Hinweis, dass du die Entfernung des Installationsmediums mit ``Enter`` bestätigen sollst. Im Anschluss daran fährt der Server herunter und du kannst ihn von neuem starten.
+
+   Dieses Vorgehen bieten sich an, wenn der Server virtualisiert betrieben wird und der Hypervisor so schnell den Neustart einleitet, dass du keine Chance hast, das Installationsmedium zu entfernen.
 
 .. ################
 .. 
