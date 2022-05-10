@@ -455,7 +455,7 @@ Basis-Konfiguration des Servers
 xterm.js für die Konsolen-Nutzung in Proxmox aktivieren
 -------------------------------------------------------
 
-Nachdem du dich erneut als ``root`` an der ``noVNC`` Konsole angemeldet hast, gebe diese zwei Zeilen Code nacheinander ein:
+Nachdem du dich erneut als ``linuxadmin`` beziehungsweise mit dem von dir angelegten Nutzer an der ``noVNC`` Konsole angemeldet hast, gebe diese zwei Zeilen Code nacheinander ein:
 
 .. code::
 
@@ -489,7 +489,7 @@ Werde mit |...|
   nano /etc/apt/apt.conf.d/20auto-upgrades
 
 Ersetze bei ``APT::Periodic::Unattended-Upgrade`` die ``"1";`` durch ``"0";``.
-Mit ``<Strg>+o`` speicherst du die Änderung ab. Und mit ``<Strg>+x`` verlässt du nano wieder.
+Mit ``<Strg>+o`` und anschließendem ``Enter`` speicherst du die Änderung ab. Und mit ``<Strg>+x`` verlässt du nano wieder.
 
 Jetzt kannst du den Server updaten mit |...|
 
