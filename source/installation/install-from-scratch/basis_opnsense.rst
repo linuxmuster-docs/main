@@ -128,11 +128,8 @@ Jetzt wird OPNsense |reg| auf der Festplatte installiert. Zuvor musst Du diese n
 
 Mit ``OK`` übernimmst Du deine Auswahl.
 
-.. figure:: media/basis_opnsense_007a.png
-   :align: center
-   :alt: OPNsense: Question about the use of a swap file
-
 Akzeptiere die Frage nach der empfohlenen Auslagerungsdatei.
+Danach erfolgt die Rückfrage, ob die Festplatte wirklich überschrieben werden soll.
 
 .. figure:: media/basis_opnsense_007.png
    :align: center
