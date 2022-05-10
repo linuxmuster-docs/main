@@ -23,9 +23,9 @@ msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:4
 msgid ""
-"Wenn du die Dokumentation erweitern willst, z.B. mit einem eigenen HowTo, "
+"Wenn Du die Dokumentation erweitern willst, z.B. mit einem eigenen HowTo, "
 "ein fehlendes Kapitel ergänzen möchtest oder größere Änderungen machen und "
-"testen willst, benötigst du folgende Dinge:"
+"testen willst, benötigst Du folgende Dinge:"
 msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:6
@@ -117,7 +117,7 @@ msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:43
 msgid ""
-"Jetzt kannst du bereits die bereits heruntergeladene Dokumentation aus dem "
+"Jetzt kannst Du bereits die bereits heruntergeladene Dokumentation aus dem "
 "offiziellen Repositorium bauen und betrachten. Öffne dazu ein Terminal, "
 "navigiere zum Ordner `linuxmuster-docs/main`, führe `make html` aus und "
 "führe `xdg-open build/html/index.html` aus, um das Ergebnis zu betrachten."

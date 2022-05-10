@@ -12,9 +12,9 @@ Setup via Terminal
 
 Melde dich als Benutzer ``root`` mit dem Passwort ``Muster!`` auf dem Server an.
 
-Für diese Anmeldung kannst du die xterm.js Konsole von Proxmox verwenden, wenn du unserer Anleitung gefolgt bist. Alternativ kannst du dich via ssh von einem anderen Rechner mit dem Server 10.0.0.1 verbinden, wenn er sich im gleichen Netzwerksegment befindet.
+Für diese Anmeldung kannst Du die xterm.js Konsole von Proxmox verwenden, wenn Du unserer Anleitung gefolgt bist. Alternativ kannst Du dich via ssh von einem anderen Rechner mit dem Server 10.0.0.1 verbinden, wenn er sich im gleichen Netzwerksegment befindet.
 
-Im Terminal wirst du mit dem Erstbildschirm von linuxmuster.net v7.1 begrüsst.
+Im Terminal wirst Du mit dem Erstbildschirm von linuxmuster.net v7.1 begrüsst.
 
 .. figure:: media/newsetup/lmn-setup-terminal-01.png
    :align: center
@@ -49,15 +49,15 @@ Weitere Parameter *können* auf der Kommandozeile angegeben werden. Werden aber 
    -h,              --help                    : print this help
 
 
-Alternativ kannst du eine Konfigurationsdatei mit dem Parameter ``--config`` übergeben.
+Alternativ kannst Du eine Konfigurationsdatei mit dem Parameter ``--config`` übergeben.
 
-Willst du diese Möglichkeit nutzen, lege eine ``config.txt`` mittels des nächsten Befehls an:
+Willst Du diese Möglichkeit nutzen, lege eine ``config.txt`` mittels des nächsten Befehls an:
 
 .. code:: 
 
    echo -e "[setup] \nservername = \ndomainname = \ndhcprange = \nschoolname = \nlocation = \ncountry = \nstate = \nskipfw = False" > ~/config.txt
    
-Diese Datei musst du noch mit deinen Angaben füllen. Hier bespielhaft mit dem Editor nano gezeigt
+Diese Datei musst Du noch mit deinen Angaben füllen. Hier bespielhaft mit dem Editor nano gezeigt
 
 .. code:: console
 	
@@ -67,26 +67,26 @@ Diese Datei musst du noch mit deinen Angaben füllen. Hier bespielhaft mit dem E
    :align: center
    :alt: Terminal Setup: Editor nano config.txt
 
-Hast du diese Textdatei mit o.g. Einträgen gespeichert ``[Strg]+[X]`` --> ``[Y]`` --> ``[Enter]``, kannst du das Setup mit folgendem Befehl aufrufen:
+Hast Du diese Textdatei mit o.g. Einträgen gespeichert ``[Strg]+[X]`` --> ``[Y]`` --> ``[Enter]``, kannst Du das Setup mit folgendem Befehl aufrufen:
 
 .. code::
 
    linuxmuster-setup --config /root/config.txt
 
-Hast du das Setup aufgerufen, erscheinen in der Konsole nach und nach nochmals relevante Parameter. Hattest du diese bereits festgelegt, so siehst du deine Werte, hast du diese nicht festgelegt, so siehst du die vorbelegten Werte. Prüfe alle Parameter und passe deren Werte ggf. an. Klicke jeweils auf ``< OK >``, um zum nächsten Schritt zu gelangen.
+Hast Du das Setup aufgerufen, erscheinen in der Konsole nach und nach nochmals relevante Parameter. Hattest Du diese bereits festgelegt, so siehst Du deine Werte, hast Du diese nicht festgelegt, so siehst Du die vorbelegten Werte. Prüfe alle Parameter und passe deren Werte ggf. an. Klicke jeweils auf ``< OK >``, um zum nächsten Schritt zu gelangen.
 
 .. figure:: media/newsetup/lmn-setup-terminal-02.png
    :align: center
    :alt: Terminal Setup: Parameter 1
 
-Danach gelangst du zur Angabe der sog. Domain. Beachte bei dessen Festlegung u.g. Hinweise zum FQDN.
+Danach gelangst Du zur Angabe der sog. Domain. Beachte bei dessen Festlegung u.g. Hinweise zum FQDN.
 
 .. figure:: media/newsetup/lmn-setup-terminal-03.png
    :align: center
    :alt: Terminal Setup: Parameter 2
 
 .. hint::
-  Der ``Domain name`` spielt eine besondere Rolle, insbesondere, wenn eine Adresse verwendet werden soll, die intern und extern identisch sein soll, so dass mit dem FQDN intern und extern gearbeitet wird. **schule.de** oder **linuxmuster.lan** stellen den Domainnamen mit der sog. Top Lebel Domain (TLD) dar. Die TLD lan wird nicht extern verwendet, sondern ist nur für den  internen Gebrauch sinnvoll. Die TLD de wird extern genutzt. Hat deine Schule die de-Domain meineschule.de registriert, dann musst du hier eine Subdomain angeben, die zugleich die sog. Samba-Domain darstellt. Für den Namen dieser Sub-/Samba-Domain gibt es Einschränkungen, die unbedingt beachtet werden müssen: Es werden nur englische Kleinbuchstaben a bis z akzeptiert. Sonst keinerlei Zeichen. Es dürfen zudem maximal 15 Zeichen verwendet werden. **Richtig**: gshoenningen (12 Zeichen, keine Umlaute und Satzzeichen etc.), **Falsch**: GSO-Heinrich-Böll-Hönningen (26 Zeichen, Großbuchstaben, Umlaute, Bindestriche)
+  Der ``Domain name`` spielt eine besondere Rolle, insbesondere, wenn eine Adresse verwendet werden soll, die intern und extern identisch sein soll, so dass mit dem FQDN intern und extern gearbeitet wird. **schule.de** oder **linuxmuster.lan** stellen den Domainnamen mit der sog. Top Lebel Domain (TLD) dar. Die TLD lan wird nicht extern verwendet, sondern ist nur für den  internen Gebrauch sinnvoll. Die TLD de wird extern genutzt. Hat deine Schule die de-Domain meineschule.de registriert, dann musst Du hier eine Subdomain angeben, die zugleich die sog. Samba-Domain darstellt. Für den Namen dieser Sub-/Samba-Domain gibt es Einschränkungen, die unbedingt beachtet werden müssen: Es werden nur englische Kleinbuchstaben a bis z akzeptiert. Sonst keinerlei Zeichen. Es dürfen zudem maximal 15 Zeichen verwendet werden. **Richtig**: gshoenningen (12 Zeichen, keine Umlaute und Satzzeichen etc.), **Falsch**: GSO-Heinrich-Böll-Hönningen (26 Zeichen, Großbuchstaben, Umlaute, Bindestriche)
 
 Klicke auf ``< OK >``. Es erscheint der IP-Adressbereich, der für die Rechneraufnahme mit Linbo reserviert wird. In der Abb. ist dies der Bereich ``10.0.0.100`` bis ``10.0.0.200``.
 
@@ -94,7 +94,7 @@ Klicke auf ``< OK >``. Es erscheint der IP-Adressbereich, der für die Rechnerau
    :align: center
    :alt: Terminal Setup: Parameter 3
 
-Klicke auf ``< OK >``. Danach gelangst du zur Eingabe des neuen Administrator-Kennworts. Dieses ist zugleich das neue Kennwort des Benutzers ``gobal-admin`` in der Schulkonsole.
+Klicke auf ``< OK >``. Danach gelangst Du zur Eingabe des neuen Administrator-Kennworts. Dieses ist zugleich das neue Kennwort des Benutzers ``gobal-admin`` in der Schulkonsole.
 
 .. figure:: media/newsetup/lmn-setup-terminal-05.png
    :align: center
@@ -125,7 +125,7 @@ Danach wird das Setup gestartet. Es dauert eine Zeit bis alle erforderlichen Die
    :align: center
    :alt: Terminal Setup: Services
 
-Nach Abschluss des Setups siehst du im Terminal, dass das Setup beendet wurde.
+Nach Abschluss des Setups siehst Du im Terminal, dass das Setup beendet wurde.
 
 .. figure:: media/newsetup/lmn-setup-terminal-08.png
    :align: center
@@ -143,18 +143,18 @@ alternativ
 
    # reboot
 
-Das erste Verfahren hat den Vorteil, dass du nicht die Zeit des Neustarts abwarten, dich erneut verbinden und anmelden musst.
+Das erste Verfahren hat den Vorteil, dass Du nicht die Zeit des Neustarts abwarten, dich erneut verbinden und anmelden musst.
 
 .. todo:: Frage?
   
    Muss der PC aus dem Bereich 10.0.0.10 ... sein
 
-Nach abgeschlossenem Setup und eventuellen Neustart des Servers, kannst du dich mit einem PC via Browser an der Schulkonsole von linuxmuster.net v7.1 anmelden. Dafür muss sich der Rechner im internen LAN eingebunden sein.
+Nach abgeschlossenem Setup und eventuellen Neustart des Servers, kannst Du dich mit einem PC via Browser an der Schulkonsole von linuxmuster.net v7.1 anmelden. Dafür muss sich der Rechner im internen LAN eingebunden sein.
 
 Anmeldung an der Schulkonsole als global-admin
 ==============================================
 
-Öffne die URL ``https://10.0.0.1`` mit dem Admin-PC. Es wurde beim Setup ein self-signed certificate erstellt, so dass du dieses beim erstmaligen Aufruf mit dem Browser akzetieren musst.
+Öffne die URL ``https://10.0.0.1`` mit dem Admin-PC. Es wurde beim Setup ein self-signed certificate erstellt, so dass Du dieses beim erstmaligen Aufruf mit dem Browser akzetieren musst.
 
 .. figure:: media/newsetup/lmn-setup-gui-09.png
    :align: center
@@ -166,15 +166,15 @@ Der Browser zeigt dir den Warnhinweis an. Klicke auf ``Erweitert...``.
    :align: center
    :alt: WebUI: Accept certificate
 
-Es erscheint auf der gleichen Seite unten ein weiterer Eintrag. Bestätige diesen, indem du den Button ``Risiko akzeptieren und fortfahren`` auswählst.
+Es erscheint auf der gleichen Seite unten ein weiterer Eintrag. Bestätige diesen, indem Du den Button ``Risiko akzeptieren und fortfahren`` auswählst.
 
-Danach kommst du zur Anmeldeseite der WebUI/Schulkonsole. Melde dich nun als Benutzer ``global-admin`` an und nutze das während des Setups festgelegte Kennwort.
+Danach kommst Du zur Anmeldeseite der WebUI/Schulkonsole. Melde dich nun als Benutzer ``global-admin`` an und nutze das während des Setups festgelegte Kennwort.
 
 .. figure:: media/newsetup/lmn-setup-gui-11.png
    :align: center
    :alt: WebUI: Login global-admin
 
-Nach erfolgreicher Anmeldung gelangst du zur Hauptseite der Schulkonsole.
+Nach erfolgreicher Anmeldung gelangst Du zur Hauptseite der Schulkonsole.
 
 .. figure:: media/newsetup/lmn-setup-gui-12.png
    :align: center
@@ -183,7 +183,7 @@ Nach erfolgreicher Anmeldung gelangst du zur Hauptseite der Schulkonsole.
 Berechtigungen der Log-Dateien anpassen
 =======================================
 
-Nach dem erfolgreichen Setup verbindest du dich via ssh auf den Server. 
+Nach dem erfolgreichen Setup verbindest Du dich via ssh auf den Server. 
 
 Zum Abschluss sind noch die Dateiberechtigung für die linuxmuster Log-Dateien anzupassen.
 
@@ -205,4 +205,4 @@ Der Inhalt des Verzeichnisses sollte sich wie folgt darstellen:
    :align: center
    :alt: directory listing log files
 
-Setze die Ersteinrichtung fort, indem du :ref:`add-user-accounts-label` und :ref:`masterclient-template-label` aufrufst.
+Setze die Ersteinrichtung fort, indem Du :ref:`add-user-accounts-label` und :ref:`masterclient-template-label` aufrufst.

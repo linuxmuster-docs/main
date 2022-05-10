@@ -20,9 +20,9 @@ Betriebssysteme installieren
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
                    `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
-Mit LINBO kannst du mehrere Betriebssysteme auf einem Client verwalten und als Muster-Clients bereistellen und ausrollen. Du kannst so flexibel verschiedene Anforderungen in PC-Räumen (z.B. Linux mit Virtualisierungs-Partition ohne Synchronisation oder unterschiedliche Images in einem Raum für den Lehrer-PC und die Pcs der Sus) abbilden. linuxmuster.net ist darauf ausgelegt, als durchgängige Linux-Lösung genutzt zu werden. Hierzu wurden f?r den Linux-Client speziell angepasste Ubuntu - Pakete entwickelt, die eine Aufnahme in die Domäne, das Einbinden der Freigaben etc. übernehmen. Windows|ltrim| Betriebssysteme können ebenfalls als Clients vollständig genutzt werden.
+Mit LINBO kannst Du mehrere Betriebssysteme auf einem Client verwalten und als Muster-Clients bereistellen und ausrollen. Du kannst so flexibel verschiedene Anforderungen in PC-Räumen (z.B. Linux mit Virtualisierungs-Partition ohne Synchronisation oder unterschiedliche Images in einem Raum für den Lehrer-PC und die Pcs der Sus) abbilden. linuxmuster.net ist darauf ausgelegt, als durchgängige Linux-Lösung genutzt zu werden. Hierzu wurden f?r den Linux-Client speziell angepasste Ubuntu - Pakete entwickelt, die eine Aufnahme in die Domäne, das Einbinden der Freigaben etc. übernehmen. Windows|ltrim| Betriebssysteme können ebenfalls als Clients vollständig genutzt werden.
 
-Das Partitionierungsschema für die Clients einer Hardwareklasse hast du mit den Schritten in :ref:`hardware-category-label` festgelegt und im darauf aufbauenden Kapitel :ref:`hardware-registration-label` deinem Client zugewiesen. Solltest du das noch nicht gemacht haben, dann hole dies jetzt nach.
+Das Partitionierungsschema für die Clients einer Hardwareklasse hast Du mit den Schritten in :ref:`hardware-category-label` festgelegt und im darauf aufbauenden Kapitel :ref:`hardware-registration-label` deinem Client zugewiesen. Solltest Du das noch nicht gemacht haben, dann hole dies jetzt nach.
 
 .. attention:: Folgende Punkte sind sicherzustellen:
 
@@ -34,11 +34,11 @@ Das Partitionierungsschema für die Clients einer Hardwareklasse hast du mit den
 
 **Festplatte mit LINBO vorbereiten**
 
-Bevor du mit der eigentlichen Installation des Client-Betriebssystem beginnen kannst, musst du die Festplatte mittels LINBO vorbereiten. Dieses wird detailiert unter :ref:`format_hdd_with_linbo-label` beschrieben.
+Bevor Du mit der eigentlichen Installation des Client-Betriebssystem beginnen kannst, musst Du die Festplatte mittels LINBO vorbereiten. Dieses wird detailiert unter :ref:`format_hdd_with_linbo-label` beschrieben.
 
 **Betriebssysteme installieren**
 
-Danach kannst du das gewünschte Betriebssystem auf dem Client installieren. Das vorgehen hierzu wird ausführlich für 
+Danach kannst Du das gewünschte Betriebssystem auf dem Client installieren. Das vorgehen hierzu wird ausführlich für 
 
 1. :ref:`install-linux-clients-current-label`
 2. :ref:`install-windows10-clients-label` 
@@ -48,9 +48,9 @@ beschrieben.
 **Muster-Client als NoProxy Gerät**
 
 Für den Zeitraum der Installation und Aktualisierung des Muster-Clients ist es wichtig, dass dieser Internet-Zugriff hat, um Aktualisierungen laden zu können.
-Dazu ist es erforderlich, dass nachdem der Client als Gerät importiert wurde, du die IP-Adresse des Gerätes in der sog. ``NoProxy`` Gruppe in der Firewall der OPNsense aufnimmst.
+Dazu ist es erforderlich, dass nachdem der Client als Gerät importiert wurde, Du die IP-Adresse des Gerätes in der sog. ``NoProxy`` Gruppe in der Firewall der OPNsense aufnimmst.
 
-Dazu meldet du dich an der OPNsense als Benutzer ``root`` an und wählst links im Menü unter ``Firewall -> Aliase`` aus.
+Dazu meldet Du dich an der OPNsense als Benutzer ``root`` an und wählst links im Menü unter ``Firewall -> Aliase`` aus.
 
 Du siehst dann anchstehende Firewall: Aliase.
 
@@ -67,7 +67,7 @@ Klicke rechts neben dem Eintrag der Alias-Gruppe ``NoProxy`` das Stift-Symbol zu
 
 Bestätige die IP mit ENTER, so dass der Eintrag grau hinterlegt wird. Klicke zum Abschluss auf ``Speichern``, um die Einstellungen zu übernehmen.
 
-Nach Abschluss der Installation und Konfiguration  des Muster-Clients kannst du diesen wieder aus der NoProxy - Gruppe entfernen. Es sei denn, du nutzt exklusiv immer den identischen Client zur Weiterentwicklung des Muster-Clients.
+Nach Abschluss der Installation und Konfiguration  des Muster-Clients kannst Du diesen wieder aus der NoProxy - Gruppe entfernen. Es sei denn, Du nutzt exklusiv immer den identischen Client zur Weiterentwicklung des Muster-Clients.
 
 
 .. toctree::

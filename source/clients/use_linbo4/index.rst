@@ -45,7 +45,7 @@ Sobald der Client registriert wurde, zeigt der Startbildschirm weitere Optionen 
 Informationen
 ^^^^^^^^^^^^^
 
-Drückst du im Startbildschirm die Funktionstaste ``F1``, dann werden dir Informationen zum Client angezeigt.
+Drückst Du im Startbildschirm die Funktionstaste ``F1``, dann werden dir Informationen zum Client angezeigt.
 
 .. figure:: media/linbo-mainscreen/linbo-mainscreen-infos-f1.png
    :align: center
@@ -129,7 +129,7 @@ Startet das System im aktuellen Zustand, unsynchronisiert. Es werden keine Patch
 Tools-Reiter
 ^^^^^^^^^^^^
 
-Um Abbilder (Images) zu verwalten, klickst du zunächst auf den Werkzeug Schaltfläche.
+Um Abbilder (Images) zu verwalten, klickst Du zunächst auf den Werkzeug Schaltfläche.
 
 .. figure:: media/linbo-mainscreen/tools.png
    :align: center
@@ -328,7 +328,7 @@ Die Grub-Konfiguration wird ggf aktualisiert, danach erscheint der reguläre ``L
 Boot-Abbild für USB-Sticks und CD/DVD
 -------------------------------------
 
-Zum Brennen auf CD/DVD oder zum Kopieren auf einen USB-Stick lädst du zuerst das aktuelle linbo - Abbild als linbo.iso herunter.
+Zum Brennen auf CD/DVD oder zum Kopieren auf einen USB-Stick lädst Du zuerst das aktuelle linbo - Abbild als linbo.iso herunter.
 
 Melde dich zuerst an der Schulkonsole an:
 

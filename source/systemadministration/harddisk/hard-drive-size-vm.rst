@@ -11,7 +11,7 @@ Aktualisieren der Server-Festplattengrößen
                    `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 .. hint::
 
-   Achtung: Dies ist noch eine unvollständige Beschreibung. Findest du Fehler oder kannst zur Verbesserung beitragen, dann wende dich bitte an einen der Autoren des Abschnittes.
+   Achtung: Dies ist noch eine unvollständige Beschreibung. Findest Du Fehler oder kannst zur Verbesserung beitragen, dann wende dich bitte an einen der Autoren des Abschnittes.
 
 Überblick
 ---------
@@ -33,14 +33,14 @@ Starte die VM wie zuvor beschrieben.
 3.2 HDD-Größen überprüfen
 -------------------------
 
-Auf der Konsole der Server-VM prüfst du zuerst, welche Festplatten des Hypervisor auch
+Auf der Konsole der Server-VM prüfst Du zuerst, welche Festplatten des Hypervisor auch
 in der VM durchgereicht werden und welche Bezeichnung diese haben. 
 Die im Hypervisor geänderten Größen werden hier bereits angezeigt, aber die Partitionen wurden noch nicht auf 
 die neuen Größen angepasst.
 
-Öffne die Konsole wie schon in einem vorherigen Abschnitt gezeigt, nachdem du in der Übersicht links den Server `lmn-server` ausgewählt hast.
+Öffne die Konsole wie schon in einem vorherigen Abschnitt gezeigt, nachdem Du in der Übersicht links den Server `lmn-server` ausgewählt hast.
 
-Für den Login benötigst du folgende Informationen:
+Für den Login benötigst Du folgende Informationen:
 
 * Login: root
 * Passwort: Muster!
@@ -161,7 +161,7 @@ Anmerkung zu den Platzhaltern `xx`, diese stehen für die ausgewählten Vorgaben
 Gebe `Reparieren` ein, damit das Größenproblem gelöst wird und verlasse dann parted wieder
 durch Angabe des Befehls `quit`.
 
-Danach erneut `fdisk` aufrufen, die 2. Partition löschen und neu mit neuer Größe anlegen. Die angegebenen Befehle musst du der Reihe nach abarbeiten.
+Danach erneut `fdisk` aufrufen, die 2. Partition löschen und neu mit neuer Größe anlegen. Die angegebenen Befehle musst Du der Reihe nach abarbeiten.
 
 .. code::
 
@@ -183,13 +183,13 @@ Danach erneut `fdisk` aufrufen, die 2. Partition löschen und neu mit neuer Grö
 
    2
 
-Nun gilt es die Partition neu anzulegen, das erreichst du mit `n`: 
+Nun gilt es die Partition neu anzulegen, das erreichst Du mit `n`: 
 
 .. code::
   
    n 
   
-Die folgenden 3 Vorgaben kannst du einfach mit `Enter` übernehmen.
+Die folgenden 3 Vorgaben kannst Du einfach mit `Enter` übernehmen.
 
 .. code::
 
@@ -208,7 +208,7 @@ Dir wird darauf die folgende Frage gestellt:
 
 Gebe ein `N` ein 
 
-Zum Beenden von fdisk verwendest du nun `w` damit deine Änderungen auf die Festplatte geschrieben werden.
+Zum Beenden von fdisk verwendest Du nun `w` damit deine Änderungen auf die Festplatte geschrieben werden.
 
 .. code::
 
@@ -270,7 +270,7 @@ Der Befehl liefert folgende Ausgabe:
    Size of logical volume vg_srv/var changed from 10,00 Gib (2560 extents) to xx,xx GiB (xxxxx extents).
    Logical volume vg_srv/var successfully resized.
 
-Diesen Befehl wiederholst du für die anderen Logical Volumes
+Diesen Befehl wiederholst Du für die anderen Logical Volumes
 
 .. code::
 
@@ -369,7 +369,7 @@ nun deinen Wünschen tatsächlich entsprechen.
 
 .. hint::
 
-   Dieses Vorgehen musst du für die optionalen Server `docker` und `opsi` wiederholen, wenn du auch deren Festplattengröße verändert hast!
+   Dieses Vorgehen musst Du für die optionalen Server `docker` und `opsi` wiederholen, wenn Du auch deren Festplattengröße verändert hast!
 
-Im Folgenden wirst du die Festplatten der OPNsense® anpassen.
+Im Folgenden wirst Du die Festplatten der OPNsense® anpassen.
 

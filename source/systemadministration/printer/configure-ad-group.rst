@@ -43,18 +43,18 @@ Klicke auf Netzwerkparameter überprüfen. Falls der Server nur ein selbst signi
 Wähle ``Diesem Zertifikat immer vertrauen`` und klicke auf ``ok``.
 Wenn Du jetzt auf Netzwerkparameter überprüfen klicken, sollte die Verbindung erfolgreich aufgebaut werden.
        
-Nachdem du auf ``weiter`` geklickt hast, erscheint ein neues Dialogfenster in dem die Anmeldeinformationen abgefragt werden.
+Nachdem Du auf ``weiter`` geklickt hast, erscheint ein neues Dialogfenster in dem die Anmeldeinformationen abgefragt werden.
 
 .. image:: media/configure-ad-groups-04.png
    :alt: Eigenschaften
    :align: center
 
-Als Bind DN trägst du ``CN=global-admin,OU=Management,OU=GLOBAL,`` gefolgt von deiner DN ein. In diesem Beispiel ist das
+Als Bind DN trägst Du ``CN=global-admin,OU=Management,OU=GLOBAL,`` gefolgt von deiner DN ein. In diesem Beispiel ist das
 ``CN=global-admin,OU=Management,OU=GLOBAL,DC=linuxmuster,DC=lan``.
 
 .. hint::
 
-   Du nutzt hier den global-admin, weil du Schreibrechte brauchst. Sicherheitshalber solltest du vor deiner Arbeit einen Snapshot des Servers machen. 
+   Du nutzt hier den global-admin, weil Du Schreibrechte brauchst. Sicherheitshalber solltest Du vor deiner Arbeit einen Snapshot des Servers machen. 
      
 Klicke auf ``Anwenden und Schließen``.
 
@@ -72,9 +72,9 @@ Im AD-Baum sieht das dann so aus:
    :alt: Der LDAP-Baum
    :align: center
 
-In ``Devices`` findest du Klassenräume und ihre Rechner. Und es gibt dort auch die ``printer-groups`` in der die Drucker zu finden sind.
+In ``Devices`` findest Du Klassenräume und ihre Rechner. Und es gibt dort auch die ``printer-groups`` in der die Drucker zu finden sind.
 In ``Students`` sind die Klassen und ihre Schüler.
-Und in ``Teachers`` findest du die Lehrer.
+Und in ``Teachers`` findest Du die Lehrer.
  
 Im Eintrag des Benutzers sind die Drucker als memberOf eingetragen.
 
@@ -115,13 +115,13 @@ und klicke auf ``Neues Attribut...``
    :alt: Neues Attribut
    :align: center
 
-Als Attribut-Typ gibst du ``member`` ein und klickst anschließend auf ``Fertigstellen``.
+Als Attribut-Typ gibst Du ``member`` ein und klickst anschließend auf ``Fertigstellen``.
 
 .. image:: media/configure-ad-groups-13.png
    :alt: Attribut Typ
    :align: center
 
-Jetzt Fügst du mit <Strg>+V den vorher kopierten distinguishedName ein und klickst anschließend auf ``OK``. 
+Jetzt Fügst Du mit <Strg>+V den vorher kopierten distinguishedName ein und klickst anschließend auf ``OK``. 
 
 .. image:: media/configure-ad-groups-14.png
    :alt: DN Info

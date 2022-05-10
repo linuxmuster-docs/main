@@ -12,7 +12,7 @@ Hinweise zu LINBO 4
 
 In der linuxmuster v7.1 löst LINBO 4 das bisherige LINBO 2.4 ab. Ab v7.1 gibt es nur noch ein Debian-Paket für LINBO (`linuxmuster-linbo7`) und eines für die grafische Oberfläche (`linuxmuster-linbo-gui7`), die nur noch LINBO 4 und eine grafische Oberfläche enthalten.
 
-Hast du auf linuxmuster v7.1 umgestellt, ist es sinnvoll, die bisherigen LINBO 2.4 Cloop-Images zu konvertieren.
+Hast Du auf linuxmuster v7.1 umgestellt, ist es sinnvoll, die bisherigen LINBO 2.4 Cloop-Images zu konvertieren.
 
 LINBO 4 weist einige Besonderheiten auf:
 
@@ -66,7 +66,7 @@ Das Cloop-Image wird dadurch in das `qcow2`-Format konvertiert und im Verzeichni
 
 
 4. Zum Schluss starte das Skript ``linuxmuster-import-devices``. Dieses löscht die nun nicht mehr benötigten start.conf-Links.
-5. Ab jetzt kannst du Images wieder wie gewohnt erstellen und verteilen.
+5. Ab jetzt kannst Du Images wieder wie gewohnt erstellen und verteilen.
 
 
 

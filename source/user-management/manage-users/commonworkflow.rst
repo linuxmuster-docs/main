@@ -70,7 +70,7 @@ Konfigurationseinstellungen vor der Benutzeraufnahme
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
-Nach Installation des Servers solltest du einige Konfigurationseinstellungen 
+Nach Installation des Servers solltest Du einige Konfigurationseinstellungen 
 für deine Schule festlegen.
 
 Melde dich an der *Schulkonsole* durch Eingabe von
@@ -91,7 +91,7 @@ werden.
    :align: center
    :alt: Einstellngen für die Benutzerverwaltung
 
-Hier legst du fest, welche Vorgaben für den Listenimport von Benutzern mithilfe
+Hier legst Du fest, welche Vorgaben für den Listenimport von Benutzern mithilfe
 von CSV-Dateien angewendet werden sollen. 
 
 Für Schüler, Lehrer und Extra-Schüler können die Vorgaben getrennt eingestellt werden.

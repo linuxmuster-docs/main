@@ -17,14 +17,14 @@ Diese beschreibt alle wichtigen Schritte ...
 
 Wie es bei einem Projekt ist, dessen Entwicklungsgeschichte mittlerweile auf das Jahr 1999 zurückblickt, ist dein Einstieg in die Beschreibung unseres Systems sicherlich verschieden gelagert.
 
-Kennst du linuxmuster.net noch nicht,
+Kennst Du linuxmuster.net noch nicht,
 -------------------------------------
 
 dann empfehlen wir dir das Kapitel
 
   :ref:`what-is-linuxmuster.net-label`
 
-Hattest du schon Kontakt mit einer Installation von
+Hattest Du schon Kontakt mit einer Installation von
 ---------------------------------------------------
 
   | linuxmuster.net Version 7?
@@ -45,14 +45,14 @@ Weitere Hilfe
 
 Neben dieser Dokumentation steht dir unsere Community in unserem Hilfeforum und unser kostenfreier Telefon-Support helfend zur Seite.
 
-Das Forum findest du unter `<https://ask.linuxmuster.net>`_.
+Das Forum findest Du unter `<https://ask.linuxmuster.net>`_.
 
 Informationen zum Telefon-Support gibt es auf unser Projektseite `<https://www.linuxmuster.net/de/support-de/>`_.
 
 
 .. hint::
 
-   Suchst du die Dokumentation zur Version linuxmuster.net 6.2 oder die Möglichkeit unsere Dokumentation herunterzuladen?
+   Suchst Du die Dokumentation zur Version linuxmuster.net 6.2 oder die Möglichkeit unsere Dokumentation herunterzuladen?
 
 Dann schaue an das untere Ende der Menüleiste.
 

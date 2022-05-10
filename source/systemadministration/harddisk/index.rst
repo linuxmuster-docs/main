@@ -9,7 +9,7 @@ Anpassen der Festplattengröße
                    `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_,
                    `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
-Must du aufgrund geänderter Anforderungen die bereits eingerichteten Festplattengrößen in deiner Virtualisierungsumgebung ändern,
+Must Du aufgrund geänderter Anforderungen die bereits eingerichteten Festplattengrößen in deiner Virtualisierungsumgebung ändern,
 dann ist es hilfreich, sich an nachstehend beschriebenen aAblauf und Hinweisen zu orientieren.
 
 
@@ -19,7 +19,7 @@ dann ist es hilfreich, sich an nachstehend beschriebenen aAblauf und Hinweisen z
 Folgender Ablauf zur Anpassung der Festplattengrößen ist einzuhalten:
 
 1. In der Virtualisierungsumgebung ein Snapshot der VM ausführen. Auf diesen Stand
-   kannst du zurückkehren, sofern bei den nachfolgenden Schritten etwas nicht funktioniert.
+   kannst Du zurückkehren, sofern bei den nachfolgenden Schritten etwas nicht funktioniert.
 2. In der Virtualisierungsumgebung die HDDs der VM erweitern.
 3. Größenänderung in den VMs bekannt machen.
 
@@ -31,7 +31,7 @@ Folgender Ablauf zur Anpassung der Festplattengrößen ist einzuhalten:
 Anpassung Hypervisor
 --------------------
 
-Starte nun mit Punkt 1, indem du nachstehend deine eingesetzte Virtualisierungsumgebung auswählst und
+Starte nun mit Punkt 1, indem Du nachstehend deine eingesetzte Virtualisierungsumgebung auswählst und
 gemäß der Dokumentation die Festplattengröße deiner VMs im Hypervisor anpasst.
 
 =================================== ======================

@@ -41,9 +41,9 @@ Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM 
 .. ... mit der WebUI (v1)
 .. ======================
 .. 
-.. Nachdem du nun die neue Hardwareklasse erstellt hast und der Client / die VM noch ausgeschaltet bereit steht, musst du dessen MAC-Adresse in der Web-UI als Gerät anlegen. Dort weist du dem Gerät dann die Hardwareklasse zu und wählst im Feld PXE den Eintrag ``Linbo PXE`` aus.
+.. Nachdem Du nun die neue Hardwareklasse erstellt hast und der Client / die VM noch ausgeschaltet bereit steht, musst Du dessen MAC-Adresse in der Web-UI als Gerät anlegen. Dort weist Du dem Gerät dann die Hardwareklasse zu und wählst im Feld PXE den Eintrag ``Linbo PXE`` aus.
 .. 
-.. Um einen Rechner mit der Schulkonsole anzulegen, gehst du wie folgt vor: 
+.. Um einen Rechner mit der Schulkonsole anzulegen, gehst Du wie folgt vor: 
 .. 
 .. Wähle nach der Anmeldung links im Menü unter ``Geräteverwaltung --> Geräte``.
 .. 
@@ -53,7 +53,7 @@ Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM 
 ..  
 .. Nun erscheint die Gerätekonfiguration.
 .. 
-.. Als Spaltenköpfe siehst du u.a. den Raum, den Hostnamen, ..., PXE.
+.. Als Spaltenköpfe siehst Du u.a. den Raum, den Hostnamen, ..., PXE.
 .. 
 .. .. figure:: media/10-webui-devices-header.png
 ..    :align: center
@@ -77,11 +77,11 @@ Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM 
 ..    :align: center
 ..    :alt: WebUI add devices
 .. 
-.. In diese neue Zeile gibst du unter Raum den Namen des Raumes (hier ``server``) ein. Entsprechend verfährst du mit den Spalten Hostname, MAC, IP und Sophomorix-Rolle.
+.. In diese neue Zeile gibst Du unter Raum den Namen des Raumes (hier ``server``) ein. Entsprechend verfährst Du mit den Spalten Hostname, MAC, IP und Sophomorix-Rolle.
 .. 
 .. .. hint:: Verwende nicht eine IP-Adresse aus dem Bereich der Rechneraufnahme.
 .. 
-.. Im Feld ``Gruppe`` trägst du den Namen deiner Hardwareklasse ein und im Feld ``PXE`` wählst du ``Linbo PXE`` aus.
+.. Im Feld ``Gruppe`` trägst Du den Namen deiner Hardwareklasse ein und im Feld ``PXE`` wählst Du ``Linbo PXE`` aus.
 .. 
 .. Die Schaltfläche ``SPEICHERN`` überprüft die Eingabe. Mit ``SPEICHERN & IMPORTIEREN`` werden die neuen Geräte importiert.
 .. 
@@ -97,7 +97,7 @@ Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM 
 .. 
 .. .. attention:: Hinweise zur VM
 .. 
-..    Die nachstehenden Hinweise sind nur in Ausnahmefällen bei Nutzung einer VM relevant. Durch diese Änderungen werden zudem Anpassungen in der Boot-Loader Konfiguration von Linbo für die Hardwareklasse nicht mehr bei einem ``linuxmuster-import-devices`` angewendet. Folge diesen Schritten NUR wenn du XCP-ng als Virtualisierungsumgebung verwendest und den Muster-Client in einer VM anlegst.
+..    Die nachstehenden Hinweise sind nur in Ausnahmefällen bei Nutzung einer VM relevant. Durch diese Änderungen werden zudem Anpassungen in der Boot-Loader Konfiguration von Linbo für die Hardwareklasse nicht mehr bei einem ``linuxmuster-import-devices`` angewendet. Folge diesen Schritten NUR wenn Du XCP-ng als Virtualisierungsumgebung verwendest und den Muster-Client in einer VM anlegst.
 .. 
 ..    Sollte der Muster-Client als VM aufgebaut werden, so ist je nach eingesetzter Virtualisierungssoftware darauf zu achten, dass die VGA-Einstellungen eine geringe Auflösung und eine geringe Farbteife aufweisen.
 .. 
@@ -132,14 +132,14 @@ Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM 
 .. 
 ..    **Gerät importieren**
 ..    
-..    Hast du alle Einstellungen für die Geräte bzw. erneute Änderungen hier vorgenommen, klickst du in der WebUI unter ``Geräteverwaltung --> Geräte`` erneut ``Speichern & Importieren``, damit diese Einstellungen angewendet werden.
+..    Hast Du alle Einstellungen für die Geräte bzw. erneute Änderungen hier vorgenommen, klickst Du in der WebUI unter ``Geräteverwaltung --> Geräte`` erneut ``Speichern & Importieren``, damit diese Einstellungen angewendet werden.
 .. 
 ..    Alternativ kann auf dem Server in der Konsole als Benutzer ``root`` der Befehl ``linuxmuster-import-devices`` ausgeführt werden.
 .. 
 .. PC / VM via PXE starten
 .. -----------------------
 .. 
-.. Mit o.g. Einstellungen startest du nun den PC / die VM. Während des Boot-Vorgangs erhält der PC / die VM via PXE eine IP-Adresse und Linbo wird geladen.
+.. Mit o.g. Einstellungen startest Du nun den PC / die VM. Während des Boot-Vorgangs erhält der PC / die VM via PXE eine IP-Adresse und Linbo wird geladen.
 .. 
 .. Wurde in der start.conf kein ``Autostart`` gewählt, startet Linbo mit folgendem Start-Bildschirm:
 .. 
@@ -150,7 +150,7 @@ Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM 
 .. Festplatte mit Linbo vorbereiten
 .. --------------------------------
 
-.. Klicke nun rechts auf das Icon für Einstellungen / Tools. Es erscheint ein Dialog und du wirst aufgefordert das Kennwort für den Linbo-Benutzer anzugeben.
+.. Klicke nun rechts auf das Icon für Einstellungen / Tools. Es erscheint ein Dialog und Du wirst aufgefordert das Kennwort für den Linbo-Benutzer anzugeben.
 .. 
 .. .. figure:: media/18-linbo-webui-root-login.png
 ..    :align: center
@@ -172,7 +172,7 @@ Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM 
 .. 
 .. Bestätige die Paritionierung und Formatierung mit: ``ja``
 .. 
-.. Nach erfolgreicher Formatierung siehst du diese Bestätigung:
+.. Nach erfolgreicher Formatierung siehst Du diese Bestätigung:
 .. 
 ..  .. figure:: media/21-linbo-webui-partitioned.png
 ..    :align: center
@@ -184,7 +184,7 @@ Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM 
 ..    :align: center
 ..    :alt: Linbo WebUI shutdown.
 .. 
-.. Nun kannst du mit der Installation des gewünschtem Betriebssystems (Linux oder Windows) fortfahren. Wähle für die entsprechenden Anleitungen links im Menü die entsprechenden Einträge aus.
+.. Nun kannst Du mit der Installation des gewünschtem Betriebssystems (Linux oder Windows) fortfahren. Wähle für die entsprechenden Anleitungen links im Menü die entsprechenden Einträge aus.
 .. 
 .. .. hint:: Nachfolgend Text aus dem Bereich Setup
 .. 
@@ -196,7 +196,7 @@ Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM 
 .. 2. \`Editieren der Datei devices.csv`_
 .. 3. \`Aufnahme über linbo`_
 .. 
-.. Hast du eine Liste von MAC-Addressen parat, bieten sich die Varianten 1 und 2 an. Falls du die MAC-Addresse erst herausfinden musst, stellt die Variante 3 den leichteren Weg dar. Dort kannst du auf der gebooteten LINBO Oberfläche die MAC-Addresse auslesen.
+.. Hast Du eine Liste von MAC-Addressen parat, bieten sich die Varianten 1 und 2 an. Falls Du die MAC-Addresse erst herausfinden musst, stellt die Variante 3 den leichteren Weg dar. Dort kannst Du auf der gebooteten LINBO Oberfläche die MAC-Addresse auslesen.
 .. 
 .. .. hint::
 ..    Bei der Wahl der Bezeichnung für Raum und Gruppe bitte Folgendes unbedingt vermeiden:
@@ -206,7 +206,7 @@ Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM 
 ... mit der WebUI
 =================
 
-Um einen Rechner mit der Schulkonsole aufzunehmen, meldest du dich zunächst an der Schulkonsole als ``global-admin`` an.
+Um einen Rechner mit der Schulkonsole aufzunehmen, meldest Du dich zunächst an der Schulkonsole als ``global-admin`` an.
 
 Wähle dann links im Menü ``Geräteverwaltung --> Geräte``.
 
@@ -214,7 +214,7 @@ Wähle dann links im Menü ``Geräteverwaltung --> Geräte``.
    :align: center
    :alt: Device Management: Menue
 
-Danach siehst du rechts die Liste mit allen bereits in der Gerätedatei eingetragenen Geräten. Standardmäßig sind nach dem Setup die konfigurierten Server
+Danach siehst Du rechts die Liste mit allen bereits in der Gerätedatei eingetragenen Geräten. Standardmäßig sind nach dem Setup die konfigurierten Server
 schon in der Liste mit der Rolle ``Server`` eingetragen.
 
 .. figure:: media/add-devices/02-device-management-devices.png
@@ -227,14 +227,14 @@ Klicke unterhalb der Liste auf den Button ``+ Gerät hinzufügen``, um ein neues
    :align: center
    :alt: Device Management: Add New Device
 
-In der neuen Zeile gibst du nun folgenes an:
+In der neuen Zeile gibst Du nun folgenes an:
 
 1. Raum: Name des Raums (Achtung: keine Binde- und Unterstriche verwenden, keine Umlaute,  max. 10 Zeichen)
 2. Hostname: Name des Geräts (Erlaubte Zeichen ``a-z`` ``A-Z`` ``0-9`` ``-``; Achtung: Keine Unterstriche verwenden; max. 15 Zeichen)
 3. Gruppe: Bezeichnung der Linbo-Hardwareklasse. ``Gleiche Bezeichnungen für Raum und Gruppe sind unzulässig``. Reservierte Wörter, wie "con" und "man", dürfen nicht verwendet werden.
 4. MAC: Media Access Control - Hardware-Adresse des Netzwerkadapters. Trage 12 Hexadezimalzahlen mit einem Doppelpunkt als Trennzeichen nach zwei Ziffern ein.
 5. IP: Gebe eine IP-Adresse für das Gerät an, das diesem automatisch zugewiesen werden soll. Z.B. Raum 202 im Gebäude G erhält den Bereich 10.0.202.x/16 und PC01 erhält die UP 10.0.202.1
-6. Sophomorix-Rolle: Hier gibst du an, welche Art von Gerät du einbindest. Für PCs im Fachraum gibst du z.B. Schüler-PC im Klassenzimmer an.
+6. Sophomorix-Rolle: Hier gibst Du an, welche Art von Gerät Du einbindest. Für PCs im Fachraum gibst Du z.B. Schüler-PC im Klassenzimmer an.
 7. PXE: Lege über das Drop-down Menü fest, ob der PC mit Linbo-PXE synchronisiert werden soll oder nicht.
 
 .. hint::
@@ -259,11 +259,11 @@ Im folgenden erscheinen einige Log-Meldungen und - wenn der Import erfolgreich w
    :align: center
    :alt: Device Management: Import finished
 
-Um weitere Geräte hinzuzufügen, wiederholst du den beschriebenen Vorgang in der Schulkonsole entsprechend.
+Um weitere Geräte hinzuzufügen, wiederholst Du den beschriebenen Vorgang in der Schulkonsole entsprechend.
 
 .. hint::
 
-   Sind nun die gewünschten Geräte aufgenommen, kannst du mit ...
+   Sind nun die gewünschten Geräte aufgenommen, kannst Du mit ...
     
     ... der Erstellung eines Muster-Clients fortfahren, so dass alle PCs einer Linbo Hardwareklasse ein identisches Image erhalten. Gehe zu :ref:`client-templates-label`
 
@@ -274,7 +274,7 @@ Um weitere Geräte hinzuzufügen, wiederholst du den beschriebenen Vorgang in de
 ... mittels der Datei devices.csv
 =================================
 
-Wenn du sehr viele Geräte hinzufügen möchtest, deren MAC-Adressen du bereits kennst, dann ist die o.g. Option ``Im Editor öffnen`` eine Möglichkeit, die Datei devices.csv direkt zu editieren.
+Wenn Du sehr viele Geräte hinzufügen möchtest, deren MAC-Adressen Du bereits kennst, dann ist die o.g. Option ``Im Editor öffnen`` eine Möglichkeit, die Datei devices.csv direkt zu editieren.
 
 .. figure:: media/add-devices/07-device-management-edit-file.png
    :align: center
@@ -284,7 +284,7 @@ Die Datei kann hier auch zur lokalen Bearbeitung heruntergeladen und wieder hoch
 
 .. hint:: 
 
-  Es sind nun die gewünschten Geräte aufgenommen und du kannst mit ...
+  Es sind nun die gewünschten Geräte aufgenommen und Du kannst mit ...
     
   ... der Erstellung eines Muster-Clients fortfahren, so dass alle PCs einer Linbo Hardwareklasse ein identisches Image erhalten. Gehe zu :ref:`client-templates-label`
 
@@ -295,7 +295,7 @@ Die Datei kann hier auch zur lokalen Bearbeitung heruntergeladen und wieder hoch
 ... mittles LINBO
 =================
 
-Wurde z.B. ein neuer Schulungsraum mit 20 PCs ausgestattet, deren MAC-Adressen du nicht kennst, dann bietet sich diese Möglichkeit an. 
+Wurde z.B. ein neuer Schulungsraum mit 20 PCs ausgestattet, deren MAC-Adressen Du nicht kennst, dann bietet sich diese Möglichkeit an. 
 
 Dazu hat sich folgendes Vorgehen bewährt:
 
@@ -315,7 +315,7 @@ Dazu hat sich folgendes Vorgehen bewährt:
 ..    :align: center
 ..    :alt: Device Management: Linbo 4 Groups
 .. 
-.. 5. Klicke nun unten auf den Button ``+Erstellen``. Es erscheinen nun die Einträge des Drop-down Menüs. Wähle nun eine gewünschte Konfigurationsvorlage für die neu einzubindenden Geräte aus. Willst du z.B. die neuen Geräte mit UEFI-Boot und Ubutnu 20.4 LTS betreiben, dann wähle den Eintrag ``start.conf.ubuntu20-efi``.
+.. 5. Klicke nun unten auf den Button ``+Erstellen``. Es erscheinen nun die Einträge des Drop-down Menüs. Wähle nun eine gewünschte Konfigurationsvorlage für die neu einzubindenden Geräte aus. Willst Du z.B. die neuen Geräte mit UEFI-Boot und Ubutnu 20.4 LTS betreiben, dann wähle den Eintrag ``start.conf.ubuntu20-efi``.
 .. 
 .. .. figure:: media/add-devices/10-device-management-linbo4-group-config.png
 ..    :align: center
@@ -333,20 +333,20 @@ Dazu hat sich folgendes Vorgehen bewährt:
 ..    :align: center
 ..    :alt: Device Management: Linbo 4 Groups Import finished
 .. 
-.. 8. Nach Abschluss siehst du die neue Gruppe in der Übersicht und kannst mit dem Stift-Symbol die Einträge anpassen.
+.. 8. Nach Abschluss siehst Du die neue Gruppe in der Übersicht und kannst mit dem Stift-Symbol die Einträge anpassen.
 .. 
 .. .. figure:: media/add-devices/13-device-management-linbo4-group-new-overview.png
 ..    :align: center
 ..    :alt: Device Management: Linbo 4 Groups: Overview
 .. 
-.. 9. Hast du für die neue Gruppe den Stift geklickt, siehst du die Konfigurationseinstellungen für die Hardwareklasse. Klicke auf die Reiterkarte ``Partitionen`` und du siehst die Einstellungen für die Partitionsgrössen, die für deine neu einzubindenden PCs ggf. anzupassen sind.
+.. 9. Hast Du für die neue Gruppe den Stift geklickt, siehst Du die Konfigurationseinstellungen für die Hardwareklasse. Klicke auf die Reiterkarte ``Partitionen`` und Du siehst die Einstellungen für die Partitionsgrössen, die für deine neu einzubindenden PCs ggf. anzupassen sind.
 .. 
 .. .. figure:: media/add-devices/14-device-management-linbo4-group-partitions.png
 ..    :align: center
 ..    :alt: Device Management: Linbo 4 Groups: Partitions
 .. 
-.. 10. Hast du die Partitionen angepasst und ``Speichern`` geklickt, wird erneut ein Import ausgeführt.
-.. 11. Hast du alle einzubindenden PCs im BIOS auf PXE - Boot und für o.g. Beispiel auf UEFI eingestellt, dann starte diese, so dass Linbo4 gebootet wird.
+.. 10. Hast Du die Partitionen angepasst und ``Speichern`` geklickt, wird erneut ein Import ausgeführt.
+.. 11. Hast Du alle einzubindenden PCs im BIOS auf PXE - Boot und für o.g. Beispiel auf UEFI eingestellt, dann starte diese, so dass Linbo4 gebootet wird.
 .. 12. Es sollte bei einem erfolgreichen Boot-vorgang via PXE mit Linbo folgender Startbildschirm zu sehen sein:
 .. 
 .. 13. Folgende Ansicht sollte erscheinen.
@@ -372,13 +372,13 @@ Dazu hat sich folgendes Vorgehen bewährt:
    :alt: Device Management: Linbo 4 - new menue symbols
 
 6. Wähle den Eintrag ``Register`` aus.
-7. Es öffnet sich ein Fenster, um den Client zu registrieren. Fülle alle Felder aus. Achte darauf, dass du als Host group die zuvor neu angelegte einträgst.
+7. Es öffnet sich ein Fenster, um den Client zu registrieren. Fülle alle Felder aus. Achte darauf, dass Du als Host group die zuvor neu angelegte einträgst.
 
 .. figure:: media/add-devices/18-device-management-linbo4-register-client.png
    :align: center
    :alt: Device Management: Linbo 4 - register client
 
-8. Klicke dann auf den Eintrag ``register``. Nach Abschluss der Neuaufnahme siehst du nachstehende Meldung:
+8. Klicke dann auf den Eintrag ``register``. Nach Abschluss der Neuaufnahme siehst Du nachstehende Meldung:
 
 .. figure:: media/add-devices/19-device-management-linbo4-registering-client-finished.png
    :align: center
@@ -391,7 +391,7 @@ Dazu hat sich folgendes Vorgehen bewährt:
    :align: center
    :alt: Device Management: Linbo 4 - registered clients
 
-11. Klicke nun auf ``Speichern & importieren``. Wurde der Vorgang abgeschlossen, siehst du dies im Importfenster.
+11. Klicke nun auf ``Speichern & importieren``. Wurde der Vorgang abgeschlossen, siehst Du dies im Importfenster.
 
 .. figure:: media/add-devices/21-device-management-linbo4-registered-clients-imported.png
    :align: center
@@ -399,7 +399,7 @@ Dazu hat sich folgendes Vorgehen bewährt:
 
 .. hint::
 
-   Es sind nun die gewünschten Geräte aufgenommen und du kannst mit ...
+   Es sind nun die gewünschten Geräte aufgenommen und Du kannst mit ...
     
     ... der Erstellung eines Muster-Clients fortfahren, so dass alle PCs einer Linbo Hardwareklasse ein identisches Image erhalten. Gehe zu :ref:`client-templates-label`
 

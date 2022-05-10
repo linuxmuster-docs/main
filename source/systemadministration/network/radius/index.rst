@@ -57,7 +57,7 @@ Zugehörigkeit zur Gruppe wifi einmalig festlegen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Die Steuerung der Gruppenzugehörigkeit kann auf der Konsole auf dem lmn-Server wie folgt gesetzt werden. 
-Wenn du z.B. nur die Gruppe der Lehrer und der Schüler der Oberstufenklassen „k1“ und „k2“ für den WLAN-Zugang konfigurieren willst, erstellst du eine Vorlage und setzt die wifi-Gruppe dann wie folgt:
+Wenn Du z.B. nur die Gruppe der Lehrer und der Schüler der Oberstufenklassen „k1“ und „k2“ für den WLAN-Zugang konfigurieren willst, erstellst Du eine Vorlage und setzt die wifi-Gruppe dann wie folgt:
 
 .. code::
 
@@ -68,7 +68,7 @@ Wenn du z.B. nur die Gruppe der Lehrer und der Schüler der Oberstufenklassen �
 
    server ~ # sophomorix-managementgroup --set-wifi teachers_and_oberstufe
 
-Um noch weitere einzelne Schüler hinzuzunehmen oder zu entfernen, nutzt du danach die Funktion --wifi bzw. --nowifi mit von Komma getrennten Benutzernamen.
+Um noch weitere einzelne Schüler hinzuzunehmen oder zu entfernen, nutzt Du danach die Funktion --wifi bzw. --nowifi mit von Komma getrennten Benutzernamen.
 
 .. code::
 
@@ -171,13 +171,13 @@ Die Steuerung der Gruppenzugehörigkeit kann auf der Konsole wie folgt gesetzt w
 
   # sophomorix-managementgroup --nowifi/--wifi user1,user2,...
 
-Um alle Schüler aus der Gruppe wifi zu nehmen, listest du alle User des Systems auf und schreibst diese in eine Datei. Dies kannst du wie folgt erledigen:
+Um alle Schüler aus der Gruppe wifi zu nehmen, listest Du alle User des Systems auf und schreibst diese in eine Datei. Dies kannst Du wie folgt erledigen:
 
 .. code::
 
   # samba-tool user list > user.txt
 
-Jetzt entferns du alle User aus der Liste, die immer ins Wlan dürfen sollen. Danach baust du die Liste zu einer Kommazeile um mit:
+Jetzt entferns Du alle User aus der Liste, die immer ins Wlan dürfen sollen. Danach baust Du die Liste zu einer Kommazeile um mit:
 
 .. code::
 

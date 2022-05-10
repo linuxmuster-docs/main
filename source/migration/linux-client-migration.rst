@@ -32,12 +32,12 @@ Vorgehen
 
    Du musst als Benutzer ``linuxadmin`` angemeldet bleiben, solange bis das Setup des neuen Pakets linuxmuster-linuxclient7 vollständig abgeschlossen ist!
 
-Zu den Schritten 6. bis 10. findest du nachstehend Hinweise zur Umsetzung.
+Zu den Schritten 6. bis 10. findest Du nachstehend Hinweise zur Umsetzung.
 
 Entferne die alten Linux-Client Pakete
 --------------------------------------
 
-Hast du den alten Linux-Client in der VM erfolgreich gestartet, meldest du dich als Benutzer ``linuxadmin`` an.
+Hast Du den alten Linux-Client in der VM erfolgreich gestartet, meldest Du dich als Benutzer ``linuxadmin`` an.
 
 Entferne danach die alten Linux-Client Pakete mit folgendem Befehl:
 
@@ -48,7 +48,7 @@ Entferne danach die alten Linux-Client Pakete mit folgendem Befehl:
 Anmeldemanager wechseln
 -----------------------
 
-Das neue Paket linuxmuster-linuxclient7 benötigt als Anmeldemanager gdm3 und Gnome, so dass zuerst der bisherige Anmeldemanager zu deinstallieren ist. Die Dokumentation geht hier dabei davon aus, dass lightdm zu deinstallierenn ist. Ggf. must du das auf deinen genutzten Anmeldemanager anpassen.
+Das neue Paket linuxmuster-linuxclient7 benötigt als Anmeldemanager gdm3 und Gnome, so dass zuerst der bisherige Anmeldemanager zu deinstallieren ist. Die Dokumentation geht hier dabei davon aus, dass lightdm zu deinstallierenn ist. Ggf. must Du das auf deinen genutzten Anmeldemanager anpassen.
 
 Lösche den Anmeldemanager ``lightdm`` mit dem Befehl:
 
@@ -56,7 +56,7 @@ Lösche den Anmeldemanager ``lightdm`` mit dem Befehl:
 
    sudo apt purge lightdm
 
-Danach installierst du ``gdm3`` mit:
+Danach installierst Du ``gdm3`` mit:
 
 .. code:: 
 
@@ -70,8 +70,8 @@ Räume danach die Pakete im apt-cache auf:
 
 .. attention::
 
-   Bleibe weiterhin als Benutzer linuxadmin angemeldet, solange bis du das Setup des neuen Paketes linuxmuster-linuxclient7 abgeschlossen hast.
+   Bleibe weiterhin als Benutzer linuxadmin angemeldet, solange bis Du das Setup des neuen Paketes linuxmuster-linuxclient7 abgeschlossen hast.
 
 Führe nun alle Schritte zur Installation und zum Setup des neuen linuxmuster-linuxclient7 Pakets aus wie diese im Kapitel :ref:`install-linux-clients-current-label` beschrieben sind.
 
-Nach Abschluss des Setups erstellst du ein neues Image.
+Nach Abschluss des Setups erstellst Du ein neues Image.

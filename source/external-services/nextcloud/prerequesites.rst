@@ -35,11 +35,11 @@ Greift ein Gerät außerhalb der Schule über die Nextcloud auf Daten auf dem Sc
 
 Sollte ein Zugriff auf die Home-Laufwerke der lmn7 nicht vorgesehen sein, ist die externe Nextcloud, was die Rechenleistung angeht, leistungsstärker als eine interne Nextcloud.
 
-Falls du bereits einen Nextcloud-Service hast, kannst du das erste Kapitel überspringen.
+Falls Du bereits einen Nextcloud-Service hast, kannst Du das erste Kapitel überspringen.
 
 Voraussetzung: Docker-Host
 ==========================
 
 Um den Nextcloud-Service in der hier beschriebenen Form zu betreiben, ist die Installation eines Docker-Hosts erforderlich. 
-Hierzu ist ein dedizierter oder als VM entsprechend leistungsstarker Linux-Server mit Ubuntu 20.04 LTS zu installieren. Auf dem Server ist dann der Docker-Host einzurichten. Wie das geht siehst du im Kaptitel :ref:`Installation eines Dockerhosts <dockerhost-install-label>`
+Hierzu ist ein dedizierter oder als VM entsprechend leistungsstarker Linux-Server mit Ubuntu 20.04 LTS zu installieren. Auf dem Server ist dann der Docker-Host einzurichten. Wie das geht siehst Du im Kaptitel :ref:`Installation eines Dockerhosts <dockerhost-install-label>`
 

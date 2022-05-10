@@ -9,9 +9,9 @@ Upgrade v7.0 auf v7.1
 Bestehendes System
 ------------------
 
-Du hat linuxmuster.net bereits in der Version 7.0 installiert und du verfügst über ein lauffähiges System bestehend aus OPNsense® und linuxmuster.net Server basierend auf Ubuntu 18.04 LTS.
+Du hat linuxmuster.net bereits in der Version 7.0 installiert und Du verfügst über ein lauffähiges System bestehend aus OPNsense® und linuxmuster.net Server basierend auf Ubuntu 18.04 LTS.
 
-Vom Server aus hast du Internet-Zugriff.
+Vom Server aus hast Du Internet-Zugriff.
 
 Aktualisierung der Apt-Sources
 ------------------------------
@@ -27,14 +27,14 @@ Füge das neue repository auf dem Server in der Konsole wie folgt hinzu:
    sudo sh -c 'echo "deb https://deb.linuxmuster.net/ lmn71 main" > /etc/apt/sources.list.d/lmn71.list'
    sudo apt update
    
-Danach löscht du die bisherigen Paketquellen für die Version lmn 7.0. 
+Danach löscht Du die bisherigen Paketquellen für die Version lmn 7.0. 
 Gebe hierzu im Terminal auf dem Server folgendes an:
 
 .. code::
 
    sudo rm /etc/apt/apt.sources.d/lmn7.list
    
-Alternativ kannst du die Einträge in der Datei ``/etc/apt/apt.sources.d/lmn7.list`` wie folgt auskommentieren:
+Alternativ kannst Du die Einträge in der Datei ``/etc/apt/apt.sources.d/lmn7.list`` wie folgt auskommentieren:
 
 .. code::
 
@@ -60,7 +60,7 @@ Hat alles erfolgreich funktioniert wirst Du nach der Anmeldung auf der Konsole d
 
 .. figure:: media/01-console-welcome-lmn71.png
 
-Solltest du in den Log-Dateien oder bei der Installation folgenden Hinweis finden, kannst du wie beschrieben das Update entsprechend ausführen:
+Solltest Du in den Log-Dateien oder bei der Installation folgenden Hinweis finden, kannst Du wie beschrieben das Update entsprechend ausführen:
 
 .. code::
 
@@ -68,6 +68,6 @@ Solltest du in den Log-Dateien oder bei der Installation folgenden Hinweis finde
    You should consider upgrading via the '/usr/bin/python3 -m pip install --upgrade pip' command.
 
 
-Danach musst du noch deine Linbo 2.4 Images auf Linbo 4 migrieren. Führe dies wie hier :ref:`migration-linbo-label` beschrieben durch.
+Danach musst Du noch deine Linbo 2.4 Images auf Linbo 4 migrieren. Führe dies wie hier :ref:`migration-linbo-label` beschrieben durch.
 
-Danach ist dein Update auf linuxmuster v7.1 abgeschlossen und du kannst wie bisher auch weiterarbeiten.
+Danach ist dein Update auf linuxmuster v7.1 abgeschlossen und Du kannst wie bisher auch weiterarbeiten.

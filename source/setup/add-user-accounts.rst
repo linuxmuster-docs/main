@@ -75,7 +75,7 @@ Klicke auf den Button ``+ Lehrer hinzufügen``. Es wird eine leere Zeile hinzuge
 
 Mit ``+ Lehrer hinzufügen`` können auf diese Art und Weise weitere Lehrer einzeln aufgenommen werden. Klicke nach dem Eintragen aller der Daten unten auf den Button ``Speichern & Prüfen``.
 
-Es erscheint ein Fenster, in dem du siehst, wie mit den angegebenen Benutzerdaten verfahren wird.
+Es erscheint ein Fenster, in dem Du siehst, wie mit den angegebenen Benutzerdaten verfahren wird.
 
 .. figure:: media/add-user/add-user-05.png
    :align: center
@@ -91,7 +91,7 @@ Der Importdialog zeigt den Fortschritt an und meldet zurück, wenn die Aufnahme 
 
 Bestätige dies mit dem Button ``Schliessen``.
 
-Die neune oder geänderten Benutzer findest du nun im Menü ``Benutzerverwaltung --> Lehrer``. Hier können deren Kontoinformationen abgerufen und z.B. Erstpasswörter (zurück-)gesetzt werden.
+Die neune oder geänderten Benutzer findest Du nun im Menü ``Benutzerverwaltung --> Lehrer``. Hier können deren Kontoinformationen abgerufen und z.B. Erstpasswörter (zurück-)gesetzt werden.
 
 .. figure:: media/add-user/add-user-07.png
    :align: center
@@ -106,7 +106,7 @@ Schüler können analog zu Lehrern einzeln hinzugefügt werden.
 Alternativ können **alle** Schüler (alte wie neue) importiert werden. Wähle im Menü ``Benutzerverwaltung --> /Listenverwaltung --> Schüler`` (es erscheint
 automatisch die Schülerliste).
 
-Mit der Schaltfläche unterhalb der dargestellten Schüler ``CSV`` kannst du verschiedene Möglichkeiten ansteuern, eine CSV-Datei zu erstellen, diese zu bearbeiten oder eine neue bereitzustellen.
+Mit der Schaltfläche unterhalb der dargestellten Schüler ``CSV`` kannst Du verschiedene Möglichkeiten ansteuern, eine CSV-Datei zu erstellen, diese zu bearbeiten oder eine neue bereitzustellen.
 
 .. figure:: media/add-user/add-user-08.png
    :align: center
@@ -159,19 +159,19 @@ Fehlerkorrektur
 Hat man einen fehlerhafte Daten in das System eingepflegt und hat sie noch nicht imporiert, lassen sich Schüler und Lehrerlisten aus einer
 Sicherung zurückholen. Der Knopf für die Sicherung ist rechts unten in der Listenverwaltung.
 
-Hast du z.B. bei der zuvor importierten CSV-Datei die IDs vergessen, kannst Du diese in der CSV-Datei ergänzen, diese erneut importieren. Es werden dir dann die Änderungen angezeigt. In diesem Fall wird die uid auf die neu eingetragenen ID geändert.
+Hast Du z.B. bei der zuvor importierten CSV-Datei die IDs vergessen, kannst Du diese in der CSV-Datei ergänzen, diese erneut importieren. Es werden dir dann die Änderungen angezeigt. In diesem Fall wird die uid auf die neu eingetragenen ID geändert.
 
 .. figure:: media/add-user/add-user-12.png
    :align: center
    :alt: Menue: import users - changes
 
-Unter Listenverwaltung hast du bei den jeweiligen Benutzern (schüler, Lehrer, Extraschüler) unten rechts das Drop-down-Menü für die CSV-Dateien.
+Unter Listenverwaltung hast Du bei den jeweiligen Benutzern (schüler, Lehrer, Extraschüler) unten rechts das Drop-down-Menü für die CSV-Dateien.
 
 .. figure:: media/add-user/add-user-08.png
    :align: center
    :alt: Menue: CSV
 
-Klickst du auf ``CSV --> Im Editor öffnen`` wird die students.csv auf dem Server geöffnet und du kannst Änderungen vornehmen.
+Klickst Du auf ``CSV --> Im Editor öffnen`` wird die students.csv auf dem Server geöffnet und Du kannst Änderungen vornehmen.
 
 .. figure:: media/add-user/add-user-13.png
    :align: center

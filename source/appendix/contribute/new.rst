@@ -3,7 +3,7 @@
 Dokumentation lokal bearbeiten und veröffentlichen
 ==================================================
 
-Wenn du die Dokumentation erweitern willst, z.B. mit einem eigenen HowTo, ein fehlendes Kapitel ergänzen möchtest oder größere Änderungen machen und testen willst, benötigst du folgende Dinge:
+Wenn Du die Dokumentation erweitern willst, z.B. mit einem eigenen HowTo, ein fehlendes Kapitel ergänzen möchtest oder größere Änderungen machen und testen willst, benötigst Du folgende Dinge:
 
 - ein Konto bei `Github <https://github.com/join>`_
 - Die Software `git <https://git-scm.com/>`_ (wird zur Verwaltung und Versionierung der Dokumentation verwendet)
@@ -13,7 +13,7 @@ Wenn du die Dokumentation erweitern willst, z.B. mit einem eigenen HowTo, ein fe
 Lokale Installation (Ubuntu)
 ----------------------------
 
-Mit folgenden Befehlen kannst du unter einer aktuellen (ab 16.04) Ubuntu-Distributionen git, python und sphinx nachinstallieren:
+Mit folgenden Befehlen kannst Du unter einer aktuellen (ab 16.04) Ubuntu-Distributionen git, python und sphinx nachinstallieren:
 
 .. code::
 
@@ -25,7 +25,7 @@ Mit folgenden Befehlen kannst du unter einer aktuellen (ab 16.04) Ubuntu-Distrib
 Offizielle Dokumentation kompilieren
 ------------------------------------
 
-Hast du bereits bereits eine heruntergeladene Dokumentation aus dem offiziellen Repository, dann könntest du nun eine lokale Version der Dokumentation bauen und betrachten. Ansonsten mach mit dem nächsten Punkt weiter: `GitHub Konto erstellen`_ 
+Hast Du bereits bereits eine heruntergeladene Dokumentation aus dem offiziellen Repository, dann könntest Du nun eine lokale Version der Dokumentation bauen und betrachten. Ansonsten mach mit dem nächsten Punkt weiter: `GitHub Konto erstellen`_ 
 
 Öffne dazu ein Terminal, navigiere zum Ordner `linuxmuster-docs/main`, führe `make clean && make html` aus und rufe die Datei `linuxmuster-docs/main/build/html/index.html` z.B. mit dem Browser Firefox auf, um das Ergebnis zu betrachten.
 
@@ -44,9 +44,9 @@ Hast du bereits bereits eine heruntergeladene Dokumentation aus dem offiziellen 
 GitHub Konto erstellen
 ----------------------
 
-Spätestens jetzt solltest du ein Konto bei GitHub erstellen: https://github.com/join. 
+Spätestens jetzt solltest Du ein Konto bei GitHub erstellen: https://github.com/join. 
 
-Verifziere deine E-Mail-Adresse. Natürlich kannst du die Dokumentation zu GitHub durchlesen. Weiter geht es dann unter https://github.com/linuxmuster-docs/main
+Verifziere deine E-Mail-Adresse. Natürlich kannst Du die Dokumentation zu GitHub durchlesen. Weiter geht es dann unter https://github.com/linuxmuster-docs/main
 
 .. hint::
 
@@ -65,7 +65,7 @@ Linuxmuster Dokumentation forken
 
 .. note::
 
-   Nutze die URL ``git@github.com:lmn-docs-bot/main.git`` falls du bereits einen SSH-Schlüssel bei Github hochgeladen hast!
+   Nutze die URL ``git@github.com:lmn-docs-bot/main.git`` falls Du bereits einen SSH-Schlüssel bei Github hochgeladen hast!
 
 .. code::
 
@@ -103,11 +103,11 @@ Schaue dir auch die anderen Dokumentationsdateien an, um mehr über den Aufbau u
 Commit und push
 ~~~~~~~~~~~~~~~
 
-Hast du alle Änderungen vorgenommen, kannst du diese nun zur Überprüfung einreichen. Dazu sind folgende Schritte notwendig:
+Hast Du alle Änderungen vorgenommen, kannst Du diese nun zur Überprüfung einreichen. Dazu sind folgende Schritte notwendig:
 
 .. important::
 
-   Überprüfe bitte zuerst, ob ``make clean && make html`` ohne Fehler durchläuft! Falls nicht, behebe bitte alle Fehler und Warnungen, bevor du deine Änderungen hochlädst!
+   Überprüfe bitte zuerst, ob ``make clean && make html`` ohne Fehler durchläuft! Falls nicht, behebe bitte alle Fehler und Warnungen, bevor Du deine Änderungen hochlädst!
 
 .. code::
 
@@ -129,13 +129,13 @@ Gebe nun noch einen Kommentar zu deinen Änderungen ein und lade alles in deinen
 Pull-Request
 ~~~~~~~~~~~~
 
-Erstelle nun einen "Pull-Request" unter `<https://github.com/lmn-docs-bot/main>`_, indem du auf "New Pull Request" klickst.
+Erstelle nun einen "Pull-Request" unter `<https://github.com/lmn-docs-bot/main>`_, indem Du auf "New Pull Request" klickst.
 
 .. figure:: media/07_new_pull-request.png
    :align: center
    :alt: PR on Github
 
-Wenn du weitere Änderungen vornehmen möchtest und diese mit ``git commit -a -m"My comment"`` und ``git push`` bei Github hochlädst, werden diese Änderungen automatisch dem Pull Request hinzugefügt.
+Wenn Du weitere Änderungen vornehmen möchtest und diese mit ``git commit -a -m"My comment"`` und ``git push`` bei Github hochlädst, werden diese Änderungen automatisch dem Pull Request hinzugefügt.
 
 
 Eigenen Fork aktualisieren

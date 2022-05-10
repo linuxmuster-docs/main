@@ -34,7 +34,7 @@ Hinweise
 
 Für diese Anleitung haben wir uns entschieden, Proxmox als Virtualisierungslösung einzusetzen.
 
-Alternativ installierst du von Grund auf die Serverbetriebssysteme
+Alternativ installierst Du von Grund auf die Serverbetriebssysteme
 *Ubuntu Server* und *OPNsense®* direkt auf der Hardware oder innerhalb
 deiner Virtualisierungslösung. Hinweise auf andere Virtualisierungslösungen finden sich im Anwenderwiki von linuxmuster.net:
 
@@ -55,7 +55,7 @@ Diese Anleitung beinhaltet Angaben zu den notwendigen Systemanforderungen und Fe
 Systemvoraussetzungen
 =====================
 
-In der unten aufgeführten Tabelle findest du die Systemvoraussetzungen zum Betrieb der virtuellen Maschinen. Die Systemanforderungen für die Installation von Proxmox selbst finden sich im Web unter https://www.proxmox.com/de/proxmox-ve/systemanforderungen. 
+In der unten aufgeführten Tabelle findest Du die Systemvoraussetzungen zum Betrieb der virtuellen Maschinen. Die Systemanforderungen für die Installation von Proxmox selbst finden sich im Web unter https://www.proxmox.com/de/proxmox-ve/systemanforderungen. 
 
 Die Werte bilden die Mindestvoraussetzungen zur Planung. Für die Installation mit Proxmox und linuxmuster v7.1 wird als Standard der ``IP-Bereich 10.0.0.0/16`` genutzt.
 
@@ -69,7 +69,7 @@ Proxmox-Host 10.0.0.10/16  500 GiB           4 GiB
 
 Die Festplattengröße sowie der genutzte RAM der jeweiligen VMs kann ggf. vor deren Einrichtung einfach an die Bedürfnisse der Schule angepasst werden.
 
-Bevor du dieses Kapitel durcharbeitest, lese bitte zuerst die Abschnitte
+Bevor Du dieses Kapitel durcharbeitest, lese bitte zuerst die Abschnitte
   + :ref:`what-is-linuxmuster.net-label`
   + (:ref:`what-is-new-label`)
   +  :ref:`install-overview-label`
@@ -113,7 +113,7 @@ Lade dir dort das aktuellste Image herunter und erstelle dir einen bootfähigen 
 Erstellen eines USB-Sticks zur Installation des Proxmox-Host
 ------------------------------------------------------------
 
-Nachdem du die ISO-Datei für Proxmox heruntergeladen hast, wechselst du in das Download-Verzeichnis. Danach ermittel du den korrekten Buchstaben für den USB-Stick unter Linux. X ist durch den korrekten Buchstaben zu ersetzen und dann ist nachstehender Befehl als Benutzer *root* oder mit einem *sudo* vorangestellt einzugeben:
+Nachdem Du die ISO-Datei für Proxmox heruntergeladen hast, wechselst Du in das Download-Verzeichnis. Danach ermittel Du den korrekten Buchstaben für den USB-Stick unter Linux. X ist durch den korrekten Buchstaben zu ersetzen und dann ist nachstehender Befehl als Benutzer *root* oder mit einem *sudo* vorangestellt einzugeben:
 
 .. code-block:: console
  
@@ -158,10 +158,10 @@ Bestätige das ``End-User Agreement`` mit ``Enter``.
    :align: center
    :alt: Proxmox Installation Wahl der Festplatten
 
-Wähle die gewünschte Festplatte auf dem Server zur Installation aus. Hast du mehrere einzelne Festplatten im Server verbaut und kein RAID-Verbund definiert, so kannst du auf dieser Stelle mithilfe der Schaltfläche `Optionen` weitere Einstellungen aufrufen. Hier kannst du |zb| mehrere Festplatten angeben, die in einem sog. ZFS-Pool definiert werden sollen. Dies ist für das Erstellen von sog. Snapshots von Vorteil. Soll aber an dieser Stelle nicht vertieft werden. 
+Wähle die gewünschte Festplatte auf dem Server zur Installation aus. Hast Du mehrere einzelne Festplatten im Server verbaut und kein RAID-Verbund definiert, so kannst Du auf dieser Stelle mithilfe der Schaltfläche `Optionen` weitere Einstellungen aufrufen. Hier kannst Du |zb| mehrere Festplatten angeben, die in einem sog. ZFS-Pool definiert werden sollen. Dies ist für das Erstellen von sog. Snapshots von Vorteil. Soll aber an dieser Stelle nicht vertieft werden. 
 (siehe hierzu |ua|: https://pve.proxmox.com/pve-docs/pve-admin-guide.html)
 
-Nun bei den ``Location- and Time-Settings``, nachdem du Germany ausgewählt hast, `Next` wählen:
+Nun bei den ``Location- and Time-Settings``, nachdem Du Germany ausgewählt hast, `Next` wählen:
 
 .. figure:: media/install-on-proxmox_05_location-and-time-zone.png
    :align: center
@@ -173,8 +173,8 @@ Lege ein Kennwort für den Administrator des Proxmox-Host und eine E-Mail-Adress
    :align: center
    :alt: Proxmox Installation Admin-Passwort
 
-Lege die IP-Adresse des Proxmox-Host im internen Netz fest. Solltest du intern |zb| auf dem (DSL-)Router einen
-DHCP-Server laufen haben, dann erhältst du hier bereits eine vorausgefüllte Konfigurationsseite. Passe diese Werte nun den gewünschten Werten an. Der Hostname des Proxmox-Host ist hier in gewünschter Form |-| hier `hv01.linuxmuster.lan` |-| anzugeben.
+Lege die IP-Adresse des Proxmox-Host im internen Netz fest. Solltest Du intern |zb| auf dem (DSL-)Router einen
+DHCP-Server laufen haben, dann erhältst Du hier bereits eine vorausgefüllte Konfigurationsseite. Passe diese Werte nun den gewünschten Werten an. Der Hostname des Proxmox-Host ist hier in gewünschter Form |-| hier `hv01.linuxmuster.lan` |-| anzugeben.
 
 .. hint::
 
@@ -206,9 +206,9 @@ Nach erfolgreicher Installation lasse Proxmox über `Reboot` neu starten.
 Proxmox Einrichtung
 -------------------
 
-Nach dem Neustart von Proxmox kannst du dich über einen PC, welcher sich im selben Netz befindet, via Browser auf das grafische Webinterface zur Verwaltung des Proxmox-Hosts aufschalten. Hierzu gibst du die URL https://192.168.199.20:8006 ein. Du erhältst ein "Warning", da ein mögliches Sicherheitsrisiko erkannt wurde. Dies ist auf das selbst ausgestellte SSL-Zertifikat des Proxmox-Host zurückzuführen. 
+Nach dem Neustart von Proxmox kannst Du dich über einen PC, welcher sich im selben Netz befindet, via Browser auf das grafische Webinterface zur Verwaltung des Proxmox-Hosts aufschalten. Hierzu gibst Du die URL https://192.168.199.20:8006 ein. Du erhältst ein "Warning", da ein mögliches Sicherheitsrisiko erkannt wurde. Dies ist auf das selbst ausgestellte SSL-Zertifikat des Proxmox-Host zurückzuführen. 
 
-Klicke auf ``Erweitert ...``, es erscheint ein weiterer Hinweis auf das "self-signed certificate". Dieses nimmst du nun mit dem Button ``Risiko akzeptieren und fortfahren`` an.
+Klicke auf ``Erweitert ...``, es erscheint ein weiterer Hinweis auf das "self-signed certificate". Dieses nimmst Du nun mit dem Button ``Risiko akzeptieren und fortfahren`` an.
 
 Es erscheint die Anmeldemaske des Proxmox-Webinterface. Melde dich als User ``root`` und dem vorher gesetzten Passwort an:
 
@@ -216,7 +216,7 @@ Es erscheint die Anmeldemaske des Proxmox-Webinterface. Melde dich als User ``ro
    :align: center
    :alt: Proxmox Web-UI Login
 
-Im Fenster `No valid subscription` wählst du `OK` um das Fenster schließen:
+Im Fenster `No valid subscription` wählst Du `OK` um das Fenster schließen:
 
 .. figure:: media/install-on-proxmox_11_no-valid-subscription.png
    :align: center
@@ -244,7 +244,7 @@ Folgende vier Befehle müssen der Reihe nach ausgeführt werden:
 
 .. hint:
 
-   Falls du die beiden Befehl via copy&paste übernimmst, prüfe, ob in der Eingabekonsole die Hochkommata erhalten bleiben.
+   Falls Du die beiden Befehl via copy&paste übernimmst, prüfe, ob in der Eingabekonsole die Hochkommata erhalten bleiben.
 
 .. code::
 
@@ -273,7 +273,7 @@ Die bisherige Netzwerkkonfiguration stellt sich wie folgt dar:
    :align: center
    :alt: Proxmox-Übersicht hv01 - Network
 
-Für die folgende Überprüfung öffnest du nochmals die Konsole auf dem Hypervisor hv01, falls sie nicht geöffnet sein sollte, wie oben beschrieben und lässt dir den Inhalt der Konfigurationsdatei anzeigen mittels:
+Für die folgende Überprüfung öffnest Du nochmals die Konsole auf dem Hypervisor hv01, falls sie nicht geöffnet sein sollte, wie oben beschrieben und lässt dir den Inhalt der Konfigurationsdatei anzeigen mittels:
 
 .. code:: 
 
@@ -322,7 +322,7 @@ Mit `OK` wird der Kommentar übernommen.
 
 ####
 
-Nun erstellst du die zweite Bridge ``vmbr1``:
+Nun erstellst Du die zweite Bridge ``vmbr1``:
 
 Dazu wähle das Menü ``Datacenter`` --> ``hv01`` --> ``Network`` -->  ``Create`` --> ``Linux Bridge``
 
@@ -461,7 +461,7 @@ Es ist zu erkennen, dass auf ``/dev/sdb3`` nur noch ``pve-swap`` und ``pve-root`
    :align: center
    :alt:  Proxmox-Übersicht Festplatten default
 
-Danach findest du noch folgenden Speicher:
+Danach findest Du noch folgenden Speicher:
 
 .. figure:: media/install-on-proxmox_25_storage-after-remove.png
    :align: center
@@ -475,7 +475,7 @@ Die erste Festplatte heißt hier sda und ersetzt die pve-data-Partition, die im 
 
 .. hint::
 
-  Für folgende Schritte: Die Bezeichnungen vg-xxx & lv-xxx Namen solltest du auf deine Festplattengrößen 
+  Für folgende Schritte: Die Bezeichnungen vg-xxx & lv-xxx Namen solltest Du auf deine Festplattengrößen 
   entsprechend anpassen, die folgenden Grafiken dienen zur Orientierung: `vg-hdd-1000` eignet sich 
   beispielsweise für ein Volume aus einer HDD mit 1 TByte Kapazität.
 
@@ -553,7 +553,7 @@ Vorbereiten des ISO-Speichers
 =============================
 
 Um die v7.1 zu installieren, müssen zwei virtuelle Maschinen angelegt werden. OPNsense und Ubuntu Server 18.04 LTS werden in die VMs installiert.
-Dazu ist es erforderlich, dass du die ISO-Images für OPNsense und Ubuntu Server 18.04 LTS auf den Proxmox-Hypervisor in den Datenspeicher für ISO-Images lädst.
+Dazu ist es erforderlich, dass Du die ISO-Images für OPNsense und Ubuntu Server 18.04 LTS auf den Proxmox-Hypervisor in den Datenspeicher für ISO-Images lädst.
 
 .. figure:: media/proxmox-download-iso_01.png
    :align: center
@@ -564,13 +564,13 @@ Gehe dazu auf ``Datacenter`` --> ``<proxmox-host>`` --> ``Datenspeicher (auf loc
 Ubuntu Server
 -------------
 
-In dem nun geöffneten Fenster trägst du die URL
+In dem nun geöffneten Fenster trägst Du die URL
 
 .. code::
    
    https://releases.ubuntu.com/bionic/ubuntu-18.04.6-live-server-amd64.iso
 
-ein (copy&paste). Anschließend betätigst du dann den Button ``Query URL``.
+ein (copy&paste). Anschließend betätigst Du dann den Button ``Query URL``.
 
 .. figure:: media/proxmox-iso-download-ubuntu_01.png
    :align: center
@@ -609,31 +609,31 @@ befindet sich das heruntergeladene Ubuntu-ISO nun in dem ``ISO Images`` und steh
 OPNsense
 --------
 
-Die zuvor gezeigte Möglichkeit des einfachen Importes mittels den Bordmitteln von Proxmox steht dir für die OPNsense |reg| leider nicht zur Verfügung, da nur der Download einer bz2-Datei möglich ist. Dir steht der Weg des Downloads auf einen lokalen PC, der Umwandlung des bz2-File in eine iso-Datei und dann der Upload über den dir im Abschnitt Ubuntu aufgezeigten Ablauf frei. Dabei wählst du dann nicht ``URL``, sondern ``Upload``.
+Die zuvor gezeigte Möglichkeit des einfachen Importes mittels den Bordmitteln von Proxmox steht dir für die OPNsense |reg| leider nicht zur Verfügung, da nur der Download einer bz2-Datei möglich ist. Dir steht der Weg des Downloads auf einen lokalen PC, der Umwandlung des bz2-File in eine iso-Datei und dann der Upload über den dir im Abschnitt Ubuntu aufgezeigten Ablauf frei. Dabei wählst Du dann nicht ``URL``, sondern ``Upload``.
 
 Um dir den Upload zu ersparen, beschreiben wir hier den Weg, um die benötigten Dateien direkt in deine Proxmox-Maschine zu bringen:
 
-Als Erstes startest du die Konsole ``xterm.js`` wie dargestellt, falls sie nicht sowieso gestartet ist.
+Als Erstes startest Du die Konsole ``xterm.js`` wie dargestellt, falls sie nicht sowieso gestartet ist.
 
 .. figure:: media/proxmox-shell-xterm_01_start.png
    :align: center
    :alt: Proxmox open xterm shell
 
-Mit ihr hast du jetzt die Möglichkeit, mit Copy&Paste die folgenden bash-Zeilen direkt zu übernehmen.
+Mit ihr hast Du jetzt die Möglichkeit, mit Copy&Paste die folgenden bash-Zeilen direkt zu übernehmen.
 
 .. figure:: media/proxmox-shell-xterm_02_open_shell.png
    :align: center
    :alt: Proxmox xterm shell
 
-Als Nächstes musst du in das Verzeichnis wechseln, wo Proxmox die ISO-Dateien sucht. Dazu kopierst du diese Zeile in das gezeigte Fenster. 
+Als Nächstes musst Du in das Verzeichnis wechseln, wo Proxmox die ISO-Dateien sucht. Dazu kopierst Du diese Zeile in das gezeigte Fenster. 
 
 .. code::
 
    cd /var/lib/vz/template/iso
 
-Mit ``[Enter]`` wechselt du dann in das Verzeichnis.
+Mit ``[Enter]`` wechselt Du dann in das Verzeichnis.
 
-Dann musst du die folgenden vier Dateien herunterladen:
+Dann musst Du die folgenden vier Dateien herunterladen:
    
 Prüfsummendatei (<filename>.sha256)
 
@@ -672,25 +672,25 @@ Die komprimierte ISO Datei (<filename>.iso.bz2)
 
 Der letzte Befehl sollte dir ein ``Verified OK`` liefern.
 
-Nun gilt es, die ISO-Datei auszupacken. Das machst du mit folgendem Befehl:
+Nun gilt es, die ISO-Datei auszupacken. Das machst Du mit folgendem Befehl:
 
 .. code::
 
    bunzip2 OPNsense-22.1.2-OpenSSL-dvd-amd64.iso.bz2
 
-Das Entpacken kann einige Zeit in Anspruch nehmen. Anschließend sollte sich in dem Verzeichnis die OPNsense-ISO-Datei befinden. Die daneben befindlichen anderen OPNsense-Datei kannst du nun wieder löschen.
+Das Entpacken kann einige Zeit in Anspruch nehmen. Anschließend sollte sich in dem Verzeichnis die OPNsense-ISO-Datei befinden. Die daneben befindlichen anderen OPNsense-Datei kannst Du nun wieder löschen.
 
 .. code::
 
    rm OPNsense*.sha256 OPNsense*.pub OPNsense*.sig
 
-Somit hast du nun alle nötigen ISO-Dateien für die weitere Installation zusammen.
+Somit hast Du nun alle nötigen ISO-Dateien für die weitere Installation zusammen.
 
 .. figure:: media/proxmox-download-iso_02.png
    :align: center
    :alt: Proxmox ISO Images folder view
 
-Es sind  beide ISO Images auf den ISO-Speicher in Proxmox verfügbar, du richtest nun die VMs ein.
+Es sind  beide ISO Images auf den ISO-Speicher in Proxmox verfügbar, Du richtest nun die VMs ein.
 
 Vorbereiten der virtuellen Maschinen
 ====================================
@@ -698,13 +698,13 @@ Vorbereiten der virtuellen Maschinen
 Anlegen der VM für OPNsense
 ---------------------------
 
-Um für die OPNsense Firewall eine VM anzulegen, wählst du in der Proxmox - Verwaltungsoberfläche den Button ``Create VM``.
+Um für die OPNsense Firewall eine VM anzulegen, wählst Du in der Proxmox - Verwaltungsoberfläche den Button ``Create VM``.
 
 .. figure:: media/proxmox-create-vm.png
    :align: center
    :alt: Proxmox Create VM
 
-Es erscheint nun das Fenster zur Anlage der neuen VM. Trage hier einen Namen für die VM ein, anhand der du Version und Funktion erkennst.
+Es erscheint nun das Fenster zur Anlage der neuen VM. Trage hier einen Namen für die VM ein, anhand der Du Version und Funktion erkennst.
 
 .. figure:: media/proxmox-create-vm-opnsense-01.png
    :align: center
@@ -712,7 +712,7 @@ Es erscheint nun das Fenster zur Anlage der neuen VM. Trage hier einen Namen fü
 
 Klicke dann auf ``Next``.
 
-Wähle nun den ISO-Datenspeicher unter ``Storage`` aus. Das ist der Speicher, auf den du vorher die ISO-Images abgelegt hast.
+Wähle nun den ISO-Datenspeicher unter ``Storage`` aus. Das ist der Speicher, auf den Du vorher die ISO-Images abgelegt hast.
 Wähle dann das ISO image der OPNsense aus.
 
 .. figure:: media/proxmox-create-vm-opnsense-02.png
@@ -730,9 +730,9 @@ Belasse hier zunächst alle Voreinstellungen für Grafikkarte und Festplatten-Co
 Klicke dann auf ``Next``.
 
 Wähle nun hier unter ``Storage`` den geeigneten Datenspeicher auf, um die Festplatte der VM dort abzulegen. In der Abb. wird der Datenspeicher ``Dataset`` verwendet.
-In dem Drop-down Menü siehst du alle in deinem System verfügbaren Datenspeicher.
+In dem Drop-down Menü siehst Du alle in deinem System verfügbaren Datenspeicher.
 
-.. hint:: Folgende Größenangaben beziehen sich, wie schon geschrieben, auf eine Testumgebung. Für andere Einsatzszenarien solltest du dich unbedingt mit den `Hardware-Anforderungen <https://docs.opnsense.org/manual/hardware.html#hardware-requirements>`_ gemäß der OPNsense |reg| -Dokumentation auseinandersetzen.
+.. hint:: Folgende Größenangaben beziehen sich, wie schon geschrieben, auf eine Testumgebung. Für andere Einsatzszenarien solltest Du dich unbedingt mit den `Hardware-Anforderungen <https://docs.opnsense.org/manual/hardware.html#hardware-requirements>`_ gemäß der OPNsense |reg| -Dokumentation auseinandersetzen.
 
 .. figure:: media/proxmox-create-vm-opnsense-04.png
    :align: center
@@ -756,7 +756,7 @@ Gebe nun für die Firewall die gewünschte Größe des Arbeitsspeichers an.
 
 Klicke dann auf ``Next``.
 
-Gebe danach die ``Bridge vmbr0`` für die einzurichtende Netzwerkkarte an. Die zweite Netzwerkkarte fügst du nach Anlage der VM hinzu. Dies muss noch vor der eigentlichen Installation erfolgen.
+Gebe danach die ``Bridge vmbr0`` für die einzurichtende Netzwerkkarte an. Die zweite Netzwerkkarte fügst Du nach Anlage der VM hinzu. Dies muss noch vor der eigentlichen Installation erfolgen.
 
 .. figure:: media/proxmox-create-vm-opnsense-07.png
    :align: center
@@ -764,7 +764,7 @@ Gebe danach die ``Bridge vmbr0`` für die einzurichtende Netzwerkkarte an. Die z
 
 Klicke dann auf ``Next``.
 
-Zum Abschluss siehst du nochmals alle Einstellungen für die VM. Überprüfe diese. Solltest du Änderungen vornehmen wollen, kannst du auf die entsprechende Reiterkarte klicken, Änderungen durchführen und wieder zur Reiterkarte ``Confirm`` wechseln.
+Zum Abschluss siehst Du nochmals alle Einstellungen für die VM. Überprüfe diese. Solltest Du Änderungen vornehmen wollen, kannst Du auf die entsprechende Reiterkarte klicken, Änderungen durchführen und wieder zur Reiterkarte ``Confirm`` wechseln.
 
 .. figure:: media/proxmox-create-vm-opnsense-08.png
    :align: center
@@ -792,7 +792,7 @@ Klicke hierzu oben auf die Reiterkarte ``Add``. Es erscheint ein Drop-down Menü
 
 Wähle als Bridge die zweite zuvor eingerichtete Bridge |-| hier ``vmbr1``. 
 
-Achte für die weitere Installation darauf, wie du die Bridges zugeordnet hast:
+Achte für die weitere Installation darauf, wie Du die Bridges zugeordnet hast:
 
 1. vmbr 0 - externes Netzwerk: red
 2. vmbr 1 - internes Netzwerk: green
@@ -804,7 +804,7 @@ Klicke auf ``Add``.
 Hinzufügen einer Seriellen Schnittstelle
 ----------------------------------------
 
-Damit dir copy&paste in der Oberfläche von Proxmox bei der Auswahl unter ``Console`` zur Verfügung steht, muss du die Nutzung von xterm.js ermöglichen.
+Damit dir copy&paste in der Oberfläche von Proxmox bei der Auswahl unter ``Console`` zur Verfügung steht, muss Du die Nutzung von xterm.js ermöglichen.
 
 .. figure:: media/xterm-opnsense_001.png
    :align: center
@@ -837,13 +837,13 @@ Kontrolliere nochmals alle Einstellungen der neu angelegten VM.
 Anlegen der VM für linuxmuster server
 -------------------------------------
 
-Um für den linuxmuster.net Server v7.1 die VM anzulegen, wählst du erneut in der Proxmox - Verwaltungsoberfläche den Button ``Create VM``.
+Um für den linuxmuster.net Server v7.1 die VM anzulegen, wählst Du erneut in der Proxmox - Verwaltungsoberfläche den Button ``Create VM``.
 
 .. figure:: media/proxmox-create-vm.png
    :align: center
    :alt: Proxmox Create VM
 
-Es erscheint nun das Fenster zur Anlage der neuen VM. Trage hier einen Namen für die VM ein, anhand der du Version und Funktion erkennst.
+Es erscheint nun das Fenster zur Anlage der neuen VM. Trage hier einen Namen für die VM ein, anhand der Du Version und Funktion erkennst.
 
 .. figure:: media/proxmox-create-vm-ubuntu-server-01.png
    :align: center
@@ -851,7 +851,7 @@ Es erscheint nun das Fenster zur Anlage der neuen VM. Trage hier einen Namen fü
 
 Klicke dann auf ``Next``.
 
-Wähle nun den ISO-Datenspeicher unter Storage aus. Das ist der Speicher, auf den du vorher die ISO-Images abgelegt hast.
+Wähle nun den ISO-Datenspeicher unter Storage aus. Das ist der Speicher, auf den Du vorher die ISO-Images abgelegt hast.
 Wähle dann das ISO image der OPNsense aus.
 
 .. figure:: media/proxmox-create-vm-ubuntu-server-02.png
@@ -869,13 +869,13 @@ Belasse hier zunächst alle Voreinstellungen für Grafikkarte und Festplatten-Co
 Klicke dann auf ``Next``.
 
 Wähle nun hier unter ``Storage`` den geeigneten Datenspeicher aus, um die Festplatte der VM dort abzulegen. In der Abb. wird der Datenspeicher ``Dataset`` verwendet.
-In dem Drop-down Menü siehst du alle in deinem System verfügbaren Datenspeicher.
+In dem Drop-down Menü siehst Du alle in deinem System verfügbaren Datenspeicher.
 
 .. figure:: media/proxmox-create-vm-ubuntu-server-04.png
    :align: center
    :alt: Proxmox Create VM: Disks
 
-Für die erste Festplatte wählst du wie in obiger Abb. |zb| 25 GiB.
+Für die erste Festplatte wählst Du wie in obiger Abb. |zb| 25 GiB.
 
 Füge dann mit dem Button unten links ``Add`` eine weitere Festplatte hinzu. Wähle hierbei wieder den geeigneten Datenspeicher aus und gebe nun die Größe |zb| 100 GiB, oder direkt für deine Schule die gewünschte Größe |zb| 500 GiB aus.
 
@@ -909,7 +909,7 @@ Gebe danach die Bridge vmbr1 für die einzurichtende Netzwerkkarte an. Dies muss
 
 Klicke dann auf ``Next``.
 
-Zum Abschluss siehst du nochmals alle getroffenen Einstellungen. Überprüfe diese. Solltest du Änderungen vornehmen wollen, kannst du auf die entsprechende Reiterkarte klicken, Änderungen durchführen und wieder zur Reiterkarte ``Confirm`` wechseln.
+Zum Abschluss siehst Du nochmals alle getroffenen Einstellungen. Überprüfe diese. Solltest Du Änderungen vornehmen wollen, kannst Du auf die entsprechende Reiterkarte klicken, Änderungen durchführen und wieder zur Reiterkarte ``Confirm`` wechseln.
 
 .. figure:: media/proxmox-create-vm-ubuntu-server-09.png
    :align: center
@@ -919,7 +919,7 @@ Achte darauf, dass die Option ``Start after created`` unbedingt ``deaktiviert`` 
 
 Klicke dann auf ``Finish``.
 
-Nachdem die VM angelegt wurde, siehst du diese links im Verzeichnisbaum deines Proxmox-Host, in dem alle VMs dargestellt werden.
+Nachdem die VM angelegt wurde, siehst Du diese links im Verzeichnisbaum deines Proxmox-Host, in dem alle VMs dargestellt werden.
 
 .. figure:: media/proxmox-create-vm-ubuntu-server-10.png
    :align: center
@@ -928,7 +928,7 @@ Nachdem die VM angelegt wurde, siehst du diese links im Verzeichnisbaum deines P
 Hinzufügen einer Seriellen Schnittstelle
 ----------------------------------------
 
-Damit dir copy&paste ebenfalls für den Server zur Verfügung steht, muss du die Nutzung von xterm.js auch für ihn wie oben beschrieben ermöglichen. Hier erneut die Beschreibung
+Damit dir copy&paste ebenfalls für den Server zur Verfügung steht, muss Du die Nutzung von xterm.js auch für ihn wie oben beschrieben ermöglichen. Hier erneut die Beschreibung
 
 .. figure:: media/xterm-server_001.png
    :align: center
@@ -959,7 +959,7 @@ Die eigentliche Installation des Servers in der VM folgt später.
 Boot-Optionen
 -------------
 
-Um bei der from Scratch Installation von CD zu starten, wählst du die VM aus, klickst auf ``Options`` und klickst oben auf den Menüeintrag ``Edit``.
+Um bei der from Scratch Installation von CD zu starten, wählst Du die VM aus, klickst auf ``Options`` und klickst oben auf den Menüeintrag ``Edit``.
 
 .. figure:: media/proxmox-vm-boot-order-01.png
    :align: center
@@ -979,11 +979,11 @@ nachher:
    :align: center
    :alt: Proxmox VM: Boot order changed
 
-Dies führst du für die OPNsense VM und für die Ubuntu Server VM durch.
+Dies führst Du für die OPNsense VM und für die Ubuntu Server VM durch.
 
 .. hint:: 
    
-   Nach abgeschlossener Installation musst du daran denken, die CD wieder auszuwerfen und in den VMs die Boot-Reihenfolge wieder so zu ändern, dass zuerst von Festplatte gebootet wird.
+   Nach abgeschlossener Installation musst Du daran denken, die CD wieder auszuwerfen und in den VMs die Boot-Reihenfolge wieder so zu ändern, dass zuerst von Festplatte gebootet wird.
 
 ######
 

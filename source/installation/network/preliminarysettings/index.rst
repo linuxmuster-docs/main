@@ -9,7 +9,7 @@ Netzbereich anpassen
 
 Sollte es erforderlich sein, dass der Netzbereich von den Vorgaben im Setup (``10.0.0.0/16``) abweicht, dann sind nachstehende Schritte zur Anpassung vor Aufruf des Setups mit der WebUI oder des Setups auf der Konsole auf dem Server auszuführen.
 
-Dies ist ebenfalls der Fall, wenn du eine ``from-scratch`` Installation durchgeführt hast.
+Dies ist ebenfalls der Fall, wenn Du eine ``from-scratch`` Installation durchgeführt hast.
 
 .. hint::
 

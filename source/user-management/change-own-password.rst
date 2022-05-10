@@ -51,12 +51,12 @@ In dieser Beispielfehlermeldung bestand das Passwort nur aus
 Kleinbuchstaben, Zahlen und Sonderzeichen. Es enthielt keine
 Großbuchstaben.
 
-Jetzt kannst du dich ausloggen. Rechts oben, wo in einem Kreis dein
+Jetzt kannst Du dich ausloggen. Rechts oben, wo in einem Kreis dein
 Bild oder Buchstabe steht erreicht man das persönliche Menü.
 
 .. figure:: media/selma-logout-menu.png
 
-Mit dem neuen Passwort kannst du dich an allen Diensten anmelden, die
+Mit dem neuen Passwort kannst Du dich an allen Diensten anmelden, die
 im Schulnetzwerk mit dem Schulkonto verbunden sind, z.B. auch die
 Anmeldung an PCs.
 

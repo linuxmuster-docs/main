@@ -15,7 +15,7 @@ Betriebssystem Windows 10 installieren
 
 1. Du hast den PC wie zuvor beschrieben über CD/USB-Stick gebootet. Dieser wurde zudem zuvor mit LINBO partioniert und formatiert.
 2. Drücke während des Boot-Vorgangs nach Aufforderung eine Taste, damit von dem Windows-Installationsmedium tatsächlich gebootet wird.
-3. Danach siehst du zu Beginn der Installation die Spracheinstellungen. Wähle die gewünschten Einstellungen aus und klicke auf ``Weiter``:
+3. Danach siehst Du zu Beginn der Installation die Spracheinstellungen. Wähle die gewünschten Einstellungen aus und klicke auf ``Weiter``:
 
 .. figure:: media/14_windows-10-clients_choose-language.png
    :align: center
@@ -27,7 +27,7 @@ Betriebssystem Windows 10 installieren
    :align: center
    :alt: Win10 Choose Install
 
-5. Es wird das Setup gestartet. Es erscheint zuerst der Hinweis auf die Windows-Aktivierung. Hier kannst du zum jetzigen Zeitpunkt die Option 
+5. Es wird das Setup gestartet. Es erscheint zuerst der Hinweis auf die Windows-Aktivierung. Hier kannst Du zum jetzigen Zeitpunkt die Option 
    ``Ich habe keinen Product Key`` wählen. Die Aktivierung mit der vorhandenen Lizenz erfolgt dann später in anderer Form.
 
 6. Wähle dann das gewünschte Betriebssystem aus, für das die Lizenz vorliegt, z.B. Windows 10 Pro Education N.
@@ -77,11 +77,11 @@ In der Abb. wurde ein UEFI-System vorbereitet. Partition 3 wurde für Windows 10
 
 .. hint::
 
-   Solltest du hier Probleme haben und ein UEFI-System als Client eingerichtet haben, so versuche, den Client auf den Legacy-Modus umzustellen und die Hardwareklasse in der Schulkonsole ebenfalls so anzupassen, dass BIOS64 genutzt wird. Importiere die Geräte neu, formatiere den Client mit LINBO neu, installiere Windows erneut und boote das installierte Windows aus dem lokalen Cache - wie zuvor beschrieben.
+   Solltest Du hier Probleme haben und ein UEFI-System als Client eingerichtet haben, so versuche, den Client auf den Legacy-Modus umzustellen und die Hardwareklasse in der Schulkonsole ebenfalls so anzupassen, dass BIOS64 genutzt wird. Importiere die Geräte neu, formatiere den Client mit LINBO neu, installiere Windows erneut und boote das installierte Windows aus dem lokalen Cache - wie zuvor beschrieben.
 
 12. Nachdem Windows nun aus dem lokalen LINBO-Cache bootet, wird die Installation fortgeführt. Windows richtet Dienste ein und startet dann erneut. Du gelangst wieder in LINBO und startest Windows wieder unsynchronisiert mit der grünen Pfeiltaste.
 
-Nach dem erneuten Start von Windows wählst du deine Region aus.
+Nach dem erneuten Start von Windows wählst Du deine Region aus.
 
 .. figure:: media/21_windows-10-clients_choose-region.png
    :align: center
@@ -221,13 +221,13 @@ g) mit Enter bestätigen. Nun wurde die Datei übertragen.
 
 h) Putty schließen 
 
-2. auf dem PC im Programm ``Explorer`` nun das Netzlaufwerk des Servers öffnen, indem du in der Leiste oben ``\\server`` eingibst:
+2. auf dem PC im Programm ``Explorer`` nun das Netzlaufwerk des Servers öffnen, indem Du in der Leiste oben ``\\server`` eingibst:
 
 .. figure:: media/39_windows-10-clients_open-net-resource.png
    :align: center
    :alt: Win10 Open Network Resource
 
-3. Du gibst ggf. die Anmeldedaten des ``global-admin`` ein. Danach öffnest du nacheinander die Ordner ``linuxmuster-global → managament → global-admin``
+3. Du gibst ggf. die Anmeldedaten des ``global-admin`` ein. Danach öffnest Du nacheinander die Ordner ``linuxmuster-global → managament → global-admin``
 
 4. Hier liegt die Registry-Datei ``win10.global``. Ziehe diese via Drag & Drop auf den Desktop.
 
@@ -258,7 +258,7 @@ Domänenanbindung
 Geräte die dauerhaft mit den Ressourcen der linuxmuster.net-Umgebung arbeiten sollen, sind nun in der Domäne aufzunehmen. Um Geräte richtig in das AD einzuordnen,
 sollten diese, wie weiter oben erklärt, zuerst in linuxmuster.net über die MAC mit richtigen Einstellungen aufgenommen worden sein.
 
-Starte den Muster-Client wieder via LINBO, indem du Win10 mit dem GÜNEN Start-Button aus dem lokalen Cache startest.
+Starte den Muster-Client wieder via LINBO, indem Du Win10 mit dem GÜNEN Start-Button aus dem lokalen Cache startest.
 
 Manueller Domänen Join für Windows
 ----------------------------------
@@ -271,9 +271,9 @@ Manueller Domänen Join für Windows
    :align: center
    :alt: Win10 Login As Global-Admin
 
-2. OK → Windows-Sicherheitsfrage: Hier musst du dich als Domänen-Benutzer ``global-admin`` anmelden. Zum Abschluss solltest du die Meldung erhalten: "Willkommen in der Domäne ....".
+2. OK → Windows-Sicherheitsfrage: Hier musst Du dich als Domänen-Benutzer ``global-admin`` anmelden. Zum Abschluss solltest Du die Meldung erhalten: "Willkommen in der Domäne ....".
 
-3. Danach musst du das Fenster zum Neustart des PCs bestätigen. Schließe das Fenster der Domänenaufnahme. Es erscheint der Hinweis, dass der PC neu gestartet werden muss. Bestätige den Neustart.
+3. Danach musst Du das Fenster zum Neustart des PCs bestätigen. Schließe das Fenster der Domänenaufnahme. Es erscheint der Hinweis, dass der PC neu gestartet werden muss. Bestätige den Neustart.
 
 Der PC bootet nun wieder in LINBO. 
 
@@ -286,7 +286,7 @@ Es muss nach diesem Domänenbeitritt ein Muster-Image erstellt werden.
 LINBO Muster-Image mit Domänenbeitritt
 ======================================
 
-Nachdem der Muster-client mit Windows 10 - wie zuvor beschrieben - der Domäne hinzugefügt wurde, erstellst du jetzt ein Image für den Muster-Client. Wird dieses Image auf andere Maschinen übertragen, so sind diese bereits in der Domäne aufgenommen.
+Nachdem der Muster-client mit Windows 10 - wie zuvor beschrieben - der Domäne hinzugefügt wurde, erstellst Du jetzt ein Image für den Muster-Client. Wird dieses Image auf andere Maschinen übertragen, so sind diese bereits in der Domäne aufgenommen.
 
 Hierbei ist es notwenig, das für das Image in der Registry, den Namen der PCs jeweils automatisch anzupassen, da sonst jeder PC, der das Image kopiert, den selben Rechnernamen hätte.
 
@@ -301,7 +301,7 @@ Hierbei ist es notwenig, das für das Image in der Registry, den Namen der PCs j
 Image in LINBO erstellen
 ------------------------
 
-1. Jetzt wieder in LINBO starten und von dem aktuellem Stand ein Image erstellen. Klicke rechts auf das Werkzeug-Symbol. Gebe das Linbo-Passwort ein, dann siehst du folgende Einträge:
+1. Jetzt wieder in LINBO starten und von dem aktuellem Stand ein Image erstellen. Klicke rechts auf das Werkzeug-Symbol. Gebe das Linbo-Passwort ein, dann siehst Du folgende Einträge:
 
 .. figure:: media/45_windows-10-clients_linbo-create-image.png
    :align: center
@@ -313,9 +313,9 @@ Image in LINBO erstellen
    :align: center
    :alt: Linbo Upload Image
 
-Gebe an, ob ein aktuelles Image ersetzt werden soll, den gewünschten Image-Namen (die Dateiendung ist immer .qcow2). Zudem kannst du eine Beschreibung angeben, die dir Hinweise zum Konfigurationsstand des Images gibt. Da du das erste Image erstellst, klicke nun ``erstellen + hochladen``.
+Gebe an, ob ein aktuelles Image ersetzt werden soll, den gewünschten Image-Namen (die Dateiendung ist immer .qcow2). Zudem kannst Du eine Beschreibung angeben, die dir Hinweise zum Konfigurationsstand des Images gibt. Da Du das erste Image erstellst, klicke nun ``erstellen + hochladen``.
 
-Nach dem erfolgreichen Upload siehst du folgende Statusmeldung:
+Nach dem erfolgreichen Upload siehst Du folgende Statusmeldung:
 
 .. figure:: media/46a_windows-10-clients_linbo-uploaded-image.png
    :align: center
@@ -348,7 +348,7 @@ Klicke nun unten auf die Drop-down Liste ``Copy from -> win10.image.reg``. Es wi
 
 5. Alternativ in der Server-Shell aus ``/srv/linbo/exmaples`` die richtige Vorlage in ``/srv/linbo`` kopieren. Die Datei trägt dann den Namen ``<imagename>.reg`` - also in o.g. Beispiel win10.reg.
 
-6. In Zeile 22 musst du noch Folgendes ergänzen:
+6. In Zeile 22 musst Du noch Folgendes ergänzen:
 
 .. code::
 
@@ -358,19 +358,19 @@ Klicke nun unten auf die Drop-down Liste ``Copy from -> win10.image.reg``. Es wi
    [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
    "DefaultLogonDomain"="<SAMBADOMAIN>"
 
-Hier <SAMBADOMAIN> durch den zuvor festgelegten Namen der Samba_Domäne ersetzen. Hattest du z.B. während der Installation gshoenningen.linuxmuster.lan gewählt, so gibst du hier nur gshoeningen an. Übernehme die Eintragungen mit ``Speichern``.
+Hier <SAMBADOMAIN> durch den zuvor festgelegten Namen der Samba_Domäne ersetzen. Hattest Du z.B. während der Installation gshoenningen.linuxmuster.lan gewählt, so gibst Du hier nur gshoeningen an. Übernehme die Eintragungen mit ``Speichern``.
 
 Imageübertragung auf den PC
 ---------------------------
 
 1. Starte den PC, auf den das Image übertragen werden soll, über das Netzlaufwerk bis er in LINBO gebootet hat.
-Nun öffnest du den Imaging-Reiter, wie im ersten Kapitel 
+Nun öffnest Du den Imaging-Reiter, wie im ersten Kapitel 
 
 :ref:`Computer in linuxmuster.net aufnehmenn <install-windows10-clients-label>` 
 
  → ``Client lokal registrieren`` beschrieben wird.
 
-2. Als nächstes partitionierst und formatierst du den PC über den LINBO-Menüeintrag ``Partitionieren`` wie zuvor beschrieben.
+2. Als nächstes partitionierst und formatierst Du den PC über den LINBO-Menüeintrag ``Partitionieren`` wie zuvor beschrieben.
 
 3. Wechsel nun auf dem Imaging-Menü wieder in das Startmenü von LINBO. Klicke hier das rote Symbol, um Windows neu zu installieren.
 
