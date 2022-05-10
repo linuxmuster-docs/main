@@ -91,7 +91,7 @@ Als letzte Überprüfung bevor du das Skript einsetzt, verbinde dich vom Server 
 
    ssh root@10.0.0.254
 
-Du solltest dich danach auf den Konsole der OPNsense |reg| wiederfinden. Eventuell musst du auch vorher deren Key akzeptieren. Mit ``0`` solltest du dich wieder ausloggen und zurück auf der Server-Konsole sein.
+Du solltest dich nach der Eingabe des Passwortes ``Muster!`` auf den Konsole der OPNsense |reg| wiederfinden. Eventuell musst du auch vorher deren Key akzeptieren. Mit ``0`` solltest du dich wieder ausloggen und zurück auf der Server-Konsole sein.
 
 Sollte dieser Test erfolgreich sein, steht der abschließenden Vorbereitung nichts mehr im Wege:
 
