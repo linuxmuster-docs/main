@@ -95,6 +95,9 @@ Du solltest dich nach der Eingabe des Passwortes ``Muster!`` auf den Konsole der
 
 Sollte dieser Test erfolgreich sein, steht der abschließenden Vorbereitung nichts mehr im Wege:
 
+Aufruf lmn71-prepare
+--------------------
+
 Wechsele deinen Login und werde ``root``:
 
 .. code-block:: Bash
@@ -168,9 +171,9 @@ Das Netzwerk-Interface sollte richtig erkannt sein, da du ja nur eines für den 
 
 .. code-block:: Bash
 
-   Enter ip address with net or bitmask [10.0.0.1/16]:
+   Enter ip address with net or bitmask [10.0.0.1/16]: 10.112.0.1/16
   
-An dieser Stelle ist die Eingabe eines abweichenden Netzwerk-Bereichs möglich, dafür müsstest du den IP-Bereich und die zuverwendente Netzwerkmaske eingeben. Gibst du keine ein, übernimmst du unsere Standardvorgabe mit `` [ENTER]``
+An dieser Stelle ist die Eingabe eines abweichenden Netzwerk-Bereichs möglich, dafür müsstest du den IP-Bereich und die zuverwendente Netzwerkmaske eingeben. Hier im Beispiel mit 10.112.0.0/16 gezeigt. Gibst du keine ein, übernimmst du unsere Standardvorgabe wie angezeigt mit `` [ENTER]``
 
 .. code-block:: Bash
 
