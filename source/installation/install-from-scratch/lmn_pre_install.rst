@@ -183,6 +183,12 @@ Die Adresse der Firewall wird automatisch deiner zuvor gemachten Eingabe angepas
 
 .. code-block:: Bash
 
+   Enter gateway ip address [10.112.0.254]:
+
+Auch diese Adresse des Gateway sollte automatisch angepasst sein, ansonsten musst hier tätig werden.
+
+.. code-block:: Bash
+
    Enter hostname [server]: 
 
 Auch hier gilt Übernahme der Vorgabe mit ``[ENTER]``, Änderungen möglich.
