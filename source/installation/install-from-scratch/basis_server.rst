@@ -452,8 +452,8 @@ gewechselt ist, dann starte den Server neu.
 Basis-Konfiguration des Servers
 ===============================
 
-xterm.js für die Konsolenutzung in Proxmox aktivieren
------------------------------------------------------
+xterm.js für die Konsolen-Nutzung in Proxmox aktivieren
+-------------------------------------------------------
 
 Nachdem du dich erneut als ``root`` an der ``noVNC`` Konsole angemeldet hast, gebe diese zwei Zeilen Code nacheinander ein:
 
