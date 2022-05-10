@@ -199,7 +199,11 @@ Auch hier gilt Übernahme der Vorgabe mit ``[ENTER]``, Änderungen möglich.
 
 Auch hier sind idivuelle Anpassung möglich, wenn du nicht unsere Standardvorgabe nutzen willst. Dabei gilt aber zu beachten das ...
 
-.. todo:: Hint-Box mit Anmerkungen zu dem Namensraum ergänzen
+.. attention:: 
+
+   Die Länge des ersten Teils der Domäne darf maximal 15 Zeichen betragen. Die Domäne „muster-gymnasium.de“ überschreitet diese Grenze um ein Zeichen, da „muster-gymnasium“ 16 Zeichen lang ist.
+
+   Eine gute Wahl ist beispielsweise ``linuxmuster.lan``!
 
 .. code-block:: Bash
 
