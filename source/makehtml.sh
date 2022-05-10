@@ -8,6 +8,7 @@ then
         cat log.txt
 else
 	echo -e "\nGefundene Fehler: 0\n"
+	git status
 fi
 rm log.txt
 cd -
