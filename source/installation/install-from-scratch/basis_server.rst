@@ -45,6 +45,9 @@ Bist du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst du fortfa
 Erster Start des Servers vom Installationsmedium
 ================================================
 
+Sprachauswahl
+-------------
+
 Starte den Server via Ubuntu 18.04 Server ISO-Image (USB-Stick oder CD-ROM). Es erscheint das erste Installationsfenster mit der Abfrage zur gewünschten Sprache.
 
 .. figure:: media/basis_server_001.png
@@ -52,6 +55,9 @@ Starte den Server via Ubuntu 18.04 Server ISO-Image (USB-Stick oder CD-ROM). Es 
 Wähle deine bevorzugte Sprache.
 
 .. Beantworte danach die Frage, ob auf einen neuen Installer (für 20.04) aktualisiert werden soll, mit ``Ohne Aktualisierung fortfahren``.
+
+Tastaturlayout
+--------------
 
 Danach wähle dein Tastaturlayout.
 
@@ -67,6 +73,9 @@ Wähle das Tastaturlayout Deutsch und bestätige dies mit ``Erledigt``.
 
    Da sollte zumindest für eine deutsche Tastatur das richtige Layout finden.
    Für andere einfach den Abfragen folgen
+
+Netzwerk
+--------
 
 Konfiguriere danach deine Netzwerkkarte.
 
@@ -105,7 +114,13 @@ Die Mirror-Adresse übernimmst du ebenfalls mit ``Erledigt``.
 
 .. figure:: media/basis_server_009_new-installer.png
 
-Bei der angebotene Aktualisierung des Installers wählst du ``Ohne Akualisierung fortfahren``.
+Aktualisierung des Installers
+-----------------------------
+
+Bei der angebotene Aktualisierung wählst du ``Ohne Akualisierung fortfahren``.
+
+Speichermedien
+--------------
 
 Jetzt musst du die Speichermedien einrichten.
 
@@ -123,6 +138,11 @@ In dieser Anleitung beschreiben wir zunächst die Installation auf Basis unserer
 
 * |...| 25G Speichermedium für das System und
 * |...| 100G Speichermedium für Daten
+
+Wobei anzumerken ist, dass die Installation des Speicherplatzes für das System ``/`` für alle Varianten die selbe ist. Daher startet unsere Beschreibung mit dieser.
+
+Speicher des Systems
+^^^^^^^^^^^^^^^^^^^^
 
 Wähle nun zur Einrichtung der Festplatten ``Custom Storage Layout`` aus, wie in obigen Bild dargestellt.
 
@@ -143,6 +163,9 @@ Gehe auf ``Erstellen``.
 Danach gelangst Du zu nachstehendem Bildschirm.
 
 .. figure:: media/basis_server_014_custom-storage-layout-create-partition-table-lvm-hdb-5.png
+
+Speicherplatz für das Testsystem
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Für das Setup werden noch weitere Partitionen benötigt. Dafür haben wir uns für folgende Größenvorgabe entschieden. 
 
@@ -167,7 +190,8 @@ Zum Abschluss werden dir die Partitionsierungseinstellungen gemäß deiner Einga
 
 Wenn du es für deine Installation nutzen willst, dann kannst du die nächsten Punkte überspringen und mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
 
-#####
+Speicherplatz nach deinen Vorgaben
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Solltest du dich für eine andere Größeneinteilung oder für eine Einrichtung auf realen Festplatten entschieden haben, dann geht es hier für dich weiter.
 
@@ -180,10 +204,14 @@ Solltest du dich für eine andere Größeneinteilung oder für eine Einrichtung 
    default-school /dev/sg_srv/default-school /srv/samba/default-school 80G
    ============== ========================== ========================= ==========
 
-Wir beschreiben hier exemplarisch das Vorgehen für die Größen aus der obigen Tabelle für die ...
+Wir beschreiben hier exemplarisch das Vorgehen für die Größen aus der obigen Tabelle für die |...|
 
-|...| Einrichtung eines LVM auf der 2. HDD nach deinen Vorgaben
----------------------------------------------------------------
+|...| `Einrichtung eines LVM auf der 2. HDD nach deinen Vorgaben`_
+
+|...| `Einrichtung ohne LVM auf HDD nach deinen Vorgaben`_
+
+Einrichtung eines LVM auf der 2. HDD nach deinen Vorgaben
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. figure:: media/basis_server_016_lvm_001.png
 
@@ -250,8 +278,8 @@ Zum Abschluss werden dir die Partitionsierungseinstellungen gemäß deiner Einga
 
 Wenn du es für deine Installation nutzen willst, dann kanst du mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
 
-|...| Einrichtung ohne LVM auf HDD nach deinen Vorgaben
--------------------------------------------------------
+Einrichtung ohne LVM auf HDD nach deinen Vorgaben
++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Ohne LVM sind die Mount Points ``/var``, ``/srv/linbo``, ``/srv/samba/global`` und ``/srv/samba/default-school`` auf die HDD(s) / einzelne Partionen zu legen.
 
