@@ -26,7 +26,7 @@ Die Nutzung von LINBO erfordert die Einrichtung eines Muster-Clients. Dies erfor
 
 **Hardwareklasse erstellen**
 
-Mittels der Hardwareklasse teilst du LINBO mit, welche Konfiguration für die Geräte anzuwenden ist. Dies umfasst:
+Mittels der Hardwareklasse teilst Du LINBO mit, welche Konfiguration für die Geräte anzuwenden ist. Dies umfasst:
 
   * Name der Hardwareklasse
 
@@ -40,7 +40,7 @@ Mittels der Hardwareklasse teilst du LINBO mit, welche Konfiguration für die Ge
 
 **Rechneraufnahme**
 
-Bei der Rechneraufnahme legst du fest, welche Konfigurationen für jede einzelne Arbeitsstation gelten sollen. Das sind:
+Bei der Rechneraufnahme legst Du fest, welche Konfigurationen für jede einzelne Arbeitsstation gelten sollen. Das sind:
 
   * Raum in dem sich der Rechner befindet
   * Name des Rechners
@@ -50,7 +50,7 @@ Bei der Rechneraufnahme legst du fest, welche Konfigurationen für jede einzelne
   * Art des Gerätes
   * Aktivierung von LINBO
 
-Wie du aus den letzten beiden Punkten erkennen kannst, ist die Aktivierung von LINBO nicht für jedes Gerät zwingend notwendig. So benötigt z.B. ein Netzwerk-Drucker kein eigenes Image. Dieser benötigt nur eine IP und eine Raumzuordnung. Des Weiteren ist seine Aufnahme notwendig, damit er im Active Directory des ``Samba`` vom linuxmuster.net-Server aufgenommen wird und somit dem System bekannt ist.
+Wie Du aus den letzten beiden Punkten erkennen kannst, ist die Aktivierung von LINBO nicht für jedes Gerät zwingend notwendig. So benötigt z.B. ein Netzwerk-Drucker kein eigenes Image. Dieser benötigt nur eine IP und eine Raumzuordnung. Des Weiteren ist seine Aufnahme notwendig, damit er im Active Directory des ``Samba`` vom linuxmuster.net-Server aufgenommen wird und somit dem System bekannt ist.
 
 Es gibt drei Möglichkeiten die Rechneraufnahme durchzuführen, welche das sind, wird dir im Kapitel :ref:`hardware-registration-label` gezeigt.
 

@@ -25,11 +25,11 @@ Anlegen und Installieren des Servers
                    `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
 
-Bist du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst du fortfahren mit `Erster Start des Servers vom Installationsmedium`_.
+Bist Du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst Du fortfahren mit `Erster Start des Servers vom Installationsmedium`_.
 
 .. hint::
 
-   Willst du in einer VM installieren, so must du für die neue VM folgende Mindesteinstellungen angeben:
+   Willst Du in einer VM installieren, so must Du für die neue VM folgende Mindesteinstellungen angeben:
      
      - Template - Ubuntu Bionic Beaver 18.04, installation from ISO library, 
      - Boot-Mode - BIOS Boot / MBR, 
@@ -40,7 +40,7 @@ Bist du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst du fortfa
    
    Achte darauf, dass vor dem Start der VM beide Festplatten der VM zugewiesen wurden.
 
-   Bei der Einrichtung des Servers musst du nur einen Server mit 2 HDDs haben und Ubuntu 18.04 auf der ersten HDD installieren. Die zweite HDD bleibt frei. Auf dieser 2. HDD richtest du - wie nachstehend beschrieben -  ein LVM ein.
+   Bei der Einrichtung des Servers musst Du nur einen Server mit 2 HDDs haben und Ubuntu 18.04 auf der ersten HDD installieren. Die zweite HDD bleibt frei. Auf dieser 2. HDD richtest Du - wie nachstehend beschrieben -  ein LVM ein.
 
 Erster Start des Servers vom Installationsmedium
 ================================================
@@ -65,7 +65,7 @@ Danach wähle dein Tastaturlayout.
 
 Wähle das Tastaturlayout Deutsch und bestätige dies mit ``Erledigt``.
 
-.. tip:: Wenn du dir nicht sicher bist, vor welcher Tastatur du gerade sitzt:
+.. tip:: Wenn Du dir nicht sicher bist, vor welcher Tastatur Du gerade sitzt:
 
    Wähle nacheinander 
   
@@ -106,27 +106,27 @@ Mit ``Èrledigt`` geht es weiter.
 
 .. figure:: media/basis_server_007.png
 
-Lass die Proxy-Adresszeile leer. Auch diese Anfrage verlässt du mit ``Erledigt``.
+Lass die Proxy-Adresszeile leer. Auch diese Anfrage verlässt Du mit ``Erledigt``.
 
 .. figure:: media/basis_server_008.png
 
-Die Mirror-Adresse übernimmst du ebenfalls mit ``Erledigt``.
+Die Mirror-Adresse übernimmst Du ebenfalls mit ``Erledigt``.
 
 .. figure:: media/basis_server_009_new-installer.png
 
 Aktualisierung des Installers
 -----------------------------
 
-Bei der angebotene Aktualisierung wählst du ``Ohne Akualisierung fortfahren``.
+Bei der angebotene Aktualisierung wählst Du ``Ohne Akualisierung fortfahren``.
 
 Speichermedien
 --------------
 
-Jetzt musst du die Speichermedien einrichten.
+Jetzt musst Du die Speichermedien einrichten.
 
 .. figure:: media/basis_server_010_custom-storage-layout.png
 
-Für die weitere Installation um aus einem Ubuntu-Server einen linuxmuster.net-Server zu machen, benötigst du zwei unterschiedliche Speichermedien in deinem Server.
+Für die weitere Installation um aus einem Ubuntu-Server einen linuxmuster.net-Server zu machen, benötigst Du zwei unterschiedliche Speichermedien in deinem Server.
 
 Dabei ist es egal ob es sich dabei um |...| 
 
@@ -150,7 +150,7 @@ Es werden dir dann die verfügbaren Geräte angezeigt.
 
 .. figure:: media/basis_server_011_custom-storage-layout-create-partition-table.png
 
-Wähle die erste Festplatte bzw. die erste Partition aus, auf der du das System des Servers unterbringen möchtest. Es wird ein Kontextmenü angezeigt, bei dem du mit ``Add GPT Partition`` diese erstellen musst. 
+Wähle die erste Festplatte bzw. die erste Partition aus, auf der Du das System des Servers unterbringen möchtest. Es wird ein Kontextmenü angezeigt, bei dem Du mit ``Add GPT Partition`` diese erstellen musst. 
 
 .. figure:: media/basis_server_012_custom-storage-layout-create-partition-table2.png
 
@@ -188,12 +188,12 @@ Zum Abschluss werden dir die Partitionsierungseinstellungen gemäß deiner Einga
 
 .. figure:: media/basis_server_016_custom-storage-layout-create-partition-table-overview.png
 
-Wenn du es für deine Installation nutzen willst, dann kannst du die nächsten Punkte überspringen und mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
+Wenn Du es für deine Installation nutzen willst, dann kannst Du die nächsten Punkte überspringen und mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
 
 Speicherplatz nach deinen Vorgaben
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Solltest du dich für eine andere Größeneinteilung oder für eine Einrichtung auf realen Festplatten entschieden haben, dann geht es hier für dich weiter.
+Solltest Du dich für eine andere Größeneinteilung oder für eine Einrichtung auf realen Festplatten entschieden haben, dann geht es hier für dich weiter.
 
    ============== ========================== ========================= ==========
    LV Name        LV Pfad                    Mountpoint                Größe
@@ -219,7 +219,7 @@ Wähle den Eintrag ``Datenträgergruppe (LVM) anlegen`` aus.
 
 .. figure:: media/basis_server_016_lvm_002.png
 
-Hier gibst du einen Namen für die LVM Volume Group an (z.B. sg_srv) und wählst das Gerät aus wo es erstellt werden soll. ``Erstellen`` schließt dieses Fenster.
+Hier gibst Du einen Namen für die LVM Volume Group an (z.B. sg_srv) und wählst das Gerät aus wo es erstellt werden soll. ``Erstellen`` schließt dieses Fenster.
 
 #####
 
@@ -227,11 +227,11 @@ Bei ``VERFÜGBARE GERÄTE`` gilt es nun in die angelegte "LVM volume group" die 
 
 .. figure:: media/basis_server_016_lvm_003.png
 
-Bei ``VERFÜGBARE GERÄTE`` findest du die von dir zuvor angelegte "LVM volume group". Diese markierst du , um dann ``Create Logical Volume`` auszuwählen.
+Bei ``VERFÜGBARE GERÄTE`` findest Du die von dir zuvor angelegte "LVM volume group". Diese markierst Du , um dann ``Create Logical Volume`` auszuwählen.
 
 .. figure:: media/basis_server_016_lvm_004.png
 
-Die benötigten Daten entnimmst du aus der obigen Tabelle.
+Die benötigten Daten entnimmst Du aus der obigen Tabelle.
 Die Zuordnung ist folgende:
 
 ========== === ===============================
@@ -242,11 +242,11 @@ Die Zuordnung ist folgende:
 
 Bei ``Format`` wählst du, wie in der Grafik gezeigt "ext4".
 
-Wieder schließt du diese Aktion mit ``[Èrstellen]`` ab.
+Wieder schließt Du diese Aktion mit ``[Èrstellen]`` ab.
 
 #####
 
-Die letzten zwei Schritte wiederholst du für die anderen Positionen der Tabelle |...|
+Die letzten zwei Schritte wiederholst Du für die anderen Positionen der Tabelle |...|
 
 |...| linbo:
 
@@ -276,7 +276,7 @@ Zum Abschluss werden dir die Partitionsierungseinstellungen gemäß deiner Einga
 
 .. figure:: media/basis_server_016_lvm_011.png
 
-Wenn du es für deine Installation nutzen willst, dann kanst du mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
+Wenn Du es für deine Installation nutzen willst, dann kanst Du mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
 
 Einrichtung ohne LVM auf HDD nach deinen Vorgaben
 +++++++++++++++++++++++++++++++++++++++++++++++++
@@ -290,7 +290,7 @@ Speicherplatzkonfiguration übernehmen
 
 Stimmen diese mit den gewünschten überein, so wähle ``Erledigt`` wie in dem zuletzt gesehen Bild aus.
 
-Danach erhälst du die Rückfrage, ob die Installation fortgesetzt werden soll und das die Daten auf der Festplatte dabei gelöscht werden.
+Danach erhälst Du die Rückfrage, ob die Installation fortgesetzt werden soll und das die Daten auf der Festplatte dabei gelöscht werden.
 
 .. figure:: media/basis_server_016_d.png
 
@@ -302,9 +302,9 @@ Nenne den Server ``server``. Der Benutzername (linuxadmin) und das Passwort (Mus
 
 .. figure:: media/basis_server_018.png
 
-Solltest du eine Möglichkeit für einen Fernzugang zu dem Server wünschen, aktiviere ``OpenSSH-Server installieren``. 
+Solltest Du eine Möglichkeit für einen Fernzugang zu dem Server wünschen, aktiviere ``OpenSSH-Server installieren``. 
 
-.. attention:: Wenn du dies machst, mache dir auch Gedanken wie du diesen Zugang absichern kannst.
+.. attention:: Wenn Du dies machst, mache dir auch Gedanken wie Du diesen Zugang absichern kannst.
    
    Wir empfehlen das PublicKey-Verfahren.
    https://wiki.ubuntuusers.de/SSH/#Publickey-Authentifizierung (externer Link)
@@ -319,7 +319,7 @@ Zum Abschluß der Installation wird automatisch versucht, Updates zu installiere
 
 .. figure:: media/basis_server_020.png
 
-und danach gilt es den Server neu zu starten. Das veranlasst du mit ``Jetzt neustarten``, wenn es dir angeboten wird.
+und danach gilt es den Server neu zu starten. Das veranlasst Du mit ``Jetzt neustarten``, wenn es dir angeboten wird.
 
 .. figure:: media/basis_server_021.png
 
@@ -327,9 +327,9 @@ Bei laufender und wie zuvor beschriebener Einrichtung der OPNsense |reg| sollte 
 
 .. hint::
 
-   Bei einer Installation in eine VM achte vor dem Neustart darauf, dass du die ISO-Datei / DVD ausgeworfen hast und die Boot-Reihenfolge so unmgestellt hast, dass die VM direkt von HDD bootet.
+   Bei einer Installation in eine VM achte vor dem Neustart darauf, dass Du die ISO-Datei / DVD ausgeworfen hast und die Boot-Reihenfolge so unmgestellt hast, dass die VM direkt von HDD bootet.
 
-Wann die Installation abgeschlossen ist, erkennst du daran das die Anzeige am unteren Bildschirmrand von
+Wann die Installation abgeschlossen ist, erkennst Du daran das die Anzeige am unteren Bildschirmrand von
 
 .. figure:: media/basis_server_022.png
 
@@ -341,9 +341,9 @@ gewechselt ist, dann starte den Server neu.
 
 .. tip::
 
-   Alternative zum ``Jetzt Neustarten`` gehe zum Punkt ``Hilfe`` oben rechts. Dort wählst du den Menüpunkt ``Enter Shell`` aus, wo du dann den Server gezielt mit ``init 0`` herunterfährst. Es folgt noch ein Hinweis, dass du die Entfernung des Installationsmediums mit ``Enter`` bestätigen sollst. Im Anschluss daran fährt der Server herunter und du kannst ihn von neuem starten.
+   Alternative zum ``Jetzt Neustarten`` gehe zum Punkt ``Hilfe`` oben rechts. Dort wählst Du den Menüpunkt ``Enter Shell`` aus, wo Du dann den Server gezielt mit ``init 0`` herunterfährst. Es folgt noch ein Hinweis, dass Du die Entfernung des Installationsmediums mit ``Enter`` bestätigen sollst. Im Anschluss daran fährt der Server herunter und Du kannst ihn von neuem starten.
 
-   Dieses Vorgehen bieten sich an, wenn der Server virtualisiert betrieben wird und der Hypervisor so schnell den Neustart einleitet, dass du keine Chance hast, das Installationsmedium zu entfernen.
+   Dieses Vorgehen bieten sich an, wenn der Server virtualisiert betrieben wird und der Hypervisor so schnell den Neustart einleitet, dass Du keine Chance hast, das Installationsmedium zu entfernen.
 
 .. ################
 .. 
@@ -361,9 +361,9 @@ gewechselt ist, dann starte den Server neu.
 .. 
 .. .. todo:: Hinweis in der obigen Hinweisbox beachten. Dann würde dieses hier anders gelöst sein.
 .. 
-.. Solltest du bei der Installtion unserem Partitionerungs-Vorschlag gefolgt sein, dann kannst du direkt mit `Automatische Updates abschalten`_ fortfahren.
+.. Solltest Du bei der Installtion unserem Partitionerungs-Vorschlag gefolgt sein, dann kannst Du direkt mit `Automatische Updates abschalten`_ fortfahren.
 .. 
-.. 1. Hast du wie zuvor beschrieben ein LVM angelegt, gib auf der Konsole ``sudo vgscan --mknodes`` ein. Es wird dir dann die sog. ``volume group "vg0"`` angezeigt, die du während der Installation auf der 2. HDD angelegt hast.
+.. 1. Hast Du wie zuvor beschrieben ein LVM angelegt, gib auf der Konsole ``sudo vgscan --mknodes`` ein. Es wird dir dann die sog. ``volume group "vg0"`` angezeigt, die Du während der Installation auf der 2. HDD angelegt hast.
 .. 
 .. 2. Führe ``sudo vgchange -ay`` aus, um das Volume zu aktivieren.
 .. 
@@ -430,7 +430,7 @@ gewechselt ist, dann starte den Server neu.
 .. Speichere die Einstellung mit ``Strg+w`` und verlasse den Editor mit ``Strg+x``. 
 .. 
 .. 11. Lade die Eintragungen aus der Datei ``/etc/fstab`` neu mit ``mount -a``. Ggf. erkennst Du auch noch Fehler, die sich aufgrund von Tippfehlern in der Datrei /etc/fstab ergeben.
-..     Behebe diese zuerst bevor du fortfährst.
+..     Behebe diese zuerst bevor Du fortfährst.
 .. 
 .. 12. Kopiere dann die gesicherten Inhalte wieder in das Verzeichnis ``/var``, das jetzt auf dem LVM gemountet ist und noch keinen Inhalt hat. Starte danach wieder   
 ..     das virtuelle Dateisystem oder gehe direkt zu Punkt 13, da beim Neustart dieses wieder eingehangen wird.
@@ -441,11 +441,11 @@ gewechselt ist, dann starte den Server neu.
 ..    sudo cp -R * /var
 ..    sudo systemctl start lxcfs.service
 .. 
-.. 13. Boote danach den Server neu mit ``sudo reboot``. Startet dieser ohne Fehlermeldungen durch, kannst du nun das Verzeichnis ``savevar`` wieder löschen mit ``rm -R /savevar``.
+.. 13. Boote danach den Server neu mit ``sudo reboot``. Startet dieser ohne Fehlermeldungen durch, kannst Du nun das Verzeichnis ``savevar`` wieder löschen mit ``rm -R /savevar``.
 .. 
 .. .. hint::
 .. 
-..    Solltest Du beim Kopieren des Inhalts von ``var`` Fehler angezeigt bekommen, so hast du das virtuelle Dateisystem zuvor nicht ausgehangen. Gehe dann wie unter 9. vor.
+..    Solltest Du beim Kopieren des Inhalts von ``var`` Fehler angezeigt bekommen, so hast Du das virtuelle Dateisystem zuvor nicht ausgehangen. Gehe dann wie unter 9. vor.
 
 ######
 
@@ -455,7 +455,7 @@ Basis-Konfiguration des Servers
 xterm.js für die Konsolen-Nutzung in Proxmox aktivieren
 -------------------------------------------------------
 
-Nachdem du dich erneut als ``linuxadmin`` beziehungsweise mit dem von dir angelegten Nutzer an der ``noVNC`` Konsole angemeldet hast, gebe diese zwei Zeilen Code nacheinander ein:
+Nachdem Du dich erneut als ``linuxadmin`` beziehungsweise mit dem von dir angelegten Nutzer an der ``noVNC`` Konsole angemeldet hast, gebe diese zwei Zeilen Code nacheinander ein:
 
 .. code::
 
@@ -467,14 +467,14 @@ Nachdem du dich erneut als ``linuxadmin`` beziehungsweise mit dem von dir angele
 
 Jetzt melde dich an der ``noVNC``-Konsole ab und an der ``xterm.js`` an.
 
-Auch wenn du keinen Prompt siehst, einfach deinen Login eingeben. Nach dem ``Enter`` wirst du zur Eingabe deines Passwortes aufgefordert.
+Auch wenn Du keinen Prompt siehst, einfach deinen Login eingeben. Nach dem ``Enter`` wirst Du zur Eingabe deines Passwortes aufgefordert.
 
-Danach kannst du die folgenden Codezeilen einfach zwischen der Anleitung und dem Server übertragen.
+Danach kannst Du die folgenden Codezeilen einfach zwischen der Anleitung und dem Server übertragen.
 
 Automatische Updates abschalten
 -------------------------------
 
-Der frisch installierte Ubuntu-Server hat automatische Updates aktiviert. Das solltest du abschalten, denn nur so kannst du sichern sein, dass Updates nicht während der Unterrichtszeit in deiner Einrichtung durchgeführt werden und zu eventuellen Problemen im Schulalltag führen.
+Der frisch installierte Ubuntu-Server hat automatische Updates aktiviert. Das solltest Du abschalten, denn nur so kannst Du sichern sein, dass Updates nicht während der Unterrichtszeit in deiner Einrichtung durchgeführt werden und zu eventuellen Problemen im Schulalltag führen.
 
 Werde mit |...| 
 
@@ -489,15 +489,15 @@ Werde mit |...|
   nano /etc/apt/apt.conf.d/20auto-upgrades
 
 Ersetze bei ``APT::Periodic::Unattended-Upgrade`` die ``"1";`` durch ``"0";``.
-Mit ``<Strg>+o`` und anschließendem ``Enter`` speicherst du die Änderung ab. Und mit ``<Strg>+x`` verlässt du nano wieder.
+Mit ``<Strg>+o`` und anschließendem ``Enter`` speicherst Du die Änderung ab. Und mit ``<Strg>+x`` verlässt Du nano wieder.
 
-Jetzt kannst du den Server updaten mit |...|
+Jetzt kannst Du den Server updaten mit |...|
 
 .. code:: 
 
    apt update && apt dist-upgrade
    
-Nachdem dir neue Pakete zur Anzeige gebracht wurden, startest du den Upgrade-Prozess mit ``j``.
+Nachdem dir neue Pakete zur Anzeige gebracht wurden, startest Du den Upgrade-Prozess mit ``j``.
 
 .. attention::
 
@@ -535,7 +535,7 @@ Test der Verbindung zur Firewall
 
 Es folgt ein letzter Test um sicherzustellen, das die SSH-Verbindung zwischen dem Server und der Firewall funktioniert. Diese ist für das weitere Vorgehen entscheidend.
 
-Nach dem erneuten Einloggen rufst du folgende Zeile an der Konsole des Servers auf: 
+Nach dem erneuten Einloggen rufst Du folgende Zeile an der Konsole des Servers auf: 
 
 .. code::
 
@@ -545,13 +545,13 @@ Da es die erste Kontaktaufnahme zwischen dem Server und der Firewall ist,
 
 .. figure:: media/basis_server_024.png
 
-ist es notwendig das du den Key akzeptierst. 
+ist es notwendig das Du den Key akzeptierst. 
 
 Anschließend sollte der Login nach der Eingabe des Passwortes ``Muster!`` erfolgreich sein.
 
 .. figure:: media/basis_server_025.png
 
-Mit ``0) Logout`` beendest du die Verbindung.
+Mit ``0) Logout`` beendest Du die Verbindung.
 
 Weiter geht es jetzt mit :ref:`lmn_pre_install-label`
 

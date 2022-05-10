@@ -68,7 +68,7 @@ Der hier aufgezeigte Ablauf eines synchronisierten Startes ist einer von vielen 
 
 Deren Beschreibung ist im Unterkapitel "LINBO4 nutzen" zu finden.
 
-In dem gezeigten Ablauf eines synchroniesierten Betriebssystem-Starts wurde ersichtlich, das sich auf dem Server mindestens ein Client-Images befinden muss. Dieses musst du nun anlegen, dabei ist folgendes von entscheidender Wichtigkeit:
+In dem gezeigten Ablauf eines synchroniesierten Betriebssystem-Starts wurde ersichtlich, das sich auf dem Server mindestens ein Client-Images befinden muss. Dieses musst Du nun anlegen, dabei ist folgendes von entscheidender Wichtigkeit:
 
 In der linuxmuster.net 7 ist es für Clients, denen alle pädagogischen Funktionen im Netz zur Verfügung stehen sollen, erforderlich, dass diese im Active Directory (AD) des Servers (samba 4) einen sog. ``Domänenbeitritt`` ausführen. Hierbei werden Schlüssel erzeugt und ausgetauscht. Diese stellen sicher, dass der Client als berechtigtes Gerät erkannt wird.
 
@@ -114,13 +114,13 @@ Melde dich als Benutzer ``global-admin`` an der Web-UI an.
    :align: center
    :alt: WebUI login
 
-Erstelle nun die Konfiguration für die neue Hardwareklasse. Dafür klickst du links im Menü den Eintrag ``Geräteverwaltung --> Linbo4``.
+Erstelle nun die Konfiguration für die neue Hardwareklasse. Dafür klickst Du links im Menü den Eintrag ``Geräteverwaltung --> Linbo4``.
 
 .. figure:: media/02-webui-menue-linbo.png
    :align: center
    :alt: WebUI menue linbo
 
-Nun klickst du unten links auf ``+ERSTELLEN``.
+Nun klickst Du unten links auf ``+ERSTELLEN``.
 
 Es öffnet sich ein Kontextmenü. Du kannst entweder ein leere start.conf nutzen, oder ein bereits vordefiniertes Template für dein gewünschtes Betriebssystem auswählen.
 
@@ -128,39 +128,39 @@ Es öffnet sich ein Kontextmenü. Du kannst entweder ein leere start.conf nutzen
    :align: center
    :alt: WebUI menue linbo create start template
 
-Es öffnet sich ein Fenster, in dem du die Namen der neuen Hardwareklasse angibst. Diesen wirst du später brauchen um Geräte dieser Hardwareklasse zuzuweisen.
+Es öffnet sich ein Fenster, in dem Du die Namen der neuen Hardwareklasse angibst. Diesen wirst Du später brauchen um Geräte dieser Hardwareklasse zuzuweisen.
 
 .. figure:: media/04-webui-menue-linbo-name-for-start-conf.png
    :align: center
    :alt: WebUI menue linbo hwc group name
 
-Danach gelangst du zu den Einstellungen der Hardwareklasse. Dort gibt es die Reiterkarten ``Allgmein`` und  ``Partitionen``.
+Danach gelangst Du zu den Einstellungen der Hardwareklasse. Dort gibt es die Reiterkarten ``Allgmein`` und  ``Partitionen``.
 
-Unter ``Allgemein`` legst du die IP des Servers fest, gibst das Startverhalten und ggf. Kernel-Optionen für den Boot bei besonderer Hardware an.
+Unter ``Allgemein`` legst Du die IP des Servers fest, gibst das Startverhalten und ggf. Kernel-Optionen für den Boot bei besonderer Hardware an.
 
 .. figure:: media/05-webui-linbo-edit-new-group.png
    :align: center
    :alt: WebUI linbo edit new hwc group
 
-Unter ``Partitionen`` legst du fest, welche Partitionen auf der Festplatte vorgesehen werden sollen.
+Unter ``Partitionen`` legst Du fest, welche Partitionen auf der Festplatte vorgesehen werden sollen.
 
 .. figure:: media/06-webui-linbo-edit-new-group-partition-scheme.png
    :align: center
    :alt: WebUI linbo edit new hwc group - partition scheme
 
-Löschst du dort z.B. die Partitionen ``swap`` und ``data`` so sieht deine Partitionierung wie folgt aus:
+Löschst Du dort z.B. die Partitionen ``swap`` und ``data`` so sieht deine Partitionierung wie folgt aus:
 
 .. figure:: media/07-webui-linbo-edit-new-group-partition-scheme-edited.png
    :align: center
    :alt: WebUI linbo edit new hwc group - partition scheme edited
 
-Um Einstellungen für das Betriebssystem vorzunehmen, klickst du auf das Stift-Icon (hier für Ubuntu) und es öffnet sich ein weiteres Fenster, um Einstellungen für das Betriebssystem vorzunehmen.
+Um Einstellungen für das Betriebssystem vorzunehmen, klickst Du auf das Stift-Icon (hier für Ubuntu) und es öffnet sich ein weiteres Fenster, um Einstellungen für das Betriebssystem vorzunehmen.
 
 .. figure:: media/08-webui-linbo-edit-new-group-os-infos-edited.png
    :align: center
    :alt: WebUI linbo edit new hwc group - os edited
 
-Unter der Reiterkarte ``OS`` legst du für das Betriebssystem (OS) die gewünschten Icons, die Start-Optionen und u.a. auch den Namen für das Basisimage fest. Zu Beginn bleibt hier der Eintrag ``None`` noch stehen und auch bei ``Start Optionen`` muss ``Autostart`` deaktiviert bleiben, da du erst das Image für den Muster-Client erstellen musst.
+Unter der Reiterkarte ``OS`` legst Du für das Betriebssystem (OS) die gewünschten Icons, die Start-Optionen und u.a. auch den Namen für das Basisimage fest. Zu Beginn bleibt hier der Eintrag ``None`` noch stehen und auch bei ``Start Optionen`` muss ``Autostart`` deaktiviert bleiben, da Du erst das Image für den Muster-Client erstellen musst.
 
 Auf dem linuxmuster.net Server werden die start.conf-Dateien im Verzeichnis ``/srv/linbo`` abgelegt. Jede Hardwareklasse hat eine eigene start.conf-Datei. Für die neu angelegte Hardwareklasse des Muster-Clients wurde dort nun eine Datei ``start.conf.<name-der-hwk>`` erstellt.
 
@@ -248,9 +248,9 @@ Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM 
 Rechneraufnahme mit der Schulkonsole
 ====================================
 
-Nachdem du nun die neue Hardwareklasse erstellt hast und der Client / die VM noch ausgeschaltet bereit steht, musst du dessen MAC-Adresse in der Web-UI als Gerät anlegen. Dort weist du dem Gerät dann die Hardwareklasse zu und wählst im Feld PXE den Eintrag ``Linbo PXE`` aus.
+Nachdem Du nun die neue Hardwareklasse erstellt hast und der Client / die VM noch ausgeschaltet bereit steht, musst Du dessen MAC-Adresse in der Web-UI als Gerät anlegen. Dort weist Du dem Gerät dann die Hardwareklasse zu und wählst im Feld PXE den Eintrag ``Linbo PXE`` aus.
 
-Um einen Rechner mit der Schulkonsole anzulegen, gehst du wie folgt vor: 
+Um einen Rechner mit der Schulkonsole anzulegen, gehst Du wie folgt vor: 
 
 Wähle nach der Anmeldung links im Menü unter ``Geräteverwaltung --> Geräte``.
 
@@ -260,7 +260,7 @@ Wähle nach der Anmeldung links im Menü unter ``Geräteverwaltung --> Geräte``
  
 Nun erscheint die Gerätekonfiguration.
 
-Als Spaltenköpfe siehst du u.a. den Raum, den Hostnamen, ..., PXE.
+Als Spaltenköpfe siehst Du u.a. den Raum, den Hostnamen, ..., PXE.
 
 .. figure:: media/10-webui-devices-header.png
    :align: center
@@ -284,11 +284,11 @@ Es wird eine neue Leerzeile hinzugefügt.
    :align: center
    :alt: WebUI add devices
 
-In diese neue Zeile gibst du unter Raum den Namen des Raumes (hier ``server``) ein. Entsprechend verfährst du mit den Spalten Hostname, MAC, IP und Sophomorix-Rolle.
+In diese neue Zeile gibst Du unter Raum den Namen des Raumes (hier ``server``) ein. Entsprechend verfährst Du mit den Spalten Hostname, MAC, IP und Sophomorix-Rolle.
 
 .. hint:: Verwende nicht eine IP-Adresse aus dem Bereich der Rechneraufnahme.
 
-Im Feld ``Gruppe`` trägst du den Namen deiner Hardwareklasse ein und im Feld ``PXE`` wählst du ``Linbo PXE`` aus.
+Im Feld ``Gruppe`` trägst Du den Namen deiner Hardwareklasse ein und im Feld ``PXE`` wählst Du ``Linbo PXE`` aus.
 
 Die Schaltfläche ``SPEICHERN`` überprüft die Eingabe. Mit ``SPEICHERN & IMPORTIEREN`` werden die neuen Geräte importiert.
 
@@ -304,7 +304,7 @@ Danach erscheinen einige Log-Meldungen und - wenn der Import erfolgreich war - `
 
 .. attention:: Hinweise zur VM
 
-   Die nachstehenden Hinweise sind nur in Ausnahmefällen bei Nutzung einer VM relevant. Durch diese Änderungen werden zudem Anpassungen in der Boot-Loader Konfiguration von Linbo für die Hardwareklasse nicht mehr bei einem ``linuxmuster-import-devices`` angewendet. Folge diesen Schritten NUR wenn du XCP-ng als Virtualisierungsumgebung verwendest und den Muster-Client in einer VM anlegst.
+   Die nachstehenden Hinweise sind nur in Ausnahmefällen bei Nutzung einer VM relevant. Durch diese Änderungen werden zudem Anpassungen in der Boot-Loader Konfiguration von Linbo für die Hardwareklasse nicht mehr bei einem ``linuxmuster-import-devices`` angewendet. Folge diesen Schritten NUR wenn Du XCP-ng als Virtualisierungsumgebung verwendest und den Muster-Client in einer VM anlegst.
 
    Sollte der Muster-Client als VM aufgebaut werden, so ist je nach eingesetzter Virtualisierungssoftware darauf zu achten, dass die VGA-Einstellungen eine geringe Auflösung und eine geringe Farbteife aufweisen.
 
@@ -339,14 +339,14 @@ Danach erscheinen einige Log-Meldungen und - wenn der Import erfolgreich war - `
 
    **Gerät importieren**
    
-   Hast du alle Einstellungen für die Geräte bzw. erneute Änderungen hier vorgenommen, klickst du in der WebUI unter ``Geräteverwaltung --> Geräte`` erneut ``Speichern & Importieren``, damit diese Einstellungen angewendet werden.
+   Hast Du alle Einstellungen für die Geräte bzw. erneute Änderungen hier vorgenommen, klickst Du in der WebUI unter ``Geräteverwaltung --> Geräte`` erneut ``Speichern & Importieren``, damit diese Einstellungen angewendet werden.
 
    Alternativ kann auf dem Server in der Konsole als Benutzer ``root`` der Befehl ``linuxmuster-import-devices`` ausgeführt werden.
 
 PC / VM via PXE starten
 =======================
 
-Mit o.g. Einstellungen startest du nun den PC / die VM. Während des Boot-Vorgangs erhält der PC / die VM via PXE eine IP-Adresse und Linbo wird geladen.
+Mit o.g. Einstellungen startest Du nun den PC / die VM. Während des Boot-Vorgangs erhält der PC / die VM via PXE eine IP-Adresse und Linbo wird geladen.
 
 Wurde in der start.conf kein ``Autostart`` gewählt, startet Linbo mit folgendem Start-Bildschirm:
 
@@ -357,7 +357,7 @@ Wurde in der start.conf kein ``Autostart`` gewählt, startet Linbo mit folgendem
 Festplatte mit Linbo vorbereiten
 ================================
 
-Klicke nun rechts auf das Icon für Einstellungen / Tools. Es erscheint ein Dialog und du wirst aufgefordert das Kennwort für den Linbo-Benutzer anzugeben.
+Klicke nun rechts auf das Icon für Einstellungen / Tools. Es erscheint ein Dialog und Du wirst aufgefordert das Kennwort für den Linbo-Benutzer anzugeben.
 
 .. figure:: media/18-linbo-webui-root-login.png
    :align: center
@@ -379,7 +379,7 @@ Klicke nun auf den Menüeintrag ``Festplatte partitionieren``. Es öffnet sich e
 
 Bestätige die Paritionierung und Formatierung mit: ``ja``
 
-Nach erfolgreicher Formatierung siehst du diese Bestätigung:
+Nach erfolgreicher Formatierung siehst Du diese Bestätigung:
 
 .. figure:: media/21-linbo-webui-partitioned.png
    :align: center
@@ -391,5 +391,5 @@ Klicke auf das Zeichen ``<`` und fahre danach den PC / die VM über das Icon ``H
    :align: center
    :alt: Linbo WebUI shutdown.
 
-Nun kannst du mit der Installation des gewünschtem Betriebssystems (Linux oder Windows) fortfahren. Wähle für die entsprechenden Anleitungen links im Menü die entsprechenden Einträge aus.
+Nun kannst Du mit der Installation des gewünschtem Betriebssystems (Linux oder Windows) fortfahren. Wähle für die entsprechenden Anleitungen links im Menü die entsprechenden Einträge aus.
 

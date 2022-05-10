@@ -26,7 +26,7 @@ Anlegen und Installieren der Firewall
                    `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
 
-Bist du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst du fortfahren mit `Erster Start der Firewall`_
+Bist Du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst Du fortfahren mit `Erster Start der Firewall`_
 
 Installation der OPNsense |reg|
 ===============================
@@ -41,9 +41,9 @@ Lade dir die ISO-Datei der OPNsense |reg| von der Seite https://opnsense.org/dow
 Nutze als Architektur ``amd64`` und als "image type" ``dvd`` und einen Mirror, der in deiner Nähe ist.
 Du erhältst dann ein mit bz2 komprimiertes ISO-Image. Entpacke die heruntergeladene Datei.
 
-Unter Windows kannst du dies z.B. mit 7-ZIP durchführen.
+Unter Windows kannst Du dies z.B. mit 7-ZIP durchführen.
 
-Unter Linux gibst du auf der Eingabekonsole folgenden Befehl an, der dir die Datei im gleichen Ordner entpackt:
+Unter Linux gibst Du auf der Eingabekonsole folgenden Befehl an, der dir die Datei im gleichen Ordner entpackt:
 
 .. code::
 
@@ -55,11 +55,11 @@ Unter Linux gibst du auf der Eingabekonsole folgenden Befehl an, der dir die Dat
    bunzip OPNsense-22.1-OpenSSL-dvd-amd64.iso.bz2
 
 
-Brenne die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren USB-Stick an. In einer Virtualisierungsumgebung lädst du die ISO-Datei auf den ISP-Speicher.
+Brenne die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren USB-Stick an. In einer Virtualisierungsumgebung lädst Du die ISO-Datei auf den ISP-Speicher.
 
 .. hint:: 
 
-   Willst du in einer VM installieren, so musst du für die neue VM folgende Mindesteinstellungen angeben:
+   Willst Du in einer VM installieren, so musst Du für die neue VM folgende Mindesteinstellungen angeben:
    
    - template - other install media, installation from ISO library,
    - Boot-Mode - UEFI (Achtung: xcp-ng: Boot/MBR),
@@ -77,9 +77,9 @@ Brenne die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren U
 Erster Start der Firewall
 =========================
 
-Starte dann OPNsense |reg| auf dem Rechner oder in der neu angelegten VM von deinem Installationsmedium. Je nach Virtualisierungsumgebung hast du ggf. die ISO-Datei bereits auf den ISO-Datenspeicher des Hypervisors abgelegt. Boote dann die VM hierüber.
+Starte dann OPNsense |reg| auf dem Rechner oder in der neu angelegten VM von deinem Installationsmedium. Je nach Virtualisierungsumgebung hast Du ggf. die ISO-Datei bereits auf den ISO-Datenspeicher des Hypervisors abgelegt. Boote dann die VM hierüber.
 
-Am Ende des Boot-Vorgangs der OPNsense |reg| gelangst du zu folgendem Bildschirm:
+Am Ende des Boot-Vorgangs der OPNsense |reg| gelangst Du zu folgendem Bildschirm:
 
 .. figure:: media/basis_opnsense_001.png
    :align: center
@@ -120,13 +120,13 @@ Installiere nun OPNsense |reg| via ``Install (UFS)``.
 
 Bestätige die Festplatte und wähle ``Install (UFS) UFS GPR/UEFI Hybrid``. 
 
-Jetzt wird OPNsense |reg| auf der Festplatte installiert. Zuvor musst du diese noch auswählen.
+Jetzt wird OPNsense |reg| auf der Festplatte installiert. Zuvor musst Du diese noch auswählen.
 
 .. figure:: media/basis_opnsense_006.png
    :align: center
    :alt: OPNsense: UFS Configuration
 
-Mit ``OK`` übernimmst du deine Auswahl.
+Mit ``OK`` übernimmst Du deine Auswahl.
 
 .. figure:: media/basis_opnsense_007a.png
    :align: center
@@ -146,7 +146,7 @@ Warte jetzt, bis die Installation abgeschlossen ist.
    :align: center
    :alt: OPNsense: UFS Configuration 2
 
-Zum Abschluss der Konfiguration musst du das Kennwort für den Benutzer ``root`` neu setzen.
+Zum Abschluss der Konfiguration musst Du das Kennwort für den Benutzer ``root`` neu setzen.
 
 .. figure:: media/basis_opnsense_009.png
    :align: center
@@ -178,7 +178,7 @@ Wähle danach die Option ``Exit and reboot`` aus.
 
 .. hint::
 
-   Solltest du nicht zum Entfernen, das Installationsmedium aufgefordert werden, fahre deine neue Firewall herunter (schalte sie aus). Ansonsten gerätst du eventuell in eine erneute Installation. Starte sie neu, nachdem du das Installationsmedium ausgeworfen hast und fahre mit der Installation fort.
+   Solltest Du nicht zum Entfernen, das Installationsmedium aufgefordert werden, fahre deine neue Firewall herunter (schalte sie aus). Ansonsten gerätst Du eventuell in eine erneute Installation. Starte sie neu, nachdem Du das Installationsmedium ausgeworfen hast und fahre mit der Installation fort.
 
 Der Boot-Vorgang kann dann eine Weile dauern. Vor allem, wenn der Router kein DHCP anbieten sollte.
 
@@ -204,15 +204,15 @@ Tastaturbelegung
    :align: center
    :alt: OPNsense: Final Configuration
 
-Zuerst überprüfe, ob die Tastaturbelegung richtig ist. Dazu wähle den Punkt 8) aus. Auf der Konsole kannst du dann die Umlaute und Sonderzeichen der deutschen Tastaturbelegung testen. Sollte sie korrekt sein, verlässt du mit ``exit`` die Konsole und bist wieder im Auswahl-Bildschirm. Fahre mit `Überprüfung der Zuordnung der Netzwerkkarten`_ fort, ansonsten ...
+Zuerst überprüfe, ob die Tastaturbelegung richtig ist. Dazu wähle den Punkt 8) aus. Auf der Konsole kannst Du dann die Umlaute und Sonderzeichen der deutschen Tastaturbelegung testen. Sollte sie korrekt sein, verlässt Du mit ``exit`` die Konsole und bist wieder im Auswahl-Bildschirm. Fahre mit `Überprüfung der Zuordnung der Netzwerkkarten`_ fort, ansonsten ...
 
 .. hint::
 
-   Solltest du feststellen, dass nach dem Neustart in der Konsole der OPNsense |reg| die Tastaturbelegung immer noch falsch ist, stelle diese dauerhaft wie nachstehend beschrieben um:
+   Solltest Du feststellen, dass nach dem Neustart in der Konsole der OPNsense |reg| die Tastaturbelegung immer noch falsch ist, stelle diese dauerhaft wie nachstehend beschrieben um:
 
    .. code::
 
-     cd /usr/share/syscons/keymaps    # Für den Buchstaben "z" musst du die Taste "y" drücken ;-)
+     cd /usr/share/syscons/keymaps    # Für den Buchstaben "z" musst Du die Taste "y" drücken ;-)
 
      ls german.iso.kbd                # listet das deutsche Tastaturlayout auf, sofern vorhanden
     
@@ -236,7 +236,7 @@ Die erste Netzwerkkarte (LAN) ist mit dem pädagogischen Netz verbunden. Allerdi
 
 Die zweite Netzwerkkarte (WAN) ist mit dem Router verbunden. Die IP hängt davon ab, welche IPs via DHCP von deinem DSL_Router verteilt werden.
 
-In einer Schulumgebung kann es sein, dass der Router keinen DHCP-Service anbieten. In diesem Fall musst du dafür sorgen, dass sich sowohl das Interface (WAN) der OPNsense |reg| als auch der Router im gleichen Netzwerk befinden. 
+In einer Schulumgebung kann es sein, dass der Router keinen DHCP-Service anbieten. In diesem Fall musst Du dafür sorgen, dass sich sowohl das Interface (WAN) der OPNsense |reg| als auch der Router im gleichen Netzwerk befinden. 
 
 Hier in unserem Beispiel hat die Zuordnung der Netzwerkkarten nicht geklappt, der Router sollte 192.168.21.212 der OPNsense |reg| zuweisen.
 
@@ -265,7 +265,7 @@ und denen der Netzwerkbrücken vmbr0 und vmbr1 zu überprüfen:
 
 ``hv01`` --> ``VM100`` --> ``Hardware`` --> ``Network Device (net.)`` 
 
-Unter ``hv01`` unter ``Network`` kannst du dir jetzt mittels des Kommentarfeldes wieder die Zuordnung ins Gedächtnis rufen.
+Unter ``hv01`` unter ``Network`` kannst Du dir jetzt mittels des Kommentarfeldes wieder die Zuordnung ins Gedächtnis rufen.
 
 =========  ======  =================  ===  ==================  ==========  ===
 Bridge des Visualisierers             <->  Virtuelle Maschine
@@ -276,7 +276,7 @@ red        vmbr0   0E:76:8B:51:85:15  <->  0e:76:8b:51:85:15   vtnet0      WAN
 green      vmbr1   DA:97:1B:E1:35:9C  <->  da:97:1b:E1:35:9c   vtnet1      LAN
 =========  ======  =================  ===  ==================  ==========  ===
 
-Aus diesem Wissen und dem Vergleich erkennst du |...|
+Aus diesem Wissen und dem Vergleich erkennst Du |...|
 
 .. figure:: media/basis_opnsense_018.png
    :align: center
@@ -294,7 +294,7 @@ Aus diesem Wissen und dem Vergleich erkennst du |...|
    :align: center
    :alt: OPNsense: GUI - Assign interfaces 
 
-Hast du kein weiteres Interface, dann ``Enter``
+Hast Du kein weiteres Interface, dann ``Enter``
 
 .. figure:: media/basis_opnsense_021.png
    :align: center
@@ -351,14 +351,14 @@ Die Ausgabe sollte wie folgt aussehen:
 
    Sollte einer der Test nicht erfolgreich verlaufen, dann stimmt etwas mit der Netzwerkkartenzuordnung nicht.
 
-   Als Erstes probiere es mit dem Neustart aller Netzwerk-Dienste. Dazu wählst du den Punkt ``11) Reload all services``. Danach wiederholst du das Upgrade nochmals mit dem Punkt ``12) Update from console``.
+   Als Erstes probiere es mit dem Neustart aller Netzwerk-Dienste. Dazu wählst Du den Punkt ``11) Reload all services``. Danach wiederholst Du das Upgrade nochmals mit dem Punkt ``12) Update from console``.
 
    Sollte die Aktualisierung immer noch nicht erfolgreich durchgeführt werden, dann überprüfe deine vorherige Netzwerk-Konfiguration auf Fehler.
 
 IP-Adressen zuweisen
 --------------------
 
-Solltest du in deiner Netzwerkkonfiguration von unserem Muster abweichen, musst du bei nachfolgenden Schritten deiner Festlegung folgen.
+Solltest Du in deiner Netzwerkkonfiguration von unserem Muster abweichen, musst Du bei nachfolgenden Schritten deiner Festlegung folgen.
 
 .. figure:: media/basis_opnsense_026.png
    :align: center
@@ -438,41 +438,41 @@ Nach der letzten Eingabe startet die Übernahme in das System.
    :align: center
    :alt: OPNsense: GUI IP
 
-Nach erfolgreicher Übernahme erhältst du den Hinweis, dass du dich mit der LAN IP auf die GUI der OPNsense |reg| aufschalten könntest.
+Nach erfolgreicher Übernahme erhältst Du den Hinweis, dass Du dich mit der LAN IP auf die GUI der OPNsense |reg| aufschalten könntest.
 
 .. figure:: media/basis_opnsense_040.png
    :align: center
    :alt: OPNsense: GUI IP
 
-Bevor du das aber machst, erfolgt ein letzter Test:
+Bevor Du das aber machst, erfolgt ein letzter Test:
 
 Aktualisierung der OPNsense |reg|
 ---------------------------------
 
-Aktualisiere die OPNsense |reg| in der Konsole, indem du den Punkt ``12) Update from console`` aufrufst und die Rückfrage mit ``y`` bestätigst.
+Aktualisiere die OPNsense |reg| in der Konsole, indem Du den Punkt ``12) Update from console`` aufrufst und die Rückfrage mit ``y`` bestätigst.
 
 .. hint:: 
 
    Sollte hierbei keine Verbindung zu den externen Update-Servern möglich sein, dann stimmt etwas mit der Netzwerkkartenzuordnung nicht.
 
-   Als Erstes probiere es mit dem Neustart aller Netzwerk-Dienste. Dazu wählst du den Punkt ``11) Reload all services``. Danach wiederholst du das Upgrade nochmals mit dem Punkt ``12) Update from console``.
+   Als Erstes probiere es mit dem Neustart aller Netzwerk-Dienste. Dazu wählst Du den Punkt ``11) Reload all services``. Danach wiederholst Du das Upgrade nochmals mit dem Punkt ``12) Update from console``.
 
    Sollte die Aktualisierung immer noch nicht erfolgreich durchgeführt werden, dann überprüfe deine vorherige Netzwerk-Konfiguration auf Fehler.
 
-Klappt das Update, startest du die OPNsense |reg| neu, nachdem du dich erneut eingeloggt hast.
+Klappt das Update, startest Du die OPNsense |reg| neu, nachdem Du dich erneut eingeloggt hast.
 
 .. figure:: media/basis_opnsense_023.png
    :align: center
    :alt: OPNsense: GUI - Assign interfaces
 
-``6) Reboot``, dessen Nachfrage du mit ``y`` beantwortest.
+``6) Reboot``, dessen Nachfrage Du mit ``y`` beantwortest.
 
 .. todo:: Benennung der Bilder aktualisieren
 
 Konfiguration der OPNsense |reg|
 ================================
 
-Für die nachfolgende Konfiguration der OPNsense |reg| brauchst du einen Rechner mit Webbrowser im LAN-Bereich der OPNsense |reg|. Das kann ein Laptop mit einem beliebigen Betriebssystem sein. Wichtig ist nur, dass er mit dem LAN-Adapter der OPNsense |reg| verbunden ist und sich im gleichen Netzwerk wie die OPNsense |reg| befindet. In unserer Beschreibung gehen wir davon aus, dass seine manuell zugewiesene IP-Adresse 10.0.0.10 ist.
+Für die nachfolgende Konfiguration der OPNsense |reg| brauchst Du einen Rechner mit Webbrowser im LAN-Bereich der OPNsense |reg|. Das kann ein Laptop mit einem beliebigen Betriebssystem sein. Wichtig ist nur, dass er mit dem LAN-Adapter der OPNsense |reg| verbunden ist und sich im gleichen Netzwerk wie die OPNsense |reg| befindet. In unserer Beschreibung gehen wir davon aus, dass seine manuell zugewiesene IP-Adresse 10.0.0.10 ist.
 
 Nachdem der Browser gestartet ist, gib folgende URL für den Zugriff auf die GUI der OPNsense |reg| ein:
 
@@ -510,23 +510,23 @@ System: Assistent: Zeitserverinformation
 
 .. figure:: media/basis_opnsense_044.png
 
-Die Angaben zum Time Server übernimmst du mit ``Next``.
+Die Angaben zum Time Server übernimmst Du mit ``Next``.
 
 System: Assistent: Konfiguriere WAN-Schnittstelle
 -------------------------------------------------
 
-Danach kommst du zu den Einstellungen für die WAN-Schnittstelle.
-Nutzt du hier DHCP z.B. eines vorgelagerten DSL-Routers, so gibst du hier DHCP an, ansonsten ändere diese bitte auf ``Static``.
+Danach kommst Du zu den Einstellungen für die WAN-Schnittstelle.
+Nutzt Du hier DHCP z.B. eines vorgelagerten DSL-Routers, so gibst Du hier DHCP an, ansonsten ändere diese bitte auf ``Static``.
 
 .. figure:: media/basis_opnsense_045.png
 
-Falls deine Firewall eine statische IP-Adresse hat, die nicht über DHCP erteilt wird, trägst du sie hier ein.
+Falls deine Firewall eine statische IP-Adresse hat, die nicht über DHCP erteilt wird, trägst Du sie hier ein.
 
 .. figure:: media/basis_opnsense_046.png
 
-Falls dein Router eine private IP hat, musst du den Haken bei ``Private RFC1918-Netzwerke blockieren`` entfernen. Diesen Eintrag findest du ganz unten auf der Seite, nachdem du runtergescrollt hast.
+Falls dein Router eine private IP hat, musst Du den Haken bei ``Private RFC1918-Netzwerke blockieren`` entfernen. Diesen Eintrag findest Du ganz unten auf der Seite, nachdem Du runtergescrollt hast.
 
-Mit ``Weiter`` übernimmst du die von dir gemachten Einstellungen
+Mit ``Weiter`` übernimmst Du die von dir gemachten Einstellungen
 
 System: Assistent: Konfiguriere LAN-Schnittstelle
 -------------------------------------------------
@@ -549,17 +549,17 @@ System: Assistent: Konfiguration neu laden
 
 .. figure:: media/basis_opnsense_049.png
 
-Nachdem du die Einstellungen übernommen hast, können sich auch die Einstellungen des LAN-Netzwerks geändert haben. Dann wirst du nicht wie im nächsten Bild zu sehen über die erfolgreiche Konfiguration informiert.
+Nachdem Du die Einstellungen übernommen hast, können sich auch die Einstellungen des LAN-Netzwerks geändert haben. Dann wirst Du nicht wie im nächsten Bild zu sehen über die erfolgreiche Konfiguration informiert.
 
 .. figure:: media/basis_opnsense_050.png
 
-Sollte das bei dir der Fall sein, musst du deinem Admin PC die passende IP-Adresse 10.0.0.10/16, DNS: 10.0.0.254und das Gateway: 10.0.0.254 manuell geben. (hier exemplarisch für unseren Standard-LAN-Bereich)
+Sollte das bei dir der Fall sein, musst Du deinem Admin PC die passende IP-Adresse 10.0.0.10/16, DNS: 10.0.0.254und das Gateway: 10.0.0.254 manuell geben. (hier exemplarisch für unseren Standard-LAN-Bereich)
 
 Gehe dann mit einem Webbrowser auf ``https://10.0.0.254``.
 
 .. hint:: 
 
-   Falls du dich für das Netz der linuxmuster.net v6.2 entschieden hast, solltest du die IP-Adresse 10.16.0.10/12, DNS: 10.16.1.254 und das Gateway 10.16.1.254 verwenden.
+   Falls Du dich für das Netz der linuxmuster.net v6.2 entschieden hast, solltest Du die IP-Adresse 10.16.0.10/12, DNS: 10.16.1.254 und das Gateway 10.16.1.254 verwenden.
   
    Du solltest dann auch mit einem Webbrowser auf https://10.16.1.254 gehen.
 
@@ -569,7 +569,7 @@ Melde dich wieder mit ``root`` und dem Passwort ``Muster!`` an.
 
 DHCP abschalten
 ---------------
-Jetzt musst du den DHCP-Service der Firewall abschalten. Der wird ja später vom Server übernommen. 
+Jetzt musst Du den DHCP-Service der Firewall abschalten. Der wird ja später vom Server übernommen. 
 
 .. figure:: media/basis_opnsense_051.png
 
@@ -578,22 +578,22 @@ Gehe auf ``Dienste -> DHCPv4 -> [LAN]`` und lösche den Haken bei ``Aktivieren``
 Zusätzliche Netzwerkkarte hinzufügen (Optional)
 -----------------------------------------------
 
-Die linuxmuster.net v7 läuft bereits mit zwei Netzwerkkarten. Möchtest du allerdings ein WLAN oder in einer DMZ einen Webserver betreiben, brauchst du noch weitere Netzwerkkarten.
+Die linuxmuster.net v7 läuft bereits mit zwei Netzwerkkarten. Möchtest Du allerdings ein WLAN oder in einer DMZ einen Webserver betreiben, brauchst Du noch weitere Netzwerkkarten.
 
-Wie das geht, siehst du im Folgenden:
+Wie das geht, siehst Du im Folgenden:
 
 .. figure:: media/basis_opnsense_052.png
 
-Bei ``Schnittstellen -> Zuweisungen`` drückst du ``+``, um die dritte Schnittstelle deinem System hinzuzufügen. Diese dritte Schnittstelle ist dann als ``OPT1`` im System bekannt. OPT1 muss nur noch aktiviert und es muss ihr noch eine IP-Adresse zugewiesen werden. 
+Bei ``Schnittstellen -> Zuweisungen`` drückst Du ``+``, um die dritte Schnittstelle deinem System hinzuzufügen. Diese dritte Schnittstelle ist dann als ``OPT1`` im System bekannt. OPT1 muss nur noch aktiviert und es muss ihr noch eine IP-Adresse zugewiesen werden. 
 
 .. figure:: media/basis_opnsense_053.png
 
-Unter ``Schnittstellen -> [OPT1]`` kannst du diese Einstellungen vornehmen. Der Screenshot zeigt ein Beispiel. Für weitere Netzwerkkarten verfährst du entsprechend. OPT1 wird dann hochgezählt zu OPT2 etc.
+Unter ``Schnittstellen -> [OPT1]`` kannst Du diese Einstellungen vornehmen. Der Screenshot zeigt ein Beispiel. Für weitere Netzwerkkarten verfährst Du entsprechend. OPT1 wird dann hochgezählt zu OPT2 etc.
 
 ssh erlauben
 ------------
 
-.. attention:: Damit der Server für das weitere Set-up Zugriff auf die OPNsense |reg| hat, musst du den ssh-Zugriff erlauben. Gehe dafür auf ``System -> Einstellungen -> Verwaltung``.
+.. attention:: Damit der Server für das weitere Set-up Zugriff auf die OPNsense |reg| hat, musst Du den ssh-Zugriff erlauben. Gehe dafür auf ``System -> Einstellungen -> Verwaltung``.
 
 .. figure:: media/basis_opnsense_054.png
 
@@ -606,13 +606,13 @@ Diese Einstellungen wieder ``Speichern``.
 Update der OPNsense |reg|
 -------------------------
 
-Aktualisiere nun die OPNsense |reg|, indem du unter 
+Aktualisiere nun die OPNsense |reg|, indem Du unter 
 
 .. figure:: media/basis_opnsense_055.png
 
 ``System`` ``->`` ``Firmware`` ``-->`` ``Aktualisierungen`` ``--->`` ``Status`` ``----> `` ``Auf Aktualisierungen prüfen`` klickst.
 
-Wenn keine Aktualisierungen verfügbar sind, erhältst du folgende Meldung |...|
+Wenn keine Aktualisierungen verfügbar sind, erhältst Du folgende Meldung |...|
 
 .. figure:: media/basis_opnsense_056.png
 
@@ -625,9 +625,9 @@ Sollten dir wie in nachstehender Abbildung unter dem Reiter ``Aktualisierungen``
 
 .. hint::
 
-   Falls du nicht ins Internet kommst, kann es an der Gateway-Einstellung liegen. Gehe auf ``System`` --> ``Gateways`` --> ``Einzeln`` und editiere dein Gateway (WANGW).
+   Falls Du nicht ins Internet kommst, kann es an der Gateway-Einstellung liegen. Gehe auf ``System`` --> ``Gateways`` --> ``Einzeln`` und editiere dein Gateway (WANGW).
 
-   Setze einen Haken bei ``Deaktiviere Gatewayüberwachung``, speichere die Einstellung und übernimm die Änderung. Jetzt ist dein Gateway online und du kommst ins Internet. Erstaunlicherweise kannst du die Gatewayüberwachung wieder aktivieren, ohne dass das Gateway offline geht.
+   Setze einen Haken bei ``Deaktiviere Gatewayüberwachung``, speichere die Einstellung und übernimm die Änderung. Jetzt ist dein Gateway online und Du kommst ins Internet. Erstaunlicherweise kannst Du die Gatewayüberwachung wieder aktivieren, ohne dass das Gateway offline geht.
 
 |...| dann klicke in o.g. Fenster ``Jetzt aktualisieren``. 
 
@@ -654,8 +654,8 @@ Logout
 
 .. hint:: 
 
-   Installierst du die OPNsense |reg| in einer VM, so solltest du nun noch die Tools der gewählten Virtualisierungsumgebung installieren, damit die VM komfortabel gesteuert werden kann.
-   Für XCP-ng findest du nachstehend die Hinweise: https://xcp-ng.org/docs/guides.html#pfsense-opnsense-vmi
+   Installierst Du die OPNsense |reg| in einer VM, so solltest Du nun noch die Tools der gewählten Virtualisierungsumgebung installieren, damit die VM komfortabel gesteuert werden kann.
+   Für XCP-ng findest Du nachstehend die Hinweise: https://xcp-ng.org/docs/guides.html#pfsense-opnsense-vmi
    
    - Kann diese hint-Box ganz raus, da verschoben ins Wiki?
 

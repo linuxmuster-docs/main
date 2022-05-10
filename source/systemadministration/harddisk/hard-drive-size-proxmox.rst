@@ -21,15 +21,15 @@ Wähle als Erstes die VM aus, die geklont werden soll.
    :align: center
    :alt: Snapshot Schritt 1.1
 
-Unter ``More`` findest du den Button zum Starten des Klon-Vorganges
+Unter ``More`` findest Du den Button zum Starten des Klon-Vorganges
 
 .. figure:: media/hdd-preparation-on-proxmox_0_2_vm-overview.png
    :align: center
    :alt: Snapshot Schritt 1.2
 
-In dem sich öffnen Fenster siehst du welche VM geklont werden wird und deren neuer ID.
+In dem sich öffnen Fenster siehst Du welche VM geklont werden wird und deren neuer ID.
 
-Im Feld `Name` kannst du einen eigenen angeben, ansonsten wird einer nach dem Muster "Copy of VM ..." verwendet.
+Im Feld `Name` kannst Du einen eigenen angeben, ansonsten wird einer nach dem Muster "Copy of VM ..." verwendet.
 
 .. figure:: media/hdd-preparation-on-proxmox_0_3_vm-overview.png
    :align: center
@@ -43,7 +43,7 @@ Das wird sichtbar daran, dass die VM mit der neuen ID in der linken Übersicht m
   :align: center
   :alt: Snapshot Schritt 1.4
 
-Das Schloss zeigt an, dass das Kopieren der VM gestartet ist. Dieses siehst du auch in den `Tasks` am unteren Bildschirmrand.
+Das Schloss zeigt an, dass das Kopieren der VM gestartet ist. Dieses siehst Du auch in den `Tasks` am unteren Bildschirmrand.
 
 .. figure:: media/hdd-preparation-on-proxmox_0_5_vm-overview.png
    :align: center
@@ -61,7 +61,7 @@ Bei der neuen VM ist das Schloss verschwunden und der Name wird in der Übersich
    :align: center
    :alt: Snapshot Schritt 1.7
 
-.. hint:: Diesen Ablauf musst du für alle Virtuellen Maschinen, deren Festplatte du vergrößern möchtest, wiederholen.
+.. hint:: Diesen Ablauf musst Du für alle Virtuellen Maschinen, deren Festplatte Du vergrößern möchtest, wiederholen.
 
 2. Vorbereiten der PROXMOX Festplatten
 --------------------------------------
@@ -74,7 +74,7 @@ Ausgangssituation:
 
 Die OPNsense®-VM wurde mit dem Namen `lmn7-opnsense` und der `VM-ID: 200` angelegt. In der Übersicht erkennst du, dass derzeit
 eine Festplatte mit einer Größe von 10 GiB eingerichtet wurde. 
-Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sein. Die Festplattengröße kannst du nun wie folgt anpassen:
+Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sein. Die Festplattengröße kannst Du nun wie folgt anpassen:
 
 1. Wähle links im Menü die gewünschte VM aus und dann in der Spalte daneben (Kontextmenü der VM) den Eintrag `Hardware` aus.
 
@@ -90,7 +90,7 @@ Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sei
 
    Auf diesem Wege ist nur eine Vergrößerung des Plattenplatzes möglich, eine Verkleinerung hingegen nicht!
 
-4. Es erscheint ein neues Fenster, in dem du angeben must, um wieviel GiB du die Festplatte vergrößern willst. 
+4. Es erscheint ein neues Fenster, in dem Du angeben must, um wieviel GiB Du die Festplatte vergrößern willst. 
 
 .. figure:: media/hdd-preparation-on-proxmox_3_vm-hdd-resize.png
    :align: center
@@ -122,14 +122,14 @@ Nachdem im Virtualisierungs-Host die HDD der VM vergrößert wurde, muss die tat
 
 Wähle links im Menü die gewünschte VM aus. Exemplarisch ist der Start der Server-VM dargestellt. 
 
-Nach der Auswahl betätgist du den Button `Start`.
+Nach der Auswahl betätgist Du den Button `Start`.
 
-Wiederhole dieses Vorgehen für alle VMs deren Festplatten du angepasst hast.
+Wiederhole dieses Vorgehen für alle VMs deren Festplatten Du angepasst hast.
 
 3.2 Vergrößern der Server Festplatten
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In der gestarteten VM musst du nun den Festplattenplatz anpassen.
+In der gestarteten VM musst Du nun den Festplattenplatz anpassen.
 Folge hierzu der Beschreibung mit nachstehendem Link.
 
 

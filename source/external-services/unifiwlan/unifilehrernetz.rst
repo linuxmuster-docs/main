@@ -24,7 +24,7 @@ Klicke unten links auf `Einstellungen`. Gehe auf `drahtlose Netzwerke` .
 
 Es ist bereits eine WLAN-Gruppe `Default` eingerichtet. Die wird Dir für den Betrieb in einer Schule ausreichen.
 
-Wie erwartet sind noch keine drahtlosen Netzwerke eingerichtet. Für dein erstes WLAN klickst du auf `NEUES DRAHTLOSES NETZWERK HINZUFÜGEN`.
+Wie erwartet sind noch keine drahtlosen Netzwerke eingerichtet. Für dein erstes WLAN klickst Du auf `NEUES DRAHTLOSES NETZWERK HINZUFÜGEN`.
 
 .. figure:: media/u15.png
    :alt: Netzwerke hinzufügen
@@ -33,9 +33,9 @@ Gib dem Lehrernetz einen Namen (z.B. Lehrer).
 
 Wähle die Verschlüsselung `WPA Personal` und ein Passwort.
 
-Wähle **nicht** Gastrichtlinie. Im Schulnetz möchtest du keine Gäste!
+Wähle **nicht** Gastrichtlinie. Im Schulnetz möchtest Du keine Gäste!
 
-Wenn du möchtest, verbirg die SSID. Was Schüler nicht sehen, macht sie nicht neugierig.
+Wenn Du möchtest, verbirg die SSID. Was Schüler nicht sehen, macht sie nicht neugierig.
 
 Speichere die Einstellungen.
 

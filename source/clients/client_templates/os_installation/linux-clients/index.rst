@@ -29,7 +29,7 @@ Du hast bereits:
 
 .. todo: :ref:Ziel muss gesetzt werden, nächster Absatz
 
-Falls du das noch nicht getan hast, starte zuerst mit den Schritten, die im Kapitel ref:`add-computer-label` beschrieben werden und mache erst danach hier weiter.
+Falls Du das noch nicht getan hast, starte zuerst mit den Schritten, die im Kapitel ref:`add-computer-label` beschrieben werden und mache erst danach hier weiter.
 
 Einrichten eines Linux-Clients
 ==============================
@@ -37,16 +37,16 @@ Einrichten eines Linux-Clients
 Client OS installieren
 ----------------------
 
-Gib im PC / in der VM nun an, dass von dem gewünschten ISO-Image / der Installations-DVD gestartet werden soll. Hierbei musst du darauf achten, die Boot-Reihenfolge so zu ändern, dass nicht mehr vom Netzwerk, sondern von der ISO-Datei / der Installations-DVD gebootet wird.
+Gib im PC / in der VM nun an, dass von dem gewünschten ISO-Image / der Installations-DVD gestartet werden soll. Hierbei musst Du darauf achten, die Boot-Reihenfolge so zu ändern, dass nicht mehr vom Netzwerk, sondern von der ISO-Datei / der Installations-DVD gebootet wird.
 
-Starte nun den PC/die VM mit den neuen Einstellungen, sodass Ubuntu vom ISO-Image / von der Installations-DVD startet. Nachdem der Start ausgeführt wurde, wähle auf dem ersten Bildschirm aus, dass du Ubuntu installieren möchtest.
+Starte nun den PC/die VM mit den neuen Einstellungen, sodass Ubuntu vom ISO-Image / von der Installations-DVD startet. Nachdem der Start ausgeführt wurde, wähle auf dem ersten Bildschirm aus, dass Du Ubuntu installieren möchtest.
 
 Installation Ubuntu
 -------------------
 
 Gib in den ersten Schritten der Installation die gewünschte Sprache und Tastaturbelegung an.
 
-Bei der ``Installationsart`` wählst du ``Etwas Anderes`` aus.
+Bei der ``Installationsart`` wählst Du ``Etwas Anderes`` aus.
 
 .. figure:: media/01-linux-client-ubu-install.png
    :align: center
@@ -78,13 +78,13 @@ Klicke auf ``ok`` und es werden nochmals alle Einstellungen angezeigt:
 
 Sind diese Einstellungen korrekt, so setze die Installation mit dem Button ``Jetzt installieren`` fort.
 
-Im Verlauf der Installation wirst du nach dem Namen für den Computer und dem Benutzername und Kennwort für den neuen Administrator gefragt. Gib hier als Benutzername ``linuxadmin`` ein. Beim Namen des Rechners musst du den Namen des PCs / der VM angeben, wie du ihn in der Gerätekonfiguration des festgelegt hast.
+Im Verlauf der Installation wirst Du nach dem Namen für den Computer und dem Benutzername und Kennwort für den neuen Administrator gefragt. Gib hier als Benutzername ``linuxadmin`` ein. Beim Namen des Rechners musst Du den Namen des PCs / der VM angeben, wie Du ihn in der Gerätekonfiguration des festgelegt hast.
 
 .. figure:: media/05-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Installation: linuxadmin user
 
-Am Ende der Installation wirst du aufgefordert, den Rechner neu zu starten. Fahre die VM herunter und werfe das ISO-Image / die Installations-DVD aus.
+Am Ende der Installation wirst Du aufgefordert, den Rechner neu zu starten. Fahre die VM herunter und werfe das ISO-Image / die Installations-DVD aus.
 
 Erstimage erstellen
 -------------------
@@ -107,13 +107,13 @@ Du wirst nach nach dem Linbo-Passwort gefragt. Gebe dieses ein. Deine Eingabe wi
    :align: center
    :alt: Ubuntu Installation: root login
 
-Klicke dann auf ``anmelden`` und du gelangst zu folgender Ansicht:
+Klicke dann auf ``anmelden`` und Du gelangst zu folgender Ansicht:
 
 .. figure:: media/09-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Installation: linbo menue for imaging
 
-Klicke auf das große Festplatten-Icon, das in der Ecke rechts unten farblich markiert ist, um nun ein Image zu erstellen. Anstatt des Festplatten-Icons wird bei dir eventuell das Icon des Betriebssystems angezeigt, dass du in der WebUI festgelegt hast.
+Klicke auf das große Festplatten-Icon, das in der Ecke rechts unten farblich markiert ist, um nun ein Image zu erstellen. Anstatt des Festplatten-Icons wird bei dir eventuell das Icon des Betriebssystems angezeigt, dass Du in der WebUI festgelegt hast.
 
 Es wird ein neues Fenster geöffnet:
 
@@ -121,7 +121,7 @@ Es wird ein neues Fenster geöffnet:
    :align: center
    :alt: Ubuntu Installation: linbo imaging
 
-Wähle aus, dass du ein neues Image erstellen möchtest, gib einen Namen für das Image an und klicke auf ``erstellen + hochladen``.
+Wähle aus, dass Du ein neues Image erstellen möchtest, gib einen Namen für das Image an und klicke auf ``erstellen + hochladen``.
 
 Während des Vorgangs siehst Du nachstehenden Bildschirm:
 
@@ -143,14 +143,14 @@ Du siehst nun drei Start-Icons. Der grosse Icons started das Image sychronisiert
    :align: center
    :alt: Ubuntu Installation: image uploaded - new menue icons
 
-Bevor du nun das Image startest, musst du zuerst noch die Hardwareklasse anpassen.
+Bevor Du nun das Image startest, musst Du zuerst noch die Hardwareklasse anpassen.
 
 Imagenamen eintragen (HWK)
 --------------------------
 
 .. todo:: Ist nochmals zuüberprüfen: None
 
-Nachdem du nun das Image erstellt hast, musst du es noch deiner Hardwareklasse zuweisen. Denn zu Beginn hattest du bei der Rechneraufnahme für das Basisimage noch ``None`` eingetragen, bzw. stehen gelassen.
+Nachdem Du nun das Image erstellt hast, musst Du es noch deiner Hardwareklasse zuweisen. Denn zu Beginn hattest Du bei der Rechneraufnahme für das Basisimage noch ``None`` eingetragen, bzw. stehen gelassen.
 Gehe dazu in der WebUI auf ``Geräteverwaltung -> Linbo 4 -> Gruppen -> <hwk auswählen>``. Klicke für die gewünschte HWK das Stift-Symbol, um die Einstellungen anzupassen.Es öffnet sich das Fenster mit den Einstellungen für die HWK. Wähle hier unter ``Partitionen`` dein Betriebssystem (Reiterkarte ``OS``) aus und klicke das Stift-Icon. Klicke in dem sich öffnenden Fenster die Reiterkarte unter ``OS`` und klicke unter dem Eintrag ``Basisimage`` auf die Drop-down Liste und wähle das erstellte Image aus. (vgl. hierzu auch das Vorgehen unter ref:`add-computer-label`).
 
 .. figure:: media/12-linux-client-ubu-install.png
@@ -159,9 +159,9 @@ Gehe dazu in der WebUI auf ``Geräteverwaltung -> Linbo 4 -> Gruppen -> <hwk aus
 
 Übernehme die Eintragungen jeweils mit ``SPEICHERN``. Danach wird automatisch ein Import der Geräte ausgeführt, um diese Einstellungen für alle Geräte der HWK zu übernehmen.
 
-Alternativ kannst du in der WebUI unter der ``Geräteverwaltung ->  Speichern & Importieren`` klicken.
+Alternativ kannst Du in der WebUI unter der ``Geräteverwaltung ->  Speichern & Importieren`` klicken.
 
-Starte danach den Client erneut mit Linbo und klicke nun das große Festplattensymbol bzw. das Symbol, welches du ausgewählt hast, um Ubuntu synchronisiert zu starten.
+Starte danach den Client erneut mit Linbo und klicke nun das große Festplattensymbol bzw. das Symbol, welches Du ausgewählt hast, um Ubuntu synchronisiert zu starten.
 
 .. hint::
 
@@ -222,7 +222,7 @@ Um den Domänenbeitritt auszuführen, rufe das Setup des linuxmuster-linuxclient
 
 Für den Domänenbeitritt wird das Kennwort des Domänen-Admins ``global-admin`` abgefragt.
 
-Am Ende des Domänenbeitritts erfolgt eine Bestätigung, dass dieser erfolgreich durchgeführt wurde. Falls nicht, musst du das Setup für den linuxmuster-linuxclient7 erneut durchlaufen.
+Am Ende des Domänenbeitritts erfolgt eine Bestätigung, dass dieser erfolgreich durchgeführt wurde. Falls nicht, musst Du das Setup für den linuxmuster-linuxclient7 erneut durchlaufen.
 
 Image vorbereiten
 -----------------
@@ -245,27 +245,27 @@ Image erstellen
 
 Führe einen Neustart des Linux-Client durch, sodass die VM via PXE in Linbo bootet.
 
-Nun erstellst du in Linbo - genauso wie zuvor unter **Erstimage erstellen** beschrieben - das Image des neuen Muster-Clients für Linux. Achte hierbei darauf, dass du dieses Mal ``aktuelles Image ersetzen`` auswählst.
+Nun erstellst Du in Linbo - genauso wie zuvor unter **Erstimage erstellen** beschrieben - das Image des neuen Muster-Clients für Linux. Achte hierbei darauf, dass Du dieses Mal ``aktuelles Image ersetzen`` auswählst.
 
-Wurde der Vorgang erfolgreich beendet, kannst du dich wieder abmelden und den vorbereiteten Linux-Client synchronisiert starten. Nun sollte die Anmeldung mit jedem in der Schulkonsole eingetragenen Benutzer funktionieren.
+Wurde der Vorgang erfolgreich beendet, kannst Du dich wieder abmelden und den vorbereiteten Linux-Client synchronisiert starten. Nun sollte die Anmeldung mit jedem in der Schulkonsole eingetragenen Benutzer funktionieren.
 
 Eigene Anpassungen im Image
 ===========================
 
-Um den Linux-Client als Mustervorlage zu aktualisieren und Anpassungen vorzunehmen, startest du den Client synchronisiert und meldest dich mit dem Benutzer ``linuxadmin`` an.
+Um den Linux-Client als Mustervorlage zu aktualisieren und Anpassungen vorzunehmen, startest Du den Client synchronisiert und meldest dich mit dem Benutzer ``linuxadmin`` an.
 
-Danach installierst du die benötigte Software und nimmst die gewünschten Einstellungen vor.
+Danach installierst Du die benötigte Software und nimmst die gewünschten Einstellungen vor.
 
-Beispielsweise installierst du auf dem Linux-Client zuerst Libre-Office:
+Beispielsweise installierst Du auf dem Linux-Client zuerst Libre-Office:
 
 .. code::
 
    sudo apt update
    sudo apt install libreoffice
 
-Hast du alle Anpassungen vorgenommen, musst du den Linux-Client noch zur Erstellung des Images vorbereiten.
+Hast Du alle Anpassungen vorgenommen, musst Du den Linux-Client noch zur Erstellung des Images vorbereiten.
 
-Das machst du mit folgendem Befehl:
+Das machst Du mit folgendem Befehl:
 
 .. code::
 
@@ -273,7 +273,7 @@ Das machst du mit folgendem Befehl:
 
 .. attention::
 
-   Falls du die history deines Terminals nutzt um Befehle wieder zu nutzen, dann achte darauf das du den Parameter ``-y`` entfernst.
+   Falls Du die history deines Terminals nutzt um Befehle wieder zu nutzen, dann achte darauf das Du den Parameter ``-y`` entfernst.
    
 Sollte während des Updates oder der Image-Vorbereitung die Meldung erscheinen, dass lokale Änderungen der PAM-Konfiguration außer Kraft gesetzt werden sollen, wähle hier immer ``Nein`` (siehe Abb.), da sonst der konfigurierte Login nicht mehr funktioniert.
 
@@ -281,13 +281,13 @@ Sollte während des Updates oder der Image-Vorbereitung die Meldung erscheinen, 
    :align: center
    :alt: Linux-Client: Update - PAM Settings
 
-Solltest du versehentlich ``ja`` ausgewählt haben, kannst du die Anmeldung mit folgendem Befehl reparieren:
+Solltest Du versehentlich ``ja`` ausgewählt haben, kannst Du die Anmeldung mit folgendem Befehl reparieren:
 
 .. code::
 
   sudo linuxmuster-linuxclient7 upgrade
 
-Im Anschluss startest du deinen Linux-Client neu und erstellst wiederum, wie zuvor beschrieben, ein neues Image. Auch hier: ``aktuelles Image ersetzen`` auswählen.
+Im Anschluss startest Du deinen Linux-Client neu und erstellst wiederum, wie zuvor beschrieben, ein neues Image. Auch hier: ``aktuelles Image ersetzen`` auswählen.
 
 
 Serverseitige Anpassungen
@@ -309,7 +309,7 @@ Diese finden sich auf dem linuxmuster Server im Verzeichnis: ``/var/lib/samba/sy
 
 Hier findet sich das Logon-Skript (``logon.sh``). Es wird immer dann ausgeführt, wenn sich ein Benutzer am Linux-Client anmeldet.
 
-In diesem Logon-Skript musst du die Einstellungen für den zu verwenden Proxy-Server festlegen, sofern dieser von den Linux-Clients verwendet werden soll.
+In diesem Logon-Skript musst Du die Einstellungen für den zu verwenden Proxy-Server festlegen, sofern dieser von den Linux-Clients verwendet werden soll.
 
 Editiere die Datei ``/var/lib/samba/sysvol/linuxmuster.lan/scripts/default-school/custom/linux/logon.sh`` und füge folgende Zeilen hinzu. Passe die ``PROXY_DOMAIN`` für dein Einsatzszenario an.
 

@@ -34,13 +34,13 @@ Das Standard-Setup der v7.1 geht zunächst davon aus, dass keinerlei Netzbereich
 
 .. attention::
   
-   Solltest du in der linuxmuster.net v6.2 bereits Netzsegmente gebildet und/oder Netzbereiche geändert haben, 
+   Solltest Du in der linuxmuster.net v6.2 bereits Netzsegmente gebildet und/oder Netzbereiche geändert haben, 
    dann beachte nachstehendes Unterkapitel mit Hinweisen zum korrekten Vorgehen.
 
 System mit Netzanpassungen
 --------------------------
 
-Solltest du in der linuxmuster.net v6.2 andere Netzbereiche konfiguriert haben, die jetzt weiter genutzt werden sollen, oder hast Du das Netz in Subnetze aufgeteilt und möchtest bei der Migration diese Subnetze mit umstellen, dann ist nachstehendes Vorgehen unbedingt bereits beim Erstsetup der VMs der v7.1 zu beachten.
+Solltest Du in der linuxmuster.net v6.2 andere Netzbereiche konfiguriert haben, die jetzt weiter genutzt werden sollen, oder hast Du das Netz in Subnetze aufgeteilt und möchtest bei der Migration diese Subnetze mit umstellen, dann ist nachstehendes Vorgehen unbedingt bereits beim Erstsetup der VMs der v7.1 zu beachten.
 
 Ablauf
 ------
@@ -59,9 +59,9 @@ IPs OPNsense® anpassen
 
 Die IP der externen Schnittstelle (WAN) der OPNsense® ist ggf. anzupassen. Diese ist in der Erstauslieferung so konfiguriert, das diese eine IP via DHCP erhalten würde. Sollte die OPNsense® Firewall hinter einem Router arbeiten, so kann eine Anpassung für eine statische IP erforderlich sein.
 
-Hierzu rufst Du auf der Konsole in der OPNsense®, nachdem du dich als ``root`` angemeldet hast, den Punkt ``2) Set interface IP address`` auf. Solle eine DHCP-Konfiguration in deinem Netz hier nicht möglich sein,  wählst du zunächst die WAN-Schnittstelle aus und trägst die IP Adresse aus deinem lokalen Netz mit korrekter Subnetzmaske, Gateway und DNS ein.
+Hierzu rufst Du auf der Konsole in der OPNsense®, nachdem Du dich als ``root`` angemeldet hast, den Punkt ``2) Set interface IP address`` auf. Solle eine DHCP-Konfiguration in deinem Netz hier nicht möglich sein,  wählst Du zunächst die WAN-Schnittstelle aus und trägst die IP Adresse aus deinem lokalen Netz mit korrekter Subnetzmaske, Gateway und DNS ein.
 
-Danach wählst du die `LAN-Schnittstelle` aus und konfigurierst die bisherige IP, die im IPFire bereits genutzt wurde. Hast du z.B. ein Subnetting für das Server-Netz in der v6.2 genutzt, das im "grünen" Netz den Bereich 10.16.1.0/24 vorsieht, so vergibst du hier auf der LAN-Schnittstelle der OPNsense® die IP 10.16.1.254/24 (Subnetmask 255.255.255.0 = 24 Bit).
+Danach wählst Du die `LAN-Schnittstelle` aus und konfigurierst die bisherige IP, die im IPFire bereits genutzt wurde. Hast Du z.B. ein Subnetting für das Server-Netz in der v6.2 genutzt, das im "grünen" Netz den Bereich 10.16.1.0/24 vorsieht, so vergibst Du hier auf der LAN-Schnittstelle der OPNsense® die IP 10.16.1.254/24 (Subnetmask 255.255.255.0 = 24 Bit).
 
 Bei vorhandener Subnettierung dürfte für o.g. Besipiel der L3-Switch im Server - VLAN die IP 10.16.1.253 haben. Zudem ist darauf zu achten, dass auf der Virtualisierungsumgebung die korrekten Bridges für das jeweilige VLAN den Schnittstellen der VMs korrekt zugeordnet wurden.
 
@@ -89,27 +89,27 @@ In der Datei `/etc/netplan/01-meine-netzconfig.yaml` - Name bitte auf dein Syste
        nameservers:
          addresses: [10.16.1.254, 10.16.1.1]
 
-Danach speicherst du die Änderungen und wendest diese mit folgendem Befehl an und testest, ob die Firewall im internen Netz erreichbar ist:
+Danach speicherst Du die Änderungen und wendest diese mit folgendem Befehl an und testest, ob die Firewall im internen Netz erreichbar ist:
 
 .. code::
 
   netplan apply
   ping 10.16.1.254
 
-Erhälst du erfolgreich Pakete zurück, so kanst du die Firewall erreichen.
+Erhälst Du erfolgreich Pakete zurück, so kanst Du die Firewall erreichen.
 
-Können alle VMs im internen Netz sich untereinander via ping erreichen, bereitest du die VMs mit linuxmuster-prepare vor. siehe: :ref:`modify-net-label`
+Können alle VMs im internen Netz sich untereinander via ping erreichen, bereitest Du die VMs mit linuxmuster-prepare vor. siehe: :ref:`modify-net-label`
 
 linuxmuster-prepare
 """""""""""""""""""
 
-Jetzt meldest du dich auf der Eingabekonsole an der Server-VM an.
+Jetzt meldest Du dich auf der Eingabekonsole an der Server-VM an.
 
-Du bereitest diese VMs für der Erstsetup vor, indem du die korrekten Angaben zur gewünschten IP der VM und der Firewall mit linuxmuster-prepare (siehe: :ref:`modify-net-label`) angibst.
+Du bereitest diese VMs für der Erstsetup vor, indem Du die korrekten Angaben zur gewünschten IP der VM und der Firewall mit linuxmuster-prepare (siehe: :ref:`modify-net-label`) angibst.
 
 Gehen wir davon aus, dass Du für die Server VM im vorangegangenen Schritt die IP `10.16.1.1/24` und für die OPNsense® als Firewall die IP `10.16.1.254/24` zugeordnet hast. Zudem nehmen wir an, dass Deine zukunftige Schuldomäne den Namen `schuldomaene` erhalten wird und deine Domain `meineschule`.`de` lautet.
 
-Mit diesen Vorgaben bereitest du die Server-VM nun mit folgendem Befehl auf das Setup vor:
+Mit diesen Vorgaben bereitest Du die Server-VM nun mit folgendem Befehl auf das Setup vor:
 
 .. code::
 
@@ -138,13 +138,13 @@ Aktualisiere die VM mit folgendem Befehl:
 
 Starte danach die VM neu.
 
-Nach dem Neustart meldest du dich an der Server-VM als Benutzer `root` an und rufst das Setup mit folgendem Befehl auf:
+Nach dem Neustart meldest Du dich an der Server-VM als Benutzer `root` an und rufst das Setup mit folgendem Befehl auf:
 
 .. code::
 
    linuxmuster-setup
 
-Nach erfolgreichem Setup :ref:`setup-label` durchläuft du die nachstehend dargestellten Schritte zur Migration.
+Nach erfolgreichem Setup :ref:`setup-label` durchläuft Du die nachstehend dargestellten Schritte zur Migration.
   
 
 Vorgehen zur Migration
@@ -200,7 +200,7 @@ lade das entsprechende Debian-Paket von der Webseite herunter
    ...
    sophomorix-dump (3.63.2-1) wird eingerichtet ...
 
-Alternativ kannst du (z.B. wenn du das babo-Repository nicht
+Alternativ kannst Du (z.B. wenn Du das babo-Repository nicht
 einbinden kannst) unter http://pkg.linuxmuster.net/babo/ die
 neueste Version `sophomorix-dump_u.v.w-z_all.deb` herausfinden,
 herunterladen und installieren:
@@ -433,7 +433,7 @@ Das Skript muss zwei Mal ausgeführt werden.
 
 .. hint::
 
-   Jetzt solltest du noch die Datei ``school.conf`` bearbeiten, denn das
+   Jetzt solltest Du noch die Datei ``school.conf`` bearbeiten, denn das
    wird nicht automatisch gemacht.
 
 8. Updates diverser Einstellungen

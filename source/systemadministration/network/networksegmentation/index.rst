@@ -44,7 +44,7 @@ erfordert managebare L2- und L3-Switche, die VLANs verwalten können. Hierzu kö
 
 Die Konfigurationsschritte für den L3-Switch werden anhand eines ``Cisco SG300-300-28`` besipielhaft dargstellt. Für die Konfiguration der L2-Switche werden die Schritte anhand eines ``Cisco SF200-24`` exemplarisch verdeutlicht. Bei dem Einsatz anderer Switche sind die dargestellten Konfigurationsschritte entsprechend anzupassen.
 
-Am Ende des Kapitels findest du weitere Konfigurationen für andere L3-Switche, die du zur Anpassung auf dein Netzszenario nutzen kannst.
+Am Ende des Kapitels findest Du weitere Konfigurationen für andere L3-Switche, die Du zur Anpassung auf dein Netzszenario nutzen kannst.
 
 Geplante Netzwerkstruktur
 =========================
@@ -223,7 +223,7 @@ Upload der Konfiguration: Schritt für Schritt
    :alt: 
    :align: center
 
-Meldest du dich als Benutzer ``cisco`` mit dem Kennwort ``cisco`` (Voreinstellungen) an.
+Meldest Du dich als Benutzer ``cisco`` mit dem Kennwort ``cisco`` (Voreinstellungen) an.
 
 .. image:: media/sg300/003_sg300_change_pw.png
    :alt: 
@@ -254,7 +254,7 @@ Ist der Upload erfolgreich verlaufen, so muss der Switch neu gestartet werden, u
 
 Der Neustart ist über das Menü ``Administration --> File Management --> Reboot`` durchzuführen.
 
-Nach dem Neustart meldest du dich erneut an dem L3-Switch an und kontrollieren nochmals die Switch-Ports. Hierbei ist zwischen Access-Ports (port-basierte VLANs) und Trunk-Ports zu unterscheiden.
+Nach dem Neustart meldest Du dich erneut an dem L3-Switch an und kontrollieren nochmals die Switch-Ports. Hierbei ist zwischen Access-Ports (port-basierte VLANs) und Trunk-Ports zu unterscheiden.
 
 .. hint::
 
@@ -362,7 +362,7 @@ Es sind Zwei ACL anzulegen: Lehrkraefte und Klassenraume. Dies erfolgt im Menü 
 **ACEs hinzufügen**
 
 Für die zuvor genannten ACLs sind jetzt sog. Entries (Einträge) anzulegen.
-Hierfür wählst du im Menü:  Zugriffssteuerung --> IPv4 basiertes ACE --> <Name der ACL aus Liste auswählen - hier Lehrkraefte> --> Hinzufügen
+Hierfür wählst Du im Menü:  Zugriffssteuerung --> IPv4 basiertes ACE --> <Name der ACL aus Liste auswählen - hier Lehrkraefte> --> Hinzufügen
 
 .. image:: media/sg300/017_sg300_access_control_ipv4_based_acl.png
    :alt: ACLs
@@ -378,13 +378,13 @@ Du gibst dann folgende Werte an:
 *    Wert der Ziel-IP-Adresse: 10.16.1.0 (Servernetz-IP)
 *    Ziel-IP-Platzhaltermaske: 0.0.0.255 (invertierte Netzmaske)
 
-Danach legst du eine zweite ACE für die ACL Lehrkraefte an. Im Ergebnis solltest du für die Lehrkraefte dann nachstehenden Einträge haben:
+Danach legst Du eine zweite ACE für die ACL Lehrkraefte an. Im Ergebnis solltest Du für die Lehrkraefte dann nachstehenden Einträge haben:
 
 .. image:: media/sg300/018_sg300_ipv4_based_ace_lehrer.png
    :alt: ACE for teachers
    :align: center
 
-Danach lest du ACEs für die ``ACL Klassenraeume`` an. Danach solltest du nachstehende Einträge haben:
+Danach lest Du ACEs für die ``ACL Klassenraeume`` an. Danach solltest Du nachstehende Einträge haben:
 
 .. image:: media/sg300/019_sg300_ipv4_based_ace_klassenraeume.png
    :alt: 
@@ -420,13 +420,13 @@ Für das DHCP-Relaying/Snooping muss zudem die Option 82 aktiviert werden.
    :alt: DHCP Snooping
    :align: center
 
-Abschliessend trägst du noch die VLANs ein, die für das DHCP Relay aktiv sein sollen. 
+Abschliessend trägst Du noch die VLANs ein, die für das DHCP Relay aktiv sein sollen. 
 
 .. image:: media/sg300/024_sg300_dhcp_relay_vlans.png
    :alt: DHCP Relay: VLANs
    :align: center
 
-Nachdem du alle Einstellungen kontrolliert und ggf. angepasst haben, speicherst du die aktuelle Konfiguration. Dies erledigst du bei dem Cisco-Switch dadurch, dass du die Konfiguration aus dem RAM (running-config) auf die NVRAM-Konfiguration kopierst (startup-config).
+Nachdem Du alle Einstellungen kontrolliert und ggf. angepasst haben, speicherst Du die aktuelle Konfiguration. Dies erledigst Du bei dem Cisco-Switch dadurch, dass Du die Konfiguration aus dem RAM (running-config) auf die NVRAM-Konfiguration kopierst (startup-config).
 
 Weitere L2-Switches mit VLANs anbinden
 ======================================
@@ -867,7 +867,7 @@ Die durchzuführenden Tests sind in folgende Bereiche zu unterteilen:
 Download L3-Configs
 ===================
 
-Nachstehend werden dir einige Konfigurationsdateien für L3-Switche angeboten, die du an dein Netzszenario anpassen kannst.
+Nachstehend werden dir einige Konfigurationsdateien für L3-Switche angeboten, die Du an dein Netzszenario anpassen kannst.
 
 Für den L3-Switch Cisco SG300-28 steht die vorbereitete Konfigurationsdatei zur Verfügung, die die Konfiguration auf dem L3-Switch so einspielt, wie diese in dieser Dokumentation beschrieben wird.
 

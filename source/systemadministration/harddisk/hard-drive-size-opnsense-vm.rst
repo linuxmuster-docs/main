@@ -12,7 +12,7 @@ Aktualisieren der Festplattengrößen der OPNsense®-VM
 
 .. hint::
 
-   Diesen Abschnitt musst du nur ausführen, sofern du in deinem Hypervisor die HDD-Größe der OPNsense® bereits vergrößert hast.
+   Diesen Abschnitt musst Du nur ausführen, sofern Du in deinem Hypervisor die HDD-Größe der OPNsense® bereits vergrößert hast.
    
 Überblick
 ---------
@@ -137,7 +137,7 @@ Ausgabe des Befehls:
 4.7 Tests durchführen
 ---------------------
 
-Mittels `df -h`, `gpart show` und `gpart status` kannst du überprüfen, ob die von dir gewünschte Größenänderung erfolgreich übernommen wurden.
+Mittels `df -h`, `gpart show` und `gpart status` kannst Du überprüfen, ob die von dir gewünschte Größenänderung erfolgreich übernommen wurden.
 
 .. code::
 
@@ -171,7 +171,7 @@ Mittels `df -h`, `gpart show` und `gpart status` kannst du überprüfen, ob die 
 Führe nun einen Reboot der VM aus.
 
 
-Weiterführende Erklärungen zu FreeBSD zu diesem Thema findest du hier: 
+Weiterführende Erklärungen zu FreeBSD zu diesem Thema findest Du hier: 
 
 https://www.digitalocean.com/community/questions/freebsd-growfs-operation-not-permitted-aka-enlarge-your-partition
 

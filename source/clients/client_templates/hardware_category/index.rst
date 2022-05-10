@@ -26,13 +26,13 @@ Melde dich als Benutzer ``global-admin`` an der Web-UI an.
    :align: center
    :alt: WebUI login
 
-Erstelle nun die Konfiguration für die neue Hardwareklasse. Dafür klickst du links im Menü den Eintrag ``Geräteverwaltung --> Linbo4``.
+Erstelle nun die Konfiguration für die neue Hardwareklasse. Dafür klickst Du links im Menü den Eintrag ``Geräteverwaltung --> Linbo4``.
 
 .. figure:: media/02-webui-menue-linbo.png
    :align: center
    :alt: WebUI menue linbo
 
-Nun klickst du unten links auf ``+ERSTELLEN``.
+Nun klickst Du unten links auf ``+ERSTELLEN``.
 
 Es öffnet sich ein Kontextmenü. Du kannst entweder ein leere ``start.conf`` nutzen, oder ein bereits vordefiniertes Template für dein gewünschtes Betriebssystem auswählen. Hierbei kannst Du Templates für ein oder mehrere Betriebssysteme mit oder ohne UEFI-BIOS auswählen und diese ggf. nach deinen Vorstellungen anpassen.
 
@@ -40,7 +40,7 @@ Es öffnet sich ein Kontextmenü. Du kannst entweder ein leere ``start.conf`` nu
    :align: center
    :alt: WebUI menue linbo create start template
 
-Es öffnet sich ein Fenster, in dem du die Namen der neuen Hardwareklasse angibst. Diesen wirst du später benötigen, um Geräte dieser Hardwareklasse zuzuweisen.
+Es öffnet sich ein Fenster, in dem Du die Namen der neuen Hardwareklasse angibst. Diesen wirst Du später benötigen, um Geräte dieser Hardwareklasse zuzuweisen.
 
 .. figure:: media/04-webui-menue-linbo-name-for-start-conf.png
    :align: center
@@ -48,7 +48,7 @@ Es öffnet sich ein Fenster, in dem du die Namen der neuen Hardwareklasse angibs
 
 .. hint::
 
-   Die neu angelegte Hardwareklasse wird nicht direkt in der Übersicht mit allen eingerichteten Klassen angezeigt. Hierzu musst du zunächst mit ``F5`` die Webseite neu laden.
+   Die neu angelegte Hardwareklasse wird nicht direkt in der Übersicht mit allen eingerichteten Klassen angezeigt. Hierzu musst Du zunächst mit ``F5`` die Webseite neu laden.
 
 Die Liste der angelegten Hardwareklassen kann dann - z.B. wie nachstehend dargestellt - aussehen (andere Namen für die HWK verwendet):
 
@@ -56,35 +56,35 @@ Die Liste der angelegten Hardwareklassen kann dann - z.B. wie nachstehend darges
    :align: center
    :alt: WebUI menue linbo hwc list
 
-Du rufst nun die Einstellungen der zuvor angelegten Hardwareklasse auf, indem du das ``Stift-Symbol`` rechts daneben aufrufst.
+Du rufst nun die Einstellungen der zuvor angelegten Hardwareklasse auf, indem Du das ``Stift-Symbol`` rechts daneben aufrufst.
 
 Es erscheint ein Fenster mit den Einstellungen der Hardwareklasse. Dort gibt es die Reiterkarten ``Allgmein`` und  ``Partitionen``.
 
-Unter ``Allgemein`` legst du die IP des Servers fest, gibst das Startverhalten und ggf. Kernel-Optionen für den Boot bei besonderer Hardware an.
+Unter ``Allgemein`` legst Du die IP des Servers fest, gibst das Startverhalten und ggf. Kernel-Optionen für den Boot bei besonderer Hardware an.
 
 .. figure:: media/05-webui-linbo-edit-new-group.png
    :align: center
    :alt: WebUI linbo edit new hwc group
 
-Unter ``Partitionen`` legst du fest, welche Partitionen auf der Festplatte vorgesehen werden sollen.
+Unter ``Partitionen`` legst Du fest, welche Partitionen auf der Festplatte vorgesehen werden sollen.
 
 .. figure:: media/06-webui-linbo-edit-new-group-partition-scheme.png
    :align: center
    :alt: WebUI linbo edit new hwc group - partition scheme
 
-Löschst du dort z.B. die Partitionen ``swap`` und ``data`` so sieht deine Partitionierung wie folgt aus:
+Löschst Du dort z.B. die Partitionen ``swap`` und ``data`` so sieht deine Partitionierung wie folgt aus:
 
 .. figure:: media/07-webui-linbo-edit-new-group-partition-scheme-edited.png
    :align: center
    :alt: WebUI linbo edit new hwc group - partition scheme edited
 
-Um Einstellungen für das Betriebssystem vorzunehmen, klickst du auf das Stift-Icon (hier für Ubuntu) und es öffnet sich ein weiteres Fenster, um Einstellungen für das Betriebssystem vorzunehmen.
+Um Einstellungen für das Betriebssystem vorzunehmen, klickst Du auf das Stift-Icon (hier für Ubuntu) und es öffnet sich ein weiteres Fenster, um Einstellungen für das Betriebssystem vorzunehmen.
 
 .. figure:: media/08-webui-linbo-edit-new-group-os-infos-edited.png
    :align: center
    :alt: WebUI linbo edit new hwc group - os edited
 
-Unter der Reiterkarte ``OS`` legst du für das Betriebssystem (OS) die gewünschten Icons, die Start-Optionen und u.a. auch den Namen für das Basisimage fest. Zu Beginn bleibt hier der Eintrag ``None`` noch stehen und auch bei ``Start Optionen`` muss ``Autostart`` deaktiviert bleiben, da du erst das Image für den Muster-Client erstellen musst.
+Unter der Reiterkarte ``OS`` legst Du für das Betriebssystem (OS) die gewünschten Icons, die Start-Optionen und u.a. auch den Namen für das Basisimage fest. Zu Beginn bleibt hier der Eintrag ``None`` noch stehen und auch bei ``Start Optionen`` muss ``Autostart`` deaktiviert bleiben, da Du erst das Image für den Muster-Client erstellen musst.
 
 Auf dem linuxmuster.net Server werden die start.conf-Dateien im Verzeichnis ``/srv/linbo`` abgelegt. Jede Hardwareklasse hat eine eigene start.conf-Datei. Für die neu angelegte Hardwareklasse des Muster-Clients wurde dort nun eine Datei ``start.conf.<name-der-hwk>`` erstellt (z.B. start.conf.ubu20efi).
 

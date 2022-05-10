@@ -16,7 +16,7 @@ Vorgehen
 Drucker testen
 --------------
 
-Nachdem der Linux-Client neu gestartet und synchronisiert wurde, meldest du dich an und prüfst, ob unter ``Drucker`` alle zuvor auf dem Server eingerichteten Drucker angezeigt werden. Dies muss der Fall sein, sofern aus dem jeweiligen Raum oder von dem jeweiligen PC ein Zugriff auf dem Drucker überhaupt gewünscht ist und zuvor eingerichtet wurde.
+Nachdem der Linux-Client neu gestartet und synchronisiert wurde, meldest Du dich an und prüfst, ob unter ``Drucker`` alle zuvor auf dem Server eingerichteten Drucker angezeigt werden. Dies muss der Fall sein, sofern aus dem jeweiligen Raum oder von dem jeweiligen PC ein Zugriff auf dem Drucker überhaupt gewünscht ist und zuvor eingerichtet wurde.
 
 Markiere einen Drucker, klicke mit der rechten Maustaste und wähle im Kontextmenü den Punkt ``Eigenschaften`` aus. Klicke unterhalb von ``Tests und Wartungen`` den Button ``Testseite drucken`` aus.
 

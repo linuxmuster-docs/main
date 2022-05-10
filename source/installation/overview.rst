@@ -14,7 +14,7 @@ Installation: Übersicht
 Ablauf
 ++++++
 
-Um linuxmuster.net v7.1 zu installieren musst du folgende Schritte durchlaufen:
+Um linuxmuster.net v7.1 zu installieren musst Du folgende Schritte durchlaufen:
 
 1. Planung der Infrastruktur (Server und Netzwerk)
 
@@ -81,7 +81,7 @@ Um linuxmuster.net v7.1 zu installieren musst du folgende Schritte durchlaufen:
 ..       :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part7-installation-finish.svg
 
 
-Nachstehend kannst du den Installationsablauf als Übersicht herunterladen:
+Nachstehend kannst Du den Installationsablauf als Übersicht herunterladen:
 
 :download:`Übersicht als PDF-Datei <media/overview-installation-process.pdf>`
 

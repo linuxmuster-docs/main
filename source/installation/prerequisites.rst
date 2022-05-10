@@ -124,7 +124,7 @@ Daraus ergeben sich folgende Mindestvoraussetzungen für einen Virtualisierungsh
 * bei WLAN-Nutzung eine Netzwerkkarte zusätzlich (blaues Netz)
 * sollen Serverdienste im Internet von außen zugänglich sein, empfehlen wir diese in die DMZ auszulagern. Dafür wird eine weiteres Netzwerk-Interface benötigt (oranges Netz)
 
-Durch die fortschreitende Digitalisierung in der Bildung ist der Auf- bzw. Ausbau einer funktionalen WLAN-Infrastruktur für jede Schule eine gute Entscheidung. Daraus ergibt sich aus unserer Sicht die Empfehlung zu mindestens drei Netzwerkkarten. Willst du für alle möglichen Einsatzszenarien gut gerüstet sein, empfiehlt sich allerdings gleich den Virtualisierungshost mit vier und mehr Netzwerk-Interfaces auszulegen.
+Durch die fortschreitende Digitalisierung in der Bildung ist der Auf- bzw. Ausbau einer funktionalen WLAN-Infrastruktur für jede Schule eine gute Entscheidung. Daraus ergibt sich aus unserer Sicht die Empfehlung zu mindestens drei Netzwerkkarten. Willst Du für alle möglichen Einsatzszenarien gut gerüstet sein, empfiehlt sich allerdings gleich den Virtualisierungshost mit vier und mehr Netzwerk-Interfaces auszulegen.
 
 Das obige Prinzip ist bereits ein Beispiel für die Netzwerksegmentierung, die im nächsten Abschnitt näher erläutert wird.
 
