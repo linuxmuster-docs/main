@@ -65,7 +65,7 @@ Danach wähle Dein Tastaturlayout.
 
 Wähle das Tastaturlayout Deutsch und bestätige dies mit ``Erledigt``.
 
-.. tip:: Wenn Du dir nicht sicher bist, vor welcher Tastatur Du gerade sitzt:
+.. tip:: Wenn Du Dir nicht sicher bist, vor welcher Tastatur Du gerade sitzt:
 
    Wähle nacheinander 
   
@@ -146,7 +146,7 @@ Speicher des Systems
 
 Wähle nun zur Einrichtung der Festplatten ``Custom Storage Layout`` aus, wie in obigen Bild dargestellt.
 
-Es werden dir dann die verfügbaren Geräte angezeigt. 
+Es werden Dir dann die verfügbaren Geräte angezeigt. 
 
 .. figure:: media/basis_server_011_custom-storage-layout-create-partition-table.png
 
@@ -182,9 +182,9 @@ Für das Setup werden noch weitere Partitionen benötigt. Dafür haben wir uns f
 
 .. [#f1] Sollte Deine Festplatte größer sein als die vorgeschlagene Mindestgröße so wird für diese Partition der maximal übrige freie Platz mit verwendet.
 
-Unser Installationscript nimmt dir die nötigen vorbereitenden Aktionen ab. Du läßt also das zweite Speichermeddium unkonfiguriert.
+Unser Installationscript nimmt Dir die nötigen vorbereitenden Aktionen ab. Du läßt also das zweite Speichermeddium unkonfiguriert.
 
-Zum Abschluss werden dir die Partitionsierungseinstellungen gemäß Deiner Eingaben angezeigt.
+Zum Abschluss werden Dir die Partitionsierungseinstellungen gemäß Deiner Eingaben angezeigt.
 
 .. figure:: media/basis_server_016_custom-storage-layout-create-partition-table-overview.png
 
@@ -227,7 +227,7 @@ Bei ``VERFÜGBARE GERÄTE`` gilt es nun in die angelegte "LVM volume group" die 
 
 .. figure:: media/basis_server_016_lvm_003.png
 
-Bei ``VERFÜGBARE GERÄTE`` findest Du die von dir zuvor angelegte "LVM volume group". Diese markierst Du , um dann ``Create Logical Volume`` auszuwählen.
+Bei ``VERFÜGBARE GERÄTE`` findest Du die von Dir zuvor angelegte "LVM volume group". Diese markierst Du , um dann ``Create Logical Volume`` auszuwählen.
 
 .. figure:: media/basis_server_016_lvm_004.png
 
@@ -272,7 +272,7 @@ Die letzten zwei Schritte wiederholst Du für die anderen Positionen der Tabelle
 
 ######
 
-Zum Abschluss werden dir die Partitionsierungseinstellungen gemäß Deiner Eingaben angezeigt.
+Zum Abschluss werden Dir die Partitionsierungseinstellungen gemäß Deiner Eingaben angezeigt.
 
 .. figure:: media/basis_server_016_lvm_011.png
 
@@ -304,7 +304,7 @@ Nenne den Server ``server``. Der Benutzername (linuxadmin) und das Passwort (Mus
 
 Solltest Du eine Möglichkeit für einen Fernzugang zu dem Server wünschen, aktiviere ``OpenSSH-Server installieren``. 
 
-.. attention:: Wenn Du dies machst, mache dir auch Gedanken wie Du diesen Zugang absichern kannst.
+.. attention:: Wenn Du dies machst, mache Dir auch Gedanken wie Du diesen Zugang absichern kannst.
    
    Wir empfehlen das PublicKey-Verfahren.
    https://wiki.ubuntuusers.de/SSH/#Publickey-Authentifizierung (externer Link)
@@ -319,7 +319,7 @@ Zum Abschluß der Installation wird automatisch versucht, Updates zu installiere
 
 .. figure:: media/basis_server_020.png
 
-und danach gilt es den Server neu zu starten. Das veranlasst Du mit ``Jetzt neustarten``, wenn es dir angeboten wird.
+und danach gilt es den Server neu zu starten. Das veranlasst Du mit ``Jetzt neustarten``, wenn es Dir angeboten wird.
 
 .. figure:: media/basis_server_021.png
 
@@ -363,7 +363,7 @@ gewechselt ist, dann starte den Server neu.
 .. 
 .. Solltest Du bei der Installtion unserem Partitionerungs-Vorschlag gefolgt sein, dann kannst Du direkt mit `Automatische Updates abschalten`_ fortfahren.
 .. 
-.. 1. Hast Du wie zuvor beschrieben ein LVM angelegt, gib auf der Konsole ``sudo vgscan --mknodes`` ein. Es wird dir dann die sog. ``volume group "vg0"`` angezeigt, die Du während der Installation auf der 2. HDD angelegt hast.
+.. 1. Hast Du wie zuvor beschrieben ein LVM angelegt, gib auf der Konsole ``sudo vgscan --mknodes`` ein. Es wird Dir dann die sog. ``volume group "vg0"`` angezeigt, die Du während der Installation auf der 2. HDD angelegt hast.
 .. 
 .. 2. Führe ``sudo vgchange -ay`` aus, um das Volume zu aktivieren.
 .. 
@@ -455,7 +455,7 @@ Basis-Konfiguration des Servers
 xterm.js für die Konsolen-Nutzung in Proxmox aktivieren
 -------------------------------------------------------
 
-Nachdem Du Dich erneut als ``linuxadmin`` beziehungsweise mit dem von dir angelegten Nutzer an der ``noVNC`` Konsole angemeldet hast, gebe diese zwei Zeilen Code nacheinander ein:
+Nachdem Du Dich erneut als ``linuxadmin`` beziehungsweise mit dem von Dir angelegten Nutzer an der ``noVNC`` Konsole angemeldet hast, gebe diese zwei Zeilen Code nacheinander ein:
 
 .. code::
 
@@ -497,11 +497,11 @@ Jetzt kannst Du den Server updaten mit |...|
 
    apt update && apt dist-upgrade
    
-Nachdem dir neue Pakete zur Anzeige gebracht wurden, startest Du den Upgrade-Prozess mit ``j``.
+Nachdem Dir neue Pakete zur Anzeige gebracht wurden, startest Du den Upgrade-Prozess mit ``j``.
 
 .. attention::
 
-   Durch das Deaktiveren der automatischen Updates liegt jetzt natürlich die Veranwortung des zeitnahen Einspielen von Updates bei dir bzw. der Person die für die Administration verantwortlich zeichnet!
+   Durch das Deaktiveren der automatischen Updates liegt jetzt natürlich die Veranwortung des zeitnahen Einspielen von Updates bei Dir bzw. der Person die für die Administration verantwortlich zeichnet!
 
 .. Nächstes Kapitel herausgenommen, da dieses Vorgehen Fehler bei lmn71-prepare erzeugt. Speicherung eines init-Scriptes network nicht möglich.
    

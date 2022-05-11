@@ -867,7 +867,7 @@ Die durchzuführenden Tests sind in folgende Bereiche zu unterteilen:
 Download L3-Configs
 ===================
 
-Nachstehend werden dir einige Konfigurationsdateien für L3-Switche angeboten, die Du an Dein Netzszenario anpassen kannst.
+Nachstehend werden Dir einige Konfigurationsdateien für L3-Switche angeboten, die Du an Dein Netzszenario anpassen kannst.
 
 Für den L3-Switch Cisco SG300-28 steht die vorbereitete Konfigurationsdatei zur Verfügung, die die Konfiguration auf dem L3-Switch so einspielt, wie diese in dieser Dokumentation beschrieben wird.
 

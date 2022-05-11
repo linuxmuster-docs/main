@@ -191,7 +191,7 @@ Die ``User data group map`` muss im JSON-Format angegeben werden, bei Syntaxfehl
 
 .. hint::
 
-  Die Bezeichnungen für die Klassen müssen so eintragen werden, wie sie im LDAP stehen. Dies kann von der Anzeige in der Schulkonsole abweichen. Steht z.B. in der Schulkonsole „R 5b“, wird im LDAP daraus „r5b“. Dies lässt sich aber mit ldapsearch für Klassen (wie im Wiki beschrieben) herausfinden. Vor dem Import solltest Du dir die Struktur in Rocketchat genau überlegen, da "Nacharebiten" mit vielen Einzelschritten verbunden sein kann.
+  Die Bezeichnungen für die Klassen müssen so eintragen werden, wie sie im LDAP stehen. Dies kann von der Anzeige in der Schulkonsole abweichen. Steht z.B. in der Schulkonsole „R 5b“, wird im LDAP daraus „r5b“. Dies lässt sich aber mit ldapsearch für Klassen (wie im Wiki beschrieben) herausfinden. Vor dem Import solltest Du Dir die Struktur in Rocketchat genau überlegen, da "Nacharebiten" mit vielen Einzelschritten verbunden sein kann.
 
 12. Auto Sync LDAP Groups to Channels: JA
 13. Channel Admin: rocket.cat

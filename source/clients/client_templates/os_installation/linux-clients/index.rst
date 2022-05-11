@@ -54,7 +54,7 @@ Bei der ``Installationsart`` wählst Du ``Etwas Anderes`` aus.
 
 Du hattest mit Linbo ja bereits die Festplatte partitioniert und formatiert.
 
-Es werden dir also die bereits vorhandenen Partitionen und Dateisysteme angezeigt. Je nach genutzter Virtualisierungsumgebung / Hardware können die Festplattenbezeichnungen hier auch als ``/dev/sda`` und die Partionen als ``/dev/sda1`` etc. angezeigt werden.
+Es werden Dir also die bereits vorhandenen Partitionen und Dateisysteme angezeigt. Je nach genutzter Virtualisierungsumgebung / Hardware können die Festplattenbezeichnungen hier auch als ``/dev/sda`` und die Partionen als ``/dev/sda1`` etc. angezeigt werden.
 
 Wähle, wie in der nachstehenden Abb. zu sehen, die Partition aus, auf der Ubuntu installiert werden soll.
 
@@ -113,7 +113,7 @@ Klicke dann auf ``anmelden`` und Du gelangst zu folgender Ansicht:
    :align: center
    :alt: Ubuntu Installation: linbo menue for imaging
 
-Klicke auf das große Festplatten-Icon, das in der Ecke rechts unten farblich markiert ist, um nun ein Image zu erstellen. Anstatt des Festplatten-Icons wird bei dir eventuell das Icon des Betriebssystems angezeigt, dass Du in der WebUI festgelegt hast.
+Klicke auf das große Festplatten-Icon, das in der Ecke rechts unten farblich markiert ist, um nun ein Image zu erstellen. Anstatt des Festplatten-Icons wird bei Dir eventuell das Icon des Betriebssystems angezeigt, dass Du in der WebUI festgelegt hast.
 
 Es wird ein neues Fenster geöffnet:
 
@@ -305,7 +305,7 @@ Diese finden sich auf dem linuxmuster Server im Verzeichnis: ``/var/lib/samba/sy
 
 .. hint::
 
-   Ersetze ``linuxmuster.lan`` durch den von dir beim Setup festgelegten Domänennamen.
+   Ersetze ``linuxmuster.lan`` durch den von Dir beim Setup festgelegten Domänennamen.
 
 Hier findet sich das Logon-Skript (``logon.sh``). Es wird immer dann ausgeführt, wenn sich ein Benutzer am Linux-Client anmeldet.
 

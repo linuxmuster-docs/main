@@ -33,7 +33,7 @@ Wähle nun das ``Werkzeug-Symbol`` rechts aus.
    :alt: LINBO tool icon
 
 Es erscheint die Aufforderung, dass Du das LINBO-Passwort eingeben must. Dies entspricht nach der Installation i.d.R. dem des global-admin.
-Bei der Eingabe des Kennwortes werden dir keine Zeichen angezeigt - auch keine Sternchen.
+Bei der Eingabe des Kennwortes werden Dir keine Zeichen angezeigt - auch keine Sternchen.
 
 .. figure:: media/03-linbo-password-screen.png
    :align: center

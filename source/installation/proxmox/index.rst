@@ -108,7 +108,7 @@ https://www.proxmox.com/de/downloads/category/iso-images-pve/
 
 Dort findet sich das ISO-Image zur Installation von Proxmox.
 
-Lade dir dort das aktuellste Image herunter und erstelle dir einen bootfähigen USB-Stick zur weiteren Installation.
+Lade Dir dort das aktuellste Image herunter und erstelle Dir einen bootfähigen USB-Stick zur weiteren Installation.
 
 Erstellen eines USB-Sticks zur Installation des Proxmox-Host
 ------------------------------------------------------------
@@ -273,7 +273,7 @@ Die bisherige Netzwerkkonfiguration stellt sich wie folgt dar:
    :align: center
    :alt: Proxmox-Übersicht hv01 - Network
 
-Für die folgende Überprüfung öffnest Du nochmals die Konsole auf dem Hypervisor hv01, falls sie nicht geöffnet sein sollte, wie oben beschrieben und lässt dir den Inhalt der Konfigurationsdatei anzeigen mittels:
+Für die folgende Überprüfung öffnest Du nochmals die Konsole auf dem Hypervisor hv01, falls sie nicht geöffnet sein sollte, wie oben beschrieben und lässt Dir den Inhalt der Konfigurationsdatei anzeigen mittels:
 
 .. code:: 
 
@@ -604,14 +604,14 @@ Nach dem Schließen des Fensters,
    :align: center
    :alt: Proxmox ISO Images folder view
 
-befindet sich das heruntergeladene Ubuntu-ISO nun in dem ``ISO Images`` und steht dir für die weitere Verwendung zur Verfügung.
+befindet sich das heruntergeladene Ubuntu-ISO nun in dem ``ISO Images`` und steht Dir für die weitere Verwendung zur Verfügung.
 
 OPNsense
 --------
 
-Die zuvor gezeigte Möglichkeit des einfachen Importes mittels den Bordmitteln von Proxmox steht dir für die OPNsense |reg| leider nicht zur Verfügung, da nur der Download einer bz2-Datei möglich ist. Dir steht der Weg des Downloads auf einen lokalen PC, der Umwandlung des bz2-File in eine iso-Datei und dann der Upload über den dir im Abschnitt Ubuntu aufgezeigten Ablauf frei. Dabei wählst Du dann nicht ``URL``, sondern ``Upload``.
+Die zuvor gezeigte Möglichkeit des einfachen Importes mittels den Bordmitteln von Proxmox steht Dir für die OPNsense |reg| leider nicht zur Verfügung, da nur der Download einer bz2-Datei möglich ist. Dir steht der Weg des Downloads auf einen lokalen PC, der Umwandlung des bz2-File in eine iso-Datei und dann der Upload über den Dir im Abschnitt Ubuntu aufgezeigten Ablauf frei. Dabei wählst Du dann nicht ``URL``, sondern ``Upload``.
 
-Um dir den Upload zu ersparen, beschreiben wir hier den Weg, um die benötigten Dateien direkt in Deine Proxmox-Maschine zu bringen:
+Um Dir den Upload zu ersparen, beschreiben wir hier den Weg, um die benötigten Dateien direkt in Deine Proxmox-Maschine zu bringen:
 
 Als Erstes startest Du die Konsole ``xterm.js`` wie dargestellt, falls sie nicht sowieso gestartet ist.
 
@@ -670,7 +670,7 @@ Die komprimierte ISO Datei (<filename>.iso.bz2)
 
    openssl dgst -sha256 -verify OPNsense-22.1.pub -signature /tmp/image.sig OPNsense-22.1.2-OpenSSL-dvd-amd64.iso.bz2
 
-Der letzte Befehl sollte dir ein ``Verified OK`` liefern.
+Der letzte Befehl sollte Dir ein ``Verified OK`` liefern.
 
 Nun gilt es, die ISO-Datei auszupacken. Das machst Du mit folgendem Befehl:
 
@@ -804,7 +804,7 @@ Klicke auf ``Add``.
 Hinzufügen einer Seriellen Schnittstelle
 ----------------------------------------
 
-Damit dir copy&paste in der Oberfläche von Proxmox bei der Auswahl unter ``Console`` zur Verfügung steht, muss Du die Nutzung von xterm.js ermöglichen.
+Damit Dir copy&paste in der Oberfläche von Proxmox bei der Auswahl unter ``Console`` zur Verfügung steht, muss Du die Nutzung von xterm.js ermöglichen.
 
 .. figure:: media/xterm-opnsense_001.png
    :align: center
@@ -928,7 +928,7 @@ Nachdem die VM angelegt wurde, siehst Du diese links im Verzeichnisbaum Deines P
 Hinzufügen einer Seriellen Schnittstelle
 ----------------------------------------
 
-Damit dir copy&paste ebenfalls für den Server zur Verfügung steht, muss Du die Nutzung von xterm.js auch für ihn wie oben beschrieben ermöglichen. Hier erneut die Beschreibung
+Damit Dir copy&paste ebenfalls für den Server zur Verfügung steht, muss Du die Nutzung von xterm.js auch für ihn wie oben beschrieben ermöglichen. Hier erneut die Beschreibung
 
 .. figure:: media/xterm-server_001.png
    :align: center

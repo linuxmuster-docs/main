@@ -31,7 +31,7 @@ Durch die letztgenannten ist es nun in der Version 4 erschienen. Der Sourcecode 
 Funktionsweise
 ==============
 
-Zum Verständnis erklären wir dir einen 
+Zum Verständnis erklären wir Dir einen 
 
 Start eines Arbeitsplatzrechners
 --------------------------------
@@ -78,4 +78,4 @@ Ziel ist es, dass alle PCs mit einem vordefinierten ``Muster-Image`` für Linux 
 
 Hierzu ist zunächst ein Rechner mit dem gewünschten Client-Betriebssystem und den gewünschten Programmen zu installieren und vorzukonfigurieren. Dieser ``Muster-Client`` muss dann mit dem jeweiligen Betriebssystem einen Domänenbeitritt ausführen, auch dieser wird im Image gespeichert. Erst danach kann dieses Image ebenfalls für alle anderen PCs genutzt werden.
 
-Das Vorgehen wird dir detailiert unter :ref:`masterclient-template-label` beschrieben.
+Das Vorgehen wird Dir detailiert unter :ref:`masterclient-template-label` beschrieben.

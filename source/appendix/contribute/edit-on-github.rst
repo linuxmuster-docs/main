@@ -39,7 +39,7 @@ Dein Änderungsvorschlag wird dann vom Dokumentationsteam geprüft und gegebenen
 
    Bitte beachte auch unbedingt die :doc:`Leitlinien zur Dokumentation <guidelines>`, damit Deine Änderungen schnell eingepflegt werden könnnen!
 
-Sollest Du bereits Schreibrechte am Repositorium haben und bist dir sicher, dass die Dokumentation durch Deine Änderung nicht beeinträchtigt wird, kannst Du die Änderungen direkt einbauen ("Commit") oder im Zweifel einen Zweig und einen so genannten Pull-Request erstellen.
+Sollest Du bereits Schreibrechte am Repositorium haben und bist Dir sicher, dass die Dokumentation durch Deine Änderung nicht beeinträchtigt wird, kannst Du die Änderungen direkt einbauen ("Commit") oder im Zweifel einen Zweig und einen so genannten Pull-Request erstellen.
 
 .. figure:: media/05_edit-on-github_commit-changes.png
    :align: center

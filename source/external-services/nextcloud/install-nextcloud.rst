@@ -17,7 +17,7 @@ Auf einem Docker-Host sind folgende Schritte zur Installation notwendig:
 Erstellung des Zertifikats
 ==========================
 
-Zuerst musst Du dir einen Dienstenamen ausdenken und SSL-Zertifikate besorgen. Also z.B. nextcloud.meine-schule.de. 
+Zuerst musst Du Dir einen Dienstenamen ausdenken und SSL-Zertifikate besorgen. Also z.B. nextcloud.meine-schule.de. 
 
 Dazu legst Du einen DNS Eintrag für Deine Dockerapp, z.B. nextcloud.meine-schule.de, der auf die IP des Docker-Hosts zeigt an. Das darf auch ein CNAME sein.
 

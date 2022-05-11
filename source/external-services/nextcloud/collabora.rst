@@ -19,7 +19,7 @@ Um Collabora auf dem Docker-Host zu installieren, sind die identischen Schritte 
 Erstellung des Zertifikats
 ==========================
 
-Zuerst musst Du dir einen Dienstenamen ausdenken, den DNS Eintrag dazu setzen und SSL-Zertifikat besorgen. Also z.B. office.meine-schule.de. 
+Zuerst musst Du Dir einen Dienstenamen ausdenken, den DNS Eintrag dazu setzen und SSL-Zertifikat besorgen. Also z.B. office.meine-schule.de. 
 
 Dazu legst Du einen DNS Eintrag für Deine Dockerapp, z.B. office.meine-schule.de, der auf die IP des Docker-Hosts zeigt an. Das darf auch ein CNAME sein.
 
@@ -156,7 +156,7 @@ Collabora updaten
 =================
 
 Fall Du feststellst, dass die Collabora-Version, die Du gerade benutzt, nicht mehr aktuell ist, meldest Du Dich wieder als root auf dem Docker-Host an und gehst mit ``cd /srv/docker/collabora`` in das Verzeichnis `/srv/docker/collabora`.
-Dann beendest Du mit ``docker-compose down`` Collabora. Mit ``docker-compose pull`` holst Du dir das aktuelle Image und mit ``docker-compose up -d`` startest Du Dein aktualisiertes Collabora wieder.
+Dann beendest Du mit ``docker-compose down`` Collabora. Mit ``docker-compose pull`` holst Du Dir das aktuelle Image und mit ``docker-compose up -d`` startest Du Dein aktualisiertes Collabora wieder.
 
 
 Collabora in der Nextcloud nutzen

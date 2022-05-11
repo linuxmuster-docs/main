@@ -45,7 +45,7 @@ Sobald der Client registriert wurde, zeigt der Startbildschirm weitere Optionen 
 Informationen
 ^^^^^^^^^^^^^
 
-Drückst Du im Startbildschirm die Funktionstaste ``F1``, dann werden dir Informationen zum Client angezeigt.
+Drückst Du im Startbildschirm die Funktionstaste ``F1``, dann werden Dir Informationen zum Client angezeigt.
 
 .. figure:: media/linbo-mainscreen/linbo-mainscreen-infos-f1.png
    :align: center

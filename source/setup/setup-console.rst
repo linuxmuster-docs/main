@@ -160,7 +160,7 @@ Anmeldung an der Schulkonsole als global-admin
    :align: center
    :alt: WebUI: First ssl access
 
-Der Browser zeigt dir den Warnhinweis an. Klicke auf ``Erweitert...``.
+Der Browser zeigt Dir den Warnhinweis an. Klicke auf ``Erweitert...``.
 
 .. figure:: media/newsetup/lmn-setup-gui-10.png
    :align: center
@@ -193,7 +193,7 @@ Setze die Berechtigungen nun mit folgendem Befehl als Benutzer ``root``:
 
   chmod 600 /var/log/linuxmuster/setup.*.log 
 
-Lasse dir den Inhalt des Verzeichnisses danach ausgeben und kontrollieren, ob Besitzer und Gruppe root sind und diese lesen und schreiben dürfen. 
+Lasse Dir den Inhalt des Verzeichnisses danach ausgeben und kontrollieren, ob Besitzer und Gruppe root sind und diese lesen und schreiben dürfen. 
 
 .. code::
 
