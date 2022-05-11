@@ -279,7 +279,7 @@ Für die Verbidnung mit den Clients muss nun ein Export des Profils für den Ben
 Dazu gehst Du zu ``VPN`` --> ``OpenVPN`` --> ``Clientexport``.
 Dort gibst Du Folgerndes an:
 
-1.  Ferner Zugriffsserver: ``Linuxmuster VPN UDP:25008`` --> Server aus der Liste auswählen, Port wie von dir vorher angegeben.
+1.  Ferner Zugriffsserver: ``Linuxmuster VPN UDP:25008`` --> Server aus der Liste auswählen, Port wie von Dir vorher angegeben.
 2.  Export type: Nur Datei
 3.  Hostname: URL unter dem die Firewall erreichbar ist, z.B: vpn.meineschule.de
 4.  Port: 25008 (ggf. anpassen an eigene Portwahl)
@@ -310,7 +310,7 @@ In der GUI der OPNsense® klickst Du links auf den Menüeintrag ``Lobby`` und si
 OpenVPN Client
 --------------
 
-Installiere dir auf Deinem Gerät (PC, Tablet, Smartphone) den OpenVPN Client. Die heruntergeladene Datei muss nun auf das Endgerät heruntergeladen und dort in die App OpenVPN Connect (für alle Plattformen) importiert werden. Nach dem Import kann durch Eingabe von Benutzername und Passwort eine VPN-Verbindung hergestellt werden.
+Installiere Dir auf Deinem Gerät (PC, Tablet, Smartphone) den OpenVPN Client. Die heruntergeladene Datei muss nun auf das Endgerät heruntergeladen und dort in die App OpenVPN Connect (für alle Plattformen) importiert werden. Nach dem Import kann durch Eingabe von Benutzername und Passwort eine VPN-Verbindung hergestellt werden.
 
 
 Auf der OPNsense® kannst Du den Verbindungsstatus der VPN-Verbindungen unter ``VPN`` --> ``OpenVPN`` --> ``Verbindungsstatus`` überprüfen.

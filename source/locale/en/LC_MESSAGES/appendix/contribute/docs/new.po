@@ -69,7 +69,7 @@ msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:17
 msgid ""
-"Lade dir die neueste virtuelle Umgebung von hier herunter: http://www.lehrer"
+"Lade Dir die neueste virtuelle Umgebung von hier herunter: http://www.lehrer"
 ".uni-karlsruhe.de/~za3966/lmn/"
 msgstr ""
 

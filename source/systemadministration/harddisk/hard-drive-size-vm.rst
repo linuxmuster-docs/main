@@ -87,7 +87,7 @@ Die Bezeichnung `xvda` steht in XCP-ng für die 1. Festplatte der VM, `xvdb` fü
 3.3 Dateisystem prüfen
 ----------------------
 
-Lasse dir nun die aktuellen Größen des Dateisystems ausgeben.
+Lasse Dir nun die aktuellen Größen des Dateisystems ausgeben.
 
 .. code::
 
@@ -171,13 +171,13 @@ Danach erneut `fdisk` aufrufen, die 2. Partition löschen und neu mit neuer Grö
 
    p 
    
-`p` (print) zeigt dir die vorhanden Partitionen an
+`p` (print) zeigt Dir die vorhanden Partitionen an
 
 .. code::
 
    d 
    
-`d` bietet dir die Auswahl der zu löschen Partitionen durch die Angabe einer Nummer an. Hier also die 2
+`d` bietet Dir die Auswahl der zu löschen Partitionen durch die Angabe einer Nummer an. Hier also die 2
 
 .. code::
 

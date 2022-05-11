@@ -84,7 +84,7 @@ Ausgabe des Befehls liefert:
 
    df -h 
    
-Die Ausgabe zeigt dir an, dass derzeit nur der bisher verwendete Platz zu Verfügung steht:
+Die Ausgabe zeigt Dir an, dass derzeit nur der bisher verwendete Platz zu Verfügung steht:
 
 .. code::
   
@@ -137,7 +137,7 @@ Ausgabe des Befehls:
 4.7 Tests durchführen
 ---------------------
 
-Mittels `df -h`, `gpart show` und `gpart status` kannst Du überprüfen, ob die von dir gewünschte Größenänderung erfolgreich übernommen wurden.
+Mittels `df -h`, `gpart show` und `gpart status` kannst Du überprüfen, ob die von Dir gewünschte Größenänderung erfolgreich übernommen wurden.
 
 .. code::
 

@@ -98,7 +98,7 @@ Im Verzeichnis ``source`` und den entsprechenden Unterordnern befinden sich alle
    $ mkdir source/howto/foobar
    $ touch source/howto/foobar/index.rst
 
-Schaue dir auch die anderen Dokumentationsdateien an, um mehr über den Aufbau und Syntax zu lernen.
+Schaue Dir auch die anderen Dokumentationsdateien an, um mehr über den Aufbau und Syntax zu lernen.
 
 Commit und push
 ~~~~~~~~~~~~~~~

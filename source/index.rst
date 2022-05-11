@@ -20,7 +20,7 @@ Wie es bei einem Projekt ist, dessen Entwicklungsgeschichte mittlerweile auf das
 Kennst Du linuxmuster.net noch nicht,
 -------------------------------------
 
-dann empfehlen wir dir das Kapitel
+dann empfehlen wir Dir das Kapitel
 
   :ref:`what-is-linuxmuster.net-label`
 
@@ -43,7 +43,7 @@ Diese Dokumentation führt Dich durch die Vorbereitung der Virtualisierungslösu
 Weitere Hilfe
 -------------
 
-Neben dieser Dokumentation steht dir unsere Community in unserem Hilfeforum und unser kostenfreier Telefon-Support helfend zur Seite.
+Neben dieser Dokumentation steht Dir unsere Community in unserem Hilfeforum und unser kostenfreier Telefon-Support helfend zur Seite.
 
 Das Forum findest Du unter `<https://ask.linuxmuster.net>`_.
 
@@ -60,7 +60,7 @@ Dann schaue an das untere Ende der Menüleiste.
    :align: center
    :alt: Read The Docs Menu - closed
 
-Nach einem Klick eröffnen sich dir dort noch weitere Möglichkeiten:
+Nach einem Klick eröffnen sich Dir dort noch weitere Möglichkeiten:
 
 .. figure:: media/02_intro_read-the-docs-opened.png
    :align: center

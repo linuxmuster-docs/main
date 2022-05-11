@@ -85,7 +85,7 @@ Du erhälst die Rückfrage, ob die Firewall ggf. nicht konfiguriert werden soll.
    :align: center
    :alt: WebUI Setup: FW
 
-Es wird danach die Zusammenfassung der vorgenommenen Einstellungen in der Übersicht dargestellt. Du kannst die getroffenen Einstellungen auch noch prüfen lassen. Danach wird dir wie in der Abb. die geprüfte Zusammenfassung angezeigt
+Es wird danach die Zusammenfassung der vorgenommenen Einstellungen in der Übersicht dargestellt. Du kannst die getroffenen Einstellungen auch noch prüfen lassen. Danach wird Dir wie in der Abb. die geprüfte Zusammenfassung angezeigt
 
 .. figure:: media/newsetup/lmn-setup-gui-06.png
    :align: center
@@ -128,7 +128,7 @@ Es wurde beim Setup ein self-signed certificate erstellt, so dass Du dieses beim
    :align: center
    :alt: WebUI: First ssl access
 
-Der Browser zeigt dir den Warnhinweis an. Klicke auf ``Erweitert...``.
+Der Browser zeigt Dir den Warnhinweis an. Klicke auf ``Erweitert...``.
 
 .. figure:: media/newsetup/lmn-setup-gui-10.png
    :align: center
@@ -161,7 +161,7 @@ Setze die Berechtigungen nun mit folgendem Befehl als Benutzer ``root``:
 
   chmod 600 /var/log/linuxmuster/setup.*.log 
 
-Lasse dir den Inhalt des Verzeichnisses danach ausgeben und kontrollieren, ob Besitzer und Gruppe ``root`` sind und der Benutzer ``root`` lesen und schreiben darf. 
+Lasse Dir den Inhalt des Verzeichnisses danach ausgeben und kontrollieren, ob Besitzer und Gruppe ``root`` sind und der Benutzer ``root`` lesen und schreiben darf. 
 
 .. code::
 

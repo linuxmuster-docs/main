@@ -31,7 +31,7 @@ Bist Du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst Du fortfa
 Installation der OPNsense |reg|
 ===============================
 
-Lade dir die ISO-Datei der OPNsense |reg| von der Seite https://opnsense.org/download/ herunter.
+Lade Dir die ISO-Datei der OPNsense |reg| von der Seite https://opnsense.org/download/ herunter.
 
 .. hint::
 
@@ -43,7 +43,7 @@ Du erhältst dann ein mit bz2 komprimiertes ISO-Image. Entpacke die heruntergela
 
 Unter Windows kannst Du dies z.B. mit 7-ZIP durchführen.
 
-Unter Linux gibst Du auf der Eingabekonsole folgenden Befehl an, der dir die Datei im gleichen Ordner entpackt:
+Unter Linux gibst Du auf der Eingabekonsole folgenden Befehl an, der Dir die Datei im gleichen Ordner entpackt:
 
 .. code::
 
@@ -237,7 +237,7 @@ In einer Schulumgebung kann es sein, dass der Router keinen DHCP-Service anbiete
 
 Hier in unserem Beispiel hat die Zuordnung der Netzwerkkarten nicht geklappt, der Router sollte 192.168.21.212 der OPNsense |reg| zuweisen.
 
-Sollte bei dem WAN Interface keine, eine IP-Adresse nach dem Muster 0.0.0.0/8 oder eine andere als die von dir erwartete erscheinen, dann muss die Zuordnung der Netzwerkkarte überprüft werden. Hier beispielhaft anhand unserer Proxmox-Umgebung.
+Sollte bei dem WAN Interface keine, eine IP-Adresse nach dem Muster 0.0.0.0/8 oder eine andere als die von Dir erwartete erscheinen, dann muss die Zuordnung der Netzwerkkarte überprüft werden. Hier beispielhaft anhand unserer Proxmox-Umgebung.
 
 Anpassung der Zuordnung der Netzwerkkarten
 ------------------------------------------
@@ -262,7 +262,7 @@ und denen der Netzwerkbrücken vmbr0 und vmbr1 zu überprüfen:
 
 ``hv01`` --> ``VM100`` --> ``Hardware`` --> ``Network Device (net.)`` 
 
-Unter ``hv01`` unter ``Network`` kannst Du dir jetzt mittels des Kommentarfeldes wieder die Zuordnung ins Gedächtnis rufen.
+Unter ``hv01`` unter ``Network`` kannst Du Dir jetzt mittels des Kommentarfeldes wieder die Zuordnung ins Gedächtnis rufen.
 
 =========  ======  =================  ===  ==================  ==========  ===
 Bridge des Visualisierers             <->  Virtuelle Maschine
@@ -523,7 +523,7 @@ Falls Deine Firewall eine statische IP-Adresse hat, die nicht über DHCP erteilt
 
 Falls Dein Router eine private IP hat, musst Du den Haken bei ``Private RFC1918-Netzwerke blockieren`` entfernen. Diesen Eintrag findest Du ganz unten auf der Seite, nachdem Du runtergescrollt hast.
 
-Mit ``Weiter`` übernimmst Du die von dir gemachten Einstellungen
+Mit ``Weiter`` übernimmst Du die von Dir gemachten Einstellungen
 
 System: Assistent: Konfiguriere LAN-Schnittstelle
 -------------------------------------------------
@@ -550,7 +550,7 @@ Nachdem Du die Einstellungen übernommen hast, können sich auch die Einstellung
 
 .. figure:: media/basis_opnsense_050.png
 
-Sollte das bei dir der Fall sein, musst Du Deinem Admin PC die passende IP-Adresse 10.0.0.10/16, DNS: 10.0.0.254und das Gateway: 10.0.0.254 manuell geben. (hier exemplarisch für unseren Standard-LAN-Bereich)
+Sollte das bei Dir der Fall sein, musst Du Deinem Admin PC die passende IP-Adresse 10.0.0.10/16, DNS: 10.0.0.254und das Gateway: 10.0.0.254 manuell geben. (hier exemplarisch für unseren Standard-LAN-Bereich)
 
 Gehe dann mit einem Webbrowser auf ``https://10.0.0.254``.
 
@@ -616,7 +616,7 @@ Wenn keine Aktualisierungen verfügbar sind, erhältst Du folgende Meldung |...|
 
 |...| und kannst zum abschließenden Schritt `Logout`_ gehen.
 
-Sollten dir wie in nachstehender Abbildung unter dem Reiter ``Aktualisierungen`` zu aktualisierenden Pakete angezeigt werden |...|
+Sollten Dir wie in nachstehender Abbildung unter dem Reiter ``Aktualisierungen`` zu aktualisierenden Pakete angezeigt werden |...|
 
 .. figure:: media/basis_opnsense_057.png
 

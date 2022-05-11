@@ -25,7 +25,7 @@ Server auf lmn7.1 vorbereiten
                    `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
 
-Nachdem Du die Firewall und den Server wie beschrieben installiert hast, müssen beide Maschinen fertig konfiguriert werden. Um dieses zu vereinfachen stellen wir dir das Skript ``lmn71-prepare`` zur Verfügung.
+Nachdem Du die Firewall und den Server wie beschrieben installiert hast, müssen beide Maschinen fertig konfiguriert werden. Um dieses zu vereinfachen stellen wir Dir das Skript ``lmn71-prepare`` zur Verfügung.
 
 Das Skript lmn71-prepare
 ========================
@@ -209,7 +209,7 @@ Auch hier sind idivuelle Anpassung möglich, wenn Du nicht unsere Standardvorgab
 
    Enter physical device to use for LVM []: [ENTER]
 
-Da Du das LVM, wie von dir zuvor bei der Ubuntu-Servers-Installation festgelegt, verwenden willst musst Du an dieser Stelle einfach nur die ``[Enter]``-Taste drücken. Die bei Aufruf des Installationsscripts übergebene Option ``-x`` veranlasst, dass es so eingerichtet wird.
+Da Du das LVM, wie von Dir zuvor bei der Ubuntu-Servers-Installation festgelegt, verwenden willst musst Du an dieser Stelle einfach nur die ``[Enter]``-Taste drücken. Die bei Aufruf des Installationsscripts übergebene Option ``-x`` veranlasst, dass es so eingerichtet wird.
 
 #####
 

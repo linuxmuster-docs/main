@@ -133,7 +133,7 @@ Die Windows-Clients erlauben normalen Benutzern nicht, einen Druckertreiber zu i
   HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Printers\PointAndPrint
   RestrictDriverInstallationToAdministrators=0 (DWORD)
 
-Erzeuge den Eintrag mit dem Registrierungs-Editor direkt in die Registry oder lege dir die Datei ``win10.printer.reg`` mit folgendem Inhalt an:
+Erzeuge den Eintrag mit dem Registrierungs-Editor direkt in die Registry oder lege Dir die Datei ``win10.printer.reg`` mit folgendem Inhalt an:
 
 .. code::
 
