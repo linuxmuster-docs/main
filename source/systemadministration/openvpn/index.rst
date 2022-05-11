@@ -310,7 +310,7 @@ In der GUI der OPNsense® klickst Du links auf den Menüeintrag ``Lobby`` und si
 OpenVPN Client
 --------------
 
-Installiere dir auf deinem Gerät (PC, Tablet, Smartphone) den OpenVPN Client. Die heruntergeladene Datei muss nun auf das Endgerät heruntergeladen und dort in die App OpenVPN Connect (für alle Plattformen) importiert werden. Nach dem Import kann durch Eingabe von Benutzername und Passwort eine VPN-Verbindung hergestellt werden.
+Installiere dir auf Deinem Gerät (PC, Tablet, Smartphone) den OpenVPN Client. Die heruntergeladene Datei muss nun auf das Endgerät heruntergeladen und dort in die App OpenVPN Connect (für alle Plattformen) importiert werden. Nach dem Import kann durch Eingabe von Benutzername und Passwort eine VPN-Verbindung hergestellt werden.
 
 
 Auf der OPNsense® kannst Du den Verbindungsstatus der VPN-Verbindungen unter ``VPN`` --> ``OpenVPN`` --> ``Verbindungsstatus`` überprüfen.

@@ -33,7 +33,7 @@ Gleiches gilt für die Vorbereitung der ``from-scratch`` installierten Server.
 Das Skript lmn71-appliance
 --------------------------
 
-Das Skript lmn71-appliance installiert für dich das Paket linuxmuster-prepare mit all seinen Abhängigkeiten und es richtet die zweite Festplatte für den Serverbetrieb ein.
+Das Skript lmn71-appliance installiert für Dich das Paket linuxmuster-prepare mit all seinen Abhängigkeiten und es richtet die zweite Festplatte für den Serverbetrieb ein.
 
 * Vorbereitung: Lade das Skript hier herunter: ``wget https://raw.githubusercontent.com/linuxmuster/linuxmuster-prepare/master/lmn71-appliance``.
 * Mach das Sktipt nun ausführbar: ``chmod +x lmn71-appliance`` ausführbar

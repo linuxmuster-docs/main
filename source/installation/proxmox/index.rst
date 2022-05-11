@@ -206,11 +206,11 @@ Nach erfolgreicher Installation lasse Proxmox über `Reboot` neu starten.
 Proxmox Einrichtung
 -------------------
 
-Nach dem Neustart von Proxmox kannst Du dich über einen PC, welcher sich im selben Netz befindet, via Browser auf das grafische Webinterface zur Verwaltung des Proxmox-Hosts aufschalten. Hierzu gibst Du die URL https://192.168.199.20:8006 ein. Du erhältst ein "Warning", da ein mögliches Sicherheitsrisiko erkannt wurde. Dies ist auf das selbst ausgestellte SSL-Zertifikat des Proxmox-Host zurückzuführen. 
+Nach dem Neustart von Proxmox kannst Du Dich über einen PC, welcher sich im selben Netz befindet, via Browser auf das grafische Webinterface zur Verwaltung des Proxmox-Hosts aufschalten. Hierzu gibst Du die URL https://192.168.199.20:8006 ein. Du erhältst ein "Warning", da ein mögliches Sicherheitsrisiko erkannt wurde. Dies ist auf das selbst ausgestellte SSL-Zertifikat des Proxmox-Host zurückzuführen. 
 
 Klicke auf ``Erweitert ...``, es erscheint ein weiterer Hinweis auf das "self-signed certificate". Dieses nimmst Du nun mit dem Button ``Risiko akzeptieren und fortfahren`` an.
 
-Es erscheint die Anmeldemaske des Proxmox-Webinterface. Melde dich als User ``root`` und dem vorher gesetzten Passwort an:
+Es erscheint die Anmeldemaske des Proxmox-Webinterface. Melde Dich als User ``root`` und dem vorher gesetzten Passwort an:
 
 .. figure:: media/install-on-proxmox_10_proxmox-login.png
    :align: center
@@ -261,7 +261,7 @@ Für eine funktionierende Umgebung müssen ``zwei Netzwerkbrücken/Bridge (vSwit
 
 Eine für das ``interne Netz (green, 10.0.0.0/16)`` und eine für das ``externe Netz (red, externes Netz, Internetzugriff)``. 
 
-Nach der zuvor beschriebenen Erstinstallation von Proxmox wurde bislang nur eine sogenannte Bridge (vmbr0) eingerichtet. Diese ist mit der ersten Netzwerkschnittstelle (NIC) des Proxmox-Hosts verbunden. Das Ethernet-Kabel der 1. NIC ist mit dem (DSL)-Router verbunden. Verlief der vorherige Befehl zur Aktualisierung von Proxmox erfolgreich, so weißt du, dass diese Bridge bereits funktioniert und für die weitere Nutzung für das ``externe Netz (red) - vmbr0`` genutzt werden kann.
+Nach der zuvor beschriebenen Erstinstallation von Proxmox wurde bislang nur eine sogenannte Bridge (vmbr0) eingerichtet. Diese ist mit der ersten Netzwerkschnittstelle (NIC) des Proxmox-Hosts verbunden. Das Ethernet-Kabel der 1. NIC ist mit dem (DSL)-Router verbunden. Verlief der vorherige Befehl zur Aktualisierung von Proxmox erfolgreich, so weißt Du, dass diese Bridge bereits funktioniert und für die weitere Nutzung für das ``externe Netz (red) - vmbr0`` genutzt werden kann.
 
 Für die internen virtuellen Netze ist also eine zweite Bridge zu erstellen, die an die zweite Netzwerkkarte direkt gebunden wird. Dieser wird allerdings keine IP-Adresse zugeordnet. 
 
@@ -344,7 +344,7 @@ Anschließend Proxmox über den Button ``Reboot`` oben rechts neu starten, um di
    :align: center
    :alt: Proxmox reboot
 
-Die Netzwerkkonfiguration des Proxmox-Host kannst du, nach dem Neustart mit ``cat /etc/network/interfaces`` wie oben gezeigt in der Konsole überprüfen.
+Die Netzwerkkonfiguration des Proxmox-Host kannst Du, nach dem Neustart mit ``cat /etc/network/interfaces`` wie oben gezeigt in der Konsole überprüfen.
 
 Dort sollten sich nun nachstehende Eintragungen befinden. Bei der Bridge ``vmbr0`` muss die IP-Adresse derjenigen entsprechen, die bei der Installation eingetragenen wurde.
 
@@ -475,7 +475,7 @@ Die erste Festplatte heißt hier sda und ersetzt die pve-data-Partition, die im 
 
 .. hint::
 
-  Für folgende Schritte: Die Bezeichnungen vg-xxx & lv-xxx Namen solltest Du auf deine Festplattengrößen 
+  Für folgende Schritte: Die Bezeichnungen vg-xxx & lv-xxx Namen solltest Du auf Deine Festplattengrößen 
   entsprechend anpassen, die folgenden Grafiken dienen zur Orientierung: `vg-hdd-1000` eignet sich 
   beispielsweise für ein Volume aus einer HDD mit 1 TByte Kapazität.
 
@@ -611,7 +611,7 @@ OPNsense
 
 Die zuvor gezeigte Möglichkeit des einfachen Importes mittels den Bordmitteln von Proxmox steht dir für die OPNsense |reg| leider nicht zur Verfügung, da nur der Download einer bz2-Datei möglich ist. Dir steht der Weg des Downloads auf einen lokalen PC, der Umwandlung des bz2-File in eine iso-Datei und dann der Upload über den dir im Abschnitt Ubuntu aufgezeigten Ablauf frei. Dabei wählst Du dann nicht ``URL``, sondern ``Upload``.
 
-Um dir den Upload zu ersparen, beschreiben wir hier den Weg, um die benötigten Dateien direkt in deine Proxmox-Maschine zu bringen:
+Um dir den Upload zu ersparen, beschreiben wir hier den Weg, um die benötigten Dateien direkt in Deine Proxmox-Maschine zu bringen:
 
 Als Erstes startest Du die Konsole ``xterm.js`` wie dargestellt, falls sie nicht sowieso gestartet ist.
 
@@ -730,9 +730,9 @@ Belasse hier zunächst alle Voreinstellungen für Grafikkarte und Festplatten-Co
 Klicke dann auf ``Next``.
 
 Wähle nun hier unter ``Storage`` den geeigneten Datenspeicher auf, um die Festplatte der VM dort abzulegen. In der Abb. wird der Datenspeicher ``Dataset`` verwendet.
-In dem Drop-down Menü siehst Du alle in deinem System verfügbaren Datenspeicher.
+In dem Drop-down Menü siehst Du alle in Deinem System verfügbaren Datenspeicher.
 
-.. hint:: Folgende Größenangaben beziehen sich, wie schon geschrieben, auf eine Testumgebung. Für andere Einsatzszenarien solltest Du dich unbedingt mit den `Hardware-Anforderungen <https://docs.opnsense.org/manual/hardware.html#hardware-requirements>`_ gemäß der OPNsense |reg| -Dokumentation auseinandersetzen.
+.. hint:: Folgende Größenangaben beziehen sich, wie schon geschrieben, auf eine Testumgebung. Für andere Einsatzszenarien solltest Du Dich unbedingt mit den `Hardware-Anforderungen <https://docs.opnsense.org/manual/hardware.html#hardware-requirements>`_ gemäß der OPNsense |reg| -Dokumentation auseinandersetzen.
 
 .. figure:: media/proxmox-create-vm-opnsense-04.png
    :align: center
@@ -869,7 +869,7 @@ Belasse hier zunächst alle Voreinstellungen für Grafikkarte und Festplatten-Co
 Klicke dann auf ``Next``.
 
 Wähle nun hier unter ``Storage`` den geeigneten Datenspeicher aus, um die Festplatte der VM dort abzulegen. In der Abb. wird der Datenspeicher ``Dataset`` verwendet.
-In dem Drop-down Menü siehst Du alle in deinem System verfügbaren Datenspeicher.
+In dem Drop-down Menü siehst Du alle in Deinem System verfügbaren Datenspeicher.
 
 .. figure:: media/proxmox-create-vm-ubuntu-server-04.png
    :align: center
@@ -877,7 +877,7 @@ In dem Drop-down Menü siehst Du alle in deinem System verfügbaren Datenspeiche
 
 Für die erste Festplatte wählst Du wie in obiger Abb. |zb| 25 GiB.
 
-Füge dann mit dem Button unten links ``Add`` eine weitere Festplatte hinzu. Wähle hierbei wieder den geeigneten Datenspeicher aus und gebe nun die Größe |zb| 100 GiB, oder direkt für deine Schule die gewünschte Größe |zb| 500 GiB aus.
+Füge dann mit dem Button unten links ``Add`` eine weitere Festplatte hinzu. Wähle hierbei wieder den geeigneten Datenspeicher aus und gebe nun die Größe |zb| 100 GiB, oder direkt für Deine Schule die gewünschte Größe |zb| 500 GiB aus.
 
 .. figure:: media/proxmox-create-vm-ubuntu-server-05.png
    :align: center
@@ -919,7 +919,7 @@ Achte darauf, dass die Option ``Start after created`` unbedingt ``deaktiviert`` 
 
 Klicke dann auf ``Finish``.
 
-Nachdem die VM angelegt wurde, siehst Du diese links im Verzeichnisbaum deines Proxmox-Host, in dem alle VMs dargestellt werden.
+Nachdem die VM angelegt wurde, siehst Du diese links im Verzeichnisbaum Deines Proxmox-Host, in dem alle VMs dargestellt werden.
 
 .. figure:: media/proxmox-create-vm-ubuntu-server-10.png
    :align: center

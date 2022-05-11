@@ -44,7 +44,7 @@ erfordert managebare L2- und L3-Switche, die VLANs verwalten können. Hierzu kö
 
 Die Konfigurationsschritte für den L3-Switch werden anhand eines ``Cisco SG300-300-28`` besipielhaft dargstellt. Für die Konfiguration der L2-Switche werden die Schritte anhand eines ``Cisco SF200-24`` exemplarisch verdeutlicht. Bei dem Einsatz anderer Switche sind die dargestellten Konfigurationsschritte entsprechend anzupassen.
 
-Am Ende des Kapitels findest Du weitere Konfigurationen für andere L3-Switche, die Du zur Anpassung auf dein Netzszenario nutzen kannst.
+Am Ende des Kapitels findest Du weitere Konfigurationen für andere L3-Switche, die Du zur Anpassung auf Dein Netzszenario nutzen kannst.
 
 Geplante Netzwerkstruktur
 =========================
@@ -223,7 +223,7 @@ Upload der Konfiguration: Schritt für Schritt
    :alt: 
    :align: center
 
-Meldest Du dich als Benutzer ``cisco`` mit dem Kennwort ``cisco`` (Voreinstellungen) an.
+Meldest Du Dich als Benutzer ``cisco`` mit dem Kennwort ``cisco`` (Voreinstellungen) an.
 
 .. image:: media/sg300/003_sg300_change_pw.png
    :alt: 
@@ -254,7 +254,7 @@ Ist der Upload erfolgreich verlaufen, so muss der Switch neu gestartet werden, u
 
 Der Neustart ist über das Menü ``Administration --> File Management --> Reboot`` durchzuführen.
 
-Nach dem Neustart meldest Du dich erneut an dem L3-Switch an und kontrollieren nochmals die Switch-Ports. Hierbei ist zwischen Access-Ports (port-basierte VLANs) und Trunk-Ports zu unterscheiden.
+Nach dem Neustart meldest Du Dich erneut an dem L3-Switch an und kontrollieren nochmals die Switch-Ports. Hierbei ist zwischen Access-Ports (port-basierte VLANs) und Trunk-Ports zu unterscheiden.
 
 .. hint::
 
@@ -867,7 +867,7 @@ Die durchzuführenden Tests sind in folgende Bereiche zu unterteilen:
 Download L3-Configs
 ===================
 
-Nachstehend werden dir einige Konfigurationsdateien für L3-Switche angeboten, die Du an dein Netzszenario anpassen kannst.
+Nachstehend werden dir einige Konfigurationsdateien für L3-Switche angeboten, die Du an Dein Netzszenario anpassen kannst.
 
 Für den L3-Switch Cisco SG300-28 steht die vorbereitete Konfigurationsdatei zur Verfügung, die die Konfiguration auf dem L3-Switch so einspielt, wie diese in dieser Dokumentation beschrieben wird.
 

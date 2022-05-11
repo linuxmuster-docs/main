@@ -25,7 +25,7 @@ Linbo4, das von linuxmuster.net entwickelt wurde, weist einige Neuerungen auf:
 * Es gibt derzeit keine differentiellen Images mehr. Differentielle Images werden voraussichtlich erst wieder ab Linbo v4.1 unterstützt.
 * Bisherige Images im cloop Format sind direkt in das neue qcow2 Format zu konvertieren.
 
-Dieses Kapitel führt dich in die Nutzung von linbo4 ein und erklärt die wesentlichen Schritte zur Imageverwaltung.
+Dieses Kapitel führt Dich in die Nutzung von linbo4 ein und erklärt die wesentlichen Schritte zur Imageverwaltung.
 
 Der LINBO Startbildschirm
 -------------------------
@@ -330,11 +330,11 @@ Boot-Abbild für USB-Sticks und CD/DVD
 
 Zum Brennen auf CD/DVD oder zum Kopieren auf einen USB-Stick lädst Du zuerst das aktuelle linbo - Abbild als linbo.iso herunter.
 
-Melde dich zuerst an der Schulkonsole an:
+Melde Dich zuerst an der Schulkonsole an:
 
 https://10.0.0.1/
 
-Melde dich an der Schulkonsole als Benutzer ``global-admin`` an.
+Melde Dich an der Schulkonsole als Benutzer ``global-admin`` an.
 
 .. figure:: media/linbo-bootscreen/linbo-iso-login-school-console.png
    :align: center

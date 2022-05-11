@@ -6,9 +6,9 @@
 
 .. sectionauthor:: `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
 
-Melde dich an der Schulkonsole an, d.h. besuche mit dem Browser die
-Webseite ``https://server.linuxmuster.lan`` oder die an deiner Schule
-äquivalent vom Administrator eingerichtete Seite und melde dich mit
+Melde Dich an der Schulkonsole an, d.h. besuche mit dem Browser die
+Webseite ``https://server.linuxmuster.lan`` oder die an Deiner Schule
+äquivalent vom Administrator eingerichtete Seite und melde Dich mit
 den Schulkontodaten an.
 
 .. hint:: Dein Benutzername besteht nur aus Kleinbuchstaben und
@@ -22,7 +22,7 @@ Klicke auf der Hauptseite auf "Passwort ändern"
 
 Gib das aktuelle und zweimal ein neues Passwort ein. Beachte die
 Anforderungen an das neue Passwort, die von Schule zu Schule abweichen
-können. Informiere dafür dich bei deinem
+können. Informiere dafür Dich bei deinem
 Netzwerkberater. Standardmäßig gibt es folgende Regeln
 
   * Folgende Zeichen sind erlaubt:
@@ -51,12 +51,12 @@ In dieser Beispielfehlermeldung bestand das Passwort nur aus
 Kleinbuchstaben, Zahlen und Sonderzeichen. Es enthielt keine
 Großbuchstaben.
 
-Jetzt kannst Du dich ausloggen. Rechts oben, wo in einem Kreis dein
+Jetzt kannst Du Dich ausloggen. Rechts oben, wo in einem Kreis dein
 Bild oder Buchstabe steht erreicht man das persönliche Menü.
 
 .. figure:: media/selma-logout-menu.png
 
-Mit dem neuen Passwort kannst Du dich an allen Diensten anmelden, die
+Mit dem neuen Passwort kannst Du Dich an allen Diensten anmelden, die
 im Schulnetzwerk mit dem Schulkonto verbunden sind, z.B. auch die
 Anmeldung an PCs.
 

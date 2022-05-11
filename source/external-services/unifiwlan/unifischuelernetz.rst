@@ -8,7 +8,7 @@ Schritt für Schritt
 
 Installiere auf dem linuxmuster.net-Server das Paket linuxmuster-freeradius. Siehe :ref:`linuxmuster-freeradius-label`
 
-Melde dich am Unifi-Kontroller an `<https://unifi:8443>`_.
+Melde Dich am Unifi-Kontroller an `<https://unifi:8443>`_.
 
 Gehe zu `Einstellungen` -> `Profile` -> `NEUES RADIUS-PROFIL ERSTELLEN`.
 

@@ -49,18 +49,18 @@ Nachdem Du auf ``weiter`` geklickt hast, erscheint ein neues Dialogfenster in de
    :alt: Eigenschaften
    :align: center
 
-Als Bind DN trägst Du ``CN=global-admin,OU=Management,OU=GLOBAL,`` gefolgt von deiner DN ein. In diesem Beispiel ist das
+Als Bind DN trägst Du ``CN=global-admin,OU=Management,OU=GLOBAL,`` gefolgt von Deiner DN ein. In diesem Beispiel ist das
 ``CN=global-admin,OU=Management,OU=GLOBAL,DC=linuxmuster,DC=lan``.
 
 .. hint::
 
-   Du nutzt hier den global-admin, weil Du Schreibrechte brauchst. Sicherheitshalber solltest Du vor deiner Arbeit einen Snapshot des Servers machen. 
+   Du nutzt hier den global-admin, weil Du Schreibrechte brauchst. Sicherheitshalber solltest Du vor Deiner Arbeit einen Snapshot des Servers machen. 
      
 Klicke auf ``Anwenden und Schließen``.
 
 Der Baum des AD wird geladen und angezeigt.
 
-Schreib dich in der Schulkonsole bei den Druckern ein.
+Schreib Dich in der Schulkonsole bei den Druckern ein.
 
 .. image:: media/configure-ad-groups-05.png
    :alt: Eigenschaften

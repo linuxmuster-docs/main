@@ -25,7 +25,7 @@ Hast Du eine Liste von MAC-Addressen parat, bieten sich die Varianten 1 und 2 an
 Aufnahme über die Schulkonsole
 ------------------------------
 
-Um einen Rechner mit der Schulkonsole aufzunehmen, meldest Du dich zunächst an der Schulkonsole als ``global-admin`` an.
+Um einen Rechner mit der Schulkonsole aufzunehmen, meldest Du Dich zunächst an der Schulkonsole als ``global-admin`` an.
 
 Wähle dann links im Menü ``Geräteverwaltung --> Geräte``.
 
@@ -138,7 +138,7 @@ Dazu hat sich folgendes Vorgehen bewährt:
    :align: center
    :alt: Device Management: Linbo 4 Groups: Overview
 
-9. Hast Du für die neue Gruppe den Stift geklickt, siehst Du die Konfigurationseinstellungen für die Hardwareklasse. Klicke auf die Reiterkarte ``Partitionen`` und Du siehst die Einstellungen für die Partitionsgrössen, die für deine neu einzubindenden PCs ggf. anzupassen sind.
+9. Hast Du für die neue Gruppe den Stift geklickt, siehst Du die Konfigurationseinstellungen für die Hardwareklasse. Klicke auf die Reiterkarte ``Partitionen`` und Du siehst die Einstellungen für die Partitionsgrössen, die für Deine neu einzubindenden PCs ggf. anzupassen sind.
 
 .. figure:: media/add-devices/14-device-management-linbo4-group-partitions.png
    :align: center
@@ -180,7 +180,7 @@ Dazu hat sich folgendes Vorgehen bewährt:
    :alt: Device Management: Linbo 4 - registering client finished
 
 19. führe o.g. Vorgang für alle neu aufzunehmenden Clients durch.
-20. Wenn alle PCs lokal registriert wurden, melde dich wieder als ``global-admin`` an der **Schulkonsole** an. Wähle im Menü ``Geräteverwwaltung --> Geräte`` aus. Du siehst nun neben den schon vorhandenen Geräten ebenfalls die neu aufgenommen Geräte (in der Abb. sind dies die PCs für den Raum g202):
+20. Wenn alle PCs lokal registriert wurden, melde Dich wieder als ``global-admin`` an der **Schulkonsole** an. Wähle im Menü ``Geräteverwwaltung --> Geräte`` aus. Du siehst nun neben den schon vorhandenen Geräten ebenfalls die neu aufgenommen Geräte (in der Abb. sind dies die PCs für den Raum g202):
 
 .. figure:: media/add-devices/20-device-management-linbo4-registered-clients.png
    :align: center

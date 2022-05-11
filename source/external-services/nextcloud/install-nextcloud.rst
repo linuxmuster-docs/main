@@ -12,14 +12,14 @@ Auf einem Docker-Host sind folgende Schritte zur Installation notwendig:
 #. Erstellen einer Site für die Nextcloud in nginx.
 #. Erstellen und Starten der Nextcloud Docker App.
 
-.. hint:: Im Folgenden musst Du natürlich ``nextcloud.meine-schule.de`` durch deine URL ersetzen.
+.. hint:: Im Folgenden musst Du natürlich ``nextcloud.meine-schule.de`` durch Deine URL ersetzen.
 
 Erstellung des Zertifikats
 ==========================
 
 Zuerst musst Du dir einen Dienstenamen ausdenken und SSL-Zertifikate besorgen. Also z.B. nextcloud.meine-schule.de. 
 
-Dazu legst Du einen DNS Eintrag für deine Dockerapp, z.B. nextcloud.meine-schule.de, der auf die IP des Docker-Hosts zeigt an. Das darf auch ein CNAME sein.
+Dazu legst Du einen DNS Eintrag für Deine Dockerapp, z.B. nextcloud.meine-schule.de, der auf die IP des Docker-Hosts zeigt an. Das darf auch ein CNAME sein.
 
 Trage diesen Host in die Datei ``/etc/dehydrated/domains.txt`` ein.
 
@@ -28,11 +28,11 @@ Führe den Befehl ``dehydrated -c`` aus. Jetzt hast Du die Zertifikate im Verzei
 Erstellen einer Site für die Nextcloud in nginx
 ===============================================
 
-Wir benutzen nginx als ``Reverse-Proxy``. So können auf deinem Docker-Host viele Services wie beispielsweise ``mrbs.meine-schule.de`` und ``nextcloud.meine-schule.de`` unter der gleichen IP-Adresse laufen.
+Wir benutzen nginx als ``Reverse-Proxy``. So können auf Deinem Docker-Host viele Services wie beispielsweise ``mrbs.meine-schule.de`` und ``nextcloud.meine-schule.de`` unter der gleichen IP-Adresse laufen.
 
 Wenn beispielsweise ein Benutzer die Seite nextcloud.meine-schule.de aufruft, schaut sich nginx die URL an, die aufgerufen wurde, und liefert dann die entsprechende Seite aus.
 
-Melde dich als root auf deinem Docker-Host an.
+Melde Dich als root auf Deinem Docker-Host an.
 
 Erstelle mit ``mkdir -p /srv/docker/nextcloud`` das Verzeichnis, in das alle Nextcloud-Dateien abgelegt werden.
 
@@ -84,11 +84,11 @@ Erzeuge die Datei ``/srv/docker/nextcloud/nextcloud.nginx.conf`` mit folgendem I
     }
   }
 
-Diese conf-Datei geht davon aus, dass deine Nextcloud auf localhost:7771 erreichbar sein wird. Den Port 7771 kannst Du frei wählen. Dies muss identisch sein mit dem später in docker-compose.yml anzugebenen Port für nextcloud.
+Diese conf-Datei geht davon aus, dass Deine Nextcloud auf localhost:7771 erreichbar sein wird. Den Port 7771 kannst Du frei wählen. Dies muss identisch sein mit dem später in docker-compose.yml anzugebenen Port für nextcloud.
 
-Jetzt musst Du noch im Verzeichnis ``/etc/nginx/sites-enabled`` einen Link auf deine ``nextcloud.nginx.conf`` anlegen und nginx neu starten.
+Jetzt musst Du noch im Verzeichnis ``/etc/nginx/sites-enabled`` einen Link auf Deine ``nextcloud.nginx.conf`` anlegen und nginx neu starten.
 
-Melde dich wieder als root am Docker-Host an und lege mit ``ln -s /srv/docker/nextcloud/nextcloud.nginx.conf /etc/nginx/sites-enabled/nextcloud.meine-schule.de`` den Link an.
+Melde Dich wieder als root am Docker-Host an und lege mit ``ln -s /srv/docker/nextcloud/nextcloud.nginx.conf /etc/nginx/sites-enabled/nextcloud.meine-schule.de`` den Link an.
 
 So, jetzt musst Du nur noch mit ``systemctl restart nginx.service`` nginx neu starten.
 
@@ -102,7 +102,7 @@ Jetzt musst Du nur noch drei Dateien angelegen, die docker-compose sagen, was es
 Alles was wir jetzt machen, spielt sich im Verzeichnis ``/srv/docker/nextcloud`` ab. Später werden auch dort sämtliche Daten liegen. 
 Für eine Datensicherung musst Du nur dieses Verzeichnis sichern.
 
-Melde dich wieder als root auf dem Docker-Host an und gehe mit ``cd /srv/docker/nextcloud`` in das Verzeichnis ``/srv/docker/nextcloud``.
+Melde Dich wieder als root auf dem Docker-Host an und gehe mit ``cd /srv/docker/nextcloud`` in das Verzeichnis ``/srv/docker/nextcloud``.
 
 Die Datei Dockerfile
 --------------------
@@ -184,7 +184,7 @@ Die Datei docker-compose.yml
     db:
     nextcloud:
     
-In der Datei ``docker-compose.yml`` werden die Services deiner Nextcloud beschrieben.
+In der Datei ``docker-compose.yml`` werden die Services Deiner Nextcloud beschrieben.
 
 Das Verzeichnis ``/var/www/html`` des Webservers wird unter dem Verzeichnis ``/srv/docker/nextcloud/nextcloud`` auf dem Docker-Host abgelegt. Und das Datenverzeichnis ``/var/lib/mysql`` der Maria Datenbank wird unter dem Verzeichnis ``/srv/docker/nextcloud/db`` auf dem Docker-Host abgelegt.
 
@@ -194,7 +194,7 @@ Damit sind alle Daten im Verzeichnis ``/srv/docker/nextcloud``.
 
 Wenn Du im Verzeichnis ``/srv/docker/nextcloud`` bist, startest Du die Nextcloud mit ``docker-compose up -d --build``. 
 
-Jetzt must Du mit einem Browser die Startseite ``https://nextcloud.meine-schule.de`` deiner neuen Nextcloud aufrufen und einen Benutzernamen und ein Passwort für den Nextcloud-admin angeben.
+Jetzt must Du mit einem Browser die Startseite ``https://nextcloud.meine-schule.de`` Deiner neuen Nextcloud aufrufen und einen Benutzernamen und ein Passwort für den Nextcloud-admin angeben.
 
 .. image:: media/install-01.png
    :alt: Server - Einstellungen
@@ -217,7 +217,7 @@ Da die Nextcloud hinter dem nginx-Proxy liegt und nicht weiß, ob die Benutzer d
 Nextcloud: Hinweise config.php
 ------------------------------
 
-Melde dich an der Nextcloud als admin an und wähle links unter ``Verwaltung -> Übersicht`` aus. Es erscheinen ggf. Sicherheits- & Einrichtungswarnungen.
+Melde Dich an der Nextcloud als admin an und wähle links unter ``Verwaltung -> Übersicht`` aus. Es erscheinen ggf. Sicherheits- & Einrichtungswarnungen.
 
 Solltest Du hier einen Hinweis auf eine fehlende default phone region sehen, so kannst Du in der config.hphp den Eintrag ``'default_phone_region' => 'DE',`` ergänzen.
 

@@ -12,7 +12,7 @@ So könnte beispielsweise ein Lehrer mit seinem Smartphone eine Aufgabe abfotogr
 Schritt für Schritt
 -------------------
 
-Öffne von einem Rechner im Schulnetz den Unifi-Kontroller `<https://unifi:8443>`_ und melde dich an. 
+Öffne von einem Rechner im Schulnetz den Unifi-Kontroller `<https://unifi:8443>`_ und melde Dich an. 
 
 .. figure:: media/u13.png
    :alt: Einstellungen
@@ -24,7 +24,7 @@ Klicke unten links auf `Einstellungen`. Gehe auf `drahtlose Netzwerke` .
 
 Es ist bereits eine WLAN-Gruppe `Default` eingerichtet. Die wird Dir für den Betrieb in einer Schule ausreichen.
 
-Wie erwartet sind noch keine drahtlosen Netzwerke eingerichtet. Für dein erstes WLAN klickst Du auf `NEUES DRAHTLOSES NETZWERK HINZUFÜGEN`.
+Wie erwartet sind noch keine drahtlosen Netzwerke eingerichtet. Für Dein erstes WLAN klickst Du auf `NEUES DRAHTLOSES NETZWERK HINZUFÜGEN`.
 
 .. figure:: media/u15.png
    :alt: Netzwerke hinzufügen

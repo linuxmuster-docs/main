@@ -15,7 +15,7 @@ Wenn ein Service, wie die Nextcloud oder Moodle auf das AD des Servers zugreifen
 
 Die Firewallregel wird also eine Portweiterleitung des Ports 636 (ldaps) sein.
 
-Melde dich als root an der OpnSense an und navigiere zu ``Firewall -> NAT -> Portweiterleitung``.
+Melde Dich als root an der OpnSense an und navigiere zu ``Firewall -> NAT -> Portweiterleitung``.
 
 .. image:: media/firewall-01.png
    :alt: Firewall Portweiterleitung
@@ -27,7 +27,7 @@ Klicke auf Hinzufügen um eine neue Firewallregel hinzuzufügen und trage die fo
    :alt: Firewall Portweiterleitung ldaps
    :align: center
 
-Bei *Ziel-IP umleiten* trägst Du natürlich die IP-Adresse deines Servers ein. Im Allgemeinen wird das 10.0.0.1 sein. In der lmn6 war das 10.16.1.1.
+Bei *Ziel-IP umleiten* trägst Du natürlich die IP-Adresse Deines Servers ein. Im Allgemeinen wird das 10.0.0.1 sein. In der lmn6 war das 10.16.1.1.
 
 Firewallregel für den Zugriff über Samba
 ========================================
@@ -70,4 +70,4 @@ Klicke auf ``Hinzufügen``, um eine neue Firewallregel hinzuzufügen und trage d
    :alt: Firewall Portweiterleitung SMB
    :align: center
 
-Bei Quelle trägst Du die IP-Adresse und die Netzwerkmaske deines Docker-Hosts ein. Und bei *Ziel-IP umleiten* trägst Du wieder die IP-Adresse deines Servers ein. Im Allgemeinen wird das ``10.0.0.1`` sein. In der lmn6 war dies die IP ``10.16.1.1``.
+Bei Quelle trägst Du die IP-Adresse und die Netzwerkmaske Deines Docker-Hosts ein. Und bei *Ziel-IP umleiten* trägst Du wieder die IP-Adresse Deines Servers ein. Im Allgemeinen wird das ``10.0.0.1`` sein. In der lmn6 war dies die IP ``10.16.1.1``.

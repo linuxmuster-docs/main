@@ -37,7 +37,7 @@ Zu den Schritten 6. bis 10. findest Du nachstehend Hinweise zur Umsetzung.
 Entferne die alten Linux-Client Pakete
 --------------------------------------
 
-Hast Du den alten Linux-Client in der VM erfolgreich gestartet, meldest Du dich als Benutzer ``linuxadmin`` an.
+Hast Du den alten Linux-Client in der VM erfolgreich gestartet, meldest Du Dich als Benutzer ``linuxadmin`` an.
 
 Entferne danach die alten Linux-Client Pakete mit folgendem Befehl:
 

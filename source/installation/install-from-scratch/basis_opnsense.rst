@@ -38,7 +38,7 @@ Lade dir die ISO-Datei der OPNsense |reg| von der Seite https://opnsense.org/dow
    Die zuletzt freigegeben OPNsense Version für das Set-up von linuxmuster.net v7.1 ist die Version 22.1. 
    https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-22.1-OpenSSL-dvd-amd64.iso.bz2
 
-Nutze als Architektur ``amd64`` und als "image type" ``dvd`` und einen Mirror, der in deiner Nähe ist.
+Nutze als Architektur ``amd64`` und als "image type" ``dvd`` und einen Mirror, der in Deiner Nähe ist.
 Du erhältst dann ein mit bz2 komprimiertes ISO-Image. Entpacke die heruntergeladene Datei.
 
 Unter Windows kannst Du dies z.B. mit 7-ZIP durchführen.
@@ -77,7 +77,7 @@ Brenne die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren U
 Erster Start der Firewall
 =========================
 
-Starte dann OPNsense |reg| auf dem Rechner oder in der neu angelegten VM von deinem Installationsmedium. Je nach Virtualisierungsumgebung hast Du ggf. die ISO-Datei bereits auf den ISO-Datenspeicher des Hypervisors abgelegt. Boote dann die VM hierüber.
+Starte dann OPNsense |reg| auf dem Rechner oder in der neu angelegten VM von Deinem Installationsmedium. Je nach Virtualisierungsumgebung hast Du ggf. die ISO-Datei bereits auf den ISO-Datenspeicher des Hypervisors abgelegt. Boote dann die VM hierüber.
 
 Am Ende des Boot-Vorgangs der OPNsense |reg| gelangst Du zu folgendem Bildschirm:
 
@@ -85,7 +85,7 @@ Am Ende des Boot-Vorgangs der OPNsense |reg| gelangst Du zu folgendem Bildschirm
    :align: center
    :alt: OPNsense: First boot
 
-Melde dich als Benutzer ``installer`` mit dem Passwort ``opnsense`` an.
+Melde Dich als Benutzer ``installer`` mit dem Passwort ``opnsense`` an.
 
 Du gelangst direkt zum Installer und kannst das Layout der Tastatur festlegen.
 
@@ -126,7 +126,7 @@ Jetzt wird OPNsense |reg| auf der Festplatte installiert. Zuvor musst Du diese n
    :align: center
    :alt: OPNsense: UFS Configuration
 
-Mit ``OK`` übernimmst Du deine Auswahl.
+Mit ``OK`` übernimmst Du Deine Auswahl.
 
 Akzeptiere die Frage nach der empfohlenen Auslagerungsdatei.
 Danach erfolgt die Rückfrage, ob die Festplatte wirklich überschrieben werden soll.
@@ -175,7 +175,7 @@ Wähle danach die Option ``Exit and reboot`` aus.
 
 .. hint::
 
-   Solltest Du nicht zum Entfernen, das Installationsmedium aufgefordert werden, fahre deine neue Firewall herunter (schalte sie aus). Ansonsten gerätst Du eventuell in eine erneute Installation. Starte sie neu, nachdem Du das Installationsmedium ausgeworfen hast und fahre mit der Installation fort.
+   Solltest Du nicht zum Entfernen, das Installationsmedium aufgefordert werden, fahre Deine neue Firewall herunter (schalte sie aus). Ansonsten gerätst Du eventuell in eine erneute Installation. Starte sie neu, nachdem Du das Installationsmedium ausgeworfen hast und fahre mit der Installation fort.
 
 Der Boot-Vorgang kann dann eine Weile dauern. Vor allem, wenn der Router kein DHCP anbieten sollte.
 
@@ -187,12 +187,12 @@ Wenn alles geklappt hat, ist Folgendes zu sehen:
 
 .. hint::
 
-   Die dargestellte IPs und Netze können bei deiner OPNsense |reg| andere sein.
+   Die dargestellte IPs und Netze können bei Deiner OPNsense |reg| andere sein.
 
 Basis-Konfiguration der OPNsense |reg|
 ======================================
 
-Melde dich als ``root`` mit dem Passwort ``Muster!`` an der OPNsense |reg| an.
+Melde Dich als ``root`` mit dem Passwort ``Muster!`` an der OPNsense |reg| an.
 
 Tastaturbelegung
 ----------------
@@ -231,7 +231,7 @@ Zuerst überprüfe, ob die Tastaturbelegung richtig ist. Dazu wähle den Punkt 8
 
 Die erste Netzwerkkarte (LAN) ist mit dem pädagogischen Netz verbunden. Allerdings noch mit den falschen Netzwerkeinstellungen, da die Installationsroutine der OPNsense |reg| immer die IP 192.168.1.1/24 zuweist. Diese gilt es noch zu ändern.
 
-Die zweite Netzwerkkarte (WAN) ist mit dem Router verbunden. Die IP hängt davon ab, welche IPs via DHCP von deinem DSL_Router verteilt werden.
+Die zweite Netzwerkkarte (WAN) ist mit dem Router verbunden. Die IP hängt davon ab, welche IPs via DHCP von Deinem DSL_Router verteilt werden.
 
 In einer Schulumgebung kann es sein, dass der Router keinen DHCP-Service anbieten. In diesem Fall musst Du dafür sorgen, dass sich sowohl das Interface (WAN) der OPNsense |reg| als auch der Router im gleichen Netzwerk befinden. 
 
@@ -350,12 +350,12 @@ Die Ausgabe sollte wie folgt aussehen:
 
    Als Erstes probiere es mit dem Neustart aller Netzwerk-Dienste. Dazu wählst Du den Punkt ``11) Reload all services``. Danach wiederholst Du das Upgrade nochmals mit dem Punkt ``12) Update from console``.
 
-   Sollte die Aktualisierung immer noch nicht erfolgreich durchgeführt werden, dann überprüfe deine vorherige Netzwerk-Konfiguration auf Fehler.
+   Sollte die Aktualisierung immer noch nicht erfolgreich durchgeführt werden, dann überprüfe Deine vorherige Netzwerk-Konfiguration auf Fehler.
 
 IP-Adressen zuweisen
 --------------------
 
-Solltest Du in deiner Netzwerkkonfiguration von unserem Muster abweichen, musst Du bei nachfolgenden Schritten deiner Festlegung folgen.
+Solltest Du in Deiner Netzwerkkonfiguration von unserem Muster abweichen, musst Du bei nachfolgenden Schritten Deiner Festlegung folgen.
 
 .. figure:: media/basis_opnsense_026.png
    :align: center
@@ -435,7 +435,7 @@ Nach der letzten Eingabe startet die Übernahme in das System.
    :align: center
    :alt: OPNsense: GUI IP
 
-Nach erfolgreicher Übernahme erhältst Du den Hinweis, dass Du dich mit der LAN IP auf die GUI der OPNsense |reg| aufschalten könntest.
+Nach erfolgreicher Übernahme erhältst Du den Hinweis, dass Du Dich mit der LAN IP auf die GUI der OPNsense |reg| aufschalten könntest.
 
 .. figure:: media/basis_opnsense_040.png
    :align: center
@@ -454,9 +454,9 @@ Aktualisiere die OPNsense |reg| in der Konsole, indem Du den Punkt ``12) Update 
 
    Als Erstes probiere es mit dem Neustart aller Netzwerk-Dienste. Dazu wählst Du den Punkt ``11) Reload all services``. Danach wiederholst Du das Upgrade nochmals mit dem Punkt ``12) Update from console``.
 
-   Sollte die Aktualisierung immer noch nicht erfolgreich durchgeführt werden, dann überprüfe deine vorherige Netzwerk-Konfiguration auf Fehler.
+   Sollte die Aktualisierung immer noch nicht erfolgreich durchgeführt werden, dann überprüfe Deine vorherige Netzwerk-Konfiguration auf Fehler.
 
-Klappt das Update, startest Du die OPNsense |reg| neu, nachdem Du dich erneut eingeloggt hast.
+Klappt das Update, startest Du die OPNsense |reg| neu, nachdem Du Dich erneut eingeloggt hast.
 
 .. figure:: media/basis_opnsense_023.png
    :align: center
@@ -479,13 +479,13 @@ Du erhältst zunächst eine Zertifikatswarnung, da OPNsense |reg| ja ganz frisch
 
 .. figure:: media/basis_opnsense_041.png
 
-``Erweitert`` und anschließend ``Risiko akzeptieren und fortfahren`` bringt dich auf die Log-in-Seite.
+``Erweitert`` und anschließend ``Risiko akzeptieren und fortfahren`` bringt Dich auf die Log-in-Seite.
 
 .. figure:: media/basis_opnsense_042.png
 
-Melde dich mit ``root`` und dem Passwort ``Muster!`` an. 
+Melde Dich mit ``root`` und dem Passwort ``Muster!`` an. 
 
-Starte den General Setup Wizard mit dem ``Next``-Knopf. "Er" wird dich durch die Konfiguration führen, wobei schon einiges richtig durch die zuvor erfolgte Basis-Konfiguration eingerichtet wurde.  
+Starte den General Setup Wizard mit dem ``Next``-Knopf. "Er" wird Dich durch die Konfiguration führen, wobei schon einiges richtig durch die zuvor erfolgte Basis-Konfiguration eingerichtet wurde.  
 
 System: Assistent: Allgemeine Information
 -----------------------------------------
@@ -517,11 +517,11 @@ Nutzt Du hier DHCP z.B. eines vorgelagerten DSL-Routers, so gibst Du hier DHCP a
 
 .. figure:: media/basis_opnsense_045.png
 
-Falls deine Firewall eine statische IP-Adresse hat, die nicht über DHCP erteilt wird, trägst Du sie hier ein.
+Falls Deine Firewall eine statische IP-Adresse hat, die nicht über DHCP erteilt wird, trägst Du sie hier ein.
 
 .. figure:: media/basis_opnsense_046.png
 
-Falls dein Router eine private IP hat, musst Du den Haken bei ``Private RFC1918-Netzwerke blockieren`` entfernen. Diesen Eintrag findest Du ganz unten auf der Seite, nachdem Du runtergescrollt hast.
+Falls Dein Router eine private IP hat, musst Du den Haken bei ``Private RFC1918-Netzwerke blockieren`` entfernen. Diesen Eintrag findest Du ganz unten auf der Seite, nachdem Du runtergescrollt hast.
 
 Mit ``Weiter`` übernimmst Du die von dir gemachten Einstellungen
 
@@ -550,19 +550,19 @@ Nachdem Du die Einstellungen übernommen hast, können sich auch die Einstellung
 
 .. figure:: media/basis_opnsense_050.png
 
-Sollte das bei dir der Fall sein, musst Du deinem Admin PC die passende IP-Adresse 10.0.0.10/16, DNS: 10.0.0.254und das Gateway: 10.0.0.254 manuell geben. (hier exemplarisch für unseren Standard-LAN-Bereich)
+Sollte das bei dir der Fall sein, musst Du Deinem Admin PC die passende IP-Adresse 10.0.0.10/16, DNS: 10.0.0.254und das Gateway: 10.0.0.254 manuell geben. (hier exemplarisch für unseren Standard-LAN-Bereich)
 
 Gehe dann mit einem Webbrowser auf ``https://10.0.0.254``.
 
 .. hint:: 
 
-   Falls Du dich für das Netz der linuxmuster.net v6.2 entschieden hast, solltest Du die IP-Adresse 10.16.0.10/12, DNS: 10.16.1.254 und das Gateway 10.16.1.254 verwenden.
+   Falls Du Dich für das Netz der linuxmuster.net v6.2 entschieden hast, solltest Du die IP-Adresse 10.16.0.10/12, DNS: 10.16.1.254 und das Gateway 10.16.1.254 verwenden.
   
    Du solltest dann auch mit einem Webbrowser auf https://10.16.1.254 gehen.
 
 Du erhältst eventuell wieder eine Zertifikatswarnung. Akzeptiere diese und fahre fort.
 
-Melde dich wieder mit ``root`` und dem Passwort ``Muster!`` an.
+Melde Dich wieder mit ``root`` und dem Passwort ``Muster!`` an.
 
 DHCP abschalten
 ---------------
@@ -570,7 +570,7 @@ Jetzt musst Du den DHCP-Service der Firewall abschalten. Der wird ja später vom
 
 .. figure:: media/basis_opnsense_051.png
 
-Gehe auf ``Dienste -> DHCPv4 -> [LAN]`` und lösche den Haken bei ``Aktivieren``, wenn gesetzt. ``Speichern`` lässt dich deine Einstellungen unten auf der Seite.
+Gehe auf ``Dienste -> DHCPv4 -> [LAN]`` und lösche den Haken bei ``Aktivieren``, wenn gesetzt. ``Speichern`` lässt Dich Deine Einstellungen unten auf der Seite.
 
 Zusätzliche Netzwerkkarte hinzufügen (Optional)
 -----------------------------------------------
@@ -581,7 +581,7 @@ Wie das geht, siehst Du im Folgenden:
 
 .. figure:: media/basis_opnsense_052.png
 
-Bei ``Schnittstellen -> Zuweisungen`` drückst Du ``+``, um die dritte Schnittstelle deinem System hinzuzufügen. Diese dritte Schnittstelle ist dann als ``OPT1`` im System bekannt. OPT1 muss nur noch aktiviert und es muss ihr noch eine IP-Adresse zugewiesen werden. 
+Bei ``Schnittstellen -> Zuweisungen`` drückst Du ``+``, um die dritte Schnittstelle Deinem System hinzuzufügen. Diese dritte Schnittstelle ist dann als ``OPT1`` im System bekannt. OPT1 muss nur noch aktiviert und es muss ihr noch eine IP-Adresse zugewiesen werden. 
 
 .. figure:: media/basis_opnsense_053.png
 
@@ -622,9 +622,9 @@ Sollten dir wie in nachstehender Abbildung unter dem Reiter ``Aktualisierungen``
 
 .. hint::
 
-   Falls Du nicht ins Internet kommst, kann es an der Gateway-Einstellung liegen. Gehe auf ``System`` --> ``Gateways`` --> ``Einzeln`` und editiere dein Gateway (WANGW).
+   Falls Du nicht ins Internet kommst, kann es an der Gateway-Einstellung liegen. Gehe auf ``System`` --> ``Gateways`` --> ``Einzeln`` und editiere Dein Gateway (WANGW).
 
-   Setze einen Haken bei ``Deaktiviere Gatewayüberwachung``, speichere die Einstellung und übernimm die Änderung. Jetzt ist dein Gateway online und Du kommst ins Internet. Erstaunlicherweise kannst Du die Gatewayüberwachung wieder aktivieren, ohne dass das Gateway offline geht.
+   Setze einen Haken bei ``Deaktiviere Gatewayüberwachung``, speichere die Einstellung und übernimm die Änderung. Jetzt ist Dein Gateway online und Du kommst ins Internet. Erstaunlicherweise kannst Du die Gatewayüberwachung wieder aktivieren, ohne dass das Gateway offline geht.
 
 |...| dann klicke in o.g. Fenster ``Jetzt aktualisieren``. 
 

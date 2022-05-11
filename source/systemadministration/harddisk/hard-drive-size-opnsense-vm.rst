@@ -12,7 +12,7 @@ Aktualisieren der Festplattengrößen der OPNsense®-VM
 
 .. hint::
 
-   Diesen Abschnitt musst Du nur ausführen, sofern Du in deinem Hypervisor die HDD-Größe der OPNsense® bereits vergrößert hast.
+   Diesen Abschnitt musst Du nur ausführen, sofern Du in Deinem Hypervisor die HDD-Größe der OPNsense® bereits vergrößert hast.
    
 Überblick
 ---------

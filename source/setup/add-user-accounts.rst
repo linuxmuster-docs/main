@@ -10,7 +10,7 @@
 
 In einer Schule müssen meist mehrere hundert bis einige tausend Schüler als Benutzer angelegt werden. Die Schulkonsole (WebUI) erlaubt das Einlesen aller Schülerdaten aus einer Text-Datei, die z.B. aus dem Schulverwaltungsprogramm der Schule bezogen wurde. Anschließend werden Konten aller Schüler dieser Liste, die im System noch nicht vorhanden sind, angelegt, solche mit einer neuen Klasse versetzt und Konten nicht mehr aufgeführter Schüler schrittweise aus dem System entfernt.
 
-In diesen Abschnitten wird beispielhaft ein Lehrer händisch angelegt und per Datei-Import einige Schüler aufgenommen. Melde dich dafür an der Schulkonsole als ``global-admin`` an.
+In diesen Abschnitten wird beispielhaft ein Lehrer händisch angelegt und per Datei-Import einige Schüler aufgenommen. Melde Dich dafür an der Schulkonsole als ``global-admin`` an.
 
 
 Zeichenkodierung wählen

@@ -9,7 +9,7 @@ Anpassen der Festplattengröße
                    `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_,
                    `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
-Must Du aufgrund geänderter Anforderungen die bereits eingerichteten Festplattengrößen in deiner Virtualisierungsumgebung ändern,
+Must Du aufgrund geänderter Anforderungen die bereits eingerichteten Festplattengrößen in Deiner Virtualisierungsumgebung ändern,
 dann ist es hilfreich, sich an nachstehend beschriebenen aAblauf und Hinweisen zu orientieren.
 
 
@@ -31,8 +31,8 @@ Folgender Ablauf zur Anpassung der Festplattengrößen ist einzuhalten:
 Anpassung Hypervisor
 --------------------
 
-Starte nun mit Punkt 1, indem Du nachstehend deine eingesetzte Virtualisierungsumgebung auswählst und
-gemäß der Dokumentation die Festplattengröße deiner VMs im Hypervisor anpasst.
+Starte nun mit Punkt 1, indem Du nachstehend Deine eingesetzte Virtualisierungsumgebung auswählst und
+gemäß der Dokumentation die Festplattengröße Deiner VMs im Hypervisor anpasst.
 
 =================================== ======================
 Vorbereiten der Proxmox-Festplatten |follow_me2proxmox-hd|

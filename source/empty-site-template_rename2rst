@@ -33,13 +33,13 @@ Eventuell kannst Du uns helfen dieses zu ändern. Es gibt verschiedene Möglichk
 
     Unsere :ref:`guidelines-label` zeigen dir welche Absprachen wir diesbezüglich getroffen haben. Schicke uns deinen Inhalt für diese Seite an eine der zuvor genannten Adressen.
 
-* Hast Du eventuell schon einen git-hub-Account oder wolltest dich schon immer mit git befassen.
+* Hast Du eventuell schon einen git-hub-Account oder wolltest Dich schon immer mit git befassen.
  
     Wir nutzen für die Organisation unserer Dokumentation git. Aus dem in github gehosteten RST-Files werden automatisch via ReadTheDocs (Sqhinx) diese Seiten hier erzeugt. 
  
     So hättest Du direkt die Möglichkeit unsere Dokumentation zu verbessern. Dafür gibt es den Button der sich immer oben rechts auf den Seiten befindet: **Edit on GitHub**. Eine Beschreibung findest Du hier: :ref:`edit-on-github-label`
 
-* Du willst git auf deinem Rechner einsetzen um dort lokal arbeiten zu können.
+* Du willst git auf Deinem Rechner einsetzen um dort lokal arbeiten zu können.
 
     Auch dafür stehen wir dir hilfreich zur Seite, wie das geht haben wir hier :ref:`new-label` beschrieben.
   

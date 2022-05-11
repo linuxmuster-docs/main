@@ -49,7 +49,7 @@ Das Schloss zeigt an, dass das Kopieren der VM gestartet ist. Dieses siehst Du a
    :align: center
    :alt: Snapshot Schritt 1.5
 
-Dort erkennst du, wann der Vorgang abgeschlossen ist.
+Dort erkennst Du, wann der Vorgang abgeschlossen ist.
 
 .. figure:: media/hdd-preparation-on-proxmox_0_6_vm-overview.png
    :align: center
@@ -72,7 +72,7 @@ Ausgangssituation:
    :align: center
    :alt: Schritt 2.1
 
-Die OPNsense®-VM wurde mit dem Namen `lmn7-opnsense` und der `VM-ID: 200` angelegt. In der Übersicht erkennst du, dass derzeit
+Die OPNsense®-VM wurde mit dem Namen `lmn7-opnsense` und der `VM-ID: 200` angelegt. In der Übersicht erkennst Du, dass derzeit
 eine Festplatte mit einer Größe von 10 GiB eingerichtet wurde. 
 Für den Einsatz in einem Produktivserver einer Schule dürfte dies zu klein sein. Die Festplattengröße kannst Du nun wie folgt anpassen:
 

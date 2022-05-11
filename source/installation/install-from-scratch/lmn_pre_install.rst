@@ -37,7 +37,7 @@ Das Skript lmn71-prepare
 Installtions des Pakets ``linuxmuster-prepare``
 -----------------------------------------------
 
-Wenn Du nicht mehr an deinem Server eingeloggt bist, melde dich erneut an.
+Wenn Du nicht mehr an Deinem Server eingeloggt bist, melde Dich erneut an.
 
 Führe danach folgende Befehle in der Eingabekonsole aus:
 
@@ -76,7 +76,7 @@ Nachdem Du den Befehl mit ``J`` bestätigt hast, lädt er das Skript lmn71-prepa
 
 .. attention:: Wichtiger Hinweis, schon jetzt! 
 
-   Solltest Du mit deiner Konfiguration von unseren Standard-Vorgaben bei dem zuletzt genannten Punkt abweichen, müssen deine Einstellungen unbedingt vor dem Aufruf des Skiptes lmn71-prepare eingearbeitet sein!
+   Solltest Du mit Deiner Konfiguration von unseren Standard-Vorgaben bei dem zuletzt genannten Punkt abweichen, müssen Deine Einstellungen unbedingt vor dem Aufruf des Skiptes lmn71-prepare eingearbeitet sein!
 
    :ref:`basis_opnsense`
    
@@ -85,13 +85,13 @@ Nachdem Du den Befehl mit ``J`` bestätigt hast, lädt er das Skript lmn71-prepa
 Letzter Test vor Anwendung des Skriptes "lmn71-prepare"
 -------------------------------------------------------
 
-Als letzte Überprüfung bevor Du das Skript einsetzt, verbinde dich vom Server aus mit der Firewall via ssh.
+Als letzte Überprüfung bevor Du das Skript einsetzt, verbinde Dich vom Server aus mit der Firewall via ssh.
 
 .. code-block:: Bash
 
    ssh root@10.0.0.254
 
-Du solltest dich nach der Eingabe des Passwortes ``Muster!`` auf den Konsole der OPNsense |reg| wiederfinden. Eventuell musst Du auch vorher deren Key akzeptieren. Mit ``0`` solltest Du dich wieder ausloggen und zurück auf der Server-Konsole sein.
+Du solltest Dich nach der Eingabe des Passwortes ``Muster!`` auf den Konsole der OPNsense |reg| wiederfinden. Eventuell musst Du auch vorher deren Key akzeptieren. Mit ``0`` solltest Du Dich wieder ausloggen und zurück auf der Server-Konsole sein.
 
 Sollte dieser Test erfolgreich sein, steht der abschließenden Vorbereitung nichts mehr im Wege:
 
@@ -138,7 +138,7 @@ Installation mit unseren Standardvorgaben
 
    lmn71-prepare -i -u -p server
 
-Jetzt ist es an der Zeit, dass Du dich zurücklehnst und den Verlauf beobachtest.
+Jetzt ist es an der Zeit, dass Du Dich zurücklehnst und den Verlauf beobachtest.
 
 Nach dem das Skript abgearbeitet ist, steht dem :ref:`setup-label` nichst mehr im Wege.
 
@@ -151,7 +151,7 @@ Installation mit deinen Vorgaben:
 
    lmn71-prepare -i -x -p server
 
-Ausgabe des Befehls und deine Eingaben
+Ausgabe des Befehls und Deine Eingaben
 
 .. code-block:: Bash
 
@@ -179,7 +179,7 @@ An dieser Stelle ist die Eingabe eines abweichenden Netzwerk-Bereichs möglich, 
 
    Enter firewall ip address [10.112.0.254]:
 
-Die Adresse der Firewall wird automatisch deiner zuvor gemachten Eingabe angepasst. Alternativ könntest Du sie anpassen, wenn die Firewall eine andere als die angezeigte haben sollte. Weiter mit ``[ENTER]`` 
+Die Adresse der Firewall wird automatisch Deiner zuvor gemachten Eingabe angepasst. Alternativ könntest Du sie anpassen, wenn die Firewall eine andere als die angezeigte haben sollte. Weiter mit ``[ENTER]`` 
 
 .. code-block:: Bash
 
@@ -213,6 +213,6 @@ Da Du das LVM, wie von dir zuvor bei der Ubuntu-Servers-Installation festgelegt,
 
 #####
 
-Jetzt ist es an der Zeit, dass Du dich zurücklehnst und den Verlauf beobachtest.
+Jetzt ist es an der Zeit, dass Du Dich zurücklehnst und den Verlauf beobachtest.
 
 Nach dem das Skript abgearbeitet ist, steht dem :ref:`setup-label` nichst mehr im Wege.

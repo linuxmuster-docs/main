@@ -68,6 +68,6 @@ Solltest Du in den Log-Dateien oder bei der Installation folgenden Hinweis finde
    You should consider upgrading via the '/usr/bin/python3 -m pip install --upgrade pip' command.
 
 
-Danach musst Du noch deine Linbo 2.4 Images auf Linbo 4 migrieren. Führe dies wie hier :ref:`migration-linbo-label` beschrieben durch.
+Danach musst Du noch Deine Linbo 2.4 Images auf Linbo 4 migrieren. Führe dies wie hier :ref:`migration-linbo-label` beschrieben durch.
 
-Danach ist dein Update auf linuxmuster v7.1 abgeschlossen und Du kannst wie bisher auch weiterarbeiten.
+Danach ist Dein Update auf linuxmuster v7.1 abgeschlossen und Du kannst wie bisher auch weiterarbeiten.
