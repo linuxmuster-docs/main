@@ -51,7 +51,7 @@ Achte darauf, dass Du ``Anmeldedaten in Datenbank speichern`` wählst.
 
    Bei Auswahl dieser Option ist zu beachten, dass die Anmeldedaten in der Datenbank symmetrisch verschlüsselt werden. Der Schlüssel dazu wird in der config.php hinterlegt. Dies kann ein Sicherheitsrisiko darstellen, wenn der Server kompromittiert worden sein sollte. Der bessere Weg wäre, die Option **Anmeldedaten in Sitzung speichern** dies hat aber andere Nebeneffekte, so dass die Einbindung nicht erfolgreich funktioniert.
 
-Ob Du die Vorschau aktivierst oder nicht hängt vom Standort der Nextcloud ab. Ist die Nextcloud nicht in der Schule gehostet und ist deine Internet-Verbindung eher langsam, so ist es besser, wenn Du den Haken bei ``Vorschau aktivieren`` nicht setzt.
+Ob Du die Vorschau aktivierst oder nicht hängt vom Standort der Nextcloud ab. Ist die Nextcloud nicht in der Schule gehostet und ist Deine Internet-Verbindung eher langsam, so ist es besser, wenn Du den Haken bei ``Vorschau aktivieren`` nicht setzt.
 
 .. image:: media/SMB04.png
    :alt: Vorschau aktivieren

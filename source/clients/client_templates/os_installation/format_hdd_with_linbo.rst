@@ -45,7 +45,7 @@ Es erscheint dann das LINBO-Tools Menü.
    :align: center
    :alt: LINBO password screen
 
-Wähle hier nun den Eintrag ``Festplatte partitionieren`` aus, damit die Festplatte deines Clients wie zuvor in der Hardwareklasse angegeben, partitioniert und formatiert wird. Bevor der Vorgang angewendet wird, erhälst Du die Rückfrage, ob damit wirklich alle Daten auf dem Laufwerk gelöscht werden sollen.
+Wähle hier nun den Eintrag ``Festplatte partitionieren`` aus, damit die Festplatte Deines Clients wie zuvor in der Hardwareklasse angegeben, partitioniert und formatiert wird. Bevor der Vorgang angewendet wird, erhälst Du die Rückfrage, ob damit wirklich alle Daten auf dem Laufwerk gelöscht werden sollen.
 
 Bestätige dies mit ``Ja``. 
 

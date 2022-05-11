@@ -11,7 +11,7 @@ Wenn Du einen Fehler (Rechtschreibfehler, kleine inhaltliche Fehler, etc.) in de
 
 Damit wirst Du auf github.com geleitet. Mit einem Klick auf den Stift
 (siehe Bild) kannst Du das aktuelle Kapitel bearbeiten. Dafür müsst
-du dich bei GitHub anmelden. Wenn Du noch kein Konto bei GitHub
+du Dich bei GitHub anmelden. Wenn Du noch kein Konto bei GitHub
 hast, kannst Du `hier eines anlegen <https://github.com/join>`_
 oder oben rechts auf "Sign up" klicken.
 
@@ -37,9 +37,9 @@ Dein Änderungsvorschlag wird dann vom Dokumentationsteam geprüft und gegebenen
 
 .. hint:: 
 
-   Bitte beachte auch unbedingt die :doc:`Leitlinien zur Dokumentation <guidelines>`, damit deine Änderungen schnell eingepflegt werden könnnen!
+   Bitte beachte auch unbedingt die :doc:`Leitlinien zur Dokumentation <guidelines>`, damit Deine Änderungen schnell eingepflegt werden könnnen!
 
-Sollest Du bereits Schreibrechte am Repositorium haben und bist dir sicher, dass die Dokumentation durch deine Änderung nicht beeinträchtigt wird, kannst Du die Änderungen direkt einbauen ("Commit") oder im Zweifel einen Zweig und einen so genannten Pull-Request erstellen.
+Sollest Du bereits Schreibrechte am Repositorium haben und bist dir sicher, dass die Dokumentation durch Deine Änderung nicht beeinträchtigt wird, kannst Du die Änderungen direkt einbauen ("Commit") oder im Zweifel einen Zweig und einen so genannten Pull-Request erstellen.
 
 .. figure:: media/05_edit-on-github_commit-changes.png
    :align: center

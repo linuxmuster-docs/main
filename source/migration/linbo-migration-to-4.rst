@@ -44,7 +44,7 @@ Folgende Änderungen sollte man auch beachten:
 Konvertieren der LINBO 2.4 Images
 =================================
 
-1. Konvertiere deine Cloop-Images in das qcow2 Format mithilfe von ``linbo-cloop2qcow2``. Wechsle dazu in das Linbo-Verzeichnis und rufe den Befehl mit dem zu konvertierenden Dateinamen auf:
+1. Konvertiere Deine Cloop-Images in das qcow2 Format mithilfe von ``linbo-cloop2qcow2``. Wechsle dazu in das Linbo-Verzeichnis und rufe den Befehl mit dem zu konvertierenden Dateinamen auf:
 
 .. code::
 

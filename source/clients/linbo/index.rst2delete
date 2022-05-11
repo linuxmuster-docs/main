@@ -108,7 +108,7 @@ Die Schritte 1-5 sind für Windows und Linux identisch, sie sind nachstehend bes
 Hardwareklasse (HWK) / Gruppe erstellen
 =======================================
 
-Melde dich als Benutzer ``global-admin`` an der Web-UI an.
+Melde Dich als Benutzer ``global-admin`` an der Web-UI an.
 
 .. figure:: media/01-webui-login.png
    :align: center
@@ -122,7 +122,7 @@ Erstelle nun die Konfiguration für die neue Hardwareklasse. Dafür klickst Du l
 
 Nun klickst Du unten links auf ``+ERSTELLEN``.
 
-Es öffnet sich ein Kontextmenü. Du kannst entweder ein leere start.conf nutzen, oder ein bereits vordefiniertes Template für dein gewünschtes Betriebssystem auswählen.
+Es öffnet sich ein Kontextmenü. Du kannst entweder ein leere start.conf nutzen, oder ein bereits vordefiniertes Template für Dein gewünschtes Betriebssystem auswählen.
 
 .. figure:: media/03-webui-menue-linbo-create-start-template.png
    :align: center
@@ -148,7 +148,7 @@ Unter ``Partitionen`` legst Du fest, welche Partitionen auf der Festplatte vorge
    :align: center
    :alt: WebUI linbo edit new hwc group - partition scheme
 
-Löschst Du dort z.B. die Partitionen ``swap`` und ``data`` so sieht deine Partitionierung wie folgt aus:
+Löschst Du dort z.B. die Partitionen ``swap`` und ``data`` so sieht Deine Partitionierung wie folgt aus:
 
 .. figure:: media/07-webui-linbo-edit-new-group-partition-scheme-edited.png
    :align: center
@@ -288,7 +288,7 @@ In diese neue Zeile gibst Du unter Raum den Namen des Raumes (hier ``server``) e
 
 .. hint:: Verwende nicht eine IP-Adresse aus dem Bereich der Rechneraufnahme.
 
-Im Feld ``Gruppe`` trägst Du den Namen deiner Hardwareklasse ein und im Feld ``PXE`` wählst Du ``Linbo PXE`` aus.
+Im Feld ``Gruppe`` trägst Du den Namen Deiner Hardwareklasse ein und im Feld ``PXE`` wählst Du ``Linbo PXE`` aus.
 
 Die Schaltfläche ``SPEICHERN`` überprüft die Eingabe. Mit ``SPEICHERN & IMPORTIEREN`` werden die neuen Geräte importiert.
 
@@ -314,7 +314,7 @@ Danach erscheinen einige Log-Meldungen und - wenn der Import erfolgreich war - `
 
    Nachstehende Hinweise gelten nur für eine VM unter XCP-ng.
 
-   Unter XCP-ng 8.2 sind nachstehende Anpassungen erforderlich, da sonst während des Linbo Boot-Vorgangs ein Hinweis erscheint, dass die Farbtiefe nicht dargestellt werden kann. Rufe auf dem Server die Datei Grub-Datei deiner Hardwareklasse z.B. ``/srv/linbo/boot/grub/20210426_focalfossa_base.cfg`` auf.
+   Unter XCP-ng 8.2 sind nachstehende Anpassungen erforderlich, da sonst während des Linbo Boot-Vorgangs ein Hinweis erscheint, dass die Farbtiefe nicht dargestellt werden kann. Rufe auf dem Server die Datei Grub-Datei Deiner Hardwareklasse z.B. ``/srv/linbo/boot/grub/20210426_focalfossa_base.cfg`` auf.
 
    Ersetze dort den Eintrag
 

@@ -46,11 +46,11 @@ GitHub Konto erstellen
 
 Spätestens jetzt solltest Du ein Konto bei GitHub erstellen: https://github.com/join. 
 
-Verifziere deine E-Mail-Adresse. Natürlich kannst Du die Dokumentation zu GitHub durchlesen. Weiter geht es dann unter https://github.com/linuxmuster-docs/main
+Verifziere Deine E-Mail-Adresse. Natürlich kannst Du die Dokumentation zu GitHub durchlesen. Weiter geht es dann unter https://github.com/linuxmuster-docs/main
 
 .. hint::
 
-   Im folgenden wird das Konto "lmn-docs-bot" verwendet. Überall wo dieser auftaucht, ersetze ihn durch dein Kontonamen bei GitHub.
+   Im folgenden wird das Konto "lmn-docs-bot" verwendet. Überall wo dieser auftaucht, ersetze ihn durch Dein Kontonamen bei GitHub.
 
 Linuxmuster Dokumentation forken
 --------------------------------
@@ -81,7 +81,7 @@ Du kannst nun mit
    linuxadmin@lmn-docs:~/my-docs$ make clean && make html
    linuxadmin@lmn-docs:~/my-docs$ firefox build/html/index.html
 
-die Dokumentation in HTML übersetzen und diese lokal in deinem Browser öffnen.
+die Dokumentation in HTML übersetzen und diese lokal in Deinem Browser öffnen.
 
 Dokumentation ändern oder neu erstellen
 ---------------------------------------
@@ -107,7 +107,7 @@ Hast Du alle Änderungen vorgenommen, kannst Du diese nun zur Überprüfung einr
 
 .. important::
 
-   Überprüfe bitte zuerst, ob ``make clean && make html`` ohne Fehler durchläuft! Falls nicht, behebe bitte alle Fehler und Warnungen, bevor Du deine Änderungen hochlädst!
+   Überprüfe bitte zuerst, ob ``make clean && make html`` ohne Fehler durchläuft! Falls nicht, behebe bitte alle Fehler und Warnungen, bevor Du Deine Änderungen hochlädst!
 
 .. code::
 

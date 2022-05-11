@@ -83,14 +83,14 @@ Für den ``binduser`` ist die Domäne anzupassen, so dass mit o.g. Beispiel die 
 
 In der Zeile darunter ist das Kennwort des ``binduser`` einzutragen. Dieses Passwort des neuen Bind-Users erhälst Du mit dem Befehl unter 3., den Du auf dem linuxmuster.net Server absetzen musst. Dass Passwort trägst Du hier ein.
 
-Als ``Base-DN`` trägst Du ``OU=default-school,OU=SCHOOLS,`` gefolgt von deiner Domain (z.B. DC=schule,DC=meineschule,DC=de) ein.
+Als ``Base-DN`` trägst Du ``OU=default-school,OU=SCHOOLS,`` gefolgt von Deiner Domain (z.B. DC=schule,DC=meineschule,DC=de) ein.
 
-Solltest Du auf deinem Sever ein self-signed certificate verwenden, so sind die Einstellungen unter ``Fortgeschritten -> Verbindungseinstellungen`` wichtig, die später in dieser Dokumentation dargestellt werden.
+Solltest Du auf Deinem Sever ein self-signed certificate verwenden, so sind die Einstellungen unter ``Fortgeschritten -> Verbindungseinstellungen`` wichtig, die später in dieser Dokumentation dargestellt werden.
 
 Einstellungen: Benutzer
 =======================
 
-Wenn Du mit einem Tool wie Apache Directory Studio die Attribute eines Lehrer-Accounts anschaust, siehst du, dass Du sie an zwei Attributen erkennst:
+Wenn Du mit einem Tool wie Apache Directory Studio die Attribute eines Lehrer-Accounts anschaust, siehst Du, dass Du sie an zwei Attributen erkennst:
 ``objectClass=person`` und ``sophomorixRole=teacher``.
 
 Bei Schüler-Accounts ist ``sophomorixRole=student``.
@@ -179,7 +179,7 @@ Einstellungen Fortgeschritten
    :alt: Verbindungseinstellungen
    :align: center
 
-Setze eine Häkchen bei ``Konfiguartion aktiv`` und, falls dein Server mit einem selbstsigniertem Zertifikat arbeitet, auch bei ``Schalten Sie die SSL-Zertifikatsprüfung aus``.
+Setze eine Häkchen bei ``Konfiguartion aktiv`` und, falls Dein Server mit einem selbstsigniertem Zertifikat arbeitet, auch bei ``Schalten Sie die SSL-Zertifikatsprüfung aus``.
 
 .. image:: media/image_7.png
    :alt: Ordnereinstellungen
@@ -193,7 +193,7 @@ In ``Benutzersucheigenschaften`` gibst Du ``sn`` und ``givenName`` ein. So könn
 
 Im Feld ``Standard-Kontingent`` wird festgelegt, wie viel Speicher dem Benutzer auf der Nextcloud zur Verfügung steht. Da die Benutzer ihre Daten eigentlich auf dem Schulserver und nicht auf der Nextcloud speichern sollen, hälst Du diesen Wert eher klein. 
 
-Das ``"$home"Platzhalter-Feld`` brauchst du, wenn Du die Home-Verzeichnisse auch in der Nextcloud zur Verfügung stellen möchtest.
+Das ``"$home"Platzhalter-Feld`` brauchst Du, wenn Du die Home-Verzeichnisse auch in der Nextcloud zur Verfügung stellen möchtest.
 
 So, das war's. Sicherheitshalber gehst Du nochmal auf den Reiter ``Experte`` und klicks auf  ``Lösche LDAP-Benutzernamenzuordung`` und ``Lösche LDAP-Gruppennamenzuordung``.
 

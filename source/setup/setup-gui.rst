@@ -14,7 +14,7 @@ Die Weboberfläche (WebUI/Schulkonsole) erreicht man über einen Browser eines G
 konfiguriert man den Admin-PC mit der festen IP-Adresse ``10.0.0.10`` (entsprechend ``x.x.x.10`` in jeder anderen Netzwerkkonfiguration) der
 Netzwerkmaske ``255.255.0.0``, dem Gateway ``10.0.0.254`` und dem DNS-Eintrag ``10.0.0.1``.
 
-Öffne auf dem Admin-PC mit einem Webbrowser die URL ``http://10.0.0.1``. Melde dich hier einmalig mit dem Benutzer ``root`` und dem Passwort ``Muster!`` an.
+Öffne auf dem Admin-PC mit einem Webbrowser die URL ``http://10.0.0.1``. Melde Dich hier einmalig mit dem Benutzer ``root`` und dem Passwort ``Muster!`` an.
     
 .. figure:: media/newsetup/lmn-setup-gui-00.png
    :align: center
@@ -48,7 +48,7 @@ Im nächsten Dialog musst Du den Schulnamen, die Stadt, das Bundesland und das L
 
 .. hint:: 
 
-   schule.de oder linuxmuster.lan stellen den Domainnamen mit der sog. Top Lebel Domain (TLD) dar. Die TLD lan wird nicht extern verwendet, sondern ist nur für den  internen Gebrauch sinnvoll. Die TLD de wird extern genutzt. Hat deine Schule die De-Domain meineschule.de registriert, dann musst Du hier eine Subdomain angeben, die zugleich die sog. Samba-Domain darstellt. Für den Namen dieser Sub-/Samba-Domain gibt es Einschränkungen, die unbedingt beachtet werden müssen: Es werden nur englische Kleinbuchstaben a bis z akzeptiert. Sonst keinerlei Zeichen. Es dürfen zudem maximal 15 Zeichen verwendet werden. **Richtig**: gshoenningen (12 Zeichen, keine Umlaute und Satzzeichen etc.), **Falsch**: GSO-Heinrich-Böll-Hönningen (26 Zeichen, Großbuchstaben, Umlaute, Bindestriche)
+   schule.de oder linuxmuster.lan stellen den Domainnamen mit der sog. Top Lebel Domain (TLD) dar. Die TLD lan wird nicht extern verwendet, sondern ist nur für den  internen Gebrauch sinnvoll. Die TLD de wird extern genutzt. Hat Deine Schule die De-Domain meineschule.de registriert, dann musst Du hier eine Subdomain angeben, die zugleich die sog. Samba-Domain darstellt. Für den Namen dieser Sub-/Samba-Domain gibt es Einschränkungen, die unbedingt beachtet werden müssen: Es werden nur englische Kleinbuchstaben a bis z akzeptiert. Sonst keinerlei Zeichen. Es dürfen zudem maximal 15 Zeichen verwendet werden. **Richtig**: gshoenningen (12 Zeichen, keine Umlaute und Satzzeichen etc.), **Falsch**: GSO-Heinrich-Böll-Hönningen (26 Zeichen, Großbuchstaben, Umlaute, Bindestriche)
 
 .. figure:: media/newsetup/lmn-setup-gui-03.png
    :align: center
@@ -111,13 +111,13 @@ Zum Abschluss siehst Du den Eintrag
 
    ### linuxmuster-setup finished at ... ###
 
-Schliesse das Setup nun mit ``Finish`` ab. Es erscheint eine Statusmeldung, dass das Setup abgeschlossen ist und Du dich danach mit dem Benutzer ``global-admin`` anmelden sollst.
+Schliesse das Setup nun mit ``Finish`` ab. Es erscheint eine Statusmeldung, dass das Setup abgeschlossen ist und Du Dich danach mit dem Benutzer ``global-admin`` anmelden sollst.
 
 .. figure:: media/newsetup/lmn-setup-gui-08.png
    :align: center
    :alt: WebUI Setup: Wizard - setup complete
 
-Bestätigst Du dies mit ``Close`` started das Setup nun die Schulkonsole neu und leitet dich auf die verschlüsselte Seite der Webui mit der URL ``https://10.0.0.1`` um.
+Bestätigst Du dies mit ``Close`` started das Setup nun die Schulkonsole neu und leitet Dich auf die verschlüsselte Seite der Webui mit der URL ``https://10.0.0.1`` um.
 
 Anmeldung an der Schulkonsole
 =============================
@@ -136,7 +136,7 @@ Der Browser zeigt dir den Warnhinweis an. Klicke auf ``Erweitert...``.
 
 Es erscheint auf der gleichen Seite unten ein weiterer Eintrag. Bestätige diesen, indem Du den Button ``Risiko akzeptieren und fortfahren`` auswählst.
 
-Danach kommst Du zur Anmeldeseite der WebUI/Schulkonsole. Melde dich nun als Benutzer ``global-admin`` an und nutze das während des Setups festgelegte Kennwort.
+Danach kommst Du zur Anmeldeseite der WebUI/Schulkonsole. Melde Dich nun als Benutzer ``global-admin`` an und nutze das während des Setups festgelegte Kennwort.
 
 .. figure:: media/newsetup/lmn-setup-gui-11.png
    :align: center
@@ -151,7 +151,7 @@ Nach erfolgreicher Anmeldung gelangst Du zur Hauptseite der Schulkonsole.
 Berechtigungen der Log-Dateien anpassen
 =======================================
 
-Nach dem erfolgreichen Setup verbindest Du dich via ssh auf den Server. 
+Nach dem erfolgreichen Setup verbindest Du Dich via ssh auf den Server. 
 
 Zum Abschluss sind noch die Dateiberechtigung für die linuxmuster Log-Dateien anzupassen.
 

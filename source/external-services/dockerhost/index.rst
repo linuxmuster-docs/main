@@ -30,7 +30,7 @@ Installation des Ubuntu Servers
 
 Lade die iso-Datei für den Ubuntu-Server von https://ubuntu.com/download/server herunter und starte deinen Server vom Installationsmedium.
 
-Im folgenden gehen wir davon aus, dass der Docker-Host in deiner `/etc/linuxmuster/sophomorix/default-school/devices.csv` als `servername` bekannt ist. Dann bekommt der Dockerhost seine IP und seinen Namen über DHCP.
+Im folgenden gehen wir davon aus, dass der Docker-Host in Deiner `/etc/linuxmuster/sophomorix/default-school/devices.csv` als `servername` bekannt ist. Dann bekommt der Dockerhost seine IP und seinen Namen über DHCP.
 
 Wenn Du den Dockerhost nicht im Schulnetz sondern in der DMZ der OpnSense anlegen möchtest, bekommt er ebenfalls seine IP über DHCP. 
 
@@ -38,7 +38,7 @@ Wenn Du den Dockerhost nicht im Schulnetz sondern in der DMZ der OpnSense anlege
    :alt: Reverse-Proxy
    :align: center
 
-Wähle deine bevorzugte Sprache
+Wähle Deine bevorzugte Sprache
 
 .. image:: media/dh02.png
    :alt: Reverse-Proxy
@@ -88,20 +88,20 @@ Der Benutzername ist frei wählbar.
    :alt: Reverse-Proxy
    :align: center
 
-OpenSSH-Server solltest Du installieren, möchtest Du dich vom lmn-Server auf dem Docker-Host anmelden können.
+OpenSSH-Server solltest Du installieren, möchtest Du Dich vom lmn-Server auf dem Docker-Host anmelden können.
 Andere Pakete brauchst Du nicht zu installieren.
  
-Wenn alles installiert ist, kannst Du dich an deinem frisch installiertem Docker-Host anmelden.
+Wenn alles installiert ist, kannst Du Dich an Deinem frisch installiertem Docker-Host anmelden.
 
 Installation ohne nginx und dehydrated
 --------------------------------------
 * Gib ``sudo -i`` ein um `root` zu werden.
-* Update dein System mit ``apt update`` und ``apt dist-upgrade``. 
+* Update Dein System mit ``apt update`` und ``apt dist-upgrade``. 
 * Installiere docker und docker-compose mit ``apt install docker.io python3-pip`` und ``pip3 install docker-compose``.
 
 Installtion mit nginx und dehydrated
 ------------------------------------
 * Gib ``sudo -i`` ein um `root` zu werden.
-* Update dein System mit ``apt update`` und ``apt dist-upgrade``. 
+* Update Dein System mit ``apt update`` und ``apt dist-upgrade``. 
 * Installiere docker, docker-compose, nginx und dehydrated mit ``apt install docker.io python3-pip nginx dehydrated`` und ``pip3 install docker-compose``.
 

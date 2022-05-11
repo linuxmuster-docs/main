@@ -24,19 +24,19 @@ LDAP-Anbindung
 Verbindungseinstellungen
 ------------------------
 
-Melde dich an Rocket.Chat mit der Administrator-Berechtigung an.
+Melde Dich an Rocket.Chat mit der Administrator-Berechtigung an.
 
 .. image:: media/01-login-rocketchat.png
    :alt: Login Rocket.Chat
    :align: center
 
-Klicke danach oben links auf das icon für dein Profil.
+Klicke danach oben links auf das icon für Dein Profil.
 
 .. image:: media/02-admin-profile.png
    :alt: Admin Profile
    :align: center
 
-Danach siehst Du das Kontextmenü deines Profils.
+Danach siehst Du das Kontextmenü Deines Profils.
 
 .. image:: media/03-admin-profile-menue.png
    :alt: Admin Profile Konetxtmenü
@@ -149,7 +149,7 @@ Dies muss im JSON-Format angegeben werden, bei Syntaxfehlern funktioniert der Sy
 
 .. attention::
 
-   Achte darauf, dass die DC-Eintragungen in dem Filter durch die deiner BaseDN ersetzt werden. In dem hier gezeigten Filter also an drei Stellen.
+   Achte darauf, dass die DC-Eintragungen in dem Filter durch die Deiner BaseDN ersetzt werden. In dem hier gezeigten Filter also an drei Stellen.
 
 10. LDAP Group BaseDN: DC=linuxmuster,DC=lan -> eigener BaseDN ist einzutragen
 11. User data Group Map:
@@ -262,7 +262,7 @@ Damit sich nur Lehrer anmelden können:
 
 .. attention::
 
-   Achte darauf, dass Du die DC-Einträge durch die deiner BaseDN ersetzt.
+   Achte darauf, dass Du die DC-Einträge durch die Deiner BaseDN ersetzt.
 
 3. Scope: sub
 4. Search Field: sAMAccountName
@@ -327,7 +327,7 @@ Fehlerbeispiel:
 
    Exception in callback of async function: SyntaxError: Unexpected token „ in JSON at position 1 at JSON.parse () at   getDataToSyncUserData (app/ldap/server/sync.js:116:25) at addLdapUser (app/ldap/server/sync.js:447:19) at app/ldap/server/sync.js:538:5 at Array.forEach () at app/ldap/server/sync.js:505:13 at runWithEnvironment (packages/meteor.js:1286:24)
 
-Rocket.Chat hat in einer neu aufgesetzten Instanz für die Benutzerkonten die Zwei-Faktor-Authentifizierung automatisch aktiviert. Wenn Du auf deinem linuxmuster.net Server keine real genutzten E-Mail Adressen eingetragen hast, schalte die Zwei-Faktor-Authentifizierung vor den Test zur Überprüfung der Anmeldung von LDAP-Benutzern aus.
+Rocket.Chat hat in einer neu aufgesetzten Instanz für die Benutzerkonten die Zwei-Faktor-Authentifizierung automatisch aktiviert. Wenn Du auf Deinem linuxmuster.net Server keine real genutzten E-Mail Adressen eingetragen hast, schalte die Zwei-Faktor-Authentifizierung vor den Test zur Überprüfung der Anmeldung von LDAP-Benutzern aus.
 
 Hierzu wähle als Administrator in dem Bereich ``Einstellungen`` den Bereich ``Konten`` und rechts im Kontextmenü ``Zwei-Faktor-Authentifizierung`` und deaktiviere diese dort, wie nachstehend dargestellt.
 

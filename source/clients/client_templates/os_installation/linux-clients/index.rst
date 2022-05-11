@@ -150,8 +150,8 @@ Imagenamen eintragen (HWK)
 
 .. todo:: Ist nochmals zuüberprüfen: None
 
-Nachdem Du nun das Image erstellt hast, musst Du es noch deiner Hardwareklasse zuweisen. Denn zu Beginn hattest Du bei der Rechneraufnahme für das Basisimage noch ``None`` eingetragen, bzw. stehen gelassen.
-Gehe dazu in der WebUI auf ``Geräteverwaltung -> Linbo 4 -> Gruppen -> <hwk auswählen>``. Klicke für die gewünschte HWK das Stift-Symbol, um die Einstellungen anzupassen.Es öffnet sich das Fenster mit den Einstellungen für die HWK. Wähle hier unter ``Partitionen`` dein Betriebssystem (Reiterkarte ``OS``) aus und klicke das Stift-Icon. Klicke in dem sich öffnenden Fenster die Reiterkarte unter ``OS`` und klicke unter dem Eintrag ``Basisimage`` auf die Drop-down Liste und wähle das erstellte Image aus. (vgl. hierzu auch das Vorgehen unter ref:`add-computer-label`).
+Nachdem Du nun das Image erstellt hast, musst Du es noch Deiner Hardwareklasse zuweisen. Denn zu Beginn hattest Du bei der Rechneraufnahme für das Basisimage noch ``None`` eingetragen, bzw. stehen gelassen.
+Gehe dazu in der WebUI auf ``Geräteverwaltung -> Linbo 4 -> Gruppen -> <hwk auswählen>``. Klicke für die gewünschte HWK das Stift-Symbol, um die Einstellungen anzupassen.Es öffnet sich das Fenster mit den Einstellungen für die HWK. Wähle hier unter ``Partitionen`` Dein Betriebssystem (Reiterkarte ``OS``) aus und klicke das Stift-Icon. Klicke in dem sich öffnenden Fenster die Reiterkarte unter ``OS`` und klicke unter dem Eintrag ``Basisimage`` auf die Drop-down Liste und wähle das erstellte Image aus. (vgl. hierzu auch das Vorgehen unter ref:`add-computer-label`).
 
 .. figure:: media/12-linux-client-ubu-install.png
    :align: center
@@ -170,7 +170,7 @@ Starte danach den Client erneut mit Linbo und klicke nun das große Festplattens
 Paket linuxmuster-linuxclient7 installieren
 --------------------------------------------
 
-Melde dich an dem gestarteten Ubuntu 20.04 als Benutzer ``linuxadmin`` an.
+Melde Dich an dem gestarteten Ubuntu 20.04 als Benutzer ``linuxadmin`` an.
 
 .. figure:: media/13-linux-client-ubu-install.png
    :align: center
@@ -247,12 +247,12 @@ Führe einen Neustart des Linux-Client durch, sodass die VM via PXE in Linbo boo
 
 Nun erstellst Du in Linbo - genauso wie zuvor unter **Erstimage erstellen** beschrieben - das Image des neuen Muster-Clients für Linux. Achte hierbei darauf, dass Du dieses Mal ``aktuelles Image ersetzen`` auswählst.
 
-Wurde der Vorgang erfolgreich beendet, kannst Du dich wieder abmelden und den vorbereiteten Linux-Client synchronisiert starten. Nun sollte die Anmeldung mit jedem in der Schulkonsole eingetragenen Benutzer funktionieren.
+Wurde der Vorgang erfolgreich beendet, kannst Du Dich wieder abmelden und den vorbereiteten Linux-Client synchronisiert starten. Nun sollte die Anmeldung mit jedem in der Schulkonsole eingetragenen Benutzer funktionieren.
 
 Eigene Anpassungen im Image
 ===========================
 
-Um den Linux-Client als Mustervorlage zu aktualisieren und Anpassungen vorzunehmen, startest Du den Client synchronisiert und meldest dich mit dem Benutzer ``linuxadmin`` an.
+Um den Linux-Client als Mustervorlage zu aktualisieren und Anpassungen vorzunehmen, startest Du den Client synchronisiert und meldest Dich mit dem Benutzer ``linuxadmin`` an.
 
 Danach installierst Du die benötigte Software und nimmst die gewünschten Einstellungen vor.
 
@@ -273,7 +273,7 @@ Das machst Du mit folgendem Befehl:
 
 .. attention::
 
-   Falls Du die history deines Terminals nutzt um Befehle wieder zu nutzen, dann achte darauf das Du den Parameter ``-y`` entfernst.
+   Falls Du die history Deines Terminals nutzt um Befehle wieder zu nutzen, dann achte darauf das Du den Parameter ``-y`` entfernst.
    
 Sollte während des Updates oder der Image-Vorbereitung die Meldung erscheinen, dass lokale Änderungen der PAM-Konfiguration außer Kraft gesetzt werden sollen, wähle hier immer ``Nein`` (siehe Abb.), da sonst der konfigurierte Login nicht mehr funktioniert.
 
@@ -311,7 +311,7 @@ Hier findet sich das Logon-Skript (``logon.sh``). Es wird immer dann ausgeführt
 
 In diesem Logon-Skript musst Du die Einstellungen für den zu verwenden Proxy-Server festlegen, sofern dieser von den Linux-Clients verwendet werden soll.
 
-Editiere die Datei ``/var/lib/samba/sysvol/linuxmuster.lan/scripts/default-school/custom/linux/logon.sh`` und füge folgende Zeilen hinzu. Passe die ``PROXY_DOMAIN`` für dein Einsatzszenario an.
+Editiere die Datei ``/var/lib/samba/sysvol/linuxmuster.lan/scripts/default-school/custom/linux/logon.sh`` und füge folgende Zeilen hinzu. Passe die ``PROXY_DOMAIN`` für Dein Einsatzszenario an.
 
 .. code::
 

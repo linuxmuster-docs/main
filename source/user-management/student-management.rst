@@ -9,9 +9,9 @@
 Als Lehrer hat man in der Schulkonsole mehrere pädagogische und
 verwaltungstechnische Funktionen zur Verfügung.
 
-Melde dich an der Schulkonsole an, d.h. besuche mit dem Browser die
-Webseite ``https://server.linuxmuster.lan`` oder die an deiner Schule
-äquivalent vom Administrator eingerichtete Seite und melde dich mit
+Melde Dich an der Schulkonsole an, d.h. besuche mit dem Browser die
+Webseite ``https://server.linuxmuster.lan`` oder die an Deiner Schule
+äquivalent vom Administrator eingerichtete Seite und melde Dich mit
 den Schulkontodaten an.
 
 .. _student-management-overview-label:
@@ -119,7 +119,7 @@ eingeschrieben sein.
 Unter ``KLASSENZIMMER/Unterricht`` klicke auf ``Neuer Kurs`` und gib
 dem Kurs einen Namen. Im Kurs können sowohl Schülerinnen und Schüler
 einer Klasse als auch verschiedener Klassen zusammengestellt
-werden. Der Kurs ist auch nur für dich sichtbar und verwendbar.
+werden. Der Kurs ist auch nur für Dich sichtbar und verwendbar.
 
 .. figure:: media/create-session-naming.png
 

@@ -19,7 +19,7 @@ Mehrmaliger Gebrauch:
 Schritt für Schritt
 -------------------
 
-Melde dich an und gehe auf `Einstellungen` -> `Gastkontrolle`.
+Melde Dich an und gehe auf `Einstellungen` -> `Gastkontrolle`.
 
 .. figure:: media/voucher02.png
    :alt: Gastrichtlinien
@@ -54,7 +54,7 @@ Damit die Clients überhaupt auf den Unifi-Kontroller zugreifen können, muss ei
 Schritt für Schritt
 -------------------
 
-Öffne die OPNsense® `<https://firewall.linuxmuster.lan>`_ und melde dich an.
+Öffne die OPNsense® `<https://firewall.linuxmuster.lan>`_ und melde Dich an.
 
 Gehe auf `Firewall`->`Regeln`->`WLAN` und wähle `Hinzufügen`.
 
@@ -73,7 +73,7 @@ Mache die folgenden Eingaben:
 
   Beschreibung: `WLAN hat Zugriff auf Unifi-Controller Port 8880`
   
-Speichere deine Eingaben.
+Speichere Deine Eingaben.
 
 .. figure:: media/os02.png
    :alt: Regel kopieren
@@ -84,4 +84,4 @@ Kopiere die eben erstellte Regel und ändere:
 
   Beschreibung: `WLAN hat Zugriff auf Unifi-Controller Port 8443`   
 
-Steichere deine Eingabe und übernimm die Änderungen.
+Steichere Deine Eingabe und übernimm die Änderungen.

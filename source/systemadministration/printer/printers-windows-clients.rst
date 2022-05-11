@@ -14,7 +14,7 @@ Die Treiber sind nun über die Microsoft Management Console (MMC) hinzuzufügen.
 Dem global-admin die nötigen Rechte einräumen
 ---------------------------------------------
 
-Bevor es losgehen kann, müssen wir dem `global-admin` noch die nötigen Rechte auf dem Server einräumen. Melde dich dazu als `root` auf dem Server an und führen Sie die folgenden Befehle aus:
+Bevor es losgehen kann, müssen wir dem `global-admin` noch die nötigen Rechte auf dem Server einräumen. Melde Dich dazu als `root` auf dem Server an und führen Sie die folgenden Befehle aus:
 
 .. code::
  
@@ -27,7 +27,7 @@ Dem Server vertrauen
 
 Seit Juli 2016 hat Windows10 ein neues Sicherheitsfeature. Es muss über GPOs festgelegt werden, dass die Windows-Clients unserem Server vertrauen. Dazu gehen wir wie folgt vor:
 
-Melde dich als global-admin am Windows-Client an und starte die Gruppenrichtlinienverwaltung (Wie Du sie installierts kannst Du :ref:`hier<install-RSAT-label>` nachlesen). 
+Melde Dich als global-admin am Windows-Client an und starte die Gruppenrichtlinienverwaltung (Wie Du sie installierts kannst Du :ref:`hier<install-RSAT-label>` nachlesen). 
 Navigiere zur Default Domain Policy von linuxmuster.lan. 
 
 .. image:: media/printers-windows-clients-01.png

@@ -130,7 +130,7 @@ msgstr ""
 #: ../../source/appendix/contribute/docs/new.rst:63
 msgid ""
 "Spätestens jetzt sollte ein Konto bei GitHub erstellt werden: "
-"https://github.com/join. Verifziere deine E-Mail-Adresse. Natürlich kannst "
+"https://github.com/join. Verifziere Deine E-Mail-Adresse. Natürlich kannst "
 "du die Dokumentation zu GitHub durchlesen. Weiter geht es dann unter "
 "https://github.com/linuxmuster-docs/main"
 msgstr ""
@@ -138,7 +138,7 @@ msgstr ""
 #: ../../source/appendix/contribute/docs/new.rst:70
 msgid ""
 "Im folgenden wird das Konto \"lmn-docs-bot\" verwendet. Überall wo dieser "
-"auftaucht, ersetze ihn durch dein Kontonamen bei GitHub."
+"auftaucht, ersetze ihn durch Dein Kontonamen bei GitHub."
 msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:74

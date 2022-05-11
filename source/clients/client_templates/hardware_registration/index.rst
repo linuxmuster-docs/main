@@ -81,7 +81,7 @@ Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM 
 .. 
 .. .. hint:: Verwende nicht eine IP-Adresse aus dem Bereich der Rechneraufnahme.
 .. 
-.. Im Feld ``Gruppe`` trägst Du den Namen deiner Hardwareklasse ein und im Feld ``PXE`` wählst Du ``Linbo PXE`` aus.
+.. Im Feld ``Gruppe`` trägst Du den Namen Deiner Hardwareklasse ein und im Feld ``PXE`` wählst Du ``Linbo PXE`` aus.
 .. 
 .. Die Schaltfläche ``SPEICHERN`` überprüft die Eingabe. Mit ``SPEICHERN & IMPORTIEREN`` werden die neuen Geräte importiert.
 .. 
@@ -107,7 +107,7 @@ Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM 
 .. 
 ..    Nachstehende Hinweise gelten nur für eine VM unter XCP-ng.
 .. 
-..    Unter XCP-ng 8.2 sind nachstehende Anpassungen erforderlich, da sonst während des Linbo Boot-Vorgangs ein Hinweis erscheint, dass die Farbtiefe nicht dargestellt werden kann. Rufe auf dem Server die Datei Grub-Datei deiner Hardwareklasse z.B. ``/srv/linbo/boot/grub/20210426_focalfossa_base.cfg`` auf.
+..    Unter XCP-ng 8.2 sind nachstehende Anpassungen erforderlich, da sonst während des Linbo Boot-Vorgangs ein Hinweis erscheint, dass die Farbtiefe nicht dargestellt werden kann. Rufe auf dem Server die Datei Grub-Datei Deiner Hardwareklasse z.B. ``/srv/linbo/boot/grub/20210426_focalfossa_base.cfg`` auf.
 .. 
 ..    Ersetze dort den Eintrag
 .. 
@@ -206,7 +206,7 @@ Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM 
 ... mit der WebUI
 =================
 
-Um einen Rechner mit der Schulkonsole aufzunehmen, meldest Du dich zunächst an der Schulkonsole als ``global-admin`` an.
+Um einen Rechner mit der Schulkonsole aufzunehmen, meldest Du Dich zunächst an der Schulkonsole als ``global-admin`` an.
 
 Wähle dann links im Menü ``Geräteverwaltung --> Geräte``.
 
@@ -339,7 +339,7 @@ Dazu hat sich folgendes Vorgehen bewährt:
 ..    :align: center
 ..    :alt: Device Management: Linbo 4 Groups: Overview
 .. 
-.. 9. Hast Du für die neue Gruppe den Stift geklickt, siehst Du die Konfigurationseinstellungen für die Hardwareklasse. Klicke auf die Reiterkarte ``Partitionen`` und Du siehst die Einstellungen für die Partitionsgrössen, die für deine neu einzubindenden PCs ggf. anzupassen sind.
+.. 9. Hast Du für die neue Gruppe den Stift geklickt, siehst Du die Konfigurationseinstellungen für die Hardwareklasse. Klicke auf die Reiterkarte ``Partitionen`` und Du siehst die Einstellungen für die Partitionsgrössen, die für Deine neu einzubindenden PCs ggf. anzupassen sind.
 .. 
 .. .. figure:: media/add-devices/14-device-management-linbo4-group-partitions.png
 ..    :align: center
@@ -385,7 +385,7 @@ Dazu hat sich folgendes Vorgehen bewährt:
    :alt: Device Management: Linbo 4 - registering client finished
 
 9. führe o.g. Vorgang für alle neu aufzunehmenden Clients durch.
-10. Wenn alle PCs so registriert wurden, öffne an deinem Administrations-Rechner die Schulkonsole und melde dich wieder als ``global-admin`` an. Wähle im Menü ``Geräteverwwaltung --> Geräte`` aus. Du siehst nun neben den schon vorhandenen Geräten ebenfalls die neu aufgenommen Geräte (in der Abb. sind dies die PCs für den Raum g202):
+10. Wenn alle PCs so registriert wurden, öffne an Deinem Administrations-Rechner die Schulkonsole und melde Dich wieder als ``global-admin`` an. Wähle im Menü ``Geräteverwwaltung --> Geräte`` aus. Du siehst nun neben den schon vorhandenen Geräten ebenfalls die neu aufgenommen Geräte (in der Abb. sind dies die PCs für den Raum g202):
 
 .. figure:: media/add-devices/20-device-management-linbo4-registered-clients.png
    :align: center

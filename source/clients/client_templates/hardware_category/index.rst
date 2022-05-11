@@ -20,7 +20,7 @@ Hardwareklasse (HWK) / Gruppe erstellen
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
                    `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
-Melde dich als Benutzer ``global-admin`` an der Web-UI an.
+Melde Dich als Benutzer ``global-admin`` an der Web-UI an.
 
 .. figure:: media/01-webui-login.png
    :align: center
@@ -34,7 +34,7 @@ Erstelle nun die Konfiguration für die neue Hardwareklasse. Dafür klickst Du l
 
 Nun klickst Du unten links auf ``+ERSTELLEN``.
 
-Es öffnet sich ein Kontextmenü. Du kannst entweder ein leere ``start.conf`` nutzen, oder ein bereits vordefiniertes Template für dein gewünschtes Betriebssystem auswählen. Hierbei kannst Du Templates für ein oder mehrere Betriebssysteme mit oder ohne UEFI-BIOS auswählen und diese ggf. nach deinen Vorstellungen anpassen.
+Es öffnet sich ein Kontextmenü. Du kannst entweder ein leere ``start.conf`` nutzen, oder ein bereits vordefiniertes Template für Dein gewünschtes Betriebssystem auswählen. Hierbei kannst Du Templates für ein oder mehrere Betriebssysteme mit oder ohne UEFI-BIOS auswählen und diese ggf. nach deinen Vorstellungen anpassen.
 
 .. figure:: media/03-webui-menue-linbo-create-start-template.png
    :align: center
@@ -72,7 +72,7 @@ Unter ``Partitionen`` legst Du fest, welche Partitionen auf der Festplatte vorge
    :align: center
    :alt: WebUI linbo edit new hwc group - partition scheme
 
-Löschst Du dort z.B. die Partitionen ``swap`` und ``data`` so sieht deine Partitionierung wie folgt aus:
+Löschst Du dort z.B. die Partitionen ``swap`` und ``data`` so sieht Deine Partitionierung wie folgt aus:
 
 .. figure:: media/07-webui-linbo-edit-new-group-partition-scheme-edited.png
    :align: center

@@ -81,7 +81,7 @@ In der Abb. wurde ein UEFI-System vorbereitet. Partition 3 wurde für Windows 10
 
 12. Nachdem Windows nun aus dem lokalen LINBO-Cache bootet, wird die Installation fortgeführt. Windows richtet Dienste ein und startet dann erneut. Du gelangst wieder in LINBO und startest Windows wieder unsynchronisiert mit der grünen Pfeiltaste.
 
-Nach dem erneuten Start von Windows wählst Du deine Region aus.
+Nach dem erneuten Start von Windows wählst Du Deine Region aus.
 
 .. figure:: media/21_windows-10-clients_choose-region.png
    :align: center
@@ -271,7 +271,7 @@ Manueller Domänen Join für Windows
    :align: center
    :alt: Win10 Login As Global-Admin
 
-2. OK → Windows-Sicherheitsfrage: Hier musst Du dich als Domänen-Benutzer ``global-admin`` anmelden. Zum Abschluss solltest Du die Meldung erhalten: "Willkommen in der Domäne ....".
+2. OK → Windows-Sicherheitsfrage: Hier musst Du Dich als Domänen-Benutzer ``global-admin`` anmelden. Zum Abschluss solltest Du die Meldung erhalten: "Willkommen in der Domäne ....".
 
 3. Danach musst Du das Fenster zum Neustart des PCs bestätigen. Schließe das Fenster der Domänenaufnahme. Es erscheint der Hinweis, dass der PC neu gestartet werden muss. Bestätige den Neustart.
 
@@ -391,9 +391,9 @@ Linuxmuster.net sieht vor, dass **Programminstallationen von "global-admin"** du
     
    Der Neustart ist notwenig, da das Profil des "global-admin" ansonsten nicht kopiert werden kann bzw. um die Registry-Zweige für den global-admin freizugeben.
 
-2. Melden dich als ``lokaler User mit Admin-Rechten`` an dem Rechner an
+2. Melden Dich als ``lokaler User mit Admin-Rechten`` an dem Rechner an
 3. Lade die Datei ``https://www.forensit.com/Downloads/Support/DefProf.msi`` herunter. Führe diese aus. Das Programm DefProf.exe befindet sich dann in entpackter Form in Ihrem Download-Verzeichnis. Kopiere dieses Programm in das Verzeichnis: ``C:\Windows\system32\``. 
 4. Führe unter Win10 die PowerShell als Admin aus. Wechsel auf Laufwerk C:\ und führe den Befehl ``C:\> defprof global-admin`` aus. Die Nachfrage bei der Ausführung ist zu bejahen.
-5. Melde dich als lokaler User ab und als global-admin an
+5. Melde Dich als lokaler User ab und als global-admin an
 6. Fahre den Rechner herunter
 7. Starte den Rechner neu und erstellen ein neues Image mit LINBO.

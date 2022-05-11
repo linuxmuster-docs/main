@@ -59,7 +59,7 @@ IPs OPNsense® anpassen
 
 Die IP der externen Schnittstelle (WAN) der OPNsense® ist ggf. anzupassen. Diese ist in der Erstauslieferung so konfiguriert, das diese eine IP via DHCP erhalten würde. Sollte die OPNsense® Firewall hinter einem Router arbeiten, so kann eine Anpassung für eine statische IP erforderlich sein.
 
-Hierzu rufst Du auf der Konsole in der OPNsense®, nachdem Du dich als ``root`` angemeldet hast, den Punkt ``2) Set interface IP address`` auf. Solle eine DHCP-Konfiguration in deinem Netz hier nicht möglich sein,  wählst Du zunächst die WAN-Schnittstelle aus und trägst die IP Adresse aus deinem lokalen Netz mit korrekter Subnetzmaske, Gateway und DNS ein.
+Hierzu rufst Du auf der Konsole in der OPNsense®, nachdem Du Dich als ``root`` angemeldet hast, den Punkt ``2) Set interface IP address`` auf. Solle eine DHCP-Konfiguration in Deinem Netz hier nicht möglich sein,  wählst Du zunächst die WAN-Schnittstelle aus und trägst die IP Adresse aus Deinem lokalen Netz mit korrekter Subnetzmaske, Gateway und DNS ein.
 
 Danach wählst Du die `LAN-Schnittstelle` aus und konfigurierst die bisherige IP, die im IPFire bereits genutzt wurde. Hast Du z.B. ein Subnetting für das Server-Netz in der v6.2 genutzt, das im "grünen" Netz den Bereich 10.16.1.0/24 vorsieht, so vergibst Du hier auf der LAN-Schnittstelle der OPNsense® die IP 10.16.1.254/24 (Subnetmask 255.255.255.0 = 24 Bit).
 
@@ -73,7 +73,7 @@ netplan
 
 Die Server-VM muss nun vorbereitet werden.
 
-In der Datei `/etc/netplan/01-meine-netzconfig.yaml` - Name bitte auf dein System anpassen - sind die Netzwerkeinstellungen wie folgt zu ändern (**Hinweis:** nachstehende Angaben greifen o.g. Beispiel hier nur für die Server-VM auf):
+In der Datei `/etc/netplan/01-meine-netzconfig.yaml` - Name bitte auf Dein System anpassen - sind die Netzwerkeinstellungen wie folgt zu ändern (**Hinweis:** nachstehende Angaben greifen o.g. Beispiel hier nur für die Server-VM auf):
 
 .. code::
 
@@ -103,11 +103,11 @@ Können alle VMs im internen Netz sich untereinander via ping erreichen, bereite
 linuxmuster-prepare
 """""""""""""""""""
 
-Jetzt meldest Du dich auf der Eingabekonsole an der Server-VM an.
+Jetzt meldest Du Dich auf der Eingabekonsole an der Server-VM an.
 
 Du bereitest diese VMs für der Erstsetup vor, indem Du die korrekten Angaben zur gewünschten IP der VM und der Firewall mit linuxmuster-prepare (siehe: :ref:`modify-net-label`) angibst.
 
-Gehen wir davon aus, dass Du für die Server VM im vorangegangenen Schritt die IP `10.16.1.1/24` und für die OPNsense® als Firewall die IP `10.16.1.254/24` zugeordnet hast. Zudem nehmen wir an, dass Deine zukunftige Schuldomäne den Namen `schuldomaene` erhalten wird und deine Domain `meineschule`.`de` lautet.
+Gehen wir davon aus, dass Du für die Server VM im vorangegangenen Schritt die IP `10.16.1.1/24` und für die OPNsense® als Firewall die IP `10.16.1.254/24` zugeordnet hast. Zudem nehmen wir an, dass Deine zukunftige Schuldomäne den Namen `schuldomaene` erhalten wird und Deine Domain `meineschule`.`de` lautet.
 
 Mit diesen Vorgaben bereitest Du die Server-VM nun mit folgendem Befehl auf das Setup vor:
 
@@ -138,7 +138,7 @@ Aktualisiere die VM mit folgendem Befehl:
 
 Starte danach die VM neu.
 
-Nach dem Neustart meldest Du dich an der Server-VM als Benutzer `root` an und rufst das Setup mit folgendem Befehl auf:
+Nach dem Neustart meldest Du Dich an der Server-VM als Benutzer `root` an und rufst das Setup mit folgendem Befehl auf:
 
 .. code::
 

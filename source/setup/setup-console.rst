@@ -10,9 +10,9 @@ Setup im Terminal
 Setup via Terminal
 ==================
 
-Melde dich als Benutzer ``root`` mit dem Passwort ``Muster!`` auf dem Server an.
+Melde Dich als Benutzer ``root`` mit dem Passwort ``Muster!`` auf dem Server an.
 
-Für diese Anmeldung kannst Du die xterm.js Konsole von Proxmox verwenden, wenn Du unserer Anleitung gefolgt bist. Alternativ kannst Du dich via ssh von einem anderen Rechner mit dem Server 10.0.0.1 verbinden, wenn er sich im gleichen Netzwerksegment befindet.
+Für diese Anmeldung kannst Du die xterm.js Konsole von Proxmox verwenden, wenn Du unserer Anleitung gefolgt bist. Alternativ kannst Du Dich via ssh von einem anderen Rechner mit dem Server 10.0.0.1 verbinden, wenn er sich im gleichen Netzwerksegment befindet.
 
 Im Terminal wirst Du mit dem Erstbildschirm von linuxmuster.net v7.1 begrüsst.
 
@@ -73,7 +73,7 @@ Hast Du diese Textdatei mit o.g. Einträgen gespeichert ``[Strg]+[X]`` --> ``[Y]
 
    linuxmuster-setup --config /root/config.txt
 
-Hast Du das Setup aufgerufen, erscheinen in der Konsole nach und nach nochmals relevante Parameter. Hattest Du diese bereits festgelegt, so siehst Du deine Werte, hast Du diese nicht festgelegt, so siehst Du die vorbelegten Werte. Prüfe alle Parameter und passe deren Werte ggf. an. Klicke jeweils auf ``< OK >``, um zum nächsten Schritt zu gelangen.
+Hast Du das Setup aufgerufen, erscheinen in der Konsole nach und nach nochmals relevante Parameter. Hattest Du diese bereits festgelegt, so siehst Du Deine Werte, hast Du diese nicht festgelegt, so siehst Du die vorbelegten Werte. Prüfe alle Parameter und passe deren Werte ggf. an. Klicke jeweils auf ``< OK >``, um zum nächsten Schritt zu gelangen.
 
 .. figure:: media/newsetup/lmn-setup-terminal-02.png
    :align: center
@@ -86,7 +86,7 @@ Danach gelangst Du zur Angabe der sog. Domain. Beachte bei dessen Festlegung u.g
    :alt: Terminal Setup: Parameter 2
 
 .. hint::
-  Der ``Domain name`` spielt eine besondere Rolle, insbesondere, wenn eine Adresse verwendet werden soll, die intern und extern identisch sein soll, so dass mit dem FQDN intern und extern gearbeitet wird. **schule.de** oder **linuxmuster.lan** stellen den Domainnamen mit der sog. Top Lebel Domain (TLD) dar. Die TLD lan wird nicht extern verwendet, sondern ist nur für den  internen Gebrauch sinnvoll. Die TLD de wird extern genutzt. Hat deine Schule die de-Domain meineschule.de registriert, dann musst Du hier eine Subdomain angeben, die zugleich die sog. Samba-Domain darstellt. Für den Namen dieser Sub-/Samba-Domain gibt es Einschränkungen, die unbedingt beachtet werden müssen: Es werden nur englische Kleinbuchstaben a bis z akzeptiert. Sonst keinerlei Zeichen. Es dürfen zudem maximal 15 Zeichen verwendet werden. **Richtig**: gshoenningen (12 Zeichen, keine Umlaute und Satzzeichen etc.), **Falsch**: GSO-Heinrich-Böll-Hönningen (26 Zeichen, Großbuchstaben, Umlaute, Bindestriche)
+  Der ``Domain name`` spielt eine besondere Rolle, insbesondere, wenn eine Adresse verwendet werden soll, die intern und extern identisch sein soll, so dass mit dem FQDN intern und extern gearbeitet wird. **schule.de** oder **linuxmuster.lan** stellen den Domainnamen mit der sog. Top Lebel Domain (TLD) dar. Die TLD lan wird nicht extern verwendet, sondern ist nur für den  internen Gebrauch sinnvoll. Die TLD de wird extern genutzt. Hat Deine Schule die de-Domain meineschule.de registriert, dann musst Du hier eine Subdomain angeben, die zugleich die sog. Samba-Domain darstellt. Für den Namen dieser Sub-/Samba-Domain gibt es Einschränkungen, die unbedingt beachtet werden müssen: Es werden nur englische Kleinbuchstaben a bis z akzeptiert. Sonst keinerlei Zeichen. Es dürfen zudem maximal 15 Zeichen verwendet werden. **Richtig**: gshoenningen (12 Zeichen, keine Umlaute und Satzzeichen etc.), **Falsch**: GSO-Heinrich-Böll-Hönningen (26 Zeichen, Großbuchstaben, Umlaute, Bindestriche)
 
 Klicke auf ``< OK >``. Es erscheint der IP-Adressbereich, der für die Rechneraufnahme mit Linbo reserviert wird. In der Abb. ist dies der Bereich ``10.0.0.100`` bis ``10.0.0.200``.
 
@@ -143,13 +143,13 @@ alternativ
 
    # reboot
 
-Das erste Verfahren hat den Vorteil, dass Du nicht die Zeit des Neustarts abwarten, dich erneut verbinden und anmelden musst.
+Das erste Verfahren hat den Vorteil, dass Du nicht die Zeit des Neustarts abwarten, Dich erneut verbinden und anmelden musst.
 
 .. todo:: Frage?
   
    Muss der PC aus dem Bereich 10.0.0.10 ... sein
 
-Nach abgeschlossenem Setup und eventuellen Neustart des Servers, kannst Du dich mit einem PC via Browser an der Schulkonsole von linuxmuster.net v7.1 anmelden. Dafür muss sich der Rechner im internen LAN eingebunden sein.
+Nach abgeschlossenem Setup und eventuellen Neustart des Servers, kannst Du Dich mit einem PC via Browser an der Schulkonsole von linuxmuster.net v7.1 anmelden. Dafür muss sich der Rechner im internen LAN eingebunden sein.
 
 Anmeldung an der Schulkonsole als global-admin
 ==============================================
@@ -168,7 +168,7 @@ Der Browser zeigt dir den Warnhinweis an. Klicke auf ``Erweitert...``.
 
 Es erscheint auf der gleichen Seite unten ein weiterer Eintrag. Bestätige diesen, indem Du den Button ``Risiko akzeptieren und fortfahren`` auswählst.
 
-Danach kommst Du zur Anmeldeseite der WebUI/Schulkonsole. Melde dich nun als Benutzer ``global-admin`` an und nutze das während des Setups festgelegte Kennwort.
+Danach kommst Du zur Anmeldeseite der WebUI/Schulkonsole. Melde Dich nun als Benutzer ``global-admin`` an und nutze das während des Setups festgelegte Kennwort.
 
 .. figure:: media/newsetup/lmn-setup-gui-11.png
    :align: center
@@ -183,7 +183,7 @@ Nach erfolgreicher Anmeldung gelangst Du zur Hauptseite der Schulkonsole.
 Berechtigungen der Log-Dateien anpassen
 =======================================
 
-Nach dem erfolgreichen Setup verbindest Du dich via ssh auf den Server. 
+Nach dem erfolgreichen Setup verbindest Du Dich via ssh auf den Server. 
 
 Zum Abschluss sind noch die Dateiberechtigung für die linuxmuster Log-Dateien anzupassen.
 

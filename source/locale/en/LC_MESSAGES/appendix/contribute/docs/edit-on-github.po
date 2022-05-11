@@ -73,7 +73,7 @@ msgstr ""
 #: ../../source/appendix/contribute/docs/edit-on-github.rst:45
 msgid ""
 "Sollest Du bereits Schreibrechte am Repositorium haben und bist dir sicher, "
-"dass die Dokumentation durch deine Änderung nicht beeinträchtigt wird, "
+"dass die Dokumentation durch Deine Änderung nicht beeinträchtigt wird, "
 "kannst Du die Änderungen direkt einbauen (\"Commit\") oder im Zweifel einen "
 "Zweig und einen so genannten Pull-Request erstellen."
 msgstr ""

@@ -11,7 +11,7 @@ Aktualisieren der Server-Festplattengrößen
                    `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 .. hint::
 
-   Achtung: Dies ist noch eine unvollständige Beschreibung. Findest Du Fehler oder kannst zur Verbesserung beitragen, dann wende dich bitte an einen der Autoren des Abschnittes.
+   Achtung: Dies ist noch eine unvollständige Beschreibung. Findest Du Fehler oder kannst zur Verbesserung beitragen, dann wende Dich bitte an einen der Autoren des Abschnittes.
 
 Überblick
 ---------
@@ -70,7 +70,7 @@ Du solltest jetzt die geänderten Größen angezeigt bekommen.
    ├─vg_srv-global          253:2    0  9,8G  0 lvm  /srv/samba/global
    └─vg_srv-default--school 253:3    0   40G  0 lvm  /srv/samba/schools/default-school
    
-In Abhängigkeit deiner Virtualisierungs-Umgebung werden die Festplatten unterschiedlich benannt. Wir zeigen das hier an einem Beispiel mittels mit XCP-ng. Es kann also in deiner Konfiguration Abweichungen in der Bezeichnung geben. Passe diese bei den folgenden Befehlen dementsprechend an.
+In Abhängigkeit Deiner Virtualisierungs-Umgebung werden die Festplatten unterschiedlich benannt. Wir zeigen das hier an einem Beispiel mittels mit XCP-ng. Es kann also in Deiner Konfiguration Abweichungen in der Bezeichnung geben. Passe diese bei den folgenden Befehlen dementsprechend an.
 
 Die Bezeichnung `xvda` steht in XCP-ng für die 1. Festplatte der VM, `xvdb` für die 2. Festplatte der VM.
 
@@ -151,7 +151,7 @@ Gebe `print` ein.
 Es wird dann ein Größenproblem für die 1. HDD angezeigt und parted bietet eine Auswahloption an, um dieses
 Problem zu beheben. 
 
-Anmerkung zu den Platzhaltern `xx`, diese stehen für die ausgewählten Vorgaben deiner Installation.
+Anmerkung zu den Platzhaltern `xx`, diese stehen für die ausgewählten Vorgaben Deiner Installation.
 
 .. code::
 
@@ -208,7 +208,7 @@ Dir wird darauf die folgende Frage gestellt:
 
 Gebe ein `N` ein 
 
-Zum Beenden von fdisk verwendest Du nun `w` damit deine Änderungen auf die Festplatte geschrieben werden.
+Zum Beenden von fdisk verwendest Du nun `w` damit Deine Änderungen auf die Festplatte geschrieben werden.
 
 .. code::
 
@@ -334,7 +334,7 @@ Starte nun die Server-VM neu, um zu prüfen, ob die vorgenommenen Größenanpass
 3.7 Tests durchführen
 ---------------------
 
-Nachdem die VM wieder gestartet ist, melde dich an der Konsole an und prüfe mithilfe nachstehender Befehle, ob die Platten- und Partitionsgrößen
+Nachdem die VM wieder gestartet ist, melde Dich an der Konsole an und prüfe mithilfe nachstehender Befehle, ob die Platten- und Partitionsgrößen
 nun deinen Wünschen tatsächlich entsprechen.
 
 .. code::

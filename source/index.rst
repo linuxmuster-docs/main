@@ -15,7 +15,7 @@ Diese beschreibt alle wichtigen Schritte ...
   | ... der Verwaltung von Nutzern,
   | ... bis hin zu individuellen Anpassungen.
 
-Wie es bei einem Projekt ist, dessen Entwicklungsgeschichte mittlerweile auf das Jahr 1999 zurückblickt, ist dein Einstieg in die Beschreibung unseres Systems sicherlich verschieden gelagert.
+Wie es bei einem Projekt ist, dessen Entwicklungsgeschichte mittlerweile auf das Jahr 1999 zurückblickt, ist Dein Einstieg in die Beschreibung unseres Systems sicherlich verschieden gelagert.
 
 Kennst Du linuxmuster.net noch nicht,
 -------------------------------------
@@ -29,14 +29,14 @@ Hattest Du schon Kontakt mit einer Installation von
 
   | linuxmuster.net Version 7?
 
-Dann ist das Kapitel :ref:`what-is-new-label` für dich von Interesse.
+Dann ist das Kapitel :ref:`what-is-new-label` für Dich von Interesse.
 
 Mit der Version 7.1 gibt es einige Neuerungen. Das zuvor genannte Kapitel :ref:`what-is-linuxmuster.net-label` geht auf diese Neuerungen detailliert ein. Ein Blick lohnt sich daher auf alle Fälle.
 
 Installation from Scratch
 -------------------------
 
-Diese Dokumentation führt dich durch die Vorbereitung der Virtualisierungslösungen Proxmox, um linuxmuster.net 7.1 installieren zu können. Hierzu gehört die spezifische Einrichtung des Netzwerks sowie die Vorbereitung der Virtuellen Maschinen.
+Diese Dokumentation führt Dich durch die Vorbereitung der Virtualisierungslösungen Proxmox, um linuxmuster.net 7.1 installieren zu können. Hierzu gehört die spezifische Einrichtung des Netzwerks sowie die Vorbereitung der Virtuellen Maschinen.
 
 .. todo:: Verweis auf die Hypervisoren im Wiki einfügen.
 

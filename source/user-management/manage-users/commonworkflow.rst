@@ -71,9 +71,9 @@ Konfigurationseinstellungen vor der Benutzeraufnahme
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
 Nach Installation des Servers solltest Du einige Konfigurationseinstellungen 
-für deine Schule festlegen.
+für Deine Schule festlegen.
 
-Melde dich an der *Schulkonsole* durch Eingabe von
+Melde Dich an der *Schulkonsole* durch Eingabe von
 https://10.0.0.1 in einen Browser als ``global-admin`` an. 
 
 .. figure:: media/01_schoolconsole_login.png

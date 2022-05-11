@@ -52,14 +52,14 @@ Starte den Server via Ubuntu 18.04 Server ISO-Image (USB-Stick oder CD-ROM). Es 
 
 .. figure:: media/basis_server_001.png
 
-Wähle deine bevorzugte Sprache.
+Wähle Deine bevorzugte Sprache.
 
 .. Beantworte danach die Frage, ob auf einen neuen Installer (für 20.04) aktualisiert werden soll, mit ``Ohne Aktualisierung fortfahren``.
 
 Tastaturlayout
 --------------
 
-Danach wähle dein Tastaturlayout.
+Danach wähle Dein Tastaturlayout.
 
 .. figure:: media/basis_server_002.png
 
@@ -77,7 +77,7 @@ Wähle das Tastaturlayout Deutsch und bestätige dies mit ``Erledigt``.
 Netzwerk
 --------
 
-Konfiguriere danach deine Netzwerkkarte.
+Konfiguriere danach Deine Netzwerkkarte.
 
 .. figure:: media/basis_server_003.png
 
@@ -126,7 +126,7 @@ Jetzt musst Du die Speichermedien einrichten.
 
 .. figure:: media/basis_server_010_custom-storage-layout.png
 
-Für die weitere Installation um aus einem Ubuntu-Server einen linuxmuster.net-Server zu machen, benötigst Du zwei unterschiedliche Speichermedien in deinem Server.
+Für die weitere Installation um aus einem Ubuntu-Server einen linuxmuster.net-Server zu machen, benötigst Du zwei unterschiedliche Speichermedien in Deinem Server.
 
 Dabei ist es egal ob es sich dabei um |...| 
 
@@ -180,20 +180,20 @@ Für das Setup werden noch weitere Partitionen benötigt. Dafür haben wir uns f
    default-school /dev/sg_srv/default-school /srv/samba/default-school 40G [#f1]_
    ============== ========================== ========================= ==========
 
-.. [#f1] Sollte deine Festplatte größer sein als die vorgeschlagene Mindestgröße so wird für diese Partition der maximal übrige freie Platz mit verwendet.
+.. [#f1] Sollte Deine Festplatte größer sein als die vorgeschlagene Mindestgröße so wird für diese Partition der maximal übrige freie Platz mit verwendet.
 
 Unser Installationscript nimmt dir die nötigen vorbereitenden Aktionen ab. Du läßt also das zweite Speichermeddium unkonfiguriert.
 
-Zum Abschluss werden dir die Partitionsierungseinstellungen gemäß deiner Eingaben angezeigt.
+Zum Abschluss werden dir die Partitionsierungseinstellungen gemäß Deiner Eingaben angezeigt.
 
 .. figure:: media/basis_server_016_custom-storage-layout-create-partition-table-overview.png
 
-Wenn Du es für deine Installation nutzen willst, dann kannst Du die nächsten Punkte überspringen und mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
+Wenn Du es für Deine Installation nutzen willst, dann kannst Du die nächsten Punkte überspringen und mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
 
 Speicherplatz nach deinen Vorgaben
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Solltest Du dich für eine andere Größeneinteilung oder für eine Einrichtung auf realen Festplatten entschieden haben, dann geht es hier für dich weiter.
+Solltest Du Dich für eine andere Größeneinteilung oder für eine Einrichtung auf realen Festplatten entschieden haben, dann geht es hier für Dich weiter.
 
    ============== ========================== ========================= ==========
    LV Name        LV Pfad                    Mountpoint                Größe
@@ -240,7 +240,7 @@ Die Zuordnung ist folgende:
 ``Mount``  --> Mountpoint
 ========== === ===============================
 
-Bei ``Format`` wählst du, wie in der Grafik gezeigt "ext4".
+Bei ``Format`` wählst Du, wie in der Grafik gezeigt "ext4".
 
 Wieder schließt Du diese Aktion mit ``[Èrstellen]`` ab.
 
@@ -272,11 +272,11 @@ Die letzten zwei Schritte wiederholst Du für die anderen Positionen der Tabelle
 
 ######
 
-Zum Abschluss werden dir die Partitionsierungseinstellungen gemäß deiner Eingaben angezeigt.
+Zum Abschluss werden dir die Partitionsierungseinstellungen gemäß Deiner Eingaben angezeigt.
 
 .. figure:: media/basis_server_016_lvm_011.png
 
-Wenn Du es für deine Installation nutzen willst, dann kanst Du mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
+Wenn Du es für Deine Installation nutzen willst, dann kanst Du mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
 
 Einrichtung ohne LVM auf HDD nach deinen Vorgaben
 +++++++++++++++++++++++++++++++++++++++++++++++++
@@ -455,7 +455,7 @@ Basis-Konfiguration des Servers
 xterm.js für die Konsolen-Nutzung in Proxmox aktivieren
 -------------------------------------------------------
 
-Nachdem Du dich erneut als ``linuxadmin`` beziehungsweise mit dem von dir angelegten Nutzer an der ``noVNC`` Konsole angemeldet hast, gebe diese zwei Zeilen Code nacheinander ein:
+Nachdem Du Dich erneut als ``linuxadmin`` beziehungsweise mit dem von dir angelegten Nutzer an der ``noVNC`` Konsole angemeldet hast, gebe diese zwei Zeilen Code nacheinander ein:
 
 .. code::
 
@@ -465,16 +465,16 @@ Nachdem Du dich erneut als ``linuxadmin`` beziehungsweise mit dem von dir angele
 
    sudo systemctl start serial-getty@ttyS0.service
 
-Jetzt melde dich an der ``noVNC``-Konsole ab und an der ``xterm.js`` an.
+Jetzt melde Dich an der ``noVNC``-Konsole ab und an der ``xterm.js`` an.
 
-Auch wenn Du keinen Prompt siehst, einfach deinen Login eingeben. Nach dem ``Enter`` wirst Du zur Eingabe deines Passwortes aufgefordert.
+Auch wenn Du keinen Prompt siehst, einfach deinen Login eingeben. Nach dem ``Enter`` wirst Du zur Eingabe Deines Passwortes aufgefordert.
 
 Danach kannst Du die folgenden Codezeilen einfach zwischen der Anleitung und dem Server übertragen.
 
 Automatische Updates abschalten
 -------------------------------
 
-Der frisch installierte Ubuntu-Server hat automatische Updates aktiviert. Das solltest Du abschalten, denn nur so kannst Du sichern sein, dass Updates nicht während der Unterrichtszeit in deiner Einrichtung durchgeführt werden und zu eventuellen Problemen im Schulalltag führen.
+Der frisch installierte Ubuntu-Server hat automatische Updates aktiviert. Das solltest Du abschalten, denn nur so kannst Du sichern sein, dass Updates nicht während der Unterrichtszeit in Deiner Einrichtung durchgeführt werden und zu eventuellen Problemen im Schulalltag führen.
 
 Werde mit |...| 
 
