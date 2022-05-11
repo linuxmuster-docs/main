@@ -111,7 +111,7 @@ Klicke auf ``< OK >``. Danach gelangst Du zur Eingabe des neuen Administrator-Ke
    * Es sollten die Passwörter der o.g. User nach dem Setup geändert werden, sodass jeder User ein eigenes Password hat.
 
 
-Gebe das kennwort ein und klicke auf ``< OK >``.
+Gebe das Kennwort ein und klicke auf ``< OK >``.
 
 .. figure:: media/newsetup/lmn-setup-terminal-06.png
    :align: center
