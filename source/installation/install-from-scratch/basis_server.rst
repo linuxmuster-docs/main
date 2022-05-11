@@ -98,7 +98,7 @@ Wähle ``Manual`` aus.
  
    Eine gute Wahl ist beispielsweise ``linuxmuster.lan``. Beim späteren Set-up von linuxmuster.net wird diese ggf. für alle Server-Dienste angepasst.
 
-Gib die Netzwerkkonfiguration, wie im oberen Bild ein beziehungsweise passe sie deinen Bedürfnissen an und übernehme sie mit ``Speichern``. 
+Gib die Netzwerkkonfiguration, wie im oberen Bild ein beziehungsweise passe sie Deinen Bedürfnissen an und übernehme sie mit ``Speichern``. 
 
 .. figure:: media/basis_server_006.png
 
@@ -190,7 +190,7 @@ Zum Abschluss werden dir die Partitionsierungseinstellungen gemäß Deiner Einga
 
 Wenn Du es für Deine Installation nutzen willst, dann kannst Du die nächsten Punkte überspringen und mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
 
-Speicherplatz nach deinen Vorgaben
+Speicherplatz nach Deinen Vorgaben
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Solltest Du Dich für eine andere Größeneinteilung oder für eine Einrichtung auf realen Festplatten entschieden haben, dann geht es hier für Dich weiter.
@@ -206,11 +206,11 @@ Solltest Du Dich für eine andere Größeneinteilung oder für eine Einrichtung 
 
 Wir beschreiben hier exemplarisch das Vorgehen für die Größen aus der obigen Tabelle für die |...|
 
-|...| `Einrichtung eines LVM auf der 2. HDD nach deinen Vorgaben`_
+|...| `Einrichtung eines LVM auf der 2. HDD nach Deinen Vorgaben`_
 
-|...| `Einrichtung ohne LVM auf HDD nach deinen Vorgaben`_
+|...| `Einrichtung ohne LVM auf HDD nach Deinen Vorgaben`_
 
-Einrichtung eines LVM auf der 2. HDD nach deinen Vorgaben
+Einrichtung eines LVM auf der 2. HDD nach Deinen Vorgaben
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. figure:: media/basis_server_016_lvm_001.png
@@ -278,7 +278,7 @@ Zum Abschluss werden dir die Partitionsierungseinstellungen gemäß Deiner Einga
 
 Wenn Du es für Deine Installation nutzen willst, dann kanst Du mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
 
-Einrichtung ohne LVM auf HDD nach deinen Vorgaben
+Einrichtung ohne LVM auf HDD nach Deinen Vorgaben
 +++++++++++++++++++++++++++++++++++++++++++++++++
 
 Ohne LVM sind die Mount Points ``/var``, ``/srv/linbo``, ``/srv/samba/global`` und ``/srv/samba/default-school`` auf die HDD(s) / einzelne Partionen zu legen.
@@ -467,7 +467,7 @@ Nachdem Du Dich erneut als ``linuxadmin`` beziehungsweise mit dem von dir angele
 
 Jetzt melde Dich an der ``noVNC``-Konsole ab und an der ``xterm.js`` an.
 
-Auch wenn Du keinen Prompt siehst, einfach deinen Login eingeben. Nach dem ``Enter`` wirst Du zur Eingabe Deines Passwortes aufgefordert.
+Auch wenn Du keinen Prompt siehst, einfach Deinen Login eingeben. Nach dem ``Enter`` wirst Du zur Eingabe Deines Passwortes aufgefordert.
 
 Danach kannst Du die folgenden Codezeilen einfach zwischen der Anleitung und dem Server übertragen.
 

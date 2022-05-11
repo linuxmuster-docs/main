@@ -128,4 +128,4 @@ Jetzt Fügst Du mit <Strg>+V den vorher kopierten distinguishedName ein und klic
    :align: center
 
 Alle Rechner die im Informatikraum stehen, werden ab „jetzt“ Zugriff auf den InfoLaser haben.
-Allerdings kann es eine ganze Weile dauern, bis sich dieser Eintrag auf die Druckerverteilung auswirkt. Starte am besten deinen Client neu.
+Allerdings kann es eine ganze Weile dauern, bis sich dieser Eintrag auf die Druckerverteilung auswirkt. Starte am besten Deinen Client neu.

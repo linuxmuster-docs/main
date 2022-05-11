@@ -46,7 +46,7 @@ Gebe als Verbindung die IP-Adresse und den Port des LPD-Druckers wie in der Abb.
    :alt: add printer 2/5
    :align: center
 
-Klicke auf ``weiter``. Wähle nun den geeigneten Druckertreiber für deinen Drucker aus:
+Klicke auf ``weiter``. Wähle nun den geeigneten Druckertreiber für Deinen Drucker aus:
 
 .. image:: media/10-printer-add-printer-02.png
    :alt: add printer 3/5

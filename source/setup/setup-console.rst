@@ -57,7 +57,7 @@ Willst Du diese Möglichkeit nutzen, lege eine ``config.txt`` mittels des nächs
 
    echo -e "[setup] \nservername = \ndomainname = \ndhcprange = \nschoolname = \nlocation = \ncountry = \nstate = \nskipfw = False" > ~/config.txt
    
-Diese Datei musst Du noch mit deinen Angaben füllen. Hier bespielhaft mit dem Editor nano gezeigt
+Diese Datei musst Du noch mit Deinen Angaben füllen. Hier bespielhaft mit dem Editor nano gezeigt
 
 .. code:: console
 	

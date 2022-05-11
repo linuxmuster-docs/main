@@ -335,7 +335,7 @@ Starte nun die Server-VM neu, um zu prüfen, ob die vorgenommenen Größenanpass
 ---------------------
 
 Nachdem die VM wieder gestartet ist, melde Dich an der Konsole an und prüfe mithilfe nachstehender Befehle, ob die Platten- und Partitionsgrößen
-nun deinen Wünschen tatsächlich entsprechen.
+nun Deinen Wünschen tatsächlich entsprechen.
 
 .. code::
 

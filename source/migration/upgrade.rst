@@ -41,7 +41,7 @@ Alternativ kannst Du die Einträge in der Datei ``/etc/apt/apt.sources.d/lmn7.li
    # deb https://archive.linuxmuster.net lmn7/
    # deb-src https://archive.linuxmuster.net lmn7/
    
-Aktualisiere die Paketquellen auf dem Server und migriere / aktualisiere deinen Server nun auf die Version lmn 7.1 mit:
+Aktualisiere die Paketquellen auf dem Server und migriere / aktualisiere Deinen Server nun auf die Version lmn 7.1 mit:
 
 .. code::
 

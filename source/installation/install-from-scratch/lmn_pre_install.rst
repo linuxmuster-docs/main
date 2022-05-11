@@ -98,7 +98,7 @@ Sollte dieser Test erfolgreich sein, steht der abschließenden Vorbereitung nich
 Aufruf lmn71-prepare
 --------------------
 
-Wechsele deinen Login und werde ``root``:
+Wechsele Deinen Login und werde ``root``:
 
 .. code-block:: Bash
  
@@ -144,7 +144,7 @@ Nach dem das Skript abgearbeitet ist, steht dem :ref:`setup-label` nichst mehr i
 
 #####
 
-Installation mit deinen Vorgaben:
+Installation mit Deinen Vorgaben:
 ---------------------------------
 
 .. code-block:: Bash

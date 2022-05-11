@@ -28,7 +28,7 @@ Installiere zunächst einen ubuntu 20.04 Server.
 Installation des Ubuntu Servers
 -------------------------------
 
-Lade die iso-Datei für den Ubuntu-Server von https://ubuntu.com/download/server herunter und starte deinen Server vom Installationsmedium.
+Lade die iso-Datei für den Ubuntu-Server von https://ubuntu.com/download/server herunter und starte Deinen Server vom Installationsmedium.
 
 Im folgenden gehen wir davon aus, dass der Docker-Host in Deiner `/etc/linuxmuster/sophomorix/default-school/devices.csv` als `servername` bekannt ist. Dann bekommt der Dockerhost seine IP und seinen Namen über DHCP.
 
