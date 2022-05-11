@@ -7,6 +7,14 @@ Netzbereich anpassen
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
+.. important::
+
+   Wenn die hier angesprochenen Anpassungen in den vorhergehenden Anleitungen beschrieben ist, dann wäre dieses ganze Kapitel überflüssig. Ich denke, das betrifft LVM und den Netzbereich.
+
+   Beides ist schon Bestandteil der vorhergehenden Beschreibung. Dann wäre nur an den betreffenden Stellen nochmals darauf zu verweisen, dass diese Angaben nötig sind für die Migration von Version 6 auf die 7.1.
+
+   Wichtig ist dann auch ein abschließender Verweis beim ``lmn71-prepare``, dass für diese Fälle der Parameter ``-x`` zwingend erforderlich ist.
+
 Sollte es erforderlich sein, dass der Netzbereich von den Vorgaben im Setup (``10.0.0.0/16``) abweicht, dann sind nachstehende Schritte zur Anpassung vor Aufruf des Setups mit der WebUI oder des Setups auf der Konsole auf dem Server auszuführen.
 
 Dies ist ebenfalls der Fall, wenn Du eine ``from-scratch`` Installation durchgeführt hast.

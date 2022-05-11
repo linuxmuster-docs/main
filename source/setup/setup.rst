@@ -72,6 +72,7 @@ Server-Konsole
      :align: center 
      :width: 100%
      :alt: Screenshot Server Console 
+     :target: setup-console.html
 
      Hier geht es zum :ref:`setup-console-label`
 
@@ -85,6 +86,7 @@ WEBUI
      :align: center 
      :width: 100% 
      :alt: Screenshot WebUI
+     :target: setup-gui.html
 
      Hier geht es zum :ref:`setup-gui-label`
 
