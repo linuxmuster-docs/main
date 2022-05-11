@@ -287,7 +287,7 @@ Solltest Du versehentlich ``ja`` ausgewählt haben, kannst Du die Anmeldung mit 
 
   sudo linuxmuster-linuxclient7 upgrade
 
-Im Anschluss startest Du deinen Linux-Client neu und erstellst wiederum, wie zuvor beschrieben, ein neues Image. Auch hier: ``aktuelles Image ersetzen`` auswählen.
+Im Anschluss startest Du Deinen Linux-Client neu und erstellst wiederum, wie zuvor beschrieben, ein neues Image. Auch hier: ``aktuelles Image ersetzen`` auswählen.
 
 
 Serverseitige Anpassungen

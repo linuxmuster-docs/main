@@ -460,7 +460,7 @@ Mit folgendem Schritt werden
 
    server ~ # sophomorix-update
 
-Lösche die Benutzer, die nach deinen Einstellungen in ``school.conf`` fällig werden.
+Lösche die Benutzer, die nach Deinen Einstellungen in ``school.conf`` fällig werden.
 
 .. code::
 

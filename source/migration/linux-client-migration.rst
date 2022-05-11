@@ -48,7 +48,7 @@ Entferne danach die alten Linux-Client Pakete mit folgendem Befehl:
 Anmeldemanager wechseln
 -----------------------
 
-Das neue Paket linuxmuster-linuxclient7 benötigt als Anmeldemanager gdm3 und Gnome, so dass zuerst der bisherige Anmeldemanager zu deinstallieren ist. Die Dokumentation geht hier dabei davon aus, dass lightdm zu deinstallierenn ist. Ggf. must Du das auf deinen genutzten Anmeldemanager anpassen.
+Das neue Paket linuxmuster-linuxclient7 benötigt als Anmeldemanager gdm3 und Gnome, so dass zuerst der bisherige Anmeldemanager zu deinstallieren ist. Die Dokumentation geht hier dabei davon aus, dass lightdm zu deinstallierenn ist. Ggf. must Du das auf Deinen genutzten Anmeldemanager anpassen.
 
 Lösche den Anmeldemanager ``lightdm`` mit dem Befehl:
 

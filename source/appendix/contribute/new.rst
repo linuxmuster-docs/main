@@ -119,7 +119,7 @@ Falls Sie neue Dateien oder Ordner erstellt haben, müssen diese noch hinzugefü
 
    $ git add source/howto/foobar
 
-Gebe nun noch einen Kommentar zu deinen Änderungen ein und lade alles in deinen Fork hoch:
+Gebe nun noch einen Kommentar zu Deinen Änderungen ein und lade alles in Deinen Fork hoch:
 
 .. code-block:: console
 
