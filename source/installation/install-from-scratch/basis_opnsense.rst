@@ -309,7 +309,7 @@ Diese Zuordnung ist nun richtig, also weiter mit ``y`` |...|
    :align: center
    :alt: OPNsense: GUI - Assign interfaces 
 
-Die Zuordnung des WAN Interfaces ist nun richtig.
+Die Zuordnung des WAN-Interfaces ist nun richtig. Das erkennst Du daran, das dessen IP-Adresse dem Adress-Pool des Routers entnommen ist.
 
 WAN Zugang testen
 ^^^^^^^^^^^^^^^^^
