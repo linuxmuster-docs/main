@@ -194,6 +194,8 @@ Basis-Konfiguration der OPNsense |reg|
 
 Melde Dich als ``root`` mit dem Passwort ``Muster!`` an der OPNsense |reg| an.
 
+#####
+
 Tastaturbelegung
 ----------------
 
@@ -222,6 +224,8 @@ Zuerst überprüfe, ob die Tastaturbelegung richtig ist. Dazu wähle den Punkt 8
 
      exit                             # Konsole verlassen
 
+#####
+
 Überprüfung der Zuordnung der Netzwerkkarten
 --------------------------------------------
 
@@ -238,6 +242,8 @@ In einer Schulumgebung kann es sein, dass der Router keinen DHCP-Service anbiete
 Hier in unserem Beispiel hat die Zuordnung der Netzwerkkarten nicht geklappt, der Router sollte 192.168.21.212 der OPNsense |reg| zuweisen.
 
 Sollte bei dem WAN Interface keine, eine IP-Adresse nach dem Muster 0.0.0.0/8 oder eine andere als die von Dir erwartete erscheinen, dann muss die Zuordnung der Netzwerkkarte überprüft werden. Hier beispielhaft anhand unserer Proxmox-Umgebung.
+
+#####
 
 Anpassung der Zuordnung der Netzwerkkarten
 ------------------------------------------
@@ -311,6 +317,8 @@ Diese Zuordnung ist nun richtig, also weiter mit ``y`` |...|
 
 Die Zuordnung des WAN-Interfaces ist nun richtig. Das erkennst Du daran, das dessen IP-Adresse dem Adress-Pool des Routers entnommen ist.
 
+#####
+
 WAN Zugang testen
 ^^^^^^^^^^^^^^^^^
 
@@ -347,6 +355,8 @@ Die Ausgabe sollte wie folgt aussehen:
 .. hint:: 
 
    Sollte einer der Test auch nach ``11) Reload all services`` nicht erfolgreich verlaufen, dann stimmt etwas mit der Netzwerkkartenzuordnung nicht. Überprüfe Deine vorherige Netzwerk-Konfiguration auf Fehler.
+
+#####
 
 IP-Adressen zuweisen
 --------------------
@@ -439,6 +449,8 @@ Nach erfolgreicher Übernahme erhältst Du den Hinweis, dass Du Dich mit der LAN
 
 Bevor Du das aber machst, erfolgt ein letzter Test:
 
+#####
+
 Aktualisierung der OPNsense |reg|
 ---------------------------------
 
@@ -487,6 +499,8 @@ Gefolgt von folgender Aufforderung:
 
 Starte den General Setup Wizard mit dem ``Next``-Knopf. "Er" wird Dich durch die Konfiguration führen, wobei schon einiges richtig durch die zuvor erfolgte Basis-Konfiguration eingerichtet wurde.  
 
+#####
+
 System: Assistent: Allgemeine Information
 -----------------------------------------
 
@@ -502,12 +516,16 @@ Gib als ``Primary DNS``, die neue IP des Upstream Gateway der externen WAN-Schni
 
 Weiter geht es mit ``Next``
 
+#####
+
 System: Assistent: Zeitserverinformation
 -----------------------------------------
 
 .. figure:: media/basis_opnsense_044.png
 
 Die Angaben zum Time Server übernimmst Du mit ``Next``.
+
+#####
 
 System: Assistent: Konfiguriere WAN-Schnittstelle
 -------------------------------------------------
@@ -525,12 +543,16 @@ Falls Dein Router eine private IP hat, musst Du den Haken bei ``Private RFC1918-
 
 Mit ``Weiter`` übernimmst Du die von Dir gemachten Einstellungen
 
+#####
+
 System: Assistent: Konfiguriere LAN-Schnittstelle
 -------------------------------------------------
 
 .. figure:: media/basis_opnsense_047.png
 
 Die IP-Adresse und die Subnetzmaske des Schulnetzes sollte hier eingetragen sein. Sollte dies nicht der Fall sein, ändere das nun.
+
+#####
 
 System: Assistent: Setze Root-Passwort 
 --------------------------------------
@@ -540,6 +562,8 @@ System: Assistent: Setze Root-Passwort
 .. hint:: 
 
    An dieser Stelle muss als root-Passwort ``Muster!`` eingegeben werden, da später der lmn-Server beim Einrichten der Firewall davon ausgeht, dass das root-Passwort ``Muster!`` ist!
+
+#####
 
 System: Assistent: Konfiguration neu laden
 ------------------------------------------
@@ -564,6 +588,8 @@ Du erhältst eventuell wieder eine Zertifikatswarnung. Akzeptiere diese und fahr
 
 Melde Dich wieder mit ``root`` und dem Passwort ``Muster!`` an.
 
+#####
+
 DHCP abschalten
 ---------------
 Jetzt musst Du den DHCP-Service der Firewall abschalten. Der wird ja später vom Server übernommen. 
@@ -571,6 +597,8 @@ Jetzt musst Du den DHCP-Service der Firewall abschalten. Der wird ja später vom
 .. figure:: media/basis_opnsense_051.png
 
 Gehe auf ``Dienste -> DHCPv4 -> [LAN]`` und lösche den Haken bei ``Aktivieren``, wenn gesetzt. ``Speichern`` lässt Dich Deine Einstellungen unten auf der Seite.
+
+#####
 
 Zusätzliche Netzwerkkarte hinzufügen (Optional)
 -----------------------------------------------
@@ -587,6 +615,8 @@ Bei ``Schnittstellen -> Zuweisungen`` drückst Du ``+``, um die dritte Schnittst
 
 Unter ``Schnittstellen -> [OPT1]`` kannst Du diese Einstellungen vornehmen. Der Screenshot zeigt ein Beispiel. Für weitere Netzwerkkarten verfährst Du entsprechend. OPT1 wird dann hochgezählt zu OPT2 etc.
 
+#####
+
 ssh erlauben
 ------------
 
@@ -599,6 +629,8 @@ Setze jeweils den Haken bei ``Aktiviere Secure Shell``, ``Erlaube Anmeldung mit 
 Bei dem Punkt ``Sekundäre Konsole`` wähle die Serial-Konsole aus. Mit dieser Auswahl wird die Nutzbarmachung der xterm.js-Konsole innerhalb von Proxmox abgeschlossen. (Zur Erinnerung: :ref:`xterm-label`)
 
 Diese Einstellungen wieder ``Speichern``.
+
+#####
 
 Update der OPNsense |reg|
 -------------------------
@@ -641,6 +673,8 @@ Zum Abschluss erfolgt der Neustart automatisch.
 .. figure:: media/basis_opnsense_060.png
 
 Nach dem Neustart ist die OPNsense |reg| soweit vorbereitet.
+
+#####
 
 Logout
 ------
