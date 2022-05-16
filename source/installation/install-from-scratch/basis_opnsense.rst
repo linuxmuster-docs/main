@@ -475,9 +475,15 @@ Du erhältst zunächst eine Zertifikatswarnung, da OPNsense |reg| ja ganz frisch
 
 ``Erweitert`` und anschließend ``Risiko akzeptieren und fortfahren`` bringt Dich auf die Log-in-Seite.
 
-.. figure:: media/basis_opnsense_042.png
+.. figure:: media/basis_opnsense_042-01.png
 
-Melde Dich mit ``root`` und dem Passwort ``Muster!`` an. 
+Melde Dich mit ``root`` und dem Passwort ``Muster!`` an. Beim ersten Start erhälst folgende Information:
+
+.. figure:: media/basis_opnsense_042-02.png
+
+Gefolgt von folgender Aufforderung:
+
+.. figure:: media/basis_opnsense_042-03.png
 
 Starte den General Setup Wizard mit dem ``Next``-Knopf. "Er" wird Dich durch die Konfiguration führen, wobei schon einiges richtig durch die zuvor erfolgte Basis-Konfiguration eingerichtet wurde.  
 
