@@ -452,13 +452,11 @@ Aktualisiere die OPNsense |reg| in der Konsole, indem Du den Punkt ``12) Update 
 
    Sollte die Aktualisierung immer noch nicht erfolgreich durchgeführt werden, dann überprüfe Deine vorherige Netzwerk-Konfiguration auf Fehler.
 
-Klappt das Update, startest Du die OPNsense |reg| neu, nachdem Du Dich erneut eingeloggt hast.
+Klappt das Update, startet die OPNsense |reg| neu.
 
 .. figure:: media/basis_opnsense_023.png
    :align: center
    :alt: OPNsense: GUI - Assign interfaces
-
-``6) Reboot``, dessen Nachfrage Du mit ``y`` beantwortest.
 
 .. todo:: Benennung der Bilder aktualisieren
 
