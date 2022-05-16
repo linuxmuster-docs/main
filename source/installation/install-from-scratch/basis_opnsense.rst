@@ -477,7 +477,7 @@ Du erhältst zunächst eine Zertifikatswarnung, da OPNsense |reg| ja ganz frisch
 
 .. figure:: media/basis_opnsense_042-01.png
 
-Melde Dich mit ``root`` und dem Passwort ``Muster!`` an. Beim ersten Start erhälst folgende Information:
+Melde Dich mit ``root`` und dem Passwort ``Muster!`` an. Beim ersten Start erhältst folgende Information:
 
 .. figure:: media/basis_opnsense_042-02.png
 
