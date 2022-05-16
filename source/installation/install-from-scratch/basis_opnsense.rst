@@ -346,11 +346,7 @@ Die Ausgabe sollte wie folgt aussehen:
 
 .. hint:: 
 
-   Sollte einer der Test nicht erfolgreich verlaufen, dann stimmt etwas mit der Netzwerkkartenzuordnung nicht.
-
-   Als Erstes probiere es mit dem Neustart aller Netzwerk-Dienste. Dazu wählst Du den Punkt ``11) Reload all services``. Danach wiederholst Du das Upgrade nochmals mit dem Punkt ``12) Update from console``.
-
-   Sollte die Aktualisierung immer noch nicht erfolgreich durchgeführt werden, dann überprüfe Deine vorherige Netzwerk-Konfiguration auf Fehler.
+   Sollte einer der Test auch nach ``11) Reload all services`` nicht erfolgreich verlaufen, dann stimmt etwas mit der Netzwerkkartenzuordnung nicht. Überprüfe Deine vorherige Netzwerk-Konfiguration auf Fehler.
 
 IP-Adressen zuweisen
 --------------------
