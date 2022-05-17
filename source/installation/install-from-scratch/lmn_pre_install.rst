@@ -173,7 +173,7 @@ Das Netzwerk-Interface sollte richtig erkannt sein, da Du ja nur eines für den 
 
    Enter ip address with net or bitmask [10.0.0.1/16]: 10.112.0.1/16
   
-An dieser Stelle ist die Eingabe eines abweichenden Netzwerk-Bereichs möglich, dafür müsstest Du den IP-Bereich und die zuverwendente Netzwerkmaske eingeben. Hier im Beispiel mit 10.112.0.0/16 gezeigt. Gibst Du keine ein, übernimmst Du unsere Standardvorgabe wie angezeigt mit `` [ENTER]``
+An dieser Stelle ist die Eingabe eines abweichenden Netzwerk-Bereichs möglich, dafür müsstest Du den IP-Bereich und die zu verwendende Netzwerkmaske eingeben. Hier im Beispiel mit 10.112.0.0/16 gezeigt. Gibst Du keine ein, übernimmst Du unsere Standardvorgabe wie angezeigt mit `` [ENTER]``
 
 .. code-block:: Bash
 
