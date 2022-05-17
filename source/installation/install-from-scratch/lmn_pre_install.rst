@@ -25,17 +25,17 @@ Server auf lmn7.1 vorbereiten
                    `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
 
-Nachdem Du die Firewall und den Server wie beschrieben installiert hast, müssen beide Maschinen fertig konfiguriert werden. Um dieses zu vereinfachen stellen wir Dir das Skript ``lmn71-prepare`` zur Verfügung.
+Nachdem Du die Firewall und den Server wie beschrieben installiert hast, müssen beide Maschinen fertig konfiguriert werden. Um dieses zu vereinfachen, stellen wir Dir das Skript ``lmn71-prepare`` zur Verfügung.
 
 Das Skript lmn71-prepare
 ========================
 
 .. todo:: 
    
-   Check des Repros zum Release-Datums! Anm. des Autors
+   Check des Repro zum Release-Datums! Anm. des Autors
 
-Installtions des Pakets ``linuxmuster-prepare``
------------------------------------------------
+Installations des Pakets ``linuxmuster-prepare``
+------------------------------------------------
 
 Wenn Du nicht mehr an Deinem Server eingeloggt bist, melde Dich erneut an.
 
@@ -48,7 +48,7 @@ Führe danach folgende Befehle in der Eingabekonsole aus:
 .. hint:: -qO --> [-][q][Großbuchstabe O]
 
 Damit installierst Du den Key für das Repository von linuxmuster.net und aktivierst ihn.
-Die nächste Zeile fügt das linuxmuster 7.1 Repository hinzu. 
+Die nächste Zeile fügt das Linuxmuster 7.1 Repository hinzu. 
 
 .. code-block:: Bash
 
@@ -68,7 +68,7 @@ Damit ist die Vorbereitung abgeschlossen und Du installierst das Paket "linuxmus
 
 Nachdem Du den Befehl mit ``J`` bestätigt hast, lädt er das Skript lmn71-prepare auf den Server, dass |...|
 
-   - die benötigten linuxmuster-Pakete und die von ihnen benötigten anderen Pakete installiert,
+   - die benötigten Linuxmuster-Pakete und die von ihnen benötigten anderen Pakete installiert,
    - das Betriebssystem des Servers nochmals auf den aktuellen Stand bringt,
    - das root-Passwort auf Muster! setzt und
    - das Netzwerk konfiguriert,
@@ -76,7 +76,7 @@ Nachdem Du den Befehl mit ``J`` bestätigt hast, lädt er das Skript lmn71-prepa
 
 .. attention:: Wichtiger Hinweis, schon jetzt! 
 
-   Solltest Du mit Deiner Konfiguration von unseren Standard-Vorgaben bei dem zuletzt genannten Punkt abweichen, müssen Deine Einstellungen unbedingt vor dem Aufruf des Skiptes lmn71-prepare eingearbeitet sein!
+   Solltest Du mit Deiner Konfiguration von unseren Standard-Vorgaben bei dem zuletzt genannten Punkt abweichen, müssen Deine Einstellungen unbedingt vor dem Aufruf des Skriptes lmn71-prepare eingearbeitet sein!
 
    :ref:`basis_opnsense`
    
@@ -85,13 +85,13 @@ Nachdem Du den Befehl mit ``J`` bestätigt hast, lädt er das Skript lmn71-prepa
 Letzter Test vor Anwendung des Skriptes "lmn71-prepare"
 -------------------------------------------------------
 
-Als letzte Überprüfung bevor Du das Skript einsetzt, verbinde Dich vom Server aus mit der Firewall via ssh.
+Als letzte Überprüfung, bevor Du das Skript einsetzt, verbinde Dich vom Server aus mit der Firewall via ssh.
 
 .. code-block:: Bash
 
    ssh root@10.0.0.254
 
-Du solltest Dich nach der Eingabe des Passwortes ``Muster!`` auf den Konsole der OPNsense |reg| wiederfinden. Eventuell musst Du auch vorher deren Key akzeptieren. Mit ``0`` solltest Du Dich wieder ausloggen und zurück auf der Server-Konsole sein.
+Du solltest Dich nach der Eingabe des Passwortes ``Muster!`` auf der Konsole der OPNsense |reg| wiederfinden. Eventuell musst Du auch vorher deren Key akzeptieren. Mit ``0`` solltest Du Dich wieder ausloggen und zurück auf der Server-Konsole sein.
 
 Sollte dieser Test erfolgreich sein, steht der abschließenden Vorbereitung nichts mehr im Wege:
 
@@ -104,13 +104,13 @@ Wechsele Deinen Login und werde ``root``:
  
    sudo -i
 
-Für die weitere Konfiguration nutzt Du unser lmn71-prepare Script. Hilfe erhälst Du mittels
+Für die weitere Konfiguration nutzt Du unser lmn71-prepare Script. Hilfe erhältst Du mittels
 
 .. code-block:: Bash
 
    lmn71-prepare -h
 
-Hier ein Auszug mit den benötigten Optionen die Du gleich anwenden wirst.
+Hier ein Auszug mit den benötigten Optionen, die Du gleich anwenden wirst.
 
 .. code-block:: Bash
 
@@ -173,7 +173,7 @@ Das Netzwerk-Interface sollte richtig erkannt sein, da Du ja nur eines für den 
 
    Enter ip address with net or bitmask [10.0.0.1/16]: 10.112.0.1/16
   
-An dieser Stelle ist die Eingabe eines abweichenden Netzwerk-Bereichs möglich, dafür müsstest Du den IP-Bereich und die zu verwendende Netzwerkmaske eingeben. Hier im Beispiel mit 10.112.0.0/16 gezeigt. Gibst Du keine ein, übernimmst Du unsere Standardvorgabe wie angezeigt mit `` [ENTER]``
+An dieser Stelle ist die Eingabe eines abweichenden Netzwerk-Bereichs möglich, dafür müsstest Du den IP-Bereich und die zu verwendende Netzwerkmaske eingeben. Hier im Beispiel mit 10.112.0.0/16 gezeigt. Gibst Du keine ein, übernimmst Du unsere Standard-Vorgabe wie angezeigt mit `` [ENTER]``
 
 .. code-block:: Bash
 
@@ -215,4 +215,4 @@ Da Du das LVM, wie von Dir zuvor bei der Ubuntu-Servers-Installation festgelegt,
 
 Jetzt ist es an der Zeit, dass Du Dich zurücklehnst und den Verlauf beobachtest.
 
-Nach dem das Skript abgearbeitet ist, steht dem :ref:`setup-label` nichst mehr im Wege.
+Nachdem das Skript abgearbeitet ist, steht dem :ref:`setup-label` nichts mehr im Wege.
