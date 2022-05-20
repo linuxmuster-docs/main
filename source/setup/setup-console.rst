@@ -100,6 +100,9 @@ Klicke auf ``< OK >``. Danach gelangst Du zur Eingabe des neuen Administrator-Ke
    :align: center
    :alt: Terminal Setup: Parameter 4
 
+.. todo:: Passwortbeschränkungen einfügen, siehe Setup-WebUi
+          Laut WebUI wären das: Valid characters are: a-z A-Z 0-9 ?!§+-@#$%&*( )[ ]{ }
+
 .. hint::
 
    * Das beim Setup eingegebene Adminpasswort wird für folgende administrativen User gesetzt:
