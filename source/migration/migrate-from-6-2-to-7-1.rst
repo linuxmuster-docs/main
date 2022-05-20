@@ -436,6 +436,8 @@ Das Skript muss zwei Mal ausgeführt werden.
    Jetzt solltest Du noch die Datei ``school.conf`` bearbeiten, denn das
    wird nicht automatisch gemacht.
 
+.. todo:: school.conf ist schon klar, aber um welche Inhalte soll es gehen bei der Bearbeitung
+
 8. Updates diverser Einstellungen
 ---------------------------------
 
@@ -478,9 +480,13 @@ So kann man überprüfen, ob Sonderzeichen in ``students.csv`` oder ``teachers.c
 9. Rechner importieren
 ----------------------
 
+.. .. code:: 
+
+   --dryrun ohne funktion
+   server ~ # linuxmuster-import-devices --dry-run
+
 .. code::
 
-   server ~ # linuxmuster-import-devices --dry-run
    server ~ # linuxmuster-import-devices
 
 Tests
@@ -506,7 +512,19 @@ Benutzer und Gruppen können mit folgendem Skript getestet werden:
 
 .. code::
 
-   server ~ # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --verify-uid
+   server ~ # sophomorix-vampire --datadir /path/to/dir/sophomorix-dump --verify-uidi
+
+.. error:: Kommando liefert
+
+   Unknown option: verify-uid
+   Command line:
+
+   You have made a mistake, when specifying options.
+   See error message above. 
+
+   ... sophomorix-vampire is terminating
+
+.. todo:: Kann der Punkt raus?
 
 11. Synchronisiere Benutzerdaten
 --------------------------------
