@@ -31,3 +31,7 @@
 
 .. |reg| unicode:: U+00AE .. Trademark
    :ltrim:
+
+.. |-| unicode:: U+2013 .. Gedankenstrich
+
+.. |dh| unicode:: d. U+00A0 h. .. das heisst
