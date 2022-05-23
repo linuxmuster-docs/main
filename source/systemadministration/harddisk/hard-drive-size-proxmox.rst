@@ -132,8 +132,7 @@ Wiederhole dieses Vorgehen für alle VMs deren Festplatten Du angepasst hast.
 In der gestarteten VM musst Du nun den Festplattenplatz anpassen.
 Folge hierzu der Beschreibung mit nachstehendem Link.
 
-
-================================= =================
-Vergrößern der Server-Festplatten |follow_me2vm-hd|
-================================= =================
+.. ================================= =================
+   Vergrößern der Server-Festplatten |follow_me2vm-hd|
+   ================================= =================
 
