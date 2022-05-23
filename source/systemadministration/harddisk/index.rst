@@ -34,27 +34,12 @@ Anpassung Hypervisor
 Starte nun mit Punkt 1, indem Du nachstehend Deine eingesetzte Virtualisierungsumgebung auswählst und
 gemäß der Dokumentation die Festplattengröße Deiner VMs im Hypervisor anpasst.
 
-=================================== ======================
-Vorbereiten der Proxmox-Festplatten |follow_me2proxmox-hd|
-=================================== ======================
-
-
 .. toctree::
    :maxdepth: 2
    :caption:  Festplatten-Anpassung
    :hidden:  
 
    hard-drive-size-proxmox
-
-.. Anpassung VMs
-   -------------
-
-   Passe nun die Größe der Festplatten in den VMs selbst wie nachstehend beschrieben an.
-   
-.. toctree::
-   :maxdepth: 2
-   :caption:  Festplatten-Anpassung
-   :hidden:  
-   
    hard-drive-size-vm
    hard-drive-size-opnsense-vm
+   

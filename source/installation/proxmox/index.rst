@@ -1,23 +1,3 @@
-.. |-| unicode:: U+2013 .. Gedankenstrich
-
-.. |zB| unicode:: z. U+00A0 B. .. Zum Beispiel
-
-.. |dh| unicode:: d. U+00A0 h. .. das heisst
-  
-.. |ua| unicode:: u. U+00A0 a. .. und andere
-
-.. |_| unicode:: U+202F .. geschütztes Leerzeichen
-   :trim:
-
-.. |...| unicode:: U+2026 .. Auslassungszeichen
-   :trim:
-
-.. |copy| unicode:: 0xA9 .. Copyright-Zeichen
-   :ltrim:
-
-.. |reg| unicode:: U+00AE .. Trademark
-   :ltrim:
-
 .. include:: /guided-inst.subst
 
 .. _install-on-proxmox-label:
