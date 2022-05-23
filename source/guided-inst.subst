@@ -1,302 +1,33 @@
-..  This file contains all placeholders for the link_arrow graphics to ensure a central
-    point of contact for any changes.
-    To use these placeholders, the rst files that are to contain such a link must contain
-    the include directive:
+.. This file contains all placeholders to ensure a central point of contact in case of any changes.
    
-    .. include:: /guided-inst.subst
+   To be able to use these placeholders, the rst files that are to contain such a link must contain the include directive:
+
+   .. include:: /guided_inst.subst
+
+   The two pipe symbols "|abc|" with the text in between represent the placeholder. It is followed by the character set to be used, followed by two colons. This is followed by the text that replaces the placeholder during the make run. The end of the line is a comment that starts with the two dots.
+
+.. Diese Datei enthält alle Platzhalter, um eine zentrale Anlaufstelle im Falle von Änderungen zu gewährleisten.
+
+   Um diese Platzhalter verwenden zu können, müssen die ersten Dateien, die einen solchen Link enthalten sollen, die include-Anweisung enthalten:
+
+   .. include:: /guided_inst.subst
+
+   Die beiden Pipe-Symbole "|abc|" mit dem Text dazwischen stellen den Platzhalter dar. Es folgt der zu verwendende Zeichensatz, gefolgt von zwei Doppelpunkten. Danach folgt der Text, der den Platzhalter während des Make-Laufs ersetzt. Das Ende der Zeile ist ein Kommentar, der mit den beiden Punkten beginnt.
+
+   Siehe auch: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#substitutions
    
-    The naming of the placeholders should follow the pattern |follow_me2<TARGET>|.
+.. |zB| unicode:: z. U+00A0 B. .. Zum Beispiel 
+  
+.. |ua| unicode:: u. U+00A0 a. .. und andere
 
-    Necessary adjustments are, apart from the naming, those of the jump target under
-    :target: with relative path specifications, starting from the page where the call is made.
-    This file assumes that our basic directory is getting-started/installoptions/
+.. |_| unicode:: U+202F .. geschütztes Leerzeichen
+   :trim:
 
-    The numbers in square brackets refer to the structure shown in the Github-WIKI
-    https://github.com/linuxmuster-docs/main/wiki/List-of-links-according-to-the-installation-flowchart.
-   
-..  Diese Datei enthält alle Platzhalter für die link_arrow-Grafiken um eine
-    zentrale Anlaufstelle bei eventuellen Änderungen sicher zu stellen.
-   
-    Um diese Platzhalter nutzen zu können, müssen die rst-Dateien
-    die einen solchen Link enthalten sollen die include-Directive enthalten:
-   
-    .. include:: /guided_inst.subst
-   
-    Die Benennung der Platzhalter sollte dem Muster |follow_me2<ZIEL>| folgen.
-    Nötige Anpassungen sind außer der Benennung, die des Sprungzieles unter :target:
-    mit relativen Pfadangaben, ausgehend von der Seite wo der Aufruf erfolgt.
+.. |...| unicode:: U+2026 .. Auslassungszeichen
+   :trim:
 
-    Die Nummern in eckigen Klammer beziehen sich auf die Struktur die im Wiki von Github
-    https://github.com/linuxmuster-docs/main/wiki/List-of-links-according-to-the-installation-flowchart
-    dargestellt ist.
+.. |copy| unicode:: 0xA9 .. Copyright-Zeichen
+   :ltrim:
 
-.. {1} 
-.. |follow_me2proxmox| image:: /media/link_arrow.svg
-   :target: install-on-proxmox/index.html
-   :width: 200 px
-   :align: middle
-
-.. {2}
-.. |follow_me2kvm| image:: /media/link_arrow.svg
-   :target: install-on-kvm/index.html
-   :width: 200 px
-   :align: middle
-
-.. {3}
-.. |follow_me2xcp-ng| image:: /media/link_arrow.svg
-   :target: install-on-xcp-ng/index.html
-   :width: 200 px
-   :align: middle
-
-.. {4}
-.. |follow_me2scratch| image:: /media/link_arrow.svg
-   :target: install-from-scratch/index.html
-   :width: 200 px
-   :align: middle
-
-.. {5}
-.. |follow_me2hd-resize| image:: /media/link_arrow.svg
-   :target: ../../harddisk/index.html
-   :width: 200 px
-   :align: middle
-
-.. {6}
-.. |follow_me2proxmox-hd| image:: /media/link_arrow.svg
-   :target: hard-drive-size-proxmox.html
-   :width: 200 px
-   :align: middle
-
-.. {6?}   
-.. |follow_me2proxmox-hd-chapter| image:: /media/link_arrow.svg
-   :target: ../../harddisk/hard-drive-size-proxmox.html
-   :width: 200 px
-   :align: middle   
-
-.. {7}
-.. |follow_me2kvm-hd| image:: /media/link_arrow.svg
-   :target: hard-drive-size-kvm.html
-   :width: 200 px
-   :align: middle
-
-.. {8}
-.. |follow_me2xcp-ng-hd| image:: /media/link_arrow.svg
-   :target: hard-drive-size-xcp-ng.html
-   :width: 200 px
-   :align: middle
-
-.. {9}
-.. |follow_me2vm-hd| image:: /media/link_arrow.svg
-   :target: hard-drive-size-vm.html
-   :width: 200 px
-   :align: middle
-
-.. {10a}
-.. |follow_me2network_a| image:: /media/link_arrow.svg
-   :target: ../network/index.html
-   :width: 200 px
-   :align: middle
-
-.. {10b}
-.. |follow_me2network_b| image:: /media/link_arrow.svg
-   :target: ../../network/index.html
-   :width: 200 px
-   :align: middle
-
-.. {11a}
-.. |follow_me2proxmox-ui-protection_a| image:: /media/link_arrow.svg
-   :target: ./proxmox-ui-protection.html
-   :width: 200 px
-   :align: middle
-
-.. {11b}
-.. |follow_me2proxmox-ui-protection_b| image:: /media/link_arrow.svg
-   :target: ../proxmox-ui-protection.html
-   :width: 200 px
-   :align: middle
-
-.. {12}
-.. |follow_me2network-migration| image:: /media/link_arrow.svg
-   :target: ../network/migration/index.html
-   :width: 200 px
-   :align: middle
-
-.. {26a}
-.. |follow_me2migration_a| image:: /media/link_arrow.svg
-   :target: ../getting-started/migration/index.html
-   :width: 200 px
-   :align: middle
-
-.. {26b}
-.. |follow_me2migration_b| image:: /media/link_arrow.svg
-   :target: ../migration/index.html
-   :width: 200 px
-   :align: middle
-
-.. {13}
-.. |follow_me2migration-proxmox| image:: /media/link_arrow.svg
-   :target: ../migration/proxmox.html
-   :width: 200 px
-   :align: middle
-
-.. {14}
-.. |follow_me2migration-kvm| image:: /media/link_arrow.svg
-   :target: ../migration/kvm.html
-   :width: 200 px
-   :align: middle
-
-.. {15}
-.. |follow_me2migration-xcp-ng| image:: /media/link_arrow.svg
-   :target: ../migration/xcp-ng.html
-   :width: 200 px
-   :align: middle
-
-.. {16}
-.. |follow_me2network-with-segmentation| image:: /media/link_arrow.svg
-   :target: ../network/segmentation/index.html
-   :width: 200 px
-   :align: middle
-
-.. {17}
-.. |follow_me2network-without-segmentation| image:: /media/link_arrow.svg
-   :target: ../network/segmentation/without.html
-   :width: 200 px
-   :align: middle
- 
-.. {18}
-.. |follow_me2net-config-proxmox| image:: /media/link_arrow.svg
-   :target: proxmox.html
-   :width: 200 px
-   :align: middle
- 
-.. {19}
-.. |follow_me2net-config-kvm-xcp-ng| image:: /media/link_arrow.svg
-   :target: kvm_and_xcp-ng.html
-   :width: 200 px
-   :align: middle
- 
-.. {22a}
-.. |follow_me2network-test_a| image:: /media/link_arrow.svg
-   :target: ../network/network-test.html
-   :width: 200 px
-   :align: middle
-
-.. {22b}
-.. |follow_me2network-test_b| image:: /media/link_arrow.svg
-   :target: ../network-test.html
-   :width: 200 px
-   :align: middle
-
-.. {23}
-.. |follow_me2setup| image:: /media/link_arrow.svg
-   :target: ../../setup.html
-   :width: 200 px
-   :align: middle
-
-.. {24}
-.. |follow_me2setup-with-web-ui| image:: /media/link_arrow.svg
-   :target: ../setup/with-web-ui.html
-   :width: 200 px
-   :align: middle
-
-.. {25}
-.. |follow_me2setup-on-server-konsole| image:: /media/link_arrow.svg
-   :target: ../setup/at-server-konsole.html
-   :width: 200 px
-   :align: middle
-
-.. {26} 
-.. |follow_me2do-migration| image:: /media/link_arrow.svg
-   :target: ../../migration/index.html
-   :width: 200 px
-   :align: middle
-
-
-.. {27}
-.. |follow_me2user-creation| image:: /media/link_arrow.svg
-       :target: ../../systemadministration/user-management/add-user-accounts.html
-       :width: 200 px
-       :align: middle
-
-.. {28}
-.. |follow_me2add-client| image:: /media/link_arrow.svg
-       :target: ../../clients/add-computer.html
-       :width: 200 px
-       :align: middle
-
-.. {29a}
-.. |follow_me2linux-clients_a| image:: /media/link_arrow.svg
-       :target: linux-clients/index.html
-       :width: 200 px
-       :align: middle   
-
-.. {29b}
-.. |follow_me2linux-clients_b| image:: /media/link_arrow.svg
-       :target: ../linux-clients/index.html
-       :width: 200 px
-       :align: middle   
-
-.. {30a}
-.. |follow_me2windows-clients_a| image:: /media/link_arrow.svg
-       :target:  windows10clients/index.html
-       :width: 200 px
-       :align: middle   
-
-.. {30b}
-.. |follow_me2windows-clients_b| image:: /media/link_arrow.svg
-       :target:  ../windows10clients/index.html
-       :width: 200 px
-       :align: middle   
-
-.. {31}
-.. |follow_me2finish-install| image:: /media/link_arrow.svg
-       :target:  ../../getting-started/finish-install.html
-       :width: 200 px
-       :align: middle   
-
-.. nachstehende Referenzen sind nur fur v7 master - entfallen bei Umstellung auf iss301
-
-
-.. |follow_me2xcp-ng-backhd| image:: /media/link_arrow.svg
-       :target: ../installoptions/install-on-xcp-ng/index.html
-       :width: 200 px
-       :align: middle
-
-.. |follow_me2proxmox-backhd| image:: /media/link_arrow.svg
-       :target: ../installoptions/install-on-proxmox/index.html#vm-netzwerkeinstellungen-prufen
-       :width: 200 px
-       :align: middle
-   
-.. |follow_me2kvm-backhd| image:: /media/link_arrow.svg
-       :target: ../installoptions/install-on-kvm/index.html
-       :width: 200 px
-       :align: middle
-
-.. |follow_me2network-area| image:: /media/link_arrow.svg
-       :target: ../../setup.html
-       :width: 200 px
-       :align: middle
-
-.. |follow_me2linux-adjusting_hard_drive_size| image:: /media/link_arrow.svg
-       :target: ../../harddisk/index.html
-       :width: 200 px
-       :align: middle   
-
-.. |follow_me2linux-modify_net| image:: /media/link_arrow.svg
-       :target: ../../network/preliminarysettings/index.html
-       :width: 200 px
-       :align: middle
-
-.. |follow_me2installoptions| image:: /media/link_arrow.svg
-       :target: ../installoptions/index.html
-       :width: 200 px
-       :align: middle
-
-.. |follow_me2modify-net| image:: /media/link_arrow.svg
-       :target: ../network/preliminarysettings/index.html
-       :width: 200 px
-       :align: middle
-
-.. |follow_me2migration| image:: /media/link_arrow.svg
-   :target: ../getting-started/migration/index.html
-   :width: 200 px
-   :align: middle
+.. |reg| unicode:: U+00AE .. Trademark
+   :ltrim:
