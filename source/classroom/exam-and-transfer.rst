@@ -1,8 +1,8 @@
 .. _exam-and-transfer-label:
 
-=========================================
- Prüfungsmodus, austeilen und einsammeln
-=========================================
+========================================================
+ Prüfungs-/Klassenerbeitsmodus, austeilen und einsammeln
+========================================================
 
 In einem Kurs können Schülerkonten in den Prüfungsmodus versetzt
 werden, ebenso kann man mit oder ohne Prüfungsmodus Schülern Dateien
@@ -23,8 +23,8 @@ wird aktiviert durch Anklicken in der ersten Spalte.
 Änderungen werden gelb hinterlegt bis sie mit `SPEICHERN & ÜBERNEHMEN`
 übernommen werden.
 
-Prüfungsmodus
-~~~~~~~~~~~~~
+Prüfungsmodus bzw. Klassenarbeitsmodus
+======================================
 
 Während des Prüfungsmodus wird für jedes Schülerkonto ein neues Konto
 angelegt mit dem bisherigen Kontonamen mit angehängter Zeichenkette
@@ -48,7 +48,7 @@ deaktiviert.
 
 
 Austeilen und Einsammeln
-~~~~~~~~~~~~~~~~~~~~~~~~
+========================
 
 Im Home-Laufwerk aller Benutzer (``Home_auf_Server`` bzw. `H:\\`) gibt
 es einen Ordner für den Transfer ``transfer``. Über diesen Ordner wird
