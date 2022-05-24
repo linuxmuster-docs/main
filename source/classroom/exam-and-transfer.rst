@@ -1,7 +1,7 @@
 .. _exam-and-transfer-label:
 
 ========================================================
- Prüfungs-/Klassenerbeitsmodus, austeilen und einsammeln
+ Prüfungs-/Klassenarbeitsmodus, austeilen und einsammeln
 ========================================================
 
 In einem Kurs können Schülerkonten in den Prüfungsmodus versetzt
