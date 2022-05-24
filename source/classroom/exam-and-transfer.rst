@@ -23,7 +23,7 @@ wird aktiviert durch Anklicken in der ersten Spalte.
 Änderungen werden gelb hinterlegt bis sie mit `SPEICHERN & ÜBERNEHMEN`
 übernommen werden.
 
-Prüfungsmodus bzw. Klassenarbeitsmodus
+Prüfungsmodus = Klassenarbeitsmodus
 ======================================
 
 Während des Prüfungsmodus wird für jedes Schülerkonto ein neues Konto
