@@ -1,8 +1,8 @@
 .. _exam-and-transfer-label:
 
-========================================================
- Prüfungs-/Klassenarbeitsmodus, austeilen und einsammeln
-========================================================
+=======================================================
+Prüfungs-/Klassenarbeitsmodus, austeilen und einsammeln
+=======================================================
 
 In einem Kurs können Schülerkonten in den Prüfungsmodus versetzt
 werden, ebenso kann man mit oder ohne Prüfungsmodus Schülern Dateien
@@ -81,6 +81,4 @@ Schülern ein, verschiebt die Benutzer zurück auf ihre normalen
 Benutzernamen und aktiviert die Internet-, WLAN- und Druckzugriffe.
 Die Änderung muss ebenso durch ``SPEICHERN & ÜBERNEHMEN`` quittiert
 werden.
-
-
 
