@@ -118,7 +118,7 @@ Mit ``OK`` übernimmst Du Deine Auswahl.
    :align: center
    :alt: OPNsense: Swap file
 
-Akzeptiere die Frage nach der empfohlenen Auslagerungsdatei.
+Sollte Dir dieses Fenster angezeigt werden, dann akzeptiere die Frage nach der empfohlenen Auslagerungsdatei.
 
 Danach erfolgt die Rückfrage, ob die Festplatte wirklich überschrieben werden soll.
 
