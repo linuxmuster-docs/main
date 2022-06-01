@@ -45,15 +45,6 @@ Aktualisiere die Softwareliste des Servers mittels
    
    sudo apt update
 
-.. todo:: Workaround damit später linuxmuster-setup durchläuft, paramiko ipdaten
-
-   .. code-block:: Bash
-
-      pip3 install --user --upgrade paramiko
-
-   https://www.activestate.com/resources/quick-reads/how-to-update-all-python-packages/
-
-
 Damit ist die Vorbereitung abgeschlossen und Du installierst das Paket "linuxmuster-prepare".
 
 .. code-block:: Bash
