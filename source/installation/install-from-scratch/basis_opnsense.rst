@@ -10,7 +10,9 @@ Anlegen und Installieren der Firewall
                    `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
 
-Bist Du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst Du fortfahren mit `Erster Start der Firewall`_
+.. note:: 
+
+   Bist Du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst Du fortfahren mit `Erster Start der Firewall`_
 
 Installation der OPNsense |reg|
 ===============================
