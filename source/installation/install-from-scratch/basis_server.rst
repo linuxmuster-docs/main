@@ -306,15 +306,11 @@ Zum Abschluß der Installation wird automatisch versucht, Updates zu installiere
 
 .. figure:: media/basis_server_020.png
 
-|...| und danach gilt es den Server neu zu starten. Das veranlasst Du mit ``Jetzt neustarten``, wenn es Dir angeboten wird.
-
-.. figure:: media/basis_server_021.png
-
-Bei laufender und wie zuvor beschriebener Einrichtung der OPNsense |reg| sollte dies erfolgreich verlaufen.
+|...| und danach gilt es den Server neu zu starten.
 
 .. hint::
 
-   Bei einer Installation in eine VM achte vor dem Neustart darauf, dass Du die ISO-Datei / DVD ausgeworfen hast und die Boot-Reihenfolge so unmgestellt hast, dass die VM direkt von HDD bootet.
+   Bei einer Installation in eine VM achte vor dem Neustart darauf, dass Du die ISO-Datei / DVD ausgeworfen hast und die Boot-Reihenfolge so umgestellt hast, dass die VM direkt von HDD bootet.
 
 Wann die Installation abgeschlossen ist, erkennst Du daran das die Anzeige am unteren Bildschirmrand von
 
@@ -324,13 +320,19 @@ auf
 
 .. figure:: media/basis_server_023.png
 
-gewechselt ist, dann starte den Server neu.
+gewechselt ist.
+
+.. figure:: media/basis_server_021.png
+
+Den Neustart veranlasst Du mit ``Jetzt neustarten``, wenn es Dir angeboten wird.
 
 .. tip::
 
+   Folgendes Vorgehen bieten sich an, wenn der Server virtualisiert betrieben wird und der Hypervisor so schnell den Neustart einleitet, dass Du keine Chance hast, das Installationsmedium zu entfernen.
+
    Alternative zum ``Jetzt Neustarten`` gehe zum Punkt ``Hilfe`` oben rechts. Dort wählst Du den Menüpunkt ``Enter Shell`` aus, wo Du dann den Server gezielt mit ``init 0`` herunterfährst. Es folgt noch ein Hinweis, dass Du die Entfernung des Installationsmediums mit ``Enter`` bestätigen sollst. Im Anschluss daran fährt der Server herunter und Du kannst ihn von neuem starten.
 
-   Dieses Vorgehen bieten sich an, wenn der Server virtualisiert betrieben wird und der Hypervisor so schnell den Neustart einleitet, dass Du keine Chance hast, das Installationsmedium zu entfernen.
+Bei laufender und wie zuvor beschriebener Einrichtung der OPNsense |reg| sollte dies erfolgreich verlaufen.
 
 ######
 
@@ -356,24 +358,43 @@ Auch wenn Du keinen Prompt siehst, einfach Deinen Login eingeben. Nach dem ``Ent
 
 Danach kannst Du die folgenden Codezeilen einfach zwischen der Anleitung und dem Server übertragen.
 
-Quota-Einsellungen überprüfen
------------------------------
+Quota-Einstellungen überprüfen
+------------------------------
 
-Betrifft Dich nur wenn du nicht mit den default-Einstellungen installierst.
+Betrifft Dich nur wenn du nicht mit den default-Einstellungen installierst. Überspringe diesen Punkt und gehe zu `Bezeichnung des Speichermediums für das LVM ermitteln`_
 
-10. Rufe die Datei ``/etc/fstab`` mit dem Editor nano auf und ergänze den bisherigen Eintrag für die 1. HDD um nachstehenden Eintragungen:
+
+.. code:: 
+
+   nano /etc/fstab
+
+Mit diesem Aufruf öffnest du die Datei ``/etc/fstab`` mit dem Editor nano auf, damit du die Ersetzung von ``defaults`` durchführen kannst. Das ist der Ersetzungstext:
+
+.. code::
+
+   user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1
+
+Vor deiner Ersetzung:
+
+.. code::
+ 
+   /dev/vg0/var              /var ext4 defaults 0 1
+   /dev/vg0/linbo            /srv/linbo ext4 defaults 0 1
+   /dev/vg0/global           /srv/samba/global ext4 defaults 0 1
+   /dev/vg0/default-school   /srv/samba/schools/default-school ext4 defaults 0 1
+
+Nach der Änderung:
  
  .. code::
  
-    /dev/vg0/var              /var ext4 defaults 0 1
+   /dev/vg0/var              /var ext4 defaults 0 1
    /dev/vg0/linbo            /srv/linbo ext4 defaults 0 1
    /dev/vg0/global           /srv/samba/global ext4 user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1 0 1
    /dev/vg0/default-school   /srv/samba/schools/default-school ext4 user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1 0 1
  
 Speichere die Einstellung mit ``Strg+w`` und verlasse den Editor mit ``Strg+x``. 
  
-11. Lade die Eintragungen aus der Datei ``/etc/fstab`` neu mit ``mount -a``. Ggf. erkennst Du auch noch Fehler, die sich aufgrund von Tippfehlern in der Datrei /etc/fstab ergeben.
-     Behebe diese zuerst bevor Du fortfährst.
+Lade die Eintragungen aus der Datei ``/etc/fstab`` neu mit ``mount -a``. Ggf. erkennst Du auch noch Fehler, die sich aufgrund von Tippfehlern in der Datrei /etc/fstab ergeben. Behebe diese zuerst bevor Du fortfährst.
  
 .. 12. Kopiere dann die gesicherten Inhalte wieder in das Verzeichnis ``/var``, das jetzt auf dem LVM gemountet ist und noch keinen Inhalt hat. Starte danach wieder   
 ..     das virtuelle Dateisystem oder gehe direkt zu Punkt 13, da beim Neustart dieses wieder eingehangen wird.
@@ -390,6 +411,21 @@ Speichere die Einstellung mit ``Strg+w`` und verlasse den Editor mit ``Strg+x``.
 .. 
 ..    Solltest Du beim Kopieren des Inhalts von ``var`` Fehler angezeigt bekommen, so hast Du das virtuelle Dateisystem zuvor nicht ausgehangen. Gehe dann wie unter 9. vor.
 
+Bezeichnung des Speichermediums für das LVM ermitteln
+-----------------------------------------------------
+
+Betrifft Dich nur wenn du die default-Einstellungen verwendest.
+
+.. code::
+
+   lsblk
+
+Aus dessen Ausgabe kannst du Namen für die weitere Verwendung ermitteln. Hier wäre er beispielhaft ``/dev/sdb/``
+
+.. figure:: media/basis_server_024a.png
+
+.. note:: Am besten notierst Du dir diese Erkenntnis für die spätere Verwendung.
+
 Automatische Updates abschalten
 -------------------------------
 
@@ -400,7 +436,7 @@ Werde mit |...|
 .. code::
 
   sudo -i
- 
+
 |...| zum Nutzer ``root`` und editiere, beispielsweise mit nano, die Datei |...|
 
 .. code::
