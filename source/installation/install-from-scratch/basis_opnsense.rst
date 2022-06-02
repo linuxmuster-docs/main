@@ -10,7 +10,9 @@ Anlegen und Installieren der Firewall
                    `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
 
-Bist Du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst Du fortfahren mit `Erster Start der Firewall`_
+.. note:: 
+
+   Bist Du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst Du fortfahren mit `Erster Start der Firewall`_
 
 Installation der OPNsense |reg|
 ===============================
@@ -112,20 +114,25 @@ Jetzt wird OPNsense |reg| auf der Festplatte installiert. Zuvor musst Du diese n
 
 Mit ``OK`` übernimmst Du Deine Auswahl.
 
-Akzeptiere die Frage nach der empfohlenen Auslagerungsdatei.
+.. figure:: media/basis_opnsense_007a.png
+   :align: center
+   :alt: OPNsense: Swap file
+
+Sollte Dir dieses Fenster angezeigt werden, dann akzeptiere die Frage nach der empfohlenen Auslagerungsdatei.
+
 Danach erfolgt die Rückfrage, ob die Festplatte wirklich überschrieben werden soll.
 
 .. figure:: media/basis_opnsense_007.png
    :align: center
-   :alt: OPNsense: UFS Configuration 2
-
+   :alt: OPNsense: Last change to abort vs. start installation
+   
 Bestätige diesen Vorgang, um die Installation zu starten.
 
 Warte jetzt, bis die Installation abgeschlossen ist.
 
 .. figure:: media/basis_opnsense_008.png
    :align: center
-   :alt: OPNsense: UFS Configuration 2
+   :alt: OPNsense: Installation progress
 
 Zum Abschluss der Konfiguration musst Du das Kennwort für den Benutzer ``root`` neu setzen.
 

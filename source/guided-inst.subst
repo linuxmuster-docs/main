@@ -24,7 +24,6 @@
    :trim:
 
 .. |...| unicode:: U+2026 .. Auslassungszeichen
-   :trim:
 
 .. |copy| unicode:: 0xA9 .. Copyright-Zeichen
    :ltrim:

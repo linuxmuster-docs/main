@@ -10,7 +10,9 @@ Anlegen und Installieren des Servers
                    `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
 
-Bist Du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst Du fortfahren mit `Erster Start des Servers vom Installationsmedium`_.
+.. note:: 
+
+   Bist Du zuvor der Anleitung "Proxmox vorbereiten" gefolgt, dann kannst Du fortfahren mit `Erster Start des Servers vom Installationsmedium`_.
 
 .. hint::
 
@@ -77,13 +79,15 @@ Wähle ``Manual`` aus.
 
 .. figure:: media/basis_server_005.png
 
+Gib die Netzwerkkonfiguration, wie im oberen Bild ein beziehungsweise |...|
+
+.. hint:: |...| passe sie Deinen Bedürfnissen an und übernehme diese mit ``Speichern``. 
+
 .. attention::
 
    Die Länge des ersten Teils der Domäne darf maximal 15 Zeichen betragen. Die Domäne "muster-gymnasium.de" überschreitet diese Grenze um ein Zeichen, da "muster-gymnasium" 16 Zeichen lang ist.
  
    Eine gute Wahl ist beispielsweise ``linuxmuster.lan``. Beim späteren Set-up von linuxmuster.net wird diese ggf. für alle Server-Dienste angepasst.
-
-Gib die Netzwerkkonfiguration, wie im oberen Bild ein beziehungsweise passe sie Deinen Bedürfnissen an und übernehme sie mit ``Speichern``. 
 
 .. figure:: media/basis_server_006.png
 
@@ -107,10 +111,6 @@ Bei der angebotene Aktualisierung wählst Du ``Ohne Akualisierung fortfahren``.
 Speichermedien
 --------------
 
-Jetzt musst Du die Speichermedien einrichten.
-
-.. figure:: media/basis_server_010_custom-storage-layout.png
-
 Für die weitere Installation um aus einem Ubuntu-Server einen linuxmuster.net-Server zu machen, benötigst Du zwei unterschiedliche Speichermedien in Deinem Server.
 
 Dabei ist es egal ob es sich dabei um |...| 
@@ -124,10 +124,12 @@ In dieser Anleitung beschreiben wir zunächst die Installation auf Basis unserer
 * |...| 25G Speichermedium für das System und
 * |...| 100G Speichermedium für Daten
 
-Wobei anzumerken ist, dass die Installation des Speicherplatzes für das System ``/`` für alle Varianten die selbe ist. Daher startet unsere Beschreibung mit dieser.
+Wobei anzumerken ist, dass die Installation des Speicherplatzes für das System ``/`` für alle Varianten dieselbe ist. Daher startet unsere Beschreibung mit dieser.
 
 Speicher des Systems
 ^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: media/basis_server_010_custom-storage-layout.png
 
 Wähle nun zur Einrichtung der Festplatten ``Custom Storage Layout`` aus, wie in obigen Bild dargestellt.
 
@@ -300,19 +302,15 @@ Installiere keine weiteren optionalen Pakete.
 
 Bestätige den Start des Installationsvorganges mit ``Erledigt``.
 
-Zum Abschluß der Installation wird automatisch versucht, Updates zu installieren
+Zum Abschluß der Installation wird automatisch versucht, Updates zu installieren |...|
 
 .. figure:: media/basis_server_020.png
 
-und danach gilt es den Server neu zu starten. Das veranlasst Du mit ``Jetzt neustarten``, wenn es Dir angeboten wird.
-
-.. figure:: media/basis_server_021.png
-
-Bei laufender und wie zuvor beschriebener Einrichtung der OPNsense |reg| sollte dies erfolgreich verlaufen.
+|...| und danach gilt es den Server neu zu starten.
 
 .. hint::
 
-   Bei einer Installation in eine VM achte vor dem Neustart darauf, dass Du die ISO-Datei / DVD ausgeworfen hast und die Boot-Reihenfolge so unmgestellt hast, dass die VM direkt von HDD bootet.
+   Bei einer Installation in eine VM achte vor dem Neustart darauf, dass Du die ISO-Datei / DVD ausgeworfen hast und die Boot-Reihenfolge so umgestellt hast, dass die VM direkt von HDD bootet.
 
 Wann die Installation abgeschlossen ist, erkennst Du daran das die Anzeige am unteren Bildschirmrand von
 
@@ -322,122 +320,26 @@ auf
 
 .. figure:: media/basis_server_023.png
 
-gewechselt ist, dann starte den Server neu.
+gewechselt ist.
+
+.. figure:: media/basis_server_021.png
+
+Den Neustart veranlasst Du mit ``Jetzt neustarten``, wenn es Dir angeboten wird.
 
 .. tip::
 
+   Folgendes Vorgehen bieten sich an, wenn der Server virtualisiert betrieben wird und der Hypervisor so schnell den Neustart einleitet, dass Du keine Chance hast, das Installationsmedium zu entfernen.
+
    Alternative zum ``Jetzt Neustarten`` gehe zum Punkt ``Hilfe`` oben rechts. Dort wählst Du den Menüpunkt ``Enter Shell`` aus, wo Du dann den Server gezielt mit ``init 0`` herunterfährst. Es folgt noch ein Hinweis, dass Du die Entfernung des Installationsmediums mit ``Enter`` bestätigen sollst. Im Anschluss daran fährt der Server herunter und Du kannst ihn von neuem starten.
 
-   Dieses Vorgehen bieten sich an, wenn der Server virtualisiert betrieben wird und der Hypervisor so schnell den Neustart einleitet, dass Du keine Chance hast, das Installationsmedium zu entfernen.
-
-.. ################
-.. 
-.. .. figure:: media/basis_server_016_custom-storage-layout-create-partition-table-overview.png
-.. 
-.. 
-.. .. todo:: Beschreibung anhand der ubuntu-Installationsmaske einfügen wenn das möglich sein sollte.
-.. 
-.. .. .. figure:: media/basis_server_015_custom-storage-layout-create-partition-table-lvm-6.png
-.. 
-.. .. todo:: Hier weiter beschreiben
-..
-.. LVM - Einrichtung 
-.. -----------------
-.. 
-.. .. todo:: Hinweis in der obigen Hinweisbox beachten. Dann würde dieses hier anders gelöst sein.
-.. 
-.. Solltest Du bei der Installtion unserem Partitionerungs-Vorschlag gefolgt sein, dann kannst Du direkt mit `Automatische Updates abschalten`_ fortfahren.
-.. 
-.. 1. Hast Du wie zuvor beschrieben ein LVM angelegt, gib auf der Konsole ``sudo vgscan --mknodes`` ein. Es wird Dir dann die sog. ``volume group "vg0"`` angezeigt, die Du während der Installation auf der 2. HDD angelegt hast.
-.. 
-.. 2. Führe ``sudo vgchange -ay`` aus, um das Volume zu aktivieren.
-.. 
-.. 3. Gib ``sudo pvdisplay`` an, um Informationen zu der Logical Volume Group auszugeben. PV = physical volume = hdd, vg = volume group. Du kannst für Kurzinformationen auch ``sudo pvs`` angeben. Die vg - volume group sollte schon vorhanden sein und wie zuvor angegeben hier ``vg0`` heißen.
-.. 
-.. 4. Lege nun logical volumes an. Wir gehen von 100G für die HDD aus:
-.. 
-.. .. code::
-.. 
-..    sudo lvcreate -L 10G -n /dev/vg0/var vg0
-..    sudo lvcreate -L 40G -n /dev/vg0/linbo vg0
-..    sudo lvcreate -L 10G -n /dev/vg0/global vg0
-..    sudo lvcreate -L 38G -n /dev/vg0/default-school vg0
-..    
-.. 5. Um zu prüfen, ob die logical volumes angelegt wurden, gib den Befehl ``sudo lvs`` an.
-.. 
-.. 6. Aktiviere nun diese logical volumes wie folgt:
-.. 
-.. .. ode::
-.. 
-..    sudo lvchange -ay /dev/vg0/var
-..    sudo lvchange -ay /dev/vg0/linbo
-..    sudo lvchange -ay /dev/vg0/global
-..    sudo lvchange -ay /dev/vg0/default-school
-..    
-.. 7. Formatiere die Verzeichnisse in den neu angelegten logical volume groups wie folgt:
-
-.. .. code::
-
-..    sudo mkfs.ext4 /dev/vg0/var
-..    sudo mkfs.ext4 /dev/vg0/linbo
-..    sudo mkfs.ext4 /dev/vg0/global
-..    sudo mkfs.ext4 /dev/vg0/default-school
-..    
-.. 8. Lege nachstehende Verzeichnisse an, die wir danach auf die logical volumes mounten:
-..    
-.. .. code:: 
-.. 
-..    sudo mkdir /srv/linbo
-..    sudo mkdir /srv/samba
-..    sudo mkdir /srv/samba/global
-..    sudo mkdir /srv/samba/schools
-..    sudo mkdir /srv/samba/schools/default-school
-..  
-.. 9. Kopiere den Inhalt von ``/var`` zunächst in einen neuen Ordner ``/savevar``. Das Verzeichnis ``/var`` soll später auf das LVM gemountet werden.
-..    Hierbei ist darauf zu achten, dass das virtuelle Dateisystem unterhalb von /var, das für die LX-Container genutzt wird, zunächst ausgehangen und der entsprechende    
-..    Dienst ``lxcfs.service`` beendet wird.
-.. 
-.. .. code:: 
-.. 
-..    sudo mkdir /savevar
-..    sudo systemctl stop lxcfs.service
-..    sudo cp -R /var /savevar
-.. 
-.. 10. Rufe die Datei ``/etc/fstab`` mit dem Editor nano auf und ergänze den bisherigen Eintrag für die 1. HDD um nachstehenden Eintragungen:
-.. 
-.. .. code::
-.. 
-..    /dev/vg0/var              /var ext4 defaults 0 1
-   /dev/vg0/linbo            /srv/linbo ext4 defaults 0 1
-   /dev/vg0/global           /srv/samba/global ext4 user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1 0 1
-   /dev/vg0/default-school   /srv/samba/schools/default-school ext4 user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1 0 1
-.. 
-.. Speichere die Einstellung mit ``Strg+w`` und verlasse den Editor mit ``Strg+x``. 
-.. 
-.. 11. Lade die Eintragungen aus der Datei ``/etc/fstab`` neu mit ``mount -a``. Ggf. erkennst Du auch noch Fehler, die sich aufgrund von Tippfehlern in der Datrei /etc/fstab ergeben.
-..     Behebe diese zuerst bevor Du fortfährst.
-.. 
-.. 12. Kopiere dann die gesicherten Inhalte wieder in das Verzeichnis ``/var``, das jetzt auf dem LVM gemountet ist und noch keinen Inhalt hat. Starte danach wieder   
-..     das virtuelle Dateisystem oder gehe direkt zu Punkt 13, da beim Neustart dieses wieder eingehangen wird.
-.. 
-.. .. code::
-.. 
-..    cd /savevar/var
-..    sudo cp -R * /var
-..    sudo systemctl start lxcfs.service
-.. 
-.. 13. Boote danach den Server neu mit ``sudo reboot``. Startet dieser ohne Fehlermeldungen durch, kannst Du nun das Verzeichnis ``savevar`` wieder löschen mit ``rm -R /savevar``.
-.. 
-.. .. hint::
-.. 
-..    Solltest Du beim Kopieren des Inhalts von ``var`` Fehler angezeigt bekommen, so hast Du das virtuelle Dateisystem zuvor nicht ausgehangen. Gehe dann wie unter 9. vor.
+Bei laufender und wie zuvor beschriebener Einrichtung der OPNsense |reg| sollte dies erfolgreich verlaufen.
 
 ######
 
 Basis-Konfiguration des Servers
 ===============================
 
-xterm.js für die Konsolen-Nutzung in Proxmox aktivieren
+term.js für die Konsolen-Nutzung in Proxmox aktivieren
 -------------------------------------------------------
 
 Nachdem Du Dich erneut als ``linuxadmin`` beziehungsweise mit dem von Dir angelegten Nutzer an der ``noVNC`` Konsole angemeldet hast, gebe diese zwei Zeilen Code nacheinander ein:
@@ -456,6 +358,74 @@ Auch wenn Du keinen Prompt siehst, einfach Deinen Login eingeben. Nach dem ``Ent
 
 Danach kannst Du die folgenden Codezeilen einfach zwischen der Anleitung und dem Server übertragen.
 
+Quota-Einstellungen überprüfen
+------------------------------
+
+Betrifft Dich nur wenn du nicht mit den default-Einstellungen installierst. Überspringe diesen Punkt und gehe zu `Bezeichnung des Speichermediums für das LVM ermitteln`_
+
+
+.. code:: 
+
+   nano /etc/fstab
+
+Mit diesem Aufruf öffnest du die Datei ``/etc/fstab`` mit dem Editor nano auf, damit du die Ersetzung von ``defaults`` durchführen kannst. Das ist der Ersetzungstext:
+
+.. code::
+
+   user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1
+
+Vor deiner Ersetzung:
+
+.. code::
+ 
+   /dev/vg0/var              /var ext4 defaults 0 1
+   /dev/vg0/linbo            /srv/linbo ext4 defaults 0 1
+   /dev/vg0/global           /srv/samba/global ext4 defaults 0 1
+   /dev/vg0/default-school   /srv/samba/schools/default-school ext4 defaults 0 1
+
+Nach der Änderung:
+ 
+ .. code::
+ 
+   /dev/vg0/var              /var ext4 defaults 0 1
+   /dev/vg0/linbo            /srv/linbo ext4 defaults 0 1
+   /dev/vg0/global           /srv/samba/global ext4 user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1 0 1
+   /dev/vg0/default-school   /srv/samba/schools/default-school ext4 user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1 0 1
+ 
+Speichere die Einstellung mit ``Strg+w`` und verlasse den Editor mit ``Strg+x``. 
+ 
+Lade die Eintragungen aus der Datei ``/etc/fstab`` neu mit ``mount -a``. Ggf. erkennst Du auch noch Fehler, die sich aufgrund von Tippfehlern in der Datrei /etc/fstab ergeben. Behebe diese zuerst bevor Du fortfährst.
+ 
+.. 12. Kopiere dann die gesicherten Inhalte wieder in das Verzeichnis ``/var``, das jetzt auf dem LVM gemountet ist und noch keinen Inhalt hat. Starte danach wieder   
+..     das virtuelle Dateisystem oder gehe direkt zu Punkt 13, da beim Neustart dieses wieder eingehangen wird.
+.. 
+.. .. code::
+.. 
+..    cd /savevar/var
+..    sudo cp -R * /var
+..    sudo systemctl start lxcfs.service
+.. 
+.. 13. Boote danach den Server neu mit ``sudo reboot``. Startet dieser ohne Fehlermeldungen durch, kannst Du nun das Verzeichnis ``savevar`` wieder löschen mit ``rm -R /savevar``.
+.. 
+.. .. hint::
+.. 
+..    Solltest Du beim Kopieren des Inhalts von ``var`` Fehler angezeigt bekommen, so hast Du das virtuelle Dateisystem zuvor nicht ausgehangen. Gehe dann wie unter 9. vor.
+
+Bezeichnung des Speichermediums für das LVM ermitteln
+-----------------------------------------------------
+
+Betrifft Dich nur wenn du die default-Einstellungen verwendest.
+
+.. code::
+
+   lsblk
+
+Aus dessen Ausgabe kannst du Namen für die weitere Verwendung ermitteln. Hier wäre er beispielhaft ``/dev/sdb/``
+
+.. figure:: media/basis_server_024a.png
+
+.. note:: Am besten notierst Du dir diese Erkenntnis für die spätere Verwendung.
+
 Automatische Updates abschalten
 -------------------------------
 
@@ -466,7 +436,7 @@ Werde mit |...|
 .. code::
 
   sudo -i
- 
+
 |...| zum Nutzer ``root`` und editiere, beispielsweise mit nano, die Datei |...|
 
 .. code::

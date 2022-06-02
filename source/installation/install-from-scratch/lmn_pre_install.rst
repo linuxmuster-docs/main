@@ -12,6 +12,8 @@ Server auf lmn7.1 vorbereiten
 
 Nachdem Du die Firewall und den Server wie beschrieben installiert hast, müssen beide Maschinen fertig konfiguriert werden. Um dieses zu vereinfachen, stellen wir Dir das Skript ``lmn71-prepare`` zur Verfügung.
 
+.. todo:: lsblk für zu nutzenden Festplatten bezeichnung ermitteln
+
 Das Skript lmn71-prepare
 ========================
 
@@ -44,15 +46,6 @@ Aktualisiere die Softwareliste des Servers mittels
 .. code-block:: Bash
    
    sudo apt update
-
-.. todo:: Workaround damit später linuxmuster-setup durchläuft, paramiko ipdaten
-
-   .. code-block:: Bash
-
-      pip3 install --user --upgrade paramiko
-
-   https://www.activestate.com/resources/quick-reads/how-to-update-all-python-packages/
-
 
 Damit ist die Vorbereitung abgeschlossen und Du installierst das Paket "linuxmuster-prepare".
 
@@ -120,8 +113,6 @@ Hier ein Auszug mit den benötigten Optionen, die Du gleich anwenden wirst.
    -p, --profile=<profile>     : Host profile to apply, mandatory. Expected
                                  values are "server" or "ubuntu".
    |...|
-   -u, --unattended            : Unattended mode, do not ask, use defaults.
-   |...|
 
 #####
 
@@ -130,11 +121,11 @@ Installation mit unseren Standardvorgaben
 
 .. code-block:: Bash
 
-   lmn71-prepare -i -u -p server
+   lmn71-prepare -i -p server
 
-Jetzt ist es an der Zeit, dass Du Dich zurücklehnst und den Verlauf beobachtest.
+.. Jetzt ist es an der Zeit, dass Du Dich zurücklehnst und den Verlauf beobachtest.
 
-Nach dem das Skript abgearbeitet ist, steht dem :ref:`setup-label` nichst mehr im Wege.
+.. Nach dem das Skript abgearbeitet ist, steht dem :ref:`setup-label` nichst mehr im Wege.
 
 #####
 
@@ -145,7 +136,12 @@ Installation mit Deinen Vorgaben:
 
    lmn71-prepare -i -x -p server
 
-Ausgabe des Befehls und Deine Eingaben
+#####
+
+Ausgaben des Befehls und Deine Eingaben
+---------------------------------------
+
+.. hint:: Im Folgenden beschreiben wir die Eingaben für unsere Standard-Vorgaben. In der Regel kannst Du diese einfach mit ``Enter`` übernehmen. Wo Eingaben nötig bzw. Anpassungen möglich sind, machen wir darauf in der Beschreibung mit einer Hinweisbox aufmerksam.
 
 .. code-block:: Bash
 
@@ -156,6 +152,8 @@ Ausgabe des Befehls und Deine Eingaben
 
 Das vorausgewählte Profile "server" kannst Du mit ``[ENTER]`` übernehmen, da Du ja den Server einrichten willst.
 
+#####
+
 .. code-block:: Bash
 
    ## Network
@@ -163,47 +161,67 @@ Das vorausgewählte Profile "server" kannst Du mit ``[ENTER]`` übernehmen, da D
   
 Das Netzwerk-Interface sollte richtig erkannt sein, da Du ja nur eines für den Server eingerichtet hast. Also wieder mit ``[ENTER]`` bestätigen.
 
+#####
+
 .. code-block:: Bash
 
-   Enter ip address with net or bitmask [10.0.0.1/16]: 10.112.0.1/16
-  
-An dieser Stelle ist die Eingabe eines abweichenden Netzwerk-Bereichs möglich, dafür müsstest Du den IP-Bereich und die zu verwendende Netzwerkmaske eingeben. Hier im Beispiel mit 10.112.0.0/16 gezeigt. Gibst Du keine ein, übernimmst Du unsere Standard-Vorgabe wie angezeigt mit `` [ENTER]``
+   Enter ip address with net or bitmask [10.0.0.1/16]:
+
+.. hint:: An dieser Stelle ist die Eingabe eines abweichenden Netzwerk-Bereichs möglich, dafür müsstest Du den IP-Bereich und die zu verwendende Netzwerkmaske eingeben. Gibst Du keine ein, übernimmst Du mit ``[ENTER]`` unsere Standard-Vorgabe wie angezeigt.
+
+#####
 
 .. code-block:: Bash
 
    Enter firewall ip address [10.112.0.254]:
 
-Die Adresse der Firewall wird automatisch Deiner zuvor gemachten Eingabe angepasst. Alternativ könntest Du sie anpassen, wenn die Firewall eine andere als die angezeigte haben sollte. Weiter mit ``[ENTER]`` 
+Die Adresse der Firewall wird automatisch Deiner zuvor gemachten Eingabe angepasst. 
+
+.. hint:: Alternativ könntest Du sie anpassen, wenn die Firewall eine andere als die angezeigte haben sollte.
+
+#####
 
 .. code-block:: Bash
 
    Enter gateway ip address [10.112.0.254]:
 
-Auch diese Adresse des Gateway sollte automatisch angepasst sein, ansonsten musst hier tätig werden.
+Auch diese Adresse des Gateway sollte automatisch angepasst sein.
+
+.. hint:: Ansonsten müstest Du hier nochmals tätig werden.
+
+#####
 
 .. code-block:: Bash
 
    Enter hostname [server]: 
 
-Auch hier gilt Übernahme der Vorgabe mit ``[ENTER]``, Änderungen möglich.
+Auch hier gilt Übernahme der Vorgabe mit ``[ENTER]``.
+
+.. hint:: Änderungen möglich.
+
+#####
 
 .. code-block:: Bash
 
    Enter domainname [linuxmuster.lan]:
 
-Auch hier sind idivuelle Anpassung möglich, wenn Du nicht unsere Standardvorgabe nutzen willst. Dabei gilt aber zu beachten das ...
+.. hint:: Auch hier ist eine individuelle Anpassung möglich, wenn Du nicht unsere Standardvorgabe nutzen willst. Dabei gilt aber zu beachten, dass |...|
 
 .. attention:: 
 
-   Die Länge des ersten Teils der Domäne darf maximal 15 Zeichen betragen. Die Domäne „muster-gymnasium.de“ überschreitet diese Grenze um ein Zeichen, da „muster-gymnasium“ 16 Zeichen lang ist.
+   |...| die Länge des ersten Teils der Domäne maximal 15 Zeichen betragen darf. Die Domäne „muster-gymnasium.de“ überschreitet diese Grenze um ein Zeichen, da „muster-gymnasium“ 16 Zeichen lang ist.
 
    Eine gute Wahl ist beispielsweise ``linuxmuster.lan``!
 
+#####
+
 .. code-block:: Bash
 
-   Enter physical device to use for LVM []: [ENTER]
+   Enter physical device to use for LVM []: /dev/sdb
 
-Da Du das LVM, wie von Dir zuvor bei der Ubuntu-Servers-Installation festgelegt, verwenden willst musst Du an dieser Stelle einfach nur die ``[Enter]``-Taste drücken. Die bei Aufruf des Installationsscripts übergebene Option ``-x`` veranlasst, dass es so eingerichtet wird.
+Für die Verwenung unserer Vorgaben, musst Du den Speicherort für das LVM angeben. Die benötigte Eingaben hast Du zuvor ja ermittelt. LINK_EINFÜGEN Hier beispielhaft für die zweite erkannte Festplatte. 
+
+.. hint:: Bei anderen Partitionsgrößen hast Du das LVM bei der Ubuntu-Servers-Installation angelegt. Um es zu verwenden, musst Du an dieser Stelle einfach nur die ``[Enter]``-Taste drücken. Die bei Aufruf des Installationsscripts übergebene Option ``-x`` veranlasst, dass es so übernommen wird.
 
 #####
 
