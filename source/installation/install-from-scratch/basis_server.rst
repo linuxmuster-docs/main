@@ -111,8 +111,6 @@ Bei der angebotene Aktualisierung wählst Du ``Ohne Akualisierung fortfahren``.
 Speichermedien
 --------------
 
-Jetzt musst Du die Speichermedien einrichten.
-
 Für die weitere Installation um aus einem Ubuntu-Server einen linuxmuster.net-Server zu machen, benötigst Du zwei unterschiedliche Speichermedien in Deinem Server.
 
 Dabei ist es egal ob es sich dabei um |...| 
@@ -126,7 +124,7 @@ In dieser Anleitung beschreiben wir zunächst die Installation auf Basis unserer
 * |...| 25G Speichermedium für das System und
 * |...| 100G Speichermedium für Daten
 
-Wobei anzumerken ist, dass die Installation des Speicherplatzes für das System ``/`` für alle Varianten die selbe ist. Daher startet unsere Beschreibung mit dieser.
+Wobei anzumerken ist, dass die Installation des Speicherplatzes für das System ``/`` für alle Varianten dieselbe ist. Daher startet unsere Beschreibung mit dieser.
 
 Speicher des Systems
 ^^^^^^^^^^^^^^^^^^^^
@@ -304,11 +302,11 @@ Installiere keine weiteren optionalen Pakete.
 
 Bestätige den Start des Installationsvorganges mit ``Erledigt``.
 
-Zum Abschluß der Installation wird automatisch versucht, Updates zu installieren
+Zum Abschluß der Installation wird automatisch versucht, Updates zu installieren |...|
 
 .. figure:: media/basis_server_020.png
 
-und danach gilt es den Server neu zu starten. Das veranlasst Du mit ``Jetzt neustarten``, wenn es Dir angeboten wird.
+|...| und danach gilt es den Server neu zu starten. Das veranlasst Du mit ``Jetzt neustarten``, wenn es Dir angeboten wird.
 
 .. figure:: media/basis_server_021.png
 
