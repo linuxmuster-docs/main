@@ -422,7 +422,11 @@ Betrifft Dich nur wenn du die default-Einstellungen verwendest.
 
 Aus dessen Ausgabe kannst du Namen für die weitere Verwendung ermitteln. Hier wäre er beispielhaft ``/dev/sdb/``
 
-.. figure:: media/basis_server_024a.png
+.. figure:: media/basis_server_024.png
+
+.. attention::
+
+   Bild basis_server024.png noch ersetzen durch die korrekte Ausgabe des Befehls lsblk auf dem Server.
 
 .. note:: Am besten notierst Du dir diese Erkenntnis für die spätere Verwendung.
 
@@ -498,19 +502,19 @@ Nach dem erneuten Einloggen rufst Du folgende Zeile an der Konsole des Servers a
 
 Da es die erste Kontaktaufnahme zwischen dem Server und der Firewall ist,
 
-.. figure:: media/basis_server_024.png
+.. figure:: media/basis_server_025.png
 
-ist es notwendig das Du den Key akzeptierst. 
+ist es notwendig das Du den Key akzeptierst.
 
 Anschließend sollte der Login nach der Eingabe des Passwortes ``Muster!`` erfolgreich sein.
 
-.. figure:: media/basis_server_025.png
+.. figure:: media/basis_server_026.png
 
 Mit ``0) Logout`` beendest Du die Verbindung.
 
 Weiter geht es jetzt mit :ref:`lmn_pre_install-label`
 
-.. todo:: Hinweis des zum Releade-Termin zur erledigen Aufgaben.
+.. todo:: Hinweis des zum Release-Termin zur erledigen Aufgaben.
    
    * Zeilen 309-410 und 467-492 in rst-File löschen, wenn das Verfahren an Ort und Stelle für gut befunden wurde.
    * Grafiken /media sind zu überprüfen ob noch benötigt und alle Benennungen den Absprache entsprechen. 
