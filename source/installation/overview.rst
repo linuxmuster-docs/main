@@ -1,7 +1,7 @@
 .. _install-overview-label:
 
-Installation: Übersicht
-=======================
+Installationablauf
+==================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
                    `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_
@@ -9,10 +9,6 @@ Installation: Übersicht
 .. todo:: Für die Veröffentlichung als latest:
 
           Kommentar-Tags und die vorhergehende Leerzeile bei :target: entfernen
-
-
-Ablauf
-++++++
 
 Um linuxmuster.net v7.1 zu installieren musst Du folgende Schritte durchlaufen:
 
@@ -36,7 +32,7 @@ Um linuxmuster.net v7.1 zu installieren musst Du folgende Schritte durchlaufen:
 
 ..       :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part2-basis-server-provision.svg
 
-\* Bei der aktuellen linuxmuster.net Version dient die LTS Version 18.04 (Bionic Beaver) als Basis
+\* Bei der aktuellen linuxmuster.net Version dient die LTS Version 18.04 (Bionic Beaver) als Basis.
 
 5. Installation from Scratch in die vorbereiteten VMs - oder alternativ direkt auf zwei Hardware-Maschinen
 
