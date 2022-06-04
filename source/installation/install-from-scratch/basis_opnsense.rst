@@ -672,18 +672,3 @@ Logout
 
 .. figure:: media/basis_opnsense_061.png
 
-.. todo:: Unterstehende offene Fragen klären
-
-.. hint:: 
-
-   Installierst Du die OPNsense |reg| in einer VM, so solltest Du nun noch die Tools der gewählten Virtualisierungsumgebung installieren, damit die VM komfortabel gesteuert werden kann.
-   Für XCP-ng findest Du nachstehend die Hinweise: https://xcp-ng.org/docs/guides.html#pfsense-opnsense-vmi
-   
-   - Kann diese hint-Box ganz raus, da verschoben ins Wiki?
-
-   Ich habe keine Guest-Tools für OPNsense |reg| gefunden,
-   dafür aber weitere Konfigurationen:
-
-   https://pfstore.com.au/blogs/guides/run-opnsense-in-proxmox
-
-   - Könnte da für uns etwas dabei sein?
