@@ -781,7 +781,7 @@ Klicke auf ``Add``.
 Hinzufügen einer Seriellen Schnittstelle
 ----------------------------------------
 
-Damit Dir copy&paste in der Oberfläche von Proxmox bei der Auswahl unter ``Console`` zur Verfügung steht, muss Du die Nutzung von xterm.js ermöglichen.
+Damit Dir `copy & past` in der Oberfläche von Proxmox bei der Auswahl unter ``Console`` zur Verfügung steht, muss Du die Nutzung von `xterm.js` ermöglichen.
 
 .. figure:: media/xterm-opnsense_001.png
    :align: center
@@ -810,6 +810,10 @@ Klicke auf ``Add``, anschließend sollte der gezeigte Menüpunkt nicht mehr ausg
 .. hint:: Für die weitere Nutzung von xterm.js ist allerdings noch eine Anpassung bei der laufenden OPNsense |reg| nötig. Die nehmen wir zu einem geeigneten, späteren Zeitpunkt vor. (Stichwort: Sekundäre Konsole)
 
 Kontrolliere nochmals alle Einstellungen der neu angelegten VM.
+
+.. attention::
+
+   Sollte bei der nachfolgenden Installation die OPNsense |reg| DVD nicht starten, lösche nochmals die serielle Schnittstelle bei den Hardware-Einstellungen. Führe dann zuerst die Installation wie beschrieben durch. Fahre danach die VM mit OPNsense |reg| herunter, füge die serielle Schnittstelle erneut hinzu und starte die VM mit OPNsense |reg|. Führe dann die weitere Konfiguration durch.
 
 Anlegen der VM für linuxmuster server
 -------------------------------------
