@@ -440,7 +440,11 @@ Aus dessen Ausgabe kannst du Namen für die weitere Verwendung ermitteln. Hier w
 
 .. figure:: media/basis_server_024.png
 
+<<<<<<< HEAD
 .. note:: Notiere Dir HDD- und Paritions-Bezeichnungen für die spätere Verwendung.
+=======
+.. note:: Am besten notierst Du dir diese Erkenntnis für die spätere Verwendung.
+>>>>>>> upstream/v7.1
 
 Automatische Updates abschalten
 -------------------------------
