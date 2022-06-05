@@ -148,11 +148,7 @@ alternativ
 
 Das erste Verfahren hat den Vorteil, dass Du nicht die Zeit des Neustarts abwarten, Dich erneut verbinden und anmelden musst.
 
-.. todo:: Frage?
-  
-   Muss der PC aus dem Bereich 10.0.0.10 ... sein
-
-Nach abgeschlossenem Setup und eventuellen Neustart des Servers, kannst Du Dich mit einem PC via Browser an der Schulkonsole von linuxmuster.net v7.1 anmelden. Dafür muss sich der Rechner im internen LAN eingebunden sein.
+Nach abgeschlossenem Setup und eventuellen Neustart des Servers, kannst Du Dich mit einem PC via Browser an der Schulkonsole von linuxmuster.net v7.1 anmelden. Dafür muss sich der Rechner im internen LAN befinden (z.B. 10.0.0.10/16).
 
 Anmeldung an der Schulkonsole als global-admin
 ==============================================
