@@ -70,7 +70,7 @@ Klicke auf den Button ``+ Lehrer hinzufügen``. Es wird eine leere Zeile hinzuge
 
 .. hint::
 
-   Wie dargestellt führt der Benutzername bo.hans zu einem Importfehler ! Im Benutzernamen darf kein Punkt enthalten sein. VornameNachname oder nur nachname wären hingegen zulässige Benutzernamen.
+   Wie dargestellt führt der Benutzername bo.hans zu einem Importfehler ! Im Benutzernamen darf kein Punkt enthalten sein. VornameNachname oder nur Nachname wären hingegen zulässige Benutzernamen.
 
 
 Mit ``+ Lehrer hinzufügen`` können auf diese Art und Weise weitere Lehrer einzeln aufgenommen werden. Klicke nach dem Eintragen aller der Daten unten auf den Button ``Speichern & Prüfen``.
@@ -128,7 +128,7 @@ Nachstehende Daten könnten lokal erstellt, als CSV-Datei mit der UTF-8 Codierun
 
 .. attention::
 
-   Die Datei muss alle alten und neuen Schüler enthalten, sonst werden alle fehlenden Schüler zur Entfernung (Versetzung aus der Schule) vorgemerkt. Siehe auch :ref:`add-user-errorcorrection-label` unten. Die dateinamen sind ebenso eindeutig vorgegeben. Für Schüler ist die Datei students.csv zu nennen.
+   Die Datei muss alle alten und neuen Schüler enthalten, sonst werden alle fehlenden Schüler zur Entfernung (Versetzung aus der Schule) vorgemerkt. Siehe auch :ref:`add-user-errorcorrection-label` unten. Die Dateinamen sind ebenso eindeutig vorgegeben. Für Schüler ist die Datei students.csv zu nennen.
 
 Mit der Option ``Eigene CSV hochladen`` kann eine so formatierte Datei nun hochgeladen werden. Die Schüler der zu importierenden Datei sind dann in der Listenverwaltung unter den Schülern zu sehen.
 
@@ -142,7 +142,7 @@ Mit ``Speichern`` werden eventuelle Konsistenzfehler überprüft. Die Schaltflä
    :align: center
    :alt: Menue: pupils to be imported - checked
 
-Mit Klick auf den Button ``Übernehmen``, werden die dargestellten Aktionen ausgeführt. Der abgeschlossene Import ist im Fenster zu sehene:
+Mit Klick auf den Button ``Übernehmen`` werden die dargestellten Aktionen ausgeführt. Der abgeschlossene Import ist im Fenster zu sehen:
 
 .. figure:: media/add-user/add-user-11.png
    :align: center
@@ -156,22 +156,22 @@ Konten bearbeitet werden.
 Fehlerkorrektur
 ===============
 
-Hat man einen fehlerhafte Daten in das System eingepflegt und hat sie noch nicht imporiert, lassen sich Schüler und Lehrerlisten aus einer
+Hat man fehlerhafte Daten in das System eingepflegt und hat sie noch nicht imporiert, lassen sich Schüler und Lehrerlisten aus einer
 Sicherung zurückholen. Der Knopf für die Sicherung ist rechts unten in der Listenverwaltung.
 
-Hast Du z.B. bei der zuvor importierten CSV-Datei die IDs vergessen, kannst Du diese in der CSV-Datei ergänzen, diese erneut importieren. Es werden Dir dann die Änderungen angezeigt. In diesem Fall wird die uid auf die neu eingetragenen ID geändert.
+Hast Du z.B. bei der zuvor importierten CSV-Datei die IDs vergessen, kannst Du diese in der CSV-Datei ergänzen, diese erneut importieren. Es werden Dir dann die Änderungen angezeigt. In diesem Fall wird die ``uid`` auf die neu eingetragenen ID geändert.
 
 .. figure:: media/add-user/add-user-12.png
    :align: center
    :alt: Menue: import users - changes
 
-Unter Listenverwaltung hast Du bei den jeweiligen Benutzern (schüler, Lehrer, Extraschüler) unten rechts das Drop-down-Menü für die CSV-Dateien.
+Unter Listenverwaltung hast Du bei den jeweiligen Benutzern (Schüler, Lehrer, Extraschüler) unten rechts das Drop-down-Menü für die CSV-Dateien.
 
 .. figure:: media/add-user/add-user-08.png
    :align: center
    :alt: Menue: CSV
 
-Klickst Du auf ``CSV --> Im Editor öffnen`` wird die students.csv auf dem Server geöffnet und Du kannst Änderungen vornehmen.
+Klickst Du auf ``CSV --> Im Editor öffnen`` wird die ``students.csv`` auf dem Server geöffnet und Du kannst Änderungen vornehmen.
 
 .. figure:: media/add-user/add-user-13.png
    :align: center
