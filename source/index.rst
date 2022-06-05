@@ -85,8 +85,7 @@ Nach einem Klick eröffnen sich Dir dort noch weitere Möglichkeiten:
   installation/prerequisites
   installation/proxmox/index
   installation/install-from-scratch/index
-  installation/network/preliminarysettings/index
- 
+
 .. toctree::
   :maxdepth: 4
   :caption: Ersteinrichtung

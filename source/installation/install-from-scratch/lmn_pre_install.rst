@@ -12,13 +12,11 @@ Server auf lmn7.1 vorbereiten
 
 Nachdem Du die Firewall und den Server wie beschrieben installiert hast, müssen beide Maschinen fertig konfiguriert werden. Um dieses zu vereinfachen, stellen wir Dir das Skript ``lmn71-prepare`` zur Verfügung.
 
-.. todo:: lsblk für zu nutzenden Festplatten bezeichnung ermitteln
-
 Das Skript lmn71-prepare
 ========================
 
-.. todo:: 
-   
+.. todo::
+
    Check des Repro zum Release-Datums! Anm. des Autors
 
 Installations des Pakets ``linuxmuster-prepare``
@@ -35,7 +33,8 @@ Führe danach folgende Befehle in der Eingabekonsole aus:
 .. hint:: -qO --> [-][q][Großbuchstabe O]
 
 Damit installierst Du den Key für das Repository von linuxmuster.net und aktivierst ihn.
-Die nächste Zeile fügt das Linuxmuster 7.1 Repository hinzu. 
+
+Die nächste Zeile fügt das Linuxmuster 7.1 Repository hinzu.
 
 .. code-block:: Bash
 
@@ -44,22 +43,22 @@ Die nächste Zeile fügt das Linuxmuster 7.1 Repository hinzu.
 Aktualisiere die Softwareliste des Servers mittels
 
 .. code-block:: Bash
-   
+
    sudo apt update
 
 Damit ist die Vorbereitung abgeschlossen und Du installierst das Paket "linuxmuster-prepare".
 
 .. code-block:: Bash
-   
+
    sudo apt install linuxmuster-prepare
 
-Nachdem Du den Befehl mit ``J`` bestätigt hast, lädt er das Skript lmn71-prepare auf den Server, dass |...|
+Nachdem Du den Befehl mit ``J`` bestätigt hast, wird das Skript lmn71-prepare auf den Server geladen, |...|
 
-   - die benötigten Linuxmuster-Pakete und die von ihnen benötigten anderen Pakete installiert,
-   - das Betriebssystem des Servers nochmals auf den aktuellen Stand bringt,
-   - das root-Passwort auf Muster! setzt und
-   - das Netzwerk konfiguriert,
-   - im Falle des Serverprofils das LVM einrichtet.
+   - die benötigten Linuxmuster-Pakete und die benötigten anderen Pakete installiert,
+   - das Betriebssystem des Servers nochmals auf den aktuellen Stand gebracht,
+   - das root-Passwort auf Muster! gesetzt,
+   - das Netzwerk konfiguriert und
+   - im Falle des Serverprofils das LVM eingerichtet.
 
 .. attention:: Wichtiger Hinweis, schon jetzt! 
 
@@ -141,7 +140,9 @@ Installation mit Deinen Vorgaben:
 Ausgaben des Befehls und Deine Eingaben
 ---------------------------------------
 
-.. hint:: Im Folgenden beschreiben wir die Eingaben für unsere Standard-Vorgaben. In der Regel kannst Du diese einfach mit ``Enter`` übernehmen. Wo Eingaben nötig bzw. Anpassungen möglich sind, machen wir darauf in der Beschreibung mit einer Hinweisbox aufmerksam.
+.. hint:: Im Folgenden beschreiben wir die Eingaben für unsere Standard-Vorgaben. In der Regel kannst Du diese einfach mit ``Enter`` übernehmen. Wo Eingaben nötig bzw. Anpassungen möglich sind, erhälst Du nachstehend einen Hinweis.
+
+Du hast das Skript aufgerufen und erhälst folgende Ausgabe:
 
 .. code-block:: Bash
 
@@ -150,7 +151,7 @@ Ausgaben des Befehls und Deine Eingaben
    ## Profile
    Enter host profile [server, ubuntu] [server]:
 
-Das vorausgewählte Profile "server" kannst Du mit ``[ENTER]`` übernehmen, da Du ja den Server einrichten willst.
+Das vorausgewählte Profile `server` kannst Du mit ``[ENTER]`` übernehmen, da Du ja den Server einrichten willst.
 
 #####
 
@@ -158,7 +159,7 @@ Das vorausgewählte Profile "server" kannst Du mit ``[ENTER]`` übernehmen, da D
 
    ## Network
    Enter network interface to use ['ens18']:
-  
+
 Das Netzwerk-Interface sollte richtig erkannt sein, da Du ja nur eines für den Server eingerichtet hast. Also wieder mit ``[ENTER]`` bestätigen.
 
 #####
@@ -219,9 +220,17 @@ Auch hier gilt Übernahme der Vorgabe mit ``[ENTER]``.
 
    Enter physical device to use for LVM []: /dev/sdb
 
-Für die Verwenung unserer Vorgaben, musst Du den Speicherort für das LVM angeben. Die benötigte Eingaben hast Du zuvor ja ermittelt. LINK_EINFÜGEN Hier beispielhaft für die zweite erkannte Festplatte. 
+Für die Verwenung unserer Vorgaben, musst Du den Speicherort für das LVM angeben. Die benötigte Eingaben hast Du zuvor ja ermittelt.
 
-.. hint:: Bei anderen Partitionsgrößen hast Du das LVM bei der Ubuntu-Servers-Installation angelegt. Um es zu verwenden, musst Du an dieser Stelle einfach nur die ``[Enter]``-Taste drücken. Die bei Aufruf des Installationsscripts übergebene Option ``-x`` veranlasst, dass es so übernommen wird.
+Falls nicht, kannst Du dies hier :ref:`lsblk-command` nachlesen.
+
+Nachstehend erfolgt die Angabe beispielhaft für die zweite erkannte Festplatte:
+
+.. code::
+
+   /dev/sdb
+
+ .. hint:: Bei anderen Partitionsgrößen hast Du das LVM bei der Ubuntu-Servers-Installation angelegt. Um es zu verwenden, musst Du an dieser Stelle einfach nur die ``[Enter]``-Taste drücken. Die bei Aufruf des Installationsscripts übergebene Option ``-x`` veranlasst, dass es so übernommen wird.
 
 #####
 

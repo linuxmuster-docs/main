@@ -111,7 +111,7 @@ Bei der angebotene Aktualisierung wählst Du ``Ohne Akualisierung fortfahren``.
 Speichermedien
 --------------
 
-Für die weitere Installation um aus einem Ubuntu-Server einen linuxmuster.net-Server zu machen, benötigst Du zwei unterschiedliche Speichermedien in Deinem Server.
+Für die weitere Installation benötigst Du zwei unterschiedliche Speichermedien in Deinem Server.
 
 Dabei ist es egal ob es sich dabei um |...| 
 
@@ -124,7 +124,7 @@ In dieser Anleitung beschreiben wir zunächst die Installation auf Basis unserer
 * |...| 25G Speichermedium für das System und
 * |...| 100G Speichermedium für Daten
 
-Wobei anzumerken ist, dass die Installation des Speicherplatzes für das System ``/`` für alle Varianten dieselbe ist. Daher startet unsere Beschreibung mit dieser.
+Wobei anzumerken ist, dass die Installation des Speicherplatzes für das System ``/`` für alle Varianten identisch ist.
 
 Speicher des Systems
 ^^^^^^^^^^^^^^^^^^^^
@@ -169,7 +169,7 @@ Für das Setup werden noch weitere Partitionen benötigt. Dafür haben wir uns f
 
 .. [#f1] Sollte Deine Festplatte größer sein als die vorgeschlagene Mindestgröße so wird für diese Partition der maximal übrige freie Platz mit verwendet.
 
-Unser Installationscript nimmt Dir die nötigen vorbereitenden Aktionen ab. Du läßt also das zweite Speichermeddium unkonfiguriert.
+Unser linuxmuster-setup nimmt Dir die nötigen vorbereitenden Aktionen ab. Du läßt also das `zweite Speichermeddium unkonfiguriert`.
 
 Zum Abschluss werden Dir die Partitionsierungseinstellungen gemäß Deiner Eingaben angezeigt.
 
@@ -177,8 +177,8 @@ Zum Abschluss werden Dir die Partitionsierungseinstellungen gemäß Deiner Einga
 
 Wenn Du es für Deine Installation nutzen willst, dann kannst Du die nächsten Punkte überspringen und mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
 
-Speicherplatz nach Deinen Vorgaben
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Speicherplatz nach Deinen Vorgaben (optional)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Solltest Du Dich für eine andere Größeneinteilung oder für eine Einrichtung auf realen Festplatten entschieden haben, dann geht es hier für Dich weiter.
 
@@ -193,12 +193,12 @@ Solltest Du Dich für eine andere Größeneinteilung oder für eine Einrichtung 
 
 Wir beschreiben hier exemplarisch das Vorgehen für die Größen aus der obigen Tabelle für die |...|
 
-|...| `Einrichtung eines LVM auf der 2. HDD nach Deinen Vorgaben`_
+|...| `Einrichtung eines LVM auf der 2. HDD nach Deinen Vorgaben (optional)`_
 
-|...| `Einrichtung ohne LVM auf HDD nach Deinen Vorgaben`_
+|...| `Einrichtung ohne LVM auf HDD nach Deinen Vorgaben (optional)`_
 
-Einrichtung eines LVM auf der 2. HDD nach Deinen Vorgaben
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Einrichtung eines LVM auf der 2. HDD nach Deinen Vorgaben (optional)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. figure:: media/basis_server_016_lvm_001.png
 
@@ -265,8 +265,8 @@ Zum Abschluss werden Dir die Partitionsierungseinstellungen gemäß Deiner Einga
 
 Wenn Du es für Deine Installation nutzen willst, dann kanst Du mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
 
-Einrichtung ohne LVM auf HDD nach Deinen Vorgaben
-+++++++++++++++++++++++++++++++++++++++++++++++++
+Einrichtung ohne LVM auf HDD nach Deinen Vorgaben (optional)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Ohne LVM sind die Mount Points ``/var``, ``/srv/linbo``, ``/srv/samba/global`` und ``/srv/samba/default-school`` auf die HDD(s) / einzelne Partionen zu legen.
 
@@ -310,7 +310,7 @@ Zum Abschluß der Installation wird automatisch versucht, Updates zu installiere
 
 .. hint::
 
-   Bei einer Installation in eine VM achte vor dem Neustart darauf, dass Du die ISO-Datei / DVD ausgeworfen hast und die Boot-Reihenfolge so umgestellt hast, dass die VM direkt von HDD bootet.
+   Bei einer VM achte vor dem Neustart darauf, dass Du die ISO-Datei / DVD ausgeworfen hast und die Boot-Reihenfolge so umgestellt hast, dass die VM direkt von HDD bootet.
 
 Wann die Installation abgeschlossen ist, erkennst Du daran das die Anzeige am unteren Bildschirmrand von
 
@@ -340,7 +340,7 @@ Basis-Konfiguration des Servers
 ===============================
 
 term.js für die Konsolen-Nutzung in Proxmox aktivieren
--------------------------------------------------------
+------------------------------------------------------
 
 Nachdem Du Dich erneut als ``linuxadmin`` beziehungsweise mit dem von Dir angelegten Nutzer an der ``noVNC`` Konsole angemeldet hast, gebe diese zwei Zeilen Code nacheinander ein:
 
@@ -352,16 +352,30 @@ Nachdem Du Dich erneut als ``linuxadmin`` beziehungsweise mit dem von Dir angele
 
    sudo systemctl start serial-getty@ttyS0.service
 
-Jetzt melde Dich an der ``noVNC``-Konsole ab und an der ``xterm.js`` an.
+Fahre nun die virtuelle Maschine (VM) herunter. 
+Gehe dann zu den Hardware-Einstellungen der VM und füge einen seriellen Port hinzu.
 
-Auch wenn Du keinen Prompt siehst, einfach Deinen Login eingeben. Nach dem ``Enter`` wirst Du zur Eingabe Deines Passwortes aufgefordert.
+.. figure:: media/basis_server_023a.png
+
+Wähle die Portnummer 0. Nachdem Du den seriellen Port hinzugefügst hast, siehst Du diesen in der Hardware-Liste:
+
+.. figure:: media/basis_server_023b.png
+
+Starte jetzt die VM erneut. Wähle nun oben rechts ``>_ Console -> xterm.js``.
+Es öffnet sich das Terminal-Fenster der VM und es erscheint folgender Hinweis:
+
+.. figure:: media/basis_server_023c.png
+
+Auch wenn Du keinen Prompt siehst, gebe einfach Deinen Login ein. Nach dem ``Enter`` wirst Du zur Eingabe Deines Passwortes aufgefordert.
 
 Danach kannst Du die folgenden Codezeilen einfach zwischen der Anleitung und dem Server übertragen.
 
 Quota-Einstellungen überprüfen
 ------------------------------
 
-Betrifft Dich nur wenn du nicht mit den default-Einstellungen installierst. Überspringe diesen Punkt und gehe zu `Bezeichnung des Speichermediums für das LVM ermitteln`_
+.. hint::
+
+   Nachstehende schritte musst Du nur durchführebn, wenn Du **nicht** mit den default-Einstellungen installierst. Überspringe diesen Punkt und gehe zu `Bezeichnung des Speichermediums für das LVM ermitteln`_
 
 
 .. code:: 
@@ -411,6 +425,8 @@ Lade die Eintragungen aus der Datei ``/etc/fstab`` neu mit ``mount -a``. Ggf. er
 .. 
 ..    Solltest Du beim Kopieren des Inhalts von ``var`` Fehler angezeigt bekommen, so hast Du das virtuelle Dateisystem zuvor nicht ausgehangen. Gehe dann wie unter 9. vor.
 
+.. _lsblk-command:
+
 Bezeichnung des Speichermediums für das LVM ermitteln
 -----------------------------------------------------
 
@@ -424,11 +440,7 @@ Aus dessen Ausgabe kannst du Namen für die weitere Verwendung ermitteln. Hier w
 
 .. figure:: media/basis_server_024.png
 
-.. attention::
-
-   Bild basis_server024.png noch ersetzen durch die korrekte Ausgabe des Befehls lsblk auf dem Server.
-
-.. note:: Am besten notierst Du dir diese Erkenntnis für die spätere Verwendung.
+.. note:: Notiere Dir HDD- und Paritions-Bezeichnungen für die spätere Verwendung.
 
 Automatische Updates abschalten
 -------------------------------
@@ -492,7 +504,7 @@ Nachdem Dir neue Pakete zur Anzeige gebracht wurden, startest Du den Upgrade-Pro
 Test der Verbindung zur Firewall
 --------------------------------
 
-Es folgt ein letzter Test um sicherzustellen, das die SSH-Verbindung zwischen dem Server und der Firewall funktioniert. Diese ist für das weitere Vorgehen entscheidend.
+Es folgt ein letzter Test, um sicherzustellen, dass die SSH-Verbindung zwischen dem Server und der Firewall funktioniert. Diese ist für das weitere Vorgehen entscheidend.
 
 Nach dem erneuten Einloggen rufst Du folgende Zeile an der Konsole des Servers auf: 
 
@@ -515,6 +527,6 @@ Mit ``0) Logout`` beendest Du die Verbindung.
 Weiter geht es jetzt mit :ref:`lmn_pre_install-label`
 
 .. todo:: Hinweis des zum Release-Termin zur erledigen Aufgaben.
-   
-   * Zeilen 309-410 und 467-492 in rst-File löschen, wenn das Verfahren an Ort und Stelle für gut befunden wurde.
-   * Grafiken /media sind zu überprüfen ob noch benötigt und alle Benennungen den Absprache entsprechen. 
+
+   * Zeilen ??? 309-410 ??? und 475-500 in rst-File löschen, wenn das Verfahren an Ort und Stelle für gut befunden wurde.
+   * Grafiken /media sind zu überprüfen ob noch benötigt und alle Benennungen den Absprache entsprechen.
