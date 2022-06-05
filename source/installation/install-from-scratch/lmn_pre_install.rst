@@ -174,7 +174,7 @@ Das Netzwerk-Interface sollte richtig erkannt sein, da Du ja nur eines für den 
 
 .. code-block:: Bash
 
-   Enter firewall ip address [10.112.0.254]:
+   Enter firewall ip address [10.0.0.254]:
 
 Die Adresse der Firewall wird automatisch Deiner zuvor gemachten Eingabe angepasst. 
 
@@ -184,7 +184,7 @@ Die Adresse der Firewall wird automatisch Deiner zuvor gemachten Eingabe angepas
 
 .. code-block:: Bash
 
-   Enter gateway ip address [10.112.0.254]:
+   Enter gateway ip address [10.0.0.254]:
 
 Auch diese Adresse des Gateway sollte automatisch angepasst sein.
 
