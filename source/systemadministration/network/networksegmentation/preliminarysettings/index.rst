@@ -7,33 +7,26 @@ Netzbereich anpassen
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
-.. important::
-
-   Wenn die hier angesprochenen Anpassungen in den vorhergehenden Anleitungen beschrieben ist, dann wäre dieses ganze Kapitel überflüssig. Ich denke, das betrifft LVM und den Netzbereich.
-
-   Beides ist schon Bestandteil der vorhergehenden Beschreibung. Dann wäre nur an den betreffenden Stellen nochmals darauf zu verweisen, dass diese Angaben nötig sind für die Migration von Version 6 auf die 7.1.
-
-   Wichtig ist dann auch ein abschließender Verweis beim ``lmn71-prepare``, dass für diese Fälle der Parameter ``-x`` zwingend erforderlich ist.
-
-Sollte es erforderlich sein, dass der Netzbereich von den Vorgaben im Setup (``10.0.0.0/16``) abweicht, dann sind nachstehende Schritte zur Anpassung vor Aufruf des Setups mit der WebUI oder des Setups auf der Konsole auf dem Server auszuführen.
-
-Dies ist ebenfalls der Fall, wenn Du eine ``from-scratch`` Installation durchgeführt hast.
-
 .. hint::
 
-   Die Anpassung des Netzbereichs ist vor Aufruf des eigentlichen Setups auszuführen. Dies erfolgt mit dem Paket ``linuxmuster-prepare``.
+   Die Anpassung des Netzbereichs ist vor Aufruf des eigentlichen Setups auszuführen. Dies erfolgt mit dem Paket ``lmn71-prepare``.
 
 Vorgehen
 ========
 
-Die OPNsense® ist im gewünschten Zielnetz einzurichten (z.B. 10.17.0.254/16). Diese muss für alle Server / Ubuntu-VMs als Gateway angegeben werden. Dies kann mithilfe des linuxmuster-prepare Skripts (https://github.com/linuxmuster/linuxmuster-prepare) für den gewünschten neuen Netzbereich (z.B. 10.17.0.0/16) vorbereitet werden.
+Die OPNsense® ist im gewünschten Zielnetz einzurichten (z.B. 10.17.0.254/16). Diese muss für alle Server / Ubuntu-VMs als Gateway angegeben werden. Dies kann mithilfe des lmn71-prepare Skripts für den gewünschten neuen Netzbereich (z.B. 10.17.0.0/16) vorbereitet werden.
 
 Gleiches gilt für die Vorbereitung der ``from-scratch`` installierten Server.
 
-Das Skript lmn71-appliance
---------------------------
+Das Skript lmn71-prepare
+------------------------
 
-Das Skript lmn71-appliance installiert für Dich das Paket linuxmuster-prepare mit all seinen Abhängigkeiten und es richtet die zweite Festplatte für den Serverbetrieb ein.
+Das Skript lmn71-prepare installiert für Dich das Paket linuxmuster-prepare mit all seinen Abhängigkeiten und es richtet die zweite Festplatte für den Serverbetrieb ein.
+
+.. attention::
+  
+   Nachstehende Beschreibung muss für 7.1 noch überarbeitet werden !
+
 
 * Vorbereitung: Lade das Skript hier herunter: ``wget https://raw.githubusercontent.com/linuxmuster/linuxmuster-prepare/master/lmn71-appliance``.
 * Mach das Sktipt nun ausführbar: ``chmod +x lmn71-appliance`` ausführbar
