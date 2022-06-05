@@ -411,6 +411,8 @@ Lade die Eintragungen aus der Datei ``/etc/fstab`` neu mit ``mount -a``. Ggf. er
 .. 
 ..    Solltest Du beim Kopieren des Inhalts von ``var`` Fehler angezeigt bekommen, so hast Du das virtuelle Dateisystem zuvor nicht ausgehangen. Gehe dann wie unter 9. vor.
 
+.. _Bezeichnung_LVM: 
+
 Bezeichnung des Speichermediums für das LVM ermitteln
 -----------------------------------------------------
 
@@ -423,10 +425,6 @@ Betrifft Dich nur wenn du die default-Einstellungen verwendest.
 Aus dessen Ausgabe kannst du Namen für die weitere Verwendung ermitteln. Hier wäre er beispielhaft ``/dev/sdb/``
 
 .. figure:: media/basis_server_024.png
-
-.. attention::
-
-   Bild basis_server024.png noch ersetzen durch die korrekte Ausgabe des Befehls lsblk auf dem Server.
 
 .. note:: Am besten notierst Du dir diese Erkenntnis für die spätere Verwendung.
 
