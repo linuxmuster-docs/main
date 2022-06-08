@@ -781,7 +781,7 @@ Klicke auf ``Add``.
 Hinzufügen einer Seriellen Schnittstelle
 ----------------------------------------
 
-Damit Dir `copy & past` in der Oberfläche von Proxmox bei der Auswahl unter ``Console`` zur Verfügung steht, muss Du die Nutzung von `xterm.js` ermöglichen.
+Damit Dir `copy & paste` in der Oberfläche von Proxmox bei der Auswahl unter ``Console`` zur Verfügung steht, muss Du die Nutzung von `xterm.js` ermöglichen.
 
 .. figure:: media/xterm-opnsense_001.png
    :align: center
@@ -807,9 +807,11 @@ Lege einen Seriellen Port mit der Bezeichnung ``0`` an.
 
 Klicke auf ``Add``, anschließend sollte der gezeigte Menüpunkt nicht mehr ausgegraut sein.
 
-.. hint:: Für die weitere Nutzung von xterm.js ist allerdings noch eine Anpassung bei der laufenden OPNsense |reg| nötig. Die nehmen wir zu einem geeigneten, späteren Zeitpunkt vor. (Stichwort: Sekundäre Konsole)
+.. hint:: Für die weitere Nutzung von xterm.js ist allerdings noch eine Anpassung bei der laufenden OPNsense |reg| nötig. Die nehmen wir zu einem geeigneten späteren Zeitpunkt vor, bis dahin musst Du noch die Konsole ``noVNC`` nutzen. (Stichwort: Sekundäre Konsole)
 
 Kontrolliere nochmals alle Einstellungen der neu angelegten VM.
+
+.. todo:: Nächste Hinweisbox sollte überflüssig sein, wenn für die OPNsense-Installation nicht xterm.js sondern noVNC genommen wird. Ist in der Beschreibung so beschrieben. Falls @cweikl sein OK gibt kann die raus und die Beschreibung nochmals für den Server wiederholt werden. siehe unteres todo
 
 .. attention::
 
@@ -905,6 +907,8 @@ Nachdem die VM angelegt wurde, siehst Du diese links im Verzeichnisbaum Deines P
 .. figure:: media/proxmox-create-vm-ubuntu-server-10.png
    :align: center
    :alt: Proxmox VMs: Overview
+
+.. todo:: Aktivierung der Serial0 nochmals wiederholen bzw. darauf verweisen.
 
 Boot-Optionen
 -------------
