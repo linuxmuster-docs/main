@@ -869,8 +869,6 @@ Nachdem die VM angelegt wurde, siehst Du diese links im Verzeichnisbaum Deines P
    :align: center
    :alt: Proxmox VMs: Overview
 
-.. todo:: Aktivierung der Serial0 nochmals wiederholen bzw. darauf verweisen.
-
 Abschließende Konfiguration der virtuellen Maschinen
 ----------------------------------------------------
 
