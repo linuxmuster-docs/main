@@ -10,7 +10,7 @@ Proxmox vorbereiten
                    `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
 Hinweise
---------
+========
 
 Für diese Anleitung haben wir uns entschieden, Proxmox als Virtualisierungslösung einzusetzen.
 
@@ -28,12 +28,12 @@ Das web-basierte Verwaltungs-Interface läuft direkt auf dem Server. Zudem kann 
 Proxmox
 -------
 
-Proxmox VE eignet sich für den virtuellen Betrieb von linuxmuster.net besonders, da dieser Hypervisor dem Open-Source-Konzept entspricht. Der Einsatz wird auf jeglicher Markenhardware unterstützt und es gibt zahlreiche professionelle 3rd-Party Software für Backup-Lösungen und andere Features. „No-Name-Hardware“ kann hiermit ebenfalls meist verwendet werden.
+Proxmox VE eignet sich für den virtuellen Betrieb von linuxmuster.net besonders, da dieser Hypervisor dem Open-Source-Konzept entspricht. Der Einsatz wird auf jeglicher Markenhardware unterstützt und es gibt zahlreiche professionelle 3rd-Party Software für Sicherungskopien und andere Features. „No-Name-Hardware“ kann hiermit ebenfalls meist verwendet werden.
 
 Diese Anleitung beinhaltet Angaben zu den notwendigen Systemanforderungen und Festplattenkonfigurationen sowie der anschließenden Installation von Proxmox.
 
 Systemvoraussetzungen
-=====================
+---------------------
 
 In der unten aufgeführten Tabelle findest Du die Systemvoraussetzungen zum Betrieb der virtuellen Maschinen. Die Systemanforderungen für die Installation von Proxmox selbst finden sich im Web unter https://www.proxmox.com/de/proxmox-ve/systemanforderungen. 
 
@@ -129,7 +129,7 @@ Wähle ``Install Proxmox VE`` und starte die Installation mit ``ENTER``.
    :align: center
    :alt: Proxmox Nutzervereinbarung
 
-Bestätige das ``End-User Agreement`` mit ``Enter``.
+Bestätige das ``End-User-Agreement`` mit ``Enter``.
 
 .. figure:: media/install-on-proxmox_04_target-harddisk.png
    :align: center
@@ -752,7 +752,7 @@ Achte darauf, dass die Option ``Start after created`` unbedingt ``deaktiviert`` 
 Klicke dann auf ``Finish``.
 
 Hinzufügen einer weiteren Netzwerkbrücke
-----------------------------------------
+++++++++++++++++++++++++++++++++++++++++
 
 Nachdem die VM angelegt wurde, wähle diese aus und klicke auf den Eintrag ``Hardware``.
 
@@ -777,45 +777,6 @@ Achte für die weitere Installation darauf, wie Du die Bridges zugeordnet hast:
 Klicke auf ``Add``.
 
 .. _xterm-label:
-
-Hinzufügen einer Seriellen Schnittstelle
-----------------------------------------
-
-Damit Dir `copy & paste` in der Oberfläche von Proxmox bei der Auswahl unter ``Console`` zur Verfügung steht, muss Du die Nutzung von `xterm.js` ermöglichen.
-
-.. figure:: media/xterm-opnsense_001.png
-   :align: center
-   :alt: Console menu before xterm.js activation
-
-Das obige Bildschirmfoto zeigt den Zustand vor der Aktivierung.
-
-.. figure:: media/xterm-opnsense_002.png
-   :align: center
-   :alt: Description of how to open the Add menu
-
-Gehe auf ``hv01`` --> ``lmn71-opnsense`` --> ``Hardware`` --> ``Serial Port``
-
-.. figure:: media/xterm-opnsense_003.png
-   :align: center
-   :alt: Add serial port 0
-
-Lege einen Seriellen Port mit der Bezeichnung ``0`` an.
-
-.. figure:: media/xterm-opnsense_004.png
-   :align: center
-   :alt: Console menu after activation of xterm.js
-
-Klicke auf ``Add``, anschließend sollte der gezeigte Menüpunkt nicht mehr ausgegraut sein.
-
-.. hint:: Für die weitere Nutzung von xterm.js ist allerdings noch eine Anpassung bei der laufenden OPNsense |reg| nötig. Die nehmen wir zu einem geeigneten späteren Zeitpunkt vor, bis dahin musst Du noch die Konsole ``noVNC`` nutzen. (Stichwort: Sekundäre Konsole)
-
-Kontrolliere nochmals alle Einstellungen der neu angelegten VM.
-
-.. todo:: Nächste Hinweisbox sollte überflüssig sein, wenn für die OPNsense-Installation nicht xterm.js sondern noVNC genommen wird. Ist in der Beschreibung so beschrieben. Falls @cweikl sein OK gibt kann die raus und die Beschreibung nochmals für den Server wiederholt werden. siehe unteres todo
-
-.. attention::
-
-   Sollte bei der nachfolgenden Installation die OPNsense |reg| DVD nicht starten, lösche nochmals die serielle Schnittstelle bei den Hardware-Einstellungen. Führe dann zuerst die Installation wie beschrieben durch. Fahre danach die VM mit OPNsense |reg| herunter, füge die serielle Schnittstelle erneut hinzu und starte die VM mit OPNsense |reg|. Führe dann die weitere Konfiguration durch.
 
 Anlegen der VM für linuxmuster server
 -------------------------------------
@@ -910,8 +871,13 @@ Nachdem die VM angelegt wurde, siehst Du diese links im Verzeichnisbaum Deines P
 
 .. todo:: Aktivierung der Serial0 nochmals wiederholen bzw. darauf verweisen.
 
+Abschließende Konfiguration der virtuellen Maschinen
+----------------------------------------------------
+
+Die nächsten beiden Einstellungen musst Du sowohl für die Firewall als auch für den Server vornehmen. Wir beschreiben es hier jetzt exemplarisch für die Firewall. 
+
 Boot-Optionen
--------------
++++++++++++++
 
 Um bei der from Scratch Installation von CD zu starten, wählst Du die VM aus, klickst auf ``Options`` und klickst oben auf den Menüeintrag ``Edit``.
 
@@ -921,24 +887,55 @@ Um bei der from Scratch Installation von CD zu starten, wählst Du die VM aus, k
 
 Markiere mit der Maus den Eintrag ide2 (CD) und ziehe diesen an Position 1.
 
-vorher:
+Vorher:
 
 .. figure:: media/proxmox-vm-boot-order-02.png
    :align: center
    :alt: Proxmox VM: Boot order start
 
-nachher:
+Nachher:
 
 .. figure:: media/proxmox-vm-boot-order-03.png
    :align: center
    :alt: Proxmox VM: Boot order changed
 
-Dies führst Du für die OPNsense VM und für die Ubuntu Server VM durch.
-
-.. hint::
-
-   Nach abgeschlossener Installation musst Du daran denken, die CD wieder auszuwerfen und in den VMs die Boot-Reihenfolge wieder so zu ändern, dass zuerst von Festplatte gebootet wird.
-
 ######
 
-Installiere nun gemäß der Anleitung: :ref:`install-from-scratch-label`
+Hinzufügen einer seriellen Schnittstelle
+++++++++++++++++++++++++++++++++++++++++
+
+Damit Dir `Copy-and-paste` in der Oberfläche von Proxmox bei der Auswahl unter ``Console`` zur Verfügung steht, musst Du die Nutzung von `xterm.js` ermöglichen. Als vorbereitende Maßnahmen musst Du eine serielle Schnittstelle für die VM aktivieren.
+
+.. figure:: media/xterm-opnsense_001.png
+   :align: center
+   :alt: Console menu before xterm.js activation
+
+Das obige Bildschirmfoto zeigt den Zustand vor der Aktivierung.
+
+.. figure:: media/xterm-opnsense_002.png
+   :align: center
+   :alt: Description of how to open the Add menu
+
+Gehe auf ``hv01`` --> ``lmn71-opnsense`` --> ``Hardware`` --> ``Serial Port``
+
+.. figure:: media/xterm-opnsense_003.png
+   :align: center
+   :alt: Add serial port 0
+
+Lege einen Seriellen Port mit der Bezeichnung ``0`` an.
+
+.. figure:: media/xterm-opnsense_004.png
+   :align: center
+   :alt: Console menu after activation of xterm.js
+
+Klicke auf ``Add``, anschließend sollte der gezeigte Menüpunkt nicht mehr ausgegraut sein.
+
+Kontrolliere nochmals alle Einstellungen der neu angelegten VM.
+
+Die beiden letzten Einstellungen musst Du nochmals für den Server einrichten.
+
+.. hint:: Für die weitere Nutzung von xterm.js ist allerdings noch eine Anpassung bei der laufenden OPNsense |reg| bzw. dem Server nötig. Die nimmst Du zu einem geeigneten späteren Zeitpunkt vor, bis dahin musst Du noch die Konsole ``noVNC`` nutzen.
+
+#####
+
+Nun sind Deine virtuellen Maschinen für die weitere Installation bereit und Du kannst gemäß der Anleitung: :ref:`install-from-scratch-label` weiterarbeiten.
