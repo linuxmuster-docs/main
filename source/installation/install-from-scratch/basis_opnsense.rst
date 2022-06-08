@@ -65,6 +65,8 @@ Erster Start der Firewall
 
 Starte dann OPNsense |reg| auf dem Rechner oder in der neu angelegten VM von Deinem Installationsmedium. Je nach Virtualisierungsumgebung hast Du ggf. die ISO-Datei bereits auf den ISO-Datenspeicher des Hypervisors abgelegt. Boote dann die VM hierüber.
 
+.. attention:: Solltest Du unserer Anleitung gefolgt sein und PROXMOX nutzen, dann muss Du für die Installation die Konsole ``noVNC`` nutzen.
+
 Am Ende des Boot-Vorgangs der OPNsense |reg| gelangst Du zu folgendem Bildschirm:
 
 .. figure:: media/basis_opnsense_001.png
@@ -194,7 +196,7 @@ Tastaturbelegung
    :align: center
    :alt: OPNsense: Final Configuration
 
-Zuerst überprüfe, ob die Tastaturbelegung richtig ist. Dazu wähle den Punkt 8) aus. Auf der Konsole kannst Du dann die Umlaute und Sonderzeichen der deutschen Tastaturbelegung testen. Sollte sie korrekt sein, verlässt Du mit ``exit`` die Konsole und bist wieder im Auswahl-Bildschirm. Fahre mit `Überprüfung der Zuordnung der Netzwerkkarten`_ fort, ansonsten ...
+Zuerst überprüfe, ob die Tastaturbelegung richtig ist. Dazu wähle den Punkt ``8) Shell`` aus. Auf der Konsole kannst Du dann die Umlaute und Sonderzeichen der deutschen Tastaturbelegung testen. Sollte sie korrekt sein, verlässt Du mit ``exit`` die Konsole und bist wieder im Auswahl-Bildschirm. Fahre mit `Überprüfung der Zuordnung der Netzwerkkarten`_ fort, ansonsten |...|
 
 .. hint::
 
