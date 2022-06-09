@@ -21,7 +21,7 @@ Lade Dir die ISO-Datei der OPNsense |reg| von der Seite https://opnsense.org/dow
 
 .. hint::
 
-   Die zuletzt freigegeben OPNsense Version für das Set-up von linuxmuster.net v7.1 ist die Version 22.1. 
+   Die zuletzt freigegeben OPNsense Version für das Setup von linuxmuster.net v7.1 ist die Version 22.1. 
    https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-22.1-OpenSSL-dvd-amd64.iso.bz2
 
 Nutze als Architektur ``amd64`` und als "image type" ``dvd`` und einen Mirror, der in Deiner Nähe ist.
@@ -501,7 +501,7 @@ System: Assistent: Allgemeine Information
 
    Die Länge des ersten Teils der Domäne darf maximal 15 Zeichen betragen. Die Domäne "muster-gymnasium.de" überschreitet diese Grenze um ein Zeichen, da "muster-gymnasium" 16 Zeichen lang ist.
 
-   Eine gute Wahl ist beispielsweise ``linuxmuster.lan``. Beim späteren Set-up von linuxmuster.net wird diese ggf. für alle Server-Dienste angepasst.
+   Eine gute Wahl ist beispielsweise ``linuxmuster.lan``. Beim späteren Setup von linuxmuster.net wird diese ggf. für alle Server-Dienste angepasst.
 
 .. figure:: media/basis_opnsense_043.png
 
@@ -613,7 +613,7 @@ Unter ``Schnittstellen -> [OPT1]`` kannst Du diese Einstellungen vornehmen. Der 
 ssh erlauben
 ------------
 
-.. attention:: Damit der Server für das weitere Set-up Zugriff auf die OPNsense |reg| hat, musst Du den ssh-Zugriff erlauben. Gehe dafür auf ``System -> Einstellungen -> Verwaltung``.
+.. attention:: Damit der Server für das weitere Setup Zugriff auf die OPNsense |reg| hat, musst Du den ssh-Zugriff erlauben. Gehe dafür auf ``System -> Einstellungen -> Verwaltung``.
 
 .. figure:: media/basis_opnsense_054.png
 
