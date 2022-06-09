@@ -19,7 +19,7 @@ Das Skript lmn71-prepare
 
    Check des Repro zum Release-Datums! Anm. des Autors
 
-Installations des Pakets ``linuxmuster-prepare``
+Installation des Pakets ``linuxmuster-prepare``
 ------------------------------------------------
 
 Wenn Du nicht mehr an Deinem Server eingeloggt bist, melde Dich erneut an.
@@ -52,11 +52,11 @@ Damit ist die Vorbereitung abgeschlossen und Du installierst das Paket "linuxmus
 
    sudo apt install linuxmuster-prepare
 
-Nachdem Du den Befehl mit ``J`` bestätigt hast, wird das Skript lmn71-prepare auf den Server geladen, |...|
+Nachdem Du den Befehl mit ``J`` bestätigt hast, wird das Skript lmn71-prepare auf den Server geladen, welches |...|
 
    - die benötigten Linuxmuster-Pakete und die benötigten anderen Pakete installiert,
-   - das Betriebssystem des Servers nochmals auf den aktuellen Stand gebracht,
-   - das root-Passwort auf Muster! gesetzt,
+   - das Betriebssystem des Servers nochmals auf den aktuellen Stand bringt,
+   - das root-Passwort auf Muster! setzt,
    - das Netzwerk konfiguriert und
    - im Falle des Serverprofils das LVM eingerichtet.
 
@@ -84,7 +84,7 @@ Sollte dieser Test erfolgreich sein, steht der abschließenden Vorbereitung nich
 Aufruf lmn71-prepare
 --------------------
 
-Wechsele Deinen Login und werde ``root``:
+Wechsele Deinen Log-in und werde ``root``:
 
 .. code-block:: Bash
  
@@ -115,8 +115,8 @@ Hier ein Auszug mit den benötigten Optionen, die Du gleich anwenden wirst.
 
 #####
 
-Installation mit unseren Standardvorgaben
------------------------------------------
+Installation mit unseren Standard-Vorgaben
+------------------------------------------
 
 .. code-block:: Bash
 
@@ -140,9 +140,9 @@ Installation mit Deinen Vorgaben:
 Ausgaben des Befehls und Deine Eingaben
 ---------------------------------------
 
-.. hint:: Im Folgenden beschreiben wir die Eingaben für unsere Standard-Vorgaben. In der Regel kannst Du diese einfach mit ``Enter`` übernehmen. Wo Eingaben nötig bzw. Anpassungen möglich sind, erhälst Du nachstehend einen Hinweis.
+.. hint:: Im Folgenden beschreiben wir die Eingaben für unsere Standard-Vorgaben. In der Regel kannst Du diese einfach mit ``Enter`` übernehmen. Wo Eingaben nötig bzw. Anpassungen möglich sind, erhältst Du nachstehend einen Hinweis.
 
-Du hast das Skript aufgerufen und erhälst folgende Ausgabe:
+Du hast das Skript aufgerufen und erhältst folgende Ausgabe:
 
 .. code-block:: Bash
 
@@ -151,7 +151,7 @@ Du hast das Skript aufgerufen und erhälst folgende Ausgabe:
    ## Profile
    Enter host profile [server, ubuntu] [server]:
 
-Das vorausgewählte Profile `server` kannst Du mit ``[ENTER]`` übernehmen, da Du ja den Server einrichten willst.
+Das vorausgewählte Profil `server` kannst Du mit ``[ENTER]`` übernehmen, da Du ja den Server einrichten willst.
 
 #####
 
@@ -168,7 +168,7 @@ Das Netzwerk-Interface sollte richtig erkannt sein, da Du ja nur eines für den 
 
    Enter ip address with net or bitmask [10.0.0.1/16]:
 
-.. hint:: An dieser Stelle ist die Eingabe eines abweichenden Netzwerk-Bereichs möglich, dafür müsstest Du den IP-Bereich und die zu verwendende Netzwerkmaske eingeben. Gibst Du keine ein, übernimmst Du mit ``[ENTER]`` unsere Standard-Vorgabe wie angezeigt.
+.. hint:: An dieser Stelle ist die Eingabe eines abweichenden Netzwerk-Bereichs möglich, dafür müsstest Du den IP-Bereich und die zu verwendende Netzwerkmaske eingeben. Gibst Du keine ein, übernimmst Du mit ``[ENTER]`` unsere Standard-Vorgabe, wie angezeigt.
 
 #####
 
@@ -186,9 +186,9 @@ Die Adresse der Firewall wird automatisch Deiner zuvor gemachten Eingabe angepas
 
    Enter gateway ip address [10.0.0.254]:
 
-Auch diese Adresse des Gateway sollte automatisch angepasst sein.
+Auch die Adresse des Gateways sollte automatisch angepasst sein.
 
-.. hint:: Ansonsten müstest Du hier nochmals tätig werden.
+.. hint:: Ansonsten müsstest Du hier nochmals tätig werden.
 
 #####
 
@@ -206,11 +206,13 @@ Auch hier gilt Übernahme der Vorgabe mit ``[ENTER]``.
 
    Enter domainname [linuxmuster.lan]:
 
-.. hint:: Auch hier ist eine individuelle Anpassung möglich, wenn Du nicht unsere Standardvorgabe nutzen willst. Dabei gilt aber zu beachten, dass |...|
+.. hint:: Auch hier ist eine individuelle Anpassung möglich, wenn Du nicht unsere Standard-Vorgabe nutzen willst. Dabei gilt aber zu beachten, dass |...|
 
 .. attention:: 
 
-   |...| die Länge des ersten Teils der Domäne maximal 15 Zeichen betragen darf. Die Domäne „muster-gymnasium.de“ überschreitet diese Grenze um ein Zeichen, da „muster-gymnasium“ 16 Zeichen lang ist.
+   |...| die Länge des ersten Teils der Domäne maximal 15 Zeichen betragen darf.
+  
+   Die Domäne „muster-gymnasium.de“ überschreitet diese Grenze um ein Zeichen, da „muster-gymnasium“ 16 Zeichen lang ist.
 
    Eine gute Wahl ist beispielsweise ``linuxmuster.lan``!
 
@@ -220,7 +222,7 @@ Auch hier gilt Übernahme der Vorgabe mit ``[ENTER]``.
 
    Enter physical device to use for LVM []: /dev/sdb
 
-Für die Verwenung unserer Vorgaben, musst Du den Speicherort für das LVM angeben. Die benötigte Eingaben hast Du zuvor ja ermittelt.
+Für die Verwendung unserer Vorgaben musst Du den Speicherort für das LVM angeben. Die benötigte Eingaben hast Du zuvor ja ermittelt.
 
 Falls nicht, kannst Du dies hier :ref:`lsblk-command` nachlesen.
 

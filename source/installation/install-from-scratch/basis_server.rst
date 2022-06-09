@@ -41,8 +41,6 @@ Starte den Server via Ubuntu 18.04 Server ISO-Image (USB-Stick oder CD-ROM). Es 
 
 Wähle Deine bevorzugte Sprache.
 
-.. Beantworte danach die Frage, ob auf einen neuen Installer (für 20.04) aktualisiert werden soll, mit ``Ohne Aktualisierung fortfahren``.
-
 Tastaturlayout
 --------------
 
@@ -352,43 +350,42 @@ Nachdem Du Dich erneut als ``linuxadmin`` beziehungsweise mit dem von Dir angele
 
    sudo systemctl start serial-getty@ttyS0.service
 
-Fahre nun die virtuelle Maschine (VM) herunter. 
-Gehe dann zu den Hardware-Einstellungen der VM und füge einen seriellen Port hinzu.
+Fahre nun die virtuelle Maschine (VM) herunter und starte sie erneut.
 
-.. figure:: media/basis_server_023a.png
-
-Wähle die Portnummer 0. Nachdem Du den seriellen Port hinzugefügst hast, siehst Du diesen in der Hardware-Liste:
-
-.. figure:: media/basis_server_023b.png
-
-Starte jetzt die VM erneut. Wähle nun oben rechts ``>_ Console -> xterm.js``.
+Wähle jedoch oben rechts ``>_ Console -> xterm.js``.
 Es öffnet sich das Terminal-Fenster der VM und es erscheint folgender Hinweis:
 
 .. figure:: media/basis_server_023c.png
 
-Auch wenn Du keinen Prompt siehst, gebe einfach Deinen Login ein. Nach dem ``Enter`` wirst Du zur Eingabe Deines Passwortes aufgefordert.
+Nach einem ``Enter`` wirst Du zur Eingabe Deines Passwortes aufgefordert.
 
-Danach kannst Du die folgenden Codezeilen einfach zwischen der Anleitung und dem Server übertragen.
+Nach erfolgter Anmeldung mit Deinem Account kannst Du die ab jetzt folgenden Codezeilen einfach zwischen der Anleitung und dem Server mittels ``Copy-and-paste`` übertragen. Abhängig von dem Betriebssystem Deines Administration-PCs klappt vielleicht auch ``Drag-and-drop``. Einfach mal testen.
+
+.. code::
+
+   stty cols 120 rows 60
+
+.. note:: Der Befehl sorgt dafür, dass die Zeilenumbrüche hoffentlich zu Deiner Konsolen-Anzeige passen. Ansonsten musst Du die Angaben für die Zeichen (cols) und Zeilen (rows) anpassen.    
 
 Quota-Einstellungen überprüfen
 ------------------------------
 
 .. hint::
 
-   Nachstehende schritte musst Du nur durchführebn, wenn Du **nicht** mit den default-Einstellungen installierst. Überspringe diesen Punkt und gehe zu `Bezeichnung des Speichermediums für das LVM ermitteln`_
+   Nachstehende Schritte musst Du nur durchführen, wenn Du **nicht** mit den default-Einstellungen installierst. Überspringe diesen Punkt und gehe zu: `Bezeichnung des Speichermediums für das LVM ermitteln`_
 
 
 .. code:: 
 
    nano /etc/fstab
 
-Mit diesem Aufruf öffnest du die Datei ``/etc/fstab`` mit dem Editor nano auf, damit du die Ersetzung von ``defaults`` durchführen kannst. Das ist der Ersetzungstext:
+Mit diesem Aufruf öffnest Du die Datei ``/etc/fstab`` mit dem Editor nano auf, damit Du die Ersetzung von ``defaults`` durchführen kannst. Das ist der Ersetzungstext:
 
 .. code::
 
    user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1
 
-Vor deiner Ersetzung:
+Vor Deiner Ersetzung:
 
 .. code::
  
@@ -408,43 +405,24 @@ Nach der Änderung:
  
 Speichere die Einstellung mit ``Strg+w`` und verlasse den Editor mit ``Strg+x``. 
  
-Lade die Eintragungen aus der Datei ``/etc/fstab`` neu mit ``mount -a``. Ggf. erkennst Du auch noch Fehler, die sich aufgrund von Tippfehlern in der Datrei /etc/fstab ergeben. Behebe diese zuerst bevor Du fortfährst.
+Lade die Eintragungen aus der Datei ``/etc/fstab`` neu mit ``mount -a``. Ggf. erkennst Du auch noch Fehler, die sich aufgrund von Tippfehlern in der Datei /etc/fstab ergeben. Behebe diese zuerst, bevor Du fortfährst.
  
-.. 12. Kopiere dann die gesicherten Inhalte wieder in das Verzeichnis ``/var``, das jetzt auf dem LVM gemountet ist und noch keinen Inhalt hat. Starte danach wieder   
-..     das virtuelle Dateisystem oder gehe direkt zu Punkt 13, da beim Neustart dieses wieder eingehangen wird.
-.. 
-.. .. code::
-.. 
-..    cd /savevar/var
-..    sudo cp -R * /var
-..    sudo systemctl start lxcfs.service
-.. 
-.. 13. Boote danach den Server neu mit ``sudo reboot``. Startet dieser ohne Fehlermeldungen durch, kannst Du nun das Verzeichnis ``savevar`` wieder löschen mit ``rm -R /savevar``.
-.. 
-.. .. hint::
-.. 
-..    Solltest Du beim Kopieren des Inhalts von ``var`` Fehler angezeigt bekommen, so hast Du das virtuelle Dateisystem zuvor nicht ausgehangen. Gehe dann wie unter 9. vor.
-
 .. _lsblk-command:
 
 Bezeichnung des Speichermediums für das LVM ermitteln
 -----------------------------------------------------
 
-Betrifft Dich nur wenn du die default-Einstellungen verwendest.
+Betrifft Dich nur, wenn Du die default-Einstellungen verwendest.
 
 .. code::
 
    lsblk
 
-Aus dessen Ausgabe kannst du Namen für die weitere Verwendung ermitteln. Hier wäre er beispielhaft ``/dev/sdb/``
+Aus dessen Ausgabe kannst Du Namen für die weitere Verwendung ermitteln. Hier wäre er beispielhaft ``/dev/sdb/``
 
 .. figure:: media/basis_server_024.png
 
-<<<<<<< HEAD
-.. note:: Notiere Dir HDD- und Paritions-Bezeichnungen für die spätere Verwendung.
-=======
-.. note:: Am besten notierst Du dir diese Erkenntnis für die spätere Verwendung.
->>>>>>> upstream/v7.1
+.. note:: Notiere Dir HDD- und Partition-Bezeichnungen für die spätere Verwendung.
 
 Automatische Updates abschalten
 -------------------------------
@@ -466,7 +444,7 @@ Werde mit |...|
 Ersetze bei ``APT::Periodic::Unattended-Upgrade`` die ``"1";`` durch ``"0";``.
 Mit ``<Strg>+o`` und anschließendem ``Enter`` speicherst Du die Änderung ab. Und mit ``<Strg>+x`` verlässt Du nano wieder.
 
-Jetzt kannst Du den Server updaten mit |...|
+Jetzt kannst Du den Server updaten, mit |...|
 
 .. code:: 
 
@@ -476,34 +454,7 @@ Nachdem Dir neue Pakete zur Anzeige gebracht wurden, startest Du den Upgrade-Pro
 
 .. attention::
 
-   Durch das Deaktiveren der automatischen Updates liegt jetzt natürlich die Veranwortung des zeitnahen Einspielen von Updates bei Dir bzw. der Person die für die Administration verantwortlich zeichnet!
-
-.. Nächstes Kapitel herausgenommen, da dieses Vorgehen Fehler bei lmn71-prepare erzeugt. Speicherung eines init-Scriptes network nicht möglich.
-   
-.. cloud-init abschalten
-.. ---------------------
-
-.. 1. Erstelle eine leere Datei um den Dienst am Start zu hindern.
-
-.. .. code::
-
-..       sudo touch /etc/cloud/cloud-init.disabled
-
-.. 2. Deinstalliere alle Pakete und Ordner dieses Dienstes.
-
-.. .. code::
-
-..       sudo apt purge cloud-init
-
-.. .. code::
-
-..       sudo rm -rf /etc/cloud/ && sudo rm -rf /var/lib/cloud/
-
-.. 4. Starte den Server neu.
-
-.. .. code::
-
-..       sudo reboot
+   Durch das Deaktivieren der automatischen Updates liegt jetzt natürlich die Verantwortung des zeitnahen Einspielen von Updates bei Dir bzw. der Person, die für die Administration verantwortlich zeichnet!
 
 Test der Verbindung zur Firewall
 --------------------------------
@@ -520,17 +471,12 @@ Da es die erste Kontaktaufnahme zwischen dem Server und der Firewall ist,
 
 .. figure:: media/basis_server_025.png
 
-ist es notwendig das Du den Key akzeptierst.
+ist es notwendig, dass Du den Key akzeptierst.
 
-Anschließend sollte der Login nach der Eingabe des Passwortes ``Muster!`` erfolgreich sein.
+Anschließend sollte der Log-in nach der Eingabe des Passwortes ``Muster!`` erfolgreich sein.
 
 .. figure:: media/basis_server_026.png
 
 Mit ``0) Logout`` beendest Du die Verbindung.
 
 Weiter geht es jetzt mit :ref:`lmn_pre_install-label`
-
-.. todo:: Hinweis des zum Release-Termin zur erledigen Aufgaben.
-
-   * Zeilen ??? 309-410 ??? und 475-500 in rst-File löschen, wenn das Verfahren an Ort und Stelle für gut befunden wurde.
-   * Grafiken /media sind zu überprüfen ob noch benötigt und alle Benennungen den Absprache entsprechen.
