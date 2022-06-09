@@ -471,7 +471,7 @@ Nachdem Dir neue Pakete zur Anzeige gebracht wurden, startest Du den Upgrade-Pro
 
 .. attention::
 
-   Durch das Deaktivieren der automatischen Updates liegt jetzt natürlich die Verantwortung des zeitnahen Einspielen von Updates bei Dir bzw. der Personi, die für die Administration verantwortlich zeichnet!
+   Durch das Deaktivieren der automatischen Updates liegt jetzt natürlich die Verantwortung des zeitnahen Einspielen von Updates bei Dir bzw. der Person, die für die Administration verantwortlich zeichnet!
 
 .. Nächstes Kapitel herausgenommen, da dieses Vorgehen Fehler bei lmn71-prepare erzeugt. Speicherung eines init-Scriptes network nicht möglich.
    
