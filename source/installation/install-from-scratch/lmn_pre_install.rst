@@ -220,6 +220,7 @@ Auch hier gilt Übernahme der Vorgabe mit ``[ENTER]``.
 
    Enter physical device to use for LVM []: /dev/sdb
 
+<<<<<<< Updated upstream
 Für die Verwenung unserer Vorgaben, musst Du den Speicherort für das LVM angeben. Die benötigte Eingaben hast Du zuvor ja ermittelt.
 
 Falls nicht, kannst Du dies hier :ref:`lsblk-command` nachlesen.
