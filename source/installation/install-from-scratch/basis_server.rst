@@ -41,8 +41,6 @@ Starte den Server via Ubuntu 18.04 Server ISO-Image (USB-Stick oder CD-ROM). Es 
 
 Wähle Deine bevorzugte Sprache.
 
-.. Beantworte danach die Frage, ob auf einen neuen Installer (für 20.04) aktualisiert werden soll, mit ``Ohne Aktualisierung fortfahren``.
-
 Tastaturlayout
 --------------
 
@@ -409,21 +407,6 @@ Speichere die Einstellung mit ``Strg+w`` und verlasse den Editor mit ``Strg+x``.
  
 Lade die Eintragungen aus der Datei ``/etc/fstab`` neu mit ``mount -a``. Ggf. erkennst Du auch noch Fehler, die sich aufgrund von Tippfehlern in der Datei /etc/fstab ergeben. Behebe diese zuerst, bevor Du fortfährst.
  
-.. 12. Kopiere dann die gesicherten Inhalte wieder in das Verzeichnis ``/var``, das jetzt auf dem LVM gemountet ist und noch keinen Inhalt hat. Starte danach wieder   
-..     das virtuelle Dateisystem oder gehe direkt zu Punkt 13, da beim Neustart dieses wieder eingehangen wird.
-.. 
-.. .. code::
-.. 
-..    cd /savevar/var
-..    sudo cp -R * /var
-..    sudo systemctl start lxcfs.service
-.. 
-.. 13. Boote danach den Server neu mit ``sudo reboot``. Startet dieser ohne Fehlermeldungen durch, kannst Du nun das Verzeichnis ``savevar`` wieder löschen mit ``rm -R /savevar``.
-.. 
-.. .. hint::
-.. 
-..    Solltest Du beim Kopieren des Inhalts von ``var`` Fehler angezeigt bekommen, so hast Du das virtuelle Dateisystem zuvor nicht ausgehangen. Gehe dann wie unter 9. vor.
-
 .. _lsblk-command:
 
 Bezeichnung des Speichermediums für das LVM ermitteln
@@ -473,33 +456,6 @@ Nachdem Dir neue Pakete zur Anzeige gebracht wurden, startest Du den Upgrade-Pro
 
    Durch das Deaktivieren der automatischen Updates liegt jetzt natürlich die Verantwortung des zeitnahen Einspielen von Updates bei Dir bzw. der Person, die für die Administration verantwortlich zeichnet!
 
-.. Nächstes Kapitel herausgenommen, da dieses Vorgehen Fehler bei lmn71-prepare erzeugt. Speicherung eines init-Scriptes network nicht möglich.
-   
-.. cloud-init abschalten
-.. ---------------------
-
-.. 1. Erstelle eine leere Datei um den Dienst am Start zu hindern.
-
-.. .. code::
-
-..       sudo touch /etc/cloud/cloud-init.disabled
-
-.. 2. Deinstalliere alle Pakete und Ordner dieses Dienstes.
-
-.. .. code::
-
-..       sudo apt purge cloud-init
-
-.. .. code::
-
-..       sudo rm -rf /etc/cloud/ && sudo rm -rf /var/lib/cloud/
-
-.. 4. Starte den Server neu.
-
-.. .. code::
-
-..       sudo reboot
-
 Test der Verbindung zur Firewall
 --------------------------------
 
@@ -524,8 +480,3 @@ Anschließend sollte der Log-in nach der Eingabe des Passwortes ``Muster!`` erfo
 Mit ``0) Logout`` beendest Du die Verbindung.
 
 Weiter geht es jetzt mit :ref:`lmn_pre_install-label`
-
-.. todo:: Hinweis des zum Release-Termin zur erledigen Aufgaben.
-
-   * Zeilen ??? 309-410 ??? und 475-500 in rst-File löschen, wenn das Verfahren an Ort und Stelle für gut befunden wurde.
-   * Grafiken /media sind zu überprüfen ob noch benötigt und alle Benennungen den Absprache entsprechen.
