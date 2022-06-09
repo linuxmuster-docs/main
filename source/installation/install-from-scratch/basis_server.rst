@@ -352,23 +352,22 @@ Nachdem Du Dich erneut als ``linuxadmin`` beziehungsweise mit dem von Dir angele
 
    sudo systemctl start serial-getty@ttyS0.service
 
-Fahre nun die virtuelle Maschine (VM) herunter. 
-Gehe dann zu den Hardware-Einstellungen der VM und füge einen seriellen Port hinzu.
+Fahre nun die virtuelle Maschine (VM) herunter und starte sie erneut.
 
-.. figure:: media/basis_server_023a.png
-
-Wähle die Portnummer 0. Nachdem Du den seriellen Port hinzugefügst hast, siehst Du diesen in der Hardware-Liste:
-
-.. figure:: media/basis_server_023b.png
-
-Starte jetzt die VM erneut. Wähle nun oben rechts ``>_ Console -> xterm.js``.
+Wähle jedoch oben rechts ``>_ Console -> xterm.js``.
 Es öffnet sich das Terminal-Fenster der VM und es erscheint folgender Hinweis:
 
 .. figure:: media/basis_server_023c.png
 
-Auch wenn Du keinen Prompt siehst, gebe einfach Deinen Login ein. Nach dem ``Enter`` wirst Du zur Eingabe Deines Passwortes aufgefordert.
+Nach einem ``Enter`` wirst Du zur Eingabe Deines Passwortes aufgefordert.
 
-Danach kannst Du die folgenden Codezeilen einfach zwischen der Anleitung und dem Server übertragen.
+Nach erfolgter Anmeldung mit Deinem Account kannst Du die ab jetzt folgenden Codezeilen einfach zwischen der Anleitung und dem Server mittels ``Copy-and-paste`` übertragen. Abhängig von dem Betriebssystem Deines Administration-PCs klappt vielleicht auch ``Drag-and-drop``. Einfach mal testen.
+
+.. code::
+
+   stty cols 120 rows 60
+
+.. note:: Der Befehl sorgt dafür, dass die Zeilenumbrüche hoffentlich zu Deiner Konsolen-Anzeige passen. Ansonsten musst Du die Angaben für die Zeichen (cols) und Zeilen (rows) anpassen.    
 
 Quota-Einstellungen überprüfen
 ------------------------------
