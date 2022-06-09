@@ -429,7 +429,7 @@ Lade die Eintragungen aus der Datei ``/etc/fstab`` neu mit ``mount -a``. Ggf. er
 Bezeichnung des Speichermediums für das LVM ermitteln
 -----------------------------------------------------
 
-Betrifft Dich nur wenn Du die default-Einstellungen verwendest.
+Betrifft Dich nur, wenn Du die default-Einstellungen verwendest.
 
 .. code::
 
@@ -439,7 +439,7 @@ Aus dessen Ausgabe kannst Du Namen für die weitere Verwendung ermitteln. Hier w
 
 .. figure:: media/basis_server_024.png
 
-.. note:: Notiere Dir HDD- und Paritions-Bezeichnungen für die spätere Verwendung.
+.. note:: Notiere Dir HDD- und Partition-Bezeichnungen für die spätere Verwendung.
 
 Automatische Updates abschalten
 -------------------------------
@@ -461,7 +461,7 @@ Werde mit |...|
 Ersetze bei ``APT::Periodic::Unattended-Upgrade`` die ``"1";`` durch ``"0";``.
 Mit ``<Strg>+o`` und anschließendem ``Enter`` speicherst Du die Änderung ab. Und mit ``<Strg>+x`` verlässt Du nano wieder.
 
-Jetzt kannst Du den Server updaten mit |...|
+Jetzt kannst Du den Server updaten, mit |...|
 
 .. code:: 
 
@@ -471,7 +471,7 @@ Nachdem Dir neue Pakete zur Anzeige gebracht wurden, startest Du den Upgrade-Pro
 
 .. attention::
 
-   Durch das Deaktiveren der automatischen Updates liegt jetzt natürlich die Veranwortung des zeitnahen Einspielen von Updates bei Dir bzw. der Person die für die Administration verantwortlich zeichnet!
+   Durch das Deaktivieren der automatischen Updates liegt jetzt natürlich die Verantwortung des zeitnahen Einspielen von Updates bei Dir bzw. der Personi, die für die Administration verantwortlich zeichnet!
 
 .. Nächstes Kapitel herausgenommen, da dieses Vorgehen Fehler bei lmn71-prepare erzeugt. Speicherung eines init-Scriptes network nicht möglich.
    
