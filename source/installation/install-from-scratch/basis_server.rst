@@ -374,20 +374,20 @@ Quota-Einstellungen überprüfen
 
 .. hint::
 
-   Nachstehende schritte musst Du nur durchführebn, wenn Du **nicht** mit den default-Einstellungen installierst. Überspringe diesen Punkt und gehe zu `Bezeichnung des Speichermediums für das LVM ermitteln`_
+   Nachstehende Schritte musst Du nur durchführen, wenn Du **nicht** mit den default-Einstellungen installierst. Überspringe diesen Punkt und gehe zu: `Bezeichnung des Speichermediums für das LVM ermitteln`_
 
 
 .. code:: 
 
    nano /etc/fstab
 
-Mit diesem Aufruf öffnest du die Datei ``/etc/fstab`` mit dem Editor nano auf, damit du die Ersetzung von ``defaults`` durchführen kannst. Das ist der Ersetzungstext:
+Mit diesem Aufruf öffnest Du die Datei ``/etc/fstab`` mit dem Editor nano auf, damit Du die Ersetzung von ``defaults`` durchführen kannst. Das ist der Ersetzungstext:
 
 .. code::
 
    user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1
 
-Vor deiner Ersetzung:
+Vor Deiner Ersetzung:
 
 .. code::
  
@@ -407,7 +407,7 @@ Nach der Änderung:
  
 Speichere die Einstellung mit ``Strg+w`` und verlasse den Editor mit ``Strg+x``. 
  
-Lade die Eintragungen aus der Datei ``/etc/fstab`` neu mit ``mount -a``. Ggf. erkennst Du auch noch Fehler, die sich aufgrund von Tippfehlern in der Datrei /etc/fstab ergeben. Behebe diese zuerst bevor Du fortfährst.
+Lade die Eintragungen aus der Datei ``/etc/fstab`` neu mit ``mount -a``. Ggf. erkennst Du auch noch Fehler, die sich aufgrund von Tippfehlern in der Datei /etc/fstab ergeben. Behebe diese zuerst, bevor Du fortfährst.
  
 .. 12. Kopiere dann die gesicherten Inhalte wieder in das Verzeichnis ``/var``, das jetzt auf dem LVM gemountet ist und noch keinen Inhalt hat. Starte danach wieder   
 ..     das virtuelle Dateisystem oder gehe direkt zu Punkt 13, da beim Neustart dieses wieder eingehangen wird.
@@ -429,21 +429,17 @@ Lade die Eintragungen aus der Datei ``/etc/fstab`` neu mit ``mount -a``. Ggf. er
 Bezeichnung des Speichermediums für das LVM ermitteln
 -----------------------------------------------------
 
-Betrifft Dich nur wenn du die default-Einstellungen verwendest.
+Betrifft Dich nur wenn Du die default-Einstellungen verwendest.
 
 .. code::
 
    lsblk
 
-Aus dessen Ausgabe kannst du Namen für die weitere Verwendung ermitteln. Hier wäre er beispielhaft ``/dev/sdb/``
+Aus dessen Ausgabe kannst Du Namen für die weitere Verwendung ermitteln. Hier wäre er beispielhaft ``/dev/sdb/``
 
 .. figure:: media/basis_server_024.png
 
-<<<<<<< HEAD
 .. note:: Notiere Dir HDD- und Paritions-Bezeichnungen für die spätere Verwendung.
-=======
-.. note:: Am besten notierst Du dir diese Erkenntnis für die spätere Verwendung.
->>>>>>> upstream/v7.1
 
 Automatische Updates abschalten
 -------------------------------
