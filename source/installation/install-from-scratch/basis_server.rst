@@ -515,9 +515,9 @@ Da es die erste Kontaktaufnahme zwischen dem Server und der Firewall ist,
 
 .. figure:: media/basis_server_025.png
 
-ist es notwendig das Du den Key akzeptierst.
+ist es notwendig, dass Du den Key akzeptierst.
 
-Anschließend sollte der Login nach der Eingabe des Passwortes ``Muster!`` erfolgreich sein.
+Anschließend sollte der Log-in nach der Eingabe des Passwortes ``Muster!`` erfolgreich sein.
 
 .. figure:: media/basis_server_026.png
 
