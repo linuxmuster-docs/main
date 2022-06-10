@@ -3,7 +3,7 @@
 .. _setup-console-label:
 
 ==================
-Set-up im Terminal
+Setup im Terminal
 ==================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
@@ -19,7 +19,7 @@ Im Terminal wirst Du mit dem Erstbildschirm von linuxmuster.net v7.1 begrüßt.
    :align: center
    :alt: Terminal after login
 
-Das Set-up wird über den Befehl ``linuxmuster-setup`` gestartet. 
+Das Setup wird über den Befehl ``linuxmuster-setup`` gestartet. 
 
 Erfolgt der Aufruf direkt mittels ``linuxmuster-setup`` *müssen* mindestens folgende Setup-Parameter als Kommandozeilenparameter übergeben werden (in einer Zeile) - die angegebene Werte nach dem Gleichheitszeichen sind selbstverständlich nur Beispielwerte:
 
@@ -71,7 +71,7 @@ Diese Datei musst Du noch mit Deinen Angaben füllen. Hier beispielhaft mit dem 
    :align: center
    :alt: Terminal Setup: Editor nano config.txt
 
-Hast Du diese Textdatei mit deinen Einträgen gespeichert ``[Strg]+[X]`` --> ``[Y]`` --> ``[Enter]``, kannst Du das Set-up mit folgendem Befehl aufrufen:
+Hast Du diese Textdatei mit deinen Einträgen gespeichert ``[Strg]+[X]`` --> ``[Y]`` --> ``[Enter]``, kannst Du das Setup mit folgendem Befehl aufrufen:
 
 .. code::
 
@@ -85,22 +85,53 @@ Klicke jeweils auf ``< OK >``, um zum nächsten Schritt zu gelangen.
    :align: center
    :alt: Terminal Setup: Parameter 1
 
-Danach gelangst Du zur Angabe der sog. Domain. Beachte bei dessen Festlegung u.g. Hinweise zum FQDN.
+Danach gelangst Du zur Angabe der sogenannten Domain. Beachte bei dessen Festlegung u.g. Hinweise zum FQDN.
 
 .. figure:: media/newsetup/lmn-setup-terminal-03.png
    :align: center
    :alt: Terminal Setup: Parameter 2
 
 .. hint::
-  Der ``Domain name`` spielt eine besondere Rolle, insbesondere, wenn eine Adresse verwendet werden soll, die intern und extern identisch sein soll, sodass mit dem FQDN intern und extern gearbeitet wird. **schule.de** oder **linuxmuster.lan** stellen den Domainnamen mit der sog. Top-Level-Domain (TLD) dar. Die TLD **lan** wird nicht extern verwendet, sondern ist nur für den  internen Gebrauch sinnvoll. Die TLD de wird extern genutzt. Hat Deine Schule die de-Domain meineschule.de registriert, dann musst Du hier eine Subdomain angeben, die zugleich die sog. Samba-Domain darstellt. Für den Namen dieser Sub-/Samba-Domain gibt es Einschränkungen, die unbedingt beachtet werden müssen: Es werden nur englische Kleinbuchstaben a bis z akzeptiert. Sonst keinerlei Zeichen. Es dürfen zudem maximal 15 Zeichen verwendet werden. **Richtig**: gshoenningen (12 Zeichen, keine Umlaute und Satzzeichen etc.), **Falsch**: GSO-Heinrich-Böll-Hönningen (26 Zeichen, Großbuchstaben, Umlaute, Bindestriche)
+  Der ``Domain name`` spielt eine besondere Rolle für das Setup.
+  
+  Besonders, wenn eine Adresse verwendet werden soll, die intern und extern identisch sein soll, sodass mit dem FQDN intern und extern gearbeitet wird. Um Dir das zu verdeutlichen, zeigen wir das an zwei Beispielen: 
+ 
+   * **meineschule.de** 
+   * **linuxmuster.lan**
+    
+   Die einzelnen Teile des Domainnamens werden durch einen einzelnen Punkt getrennt.
+   
+   Die beiden rechten Teile **de** beziehungsweise **lan**  stellen die sogenannte Top-Level-Domain (TLD) dar.
+   
+   Die TLD **lan** wird nicht extern verwendet, sondern ist nur für den internen Gebrauch sinnvoll.
+   
+   Die TLD **de** wird extern genutzt.
+  
+   Hat Deine Schule die de-Domain **meineschule.de** registriert, dann musst Du hier eine Subdomain angeben, da **meineschule** zugleich die sogenannten Samba-Domain darstellt. 
+   
+   Wie aufgezeigt wird aus dem ganz linken Teil die Samba-Domain gebildet. Für diese gibt es defininationsmäßig einige Einschränkungen:
 
-Klicke auf ``< OK >``. Es erscheint der IP-Adressbereich, der für die Rechneraufnahme mit Linbo reserviert wird. In der Abb. ist dies der Bereich ``10.0.0.100`` bis ``10.0.0.200``.
+   * Es dürfen maximal 15 Zeichen verwendet werden.
+
+   * Es werden nur englische Kleinbuchstaben a bis z akzeptiert.
+
+   **Richtig**: gshoenningen (12 Zeichen, keine Umlaute und Satzzeichen etc.)
+  
+   **Falsch**: GSO-Heinrich-Böll-Hönningen (26 Zeichen, Großbuchstaben, Umlaute, Bindestriche)
+
+   Weitergehende Informationen findest du hier: https://wiki.samba.org/index.php/Active_Directory_Naming_FAQ
+
+Nachdem du deine Eingabe getätigt hast, bestätige diese mit ``< OK >``. 
+
+Es erscheint der IP-Adressbereich, der für die Rechneraufnahme mit Linbo reserviert wird. In der Abb. ist dies der Bereich ``10.0.0.100`` bis ``10.0.0.200``.
 
 .. figure:: media/newsetup/lmn-setup-terminal-04.png
    :align: center
    :alt: Terminal Setup: Parameter 3
 
-Klicke auf ``< OK >``. Danach gelangst Du zur Eingabe des neuen Administrator-Kennworts. Dieses ist zugleich das neue Kennwort des Benutzers ``gobal-admin`` in der Schulkonsole.
+Wechsele mit ``< OK >`` zur nächsten EIngabemaske.
+
+Hier setzt Du ein neues Administrations-Kennwort. Dieses wird zugleich das neue Kennwort aller administrativens Benutzer, so auch vom ``gobal-admin`` in der Schulkonsole.
 
 .. figure:: media/newsetup/lmn-setup-terminal-05.png
    :align: center
@@ -111,13 +142,13 @@ Klicke auf ``< OK >``. Danach gelangst Du zur Eingabe des neuen Administrator-Ke
 
 .. hint::
 
-   * Das beim Set-up eingegebene Admin-Passwort wird für folgende administrativen User gesetzt:
+   * Das beim Setup eingegebene Admin-Passwort wird für folgende administrativen User gesetzt:
       * root auf dem Server
       * root auf der Firewall
       * global-admin (AD)
       * pgmadmin (AD)
       * linbo (/etc/rsyncd.secrets)
-   * Es sollten die Passwörter der o.g. User nach dem Set-up geändert werden, sodass jeder User ein eigenes Password hat.
+   * Es sollten die Passwörter der o.g. User nach dem Setup geändert werden, sodass jeder User ein eigenes Password hat.
 
 
 Gebe das Kennwort ein und klicke auf ``< OK >``.
@@ -128,17 +159,17 @@ Gebe das Kennwort ein und klicke auf ``< OK >``.
 
 Bestätige dieses Kennwort und klicke auf ``< OK >``.
 
-Danach wird das Set-up gestartet. Es dauert einige Zeit, bis alle erforderlichen Dienste und die OPNsense eingerichtet wurden.
+Danach wird das Setup gestartet. Es dauert einige Zeit, bis alle erforderlichen Dienste und die OPNsense eingerichtet wurden.
 
 .. figure:: media/newsetup/lmn-setup-terminal-07.png
    :align: center
    :alt: Terminal Setup: Services
 
-Nach Abschluss des Setups siehst Du im Terminal, dass das Set-up beendet wurde.
+Nach Abschluss des Setups siehst Du im Terminal, dass das Setup beendet wurde.
 
 .. figure:: media/newsetup/lmn-setup-terminal-08.png
    :align: center
-   :alt: Terminal Set-up finished
+   :alt: Terminal Setup finished
 
 Danach muss noch der Dienst für die WebUI/Schulkonsole oder der Server neu gestartet werden.
 
@@ -154,12 +185,12 @@ alternativ
 
 Das erste Verfahren hat den Vorteil, dass Du nicht die Zeit des Neustarts abwarten, Dich erneut verbinden und anmelden musst.
 
-Nach abgeschlossenem Set-up und eventuellen Neustart des Servers, kannst Du Dich mit einem PC via Browser an der Schulkonsole von linuxmuster.net v7.1 anmelden. Dafür muss sich der Rechner im internen LAN befinden (z.B. 10.0.0.10/16).
+Nach abgeschlossenem Setup und eventuellen Neustart des Servers, kannst Du Dich mit einem PC via Browser an der Schulkonsole von linuxmuster.net v7.1 anmelden. Dafür muss sich der Rechner im internen LAN befinden (z.B. 10.0.0.10/16).
 
 Anmeldung an der Schulkonsole als global-admin
 ==============================================
 
-Öffne die URL ``https://10.0.0.1`` mit dem Admin-PC. Es wurde beim Set-up ein self-signed certificate erstellt, sodass Du dieses beim erstmaligen Aufruf mit dem Browser akzeptieren musst.
+Öffne die URL ``https://10.0.0.1`` mit dem Admin-PC. Es wurde beim Setup ein self-signed certificate erstellt, sodass Du dieses beim erstmaligen Aufruf mit dem Browser akzeptieren musst.
 
 .. figure:: media/newsetup/lmn-setup-gui-09.png
    :align: center
@@ -188,7 +219,7 @@ Nach erfolgreicher Anmeldung gelangst Du zur Hauptseite der Schulkonsole.
 Berechtigungen der Log-Dateien anpassen
 =======================================
 
-Nach dem erfolgreichen Set-up verbindest Du Dich via ssh auf den Server. 
+Nach dem erfolgreichen Setup verbindest Du Dich via ssh auf den Server. 
 
 Zum Abschluss sind noch die Dateiberechtigung für die linuxmuster Log-Dateien anzupassen.
 

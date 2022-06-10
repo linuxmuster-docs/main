@@ -233,7 +233,7 @@ Für weitergehende Informationen `siehe opnsense.org <https://opnsense.org/>`_.
 Anpassbar
 ---------
 
-Alle bisher vorgestellten Basisdienste werden mithilfe des Set-ups konfiguriert, bleiben aber frei anpass- und erweiterbar. Es folgt eine einführende Beschreibung der letzten drei Bausteine, die linuxmuster.net zu der Komplettlösung machen.
+Alle bisher vorgestellten Basisdienste werden mithilfe des Setups konfiguriert, bleiben aber frei anpass- und erweiterbar. Es folgt eine einführende Beschreibung der letzten drei Bausteine, die linuxmuster.net zu der Komplettlösung machen.
 
 .. image::    media/structure_of_version_7_community.svg
    :name:     structure-community-components
