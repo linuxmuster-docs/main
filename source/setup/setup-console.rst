@@ -85,22 +85,53 @@ Klicke jeweils auf ``< OK >``, um zum nächsten Schritt zu gelangen.
    :align: center
    :alt: Terminal Setup: Parameter 1
 
-Danach gelangst Du zur Angabe der sog. Domain. Beachte bei dessen Festlegung u.g. Hinweise zum FQDN.
+Danach gelangst Du zur Angabe der sogenannten Domain. Beachte bei dessen Festlegung u.g. Hinweise zum FQDN.
 
 .. figure:: media/newsetup/lmn-setup-terminal-03.png
    :align: center
    :alt: Terminal Setup: Parameter 2
 
 .. hint::
-  Der ``Domain name`` spielt eine besondere Rolle, insbesondere, wenn eine Adresse verwendet werden soll, die intern und extern identisch sein soll, sodass mit dem FQDN intern und extern gearbeitet wird. **schule.de** oder **linuxmuster.lan** stellen den Domainnamen mit der sog. Top-Level-Domain (TLD) dar. Die TLD **lan** wird nicht extern verwendet, sondern ist nur für den  internen Gebrauch sinnvoll. Die TLD de wird extern genutzt. Hat Deine Schule die de-Domain meineschule.de registriert, dann musst Du hier eine Subdomain angeben, die zugleich die sog. Samba-Domain darstellt. Für den Namen dieser Sub-/Samba-Domain gibt es Einschränkungen, die unbedingt beachtet werden müssen: Es werden nur englische Kleinbuchstaben a bis z akzeptiert. Sonst keinerlei Zeichen. Es dürfen zudem maximal 15 Zeichen verwendet werden. **Richtig**: gshoenningen (12 Zeichen, keine Umlaute und Satzzeichen etc.), **Falsch**: GSO-Heinrich-Böll-Hönningen (26 Zeichen, Großbuchstaben, Umlaute, Bindestriche)
+  Der ``Domain name`` spielt eine besondere Rolle für das Setup.
+  
+  Besonders, wenn eine Adresse verwendet werden soll, die intern und extern identisch sein soll, sodass mit dem FQDN intern und extern gearbeitet wird. Um Dir das zu verdeutlichen, zeigen wir das an zwei Beispielen: 
+ 
+   * **meineschule.de** 
+   * **linuxmuster.lan**
+    
+   Die einzelnen Teile des Domainnamens werden durch einen einzelnen Punkt getrennt.
+   
+   Die beiden rechten Teile **de** beziehungsweise **lan**  stellen die sogenannte Top-Level-Domain (TLD) dar.
+   
+   Die TLD **lan** wird nicht extern verwendet, sondern ist nur für den internen Gebrauch sinnvoll.
+   
+   Die TLD **de** wird extern genutzt.
+  
+   Hat Deine Schule die de-Domain **meineschule.de** registriert, dann musst Du hier eine Subdomain angeben, da **meineschule** zugleich die sogenannten Samba-Domain darstellt. 
+   
+   Wie aufgezeigt wird aus dem ganz linken Teil die Samba-Domain gebildet. Für diese gibt es defininationsmäßig einige Einschränkungen:
 
-Klicke auf ``< OK >``. Es erscheint der IP-Adressbereich, der für die Rechneraufnahme mit Linbo reserviert wird. In der Abb. ist dies der Bereich ``10.0.0.100`` bis ``10.0.0.200``.
+   * Es dürfen maximal 15 Zeichen verwendet werden.
+
+   * Es werden nur englische Kleinbuchstaben a bis z akzeptiert.
+
+   **Richtig**: gshoenningen (12 Zeichen, keine Umlaute und Satzzeichen etc.)
+  
+   **Falsch**: GSO-Heinrich-Böll-Hönningen (26 Zeichen, Großbuchstaben, Umlaute, Bindestriche)
+
+   Weitergehende Informationen findest du hier: https://wiki.samba.org/index.php/Active_Directory_Naming_FAQ
+
+Nachdem du deine Eingabe getätigt hast, bestätige diese mit ``< OK >``. 
+
+Es erscheint der IP-Adressbereich, der für die Rechneraufnahme mit Linbo reserviert wird. In der Abb. ist dies der Bereich ``10.0.0.100`` bis ``10.0.0.200``.
 
 .. figure:: media/newsetup/lmn-setup-terminal-04.png
    :align: center
    :alt: Terminal Setup: Parameter 3
 
-Klicke auf ``< OK >``. Danach gelangst Du zur Eingabe des neuen Administrator-Kennworts. Dieses ist zugleich das neue Kennwort des Benutzers ``gobal-admin`` in der Schulkonsole.
+Wechsele mit ``< OK >`` zur nächsten EIngabemaske.
+
+Hier setzt Du ein neues Administrations-Kennwort. Dieses wird zugleich das neue Kennwort aller administrativens Benutzer, so auch vom ``gobal-admin`` in der Schulkonsole.
 
 .. figure:: media/newsetup/lmn-setup-terminal-05.png
    :align: center
