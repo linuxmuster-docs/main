@@ -26,20 +26,31 @@ Lies zunächst alle wichtigen Hinweise des Setup Kapitels und mache dann entwede
 Wichtige Hinweise
 =================
 
-* Nach Abschluss dieses Setups sind die Domäne und andere Details des Netzwerks permanent festgelegt und nur durch Neuinstallation änderbar.
+* Nach Abschluss dieses Setups sind die (AD-)Domäne und andere Details des Netzwerks permanent festgelegt und nur durch Neuinstallation änderbar.
 
   Es ist daher wichtig, zu diesem Zeitpunkt ein **Snapshot/Backup von Server und Firewall** anzufertigen.
 
   Sollte es beim Setup Fehler geben, oder Einstellungen nochmals geändert werden müssen, sind die virtuellen Maschinen auf den Stand des Snapshots zurückzusetzen und das Setup muss erneut aufgerufen werden.
 
-* Beim Domänennamen ist zu beachten, dass der **erste** Teil der Domäne nicht länger als 15 Zeichen sein darf! Dies ergibt sich aus den Samba/AD-Vorgaben.
+* Beim Domänennamen ist zu beachten:
 
-  Im Beispiel ``server.linuxmuster.lan`` ist ``server`` der Rechnername und ``linuxmuster.lan`` die Domäne.  
-  Die Domäne ``linuxmuster`` darf nicht länger als **15 Zeichen** sein.
+  - nutze immer eine echte externe Domain, die auf Deine Organisation registriert ist -> z.B. 'meineschule.de'
+  - für das Setup von linuxmuster benötigst Du nun eine Subdomain, die vom AD DNS-Server authoritativ intern aufgelöst wird, aber niemals von extern.
+  - der AD DNS-Server arbeitet immer nur für diese eine Subdomain und die darunter liegenden Namensräume autoritativ.
+  - alle internen Clients müssen den AD DNS-Server als DNS-Server nutzen.
+  - diese Subdomain darf nicht nicht länger als 15 Zeichen sein (NetBIOS-Name) und keien Satzzeichen enthalten.
+  - der Fully Qualified Domain Name (FQDN) darf nicht länger als 64 Byte sein.
+  - nutze niemals nicht registrierte Domains wie z.B. .local -> meineschule.local 
 
-* Will man eine Domäne nutzen, die auch extern auflösbar ist, sollte zusätzlich eine Subdomäne verwendet werden. 
+* Beim Setup von linuxmuster gibst Du also einen Domänennamen nach folgendem Schema an:
   
-  Zum Beispiel ``linuxmuster.meineschule.de`` statt ``meineschule.de``. 
+  - 'hostname'.'subdomain=NetBIOS-Name'.'domain'.'tld'
+  - ein funktionierendes Beispiel wäre: 'server01ad'.'linuxmuster'.'meineschule'.'de'
+  - hostname -> server01ad, subdomain -> linuxmuster, meineschule -> domain, tld -> de
+
+* Es wird also eine extern auflösbare, registrierte Domain genutzt und bei der Einrichtung des Servers wird eine eigene interne Subdomain als AD-Domäne angegeben.
+
+  Zum Beispiel ``linuxmuster.meineschule.de`` -> linuxmuster als Dubdomain zur Domain ``meineschule.de``.
   
   Der erste Part ``linuxmuster`` wird in diesem Beispiel dann als SAMBA-Domäne verwendet.
   
@@ -51,6 +62,10 @@ Wichtige Hinweise
 
 Anpassung des Netzbereichs
 ==========================
+
+.. attention::
+
+  Ist dies noch so ? Prüfen, wie die Abfragen sind und o.g. Infos in die Setup-Anleitung einarbeiten.
 
 Die Standardkonfiguration sieht vor, dass das Schulnetz die lokale Domäne ``linuxmuster.lan`` bekommt und Geräte im Netzbereich ``10.0.0.0/16`` sind. 
 
