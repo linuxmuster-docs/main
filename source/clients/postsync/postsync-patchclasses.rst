@@ -264,7 +264,7 @@ Das universelle Postsync-Script weist derzeit folgenden Inhalt auf:
    
    echo "##### POSTSYNC END #####" | tee -a $LOG
    
-.. attention:: Um Komplikationen vorzubeugen, verwende nicht das Kommando ``exit`` in einem Deiner Scripte!
+.. attention:: Um Komplikationen vorzubeugen, verwende das Kommando ``exit`` in keinem Deiner Postsync-Scripte!
 
 Aktualisierungen für dieses Script finden sich unter:
 
