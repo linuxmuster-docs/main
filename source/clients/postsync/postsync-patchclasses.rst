@@ -263,6 +263,9 @@ Das universelle Postsync-Script weist derzeit folgenden Inhalt auf:
    echo $NOW > /mnt/lastsync
    
    echo "##### POSTSYNC END #####" | tee -a $LOG
+   
+.. attention:: Um Komplikationen vorzubeugen, verwende nicht das Kommando ``exit`` in einem Deiner Scripte!  
+   
 
 Aktualisierungen für dieses Script finden sich unter:
 
