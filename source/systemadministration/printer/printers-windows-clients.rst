@@ -76,7 +76,7 @@ Druckertreiber auf dem Server installieren
 
 Jetzt können wir die Druckertreiber auf dem Server installieren.
 
-Öffne als global-admin das Programm mmc.exe, wähle ``Datei → snapin hinzufügen/entfernen`` und füge die Druckerverwaltung hinzu.
+Öffne als global-admin das Programm mmc.exe, wähle ``Datei → snapin hinzufügen/entfernen`` und füge die Druckverwaltung hinzu.
 
 .. image:: media/printers-windows-clients-06.png
    :alt: mmc.exe
