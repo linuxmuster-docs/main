@@ -266,7 +266,7 @@ Wenn Du es für Deine Installation nutzen willst, dann kanst Du mit `Speicherpla
 Einrichtung ohne LVM auf HDD nach Deinen Vorgaben (optional)
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Ohne LVM sind die Mount Points ``/var``, ``/srv/linbo``, ``/srv/samba/global`` und ``/srv/samba/default-school`` auf die HDD(s) / einzelne Partionen zu legen.
+Ohne LVM sind die Mount Points ``/var``, ``/srv/linbo``, ``/srv/samba/global`` und ``/srv/samba/schools/default-school`` auf die HDD(s) / einzelne Partionen zu legen.
 
 .. todo:: Beschreibung wäre hier zu erstellen. Original Text "Die Zuordnung der Mount Points zum LVM wird später detailliert beschrieben" und der beschreibene Text in den Zeilen 203 bis 291 könnte dann entfallen, da die Erklärung hier stehen würde.
 
