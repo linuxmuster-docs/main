@@ -156,14 +156,14 @@ Für das Setup werden noch weitere Partitionen benötigt. Dafür haben wir uns f
 
 .. hint:: Für kleine Schulen oder eine Test-Installation sollten diese Vorgaben passen. 
    
-   ============== ========================== ========================= ==========
-   LV Name        LV Pfad                    Mountpoint                Größe
-   ============== ========================== ========================= ==========
-   var            /dev/sg_srv/var            /var                      10G
-   linbo          /dev/sg_srv/linbo          /srv/linbo                40G
-   global         /dev/sg_srv/global         /srv/samba/global         10G
-   default-school /dev/sg_srv/default-school /srv/samba/default-school 40G [#f1]_
-   ============== ========================== ========================= ==========
+   ============== ========================== ================================= ==========
+   LV Name        LV Pfad                    Mountpoint                        Größe
+   ============== ========================== ================================= ==========
+   var            /dev/sg_srv/var            /var                              10G
+   linbo          /dev/sg_srv/linbo          /srv/linbo                        40G
+   global         /dev/sg_srv/global         /srv/samba/global                 10G
+   default-school /dev/sg_srv/default-school /srv/samba/schools/default-school 40G [#f1]_
+   ============== ========================== ================================= ==========
 
 .. [#f1] Sollte Deine Festplatte größer sein als die vorgeschlagene Mindestgröße so wird für diese Partition der maximal übrige freie Platz mit verwendet.
 
@@ -180,14 +180,14 @@ Speicherplatz nach Deinen Vorgaben (optional)
 
 Solltest Du Dich für eine andere Größeneinteilung oder für eine Einrichtung auf realen Festplatten entschieden haben, dann geht es hier für Dich weiter.
 
-   ============== ========================== ========================= ==========
-   LV Name        LV Pfad                    Mountpoint                Größe
-   ============== ========================== ========================= ==========
-   var            /dev/sg_srv/var            /var                      20G
-   linbo          /dev/sg_srv/linbo          /srv/linbo                80G
-   global         /dev/sg_srv/global         /srv/samba/global         20G
-   default-school /dev/sg_srv/default-school /srv/samba/default-school 80G
-   ============== ========================== ========================= ==========
+   ============== ========================== ================================= ==========
+   LV Name        LV Pfad                    Mountpoint                        Größe
+   ============== ========================== ================================= ==========
+   var            /dev/sg_srv/var            /var                              20G
+   linbo          /dev/sg_srv/linbo          /srv/linbo                        80G
+   global         /dev/sg_srv/global         /srv/samba/global                 20G
+   default-school /dev/sg_srv/default-school /srv/samba/schools/default-school 80G
+   ============== ========================== ================================= ==========
 
 Wir beschreiben hier exemplarisch das Vorgehen für die Größen aus der obigen Tabelle für die |...|
 
