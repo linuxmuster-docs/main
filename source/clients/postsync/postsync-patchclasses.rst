@@ -270,7 +270,3 @@ Aktualisierungen für dieses Script finden sich unter:
 
 https://github.com/linuxmuster/linuxmuster-client-servertools/blob/master/usr/lib/linuxmuster-client-servertools/generic.postsync
 
-
-
-
-
