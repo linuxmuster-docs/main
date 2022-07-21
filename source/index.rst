@@ -179,6 +179,7 @@ Nach einem Klick eröffnen sich Dir dort noch weitere Möglichkeiten:
   external-services/nextcloud/index
   external-services/rocketchat/index
   external-services/unifiwlan/index
+  external-services/aleksis/index
 
 .. toctree::
   :maxdepth: 1
