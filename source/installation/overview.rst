@@ -6,10 +6,6 @@ Installationablauf
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
                    `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
-.. todo:: Für die Veröffentlichung als latest:
-
-          Kommentar-Tags und die vorhergehende Leerzeile bei :target: entfernen
-
 Um linuxmuster.net v7.1 zu installieren musst Du folgende Schritte durchlaufen:
 
 1. Planung der Infrastruktur (Server und Netzwerk)
