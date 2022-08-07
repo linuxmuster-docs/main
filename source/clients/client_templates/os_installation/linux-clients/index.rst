@@ -1,4 +1,4 @@
-.. include:: /guided-inst.subst
+.. include:: ../../../../guided-inst.subst
 
 .. _install-linux-clients-current-label:
 
@@ -27,7 +27,7 @@ Du hast bereits:
    4.  PC/VM via PXE mit Linbo gestartet
    5.  Die Festplatte mit Linbo partitioniert und formatiert
 
-.. todo: :ref:Ziel muss gesetzt werden, nächster Absatz
+.. todo:: :ref:Ziel muss gesetzt werden, nächster Absatz
 
 Falls Du das noch nicht getan hast, starte zuerst mit den Schritten, die im Kapitel ref:`add-computer-label` beschrieben werden und mache erst danach hier weiter.
 
@@ -147,8 +147,6 @@ Bevor Du nun das Image startest, musst Du zuerst noch die Hardwareklasse anpasse
 
 Imagenamen eintragen (HWK)
 --------------------------
-
-.. todo:: Ist nochmals zuüberprüfen: None
 
 Nachdem Du nun das Image erstellt hast, musst Du es noch Deiner Hardwareklasse zuweisen. Denn zu Beginn hattest Du bei der Rechneraufnahme für das Basisimage noch ``None`` eingetragen, bzw. stehen gelassen.
 Gehe dazu in der WebUI auf ``Geräteverwaltung -> Linbo 4 -> Gruppen -> <hwk auswählen>``. Klicke für die gewünschte HWK das Stift-Symbol, um die Einstellungen anzupassen.Es öffnet sich das Fenster mit den Einstellungen für die HWK. Wähle hier unter ``Partitionen`` Dein Betriebssystem (Reiterkarte ``OS``) aus und klicke das Stift-Icon. Klicke in dem sich öffnenden Fenster die Reiterkarte unter ``OS`` und klicke unter dem Eintrag ``Basisimage`` auf die Drop-down Liste und wähle das erstellte Image aus. (vgl. hierzu auch das Vorgehen unter ref:`add-computer-label`).
