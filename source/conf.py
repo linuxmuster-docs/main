@@ -38,6 +38,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
     'sphinx.ext.intersphinx',
+    'sphinx.ext.autosummary',
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
     'sphinx.ext.ifconfig',
@@ -60,7 +61,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'linuxmuster.net'
-copyright = u'2017-2021, linuxmuster.net'
+copyright = u'2017-2022, linuxmuster.net'
 author = u'linuxmuster.net'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -402,4 +403,11 @@ epub_exclude_files = ['search.html']
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'https://docs.python.org/': None}
+intersphinx_mapping = {
+    "rtd": ("https://docs.readthedocs.io/en/stable/", None),
+    "python": ("https://docs.python.org/3/", None),
+    "sphinx": ("https://www.sphinx-doc.org/en/master/", None),
+    }               
+
+intersphinx_disabled_domains = ["std"]
+
