@@ -4,7 +4,7 @@
 Firewall-Regeln
 ===============
 
-Damit die Nextcloud funktionieren kann, braucht Sie Zugriff auf das AD des Servers. Möchtest du auch auf Verzeichnisse und Dateien zugreifen, muss die OpnSense auch Samba-Anfragen an den Server weiterleiten.
+Damit die Nextcloud funktionieren kann, braucht Sie Zugriff auf das AD des Servers. Möchtest Du auch auf Verzeichnisse und Dateien zugreifen, muss die OpnSense auch Samba-Anfragen an den Server weiterleiten.
 
 In beiden Fällen müssen Anfragen vom Docker-Host an den Server weitergeleitet werden
 
@@ -15,7 +15,7 @@ Wenn ein Service, wie die Nextcloud oder Moodle auf das AD des Servers zugreifen
 
 Die Firewallregel wird also eine Portweiterleitung des Ports 636 (ldaps) sein.
 
-Melde dich als root an der OpnSense an und navigiere zu ``Firewall -> NAT -> Portweiterleitung``.
+Melde Dich als root an der OpnSense an und navigiere zu ``Firewall -> NAT -> Portweiterleitung``.
 
 .. image:: media/firewall-01.png
    :alt: Firewall Portweiterleitung
@@ -27,7 +27,7 @@ Klicke auf Hinzufügen um eine neue Firewallregel hinzuzufügen und trage die fo
    :alt: Firewall Portweiterleitung ldaps
    :align: center
 
-Bei *Ziel-IP umleiten* trägst du natürlich die IP-Adresse deines Servers ein. Im Allgemeinen wird das 10.0.0.1 sein. In der lmn6 war das 10.16.1.1.
+Bei *Ziel-IP umleiten* trägst Du natürlich die IP-Adresse Deines Servers ein. Im Allgemeinen wird das 10.0.0.1 sein. In der lmn6 war das 10.16.1.1.
 
 Firewallregel für den Zugriff über Samba
 ========================================
@@ -36,7 +36,7 @@ Firewallregel für den Zugriff über Samba
 
    Sollte der Nextcloud-Servicve extern stehen, so sollten diese Ports nicht weitergeleitet werden.
 
-Für den Zugriff über Samba müssen die Ports ``139 und 445`` an den Server weiter geleitet werden. Dazu legst du erst mal einen Alias an.
+Für den Zugriff über Samba müssen die Ports ``139 und 445`` an den Server weiter geleitet werden. Dazu legst Du erst mal einen Alias an.
 
 Navigiere auf Firewall -> Aliase.
 
@@ -44,7 +44,7 @@ Navigiere auf Firewall -> Aliase.
    :alt: Firewall Portweiterleitung ldaps
    :align: center
    
-In der Zeile unter dem letzten Alias klickst du auf ``+`` um einen neuen Alias anzulegen.
+In der Zeile unter dem letzten Alias klickst Du auf ``+`` um einen neuen Alias anzulegen.
 
  .. image:: media/firewall-04.png
    :alt: Firewall neuer Alias
@@ -70,4 +70,4 @@ Klicke auf ``Hinzufügen``, um eine neue Firewallregel hinzuzufügen und trage d
    :alt: Firewall Portweiterleitung SMB
    :align: center
 
-Bei Quelle trägst du die IP-Adresse und die Netzwerkmaske deines Docker-Hosts ein. Und bei *Ziel-IP umleiten* trägst du wieder die IP-Adresse deines Servers ein. Im Allgemeinen wird das ``10.0.0.1`` sein. In der lmn6 war dies die IP ``10.16.1.1``.
+Bei Quelle trägst Du die IP-Adresse und die Netzwerkmaske Deines Docker-Hosts ein. Und bei *Ziel-IP umleiten* trägst Du wieder die IP-Adresse Deines Servers ein. Im Allgemeinen wird das ``10.0.0.1`` sein. In der lmn6 war dies die IP ``10.16.1.1``.

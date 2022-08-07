@@ -1,0 +1,197 @@
+.. _add-devices-label:
+
+=================
+ Rechneraufnahme
+=================
+
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
+                   `@Alois <https://ask.linuxmuster.net/u/Alois>`_ ,
+		           `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
+                   `@michael_kohls <https://ask.linuxmuster.net/u/michael_kohls>`_
+
+Es gibt mehrere Varianten Geräte im Schulserver aufzunehmen:
+
+1. `Aufnahme über die Schulkonsole`_ (grafische Oberfläche)
+2. `Editieren der Datei devices.csv`_
+3. `Aufnahme über linbo`_
+
+Hast Du eine Liste von MAC-Addressen parat, bieten sich die Varianten 1 und 2 an. Falls Du die MAC-Addresse erst herausfinden musst, stellt die Variante 3 den leichteren Weg dar. Dort kannst Du auf der gebooteten LINBO Oberfläche die MAC-Addresse auslesen.
+
+.. hint::
+   Bei der Wahl der Bezeichnung für Raum und Gruppe bitte Folgendes unbedingt vermeiden:
+      - Gleiche Bezeichnungen für Raum und Gruppe
+      - Reservierte Wörter, wie "con" und "man"
+
+Aufnahme über die Schulkonsole
+------------------------------
+
+Um einen Rechner mit der Schulkonsole aufzunehmen, meldest Du Dich zunächst an der Schulkonsole als ``global-admin`` an.
+
+Wähle dann links im Menü ``Geräteverwaltung --> Geräte``.
+
+.. figure:: media/add-devices/01-device-management-devices-menue.png
+   :align: center
+   :alt: Device Management: Menue
+
+Danach siehst Du rechts die Liste mit allen bereits in der Gerätedatei eingetragenen Geräten. Standardmäßig sind nach dem Setup die konfigurierten Server
+schon in der Liste mit der Rolle ``Server`` eingetragen.
+
+.. figure:: media/add-devices/02-device-management-devices.png
+   :align: center
+   :alt: Device Management: Devices
+
+Klicke unterhalb der Liste auf den Button ``+ Gerät hinzufügen``, um ein neues Gerät einzutragen. Es wird eine neue, noch leere Zeile am Ende der Geräteliste eingefügt.
+
+.. figure:: media/add-devices/03-device-management-add-new-device.png
+   :align: center
+   :alt: Device Management: Add New Device
+
+In der neuen Zeile gibst Du nun folgenes an:
+
+1. Raum: Name des Raums (Achtung: keine Binde- und Unterstriche verwenden, keine Umlaute,  max. 10 Zeichen)
+2. Hostname: Name des Geräts (Achtung: Keine Unterstriche verwenden, max. 15 Zeichen)
+3. Gruppe: Bezeichnung der Linbo-Hardwareklasse. Gleiche Bezeichnungen für Raum und Gruppe sind unzulässig. Reservierte Wörter, wie "con" und "man", dürfen nich verwendet werden.
+4. MAC: Media Access Control - Hardware-Adresse des Netzwerkadapters. Trage 12 Hexadezimalzahlen mit einem Doppelpunkt als Trennzeichen nach zwei Ziffern ein.
+5. IP: Gebe eine IP-Adresse für das Gerät an, das diesem automatisch zugewiesen werden soll. Z.B. Raum 202 im Gebäude G erhält den Bereich 10.0.202.x/16 und PC01 erhält die UP 10.0.202.1
+6. Sophomorix-Rolle: Hier gibst Du an, welche Art von Gerät Du einbindest. Für PCs im Fachraum gibst Du z.B. Schüler-PC im Klassenzimmer an.
+7. PXE: Lege über das Drop-down Menü fest, ob der PC mit Linbo-PXE synchronisiert werden soll oder nicht.
+
+.. hint::
+
+   Die Bedeutung der Sophomorix-Rolle wird auf `Github <https://github.com/linuxmuster/sophomorix4/wiki/objectClasses>`_ beschrieben.
+
+Die o.g. Zeile könnte ausgefüllt wie folgt aussehen:
+
+.. figure:: media/add-devices/04-device-management-add-new-device-settings.png
+   :align: center
+   :alt: Device Management: Add New Device Settings
+
+Die Schaltfläche ``SPEICHERN`` überprüft die Eingabe, ``SPEICHERN & IMPORTIEREN`` werden die neuen Geräte importiert. Mit dem Button ``Im Editor öffnen`` wird die Datei devices.csv im Editor geöffnet und kann bearbeitet werden.
+
+.. figure:: media/add-devices/05-device-management-buttons.png
+   :align: center
+   :alt: Device Management: Add New Devices - Buttons
+
+Im folgenden erscheinen einige Log-Meldungen und - wenn der Import erfolgreich war - "Import abgeschlossen"
+
+.. figure:: media/add-devices/06-device-management-add-new-devices-import-finished.png
+   :align: center
+   :alt: Device Management: Import finished
+
+Um weitere Geräte hinzuzufügen, wiederholst Du den beschriebenen Vorgang in der Schulkonsole entsprechend.
+
+
+Editieren der Datei devices.csv
+-------------------------------
+
+Wenn Du sehr viele Geräte hinzufügen möchtest, deren MAC-Adressen Du bereits kennst, dann ist die o.g. Option ``Im editor öffnen`` eine Möglichkeit, die Datei devices.csv direkt zu editieren.
+
+.. figure:: media/add-devices/07-device-management-edit-file.png
+   :align: center
+   :alt: Device Management: Edit file
+
+Die Datei kann hier auch zur lokalen Bearbeitung heruntergeladen und wieder hochgeladen werden.
+
+
+Aufnahme über linbo
+-------------------
+
+Wurde z.B. ein neuer Schulungsraum mit 20 PCs ausgestattet, so sind diese nun einzubinden und mit einem neuen Image zu bespielen.
+
+Dazu hat sich folgendes Vorgehen bewährt:
+
+1. Der Clientrechner muss mit dem Schulnetzwerk verbunden sein und den Server erreichen können.
+2. Um LINBO zu starten, den PC über das Netzwerk booten (PXE). Dazu entweder im BIOS-Setup in der Bootreihenfolge PXE-Boot als erstes Bootmedium einstellen oder über das Bootmenü PXE-Boot auswählen. Dies gelingt je nach Rechner meistens über die Tasten F2, F10, F12. Als virtueller Rechner auf einem Hypervisor unter ``VMxyz --> Options --> Bootorder`` ist hier die Netzwerkkarte als erstes Boot-Medium zu wählen.
+3. In der Schulkonsole unter ``Geräteverwaltung --> LINBO 4`` auswählen.
+
+.. figure:: media/add-devices/08-device-management-linbo4-menue.png
+   :align: center
+   :alt: Device Management: Linbo 4 Menue
+
+4. Es erscheint rechts eine Liste mit den bereits eingerichteten Gruppen (Linbo-Hardwareklassen). Zu Beginn ist diese noch leer.
+
+.. figure:: media/add-devices/09-device-management-linbo4-groups.png
+   :align: center
+   :alt: Device Management: Linbo 4 Groups
+
+5. Klicke nun unten auf den Button ``+Erstellen``. Es erscheinen nun die Einträge des Drop-down Menüs. Wähle nun eine gewünschte Konfigurationsvorlage für die neu einzubindenden Geräte aus. Willst Du z.B. die neuen Geräte mit UEFI-Boot und Ubutnu 20.4 LTS betreiben, dann wähle den Eintrag ``start.conf.ubuntu20-efi``.
+
+.. figure:: media/add-devices/10-device-management-linbo4-group-config.png
+   :align: center
+   :alt: Device Management: Linbo 4 Group Config File
+
+6. Gebe einen Namen für die neue Gruppe an, z.B. ubu20efi
+
+.. figure:: media/add-devices/11-device-management-linbo4-group-name.png
+   :align: center
+   :alt: Device Management: Linbo 4 Group Name
+
+7. Hast Du den Namen bestätigt wird der Import gestartet, nach Abschluss ist die neue Gruppe nun verfügbar.
+
+.. figure:: media/add-devices/12-device-management-linbo4-group-add-finsihed.png
+   :align: center
+   :alt: Device Management: Linbo 4 Groups Import finished
+
+8. Nach Abschluss siehst Du die neue Gruppe in der Übersicht und kannst mit dem Stift-Symbol die Einträge anpassen.
+
+.. figure:: media/add-devices/13-device-management-linbo4-group-new-overview.png
+   :align: center
+   :alt: Device Management: Linbo 4 Groups: Overview
+
+9. Hast Du für die neue Gruppe den Stift geklickt, siehst Du die Konfigurationseinstellungen für die Hardwareklasse. Klicke auf die Reiterkarte ``Partitionen`` und Du siehst die Einstellungen für die Partitionsgrössen, die für Deine neu einzubindenden PCs ggf. anzupassen sind.
+
+.. figure:: media/add-devices/14-device-management-linbo4-group-partitions.png
+   :align: center
+   :alt: Device Management: Linbo 4 Groups: Partitions
+
+10. Hast Du die Partitionen angepasst und ``Speichern`` geklickt, wird erneut ein Import ausgeführt.
+11. Hast Du alle einzubindenden PCs im BIOS auf PXE - Boot und für o.g. Beispiel auf UEFI eingestellt, dann starte diese, so dass Linbo4 gebootet wird.
+12. Es sollte bei einem erfolgreichen Boot-vorgang via PXE mit Linbo folgender Startbildschirm zu sehen sein:
+
+13. Folgende Ansicht sollte erscheinen.
+
+.. figure:: media/add-devices/15-device-management-linbo4-bootscreen.png
+   :align: center
+   :alt: Device Management: Linbo 4 - bootscreen
+
+14. Wähle in dem Linbo Startbildschirm nun rechts das werkzeug-Symvol aus. Es erscheint die Kennwortabfrage. Gebe das Kennwort des Linbo Root-benutzers an, wie es beim Setup erstellt wurde. Achtung: Deine Eingabe ist nicht zu sehen, es werden auch keine Sternchen für die eingegebenen Ziffern dargestellt.
+
+.. figure:: media/add-devices/16-device-management-linbo4-password.png
+   :align: center
+   :alt: Device Management: Linbo 4 - password
+
+15. Es werden nun zwei weitere Menü-Symbole dargestellt:
+
+.. figure:: media/add-devices/17-device-management-linbo4-new-menue-symbols.png
+   :align: center
+   :alt: Device Management: Linbo 4 - new menue symbols
+
+16. Wähle den Eintrag ``Register`` aus.
+17. Es öffnet sich ein Fenster, um den Client zu registrieren. Fülle alle Felder aus. Achte darauf, dass Du als Host group die zuvor neu angelegte einträgst.
+
+.. figure:: media/add-devices/18-device-management-linbo4-register-client.png
+   :align: center
+   :alt: Device Management: Linbo 4 - register client
+
+18. Klicke dann auf den Eintrag ``register``. Nach Abschluss der Neuaufnahme siehst Du nachstehende Meldung:
+
+.. figure:: media/add-devices/19-device-management-linbo4-registering-client-finished.png
+   :align: center
+   :alt: Device Management: Linbo 4 - registering client finished
+
+19. führe o.g. Vorgang für alle neu aufzunehmenden Clients durch.
+20. Wenn alle PCs lokal registriert wurden, melde Dich wieder als ``global-admin`` an der **Schulkonsole** an. Wähle im Menü ``Geräteverwwaltung --> Geräte`` aus. Du siehst nun neben den schon vorhandenen Geräten ebenfalls die neu aufgenommen Geräte (in der Abb. sind dies die PCs für den Raum g202):
+
+.. figure:: media/add-devices/20-device-management-linbo4-registered-clients.png
+   :align: center
+   :alt: Device Management: Linbo 4 - registered clients
+
+21. Klicke nun auf ``Speichern & importieren``. Wurde der Vorgang abgeschlossen, siehst Du dies im Importfenster.
+
+.. figure:: media/add-devices/21-device-management-linbo4-registered-clients-imported.png
+   :align: center
+   :alt: Device Management: Linbo 4 - registered clients imported
+
+22. Es sind nun die gewünschten Geräte aufgenommen und Du kannst mit der erstellung der Muster-Clients fortfahren, so dass alle PCs einer Linbo Hardwareklasse ein identisches Image erhalten und mit lmn71 arbeiten können. Gehe zu :ref:`add-computer-label`
+
+

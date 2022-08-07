@@ -9,9 +9,9 @@
 Als Lehrer hat man in der Schulkonsole mehrere pädagogische und
 verwaltungstechnische Funktionen zur Verfügung.
 
-Melde dich an der Schulkonsole an, d.h. besuche mit dem Browser die
-Webseite ``https://server.linuxmuster.lan`` oder die an deiner Schule
-äquivalent vom Administrator eingerichtete Seite und melde dich mit
+Melde Dich an der Schulkonsole an, d.h. besuche mit dem Browser die
+Webseite ``https://server.linuxmuster.lan`` oder die an Deiner Schule
+äquivalent vom Administrator eingerichtete Seite und melde Dich mit
 den Schulkontodaten an.
 
 .. _student-management-overview-label:
@@ -68,12 +68,12 @@ Schülerinnen und Schüler der Klasse und kann so ausgeteilt werden.
 In Klassen einschreiben und Projekte anlegen
 ============================================
 
-Die folgende Anleitung brauchst du dann, wenn du mit einer gesamten
+Die folgende Anleitung brauchst Du dann, wenn Du mit einer gesamten
 Schulklasse oder einem Teilnehmer einer Teilgruppe von Schülern
 Dateien über einen gemeinsamen Ordner bearbeiten willst oder diese
 Gruppierung in einer externen Anwendung gemeinsam ansprechen willst
 (z.B. Nextcloudgruppe oder Moodlegruppe). Für alle
-Unterrichtsfunktionen benötigst du dagegen einen Kurs, siehe nächsten
+Unterrichtsfunktionen benötigst Du dagegen einen Kurs, siehe nächsten
 Abschnitt.
 
 In Klassen einschreiben
@@ -111,20 +111,20 @@ erfolgreich erstellt wurde und es erscheint in der Liste der Projekte.
 Unterrichtskurs einrichten
 ==========================
 
-Die folgende Anleitung brauchst du für alle Unterrichtsfunktionen
-(außer dem Tauschordner) und dafür musst du nicht in der Klasse
+Die folgende Anleitung brauchst Du für alle Unterrichtsfunktionen
+(außer dem Tauschordner) und dafür musst Du nicht in der Klasse
 eingeschrieben sein.
 
 
 Unter ``KLASSENZIMMER/Unterricht`` klicke auf ``Neuer Kurs`` und gib
 dem Kurs einen Namen. Im Kurs können sowohl Schülerinnen und Schüler
 einer Klasse als auch verschiedener Klassen zusammengestellt
-werden. Der Kurs ist auch nur für dich sichtbar und verwendbar.
+werden. Der Kurs ist auch nur für Dich sichtbar und verwendbar.
 
 .. figure:: media/create-session-naming.png
 
 Der Kurs taucht nun in der Auflistung mittig auf. Klicke ihn an, er
-ist zunächst leer. In der ersten Zeile kannst du nun bei `Schüler
+ist zunächst leer. In der ersten Zeile kannst Du nun bei `Schüler
 hinzufügen` einzelne Schülernamen eingeben oder bei `Klasse
 hinzufügen` Klassennamen eingeben.
 
@@ -169,7 +169,7 @@ angelegten Kurs.
 
 .. figure:: media/webui-teacher-sessions-overview.png
 
-Die Liste mit Schülern des Kurses wird angezeigt. Klickst du auf das
+Die Liste mit Schülern des Kurses wird angezeigt. Klickst Du auf das
 Zahnradsymbol in der Zeile des Schülers im Kurs, erscheinen die
 Möglichkeiten
 

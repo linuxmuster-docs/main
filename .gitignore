@@ -1,3 +1,6 @@
+source/installation/install-from-scratch/media/lmn71-additional/*
 build/*
+log.txt
 .project
+*.xcf
 *~

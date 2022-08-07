@@ -12,7 +12,7 @@ Für das folgende Beispiel nehmen wir an, der Drucker stehe in Raum
 "00:11:22:33:44:55" und bekomme entsprechend einem IP-Adressschema die
 IP-Adresse 10.2.200.101.
 
-Melde dich als ``global-admin`` in der `Schulkonsole (https://10.0.0.1) <https://10.0.0.1>`_ an.
+Melde Dich als ``global-admin`` in der `Schulkonsole (https://10.0.0.1) <https://10.0.0.1>`_ an.
 Wähle dort links im Menü ``Geräteverwaltung`` das Untermenü ``Geräte`` aus.
 
 .. image:: media/01-printer-devices.png

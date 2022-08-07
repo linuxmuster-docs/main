@@ -1,6 +1,8 @@
 Leoclient 2 - Windows im Linuxclient
 ====================================
 
+.. todo:: Dieses Kapitel sollte nochmals mit Blick auf den neunen linuxmuster-client überarbeitet werden.
+
 Leoclient2 bietet die Möglichkeit auf einem Linuxclient verschiedene virtuelle Maschinen, beispielsweise mit Windows-Betriebssystem, einzurichten und zu starten.
 
 Inhalt:

@@ -28,7 +28,7 @@ Wähle links im Menü unter dem Eintrag ``System`` --> ``Zugang`` --> ``Server``
    :alt: Menue System - Access - Server
    :align: center
 
-Um die LDAP-Anbindung auf der OPNsense® für Schüler und Lehrer einzurichten, durchläufst du folgende Schritte:
+Um die LDAP-Anbindung auf der OPNsense® für Schüler und Lehrer einzurichten, durchläufst Du folgende Schritte:
 
 Server hinzufügen
 -----------------
@@ -210,7 +210,7 @@ Nachstehende Abb. verdeutlicht diese Einstellungen:
 30.  IPv6 deaktivieren:
 31.  Für den Rest: Standardwerte!
 
-Hast du den VPN-Serbver erfolgreich hinzugefügt, so wird dieser in der Übersicht angezeigt. Siehst du vor der Angabe des Protokolls ein ``grünes`` Dreieck, dann läuft der VPN-Server.
+Hast Du den VPN-Serbver erfolgreich hinzugefügt, so wird dieser in der Übersicht angezeigt. Siehst Du vor der Angabe des Protokolls ein ``grünes`` Dreieck, dann läuft der VPN-Server.
 
 .. image:: media/14-vpn-server-added.png
    :alt: VPN Server hinzugefügt
@@ -244,7 +244,7 @@ Hier findet sich jetzt nach der Anlage des VPN-Servers eine neuer Menüeintrag f
 
 Es sind folgende Eingaben vorzunehmenn:
 
-1.  Quelle: 172.30.1.0/24 -> das VPN-Netz, das du für den OpenVPN-Server zuvor eingerichtet hast.
+1.  Quelle: 172.30.1.0/24 -> das VPN-Netz, das Du für den OpenVPN-Server zuvor eingerichtet hast.
 2.  Für den Rest: <Standardwerte>
 
 Änderungen übernehmen (rechts im blauen Kasten).
@@ -261,7 +261,7 @@ In der OPNsense® ist dann unter ``Firewall`` --> ``NAT`` --> ``Portweiterleitun
    :alt: NAT: Port-Forwarding
    :align: center
 
-Hier legst du nun eine Regel an, die UDP-Pakete, die an diese Firewall auf dem gewählten VPN-Port (hier in dem Beispiel Port 1194) ankommen, an die externe Schnittstelle (IP aus einem privaten Netz) der Firewall und den hier konfigurierten Port weitergegeben werden.
+Hier legst Du nun eine Regel an, die UDP-Pakete, die an diese Firewall auf dem gewählten VPN-Port (hier in dem Beispiel Port 1194) ankommen, an die externe Schnittstelle (IP aus einem privaten Netz) der Firewall und den hier konfigurierten Port weitergegeben werden.
 
 Nachstehende Abb. verdeutlicht diese Regel:
 
@@ -277,9 +277,9 @@ Konfiguration exportieren
 Für die Verbidnung mit den Clients muss nun ein Export des Profils für den Benutzer erfolgen.
 
 Dazu gehst Du zu ``VPN`` --> ``OpenVPN`` --> ``Clientexport``.
-Dort gibst du Folgerndes an:
+Dort gibst Du Folgerndes an:
 
-1.  Ferner Zugriffsserver: ``Linuxmuster VPN UDP:25008`` --> Server aus der Liste auswählen, Port wie von dir vorher angegeben.
+1.  Ferner Zugriffsserver: ``Linuxmuster VPN UDP:25008`` --> Server aus der Liste auswählen, Port wie von Dir vorher angegeben.
 2.  Export type: Nur Datei
 3.  Hostname: URL unter dem die Firewall erreichbar ist, z.B: vpn.meineschule.de
 4.  Port: 25008 (ggf. anpassen an eigene Portwahl)
@@ -289,18 +289,18 @@ Dort gibst du Folgerndes an:
    :alt: OpenVPN Client: Export configuration
    :align: center
 
-Danach drückst du unter ``Accounts / certificates`` bei Linuxmuster VPN Server ganz rechts auf das Downloadsymbol.
+Danach drückst Du unter ``Accounts / certificates`` bei Linuxmuster VPN Server ganz rechts auf das Downloadsymbol.
 
 .. image:: media/19-vpn-client-download-configuration.png
    :alt: OpenVPN Client: Download configuration
    :align: center
 
-Diese Konfigurationseinstellungen kannst du nun allen Nutzern (z.B. Lehrern und Schülern), die Zugriff auf der Schulnetz via VPN haben sollen, im Intranet oder via Messenger zur Verfügung stellen.
+Diese Konfigurationseinstellungen kannst Du nun allen Nutzern (z.B. Lehrern und Schülern), die Zugriff auf der Schulnetz via VPN haben sollen, im Intranet oder via Messenger zur Verfügung stellen.
 
 mit VPN verbinden
 =================
 
-Bevor du nun die Verbindung mit einem Client zum VPN-Server testest, überprüfe zuerst, ob der Dienst läuft.
+Bevor Du nun die Verbindung mit einem Client zum VPN-Server testest, überprüfe zuerst, ob der Dienst läuft.
 In der GUI der OPNsense® klickst Du links auf den Menüeintrag ``Lobby`` und siehst rechts alle Dienste mit ihrem Status aufgelistet. Hier muss für OpenVPN Server ein ``grünes`` Dreieck zu sehen sein. Dies weist daraufhin, dass der Dienst läuft.
 
 .. image:: media/20-vpn-server-check-service.png
@@ -310,10 +310,10 @@ In der GUI der OPNsense® klickst Du links auf den Menüeintrag ``Lobby`` und si
 OpenVPN Client
 --------------
 
-Installiere dir auf deinem Gerät (PC, Tablet, Smartphone) den OpenVPN Client. Die heruntergeladene Datei muss nun auf das Endgerät heruntergeladen und dort in die App OpenVPN Connect (für alle Plattformen) importiert werden. Nach dem Import kann durch Eingabe von Benutzername und Passwort eine VPN-Verbindung hergestellt werden.
+Installiere Dir auf Deinem Gerät (PC, Tablet, Smartphone) den OpenVPN Client. Die heruntergeladene Datei muss nun auf das Endgerät heruntergeladen und dort in die App OpenVPN Connect (für alle Plattformen) importiert werden. Nach dem Import kann durch Eingabe von Benutzername und Passwort eine VPN-Verbindung hergestellt werden.
 
 
-Auf der OPNsense® kannst du den Verbindungsstatus der VPN-Verbindungen unter ``VPN`` --> ``OpenVPN`` --> ``Verbindungsstatus`` überprüfen.
+Auf der OPNsense® kannst Du den Verbindungsstatus der VPN-Verbindungen unter ``VPN`` --> ``OpenVPN`` --> ``Verbindungsstatus`` überprüfen.
 
 .. image:: media/21-vpn-check-connection-status-menue-item.png
    :alt: VPN: Check connection status - menue item
