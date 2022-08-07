@@ -16,8 +16,7 @@ build:
 python:
   install:
    - requirements: requirements.txt
-   - method: pip
-     path: .  
+    
   
 sphinx:
    configuration: conf.py      
