@@ -1,4 +1,4 @@
-.. include:: /guided-inst.subst
+.. include:: ../../guided-inst.subst
 
 .. _support-linuxmuster-label:
 
@@ -35,4 +35,3 @@ Zudem haben wir Dokumentationsleitlinien erstellt. Diese sollten von allen Mitar
   edit-on-github
   new
   guidelines
-
