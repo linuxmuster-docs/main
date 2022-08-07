@@ -9,9 +9,9 @@ version: 2
 # set the version of Python and other tools
 
 build:
-  os: ubuntu-20.04
+  os: "ubuntu-20.04"
   tools:
-    python: "3.8"
+    python: "3.9"
 
 python:
   install:
@@ -19,7 +19,7 @@ python:
     
   
 sphinx:
-   configuration: conf.py      
+   configuration: source/conf.py      
    fail_on_warning: true
   
 formats:
