@@ -1,4 +1,4 @@
-.. include:: /guided-inst.subst
+.. include:: ../../guided-inst.subst
 
 .. _basis_opnsense:
 
@@ -463,7 +463,6 @@ Klappt das Update, startet die OPNsense |reg| neu.
    :align: center
    :alt: OPNsense: GUI - Assign interfaces
 
-.. todo:: Benennung der Bilder aktualisieren
 
 Konfiguration der OPNsense |reg|
 ================================

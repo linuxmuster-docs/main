@@ -1,4 +1,4 @@
-.. include:: /guided-inst.subst
+.. include:: ../../guided-inst.subst
 
 .. _basis_server-label:
 
@@ -268,7 +268,7 @@ Einrichtung ohne LVM auf HDD nach Deinen Vorgaben (optional)
 
 Ohne LVM sind die Mount Points ``/var``, ``/srv/linbo``, ``/srv/samba/global`` und ``/srv/samba/schools/default-school`` auf die HDD(s) / einzelne Partionen zu legen.
 
-.. todo:: Beschreibung wäre hier zu erstellen. Original Text "Die Zuordnung der Mount Points zum LVM wird später detailliert beschrieben" und der beschreibene Text in den Zeilen 203 bis 291 könnte dann entfallen, da die Erklärung hier stehen würde.
+.. hint:: Beschreibung wäre hier zu erstellen. Original Text "Die Zuordnung der Mount Points zum LVM wird später detailliert beschrieben" und der beschreibene Text in den Zeilen 203 bis 291 könnte dann entfallen, da die Erklärung hier stehen würde.
 
 Speicherplatzkonfiguration übernehmen
 -------------------------------------

@@ -1,4 +1,4 @@
-.. include:: /guided-inst.subst
+.. include:: ../../guided-inst.subst
 
 .. _install-from-scratch-label:
 
