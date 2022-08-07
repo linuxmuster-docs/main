@@ -1,4 +1,4 @@
-.. include:: /guided-inst.subst
+.. include:: ../guided-inst.subst
 
 .. _setup-console-label:
 
@@ -137,8 +137,7 @@ Hier setzt Du ein neues Administrations-Kennwort. Dieses wird zugleich das neue 
    :align: center
    :alt: Terminal Setup: Parameter 4
 
-.. todo:: Passwortbeschränkungen einfügen, siehe Setup-WebUi
-          Laut WebUI wären das: Valid characters are: a-z A-Z 0-9 ?!§+-@#$%&*( )[ ]{ }
+.. hint:: Passwortbeschränkungen: Valid characters are: a-z A-Z 0-9 ?!§+-@#$%&*( )[ ]{ }
 
 .. hint::
 

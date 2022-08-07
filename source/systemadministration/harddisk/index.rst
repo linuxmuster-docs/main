@@ -1,4 +1,4 @@
-.. include:: /guided-inst.subst
+.. include:: ../../guided-inst.subst
 
 .. _adjusting_hard_drive_size-label:
 

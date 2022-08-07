@@ -1,4 +1,4 @@
-.. include:: /guided-inst.subst
+.. include:: ../guided-inst.subst
 
 .. _migration_6_7:
 
@@ -39,7 +39,6 @@ Es muss als Quellsystem linuxmuster.net in der Version 6.2 installiert sein.
 
 Es ist möglich, dass auch ab Version 6.1 und 6.0 eine Migration funktioniert. Dies wurde nicht offiziell getestet.
 
-.. todo:: Test mit Version 6.0 läuft. Zwischenergebnis: Positiv
 
 Neues v7.1 System
 -----------------
@@ -53,8 +52,6 @@ Es wird davon ausgegangen, dass |...|
 In dieser Beschreibung wird als Schulinstanz, wie beim Erstsetup vorgegeben, ``default-school`` beibehalten.
 
 .. Das Standard-Setup der v7.1 geht zunächst davon aus, dass keinerlei Netzbereichs-/Adressanpassungen und Netzsegmentierungen (Subnetting) durchgeführt wurden.
-
-.. todo:: Test und Klärung ob die Anpassung der Netzwerk-Einstellungen nicht mittel lmn7-prepare vorgenommen werden können.
 
 .. attention::
   
@@ -463,8 +460,6 @@ In dieser Beschreibung wird als Schulinstanz, wie beim Erstsetup vorgegeben, ``d
       Jetzt solltest Du noch die Datei ``school.conf`` bearbeiten, denn das
       wird nicht automatisch gemacht.
    
-   .. todo:: school.conf ist schon klar, aber um welche Inhalte soll es gehen bei der Bearbeitung
-   
    8. Updates diverser Einstellungen
    .. ---------------------------------
    
@@ -550,8 +545,7 @@ In dieser Beschreibung wird als Schulinstanz, wie beim Erstsetup vorgegeben, ``d
       See error message above. 
    
       ... sophomorix-vampire is terminating
-   
-   .. todo:: Kann der Punkt raus?
+
    
    11. Synchronisiere Benutzerdaten
    .. --------------------------------

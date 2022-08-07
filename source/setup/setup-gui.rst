@@ -26,7 +26,7 @@ Netzwerkmaske ``255.255.0.0``, dem Gateway ``10.0.0.254`` und dem DNS-Eintrag ``
    
    Sollte das nicht möglich sein, überprüfe das hier geschriebene: https://ask.linuxmuster.net/t/lmn-7-1-linuxmuster-prepare-webui-laeuft-nicht/8655/15
 
-.. todo:: Workaround entfernen nach Überprüfung.
+.. hint:: Workaround entfernen nach Überprüfung.
 
 Es erscheint der Hinweis, dass Du das Webinterface nicht als Benutzer root benutzen sollst, es sei denn, Du verwendest dieses das erste Mal.
 
@@ -173,6 +173,5 @@ Der Inhalt des Verzeichnisses sollte sich wie folgt darstellen:
    :align: center
    :alt: directory listing log files
 
-.. todo: :ref:Ziel muss gesetzt werden, nächster Satz 
 
-Setze die Ersteinrichtung fort, indem Du :ref:`add-user-accounts-label` und ref:`add-devices-label` aufrufst.
+Setze die Ersteinrichtung fort, indem Du :ref:`add-user-accounts-label` und :ref:`hardware-registration-label` aufrufst.
