@@ -14,23 +14,23 @@ Um Collabora auf dem Docker-Host zu installieren, sind die identischen Schritte 
 #. Erstellen einer Site für die Collabora in nginx.
 #. Erstellen und Starten der Collabora App.
 
-.. hint:: Im Folgenden musst du natürlich ``office.meine-schule.de`` durch deine URL ersetzen.
+.. hint:: Im Folgenden musst Du natürlich ``office.meine-schule.de`` durch Deine URL ersetzen.
 
 Erstellung des Zertifikats
 ==========================
 
-Zuerst musst du dir einen Dienstenamen ausdenken, den DNS Eintrag dazu setzen und SSL-Zertifikat besorgen. Also z.B. office.meine-schule.de. 
+Zuerst musst Du Dir einen Dienstenamen ausdenken, den DNS Eintrag dazu setzen und SSL-Zertifikat besorgen. Also z.B. office.meine-schule.de. 
 
-Dazu legst du einen DNS Eintrag für deine Dockerapp, z.B. office.meine-schule.de, der auf die IP des Docker-Hosts zeigt an. Das darf auch ein CNAME sein.
+Dazu legst Du einen DNS Eintrag für Deine Dockerapp, z.B. office.meine-schule.de, der auf die IP des Docker-Hosts zeigt an. Das darf auch ein CNAME sein.
 
 Trage diesen Host in die Datei ``/etc/dehydrated/domains.txt`` ein.
 
-Führe den Befehl ``dehydrated -c`` aus. Jetzt hast du die Zertifikate im Verzeichnis ``/var/lib/dehydrated/certs/`` zur Verfügung, der Docker-Host aktualisiert diese per Cronjob.
+Führe den Befehl ``dehydrated -c`` aus. Jetzt hast Du die Zertifikate im Verzeichnis ``/var/lib/dehydrated/certs/`` zur Verfügung, der Docker-Host aktualisiert diese per Cronjob.
 
 Erstellen einer Site für Collabora in nginx
 ===========================================
 
-Melde dich als root auf deinem Docker-Host an.
+Melde Dich als root auf Deinem Docker-Host an.
 
 Erstelle mit ``mkdir -p /srv/docker/collabora`` das Verzeichnis, in das alle Collabora-Dateien abgelegt werden.
 
@@ -103,13 +103,13 @@ Erzeuge die Datei ``office.nginx.conf`` im Verzeichnis ``srv/docker/collabora``.
   } 
  }
 
-Diese conf-Datei geht davon aus, dass dein Collabora auf localhost:9980 erreichbar sein wird. Den Port 9980 kannst du wieder frei wählen. Der Port muss mit dem Port übereinstimmen, der in der docker-compose.yml später für collabora angegeben wird. 
+Diese conf-Datei geht davon aus, dass Dein Collabora auf localhost:9980 erreichbar sein wird. Den Port 9980 kannst Du wieder frei wählen. Der Port muss mit dem Port übereinstimmen, der in der docker-compose.yml später für collabora angegeben wird. 
 
-Jetzt musst du noch im Verzeichnis ``/etc/nginx/sites-enabled`` einen Link auf deine ``office.nginx.conf`` anlegen und nginx neu starten.
+Jetzt musst Du noch im Verzeichnis ``/etc/nginx/sites-enabled`` einen Link auf Deine ``office.nginx.conf`` anlegen und nginx neu starten.
 
-Melde dich wieder als root am Docker-Host an und lege mit ``ln -s /srv/docker/collabora/office.nginx.conf /etc/nginx/sites-enabled/office.meine-schule.de`` den Link an.
+Melde Dich wieder als root am Docker-Host an und lege mit ``ln -s /srv/docker/collabora/office.nginx.conf /etc/nginx/sites-enabled/office.meine-schule.de`` den Link an.
 
-So, jetzt musst du nur noch mit ``systemctl restart nginx.service`` nginx neu starten.
+So, jetzt musst Du nur noch mit ``systemctl restart nginx.service`` nginx neu starten.
 
 Collabora mit docker-compose einrichten und starten
 ===================================================
@@ -118,7 +118,7 @@ Du legst jetzt noch eine Datei docker-compose.yml an.
 
 Alle Schritte sind jetzt im Verzeichnis ``/srv/docker/collabora`` duchzuführen.
 
-Melde dich wieder als root auf dem Docker-Host an und gehe mit ``cd /srv/docker/collabora`` in das Verzeichnis `/srv/docker/collabora`.
+Melde Dich wieder als root auf dem Docker-Host an und gehe mit ``cd /srv/docker/collabora`` in das Verzeichnis `/srv/docker/collabora`.
 
 Die Datei docker-compose.yml
 ============================
@@ -148,32 +148,32 @@ Die Datei docker-compose.yml
     
 Der Eintrag ``- domain=[a-z]*+.meine-schule.de`` bewirkt, dass alle Rechner in der Domäne meine-schule.de Zugriff auf den Collabora-Service haben.
 
-Möchtest du, dass nur nextcloud.meine-schule.de Zugriff auf den Collabora-Service hat, muss der Eintrag ``- domain=nextcloud.meine-schule.de`` lauten.
+Möchtest Du, dass nur nextcloud.meine-schule.de Zugriff auf den Collabora-Service hat, muss der Eintrag ``- domain=nextcloud.meine-schule.de`` lauten.
 
-Wenn du im Verzeichnis `/srv/docker/collabora` bist, startest du Collabora mit ``docker-compose up -d``. 
+Wenn Du im Verzeichnis `/srv/docker/collabora` bist, startest Du Collabora mit ``docker-compose up -d``. 
 
 Collabora updaten
 =================
 
-Fall du feststellst, dass die Collabora-Version, die du gerade benutzt, nicht mehr aktuell ist, meldest du dich wieder als root auf dem Docker-Host an und gehst mit ``cd /srv/docker/collabora`` in das Verzeichnis `/srv/docker/collabora`.
-Dann beendest du mit ``docker-compose down`` Collabora. Mit ``docker-compose pull`` holst du dir das aktuelle Image und mit ``docker-compose up -d`` startest du dein aktualisiertes Collabora wieder.
+Fall Du feststellst, dass die Collabora-Version, die Du gerade benutzt, nicht mehr aktuell ist, meldest Du Dich wieder als root auf dem Docker-Host an und gehst mit ``cd /srv/docker/collabora`` in das Verzeichnis `/srv/docker/collabora`.
+Dann beendest Du mit ``docker-compose down`` Collabora. Mit ``docker-compose pull`` holst Du Dir das aktuelle Image und mit ``docker-compose up -d`` startest Du Dein aktualisiertes Collabora wieder.
 
 
 Collabora in der Nextcloud nutzen
 =================================
 
-Als erstes musst du die App ``Collabora Online`` aktivieren. Gehe dazu auf ``A -> + Apps``. Auf der Seite ganz unten findest du die deaktivierten Apps. Aktiviere ``Collabora Online``.
+Als erstes musst Du die App ``Collabora Online`` aktivieren. Gehe dazu auf ``A -> + Apps``. Auf der Seite ganz unten findest Du die deaktivierten Apps. Aktiviere ``Collabora Online``.
 
-Navigiere links zu ``Verwaltung -> Einstellungen -> Collabora Online Development Edition`` und trage dort unter ``Verwende Deinen eigenen Server`` die URL deines Collabora-Services ein.
+Navigiere links zu ``Verwaltung -> Einstellungen -> Collabora Online Development Edition`` und trage dort unter ``Verwende Deinen eigenen Server`` die URL Deines Collabora-Services ein.
 
 .. image:: media/collabora-01.png   
    :align: center
 
 .. hint::
 
-   Achte darauf, dass du deine https://<deineurl> angibst, damit Collabora auch via https erreichbar ist.
+   Achte darauf, dass Du Deine https://<deineurl> angibst, damit Collabora auch via https erreichbar ist.
 
-Damit ist die Einrichtung abgeschlossen und du kannst Nextcloud für deine Schule weiter anpassen.
+Damit ist die Einrichtung abgeschlossen und Du kannst Nextcloud für Deine Schule weiter anpassen.
 
-Unter https://office.meine-schule.de/browser/dist/admin/admin.html erreichst du die Monitoring-Oberfläche von Collabora.
+Unter https://office.meine-schule.de/browser/dist/admin/admin.html erreichst Du die Monitoring-Oberfläche von Collabora.
  

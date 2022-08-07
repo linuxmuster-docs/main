@@ -21,7 +21,7 @@ Für die Installation brauchen wir einen ``Dockerhost ohne nginx und dehydrated`
 Unifi-Controller mit docker-compose einrichten und starten
 ==========================================================
 
-Melde dich auf dem Docker-Host an, werde mit ``sudo -i`` `root` und lege mit ``mkdir -p /srv/docker/unifi`` das Verzeichnis `/srv/docker/unifi` an. 
+Melde Dich auf dem Docker-Host an, werde mit ``sudo -i`` `root` und lege mit ``mkdir -p /srv/docker/unifi`` das Verzeichnis `/srv/docker/unifi` an. 
 
 Gehe mit ``cd /srv/docker/unifi`` in das neue Verzeichnis und lege die Datei docker-compose.yml an mit folgendem Inhalt an:
 
@@ -54,5 +54,5 @@ Starte den Unifi-Controller mit ``docker-compose up -d``.
 
 .. hint::
 
-   Zur Zeit wird die Unifi-Controller-Version 6.5.53 installiert. Möchtest du eine frühere Version installieren, musst du das in Zeile 4 angeben. Beispiel: ``image: ghcr.io/linuxserver/unifi-controller:LTS-version-5.6.42``. Welche Versionen es gibt, siehst du `hier <https://hub.docker.com/r/linuxserver/unifi-controller/tags?page=1>`_ .
+   Zur Zeit wird die Unifi-Controller-Version 6.5.53 installiert. Möchtest Du eine frühere Version installieren, musst Du das in Zeile 4 angeben. Beispiel: ``image: ghcr.io/linuxserver/unifi-controller:LTS-version-5.6.42``. Welche Versionen es gibt, siehst Du `hier <https://hub.docker.com/r/linuxserver/unifi-controller/tags?page=1>`_ .
 

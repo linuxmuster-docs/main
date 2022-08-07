@@ -19,30 +19,30 @@ Mehrmaliger Gebrauch:
 Schritt für Schritt
 -------------------
 
-Melde dich an und gehe auf `Einstellungen` -> `Gastkontrolle`.
+Melde Dich an und gehe auf `Einstellungen` -> `Gastkontrolle`.
 
 .. figure:: media/voucher02.png
    :alt: Gastrichtlinien
 
-Im Bereich Gastrichtlinien setzt du einen Haken bei `Gastzugang aktivieren`.
+Im Bereich Gastrichtlinien setzt Du einen Haken bei `Gastzugang aktivieren`.
 
-Bei `Authentifizierung` wählst du `Hotspot`. 
+Bei `Authentifizierung` wählst Du `Hotspot`. 
 
 Hat `HTTPS-Umleitung aktivieren` ein Häkchen, so werden Clients auch dann umgeleitet, wenn Sie auf HTTPS-Seiten surfen. Leider erhält man dann eine Zertifikatswarnung, da der Unifi-Kontroller mit einem selbstsignierten Zertifikat arbeitet. Allerdings leiten viele Betriebsysteme von selbst auf das Gastportal um.
 
 .. figure:: media/voucher03.png
    :alt: Portal-Anpassung
 
-In der Portal-Anpassung wählst du die Template-Engine AngularJS und fügst die Sprache Deutsch hinzu.
+In der Portal-Anpassung wählst Du die Template-Engine AngularJS und fügst die Sprache Deutsch hinzu.
 
-Den Rest der Einstellungen kannst du so lassen.
+Den Rest der Einstellungen kannst Du so lassen.
 
 .. figure:: media/voucher04.png
    :alt: Portal-Anpassung
 
-Unter `HOTSPOT` setz du ein Häkchen bei Gutscheine.
+Unter `HOTSPOT` setz Du ein Häkchen bei Gutscheine.
 
-In der `Zugriffskontrolle` musst du den Zugriff auf den Unifi-Kontroller noch vor der Anmeldung erlauben, da man sonst nicht auf die Anmeldeseite kommt.
+In der `Zugriffskontrolle` musst Du den Zugriff auf den Unifi-Kontroller noch vor der Anmeldung erlauben, da man sonst nicht auf die Anmeldeseite kommt.
 
 Gehe auf `ÄNDERUNGEN ANWENDEN`. Damit werden die Änderungen gespeichert und auf die APs ausgerollt.
 
@@ -54,7 +54,7 @@ Damit die Clients überhaupt auf den Unifi-Kontroller zugreifen können, muss ei
 Schritt für Schritt
 -------------------
 
-Öffne die OPNsense® `<https://firewall.linuxmuster.lan>`_ und melde dich an.
+Öffne die OPNsense® `<https://firewall.linuxmuster.lan>`_ und melde Dich an.
 
 Gehe auf `Firewall`->`Regeln`->`WLAN` und wähle `Hinzufügen`.
 
@@ -73,7 +73,7 @@ Mache die folgenden Eingaben:
 
   Beschreibung: `WLAN hat Zugriff auf Unifi-Controller Port 8880`
   
-Speichere deine Eingaben.
+Speichere Deine Eingaben.
 
 .. figure:: media/os02.png
    :alt: Regel kopieren
@@ -84,4 +84,4 @@ Kopiere die eben erstellte Regel und ändere:
 
   Beschreibung: `WLAN hat Zugriff auf Unifi-Controller Port 8443`   
 
-Steichere deine Eingabe und übernimm die Änderungen.
+Steichere Deine Eingabe und übernimm die Änderungen.

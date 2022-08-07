@@ -6,8 +6,7 @@ Linuxmuster.net aktuell halten
 Update des Ubuntu Servers von linuxmuster.net 
 ---------------------------------------------
 
-Um die linuxmuster.net 7.x zugrunde liegende Ubuntu Version (Ubuntu Server 18.04.x LTS 64bit) zu aktualisieren, beachte 
-bitte nachstehende Hinweise.
+Um die linuxmuster.net 7.x zugrunde liegende Ubuntu Version (Ubuntu Server 18.04.x LTS 64bit) zu aktualisieren, beachte bitte nachstehende Hinweise.
 
 .. attention::
 
@@ -75,19 +74,11 @@ Um die Server-Installation auf den aktuellen Paketstand zu bringen, gehe folgend
    .. image:: media/03-dist-upgrade.png
         :alt: Restart Services
         :align: center
-
-.. attention::
-
-   Manchmal gibt es Aktualisierungen, die händische Eingriffe erfordern,
-   die werden gesondert gesammelt und müssen :ref:`an dieser Stelle
-   <found-and-fixed-problems-label>` überprüft werden, ob sie für
-   das eigene System zutreffen.
-
 		
-Aktualisierung der Firewall OPNSense®
+Aktualisierung der Firewall OPNsense®
 -------------------------------------
 
-Um die Firewall OPNSense® zu aktualisieren, beachte bitte Hinweise.
+Um die Firewall OPNsense® zu aktualisieren, beachte bitte Hinweise.
 
 .. attention::
 
@@ -100,20 +91,20 @@ Verbinde Dich hierzu mit der Firewall über einen Browser. Nach der Anmeldung er
 um direkt Updates einzuspielen.
     
     .. image:: media/04-opnsense-update.png
-        :alt: OPNSense® aktualisieren
+        :alt: OPNsense® aktualisieren
         :align: center
 
 Eine etwas ausführlichere Übersicht ist unter ``System -> Firmware -> Aktualisierungen`` zu finden. 
 
     .. image:: media/05-opnsense-update.png
-        :alt: OPNSense® aktualisieren
+        :alt: OPNsense® aktualisieren
         :align: center
 
 Normale Minor-Releases können so direkt eingespielt werden. Sobald allerdings das Patch-Level erhöht wird, muss hier zuerst 
 das `Upgrade` entsperrt werden.
 
     .. image:: media/06-opnsense-update.png
-        :alt: OPNSense® aktualisieren
+        :alt: OPNsense® aktualisieren
         :align: center
 
 Es ist zu empfehlen solche Upgrades außerhalb der regulären Einsatzzeiten der Schule zu betreiben. Bei einem Upgrade startet 

@@ -24,38 +24,38 @@ LDAP-Anbindung
 Verbindungseinstellungen
 ------------------------
 
-Melde dich an Rocket.Chat mit der Administrator-Berechtigung an.
+Melde Dich an Rocket.Chat mit der Administrator-Berechtigung an.
 
 .. image:: media/01-login-rocketchat.png
    :alt: Login Rocket.Chat
    :align: center
 
-Klicke danach oben links auf das icon für dein Profil.
+Klicke danach oben links auf das icon für Dein Profil.
 
 .. image:: media/02-admin-profile.png
    :alt: Admin Profile
    :align: center
 
-Danach siehst du das Kontextmenü deines Profils.
+Danach siehst Du das Kontextmenü Deines Profils.
 
 .. image:: media/03-admin-profile-menue.png
    :alt: Admin Profile Konetxtmenü
    :align: center
 
-Klicke hier auf ``Administration``. Danach siehst du links im Fenster eine sehr lange Menüliste.
+Klicke hier auf ``Administration``. Danach siehst Du links im Fenster eine sehr lange Menüliste.
 Diese unterteilt sich in die Abschnitte ``Administration``
 
 .. image:: media/04-administration-sidebar.png
    :alt: Admininistrations-Menü
    :align: center
 
-etwas weiter darunter findest du links den Abschnitt ``Einstellungen``.
+etwas weiter darunter findest Du links den Abschnitt ``Einstellungen``.
 
 .. image:: media/05-settings-sidebar.png
    :alt: Administrations-Menü: Einstellungen
    :align: center
 
-Im Abschnitt ``Einstellungen`` wählst du den Eintrag ``LDAP`` aus.
+Im Abschnitt ``Einstellungen`` wählst Du den Eintrag ``LDAP`` aus.
 
 .. image:: media/06-ldap-settings-sidebar.png
    :alt: Menü: Settings - LDAP
@@ -87,7 +87,7 @@ Die nachstehende Abb. entspricht diesen Einstellungen:
 
 .. attention::
 
-   Verwendest du ein self-signed certificate, so must Du die Option ``Unberechtigte ablehnen`` auf NEIN setzen bzw.   deaktivieren, sonst kommt keine Verbindung zustande. 
+   Verwendest Du ein self-signed certificate, so must Du die Option ``Unberechtigte ablehnen`` auf NEIN setzen bzw.   deaktivieren, sonst kommt keine Verbindung zustande. 
 
 
 Authentication
@@ -110,7 +110,7 @@ Danach oben auf „Test Connection“ clicken. Wenn eine Fehlermeldung erscheint
 Sync / Import
 -------------
 
-Für die Synchronisation der Benutzer-Accounts nimmst du folgende Einstellungen vor:
+Für die Synchronisation der Benutzer-Accounts nimmst Du folgende Einstellungen vor:
 
 1.  Username Fiels: sAMAccountName
 2.  Unique Identifier Field: sAMAccountName
@@ -149,7 +149,7 @@ Dies muss im JSON-Format angegeben werden, bei Syntaxfehlern funktioniert der Sy
 
 .. attention::
 
-   Achte darauf, dass die DC-Eintragungen in dem Filter durch die deiner BaseDN ersetzt werden. In dem hier gezeigten Filter also an drei Stellen.
+   Achte darauf, dass die DC-Eintragungen in dem Filter durch die Deiner BaseDN ersetzt werden. In dem hier gezeigten Filter also an drei Stellen.
 
 10. LDAP Group BaseDN: DC=linuxmuster,DC=lan -> eigener BaseDN ist einzutragen
 11. User data Group Map:
@@ -191,7 +191,7 @@ Die ``User data group map`` muss im JSON-Format angegeben werden, bei Syntaxfehl
 
 .. hint::
 
-  Die Bezeichnungen für die Klassen müssen so eintragen werden, wie sie im LDAP stehen. Dies kann von der Anzeige in der Schulkonsole abweichen. Steht z.B. in der Schulkonsole „R 5b“, wird im LDAP daraus „r5b“. Dies lässt sich aber mit ldapsearch für Klassen (wie im Wiki beschrieben) herausfinden. Vor dem Import solltest du dir die Struktur in Rocketchat genau überlegen, da "Nacharebiten" mit vielen Einzelschritten verbunden sein kann.
+  Die Bezeichnungen für die Klassen müssen so eintragen werden, wie sie im LDAP stehen. Dies kann von der Anzeige in der Schulkonsole abweichen. Steht z.B. in der Schulkonsole „R 5b“, wird im LDAP daraus „r5b“. Dies lässt sich aber mit ldapsearch für Klassen (wie im Wiki beschrieben) herausfinden. Vor dem Import solltest Du Dir die Struktur in Rocketchat genau überlegen, da "Nacharebiten" mit vielen Einzelschritten verbunden sein kann.
 
 12. Auto Sync LDAP Groups to Channels: JA
 13. Channel Admin: rocket.cat
@@ -262,7 +262,7 @@ Damit sich nur Lehrer anmelden können:
 
 .. attention::
 
-   Achte darauf, dass du die DC-Einträge durch die deiner BaseDN ersetzt.
+   Achte darauf, dass Du die DC-Einträge durch die Deiner BaseDN ersetzt.
 
 3. Scope: sub
 4. Search Field: sAMAccountName
@@ -327,7 +327,7 @@ Fehlerbeispiel:
 
    Exception in callback of async function: SyntaxError: Unexpected token „ in JSON at position 1 at JSON.parse () at   getDataToSyncUserData (app/ldap/server/sync.js:116:25) at addLdapUser (app/ldap/server/sync.js:447:19) at app/ldap/server/sync.js:538:5 at Array.forEach () at app/ldap/server/sync.js:505:13 at runWithEnvironment (packages/meteor.js:1286:24)
 
-Rocket.Chat hat in einer neu aufgesetzten Instanz für die Benutzerkonten die Zwei-Faktor-Authentifizierung automatisch aktiviert. Wenn du auf deinem linuxmuster.net Server keine real genutzten E-Mail Adressen eingetragen hast, schalte die Zwei-Faktor-Authentifizierung vor den Test zur Überprüfung der Anmeldung von LDAP-Benutzern aus.
+Rocket.Chat hat in einer neu aufgesetzten Instanz für die Benutzerkonten die Zwei-Faktor-Authentifizierung automatisch aktiviert. Wenn Du auf Deinem linuxmuster.net Server keine real genutzten E-Mail Adressen eingetragen hast, schalte die Zwei-Faktor-Authentifizierung vor den Test zur Überprüfung der Anmeldung von LDAP-Benutzern aus.
 
 Hierzu wähle als Administrator in dem Bereich ``Einstellungen`` den Bereich ``Konten`` und rechts im Kontextmenü ``Zwei-Faktor-Authentifizierung`` und deaktiviere diese dort, wie nachstehend dargestellt.
 

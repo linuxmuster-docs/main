@@ -23,9 +23,9 @@ msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:4
 msgid ""
-"Wenn du die Dokumentation erweitern willst, z.B. mit einem eigenen HowTo, "
+"Wenn Du die Dokumentation erweitern willst, z.B. mit einem eigenen HowTo, "
 "ein fehlendes Kapitel ergänzen möchtest oder größere Änderungen machen und "
-"testen willst, benötigst du folgende Dinge:"
+"testen willst, benötigst Du folgende Dinge:"
 msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:6
@@ -69,7 +69,7 @@ msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:17
 msgid ""
-"Lade dir die neueste virtuelle Umgebung von hier herunter: http://www.lehrer"
+"Lade Dir die neueste virtuelle Umgebung von hier herunter: http://www.lehrer"
 ".uni-karlsruhe.de/~za3966/lmn/"
 msgstr ""
 
@@ -117,7 +117,7 @@ msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:43
 msgid ""
-"Jetzt kannst du bereits die bereits heruntergeladene Dokumentation aus dem "
+"Jetzt kannst Du bereits die bereits heruntergeladene Dokumentation aus dem "
 "offiziellen Repositorium bauen und betrachten. Öffne dazu ein Terminal, "
 "navigiere zum Ordner `linuxmuster-docs/main`, führe `make html` aus und "
 "führe `xdg-open build/html/index.html` aus, um das Ergebnis zu betrachten."
@@ -130,7 +130,7 @@ msgstr ""
 #: ../../source/appendix/contribute/docs/new.rst:63
 msgid ""
 "Spätestens jetzt sollte ein Konto bei GitHub erstellt werden: "
-"https://github.com/join. Verifziere deine E-Mail-Adresse. Natürlich kannst "
+"https://github.com/join. Verifziere Deine E-Mail-Adresse. Natürlich kannst "
 "du die Dokumentation zu GitHub durchlesen. Weiter geht es dann unter "
 "https://github.com/linuxmuster-docs/main"
 msgstr ""
@@ -138,7 +138,7 @@ msgstr ""
 #: ../../source/appendix/contribute/docs/new.rst:70
 msgid ""
 "Im folgenden wird das Konto \"lmn-docs-bot\" verwendet. Überall wo dieser "
-"auftaucht, ersetze ihn durch dein Kontonamen bei GitHub."
+"auftaucht, ersetze ihn durch Dein Kontonamen bei GitHub."
 msgstr ""
 
 #: ../../source/appendix/contribute/docs/new.rst:74

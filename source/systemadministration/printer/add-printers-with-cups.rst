@@ -5,7 +5,7 @@ Drucker auf dem Server hinzufügen
 
 Um die als Geräte bereits importieren Netzwerkdrucker einzurichten, sind diese auf dem linuxmuster.net Server mithilfe von CUPS einzurichten und bereitzustellen. Die gesamte Druckersteuerung erfolgt via Active Directory für alle Betriebssysteme, so dass diese zunächst auf dem Server bereitgestellt, den AD-Gruppen zugewiesen und ggf. Anpassungen pro Client Betriebssystem vorgenommen werden müssen.
 
-Starte auf einem Rechner einen Browser, um das sog. CUPS-Webinterface des Servers zur weiteren Einrichtung der Drucker aufzurufen. Hierzu füge nachstehende URL in der Adresszeile deines Browsers ein:
+Starte auf einem Rechner einen Browser, um das sog. CUPS-Webinterface des Servers zur weiteren Einrichtung der Drucker aufzurufen. Hierzu füge nachstehende URL in der Adresszeile Deines Browsers ein:
 
 .. code::
 
@@ -23,7 +23,7 @@ Es erscheint die Login-Aufforderung von CUPS auf dem Server:
    :alt: CUPS: Login
    :align: center
 
-Melde dich als ``root`` dort an.
+Melde Dich als ``root`` dort an.
 
 Drucker hinzufügen
 ------------------
@@ -46,7 +46,7 @@ Gebe als Verbindung die IP-Adresse und den Port des LPD-Druckers wie in der Abb.
    :alt: add printer 2/5
    :align: center
 
-Klicke auf ``weiter``. Wähle nun den geeigneten Druckertreiber für deinen Drucker aus:
+Klicke auf ``weiter``. Wähle nun den geeigneten Druckertreiber für Deinen Drucker aus:
 
 .. image:: media/10-printer-add-printer-02.png
    :alt: add printer 3/5
@@ -81,7 +81,7 @@ Danach findet sich der neue Drucker in der Druckerliste in CUPS.
    :alt: printer added
    :align: center
 
-Nun wird dein Netzwerkdrucker vom Server den Clients bereitgestellt.
+Nun wird Dein Netzwerkdrucker vom Server den Clients bereitgestellt.
 
 Angesprochen wird obiger Drucker über folgende URL:
 

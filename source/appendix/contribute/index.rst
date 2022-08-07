@@ -16,13 +16,13 @@ Es gibt verschiedene Möglichkeiten, wie Sie helfen können, linuxmuster.net zu 
     - Eigene Tipps und Tricks dokumentieren: https://linuxmuster.net/wiki
     - dem Verein beitreten
     
-Wir freuen uns, wenn du darüber hinaus an der Dokumentation mitarbeiten würdest. Dies können 
+Wir freuen uns, wenn Du darüber hinaus an der Dokumentation mitarbeiten würdest. Dies können 
 
     - einfache Änderungen auf Github sein, 
     - die Übersetzung von Abschnitten, 
     - die Erstellung neuer Dokumentationskapitel
 
-Für alle drei Möglichkeiten findest du links im Menü weitere Hinweise.
+Für alle drei Möglichkeiten findest Du links im Menü weitere Hinweise.
 Zudem haben wir Dokumentationsleitlinien erstellt. Diese sollten von allen Mitarbeitenden an der Dokumentation berücksichtigt werden.
 
 
@@ -31,8 +31,8 @@ Zudem haben wir Dokumentationsleitlinien erstellt. Diese sollten von allen Mitar
   :caption: Mitarbeit
   :hidden:
 
-  edit-on-github
   translate
+  edit-on-github
   new
   guidelines
 

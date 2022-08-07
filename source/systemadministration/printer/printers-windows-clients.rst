@@ -14,7 +14,7 @@ Die Treiber sind nun über die Microsoft Management Console (MMC) hinzuzufügen.
 Dem global-admin die nötigen Rechte einräumen
 ---------------------------------------------
 
-Bevor es losgehen kann, müssen wir dem `global-admin` noch die nötigen Rechte auf dem Server einräumen. Melde dich dazu als `root` auf dem Server an und führen Sie die folgenden Befehle aus:
+Bevor es losgehen kann, müssen wir dem `global-admin` noch die nötigen Rechte auf dem Server einräumen. Melde Dich dazu als `root` auf dem Server an und führen Sie die folgenden Befehle aus:
 
 .. code::
  
@@ -27,7 +27,7 @@ Dem Server vertrauen
 
 Seit Juli 2016 hat Windows10 ein neues Sicherheitsfeature. Es muss über GPOs festgelegt werden, dass die Windows-Clients unserem Server vertrauen. Dazu gehen wir wie folgt vor:
 
-Melde dich als global-admin am Windows-Client an und starte die Gruppenrichtlinienverwaltung (Wie du sie installierts kannst du :ref:`hier<install-RSAT-label>` nachlesen). 
+Melde Dich als global-admin am Windows-Client an und starte die Gruppenrichtlinienverwaltung (Wie Du sie installierts kannst Du :ref:`hier<install-RSAT-label>` nachlesen). 
 Navigiere zur Default Domain Policy von linuxmuster.lan. 
 
 .. image:: media/printers-windows-clients-01.png
@@ -91,7 +91,7 @@ Wie man sieht, sind die Drucker dem Systems bekannt. Du musst nur noch die Druck
    :align: center
 
 Mache einen Rechtsklick auf ``Treiber`` und wähle ``Treiber hinzufügen``.
-Gehe zu ``Weiter → Weiter → Datenträger… Durchsuchen → Ok`` und wähle den richtigen Druckertreiber. Es werden nur Microsoft zertifizierte Treiber akzeptiert. Falls du mit einem Treiber Probleme haben solltest, versuche es eventuell mit einem etwas älteren Treiber. Die werden sehr oft akzeptiert. 
+Gehe zu ``Weiter → Weiter → Datenträger… Durchsuchen → Ok`` und wähle den richtigen Druckertreiber. Es werden nur Microsoft zertifizierte Treiber akzeptiert. Falls Du mit einem Treiber Probleme haben solltest, versuche es eventuell mit einem etwas älteren Treiber. Die werden sehr oft akzeptiert. 
 
 Klicke abschließend auf ``Fertigstellen``.
 
@@ -106,8 +106,8 @@ Jetzt müssen wir nur noch den Druckern die Druckertreiber zuweisen.
    :alt: mmc.exe
    :align: center
 
-Mache einen Rechtsklick auf den Drucker, dem du einen Druckertreiber zuweisen möchtest und wähle ``Eigenschaften…``
-Falls du gefragt wirst, ob du einen Druckertreiber lokal installieren möchtest, antworte mit Nein.
+Mache einen Rechtsklick auf den Drucker, dem Du einen Druckertreiber zuweisen möchtest und wähle ``Eigenschaften…``
+Falls Du gefragt wirst, ob Du einen Druckertreiber lokal installieren möchtest, antworte mit Nein.
 
 Gehe zum Reiter ``Erweitert``, wähle bei Treiber den passenden Treiber für den Drucker und bestätige mit ``OK``.
 
@@ -115,7 +115,7 @@ Gehe zum Reiter ``Erweitert``, wähle bei Treiber den passenden Treiber für den
    :alt: Eigenschaften von
    :align: center
 
-Leider ändert Windows den Namen des Drucker in den Namen des Druckertreibers. Um wieder den richtigen Namen zu setzen, machst du in mmc.exe einen Rechtsklick auf den Drucker und wählst ``Eigenschaften…``
+Leider ändert Windows den Namen des Drucker in den Namen des Druckertreibers. Um wieder den richtigen Namen zu setzen, machst Du in mmc.exe einen Rechtsklick auf den Drucker und wählst ``Eigenschaften…``
 
 Ändere unter dem Reiter ``Allgemein`` den Namen des Druckers auf den Namen, den er in CUPS hat und bestätige mit ``OK``.
 
@@ -133,7 +133,7 @@ Die Windows-Clients erlauben normalen Benutzern nicht, einen Druckertreiber zu i
   HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Printers\PointAndPrint
   RestrictDriverInstallationToAdministrators=0 (DWORD)
 
-Erzeuge den Eintrag mit dem Registrierungs-Editor direkt in die Registry oder lege dir die Datei ``win10.printer.reg`` mit folgendem Inhalt an:
+Erzeuge den Eintrag mit dem Registrierungs-Editor direkt in die Registry oder lege Dir die Datei ``win10.printer.reg`` mit folgendem Inhalt an:
 
 .. code::
 
@@ -147,7 +147,7 @@ Und doppelklicke als `global-admin` ``win10.printer.reg``.
 
 Jetzt muss nur noch ein neues Image erzeugt und verteilt werden, damit die Firewall-Einstellungen und der Registry-Eintrag auf die Windows-Clients verteilt werden. 
 
-Wenn alles geklappt hat, installieren sich die Druckertreiber auf den Windows-Clients sobald sich ein Benutzer anmeldet. Wie du die Drucker-Raumzuweisung machst, kannst du :ref:`hier<add-ad-group-label>` nachlesen.
+Wenn alles geklappt hat, installieren sich die Druckertreiber auf den Windows-Clients sobald sich ein Benutzer anmeldet. Wie Du die Drucker-Raumzuweisung machst, kannst Du :ref:`hier<add-ad-group-label>` nachlesen.
 
 Hat ein Lehrer in der Schulkonsole bei einem Drucker einen Haken gesetzt, wird der Drucker bei der Anmeldung des Lehrers zusätzlich installiert. Das ist dann sinnvoll, wenn beispielsweise ein Lehrer oft in der Nähe des Physik-Drucker unterrichtet. Dann kann er auch von jedem Laptop aus auf dem Physik-Drucker ausdrucken.     
 
