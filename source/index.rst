@@ -38,8 +38,6 @@ Installation from Scratch
 
 Diese Dokumentation führt Dich durch die Vorbereitung der Virtualisierungslösungen Proxmox, um linuxmuster.net 7.1 installieren zu können. Hierzu gehört die spezifische Einrichtung des Netzwerks sowie die Vorbereitung der Virtuellen Maschinen.
 
-.. todo:: Verweis auf die Hypervisoren im Wiki einfügen.
-
 Weitere Hilfe
 -------------
 
@@ -66,7 +64,6 @@ Nach einem Klick eröffnen sich Dir dort noch weitere Möglichkeiten:
    :align: center
    :alt: Read The Docs Menu - opened
 
-.. todo:: Auskommentiere Zeilen im toctree entfernen, wenn defenitiv getestet das überflüssig.
 
 .. toctree::
   :maxdepth: 2

@@ -1,4 +1,4 @@
-.. include:: /guided-inst.subst
+.. include:: ../../guided-inst.subst
 
 .. _lmn_pre_install-label:
 
@@ -14,10 +14,6 @@ Nachdem Du die Firewall und den Server wie beschrieben installiert hast, müssen
 
 Das Skript lmn71-prepare
 ========================
-
-.. todo::
-
-   Check des Repro zum Release-Datums! Anm. des Autors
 
 Installation des Pakets ``linuxmuster-prepare``
 ------------------------------------------------
