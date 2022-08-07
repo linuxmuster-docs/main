@@ -174,4 +174,4 @@ Der Inhalt des Verzeichnisses sollte sich wie folgt darstellen:
    :alt: directory listing log files
 
 
-Setze die Ersteinrichtung fort, indem Du :ref:`add-user-accounts-label` und :ref:`add-devices-label` aufrufst.
+Setze die Ersteinrichtung fort, indem Du :ref:`add-user-accounts-label` und :ref:`hardware-registration-label` aufrufst.

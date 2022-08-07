@@ -1,10 +1,6 @@
 Einführung
 ==========
 
-.. hint:: **Diese Dokumentation befindet sich momentan noch im Aufbau!**
-  
-  Bitte beachte: Sie stellt nicht den aktuellen Entwicklungsstatus der neuen linuxmuster.net Version 7.1 dar. Basierend auf der Doku der vorhergehenden Version, die als Vorlage dient, sind noch nicht alle Bestandteile aktualisiert. Dies gilt für Teile die Benutzerverwaltung, die pädagogischen Funktionen sowie die Systemadministration. Alle anderen Kapitel wurden bereits überarbeitet. Bei Unterkapiteln finden sich ggf. Hinweise, falls diese noch anzupassen sind.
-
 Herzlich Willkommen zur Dokumentation von linuxmuster.net v7.1!
 
 Diese beschreibt alle wichtigen Schritte ...

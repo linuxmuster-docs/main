@@ -23,7 +23,7 @@ Du hast bereits:
    4.  PC/VM via PXE mit Linbo gestartet
    5.  Die Festplatte mit Linbo partitioniert und formatiert
 
-Falls Du das noch nicht getan hast, starte zuerst mit den Schritten, die im Kapitel :ref:`add-computer-label` beschrieben werden und mache erst danach hier weiter.
+Falls Du das noch nicht getan hast, starte zuerst mit den Schritten, die im Kapitel :ref:`hardware-registration-label` beschrieben werden und mache erst danach hier weiter.
 
 Einrichten eines Linux-Clients
 ==============================
