@@ -184,7 +184,11 @@ alternativ
 
 Das erste Verfahren hat den Vorteil, dass Du nicht die Zeit des Neustarts abwarten, Dich erneut verbinden und anmelden musst.
 
-Nach abgeschlossenem Setup und eventuellen Neustart des Servers, kannst Du Dich mit einem PC via Browser an der Schulkonsole von linuxmuster.net v7.1 anmelden. Dafür muss sich der Rechner im internen LAN befinden (z.B. 10.0.0.10/16).
+Nach abgeschlossenem Set-up und dem Neustart des Dienstes ``linuxmuster-webui`` bzw. eventuellen Neustart des Servers, könntest Du Dich mit einem PC via Browser an der Schulkonsole von linuxmuster.net v7.1 anmelden.  
+
+Nachdem sich Dein Client eine IP-Adresse via DHCP aus dem Adressbereich für die Rechneraufnahme geholt hat, ist dieses aber nicht möglich. Dessen Adressen sind aus sicherheitstechnischen Erwägungen nur auf das allernötigste beschränkt.
+
+Daher muss sich der Rechner in einem besonderen LAN-Bereich befinden, etwa die 10.0.0.10/16. Diese IP-Adresse musst Du manuell in Deinem Admin-PC einrichten.
 
 Anmeldung an der Schulkonsole als global-admin
 ==============================================
