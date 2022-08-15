@@ -32,9 +32,9 @@ Gebe hierzu im Terminal auf dem Server folgendes an:
 
 .. code::
 
-   sudo rm /etc/apt/apt.sources.d/lmn7.list
+   sudo rm /etc/apt/sources.list.d/lmn7.list
    
-Alternativ kannst Du die Einträge in der Datei ``/etc/apt/apt.sources.d/lmn7.list`` wie folgt auskommentieren:
+Alternativ kannst Du die Einträge in der Datei ``/etc/apt/sources.list.d/lmn7.list`` wie folgt auskommentieren:
 
 .. code::
 
