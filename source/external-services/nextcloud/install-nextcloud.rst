@@ -134,7 +134,7 @@ Die Datei docker-compose.yml
 
 .. code::
 
-    version: '3'
+  version: '3'
 
   services:
     db2:
