@@ -81,8 +81,11 @@ Freeradius installieren und aktivieren
 
 .. code::
 
-   # apt install freeradius
-   # systemctl enable freeradius.service
+   apt install freeradius
+   
+.. code::
+
+   systemctl enable freeradius.service
 
 ntlm_auth in samba erlauben
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -99,7 +102,7 @@ Danach muss der samba-ad-dc Dienst neu gestartet werden:
 
 .. code::
 
-   # systemctl restart samba-ad-dc.service
+   systemctl restart samba-ad-dc.service
 
 Radius konfigurieren
 ^^^^^^^^^^^^^^^^^^^^
@@ -108,8 +111,8 @@ Dem Freeradius-Dient muss Zugriff auf winbind gegeben werden:
 
 .. code::
 
-  # usermod -a -G winbindd_priv freerad
-  # chown root:winbindd_priv /var/lib/samba/winbindd_privileged/
+   usermod -a -G winbindd_priv freerad
+   chown root:winbindd_priv /var/lib/samba/winbindd_privileged/
 
 In dem Verzeichnis ``/etc/freeradius/3.0/sites-enabled`` in die Dateien ``default`` und ``inner-tunnel`` ganz am Anfang unter ``authenticate`` ist ``ntlm_auth`` einzufügen.
 
@@ -159,7 +162,7 @@ Nun ist der Freeradius-Dienst neuzustarten:
 
 .. code::
   
-  # systemctl restart freeradius.service
+   systemctl restart freeradius.service
 
 .. attention::
 
@@ -169,25 +172,25 @@ Die Steuerung der Gruppenzugehörigkeit kann auf der Konsole wie folgt gesetzt w
 
 .. code::
 
-  # sophomorix-managementgroup --nowifi/--wifi user1,user2,...
+    sophomorix-managementgroup --nowifi/--wifi user1,user2,...
 
 Um alle Schüler aus der Gruppe wifi zu nehmen, listest Du alle User des Systems auf und schreibst diese in eine Datei. Dies kannst Du wie folgt erledigen:
 
 .. code::
 
-  # samba-tool user list > user.txt
+   samba-tool user list > user.txt
 
 Jetzt entferns Du alle User aus der Liste, die immer ins Wlan dürfen sollen. Danach baust Du die Liste zu einer Kommazeile um mit:
 
 .. code::
 
-  #less user |  tr '\n' ',' > usermitkomma.txt
+  less user.txt |  tr '\n' ',' > usermitkomma.txt
 
 Die Datei kann jetzt an den o.g. Sophomorix-Befehl übergeben werden:
 
 .. code::
 
-  # sophomorix-managementgroup --nowifi $(less usermitkomma.txt)
+   sophomorix-managementgroup --nowifi $(less usermitkomma.txt)
 
 Firewallregeln anpassen
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -196,7 +199,7 @@ Auf dem lmn-Server ist in der Datei ``/etc/linuxmuster/allowed_ports`` der Radiu
 
 .. code::
 
-  udp domain,netbios-ns,netbios-dgm,9000:9100,1812
+   udp domain,netbios-ns,netbios-dgm,9000:9100,1812
 
 Danach ist der lmn-Server neu zu starten.
 
@@ -214,8 +217,8 @@ Sollte das nicht funktionieren, hält man den Freeradius-Dienst an und startet i
 
 .. code::
 
-  # service freeradius stop
-  # service freeradius debug
+   service freeradius stop
+   service freeradius debug
 
 Jetzt sieht man alle Vorgänge während man versucht, sich mit einem Device zu verbinden.
 
@@ -226,20 +229,20 @@ Die APs müssen im Freeradius noch in der Datei ``/etc/freeradius/3.0/clients.co
 
 .. code::
 
-  client server {
-  ipaddr = 10.0.0.1
-  secret = GeHeim
-  }
+   client server {
+   ipaddr = 10.0.0.1
+   secret = GeHeim
+   }
 
-  client opnsense {
-  ipaddr = 10.0.0.254
-  secret = GeHeim
-  }
+   client opnsense {
+   ipaddr = 10.0.0.254
+   secret = GeHeim
+   }
 
-  client unifi {
-  ipaddr = 10.0.0.10
-  secret = GeHeim
-  }
+   client unifi {
+   ipaddr = 10.0.0.10
+   secret = GeHeim
+   }
 
 
 Um den APs feste IPs zuzuweisen, sollten diese auf dem lmn-Server in der Datei ``/etc/linuxmuster/sophomorix/default-school/devices.csv`` eingetragen sein.
