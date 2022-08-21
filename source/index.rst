@@ -67,7 +67,7 @@ Nach einem Klick eröffnen sich Dir dort noch weitere Möglichkeiten:
   :hidden:
 
   about/about
-  about/what-is-new-in-7-1
+  about/what-is-new
 
 .. toctree::
   :maxdepth: 2
