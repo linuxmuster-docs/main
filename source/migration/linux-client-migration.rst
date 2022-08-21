@@ -8,14 +8,12 @@ Migration eines bestehenden Linux-Clients
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_, 
                    `@dorian <https://ask.linuxmuster.net/u/dorian>`_
 
-Wird ein Ubuntu 20.04 Linux-Client eingesetzt, der mit den bisherigen linuxmuster-client-servertools und dem Befehl linuxmuster-client eingerichtet wurde, so kann dieser vorbereitete Client migriert werden, so dass die aktuell gepflegten Pakete für linuxmuster-linuxclient7 genutzt werden können.
+Wird ein Ubuntu 20.04 Linux-Client eingesetzt, so kann dieser vorbereitete Client migriert werden, so dass die aktuell gepflegten Pakete für linuxmuster-linuxclient7 genutzt werden können.
 
 Vorgehen
 --------
 
-.. todo: :ref:Ziel muss gesetzt werden, Punkt 1 
-
-1. VM anlegen und vorbereiten wie unter ref:`add-computer-label` beschrieben.
+1. VM anlegen und vorbereiten wie unter :ref:`hardware-registration-label` beschrieben.
 2. Für Linbo die start.conf der Hardwareklasse anpassen, so dass das bisherige Image angegeben wird.
 3. Start der VM via PXE
 4. Anmelden als Benutzer ``linuxadmin``
