@@ -49,7 +49,7 @@ Konvertieren der LINBO 2.4 Images
 .. code::
 
    cd /srv/linbo 
-   linbo-cloop2qcow2 ubu22.cloop
+   linbo-cloop2.qcow2 ubu22.cloop
 
 Das Cloop-Image wird dadurch in das `qcow2`-Format konvertiert und im Verzeichnis ``/srv/linbo/images/ubu22/`` als Datei ``ubu22.qcow2`` abgelegt.
 

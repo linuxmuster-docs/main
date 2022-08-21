@@ -266,9 +266,6 @@ Das universelle Postsync-Script weist derzeit folgenden Inhalt auf:
    
 .. attention:: Um Komplikationen vorzubeugen, verwende das Kommando ``exit`` in keinem Deiner Postsync-Scripte!
 
-Aktualisierungen für dieses Script finden sich unter:
-
-https://github.com/linuxmuster/linuxmuster-client-servertools/blob/master/usr/lib/linuxmuster-client-servertools/generic.postsync
 
 
 
