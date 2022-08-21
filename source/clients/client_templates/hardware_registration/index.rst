@@ -25,6 +25,11 @@ Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM 
  * Boot Firmware: BIOS oder UEFI (je nach später genutzten PCs) - Achtung: start.conf von linbo ggf. anpassen -> siehe Hinweise bei den Client-Systemen
  * z.B. 50 GiB HDD (20 GiB OS + 20 GiB Cache + ggf. SWAP oder andere Partitionen)
 
+.. hint::
+   
+   Die Gerätenamen dürfen nur aus ASCII-Zeichen (nur Kleinbuchstaben), Ziffern von 0 bis 9 und dem Bindestrich bestehen. Ein Gerätename darf nicht mit einem Bindestrich beginnen oder enden.
+
+
 ... mit der WebUI
 =================
 
