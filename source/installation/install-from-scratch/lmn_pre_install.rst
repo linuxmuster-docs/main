@@ -10,9 +10,9 @@ Server auf lmn7.1 vorbereiten
                    `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
 
-Nachdem Du die Firewall und den Server wie beschrieben installiert hast, müssen beide Maschinen fertig konfiguriert werden. Um dieses zu vereinfachen, stellen wir Dir das Skript ``lmn71-prepare`` zur Verfügung.
+Nachdem Du die Firewall und den Server wie beschrieben installiert hast, müssen beide Maschinen fertig konfiguriert werden. Um dieses zu vereinfachen, stellen wir Dir das Skript ``lmn-prepare`` zur Verfügung.
 
-Das Skript lmn71-prepare
+Das Skript lmn-prepare
 ========================
 
 Installation des Pakets ``linuxmuster-prepare``
@@ -48,7 +48,7 @@ Damit ist die Vorbereitung abgeschlossen und Du installierst das Paket "linuxmus
 
    sudo apt install linuxmuster-prepare
 
-Nachdem Du den Befehl mit ``J`` bestätigt hast, wird das Skript lmn71-prepare auf den Server geladen, welches |...|
+Nachdem Du den Befehl mit ``J`` bestätigt hast, wird das Skript lmn-prepare auf den Server geladen, welches |...|
 
    - die benötigten Linuxmuster-Pakete und die benötigten anderen Pakete installiert,
    - das Betriebssystem des Servers nochmals auf den aktuellen Stand bringt,
@@ -58,13 +58,13 @@ Nachdem Du den Befehl mit ``J`` bestätigt hast, wird das Skript lmn71-prepare a
 
 .. attention:: Wichtiger Hinweis, schon jetzt! 
 
-   Solltest Du mit Deiner Konfiguration von unseren Standard-Vorgaben bei dem zuletzt genannten Punkt abweichen, müssen Deine Einstellungen unbedingt vor dem Aufruf des Skriptes lmn71-prepare eingearbeitet sein!
+   Solltest Du mit Deiner Konfiguration von unseren Standard-Vorgaben bei dem zuletzt genannten Punkt abweichen, müssen Deine Einstellungen unbedingt vor dem Aufruf des Skriptes lmn-prepare eingearbeitet sein!
 
    :ref:`basis_opnsense`
    
    :ref:`basis_server-label`
 
-Letzter Test vor Anwendung des Skriptes "lmn71-prepare"
+Letzter Test vor Anwendung des Skriptes "lmn-prepare"
 -------------------------------------------------------
 
 Als letzte Überprüfung, bevor Du das Skript einsetzt, verbinde Dich vom Server aus mit der Firewall via ssh.
@@ -77,7 +77,7 @@ Du solltest Dich nach der Eingabe des Passwortes ``Muster!`` auf der Konsole der
 
 Sollte dieser Test erfolgreich sein, steht der abschließenden Vorbereitung nichts mehr im Wege:
 
-Aufruf lmn71-prepare
+Aufruf lmn-prepare
 --------------------
 
 Wechsele Deinen Log-in und werde ``root``:
@@ -86,17 +86,17 @@ Wechsele Deinen Log-in und werde ``root``:
  
    sudo -i
 
-Für die weitere Konfiguration nutzt Du unser lmn71-prepare Script. Hilfe erhältst Du mittels
+Für die weitere Konfiguration nutzt Du unser lmn-prepare Script. Hilfe erhältst Du mittels
 
 .. code-block:: Bash
 
-   lmn71-prepare -h
+   lmn-prepare -h
 
 Hier ein Auszug mit den benötigten Optionen, die Du gleich anwenden wirst.
 
 .. code-block:: Bash
 
-   Usage: lmn71-prepare [options]
+   Usage: lmn-prepare [options]
 
    [options] are:
 
@@ -116,7 +116,7 @@ Installation mit unseren Standard-Vorgaben
 
 .. code-block:: Bash
 
-   lmn71-prepare -i -p server
+   lmn-prepare -i -p server
 
 .. Jetzt ist es an der Zeit, dass Du Dich zurücklehnst und den Verlauf beobachtest.
 
@@ -129,7 +129,7 @@ Installation mit Deinen Vorgaben:
 
 .. code-block:: Bash
 
-   lmn71-prepare -i -x -p server
+   lmn-prepare -i -x -p server
 
 #####
 
@@ -142,7 +142,7 @@ Du hast das Skript aufgerufen und erhältst folgende Ausgabe:
 
 .. code-block:: Bash
 
-   ### lmn71-prepare
+   ### lmn-prepare
    ## Force is given, skipping test for configured system.
    ## Profile
    Enter host profile [server, ubuntu] [server]:
