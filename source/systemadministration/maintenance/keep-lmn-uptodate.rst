@@ -54,7 +54,7 @@ Um die Server-Installation auf den aktuellen Paketstand zu bringen, gehe folgend
    Bestätige die Aktualisierung mit der Eingabe von **Y**
 
 5. Während des Aktualisierungsverlaufs fragen manchmal Pakete nach, ob eine neue Konfigurationsdatei 
-   installiert werden soll. Gebe hier **N** oder **ENTER** für "Beibehalten" an.
+   installiert werden soll. Gib hier **N** oder **ENTER** für "Beibehalten" an.
    
    .. image:: media/01-dist-upgrade.png
         :alt: Keep Config
