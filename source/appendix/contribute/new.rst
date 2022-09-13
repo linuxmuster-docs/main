@@ -61,7 +61,7 @@ Linuxmuster Dokumentation forken
    :align: center
    :alt: Fork on Github
 
-Öffne nun einen Terminal / Eingabeauffoderung (``Strg+Alt+t`` in Ubuntu) and gebe folgenden Befehl ein:
+Öffne nun einen Terminal / Eingabeauffoderung (``Strg+Alt+t`` in Ubuntu) and gib folgenden Befehl ein:
 
 .. note::
 
@@ -119,7 +119,7 @@ Falls Sie neue Dateien oder Ordner erstellt haben, müssen diese noch hinzugefü
 
    $ git add source/howto/foobar
 
-Gebe nun noch einen Kommentar zu Deinen Änderungen ein und lade alles in Deinen Fork hoch:
+Gib nun noch einen Kommentar zu Deinen Änderungen ein und lade alles in Deinen Fork hoch:
 
 .. code-block:: console
 
