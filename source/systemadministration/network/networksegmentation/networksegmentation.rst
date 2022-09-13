@@ -229,7 +229,7 @@ Meldest Du Dich als Benutzer ``cisco`` mit dem Kennwort ``cisco`` (Voreinstellun
    :align: center
 
 Danach erfolgt der Wechsel in das Menü ``Administration --> User Accounts``. 
-Dort ist der betreffende Benutzer auszuwählen, mit dem Menüpunkt ``Edit`` ist das Kennwort des Benutzers neu zu setzen. Die neueren Firmware-Versionen gebe neine Kennwort-Komplexität vor.
+Dort ist der betreffende Benutzer auszuwählen, mit dem Menüpunkt ``Edit`` ist das Kennwort des Benutzers neu zu setzen. Die neueren Firmware-Versionen geben eine Kennwort-Komplexität vor.
 
 .. image:: media/sg300/004_sg300_system_settings_l3.png
    :alt: 
