@@ -92,7 +92,7 @@ Melde Dich wieder als root am Docker-Host an und lege mit ``ln -s /srv/docker/ne
 
 So, jetzt musst Du nur noch mit ``systemctl restart nginx.service`` nginx neu starten.
 
-Prüfe noch, welche Ports nun genutzt werden. Gebe dazu den Befehl ``netstat -tulp`` an.
+Prüfe noch, welche Ports nun genutzt werden. Gib dazu den Befehl ``netstat -tulp`` an.
 
 Nextcloud mit docker-compose einrichten und starten
 ===================================================
