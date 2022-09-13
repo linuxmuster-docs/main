@@ -146,13 +146,13 @@ Zum Abschluss der Konfiguration musst Du das Kennwort für den Benutzer ``root``
    
    An dieser Stelle muss als root-Passwort ``Muster!`` eingegeben werden, da später der lmn-Server beim Einrichten der Firewall davon ausgeht, dass das root-Passwort ``Muster!`` ist! Sollte dieses anders lauten, wird die komplette weitere Installation scheitern!
 
-Gebe das neue Passwort für root ein.
+Gib das neue Passwort für root ein.
 
 .. figure:: media/basis_opnsense_010.png
    :align: center
    :alt: OPNsense: Type new root password
 
-Gebe dieses Kennwort erneut ein.
+Gib dieses Kennwort erneut ein.
 
 .. figure:: media/basis_opnsense_011.png
    :align: center
@@ -315,7 +315,7 @@ Die Zuordnung des WAN-Interfaces ist nun richtig. Das erkennst Du daran, das des
 WAN Zugang testen
 ^^^^^^^^^^^^^^^^^
 
-Um zwei erste Tests durchzuführen, wechsel mit ``8) Shell`` auf die Kommandozeile und gebe dort folgende Befehle ein.
+Um zwei erste Tests durchzuführen, wechsel mit ``8) Shell`` auf die Kommandozeile und gib dort folgende Befehle ein.
 
 .. hint:: 
 
