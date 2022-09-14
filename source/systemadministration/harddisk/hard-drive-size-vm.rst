@@ -48,7 +48,7 @@ Für den Login benötigst Du folgende Informationen:
 .. hint:: Diese Daten dürfen bis zum Aufruf des Installationsskriptes nicht verändert werden!
 
 
-In der geöffneten Konsole gebe folgenden Befehl ein:
+In der geöffneten Konsole gib folgenden Befehl ein:
 
 .. code::
 
@@ -146,7 +146,7 @@ Das Programm wartet dann auf eine Eingabe von dir.
    Willkommen zu GNU Parted! Rufen Sie >>help<< auf, um eine Liste der verfügbaren Befehle zu erhalten.
    (parted)
 
-Gebe `print` ein.
+Gib `print` ein.
    
 Es wird dann ein Größenproblem für die 1. HDD angezeigt und parted bietet eine Auswahloption an, um dieses
 Problem zu beheben. 
@@ -158,7 +158,7 @@ Anmerkung zu den Platzhaltern `xx`, diese stehen für die ausgewählten Vorgaben
    Warnung: Nicht der gesamte verfügbare Platz von /dev/xvda scheint belegt zu sein. Sie können die GPT reparieren, damit der gesamte Platz verwendet wird (zusätzlich xxx Blöcke) oder Sie können mit den aktuellen Einstellungen fortfahren.
   Reparieren/Fix/Ignoiren/Ignore? 
 
-Gebe `Reparieren` ein, damit das Größenproblem gelöst wird und verlasse dann parted wieder
+Gib `Reparieren` ein, damit das Größenproblem gelöst wird und verlasse dann parted wieder
 durch Angabe des Befehls `quit`.
 
 Danach erneut `fdisk` aufrufen, die 2. Partition löschen und neu mit neuer Größe anlegen. Die angegebenen Befehle musst Du der Reihe nach abarbeiten.
@@ -206,7 +206,7 @@ Dir wird darauf die folgende Frage gestellt:
 
    Wollen Sie die Signatur entfernen? [J]a/[N]ein:
 
-Gebe ein `N` ein 
+Gib ein `N` ein 
 
 Zum Beenden von fdisk verwendest Du nun `w` damit Deine Änderungen auf die Festplatte geschrieben werden.
 
@@ -219,7 +219,7 @@ Zum Beenden von fdisk verwendest Du nun `w` damit Deine Änderungen auf die Fest
    Die Partitionstabelle wurde verändert.
    Festplatten werden synchronisiert.
    
-Nun muss die Partition noch auf die neue Größe erweitert werden. Gebe in der Konsole nun an:
+Nun muss die Partition noch auf die neue Größe erweitert werden. Gib in der Konsole nun an:
 
 .. code::
 

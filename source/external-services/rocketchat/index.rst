@@ -124,7 +124,7 @@ Die nachstehende Abb. gibt diese Einstellungen wieder.
    :alt: LDAP: Sync Settings
    :align: center
 
-Für die Zuorndung der Attribute und die Anwendung der Filter gebe bitte folgende Werte ein:
+Für die Zuorndung der Attribute und die Anwendung der Filter gib bitte folgende Werte ein:
 
 6.  User Data Field Map: 
 

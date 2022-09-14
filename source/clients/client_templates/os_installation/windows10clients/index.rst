@@ -301,7 +301,7 @@ Hierbei ist es notwenig, das für das Image in der Registry, den Namen der PCs j
 Image in LINBO erstellen
 ------------------------
 
-1. Jetzt wieder in LINBO starten und von dem aktuellem Stand ein Image erstellen. Klicke rechts auf das Werkzeug-Symbol. Gebe das Linbo-Passwort ein, dann siehst Du folgende Einträge:
+1. Jetzt wieder in LINBO starten und von dem aktuellem Stand ein Image erstellen. Klicke rechts auf das Werkzeug-Symbol. Gib das Linbo-Passwort ein, dann siehst Du folgende Einträge:
 
 .. figure:: media/45_windows-10-clients_linbo-create-image.png
    :align: center
@@ -313,7 +313,7 @@ Image in LINBO erstellen
    :align: center
    :alt: Linbo Upload Image
 
-Gebe an, ob ein aktuelles Image ersetzt werden soll, den gewünschten Image-Namen (die Dateiendung ist immer .qcow2). Zudem kannst Du eine Beschreibung angeben, die Dir Hinweise zum Konfigurationsstand des Images gibt. Da Du das erste Image erstellst, klicke nun ``erstellen + hochladen``.
+Gib an, ob ein aktuelles Image ersetzt werden soll, den gewünschten Image-Namen (die Dateiendung ist immer .qcow2). Zudem kannst Du eine Beschreibung angeben, die Dir Hinweise zum Konfigurationsstand des Images gibt. Da Du das erste Image erstellst, klicke nun ``erstellen + hochladen``.
 
 Nach dem erfolgreichen Upload siehst Du folgende Statusmeldung:
 

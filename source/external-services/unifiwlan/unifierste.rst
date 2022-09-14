@@ -47,7 +47,7 @@ Damit der Unificontroller die angeschlossenen Access Points (APs) aufnehmen kann
 mit diesen kommuniziert, sind noch folgende Einstellungen zu treffen:
 
 1. Wähle ``Settings → System Settings → Controller/Application Configuration``
-2. Gebe dort bei der Option ``Host to inform`` die IP-Adresse des Dockerhosts, den FQDN oder ein CNAME als FQDN ein.
+2. Gib dort bei der Option ``Host to inform`` die IP-Adresse des Dockerhosts, den FQDN oder ein CNAME als FQDN ein.
 3. Teste die Aufnahme, indem Du einen AP anschließt. Nachdem dieser gestartet ist, siehst Du im Controller den AP in der Phase ``Adopting``.
    Diese muss erfolgreich beendet worden sein. Sollte dies nicht der Fall sein, so solltest Du in den log files des Unifi Controllers nach Fehlern suchen.
 

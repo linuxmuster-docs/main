@@ -138,13 +138,13 @@ Bestätige das ``End-User-Agreement`` mit ``Enter``.
 Wähle die gewünschte Festplatte auf dem Server zur Installation aus. Hast Du mehrere einzelne Festplatten im Server verbaut und kein RAID-Verbund definiert, so kannst Du hier mit der Schaltfläche `Optionen` weitere Einstellungen aufrufen. Hier kannst Du |zb| mehrere Festplatten angeben, die in einem sog. ZFS-Pool definiert werden sollen. Dies ist für das Erstellen von sog. Snapshots von Vorteil. Soll aber an dieser Stelle nicht vertieft werden.
 (siehe hierzu |ua|: https://pve.proxmox.com/pve-docs/pve-admin-guide.html)
 
-Gebe bei ``Location- and Time Zone selection`` als Land und Keyboard Layout  ``Germany`` an. Wähle als Zeitzone Europe/Berlin.
+Gib bei ``Location- and Time Zone selection`` als Land und Keyboard Layout  ``Germany`` an. Wähle als Zeitzone Europe/Berlin.
 
 .. figure:: media/install-on-proxmox_05_location-and-time-zone.png
    :align: center
    :alt: Proxmox Installation Zeitzone 
 
-Lege ein Kennwort für den Administrator des Proxmox-Host fest und gebe eine E-Mail-Adresse an. Klicke auf ``Weiter``.
+Lege ein Kennwort für den Administrator des Proxmox-Host fest und gib eine E-Mail-Adresse an. Klicke auf ``Weiter``.
 
 .. figure:: media/install-on-proxmox_06_admin-password.png
    :align: center
@@ -717,7 +717,7 @@ In dem Drop-down Menü siehst Du alle in Deinem System verfügbaren Datenspeiche
 
 Klicke dann auf ``Next``.
 
-Gebe nun für die CPU Sockel und Kerne an.
+Gib nun für die CPU Sockel und Kerne an.
 
 .. figure:: media/proxmox-create-vm-opnsense-05.png
    :align: center
@@ -725,7 +725,7 @@ Gebe nun für die CPU Sockel und Kerne an.
 
 Klicke dann auf ``Next``.
 
-Gebe nun für die Firewall die gewünschte Größe des Arbeitsspeichers an.
+Gib nun für die Firewall die gewünschte Größe des Arbeitsspeichers an.
 
 .. figure:: media/proxmox-create-vm-opnsense-06.png
    :align: center
@@ -733,7 +733,7 @@ Gebe nun für die Firewall die gewünschte Größe des Arbeitsspeichers an.
 
 Klicke dann auf ``Next``.
 
-Gebe danach die ``Bridge vmbr0`` für die einzurichtende Netzwerkkarte an. Die zweite Netzwerkkarte fügst Du nach Anlage der VM hinzu. Dies muss noch vor der eigentlichen Installation erfolgen.
+Gib danach die ``Bridge vmbr0`` für die einzurichtende Netzwerkkarte an. Die zweite Netzwerkkarte fügst Du nach Anlage der VM hinzu. Dies muss noch vor der eigentlichen Installation erfolgen.
 
 .. figure:: media/proxmox-create-vm-opnsense-07.png
    :align: center
@@ -821,7 +821,7 @@ In dem Drop-down Menü siehst Du alle in Deinem System verfügbaren Datenspeiche
 
 Für die erste Festplatte wählst Du wie in obiger Abb. |zb| 25 GiB.
 
-Füge dann mit dem Button unten links ``Add`` eine weitere Festplatte hinzu. Wähle hierbei wieder den geeigneten Datenspeicher aus und gebe nun die Größe |zb| 100 GiB, oder direkt für Deine Schule die gewünschte Größe |zb| 500 GiB aus.
+Füge dann mit dem Button unten links ``Add`` eine weitere Festplatte hinzu. Wähle hierbei wieder den geeigneten Datenspeicher aus und # nun die Größe |zb| 100 GiB, oder direkt für Deine Schule die gewünschte Größe |zb| 500 GiB aus.
 
 .. figure:: media/proxmox-create-vm-ubuntu-server-05.png
    :align: center
@@ -829,7 +829,7 @@ Füge dann mit dem Button unten links ``Add`` eine weitere Festplatte hinzu. Wä
 
 Klicke dann auf ``Next``.
 
-Gebe nun für die CPU Sockel und Kerne an.
+Gib nun für die CPU Sockel und Kerne an.
 
 .. figure:: media/proxmox-create-vm-ubuntu-server-06.png
    :align: center
@@ -837,7 +837,7 @@ Gebe nun für die CPU Sockel und Kerne an.
 
 Klicke dann auf ``Next``.
 
-Gebe nun für den Server die gewünschte Größe des Arbeitsspeichers an.
+Gib nun für den Server die gewünschte Größe des Arbeitsspeichers an.
 
 .. figure:: media/proxmox-create-vm-ubuntu-server-07.png
    :align: center
@@ -845,7 +845,7 @@ Gebe nun für den Server die gewünschte Größe des Arbeitsspeichers an.
 
 Klicke dann auf ``Next``.
 
-Gebe danach die Bridge vmbr1 für die einzurichtende Netzwerkkarte an. Dies muss die Bridge für das interne Netz (green) sein.
+Gib danach die Bridge vmbr1 für die einzurichtende Netzwerkkarte an. Dies muss die Bridge für das interne Netz (green) sein.
 
 .. figure:: media/proxmox-create-vm-ubuntu-server-08.png
    :align: center

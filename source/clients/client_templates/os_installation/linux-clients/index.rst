@@ -95,7 +95,7 @@ Klicke nun unten rechts auf das Werkzeug-Icon, um zum Menü für die Imageerstel
    :align: center
    :alt: Ubuntu Installation: Menue Tools
 
-Du wirst nach nach dem Linbo-Passwort gefragt. Gebe dieses ein. Deine Eingabe wird hierbei nicht angeziegt.
+Du wirst nach nach dem Linbo-Passwort gefragt. Gib dieses ein. Deine Eingabe wird hierbei nicht angeziegt.
 
 .. figure:: media/08-linux-client-ubu-install.png
    :align: center
@@ -177,7 +177,7 @@ Installiere das Paket ``linuxmuster-linuxclient7`` wie folgt:
 1. Schritt
 ^^^^^^^^^^
 
-Öffne ein Terminal unter Ubuntu mit ``strg`` + ``T`` oder klicke unten links auf die Kacheln und gebe in der Suchzeile als Anwendung ``Terminal`` ein.
+Öffne ein Terminal unter Ubuntu mit ``strg`` + ``T`` oder klicke unten links auf die Kacheln und gib in der Suchzeile als Anwendung ``Terminal`` ein.
 
 Importiere nun den GPG-Schlüssel des linuxmuster.net 7.1 Repository:
 

@@ -342,7 +342,7 @@ Basis-Konfiguration des Servers
 term.js für die Konsolen-Nutzung in Proxmox aktivieren
 ------------------------------------------------------
 
-Nachdem Du Dich erneut als ``linuxadmin`` beziehungsweise mit dem von Dir angelegten Nutzer an der ``noVNC`` Konsole angemeldet hast, gebe diese zwei Zeilen Code nacheinander ein:
+Nachdem Du Dich erneut als ``linuxadmin`` beziehungsweise mit dem von Dir angelegten Nutzer an der ``noVNC`` Konsole angemeldet hast, gib diese zwei Zeilen Code nacheinander ein:
 
 .. code::
 

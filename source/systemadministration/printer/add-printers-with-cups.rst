@@ -40,7 +40,7 @@ Rufe den Untermenüpunkt ``Drucker hinzufügen`` aus. Es erscheint nachstehende 
    :alt: add printer 1/5
    :align: center
 
-Gebe als Verbindung die IP-Adresse und den Port des LPD-Druckers wie in der Abb. an:
+Gib als Verbindung die IP-Adresse und den Port des LPD-Druckers wie in der Abb. an:
 
 .. image:: media/09-printer-add-printer-02.png
    :alt: add printer 2/5
@@ -62,13 +62,13 @@ Hierzu wähle den Hersteller aus, dann erscheint eine Liste mit den verfügbaren
 Drucker konfigurieren
 ---------------------
 
-Danach erscheinen die Standardeinstellungen für den hinzugefügten Drucker. Wähle hier die gewünschten Einstellungen aus und speichere diese als ``Standardeinstellungen festlegen``. Gebe unter  ``Fehlerbehandlung``  **abort-job** an, um sicherzustellen, dass CUPS im Fehlerfall den Druckjob löscht.
+Danach erscheinen die Standardeinstellungen für den hinzugefügten Drucker. Wähle hier die gewünschten Einstellungen aus und speichere diese als ``Standardeinstellungen festlegen``. Gib unter  ``Fehlerbehandlung``  **abort-job** an, um sicherzustellen, dass CUPS im Fehlerfall den Druckjob löscht.
 
 .. image:: media/12-printer-define-standard-printing-options.png
    :alt: add printer 5/5
    :align: center
 
-Damit der Drucker nur von berechtigten Nutzern verwendet werden kann, muss noch der Kreis der erlaubten Benutzer festgelegt werden: Gebe unter ``Erlaubte Benutzer festlegen`` die Gruppe ``@printing`` an. Lehrer sind standardmäßig in der Gruppe. Bei Schülern wird die Zugehörigkeit über die Spalte **Drucken** in der Schulkonsole gesteuert.
+Damit der Drucker nur von berechtigten Nutzern verwendet werden kann, muss noch der Kreis der erlaubten Benutzer festgelegt werden: Gib unter ``Erlaubte Benutzer festlegen`` die Gruppe ``@printing`` an. Lehrer sind standardmäßig in der Gruppe. Bei Schülern wird die Zugehörigkeit über die Spalte **Drucken** in der Schulkonsole gesteuert.
 
 .. image:: media/15-printer-define-allowed-users.png
    :alt: printer: allowed user

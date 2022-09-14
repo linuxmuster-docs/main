@@ -79,7 +79,7 @@ Bind-Einstellungen
   
    # sophomorix-admin --create-school-binduser moodle-binduser --school default-school --random-passwd-save
 
-2. Gebe für den neu angelegten Benutzer einen Kommentar an, um später einen Hinweis zu erhalten, für welchen Zweck der Benutzer genutzt wird.
+2. Gib für den neu angelegten Benutzer einen Kommentar an, um später einen Hinweis zu erhalten, für welchen Zweck der Benutzer genutzt wird.
 
 .. code::
 
