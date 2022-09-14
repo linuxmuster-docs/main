@@ -96,7 +96,7 @@ Folgende Konfiguration zeigt ein mögliches Beispiel für die ``Hardwareklasse u
    Locale = de-DE                      # gui locale <de-de|en-gb|fr-fr|es-es>
    DownloadType = torrent
    SystemType = efi64                  # UEFI-BIOS
-   KernelOptions = quiet splash        # hier muessen bei speuieller Hardware ggf. Kernel-Parameter angegeben werden
+   KernelOptions = quiet splash        # hier muessen bei spezieller Hardware ggf. Kernel-Parameter angegeben werden wie nomodeset
   
    [Partition]
    Dev = /dev/sda1
@@ -159,4 +159,16 @@ Folgende Konfiguration zeigt ein mögliches Beispiel für die ``Hardwareklasse u
    RestoreOpsiState = no
    ForceOpsiSetup =
    Hidden = yes
+
+.. hint::
+
+  Sollte der Client beim Boot-Vorgang Probleme haben (z.B. initializing hardware ...), dann müssten zur Behebung Kernel-Parameter für den Linux-Client in der Conf-Datei eingetragen werden. Dies kann insbesondere bei neueren Grafikkarten der Fall sein, so dass hier weitere Optionen anzugeben sind. Oftmals führt bereits folgende Zeile zum Erfolg: 
+
+  KernelOptions = quiet splash nomodeset
+
+  Hilfreich können auch KernelOptions sein wie z.B.: 
+
+  modprobe.blacklist=radeon 
+  oder 
+  i915.alpha_support=1 
 
