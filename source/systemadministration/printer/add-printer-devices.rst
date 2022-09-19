@@ -8,7 +8,7 @@ Zuerst muss der Drucker am Server mithilfe der Schulkonsole hinzugefügt werden.
 Hierbei wird dem Drucker ein Name sowie eine IP-Adresse zugewiesen.
 
 Für das folgende Beispiel nehmen wir an, der Drucker stehe in Raum
-"r200", bekomme den Namen "r203-pr01", habe die MAC-Adresse
+"r200", bekomme den Namen "r200-pr01", habe die MAC-Adresse
 "00:11:22:33:44:55" und bekomme entsprechend einem IP-Adressschema die
 IP-Adresse 10.2.200.101.
 
