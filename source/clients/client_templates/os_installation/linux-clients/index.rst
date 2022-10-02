@@ -183,7 +183,7 @@ Importiere nun den GPG-Schlüssel des linuxmuster.net 7.1 Repository:
 
 .. code::
 
-   wget -qO - "https://deb.linuxmuster.net/pub.gpg" -O /etc/apt/trusted.gpg.d/linuxmuster.net.gpg
+   sudo wget -qO - "https://deb.linuxmuster.net/pub.gpg" -O /etc/apt/trusted.gpg.d/linuxmuster.net.gpg
 
 
 2. Schritt
