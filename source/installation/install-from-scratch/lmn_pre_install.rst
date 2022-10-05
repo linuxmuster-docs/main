@@ -24,9 +24,9 @@ Führe danach folgende Befehle in der Eingabekonsole aus:
 
 .. code-block:: Bash
 
-   wget -qO - "https://deb.linuxmuster.net/pub.gpg" | sudo apt-key add -
+   sudo wget -q "https://deb.linuxmuster.net/pub.gpg" -O /etc/apt/trusted.gpg.d/linuxmuster.net.gpg
 
-.. hint:: -qO --> [-][q][Großbuchstabe O]
+.. hint:: -O --> [-][Großbuchstabe O]
 
 Damit installierst Du den Key für das Repository von linuxmuster.net und aktivierst ihn.
 
@@ -56,7 +56,7 @@ Nachdem Du den Befehl mit ``J`` bestätigt hast, wird das Skript lmn-prepare auf
    - das Netzwerk konfiguriert und
    - im Falle des Serverprofils das LVM eingerichtet.
 
-.. attention:: Wichtiger Hinweis, schon jetzt! 
+.. attention:: Wichtiger Hinweis, schon jetzt!
 
    Solltest Du mit Deiner Konfiguration von unseren Standard-Vorgaben bei dem zuletzt genannten Punkt abweichen, müssen Deine Einstellungen unbedingt vor dem Aufruf des Skriptes lmn-prepare eingearbeitet sein!
 
@@ -107,131 +107,51 @@ Hier ein Auszug mit den benötigten Optionen, die Du gleich anwenden wirst.
    |...|
    -p, --profile=<profile>     : Host profile to apply, mandatory. Expected
                                  values are "server" or "ubuntu".
+   -l, --pvdevice=<device>     : Initially sets up lvm on the given device (server
+                                 profile only). <device> can be a partition or an
+                                 entire disk.
+   -v, --volumes=<volumelist>  : List of lvm volumes to create (to be used together
+                                 with -l/--pvdevice). Syntax (size in GiB):
+                                 <name>:<size>,<name>:<size>,...
    |...|
 
 #####
 
-Installation mit unseren Standard-Vorgaben
-------------------------------------------
+Installation mit Standard-Vorgaben oder Deinen Vorgaben
+-------------------------------------------------------
 
 .. code-block:: Bash
 
-   lmn-prepare -i -p server
+   lmn-prepare -i -u -p server -l /dev/sdb -v var:10,linbo:40,global:10,default-school:100%FREE
 
-.. Jetzt ist es an der Zeit, dass Du Dich zurücklehnst und den Verlauf beobachtest.
+Es wird hier also eine Erstinstallation (-i) mit dem Profil ``server`` auf der zweiten Festplatte (/dev/sdb) durchgeführt. Auf der zweiten Platte  werden vier Volumes mit 10G, 40G, 10G und dem verbleibenden Rest der zweiten Festplatte eingerichtet.
 
-.. Nach dem das Skript abgearbeitet ist, steht dem :ref:`setup-label` nichst mehr im Wege.
+Passe die Größenangaben auf Deine Situation an.
 
-#####
-
-Installation mit Deinen Vorgaben:
----------------------------------
+Es wird zuerst das LVM auf der zweiten Platte eingerichtet, danach werden alle erforderliche Pakete geladen und installiert. Dies kann etwas dauern. Nach Abschluss des Installations- und Vorbereitungsarbeiten wirst Du aufgefordert, den Server neu zu starten.
 
 .. code-block:: Bash
 
-   lmn-prepare -i -x -p server
-
-#####
-
-Ausgaben des Befehls und Deine Eingaben
----------------------------------------
-
-.. hint:: Im Folgenden beschreiben wir die Eingaben für unsere Standard-Vorgaben. In der Regel kannst Du diese einfach mit ``Enter`` übernehmen. Wo Eingaben nötig bzw. Anpassungen möglich sind, erhältst Du nachstehend einen Hinweis.
-
-Du hast das Skript aufgerufen und erhältst folgende Ausgabe:
-
-.. code-block:: Bash
-
-   ### lmn-prepare
-   ## Force is given, skipping test for configured system.
-   ## Profile
-   Enter host profile [server, ubuntu] [server]:
-
-Das vorausgewählte Profil `server` kannst Du mit ``[ENTER]`` übernehmen, da Du ja den Server einrichten willst.
-
-#####
-
-.. code-block:: Bash
-
-   ## Network
-   Enter network interface to use ['ens18']:
-
-Das Netzwerk-Interface sollte richtig erkannt sein, da Du ja nur eines für den Server eingerichtet hast. Also wieder mit ``[ENTER]`` bestätigen.
-
-#####
-
-.. code-block:: Bash
-
-   Enter ip address with net or bitmask [10.0.0.1/16]:
-
-.. hint:: An dieser Stelle ist die Eingabe eines abweichenden Netzwerk-Bereichs möglich, dafür müsstest Du den IP-Bereich und die zu verwendende Netzwerkmaske eingeben. Gibst Du keine ein, übernimmst Du mit ``[ENTER]`` unsere Standard-Vorgabe, wie angezeigt.
-
-#####
-
-.. code-block:: Bash
-
-   Enter firewall ip address [10.0.0.254]:
-
-Die Adresse der Firewall wird automatisch Deiner zuvor gemachten Eingabe angepasst. 
-
-.. hint:: Alternativ könntest Du sie anpassen, wenn die Firewall eine andere als die angezeigte haben sollte.
-
-#####
-
-.. code-block:: Bash
-
-   Enter gateway ip address [10.0.0.254]:
-
-Auch die Adresse des Gateways sollte automatisch angepasst sein.
-
-.. hint:: Ansonsten müsstest Du hier nochmals tätig werden.
-
-#####
-
-.. code-block:: Bash
-
-   Enter hostname [server]: 
-
-Auch hier gilt Übernahme der Vorgabe mit ``[ENTER]``.
-
-.. hint:: Änderungen möglich.
-
-#####
-
-.. code-block:: Bash
-
-   Enter domainname [linuxmuster.lan]:
-
-.. hint:: Auch hier ist eine individuelle Anpassung möglich, wenn Du nicht unsere Standard-Vorgabe nutzen willst. Dabei gilt aber zu beachten, dass |...|
-
-.. attention:: 
-
-   |...| die Länge des ersten Teils der Domäne maximal 15 Zeichen betragen darf.
+   ## Passwords
+   # root ... OK!
+   # linuxadmin ... OK!
+   ## Writing configuration
+   
+   ## The system has been prepared with the following values:
+   # Profile   : server
+   # Hostname  : server
+   # Domain    : linuxmuster.lan
+   # IP        : 10.0.0.1
+   # Netmask   : 255.255.0.0
+   # Firewall  : 10.0.0.254
+   # Gateway   : 10.0.0.254
+   # Interface : ens18
+   # Swapsize  : 2G
+  # LVM device: /dev/sdb
+  # LVM vlms  : var:10,linbo:40,global:10,default-school:100%FREE
   
-   Die Domäne „muster-gymnasium.de“ überschreitet diese Grenze um ein Zeichen, da „muster-gymnasium“ 16 Zeichen lang ist.
+  ### Finished - a reboot is necessary!
 
-   Eine gute Wahl ist beispielsweise ``linuxmuster.lan``!
+Gebe in der Konsole nun den Befehl ``reboot`` ein.
 
-#####
-
-.. code-block:: Bash
-
-   Enter physical device to use for LVM []: /dev/sdb
-
-Für die Verwendung unserer Vorgaben musst Du den Speicherort für das LVM angeben. Die benötigte Eingaben hast Du zuvor ja ermittelt.
-
-Falls nicht, kannst Du dies hier :ref:`lsblk-command` nachlesen.
-
-Nachstehend erfolgt die Angabe beispielhaft für die zweite erkannte Festplatte:
-
-.. code::
-
-   /dev/sdb
-
-.. hint:: Bei anderen Partitionsgrößen hast Du das LVM bei der Ubuntu-Servers-Installation angelegt. Um es zu verwenden, musst Du an dieser Stelle einfach nur die ``[Enter]``-Taste drücken. Die bei Aufruf des Installationsscripts übergebene Option ``-x`` veranlasst, dass es so übernommen wird.
-
-#####
-
-Jetzt ist es an der Zeit, dass Du Dich zurücklehnst und den Verlauf beobachtest.
-
-Nachdem das Skript abgearbeitet ist, steht dem :ref:`setup-label` nichts mehr im Wege.
+Danach steht dem :ref:`setup-label` nichts mehr im Wege.
