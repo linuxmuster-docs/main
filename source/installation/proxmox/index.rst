@@ -902,7 +902,7 @@ Nachher:
 Hinzufügen einer seriellen Schnittstelle
 ++++++++++++++++++++++++++++++++++++++++
 
-Damit Dir `Copy-and-paste` in der Oberfläche von Proxmox bei der Auswahl unter ``Console`` zur Verfügung steht, musst Du die Nutzung von `xterm.js` ermöglichen. Als vorbereitende Maßnahmen musst Du eine serielle Schnittstelle für die VM aktivieren.
+Damit Dir `Copy-and-paste` in der Oberfläche von Proxmox bei der Auswahl unter ``Console`` zur Verfügung steht, musst Du die Nutzung von `xterm.js` ermöglichen. Als vorbereitende Maßnahmen musst Du eine serielle Schnittstelle für die jeweilige VM aktivieren.
 
 .. figure:: media/xterm-opnsense_001.png
    :align: center
@@ -930,7 +930,7 @@ Klicke auf ``Add``, anschließend sollte der gezeigte Menüpunkt nicht mehr ausg
 
 Kontrolliere nochmals alle Einstellungen der neu angelegten VM.
 
-Die beiden letzten Einstellungen musst Du nochmals für den Server einrichten.
+Die beiden letzten Einstellungen musst Du **nochmals für den Server** einrichten.
 
 .. hint:: Für die weitere Nutzung von xterm.js ist allerdings noch eine Anpassung bei der laufenden OPNsense |reg| bzw. dem Server nötig. Die nimmst Du zu einem geeigneten späteren Zeitpunkt vor, bis dahin musst Du noch die Konsole ``noVNC`` nutzen.
 
