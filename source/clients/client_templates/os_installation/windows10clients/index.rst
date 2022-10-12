@@ -397,3 +397,25 @@ Linuxmuster.net sieht vor, dass **Programminstallationen von "global-admin"** du
 5. Melde Dich als lokaler User ab und als global-admin an
 6. Fahre den Rechner herunter
 7. Starte den Rechner neu und erstellen ein neues Image mit LINBO.
+
+Zeitprobleme lösen
+==================
+
+Windows 10 Clients nutzen den linuxmuster.net Server als Zeitserver. Hierbei kann es zu Beginn zu Zeitabweichungen kommmen.
+
+Diese sind dadurch zu beheben, indem Du auf dem linuxmuster.net Server ein Skript aufrufst, das die NTP-Konfiguration anpasst.
+
+Öffene auf dem Server eine Konsole als Benutzer ``root`` und gebe folgenden Befehle ein:
+
+.. code::Bash
+
+  /usr/share/linuxmuster/fix-ntp_signd-dir.sh
+  
+Es wird hierdurch das Verzeichnis für NTP Sockets auf dem Server repariert, so dass Windows Clients erfolgreich hierauf zugreifen können. Danach sollte der Zeitabgleich via NTP erfolgreich durchlaufen.
+
+  
+  
+
+
+
+
