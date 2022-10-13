@@ -31,7 +31,7 @@ Mittels der Hardwareklasse teilst Du LINBO mit, welche Konfiguration für die Ge
 
 Bei der Rechneraufnahme legst Du fest, welche Konfigurationen für jede einzelne Arbeitsstation gelten sollen. Das sind:
 
-  * Raum in dem sich der Rechner befindet
+  * Raum, in dem sich der Rechner befindet.
   * Name des Rechners
   * Name der Hardwareklasse, welcher der Rechner angehören soll.
   * MAC-Adresse des Rechners

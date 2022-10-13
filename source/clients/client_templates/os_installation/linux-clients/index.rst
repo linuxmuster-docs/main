@@ -11,7 +11,7 @@ Linux-Client
 
 linuxmuster.net stellt für Ubuntu-Clients das Paket ``linuxmuster-linuxclient7`` bereit. Es führt automatisiert den Domänenbeitritt aus und vereinheitlicht das Management von Liux- und Windows-Clients durch Auslesen der GPO-Konfigurationen im Active Directory.
 
-Offiziell wird derzeit Ubuntu 20.04 mit gdm3 und Gnome unterstützt. Andere Ubuntu-basierte Distributionen mit gdm3 und Gnome könnten aber auch funktionieren.
+Offiziell wird derzeit Ubuntu 22.04 mit gdm3 und Gnome unterstützt. Andere Ubuntu-basierte Distributionen mit gdm3 und Gnome könnten aber auch funktionieren (z.B. Linux POP!OS).
 
 Voraussetzung
 =============
@@ -162,7 +162,7 @@ Starte danach den Client erneut mit Linbo und klicke nun das große Festplattens
 Paket linuxmuster-linuxclient7 installieren
 --------------------------------------------
 
-Melde Dich an dem gestarteten Ubuntu 20.04 als Benutzer ``linuxadmin`` an.
+Melde Dich an dem gestarteten Ubuntu 22.04 als Benutzer ``linuxadmin`` an.
 
 .. figure:: media/13-linux-client-ubu-install.png
    :align: center
