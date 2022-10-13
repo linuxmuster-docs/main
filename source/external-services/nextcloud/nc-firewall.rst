@@ -8,6 +8,10 @@ Damit die Nextcloud funktionieren kann, braucht Sie Zugriff auf das AD des Serve
 
 In beiden Fällen müssen Anfragen vom Docker-Host an den Server weitergeleitet werden
 
+.. hint::
+
+   Jede Öffnung der Firewall birgt Sicherheitsrisiken. Ingesamt müssen diese vor der Einrichtung bewertet werden.
+
 Firewallregel für den Zugriff auf das AD
 ========================================
 
@@ -28,6 +32,17 @@ Klicke auf Hinzufügen um eine neue Firewallregel hinzuzufügen und trage die fo
    :align: center
 
 Bei *Ziel-IP umleiten* trägst Du natürlich die IP-Adresse Deines Servers ein. Im Allgemeinen wird das 10.0.0.1 sein. In der lmn6 war das 10.16.1.1.
+
+Externer NC-Docker
+------------------
+ 
+Steht der NC-Docker extern so ist folgende Einstellung für die WAN-Schnittstelle zu setzen:
+ 
+ .. image:: media/firewall-02-1.png
+   :alt: WAN-Port Einstellungen
+   :align: center
+
+
 
 Firewallregel für den Zugriff über Samba
 ========================================
