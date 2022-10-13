@@ -28,6 +28,10 @@ Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer solchen VM 
 .. hint::
    
    Die Gerätenamen dürfen nur aus ASCII-Zeichen (nur Kleinbuchstaben), Ziffern von 0 bis 9 und dem Bindestrich bestehen. Ein Gerätename darf nicht mit einem Bindestrich beginnen oder enden.
+   
+   Für den Gerätenamen dürfen maximal 15-Zeichen verwendet werden. 
+   
+   Beispiel: ``g001-r101-pc001``
 
 
 ... mit der WebUI
