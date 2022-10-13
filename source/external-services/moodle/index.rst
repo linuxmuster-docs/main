@@ -93,25 +93,25 @@ Bind-Einstellungen
 
 4. Trage in Moodle die unter 3. angezeigten Daten in Moodle für den Bind-User nach dem nachstehenden Schema ein:
 
-+----------------+--------------------------------------------------------------------------------+
-| Anmeldename    | CN=moodle-binduser,OU=Management,OU=GLOBAL,DC=linuxmuster,DC=lan               |
-+----------------+--------------------------------------------------------------------------------+
-|                | DC=linuxmuster,DC=lan sind mit den Angaben der eigenen Domäne zu ersetzen.     |
-+----------------+--------------------------------------------------------------------------------+
-| Kennwort       | geheim (angezeigtes Kennwort, das in der datei hinterlegt wurde)               |
-+----------------+--------------------------------------------------------------------------------+
-|                | Kennwort des Bind-Users wurde unter 1. in einer Datei auf dem Server abgelegt. |
-+----------------+--------------------------------------------------------------------------------+
-|                | zur Anzeige ist der Befehl unter 3. erforderlich                               |
-+----------------+--------------------------------------------------------------------------------+
-| Nutzertyp      | MS ActiveDirectory                                                             |
-+----------------+--------------------------------------------------------------------------------+
-| Kontexte       | OU=schools,DC=linuxmuster,DC=lan                                               |
-+----------------+--------------------------------------------------------------------------------+
-|                | Die DC-Einträge sind durch die, der eigenen Domäne zu ersetzen.                |
-+----------------+--------------------------------------------------------------------------------+
-| Subkontexte    | Ja                                                                             |
-+----------------+--------------------------------------------------------------------------------+
++----------------+-------------------------------------------------------------------------------------+
+| Anmeldename    | CN=moodle-binduser,OU=Management,OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan |
++----------------+-------------------------------------------------------------------------------------+
+|                | DC=linuxmuster,DC=lan sind mit den Angaben der eigenen Domäne zu ersetzen.          |
++----------------+-------------------------------------------------------------------------------------+
+| Kennwort       | geheim (angezeigtes Kennwort, das in der datei hinterlegt wurde)                    |
++----------------+-------------------------------------------------------------------------------------+
+|                | Kennwort des Bind-Users wurde unter 1. in einer Datei auf dem Server abgelegt.      |
++----------------+-------------------------------------------------------------------------------------+
+|                | zur Anzeige ist der Befehl unter 3. erforderlich                                    |
++----------------+-------------------------------------------------------------------------------------+
+| Nutzertyp      | MS ActiveDirectory                                                                  |
++----------------+-------------------------------------------------------------------------------------+
+| Kontexte       | OU=schools,DC=linuxmuster,DC=lan                                                    |
++----------------+-------------------------------------------------------------------------------------+
+|                | Die DC-Einträge sind durch die, der eigenen Domäne zu ersetzen.                     |
++----------------+-------------------------------------------------------------------------------------+
+| Subkontexte    | Ja                                                                                  |
++----------------+-------------------------------------------------------------------------------------+
 
 
 Weitere Einstellungen
