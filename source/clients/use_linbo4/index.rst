@@ -240,7 +240,9 @@ Wird ein neuer Dateiname gewählt, kann man Informationen zu dem neuen Image ver
 
 .. warning:: 
 
-   Vergibt man einen neuen Dateinamen, sollte man sicher stellen, dass die Cache-Partition über ausreichend Platz verfügt, da das alte Image ebenfalls im Cache gespeichert bleibt. Ist nicht genügend Platz vorhanden, dann schlägt das Erstellen des Abbildes fehl.
+   Vergibt man einen neuen Dateinamen, sollte man sicher stellen, dass die Cache-Partition über ausreichend Platz verfügt, da das alte Image ebenfalls im Cache gespeichert bleibt. Ist nicht genügend Platz vorhanden, dann schlägt das Erstellen des Abbildes fehl. Hier ist vor der Erstellung eines neuen Images sicherzustellen, dass die lokale Cache-Partition vorab geleert wird. 
+   
+   Siehe hierzu das Unterkapitel zum Linbo4-Cache am Ende dieses Hauptkapitels.
 
 Es gibt die beiden Optionen zum Abschluss der Aktion ``erstellen`` oder ``erstellen+hochladen`` den Computer neu zu starten oder
 herunterzufahren.
@@ -365,5 +367,94 @@ Mit ``Enter`` wird der Client gebootet
 .. image:: media/linbo_screen2.png
 
 Mit der Auswahl durch die Pfeiltasten der Tastatur ``Ersteinrichtung + Neustart`` wird Linbo eingerichtet und der Rechner mit Linbo gestartet. Nach dem Neustart stehen alle Linbo-Funktionen zur Verfügung.
+
+Linbo4-Cache: Hinweise
+----------------------
+
+Linbo4 nutzt auf jedem Client eine lokale Cache-Partition, um ein oder mehrere Image/s eine Betriebssystems lokal vorzuhalten. Es lassen sich so unterschiedliche Verhaltensweisen eines Clients entweder via start.conf Datei oder via linbo-remote steuern.
+
+Cache-Verhalten
+^^^^^^^^^^^^^^^
+
+Ausgangszustände des Linbo-Caches können sein:
+
+1.  Cache ist leer.
+2.  Cache beinhaltet ein altes, aber gewünschtes Image.
+3.  Cache beinhaltet ein aktuelles Image.
+4.  Cache beinhaltet ein altes, aber nicht mehr gewünschtes Image.
+5.  Cache beinhaltet zwei alte, aber gewünschte Images.
+6.  Cache beinhaltet zwei aktuelle Images.
+7.  Cache beinhaltet zwei alte, aber nicht mehr gewünschte Images.
+
+Weitere Fälle sind denkbar. 
+
+- Welches Verhalten stellt sich dar? 
+- Welche Wirkung hat in Linbo der Befehl initcache - also eine vorherige Bereinigung / neue Befüllung des Linbo-Caches?
+
+1. Fall 1, das Image wird geladen ohne „initcache“.
+2. Fall 2, das neue Image wird geladen ohne „initcache“, das alte wird gelöscht.
+3. Fall 3, nichts passiert, ob mit oder ohne „initcache“.
+4. Fall 4, ohne „initcache“ läuft man Gefahr, dass der Cache voll läuft, mit „initcache“ wird das überflüssige Image gelöscht.
+5. Fall 5, die Images werden geladen (ohne „initcache“), die alten Images werden gelöscht.
+6. Fall 6, nichts passiert, ob mit oder ohne „initcache“.
+7. Fall 7, ohne „initcache“ läuft man Gefahr, dass der Cache voll läuft; mit „initcache“ werden die Images gelöscht und die neuen Images geladen.
+
+
+Grundsätzlich gilt:
+
+- ``initcache`` ist dann hilfreich, wenn
+
+  ..  ein neues Image nur in den Cache heruntergeladen werden soll,
+  ..  der Client mehrere Images für mehrere BS vorhält und neue Versionen in einem Schwung in den lokalen Cache heruntergeladen werden sollen,
+  ..  es für den Client ein Image mit neuem Namen gibt und sichergestellt werden soll, dass vor dem Herunterladen das Image mit dem alten Namen gelöscht wird, um Platzproblemen im Cache vorzubeugen.
+
+- ``initcache`` ist überflüssig, wenn nur ein Betriebssystem mit einem neuen Image gesynct werden soll und es keinen Grund gibt den Cache aufzuräumen. Das Image wird auch mit sync heruntergeladen.
+
+- ``initcache`` ist kontraproduktiv, wenn der Client mehrere Images vorhält und beim Sync dann u.U. länger als nötig unbenutzbar ist, weil zuerst alle neuen Images (nicht nur das zu syncende) heruntergeladen werden.
+
+Initcache anwenden
+^^^^^^^^^^^^^^^^^^
+
+**Option 1**
+
+In der Hardwareklasse (HWK) besteht für Linbo in der start.conf die Möglichkeit die Option
+
+.. code::Bash
+
+   [LINBO]                       # globale Konfiguration
+   Cache = /dev/sda6             # lokale Cache Partition
+   Server = 10.0.0.1             # IP des Linbo-Servers, der das Linbo-Repository vorhaelt
+   Group = r101                  # Name der Rechnergruppe fuer die diese Konfigurationsdatei gilt
+   SystemType = efi64            # moeglich ist bios|bios64|efi32|efi64 (Standard: bios fuer bios 32bit)
+   RootTimeout = 600             # automatischer Rootlogout nach 600 Sek.
+   AutoPartition = no            # automatische Partitionsreparatur beim LINBO-Start
+   AutoFormat = no               # kein automatisches Formatieren aller Partitionen beim LINBO-Start
+   AutoInitCache = no            # kein automatisches Befuellen des Caches beim LINBO-Start
+   DownloadType = torrent        # Image-Download per torrent|multicast|rsync, default ist rsync
+   KernelOptions = quiet splash  # 
+
+Wird der Parameter ``AutInitCache=yes`` gesetzt, so wird der lokale Cache jedesmal vollständig neu befüllt. Das ist entsprechend der oben beschriebenen Fälle allerdings nicht immer sinnvoll.
+
+**Option 2**
+
+Vom linuxmuster.net Server aus wird mit ``linbo-remote`` das Verhalten für initcache bei Bedarf gezielt gesteuert. In der start.conf der Linbo-HWK ist die Option ``AutoInitCache=no`` gesetzt.
+
+Mit folgendem Befehl, der auf dem Server abgesetzt wird, lässt sich der Cache beim nächsten Boot-Vorgang des betreffenden PCs neu befüllen:
+
+.. code::Bash
+
+   linbo-remote -i r100-pc01 -w 45 -p initcache,sync:1,sync:2,sync:3,start:2
+   
+Es werden WOL-Pakete an den PC r100-pc01 gesendet, um diesen "aufzuwecken". Nach einer Wartezeit von 45 Sekunden werden die angegebenen Befehle an den Client weitergegeben. Es
+wird der Cache neu befüllt, das 1., 2. und 3. Betriebssystem synchronisiert und das 2. Betriebssystem gestartet.
+   
+Dies kann ebenfalls für eine ganze Rechnergruppe angewendet werden:
+
+.. code::Bash
+
+   linbo-remote -g r101 -w 60 -p initcache,sync:1;sync:2,sync:3,start:2
+   
+Es werden ein WOL-Pakete an alle PCs der Geruppe r101 gesendet, um diese "aufzuwecken". Nach einer Wartezeit von 60 Sekunden werden die angegebenen Befehle an dien Clients weitergegeben. Es
+wird der Cache neu befüllt, das 1., 2. und 3. Betriebssystem synchronisiert und das 2. Betriebssystem gestartet.
 
 
