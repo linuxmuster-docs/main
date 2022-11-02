@@ -440,8 +440,7 @@ Nach erfolgreicher Übernahme erhältst Du den Hinweis, dass Du Dich mit der LAN
    :align: center
    :alt: OPNsense: GUI IP
 
-Bevor Du das aber machst, erfolgt ein letzter Test:
-
+Bevor Du das aber machst, erfolgt ein letzter Test, und zwar mit der Aktualisierung der Opnsense.
 #####
 
 Aktualisierung der OPNsense |reg|
