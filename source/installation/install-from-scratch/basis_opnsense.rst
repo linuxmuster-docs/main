@@ -106,7 +106,7 @@ Installiere nun OPNsense |reg| via ``Install (UFS)``.
    :align: center
    :alt: OPNsense: Install (UFS)
 
-Bestätige die Festplatte und wähle ``Install (UFS) UFS GPR/UEFI Hybrid``. 
+Bestätige die Festplatte und wähle ``Install (UFS) UFS GPT/UEFI Hybrid``. 
 
 Jetzt wird OPNsense |reg| auf der Festplatte installiert. Zuvor musst Du diese noch auswählen.
 
