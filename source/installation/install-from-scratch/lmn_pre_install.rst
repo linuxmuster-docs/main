@@ -125,7 +125,7 @@ Installation mit Standard-Vorgaben oder Deinen Vorgaben
 
    lmn-prepare -p server -l /dev/sdb -v var:10,linbo:40,global:10,default-school:100%FREE
 
-Für weitere Informationen bitte https://github.com/linuxmuster/linuxmuster-prepare beachten
+Für zusätzliche Informationen bitte https://github.com/linuxmuster/linuxmuster-prepare beachten
 
 Es wird hier also eine Erstinstallation (-i) mit dem Profil ``server`` auf der zweiten Festplatte (/dev/sdb) durchgeführt. Auf der zweiten Platte  werden vier Volumes mit 10G, 40G, 10G und dem verbleibenden Rest der zweiten Festplatte eingerichtet.
 
