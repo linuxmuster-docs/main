@@ -27,6 +27,8 @@ Anlegen und Installieren des Servers
    
    Achte darauf, dass vor dem Start der VM beide Festplatten der VM zugewiesen wurden.
 
+.. hint:: Für Anwender einer Virtualisierungslösung wird empfohlen an dieser Stelle ein Snapshot zu erstellen!
+
    Bei der Einrichtung des Servers musst Du nur einen Server mit 2 HDDs haben und Ubuntu 18.04 auf der ersten HDD installieren. Die zweite HDD bleibt frei. Auf dieser 2. HDD richtest Du - wie nachstehend beschrieben -  ein LVM ein.
 
 Erster Start des Servers vom Installationsmedium
