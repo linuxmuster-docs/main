@@ -486,6 +486,9 @@ Anschließend sollte der Log-in nach der Eingabe des Passwortes ``Muster!`` erfo
 
 .. figure:: media/basis_server_026.png
 
+
 Mit ``0) Logout`` beendest Du die Verbindung.
+
+.. hint:: Für Anwender einer Vrtualisierungslösung empfehlen wir an dieser Stelle einen Snapshot zu erstellen!
 
 Weiter geht es jetzt mit :ref:`lmn_pre_install-label`
