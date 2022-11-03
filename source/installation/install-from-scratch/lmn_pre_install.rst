@@ -9,6 +9,8 @@ Server auf lmn7.1 vorbereiten
 .. sectionauthor:: `@rettich <https://ask.linuxmuster.net/u/rettich>`_,
                    `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
+                  
+.. hint:: Für Anwender einer Virtualisierungslösung wird empfohlen an dieser Stelle ein Snapshot zu erstellen!
 
 Nachdem Du die Firewall und den Server wie beschrieben installiert hast, müssen beide Maschinen fertig konfiguriert werden. Um dieses zu vereinfachen, stellen wir Dir das Skript ``lmn-prepare`` zur Verfügung.
 
