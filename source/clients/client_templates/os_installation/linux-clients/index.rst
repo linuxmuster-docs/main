@@ -28,6 +28,26 @@ Falls Du das noch nicht getan hast, starte zuerst mit den Schritten, die im Kapi
 Einrichten eines Linux-Clients
 ==============================
 
+
+Imagenamen eintragen (HWK)
+--------------------------
+
+Vor der Installation bzw. Imageerstellung musst Du eine Hardwareklasse zuweisen, sofern nicht bereits bei der Rechneraufnahme erfolgt. 
+Gehe dazu in der WebUI auf ``Geräteverwaltung -> Linbo 4 -> Gruppen -> <hwk auswählen>``. Klicke für die gewünschte HWK das Stift-Symbol, um die Einstellungen anzupassen.
+Es öffnet sich das Fenster mit den Einstellungen für die HWK. Wähle hier unter ``Partitionen`` Dein Betriebssystem (Reiterkarte ``OS``) aus und klicke das Stift-Icon. Klicke in dem sich öffnenden Fenster die Reiterkarte unter ``OS`` und klicke auf das ``+`` - Symbol, um einen neuen Eintrag für das ``Basisisimage`` festzulegen. Alternativ kannst Du auch einen Nmane
+aus der Drop-down Liste auswählen. Bei der Erstellung des Erstimages wird ein vorhandenes überschrieben. (vgl. hierzu auch das Vorgehen unter ref:`add-computer-label`).
+
+.. figure:: media/00-webui-linbo-edit-new-group-os-infos-edited.png
+   :align: center
+   :alt: Ubuntu Installation: indicate image name
+
+Übernehme die Eintragungen jeweils mit ``Speichern & Importieren``. Danach wird automatisch ein Import der Geräte ausgeführt, um diese Einstellungen für alle Geräte der HWK zu übernehmen.
+
+.. hint::
+
+   Das neue Image befindet sich später auf dem Server unter ``/srv/linbo/images/<os>/`` - also für o.g. Abb. z.B. /srv/linbo/images/ubuntu/pop_os_mlm.qcow2
+
+
 Client OS installieren
 ----------------------
 
@@ -95,7 +115,11 @@ Klicke nun unten rechts auf das Werkzeug-Icon, um zum Menü für die Imageerstel
    :align: center
    :alt: Ubuntu Installation: Menue Tools
 
-Du wirst nach nach dem Linbo-Passwort gefragt. Gib dieses ein. Deine Eingabe wird hierbei nicht angeziegt.
+Du wirst nach dem Linbo-Passwort gefragt. Gib dieses ein. 
+
+.. attention:: 
+
+   Deine Eingabe wird hierbei nicht angezeigt.
 
 .. figure:: media/08-linux-client-ubu-install.png
    :align: center
@@ -115,7 +139,7 @@ Es wird ein neues Fenster geöffnet:
    :align: center
    :alt: Ubuntu Installation: linbo imaging
 
-Wähle aus, dass Du ein neues Image erstellen möchtest, gib einen Namen für das Image an und klicke auf ``erstellen + hochladen``.
+Wähle aus, dass Du das aktuelle Image ersetzen möchtest. Gibt es das Image noch nicht, so wird ein neues Image mit dem zuvor in der WebUI festgelegten Namen erstellt.
 
 Während des Vorgangs siehst Du nachstehenden Bildschirm:
 
@@ -125,7 +149,7 @@ Während des Vorgangs siehst Du nachstehenden Bildschirm:
 
 Zum Abschluss erscheint die Meldung, dass das Image erfolgreich hochgeladen wurde.
 
-.. figure:: media/11a-linux-client-ubu-install.png
+.. figure:: media/12-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Installation: image uploaded successfully
 
@@ -133,38 +157,18 @@ Gehe durch einen Klick auf das Zeichen ``<`` zurück und klicke im nächsten Bil
 
 Du siehst nun drei Start-Icons. Der grosse Icons started das Image sychronisiert, während das grüne Icon das locale Image started.
 
-.. figure:: media/11b-linux-client-ubu-install.png
+.. figure:: media/13-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Installation: image uploaded - new menue icons
 
-Bevor Du nun das Image startest, musst Du zuerst noch die Hardwareklasse anpassen.
 
-Imagenamen eintragen (HWK)
---------------------------
-
-Nachdem Du nun das Image erstellt hast, musst Du es noch Deiner Hardwareklasse zuweisen. Denn zu Beginn hattest Du bei der Rechneraufnahme für das Basisimage noch ``None`` eingetragen, bzw. stehen gelassen.
-Gehe dazu in der WebUI auf ``Geräteverwaltung -> Linbo 4 -> Gruppen -> <hwk auswählen>``. Klicke für die gewünschte HWK das Stift-Symbol, um die Einstellungen anzupassen.Es öffnet sich das Fenster mit den Einstellungen für die HWK. Wähle hier unter ``Partitionen`` Dein Betriebssystem (Reiterkarte ``OS``) aus und klicke das Stift-Icon. Klicke in dem sich öffnenden Fenster die Reiterkarte unter ``OS`` und klicke unter dem Eintrag ``Basisimage`` auf die Drop-down Liste und wähle das erstellte Image aus. (vgl. hierzu auch das Vorgehen unter ref:`add-computer-label`).
-
-.. figure:: media/12-linux-client-ubu-install.png
-   :align: center
-   :alt: Ubuntu Installation: indicate image name
-
-Übernehme die Eintragungen jeweils mit ``SPEICHERN``. Danach wird automatisch ein Import der Geräte ausgeführt, um diese Einstellungen für alle Geräte der HWK zu übernehmen.
-
-Alternativ kannst Du in der WebUI unter der ``Geräteverwaltung ->  Speichern & Importieren`` klicken.
-
-Starte danach den Client erneut mit Linbo und klicke nun das große Festplattensymbol bzw. das Symbol, welches Du ausgewählt hast, um Ubuntu synchronisiert zu starten.
-
-.. hint::
-
-   Das neue Image befindet sich auf dem Server unter ``/srv/linbo/images/<os>/`` - also z.B. /srv/linbo/images/ubuntu/ubuntu.qcow2
 
 Paket linuxmuster-linuxclient7 installieren
 --------------------------------------------
 
 Melde Dich an dem gestarteten Ubuntu 22.04 als Benutzer ``linuxadmin`` an.
 
-.. figure:: media/13-linux-client-ubu-install.png
+.. figure:: media/14-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Setup: Login as linuxadmin
 
