@@ -67,13 +67,15 @@ Löschst Du dort z.B. die Partitionen ``swap`` und ``data`` so sieht Deine Parti
    :align: center
    :alt: WebUI linbo edit new hwc group - partition scheme edited
 
-Um Einstellungen für das Betriebssystem vorzunehmen, klickst Du auf das Stift-Icon (hier für Ubuntu) und es öffnet sich ein weiteres Fenster, um Einstellungen für das Betriebssystem vorzunehmen.
+Um Einstellungen für das Betriebssystem vorzunehmen, klickst Du auf das Stift-Icon. Es öffnet sich ein weiteres Fenster, um Einstellungen für das Betriebssystem vorzunehmen.
 
 .. figure:: media/08-webui-linbo-edit-new-group-os-infos-edited.png
    :align: center
    :alt: WebUI linbo edit new hwc group - os edited
 
-Unter der Reiterkarte ``OS`` legst Du für das Betriebssystem (OS) die gewünschten Icons, die Start-Optionen und u.a. auch den Namen für das Basisimage fest. Zu Beginn bleibt hier der Eintrag ``None`` noch stehen und auch bei ``Start Optionen`` muss ``Autostart`` deaktiviert bleiben, da Du erst das Image für den Muster-Client erstellen musst.
+Unter der Reiterkarte ``OS`` legst Du für das Betriebssystem (OS) die gewünschten Icons, die Start-Optionen und u.a. auch den Namen für das Basisimage fest. Um ein neues Image festzulegen, klickst Du 
+auf das ``+`` - Zeichen und trägst einen neuen Namen für das Image ein. Achte darauf, dass die Dateiendung ``.qcow2`` lautet. Um nun das neue Image zu erstellen, startest Du den Client neu. Es wird 
+das bestehende Image, das unter Basisimage angelegt bzw. ausgewählt wurde - hier das noch nicht existierende Image pop_os_mim.qwco2 -, überschrieben. 
 
 Auf dem linuxmuster.net Server werden die start.conf-Dateien im Verzeichnis ``/srv/linbo`` abgelegt. Jede Hardwareklasse hat eine eigene start.conf-Datei. Für die neu angelegte Hardwareklasse des Muster-Clients wurde dort nun eine Datei ``start.conf.<name-der-hwk>`` erstellt (z.B. start.conf.ubu20efi).
 
@@ -144,7 +146,7 @@ Folgende Konfiguration zeigt ein mögliches Beispiel für die ``Hardwareklasse u
    Description = Ubuntu 20.04
    IconName = ubuntu.svg
    Image =
-   BaseImage = ubuntu.qcow2
+   BaseImage = ubuntu.qcow2 # Name des neu angelegten Images in obiger Abb. ist dies: pop_os_mlm.qcow2
    Boot = /dev/sda2
    Root = /dev/sda2
    Kernel = /boot/vmlinuz
