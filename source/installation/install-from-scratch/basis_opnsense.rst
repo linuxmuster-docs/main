@@ -21,8 +21,8 @@ Lade Dir die ISO-Datei der OPNsense |reg| von der Seite https://opnsense.org/dow
 
 .. hint::
 
-   Die zuletzt freigegeben OPNsense Version für das Setup von linuxmuster.net v7.1 ist die Version 22.1. 
-   https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-22.1-OpenSSL-dvd-amd64.iso.bz2
+   Die zuletzt freigegeben OPNsense Version für das Setup von linuxmuster.net v7.1 ist die Version 22.7. 
+   https://mirror.informatik.hs-fulda.de/opnsense/releases/22.7/OPNsense-22.7-OpenSSL-dvd-amd64.iso.bz2
 
 Nutze als Architektur ``amd64`` und als "image type" ``dvd`` und einen Mirror, der in Deiner Nähe ist.
 Du erhältst dann ein mit bz2 komprimiertes ISO-Image. Entpacke die heruntergeladene Datei.
@@ -34,11 +34,11 @@ Unter Linux gibst Du auf der Eingabekonsole folgenden Befehl an, der Dir die Dat
 .. code::
 
    tar -xjf <opnsense-dateiname>.iso.bz2
-   tar -xjf OPNsense-22.1-OpenSSL-dvd-amd64.iso.bz2
+   tar -xjf OPNsense-22.7-OpenSSL-dvd-amd64.iso.bz2
 
    Alternativ:
 
-   bunzip OPNsense-22.1-OpenSSL-dvd-amd64.iso.bz2
+   bunzip OPNsense-22.7-OpenSSL-dvd-amd64.iso.bz2
 
 
 Brenne die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren USB-Stick an. In einer Virtualisierungsumgebung lädst Du die ISO-Datei auf den ISP-Speicher.

@@ -616,36 +616,35 @@ Prüfsummendatei (<filename>.sha256)
 
 .. code::
 
-   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/22.1/OPNsense-22.1.2-OpenSSL-checksums-amd64.sha256
-
+   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/22.7/OPNsense-22.7-OpenSSL-checksums-amd64.sha256
+   
 Signatur Datei (<filename>.sig)
 	
 .. code:: 
 
-   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/22.1/OPNsense-22.1.2-OpenSSL-dvd-amd64.iso.bz2.sig
+   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/22.7/OPNsense-22.7-OpenSSL-dvd-amd64.iso.bz2.sig
 
 Der öffentliche Schlüssel von OPNsense |reg| (<filename>.pub)
 
 .. code::
 
-   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/22.1/OPNsense-22.1.pub
+   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/22.7/OPNsense-22.7.pub
 
 Die komprimierte ISO Datei (<filename>.iso.bz2)
 
 .. code::
 
-   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/22.1/OPNsense-22.1.2-OpenSSL-dvd-amd64.iso.bz2
-
+   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/22.7/OPNsense-22.7-OpenSSL-dvd-amd64.iso.bz2
+   
 Überprüfen der heruntergeladenen Dateien auf deren Integrität:
 
 .. code::
    
-   openssl base64 -d -in OPNsense-22.1.2-OpenSSL-dvd-amd64.iso.bz2.sig -out /tmp/image.sig
-
+   openssl base64 -d -in OPNsense-22.7-OpenSSL-dvd-amd64.iso.bz2.sig -out /tmp/image.sig
 
 .. code::
 
-   openssl dgst -sha256 -verify OPNsense-22.1.pub -signature /tmp/image.sig OPNsense-22.1.2-OpenSSL-dvd-amd64.iso.bz2
+   openssl dgst -sha256 -verify OPNsense-22.7.pub -signature /tmp/image.sig OPNsense-22.7-OpenSSL-dvd-amd64.iso.bz2
 
 Der letzte Befehl sollte Dir ein ``Verified OK`` liefern.
 
@@ -653,7 +652,7 @@ Nun gilt es, die ISO-Datei auszupacken. Das machst Du mit folgendem Befehl:
 
 .. code::
 
-   bunzip2 OPNsense-22.1.2-OpenSSL-dvd-amd64.iso.bz2
+   bunzip2 OPNsense-22.7-OpenSSL-dvd-amd64.iso.bz2
 
 Das Entpacken kann einige Zeit in Anspruch nehmen. Anschließend sollte sich in dem Verzeichnis die OPNsense-ISO-Datei befinden. Die daneben befindlichen anderen OPNsense-Datei kannst Du nun wieder löschen.
 
