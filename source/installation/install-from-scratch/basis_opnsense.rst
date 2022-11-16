@@ -22,7 +22,7 @@ Lade Dir die ISO-Datei der OPNsense |reg| von der Seite https://opnsense.org/dow
 .. hint::
 
    Die zuletzt freigegeben OPNsense Version für das Setup von linuxmuster.net v7.1 ist die Version 22.7. 
-https://mirror.informatik.hs-fulda.de/opnsense/releases/22.7/OPNsense-22.7-OpenSSL-dvd-amd64.iso.bz2
+   https://mirror.informatik.hs-fulda.de/opnsense/releases/22.7/OPNsense-22.7-OpenSSL-dvd-amd64.iso.bz2
 
 Nutze als Architektur ``amd64`` und als "image type" ``dvd`` und einen Mirror, der in Deiner Nähe ist.
 Du erhältst dann ein mit bz2 komprimiertes ISO-Image. Entpacke die heruntergeladene Datei.

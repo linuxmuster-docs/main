@@ -617,7 +617,7 @@ Prüfsummendatei (<filename>.sha256)
 .. code::
 
    wget https://mirror.informatik.hs-fulda.de/opnsense/releases/22.7/OPNsense-22.7-OpenSSL-checksums-amd64.sha256
-
+   
 Signatur Datei (<filename>.sig)
 	
 .. code:: 
@@ -641,7 +641,6 @@ Die komprimierte ISO Datei (<filename>.iso.bz2)
 .. code::
    
    openssl base64 -d -in OPNsense-22.7-OpenSSL-dvd-amd64.iso.bz2.sig -out /tmp/image.sig
-
 
 .. code::
 
