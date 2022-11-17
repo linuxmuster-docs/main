@@ -24,9 +24,13 @@ Netzwerkmaske ``255.255.0.0``, dem Gateway ``10.0.0.254`` und dem DNS-Eintrag ``
 
    Achte darauf, dass vor dem Setup die Verbindung zur Schulkonsole via URL noch unverschlüsselt mit HTTP erfolgt.
    
-   Sollte das nicht möglich sein, überprüfe das hier geschriebene: https://ask.linuxmuster.net/t/lmn-7-1-linuxmuster-prepare-webui-laeuft-nicht/8655/15
 
-.. hint:: Workaround entfernen nach Überprüfung.
+   Sollte das nicht möglich sein: Führe auf dem Server folgende Befehle aus:
+   
+.. code::
+
+   sudo pip3 install Jinja2 
+   sudo service linuxmuster-webui start   
 
 Es erscheint der Hinweis, dass Du das Webinterface nicht als Benutzer root benutzen sollst, es sei denn, Du verwendest dieses das erste Mal.
 
