@@ -70,9 +70,12 @@ Klicke auf den Button ``+ Lehrer hinzufügen``. Es wird eine leere Zeile hinzuge
 
 .. hint::
 
-   Wie dargestellt führt der Benutzername bo.hans zu einem Importfehler ! Im Benutzernamen darf kein Punkt enthalten sein. VornameNachname oder nur Nachname wären hingegen zulässige Benutzernamen.
+   Wie dargestellt führt der ``Benutzername bo.hans zu einem Importfehler`` ! Im Benutzernamen darf kein Punkt enthalten sein. ``vornamenachname`` oder nur ``nachname`` wären hingegen zulässige Benutzernamen.
+   
+.. attention::
 
-
+   Der angegebene Benutzername darf keine Leerzeichen, Punkte und Großbuchstaben enthalten. Anderfalls kommt es bei ``Speichern & Prüfen`` zu einer Fehlermeldung
+   
 Mit ``+ Lehrer hinzufügen`` können auf diese Art und Weise weitere Lehrer einzeln aufgenommen werden. Klicke nach dem Eintragen aller der Daten unten auf den Button ``Speichern & Prüfen``.
 
 Es erscheint ein Fenster, in dem Du siehst, wie mit den angegebenen Benutzerdaten verfahren wird.
