@@ -123,7 +123,7 @@ Installation mit Standard-Vorgaben oder Deinen Vorgaben
 
 .. code-block:: Bash
 
-   lmn-prepare -p server -l /dev/sdb -v var:10,linbo:40,global:10,default-school:100%FREE
+   lmn-prepare -i -p server -l /dev/sdb -v var:10,linbo:40,global:10,default-school:100%FREE
 
 Für zusätzliche Informationen bitte https://github.com/linuxmuster/linuxmuster-prepare beachten
 
