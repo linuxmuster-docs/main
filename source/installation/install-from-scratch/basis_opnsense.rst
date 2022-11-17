@@ -514,7 +514,11 @@ System: Assistent: Zeitserverinformation
 
 .. figure:: media/basis_opnsense_044.png
 
-Die Angaben zum Time Server übernimmst Du mit ``Next``.
+Die Angaben zum Time Server belässt Du wie angegeben. Den Eintrag für die Zeitzone änderst Du auf ``Europ/Berlin`` wie in nachstehender Abbildung.
+
+.. figure:: media/basis_opnsense_044a.png
+
+Die Angaben übernimmst Du mit ``Next``.
 
 #####
 

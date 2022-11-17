@@ -123,7 +123,7 @@ Installation mit Standard-Vorgaben oder Deinen Vorgaben
 
 .. code-block:: Bash
 
-   lmn-prepare -p server -l /dev/sdb -v var:10,linbo:40,global:10,default-school:100%FREE
+   lmn-prepare -i -p server -l /dev/sdb -v var:10,linbo:40,global:10,default-school:100%FREE
 
 Für zusätzliche Informationen bitte https://github.com/linuxmuster/linuxmuster-prepare beachten
 
@@ -150,11 +150,38 @@ Es wird zuerst das LVM auf der zweiten Platte eingerichtet, danach werden alle e
    # Gateway   : 10.0.0.254
    # Interface : ens18
    # Swapsize  : 2G
-  # LVM device: /dev/sdb
-  # LVM vlms  : var:10,linbo:40,global:10,default-school:100%FREE
+   # LVM device: /dev/sdb
+   # LVM vlms  : var:10,linbo:40,global:10,default-school:100%FREE
   
-  ### Finished - a reboot is necessary!
+   ### Finished - a reboot is necessary!
 
-Gebe in der Konsole nun den Befehl ``reboot`` ein.
+.. attention::
 
+   !!! ``Keinen Reboot`` durchführen !!!
+   
+   
+   Obwohl die Ausgabe von linuxmuster-prepare Dich dazu auffordert, darfst Du den Server nicht neu starten!
+   
+   
+Zeitservereinstellungen überprüfen
+----------------------------------
+
+Nachdem Du nun den Server vorbereitet hast, überprüfe die Zeiteinstellungen auf dem Server. Dazu gibst Du in der Konsole folgenden Befehl an:
+
+.. code-block:: Bash
+
+   timedatectl
+   
+Es wird hier noch die UTC-Zeit angegeben. Wie für die OPNsense muss nun die Zeitzone angepasst werden.
+Die erfolgt mit folgendem Befehl:
+
+.. code-block:: Bash
+
+   timedatectl set-timezone Europe/Berlin
+   # erneute Ausgabe der Zeiteinstellungen mit
+   timedatectl
+   
+Du solltest nun als Zeitzone ``Europe/Berlin`` und die korrekte Lokalzeit sowie die korrkte UTC - Zeit angezeigt bekommen.
+ 
+   
 Danach steht dem :ref:`setup-label` nichts mehr im Wege.

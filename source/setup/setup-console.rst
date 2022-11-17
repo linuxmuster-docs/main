@@ -121,7 +121,7 @@ Danach gelangst Du zur Angabe der sogenannten Domain. Beachte bei dessen Festleg
 
    Weitergehende Informationen findest du hier: https://wiki.samba.org/index.php/Active_Directory_Naming_FAQ
 
-Nachdem du deine Eingabe getätigt hast, bestätige diese mit ``< OK >``. 
+Bestätige Deine Eingabe mit ``< OK >``. 
 
 Es erscheint der IP-Adressbereich, der für die Rechneraufnahme mit Linbo reserviert wird. In der Abb. ist dies der Bereich ``10.0.0.100`` bis ``10.0.0.200``.
 
