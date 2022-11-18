@@ -185,7 +185,27 @@ Weitere Einstellungen
 | Daten übernehmen (E-Mail-Adresse)   | Leer                                                      |
 +-------------------------------------+-----------------------------------------------------------+
 
-Die Änderungen sind abschließend über Schaltfläche am Seitenende zu sichern. In der Übersicht 
+**Nutzersuche (user lookup)**
+
++-------------------------------------+-----------------------------------------------------------+
+| ObjectClass (auth_ldap|objectclass) | (\|(sophomorixRole=teacher)(sophomorixRole=student))      |
++-------------------------------------+-----------------------------------------------------------+
+|                                     | Filter: Nur Lehrer und SuS, keine Maschinen-Accounts      |
++-------------------------------------+-----------------------------------------------------------+
+
+Zum Testen, ob der Filter korrekt arbeitet, sollte zugleich die Einstellung zur Synchronisierung von 
+Nutzerkonten wie folgt angepasst werden:
+
+**Synchronisierung von Nutzerkonten (user account synchronisation)**
+
++-------------------------------------+-----------------------------------------------------------+
+| Entfernte externe Nutzer/innen      |  für Tests: intern sperren (suspend  internal)            |                                    
+| (auth_ldap|removeuser)              |                                                           |
++-------------------------------------+-----------------------------------------------------------+
+|                                     | danach: intern löschen (delete internal)                  |
++-------------------------------------+-----------------------------------------------------------+
+
+Die Änderungen sind abschließend über die Schaltfläche am Seitenende zu sichern. In der Übersicht 
 der ``Aktiven Plugins`` ist der LDAP-Server zur Authentifizierung zu aktivieren.
 
 Host-Einstellungen

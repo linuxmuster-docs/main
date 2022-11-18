@@ -11,7 +11,48 @@ Server auf lmn7.1 vorbereiten
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
                   
 
-Nachdem Du die Firewall und den Server wie beschrieben installiert hast, müssen beide Maschinen fertig konfiguriert werden. Um dieses zu vereinfachen, stellen wir Dir das Skript ``lmn-prepare`` zur Verfügung.
+Nachdem Du die Firewall und den Server wie beschrieben installiert hast, müssen beide Maschinen fertig konfiguriert werden.
+
+Passe zuerst die Zeitzone an und deinstalliere cloud-init.
+
+Vorbereitungen
+==============
+
+Zeitservereinstellungen überprüfen
+----------------------------------
+
+Nachdem Du nun den Server vorbereitet hast, überprüfe die Zeiteinstellungen auf dem Server. Dazu gibst Du in der Konsole folgenden Befehl an:
+
+.. code-block:: Bash
+
+   timedatectl
+   
+Es wird hier noch die UTC-Zeit angegeben. Wie für die OPNsense muss nun die Zeitzone angepasst werden.
+Die erfolgt mit folgendem Befehl:
+
+.. code-block:: Bash
+
+   timedatectl set-timezone Europe/Berlin
+   # erneute Ausgabe der Zeiteinstellungen mit
+   timedatectl
+   
+Du solltest nun als Zeitzone ``Europe/Berlin`` und die korrekte Lokalzeit sowie die korrkte UTC - Zeit angezeigt bekommen.
+ 
+ 
+Cloud-init deinstallieren
+-------------------------
+
+Cloud-init kannst Du unter Ubuntu mit folgenden Schritten löschen:
+
+.. code-block:: Bash
+
+   # Disable start
+   sudo touch /etc/cloud/cloud-init.disabled
+   # Uninstall
+   sudo apt-get purge cloud-init
+   sudo rm -rf /etc/cloud/ && sudo rm -rf /var/lib/cloud/
+   # Reboot
+   sudo reboot
 
 Das Skript lmn-prepare
 ========================
@@ -161,27 +202,6 @@ Es wird zuerst das LVM auf der zweiten Platte eingerichtet, danach werden alle e
    
    
    Obwohl die Ausgabe von linuxmuster-prepare Dich dazu auffordert, darfst Du den Server nicht neu starten!
-   
-   
-Zeitservereinstellungen überprüfen
-----------------------------------
-
-Nachdem Du nun den Server vorbereitet hast, überprüfe die Zeiteinstellungen auf dem Server. Dazu gibst Du in der Konsole folgenden Befehl an:
-
-.. code-block:: Bash
-
-   timedatectl
-   
-Es wird hier noch die UTC-Zeit angegeben. Wie für die OPNsense muss nun die Zeitzone angepasst werden.
-Die erfolgt mit folgendem Befehl:
-
-.. code-block:: Bash
-
-   timedatectl set-timezone Europe/Berlin
-   # erneute Ausgabe der Zeiteinstellungen mit
-   timedatectl
-   
-Du solltest nun als Zeitzone ``Europe/Berlin`` und die korrekte Lokalzeit sowie die korrkte UTC - Zeit angezeigt bekommen.
+  
  
-   
-Danach steht dem :ref:`setup-label` nichts mehr im Wege.
+Jetzt steht dem :ref:`setup-label` nichts mehr im Wege.
