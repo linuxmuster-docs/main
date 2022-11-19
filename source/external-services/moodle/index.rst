@@ -208,6 +208,10 @@ Nutzerkonten wie folgt angepasst werden:
 Die Änderungen sind abschließend über die Schaltfläche am Seitenende zu sichern. In der Übersicht 
 der ``Aktiven Plugins`` ist der LDAP-Server zur Authentifizierung zu aktivieren.
 
+.. attention::
+
+Nachdem alle Einstellungen getroffen sind, unbedingt alle Caches leeren!
+
 Host-Einstellungen
 ==================
 
