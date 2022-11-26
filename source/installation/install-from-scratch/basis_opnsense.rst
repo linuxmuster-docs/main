@@ -38,7 +38,7 @@ Unter Linux gibst Du auf der Eingabekonsole folgenden Befehl an, der Dir die Dat
 
    Alternativ:
 
-   bunzip OPNsense-22.7-OpenSSL-dvd-amd64.iso.bz2
+   bunzip2 OPNsense-22.7-OpenSSL-dvd-amd64.iso.bz2
 
 
 Brenne die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren USB-Stick an. In einer Virtualisierungsumgebung lädst Du die ISO-Datei auf den ISP-Speicher.
