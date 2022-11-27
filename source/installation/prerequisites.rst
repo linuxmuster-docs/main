@@ -18,7 +18,7 @@ Hardware
 OPNsense®
 ---------
 
-OPNsense® ist für x86-32 und x86-64 Bit Architekturen verfügbar und kann auf SD-Karte, SSDs oder HDDs installiert werden. Es wird empfohlen folgende Hardware-Anforderungen zu erfüllen, um die Mehrzahl der Einsatzszenarien abzudecken:
+OPNsense® ist für x86-32 und x86-64 Bit Architekturen verfügbar und kann auf SD-Karte, SSDs oder HDDs installiert werden. Folgende Mindestanforderung muss erfüllt sein:
 
 ==================== ==================================
 Prozessor            >= 1.5 GHz Multi-Core CPU (64 Bit)
@@ -28,6 +28,15 @@ Festplatte           mind. 20 GByte, z.B. 120 GByte SSD
 NIC                  - mind. 2 (intern + extern)
                      - oder  3 (intern + extern + WLAN)
 ==================== ==================================
+
+.. attention::
+
+   Die Firewall erstellt viele Log-Einträge, so dass der Festplattenplatz und zudem auch der Arbeitsspeicher deutlich über der Mindestanforderung liegen sollte. Als Standard
+   schreibt die OPNsense Einträge für einen 30 Tageszeitraum mit. Wir raten, den Zeitraum in den Einstellungen (``System --> Einstellungen --> Protokollierung``) 
+   individuell zu verkleinern und nur bei Bedarf und ausreichendem Plattenplatz zu erhöhen. Ein logrotate müsste bei Bedarf in der crontab angelegt werden.
+
+   Empfehlung: RAM --> 8GiB, HDD --> 50GiB
+
 
 Weitere Hinweise zu möglichen Hardwareanforderungen bei unterschiedlichen Einsatzszenarien finden sich `hier <https://wiki.opnsense.org/manual/hardware.html#hardware-requirements>`_.
 
