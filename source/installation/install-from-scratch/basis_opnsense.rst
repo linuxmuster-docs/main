@@ -27,21 +27,14 @@ Lade Dir die ISO-Datei der OPNsense |reg| von der Seite https://opnsense.org/dow
 Nutze als Architektur ``amd64`` und als "image type" ``dvd`` und einen Mirror, der in Deiner Nähe ist.
 Du erhältst dann ein mit bz2 komprimiertes ISO-Image. Entpacke die heruntergeladene Datei.
 
-Unter Windows kannst Du dies z.B. mit 7-ZIP durchführen.
-
-Unter Linux gibst Du auf der Eingabekonsole folgenden Befehl an, der Dir die Datei im gleichen Ordner entpackt:
+Gib unter Linux folgenden Befehl an:
 
 .. code::
-
-   tar -xjf <opnsense-dateiname>.iso.bz2
-   tar -xjf OPNsense-22.7-OpenSSL-dvd-amd64.iso.bz2
-
-   Alternativ:
 
    bunzip2 OPNsense-22.7-OpenSSL-dvd-amd64.iso.bz2
 
 
-Brenne die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren USB-Stick an. In einer Virtualisierungsumgebung lädst Du die ISO-Datei auf den ISP-Speicher.
+Brenne die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren USB-Stick an. In einer Virtualisierungsumgebung lädst Du die ISO-Datei auf den ISO-Speicher.
 
 .. hint:: 
 
