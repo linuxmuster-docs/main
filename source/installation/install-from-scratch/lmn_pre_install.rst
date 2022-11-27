@@ -159,18 +159,50 @@ Hier ein Auszug mit den benötigten Optionen, die Du gleich anwenden wirst.
 
 #####
 
-Installation mit Standard-Vorgaben oder Deinen Vorgaben
--------------------------------------------------------
+Installation mit Standard-Vorgaben
+----------------------------------
+
+Hast Du eine zweite HDD mit 100GiB kannst Du lmn-prepare mit den Standard-Werten ausführen.
+
+.. code::
+
+   lmn-prepare -i -p server -l /dev/sdb -u
+
+
+Mit dem Parameter ``-u`` wird dann ein LVM - hier auf der 2. Festplatte (sdb) - mit folgenden Werten eingerichtet:
+
+- var: 10 GiB
+- linbo: 40 GiB
+- global: 10GiB
+- default-school: restlicher Plattenplatz
+
+
+Installation mit Deinen Vorgaben
+---------------------------------
+
+Nachstehendes Beispiel geht davon aus, dass Du eine zweite HDD mit einer Größe von 1TiB hast.
 
 .. code-block:: Bash
 
-   lmn-prepare -i -p server -l /dev/sdb -v var:10,linbo:40,global:10,default-school:100%FREE
+   lmn-prepare -i -p server -l /dev/sdb -v var:50,linbo:500,global:50,default-school:100%FREE
 
-Für zusätzliche Informationen bitte https://github.com/linuxmuster/linuxmuster-prepare beachten
+Für zusätzliche Informationen bitte https://github.com/linuxmuster/linuxmuster-prepare beachten.
 
-Es wird hier also eine Erstinstallation (-i) mit dem Profil ``server`` auf der zweiten Festplatte (/dev/sdb) durchgeführt. Auf der zweiten Platte  werden vier Volumes mit 10G, 40G, 10G und dem verbleibenden Rest der zweiten Festplatte eingerichtet.
+Es wird hier also eine Erstinstallation (-i) mit dem Profil ``server`` auf der zweiten Festplatte (/dev/sdb) durchgeführt. Auf der zweiten Platte  werden vier Volumes mit 
 
-Passe die Größenangaben auf Deine Situation an.
+- var: 50GiB
+- linbo: 500GiB
+- global: 50GiB
+- default-school: verbleibender Rest der zweiten Festplatte - hier 400 GiB -
+
+eingerichtet.
+
+.. attention::
+
+   Passe die Größenangaben auf Deine Situation an.
+
+Ablauf
+------
 
 Es wird zuerst das LVM auf der zweiten Platte eingerichtet, danach werden alle erforderliche Pakete geladen und installiert. Dies kann etwas dauern. Nach Abschluss des Installations- und Vorbereitungsarbeiten wirst Du aufgefordert, den Server neu zu starten.
 
@@ -196,12 +228,7 @@ Es wird zuerst das LVM auf der zweiten Platte eingerichtet, danach werden alle e
   
    ### Finished - a reboot is necessary!
 
-.. attention::
 
-   !!! ``Keinen Reboot`` durchführen !!!
-   
-   
-   Obwohl die Ausgabe von linuxmuster-prepare Dich dazu auffordert, darfst Du den Server nicht neu starten!
-  
- 
-Jetzt steht dem :ref:`setup-label` nichts mehr im Wege.
+Ist lmn-prepare ohne Fehler durchgelaufen, starte den Server nun neu mit dem Befehl: ``reboot``
+
+Danach steht dem :ref:`setup-label` nichts mehr im Wege.
