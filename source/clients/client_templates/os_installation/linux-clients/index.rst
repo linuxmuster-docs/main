@@ -58,6 +58,10 @@ Starte nun den PC/die VM mit den neuen Einstellungen, sodass Ubuntu vom ISO-Imag
 Installation Ubuntu
 -------------------
 
+.. hint::
+    Bei Ubuntu sollte man darauf achten, dass der Firefox nicht als Snap-Paket installiert wird, da damit SSO nicht funktioniert!
+
+
 Gib in den ersten Schritten der Installation die gewünschte Sprache und Tastaturbelegung an.
 
 Bei der ``Installationsart`` wählst Du ``Etwas Anderes`` aus.
