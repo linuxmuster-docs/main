@@ -59,7 +59,7 @@ Installation Ubuntu
 -------------------
 
 .. hint::
-    Bei Ubuntu sollte man darauf achten, dass der Firefox nicht als Snap-Paket installiert wird, da damit SSO nicht funktioniert!
+   Bei Ubuntu sollte man darauf achten, dass der Firefox nicht als Snap-Paket installiert wird, da damit SSO nicht funktioniert! Möglicherweise trifft das    auch auf andere Distribuionen zu!
 
 
 Gib in den ersten Schritten der Installation die gewünschte Sprache und Tastaturbelegung an.
