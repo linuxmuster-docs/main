@@ -294,7 +294,7 @@ Hierbei ist es notwenig, das für das Image in der Registry, den Namen der PCs j
 
    Achtung: Nachdem eine Template-Maschine frisch der Domain gejoined ist, darf diese vor dem Upload nicht neugestartet
    werden, da sonst das durch den DomainJoin neu erstellte Maschinenpasswort in der AD für diese Maschine mit einem 
-   falschen Maschinenpasswort ersetzt werden würde. Durch den Image-Upload wird das neue Passwort ausgelesen und in die reg-Datei 
+   falschen Maschinenpasswort ersetzt werden würde. Durch den Image-Upload wird das neue Passwort ausgelesen und in die macct-Datei 
    geschrieben, die zu dem Image gehört.
 
 
