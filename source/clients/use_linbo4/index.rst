@@ -272,7 +272,7 @@ Dialog: Cache aktualisieren
    :align: center
    :alt: Linbo Update cache
 
-Der Cache wird aktualisiert. Es werden die drei Möglichkeiten der Synchronisation zur Auswahl gegeben: Rsync, Multicast oder Bittorrent.
+Der Cache wird aktualisiert. Es werden die drei Möglichkeiten der Synchronisation zur Auswahl gegeben: Rsync, Multicast oder Torrent.
 
 Dialog: Partitionieren
 ^^^^^^^^^^^^^^^^^^^^^^
