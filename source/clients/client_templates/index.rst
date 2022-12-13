@@ -62,9 +62,13 @@ Im letzten Schritt wird nun das eigentliche Betriebssystem auf dem Muster-Client
    Damit Clients in die Domäne aufgenommen werden können muss auf dem Server vorher die Standard-GPO erzeugt werden. Dies ist auch notwendig, wenn ausschließlich Linux-Clients eingesetzt werden.
 
 Die Standard-GPO wird auf dem Server erzeugt durch:
-.. code:: Bash
-  sophomorix-school --gpo-create default-school
+
+.. code:: 
+
+  # sophomorix-school --gpo-create default-school
   
 Anschließend den Samba-Dienst noch neu starten:
-.. code:: Bash
-  systemctl restart samba-ad-dc.service
+
+.. code:: 
+
+  # systemctl restart samba-ad-dc.service
