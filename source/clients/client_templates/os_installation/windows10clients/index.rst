@@ -401,15 +401,15 @@ Linuxmuster.net sieht vor, dass **Programminstallationen von "global-admin"** du
 Zeitprobleme lösen
 ==================
 
-Windows 10 Clients nutzen den linuxmuster.net Server als Zeitserver. Hierbei kann es zu Beginn zu Zeitabweichungen kommmen.
+Windows 10 Clients nutzen den linuxmuster.net Server als Zeitserver. Hierbei kann es zu Beginn zu Zeitabweichungen kommen.
 
-Diese sind dadurch zu beheben, indem Du auf dem linuxmuster.net Server ein Skript aufrufst, das die NTP-Konfiguration anpasst.
+Diese sind dadurch zu beheben, indem Du auf dem linuxmuster.net Server ein Skript aufrufst, welches die NTP-Konfiguration anpasst.
 
-Öffene auf dem Server eine Konsole als Benutzer ``root`` und gebe folgenden Befehle ein:
+Öffne auf dem Server eine Konsole als Benutzer ``root`` und gebe folgenden Befehl ein:
 
-.. code::Bash
+.. code::
 
-  /usr/share/linuxmuster/fix-ntp_signd-dir.sh
+/usr/share/linuxmuster/fix-ntp_signd-dir.sh
   
 Es wird hierdurch das Verzeichnis für NTP Sockets auf dem Server repariert, so dass Windows Clients erfolgreich hierauf zugreifen können. Danach sollte der Zeitabgleich via NTP erfolgreich durchlaufen.
 
