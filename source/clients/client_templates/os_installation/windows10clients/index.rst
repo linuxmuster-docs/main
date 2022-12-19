@@ -409,7 +409,7 @@ Diese sind dadurch zu beheben, indem Du auf dem linuxmuster.net Server ein Skrip
 
 .. code::
 
-/usr/share/linuxmuster/fix-ntp_signd-dir.sh
+  /usr/share/linuxmuster/fix-ntp_signd-dir.sh
   
 Es wird hierdurch das Verzeichnis für NTP Sockets auf dem Server repariert, so dass Windows Clients erfolgreich hierauf zugreifen können. Danach sollte der Zeitabgleich via NTP erfolgreich durchlaufen.
 
