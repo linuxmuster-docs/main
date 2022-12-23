@@ -98,6 +98,14 @@ Nachdem Du den Befehl mit ``J`` bestätigt hast, wird das Skript lmn-prepare auf
    - das Netzwerk konfiguriert und
    - im Falle des Serverprofils das LVM eingerichtet.
 
+
+Passe noch vor der Ausführung von lmn-prepare auf dem Server die ``Default-Locale`` wie folgt an:
+
+.. code-block::Bash
+
+   locale-gen && localectl set-locale LANG=en_US.UTF-8
+
+
 .. attention:: Wichtiger Hinweis, schon jetzt!
 
    Solltest Du mit Deiner Konfiguration von unseren Standard-Vorgaben bei dem zuletzt genannten Punkt abweichen, müssen Deine Einstellungen unbedingt vor dem Aufruf des Skriptes lmn-prepare eingearbeitet sein!
