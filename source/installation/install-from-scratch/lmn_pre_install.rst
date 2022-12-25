@@ -98,12 +98,15 @@ Nachdem Du den Befehl mit ``J`` bestätigt hast, wird das Skript lmn-prepare auf
    - das Netzwerk konfiguriert und
    - im Falle des Serverprofils das LVM eingerichtet.
 
+Default-Locale anpassen
+-----------------------
 
 Passe noch vor der Ausführung von lmn-prepare auf dem Server die ``Default-Locale`` wie folgt an:
 
-.. code-block::Bash
+.. code-block:: Bash
 
    locale-gen && localectl set-locale LANG=en_US.UTF-8
+
 
 
 .. attention:: Wichtiger Hinweis, schon jetzt!
@@ -237,6 +240,13 @@ Es wird zuerst das LVM auf der zweiten Platte eingerichtet, danach werden alle e
    ### Finished - a reboot is necessary!
 
 
-Ist lmn-prepare ohne Fehler durchgelaufen, starte den Server nun neu mit dem Befehl: ``reboot``
+Ist lmn-prepare ohne Fehler durchgelaufen, führe nun noch folgenden Befehl aus:
+
+.. code-block:: Bash
+
+   pip3 install jinja2
+
+
+Starte danach den Server nun neu mit dem Befehl: ``reboot``.
 
 Danach steht dem :ref:`setup-label` nichts mehr im Wege.
