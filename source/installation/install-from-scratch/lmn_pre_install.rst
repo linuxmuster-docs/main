@@ -105,7 +105,7 @@ Passe noch vor der Ausführung von lmn-prepare auf dem Server die ``Default-Loca
 
 .. code-block:: Bash
 
-   locale-gen && localectl set-locale LANG=en_US.UTF-8
+   locale-gen && localectl set-locale LANG=de_DE.UTF-8
 
 
 
