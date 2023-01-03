@@ -32,7 +32,7 @@ Die erfolgt mit folgendem Befehl:
 
 .. code-block:: Bash
 
-   timedatectl set-timezone Europe/Berlin
+   sudo timedatectl set-timezone Europe/Berlin
    # erneute Ausgabe der Zeiteinstellungen mit
    timedatectl
    
@@ -105,7 +105,7 @@ Passe noch vor der Ausführung von lmn-prepare auf dem Server die ``Default-Loca
 
 .. code-block:: Bash
 
-   locale-gen && localectl set-locale LANG=de_DE.UTF-8
+   sudo locale-gen && sudo localectl set-locale LANG=de_DE.UTF-8
 
 
 
@@ -246,7 +246,9 @@ Ist lmn-prepare ohne Fehler durchgelaufen, führe nun noch folgenden Befehl aus:
 
    pip3 install jinja2
 
+Es erscheint ggf. der Hinweis, dass die Abhängigkeiten bereits erfüllt sind.
 
-Starte danach den Server nun neu mit dem Befehl: ``reboot``.
+
+Starte danach den Server neu mit dem Befehl: ``reboot``.
 
 Danach steht dem :ref:`setup-label` nichts mehr im Wege.
