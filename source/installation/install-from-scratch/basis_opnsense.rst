@@ -180,7 +180,7 @@ Basis-Konfiguration der OPNsense |reg|
 
 Melde Dich als ``root`` mit dem Passwort ``Muster!`` an der OPNsense |reg| an.
 
-#####
+
 
 Tastaturbelegung
 ----------------
@@ -210,7 +210,7 @@ Zuerst überprüfe, ob die Tastaturbelegung richtig ist. Dazu wähle den Punkt `
 
      exit                             # Konsole verlassen
 
-#####
+
 
 Überprüfung der Zuordnung der Netzwerkkarten
 --------------------------------------------
@@ -229,7 +229,7 @@ Hier in unserem Beispiel hat die Zuordnung der Netzwerkkarten nicht geklappt, de
 
 Sollte bei dem WAN Interface keine, eine IP-Adresse nach dem Muster 0.0.0.0/8 oder eine andere als die von Dir erwartete erscheinen, dann muss die Zuordnung der Netzwerkkarte überprüft werden. Hier beispielhaft anhand unserer Proxmox-Umgebung.
 
-#####
+
 
 Anpassung der Zuordnung der Netzwerkkarten
 ------------------------------------------
@@ -271,11 +271,13 @@ Aus diesem Wissen und dem Vergleich erkennst Du |...|
    :align: center
    :alt: OPNsense: GUI - WAN connect to vtnet0 
 
+
 |...| das WAN zum Interface vtnet0 zugeordnet gehört.
 
 .. figure:: media/basis_opnsense_019.png
    :align: center
    :alt: OPNsense: GUI - 
+
 
 |...| das LAN zum Interface vtnet1 gehört.
 
@@ -283,11 +285,13 @@ Aus diesem Wissen und dem Vergleich erkennst Du |...|
    :align: center
    :alt: OPNsense: GUI - Assign interfaces 
 
+
 Hast Du kein weiteres Interface, dann ``Enter``
 
 .. figure:: media/basis_opnsense_021.png
    :align: center
    :alt: OPNsense: GUI - Assign interfaces 
+
 
 Diese Zuordnung ist nun richtig, also weiter mit ``y`` |...|
 
@@ -295,15 +299,17 @@ Diese Zuordnung ist nun richtig, also weiter mit ``y`` |...|
    :align: center
    :alt: OPNsense: GUI - Assign interfaces 
 
+
 |...| welches dann die Konfiguration startet.
 
-.. figure:: media/basis_opnsense_023.png
+.. figure:: media/basis_opnsense_023_old.png
    :align: center
    :alt: OPNsense: GUI - Assign interfaces 
 
+
 Die Zuordnung des WAN-Interfaces ist nun richtig. Das erkennst Du daran, das dessen IP-Adresse dem Adress-Pool des Routers entnommen ist.
 
-#####
+
 
 WAN Zugang testen
 ^^^^^^^^^^^^^^^^^
@@ -318,15 +324,18 @@ Um zwei erste Tests durchzuführen, wechsel mit ``8) Shell`` auf die Kommandozei
 
    ping -c 3 8.8.8.8
 
+
 Die Ausgabe sollte wie folgt aussehen:
 
 .. figure:: media/basis_opnsense_024.png
    :align: center
    :alt: OPNsense: GUI - Assign interfaces 
 
+
 .. code::
 
    ping -c 3 linuxmuster.net
+
 
 .. figure:: media/basis_opnsense_025.png
    :align: center
@@ -334,15 +343,16 @@ Die Ausgabe sollte wie folgt aussehen:
 
 ``exit`` um wieder zum Dashboard zurückzukommen.
 
-.. figure:: media/basis_opnsense_023.png
+.. figure:: media/basis_opnsense_023_old.png
    :align: center
    :alt: OPNsense: GUI - Assign interfaces 
+
 
 .. hint:: 
 
    Sollte einer der Test auch nach ``11) Reload all services`` nicht erfolgreich verlaufen, dann stimmt etwas mit der Netzwerkkartenzuordnung nicht. Überprüfe Deine vorherige Netzwerk-Konfiguration auf Fehler.
 
-#####
+
 
 IP-Adressen zuweisen
 --------------------
@@ -353,11 +363,13 @@ Solltest Du in Deiner Netzwerkkonfiguration von unserem Muster abweichen, musst 
    :align: center
    :alt: OPNsense: GUI - Set interfaces IP address 
 
+
 Wähle an der Konsole der OPNsense |reg| den Eintrag ``2) Set interface IP address`` aus.
 
 .. figure:: media/basis_opnsense_027.png
    :align: center
    :alt: OPNsense: GUI - LAN auswählen
+
 
 Wähle ``1 - LAN (`` |...| ``)`` für die nächsten Schritte.
 
@@ -365,11 +377,13 @@ Wähle ``1 - LAN (`` |...| ``)`` für die nächsten Schritte.
    :align: center
    :alt: OPNsense: GUI - Nicht via DHCP zuweisen lassen
 
+
 Bestätige die Nachfrage mit ``N`` und ``ENTER``. (Alternativ wäre auch nur ``ENTER`` möglich, da der großgeschriebene Buchstabe in der Auswahlmöglichkeit darauf hinweist, was die Standard-Einstellung ist.)
 
  .. figure:: media/basis_opnsense_029.png
    :align: center
    :alt: OPNsense: GUI - Eingabe der IP
+
 
 Gib die IPv4 Adresse ``10.0.0.254`` ein, unter der die OPNsense |reg| im lokalen Netz zu erreichen sein wird.
 
@@ -377,23 +391,28 @@ Gib die IPv4 Adresse ``10.0.0.254`` ein, unter der die OPNsense |reg| im lokalen
    :align: center
    :alt: OPNsense: GUI - Eingabe der Netzwerkmaske in CIDR
 
+
 Gib ``16`` für die Netzwerkmaske ein
 
 .. figure:: media/basis_opnsense_031.png
    :align: center
    :alt: OPNsense: GUI - Keine Eingabe nötig, also Enter
 
-Da keine Eingabe eines Upstream-Gateways nötig ist, einfach ``ENTER``
+
+Da keine Eingabe eines Upstream-Gateways nötig ist, einfach ``ENTER`` eingeben.
 
 .. figure:: media/basis_opnsense_032.png
    :align: center
    :alt: OPNsense: GUI - keine IPv6 via WAN tracking nötig
 
+
 .. attention:: Gib ein ``n`` ein.
+
 
 .. figure:: media/basis_opnsense_033.png
    :align: center
    :alt: OPNsense: GUI - keine IPv6 Adresse via DHCP6 
+
 
 Gib ein ``N`` ein.
 
@@ -401,13 +420,15 @@ Gib ein ``N`` ein.
    :align: center
    :alt: OPNsense: GUI - keine manuelle IPv6 
 
+
 Da keine IPv6-Adresse benötigt wird: ``ENTER``
 
 .. figure:: media/basis_opnsense_035.png
    :align: center
    :alt: OPNsense: GUI - keine Aktivierung eines DHCP-Servers auf LAN
 
-Diese und die nächsten drei Fragen ebenfalls jeweils ``N`` und ``ENTER`` bzw. nur ``ENTER`` beantworten. 
+
+Diese und die nächsten drei Fragen ebenfalls jeweils ``N`` und ``ENTER`` bzw. nur ``ENTER`` beantworten.
 
 .. figure:: media/basis_opnsense_036.png
    :align: center
@@ -421,11 +442,13 @@ Diese und die nächsten drei Fragen ebenfalls jeweils ``N`` und ``ENTER`` bzw. n
    :align: center
    :alt: OPNsense: GUI - Wiederherstellung der GUI Zutrittsberechtigungen
 
+
 Nach der letzten Eingabe startet die Übernahme in das System.
 
 .. figure:: media/basis_opnsense_039.png
    :align: center
    :alt: OPNsense: GUI IP
+
 
 Nach erfolgreicher Übernahme erhältst Du den Hinweis, dass Du Dich mit der LAN IP auf die GUI der OPNsense |reg| aufschalten könntest.
 
@@ -454,6 +477,7 @@ Klappt das Update, startet die OPNsense |reg| neu.
 .. figure:: media/basis_opnsense_023.png
    :align: center
    :alt: OPNsense: GUI - Assign interfaces
+
 
 
 Konfiguration der OPNsense |reg|
