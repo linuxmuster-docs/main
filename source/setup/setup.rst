@@ -26,7 +26,7 @@ Lies zunächst alle wichtigen Hinweise des Setup Kapitels und mache dann entwede
 Wichtige Hinweise
 =================
 
-* Nach Abschluss dieses Setups sind die (AD-)Domäne und andere Details des Netzwerks permanent festgelegt und nur durch Neuinstallation änderbar.
+* Nach Abschluss dieses Setups sind die (AD-)Domäne und andere Details des Netzwerks permanent festgelegt und nur durch eine erneute Neuinstallation änderbar.
 
   Es ist daher wichtig, zu diesem Zeitpunkt ein **Snapshot/Backup von Server und Firewall** anzufertigen.
 
@@ -38,7 +38,7 @@ Wichtige Hinweise
   - für das Setup von linuxmuster benötigst Du nun eine Subdomain, die vom AD DNS-Server authoritativ intern aufgelöst wird, aber niemals von extern.
   - der AD DNS-Server arbeitet immer nur für diese eine Subdomain und die darunter liegenden Namensräume autoritativ.
   - alle internen Clients müssen den AD DNS-Server als DNS-Server nutzen.
-  - diese Subdomain darf nicht nicht länger als 15 Zeichen sein (NetBIOS-Name) und keien Satzzeichen enthalten.
+  - diese Subdomain darf nicht nicht länger als 15 Zeichen sein (NetBIOS-Name) und keine Satzzeichen enthalten.
   - der Fully Qualified Domain Name (FQDN) darf nicht länger als 64 Byte sein.
   - nutze niemals nicht registrierte Domains wie z.B. .local -> meineschule.local 
 
@@ -50,7 +50,7 @@ Wichtige Hinweise
 
 * Es wird also eine extern auflösbare, registrierte Domain genutzt und bei der Einrichtung des Servers wird eine eigene interne Subdomain als AD-Domäne angegeben.
 
-  Zum Beispiel ``linuxmuster.meineschule.de`` -> linuxmuster als Dubdomain zur Domain ``meineschule.de``.
+  Zum Beispiel ``linuxmuster.meineschule.de`` -> linuxmuster als Subdomain zur Domain ``meineschule.de``.
   
   Der erste Part ``linuxmuster`` wird in diesem Beispiel dann als SAMBA-Domäne verwendet.
   
@@ -63,19 +63,14 @@ Wichtige Hinweise
 Anpassung des Netzbereichs
 ==========================
 
-.. attention::
+Die Standardkonfiguration sieht vor, dass Geräte im Netzbereich ``10.0.0.0/16`` sind.
 
-  Ist dies noch so ? Prüfen, wie die Abfragen sind und o.g. Infos in die Setup-Anleitung einarbeiten.
-
-Die Standardkonfiguration sieht vor, dass das Schulnetz die lokale Domäne ``linuxmuster.lan`` bekommt und Geräte im Netzbereich ``10.0.0.0/16`` sind. 
-
-Wenn ein anderer Netzbereich verwendet werden soll, *muss* an dieser Stelle eine Anpassung vorgenommen werden.
-
-v6.x Systeme, die mithilfe der Migration auf linuxmuster.net 7.1 migriert werden, sollten den bisherigen Netzbereich behalten.
+v6.x Systeme, die mithilfe der Migration auf linuxmuster.net 7.1 migriert werden, sollten den bisher verwendeten Netzbereich beibehalten.
 
 .. hint::
 
-   Die Anpassungen zur Netzkonfiguration sind vor der Ausführung der Erstkonfiguration durchzuführen. Zur Durchführung der Anpassungen folge bitte dem Kapitel :ref:`modify-net-label`.
+   Die erforderlichen Anpassungen der Netzkonfiguration - sofern diese von dem Standard abweichen sollen - sind vor der Ausführung der Erstkonfiguration durchzuführen. Zur Durchführung der Anpassungen folge bitte dem Kapitel :ref:`modify-net-label`.
+
 
 Auswahl der Setup-Variante
 ===========================

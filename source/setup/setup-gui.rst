@@ -38,21 +38,25 @@ Es erscheint der Hinweis, dass Du das Webinterface nicht als Benutzer root benut
    :align: center
    :alt: WebUI Setup: Root login - hint
 
+
 Bei einem unkonfiguriertem System wird direkt das Setup aufgerufen.
 
-Es erscheint der Einrichtungsassistent, in dem Du zunächst die gewünschte Sprache auswählen musst. Zudem musst Du die GNU Lizenzbedingungen akzeptieren, indem Du bei ``I accept the licence terms`` einen Haken setzt.
+Es erscheint der Einrichtungsassistent. Hier musst Du zunächst die gewünschte Sprache auswählen. Zudem musst Du die GNU Lizenzbedingungen akzeptieren, indem Du bei ``I accept the licence terms`` einen Haken setzt.
     
 .. figure:: media/newsetup/lmn-setup-gui-02.png
    :align: center
    :alt: WebUI Setup: Wizard - accept license
-    
+
+
 Danach klickst Du auf ``Weiter``.
-    
+
 Im nächsten Dialog musst Du den Schulnamen, die Stadt, das Bundesland und das Landeskürzel eintragen bzw. auswählen.  Zudem trägst Du einen Hostnamen für den Server ein. Der ``Domain name`` spielt eine besondere Rolle, insbesondere, wenn eine Adresse verwendet werden soll, die intern und extern identisch sein soll, so dass mit dem FQDN intern und extern gearbeitet wird.
 
 .. hint:: 
 
-   schule.de oder linuxmuster.lan stellen den Domainnamen mit der sog. Top Lebel Domain (TLD) dar. Die TLD lan wird nicht extern verwendet, sondern ist nur für den  internen Gebrauch sinnvoll. Die TLD de wird extern genutzt. Hat Deine Schule die De-Domain meineschule.de registriert, dann musst Du hier eine Subdomain angeben, die zugleich die sog. Samba-Domain darstellt. Für den Namen dieser Sub-/Samba-Domain gibt es Einschränkungen, die unbedingt beachtet werden müssen: Es werden nur englische Kleinbuchstaben a bis z akzeptiert. Sonst keinerlei Zeichen. Es dürfen zudem maximal 15 Zeichen verwendet werden. **Richtig**: gshoenningen (12 Zeichen, keine Umlaute und Satzzeichen etc.), **Falsch**: GSO-Heinrich-Böll-Hönningen (26 Zeichen, Großbuchstaben, Umlaute, Bindestriche)
+   schule.de oder linuxmuster.lan stellen den Domainnamen mit der sog. Top Level Domain (TLD) dar. Die TLD lan wird nicht extern verwendet, sondern ist nur für den internen Gebrauch sinnvoll. Die TLD de wird extern genutzt. Hat Deine Schule die De-Domain meineschule.de registriert, dann musst Du hier eine Subdomain angeben, die zugleich die sog. Samba-Domain darstellt. Für den Namen dieser Sub-/Samba-Domain gibt es Einschränkungen, die unbedingt beachtet werden müssen: Es werden nur englische Kleinbuchstaben a bis z akzeptiert. Sonst keinerlei Zeichen. Es dürfen zudem maximal 15 Zeichen verwendet werden. 
+
+  **Richtig**: gshoenningen (12 Zeichen, keine Umlaute und Satzzeichen etc.), **Falsch**: GSO-Heinrich-Böll-Hönningen (26 Zeichen, Großbuchstaben, Umlaute, Bindestriche)
 
 .. figure:: media/newsetup/lmn-setup-gui-03.png
    :align: center
@@ -121,7 +125,14 @@ Schliesse das Setup nun mit ``Finish`` ab. Es erscheint eine Statusmeldung, dass
    :align: center
    :alt: WebUI Setup: Wizard - setup complete
 
-Bestätigst Du dies mit ``Close`` started das Setup nun die Schulkonsole neu und leitet Dich auf die verschlüsselte Seite der Webui mit der URL ``https://10.0.0.1`` um.
+Bestätige dies mit ``Close``.
+
+Rufe auf dem Server das Terminal auf und starte den Server neu:
+
+.. code:: Bash
+
+   sudo reboot
+
 
 Anmeldung an der Schulkonsole
 =============================
@@ -152,12 +163,13 @@ Nach erfolgreicher Anmeldung gelangst Du zur Hauptseite der Schulkonsole.
    :align: center
    :alt: WebUI: Hauptseite
 
+
 Berechtigungen der Log-Dateien anpassen
 =======================================
 
 Nach dem erfolgreichen Setup verbindest Du Dich via ssh auf den Server. 
 
-Zum Abschluss sind noch die Dateiberechtigung für die linuxmuster Log-Dateien anzupassen.
+Zum Abschluss sind noch die Dateiberechtigungen für die linuxmuster Log-Dateien anzupassen.
 
 Setze die Berechtigungen nun mit folgendem Befehl als Benutzer ``root``:
 
@@ -182,6 +194,6 @@ Setze die Ersteinrichtung fort, indem Du
 
 :ref:`add-user-accounts-label` und :ref:`hardware-registration-label` aufrufst.
 
-Alternativ wenn du eine Migration durchführen willst, geht es weiter mit
+``Alternativ``: Wenn Du eine Migration durchführen willst, geht es weiter mit
 
 :ref:`migration-label`
