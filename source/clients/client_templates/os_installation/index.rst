@@ -66,5 +66,6 @@ Nach Abschluss der Installation und Konfiguration  des Muster-Clients kannst Du 
 
    format_hdd_with_linbo
    linux-clients/index
+   linux-clients/installation-popos
    windows10clients/index
 
