@@ -98,15 +98,28 @@ Nachdem Du den Befehl mit ``J`` bestätigt hast, wird das Skript lmn-prepare auf
    - das Netzwerk konfiguriert und
    - im Falle des Serverprofils das LVM eingerichtet.
 
-Default-Locale anpassen
------------------------
+Default-Locale setzen
+---------------------
 
-Passe noch vor der Ausführung von lmn-prepare auf dem Server die ``Default-Locale`` wie folgt an:
+Passe noch vor der Ausführung von lmn-prepare auf dem Server die ``Default-Locale`` an.
+
+Erzeuge zuerst die Locales mit:
 
 .. code-block:: Bash
 
-   sudo locale-gen && sudo localectl set-locale LANG=de_DE.UTF-8
+   $sudo locale-gen
+   Generating locales (this might take a while)...
+   de_DE.UTF-8... done
+   en_GB.UTF-8... done
+   en_US.UTF-8... done
+   fr_FR.UTF-8... done
+   Generation complete.
 
+Setze nun die Default-Locale. Diese muss unbedingt in o.g. Ausgabe enthalten sein!
+
+.. code-block:: Bash
+
+   $sudo localectl set-locale LANG=de_DE.UTF-8
 
 
 .. attention:: Wichtiger Hinweis, schon jetzt!
