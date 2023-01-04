@@ -9,9 +9,9 @@ Linux-Client
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_, 
                    `@dorian <https://ask.linuxmuster.net/u/dorian>`_
 
-linuxmuster.net stellt für Ubuntu-Clients das Paket ``linuxmuster-linuxclient7`` bereit. Es führt automatisiert den Domänenbeitritt aus und vereinheitlicht das Management von Liux- und Windows-Clients durch Auslesen der GPO-Konfigurationen im Active Directory.
+linuxmuster.net stellt für Ubuntu basierte Clients das Paket ``linuxmuster-linuxclient7`` bereit. Es führt automatisiert den Domänenbeitritt aus und vereinheitlicht das Management von Linux- und Windows-Clients durch Auslesen der GPO-Konfigurationen im Active Directory.
 
-Offiziell wird derzeit Ubuntu 22.04 mit gdm3 und Gnome unterstützt. Andere Ubuntu-basierte Distributionen mit gdm3 und Gnome könnten aber auch funktionieren (z.B. Linux POP!OS).
+Offiziell wird derzeit Ubuntu 22.04 und Pop!_OS 22.04 mit gdm3 und Gnome unterstützt. Andere Ubuntu basierte Distributionen mit gdm3 und Gnome könnten aber auch funktionieren.
 
 Voraussetzung
 =============
@@ -54,6 +54,11 @@ Client OS installieren
 Gib im PC / in der VM nun an, dass von dem gewünschten ISO-Image / der Installations-DVD gestartet werden soll. Hierbei musst Du darauf achten, die Boot-Reihenfolge so zu ändern, dass nicht mehr vom Netzwerk, sondern von der ISO-Datei / der Installations-DVD gebootet wird.
 
 Starte nun den PC/die VM mit den neuen Einstellungen, sodass Ubuntu vom ISO-Image / von der Installations-DVD startet. Nachdem der Start ausgeführt wurde, wähle auf dem ersten Bildschirm aus, dass Du Ubuntu installieren möchtest.
+
+Nachstehend findest Du die Beschreibung zur Installation von Ubuntu.
+
+Möchtest Du pop!os installieren, so folge dieser Beschreibung :ref:`install-linux-clients-popos-label`
+
 
 Installation Ubuntu
 -------------------
