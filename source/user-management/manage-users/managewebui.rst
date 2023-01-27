@@ -157,11 +157,11 @@ speichern und danach auf ``speichern & prüfen`` gehen.
 Pflege der Lehrerdatei
 """"""""""""""""""""""
 
-Für die Lehrer besteht die Möglichkeit, einen Wunschlogin-Namen anzugeben. Der Datensatz aus dem Schulverwaltungsprogramm wird also um ein Feld ergänzt. In der CSV-Datei muss kein Klassenname angegeben werden. Es wird automatisch ein Import in die Gruppe ``Lehrer`` vorgenommen.
+Für die Lehrer besteht die Möglichkeit, einen Wunschlogin-Namen anzugeben. Der Datensatz aus dem Schulverwaltungsprogramm wird also um ein Feld ergänzt. In der CSV-Datei muss kein Klassenname angegeben, dafür jedoch bei jedem Lehrer teachers vorangestellt werden. Es wird automatisch ein Import in die Gruppe ``Lehrer`` vorgenommen.
 
 Das Format der Datei ``teachers.csv`` stellt sich wie folgt dar:
 
-``Nachname;Vorname;Geburtsdatum;Wunschlogin;;;;;``
+``teachers;Nachname;Vorname;Geburtsdatum;Wunschlogin;;;;;``
 
 Von *sophomorix* werden noch die für einzelne Lehrer gesondert eingegebenen Quotas angehängt.
 
