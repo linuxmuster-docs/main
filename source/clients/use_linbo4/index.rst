@@ -419,7 +419,7 @@ Initcache anwenden
 
 In der Hardwareklasse (HWK) besteht für Linbo in der start.conf die Möglichkeit die Option
 
-.. code::Bash
+.. code::
 
    [LINBO]                       # globale Konfiguration
    Cache = /dev/sda6             # lokale Cache Partition
@@ -441,7 +441,7 @@ Vom linuxmuster.net Server aus wird mit ``linbo-remote`` das Verhalten für init
 
 Mit folgendem Befehl, der auf dem Server abgesetzt wird, lässt sich der Cache beim nächsten Boot-Vorgang des betreffenden PCs neu befüllen:
 
-.. code::Bash
+.. code::
 
    linbo-remote -i r100-pc01 -w 45 -p initcache,sync:1,sync:2,sync:3,start:2
    
@@ -450,11 +450,32 @@ wird der Cache neu befüllt, das 1., 2. und 3. Betriebssystem synchronisiert und
    
 Dies kann ebenfalls für eine ganze Rechnergruppe angewendet werden:
 
-.. code::Bash
+.. code::
 
    linbo-remote -g r101 -w 60 -p initcache,sync:1;sync:2,sync:3,start:2
    
 Es werden ein WOL-Pakete an alle PCs der Geruppe r101 gesendet, um diese "aufzuwecken". Nach einer Wartezeit von 60 Sekunden werden die angegebenen Befehle an dien Clients weitergegeben. Es
 wird der Cache neu befüllt, das 1., 2. und 3. Betriebssystem synchronisiert und das 2. Betriebssystem gestartet.
+
+Zudem kann mit ``linbo-remote`` auch gezielt eine Partition formatiert werden und danach die Synchronisation sowie der Start eines gewünschten Betriebssystems erfolgen:
+
+.. code::
+
+  linbo-remote -i win10-client1 -p format:3,sync:1,start:1
+
+Dabei ist zu beachten:
+
+* ``format:<#>``: 
+  Schreibt die Partitionstabelle und formatiert nur die Partition mit der angegebenen Nummer aus der Partitionstabelle. Achtung: Bei UEFI-System ist EFI immer die erste Partition
+* ``sync:<#>``: 
+  Synchronisiert das Betriebsysystem, das in der start.conf an der angegebenen <#> Position eingetragen wurde.
+* ``start:<#>``:
+  Startet das Betriebsyssystem, das in der start.conf an der angegebenen <#> Position eingetragen wurde.
+
+
+
+
+
+
 
 
