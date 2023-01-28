@@ -111,6 +111,19 @@ Wenn Du sehr viele Geräte hinzufügen möchtest, deren MAC-Adressen Du bereits 
    :align: center
    :alt: Device Management: Edit file
 
+Auf dem Server kannst Du Dir in der Konsole mit 
+
+.. code::
+
+   man devices.csv
+
+die ``man pages`` anzeigen lassen. Hier kannst Du Dir alle Felder der CSV-Datei mit Erklärungen ausgeben lassen.
+
+Weitere Hinweise zu den möglichen Rollen eines Gerätes in der devices.csv findest Du hier:
+
+https://github.com/linuxmuster/sophomorix4/wiki/objectClasses
+
+
 Die Datei kann hier auch zur lokalen Bearbeitung heruntergeladen und wieder hochgeladen werden.
 
 .. hint:: 
