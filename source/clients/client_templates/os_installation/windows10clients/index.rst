@@ -352,7 +352,7 @@ Klicke nun unten auf die Drop-down Liste ``Copy from -> win10.image.reg``. Es wi
 
 .. code::
 
-   :setzt den Domänennamen richtig
+   ;setzt den Domänennamen richtig
    [HKEY_LOCAL_MACHINE\System\ControlSet001\Services\Tcpip\Parameters]
    "Domain"="<SAMBADOMAIN>"
    [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
