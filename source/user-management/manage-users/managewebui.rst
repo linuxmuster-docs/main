@@ -10,7 +10,7 @@ Normalerweise werden an einem Linux-Server die Benutzer durch Aufruf
 eines Programms angelegt, dem man den Benutzernamen des anzulegenden
 Benutzers und die Gruppe mitteilt, in welche der Benutzer zugeordnet
 werden soll.
- 
+
 Für eine Schule ist dieses Vorgehen nicht praktikabel, da meist
 mehrere hundert bis einige tausend Schüler als Benutzer angelegt
 werden müssen. Deshalb übernimmt bei der *linuxmuster.net* das
@@ -62,9 +62,13 @@ Die meisten Schulverwaltungsprogramme bieten die Möglichkeit, eine Schüler- un
 
 ``Klasse;Nachname;Vorname;Geburtsdatum;Nr;``
 
+``Class;Last name;First name;Birthday;ID;``
+
 Dabei ist das letzte Feld optional. Es enthält die im Schulverwaltungsprogramm eindeutig vergebene Schülernummer. Ist sie vorhanden, sollte man sie unbedingt mit übernehmen, das sie die Identifikation des richtigen Datensatzes bei Versetzungen, Namensänderungen usw. erheblich erleichtert. Falls die Nummer nicht vorhanden ist, besteht jede Zeile nur aus den 4 Feldern
 
 ``Klasse;Nachname;Vorname;Geburtsdatum;``
+
+``Class;Last name;First name;Birthday;``
 
 Auch wenn Ihr Schulverwaltungsprogramm keine direkte Ausgabe für die Musterlösung vorsieht, können die Daten meist unter Angabe der benötigten Felder und mit dem Semikolon als Trennzeichen exportiert werden.
 
@@ -161,7 +165,9 @@ Für die Lehrer besteht die Möglichkeit, einen Wunschlogin-Namen anzugeben. Der
 
 Das Format der Datei ``teachers.csv`` stellt sich wie folgt dar:
 
-``teachers;Nachname;Vorname;Geburtsdatum;Wunschlogin;;;;;``
+``teachers;Last name;First name;Birthday;Login;;;;;``
+
+``Lehrer;Nachname;Vorname;Geburtsdatum;Wunschlogin;;;;;``
 
 Von *sophomorix* werden noch die für einzelne Lehrer gesondert eingegebenen Quotas angehängt.
 
@@ -179,7 +185,7 @@ Danach wählen Sie dort den Dateinamen der hochzuladenden CSV-Datei aus.
 
 .. figure:: media/15_schoolconsole_import-teachers-upload-csv-file-folder.png
    :align: center
-   :alt: Upload teachers.csv folder 
+   :alt: Upload teachers.csv folder
 
 Die Einträge werden nun geprüft und das Prüfergebnis wird Ihnen angezeigt. Hier können Sie bereits falsche Spaltenzuordnungen oder eine
 abweichende Spaltenreihenfole erkennen. Stimmt das dargestellte Ergebnis, so übernehmen Sie die Sortierreihenfolge.
@@ -217,7 +223,10 @@ Zur Verwaltung von Schülern, die nicht im Schulverwaltungsprogramm aufgenommen 
 Im Bereich *Im Editor öffnen* können Schüler von Kooperationsschulen oder Austausch- bzw. Gastschüler eingegeben werden. 
 Die Syntax ist wie bei der Schülerdatei, ergänzt um ein Feld für einen Wunschanmeldenamen:
 
+``Class;Last name;First name;Birthday;Login;``
+
 ``Klasse;Nachname;Vorname;Geburtsdatum;Wunschlogin;``
+
 
 Der Name für die Klasse ist frei wählbar, z.B: *koop* (für Kooperation) oder *at* (für Austausch). Es können aber, gerade auch bei Kooperationsschülern, die **bestehenden** Klassennamen verwendet werden. Dies ist wichtig, falls der Zugriff auf das Klassentauschverzeichnis der Klasse ermöglicht werden soll. Bei neuen Gruppennamen, wird auch ein neues Klassentauschverzeichnis angelegt.
 
