@@ -82,7 +82,11 @@ Der nächste Dialog legt das Passwort des globalen Administrators ``global-admin
       * global-admin (AD)
       * pgmadmin (AD)
       * linbo (/etc/rsyncd.secrets)
-   * Es sollten die Passwörter der o.g. User nach dem Setup geändert werden, sodass jeder User ein eigenes Password hat.
+   * Es sollten die Passwörter der o.g. User nach dem Setup geändert werden, so dass jeder User ein eigenes Password hat.
+   * Achte darauf, dass Dein Passwort den Komplexitätsanforderungen entspricht, die mit samba4 aktiviert sind: 
+     Mind. 7 Zeichen, Groß- und Kleinbuchstaben, Ziffern und Sonderzeichen. Zulässige Sonderzeichen sind: a-z A-Z 0-9 ?!§+-@#%&*( )[ ]{ }
+   * In der Datei ``/etc/linuxmuster/sophomorix/default/school/school.conf`` sind die Kennwortlängen für Schüler (Standard: 10 Zeichen) und Lehrer (12 Zeichen) angegeben.
+   * Die Grundeinstellungen für Kennwörter in samba4 kannst Du Dir auf dem Server in der Konsole mit ``samba-tool domain passwordsettings show`` anzeigen lassen.
 
 
 Danach klickst Du auf ``Weiter/Next``. 
