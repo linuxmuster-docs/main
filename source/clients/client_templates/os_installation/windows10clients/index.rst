@@ -211,7 +211,7 @@ e) und mit Enter bestätigen, dann sollte sich ähnliche Darstellung zeigen:
    :align: center
    :alt: Win10 Confirm Config Data
 
-f) um die Datei nun in den richtigen Ordner zu kopieren, den Befehl ``mv /srv/linbo/examples/win10.global.reg /srv/samba/global/management/global-admin/`` eingeben.
+f) um die Datei nun in den richtigen Ordner zu kopieren, den Befehl ``cp /srv/linbo/examples/win10.global.reg /srv/samba/global/management/global-admin/`` eingeben.
 
 .. figure:: media/38_windows-10-clients_move-global-reg.png
    :align: center
