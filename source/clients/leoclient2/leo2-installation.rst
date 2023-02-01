@@ -4,66 +4,51 @@ Installation von leoclient2
 Software-Pakete installieren
 ----------------------------
 
-Die leoclient-Pakete liegen auf dem linuxmuster.net-Paketserver, der im Linuxclient schon zur Einrichtung der Anmeldung am Server eingetragen wurde.
+Die leoclient-Pakete liegen auf dem linuxmuster.net-Paketserver https://deb.linuxmuster.net/, der im Linuxclient eventuell schon zur Einrichtung der Anmeldung am Server (Domänenanmeldung) eingetragen wurde. Dann ist der Schlüssel schon als linuxmuster.net.gpg vorhanden.
 
 .. code-block:: console
 
-   # wget http://pkg.linuxmuster.net/linuxmuster.net.key -O - | sudo apt-key add -
+   # cd /etc/apt/trusted.gpg.d
+   # wget https://deb.linuxmuster.net/pub.gpg
 
 In /etc/apt/sources.list eintragen:
 
 .. code-block:: console
 
-   deb http://pkg.linuxmuster.net/ xenial/ 
- 
+   deb https://deb.linuxmuster.net/ lmn71 main            (von Domänenanmeldung schon vorhanden)
+   deb https://deb.linuxmuster.net/ lmn71-testing main    (leoclient2 aus testing!!!)
+
 Installation der Pakete auf dem Linuxclient mit folgenden Befehlen:
 
 .. code-block:: console
 
-   # sudo apt-get update
-   # sudo apt-get install leoclient2-leovirtstarter-client leoclient2-vm-printer
-   
+   # sudo apt update
+   # sudo apt install leoclient2-leovirtstarter-client leoclient2-vm-printer
+  
 Virtualbox installieren/updaten
 -------------------------------
 
-Es wird empfohlen eine aktuelle Version von Virtualbox zu installieren
-(5.1.22 im Mai 2017).
-	  
-Für die Schule kann die PUEL-Version (aktuelles VirtualBox mit
-ExtensionPack) installiert werden, die beispielsweise USB2 unterstützt
-(statt USB1.1).
+Es wird empfohlen unter Ubuntu 22.04 die aktuelle Version von Virtualbox zu installieren.
 
-Die Anleitung zur Installation findet sich unter
-https://www.virtualbox.org/wiki/Linux_Downloads im Bereich
-''Debian-based Linux distributions''.
+.. code-block:: console
 
-In Kürze das Vorgehen für Ubuntu 16.04/xenial:
+   # sudo apt update
+   # sudo apt install virtualbox virtualbox-guest-additions-iso
+  
+Aktuelle Gasterweiterungen von VirtualBox installieren, falls nicht vorhanden beispielsweise mit (Versionsnummer anpassen)
 
-1. apt-get install dkms
+.. code-block:: console
 
-2. Virtualbox Schlüssel laden, Quellen eintagen, apt-get update
+   # cd /tmp
+   # wget https://download.virtualbox.org/virtualbox/6.1.38/Oracle_VM_VirtualBox_Extension_Pack-6.1.38.vbox-extpack
 
-3. apt-get install virtualbox-5.1
-
-4. Extension-Pack im Browser downloaden, installieren im Virtualbox-gui
+als linuxadmin anmelden
+virtualbox starten
+unter Datei → Einstellungen → Zusatzpakete: mit + hinzufügen und heruntergeladene Datei in /tmp auswählen → …
 
 
 Benutzer-Rechte anpassen
 ------------------------
-
-Hinweis: Diese Rechte-Anpassungen sind im Standard-Linuxclient schon eingepflegt.
-
-Domänenbenutzer
-
-Um für die Domänenbenutzer alle Optionen von VirtualBox freizugeben,
-müssen diese Mitglied der Gruppe ``vboxusers`` sein. Hierzu ergänzt
-man in der Datei ``/etc/security/group.conf`` in der Zeile
-``*;*;*;Al0000-2400;dialout...`` den Eintrag ``vboxusers``. Diese
-Zeile könnte dann wie folgt aussehen:
-
-.. code-block:: console
-   
-   *;*;*;Al0000-2400;dialout,cdrom,floppy,audio,dip,video,plugdev,scanner,vboxusers
 
 Lokale Benutzer
    
@@ -76,6 +61,43 @@ das mit
    # sudo adduser linuxadmin vboxusers
 
 Diese Änderung wird erst bei einer erneuten Anmeldung des Nutzers wirksam.
+
+Domänenbenutzer
+
+Anpassen der Datei /etc/group über ein Anmeldescript /etc/linuxmuster-linuxclient7/onLoginAsRoot.d/10_vboxusers-group.sh
+
+.. code-block:: console
+   
+    #!/bin/bash 
+    # mit diesem Script sollen zusätzliche Gruppenzugehörigkeiten
+    # eingerichtet werden, da dies über PAM aktuell nicht funktioniert
+    
+    # Aktuellen Benutzer in Gruppe vboxusers und lpadmin in /etc/group eintragen
+    # vboxusers:x:136:linuxadmin ersetzen mit vboxusers:x:136:linuxadmin,$USER
+    # lpadmin:x:122:linuxadmin ersetzen mit lpadmin:x:122:linuxadmin,$USER
+    # wenn vboxusers vorhanden und $USER dort nicht enthalten
+    
+    USER=`echo $USER | tr [:upper:] [:lower:]`
+    
+    if [ 'grep vboxusers /etc/group' != "" ];
+    then
+        if [ "`grep vboxusers /etc/group | grep $USER`" = "" ];
+        then
+            sed -i "s|vboxusers:x:136:linuxadmin|vboxusers:x:136:linuxadmin,$USER|g" /etc/group
+        fi
+    fi
+    
+    if [ 'grep lpadmin /etc/group' != "" ];
+    then
+        if [ "`grep lpadmin /etc/group | grep $USER`" = "" ];
+        then
+            sed -i "s|lpadmin:x:122:linuxadmin|lpadmin:x:122:linuxadmin,$USER|g" /etc/group
+        fi
+    fi
+
+u.s.w. - Fortsetzung folgt ...
+
+
 
 Rechte an den lokalen virtuellen Maschinen
 ------------------------------------------
@@ -94,28 +116,6 @@ Drucker-Splitter und ein Drucker-Spooler bei Anmeldung am Linuxclient
 gestartet werden. Der Drucker-Splitter fängt ankommende Druckdateien
 ab, bevor sie überschrieben werden. Der Drucker-Spooler druckt sie
 aus.
-
-Auf dem Standard-Linux-Client gelingt dies mit Hilfe der
-``linuxmuster-client-extras`` Skripte wie folgt:
-
-.. code-block:: console
-
-   # sudo linuxmuster-client-extras-setup --type login --on /usr/bin/run-vm-printer2-splitter
-   # sudo linuxmuster-client-extras-setup --type login --on /usr/bin/run-vm-printer2-spooler
-   
-Überprüft werden kann das mit
-
-.. code-block:: console
-
-   # sudo linuxmuster-client-extras-setup --type login -i
-
-Ohne den Standard-Linux-Client kann man mit folgenden Befehlen einen
-ähnlichen Effekt erzielen:
-
-.. code-block:: console
-
-   # sudo install -oroot -groot --mode=0644 /usr/share/leovirtstarter2/desktop/leoclient2-splitter.desktop  /etc/xdg/autostart
-   # sudo install -oroot -groot --mode=0644 /usr/share/leovirtstarter2/desktop/leoclient2-spooler.desktop  /etc/xdg/autostart
 
 Konfiguration
 
