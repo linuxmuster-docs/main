@@ -35,7 +35,6 @@ Gehe mit ``cd /srv/docker/unifi`` in das neue Verzeichnis und lege die Datei doc
       environment:
         - PUID=1000
         - PGID=1000
-        - MEM_LIMIT=1024M #optional
       volumes:
         - ./data:/config
       ports:
@@ -54,5 +53,5 @@ Starte den Unifi-Controller mit ``docker-compose up -d``.
 
 .. hint::
 
-   Zur Zeit wird die Unifi-Controller-Version 6.5.53 installiert. Möchtest Du eine frühere Version installieren, musst Du das in Zeile 4 angeben. Beispiel: ``image: ghcr.io/linuxserver/unifi-controller:LTS-version-5.6.42``. Welche Versionen es gibt, siehst Du `hier <https://hub.docker.com/r/linuxserver/unifi-controller/tags?page=1>`_ .
+   Zur Zeit wird die Unifi-Controller-Version 7.3.76 installiert. Möchtest Du eine frühere Version installieren, musst Du das in Zeile 4 angeben. Beispiel: ``image: ghcr.io/linuxserver/unifi-controller:LTS-version-5.6.42``. Welche Versionen es gibt, siehst Du `hier <https://hub.docker.com/r/linuxserver/unifi-controller/tags?page=1>`_ .
 
