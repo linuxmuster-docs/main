@@ -96,12 +96,22 @@ Wenn alles installiert ist, kannst Du Dich an Deinem frisch installiertem Docker
 Installation ohne nginx und dehydrated
 --------------------------------------
 * Gib ``sudo -i`` ein um `root` zu werden.
-* Update Dein System mit ``apt update`` und ``apt dist-upgrade``. 
-* Installiere docker und docker-compose mit ``apt install docker.io python3-pip`` und ``pip3 install docker-compose``.
+* Update Dein System mit ``apt update`` und ``apt dist-upgrade``.
+* Installiere docker und docker-compose mit:
 
-Installtion mit nginx und dehydrated
+.. code::
+
+   apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+
+Installation mit nginx und dehydrated
 ------------------------------------
 * Gib ``sudo -i`` ein um `root` zu werden.
-* Update Dein System mit ``apt update`` und ``apt dist-upgrade``. 
-* Installiere docker, docker-compose, nginx und dehydrated mit ``apt install docker.io python3-pip nginx dehydrated`` und ``pip3 install docker-compose``.
+* Update Dein System mit ``apt update`` und ``apt dist-upgrade``.
+* Installiere docker, docker-compose, nginx und dehydrated mit:
+
+.. code::
+
+   apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin nginx dehydrated
+
 
