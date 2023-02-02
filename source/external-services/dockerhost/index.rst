@@ -95,6 +95,7 @@ Wenn alles installiert ist, kannst Du Dich an Deinem frisch installiertem Docker
 
 Installation ohne nginx und dehydrated
 --------------------------------------
+
 * Gib ``sudo -i`` ein um `root` zu werden.
 * Update Dein System mit ``apt update`` und ``apt dist-upgrade``.
 * Installiere docker und docker-compose mit:
@@ -105,7 +106,8 @@ Installation ohne nginx und dehydrated
 
 
 Installation mit nginx und dehydrated
-------------------------------------
+-------------------------------------
+
 * Gib ``sudo -i`` ein um `root` zu werden.
 * Update Dein System mit ``apt update`` und ``apt dist-upgrade``.
 * Installiere docker, docker-compose, nginx und dehydrated mit:
