@@ -66,26 +66,18 @@ Danach wirst Du aufgefordert das System neu zu starten. Führe einen ``Reboot`` 
 
 Der weitere Ablauf ist identisch zu den unter 2.) beschriebenen Schritten.
 
-4. Melde Dich nach dem Neustart des Servers an. Hast Du die aktuellsten Pakete, prüfe die Datei ``/usr/lib/linuxmuster-webui/etc/requirements.txt``. Dort sollte als Eintrag für ``crypthography`` stehen:
-
-.. code::
-
-   cryptography==39.0.1
-
-Sollte dies so sein, fahre mit Schritt 5 fort. Falls nicht, aktualisiere zuerst wie unter 1.) beschrieben die installierten Pakete.
-
-5. Führe die erneute Konfiguration der lmn-Pakete aus. Rufe dazu folgenden Befehl auf:
+4. Führe die erneute Konfiguration der lmn-Pakete aus. Rufe dazu folgenden Befehl auf:
 
 .. code::
 
    dpkg-reconfigure sophomorix-samba linuxmuster-base7 linuxmuster-webui7
 
-6. Aktiviere das lmn71-Repository wieder, indem Du die Datei ``/etc/apt/sources.list.d/lmn71.list``
+5. Aktiviere das lmn71-Repository wieder, indem Du die Datei ``/etc/apt/sources.list.d/lmn71.list``
 editierst und dort das während des Upgrades automatisch eingefügte Kommentarzeichen ``#`` entfernst.
 
 Zudem oder alternativ findest Du die Datei ``/etc/apt/sources.list.d/lmn71.list.distUpgrade``, in der das Repository der lmn 7.1 auskommentiert ist.
 
-7. Füge danach das Repository der lmn72 (Achtung: testing) wie folgt hinzu:
+6. Füge danach das Repository der lmn72 (Achtung: testing) wie folgt hinzu:
 
 Importiere zuerst die Schlüsseldatei:
 
@@ -105,22 +97,22 @@ Aktualisiere nun die Paketquellen:
 
    sudo apt update
 
-8. Aktualisiere die installierten Pakete und führe anschließend ein Reboot durch:
+7. Aktualisiere die installierten Pakete und führe anschließend ein Reboot durch:
 
 .. code:: 
 
    sudo apt dist-upgrade
    sudo reboot
 
-9. Nach dem Neustart führe den Import der Geräte erneut aus:
+8. Nach dem Neustart führe den Import der Geräte erneut aus:
 
 .. code::
 
    sudo linuxmuster-import-devices
 
-10. Starte nun die Clients neu. Du wirst zunächst noch die Version 4.0 von Linbo auf den Clients nach dem ersten Start sehen. Starte den Client ein zweites Mal und Linbo wird dann automatisch auf dem Client auf die Version 4.1 aktualisiert.
+9. Starte nun die Clients neu. Du wirst zunächst noch die Version 4.0 von Linbo auf den Clients nach dem ersten Start sehen. Starte den Client ein zweites Mal und Linbo wird dann automatisch auf dem Client auf die Version 4.1 aktualisiert.
 
-11. Synchronisiere das Betriebssystem und melde Dich danach mit einem Domänen-Benutzer an.
+10. Synchronisiere das Betriebssystem und melde Dich danach mit einem Domänen-Benutzer an.
 
 .. figure:: media/01-login-lmn-7.2.png
    :align: center
