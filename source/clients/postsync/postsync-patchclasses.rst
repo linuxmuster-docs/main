@@ -5,11 +5,9 @@ Die Bereiche, für die Anpassungen vorgenommen werden sollen, heißen Patchklass
 
 **Wo müssen die Anpassungen (Patches) abgelegt werden ?**
 
-Unter ``/srv/linbo/linuxmuster-client/`` finden sich weitere Unterverzeichnisse, welche die sog. Patchklassen darstellen.
-In der ersten Ebene wird nach dem verwendeten Image (cloop-Datei) unterschieden.
-Beim Einsatz des Linuxmuster-Client 18.04 (bionic = Name der Patchklasse) sind
-alle weiteren Patches für die 18.04er-Clients in dem Verzeichnis ``bionic`` abzulegen.
-Bei Linuxmuster-Clients 20.04 (Focal Fossa) wäre dies z.B. das Verzeichnis ``focalfossa``:
+Unter ``/srv/linbo/linuxmuster-client/`` sind weitere Unterverzeichnisse für die sog. Patchklassen anzulegen.
+In der ersten Ebene wird nach dem verwendeten Image (cloop-Datei) unterschieden. Beim Einsatz des Linuxmuster-Client 18.04 (bionic = Name der Patchklasse) sind
+alle weiteren Patches für die 18.04er-Clients in dem Verzeichnis ``bionic`` abzulegen. Bei Linuxmuster-Clients 20.04 (Focal Fossa) wäre dies z.B. das Verzeichnis ``focalfossa``:
 
 .. code:: bash
 
@@ -25,16 +23,15 @@ In der nächsten Ebene können weiter Unterscheidungen nach folgendem Schema ang
    im Unterverzeichnis .../r100-pc01 liegende Patches erhält nur der PC01 in Raum r100 die Dateien.
 
 Unterhalb dieser Verzeichnisse sind alle Anpassungen so abzulegen, dass sie mit der Verzeichnisstruktur
-der betreffenden Clients identisch ist. So wird z.B. beim Anlegen der Datei auf dem Server:
+der betreffenden Clients identisch sind. So wird z.B. beim Anlegen der Datei auf dem Server:
 
 .. code:: bash
 
    .../common/etc/cups/cups.conf
 
-die cups.conf im Verzeichnis /etc/cups auf allen Clients der Patchklasse angepasst werden.
+Die ``cups.conf`` im Verzeichnis ``/etc/cups`` auf allen Clients der Patchklasse entsprechend angepasst.
 
-In der Patchklasse ``focalfossa`` würde eine Änderung der Datei rc.local auf allen Rechnern 
-in folgendem Server-Verzeichnis abgelegt werden:
+In der Patchklasse ``focalfossa`` würde eine Änderung der Datei ``rc.local`` auf allen Rechnern in folgendem Server-Verzeichnis abgelegt werden:
 
 .. code:: bash
 
@@ -43,38 +40,20 @@ in folgendem Server-Verzeichnis abgelegt werden:
 
 **Weitere Skripte ausführen**
 
-Das universelle Postsync-Script ist so aufgebaut, dass auch noch weiter Scripte ausgeführt werden können.
+Das ``universelle Postsync-Script`` ist so aufgebaut, dass auch noch weitere Scripte ausgeführt werden können.
 So können z.B. spezielle Anpassungen von PCs in einem bestimmten Raum vorgenommen werden.
-Alle abzuarbeitenden Scripte müssen im Verzeichnis postsync.d liegen.
+Alle abzuarbeitenden Scripte müssen im Verzeichnis ``postsync.d`` liegen.
 
-Sollen Scripte für die Patchklasse focalfossa und dann nur auf PCs im Raum r100 angewendet 
-werden, so müssen die Scripte in folgendem Verzeichnis liegen:
+Sollen Scripte für die ``Patchklasse focalfossa`` und dann nur auf ``PCs im Raum r100`` angewendet werden, so müssen die Scripte in folgendem Verzeichnis liegen:
 
 .. code:: bash
 
    /srv/linbo/linuxmuster-client/focalfossa/r100/postsync.d/
 
-Die Skripte müssen Sh-Scripte sein, da Linbo keine BASH als Shell kennt.
+Die Skripte müssen sh-Scripte sein, da Linbo keine BASH als Shell kennt.
 In diesen Scripten ist der Shebang ``#!/bin/sh`` voranzustellen.
-
-Beipiele für solche Scripte finden sich im Verzeichnis
-
-.. code:: bash
-
-   /usr/lib/linuxmuster-client-servertools/generic.postsync/generic.postsync.d/
-
-Es finden sich folgende Skripte als Beispielvorlagen:
-
-.. code:: bash
-
-   -rw-r--r-- 1 root root 269 Nov 21  2016 00-lcst-fix-initrd
-   -rw-r--r-- 1 root root 540 Nov 21  2016 01-lcst-setlocalpasswords
-   -rw-r--r-- 1 root root 232 Nov 21  2016 02-lcst-patch-sshd-config
-   -rw-r--r-- 1 root root 673 Nov 21  2016 03-lcst-fix-fstab
-   -rw-r--r-- 1 root root 564 Nov 21  2016 04-lcst-generate-hosts
-
-Diese können für die gewünschte Patchklasse in das jeweilige Verzeichnis kopiert und angepasst werden.
-Diese Scripte werden entsprechend ihrer lexikalischen Reihenfolge ausgeführt, also hier beginnend mit der niedrigsten Ziffer.
+Diese Scripte müssen zur Anwendung für die gewünschte Patchklasse in das jeweilige Verzeichnis kopiert und angepasst werden. Diese Scripte werden entsprechend ihrer 
+lexikalischen Reihenfolge ausgeführt, also hier beginnend mit der niedrigsten Ziffer.
 
 Nachstehende Abbildungen verdeutlichen diesen Aufbau:
 
@@ -87,8 +66,8 @@ Das allgemeine Postsync-Script arbeitet nach folgendem Schema:
 
 **Beispiel**
 
-Nachstehender Verzeichnisbaum verdeutlicht, dass für Linuxmuster-Clients für alle PCs der Patchklasse focalfossa alles unterhalb von ./common angewendet wird. 
-Zudem wird für den raum1 alles unterhalb von ./raum1 angewendet und schließlich wird für den Lehrer-PC in raum1 alles unterhalb von ./raum1-lehrer-pc angewendet.
+Nachstehender Verzeichnisbaum verdeutlicht, dass für Linuxmuster-Clients für alle PCs der Patchklasse focalfossa alles unterhalb von ./common angewendet wird.
+Zudem wird für den ``raum1`` alles unterhalb von ``./raum1`` angewendet und schließlich wird für den Lehrer-PC in ``raum1`` alles unterhalb von ``./raum1-lehrer-pc`` angewendet.
 
 .. code:: bash
 
@@ -134,7 +113,7 @@ Zudem wird für den raum1 alles unterhalb von ./raum1 angewendet und schließlic
 
 **Universelles Postsync-Script**
 
-Das universelle Postsync-Script weist derzeit folgenden Inhalt auf:
+Das universelle Postsync-Script ist unter ``/srv/linbo/images/<HWK>/<hwk>.qcow2.postsync`` mit folgendem Inhalt anzulegen und gemäß der eigenen Anforderungen anzupassen:
 
 .. code:: bash
 
@@ -144,9 +123,14 @@ Das universelle Postsync-Script weist derzeit folgenden Inhalt auf:
    NOW=$(date +%Y%m%d-%H%M)
    echo $NOW | tee -a $LOG
    
-   # IP-Adresse des Servers
-   SERVERIP=$(nslookup dummy 2> /dev/null | head -n 1 | awk -F: '{print $2}' | sed "s/\s*//g")
+   # IP-Adresse des Servers !!! bei Einsatz von LINBO 4.0 bitte Kommentarzeichen der nächsten Zeile entfernen, Zeile für LINBO 4.1 auskommentieren !!! 
+   # SERVERIP=$(nslookup dummy 2> /dev/null | head -n 1 | awk -F: '{print $2}' | sed "s/\s*//g")
    
+   # IP-Adresse des Servers für LINBO 4.1
+   SERVERIP="$(grep serverid /tmp/dhcp.log | awk -F\' '{ print $2 }')"
+   # SERVERIP=${siaddr}
+   # export SERVERIP
+
    # Die Hostgruppe des aktuellen Rechners
    HOSTGROUP=$(hostgroup) 
    

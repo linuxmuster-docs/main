@@ -66,13 +66,13 @@ Danach wirst Du aufgefordert das System neu zu starten. Führe einen ``Reboot`` 
 
 Der weitere Ablauf ist identisch zu den unter 2.) beschriebenen Schritten.
 
-4. Melde Dich nach dem Neustart des Servers an und editiere die Datei ``/usr/lib/linuxmuster-webui/etc/requirements.txt``, indem Du den Eintrag für ``crypthography`` anpasst.
+4. Melde Dich nach dem Neustart des Servers an. Hast Du die aktuellsten Pakete, prüfe die Datei ``/usr/lib/linuxmuster-webui/etc/requirements.txt``. Dort sollte als Eintrag für ``crypthography`` stehen:
 
 .. code::
 
-   cryptography==39.0.0
+   cryptography==39.0.1
 
-Speichere die Änderung ab. Ajenti benötigt diese Version des Python-Moduls.
+Sollte dies so sein, fahre mit Schritt 5 fort. Falls nicht, aktualisiere zuerst wie unter 1.) beschrieben die installierten Pakete.
 
 5. Führe die erneute Konfiguration der lmn-Pakete aus. Rufe dazu folgenden Befehl auf:
 
