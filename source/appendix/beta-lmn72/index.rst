@@ -119,9 +119,11 @@ Aktualisiere nun die Paketquellen:
    :alt: first login to lmn7.2
 
 
+
+
 .. hint::
 
-   Glückwunsch Dein System ist nun auf lmn 7.2 und Du kannst alle Neuerungen testen. Denke daran, dass die Version noch im Beta-Stadium ist. Bei Fragen oder Auffälligkeiten schaue unter https://ask.linuxmuster.net/t/lmn-7-2-testing/9732
+   Glückwunsch ! Du hast Dein System nun auf lmn 7.2 aktualisiert. Du kannst nun alle Neuerungen testen. Denke daran, dass die Version noch im Beta-Stadium ist. Bei Fragen oder Auffälligkeiten schaue unter https://ask.linuxmuster.net/t/lmn-7-2-testing/9732
 
 
 
