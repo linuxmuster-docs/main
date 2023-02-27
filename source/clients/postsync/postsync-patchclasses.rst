@@ -5,29 +5,35 @@ Die Bereiche, für die Anpassungen vorgenommen werden sollen, heißen Patchklass
 
 **Wo müssen die Anpassungen (Patches) abgelegt werden ?**
 
-Unter ``/srv/linbo/linuxmuster-client/`` sind weitere Unterverzeichnisse für die sog. Patchklassen anzulegen.
-In der ersten Ebene wird nach dem verwendeten Image (cloop-Datei) unterschieden. Beim Einsatz des Linuxmuster-Client 18.04 (bionic = Name der Patchklasse) sind
-alle weiteren Patches für die 18.04er-Clients in dem Verzeichnis ``bionic`` abzulegen. Bei Linuxmuster-Clients 20.04 (Focal Fossa) wäre dies z.B. das Verzeichnis ``focalfossa``:
+Zunächst ist das Verzechnis ``/srv/linbo/linuxmuster-client/`` anzulegen:
 
 .. code:: bash
 
-   /srv/linbo/linuxmuster-client/bionic/
+   mkdir -p /srv/linbo/linuxmuster-client/
+
+Unter ``/srv/linbo/linuxmuster-client/`` sind weitere Unterverzeichnisse für die sog. Patchklassen anzulegen.
+In der ersten Ebene wird nach dem verwendeten Imagenamen (qcow2-Datei) unterschieden. Bei Linuxmuster-Clients 20.04 (Focal Fossa) wäre dies z.B. das Verzeichnis ``focalfossa``, oder
+bei Einsatz von Pop! OS 22.04 ``popos2204``:
+
+.. code:: bash
+
    /srv/linbo/linuxmuster-client/focalfossa/
+   /srv/linbo/linuxmuster-client/popos2204/
 
 In der nächsten Ebene können weiter Unterscheidungen nach folgendem Schema angewendet werden:
 
 .. code:: bash
 
-   im Unterverzeichnis .../common liegende Patches erhalten alle Rechner
-   im Unterverzeichnis  .../r100 liegende Patches erhalten nur die Rechner in Raum r100
-   im Unterverzeichnis .../r100-pc01 liegende Patches erhält nur der PC01 in Raum r100 die Dateien.
+   im Unterverzeichnis .../common liegende Patches erhalten alle Rechner, die dieses Image nutzen.
+   im Unterverzeichnis  .../r100 liegende Patches erhalten nur die Rechner in Raum r100.
+   im Unterverzeichnis .../r100-pc01 liegende Patches erhält nur der PC01 in Raum r100.
 
 Unterhalb dieser Verzeichnisse sind alle Anpassungen so abzulegen, dass sie mit der Verzeichnisstruktur
 der betreffenden Clients identisch sind. So wird z.B. beim Anlegen der Datei auf dem Server:
 
 .. code:: bash
 
-   .../common/etc/cups/cups.conf
+   ../common/etc/cups/cups.conf
 
 Die ``cups.conf`` im Verzeichnis ``/etc/cups`` auf allen Clients der Patchklasse entsprechend angepasst.
 
@@ -52,26 +58,16 @@ Sollen Scripte für die ``Patchklasse focalfossa`` und dann nur auf ``PCs im Rau
 
 Die Skripte müssen sh-Scripte sein, da Linbo keine BASH als Shell kennt.
 In diesen Scripten ist der Shebang ``#!/bin/sh`` voranzustellen.
-Diese Scripte müssen zur Anwendung für die gewünschte Patchklasse in das jeweilige Verzeichnis kopiert und angepasst werden. Diese Scripte werden entsprechend ihrer 
-lexikalischen Reihenfolge ausgeführt, also hier beginnend mit der niedrigsten Ziffer.
-
-Nachstehende Abbildungen verdeutlichen diesen Aufbau:
-
-.. image:: media/patchclasses-postsync.png
-
-Das allgemeine Postsync-Script arbeitet nach folgendem Schema:
-
-.. image:: media/scheme-for-general-postsync-usage.png
-
+Diese Scripte müssen zur Anwendung für die gewünschte Patchklasse in das jeweilige Verzeichnis kopiert und angepasst werden. Diese Scripte werden entsprechend ihrer lexikalischen Reihenfolge ausgeführt, also hier beginnend mit der niedrigsten Ziffer.
 
 **Beispiel**
 
-Nachstehender Verzeichnisbaum verdeutlicht, dass für Linuxmuster-Clients für alle PCs der Patchklasse focalfossa alles unterhalb von ./common angewendet wird.
+Nachstehender Verzeichnisbaum verdeutlicht, dass für Linuxmuster-Clients für alle PCs der Patchklasse ``focalfossa`` alles unterhalb von ``./common`` angewendet wird. Modulare Postsync-Scripte finden sich unter ``./common/postsync.d/`` und werden in lexikalischer Reihenfolge abgearbeitet.
 Zudem wird für den ``raum1`` alles unterhalb von ``./raum1`` angewendet und schließlich wird für den Lehrer-PC in ``raum1`` alles unterhalb von ``./raum1-lehrer-pc`` angewendet.
 
 .. code:: bash
 
-   19:06/0 server /srv/linbo/linuxmuster-client/focalfossa # ls -ld $(find .)
+   root@server:/srv/linbo/linuxmuster-client/focalfossa # ls -ld $(find .)
    drwxr-xr-x 7 root root 4096 Nov 20 10:25 .
    drwxr-xr-x 3 root root 4096 Apr 22  2016 ./common
    drwxr-xr-x 3 root root 4096 Mär 17 12:54 ./common/etc
@@ -79,6 +75,9 @@ Zudem wird für den ``raum1`` alles unterhalb von ``./raum1`` angewendet und sch
    -rw-r--r-- 1 root root   21 Mai  9  2016 ./common/etc/cups/client.conf
    -rw-r--r-- 1 root root  797 Mär 31 09:16 ./common/etc/fstab
    -rw-r--r-- 1 root root  443 Mai  9  2016 ./common/etc/hosts
+   drwxr-xr-x 3 root root 4096 Mär 17 12:54 ./common/postsync.d
+   -rw-r--r-- 1 root root   21 Mai  9  2016 ./common/postsync.d/00-lcst-fix-initrd.sh
+   -rw-r--r-- 1 root root  797 Mär 31 09:16 ./common/postsync.d/01-lcst-setlocalpasswords.sh
    drwxr-xr-x 4 root root 4096 Mär 26  2015 ./raum1
    drwxr-xr-x 7 root root 4096 Nov 20 10:10 ./raum1/etc
    drwxr-xr-x 2 root root 4096 Apr 14 10:38 ./raum1/etc/cups
@@ -113,7 +112,7 @@ Zudem wird für den ``raum1`` alles unterhalb von ``./raum1`` angewendet und sch
 
 **Universelles Postsync-Script**
 
-Das universelle Postsync-Script ist unter ``/srv/linbo/images/<HWK>/<hwk>.qcow2.postsync`` mit folgendem Inhalt anzulegen und gemäß der eigenen Anforderungen anzupassen:
+Das universelle Postsync-Script ist unter ``/srv/linbo/images/<LinuxImageVerzeichnis>/<LinuxImageName>.postsync`` mit folgendem Inhalt anzulegen bzw. wie zuvor beschrieben zu kopieren und gemäß der eigenen Anforderungen anzupassen:
 
 .. code:: bash
 
