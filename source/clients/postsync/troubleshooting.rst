@@ -3,16 +3,13 @@ Troubleshooting
 
 **Welche Möglichkeiten der Fehlersuche gibt es ?**
 
-Vom linuxmuster.net Server aus kann man sich auf dem Client mithilfe 
-von **linbo_ssh** anmelden und dort z.B. den Synchronisationsvorgang 
-aktivieren. Es lassen sich so dann die Postsync-Ausgaben / Fehlermeldungen 
-auf dem Client einsehen.
+Vom linuxmuster.net Server aus kann man sich auf dem Client mithilfe von **linbo_ssh** anmelden. Es lassen sich so dann die Postsync-Ausgaben / Fehlermeldungen auf dem Client einsehen.
 
 Das Postsync-Script schreibt eine LOG-Datei, die auf dem Client unter 
 
 .. code:: bash
 
-    /mnt/var/log/postsync.log 
+    /var/log/postsync.log
     
 abgelegt wird.
 
@@ -32,13 +29,17 @@ Herunterfahren der Clients mit:
 
    linbo-remote -i <Client-name / IP-Adresse> -c halt
 
-.. hint:: Hinweise zu linbo-remote und linbo-ssh
+Bei Einsatz des universellen Postsync-Scriptes stehen am Anfang der LOG-Datei z.B. folgende Angaben, die die Infos zu Raum, Rechnername etc. ausgeben:
 
-   `linbo im Community-Wiki <https://wiki.linuxmuster.net/community/anwenderwiki:linbo:start?s[]=linbo&s[]=remote>`_
-      
-..
-   https://www.linuxmuster.net/wiki/dokumentation:handbuch:linbo:linbo.remote
-  
-..  
-   https://www.linuxmuster.net/wiki/dokumentation:handbuch51:clients:linbo:linbo_remote?s[]=linbo&s[]=ssh
+ .. figure:: media/01-output-postsync-log.png
+       :align: center
+       :alt: Output Postsync-LOG
+
+Hier kann kontrolliert werden, ob der gewünschte Rechner, Raum, die korrekte Patchklasse und Hostgruppe ausgewählt wurden. Zudem wwerden die übertragenen Dateien / Scripte dargestellt.
+
+
+
+
+
+
 
