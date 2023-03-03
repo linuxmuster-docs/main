@@ -3,15 +3,17 @@ Patchklassen für Postsync-Scripte
 
 Die Bereiche, für die Anpassungen vorgenommen werden sollen, heißen Patchklassen.
 
-**Wo müssen die Anpassungen (Patches) abgelegt werden ?**
+Ablage der Patches
+------------------
 
-Zunächst ist das Verzechnis ``/srv/linbo/linuxmuster-client/`` anzulegen:
+Zunächst ist das Verzeichnis ``/srv/linbo/linuxmuster-client/`` anzulegen:
 
 .. code:: bash
 
    mkdir -p /srv/linbo/linuxmuster-client/
 
 Unter ``/srv/linbo/linuxmuster-client/`` sind weitere Unterverzeichnisse für die sog. Patchklassen anzulegen.
+
 In der ersten Ebene wird nach dem verwendeten Imagenamen (qcow2-Datei) unterschieden. Bei Linuxmuster-Clients 20.04 (Focal Fossa) wäre dies z.B. das Verzeichnis ``focalfossa``, oder
 bei Einsatz von Pop! OS 22.04 ``popos2204``:
 
@@ -20,7 +22,7 @@ bei Einsatz von Pop! OS 22.04 ``popos2204``:
    /srv/linbo/linuxmuster-client/focalfossa/
    /srv/linbo/linuxmuster-client/popos2204/
 
-In der nächsten Ebene können weiter Unterscheidungen nach folgendem Schema angewendet werden:
+In der nächsten Ebene können weitere Unterscheidungen nach folgendem Schema angewendet werden:
 
 .. code:: bash
 
@@ -28,8 +30,13 @@ In der nächsten Ebene können weiter Unterscheidungen nach folgendem Schema ang
    im Unterverzeichnis  .../r100 liegende Patches erhalten nur die Rechner in Raum r100.
    im Unterverzeichnis .../r100-pc01 liegende Patches erhält nur der PC01 in Raum r100.
 
-Unterhalb dieser Verzeichnisse sind alle Anpassungen so abzulegen, dass sie mit der Verzeichnisstruktur
-der betreffenden Clients identisch sind. So wird z.B. beim Anlegen der Datei auf dem Server:
+
+.. hint::
+
+   In der Geräteverwaltung muss der Rechnername nach dem Schema ``RaumName-PCName`` benannt worden sein. Beispiel: Raum: r100 Rechnermane: r100-pc01
+
+
+Unterhalb dieser Verzeichnisse sind alle Anpassungen so abzulegen, dass sie mit der Verzeichnisstruktur der betreffenden Clients identisch sind. So wird z.B. beim Anlegen der Datei auf dem Server:
 
 .. code:: bash
 
@@ -44,9 +51,11 @@ In der Patchklasse ``focalfossa`` würde eine Änderung der Datei ``rc.local`` a
    /srv/linbo/linuxmuster-client/focalfossa/common/etc/rc.local
 
 
-**Weitere Skripte ausführen**
+Weitere Skripte ausführen
+-------------------------
 
 Das ``universelle Postsync-Script`` ist so aufgebaut, dass auch noch weitere Scripte ausgeführt werden können.
+
 So können z.B. spezielle Anpassungen von PCs in einem bestimmten Raum vorgenommen werden.
 Alle abzuarbeitenden Scripte müssen im Verzeichnis ``postsync.d`` liegen.
 
@@ -110,7 +119,8 @@ Zudem wird für den ``raum1`` alles unterhalb von ``./raum1`` angewendet und sch
    -rwxr-xr-x 1 root root 1645 Apr  8  2012 ./raum1-lehrer-pc/etc/init.d/epoptes
    -rwxr-xr-x 1 root root    0 Nov 20 10:22 ./raum1-lehrer-pc/etc/init.d/epoptes-client
 
-**Universelles Postsync-Script**
+Universelles Postsync-Script
+----------------------------
 
 Das universelle Postsync-Script ist unter ``/srv/linbo/images/<LinuxImageVerzeichnis>/<LinuxImageName>.postsync`` mit folgendem Inhalt anzulegen bzw. wie zuvor beschrieben zu kopieren und gemäß der eigenen Anforderungen anzupassen:
 
@@ -121,17 +131,11 @@ Das universelle Postsync-Script ist unter ``/srv/linbo/images/<LinuxImageVerzeic
    echo "##### POSTSYNC BEGIN #####" >  $LOG
    NOW=$(date +%Y%m%d-%H%M)
    echo $NOW | tee -a $LOG
-   
-   # IP-Adresse des Servers !!! bei Einsatz von LINBO 4.0 bitte Kommentarzeichen der nächsten Zeile entfernen, Zeile für LINBO 4.1 auskommentieren !!! 
-   # SERVERIP=$(nslookup dummy 2> /dev/null | head -n 1 | awk -F: '{print $2}' | sed "s/\s*//g")
-   
-   # IP-Adresse des Servers für LINBO 4.1
-   SERVERIP="$(grep serverid /tmp/dhcp.log | awk -F\' '{ print $2 }')"
-   # SERVERIP=${siaddr}
-   # export SERVERIP
 
-   # Die Hostgruppe des aktuellen Rechners
-   HOSTGROUP=$(hostgroup) 
+   # IP-Adresse des Servers für LINBO 4.1
+   SERVERIP=$LINBOSERVER
+
+   # Die Hostgruppe des aktuellen Rechners  wird mit $HOSTGROUP abgerufen
    
    # Raum feststellen. Dieses Skript geht davon aus
    # dass die Rechner Namen der Form
@@ -246,8 +250,52 @@ Das universelle Postsync-Script ist unter ``/srv/linbo/images/<LinuxImageVerzeic
    echo $NOW > /mnt/lastsync
    
    echo "##### POSTSYNC END #####" | tee -a $LOG
+
+   # Folgende Zeile stellt sicher, dass bei Änderungen des Postsync-Scriptes auf dem Server
+   # diese auch auf den Client übertragen werden.
+   # Achtung: Imageverzeichnis und Imagename sind anzupassen
+   rsync --progress -r $LINBOSERVER::linbo/images/focalfossa/focalfossa.postsync /cache/
    
 .. attention:: Um Komplikationen vorzubeugen, verwende das Kommando ``exit`` in keinem Deiner Postsync-Scripte!
+
+Variablen im Postsync-Script
+----------------------------
+
+In LINBO 4.1 stehen für die Postsync-Scripte bereits Variablen zum Abruf bereit. Nachstehende Übersicht mit Bildschirmausgaben nach dem Schema ``Text -> Variablenwert`` veranschaulicht dies:
+
+.. code:: bash
+
+  echo "# postsync script example"
+  echo "os partition  : $root"
+  echo "os name       : $name"
+  echo "os description: $description"
+  echo "cache device  : $cache"
+  echo "baseimage     : $baseimage"
+  echo "kernel        : $kernel"
+  echo "initrd        : $initrd"
+  echo "append        : $append"
+  echo "hostgroup     : $HOSTGROUP"
+  echo "hostname      : $HOSTNAME"
+  echo "domain        : $DOMAIN"
+  echo "ip            : $IP"
+  echo "netmask       : $SUBNET"
+  echo "bitmask       : $MASK"
+  echo "server ip     : $LINBOSERVER"
+  echo "server name   : $SNAME"
+
+
+Anwendung des Postsync
+======================
+
+Wurden alle Patchklassen und Scripte definiert, die Dateiberechtigungen wie angegeben kontrolliert und das Postsync-Script in dem Image-Verzeichnis hinterlegt, fehlt noch ein wesentlicher Schritt, um das Postsync Script anzuwenden.
+
+.. attention::
+
+  Das Postsync-Script wird erst angewendet, wenn die betreffenden Clients partitioniert, formatiert und synchronisiert wurden. Erst hierbei wird das Postsync-Script auf den Client übertragen !
+
+
+
+
 
 
 
