@@ -47,7 +47,7 @@ Die Liste der angelegten Hardwareklassen kann dann - z.B. wie nachstehend darges
 
 Du rufst nun die Einstellungen der zuvor angelegten Hardwareklasse auf, indem Du das ``Stift-Symbol`` rechts daneben aufrufst.
 
-Es erscheint ein Fenster mit den Einstellungen der Hardwareklasse. Dort gibt es die Reiterkarten ``Allgmein`` und  ``Partitionen``.
+Es erscheint ein Fenster mit den Einstellungen der Hardwareklasse. Dort gibt es die Reiterkarten ``Allgemein`` und  ``Partitionen``.
 
 Unter ``Allgemein`` legst Du die IP des Servers fest, gibst das Startverhalten und ggf. Kernel-Optionen für den Boot bei besonderer Hardware an.
 
@@ -164,17 +164,14 @@ Folgende Konfiguration zeigt ein mögliches Beispiel für die ``Hardwareklasse u
 
 .. hint::
 
-  Sollte der Client beim Boot-Vorgang Probleme haben (z.B. initializing hardware ...), dann müssten zur Behebung Kernel-Parameter für den Linux-Client in der Conf-Datei eingetragen werden. Dies kann insbesondere bei neueren Grafikkarten der Fall sein, so dass hier weitere Optionen anzugeben sind. Oftmals führt bereits folgende Zeile zum Erfolg: 
+  Sollte der Client beim Boot-Vorgang Probleme haben (z.B. initializing hardware ...), dann müssen zur Behebung Kernel-Parameter für den Linux-Client in der Conf-Datei eingetragen werden. Dies kann insbesondere bei neueren Grafik- und Netzwerkkarten der Fall sein, so dass hier weitere Optionen anzugeben sind. Oftmals führt bereits folgende Zeile zum Erfolg: 
 
-  KernelOptions = quiet splash nomodeset
+  ``KernelOptions = quiet splash nomodeset``
 
   Hilfreich können auch KernelOptions sein wie z.B.: 
 
-  modprobe.blacklist=radeon 
-  oder 
-  i915.alpha_support=1 
+  ``modprobe.blacklist=radeon``  oder   ``i915.alpha_support=1``
   
-.. hint::  
-
   Wenn bei neueren Realtek-Netzwerkkarten mit r8169-Chip in linbo >=4.1.26 sehr niedrige Download-Raten auftreten, können die Kerneloptionen    
   ``pcie_aspm=off`` und  ``loadmodules=r8168``  Besserung bringen.
+  
