@@ -173,4 +173,8 @@ Folgende Konfiguration zeigt ein mögliches Beispiel für die ``Hardwareklasse u
   modprobe.blacklist=radeon 
   oder 
   i915.alpha_support=1 
+  
+.. hint::  
 
+  Wenn bei neueren Realtek-Netzwerkkarten mit r8169-Chip in linbo >=4.1.26 sehr niedrige Download-Raten auftreten, können die Kerneloptionen    
+  ``pcie_aspm=off`` und  ``loadmodules=r8168``  Besserung bringen.
