@@ -415,9 +415,7 @@ Diese sind dadurch zu beheben, indem Du auf dem linuxmuster.net Server ein Skrip
   
 Es wird hierdurch das Verzeichnis für NTP Sockets auf dem Server repariert, so dass Windows Clients erfolgreich hierauf zugreifen können. Danach sollte der Zeitabgleich via NTP erfolgreich durchlaufen.
 
-.. hint::
-
-Die Systemzeit sollte möglichst synchron mit dem Server sein, um Probleme mit der Domänenanmeldung, dem Domänenbeitritt zu vermeiden! Auch andere Dienste (z.B. WSUS, KMS, ...) machen bei großen Differenzen Probleme.
+.. hint:: Die Systemzeit sollte möglichst synchron mit dem Server sein, um Probleme mit der Domänenanmeldung, dem Domänenbeitritt zu vermeiden! Auch andere Dienste (z.B. WSUS, KMS, ...) machen bei großen Differenzen Probleme.
 
 
   
