@@ -10,7 +10,7 @@ Anpassen der Festplattengröße
                    `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
 Must Du aufgrund geänderter Anforderungen die bereits eingerichteten Festplattengrößen in Deiner Virtualisierungsumgebung ändern,
-dann ist es hilfreich, sich an nachstehend beschriebenen aAblauf und Hinweisen zu orientieren.
+dann ist es hilfreich, sich an nachstehend beschriebenen Ablauf und Hinweisen zu orientieren.
 
 
 Übersicht zum Vorgehen
