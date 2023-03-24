@@ -4,7 +4,7 @@ Anzeigen des eigenen Plattenplatzes
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
-Lehrer und Administratoren können sich auf der Startseite der *Schulkonsole* über
+Jeder Benutzer kann sich auf der Startseite der *Schulkonsole* über
 ihren verbrauchten Speicherplatz und die ihnen zugewiesenen 
 Speicherplatzbegrenzungen (Quotas) informieren. 
 
@@ -27,41 +27,42 @@ Es sind verschiedene Quotas voneinander abzugrenzen:
 
 Wie in obiger Abbildung dargestellt, sind folgende Quotas zu unterscheiden:
 
-1. **default-school**: Dieser Plattenplatz in MiB wird auf dem Server auf dem share 
+1.  **default-school**: Dieser Plattenplatz in MiB wird auf dem Server auf dem share 
 ``/srv/samba/schools/default-school`` geprüft. Diese Freigabe (share DFLT) ist für alle Benutzer 
 der zugeordneten Schule relevant. In der eigenen Schule - hier ``default-school`` - können 
 Daten bis zur definierten Obergrenze auf dieser Freigabe gespeichert werden.
 
-2. **linuxmuster-global**: Dieser Plattenplatz in MiB wird auf dem Server auf dem share 
+2.  **linuxmuster-global**: Dieser Plattenplatz in MiB wird auf dem Server auf dem share 
 ``/srv/samba/global`` geprüft. Diese Freigabe (share GLOBAL) ist für alle Benutzer der beteiligten 
 Schulen (Mehr-Schulbetrieb) relevant, um schulübergreifend Dateien zu tauschen (linuxmuster-global).
 
-3. **Cloudquota**: Bezeichnet die Quota der eigenen Schule - ein anderer Name für die unter 1.) 
+3.  **Cloudquota**: Bezeichnet die Quota der eigenen Schule - ein anderer Name für die unter 1.) 
 dargestellte Quota für default-school.
 
-4. **Mailquota**:  Zeigt den verfügbaren Plattenplatz pro User zur Ablage von E-Mails an.
+4.  **Mailquota**: Zeigt den verfügbaren Plattenplatz zur Ablage von E-Mails an. 
 
-Beachten Sie auch, dass die gesetzte Quota immer für eine ganze
+Beachte auch, dass die gesetzte Quota immer für eine ganze
 Festplattenpartition auf dem Linux-Server gilt, d.h. in den meisten
 Fällen zählen auch Dateien auf den Tauschverzeichnissen zum
 verbrauchten Speicherplatz.
 
-Sollte der Netzwerkbetreuer Ihnen eine neue Quota eingerichtet haben, so erkennen Sie dies in Ihrer
+Sollte der Netzwerkbetreuer dir eine neue Quota eingerichtet haben, so erkennst du dies in deiner
 Übersicht nach der Anmeldung wie in nachstehender Abbildung dargestellt:
 
 .. figure:: media/03-quota-overview-teacher-after-quota-changes.png
    :align: center
    :alt: Neue Quota für den Lehrer
 
-Lehrer: Prüfer der Schüler-Quota
+
+Lehrer: Prüfen der Schüler-Quota
 --------------------------------
 
-Um in der unterrichteten Klasse zu prüfen, welche Schülerinnen und Schüler ihren zugewiesenen
-Speicherplatz ausgeschöpft haben, rufen Sie in der Schulkonsole ...
+Um in der unterrichteten Klasse zu prüfen, welche Schülerinnen und Schüler ihren zugewiesenen Speicherplatz ausgeschöpft haben, rufe in der Schulkonsole "Unterricht" auf. Wähle eine Klasse oder Kurs aus. Klicke auf das Zahnrad-Symbol in der Zeile eines Schülers und wähle "Benutzerinformation".
+Ganz unten wird die Quota des Schülers angezeigt:
 
-
-.. hint::
-
-   Diese Funktion ist in der aktuellen Version der Schulkonsole der v7 noch fertigzustellen.
-
+.. figure:: media/04-teacher-check-student-quota.png
+   :align: center
+   :alt: Quota eines Schülers
+   
+ 
 
