@@ -200,43 +200,38 @@ Sämtliche Änderungen müssen mit ``Speichern & Übernehmen`` übernommen werde
 Dateien-Übertragungs-Funktion
 -----------------------------
 
-Eine nützliche Funktion für Unterrichtsarbeit mit Dateien bietet linuxmuster.net mit der ``Aus- & Einsammeln-Funktion``.
+Eine nützliche Funktion für Unterrichtsarbeit mit Dateien bietet linuxmuster.net mit der ``Austeilen- & Einsammeln-Funktion``.
 Auf der Kursseite finden Sie im unteren Bereich die ``Teilen`` und ``Einsammeln`` Funktionen, welche sich auf alle
-Kursteilnehmer beziehen. Neben jedem Benutzer selbst gibt es ``Teilen`` und ``Einsammeln`` Funktionen, welche auf
+Kursteilnehmer beziehen. Neben jedem Benutzer selbst gibt es ``Austeilen`` und ``Einsammeln`` Funktionen, welche auf
 einzelne Benutzer angewendet werden. 
+Das Austeilen erfolgt aus dem Unterverzeichnis "transfer" innerhalb des Home-Verzeichnisses.
 
-TEILEN
-------
-
-Dateien auf ganzen Kurs übertragen: per Drag & Drop können Datei(en) eingefügt werden, welche auf die PCs
-der Kursteilnehmer kopiert werden.
+**Teilen**: Dateien werden auf ganzen Kurs übertragen: Gewünschte Dateien auswählen (angezeigt wird das persönliche transfer-Verzeichnis), welche in die Home-Verzeichnisse
+der Kursteilnehmer kopiert werden sollen. 
 
 .. figure:: media/18_webui-basics_share-icon.png
    :align: center
    :alt: WebUI Share Icon
 
+**Austeilen zu bestimmtem Benutzer**: Analog dem Austeilen an einen gesamten Kurs kann auch nur an einen bestimmten Benutzer ausgeteilt werden.
+
 .. hint::
+   **Datei hochladen**: Fehlt die gewünschte Datei im eigenen transfer-Verzeichnis, kann diese auch sofort hochgeladen werden.
+   
+Bei den Kursteilnehmern werden dabei im transfer-Verzeichnis automatisch Unterorder für jeden Kurs erstellt (wenn noch nicht vorhanden). Nur aus diesen kann auch wieder eingesammelt werden!
 
-   **Teilen zu bestimmtem Benutzer**: per Drag & Drop können Datei(en) eingefügt werden, welche auf den PC des 
-   ausgewählten Benutzers kopiert werden.
-
-EINSAMMELN
-----------
-
-Kopiere Übertragung des ganzen Kurses: Sammelt die bearbeitete Datei/en des Kursteilnehmers wieder ein,
+**Einsammeln**:
+Kopiere transfer-Verzeichnis des ganzen Kurses: Sammelt die bearbeitete/-n Datei/-en des Kursteilnehmers wieder ein,
 ohne Sie vom Benutzer zu löschen.
-Sammle Übertragung des ganzen Kurses ein Sammelt die bearbeitete Datei/en des ausgewählten Benutzers
-wieder ein und löscht Sie vom PC der Kursteilnehmer.
+Sammle transfer-Verzeichnis des ganzen Kurses ein: Sammelt die bearbeitete/-n Datei/-en des ausgewählten Benutzers
+wieder ein und löscht Sie beim Kursteilnehmer.
 
 .. figure:: media/19_webui-basics_collect-icon.png
    :align: center
    :alt: WebUI Collect Icon
 
-**Einsammeln zu bestimmtem Benutzer**: Dateien kopieren: Sammelt die bearbeitete Datei/en des 
-ausgewählten Benutzers wieder ein ohne Sie vom Benutzer zu löschen. 
-
-**Dateienen einsammeln**: Sammelt die bearbeitete Datei/en des ausgewählten Benutzers wieder ein und löscht 
-   Sie vom PC des Benutzers.
+**Einsammeln von bestimmtem Benutzer**: Dateien kopieren / Verschieben: Sammelt die bearbeitete Datei/en des 
+ausgewählten Benutzers wieder ein. 
 
 .. figure:: media/20_webui-basics_collect-share-overview.png
    :align: center
@@ -288,7 +283,7 @@ unten links bestätigen.
    :align: center
    :alt: WebUI Besome Object Member
 
-**Aus Objekt austreten**: Den Haken des jeweiligen Objektes entfernen und anschließend mit der ``Übernhemen-Taste`` 
+**Aus Objekt austreten**: Den Haken des jeweiligen Objektes entfernen und anschließend mit der ``Übernehmen-Taste`` 
 unten links bestätigen.
 
 .. figure:: media/26_webui-basics_leave-object.png
