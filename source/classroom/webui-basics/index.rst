@@ -227,20 +227,20 @@ Schülern im Prüfungsmodus ist automatisch die WLAN-, Internet- & Drucker-Freig
 angepasst werden. Um den Prüfungsmodus zu terminieren, den Haken bei jedem Kursmitglied entfernen und ``Speichern & Übernehmen`` 
 ausführen.
 
-Weitere Hinweise sind im Abschnitt `Prüfungsmodus Klassenarbeitsmodus <https://docs.linuxmuster.net/de/latest/classroom/exam-and-transfer.html#prufungsmodus-klassenarbeitsmodus`_ zu finden.
+Weitere Hinweise sind im Abschnitt `Prüfungsmodus Klassenarbeitsmodus <https://docs.linuxmuster.net/de/latest/classroom/exam-and-transfer.html#prufungsmodus-klassenarbeitsmodus>`_ zu finden.
 
 Einschreiben
 ------------
 
 Dieser Abschnitt dient Lehrern dazu sich in Schulklassen, Projekte oder zu Druckern einzuschreiben. Lehrer ordnen sich hier
-beispielsweise zu Beginn des Schuljahres den jeweiligen Klassen zuordnen.
+beispielsweise zu Beginn des Schuljahres den jeweiligen Klassen zu.
 
 .. figure:: media/23_webui-basics_subscript-classes.png
    :align: center
    :alt: WebUI Subscript Classes
 
 Ein jeweiliges Objekt zum Einschreiben auswählen oder den Haken entfernen um daraus auszutreten. Geänderte
-Einstellungen werden gelb angezeigt. Um die Änderungen anzuwenden, auf Übernehmen klicken. In diesem Abschnitt
+Einstellungen werden gelb angezeigt. Um die Änderungen anzuwenden, auf ``Übernehmen`` klicken. In diesem Abschnitt
 finden Sie eine übersichtliche Darstellung zu zugehörigen Schulklassen, Druckern und Projekten. Für detaillierte
 Informationen zu einem Objekt, dieses anklicken.
 
