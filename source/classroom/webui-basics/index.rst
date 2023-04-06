@@ -204,38 +204,8 @@ Eine nützliche Funktion für Unterrichtsarbeit mit Dateien bietet linuxmuster.n
 Auf der Kursseite finden Sie im unteren Bereich die ``Teilen`` und ``Einsammeln`` Funktionen, welche sich auf alle
 Kursteilnehmer beziehen. Neben jedem Benutzer selbst gibt es ``Austeilen`` und ``Einsammeln`` Funktionen, welche auf
 einzelne Benutzer angewendet werden. 
-Das Austeilen erfolgt aus dem Unterverzeichnis "transfer" innerhalb des Home-Verzeichnisses.
 
-**Teilen**: Dateien werden auf ganzen Kurs übertragen: Gewünschte Dateien auswählen (angezeigt wird das persönliche transfer-Verzeichnis), welche in die Home-Verzeichnisse
-der Kursteilnehmer kopiert werden sollen. 
-
-.. figure:: media/18_webui-basics_share-icon.png
-   :align: center
-   :alt: WebUI Share Icon
-
-**Austeilen zu bestimmtem Benutzer**: Analog dem Austeilen an einen gesamten Kurs kann auch nur an einen bestimmten Benutzer ausgeteilt werden.
-
-.. hint::
-   **Datei hochladen**: Fehlt die gewünschte Datei im eigenen transfer-Verzeichnis, kann diese auch sofort hochgeladen werden.
-   
-Bei den Kursteilnehmern werden dabei im transfer-Verzeichnis automatisch Unterorder für jeden Kurs erstellt (wenn noch nicht vorhanden). Nur aus diesen kann auch wieder eingesammelt werden!
-
-**Einsammeln**:
-Kopiere transfer-Verzeichnis des ganzen Kurses: Sammelt die bearbeitete/-n Datei/-en des Kursteilnehmers wieder ein,
-ohne Sie vom Benutzer zu löschen.
-Sammle transfer-Verzeichnis des ganzen Kurses ein: Sammelt die bearbeitete/-n Datei/-en des ausgewählten Benutzers
-wieder ein und löscht Sie beim Kursteilnehmer.
-
-.. figure:: media/19_webui-basics_collect-icon.png
-   :align: center
-   :alt: WebUI Collect Icon
-
-**Einsammeln von bestimmtem Benutzer**: Dateien kopieren / Verschieben: Sammelt die bearbeitete Datei/en des 
-ausgewählten Benutzers wieder ein. 
-
-.. figure:: media/20_webui-basics_collect-share-overview.png
-   :align: center
-   :alt: WebUI Collect Share Overview
+Weitere Erläuterungen sind im Abschnitt `Austeilen und Einsammeln`_ zu finden.
 
 Prüfungsmodus
 -------------
@@ -256,6 +226,8 @@ stellt den Prüfungsmodus dar. Ausgewählte Schüler können dadurch in diesen M
 Schülern im Prüfungsmodus ist automatisch die WLAN-, Internet- & Drucker-Freigabe gesperrt. Dies kann jedoch
 angepasst werden. Um den Prüfungsmodus zu terminieren, den Haken bei jedem Kursmitglied entfernen und ``Speichern & Übernehmen`` 
 ausführen.
+
+Weitere Hinweise sind im Abschnitt `Prüfungsmodus = Klassenarbeitsmodus`_ zu finden.
 
 Einschreiben
 ------------
