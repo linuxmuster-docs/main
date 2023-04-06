@@ -27,6 +27,9 @@ Linbo4, das von linuxmuster.net entwickelt wurde, weist einige Neuerungen auf:
 
 Dieses Kapitel führt Dich in die Nutzung von linbo4 ein und erklärt die wesentlichen Schritte zur Imageverwaltung.
 
+.. hint::
+	Die meisten PC mit UEFI verwenden standardmäßig "SecureBoot". Dies muss deaktiviert werden, um Linbo booten zu können!
+
 Der LINBO Startbildschirm
 -------------------------
 
