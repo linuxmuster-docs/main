@@ -205,7 +205,7 @@ Auf der Kursseite finden Sie im unteren Bereich die ``Teilen`` und ``Einsammeln`
 Kursteilnehmer beziehen. Neben jedem Benutzer selbst gibt es ``Austeilen`` und ``Einsammeln`` Funktionen, welche auf
 einzelne Benutzer angewendet werden. 
 
-Weitere Erläuterungen sind im Abschnitt `austeilen-und-einsammeln`_ zu finden.
+Weitere Erläuterungen sind im Abschnitt `Austeilen und Einsammeln <https://docs.linuxmuster.net/de/latest/classroom/exam-and-transfer.html#austeilen-und-einsammeln>`_ zu finden.
 
 Prüfungsmodus
 -------------
@@ -227,7 +227,7 @@ Schülern im Prüfungsmodus ist automatisch die WLAN-, Internet- & Drucker-Freig
 angepasst werden. Um den Prüfungsmodus zu terminieren, den Haken bei jedem Kursmitglied entfernen und ``Speichern & Übernehmen`` 
 ausführen.
 
-Weitere Hinweise sind im Abschnitt `prufungsmodus-klassenarbeitsmodus`_ zu finden.
+Weitere Hinweise sind im Abschnitt `Prüfungsmodus=Klassenarbeitsmodus <https://docs.linuxmuster.net/de/latest/classroom/exam-and-transfer.html#prufungsmodus-klassenarbeitsmodus`_ zu finden.
 
 Einschreiben
 ------------
