@@ -230,12 +230,47 @@ oder
 
    CN=GSHOENNINGEN.LINUXMUSTER.LAN
 
-Zunächst ist ein Zertifikat zu erstellen, das die gesamte Zertifizierungskette enthält:
+
+Zunächst ist für RADIUS ein selbst signiertes Zertifikat zu erstellen. Grundlage ist immer ein privater Schlüssel:
 
 .. code::
 
-   cd /etc/linuxmuster/ssl/
-   cat server.cert.pem ca.pem > fullchain.pem
+    cd /etc/linuxmuster/ssl/
+    openssl genrsa -out radius-key.pem 4096
+    chgrp ssl-cert radius-key.pem
+
+Danach ist ein neues Zertifikat zu beantragen:
+
+.. code::
+
+    openssl req -new -key radius-key.pem -out radius.csr -sha512
+
+Gebe hierbei die gewünschten Informationen an. Bei ``Common Name (e.g. server FQDN or YOUR name) []:`` muss ein die zuvo ermittelte CN eingetragen werden, die durch z.B. drch ein vorangestelltes radius ergänzt wird. Ein korrekter Eintrag wäre z.B.: radius.gshoenningen.linuxmuster.lan
+
+Das Zertifikat ist nun noch auszustellen. Zuvor wird noch das Kennwort für den CAkey /etc/linuxmuster/ssl/cakey.pem benötigt. Dieses findet sich unter ``/etc/linuxmuster/.secret/cakey``.
+
+Zur Ausstellung ist folgender Befehl anzugeben und o.g. Kennwort zum Abschluss anzugeben:
+
+.. code::
+
+   openssl x509 -req -in radius.csr -CA /etc/linuxmuster/ssl/cacert.pem -CAkey /etc/linuxmuster/ssl/cakey.pem -CAcreateserial -out radius.pem -days 365 -sha512
+
+Die erstellten Dateien sowie die cacert-Dateien sind nun in das Freeradius Zertifikats-Verzeichnis zu kopieren, Gruppenzugehörigkeit und Dateiberechtigungen wie folgt anzupassen:
+
+.. code::
+
+    cd /etc/linuxmuster/ssl/
+    cp cacert.crt cacert.pem radius.csr radius-key.pem radius.pem /etc/freeradius/3.0/certs/
+    cd /etc/freeradius/3.0/certs/
+    chgrp freerad cacert.crt cacert.pem radius.csr radius-key.pem radius.pem
+    chmod 640 cacert.crt cacert.pem radius.csr radius-key.pem radius.pem
+
+Danach ein Zertifikat erstellen, das die gesamte Zertifizierungskette enthält:
+
+.. code::
+
+   cd /etc/freeradius/3.0/certs/
+   cat radius.pem cacert.pem > fullchain.pem
    chgrp freerad fullchain.pem
    chmod 640 fullchain.pem
 
@@ -243,16 +278,25 @@ Passe nun RADIUS so an, dass das Fullchain-Zertifikat genutzt wird.
 
 .. code::
 
-   nano /etc/freeradius/3.2/mods-enabled/eap r-Distribution bzw. RADIUS-Version)
-   ...
-   #
-   tls-config tls-common {
-        ...
-        certificate_file = /etc/linuxmuster/ssl/fullchain.pem
+   nano /etc/freeradius/3.0/mods-enabled/eap
+
+
+   eap {
+        [...]
+        tls-config tls-common {
+        	    [...]
+                private_key_file = /etc/freeradius/3.0/certs/radius-key.pem
+                certificate_file = /etc/freeradius/3.0/certs/fullchain.pem
+                ca_file = /etc/freeradius/3.0/certs/cacert.pem
+               [...]
+        }
+        [...]
+   }
+
 
 .. hint::
 
-   Je nach Server-Distribution ist ggf. die datei EAP unter /etc/raddb/mods-enabled/eap oder je nach Radius-Version unter /etc/freeradius/3.0/mods-enabled/eap anzupassen.
+   Je nach Server-Distribution ist ggf. die datei EAP unter /etc/raddb/mods-enabled/eap oder je nach Radius-Version unter /etc/freeradius/3.2/mods-enabled/eap anzupassen.
 
 Danach den Dienst neu starten:
 
