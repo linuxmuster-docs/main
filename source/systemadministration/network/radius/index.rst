@@ -248,7 +248,7 @@ Passe nun RADIUS so an, dass das Fullchain-Zertifikat genutzt wird.
    #
    tls-config tls-common {
         ...
-        private_key_file = /etc/linuxmuster/ssl/fullchain.pem
+        certificate_file = /etc/linuxmuster/ssl/fullchain.pem
 
 .. hint::
 
