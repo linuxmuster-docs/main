@@ -6,7 +6,7 @@ Im Schüler-WLAN sind die Geräte der Schüler. Es liegt im blauen Netz der OPNs
 Schritt für Schritt
 -------------------
 
-Installiere auf dem linuxmuster.net-Server das Paket linuxmuster-freeradius. Siehe :ref:`linuxmuster-freeradius-label`
+Installiere auf dem linuxmuster.net-Server das Paket ``freeradius``. Siehe :ref:`linuxmuster-freeradius-label`
 
 Melde Dich am Unifi-Kontroller an `<https://unifi:8443>`_.
 

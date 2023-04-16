@@ -138,7 +138,21 @@ Anpassen des Abschnitts ``ntlm_auth`` weiter unten. Zuerst das Kommentarzeichen 
    # eine Zeile
    ntlm_auth = "/usr/bin/ntlm_auth --allow-mschapv2 --request-nt-key --domain=DOMÄNE --require-membership-of=DOMÄNE\wifi --username=%{%{Stripped-User-Name}:-%{%{User-Name}:-None}} --challenge=%{%{mschap:Challenge}:-00} --nt-response=%{%{mschap:NT-Response}:-00}"
 
-Dabei muss DOMÄNE durch den eigenen Domänennamen (Samba-Domäne) ersetzt werden. Die Option ``–require-membership-of=…`` lässt nur Mitglieder der Gruppe wifi zu. So funktioniert die WLAN-Steuerung über die WebUI.
+Dabei muss DOMÄNE durch den eigenen Domänennamen ersetzt werden. Gebe den Inhalt der Datei ``/etc/hosts`` mit folgendem Befehl aus:
+
+
+.. code::
+
+   less /etc/hosts
+
+   Ausgabe:
+
+   127.0.0.1 localhost
+   10.0.0.1 server.linuxmuster.lan server
+
+Hostname ist im o.g. Beispiel ``server``. Danach folgen Domain und Top-Level-Domain, also: ``.linuxmuster.lan``. DOMÄNE muss in o.g. ntlm_auth in diesem Beispiel durch linuxmuster.lan ersetzt werden.
+
+Die Option ``–require-membership-of=…`` lässt nur Mitglieder der Gruppe wifi zu. So funktioniert die WLAN-Steuerung über die WebUI.
 
 Danach ist die Datei ``/etc/freeradius/3.0/mods-enabled/ntlm_auth`` noch anzupassen. Zuerst ist das Kommentarzeichen # zu entfernen. Danach ist die Zeile wie folgt anzupassen:
 
@@ -150,7 +164,8 @@ Danach ist die Datei ``/etc/freeradius/3.0/mods-enabled/ntlm_auth`` noch anzupas
        program = "/usr/bin/ntlm_auth --allow-mschapv2 --request-nt-key --domain=DOMÄNE --require-membership-of=DOMÄNE\wifi --username=%{mschap:User-Name} --password=%{User-Password}"
    }
 
-Dabei muss DOMÄNE durch den eigenen Domänennamen (Samba-Domäne) ersetzt werden.
+DOMÄNE ist hierbei wieder wie zuvor zu ersetzen.
+
 
 In der Datei ``/etc/freeradius/3.0/users`` ist ganz oben nachstehende Zeile einzufügen.
 
@@ -191,6 +206,65 @@ Die Datei kann jetzt an den o.g. Sophomorix-Befehl übergeben werden:
 .. code::
 
    sophomorix-managementgroup --nowifi $(less usermitkomma.txt)
+
+
+WLAN Zertifikate einrichten
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Um allen Clients eine Anmeldung mit Zertifikat zu ermöglichen, ist es notwendig, dass der RADIUS-Server die vollständige Zertifikatskette ausliefert. Zu beachten ist, dass zudem für RADIUS bei
+Zertifikaten eine eigene CA hierfür zu nutzen ist. Es gilt das Prinzip des Organisationsvertrauens.
+
+Der Server von linuxmuster.net verfügt bereits über eine eigene CA. Die Zertifikatsdateien finden sich unter ``/etc/linuxmuster/ssl/``.
+
+Mit folgendem Befehl lässt sich der CN des Zertifikats ermitteln:
+
+.. code::
+
+   openssl x509 -in /etc/linuxmuster/ssl/cacert.crt -text -noout |more
+
+In der Ausgabe unter ISSUER nach dem Eintrag CN zu suchen. Dieser kann z.B. wie folgt aussehen:
+
+   CN = LINUXMUSTER.LAN
+
+oder 
+
+   CN=GSHOENNINGEN.LINUXMUSTER.LAN
+
+Zunächst ist ein Zertifikat zu erstellen, das die gesamte Zertifizierungskette enthält:
+
+.. code::
+
+   cd /etc/linuxmuster/ssl/
+   cat server.cert.pem ca.pem > fullchain.pem
+   chgrp freerad fullchain.pem
+   chmod 640 fullchain.pem
+
+Passe nun RADIUS so an, dass das Fullchain-Zertifikat genutzt wird.
+
+.. code::
+
+   nano /etc/freeradius/3.2/mods-enabled/eap r-Distribution bzw. RADIUS-Version)
+   ...
+   #
+   tls-config tls-common {
+        ...
+        private_key_file = /etc/linuxmuster/ssl/fullchain.pem
+
+.. hint::
+
+   Je nach Server-Distribution ist ggf. die datei EAP unter /etc/raddb/mods-enabled/eap oder je nach Radius-Version unter /etc/freeradius/3.0/mods-enabled/eap anzupassen.
+
+Danach den Dienst neu starten:
+
+.. code::
+
+   systemctl restart freeradius.service
+
+
+Melden die Clients sich nun im WLAN an, so liefert der RADIUS die Zertifikatskette aus und bei der ersten Herstellung der Verbindung muss das Zertifikat auf dem Client akzeptiert werden, so dass es dort dann importiert wird.
+
+Auf diese Weise kann WPA-Enterprise auch mit neueren Client-Betriebssystemen genutzt werden.
+
 
 Firewallregeln anpassen
 ^^^^^^^^^^^^^^^^^^^^^^^
