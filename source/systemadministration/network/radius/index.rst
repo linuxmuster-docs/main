@@ -222,7 +222,7 @@ Mit folgendem Befehl lässt sich der CN des Zertifikats ermitteln:
 
    openssl x509 -in /etc/linuxmuster/ssl/cacert.crt -text -noout |more
 
-In der Ausgabe unter ISSUER nach dem Eintrag CN zu suchen. Dieser kann z.B. wie folgt aussehen:
+In der Ausgabe ist unter ISSUER nach dem Eintrag CN zu suchen. Dieser kann z.B. wie folgt aussehen:
 
    CN = LINUXMUSTER.LAN
 
@@ -245,9 +245,9 @@ Danach ist ein neues Zertifikat zu beantragen:
 
     openssl req -new -key radius-key.pem -out radius.csr -sha512
 
-Gebe hierbei die gewünschten Informationen an. Bei ``Common Name (e.g. server FQDN or YOUR name) []:`` muss ein die zuvo ermittelte CN eingetragen werden, die durch z.B. drch ein vorangestelltes radius ergänzt wird. Ein korrekter Eintrag wäre z.B.: radius.gshoenningen.linuxmuster.lan
+Gebe hierbei die gewünschten Informationen an. Bei ``Common Name (e.g. server FQDN or YOUR name) []:`` muss die zuvor ermittelte CN eingetragen werden, die z.B. durch ein vorangestelltes ``radius`` ergänzt wird. Ein korrekter Eintrag wäre z.B.: ``radius.gshoenningen.linuxmuster.lan``
 
-Das Zertifikat ist nun noch auszustellen. Zuvor wird noch das Kennwort für den CAkey /etc/linuxmuster/ssl/cakey.pem benötigt. Dieses findet sich unter ``/etc/linuxmuster/.secret/cakey``.
+Das Zertifikat ist nun noch auszustellen. Zuvor wird noch das Kennwort für den CA-Key (/etc/linuxmuster/ssl/cakey.pem) benötigt. Das Kennwort findet sich unter ``/etc/linuxmuster/.secret/cakey``.
 
 Zur Ausstellung ist folgender Befehl anzugeben und o.g. Kennwort zum Abschluss anzugeben:
 
@@ -255,7 +255,7 @@ Zur Ausstellung ist folgender Befehl anzugeben und o.g. Kennwort zum Abschluss a
 
    openssl x509 -req -in radius.csr -CA /etc/linuxmuster/ssl/cacert.pem -CAkey /etc/linuxmuster/ssl/cakey.pem -CAcreateserial -out radius.pem -days 365 -sha512
 
-Die erstellten Dateien sowie die cacert-Dateien sind nun in das Freeradius Zertifikats-Verzeichnis zu kopieren, Gruppenzugehörigkeit und Dateiberechtigungen wie folgt anzupassen:
+Die erstellten Dateien sowie die cacert-Dateien sind nun in das Freeradius Zertifikats-Verzeichnis zu kopieren sowie Gruppenzugehörigkeiten und Dateiberechtigungen wie folgt anzupassen:
 
 .. code::
 
@@ -265,7 +265,7 @@ Die erstellten Dateien sowie die cacert-Dateien sind nun in das Freeradius Zerti
     chgrp freerad cacert.crt cacert.pem radius.csr radius-key.pem radius.pem
     chmod 640 cacert.crt cacert.pem radius.csr radius-key.pem radius.pem
 
-Danach ein Zertifikat erstellen, das die gesamte Zertifizierungskette enthält:
+Danach ist ein Zertifikat zu erstellen, das die gesamte Zertifizierungskette enthält:
 
 .. code::
 
