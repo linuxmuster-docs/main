@@ -55,6 +55,10 @@ Wichtige Hinweise
   Der erste Part ``linuxmuster`` wird in diesem Beispiel dann als SAMBA-Domäne verwendet.
   
   Der volle Name(FQDN) des Servers ist dann ``server.linuxmuster.meineschule.de``.
+  
+.. hint::
+
+  Daraus folgt wie in einem reinen MS-Netzwerk, dass der linuxmuster.net-Server immer den Service DNS für die Vertrauensstellung liefern muss, denn er übernimmt die Rolle des Domänencontrollers für die Active Domane. In unserer Beschreibung als SAMBA-Domäne bezeichnet. 
 
 * Alle Hosts, die im Setup konfiguriert werden, müssen bereits laufen (OPNsense und Server) und sie müssen sich im internen LAN gegenseitig erreichen.
 
