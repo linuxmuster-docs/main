@@ -436,7 +436,7 @@ In der Hardwareklasse (HWK) besteht für Linbo in der start.conf die Möglichkei
    DownloadType = torrent        # Image-Download per torrent|multicast|rsync, default ist rsync
    KernelOptions = quiet splash  # 
 
-Wird der Parameter ``AutInitCache=yes`` gesetzt, so wird der lokale Cache jedesmal vollständig neu befüllt. Das ist entsprechend der oben beschriebenen Fälle allerdings nicht immer sinnvoll.
+Wird der Parameter ``AutoInitCache=yes`` gesetzt, so wird der lokale Cache jedesmal vollständig neu befüllt. Das ist entsprechend der oben beschriebenen Fälle allerdings nicht immer sinnvoll.
 
 **Option 2**
 
