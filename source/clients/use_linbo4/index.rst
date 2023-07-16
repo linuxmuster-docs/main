@@ -475,8 +475,73 @@ Dabei ist zu beachten:
 * ``start:<#>``:
   Startet das Betriebsyssystem, das in der start.conf an der angegebenen <#> Position eingetragen wurde.
 
+Linbo4: Hook-Skripte
+--------------------
 
+.. attention::
 
+   Ab der Version Linbo 4.1.31 ``linuxmuster-linbo7 4.1.31`` stehen sogenannte Hook-Skripte zur Verfügung, um vor oder nach der Erstellung von ``linbofs`` kleine Programme auszuführen, die durch definierte Ereignisse ausgelöst werden.
+
+Mit Hilfe von Hook-Skripten können z.B. Probleme bei spezifiischer Hardware ggf. angefangen werden. So gibt es USB2LAN-Adapter, bei denen der USB-Adapter erst mit etwas Verzögerung ansprechbar ist. Ohne Hook-Skript wäre Linbo offline, weil nur die Netzwerkkarte eth0 abfragt wird. Durch dein Einsatz eines
+Pre-Hook-Skriptes kann so eine Wartezeit definiert werden, die bewirkt, dass der USB2LAN-Adapter verfügbar ist und Linbo mit eth0 eine IP-Adresse erhält und alle weiteren Boote-Parameter.
+
+Pre-Hook-Skripte
+^^^^^^^^^^^^^^^^
+
+Hook-Skripte, die vor der Erstellung von ``linbofs`` ausgeführt werden, sind bei Linbo4 sog. Pre-Hook-Skripte.
+
+Diese Skripte sind in folgendem Verzeichnis abzulegen:
+
+.. code::
+
+   /var/lib/linuxmuster/hooks/update-linbofs.pre.d/
+
+Ein Hook-Skript muss ausführbar sein und mit einem ``shebang`` beginnen.
+
+Nachstehendes Besipiel führt dazu, dass vor Erstellung des linbofs eine Wartezeit eingefügt und der TCP/IP Stack der Netzwerkkarte mit der IP des localhost geprüft wird:
+
+.. code::
+
+   #!/bin/sh
+   #
+   # waiting for usb2lan adapter to come up
+   # /var/lib/linuxmuster/hooks/update-linbofs.pre.d/usb2lan_loop.sh
+
+   local netwait=0
+
+   if [ -z "$netwait" ] && netwait=0; then
+   sleep 15
+
+   while :
+       do
+          if ping -c 1 127.0.0.1 &> /dev/null
+          then
+          echo "usb2lan adapter is up"
+          break
+          fi
+      sleep 10
+   done
+
+   exit 0
+
+Das Skript muss in dem o.g. Verzeichnis ausführbar sein:
+
+.. code::
+
+   chmod +x /var/lib/linuxmuster/hooks/update-linbofs.pre.d/usb2lan_loop.sh
+
+Post-Hook-Skripte
+^^^^^^^^^^^^^^^^^
+
+Hook-Skripte, die nach der Erstellung von ``linbofs`` ausgeführt werden, sind bei Linbo4 sog. Post-Hook-Skripte.
+
+Diese Skripte sind in folgendem Verzeichnis abzulegen:
+
+.. code::
+
+   /var/lib/linuxmuster/hooks/update-linbofs.pre.d/
+
+Für die Post-Hook-Skripte sind o.g Hinweise ebenfalls zu beachten.
 
 
 
