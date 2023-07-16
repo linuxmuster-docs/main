@@ -482,8 +482,7 @@ Linbo4: Hook-Skripte
 
    Ab der Version Linbo 4.1.31 ``linuxmuster-linbo7 4.1.31`` stehen sogenannte Hook-Skripte zur Verfügung, um vor oder nach der Erstellung von ``linbofs`` kleine Programme auszuführen, die durch definierte Ereignisse ausgelöst werden.
 
-Mit Hilfe von Hook-Skripten können z.B. Probleme bei spezifiischer Hardware ggf. angefangen werden. So gibt es USB2LAN-Adapter, bei denen der USB-Adapter erst mit etwas Verzögerung ansprechbar ist. Ohne Hook-Skript wäre Linbo offline, weil nur die Netzwerkkarte eth0 abfragt wird. Durch dein Einsatz eines
-Pre-Hook-Skriptes kann so eine Wartezeit definiert werden, die bewirkt, dass der USB2LAN-Adapter verfügbar ist und Linbo mit eth0 eine IP-Adresse erhält und alle weiteren Boote-Parameter.
+Mit Hilfe von Hook-Skripten können z.B. Probleme bei spezifiischer Hardware ggf. abgefangen werden. So gibt es beipielsweise USB2LAN-Adapter, bei denen der USB-Adapter erst mit etwas Verzögerung ansprechbar ist. Ohne Hook-Skript wäre Linbo offline, weil nur die Netzwerkkarte eth0 abfragt wird. Durch dein Einsatz eines Pre-Hook-Skriptes kann so eine Wartezeit definiert werden, die bewirkt, dass der USB2LAN-Adapter verfügbar ist und Linbo mit eth0 eine IP-Adresse erhält und alle weiteren Boote-Parameter.
 
 Pre-Hook-Skripte
 ^^^^^^^^^^^^^^^^
@@ -498,7 +497,7 @@ Diese Skripte sind in folgendem Verzeichnis abzulegen:
 
 Ein Hook-Skript muss ausführbar sein und mit einem ``shebang`` beginnen.
 
-Nachstehendes Besipiel führt dazu, dass vor Erstellung des linbofs eine Wartezeit eingefügt und der TCP/IP Stack der Netzwerkkarte mit der IP des localhost geprüft wird:
+Nachstehendes Beispiel führt dazu, dass vor Erstellung des linbofs eine Wartezeit eingefügt und der TCP/IP Stack der Netzwerkkarte mit der IP des localhost geprüft wird:
 
 .. code::
 
@@ -524,7 +523,7 @@ Nachstehendes Besipiel führt dazu, dass vor Erstellung des linbofs eine Warteze
 
    exit 0
 
-Das Skript muss in dem o.g. Verzeichnis ausführbar sein:
+Das Skript muss in dem o.g. Verzeichnis als ausführbar definiert werden:
 
 .. code::
 
@@ -539,9 +538,11 @@ Diese Skripte sind in folgendem Verzeichnis abzulegen:
 
 .. code::
 
-   /var/lib/linuxmuster/hooks/update-linbofs.pre.d/
+   /var/lib/linuxmuster/hooks/update-linbofs.post.d/
 
-Für die Post-Hook-Skripte sind o.g Hinweise ebenfalls zu beachten.
+Hook-Skripte müssen ausführbar sein und mit einem ``shebang`` beginnen. Es sind die zuvor genannten Hinweise zu beachten.
+
+
 
 
 
