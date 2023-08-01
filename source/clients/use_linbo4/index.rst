@@ -296,6 +296,112 @@ Mit diesem Dialog kann ein erstmalig genutzer Rechner registriert werden. Dafür
 
    Bitte trage für die Rechnergruppe einen Namen ohne Bindestriche `` - `` ein.
 
+LINBO Differenzielles Image erstellen
+-------------------------------------
+
+.. hint::
+
+   Seit der Version LINBO 4.1 ist es möglich, differentielle Images zu erstellen.
+
+``Differentielle Images`` bauen auf einem Vollimage eines Client-Betriebssystems auf und legen alle Änderungen / Ergänzungen seit dem letzten Image ab. Diese werden dann bei einer Synchronisation des Clients vollständig angewendet.
+
+Werden nur kleine Ergänzungen auf dem Client vorgenommen, kann ein differenzielles Image erstellt werden, um das Verteilen der Änderungen möglichst schnell für alle Clients einer Hardware-Klasse durchzuführen. Für die Aktualisierung der Clients werden so, deutlich weniger Daten via Netzwerk übertragen.
+
+Sollten für ein Basisimage bereits mehrere differenzielle Images erstellt worden sein, so kann es sinnvoll sein, wenn viel neue Software installiert wurde, diese wieder duch Erstellung eines Vollimages zu konsolidieren.
+
+Vorbereitungen
+^^^^^^^^^^^^^^
+
+Der betreffende Muster-Client wurde entsprechend angepasst und alle erforderlichen Schritte zur Erstellung eines Images auf Client-Seite durchgeführt.
+
+Für Linux-Clients ist z.B. der Befehl
+
+.. code::
+
+  sudo linuxmuster-linuxclient7 prepare-image
+
+auszuführen.
+
+Danach ist der Client neu zu starten.
+
+Image erstellen
+^^^^^^^^^^^^^^^
+
+Erscheint die LINBO GUI:
+
+.. figure:: media/linbo-diff-images/01-linbo-gui.png
+   :align: center
+   :alt: Linbo GUI
+
+
+Wähle rechts das Werkzeug-Icon aus.
+
+.. figure:: media/linbo-diff-images/02-tools-icon.png
+   :align: left
+   :alt: Tools Icon
+
+Es erscheint ein neues Fenster, in dem Du das Passwort des Linbo-Admins eingeben musst, um dich zu authentifizieren.
+
+.. figure:: media/linbo-diff-images/03-linbo-password.png
+   :align: center
+   :alt: Linbo Password
+
+Das Kennwort ist bei Eingabe nicht sichtbar. Klicke auf ``Anmelden``. Es erscheint das Werkzeug-Menü.
+
+.. figure:: media/linbo-diff-images/04-linbo-tools-menue.png
+   :align: center
+   :alt: Linbo Tools Menue
+
+Zur Erstellung eines differenziellen Images klicke nun auf das große Icon zur Erstellung eines Images.
+
+.. figure:: media/linbo-diff-images/05-icon-new-image.png
+   :align: center
+   :alt: Linbo New Image
+
+Es erscheint das Menü zur Erstellung neuer oder differenzieller Images.
+
+.. figure:: media/linbo-diff-images/06-menue-new-image.png
+   :align: center
+   :alt: Linbo Menue for Imaging
+
+
+Wähle die Option ``Neues differenzielles Image erstellen`` aus, trage eine nachvollziehbare Beschreibung für das Image als Text ein.
+
+Wähle zur Erstellung des differenziellen Images den Eintrag ``erstellen + hochladen`` aus, damit zuerst auf dem Client das Image erstellt und dieses im Anschluss auf den Server geladen wird.
+
+.. figure:: media/linbo-diff-images/07-image-create-and-upload.png
+   :align: center
+   :alt: Create + Upload Image
+
+Es werden bei der Erstellung des Images in der Linbo-GUI weitere Status-Meldungen angezeigt. Ist der Prozess der Erstellung und das Hochladen des differenziellen Images auf den Server abgeschlossen, siehst Du folgende Meldung:
+
+.. figure:: media/linbo-diff-images/08-finished-uploading-new-image.png
+   :align: center
+   :alt: Image Creation finished
+
+
+Starte im Anschluss LINBO neu, indem Du das entsprechende Icon auswählst:
+
+.. figure:: media/linbo-diff-images/09-reboot-linbo.png
+   :align: center
+   :alt: Reboot Linbo
+
+Image synchronisieren
+^^^^^^^^^^^^^^^^^^^^^
+
+Nachdem LINBO neu gestartet wurde, erscheint wieder die LINBO-GUI.
+
+.. figure:: media/linbo-diff-images/10-linbo-boot-icons.png
+   :align: center
+   :alt: Linbo Boot Icons
+
+Wende nun das differenzielle Image auf den Client an, indem Du das grosse Icon zur Synchronisation des Images klickst. Während der lokale Cache aktualisiert wird, siehst Du eine entsprechende Status-Leiste mit dem Fortschritt.
+
+.. figure:: media/linbo-diff-images/11-sync-image.png
+   :align: left
+   :alt: Image Creation finished
+
+Das differenzielle Image wird vom Server geholt und lokal im Cache des Clients angewendet. Danach wird der Client gestartet.
 
 Boot-Bildschirme in LINBO
 -------------------------
