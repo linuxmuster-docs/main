@@ -333,12 +333,11 @@ Erscheint die LINBO GUI:
    :align: center
    :alt: Linbo GUI
 
-
-Wähle rechts das Werkzeug-Icon aus.
-
 .. figure:: media/linbo-diff-images/02-tools-icon.png
    :align: left
    :alt: Tools Icon
+
+Wähle rechts das Werkzeug-Icon aus.
 
 Es erscheint ein neues Fenster, in dem Du das Passwort des Linbo-Admins eingeben musst, um dich zu authentifizieren.
 
@@ -364,7 +363,6 @@ Es erscheint das Menü zur Erstellung neuer oder differenzieller Images.
    :align: center
    :alt: Linbo Menue for Imaging
 
-
 Wähle die Option ``Neues differenzielles Image erstellen`` aus, trage eine nachvollziehbare Beschreibung für das Image als Text ein.
 
 Wähle zur Erstellung des differenziellen Images den Eintrag ``erstellen + hochladen`` aus, damit zuerst auf dem Client das Image erstellt und dieses im Anschluss auf den Server geladen wird.
@@ -378,7 +376,6 @@ Es werden bei der Erstellung des Images in der Linbo-GUI weitere Status-Meldunge
 .. figure:: media/linbo-diff-images/08-finished-uploading-new-image.png
    :align: center
    :alt: Image Creation finished
-
 
 Starte im Anschluss LINBO neu, indem Du das entsprechende Icon auswählst:
 
@@ -402,6 +399,91 @@ Wende nun das differenzielle Image auf den Client an, indem Du das grosse Icon z
    :alt: Image Creation finished
 
 Das differenzielle Image wird vom Server geholt und lokal im Cache des Clients angewendet. Danach wird der Client gestartet.
+
+
+WebUI: LINBO-Imageverwaltung
+----------------------------
+
+Alle LINBO-Images werden mit der Zuordnung zu den Hardwaregruppen in der WebUI übersichtlich dargestellt und können hier einfach verwaltet werden.
+
+Neben den Informationen zu den Images wie z.B. dateigröße und Imagebeschreibungen, lassen sich Images beispielsweise löschen oder anpassen.
+
+Imageverwaltung aufrufen
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: media/linbo-diff-images/12-gui-images-menue-left.png
+   :align: left
+   :alt: LNBO Image Menue
+
+Um zur Umageverwaltung in der WebUI zu gelangen, meldest Du Dich in der WebUI als ``global-admin`` an. Danach rufst Du links in der Menüspalte ``Geräteverwaltung -> LINBO4`` auf.
+
+.. figure:: media/linbo-diff-images/13-linbo-group-images.png
+   :align: center
+   :alt: LINBO Group Images
+
+Rechts erscheinen im Fenster zunächst die Hardwaregruppen mit den zugeordneten Basis-Images. In nachstehender Abbildung ist das Basis-Image blau hervorgehoben und weist die Dateiendung ``.qcow2`` auf. In der Abbildung ist nur eine Hardwareklasse mit dem zugeordneten Basisimage dargestellt.
+
+Images verwalten
+^^^^^^^^^^^^^^^^
+
+Klicke oben in dem Fenster auf die Reiterkarte ``Abbilder``, so siehst Du eine Gesamtliste aller Abbilder, die mit LINBO erstellt wurden und hier verwaltet werden können.
+
+.. figure:: media/linbo-diff-images/14-group-images-overview.png
+   :align: center
+   :alt: LINBO Image Overview
+
+Unter der Spaltenüberschrift ``Name`` ist der Name und die Dateigröße des Basis-Images abgelegt. Daneben findest Du in der Spalte ``Differentielles Image`` das dem Basis-Image zugeordnete differentielle Image inkl. Angabe der Dateigröße. Zudem wird dargestellt, in welcher Gruppe diese Images verwendet werden. In der Spalte ``Aktionen`` befinden sich Symbole, die Aktionen für das Basis-Image ausführen.
+
+Basis-Image
+^^^^^^^^^^^
+
+.. figure:: media/linbo-diff-images/14-group-images-overview.png
+   :align: center
+   :alt: ImagesOverview
+
+Um das Basis-Image zu verwalten, das in der Image-Übersicht in der Spalte ``Namen`` angegeben wird, findest Du die Aktions-Icons in der Übersicht ganz rechts als etwas größere Symbole.
+
+.. figure:: media/linbo-diff-images/15-basic-image-menue.png
+   :align: center
+   :alt: Basic Image
+
+Klicke auf das Zahnradsymbol. Es erscheint ein Fenster mit Informationen zu dem Basis-Image.
+
+.. figure:: media/linbo-diff-images/16-basic-image-info.png
+   :align: center
+   :alt: Basic Image Info
+
+Hier finden Sie Informationen zum Dateinamen, dem Zeitstempel der Erstellung, der Dateigröße und weiterer Parameter. Die Dateiendung ``.qcow2`` steht für ein Basis-Image.
+
+Hier kannst Du Änderungen bzw. Ergänzungen vornehmen und diese mithilfe des Buttons ``SPEICHERN`` dauerhaft anwenden.
+
+Klicke auf mittlere Icon, um die Sicherungen des Basis-Images im Zeitablauf anzuzeigen.
+
+.. figure:: media/linbo-diff-images/17-basic-image-backups-history.png
+   :align: center
+   :alt: Basic Image Backups
+
+Das aktuell gültige Basis-Image wird mit dem ``Status`` Basis-Image und einem grünen Haken symbolisiert. Im Zeitablauf werden die vorangegangenen Basis-Images dargestellt. Diese können entweder gelöscht (Papierkorb), wiederhergestellt (Pfeil gegen den Uhrzeigersinn) oder deren Besonderheiten eingesehen werden (Zahnradsymbol).
+
+
+Differentielle Images
+^^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: media/linbo-diff-images/18-diff-images-menue.png
+   :align: left
+   :alt: Diff Image
+
+Die beiden kleinen Icons neben dem Namen für das differentielle Image bieten die Möglichkeit, das differentielle Image entweder zu löschen (``Papierkorb``), oder mit dem Zahnrad weitere Informationen zu dem differentiellen Image aufzurufen.
+
+Klickst Du auf das Zahnrad neben dem Namen für das differentielle Image, dann erscheint folgendes Fenster:
+
+.. figure:: media/linbo-diff-images/19-diff-image-infos.png
+   :align: center
+   :alt: Diff Image Infos
+
+Unter der Reiterkarte ``Allgemein`` findest Du Informationen zu dem differentiellen Image wie z.B. den Zeitstempel oder den Imagenamen. Die Dateiendung ``.qdiff`` steht für ein differentielles Image.
+
+Hier kannst Du Änderungen bzw. Ergänzungen vornehmen und diese mithilfe des Buttons ``SPEICHERN`` dauerhaft anwenden.
 
 Boot-Bildschirme in LINBO
 -------------------------
@@ -586,14 +668,16 @@ Linbo4: Hook-Skripte
 
 .. attention::
 
-   Ab der Version Linbo 4.1.31 ``linuxmuster-linbo7 4.1.31`` stehen sogenannte Hook-Skripte zur Verfügung, um vor oder nach der Erstellung von ``linbofs`` kleine Programme auszuführen, die durch definierte Ereignisse ausgelöst werden.
-
-Mit Hilfe von Hook-Skripten können z.B. Probleme bei spezifiischer Hardware ggf. abgefangen werden. So gibt es beipielsweise USB2LAN-Adapter, bei denen der USB-Adapter erst mit etwas Verzögerung ansprechbar ist. Ohne Hook-Skript wäre Linbo offline, weil nur die Netzwerkkarte eth0 abfragt wird. Durch dein Einsatz eines Pre-Hook-Skriptes kann so eine Wartezeit definiert werden, die bewirkt, dass der USB2LAN-Adapter verfügbar ist und Linbo mit eth0 eine IP-Adresse erhält und alle weiteren Boote-Parameter.
+   Ab der Version Linbo 4.1.31 ``linuxmuster-linbo7 4.1.31`` stehen sogenannte Hook-Skripte zur Verfügung, um vor oder nach ``update-linbofs`` auf dem Server kleine Programme auszuführen, die durch definierte Ereignisse ausgelöst werden.
 
 Pre-Hook-Skripte
 ^^^^^^^^^^^^^^^^
 
-Hook-Skripte, die vor der Erstellung von ``linbofs`` ausgeführt werden, sind bei Linbo4 sog. Pre-Hook-Skripte.
+Mit dem Befehl ``update-linbofs`` wird die Erstellung von linbofs auf dem Server angestossen.
+
+Pre-Hook-Skripte, werden hierbei vor der Erstellung von ``linbofs64.lz`` ausgeführt. Dies bietet die Möglichkeit, im Dateisystem vorher eigene Anpassungen vornehmen.
+
+Es könnten z.B. angepasste Dateien für ``.ssh/authorized_keys`` oder ``.env`` bereitgestellt werden.
 
 Diese Skripte sind in folgendem Verzeichnis abzulegen:
 
@@ -603,29 +687,14 @@ Diese Skripte sind in folgendem Verzeichnis abzulegen:
 
 Ein Hook-Skript muss ausführbar sein und mit einem ``shebang`` beginnen.
 
-Nachstehendes Beispiel führt dazu, dass vor Erstellung des linbofs eine Wartezeit eingefügt und der TCP/IP Stack der Netzwerkkarte mit der IP des localhost geprüft wird:
-
 .. code::
 
    #!/bin/sh
    #
    # waiting for usb2lan adapter to come up
-   # /var/lib/linuxmuster/hooks/update-linbofs.pre.d/usb2lan_loop.sh
+   # /var/lib/linuxmuster/hooks/update-linbofs.pre.d/pre-hook1.sh
 
-   local netwait=0
-
-   if [ -z "$netwait" ] && netwait=0; then
-   sleep 15
-
-   while :
-       do
-          if ping -c 1 127.0.0.1 &> /dev/null
-          then
-          echo "usb2lan adapter is up"
-          break
-          fi
-      sleep 10
-   done
+   [...]
 
    exit 0
 
@@ -633,12 +702,12 @@ Das Skript muss in dem o.g. Verzeichnis als ausführbar definiert werden:
 
 .. code::
 
-   chmod +x /var/lib/linuxmuster/hooks/update-linbofs.pre.d/usb2lan_loop.sh
+   chmod +x /var/lib/linuxmuster/hooks/update-linbofs.pre.d/pre-hook1.sh
 
 Post-Hook-Skripte
 ^^^^^^^^^^^^^^^^^
 
-Hook-Skripte, die nach der Erstellung von ``linbofs`` ausgeführt werden, sind bei Linbo4 sog. Post-Hook-Skripte.
+Post-Hook-Skripte werden nach der Erstellung von ``update-linbofs`` auf dem Server ausgeführt. Es können so nachdem der Befehl ``update-linbofs`` durchgelaufen ist, z.B. Programme auf dem Server gestartet werden.
 
 Diese Skripte sind in folgendem Verzeichnis abzulegen:
 
@@ -647,10 +716,4 @@ Diese Skripte sind in folgendem Verzeichnis abzulegen:
    /var/lib/linuxmuster/hooks/update-linbofs.post.d/
 
 Hook-Skripte müssen ausführbar sein und mit einem ``shebang`` beginnen. Es sind die zuvor genannten Hinweise zu beachten.
-
-
-
-
-
-
 
