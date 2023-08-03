@@ -22,10 +22,10 @@ Linbo4, das von linuxmuster.net entwickelt wurde, weist einige Neuerungen auf:
 * qemu-img wird nun genutzt, um die Erstellung und Wiederherstellung der qcow2 Images durchzuführen.
 * Es wird nur noch 64 Bit Client-Hardware unterstützt.
 * linuxmuster.net <=6.2 wird nicht mehr unterstützt.
-* Es gibt derzeit keine differentiellen Images mehr. Differentielle Images werden voraussichtlich erst wieder ab Linbo v4.1 unterstützt.
+* Ab LINBO v4.1 gibt es differentielle Images.
 * Bisherige Images im cloop Format sind direkt in das neue qcow2 Format zu konvertieren.
 
-Dieses Kapitel führt Dich in die Nutzung von linbo4 ein und erklärt die wesentlichen Schritte zur Imageverwaltung.
+Dieses Kapitel führt Dich in die Nutzung von LINBO4 ein und erklärt die wesentlichen Schritte zur Imageverwaltung.
 
 .. hint::
 	Die meisten PC mit UEFI verwenden standardmäßig "SecureBoot". Dies muss deaktiviert werden, um Linbo booten zu können!
@@ -406,7 +406,7 @@ WebUI: LINBO-Imageverwaltung
 
 Alle LINBO-Images werden mit der Zuordnung zu den Hardwaregruppen in der WebUI übersichtlich dargestellt und können hier einfach verwaltet werden.
 
-Neben den Informationen zu den Images wie z.B. dateigröße und Imagebeschreibungen, lassen sich Images beispielsweise löschen oder anpassen.
+Neben den Informationen zu den Images wie z.B. Dateigröße und Imagebeschreibungen, lassen sich Images beispielsweise löschen oder anpassen.
 
 Imageverwaltung aufrufen
 ^^^^^^^^^^^^^^^^^^^^^^^^

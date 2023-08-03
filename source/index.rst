@@ -170,21 +170,20 @@ Nach einem Klick eröffnen sich Dir dort noch weitere Möglichkeiten:
   external-services/dockerhost/index
   external-services/moodle/index
   external-services/nextcloud/index
-  external-services/rocketchat/index
-  external-services/unifiwlan/index
   external-services/aleksis/index
+  external-services/unifiwlan/index
 
 .. toctree::
   :maxdepth: 1
   :caption: linuxmuster.net helfen
   :hidden:
-  
+
   appendix/contribute/index
 
 .. toctree::
   :maxdepth: 1
   :caption: Anhang
   :hidden:
-  
+
   appendix/contribute/ad-dns-wiki
   appendix/beta-lmn72/index
