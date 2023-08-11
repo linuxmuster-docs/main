@@ -677,7 +677,18 @@ Mit dem Befehl ``update-linbofs`` wird die Erstellung von linbofs auf dem Server
 
 Pre-Hook-Skripte, werden hierbei vor der Erstellung von ``linbofs64.lz`` ausgeführt. Dies bietet die Möglichkeit, im Dateisystem vorher eigene Anpassungen vornehmen.
 
-Es könnten z.B. angepasste Dateien für ``.ssh/authorized_keys`` oder ``.env`` bereitgestellt werden.
+**Was passiert bei Ausführung des Befehls update-linbofs?**
+
+- Das Template (``/var/lib/linuxmuster/linbo/linbofs64.cpio``) wird in ein Verzeichnis (``/var/cache/linuxmuster/linbo/linbofs64``) entpackt.
+- Dort wird das Template angepasst: passwort-hash, dropbear-key, permissions, default-start.conf (``/srv/linbo/start.conf``), Zeitzone.
+- Zum Schluss werden die Pre-Hook Skripte ausgeführt. Dies geschieht ebenfalls innerhalb des Verzeichnisses - man kann also über relative Bezüge auf die linbofs-Dateien zugreifen.
+- Abschließend wird das Verzeichnis wieder gepackt (z.B. nach ``/srv/linbo/linbofs64.lz``), bevor danach die Posthook-Skripte angepasst werden.
+
+.. hint::
+
+   Die Linbo bekannten Variable können in den Hook-Skripten nicht verwendet werden, ohne sie vorher zu importieren.
+
+Mit Pre-Hook-Skripten können so z.B. angepasste Dateien für ``.ssh/authorized_keys`` oder ``.env`` bereitgestellt werden.
 
 Diese Skripte sind in folgendem Verzeichnis abzulegen:
 
@@ -687,17 +698,27 @@ Diese Skripte sind in folgendem Verzeichnis abzulegen:
 
 Ein Hook-Skript muss ausführbar sein und mit einem ``shebang`` beginnen.
 
+Nachstehendes Pre-Hook-Skript zeigt hierzu einige Möglichkeiten auf.
+
 .. code::
 
    #!/bin/sh
-   #
-   # waiting for usb2lan adapter to come up
    # /var/lib/linuxmuster/hooks/update-linbofs.pre.d/pre-hook1.sh
-
-   [...]
-
+   
+   # Ausgabe der Linbo-Version (wird beim Ablauf des update-linbofs-Skripts ausgegeben)
+   echo "Linbo-Version: $(cat etc/linbo-version)"
+   
+   # Hinzufügen eigener Dateien, damit sie in Linbo zur Verfügung stehen
+   mkdir myfiles && echo /etc/linuxmuster/sophomorix/default-school/devices.csv myfiles
+   
+   # Kopieren des Linbo-Verzeichnisses (z.B. zum Testen mit eigenen Skripten) nach /tmp/linbofs:
+   mkdir /tmp/linbofs && cp -R . /tmp/linbofs
+   
+   # Einfügen einer Wartezeit von 2 Sekunden vor der Netzwerkeinrichtung ;-)
+   sed -i '/^network\(\).*/a  \ \ sleep 2' init.sh
+   
    exit 0
-
+   
 Das Skript muss in dem o.g. Verzeichnis als ausführbar definiert werden:
 
 .. code::
