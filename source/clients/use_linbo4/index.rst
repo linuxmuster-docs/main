@@ -3,26 +3,25 @@
 LINBO4 nutzen
 =============
 
-LINBO steht für GNU/\ **Li**\ nux **N**\ etwork **Bo**\ ot. Es wurde ursprünglich im Auftrag des Landesmedienzentrums Baden-Württemberg von der Firma
-KNOPPER.NET in Zusammenarbeit mit den damaligen paedML-Linux- und heutigen linuxmuster.net-Entwicklern realisiert. Der Sourcecode ist unter GNU General Public License Version 2 veröffentlicht.
+LINBO steht für GNU/\ **Li**\ nux **N**\ etwork **Bo**\ ot. Es wurde ursprünglich im Auftrag des Landesmedienzentrums Baden-Württemberg von der Firma KNOPPER.NET in Zusammenarbeit mit den damaligen paedML-Linux- und heutigen linuxmuster.net-Entwicklern realisiert. Der Sourcecode ist unter GNU General Public License Version 2 veröffentlicht.
 
 LINBO bietet
 
-* vollautomatisches Ausrollen von Client-Installationen im Netzwerk
+* Vollautomatisches Ausrollen von Client-Installationen im Netzwerk
 * Verwaltung mehrerer Betriebssystem-Installationen auf einem Client (Multiboot)
-* minutenschnelle automatische Reparatur des Betriebssystems (SheilA-Prinzip)
-* konfigurierbarer Autostart
-* grafische Client-Oberfläche zur einfachen Bedienung durch Anwender und Netzwerkbetreuer
-* vollständige Integration in die linuxmuster.net
+* Minutenschnelle automatische Reparatur des Betriebssystems (SheilA-Prinzip)
+* Konfigurierbarer Autostart
+* Grafische Client-Oberfläche zur einfachen Bedienung durch Anwender und Netzwerkbetreuer
+* Vollständige Integration in linuxmuster.net
 
-Linbo4, das von linuxmuster.net entwickelt wurde, weist einige Neuerungen auf:
+LINBO4, das von linuxmuster.net entwickelt wurde, weist einige Neuerungen auf:
 
 * Für neue Images wird nur noch das Format qcow2 unterstützt. Der Name des Basis-Images muss daher in der übernommenen start.conf angepasst werden (z.B. image.qcow2).
 * Die Bennenung der zusätzlichen Image-Dateien postsync, prestart and reg ändert sich, so dass diese nur noch ohne dem Image-Format angegeben werden (z.B. image.postsync, image.prestart and image.reg, früher: image.cloop.postsync etc.).
-* qemu-img wird nun genutzt, um die Erstellung und Wiederherstellung der qcow2 Images durchzuführen.
+* qemu-img wird nun genutzt, um die Erstellung und Wiederherstellung der qcow2-Images durchzuführen.
 * Es wird nur noch 64 Bit Client-Hardware unterstützt.
 * linuxmuster.net <=6.2 wird nicht mehr unterstützt.
-* Ab LINBO v4.1 gibt es differentielle Images.
+* Ab LINBO v4.1 stehen differentielle Images zur Verfügung.
 * Bisherige Images im cloop Format sind direkt in das neue qcow2 Format zu konvertieren.
 
 Dieses Kapitel führt Dich in die Nutzung von LINBO4 ein und erklärt die wesentlichen Schritte zur Imageverwaltung.
@@ -37,13 +36,20 @@ Wird der Arbeitsplatzrechner (Client-PC) über das Netzwerk gebootet, startet LI
 
 .. figure:: media/linbo-mainscreen/linbo-mainscreen-unregistered.png
    :align: center
+   :scale: 70%
    :alt: Linbo Startbildschirm eines nicht aufgenommenen Client
+
+   Linbo Startbildschirm
 
 Sobald der Client registriert wurde, zeigt der Startbildschirm weitere Optionen an.
 
 .. figure:: media/linbo-mainscreen/linbo-mainscreen-registered.png
    :align: center
+   :scale: 70%
    :alt: Linbo Startbildschirm eines aufgenommenen Clients
+
+   Linbo Startbildschirm eines aufgenommenen Clients
+
 
 Informationen
 ^^^^^^^^^^^^^
@@ -52,7 +58,10 @@ Drückst Du im Startbildschirm die Funktionstaste ``F1``, dann werden Dir Inform
 
 .. figure:: media/linbo-mainscreen/linbo-mainscreen-infos-f1.png
    :align: center
-   :alt: Linbo Infos zum Client - F1
+   :scale: 70%
+   :alt: LINBO Infos zum Client - F1
+
+   Client Informationen - F1
 
 Host
    Der festgelegte Hostname oder "pxeclient", wenn der Client nicht registriert ist.
@@ -94,27 +103,28 @@ Neustart
 Lässt den Client herunterfahren.
 
 
-Start-Reiter
-^^^^^^^^^^^^
+Start-Icons
+^^^^^^^^^^^
 
 Pro festgelegter Partition (mit Betriebssystem oder ohne) erscheinen nach dem Start von Linbo ein großer Knopf und mehrere kleinere Knöpfe mit
 folgenden Bedeutungen
 
 .. figure:: media/linbo-mainscreen/sync+start.png
    :align: center
+   :scale: 70%
    :alt: Linbo Sync+Start Icon
 	
-   Sync+Start Knopf
+   Sync+Start Icon
 	    
-Synchronisiert das System mit dem letzten aktuellen Abbild (hir Ubuntu). Bei Windows-Systemen wird eine bereitgestellte Registry-Patch-Datei angewendet. Bei Linux-Systemen werden Hostname und Rootpartition gepatcht. Falls ein neueres Abbild auf dem Server liegt, wird dies zunächst heruntergeladen.
+Synchronisiert das System mit dem letzten aktuellen Image (hier Ubuntu). Bei Windows-Systemen wird eine bereitgestellte Registry-Patch-Datei angewendet. Bei Linux-Systemen werden Hostname und Rootpartition gepatcht. Falls ein neueres Image auf dem Server liegt, wird dies zunächst heruntergeladen.
 
 .. figure:: media/linbo-mainscreen/start.png
    :align: center
    :alt: Linbo Start Icon
 
-   Start Knopf
+   Start Icon
 
-Startet das System im aktuellen Zustand, unsynchronisiert. Es werden keine Patches angewandt.
+Startet das System im aktuellen Zustand, unsynchronisiert. Es werden keine Patches angewendet.
 	    
 .. figure:: media/linbo-mainscreen/new-and-start.png
    :align: center
@@ -129,23 +139,25 @@ Startet das System im aktuellen Zustand, unsynchronisiert. Es werden keine Patch
    Die einzelnen Schaltflächen für die Startmechanismen können auch ausgegraut sein, wenn der Administrator den jeweiligen Mechanismus deaktiviert hat.
 
 
-Tools-Reiter
-^^^^^^^^^^^^
+Tools-Icon
+^^^^^^^^^^
 
-Um Abbilder (Images) zu verwalten, klickst Du zunächst auf den Werkzeug Schaltfläche.
+Um Images zu verwalten, klickst Du zunächst auf das Werkzeug-Icon.
 
 .. figure:: media/linbo-mainscreen/tools.png
    :align: center
    :alt: Linbo Tools Icon
   
-   Werkzeug Schaltfläche - Tools Button
+   Werkzeug-Icon
 
-Der Bereich ist mit dem Passwort von "LINBO" abgesichert. Dies entspricht dem Linbo-Administrator Kennwort. Dies ist nach dem Setup zunächst identisch mit dem festgelegten root / global-admin Kennwort.
+Der Bereich ist mit dem Passwort von ``LINBO`` abgesichert. Dies entspricht dem LINBO-Administrator Kennwort. Dies ist nach dem Setup zunächst identisch mit dem festgelegten root / global-admin Kennwort.
 
 .. figure:: media/linbo-mainscreen/password-dialog.png
    :align: center
-   :alt: Linbo Password Dialog
+   :scale: 90%
+   :alt: LINBO Password Dialog
 
+   LINBO Passwort
 
 .. attention::
 
@@ -161,9 +173,9 @@ Das Passwort steht im Klartext auf dem Server in der Datei ``/etc/rsyncd.secrets
    # modified by linuxmuster-setup
    # /etc/rsyncd.secrets
 
-   linbo:MeinKewnnort
+   linbo:MeinKennwort
 
-Nach einer Änderung wird das Passwort mit den nächsten Sync bzw. Netzwerkboot aktualisiert.
+Nach einer Änderung wird das Passwort mit der nächsten Synchronisation bzw. Netzwerkboot aktualisiert.
 
 
 LINBO Imageverwaltung am Client
@@ -173,7 +185,10 @@ LINBO Imageverwaltung am Client
 
 .. figure:: media/linbo-imagingscreen/linbo-imagingscreen.png
    :align: center
+   :scale: 60%
    :alt: Linbo Tools - Imaging Functions
+
+   LINBO Tools
 
 Für jedes definierte Betriebssystem gibt es Schaltflächen für die Funktionen
 
@@ -183,7 +198,7 @@ Für jedes definierte Betriebssystem gibt es Schaltflächen für die Funktionen
 
    Image erstellen
 
-Es öffnet sich ein neues Dialogfenster, über das man ein neues Abbild erstellen (und hochladen) kann.
+Es öffnet sich ein neues Dialogfenster, über das man ein neues Image erstellen (und hochladen) kann.
 
 .. figure:: media/linbo-imagingscreen/upload.png
    :align: center
@@ -191,9 +206,9 @@ Es öffnet sich ein neues Dialogfenster, über das man ein neues Abbild erstelle
 
    Image hochladen
 
-Es öffnet sich ein neues Dialogfenster, über das man das aktuelle Abbild auf den Server hochladen kann.
+Es öffnet sich ein neues Dialogfenster, über das man das aktuelle Image auf den Server hochladen kann.
 
-Daneben können gibt es Schaltflächen für folgende administrative Funktionen 
+Daneben gibt es Schaltflächen für folgende administrative Funktionen:
 
 .. figure:: media/linbo-imagingscreen/console.png
    :align: center
@@ -201,7 +216,7 @@ Daneben können gibt es Schaltflächen für folgende administrative Funktionen
 
    Console
 
-Man kann eine (rudimentäre) Console öffnen, um Shell-Befehle abzusetzen und Fehler zu diagnostizieren.
+Du kannst eine (rudimentäre) Console öffnen, um Shell-Befehle abzusetzen und Fehler zu diagnostizieren.
 
 .. figure:: media/linbo-imagingscreen/cache.png
    :align: center
@@ -209,7 +224,7 @@ Man kann eine (rudimentäre) Console öffnen, um Shell-Befehle abzusetzen und Fe
 
    Cache aktualisieren
 
-Üblicherweise wird eine Partition auf dem Client als Cache festgelegt. Mit dieser Schaltfläche kann der Cache aktualisiert werden, d.h. alle für diesen Client nötigen Abbilder und postsync-Dateien werden gegebenenfalls heruntergeladen.
+Üblicherweise wird eine Partition auf dem Client als Cache festgelegt. Mit dieser Schaltfläche kann der Cache aktualisiert werden, d.h. alle für diesen Client nötigen Images und postsync-Dateien werden gegebenenfalls heruntergeladen.
 
 .. figure:: media/linbo-imagingscreen/partition.png
    :align: center
@@ -227,7 +242,13 @@ Partitioniert die gesamte Festplatte gemäß der Vorgabe der Hardwareklasse.
 
 Öffnet den Registrierungdialog zur erstmaligen Aufnahme dieses Rechners.
 
-Rufe zur Imageerstellung o.g. Schaltfläche auf.
+Rufe zur Imageerstellung die entsprechende Schaltfläche auf:
+
+.. figure:: media/linbo-imagingscreen/image-os.png
+   :align: center
+   :alt: Linbo Create Image
+
+   Image erstellen
 
 
 Dialog: Image erstellen
@@ -235,36 +256,49 @@ Dialog: Image erstellen
 
 .. figure:: ./media/linbo-imagingscreen/create-image-dialog.png
    :align: center
+   :scale: 70%
    :alt: Linbo Create Image Dialog
 
-Zur Auswahl steht der momentane Name des Abbilds. Das aktuelle Abbild wird dann beim Erstellen überschrieben. Beim Hochladen des aktuellen Abbilds mit demselben Namen wird auf dem Server ein Backup des vorherigen Abbilds erstellt.
+   LINBO - Image erstellen
 
-Wird ein neuer Dateiname gewählt, kann man Informationen zu dem neuen Image verfassen.
+Ab der LINBO Version 4.1 kannst Du wählen, ob Du ein neues Basisimage oder ein differentielles Image erstellen möchtest. Sollte bereits ein Basisimage existieren, so wird dieses mit überschrieben. Es erfolgt keine weitere Rückfrage. 
+
+Lokal im Cache wir das aktuelle Image beim Erstellen überschrieben. Beim Hochladen des aktuellen Images mit demselben Namen wird auf dem Server zuvor ein Backup des vorherigen Images erstellt.
+
+Auf dem Server finden sich die Images im Verzeichnis ``/srv/linbo/images/<hardwareklasse>/``.
+Die Backups der Images finden sich auf dem Server im Verzeichnis ``/srv/linbo/images/<hardwareklasse>/backups``.
+
+In der WebUI können die LINBO-Images komfortabel verwaltet werden (LINBO-Imageverwaltung_).
 
 .. warning:: 
 
-   Vergibt man einen neuen Dateinamen, sollte man sicher stellen, dass die Cache-Partition über ausreichend Platz verfügt, da das alte Image ebenfalls im Cache gespeichert bleibt. Ist nicht genügend Platz vorhanden, dann schlägt das Erstellen des Abbildes fehl. Hier ist vor der Erstellung eines neuen Images sicherzustellen, dass die lokale Cache-Partition vorab geleert wird. 
+   Vergibt man einen neuen Dateinamen, sollte man sicher stellen, dass die Cache-Partition über ausreichend Platz verfügt, da das alte Image ebenfalls im Cache gespeichert bleibt. Ist nicht genügend Platz vorhanden, dann schlägt das Erstellen des Images fehl. Hier ist vor der Erstellung eines neuen Images sicherzustellen, dass die lokale Cache-Partition vorab geleert wird. 
    
    Siehe hierzu das Unterkapitel zum Linbo4-Cache am Ende dieses Hauptkapitels.
 
-Es gibt die beiden Optionen zum Abschluss der Aktion ``erstellen`` oder ``erstellen+hochladen`` den Computer neu zu starten oder
-herunterzufahren.
+Es gibt die Optionen ``erstellen``, ``erstellen+hochladen``. Mit der Option ``erstellen`` wird das neue Image nur lokal im LINBO-Cache erstellt. Die Option ``erstellen + hochladen`` erstellt zuerst das Image lokal im LINBO-Cache und lädt danach das Image auf den Server.
 
 Dialog: Image hochladen
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: media/linbo-imagingscreen/upload-image-dialog.png
    :align: center
+   :scale: 70%
    :alt: Linbo Upload Image
 
-Wie beim Image erstellen Dialog, kann hier explizit nur ein ausgewähltes Image hochgeladen werden und der Rechner zum Abschluss neu gestartet oder heruntergefahren werden. In der Drop-down Liste werden nur dann Images angezeigt, wenn diese bereits im Cache vorhanden sind.
+   LINBO Image hochladen
+
+Wie beim Dialog zum Erstellen des Images, kann hier explizit nur ein ausgewähltes Image hochgeladen werden und der Rechner zum Abschluss neu gestartet oder heruntergefahren werden. In der Drop-down Liste werden nur dann Images angezeigt, wenn diese bereits im Cache vorhanden sind.
 
 Dialog: Console
 ^^^^^^^^^^^^^^^
 
 .. figure:: media/linbo-imagingscreen/console-dialog.png
    :align: center
+   :scale: 90%
    :alt: Linbo Console Dialog
+
+   LINBO Konsole
 
 Der einfache Konsolendialog erlaubt die Eingabe einzelner Befehle in die untere Zeile.
 
@@ -273,37 +307,42 @@ Dialog: Cache aktualisieren
 
 .. figure:: media/linbo-imagingscreen/update-cache-dialog.png
    :align: center
-   :alt: Linbo Update cache
+   :scale: 90%
+   :alt: Linbo Update Cache
 
-Der Cache wird aktualisiert. Es werden die drei Möglichkeiten der Synchronisation zur Auswahl gegeben: Rsync, Multicast oder Torrent.
+   LINBO Update Cache
+
+Der lokale Cache wird aktualisiert. Es werden die drei Möglichkeiten der Synchronisation zur Auswahl gegeben: Rsync, Multicast oder Torrent.
 
 Dialog: Partitionieren
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Es wird noch einmal gefragt, ob man wirklich alle Daten auf der Festplatte löschen will. Danach kann man mit "Cache aktualisieren"
-aber auch wieder die Abbilder vom Server kopieren.
+Es wird noch einmal gefragt, ob man wirklich alle Daten auf der Festplatte löschen will. Danach kann man mit "Cache aktualisieren" auch wieder die Images vom Server in den Cache kopieren.
 
 Dialog: Registrieren
 ^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: media/linbo-imagingscreen/register-dialog.png
    :align: center
+   :scale: 70%
    :alt: Linbo Register Dialog
 
-Mit diesem Dialog kann ein erstmalig genutzer Rechner registriert werden. Dafür müssen alle Eingabefelder dem Vergabeschema entsprechend ausgefüllt werden.
+   LINBO Client registrieren
+
+Mit diesem Dialog kann ein erstmalig genutzer Rechner registriert werden. Dafür müssen alle Eingabefelder entsprechend ausgefüllt werden.
 
 .. note:: 
 
    Bitte trage für die Rechnergruppe einen Namen ohne Bindestriche `` - `` ein.
 
-LINBO Differenzielles Image erstellen
--------------------------------------
+LINBO Differenzielle Images
+---------------------------
 
 .. hint::
 
    Seit der Version LINBO 4.1 ist es möglich, differentielle Images zu erstellen.
 
-``Differentielle Images`` bauen auf einem Vollimage eines Client-Betriebssystems auf und legen alle Änderungen / Ergänzungen seit dem letzten Image ab. Diese werden dann bei einer Synchronisation des Clients vollständig angewendet.
+``Differentielle Images`` bauen auf einem vollständigen Image eines Client-Betriebssystems auf und legen alle Änderungen / Ergänzungen seit dem letzten Image ab. Diese werden dann bei einer Synchronisation des Clients vollständig angewendet.
 
 Werden nur kleine Ergänzungen auf dem Client vorgenommen, kann ein differenzielles Image erstellt werden, um das Verteilen der Änderungen möglichst schnell für alle Clients einer Hardware-Klasse durchzuführen. Für die Aktualisierung der Clients werden so, deutlich weniger Daten via Netzwerk übertragen.
 
@@ -331,11 +370,16 @@ Erscheint die LINBO GUI:
 
 .. figure:: media/linbo-diff-images/01-linbo-gui.png
    :align: center
+   :scale: 70%
    :alt: Linbo GUI
+
+   LINBO GUI
 
 .. figure:: media/linbo-diff-images/02-tools-icon.png
    :align: left
    :alt: Tools Icon
+
+   Tools Icon
 
 Wähle rechts das Werkzeug-Icon aus.
 
@@ -343,25 +387,37 @@ Es erscheint ein neues Fenster, in dem Du das Passwort des Linbo-Admins eingeben
 
 .. figure:: media/linbo-diff-images/03-linbo-password.png
    :align: center
+   :scale: 95%
    :alt: Linbo Password
 
-Das Kennwort ist bei Eingabe nicht sichtbar. Klicke auf ``Anmelden``. Es erscheint das Werkzeug-Menü.
+   LINBO Passwort
+
+Das Kennwort ist bei Eingabe nicht sichtbar. Klicke auf ``anmelden``. Es erscheint das Werkzeug-Menü.
 
 .. figure:: media/linbo-diff-images/04-linbo-tools-menue.png
    :align: center
+   :scale: 70%
    :alt: Linbo Tools Menue
+
+   LINBO Image Menü
 
 Zur Erstellung eines differenziellen Images klicke nun auf das große Icon zur Erstellung eines Images.
 
 .. figure:: media/linbo-diff-images/05-icon-new-image.png
    :align: center
+   :scale: 70%
    :alt: Linbo New Image
+
+   Icon neues Image
 
 Es erscheint das Menü zur Erstellung neuer oder differenzieller Images.
 
 .. figure:: media/linbo-diff-images/06-menue-new-image.png
    :align: center
-   :alt: Linbo Menue for Imaging
+   :scale: 70%
+   :alt: Linbo create image
+
+   LINBO Image erstellen
 
 Wähle die Option ``Neues differenzielles Image erstellen`` aus, trage eine nachvollziehbare Beschreibung für das Image als Text ein.
 
@@ -369,19 +425,27 @@ Wähle zur Erstellung des differenziellen Images den Eintrag ``erstellen + hochl
 
 .. figure:: media/linbo-diff-images/07-image-create-and-upload.png
    :align: center
+   :scale: 70%
    :alt: Create + Upload Image
+
+   Image erstellen + hochladen
 
 Es werden bei der Erstellung des Images in der Linbo-GUI weitere Status-Meldungen angezeigt. Ist der Prozess der Erstellung und das Hochladen des differenziellen Images auf den Server abgeschlossen, siehst Du folgende Meldung:
 
 .. figure:: media/linbo-diff-images/08-finished-uploading-new-image.png
    :align: center
+   :scale: 70%
    :alt: Image Creation finished
+
+   LINBO Image erstellt
 
 Starte im Anschluss LINBO neu, indem Du das entsprechende Icon auswählst:
 
 .. figure:: media/linbo-diff-images/09-reboot-linbo.png
    :align: center
    :alt: Reboot Linbo
+
+   Icon neu starten
 
 Image synchronisieren
 ^^^^^^^^^^^^^^^^^^^^^
@@ -390,16 +454,23 @@ Nachdem LINBO neu gestartet wurde, erscheint wieder die LINBO-GUI.
 
 .. figure:: media/linbo-diff-images/10-linbo-boot-icons.png
    :align: center
+   :scale: 70%
    :alt: Linbo Boot Icons
+
+   LINBO-GUI: Boot-Icons
 
 Wende nun das differenzielle Image auf den Client an, indem Du das grosse Icon zur Synchronisation des Images klickst. Während der lokale Cache aktualisiert wird, siehst Du eine entsprechende Status-Leiste mit dem Fortschritt.
 
 .. figure:: media/linbo-diff-images/11-sync-image.png
-   :align: left
+   :align: center
+   :scale: 70%
    :alt: Image Creation finished
+
+   Fortschrittsbalken
 
 Das differenzielle Image wird vom Server geholt und lokal im Cache des Clients angewendet. Danach wird der Client gestartet.
 
+.. _LINBO-Imageverwaltung:
 
 WebUI: LINBO-Imageverwaltung
 ----------------------------
@@ -415,22 +486,30 @@ Imageverwaltung aufrufen
    :align: left
    :alt: LNBO Image Menue
 
+   LINBO4 Menü
+
 Um zur Umageverwaltung in der WebUI zu gelangen, meldest Du Dich in der WebUI als ``global-admin`` an. Danach rufst Du links in der Menüspalte ``Geräteverwaltung -> LINBO4`` auf.
 
 .. figure:: media/linbo-diff-images/13-linbo-group-images.png
    :align: center
+   :scale: 70%
    :alt: LINBO Group Images
 
-Rechts erscheinen im Fenster zunächst die Hardwaregruppen mit den zugeordneten Basis-Images. In nachstehender Abbildung ist das Basis-Image blau hervorgehoben und weist die Dateiendung ``.qcow2`` auf. In der Abbildung ist nur eine Hardwareklasse mit dem zugeordneten Basisimage dargestellt.
+   LINBO Hardwaregruppen
+
+Rechts erscheinen im Fenster zunächst die Hardwaregruppen mit den zugeordneten Basis-Images als ``Verwendete Images``. In nachstehender Abbildung ist das Basis-Image blau hervorgehoben. Es nutzt die Dateiendung ``.qcow2``. In der Abbildung ist nur eine Hardwareklasse mit dem zugeordneten Basis-Image dargestellt.
 
 Images verwalten
 ^^^^^^^^^^^^^^^^
 
-Klicke oben in dem Fenster auf die Reiterkarte ``Abbilder``, so siehst Du eine Gesamtliste aller Abbilder, die mit LINBO erstellt wurden und hier verwaltet werden können.
+Klicke oben in dem Fenster auf den Tab ``Abbilder / Images``, so siehst Du eine Gesamtliste aller Images, die mit LINBO erstellt wurden und hier verwaltet werden können.
 
 .. figure:: media/linbo-diff-images/14-group-images-overview.png
    :align: center
+   :scale: 70%
    :alt: LINBO Image Overview
+
+   Überblick der LINBO-Images
 
 Unter der Spaltenüberschrift ``Name`` ist der Name und die Dateigröße des Basis-Images abgelegt. Daneben findest Du in der Spalte ``Differentielles Image`` das dem Basis-Image zugeordnete differentielle Image inkl. Angabe der Dateigröße. Zudem wird dargestellt, in welcher Gruppe diese Images verwendet werden. In der Spalte ``Aktionen`` befinden sich Symbole, die Aktionen für das Basis-Image ausführen.
 
@@ -439,19 +518,28 @@ Basis-Image
 
 .. figure:: media/linbo-diff-images/14-group-images-overview.png
    :align: center
+   :scale: 70%
    :alt: ImagesOverview
+
+   LINBO Images
 
 Um das Basis-Image zu verwalten, das in der Image-Übersicht in der Spalte ``Namen`` angegeben wird, findest Du die Aktions-Icons in der Übersicht ganz rechts als etwas größere Symbole.
 
 .. figure:: media/linbo-diff-images/15-basic-image-menue.png
    :align: center
+   :scale: 90%
    :alt: Basic Image
+
+   Aktionen
 
 Klicke auf das Zahnradsymbol. Es erscheint ein Fenster mit Informationen zu dem Basis-Image.
 
 .. figure:: media/linbo-diff-images/16-basic-image-info.png
    :align: center
+   :scale: 70%
    :alt: Basic Image Info
+
+   Informationen zum Image
 
 Hier finden Sie Informationen zum Dateinamen, dem Zeitstempel der Erstellung, der Dateigröße und weiterer Parameter. Die Dateiendung ``.qcow2`` steht für ein Basis-Image.
 
@@ -461,9 +549,12 @@ Klicke auf mittlere Icon, um die Sicherungen des Basis-Images im Zeitablauf anzu
 
 .. figure:: media/linbo-diff-images/17-basic-image-backups-history.png
    :align: center
+   :scale: 70%
    :alt: Basic Image Backups
 
-Das aktuell gültige Basis-Image wird mit dem ``Status`` Basis-Image und einem grünen Haken symbolisiert. Im Zeitablauf werden die vorangegangenen Basis-Images dargestellt. Diese können entweder gelöscht (Papierkorb), wiederhergestellt (Pfeil gegen den Uhrzeigersinn) oder deren Besonderheiten eingesehen werden (Zahnradsymbol).
+   Image-Sicherungen
+
+Das aktuell gültige Basis-Image wird mit dem ``Status`` Basis-Image und einem grünen Haken symbolisiert. Im Zeitablauf werden die vorangegangenen Basis-Images dargestellt. Diese können entweder gelöscht (Papierkorb), wiederhergestellt (Pfeil gegen den Uhrzeigersinn) oder deren Besonderheiten eingesehen werden (Zahnrad-Icon).
 
 
 Differentielle Images
@@ -479,7 +570,10 @@ Klickst Du auf das Zahnrad neben dem Namen für das differentielle Image, dann e
 
 .. figure:: media/linbo-diff-images/19-diff-image-infos.png
    :align: center
+   :scale: 70%
    :alt: Diff Image Infos
+
+   Informationen zum diff. Image
 
 Unter der Reiterkarte ``Allgemein`` findest Du Informationen zu dem differentiellen Image wie z.B. den Zeitstempel oder den Imagenamen. Die Dateiendung ``.qdiff`` steht für ein differentielles Image.
 
@@ -496,6 +590,7 @@ Bootvorgang via Netzwerk
 
 .. figure:: media/linbo-bootscreen/linbo-tftp.png
    :align: center
+   :scale: 70%
    :alt: Initialmeldungen beim Bootvorgang via Netzwerk (PXE)
 
    Initialmeldungen beim Bootvorgang via Netzwerk (PXE)
@@ -504,6 +599,7 @@ Egal ob über die lokale Festplatte gebootet wurde oder nach dem Bootvorgang via
 
 .. figure:: media/linbo-bootscreen/linbo-group.png
    :align: center
+   :scale: 70%
    :alt: Bootbildschirm: Laden des Kernels
 
    Bootbildschirm: Laden des Kernels
@@ -512,16 +608,17 @@ Der gebootete LINBO-Kernel erscheint als ASCII-Art.
 
 .. figure:: media/linbo-bootscreen/linbo-ascii.png
    :align: center
+   :scale: 70%
    :alt: LINBO-Kernelboot ASCII-Art
 
    LINBO-Kernelboot ASCII-Art
 
 Die Grub-Konfiguration wird ggf aktualisiert, danach erscheint der reguläre ``LINBO Startbildschirm``.
 
-Boot-Abbild für USB-Sticks und CD/DVD
+LINBO-Image für USB-Sticks und CD/DVD
 -------------------------------------
 
-Zum Brennen auf CD/DVD oder zum Kopieren auf einen USB-Stick lädst Du zuerst das aktuelle linbo - Abbild als linbo.iso herunter.
+Zum Erstellen einer Boot-CD/DVD oder zum Kopieren auf einen USB-Stick lädst Du zuerst das aktuelle LINBO - Image als ``linbo.iso`` herunter. Dies ermöglicht es, dass ein Client lokal via CD/DVD oder USB-Stick als Boot-Medium startet. Dies kann dann hilfreich sein, wenn das Booten von LINBO via Netzwerk Probleme bereitet.
 
 Melde Dich zuerst an der Schulkonsole an:
 
@@ -531,13 +628,19 @@ Melde Dich an der Schulkonsole als Benutzer ``global-admin`` an.
 
 .. figure:: media/linbo-bootscreen/linbo-iso-login-school-console.png
    :align: center
+   :scale: 70%
    :alt: LINBO - Login School Console
 
-Wähle dann links den Menüpunt ``linbo4`` aus.
+   Login WebUI
+
+Wähle danach links den Menüpunkt ``LINBO4`` aus.
 
 .. figure:: media/linbo-bootscreen/linbo-iso-menue-linbo4.png
    :align: center
+   :scale: 70%
    :alt: LINBO4 Menue
+
+   LINBO4 Menüeintrag
 
 Rechts im Fenster erscheinen ganz unten zwei Buttons. Klicke nun den Button ``Linbo Boot herunterladen``.
 
@@ -545,21 +648,34 @@ Es erscheint ein Fenster zum Download des ISO-Images.
 
 .. figure:: media/linbo-bootscreen/linbo-iso-download.png
    :align: center
+   :scale: 70%
    :alt: Download linbo.iso
 
-Das Booten eines Rechers mit einem Linbo-Stick oder einer Linbo-CD/DVD kann nötig werden, wenn - in seltenen Fällen - Linbo nicht per PXE installiert wird.
+   Download des LINBO-Images
 
-Bootet man einen Rechner vom Stick, oder von einer CD/DVD, dann sieht man folgendes Bild:
+Das Booten eines Rechers mit einem LINBO-USB-Stick oder einer LINBO-CD/DVD kann nötig werden, wenn - in seltenen Fällen - LINBO nicht per PXE installiert wird.
 
-.. image:: media/linbo_screen1.png
+Bootes Du einen Rechner via Stick oder von einer CD/DVD, dann siehst Du folgendes Bild:
+
+.. figure:: media/linbo_screen1.png
+   :align: center
+   :scale: 70%
+   :alt: LINBO Boot Screen 1
+
+   LINBO Screen
 
 Mit ``Enter`` wird der Client gebootet
  
-.. image:: media/linbo_screen2.png
+.. figure:: media/linbo_screen2.png
+   :align: center
+   :scale: 70%
+   :alt: LINBO menue selction
+
+   LINBO Start-Menü
 
 Mit der Auswahl durch die Pfeiltasten der Tastatur ``Ersteinrichtung + Neustart`` wird Linbo eingerichtet und der Rechner mit Linbo gestartet. Nach dem Neustart stehen alle Linbo-Funktionen zur Verfügung.
 
-Linbo4-Cache: Hinweise
+LINBO4-Cache: Hinweise
 ----------------------
 
 Linbo4 nutzt auf jedem Client eine lokale Cache-Partition, um ein oder mehrere Image/s eine Betriebssystems lokal vorzuhalten. Es lassen sich so unterschiedliche Verhaltensweisen eines Clients entweder via start.conf Datei oder via linbo-remote steuern.
@@ -663,12 +779,12 @@ Dabei ist zu beachten:
 * ``start:<#>``:
   Startet das Betriebsyssystem, das in der start.conf an der angegebenen <#> Position eingetragen wurde.
 
-Linbo4: Hook-Skripte
+LINBO4: Hook-Skripte
 --------------------
 
 .. attention::
 
-   Ab der Version Linbo 4.1.31 ``linuxmuster-linbo7 4.1.31`` stehen sogenannte Hook-Skripte zur Verfügung, um vor oder nach ``update-linbofs`` auf dem Server kleine Programme auszuführen, die durch definierte Ereignisse ausgelöst werden.
+   Ab der Version LINBO 4.1.31 ``linuxmuster-linbo7 4.1.31`` stehen sogenannte Hook-Skripte zur Verfügung, um vor oder nach ``update-linbofs`` auf dem Server kleine Programme auszuführen, die durch definierte Ereignisse ausgelöst werden.
 
 Pre-Hook-Skripte
 ^^^^^^^^^^^^^^^^
@@ -714,8 +830,8 @@ Nachstehendes Pre-Hook-Skript zeigt hierzu einige Möglichkeiten auf.
    # Kopieren des Linbo-Verzeichnisses (z.B. zum Testen mit eigenen Skripten) nach /tmp/linbofs:
    mkdir /tmp/linbofs && cp -R . /tmp/linbofs
    
-   # Einfügen einer Wartezeit von 2 Sekunden vor der Netzwerkeinrichtung ;-)
-   sed -i '/^network\(\).*/a  \ \ sleep 2' init.sh
+   # Einfügen einer Wartezeit von 2 Sekunden vor der Netzwerkeinrichtung, Ausgabe von Text in der Konsole
+   sed -i '/^network\(\).*/a \ \ echo "Warte auf Netzwerk..." && sleep 2' init.sh
    
    exit 0
    
