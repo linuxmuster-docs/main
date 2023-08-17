@@ -125,7 +125,7 @@ Die erstellte CA findet sich unter ``System`` --> ``Zugang`` --> ``Sicherheit`` 
 Zertifikat hinzufügen
 ---------------------
 
-Danach ist unter Unter ``System`` --> ``Zugang`` --> ``Sicherheit`` --> ``Zertifikate`` ein Zertifikat hinzuzufügen (oben rechts).
+Danach ist unter Unter ``System`` --> ``Sicherheit`` --> ``Zertifikate`` ein Zertifikat hinzuzufügen (oben rechts).
 
 .. image:: media/08-create-certificate-menue-item.png
    :alt: System-Security-Certificates: Menue item
