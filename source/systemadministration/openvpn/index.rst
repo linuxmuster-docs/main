@@ -210,7 +210,7 @@ Nachstehende Abb. verdeutlicht diese Einstellungen:
 30.  IPv6 deaktivieren:
 31.  Für den Rest: Standardwerte!
 
-Hast Du den VPN-Serbver erfolgreich hinzugefügt, so wird dieser in der Übersicht angezeigt. Siehst Du vor der Angabe des Protokolls ein ``grünes`` Dreieck, dann läuft der VPN-Server.
+Hast Du den VPN-Server erfolgreich hinzugefügt, so wird dieser in der Übersicht angezeigt. Siehst Du vor der Angabe des Protokolls ein ``grünes`` Dreieck, dann läuft der VPN-Server.
 
 .. image:: media/14-vpn-server-added.png
    :alt: VPN Server hinzugefügt
