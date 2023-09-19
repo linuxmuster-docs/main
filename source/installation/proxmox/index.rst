@@ -95,7 +95,7 @@ Nachdem Du die ISO-Datei für Proxmox heruntergeladen hast, wechselst Du in das 
 
 .. code-block:: console
 
-   dd if=proxmox-ve_7.2-1.iso of=/dev/sdX bs=1M status=progress conv=fdatasync
+   dd if=proxmox-ve_8.0-2.iso of=/dev/sdX bs=1M status=progress conv=fdatasync
 
 Verkabelungshinweise
 --------------------

@@ -43,10 +43,10 @@ Weitere Hinweise zu möglichen Hardwareanforderungen bei unterschiedlichen Einsa
 Als Basis nutzt OPNsense® das Betriebssystem FreeBSD.  Hinweise zu den Anforderungen von FreeBSD bzw. zur Kompatibilität mit eingesetzten Hardware-Komponenten finden sich unter der `HCL - Hardware Compatibility List <https://www.freebsd.org/releases/11.1R/hardware.html>`_
 
 
-Server linuxmuster v7.1
+Server linuxmuster v7.2
 -----------------------
 
-Für linuxmuster.net v7.1 wird als Basis ein Ubuntu Server 18.04 LTS eingesetzt. Es wird empfohlen folgende Hardware-Mindestanforderungen zu erfüllen:
+Für linuxmuster.net v7.2 wird als Basis ein Ubuntu Server 22.04 LTS eingesetzt. Es wird empfohlen folgende Hardware-Mindestanforderungen zu erfüllen:
 
 ========================= ===========================================
 Prozessor                 >= 2 GHz Multi-Core CPU (64 Bit)

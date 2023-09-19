@@ -72,7 +72,7 @@ Führe danach folgende Befehle in der Eingabekonsole aus:
 
 Damit installierst Du den Key für das Repository von linuxmuster.net und aktivierst ihn.
 
-Die nächste Zeile fügt das Linuxmuster 7.1 Repository hinzu.
+Die nächste Zeile fügt das Linuxmuster 7.2 Repository hinzu.
 
 .. code-block:: Bash
 

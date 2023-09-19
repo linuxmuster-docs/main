@@ -1,7 +1,7 @@
 .. _setup-label:
 
 ===========
-Setup v7.1
+Setup v7.2
 ===========
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
@@ -12,7 +12,7 @@ Setup v7.1
    Alle linuxmuster 6.x Systeme können statt einer Neuinstallation über eine :ref:`migration-label` umgezogen werden, dennoch ist die
    Erstkonfiguration hier eine notwendige Voraussetzung.
 
-   Alle linuxmuster 7.0 Systeme werden lediglich über ein :ref:`upgrade-from-7.0-label` auf linuxmuster v7.1 aktualisiert. 
+   Alle linuxmuster 7.1 Systeme werden lediglich über ein :ref:`upgrade-from-7.1-label` auf linuxmuster v7.2 aktualisiert. 
    Ein erneutes Setup ist dann nicht mehr erforderlich.
    
 Es gibt 2 Möglichkeiten, die Erstkonfiguration durchzuführen: 
@@ -62,14 +62,14 @@ Wichtige Hinweise
 
 * Alle Hosts, die im Setup konfiguriert werden, müssen bereits laufen (OPNsense und Server) und sie müssen sich im internen LAN gegenseitig erreichen.
 
-* v6.x Systeme, die mithilfe der Migration auf linuxmuster.net 7.1 migriert werden, können dabei für eine neue (oder die alte) Domäne konfiguriert werden.
+* v6.x Systeme, die mithilfe der Migration auf linuxmuster.net 7.2 migriert werden, können dabei für eine neue (oder die alte) Domäne konfiguriert werden.
 
 Anpassung des Netzbereichs
 ==========================
 
 Die Standardkonfiguration sieht vor, dass Geräte im Netzbereich ``10.0.0.0/16`` sind.
 
-v6.x Systeme, die mithilfe der Migration auf linuxmuster.net 7.1 migriert werden, sollten den bisher verwendeten Netzbereich beibehalten.
+v6.x Systeme, die mithilfe der Migration auf linuxmuster.net 7.2 migriert werden, sollten den bisher verwendeten Netzbereich beibehalten.
 
 .. hint::
 

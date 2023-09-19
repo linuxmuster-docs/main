@@ -28,7 +28,7 @@ Um **linuxmuster.net latest** zu installieren musst Du folgende Schritte durchla
 
 ..       :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part2-basis-server-provision.svg
 
-\* Bei der aktuellen linuxmuster.net Version dient die LTS Version 18.04 (Bionic Beaver) als Basis.
+\* Bei der aktuellen linuxmuster.net Version dient die LTS Version 22.04 als Basis.
 
 5. Installation from Scratch in die vorbereiteten VMs - oder alternativ direkt auf zwei Hardware-Maschinen
 
