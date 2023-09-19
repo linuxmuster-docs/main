@@ -1,12 +1,12 @@
 .. _`what-is-new-label`:
 
 ===================
-Was ist neu in 7.1?
+Was ist neu in 7.2?
 ===================
 
 .. sectionauthor:: `Das Dokuteam <https://ask.linuxmuster.net/c/weiterentwicklung/doku>`_
 
-Linuxmuster.net 7.1 ist das Release-Update der linuxmuster.net v7.0. Es erfolgt auf Basis der bislang eingesetzten Ubuntu LTS Version ein Update der Kernpakete der linuxmuster.net Lösung, die neue Features bereitstellt.
+Linuxmuster.net 7.2 ist das Release-Update der linuxmuster.net v7.1. Es erfolgt eine Aktualisierung der bisher eingesetzten Ubuntu LTS Version auf die derzeit aktuellste Ubuntu Server LTS Version. Die Kernpakete der linuxmuster.net Lösung erhalten alle ein Update und stellen viele Verbesserungen und neue Features bereit.
 
 Neue Funktionalitäten
 ---------------------
@@ -53,11 +53,6 @@ Selbstheilende Arbeitsstationen
     * Umstellung der Images-Abbilder auf das qcow2 Format
     * Neues User-Interface für die Steuerung an den Clients
 
-Hinweise
---------
 
-.. hint::
-
-   * Release-Informationen werden im Forum im Thread `Neue Pakete für lmn7.1 <https://ask.linuxmuster.net/t/linuxmuster-net-7-1-testing/8265/7>`_ veröffentlicht.
 
 
