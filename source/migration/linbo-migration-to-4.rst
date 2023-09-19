@@ -1,27 +1,26 @@
 .. _migration-linbo-label:
 
 ==========================
-Migration LINBO 2.4 zu 4.0
+Migration LINBO 2.4 zu 4.1
 ==========================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
 
-Hinweise zu LINBO 4
-===================
+Hinweise zu LINBO 4.1
+=====================
 
-In der linuxmuster v7.1 löst LINBO 4 das bisherige LINBO 2.4 ab. Ab v7.1 gibt es nur noch ein Debian-Paket für LINBO (`linuxmuster-linbo7`) und eines für die grafische Oberfläche (`linuxmuster-linbo-gui7`), die nur noch LINBO 4 und eine grafische Oberfläche enthalten.
+In der linuxmuster v7.2 löst LINBO 4.1 das bisherige LINBO 2.4 ab. Bereits ab v7.1 gibt es nur noch ein Debian-Paket für LINBO (`linuxmuster-linbo7`) und eines für die grafische Oberfläche (`linuxmuster-linbo-gui7`), die nur noch LINBO 4 und eine grafische Oberfläche enthalten.
 
-Hast Du auf linuxmuster v7.1 umgestellt, ist es sinnvoll, die bisherigen LINBO 2.4 Cloop-Images zu konvertieren.
+Hast Du auf linuxmuster v7.2 umgestellt, ist es sinnvoll, die bisherigen LINBO 2.4 Cloop-Images zu konvertieren.
 
-LINBO 4 weist einige Besonderheiten auf:
+LINBO 4.1 weist einige Besonderheiten auf:
 
 * neues Image-Format mit Abwärtskompatibilität zum alten Format für eine einfach Migration
 * Änderungen an der Namensgebung und des Speicherortes der zum Image zugehörigen Dateien
 * Es wird nur noch 64-Bit Client-Hardware unterstützt.
-* LINBO 4 kann nicht mit linuxmuster v6.2 und kleiner verwendet werden.
-* Es gibt derzeit *keine* differentiellen Images. Differentielle Images werden voraussichtlich erst wieder ab LINBO v4.1 unterstützt.
-
+* LINBO 4.1 kann nicht mit linuxmuster v6.2 und kleiner verwendet werden.
+* Es werden differentielle Images ab LINBO v4.1 unterstützt.
 
 Neues Image-Format
 ------------------

@@ -1,3 +1,12 @@
+.. |_| unicode:: U+202F
+   :trim:
+
+.. |copy| unicode:: 0xA9 .. Copyright-Zeichen
+   :ltrim:
+
+.. |reg| unicode:: U+00AE .. Trademark
+   :ltrim:
+
 .. _`what-is-new-label`:
 
 ===================
@@ -8,6 +17,10 @@ Was ist neu in 7.2?
 
 Linuxmuster.net 7.2 ist das Release-Update der linuxmuster.net v7.1. Es erfolgt eine Aktualisierung der bisher eingesetzten Ubuntu LTS Version auf die derzeit aktuellste Ubuntu Server LTS Version. Die Kernpakete der linuxmuster.net Lösung erhalten alle ein Update und stellen viele Verbesserungen und neue Features bereit.
 
+.. attention::
+
+   Die Version linuxmuster.net 7.2 ist noch im Beta-Stadium und n i c h t für den produktiven Einsatz geeignet.
+
 Neue Funktionalitäten
 ---------------------
 
@@ -16,10 +29,10 @@ Verbesserte Skalierbarkeit
   * Gruppenorientierte Abbildung der Schule und flexible, regelbasierte Steuerung
   * Moderne Bereitstellung zusätzlicher IT-Dienste der Schule innerhalb der Schullösung
 
-Moderne Steuerung
+Moderne Betriebssystembasis und Steuerung
+  * Aktuelle Betriebssysteme der Server (Ubuntu Server 22.04 LTS & OPNSense |reg| 23.7) und der vorkonfigurierten, kostenlos bereitgestellten Linux-Arbeitsplätze
+  * Mit LINBO 4.1: Neues User-Interface für die Steuerung an den Clients und aktuellste Linux-Kernels für aktuelle Hardware
   * Webbasierte Steuerung der pädagogischen Funktionen mit einem sog. responsive design
-  * Aktuelle Betriebssysteme der Server und der vorkonfigurierten, kostenlos bereitgestellten Linux-Arbeitsplätze
-  * Mit LINBO 4: Neues User-Interface für die Steuerung an den Clients
   * WebUI mit vielen administrativen Möglichkeiten, die zuvor nur an der Server-Konsole zu erreichen waren.
 
 Technische Neuerungen
@@ -48,10 +61,12 @@ Netzwerkverwaltung
 
 Selbstheilende Arbeitsstationen
   * LINBO ist weiterhin das zentrale Softwareverteilungssystem.
-  * Es erfolgt ein Major Release Update auf LINBO 4.
+  * Es erfolgt ein Major Release Update auf LINBO 4.1.
 
     * Umstellung der Images-Abbilder auf das qcow2 Format
     * Neues User-Interface für die Steuerung an den Clients
+    * Differenzielle Images
+    * Aktuelle Linux-Kernel ab 6.2.* und einem nativen NTFS-Kernel Treiber
 
 
 

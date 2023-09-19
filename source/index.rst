@@ -1,6 +1,10 @@
 Einführung
 ==========
 
+.. hint::
+
+   Diese Dokumentation zu linuxmuster.net v7.2 befindet sich derzeit noch im Aufbau bzw. wird noch angepasst. Derzeit ist die Version v7.2 noch im B E T A - Stadium.
+
 Herzlich Willkommen zur Dokumentation von linuxmuster.net v7.2!
 
 Diese beschreibt alle wichtigen Schritte ...
@@ -186,4 +190,3 @@ Nach einem Klick eröffnen sich Dir dort noch weitere Möglichkeiten:
   :hidden:
 
   appendix/contribute/ad-dns-wiki
-  appendix/beta-lmn72/index

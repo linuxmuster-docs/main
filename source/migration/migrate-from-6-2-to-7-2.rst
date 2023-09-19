@@ -3,7 +3,7 @@
 .. _migration_6_7:
 
 ==============================
-Migration lmn6.2.. --> lmn 7.1
+Migration lmn6.2.. --> lmn 7.2
 ==============================
 
 .. sectionauthor:: `@jeffbeck <https://ask.linuxmuster.net/u/jeffbeck>`_,
@@ -40,18 +40,18 @@ Es muss als Quellsystem linuxmuster.net in der Version 6.2 installiert sein.
 Es ist möglich, dass auch ab Version 6.1 und 6.0 eine Migration funktioniert. Dies wurde nicht offiziell getestet.
 
 
-Neues v7.1 System
+Neues v7.2 System
 -----------------
 
 Es wird davon ausgegangen, dass |...|
 
-  *  der Server der Version 7.1 und eine Firewall (Standard OPNSense |reg| ) zur Verfügung stehen. 
+  *  der Server der Version 7.2 und eine Firewall (Standard OPNSense |reg| ) zur Verfügung stehen. 
   *  das Setup wie zuvor beschrieben ausgeführt wurde und ohne Fehler durchgelaufen ist.
   *  nach der Installation keine zusätzlichen Benutzer, Gruppen und Projekte angelegt wurden. 
 
 In dieser Beschreibung wird als Schulinstanz, wie beim Erstsetup vorgegeben, ``default-school`` beibehalten.
 
-.. Das Standard-Setup der v7.1 geht zunächst davon aus, dass keinerlei Netzbereichs-/Adressanpassungen und Netzsegmentierungen (Subnetting) durchgeführt wurden.
+.. Das Standard-Setup der v7.2 geht zunächst davon aus, dass keinerlei Netzbereichs-/Adressanpassungen und Netzsegmentierungen (Subnetting) durchgeführt wurden.
 
 .. attention::
   
@@ -63,7 +63,7 @@ In dieser Beschreibung wird als Schulinstanz, wie beim Erstsetup vorgegeben, ``d
    System mit Netzanpassungen
    .. --------------------------
 
-   Solltest Du in der linuxmuster.net v6.2 andere Netzbereiche konfiguriert haben, die jetzt weiter genutzt werden sollen, oder hast Du das Netz in Subnetze aufgeteilt und möchtest bei der Migration diese Subnetze mit umstellen, dann ist nachstehendes Vorgehen unbedingt bereits beim Erstsetup der VMs der v7.1 zu beachten.
+   Solltest Du in der linuxmuster.net v6.2 andere Netzbereiche konfiguriert haben, die jetzt weiter genutzt werden sollen, oder hast Du das Netz in Subnetze aufgeteilt und möchtest bei der Migration diese Subnetze mit umstellen, dann ist nachstehendes Vorgehen unbedingt bereits beim Erstsetup der VMs der v7.2 zu beachten.
 
 
    Ablauf
