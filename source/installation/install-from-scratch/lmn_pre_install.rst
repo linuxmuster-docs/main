@@ -69,7 +69,7 @@ Das Skript ``lmn-appliance`` bereitet den Server / die Appliance vor:
   - im Falle des Serverprofils optional LVM einrichtet.
 
 Skript herunterladen
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 Wenn Du nicht mehr an Deinem Server eingeloggt bist, melde Dich erneut an.
 
