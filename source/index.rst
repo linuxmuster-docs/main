@@ -1,7 +1,7 @@
 Einführung
 ==========
 
-Herzlich Willkommen zur Dokumentation von linuxmuster.net v7.1!
+Herzlich Willkommen zur Dokumentation von linuxmuster.net v7.2!
 
 Diese beschreibt alle wichtigen Schritte ...
 
@@ -27,12 +27,12 @@ Hattest Du schon Kontakt mit einer Installation von
 
 Dann ist das Kapitel :ref:`what-is-new-label` für Dich von Interesse.
 
-Mit der Version 7.1 gibt es einige Neuerungen. Das zuvor genannte Kapitel :ref:`what-is-linuxmuster.net-label` geht auf diese Neuerungen detailliert ein. Ein Blick lohnt sich daher auf alle Fälle.
+Mit der Version 7.2 gibt es einige Neuerungen. Das zuvor genannte Kapitel :ref:`what-is-linuxmuster.net-label` geht auf diese Neuerungen detailliert ein. Ein Blick lohnt sich daher auf alle Fälle.
 
 Installation from Scratch
 -------------------------
 
-Diese Dokumentation führt Dich durch die Vorbereitung der Virtualisierungslösungen Proxmox, um linuxmuster.net 7.1 installieren zu können. Hierzu gehört die spezifische Einrichtung des Netzwerks sowie die Vorbereitung der Virtuellen Maschinen.
+Diese Dokumentation führt Dich durch die Vorbereitung der Virtualisierungslösungen Proxmox, um linuxmuster.net 7.2 installieren zu können. Hierzu gehört die spezifische Einrichtung des Netzwerks sowie die Vorbereitung der Virtuellen Maschinen.
 
 Weitere Hilfe
 -------------
