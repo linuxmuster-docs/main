@@ -19,7 +19,7 @@ Linuxmuster.net 7.2 ist das Release-Update der linuxmuster.net v7.1. Es erfolgt 
 
 .. attention::
 
-   Die Version linuxmuster.net 7.2 ist noch im Beta-Stadium und n i c h t für den produktiven Einsatz geeignet.
+   Die Version linuxmuster.net 7.2 ist derzeit noch im Beta-Stadium und n i c h t für den produktiven Einsatz freigegeben.
 
 Neue Funktionalitäten
 ---------------------
@@ -31,9 +31,9 @@ Verbesserte Skalierbarkeit
 
 Moderne Betriebssystembasis und Steuerung
   * Aktuelle Betriebssysteme der Server (Ubuntu Server 22.04 LTS & OPNSense |reg| 23.7) und der vorkonfigurierten, kostenlos bereitgestellten Linux-Arbeitsplätze
-  * Mit LINBO 4.1: Neues User-Interface für die Steuerung an den Clients und aktuellste Linux-Kernels für aktuelle Hardware
+  * Mit LINBO 4.1: Neues User-Interface für die Steuerung an den Clients, aktuellste Linux-Kernels für aktuelle Hardware, differentielle Images, ntfs3 Kernel-Treiber
   * Webbasierte Steuerung der pädagogischen Funktionen mit einem sog. responsive design
-  * WebUI mit vielen administrativen Möglichkeiten, die zuvor nur an der Server-Konsole zu erreichen waren.
+  * WebUI mit vielen administrativen Möglichkeiten, die zuvor nur an der Server-Konsole zu erreichen waren (Erstellen von Hardwareklassen, Erstellen von Client-Konfigurationen, Erstellen von differenziellen Images u.v.m.).
 
 Technische Neuerungen
 ---------------------
@@ -51,13 +51,13 @@ Benutzerverwaltung
   * Klassen- und Projektmanagement bleibt erhalten
   * Zusätzlich Session-basierte Berechtigungen für die Unterrichtsteuerung
 
-    * Gruppen können freiwählbar zusammengestellt werden
+    * Gruppen können frei zusammengestellt werden
     * Benutzerbezogene statt rechnerbezogene Verwaltung
 
 Netzwerkverwaltung
   * Frei definierbare IP-Bereiche
   * Standardmäßige Zugangskontrolle zum Internet über einen Proxyservice
-    auf Single-Sign-On Basis - anselle eines transparenten Proxys
+    auf Single-Sign-On Basis - anselle eines transparenten Proxy
 
 Selbstheilende Arbeitsstationen
   * LINBO ist weiterhin das zentrale Softwareverteilungssystem.

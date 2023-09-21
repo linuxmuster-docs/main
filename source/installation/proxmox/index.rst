@@ -21,9 +21,9 @@ deiner Virtualisierungslösung. Hinweise auf andere Virtualisierungslösungen fi
 1. XCP-ng: https://wiki.linuxmuster.net/community/anwenderwiki:virtualisierung:xcpng:xcpng4lmn71
 2. KVM:  https://wiki.linuxmuster.net/community/anwenderwiki:virtualisierung:kvm:kvm4lmn71
 
-Proxmox ist eine Open Source-Virtualisierungsplattform. Diese kombiniert KVM- und Container-basierte Virtualisierung und verwaltet virtuelle Maschinen, Container, Storage, virtuelle Netzwerke und Hochverfügbarkeit-Cluster übersichtlich über die zentrale Managementkonsole.
+Proxmox ist eine Open Source-Virtualisierungsplattform. Diese kombiniert KVM- und Container-basierte Virtualisierung und verwaltet virtuelle Maschinen, Container, Storage, virtuelle Netzwerke und Hochverfügbarkeit-Cluster übersichtlich über ein web-basierte Managementkonsole.
 
-Das web-basierte Verwaltungs-Interface läuft direkt auf dem Server. Zudem kann die Virtualisierungsumgebung via SSH administriert werden.
+Die zentrale Managementkonsole läuft direkt auf dem Server. Zudem kann die Virtualisierungsumgebung via SSH administriert werden.
 
 Proxmox
 -------
@@ -37,7 +37,7 @@ Systemvoraussetzungen
 
 In der unten aufgeführten Tabelle findest Du die Systemvoraussetzungen zum Betrieb der virtuellen Maschinen. Die Systemanforderungen für die Installation von Proxmox selbst finden sich im Web unter https://www.proxmox.com/de/proxmox-ve/systemanforderungen. 
 
-Die Werte bilden die Mindestvoraussetzungen zur Planung. Für die Installation mit Proxmox und linuxmuster v7.1 wird als Standard der ``IP-Bereich 10.0.0.0/16`` genutzt.
+Die Werte bilden die Mindestvoraussetzungen zur Planung. Für die Installation mit Proxmox und linuxmuster v7.2 wird als Standard der ``IP-Bereich 10.0.0.0/16`` genutzt.
 
 ============ ============= ================= =====
 VM           IP            HDD               RAM 
@@ -50,8 +50,8 @@ Proxmox-Host 10.0.0.10/16  500 GiB           4 GiB
 Die Festplattengröße sowie der genutzte RAM der jeweiligen VMs kann ggf. vor deren Einrichtung einfach an die Bedürfnisse der Schule angepasst werden.
 
 Bevor Du dieses Kapitel durcharbeitest, lese bitte zuerst die Abschnitte
-  + (:ref:`what-is-linuxmuster.net-label`)
-  + (:ref:`what-is-new-label`)
+  +  :ref:`what-is-linuxmuster.net-label`
+  +  :ref:`what-is-new-label`
   +  :ref:`install-overview-label`
   +  :ref:`prerequisites-label`
 
@@ -91,7 +91,7 @@ Lade Dir dort das aktuellste Image herunter und erstelle Dir einen bootfähigen 
 Erstellen eines USB-Sticks zur Installation des Proxmox-Host
 ------------------------------------------------------------
 
-Nachdem Du die ISO-Datei für Proxmox heruntergeladen hast, wechselst Du in das Download-Verzeichnis. Danach ermittel Du den korrekten Buchstaben für den USB-Stick unter Linux. X ist durch den korrekten Buchstaben zu ersetzen und dann ist nachstehender Befehl als Benutzer *root* oder mit einem *sudo* vorangestellt einzugeben:
+Nachdem Du die ISO-Datei für Proxmox heruntergeladen hast, wechselst Du in das Download-Verzeichnis. Danach ermittel Du den korrekten Buchstaben für den USB-Stick unter Linux. Das X bei sdX ist durch den korrekten Buchstaben für den USB-Stick zu ersetzen (z.B. /dev/sda). Nachstehender Befehl als Benutzer *root* oder mit einem *sudo* vorangestellt einzugeben:
 
 .. code-block:: console
 
@@ -211,9 +211,9 @@ Nach erfolgreicher Installation lasse Proxmox über `Reboot` neu starten.
 Proxmox Einrichtung
 -------------------
 
-Nach dem Neustart von Proxmox kannst Du Dich über einen PC, der sich im selben Netz befindet, via Browser auf das grafische Webinterface zur Verwaltung des Proxmox-Hosts aufschalten. Hierzu gibst Du die URL https://192.168.199.20:8006 ein. Du erhältst ein "Warning", da ein mögliches Sicherheitsrisiko erkannt wurde. Dies ist auf das selbst ausgestellte SSL-Zertifikat des Proxmox-Host zurückzuführen.
+Nach dem Neustart von Proxmox kannst Du Dich über einen PC, der sich im selben Netz befindet, via Browser auf das grafische Webinterface zur Verwaltung des Proxmox-Hosts aufschalten. Hierzu gibst Du die URL https://192.168.199.20:8006 ein. Du erhältst ein ``"Warning``, da ein mögliches Sicherheitsrisiko erkannt wurde. Dies ist auf das selbst ausgestellte SSL-Zertifikat des Proxmox-Host zurückzuführen.
 
-Klicke auf ``Erweitert ...``, es erscheint ein weiterer Hinweis auf das "self-signed certificate". Dieses nimmst Du nun mit dem Button ``Risiko akzeptieren und fortfahren`` an.
+Klicke auf ``Erweitert ...``, es erscheint ein weiterer Hinweis auf das ``self-signed certificate``. Dieses nimmst Du nun mit dem Button ``Risiko akzeptieren und fortfahren`` an.
 
 Es erscheint die Anmeldemaske des Proxmox-Webinterface. Melde Dich als User ``root`` und dem vorher gesetzten Passwort an:
 
@@ -245,7 +245,7 @@ Um Proxmox Updates installieren zu können, müssen in der Shell des Nodes hv01 
 
    Proxmox Shell
 
-Kommentiere zuerst die Paketquellen für die Enterprise-Pakete aus:
+Kommentiere zuerst die Paketquellen für die Enterprise-Pakete aus, die nach der Erstinstallation automatisch eingerichtet wurden:
 
 .. code::
 
@@ -256,7 +256,7 @@ Kommentiere zuerst die Paketquellen für die Enterprise-Pakete aus:
 
    Falls Du die beiden Befehl via copy&paste übernimmst, prüfe, ob in der Eingabekonsole die Hochkommata erhalten bleiben.
 
-Füge dann für Proxmox VE Version 8 eine No-Subscription Packetquelle hinzu.
+Füge dann für Proxmox VE Version 8 eine neu Paketquelle für die No-Subscription-Pakete hinzu.
 
 .. code::
 
@@ -281,7 +281,7 @@ Eine für das ``interne Netz (green, 10.0.0.0/16)`` und eine für das ``externe 
 
 Nach der zuvor beschriebenen Erstinstallation von Proxmox wurde bislang nur eine sogenannte Bridge (vmbr0) eingerichtet. Diese ist mit der ersten Netzwerkschnittstelle (NIC) des Proxmox-Hosts verbunden. Das Ethernet-Kabel der 1. NIC ist mit dem (DSL)-Router verbunden. Verlief der vorherige Befehl zur Aktualisierung von Proxmox erfolgreich, so weißt Du, dass diese Bridge bereits funktioniert und für die weitere Nutzung für das ``externe Netz (red) - vmbr0`` genutzt werden kann.
 
-Für die internen virtuellen Netze ist also eine zweite Bridge zu erstellen, die an die zweite Netzwerkkarte direkt gebunden wird. Dieser wird allerdings keine IP-Adresse zugeordnet. 
+Für die internen virtuellen Netze ist also eine zweite Bridge zu erstellen, die an die zweite Netzwerkkarte direkt gebunden wird. Dieser wird allerdings **keine** IP-Adresse zugeordnet.
 
 Ausgangspunkt: ``Host hv01`` --> ``Network``
 
@@ -294,12 +294,12 @@ Die bisherige Netzwerkkonfiguration stellt sich wie folgt dar:
 
    Proxmox Network
 
-Für die folgende Überprüfung öffnest Du nochmals die Konsole auf dem Hypervisor hv01, falls sie nicht geöffnet sein sollte, wie oben beschrieben und lässt Dir den Inhalt der Konfigurationsdatei anzeigen mittels:
+Für die folgende Überprüfung öffnest Du nochmals die Konsole auf dem Hypervisor hv01, falls sie nicht geöffnet sein sollte - wie zuvor beschrieben - und lässt Dir den Inhalt der Konfigurationsdatei anzeigen mittels:
 
-.. code:: 
+.. code::
 
    cat /etc/network/interfaces
-   
+
 Dort befinden sich bisher folgende Eintragungen:
 
 .. code::
@@ -322,10 +322,9 @@ Dort befinden sich bisher folgende Eintragungen:
 
 .. hint::
 
-   Die Bezeichnungen für die Netzwerkkarten eno1, eno2 können je nach eingesetztem System von der dargestellten Bezeichnung abweichen (z.B. enp1s0, enp7s0 o.a).
+   Die Bezeichnungen für die Netzwerkkarten eno1, eno2 können je nach eingesetztem System von der dargestellten Bezeichnung abweichen (z.B. enp1s0, enp7s0).
 
-Für das weitere Vorgehen ist es hilfreich, die Funktion der Kommentierung der Netzwerkbrücken zu nutzen.
-Diese ist für die vmbr0 bisher noch nicht gesetzt.
+Für das weitere Vorgehen ist es hilfreich, die Funktion der Kommentierung der Netzwerkbrücken zu nutzen. Diese ist für die vmbr0 bisher noch nicht gesetzt.
 
 .. figure:: media/install-on-proxmox_13_network-vmbr0.png
    :align: center
@@ -445,11 +444,10 @@ Während der Proxmox-Installation wurden die Storages „local“ und „local-l
    :align: center
    :scale: 80%
    :alt: Proxmox Konsole Output lsblk default
- 
+
    lsblk Befehl
 
-   
-Es ist zu sehen, dass die Festplatten sda (931.5G) und sdb (111.8G) vorhanden sind. Die erste Festplatte sda ist eine HDD mit 1 TByte Kapazität und soll nun für die VMs genutzt werden. Die zweite Festplatte ist eine SSD, auf der Proxmox selbst installiert wurde. Von dieser zweiten Platte startet dieses System automatisch Proxmox. Zudem findet sich auf `sdb3` ein sog. `LVM`. Bei der Erstinstallation wurde hier automatisch ein Bereich für die VMs eingerichtet.
+Es ist zu sehen, dass die Festplatten sda (931.5G) und sdb (111.8G) vorhanden sind. Die erste Festplatte sda ist eine HDD mit 1 TiB Kapazität und soll nun für die VMs genutzt werden. Die zweite Festplatte ist eine SSD, auf der Proxmox selbst installiert wurde. Von dieser zweiten Platte startet dieses System automatisch Proxmox. Zudem findet sich auf `sdb3` ein sog. `LVM`. Bei der Erstinstallation wurde hier automatisch ein Bereich für die VMs eingerichtet.
 
 Dieser Bereich wird im Folgenden gelöscht und der frei werdende Platz auf `sdb` wird vollständig dem Proxmox-Host zugeordnet. Danach wird die Festplatte `sda` als LVM für die VM eingerichtet.
 
@@ -540,7 +538,7 @@ Die erste Festplatte heißt hier sda und ersetzt die pve-data-Partition, die im 
 
   Für folgende Schritte: Die Bezeichnungen vg-xxx & lv-xxx Namen solltest Du auf Deine Festplattengrößen 
   entsprechend anpassen, die folgenden Grafiken dienen zur Orientierung: `vg-hdd-1000` eignet sich 
-  beispielsweise für ein Volume aus einer HDD mit 1 TByte Kapazität.
+  beispielsweise für ein Volume aus einer HDD mit 1 TiB Kapazität.
 
 1. Datenträger vorher partitionieren, |zb| mit ``fdisk /dev/sda → g → n → w`` (über lsblk den richtigen Datenträgernamen herausfinden; in diesem Fall sda)
 
@@ -583,7 +581,7 @@ Beispiel:
 
    vgcreate
 
-4. mit ``lvcreate -l 99%VG -n lv-<disk>-<size> vg-<disk>-<size>`` nun das logical volume erstellen. Hier ist die virtuelle Festplatte eine HDD mit 1 TByte Speicher, weshalb die Namen im Befehl so angepasst werden: 
+4. mit ``lvcreate -l 99%VG -n lv-<disk>-<size> vg-<disk>-<size>`` nun das logical volume erstellen. Hier ist die virtuelle Festplatte eine HDD mit 1 TiB Speicher, weshalb die Namen im Befehl so angepasst werden: 
 
 Beispiel: 
 
@@ -615,7 +613,7 @@ Beispiel:
 
 *Datenträger grafisch als Storage in Proxmox anbinden*
 
-1. Im Menü `Datacenter > Storage > Add` wählt man „LVM-Thin“ aus. Im ID-Feld wird der Name des virtuellen Datenträgers angegeben. In diesem Fall ist es eine HDD mit 1 TByte Speicherkapazität, weshalb die Bezeichnung vd-hdd-1000 gewählt wird. Unter Volume Group die erstellte virtuelle Gruppe auswählen, welche hier vg-hdd-1000 ist:
+1. Im Menü `Datacenter > Storage > Add` wählt man „LVM-Thin“ aus. Im ID-Feld wird der Name des virtuellen Datenträgers angegeben. In diesem Fall ist es eine HDD mit 1 TiB Speicherkapazität, weshalb die Bezeichnung vd-hdd-1000 gewählt wird. Unter Volume Group die erstellte virtuelle Gruppe auswählen, welche hier vg-hdd-1000 ist:
 
 .. figure:: media/install-on-proxmox_31_add-lvm-thin.png
    :align: center
@@ -636,8 +634,8 @@ Beispiel:
 Vorbereiten des ISO-Speichers
 =============================
 
-Um die v7.1 zu installieren, müssen zwei virtuelle Maschinen angelegt werden. OPNsense und Ubuntu Server 18.04 LTS werden in die VMs installiert.
-Dazu ist es erforderlich, dass Du die ISO-Images für OPNsense und Ubuntu Server 18.04 LTS auf den Proxmox-Hypervisor in den Datenspeicher für ISO-Images lädst.
+Um die v7.2 zu installieren, müssen zwei virtuelle Maschinen angelegt werden. OPNsense und Ubuntu Server LTS werden in die VMs installiert.
+Dazu ist es erforderlich, dass Du die ISO-Images für OPNsense und Ubuntu Server LTS auf den Proxmox-Hypervisor in den Datenspeicher für ISO-Images lädst.
 
 .. figure:: media/proxmox-download-iso_01.png
    :align: center
@@ -708,7 +706,7 @@ befindet sich das heruntergeladene Ubuntu-ISO nun in dem ``ISO Images`` und steh
 OPNsense
 --------
 
-Die zuvor gezeigte Möglichkeit des einfachen Importes mittels den Bordmitteln von Proxmox steht Dir für die OPNsense |reg| leider nicht zur Verfügung, da nur der Download einer bz2-Datei möglich ist. Dir steht der Weg des Downloads auf einen lokalen PC, der Umwandlung des bz2-File in eine iso-Datei und dann der Upload über den Dir im Abschnitt Ubuntu aufgezeigten Ablauf frei. Dabei wählst Du dann nicht ``URL``, sondern ``Upload``.
+Die zuvor gezeigte Möglichkeit des einfachen Imports mit den Bordmitteln von Proxmox steht Dir für die OPNsense |reg| leider nicht zur Verfügung, da nur der Download einer bz2-Datei möglich ist. Dir steht der Weg des Downloads auf einen lokalen PC, der Umwandlung des bz2-File in eine iso-Datei und dann der Upload über den Dir im Abschnitt Ubuntu aufgezeigten Ablauf frei. Dabei wählst Du dann nicht ``URL``, sondern ``Upload``.
 
 Um Dir den Upload zu ersparen, beschreiben wir hier den Weg, um die benötigten Dateien direkt in Deine Proxmox-Maschine zu bringen:
 
@@ -721,7 +719,7 @@ Als Erstes startest Du die Konsole ``xterm.js`` wie dargestellt, falls sie nicht
 
    xterm shell öffnen
 
-Mit ihr hast Du jetzt die Möglichkeit, mit Copy&Paste die folgenden bash-Zeilen direkt zu übernehmen.
+Mit ihr hast Du jetzt die Möglichkeit, mit ``Copy&Paste`` die folgenden bash-Zeilen direkt zu übernehmen.
 
 .. figure:: media/proxmox-shell-xterm_02_open_shell.png
    :align: center

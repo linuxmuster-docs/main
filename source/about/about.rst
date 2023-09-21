@@ -31,39 +31,39 @@ Im Prinzip gibt es vier große Merkmale, die auffallen:
 
 .. tabularcolumns:: |c|c|c|c|
 
-+-----------++-----------+
-| Firma     || Schule    |
-+------+----++------+----+
-| User | PC || User | PC |
-+======+====++======+====+
-|  50  | 50 || 500  | 50 |
-+------+----++------+----+
++-----------+-----------+
+| Firma     | Schule    |
++------+----+------+----+
+| User | PC | User | PC |
++======+====+======+====+
+|  50  | 50 | 500  | 50 |
++------+----+------+----+
 
 2. Die Zusammensetzung von Usern in  Abteilungen
 
 .. tabularcolumns:: |c|c|c|c|
 
-+------------------++---------------+
-|      Firma       ||    Schule     |
-+------+-----------++------+--------+
-| User | Abteilung || User | Gruppe |
-+======+===========++======+========+
-|  A   |     1     ||  A   | Klasse |
-|      |           ||      +--------+
-|      |           ||      | Kurs 1 |
-|      |           ||      +--------+
-|      |           ||      | Kurs 2 |
-|      |           ||      +--------+
-|      |           ||      | AG 1   |
-+------+-----------++------+--------+
-|  B   |     1     ||  B   | Klasse |
-|      |           ||      +--------+
-|      |           ||      | Kurs 3 |
-|      |           ||      +--------+
-|      |           ||      | Kurs 2 |
-|      |           ||      +--------+
-|      |           ||      | AG 1   |
-+------+-----------++------+--------+
++------------------+---------------+
+|      Firma       |    Schule     |
++------+-----------+------+--------+
+| User | Abteilung | User | Gruppe |
++======+===========+======+========+
+|  A   | Marketing |  A   | Klasse |
+|      |           |      +--------+
+|      |           |      | Kurs 1 |
+|      |           |      +--------+
+|      |           |      | Kurs 2 |
+|      |           |      +--------+
+|      |           |      | AG 1   |
++------+-----------+------+--------+
+|  B   | Marketing |  B   | Klasse |
+|      |           |      +--------+
+|      |           |      | Kurs 3 |
+|      |           |      +--------+
+|      |           |      | Kurs 2 |
+|      |           |      +--------+
+|      |           |      | AG 1   |
++------+-----------+------+--------+
 
 3. Die Fluktuation im jährlichen Wechsel
 
@@ -73,7 +73,7 @@ Im Prinzip gibt es vier große Merkmale, die auffallen:
 
 4. Der Umgang mit den Arbeitsmitteln
 
-   Schüler:innen teilen sich ein und dasselbe Arbeitsmittel im schulischen Alltag. Dabei ist es für die nächste Unterrichtseinheit unablässig, dass zum Start immer eine einheitliche Umgebung auf den Rechnern vorhanden ist. Die zeitliche Taktung zwischen den Wechseln kann sehr kurz sein.
+   Schüler:innen teilen sich ein und dasselbe Arbeitsmittel im schulischen Alltag. Dabei ist es für die nächste Unterrichtseinheit entscheidend, dass zum Start immer eine einheitliche Umgebung auf den Rechnern vorhanden ist. Die zeitliche Taktung zwischen den Wechseln kann sehr kurz sein.
 
    Dies ist in einer Firma so nicht gegeben. Wenn ein User seinen Rechner verlässt, findet er ihn der Regel immer genauso wieder.
 
@@ -271,7 +271,7 @@ Alle bisher vorgestellten Basisdienste werden mithilfe des Setups konfiguriert, 
 
  Für weitergehende Informationen siehe die Docker-Homepage: https://www.docker.com
 
-:Extra: Ein Porfolio an unterschiedlichen externen Diensten lässt sich an die linuxmuster.net Lösung anbinden, sodass eine einheitliche Authentifizierung erfolgt. 
+:Extra: Ein Porfolio an unterschiedlichen externen Diensten lässt sich an die linuxmuster.net Lösung anbinden, sodass eine einheitliche Authentifizierung erfolgt.
 
    .. image::    media/structure_of_version_7_extra.svg
       :name:     structure-extra-server-and-services
