@@ -1071,7 +1071,7 @@ Die nächsten beiden Einstellungen musst Du sowohl für die Firewall als auch f�
 Boot-Optionen
 +++++++++++++
 
-Um bei der from Scratch Installation von CD zu starten, wählst Du die VM aus, klickst auf ``Options`` und klickst oben auf den Menüeintrag ``Edit``.
+Um bei der from Scratch Installation von CD zu starten, wählst Du die jeweilige VM (z.B. 100 (lmn7-opnsense) aus, klickst auf ``Options`` und klickst oben auf den Menüeintrag ``Edit``.
 
 .. figure:: media/proxmox-vm-boot-order-01.png
    :align: center
@@ -1104,7 +1104,11 @@ Nachher:
 Hinzufügen einer seriellen Schnittstelle
 ++++++++++++++++++++++++++++++++++++++++
 
-Damit Dir `Copy-and-paste` in der Oberfläche von Proxmox bei der Auswahl unter ``Console`` zur Verfügung steht, musst Du die Nutzung von `xterm.js` ermöglichen. Als vorbereitende Maßnahmen musst Du eine serielle Schnittstelle für die jeweilige VM aktivieren.
+Damit Dir `copy-and-paste` in der Oberfläche von Proxmox bei der Auswahl unter ``>_ Console`` zur Verfügung steht, musst Du die Nutzung von `xterm.js` ermöglichen. Als vorbereitende Maßnahme musst Du eine serielle Schnittstelle für die jeweilige VM aktivieren.
+
+Wähle zuerst die gewünschte VM aus (z.B. `100 (lmn72-opnsense)`, wähle danach den Eintrag ``Hardware`` für die VM aus und klicke dann oben rechts auf das Icon ``>_ Console``.
+
+Nachstehende Abb. zeigt den Zustand vor der Aktivierung.
 
 .. figure:: media/xterm-opnsense_001.png
    :align: center
@@ -1113,16 +1117,16 @@ Damit Dir `Copy-and-paste` in der Oberfläche von Proxmox bei der Auswahl unter 
 
    Zustand vor der Aktivierung
 
-Das obige Bildschirmfoto zeigt den Zustand vor der Aktivierung.
+Wähle die die gewünschte VM aus klicke dann --> ``lmn72-opnsense`` --> ``Hardware`` --> ``Serial Port``.
 
 .. figure:: media/xterm-opnsense_002.png
    :align: center
    :scale: 80%
    :alt: Description of how to open the Add menu
 
-   Zustand nach der Aktivierung
+   Serial Port hinzufügen
 
-Gehe auf ``hv01`` --> ``lmn71-opnsense`` --> ``Hardware`` --> ``Serial Port``
+Lege einen Seriellen Port mit der Bezeichnung ``0`` an. Klicke danach auf ``Add``.
 
 .. figure:: media/xterm-opnsense_003.png
    :align: center
@@ -1131,7 +1135,7 @@ Gehe auf ``hv01`` --> ``lmn71-opnsense`` --> ``Hardware`` --> ``Serial Port``
 
    Serielle Schnittstelle 0 hinzufügen
 
-Lege einen Seriellen Port mit der Bezeichnung ``0`` an.
+Danach siehst Du den seriellen Port in der Hardware-Übersicht der VM.Klickst Du oben rechts auf ``>_ Console``. Der der gezeigte Menüpunkt ``xterm.js`` sollte nun nicht mehr ausgegraut sein.
 
 .. figure:: media/xterm-opnsense_004.png
    :align: center
@@ -1139,8 +1143,6 @@ Lege einen Seriellen Port mit der Bezeichnung ``0`` an.
    :alt: Console menu after activation of xterm.js
 
    Zustand nach der Aktivierung
-
-Klicke auf ``Add``, anschließend sollte der gezeigte Menüpunkt nicht mehr ausgegraut sein.
 
 Kontrolliere nochmals alle Einstellungen der neu angelegten VM.
 
