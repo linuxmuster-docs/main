@@ -6,8 +6,7 @@
 Anlegen und Installieren des Servers
 ====================================
 
-.. sectionauthor:: `@rettich <https://ask.linuxmuster.net/u/rettich>`_,
-                   `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
 
 .. note:: 
@@ -18,8 +17,9 @@ Anlegen und Installieren des Servers
 
    Willst Du in einer VM installieren, so must Du für die neue VM folgende Mindesteinstellungen angeben:
      
-     - Template - Ubuntu Bionic Beaver 18.04, installation from ISO library, 
-     - Boot-Mode - BIOS Boot / MBR, 
+     - Installation von Local/ISO, 
+     - Gast OS: Linux, 6.X - 2.6 Kernel
+     - BIOS: Boot / MBR / SeaBIOS, 
      - 2 vCPU, 
      - 3 GiB RAM, 
      - storage -> hdd1: 25 GiB -> hdd2: 100 GiB, 
@@ -27,8 +27,7 @@ Anlegen und Installieren des Servers
    
    Achte darauf, dass vor dem Start der VM beide Festplatten der VM zugewiesen wurden.
 
-
-   Bei der Einrichtung des Servers musst Du nur einen Server mit 2 HDDs haben und Ubuntu 18.04 auf der ersten HDD installieren. Die zweite HDD bleibt frei. Auf dieser 2. HDD richtest Du - wie nachstehend beschrieben -  ein LVM ein.
+   Bei der Einrichtung des Servers musst Du nur einen Server mit 2 HDDs haben und Ubuntu auf der ersten HDD installieren. Die zweite HDD bleibt frei. Auf dieser 2. HDD richtest Du - wie nachstehend beschrieben -  ein LVM ein.
 
 Erster Start des Servers vom Installationsmedium
 ================================================
@@ -36,9 +35,14 @@ Erster Start des Servers vom Installationsmedium
 Sprachauswahl
 -------------
 
-Starte den Server via Ubuntu 18.04 Server ISO-Image (USB-Stick oder CD-ROM). Es erscheint das erste Installationsfenster mit der Abfrage zur gewünschten Sprache.
+Starte den Server via Ubuntu 22.04 Server ISO-Image (USB-Stick oder CD-ROM). Es erscheint das erste Installationsfenster mit der Abfrage zur gewünschten Sprache.
 
 .. figure:: media/basis_server_001.png
+   :align: center
+   :scale: 80%
+   :alt: Choose your language
+
+   Wähle Deine bevorzugte Sprache
 
 Wähle Deine bevorzugte Sprache.
 
@@ -48,8 +52,13 @@ Tastaturlayout
 Danach wähle Dein Tastaturlayout.
 
 .. figure:: media/basis_server_002.png
+   :align: center
+   :scale: 80%
+   :alt: choose keyboard layout
 
-Wähle das Tastaturlayout Deutsch und bestätige dies mit ``Erledigt``.
+   Wähle Dein Tastaturlayout
+
+Wähle das Tastaturlayout ``Deutsch`` und bestätige dies mit ``Erledigt``.
 
 .. tip:: Wenn Du Dir nicht sicher bist, vor welcher Tastatur Du gerade sitzt:
 
@@ -59,6 +68,19 @@ Wähle das Tastaturlayout Deutsch und bestätige dies mit ``Erledigt``.
 
    Da sollte zumindest für eine deutsche Tastatur das richtige Layout finden.
    Für andere einfach den Abfragen folgen
+   
+Installationsart wählen
+-----------------------
+
+Wähle die Art der Installation für den Ubuntu Server aus. Es reicht die minimale Installation.
+
+.. figure:: media/basis_server_002a.png
+   :align: center
+   :scale: 80%
+   :alt: typr of installation
+
+   Installationsart wählen
+
 
 Netzwerk
 --------
@@ -66,17 +88,31 @@ Netzwerk
 Konfiguriere danach Deine Netzwerkkarte.
 
 .. figure:: media/basis_server_003.png
+   :align: center
+   :scale: 80%
+   :alt: configure your nic
 
-In der Voreinstellung ist die Netzwerkkarte auf DHCP eingestellt. Das klappt natürlich nicht, da der DHCP-Service der Firewall deaktiviert wurde. 
-Du musst also die Konfiguration von Hand einstellen.
+   Konfiguriere Deine Netzwerkkarte
+
+In der Voreinstellung ist die Netzwerkkarte auf DHCP eingestellt. Das klappt natürlich nicht, da der DHCP-Service der Firewall deaktiviert wurde. Du musst also die Konfiguration manuell vornehmen.
 
 Gehe dazu auf die Netzwerkkarte und wähle ``Edit IPv4``.
 
 .. figure:: media/basis_server_004.png
+   :align: center
+   :scale: 80%
+   :alt: change IPv4 configuration
+
+   Ändere die IPv4 Konfiguration
 
 Wähle ``Manual`` aus.
 
 .. figure:: media/basis_server_005.png
+   :align: center
+   :scale: 80%
+   :alt: insert IPv4 configuration 
+
+   Trage die IPv4 Einstellungen ein
 
 Gib die Netzwerkkonfiguration, wie im oberen Bild ein beziehungsweise |...|
 
@@ -89,21 +125,41 @@ Gib die Netzwerkkonfiguration, wie im oberen Bild ein beziehungsweise |...|
    Eine gute Wahl ist beispielsweise ``linuxmuster.lan``. Beim späteren Setup von linuxmuster.net wird diese ggf. für alle Server-Dienste angepasst.
 
 .. figure:: media/basis_server_006.png
+   :align: center
+   :scale: 80%
+   :alt: confirm setting
+
+   Bestätige Deine Einstellungen
 
 Mit ``Èrledigt`` geht es weiter.
 
 .. figure:: media/basis_server_007.png
+   :align: center
+   :scale: 80%
+   :alt: confirm empty proxy
+
+   Bestätige die Proxy-Einstellungen
 
 Lass die Proxy-Adresszeile leer. Auch diese Anfrage verlässt Du mit ``Erledigt``.
 
 .. figure:: media/basis_server_008.png
+   :align: center
+   :scale: 80%
+   :alt: confirm mirror
+
+   Bestätige den Ubuntu Mirror Server
 
 Die Mirror-Adresse übernimmst Du ebenfalls mit ``Erledigt``.
 
-.. figure:: media/basis_server_009_new-installer.png
-
 Aktualisierung des Installers
 -----------------------------
+
+.. figure:: media/basis_server_009_new-installer.png
+   :align: center
+   :scale: 80%
+   :alt: no update for installer
+
+   Installer nicht aktualisieren
 
 Bei der angebotene Aktualisierung wählst Du ``Ohne Akualisierung fortfahren``.
 
@@ -129,26 +185,51 @@ Speicher des Systems
 ^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: media/basis_server_010_custom-storage-layout.png
+   :align: center
+   :scale: 80%
+   :alt: choose your custom storage layout
+
+   Eigenes Festplattenlayout wählen
 
 Wähle nun zur Einrichtung der Festplatten ``Custom Storage Layout`` aus, wie in obigen Bild dargestellt.
 
 Es werden Dir dann die verfügbaren Geräte angezeigt. 
 
 .. figure:: media/basis_server_011_custom-storage-layout-create-partition-table.png
+   :align: center
+   :scale: 80%
+   :alt: available devices
+
+   Anzeige der verfügbaren Geräte
 
 Wähle die erste Festplatte bzw. die erste Partition aus, auf der Du das System des Servers unterbringen möchtest. Es wird ein Kontextmenü angezeigt, bei dem Du mit ``Add GPT Partition`` diese erstellen musst. 
 
 .. figure:: media/basis_server_012_custom-storage-layout-create-partition-table2.png
+   :align: center
+   :scale: 80%
+   :alt: add gpt partition
+
+   Füge eine GPT Partition hinzu
 
 Wähle den gesamten Festplattenplatz (einfach das Eingabefeld leer lassen) und formatiere diesen mit dem ext4-Dateiformat und weise diese dem Mount Point ``/`` zu.
 
 .. figure:: media/basis_server_013_custom-storage-layout-create-partition-table3.png
+   :align: center
+   :scale: 80%
+   :alt: choose partition size
+
+   Lege die Partitionsgröße fest
 
 Gehe auf ``Erstellen``.
 
 Danach gelangst Du zu nachstehendem Bildschirm.
 
 .. figure:: media/basis_server_014_custom-storage-layout-create-partition-table-lvm-hdb-5.png
+   :align: center
+   :scale: 80%
+   :alt: storage configuration overview
+
+   Speicherplatzkonfiguration
 
 Speicherplatz für das Testsystem
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -166,7 +247,7 @@ Für das Setup werden noch weitere Partitionen benötigt. Dafür haben wir uns f
    default-school /dev/sg_srv/default-school /srv/samba/schools/default-school 40G [#f1]_
    ============== ========================== ================================= ==========
 
-.. [#f1] Sollte Deine Festplatte größer sein als die vorgeschlagene Mindestgröße so wird für diese Partition der maximal übrige freie Platz mit verwendet.
+.. [#f1] Sollte Deine Festplatte größer sein als die vorgeschlagene Mindestgröße, so wird für diese Partition der maximal übrige freie Platz verwendet.
 
 .. attention::
 
@@ -175,6 +256,11 @@ Für das Setup werden noch weitere Partitionen benötigt. Dafür haben wir uns f
 Zum Abschluss werden Dir die Partitionsierungseinstellungen gemäß Deiner Eingaben angezeigt.
 
 .. figure:: media/basis_server_016_custom-storage-layout-create-partition-table-overview.png
+   :align: center
+   :scale: 80%
+   :alt: confirm storage configuration
+
+   Speicherplatzkonfiguration übernehmen
 
 Wenn Du es für Deine Installation nutzen willst, dann kannst Du die nächsten Punkte überspringen und mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
 
@@ -206,22 +292,42 @@ Einrichtung eines LVM auf der 2. HDD nach Deinen Vorgaben (optional)
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. figure:: media/basis_server_016_lvm_001.png
+   :align: center
+   :scale: 80%
+   :alt: create lvm on second storage
+
+   Lege ein LVM an
 
 Wähle den Eintrag ``Datenträgergruppe (LVM) anlegen`` aus.
 
 .. figure:: media/basis_server_016_lvm_002.png
+   :align: center
+   :scale: 80%
+   :alt: create an lvm volume
+
+   LVM-Volume erstellen
 
 Hier gibst Du einen Namen für die LVM Volume Group an (z.B. sg_srv) und wählst das Gerät aus wo es erstellt werden soll. ``Erstellen`` schließt dieses Fenster.
 
 #####
 
-Bei ``VERFÜGBARE GERÄTE`` gilt es nun in die angelegte "LVM volume group" die benötigten "Logical Volume" anzulegen.
+Bei ``VERFÜGBARE GERÄTE`` gilt es nun in die angelegte ``LVM volume group`` die benötigten ``Logical Volume`` anzulegen.
 
 .. figure:: media/basis_server_016_lvm_003.png
+   :align: center
+   :scale: 80%
+   :alt: create logical volume
+
+   Lege ein Logical Volume an
 
 Bei ``VERFÜGBARE GERÄTE`` findest Du die von Dir zuvor angelegte "LVM volume group". Diese markierst Du , um dann ``Create Logical Volume`` auszuwählen.
 
 .. figure:: media/basis_server_016_lvm_004.png
+   :align: center
+   :scale: 80%
+   :alt: define size of logical volume
+
+   Lege die Größe des Logical Volume fest
 
 Die benötigten Daten entnimmst Du aus der obigen Tabelle.
 Die Zuordnung ist folgende:
@@ -243,30 +349,65 @@ Die letzten zwei Schritte wiederholst Du für die anderen Positionen der Tabelle
 |...| linbo:
 
 .. figure:: media/basis_server_016_lvm_005.png
+   :align: center
+   :scale: 80%
+   :alt: volume for linbo
+
+   Volume für LINBO festlegen
 
 .. figure:: media/basis_server_016_lvm_006.png
+   :align: center
+   :scale: 80%
+   :alt: define size for linbo volume
+
+   Größe für LINBO festlegen
 
 #####
 
 |...| global:
 
 .. figure:: media/basis_server_016_lvm_007.png
+   :align: center
+   :scale: 80%
+   :alt: define volume for global
+
+   Volume für global festlegen
 
 .. figure:: media/basis_server_016_lvm_008.png
+   :align: center
+   :scale: 80%
+   :alt: define size for volume global
+
+   Größe für global festlegen
 
 #####
 
 |...| default-school:
 
 .. figure:: media/basis_server_016_lvm_009.png
+   :align: center
+   :scale: 80%
+   :alt: define volume vor default-school
+
+   Volume für default-school definieren
 
 .. figure:: media/basis_server_016_lvm_010.png
+   :align: center
+   :scale: 80%
+   :alt: define size for volume default-school
+
+   Größe für das Volume default-school festlegen
 
 ######
 
 Zum Abschluss werden Dir die Partitionsierungseinstellungen gemäß Deiner Eingaben angezeigt.
 
 .. figure:: media/basis_server_016_lvm_011.png
+   :align: center
+   :scale: 80%
+   :alt: overview partition settings
+
+   Überblick über die Partitionseinstellungen
 
 Wenn Du es für Deine Installation nutzen willst, dann kanst Du mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
 
@@ -284,17 +425,32 @@ Speicherplatzkonfiguration übernehmen
 
 Stimmen diese mit den gewünschten überein, so wähle ``Erledigt`` wie in dem zuletzt gesehen Bild aus.
 
-Danach erhälst Du die Rückfrage, ob die Installation fortgesetzt werden soll und das die Daten auf der Festplatte dabei gelöscht werden.
+Danach erhälst Du die Rückfrage, ob die Installation fortgesetzt werden soll und die Daten auf der Festplatte hierbei gelöscht werden.
 
 .. figure:: media/basis_server_016_d.png
+   :align: center
+   :scale: 80%
+   :alt: confirm partition settings
+
+   Bestätige die Partitionseinstellungen
 
 Bestätige dies mit ``Fortfahren``.
 
 .. figure:: media/basis_server_017.png
+   :align: center
+   :scale: 80%
+   :alt: profile setup
+
+   Lege ein Benutzerprofil an
 
 Nenne den Server ``server``. Der Benutzername (linuxadmin) und das Passwort (Muster!) sind frei wählbar - wie in der Abb. dargestellt.
 
 .. figure:: media/basis_server_018.png
+   :align: center
+   :scale: 80%
+   :alt: activate ssh server
+
+   Aktiviere den SSH-Server
 
 Solltest Du eine Möglichkeit für einen Fernzugang zu dem Server wünschen, aktiviere ``OpenSSH-Server installieren``. 
 
@@ -304,6 +460,11 @@ Solltest Du eine Möglichkeit für einen Fernzugang zu dem Server wünschen, akt
    https://wiki.ubuntuusers.de/SSH/#Publickey-Authentifizierung (externer Link)
 
 .. figure:: media/basis_server_019.png
+   :align: center
+   :scale: 80%
+   :alt: deactivate server snaps
+
+   Deaktiviere alle Server Snaps
 
 Installiere keine weiteren optionalen Pakete.
 
@@ -312,6 +473,11 @@ Bestätige den Start des Installationsvorganges mit ``Erledigt``.
 Zum Abschluß der Installation wird automatisch versucht, Updates zu installieren |...|
 
 .. figure:: media/basis_server_020.png
+   :align: center
+   :scale: 80%
+   :alt: complete Installation
+
+   Schließe die Installation ab
 
 |...| und danach gilt es den Server neu zu starten.
 
@@ -322,14 +488,29 @@ Zum Abschluß der Installation wird automatisch versucht, Updates zu installiere
 Wann die Installation abgeschlossen ist, erkennst Du daran das die Anzeige am unteren Bildschirmrand von
 
 .. figure:: media/basis_server_022.png
+   :align: center
+   :scale: 80%
+   :alt: updating server
+
+   Server-Aktualisierungen
 
 auf
 
 .. figure:: media/basis_server_023.png
+   :align: center
+   :scale: 80%
+   :alt: finished updates
+
+   ... abgeschlosse
 
 gewechselt ist.
 
 .. figure:: media/basis_server_021.png
+   :align: center
+   :scale: 80%
+   :alt: reboot server
+
+   Starte den Server neu
 
 Den Neustart veranlasst Du mit ``Jetzt neustarten``, wenn es Dir angeboten wird.
 
@@ -365,6 +546,11 @@ Wähle jedoch oben rechts ``>_ Console -> xterm.js``.
 Es öffnet sich das Terminal-Fenster der VM und es erscheint folgender Hinweis:
 
 .. figure:: media/basis_server_023c.png
+   :align: center
+   :scale: 80%
+   :alt: starting serial terminal
+
+   Starte die serielle Schnittstelle
 
 Nach einem ``Enter`` wirst Du zur Eingabe Deines Passwortes aufgefordert.
 
@@ -405,7 +591,7 @@ Vor Deiner Ersetzung:
 
 Nach der Änderung:
  
- .. code::
+.. code::
  
    /dev/vg0/var              /var ext4 defaults 0 1
    /dev/vg0/linbo            /srv/linbo ext4 defaults 0 1
@@ -430,6 +616,11 @@ Betrifft Dich nur, wenn Du die default-Einstellungen verwendest.
 Aus dessen Ausgabe kannst Du Namen für die weitere Verwendung ermitteln. Hier wäre er beispielhaft ``/dev/sdb/``
 
 .. figure:: media/basis_server_024.png
+   :align: center
+   :scale: 80%
+   :alt: output of lsblk command
+
+   Ausgabe des lsblk - Befehls
 
 .. note:: Notiere Dir HDD- und Partition-Bezeichnungen für die spätere Verwendung.
 
@@ -479,12 +670,22 @@ Nach dem erneuten Einloggen rufst Du folgende Zeile an der Konsole des Servers a
 Da es die erste Kontaktaufnahme zwischen dem Server und der Firewall ist,
 
 .. figure:: media/basis_server_025.png
+   :align: center
+   :scale: 80%
+   :alt: ecdsa key opnsense
+
+   Akzeptiere den ECDSA Schlüssel der OPNsense
 
 ist es notwendig, dass Du den Key akzeptierst.
 
 Anschließend sollte der Log-in nach der Eingabe des Passwortes ``Muster!`` erfolgreich sein.
 
 .. figure:: media/basis_server_026.png
+   :align: center
+   :scale: 80%
+   :alt: opnsense login
+
+   OPNsense Login Bildschirm
 
 
 Mit ``0) Logout`` beendest Du die Verbindung.

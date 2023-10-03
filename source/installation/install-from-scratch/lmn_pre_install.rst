@@ -6,8 +6,7 @@
 Server auf lmn7.2 vorbereiten
 =============================
 
-.. sectionauthor:: `@rettich <https://ask.linuxmuster.net/u/rettich>`_,
-                   `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
                   
 
