@@ -6,9 +6,9 @@
 Anlegen und Installieren der Firewall
 =====================================
 
-.. sectionauthor:: `@rettich <https://ask.linuxmuster.net/u/rettich>`_,
-                   `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
-                   `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
+                   `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_,
+                   `@rettich <https://ask.linuxmuster.net/u/rettich>`_,
 
 .. note:: 
 
@@ -21,7 +21,9 @@ Lade Dir die ISO-Datei der OPNsense |reg| von der Seite https://opnsense.org/dow
 
 .. hint::
 
-   Die zuletzt freigegeben OPNsense Version für das Setup von linuxmuster.net v7.2 ist die Version 23.7. wget https://mirror.informatik.hs-fulda.de/opnsense/releases/23.7/OPNsense-23.7-dvd-amd64.iso.bz2
+   Die zuletzt freigegeben OPNsense Version für das Setup von linuxmuster.net v7.2 ist die Version 23.7. 
+   
+   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/23.7/OPNsense-23.7-dvd-amd64.iso.bz2
 
 Nutze als Architektur ``amd64`` und als "image type" ``dvd`` und einen Mirror, der in Deiner Nähe ist.
 Du erhältst dann ein mit bz2 komprimiertes ISO-Image. Entpacke die heruntergeladene Datei. Siehe hierzu auch :ref:`install-on-proxmox-label` - dort Kapitel `Vorbereiten des ISO-Speichers -> OPNsense |reg|`.
@@ -30,7 +32,7 @@ Unter Linux ist folgender Befehl anzugeben:
 
 .. code::
 
-   bunzip2 OPNsense-22.7-OpenSSL-dvd-amd64.iso.bz2
+   bunzip2 OPNsense-23.7-OpenSSL-dvd-amd64.iso.bz2
 
 
 Schreibe die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren USB-Stick an. In einer Virtualisierungsumgebung lädst Du die ISO-Datei auf den ISO-Speicher.
@@ -46,7 +48,7 @@ Schreibe die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren
    - storage 10 GiB
    - 2 NIC mit Zuordnung zu vSwitch red, green.
   
-Für den produktiven Betrieb müssen diese Hardware-Einstellungen deutlich angehoben werden (z.B.: 4 vCPU, 8 HiB RAM, 50 GiB SSD, 3 NIC).
+Für den produktiven Betrieb müssen diese Hardware-Einstellungen **deutlich** angehoben werden (z.B.: 4 vCPU, 8 GiB RAM, 50 GiB SSD, 3 NIC).
   
 Erster Start der Firewall
 =========================
