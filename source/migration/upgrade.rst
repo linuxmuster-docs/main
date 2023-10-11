@@ -19,7 +19,7 @@ Führe dazu in der Konsole folgende Befehle aus:
 2. Aktualisiere danach das Betriebssystem auf dem Server von Ubuntu 18.04 LTS auf die Version Ubuntu 20.04 LTS. Nutze dazu den Befehl ``do-release-upgrade``.
 
 
-Gebe dazu auf der Server-Konsole ein:
+Gib dazu auf der Server-Konsole ein:
 
 .. code::
 
@@ -29,13 +29,15 @@ Gebe dazu auf der Server-Konsole ein:
 Nach der Überprüfung siehst Du, wieviele Pakete aktualisiert, neu installiert und gelöscht werden.
 Bestätige den Vorgang zur Durchführung des Upgrades mit ``j``.
 
-Während des Upgrades erhälst Du mehrere Nachfragen. Für einige Dienste (z.B. samba, ssh) wirst Du gefragt, ob die Konfigurationsdatei aktualisiert werden soll.
+Während des Upgrades erhältst Du mehrere Nachfragen. 
+Für einige Dienste (z.B. samba, ssh) wirst Du gefragt, ob die Konfigurationsdatei aktualisiert werden soll.
 
 .. attention::
 
    Die Nachfrage zur Aktualisierung der Konfigurationsdateien für diese Dienste musst Du unbedingt mit ``N`` beantworten.
+   Beispiele sind: ``/etc/security/limits.conf, /etc/ntp.conf, /etc/system/system.conf``
 
-Zudem müssen nach der Installation einiger neuerer Bibliotheken einige Dienste neu gestartet werden. Diese werden Dir in einer Liste angezeigt. Bestätige deren Neustart mit ``OK``.
+Zudem müssen während oder nach der Installation einiger neuerer Bibliotheken einige Dienste neu gestartet werden. Diese werden Dir in einer Liste angezeigt. Bestätige deren Neustart mit ``OK``.
 
 Danach wirst Du gefragt, ob Du die lokale Version bestimmter Dienste beibehalten möchtest. Beantworte dies jeweils mit ``Ja/OK``.
 
