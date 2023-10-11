@@ -35,7 +35,7 @@ Für einige Dienste (z.B. samba, ssh) wirst Du gefragt, ob die Konfigurationsdat
 .. attention::
 
    Die Nachfrage zur Aktualisierung der Konfigurationsdateien für diese Dienste musst Du unbedingt mit ``N`` beantworten.
-   Beispiele sind: ``/etc/security/limits.conf, /etc/ntp.conf, /etc/system/system.conf``
+   Beispiele (keine Garantie auf Vollständigkeite) sind: ``/etc/security/limits.conf``, ``/etc/ntp.conf``, ``/etc/system/system.conf``, ``/etc/samba/smb.conf``, ``/etc/sshd/sshd_config``
 
 Zudem müssen während oder nach der Installation einiger neuerer Bibliotheken einige Dienste neu gestartet werden. Diese werden Dir in einer Liste angezeigt. Bestätige deren Neustart mit ``OK``.
 
