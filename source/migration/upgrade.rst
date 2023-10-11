@@ -53,7 +53,8 @@ Der weitere Ablauf ist identisch zu den unter 2.) beschriebenen Schritten.
 
 .. code::
 
-   dpkg-reconfigure sophomorix-samba linuxmuster-base7 linuxmuster-webui7
+   linuxadmin@server:~$ sudo -i
+   root@server:~$ dpkg-reconfigure sophomorix-samba linuxmuster-base7 linuxmuster-webui7
 
 5. Aktiviere das lmn71-Repository wieder, indem Du die Datei ``/etc/apt/sources.list.d/lmn71.list``
 editierst und dort das während des Upgrades automatisch eingefügte Kommentarzeichen ``#`` entfernst.
@@ -66,26 +67,31 @@ Importiere zuerst die Schlüsseldatei:
 
 .. code::
 
-   sudo wget -qO- "https://deb.linuxmuster.net/pub.gpg" | gpg --dearmour -o /usr/share/keyrings/linuxmuster.net.gpg
+   root@server:~$ wget -qO- "https://deb.linuxmuster.net/pub.gpg" | gpg --dearmour -o /usr/share/keyrings/linuxmuster.net.gpg
 
 Füge danach das Linuxmuster 7.2 Testing-Repro hinzu:
 
 .. code::
 
-   sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/linuxmuster.net.gpg] https://deb.linuxmuster.net/ lmn72 main" > /etc/apt/sources.list.d/lmn72.list'
+   root@server:~$ sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/linuxmuster.net.gpg] https://deb.linuxmuster.net/ lmn72 main" > /etc/apt/sources.list.d/lmn72.list'
 
 Aktualisiere nun die Paketquellen:
 
 .. code::
 
-   sudo apt update
+   root@server:~$ apt update
 
 7. Aktualisiere die installierten Pakete und führe anschließend ein Reboot durch:
 
+.. attention::
+
+   Die Nachfrage zur Aktualisierung der Konfigurationsdateien für Dienste musst du in diesem Schritt (im Gegensatz zur Systemaktualisierung in Schritt 2 und 3) mit ``I`` oder ``Y`` akzeptieren.
+   Beispiele (keine Garantie auf Vollständigkeit) sind: ``/etc/default/linbo-torrent``
+
 .. code:: 
 
-   sudo apt dist-upgrade
-   sudo reboot
+   root@server:~$  apt dist-upgrade
+   root@server:~$  reboot
 
 8. Nach dem Neustart führe den Import der Geräte erneut aus:
 
