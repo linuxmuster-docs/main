@@ -13,11 +13,14 @@ Melde Dich als Benutzer ``root`` mit dem Passwort ``Muster!`` auf dem Server an.
 
 Für diese Anmeldung kannst Du die xterm.js Konsole von Proxmox verwenden, wenn Du unserer Anleitung gefolgt bist. Alternativ kannst Du Dich via ssh von einem anderen Rechner mit dem Server verbinden, wenn er sich im gleichen Netzwerksegment befindet.
 
-Im Terminal wirst Du mit dem Erstbildschirm von linuxmuster.net v7.1 begrüßt.
+Im Terminal wirst Du mit dem Erstbildschirm von linuxmuster.net v7.2 begrüßt.
 
 .. figure:: media/newsetup/lmn-setup-terminal-01.png
    :align: center
    :alt: Terminal after login
+   :width: 80%
+   
+   Welcome to lmn.net
 
 Das Setup wird über den Befehl ``linuxmuster-setup`` gestartet. 
 
@@ -70,6 +73,9 @@ Diese Datei musst Du noch mit Deinen Angaben füllen. Hier beispielhaft mit dem 
 .. figure:: media/newsetup/lmn-setup-terminal-02a.png
    :align: center
    :alt: Terminal Setup: Editor nano config.txt
+   :width: 80%
+   
+   Editor Nano: config.txt
 
 Hast Du diese Textdatei mit deinen Einträgen gespeichert ``[Strg]+[X]`` --> ``[Y]`` --> ``[Enter]``, kannst Du das Setup mit folgendem Befehl aufrufen:
 
@@ -84,12 +90,18 @@ Klicke jeweils auf ``< OK >``, um zum nächsten Schritt zu gelangen.
 .. figure:: media/newsetup/lmn-setup-terminal-02.png
    :align: center
    :alt: Terminal Setup: Parameter 1
+   :width: 80%
+   
+   Terminal Setup Hostname
 
 Danach gelangst Du zur Angabe der sogenannten Domain. Beachte bei dessen Festlegung u.g. Hinweise zum FQDN.
 
 .. figure:: media/newsetup/lmn-setup-terminal-03.png
    :align: center
    :alt: Terminal Setup: Parameter 2
+   :width: 80%
+   
+   Terminal Setup FQDN
 
 .. hint::
   Der ``Domain name`` spielt eine besondere Rolle für das Setup.
@@ -128,14 +140,20 @@ Es erscheint der IP-Adressbereich, der für die Rechneraufnahme mit Linbo reserv
 .. figure:: media/newsetup/lmn-setup-terminal-04.png
    :align: center
    :alt: Terminal Setup: Parameter 3
+   :width: 80%
+   
+   Terminal Setup: DHCP Bereich festlegen
 
-Wechsele mit ``< OK >`` zur nächsten EIngabemaske.
+Wechsele mit ``< OK >`` zur nächsten Eingabemaske.
 
 Hier setzt Du ein neues Administrations-Kennwort. Dieses wird zugleich das neue Kennwort aller administrativens Benutzer, so auch vom ``gobal-admin`` in der Schulkonsole.
 
 .. figure:: media/newsetup/lmn-setup-terminal-05.png
    :align: center
    :alt: Terminal Setup: Parameter 4
+   :width: 80%
+   
+   Terminal Setup: Global-admin und root Kennwort festelegen
 
 .. hint:: Passwortbeschränkungen: Valid characters are: a-z A-Z 0-9 ?!§+-@#%&*( )[ ]{ }
 
@@ -159,6 +177,9 @@ Gebe das Kennwort ein und klicke auf ``< OK >``.
 .. figure:: media/newsetup/lmn-setup-terminal-06.png
    :align: center
    :alt: Terminal Setup: Parameter 5
+   :width: 80%
+   
+   Terminal Setup: Kennwort bestätigen
 
 Bestätige dieses Kennwort und klicke auf ``< OK >``.
 
@@ -167,12 +188,18 @@ Danach wird das Setup gestartet. Es dauert einige Zeit, bis alle erforderlichen 
 .. figure:: media/newsetup/lmn-setup-terminal-07.png
    :align: center
    :alt: Terminal Setup: Services
+   :width: 80%
+   
+   Terminal Setup: Fortschritt des Setups
 
 Nach Abschluss des Setups siehst Du im Terminal, dass das Setup beendet wurde.
 
 .. figure:: media/newsetup/lmn-setup-terminal-08.png
    :align: center
    :alt: Terminal Setup finished
+   :width: 80%
+   
+   Terminal Setup: Abschluss des Setups
 
 Danach muss noch der Dienst für die WebUI/Schulkonsole oder der Server neu gestartet werden.
 
@@ -188,11 +215,11 @@ alternativ
 
 Das erste Verfahren hat den Vorteil, dass Du nicht die Zeit des Neustarts abwarten, Dich erneut verbinden und anmelden musst.
 
-Nach abgeschlossenem Set-up und dem Neustart des Dienstes ``linuxmuster-webui`` bzw. eventuellen Neustart des Servers, könntest Du Dich mit einem PC via Browser an der Schulkonsole von linuxmuster.net v7.1 anmelden.  
+Nach abgeschlossenem Setup und dem Neustart des Dienstes ``linuxmuster-webui`` bzw. eventuellen Neustart des Servers, kannst Du Dich mit einem PC via Browser an der Schulkonsole von linuxmuster.net v7.2 anmelden.  
 
 Nachdem sich Dein Client eine IP-Adresse via DHCP aus dem Adressbereich für die Rechneraufnahme geholt hat, ist dieses aber nicht möglich. Dessen Adressen sind aus sicherheitstechnischen Erwägungen nur auf das allernötigste beschränkt.
 
-Daher muss sich der Rechner in einem besonderen LAN-Bereich befinden, etwa die 10.0.0.10/16. Diese IP-Adresse musst Du manuell in Deinem Admin-PC einrichten.
+Daher muss sich der Rechner in einem besonderen LAN-Bereich befinden, etwa mit der IPv4-Adresse 10.0.0.10/16. Diese IP-Adresse musst Du manuell in Deinem Admin-PC einrichten.
 
 Anmeldung an der Schulkonsole als global-admin
 ==============================================
@@ -202,12 +229,18 @@ Anmeldung an der Schulkonsole als global-admin
 .. figure:: media/newsetup/lmn-setup-gui-09.png
    :align: center
    :alt: WebUI: First ssl access
+   :width: 80%
+   
+   SSL: Mögliches Sicherheitsrisiko - Erweitert
 
 Der Browser zeigt Dir den Warnhinweis an. Klicke auf ``Erweitert ...``.
 
 .. figure:: media/newsetup/lmn-setup-gui-10.png
    :align: center
    :alt: WebUI: Accept certificate
+   :width: 80%
+   
+   SSL: Risiko akzeptieren und fortfahren
 
 Es erscheint auf der gleichen Seite unten ein weiterer Eintrag. Bestätige diesen, indem Du den Button ``Risiko akzeptieren und fortfahren`` auswählst.
 
@@ -216,12 +249,18 @@ Danach kommst Du zur Anmeldeseite der WebUI/Schulkonsole. Melde Dich nun als Ben
 .. figure:: media/newsetup/lmn-setup-gui-11.png
    :align: center
    :alt: WebUI: Login global-admin
+   :width: 80%
+   
+   Login global-admin
 
 Nach erfolgreicher Anmeldung gelangst Du zur Hauptseite der Schulkonsole.
 
 .. figure:: media/newsetup/lmn-setup-gui-12.png
    :align: center
    :alt: WebUI: Hauptseite
+   :width: 80%
+   
+   Hauptseite der Schulkonsole
 
 Berechtigungen der Log-Dateien anpassen
 =======================================
@@ -247,11 +286,12 @@ Der Inhalt des Verzeichnisses sollte sich wie folgt darstellen:
 .. figure:: media/newsetup/lmn-setup-permissions-log-files.png
    :align: center
    :alt: directory listing log files
+   :width: 80%
+   
+   Liste die Berechtigungen der Dateien auf
 
-Setze die Ersteinrichtung fort, indem Du 
+Setze die Ersteinrichtung fort, indem Du :ref:`add-user-accounts-label` und :ref:`hardware-registration-label` aufrufst.
 
-:ref:`add-user-accounts-label` und :ref:`hardware-registration-label` aufrufst.
+``Alternativ``: Willst Du eine Migration durchführen, geht es weiter mit: :ref:`migration-label`
 
-Alternativ wenn du eine Migration durchführen willst, geht es weiter mit
 
-:ref:`migration-label`

@@ -9,11 +9,9 @@ Setup v7.2
 
 .. attention::
 
-   Alle linuxmuster 6.x Systeme können statt einer Neuinstallation über eine :ref:`migration-label` umgezogen werden, dennoch ist die
-   Erstkonfiguration hier eine notwendige Voraussetzung.
+   Alle linuxmuster 6.x Systeme können statt einer Neuinstallation über eine :ref:`migration-label` umgezogen werden, dennoch ist die Erstkonfiguration hier eine notwendige Voraussetzung.
 
-   Alle linuxmuster 7.1 Systeme werden lediglich über ein :ref:`upgrade-from-7.1-label` auf linuxmuster v7.2 aktualisiert. 
-   Ein erneutes Setup ist dann nicht mehr erforderlich.
+   Alle linuxmuster 7.1 Systeme werden lediglich über ein :ref:`upgrade-from-7.1-label` auf linuxmuster v7.2 aktualisiert. Ein erneutes Setup ist dann nicht mehr erforderlich.
    
 Es gibt 2 Möglichkeiten, die Erstkonfiguration durchzuführen: 
 
@@ -34,7 +32,7 @@ Wichtige Hinweise
 
 * Beim Domänennamen ist zu beachten:
 
-  - nutze immer eine echte externe Domain, die auf Deine Organisation registriert ist -> z.B. 'meineschule.de'
+  - nutze immer eine echte externe Domain, die auf Deine Organisation registriert ist -> z.B. ``meineschule.de``
   - für das Setup von linuxmuster benötigst Du nun eine Subdomain, die vom AD DNS-Server authoritativ intern aufgelöst wird, aber niemals von extern.
   - der AD DNS-Server arbeitet immer nur für diese eine Subdomain und die darunter liegenden Namensräume autoritativ.
   - alle internen Clients müssen den AD DNS-Server als DNS-Server nutzen.
@@ -44,8 +42,8 @@ Wichtige Hinweise
 
 * Beim Setup von linuxmuster gibst Du also einen Domänennamen nach folgendem Schema an:
   
-  - 'hostname'.'subdomain=NetBIOS-Name'.'domain'.'tld'
-  - ein funktionierendes Beispiel wäre: 'server01ad'.'linuxmuster'.'meineschule'.'de'
+  - hostname.subdomain=NetBIOS-Name.domain.tld
+  - ein funktionierendes Beispiel wäre: server01ad.linuxmuster.meineschule.de
   - hostname -> server01ad, subdomain -> linuxmuster, meineschule -> domain, tld -> de
 
 * Es wird also eine extern auflösbare, registrierte Domain genutzt und bei der Einrichtung des Servers wird eine eigene interne Subdomain als AD-Domäne angegeben.
@@ -84,7 +82,7 @@ Server-Konsole
 
 .. figure:: media/newsetup/lmn-setup-terminal-03.png
      :align: center 
-     :width: 100%
+     :width: 80%
      :alt: Screenshot Server Console 
      :target: setup-console.html
 
@@ -98,7 +96,7 @@ WEB UI
 
 .. figure:: media/newsetup/lmn-setup-gui-02.png
      :align: center 
-     :width: 100% 
+     :width: 80% 
      :alt: Screenshot Web UI
      :target: setup-gui.html
 

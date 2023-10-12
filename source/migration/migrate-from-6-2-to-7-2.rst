@@ -2,9 +2,9 @@
 
 .. _migration_6_7:
 
-==============================
-Migration lmn6.2.. --> lmn 7.2
-==============================
+=============================
+Migration lmn 6.2 --> lmn 7.2
+=============================
 
 .. sectionauthor:: `@jeffbeck <https://ask.linuxmuster.net/u/jeffbeck>`_,
 		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
@@ -137,7 +137,7 @@ In dieser Beschreibung wird als Schulinstanz, wie beim Erstsetup vorgegeben, ``d
 
    .. code::
 
-      ./lmn71-appliance -s -u -d schuldomaene.meineschule.de -n 10.16.1.1/24 -f 10.16.1.254
+      ./lmn-appliance -s -u -d schuldomaene.meineschule.de -n 10.16.1.1/24 -f 10.16.1.254
 
    Starte nach den Anpassungen die VM neu mit ``reboot``.
 

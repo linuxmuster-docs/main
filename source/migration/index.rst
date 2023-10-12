@@ -21,6 +21,8 @@ Folge je nach gegebenen Voraussetzungen Deinem Migrationspfad.
   :hidden:
 
   migrate-from-6-2-to-7-2
+  upgrade
+  
 
 
 

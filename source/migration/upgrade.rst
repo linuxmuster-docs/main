@@ -67,7 +67,7 @@ Importiere zuerst die Schlüsseldatei:
 
 .. code::
 
-   root@server:~$ wget -qO- "https://deb.linuxmuster.net/pub.gpg" | gpg --dearmour -o /usr/share/keyrings/linuxmuster.net.gpg
+   root@server:~$ sudo sh -c 'wget -qO- "https://deb.linuxmuster.net/pub.gpg" | gpg --dearmour -o /usr/share/keyrings/linuxmuster.net.gpg'
 
 Füge danach das Linuxmuster 7.2 Testing-Repro hinzu:
 
@@ -106,7 +106,8 @@ Aktualisiere nun die Paketquellen:
 .. figure:: media/01-login-lmn-7.2.png
    :align: center
    :alt: first login to lmn7.2
-
-
+   :scale: 80%
+   
+   Server-Infos nach dem Konsolen-Login
 
 

@@ -234,7 +234,7 @@ Zur Eintragung der Paketquellen führe folgende Befehle in der Eingabekonsole au
 
 .. code-block:: Bash
 
-   sudo wget -qO- "https://deb.linuxmuster.net/pub.gpg" | gpg --dearmour -o /usr/share/keyrings/linuxmuster.net.gpg
+   sudo sh -c 'wget -qO- "https://deb.linuxmuster.net/pub.gpg" | gpg --dearmour -o /usr/share/keyrings/linuxmuster.net.gpg'
 
 .. hint:: -O --> [-][Großbuchstabe O]
 
@@ -250,10 +250,12 @@ Zuletzt fügst Du das Linuxmuster 7.2 Repository hinzu.
 
 .. code-block:: Bash
 
-  sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/linuxmuster.net.gpg] https://deb.linuxmuster.net/ lmn72 main" > /etc/apt/sources.list.d/lmn72.list'
+   sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/linuxmuster.net.gpg] https://deb.linuxmuster.net/ lmn72 main" > /etc/apt/sources.list.d/lmn72.list'
 
-Aktualisiere die Softwareliste des Servers mittels
+Aktualisiere die Softwareliste des Servers:
 
 .. code-block:: Bash
 
    sudo apt update
+
+
