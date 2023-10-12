@@ -14,7 +14,7 @@ In einer Schule müssen meist mehrere hundert bis einige tausend Schüler als Be
 - solche mit einer neuen Klasse versetzt und 
 - Konten nicht mehr aufgeführter Schüler schrittweise aus dem System entfernt.
 
-In diesen Abschnitten wird beispielhaft ``ein Lehrer händisch`` angelegt und per Datei-Import einige Schüler aufgenommen. Melde Dich dafür an der Schulkonsole als ``global-admin`` an.
+In diesen Abschnitten werden beispielhaft ``ein Lehrer händisch`` angelegt und per Datei-Import einige Schüler aufgenommen. Melde Dich dafür an der Schulkonsole als ``global-admin`` an.
 
 
 Zeichenkodierung wählen
@@ -27,13 +27,18 @@ Klicke dazu auf das Menü ``Einstellungen -->  Schuleinstellungen``.
 .. figure:: media/add-user/add-user-01.png
    :align: center
    :alt: Menue Settings
+   
+   Schuleinstellungen wählen
 
-Klicke rechts auf die Reiterkarte ``Listenimport`` unterhalb von ``Zeichenkodierung`` ist im
-Beispiel "UTF-8" erkannt worden.
+Klicke rechts auf die Reiterkarte ``Listenimport``, unterhalb von ``Zeichenkodierung`` ist im
+Beispiel ``UTF-8`` erkannt worden.
 
 .. figure:: media/add-user/add-user-02.png
    :align: center
    :alt: Menue Coding
+   :width: 80%
+   
+   Listenimport und Zeichenkodierung
 
 Klicke auf das Drop-down Menü für die Listenkodierung und wähle die gewünschte Kodierung aus.
 Schließe die Eingabe mit "Speichern" ab.
@@ -61,6 +66,8 @@ Wähle das Menü ``Benutzerverwaltung --> Listenverwaltung``.
 .. figure:: media/add-user/add-user-03.png
    :align: center
    :alt: Menue list management
+   
+   Menüeintrag Listenverwaltung
 
 Wähle rechts oben die Reiterkarte ``Lehrer``.
 
@@ -72,6 +79,9 @@ Klicke auf den Button ``+ Lehrer hinzufügen``. Es wird eine leere Zeile hinzuge
 .. figure:: media/add-user/add-user-04.png
    :align: center
    :alt: Menue: Add teacher
+   :width: 80%
+   
+   Lehrer hinzufügen
 
 .. hint::
 
@@ -88,6 +98,9 @@ Es erscheint ein Fenster, in dem Du siehst, wie mit den angegebenen Benutzerdate
 .. figure:: media/add-user/add-user-05.png
    :align: center
    :alt: Menue: Add teacher - check data
+   :width: 80%
+   
+   Prüfergebnis für den Import der Nutzerdaten
 
 In o.g. Fenster ist zu sehen, dass ein neuer Lehrer hinzugefügt wird. Mit dem Button ``Übernehmen`` werden die dargestellten Aktionen ausgeführt (hinzufügen, aktualisieren, löschen).
 
@@ -96,6 +109,9 @@ Der Importdialog zeigt den Fortschritt an und meldet zurück, wenn die Aufnahme 
 .. figure:: media/add-user/add-user-06.png
    :align: center
    :alt: Menue: Add teacher - import finished
+   :width: 80%
+   
+   Import fertiggestellt
 
 Bestätige dies mit dem Button ``Schliessen``.
 
@@ -104,6 +120,9 @@ Die neune oder geänderten Benutzer findest Du nun im Menü ``Benutzerverwaltung
 .. figure:: media/add-user/add-user-07.png
    :align: center
    :alt: Menue: Added teacher
+   :width: 80%
+   
+   Benutzerverwaltung: Lehrer
 
 
 Schüler importieren
@@ -111,14 +130,15 @@ Schüler importieren
 
 Schüler können analog zu Lehrern einzeln hinzugefügt werden.
 
-Alternativ können **alle** Schüler (alte wie neue) importiert werden. Wähle im Menü ``Benutzerverwaltung --> /Listenverwaltung --> Schüler`` (es erscheint
-automatisch die Schülerliste).
+Alternativ können **alle** Schüler (alte wie neue) importiert werden. Wähle im Menü ``Benutzerverwaltung --> /Listenverwaltung --> Schüler`` (es erscheint automatisch die Schülerliste).
 
 Mit der Schaltfläche unterhalb der dargestellten Schüler ``CSV`` kannst Du verschiedene Möglichkeiten ansteuern, eine CSV-Datei zu erstellen, diese zu bearbeiten oder eine neue bereitzustellen.
 
 .. figure:: media/add-user/add-user-08.png
    :align: center
    :alt: Menue: list management - csv
+     
+   Eigene CSV hochladen
 
 Eine zu importierende Datei sollte folgende Daten aufweisen:
 
@@ -143,18 +163,27 @@ Mit der Option ``Eigene CSV hochladen`` kann eine so formatierte Datei nun hochg
 .. figure:: media/add-user/add-user-09.png
    :align: center
    :alt: Menue: pupils to be imported via csv
+   :width: 80%
+   
+   Schüler hinzufügen
 
 Mit ``Speichern`` werden eventuelle Konsistenzfehler überprüft. Die Schaltfläche ``SPEICHERN & PRÜFEN`` zeigt nun an, wieviele Schüler bei ``ÜBERNEHMEN`` ins System übernommen, versetzt (aktualisiert) oder gelöscht werden. 
 
 .. figure:: media/add-user/add-user-10.png
    :align: center
    :alt: Menue: pupils to be imported - checked
+   :width: 80%
+   
+   Überprüfung der zu importierenden Benutzer
 
 Mit Klick auf den Button ``Übernehmen`` werden die dargestellten Aktionen ausgeführt. Der abgeschlossene Import ist im Fenster zu sehen:
 
 .. figure:: media/add-user/add-user-11.png
    :align: center
    :alt: Menue: pupils to be imported - checked
+   :width: 80%
+   
+   Benutzer importiert
 
 Ab der erfolgreichen Übernahme können die Schüler unter dem Menüpunkt ``Benutzerverwaltung --> Schüler`` gefunden und deren
 Konten bearbeitet werden.
@@ -172,17 +201,27 @@ Hast Du z.B. bei der zuvor importierten CSV-Datei die IDs vergessen, kannst Du d
 .. figure:: media/add-user/add-user-12.png
    :align: center
    :alt: Menue: import users - changes
+   :width: 80%
+   
+   Benutzer aktualisiert
 
 Unter Listenverwaltung hast Du bei den jeweiligen Benutzern (Schüler, Lehrer, Extraschüler) unten rechts das Drop-down-Menü für die CSV-Dateien.
 
 .. figure:: media/add-user/add-user-08.png
    :align: center
    :alt: Menue: CSV
+   
+   Eigene CSV hochladen
+   
 
 Klickst Du auf ``CSV --> Im Editor öffnen`` wird die ``students.csv`` auf dem Server geöffnet und Du kannst Änderungen vornehmen.
 
 .. figure:: media/add-user/add-user-13.png
    :align: center
    :alt: Menue: CSV
+   :width: 80%
+   
+   CSV-Datei mit der WebUI im Browser editieren
 
 Eine ausführlichere Dokumentation zur Benutzerverwaltung findet sich im entsprechenden Abschnitt dieser Dokumentation.
+
