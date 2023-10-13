@@ -391,21 +391,21 @@ Solltest Du versehentlich ``ja`` ausgewählt haben, kannst Du die Anmeldung mit 
 
   sudo linuxmuster-linuxclient7 upgrade
 
-Im Anschluss startest Du Deinen Linux-Client neu und erstellst wiederum, wie zuvor beschrieben, ein neues Image. Auch hier: ``aktuelles Image ersetzen`` auswählen.
+Im Anschluss startest Du Deinen Linux-Client neu und erstellst wiederum, wie zuvor beschrieben, ein neues Image.
 
 
 Serverseitige Anpassungen
 =========================
 
-Damit der Linux-Client die Drucker automatisch ermittelt und der Proxy korrekt eingerichtet wird, ist es erforderlich, dass auf dem linuxmuster Server einige Anpassungen vorgenommen werden.
+Damit der Linux-Client die Drucker automatisch ermittelt und der Proxy korrekt eingerichtet wird, ist es erforderlich, dass auf dem linuxmuster.net Server einige Anpassungen vorgenommen werden.
 
 
 Proxy-Einstellungen
 -------------------
 
-Bei der Anmeldung vom Linux-Client werden sog. Hook-Skripte ausgeführt.
+Bei der Anmeldung vom Linux-Client werden sog. ``Hook-Skripte`` ausgeführt.
 
-Diese finden sich auf dem linuxmuster Server im Verzeichnis: ``/var/lib/samba/sysvol/linuxmuster.lan/scripts/default-school/custom/linux/``.
+Diese finden sich auf dem linuxmuster.net Server im Verzeichnis: ``/var/lib/samba/sysvol/linuxmuster.lan/scripts/default-school/custom/linux/``.
 
 .. hint::
 
@@ -451,7 +451,7 @@ Damit die Drucker richtig gefunden und via GPO administriert werden können, ist
 
 Die Zuordnung von Druckern zu Computern geschieht auf Basis von Gruppen im Active Directory. Im Kapitel :ref:`configure-printers-label` gibt es weitere Informationen dazu.
 
-Damit auf jedem Rechner nur die Drucker angezeigt werden, die ihm auch zugeordnet wurden, muss auf dem Server in der Datei ``/etc/cups/cupsd.conf`` der Eintrag ``Browsing On`` auf ``Browsing Off`` umgestellt werden. Tut man dies nicht, werden auf jedem Rechner ALLE Drucker angezeigt, nicht nur die ihm zugeteilten.
+Damit auf jedem Rechner nur die Drucker angezeigt werden, die ihm auch zugeordnet wurden, muss auf dem Server in der Datei ``/etc/cups/cupsd.conf`` der Eintrag ``Browsing On`` auf ``Browsing Off`` umgestellt werden. Ansonsten werden auf jedem Rechner ALLE Drucker angezeigt, nicht nur die ihm zugeteilten.
 
 Weiterführende Dokumentation
 ============================
