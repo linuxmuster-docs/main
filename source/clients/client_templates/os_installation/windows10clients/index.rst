@@ -13,47 +13,63 @@ Windows 10 Clients
 Betriebssystem Windows 10 installieren
 --------------------------------------
 
-1. Du hast den PC wie zuvor beschrieben über CD/USB-Stick gebootet. Dieser wurde zudem zuvor mit LINBO partioniert und formatiert.
+1. Du hast den PC wie zuvor beschrieben mit LINBO partioniert und formatiert. Danach hast Du den PC / die VM über CD/USB-Stick gebootet. 
 2. Drücke während des Boot-Vorgangs nach Aufforderung eine Taste, damit von dem Windows-Installationsmedium tatsächlich gebootet wird.
 3. Danach siehst Du zu Beginn der Installation die Spracheinstellungen. Wähle die gewünschten Einstellungen aus und klicke auf ``Weiter``:
 
 .. figure:: media/14_windows-10-clients_choose-language.png
    :align: center
    :alt: Win10 Choose Clients
+   :width: 80%
+   
+   Wähle die Sprache und das Tastaturlayout
 
 4. ``Jetzt installieren`` wählen.
 
 .. figure:: media/15_windows-10-clients_choose-install.png
    :align: center
    :alt: Win10 Choose Install
+   :width: 80%
+   
+   Wähle Jetzt installieren
 
-5. Es wird das Setup gestartet. Es erscheint zuerst der Hinweis auf die Windows-Aktivierung. Hier kannst Du zum jetzigen Zeitpunkt die Option 
-   ``Ich habe keinen Product Key`` wählen. Die Aktivierung mit der vorhandenen Lizenz erfolgt dann später in anderer Form.
+5. Es wird das Setup gestartet. Es erscheint zuerst der Hinweis auf die Windows-Aktivierung. Hier kannst Du zum jetzigen Zeitpunkt die Option ``Ich habe keinen Product Key`` wählen. Die Aktivierung mit der vorhandenen Lizenz erfolgt dann später in anderer Form.
 
 6. Wähle dann das gewünschte Betriebssystem aus, für das die Lizenz vorliegt, z.B. Windows 10 Pro Education N.
 
 .. figure:: media/16_windows-10-clients_choose-os.png
    :align: center
    :alt: Choose OS
+   :width: 80%
+   
+   Wähle das gewünschte Betriebssystem aus
 
 6. Haken zum Akzeptieren der Lizenzbedingungen setzen und auf ``Weiter``.
 
 .. figure:: media/17_windows-10-clients_accept-license-agreement.png
    :align: center
    :alt: Accept License Agreement
+   :width: 80%
+   
+   Akzeptiere die Lizenzbedingungen
 
 7. ``Benutzderfinierte Installation`` wählen.
 
 .. figure:: media/18_windows-10-clients_choose-individual-installation.png
    :align: center
    :alt: Win10 Choose Individual Installation
+   :width: 80%
+   
+   Wähle die benutzerdefinierte Installation
 
-8. Im Menü der Festplattenauswahl sollte nun eine Partition vorhanden sein, die von LINBO vorbereitet wurde und 
-   auf welcher Windows 10 installiert werden soll.
+8. Im Menü der Festplattenauswahl sollte nun eine Partition vorhanden sein, die von LINBO vorbereitet wurde und auf welcher Windows 10 installiert werden soll.
 
 .. figure:: media/19_windows-10-clients_choose-partition.png
    :align: center
    :alt: Win10 Choose Partition
+   :width: 80%
+   
+   Wähle die Partition für die Installation von Windows
 
 In der Abb. wurde ein UEFI-System vorbereitet. Partition 3 wurde für Windows 10 vorbereitet und Partition 4 ist die Cache-Parition. Wähle nun die richtige Parition (hier: Parition 3: windows) aus und klicke auf ``Weiter``.
 
@@ -62,6 +78,9 @@ In der Abb. wurde ein UEFI-System vorbereitet. Partition 3 wurde für Windows 10
 .. figure:: media/19a_windows-10-installation-process.png
    :align: center
    :alt: Win10 installing os components
+   :width: 80%
+   
+   Fortschritt der Installation von Windows
 
 10. Starte Windows neu.
 
@@ -74,6 +93,9 @@ In der Abb. wurde ein UEFI-System vorbereitet. Partition 3 wurde für Windows 10
 .. figure:: media/20_windows-10-clients_linbo-start-os-unsynchronised.png
    :align: center
    :alt: Linbo Start OS Unsynchronised
+   :width: 80%
+   
+   Starte Windows 10 unsynchronisiert
 
 .. hint::
 
@@ -86,89 +108,131 @@ Nach dem erneuten Start von Windows wählst Du Deine Region aus.
 .. figure:: media/21_windows-10-clients_choose-region.png
    :align: center
    :alt: Win10 Choose Region
+   :width: 80%
+   
+   Wähle die Region aus
 
 13. Tastaturlayout wählen.
 
 .. figure:: media/22_windows-10-clients_choose-keyboard-layout.png
    :align: center
    :alt: Win10 Choose Keyboard Layout
+   :width: 80%
+   
+   Wähle das Tastaurlayout aus
 
 14. Zweites Tastaturlayout ggf. wählen.
 
 .. figure:: media/23_windows-10-clients_choose-second-key-layout.png
    :align: center
    :alt: Win10 Choose Second Key Layout
+   :width: 80%
+   
+   Wähle ggf. ein zweites Tastaturlayout aus
 
 15. Mit Netzwerk verbinden.
 
 .. figure:: media/24_windows-10-clients_connect-network.png
    :align: center
    :alt: Win10 Connect Network
+   :width: 80%
+   
+   Ohne Internet-verbindung installieren
+   
 
 16. Internet-Verbindung herstellen.
 
 .. figure:: media/25_windows-10-clients_internet-connection.png
    :align: center
    :alt: Win10 Internet Connection
+   :width: 80%
+   
+   Weiter mit eingeschränktem Setup
 
 17. Admin-Benutzer festlegen.
 
 .. figure:: media/26_windows-10-clients_create-admin-user.png
    :align: center
    :alt: Win10 Create Admin User
+   :width: 80%
+   
+   Lege den Benutzer admin an
 
-18. Kennwort festlegen und die Sicherheitsfragen beantworten:
+18. Kennwort festlegen und die Sicherheitsfragen beantworten.
 
 .. figure:: media/27_windows-10-clients_create-admin-password.png
    :align: center
    :alt: Win10 Create Admin Password
+   :width: 80%
+   
+   Lege das Kennwort für den lokalen Benutzer admin fest
 
 19. Aktivitätenverlauf deaktivieren.
 
 .. figure:: media/28_windows-10-clients_deactivate-tracking.png
    :align: center
    :alt: Win10 Deactivate Tracking
+   :width: 80%
+   
+   Deaktiviere das Tracking
 
-20. Assistenten deaktivieren:
+20. Assistenten deaktiviern.
 
 .. figure:: media/29_windows-10-clients_deactivate-assistant.png
    :align: center
    :alt: Win10 Deactivate Assistant
+   :width: 80%
+   
+   Deaktiviere Assistenten
 
-21. Spracherkennung deaktivieren:
+21. Spracherkennung deaktivieren.
 
 .. figure:: media/30_windows-10-clients_deactivate-voice-recognition.png
    :align: center
    :alt: Win10 Deactivate Voice Recognition
+   :width: 80%
+   
+   Deaktiviere die Spracherkennung
 
-22. Standortdienste deaktivieren:
+22. Standortdienste deaktivieren.
 
 .. figure:: media/31_windows-10-clients_deactivate-location-services.png
    :align: center
    :alt: Win10 Deavtivate Location Services
+   :width: 80%
+   
+   Deaktiviere den Ortungsdienst
 
 23. Gerätesuche deaktivieren
 
 .. figure:: media/32_windows-10-clients_deactivate-device-search.png
    :align: center
    :alt: Win10 Deactivate Device Search
+   :width: 80%
+   
+   Deaktiviere die Gerätesuche
 
-24. Übermittlung der Diagnosedaten deaktivieren:
+24. Übermittlung der Diagnosedaten deaktivieren.
 
 .. figure:: media/33_windows-10-clients_deactivate-diagnose-data.png
    :align: center
    :alt: Win10 Deactivate Diagnose Data
+   :width: 80%
+   
+   Deaktiviere die Übermittlung von Diagnosedaten
 
-25. Verbesserung der Eingabe / Freihand deaktivieren:
+25. Verbesserung der Eingabe / Freihand deaktivierens
 
 .. figure:: media/34_windows-10-clients_deactivate-freehand.png
    :align: center
    :alt: Win10 Deactivate Freehand
+   :width: 80%
+   
+   Deaktiviere die Freihandeingabe
 
 26. Restliche Einrichtungsschritte vornehmen.
 
-27. Als Nutzer ``admin`` anlegen und Kennwort leer lassen oder ein bestimmtes setzen. Die nächsten Einstellungen
-    ablehnen.
+27. Als Nutzer ``admin`` anlegen und Kennwort leer lassen oder ein bestimmtes setzen. Die nächsten Einstellungen ablehnen.
 
 28. Weitere gewünschte Einrichtungen ausführen (Programme, Hintergründe, usw.)
 
@@ -196,6 +260,10 @@ b) die richtigen Verbindungsdaten eingeben:
 .. figure:: media/35_windows-10-clients_putty-connection-data.png
    :align: center
    :alt: Putty Connection Data
+   :width: 80%
+   
+   SSH Verbindung zum Server einrichten
+   
 
 c) und mit Open unten links verbinden
 d) für login as: root eingeben und als password das beim Setup vergeben Passwort eingeben 
@@ -204,28 +272,49 @@ d) für login as: root eingeben und als password das beim Setup vergeben Passwor
 .. figure:: media/36_windows-10-clients_login-as-root.png
    :align: center
    :alt: Win10 Login As Root
+   :width: 80%
+   
+   Anmelden als Benutzer root
 
 e) und mit Enter bestätigen, dann sollte sich ähnliche Darstellung zeigen:
 
 .. figure:: media/37_windows-10-clients_confirm-config-data.png
    :align: center
    :alt: Win10 Confirm Config Data
+   :width: 80%
+   
+   Erfolgreiche Anmeldung via SSH
 
 f) um die Datei nun in den richtigen Ordner zu kopieren, den Befehl ``cp /srv/linbo/examples/win10.global.reg /srv/samba/global/management/global-admin/`` eingeben.
 
 .. figure:: media/38_windows-10-clients_move-global-reg.png
    :align: center
    :alt: Win10 Move Global reg
+   :width: 80%
+   
+   Befehl um die REG-Datei zu kopieren
 
 g) mit Enter bestätigen. Nun wurde die Datei übertragen.
 
 h) Putty schließen 
 
-2. auf dem PC im Programm ``Explorer`` nun das Netzlaufwerk des Servers öffnen, indem Du in der Leiste oben ``\\server`` eingibst:
+2. auf dem PC im Programm ``Explorer`` nun das Netzlaufwerk des Servers öffnen, indem Du in der Leiste oben ``\\server`` eingibst. Es erscheint ein neues Fenster, in dem Du aufgefordert wirst, dich am Server zu authentifizieren. Melde Dich als Benutzer ``gloabl-admin`` mit dem zugehörigen Kennwort an.
+
+.. figure:: media/39_windows-10-clients_open-net-resource-login.png
+   :align: center
+   :alt: Win10 Open Network Resource Login
+   :width: 80%
+   
+   Melde Dich am Server als global-admin an
+
+Gebe danach erneut im Programm ``Explorer`` den Server mit ``\\server`` ein.
 
 .. figure:: media/39_windows-10-clients_open-net-resource.png
    :align: center
    :alt: Win10 Open Network Resource
+   :width: 80%
+   
+   Dateizugriff auf den Server
 
 3. Du gibst ggf. die Anmeldedaten des ``global-admin`` ein. Danach öffnest Du nacheinander die Ordner ``linuxmuster-global → managament → global-admin``
 
@@ -234,23 +323,31 @@ h) Putty schließen
 .. figure:: media/40_windows-10-clients_copy-global-reg.png
    :align: center
    :alt: Win10 Copy Global Registry File
+   :width: 80%
+   
+   Kopiere die REG-Datei auf den Desktop
 
-5. Führen nun einen Doppelklick auf die Datei win10.global.reg aus. Lasse Änderungen durch diese App zu.
+5. Führe nun einen Doppelklick auf die Datei win10.global.reg aus. Lasse Änderungen durch diese App zu.
 
 6. Evtl. weitere gewünschte System-Einrichtungen für die Vorlage vornehmen.
 
-7. Zum Herunterfahren vorsichtshalber über das Windows-Startmenü in der Suche ``cmd`` eingeben und die
-   Eingabeaufforderung öffnen.
+7. Zum Herunterfahren vorsichtshalber über das Windows-Startmenü in der Suche ``cmd`` eingeben und die Eingabeaufforderung öffnen.
 
 .. figure:: media/41_windows-10-clients_open-terminal.png
    :align: center
    :alt: Win10 Open Terminal
+   :width: 80%
+   
+   Öffne das Windows-Terminal
 
 8. In der Console ``shutdown -s -t 1`` eingeben und mit ``Enter`` bestätigen:
 
 .. figure:: media/42_windows-10-clients_shutdown-windows-device.png
    :align: center
    :alt: Win10 Shutdown Device
+   :width: 80%
+   
+   Fahre das Gerät herunter
 
 Domänenanbindung
 ================
@@ -260,20 +357,81 @@ sollten diese, wie weiter oben erklärt, zuerst in linuxmuster.net über die MAC
 
 Starte den Muster-Client wieder via LINBO, indem Du Win10 mit dem GÜNEN Start-Button aus dem lokalen Cache startest.
 
+.. figure:: media/42_windows-10-client_start_from_cache.png
+   :align: center
+   :alt: Win10 Shutdown Device
+   :width: 50%
+   
+   Starte Windows 10 mit der grünen Taste
+
 Manueller Domänen Join für Windows
 ----------------------------------
 
-1. Über ``Systemsteuerung → System und Sicherheit → System → Einstellungen Ändern → Ändern → Computernamen`` 
-   vergeben (übereinstimmend mit Namen in dern Geräteliste!) und unter Mitglied von als Domäne die im Schritt Setup mit der Schulkonsole oder Setup im Terminal gewählten Domain namen, z.B. linuxmuster.lan
-   angeben. Mit ``global-admin`` und Ihrem beim Setup vergebenen Passwort bestätigen:
+1. Über ``System → Info → Diesen PC umbenennen`` einen Hostname vergeben, der übereinstimmend mit Namen in der Gerätelisteist ist.
 
-.. figure:: media/43_windows-10-clients_login-as-global-admin.png
+.. figure:: media/43_windows-10-clients_rename-client.png
    :align: center
-   :alt: Win10 Login As Global-Admin
+   :alt: Win10 rename client
+   
+   Client umbenennen
+   
+Um den neuen Hostname anzuwenden, muss Windows neu gestartet werden.
 
-2. OK → Windows-Sicherheitsfrage: Hier musst Du Dich als Domänen-Benutzer ``global-admin`` anmelden. Zum Abschluss solltest Du die Meldung erhalten: "Willkommen in der Domäne ....".
+.. figure:: media/43_windows-10-clients_reboot-windows.png
+   :align: center
+   :alt: Win10 reboot
+   
+   Starte Windows neu
 
-3. Danach musst Du das Fenster zum Neustart des PCs bestätigen. Schließe das Fenster der Domänenaufnahme. Es erscheint der Hinweis, dass der PC neu gestartet werden muss. Bestätige den Neustart.
+Starte in LINBO Windows mit der ``grünen Taste`` neu.
+
+Nach dem Neustart meldest Du Dich wieder als Benutzer admin an und rufst ``System --> Info --> Diesen PC umbenennen (fortgeschritten)`` auf.
+
+.. figure:: media/43_windows-10-clients_system-settings.png
+   :align: center
+   :alt: Win10 reboot
+   
+   Erweiterte Systemeinstellungen
+
+Klicke auf der Reiterkarte ``Computername`` auf ``Ändern``. 
+
+.. figure:: media/43_windows-10-clients_change-domain.png
+   :align: center
+   :alt: Win10 reboot
+   
+   Ändere die Dommänenzugehörigkeit
+   
+Trage unter ``Mitglied von -> Domäne`` Deine Domäne ein. Bestätige dies mit ``OK``.
+
+.. figure:: media/43_windows-10-clients_change-domain-net-login.png
+   :align: center
+   :alt: Win10 reboot
+   
+   Melde Dich als Benutzer global-admin an
+
+Bei einem erfolgreichen Beitritt zur Windows-Domäne wird dies mit folgendem Fenster bestätigt.
+
+.. figure:: media/43_windows-10-clients_change-domain-welcome.png
+   :align: center
+   :alt: Win10 reboot
+   
+   Willkommen in der Domäne
+
+Beendest Du die Systemeinstellungen erscheint der Hinweis, dass der PC neu zu starten ist.
+
+.. figure:: media/43_windows-10-clients_change-domain-reboot-hint.png
+   :align: center
+   :alt: Win10 reboot
+   
+   Der Computer muss neu gestartet werden
+
+Bestätige dies im nächsten Fenster mit ``Jetzt neu starten``.
+
+.. figure:: media/43_windows-10-clients_change-domain-reboot.png
+   :align: center
+   :alt: Win10 reboot
+   
+   PC neu starten
 
 Der PC bootet nun wieder in LINBO. 
 
@@ -292,11 +450,8 @@ Hierbei ist es notwenig, das für das Image in der Registry, den Namen der PCs j
 
 .. hint::
 
-   Achtung: Nachdem eine Template-Maschine frisch der Domain gejoined ist, darf diese vor dem Upload nicht neugestartet
-   werden, da sonst das durch den DomainJoin neu erstellte Maschinenpasswort in der AD für diese Maschine mit einem 
-   falschen Maschinenpasswort ersetzt werden würde. Durch den Image-Upload wird das neue Passwort ausgelesen und in die macct-Datei 
+   Achtung: Nachdem eine Template-Maschine frisch der Domain gejoined ist, darf diese vor dem Upload nicht neugestartet werden, da sonst das durch den DomainJoin neu erstellte Maschinenpasswort in der AD für diese Maschine mit einem falschen Maschinenpasswort ersetzt werden würde. Durch den Image-Upload wird das neue Passwort ausgelesen und in die macct-Datei 
    geschrieben, die zu dem Image gehört.
-
 
 Image in LINBO erstellen
 ------------------------
@@ -306,49 +461,83 @@ Image in LINBO erstellen
 .. figure:: media/45_windows-10-clients_linbo-create-image.png
    :align: center
    :alt: Linbo Upload Image
+   :width: 80%
+   
+   Werkzeug-Symbol - Untermenü
 
 2. Klicke nun das grosse Windows-Symbol, um das Image zu erstellen. Es öffnet sich folgender Dialog:
 
 .. figure:: media/46_windows-10-clients_linbo-upload-image.png
    :align: center
    :alt: Linbo Upload Image
+   :width: 80%
+   
+   Image erstellen 
 
-Gib an, ob ein aktuelles Image ersetzt werden soll, den gewünschten Image-Namen (die Dateiendung ist immer .qcow2). Zudem kannst Du eine Beschreibung angeben, die Dir Hinweise zum Konfigurationsstand des Images gibt. Da Du das erste Image erstellst, klicke nun ``erstellen + hochladen``.
+Gib eine Beschreibung an, die Dir Hinweise zum Konfigurationsstand des Images gibt. Da Du das erste Image erstellst, klicke nun ``erstellen + hochladen``.
 
 Nach dem erfolgreichen Upload siehst Du folgende Statusmeldung:
 
 .. figure:: media/46a_windows-10-clients_linbo-uploaded-image.png
    :align: center
    :alt: Linbo Upload Image
+   :width: 80%
+   
+   Image erfolgreich hochgeladen
 
-3. Nach dem erfolgreichem Upload sollte das Image auf der Linuxmuster.net-Schulkonsole unter ``LINBO4 → Gruppen``
+3. Nach dem erfolgreichem Upload sollte das Image auf der Linuxmuster.net-Schulkonsole unter ``LINBO4 → Gruppen`` angezeigt werden.
 
 .. figure:: media/46b_windows-10-image-school-console.png
    :align: center
    :alt: School Console: Group - Used Image
+   :width: 80%
+   
+   Verwendete Images
 
-Zudem finden sich die Abbilder selbst unter `` LINBO4 → Gruppen → Abbilder`` aufgelistet.
+Zudem finden sich die Abbilder selbst unter ``LINBO4 → Gruppen → Abbilder`` aufgelistet.
 
 .. figure:: media/46c_windows-10-images-listed-in-school-console.png
    :align: center
    :alt: School Console List Images
+   :width: 80%
+   
+   Übersicht der Abbilder
 
 Falls der Gruppe anfangs kein Basisimage zugeordnet war, sollte das unter ``Groups → <gruppenname> → Partitionen → Windows 10 edit → OS → Basisimage`` nachgeholt werden. Speichern nicht vergessen.
 
 .. figure:: media/46d_windows-10-define-basis-image.png
    :align: center
    :alt: Linbo Upload Image
+   :width: 80%
+   
+   Basisimage für die HWK festlegen
 
-4. Einem Image muss ein Registry Patch angeben werden: Wähle dazu das gewünschte Image aus, klicke auf das Zahnrad-Symbol, gehe zur Reiterkarte ``Registry-Patch``.
-Klicke nun unten auf die Drop-down Liste ``Copy from -> win10.image.reg``. Es wird die Reg-Datei in dem Fenster angezeigt.
+4. Einem Image muss ein sog. Registry-Patch angegeben werden: Wähle dazu das gewünschte Image aus. Klicke hierzu auf ``LINBO 4 --> Abbilder --> <Name des Images>``. Klicke rechts neben dem Imagenamen auf das Zahnrad-Symbol. Gehe dort zur Reiterkarte ``Registry-Patch``.
 
-.. figure:: media/47_windows-10-clients_linbo-indicate-registry-patch.png
+Klicke nun unten auf die Drop-down Liste ``Copy from``. Es werden verschiedene Reg-Patches in der Dropdown-Liste dargestellt.
+
+.. figure:: media/47_windows-10-clients_linbo-copy-registry-patch.png
    :align: center
    :alt: Linbo Indicate Registry Patch
+   :width: 80%
+   
+   Registry-Patch auswählen
 
-5. Alternativ in der Server-Shell aus ``/srv/linbo/exmaples`` die richtige Vorlage in ``/srv/linbo`` kopieren. Die Datei trägt dann den Namen ``<imagename>.reg`` - also in o.g. Beispiel win10.reg.
 
-6. In Zeile 22 musst Du noch Folgendes ergänzen:
+Klicke nun unten auf die Drop-down Liste ``Copy from -> win10.image.reg``. Es wird die Reg-Datei in dem Fenster angezeigt.
+
+.. figure:: media/47_windows-10-clients_linbo-save-registry-patch.png
+   :align: center
+   :alt: Linbo Indicate Registry Patch
+   :width: 80%
+   
+   Kopiere und speichere den Registry-Patch
+   
+Speichere diesen kopierten Registry-Patch für das Windows 10 Image, indem Du direkt auf ``SPEICHERN`` klickst. 
+
+5. Alternativ in der Server-Shell aus ``/srv/linbo/examples`` die richtige Vorlage in ``/srv/linbo`` kopieren. Die Datei trägt dann den Namen ``<imagename>.reg`` - also in o.g. Beispiel win10.reg. 
+
+6. Danach rufst Du für das Image erneut das Zahnrad-Symbol für die Einstellungen auf und gehst auf die Reiterkarte ``Registry Patch``. In Zeile 30 musst Du noch Folgendes ergänzen:
 
 .. code::
 
@@ -358,13 +547,30 @@ Klicke nun unten auf die Drop-down Liste ``Copy from -> win10.image.reg``. Es wi
    [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
    "DefaultLogonDomain"="<SAMBADOMAIN>"
 
-Hier <SAMBADOMAIN> durch den zuvor festgelegten Namen der Samba_Domäne ersetzen. Hattest Du z.B. während der Installation gshoenningen.linuxmuster.lan gewählt, so gibst Du hier nur gshoeningen an. Übernehme die Eintragungen mit ``Speichern``.
+Hier <SAMBADOMAIN> durch den zuvor festgelegten Namen der Samba_Domäne ersetzen. Hattest Du z.B. während der Installation ``gshoenningen.linuxmuster.lan`` gewählt, so gibst Du hier diesen FQDN an. 
+
+.. figure:: media/47_windows-10-clients_linbo-indicate-registry-patch.png
+   :align: center
+   :alt: Linbo Indicate Registry Patch
+   :width: 80%
+   
+   Registry-Patch editieren
+
+Übernehme die Eintragungen mit ``SPEICHERN``.
+
+Solltest Du Dir unsicher sein, kannst Du auf dem Server folgenden Befehl absetzen, um die SAMBADOMAIN nachzuschlagen:
+
+.. code::
+
+   less /etc/samba/smb.conf | grep realm
+   
+Gib den der Variablen ``realm =`` zugewiesenen Wert hier an.
+
 
 Imageübertragung auf den PC
 ---------------------------
 
-1. Starte den PC, auf den das Image übertragen werden soll, über das Netzlaufwerk bis er in LINBO gebootet hat.
-Nun öffnest Du den Imaging-Reiter, wie im ersten Kapitel 
+1. Starte den PC, auf den das Image übertragen werden soll, über das Netzlaufwerk bis er in LINBO gebootet hat. Nun öffnest Du den Imaging-Reiter, wie im ersten Kapitel 
 
 :ref:`Computer in linuxmuster.net aufnehmenn <install-windows10-clients-label>` 
 
@@ -377,26 +583,35 @@ Nun öffnest Du den Imaging-Reiter, wie im ersten Kapitel
 .. figure:: media/49_windows-10-clients_linbo-start-imaging.png
    :align: center
    :alt: Linbo Start Imaging
+   :width: 80%
+   
+   Starte Windows synchronisiert
 
 4. Wenn das Image vollständig heruntergeladen ist, startet Windows automatisch.
+
+Programminstallationen
+======================
+
+Hast Du wie zuvor beschrieben, den Client synchronisiert gestartet, meldest Du Dich als Benutzer ``global-admin`` an der Domäne an.
+
+Installiere die gewünschten Programme und konfiguriere die benötigten Programm- und Systemeinstellungen.
+
+Starte den PC neu, ohne danach neu zu sychronisieren. Führe danach nachstehenden Abschnitt aus.
 
 Default Profil kopieren
 =======================
 
-Linuxmuster.net sieht vor, dass **Programminstallationen von "global-admin"** durchgeführt werden. Damit alle User die bei der Installation vorgenommenen Änderungen bekommen, muss das Profil des "global-admin" nach "Default" kopiert werden. Um das Profil zu kopieren, ist wie folgt vorzugehen:
+linuxmuster.net sieht vor, dass **Programminstallationen von "global-admin"** durchgeführt werden. Damit alle User die bei der Installation vorgenommenen Änderungen bekommen, muss das Profil des "global-admin" nach "Default" kopiert werden. 
 
-1. Starte den Rechner nach der Installation von Programmen neu ohne Synchronisation
+Um dies durchzuführen, musst due die Gruppenrichtlinien wie nachstehend beschrieben anpassen.
+
+1. Computerkonfiguration - Administrative Vorlagen, System,
+
+2. ...
 
 .. attention::
-    
-   Der Neustart ist notwenig, da das Profil des "global-admin" ansonsten nicht kopiert werden kann bzw. um die Registry-Zweige für den global-admin freizugeben.
 
-2. Melden Dich als ``lokaler User mit Admin-Rechten`` an dem Rechner an
-3. Lade die Datei ``https://www.forensit.com/Downloads/Support/DefProf.msi`` herunter. Führe diese aus. Das Programm DefProf.exe befindet sich dann in entpackter Form in Ihrem Download-Verzeichnis. Kopiere dieses Programm in das Verzeichnis: ``C:\Windows\system32\``. 
-4. Führe unter Win10 die PowerShell als Admin aus. Wechsel auf Laufwerk C:\ und führe den Befehl ``C:\> defprof global-admin`` aus. Die Nachfrage bei der Ausführung ist zu bejahen.
-5. Melde Dich als lokaler User ab und als global-admin an
-6. Fahre den Rechner herunter
-7. Starte den Rechner neu und erstellen ein neues Image mit LINBO.
+   Beschreibung fehlt noch !!
 
 Zeitprobleme lösen
 ==================
@@ -405,7 +620,7 @@ Auch wenn bereits beim Start über linbo die Systemzeit synchonisiert wird, soll
 
 Bei der Synchronisation zwischen Client und Server kann es zu Beginn zu Zeitabweichungen kommen.
 
-Diese sind dadurch zu beheben, indem Du auf dem linuxmuster.net Server ein Skript aufrufst, welches die NTP-Konfiguration anpasst.
+Diese sind zu beheben, indem Du auf dem linuxmuster.net Server ein Skript aufrufst, welches die NTP-Konfiguration anpasst.
 
 Öffne auf dem Server eine Konsole als Benutzer ``root`` und gebe folgenden Befehl ein:
 
