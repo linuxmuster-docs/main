@@ -93,7 +93,7 @@ In der Abb. wurde ein UEFI-System vorbereitet. Partition 3 wurde für Windows 10
 .. figure:: media/20_windows-10-clients_linbo-start-os-unsynchronised.png
    :align: center
    :alt: Linbo Start OS Unsynchronised
-   :width: 80%
+   :width: 50%
    
    Starte Windows 10 unsynchronisiert
 
@@ -234,7 +234,9 @@ Nach dem erneuten Start von Windows wählst Du Deine Region aus.
 
 27. Als Nutzer ``admin`` anlegen und Kennwort leer lassen oder ein bestimmtes setzen. Die nächsten Einstellungen ablehnen.
 
-28. Weitere gewünschte Einrichtungen ausführen (Programme, Hintergründe, usw.)
+28. Weitere gewünschte Einrichtungen ausführen (Programme, Hintergründe, usw.).
+
+29. Alle Updates installieren. Hierbei muss Windows immer wieder neu gestartet werden. Darauf achten, dass Windows aus LINBO heruas immer nur mit der GRÜNEN Pfeiltaste gestartet wird.
 
 29. Installation abschließen.
 
@@ -303,7 +305,7 @@ h) Putty schließen
 .. figure:: media/39_windows-10-clients_open-net-resource-login.png
    :align: center
    :alt: Win10 Open Network Resource Login
-   :width: 80%
+   :width: 50%
    
    Melde Dich am Server als global-admin an
 
@@ -372,6 +374,7 @@ Manueller Domänen Join für Windows
 .. figure:: media/43_windows-10-clients_rename-client.png
    :align: center
    :alt: Win10 rename client
+   :width: 60%
    
    Client umbenennen
    
@@ -380,6 +383,7 @@ Um den neuen Hostname anzuwenden, muss Windows neu gestartet werden.
 .. figure:: media/43_windows-10-clients_reboot-windows.png
    :align: center
    :alt: Win10 reboot
+   :width: 60%
    
    Starte Windows neu
 
@@ -390,6 +394,7 @@ Nach dem Neustart meldest Du Dich wieder als Benutzer admin an und rufst ``Syste
 .. figure:: media/43_windows-10-clients_system-settings.png
    :align: center
    :alt: Win10 reboot
+   :width: 60%
    
    Erweiterte Systemeinstellungen
 
@@ -398,6 +403,7 @@ Klicke auf der Reiterkarte ``Computername`` auf ``Ändern``.
 .. figure:: media/43_windows-10-clients_change-domain.png
    :align: center
    :alt: Win10 reboot
+   :width: 60%
    
    Ändere die Dommänenzugehörigkeit
    
@@ -406,6 +412,7 @@ Trage unter ``Mitglied von -> Domäne`` Deine Domäne ein. Bestätige dies mit `
 .. figure:: media/43_windows-10-clients_change-domain-net-login.png
    :align: center
    :alt: Win10 reboot
+   :width: 60%
    
    Melde Dich als Benutzer global-admin an
 
@@ -414,6 +421,7 @@ Bei einem erfolgreichen Beitritt zur Windows-Domäne wird dies mit folgendem Fen
 .. figure:: media/43_windows-10-clients_change-domain-welcome.png
    :align: center
    :alt: Win10 reboot
+   :width: 60%
    
    Willkommen in der Domäne
 
@@ -422,6 +430,7 @@ Beendest Du die Systemeinstellungen erscheint der Hinweis, dass der PC neu zu st
 .. figure:: media/43_windows-10-clients_change-domain-reboot-hint.png
    :align: center
    :alt: Win10 reboot
+   :width: 60%
    
    Der Computer muss neu gestartet werden
 
@@ -430,6 +439,7 @@ Bestätige dies im nächsten Fenster mit ``Jetzt neu starten``.
 .. figure:: media/43_windows-10-clients_change-domain-reboot.png
    :align: center
    :alt: Win10 reboot
+   :width: 60%
    
    PC neu starten
 
@@ -601,17 +611,55 @@ Starte den PC neu, ohne danach neu zu sychronisieren. Führe danach nachstehende
 Default Profil kopieren
 =======================
 
-linuxmuster.net sieht vor, dass **Programminstallationen von "global-admin"** durchgeführt werden. Damit alle User die bei der Installation vorgenommenen Änderungen bekommen, muss das Profil des "global-admin" nach "Default" kopiert werden. 
+linuxmuster.net sieht vor, dass **Programminstallationen von global-admin** durchgeführt werden. Damit alle User die bei der Installation vorgenommenen Änderungen bekommen, muss das Profil des ``global-admin`` nach "Default" kopiert werden. 
 
-Um dies durchzuführen, musst due die Gruppenrichtlinien wie nachstehend beschrieben anpassen.
+Dies kann mit dem dem freien Tool ``DefProf`` durchgeführt werden. Das Tool kann hier heruntergeladen werden: https://www.forensit.com/Downloads/DefProf.msi
 
-1. Computerkonfiguration - Administrative Vorlagen, System,
+Das Ausführen der MSI-Datei entpackt das eigentliche Programm. Hast Du dies als Benutzer ``global-admin`` durchgeführt, siehst Du folgendes Fenster:
 
-2. ...
+.. figure:: media/49_windows-10-clients_defprof-installation.png
+   :align: center
+   :alt: Win10 Defprof installation
+   :width: 80%
+   
+   Installiere DefProf
 
-.. attention::
+Das ausführbare Programm befindet sich nun unter ``c:\Users\global-admin\downloads\Defprof.exe``.
+Kopiere diese Datei nun unter ``c:\Windows\`` als Benutzer ``global-admin``.
 
-   Beschreibung fehlt noch !!
+Hast Du alle Einstellungen als Benutzer ``global-admin`` für das Profil vorgenommen, kannst Du nun dieses Profil mithilfe des zuvor installierten Tools DefProf als Default-Profil kopieren.
+
+Hierzu führst Du folgende Schritte aus:
+
+1. Hierzu meldet Du Dich zuerst als Benutzer ``global-admin`` ab und lokal am PC als Benutzer ``admin`` wieder an.
+
+2. Bist Du lokal als ``admin`` angemeldet, klickst Du mit der rechten Maustaste auf das Windows-Symbol unten links.
+
+3. Wähle dann in dem Kontextmenü ``Windows PowerShell(Administrator)`` aus.
+
+4. Es öffnet sich die PowerShell-Eingabekonsole von Windows mit Administrator-Berechtigungen.
+
+5. Gebe nun in der Konsole den Befehl ``defprof`` gefolgt von dem als Default-Profil zu kopierenden Profil an.
+
+6. Für den Wind10 Muster-Client bedeutet dies, dass Du ``defprof global-admin`` angibst.
+
+.. code::
+
+   c:\depfrof global-admin
+   
+7. Bei der Erstausführung müssen noch weitere Tools nachinstalliert werden. Bestätige dies mit ``Y``.
+
+8. Wurde das Profil erfolgreich als Default Profil kopiert, siehst Du folgende Meldungen:
+
+.. figure:: media/49_windows-10-clients_defprof-profil-copied.png
+   :align: center
+   :alt: Win10 Defprof profile copied
+   :width: 80%
+   
+   DefProf: profil erfolgreich kopiert
+
+9. Danach startest Du Windows neu und erstellst wie zuvor beschrieben ein neues Image für Windows.
+
 
 Zeitprobleme lösen
 ==================
@@ -619,16 +667,6 @@ Zeitprobleme lösen
 Auch wenn bereits beim Start über linbo die Systemzeit synchonisiert wird, sollte auch Windows statt der standardmäßigen Microsoft-Server im Internet den linuxmuster.net Server als NTP-Zeitserver benutzen. Dies kann z.B. per GPO (Computerkonfiguration - Administrative Vorlagen, System, Windows-Zeitdienst und Zeitanbieter) konfiguriert werden.
 
 Bei der Synchronisation zwischen Client und Server kann es zu Beginn zu Zeitabweichungen kommen.
-
-Diese sind zu beheben, indem Du auf dem linuxmuster.net Server ein Skript aufrufst, welches die NTP-Konfiguration anpasst.
-
-Öffne auf dem Server eine Konsole als Benutzer ``root`` und gebe folgenden Befehl ein:
-
-.. code::
-
-  /usr/share/linuxmuster/fix-ntp_signd-dir.sh
-  
-Es wird hierdurch das Verzeichnis für NTP Sockets auf dem Server repariert, so dass Windows Clients erfolgreich hierauf zugreifen können. Danach sollte der Zeitabgleich via NTP erfolgreich durchlaufen.
 
 .. hint:: Die Systemzeit sollte möglichst synchron mit dem Server sein, um Probleme mit der Domänenanmeldung, dem Domänenbeitritt zu vermeiden! Auch andere Dienste (z.B. WSUS, KMS, ...) machen bei großen Differenzen Probleme.
 
