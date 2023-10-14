@@ -605,9 +605,29 @@ Imageübertragung auf den PC
    :alt: Linbo Start Imaging
    :width: 50%
    
-   Starte Windows synchronisiert
+   Windows neu installieren
 
 4. Wenn das Image vollständig heruntergeladen ist, startet Windows automatisch.
+
+5. Windows kann mit LINBO nicht erfolgreich synchronisiert werden. Dies führt zu IO-Fehlern auf der Windows-Partition. In der start.conf der HWK sollte für Windows daher ggf. ``DefaultAction = new`` festgelegt werden.
+
+In der Datei ``/srv/linbo/start.conf.win10-muster-client`` (start.conf der HWK) könnten die Einstellungen für Windows wie folgt aussehen:
+
+.. figure:: media/49_windows-10-clients_start-conf-os.png
+   :align: center
+   :alt: Linbo Start.conf os settings
+   :width: 50%
+   
+   LINBO Start.conf Einstellungen für Windows
+   
+
+Bei Änderungen in der start.conf der HWK muss erneut ein Import der Geräte ausgeführt werden. Dies kann entweder in der Schulkonsole unter ``Geräteverwaltung -> Geräte -> Speichern & importieren`` erfolgen. 
+
+Alternativ kann dies auf dem Server ebenfalls wie folgt durchgeführt werden:
+
+.. code::
+
+   linuxmuster-import-devices
 
 Programminstallationen
 ======================
