@@ -236,27 +236,27 @@ Nach dem erneuten Start von Windows wählst Du Deine Region aus.
 
 28. Weitere gewünschte Einrichtungen ausführen (Programme, Hintergründe, usw.).
 
-29. Alle Updates installieren. Hierbei muss Windows immer wieder neu gestartet werden. Darauf achten, dass Windows aus LINBO heruas immer nur mit der GRÜNEN Pfeiltaste gestartet wird.
+29. Alle Updates installieren. Hierbei muss Windows immer wieder neu gestartet werden. Darauf achten, dass Windows aus LINBO heraus immer nur mit der GRÜNEN Pfeiltaste gestartet wird.
 
-29. Installation abschließen.
+30. Gewünschte Einstellungen am Client vornehmen und Installation abschließen.
 
-30. Rechner **nicht herunterfahren**, sondern unbedingt den nächsten Schritt Global Registry-Patch einspielen ausführen, ansonsten funktioniert Windows **nicht** mehr und muss neu installiert werden!!
+31. Rechner **nicht herunterfahren**, sondern unbedingt im nächsten Schritt den ``Global Registry-Patch`` einspielen, ansonsten funktioniert Windows **nicht** mehr und muss neu installiert werden!!
 
-Global-Registry für Windows 10
-------------------------------
+Global-Registry Patch für Windows 10
+------------------------------------
 
 .. ATTENTION:: Die Global-Registry-Patch-Datei ist wichtig für Windows-Maschinen und **muss** einmal ausgeführt worden sein.
 
-1. die Global Registry liegt als Vorlage auf der Server-VM in ``\\server\srv\linbo\examples`` und heißt
-``win10.global.reg`` und muss nach ``\\srv\samba\global\management\global-admin`` kopiert werden, um Sie
-dann auf dem PC anwenden zu können. Das geht z.B. über die Console der Server-VM selbst:
+1. die Global Registry liegt als Vorlage auf dem Server in ``\\server\srv\linbo\examples`` und heißt ``win10.global.reg`` und muss nach ``\\srv\samba\global\management\global-admin`` kopiert werden, um Sie dann auf dem PC anwenden zu können. Das geht z.B. über die Konsole des Servers selbst:
 
 .. code::
 
    cp /srv/linbo/examples/win10.global.reg /srv/samba/global/management/global-admin/
 
-oder auf dem Admin-PC über Putty. Dazu musst du
-a) Putty installieren und öffnen
+oder auf dem Admin-PC mitthile des SSH-Programms ``putty``. Dazu musst du
+
+a) putty installieren und öffnen
+
 b) die richtigen Verbindungsdaten eingeben:   
 
 .. figure:: media/35_windows-10-clients_putty-connection-data.png
@@ -265,10 +265,10 @@ b) die richtigen Verbindungsdaten eingeben:
    :width: 80%
    
    SSH Verbindung zum Server einrichten
-   
 
 c) und mit Open unten links verbinden
-d) für login as: root eingeben und als password das beim Setup vergeben Passwort eingeben 
+
+d) für login as: ``root`` eingeben und als password das beim Setup vergebene Passwort eingeben 
    (beim Tippen wird es nicht angezeigt)  
 
 .. figure:: media/36_windows-10-clients_login-as-root.png
@@ -298,7 +298,7 @@ f) um die Datei nun in den richtigen Ordner zu kopieren, den Befehl ``cp /srv/li
 
 g) mit Enter bestätigen. Nun wurde die Datei übertragen.
 
-h) Putty schließen 
+h) putty schließen 
 
 2. auf dem PC im Programm ``Explorer`` nun das Netzlaufwerk des Servers öffnen, indem Du in der Leiste oben ``\\server`` eingibst. Es erscheint ein neues Fenster, in dem Du aufgefordert wirst, dich am Server zu authentifizieren. Melde Dich als Benutzer ``gloabl-admin`` mit dem zugehörigen Kennwort an.
 
@@ -309,7 +309,7 @@ h) Putty schließen
    
    Melde Dich am Server als global-admin an
 
-Gebe danach erneut im Programm ``Explorer`` den Server mit ``\\server`` ein.
+Gebe danach ggf. erneut im Programm ``Explorer`` den Server mit ``\\server`` ein.
 
 .. figure:: media/39_windows-10-clients_open-net-resource.png
    :align: center
@@ -318,9 +318,9 @@ Gebe danach erneut im Programm ``Explorer`` den Server mit ``\\server`` ein.
    
    Dateizugriff auf den Server
 
-3. Du gibst ggf. die Anmeldedaten des ``global-admin`` ein. Danach öffnest Du nacheinander die Ordner ``linuxmuster-global → managament → global-admin``
+3. Du gibst dann ggf. die Anmeldedaten des ``global-admin`` ein. Danach öffnest Du nacheinander die Ordner ``linuxmuster-global → managament → global-admin``
 
-4. Hier liegt die Registry-Datei ``win10.global``. Ziehe diese via Drag & Drop auf den Desktop.
+4. Hier liegt die Registry-Datei ``win10.global.reg``. Ziehe diese via Drag & Drop auf den Desktop.
 
 .. figure:: media/40_windows-10-clients_copy-global-reg.png
    :align: center
@@ -329,9 +329,50 @@ Gebe danach erneut im Programm ``Explorer`` den Server mit ``\\server`` ein.
    
    Kopiere die REG-Datei auf den Desktop
 
-5. Führe nun einen Doppelklick auf die Datei win10.global.reg aus. Lasse Änderungen durch diese App zu.
+5. In der Datei ``win10.gloabl.reg`` musst Du jetzt noch Deine SAMBADOMAIN in der Datei eintragen. Öffne dazu die Datei auf dem client im Editor.
 
-6. Evtl. weitere gewünschte System-Einrichtungen für die Vorlage vornehmen.
+.. figure:: media/40_windows-10-clients_edit-global-reg.png
+   :align: center
+   :alt: Win10 Edit Global Registry File
+   :width: 80%
+   
+   Editiere die global.reg Datei auf dem Desktop
+   
+Suche in der Datei den Abschnitt ``; samba domain, to be adapted``.
+In diesem Abschnitt findest Du folgende Zeilen:
+
+.. code::
+
+   "DefaultLogonDomain"="SAMBADOMAIN"
+   ...
+   "Domain"="SAMBADOMAIN"
+   "NV Domain"="SAMBADOMAIN"
+
+Den Eintrag ``SAMBADOMAIN`` musst Du durch Deine beim Setup festgelegte Domäne ersetzen. Hierzu gibst Du den FQDN an. Hattest Du z.B. während der Installation ``gshoenningen.linuxmuster.lan`` gewählt, so gibst Du hier diesen FQDN an. 
+
+Solltest Du Dir unsicher sein, kannst Du auf dem Server folgenden Befehl absetzen, um die SAMBADOMAIN nachzuschlagen:
+
+.. code::
+
+   less /etc/samba/smb.conf | grep realm
+   
+Gib den der Variablen ``realm =`` zugewiesenen Wert hier an.
+
+Für o.g. Beispiel müssten die Eintragen wie folgt angepasst werden:
+
+.. code::
+
+   "DefaultLogonDomain"="GSHOENNINGEN.LINUXMUSTER.LAN"
+   ...
+   "Domain"="GSHOENNINGEN.LINUXMUSTER.LAN"
+   ...
+   "NV Domain"="GSHOENNINGEN.LINUXMUSTER.LAN"
+
+Speichere die angepasste Datei ab. Die Eintragungen sollten dann wie in o.g. Abbildung aussehen - nur mit Deiner SAMBADOMAIN.
+
+6. Führe nun einen Doppelklick auf die Datei ``win10.global.reg`` auf dem Desktop aus. Lasse Änderungen durch diese App zu.
+
+7. Nehme ggf. weitere gewünschte System-Einrichtungen vor.
 
 7. Zum Herunterfahren vorsichtshalber über das Windows-Startmenü in der Suche ``cmd`` eingeben und die Eingabeaufforderung öffnen.
 
@@ -354,10 +395,9 @@ Gebe danach erneut im Programm ``Explorer`` den Server mit ``\\server`` ein.
 Domänenanbindung
 ================
 
-Geräte die dauerhaft mit den Ressourcen der linuxmuster.net-Umgebung arbeiten sollen, sind nun in der Domäne aufzunehmen. Um Geräte richtig in das AD einzuordnen,
-sollten diese, wie weiter oben erklärt, zuerst in linuxmuster.net über die MAC mit richtigen Einstellungen aufgenommen worden sein.
+Geräte die dauerhaft mit den Ressourcen der linuxmuster.net Umgebung arbeiten sollen, sind nach dem Einspielen des ``win10-global.reg`` Patches in der Domäne aufzunehmen.
 
-Starte den Muster-Client wieder via LINBO, indem Du Win10 mit dem GÜNEN Start-Button aus dem lokalen Cache startest.
+Starte den Muster-Client wieder via LINBO, indem Du Win10 mit dem GRÜNEN Start-Button aus dem lokalen Cache startest.
 
 .. figure:: media/42_windows-10-client_start_from_cache.png
    :align: center
@@ -369,7 +409,7 @@ Starte den Muster-Client wieder via LINBO, indem Du Win10 mit dem GÜNEN Start-B
 Manueller Domänen Join für Windows
 ----------------------------------
 
-1. Über ``System → Info → Diesen PC umbenennen`` einen Hostname vergeben, der übereinstimmend mit Namen in der Gerätelisteist ist.
+1. Über ``System → Info → Diesen PC umbenennen`` einen Hostname vergeben, der *übereinstimmend* mit dem Hostnamen in der Gerätelististe ist.
 
 .. figure:: media/43_windows-10-clients_rename-client.png
    :align: center
@@ -454,7 +494,7 @@ Es muss nach diesem Domänenbeitritt ein Muster-Image erstellt werden.
 LINBO Muster-Image mit Domänenbeitritt
 ======================================
 
-Nachdem der Muster-client mit Windows 10 - wie zuvor beschrieben - der Domäne hinzugefügt wurde, erstellst Du jetzt ein Image für den Muster-Client. Wird dieses Image auf andere Maschinen übertragen, so sind diese bereits in der Domäne aufgenommen.
+Nachdem der Muster-client mit Windows 10 - wie zuvor beschrieben - der Domäne hinzugefügt wurde, erstellst Du **jetzt** ein Image für den Muster-Client. Wird dieses Image auf andere Maschinen übertragen, so sind diese bereits in der Domäne aufgenommen.
 
 Hierbei ist es notwenig, das für das Image in der Registry, den Namen der PCs jeweils automatisch anzupassen, da sonst jeder PC, der das Image kopiert, den selben Rechnernamen hätte.
 
@@ -466,7 +506,7 @@ Hierbei ist es notwenig, das für das Image in der Registry, den Namen der PCs j
 Image in LINBO erstellen
 ------------------------
 
-1. Jetzt wieder in LINBO starten und von dem aktuellem Stand ein Image erstellen. Klicke rechts auf das Werkzeug-Symbol. Gib das Linbo-Passwort ein, dann siehst Du folgende Einträge:
+1. Jetzt wieder in LINBO starten und von dem aktuellem Stand ein Image erstellen. Klicke rechts auf das Werkzeug-Symbol. Gib das LINBO-Passwort ein, dann siehst Du folgende Einträge:
 
 .. figure:: media/45_windows-10-clients_linbo-create-image.png
    :align: center
@@ -484,7 +524,7 @@ Image in LINBO erstellen
    
    Image erstellen 
 
-Gib eine Beschreibung an, die Dir Hinweise zum Konfigurationsstand des Images gibt. Da Du das erste Image erstellst, klicke nun ``erstellen + hochladen``.
+Gib eine Beschreibung an, die Dir Hinweise zum Konfigurationsstand des Images gibt. Da Du das erste Image erstellst, klickst Du nun ``erstellen + hochladen``.
 
 Nach dem erfolgreichen Upload siehst Du folgende Statusmeldung:
 
@@ -495,7 +535,7 @@ Nach dem erfolgreichen Upload siehst Du folgende Statusmeldung:
    
    Image erfolgreich hochgeladen
 
-3. Nach dem erfolgreichem Upload sollte das Image auf der Linuxmuster.net-Schulkonsole unter ``LINBO4 → Gruppen`` angezeigt werden.
+3. Nach dem erfolgreichem Upload sollte das Image auf der linuxmuster.net Schulkonsole unter ``LINBO4 → Gruppen`` angezeigt werden.
 
 .. figure:: media/46b_windows-10-image-school-console.png
    :align: center
@@ -522,7 +562,7 @@ Falls der Gruppe anfangs kein Basisimage zugeordnet war, sollte das unter ``Grou
    
    Basisimage für die HWK festlegen
 
-4. Einem Image muss ein sog. Registry-Patch angegeben werden: Wähle dazu das gewünschte Image aus. Klicke hierzu auf ``LINBO 4 --> Abbilder --> <Name des Images>``. Klicke rechts neben dem Imagenamen auf das Zahnrad-Symbol. Gehe dort zur Reiterkarte ``Registry-Patch``.
+4. Einem Image muss ein sog. Image-Registry-Patch angegeben werden: Wähle dazu das gewünschte Image aus. Klicke hierzu auf ``LINBO 4 --> Abbilder --> <Name des Images>``. Klicke rechts neben dem Imagenamen auf das Zahnrad-Symbol. Gehe dort zur Reiterkarte ``Registry-Patch``.
 
 Klicke nun unten auf die Drop-down Liste ``Copy from``. Es werden verschiedene Reg-Patches in der Dropdown-Liste dargestellt.
 
@@ -543,39 +583,9 @@ Klicke nun unten auf die Drop-down Liste ``Copy from -> win10.image.reg``. Es wi
    
    Kopiere und speichere den Registry-Patch
    
-Speichere diesen kopierten Registry-Patch für das Windows 10 Image, indem Du direkt auf ``SPEICHERN`` klickst. 
+Speichere diesen kopierten Registry-Patch für das Windows 10 Image, indem Du direkt auf ``SPEICHERN`` klickst.
 
-5. Alternativ in der Server-Shell aus ``/srv/linbo/examples`` die richtige Vorlage in ``/srv/linbo`` kopieren. Die Datei trägt dann den Namen ``<imagename>.reg`` - also in o.g. Beispiel win10.reg. 
-
-6. Danach rufst Du für das Image erneut das Zahnrad-Symbol für die Einstellungen auf und gehst auf die Reiterkarte ``Registry Patch``. In Zeile 30 musst Du noch Folgendes ergänzen:
-
-.. code::
-
-   ;setzt den Domänennamen richtig
-   [HKEY_LOCAL_MACHINE\System\ControlSet001\Services\Tcpip\Parameters]
-   "Domain"="<SAMBADOMAIN>"
-   [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
-   "DefaultLogonDomain"="<SAMBADOMAIN>"
-
-Hier <SAMBADOMAIN> durch den zuvor festgelegten Namen der Samba_Domäne ersetzen. Hattest Du z.B. während der Installation ``gshoenningen.linuxmuster.lan`` gewählt, so gibst Du hier diesen FQDN an. 
-
-.. figure:: media/47_windows-10-clients_linbo-indicate-registry-patch.png
-   :align: center
-   :alt: Linbo Indicate Registry Patch
-   :width: 80%
-   
-   Registry-Patch editieren
-
-Übernehme die Eintragungen mit ``SPEICHERN``.
-
-Solltest Du Dir unsicher sein, kannst Du auf dem Server folgenden Befehl absetzen, um die SAMBADOMAIN nachzuschlagen:
-
-.. code::
-
-   less /etc/samba/smb.conf | grep realm
-   
-Gib den der Variablen ``realm =`` zugewiesenen Wert hier an.
-
+5. *Alternativ* kannst Du in der Server-Shell aus ``/srv/linbo/examples`` die richtige Vorlage in ``/srv/linbo/`` kopieren. Die Datei trägt dann den Namen ``<imagename>.reg`` - also in o.g. Beispiel win10.reg. 
 
 Imageübertragung auf den PC
 ---------------------------
@@ -588,12 +598,12 @@ Imageübertragung auf den PC
 
 2. Als nächstes partitionierst und formatierst Du den PC über den LINBO-Menüeintrag ``Partitionieren`` wie zuvor beschrieben.
 
-3. Wechsel nun auf dem Imaging-Menü wieder in das Startmenü von LINBO. Klicke hier das rote Symbol, um Windows neu zu installieren.
+3. Wechsel nun auf dem Imaging-Menü wieder in das Startmenü von LINBO. Klicke hier das ``ROTE`` Symbol (Windows neu installieren), um Windows neu zu installieren.
 
 .. figure:: media/49_windows-10-clients_linbo-start-imaging.png
    :align: center
    :alt: Linbo Start Imaging
-   :width: 80%
+   :width: 50%
    
    Starte Windows synchronisiert
 
@@ -611,7 +621,7 @@ Starte den PC neu, ohne danach neu zu sychronisieren. Führe danach nachstehende
 Default Profil kopieren
 =======================
 
-linuxmuster.net sieht vor, dass **Programminstallationen von global-admin** durchgeführt werden. Damit alle User die bei der Installation vorgenommenen Änderungen bekommen, muss das Profil des ``global-admin`` nach "Default" kopiert werden. 
+linuxmuster.net sieht vor, dass **Programminstallationen von global-admin** durchgeführt werden. Damit alle User die bei der Installation vorgenommenen Änderungen bekommen, muss das Profil des ``global-admin`` als ``Default`` Profil kopiert werden. 
 
 Dies kann mit dem dem freien Tool ``DefProf`` durchgeführt werden. Das Tool kann hier heruntergeladen werden: https://www.forensit.com/Downloads/DefProf.msi
 
@@ -641,7 +651,7 @@ Hierzu führst Du folgende Schritte aus:
 
 5. Gebe nun in der Konsole den Befehl ``defprof`` gefolgt von dem als Default-Profil zu kopierenden Profil an.
 
-6. Für den Wind10 Muster-Client bedeutet dies, dass Du ``defprof global-admin`` angibst.
+6. Für den Windows 10 Muster-Client bedeutet dies, dass Du ``defprof global-admin`` angibst.
 
 .. code::
 
@@ -664,16 +674,10 @@ Hierzu führst Du folgende Schritte aus:
 Zeitprobleme lösen
 ==================
 
-Auch wenn bereits beim Start über linbo die Systemzeit synchonisiert wird, sollte auch Windows statt der standardmäßigen Microsoft-Server im Internet den linuxmuster.net Server als NTP-Zeitserver benutzen. Dies kann z.B. per GPO (Computerkonfiguration - Administrative Vorlagen, System, Windows-Zeitdienst und Zeitanbieter) konfiguriert werden.
+Auch wenn bereits beim Start über LINBO die Systemzeit synchonisiert wird, sollte auch Windows statt der standardmäßigen Microsoft-Server im Internet den linuxmuster.net Server als NTP-Zeitserver benutzen. Dies kann z.B. per GPO (``Computerkonfiguration -> Administrative Vorlagen -> System -> Windows-Zeitdienst -> Zeitanbieter``) konfiguriert werden.
 
 Bei der Synchronisation zwischen Client und Server kann es zu Beginn zu Zeitabweichungen kommen.
 
 .. hint:: Die Systemzeit sollte möglichst synchron mit dem Server sein, um Probleme mit der Domänenanmeldung, dem Domänenbeitritt zu vermeiden! Auch andere Dienste (z.B. WSUS, KMS, ...) machen bei großen Differenzen Probleme.
-
-
-  
-  
-
-
 
 
