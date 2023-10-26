@@ -240,12 +240,44 @@ Nach dem erneuten Start von Windows wählst Du Deine Region aus.
 
 30. Gewünschte Einstellungen am Client vornehmen und Installation abschließen.
 
-31. Rechner **nicht herunterfahren**, sondern unbedingt im nächsten Schritt den ``Global Registry-Patch`` einspielen, ansonsten funktioniert Windows **nicht** mehr und muss neu installiert werden!!
 
 Global-Registry Patch für Windows 10
 ------------------------------------
 
-.. ATTENTION:: Die Global-Registry-Patch-Datei ist wichtig für Windows-Maschinen und **muss** einmal ausgeführt worden sein.
+.. ATTENTION:: Vor der Aufnahme des Rechners in die Domäne muss der sog. ``Global-Registry-Patch`` eingespielt werden, da es ansonsten zu einer Änderung des Kennworts für das Computerkonto kommen kann.
+
+Dies kann auf zwei Arten erfolgen:
+
+Variante A
+^^^^^^^^^^
+
+1. Starte auf dem Client Windows in LINBO mit der grünen Pfeiltaste.
+
+2. Melde Dich als lokaler Administrator am Windows-PC an.
+
+3. Öffen den Explorer und gehe auf ``Dieser PC -> Geräte und Laufwerke -> windows (C:) -> linuxmuster-win``
+
+.. figure:: media/35_windows-10-clients_linuxmuster-win.png
+   :align: center
+   :alt: linuxmuster-win
+   :width: 80%
+   
+   Öffne den Ordner c:\\linuxmuster-win\\
+
+4. Bestätige die Nachfrage zur Berechtigung zum Zugriff auf diesen Ordner mit ``Fortsetzen``.
+
+5. Kopiere die Datei ``win10.global`` auf den Desktop, indem Du diese mit der linken Maustaste markierst und auf den Desktop ziehst.
+
+.. figure:: media/35_windows-10-clients_linuxmuster-win-win10-global.png
+   :align: center
+   :alt: linuxmuster-win-win10-global
+   :width: 80%
+   
+   Kopiere die Datei win10.global auf den Desktop
+   
+
+Variante B
+^^^^^^^^^^
 
 1. Die Global-Registry-Patch-Datei liegt als Vorlage auf dem Server in ``\\server\srv\linbo\examples`` und heißt ``win10.global.reg``. Diese muss auf den Client kopiert, angepasst und auf dem Client eingespielt werden.
 
@@ -329,7 +361,10 @@ f) Kopiere die Datei ``win10.global.reg`` auf den Desktop, in dem Du diese mit d
 
 g) Schließe WinSCP wieder.
 
-2. Die Datei ``win10.global.reg`` befindet sich nun auf dem Desktop Deines Win10-Clients.
+Win10.global.reg anpassen
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Die Datei ``win10.global.reg`` befindet sich nun auf dem Desktop Deines Win10-Clients.
 
 .. figure:: media/39_windows-10-clients_global-reg-file-desktop.png
    :align: center
@@ -338,7 +373,7 @@ g) Schließe WinSCP wieder.
    
    Du findest nun die Datei win10.global.reg auf dem Desktop
 
-3. In der Datei ``win10.gloabl.reg`` musst Du jetzt noch Deine SAMBADOMAIN in der Datei eintragen. Öffne dazu die Datei auf dem Client in einem Editor (z.B. notepad++).
+In der Datei ``win10.gloabl.reg`` musst Du jetzt noch Deine SAMBADOMAIN in der Datei eintragen. Öffne dazu die Datei auf dem Client in einem Editor (z.B. notepad++).
 
 .. figure:: media/40_windows-10-clients_edit-global-reg.png
    :align: center
@@ -379,11 +414,14 @@ Für o.g. Beispiel müssten die Eintragen wie folgt angepasst werden:
 
 Speichere die angepasste Datei ab. Die Eintragungen sollten dann wie in o.g. Abbildung aussehen - nur mit Deiner SAMBADOMAIN.
 
-4. Führe nun einen Doppelklick auf die Datei ``win10.global.reg`` auf dem Desktop aus. Lasse Änderungen durch diese App zu.
+win10.global.reg einspielen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-5. Nehme ggf. weitere gewünschte System-Einrichtungen vor.
+Führe nun einen Doppelklick auf die Datei ``win10.global.reg`` auf dem Desktop aus. Lasse Änderungen durch diese App zu.
 
-6. Zum Herunterfahren vorsichtshalber über das Windows-Startmenü in der Suche ``cmd`` eingeben und die Eingabeaufforderung öffnen.
+Nehme ggf. weitere gewünschte System-Einrichtungen vor.
+
+Zum Herunterfahren vorsichtshalber über das Windows-Startmenü in der Suche ``cmd`` eingeben und die Eingabeaufforderung öffnen.
 
 .. figure:: media/41_windows-10-clients_open-terminal.png
    :align: center
@@ -392,7 +430,7 @@ Speichere die angepasste Datei ab. Die Eintragungen sollten dann wie in o.g. Abb
    
    Öffne das Windows-Terminal
 
-7. In der Console ``shutdown -s -t 1`` eingeben und mit ``Enter`` bestätigen:
+In der Console ``shutdown -s -t 1`` eingeben und mit ``Enter`` bestätigen:
 
 .. figure:: media/42_windows-10-clients_shutdown-windows-device.png
    :align: center
@@ -418,7 +456,7 @@ Starte den Muster-Client wieder via LINBO, indem Du Win10 mit dem GRÜNEN Start-
 Manueller Domänen Join für Windows
 ----------------------------------
 
-1. Über ``System → Info → Diesen PC umbenennen`` einen Hostname vergeben, der *übereinstimmend* mit dem Hostnamen in der Gerätelististe ist.
+Über ``System → Info → Diesen PC umbenennen`` einen Hostname vergeben, der *übereinstimmend* mit dem Hostnamen in der Gerätelististe ist.
 
 .. figure:: media/43_windows-10-clients_rename-client.png
    :align: center
@@ -498,14 +536,14 @@ Der PC bootet nun wieder in LINBO.
 
    Starte Windows 10 nun **NICHT** neu !
 
-Es muss nach diesem Domänenbeitritt ein Muster-Image erstellt werden.
+Es **muss** nach diesem Domänenbeitritt ein Muster-Image erstellt werden.
 
 LINBO Muster-Image mit Domänenbeitritt
-======================================
+--------------------------------------
 
-Nachdem der Muster-client mit Windows 10 - wie zuvor beschrieben - der Domäne hinzugefügt wurde, erstellst Du **jetzt** ein Image für den Muster-Client. Wird dieses Image auf andere Maschinen übertragen, so sind diese bereits in der Domäne aufgenommen.
+Nachdem der Muster-Client mit Windows 10 - wie zuvor beschrieben - der Domäne hinzugefügt wurde, erstellst Du **jetzt** ein Image für den Muster-Client. Wird dieses Image auf andere Maschinen übertragen, so sind diese bereits in der Domäne aufgenommen.
 
-Hierbei ist es notwenig, das für das Image in der Registry, den Namen der PCs jeweils automatisch anzupassen, da sonst jeder PC, der das Image kopiert, den selben Rechnernamen hätte.
+Hierbei ist es notwenig, den Namen der PCs jeweils automatisch in der Registry anzupassen, da sonst jeder PC, der das Image kopiert, den selben Rechnernamen hätte.
 
 .. hint::
 
@@ -639,7 +677,7 @@ Alternativ kann dies auf dem Server ebenfalls wie folgt durchgeführt werden:
    linuxmuster-import-devices
 
 Programminstallationen
-======================
+----------------------
 
 Hast Du wie zuvor beschrieben, den Client synchronisiert gestartet, meldest Du Dich als Benutzer ``global-admin`` an der Domäne an.
 
@@ -648,7 +686,7 @@ Installiere die gewünschten Programme und konfiguriere die benötigten Programm
 Starte den PC neu, ohne danach neu zu sychronisieren. Führe danach nachstehenden Abschnitt aus.
 
 Default Profil kopieren
-=======================
+-----------------------
 
 linuxmuster.net sieht vor, dass **Programminstallationen von global-admin** durchgeführt werden. Damit alle User die bei der Installation vorgenommenen Änderungen bekommen, muss das Profil des ``global-admin`` als ``Default`` Profil kopiert werden. 
 
@@ -701,7 +739,7 @@ Hierzu führst Du folgende Schritte aus:
 
 
 Zeitprobleme lösen
-==================
+------------------
 
 Auch wenn bereits beim Start über LINBO die Systemzeit synchonisiert wird, sollte auch Windows statt der standardmäßigen Microsoft-Server im Internet den linuxmuster.net Server als NTP-Zeitserver benutzen. Dies kann z.B. per GPO (``Computerkonfiguration -> Administrative Vorlagen -> System -> Windows-Zeitdienst -> Zeitanbieter``) konfiguriert werden.
 
