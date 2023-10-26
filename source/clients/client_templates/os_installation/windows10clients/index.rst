@@ -247,89 +247,98 @@ Global-Registry Patch für Windows 10
 
 .. ATTENTION:: Die Global-Registry-Patch-Datei ist wichtig für Windows-Maschinen und **muss** einmal ausgeführt worden sein.
 
-1. die Global Registry liegt als Vorlage auf dem Server in ``\\server\srv\linbo\examples`` und heißt ``win10.global.reg`` und muss nach ``\\srv\samba\global\management\global-admin`` kopiert werden, um Sie dann auf dem PC anwenden zu können. Das geht z.B. über die Konsole des Servers selbst:
+1. Die Global-Registry-Patch-Datei liegt als Vorlage auf dem Server in ``\\server\srv\linbo\examples`` und heißt ``win10.global.reg``. Diese muss auf den Client kopiert, angepasst und auf dem Client eingespielt werden.
 
-.. code::
+Gehe wie folgt dabei vor:
 
-   cp /srv/linbo/examples/win10.global.reg /srv/samba/global/management/global-admin/
+a) Installiere Dir zuerst auf dem Windows-Client das freie Programm WinSCP (Freeware). 
+Dieses kannst Du hier herunterladen: https://winscp.net/download/WinSCP-6.1.2-Setup.exe
 
-oder auf dem Admin-PC mitthile des SSH-Programms ``putty``. Dazu musst du
-
-a) putty installieren und öffnen
-
-b) die richtigen Verbindungsdaten eingeben:   
-
-.. figure:: media/35_windows-10-clients_putty-connection-data.png
+.. figure:: media/35_windows-10-clients_winscp-download.png
    :align: center
-   :alt: Putty Connection Data
+   :alt: winscp download
    :width: 80%
    
-   SSH Verbindung zum Server einrichten
+   WinSCP herunterladen
 
-c) und mit Open unten links verbinden
+b) Überprüfe, ob die Prüfsumme des heruntergeladenen Programms korrekt ist, um sicherzustellen, dass Du keine kompromittierte Version heruntergeladen hast. 
+Die korrekten SHA-Prüfsummen des Zertifikats für WinSCP sind:
 
-d) für login as: ``root`` eingeben und als password das beim Setup vergebene Passwort eingeben 
-   (beim Tippen wird es nicht angezeigt)  
-
-.. figure:: media/36_windows-10-clients_login-as-root.png
+.. figure:: media/35_windows-10-clients_checksum-sha.png
    :align: center
-   :alt: Win10 Login As Root
+   :alt: winscp checksum
+   :width: 60%
+   
+   Prüfsummen von WinSCP
+   
+Führe auf die heruntergeladene Datei einen Rechtsklick aus und klicke auf ``Eigenschaften``.
+
+.. figure:: media/35_windows-10-clients_winscp-file-properties.png
+   :align: center
+   :alt: winscp file properties
+   :width: 60%
+   
+   WinSCP: Eigenschaften der heruntergeladenen Datei
+   
+Klicke nun auf die Reiterkarte ``Digitale Dignaturen``, markiere den Digestalgorithmus SHA-256 in der Signaturliste und klicke auf ``Details``. Klicke dann auf ``Zertifikat anzeigen`` und im nächsten Fenster auf die Reiterkarte ``Details``. Gehe in der Liste mit den Feldern bis zu dem Eintrag ``Fingerabdruck``. Der hier angezeigte Wert muss mit dem auf dem Bild dargestellten übereinstimmen.
+
+.. figure:: media/35_windows-10-clients_winscp-signatur-fingerprint.png
+   :align: center
+   :alt: winscp signature fingerprint
    :width: 80%
    
-   Anmelden als Benutzer root
+   WinSCP: Fingerprint der Signatur prüfen
 
-e) und mit Enter bestätigen, dann sollte sich ähnliche Darstellung zeigen:
+Stimmt diese überein, so führe die Installation durch. Wähle während die Installation die Commander - Oberfläche aus.
 
-.. figure:: media/37_windows-10-clients_confirm-config-data.png
+c) Öffne nun das Programm WinSCP. Es erscheint direkt ein Anmeldefenster. Trage hier folgende Werte ein:
+
+.. figure:: media/35_windows-10-clients_winscp-logon-windows.png
    :align: center
-   :alt: Win10 Confirm Config Data
+   :alt: winscp logon windows
    :width: 80%
    
-   Erfolgreiche Anmeldung via SSH
+   WinSCP: Anmeldefenster
 
-f) um die Datei nun in den richtigen Ordner zu kopieren, den Befehl ``cp /srv/linbo/examples/win10.global.reg /srv/samba/global/management/global-admin/`` eingeben.
+d) Klicke danach auf ``anmelden``. Bei der ersten Anmeldung erhälst Du noch ein Hinweisfenster zu dem Hostschlüssel des Servers. Klicke hier auf ``Ja``, um diesen im Speicher abzulegen.
 
-.. figure:: media/38_windows-10-clients_move-global-reg.png
+.. figure:: media/36_windows-10-clients_winscp-host-key.png
    :align: center
-   :alt: Win10 Move Global reg
+   :alt: winscp host key
+   :width: 60%
+   
+   Nehme den Hostschlüssel des Servers bei der ersten Anmeldung an
+
+e) Klicke nun im rechten Fenster, in dem der Inhalt des Servers dargestellt wird auf ``/srv/linbo/examples/``. Wähle hier - wie in der Abb. markiert - die Datei ``win10.global.reg`` aus. Klicke links in dem Fenster, in dem der Inhalt Deines Win10-Clients dargestellt wird auf ``c:\users\global-admin\Desktop\``. 
+
+.. figure:: media/37_windows-10-clients_winscp-choose-directories.png
+   :align: center
+   :alt: winscp choose directories
    :width: 80%
    
-   Befehl um die REG-Datei zu kopieren
+   WinSCP: Verzeichnisse auswählen
 
-g) mit Enter bestätigen. Nun wurde die Datei übertragen.
+f) Kopiere die Datei ``win10.global.reg`` auf den Desktop, in dem Du diese mit der linken Maustaste in WinSCP aus dem rechten Fenster in das linke Fenster ziehst. Danach erhälst Du die Rückfrage, ob Du die Datei wirklich herunterladen möchtest:
 
-h) putty schließen 
-
-2. auf dem PC im Programm ``Explorer`` nun das Netzlaufwerk des Servers öffnen, indem Du in der Leiste oben ``\\server`` eingibst. Es erscheint ein neues Fenster, in dem Du aufgefordert wirst, dich am Server zu authentifizieren. Melde Dich als Benutzer ``gloabl-admin`` mit dem zugehörigen Kennwort an.
-
-.. figure:: media/39_windows-10-clients_open-net-resource-login.png
+.. figure:: media/38_windows-10-clients_winscp-copy-global-reg-file.png
    :align: center
-   :alt: Win10 Open Network Resource Login
-   :width: 50%
-   
-   Melde Dich am Server als global-admin an
-
-Gebe danach ggf. erneut im Programm ``Explorer`` den Server mit ``\\server`` ein.
-
-.. figure:: media/39_windows-10-clients_open-net-resource.png
-   :align: center
-   :alt: Win10 Open Network Resource
+   :alt: winscp copy global reg file
    :width: 80%
    
-   Dateizugriff auf den Server
+   Bestätige das Kopieren der Datei auf den Desktop mit OK
 
-3. Du gibst dann ggf. die Anmeldedaten des ``global-admin`` ein. Danach öffnest Du nacheinander die Ordner ``linuxmuster-global → managament → global-admin``
+g) Schließe WinSCP wieder.
 
-4. Hier liegt die Registry-Datei ``win10.global.reg``. Ziehe diese via Drag & Drop auf den Desktop.
+2. Die Datei ``win10.global.reg`` befindet sich nun auf dem Desktop Deines Win10-Clients.
 
-.. figure:: media/40_windows-10-clients_copy-global-reg.png
+.. figure:: media/39_windows-10-clients_global-reg-file-desktop.png
    :align: center
-   :alt: Win10 Copy Global Registry File
-   :width: 80%
+   :alt: global reg file desktop
+   :width: 15%
    
-   Kopiere die REG-Datei auf den Desktop
+   Du findest nun die Datei win10.global.reg auf dem Desktop
 
-5. In der Datei ``win10.gloabl.reg`` musst Du jetzt noch Deine SAMBADOMAIN in der Datei eintragen. Öffne dazu die Datei auf dem client im Editor.
+3. In der Datei ``win10.gloabl.reg`` musst Du jetzt noch Deine SAMBADOMAIN in der Datei eintragen. Öffne dazu die Datei auf dem Client in einem Editor (z.B. notepad++).
 
 .. figure:: media/40_windows-10-clients_edit-global-reg.png
    :align: center
@@ -338,7 +347,7 @@ Gebe danach ggf. erneut im Programm ``Explorer`` den Server mit ``\\server`` ein
    
    Editiere die global.reg Datei auf dem Desktop
    
-Suche in der Datei den Abschnitt ``; samba domain, to be adapted``.
+Suche in der Datei den Abschnitt ``; samba domain, to be adapted`` bzw. ``SAMBADOMAIN``.
 In diesem Abschnitt findest Du folgende Zeilen:
 
 .. code::
@@ -370,20 +379,20 @@ Für o.g. Beispiel müssten die Eintragen wie folgt angepasst werden:
 
 Speichere die angepasste Datei ab. Die Eintragungen sollten dann wie in o.g. Abbildung aussehen - nur mit Deiner SAMBADOMAIN.
 
-6. Führe nun einen Doppelklick auf die Datei ``win10.global.reg`` auf dem Desktop aus. Lasse Änderungen durch diese App zu.
+4. Führe nun einen Doppelklick auf die Datei ``win10.global.reg`` auf dem Desktop aus. Lasse Änderungen durch diese App zu.
 
-7. Nehme ggf. weitere gewünschte System-Einrichtungen vor.
+5. Nehme ggf. weitere gewünschte System-Einrichtungen vor.
 
-7. Zum Herunterfahren vorsichtshalber über das Windows-Startmenü in der Suche ``cmd`` eingeben und die Eingabeaufforderung öffnen.
+6. Zum Herunterfahren vorsichtshalber über das Windows-Startmenü in der Suche ``cmd`` eingeben und die Eingabeaufforderung öffnen.
 
 .. figure:: media/41_windows-10-clients_open-terminal.png
    :align: center
    :alt: Win10 Open Terminal
-   :width: 80%
+   :width: 50%
    
    Öffne das Windows-Terminal
 
-8. In der Console ``shutdown -s -t 1`` eingeben und mit ``Enter`` bestätigen:
+7. In der Console ``shutdown -s -t 1`` eingeben und mit ``Enter`` bestätigen:
 
 .. figure:: media/42_windows-10-clients_shutdown-windows-device.png
    :align: center
