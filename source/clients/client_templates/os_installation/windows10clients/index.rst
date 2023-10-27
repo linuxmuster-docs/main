@@ -246,11 +246,6 @@ Global-Registry Patch für Windows 10
 
 .. ATTENTION:: Vor der Aufnahme des Rechners in die Domäne muss der sog. ``Global-Registry-Patch`` eingespielt werden, da es ansonsten zu einer Änderung des Kennworts für das Computerkonto kommen kann.
 
-Dies kann auf zwei Arten erfolgen:
-
-Variante A
-^^^^^^^^^^
-
 1. Starte auf dem Client Windows in LINBO mit der grünen Pfeiltaste.
 
 2. Melde Dich als lokaler Administrator am Windows-PC an.
@@ -274,145 +269,12 @@ Variante A
    :width: 80%
    
    Kopiere die Datei win10.global auf den Desktop
-   
 
-Variante B
-^^^^^^^^^^
+Danach setzt Du die Installation mit dem Abschnitt :ref:`win10.global.reg einspielen` einspielen fort.
 
-1. Die Global-Registry-Patch-Datei liegt als Vorlage auf dem Server in ``\\server\srv\linbo\examples`` und heißt ``win10.global.reg``. Diese muss auf den Client kopiert, angepasst und auf dem Client eingespielt werden.
+Im Fehlerfall gehst Du zu dem Abschnitt :ref:`im Fehlerfall`
 
-Gehe wie folgt dabei vor:
-
-a) Installiere Dir zuerst auf dem Windows-Client das freie Programm WinSCP (Freeware). 
-Dieses kannst Du hier herunterladen: https://winscp.net/download/WinSCP-6.1.2-Setup.exe
-
-.. figure:: media/35_windows-10-clients_winscp-download.png
-   :align: center
-   :alt: winscp download
-   :width: 80%
-   
-   WinSCP herunterladen
-
-b) Überprüfe, ob die Prüfsumme des heruntergeladenen Programms korrekt ist, um sicherzustellen, dass Du keine kompromittierte Version heruntergeladen hast. 
-Die korrekten SHA-Prüfsummen des Zertifikats für WinSCP sind:
-
-.. figure:: media/35_windows-10-clients_checksum-sha.png
-   :align: center
-   :alt: winscp checksum
-   :width: 60%
-   
-   Prüfsummen von WinSCP
-   
-Führe auf die heruntergeladene Datei einen Rechtsklick aus und klicke auf ``Eigenschaften``.
-
-.. figure:: media/35_windows-10-clients_winscp-file-properties.png
-   :align: center
-   :alt: winscp file properties
-   :width: 60%
-   
-   WinSCP: Eigenschaften der heruntergeladenen Datei
-   
-Klicke nun auf die Reiterkarte ``Digitale Dignaturen``, markiere den Digestalgorithmus SHA-256 in der Signaturliste und klicke auf ``Details``. Klicke dann auf ``Zertifikat anzeigen`` und im nächsten Fenster auf die Reiterkarte ``Details``. Gehe in der Liste mit den Feldern bis zu dem Eintrag ``Fingerabdruck``. Der hier angezeigte Wert muss mit dem auf dem Bild dargestellten übereinstimmen.
-
-.. figure:: media/35_windows-10-clients_winscp-signatur-fingerprint.png
-   :align: center
-   :alt: winscp signature fingerprint
-   :width: 80%
-   
-   WinSCP: Fingerprint der Signatur prüfen
-
-Stimmt diese überein, so führe die Installation durch. Wähle während die Installation die Commander - Oberfläche aus.
-
-c) Öffne nun das Programm WinSCP. Es erscheint direkt ein Anmeldefenster. Trage hier folgende Werte ein:
-
-.. figure:: media/35_windows-10-clients_winscp-logon-windows.png
-   :align: center
-   :alt: winscp logon windows
-   :width: 80%
-   
-   WinSCP: Anmeldefenster
-
-d) Klicke danach auf ``anmelden``. Bei der ersten Anmeldung erhälst Du noch ein Hinweisfenster zu dem Hostschlüssel des Servers. Klicke hier auf ``Ja``, um diesen im Speicher abzulegen.
-
-.. figure:: media/36_windows-10-clients_winscp-host-key.png
-   :align: center
-   :alt: winscp host key
-   :width: 60%
-   
-   Nehme den Hostschlüssel des Servers bei der ersten Anmeldung an
-
-e) Klicke nun im rechten Fenster, in dem der Inhalt des Servers dargestellt wird auf ``/srv/linbo/examples/``. Wähle hier - wie in der Abb. markiert - die Datei ``win10.global.reg`` aus. Klicke links in dem Fenster, in dem der Inhalt Deines Win10-Clients dargestellt wird auf ``c:\users\global-admin\Desktop\``. 
-
-.. figure:: media/37_windows-10-clients_winscp-choose-directories.png
-   :align: center
-   :alt: winscp choose directories
-   :width: 80%
-   
-   WinSCP: Verzeichnisse auswählen
-
-f) Kopiere die Datei ``win10.global.reg`` auf den Desktop, in dem Du diese mit der linken Maustaste in WinSCP aus dem rechten Fenster in das linke Fenster ziehst. Danach erhälst Du die Rückfrage, ob Du die Datei wirklich herunterladen möchtest:
-
-.. figure:: media/38_windows-10-clients_winscp-copy-global-reg-file.png
-   :align: center
-   :alt: winscp copy global reg file
-   :width: 80%
-   
-   Bestätige das Kopieren der Datei auf den Desktop mit OK
-
-g) Schließe WinSCP wieder.
-
-Win10.global.reg anpassen
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Die Datei ``win10.global.reg`` befindet sich nun auf dem Desktop Deines Win10-Clients.
-
-.. figure:: media/39_windows-10-clients_global-reg-file-desktop.png
-   :align: center
-   :alt: global reg file desktop
-   :width: 15%
-   
-   Du findest nun die Datei win10.global.reg auf dem Desktop
-
-In der Datei ``win10.gloabl.reg`` musst Du jetzt noch Deine SAMBADOMAIN in der Datei eintragen. Öffne dazu die Datei auf dem Client in einem Editor (z.B. notepad++).
-
-.. figure:: media/40_windows-10-clients_edit-global-reg.png
-   :align: center
-   :alt: Win10 Edit Global Registry File
-   :width: 80%
-   
-   Editiere die global.reg Datei auf dem Desktop
-   
-Suche in der Datei den Abschnitt ``; samba domain, to be adapted`` bzw. ``SAMBADOMAIN``.
-In diesem Abschnitt findest Du folgende Zeilen:
-
-.. code::
-
-   "DefaultLogonDomain"="SAMBADOMAIN"
-   ...
-   "Domain"="SAMBADOMAIN"
-   "NV Domain"="SAMBADOMAIN"
-
-Den Eintrag ``SAMBADOMAIN`` musst Du durch Deine beim Setup festgelegte Domäne ersetzen. Hierzu gibst Du den FQDN an. Hattest Du z.B. während der Installation ``gshoenningen.linuxmuster.lan`` gewählt, so gibst Du hier diesen FQDN an. 
-
-Solltest Du Dir unsicher sein, kannst Du auf dem Server folgenden Befehl absetzen, um die SAMBADOMAIN nachzuschlagen:
-
-.. code::
-
-   less /etc/samba/smb.conf | grep realm
-   
-Gib den der Variablen ``realm =`` zugewiesenen Wert hier an.
-
-Für o.g. Beispiel müssten die Eintragen wie folgt angepasst werden:
-
-.. code::
-
-   "DefaultLogonDomain"="GSHOENNINGEN.LINUXMUSTER.LAN"
-   ...
-   "Domain"="GSHOENNINGEN.LINUXMUSTER.LAN"
-   ...
-   "NV Domain"="GSHOENNINGEN.LINUXMUSTER.LAN"
-
-Speichere die angepasste Datei ab. Die Eintragungen sollten dann wie in o.g. Abbildung aussehen - nur mit Deiner SAMBADOMAIN.
+.. _win10.global.reg einspielen:
 
 win10.global.reg einspielen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -452,6 +314,8 @@ Starte den Muster-Client wieder via LINBO, indem Du Win10 mit dem GRÜNEN Start-
    :width: 50%
    
    Starte Windows 10 mit der grünen Taste
+   
+.. _manueller Domänen Join:
 
 Manueller Domänen Join für Windows
 ----------------------------------
@@ -534,21 +398,16 @@ Der PC bootet nun wieder in LINBO.
 
 .. Attention::
 
-   Starte Windows 10 nun **NICHT** neu !
-
-Es **muss** nach diesem Domänenbeitritt ein Muster-Image erstellt werden.
+   Starte Windows 10 nun **NICHT** neu ! Nach dem Start in LINBO erstellst Du jetzt Muster-Image
 
 LINBO Muster-Image mit Domänenbeitritt
 --------------------------------------
 
 Nachdem der Muster-Client mit Windows 10 - wie zuvor beschrieben - der Domäne hinzugefügt wurde, erstellst Du **jetzt** ein Image für den Muster-Client. Wird dieses Image auf andere Maschinen übertragen, so sind diese bereits in der Domäne aufgenommen.
 
-Hierbei ist es notwenig, den Namen der PCs jeweils automatisch in der Registry anzupassen, da sonst jeder PC, der das Image kopiert, den selben Rechnernamen hätte.
-
 .. hint::
 
-   Achtung: Nachdem eine Template-Maschine frisch der Domain gejoined ist, darf diese vor dem Upload nicht neugestartet werden, da sonst das durch den DomainJoin neu erstellte Maschinenpasswort in der AD für diese Maschine mit einem falschen Maschinenpasswort ersetzt werden würde. Durch den Image-Upload wird das neue Passwort ausgelesen und in die macct-Datei 
-   geschrieben, die zu dem Image gehört.
+   Nachdem eine Template-Maschine frisch der Domain gejoined ist, darf diese vor dem Upload nicht neu gestartet werden, da sonst das durch den DomainJoin neu erstellte Maschinenpasswort in der AD für diese Maschine mit einem falschen Maschinenpasswort ersetzt werden würde. Durch den Image-Upload wird das neue Passwort ausgelesen und in die macct-Datei   geschrieben, die zu dem Image gehört.
 
 Image in LINBO erstellen
 ------------------------
@@ -637,11 +496,7 @@ Speichere diesen kopierten Registry-Patch für das Windows 10 Image, indem Du di
 Imageübertragung auf den PC
 ---------------------------
 
-1. Starte den PC, auf den das Image übertragen werden soll, über das Netzlaufwerk bis er in LINBO gebootet hat. Nun öffnest Du den Imaging-Reiter, wie im ersten Kapitel 
-
-:ref:`Computer in linuxmuster.net aufnehmenn <install-windows10-clients-label>` 
-
- → ``Client lokal registrieren`` beschrieben wird.
+1. Starte den PC, auf den das Image übertragen werden soll, über das Netzlaufwerk bis er in LINBO gebootet hat. Nun öffnest Du den Imaging-Reiter, wie im ersten Kapitel :ref:`Computer in linuxmuster.net aufnehmen <install-windows10-clients-label>`  → ``Client lokal registrieren`` beschrieben wird.
 
 2. Als nächstes partitionierst und formatierst Du den PC über den LINBO-Menüeintrag ``Partitionieren`` wie zuvor beschrieben.
 
@@ -656,7 +511,9 @@ Imageübertragung auf den PC
 
 4. Wenn das Image vollständig heruntergeladen ist, startet Windows automatisch.
 
-5. Windows kann mit LINBO nicht erfolgreich synchronisiert werden. Dies führt zu IO-Fehlern auf der Windows-Partition. In der start.conf der HWK sollte für Windows daher ggf. ``DefaultAction = new`` festgelegt werden.
+.. attention:
+
+   Windows kann mit LINBO nicht erfolgreich synchronisiert werden. Dies führt zu IO-Fehlern auf der Windows-Partition. In der start.conf der HWK sollte für Windows daher ggf. ``DefaultAction = new`` festgelegt werden.
 
 In der Datei ``/srv/linbo/start.conf.win10-muster-client`` (start.conf der HWK) könnten die Einstellungen für Windows wie folgt aussehen:
 
@@ -670,7 +527,7 @@ In der Datei ``/srv/linbo/start.conf.win10-muster-client`` (start.conf der HWK) 
 
 Bei Änderungen in der start.conf der HWK muss erneut ein Import der Geräte ausgeführt werden. Dies kann entweder in der Schulkonsole unter ``Geräteverwaltung -> Geräte -> Speichern & importieren`` erfolgen. 
 
-Alternativ kann dies auf dem Server ebenfalls wie folgt durchgeführt werden:
+Alternativ kann dies auf dem Server in der Konsole durchgeführt werden:
 
 .. code::
 
@@ -737,14 +594,152 @@ Hierzu führst Du folgende Schritte aus:
 
 9. Danach startest Du Windows neu und erstellst wie zuvor beschrieben ein neues Image für Windows.
 
+.. _im Fehlerfall:
+
+im Fehlerfall
+-------------
 
 Zeitprobleme lösen
-------------------
+^^^^^^^^^^^^^^^^^^
 
-Auch wenn bereits beim Start über LINBO die Systemzeit synchonisiert wird, sollte auch Windows statt der standardmäßigen Microsoft-Server im Internet den linuxmuster.net Server als NTP-Zeitserver benutzen. Dies kann z.B. per GPO (``Computerkonfiguration -> Administrative Vorlagen -> System -> Windows-Zeitdienst -> Zeitanbieter``) konfiguriert werden.
+LINBO aktualisiert beim Sytemstart die Zeit in LINBO. In Windows ist die Zeit damit allerdings noch nicht synchronisiert. Wurde, wie zuvor beschrieben, der Win10-PC der Domäne hinzugefügt, dann erfolgt automatisch die Zeitsynchronisation des Client mit dem AD-Server / Domaincontroller.
 
 Bei der Synchronisation zwischen Client und Server kann es zu Beginn zu Zeitabweichungen kommen.
 
-.. hint:: Die Systemzeit sollte möglichst synchron mit dem Server sein, um Probleme mit der Domänenanmeldung, dem Domänenbeitritt zu vermeiden! Auch andere Dienste (z.B. WSUS, KMS, ...) machen bei großen Differenzen Probleme.
+.. hint:: Die Systemzeit sollte möglichst synchron mit dem Server sein, um Probleme mit der Domänenanmeldung, dem Domänenbeitritt zu vermeiden! Auch andere Dienste (z.B. WSUS, KMS, ...) machen bei Zeitdifferenzen Probleme.
 
+.. attention::
+
+   Wurde der linuxmuster.net Server vor Oktober 2022 installiert, ist die Samba-Konfiguration für die Zeitsynchronisation zu korrigieren.
+   
+   Führe in diesem Fall am Server folgenden Befehl aus:
+
+.. code::
+
+   sudo /usr/share/linuxmuster/fix-ntp_signd-dir.sh
+
+
+Domänenjoin verloren
+^^^^^^^^^^^^^^^^^^^^
+
+Hast z.B. nicht daran gedacht, nach dem Domänenjoin ein Image zu erstellen, so kann die Vertrauensstellung zwischen Client und Server verloren gegangen sein.
+
+Dies kannst Du wie folgt reparieren:
+
+1.  Melde Dich lokal am Windows-PC als admin an. Klicke mit der rechten Maustaste auf das Windows-Symbol unten links.
+
+2.  Wähle dann in dem Kontextmenü ``Windows PowerShell(Administrator)`` aus.
+
+3.  Es öffnet sich die PowerShell-Eingabekonsole von Windows mit Administrator-Berechtigungen.
+
+4.  Gib in der Windows PowerShell(Administrator) folgenden Befehl an:
+
+.. code::
+
+   Reset-ComputerMachinePassword -Credential global-admin 
+   
+5. Erstelle anschließend ein neues Image.
+
+
+fehlendes Verzeichnis linuxmuster-win
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. attention:
+
+   Nachstend beschriebene Schritte sind nur dann auszuführen, wenn Du nach dem Start von Windows 10 via LINBO und grüner Pfeiltaste kein Verzeichnis c:\linuxmuster-win zur Verfügung haben solltest. 
+
+1. Die Global-Registry-Patch-Datei liegt als Vorlage auf dem Server in ``\\server\srv\linbo\examples`` und heißt ``win10.global.reg``. Diese muss auf den Client kopiert, angepasst und auf dem Client eingespielt werden.
+
+Gehe wie folgt dabei vor:
+
+a) Installiere Dir zuerst auf dem Windows-Client das freie Programm WinSCP (Freeware). 
+Dieses kannst Du hier herunterladen: https://winscp.net/download/WinSCP-6.1.2-Setup.exe
+
+.. figure:: media/35_windows-10-clients_winscp-download.png
+   :align: center
+   :alt: winscp download
+   :width: 80%
+   
+   WinSCP herunterladen
+
+b) Überprüfe, ob die Prüfsumme des heruntergeladenen Programms korrekt ist, um sicherzustellen, dass Du keine kompromittierte Version heruntergeladen hast. 
+Die korrekten SHA-Prüfsummen des Zertifikats für WinSCP sind:
+
+.. figure:: media/35_windows-10-clients_checksum-sha.png
+   :align: center
+   :alt: winscp checksum
+   :width: 60%
+   
+   Prüfsummen von WinSCP
+   
+Führe auf die heruntergeladene Datei einen Rechtsklick aus und klicke auf ``Eigenschaften``.
+
+.. figure:: media/35_windows-10-clients_winscp-file-properties.png
+   :align: center
+   :alt: winscp file properties
+   :width: 60%
+   
+   WinSCP: Eigenschaften der heruntergeladenen Datei
+   
+Klicke nun auf die Reiterkarte ``Digitale Dignaturen``, markiere den Digestalgorithmus SHA-256 in der Signaturliste und klicke auf ``Details``. Klicke dann auf ``Zertifikat anzeigen`` und im nächsten Fenster auf die Reiterkarte ``Details``. Gehe in der Liste mit den Feldern bis zu dem Eintrag ``Fingerabdruck``. Der hier angezeigte Wert muss mit dem auf dem Bild dargestellten übereinstimmen.
+
+.. figure:: media/35_windows-10-clients_winscp-signatur-fingerprint.png
+   :align: center
+   :alt: winscp signature fingerprint
+   :width: 80%
+   
+   WinSCP: Fingerprint der Signatur prüfen
+
+Stimmt diese überein, so führe die Installation durch. Wähle während die Installation die Commander - Oberfläche aus.
+
+c) Öffne nun das Programm WinSCP. Es erscheint direkt ein Anmeldefenster. Trage hier folgende Werte ein:
+
+.. figure:: media/35_windows-10-clients_winscp-logon-windows.png
+   :align: center
+   :alt: winscp logon windows
+   :width: 80%
+   
+   WinSCP: Anmeldefenster
+
+d) Klicke danach auf ``anmelden``. Bei der ersten Anmeldung erhälst Du noch ein Hinweisfenster zu dem Hostschlüssel des Servers. Klicke hier auf ``Ja``, um diesen im Speicher abzulegen.
+
+.. figure:: media/36_windows-10-clients_winscp-host-key.png
+   :align: center
+   :alt: winscp host key
+   :width: 60%
+   
+   Nehme den Hostschlüssel des Servers bei der ersten Anmeldung an
+
+e) Klicke nun im rechten Fenster, in dem der Inhalt des Servers dargestellt wird auf ``/srv/linbo/examples/``. Wähle hier - wie in der Abb. markiert - die Datei ``win10.global.reg`` aus. Klicke links in dem Fenster, in dem der Inhalt Deines Win10-Clients dargestellt wird auf ``c:\users\global-admin\Desktop\``. 
+
+.. figure:: media/37_windows-10-clients_winscp-choose-directories.png
+   :align: center
+   :alt: winscp choose directories
+   :width: 80%
+   
+   WinSCP: Verzeichnisse auswählen
+
+f) Kopiere die Datei ``win10.global.reg`` auf den Desktop, in dem Du diese mit der linken Maustaste in WinSCP aus dem rechten Fenster in das linke Fenster ziehst. Danach erhälst Du die Rückfrage, ob Du die Datei wirklich herunterladen möchtest:
+
+.. figure:: media/38_windows-10-clients_winscp-copy-global-reg-file.png
+   :align: center
+   :alt: winscp copy global reg file
+   :width: 80%
+   
+   Bestätige das Kopieren der Datei auf den Desktop mit OK
+
+g) Schließe WinSCP wieder.
+
+h) Win10.global.reg anpassen
+
+Die Datei ``win10.global.reg`` befindet sich nun auf dem Desktop Deines Win10-Clients.
+
+.. figure:: media/39_windows-10-clients_global-reg-file-desktop.png
+   :align: center
+   :alt: global reg file desktop
+   :width: 15%
+   
+   Du findest nun die Datei win10.global.reg auf dem Desktop
+
+i) Führe danach den einen Neustart aus und gehe zu :ref:`manueller Domänen Join`
 
