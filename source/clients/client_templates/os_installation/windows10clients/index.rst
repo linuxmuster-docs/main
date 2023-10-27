@@ -610,14 +610,7 @@ Bei der Synchronisation zwischen Client und Server kann es zu Beginn zu Zeitabwe
 
 .. attention::
 
-   Wurde der linuxmuster.net Server vor Oktober 2022 installiert, ist die Samba-Konfiguration für die Zeitsynchronisation zu korrigieren.
-   
-   Führe in diesem Fall am Server folgenden Befehl aus:
-
-.. code::
-
-   sudo /usr/share/linuxmuster/fix-ntp_signd-dir.sh
-
+   Wurde der linuxmuster.net Server vor Oktober 2022 installiert und treten hier noch Fehler auf, dann ist ggf. die Samba-Konfiguration für die Zeitsynchronisation zu korrigieren. Hinweise finden sich hier: https://github.com/linuxmuster/linuxmuster-base7/issues/144
 
 Domänenjoin verloren
 ^^^^^^^^^^^^^^^^^^^^
