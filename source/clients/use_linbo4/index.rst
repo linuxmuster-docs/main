@@ -23,6 +23,7 @@ LINBO4, das von linuxmuster.net entwickelt wurde, weist einige Neuerungen auf:
 * linuxmuster.net <=6.2 wird nicht mehr unterstützt.
 * Ab LINBO v4.1 stehen differentielle Images zur Verfügung.
 * Bisherige Images im cloop Format sind direkt in das neue qcow2 Format zu konvertieren.
+* AB LINBO v4.1.36 wird Kernel 6.5.3 verwendet und es können qcow2-Images mit Torrent verteilt werden, die > 52 GiB sind. Für ctorrent kann hierzu die sog. piece length konfiguriert werden.
 
 Dieses Kapitel führt Dich in die Nutzung von LINBO4 ein und erklärt die wesentlichen Schritte zur Imageverwaltung.
 
@@ -853,4 +854,84 @@ Diese Skripte sind in folgendem Verzeichnis abzulegen:
    /var/lib/linuxmuster/hooks/update-linbofs.post.d/
 
 Hook-Skripte müssen ausführbar sein und mit einem ``shebang`` beginnen. Es sind die zuvor genannten Hinweise zu beachten.
+
+im Fehlerfall
+-------------
+
+Torrent-Fehler
+^^^^^^^^^^^^^^
+
+Nutzt Du sehr große Images, so kann es passieren, dass bei der Verteilung der qcow2-Images mit Torrent-Fehler auftreten und die Synchronisation auf ``rsync`` zurückfällt. Hierbei kommt es zum Einbruch bei den Datenübertragungsraten.
+
+Ab LINBO v4.1.36 können für ``ctorrent`` Parameter angepasst werden, um dies zu verhindern.
+
+Die Konfigurationsdati für ctorrent befindet sich 
+
+.. code::
+
+   /etc/default/linbo-torrent
+   
+Die Paketgrößen können nun als Parameter ``piece length`` angepasst werden. Dazu kannst Du in o.g. Konfigurationsdatei den Parameter wie folgt setzen:
+
+.. code::
+
+   # Piece length (torrent file option)
+   PIECELEN="524288"
+   
+Hast Du den Wert angepasst, musst Du Torrent neu startebn:
+
+.. code::
+
+   linbo-torrent restart  
+ 
+Wurde die Option in der Konfigurationsdatei nicht explizit gesetzt, so wird ein Standardwert (default value) von ``262144`` verwendet. 
+
+Mit der Erhöhung des Wertes können o.g. Probleme behoben werden.
+
+Zum Vergleich findet sich nachstehende Konfigurationsdatei ``/etc/default/linbi-torrent``:
+
+.. code::
+
+   # default values for linbo-torrenthelper service provided by ctorrent
+   # thomas@linuxmuster.net
+   # 20230918
+   #
+   # note: you have to invoke 'linbo-torrent restart' after you have changed any values
+   #
+
+   # Exit while seed <SEEDHOURS> hours later (default 72 hours)
+   SEEDHOURS="100000"
+
+   # Max peers count (default 100)
+   MAXPEERS="100"
+   
+   # Min peers count (default 1)
+   MINPEERS="1"
+   
+   # Download slice/block size, unit KB (default 16, max 128)
+   SLICESIZE="128"
+   
+   # Max bandwidth down (unit KB/s, default unlimited)
+   MAXDOWN=""
+   
+   # Max bandwidth up (unit KB/s, default unlimited)
+   MAXUP=""
+   
+   # Supplemental ctorrent options, separated by space (-v: Verbose output for debugging)
+   #OPTIONS="-v"
+   
+   # Timeout in seconds until rsync fallback (client only)
+   TIMEOUT="300"
+   
+   # user to run ctorrent (server only)
+   CTUSER="nobody"
+   
+   # Piece length (torrent file option)
+   PIECELEN="524288"
+   
+   
+
+
+
+   
 
