@@ -2,7 +2,7 @@
  linuxmuster.net 6.2 Dokumentation
 ===================================
 
-Herzlich Willkommen zur Dokumentation von linuxmuster.net v6.2! Diese
+Hallo Willkommen zur Dokumentation von linuxmuster.net v6.2! Diese
 Dokumentation beschreibt alle wichtigen Schritte von der Installation,
 der Einrichtung von Windows- und Ubuntu-Rechnern, der Verwaltung von
 Nutzern bis hin zu individuellen Anpassungen.
