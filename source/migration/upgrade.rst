@@ -109,5 +109,10 @@ Aktualisiere nun die Paketquellen:
    :scale: 80%
    
    Server-Infos nach dem Konsolen-Login
+   
+.. attention::
+
+   Beim Upgrade von Ubuntu 18.04 über Ubuntu 20.04 zu 22.04 LTS werden die Einstellungen für CUPs zwar korrekt übernommen. Allerdings treten für einige Drucker Fehler auf. Es ist in diesen Fällen sinnvoll die Druckerinstallation erneut durchzuführen. Für viele HP-Drucker ist es hilfreich die Bibliothek ``hplip`` auf dem Server nachzuinstallieren - siehe zu den Druckern :ref:`configure-printers-label`.
+   
 
 
