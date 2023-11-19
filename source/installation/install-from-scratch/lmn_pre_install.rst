@@ -96,15 +96,65 @@ Erzeuge zuerst die Locales mit:
 
 .. code-block:: Bash
 
-   $sudo locale-gen
+   sudo localectl status
+   System Locale: LANG=C.UTF-8
+       VC Keymap: n/a
+      X11 Layout: de
+       X11 Model: pc105
+
+Prüfe, welche Locales installiert sind:
+
+.. code-block::
+
+   locale -a
+   C
+   C.utf8
+   POSIX
+
+Sollte das Paket Locales nicht installiert sein, führe folgenden Befehl aus:
+
+.. code-block::
+
+   apt locales
+
+Erzeuge nun die Locales neu:
+
+.. code-block::
+
+   dpkg-reconfigure locales
+   
+   Configuring locales
+
+   Locales are a framework to switch between multiple languages and allow users to
+   use their language, country, characters, collation order, etc.
+   
+   Please choose which locales to generate. UTF-8 locales should be chosen by
+   default, particularly for new installations. Other character sets may be useful
+   for backwards compatibility with older systems and software.
+   
+   1. All locales                      252. gl_ES ISO-8859-1
+   2. C.UTF-8 UTF-8                    253. gl_ES.UTF-8 UTF-8
+   3. aa_DJ ISO-8859-1                 254. gl_ES@euro ISO-8859-15
+   4. aa_DJ.UTF-8 UTF-8                255. gu_IN UTF-8
+   5. aa_ER UTF-8                      256. gv_GB ISO-8859-1
+   6. aa_ER@saaho UTF-8                257. gv_GB.UTF-8 UTF-8
+   7. aa_ET UTF-8                      258. ha_NG UTF-8
+   8. af_ZA ISO-8859-1                 259. hak_TW UTF-8
+   9. af_ZA.UTF-8 UTF-8                260. he_IL ISO-8859-8
+   10. agr_PE UTF-8                    261. he_IL.UTF-8 UTF-8
+   11. ak_GH UTF-8                     262. hi_IN UTF-8
+   12. am_ET UTF-8                     263. hif_FJ UTF-8
+
+   Locales to be generated: de_DE.UTF-8 
+   
+    1. None  2. C.UTF-8  3. de_DE.UTF-8
+   Default locale for the system environment: 3
+   
    Generating locales (this might take a while)...
    de_DE.UTF-8... done
-   en_GB.UTF-8... done
-   en_US.UTF-8... done
-   fr_FR.UTF-8... done
    Generation complete.
 
-Setze nun die Default-Locale. Diese muss unbedingt in o.g. Ausgabe enthalten sein!
+Du kannst die Default-Locale ggf. auch mit folgenden Befehl neu setzen:
 
 .. code-block:: Bash
 

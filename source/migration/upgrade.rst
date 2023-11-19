@@ -4,9 +4,6 @@
 Upgrade v7.1 auf v7.2
 =====================
 
-Vorbereitungen
-^^^^^^^^^^^^^^
-
 1. Bringe zuerst den lmn7.1 Server auf den aktuellsten Paketstand.
 
 Führe dazu in der Konsole folgende Befehle aus:
