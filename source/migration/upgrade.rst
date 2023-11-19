@@ -69,6 +69,10 @@ Importiere zuerst die Schlüsseldatei:
 
    root@server:~$ sudo sh -c 'wget -qO- "https://deb.linuxmuster.net/pub.gpg" | gpg --dearmour -o /usr/share/keyrings/linuxmuster.net.gpg'
 
+.. hint::
+
+   Bei ``wget -qO-`` ist der Großbuchstabe O zu verwenden - n i c h t die Zahl 0. 
+
 Füge danach das Linuxmuster 7.2 Testing-Repro hinzu:
 
 .. code::
@@ -99,7 +103,7 @@ Aktualisiere nun die Paketquellen:
 
    sudo linuxmuster-import-devices
 
-9. Starte nun die Clients neu. Du wirst zunächst noch die Version 4.0 von Linbo auf den Clients nach dem ersten Start sehen. Starte den Client ein zweites Mal und Linbo wird dann automatisch auf dem Client auf die Version 4.1 aktualisiert.
+9. Starte nun die Clients neu. Du wirst zunächst noch die Version 4.0 von Linbo auf den Clients nach dem ersten Start sehen. Starte den Client ein zweites Mal und Linbo wird dann automatisch auf dem Client auf die Version 4.2 aktualisiert.
 
 10. Synchronisiere das Betriebssystem und melde Dich danach mit einem Domänen-Benutzer an.
 

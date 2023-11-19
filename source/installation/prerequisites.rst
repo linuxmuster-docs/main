@@ -8,7 +8,9 @@
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
 		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_
 
-Linuxmuster.net wird als Zwei-Server-Lösung (Firewall und linuxmuster.net-Server) betrieben. Optional können weitere Server wie z. B. ein Docker-Host eingesetzt werden. Daneben gibt es mindestens eine Trennung in zwei logische Netzwerke, meist sind aber drei oder mehr davon gefordert (WLAN, DMZ, Lehrernetz). linuxmuster.net kann virtualisiert oder ohne Virtualisierung betrieben werden.
+Linuxmuster.net wird als Zwei-Server-Lösung (Firewall und linuxmuster.net-Server) auf einem Hypervisor (Proxmox) betrieben. 
+
+Optional können weitere Server wie z. B. ein Docker-Host eingesetzt werden. Daneben gibt es mindestens eine Trennung in zwei logische Netzwerke, meist sind aber drei oder mehr davon gefordert (WLAN, DMZ, Lehrernetz).
 
 Daraus leiten sich Voraussetzungen an Hardware, Netzwerkstrukturen und Software ab, die in diesem Kapitel benannt werden.
 
