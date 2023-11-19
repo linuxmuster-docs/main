@@ -9,7 +9,7 @@ Install-from-Scratch
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
 
-In diesem Dokument findest Du eine "Schritt-für-Schritt" Anleitung zur Installation der linuxmuster.net Musterlösung direkt auf der Hardware. Zugleich nutzt Du diese Anleitung zur Installation in vorbereitete VMs.
+In diesem Dokument findest Du eine "Schritt-für-Schritt" Anleitung zur Installation der linuxmuster.net Musterlösung von Grund auf (install-from-scratch).
 
 Lies zuerst die Abschnitte ":ref:`what-is-new-label`" und ":ref:`prerequisites-label`", bevor Du dieses Kapitel durcharbeitest.
 
@@ -32,5 +32,6 @@ Im Laufe der Installation benötigst Du einen Admin-PC. Das kann ein einfacher L
   :hidden:
 
   basis_opnsense
+  proxmox_internes_netz
   basis_server
   lmn_pre_install

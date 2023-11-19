@@ -18,12 +18,22 @@ Was ist linuxmuster.net?
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
                    `@MachtDochNix <https://ask.linuxmuster.net/u/machtdochnix>`_
 
-Anforderungen
-=============
+linuxmuster.net ist eine Komplettlösung für den digital unterstützten Unterricht für Schüler:innen und Lehrer:innen einer zeitgemäßen Bildungseinrichtung.
 
-**Schulnetzwerk vs. "normales" Netzwerk**
+Die langjährigen Erfahrungen aller Beteiligten aus der linuxmuster.net Gemeinde haben gezeigt, dass sich ein Firnmennetzwerk fundamental von den Anforderungen an ein 
+heutige Schulnetz unterscheiden. 
 
-Warum unterscheiden wir eigentlich zwischen einer IT in einer Firma und einer Schule?
+Die Entwicklung von linuxmuster.net greift all diese Anforderungen auf und stellt eine modulare Lösung für ein Schulnetz zur Verfügung. 
+
+Diese kann von einer Ein-Server-Lösung bis hin zu einer
+Mehr-Server-Lösung mit Cloud-Anbindung und BYOD-Integration skaliert werden.
+
+Die Anforderungen, die heute an ein Schulnetz gestellt werden, erklären wir im nachfolgenden Abschnitten detailliert. Im Anschluss zeigen wir auf, wie linuxmuster.net diese umsetzt.
+
+Schulnetzwerk vs. "normales" Netzwerk
+=====================================
+
+**Welche Unterschiede in der IT in einer Firma und einer Schule sind für uns relevant?**
 
 Im Prinzip gibt es vier große Merkmale, die auffallen:
 

@@ -21,7 +21,9 @@ Lade Dir die ISO-Datei der OPNsense |reg| von der Seite https://opnsense.org/dow
 
 .. hint::
 
-   Die zuletzt freigegeben OPNsense Version für das Setup von linuxmuster.net v7.2 ist die Version 23.7. 
+   Die zuletzt freigegeben OPNsense Version für das Setup von linuxmuster.net v7.2 ist die Version 23.7 
+   
+   [Stand: November 23]. 
    
    wget https://mirror.informatik.hs-fulda.de/opnsense/releases/23.7/OPNsense-23.7-dvd-amd64.iso.bz2
 
@@ -56,6 +58,12 @@ Erster Start der Firewall
 Starte dann OPNsense |reg| auf dem Rechner oder in der neu angelegten VM von Deinem Installationsmedium. Je nach Virtualisierungsumgebung hast Du ggf. die ISO-Datei bereits auf dem ISO-Datenspeicher des Hypervisors abgelegt. Boote dann die VM via ISO-Datei.
 
 .. attention:: Solltest Du unserer Anleitung gefolgt sein und PROXMOX nutzen, dann muss Du für die Installation die Konsole ``noVNC`` nutzen.
+
+.. figure:: media/start_opnsense.png
+   :align: center
+   :alt: OPNsense: Start VMt
+   
+   Starte die OPNsense-VM
 
 Am Ende des Boot-Vorgangs der OPNsense |reg| gelangst Du zu folgendem Bildschirm:
 
@@ -154,7 +162,7 @@ Zum Abschluss der Konfiguration musst Du das Kennwort für den Benutzer ``root``
    
    An dieser Stelle muss als root-Passwort ``Muster!`` eingegeben werden, da später der lmn-Server beim Einrichten der Firewall davon ausgeht, dass das root-Passwort ``Muster!`` ist! Sollte dieses anders lauten, wird die komplette weitere Installation scheitern!
 
-Gib das neue Passwort für root ein.
+Gib das neue Passwort (``Muster!``) für root ein.
 
 .. figure:: media/basis_opnsense_010.png
    :align: center
@@ -182,7 +190,25 @@ Wähle danach die Option ``Exit and reboot`` aus.
 
 .. hint::
 
-   Solltest Du nicht zum Entfernen, das Installationsmedium aufgefordert werden, fahre Deine neue Firewall herunter (schalte sie aus). Ansonsten gerätst Du eventuell in eine erneute Installation. Starte die VM neu, nachdem Du das Installationsmedium ausgeworfen hast und fahre mit der Installation fort.
+   Solltest Du nicht zum Entfernen, das Installationsmedium aufgefordert werden, fahre Deine neue Firewall herunter (schalte sie aus). 
+   
+   Ändere die Boot-Reihenfolge zurück (Start via Festplatte).
+   
+.. figure:: media/basis_opnsense_012a.png
+   :align: center
+   :alt: OPNsense: Change boot order
+   
+   Ändere die Boot-Reihenfolge
+   
+   Werfe die ISO-Datei aus dem CD-Laufwerk aus.
+   
+.. figure:: media/basis_opnsense_012b.png
+   :align: center
+   :alt: OPNsense: Unmount CD
+   
+   Werfe die ISo-Datei aus dem Laufwerk aus.
+   
+   Starte die VM neu, nachdem Du das Installationsmedium ausgeworfen hast und fahre mit der Installation fort.
 
 Der Boot-Vorgang kann dann eine Weile dauern. Vor allem, wenn der Router kein DHCP anbieten sollte.
 
@@ -835,6 +861,6 @@ Logout
    
    Logout   
    
-   
+.. hint:: Für Anwender einer Virtualisierungslösung empfehlen wir an dieser Stelle einen Snapshot zu erstellen!
 
 

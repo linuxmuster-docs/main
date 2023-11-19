@@ -567,7 +567,11 @@ Quota-Einstellungen überprüfen
 
 .. hint::
 
-   Nachstehende Schritte musst Du nur durchführen, wenn Du **nicht** mit den default-Einstellungen installierst. Überspringe diesen Punkt und gehe zu: `Bezeichnung des Speichermediums für das LVM ermitteln`_
+   Nachstehende Schritte musst Du nur durchführen, wenn Du **nicht** mit den default-Einstellungen installierst. 
+   
+   Überspringe diesen Punkt und gehe zu: `Bezeichnung des Speichermediums für das LVM ermitteln`_
+   
+   Hast Du bei der Installation des Servers als Speichermediem **kein LVM manuell** angelegt, dann führst Du nachstehende Schritte aus. In allen anderen Fällen überspringt Du diesen Schritt.
 
 
 .. code:: 
