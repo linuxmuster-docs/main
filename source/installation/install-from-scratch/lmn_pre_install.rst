@@ -115,13 +115,13 @@ Sollte das Paket Locales nicht installiert sein, führe folgenden Befehl aus:
 
 .. code-block::
 
-   apt locales
+   sudo apt install apt-utils locales
 
 Erzeuge nun die Locales neu:
 
 .. code-block::
 
-   dpkg-reconfigure locales
+   sudo dpkg-reconfigure locales
    
    Configuring locales
 
@@ -163,11 +163,13 @@ Du kannst die Default-Locale ggf. auch mit folgenden Befehl neu setzen:
 
 .. attention:: Wichtiger Hinweis, schon jetzt!
 
-   Solltest Du mit Deiner Konfiguration von unseren Standard-Vorgaben bei dem zuletzt genannten Punkt abweichen, müssen Deine Einstellungen unbedingt vor dem Aufruf des Skriptes lmn-prepare eingearbeitet sein!
-
-   :ref:`basis_opnsense`
+   Solltest Du mit Deiner Konfiguration von unseren Standard-Vorgaben bei dem zuletzt genannten Punkt abweichen, musst Du Deine Einstellungen unbedingt bei Aufruf des Skriptes lmn-prepare anpassen!
    
-   :ref:`basis_server-label`
+   
+.. hint::
+
+   Erstelle jetzt einen Snapshot Deiner Server-VM.   
+   
 
 Letzter Test vor Anwendung des Skriptes lmn-appliance
 -----------------------------------------------------
@@ -191,7 +193,29 @@ Wechsele Deinen Log-in und werde ``root``:
 
    sudo -i
 
-Rufe nun das Skript ``lmn-appliance`` so auf, dass eine Server Appliance vorbereitet wird und das LVM auf der zweiten Festplatte eingerichtet wird.
+Lade das lmn-appliance Skript herunter und setze die Ausführungsberechtigung:
+
+.. code::
+
+   wget https://raw.githubusercontent.com/linuxmuster/linuxmuster-prepare/master/lmn-appliance
+   chmod +x lmn-appliance
+
+Prüfe Deine Festplatten und Partitionen mit 
+
+.. code::
+
+   lsblk
+   
+   NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+   sda      8:0    0   50G  0 disk 
+   ├─sda1   8:1    0    1M  0 part 
+   └─sda2   8:2    0   50G  0 part /
+   sdb      8:16   0  200G  0 disk 
+   sr0     11:0    1 1024M  0 rom  
+
+In o.g. Beispiel wurde Ubuntu Server auf der 1. Festplatte (sda) installiert. Die zweite Festplatte (sdb) kennt noch keine Partitionen.
+
+Rufe nun das Skript ``lmn-appliance`` so auf, dass Dein Server vorbereitet wird. Das LVM wird dann auf  der zweiten Festplatte eingerichtet wird.
 
 .. code-block:: Bash
 
@@ -199,13 +223,10 @@ Rufe nun das Skript ``lmn-appliance`` so auf, dass eine Server Appliance vorbere
 
 Mit dem Parameter -u wird dann ein LVM - hier auf der 2. Festplatte (sdb) - mit folgenden Werten eingerichtet:
 
-    var: 10 GiB
-
-    linbo: 40 GiB
-
-    global: 10GiB
-
-    default-school: restlicher Plattenplatz
+- var: 10 GiB
+- linbo: 40 GiB
+- global: 10GiB
+- default-school: restlicher Plattenplatz
 
 Weitere Skript-Parameter findest Du hier dokumentiert: https://github.com/linuxmuster/linuxmuster-prepare
 
@@ -217,17 +238,14 @@ Nachstehendes Beispiel geht davon aus, dass Du eine zweite HDD mit einer Größe
 
 .. code-block:: Bash
 
-  lmn-appliance -i -p server -l /dev/sdb -v var:50,linbo:500,global:50,default-school:100%FREE
+  ./lmn-appliance -p server -l /dev/sdb -v var:50,linbo:500,global:50,default-school:100%FREE
 
-Es wird hier also eine Erstinstallation (-i) mit dem Profil server auf der zweiten Festplatte (/dev/sdb) durchgeführt. Auf der zweiten Platte werden vier Volumes mit
+Es wird hier also mit dem Profil server auf der zweiten Festplatte (/dev/sdb) ein LVM eingerichtet. Auf der zweiten Platte werden vier Volumes mit den Größen
 
-    var: 50GiB
-
-    linbo: 500GiB
-
-    global: 50GiB
-
-    default-school: verbleibender Rest der zweiten Festplatte - hier 400 GiB -
+- var: 50GiB
+- linbo: 500GiB
+- global: 50GiB
+- default-school: verbleibender Rest der zweiten Festplatte - hier 400 GiB -
 
 eingerichtet.
 
