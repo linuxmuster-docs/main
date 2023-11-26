@@ -12,7 +12,7 @@ Anlegen und Installieren der Firewall
 
 .. note:: 
 
-   Bist Du zuvor der Anleitung "Proxmox vorbereiten" ('install-on-proxmox-label'_ ) gefolgt, dann kannst Du fortfahren mit `Erster Start der Firewall`_
+   Bist Du zuvor der Anleitung :ref:`Proxmox vorbereiten <install-on-proxmox-label>` gefolgt, dann kannst Du fortfahren mit: `Erster Start der Firewall`_
 
 Installation der OPNsense |reg|
 ===============================
@@ -27,8 +27,8 @@ Lade Dir die ISO-Datei der OPNsense |reg| von der Seite https://opnsense.org/dow
    
    wget https://mirror.informatik.hs-fulda.de/opnsense/releases/23.7/OPNsense-23.7-dvd-amd64.iso.bz2
 
-Nutze als Architektur ``amd64`` und als "image type" ``dvd`` und einen Mirror, der in Deiner Nähe ist.
-Du erhältst dann ein mit bz2 komprimiertes ISO-Image. Entpacke die heruntergeladene Datei. Siehe hierzu auch :ref:`install-on-proxmox-label` - dort Kapitel `Vorbereiten des ISO-Speichers -> OPNsense |reg|`.
+Nutze als Architektur ``amd64`` und als ``image type dvd`` und einen Mirror, der in Deiner Nähe ist.
+Du erhältst dann ein mit ``bz2`` komprimiertes ISO-Image. Entpacke die heruntergeladene Datei. Siehe hierzu auch :ref:`install-on-proxmox-label` - dort Kapitel `Vorbereiten des ISO-Speichers -> OPNsense |reg|`.
 
 Unter Linux ist folgender Befehl anzugeben:
 
@@ -37,7 +37,7 @@ Unter Linux ist folgender Befehl anzugeben:
    bunzip2 OPNsense-23.7-OpenSSL-dvd-amd64.iso.bz2
 
 
-Schreibe die entpackte ISO-Datei auf eine DVD oder fertige davon einen bootbaren USB-Stick an. In einer Virtualisierungsumgebung lädst Du die ISO-Datei auf den ISO-Speicher.
+In der Virtualisierungsumgebung lädst Du die ISO-Datei auf den ISO-Speicher.
 
 .. hint:: 
 
@@ -222,7 +222,7 @@ Wenn alles geklappt hat, ist Folgendes zu sehen:
 
 .. hint::
 
-   Die dargestellte IPs und Netze können bei Deiner OPNsense |reg| andere sein.
+   Die dargestellten IPs und Netze können bei Deiner OPNsense |reg| andere sein.
 
 Basis-Konfiguration der OPNsense |reg|
 ======================================
@@ -270,15 +270,9 @@ Fahre mit `Überprüfung der Zuordnung der Netzwerkkarten`_ fort, ansonsten |...
    
    Zuordnung der NICs prüfen
 
-Die erste Netzwerkkarte (LAN) ist mit dem pädagogischen Netz verbunden. Allerdings noch mit den falschen Netzwerkeinstellungen, da die Installationsroutine der OPNsense |reg| immer die IP 192.168.1.1/24 zuweist. Dies ist jetzt noch zu ändern.
+Die erste Netzwerkkarte (LAN) ist derzeit als LAN mit dem pädagogischen Netz verbunden. Die Netzwerkkarte ``vtnet0`` ist nach der bisherigen Installation allerdings mit dem roten Netz wverbunden. Zudem vergibt die Installationsroutine der OPNsense |reg| immer die IP 192.168.1.1/24 der LAN-Schnittstelle. Dies ist jetzt noch zu ändern.
 
-Die zweite Netzwerkkarte (WAN) ist mit dem Router verbunden. Die IP hängt davon ab, welche IPs via DHCP von Deinem DSL_Router verteilt werden.
-
-In einer Schulumgebung kann es sein, dass der Router keinen DHCP-Service anbietet. In diesem Fall musst Du dafür sorgen, dass sich sowohl das Interface (WAN) der OPNsense |reg| als auch der Router im gleichen Netzwerk befinden.
-
-Hier in unserem Beispiel hat die Zuordnung der Netzwerkkarten nicht geklappt, der Router sollte 192.168.21.212 der OPNsense |reg| zuweisen.
-
-Sollte bei dem WAN Interface keine, eine IP-Adresse nach dem Muster 0.0.0.0/8 oder eine andere als die von Dir erwartete erscheinen, dann muss die Zuordnung der Netzwerkkarte überprüft werden. Hier wird dies beispielhaft anhand unserer Proxmox-Umgebung dargestellt.
+Die zweite Netzwerkkarte (WAN) ist derzeit mit ``vtnet1`` verbunden. Dies müssen wir noch ändern.
 
 Anpassung der Zuordnung der Netzwerkkarten
 ------------------------------------------
@@ -365,12 +359,12 @@ Diese Zuordnung ist nun richtig, also weiter mit ``y`` |...|
 
    Prüfe die Zuordnung der Netzwerkkarten
 
-Die Zuordnung des WAN-Interfaces ist hier zu erkennen und nun so wie beabsichtigt. Das erkennst Du daran, das dessen IP-Adresse dem Adress-Pool des Routers entnommen ist.
+Die Zuordnung des WAN-Interfaces ist hier zu erkennen und nun so wie beabsichtigt. Das erkennst Du daran, das dessen IP-Adresse dem Adress-Pool des Routers entnommen ist (, sofern der DSL-Router via DHCP eine Adresse verteilt.
 
 WAN Zugang testen
 ^^^^^^^^^^^^^^^^^
 
-Um zwei erste Tests durchzuführen, wähle ``8) Shell`` auf der Kommandozeile und gib dort folgende Befehle ein:
+Hast Du auf der WAN-Schnittstelle eine IP-Adresse erhalten, führe zwei erste Tests durch. Wähle ``8) Shell`` auf der Kommandozeile und gib dort folgende Befehle ein:
 
 .. hint:: 
 
@@ -555,9 +549,9 @@ Klappt das Update, startet die OPNsense |reg| neu.
 Konfiguration der OPNsense |reg|
 ================================
 
-Für die nachfolgende Konfiguration der OPNsense |reg| brauchst Du einen Rechner mit Webbrowser im LAN-Bereich der OPNsense |reg|. Das kann ein Laptop mit einem beliebigen Betriebssystem sein. Wichtig ist nur, dass er mit dem LAN-Adapter der OPNsense |reg| verbunden ist und sich im gleichen Netzwerk wie die OPNsense |reg| befindet. In unserer Beschreibung gehen wir davon aus, dass seine manuell zugewiesene IP-Adresse 10.0.0.10 ist.
+Für die nachfolgende Konfiguration der OPNsense |reg| brauchst Du einen Rechner mit Webbrowser im LAN-Bereich der OPNsense |reg|. Das kann ein Laptop mit einem beliebigen Betriebssystem sein. Wichtig ist nur, dass er mit internen Switch im grünen Netzwerk verbunden ist, das mit dem LAN-Adapter der OPNsense |reg| verbunden ist und sich im gleichen Netzwerk wie die OPNsense |reg| befindet. In unserer Beschreibung gehen wir davon aus, dass der Laptop/PC manuell  IP-Adresse 10.0.0.10 mit der Subnetmask 255.255.0.0 (16 Bit) erhält.
 
-Nachdem der Browser gestartet ist, gib folgende URL für den Zugriff auf die GUI der OPNsense |reg| ein:
+Nachdem der Browser gestartet ist, gibst Du folgende URL für den Zugriff auf die GUI der OPNsense |reg| ein:
 
 ``https://10.0.0.254``
 
@@ -593,16 +587,15 @@ Gefolgt von folgender Aufforderung:
    
    Setup Wizard
 
-Starte den General Setup Wizard mit dem ``Next``- Button. Dieser Wizard führt Dich durch die Konfiguration. Einige Dinge wurden zuvor bereits korrekt für die Basis-Konfiguration eingerichtet.  
+Starte den ``General Setup Wizard`` mit dem ``Next``- Button. Dieser Wizard führt Dich durch die Konfiguration. Einige Dinge wurden zuvor bereits korrekt für die Basis-Konfiguration eingerichtet.  
 
-#####
 
 System: Assistent: Allgemeine Information
 -----------------------------------------
 
 .. attention::
 
-   Die Länge des ersten Teils der Domäne darf maximal 15 Zeichen betragen. Die Domäne "muster-gymnasium.de" überschreitet diese Grenze um ein Zeichen, da "muster-gymnasium" 16 Zeichen lang ist.
+   Die Länge des ersten Teils der Domäne darf maximal 15 Zeichen betragen. Die Domain "muster-gymnasium.de" überschreitet diese Grenze um ein Zeichen, da "muster-gymnasium" 16 Zeichen lang ist.
 
    Eine gute Wahl ist beispielsweise ``linuxmuster.lan``. Beim späteren Setup von linuxmuster.net wird diese ggf. für alle Server-Dienste angepasst.
 
@@ -616,7 +609,6 @@ Gib als ``Primary DNS``, die neue IP des Upstream Gateway der externen WAN-Schni
 
 Weiter geht es mit ``Next``
 
-#####
 
 System: Assistent: Zeitserverinformation
 -----------------------------------------
@@ -637,7 +629,6 @@ Die Angaben zum Time Server belässt Du wie angegeben. Den Eintrag für die Zeit
 
 Die Angaben übernimmst Du mit ``Next``.
 
-#####
 
 System: Assistent: Konfiguriere WAN-Schnittstelle
 -------------------------------------------------
@@ -663,7 +654,6 @@ Falls Dein Router eine private IP hat, musst Du den Haken bei ``Private RFC1918-
 
 Mit ``Weiter`` übernimmst Du die von Dir vorgenommenen Einstellungen.
 
-#####
 
 System: Assistent: Konfiguriere LAN-Schnittstelle
 -------------------------------------------------
@@ -676,7 +666,6 @@ System: Assistent: Konfiguriere LAN-Schnittstelle
 
 Die IP-Adresse und die Subnetzmaske des Schulnetzes sollten hier eingetragen sein. Sollte dies nicht der Fall sein, ändere dies nun.
 
-#####
 
 System: Assistent: Setze Root-Passwort 
 --------------------------------------
@@ -691,7 +680,6 @@ System: Assistent: Setze Root-Passwort
 
    An dieser Stelle muss als root-Passwort ``Muster!`` eingegeben werden, da später der lmn-Server beim Einrichten der Firewall davon ausgeht, dass das root-Passwort ``Muster!`` ist!
 
-#####
 
 System: Assistent: Konfiguration neu laden
 ------------------------------------------
@@ -724,7 +712,6 @@ Du erhältst eventuell wieder eine Zertifikatswarnung. Akzeptiere diese und fahr
 
 Melde Dich wieder mit ``root`` und dem Passwort ``Muster!`` an.
 
-#####
 
 DHCP abschalten
 ---------------
@@ -738,7 +725,6 @@ Jetzt musst Du den DHCP-Service der Firewall abschalten. Der wird ja später vom
 
 Gehe auf ``Dienste -> DHCPv4 -> [LAN]`` und lösche den Haken bei ``Aktivieren``, wenn gesetzt. ``Speichern`` lässt Dich Deine Einstellungen unten auf der Seite.
 
-#####
 
 Zusätzliche Netzwerkkarte hinzufügen (Optional)
 -----------------------------------------------
@@ -763,7 +749,6 @@ Bei ``Schnittstellen -> Zuweisungen`` drückst Du ``+``, um die dritte Schnittst
 
 Unter ``Schnittstellen -> [OPT1]`` kannst Du diese Einstellungen vornehmen. Der Screenshot zeigt ein Beispiel. Für weitere Netzwerkkarten verfährst Du entsprechend. OPT1 wird dann hochgezählt zu OPT2 etc.
 
-#####
 
 ssh erlauben
 ------------
@@ -782,7 +767,6 @@ Bei dem Punkt ``Sekundäre Konsole`` wähle die Serial-Konsole aus. Mit dieser A
 
 Diese Einstellungen wieder ``Speichern``.
 
-#####
 
 Update der OPNsense |reg|
 -------------------------
@@ -808,7 +792,7 @@ Wenn keine Aktualisierungen verfügbar sind, erhältst Du folgende Meldung |...|
 
 |...| und kannst zum abschließenden Schritt `Logout`_ gehen.
 
-Sollten Dir wie in nachstehender Abbildung unter dem Reiter ``Aktualisierungen`` zu aktualisierenden Pakete angezeigt werden |...|
+Sollten Dir - wie in nachstehender Abbildung - unter dem Reiter ``Aktualisierungen`` zu aktualisierenden Pakete angezeigt werden |...|
 
 .. figure:: media/basis_opnsense_057.png
    :align: center
@@ -850,8 +834,6 @@ Zum Abschluss erfolgt der Neustart automatisch.
 
 Nach dem Neustart ist die OPNsense |reg| soweit vorbereitet.
 
-#####
-
 Logout
 ------
 
@@ -861,6 +843,6 @@ Logout
    
    Logout   
    
-.. hint:: Für Anwender einer Virtualisierungslösung empfehlen wir an dieser Stelle einen Snapshot zu erstellen!
+.. hint:: Für Anwender einer Virtualisierungslösung empfehlen wir an dieser Stelle einen ``Snapshot`` zu erstellen!
 
 

@@ -11,7 +11,7 @@ Install-from-Scratch
 
 In diesem Dokument findest Du eine "Schritt-für-Schritt" Anleitung zur Installation der linuxmuster.net Musterlösung von Grund auf (install-from-scratch).
 
-Lies zuerst die Abschnitte ":ref:`what-is-new-label`" und ":ref:`prerequisites-label`", bevor Du dieses Kapitel durcharbeitest.
+Lies zuerst die Abschnitte :ref:`what-is-new-label` und :ref:`prerequisites-label`, bevor Du dieses Kapitel durcharbeitest.
 
 Nach der Installation gemäß dieser Anleitung erhältst Du eine einsatzbereite Umgebung bestehend aus
 
@@ -23,7 +23,7 @@ Im Laufe der Installation benötigst Du einen Admin-PC. Das kann ein einfacher L
 **Vorgehensweise**
 
 * Zunächst installierst Du die Firewall OPNsense |reg|.
-* Gefolgt von der Installation des Ubuntu-Servers.
+* Danach installierst Du den Ubuntu-Server.
 * Schließlich richtest Du linuxmuster.net ein.
 
 .. toctree::

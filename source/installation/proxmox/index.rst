@@ -88,17 +88,17 @@ Nachdem Du die ISO-Datei für Proxmox heruntergeladen hast, wechselst Du in das 
 
 .. code-block:: console
 
-   dd if=proxmox-ve_8.0-2.iso of=/dev/sdX bs=1M status=progress conv=fdatasync
+   dd if=proxmox-ve_8.1-1.iso of=/dev/sdX bs=1M status=progress conv=fdatasync
 
 Verkabelungshinweise
 --------------------
 
 Es ist für linuxmuster.net ein internes Netz (grün) und ein externes Netz (rot) am Proxmox-Host zu unterscheiden.
-Sind zwei Netzwerkkarten im Proxmox-Host vorhanden, so ist die erste Netzwerkkarte (|zb| eth0, eno1 oder enp7s0), die zu Beginn eine IP aus dem bestehenden lokalen Netz (|zb| via DSL-Router) erhalten soll, mit dem Switch zu verbinden, der an den (DSL-)Router angeschlossen ist.
+Sind zwei Netzwerkkarten im Proxmox-Host vorhanden, so ist die erste Netzwerkkarte (|zb| eth0, eno1 oder enp7s0), die zu Beginn eine IP aus dem bestehenden lokalen Netz (|zb| via DSL-Router) erhalten soll, mit dem Switch zu verbinden, der an den (DSL-)Router angeschlossen ist. Bei einem Home-DSL-Router ist der Switch i.d.R. Regel bereits eingebaut. DSL-Router mit Switch angeschlossen an die erste Netwzerkkarte stellen hier das rote / externe Netz dar. Der Admin-PC ist zu Beginn ebenfalls hier anzuschliessen.
 
-Die zweite Netzwerkkarte (|zb| eth1 oder enp7s1) ist dann an einen eigenen Switch anzuschließen, ebenso wie alle Clients, die im internen Netz eingesetzt werden.
+Die zweite Netzwerkkarte (|zb| eth1 oder enp7s1) ist dann an einen eigenen Switch anzuschließen, ebenso wie alle Clients, die im internen Netz (grün) eingesetzt werden.
 
-Um zu Beginn den Proxmox-Host zu administrieren, ist ein Laptop mit dem Switch zu verbinden, der an den lokalen (DSL-)Router angeschlossen ist. Der Laptop erhält ebenfalls eine IP aus dem lokalen (DSL-)Netz und kann sich dann auf die zu Beginn eingerichtete IP-Adresse des Proxmox-Host auf die grafische Verwaltungsoberfläche verbinden.
+Um zu Beginn den Proxmox-Host zu administrieren, ist ein Laptop/PC mit dem Switch zu verbinden, der an den lokalen (DSL-)Router angeschlossen ist (rotes Netz). Der Laptop/PC erhält ebenfalls eine IP aus dem lokalen (DSL-)Netz und kann sich dann auf die zu Beginn eingerichtete IP-Adresse des Proxmox-Host auf die grafische Verwaltungsoberfläche verbinden.
 
 .. figure:: media/install-on-proxmox_01_network-4-proxmox-installation.svg
    :align: center
@@ -106,6 +106,13 @@ Um zu Beginn den Proxmox-Host zu administrieren, ist ein Laptop mit dem Switch z
    :alt: Netzwerk für die Proxmox Installation
 
    Proxmox Netzwerk
+
+.. hint::
+
+   Abbildung ersetzen
+
+Es werden zunächst alle Aktualisierungen durchgeführt und die benötigten ISO-Images auf den Proxmox-Host heruntergeladen. Erst danach wird die Konfiguration des Proxmox-Host so geändert wird, dass diser nur noch im grünen Netz erreichbar ist.
+
 
 Installieren von Proxmox
 ========================
@@ -117,7 +124,7 @@ Vom USB-Stick booten, danach erscheint folgender Bildschirm:
 
 .. figure:: media/install-on-proxmox_02_boot-menu.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: Proxmox Boot-Menu
 
    Proxmox Boot Menue
@@ -131,7 +138,7 @@ Wähle ``Install Proxmox VE (Graphical)`` und starte die Installation mit ``ENTE
 
 .. figure:: media/install-on-proxmox_03_eula.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: Proxmox Nutzervereinbarung
 
    Proxmox End-User-Agreement
@@ -148,11 +155,11 @@ Bestätige das ``End-User-Agreement`` mit ``Enter``.
 Wähle die gewünschte Festplatte auf dem Server zur Installation aus. Hast Du mehrere einzelne Festplatten im Server verbaut und kein RAID-Verbund definiert, so kannst Du hier mit der Schaltfläche `Optionen` weitere Einstellungen aufrufen. Hier kannst Du |zb| mehrere Festplatten angeben, die in einem sog. ZFS-Pool definiert werden sollen. Dies ist für das Erstellen von sog. Snapshots von Vorteil. Soll aber an dieser Stelle nicht vertieft werden.
 (siehe hierzu |ua|: https://pve.proxmox.com/pve-docs/pve-admin-guide.html)
 
-Gib bei ``Location- and Time Zone selection`` als Land und Keyboard Layout  ``Germany`` an. Wähle als Zeitzone Europe/Berlin.
+Gib bei ``Location and Time Zone selection`` als Land und Keyboard Layout  ``Germany`` an. Wähle als Zeitzone Europe/Berlin.
 
 .. figure:: media/install-on-proxmox_05_location-and-time-zone.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: Proxmox Installation Zeitzone 
 
    Proxmox Zeitzone
@@ -161,14 +168,13 @@ Lege ein Kennwort für den Administrator des Proxmox-Host fest und gib eine E-Ma
 
 .. figure:: media/install-on-proxmox_06_admin-password.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: Proxmox Installation Admin-Passwort
 
    Admin Password festelegen
 
 
-Lege die IP-Adresse des Proxmox-Host im internen Netz fest. Solltest Du intern |zb| auf dem (DSL-)Router einen
-DHCP-Server laufen haben, dann erhältst Du hier bereits eine vorausgefüllte Konfigurationsseite. Passe diese Werte nun den gewünschten Werten an. Der Hostname des Proxmox-Host ist hier in gewünschter Form |-| hier `<hostename> (z.B. pve).linuxmuster.lan` |-| anzugeben.
+Lege die IP-Adresse des Proxmox-Host fest. Solltest Du intern |zb| auf dem (DSL-)Router einen DHCP-Server laufen haben, dann erhältst Du hier bereits eine vorausgefüllte Konfigurationsseite. Passe diese Werte nun den gewünschten Werten an. Der Hostname des Proxmox-Host ist hier in gewünschter Form |-| hier `<hostename> (z.B. pve).linuxmuster.lan` |-| anzugeben.
 
 .. hint::
 
@@ -180,7 +186,7 @@ Hier wurde die interne IP-Adresse `192.168.199.20/24` festgelegt.
 
 .. figure:: media/install-on-proxmox_07_network-configuration.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: Proxmox Installation Netzwerk Konfiguration
 
    Netwerk Konfiguration
@@ -189,7 +195,7 @@ Hier wurde die interne IP-Adresse `192.168.199.20/24` festgelegt.
 
 .. figure:: media/install-on-proxmox_08_install-summary.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: Proxmox Installation Übersicht
 
    Zusamenfassung der Installationsoptionen
@@ -198,7 +204,7 @@ Warte den Abschluss der Installation ab.
 
 .. figure:: media/install-on-proxmox_09_install-success.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: Proxmox Installation erfolgreich beendet
 
    Installation beendet
@@ -273,11 +279,11 @@ Aktualisiere danach die Paketquellen und die Pakete:
 Netzwerkbrücken einrichten
 --------------------------
 
-Für eine funktionierende Umgebung müssen ``zwei Netzwerkbrücken/Bridge (vSwitch)`` auf dem Hypervisor eingerichtet werden.
+Für eine funktionierende Umgebung müssen ``zwei Netzwerkbrücken/Bridges (vSwitch)`` auf dem Hypervisor eingerichtet werden.
 
 Eine für das ``interne Netz (green, 10.0.0.0/16)`` und eine für das ``externe Netz (red, externes Netz, Internetzugriff)``. 
 
-Nach der zuvor beschriebenen Erstinstallation von Proxmox wurde bislang **nur eine Bridge (vmbr0)** eingerichtet. Diese ist mit der ersten Netzwerkschnittstelle (NIC) des Proxmox-Hosts verbunden. Das Ethernet-Kabel der 1. NIC ist mit dem (DSL)-Router verbunden. Verlief der vorherige Befehl zur Aktualisierung von Proxmox erfolgreich, so weißt Du, dass diese Bridge bereits funktioniert und für die weitere Nutzung für das ``externe Netz (red) - vmbr0`` genutzt werden kann.
+Nach der zuvor beschriebenen Erstinstallation von Proxmox wurde bislang **nur eine Bridge (vmbr0)** eingerichtet (rotes Netz). Diese ist mit der ersten Netzwerkschnittstelle (NIC) des Proxmox-Hosts verbunden. Das Ethernet-Kabel der 1. NIC ist mit dem (DSL)-Router verbunden. Verlief der vorherige Befehl zur Aktualisierung von Proxmox erfolgreich, so weißt Du, dass diese Bridge bereits funktioniert und für die weitere Nutzung für das ``externe Netz (red) - vmbr0`` genutzt werden kann.
 
 Für die internen virtuellen Netze ist also eine **zweite Bridge** zu erstellen, die an die zweite Netzwerkkarte direkt gebunden wird. Dieser wird allerdings **keine** IP-Adresse zugeordnet.
 
@@ -295,7 +301,6 @@ Die **bisherige** Netzwerkkonfiguration stellt sich wie folgt dar:
 .. todo::
 
    Grafik anpassen - alle ohne Versionnummern
-
 
 Für die folgende Überprüfung öffnest Du nochmals die Konsole auf dem Hypervisor, falls sie nicht geöffnet sein sollte - wie zuvor beschrieben - und lässt Dir den Inhalt der Konfigurationsdatei anzeigen mittels:
 
@@ -348,11 +353,9 @@ Markiere wie gezeigt ``vmbr0`` und betätige den ``Edit``-Button, um das Konfigu
 
    Kommentar für vmbr0
 
-Trage unter ``Comment`` einen Kommentar ein, der veranschaulicht, dass diese Brücke die Verbindung zum Internet stellt. Zum Beispiel wie hier gezeigt ``red``, den bei uns historisch gewachsenen Begriff für dieses Interface.
+Trage unter ``Comment`` einen Kommentar ein, der veranschaulicht, dass diese Brücke die Verbindung zum Internet stellt. Zum Beispiel wie hier gezeigt ``red``.
 
 Mit `OK` wird der Kommentar übernommen.
-
-####
 
 Nun erstellst Du die zweite Bridge ``vmbr1``:
 
@@ -374,13 +377,13 @@ Es öffnet sich ein neues Fenster. Dort sind folgende Einträge nötig:
 
    Linux Bridge erstellen
 
-Mit `Create` wird die Brücke erstellen.
+Mit ``Create`` wird die Brücke erstellen.
 
-Anschließend Proxmox über den Button ``Reboot`` oben rechts neu starten, um die neue Netzwerkkonfiguration zu laden. Node <hostename> (z.B. pve) muss dafür im Menü ``Datacenter`` links ausgewählt sein:
+Anschließend startest Du Proxmox über den Button ``Reboot`` oben rechts neu, um die neue Netzwerkkonfiguration zu laden. Node <hostename> (z.B. pve) muss dafür im Menü ``Datacenter`` links ausgewählt sein:
 
 .. figure:: media/install-on-proxmox_16_reboot.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: Proxmox reboot
 
    Proxmox Neustart
@@ -419,6 +422,10 @@ Zur Veranschaulichung eine Grafik, die den Status der Konfiguration zeigt.
 .. figure:: media/install-on-proxmox_17_network-eno2.svg
    :align: center
    :alt: eno2 Schnittstelle hinzugefügt
+   
+.. hint::
+
+   Grafik ersetzen
 
 (Optional) Festplatten anpassen
 -------------------------------
@@ -429,11 +436,11 @@ In diesem Schritt wird die zweite Festplatte in Proxmox eingebunden, um diese al
 
 .. note::
 
-   Die folgenden Schritte bitte dann ausführen, wenn nicht auf einem einzigen Volume Proxmox eingerichtet werden soll! In diesem Fall geht es hier weiter: `Vorbereiten des ISO-Speichers`_
+   Die folgenden Schritte bitte dann ausführen, wenn Proxmox nicht auf einem einzigen Volume eingerichtet werden soll! Solltest Du bei der Installation von Proxmox nur einen Speicher nutzen, kannst Du direkt weitergehen zu: `Vorbereiten des ISO-Speichers`_
 
 *local-lvm(<hostename> (z.B. pve))-Partition entfernen und Speicher freigeben*
 
-Während der Proxmox-Installation wurden die Storages „local“ und „local-lvm“ automatisch auf der ersten Festplatte erstellt. Da anfangs für die Linuxmuster-Maschinen eine zweite Festplatte als „Storage“ eingerichtet wurde, wird „local-lvm“ nicht benötigt. Deshalb wird nun „local-lvm“ entfernt und „local“ durch den freigewordenen Speicher vergrößert, sodass auf der ersten Festplatte der gesamte Speicher dem Hypervisor zur Verfügung steht.
+Während der Proxmox-Installation wurden die Storages ``local`` und ``local-lvm`` automatisch auf der ersten Festplatte erstellt. Da anfangs für die Linuxmuster-Maschinen eine zweite Festplatte als ``Storage`` eingerichtet wurde, wird ``local-lvm`` nicht benötigt. Deshalb wird nun ``local-lvm`` entfernt und ``local`` durch den freigewordenen Speicher vergrößert, sodass auf der ersten Festplatte der gesamte Speicher dem Hypervisor zur Verfügung steht.
 
 1. auf <hostename> (z.B. pve) oben rechts Shell anklicken:
 
@@ -672,7 +679,7 @@ ein (copy&paste). Anschließend betätigst Du dann den Button ``Query URL``.
 
 Wenn die Abfrage der URL positiv war, sollten sich die Felder ausgefüllt haben.
 
-Zum Überprüfen der Datei-Integrität aktiviere ``Verify certificates``, das sich unter den ``Advanced`` Optionen befindet.
+Zur Überprüfung der Integrität der Dati aktiviere ``Verify certificates``, das sich unter den ``Advanced`` Optionen befindet.
 
 Wähle wie dargestellt: ``SHA-256`` und trage die Checksumme ein:
 
@@ -969,7 +976,7 @@ Es erscheint nun das Fenster zur Anlage der neuen VM. Trage hier einen Namen fü
 Klicke dann auf ``Next``.
 
 Wähle nun den ISO-Datenspeicher unter Storage aus. Das ist der Speicher, auf den Du vorher die ISO-Images abgelegt hast.
-Wähle dann das ISO image der OPNsense aus.
+Wähle dann das ISO image des Ubuntu Server aus.
 
 .. figure:: media/proxmox-create-vm-ubuntu-server-02.png
    :align: center
@@ -1036,7 +1043,7 @@ Gib nun für den Server die gewünschte Größe des Arbeitsspeichers an.
 
 Klicke dann auf ``Next``.
 
-Gib danach die Bridge vmbr1 für die einzurichtende Netzwerkkarte an. Dies muss die Bridge für das interne Netz (green) sein.
+Gib danach die Bridge ``vmbr1`` für die einzurichtende Netzwerkkarte an. Dies muss die Bridge für das interne Netz (green) sein.
 
 .. figure:: media/proxmox-create-vm-ubuntu-server-08.png
    :align: center
@@ -1072,7 +1079,7 @@ Nachdem die VM angelegt wurde, siehst Du diese links im Verzeichnisbaum Deines P
 Abschließende Konfiguration der virtuellen Maschinen
 ----------------------------------------------------
 
-Die nächsten beiden Einstellungen musst Du sowohl für die Firewall als auch für den Server vornehmen. Wir beschreiben es hier jetzt exemplarisch für die Firewall. 
+Die nächsten beiden Einstellungen musst Du sowohl für die **Firewall als auch für den Server** vornehmen. Wir beschreiben es hier jetzt exemplarisch für die Firewall. 
 
 Boot-Optionen
 +++++++++++++
@@ -1156,6 +1163,5 @@ Die beiden letzten Einstellungen musst Du **nochmals für den linuxmuster.net Se
 
 .. hint:: Für die weitere Nutzung von xterm.js ist allerdings noch eine Anpassung bei der laufenden OPNsense |reg| bzw. dem Server nötig. Die nimmst Du zu einem geeigneten späteren Zeitpunkt vor, bis dahin musst Du noch die Konsole ``noVNC`` nutzen.
 
-#####
+Die virtuellen Maschinen sidn jetzt für die weitere Installation vorbereitet. Du kannst gemäß der Anleitung: :ref:`install-from-scratch-label` mit der Installation fortfahren.
 
-Nun sind Deine virtuellen Maschinen für die weitere Installation bereit und Du kannst gemäß der Anleitung: :ref:`install-from-scratch-label` weiterarbeiten.
