@@ -35,7 +35,7 @@ Erster Start des Servers vom Installationsmedium
 Sprachauswahl
 -------------
 
-Starte den Server via Ubuntu 22.04 Server ISO-Image (USB-Stick oder CD-ROM). Es erscheint das erste Installationsfenster mit der Abfrage zur gewünschten Sprache.
+Starte den Server Ubuntu 22.04 LTS Server ISO-Image. Es erscheint das erste Installationsfenster mit der Abfrage zur gewünschten Sprache.
 
 .. figure:: media/basis_server_001.png
    :align: center
@@ -231,10 +231,9 @@ Danach gelangst Du zu nachstehendem Bildschirm.
 
    Speicherplatzkonfiguration
 
-Speicherplatz für das Testsystem
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Lasse das `zweite Speichermedium unkonfiguriert`.
 
-Für das Setup werden noch weitere Partitionen benötigt. Dafür haben wir uns für folgende Größenvorgabe entschieden. 
+Für das Setup werden noch weitere Partitionen benötigt, die so ohne weitere Angabe von dem später beschriebenen Skript ``lmn-prepare`` genutzt werden.
 
 .. hint:: Für kleine Schulen oder eine Test-Installation sollten diese Vorgaben passen. 
    
@@ -247,183 +246,16 @@ Für das Setup werden noch weitere Partitionen benötigt. Dafür haben wir uns f
    default-school /dev/sg_srv/default-school /srv/samba/schools/default-school 40G [#f1]_
    ============== ========================== ================================= ==========
 
-.. [#f1] Sollte Deine Festplatte größer sein als die vorgeschlagene Mindestgröße, so wird für diese Partition der maximal übrige freie Platz verwendet.
+.. [#f1] Sollte Deine Festplatte größer sein als die vorgeschlagene Mindestgröße, so wird für diese Partition der maximal übrige freie Platz verwendet. Du kannst zudem eigene Größenangaben vornehmen, sofern Deine Voraussetzungen abweichen.
 
 .. attention::
 
-   Unser linuxmuster-setup nimmt Dir die nötigen vorbereitenden Aktionen ab. Du läßt also das `zweite Speichermedium unkonfiguriert`.
-
-Zum Abschluss werden Dir die Partitionsierungseinstellungen gemäß Deiner Eingaben angezeigt.
-
-.. figure:: media/basis_server_016_custom-storage-layout-create-partition-table-overview.png
-   :align: center
-   :scale: 80%
-   :alt: confirm storage configuration
-
-   Speicherplatzkonfiguration übernehmen
-
-Wenn Du es für Deine Installation nutzen willst, dann kannst Du die nächsten Punkte überspringen und mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
-
-Speicherplatz nach Deinen Vorgaben (optional)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. tip::
-
-  Alternativ kannst Du die zweite Platte mit anderen Größenangaben auch mit linuxmuster-prepare im Zuge des Setup ausführen. Möchtest Du dies so durchführen, kannst Du nachstehende Punkte überspringen.
-
-Solltest Du Dich für eine andere Größeneinteilung oder für eine Einrichtung auf realen Festplatten entschieden haben, dann geht es hier für Dich weiter.
-
-   ============== ========================== ================================= ==========
-   LV Name        LV Pfad                    Mountpoint                        Größe
-   ============== ========================== ================================= ==========
-   var            /dev/sg_srv/var            /var                              20G
-   linbo          /dev/sg_srv/linbo          /srv/linbo                        80G
-   global         /dev/sg_srv/global         /srv/samba/global                 20G
-   default-school /dev/sg_srv/default-school /srv/samba/schools/default-school 80G
-   ============== ========================== ================================= ==========
-
-Wir beschreiben hier exemplarisch das Vorgehen für die Größen aus der obigen Tabelle für die |...|
-
-|...| `Einrichtung eines LVM auf der 2. HDD nach Deinen Vorgaben (optional)`_
-
-|...| `Einrichtung ohne LVM auf HDD nach Deinen Vorgaben (optional)`_
-
-Einrichtung eines LVM auf der 2. HDD nach Deinen Vorgaben (optional)
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. figure:: media/basis_server_016_lvm_001.png
-   :align: center
-   :scale: 80%
-   :alt: create lvm on second storage
-
-   Lege ein LVM an
-
-Wähle den Eintrag ``Datenträgergruppe (LVM) anlegen`` aus.
-
-.. figure:: media/basis_server_016_lvm_002.png
-   :align: center
-   :scale: 80%
-   :alt: create an lvm volume
-
-   LVM-Volume erstellen
-
-Hier gibst Du einen Namen für die LVM Volume Group an (z.B. sg_srv) und wählst das Gerät aus wo es erstellt werden soll. ``Erstellen`` schließt dieses Fenster.
-
-#####
-
-Bei ``VERFÜGBARE GERÄTE`` gilt es nun in die angelegte ``LVM volume group`` die benötigten ``Logical Volume`` anzulegen.
-
-.. figure:: media/basis_server_016_lvm_003.png
-   :align: center
-   :scale: 80%
-   :alt: create logical volume
-
-   Lege ein Logical Volume an
-
-Bei ``VERFÜGBARE GERÄTE`` findest Du die von Dir zuvor angelegte "LVM volume group". Diese markierst Du , um dann ``Create Logical Volume`` auszuwählen.
-
-.. figure:: media/basis_server_016_lvm_004.png
-   :align: center
-   :scale: 80%
-   :alt: define size of logical volume
-
-   Lege die Größe des Logical Volume fest
-
-Die benötigten Daten entnimmst Du aus der obigen Tabelle.
-Die Zuordnung ist folgende:
-
-========== === ===============================
-``Name``   --> LV Name
-``Size``   --> Größe
-``Mount``  --> Mountpoint
-========== === ===============================
-
-Bei ``Format`` wählst Du, wie in der Grafik gezeigt "ext4".
-
-Wieder schließt Du diese Aktion mit ``[Èrstellen]`` ab.
-
-#####
-
-Die letzten zwei Schritte wiederholst Du für die anderen Positionen der Tabelle |...|
-
-|...| linbo:
-
-.. figure:: media/basis_server_016_lvm_005.png
-   :align: center
-   :scale: 80%
-   :alt: volume for linbo
-
-   Volume für LINBO festlegen
-
-.. figure:: media/basis_server_016_lvm_006.png
-   :align: center
-   :scale: 80%
-   :alt: define size for linbo volume
-
-   Größe für LINBO festlegen
-
-#####
-
-|...| global:
-
-.. figure:: media/basis_server_016_lvm_007.png
-   :align: center
-   :scale: 80%
-   :alt: define volume for global
-
-   Volume für global festlegen
-
-.. figure:: media/basis_server_016_lvm_008.png
-   :align: center
-   :scale: 80%
-   :alt: define size for volume global
-
-   Größe für global festlegen
-
-#####
-
-|...| default-school:
-
-.. figure:: media/basis_server_016_lvm_009.png
-   :align: center
-   :scale: 80%
-   :alt: define volume vor default-school
-
-   Volume für default-school definieren
-
-.. figure:: media/basis_server_016_lvm_010.png
-   :align: center
-   :scale: 80%
-   :alt: define size for volume default-school
-
-   Größe für das Volume default-school festlegen
-
-######
-
-Zum Abschluss werden Dir die Partitionsierungseinstellungen gemäß Deiner Eingaben angezeigt.
-
-.. figure:: media/basis_server_016_lvm_011.png
-   :align: center
-   :scale: 80%
-   :alt: overview partition settings
-
-   Überblick über die Partitionseinstellungen
-
-Wenn Du es für Deine Installation nutzen willst, dann kanst Du mit `Speicherplatzkonfiguration übernehmen`_ weitermachen.
-
-Einrichtung ohne LVM auf HDD nach Deinen Vorgaben (optional)
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Ohne LVM sind die Mount Points ``/var``, ``/srv/linbo``, ``/srv/samba/global`` und ``/srv/samba/schools/default-school`` auf die HDD(s) beziehungsweise auf einzelne Partitionen zu legen.
-
-Auf eine detaillierte Beschreibung verzichten wir hier. Wir gehen davon aus, dass Du weißt, wie Du es umsetzen musst, wenn Du es so einrichten willst. 
-
-Die vorhergehende Beschreibung bietet Dir sicherlich genügende Hinweise, daher verlinken wir sie hier noch einmal für Dich. `Einrichtung eines LVM auf der 2. HDD nach Deinen Vorgaben (optional)`_ 
+   Unser lmn-prepare nimmt Dir die nötigen vorbereitenden Aktionen ab. Du läßt also das `zweite Speichermedium unkonfiguriert`.
 
 Speicherplatzkonfiguration übernehmen
 -------------------------------------
 
-Stimmen diese mit den gewünschten überein, so wähle ``Erledigt`` wie in dem zuletzt gesehen Bild aus.
+Übernehme die Speicherplatzkonfiguration und wähle ``Erledigt`` aus.
 
 Danach erhälst Du die Rückfrage, ob die Installation fortgesetzt werden soll und die Daten auf der Festplatte hierbei gelöscht werden.
 
@@ -485,7 +317,7 @@ Zum Abschluß der Installation wird automatisch versucht, Updates zu installiere
 
    Bei einer VM achte vor dem Neustart darauf, dass Du die ISO-Datei / DVD ausgeworfen hast und die Boot-Reihenfolge so umgestellt hast, dass die VM direkt von HDD bootet.
 
-Wann die Installation abgeschlossen ist, erkennst Du daran das die Anzeige am unteren Bildschirmrand von
+Wann die Installation abgeschlossen ist, erkennst Du daran, dass die Anzeige am unteren Bildschirmrand von
 
 .. figure:: media/basis_server_022.png
    :align: center
@@ -516,13 +348,12 @@ Den Neustart veranlasst Du mit ``Jetzt neustarten``, wenn es Dir angeboten wird.
 
 .. tip::
 
-   Folgendes Vorgehen bieten sich an, wenn der Server virtualisiert betrieben wird und der Hypervisor so schnell den Neustart einleitet, dass Du keine Chance hast, das Installationsmedium zu entfernen.
+   Folgendes Vorgehen bietet sich an, wenn der Server virtualisiert betrieben wird und der Hypervisor so schnell den Neustart einleitet, dass Du keine Chance hast, das Installationsmedium zu entfernen.
 
    Alternative zum ``Jetzt Neustarten`` gehe zum Punkt ``Hilfe`` oben rechts. Dort wählst Du den Menüpunkt ``Enter Shell`` aus, wo Du dann den Server gezielt mit ``init 0`` herunterfährst. Es folgt noch ein Hinweis, dass Du die Entfernung des Installationsmediums mit ``Enter`` bestätigen sollst. Im Anschluss daran fährt der Server herunter und Du kannst ihn von neuem starten.
 
 Bei laufender und wie zuvor beschriebener Einrichtung der OPNsense |reg| sollte dies erfolgreich verlaufen.
 
-######
 
 Basis-Konfiguration des Servers
 ===============================
@@ -562,71 +393,6 @@ Nach erfolgter Anmeldung mit Deinem Account kannst Du die ab jetzt folgenden Cod
 
 .. note:: Der Befehl sorgt dafür, dass die Zeilenumbrüche hoffentlich zu Deiner Konsolen-Anzeige passen. Ansonsten musst Du die Angaben für die Zeichen (cols) und Zeilen (rows) anpassen.    
 
-Quota-Einstellungen überprüfen
-------------------------------
-
-.. hint::
-
-   Nachstehende Schritte musst Du nur durchführen, wenn Du **nicht** mit den default-Einstellungen installierst. 
-   
-   Überspringe diesen Punkt und gehe zu: `Bezeichnung des Speichermediums für das LVM ermitteln`_
-   
-   Hast Du bei der Installation des Servers als Speichermediem **kein LVM manuell** angelegt, dann führst Du nachstehende Schritte aus. In allen anderen Fällen überspringt Du diesen Schritt.
-
-
-.. code:: 
-
-   nano /etc/fstab
-
-Mit diesem Aufruf öffnest Du die Datei ``/etc/fstab`` mit dem Editor nano auf, damit Du die Ersetzung von ``defaults`` durchführen kannst. Das ist der Ersetzungstext:
-
-.. code::
-
-   user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1
-
-Vor Deiner Ersetzung:
-
-.. code::
- 
-   /dev/vg0/var              /var ext4 defaults 0 1
-   /dev/vg0/linbo            /srv/linbo ext4 defaults 0 1
-   /dev/vg0/global           /srv/samba/global ext4 defaults 0 1
-   /dev/vg0/default-school   /srv/samba/schools/default-school ext4 defaults 0 1
-
-Nach der Änderung:
- 
-.. code::
- 
-   /dev/vg0/var              /var ext4 defaults 0 1
-   /dev/vg0/linbo            /srv/linbo ext4 defaults 0 1
-   /dev/vg0/global           /srv/samba/global ext4 user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1 0 1
-   /dev/vg0/default-school   /srv/samba/schools/default-school ext4 user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1 0 1
- 
-Speichere die Einstellung mit ``Strg+w`` und verlasse den Editor mit ``Strg+x``. 
- 
-Lade die Eintragungen aus der Datei ``/etc/fstab`` neu mit ``mount -a``. Ggf. erkennst Du auch noch Fehler, die sich aufgrund von Tippfehlern in der Datei /etc/fstab ergeben. Behebe diese zuerst, bevor Du fortfährst.
- 
-.. _lsblk-command:
-
-Bezeichnung des Speichermediums für das LVM ermitteln
------------------------------------------------------
-
-Betrifft Dich nur, wenn Du die default-Einstellungen verwendest.
-
-.. code::
-
-   lsblk
-
-Aus dessen Ausgabe kannst Du Namen für die weitere Verwendung ermitteln. Hier wäre er beispielhaft ``/dev/sdb/``
-
-.. figure:: media/basis_server_024.png
-   :align: center
-   :scale: 80%
-   :alt: output of lsblk command
-
-   Ausgabe des lsblk - Befehls
-
-.. note:: Notiere Dir HDD- und Partition-Bezeichnungen für die spätere Verwendung.
 
 Automatische Updates abschalten
 -------------------------------

@@ -11,12 +11,12 @@ Proxmox in das interne Netz bringen
                   
 
 Nachdem Du die Firewall installierst, eine Erstkonfiguration erstellt und dann einen Snapshot der VM erstellt hast, musst Du jetzt den Proxmox-Host umkonfigurieren.
-Ziel ist es, dass der Proxmox-Host nunmehr nur noch im internen Netzwerk (green) erreichbar ist. Der Host wird dann durch die OPNsense - Firewall geschützt. 
-Die OPNsense ist zugleich das neue Gateway für den Proxmox-Host, um Zugriffe in das externe Netz zu ermöglichen.
+
+Ziel ist es, dass der Proxmox-Host nunmehr ``nur noch im internen Netzwerk (green)`` erreichbar ist. Der Host wird dann durch die OPNsense - Firewall geschützt. Die OPNsense ist zugleich das neue Gateway für den Proxmox-Host, um Zugriffe in das externe Netz zu ermöglichen.
 
 Um dies umzusetzen, sind die Bridges umzukonfigurieren.
 
-1. vmbr0 - red - externes Netzwerk   (IP im Beispiel 192.168.0.20/24)
+1. vmbr0 - red - externes Netzwerk   (IP im Beispiel 192.168.0.20/24 bzw. IP via DHCP)
 2. vmbr1 - green - internes Netzwerk (IP im LAN: 10.0.0.20/16)
 
 Rufe auf dem Proxmox-Host eine Eingabekonsole auf und ändere die Datei ``/etc/network/interfaces`` wie folgt:
@@ -72,9 +72,12 @@ Hast Du dies erfolgreich umgesetzt, dann hast Du Folgendes erreicht:
    :alt: Netzwerk für die Proxmox Installation
 
    Proxmox Netzwerk
+
+.. hint::
+
+   Grafik ersetzen
    
-   
-Du musst nun noch den Admin-PC nach dem Neustart des Proxmox-Host auf den internen Switch des grünen Netzes anschließen. Der Admin-PC benötigt nun eine manuelle vergeben IP:
+Du musst nun noch den Admin-PC nach dem Neustart des Proxmox-Host auf den internen Switch des grünen Netzes anschließen. Der Admin-PC benötigt nun eine manuell vergebene IP:
 
 -  IP Address: 10.0.0.10/16
 -  Subnetzmaske: 255.255.0.0
@@ -88,7 +91,9 @@ Danach solltest Du vom Admin-PC aus folgende Hosts erreichen können:
 3. 8.8.8.8 - externer DNS-Server
 4. linuxmuster.net - externe URL
 
+Der Proxmox-Host ist nun "hinter" der OPNsense und kann über diese auf das Internet zugreifen. Dafür muss die virtuelle Maschine der OPNsense aktiv sein.
 
+Fahre nun fort mit :ref:`basis_server-label`.
 
 
 
