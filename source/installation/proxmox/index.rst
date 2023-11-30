@@ -422,10 +422,8 @@ Zur Veranschaulichung eine Grafik, die den Status der Konfiguration zeigt.
 .. figure:: media/install-on-proxmox_17_network-eno2.svg
    :align: center
    :alt: eno2 Schnittstelle hinzugefügt
-   
-.. hint::
 
-   Grafik ersetzen
+   Neue Netzwerkschnittstelle eno2 an vmbr1 erzeugt
 
 (Optional) Festplatten anpassen
 -------------------------------
