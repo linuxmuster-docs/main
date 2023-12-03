@@ -190,23 +190,23 @@ Speicher des Systems
    :alt: choose your custom storage layout
 
    Eigenes Festplattenlayout wählen
-
+   
 Wähle nun zur Einrichtung der Festplatten ``Custom Storage Layout`` aus, wie in obigen Bild dargestellt.
 
 Es werden Dir dann die verfügbaren Geräte angezeigt. 
 
 .. figure:: media/basis_server_011_custom-storage-layout-create-partition-table.png
    :align: center
-   :scale: 80%
+   :scale: 70%
    :alt: available devices
 
-   Anzeige der verfügbaren Geräte
+   Anzeige der verfügbaren Geräte - andere HDD-Größen als zuvor genannt
 
 Wähle die erste Festplatte bzw. die erste Partition aus, auf der Du das System des Servers unterbringen möchtest. Es wird ein Kontextmenü angezeigt, bei dem Du mit ``Add GPT Partition`` diese erstellen musst. 
 
 .. figure:: media/basis_server_012_custom-storage-layout-create-partition-table2.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: add gpt partition
 
    Füge eine GPT Partition hinzu
@@ -215,7 +215,7 @@ Wähle den gesamten Festplattenplatz (einfach das Eingabefeld leer lassen) und f
 
 .. figure:: media/basis_server_013_custom-storage-layout-create-partition-table3.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: choose partition size
 
    Lege die Partitionsgröße fest
@@ -226,7 +226,7 @@ Danach gelangst Du zu nachstehendem Bildschirm.
 
 .. figure:: media/basis_server_014_custom-storage-layout-create-partition-table-lvm-hdb-5.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: storage configuration overview
 
    Speicherplatzkonfiguration
@@ -283,6 +283,17 @@ Nenne den Server ``server``. Der Benutzername (linuxadmin) und das Passwort (Mus
    :alt: activate ssh server
 
    Aktiviere den SSH-Server
+   
+   
+Danach wirst Du gefragt, ob Die ``Ubuntu Pro`` aktiviert werden soll. Überspringe dies.
+
+.. figure:: media/basis_server_018a.png
+   :align: center
+   :scale: 80%
+   :alt: skip Ubuntu Pro activation
+
+   Überspringe die Aktivierung von Ubuntu Pro
+      
 
 Solltest Du eine Möglichkeit für einen Fernzugang zu dem Server wünschen, aktiviere ``OpenSSH-Server installieren``. 
 
@@ -409,6 +420,7 @@ Werde mit |...|
 
 .. code::
 
+  apt install nano
   nano /etc/apt/apt.conf.d/20auto-upgrades
 
 Ersetze bei ``APT::Periodic::Unattended-Upgrade`` die ``"1";`` durch ``"0";``.
@@ -421,6 +433,10 @@ Jetzt kannst Du den Server updaten, mit |...|
    apt update && apt dist-upgrade
    
 Nachdem Dir neue Pakete zur Anzeige gebracht wurden, startest Du den Upgrade-Prozess mit ``j``.
+Du erhälst die Rückfrage, welche Dienste, die noch mit alten Bibliotheken arbeiten, neu gestartet werden sollen.
+
+Hier spielt es keine Rolle, welche Dienste Du angibst, denn zum Abschluss startest Du den Server einmal neu mit dem Befehl ``reboot``.
+Danach sind alle Dienste mit den jeweils neu installierten Bibliotheken neu gestartet.
 
 .. attention::
 
