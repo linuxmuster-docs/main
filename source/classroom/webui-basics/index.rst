@@ -4,15 +4,17 @@
 Schulkonsole des Lehrers
 ========================
 
-.. sectionauthor:: `@Maurice <https://ask.linuxmuster.net/u/Maurice>`_, `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
-            `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
+                   `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
-Haben Sie in linuxmuster.net v7 einen Lehrer-Account, so können Sie die Steuerung des Unterrichts web-basiert mithilfe der 
+Haben Sie in linuxmuster.net einen Lehrer-Account, so können Sie die Steuerung des Unterrichts web-basiert mithilfe der 
 Schulkonsole in einem Browser vornehmen.
 
 .. figure:: media/01_webui-basics_welcome.png
    :align: center
    :alt: WebUI Welcome
+       
+   Schulkonsole als Lehrer nach der Anmeldung
 
 Allgemeine Bedienung
 ====================
@@ -26,49 +28,49 @@ zugehörige Menüpunkte.
 
 Die Icons haben folgende Bedeutung:
 
-* Menü ein- und ausklappen
-
 .. figure:: media/03_webui-basics_extend-menue.png
    :align: center
    :alt: WebUI Extend Menue
-
-* Benutzericon
-
+   
+   Menü ein- und ausklappen
+   
 .. figure:: media/04_webui-basics_user-icon.png
    :align: center
    :alt: WebUI User Icon
-
-* angemeldeter Benutzername
-
-.. figure:: media/05_webui-basics_username.png
-   :align: center
-   :alt: WebUI Username
-
-* eigenes Passwort ändern
+   
+   angemeldeter Benutzer
 
 .. figure:: media/06_webui-basics_change-password.png
    :align: center
    :alt: WebUI Change Password
 
-* Abmelden
+   Kennwort ändern
+
+.. figure:: media/06_webui-basics_change-to-2fa.png
+   :align: center
+   :alt: WebUI Change Password Authentication to 2FA
+
+   Aktiviere die Zwei-Faktor-Authentifizierung
 
 .. figure:: media/07_webui-basics_logout.png
    :align: center
    :alt: WebUI Logout
-
-* Seitenverhältnis skalieren
+   
+   Abmelden
 
 .. figure:: media/08_webui-basics_scale-page-ratio.png
    :align: center
    :alt: WebUI Scale Page Ratio
 
-Das Menü können Sie durch Anklicken der drei Striche links neben dem linuxmuster.net-Symbol ein- und ausblenden.
+   Seitenverhältnis skalieren
+   
+Das Menü kannst Du durch Anklicken der drei Striche links neben dem linuxmuster.net-Symbol ein- und ausblenden.
 
 .. hint:: 
-   Bei Namenvergaben, beispielsweise von Kursen oder Projekten, sollte auf Umlaute und ß verzichtet werden.
+  
+   Bei Vergabe von Kursen- oder Projektnamen solltest Du auf Umlaute und ß verzichteen.
 
-Die Schulkonsole des Lehrers teilt sich auf einen ``Übersichtsbereich Allgemein`` sowie auf ``pädagogische Funktionen`` 
-im Bereich Klassenzimmer auf.
+Die Schulkonsole des Lehrers teilt sich auf die Bereiche ``Allgemein`` und ``Klassenzimmer``.
 
 Allgemein
 =========
@@ -76,12 +78,27 @@ Allgemein
 Hauptseite
 ----------
 
-.. figure:: media/09_webui-basics_main-page.png
+.. figure:: media/01_webui-basics_welcome.png
    :align: center
    :alt: WebUI Main Page
+   
+   Hauptseite als angemeldeter Lehrer
 
-Eine generelle Übersicht über Account- & Speicherinformationen des angemeldeten Benutzer. Möglichkeit zur Änderung des
-eigenen Passworts über ``Passwort ändern``-Funktion.
+Hier findest Du Informatioen zu Deinem Konto, Deinen zugeordneten Benutzergruppen sowie dem Verbrauch des Festplattenkontingents (Quotas).
+
+
+Meine Dateien
+-------------
+
+.. figure:: media/02_webui-basics_my-files.png
+   :align: center
+   :alt: WebUI My Files
+   
+   Meine Dateien als angemeldeter Lehrer
+
+Hier findest Du die Ordner und Dateien, die Du für Deinen Unterricht z.B. im Unterverzeichnis Unterricht abgelegt hast und im Unterricht verteilen kannst.
+Das Verzeichnis ``transfer`` wird für den Klassenarbeitsmodus benötigt, um Dateien für Klassenarbeiten auszuteilen und die Ergebnisse auch wieder einzusammeln.
+
 
 Klassenzimmer
 -------------
@@ -89,35 +106,39 @@ Klassenzimmer
 Unterricht
 ----------
 
-Kurse, in denen Sie Mitglied sind, werden hier aufgelistet.
+Klassen / Kurse, in denen Du Mitglied bist, werden hier aufgelistet.
 
 .. figure:: media/10_webui-basics_my-classes.png
    :align: center
    :alt: WebUI My Classes
 
-Der Kurs "Dieser Raum" wird dynamisch zusammengestellt mit angemeldeten Nutzern in einem Raum. Nur der Button zum neu starten der Sitzung ist auswählbar.
+   Unterricht nach der Erstanmeldung als Lehrer
 
-Bei Kursen unter "Meine Klassen" kann unter 2 Button gewählt werden:
+Zu Beginn bist Du noch in keinen Klassen / Kursen oder Projekten eingeschrieben. Schreibe Dich als Lehrer zuerst in den gewünschten Klassen / Kursen ein.  Hierzu klickst Du links im Menü auf ``Einschreiben`` -> ``Schulklassen``. Bei den angezeigten Schulklassen setzt Du für diejenigen Klassen einen Haken, in denen Du Dich einschreiben möchtest.
 
-* Sitzung unverändert starten
+Oben erscheint ein blau hinterlegter Hinweis. Um die Die Einschreibung abzuschließen, musst Du auf ``Jetzt ausführen`` in dem baluen Hinweisfeld klicken.
 
-.. figure:: media/43_webui-basics_start-session-unchanged.png
+.. figure:: media/11_webui-class-enrollement.png
    :align: center
-   :alt: start session unchanged button
+   :alt: class enrollement
+   
+   Einschreibung in Klassen
 
-Die Sitzung wird wie vorgefunden gestartet. Es kann also sein, dass hier Schüler, die nicht mehr in diese Klasse gehören, noch angezeigt werden oder hinzugekommene fehlen. Man kann Schüler aus anderen Klassen hinzufügen und entfernen. Das bleibt dann solange, bis die Sitzung neu erstellt wird.
+Verlief die Einschreibung erfolgreich, siehst Du nun im Menüpunkt ``Unterricht`` Deine Dir zugewiesenen Klassen / Kurse.
 
-* Sitzung neu erstellen
-
-.. figure:: media/44_webui-basics_start-new-session.png
+.. figure:: media/12_webui-classes-enrolled.png
    :align: center
-   :alt: start new session button
+   :alt: classes enrolled
+   
+   Eingeschriebene Klassen
 
-Es handelt sich hier um den aktuellen Stand der Schüler wie er im AD zu finden ist. Das erstellen dauert einen Moment länger.
+Klickst Du nun auf eine Klasse, so wird diese mit den eingetragenen Benutzern zusammengestellt. Es werden alle Benutzer dargestellt.
 
+.. figure:: media/13_webui-class-selected.png
+   :align: center
+   :alt: class selected
 
-Unterhalb von "Meine Kurse" finden Sie ihre selbst erstellten Kurse.
-
+   Ausgewählte Klassen und deren Benutzer
 
 Kurse erstellen
 ---------------
@@ -128,6 +149,8 @@ Kursnamen ein und bestätigen mit OK.
 .. figure:: media/11_webui-basics_new-class.png
    :align: center
    :alt: WebUI New Class
+   
+   Neuen Kurs erstellen
 
 Schüler einem Kurs hinzufügen
 -----------------------------
