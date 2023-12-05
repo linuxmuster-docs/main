@@ -75,7 +75,8 @@ Wenn Du nicht mehr an Deinem Server eingeloggt bist, melde Dich erneut an.
 Führe danach folgende Befehle in der Eingabekonsole aus:
 
 .. code-block:: Bash
-
+ 
+  sudo -i
   wget https://raw.githubusercontent.com/linuxmuster/linuxmuster-prepare/master/lmn-appliance
   chmod +x lmn-appliance
 
