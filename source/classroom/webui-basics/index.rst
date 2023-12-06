@@ -16,8 +16,8 @@ Schulkonsole in einem Browser vornehmen.
        
    Schulkonsole als Lehrer nach der Anmeldung
 
-Allgemeine Bedienung
-====================
+Allgemein
+=========
 
 Die Schulkonsole wird im Browser über ``https://10.0.0.1`` aufgerufen. Je nachdem welcher Benutzer angemeldet ist, erscheinen
 zugehörige Menüpunkte.
@@ -72,8 +72,8 @@ Das Menü kannst Du durch Anklicken der drei Striche links neben dem linuxmuster
 
 Die Schulkonsole des Lehrers teilt sich auf die Bereiche ``Allgemein`` und ``Klassenzimmer``.
 
-Allgemein
-=========
+Nutzung
+=======
 
 Hauptseite
 ----------
@@ -143,8 +143,15 @@ Klickst Du nun auf eine Klasse, so wird diese mit den eingetragenen Benutzern zu
 Kurse erstellen
 ---------------
 
-Unter Kurse können Sie über die Funktion oben rechts ``Neuer Kurs`` einen neuen Kurs anlegen. Geben Sie dazu den
-Kursnamen ein und bestätigen mit OK.
+Unter Kurse kannst Du über die Funktion oben rechts ``Neuer Kurs`` einen neuen Kurs anlegen. 
+
+.. figure:: media/11_webui-basics_new-class-button.png
+   :align: center
+   :alt: WebUI New Class Button
+   
+   Wähle den Eintrag Neuer Kurs
+
+Gebe in dem sich öffnenden Fenster den neuen Kursnamen ein und bestätige dies mit ``OK``.
 
 .. figure:: media/11_webui-basics_new-class.png
    :align: center
@@ -152,25 +159,45 @@ Kursnamen ein und bestätigen mit OK.
    
    Neuen Kurs erstellen
 
+Der neu angelegte Kurs erscheint im Menü ``Unterricht`` -> unter der Rubrik ``Meine Kurse``.
+
+.. figure:: media/11_webui-basics_my-courses.png
+   :align: center
+   :alt: WebUI my courses
+   
+   Meine Kurse
+
+In obiger Abbildung siehst Du, dass in dem neu angelegten Kurs, noch keine Schüler zugewiesen wurden.
+
+
 Schüler einem Kurs hinzufügen
 -----------------------------
 
-Um Schüler einem Kurs hinzuzufügen, den jeweiligen Kurs auswählen. In den oberen Zeilen gibt es nun die
-Möglichkeit über ``Schüler hinzufügen`` einzelne Schüler hinzuzufügen oder über ``Klasse hinzufügen`` eine ganze Schulklasse.
-Um die Übernahme der ausgewählten Benutzer in den Kurs anzuwenden, unten rechts mit ``Speichern & Übernehmen`` bestätigen.
+Um Schüler einem Kurs hinzuzufügen, wählst Du den gewünschten Kurse via Klick auf das Icon des Kurses aus.
+
+.. figure:: media/12_webui-basics_selected_course.png
+   :align: center
+   :alt: seclected course
+   
+   Ausgwählter Kurs
+
+In den oberen Zeilen gibt es nun die Möglichkeit über ``Schüler hinzufügen`` einzelne Schüler hinzuzufügen oder über ``Klasse hinzufügen`` eine ganze Schulklasse dem Kurs hinzuzufügen. Klickst Du in das Feld ``Schüler hinzufügen`` gibst Du die ersten beiden Buchstaben des Schülernamens ein und es erscheint eine Liste mit Schülern, deren Nachname mit diesen Buchstaben beginnt.
 
 .. figure:: media/12_webui-basics_add-class-members.png
    :align: center
-   :alt: WebUI Add Class Members
+   :alt: add pupils to course
+   
+   Ausgwählter Kurs: Schüler hinzufügen
 
-Wählen Sie nun einen bestimmten Kurs aus, finden Sie eine Ansicht nach folgendem Schema vor.
+Hast Du alle gewünschten Schüler ausgewählt, siehst Du eine Liste mit allen Schülern des Kurses. Um diese in den Kurs zu übernehmen, klickst Du abschließend unten rechts auf ``Speichern & übernehmen``.
+
+Wählst Du einen bestimmten Kurs oder eine bestimmte Klasse aus, findest Du folgende Ansicht vor.
 
 .. figure:: media/13_webui-basics_class-overview.png
    :align: center
    :alt: WebUI Class Overview
 
-In dieser Übersicht können die pädagogischen Funktionen WLAN-, Internet- & Drucker-Freigabe, Dateien-Übertragungs-
-Funktion und Prüfungsmodus genutzt werden.
+In dieser Übersicht können die pädagogischen Funktionen WLAN-, Internet- & Drucker-Freigabe, Dateien-Übertragungs-Funktion und Prüfungsmodus genutzt werden.
 
 WLAN-, Internet-Freigabe & Drucker-Freigabe
 -------------------------------------------
