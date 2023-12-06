@@ -126,7 +126,7 @@ Gib die Netzwerkkonfiguration, wie im oberen Bild ein beziehungsweise |...|
 
 .. figure:: media/basis_server_006.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: confirm setting
 
    Bestätige Deine Einstellungen
@@ -135,7 +135,7 @@ Mit ``Èrledigt`` geht es weiter.
 
 .. figure:: media/basis_server_007.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: confirm empty proxy
 
    Bestätige die Proxy-Einstellungen
@@ -144,7 +144,7 @@ Lass die Proxy-Adresszeile leer. Auch diese Anfrage verlässt Du mit ``Erledigt`
 
 .. figure:: media/basis_server_008.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: confirm mirror
 
    Bestätige den Ubuntu Mirror Server
@@ -156,12 +156,12 @@ Aktualisierung des Installers
 
 .. figure:: media/basis_server_009_new-installer.png
    :align: center
-   :scale: 80%
-   :alt: no update for installer
+   :scale: 40%
+   :alt: update installer
 
-   Installer nicht aktualisieren
+   Installer aktualisieren
 
-Bei der angebotene Aktualisierung wählst Du ``Ohne Akualisierung fortfahren``.
+Bei der angebotene Aktualisierung wählst Du ``Akualisieren auf neuen Installer``.
 
 Speichermedien
 --------------
@@ -186,7 +186,7 @@ Speicher des Systems
 
 .. figure:: media/basis_server_010_custom-storage-layout.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: choose your custom storage layout
 
    Eigenes Festplattenlayout wählen
@@ -197,7 +197,7 @@ Es werden Dir dann die verfügbaren Geräte angezeigt.
 
 .. figure:: media/basis_server_011_custom-storage-layout-create-partition-table.png
    :align: center
-   :scale: 70%
+   :scale: 60%
    :alt: available devices
 
    Anzeige der verfügbaren Geräte - andere HDD-Größen als zuvor genannt
@@ -226,7 +226,7 @@ Danach gelangst Du zu nachstehendem Bildschirm.
 
 .. figure:: media/basis_server_014_custom-storage-layout-create-partition-table-lvm-hdb-5.png
    :align: center
-   :scale: 60%
+   :scale: 50%
    :alt: storage configuration overview
 
    Speicherplatzkonfiguration
@@ -261,7 +261,7 @@ Danach erhälst Du die Rückfrage, ob die Installation fortgesetzt werden soll u
 
 .. figure:: media/basis_server_016_d.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: confirm partition settings
 
    Bestätige die Partitionseinstellungen
@@ -270,7 +270,7 @@ Bestätige dies mit ``Fortfahren``.
 
 .. figure:: media/basis_server_017.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: profile setup
 
    Lege ein Benutzerprofil an
@@ -279,7 +279,7 @@ Nenne den Server ``server``. Der Benutzername (linuxadmin) und das Passwort (Mus
 
 .. figure:: media/basis_server_018.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: activate ssh server
 
    Aktiviere den SSH-Server
@@ -289,7 +289,7 @@ Danach wirst Du gefragt, ob Die ``Ubuntu Pro`` aktiviert werden soll. Übersprin
 
 .. figure:: media/basis_server_018a.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: skip Ubuntu Pro activation
 
    Überspringe die Aktivierung von Ubuntu Pro
@@ -304,7 +304,7 @@ Solltest Du eine Möglichkeit für einen Fernzugang zu dem Server wünschen, akt
 
 .. figure:: media/basis_server_019.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: deactivate server snaps
 
    Deaktiviere alle Server Snaps
@@ -317,7 +317,7 @@ Zum Abschluß der Installation wird automatisch versucht, Updates zu installiere
 
 .. figure:: media/basis_server_020.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: complete Installation
 
    Schließe die Installation ab
@@ -332,7 +332,7 @@ Wann die Installation abgeschlossen ist, erkennst Du daran, dass die Anzeige am 
 
 .. figure:: media/basis_server_022.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: updating server
 
    Server-Aktualisierungen
@@ -350,7 +350,7 @@ gewechselt ist.
 
 .. figure:: media/basis_server_021.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: reboot server
 
    Starte den Server neu
@@ -404,6 +404,48 @@ Nach erfolgter Anmeldung mit Deinem Account kannst Du die ab jetzt folgenden Cod
 
 .. note:: Der Befehl sorgt dafür, dass die Zeilenumbrüche hoffentlich zu Deiner Konsolen-Anzeige passen. Ansonsten musst Du die Angaben für die Zeichen (cols) und Zeilen (rows) anpassen.    
 
+
+Proxmox Guest-Agent installieren
+--------------------------------
+
+Um mit Proxmox die Server VM herunterfahren zu können, oder für den Snapshot diese vorher korrekt "einzufrieren", ist die Installation eines Gast-Agenten unter Ubuntu Server 22.04 erforderlich. Zudem musst Du noch dem Agenten unter Proxmox aktivieren.
+
+Gehe dabei wie folgt vor:
+
+1. Installiere auf der Server-Konsole die benötigten Pakete für den QEMU-Gast-Agenten:
+
+.. code::
+
+   sudo apt update
+   sudo apt install qemu-guest-agent
+
+2. Aktiviere auf Ubuntu Server den QEMU-Gast-Agenten als Daemon via Konsole:
+
+.. code::
+
+   sudo systemctl enable qemu-guest-agent
+   
+3. Fahre die virtuelle Maschine herunter: ``sudo shutdown -h now``
+4. Wähle in der Proxmox WebUI die virtuelle Maschine für den Ubuntu Server aus. Gehe dort zu ``Options``
+
+.. figure:: media/basis_server_proxmox_qemu-guest-agent.png
+   :align: center
+   :scale: 80%
+   :alt: proxmox qemu guest agent
+
+   Proxmox QEMU Guest Agent aufrufen
+
+5. Wähle den QEMU Guest Agent aus und klicke dann oben auf ``Edit``.
+6. Aktiviere den QEMU Guest Agent, indem Du den Haken setzt und dies mit ``OK`` bestätigst.
+
+.. figure:: media/basis_server_activate_qemu_agent.png
+   :align: center
+   :scale: 80%
+   :alt: activate qemu guest agent
+
+   Aktiviere den QEMU Guest Agent 
+
+7. Starte danach die VM neu.
 
 Automatische Updates abschalten
 -------------------------------
