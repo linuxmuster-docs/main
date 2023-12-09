@@ -66,9 +66,9 @@ Das Menü kannst Du durch Anklicken der drei Striche links neben dem linuxmuster
    
 .. hint:: 
   
-   Bei Vergabe von Kurs- oder Projektnamen solltest Du auf Umlaute und ß verzichteen.
+   Bei Vergabe von Kurs- oder Projektnamen solltest Du auf Umlaute und ß verzichten.
 
-Die Schulkonsole des Lehrers teilt sich auf die Bereiche ``Allgemein`` und ``Klassenzimmer``.
+Das Menü der Schulkonsole des Lehrers teilt sich in die Bereiche ``Allgemein`` und ``Klassenzimmer`` auf.
 
 Allgemein
 =========
@@ -82,7 +82,7 @@ Hauptseite
    
    Hauptseite als angemeldeter Lehrer
 
-Hier findest Du Informatioen zu Deinem Konto, Deinen zugeordneten Benutzergruppen sowie dem Verbrauch des Festplattenkontingents (Quotas).
+Hier findest Du Informationen zu Deinem Konto, Deinen zugeordneten Benutzergruppen sowie dem Verbrauch Deines Festplattenkontingents (Quota).
 
 
 Meine Dateien
@@ -94,7 +94,7 @@ Meine Dateien
    
    Meine Dateien als angemeldeter Lehrer
 
-Hier findest Du die Ordner und Dateien, die Du für Deinen Klassen z.B. im Unterverzeichnis **Unterricht** abgelegt hast und im an die Schüler der Klassen verteilen kannst. Das Verzeichnis ``transfer`` wird für den Klassenarbeitsmodus benötigt, um Dateien für Klassenarbeiten auszuteilen und die Ergebnisse auch wieder einzusammeln.
+Hier findest Du die Ordner und Dateien, die z.B. im Unterverzeichnis **Unterricht** abgelegt hast und im Unterricht an die Schüler der Klassen verteilen kannst. Das Verzeichnis ``transfer`` wird u.a. für den Klassenarbeitsmodus benötigt, um Dateien für Klassenarbeiten auszuteilen und die Ergebnisse auch wieder einzusammeln.
 
 Klassenzimmer
 =============
@@ -112,14 +112,13 @@ Klassen / Kurse, in denen Du Mitglied bist, werden hier aufgelistet.
 
 Zu Beginn bist Du noch in keinen Klassen / Kursen oder Projekten eingeschrieben. Schreibe Dich als Lehrer zuerst in den gewünschten Klassen / Kursen ein.  Hierzu klickst Du links im Menü auf ``Einschreiben`` -> ``Schulklassen``. Bei den angezeigten Schulklassen setzt Du für diejenigen Klassen einen Haken, in denen Du Dich einschreiben möchtest.
 
-Oben erscheint ein blau hinterlegter Hinweis. Um die Die Einschreibung abzuschließen, musst Du auf ``Jetzt ausführen`` in dem baluen Hinweisfeld klicken.
-
 .. figure:: media/11_webui-class-enrollement.png
    :align: center
    :alt: class enrollement
    
    Einschreibung in Klassen
 
+Oben erscheint ein blau hinterlegter Hinweis. Um die Die Einschreibung abzuschließen, musst Du auf ``Jetzt ausführen`` in dem blauen Hinweisfeld klicken.
 Verlief die Einschreibung erfolgreich, siehst Du nun im Menüpunkt ``Unterricht`` Deine Dir zugewiesenen Klassen / Kurse.
 
 .. figure:: media/12_webui-classes-enrolled.png
@@ -128,7 +127,7 @@ Verlief die Einschreibung erfolgreich, siehst Du nun im Menüpunkt ``Unterricht`
    
    Eingeschriebene Klassen
 
-Klickst Du nun auf eine Klasse, so wird diese mit den eingetragenen Benutzern zusammengestellt. Es werden alle Benutzer dargestellt.
+Klickst Du nun auf eine Klasse, so wird diese mit den eingetragenen Benutzern zusammengestellt. Es werden alle Benutzer der Klasse dargestellt.
 
 .. figure:: media/13_webui-class-selected.png
    :align: center
@@ -177,7 +176,7 @@ Um Schüler einem Kurs hinzuzufügen, wählst Du den gewünschten Kurse via Klic
    
    Ausgwählter Kurs
 
-In den oberen Zeilen gibt es nun die Möglichkeit über ``Schüler hinzufügen`` einzelne Schüler hinzuzufügen oder über ``Klasse hinzufügen`` eine ganze Schulklasse dem Kurs hinzuzufügen. Klickst Du in das Feld ``Schüler hinzufügen`` gibst Du die **ersten beiden Buchstaben des Schülernamens** ein und es erscheint eine Liste mit Schülern, deren Nachnamen mit diesen Buchstaben beginnen.
+In den oberen Zeilen gibt es nun die Möglichkeit über ``Schüler hinzufügen`` einzelne Schüler hinzuzufügen oder über ``Klasse hinzufügen`` eine ganze Schulklasse dem Kurs hinzuzufügen. Klickst Du in das Feld ``Schüler hinzufügen`` und gibst dort die **ersten beiden Buchstaben des Schülernamens** ein, erscheint eine Liste mit Schülern, deren Nachnamen mit diesen Buchstaben beginnen.
 
 .. figure:: media/12_webui-basics_add-class-members.png
    :align: center
@@ -185,7 +184,7 @@ In den oberen Zeilen gibt es nun die Möglichkeit über ``Schüler hinzufügen``
    
    Ausgwählter Kurs: Schüler hinzufügen
 
-Hast Du alle gewünschten Schüler ausgewählt, siehst Du eine Liste mit allen Schülern des Kurses. Um diese in den Kurs zu übernehmen, klickst Du abschließend unten rechts auf ``Speichern & übernehmen``.
+Hast Du alle gewünschten Schüler nacheinander ausgewählt, siehst Du eine Liste mit allen Schülern des Kurses. Um diese in den Kurs zu übernehmen, klickst Du abschließend unten rechts auf ``Speichern & übernehmen``.
 
 Wählst Du einen bestimmten Kurs oder eine bestimmte Klasse aus, findest Du folgende Ansicht vor.
 
@@ -267,7 +266,7 @@ Sämtliche Änderungen müssen mit ``Speichern & Übernehmen`` angewendet werden
 Dateien austeilen & einsammeln
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Dateien können für die Unterrichtsarbeit mithilfe der Funktion ``Austeilen- & Einsammeln`` an Schüler ausgeteilt und wieder eingesammelt werden. 
+Dateien können für die Unterrichtsarbeit mithilfe der Funktion ``Teilen & Einsammeln`` an Schüler ausgeteilt und wieder eingesammelt werden. 
 
 Auf der Kursseite findest Du im unteren Bereich die Buttons ``Teilen`` und ``Einsammeln``, welche sich auf alle Kursteilnehmer beziehen. 
 
@@ -306,7 +305,7 @@ Das Absolventenkappen-Symbol
 
    Prüfungsmodus
 
-stellt den Prüfungsmodus dar. Ausgewählte Schüler können dadurch in diesen Modus gesetzt werden (nach Speichern & Übernehmen unten rechts). Im aktivierten Prüfungsmodus wird die Seite in folgendem Schema angezeigt.
+stellt den Prüfungsmodus dar. Ausgewählte Schüler oder alle Schüler einer Klasse eines Kurses können dadurch in diesen Modus gesetzt werden (nach Klick auf ``Speichern & Übernehmen`` unten rechts). Im aktivierten Prüfungsmodus wird die Seite wie folgt angezeigt:
 
 .. figure:: media/22_webui-basics_active-exam-modus.png
    :align: center
@@ -314,9 +313,9 @@ stellt den Prüfungsmodus dar. Ausgewählte Schüler können dadurch in diesen M
    
    Aktiver Prüfungsmodus
 
-Bei allen Schülern, die im Prüfungsmodus sind, wird unter Prüfungsaufsicht der Name des Lehrers, die den Modus aktiviert hat, mit rotem Hintergrund dargestellt. Schülern im Prüfungsmodus ist automatisch die WLAN-, Internet- & Drucker-Freigabe gesperrt. Dies kann jedoch angepasst werden. 
+Bei allen Schülern, die im Prüfungsmodus sind, wird unter Prüfungsaufsicht der Name des Lehrers, die den Modus aktiviert hat, mit rotem Hintergrund dargestellt. Schülern im Prüfungsmodus ist automatisch die WLAN-, Internet- & Drucker-Freigabe gesperrt. Dies kann jedoch individuell angepasst werden. 
 
-Um den Prüfungsmodus zu beenden, entfernst Du den Haken bei jedem Kursmitglied (Klick unter das Prüfungsmodus-Icson) und übernimmst die Einstellungen mit ``Speichern & Übernehmen``.
+Um den Prüfungsmodus zu beenden, entfernst Du den Haken bei jedem Kursmitglied (Klick unter das Prüfungsmodus-Icon) und übernimmst die Einstellungen mit ``Speichern & Übernehmen``.
 
 Ausführliche Hinweise zum Prüfungsmodus findest Du im Abschnitt :ref:`exam-and-transfer-label`.
 
@@ -334,7 +333,7 @@ Schulklassen
    
    Schulklassen
    
-Hier werden alle Schulklassen der Schule aufgelistet. Durch Klick auf den Klassennamen werden ir weitere Informationen angezeigt, wie etwa alle Schüler der Klasse.
+Hier werden alle Schulklassen der Schule aufgelistet. Durch Klick auf den Klassennamen werden Dir weitere Informationen angezeigt, wie etwa alle Schüler der Klasse.
 
 .. figure:: media/22_webui-basics_school_classes_details.png
    :align: center
@@ -367,7 +366,8 @@ Projekte unterscheiden sich von Kursen:
 * Projekte können wiederverwendet werden.
 * Unterrichtssteuerung (Passwörter ändern, Internet sprerren, etc.) ist **nicht** möglich.
 
-**Projekt anlegen**: 
+**Projekt anlegen**
+
 Um ein Projket anzulegen klickst Du im Menü ``Klassenzimmmer -> Einschreiben -> Neues Projekt``.
 
 .. figure:: media/22_webui-basics_new_project.png
@@ -387,8 +387,9 @@ Es erscheint ein neues Fenster, in dem Du den Namen für das anzulegende Projekt
 
 Du darfst nur Kleinbuchstaben und Zahlen in dem Projektnamen verwenden. Bestätige das Anlegen des neuen Projektes mit ``OK``.
 
-**Projektmitglieder verwalten**: 
-Durch Anklicken eines bestimmten Projektes, werden weitere Informationen angezeigt, wie etwa die Mitglieder und Administratoren des Projekts.
+**Projektmitglieder verwalten**
+
+Durch Anklicken eines bestimmten Projekts, werden weitere Informationen angezeigt, wie etwa die Mitglieder und Administratoren des Projekts.
 
 .. figure:: media/22_webui-basics_new_project_details.png
    :align: center
@@ -413,9 +414,9 @@ Mitglieder können nun über den Button ``Benutzer oder Gruppe hinzufügen`` dem
    
    Projektmitglieder hinzufügen
 
-Gebe in einer Der Zeilen die ersten beiden Anfangsbuchstaben ein und es wird Dir als Benutzer, Klasse oder Gruppe die bereits existierenden aufgelistet. Wähle aus der Liste die gewüscnhten aus. Für weitere Benutzer oder Gruppen wiederhole diesen Vorgang. Die bereits ausgewählten Benutzer oder Gruppen werden Dir unten links in dem Fenster unter der Überschrift ``Hinzufügen`` aufgelistet. Findest Du hier alle gewnüschten Benutzer und Gruppen, klickst Du auf ``Übernehmen``, um diese dem Projekt hinzuzufügen.
+Gebe in einer der Zeilen die ersten beiden Anfangsbuchstaben ein und es werden Dir unter Benutzer, Klasse oder Gruppe die bereits existierenden Einträge aufgelistet. Wähle aus der Liste die gewünschten aus. Wiederhole diese Vorgang für weitere Benutzer oder Gruppen. Die bereits ausgewählten Benutzer oder Gruppen werden Dir unten links in dem Fenster unter der Überschrift ``Hinzufügen`` aufgelistet. Findest Du hier alle gewnüschten Benutzer und Gruppen, klicke auf ``Übernehmen``, um diese dem Projekt hinzuzufügen.
 
-**Projekt löschen**: 
+**Projekt löschen**
 
 Klicken auf das jeweilige Projekt und wähle unten links ``Projekt löschen``. Bestätige diesen Vorgang im nächsten Fenster mit ``LÖSCHEN``.
 
@@ -423,7 +424,7 @@ Klicken auf das jeweilige Projekt und wähle unten links ``Projekt löschen``. B
 Passwörter drucken
 ^^^^^^^^^^^^^^^^^^
 
-Hier gibt es die Möglichkeit, eine übersichtliche Liste von Benutzer- & Passwortinformationen per PDF oder CSV-Format ausdrucken zu lassen.
+Hier gibt es die Möglichkeit, eine übersichtliche Liste von Benutzer- & Passwortinformationen im PDF- oder CSV-Format ausdrucken zu lassen bzw. als Datei herunterzuladen.
 
 .. figure:: media/41_webui-basics_user-list-print-overview.png
    :align: center
@@ -431,7 +432,7 @@ Hier gibt es die Möglichkeit, eine übersichtliche Liste von Benutzer- & Passwo
    
    Übersicht der Klassen zum Ausdruck der Passwörter
 
-Der Druck der Passwörter kann durch Anklicken der jeweiligen Klasse klassenspezifisch erfolgen. Markiere die Klasse und klicke auf das Druckesymbol in der Zeil der Klasse. Es erscheint ein neues Fenster.
+Der Druck der Passwörter kann durch Anklicken der jeweiligen Klasse klassenspezifisch erfolgen. Markiere die Klasse und klicke auf das Druckersymbol in der Zeile der Klasse. Es erscheint ein neues Fenster.
 
 .. figure:: media/41_webui-basics_user-list-pdf.png
    :align: center
@@ -439,13 +440,14 @@ Der Druck der Passwörter kann durch Anklicken der jeweiligen Klasse klassenspez
    
    Passwörter der Klasse als PDF ausdrucken
    
-Als PDF werden die Benutzer neben dem zugehörigen Passwort in Kästchen angezeigt, wie in diesem Beispiel:
+Wähle die gewünschten Einstellungen aus und es wird die erstellte Datei heruntergeladen und angezeigt.
+
+Im PDF-Format werden die Benutzer neben dem zugehörigen Passwort in Kästchen angezeigt, wie in diesem Beispiel:
 
 .. figure:: media/42_webui-basics_class-users-export.png
    :align: center
    :alt: WebUI class Users Export
    
    PDF-Datei mit den Passwörtern der Schüler der Klasse
-
 
 
