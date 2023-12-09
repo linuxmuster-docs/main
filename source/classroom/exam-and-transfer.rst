@@ -150,49 +150,166 @@ Aktiviere nun die gewünschten Dateien und /oder Verzeichniss, die Du den Prüfl
    Dateien bereitstellen: Aktiviere die bereitzustellenden Dateien
    
 Um die Dateien auszuteilen, klickst Du nun unten rechts auf ``TEILEN``.
+
+Bist Du als Lehrer an einem Client angemeldet, so findest Du die zu teilenden Daten unter Deinem Home-Laufwerk ``H:\`` im Unterverzeichnis ``transfer``.
+
+.. figure:: media/webui-teachers-session-share-files-client-view.png
+   :align: center
+   :alt: WebUI Share Files Client View
+   
+   Zu teilende Daten am Client
    
 Prüflinge
 ---------
 
+1. Nachdem der Leher den Prüflingen ihre Prüfungs-Accounts mitgeteilt hat, melden diese sich mit den Daten an.
+2. Der Prüfling geht im Dateiverzeichnis in sein Home-Laufwerk (H:\) in den Transfer-Ordner, dort in den Ordner des Lehrers der Prüfung.
+3. Im Ordner H:\transfer\LEHRER\ werden die bereitgestellten Dateien in ein anderes Verzeichnis übernommen, dort bearbeitet und gespeichert.
+4. Bei Abschluss der Prüfung kopiet der Prüfling zur Abgabe die bearbeiteten Dateien in das Verzeichnis ``H:\transfer\LEHRER\_collect\``.
+5. Der Lehrer sammelt alle abgegebene Dateien ein und schließt die Prüfung.
+6. Der Prüfling meldet sich ab.
+
 Anmeldung
 ^^^^^^^^^
 
-.. hint::
+Jeder Prüfling meldet sich an dem Client an. Hierzu ist der bisherige Login + die Erweiterung -exam und das bisherige Kennwort anzugeben.
+Nachstehende Abbildungen verdeutlichen dies einmal für einen Windows-Client und für einen Ubuntu-Client:
 
-   Dieser Abschnitt ist neu zu erstellen
+.. figure:: media/webui-exam-login-windows.png
+   :align: center
+   :alt: Exam Login Windows Client
+   
+   Prüfungsanmeldung Windows-Client
+   
+Nach erfolgreicher Anmeldung am Client sieht der Prüfling die Einrichtung der Prüfungsumgebung.
 
+.. figure:: media/webui-exam-login-setup.png
+   :align: center
+   :alt: Exam Login Windows Client Setup
+   
+   Prüfungsanmeldung Windows-Client - Setup
 
+An einem 22.04 Ubuntu-Client mit Gnome sieht die Anmeldung wie folgt aus:
 
+.. figure:: media/webui-exam-login-ubtunu.png
+   :align: center
+   :alt: Exam Login Ubuntu
+   
+   Prüfungsanmeldung Ubuntu-Client
+   
+Angabe des Kennworts.
 
-Im Home-Laufwerk aller Benutzer (``Home_auf_Server`` bzw. `H:\\`) gibt
-es einen Ordner für den Transfer ``transfer``. Über diesen Ordner wird
-ausgeteilt und eingesammelt. Folgende Anleitung funktioniert mit und
-ohne Prüfungssituation.
+.. figure:: media/webui-exam-login-ubtunu-password.png
+   :align: center
+   :alt: Exam Login Ubuntu Password
+   
+   Prüfungsanmeldung Ubuntu-Client - Eingabe des Kennworts
+   
+Hat sich der Prüfling erfolgreich am Client angemeldet und ruft den Dateimanager auf, so sieht dieser folgende Netzlaufwerke:
 
-Es gibt zwei Arten Daten an Schüler im aktuellen Kurs auszuteilen. Zum
-einen kann man Ordner und Dateien im Ordner ``transfer`` ablegen. Zum
-anderen kann man im folgenden Dialog per Drag and Drop *einzelne*
-Dateien hochladen. Klickt man nun bei einzelnen Schülern oder unten
-auf der Seite für alle Schüler des Kurses auf ``Teilen``, kann man im
-folgenden Dialog neben dem Hochladen auch die zum Teilen gewünschten
-Daten auswählen und  das Austeilen anstoßen.
+.. figure:: media/webui-exam-login-network-shares.png
+   :align: center
+   :alt: Exam Login Network Shares
+   
+   Prüfungsanmeldung: Netzwerklaufwerke
 
-.. figure:: media/webui-teacher-session-upload.png
+Die bereitgestellten Dateien findet der Prüfling nun im Verzeichnis ``H:\transfer\LEHRER\``.
 
-Die ausgeteilten Daten landen nun als Kopien im Ordner
-``transfer\Lehrername-Kursname`` der entsprechenden Schüler.
+.. figure:: media/webui-exam-login-network-shares-shared-files.png
+   :align: center
+   :alt: Exam Login Network Shares Shared Files
+   
+   Prüfung: Bereitgestellte Dateien
+   
+In der Prüfung bearbeitet der Prüfling die bereitgestellten Dateien und speichert seine Lösung zur Abgabe in dem Verzeichnis ``H:\transfer\LEHRER\_collect\``.
 
-Die Schüler speichern ihre Daten ebenso im Ordner ``transfer\Lehrername-Kursname``.
+.. figure:: media/webui-exam-finalise-files.png
+   :align: center
+   :alt: Exam Finalise files
+   
+   Prüfung: Dateiabgabe
+   
+Unter Windows stellt sich dies für den Prüfling wie folgt dar:
 
-Der Lehrer hat nun während dieser Phase die Möglichkeit die Daten
-einzusammeln. Dabei gibt es die Variante, die Daten zu kopieren oder
-einzusammeln (und damit auf Benutzerseite zu löschen). Die eingesammelten Daten findet man im Ordner ``transfer\collected\Zeitstempel-Kursname``.
+Netzwerkfreigaben
+   
+.. figure:: media/webui-exam-shares-windows.png
+   :align: center
+   :alt: Exam Shares Windows
+   
+   Prüfung: Netzwerkfreigaben unter Windows
+   
+Bereitgestellte Dateien   
 
-.. figure:: media/webui-teacher-session-collect.png
+.. figure:: media/webui-exam-shares-windows-shared-files.png
+   :align: center
+   :alt: Exam Windows Shared Files
+   
+   Prüfung: Bereitgestellte Dateien unter Windows
+   
+Abgabe unter ``H:\transfer\LEHRER\_collect\``
 
-Das Beenden des Prüfungsmodus sammelt automatisch die Daten von den
-Schülern ein, verschiebt die Benutzer zurück auf ihre normalen
-Benutzernamen und aktiviert die Internet-, WLAN- und Druckzugriffe.
-Die Änderung muss ebenso durch ``SPEICHERN & ÜBERNEHMEN`` quittiert
-werden.
+.. figure:: media/webui-exam-shares-windows-finalised-files.png
+   :align: center
+   :alt: Exam Windows Files finalised
+   
+   Prüfung: Dateiabgabe unter Windows
+   
+   
+Abgaben einsammeln
+^^^^^^^^^^^^^^^^^^
+
+Der Lehrer sieht in der Schulkonsole die abgegebenen Dateien.
+
+.. figure:: media/webui-exam-sent-files.png
+   :align: center
+   :alt: Exam Windows Files sent
+   
+   Prüfung: abgegebene Dateien einsehen
+   
+Um vor Abschluss der Prüfung alle Abgaben einzusammeln, klickst Du unten links auf ``Von allen einsammeln``.
+Klicke nun auf ``Move _collect cirectory from all members``. Es werden nun alle Abgaben in das Verzeichnis des Lehrers zum Einsammeln der Dateien verschoben.
+
+.. figure:: media/webui-exam-collect-all-files.png
+   :align: center
+   :alt: Exam Collect all Files
+   
+   Prüfung: Alle Dateien einsammeln
+   
+Prüfung beenden
+^^^^^^^^^^^^^^^
+
+Nachdem alle Dateien eingsammelt wurden, beendet der Lehrer den Prüfungsmodus.
+
+.. figure:: media/webui-exam-stop-exam-mode.png
+   :align: center
+   :alt: Stop Exam Mode
+   
+   Prüfung: beenden
+   
+Hierzu klickst Du auf das rot hinterlegte Prüfungssymbol.
+
+Abgaben einsehen
+^^^^^^^^^^^^^^^^
+
+Hast Du als Lehrer die Prüfung beendet, kannst Du nun in der Schulkonsole unter ``Allgemein -> Meine Dateien`` im Ordner ``transfer`` alle bislang eingesammelten Dateien finden.
+
+.. figure:: media/webui-exam-check-collected-files.png
+   :align: center
+   :alt: Check colletced Files
+   
+   Prüfung: Prüfe Dateiabgaben
+   
+Für die durchgeführte Prüfung gehst Du in den Ordner ``schoolclass_10a_20231209-171650`` - also immer der Ordner mit dem aktuellen Prüfungsdatum.
+
+Dort findest Du pro Prüfling einen Ordner, in dem sich die abgegebenen Dateien befinden.
+
+Die Abgaben kannst Du markieren und herunterladen.
+
+.. figure:: media/webui-exam-download-results.png
+   :align: center
+   :alt: Download Results
+   
+   Prüfung: Dateiabgaben herunterladen
+   
 
