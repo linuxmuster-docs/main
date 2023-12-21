@@ -17,7 +17,7 @@ Die Weboberfläche (WebUI/Schulkonsole) erreicht man über einen Browser eines G
 .. figure:: media/newsetup/lmn-setup-gui-00.png
    :align: center
    :alt: WebUI Setup: Root login
-   :width: 80%
+   :width: 50%
    
    Anmeldung als Benutzer root 
     
@@ -96,7 +96,7 @@ Der nächste Dialog legt das Passwort des globalen Administrators ``global-admin
 
 Danach klickst Du auf ``Weiter/Next``. 
 
-Du erhälst die Rückfrage, ob die Firewall ggf. nicht konfiguriert werden soll. Sofern Du das System zusammen mit der OPNsense als Firewall neu einrichtest, setzt Du keinen Haken und klickst Du auf ``Weiter/Next``.
+Du erhälst die Rückfrage, ob die Firewall ggf. nicht konfiguriert werden soll. Sofern Du das System zusammen mit der OPNsense als Firewall **neu einrichtest**, setzt Du ``keinen Haken`` und klickst Du auf ``Weiter/Next``.
 
 .. figure:: media/newsetup/lmn-setup-gui-05.png
    :align: center
@@ -127,6 +127,9 @@ Ist die Installation abgeschlossen, gelangst Du zu folgendem Fenster:
 .. figure:: media/newsetup/lmn-setup-gui-07.png
    :align: center
    :alt: WebUI Setup: Wizard - setup finished
+   :width: 70%
+   
+   Setup-Fenster
 
 Zum Abschluss siehst Du den Eintrag 
 
@@ -139,7 +142,7 @@ Schliesse das Setup nun mit ``Finish`` ab. Es erscheint eine Statusmeldung, dass
 .. figure:: media/newsetup/lmn-setup-gui-08.png
    :align: center
    :alt: WebUI Setup: Wizard - setup complete
-   :width: 80%
+   :width: 60%
    
    Abschluss des Setups
 
@@ -180,7 +183,7 @@ Danach kommst Du zur Anmeldeseite der WebUI/Schulkonsole. Melde Dich nun als Ben
 .. figure:: media/newsetup/lmn-setup-gui-11.png
    :align: center
    :alt: WebUI: Login global-admin
-   :width: 80%
+   :width: 50%
    
    Login als Benutzer global-admin
 
