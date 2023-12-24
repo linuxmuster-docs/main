@@ -270,7 +270,7 @@ Fahre mit `Überprüfung der Zuordnung der Netzwerkkarten`_ fort, ansonsten |...
    
    Zuordnung der NICs prüfen
 
-Die erste Netzwerkkarte (LAN) ist derzeit als LAN mit dem pädagogischen Netz verbunden. Die Netzwerkkarte ``vtnet0`` ist nach der bisherigen Installation allerdings mit dem roten Netz wverbunden. Zudem vergibt die Installationsroutine der OPNsense |reg| immer die IP 192.168.1.1/24 der LAN-Schnittstelle. Dies ist jetzt noch zu ändern.
+Die erste Netzwerkkarte (LAN) ist derzeit als LAN mit dem pädagogischen Netz verbunden. Die Netzwerkkarte ``vtnet0`` ist nach der bisherigen Installation allerdings mit dem roten Netz verbunden. Zudem vergibt die Installationsroutine der OPNsense |reg| immer die IP 192.168.1.1/24 der LAN-Schnittstelle. Dies ist jetzt noch zu ändern.
 
 Die zweite Netzwerkkarte (WAN) ist derzeit mit ``vtnet1`` verbunden. Dies müssen wir noch ändern.
 
@@ -359,7 +359,7 @@ Diese Zuordnung ist nun richtig, also weiter mit ``y`` |...|
 
    Prüfe die Zuordnung der Netzwerkkarten
 
-Die Zuordnung des WAN-Interfaces ist hier zu erkennen und nun so wie beabsichtigt. Das erkennst Du daran, das dessen IP-Adresse dem Adress-Pool des Routers entnommen ist (, sofern der DSL-Router via DHCP eine Adresse verteilt.
+Die Zuordnung des WAN-Interfaces ist hier zu erkennen und nun so wie beabsichtigt. Das erkennst Du daran, das dessen IP-Adresse dem Adress-Pool des Routers entnommen ist (, sofern der DSL-Router via DHCP eine Adresse verteilt).
 
 WAN Zugang testen
 ^^^^^^^^^^^^^^^^^
@@ -549,7 +549,7 @@ Klappt das Update, startet die OPNsense |reg| neu.
 Konfiguration der OPNsense |reg|
 ================================
 
-Für die nachfolgende Konfiguration der OPNsense |reg| brauchst Du einen Rechner mit Webbrowser im LAN-Bereich der OPNsense |reg|. Das kann ein Laptop mit einem beliebigen Betriebssystem sein. Wichtig ist nur, dass er mit internen Switch im grünen Netzwerk verbunden ist, das mit dem LAN-Adapter der OPNsense |reg| verbunden ist und sich im gleichen Netzwerk wie die OPNsense |reg| befindet. In unserer Beschreibung gehen wir davon aus, dass der Laptop/PC manuell  IP-Adresse 10.0.0.10 mit der Subnetmask 255.255.0.0 (16 Bit) erhält.
+Für die nachfolgende Konfiguration der OPNsense |reg| brauchst Du einen Rechner mit Webbrowser im LAN-Bereich der OPNsense |reg|. Das kann ein Laptop mit einem beliebigen Betriebssystem sein. Wichtig ist nur, dass er mit internen Switch im grünen Netzwerk verbunden ist, das mit dem LAN-Adapter der OPNsense |reg| verbunden ist und sich im gleichen Netzwerk wie die OPNsense |reg| befindet. In unserer Beschreibung gehen wir davon aus, dass der Laptop/PC manuell die IP-Adresse 10.0.0.10 mit der Subnetmask 255.255.0.0 (16 Bit) erhält.
 
 Nachdem der Browser gestartet ist, gibst Du folgende URL für den Zugriff auf die GUI der OPNsense |reg| ein:
 
