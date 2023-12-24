@@ -1128,7 +1128,7 @@ Nachstehende Abb. zeigt den Zustand vor der Aktivierung.
 
    Zustand vor der Aktivierung
 
-Wähle die die gewünschte VM aus klicke dann --> ``lmn72-opnsense`` --> ``Hardware`` --> ``Serial Port``.
+Wähle die gewünschte VM aus, klicke dann --> ``lmn72-opnsense`` --> ``Hardware`` --> ``Serial Port``.
 
 .. figure:: media/xterm-opnsense_002.png
    :align: center
@@ -1146,7 +1146,7 @@ Lege einen Seriellen Port mit der Bezeichnung ``0`` an. Klicke danach auf ``Add`
 
    Serielle Schnittstelle 0 hinzufügen
 
-Danach siehst Du den seriellen Port in der Hardware-Übersicht der VM.Klickst Du oben rechts auf ``>_ Console``. Der der gezeigte Menüpunkt ``xterm.js`` sollte nun nicht mehr ausgegraut sein.
+Danach siehst Du den seriellen Port in der Hardware-Übersicht der VM. Klickst Du oben rechts auf ``>_ Console``. Der der gezeigte Menüpunkt ``xterm.js`` sollte nun nicht mehr ausgegraut sein.
 
 .. figure:: media/xterm-opnsense_004.png
    :align: center
@@ -1161,5 +1161,5 @@ Die beiden letzten Einstellungen musst Du **nochmals für den linuxmuster.net Se
 
 .. hint:: Für die weitere Nutzung von xterm.js ist allerdings noch eine Anpassung bei der laufenden OPNsense |reg| bzw. dem Server nötig. Die nimmst Du zu einem geeigneten späteren Zeitpunkt vor, bis dahin musst Du noch die Konsole ``noVNC`` nutzen.
 
-Die virtuellen Maschinen sidn jetzt für die weitere Installation vorbereitet. Du kannst gemäß der Anleitung: :ref:`install-from-scratch-label` mit der Installation fortfahren.
+Die virtuellen Maschinen sind jetzt für die weitere Installation vorbereitet. Du kannst gemäß der Anleitung: :ref:`install-from-scratch-label` mit der Installation fortfahren.
 
