@@ -779,7 +779,7 @@ Aktualisiere nun die OPNsense |reg|, indem Du unter
    
    Aktualisiere die Firmware
 
-``System`` ``->`` ``Firmware`` ``-->`` ``Aktualisierungen`` ``--->`` ``Status`` ``----> `` ``Auf Aktualisierungen prüfen`` klickst.
+``System`` ``->`` ``Firmware`` ``-->`` ``Aktualisierungen`` ``--->`` ``Status`` ``---->`` ``Auf Aktualisierungen prüfen`` klickst.
 
 Wenn keine Aktualisierungen verfügbar sind, erhältst Du folgende Meldung |...|
 
@@ -792,7 +792,7 @@ Wenn keine Aktualisierungen verfügbar sind, erhältst Du folgende Meldung |...|
 
 |...| und kannst zum abschließenden Schritt `Logout`_ gehen.
 
-Sollten Dir - wie in nachstehender Abbildung - unter dem Reiter ``Aktualisierungen`` zu aktualisierenden Pakete angezeigt werden |...|
+Sollten Dir - wie in nachstehender Abbildung - unter dem Reiter ``Aktualisierungen`` zu aktualisierende Pakete angezeigt werden |...|
 
 .. figure:: media/basis_opnsense_057.png
    :align: center
@@ -800,13 +800,13 @@ Sollten Dir - wie in nachstehender Abbildung - unter dem Reiter ``Aktualisierung
    
    Aktualisierungen verfügbar
 
+|...| dann klicke in o.g. Fenster ``Jetzt aktualisieren``. 
+
 .. hint::
 
    Falls Du nicht ins Internet kommst, kann es an der Gateway-Einstellung liegen. Gehe auf ``System`` --> ``Gateways`` --> ``Einzeln`` und editiere Dein Gateway (WANGW).
 
    Setze einen Haken bei ``Deaktiviere Gatewayüberwachung``, speichere die Einstellung und übernimm die Änderung. Jetzt ist Dein Gateway online und Du kommst ins Internet. Erstaunlicherweise kannst Du die Gatewayüberwachung wieder aktivieren, ohne dass das Gateway offline geht.
-
-|...| dann klicke in o.g. Fenster ``Jetzt aktualisieren``. 
 
 Je nach gefundenen Aktualisierungen, kann ein Neustart erforderlich sein. Dies wird vor dem Update abgefragt und ist zu bestätigen.
 
