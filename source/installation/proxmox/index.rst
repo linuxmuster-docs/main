@@ -147,7 +147,7 @@ Bestätige das ``End-User-Agreement`` mit ``Enter``.
 Wähle die gewünschte Festplatte auf dem Server zur Installation aus. Hast Du mehrere einzelne Festplatten im Server verbaut und kein RAID-Verbund definiert, so kannst Du hier mit der Schaltfläche `Optionen` weitere Einstellungen aufrufen. Hier kannst Du |zb| mehrere Festplatten angeben, die in einem sog. ZFS-Pool definiert werden sollen. Dies ist für das Erstellen von sog. Snapshots von Vorteil. Soll aber an dieser Stelle nicht vertieft werden.
 (siehe hierzu |ua|: https://pve.proxmox.com/pve-docs/pve-admin-guide.html)
 
-Für unsere beispielthafte Installation wählen wir hier die kleinere der beiden angezeigten aus, die SSD.
+Für unsere beispielthafte Installation wählen wir hier die kleinere der beiden angezeigten aus, also die SSD.
 
 Gib bei ``Location and Time Zone selection`` als Land und Keyboard Layout  ``Germany`` an. Wähle als Zeitzone Europe/Berlin.
 
@@ -452,6 +452,10 @@ Während der Proxmox-Installation wurden die Storages ``local`` und ``local-lvm`
 Es ist zu sehen, dass die Festplatten sda (931.5G) und sdb (111.8G) vorhanden sind. Die erste Festplatte sda ist eine HDD mit 1 TiB Kapazität und soll nun für die VMs genutzt werden. Die zweite Festplatte ist eine SSD, auf der Proxmox selbst installiert wurde. Von dieser zweiten Platte startet dieses System automatisch Proxmox. Zudem findet sich auf `sdb3` ein sog. `LVM`. Bei der Erstinstallation wurde hier automatisch ein Bereich für die VMs eingerichtet.
 
 Dieser Bereich wird im Folgenden gelöscht und der frei werdende Platz auf `sdb` wird vollständig dem Proxmox-Host zugeordnet. Danach wird die Festplatte `sda` als LVM für die VM eingerichtet.
+
+.. todo::
+
+   Die Bezeichnung der Festplatten ist zwischen den Bildern der Proxmox-Installation und der Beschreibung derin diesem Kapitel vertausch worden. :-( Muss aufgearbeitet werden. @MachtDochNix nimmt sich der Sache an. :-)
 
 3. Vorhandene local-lvm entfernen:
 
