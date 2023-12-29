@@ -147,6 +147,8 @@ Bestätige das ``End-User-Agreement`` mit ``Enter``.
 Wähle die gewünschte Festplatte auf dem Server zur Installation aus. Hast Du mehrere einzelne Festplatten im Server verbaut und kein RAID-Verbund definiert, so kannst Du hier mit der Schaltfläche `Optionen` weitere Einstellungen aufrufen. Hier kannst Du |zb| mehrere Festplatten angeben, die in einem sog. ZFS-Pool definiert werden sollen. Dies ist für das Erstellen von sog. Snapshots von Vorteil. Soll aber an dieser Stelle nicht vertieft werden.
 (siehe hierzu |ua|: https://pve.proxmox.com/pve-docs/pve-admin-guide.html)
 
+Für unsere beispielthafte Installation wählen wir hier die kleinere der beiden angezeigten aus, die SSD.
+
 Gib bei ``Location and Time Zone selection`` als Land und Keyboard Layout  ``Germany`` an. Wähle als Zeitzone Europe/Berlin.
 
 .. figure:: media/install-on-proxmox_05_location-and-time-zone.png
@@ -289,10 +291,6 @@ Die **bisherige** Netzwerkkonfiguration stellt sich wie folgt dar:
 
    Proxmox Network
 
-.. todo::
-
-   Grafik anpassen - alle ohne Versionnummern
-
 Für die folgende Überprüfung öffnest Du nochmals die Konsole auf dem Hypervisor, falls sie nicht geöffnet sein sollte - wie zuvor beschrieben - und lässt Dir den Inhalt der Konfigurationsdatei anzeigen mittels:
 
 .. code::
@@ -416,8 +414,9 @@ Zur Veranschaulichung eine Grafik, die den Status der Konfiguration zeigt.
 
    Neue Netzwerkschnittstelle eno2 an vmbr1 erzeugt
 
-(Optional) Festplatten anpassen
--------------------------------
+Festplatten anpassen
+--------------------
+
 
 *Zweiten Datenträger als Speicher einbinden*
 
@@ -425,6 +424,7 @@ In diesem Schritt wird die zweite Festplatte in Proxmox eingebunden, um diese al
 
 .. note::
 
+   Gemäß der |og| Minimalanforderungen gehen wir davon aus, dass in deinem Proxmox-Host zwei Festplatten verbaut sind. 
    Die folgenden Schritte bitte dann ausführen, wenn Proxmox nicht auf einem einzigen Volume eingerichtet werden soll! Solltest Du bei der Installation von Proxmox nur einen Speicher nutzen, kannst Du direkt weitergehen zu: `Vorbereiten des ISO-Speichers`_
 
 *local-lvm(<hostename> (z.B. pve))-Partition entfernen und Speicher freigeben*
