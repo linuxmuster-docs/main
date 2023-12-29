@@ -105,11 +105,8 @@ Um zu Beginn den Proxmox-Host zu administrieren, ist ein Laptop/PC mit dem Switc
    :scale: 80%
    :alt: Netzwerk für die Proxmox Installation
 
-   Proxmox Netzwerk
+   Aufbau des Netzwerkes zur Proxmox Installation
 
-.. hint::
-
-   Abbildung ersetzen
 
 Es werden zunächst alle Aktualisierungen durchgeführt und die benötigten ISO-Images auf den Proxmox-Host heruntergeladen. Erst danach wird die Konfiguration des Proxmox-Host so geändert wird, dass diser nur noch im grünen Netz erreichbar ist.
 
