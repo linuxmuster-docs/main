@@ -108,7 +108,7 @@ Um zu Beginn den Proxmox-Host zu administrieren, ist ein Laptop/PC mit dem Switc
    Aufbau des Netzwerkes zur Proxmox Installation
 
 
-Es werden zunächst alle Aktualisierungen durchgeführt und die benötigten ISO-Images auf den Proxmox-Host heruntergeladen. Erst danach wird die Konfiguration des Proxmox-Host so geändert wird, dass diser nur noch im grünen Netz erreichbar ist.
+Es werden zunächst alle Aktualisierungen durchgeführt und die benötigten ISO-Images auf den Proxmox-Host heruntergeladen. Erst danach wird die Konfiguration des Proxmox-Host so geändert wird, dass dieser nur noch im grünen Netz erreichbar ist.
 
 
 Installieren von Proxmox
@@ -126,11 +126,6 @@ Vom USB-Stick booten, danach erscheint folgender Bildschirm:
 
    Proxmox Boot Menue
    
-.. todo::
-
-   Grafik anpassen
-
-
 Wähle ``Install Proxmox VE (Graphical)`` und starte die Installation mit ``ENTER``.
 
 .. figure:: media/install-on-proxmox_03_eula.png
@@ -175,9 +170,8 @@ Lege die IP-Adresse des Proxmox-Host fest. Solltest Du intern |zb| auf dem (DSL-
 
 .. hint::
 
-   Diese muss zu diesem Zeitpunkt der Installation diejenige Adresse sein, die ebenfalls Zugriff auf das Internet hat.
-   In einem lokalen Netz mit DSL-Router wäre dies eine IP-Adresse aus dem internen Netz, die der Router für die internen Clients 
-   verteilt - also |zb| 192.168.199.20/24. DNS- und Gateway-Adressen entsprechen der Router-IP.
+   Die IP muss zu diesem Zeitpunkt der Installation diejenige Adresse sein, die ebenfalls Zugriff auf das Internet hat.
+   In einem lokalen Netz mit DSL-Router wäre dieses eine aus dem internen Netz, die der Router für die internen Clients verteilt - also |zb| 192.168.199.20/24. DNS- und Gateway-Adressen entsprechen der Router-IP.
 
 Hier wurde die interne IP-Adresse `192.168.199.20/24` festgelegt.
 
