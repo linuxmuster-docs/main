@@ -424,8 +424,9 @@ In diesem Schritt wird die zweite Festplatte in Proxmox eingebunden, um diese al
 
 .. note::
 
-   Gemäß der |og| Minimalanforderungen gehen wir davon aus, dass in deinem Proxmox-Host zwei Festplatten verbaut sind. 
-   Die folgenden Schritte bitte dann ausführen, wenn Proxmox nicht auf einem einzigen Volume eingerichtet werden soll! Solltest Du bei der Installation von Proxmox nur einen Speicher nutzen, kannst Du direkt weitergehen zu: `Vorbereiten des ISO-Speichers`_
+   Gemäß der oben genannten Minimalanforderungen gehen wir davon aus, dass in deinem Proxmox-Host zwei Festplatten verbaut sind. 
+   
+   Solltest Du bei der Installation von Proxmox nur einen Speicher nutzen, kannst Du direkt weitergehen zu: `Vorbereiten des ISO-Speichers`_
 
 *local-lvm(<hostename> (z.B. pve))-Partition entfernen und Speicher freigeben*
 
