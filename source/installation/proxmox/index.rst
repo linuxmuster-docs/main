@@ -450,13 +450,13 @@ Während der Proxmox-Installation wurden die Storages ``local`` und ``local-lvm`
 
    lsblk Befehl
 
-Es ist zu sehen, dass die Festplatten sda (931.5G) und sdb (111.8G) vorhanden sind. Die erste Festplatte sda ist eine HDD mit 1 TiB Kapazität und soll nun für die VMs genutzt werden. Die zweite Festplatte ist eine SSD, auf der Proxmox selbst installiert wurde. Von dieser zweiten Platte startet dieses System automatisch Proxmox. Zudem findet sich auf `sdb3` ein sog. `LVM`. Bei der Erstinstallation wurde hier automatisch ein Bereich für die VMs eingerichtet.
+Es ist zu sehen, dass die Festplatten sda (111.8G) und sdb (931.5G) vorhanden sind. 
 
-Dieser Bereich wird im Folgenden gelöscht und der frei werdende Platz auf `sdb` wird vollständig dem Proxmox-Host zugeordnet. Danach wird die Festplatte `sda` als LVM für die VM eingerichtet.
+Die zweite Festplatte `sdb` ist eine HDD mit 1 TB Kapazität und soll für die VMs genutzt werden.
 
-.. todo::
+Die erste Festplatte ist eine SSD, auf der Proxmox selbst installiert wurde. Von dieser zweiten Platte startet dieses System automatisch Proxmox. Zudem befindet sich auf `sda3` ein sog. `LVM`. Bei der Erstinstallation wurde hier automatisch ein Bereich für die VMs eingerichtet. Dieser Bereich wird im Folgenden gelöscht und der frei werdende Platz auf `sda` wird vollständig dem Proxmox-Host zugeordnet. i
 
-   Die Bezeichnung der Festplatten ist zwischen den Bildern der Proxmox-Installation und der Beschreibung derin diesem Kapitel vertausch worden. :-( Muss aufgearbeitet werden. @MachtDochNix nimmt sich der Sache an. :-)
+Danach wird die Festplatte `sdb` als LVM für die VM eingerichtet.
 
 3. Vorhandene local-lvm entfernen:
 
