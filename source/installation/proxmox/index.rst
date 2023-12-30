@@ -417,10 +417,7 @@ Zur Veranschaulichung eine Grafik, die den Status der Konfiguration zeigt.
 Festplatten anpassen
 --------------------
 
-
-*Zweiten Datenträger als Speicher einbinden*
-
-In diesem Schritt wird die zweite Festplatte in Proxmox eingebunden, um diese als Storage für die virtuellen Maschinen zu nutzen.
+In diesem Schritt wird die erste Festplatte angepasst und die zweite in Proxmox eingebunden, um diese als Storage für die virtuellen Maschinen zu nutzen.
 
 .. note::
 
@@ -428,7 +425,14 @@ In diesem Schritt wird die zweite Festplatte in Proxmox eingebunden, um diese al
    
    Solltest Du bei der Installation von Proxmox nur einen Speicher nutzen, kannst Du direkt weitergehen zu: `Vorbereiten des ISO-Speichers`_
 
-*local-lvm(<hostename> (z.B. pve))-Partition entfernen und Speicher freigeben*
+.. figure:: media/install-on-proxmox_17_hdd_after_installation.svg
+   :align: center
+   :alt: Aufteilung der Festplatten nach der Proxmox Installation
+
+   Aufteilung der Festplatten nach der Proxmox Installation
+
+local-lvm(<hostename> (z.B. pve))-Partition entfernen und Speicher freigeben
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Während der Proxmox-Installation wurden die Storages ``local`` und ``local-lvm`` automatisch auf der ersten Festplatte erstellt. Da anfangs für die Linuxmuster-Maschinen eine zweite Festplatte als ``Storage`` eingerichtet wurde, wird ``local-lvm`` nicht benötigt. Deshalb wird nun ``local-lvm`` entfernt und ``local`` durch den freigewordenen Speicher vergrößert, sodass auf der ersten Festplatte der gesamte Speicher dem Hypervisor zur Verfügung steht.
 
@@ -454,7 +458,7 @@ Es ist zu sehen, dass die Festplatten sda (111.8G) und sdb (931.5G) vorhanden si
 
 Die zweite Festplatte `sdb` ist eine HDD mit 1 TB Kapazität und soll für die VMs genutzt werden.
 
-Die erste Festplatte ist eine SSD, auf der Proxmox selbst installiert wurde. Von dieser zweiten Platte startet dieses System automatisch Proxmox. Zudem befindet sich auf `sda3` ein sog. `LVM`. Bei der Erstinstallation wurde hier automatisch ein Bereich für die VMs eingerichtet. Dieser Bereich wird im Folgenden gelöscht und der frei werdende Platz auf `sda` wird vollständig dem Proxmox-Host zugeordnet. i
+Die erste Festplatte ist eine SSD, auf der Proxmox selbst installiert wurde. Von dieser zweiten Platte startet dieses System automatisch Proxmox. Zudem befindet sich auf `sda3` ein sog. `LVM`. Bei der Erstinstallation wurde hier automatisch ein Bereich für die VMs eingerichtet. Dieser Bereich wird im Folgenden gelöscht und der frei werdende Platz auf `sda` wird vollständig dem Proxmox-Host zugeordnet.
 
 Danach wird die Festplatte `sdb` als LVM für die VM eingerichtet.
 
@@ -515,7 +519,7 @@ Bestätige die Nachfrage mit ``y``
 
    lsblk Konsolenausgabe
 
-Es ist zu erkennen, dass auf ``/dev/sdb3`` nur noch ``pve-swap`` und ``pve-root`` vorhanden sind. 
+Es ist zu erkennen, dass auf ``/dev/sda3`` nur noch ``pve-swap`` und ``pve-root`` vorhanden sind. 
 
 7. Auf der Weboberfläche von Proxmox ist der local-lvm Eintrag noch über ``Datacenter → Storage local-lvm (<hostename> (z.B. pve))`` mit dem ``Remove``-Button grafisch zu entfernen:
 
@@ -526,7 +530,7 @@ Es ist zu erkennen, dass auf ``/dev/sdb3`` nur noch ``pve-swap`` und ``pve-root`
 
    Festplatten Default-Einstellungen
 
-Danach findest Du noch folgenden Speicher:
+Danach findest Du noch folgenden Speicher in der Weboberfläche:
 
 .. figure:: media/install-on-proxmox_25_storage-after-remove.png
    :align: center
@@ -535,11 +539,22 @@ Danach findest Du noch folgenden Speicher:
 
    Zustand nach Löschung des local-lvm
 
-Die SSD ``/dev/sdb`` steht für den Proxmox-Host zur Verfügung.
+In der schematischen Darstellung ergibt sich nun folgendes Bild:
+
+.. figure:: media/install-on-proxmox_25_ssd_after_configuration.svg
+   :align: center
+   :alt: Aufteilung der SSD nach der Konfigurationsseite 
+
+   Aufteilung der Festplatten nach der Anpassung
+
+Zweiten Datenträger als Speicher einbinden
+++++++++++++++++++++++++++++++++++++++++++
+
+Die SSD ``/dev/sda`` steht für den Proxmox-Host zur Verfügung.
 
 *Zweiten Datenträger vorbereiten*
 
-Die erste Festplatte heißt hier sda und ersetzt die pve-data-Partition, die im vorigen Schritt entfernt wurde. Um diese für Proxmox vorzubereiten, stellt man über Konsolenbefehle einige Konfigurationen ein. Falls die Shell noch nicht geöffnet ist, wie oben beschrieben, öffnen und folgende Befehle eingeben:
+Die zweite Festplatte heißt sdb und ersetzt die pve-data-Partition, die im vorigen Schritt entfernt wurde. Um diese für Proxmox vorzubereiten, stellt man über Konsolenbefehle einige Konfigurationen ein. Falls die Shell noch nicht geöffnet ist, wie oben beschrieben, öffnen und folgende Befehle eingeben:
 
 .. hint::
 
@@ -547,7 +562,7 @@ Die erste Festplatte heißt hier sda und ersetzt die pve-data-Partition, die im 
   entsprechend anpassen, die folgenden Grafiken dienen zur Orientierung: `vg-hdd-1000` eignet sich 
   beispielsweise für ein Volume aus einer HDD mit 1 TiB Kapazität.
 
-1. Datenträger vorher partitionieren, |zb| mit ``fdisk /dev/sda → g → n → w`` (über lsblk den richtigen Datenträgernamen herausfinden; in diesem Fall sda)
+1. Datenträger vorher partitionieren, |zb| mit ``fdisk /dev/sdb → g → n → w`` (über lsblk den richtigen Datenträgernamen herausfinden; in diesem Fall sdb)
 
 .. figure:: media/install-on-proxmox_26_console-fdisk.png
    :align: center
@@ -562,7 +577,7 @@ Beispiel:
 
 .. code::
 
-   pvcreate /dev/sda1
+   pvcreate /dev/sdb1
 
 und anschließend mit ``y`` bestätigen:
 
@@ -579,7 +594,7 @@ Beispiel:
 
 .. code::
 
-   vgcreate vg-hdd-1000 /dev/sda1
+   vgcreate vg-hdd-1000 /dev/sdb1
 
 .. figure:: media/install-on-proxmox_28_console-vgcreate.png
    :align: center
@@ -618,7 +633,8 @@ Beispiel:
 
    lvconvert
 
-*Datenträger grafisch als Storage in Proxmox anbinden*
+Datenträger grafisch als Storage in Proxmox anbinden
+++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 1. Im Menü `Datacenter > Storage > Add` wählt man „LVM-Thin“ aus. Im ID-Feld wird der Name des virtuellen Datenträgers angegeben. In diesem Fall ist es eine HDD mit 1 TiB Speicherkapazität, weshalb die Bezeichnung vd-hdd-1000 gewählt wird. Unter Volume Group die erstellte virtuelle Gruppe auswählen, welche hier vg-hdd-1000 ist:
 
@@ -638,6 +654,14 @@ Beispiel:
 
    Zweite HDD
 
+Hier noch der Vollständigkeitshalber die schematische Darstellung, wie sie sich jetzt zeigt:
+
+.. figure:: media/install-on-proxmox_32_hdd_after_configuration.svg
+   :align: center
+   :alt: Aufteilung der Festplatten nach der 
+
+   Aufteilung der Festplatten nach der Anpassung
+
 Vorbereiten des ISO-Speichers
 =============================
 
@@ -655,6 +679,10 @@ Gehe dazu auf ``Datacenter`` --> ``<proxmox-host>`` --> ``Datenspeicher (auf loc
 
 Ubuntu Server
 -------------
+
+.. hint:: 
+
+   Beachte für den Download des Ubuntu Servers, dass du immer die Version verwendest, die in den Systemvoraussetzungen genannt wurde. Zum jetzigen Zeitpunkt ist dies in der Angabe der URL berücksichtigt. 
 
 In dem nun geöffneten Fenster trägst Du die URL
 
