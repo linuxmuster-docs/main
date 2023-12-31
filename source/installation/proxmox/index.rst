@@ -843,9 +843,9 @@ Es sind beide ISO Images auf den ISO-Speicher in Proxmox verfügbar, Du richtest
 
 .. figure:: media/proxmox-iso-download-opnsense_03.svg
    :align: center
-   :alt: Nach der Bereitstellung des OPNsensen Installationsmediums 
+   :alt: Nach der Bereitstellung des OPNsense Installationsmediums 
 
-   Nach der Bereitstellung des OPNsensen Installationsmediums 
+   Nach der Bereitstellung des OPNsense Installationsmediums 
 
 
 Vorbereiten der virtuellen Maschinen
