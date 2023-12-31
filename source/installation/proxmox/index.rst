@@ -665,8 +665,7 @@ Hier noch der Vollständigkeitshalber die schematische Darstellung, wie sie sich
 Vorbereiten des ISO-Speichers
 =============================
 
-Um die v7.2 zu installieren, müssen zwei virtuelle Maschinen angelegt werden. OPNsense und Ubuntu Server LTS werden in die VMs installiert.
-Dazu ist es erforderlich, dass Du die ISO-Images für OPNsense und Ubuntu Server LTS auf den Proxmox-Hypervisor in den Datenspeicher für ISO-Images lädst.
+Um die v7.2 zu installieren, müssen zwei virtuelle Maschinen angelegt werden. OPNsense und Ubuntu Server LTS werden in diesei VMs installiert. Dazu ist es erforderlich, dass Du die ISO-Images für OPNsense und Ubuntu Server LTS auf den Proxmox-Hypervisor in den Datenspeicher für ISO-Images lädst.
 
 .. figure:: media/proxmox-download-iso_01.png
    :align: center
@@ -701,9 +700,13 @@ ein (copy&paste). Anschließend betätigst Du dann den Button ``Query URL``.
 
 Wenn die Abfrage der URL positiv war, sollten sich die Felder ausgefüllt haben.
 
-Zur Überprüfung der Integrität der Dati aktiviere ``Verify certificates``, das sich unter den ``Advanced`` Optionen befindet.
+Zur Überprüfung der Integrität der Datei aktiviere ``Verify certificates``, das sich unter den ``Advanced`` Optionen befindet.
 
 Wähle wie dargestellt: ``SHA-256`` und trage die Checksumme ein:
+
+.. hint:: 
+
+   Sollte sich nach der Erstellung dieser Beschreibung eine Änderung der herunterzuladen Image-Datei ergeben haben, wirst du die Checksumme anpassen müssen. 
 
 .. code:: 
   
@@ -737,6 +740,12 @@ Nach dem Schließen des Fensters,
    ISO-Images
 
 befindet sich das heruntergeladene Ubuntu-ISO nun in dem ``ISO Images`` und steht Dir für die weitere Verwendung zur Verfügung.
+
+.. figure:: media/proxmox-iso-download-ubuntu_05.svg
+   :align: center
+   :alt: Nach der Bereitstellung des Ubuntu Installationsmediums 
+
+   Nach der Bereitstellung des Ubuntu Installationsmediums 
 
 OPNsense
 --------
@@ -830,7 +839,14 @@ Somit hast Du nun alle nötigen ISO-Dateien für die weitere Installation zusamm
 
    ISO-Images
 
-Es sind  beide ISO Images auf den ISO-Speicher in Proxmox verfügbar, Du richtest nun die VMs ein.
+Es sind beide ISO Images auf den ISO-Speicher in Proxmox verfügbar, Du richtest nun die VMs ein.
+
+.. figure:: media/proxmox-iso-download-opnsense_03.svg
+   :align: center
+   :alt: Nach der Bereitstellung des OPNsensen Installationsmediums 
+
+   Nach der Bereitstellung des OPNsensen Installationsmediums 
+
 
 Vorbereiten der virtuellen Maschinen
 ====================================
