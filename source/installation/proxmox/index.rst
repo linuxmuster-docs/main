@@ -1123,7 +1123,7 @@ Nachdem die VM angelegt wurde, siehst Du diese links im Verzeichnisbaum Deines P
 
 Welches sich auch in der schematischen Übersicht zeigt:
 
-.. figure:: media/proxmox-create-vm-opnsense-11.svg
+.. figure:: media/proxmox-create-vm-ubuntu-server-11.svg
    :align: center
    :scale: 80%
    :alt: Proxmox Create VM: Add 2nd NIC
