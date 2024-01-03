@@ -988,6 +988,13 @@ Achte für die weitere Installation darauf, wie Du die Bridges zugeordnet hast:
 
 Klicke auf ``Add``.
 
+.. figure:: media/proxmox-create-vm-opnsense-11.svg
+   :align: center
+   :scale: 80%
+   :alt: Proxmox Create VM: Add 2nd NIC
+
+   Stand nach der Erzeugung der Virtuellen Maschine OPNsense 
+
 .. _xterm-label:
 
 Anlegen der VM für linuxmuster server
@@ -1113,6 +1120,15 @@ Nachdem die VM angelegt wurde, siehst Du diese links im Verzeichnisbaum Deines P
    :alt: Proxmox VMs: Overview
 
    VMs
+
+Welches sich auch in der schematischen Übersicht zeigt:
+
+.. figure:: media/proxmox-create-vm-opnsense-11.svg
+   :align: center
+   :scale: 80%
+   :alt: Proxmox Create VM: Add 2nd NIC
+
+   Stand nach der Erzeugung der Virtuellen Maschine Ubuntu 
 
 Abschließende Konfiguration der virtuellen Maschinen
 ----------------------------------------------------
