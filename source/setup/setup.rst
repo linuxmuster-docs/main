@@ -42,9 +42,13 @@ Wichtige Hinweise
 
 * Beim Setup von linuxmuster gibst Du also einen Domänennamen nach folgendem Schema an:
   
-  - hostname.subdomain=NetBIOS-Name.domain.tld
-  - ein funktionierendes Beispiel wäre: server01ad.linuxmuster.meineschule.de
-  - hostname -> server01ad, subdomain -> linuxmuster, meineschule -> domain, tld -> de
+  hostname.subdomain=NetBIOS-Name.domain.tld
+  ein funktionierendes Beispiel wäre: server01ad.linuxmuster.meineschule.de
+    
+  * server01ad -> hostname
+  * linuxmuster -> subdomain
+  * domain -> meineschule
+  * de -> tld
 
 * Es wird also eine extern auflösbare, registrierte Domain genutzt und bei der Einrichtung des Servers wird eine eigene interne Subdomain als AD-Domäne angegeben.
 
