@@ -1,26 +1,30 @@
 .. _migration-linbo-label:
 
 ==========================
-Migration LINBO 2.4 zu 4.1
+Migration LINBO 2.4 zu 4.2
 ==========================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
 
-Hinweise zu LINBO 4.1
+Hinweise zu LINBO 4.2
 =====================
 
-In der linuxmuster v7.2 löst LINBO 4.1 das bisherige LINBO 2.4 ab. Bereits ab v7.1 gibt es nur noch ein Debian-Paket für LINBO (`linuxmuster-linbo7`) und eines für die grafische Oberfläche (`linuxmuster-linbo-gui7`), die nur noch LINBO 4 und eine grafische Oberfläche enthalten.
+In der linuxmuster v7.2 löst LINBO 4.2 das bisherige LINBO 2.4 ab. Bereits ab v7.1 gibt es nur noch ein Debian-Paket für LINBO (`linuxmuster-linbo7`) und eines für die grafische Oberfläche (`linuxmuster-linbo-gui7`), die nur noch LINBO 4 und eine grafische Oberfläche enthalten.
 
 Hast Du auf linuxmuster v7.2 umgestellt, ist es sinnvoll, die bisherigen LINBO 2.4 Cloop-Images zu konvertieren.
 
-LINBO 4.1 weist einige Besonderheiten auf:
+LINBO 4.2 weist einige Besonderheiten auf:
 
-* neues Image-Format mit Abwärtskompatibilität zum alten Format für eine einfach Migration
+* Neues Image-Format mit Abwärtskompatibilität zum alten Format für eine einfach Migration
 * Änderungen an der Namensgebung und des Speicherortes der zum Image zugehörigen Dateien
 * Es wird nur noch 64-Bit Client-Hardware unterstützt.
-* LINBO 4.1 kann nicht mit linuxmuster v6.2 und kleiner verwendet werden.
-* Es werden differentielle Images ab LINBO v4.1 unterstützt.
+* LINBO 4.2 kann nicht mit linuxmuster v6.2 und kleiner verwendet werden.
+* Es werden differentielle Images ab LINBO >= 4.1 unterstützt.
+* Erweiterte LINBO-Client Shell
+* WLAN-Unterstützung
+* Unterstützung eigener Boot-Skripte
+* Einbindung des aktuellsten Linux-Kernels (z.B. > 6.6) - alternativ kann auch ein LTS-Kernel (6.1.*), ein legacy Kernel (5.15.*) oder ein eigener Kernel eingebunden werden.
 
 Neues Image-Format
 ------------------
