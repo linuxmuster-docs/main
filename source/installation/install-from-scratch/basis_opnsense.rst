@@ -10,13 +10,21 @@ Anlegen und Installieren der Firewall
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_,
                    `@rettich <https://ask.linuxmuster.net/u/rettich>`_,
 
-.. note:: 
-
-   Bist Du zuvor der Anleitung :ref:`Proxmox vorbereiten <install-on-proxmox-label>` gefolgt, dann kannst Du fortfahren mit: `Erster Start der Firewall`_
-
 Installation der OPNsense |reg|
 ===============================
 
+.. note:: 
+
+   Bist Du zuvor der Anleitung :ref:`Proxmox vorbereiten <install-on-proxmox-label>` gefolgt, dann kannst Du fortfahren mit: `Erster Start der Firewall`_
+   
+   .. figure:: media/basis_opnsense_000.svg
+      :align: center
+      :alt: Stand nach Proxmox Installation
+   
+      Stand nach der vorhergehenden Beschreibung
+
+Falls Du Dich für eine andere Installationsart entschieden hast, musst Du den dargestellten Aufbau herstellen.
+      
 Lade Dir die ISO-Datei der OPNsense |reg| von der Seite https://opnsense.org/download/ herunter.
 
 .. hint::
@@ -52,6 +60,8 @@ In der Virtualisierungsumgebung lädst Du die ISO-Datei auf den ISO-Speicher.
   
 Für den produktiven Betrieb müssen diese Hardware-Einstellungen **deutlich** angehoben werden (z.B.: 4 vCPU, 8 GiB RAM, 50 GiB SSD, 3 NIC).
   
+.. _first_start_firewall:
+
 Erster Start der Firewall
 =========================
 

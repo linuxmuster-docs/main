@@ -1217,5 +1217,5 @@ Die beiden letzten Einstellungen musst Du **nochmals für den linuxmuster.net Se
 
 .. hint:: Für die weitere Nutzung von xterm.js ist allerdings noch eine Anpassung bei der laufenden OPNsense |reg| bzw. dem Server nötig. Die nimmst Du zu einem geeigneten späteren Zeitpunkt vor, bis dahin musst Du noch die Konsole ``noVNC`` nutzen.
 
-Die virtuellen Maschinen sind jetzt für die weitere Installation vorbereitet. Du kannst gemäß der Anleitung: :ref:`install-from-scratch-label` mit der Installation fortfahren.
+Die virtuellen Maschinen sind jetzt für die weitere Installation vorbereitet. Du kannst gemäß der Anleitung: :ref:`first_start_firewall` mit der Installation fortfahren.
 
