@@ -1184,7 +1184,7 @@ Nachstehende Abb. zeigt den Zustand vor der Aktivierung.
 
    Zustand vor der Aktivierung
 
-Wähle die gewünschte VM aus, klicke dann --> ``lmn-opnsense`` --> ``Hardware`` --> ``Serial Port``.
+Wähle die gewünschte VM ``lmn-opnsense`` aus, klicke dann --> ``Add`` --> ``Hardware`` --> ``Serial Port``.
 
 .. figure:: media/xterm-opnsense_002.png
    :align: center
