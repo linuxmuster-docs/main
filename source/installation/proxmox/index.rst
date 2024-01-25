@@ -1173,7 +1173,7 @@ Hinzufügen einer seriellen Schnittstelle
 
 Damit Dir `copy-and-paste` in der Oberfläche von Proxmox bei der Auswahl unter ``>_ Console`` zur Verfügung steht, musst Du die Nutzung von `xterm.js` ermöglichen. Als vorbereitende Maßnahme musst Du eine serielle Schnittstelle für die jeweilige VM aktivieren.
 
-Wähle zuerst die gewünschte VM aus (z.B. `100 (lmn72-opnsense)`, wähle danach den Eintrag ``Hardware`` für die VM aus und klicke dann oben rechts auf das Icon ``>_ Console``.
+Wähle zuerst die gewünschte VM aus (z.B. `100 (lmn-opnsense)`, wähle danach den Eintrag ``Hardware`` für die VM aus und klicke dann oben rechts auf das Icon ``>_ Console``.
 
 Nachstehende Abb. zeigt den Zustand vor der Aktivierung.
 
@@ -1184,7 +1184,7 @@ Nachstehende Abb. zeigt den Zustand vor der Aktivierung.
 
    Zustand vor der Aktivierung
 
-Wähle die gewünschte VM aus, klicke dann --> ``lmn72-opnsense`` --> ``Hardware`` --> ``Serial Port``.
+Wähle die gewünschte VM aus, klicke dann --> ``lmn-opnsense`` --> ``Hardware`` --> ``Serial Port``.
 
 .. figure:: media/xterm-opnsense_002.png
    :align: center
