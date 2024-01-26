@@ -61,23 +61,28 @@ Danach must Du noch die Datei ``/etc/hosts`` anpassen:
    ff02::1 ip6-allnodes
    ff02::2 ip6-allrouters
    ff02::3 ip6-allhosts
-   
-Starte danach den Proxmox-Host neu.
 
-Hast Du dies erfolgreich umgesetzt, dann hast Du Folgendes erreicht:
+Diese Einstellungen werden mit dem nächsten Start des Proxmox-Hosts aktiv.
 
-.. figure:: media/install-on-proxmox_01_network-4-proxmox-installation.svg
+Daher gilt es sicherszustellen das die OPNSense |reg| automatisch startet. Dafür bei (``Proxmox-Host`` --> ``VM`` --> ``Options`` --> ``Start on boot``) die Aktivierung setzen.
+
+.. figure:: media/proxmox_internes_netz_001.png
+   :align: center
+   :scale: 80%
+   :alt: Autostart der OPNSense |reg|
+
+   Autostart der OPNSense |reg|
+
+Hast Du dies erfolgreich umgesetzt, dann starte den Proxmox-Host neu.
+
+.. figure:: media/proxmox_internes_netz_002.svg
    :align: center
    :scale: 80%
    :alt: Netzwerk für die Proxmox Installation
 
    Proxmox Netzwerk
 
-.. hint::
-
-   Grafik ersetzen
-   
-Du musst nun noch den Admin-PC nach dem Neustart des Proxmox-Host auf den internen Switch des grünen Netzes anschließen. Der Admin-PC benötigt nun eine manuell vergebene IP:
+Du musst den Admin-PC an den internen Switch des grüne Netzes nach dem Neustart des Proxmox-Host, wie dargestell anschließen. Der Admin-PC benötigt nun eine manuell vergebene IP:
 
 -  IP Address: 10.0.0.10/16
 -  Subnetzmaske: 255.255.0.0
@@ -91,7 +96,7 @@ Danach solltest Du vom Admin-PC aus folgende Hosts erreichen können:
 3. 8.8.8.8 - externer DNS-Server
 4. linuxmuster.net - externe URL
 
-Der Proxmox-Host ist nun "hinter" der OPNsense und kann über diese auf das Internet zugreifen. Dafür muss die virtuelle Maschine der OPNsense aktiv sein.
+Der Proxmox-Host ist nun "hinter" der OPNsense und kann über diese auf das Internet zugreifen. Dafür muss die virtuelle Maschine der OPNsense aktiv sein, was Du mit dem vorherigen Schritt sichergestellt hast.
 
 Fahre nun fort mit :ref:`basis_server-label`.
 
