@@ -61,7 +61,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'linuxmuster.net'
-copyright = u'2017-2022, linuxmuster.net'
+copyright = u'2017-2024, linuxmuster.net'
 author = u'linuxmuster.net'
 
 # The version info for the project you're documenting, acts as replacement for
