@@ -21,11 +21,11 @@ Auf Ebene der Dateien:
 
   .. code-block:: rst
 
-     (unter)kapitelbezeichnung_laufende-nummer_beschreibung-des-dargestelltem
+     (unter)kapitelbezeichnung_laufende-nummer_beschreibung-des-dargestellten
   
   -  (unter)kapitelbezeichnung <-- Titel des Kapitels bzw. des Unterkapitels in dem die Medien-Datei verwendet wird
-  -  laufende-nummer <-- Bilder ihrer Verwendung nach von oben nach unten fortlaufend durchnummeriert; eine führende Null
-  -  beschreibung-des-dargestelltem <-- Bei Fenstern zum Beispiel der Namen des Fensters
+  -  laufende-nummer <-- Bilder ihrer Verwendung von oben nach unten fortlaufend durchnummeriert; eine führende Null
+  -  beschreibung-des-dargestellten <-- Bei Fenstern zum Beispiel der Namen des Fensters
   -  Unterstrich (_) um die drei Felder voneinander abzugrenzen
   
   
@@ -36,7 +36,7 @@ Auf Ebene der Dateien:
      ../install-on-xcp-ng/media/install-on-xcp-ng_01_network-sketch.png
 
   
-  Hinzugefügte Dateien erben von der vorhergehenden Datei die Laufende-Nummer und die wird um eine neu aufsteigende Nummerierung ergänzt.
+  Hinzugefügte Dateien erben von der vorhergehenden Datei die Laufende-Nummer und diese wird um eine neu aufsteigende Nummerierung ergänzt.
 		  
      .. figure:: media/09_guedelines_view-of-the-file-structure.png
         :align: center
@@ -46,7 +46,7 @@ Auf Ebene der Dateien:
 
 **Medien und Bilder, die in der Dokumentation mehrfach genutzt werden.**
 
-  Sie sollten von diesem Schema abweichen, da sie nur in dem root-Verzeichnis vorhanden sein müssen. Indem auf die laufenden Nummer und Kapitelbezeichnung verzichtet wird, werden sie als solche kenntlich gemacht. Beispiel wäre die SVG-Grafik follow_arrow.svg die dann mit /media/follow_arrow.svg in der Datei /guided_inst.subst eingebunden wird.
+  Du solltest von diesem Schema abweichen, da diese nur in dem root-Verzeichnis vorhanden sein müssen. Indem auf die laufenden Nummern und Kapitelbezeichnungen verzichtet wird, werden sie als solche kenntlich gemacht. Beispiel wäre die SVG-Grafik follow_arrow.svg die dann mit /media/follow_arrow.svg in der Datei /guided_inst.subst eingebunden wird.
   
 Styleguide
 ----------
@@ -63,7 +63,7 @@ Styleguide
 	# mein kommando --force
 	output
 
-- Für Bilder kann man image oder figure verwenden. Bei figure kann man Bildunterschriften hinzufügen
+- Für Bilder kann man image oder figure verwenden. Bei figure kann man Bildunterschriften hinzufügen.
 
   .. code-block:: rst
 		  
@@ -74,7 +74,7 @@ Styleguide
 	Bildunterschriften 
 
 
-- Ein Kapitel sollte einen toctree enthalten, wenn es mehrere Dateien gibt
+- Ein Kapitel sollte einen ``toctree`` enthalten, wenn es mehrere Dateien gibt.
 
 - Ein Kapitel kann ein Label erhalten bzw. muss eines erhalten wenn es als Sprungziel dienen könnte. 
 
@@ -85,13 +85,13 @@ Styleguide
      Bekannte Fehler
      ===============
 
-  Bennungen dieser Sprungpunkte sollen immer mit ``-label`` enden   
+  Die Bennung dieser Sprungpunkte sollen immer mit ``-label`` enden.
 
 - Mit diesem Sprungpunkt kann man an anderer Stelle auf ihn verweisen
 
   .. code-block:: rst
 
-     Bitte lesen Sie :ref:`hier <knownbugs-label>` nach, welche Fehler bekannt sind.
+     Bitte lies :ref:`hier <knownbugs-label>` nach, welche Fehler bekannt sind.
 
 - Um eine Tabelle
      
@@ -103,7 +103,7 @@ Styleguide
   Rababa      Rababarababa Rabararabararabara
   =========== ============ ==================
   
-  einzustellen, nutze folgende einfache Syntax
+  einzustellen, nutze folgende einfache Syntax:
   
   .. code-block:: rst
 
