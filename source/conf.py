@@ -134,6 +134,10 @@ gettext_compact = False     # optional
 #         '_static/theme_overrides.css',
 #     ],
 # }
+html_js_files = [
+    'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js', 
+    '_static/flyout.js'
+]
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
