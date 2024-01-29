@@ -42,6 +42,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
     'sphinx.ext.ifconfig',
+    'sphinx.ext.sphinx_rtd_theme',
 #    'sphinx.ext.githubpages',
 ]
 
