@@ -64,7 +64,7 @@ Wähle das Tastaturlayout ``Deutsch`` und bestätige dies mit ``Erledigt``.
 
    Wähle nacheinander 
   
-   ``Tastatur erkennen`` --> ``OK`` --> ``y`` --> ``Ja`` --> ``Shift``+``*`` --> ``q`` --> ``z`` --> ``OK``
+   ``Tastatur erkennen`` --> ``OK`` --> ``y`` --> ``Ja`` --> ``Shift`` + ``*`` --> ``q`` --> ``z`` --> ``OK``
 
    Da sollte zumindest für eine deutsche Tastatur das richtige Layout finden.
    Für andere einfach den Abfragen folgen
