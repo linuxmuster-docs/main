@@ -268,13 +268,21 @@ Danach erhälst Du die Rückfrage, ob die Installation fortgesetzt werden soll u
 
 Bestätige dies mit ``Fortfahren``.
 
+Benutzerprofil anlegen
+----------------------
+
 .. figure:: media/basis_server_017.png
    :align: center
    :scale: 60%
    :alt: profile setup
 
    Lege ein Benutzerprofil an
-   
+      
+Nenne den Server ``server``. Der Benutzername (linuxadmin) und das Passwort (Muster!) sind frei wählbar - wie in der Abb. dargestellt.
+
+Abfrage Ubuntu Pro
+------------------
+
 Danach wirst Du gefragt, ob Die ``Ubuntu Pro`` aktiviert werden soll. Überspringe dies.
 
 .. figure:: media/basis_server_018a.png
@@ -283,8 +291,9 @@ Danach wirst Du gefragt, ob Die ``Ubuntu Pro`` aktiviert werden soll. Übersprin
    :alt: skip Ubuntu Pro activation
 
    Überspringe die Aktivierung von Ubuntu Pro
-      
-Nenne den Server ``server``. Der Benutzername (linuxadmin) und das Passwort (Muster!) sind frei wählbar - wie in der Abb. dargestellt.
+
+Abfrage OpenSSH-Zugang
+----------------------
 
 .. figure:: media/basis_server_018.png
    :align: center
@@ -299,6 +308,9 @@ Solltest Du eine Möglichkeit für einen Fernzugang zu dem Server wünschen, akt
    
    Wir empfehlen das PublicKey-Verfahren.
    https://wiki.ubuntuusers.de/SSH/#Publickey-Authentifizierung (externer Link)
+
+Optionale Server-Pakete
+-----------------------
 
 .. figure:: media/basis_server_019.png
    :align: center
