@@ -274,16 +274,6 @@ Bestätige dies mit ``Fortfahren``.
    :alt: profile setup
 
    Lege ein Benutzerprofil an
-
-Nenne den Server ``server``. Der Benutzername (linuxadmin) und das Passwort (Muster!) sind frei wählbar - wie in der Abb. dargestellt.
-
-.. figure:: media/basis_server_018.png
-   :align: center
-   :scale: 60%
-   :alt: activate ssh server
-
-   Aktiviere den SSH-Server
-   
    
 Danach wirst Du gefragt, ob Die ``Ubuntu Pro`` aktiviert werden soll. Überspringe dies.
 
@@ -294,7 +284,15 @@ Danach wirst Du gefragt, ob Die ``Ubuntu Pro`` aktiviert werden soll. Übersprin
 
    Überspringe die Aktivierung von Ubuntu Pro
       
+Nenne den Server ``server``. Der Benutzername (linuxadmin) und das Passwort (Muster!) sind frei wählbar - wie in der Abb. dargestellt.
 
+.. figure:: media/basis_server_018.png
+   :align: center
+   :scale: 60%
+   :alt: activate ssh server
+
+   Aktiviere den SSH-Server
+   
 Solltest Du eine Möglichkeit für einen Fernzugang zu dem Server wünschen, aktiviere ``OpenSSH-Server installieren``. 
 
 .. attention:: Wenn Du dies machst, mache Dir auch Gedanken wie Du diesen Zugang absichern kannst.
