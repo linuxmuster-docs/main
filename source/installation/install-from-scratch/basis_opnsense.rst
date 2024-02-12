@@ -371,10 +371,15 @@ Diese Zuordnung ist nun richtig, also weiter mit ``y`` |...|
 
 Die Zuordnung des WAN-Interfaces ist hier zu erkennen und nun so wie beabsichtigt. Das erkennst Du daran, das dessen IP-Adresse dem Adress-Pool des Routers entnommen ist (, sofern der DSL-Router via DHCP eine Adresse verteilt).
 
+.. hint::
+
+   Starte die OPNsense |reg| neu, nachdem Du die Netzwerkkarten neu zugeordnet hast.
+
+
 WAN Zugang testen
 ^^^^^^^^^^^^^^^^^
 
-Hast Du auf der WAN-Schnittstelle eine IP-Adresse erhalten, führe zwei erste Tests durch. Wähle ``8) Shell`` auf der Kommandozeile und gib dort folgende Befehle ein:
+Hast Du die OPNsense |reg| neu gestartet und auf der WAN-Schnittstelle eine IP-Adresse erhalten, führe zwei erste Tests durch. Wähle ``8) Shell`` auf der Kommandozeile und gib dort folgende Befehle ein:
 
 .. hint:: 
 
@@ -532,7 +537,7 @@ Nach erfolgreicher Übernahme erhältst Du den Hinweis, dass Du Dich mit der LAN
    
    GUI IP
 
-Bevor Du das aber machst, erfolgt ein letzter Test, und zwar mit der Aktualisierung der Opnsense.
+Bevor Du das aber machst, erfolgt ein letzter Test, und zwar mit der Aktualisierung der OPNsense |reg|.
 
 
 Aktualisierung der OPNsense |reg|
