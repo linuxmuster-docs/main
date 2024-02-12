@@ -32,6 +32,7 @@ Im Laufe der Installation benötigst Du einen Admin-PC. Das kann ein einfacher L
   :hidden:
 
   basis_opnsense
-  proxmox_internes_netz
   basis_server
   lmn_pre_install
+  proxmox_internes_netz
+  
