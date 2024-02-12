@@ -10,7 +10,17 @@ Proxmox in das interne Netz bringen
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
                   
 
-Nachdem Du die Firewall installierst, eine Erstkonfiguration erstellt und dann einen Snapshot der VM erstellt hast, musst Du jetzt den Proxmox-Host umkonfigurieren.
+Du hast bis hiering bereits folgende Schritte absolviert:
+
+- Du hast die Firewall installiert,
+- eine Erstkonfiguration der Firewall erstellt,
+- Du hast einen Snapshot der Firewall-VM erstellt,
+- Du hast die Server-VM erstellt
+- Du hast Ubuntu-Server installiert und vorkonfiguriert
+- Du hast den Server mit ``lmn-prepare`` für das spätere linuxmuster-setup vorbereitet,
+- Du hast von der Server-VM einen Snapshot erstellt.
+
+Hast Du diese Schritte erfolgreich durchlaufen, gilt es jetzt, die Netzwerk-Konfiguration des Proxmox-Host umzukonfigurieren.
 
 Ziel ist es, dass der Proxmox-Host nunmehr ``nur noch im internen Netzwerk (green)`` erreichbar ist. Der Host wird dann durch die OPNsense - Firewall geschützt. Die OPNsense ist zugleich das neue Gateway für den Proxmox-Host, um Zugriffe in das externe Netz zu ermöglichen.
 
@@ -82,7 +92,7 @@ Hast Du dies erfolgreich umgesetzt, dann starte den Proxmox-Host neu.
 
    Proxmox Netzwerk
 
-Du musst den Admin-PC an den internen Switch des grüne Netzes nach dem Neustart des Proxmox-Host, wie dargestell anschließen. Der Admin-PC benötigt nun eine manuell vergebene IP:
+Du musst den Admin-PC an den internen Switch des grünen Netzes nach dem Neustart des Proxmox-Host, wie dargestellt, anschließen. Der Admin-PC benötigt nun eine manuell vergebene IP:
 
 -  IP Address: 10.0.0.10/16
 -  Subnetzmaske: 255.255.0.0
@@ -96,7 +106,7 @@ Danach solltest Du vom Admin-PC aus folgende Hosts erreichen können:
 3. 8.8.8.8 - externer DNS-Server
 4. linuxmuster.net - externe URL
 
-Der Proxmox-Host ist nun "hinter" der OPNsense und kann über diese auf das Internet zugreifen. Dafür muss die virtuelle Maschine der OPNsense aktiv sein, was Du mit dem vorherigen Schritt sichergestellt hast.
+Der Proxmox-Host ist nun "hinter" der OPNsense |reg| und kann über diese auf das Internet zugreifen. Dafür muss die virtuelle Maschine der OPNsense |reg| aktiv sein, was Du mit dem vorherigen Schritt sichergestellt hast.
 
 Fahre nun fort mit :ref:`basis_server-label`.
 
