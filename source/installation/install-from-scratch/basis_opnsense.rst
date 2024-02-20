@@ -29,11 +29,11 @@ Lade Dir die ISO-Datei der OPNsense |reg| von der Seite https://opnsense.org/dow
 
 .. hint::
 
-   Die zuletzt freigegeben OPNsense Version für das Setup von linuxmuster.net v7.2 ist die Version 23.7 
+   Die zuletzt freigegeben OPNsense Version für das Setup von linuxmuster.net v7.2 ist die Version 24.1 
    
-   [Stand: November 23]. 
+   [Stand: Februar 24]. 
    
-   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/23.7/OPNsense-23.7-dvd-amd64.iso.bz2
+   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/24.1/OPNsense-24.1-dvd-amd64.iso.bz2
 
 Nutze als Architektur ``amd64`` und als ``image type dvd`` und einen Mirror, der in Deiner Nähe ist.
 Du erhältst dann ein mit ``bz2`` komprimiertes ISO-Image. Entpacke die heruntergeladene Datei. Siehe hierzu auch :ref:`install-on-proxmox-label` - dort Kapitel `Vorbereiten des ISO-Speichers -> OPNsense |reg|`.
@@ -42,7 +42,7 @@ Unter Linux ist folgender Befehl anzugeben:
 
 .. code::
 
-   bunzip2 OPNsense-23.7-OpenSSL-dvd-amd64.iso.bz2
+   bunzip2 OPNsense-24.1-dvd-amd64.iso.bz2
 
 
 In der Virtualisierungsumgebung lädst Du die ISO-Datei auf den ISO-Speicher.

@@ -215,6 +215,10 @@ alternativ
 
 Das erste Verfahren hat den Vorteil, dass Du nicht die Zeit des Neustarts abwarten, Dich erneut verbinden und anmelden musst.
 
+.. hint::
+
+   Starte nach dem erfolgreichen Setup ebenfalls die OPNsense | reg | neu.
+
 Nach abgeschlossenem Setup und dem Neustart des Dienstes ``linuxmuster-webui`` bzw. eventuellen Neustart des Servers, kannst Du Dich mit einem PC via Browser an der Schulkonsole von linuxmuster.net v7.2 anmelden.  
 
 Nachdem sich Dein Client eine IP-Adresse via DHCP aus dem Adressbereich für die Rechneraufnahme geholt hat, ist dieses aber nicht möglich. Dessen Adressen sind aus sicherheitstechnischen Erwägungen nur auf das allernötigste beschränkt.
@@ -249,7 +253,7 @@ Danach kommst Du zur Anmeldeseite der WebUI/Schulkonsole. Melde Dich nun als Ben
 .. figure:: media/newsetup/lmn-setup-gui-11.png
    :align: center
    :alt: WebUI: Login global-admin
-   :width: 80%
+   :width: 50%
    
    Login global-admin
 
@@ -290,8 +294,37 @@ Der Inhalt des Verzeichnisses sollte sich wie folgt darstellen:
    
    Liste die Berechtigungen der Dateien auf
 
+OPNsense |reg| Unbound DNS anpassen
+====================================
+
+Das linuxmuster-setup richtet in der OPNsense |reg| als voreingestellte DNS-Server diejnigen des DNS0.EU - Projekts ein. Dies sind europäische öffentliche DNS-Server, die darauf zielen, bösartige Domains zu blocken, Ende-zu-Ende verschlüsselung zu gewährleisten und gefährdende Inhalte zu filtern (https://www.dns0.eu/de).
+
+Nach der Installation muss im Unbound DNS-Resolver der OPNsense diese Voreinstellung noch aktiviert werden. Die DNS-Einstellungen der OPNsense kannst Du unter ``System -> Einstellungen -> Allgemein`` kontrollieren.
+
+.. figure:: media/newsetup/opnsense-dns-eintragungen-01.png
+   :align: center
+   :alt: dns settings
+   :width: 80%
+   
+   DNS-Einträge
+
+Zur Aktivierung gehe auf ``Dienste -> Unbound DNS -> Query Forwarding``.
+
+.. figure:: media/newsetup/opnsense-unbound-dns-resolver-settings.png
+   :align: center
+   :alt: dns settings
+   :width: 80%
+   
+   Unbound-DNS: Query Forwarding
+
+Setze den Haken für ``Use System Nameservers``, dort siehst Du dann die in obiger Abb. dargestellten DNS-Einträge. Klicke zur Aktivierung auf ``Anwenden``.
+
+Mit sog. Overrides können im Unbound DNS genutzt werden, um die DNS-Ergebnisse in gewünschter Form anzupassen oder aber spezielle DNS Einträge bereitzustellen. Weitergehende Informationen findest Du hier: https://docs.opnsense.org/manual/unbound.html
+
+   
 Setze die Ersteinrichtung fort, indem Du :ref:`add-user-accounts-label` und :ref:`hardware-registration-label` aufrufst.
 
 ``Alternativ``: Willst Du eine Migration durchführen, geht es weiter mit: :ref:`migration-label`
+
 
 
