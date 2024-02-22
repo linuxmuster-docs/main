@@ -805,7 +805,15 @@ Die komprimierte ISO Datei (<filename>.iso.bz2)
 .. code::
 
    wget https://mirror.informatik.hs-fulda.de/opnsense/releases/24.1/OPNsense-24.1-dvd-amd64.iso.bz2
-   
+
+Nun gilt es, die ISO-Datei auszupacken. Das machst Du mit folgendem Befehl:
+
+.. code::
+
+   bunzip2 OPNsense-24.1-dvd-amd64.iso.bz2
+
+Das Entpacken kann einige Zeit in Anspruch nehmen. Anschließend sollte sich in dem Verzeichnis die OPNsense-ISO-Datei befinden.
+
 Überprüfen der heruntergeladenen Dateien auf deren Integrität:
 
 .. code::
@@ -818,19 +826,11 @@ Die komprimierte ISO Datei (<filename>.iso.bz2)
 
 Der letzte Befehl sollte Dir ein ``Verified OK`` liefern.
 
-Nun gilt es, die ISO-Datei auszupacken. Das machst Du mit folgendem Befehl:
-
-.. code::
-
-   bunzip2 OPNsense-24.1-dvd-amd64.iso.bz2
-
-Das Entpacken kann einige Zeit in Anspruch nehmen. Anschließend sollte sich in dem Verzeichnis die OPNsense-ISO-Datei befinden. Die daneben befindlichen anderen OPNsense-Datei kannst Du nun wieder löschen.
+Somit hast Du nun alle nötigen ISO-Dateien für die weitere Installation zusammen.  Die daneben befindlichen anderen OPNsense-Datei kannst Du nun wieder löschen.
 
 .. code::
 
    rm OPNsense*.sha256 OPNsense*.pub OPNsense*.sig
-
-Somit hast Du nun alle nötigen ISO-Dateien für die weitere Installation zusammen.
 
 .. figure:: media/proxmox-download-iso_02.png
    :align: center
