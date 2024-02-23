@@ -1222,3 +1222,4 @@ Die beiden letzten Einstellungen musst Du **nochmals für den linuxmuster.net Se
 
 Die virtuellen Maschinen sind jetzt für die weitere Installation vorbereitet. Du kannst gemäß der Anleitung: :ref:`first_start_firewall` mit der Installation fortfahren.
 
+.. hint:: Jetzt wäre auch ein guter Zeitpunkt für ein Snapshoting und/oder dem Klonen der bisher erstellen VMs. 
