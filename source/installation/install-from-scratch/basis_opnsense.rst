@@ -552,14 +552,24 @@ Aktualisiere die OPNsense |reg| in der Konsole, indem Du den Punkt ``12) Update 
    Als Erstes probiere es mit dem Neustart aller Netzwerk-Dienste. Dazu wählst Du den Punkt ``11) Reload all services``. Danach wiederholst Du das Upgrade nochmals mit dem Punkt ``12) Update from console``.
 
    Sollte die Aktualisierung immer noch nicht erfolgreich durchgeführt werden, dann überprüfe Deine vorherige Netzwerk-Konfiguration auf Fehler.
+   
+Sollte sich eine Eingabe-Aufforderung wie hier dargestellt vorher öffnen, muss du zum Fortführen des Updates ein ``q`` eingeben. Um dir alle Mitteilungen anzusehen, verwende die Auf- bzw. Ab-Tasten.
 
-Klappt das Update, startet die OPNsense |reg| neu.
+.. figure:: media/basis_opnsense_022_hello_world.png
+   :align: center
+   :alt: OPNsense: Hello World - New Features
+   
+   OPNsense: Hello World - New Features
+
+Das Update ist erfolgreich durchgeführt, wenn du wieder zu dieser Ansicht gelangst.
 
 .. figure:: media/basis_opnsense_023.png
    :align: center
    :alt: OPNsense: GUI - Assign interfaces
    
    NIC Zuordnung nach Neustart
+
+Klappt das Update, starte die OPNsense |reg| neu.
 
 Konfiguration der OPNsense |reg|
 ================================
