@@ -900,7 +900,10 @@ Klicke dann auf ``Next``.
 Wähle nun hier unter ``Storage`` den geeigneten Datenspeicher auf, um die Festplatte der VM dort abzulegen. In der Abb. wird der Datenspeicher ``Dataset`` verwendet.
 In dem Drop-down Menü siehst Du alle in Deinem System verfügbaren Datenspeicher.
 
-.. hint:: Folgende Größenangaben beziehen sich, wie schon geschrieben, auf eine Testumgebung. Für andere Einsatzszenarien solltest Du Dich unbedingt mit den `Hardware-Anforderungen <https://docs.opnsense.org/manual/hardware.html#hardware-requirements>`_ gemäß der OPNsense |reg| -Dokumentation auseinandersetzen. Wie in der Dokumentation schon ausgeführt, solltest Du hier besser **mindestens 8 GiB RAM und 50 GiB für die Festplatte** wählen.
+.. hint:: Folgende Größenangaben beziehen sich, wie schon geschrieben, auf eine Testumgebung.  
+   Wie in der Dokumentation schon ausgeführt, solltest Du hier für den produktiven Einsatz - **mindestens 8 GiB RAM und 50 GiB für die Festplatte** wählen, um alle OPNsense |reg| Standardfunktionen auszuführen. 
+   
+   Damit funktioniert jede Funktion, aber vielleicht nicht bei einer großen Anzahl von Benutzern oder hoher Last. Für andere Einsatzszenarien solltest Du Dich unbedingt mit den `Hardware-Anforderungen <https://docs.opnsense.org/manual/hardware.html#hardware-requirements>`_ gemäß der OPNsense |reg| -Dokumentation auseinandersetzen.
 
 .. figure:: media/proxmox-create-vm-opnsense-04.png
    :align: center
