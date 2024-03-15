@@ -1,10 +1,6 @@
 Einführung
 ==========
 
-.. hint::
-
-   Diese Dokumentation zu linuxmuster.net v7.2 befindet sich derzeit noch im Aufbau bzw. wird noch angepasst. Derzeit ist die Version v7.2 noch im B E T A - Stadium.
-
 Herzlich Willkommen zur Dokumentation von linuxmuster.net v7.2!
 
 Diese beschreibt alle wichtigen Schritte ...
@@ -15,7 +11,7 @@ Diese beschreibt alle wichtigen Schritte ...
   | ... der Verwaltung von Nutzern,
   | ... bis hin zu individuellen Anpassungen.
 
-Wie es bei einem Projekt ist, dessen Entwicklungsgeschichte mittlerweile auf das Jahr 1999 zurückblickt, ist Dein Einstieg in die Beschreibung unseres Systems sicherlich verschieden gelagert.
+Wie es bei einem Projekt ist, dessen Entwicklungsgeschichte mittlerweile auf das Jahr 1999 zurückblickt, ist Dein Einstieg in die Beschreibung unseres Systems sicherlich unterschiedlich.
 
 Kennst Du linuxmuster.net noch nicht,
 -------------------------------------
@@ -49,7 +45,7 @@ Informationen zum Telefon-Support gibt es auf unser Projektseite `<https://www.l
 
 .. hint::
 
-   Suchst Du die Dokumentation zur Version linuxmuster.net 6.2 oder die Möglichkeit unsere Dokumentation herunterzuladen?
+   Suchst Du die Dokumentation zur Version linuxmuster.net 7.1 oder die Möglichkeit unsere Dokumentation herunterzuladen?
 
 Dann schaue an das untere Ende der Menüleiste.
 
