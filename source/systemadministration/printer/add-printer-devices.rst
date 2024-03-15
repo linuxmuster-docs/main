@@ -37,6 +37,10 @@ Für o.g. Beispieldrucker stellt sich der Eintrag wie folgt dar:
 
 Bestätige den Eintrag mit ``speichern & importieren``.
 
+.. attention::
+
+   Den hier vergebenen Druckernamen musst Du später in identischer Schreibweise in CUPS angeben (siehe nächstes Unterkapitel).
+
 Es erscheint ein Fenster, in dem der Vorgang bestätigt wird.
 
 .. image:: media/04-printer-devices-added.png

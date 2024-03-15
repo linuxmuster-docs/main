@@ -23,6 +23,7 @@ LINBO4, das von linuxmuster.net entwickelt wurde, weist einige Neuerungen auf:
 * linuxmuster.net <=6.2 wird nicht mehr unterstützt.
 * Ab LINBO v4.1 stehen differentielle Images zur Verfügung.
 * Bisherige Images im cloop Format sind direkt in das neue qcow2 Format zu konvertieren.
+* AB LINBO v4.1.36 wird Kernel 6.5.3 verwendet und es können qcow2-Images mit Torrent verteilt werden, die > 52 GiB sind. Für ctorrent kann hierzu die sog. piece length konfiguriert werden.
 
 Dieses Kapitel führt Dich in die Nutzung von LINBO4 ein und erklärt die wesentlichen Schritte zur Imageverwaltung.
 
@@ -853,4 +854,137 @@ Diese Skripte sind in folgendem Verzeichnis abzulegen:
    /var/lib/linuxmuster/hooks/update-linbofs.post.d/
 
 Hook-Skripte müssen ausführbar sein und mit einem ``shebang`` beginnen. Es sind die zuvor genannten Hinweise zu beachten.
+
+LINBO4: Linux-Kernel
+--------------------
+
+Linbo ab v4.2 nutzt als Standard den aktuellsten Linux-Kernel. Manchmal gibt es aber dennoch Probleme mit Hardware, die nicht richtig erkannt wird. Dann kann es sein, dass z.B. LINBO per PXE nicht korrekt startet oder das System *scheinbar hängen bleibt*. Solche Fälle widerspenstiger Hardware können mit LINBO 4.2 mit einigen Handgriffen vielfach erfolgreich gelöst werden.
+
+Mit LINBO 4.2 wird auf dem Client ein aktueller Linux-Kernel >= 6.6.x installiert und gestartet. Bei neuerer Hardware funktioniert dies i.d.R. problemlos. Bei einigen älteren Hardware-Modellen oder Modellen mit besonderer Hardware-Bestückung kann es vorkommen, dass der Client nicht startet. Dies kann schrittweise wie nachstehend beschrieben, zuerst eingegrenzt und dann behoben werden:
+
+
+1. LINBO-Kernel wechseln
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Auf dem Server befindet sich unter ``/etc/linuxmuster/linbo/custom_kernel.ex`` eine Beispieldatei, wie man den LINBO-Kernel wechselt. Die Kernel befinden sich unterhalb von ``/var/lib/linuxmuster/linbo/``. Es stehen drei verschiedene Versionen zu Verfügung: *legacy, longterm, stable*
+
+2. Netzwerkkarten-Treiber ersetzen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Erkennt der Client Hardware nicht richtig, kann mit linbo-ssh geprüft werden, welcher Treiber Probleme bereitet. Hierzu wechselst Du mit ``linbo-ssh <IP des Clients>`` auf die LINBO-Konsole auf dem Client.
+
+.. code::
+
+    dmesg |grep firmware    # listet evtl Probleme mit fehlenden Treiber auf     
+    
+Danach die benötigte Firmware mit Pfad so unter ``/etc/linuxmuster/linbo/firmware`` eintragen - siehe hierzu auch die *Beispieldatei firmware.ex*. 
+
+Führe anschließend den Befehl ``update-linbofs`` auf dem linuxmuster Server aus.
+
+3. Kernel-Options verwenden
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Auf dem Server findet sich pro Hardwareklasse eine start.conf Datei unter: ``/srv/linbo/start.conf.<Hardwareklasse>``
+
+Setze den Eintrag KernOptions und gebe Optionen an, die für Deine Hardware dem Kernel wichtige Infos mitgeben.
+
+.. code::
+
+     KernelOptions =
+     #unterschiedliche Einträge ausprobieren.
+     
+     KernelOptions = loadmodules=r8168 modprobe.blacklist=r8169
+     
+     oder auch
+     
+     KernelOptions = nomodeset
+     
+Anschließend musst Du auf dem Sever den Befehl ``linuxmuster-import-devices`` ausführen, damit die Änderungen auf den Clients übernommen werden.
+
+4. LINBO-Befehle
+^^^^^^^^^^^^^^^^
+
+Unter LINBO können sämtliche Befehle auch direkt am Client eingegeben werden. Dies ist sehr hilfreich, um Log-Dateien auszulesen, Hardware-Probleme und ihre mögliche Lösung schrittweise auszutesten.
+
+Dazu wechselst Du wieder mit ``linbo-ssh <IP des Clients>`` auf die LINBO-Konsole des Clients. Dort kannst Du dann direkt LINBO-Befehle wie z.B. 
+``linbo_partition_format`` oder ``linbo_sync 1`` angeben.
+
+Sämtliche Befehle, die linuxmuster-linbo7 (next generation) beherrscht, werden hier aufgelistet: https://github.com/linuxmuster/linuxmuster-linbo7/issues/72#issuecomment-1156633508
+
+im Fehlerfall
+-------------
+
+Torrent-Fehler
+^^^^^^^^^^^^^^
+
+Nutzt Du sehr große Images, so kann es passieren, dass bei der Verteilung der qcow2-Images mit Torrent-Fehler auftreten und die Synchronisation auf ``rsync`` zurückfällt. Hierbei kommt es zum Einbruch bei den Datenübertragungsraten.
+
+Ab LINBO v4.1.36 können für ``ctorrent`` Parameter angepasst werden, um dies zu verhindern.
+
+Die Konfigurationsdati für ctorrent befindet sich 
+
+.. code::
+
+   /etc/default/linbo-torrent
+   
+Die Paketgrößen können nun als Parameter ``piece length`` angepasst werden. Dazu kannst Du in o.g. Konfigurationsdatei den Parameter wie folgt setzen:
+
+.. code::
+
+   # Piece length (torrent file option)
+   PIECELEN="524288"
+   
+Hast Du den Wert angepasst, musst Du Torrent neu startebn:
+
+.. code::
+
+   linbo-torrent restart  
+ 
+Wurde die Option in der Konfigurationsdatei nicht explizit gesetzt, so wird ein Standardwert (default value) von ``262144`` verwendet. 
+
+Mit der Erhöhung des Wertes können o.g. Probleme behoben werden.
+
+Zum Vergleich findet sich nachstehende Konfigurationsdatei ``/etc/default/linbi-torrent``:
+
+.. code::
+
+   # default values for linbo-torrenthelper service provided by ctorrent
+   # thomas@linuxmuster.net
+   # 20230918
+   #
+   # note: you have to invoke 'linbo-torrent restart' after you have changed any values
+   #
+
+   # Exit while seed <SEEDHOURS> hours later (default 72 hours)
+   SEEDHOURS="100000"
+
+   # Max peers count (default 100)
+   MAXPEERS="100"
+   
+   # Min peers count (default 1)
+   MINPEERS="1"
+   
+   # Download slice/block size, unit KB (default 16, max 128)
+   SLICESIZE="128"
+   
+   # Max bandwidth down (unit KB/s, default unlimited)
+   MAXDOWN=""
+   
+   # Max bandwidth up (unit KB/s, default unlimited)
+   MAXUP=""
+   
+   # Supplemental ctorrent options, separated by space (-v: Verbose output for debugging)
+   #OPTIONS="-v"
+   
+   # Timeout in seconds until rsync fallback (client only)
+   TIMEOUT="300"
+   
+   # user to run ctorrent (server only)
+   CTUSER="nobody"
+   
+   # Piece length (torrent file option)
+   PIECELEN="524288"
+   
+   
+   
 

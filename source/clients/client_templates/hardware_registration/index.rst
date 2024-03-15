@@ -8,7 +8,7 @@ Rechneraufnahme
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
                    `@Alois <https://ask.linuxmuster.net/u/Alois>`_ ,
-	               `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
+	           `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_,
                    `@michael_kohls <https://ask.linuxmuster.net/u/michael_kohls>`_
 
 Der PC, der als Hardware zum Aufbau des Muster-Clients genutzt werden soll, ist via Kabel mit dem Netzwerk zu verbinden.
@@ -44,19 +44,26 @@ Wähle dann links im Menü ``Geräteverwaltung --> Geräte``.
 .. figure:: media/add-devices/01-device-management-devices-menue.png
    :align: center
    :alt: Device Management: Menue
+   
+   Menü Geräte
 
-Danach siehst Du rechts die Liste mit allen bereits in der Gerätedatei eingetragenen Geräten. Standardmäßig sind nach dem Setup die konfigurierten Server
-schon in der Liste mit der Rolle ``Server`` eingetragen.
+Danach siehst Du rechts die Liste mit allen bereits in der Gerätedatei eingetragenen Geräten. Standardmäßig sind nach dem Setup die konfigurierten Server schon in der Liste mit der Rolle ``Server`` eingetragen.
 
 .. figure:: media/add-devices/02-device-management-devices.png
    :align: center
    :alt: Device Management: Devices
+   :width: 80%
+   
+   Eingetragene Server
 
-Klicke unterhalb der Liste auf den Button ``+ Gerät hinzufügen``, um ein neues Gerät einzutragen. Es wird eine neue, noch leere Zeile am Ende der Geräteliste eingefügt.
+Klicke unterhalb der Liste auf den Button ``+ Gerät hinzufügen``, um ein neues Gerät einzutragen. Es wird eine neue, noch leere Zeile am Anfang der Geräteliste eingefügt.
 
 .. figure:: media/add-devices/03-device-management-add-new-device.png
    :align: center
    :alt: Device Management: Add New Device
+   :width: 80%
+   
+   Neues Gerät hinzufügen
 
 In der neuen Zeile gibst Du nun folgenes an:
 
@@ -77,18 +84,27 @@ Die o.g. Zeile könnte ausgefüllt wie folgt aussehen:
 .. figure:: media/add-devices/04-device-management-add-new-device-settings.png
    :align: center
    :alt: Device Management: Add New Device Settings
+   :width: 80%
+   
+   Eintragungen für neuen Client
 
-Die Schaltfläche ``SPEICHERN`` überprüft die Eingabe, ``SPEICHERN & IMPORTIEREN`` werden die neuen Geräte importiert. Mit dem Button ``Im Editor öffnen`` wird die Datei ``/etc/linuxmuster/sophomorix/default-school/devices.csv`` im Editor geöffnet und kann bearbeitet werden.
+Die Schaltfläche ``Speichern`` überprüft die Eingabe, ``Speichern & importieren`` werden die neuen Geräte importiert. Mit dem Button ``Im Editor öffnen`` wird die Datei ``/etc/linuxmuster/sophomorix/default-school/devices.csv`` im Editor geöffnet und kann bearbeitet werden.
 
 .. figure:: media/add-devices/05-device-management-buttons.png
    :align: center
    :alt: Device Management: Add New Devices - Buttons
+   :width: 50%
+   
+   Schaltflächen
 
 Im folgenden erscheinen einige Log-Meldungen und - wenn der Import erfolgreich war - "Import abgeschlossen"
 
 .. figure:: media/add-devices/06-device-management-add-new-devices-import-finished.png
    :align: center
    :alt: Device Management: Import finished
+   :width: 80%
+   
+   Import abgeschlossen
 
 Um weitere Geräte hinzuzufügen, wiederholst Du den beschriebenen Vorgang in der Schulkonsole entsprechend.
 
@@ -110,6 +126,9 @@ Wenn Du sehr viele Geräte hinzufügen möchtest, deren MAC-Adressen Du bereits 
 .. figure:: media/add-devices/07-device-management-edit-file.png
    :align: center
    :alt: Device Management: Edit file
+   :width: 80%
+   
+   devices.csv im Editor anpassen
 
 Auf dem Server kannst Du Dir in der Konsole mit 
 
@@ -134,8 +153,6 @@ Die Datei kann hier auch zur lokalen Bearbeitung heruntergeladen und wieder hoch
 
   ... dem Verteilen eines vorhandenen Images auf die aufgenommenen Geräte beginnen. Gehe zu :ref:`using-linbo-label` 
 
-  .. todo Ziel im letzten Aufzählungspunkt muss angepasst werden.
-
 ... mittles LINBO
 =================
 
@@ -150,22 +167,28 @@ Dazu hat sich folgendes Vorgehen bewährt:
 .. figure:: media/add-devices/15-device-management-linbo4-bootscreen.png
    :align: center
    :alt: Device Management: Linbo 4 - bootscreen
+   :width: 80%
+   
+   PXE-Bootvorgang auf dem Client
 
-
-4. Wähle in dem Linbo Startbildschirm nun rechts das werkzeug-Symvol aus. Es erscheint die Kennwortabfrage. Gib das Kennwort des Linbo-Root-Benutzers an, wie es beim Setup erstellt wurde.
+4. Wähle in dem LINBO Startbildschirm nun rechts das Werkzeug-Symbol aus. Es erscheint die Kennwortabfrage. Gib das Kennwort des Linbo-Root-Benutzers an, wie es beim Setup erstellt wurde.
   
 .. attention:: Deine Eingabe ist nicht zu sehen, es werden auch keine Sternchen für die eingegebenen Ziffern dargestellt.
 
 .. figure:: media/add-devices/16-device-management-linbo4-password.png
    :align: center
    :alt: Device Management: Linbo 4 - password
-
+   :width: 80%
+   
+   Eingabe des LINBO Kennworts
 
 5. Es werden nun zwei weitere Menü-Symbole dargestellt:
 
 .. figure:: media/add-devices/17-device-management-linbo4-new-menue-symbols.png
    :align: center
    :alt: Device Management: Linbo 4 - new menue symbols
+   
+   Werkzeug-Symbol - Untermenü
 
 6. Wähle den Eintrag ``Register`` aus.
 7. Es öffnet sich ein Fenster, um den Client zu registrieren. Fülle alle Felder aus. Achte darauf, dass Du als Host group die zuvor neu angelegte einträgst.
@@ -173,26 +196,38 @@ Dazu hat sich folgendes Vorgehen bewährt:
 .. figure:: media/add-devices/18-device-management-linbo4-register-client.png
    :align: center
    :alt: Device Management: Linbo 4 - register client
+   :width: 80%
+   
+   Register Client
 
 8. Klicke dann auf den Eintrag ``register``. Nach Abschluss der Neuaufnahme siehst Du nachstehende Meldung:
 
 .. figure:: media/add-devices/19-device-management-linbo4-registering-client-finished.png
    :align: center
    :alt: Device Management: Linbo 4 - registering client finished
+   :width: 80%
+   
+   Registrierung abgeschlossen
 
-9. führe o.g. Vorgang für alle neu aufzunehmenden Clients durch.
+9. Führe o.g. Vorgang für alle neu aufzunehmenden Clients durch.
 
-10. Wenn alle PCs so registriert wurden, öffne an Deinem Administrations-Rechner die Schulkonsole und melde Dich wieder als ``global-admin`` an. Wähle im Menü ``Geräteverwwaltung --> Geräte`` aus. Du siehst nun neben den schon vorhandenen Geräten ebenfalls die neu aufgenommen Geräte (in der Abb. sind dies die PCs für den Raum g202):
+10. Wenn alle PCs so registriert wurden, öffne an Deinem Administrations-Rechner die Schulkonsole und melde Dich wieder als ``global-admin`` an. Wähle im Menü ``Geräteverwaltung --> Geräte`` aus. Du siehst nun neben den schon vorhandenen Geräten ebenfalls die neu aufgenommen Geräte (in der Abb. sind dies die PCs für den Raum g202):
 
 .. figure:: media/add-devices/20-device-management-linbo4-registered-clients.png
    :align: center
    :alt: Device Management: Linbo 4 - registered clients
+   :width: 80%
+   
+   Neu aufgenommene Geräte
 
 11. Klicke nun auf ``Speichern & importieren``. Wurde der Vorgang abgeschlossen, siehst Du dies im Importfenster.
 
 .. figure:: media/add-devices/21-device-management-linbo4-registered-clients-imported.png
    :align: center
    :alt: Device Management: Linbo 4 - registered clients imported
+   :width: 80%
+   
+   Import abgeschlossen
 
 .. hint::
 
@@ -202,6 +237,5 @@ Dazu hat sich folgendes Vorgehen bewährt:
 
     ... dem Verteilen eines vorhandenen Images auf die aufgenommenen Geräte beginnen. Gehe zu :ref:`using-linbo-label` 
 
-   .. todo Ziel im letzten Aufzählungspunkt muss angepasst werden.
 
 

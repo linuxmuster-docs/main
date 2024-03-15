@@ -1,5 +1,5 @@
 .. |zb| unicode:: z. U+00A0 B. .. Zum Beispiel 
-  
+
 .. |_| unicode:: U+202F
    :trim:
 
@@ -18,12 +18,22 @@ Was ist linuxmuster.net?
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
                    `@MachtDochNix <https://ask.linuxmuster.net/u/machtdochnix>`_
 
-Anforderungen
-=============
+linuxmuster.net ist eine Komplettlösung für den digital unterstützten Unterricht für Schüler:innen und Lehrer:innen einer zeitgemäßen Bildungseinrichtung.
 
-**Schulnetzwerk vs. "normales" Netzwerk**
+Die langjährigen Erfahrungen aller Beteiligten aus der linuxmuster.net Gemeinde haben gezeigt, dass sich ein Firnmennetzwerk fundamental von den Anforderungen an ein 
+heutige Schulnetz unterscheiden. 
 
-Warum unterscheiden wir eigentlich zwischen einer IT in einer Firma und einer Schule?
+Die Entwicklung von linuxmuster.net greift all diese Anforderungen auf und stellt eine modulare Lösung für ein Schulnetz zur Verfügung. 
+
+Diese kann von einer Ein-Server-Lösung bis hin zu einer
+Mehr-Server-Lösung mit Cloud-Anbindung und BYOD-Integration skaliert werden.
+
+Die Anforderungen, die heute an ein Schulnetz gestellt werden, erklären wir im nachfolgenden Abschnitten detailliert. Im Anschluss zeigen wir auf, wie linuxmuster.net diese umsetzt.
+
+Schulnetzwerk vs. "normales" Netzwerk
+=====================================
+
+**Welche Unterschiede in der IT in einer Firma und einer Schule sind für uns relevant?**
 
 Im Prinzip gibt es vier große Merkmale, die auffallen:
 
@@ -31,39 +41,39 @@ Im Prinzip gibt es vier große Merkmale, die auffallen:
 
 .. tabularcolumns:: |c|c|c|c|
 
-+-----------++-----------+
-| Firma     || Schule    |
-+------+----++------+----+
-| User | PC || User | PC |
-+======+====++======+====+
-|  50  | 50 || 500  | 50 |
-+------+----++------+----+
++-----------+-----------+
+| Firma     | Schule    |
++------+----+------+----+
+| User | PC | User | PC |
++======+====+======+====+
+|  50  | 50 | 500  | 50 |
++------+----+------+----+
 
 2. Die Zusammensetzung von Usern in  Abteilungen
 
 .. tabularcolumns:: |c|c|c|c|
 
-+------------------++---------------+
-|      Firma       ||    Schule     |
-+------+-----------++------+--------+
-| User | Abteilung || User | Gruppe |
-+======+===========++======+========+
-|  A   |     1     ||  A   | Klasse |
-|      |           ||      +--------+
-|      |           ||      | Kurs 1 |
-|      |           ||      +--------+
-|      |           ||      | Kurs 2 |
-|      |           ||      +--------+
-|      |           ||      | AG 1   |
-+------+-----------++------+--------+
-|  B   |     1     ||  B   | Klasse |
-|      |           ||      +--------+
-|      |           ||      | Kurs 3 |
-|      |           ||      +--------+
-|      |           ||      | Kurs 2 |
-|      |           ||      +--------+
-|      |           ||      | AG 1   |
-+------+-----------++------+--------+
++------------------+---------------+
+|      Firma       |    Schule     |
++------+-----------+------+--------+
+| User | Abteilung | User | Gruppe |
++======+===========+======+========+
+|  A   | Marketing |  A   | Klasse |
+|      |           |      +--------+
+|      |           |      | Kurs 1 |
+|      |           |      +--------+
+|      |           |      | Kurs 2 |
+|      |           |      +--------+
+|      |           |      | AG 1   |
++------+-----------+------+--------+
+|  B   | Marketing |  B   | Klasse |
+|      |           |      +--------+
+|      |           |      | Kurs 3 |
+|      |           |      +--------+
+|      |           |      | Kurs 2 |
+|      |           |      +--------+
+|      |           |      | AG 1   |
++------+-----------+------+--------+
 
 3. Die Fluktuation im jährlichen Wechsel
 
@@ -73,7 +83,7 @@ Im Prinzip gibt es vier große Merkmale, die auffallen:
 
 4. Der Umgang mit den Arbeitsmitteln
 
-   Schüler:innen teilen sich ein und dasselbe Arbeitsmittel im schulischen Alltag. Dabei ist es für die nächste Unterrichtseinheit unablässig, dass zum Start immer eine einheitliche Umgebung auf den Rechnern vorhanden ist. Die zeitliche Taktung zwischen den Wechseln kann sehr kurz sein.
+   Schüler:innen teilen sich ein und dasselbe Arbeitsmittel im schulischen Alltag. Dabei ist es für die nächste Unterrichtseinheit entscheidend, dass zum Start immer eine einheitliche Umgebung auf den Rechnern vorhanden ist. Die zeitliche Taktung zwischen den Wechseln kann sehr kurz sein.
 
    Dies ist in einer Firma so nicht gegeben. Wenn ein User seinen Rechner verlässt, findet er ihn der Regel immer genauso wieder.
 
@@ -167,8 +177,8 @@ Dateiverwaltung und -verteilung
 
 Alle Nutzer besitzen einen persönlichen Bereich auf dem Netzwerkspeicher. Ebenso steht ein solcher den Gruppen für den Austausch ihrer gemeinschaftlichen Arbeit zur Verfügung.
 
-Selbstheilende Arbeitsstationen durch LINBO 4
-+++++++++++++++++++++++++++++++++++++++++++++
+Selbstheilende Arbeitsstationen durch LINBO 4.1
++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. image::    media/structure_of_version_7_client.svg
    :name:     structure-linbo-client-management
@@ -271,7 +281,7 @@ Alle bisher vorgestellten Basisdienste werden mithilfe des Setups konfiguriert, 
 
  Für weitergehende Informationen siehe die Docker-Homepage: https://www.docker.com
 
-:Extra: Ein Porfolio an unterschiedlichen externen Diensten lässt sich an die linuxmuster.net Lösung anbinden, sodass eine einheitliche Authentifizierung erfolgt. 
+:Extra: Ein Porfolio an unterschiedlichen externen Diensten lässt sich an die linuxmuster.net Lösung anbinden, sodass eine einheitliche Authentifizierung erfolgt.
 
    .. image::    media/structure_of_version_7_extra.svg
       :name:     structure-extra-server-and-services

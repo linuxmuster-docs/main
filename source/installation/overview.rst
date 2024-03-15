@@ -20,6 +20,15 @@ Um **linuxmuster.net latest** zu installieren musst Du folgende Schritte durchla
 
 ..       :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part1-preliminary-consideration.svg
 
+.. todo::
+
+   Grafik anpassen
+
+Diese Dokumentation konzentriert sich auf die Umsetzung als Zwei-Server-Lösung auf einem Hypervisor (Proxmox). 
+Andere Virtualisierungslösungen sind möglich, werden aber von linuxmuster.net nicht (mehr) offiziell unterstützt.
+
+Falls Du einen anderen Hypervisor bevorzugst, kannst Du Dich dennoch an der Dokumentation orientieren und findest im linuxmuster.net Forum (https://ask.linuxmuster.net) und im Community-Wiki (https://wiki.linuxmuster.net/community/) Unterstützung.
+
 4. Vorbereitung der benötigten Server
 
    .. figure:: media/overview-installation-process-part2-basis-server-provision.svg
@@ -28,17 +37,15 @@ Um **linuxmuster.net latest** zu installieren musst Du folgende Schritte durchla
 
 ..       :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part2-basis-server-provision.svg
 
-\* Bei der aktuellen linuxmuster.net Version dient die LTS Version 18.04 (Bionic Beaver) als Basis.
+\* Bei der aktuellen linuxmuster.net Version dient die LTS Version 22.04 als Basis.
 
-5. Installation from Scratch in die vorbereiteten VMs - oder alternativ direkt auf zwei Hardware-Maschinen
+5. Installation in die vorbereiteten VMs (virtuelle Maschinen)
 
    .. figure:: media/overview-installation-process-part3-lmn-server-preparation.svg
        :align: center
        :alt: Installation: Übersicht
 
 ..       :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part3-lmn-server-preparation.svg
-
-\* Die Bezeichnung des Scriptes enthält immer einen Verweis auf die Version.
 
 6. Test der Netzwerkfunktionen
 
@@ -79,7 +86,7 @@ Nachstehend kannst Du den Installationsablauf als Übersicht herunterladen:
 
 :download:`Übersicht als Inkscape SVG-Datei <media/overview-installation-process_inkscape_latest.svg>`
 
-.. Checkliste
-.. ++++++++++
+.. todo::
 
-.. Nutzen Sie die *still missing*, um alle während der Installation gemachten Einstellungen festzuhalten. Es handelt sich um ein PDF-Formular, Sie können es also auch am PC ausfüllen. Halten Sie diese Checkliste bereit, wenn Sie den Telefon-Support in Anspruch nehmen wollen.
+   Grafik anpassen
+

@@ -1,7 +1,7 @@
 Einführung
 ==========
 
-Herzlich Willkommen zur Dokumentation von linuxmuster.net v7.1!
+Herzlich Willkommen zur Dokumentation von linuxmuster.net v7.2!
 
 Diese beschreibt alle wichtigen Schritte ...
 
@@ -11,7 +11,7 @@ Diese beschreibt alle wichtigen Schritte ...
   | ... der Verwaltung von Nutzern,
   | ... bis hin zu individuellen Anpassungen.
 
-Wie es bei einem Projekt ist, dessen Entwicklungsgeschichte mittlerweile auf das Jahr 1999 zurückblickt, ist Dein Einstieg in die Beschreibung unseres Systems sicherlich verschieden gelagert.
+Wie es bei einem Projekt ist, dessen Entwicklungsgeschichte mittlerweile auf das Jahr 1999 zurückblickt, ist Dein Einstieg in die Beschreibung unseres Systems sicherlich unterschiedlich.
 
 Kennst Du linuxmuster.net noch nicht,
 -------------------------------------
@@ -27,12 +27,11 @@ Hattest Du schon Kontakt mit einer Installation von
 
 Dann ist das Kapitel :ref:`what-is-new-label` für Dich von Interesse.
 
-Mit der Version 7.1 gibt es einige Neuerungen. Das zuvor genannte Kapitel :ref:`what-is-linuxmuster.net-label` geht auf diese Neuerungen detailliert ein. Ein Blick lohnt sich daher auf alle Fälle.
-
 Installation from Scratch
 -------------------------
 
-Diese Dokumentation führt Dich durch die Vorbereitung der Virtualisierungslösungen Proxmox, um linuxmuster.net 7.1 installieren zu können. Hierzu gehört die spezifische Einrichtung des Netzwerks sowie die Vorbereitung der Virtuellen Maschinen.
+Diese Dokumentation führt Dich durch eine Installation von Grund auf. Dies bedeutet, dass zunächst 
+die Vorbereitung der Virtualisierungslösungen - hier Proxmox - dokumentiert wird. Auf dem Virtualisierer sind sog. Virtuelle Maschinen (VM) anzulegen, um linuxmuster.net 7.2 installieren zu können. Hierzu gehört die spezifische Einrichtung des Netzwerks, des Speichers sowie die Vorbereitung der VM.
 
 Weitere Hilfe
 -------------
@@ -46,7 +45,7 @@ Informationen zum Telefon-Support gibt es auf unser Projektseite `<https://www.l
 
 .. hint::
 
-   Suchst Du die Dokumentation zur Version linuxmuster.net 6.2 oder die Möglichkeit unsere Dokumentation herunterzuladen?
+   Suchst Du die Dokumentation zur Version linuxmuster.net 7.1 oder die Möglichkeit unsere Dokumentation herunterzuladen?
 
 Dann schaue an das untere Ende der Menüleiste.
 
@@ -186,4 +185,4 @@ Nach einem Klick eröffnen sich Dir dort noch weitere Möglichkeiten:
   :hidden:
 
   appendix/contribute/ad-dns-wiki
-  appendix/beta-lmn72/index
+  appendix/lvm-server/index
