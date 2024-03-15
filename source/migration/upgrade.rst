@@ -1,73 +1,119 @@
-.. _upgrade-from-7.0-label:
+.. _upgrade-from-7.1-label:
 
 =====================
-Upgrade v7.0 auf v7.1
+Upgrade v7.1 auf v7.2
 =====================
 
-.. sectionauthor:: `@cweikl <https://ask.linuxmuster,net/u/cweikl>`_
+1. Bringe zuerst den lmn7.1 Server auf den aktuellsten Paketstand.
 
-Bestehendes System
-------------------
-
-Du hat linuxmuster.net bereits in der Version 7.0 installiert und Du verfügst über ein lauffähiges System bestehend aus OPNsense® und linuxmuster.net Server basierend auf Ubuntu 18.04 LTS.
-
-Vom Server aus hast Du Internet-Zugriff.
-
-Aktualisierung der Apt-Sources
-------------------------------
-
-Es müssen in den Paketquellen die ``linuxmuster.net sources`` für die neue lmn 7.1 eingetragen und der Schlüssel des Paketservers importiert werden.
-
-Füge das neue repository auf dem Server in der Konsole wie folgt hinzu:
+Führe dazu in der Konsole folgende Befehle aus:
 
 .. code::
 
-   sudo -i
-   wget -qO - "https://deb.linuxmuster.net/pub.gpg" | sudo apt-key add -
-   sudo sh -c 'echo "deb https://deb.linuxmuster.net/ lmn71 main" > /etc/apt/sources.list.d/lmn71.list'
    sudo apt update
-   
-Danach löscht Du die bisherigen Paketquellen für die Version lmn 7.0. 
-Gebe hierzu im Terminal auf dem Server folgendes an:
+   sudo apt dist-upgrade
+
+2. Aktualisiere danach das Betriebssystem auf dem Server von Ubuntu 18.04 LTS auf die Version Ubuntu 20.04 LTS. Nutze dazu den Befehl ``do-release-upgrade``.
+
+
+Gib dazu auf der Server-Konsole ein:
 
 .. code::
 
-   sudo rm /etc/apt/sources.list.d/lmn7.list
-   
-Alternativ kannst Du die Einträge in der Datei ``/etc/apt/sources.list.d/lmn7.list`` wie folgt auskommentieren:
+   linuxadmin@server:~$ sudo -i
+   root@server:~$ do-release-upgrade
+
+Nach der Überprüfung siehst Du, wieviele Pakete aktualisiert, neu installiert und gelöscht werden.
+Bestätige den Vorgang zur Durchführung des Upgrades mit ``j``.
+
+Während des Upgrades erhältst Du mehrere Nachfragen. 
+Für einige Dienste (z.B. samba, ssh) wirst Du gefragt, ob die Konfigurationsdatei aktualisiert werden soll.
+
+.. attention::
+
+   Die Nachfrage zur Aktualisierung der Konfigurationsdateien für diese Dienste musst Du unbedingt mit ``N`` beantworten.
+   Beispiele (keine Garantie auf Vollständigkeite) sind: ``/etc/security/limits.conf``, ``/etc/ntp.conf``, ``/etc/system/system.conf``, ``/etc/samba/smb.conf``, ``/etc/sshd/sshd_config``
+
+Zudem müssen während oder nach der Installation einiger neuerer Bibliotheken einige Dienste neu gestartet werden. Diese werden Dir in einer Liste angezeigt. Bestätige deren Neustart mit ``OK``.
+
+Danach wirst Du gefragt, ob Du die lokale Version bestimmter Dienste beibehalten möchtest. Beantworte dies jeweils mit ``Ja/OK``.
+
+Nach der Aktualisierung der Pakete wirst Du gefragt, ob die alten Pakete entfernt werden sollen. Bestätige dies mit ``J``.
+
+Danach wirst Du aufgefordert das System neu zu starten. Führe einen ``Reboot`` aus.
+
+3. Aktualisiere danach das Betriebssystem auf dem Server von Ubuntu 20.04 LTS auf die nachfolgende Version Ubuntu 22.04 LTS. Nutze dazu den Befehl ``do-release-upgrade``.
+
+Der weitere Ablauf ist identisch zu den unter 2.) beschriebenen Schritten.
+
+4. Führe die erneute Konfiguration der lmn-Pakete aus. Rufe dazu folgenden Befehl auf:
 
 .. code::
 
-   # deb https://archive.linuxmuster.net lmn7/
-   # deb-src https://archive.linuxmuster.net lmn7/
-   
-Aktualisiere die Paketquellen auf dem Server und migriere / aktualisiere Deinen Server nun auf die Version lmn 7.1 mit:
+   linuxadmin@server:~$ sudo -i
+   root@server:~$ dpkg-reconfigure sophomorix-samba linuxmuster-base7 linuxmuster-webui7
+
+5. Aktiviere das lmn71-Repository wieder, indem Du die Datei ``/etc/apt/sources.list.d/lmn71.list``
+editierst und dort das während des Upgrades automatisch eingefügte Kommentarzeichen ``#`` entfernst.
+
+Zudem oder alternativ findest Du die Datei ``/etc/apt/sources.list.d/lmn71.list.distUpgrade``, in der das Repository der lmn 7.1 auskommentiert ist.
+
+6. Füge danach das Repository der lmn72 wie folgt hinzu:
+
+Importiere zuerst die Schlüsseldatei:
 
 .. code::
 
-   sudo apt update && apt dist-upgrade
-   
-Bestätige die Rückfragen zur Installation mit y / j.
+   root@server:~$ sudo sh -c 'wget -qO- "https://deb.linuxmuster.net/pub.gpg" | gpg --dearmour -o /usr/share/keyrings/linuxmuster.net.gpg'
 
 .. hint::
 
-   Sollte die Rückfrage kommen, ob die ``smb.conf`` ersetzt werden soll, antworte unbedingt mit ``nein``!
+   Bei ``wget -qO-`` ist der Großbuchstabe O zu verwenden - n i c h t die Zahl 0. 
 
-
-Nach Abschluss der Aktualisierung starte das System einmal neu mit ``sudo reboot``.
-
-Hat alles erfolgreich funktioniert wirst Du nach der Anmeldung auf der Konsole des Servers mit folgendem Bildschirm begrüßt:
-
-.. figure:: media/01-console-welcome-lmn71.png
-
-Solltest Du in den Log-Dateien oder bei der Installation folgenden Hinweis finden, kannst Du wie beschrieben das Update entsprechend ausführen:
+Füge danach das Linuxmuster 7.2 Testing-Repro hinzu:
 
 .. code::
 
-   Checking for python3-reconfigure ... WARNING: You are using pip version 20.0.2; however, version 21.3.1 is available.
-   You should consider upgrading via the '/usr/bin/python3 -m pip install --upgrade pip' command.
+   root@server:~$ sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/linuxmuster.net.gpg] https://deb.linuxmuster.net/ lmn72 main" > /etc/apt/sources.list.d/lmn72.list'
+
+Aktualisiere nun die Paketquellen:
+
+.. code::
+
+   root@server:~$ apt update
+
+7. Aktualisiere die installierten Pakete und führe anschließend ein Reboot durch:
+
+.. attention::
+
+   Die Nachfrage zur Aktualisierung der Konfigurationsdateien für Dienste musst du in diesem Schritt (im Gegensatz zur Systemaktualisierung in Schritt 2 und 3) mit ``I`` oder ``Y`` akzeptieren.
+   Beispiele (keine Garantie auf Vollständigkeit) sind: ``/etc/default/linbo-torrent``
+
+.. code:: 
+
+   root@server:~$  apt dist-upgrade
+   root@server:~$  reboot
+
+8. Nach dem Neustart führe den Import der Geräte erneut aus:
+
+.. code::
+
+   sudo linuxmuster-import-devices
+
+9. Starte nun die Clients neu. Du wirst zunächst noch die Version 4.0 von Linbo auf den Clients nach dem ersten Start sehen. Starte den Client ein zweites Mal und Linbo wird dann automatisch auf dem Client auf die Version 4.2 aktualisiert.
+
+10. Synchronisiere das Betriebssystem und melde Dich danach mit einem Domänen-Benutzer an.
+
+.. figure:: media/01-login-lmn-7.2.png
+   :align: center
+   :alt: first login to lmn7.2
+   :scale: 80%
+   
+   Server-Infos nach dem Konsolen-Login
+   
+.. attention::
+
+   Beim Upgrade von Ubuntu 18.04 über Ubuntu 20.04 zu 22.04 LTS werden die Einstellungen für CUPs zwar korrekt übernommen. Allerdings treten für einige Drucker Fehler auf. Es ist in diesen Fällen sinnvoll die Druckerinstallation erneut durchzuführen. Für viele HP-Drucker ist es hilfreich die Bibliothek ``hplip`` auf dem Server nachzuinstallieren - siehe zu den Druckern :ref:`configure-printers-label`.
+   
 
 
-Danach musst Du noch Deine Linbo 2.4 Images auf Linbo 4 migrieren. Führe dies wie hier :ref:`migration-linbo-label` beschrieben durch.
-
-Danach ist Dein Update auf linuxmuster v7.1 abgeschlossen und Du kannst wie bisher auch weiterarbeiten.

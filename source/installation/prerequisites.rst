@@ -8,7 +8,9 @@
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
 		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_
 
-Linuxmuster.net wird als Zwei-Server-Lösung (Firewall und linuxmuster.net-Server) betrieben. Optional können weitere Server wie z. B. ein Docker-Host eingesetzt werden. Daneben gibt es mindestens eine Trennung in zwei logische Netzwerke, meist sind aber drei oder mehr davon gefordert (WLAN, DMZ, Lehrernetz). linuxmuster.net kann virtualisiert oder ohne Virtualisierung betrieben werden.
+Linuxmuster.net wird als Zwei-Server-Lösung (Firewall und linuxmuster.net-Server) auf einem Hypervisor (Proxmox) betrieben. 
+
+Optional können weitere Server wie z. B. ein Docker-Host eingesetzt werden. Daneben gibt es mindestens eine Trennung in zwei logische Netzwerke, meist sind aber drei oder mehr davon gefordert (WLAN, DMZ, Lehrernetz).
 
 Daraus leiten sich Voraussetzungen an Hardware, Netzwerkstrukturen und Software ab, die in diesem Kapitel benannt werden.
 
@@ -31,7 +33,7 @@ NIC                  - mind. 2 (intern + extern)
 
 .. attention::
 
-   Die Firewall erstellt viele Log-Einträge, so dass der Festplattenplatz und zudem auch der Arbeitsspeicher deutlich über der Mindestanforderung liegen sollte. Als Standard
+   Die Firewall erstellt viele Log-Einträge, so dass der Festplattenplatz und zudem auch der Arbeitsspeicher deutlich über der Mindestanforderung liegen sollten. Als Standard
    schreibt die OPNsense Einträge für einen 30 Tageszeitraum mit. Wir raten, den Zeitraum in den Einstellungen (``System --> Einstellungen --> Protokollierung``) 
    individuell zu verkleinern und nur bei Bedarf und ausreichendem Plattenplatz zu erhöhen. Ein logrotate müsste bei Bedarf in der crontab angelegt werden.
 
@@ -40,13 +42,13 @@ NIC                  - mind. 2 (intern + extern)
 
 Weitere Hinweise zu möglichen Hardwareanforderungen bei unterschiedlichen Einsatzszenarien finden sich `hier <https://wiki.opnsense.org/manual/hardware.html#hardware-requirements>`_.
 
-Als Basis nutzt OPNsense® das Betriebssystem FreeBSD.  Hinweise zu den Anforderungen von FreeBSD bzw. zur Kompatibilität mit eingesetzten Hardware-Komponenten finden sich unter der `HCL - Hardware Compatibility List <https://www.freebsd.org/releases/11.1R/hardware.html>`_
+Als Basis nutzt OPNsense® v24.1 das Betriebssystem FreeBSD v13.2. Hinweise zu den Anforderungen von FreeBSD bzw. zur Kompatibilität mit eingesetzten Hardware-Komponenten finden sich unter der `HCL - Hardware Compatibility List <https://www.freebsd.org/releases/11.1R/hardware.html>`_.
 
 
-Server linuxmuster v7.1
+Server linuxmuster v7.2
 -----------------------
 
-Für linuxmuster.net v7.1 wird als Basis ein Ubuntu Server 18.04 LTS eingesetzt. Es wird empfohlen folgende Hardware-Mindestanforderungen zu erfüllen:
+Für linuxmuster.net v7.2 wird als Basis Ubuntu Server 22.04 LTS eingesetzt. Es wird empfohlen folgende Hardware-Mindestanforderungen zu erfüllen:
 
 ========================= ===========================================
 Prozessor                 >= 2 GHz Multi-Core CPU (64 Bit)
@@ -113,7 +115,7 @@ Admin-PC   10.0.0.10
 Netz-Grundstruktur
 ------------------
 
-Die Aufteilung der Netzbereiche mit linuxmuster.net sind in der Dokumentation weiterhin mit Farben gekennzeichnet, um diese deutlich voneinander abzuheben:
+Die Aufteilung der Netzbereiche mit linuxmuster.net sind in der Dokumentation mit Farben gekennzeichnet, um diese deutlich voneinander abzuheben:
 
 .. figure:: media/simple-network.png
    :align: center
@@ -143,7 +145,7 @@ Getrennte Netze und VLAN
 
 Immer häufiger (z.B. durch Vorgaben vom Kultusministerium oder Lastverteilung) besteht Bedarf an einer weiteren Trennung des internen Netzes in mehrere logisch voneinander getrennte Netze. Neben den getrennten Netzen für WLAN oder eine demilitarisierte Zone (DMZ) wie oben abgebildet, erlaubt linuxmuster.net sehr flexibel eine beliebige Einteilung des Schulnetzes in Subnetze.
 
-Wer vor der Entscheidung steht, Subnetze oder VLANs einzurichten, sollte zuvor das Kapitel :ref:`Netzsegmentierung mit linuxmuster.net <subnetting-basics-label>` lesen.
+Wer vor der Entscheidung steht, Subnetze und/oder VLANs einzurichten, sollte zuvor das Kapitel :ref:`Netzsegmentierung mit linuxmuster.net <subnetting-basics-label>` lesen.
 
 
 Virtualisierung
@@ -155,7 +157,7 @@ Wenn man linuxmuster.net virtualisiert betreibt, gelten zu den obigen Voraussetz
 
   Wird kein Layer 3 - Switch eingesetzt, sollte der Virtualisierungshost (Hypervisor) wenigstens mit der obengenannten Anzahl von Netzwerkkarten ausgestattet sein.
 
-  Mit dem Einsatz eines Layer 3 - Switches wird die Konfiguration auf dem Hypervisor schnell komplex, die physikalische Verkabelung kann dadurch aber einfacher werden. So lassen sich auch etwaige neue Anforderungen durch zusätzliche VLANs realisieren.
+  Mit dem Einsatz eines Layer 3 - Switches wird die Konfiguration auf dem Hypervisor schnell komplex, die physikalische Verkabelung kann dadurch aber einfacher werden. So lassen sich auch neue Anforderungen durch zusätzliche VLANs realisieren.
 
 * Der Speicherplatz wird virtualisiert. Darauf muss man bei der Verwendung externer (iSCSI/NFS) wie interner Speichersysteme (LVM) achten. Dies kann auch zur Vereinfachung eines Backupverfahrens beitragen. Es wird empfohlen sog. ``Shared Storage`` bei der Virtualisierung einzusetzen, um dadurch flexibler bei der Erweiterung zu sein (z.B. NAS-System mit iSCSI oder NFS-Anbindung).
 

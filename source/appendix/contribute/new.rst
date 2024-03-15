@@ -3,7 +3,7 @@
 Dokumentation lokal bearbeiten und veröffentlichen
 ==================================================
 
-Wenn Du die Dokumentation erweitern willst, z.B. mit einem eigenen HowTo, ein fehlendes Kapitel ergänzen möchtest oder größere Änderungen machen und testen willst, benötigst Du folgende Dinge:
+Wenn Du die Dokumentation erweitern willst, z.B. mit einem eigenen HowTo, ein fehlendes Kapitel ergänzen möchtest, oder größere Änderungen machen und testen willst, benötigst Du folgende Dinge:
 
 - ein Konto bei `Github <https://github.com/join>`_
 - Die Software `git <https://git-scm.com/>`_ (wird zur Verwaltung und Versionierung der Dokumentation verwendet)
@@ -13,7 +13,7 @@ Wenn Du die Dokumentation erweitern willst, z.B. mit einem eigenen HowTo, ein fe
 Lokale Installation (Ubuntu)
 ----------------------------
 
-Mit folgenden Befehlen kannst Du unter einer aktuellen (ab 16.04) Ubuntu-Distributionen git, python und sphinx nachinstallieren:
+Mit folgenden Befehlen kannst Du unter einer aktuellen (ab 22.04 LTS) Ubuntu-Distributionen git (>= 2.39.2), python (>= 3.10) und sphinx (>= 7.2.6) nachinstallieren:
 
 .. code::
 
@@ -35,7 +35,7 @@ Hast Du bereits bereits eine heruntergeladene Dokumentation aus dem offiziellen 
    linuxadmin@lmn-docs:~/linuxmuster-docs$ cd main/
    linuxadmin@lmn-docs:~/linuxmuster-docs/main$ make celan && make html
    sphinx-build -b html -d build/doctrees   source build/html
-   Running Sphinx v1.6.5
+   Running Sphinx v7.2.6
    loading translations [de_DE]... done
    loading pickled environment... done
    ...
@@ -55,7 +55,7 @@ Verifziere Deine E-Mail-Adresse. Natürlich kannst Du die Dokumentation zu GitHu
 Linuxmuster Dokumentation forken
 --------------------------------
 
-Öffnen Sie die `linuxmuster.net Dokumentation auf Github <https://github.com/linuxmuster-docs/main>`_ und klicken Sie auf "Fork".
+Öffne die `linuxmuster.net Dokumentation auf Github <https://github.com/linuxmuster-docs/main>`_ und klicke auf "Fork".
 
 .. figure:: media/06_new_make-a-fork.png
    :align: center
@@ -86,19 +86,19 @@ die Dokumentation in HTML übersetzen und diese lokal in Deinem Browser öffnen.
 Dokumentation ändern oder neu erstellen
 ---------------------------------------
 
-Die Dokumentation ist in der Markupsprache "rST" geschrieben. `Hier <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_ finden Sie einen guten Überblick über die am häufigsten verwendeten Elemente.
+Die Dokumentation ist in der Markupsprache "rST" geschrieben. `Hier <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_ findest Du einen guten Überblick über die häufig verwendeten Elemente.
 
 .. hint::
-   Bitte beachten Sie auch unbedingt die :doc:`Leitlinien zur Dokumentation <guidelines>`, damit ihre Änderungen schnell eingepflegt werden könnnen!
+   Bitte beachte auch unbedingt die :doc:`Leitlinien zur Dokumentation <guidelines>`, damit die Änderungen schnell eingepflegt werden könnnen!
 
-Im Verzeichnis ``source`` und den entsprechenden Unterordnern befinden sich alle Dokumentationsdateien. Öffnen Sie einfach eine dieser Dateien und nehmen Sie die gewünschten Änderungen vor. Sie können auch eine neue Dokumentation in einem der Unterordner anlegen. Erstellen Sie dazu einfach einen Ordner mit einem passenden Namen und die notwendige ``index.rst`` Datei.
+Im Verzeichnis ``source`` und den entsprechenden Unterordnern befinden sich alle Dokumentationsdateien. Öffne einfach eine dieser Dateien und führe die gewünschten Änderungen durch. Du kannst auch eine neue Dokumentation in einem der Unterordner anlegen. Erstelle dazu einfach einen Ordner mit einem passenden Namen und die notwendige ``index.rst`` Datei.
 
 .. code-block:: console
 
    $ mkdir source/howto/foobar
    $ touch source/howto/foobar/index.rst
 
-Schaue Dir auch die anderen Dokumentationsdateien an, um mehr über den Aufbau und Syntax zu lernen.
+Schau Dir auch die anderen Dokumentationsdateien an, um mehr über den Aufbau und Syntax zu lernen.
 
 Commit und push
 ~~~~~~~~~~~~~~~
@@ -113,7 +113,7 @@ Hast Du alle Änderungen vorgenommen, kannst Du diese nun zur Überprüfung einr
 
    $ make html
 
-Falls Sie neue Dateien oder Ordner erstellt haben, müssen diese noch hinzugefügt werden:
+Falls Du neue Dateien oder Ordner erstellt hast, müssen diese noch hinzugefügt werden:
 
 .. code::
 
@@ -129,7 +129,7 @@ Gib nun noch einen Kommentar zu Deinen Änderungen ein und lade alles in Deinen 
 Pull-Request
 ~~~~~~~~~~~~
 
-Erstelle nun einen "Pull-Request" unter `<https://github.com/lmn-docs-bot/main>`_, indem Du auf "New Pull Request" klickst.
+Erstelle nun einen "Pull-Request" unter `<https://github.com/lmn-docs-bot/main>`_, indem Du auf ``New Pull Request`` klickst.
 
 .. figure:: media/07_new_pull-request.png
    :align: center
@@ -141,8 +141,7 @@ Wenn Du weitere Änderungen vornehmen möchtest und diese mit ``git commit -a -m
 Eigenen Fork aktualisieren
 --------------------------
 
-Um später weiter Änderungen vornehmen zu können, kann der eigene Fork bei GitHub komplett gelöscht werden und ein neuer erzeugt werden. Alternativ kann der eigene Fork auf den Stand des offiziellen
-Repository gebracht werden:
+Um später weiter Änderungen vornehmen zu können, kann der eigene Fork bei GitHub komplett gelöscht und ein neuer erzeugt werden. Alternativ kann der eigene Fork auf den Stand des offiziellen Repository gebracht werden:
 
 * Verschiebe alle lokalen Änderungen mit ``git stash`` in den Hintergrund
 
@@ -165,15 +164,13 @@ Repository gebracht werden:
      Aktualisiere 76e2e32..be2f941
      Fast-forward
 
-* Wenn der merge nicht in einem "Fast-forward" endet, sollte man
-  besser den Fork löschen und neu erzeugen. Andernfalls kann man jetzt
-  die offiziellen Änderungen hochladen.
+* Wenn der merge nicht in einem ``Fast-forward`` endet, solltest Du besser den Fork löschen und neu erzeugen. Andernfalls kannst Du jetzt die offiziellen Änderungen hochladen.
 
   .. code:: bash
 
      ~/my-docs$ git push
 
-* Jetzt kann man seine lokale Änderungen wieder hervorholen
+* Jetzt kannst Du Deine lokalen Änderungen wieder hervorholen:
 
   .. code:: bash
 
@@ -185,20 +182,20 @@ Für Fortgeschrittene: andere Zweige bearbeiten
 
 Unterschiedliche Versionen von linuxmuster.net werden in unterschiedlichen Zweigen des github-Repository dokumentiert. Die aktuelle Version ist im Zweig ``master`` untergebracht und obige Abschnitte beziehen sich darauf.
 
-Will man einen anderen Zweig bearbeiten, beispielsweise den Zweig ``v7``, dann gibt es nur Folgendes zu beachten:
+Will man einen anderen Zweig bearbeiten, beispielsweise den Zweig ``v7.2``, dann gibt es nur Folgendes zu beachten:
 
-1. Man muss einmalig den Zweig mit ``git checkout v7`` lokal initialisieren. Mit ``git branch`` sieht man, welche Zweige aktuell sind.
+1. Man muss einmalig den Zweig mit ``git checkout v7.2`` lokal initialisieren. Mit ``git branch`` sieht man, welche Zweige aktuell sind.
 
    .. code::
 
       linuxadmin@lmn-docs:~/my-docs$ git branch -l
       * master
-      linuxadmin@lmn-docs:~/my-docs$ git checkout v7
-      Zu Branch 'v7' gewechselt
-      Ihr Branch ist auf demselben Stand wie 'origin/v7'.
+      linuxadmin@lmn-docs:~/my-docs$ git checkout v7.2
+      Zu Branch 'v7.2' gewechselt
+      Ihr Branch ist auf demselben Stand wie 'origin/v7.2'.
       linuxadmin@lmn-docs:~/my-docs$ git branch
       master
-      * v7
+      * v7.2
 
    Man sollte also immer nachschauen, in welchem Zweig man gerade arbeitet.
 
@@ -212,7 +209,7 @@ Will man einen anderen Zweig bearbeiten, beispielsweise den Zweig ``v7``, dann g
 
       Ein Pull-Request mit falsch gewähltem Zweig, die sich nicht automatisch zusammenführen lassen.
 
-4. Aktualisiert man den eigenen Fork über das ``upstream``-Repository, dann muss man den Befehl zum Zusammenführen anpassen. Ein Ablauf kann da so aussehen:
+4. Aktualisiert man den eigenen Fork über das ``upstream``-Repository, dann muss man den Befehl zum Zusammenführen anpassen. Ein Ablauf kann dann so aussehen:
 
    .. code::
 
@@ -224,18 +221,17 @@ Will man einen anderen Zweig bearbeiten, beispielsweise den Zweig ``v7``, dann g
       Entpacke Objekte: 100% (19/19), Fertig.
       Von https://github.com/linuxmuster-docs/main
       7d25598..2c31c06  master     -> upstream/master
-      4a27d6b..d4edde9  v7         -> upstream/v7
+      4a27d6b..d4edde9  v7.2         -> upstream/v7.2
       linuxadmin@lmn-docs:~/my-docs$ git branch
       master
-      * v7
-      linuxadmin@lmn-docs:~/my-docs$ git merge upstream/v7
+      * v7.2
+      linuxadmin@lmn-docs:~/my-docs$ git merge upstream/v7.2
       Aktualisiere d3ada10..d4edde9
       Fast-forward
       source/appendix/install-on-kvm/index.rst | 2 ++
       1 file changed, 2 insertions(+)
 
-   Ein "merge" des falschen Zweiges, z.B. ``upstream/master`` hätte hier zu Folge, dass alle Änderungen zwischen den Zweigen versucht würde zusammenzuführen, was bei sich stark unterscheidenden Zweigen
-   nicht erfolgreich wäre.
+   Ein "merge" des falschen Zweiges, z.B. ``upstream/master`` hätte hier zu Folge, dass alle Änderungen zwischen den Zweigen zusammengeführt werden würden. Dies führt bei stark unterscheidenden Zweigen zu Fehlern.
    
 Der ``master``-Zweig ist kein besonderer Zweig. Man kann also dorthin zurückkehren, wie man zu jedem Zweig wechselt, mit ``git checkout master``.
 

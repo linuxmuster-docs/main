@@ -14,12 +14,17 @@ Melde Dich als Benutzer ``global-admin`` an der Web-UI an.
 .. figure:: media/01-webui-login.png
    :align: center
    :alt: WebUI login
+   :width: 80%
+   
+   Anmeldung als Benutzer global-admin
 
-Erstelle nun die Konfiguration für die neue Hardwareklasse. Dafür klickst Du links im Menü den Eintrag ``Geräteverwaltung --> Linbo4``.
+Erstelle nun die Konfiguration für die neue Hardwareklasse. Klicke links im Menü auf den Eintrag ``Geräteverwaltung --> Linbo4``.
 
 .. figure:: media/02-webui-menue-linbo.png
    :align: center
    :alt: WebUI menue linbo
+   
+   Menü LINBO4
 
 Nun klickst Du unten links auf ``+ERSTELLEN``.
 
@@ -28,54 +33,70 @@ Es öffnet sich ein Kontextmenü. Du kannst entweder ein leere ``start.conf`` nu
 .. figure:: media/03-webui-menue-linbo-create-start-template.png
    :align: center
    :alt: WebUI menue linbo create start template
+   
+   Template für die start.conf auswählen
 
 Es öffnet sich ein Fenster, in dem Du die Namen der neuen Hardwareklasse angibst. Diesen wirst Du später benötigen, um Geräte dieser Hardwareklasse zuzuweisen.
 
 .. figure:: media/04-webui-menue-linbo-name-for-start-conf.png
    :align: center
    :alt: WebUI menue linbo hwc group name
-
-.. hint::
-
-   Die neu angelegte Hardwareklasse wird nicht direkt in der Übersicht mit allen eingerichteten Klassen angezeigt. Hierzu musst Du zunächst mit ``F5`` die Webseite neu laden.
+   :width: 80%
+   
+   Namen für die neue Hardwareklasse festlegen
 
 Die Liste der angelegten Hardwareklassen kann dann - z.B. wie nachstehend dargestellt - aussehen (andere Namen für die HWK verwendet):
 
 .. figure:: media/04a-webui-menue-linbo-list-of-hwc.png
    :align: center
    :alt: WebUI menue linbo hwc list
+   :width: 80%
+   
+   Übersicht der Hardwareklassen / Gruppen
 
 Du rufst nun die Einstellungen der zuvor angelegten Hardwareklasse auf, indem Du das ``Stift-Symbol`` rechts daneben aufrufst.
 
 Es erscheint ein Fenster mit den Einstellungen der Hardwareklasse. Dort gibt es die Reiterkarten ``Allgemein`` und  ``Partitionen``.
 
-Unter ``Allgemein`` legst Du die IP des Servers fest, gibst das Startverhalten und ggf. Kernel-Optionen für den Boot bei besonderer Hardware an.
+Unter ``Allgemein`` legst Du die IP des Servers fest, gibst das Startverhalten und ggf. Kernel-Optionen (Linux) für den Boot bei besonderer Hardware an.
 
 .. figure:: media/05-webui-linbo-edit-new-group.png
    :align: center
    :alt: WebUI linbo edit new hwc group
+   :width: 80%
+   
+   Allgemeine Einstellungen für die Hardwareklasse
 
 Unter ``Partitionen`` legst Du fest, welche Partitionen auf der Festplatte vorgesehen werden sollen.
 
 .. figure:: media/06-webui-linbo-edit-new-group-partition-scheme.png
    :align: center
    :alt: WebUI linbo edit new hwc group - partition scheme
+   :width: 80%
+   
+   Partitionen festlegen
 
 Löschst Du dort z.B. die Partitionen ``swap`` und ``data`` so sieht Deine Partitionierung wie folgt aus:
 
 .. figure:: media/07-webui-linbo-edit-new-group-partition-scheme-edited.png
    :align: center
    :alt: WebUI linbo edit new hwc group - partition scheme edited
+   :width: 80%
+   
+   Partitionen anpassen
 
-Um Einstellungen für das Betriebssystem vorzunehmen, klickst Du auf das Stift-Icon. Es öffnet sich ein weiteres Fenster, um Einstellungen für das Betriebssystem vorzunehmen.
+Um Einstellungen für das jeweilige Betriebssystem vorzunehmen, klickst Du auf das Stift-Icon neben dem angegebenen Betriebssystem. Es öffnet sich ein weiteres Fenster, um Einstellungen für das Betriebssystem vorzunehmen.
 
 .. figure:: media/08-webui-linbo-edit-new-group-os-infos-edited.png
    :align: center
    :alt: WebUI linbo edit new hwc group - os edited
+   :width: 80%
+   
+   Einstellungen des Betriebssystems anpassen
 
-Unter der Reiterkarte ``OS`` legst Du für das Betriebssystem (OS) die gewünschten Icons, die Start-Optionen und u.a. auch den Namen für das Basisimage fest. Um ein neues Image festzulegen, klickst Du 
-auf das ``+`` - Zeichen und trägst einen neuen Namen für das Image ein. Achte darauf, dass die Dateiendung ``.qcow2`` lautet. Um nun das neue Image zu erstellen, startest Du den Client neu. Es wird 
-das bestehende Image, das unter Basisimage angelegt bzw. ausgewählt wurde - hier das noch nicht existierende Image pop_os_mim.qwco2 -, überschrieben. 
+Unter der Reiterkarte ``OS`` legst Du für das Betriebssystem (OS) die gewünschten Icons, die Start-Optionen und u.a. auch den Namen für das Basisimage fest. 
+
+Um ein neues Image festzulegen, klickst Du auf das ``+`` - Zeichen und trägst einen neuen Namen für das Image ein. Achte darauf, dass die Dateiendung ``.qcow2`` lautet. Um nun das neue Image zu erstellen, startest Du den Client neu. Es wird das bestehende Image, das unter Basisimage angelegt bzw. ausgewählt wurde - hier das noch nicht existierende Image ``pop_os_mim.qcow2`` - überschrieben. 
 
 Auf dem linuxmuster.net Server werden die start.conf-Dateien im Verzeichnis ``/srv/linbo`` abgelegt. Jede Hardwareklasse hat eine eigene start.conf-Datei. Für die neu angelegte Hardwareklasse des Muster-Clients wurde dort nun eine Datei ``start.conf.<name-der-hwk>`` erstellt (z.B. start.conf.ubu20efi).
 
@@ -172,6 +193,7 @@ Folgende Konfiguration zeigt ein mögliches Beispiel für die ``Hardwareklasse u
 
   ``modprobe.blacklist=radeon``  oder   ``i915.alpha_support=1``
   
-  Wenn bei neueren Realtek-Netzwerkkarten mit r8169-Chip in linbo >=4.1.26 sehr niedrige Download-Raten auftreten, können die Kerneloptionen    
-  ``pcie_aspm=off`` und  ``loadmodules=r8168``  Besserung bringen.
+  Wenn bei neueren Realtek-Netzwerkkarten mit r8169-Chip in linbo >=4.1.26 sehr niedrige Download-Raten auftreten, können die Kerneloptionen ``pcie_aspm=off`` und  ``loadmodules=r8168``  Besserung bringen.
+
+
   

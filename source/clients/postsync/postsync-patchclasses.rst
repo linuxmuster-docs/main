@@ -141,7 +141,8 @@ Das universelle Postsync-Script ist unter ``/srv/linbo/images/<LinuxImageVerzeic
    # dass die Rechner Namen der Form
    # raumname-hostname haben, also z.B. cr01-pc18
    RAUM=${HOSTNAME%%-*}
-   # wenn der string leer ist, raum auf unknown setzen
+   
+   # wenn der string leer ist, Raum auf unknown setzen
    if [ "x${RAUM}" == "x" ]; then 
        RAUM="unknown"
    fi
@@ -153,7 +154,7 @@ Das universelle Postsync-Script ist unter ``/srv/linbo/images/<LinuxImageVerzeic
    # ein eigenes Patchklassenverzeichnis auf dem Server.
    # Damit kann man verschiedene Patchklassen mit derselben cloop-Datei
    # bedienen, wenn man das benötigt.
-   PATCHCLASS="focalfossa"
+   PATCHCLASS="focalfossa" #Name der Patchklasse anpassen
    
    # Das Verzeichnis, in dem die Serverpatches
    # im lokalen Clientcache synchronisiert werden.
@@ -239,12 +240,18 @@ Das universelle Postsync-Script ist unter ``/srv/linbo/images/<LinuxImageVerzeic
            echo " ...done." | tee -a $LOG
        done
        rm -rf /mnt/postsync.d
-    # wenn es /mnt/tarpacks gibt - löschen
-    rm -rf /mnt/tarpacks
-    
+   fi
+   
+   # wenn es /mnt/tarpacks gibt - löschen
+   rm -rf /mnt/tarpacks
+      
    # hostname in /etc/hosts patchen
-       sed -i "s/HOSTNAME/$HOSTNAME/g" /mnt/etc/hosts
-        sed -i "s/#SERVERIP/$SERVERIP/g" /mnt/etc/hosts
+   # es muss eine Datei hosts im Verzeichnis 
+   # /srv/linbo/linuxmuster-client/$HOSTGROUP/common|raum|hostname/etc/
+   # geben, die den HOSTNAME anpasst. Zudem muss dort die SERVERIP angepasst werden.
+   # Fehlt diese Datei werden der Hostname und die SERVERIP nicht ersetzt.
+   sed -i "s/HOSTNAME/$HOSTNAME/g" /mnt/etc/hosts   
+   sed -i "s/#SERVERIP/$SERVERIP/g" /mnt/etc/hosts
     
    # Zeitstempel letzter sync hinterlegen
    echo $NOW > /mnt/lastsync
@@ -292,13 +299,6 @@ Wurden alle Patchklassen und Scripte definiert, die Dateiberechtigungen wie ange
 .. attention::
 
   Das Postsync-Script wird erst angewendet, wenn die betreffenden Clients partitioniert, formatiert und synchronisiert wurden. Erst hierbei wird das Postsync-Script auf den Client übertragen !
-
-
-
-
-
-
-
 
 
 

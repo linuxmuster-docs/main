@@ -5,6 +5,14 @@ Drucker auf dem Server hinzufügen
 
 Um die als Geräte bereits importieren Netzwerkdrucker einzurichten, sind diese auf dem linuxmuster.net Server mithilfe von CUPS einzurichten und bereitzustellen. Die gesamte Druckersteuerung erfolgt via Active Directory für alle Betriebssysteme, so dass diese zunächst auf dem Server bereitgestellt, den AD-Gruppen zugewiesen und ggf. Anpassungen pro Client Betriebssystem vorgenommen werden müssen.
 
+Für die Nutzung von HP-Druckern ist es hilfreich, auf dem Server die Bibliothek ``HPLIP`` zu installieren und dann die Drucker einzuruichten.
+
+Zur Installation der HPLIP Bibliothek rufst Du unter Ubuntu 22.04 LTS Server folgenden Befehl auf dem Server auf:
+
+.. code::
+
+  sudo apt install hplip hplip-data hplip-gui hplip-doc
+
 Starte auf einem Rechner einen Browser, um das sog. CUPS-Webinterface des Servers zur weiteren Einrichtung der Drucker aufzurufen. Hierzu füge nachstehende URL in der Adresszeile Deines Browsers ein:
 
 .. code::
@@ -17,18 +25,19 @@ Da meist nur ein selbst-signiertes Zertifikat auf dem Server installiert ist, is
    :alt: Access CUPS
    :align: center
 
+
+Drucker hinzufügen
+------------------
+
+Nach der Anmeldung an CUPS wähle den Menüpunkt ``Verwaltung`` aus.
+
 Es erscheint die Login-Aufforderung von CUPS auf dem Server:
 
 .. image:: media/06-printer-cups-login.png
    :alt: CUPS: Login
    :align: center
 
-Melde Dich als ``root`` dort an.
-
-Drucker hinzufügen
-------------------
-
-Nach der Anmeldung an CUPS wähle den Menüpunkt ``Verwaltung`` aus.
+Melde Dich als ``root`` dort an. Nach erfolgreicher Anmeldung siehst Du folgende Einträge:
 
 .. image:: media/07-printers-cups-add-printer.png
    :alt: CUPS: add printer
@@ -52,8 +61,11 @@ Klicke auf ``weiter``. Wähle nun den geeigneten Druckertreiber für Deinen Druc
    :alt: add printer 3/5
    :align: center
 
-Hierzu wähle den Hersteller aus, dann erscheint eine Liste mit den verfügbaren Druckertreibern. Wähle in der Liste den korrekten Drucker aus. Sollte dieser in der Liste nicht enthalten sein, so klicke auf 
-``PPD-Datei bereitstellen -> Durchsuchen``. Wähle nun die PPD-Datei mit dem korrekten Druckertreiber aus, den Sie zuvor von der Website des Herstellers heruntergeladen hast.
+.. attention:
+
+   Der einzutragende Name des Druckers muss hier in CUPS in identischer Schreibweise eingetragen werden, wie zuvor in Schulkonsole bzw. in der Datei devices.csv.
+
+Wähle den Hersteller aus, dann erscheint eine Liste mit den verfügbaren Druckertreibern. Wähle in der Liste den korrekten Drucker aus. Sollte dieser in der Liste nicht enthalten sein, so klicke auf ``PPD-Datei bereitstellen -> Durchsuchen``. Wähle nun die PPD-Datei mit dem korrekten Druckertreiber aus, den Du zuvor von der Website des Herstellers heruntergeladen hast.
 
 .. image:: media/11-printer-add-printer-05.png
    :alt: add printer 4/5

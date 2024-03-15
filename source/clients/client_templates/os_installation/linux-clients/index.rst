@@ -18,8 +18,8 @@ Voraussetzung
 
 Du hast bereits:
    1.  PC im Netz angeschlossen / VM angelegt und geeignete Netzwerkverbindung definiert
-   2.  Eine Hardwareklasse für den PC/die VM konfiguriert
-   3.  PC/VM als Rechner augfgenommen
+   2.  Eine Hardwareklasse für den PC / die VM konfiguriert
+   3.  PC/VM als Rechner aufgenommen
    4.  PC/VM via PXE mit Linbo gestartet
    5.  Die Festplatte mit Linbo partitioniert und formatiert
 
@@ -28,18 +28,21 @@ Falls Du das noch nicht getan hast, starte zuerst mit den Schritten, die im Kapi
 Einrichten eines Linux-Clients
 ==============================
 
-
 Imagenamen eintragen (HWK)
 --------------------------
 
-Vor der Installation bzw. Imageerstellung musst Du eine Hardwareklasse zuweisen, sofern nicht bereits bei der Rechneraufnahme erfolgt. 
+Vor der Installation bzw. Imageerstellung musst Du eine Hardwareklasse (HWK) zuweisen, sofern nicht bereits bei der Rechneraufnahme erfolgt. 
+
 Gehe dazu in der WebUI auf ``Geräteverwaltung -> Linbo 4 -> Gruppen -> <hwk auswählen>``. Klicke für die gewünschte HWK das Stift-Symbol, um die Einstellungen anzupassen.
-Es öffnet sich das Fenster mit den Einstellungen für die HWK. Wähle hier unter ``Partitionen`` Dein Betriebssystem (Reiterkarte ``OS``) aus und klicke das Stift-Icon. Klicke in dem sich öffnenden Fenster die Reiterkarte unter ``OS`` und klicke auf das ``+`` - Symbol, um einen neuen Eintrag für das ``Basisisimage`` festzulegen. Alternativ kannst Du auch einen Nmane
+Es öffnet sich das Fenster mit den Einstellungen für die HWK. Wähle hier unter ``Partitionen`` Dein Betriebssystem (Reiterkarte ``OS``) aus und klicke das Stift-Icon. Klicke in dem sich öffnenden Fenster die Reiterkarte unter ``OS`` und klicke auf das ``+`` - Symbol, um einen neuen Eintrag für das ``Basisisimage`` festzulegen. Alternativ kannst Du auch einen Namen
 aus der Drop-down Liste auswählen. Bei der Erstellung des Erstimages wird ein vorhandenes überschrieben. (vgl. hierzu auch das Vorgehen unter ref:`add-computer-label`).
 
 .. figure:: media/00-webui-linbo-edit-new-group-os-infos-edited.png
    :align: center
    :alt: Ubuntu Installation: indicate image name
+   :width: 80%
+   
+   Festelegen des Dateinamens für das Basisimage
 
 Übernehme die Eintragungen jeweils mit ``Speichern & Importieren``. Danach wird automatisch ein Import der Geräte ausgeführt, um diese Einstellungen für alle Geräte der HWK zu übernehmen.
 
@@ -53,7 +56,7 @@ Client OS installieren
 
 Gib im PC / in der VM nun an, dass von dem gewünschten ISO-Image / der Installations-DVD gestartet werden soll. Hierbei musst Du darauf achten, die Boot-Reihenfolge so zu ändern, dass nicht mehr vom Netzwerk, sondern von der ISO-Datei / der Installations-DVD gebootet wird.
 
-Starte nun den PC/die VM mit den neuen Einstellungen, sodass Ubuntu vom ISO-Image / von der Installations-DVD startet. Nachdem der Start ausgeführt wurde, wähle auf dem ersten Bildschirm aus, dass Du Ubuntu installieren möchtest.
+Starte nun den PC / die VM mit den neuen Einstellungen, sodass Ubuntu vom ISO-Image / von der Installations-DVD startet. Nachdem der Start ausgeführt wurde, wähle auf dem ersten Bildschirm aus, dass Du Ubuntu installieren möchtest.
 
 Nachstehend findest Du die Beschreibung zur Installation von Ubuntu.
 
@@ -64,32 +67,72 @@ Installation Ubuntu
 -------------------
 
 .. hint::
-   Bei Ubuntu sollte man darauf achten, dass der Firefox nicht als Snap-Paket installiert wird, da damit SSO nicht funktioniert! Möglicherweise trifft das    auch auf andere Distributionen zu!
+   Bei Ubuntu sollte man darauf achten, dass der Firefox nicht als Snap-Paket installiert wird, da damit SSO nicht funktioniert! Möglicherweise trifft das auch auf andere Distributionen zu!
+   
+Hast Du den PC / die VM von vom ISO-Image / der Installations-DVD gestartet, siehst Du zunächst folgenden Start-Bildschirm:
 
+.. figure:: media/00-linux-client-ubu-grub-start.png
+   :align: center
+   :alt: Ubuntu ISO-Start
+   :width: 80%
+   
+   Installationsart festlegen   
 
 Gib in den ersten Schritten der Installation die gewünschte Sprache und Tastaturbelegung an.
+
+.. figure:: media/00-linux-client-ubu-installation-language.png
+   :align: center
+   :alt: Ubuntu installation select language
+   :width: 80%
+   
+   Sprache auswählen
+   
+.. figure:: media/00-linux-client-ubu-installation-keyboard-layout.png
+   :align: center
+   :alt: Ubuntu installation select keyboard layout
+   :width: 80%
+   
+   Tastaturlayout auswählen
+   
+Lege danach die Installationsart sowie weitere Optionen fest. Falls Du hier Aktualisierungen herunterladen wählst, so muss für dieser Client in der OPNSense|reg| in der NoProxy Gruppe eingetragen sein.
+
+.. figure:: media/00-linux-client-ubu-installation-updates.png
+   :align: center
+   :alt: Ubuntu installation updates
+   :width: 80%
+   
+   Installationsart und -optionen festlegen
 
 Bei der ``Installationsart`` wählst Du ``Etwas Anderes`` aus.
 
 .. figure:: media/01-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Installation Method
+   :width: 80%
+   
+   Installationsart festlegen
 
-Du hattest mit Linbo ja bereits die Festplatte partitioniert und formatiert.
+Du hattest mit LINBO bereits die Festplatte partitioniert und formatiert.
 
-Es werden Dir also die bereits vorhandenen Partitionen und Dateisysteme angezeigt. Je nach genutzter Virtualisierungsumgebung / Hardware können die Festplattenbezeichnungen hier auch als ``/dev/sda`` und die Partionen als ``/dev/sda1`` etc. angezeigt werden.
+Es werden Dir also die bereits vorhandenen Partitionen und Dateisysteme angezeigt. Je nach genutzter Virtualisierungsumgebung / Hardware können die Festplattenbezeichnungen hier auch als ``/dev/xvda`` und die Partionen als ``/dev/xvda1`` etc. angezeigt werden.
 
 Wähle, wie in der nachstehenden Abb. zu sehen, die Partition aus, auf der Ubuntu installiert werden soll.
 
 .. figure:: media/02-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Installation Method - Partitions
+   :width: 80%
+   
+   Wähle die Ubuntu-Partition aus
 
 Klicke nun auf ``Ändern`` und es erscheint das nächste Fenster:
 
 .. figure:: media/03-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Installation Method - Partition Settings
+   :width: 80%
+   
+   Partition bearbeiten
 
 Belasse die angezeigte Größe und das Dateisystem. Setze den Haken bei ``Partition formatieren`` und wähle als ``Einbindungspunkt`` das Root-Verzeichnis ``/`` aus.
 
@@ -98,31 +141,44 @@ Klicke auf ``ok`` und es werden nochmals alle Einstellungen angezeigt:
 .. figure:: media/04-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Installation Method - Partitions Overview
+   :width: 80%
+   
+   Übersicht der Partitionen
 
-Sind diese Einstellungen korrekt, so setze die Installation mit dem Button ``Jetzt installieren`` fort.
+Sind diese Einstellungen korrekt, prüfe noch, ob das Gerät für die Bootloader-Installation die Ubuntu-Parition ist (hier in der Abb. /dev/sda1). Falls nicht passe dies an. Der Bootloader sollte nicht auf den MBR der Festplatte installiert werden (hier also nicht auf /dev/sda).
+
+Setze die Installation mit dem Button ``Jetzt installieren`` fort.
 
 Im Verlauf der Installation wirst Du nach dem Namen für den Computer und dem Benutzername und Kennwort für den neuen Administrator gefragt. Gib hier als Benutzername ``linuxadmin`` ein. Beim Namen des Rechners musst Du den Namen des PCs / der VM angeben, wie Du ihn in der Gerätekonfiguration des festgelegt hast.
 
 .. figure:: media/05-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Installation: linuxadmin user
+   :width: 80%
+   
+   Benutzer festlegen
 
 Am Ende der Installation wirst Du aufgefordert, den Rechner neu zu starten. Fahre die VM herunter und werfe das ISO-Image / die Installations-DVD aus.
 
 Erstimage erstellen
 -------------------
 
-Passe die Boot-Reihenfolge für den PC / die VM jetzt so an, dass diese wieder via PXE bootet. Du siehst dann die Startoptionen in Linbo für das installierte Ubuntu 20.04.
+Passe die Boot-Reihenfolge für den PC / die VM jetzt so an, dass diese wieder via PXE bootet. Du siehst dann die Startoptionen in Linbo für das installierte Ubuntu 22.04.
 
 .. figure:: media/06-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Installation: Create first image
+   :width: 50%
+   
+   LINBO Startoptionen
 
-Klicke nun unten rechts auf das Werkzeug-Icon, um zum Menü für die Imageerstellung zu gelangen.
+Klicke nun unten rechts auf das Werkzeug-Symbol, um zum Menü für die Imageerstellung zu gelangen.
 
 .. figure:: media/07-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Installation: Menue Tools
+   
+   Wekzeug-Symbol
 
 Du wirst nach dem Linbo-Passwort gefragt. Gib dieses ein. 
 
@@ -133,43 +189,73 @@ Du wirst nach dem Linbo-Passwort gefragt. Gib dieses ein.
 .. figure:: media/08-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Installation: root login
+   :width: 80%
+   
+   LINBO Kennwort
 
 Klicke dann auf ``anmelden`` und Du gelangst zu folgender Ansicht:
 
 .. figure:: media/09-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Installation: linbo menue for imaging
+   :width: 80%
+   
+   Werkzeug-Menü
 
-Klicke auf das große Festplatten-Icon, das in der Ecke rechts unten farblich markiert ist, um nun ein Image zu erstellen. Anstatt des Festplatten-Icons wird bei Dir eventuell das Icon des Betriebssystems angezeigt, dass Du in der WebUI festgelegt hast.
+Klicke auf das große Festplatten-Symbol, das in der Ecke rechts unten farblich markiert ist, um nun ein Image zu erstellen. 
+
+.. figure:: media/09-linux-client-ubu-install-os-icon.png
+   :align: center
+   :alt: Ubuntu Installation: linbo imaging icon
+   :width: 50%
+   
+   Imaging-Symbol Ubuntu
+
+Anstatt des Festplatten-Symbol wird bei Dir eventuell das Symbol des Betriebssystems angezeigt, dass Du in der WebUI festgelegt hast.
 
 Es wird ein neues Fenster geöffnet:
 
 .. figure:: media/10-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Installation: linbo imaging
+   :width: 80%
+   
+   Image erstellen
 
-Wähle aus, dass Du das aktuelle Image ersetzen möchtest. Gibt es das Image noch nicht, so wird ein neues Image mit dem zuvor in der WebUI festgelegten Namen erstellt.
+Gibt es das Image noch nicht, so wird ein neues Image mit dem zuvor in der WebUI festgelegten Namen erstellt. Sollte ein Image bereits vorhanden sein, so wird dieses überschrieben. Soll ein neuer Dateiname für das neue Image festgelegt werden, so muss dies zuerst in der WebUI in der Hardwareklasse festgelegt und ein neuer Import ausgeführt werden.
+
+Klicke nun ``erstellen + hochladen``.
 
 Während des Vorgangs siehst Du nachstehenden Bildschirm:
 
 .. figure:: media/11-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Installation: image upload
+   :width: 80%
+   
+   Imageerstellung
 
 Zum Abschluss erscheint die Meldung, dass das Image erfolgreich hochgeladen wurde.
 
 .. figure:: media/12-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Installation: image uploaded successfully
+   :width: 80%
+   
+   Image wurde erfolgreich erstellt und auf den Server geladen
 
-Gehe durch einen Klick auf das Zeichen ``<`` zurück und klicke im nächsten Bildschirm das obere Icon von den drei Icsons ganz rechts, um sich abzumelden.
+Gehe durch einen Klick auf das Zeichen ``<`` zurück und klicke im nächsten Bildschirm das obere Symbol auf der rechten Seite an, um Dich abzumelden.
 
-Du siehst nun drei Start-Icons. Der grosse Icons started das Image sychronisiert, während das grüne Icon das locale Image started.
+Du siehst nun drei Start-Symbole. Der grosse Symbol started das Image sychronisiert, während das grüne Icon das lokale Image aus dem Cache ohne Synchronisation startet.
 
-.. figure:: media/13-linux-client-ubu-install.png
+.. figure:: media/06-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Installation: image uploaded - new menue icons
+   :width: 50%
+   
+   LINBO Start-Symbole
 
+Starte nun Ubuntu synchronisiert.
 
 
 Paket linuxmuster-linuxclient7 installieren
@@ -180,11 +266,14 @@ Melde Dich an dem gestarteten Ubuntu 22.04 als Benutzer ``linuxadmin`` an.
 .. figure:: media/14-linux-client-ubu-install.png
    :align: center
    :alt: Ubuntu Setup: Login as linuxadmin
+   :width: 80%
+   
+   Anmelden als Benutzer linuxadmin
 
 Installiere das Paket ``linuxmuster-linuxclient7`` wie folgt:
 
 1. Importiere den GPG-Schlüssel des linuxmuster.net Respository.
-2. Trage das linuxmuster.net 7.1 Repository ein.
+2. Trage das linuxmuster.net Repository ein.
 3. Installiere das Paket
 
 1. Schritt
@@ -192,17 +281,16 @@ Installiere das Paket ``linuxmuster-linuxclient7`` wie folgt:
 
 Öffne ein Terminal unter Ubuntu mit ``strg`` + ``T`` oder klicke unten links auf die Kacheln und gib in der Suchzeile als Anwendung ``Terminal`` ein.
 
-Importiere nun den GPG-Schlüssel des linuxmuster.net 7.1 Repository:
+Importiere nun den GPG-Schlüssel des linuxmuster.net Repository:
 
 .. code::
 
-   sudo wget -qO- "https://deb.linuxmuster.net/pub.gpg" | gpg --dearmour -o /usr/share/keyrings/linuxmuster.net.gpg
-
+   sudo sh -c 'wget -qO- "https://deb.linuxmuster.net/pub.gpg" | gpg --dearmour -o /usr/share/keyrings/linuxmuster.net.gpg'
 
 2. Schritt
 ^^^^^^^^^^
 
-Trage das linuxmuster.net 7.1 Repository in die Paketquellen des Clients ein:
+Trage das linuxmuster.net Repository in die Paketquellen des Clients ein:
 
 .. code::
 
@@ -215,6 +303,17 @@ Aktualisiere die Paketinformationen mit ``sudo apt update``.
 ^^^^^^^^^^
 
 Führe die Installation des Pakets mit ``sudo apt install linuxmuster-linuxclient7 -y`` durch.
+
+Es kommt während der Paketinstallation die Nachfrage, welches voreingestellte Realm für Kerberos 5 zu verwenden. Dieser Eintrag bleibt leer.
+
+.. figure:: media/14-linux-client-ubu-install-paket-configuration-client.png
+   :align: center
+   :alt: Ubuntu Setup: Paketkonfiguration
+   :width: 80%
+   
+   Paketkonfiguration
+
+Lasse das Feld leer und bestätige die Paketkonfiguration mit ``OK``.
 
 Setup
 -----
@@ -250,7 +349,7 @@ Image erstellen
 
 Führe einen Neustart des Linux-Client durch, sodass die VM via PXE in Linbo bootet.
 
-Nun erstellst Du in Linbo - genauso wie zuvor unter **Erstimage erstellen** beschrieben - das Image des neuen Muster-Clients für Linux. Achte hierbei darauf, dass Du dieses Mal ``aktuelles Image ersetzen`` auswählst.
+Nun erstellst Du in Linbo - genauso wie zuvor unter **Erstimage erstellen** beschrieben - das Image des neuen Muster-Clients für Linux. Das bisherige Image wird dadurch ersetzt. Wähle ``erstellen + hochladen``.
 
 Wurde der Vorgang erfolgreich beendet, kannst Du Dich wieder abmelden und den vorbereiteten Linux-Client synchronisiert starten. Nun sollte die Anmeldung mit jedem in der Schulkonsole eingetragenen Benutzer funktionieren.
 
@@ -292,21 +391,21 @@ Solltest Du versehentlich ``ja`` ausgewählt haben, kannst Du die Anmeldung mit 
 
   sudo linuxmuster-linuxclient7 upgrade
 
-Im Anschluss startest Du Deinen Linux-Client neu und erstellst wiederum, wie zuvor beschrieben, ein neues Image. Auch hier: ``aktuelles Image ersetzen`` auswählen.
+Im Anschluss startest Du Deinen Linux-Client neu und erstellst wiederum, wie zuvor beschrieben, ein neues Image.
 
 
 Serverseitige Anpassungen
 =========================
 
-Damit der Linux-Client die Drucker automatisch ermittelt und der Proxy korrekt eingerichtet wird, ist es erforderlich, dass auf dem linuxmuster Server einige Anpassungen vorgenommen werden.
+Damit der Linux-Client die Drucker automatisch ermittelt und der Proxy korrekt eingerichtet wird, ist es erforderlich, dass auf dem linuxmuster.net Server einige Anpassungen vorgenommen werden.
 
 
 Proxy-Einstellungen
 -------------------
 
-Bei der Anmeldung vom Linux-Client werden sog. Hook-Skripte ausgeführt.
+Bei der Anmeldung vom Linux-Client werden sog. ``Hook-Skripte`` ausgeführt.
 
-Diese finden sich auf dem linuxmuster Server im Verzeichnis: ``/var/lib/samba/sysvol/linuxmuster.lan/scripts/default-school/custom/linux/``.
+Diese finden sich auf dem linuxmuster.net Server im Verzeichnis: ``/var/lib/samba/sysvol/linuxmuster.lan/scripts/default-school/custom/linux/``.
 
 .. hint::
 
@@ -352,7 +451,7 @@ Damit die Drucker richtig gefunden und via GPO administriert werden können, ist
 
 Die Zuordnung von Druckern zu Computern geschieht auf Basis von Gruppen im Active Directory. Im Kapitel :ref:`configure-printers-label` gibt es weitere Informationen dazu.
 
-Damit auf jedem Rechner nur die Drucker angezeigt werden, die ihm auch zugeordnet wurden, muss auf dem Server in der Datei ``/etc/cups/cupsd.conf`` der Eintrag ``Browsing On`` auf ``Browsing Off`` umgestellt werden. Tut man dies nicht, werden auf jedem Rechner ALLE Drucker angezeigt, nicht nur die ihm zugeteilten.
+Damit auf jedem Rechner nur die Drucker angezeigt werden, die ihm auch zugeordnet wurden, muss auf dem Server in der Datei ``/etc/cups/cupsd.conf`` der Eintrag ``Browsing On`` auf ``Browsing Off`` umgestellt werden. Ansonsten werden auf jedem Rechner ALLE Drucker angezeigt, nicht nur die ihm zugeteilten.
 
 Weiterführende Dokumentation
 ============================

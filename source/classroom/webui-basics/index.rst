@@ -4,18 +4,16 @@
 Schulkonsole des Lehrers
 ========================
 
-.. sectionauthor:: `@Maurice <https://ask.linuxmuster.net/u/Maurice>`_, `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
-            `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
+                   `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
-Haben Sie in linuxmuster.net v7 einen Lehrer-Account, so können Sie die Steuerung des Unterrichts web-basiert mithilfe der 
-Schulkonsole in einem Browser vornehmen.
+Hast Du auf dem Server einen Lehrer-Account, so kannst Du die Steuerung des Unterrichts web-basiert mithilfe der Schulkonsole in einem Browser vornehmen.
 
 .. figure:: media/01_webui-basics_welcome.png
    :align: center
    :alt: WebUI Welcome
-
-Allgemeine Bedienung
-====================
+       
+   Schulkonsole als Lehrer nach der Anmeldung
 
 Die Schulkonsole wird im Browser über ``https://10.0.0.1`` aufgerufen. Je nachdem welcher Benutzer angemeldet ist, erscheinen
 zugehörige Menüpunkte.
@@ -23,52 +21,54 @@ zugehörige Menüpunkte.
 .. figure:: media/02_webui-basics_user-overview.png
    :align: center
    :alt: WebUI Welcome
+   
+   Profil nach erfolgter Anmeldung
 
 Die Icons haben folgende Bedeutung:
 
-* Menü ein- und ausklappen
+Das Menü kannst Du durch Anklicken der drei Striche links neben dem linuxmuster.net-Symbol ein- und ausblenden.
 
 .. figure:: media/03_webui-basics_extend-menue.png
    :align: center
    :alt: WebUI Extend Menue
-
-* Benutzericon
-
+   
+   oben links: Menü ein- und ausklappen
+   
 .. figure:: media/04_webui-basics_user-icon.png
    :align: center
    :alt: WebUI User Icon
-
-* angemeldeter Benutzername
-
-.. figure:: media/05_webui-basics_username.png
-   :align: center
-   :alt: WebUI Username
-
-* eigenes Passwort ändern
+   
+   angemeldeter Benutzer
 
 .. figure:: media/06_webui-basics_change-password.png
    :align: center
    :alt: WebUI Change Password
 
-* Abmelden
+   Kennwort ändern
+
+.. figure:: media/06_webui-basics_change-to-2fa.png
+   :align: center
+   :alt: WebUI Change Password Authentication to 2FA
+
+   Aktiviere die Zwei-Faktor-Authentifizierung
 
 .. figure:: media/07_webui-basics_logout.png
    :align: center
    :alt: WebUI Logout
-
-* Seitenverhältnis skalieren
+   
+   Abmelden
 
 .. figure:: media/08_webui-basics_scale-page-ratio.png
    :align: center
    :alt: WebUI Scale Page Ratio
 
-Das Menü können Sie durch Anklicken der drei Striche links neben dem linuxmuster.net-Symbol ein- und ausblenden.
-
+   Seitenverhältnis skalieren
+   
 .. hint:: 
-   Bei Namenvergaben, beispielsweise von Kursen oder Projekten, sollte auf Umlaute und ß verzichtet werden.
+  
+   Bei Vergabe von Kurs- oder Projektnamen solltest Du auf Umlaute und ß verzichten.
 
-Die Schulkonsole des Lehrers teilt sich auf einen ``Übersichtsbereich Allgemein`` sowie auf ``pädagogische Funktionen`` 
-im Bereich Klassenzimmer auf.
+Das Menü der Schulkonsole des Lehrers teilt sich in die Bereiche ``Allgemein`` und ``Klassenzimmer`` auf.
 
 Allgemein
 =========
@@ -76,87 +76,136 @@ Allgemein
 Hauptseite
 ----------
 
-.. figure:: media/09_webui-basics_main-page.png
+.. figure:: media/01_webui-basics_welcome.png
    :align: center
    :alt: WebUI Main Page
+   
+   Hauptseite als angemeldeter Lehrer
 
-Eine generelle Übersicht über Account- & Speicherinformationen des angemeldeten Benutzer. Möglichkeit zur Änderung des
-eigenen Passworts über ``Passwort ändern``-Funktion.
+Hier findest Du Informationen zu Deinem Konto, Deinen zugeordneten Benutzergruppen sowie dem Verbrauch Deines Festplattenkontingents (Quota).
+
+
+Meine Dateien
+-------------
+
+.. figure:: media/02_webui-basics_my-files.png
+   :align: center
+   :alt: WebUI My Files
+   
+   Meine Dateien als angemeldeter Lehrer
+
+Hier findest Du die Ordner und Dateien, die z.B. im Unterverzeichnis **Unterricht** abgelegt hast und im Unterricht an die Schüler der Klassen verteilen kannst. Das Verzeichnis ``transfer`` wird u.a. für den Klassenarbeitsmodus benötigt, um Dateien für Klassenarbeiten auszuteilen und die Ergebnisse auch wieder einzusammeln.
 
 Klassenzimmer
--------------
+=============
 
 Unterricht
 ----------
 
-Kurse, in denen Sie Mitglied sind, werden hier aufgelistet.
+Klassen / Kurse, in denen Du Mitglied bist, werden hier aufgelistet.
 
 .. figure:: media/10_webui-basics_my-classes.png
    :align: center
    :alt: WebUI My Classes
 
-Der Kurs "Dieser Raum" wird dynamisch zusammengestellt mit angemeldeten Nutzern in einem Raum. Nur der Button zum neu starten der Sitzung ist auswählbar.
+   Unterricht nach der Erstanmeldung als Lehrer
 
-Bei Kursen unter "Meine Klassen" kann unter 2 Button gewählt werden:
+Zu Beginn bist Du noch in keinen Klassen / Kursen oder Projekten eingeschrieben. Schreibe Dich als Lehrer zuerst in den gewünschten Klassen / Kursen ein.  Hierzu klickst Du links im Menü auf ``Einschreiben`` -> ``Schulklassen``. Bei den angezeigten Schulklassen setzt Du für diejenigen Klassen einen Haken, in denen Du Dich einschreiben möchtest.
 
-* Sitzung unverändert starten
-
-.. figure:: media/43_webui-basics_start-session-unchanged.png
+.. figure:: media/11_webui-class-enrollement.png
    :align: center
-   :alt: start session unchanged button
+   :alt: class enrollement
+   
+   Einschreibung in Klassen
 
-Die Sitzung wird wie vorgefunden gestartet. Es kann also sein, dass hier Schüler, die nicht mehr in diese Klasse gehören, noch angezeigt werden oder hinzugekommene fehlen. Man kann Schüler aus anderen Klassen hinzufügen und entfernen. Das bleibt dann solange, bis die Sitzung neu erstellt wird.
+Oben erscheint ein blau hinterlegter Hinweis. Um die Die Einschreibung abzuschließen, musst Du auf ``Jetzt ausführen`` in dem blauen Hinweisfeld klicken.
+Verlief die Einschreibung erfolgreich, siehst Du nun im Menüpunkt ``Unterricht`` Deine Dir zugewiesenen Klassen / Kurse.
 
-* Sitzung neu erstellen
-
-.. figure:: media/44_webui-basics_start-new-session.png
+.. figure:: media/12_webui-classes-enrolled.png
    :align: center
-   :alt: start new session button
+   :alt: classes enrolled
+   
+   Eingeschriebene Klassen
 
-Es handelt sich hier um den aktuellen Stand der Schüler wie er im AD zu finden ist. Das erstellen dauert einen Moment länger.
+Klickst Du nun auf eine Klasse, so wird diese mit den eingetragenen Benutzern zusammengestellt. Es werden alle Benutzer der Klasse dargestellt.
 
+.. figure:: media/13_webui-class-selected.png
+   :align: center
+   :alt: class selected
 
-Unterhalb von "Meine Kurse" finden Sie ihre selbst erstellten Kurse.
-
+   Ausgewählte Klassen und deren Benutzer
 
 Kurse erstellen
----------------
+^^^^^^^^^^^^^^^
 
-Unter Kurse können Sie über die Funktion oben rechts ``Neuer Kurs`` einen neuen Kurs anlegen. Geben Sie dazu den
-Kursnamen ein und bestätigen mit OK.
+Du kannst über die Funktion oben rechts ``Neuer Kurs`` einen neuen Kurs anlegen. 
+
+.. figure:: media/11_webui-basics_new-class-button.png
+   :align: center
+   :alt: WebUI New Class Button
+   
+   Wähle den Eintrag Neuer Kurs
+
+Gib in dem sich öffnenden Fenster den neuen Kursnamen ein und bestätige diesen mit ``OK``.
 
 .. figure:: media/11_webui-basics_new-class.png
    :align: center
    :alt: WebUI New Class
+   
+   Neuen Kurs erstellen
+
+Der neu angelegte Kurs erscheint im Menü ``Unterricht`` -> unter der Rubrik ``Meine Kurse``.
+
+.. figure:: media/11_webui-basics_my-courses.png
+   :align: center
+   :alt: WebUI my courses
+   
+   Meine Kurse
+
+In obiger Abbildung siehst Du, dass in dem neu angelegten Kurs noch keine Schüler zugewiesen wurden.
+
 
 Schüler einem Kurs hinzufügen
------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Um Schüler einem Kurs hinzuzufügen, den jeweiligen Kurs auswählen. In den oberen Zeilen gibt es nun die
-Möglichkeit über ``Schüler hinzufügen`` einzelne Schüler hinzuzufügen oder über ``Klasse hinzufügen`` eine ganze Schulklasse.
-Um die Übernahme der ausgewählten Benutzer in den Kurs anzuwenden, unten rechts mit ``Speichern & Übernehmen`` bestätigen.
+Um Schüler einem Kurs hinzuzufügen, wählst Du den gewünschten Kurse via Klick auf das Icon des Kurses aus.
+
+.. figure:: media/12_webui-basics_selected_course.png
+   :align: center
+   :alt: seclected course
+   
+   Ausgwählter Kurs
+
+In den oberen Zeilen gibt es nun die Möglichkeit über ``Schüler hinzufügen`` einzelne Schüler hinzuzufügen oder über ``Klasse hinzufügen`` eine ganze Schulklasse dem Kurs hinzuzufügen. Klickst Du in das Feld ``Schüler hinzufügen`` und gibst dort die **ersten beiden Buchstaben des Schülernamens** ein, erscheint eine Liste mit Schülern, deren Nachnamen mit diesen Buchstaben beginnen.
 
 .. figure:: media/12_webui-basics_add-class-members.png
    :align: center
-   :alt: WebUI Add Class Members
+   :alt: add pupils to course
+   
+   Ausgwählter Kurs: Schüler hinzufügen
 
-Wählen Sie nun einen bestimmten Kurs aus, finden Sie eine Ansicht nach folgendem Schema vor.
+Hast Du alle gewünschten Schüler nacheinander ausgewählt, siehst Du eine Liste mit allen Schülern des Kurses. Um diese in den Kurs zu übernehmen, klickst Du abschließend unten rechts auf ``Speichern & übernehmen``.
+
+Wählst Du einen bestimmten Kurs oder eine bestimmte Klasse aus, findest Du folgende Ansicht vor.
 
 .. figure:: media/13_webui-basics_class-overview.png
    :align: center
    :alt: WebUI Class Overview
+   
+   Übersicht der Kursteilnehmer
 
-In dieser Übersicht können die pädagogischen Funktionen WLAN-, Internet- & Drucker-Freigabe, Dateien-Übertragungs-
-Funktion und Prüfungsmodus genutzt werden.
+In dieser Übersicht können die pädagogischen Funktionen WLAN-, Internet- & Drucker-Freigabe, Dateien-Übertragungs-Funktion und Prüfungsmodus genutzt werden.
 
 WLAN-, Internet-Freigabe & Drucker-Freigabe
--------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * WLAN-Freigabe
 
 .. figure:: media/14_webui-basics_wlan-icon.png
    :align: center
-   :alt: WebUI Wlan Icon
+   :alt: WebUI WLAN Icon
+
+   WLAN Icon
 
 * Internet-Freigabe
 
@@ -164,26 +213,41 @@ WLAN-, Internet-Freigabe & Drucker-Freigabe
    :align: center
    :alt: WebUI Internet Icon
 
+   Internet Icon
+
 * Drucker-Freigabe
 
 .. figure:: media/16_webui-basics_printer-icon.png
    :align: center
    :alt: WebUI Printer Icon
+   
+   Drucker Icon
+   
+* Prüfungsmodus
 
-Freigaben zu den jeweiligen Diensten können über ``Haken setzen oder entfernen`` für jeweilige Benutzer freigegeben oder 
-gesperrt werden. Über das Kästchen direkt unter einem Dienstsymbol kann die Freigabe zu dem jeweiligen Dienst mit 
-``Speichern & Übernehmen`` auf alle Benutzerangewendet werden. Beispielsweise wurde hier mit einem Klick unter das 
-WLAN-Symbol für jeden Benutzer des aktuellen Kurses der WLAN-Zugang gesperrt.
-
-.. figure:: media/17_webui-basics_example-denied-wlan-access.png
+.. figure:: media/17_webui-basics_exam_mode-icon.png
    :align: center
-   :alt: WebUI Example Denied WLAN Access
+   :alt: WebUI exam mode Icon
+   
+   Prüfungs Icon
+
+Freigaben zu den jeweiligen Diensten können über ``Haken setzen oder entfernen`` für die jeweiligen Benutzer freigegeben oder gesperrt werden. Über das Kästchen direkt unter einem Dienstsymbol kann die Freigabe oder Sperrung zu dem jeweiligen Dienst auf alle Benutzer angewendet werden. 
+
+Beispielsweise wurde hier mit einem Klick unter das WLAN-Symbol für jeden Benutzer des aktuellen Kurses der WLAN-Zugang freigegeben. Dieses muss nur noch unten rechts mit ``Speichern & übernehmen`` angewendet werden.
+
+.. figure:: media/17_webui-basics_example-wlan-access-for-all.png
+   :align: center
+   :alt: WebUI Allow WLAN Access
+   
+   WLAN Zugang für alle Kursteilnehmer freigeben
 
 * Einstellungen (Zahnrad)
 
 .. figure:: media/45_webui-basics_gearwheel-button.png
    :align: center
    :alt: Settings Button
+   
+   Einstellungen
 
 Unter Einstellungen sind verschiedene Optionen zum Passwort des Benutzers zu finden.
 
@@ -192,178 +256,198 @@ Unter Einstellungen sind verschiedene Optionen zum Passwort des Benutzers zu fin
 .. figure:: media/46_webui-basics_trash-button.png
    :align: center
    :alt: Trash Button
+   
+   Mülleimer
 
-Mit Hilfe des Löschen Button können einzelne Schüler aus dem Kurs entfernt werden. Dies gilt, bis die Sitzung neu erstellt wird.
+Mit Hilfe des Mülleiners können einzelne Schüler aus dem Kurs entfernt werden. Dies gilt, bis die Sitzung neu erstellt wird.
 
-Sämtliche Änderungen müssen mit ``Speichern & Übernehmen`` übernommen werden!
+Sämtliche Änderungen müssen mit ``Speichern & Übernehmen`` angewendet werden.
 
-Dateien-Übertragungs-Funktion
------------------------------
+Dateien austeilen & einsammeln
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Eine nützliche Funktion für Unterrichtsarbeit mit Dateien bietet linuxmuster.net mit der ``Austeilen- & Einsammeln-Funktion``.
-Auf der Kursseite finden Sie im unteren Bereich die ``Teilen`` und ``Einsammeln`` Funktionen, welche sich auf alle
-Kursteilnehmer beziehen. Neben jedem Benutzer selbst gibt es ``Austeilen`` und ``Einsammeln`` Funktionen, welche auf
-einzelne Benutzer angewendet werden. 
+Dateien können für die Unterrichtsarbeit mithilfe der Funktion ``Teilen & Einsammeln`` an Schüler ausgeteilt und wieder eingesammelt werden. 
 
-Weitere Erläuterungen sind im Abschnitt `Austeilen und Einsammeln <https://docs.linuxmuster.net/de/latest/classroom/exam-and-transfer.html#austeilen-und-einsammeln>`_ zu finden.
+Auf der Kursseite findest Du im unteren Bereich die Buttons ``Teilen`` und ``Einsammeln``, welche sich auf alle Kursteilnehmer beziehen. 
+
+.. figure:: media/46_webui-basics_share_files.png
+   :align: center
+   :alt: Share files
+   
+   Teilen
+
+.. figure:: media/46_webui-basics_collect_files.png
+   :align: center
+   :alt: collect files
+   
+   Einsammeln
+
+
+Neben jedem Benutzer selbst gibt es ``Austeilen`` und ``Einsammeln`` Funktionen, welche nur auf die einzelnen Benutzer angewendet werden.
+
+
+.. figure:: media/46_webui-basics_share_files_per_user.png
+   :align: center
+   :alt: collect files
+   
+   Einsammeln
+
+Weitere Erläuterungen hierzu findest Du im Abschnitt :ref:`exam-and-transfer-label`.
 
 Prüfungsmodus
--------------
+^^^^^^^^^^^^^
 
 Das Absolventenkappen-Symbol
 
-.. figure:: media/21_webui-basics_graduate-icon.png
+.. figure:: media/17_webui-basics_exam_mode-icon.png
    :align: center
    :alt: WebUI Graduate Icon
 
-stellt den Prüfungsmodus dar. Ausgewählte Schüler können dadurch in diesen Modus gesetzt werden 
-(nach Speichern & Übernehmen unten rechts). Im aktivierten Prüfungsmodus wird die Seite in folgendem Schema angezeigt.
+   Prüfungsmodus
+
+stellt den Prüfungsmodus dar. Ausgewählte Schüler oder alle Schüler einer Klasse eines Kurses können dadurch in diesen Modus gesetzt werden (nach Klick auf ``Speichern & Übernehmen`` unten rechts). Im aktivierten Prüfungsmodus wird die Seite wie folgt angezeigt:
 
 .. figure:: media/22_webui-basics_active-exam-modus.png
    :align: center
    :alt: WebUIActive Exam Modus
+   
+   Aktiver Prüfungsmodus
 
-Schülern im Prüfungsmodus ist automatisch die WLAN-, Internet- & Drucker-Freigabe gesperrt. Dies kann jedoch
-angepasst werden. Um den Prüfungsmodus zu terminieren, den Haken bei jedem Kursmitglied entfernen und ``Speichern & Übernehmen`` 
-ausführen.
+Bei allen Schülern, die im Prüfungsmodus sind, wird unter Prüfungsaufsicht der Name des Lehrers, die den Modus aktiviert hat, mit rotem Hintergrund dargestellt. Schülern im Prüfungsmodus ist automatisch die WLAN-, Internet- & Drucker-Freigabe gesperrt. Dies kann jedoch individuell angepasst werden. 
 
-Weitere Hinweise sind im Abschnitt `Prüfungsmodus Klassenarbeitsmodus <https://docs.linuxmuster.net/de/latest/classroom/exam-and-transfer.html#prufungsmodus-klassenarbeitsmodus>`_ zu finden.
+Um den Prüfungsmodus zu beenden, entfernst Du den Haken bei jedem Kursmitglied (Klick unter das Prüfungsmodus-Icon) und übernimmst die Einstellungen mit ``Speichern & Übernehmen``.
+
+Ausführliche Hinweise zum Prüfungsmodus findest Du im Abschnitt :ref:`exam-and-transfer-label`.
 
 Einschreiben
 ------------
 
-Dieser Abschnitt dient Lehrern dazu sich in Schulklassen, Projekte oder zu Druckern einzuschreiben. Lehrer ordnen sich hier
-beispielsweise zu Beginn des Schuljahres den jeweiligen Klassen zu.
-
-.. figure:: media/23_webui-basics_subscript-classes.png
-   :align: center
-   :alt: WebUI Subscript Classes
-
-Ein jeweiliges Objekt zum Einschreiben auswählen oder den Haken entfernen um daraus auszutreten. Geänderte
-Einstellungen werden gelb angezeigt. Um die Änderungen anzuwenden, auf ``Übernehmen`` klicken. In diesem Abschnitt
-finden Sie eine übersichtliche Darstellung zu zugehörigen Schulklassen, Druckern und Projekten. Für detaillierte
-Informationen zu einem Objekt, dieses anklicken.
-
-.. figure:: media/24_webui-basics_object-information.png
-   :align: center
-   :alt: WebUI Object Information
-
-**Objekt beitreten**: Das jeweilige Objekt durch Anhaken auswählen und anschließend mit der Übernehmen-Taste
-unten links bestätigen.
-
-.. figure:: media/25_webui-basics_become-object-member.png
-   :align: center
-   :alt: WebUI Besome Object Member
-
-**Aus Objekt austreten**: Den Haken des jeweiligen Objektes entfernen und anschließend mit der ``Übernehmen-Taste`` 
-unten links bestätigen.
-
-.. figure:: media/26_webui-basics_leave-object.png
-   :align: center
-   :alt: WebUI Leave Object
+Im Menü ``Einschreiben`` findest Du nachstehende drei Rubriken.
 
 Schulklassen
-------------
+^^^^^^^^^^^^
 
-Hier werden alle Schulklassen aufgelistet. Durch Anklicken werden weitere Informationen angezeigt, wie etwa die
-dazugehörigen Schüler.
+.. figure:: media/22_webui-basics_school_classes.png
+   :align: center
+   :alt: WebUI School Classes
+   
+   Schulklassen
+   
+Hier werden alle Schulklassen der Schule aufgelistet. Durch Klick auf den Klassennamen werden Dir weitere Informationen angezeigt, wie etwa alle Schüler der Klasse.
+
+.. figure:: media/22_webui-basics_school_classes_details.png
+   :align: center
+   :alt: WebUI Details for School Classes
+   
+   Details der Schulklassen
 
 Drucker
--------
+^^^^^^^
 
-Hier werden alle Drucker aufgelistet. Durch Anklicken werden weitere Informationen angezeigt. Ein Auswählen ist nur erforderlich, wenn man den Drucker auch außerhalb des zugehörigen Raumes nutzen möchte.
+Hier werden alle Drucker aufgelistet. Durch Anklicken werden weitere Informationen angezeigt. 
+
+Ein Auswählen ist nur erforderlich, wenn man den Drucker auch außerhalb des zugehörigen Raumes nutzen möchte.
 
 Projekte
---------
+^^^^^^^^
 
-Hier werden alle Projekte aufgelistet. Projekte unterscheiden sich von Kursen: 
+Hier werden alle Projekte aufgelistet. Zu Beginn ist die Liste leer. Du musst zuest Projekte anlegen und diesen beitreten.
+
+.. figure:: media/22_webui-basics_projects.png
+   :align: center
+   :alt: WebUI projects
+   
+   Projekte
+
+Projekte unterscheiden sich von Kursen: 
 
 * Mehrere Lehrer können in eine Projektgruppe aufgenommen werden. 
 * Projekte verfügen über eigene Tauschverzeichnisse
 * Projekte können wiederverwendet werden.
-* Unterrichtssteuerung (Passwörter ändern, Internet sprerren, etc.) ist nicht möglich
+* Unterrichtssteuerung (Passwörter ändern, Internet sprerren, etc.) ist **nicht** möglich.
 
-**Projekt anlegen**: Über
+**Projekt anlegen**
 
-.. figure:: media/27_webui-basics_new-project-icon.png
+Um ein Projket anzulegen klickst Du im Menü ``Klassenzimmmer -> Einschreiben -> Neues Projekt``.
+
+.. figure:: media/22_webui-basics_new_project.png
    :align: center
-   :alt: WebUI New Project Icon
+   :alt: WebUI create new project
+   
+   Neues Projekt anlegen
 
-mit ``OK`` erstellen.
+Es erscheint ein neues Fenster, in dem Du den Namen für das anzulegende Projekt einträgst.
 
-Im rechten oberen Bereich, können Sie ein neues Projekt benennen und
-mit ``OK`` erstellen.
-
-.. figure:: media/28_webui-basics_new-project-name.png
+.. figure:: media/22_webui-basics_new_project_name.png
    :align: center
    :alt: WebUI New Project Name
 
-**Projektmitglieder verwalten**: Durch Anklicken eines bestimmten Projektes, werden weitere Informationen
-angezeigt, wie etwa die dazugehörigen Mitglieder und Administratoren:
-Über die Funktion ``Beitretbar`` kann die Beitrittmöglichkeit und über die Funktion ``Nicht anzeigen`` die
-Sichtbarkeit eingestellt werde. Mitglieder können hier über die Mitglieder ``bearbeiten``-Funktion gleichzeitig
-auch hinzugefügt oder entfernt werden.
+   Namen für das Projekt festlegen
 
-.. figure:: media/29_webui-basics_manage-project-members.png
+
+Du darfst nur Kleinbuchstaben und Zahlen in dem Projektnamen verwenden. Bestätige das Anlegen des neuen Projektes mit ``OK``.
+
+**Projektmitglieder verwalten**
+
+Durch Anklicken eines bestimmten Projekts, werden weitere Informationen angezeigt, wie etwa die Mitglieder und Administratoren des Projekts.
+
+.. figure:: media/22_webui-basics_new_project_details.png
+   :align: center
+   :alt: WebUI New Project Deatils
+
+   Weitere Projektinformationen
+
+Über die Funktion ``Beitretbar`` kann die Beitrittmöglichkeit und über die Funktion ``Nicht anzeigen`` die Sichtbarkeit eingestellt werde. 
+Klicke die Option ``Beitretbar`` an, damit Benutzer dem Projekt hinzugefügt werden können. 
+
+.. figure:: media/23_webui-basics_new_project_joinable.png
+   :align: center
+   :alt: WebUI New Project Joinable
+
+   Projektoption "beitretbar" setzen 
+
+Mitglieder können nun über den Button ``Benutzer oder Gruppe hinzufügen`` dem Projekt zugeordnet werden. Danach erscheint ein Fenster, in dem Du nach Benutzer, Klassen oder Gruppen suchen kannst.
+
+.. figure:: media/23_webui-basics_new_project_add_project_members.png
    :align: center
    :alt: WebUI Manage Project Members
+   
+   Projektmitglieder hinzufügen
 
-eine Übersicht aller Klassen-Benutzer, die hinzugefügt werden können, erscheint.
+Gebe in einer der Zeilen die ersten beiden Anfangsbuchstaben ein und es werden Dir unter Benutzer, Klasse oder Gruppe die bereits existierenden Einträge aufgelistet. Wähle aus der Liste die gewünschten aus. Wiederhole diese Vorgang für weitere Benutzer oder Gruppen. Die bereits ausgewählten Benutzer oder Gruppen werden Dir unten links in dem Fenster unter der Überschrift ``Hinzufügen`` aufgelistet. Findest Du hier alle gewnüschten Benutzer und Gruppen, klicke auf ``Übernehmen``, um diese dem Projekt hinzuzufügen.
 
-.. figure:: media/30_webui-basics_class-users.png
-   :align: center
-   :alt: WebUI Class Users
+**Projekt löschen**
 
-Um bestimmte Benutzer besser finden zu können, gibt es eine Filterfunktion. Ebenso ist es möglich eine
-ganze Klasse als Projektadmin zu ernennen oder alle Mitglieder einer Klasse auf einmal auszuwählen. Dafür
-einfach das Symbol links neben „Class as project admin“ oder das Symbol links neben „Gesamte Klasse dem
-Projekt hinzufügen“ unter derjenigen Klasse klicken:
+Klicken auf das jeweilige Projekt und wähle unten links ``Projekt löschen``. Bestätige diesen Vorgang im nächsten Fenster mit ``LÖSCHEN``.
 
-.. figure:: media/31_webui-basics_add-class-to-project-1.png
-   :align: center
-   :alt: WebUI Add Class To Project Part 1
-
-.. figure:: media/32_webui-basics_add-class-to-project-2.png
-   :align: center
-   :alt: WebUI Add Class To Project Part 2
-
-Haben Sie alle Projektschüler aus- oder abgewählt, unten über Speichern die Auswahl übernehmen.
-
-.. figure:: media/33_webui-basics_save-selection.png
-   :align: center
-   :alt: WebUI Save Selection
-
-**Projekt löschen**: klicken Sie das jeweilige Projekt an und wählen unten links Projekt löschen und bestätigen mit
-Löschen.
-
-**Projektansicht**: Für eine übersichtlichere Ansicht, gibt es die Möglichkeit, über den Objektfilter die
-Objektekategorie auszuwählen, welche angezeigt werden soll. Daneben können Sie die Sortierweise auf
-Gruppenname oder Mitgliedschaft anwenden (bei nochmaligem Auswählen der selben Kategorie ändert sich die
-Auflistungsrichtung).
-
-.. figure:: media/34_webui-basics_project-view.png
-   :align: center
-   :alt: WebUI Project View
 
 Passwörter drucken
-------------------
+^^^^^^^^^^^^^^^^^^
 
-Hier gibt es die Möglichkeit, eine übersichtliche Liste von Benutzer- & Passwortinformationen per PDF oder CSV-Format
-ausdrucken zu lassen.
+Hier gibt es die Möglichkeit, eine übersichtliche Liste von Benutzer- & Passwortinformationen im PDF- oder CSV-Format ausdrucken zu lassen bzw. als Datei herunterzuladen.
 
-.. figure:: media/41_webui-basics_user-list-pdf-csv.png
+.. figure:: media/41_webui-basics_user-list-print-overview.png
    :align: center
    :alt: WebUI User List Export
+   
+   Übersicht der Klassen zum Ausdruck der Passwörter
 
-Dies kann über Anklicken der jeweiligen Klasse klassenspezifisch, über Klasse: teachers auf alle Lehrer oder über die
-Option ``Alle Benutzer`` auf alle Benutzer der Schule angewendet werden. Als PDF werden die Benutzer neben dem
-zugehörigen Passwort in Kästchen angezeigt, wie in diesem Beispiel:
+Der Druck der Passwörter kann durch Anklicken der jeweiligen Klasse klassenspezifisch erfolgen. Markiere die Klasse und klicke auf das Druckersymbol in der Zeile der Klasse. Es erscheint ein neues Fenster.
+
+.. figure:: media/41_webui-basics_user-list-pdf.png
+   :align: center
+   :alt: WebUI User List Export PDF
+   
+   Passwörter der Klasse als PDF ausdrucken
+   
+Wähle die gewünschten Einstellungen aus und es wird die erstellte Datei heruntergeladen und angezeigt.
+
+Im PDF-Format werden die Benutzer neben dem zugehörigen Passwort in Kästchen angezeigt, wie in diesem Beispiel:
 
 .. figure:: media/42_webui-basics_class-users-export.png
    :align: center
    :alt: WebUI class Users Export
-
-Um nicht jedes Kästchen einzeln ausschneiden zu müssen, gibt es vor dem Drucken die Option One per page, um pro Seite
-nur eine Benutzerinformation auszugeben. Um zu Drucken Ausdrucken wählen.
+   
+   PDF-Datei mit den Passwörtern der Schüler der Klasse
 
 
