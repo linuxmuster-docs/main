@@ -53,45 +53,10 @@ Cloud-init kannst Du unter Ubuntu mit folgenden Schritten löschen:
    # Reboot
    sudo reboot
 
-Das Skript lmn-appliance
-========================
-
-Das Skript ``lmn-appliance`` bereitet den Server / die Appliance vor:
-
-- Es bringt das Betriebssystem auf den aktuellen Stand,
-- richtet das linuxmuster.net-Paket-Repo ein,
-- installiert das Paket linuxmuster-prepare und
-- startet dann das Vorbereitungsskript lmn-prepare,
-  - das die für das jeweilige Appliance-Profil benötigten Pakete installiert,
-  - das Netzwerk konfiguriert,
-  - das root-Passwort auf Muster! setzt und
-  - im Falle des Serverprofils optional LVM einrichtet.
-
-Skript herunterladen
---------------------
-
-Wenn Du nicht mehr an Deinem Server eingeloggt bist, melde Dich erneut an.
-
-Führe danach folgende Befehle in der Eingabekonsole aus:
-
-.. code-block:: Bash
- 
-  sudo -i
-  wget https://raw.githubusercontent.com/linuxmuster/linuxmuster-prepare/master/lmn-appliance
-  chmod +x lmn-appliance
-
-Das Skript ist wir folgt zu starten:
-
-.. code-block:: Bash
-
-  ./lmn-appliance <Optionen>
-
 Führe aber zuvor nachstehende Schritte aus.
 
 Default-Locale setzen
 ---------------------
-
-Passe noch vor der Ausführung von lmn-prepare auf dem Server die ``Default-Locale`` an.
 
 Erzeuge zuerst die Locales mit:
 
@@ -185,21 +150,38 @@ Du solltest Dich nach der Eingabe des Passwortes ``Muster!`` auf der Konsole der
 
 Sollte dieser Test erfolgreich sein, steht der abschließenden Vorbereitung nichts mehr im Wege:
 
-Aufruf lmn-appliance
+Das Skript lmn-appliance
+========================
+
+Das Skript ``lmn-appliance`` bereitet den Server / die Appliance vor:
+
+- Es bringt das Betriebssystem auf den aktuellen Stand,
+- richtet das linuxmuster.net-Paket-Repo ein,
+- installiert das Paket linuxmuster-prepare und
+- startet dann das Vorbereitungsskript lmn-prepare,
+  - das die für das jeweilige Appliance-Profil benötigten Pakete installiert,
+  - das Netzwerk konfiguriert,
+  - das root-Passwort auf Muster! setzt und
+  - im Falle des Serverprofils optional LVM einrichtet.
+
+Skript herunterladen
 --------------------
 
-Wechsele Deinen Log-in und werde ``root``:
+Wenn Du nicht mehr an Deinem Server eingeloggt bist, melde Dich erneut an.
+
+Führe danach folgende Befehle in der Eingabekonsole aus:
+
+Wechsele Deinen Log-in und werde zu ``root``, falls du es nicht mehr sein solltest:
 
 .. code-block:: Bash
-
-   sudo -i
+ 
+  sudo -i
 
 Lade das lmn-appliance Skript herunter und setze die Ausführungsberechtigung:
 
-.. code::
-
-   wget https://raw.githubusercontent.com/linuxmuster/linuxmuster-prepare/master/lmn-appliance
-   chmod +x lmn-appliance
+.. code-block:: Bash
+  wget https://raw.githubusercontent.com/linuxmuster/linuxmuster-prepare/master/lmn-appliance
+  chmod +x lmn-appliance
 
 Prüfe Deine Festplatten und Partitionen mit 
 
@@ -216,21 +198,29 @@ Prüfe Deine Festplatten und Partitionen mit
 
 In o.g. Beispiel wurde Ubuntu Server auf der 1. Festplatte (sda) installiert. Die zweite Festplatte (sdb) kennt noch keine Partitionen.
 
-Rufe nun das Skript ``lmn-appliance`` so auf, dass Dein Server vorbereitet wird. Das LVM wird dann auf  der zweiten Festplatte eingerichtet wird.
+Aufruf lmn-appliance
+--------------------
+
+Das Skript ist generell wie folgt zu starten:
+
+.. code-block:: Bash
+
+  ./lmn-appliance <Optionen>
+
+Die möglichen Optionen findest Du hier dokumentiert: https://github.com/linuxmuster/linuxmuster-prepare
+
+Für unsere Beispielkonfiguration rufe nun das Skript ``lmn-appliance`` so auf, dass Dein Server vorbereitet wird. Das LVM wird dann auf  der zweiten Festplatte eingerichtet wird.
 
 .. code-block:: Bash
 
   ./lmn-appliance -p server -u -l /dev/sdb
 
-Mit dem Parameter -u wird dann ein LVM - hier auf der 2. Festplatte (sdb) - mit folgenden Werten eingerichtet:
+Mit dem Parametern -u (unattended) und -l wird dann ein LVM - hier auf der 2. Festplatte (sdb) - mit folgenden Werten eingerichtet:
 
 - var: 10 GiB
 - linbo: 40 GiB
 - global: 10GiB
 - default-school: restlicher Plattenplatz
-
-Weitere Skript-Parameter findest Du hier dokumentiert: https://github.com/linuxmuster/linuxmuster-prepare
-
 
 Installation mit Deinen Vorgaben
 ================================
@@ -288,7 +278,6 @@ Ist lmn-appliance ohne Fehler durchgelaufen, starte danach den Server neu mit de
   reboot
 
 Danach steht dem Setup v7.2 nichts mehr im Wege.
-
 
 Paketquellen eintragen
 ======================
