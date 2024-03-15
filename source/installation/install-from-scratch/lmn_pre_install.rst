@@ -164,10 +164,25 @@ Das Skript ``lmn-appliance`` bereitet den Server / die Appliance vor:
   - das root-Passwort auf Muster! setzt und
   - im Falle des Serverprofils optional LVM einrichtet.
 
+Wenn Du nicht mehr an Deinem Server eingeloggt bist, melde Dich erneut an.
+
+Überprüfe Deine Festplatten und Partitionen mit 
+
+.. code::
+
+   lsblk
+   
+   NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+   sda      8:0    0   50G  0 disk 
+   ├─sda1   8:1    0    1M  0 part 
+   └─sda2   8:2    0   50G  0 part /
+   sdb      8:16   0  200G  0 disk 
+   sr0     11:0    1 1024M  0 rom  
+
+In o.g. Beispiel wurde Ubuntu Server auf der 1. Festplatte (sda) installiert. Die zweite Festplatte (sdb) kennt noch keine Partitionen.
+
 Skript herunterladen
 --------------------
-
-Wenn Du nicht mehr an Deinem Server eingeloggt bist, melde Dich erneut an.
 
 Führe danach folgende Befehle in der Eingabekonsole aus:
 
@@ -182,21 +197,6 @@ Lade das lmn-appliance Skript herunter und setze die Ausführungsberechtigung:
 .. code-block:: Bash
   wget https://raw.githubusercontent.com/linuxmuster/linuxmuster-prepare/master/lmn-appliance
   chmod +x lmn-appliance
-
-Prüfe Deine Festplatten und Partitionen mit 
-
-.. code::
-
-   lsblk
-   
-   NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
-   sda      8:0    0   50G  0 disk 
-   ├─sda1   8:1    0    1M  0 part 
-   └─sda2   8:2    0   50G  0 part /
-   sdb      8:16   0  200G  0 disk 
-   sr0     11:0    1 1024M  0 rom  
-
-In o.g. Beispiel wurde Ubuntu Server auf der 1. Festplatte (sda) installiert. Die zweite Festplatte (sdb) kennt noch keine Partitionen.
 
 Aufruf lmn-appliance
 --------------------
