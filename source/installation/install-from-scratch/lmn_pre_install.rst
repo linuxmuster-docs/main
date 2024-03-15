@@ -195,8 +195,10 @@ Wechsele Deinen Log-in und werde zu ``root``, falls du es nicht mehr sein sollte
 Lade das lmn-appliance Skript herunter und setze die Ausführungsberechtigung:
 
 .. code-block:: Bash
-  wget https://raw.githubusercontent.com/linuxmuster/linuxmuster-prepare/master/lmn-appliance
-  chmod +x lmn-appliance
+  
+   wget https://raw.githubusercontent.com/linuxmuster/linuxmuster-prepare/master/   
+   lmn-appliance
+   chmod +x lmn-appliance
 
 Aufruf lmn-appliance
 --------------------
