@@ -20,10 +20,6 @@ Um **linuxmuster.net latest** zu installieren musst Du folgende Schritte durchla
 
 ..       :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part1-preliminary-consideration.svg
 
-.. todo::
-
-   Grafik anpassen
-
 Diese Dokumentation konzentriert sich auf die Umsetzung als Zwei-Server-Lösung auf einem Hypervisor (Proxmox). 
 Andere Virtualisierungslösungen sind möglich, werden aber von linuxmuster.net nicht (mehr) offiziell unterstützt.
 
