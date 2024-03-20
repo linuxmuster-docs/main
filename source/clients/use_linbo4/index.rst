@@ -176,8 +176,12 @@ Das Passwort steht im Klartext auf dem Server in der Datei ``/etc/rsyncd.secrets
 
    linbo:MeinKennwort
 
-Nach einer Änderung wird das Passwort mit der nächsten Synchronisation bzw. Netzwerkboot aktualisiert.
+Nach Änderung des Passwortes musst Du auf dem Server noch die ``linbofs.lz`` neu erstellen, damit der Hash-Wert des aktuellen Linbo-Passwortes integriert wird. Dazu führst Du folgenden Befehl auf dem Server aus:
 
+.. code::
+
+   update-linbofs
+   
 
 LINBO Imageverwaltung am Client
 -------------------------------
@@ -376,13 +380,15 @@ Erscheint die LINBO GUI:
 
    LINBO GUI
 
+Wähle rechts das Werkzeug-Icon 
+
 .. figure:: media/linbo-diff-images/02-tools-icon.png
-   :align: left
+   :align: center
    :alt: Tools Icon
 
    Tools Icon
 
-Wähle rechts das Werkzeug-Icon aus.
+aus.
 
 Es erscheint ein neues Fenster, in dem Du das Passwort des Linbo-Admins eingeben musst, um dich zu authentifizieren.
 
