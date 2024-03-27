@@ -71,5 +71,30 @@ Das Cloop-Image wird dadurch in das `qcow2`-Format konvertiert und im Verzeichni
 4. Zum Schluss starte das Skript ``linuxmuster-import-devices``. Dieses löscht die nun nicht mehr benötigten start.conf-Links.
 5. Ab jetzt kannst Du Images wieder wie gewohnt erstellen und verteilen.
 
+Widerspenstige LINBO-Clients
+============================
 
+Möchtest Du, bestehende LINBO-Clients zu LINBO 4 migrieren und hast dabei Probleme, obwohl Du - wie zuvor beschrieben - den Befehl ``linuxmuster-import-devices`` ausgeführt hast, solltest Du nachstehend bechriebene Schritte ausführen. 
 
+Wichtig ist, dass vor dem Upgrade alle Clients das aktuelle LINBO im Cache haben. Falls es nach dem Upgrade beim Booten von LINBO trotzdem zu Fehlern kommt, kannst Du so vorgehen:
+
+1. Auf dem Server temporär den LINBO-Netboot erzwingen:
+    
+.. code::
+
+   # cd /srv/linbo/boot/grub/
+   # cp grub.cfg grub.cfg.bak
+   # cp /usr/share/linuxmuster/linbo/templates/grub.cfg.forced_netboot grub.cfg
+   
+2. Clients per PXE booten.
+3. Prüfe, ob die Clients wirklich via PXE Network Boot starten, damit hierdurch die Clients auf die letzte LINBO-Version aktualisiert werden.
+4. Nehme die Änderungen nun wieder zurück.
+
+.. code::
+
+   # cd /srv/linbo/boot/grub/
+   # cp grub.cfg.bak grub.cfg
+   
+5. Starte die Clients erneut.
+
+    
