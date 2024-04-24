@@ -107,9 +107,3 @@ Danach solltest Du vom Admin-PC aus folgende Hosts erreichen können:
 4. linuxmuster.net - externe URL
 
 Der Proxmox-Host ist nun "hinter" der OPNsense |reg| und kann über diese auf das Internet zugreifen. Dafür muss die virtuelle Maschine der OPNsense |reg| aktiv sein, was Du mit dem vorherigen Schritt sichergestellt hast.
-
-Fahre nun fort mit :ref:`basis_server-label`.
-
-
-
-
