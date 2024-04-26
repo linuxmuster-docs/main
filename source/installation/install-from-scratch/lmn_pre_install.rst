@@ -50,8 +50,6 @@ Cloud-init kannst Du unter Ubuntu mit folgenden Schritten löschen:
    # Uninstall
    sudo apt purge cloud-init
    sudo rm -rf /etc/cloud/ && sudo rm -rf /var/lib/cloud/
-   # Reboot
-   sudo reboot
 
 Default-Locale setzen
 ---------------------
