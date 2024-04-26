@@ -46,18 +46,6 @@ Starte den Server Ubuntu 22.04 LTS Server ISO-Image. Es erscheint das erste Inst
 
 Wähle Deine bevorzugte Sprache.
 
-Aktualisierung des Installers
------------------------------
-
-.. figure:: media/basis_server_009_new-installer.png
-   :align: center
-   :scale: 40%
-   :alt: update installer
-
-   Installer aktualisieren
-
-Bei der angebotene Aktualisierung wählst Du ``Ohne Aktualisierung fortfahren``.
-
 Tastaturlayout
 --------------
 
@@ -162,6 +150,18 @@ Lass die Proxy-Adresszeile leer. Auch diese Anfrage verlässt Du mit ``Erledigt`
    Bestätige den Ubuntu Mirror Server
 
 Die Mirror-Adresse übernimmst Du ebenfalls mit ``Erledigt``.
+
+Aktualisierung des Installers
+-----------------------------
+
+.. figure:: media/basis_server_009_new-installer.png
+   :align: center
+   :scale: 40%
+   :alt: update installer
+
+   Installer aktualisieren
+
+Bei der angebotene Aktualisierung wählst Du ``Aktualisieren auf neuen Installer``.
 
 Speichermedien
 --------------
