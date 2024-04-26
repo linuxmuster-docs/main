@@ -48,12 +48,10 @@ Cloud-init kannst Du unter Ubuntu mit folgenden Schritten löschen:
    # Disable start
    sudo touch /etc/cloud/cloud-init.disabled
    # Uninstall
-   sudo apt-get purge cloud-init
+   sudo apt purge cloud-init
    sudo rm -rf /etc/cloud/ && sudo rm -rf /var/lib/cloud/
    # Reboot
    sudo reboot
-
-Führe aber zuvor nachstehende Schritte aus.
 
 Default-Locale setzen
 ---------------------
@@ -131,12 +129,6 @@ Du kannst die Default-Locale ggf. auch mit folgenden Befehl neu setzen:
 
    Solltest Du mit Deiner Konfiguration von unseren Standard-Vorgaben bei dem zuletzt genannten Punkt abweichen, musst Du Deine Einstellungen unbedingt bei Aufruf des Skriptes lmn-prepare anpassen!
    
-   
-.. hint::
-
-   Erstelle jetzt einen Snapshot Deiner Server-VM.   
-   
-
 Letzter Test vor Anwendung des Skriptes lmn-appliance
 -----------------------------------------------------
 
@@ -148,7 +140,12 @@ Als letzte Überprüfung, bevor Du das Skript einsetzt, verbinde Dich vom Server
 
 Du solltest Dich nach der Eingabe des Passwortes ``Muster!`` auf der Konsole der OPNsense |reg| wiederfinden. Eventuell musst Du auch vorher deren Key akzeptieren. Mit ``0`` solltest Du Dich wieder ausloggen und zurück auf der Server-Konsole sein.
 
-Sollte dieser Test erfolgreich sein, steht der abschließenden Vorbereitung nichts mehr im Wege:
+Sollte dieser Test erfolgreich sein, steht der abschließenden Vorbereitung nach einem Neustart nichts mehr im Wege.
+
+.. code-block:: Bash
+
+   # Reboot
+   sudo reboot
 
 Das Skript lmn-appliance
 ========================
@@ -163,6 +160,10 @@ Das Skript ``lmn-appliance`` bereitet den Server / die Appliance vor:
   - das Netzwerk konfiguriert,
   - das root-Passwort auf Muster! setzt und
   - im Falle des Serverprofils optional LVM einrichtet.
+
+.. hint::
+
+   Erstelle jetzt einen Snapshot Deiner Server-VM.   
 
 Wenn Du nicht mehr an Deinem Server eingeloggt bist, melde Dich erneut an.
 
