@@ -681,7 +681,9 @@ Ubuntu Server
 
 .. hint:: 
 
-   Beachte für den Download des Ubuntu Servers, dass du immer die Version verwendest, die in den Systemvoraussetzungen genannt wurde. Zum jetzigen Zeitpunkt ist dies in der Angabe der URL berücksichtigt. 
+   Beachte für den Download des Ubuntu Servers, dass du immer die Version verwendest, die in den Systemvoraussetzungen genannt wurde. Gehe auf https://releases.ubuntu.com/jammy/ und überprüfe die dort zum Herunterladen angebotene Version für 22.04.?-live-server-amd64 und deren Checksumme.
+
+   Zum jetzigen Zeitpunkt ist dies in der Angabe der URL berücksichtigt, muss also eventuell an gepasst werden.
 
 In dem nun geöffneten Fenster trägst Du die URL
 
