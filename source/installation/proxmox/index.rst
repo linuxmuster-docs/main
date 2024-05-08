@@ -824,7 +824,7 @@ Das Entpacken kann einige Zeit in Anspruch nehmen. Anschließend sollte sich in 
 
 .. code::
 
-   openssl dgst -sha256 -verify OPNsense-24.1.pub -signature /tmp/image.sig OPNsense-24.1-dvd-amd64.iso.bz2
+   openssl dgst -sha256 -verify OPNsense-24.1.pub -signature /tmp/image.sig OPNsense-24.1-dvd-amd64.iso
 
 Der letzte Befehl sollte Dir ein ``Verified OK`` liefern.
 
