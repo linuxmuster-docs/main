@@ -90,7 +90,7 @@ Du gelangst direkt zum Installer und kannst das Layout der Tastatur festlegen.
    :align: center
    :alt: OPNsense: Installer keymap
 
-   INstaller: Tstaturlayout festlegen
+   Installer: Tastaturlayout festlegen
 
 Standardmäßig ist ein amerikanisches Tastaturlayout voreingestellt. Gehe mit den Pfeiltasten auf den Eintrag ``( ) German (no accent keys)``. Wählen diesen mit ``<Select>`` aus.
 
