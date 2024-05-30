@@ -39,9 +39,9 @@ Bei der Rechneraufnahme legst Du fest, welche Konfigurationen für jede einzelne
   * Art des Gerätes
   * Aktivierung von LINBO
 
-Wie Du aus den letzten beiden Punkten erkennen kannst, ist die Aktivierung von LINBO nicht für jedes Gerät zwingend notwendig. So benötigt z.B. ein Netzwerk-Drucker kein eigenes Image. Dieser benötigt nur eine IP und eine Raumzuordnung. Des Weiteren ist seine Aufnahme notwendig, damit er im Active Directory des ``Samba-Dienstes`` des linuxmuster.net Servers aufgenommen wird und somit dem System bekannt ist.
+Wie Du aus den letzten beiden Punkten erkennen kannst, ist die Aktivierung von LINBO nicht für jedes Gerät zwingend notwendig. So benötigt z.B. ein Netzwerk-Drucker kein eigenes Image. Dieser benötigt nur eine IP und eine Raumzuordnung. Aber seine Aufnahme ist notwendig, damit er im Active Directory des ``Samba-Dienstes`` des linuxmuster.net Servers aufgenommen wird und somit dem System bekannt ist.
 
-Es gibt drei Möglichkeiten die Rechneraufnahme durchzuführen. Diese findest Du im Kapitel :ref:`hardware-registration-label` ausfürhlich beschrieben.
+Es gibt drei Möglichkeiten die Rechneraufnahme durchzuführen. Diese findest Du im Kapitel :ref:`hardware-registration-label` ausführlich beschrieben.
 
 **OS-Installation**
 
