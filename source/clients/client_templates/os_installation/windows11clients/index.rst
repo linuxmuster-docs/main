@@ -598,8 +598,7 @@ Hierzu führst Du folgende Schritte aus:
 im Fehlerfall
 -------------
 
-Zeitprobleme lösen
-^^^^^^^^^^^^^^^^^^
+* Zeitprobleme lösen*
 
 LINBO aktualisiert beim Sytemstart die Zeit in LINBO. In Windows ist die Zeit damit allerdings noch nicht synchronisiert. Wurde, wie zuvor beschrieben, der Win11-PC der Domäne hinzugefügt, dann erfolgt automatisch die Zeitsynchronisation des Client mit dem AD-Server / Domaincontroller.
 
@@ -611,8 +610,7 @@ Bei der Synchronisation zwischen Client und Server kann es zu Beginn zu Zeitabwe
 
    Wurde der linuxmuster.net Server vor Oktober 2022 installiert und treten hier noch Fehler auf, dann ist ggf. die Samba-Konfiguration für die Zeitsynchronisation zu korrigieren. Hinweise finden sich hier: https://github.com/linuxmuster/linuxmuster-base7/issues/144
 
-Domänenjoin verloren
-^^^^^^^^^^^^^^^^^^^^
+* Domänenjoin verloren*
 
 Hast z.B. nicht daran gedacht, nach dem Domänenjoin ein Image zu erstellen, so kann die Vertrauensstellung zwischen Client und Server verloren gegangen sein.
 
