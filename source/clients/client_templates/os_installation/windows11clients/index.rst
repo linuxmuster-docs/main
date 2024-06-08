@@ -22,7 +22,7 @@ Betriebssystem Windows 11 installieren
    
    Alternativ kannst Du aus einer aktuellen Windows 11 ISO-Datei mit Rufus eine Windows 11 Installations-ISO erstellen, die die Beschränkungen mit Secure Boot, TPM 2.0 und anderen Mindestanforderungen bei der Installation nicht prüft, so dass auch auf älterer Hardware Windows 11 noch installiert werden kann. 
    
-1. Du hast den PC wie zuvor beschrieben mit LINBO partioniert und formatiert. Danach hast Du den PC / die VM über CD/USB-Stick gebootet. 
+1. Du hast den PC wie zuvor beschrieben mit LINBO partitioniert und formatiert. Danach hast Du den PC / die VM über CD/USB-Stick gebootet. 
 
 .. hint:: 
 
@@ -148,16 +148,16 @@ Nach dem erneuten Start von Windows wählst Du Deine Region aus.
    
    Wähle ggf. ein zweites Tastaturlayout aus
 
-15. Mit Netzwerk verbinden.
+15. Ohne Netzwerkverbindung installieren. Hast Du den Muster-Client in der OPNsense noch nicht in der noproxy Gruppe eingetragen, kommst Du automatisch zu diesem Bildschirm. Klicke auf ``Ich habe kein Internet``
 
 .. figure:: media/24_windows-11-clients_connect-network.png
    :align: center
    :alt: Win11 Connect Network
    :width: 80%
    
-   Ohne Internet-verbindung installieren
+   Ohne Internetverbindung installieren
 
-16. Admin-Benutzer festlegen.
+16. Admin-Benutzer festlegen. Gib hier den Namen des lokal anzulegenden Admin-Benutzers an.
 
 .. figure:: media/26_windows-11-clients_create-admin-user.png
    :align: center
@@ -166,16 +166,10 @@ Nach dem erneuten Start von Windows wählst Du Deine Region aus.
    
    Lege den Benutzer admin an
 
-17. Kennwort festlegen und die Sicherheitsfragen beantworten.
+17. Lege im nächsten Bildschirm das Kennwort des neuen lokalen Admins fest.
 
-.. figure:: media/27_windows-11-clients_create-admin-password.png
-   :align: center
-   :alt: Win11 Create Admin Password
-   :width: 80%
-   
-   Lege das Kennwort für den lokalen Benutzer admin fest
 
-18. Aktivitätenverlauf deaktivieren. Gib auch für alle nachfolgenden Abfragen immer ``Nein`` oder ``minimal`` an.
+18. Beantworte die Sicherheitsfragen. Gib auch für alle nachfolgenden Abfragen immer ``Nein`` oder ``minimal`` an.
 
 .. figure:: media/28_windows-11-clients_deactivate-tracking.png
    :align: center
@@ -184,19 +178,17 @@ Nach dem erneuten Start von Windows wählst Du Deine Region aus.
    
    Deaktiviere das Tracking
 
-19. Restliche Einrichtungsschritte vornehmen.
+19. Führe die restlichen Einrichtungsschritte durch.
 
-20. Als Nutzer ``admin`` anlegen und Kennwort leer lassen oder ein bestimmtes setzen. Die nächsten Einstellungen ablehnen.
+20. Weitere gewünschte Einrichtungen ausführen (Programme, Hintergründe, usw.).
 
-21. Weitere gewünschte Einrichtungen ausführen (Programme, Hintergründe, usw.).
-
-22. Alle Updates installieren. Hierbei muss Windows immer wieder neu gestartet werden. Darauf achten, dass Windows aus LINBO heraus immer nur mit der GRÜNEN Pfeiltaste gestartet wird. 
+21. Alle Updates installieren. Hierbei muss Windows immer wieder neu gestartet werden. Darauf achten, dass Windows aus LINBO heraus immer nur mit der GRÜNEN Pfeiltaste gestartet wird. 
 
 .. hint::
 
    Achtung: Für den ersten Muster-Client muss in der OPNsense hierzu unter ``Firewall --> Aliase --> NoProxy --> Editieren --> IP`` der neue Muster-Clients hinzugefügt werden, damit dieser Internet-Zugriff hat.
 
-23. Gewünschte Einstellungen am Client vornehmen und Installation abschließen.
+22. Gewünschte Einstellungen am Client vornehmen und Installation abschließen.
 
 
 Global-Registry Patch für Windows 11
@@ -294,7 +286,7 @@ gibst Du als PC-Namen den in der Schulkonsole festlegen und danach das Kotno des
 
 Die kann z.B. wie folgt lauten: ``h00103\linuxadmin``
 
-Über ``System → Info → Diesen PC umbenennen`` einen Hostname vergeben, der *übereinstimmend* mit dem Hostnamen in der Gerätelististe ist.
+Über ``Einstellungen --> System --> Info --> Diesen PC umbenennen`` einen Hostname vergeben, der *übereinstimmend* mit dem Hostnamen in der Gerätelististe ist.
 
 .. figure:: media/43_windows-11-clients_rename-client.png
    :align: center
@@ -381,16 +373,16 @@ Der PC bootet nun wieder in LINBO.
 
 .. Attention::
 
-   Starte Windows 10 nun **NICHT** neu ! Nach dem Start in LINBO erstellst Du jetzt Muster-Image
+   Starte Windows 11 nun **NICHT** neu ! Nach dem Start in LINBO erstellst Du jetzt ein Muster-Image erstellen.
 
 LINBO Muster-Image mit Domänenbeitritt
 --------------------------------------
 
-Nachdem der Muster-Client mit Windows 10 - wie zuvor beschrieben - der Domäne hinzugefügt wurde, erstellst Du **jetzt** ein Image für den Muster-Client. Wird dieses Image auf andere Maschinen übertragen, so sind diese bereits in der Domäne aufgenommen.
+Nachdem der Muster-Client mit Windows 11 der Domäne hinzugefügt wurde, erstellst Du **jetzt** ein Image für den Muster-Client. Wird dieses Image auf andere Maschinen übertragen, so sind diese bereits in der Domäne aufgenommen.
 
 .. hint::
 
-   Nachdem eine Template-Maschine frisch der Domain gejoined ist, darf diese vor dem Upload nicht neu gestartet werden, da sonst das durch den DomainJoin neu erstellte Maschinenpasswort in der AD für diese Maschine mit einem falschen Maschinenpasswort ersetzt werden würde. Durch den Image-Upload wird das neue Passwort ausgelesen und in die macct-Datei   geschrieben, die zu dem Image gehört.
+   Nachdem eine Template-Maschine frisch der Domain gejoined ist, darf diese vor dem Upload nicht neu gestartet werden, da sonst das durch den DomainJoin neu erstellte Maschinenpasswort in der AD für diese Maschine mit einem falschen Maschinenpasswort ersetzt werden würde. Durch den Image-Upload wird das neue Passwort ausgelesen und in die macct-Datei geschrieben, die zu dem Image gehört.
 
 Image in LINBO erstellen
 ------------------------
@@ -547,6 +539,10 @@ Default Profil kopieren
 linuxmuster.net sieht vor, dass **Programminstallationen von global-admin** durchgeführt werden. Damit alle User die bei der Installation vorgenommenen Änderungen bekommen, muss das Profil des ``global-admin`` als ``Default`` Profil kopiert werden. 
 
 Dies kann mit dem dem freien Tool ``DefProf`` durchgeführt werden. Das Tool kann hier heruntergeladen werden: https://www.forensit.com/Downloads/DefProf.msi
+
+.. hint::
+
+   Für die Nutzung von DefProf mit Windows11 stehen noch weitere Tests aus.
 
 Das Ausführen der MSI-Datei entpackt das eigentliche Programm. Hast Du dies als Benutzer ``global-admin`` durchgeführt, siehst Du folgendes Fenster:
 
