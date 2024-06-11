@@ -542,7 +542,7 @@ Dies kann mit dem dem freien Tool ``DefProf`` durchgeführt werden. Das Tool kan
 
 .. hint::
 
-   Für die Nutzung von DefProf mit Windows11 stehen noch weitere Tests aus.
+   DefProf wurde für Windows 10 entwickelt. Das beschriebene Vorgehen funktioniert aber ebenfalls mit Windows 11.
 
 Das Ausführen der MSI-Datei entpackt das eigentliche Programm. Hast Du dies als Benutzer ``global-admin`` durchgeführt, siehst Du folgendes Fenster:
 
@@ -564,9 +564,9 @@ Hierzu führst Du folgende Schritte aus:
 
 2. Bist Du lokal als ``admin`` angemeldet, klickst Du mit der rechten Maustaste auf das Windows-Symbol unten links.
 
-3. Wähle dann in dem Kontextmenü ``Windows PowerShell(Administrator)`` aus.
+3. Wähle dann in dem Kontextmenü ``Terminal (Administrator)`` aus.
 
-4. Es öffnet sich die PowerShell-Eingabekonsole von Windows mit Administrator-Berechtigungen.
+4. Es öffnet sich die Eingabekonsole von Windows mit Administrator-Berechtigungen.
 
 5. Gebe nun in der Konsole den Befehl ``defprof`` gefolgt von dem als Default-Profil zu kopierenden Profil an.
 
@@ -574,7 +574,7 @@ Hierzu führst Du folgende Schritte aus:
 
 .. code::
 
-   c:\depfrof global-admin
+   c:\defprof global-admin
    
 7. Bei der Erstausführung müssen noch weitere Tools nachinstalliert werden. Bestätige dies mit ``Y``.
 
@@ -602,27 +602,40 @@ Bei der Synchronisation zwischen Client und Server kann es zu Beginn zu Zeitabwe
 
 .. hint:: Die Systemzeit sollte möglichst synchron mit dem Server sein, um Probleme mit der Domänenanmeldung, dem Domänenbeitritt zu vermeiden! Auch andere Dienste (z.B. WSUS, KMS, ...) machen bei Zeitdifferenzen Probleme.
 
-.. attention::
-
-   Wurde der linuxmuster.net Server vor Oktober 2022 installiert und treten hier noch Fehler auf, dann ist ggf. die Samba-Konfiguration für die Zeitsynchronisation zu korrigieren. Hinweise finden sich hier: https://github.com/linuxmuster/linuxmuster-base7/issues/144
-
 * Domänenjoin verloren*
 
-Hast z.B. nicht daran gedacht, nach dem Domänenjoin ein Image zu erstellen, so kann die Vertrauensstellung zwischen Client und Server verloren gegangen sein.
+Hast Du z.B. nicht daran gedacht, nach dem Domänenjoin ein Image zu erstellen, so kann die Vertrauensstellung zwischen Client und Server verloren gegangen sein.
 
 Dies kannst Du wie folgt reparieren:
 
 1.  Melde Dich lokal am Windows-PC als admin an. Klicke mit der rechten Maustaste auf das Windows-Symbol unten links.
 
-2.  Wähle dann in dem Kontextmenü ``Windows PowerShell(Administrator)`` aus.
+2.  Wähle dann in dem Kontextmenü ``Shell (Administrator)`` aus.
 
-3.  Es öffnet sich die PowerShell-Eingabekonsole von Windows mit Administrator-Berechtigungen.
+3.  Es öffnet sich die Eingabekonsole von Windows mit Administrator-Berechtigungen.
 
-4.  Gib in der Windows PowerShell(Administrator) folgenden Befehl an:
+4.  Gib in der Windows Shell (Administrator) folgenden Befehl an:
 
 .. code::
 
    Reset-ComputerMachinePassword -Credential global-admin 
    
 5. Erstelle anschließend ein neues Image.
+
+LINBO: Registry Patches 
+-----------------------
+
+Die bisherigen Beispiele für die Windows 10 Regisry Patches sind i.d.R. auch mit Windows 11 nutzbar. 
+
+1. Für jedes Windows Image muss es einen Registry Patch File geben, der unter
+``/srv/linbo/images/<imagename>.reg`` abzulegen ist. Lautet der Name für das Image ``win11.qcow2``, dann muss der Registry File den Namen ``win11.reg`` tragen.
+
+2. In dem Registry Patch File muss die Samba-Domäne angepasst werden.
+
+3. Template ``win10.image.reg``: Registry Patch für den Hostnamen und angepasste Einträge. Diesen muss es mit dem image File geben - wie zuvor dargestellt.
+
+4. Template ``win10.global.reg``: Diese Vorlage findet sich ebenfalls unter ``/srv/linbo/examples/``. Dieser muss einmalig für den Windows 11 Muster-Client vor dem Domänen-Join aufgerufen werden. Wie dies anzuwenden ist, wurde zuvor ausführlich beschrieben.
+
+5. Template ``win11bypass.reg``: Werden diese Registry - Einträge angewendet, werden die Hardwareüberprüfungen beim Systemstart übergangen. Soll ein bestehendes Windows 10 Image auf Windows 11 aktualisiert werden, so sollte vorab win11bypass.reg eingespielt werden, damit Windows 11 ebenfalls auf nicht kompatibler Hardware ausgeführt wird.
+
 
