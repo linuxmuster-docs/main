@@ -630,9 +630,7 @@ Die bisherigen Beispiele für die Windows 10 Regisry Patches sind i.d.R. auch mi
 1. Für jedes Windows Image muss es einen Registry Patch File geben, der unter
 ``/srv/linbo/images/<imagename>.reg`` abzulegen ist. Lautet der Name für das Image ``win11.qcow2``, dann muss der Registry File den Namen ``win11.reg`` tragen.
 
-2. In dem Registry Patch File muss die Samba-Domäne angepasst werden.
-
-3. Template ``win10.image.reg``: Registry Patch für den Hostnamen und angepasste Einträge. Diesen muss es mit dem image File geben - wie zuvor dargestellt.
+2. Als Template steht hierfür ``win10.image.reg`` zur Verfügung: Registry Patch für den Hostnamen und angepasste Einträge. Diesen muss es mit dem Image File geben - wie zuvor dargestellt (z.B. win11.reg).
 
 4. Template ``win10.global.reg``: Diese Vorlage findet sich ebenfalls unter ``/srv/linbo/examples/``. Dieser muss einmalig für den Windows 11 Muster-Client vor dem Domänen-Join aufgerufen werden. Wie dies anzuwenden ist, wurde zuvor ausführlich beschrieben.
 
