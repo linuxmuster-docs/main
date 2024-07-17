@@ -5,7 +5,7 @@ Drucker auf dem Server hinzufügen
 
 Um die als Geräte bereits importieren Netzwerkdrucker einzurichten, sind diese auf dem linuxmuster.net Server mithilfe von CUPS einzurichten und bereitzustellen. Die gesamte Druckersteuerung erfolgt via Active Directory für alle Betriebssysteme, so dass diese zunächst auf dem Server bereitgestellt, den AD-Gruppen zugewiesen und ggf. Anpassungen pro Client Betriebssystem vorgenommen werden müssen.
 
-Für die Nutzung von HP-Druckern ist es hilfreich, auf dem Server die Bibliothek ``HPLIP`` zu installieren und dann die Drucker einzuruichten.
+Für die Nutzung von HP-Druckern ist es hilfreich, auf dem Server die Bibliothek ``HPLIP`` zu installieren und dann die Drucker einzurichten.
 
 Zur Installation der HPLIP Bibliothek rufst Du unter Ubuntu 22.04 LTS Server folgenden Befehl auf dem Server auf:
 

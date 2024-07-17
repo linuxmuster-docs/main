@@ -22,6 +22,11 @@ Bevor es losgehen kann, müssen wir dem `global-admin` noch die nötigen Rechte 
    chgrp -R "LINUXMUSTER\Domain Admins" /var/lib/samba/printers/
    chmod -R 2775 /var/lib/samba/printers/
 
+.. hint::
+
+   Ersetze LINUXMUSTER durch den Samba-Domänennamen z.B. SCHULE, den Du beim Setup eingerichtet hast.
+
+
 Dem Server vertrauen
 --------------------
 
@@ -41,7 +46,7 @@ Navigiere zu ``Computerkonfiguration → Richtlinien → Administrative Vorlagen
    :alt: RSAT-Printer
    :align: center
 
-Doppelkilicke auf ``Point and Print Einschränkungen``, aktiviere die Richtlinie und setzen folgende Einstellungen:
+Doppelklicke auf ``Point and Print Einschränkungen``, aktiviere die Richtlinie und setzen folgende Einstellungen:
 
 .. image:: media/printers-windows-clients-03.png
    :alt: Point and Print Einschränkungen
@@ -70,9 +75,6 @@ Starte den Rechner neu.
 
 Druckertreiber auf dem Server installieren
 ------------------------------------------
-
-.. hint::
-   Es können ausschließlich v3 Druckertreiber verwendet werden. V4 Druckertreiber werden Stand Samba 4.7 (September 2019) noch nicht unterstützt.
 
 Jetzt können wir die Druckertreiber auf dem Server installieren.
 
