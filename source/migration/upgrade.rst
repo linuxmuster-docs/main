@@ -70,7 +70,7 @@ Importiere zuerst die Schlüsseldatei:
 
    Bei ``wget -qO-`` ist der Großbuchstabe O zu verwenden - n i c h t die Zahl 0. 
 
-Füge danach das Linuxmuster 7.2 Testing-Repro hinzu:
+Füge danach das Linuxmuster 7.2 - Repository hinzu:
 
 .. code::
 
