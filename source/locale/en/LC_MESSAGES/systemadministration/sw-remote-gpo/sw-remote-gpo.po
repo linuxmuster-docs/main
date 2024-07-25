@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/systemadministration/sw-remote-gpo/sw-remote-gpo.rst:2
+msgid "Softwareinstallation via GPO"
+msgstr ""
+
+#: ../../source/systemadministration/sw-remote-gpo/sw-remote-gpo.rst:6
+msgid ""
+"Voraussetzung: Windows-PC mit installierten RSAT-Tools. Siehe: "
+"https://docs.linuxmuster.net/de/latest/systemadministration/gpo/gpo.html"
+"#installation-der-rsat-remote-server-administration-tools"
+msgstr ""
+
+#: ../../source/systemadministration/sw-remote-gpo/sw-remote-gpo.rst:8
+msgid ""
+"Über GPOs können drei Arten von Paketen installiert werden: Windows-"
+"Installationspakete mit der Dateiendung .MSI, Transformationsdateien mit "
+"der Dateiendung .MST und Patch-Dateien, die auf .MSP enden."
+msgstr ""
+
+#: ../../source/systemadministration/sw-remote-gpo/sw-remote-gpo.rst:10
+msgid ""
+"Software kann an Computer oder User verteilt werden. In diesem Beispiel "
+"erfolgt die Verteilung an die Computer in einem bestimmten Raum."
+msgstr ""
+
+#: ../../source/systemadministration/sw-remote-gpo/sw-remote-gpo.rst:12
+msgid ""
+"Zunächst sollte die Software auf einem UNC-Pfad abgelegt werden, von dem "
+"aus die Installation ausgeführt werden kann. Das Server-Share "
+"``\\\\server\\default-school\\program`` ist ungeeignet. Besser: "
+"``\\\\server\\sysvol\\domänenname\\``. Hier einen Unterordner "
+"``Software`` erstellen und die MSI-Pakete ablegen."
+msgstr ""
+
+#: ../../source/systemadministration/sw-remote-gpo/sw-remote-gpo.rst:15
+msgid "Neue GPO erzeugen"
+msgstr ""
+
+#: ../../source/systemadministration/sw-remote-gpo/sw-remote-gpo.rst:17
+msgid ""
+"Melde Dich an einem PC mit ``global-admin`` an und starte die "
+"``Gruppenrichtlinienverwaltung``. Klappe den Baum auf bis zum gewünschten"
+" Raum. Mache einen Rechtsklick auf den gewünschten Raum und wähle "
+"``Gruppenrichtlinienobjekt hier erstellen und verknüpfen``. Im folgenden "
+"Fenster einen sinnvollen Namen vergeben (z.B. Software für Raum X) und "
+"mit ``OK`` bestätigen."
+msgstr ""
+
+#: ../../source/systemadministration/sw-remote-gpo/sw-remote-gpo.rst:19
+#: ../../source/systemadministration/sw-remote-gpo/sw-remote-gpo.rst:25
+msgid "Gruppenrichtlinienverwaltung"
+msgstr ""
+
+#: ../../source/systemadministration/sw-remote-gpo/sw-remote-gpo.rst:23
+msgid ""
+"Nun muss die neue GPO noch bearbeitet werden. Mache dazu einen "
+"Rerchtsklick darauf und wähle ``Bearbeiten``."
+msgstr ""
+
+#: ../../source/systemadministration/sw-remote-gpo/sw-remote-gpo.rst:30
+msgid ""
+"Der Gruppenrichtlinienverwaltungs-Editor öffnet sich. Gehe zu: "
+"``Computerkonfiguration`` -> ``Richtlinien`` -> ``Softwareeinstellungen``"
+" -> ``Softwareinstallation``"
+msgstr ""
+
+#: ../../source/systemadministration/sw-remote-gpo/sw-remote-gpo.rst:32
+msgid "Gruppenrichtlinienverwaltungs-Editor"
+msgstr ""
+
+#: ../../source/systemadministration/sw-remote-gpo/sw-remote-gpo.rst:36
+msgid ""
+"Mache einen Rechtsklick auf ``Softwareinstallation`` und wähle ``Neu`` ->"
+" ``Paket``. Gibt den UNC-Pfad zum Paket ein. Wichtig: Das Paket muss an "
+"einer Stelle liegen, auf die der Ziel-Computer Zugriff hat! Darauf weißt "
+"der folgende Dialog auch nochmals hin."
+msgstr ""
+
+#: ../../source/systemadministration/sw-remote-gpo/sw-remote-gpo.rst:38
+msgid ""
+"Bei der Bereitstellungsmethode ``Zugewiesen`` auswählen und mit ``Okay`` "
+"bestätigen."
+msgstr ""
+
+#: ../../source/systemadministration/sw-remote-gpo/sw-remote-gpo.rst:40
+msgid "Damit die neue GPO am Ziel-PC greift, muss dieser neu gestartet werden."
+msgstr ""
+
+#: ../../source/systemadministration/sw-remote-gpo/sw-remote-gpo.rst:43
+msgid "bekannte Probleme:"
+msgstr ""
+
+#: ../../source/systemadministration/sw-remote-gpo/sw-remote-gpo.rst:45
+msgid "Hibernate / Fastboot nicht deaktiviert"
+msgstr ""
+
+#: ../../source/systemadministration/sw-remote-gpo/sw-remote-gpo.rst:47
+msgid ""
+"Die GPO wird nicht übernommen, weil die Verbindung zu schnell ist. In "
+"diesem Fall auf dem Ziel-PC mittels ``gpedit.msc`` die lokale GPO "
+"aktivieren: ``Computerkonfiguration\\Administrative "
+"Vorlagen\\System\\Anmelden`` - ``Beim Neustarten des Computers und bei "
+"der Anmeldung immer auf das Netzwerk warten``."
+msgstr ""
+
+#: ../../source/systemadministration/sw-remote-gpo/sw-remote-gpo.rst:50
+msgid "Software erneut verteilen"
+msgstr ""
+
+#: ../../source/systemadministration/sw-remote-gpo/sw-remote-gpo.rst:52
+msgid ""
+"Wurde die Software absichtlich oder unabsichtlich mit einem lokalen "
+"Administrator auf dem Ziel-PC gelöscht, muss das Paket neu verteilt "
+"werden. Dazu im Gruppenrichtlinienverwaltungs-Editor unter "
+"``Computerkonfiguration`` -> ``Richtlinien`` -> ``Softwareeinstellungen``"
+" -> ``Softwareinstallation`` einen Rechtsklick auf die Software machen "
+"und ``Alle Aufgaben -> Entfernen`` wählen. Anschließend das Paket wieder "
+"neu hinzufügen."
+msgstr ""
+

@@ -1,0 +1,221 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/appendix/contribute/guidelines.rst:4
+msgid "Leitlinien zur Dokumentation"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:8
+msgid "Strukturguide"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:10
+msgid "Auf Ebene der Dateien:"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:12
+msgid "**rst-Dateien**"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:14
+msgid ""
+"Dateinamen klein schreiben, englisch Begriffe, Leerzeichen vermeiden, "
+"Bindestrich (-) statt Unterstrich (_)"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:15
+msgid ""
+"Eine rst-Datei pro Kapitel, möglichst ein englischer Begriff, bsp: "
+"configuration.rst"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:17
+msgid "**Medien, wie Bilder, etc.**"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:19
+msgid "In einen Unterordner `media/` des Kapitles ablegen"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:20
+msgid "Benennung der Medien-Dateien:"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:26
+msgid ""
+"(unter)kapitelbezeichnung <-- Titel des Kapitels bzw. des Unterkapitels "
+"in dem die Medien-Datei verwendet wird"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:27
+msgid ""
+"laufende-nummer <-- Bilder ihrer Verwendung von oben nach unten "
+"fortlaufend durchnummeriert; eine führende Null"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:28
+msgid ""
+"beschreibung-des-dargestellten <-- Bei Fenstern zum Beispiel der Namen "
+"des Fensters"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:29
+msgid "Unterstrich (_) um die drei Felder voneinander abzugrenzen"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:32
+msgid "Beispiel:"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:39
+msgid ""
+"Hinzugefügte Dateien erben von der vorhergehenden Datei die Laufende-"
+"Nummer und diese wird um eine neu aufsteigende Nummerierung ergänzt."
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst
+msgid "propose changes"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:45
+msgid "Beispiel:  ``*1`` erste Ergänzung; ``*2`` zweite Ergänzung"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:47
+msgid "**Medien und Bilder, die in der Dokumentation mehrfach genutzt werden.**"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:49
+msgid ""
+"Du solltest von diesem Schema abweichen, da diese nur in dem root-"
+"Verzeichnis vorhanden sein müssen. Indem auf die laufenden Nummern und "
+"Kapitelbezeichnungen verzichtet wird, werden sie als solche kenntlich "
+"gemacht. Beispiel wäre die SVG-Grafik follow_arrow.svg die dann mit "
+"/media/follow_arrow.svg in der Datei /guided_inst.subst eingebunden wird."
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:52
+msgid "Styleguide"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:54
+msgid "Verwende \"Du\""
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:55
+msgid ""
+"Benutze zwei ````backticks```` für URLs, URIs, Dateipfade und Dateinamen "
+"und Code im Fließtext (inline)"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:56
+msgid ""
+"Benutze einen ```backtick``` für das Hervorheben für Benutzernamen, "
+"Schaltflächen, besondere Aktionen"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:57
+msgid "für Konsolenbefehle nutze"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:66
+msgid ""
+"Für Bilder kann man image oder figure verwenden. Bei figure kann man "
+"Bildunterschriften hinzufügen."
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:77
+msgid ""
+"Ein Kapitel sollte einen ``toctree`` enthalten, wenn es mehrere Dateien "
+"gibt."
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:79
+msgid ""
+"Ein Kapitel kann ein Label erhalten bzw. muss eines erhalten wenn es als "
+"Sprungziel dienen könnte."
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:88
+msgid "Die Bennung dieser Sprungpunkte sollen immer mit ``-label`` enden."
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:90
+msgid "Mit diesem Sprungpunkt kann man an anderer Stelle auf ihn verweisen"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:96
+msgid "Um eine Tabelle"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:99
+msgid "Spalte A"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:99
+msgid "Spalte B"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:99
+msgid "Spalte C"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:101
+msgid "Bla"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:101
+msgid "Balbla"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:101
+msgid "Blablabla"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:102
+msgid "Blub"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:102
+msgid "Blubblub"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:102
+msgid "Blubblubblub"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:103
+msgid "Rababa"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:103
+msgid "Rababarababa"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:103
+msgid "Rabararabararabara"
+msgstr ""
+
+#: ../../source/appendix/contribute/guidelines.rst:106
+msgid "einzustellen, nutze folgende einfache Syntax:"
+msgstr ""
+

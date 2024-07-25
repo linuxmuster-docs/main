@@ -1,83 +1,158 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, linuxmuster.net
-# This file is distributed under the same license as the linuxmuster.net package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
+"Language-Team: English "
+"(https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../source/user-management/preparation-newterm/index.rst:2
+#: ../../source/user-management/preparation-newterm/index.rst:5
 msgid "Vorbereitung am Schuljahresanfang"
 msgstr ""
 
-#: ../../source/user-management/preparation-newterm/index.rst:5
+#: ../../source/user-management/preparation-newterm/index.rst:11
 msgid "Klassenliste aktualisieren"
 msgstr ""
 
-#: ../../source/user-management/preparation-newterm/index.rst:7
+#: ../../source/user-management/preparation-newterm/index.rst:13
 msgid ""
-"Zu Schuljahresbeginn müssen Sie als Lehrer einmalig die Klassenliste "
-"aktualisieren. Sie fügen neue Klassen, die Sie unterrichten, hinzu und "
-"tragen Klassen aus, die Sie abgegeben haben."
+"Zu Schuljahresbeginn muss jeder Lehrer seine Klassenliste aktualisieren. "
+"Neu zu unterrichtende Klassen sind hinzuzufügen und nicht mehr "
+"unterrichtete Klassen sind auszutragen. Voraussetzung für die Zuordnung "
+"neuer Klassen ist, dass diese im linuxmuster.net System bereits "
+"existieren. Ihr Schuladministrator muss daher alle neuen Klassen- und "
+"Schülerdaten bereits aus der Schulverwaltung exportiert und in "
+"linuxmuster.net importiert haben."
 msgstr ""
 
-#: ../../source/user-management/preparation-newterm/index.rst:9
+#: ../../source/user-management/preparation-newterm/index.rst:15
 msgid ""
-"Um die Klassenliste zu aktualisieren, melden Sie sich zunächst als Lehrer an"
-" der Schulkonsole an."
+"Um die Klassenliste als Lehrer zu aktualisieren, erfolgt zunächst die "
+"Anmeldung in der Schulkonsole als Lehrer."
 msgstr ""
 
-#: ../../source/user-management/preparation-newterm/index.rst:14
+#: ../../source/user-management/preparation-newterm/index.rst:-1
+msgid "Login as a tacher"
+msgstr ""
+
+#: ../../source/user-management/preparation-newterm/index.rst:22
 msgid "Klassenliste auswählen"
-msgstr ""
-
-#: ../../source/user-management/preparation-newterm/index.rst:16
-msgid ""
-"Nach erfolgreicher Anmeldung in der Schulkonsole für Lehrer, wählen Sie aus "
-"dem Menü `Klassen` und danach den Unterpunkt `Klassenliste` aus."
-msgstr ""
-
-#: ../../source/user-management/preparation-newterm/index.rst:20
-msgid "Sie sehen dann die bereits zugeordneten Klassen."
 msgstr ""
 
 #: ../../source/user-management/preparation-newterm/index.rst:24
 msgid ""
-"Unter den bereits zugeordneten Klassen finden Sie ein Drop-down Menü, in dem"
-" Sie diejenigen Klassen finden, die Sie sich noch zuordnen können."
+"Um Klassenlisten zu aktualisieren, ist nach erfolgreicher Anmeldung als "
+"Lehrer das Menü ``Klassenzimmer -> Einschreiben`` auszuwählen."
 msgstr ""
 
-#: ../../source/user-management/preparation-newterm/index.rst:28
+#: ../../source/user-management/preparation-newterm/index.rst:-1
+msgid "choose enrole"
+msgstr ""
+
+#: ../../source/user-management/preparation-newterm/index.rst:30
 msgid ""
-"Wählen Sie aus dieser Liste nun diejenige Klasse aus, die Sie hinzufügen "
-"möchten und klicken auf den Button `eintragen`. Benötigen Sie mehrere neue "
-"Klasse, so fügen Sie diese nacheinander hinzu."
+"Jede Klasse, die dem Leher zugeordnet ist, ist mit einem Auswahlhäkchen "
+"markiert. Für Klassen, die nun dem Lehrer neu hinzugefügt werden sollen, "
+"ist das Häkchen vor der betreffenden Klasse zu setzen. Für Klassen, die "
+"im neuen Schuljahr nicht mehr dem Lehrer zugeordnet sein sollen, ist das "
+"Häkchen zu deaktivieren."
 msgstr ""
 
-#: ../../source/user-management/preparation-newterm/index.rst:32
+#: ../../source/user-management/preparation-newterm/index.rst:-1
+msgid "change class enrolement"
+msgstr ""
+
+#: ../../source/user-management/preparation-newterm/index.rst:38
+msgid ""
+"Danach sind die Änderungen unten auf der Seite mit ``Übernehmen`` "
+"dauerhaft anzuwenden."
+msgstr ""
+
+#: ../../source/user-management/preparation-newterm/index.rst:40
+msgid "Dies Änderungen stellen sich dann wie folgt dar:"
+msgstr ""
+
+#: ../../source/user-management/preparation-newterm/index.rst:-1
+msgid "control of new class enrolement"
+msgstr ""
+
+#: ../../source/user-management/preparation-newterm/index.rst:47
 msgid "Neue Anmeldung"
 msgstr ""
 
-#: ../../source/user-management/preparation-newterm/index.rst:34
+#: ../../source/user-management/preparation-newterm/index.rst:49
 msgid ""
-"Abschliessend müssen Sie sich von Ihrem Client abmelden und wieder neu "
-"anmelden, damit die Netzlaufwerke korrekt zugeordnet sind."
+"Abschließend müssen Sie sich von Ihrem Client abmelden und wieder neu "
+"anmelden, damit die Netzlaufwerke korrekt zugeordnet werden."
 msgstr ""
 
-#: ../../source/user-management/preparation-newterm/index.rst:36
+#: ../../source/user-management/preparation-newterm/index.rst:51
 msgid ""
-"Dies können Sie kontrollieren, indem Sie nach der erneuten Anmeldung mit dem"
-" Dateimanager prüfen, ob für die neue Klasse ein Tauschverzeichnis vorhanden"
-" ist."
+"Dies können Sie kontrollieren, indem Sie nach der erneuten Anmeldung mit "
+"dem Dateimanager prüfen, ob für die neue Klasse ein Tauschverzeichnis "
+"vorhanden ist."
 msgstr ""
+
+#~ msgid ""
+#~ "Zu Schuljahresbeginn müssen Sie als "
+#~ "Lehrer einmalig die Klassenliste "
+#~ "aktualisieren. Sie fügen neue Klassen, "
+#~ "die Sie unterrichten, hinzu und tragen"
+#~ " Klassen aus, die Sie abgegeben "
+#~ "haben."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Um die Klassenliste zu aktualisieren, "
+#~ "melden Sie sich zunächst als Lehrer "
+#~ "an der Schulkonsole an."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Nach erfolgreicher Anmeldung in der "
+#~ "Schulkonsole für Lehrer, wählen Sie aus"
+#~ " dem Menü `Klassen` und danach den"
+#~ " Unterpunkt `Klassenliste` aus."
+#~ msgstr ""
+
+#~ msgid "Sie sehen dann die bereits zugeordneten Klassen."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Unter den bereits zugeordneten Klassen "
+#~ "finden Sie ein Drop-down Menü, in"
+#~ " dem Sie diejenigen Klassen finden, "
+#~ "die Sie sich noch zuordnen können."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Wählen Sie aus dieser Liste nun "
+#~ "diejenige Klasse aus, die Sie hinzufügen"
+#~ " möchten und klicken auf den Button"
+#~ " `eintragen`. Benötigen Sie mehrere neue"
+#~ " Klasse, so fügen Sie diese "
+#~ "nacheinander hinzu."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Abschliessend müssen Sie sich von Ihrem"
+#~ " Client abmelden und wieder neu "
+#~ "anmelden, damit die Netzlaufwerke korrekt "
+#~ "zugeordnet sind."
+#~ msgstr ""
+

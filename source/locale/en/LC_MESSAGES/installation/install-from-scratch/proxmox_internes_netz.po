@@ -1,0 +1,176 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:7
+msgid "Proxmox in das interne Netz bringen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:13
+msgid "Du hast bis hiering bereits folgende Schritte absolviert:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:15
+msgid "Du hast die Firewall installiert,"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:16
+msgid "eine Erstkonfiguration der Firewall erstellt,"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:17
+msgid "Du hast einen Snapshot der Firewall-VM erstellt,"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:18
+msgid "Du hast die Server-VM erstellt"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:19
+msgid "Du hast Ubuntu-Server installiert und vorkonfiguriert"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:20
+msgid ""
+"Du hast den Server mit ``lmn-prepare`` für das spätere linuxmuster-setup "
+"vorbereitet,"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:21
+msgid "Du hast von der Server-VM einen Snapshot erstellt."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:23
+msgid ""
+"Hast Du diese Schritte erfolgreich durchlaufen, gilt es jetzt, die "
+"Netzwerk-Konfiguration des Proxmox-Host umzukonfigurieren."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:25
+msgid ""
+"Ziel ist es, dass der Proxmox-Host nunmehr ``nur noch im internen "
+"Netzwerk (green)`` erreichbar ist. Der Host wird dann durch die OPNsense "
+"- Firewall geschützt. Die OPNsense ist zugleich das neue Gateway für den "
+"Proxmox-Host, um Zugriffe in das externe Netz zu ermöglichen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:27
+msgid "Um dies umzusetzen, sind die Bridges umzukonfigurieren."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:29
+msgid ""
+"vmbr0 - red - externes Netzwerk   (IP im Beispiel 192.168.0.20/24 bzw. IP"
+" via DHCP)"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:30
+msgid "vmbr1 - green - internes Netzwerk (IP im LAN: 10.0.0.20/16)"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:32
+msgid ""
+"Rufe auf dem Proxmox-Host eine Eingabekonsole auf und ändere die Datei "
+"``/etc/network/interfaces`` wie folgt:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:59
+msgid "Danach must Du noch die Datei ``/etc/hosts`` anpassen:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:75
+msgid "Diese Einstellungen werden mit dem nächsten Start des Proxmox-Hosts aktiv."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:77
+msgid ""
+"Daher gilt es sicherszustellen das die OPNSense |reg| automatisch "
+"startet. Dafür bei (``Proxmox-Host`` --> ``VM`` --> ``Options`` --> "
+"``Start on boot``) die Aktivierung setzen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:84
+msgid "Autostart der OPNSense |reg|"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:86
+msgid "Hast Du dies erfolgreich umgesetzt, dann starte den Proxmox-Host neu."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:93
+msgid "Netzwerk für die Proxmox Installation"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:93
+msgid "Proxmox Netzwerk"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:95
+msgid ""
+"Du musst den Admin-PC an den internen Switch des grünen Netzes nach dem "
+"Neustart des Proxmox-Host, wie dargestellt, anschließen. Der Admin-PC "
+"benötigt nun eine manuell vergebene IP:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:97
+msgid "IP Address: 10.0.0.10/16"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:98
+msgid "Subnetzmaske: 255.255.0.0"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:99
+msgid "Gateway: 10.0.0.254"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:100
+msgid "DNS: 10.0.0.254,8.8.8.8"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:102
+msgid "Danach solltest Du vom Admin-PC aus folgende Hosts erreichen können:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:104
+msgid "10.0.0.20 - Proxmox-Host"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:105
+msgid "10.0.0.254 - OPNsense"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:106
+msgid "8.8.8.8 - externer DNS-Server"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:107
+msgid "linuxmuster.net - externe URL"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/proxmox_internes_netz.rst:109
+msgid ""
+"Der Proxmox-Host ist nun \"hinter\" der OPNsense |reg| und kann über "
+"diese auf das Internet zugreifen. Dafür muss die virtuelle Maschine der "
+"OPNsense |reg| aktiv sein, was Du mit dem vorherigen Schritt "
+"sichergestellt hast."
+msgstr ""
+

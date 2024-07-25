@@ -1,22 +1,64 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, linuxmuster.net
-# This file is distributed under the same license as the linuxmuster.net package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
+"Language-Team: English "
+"(https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../source/systemadministration/printer/index.rst:2
-msgid "Drucker"
+#: ../../source/systemadministration/printer/index.rst:21
+msgid "Drucker einrichten"
 msgstr ""
+
+#: ../../source/systemadministration/printer/index.rst:7
+msgid "Drucker einbinden"
+msgstr ""
+
+#: ../../source/systemadministration/printer/index.rst:11
+msgid "Zur Einrichtung der Drucker sollte folgendes Vorgehen eingehalten werden:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/index.rst:13
+msgid "Infos zu allen Druckern zusammentragen"
+msgstr ""
+
+#: ../../source/systemadministration/printer/index.rst:14
+msgid "Drucker via Schulkonsole als Geräte hinzufügen"
+msgstr ""
+
+#: ../../source/systemadministration/printer/index.rst:15
+msgid "Drucker auf dem Server mithilfe von CUPS einrichten"
+msgstr ""
+
+#: ../../source/systemadministration/printer/index.rst:16
+msgid "Drucker via AD-Gruppenzuweisung konfigurieren"
+msgstr ""
+
+#: ../../source/systemadministration/printer/index.rst:17
+msgid "Auf dem jeweiligen Linux- oder Windows-Client ggf. Anpassungen vornehmen"
+msgstr ""
+
+#: ../../source/systemadministration/printer/index.rst:19
+msgid ""
+"Sammle nun zuerst die Infos zu den Druckern, die Du im gesamten Netzwerk "
+"einrichten möchtest."
+msgstr ""
+
+#~ msgid "Drucker"
+#~ msgstr ""
+

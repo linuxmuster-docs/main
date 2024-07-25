@@ -1,0 +1,190 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:7
+msgid "Aktualisieren der Festplattengrößen der OPNsense®-VM"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:15
+msgid ""
+"Diesen Abschnitt musst Du nur ausführen, sofern Du in Deinem Hypervisor "
+"die HDD-Größe der OPNsense® bereits vergrößert hast."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:18
+msgid "Überblick"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:19
+msgid ""
+"OPNsense® basiert auf FreeBSD, sodass die Erweiterung der "
+"Festplattengröße von dem Vorgehen der Server-VM abweicht."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:22
+msgid "Die Erweiterung der Festplattengröße folgt folgendem Ablauf:"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:24
+msgid "Starten der VM."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:25
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:57
+msgid "Prüfen, ob die neue HDD-Größe an die VM durchgereicht wurde."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:26
+msgid "Partitionsgrößen prüfen."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:27
+msgid "Festplatte ad0 anpassen."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:28
+msgid "Partition ad0s1 anpassen."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:29
+msgid "Änderungen anwenden."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:30
+msgid "Tests durchführen."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:31
+msgid "Reboot"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:33
+msgid ""
+"Gleich bleibt, dass zu Beginn ein Snapshot erstellt werden sollte und die"
+" Virtuelle Disk im Hypervisor wie beschrieben vergrößert sein muss."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:37
+msgid "4.1 Starten der VM"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:39
+msgid ""
+"Starten der VM und öffnen einer Konsole für diese ist wie zuvor "
+"beschrieben erfolgt."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:-1
+msgid "login as user root"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:45
+msgid "Anmeldung als `root` mit dem bekannten Passwort."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:-1
+msgid "open OPNsense® shell"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:51
+msgid "Öffnen einer Shell mit der Taste `8`."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:55
+msgid "4.2 HDD-Größe prüfen"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:59
+msgid ""
+"Nach der Vergrößerung der virtuellen Platte und dem Systemstart wird "
+"überprüft, ob die Änderung vom System erkannt wird."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:66
+msgid "Ausgabe des Befehls liefert:"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:81
+msgid "4.3 Partitionsgrößen prüfen"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:87
+msgid ""
+"Die Ausgabe zeigt Dir an, dass derzeit nur der bisher verwendete Platz zu"
+" Verfügung steht:"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:98
+msgid ""
+"Es ist zu erkennen, dass die Platte `da0` nur 10 GByte nutzt. Aus 4.2. "
+"wurde ersichtlich das weitere 40 GByte zur Verfügung stehen."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:101
+msgid "4.4 Festplate da0/ada0 anpassen"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:107
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:120
+msgid "Ausgabe des Befehls:"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:114
+msgid "4.5 Partition da0s1/ada0s1 anpassen"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:127
+msgid "4.6 Änderungen anwenden"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:-1
+msgid "Output from service growfs onestart"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:138
+msgid "4.7 Tests durchführen"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:140
+msgid ""
+"Mittels `df -h`, `gpart show` und `gpart status` kannst Du überprüfen, ob"
+" die von Dir gewünschte Größenänderung erfolgreich übernommen wurden."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:169
+msgid "4.8 Reboot"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:171
+msgid "Führe nun einen Reboot der VM aus."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:174
+msgid "Weiterführende Erklärungen zu FreeBSD zu diesem Thema findest Du hier:"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-opnsense-vm.rst:176
+msgid ""
+"https://www.digitalocean.com/community/questions/freebsd-growfs-"
+"operation-not-permitted-aka-enlarge-your-partition"
+msgstr ""
+

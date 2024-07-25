@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/classroom/access-control.rst:5
+msgid "Zugriff auf WLAN, Internet und Drucker regeln"
+msgstr ""
+
+#: ../../source/classroom/access-control.rst:7
+msgid ""
+"In einer Klasse und einem Kurs kann einzelnen Personen oder dem gesamten "
+"Kurs / der Klasse die Berechtigung zu Drucken oder der Zugriff auf WLAN "
+"und Internet gegeben oder genommen werden. Voraussetzung für diese "
+"Funktionen ist die :ref:`Aufnahme des Schülers <session-setup-label>` in "
+"einen Kurs."
+msgstr ""
+
+#: ../../source/classroom/access-control.rst:9
+msgid ""
+"Öffne in der Schulkonsole unter ``KLASSENZIMMER -> Session-PREVIEW`` "
+"wähle die geünschte Klasse oder den gewünschten Kurs."
+msgstr ""
+
+#: ../../source/classroom/access-control.rst:15
+msgid "WebUI Select Session"
+msgstr ""
+
+#: ../../source/classroom/access-control.rst:15
+msgid "Starte die Session für die Klasse"
+msgstr ""
+
+#: ../../source/classroom/access-control.rst:17
+msgid "Es wird Liste mit Schülern des Kurses bzw. der Klasse angezeigt."
+msgstr ""
+
+#: ../../source/classroom/access-control.rst:23
+msgid "WebUI List Session"
+msgstr ""
+
+#: ../../source/classroom/access-control.rst:23
+msgid "Liste aller Schüler der Klasse / des Kurses"
+msgstr ""
+
+#: ../../source/classroom/access-control.rst:25
+msgid ""
+"Für jeden einzelnen und für alle Schüler können folgende Funktionen "
+"aktiviert oder deaktiviert werden:"
+msgstr ""
+
+#: ../../source/classroom/access-control.rst:27
+msgid "den Prüfungsmodus (siehe :ref:`Prüfungsmodus<exam-and-transfer-label>`)"
+msgstr ""
+
+#: ../../source/classroom/access-control.rst:28
+msgid "WLAN-Zugang"
+msgstr ""
+
+#: ../../source/classroom/access-control.rst:29
+msgid "Internetzugang"
+msgstr ""
+
+#: ../../source/classroom/access-control.rst:30
+msgid "Druckerzugriff"
+msgstr ""
+
+#: ../../source/classroom/access-control.rst:36
+msgid "WebUI Session Column per Function"
+msgstr ""
+
+#: ../../source/classroom/access-control.rst:36
+msgid "Spalten mit den zu-/abschaltbaren Funktionen pro Schüler"
+msgstr ""
+
+#: ../../source/classroom/access-control.rst:38
+msgid ""
+"Soll eine Funktion für alle Schüler aktiviert werden, klickst Du nur auf "
+"das Symbol des Spaltenkopfen (z.B. WLAN)."
+msgstr ""
+
+#: ../../source/classroom/access-control.rst:44
+msgid "WebUI Session WLAN activated"
+msgstr ""
+
+#: ../../source/classroom/access-control.rst:44
+msgid "WLAN für alle Schüler aktivieren"
+msgstr ""
+
+#: ../../source/classroom/access-control.rst:46
+msgid "Die Änderungen werden direkt angewendet."
+msgstr ""
+

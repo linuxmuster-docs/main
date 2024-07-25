@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/external-services/nextcloud/prerequesites.rst:3
+msgid "Vorüberlegungen zum Standort des Nextcloud-Services"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/prerequesites.rst:5
+msgid ""
+"Vor dem Einsatz einer Nextcloud ist zu überlegen, wie die Nutzung geplant"
+" ist und wie sich die technischen Voraussetzungen an der Schule "
+"darstellen."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/prerequesites.rst:7
+msgid ""
+"Hierbei spielen auch Überlegungen eine Rolle, ob die Daten, die auf den "
+"internen Home-Laufwerken der lmn7 liegen, über die Nextcloud eingebunden "
+"und zur Verfügung gestellt werden sollen. Sollte dies der Fall sein, so "
+"bietet sich ein interner Docker-Host an (u.a. auch aus "
+"Sicherheitsüberlegungen). Kann darauf verzeichtet werden und ist die  "
+"Anbindung der Schule nur mit begrenzter Bandbreite gegeben, so könnte "
+"eine externer Docker-Host besser für die Schule geeignet sein."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/prerequesites.rst:9
+msgid "Beide Szenarien werden nachstehend kurz dargestellt."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/prerequesites.rst:13
+msgid "Nextcloud auf einem internen Docker-Host"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/prerequesites.rst:18
+msgid ""
+"In der Grafik ist der Nextcloud-Service auf dem Docker-Host der Schule "
+"installiert. Da der Docker-Host Web-Services wie das Medien- und "
+"Raumbuchungssystem und die Nextcloud zur Verfügung stellt, ist er ein "
+"völlig eigenständiger Server, der außerhalb der linuxmuster.net steht. Er"
+" sollte also direkt an den Router angeschlossen sein und eine eigene IP-"
+"Adresse haben. Hier ist später darauf zu achten, dass die "
+"Portweiterleitungen am Router für den Docker-Host und die lmn7 korrekt "
+"gesetzt sind."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/prerequesites.rst:20
+msgid ""
+"Greift ein Gerät in der Schule, z.B. ein Tablett oder ein Handy, über die"
+" Nextcloud auf Daten zu, die in den Home-Laufwerken der lmn7 liegen, "
+"müssen die Daten nicht über das Internet gesendet werden. Hier ist der "
+"Datenzugriff schnell."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/prerequesites.rst:22
+msgid ""
+"Greift ein Gerät außerhalb der Schule über die Nextcloud auf Daten auf "
+"dem Schulserver zu, müssen die Daten vom Docker-Host über das Internet "
+"zum Gerät. Hier hängt die Geschwindigkeit von der Internetanbindung der "
+"Schule ab."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/prerequesites.rst:25
+msgid "Nextcloud auf einem externen Docker-Host"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/prerequesites.rst:30
+msgid ""
+"In der Grafik ist ein externer Nextcloud-Service außerhalb der Schule "
+"dargestellt."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/prerequesites.rst:32
+msgid ""
+"Greift ein Gerät in der Schule über die Nextcloud auf Daten auf dem "
+"Schulserver zu, müssen die Daten vom Schulserver über das Internet zum "
+"Nextcloud-Service und wieder zurück zum Schulserver. Hier ist der "
+"Datenzugriff erheblich langsamer als oben."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/prerequesites.rst:34
+msgid ""
+"Greift ein Gerät außerhalb der Schule über die Nextcloud auf Daten auf "
+"dem Schulserver zu, müssen die Daten vom Schulserver über das Internet "
+"zum Nextcloud-Service und dann zum Gerät. Der Datenzugriff ist hier nicht"
+" schneller als oben."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/prerequesites.rst:36
+msgid ""
+"Sollte ein Zugriff auf die Home-Laufwerke der lmn7 nicht vorgesehen sein,"
+" ist die externe Nextcloud, was die Rechenleistung angeht, "
+"leistungsstärker als eine interne Nextcloud."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/prerequesites.rst:38
+msgid ""
+"Falls Du bereits einen Nextcloud-Service hast, kannst Du das erste "
+"Kapitel überspringen."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/prerequesites.rst:41
+msgid "Voraussetzung: Docker-Host"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/prerequesites.rst:43
+msgid ""
+"Um den Nextcloud-Service in der hier beschriebenen Form zu betreiben, ist"
+" die Installation eines Docker-Hosts erforderlich. Hierzu ist ein "
+"dedizierter oder als VM entsprechend leistungsstarker Linux-Server mit "
+"Ubuntu 20.04 LTS zu installieren. Auf dem Server ist dann der Docker-Host"
+" einzurichten. Wie das geht siehst Du im Kaptitel :ref:`Installation "
+"eines Dockerhosts <dockerhost-install-label>`"
+msgstr ""
+

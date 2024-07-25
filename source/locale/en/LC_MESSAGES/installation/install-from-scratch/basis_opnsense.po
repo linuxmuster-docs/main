@@ -1,0 +1,1545 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:7
+msgid "Anlegen und Installieren der Firewall"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:14
+msgid "Installation der OPNsense |reg|"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:18
+msgid ""
+"Bist Du zuvor der Anleitung :ref:`Proxmox vorbereiten <install-on-"
+"proxmox-label>` gefolgt, dann kannst Du fortfahren mit: `Erster Start der"
+" Firewall`_"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst
+msgid "Stand nach Proxmox Installation"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:24
+msgid "Stand nach der vorhergehenden Beschreibung"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:26
+msgid ""
+"Falls Du Dich für eine andere Installationsart entschieden hast, musst Du"
+" den dargestellten Aufbau herstellen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:28
+msgid ""
+"Lade Dir die ISO-Datei der OPNsense |reg| von der Seite "
+"https://opnsense.org/download/ herunter."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:32
+msgid ""
+"Die zuletzt freigegeben OPNsense Version für das Setup von "
+"linuxmuster.net v7.2 ist die Version 24.1"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:34
+msgid "[Stand: Februar 24]."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:36
+msgid ""
+"wget https://mirror.informatik.hs-"
+"fulda.de/opnsense/releases/24.1/OPNsense-24.1-dvd-amd64.iso.bz2"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:38
+msgid ""
+"Nutze als Architektur ``amd64`` und als ``image type dvd`` und einen "
+"Mirror, der in Deiner Nähe ist. Du erhältst dann ein mit ``bz2`` "
+"komprimiertes ISO-Image. Entpacke die heruntergeladene Datei. Siehe "
+"hierzu auch :ref:`install-on-proxmox-label` - dort Kapitel `Vorbereiten "
+"des ISO-Speichers -> OPNsense |reg|`."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:41
+msgid "Unter Linux ist folgender Befehl anzugeben:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:48
+msgid ""
+"In der Virtualisierungsumgebung lädst Du die ISO-Datei auf den ISO-"
+"Speicher."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:52
+msgid ""
+"Willst Du in einer VM installieren, so musst Du für die neue VM folgende "
+"Mindesteinstellungen für die Hardware angeben:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:54
+msgid "template - other install media, installation from ISO library,"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:55
+msgid "Boot-Mode - UEFI (Achtung: xcp-ng: Boot/MBR),"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:56
+msgid "1 vCPU"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:57
+msgid "2 GiB RAM"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:58
+msgid "storage 10 GiB"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:59
+msgid "2 NIC mit Zuordnung zu vSwitch red, green."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:61
+msgid ""
+"Für den produktiven Betrieb müssen diese Hardware-Einstellungen "
+"**deutlich** angehoben werden (z.B.: 4 vCPU, 8 GiB RAM, 50 GiB SSD, 3 "
+"NIC)."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:66
+msgid "Erster Start der Firewall"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:68
+msgid ""
+"Starte dann OPNsense |reg| auf dem Rechner oder in der neu angelegten VM "
+"von Deinem Installationsmedium. Je nach Virtualisierungsumgebung hast Du "
+"ggf. die ISO-Datei bereits auf dem ISO-Datenspeicher des Hypervisors "
+"abgelegt. Boote dann die VM via ISO-Datei."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:70
+msgid ""
+"Solltest Du unserer Anleitung gefolgt sein und PROXMOX nutzen, dann muss "
+"Du für die Installation die Konsole ``noVNC`` nutzen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:76
+msgid "OPNsense: Start VMt"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:76
+msgid "Starte die OPNsense-VM"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:78
+msgid ""
+"Am Ende des Boot-Vorgangs der OPNsense |reg| gelangst Du zu folgendem "
+"Bildschirm:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:84
+msgid "OPNsense: First boot"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:84
+msgid "Bildschirm nach dem ersten Boot-Vorgang"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:86
+msgid ""
+"Melde Dich als Benutzer ``installer`` mit dem Passwort ``opnsense`` an. "
+"Du gelangst direkt zum Installer und kannst das Layout der Tastatur "
+"festlegen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:93
+msgid "OPNsense: Installer keymap"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:93
+msgid "Installer: Tastaturlayout festlegen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:95
+msgid ""
+"Standardmäßig ist ein amerikanisches Tastaturlayout voreingestellt. Gehe "
+"mit den Pfeiltasten auf den Eintrag ``( ) German (no accent keys)``. "
+"Wählen diesen mit ``<Select>`` aus."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:97
+msgid "Teste danach das Tastaturlayout:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:103
+msgid "OPNsense: Test keymap"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:103
+msgid "Teste das Tastaturlayout"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:105
+msgid ""
+"Bei der deutschen Tastatur werden ggf. die Umlaute im Test noch nicht "
+"korrekt wiedergegeben."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:107
+msgid "Wähle die eingestellte deutsche Tastatur aus:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:113
+msgid "OPNsense: continue with keymap"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:113
+msgid "Bestätige der Stataturlayout"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:115
+msgid "Wähle ``<Select>``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:117
+msgid "Installiere nun OPNsense |reg| via ``Install (UFS)``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:123
+msgid "OPNsense: Install (UFS)"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:123
+msgid "Install (UFS)"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:125
+msgid "Bestätige die Festplatte und wähle ``Install (UFS) UFS GPT/UEFI Hybrid``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:127
+msgid ""
+"Jetzt wird OPNsense |reg| auf der Festplatte installiert. Zuvor musst Du "
+"diese noch auswählen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:133
+msgid "OPNsense: UFS Configuration"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:133
+msgid "da0 QEMU HARDDISK"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:135
+msgid "Mit ``OK`` übernimmst Du Deine Auswahl."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:141
+msgid "OPNsense: Swap file"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:141
+msgid "SWAP Partition wählen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:143
+msgid ""
+"Sollte Dir dieses Fenster angezeigt werden, dann akzeptiere die Frage "
+"nach der empfohlenen Auslagerungsdatei."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:145
+msgid ""
+"Danach erfolgt die Rückfrage, ob die Festplatte wirklich überschrieben "
+"werden soll."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:151
+msgid "OPNsense: Last change to abort vs. start installation"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:151
+msgid "Bestätige die Installation auf da0"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:153
+msgid "Bestätige diesen Vorgang, um die Installation zu starten."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:155
+msgid "Warte jetzt, bis die Installation abgeschlossen ist."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:161
+msgid "OPNsense: Installation progress"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:161
+msgid "Installationsfortschritt"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:163
+msgid ""
+"Zum Abschluss der Konfiguration musst Du das Kennwort für den Benutzer "
+"``root`` neu setzen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:169
+msgid "OPNsense: Root Password"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:169
+msgid "Eingabe des Root Kennwortes"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:173
+msgid ""
+"An dieser Stelle muss als root-Passwort ``Muster!`` eingegeben werden, da"
+" später der lmn-Server beim Einrichten der Firewall davon ausgeht, dass "
+"das root-Passwort ``Muster!`` ist! Sollte dieses anders lauten, wird die "
+"komplette weitere Installation scheitern!"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:175
+msgid "Gib das neue Passwort (``Muster!``) für root ein."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:181
+msgid "OPNsense: Type new root password"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:181
+msgid "Eingabe des neuen Root Kennwortes"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:183
+msgid "Gib dieses Kennwort erneut ein."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:189
+msgid "OPNsense: Retype new root password"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:189
+msgid "Bestätigung des neuen Root Kennwortes"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:191
+msgid "Setze es mit ``OK``"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:197
+msgid "OPNsense: Complete Install"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:197
+msgid "Schließe die Installation ab"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:199
+msgid "Wähle danach die Option ``Exit and reboot`` aus."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:203
+msgid ""
+"Solltest Du nicht zum Entfernen, das Installationsmedium aufgefordert "
+"werden, fahre Deine neue Firewall herunter (schalte sie aus)."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:205
+msgid "Ändere die Boot-Reihenfolge zurück (Start via Festplatte)."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:-1
+msgid "OPNsense: Change boot order"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:211
+msgid "Ändere die Boot-Reihenfolge"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:213
+msgid "Werfe die ISO-Datei aus dem CD-Laufwerk aus."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:-1
+msgid "OPNsense: Unmount CD"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:219
+msgid "Werfe die ISo-Datei aus dem Laufwerk aus."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:221
+msgid ""
+"Starte die VM neu, nachdem Du das Installationsmedium ausgeworfen hast "
+"und fahre mit der Installation fort."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:223
+msgid ""
+"Der Boot-Vorgang kann dann eine Weile dauern. Vor allem, wenn der Router "
+"kein DHCP anbieten sollte."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:225
+msgid "Wenn alles geklappt hat, ist Folgendes zu sehen:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:231
+msgid "OPNsense: Final Configuration"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:231
+msgid "Login nach erfolgter Installation und Reboot"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:235
+msgid ""
+"Die dargestellten IPs und Netze können bei Deiner OPNsense |reg| andere "
+"sein."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:238
+msgid "Basis-Konfiguration der OPNsense |reg|"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:240
+msgid ""
+"Melde Dich als ``root`` mit dem Passwort ``Muster!`` an der OPNsense "
+"|reg| an."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:243
+msgid "Tastaturbelegung prüfen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:249
+msgid "OPNsense: Test keyboard layout"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:249
+msgid "Tastaturbelegung überprüfen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:251
+msgid ""
+"Zuerst überprüfe, ob die Tastaturbelegung richtig ist. Dazu wähle den "
+"Punkt ``8) Shell`` aus. Auf der Konsole kannst Du dann die Umlaute und "
+"Sonderzeichen der deutschen Tastaturbelegung testen. Sollte sie korrekt "
+"sein, verlässt Du mit ``exit`` die Konsole und bist wieder im Auswahl-"
+"Bildschirm."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:253
+msgid ""
+"Fahre mit `Überprüfung der Zuordnung der Netzwerkkarten`_ fort, ansonsten"
+" |...|"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:257
+msgid ""
+"Solltest Du feststellen, dass nach dem Neustart in der Konsole der "
+"OPNsense |reg| die Tastaturbelegung immer noch falsch ist, stelle diese "
+"dauerhaft wie nachstehend beschrieben um:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:275
+msgid "Überprüfung der Zuordnung der Netzwerkkarten"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:281
+msgid "OPNsense: Login"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:281
+msgid "Zuordnung der NICs prüfen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:283
+msgid ""
+"Die erste Netzwerkkarte (LAN) ist derzeit als LAN mit dem pädagogischen "
+"Netz verbunden. Die Netzwerkkarte ``vtnet0`` ist nach der bisherigen "
+"Installation allerdings mit dem roten Netz verbunden. Zudem vergibt die "
+"Installationsroutine der OPNsense |reg| immer die IP 192.168.1.1/24 der "
+"LAN-Schnittstelle. Dies ist jetzt noch zu ändern."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:285
+msgid ""
+"Die zweite Netzwerkkarte (WAN) ist derzeit mit ``vtnet1`` verbunden. Dies"
+" müssen wir noch ändern."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:288
+msgid "Anpassung der Zuordnung der Netzwerkkarten"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:290
+msgid ""
+"Rufe dazu den Menüeintrag ``1) Assign interfaces`` auf. Die Nachfragen "
+"bezüglich LAGGs und VLAN verneinst du."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:296
+msgid "OPNsense: GUI - LAGGs an VLANs no"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:296
+msgid "Keine LAGGs und VLANs"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:298
+msgid "Dann sind die MAC-Adressen der virtuellen Maschine, hier vtnet0 und vtnet1"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:304
+msgid "OPNsense: GUI - Valid Interfaces"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:304
+msgid "Gültige NICs"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:306
+msgid ""
+"und denen der Netzwerkbrücken vmbr0 und vmbr1 zu überprüfen (``Proxmox-"
+"Host`` --> ``VM`` --> ``Hardware`` --> ``Network Device (net.)``):"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:312
+msgid "Proxmox-GUI: Network Devices"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:312
+msgid "Proxmox NICs der VM"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:314
+msgid ""
+"Unter ``Proxxmox-Host`` --> ``Network`` kannst Du Dir jetzt mittels des "
+"Kommentarfeldes wieder die Zuordnung der Bridges ins Gedächtnis rufen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:317
+msgid "Bridge des Virtualisierers"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:317
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:321
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:322
+msgid "<->"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:317
+msgid "Virtuelle Maschine"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:319
+msgid "Kommentar"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:319
+msgid "Brücke"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:319
+msgid "MAC"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:319
+msgid "Interfaces"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:319
+msgid "Typ"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:321
+msgid "red"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:321
+msgid "vmbr0"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:321
+msgid "0E:76:8B:51:85:15"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:321
+msgid "0e:76:8b:51:85:15"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:321
+msgid "vtnet0"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:321
+msgid "WAN"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:322
+msgid "green"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:322
+msgid "vmbr1"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:322
+msgid "DA:97:1B:E1:35:9C"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:322
+msgid "da:97:1b:E1:35:9c"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:322
+msgid "vtnet1"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:322
+msgid "LAN"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:325
+msgid "Aus diesem Wissen und dem Vergleich erkennst Du |...|"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:331
+msgid "OPNsense: GUI - WAN connect to vtnet0"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:331
+msgid "WAN-Verbindung an vtnet0"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:333
+msgid "|...|, dass das WAN dem Interface vtnet0 zuzuordnen ist."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:339
+msgid "OPNsense: LAN - vtnet1"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:339
+msgid "LAN-Verbindung an vtnet1"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:341
+msgid "|...|, dass das LAN zum Interface vtnet1 zuzuordnen ist."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:-1
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:570
+msgid "OPNsense: GUI - Assign interfaces"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:348
+msgid "Hast Du kein weiteres Interface, dann gebe ``Enter`` ein."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:354
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:362
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:370
+msgid "OPNsense: Assign interfaces"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:354
+msgid "Netzwerkkarten zuordnen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:356
+msgid "Diese Zuordnung ist nun richtig, also weiter mit ``y`` |...|"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:362
+msgid "Konfiguration gestartet"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:364
+msgid ""
+"|...|, welches dann die Konfiguration startet. Nach Abschluss kommst Du "
+"wieder zum Konsolen-Menü."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:370
+msgid "Prüfe die Zuordnung der Netzwerkkarten"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:372
+msgid ""
+"Die Zuordnung des WAN-Interfaces ist hier zu erkennen und nun so wie "
+"beabsichtigt. Das erkennst Du daran, das dessen IP-Adresse dem Adress-"
+"Pool des Routers entnommen ist (, sofern der DSL-Router via DHCP eine "
+"Adresse verteilt)."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:376
+msgid ""
+"Starte die OPNsense |reg| neu, nachdem Du die Netzwerkkarten neu "
+"zugeordnet hast."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:380
+msgid "WAN Zugang testen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:382
+msgid ""
+"Hast Du die OPNsense |reg| neu gestartet und auf der WAN-Schnittstelle "
+"eine IP-Adresse erhalten, führe zwei erste Tests durch. Wähle ``8) "
+"Shell`` auf der Kommandozeile und gib dort folgende Befehle ein:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:386
+msgid ""
+"Sollte einer der Tests scheitern, dann verlasse die Konsole mittels "
+"``exit`` und nutze den Auswahlpunkt ``11) reload all Services``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:393
+msgid "Die Ausgabe sollte wie folgt aussehen:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:399
+msgid "OPNsense: ping test"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:399
+msgid "Ping Test IP"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:409
+msgid "OPNsense: ping test URL"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:409
+msgid "Ping Test URL"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:411
+msgid "Gib in der Konsole ``exit`` ein, um wieder zum Dashboard zurückzukommen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:417
+msgid "OPNsense: Dashboard"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:417
+msgid "Konsolen Dashboard"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:421
+msgid ""
+"Sollte einer der Test auch nach ``11) Reload all services`` nicht "
+"erfolgreich verlaufen, dann stimmt etwas mit der Netzwerkkartenzuordnung "
+"nicht. Überprüfe Deine vorherige Netzwerk-Konfiguration auf Fehler."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:424
+msgid "IP-Adressen zuweisen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:426
+msgid ""
+"Solltest Du in Deiner Netzwerkkonfiguration von unserem Muster abweichen,"
+" musst Du bei nachfolgenden Schritten anstelle der dargestellten IPs "
+"Deine hierfür festgelegten IPs eintragen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:432
+msgid "OPNsense: set interfaces IP address"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:432
+msgid "Setze die INterface IPs"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:434
+msgid ""
+"Wähle in der Konsole der OPNsense |reg| den Eintrag ``2) Set interface IP"
+" address`` aus."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:440
+msgid "OPNsense: LAN auswählen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:440
+msgid "LAN auswählen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:442
+msgid "Wähle ``1 - LAN (`` |...| ``)`` für die nächsten Schritte."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:448
+msgid "OPNsense: do not configure via DHCP"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:448
+msgid "IP nicht via DHCP zuweisen lassen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:450
+msgid ""
+"Bestätige die Nachfrage mit ``N`` und ``ENTER``. (Alternativ wäre auch "
+"nur ``ENTER`` möglich, da der großgeschriebene Buchstabe in der "
+"Auswahlmöglichkeit darauf hinweist, was die Standard-Einstellung ist.)"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:456
+msgid "OPNsense: insert IP"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:456
+msgid "IP eintragen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:458
+msgid ""
+"Gib die IPv4 Adresse ``10.0.0.254`` ein, unter der die OPNsense |reg| im "
+"lokalen Netz zu erreichen sein wird."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:-1
+msgid "OPNsense: netmask - CIDR notation"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:464
+msgid ""
+"Gib die Netzmaske in CIDR-Notation an. Dies bedeutet, dass Du für unseren"
+" Fall die Zahl der Bits angibst, die in der Subnetzmaske gesetzt werden. "
+"Dies ist die Zahl ``16`` und führt zu der Subnetzmaske (255.255.0.0 - "
+"dezimal)."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:470
+msgid "OPNsense: skip upstream gateway - Enter"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:470
+msgid "Bestätige mit ENTER"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:472
+msgid ""
+"Da keine Eingabe eines Upstream-Gateways nötig ist, einfach ``ENTER`` "
+"eingeben."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:478
+msgid "OPNsense: no IPv6 via WAN tracking"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:478
+msgid "Überspringe IPv6 via WAN tracking"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:480
+msgid "Gib ein ``n`` ein."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:486
+msgid "OPNsense: no IPv6 Adresse via DHCP6"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:486
+msgid "Kein IPv6 via DHCP"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:488
+msgid "Gib ein ``N`` ein."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:494
+msgid "OPNsense: no manual IPv6"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:494
+msgid "Keine manuelle festgelegte IPv6-Adresse"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:496
+msgid "Da keine IPv6-Adresse benötigt wird: ``ENTER``"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:502
+msgid "OPNsense: no DHCP-Server for LAN"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:502
+msgid "Kein DHCP-Server für das LAN aktivieren"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:504
+msgid ""
+"Diese und die nächsten drei Fragen ebenfalls jeweils ``N`` und ``ENTER`` "
+"bzw. nur ``ENTER`` beantworten."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:510
+msgid "OPNsense: change protokoll from https to http - no"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:510
+msgid "Keine Änderung des HTTPS-Protokolls"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:516
+msgid "OPNsense: create new certificate for GUI"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:516
+msgid "Kein neues Zertifikat erstellen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:522
+msgid "OPNsense: restore GUI defaults"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:522
+msgid "GUI-Einstellungen nicht zurücksetzen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:524
+msgid "Nach der letzten Eingabe startet die Übernahme in das System."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:530
+msgid "OPNsense: save settings"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:530
+msgid "Wende Konfigurationsschritte an"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:532
+msgid ""
+"Nach erfolgreicher Übernahme erhältst Du den Hinweis, dass Du Dich mit "
+"der LAN IP auf die GUI der OPNsense |reg| aufschalten könntest."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:538
+msgid "OPNsense: GUI IP"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:538
+msgid "GUI IP"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:540
+msgid ""
+"Bevor Du das aber machst, erfolgt ein letzter Test, und zwar mit der "
+"Aktualisierung der OPNsense |reg|."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:544
+msgid "Aktualisierung der OPNsense |reg|"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:546
+msgid ""
+"Aktualisiere die OPNsense |reg| in der Konsole, indem Du den Punkt ``12) "
+"Update from console`` aufrufst und die Rückfrage mit ``y`` bestätigst."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:550
+msgid ""
+"Sollte hierbei keine Verbindung zu den externen Update-Servern möglich "
+"sein, dann stimmt etwas mit der Netzwerkkartenzuordnung nicht."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:552
+msgid ""
+"Als Erstes probiere es mit dem Neustart aller Netzwerk-Dienste. Dazu "
+"wählst Du den Punkt ``11) Reload all services``. Danach wiederholst Du "
+"das Upgrade nochmals mit dem Punkt ``12) Update from console``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:554
+msgid ""
+"Sollte die Aktualisierung immer noch nicht erfolgreich durchgeführt "
+"werden, dann überprüfe Deine vorherige Netzwerk-Konfiguration auf Fehler."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:556
+msgid ""
+"Sollte sich eine Eingabe-Aufforderung wie hier dargestellt vorher öffnen,"
+" muss du zum Fortführen des Updates ein ``q`` eingeben. Um dir alle "
+"Mitteilungen anzusehen, verwende die Auf- bzw. Ab-Tasten."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:562
+msgid "OPNsense: Hello World - New Features"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:564
+msgid ""
+"Das Update ist erfolgreich durchgeführt, wenn du wieder zu dieser Ansicht"
+" gelangst."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:570
+msgid "NIC Zuordnung nach Neustart"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:572
+msgid "Klappt das Update, starte die OPNsense |reg| neu."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:575
+msgid "Konfiguration der OPNsense |reg|"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:577
+msgid ""
+"Für die nachfolgende Konfiguration der OPNsense |reg| brauchst Du einen "
+"Rechner mit Webbrowser im LAN-Bereich der OPNsense |reg|. Das kann ein "
+"Laptop mit einem beliebigen Betriebssystem sein. Wichtig ist nur, dass er"
+" mit internen Switch im grünen Netzwerk verbunden ist, das mit dem LAN-"
+"Adapter der OPNsense |reg| verbunden ist und sich im gleichen Netzwerk "
+"wie die OPNsense |reg| befindet. In unserer Beschreibung gehen wir davon "
+"aus, dass der Laptop/PC manuell die IP-Adresse 10.0.0.10 mit der "
+"Subnetmask 255.255.0.0 (16 Bit) erhält."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:579
+msgid ""
+"Nachdem der Browser gestartet ist, gibst Du folgende URL für den Zugriff "
+"auf die GUI der OPNsense |reg| ein:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:581
+msgid "``https://10.0.0.254``"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:583
+msgid ""
+"Du erhältst zunächst eine Zertifikatswarnung, da OPNsense |reg| ja ganz "
+"frisch installiert ist und ein selbst erstelltes Zertifikat nutzt."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:589
+msgid "OPNsense: GUI - certificate warning"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:589
+msgid "Zertifikatswarnung"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:591
+msgid ""
+"Klicke auf ``Erweitert`` und anschließend ``Risiko akzeptieren und "
+"fortfahren``. Dies bringt Dich auf die Login-Seite."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:597
+msgid "OPNsense: GUI - Login"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:597
+msgid "GUI Login"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:599
+msgid ""
+"Melde Dich mit ``root`` und dem Passwort ``Muster!`` an. Beim ersten "
+"Start erhältst folgende Information:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:605
+msgid "OPNsense: GUI - initial configuration"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:605
+msgid "GUI Erstkonfiguration nach erfolgter Anmeldung"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:607
+msgid "Gefolgt von folgender Aufforderung:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:613
+msgid "OPNsense: GUI - setup wizard"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:613
+msgid "Setup Wizard"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:615
+msgid ""
+"Starte den ``General Setup Wizard`` mit dem ``Next``- Button. Dieser "
+"Wizard führt Dich durch die Konfiguration. Einige Dinge wurden zuvor "
+"bereits korrekt für die Basis-Konfiguration eingerichtet."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:619
+msgid "System: Assistent: Allgemeine Information"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:623
+msgid ""
+"Die Länge des ersten Teils der Domäne darf maximal 15 Zeichen betragen. "
+"Die Domain \"muster-gymnasium.de\" überschreitet diese Grenze um ein "
+"Zeichen, da \"muster-gymnasium\" 16 Zeichen lang ist."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:625
+msgid ""
+"Eine gute Wahl ist beispielsweise ``linuxmuster.lan``. Beim späteren "
+"Setup von linuxmuster.net wird diese ggf. für alle Server-Dienste "
+"angepasst."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:631
+msgid "OPNsense: GUI - setup genreral information"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:631
+msgid "Setup: Allgemeine Angaben"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:633
+msgid ""
+"Gib als ``Primary DNS``, die neue IP des Upstream Gateway der externen "
+"WAN-Schnittstelle an und deaktiviere die Checkbox ``Override DNS``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:635
+msgid "Weiter geht es mit ``Next``"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:639
+msgid "System: Assistent: Zeitserverinformation"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:645
+msgid "OPNsense: GUI - time server settings"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:645
+msgid "Angabe des Zeitservers"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:647
+msgid ""
+"Die Angaben zum Time Server belässt Du wie angegeben. Den Eintrag für die"
+" Zeitzone änderst Du auf ``Europ/Berlin`` wie in nachstehender Abbildung."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:653
+msgid "OPNsense: GUI - time zone"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:653
+msgid "Zeitzone einstellen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:655
+msgid "Die Angaben übernimmst Du mit ``Next``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:659
+msgid "System: Assistent: Konfiguriere WAN-Schnittstelle"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:661
+msgid ""
+"Danach kommst Du zu den Einstellungen für die WAN-Schnittstelle. Nutzt Du"
+" hier DHCP z.B. eines vorgelagerten DSL-Routers, so gibst Du hier DHCP "
+"an, ansonsten ändere diese bitte auf ``Static``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:668
+msgid "OPNsense: GUI - WAN NIC"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:668
+msgid "WAN NIC"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:670
+msgid ""
+"Falls Deine Firewall eine statische IP-Adresse hat, die nicht über DHCP "
+"erteilt wird, trägst Du sie hier ein."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:676
+msgid "OPNsense: GUI - RFC1918 networks"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:676
+msgid "LAN private IP - Angabe RFC1918"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:678
+msgid ""
+"Falls Dein Router eine private IP hat, musst Du den Haken bei ``Private "
+"RFC1918-Netzwerke blockieren`` entfernen. Diesen Eintrag findest Du ganz "
+"unten auf der Seite, nachdem Du mit der Laufleiste rechts nach ganz unten"
+" gegangen bist."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:680
+msgid "Mit ``Weiter`` übernimmst Du die von Dir vorgenommenen Einstellungen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:684
+msgid "System: Assistent: Konfiguriere LAN-Schnittstelle"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:690
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:773
+msgid "OPNsense: GUI - LAN NIC"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:690
+msgid "LAN Schnittstelle"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:692
+msgid ""
+"Die IP-Adresse und die Subnetzmaske des Schulnetzes sollten hier "
+"eingetragen sein. Sollte dies nicht der Fall sein, ändere dies nun."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:696
+msgid "System: Assistent: Setze Root-Passwort"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:702
+msgid "OPNsense: GUI - set root password"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:702
+msgid "Root Kennwort setzen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:706
+msgid ""
+"An dieser Stelle muss als root-Passwort ``Muster!`` eingegeben werden, da"
+" später der lmn-Server beim Einrichten der Firewall davon ausgeht, dass "
+"das root-Passwort ``Muster!`` ist!"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:710
+msgid "System: Assistent: Konfiguration neu laden"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:716
+msgid "OPNsense: GUI - eload system configuration"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:716
+msgid "System-Konfiguration neu laden"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:718
+msgid ""
+"Nachdem Du die Einstellungen übernommen hast, können sich auch die "
+"Einstellungen des LAN-Netzwerks geändert haben. Dann wirst Du nicht - wie"
+" im nächsten Bild zu sehen - über die erfolgreiche Konfiguration "
+"informiert."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:724
+msgid "OPNsense: GUI - setup succesfull"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:724
+msgid "Erstkonfiguration erfolgreich"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:726
+msgid ""
+"Sollte dies bei Dir der Fall sein, musst Du Deinem Admin PC die passende "
+"IP-Adresse 10.0.0.10/16, DNS: 10.0.0.254 und das Gateway 10.0.0.254 "
+"manuell geben. (hier exemplarisch für unseren Standard-LAN-Bereich)"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:728
+msgid "Gehe dann mit einem Webbrowser auf ``https://10.0.0.254``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:732
+msgid ""
+"Falls Du Dich für das Netz der linuxmuster.net v6.2 entschieden hast, "
+"solltest Du die IP-Adresse 10.16.0.10/12, DNS: 10.16.1.254 und das "
+"Gateway 10.16.1.254 verwenden."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:734
+msgid "Du solltest dann auch mit einem Webbrowser auf https://10.16.1.254 gehen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:736
+msgid ""
+"Du erhältst eventuell wieder eine Zertifikatswarnung. Akzeptiere diese "
+"und fahre fort."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:738
+msgid "Melde Dich wieder mit ``root`` und dem Passwort ``Muster!`` an."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:742
+msgid "DHCP abschalten"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:743
+msgid ""
+"Jetzt musst Du den DHCP-Service der Firewall abschalten. Der wird ja "
+"später vom Server übernommen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:749
+msgid "OPNsense: GUI - deactivate DHCP"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:749
+msgid "DHCP deaktivieren"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:751
+msgid ""
+"Gehe auf ``Dienste -> DHCPv4 -> [LAN]`` und lösche den Haken bei "
+"``Aktivieren``, wenn gesetzt. ``Speichern`` lässt Dich Deine "
+"Einstellungen unten auf der Seite."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:755
+msgid "Zusätzliche Netzwerkkarte hinzufügen (Optional)"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:757
+msgid ""
+"Die linuxmuster.net v7 läuft bereits mit zwei Netzwerkkarten. Möchtest Du"
+" allerdings ein WLAN oder in einer DMZ einen Webserver betreiben, "
+"brauchst Du noch weitere Netzwerkkarten."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:759
+msgid "Wie das geht, siehst Du im Folgenden:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:765
+msgid "OPNsense: GUI - add NIC"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:765
+msgid "Schnittstelle hinzufügen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:767
+msgid ""
+"Bei ``Schnittstellen -> Zuweisungen`` drückst Du ``+``, um die dritte "
+"Schnittstelle Deinem System hinzuzufügen. Diese dritte Schnittstelle ist "
+"dann als ``OPT1`` im System bekannt. OPT1 muss nur noch aktiviert und es "
+"muss ihr noch eine IP-Adresse zugewiesen werden."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:773
+msgid "Neue Schnittstelle konfigurieren"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:775
+msgid ""
+"Unter ``Schnittstellen -> [OPT1]`` kannst Du diese Einstellungen "
+"vornehmen. Der Screenshot zeigt ein Beispiel. Für weitere Netzwerkkarten "
+"verfährst Du entsprechend. OPT1 wird dann hochgezählt zu OPT2 etc."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:779
+msgid "ssh erlauben"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:781
+msgid ""
+"Damit der Server für das weitere Setup Zugriff auf die OPNsense |reg| "
+"hat, musst Du den ssh-Zugriff erlauben. Gehe dafür auf ``System -> "
+"Einstellungen -> Verwaltung``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:787
+msgid "OPNsense: GUI - activate ssh"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:787
+msgid "SSH aktivieren"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:789
+msgid ""
+"Setze jeweils den Haken bei ``Aktiviere Secure Shell``, ``Erlaube "
+"Anmeldung mit dem root-Benutzer`` und ``Anmeldung mit Passwort "
+"erlauben``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:791
+msgid ""
+"Bei dem Punkt ``Sekundäre Konsole`` wähle die Serial-Konsole aus. Mit "
+"dieser Auswahl wird die `xterm.js-Konsole` nutzbar. (Zur Erinnerung: :ref"
+":`xterm-label`)"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:793
+msgid "Diese Einstellungen wieder ``Speichern``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:797
+msgid "Update der OPNsense |reg|"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:799
+msgid "Aktualisiere nun die OPNsense |reg|, indem Du unter"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:805
+msgid "OPNsense: GUI - update"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:805
+msgid "Aktualisiere die Firmware"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:807
+msgid ""
+"``System`` ``->`` ``Firmware`` ``-->`` ``Aktualisierungen`` ``--->`` "
+"``Status`` ``---->`` ``Auf Aktualisierungen prüfen`` klickst."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:809
+msgid ""
+"Wenn keine Aktualisierungen verfügbar sind, erhältst Du folgende Meldung "
+"|...|"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:815
+msgid "OPNsense: GUI - no update available"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:815
+msgid "Keine Aktualisierungen verfügbar"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:818
+msgid "|...| und kannst zum abschließenden Schritt `Logout`_ gehen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:820
+msgid ""
+"Sollten Dir - wie in nachstehender Abbildung - unter dem Reiter "
+"``Aktualisierungen`` zu aktualisierende Pakete angezeigt werden |...|"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:826
+msgid "OPNsense: GUI - updates available"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:826
+msgid "Aktualisierungen verfügbar"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:828
+msgid "|...| dann klicke in o.g. Fenster ``Jetzt aktualisieren``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:832
+msgid ""
+"Falls Du nicht ins Internet kommst, kann es an der Gateway-Einstellung "
+"liegen. Gehe auf ``System`` --> ``Gateways`` --> ``Einzeln`` und editiere"
+" Dein Gateway (WANGW)."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:834
+msgid ""
+"Setze einen Haken bei ``Deaktiviere Gatewayüberwachung``, speichere die "
+"Einstellung und übernimm die Änderung. Jetzt ist Dein Gateway online und "
+"Du kommst ins Internet. Erstaunlicherweise kannst Du die "
+"Gatewayüberwachung wieder aktivieren, ohne dass das Gateway offline geht."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:836
+msgid ""
+"Je nach gefundenen Aktualisierungen, kann ein Neustart erforderlich sein."
+" Dies wird vor dem Update abgefragt und ist zu bestätigen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:842
+msgid "OPNsense: GUI - Reboot"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:842
+msgid "Reboot bestätigen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:844
+msgid "Danach werden die Aktualisierungen heruntergeladen und angewendet."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:850
+msgid "OPNsense: GUI - running update"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:850
+msgid "Aktualisierungen anwenden"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:852
+msgid "Zum Abschluss erfolgt der Neustart automatisch."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:858
+msgid "OPNsense: GUI - automatic reboot"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:858
+msgid "Automatischer Neustart"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:860
+msgid "Nach dem Neustart ist die OPNsense |reg| soweit vorbereitet."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:863
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:869
+msgid "Logout"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:869
+msgid "OPNsense: GUI - logout"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_opnsense.rst:871
+msgid ""
+"Für Anwender einer Virtualisierungslösung empfehlen wir an dieser Stelle "
+"einen ``Snapshot`` zu erstellen!"
+msgstr ""
+

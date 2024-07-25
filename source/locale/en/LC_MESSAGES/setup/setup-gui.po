@@ -1,0 +1,473 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/setup/setup-gui.rst:7
+msgid "Setup via Schulkonsole"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:13
+msgid "Setup über die Schulkonsole"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:15
+msgid ""
+"Die Weboberfläche (WebUI/Schulkonsole) erreicht man über einen Browser "
+"eines Gerätes (im folgenden Admin-PC genannt) im Servernetzwerk. Dafür "
+"konfiguriert man den Admin-PC mit der festen IP-Adresse ``10.0.0.10`` "
+"(entsprechend ``x.x.x.10`` in jeder anderen Netzwerkkonfiguration) der "
+"Netzwerkmaske ``255.255.0.0``, dem Gateway ``10.0.0.254`` und dem DNS-"
+"Eintrag ``10.0.0.1``."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:17
+msgid ""
+"Öffne auf dem Admin-PC mit einem Webbrowser die URL ``http://10.0.0.1``. "
+"Melde Dich hier einmalig mit dem Benutzer ``root`` und dem Passwort "
+"``Muster!`` an."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:24
+msgid "WebUI Setup: Root login"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:24
+msgid "Anmeldung als Benutzer root"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:28
+msgid ""
+"Achte darauf, dass vor dem Setup die Verbindung zur Schulkonsole via URL "
+"noch unverschlüsselt mit HTTP erfolgt."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:30
+msgid ""
+"Es erscheint der Hinweis, dass Du das Webinterface nicht als Benutzer "
+"root benutzen sollst, es sei denn, Du verwendest dieses das erste Mal."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:37
+msgid "WebUI Setup: Root login - hint"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:37
+msgid "Willkommen bei linuxmuster.net"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:40
+msgid "Bei einem unkonfiguriertem System wird direkt das Setup aufgerufen."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:42
+msgid ""
+"Es erscheint der Einrichtungsassistent. Hier musst Du zunächst die "
+"gewünschte Sprache auswählen. Zudem musst Du die GNU Lizenzbedingungen "
+"akzeptieren, indem Du bei ``I accept the licence terms`` einen Haken "
+"setzt."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:49
+msgid "WebUI Setup: Wizard - accept license"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:49
+msgid "Akzeptiere die Lizenzvereinbarung"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:52
+msgid "Danach klickst Du auf ``Weiter``."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:54
+msgid ""
+"Im nächsten Dialog musst Du den Schulnamen, die Stadt, das Bundesland und"
+" das Landeskürzel eintragen bzw. auswählen.  Zudem trägst Du einen "
+"Hostnamen für den Server ein. Der ``Domainname`` spielt eine besondere "
+"Rolle, insbesondere, wenn eine Adresse verwendet werden soll, die intern "
+"und extern identisch sein soll, so dass mit dem FQDN intern und extern "
+"gearbeitet wird."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:58
+msgid ""
+"``schule.de`` oder ``linuxmuster.lan`` stellen den Domainnamen mit der "
+"sog. Top Level Domain (TLD) dar. Die TLD lan wird nicht extern verwendet,"
+" sondern ist nur für den internen Gebrauch sinnvoll. Die TLD de wird "
+"extern genutzt. Hat Deine Schule die De-Domain meineschule.de "
+"registriert, dann musst Du hier eine Subdomain angeben, die zugleich die "
+"sog. Samba-Domain darstellt. Für den Namen dieser Sub-/Samba-Domain gibt "
+"es Einschränkungen, die unbedingt beachtet werden müssen: Es werden nur "
+"englische Kleinbuchstaben a bis z akzeptiert. Sonst keinerlei Zeichen. Es"
+" dürfen zudem maximal 15 Zeichen verwendet werden."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:60
+msgid ""
+"**Richtig**: gshoenningen (12 Zeichen, keine Umlaute und Satzzeichen "
+"etc.), **Falsch**: GSO-Heinrich-Böll-Hönningen (26 Zeichen, "
+"Großbuchstaben, Umlaute, Bindestriche)"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:67
+msgid "WebUI Setup: Wizard - school information"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:67
+msgid "Setup: Schulinformationen"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:69 ../../source/setup/setup-gui.rst:99
+msgid "Danach klickst Du auf ``Weiter/Next``."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:71
+msgid ""
+"Der nächste Dialog legt das Passwort des globalen Administrators "
+"``global-admin`` und das von ``root`` fest. Die Einschränkungen zur "
+"Passwortsicherheit sind dem Hilfetext zu entnehmen."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:78
+msgid "WebUI Setup: Wizard - account information"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:78
+msgid "Kennwort für die Benutzer global-admin und root festlegen"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:82
+msgid ""
+"Nach dem erfolgreichen Abschluss der Erstkonfiguration gilt für ``root`` "
+"das neu gesetzte Passwort."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:90
+msgid ""
+"Das beim Setup eingegebene Adminpasswort wird für folgende "
+"administrativen User gesetzt:"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:87
+msgid "root auf dem Server"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:88
+msgid "root auf der Firewall"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:89
+msgid "global-admin (AD)"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:90
+msgid "pgmadmin (AD)"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:91
+msgid "linbo (/etc/rsyncd.secrets)"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:92
+msgid ""
+"Es sollten die Passwörter der o.g. User nach dem Setup geändert werden, "
+"so dass jeder User ein eigenes Password hat."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:93
+msgid ""
+"Achte darauf, dass Dein Passwort den Komplexitätsanforderungen "
+"entspricht, die mit samba4 aktiviert sind: Mind. 7 Zeichen, Groß- und "
+"Kleinbuchstaben, Ziffern und Sonderzeichen. Zulässige Sonderzeichen sind:"
+" a-z A-Z 0-9 ?!§+-@#%&*( )[ ]{ }"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:95
+msgid ""
+"In der Datei ``/etc/linuxmuster/sophomorix/default/school/school.conf`` "
+"sind die Kennwortlängen für Schüler (Standard: 10 Zeichen) und Lehrer (12"
+" Zeichen) angegeben."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:96
+msgid ""
+"Die Grundeinstellungen für Kennwörter in samba4 kannst Du Dir auf dem "
+"Server in der Konsole mit ``samba-tool domain passwordsettings show`` "
+"anzeigen lassen."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:101
+msgid ""
+"Du erhälst die Rückfrage, ob die Firewall ggf. nicht konfiguriert werden "
+"soll. Sofern Du das System zusammen mit der OPNsense als Firewall **neu "
+"einrichtest**, setzt Du ``keinen Haken`` und klickst Du auf "
+"``Weiter/Next``."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:108
+msgid "WebUI Setup: FW"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:108
+msgid "Überspringe die Firewall Konfiguration"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:110
+msgid ""
+"Es wird danach die Zusammenfassung der vorgenommenen Einstellungen in der"
+" Übersicht dargestellt. Du kannst die getroffenen Einstellungen auch noch"
+" prüfen lassen. Danach wird Dir wie in der Abb. die geprüfte "
+"Zusammenfassung angezeigt"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:117
+msgid "WebUI Setup: Wizard - summary with checkes values"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:117
+msgid "Zusammenfassung der Setup-Einstellungen"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:121
+msgid ""
+"Sollte die Installation anhalten oder fehlschlagen, sollte man alle "
+"Appliances auf den Zustand vor dem Setup zurücksetzen."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:124
+msgid "Starte nun die Installation, in dem Du auf ``Start Provisioning`` klickst."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:126
+msgid ""
+"Es erscheint ein Installationsfenster, in dem die verschiedenen "
+"Installationsschritte angezeigt werden. Dieser Vorgang dauert eine ganze "
+"Weile. Ist die Installation abgeschlossen, gelangst Du zu folgendem "
+"Fenster:"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:134
+msgid "WebUI Setup: Wizard - setup finished"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:134
+msgid "Setup-Fenster"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:136
+msgid "Zum Abschluss siehst Du den Eintrag"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:142
+msgid ""
+"Schliesse das Setup nun mit ``Finish`` ab. Es erscheint eine "
+"Statusmeldung, dass das Setup abgeschlossen ist und Du Dich danach mit "
+"dem Benutzer ``global-admin`` anmelden sollst."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:149
+msgid "WebUI Setup: Wizard - setup complete"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:149
+msgid "Abschluss des Setups"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:151
+msgid "Bestätige dies mit ``Close``."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:153
+msgid "Rufe auf dem Server das Terminal auf und starte den Server neu:"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:161
+msgid "Anmeldung an der Schulkonsole"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:163
+msgid ""
+"Es wurde beim Setup ein self-signed certificate erstellt, so dass Du "
+"dieses beim erstmaligen Aufruf mit dem Browser akzetieren musst."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:170
+msgid "WebUI: First ssl access"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:170
+msgid "SSL: Mögliches Sicherheitsrisiko - Erweitert"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:172
+msgid "Der Browser zeigt Dir den Warnhinweis an. Klicke auf ``Erweitert...``."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:179
+msgid "WebUI: Accept certificate"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:179
+msgid "SSL: Risiko akzeptieren und fortfahren"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:181
+msgid ""
+"Es erscheint auf der gleichen Seite unten ein weiterer Eintrag. Bestätige"
+" diesen, indem Du den Button ``Risiko akzeptieren und fortfahren`` "
+"auswählst."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:183
+msgid ""
+"Danach kommst Du zur Anmeldeseite der WebUI/Schulkonsole. Melde Dich nun "
+"als Benutzer ``global-admin`` an und nutze das während des Setups "
+"festgelegte Kennwort."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:190
+msgid "WebUI: Login global-admin"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:190
+msgid "Login als Benutzer global-admin"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:192
+msgid "Nach erfolgreicher Anmeldung gelangst Du zur Hauptseite der Schulkonsole."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:199
+msgid "WebUI: Hauptseite"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:199
+msgid "Hauptseite der Schulkonsole"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:203
+msgid "Berechtigungen der Log-Dateien anpassen"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:205
+msgid "Nach dem erfolgreichen Setup verbindest Du Dich via ssh auf den Server."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:207
+msgid ""
+"Zum Abschluss sind noch die Dateiberechtigungen für die linuxmuster Log-"
+"Dateien anzupassen."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:209
+msgid "Setze die Berechtigungen nun mit folgendem Befehl als Benutzer ``root``:"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:215
+msgid ""
+"Lasse Dir den Inhalt des Verzeichnisses danach ausgeben und "
+"kontrollieren, ob Besitzer und Gruppe ``root`` sind und der Benutzer "
+"``root`` lesen und schreiben darf."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:221
+msgid "Der Inhalt des Verzeichnisses sollte sich wie folgt darstellen:"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:228
+msgid "directory listing log files"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:228
+msgid "Liste den Inhalt des Verzeichnisses auf"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:231
+msgid "OPNsense |reg| Unbound DNS anpassen"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:233
+msgid ""
+"Das linuxmuster-setup richtet in der OPNsense |reg| als voreingestellte "
+"DNS-Server diejenigen des DNS0.EU - Projekts ein. Dies sind europäische "
+"öffentliche DNS-Server, die darauf zielen, bösartige Domains zu blocken, "
+"Ende-zu-Ende verschlüsselung zu gewährleisten und gefährdende Inhalte zu "
+"filtern (https://www.dns0.eu/de)."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:235
+msgid ""
+"Nach der Installation muss im Unbound DNS-Resolver der OPNsense diese "
+"Voreinstellung noch aktiviert werden. Die DNS-Einstellungen der OPNsense "
+"kannst Du unter ``System -> Einstellungen -> Allgemein`` kontrollieren."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:242 ../../source/setup/setup-gui.rst:251
+msgid "dns settings"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:242
+msgid "DNS-Einträge"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:244
+msgid "Zur Aktivierung gehe auf ``Dienste -> Unbound DNS -> Query Forwarding``."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:251
+msgid "Unbound-DNS: Query Forwarding"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:253
+msgid ""
+"Setze den Haken für ``Use System Nameservers``, dort siehst Du dann die "
+"in obiger Abb. dargestellten DNS-Einträge. Klicke zur Aktivierung auf "
+"``Anwenden``."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:255
+msgid ""
+"Mit sog. Overrides können im Unbound DNS genutzt werden, um die DNS-"
+"Ergebnisse in gewünschter Form anzupassen oder aber spezielle DNS "
+"Einträge bereitzustellen. Weitergehende Informationen findest Du hier: "
+"https://docs.opnsense.org/manual/unbound.html"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:258
+msgid "Setze die Ersteinrichtung fort, indem Du"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:260
+msgid ""
+":ref:`add-user-accounts-label` und :ref:`hardware-registration-label` "
+"aufrufst."
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:262
+msgid ""
+"``Alternativ``: Wenn Du eine Migration durchführen willst, geht es weiter"
+" mit"
+msgstr ""
+
+#: ../../source/setup/setup-gui.rst:264
+msgid ":ref:`migration-label`"
+msgstr ""
+

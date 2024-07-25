@@ -1,0 +1,309 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/external-services/unifiwlan/switch.rst:2
+msgid "Der Switch"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:4
+msgid ""
+"In der hier vorgestellten Lösung wird ein Cisco SG300-10 Switch verwandt."
+" Die Überlegungen lassen sich aber leicht auf andere Switches übertragen."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:7
+msgid "Grundsätzliches"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:9
+msgid ""
+"Bei vielen Switches ist es unmöglich, sich komplett auszusperren. Der "
+"SG300 hat die Konfigurationsspeicher `Ausgeführte Konfiguration` und "
+"`Startkonfiguration`."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:11
+msgid ""
+"In die `Ausgeführte Konfiguration` werden alle Einstellungen gespeichert,"
+" die Du vornimmst. Bei einem Neustart wird als erstes die "
+"`Startkonfiguration` in die `Ausgeführte Konfiguration` kopiert und dann "
+"die `Ausgeführte Konfiguration` ausgeführt."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:13
+msgid ""
+"Wenn Du sich also mit einer Einstellung ausgeschlossen hast, starte den "
+"Switch einfach neu und Du hast den zuletzt in die `Startkonfiguration` "
+"gespeicherten Stand."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:15
+msgid ""
+"Sobald Du eine Einstellung vorgenommen hast, die Dich nicht aussperrt, "
+"siehst Du oben neben dem Benutzernamen einen Link zum Speichern der "
+"`Aktuellen Konfiguration` in die `Startkonfiguration`."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:-1
+msgid "Konfiguartion speichern"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:21
+msgid "VLANs anlegen"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:23
+msgid ""
+"Das VLAN für den Internetzugang hat die VLAN-ID 2, das Schüler-WLAN die "
+"VLAN-ID 10 und das Schulnetz die VLAN-ID 16."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:-1
+msgid "VLAN-Einstellungen"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:28
+msgid "Wähle VLAN-Verwaltung -> VLAN-Einstellungen und klicken auf `Hinzufügen`."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:30
+msgid "Es öffnet sich ein Dialogfenster, mit dem Du die VLANs hinzufügen kannst."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:-1
+msgid "VLAN-Hinzufügen"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:35
+msgid "Füge die VLANs wie im Bild hinzu."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:-1
+msgid "VLAN-Übersicht"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:40
+msgid ""
+"Sobald alle VLANs hinzugefügt sind, schließe das Fenster. Die VLANs "
+"sollten jetzt aufgeführt sein."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:42
+msgid ""
+"Jetzt wäre ein guter Zeitpunkt, um die `Ausgeführte Konfiguartion` zu "
+"speichern."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:46
+msgid "Ausgeschlossen, Getaggt, Ungetaggt und PVID"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:48
+msgid ""
+"Für jeden Switchport und für jedes VLAN muss festgelegt werden, ob das "
+"VLAN mit der VLAN-ID x ausgeschlossen, getaggt akzeptiert oder "
+"Datenpakete, die mit der VLAN-ID x getaggt sind, ungetaggt weitergeleitet"
+" werden."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:51
+msgid "Ausgeschlossen:"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:51
+msgid "Datenpakete, die mit der VLAN-ID x getaggt sind, werden verworfen."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:54
+msgid "Getaggt:"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:54
+msgid "Datenpakete, die mit der VLAN-ID x getaggt sind, werden weitergeleitet."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:57
+msgid "Ungetaggt:"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:57
+msgid ""
+"Von Datenpaketen, die mit der VLAN-ID x getaggt sind, wird die VLAN-ID "
+"entfernt und zum Client weitergeleitet. Die meisten Clients können mit "
+"getaggten Datenpaketen nichts anfangen."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:61
+msgid "PVID:"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:60
+msgid ""
+"Bei einem Port, der mit der PVID x markiert ist, werden alle ungetaggten "
+"Datenpakete des Clients mit der VLAN-ID x getaggt."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:64
+msgid "Den Ports die VLANs zuweisen"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:-1
+msgid "VLAN-Topologie"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:71
+msgid "Port 1:"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:70
+msgid ""
+"Der Hypervisor ist über ein Netzwerkkabel mit Port 1 des Switches "
+"verbunden. Der Port 1 ist getaggtes Mitglied der VLANs 2, 10 und 16."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:77
+msgid "Port 2-5:"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:74
+msgid ""
+"Die APs sind im Schulnetz und werden über ein ungetaggtes VLAN verwaltet."
+" VLAN 16 ist ungetaggt und PVID ist 16."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:77
+msgid ""
+"Zusätzlich soll das Schüler-WLAN vom AP ausgestrahlt werden. Um es vom "
+"Schulnetz zu trennen, muss es getaggt am AP ankommen. VLAN 10 ist "
+"getaggt."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:80
+msgid "Port 7-8:"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:80
+msgid ""
+"Die Clients sind nur im Schulnetz und arbeiten mit ungetaggten "
+"Datenpaketen. VLAN 16 ist ungetaggt und PVID ist 16."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:83
+msgid "Port 9:"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:83
+msgid ""
+"Auch der Router arbeitet mit ungetaggten Datenpaketen. VLAN 2 ist "
+"ungetaggt und PVID ist 2."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:86
+msgid "Port 10:"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:86
+msgid ""
+"Über diesen Port wird der Switch gemanaged. Er ist das einzige Mitglied "
+"des Standard VLAN 1. Damit ist der Switch weder über das WLAN noch über "
+"das Schulnetz managebar."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:89
+msgid "Schritt für Schritt"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:91
+msgid "Wähle VLAN-Verwaltung -> Port-VLAN."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:-1
+msgid "VLAN1"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:96
+msgid ""
+"In der Grundeinstellung ist für jeden Port VLAN 1 ungetaggt und PVID 1 "
+"eingestellt."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:98
+msgid ""
+"Da der Switch nur über den Port 1 verwaltet wird, verbiete den Ports 1 "
+"bis 9 die Mitgliedschaft zu VLAN 1 und bestätige anschließend mit "
+"`Übernehmen`. Man beachte, dass dabei PVID 1 automatisch gelöscht wird."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:100
+msgid "Nun wähle die VLAN-ID 2 und klicken auf `Los`."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:-1
+msgid "VLAN2"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:105
+msgid ""
+"Für Port 1 wähle getaggt und für Port 9 Ungetaggt. Dabei wird PVID "
+"automatisch selektiert."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:107
+msgid "Jetzt ist VLAN 10 an der Reihe."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:-1
+msgid "VLAN10"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:112
+msgid "Für die Ports 1 bis 5 wählst Du getaggt."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:114
+msgid "Und schließlich noch VLAN 16."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:-1
+msgid "VLAN16"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:119
+msgid ""
+"Da die APs und die Clients im Schulnetz sind, sind die Ports 2 bis 8 "
+"ungetaggt und PVID ist gesetzt."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:121
+msgid ""
+"Über `VLAN-Verwaltung` -> `Port-VLAN-Mitgliedschaft` erhält man eine "
+"Zusammenfassung."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:-1
+msgid "Zusammenfassung"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/switch.rst:126
+msgid "Jetzt wäre ein guter Zeitpunkt zum Speichern der Konfiguration."
+msgstr ""
+

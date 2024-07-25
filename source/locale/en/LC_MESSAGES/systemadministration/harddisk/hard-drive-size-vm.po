@@ -1,0 +1,365 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:7
+msgid "Aktualisieren der Server-Festplattengrößen"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:14
+msgid ""
+"Achtung: Dies ist noch eine unvollständige Beschreibung. Findest Du "
+"Fehler oder kannst zur Verbesserung beitragen, dann wende Dich bitte an "
+"einen der Autoren des Abschnittes."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:17
+msgid "Überblick"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:19
+msgid "Starten der VM wie zuvor beschrieben ist erfolgt."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:20
+msgid "Prüfen, ob die neuen HDD-Größen an die VM durchgereicht werden."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:21
+msgid "Partitionsgrößen prüfen."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:22
+msgid "HDD1 anpassen."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:23
+msgid "HDD2 mit dem LVM anpassen."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:24
+msgid "Reboot"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:25
+msgid "Tests durchführen."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:28
+msgid "3.1 Starten der VM"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:30
+msgid "Starte die VM wie zuvor beschrieben."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:34
+msgid "3.2 HDD-Größen überprüfen"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:36
+msgid ""
+"Auf der Konsole der Server-VM prüfst Du zuerst, welche Festplatten des "
+"Hypervisor auch in der VM durchgereicht werden und welche Bezeichnung "
+"diese haben. Die im Hypervisor geänderten Größen werden hier bereits "
+"angezeigt, aber die Partitionen wurden noch nicht auf die neuen Größen "
+"angepasst."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:41
+msgid ""
+"Öffne die Konsole wie schon in einem vorherigen Abschnitt gezeigt, "
+"nachdem Du in der Übersicht links den Server `lmn-server` ausgewählt "
+"hast."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:43
+msgid "Für den Login benötigst Du folgende Informationen:"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:45
+msgid "Login: root"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:46
+msgid "Passwort: Muster!"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:48
+msgid ""
+"Diese Daten dürfen bis zum Aufruf des Installationsskriptes nicht "
+"verändert werden!"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:51
+msgid "In der geöffneten Konsole gib folgenden Befehl ein:"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:57
+msgid "Du solltest jetzt die geänderten Größen angezeigt bekommen."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:73
+msgid ""
+"In Abhängigkeit Deiner Virtualisierungs-Umgebung werden die Festplatten "
+"unterschiedlich benannt. Wir zeigen das hier an einem Beispiel mittels "
+"mit XCP-ng. Es kann also in Deiner Konfiguration Abweichungen in der "
+"Bezeichnung geben. Passe diese bei den folgenden Befehlen dementsprechend"
+" an."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:75
+msgid ""
+"Die Bezeichnung `xvda` steht in XCP-ng für die 1. Festplatte der VM, "
+"`xvdb` für die 2. Festplatte der VM."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:77
+msgid "`xvda1` ist dann die 1. Partition auf der 1. Festplatte der VM"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:78
+msgid "`xvda2` die 2. Partition auf der 1. Festplatte"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:80
+msgid ""
+"`vg-*` steht für ein LVM auf der jeweils zugeordneten Festplatte. Im "
+"obigen Beispiel befindet sich das LVM auf der 2. Festplatte (xvdb)."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:84
+msgid ""
+"Unter Proxmox oder KVM werden in der VM hingegen die "
+"Festplattenbezeichnungen sda für die 1. HDD und sdb für die 2. HDD des "
+"Systems verwendet. Die Nummerierung für die Partitionen bleibt erhalten. "
+"Die angeben sind je nach eingesetztem System ensprechend anzupassen."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:88
+msgid "3.3 Dateisystem prüfen"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:90
+msgid "Lasse Dir nun die aktuellen Größen des Dateisystems ausgeben."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:112
+msgid "Hier werden noch die alten Partitionsgrößen angegeben."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:115
+msgid "3.4 HDD1 anpassen"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:117
+msgid "Partitionen auf der 1. HDD prüfen:"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:123
+msgid "Sollte eine derartige Meldung"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:129
+msgid ""
+"durch den Befehl ausgegeben werden, dann fdisk wieder ohne Schreibvorgang"
+" verlassen mit `q`."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:131
+msgid "Dieses Problem gilt es zunächst zu lösen."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:133
+msgid "Rufe dazu auf der Eingabekonsole das Programm `parted` auf."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:139
+msgid "Das Programm wartet dann auf eine Eingabe von dir."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:149
+msgid "Gib `print` ein."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:151
+msgid ""
+"Es wird dann ein Größenproblem für die 1. HDD angezeigt und parted bietet"
+" eine Auswahloption an, um dieses Problem zu beheben."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:154
+msgid ""
+"Anmerkung zu den Platzhaltern `xx`, diese stehen für die ausgewählten "
+"Vorgaben Deiner Installation."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:161
+msgid ""
+"Gib `Reparieren` ein, damit das Größenproblem gelöst wird und verlasse "
+"dann parted wieder durch Angabe des Befehls `quit`."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:164
+msgid ""
+"Danach erneut `fdisk` aufrufen, die 2. Partition löschen und neu mit "
+"neuer Größe anlegen. Die angegebenen Befehle musst Du der Reihe nach "
+"abarbeiten."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:174
+msgid "`p` (print) zeigt Dir die vorhanden Partitionen an"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:180
+msgid ""
+"`d` bietet Dir die Auswahl der zu löschen Partitionen durch die Angabe "
+"einer Nummer an. Hier also die 2"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:186
+msgid "Nun gilt es die Partition neu anzulegen, das erreichst Du mit `n`:"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:192
+msgid "Die folgenden 3 Vorgaben kannst Du einfach mit `Enter` übernehmen."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:200
+msgid "Dir wird darauf die folgende Frage gestellt:"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:209
+msgid "Gib ein `N` ein"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:211
+msgid ""
+"Zum Beenden von fdisk verwendest Du nun `w` damit Deine Änderungen auf "
+"die Festplatte geschrieben werden."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:222
+msgid ""
+"Nun muss die Partition noch auf die neue Größe erweitert werden. Gib in "
+"der Konsole nun an:"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:228
+msgid "Ab nun wird die neue Größe für der 1. HDD genutzt."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:232
+msgid "3.5 HDD2 mit dem LVM anpassen"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:234
+msgid "In o.g. VM auf XCP-ng befindet sich auf der 2. HDD `/dev/xvdb` ein LVM."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:236
+msgid "Folgende Begriffe sind hierbei relevant:"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:238
+msgid "Physical Volume (PV)"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:239
+msgid "Volume Group (VG)"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:240
+msgid "Logical Volume (LV)"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:242
+msgid "Anpassen der PV - Größe auf die gesamte neue Festplattengröße"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:244
+msgid "PV ermitteln"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:251
+msgid "PV Größenanpassung testen"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:259
+msgid "LV-Größen anpassen"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:265
+msgid "Der Befehl liefert folgende Ausgabe:"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:273
+msgid "Diesen Befehl wiederholst Du für die anderen Logical Volumes"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:281
+msgid "Dateisystem an die neuen Größen anpassen:"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:287
+msgid "Beispiel der Befehlsausgabe:"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:297
+msgid "Wiederhole diesen Befehl für die anderen Logical Volumes."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:306
+msgid "Ergebnis prüfen"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:326
+msgid "3.6 Reboot"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:328
+msgid ""
+"Starte nun die Server-VM neu, um zu prüfen, ob die vorgenommenen "
+"Größenanpassungen funktionsfähig sind und der Reboot korrekt ausgeführt "
+"wird."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:335
+msgid "3.7 Tests durchführen"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:337
+msgid ""
+"Nachdem die VM wieder gestartet ist, melde Dich an der Konsole an und "
+"prüfe mithilfe nachstehender Befehle, ob die Platten- und "
+"Partitionsgrößen nun Deinen Wünschen tatsächlich entsprechen."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:372
+msgid ""
+"Dieses Vorgehen musst Du für die optionalen Server `docker` und `opsi` "
+"wiederholen, wenn Du auch deren Festplattengröße verändert hast!"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-vm.rst:374
+msgid "Im Folgenden wirst Du die Festplatten der OPNsense® anpassen."
+msgstr ""
+

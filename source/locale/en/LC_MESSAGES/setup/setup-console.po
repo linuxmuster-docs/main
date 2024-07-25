@@ -1,0 +1,574 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/setup/setup-console.rst:7
+msgid "Setup im Terminal"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:12
+msgid ""
+"Melde Dich als Benutzer ``root`` mit dem Passwort ``Muster!`` auf dem "
+"Server an."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:14
+msgid ""
+"Für diese Anmeldung kannst Du die xterm.js Konsole von Proxmox verwenden,"
+" wenn Du unserer Anleitung gefolgt bist. Alternativ kannst Du Dich via "
+"ssh von einem anderen Rechner mit dem Server verbinden, wenn er sich im "
+"gleichen Netzwerksegment befindet."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:16
+msgid ""
+"Im Terminal wirst Du mit dem Erstbildschirm von linuxmuster.net v7.2 "
+"begrüßt."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:23
+msgid "Terminal after login"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:23
+msgid "Welcome to lmn.net"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:25
+msgid "Das Setup wird über den Befehl ``linuxmuster-setup`` gestartet."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:27
+msgid ""
+"Erfolgt der Aufruf direkt mittels ``linuxmuster-setup`` *müssen* "
+"mindestens folgende Setup-Parameter als Kommandozeilenparameter übergeben"
+" werden (in einer Zeile) - die angegebene Werte nach dem "
+"Gleichheitszeichen sind selbstverständlich nur Beispielwerte:"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:33
+msgid ""
+"Weitere Parameter *können* auf der Kommandozeile angegeben werden. Werden"
+" aber auch in einem Dialogsystem abgefragt. Um alle Parameter zu sehen, "
+"verwende |...|"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:39
+msgid "Die dazugehörende Ausgabe:"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:59
+msgid ""
+"Alternativ kannst Du eine Konfigurationsdatei mit dem Parameter "
+"``--config`` übergeben."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:61
+msgid ""
+"Willst Du diese Möglichkeit nutzen, lege eine ``config.txt`` mittels des "
+"nächsten Befehls an:"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:67
+msgid ""
+"Diese Datei musst Du noch mit Deinen Angaben füllen. Hier beispielhaft "
+"mit dem Editor nano gezeigt"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:78
+msgid "Terminal Setup: Editor nano config.txt"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:78
+msgid "Editor Nano: config.txt"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:80
+msgid ""
+"Hast Du diese Textdatei mit deinen Einträgen gespeichert ``[Strg]+[X]`` "
+"--> ``[Y]`` --> ``[Enter]``, kannst Du das Setup mit folgendem Befehl "
+"aufrufen:"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:86
+msgid ""
+"Nach dessen Aufruf, erscheinen in der Konsole nach und nach nochmals "
+"relevante Parameter. Hattest Du diese bereits festgelegt, so siehst Du "
+"Deine Werte. Bei nicht festgelegten, siehst Du die standardmäßig "
+"vorbelegten Werte. Prüfe alle Parameter und passe deren Werte "
+"gegebenenfalls an."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:88
+msgid "Klicke jeweils auf ``< OK >``, um zum nächsten Schritt zu gelangen."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:95
+msgid "Terminal Setup: Parameter 1"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:95
+msgid "Terminal Setup Hostname"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:97
+msgid ""
+"Danach gelangst Du zur Angabe der sogenannten Domain. Beachte bei dessen "
+"Festlegung u.g. Hinweise zum FQDN."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:104
+msgid "Terminal Setup: Parameter 2"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:104
+msgid "Terminal Setup FQDN"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:107
+msgid "Der ``Domain name`` spielt eine besondere Rolle für das Setup."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:109
+msgid ""
+"Besonders, wenn eine Adresse verwendet werden soll, die intern und extern"
+" identisch sein soll, sodass mit dem FQDN intern und extern gearbeitet "
+"wird. Um Dir das zu verdeutlichen, zeigen wir das an zwei Beispielen:"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:111
+msgid "**meineschule.de**"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:112
+msgid "**linuxmuster.lan**"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:114
+msgid ""
+"Die einzelnen Teile des Domainnamens werden durch einen einzelnen Punkt "
+"getrennt."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:116
+msgid ""
+"Die beiden rechten Teile **de** beziehungsweise **lan**  stellen die "
+"sogenannte Top-Level-Domain (TLD) dar."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:118
+msgid ""
+"Die TLD **lan** wird nicht extern verwendet, sondern ist nur für den "
+"internen Gebrauch sinnvoll."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:120
+msgid "Die TLD **de** wird extern genutzt."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:122
+msgid ""
+"Hat Deine Schule die de-Domain **meineschule.de** registriert, dann musst"
+" Du hier eine Subdomain angeben, da **meineschule** zugleich die "
+"sogenannten Samba-Domain darstellt."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:124
+msgid ""
+"Wie aufgezeigt wird aus dem ganz linken Teil die Samba-Domain gebildet. "
+"Für diese gibt es defininationsmäßig einige Einschränkungen:"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:126
+msgid "Es dürfen maximal 15 Zeichen verwendet werden."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:128
+msgid "Es werden nur englische Kleinbuchstaben a bis z akzeptiert."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:130
+msgid "**Richtig**: gshoenningen (12 Zeichen, keine Umlaute und Satzzeichen etc.)"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:132
+msgid ""
+"**Falsch**: GSO-Heinrich-Böll-Hönningen (26 Zeichen, Großbuchstaben, "
+"Umlaute, Bindestriche)"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:134
+msgid ""
+"Weitergehende Informationen findest du hier: "
+"https://wiki.samba.org/index.php/Active_Directory_Naming_FAQ"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:136
+msgid "Bestätige Deine Eingabe mit ``< OK >``."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:138
+msgid ""
+"Es erscheint der IP-Adressbereich, der für die Rechneraufnahme mit Linbo "
+"reserviert wird. In der Abb. ist dies der Bereich ``10.0.0.100`` bis "
+"``10.0.0.200``."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:145
+msgid "Terminal Setup: Parameter 3"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:145
+msgid "Terminal Setup: DHCP Bereich festlegen"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:147
+msgid "Wechsele mit ``< OK >`` zur nächsten Eingabemaske."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:149
+msgid ""
+"Hier setzt Du ein neues Administrations-Kennwort. Dieses wird zugleich "
+"das neue Kennwort aller administrativens Benutzer, so auch vom ``gobal-"
+"admin`` in der Schulkonsole."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:156
+msgid "Terminal Setup: Parameter 4"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:156
+msgid "Terminal Setup: Global-admin und root Kennwort festelegen"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:158
+msgid ""
+"Passwortbeschränkungen: Valid characters are: a-z A-Z 0-9 ?!§+-@#%&*( )[ "
+"]{ }"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:166
+msgid ""
+"Das beim Setup eingegebene Admin-Passwort wird für folgende "
+"administrativen User gesetzt:"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:163
+msgid "root auf dem Server"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:164
+msgid "root auf der Firewall"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:165
+msgid "global-admin (AD)"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:166
+msgid "pgmadmin (AD)"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:167
+msgid "linbo (/etc/rsyncd.secrets)"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:168
+msgid ""
+"Es sollten die Passwörter der o.g. User nach dem Setup geändert werden, "
+"sodass jeder User ein eigenes Password hat."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:169
+msgid ""
+"Achte darauf, dass Dein Passwort den Komplexitätsanforderungen "
+"entspricht, die mit samba4 aktiviert sind: Mind. 7 Zeichen, Groß- und "
+"Kleinbuchstaben, Ziffern und Sonderzeichen (zulässige Sonderzeichen wie "
+"oben genannt)"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:171
+msgid ""
+"In der Datei ``/etc/linuxmuster/sophomorix/default/school/school.conf`` "
+"sind die Kennwortlängen für Schüler (Standard: 10 Zeichen) und Lehrer (12"
+" Zeichen) angegeben."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:172
+msgid ""
+"Die Grundeinstellungen für Kennwörter in samba4 kannst Du Dir auf dem "
+"Server in der Konsole mit ``samba-tool domain passwordsettings show`` "
+"anzeigen lassen."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:175
+msgid "Gebe das Kennwort ein und klicke auf ``< OK >``."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:182
+msgid "Terminal Setup: Parameter 5"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:182
+msgid "Terminal Setup: Kennwort bestätigen"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:184
+msgid "Bestätige dieses Kennwort und klicke auf ``< OK >``."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:186
+msgid ""
+"Danach wird das Setup gestartet. Es dauert einige Zeit, bis alle "
+"erforderlichen Dienste und die OPNsense eingerichtet wurden."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:193
+msgid "Terminal Setup: Services"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:193
+msgid "Terminal Setup: Fortschritt des Setups"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:195
+msgid ""
+"Nach Abschluss des Setups siehst Du im Terminal, dass das Setup beendet "
+"wurde."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:202
+msgid "Terminal Setup finished"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:202
+msgid "Terminal Setup: Abschluss des Setups"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:204
+msgid ""
+"Danach muss noch der Dienst für die WebUI/Schulkonsole oder der Server "
+"neu gestartet werden."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:210
+msgid "alternativ"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:216
+msgid ""
+"Das erste Verfahren hat den Vorteil, dass Du nicht die Zeit des Neustarts"
+" abwarten, Dich erneut verbinden und anmelden musst."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:220
+msgid "Starte nach dem erfolgreichen Setup ebenfalls die OPNsense | reg | neu."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:222
+msgid ""
+"Nach abgeschlossenem Setup und dem Neustart des Dienstes ``linuxmuster-"
+"webui`` bzw. eventuellen Neustart des Servers, kannst Du Dich mit einem "
+"PC via Browser an der Schulkonsole von linuxmuster.net v7.2 anmelden."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:224
+msgid ""
+"Nachdem sich Dein Client eine IP-Adresse via DHCP aus dem Adressbereich "
+"für die Rechneraufnahme geholt hat, ist dieses aber nicht möglich. Dessen"
+" Adressen sind aus sicherheitstechnischen Erwägungen nur auf das "
+"allernötigste beschränkt."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:226
+msgid ""
+"Daher muss sich der Rechner in einem besonderen LAN-Bereich befinden, "
+"etwa mit der IPv4-Adresse 10.0.0.10/16. Diese IP-Adresse musst Du manuell"
+" in Deinem Admin-PC einrichten."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:229
+msgid "Anmeldung an der Schulkonsole als global-admin"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:231
+msgid ""
+"Öffne die URL ``https://10.0.0.1`` mit dem Admin-PC. Es wurde beim Setup "
+"ein self-signed certificate erstellt, sodass Du dieses beim erstmaligen "
+"Aufruf mit dem Browser akzeptieren musst."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:238
+msgid "WebUI: First ssl access"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:238
+msgid "SSL: Mögliches Sicherheitsrisiko - Erweitert"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:240
+msgid "Der Browser zeigt Dir den Warnhinweis an. Klicke auf ``Erweitert ...``."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:247
+msgid "WebUI: Accept certificate"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:247
+msgid "SSL: Risiko akzeptieren und fortfahren"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:249
+msgid ""
+"Es erscheint auf der gleichen Seite unten ein weiterer Eintrag. Bestätige"
+" diesen, indem Du den Button ``Risiko akzeptieren und fortfahren`` "
+"auswählst."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:251
+msgid ""
+"Danach kommst Du zur Anmeldeseite der WebUI/Schulkonsole. Melde Dich nun "
+"als Benutzer ``global-admin`` an und nutze das während des Setups "
+"festgelegte Kennwort."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:258
+msgid "WebUI: Login global-admin"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:258
+msgid "Login global-admin"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:260
+msgid "Nach erfolgreicher Anmeldung gelangst Du zur Hauptseite der Schulkonsole."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:267
+msgid "WebUI: Hauptseite"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:267
+msgid "Hauptseite der Schulkonsole"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:270
+msgid "Berechtigungen der Log-Dateien anpassen"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:272
+msgid "Nach dem erfolgreichen Setup verbindest Du Dich via ssh auf den Server."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:274
+msgid ""
+"Zum Abschluss sind noch die Dateiberechtigung für die linuxmuster Log-"
+"Dateien anzupassen."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:276
+msgid "Setze die Berechtigungen nun mit folgendem Befehl als Benutzer ``root``:"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:282
+msgid ""
+"Lasse Dir den Inhalt des Verzeichnisses danach ausgeben und "
+"kontrollieren, ob Besitzer und Gruppe root sind und diese lesen und "
+"schreiben dürfen."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:288
+msgid "Der Inhalt des Verzeichnisses sollte sich wie folgt darstellen:"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:295
+msgid "directory listing log files"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:295
+msgid "Liste die Berechtigungen der Dateien auf"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:298
+msgid "OPNsense |reg| Unbound DNS anpassen"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:300
+msgid ""
+"Das linuxmuster-setup richtet in der OPNsense |reg| als voreingestellte "
+"DNS-Server diejnigen des DNS0.EU - Projekts ein. Dies sind europäische "
+"öffentliche DNS-Server, die darauf zielen, bösartige Domains zu blocken, "
+"Ende-zu-Ende Verschlüsselung zu gewährleisten und gefährdende Inhalte zu "
+"filtern (https://www.dns0.eu/de)."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:302
+msgid ""
+"Nach der Installation muss im Unbound DNS-Resolver der OPNsense diese "
+"Voreinstellung ggf. noch aktiviert werden. Die DNS-Einstellungen der "
+"OPNsense kannst Du unter ``System -> Einstellungen -> Allgemein`` "
+"kontrollieren."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:309
+#: ../../source/setup/setup-console.rst:318
+msgid "dns settings"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:309
+msgid "DNS-Einträge"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:311
+msgid "Zur Aktivierung gehe auf ``Dienste -> Unbound DNS -> Query Forwarding``."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:318
+msgid "Unbound-DNS: Query Forwarding"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:320
+msgid ""
+"Setze den Haken für ``Use System Nameservers``, dort siehst Du dann die "
+"in obiger Abb. dargestellten DNS-Einträge. Klicke zur Aktivierung auf "
+"``Anwenden``."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:322
+msgid ""
+"Mit sog. Overrides können im Unbound DNS genutzt werden, um die DNS-"
+"Ergebnisse in gewünschter Form anzupassen oder aber spezielle DNS "
+"Einträge bereitzustellen. Weitergehende Informationen findest Du hier: "
+"https://docs.opnsense.org/manual/unbound.html"
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:325
+msgid ""
+"Setze die Ersteinrichtung fort, indem Du :ref:`add-user-accounts-label` "
+"und :ref:`hardware-registration-label` aufrufst."
+msgstr ""
+
+#: ../../source/setup/setup-console.rst:327
+msgid ""
+"``Alternativ``: Willst Du eine Migration durchführen, geht es weiter mit:"
+" :ref:`migration-label`"
+msgstr ""
+

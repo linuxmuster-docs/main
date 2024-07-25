@@ -1,21 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, linuxmuster.net
-# This file is distributed under the same license as the linuxmuster.net package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
+"Language-Team: English "
+"(https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
 
 #: ../../source/clients/postsync/basics.rst:2
 msgid "Funktionsweise und Grundlagen der Postsync-Scripte"
@@ -27,20 +31,13 @@ msgstr ""
 
 #: ../../source/clients/postsync/basics.rst:6
 msgid ""
-"Nachdem der Linux-Client mit Linbo seinen lokalen Cache mit dem Cloop auf "
-"dem Server synchronisiert hat, wird ein vorhandenes Postsync-Script "
-"angewendet, das für ein sog. Cloop (also ein Client-Image) auf dem Server "
-"vorhanden ist. Wird ein sog. universelles Postsync-Script erstellt, so "
-"können sog. Patches – also spezifische Anpassungen – für die Patchklasse, "
-"den Raum und ggf. einzelne Rechner angewendet werden."
-msgstr ""
-
-#: ../../source/clients/postsync/basics.rst:9
-msgid ""
-"Nach der Synchronisation werden die Clients durch das Script vollständig auf"
-" deren Einsatzumgebung angepasst wird. Hierdurch können z.B. spezielle "
-"Anpassungen für Lehrer – PCs in einzelnen Räumen, oder für alle zu nutzenden"
-" Drucker bereitgestellt werden."
+"Nachdem mit Hilfe von LINBO der Linux-Client die Imagedatei (qcow2-Datei)"
+" vom Server geholt und auf den Client synchronisiert hat, kann ein für "
+"dieses Image definiertes Postsync-Script angewendet werden. Dieses "
+"ermöglicht es, spezifische Anpassungen (sogenannte Patches) vorzunehmen "
+"und die PCs somit auf deren Einsatzumgebung anzupassen. Hierdurch können "
+"z.B. spezielle Anpassungen für Lehrer-PCs, für PCs in speziellen Räumen, "
+"oder für alle zu nutzenden Drucker bereitgestellt werden."
 msgstr ""
 
 #: ../../source/clients/postsync/basics.rst:11
@@ -48,13 +45,69 @@ msgid "**Wo liegt das Postsync-Script ?**"
 msgstr ""
 
 #: ../../source/clients/postsync/basics.rst:13
-msgid "Das Postsync-Script liegt im Verzeichnis:"
+msgid ""
+"Ein Beispiel für ein universelles Postsync-Script liegt im Verzeichnis "
+"``/srv/linbo/examples/postsync``."
 msgstr ""
 
-#: ../../source/clients/postsync/basics.rst:19
+#: ../../source/clients/postsync/basics.rst:15
+msgid ""
+"Das Postsync-Script ist in dem Verzeichnis abzulegen, in dem sich das "
+"Image befindet, auf das das Script angewendet werden soll. Der Name für "
+"das Postsync-Script wird dann zusammengesetzt aus"
+msgstr ""
+
+#: ../../source/clients/postsync/basics.rst:27
 msgid "Es weist folgende Rechte auf:"
 msgstr ""
 
-#: ../../source/clients/postsync/basics.rst:26
-msgid "Dieses Script wird also auf das jeweilige Cloop angewendet."
+#: ../../source/clients/postsync/basics.rst:33
+msgid "**Anwendung des Postsync-Scriptes**"
 msgstr ""
+
+#: ../../source/clients/postsync/basics.rst:35
+msgid ""
+"Soll das sogenannte universelle Postsync-Script angewendet werden, so ist"
+" dieses zuerst als Vorlage in das gewünschte Image-Verzeichnis zu "
+"kopieren:"
+msgstr ""
+
+#: ../../source/clients/postsync/basics.rst:41
+msgid "Für das Image focalfossa wäre der Befehl also:"
+msgstr ""
+
+#: ../../source/clients/postsync/basics.rst:49
+msgid "Dieses Script wird also auf das jeweilige qcow2 Image angewendet."
+msgstr ""
+
+#~ msgid ""
+#~ "Nachdem der Linux-Client mit Linbo "
+#~ "seinen lokalen Cache mit dem Cloop "
+#~ "auf dem Server synchronisiert hat, wird"
+#~ " ein vorhandenes Postsync-Script "
+#~ "angewendet, das für ein sog. Cloop "
+#~ "(also ein Client-Image) auf dem "
+#~ "Server vorhanden ist. Wird ein sog. "
+#~ "universelles Postsync-Script erstellt, so "
+#~ "können sog. Patches – also spezifische"
+#~ " Anpassungen – für die Patchklasse, "
+#~ "den Raum und ggf. einzelne Rechner "
+#~ "angewendet werden."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Nach der Synchronisation werden die "
+#~ "Clients durch das Script vollständig auf"
+#~ " deren Einsatzumgebung angepasst wird. "
+#~ "Hierdurch können z.B. spezielle Anpassungen"
+#~ " für Lehrer – PCs in einzelnen "
+#~ "Räumen, oder für alle zu nutzenden "
+#~ "Drucker bereitgestellt werden."
+#~ msgstr ""
+
+#~ msgid "Das Postsync-Script liegt im Verzeichnis:"
+#~ msgstr ""
+
+#~ msgid "Dieses Script wird also auf das jeweilige Cloop angewendet."
+#~ msgstr ""
+

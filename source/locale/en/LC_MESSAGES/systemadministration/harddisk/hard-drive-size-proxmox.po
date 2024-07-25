@@ -1,0 +1,246 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:7
+msgid "Vorbereiten der Proxmox Festplatten"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:10
+msgid "1. Snapshots der VMs anfertigen"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:16
+msgid "Am Beispiel der OPNsense®-VM werden die Anpassungen nachstehend erläutert."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:18
+msgid "Wähle als Erstes die VM aus, die geklont werden soll."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:-1
+msgid "Snapshot Schritt 1.1"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:24
+msgid "Unter ``More`` findest Du den Button zum Starten des Klon-Vorganges"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:-1
+msgid "Snapshot Schritt 1.2"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:30
+msgid ""
+"In dem sich öffnen Fenster siehst Du welche VM geklont werden wird und "
+"deren neuer ID."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:32
+msgid ""
+"Im Feld `Name` kannst Du einen eigenen angeben, ansonsten wird einer nach"
+" dem Muster \"Copy of VM ...\" verwendet."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:-1
+msgid "Snapshot Schritt 1.3"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:38
+msgid "Der Klon-Vorgang wird mit `Clone` gestartet."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:40
+msgid ""
+"Das wird sichtbar daran, dass die VM mit der neuen ID in der linken "
+"Übersicht mit einem Schloss erscheint."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:-1
+msgid "Snapshot Schritt 1.4"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:46
+msgid ""
+"Das Schloss zeigt an, dass das Kopieren der VM gestartet ist. Dieses "
+"siehst Du auch in den `Tasks` am unteren Bildschirmrand."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:-1
+msgid "Snapshot Schritt 1.5"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:52
+msgid "Dort erkennst Du, wann der Vorgang abgeschlossen ist."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:-1
+msgid "Snapshot Schritt 1.6"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:58
+msgid ""
+"Bei der neuen VM ist das Schloss verschwunden und der Name wird in der "
+"Übersicht der VMs angezeigt."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:-1
+msgid "Snapshot Schritt 1.7"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:64
+msgid ""
+"Diesen Ablauf musst Du für alle Virtuellen Maschinen, deren Festplatte Du"
+" vergrößern möchtest, wiederholen."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:67
+msgid "2. Vorbereiten der PROXMOX Festplatten"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:69
+msgid "Ausgangssituation:"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:-1
+msgid "Schritt 2.1"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:75
+msgid ""
+"Die OPNsense®-VM wurde mit dem Namen `lmn7-opnsense` und der `VM-ID: 200`"
+" angelegt. In der Übersicht erkennst Du, dass derzeit eine Festplatte mit"
+" einer Größe von 10 GiB eingerichtet wurde. Für den Einsatz in einem "
+"Produktivserver einer Schule dürfte dies zu klein sein. Die "
+"Festplattengröße kannst Du nun wie folgt anpassen:"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:79
+msgid ""
+"Wähle links im Menü die gewünschte VM aus und dann in der Spalte daneben "
+"(Kontextmenü der VM) den Eintrag `Hardware` aus."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:81
+msgid ""
+"Rechts werden nun die Hardware-Komponenten der VM aufgelistet. Markiere "
+"den Eintrag `Hard disk`."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:-1
+msgid "Schritt 2.2"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:87
+msgid ""
+"Klicke danach auf den Button `Resize Disk`, um die Festplatte der VM zu "
+"vergrößern."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:91
+msgid ""
+"Auf diesem Wege ist nur eine Vergrößerung des Plattenplatzes möglich, "
+"eine Verkleinerung hingegen nicht!"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:93
+msgid ""
+"Es erscheint ein neues Fenster, in dem Du angeben must, um wieviel GiB Du"
+" die Festplatte vergrößern willst."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:-1
+msgid "Schritt 2.3"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:99
+msgid ""
+"In dem Beispiel sind 10 GByte gegeben, um auf 50 GByte zu kommen, trägst "
+"Du nun 40 GByte ein. Danach siehst Du folgenden Eintrag:"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:-1
+msgid "Schritt 2.4"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:105
+msgid "Für die anderen VMs werden die Festplatten in gleicher Weise vergrößert."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:107
+msgid ""
+"Bei der Server-VM ist zu beachten, dass diese über zwei Festplatten "
+"verfügt. Die kleine Festplatte weist zu Beginn 25 GByte die größere 100 "
+"GByte auf. Beide sind zu vergrößern."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:109
+msgid ""
+"Hierbei ist auf eine ausreichende Größe zu achten, da auf dem Server "
+"neben den Nutzer- und Klassendaten auch die von Linbo gespeicherten "
+"Festplattenabbilder der Clients abgelegt werden. Siehe Einleitung dieses "
+"Abschnittes: :ref:`adjusting_hard_drive_size-label`"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:112
+msgid "3. Schritt: HDD-Größen der Virtuellen Maschinen anpassen"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:114
+msgid ""
+"Nachdem im Virtualisierungs-Host die HDD der VM vergrößert wurde, muss "
+"die tatsächlich genutzte Größe angepasst werden."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:117
+msgid "3.1 Virtuelle Maschinen starten"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:-1
+msgid "Schritt 3.1"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:123
+msgid ""
+"Wähle links im Menü die gewünschte VM aus. Exemplarisch ist der Start der"
+" Server-VM dargestellt."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:125
+msgid "Nach der Auswahl betätgist Du den Button `Start`."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:127
+msgid ""
+"Wiederhole dieses Vorgehen für alle VMs deren Festplatten Du angepasst "
+"hast."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:130
+msgid "3.2 Vergrößern der Server Festplatten"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/hard-drive-size-proxmox.rst:132
+msgid ""
+"In der gestarteten VM musst Du nun den Festplattenplatz anpassen. Folge "
+"hierzu der Beschreibung mit nachstehendem Link."
+msgstr ""
+

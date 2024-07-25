@@ -1,0 +1,348 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:7
+msgid "Server auf lmn7.2 vorbereiten"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:13
+msgid ""
+"Nachdem Du die Firewall und den Server wie beschrieben installiert hast, "
+"müssen beide Maschinen fertig konfiguriert werden."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:15
+msgid "Passe zuerst die Zeitzone an und deinstalliere cloud-init."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:18
+msgid "Vorbereitungen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:21
+msgid "Zeitservereinstellungen überprüfen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:23
+msgid ""
+"Nachdem Du nun den Server vorbereitet hast, überprüfe die "
+"Zeiteinstellungen auf dem Server. Dazu gibst Du in der Konsole folgenden "
+"Befehl an:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:29
+msgid ""
+"Es wird hier noch die UTC-Zeit angegeben. Wie für die OPNsense muss nun "
+"die Zeitzone angepasst werden. Die erfolgt mit folgendem Befehl:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:38
+msgid ""
+"Du solltest nun als Zeitzone ``Europe/Berlin`` und die korrekte Lokalzeit"
+" sowie die korrkte UTC - Zeit angezeigt bekommen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:42
+msgid "Cloud-init deinstallieren"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:44
+msgid "Cloud-init kannst Du unter Ubuntu mit folgenden Schritten löschen:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:55
+msgid "Default-Locale setzen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:57
+msgid "Erzeuge zuerst die Locales mit:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:67
+msgid "Prüfe, welche Locales installiert sind:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:76
+msgid ""
+"Sollte das Paket Locales nicht installiert sein, führe folgenden Befehl "
+"aus:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:82
+msgid "Erzeuge nun die Locales neu:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:119
+msgid "Du kannst die Default-Locale ggf. auch mit folgenden Befehl neu setzen:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:126
+msgid "Wichtiger Hinweis, schon jetzt!"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:128
+msgid ""
+"Solltest Du mit Deiner Konfiguration von unseren Standard-Vorgaben bei "
+"dem zuletzt genannten Punkt abweichen, musst Du Deine Einstellungen "
+"unbedingt bei Aufruf des Skriptes lmn-prepare anpassen!"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:131
+msgid "Letzter Test vor Anwendung des Skriptes lmn-appliance"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:133
+msgid ""
+"Als letzte Überprüfung, bevor Du das Skript einsetzt, verbinde Dich vom "
+"Server aus mit der Firewall via ssh."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:139
+msgid ""
+"Du solltest Dich nach der Eingabe des Passwortes ``Muster!`` auf der "
+"Konsole der OPNsense |reg| wiederfinden. Eventuell musst Du auch vorher "
+"deren Key akzeptieren. Mit ``0`` solltest Du Dich wieder ausloggen und "
+"zurück auf der Server-Konsole sein."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:141
+msgid ""
+"Sollte dieser Test erfolgreich sein, steht der abschließenden "
+"Vorbereitung nach einem Neustart nichts mehr im Wege."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:149
+msgid "Das Skript lmn-appliance"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:151
+msgid "Das Skript ``lmn-appliance`` bereitet den Server / die Appliance vor:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:153
+msgid "Es bringt das Betriebssystem auf den aktuellen Stand,"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:154
+msgid "richtet das linuxmuster.net-Paket-Repo ein,"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:155
+msgid "installiert das Paket linuxmuster-prepare und"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:156
+msgid ""
+"startet dann das Vorbereitungsskript lmn-prepare, - das die für das "
+"jeweilige Appliance-Profil benötigten Pakete installiert, - das Netzwerk "
+"konfiguriert, - das root-Passwort auf Muster! setzt und - im Falle des "
+"Serverprofils optional LVM einrichtet."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:164
+msgid "Erstelle jetzt einen Snapshot Deiner Server-VM."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:166
+msgid "Wenn Du nicht mehr an Deinem Server eingeloggt bist, melde Dich erneut an."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:168
+msgid "Überprüfe Deine Festplatten und Partitionen mit"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:181
+msgid ""
+"In o.g. Beispiel wurde Ubuntu Server auf der 1. Festplatte (sda) "
+"installiert. Die zweite Festplatte (sdb) kennt noch keine Partitionen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:184
+msgid "Skript herunterladen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:186
+msgid "Führe danach folgende Befehle in der Eingabekonsole aus:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:188
+msgid ""
+"Wechsele Deinen Log-in und werde zu ``root``, falls du es nicht mehr sein"
+" solltest:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:194
+msgid ""
+"Lade das lmn-appliance Skript herunter und setze die "
+"Ausführungsberechtigung:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:202
+msgid "Aufruf lmn-appliance"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:204
+msgid "Das Skript ist generell wie folgt zu starten:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:210
+msgid ""
+"Die möglichen Optionen findest Du hier dokumentiert: "
+"https://github.com/linuxmuster/linuxmuster-prepare"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:212
+msgid ""
+"Für unsere Beispielkonfiguration rufe nun das Skript ``lmn-appliance`` so"
+" auf, dass Dein Server vorbereitet wird. Das LVM wird dann auf  der "
+"zweiten Festplatte eingerichtet wird."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:218
+msgid ""
+"Mit dem Parametern -u (unattended) und -l wird dann ein LVM - hier auf "
+"der 2. Festplatte (sdb) - mit folgenden Werten eingerichtet:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:220
+msgid "var: 10 GiB"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:221
+msgid "linbo: 40 GiB"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:222
+msgid "global: 10GiB"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:223
+msgid "default-school: restlicher Plattenplatz"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:226
+msgid "Installation mit Deinen Vorgaben"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:228
+msgid ""
+"Nachstehendes Beispiel geht davon aus, dass Du eine zweite HDD mit einer "
+"Größe von 1TiB hast."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:234
+msgid ""
+"Es wird hier also mit dem Profil server auf der zweiten Festplatte "
+"(/dev/sdb) ein LVM eingerichtet. Auf der zweiten Platte werden vier "
+"Volumes mit den Größen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:236
+msgid "var: 50GiB"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:237
+msgid "linbo: 500GiB"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:238
+msgid "global: 50GiB"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:239
+msgid "default-school: verbleibender Rest der zweiten Festplatte - hier 400 GiB -"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:241
+msgid "eingerichtet."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:245
+msgid "Passe die Größenangaben auf Deine Situation an."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:248
+msgid "Ablauf"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:250
+msgid ""
+"Es wird zuerst das LVM auf der zweiten Platte eingerichtet, danach werden"
+" alle erforderliche Pakete geladen und installiert. Dies kann etwas "
+"dauern. Nach Abschluss des Installations- und Vorbereitungsarbeiten wirst"
+" Du aufgefordert, den Server neu zu starten."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:274
+msgid ""
+"Ist lmn-appliance ohne Fehler durchgelaufen, starte danach den Server neu"
+" mit dem Befehl:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:280
+msgid "Danach steht dem Setup v7.2 nichts mehr im Wege."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:283
+msgid "Paketquellen eintragen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:287
+msgid ""
+"Dies muss nur ausgeführt werden, sofern Du den Server bzw. die VM nicht "
+"mit dem Skript ``lmn-appliance`` vorbereitet haben solltest."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:289
+msgid ""
+"Es müssen für linuxmuster.net v7.2 sowohl die Paketquellen für die v7.1 "
+"als auch die Paketquellen für die v7.2 eingetragen werden."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:291
+msgid ""
+"Zur Eintragung der Paketquellen führe folgende Befehle in der "
+"Eingabekonsole aus:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:297
+msgid "-O --> [-][Großbuchstabe O]"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:299
+msgid ""
+"Damit installierst Du den Key für das Repository von linuxmuster.net und "
+"aktivierst ihn."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:301
+msgid "Danach fügst Du zuest das Linuxmuster 7.1 Repository hinzu."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:307
+msgid "Zuletzt fügst Du das Linuxmuster 7.2 Repository hinzu."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/lmn_pre_install.rst:313
+msgid "Aktualisiere die Softwareliste des Servers:"
+msgstr ""
+

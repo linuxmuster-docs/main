@@ -1,0 +1,196 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/migration/upgrade.rst:5
+msgid "Upgrade v7.1 auf v7.2"
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:7
+msgid "Bringe zuerst den lmn7.1 Server auf den aktuellsten Paketstand."
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:9
+msgid "Führe dazu in der Konsole folgende Befehle aus:"
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:16
+msgid ""
+"Aktualisiere danach das Betriebssystem auf dem Server von Ubuntu 18.04 "
+"LTS auf die Version Ubuntu 20.04 LTS. Nutze dazu den Befehl ``do-release-"
+"upgrade``."
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:19
+msgid "Gib dazu auf der Server-Konsole ein:"
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:26
+msgid ""
+"Nach der Überprüfung siehst Du, wieviele Pakete aktualisiert, neu "
+"installiert und gelöscht werden. Bestätige den Vorgang zur Durchführung "
+"des Upgrades mit ``j``."
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:29
+msgid ""
+"Während des Upgrades erhältst Du mehrere Nachfragen. Für einige Dienste "
+"(z.B. samba, ssh) wirst Du gefragt, ob die Konfigurationsdatei "
+"aktualisiert werden soll."
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:34
+msgid ""
+"Die Nachfrage zur Aktualisierung der Konfigurationsdateien für diese "
+"Dienste musst Du unbedingt mit ``N`` beantworten. Beispiele (keine "
+"Garantie auf Vollständigkeite) sind: ``/etc/security/limits.conf``, "
+"``/etc/ntp.conf``, ``/etc/system/system.conf``, ``/etc/samba/smb.conf``, "
+"``/etc/sshd/sshd_config``"
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:37
+msgid ""
+"Zudem müssen während oder nach der Installation einiger neuerer "
+"Bibliotheken einige Dienste neu gestartet werden. Diese werden Dir in "
+"einer Liste angezeigt. Bestätige deren Neustart mit ``OK``."
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:39
+msgid ""
+"Danach wirst Du gefragt, ob Du die lokale Version bestimmter Dienste "
+"beibehalten möchtest. Beantworte dies jeweils mit ``Ja/OK``."
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:41
+msgid ""
+"Nach der Aktualisierung der Pakete wirst Du gefragt, ob die alten Pakete "
+"entfernt werden sollen. Bestätige dies mit ``J``."
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:43
+msgid ""
+"Danach wirst Du aufgefordert das System neu zu starten. Führe einen "
+"``Reboot`` aus."
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:45
+msgid ""
+"Aktualisiere danach das Betriebssystem auf dem Server von Ubuntu 20.04 "
+"LTS auf die nachfolgende Version Ubuntu 22.04 LTS. Nutze dazu den Befehl "
+"``do-release-upgrade``."
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:47
+msgid "Der weitere Ablauf ist identisch zu den unter 2.) beschriebenen Schritten."
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:49
+msgid ""
+"Führe die erneute Konfiguration der lmn-Pakete aus. Rufe dazu folgenden "
+"Befehl auf:"
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:56
+msgid ""
+"5. Aktiviere das lmn71-Repository wieder, indem Du die Datei "
+"``/etc/apt/sources.list.d/lmn71.list`` editierst und dort das während des"
+" Upgrades automatisch eingefügte Kommentarzeichen ``#`` entfernst."
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:59
+msgid ""
+"Zudem oder alternativ findest Du die Datei "
+"``/etc/apt/sources.list.d/lmn71.list.distUpgrade``, in der das Repository"
+" der lmn 7.1 auskommentiert ist."
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:61
+msgid "Füge danach das Repository der lmn72 wie folgt hinzu:"
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:63
+msgid "Importiere zuerst die Schlüsseldatei:"
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:71
+msgid ""
+"Bei ``wget -qO-`` ist der Großbuchstabe O zu verwenden - n i c h t die "
+"Zahl 0."
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:73
+msgid "Füge danach das Linuxmuster 7.2 Testing-Repro hinzu:"
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:79
+msgid "Aktualisiere nun die Paketquellen:"
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:85
+msgid ""
+"Aktualisiere die installierten Pakete und führe anschließend ein Reboot "
+"durch:"
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:89
+msgid ""
+"Die Nachfrage zur Aktualisierung der Konfigurationsdateien für Dienste "
+"musst du in diesem Schritt (im Gegensatz zur Systemaktualisierung in "
+"Schritt 2 und 3) mit ``I`` oder ``Y`` akzeptieren. Beispiele (keine "
+"Garantie auf Vollständigkeit) sind: ``/etc/default/linbo-torrent``"
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:97
+msgid "Nach dem Neustart führe den Import der Geräte erneut aus:"
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:103
+msgid ""
+"Starte nun die Clients neu. Du wirst zunächst noch die Version 4.0 von "
+"Linbo auf den Clients nach dem ersten Start sehen. Starte den Client ein "
+"zweites Mal und Linbo wird dann automatisch auf dem Client auf die "
+"Version 4.2 aktualisiert."
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:105
+msgid ""
+"Synchronisiere das Betriebssystem und melde Dich danach mit einem "
+"Domänen-Benutzer an."
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:112
+msgid "first login to lmn7.2"
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:112
+msgid "Server-Infos nach dem Konsolen-Login"
+msgstr ""
+
+#: ../../source/migration/upgrade.rst:116
+msgid ""
+"Beim Upgrade von Ubuntu 18.04 über Ubuntu 20.04 zu 22.04 LTS werden die "
+"Einstellungen für CUPs zwar korrekt übernommen. Allerdings treten für "
+"einige Drucker Fehler auf. Es ist in diesen Fällen sinnvoll die "
+"Druckerinstallation erneut durchzuführen. Für viele HP-Drucker ist es "
+"hilfreich die Bibliothek ``hplip`` auf dem Server nachzuinstallieren - "
+"siehe zu den Druckern :ref:`configure-printers-label`."
+msgstr ""
+

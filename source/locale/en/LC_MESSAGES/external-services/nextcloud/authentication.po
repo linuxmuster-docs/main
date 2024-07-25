@@ -1,0 +1,322 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/external-services/nextcloud/authentication.rst:5
+msgid "Externe Authentifizierung - Nextcloud"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:9
+msgid ""
+"Eine Nextcloud-Instanz kann extern oder intern betrieben werden. Hierbei "
+"kann diese so konfiguriert werden, dass das Active Directory (AD) der "
+"linuxmuster.net 7 als zentrale Authentifizierungsinstanz genutzt wird."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:12
+msgid ""
+"Nachstehende Konfigurationsschritte sind auf der Nextcloud-Instanz "
+"auszuführen."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:15
+msgid "App installieren"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:17
+msgid ""
+"Um via LDAP eine Authentifizierung vornehmen zu können, musst Du zuerst "
+"oben rechts als admin auf Dein ``Profil-Icon`` klicken, dann auf "
+"``Apps``. Es erscheinen links im Menü die Einträge ``Deine Apps, Aktive "
+"Apps, Deaktivierte Apps, App-Pakete``. Klicke auf ``deaktiverte Apps`` "
+"und wähle dort die App ``LDAP user and group backend`` aus und aktiviere "
+"diese."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:21
+msgid ""
+"Danach klickst Du wieder oben rechts als admin auf Dein ``Profil-Icon`` "
+"und klickst danach auf Einstellungen. Danach klickst Du links im Menü "
+"``Verwaltung`` den Eintrag  ``LDAP/AD Integration``."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:24
+msgid "Die nachstehenden Schritte führst Du dann dort entsprechend aus."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:28
+msgid "Einstellungen: Server"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:32
+msgid ""
+"Die Einstellungen kannst Du schrittweise testen (z.B. Base-DN testen). "
+"Hier musst Du ggf. mehrfach den Test durchführen, bevor eine erfolgreiche"
+" Bestätigung erfolgt. Z.T. werden vier Versuche - trotz korrekter "
+"Einstellungen - benötigt."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:34
+msgid ""
+"Sollte der Nextloud-Server extern betrieben werden, so muss die "
+"OPNsense®-Firewall so konfiguriert werden, dass Anfragen über den "
+"``LDAPs-Port 636`` an den Server weitergeleitet werden. Siehe "
+":ref:`Firewallregeln <nextcloud-firewall-label>`."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:37
+msgid ""
+"In der Konfigurationsoberfläche ist unter ``Firewall -> NAT -> "
+"Portweiterleitung`` eine entsprechende Regel anzulegen."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:41
+msgid "Bind-User"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:45
+msgid ""
+"Grundsätzlich sollten alle externen Dienste, die via LDAP an das AD "
+"angebunden werden, mit einem eigens dafür angelegten Bind-User genutzt "
+"werden. Für Nextcloud sollte so z.B. ein Benutzer ``nextcloud-binduser`` "
+"angelegt werden, der für die Verbindung zum AD genutzt wird. Hinweise "
+"hierzu findest Du unter "
+"https://github.com/linuxmuster/sophomorix4/wiki/bindusers"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:47
+msgid "**Vorgehen zur Anlage eines neuen Bind-Users**"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:49
+msgid ""
+"Auf dem linuxmuster.net Server folgenden Befehl in der Konsole als "
+"Benutzer root absetzen, um einen neuen Benutzer (``nextcloud-binduser``) "
+"für den Bind-Zugriff zu definieren. Das zufällig erzeugte Kennwort wird "
+"in einer Datei auf dem Server hinterlegt."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:55
+msgid ""
+"Gib für den neu angelegten Benutzer einen Kommentar an, um später einen "
+"Hinweis zu erhalten, für welchen Zweck der Benutzer genutzt wird."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:61
+msgid ""
+"Lasse nun die Daten für den neu angelegten Benutzer anzeigen, die dann in"
+" den Nextcloud-Einstellungen als bind-user einzutragen sind."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:67
+msgid ""
+"Trage auf dem Nextcloud-Server im Konfigurationsmenü die Daten wie in "
+"nachstehender Abb. ein. Ändere dabei aber den Bind-User von global-"
+"binduser in den neu angelegten Bind-User z.B. ``nextcloud-binduser``:"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:69
+msgid "Trage auf dem Nextcloud-Server im Konfigurationsmenü folgende Werte ein:"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:-1
+msgid "Server - Einstellungen"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:75
+msgid ""
+"Sollte der Nextcloud Server extern betrieben werden, so ist als URL für "
+"den LDAP-Server eine Adresse nach diesem Schema anzugeben: "
+"``ldaps://hostname.subdomain.domain.topleveldomain`` - z.B. "
+"ldaps://nextcloud.schule.meineschule.de. Als ``Port`` ist dann ``636`` "
+"einzutragen, um eine gesicherte Verbindung aufzubauen."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:78
+msgid ""
+"Für den ``binduser`` ist die Domäne anzupassen, so dass mit o.g. Beispiel"
+" die Eintragungen dort wie folgt aussehen könnten:"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:84
+msgid ""
+"In der Zeile darunter ist das Kennwort des ``binduser`` einzutragen. "
+"Dieses Passwort des neuen Bind-Users erhälst Du mit dem Befehl unter 3., "
+"den Du auf dem linuxmuster.net Server absetzen musst. Dass Passwort "
+"trägst Du hier ein."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:86
+msgid ""
+"Als ``Base-DN`` trägst Du ``OU=default-school,OU=SCHOOLS,`` gefolgt von "
+"Deiner Domain (z.B. DC=schule,DC=meineschule,DC=de) ein."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:88
+msgid ""
+"Solltest Du auf Deinem Sever ein self-signed certificate verwenden, so "
+"sind die Einstellungen unter ``Fortgeschritten -> "
+"Verbindungseinstellungen`` wichtig, die später in dieser Dokumentation "
+"dargestellt werden."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:91
+msgid "Einstellungen: Benutzer"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:93
+msgid ""
+"Wenn Du mit einem Tool wie Apache Directory Studio die Attribute eines "
+"Lehrer-Accounts anschaust, siehst Du, dass Du sie an zwei Attributen "
+"erkennst: ``objectClass=person`` und ``sophomorixRole=teacher``."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:96
+msgid "Bei Schüler-Accounts ist ``sophomorixRole=student``."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:98
+msgid "Daraus ergibt sich die Filterregel:"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:-1
+msgid "Benutzer - Einstellungen"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:104
+msgid "Trage also unter Benutzer in die LDAP-Abfrage folgendes ein:"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:110
+msgid ""
+"Um den Zugriff auf die Nextcloud auf Lehrer zu begrenzen, ist unter "
+"``Benutzer`` diese LDAP-Abfrage einzutragen."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:-1
+msgid "Benutzer (Lehrer) - Einstellungen"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:-1
+#: ../../source/external-services/nextcloud/authentication.rst:121
+msgid "Anmelde-Attribute"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:123
+#, python-format
+msgid ""
+"Bei der Anmeldung suchen wir den Eintrag, bei dem zusätzlich "
+"``samaccountname=%uid`` gilt. In dem Fall ist ``%uid`` der Benutzername, "
+"den wir bei der Anmeldung eingeben."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:125
+#: ../../source/external-services/nextcloud/authentication.rst:144
+msgid "Nehme folgende Einstellungen vor:"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:136
+msgid "Einstellungen: Gruppe"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:138
+msgid ""
+"Wir wollen nicht die Gruppen ``attic`` und ``wificlass``. Aber wir wollen"
+" Schüler, Lehrer, Projekte und alle Untergruppen der Gruppe ``students``."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:-1
+msgid "Filterregel Gruppe"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:-1
+msgid "Einstellungen Gruppe Lehrer"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:154
+msgid "Die nachstehende Abfrage liefert nur die Gruppe der Lehrer:"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:-1
+#: ../../source/external-services/nextcloud/authentication.rst:161
+msgid "Einstellungen Experte"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:163
+msgid ""
+"Klicke in dem Einstellungsmenü oben rechts auf den Eintrag ``Experte`` "
+"und trage nachstehende Werte ein:"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:169
+msgid "Trage dort folgenden Wert ein:"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:176
+msgid "Einstellungen Fortgeschritten"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:-1
+msgid "Verbindungseinstellungen"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:182
+msgid ""
+"Setze eine Häkchen bei ``Konfiguartion aktiv`` und, falls Dein Server mit"
+" einem selbstsigniertem Zertifikat arbeitet, auch bei ``Schalten Sie die "
+"SSL-Zertifikatsprüfung aus``."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:-1
+msgid "Ordnereinstellungen"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:188
+msgid ""
+"In ``Benutzersucheigenschaften`` gibst Du ``sn`` und ``givenName`` ein. "
+"So können Benutzer über ihren Vor- und Nachnamen gefunden werden."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:-1
+msgid "Spezielle Eigenschaften"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:194
+msgid ""
+"Im Feld ``Standard-Kontingent`` wird festgelegt, wie viel Speicher dem "
+"Benutzer auf der Nextcloud zur Verfügung steht. Da die Benutzer ihre "
+"Daten eigentlich auf dem Schulserver und nicht auf der Nextcloud "
+"speichern sollen, hälst Du diesen Wert eher klein."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:196
+msgid ""
+"Das ``\"$home\"Platzhalter-Feld`` brauchst Du, wenn Du die Home-"
+"Verzeichnisse auch in der Nextcloud zur Verfügung stellen möchtest."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/authentication.rst:198
+msgid ""
+"So, das war's. Sicherheitshalber gehst Du nochmal auf den Reiter "
+"``Experte`` und klicks auf  ``Lösche LDAP-Benutzernamenzuordung`` und "
+"``Lösche LDAP-Gruppennamenzuordung``."
+msgstr ""
+

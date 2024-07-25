@@ -1,0 +1,1860 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/installation/proxmox/index.rst:7
+msgid "Proxmox vorbereiten"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:13
+msgid "Hinweise"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:15
+msgid ""
+"Für diese Anleitung haben wir uns entschieden, Proxmox als "
+"Virtualisierungslösung einzusetzen."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:17
+msgid ""
+"Proxmox ist eine Open Source-Virtualisierungsplattform. Diese kombiniert "
+"KVM- und Container-basierte Virtualisierung und verwaltet virtuelle "
+"Maschinen, Container, Storage, virtuelle Netzwerke und Hochverfügbarkeit-"
+"Cluster übersichtlich über ein web-basierte Managementkonsole."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:19
+msgid ""
+"Die zentrale Managementkonsole läuft direkt auf dem Server. Zudem kann "
+"die Virtualisierungsumgebung via SSH administriert werden."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:22
+msgid "Proxmox"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:24
+msgid ""
+"Proxmox VE eignet sich für den virtuellen Betrieb von linuxmuster.net "
+"besonders, da dieser Hypervisor dem Open-Source-Konzept entspricht. Der "
+"Einsatz wird auf jeglicher Markenhardware unterstützt und es gibt "
+"zahlreiche professionelle 3rd-Party Software für Sicherungskopien und "
+"andere Features. „No-Name-Hardware“ kann hiermit ebenfalls meist "
+"verwendet werden."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:26
+msgid ""
+"Diese Anleitung beinhaltet Angaben zu den notwendigen Systemanforderungen"
+" und Festplattenkonfigurationen sowie der anschließenden Installation von"
+" Proxmox."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:29
+msgid "Systemvoraussetzungen"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:31
+msgid ""
+"In der unten aufgeführten Tabelle findest Du die Systemvoraussetzungen "
+"zum Betrieb der virtuellen Maschinen. Die Systemanforderungen für die "
+"Installation von Proxmox selbst finden sich im Web unter "
+"https://www.proxmox.com/de/proxmox-ve/systemanforderungen."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:33
+msgid ""
+"Die Werte bilden die Mindestvoraussetzungen zur Planung. Für die "
+"Installation mit Proxmox und linuxmuster v7.2 wird als Standard der ``IP-"
+"Bereich 10.0.0.0/16`` genutzt."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:36
+msgid "VM"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:36
+msgid "IP"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:36
+msgid "HDD"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:36
+msgid "RAM"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:38
+msgid "OPNsense®"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:38
+msgid "10.0.0.254/16"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:38
+msgid "10 GiB"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:38
+#: ../../source/installation/proxmox/index.rst:39
+#: ../../source/installation/proxmox/index.rst:40
+msgid "4 GiB"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:39
+msgid "Server"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:39
+msgid "10.0.0.1/16"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:39
+msgid "25 GiB u. 100 GiB"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:40
+msgid "Proxmox-Host"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:40
+msgid "10.0.0.10/16"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:40
+msgid "500 GiB"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:43
+msgid ""
+"Die Festplattengröße sowie der genutzte RAM der jeweiligen VMs kann ggf. "
+"vor deren Einrichtung einfach an die Bedürfnisse der Schule angepasst "
+"werden."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:49
+msgid "Bevor Du dieses Kapitel durcharbeitest, lese bitte zuerst die Abschnitte"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:46
+msgid ":ref:`what-is-linuxmuster.net-label`"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:47
+msgid ":ref:`what-is-new-label`"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:48
+msgid ":ref:`install-overview-label`"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:49
+msgid ":ref:`prerequisites-label`"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:51
+msgid ""
+"Für den Betrieb des Hypervisor selbst (Proxmox VE) sollten ca. 2 bis 6 GB"
+" Arbeitsspeicher eingeplant werden. Um nach Anleitung installieren zu "
+"können, sollte der Server mit mindestens zwei Netzwerkkarten bestückt "
+"sein. Durch VLANs kann der Betrieb aber auch bereits mit nur einer NIC "
+"erfolgen - |zB| eine 10 Gbit-Karte an einem Core-VLAN-Switch (L3)."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:53
+msgid ""
+"Der Proxmox-Host sollte gemäß o.g. Minimalanforderungen folgende Merkmale"
+" aufweisen:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:55
+msgid "RAM gesamt: min. 16 GiB (besser: 32 GiB oder 64 GiB)"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:56
+msgid "Erste HDD: min. 100 GiB für Proxmox selbst"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:57
+msgid ""
+"Zweite HDD: für die VMs mit mind. 500 GB Kapazität (besser: 1 TiB oder 2 "
+"TiB)"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:58
+msgid "Zwei Netzwerkkarten"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:59
+msgid ""
+"Der Internetzugang des Proxmox-Hosts sollte zunächst gewährleistet sein, "
+"|dh| dieser wird |zB| an einen (DSL-)Router angeschlossen, der den "
+"Internetzugang sicherstellt. Sobald alles eingerichtet ist, bekommt der "
+"Proxmox-Host eine IP-Adresse im Schulnetz und die Firewall OPNsense® "
+"stellt den Internetzugang für alle VMs und den Proxmox-Host bereit."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:63
+msgid ""
+"Virtualisierungs-Hosts sollten grundsätzlich niemals im gleichen Netz wie"
+" andere Geräte sein, damit dieser nicht von diesen angegriffen werden "
+"kann. In dieser Dokumentation wird zur Vereinfachung der Fall "
+"dokumentiert, dass der Proxmox-Host zu Beginn im externen Netz mit "
+"Internet-Zugriff und nach Abschluss der Installation im internen "
+"Schulnetz mit Internet-Zugriff via OPNsense®-Firewall befindet."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:66
+msgid "Bereitstellen des Proxmox-Hosts"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:70
+msgid ""
+"Der Proxmox-Host bildet das Grundgerüst für die Firewall *OPNsense®* und "
+"den Schulserver *server*. Die Virtualisierungsfunktionen der CPU sollten "
+"zuvor im BIOS aktiviert worden sein."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:72
+msgid ""
+"Die folgende Anleitung beschreibt die *einfachste* Implementierung ohne "
+"Dinge wie VLANs, Teaming oder RAID. Diese Themen werden in zusätzlichen "
+"Anleitungen betrachtet."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:74
+msgid ":ref:`Anleitung Netzwerksegmentierung <subnetting-basics-label>`"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:76
+msgid "Die Download-Quellen für den Proxmox-Host selbst finden sich hier:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:78
+msgid "https://www.proxmox.com/de/downloads/category/iso-images-pve/"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:80
+msgid "Dort findet sich das ISO-Image zur Installation von Proxmox."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:82
+msgid ""
+"Lade Dir dort das aktuellste Image herunter und erstelle Dir einen "
+"bootfähigen USB-Stick zur weiteren Installation."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:85
+msgid "Erstellen eines USB-Sticks zur Installation des Proxmox-Host"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:87
+msgid ""
+"Nachdem Du die ISO-Datei für Proxmox heruntergeladen hast, wechselst Du "
+"in das Download-Verzeichnis. Danach ermittel Du den korrekten Buchstaben "
+"für den USB-Stick unter Linux. Das X bei sdX ist durch den korrekten "
+"Buchstaben für den USB-Stick zu ersetzen (z.B. /dev/sda). Nachstehender "
+"Befehl als Benutzer *root* oder mit einem *sudo* vorangestellt "
+"einzugeben:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:94
+msgid "Verkabelungshinweise"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:96
+msgid ""
+"Es ist für linuxmuster.net ein internes Netz (grün) und ein externes Netz"
+" (rot) am Proxmox-Host zu unterscheiden. Sind zwei Netzwerkkarten im "
+"Proxmox-Host vorhanden, so ist die erste Netzwerkkarte (|zb| eth0, eno1 "
+"oder enp7s0), die zu Beginn eine IP aus dem bestehenden lokalen Netz "
+"(|zb| via DSL-Router) erhalten soll, mit dem Switch zu verbinden, der an "
+"den (DSL-)Router angeschlossen ist. Bei einem Home-DSL-Router ist der "
+"Switch i.d.R. Regel bereits eingebaut. DSL-Router mit Switch "
+"angeschlossen an die erste Netwzerkkarte stellen hier das rote / externe "
+"Netz dar. Der Admin-PC ist zu Beginn ebenfalls hier anzuschliessen."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:99
+msgid ""
+"Die zweite Netzwerkkarte (|zb| eth1 oder enp7s1) ist dann an einen "
+"eigenen Switch anzuschließen, ebenso wie alle Clients, die im internen "
+"Netz (grün) eingesetzt werden."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:101
+msgid ""
+"Um zu Beginn den Proxmox-Host zu administrieren, ist ein Laptop/PC mit "
+"dem Switch zu verbinden, der an den lokalen (DSL-)Router angeschlossen "
+"ist (rotes Netz). Der Laptop/PC erhält ebenfalls eine IP aus dem lokalen "
+"(DSL-)Netz und kann sich dann auf die zu Beginn eingerichtete IP-Adresse "
+"des Proxmox-Host auf die grafische Verwaltungsoberfläche verbinden."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:108
+msgid "Netzwerk für die Proxmox Installation"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:108
+msgid "Aufbau des Netzwerkes zur Proxmox Installation"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:111
+msgid ""
+"Es werden zunächst alle Aktualisierungen durchgeführt und die benötigten "
+"ISO-Images auf den Proxmox-Host heruntergeladen. Erst danach wird die "
+"Konfiguration des Proxmox-Host so geändert wird, dass dieser nur noch im "
+"grünen Netz erreichbar ist."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:115
+msgid "Installieren von Proxmox"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:118
+msgid "Basis-Installation"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:120
+msgid "Vom USB-Stick booten, danach erscheint folgender Bildschirm:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:127
+msgid "Proxmox Boot-Menu"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:127
+msgid "Proxmox Boot Menue"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:129
+msgid ""
+"Wähle ``Install Proxmox VE (Graphical)`` und starte die Installation mit "
+"``ENTER``."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:136
+msgid "Proxmox Nutzervereinbarung"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:136
+msgid "Proxmox End-User-Agreement"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:138
+msgid "Bestätige das ``End-User-Agreement`` mit ``Enter``."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:145
+msgid "Proxmox Installation Wahl der Festplatten"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:145
+msgid "Proxmox Festplattenauswahl"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:147
+msgid ""
+"Wähle die gewünschte Festplatte auf dem Server zur Installation aus. Hast"
+" Du mehrere einzelne Festplatten im Server verbaut und kein RAID-Verbund "
+"definiert, so kannst Du hier mit der Schaltfläche `Optionen` weitere "
+"Einstellungen aufrufen. Hier kannst Du |zb| mehrere Festplatten angeben, "
+"die in einem sog. ZFS-Pool definiert werden sollen. Dies ist für das "
+"Erstellen von sog. Snapshots von Vorteil. Soll aber an dieser Stelle "
+"nicht vertieft werden. (siehe hierzu |ua|: https://pve.proxmox.com/pve-"
+"docs/pve-admin-guide.html)"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:150
+msgid ""
+"Für unsere beispielthafte Installation wählen wir hier die kleinere der "
+"beiden angezeigten aus, also die SSD."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:152
+msgid ""
+"Gib bei ``Location and Time Zone selection`` als Land und Keyboard Layout"
+"  ``Germany`` an. Wähle als Zeitzone Europe/Berlin."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:159
+msgid "Proxmox Installation Zeitzone"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:159
+msgid "Proxmox Zeitzone"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:161
+msgid ""
+"Lege ein Kennwort für den Administrator des Proxmox-Host fest und gib "
+"eine E-Mail-Adresse an. Klicke auf ``Weiter``."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:168
+msgid "Proxmox Installation Admin-Passwort"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:168
+msgid "Admin Password festelegen"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:171
+msgid ""
+"Lege die IP-Adresse des Proxmox-Host fest. Solltest Du intern |zb| auf "
+"dem (DSL-)Router einen DHCP-Server laufen haben, dann erhältst Du hier "
+"bereits eine vorausgefüllte Konfigurationsseite. Passe diese Werte nun "
+"den gewünschten Werten an. Der Hostname des Proxmox-Host ist hier in "
+"gewünschter Form |-| hier `<hostename> (z.B. pve).linuxmuster.lan` |-| "
+"anzugeben."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:175
+msgid ""
+"Die IP muss zu diesem Zeitpunkt der Installation diejenige Adresse sein, "
+"die ebenfalls Zugriff auf das Internet hat. In einem lokalen Netz mit "
+"DSL-Router wäre dieses eine aus dem internen Netz, die der Router für die"
+" internen Clients verteilt - also |zb| 192.168.199.20/24. DNS- und "
+"Gateway-Adressen entsprechen der Router-IP."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:178
+msgid "Hier wurde die interne IP-Adresse `192.168.199.20/24` festgelegt."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:185
+msgid "Proxmox Installation Netzwerk Konfiguration"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:185
+msgid "Netwerk Konfiguration"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:187
+msgid ""
+"Überprüfe auf der Übersichtsseite, dass alle Angaben korrekt sind und "
+"fahre anschließend fort."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:194
+msgid "Proxmox Installation Übersicht"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:194
+msgid "Zusamenfassung der Installationsoptionen"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:196
+msgid "Warte den Abschluss der Installation ab."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:203
+msgid "Proxmox Installation erfolgreich beendet"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:203
+msgid "Installation beendet"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:205
+msgid "Nach erfolgreicher Installation lasse Proxmox über `Reboot` neu starten."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:209
+msgid "Proxmox Einrichtung"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:211
+msgid ""
+"Nach dem Neustart von Proxmox kannst Du Dich über einen PC, der sich im "
+"selben Netz befindet, via Browser auf das grafische Webinterface zur "
+"Verwaltung des Proxmox-Hosts aufschalten. Hierzu gibst Du die URL "
+"https://192.168.199.20:8006 ein. Du erhältst ein ``Warning``, da ein "
+"mögliches Sicherheitsrisiko erkannt wurde. Dies ist auf das selbst "
+"ausgestellte SSL-Zertifikat des Proxmox-Host zurückzuführen."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:213
+msgid ""
+"Klicke auf ``Erweitert ...``, es erscheint ein weiterer Hinweis auf das "
+"``self-signed certificate``. Dieses nimmst Du nun mit dem Button ``Risiko"
+" akzeptieren und fortfahren`` an."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:215
+msgid ""
+"Es erscheint die Anmeldemaske des Proxmox-Webinterface. Melde Dich als "
+"User ``root`` und dem vorher gesetzten Passwort an:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:222
+msgid "Proxmox Web-UI Login"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:222
+msgid "Proxmox WebUI Login"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:224
+msgid ""
+"Im Fenster `No valid subscription` wählst Du `OK` um das Fenster "
+"schließen:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:231
+msgid "Proxmox No valid subscription"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:234
+msgid "Updates ermöglichen"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:236
+msgid ""
+"Um Proxmox Updates installieren zu können, müssen in der Shell des Nodes "
+"<hostename> (z.B. pve) folgende Änderungen an den Repositorien "
+"vorgenommen werden. Dafür den Node im Datacenter auswählen und eine Shell"
+" öffnen."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:243
+msgid "Proxmox Open Shell"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:243
+msgid "Proxmox Shell"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:245
+msgid ""
+"Kommentiere zuerst die Paketquellen für die Enterprise-Pakete aus, die "
+"nach der Erstinstallation automatisch eingerichtet wurden:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:256
+msgid ""
+"Füge dann für Proxmox VE eine neu Paketquelle für die No-Subscription-"
+"Pakete hinzu."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:262
+msgid "Aktualisiere danach die Paketquellen und die Pakete:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:273
+msgid "Netzwerkbrücken einrichten"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:275
+msgid ""
+"Für eine funktionierende Umgebung müssen ``zwei Netzwerkbrücken/Bridges "
+"(vSwitch)`` auf dem Hypervisor eingerichtet werden."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:277
+msgid ""
+"Eine für das ``interne Netz (green, 10.0.0.0/16)`` und eine für das "
+"``externe Netz (red, externes Netz, Internetzugriff)``."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:279
+msgid ""
+"Nach der zuvor beschriebenen Erstinstallation von Proxmox wurde bislang "
+"**nur eine Bridge (vmbr0)** eingerichtet (rotes Netz). Diese ist mit der "
+"ersten Netzwerkschnittstelle (NIC) des Proxmox-Hosts verbunden. Das "
+"Ethernet-Kabel der 1. NIC ist mit dem (DSL)-Router verbunden. Verlief der"
+" vorherige Befehl zur Aktualisierung von Proxmox erfolgreich, so weißt "
+"Du, dass diese Bridge bereits funktioniert und für die weitere Nutzung "
+"für das ``externe Netz (red) - vmbr0`` genutzt werden kann."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:281
+msgid ""
+"Für die internen virtuellen Netze ist also eine **zweite Bridge** zu "
+"erstellen, die an die zweite Netzwerkkarte direkt gebunden wird. Dieser "
+"wird allerdings **keine** IP-Adresse zugeordnet."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:283
+msgid ""
+"Ausgangspunkt: ``<hostename>`` --> ``Network`` (in u.g. Bild: ``pve`` -->"
+" ``Network``)"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:285
+msgid "Die **bisherige** Netzwerkkonfiguration stellt sich wie folgt dar:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:292
+msgid "Proxmox Overview <hostename> (z.B. pve) - Network"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:292
+msgid "Proxmox Network"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:294
+msgid ""
+"Für die folgende Überprüfung öffnest Du nochmals die Konsole auf dem "
+"Hypervisor, falls sie nicht geöffnet sein sollte - wie zuvor beschrieben "
+"- und lässt Dir den Inhalt der Konfigurationsdatei anzeigen mittels:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:300
+msgid "Dort befinden sich bisher folgende Eintragungen:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:325
+msgid ""
+"Die Bezeichnungen für die Netzwerkkarten eno1, eno2 können je nach "
+"eingesetztem System von der dargestellten Bezeichnung abweichen (z.B. "
+"enp1s0, enp7s0)."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:327
+msgid ""
+"Für das weitere Vorgehen ist es hilfreich, die Funktion der Kommentierung"
+" der Netzwerkbrücken zu nutzen. Diese ist für die vmbr0 bisher noch nicht"
+" gesetzt."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:334
+msgid "Proxmox-Overview <hostename> (z.B. pve) - Network-vmbr0-edit"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:334
+msgid "Änderung der Bridge vmbr0"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:336
+msgid ""
+"Markiere wie gezeigt ``vmbr0`` und betätige den ``Edit``-Button, um das "
+"Konfigurationsfenster zu öffnen."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:343
+msgid "Proxmox-Übersicht <hostename> (z.B. pve) - Network-vmbr0-comment"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:343
+msgid "Kommentar für vmbr0"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:345
+msgid ""
+"Trage unter ``Comment`` einen Kommentar ein, der veranschaulicht, dass "
+"diese Brücke die Verbindung zum Internet stellt. Zum Beispiel wie hier "
+"gezeigt ``red``."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:347
+msgid "Mit `OK` wird der Kommentar übernommen."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:349
+msgid "Nun erstellst Du die zweite Bridge ``vmbr1``:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:351
+msgid ""
+"Dazu wähle das Menü ``Datacenter`` --> ``<hostname> (z.B. pve)`` --> "
+"``Network`` -->  ``Create`` --> ``Linux Bridge``"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:358
+msgid "Proxmox-Übersicht <hostename> (z.B. pve) - Network - Create - Linux Bridge"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:358
+#: ../../source/installation/proxmox/index.rst:367
+msgid "Linux Bridge erstellen"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:360
+msgid "Es öffnet sich ein neues Fenster. Dort sind folgende Einträge nötig:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:367
+msgid "Proxmox Create:Linux-Bridge"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:369
+msgid "Mit ``Create`` wird die Brücke erstellen."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:371
+msgid ""
+"Anschließend startest Du Proxmox über den Button ``Reboot`` oben rechts "
+"neu, um die neue Netzwerkkonfiguration zu laden. Node <hostename> (z.B. "
+"pve) muss dafür im Menü ``Datacenter`` links ausgewählt sein:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:378
+msgid "Proxmox reboot"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:378
+msgid "Proxmox Neustart"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:380
+msgid ""
+"Die Netzwerkkonfiguration des Proxmox-Host kannst Du, nach dem Neustart "
+"mit ``cat /etc/network/interfaces`` wie oben gezeigt in der Konsole "
+"überprüfen."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:382
+msgid ""
+"Dort sollten sich nun nachstehende Eintragungen befinden. Bei der Bridge "
+"``vmbr0`` muss die IP-Adresse derjenigen entsprechen, die bei der "
+"Installation eingetragen wurde."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:409
+msgid "Zur Veranschaulichung eine Grafik, die den Status der Konfiguration zeigt."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:415
+msgid "eno2 Schnittstelle hinzugefügt"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:415
+msgid "Neue Netzwerkschnittstelle eno2 an vmbr1 erzeugt"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:418
+msgid "Festplatten anpassen"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:420
+msgid ""
+"In diesem Schritt wird die erste Festplatte angepasst und die zweite in "
+"Proxmox eingebunden, um diese als Storage für die virtuellen Maschinen zu"
+" nutzen."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:424
+msgid ""
+"Gemäß der oben genannten Minimalanforderungen gehen wir davon aus, dass "
+"in deinem Proxmox-Host zwei Festplatten verbaut sind."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:426
+msgid ""
+"Solltest Du bei der Installation von Proxmox nur einen Speicher nutzen, "
+"kannst Du direkt weitergehen zu: `Vorbereiten des ISO-Speichers`_"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:432
+msgid "Aufteilung der Festplatten nach der Proxmox Installation"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:435
+msgid ""
+"local-lvm(<hostename> (z.B. pve))-Partition entfernen und Speicher "
+"freigeben"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:437
+msgid ""
+"Während der Proxmox-Installation wurden die Storages ``local`` und "
+"``local-lvm`` automatisch auf der ersten Festplatte erstellt. Da anfangs "
+"für die Linuxmuster-Maschinen eine zweite Festplatte als ``Storage`` "
+"eingerichtet wurde, wird ``local-lvm`` nicht benötigt. Deshalb wird nun "
+"``local-lvm`` entfernt und ``local`` durch den freigewordenen Speicher "
+"vergrößert, sodass auf der ersten Festplatte der gesamte Speicher dem "
+"Hypervisor zur Verfügung steht."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:439
+msgid "auf <hostename> (z.B. pve) oben rechts Shell anklicken:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:446
+msgid "Shell aufrufen"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:448
+msgid ""
+"``lsblk`` eingeben und mit der Enter-Taste bestätigen; folgende Ausgabe "
+"sollte erscheinen:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:455
+msgid "Proxmox Konsole Output lsblk default"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:455
+msgid "lsblk Befehl"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:457
+msgid ""
+"Es ist zu sehen, dass die Festplatten sda (111.8G) und sdb (931.5G) "
+"vorhanden sind."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:459
+msgid ""
+"Die zweite Festplatte `sdb` ist eine HDD mit 1 TB Kapazität und soll für "
+"die VMs genutzt werden."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:461
+msgid ""
+"Die erste Festplatte ist eine SSD, auf der Proxmox selbst installiert "
+"wurde. Von dieser zweiten Platte startet dieses System automatisch "
+"Proxmox. Zudem befindet sich auf `sda3` ein sog. `LVM`. Bei der "
+"Erstinstallation wurde hier automatisch ein Bereich für die VMs "
+"eingerichtet. Dieser Bereich wird im Folgenden gelöscht und der frei "
+"werdende Platz auf `sda` wird vollständig dem Proxmox-Host zugeordnet."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:463
+msgid "Danach wird die Festplatte `sdb` als LVM für die VM eingerichtet."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:465
+msgid "Vorhandene local-lvm entfernen:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:476
+msgid "Proxmox Konsole Output lvremote question"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:476
+msgid "lvmremote Frage"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:478
+msgid "Bestätige die Nachfrage mit ``y``"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:485
+msgid "Proxmox Konsole Output lvremote"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:485
+msgid "lvmremote Ausgabe"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:487
+msgid "Speicherbereich von local erweitern:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:498
+msgid "Proxmox Konsole Output lvresize"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:498
+msgid "lvmresize"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:500
+msgid "Filesystem anpassen:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:511
+msgid "Proxmox Konsole Output"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:511
+msgid "Konsolenausgabe"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:513
+msgid ""
+"Über ``lsblk`` sollte nun zu sehen sein, dass pve-data-Partitionen "
+"entfernt wurden:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:520
+msgid "Proxmox Konsole Output lsblk"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:520
+msgid "lsblk Konsolenausgabe"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:522
+msgid ""
+"Es ist zu erkennen, dass auf ``/dev/sda3`` nur noch ``pve-swap`` und "
+"``pve-root`` vorhanden sind."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:524
+msgid ""
+"Auf der Weboberfläche von Proxmox ist der local-lvm Eintrag noch über "
+"``Datacenter → Storage local-lvm (<hostename> (z.B. pve))`` mit dem "
+"``Remove``-Button grafisch zu entfernen:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:531
+msgid "Proxmox-Übersicht Festplatten default"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:531
+msgid "Festplatten Default-Einstellungen"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:533
+msgid "Danach findest Du noch folgenden Speicher in der Weboberfläche:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:540
+msgid "Proxmox-Übersicht nach Löschung local-lvm"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:540
+msgid "Zustand nach Löschung des local-lvm"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:542
+msgid "In der schematischen Darstellung ergibt sich nun folgendes Bild:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:548
+msgid "Aufteilung der SSD nach der Konfigurationsseite"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:548
+#: ../../source/installation/proxmox/index.rst:663
+msgid "Aufteilung der Festplatten nach der Anpassung"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:551
+msgid "Zweiten Datenträger als Speicher einbinden"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:553
+msgid "Die SSD ``/dev/sda`` steht für den Proxmox-Host zur Verfügung."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:555
+msgid "*Zweiten Datenträger vorbereiten*"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:557
+msgid ""
+"Die zweite Festplatte heißt sdb und ersetzt die pve-data-Partition, die "
+"im vorigen Schritt entfernt wurde. Um diese für Proxmox vorzubereiten, "
+"stellt man über Konsolenbefehle einige Konfigurationen ein. Falls die "
+"Shell noch nicht geöffnet ist, wie oben beschrieben, öffnen und folgende "
+"Befehle eingeben:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:561
+msgid ""
+"Für folgende Schritte: Die Bezeichnungen vg-xxx & lv-xxx Namen solltest "
+"Du auf Deine Festplattengrößen entsprechend anpassen, die folgenden "
+"Grafiken dienen zur Orientierung: `vg-hdd-1000` eignet sich "
+"beispielsweise für ein Volume aus einer HDD mit 1 TiB Kapazität."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:565
+msgid ""
+"Datenträger vorher partitionieren, |zb| mit ``fdisk /dev/sdb → g → n → "
+"w`` (über lsblk den richtigen Datenträgernamen herausfinden; in diesem "
+"Fall sdb)"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:572
+msgid "Proxmox Konsole Output fdisk"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:572
+msgid "fdisk"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:574
+msgid ""
+"Jetzt eine neue Partition auf der Festplatte anlegen - ``pvcreate "
+"/dev/sd<xy>1``"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:576
+#: ../../source/installation/proxmox/index.rst:593
+#: ../../source/installation/proxmox/index.rst:608
+#: ../../source/installation/proxmox/index.rst:623
+msgid "Beispiel:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:582
+msgid "und anschließend mit ``y`` bestätigen:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:589
+msgid "Proxmox Konsole Output vgcreate"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:589
+#: ../../source/installation/proxmox/index.rst:604
+msgid "vgcreate"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:591
+msgid ""
+"Nun wird eine virtuelle Gruppe auf der ersten Partition der zweiten "
+"Festplatte eingerichtet: ``vgcreate vg-<disk>-<size> /dev/sd<xy>1``"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:604
+msgid "Proxmox Konsole Output vgcreate vg-hdd"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:606
+msgid ""
+"mit ``lvcreate -l 99%VG -n lv-<disk>-<size> vg-<disk>-<size>`` nun das "
+"logical volume erstellen. Hier ist die virtuelle Festplatte eine HDD mit "
+"1 TiB Speicher, weshalb die Namen im Befehl so angepasst werden:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:619
+msgid "Proxmox Konsole Output lvcreate"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:619
+msgid "output lvcreate"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:621
+msgid ""
+"``lvconvert --type thin-pool vg-<disk>-<size>/lv-<disk>-<size>`` "
+"konvertiert den Speicherbereich der erstellten virtual group als „thin-"
+"pool“:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:634
+msgid "Proxmox Konsole Output lvconvert"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:634
+msgid "lvconvert"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:637
+msgid "Datenträger grafisch als Storage in Proxmox anbinden"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:639
+msgid ""
+"Im Menü `Datacenter > Storage > Add` wählt man „LVM-Thin“ aus. Im ID-Feld"
+" wird der Name des virtuellen Datenträgers angegeben. In diesem Fall ist "
+"es eine HDD mit 1 TiB Speicherkapazität, weshalb die Bezeichnung vd-"
+"hdd-1000 gewählt wird. Unter Volume Group die erstellte virtuelle Gruppe "
+"auswählen, welche hier vg-hdd-1000 ist:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:646
+msgid "Hinzufügen von LVM-Thin"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:646
+msgid "LVM-Thin hinzugefügt"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:648
+msgid ""
+"Nun sollte im linken Menü der zweite Storage zu sehen sein, auf welchem "
+"die Maschinen für Linuxmuster installiert werden können:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:655
+msgid "Proxmox-Übersicht <hostename> (z.B. pve) zweite Festplatte"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:655
+msgid "Zweite HDD"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:657
+msgid ""
+"Hier noch der Vollständigkeitshalber die schematische Darstellung, wie "
+"sie sich jetzt zeigt:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:663
+msgid "Aufteilung der Festplatten nach der"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:666
+msgid "Vorbereiten des ISO-Speichers"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:668
+msgid ""
+"Um die v7.2 zu installieren, müssen zwei virtuelle Maschinen angelegt "
+"werden. OPNsense und Ubuntu Server LTS werden in diesei VMs installiert. "
+"Dazu ist es erforderlich, dass Du die ISO-Images für OPNsense und Ubuntu "
+"Server LTS auf den Proxmox-Hypervisor in den Datenspeicher für ISO-Images"
+" lädst."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:675
+msgid "Proxmox way to folder ISO Images"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:675
+#: ../../source/installation/proxmox/index.rst:742
+#: ../../source/installation/proxmox/index.rst:842
+msgid "ISO-Images"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:677
+msgid ""
+"Gehe dazu auf ``Datacenter`` --> ``<proxmox-host>`` --> ``Datenspeicher "
+"(auf local oder zfsfile)`` --> ``ISO Images`` --> ``Download from URL``"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:680
+msgid "Ubuntu Server"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:684
+msgid ""
+"Beachte für den Download des Ubuntu Servers, dass du immer die Version "
+"verwendest, die in den Systemvoraussetzungen genannt wurde. Gehe auf "
+"https://releases.ubuntu.com/jammy/ und überprüfe die dort zum "
+"Herunterladen angebotene Version für 22.04.-live-server-amd64 und deren "
+"Checksumme."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:686
+msgid ""
+"Zum jetzigen Zeitpunkt ist dies in der Angabe der URL berücksichtigt, "
+"muss also eventuell angepasst werden."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:688
+msgid "In dem nun geöffneten Fenster trägst Du die URL"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:694
+msgid "ein (copy&paste). Anschließend betätigst Du dann den Button ``Query URL``."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:701
+msgid "Proxmox Download from URL"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:701
+msgid "Proxmox Download via URL"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:703
+msgid ""
+"Wenn die Abfrage der URL positiv war, sollten sich die Felder ausgefüllt "
+"haben."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:705
+msgid ""
+"Zur Überprüfung der Integrität der Datei aktiviere ``Verify "
+"certificates``, das sich unter den ``Advanced`` Optionen befindet."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:707
+msgid "Wähle wie dargestellt: ``SHA-256`` und trage die Checksumme ein:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:711
+msgid ""
+"Sollte sich nach der Erstellung dieser Beschreibung eine Änderung der "
+"herunterzuladen Image-Datei ergeben haben, wirst du die Checksumme "
+"anpassen müssen."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:717
+msgid "Das Herunterladen des ISOs beginnt mit ``Download``."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:724
+msgid "Proxmox download status"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:724
+msgid "Download Status"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:726
+msgid ""
+"Zum Abschluss erfolgt die Überprüfung der Checksumme, die mit ``OK, "
+"checksum verified`` enden muss."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:733
+msgid "Proxmox ISO Images verified"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:733
+msgid "Prüfsummen bestätigt"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:735
+msgid "Nach dem Schließen des Fensters,"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:742
+#: ../../source/installation/proxmox/index.rst:842
+msgid "Proxmox ISO Images folder view"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:744
+msgid ""
+"befindet sich das heruntergeladene Ubuntu-ISO nun in dem ``ISO Images`` "
+"und steht Dir für die weitere Verwendung zur Verfügung."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:750
+msgid "Nach der Bereitstellung des Ubuntu Installationsmediums"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:753
+msgid "OPNsense"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:755
+msgid ""
+"Die zuvor gezeigte Möglichkeit des einfachen Imports mit den Bordmitteln "
+"von Proxmox steht Dir für die OPNsense |reg| leider nicht zur Verfügung, "
+"da nur der Download einer bz2-Datei möglich ist. Dir steht der Weg des "
+"Downloads auf einen lokalen PC, der Umwandlung des bz2-File in eine iso-"
+"Datei und dann der Upload über den Dir im Abschnitt Ubuntu aufgezeigten "
+"Ablauf frei. Dabei wählst Du dann nicht ``URL``, sondern ``Upload``."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:757
+msgid ""
+"Um Dir den Upload zu ersparen, beschreiben wir hier den Weg, um die "
+"benötigten Dateien direkt in Deine Proxmox-Maschine zu bringen:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:759
+msgid ""
+"Als Erstes startest Du die Konsole ``xterm.js`` wie dargestellt, falls "
+"sie nicht sowieso gestartet ist."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:766
+msgid "Proxmox open xterm shell"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:766
+msgid "xterm shell öffnen"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:768
+msgid ""
+"Mit ihr hast Du jetzt die Möglichkeit, mit ``Copy&Paste`` die folgenden "
+"bash-Zeilen direkt zu übernehmen."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:775
+msgid "Proxmox xterm shell"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:775
+msgid "xterm shell"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:777
+msgid ""
+"Als Nächstes musst Du in das Verzeichnis wechseln, wo Proxmox die ISO-"
+"Dateien sucht. Dazu kopierst Du diese Zeile in das gezeigte Fenster."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:783
+msgid "Mit ``[Enter]`` wechselt Du dann in das Verzeichnis."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:785
+msgid "Dann musst Du die folgenden vier Dateien herunterladen:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:787
+msgid "Prüfsummendatei (<filename>.sha256)"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:793
+msgid "Signatur Datei (<filename>.sig)"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:799
+msgid "Der öffentliche Schlüssel von OPNsense |reg| (<filename>.pub)"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:805
+msgid "Die komprimierte ISO Datei (<filename>.iso.bz2)"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:811
+msgid ""
+"Nun gilt es, die ISO-Datei auszupacken. Das machst Du mit folgendem "
+"Befehl:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:817
+msgid ""
+"Das Entpacken kann einige Zeit in Anspruch nehmen. Anschließend sollte "
+"sich in dem Verzeichnis die OPNsense-ISO-Datei befinden."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:819
+msgid "Überprüfen der heruntergeladenen Dateien auf deren Integrität:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:829
+msgid "Der letzte Befehl sollte Dir ein ``Verified OK`` liefern."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:831
+msgid ""
+"Somit hast Du nun alle nötigen ISO-Dateien für die weitere Installation "
+"zusammen.  Die daneben befindlichen anderen OPNsense-Datei kannst Du nun "
+"wieder löschen."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:844
+msgid ""
+"Es sind beide ISO Images auf den ISO-Speicher in Proxmox verfügbar, Du "
+"richtest nun die VMs ein."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:850
+msgid "Nach der Bereitstellung des OPNsense Installationsmediums"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:854
+msgid "Vorbereiten der virtuellen Maschinen"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:857
+msgid "Anlegen der VM für OPNsense"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:859
+msgid ""
+"Um für die OPNsense Firewall eine VM anzulegen, wählst Du in der Proxmox "
+"- Verwaltungsoberfläche den Button ``Create VM``."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:866
+#: ../../source/installation/proxmox/index.rst:875
+#: ../../source/installation/proxmox/index.rst:1015
+#: ../../source/installation/proxmox/index.rst:1024
+msgid "Proxmox Create VM"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:866
+#: ../../source/installation/proxmox/index.rst:1015
+msgid "VM anlegen"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:868
+#: ../../source/installation/proxmox/index.rst:1017
+msgid ""
+"Es erscheint nun das Fenster zur Anlage der neuen VM. Trage hier einen "
+"Namen für die VM ein, anhand der Du Version und Funktion erkennst."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:875
+#: ../../source/installation/proxmox/index.rst:1024
+#: ../../source/installation/proxmox/index.rst:1114
+msgid "VM erstellen"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:877
+#: ../../source/installation/proxmox/index.rst:889
+#: ../../source/installation/proxmox/index.rst:900
+#: ../../source/installation/proxmox/index.rst:917
+#: ../../source/installation/proxmox/index.rst:928
+#: ../../source/installation/proxmox/index.rst:939
+#: ../../source/installation/proxmox/index.rst:950
+#: ../../source/installation/proxmox/index.rst:1026
+#: ../../source/installation/proxmox/index.rst:1038
+#: ../../source/installation/proxmox/index.rst:1049
+#: ../../source/installation/proxmox/index.rst:1072
+#: ../../source/installation/proxmox/index.rst:1083
+#: ../../source/installation/proxmox/index.rst:1094
+#: ../../source/installation/proxmox/index.rst:1105
+msgid "Klicke dann auf ``Next``."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:879
+msgid ""
+"Wähle nun den ISO-Datenspeicher unter ``Storage`` aus. Das ist der "
+"Speicher, auf den Du vorher die ISO-Images abgelegt hast. Wähle dann das "
+"ISO image der OPNsense aus."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:887
+#: ../../source/installation/proxmox/index.rst:1036
+msgid "Proxmox Create VM: ISO image"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:887
+#: ../../source/installation/proxmox/index.rst:1036
+msgid "VM ISO Image"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:891
+#: ../../source/installation/proxmox/index.rst:1040
+msgid ""
+"Belasse hier zunächst alle Voreinstellungen für Grafikkarte und "
+"Festplatten-Controller wie angezeigt."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:898
+#: ../../source/installation/proxmox/index.rst:1047
+msgid "Proxmox Create VM: System"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:898
+#: ../../source/installation/proxmox/index.rst:1047
+msgid "VM OS"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:902
+msgid ""
+"Wähle nun hier unter ``Storage`` den geeigneten Datenspeicher auf, um die"
+" Festplatte der VM dort abzulegen. In der Abb. wird der Datenspeicher "
+"``Dataset`` verwendet. In dem Drop-down Menü siehst Du alle in Deinem "
+"System verfügbaren Datenspeicher."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:905
+msgid ""
+"Folgende Größenangaben beziehen sich, wie schon geschrieben, auf eine "
+"Testumgebung. Wie in der Dokumentation schon ausgeführt, solltest Du hier"
+" für den produktiven Einsatz - **mindestens 8 GiB RAM und 50 GiB für die "
+"Festplatte** wählen, um alle OPNsense |reg| Standardfunktionen "
+"auszuführen."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:908
+msgid ""
+"Damit funktioniert jede Funktion, aber vielleicht nicht bei einer großen "
+"Anzahl von Benutzern oder hoher Last. Für andere Einsatzszenarien "
+"solltest Du Dich unbedingt mit den `Hardware-Anforderungen "
+"<https://docs.opnsense.org/manual/hardware.html#hardware-requirements>`_ "
+"gemäß der OPNsense |reg| -Dokumentation auseinandersetzen."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:915
+#: ../../source/installation/proxmox/index.rst:1059
+#: ../../source/installation/proxmox/index.rst:1070
+msgid "Proxmox Create VM: Disks"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:915
+msgid "VM Festplatte"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:919
+#: ../../source/installation/proxmox/index.rst:1074
+msgid "Gib nun für die CPU Sockel und Kerne an."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:926
+#: ../../source/installation/proxmox/index.rst:1081
+msgid "Proxmox Create VM: CPU"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:926
+#: ../../source/installation/proxmox/index.rst:1081
+msgid "VM CPU"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:930
+msgid "Gib nun für die Firewall die gewünschte Größe des Arbeitsspeichers an."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:937
+#: ../../source/installation/proxmox/index.rst:1092
+msgid "Proxmox Create VM: RAM"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:937
+#: ../../source/installation/proxmox/index.rst:1092
+msgid "VM Arbeitsspeicher"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:941
+msgid ""
+"Gib danach die ``Bridge vmbr0`` für die einzurichtende Netzwerkkarte an. "
+"Die zweite Netzwerkkarte fügst Du nach Anlage der VM hinzu. Dies muss "
+"noch vor der eigentlichen Installation erfolgen."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:948
+#: ../../source/installation/proxmox/index.rst:1103
+msgid "Proxmox Create VM: NIC"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:948
+#: ../../source/installation/proxmox/index.rst:1103
+msgid "VM Netzwerkkarte"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:952
+msgid ""
+"Zum Abschluss siehst Du nochmals alle Einstellungen für die VM. Überprüfe"
+" diese. Solltest Du Änderungen vornehmen wollen, kannst Du auf die "
+"entsprechende Reiterkarte klicken, Änderungen durchführen und wieder zur "
+"Reiterkarte ``Confirm`` wechseln."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:959
+#: ../../source/installation/proxmox/index.rst:1114
+msgid "Proxmox Create VM: Confirm"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:959
+msgid "VM Erstellung bestätigen"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:961
+#: ../../source/installation/proxmox/index.rst:1116
+msgid ""
+"Achte darauf, dass die Option ``Start after created`` unbedingt "
+"``deaktiviert`` ist."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:963
+#: ../../source/installation/proxmox/index.rst:1118
+msgid "Klicke dann auf ``Finish``."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:966
+msgid "Hinzufügen einer weiteren Netzwerkbrücke"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:968
+msgid ""
+"Nachdem die VM angelegt wurde, wähle diese aus und klicke auf den Eintrag"
+" ``Hardware``."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:975
+msgid "Proxmox Create VM: Hardware"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:975
+msgid "VM Hardware"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:977
+msgid ""
+"Füge nun die zweite Netzwerkkarte hinzu oder ggf. weitere NICs. Klicke "
+"hierzu oben auf die Reiterkarte ``Add``. Es erscheint ein Drop-down Menü."
+" Wähle hier den Eintrag ``Network Device``."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:985
+#: ../../source/installation/proxmox/index.rst:1001
+#: ../../source/installation/proxmox/index.rst:1136
+msgid "Proxmox Create VM: Add 2nd NIC"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:985
+msgid "VM zweite NIC anlegen"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:987
+msgid "Wähle als Bridge die zweite zuvor eingerichtete Bridge |-| hier ``vmbr1``."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:989
+msgid ""
+"Achte für die weitere Installation darauf, wie Du die Bridges zugeordnet "
+"hast:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:991
+msgid "vmbr 0 - externes Netzwerk: red"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:992
+msgid "vmbr 1 - internes Netzwerk: green"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:994
+msgid "Klicke auf ``Add``."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1001
+msgid "Stand nach der Erzeugung der Virtuellen Maschine OPNsense"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1006
+msgid "Anlegen der VM für linuxmuster server"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1008
+msgid ""
+"Um für den linuxmuster.net Server v7.2 die VM anzulegen, wählst Du erneut"
+" in der Proxmox - Verwaltungsoberfläche den Button ``Create VM``."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1028
+msgid ""
+"Wähle nun den ISO-Datenspeicher unter Storage aus. Das ist der Speicher, "
+"auf den Du vorher die ISO-Images abgelegt hast. Wähle dann das ISO image "
+"des Ubuntu Server aus."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1051
+msgid ""
+"Wähle nun hier unter ``Storage`` den geeigneten Datenspeicher aus, um die"
+" Festplatte der VM dort abzulegen. In der Abb. wird der Datenspeicher "
+"``Dataset`` verwendet. In dem Drop-down Menü siehst Du alle in Deinem "
+"System verfügbaren Datenspeicher."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1059
+msgid "VM Festplatten"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1061
+msgid "Für die erste Festplatte wählst Du wie in obiger Abb. |zb| 25 GiB."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1063
+msgid ""
+"Füge dann mit dem Button unten links ``Add`` eine weitere Festplatte "
+"hinzu. Wähle hierbei wieder den geeigneten Datenspeicher aus und die "
+"Größe von |zb| 100 GiB, oder direkt für Deine Schule die gewünschte Größe"
+" |zb| 500 GiB aus."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1070
+msgid "Vm Festplatten"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1085
+msgid "Gib nun für den Server die gewünschte Größe des Arbeitsspeichers an."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1096
+msgid ""
+"Gib danach die Bridge ``vmbr1`` für die einzurichtende Netzwerkkarte an. "
+"Dies muss die Bridge für das interne Netz (green) sein."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1107
+msgid ""
+"Zum Abschluss siehst Du nochmals alle getroffenen Einstellungen. "
+"Überprüfe diese. Solltest Du Änderungen vornehmen wollen, kannst Du auf "
+"die entsprechende Reiterkarte klicken, Änderungen durchführen und wieder "
+"zur Reiterkarte ``Confirm`` wechseln."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1120
+msgid ""
+"Nachdem die VM angelegt wurde, siehst Du diese links im Verzeichnisbaum "
+"Deines Proxmox-Host, in dem alle VMs dargestellt werden."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1127
+msgid "Proxmox VMs: Overview"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1127
+msgid "VMs"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1129
+msgid "Welches sich auch in der schematischen Übersicht zeigt:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1136
+msgid "Stand nach der Erzeugung der Virtuellen Maschine Ubuntu"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1139
+msgid "Abschließende Konfiguration der virtuellen Maschinen"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1141
+msgid ""
+"Die nächsten beiden Einstellungen musst Du sowohl für die **Firewall als "
+"auch für den Server** vornehmen. Wir beschreiben es hier jetzt "
+"exemplarisch für die Firewall."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1144
+msgid "Boot-Optionen"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1146
+msgid ""
+"Um bei der from Scratch Installation von CD zu starten, wählst Du die "
+"jeweilige VM (z.B. 100 (lmn7-opnsense) aus, klickst auf ``Options`` und "
+"klickst oben auf den Menüeintrag ``Edit``."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1153
+msgid "Proxmox VM: Boot order"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1153
+msgid "Bootreihenfolge festlegen"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1155
+msgid ""
+"Markiere mit der Maus den Eintrag ide2 (CD) und ziehe diesen an Position "
+"1."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1157
+msgid "Vorher:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1164
+msgid "Proxmox VM: Boot order start"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1164
+msgid "vorher"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1166
+msgid "Nachher:"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1173
+msgid "Proxmox VM: Boot order changed"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1173
+msgid "nachher"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1177
+msgid "Hinzufügen einer seriellen Schnittstelle"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1179
+msgid ""
+"Damit Dir `copy-and-paste` in der Oberfläche von Proxmox bei der Auswahl "
+"unter ``>_ Console`` zur Verfügung steht, musst Du die Nutzung von "
+"`xterm.js` ermöglichen. Als vorbereitende Maßnahme musst Du eine serielle"
+" Schnittstelle für die jeweilige VM aktivieren."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1181
+msgid ""
+"Wähle zuerst die gewünschte VM aus (z.B. `100 (lmn-opnsense)`, wähle "
+"danach den Eintrag ``Hardware`` für die VM aus und klicke dann oben "
+"rechts auf das Icon ``>_ Console``."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1183
+msgid "Nachstehende Abb. zeigt den Zustand vor der Aktivierung."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1190
+msgid "Console menu before xterm.js activation"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1190
+msgid "Zustand vor der Aktivierung"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1192
+msgid ""
+"Wähle die gewünschte VM ``lmn-opnsense`` aus, klicke dann --> ``Add`` -->"
+" ``Hardware`` --> ``Serial Port``."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1199
+msgid "Description of how to open the Add menu"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1199
+msgid "Serial Port hinzufügen"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1201
+msgid ""
+"Lege einen Seriellen Port mit der Bezeichnung ``0`` an. Klicke danach auf"
+" ``Add``."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1208
+msgid "Add serial port 0"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1208
+msgid "Serielle Schnittstelle 0 hinzufügen"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1210
+msgid ""
+"Danach siehst Du den seriellen Port in der Hardware-Übersicht der VM. "
+"Klickst Du oben rechts auf ``>_ Console``. Der der gezeigte Menüpunkt "
+"``xterm.js`` sollte nun nicht mehr ausgegraut sein."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1217
+msgid "Console menu after activation of xterm.js"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1217
+msgid "Zustand nach der Aktivierung"
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1219
+msgid "Kontrolliere nochmals alle Einstellungen der neu angelegten VM."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1221
+msgid ""
+"Die beiden letzten Einstellungen musst Du **nochmals für den "
+"linuxmuster.net Server (2. VM)** einrichten."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1223
+msgid ""
+"Für die weitere Nutzung von xterm.js ist allerdings noch eine Anpassung "
+"bei der laufenden OPNsense |reg| bzw. dem Server nötig. Die nimmst Du zu "
+"einem geeigneten späteren Zeitpunkt vor, bis dahin musst Du noch die "
+"Konsole ``noVNC`` nutzen."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1225
+msgid ""
+"Die virtuellen Maschinen sind jetzt für die weitere Installation "
+"vorbereitet. Du kannst gemäß der Anleitung: :ref:`first_start_firewall` "
+"mit der Installation fortfahren."
+msgstr ""
+
+#: ../../source/installation/proxmox/index.rst:1227
+msgid ""
+"Jetzt wäre auch ein guter Zeitpunkt für ein Snapshoting und/oder dem "
+"Klonen der bisher erstellen VMs."
+msgstr ""
+

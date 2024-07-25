@@ -1,0 +1,554 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:6
+msgid "Netzbereich anpassen"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:12
+msgid ""
+"Die Anpassung des Netzbereichs ist vor Aufruf des eigentlichen Setups "
+"auszuführen. Dies erfolgt mit dem Paket ``lmn71-prepare``."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:15
+msgid "Vorgehen"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:17
+msgid ""
+"Die OPNsense® ist im gewünschten Zielnetz einzurichten (z.B. "
+"10.17.0.254/16). Diese muss für alle Server / Ubuntu-VMs als Gateway "
+"angegeben werden. Dies kann mithilfe des lmn71-prepare Skripts für den "
+"gewünschten neuen Netzbereich (z.B. 10.17.0.0/16) vorbereitet werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:19
+msgid ""
+"Gleiches gilt für die Vorbereitung der ``from-scratch`` installierten "
+"Server."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:22
+msgid "Das Skript lmn71-prepare"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:24
+msgid ""
+"Das Skript lmn71-prepare installiert für Dich das Paket linuxmuster-"
+"prepare mit all seinen Abhängigkeiten und es richtet die zweite "
+"Festplatte für den Serverbetrieb ein."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:28
+msgid "Nachstehende Beschreibung muss für 7.1 noch überarbeitet werden !"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:31
+msgid ""
+"Vorbereitung: Lade das Skript hier herunter: ``wget "
+"https://raw.githubusercontent.com/linuxmuster/linuxmuster-"
+"prepare/master/lmn71-appliance``."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:32
+msgid "Mach das Sktipt nun ausführbar: ``chmod +x lmn71-appliance`` ausführbar"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:33
+msgid ""
+"Starte das Skript als Benutzer ``root`` mit: ``./lmn71-appliance -p "
+"server -l /dev/sdb``. Hierbei wird auf dem angegebenen Device/ der HDD "
+"ein LVM eingerichtet."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:34
+msgid ""
+"Für weitere Hinweise zum linuxmuster-prepare Skript siehe: "
+"https://github.com/linuxmuster/linuxmuster-prepare"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:36
+msgid ""
+"Im Anschluss kann das Setup ausgeführt werden, das dann den Netzbereich "
+"ausliest und für die weitere Einrichtung verwendet."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:39
+msgid "Hinweise zum Skript"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:41
+msgid ""
+"Das Skript ``lmn71-appliance`` bereitet eine Applicance (VM) für die "
+"linuxmuster v7.1 vor:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:43
+msgid "Es bringt das Betriebssystem auf den aktuellen Stand,"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:44
+msgid "installiert das Paket linuxmuster-prepare und"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:45
+msgid ""
+"startet dann das Vorbereitungsskript linuxmuster-prepare, das die für das"
+" jeweilige Appliance-Profil benötigten Pakete installiert, das Netzwerk "
+"konfiguriert, das root-Passwort auf Muster! setzt und im Falle des "
+"Serverprofils LVM einrichtet."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:48
+msgid "Das Skript kennt beim Aufruf folgende Übergabeparameter:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:51
+msgid "Optionen"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:54
+msgid "Parameter"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:54
+msgid "Wert"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:54
+msgid "Bedeutung"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:56
+msgid "-t,"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:56
+msgid "--hostname=<hostname>"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:56
+msgid "Hostname der Appliance, falls weggelassen wird der Profilname verwendet."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:59
+msgid "-n,"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:59
+msgid "--ipnet= <ip/bitmask>"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:59
+msgid ""
+"IP-Adresse und Bitmaske des Hosts (Standardwert ist 10.0.0.[1,2,3]/16, "
+"abhängig vom Profil)."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:62
+msgid "-p,"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:62
+msgid "--profile=<server>"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:62
+msgid ""
+"appliance-Profil, wurde -n nicht angegeben, wird die IP-Adresse "
+"automatisch gesetzt: server 10.0.0.1"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:66
+msgid "-l,"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:66
+msgid "--pvdevice=<device>"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:66
+msgid "Pfad zum LVM-Device (nur bei Serverprofil)."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:68
+msgid "-f,"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:68
+msgid "--firewall=<ip>"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:68
+msgid "Firewall-/Gateway-/Nameserver-Adresse (Standard x.x.x 254)."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:71
+msgid "-d,"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:71
+msgid "--domain= <domain>"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:71
+msgid "Domänenname (Standard: linuxmuster.lan)."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:73
+msgid "-h,"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:73
+msgid "--help"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:73
+msgid "Hilfe anzeigen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:77
+msgid "Profilvorgaben"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:79
+msgid "**server:**"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:81
+msgid ""
+"Paket linuxmuster-base7 (v7.1) mit allen seinen Abhängigkeiten wird "
+"installiert. Ist eine zweite Festplatte definiert und wird der Parameter "
+"``-l, --pvdevice=<device>`` angegeben, wird diese wie folgt mit LVM "
+"eingerichtet (Werte beziehen sich auf eine Festplattengröße von 100G. Für"
+" das LV default-school wird immer der verbleibende Rest genommen. "
+"Festplattengröße muss daher mindestens 70G betragen.):"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:84
+msgid "LV Name"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:84
+msgid "LV Pfad"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:84
+msgid "Mountpoint"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:84
+msgid "Größe"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:86
+msgid "var"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:86
+msgid "/dev/vg_srv/var"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:86
+msgid "/var"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:86
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:90
+msgid "10G"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:88
+msgid "linbo"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:88
+msgid "/dev/vg_srv/linbo"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:88
+msgid "/srv/linbo"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:88
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:92
+msgid "40G"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:90
+msgid "global"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:90
+msgid "/dev/vg_srv/global"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:90
+msgid "/srv/samba/global"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:92
+msgid "default-school"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:92
+msgid "/dev/vg_srv/default-school"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:92
+msgid "/srv/samba/default-school"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:96
+msgid "Beispiele"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:107
+msgid "Richtet Serverprofil mit LVM auf 2. Festplatte mit Standardwerten ein:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:103
+msgid "Hostname server,"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:104
+msgid "IP/Bitmask 10.0.0.1/16,"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:105
+msgid "Domänenname linuxmuster.lan"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:106
+msgid "Gateway/DNS 10.0.0.254"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:110
+msgid "Server-Appliance vorbereiten"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:119
+msgid "Appliance mit 2 Festplatten einrichten, zum Beispiel:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:113
+msgid "HD 1: 25G (Root-Dateisystem)"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:114
+msgid "HD 2: 100G (LVM)"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:116
+msgid "Ubuntu Server 18.04 Minimalinstallation durchführen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:117
+msgid "System in eine Partition auf HD 1 installieren (keine Swap-Partition),"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:118
+msgid "HD 2 unkonfiguriert lassen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:119
+msgid "Nach dem ersten Boot als root einloggen und Prepare-Skript herunterladen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:141
+msgid "Anwendung auf die Appliances"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:143
+msgid "Zuerst ist die OPNsense® Firewall anzupassen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:146
+msgid "OPNsense® Firewall"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:148
+msgid ""
+"Nach dem ersten Start als Benutzer ``root`` mit dem Passwort ``Muster!`` "
+"anmelden. Danach erscheint nachstehendes Konsolenmenü der OPNsense®:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:-1
+msgid "OPNsense® Menue"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:154
+msgid ""
+"Zunächst müssen die Netzwerk-Interfaces unter Mneüpunkt 1 neu zugordnet "
+"werden. Je nach Hypervisor werden unterschiedliche Namen für die "
+"Netzwerkinterfaces verwendet - z.B. em0 / vtnet0"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:156
+msgid "emo/vtnet0 --> LAN"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:157
+msgid "em1/vtnet1 --> WAN"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:158
+msgid "em2/vtnet2 --> OPT1"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:160
+msgid ""
+"Um nun die vorgegebene Netzwerkkonfiguration anzupassen, ist das Menü 2 "
+"zu wählen. In nachstehendem Beispiel wird das LAN-Interface auf die IP-"
+"Adresse 10.16.1.254/12 geändert."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:-1
+msgid "OPNsense® LAN Interface"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:166
+msgid ""
+"Der DHCP-Dient auf der OPNsense® sollte in jedem Fall ausgeschaltet "
+"bleiben. Sollte der Domänenname geändert werden, kann dies später via "
+"OPNsense®-GUI erfolgen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:168
+msgid "Anschließend muss die OPNsense® neu gestartet werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:170
+msgid ""
+"Im zweiten Schritt muss der Netzbereich der Server-Appliance angepasst "
+"werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:173
+msgid "Server-Applicance"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:175
+msgid ""
+"Nach dem ersten Start der Server-Appliance als ``root`` einloggen "
+"(Passwort: Muster!). Danach ist die Netzwerkverbindung für den "
+"gewünschten Bereich anzupassen. Das Netzwerkinterface des Server muss "
+"sich im gleichen Netzsegment wie die LAN-Schnittstelle der OPNsense® "
+"befinden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:181
+msgid "der o.g. Befehl gibt einen Überblick über alle gefundenen Interfaces."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:183
+msgid ""
+"Das entsprechende Interface ist unter Ubuntu 18.04 nun anzupassen. Dies "
+"erfolgt in der Datei ``/etc/netplan/01-netcfg.yaml`` (z.B. ens33):"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:195
+msgid ""
+"ggf. kann die YAML-Datei auch einen anderen Namen nach der "
+"Erstinstallation aufweisen. Zu Beginn findet sich nur eine YAML-Datei in "
+"dem Verzeichnis."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:198
+msgid "Änderungen in der Datei speichern und danach wie folgt übernehmen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:204
+msgid ""
+"Mithilfe eines Ping-Test wird zuerst geprüft, ob der Server das Gateway "
+"erreicht. Im o.g. Beispiel müste dies wie folgt überprüft werden:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:210
+msgid ""
+"Ist dies erfolgreich, muss die Appliance mit dem Skript "
+"``lmn71-appliance`` für das Setup vorbereitet werden. Netzwerkadressen "
+"und Domänenname werden damit gesetzt."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:212
+msgid "Eine eigene IP-/Netzwerkonfiguration übergibt man mit dem Parameter -n:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:219
+msgid "Einen eigenen Domänennamen übergibt man mit -d:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:225
+msgid "Eine abweichende Firewall-IP setzt man mit -f:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:231
+msgid "Das alles kann **in einem Schritt** erfolgen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:237
+msgid ""
+"Minimaler Aufruf, wenn die Standard-Netzwerkeinstellungen (10.0.0.0/16) "
+"verwendet werden sollen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:247
+msgid "Gesetzt wird damit:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:244
+msgid "Server: IP 10.0.0.1, Hostname server"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:245
+msgid "Firewall-IP: 10.0.0.254, Hostname firewall"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:246
+msgid "Domänename: linuxmuster.lan"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:249
+msgid "Einen Überblick über alle Optionen erhält man mit dem Parameter -h."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:253
+msgid ""
+"Das Default-Rootpasswort ``Muster!`` darf nicht geändert werden, da die "
+"Setuproutine dieses voraussetzt. Nach der Vorbereitung mit linuxmuster-"
+"prepare muss die Appliance neu gestartet werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:256
+msgid ""
+"Im letzten Vorbereitungsschritt muss die Appliance noch aktualisiert "
+"werden:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/preliminarysettings/index.rst:262
+msgid ""
+"Danach kann das Setup mit der WebUI oder auf der Konsole auf dem Server "
+"aufgerufen werden."
+msgstr ""
+

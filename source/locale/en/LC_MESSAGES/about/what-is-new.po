@@ -1,0 +1,196 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/about/what-is-new.rst:14
+msgid "Was ist neu in 7.2?"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:18
+msgid ""
+"Linuxmuster.net 7.2 ist das Release-Update der linuxmuster.net v7.1. Es "
+"erfolgt eine Aktualisierung der bisher eingesetzten Ubuntu LTS Version "
+"auf die derzeit aktuellste Ubuntu Server LTS Version. Die Kernpakete der "
+"linuxmuster.net Lösung erhalten alle ein Update und stellen viele "
+"Verbesserungen und neue Features bereit."
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:21
+msgid "Neue Funktionalitäten"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:26
+msgid "Verbesserte Skalierbarkeit"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:24
+msgid ""
+"Mehrschulfähigkeit: Konsolidierung mehrerer Schulinstanzen auf einem "
+"Server möglich"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:25
+msgid ""
+"Gruppenorientierte Abbildung der Schule und flexible, regelbasierte "
+"Steuerung"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:26
+msgid ""
+"Moderne Bereitstellung zusätzlicher IT-Dienste der Schule innerhalb der "
+"Schullösung"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:32
+msgid "Moderne Betriebssystembasis und Steuerung"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:29
+msgid ""
+"Aktuelle Betriebssysteme der Server (Ubuntu Server 22.04 LTS & OPNSense "
+"|reg| 24.x) und der vorkonfigurierten, kostenlos bereitgestellten Linux-"
+"Arbeitsplätze"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:30
+msgid ""
+"Mit LINBO 4.2: Neues User-Interface für die Steuerung an den Clients, "
+"aktuellste Linux-Kernels für aktuelle Hardware, differentielle Images, "
+"ntfs3 Kernel-Treiber"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:31
+msgid ""
+"Webbasierte Steuerung der pädagogischen Funktionen mit einem **responsive"
+" design** (passt sich an alle Bildschirmgrößen und -auflösungen an)."
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:32
+msgid ""
+"WebUI mit vielen administrativen Möglichkeiten, die zuvor nur an der "
+"Server-Konsole zu erreichen waren (Erstellen von Hardwareklassen, "
+"Erstellen von Client-Konfigurationen, Erstellen von differenziellen "
+"Images u.v.m.)."
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:35
+msgid "Technische Neuerungen"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:39
+msgid "Vereinfachte Installation"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:38
+msgid ""
+"Standardmäßig bleibt linuxmuster.net eine Zwei-Serverlösung aus Firewall "
+"und Server. Optional können weitere Server / Docker-Instanzen angebunden "
+"werden."
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:39
+msgid ""
+"Die Installation erwartet eine vorkonfigurierte Virtualisierungslösung "
+"(Proxmox - andere sind ebenfalls möglich)."
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:43
+msgid "Bedienung und Administration"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:42
+msgid ""
+"Die WebUI als Verwaltungswerkzeug zur Administration und zur Steuerung "
+"von Unterricht weist viele zusätzliche Funktionen auf."
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:43
+msgid "Die vollständige Bedienbarkeit auf der Konsole bleibt erhalten."
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:51
+msgid "Benutzerverwaltung"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:46
+msgid ""
+"Automatische Erkennung der Kodierung der Benutzerdaten, Sonderzeichen in "
+"Klarnamen"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:47
+msgid "Klassen- und Projektmanagement bleibt erhalten"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:48
+msgid "Zusätzliche sitzungsbasierende Berechtigungen für die Unterrichtsteuerung:"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:50
+msgid "Gruppen können frei zusammengestellt werden"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:51
+msgid "Benutzerbezogene statt rechnerbezogene Verwaltung"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:56
+msgid "Netzwerkverwaltung"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:54
+msgid "Frei definierbare IP-Bereiche"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:55
+msgid ""
+"Standardmäßige Zugangskontrolle zum Internet über einen Proxyservice auf "
+"Single-Sign-On Basis - anstelle eines transparenten Proxy"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:68
+msgid "Selbstheilende Arbeitsstationen"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:59
+msgid "LINBO ist weiterhin das zentrale Softwareverteilungssystem."
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:60
+msgid "Es erfolgt ein Major Release Update auf LINBO 4.2."
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:62
+msgid "Umstellung der Images-Abbilder auf das qcow2 Format"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:63
+msgid "Neues User-Interface für die Steuerung an den Clients"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:64
+msgid "Differenzielle Images"
+msgstr ""
+
+#: ../../source/about/what-is-new.rst:65
+msgid "Aktuelle Linux-Kernel ab 6.2.* und einem nativen NTFS-Kernel Treiber"
+msgstr ""
+

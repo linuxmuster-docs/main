@@ -1,0 +1,153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:2
+msgid "Die Grundkonfiguration"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:4
+msgid ""
+"Hier werden die Standardsprache sowie der Adminaccount gewählt und es "
+"können die APs aufgenommen werden."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:7
+msgid "Schritt für Schritt"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:9
+msgid ""
+"Öffne von einem Rechner im Schulnetz mit einem Browser "
+"`<https://unifi:8443>`_ (falls der Unificontroller in der Datei "
+"`workstations` unifi heißt)."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:11
+msgid ""
+"Da der Unifi-Kontroller mit einem selbstzertifizierten Zertifikat "
+"arbeitet, wirst Du eine Zertifikatswarnung erhalten."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:-1
+msgid "Sprachenauswahl"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:16
+msgid "Wähle Germany als Land und klicke auf `weiter`."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:-1
+msgid "Geräteauswahl"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:21
+msgid ""
+"Wähle die Geräte aus, die Du mit dem Unifi-Kontroller managen wöchtest "
+"(also alle) und klicke auf `WEITER`."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:-1
+msgid "SSID einrichten"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:26
+msgid ""
+"An dieser Stelle überspringst Du die Einrichtung eines WLANs. Das wird "
+"später ausführlich beschrieben."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:-1
+msgid "admin"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:31
+msgid "An dieser Stelle wird ein Administrator-Zugang angelegt."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:-1
+msgid "Cloud"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:36
+msgid "Überspringe auch diesen Schritt."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:-1
+msgid "Bestätigung"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:41
+msgid "Bestätige schließlich Deine Einstellungen."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:44
+msgid "Einstellungen zur Aufnahme der APs"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:46
+msgid ""
+"Damit der Unificontroller die angeschlossenen Access Points (APs) "
+"aufnehmen kann und mit diesen kommuniziert, sind noch folgende "
+"Einstellungen zu treffen:"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:49
+msgid ""
+"Wähle ``Settings → System Settings → Controller/Application "
+"Configuration``"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:50
+msgid ""
+"Gib dort bei der Option ``Host to inform`` die IP-Adresse des "
+"Dockerhosts, den FQDN oder ein CNAME als FQDN ein."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:51
+msgid ""
+"Teste die Aufnahme, indem Du einen AP anschließt. Nachdem dieser "
+"gestartet ist, siehst Du im Controller den AP in der Phase ``Adopting``. "
+"Diese muss erfolgreich beendet worden sein. Sollte dies nicht der Fall "
+"sein, so solltest Du in den log files des Unifi Controllers nach Fehlern "
+"suchen."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:54
+msgid ""
+"Die Einstellungen sehen in der alten UI des Unifi Controllers wie folgt "
+"aus:"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:-1
+msgid "Override inform host - old ui"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:59
+msgid ""
+"In der neuen UI des Unifi Controllers entspricht dies folgender "
+"Einstellung:"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifierste.rst:-1
+msgid "Override inform host - new ui"
+msgstr ""
+

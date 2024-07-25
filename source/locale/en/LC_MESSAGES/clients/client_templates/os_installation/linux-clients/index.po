@@ -1,0 +1,801 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:7
+msgid "Linux-Client"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:12
+msgid ""
+"linuxmuster.net stellt für Ubuntu basierte Clients das Paket "
+"``linuxmuster-linuxclient7`` bereit. Es führt automatisiert den "
+"Domänenbeitritt aus und vereinheitlicht das Management von Linux- und "
+"Windows-Clients durch Auslesen der GPO-Konfigurationen im Active "
+"Directory."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:14
+msgid ""
+"Offiziell wird derzeit Ubuntu 22.04 und Pop!_OS 22.04 mit gdm3 und Gnome "
+"unterstützt. Andere Ubuntu basierte Distributionen mit gdm3 und Gnome "
+"könnten aber auch funktionieren."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:17
+msgid "Voraussetzung"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:24
+msgid "Du hast bereits:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:20
+msgid ""
+"PC im Netz angeschlossen / VM angelegt und geeignete Netzwerkverbindung "
+"definiert"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:21
+msgid "Eine Hardwareklasse für den PC / die VM konfiguriert"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:22
+msgid "PC/VM als Rechner aufgenommen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:23
+msgid "PC/VM via PXE mit Linbo gestartet"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:24
+msgid "Die Festplatte mit Linbo partitioniert und formatiert"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:26
+msgid ""
+"Falls Du das noch nicht getan hast, starte zuerst mit den Schritten, die "
+"im Kapitel :ref:`hardware-registration-label` beschrieben werden und "
+"mache erst danach hier weiter."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:29
+msgid "Einrichten eines Linux-Clients"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:32
+msgid "Imagenamen eintragen (HWK)"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:34
+msgid ""
+"Vor der Installation bzw. Imageerstellung musst Du eine Hardwareklasse "
+"(HWK) zuweisen, sofern nicht bereits bei der Rechneraufnahme erfolgt."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:36
+msgid ""
+"Gehe dazu in der WebUI auf ``Geräteverwaltung -> Linbo 4 -> Gruppen -> "
+"<hwk auswählen>``. Klicke für die gewünschte HWK das Stift-Symbol, um die"
+" Einstellungen anzupassen. Es öffnet sich das Fenster mit den "
+"Einstellungen für die HWK. Wähle hier unter ``Partitionen`` Dein "
+"Betriebssystem (Reiterkarte ``OS``) aus und klicke das Stift-Icon. Klicke"
+" in dem sich öffnenden Fenster die Reiterkarte unter ``OS`` und klicke "
+"auf das ``+`` - Symbol, um einen neuen Eintrag für das ``Basisisimage`` "
+"festzulegen. Alternativ kannst Du auch einen Namen aus der Drop-down "
+"Liste auswählen. Bei der Erstellung des Erstimages wird ein vorhandenes "
+"überschrieben. (vgl. hierzu auch das Vorgehen unter ref:`add-computer-"
+"label`)."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:45
+msgid "Ubuntu Installation: indicate image name"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:45
+msgid "Festelegen des Dateinamens für das Basisimage"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:47
+msgid ""
+"Übernehme die Eintragungen jeweils mit ``Speichern & Importieren``. "
+"Danach wird automatisch ein Import der Geräte ausgeführt, um diese "
+"Einstellungen für alle Geräte der HWK zu übernehmen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:51
+msgid ""
+"Das neue Image befindet sich später auf dem Server unter "
+"``/srv/linbo/images/<os>/`` - also für o.g. Abb. z.B. "
+"/srv/linbo/images/ubuntu/pop_os_mlm.qcow2"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:55
+msgid "Client OS installieren"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:57
+msgid ""
+"Gib im PC / in der VM nun an, dass von dem gewünschten ISO-Image / der "
+"Installations-DVD gestartet werden soll. Hierbei musst Du darauf achten, "
+"die Boot-Reihenfolge so zu ändern, dass nicht mehr vom Netzwerk, sondern "
+"von der ISO-Datei / der Installations-DVD gebootet wird."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:59
+msgid ""
+"Starte nun den PC / die VM mit den neuen Einstellungen, sodass Ubuntu vom"
+" ISO-Image / von der Installations-DVD startet. Nachdem der Start "
+"ausgeführt wurde, wähle auf dem ersten Bildschirm aus, dass Du Ubuntu "
+"installieren möchtest."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:61
+msgid "Nachstehend findest Du die Beschreibung zur Installation von Ubuntu."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:63
+msgid ""
+"Möchtest Du pop!os installieren, so folge dieser Beschreibung :ref"
+":`install-linux-clients-popos-label`"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:67
+msgid "Installation Ubuntu"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:70
+msgid ""
+"Bei Ubuntu sollte man darauf achten, dass der Firefox nicht als Snap-"
+"Paket installiert wird, da damit SSO nicht funktioniert! Möglicherweise "
+"trifft das auch auf andere Distributionen zu!"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:72
+msgid ""
+"Hast Du den PC / die VM von vom ISO-Image / der Installations-DVD "
+"gestartet, siehst Du zunächst folgenden Start-Bildschirm:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:79
+msgid "Ubuntu ISO-Start"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:79
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:113
+msgid "Installationsart festlegen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:81
+msgid ""
+"Gib in den ersten Schritten der Installation die gewünschte Sprache und "
+"Tastaturbelegung an."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:88
+msgid "Ubuntu installation select language"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:88
+msgid "Sprache auswählen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:95
+msgid "Ubuntu installation select keyboard layout"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:95
+msgid "Tastaturlayout auswählen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:97
+msgid ""
+"Lege danach die Installationsart sowie weitere Optionen fest. Falls Du "
+"hier Aktualisierungen herunterladen wählst, so muss für dieser Client in "
+"der OPNSense|reg| in der NoProxy Gruppe eingetragen sein."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:104
+msgid "Ubuntu installation updates"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:104
+msgid "Installationsart und -optionen festlegen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:106
+msgid "Bei der ``Installationsart`` wählst Du ``Etwas Anderes`` aus."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:113
+msgid "Ubuntu Installation Method"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:115
+msgid "Du hattest mit LINBO bereits die Festplatte partitioniert und formatiert."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:117
+msgid ""
+"Es werden Dir also die bereits vorhandenen Partitionen und Dateisysteme "
+"angezeigt. Je nach genutzter Virtualisierungsumgebung / Hardware können "
+"die Festplattenbezeichnungen hier auch als ``/dev/xvda`` und die "
+"Partionen als ``/dev/xvda1`` etc. angezeigt werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:119
+msgid ""
+"Wähle, wie in der nachstehenden Abb. zu sehen, die Partition aus, auf der"
+" Ubuntu installiert werden soll."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:126
+msgid "Ubuntu Installation Method - Partitions"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:126
+msgid "Wähle die Ubuntu-Partition aus"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:128
+msgid "Klicke nun auf ``Ändern`` und es erscheint das nächste Fenster:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:135
+msgid "Ubuntu Installation Method - Partition Settings"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:135
+msgid "Partition bearbeiten"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:137
+msgid ""
+"Belasse die angezeigte Größe und das Dateisystem. Setze den Haken bei "
+"``Partition formatieren`` und wähle als ``Einbindungspunkt`` das Root-"
+"Verzeichnis ``/`` aus."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:139
+msgid "Klicke auf ``ok`` und es werden nochmals alle Einstellungen angezeigt:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:146
+msgid "Ubuntu Installation Method - Partitions Overview"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:146
+msgid "Übersicht der Partitionen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:148
+msgid ""
+"Sind diese Einstellungen korrekt, prüfe noch, ob das Gerät für die "
+"Bootloader-Installation die Ubuntu-Parition ist (hier in der Abb. "
+"/dev/sda1). Falls nicht passe dies an. Der Bootloader sollte nicht auf "
+"den MBR der Festplatte installiert werden (hier also nicht auf /dev/sda)."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:150
+msgid "Setze die Installation mit dem Button ``Jetzt installieren`` fort."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:152
+msgid ""
+"Im Verlauf der Installation wirst Du nach dem Namen für den Computer und "
+"dem Benutzername und Kennwort für den neuen Administrator gefragt. Gib "
+"hier als Benutzername ``linuxadmin`` ein. Beim Namen des Rechners musst "
+"Du den Namen des PCs / der VM angeben, wie Du ihn in der "
+"Gerätekonfiguration des festgelegt hast."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:159
+msgid "Ubuntu Installation: linuxadmin user"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:159
+msgid "Benutzer festlegen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:161
+msgid ""
+"Am Ende der Installation wirst Du aufgefordert, den Rechner neu zu "
+"starten. Fahre die VM herunter und werfe das ISO-Image / die "
+"Installations-DVD aus."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:164
+msgid "Erstimage erstellen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:166
+msgid ""
+"Passe die Boot-Reihenfolge für den PC / die VM jetzt so an, dass diese "
+"wieder via PXE bootet. Du siehst dann die Startoptionen in Linbo für das "
+"installierte Ubuntu 22.04."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:173
+msgid "Ubuntu Installation: Create first image"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:173
+msgid "LINBO Startoptionen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:175
+msgid ""
+"Klicke nun unten rechts auf das Werkzeug-Symbol, um zum Menü für die "
+"Imageerstellung zu gelangen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:181
+msgid "Ubuntu Installation: Menue Tools"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:181
+msgid "Wekzeug-Symbol"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:183
+msgid "Du wirst nach dem Linbo-Passwort gefragt. Gib dieses ein."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:187
+msgid "Deine Eingabe wird hierbei nicht angezeigt."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:194
+msgid "Ubuntu Installation: root login"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:194
+msgid "LINBO Kennwort"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:196
+msgid "Klicke dann auf ``anmelden`` und Du gelangst zu folgender Ansicht:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:203
+msgid "Ubuntu Installation: linbo menue for imaging"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:203
+msgid "Werkzeug-Menü"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:205
+msgid ""
+"Klicke auf das große Festplatten-Symbol, das in der Ecke rechts unten "
+"farblich markiert ist, um nun ein Image zu erstellen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:212
+msgid "Ubuntu Installation: linbo imaging icon"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:212
+msgid "Imaging-Symbol Ubuntu"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:214
+msgid ""
+"Anstatt des Festplatten-Symbol wird bei Dir eventuell das Symbol des "
+"Betriebssystems angezeigt, dass Du in der WebUI festgelegt hast."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:216
+msgid "Es wird ein neues Fenster geöffnet:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:223
+msgid "Ubuntu Installation: linbo imaging"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:223
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:348
+msgid "Image erstellen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:225
+msgid ""
+"Gibt es das Image noch nicht, so wird ein neues Image mit dem zuvor in "
+"der WebUI festgelegten Namen erstellt. Sollte ein Image bereits vorhanden"
+" sein, so wird dieses überschrieben. Soll ein neuer Dateiname für das "
+"neue Image festgelegt werden, so muss dies zuerst in der WebUI in der "
+"Hardwareklasse festgelegt und ein neuer Import ausgeführt werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:227
+msgid "Klicke nun ``erstellen + hochladen``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:229
+msgid "Während des Vorgangs siehst Du nachstehenden Bildschirm:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:236
+msgid "Ubuntu Installation: image upload"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:236
+msgid "Imageerstellung"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:238
+msgid ""
+"Zum Abschluss erscheint die Meldung, dass das Image erfolgreich "
+"hochgeladen wurde."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:245
+msgid "Ubuntu Installation: image uploaded successfully"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:245
+msgid "Image wurde erfolgreich erstellt und auf den Server geladen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:247
+msgid ""
+"Gehe durch einen Klick auf das Zeichen ``<`` zurück und klicke im "
+"nächsten Bildschirm das obere Symbol auf der rechten Seite an, um Dich "
+"abzumelden."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:249
+msgid ""
+"Du siehst nun drei Start-Symbole. Der grosse Symbol started das Image "
+"sychronisiert, während das grüne Icon das lokale Image aus dem Cache ohne"
+" Synchronisation startet."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:256
+msgid "Ubuntu Installation: image uploaded - new menue icons"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:256
+msgid "LINBO Start-Symbole"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:258
+msgid "Starte nun Ubuntu synchronisiert."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:262
+msgid "Paket linuxmuster-linuxclient7 installieren"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:264
+msgid "Melde Dich an dem gestarteten Ubuntu 22.04 als Benutzer ``linuxadmin`` an."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:271
+msgid "Ubuntu Setup: Login as linuxadmin"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:271
+msgid "Anmelden als Benutzer linuxadmin"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:273
+msgid "Installiere das Paket ``linuxmuster-linuxclient7`` wie folgt:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:275
+msgid "Importiere den GPG-Schlüssel des linuxmuster.net Respository."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:276
+msgid "Trage das linuxmuster.net Repository ein."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:277
+msgid "Installiere das Paket"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:280
+msgid "1. Schritt"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:282
+msgid ""
+"Öffne ein Terminal unter Ubuntu mit ``strg`` + ``T`` oder klicke unten "
+"links auf die Kacheln und gib in der Suchzeile als Anwendung ``Terminal``"
+" ein."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:284
+msgid "Importiere nun den GPG-Schlüssel des linuxmuster.net Repository:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:291
+msgid "2. Schritt"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:293
+msgid "Trage das linuxmuster.net Repository in die Paketquellen des Clients ein:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:299
+msgid "Aktualisiere die Paketinformationen mit ``sudo apt update``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:303
+msgid "3. Schritt"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:305
+msgid ""
+"Führe die Installation des Pakets mit ``sudo apt install linuxmuster-"
+"linuxclient7 -y`` durch."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:307
+msgid ""
+"Es kommt während der Paketinstallation die Nachfrage, welches "
+"voreingestellte Realm für Kerberos 5 zu verwenden. Dieser Eintrag bleibt "
+"leer."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:314
+msgid "Ubuntu Setup: Paketkonfiguration"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:314
+msgid "Paketkonfiguration"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:316
+msgid "Lasse das Feld leer und bestätige die Paketkonfiguration mit ``OK``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:319
+msgid "Setup"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:321
+msgid ""
+"Um den Domänenbeitritt auszuführen, rufe das Setup des linuxmuster-"
+"linuxclient7 auf:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:327
+msgid ""
+"Für den Domänenbeitritt wird das Kennwort des Domänen-Admins ``global-"
+"admin`` abgefragt."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:329
+msgid ""
+"Am Ende des Domänenbeitritts erfolgt eine Bestätigung, dass dieser "
+"erfolgreich durchgeführt wurde. Falls nicht, musst Du das Setup für den "
+"linuxmuster-linuxclient7 erneut durchlaufen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:332
+msgid "Image vorbereiten"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:334
+msgid ""
+"Der Linux-Client muss nun für die Erstellung des Images vorbereitet "
+"werden. Rufe hierzu den Befehl auf:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:341
+msgid ""
+"Der Client erhält daruch Aktualisierungen und es werden einige Dateien "
+"(journalctl & apt-caches) aufgeräumt, um Speicherplatz im Image zu "
+"sparen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:345
+msgid ""
+"Danach unbedingt S O F O R T ein neues Image mit Linbo erstellen. Beim "
+"Neustart via PXE darf Ubuntu N I C H T gestartet werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:350
+msgid ""
+"Führe einen Neustart des Linux-Client durch, sodass die VM via PXE in "
+"Linbo bootet."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:352
+msgid ""
+"Nun erstellst Du in Linbo - genauso wie zuvor unter **Erstimage "
+"erstellen** beschrieben - das Image des neuen Muster-Clients für Linux. "
+"Das bisherige Image wird dadurch ersetzt. Wähle ``erstellen + "
+"hochladen``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:354
+msgid ""
+"Wurde der Vorgang erfolgreich beendet, kannst Du Dich wieder abmelden und"
+" den vorbereiteten Linux-Client synchronisiert starten. Nun sollte die "
+"Anmeldung mit jedem in der Schulkonsole eingetragenen Benutzer "
+"funktionieren."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:357
+msgid "Eigene Anpassungen im Image"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:359
+msgid ""
+"Um den Linux-Client als Mustervorlage zu aktualisieren und Anpassungen "
+"vorzunehmen, startest Du den Client synchronisiert und meldest Dich mit "
+"dem Benutzer ``linuxadmin`` an."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:361
+msgid ""
+"Danach installierst Du die benötigte Software und nimmst die gewünschten "
+"Einstellungen vor."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:363
+msgid "Beispielsweise installierst Du auf dem Linux-Client zuerst Libre-Office:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:370
+msgid ""
+"Hast Du alle Anpassungen vorgenommen, musst Du den Linux-Client noch zur "
+"Erstellung des Images vorbereiten."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:372
+msgid "Das machst Du mit folgendem Befehl:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:380
+msgid ""
+"Falls Du die history Deines Terminals nutzt um Befehle wieder zu nutzen, "
+"dann achte darauf das Du den Parameter ``-y`` entfernst."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:382
+msgid ""
+"Sollte während des Updates oder der Image-Vorbereitung die Meldung "
+"erscheinen, dass lokale Änderungen der PAM-Konfiguration außer Kraft "
+"gesetzt werden sollen, wähle hier immer ``Nein`` (siehe Abb.), da sonst "
+"der konfigurierte Login nicht mehr funktioniert."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:-1
+msgid "Linux-Client: Update - PAM Settings"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:388
+msgid ""
+"Solltest Du versehentlich ``ja`` ausgewählt haben, kannst Du die "
+"Anmeldung mit folgendem Befehl reparieren:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:394
+msgid ""
+"Im Anschluss startest Du Deinen Linux-Client neu und erstellst wiederum, "
+"wie zuvor beschrieben, ein neues Image."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:398
+msgid "Serverseitige Anpassungen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:400
+msgid ""
+"Damit der Linux-Client die Drucker automatisch ermittelt und der Proxy "
+"korrekt eingerichtet wird, ist es erforderlich, dass auf dem "
+"linuxmuster.net Server einige Anpassungen vorgenommen werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:404
+msgid "Proxy-Einstellungen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:406
+msgid ""
+"Bei der Anmeldung vom Linux-Client werden sog. ``Hook-Skripte`` "
+"ausgeführt."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:408
+msgid ""
+"Diese finden sich auf dem linuxmuster.net Server im Verzeichnis: "
+"``/var/lib/samba/sysvol/linuxmuster.lan/scripts/default-"
+"school/custom/linux/``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:412
+msgid ""
+"Ersetze ``linuxmuster.lan`` durch den von Dir beim Setup festgelegten "
+"Domänennamen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:414
+msgid ""
+"Hier findet sich das Logon-Skript (``logon.sh``). Es wird immer dann "
+"ausgeführt, wenn sich ein Benutzer am Linux-Client anmeldet."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:416
+msgid ""
+"In diesem Logon-Skript musst Du die Einstellungen für den zu verwenden "
+"Proxy-Server festlegen, sofern dieser von den Linux-Clients verwendet "
+"werden soll."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:418
+msgid ""
+"Editiere die Datei ``/var/lib/samba/sysvol/linuxmuster.lan/scripts"
+"/default-school/custom/linux/logon.sh`` und füge folgende Zeilen hinzu. "
+"Passe die ``PROXY_DOMAIN`` für Dein Einsatzszenario an."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:444
+msgid "Drucker vorbereiten"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:448
+msgid ""
+"Dies sind nur kurze allgemeine Hinweise. Im Kapitel :ref:`configure-"
+"printers-label` findet sich eine ausführliche Anleitung."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:450
+msgid ""
+"Damit die Drucker richtig gefunden und via GPO administriert werden "
+"können, ist es erforderlich, dass jeder Drucker im CUPS-Server als Namen "
+"exakt seinen Hostnamen aus der Geräteverwaltung bekommt."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:452
+msgid ""
+"Die Zuordnung von Druckern zu Computern geschieht auf Basis von Gruppen "
+"im Active Directory. Im Kapitel :ref:`configure-printers-label` gibt es "
+"weitere Informationen dazu."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:454
+msgid ""
+"Damit auf jedem Rechner nur die Drucker angezeigt werden, die ihm auch "
+"zugeordnet wurden, muss auf dem Server in der Datei "
+"``/etc/cups/cupsd.conf`` der Eintrag ``Browsing On`` auf ``Browsing Off``"
+" umgestellt werden. Ansonsten werden auf jedem Rechner ALLE Drucker "
+"angezeigt, nicht nur die ihm zugeteilten."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:457
+msgid "Weiterführende Dokumentation"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:459
+msgid ""
+"`Entwicklerdokumentation <https://github.com/linuxmuster/linuxmuster-"
+"linuxclient7/wiki/Setup>`_"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/index.rst:460
+msgid ":ref:`using-linbo-label`"
+msgstr ""
+

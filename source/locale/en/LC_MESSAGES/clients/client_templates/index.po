@@ -1,0 +1,166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/clients/client_templates/index.rst:50
+msgid "Musterclients"
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:7
+msgid "Muster-Client aufsetzen"
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:12
+msgid ""
+"linuxmuster.net ermöglicht es, Clients mithilfe von LINBO automatisiert "
+"zu verwalteen. Auf den Clients kann ein Betriebssystem oder es können "
+"mehrere Multi-Boot Betriebssysteme auf dem Client installiert, "
+"aktualisiert, ausgerollte und zurückgesetzt werden. Mithilfe von LINBO "
+"erfolgt so ein automatischens Ausrollen der Clients im Netzwerk, das "
+"Verteilen zusätzlich zu installierender Software oder die "
+"Wiederherstellung eines funktionierenden Clients in den Ausgangszustand "
+"z.B. nach einer Laborübung, in der die Clients gezielt umkonfiguriert "
+"wurde."
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:14
+msgid ""
+"Die Nutzung von LINBO erfordert die Einrichtung eines Muster-Clients. "
+"Dies erfordert nachstehende ``drei Installationsschritte``:"
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:16
+msgid "**Hardwareklasse erstellen**"
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:18
+msgid ""
+"Mittels der Hardwareklasse teilst Du LINBO mit, welche Konfiguration für "
+"die Geräte anzuwenden ist. Dies umfasst:"
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:20
+msgid "Name der Hardwareklasse"
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:22
+msgid "Allgemeine Informationen"
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:24
+msgid "IP des TFTP-Servers, der das Image vorhält."
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:25
+msgid "Startoptionen des Clients"
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:26
+msgid "eventuell benötigte Kernel-Optionen für den Start-Vorgang"
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:28
+msgid "Angaben zu der Partitionierung des Clients"
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:30
+msgid "**Rechneraufnahme**"
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:32
+msgid ""
+"Bei der Rechneraufnahme legst Du fest, welche Konfigurationen für jede "
+"einzelne Arbeitsstation gelten sollen. Das sind:"
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:34
+msgid "Raum, in dem sich der Rechner befindet,"
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:35
+msgid "Name des Rechners"
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:36
+msgid "Name der Hardwareklasse, welcher der Rechner angehören soll,"
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:37
+msgid "MAC-Adresse des Rechners"
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:38
+msgid "IP-Adresse, die der Rechner erhalten soll,"
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:39
+msgid "Art des Gerätes"
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:40
+msgid "Aktivierung von LINBO"
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:42
+msgid ""
+"Wie Du aus den letzten beiden Punkten erkennen kannst, ist die "
+"Aktivierung von LINBO nicht für jedes Gerät zwingend notwendig. So "
+"benötigt z.B. ein Netzwerk-Drucker kein eigenes Image. Dieser benötigt "
+"nur eine IP und eine Raumzuordnung. Aber seine Aufnahme ist notwendig, "
+"damit er im Active Directory des ``Samba-Dienstes`` des linuxmuster.net "
+"Servers aufgenommen wird und somit dem System bekannt ist."
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:44
+msgid ""
+"Es gibt drei Möglichkeiten die Rechneraufnahme durchzuführen. Diese "
+"findest Du im Kapitel :ref:`hardware-registration-label` ausführlich "
+"beschrieben."
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:46
+msgid "**OS-Installation**"
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:48
+msgid ""
+"Im letzten Schritt wird nun das eigentliche Betriebssystem auf dem "
+"Muster-Client erstellt, in die Domäne eingebunden und das endgültige "
+"Image auf den linuxmuster.net Server geschrieben. Da sich das Vorgehen je"
+" nach verwendetem System unterscheidet, gehen die Unterkapitel von :ref"
+":`client-templates-label` detailliert darauf ein."
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:60
+msgid ""
+"Damit Clients in die Domäne aufgenommen werden können, muss auf dem "
+"Server vorher die Standard-GPO erzeugt werden. Dies ist auch "
+"``notwendig``, wenn ausschließlich Linux-Clients eingesetzt werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:62
+msgid "Die Standard-GPO wird auf dem Server erzeugt durch:"
+msgstr ""
+
+#: ../../source/clients/client_templates/index.rst:68
+msgid "Anschließend den Samba-Dienst noch neu starten:"
+msgstr ""
+

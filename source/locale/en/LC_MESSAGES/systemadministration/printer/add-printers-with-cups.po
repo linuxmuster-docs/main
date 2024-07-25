@@ -1,0 +1,183 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:2
+msgid "Drucker auf dem Server hinzufügen"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:6
+msgid ""
+"Um die als Geräte bereits importieren Netzwerkdrucker einzurichten, sind "
+"diese auf dem linuxmuster.net Server mithilfe von CUPS einzurichten und "
+"bereitzustellen. Die gesamte Druckersteuerung erfolgt via Active "
+"Directory für alle Betriebssysteme, so dass diese zunächst auf dem Server"
+" bereitgestellt, den AD-Gruppen zugewiesen und ggf. Anpassungen pro "
+"Client Betriebssystem vorgenommen werden müssen."
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:8
+msgid ""
+"Für die Nutzung von HP-Druckern ist es hilfreich, auf dem Server die "
+"Bibliothek ``HPLIP`` zu installieren und dann die Drucker einzurichten."
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:10
+msgid ""
+"Zur Installation der HPLIP Bibliothek rufst Du unter Ubuntu 22.04 LTS "
+"Server folgenden Befehl auf dem Server auf:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:16
+msgid ""
+"Starte auf einem Rechner einen Browser, um das sog. CUPS-Webinterface des"
+" Servers zur weiteren Einrichtung der Drucker aufzurufen. Hierzu füge "
+"nachstehende URL in der Adresszeile Deines Browsers ein:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:22
+msgid ""
+"Da meist nur ein selbst-signiertes Zertifikat auf dem Server installiert "
+"ist, ist es i.d.R. erforderlich, dem benutzten Browser die sichere "
+"Kommunikation ausnahmsweise zu erlauben (SSL-Zertifikat akzeptieren)."
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:-1
+msgid "Access CUPS"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:30
+msgid "Drucker hinzufügen"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:32
+msgid "Nach der Anmeldung an CUPS wähle den Menüpunkt ``Verwaltung`` aus."
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:34
+msgid "Es erscheint die Login-Aufforderung von CUPS auf dem Server:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:-1
+msgid "CUPS: Login"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:40
+msgid ""
+"Melde Dich als ``root`` dort an. Nach erfolgreicher Anmeldung siehst Du "
+"folgende Einträge:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:-1
+msgid "CUPS: add printer"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:46
+msgid ""
+"Rufe den Untermenüpunkt ``Drucker hinzufügen`` aus. Es erscheint "
+"nachstehende Maske. Wähle als Netzwerkdrucker i.d.R. LPD/LPR-Host aus und"
+" klicke auf ``weiter``."
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:-1
+msgid "add printer 1/5"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:52
+msgid ""
+"Gib als Verbindung die IP-Adresse und den Port des LPD-Druckers wie in "
+"der Abb. an:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:-1
+msgid "add printer 2/5"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:58
+msgid ""
+"Klicke auf ``weiter``. Wähle nun den geeigneten Druckertreiber für Deinen"
+" Drucker aus:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:-1
+msgid "add printer 3/5"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:68
+msgid ""
+"Wähle den Hersteller aus, dann erscheint eine Liste mit den verfügbaren "
+"Druckertreibern. Wähle in der Liste den korrekten Drucker aus. Sollte "
+"dieser in der Liste nicht enthalten sein, so klicke auf ``PPD-Datei "
+"bereitstellen -> Durchsuchen``. Wähle nun die PPD-Datei mit dem korrekten"
+" Druckertreiber aus, den Du zuvor von der Website des Herstellers "
+"heruntergeladen hast."
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:-1
+msgid "add printer 4/5"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:75
+msgid "Drucker konfigurieren"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:77
+msgid ""
+"Danach erscheinen die Standardeinstellungen für den hinzugefügten "
+"Drucker. Wähle hier die gewünschten Einstellungen aus und speichere diese"
+" als ``Standardeinstellungen festlegen``. Gib unter  ``Fehlerbehandlung``"
+"  **abort-job** an, um sicherzustellen, dass CUPS im Fehlerfall den "
+"Druckjob löscht."
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:-1
+msgid "add printer 5/5"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:83
+msgid ""
+"Damit der Drucker nur von berechtigten Nutzern verwendet werden kann, "
+"muss noch der Kreis der erlaubten Benutzer festgelegt werden: Gib unter "
+"``Erlaubte Benutzer festlegen`` die Gruppe ``@printing`` an. Lehrer sind "
+"standardmäßig in der Gruppe. Bei Schülern wird die Zugehörigkeit über die"
+" Spalte **Drucken** in der Schulkonsole gesteuert."
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:-1
+msgid "printer: allowed user"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:90
+msgid "Danach findet sich der neue Drucker in der Druckerliste in CUPS."
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:-1
+msgid "printer added"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:96
+msgid "Nun wird Dein Netzwerkdrucker vom Server den Clients bereitgestellt."
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printers-with-cups.rst:98
+msgid "Angesprochen wird obiger Drucker über folgende URL:"
+msgstr ""
+

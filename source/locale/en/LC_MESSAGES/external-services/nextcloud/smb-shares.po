@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/external-services/nextcloud/smb-shares.rst:3
+msgid "Zugriff auf die Home-Verzeichnisse"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/smb-shares.rst:7
+msgid ""
+"Die Benutzer können sich jetzt an der Nextcloud anmelden. Was noch fehlt "
+"ist, dass sie auf Ihre Daten auf dem Schulserver zugreifen können. Was Du"
+" nicht möchtest ist, dass die Benutzer Daten auf der Nextcloud ablegen, "
+"auf die sie von einem Rechner in der Schule keinen direkten Zugriff "
+"haben."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/smb-shares.rst:10
+msgid "Aktivierung der App External storage support"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/smb-shares.rst:12
+msgid "Als erstes musst Du die App ``External storage support`` aktivieren."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/smb-shares.rst:-1
+msgid "+Apps"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/smb-shares.rst:18
+msgid ""
+"Gehe dazu auf A -> + Apps. Auf der Seite ganz unten findest Du die "
+"deaktivierten Apps. Aktiviere ``External storage support``."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/smb-shares.rst:22
+msgid "Einbindung der Home- und Tauschverzeichnisse"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/smb-shares.rst:24
+msgid ""
+"Sollte der Nextloud-Server extern betrieben werden, so muss die "
+"OPNsense®-Firewall so konfiguriert werden, dass Anfragen über die SMB-"
+"Ports 139 und 445 an den Server weitergeleitet werden. Siehe "
+":ref:`Firewallregeln <nextcloud-firewall-label>`."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/smb-shares.rst:27
+msgid ""
+"In der Konfigurationsoberfläche ist unter ``Firewall -> NAT -> "
+"Portweiterleitung`` eine entsprechende Regel anzulegen."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/smb-shares.rst:-1
+msgid "Externer Speicher"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/smb-shares.rst:34
+msgid ""
+"In den Einstellungen von ``Externer Speicher`` kannst Du jetzt, wie oben "
+"im Bild zu sehen ist, die Tauschverzeichnisse und das Home-Verzeichnis "
+"``/`` der Benutzer einbinden."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/smb-shares.rst:38
+msgid ""
+"Das Share ``/`` ist das Wurzelverzeichnis der Benutzer. Wenn sich ein "
+"Benutzer nicht am Schulserver anmelden kann, kann er sich auch nicht an "
+"der Nextcloud anmelden. Und das trifft für den Admin der Nextcloud zu!!! "
+"Für den Share ``/`` müssen also die Gruppen angegeben werden, die Zugriff"
+" auf ein Home-Verzeichnis haben sollen. Sonst kann sich der Admin an der "
+"Nextcloud nicht mehr anmelden!!!"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/smb-shares.rst:42
+msgid ""
+"Du solltest das Share ``Tausch`` nicht für Schüler freigeben. Die "
+"Nextcloud registriert Änderungen nur dann, wenn ein Benutzer seine "
+"Dateien ändert, oder wenn die Nextcloud selbst teilt. Wenn Schüler oder "
+"Schülerinnen an Dateien oder Verzeichnissen Änderungen vornehmen, wird "
+"die Desktop-App diese Änderungen bei anderen Benutzern nicht "
+"aktualisieren. Das passiert nicht, wenn Du als Lehrer über die Nextcloud "
+"diese Tauschverzeichnisse mit den Schülern/Gruppen teilst. Dann arbeitet "
+"die Desktop-App einwandfrei."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/smb-shares.rst:-1
+msgid "Anmeldedaten"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/smb-shares.rst:48
+msgid "Achte darauf, dass Du ``Anmeldedaten in Datenbank speichern`` wählst."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/smb-shares.rst:52
+msgid ""
+"Bei Auswahl dieser Option ist zu beachten, dass die Anmeldedaten in der "
+"Datenbank symmetrisch verschlüsselt werden. Der Schlüssel dazu wird in "
+"der config.php hinterlegt. Dies kann ein Sicherheitsrisiko darstellen, "
+"wenn der Server kompromittiert worden sein sollte. Der bessere Weg wäre, "
+"die Option **Anmeldedaten in Sitzung speichern** dies hat aber andere "
+"Nebeneffekte, so dass die Einbindung nicht erfolgreich funktioniert."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/smb-shares.rst:54
+msgid ""
+"Ob Du die Vorschau aktivierst oder nicht hängt vom Standort der Nextcloud"
+" ab. Ist die Nextcloud nicht in der Schule gehostet und ist Deine "
+"Internet-Verbindung eher langsam, so ist es besser, wenn Du den Haken bei"
+" ``Vorschau aktivieren`` nicht setzt."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/smb-shares.rst:-1
+msgid "Vorschau aktivieren"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/smb-shares.rst:60
+msgid ""
+"Am Anfang scheint der Server noch langsam zu sein. Das liegt daran, dass "
+"die External Storage App einen Datei-Index aufbaut. Bei mir an der Schule"
+" hat das ca. 12 Stunden gedauert. Danach läuft die Nextcloud flott."
+msgstr ""
+
