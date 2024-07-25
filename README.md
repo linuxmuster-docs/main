@@ -156,6 +156,11 @@ for more details.
 * 6.2
     * STATUS: Old documentation of the old version of linuxmuster.net
     * version with an english translation (EN)
+ 
+## License for linuxmuster.net documentation
+
+![GitHub License](https://img.shields.io/github/license/linuxmuster-docs/main)
+
 
 <!-- Markdown link & img dfn's -->
 [build-badge]: https://github.com/linuxmuster-docs/main/workflows/VerifyDocs/badge.svg
