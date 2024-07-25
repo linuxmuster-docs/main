@@ -1,6 +1,9 @@
+<!-- logo -->
+![linuxmuster-logo](https://raw.githubusercontent.com/linuxmuster/linuxmuster-artwork/master/logo/lmn-full-logo.svg)
+
 # linuxmuster.net documentation
 
-The full documentation of linuxmuster.net.
+The project publishes the full documentation of linuxmuster.net.
 
 [![build-badge]][build-url]
 [![docs-badge]][docs-url]
@@ -15,7 +18,7 @@ Clone the repository "main" using git
    ~$ git clone git@github.com:linuxmuster-docs/main.git # if you have a ssh-key within github
 ```
 
-Install sphinx, e.g. under Ubuntu 22.04, do
+Install sphinx, e.g. using Ubuntu 22.04, do
 
 ```sh
    ~$  sudo apt install git python3-sphinx texlive texlive-latex-extra texlive-lang-german
@@ -39,9 +42,7 @@ Later, if you work again on the repository, update it with
 
 ## Contribute to the documentation
 
-Fork the repository "main" within the github-webinterface_
-
-.. _github-webinterface: https://github.com/linuxmuster-docs/main
+Fork the repository "main" within the [github-webinterface](https://github.com/linuxmuster-docs/main).
 
 * Clone your fork
 
@@ -104,15 +105,18 @@ Instead of deleting and creating a new fork you can bring your own fork up-to-da
 
 ## Guidelines for documentation
 
-The structure guide and style guide provide information on the design of our documentation. See our Guidelines
+The structure guide and style guide provide information on the design of our documentation. 
 
-[Guidelines linuxmuster.net] (https://docs.linuxmuster.net/de/latest/appendix/contribute/guidelines.html)
+See our
+
+- [Guidelines linuxmuster.net](https://docs.linuxmuster.net/de/latest/appendix/contribute/guidelines.html)
+  
 
 ## Translation
 
 We use 
 
-- [Transifex] (https://www.transifex.com/linuxmusternet/official-documentation/dashboard/)
+- [Transifex](https://www.transifex.com/linuxmusternet/official-documentation/dashboard/)
 
 to translate the documentation. Get started there!
 
@@ -137,20 +141,21 @@ Then run to following commands (inside the document root):
    $ tx pull -l en
    $ make -e SPHINXOPTS="-D language='en'" html
 ```
-## Release History
-
-* latest - v7.2
-    * CHANGE: Updated docs according to release status
-* 7.1
-    * STATUS: Documentation reflects status of v7.1 of linuxmuster.net
-* 6.2
-    * STATUS: Old documentation of the old version of linuxmuster.net
-
 Read the 
 
 - [Internationalization chapter in Sphinx-Docs](http://www.sphinx-doc.org/en/stable/intl.html)
 
 for more details.
+
+## Release History
+
+* latest - v7.2
+    * CHANGE: Updated docs according to current release status of linuxmuster.net
+* 7.1
+    * STATUS: Documentation reflects status v7.1 of linuxmuster.net
+* 6.2
+    * STATUS: Old documentation of the old version of linuxmuster.net
+    * version with an english translation (EN)
 
 <!-- Markdown link & img dfn's -->
 [build-badge]: https://github.com/linuxmuster-docs/main/workflows/VerifyDocs/badge.svg
