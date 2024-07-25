@@ -1,29 +1,10 @@
 # linuxmuster.net documentation
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/linuxmuster-docs/">
-    <img src="[https://www.linuxmuster.net/wp-content/uploads/2017/01/logo_homepage-1.png]" alt="Logo" width="80" height="80">
-  </a>
-</div>
 The full documentation of linuxmuster.net.
 
-image:: 
-    :target: 
-    :alt: Documentation Build Status
-
-
-.. image:: http://readthedocs.org/projects/linuxmuster/badge/?version=latest
-    :target: http://docs.linuxmuster.net/de/latest/?badge=latest
-    :alt: Documentation Status
-
-[![linuxmuster_docs][linuxmuster-image]][linuxmuster-url]
-[![Build Status][travis-image]][travis-url]
-[![Forks][forks-shield]][forks-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-
+[![build-badge]][build-url]
+[![docs-badge]][docs-url]
+[![issues-badge]][issues-url]
 
 ## Installation
 
@@ -122,15 +103,18 @@ Instead of deleting and creating a new fork you can bring your own fork up-to-da
   ```
 
 ## Guidelines for documentation
-++++++++++++++++++++++++++++
 
 The structure guide and style guide provide information on the design of our documentation. See our Guidelines
 
-https://docs.linuxmuster.net/de/latest/appendix/contribute/guidelines.html.
+[Guidelines linuxmuster.net] (https://docs.linuxmuster.net/de/latest/appendix/contribute/guidelines.html)
 
 ## Translation
 
-We use `Transifex <https://www.transifex.com/linuxmusternet/official-documentation/dashboard/>`__ to translate the documentation. Get started there!
+We use 
+
+- [Transifex] (https://www.transifex.com/linuxmusternet/official-documentation/dashboard/)
+
+to translate the documentation. Get started there!
 
 ## Build documentation in English
 
@@ -155,20 +139,24 @@ Then run to following commands (inside the document root):
 ```
 ## Release History
 
-* latest [v7.2]
+* latest - v7.2
     * CHANGE: Updated docs according to release status
 * 7.1
     * STATUS: Documentation reflects status of v7.1 of linuxmuster.net
 * 6.2
     * STATUS: Old documentation of the old version of linuxmuster.net
 
-Read the `Internationalization chapter <http://www.sphinx-doc.org/en/stable/intl.html>`__ in the offical sphinx documentation for a more detailed description.
+Read the 
+
+- [Internationalization chapter in Sphinx-Docs](http://www.sphinx-doc.org/en/stable/intl.html)
+
+for more details.
 
 <!-- Markdown link & img dfn's -->
-[linuxmuster_docs]: https://img.shields.io/badge/:linuxmuster-docs
-[linuxuster-image]: [https://github.com/linuxmuster-docs/main/workflows/VerifyDocs/badge.svg?style=for-the-badge](https://github.com/linuxmuster-docs/main/workflows/VerifyDocs/badge.svg)
-[linuxmuster-url]: https://github.com/linuxmuster-docs/main/workflows/VerifyDocs/badge.svg
-[issues-shield]: https://img.shields.io/github/issues/linuxmuster-docs/badge.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/linuxmuster-doc/slate.svg?style=for-the-badge
-[license-url]: https://github.com/linuxmuster-docs/blob/master/LICENSE.txt
+[build-badge]: https://github.com/linuxmuster-docs/main/workflows/VerifyDocs/badge.svg
+[build-url]: https://github.com/linuxmuster-docs/main/workflows/VerifyDocs/badge.svg
+[docs-badge]: https://readthedocs.org/projects/linuxmuster/badge/?version=latest
+[docs-url]: https://docs.linuxmuster.net/de/latest/?badge=latest
+[issues-badge]: https://img.shields.io/github/issues/linuxmuster-docs/main
+[issues-url]: https://img.shields.io/github/issues/linuxmuster-docs/main
+
