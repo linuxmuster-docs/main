@@ -1,0 +1,345 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/user-management/student-management.rst:5
+msgid "Schülerverwaltung als Lehrer"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:9
+msgid ""
+"Als Lehrer hat man in der Schulkonsole mehrere pädagogische und "
+"verwaltungstechnische Funktionen zur Verfügung."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:12
+msgid ""
+"Melde Dich an der Schulkonsole an, d.h. besuche mit dem Browser die "
+"Webseite ``https://server.linuxmuster.lan`` oder die an Deiner Schule "
+"äquivalent vom Administrator eingerichtete Seite und melde Dich mit den "
+"Schulkontodaten an."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:20
+msgid "Klassen, Projekte, Kurse - Einführung"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:22
+msgid ""
+"In der linuxmuster.net v7 gibt es zwei Kategorien von Gruppierungen. "
+"Klassen und Projekte sind Gruppierungen,"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:25
+msgid ""
+"denen Schüler automatisch angehören (Klassen) oder denen sie angehören "
+"durch Anlegen eines Lehrers (Projekte)"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:27
+msgid "die einen Tauschordner besitzen"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:28
+msgid ""
+"über die eine Zuordnung auch außerhalb der lmn7 möglich ist (z.B. "
+"Nextcloud, Moodle)"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:30
+msgid "Kurse dagegen sind Gruppierungen,"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:32
+msgid "die jeder Lehrer selbst anlegt"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:33
+msgid ""
+"die für Unterrichtsfunktionen wie Teilen/Einsammeln/Klassenarbeit "
+"verwendet werden"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:34
+msgid "die zum Zurücksetzen der Passwörter durch Lehrer verwendet werden"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:36
+msgid "Es werden meist beide Kategorien für den täglichen Umgang benötigt."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:40
+msgid ""
+"Solange ein Lehrer nur den automatisch angelegten Tauschordner der Klasse"
+" verwenden will, muss er keine Kurse einrichten. Die Konfiguration findet"
+" sich unter `KLASSENZIMMER/Einschreiben`."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:44
+msgid ""
+"Sobald ein Lehrer die Unterrichtsfunktionen verwenden will, die über "
+"einen Tauschordner hinausgehen, muss er einen Kurs anlegen und die "
+"gewünschten Schüler hinzufügen. Die Konfiguration findet sich unter "
+"`KLASSENZIMMER/Unterricht`."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:52
+msgid "Passwörter der Schüler ausdrucken"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:54
+msgid ""
+"Für ein klassenweises Ausdrucken der Erstpasswörter gibt es einen "
+"zusätzlichen Menüpunkt in der Schulkonsole. Unter dem Menüpunkt "
+"`KLASSENZIMMER/Passwörter drucken` wähle aus der Liste aller Klassen die "
+"entsprechende aus."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:61
+msgid ""
+"Das resultierende PDF enthält Benutzername und Erstpasswort aller "
+"Schülerinnen und Schüler der Klasse und kann so ausgeteilt werden."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:69
+msgid "In Klassen einschreiben und Projekte anlegen"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:71
+msgid ""
+"Die folgende Anleitung brauchst Du dann, wenn Du mit einer gesamten "
+"Schulklasse oder einem Teilnehmer einer Teilgruppe von Schülern Dateien "
+"über einen gemeinsamen Ordner bearbeiten willst oder diese Gruppierung in"
+" einer externen Anwendung gemeinsam ansprechen willst (z.B. "
+"Nextcloudgruppe oder Moodlegruppe). Für alle Unterrichtsfunktionen "
+"benötigst Du dagegen einen Kurs, siehe nächsten Abschnitt."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:80
+msgid "In Klassen einschreiben"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:82
+msgid ""
+"Unter ``KLASSENZIMMER/Einschreiben`` klicke auf die Klasse, der du "
+"angehören willst. Die Veränderung wird gelb hinterlegt angezeigt. "
+"Bestätige alle Änderungen mit ``ÜBERNEHMEN``, das sich am unteren Ende "
+"der Seite befindet."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:89
+msgid ""
+"Das Austragen aus einer Klasse funktioniert analog mit Entfernen des "
+"Hakens und Übernehmen der Änderung."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:93
+msgid "Projekte erstellen und beitreten"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:95
+msgid ""
+"Unter ``KLASSENZIMMER/Einschreiben`` klicke in der oberen Leiste auf "
+"``Neues Projekt``."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:100
+msgid ""
+"In dem sich öffnenden Eingabefeld kann der Projektname mit kleinen "
+"Buchstaben (a-z, keine Umlaute oder Sonderzeichen) und Zahlen (0-9) "
+"festgelegt werden. Die Schulkonsole meldet zurück, wenn das Projekt "
+"erfolgreich erstellt wurde und es erscheint in der Liste der Projekte."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst
+msgid "fixme"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:107
+msgid "Rest der Erstellung der Projekte"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:112
+msgid "Unterrichtskurs einrichten"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:114
+msgid ""
+"Die folgende Anleitung brauchst Du für alle Unterrichtsfunktionen (außer "
+"dem Tauschordner) und dafür musst Du nicht in der Klasse eingeschrieben "
+"sein."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:119
+msgid ""
+"Unter ``KLASSENZIMMER/Unterricht`` klicke auf ``Neuer Kurs`` und gib dem "
+"Kurs einen Namen. Im Kurs können sowohl Schülerinnen und Schüler einer "
+"Klasse als auch verschiedener Klassen zusammengestellt werden. Der Kurs "
+"ist auch nur für Dich sichtbar und verwendbar."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:126
+msgid ""
+"Der Kurs taucht nun in der Auflistung mittig auf. Klicke ihn an, er ist "
+"zunächst leer. In der ersten Zeile kannst Du nun bei `Schüler hinzufügen`"
+" einzelne Schülernamen eingeben oder bei `Klasse hinzufügen` Klassennamen"
+" eingeben."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:131
+msgid ""
+"Die Schulkonsole beschränkt während der Eingabe die möglichen Benutzer "
+"oder Gruppen des Systems und zeigt sie an. Klicke auf die angebotene "
+"Gruppe (z.B. hier: `10a`) um die entsprechenden Benutzer hinzuzufügen."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:137
+msgid ""
+"Die Schüler werden nun aufgelistet und können bei Bedarf über das Symbol "
+"des Mülleimers einzeln aus der Liste wieder entfernt werden."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:140
+msgid ""
+"Ist die Liste vollständig klicke unten rechts auf `SPEICHERN & "
+"ÜBERNEHMEN`."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:145
+msgid ""
+"Rechts oben wird das erfolgreiche Speichern mit einem grünen Haken "
+"zurückgemeldet."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:150
+msgid "Der Kurs kann später an dieser Stelle auch umbenannt oder gelöscht werden."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:153
+msgid "Folgende Unterrichtsfunktionen können jetzt genutzt werden:"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:155
+msgid ":ref:`exam-and-transfer-label`"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:156
+msgid ":ref:`classroom-access-control-label`"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:160
+msgid "Passwörter zurücksetzen"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:162
+msgid ""
+"Vergisst ein Schüler sein Passwort, kann jede Lehrkraft das Passwort des "
+"Schülers über die Schulkonsole auf das Erstpasswort zurücksetzen und dies"
+" dem Schüler mitteilen. Voraussetzung für die Passwortänderung ist die "
+"Aufnahme des Schülers in einen Kurs."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:167
+msgid ""
+"Öffne in der Schulkonsole unter ``KLASSENZIMMER/Unterricht`` den "
+"angelegten Kurs."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:172
+msgid ""
+"Die Liste mit Schülern des Kurses wird angezeigt. Klickst Du auf das "
+"Zahnradsymbol in der Zeile des Schülers im Kurs, erscheinen die "
+"Möglichkeiten"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:180
+msgid ""
+"Das **Erstpasswort** ist ein Passwort, dass beim Anlegen des Schülers "
+"durch den Administrator oder durch eine Lehrperson in der Schulkonsole "
+"gesetzt wurde. Das Erstpasswort wird auch im Klartext gespeichert und ist"
+" daher nicht für die dauerhafte Verwendung geeignet. Die Schüler müssen "
+"es selbst ändern."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:186
+msgid ""
+"Das **Benutzerpasswort** also das geheime vom Schüler geänderte Passwort "
+"kann weder von Lehrer noch Administrator eingesehen werden.  Diese "
+"Passwörter werden grundsätzlich nur verschlüsselt gespeichert."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:191
+msgid "Klicke auf"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:194
+msgid "Erstpasswort anzeigen"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:194
+msgid "um das aktuelle Erstpasswort anzuzeigen"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:198
+msgid "Erstpasswort wiederherstellen"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:197
+msgid "um das Passwort des Schülers (wieder) auf das Erstpasswort zurückzusetzen"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:202
+msgid "Erstpasswort zufällig festlegen"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:201
+msgid "um dem Schüler ein zufälliges neues Erstpasswort zu erzeugen und zu setzen"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:207
+msgid "Erstpasswort benutzerdefiniert festlegen"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:205
+msgid ""
+"um dem Schüler ein selbstgewähltes neues Erstpasswort zu erzeugen und zu "
+"setzen. Der folgende Dialog enthält einen Hinweis auf die "
+"Komplexitätsregeln des Passworts."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:214
+msgid "Benutzerpasswort festlegen"
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:210
+msgid ""
+"um direkt das Passwort des Schülers festzulegen. Das Erstpasswort wird "
+"dabei nicht geändert. Diese Option bietet sich an, wenn der Schüler "
+"selbst hier sein geheimes Passwort eingeben kann. Der folgende Dialog "
+"enthält einen Hinweis auf die Komplexitätsregeln des Passworts."
+msgstr ""
+
+#: ../../source/user-management/student-management.rst:216
+msgid ""
+"Nach Setzen des Erst- oder Benutzerpasswortes muss *nicht* mit `SPEICHERN"
+" & ÜBERNEHMEN` abgeschlossen werden."
+msgstr ""
+

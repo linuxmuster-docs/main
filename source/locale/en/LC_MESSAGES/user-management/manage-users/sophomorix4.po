@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/user-management/manage-users/sophomorix4.rst:2
+msgid "Weiterführendes zu Sophomorix4"
+msgstr ""
+
+#: ../../source/user-management/manage-users/sophomorix4.rst:4
+msgid ""
+"In der aktuellen Version der *linuxmuster.net* wird die "
+"Benutzerverwaltung mit Hilfe des Programms *Sophomorix4* durchgeführt. "
+"Für alle zuvor beschriebenen Vorgänge zur Benutzerverwaltung mit der "
+"Schulkonsole stellt sophomorix4 Konsolenbefehle auf dem linuxmuster.net "
+"Server bereit."
+msgstr ""
+
+#: ../../source/user-management/manage-users/sophomorix4.rst:8
+msgid ""
+"Optional besteht also die Möglichkeit, die Benutzerverwaltung in "
+"bestimmten Fällen auch auf der Konsole auf dem Server durchzuführen, oder"
+" bestimmte Vorgänge mithilfe von Skripten zu automatisieren."
+msgstr ""
+
+#: ../../source/user-management/manage-users/sophomorix4.rst:11
+msgid ""
+"Sophomorix4 bietet hierfür eine Schnittstelle, um eigene Skripte hieran "
+"anzubinden."
+msgstr ""
+
+#: ../../source/user-management/manage-users/sophomorix4.rst:13
+msgid ""
+"Für weitergehende Informationen sei an dieser Stelle auf die "
+"Entwicklerdokumentation verwiesen:"
+msgstr ""
+
+#: ../../source/user-management/manage-users/sophomorix4.rst:15
+msgid "https://github.com/linuxmuster/sophomorix4/wiki/"
+msgstr ""
+
+#: ../../source/user-management/manage-users/sophomorix4.rst:17
+msgid "und"
+msgstr ""
+
+#: ../../source/user-management/manage-users/sophomorix4.rst:19
+msgid "https://github.com/linuxmuster/sophomorix4/wiki/Custom_Scripts"
+msgstr ""
+
+#: ../../source/user-management/manage-users/sophomorix4.rst:21
+msgid "Auf dem Server lassen sich die Befehle wie folgt ausgeben:"
+msgstr ""
+
+#: ../../source/user-management/manage-users/sophomorix4.rst:23
+msgid "``sophomorix-<tab>``"
+msgstr ""
+
+#: ../../source/user-management/manage-users/sophomorix4.rst:25
+msgid ""
+"Die Optionn eines Befehls können dann anhand der Hilfsoption ausgegeben "
+"werden:"
+msgstr ""
+

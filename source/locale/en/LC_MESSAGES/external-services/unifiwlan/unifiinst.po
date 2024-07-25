@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/external-services/unifiwlan/unifiinst.rst:2
+msgid "Die Installation"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifiinst.rst:5
+msgid "Hardwareanforderungen"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifiinst.rst:7
+msgid "3 GB RAM"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifiinst.rst:8
+msgid "Eine Netzwerkkarte im Schulnetz (VLAN 16)"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifiinst.rst:9
+msgid "10 GB Festplatte (bei mir im Schulbetrieb sind 3,3 GB vom 40 GB belegt)."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifiinst.rst:13
+msgid "Die Grundinstallation"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifiinst.rst:15
+msgid ""
+"Für die Installation brauchen wir einen ``Dockerhost ohne nginx und "
+"dehydrated`` (siehe :ref:`Installation eines Dockerhosts <dockerhost-"
+"install-label>`)."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifiinst.rst:19
+msgid ""
+"Es kann hierzu jeder bereits bestehende Docker-Host verwendet werden, "
+"sofern die u.g. Ports nicht bereits belegt sind."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifiinst.rst:22
+msgid "Unifi-Controller mit docker-compose einrichten und starten"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifiinst.rst:24
+msgid ""
+"Melde Dich auf dem Docker-Host an, werde mit ``sudo -i`` `root` und lege "
+"mit ``mkdir -p /srv/docker/unifi`` das Verzeichnis `/srv/docker/unifi` "
+"an."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifiinst.rst:26
+msgid ""
+"Gehe mit ``cd /srv/docker/unifi`` in das neue Verzeichnis und lege die "
+"Datei docker-compose.yml an mit folgendem Inhalt an:"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifiinst.rst:52
+msgid "Starte den Unifi-Controller mit ``docker-compose up -d``."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifiinst.rst:56
+msgid ""
+"Zur Zeit wird die Unifi-Controller-Version 7.3.76 installiert. Möchtest "
+"Du eine frühere Version installieren, musst Du das in Zeile 4 angeben. "
+"Beispiel: ``image: ghcr.io/linuxserver/unifi-controller:LTS-"
+"version-5.6.42``. Welche Versionen es gibt, siehst Du `hier "
+"<https://hub.docker.com/r/linuxserver/unifi-controller/tags?page=1>`_ ."
+msgstr ""
+

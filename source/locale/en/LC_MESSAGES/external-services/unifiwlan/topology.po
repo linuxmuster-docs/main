@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/external-services/unifiwlan/topology.rst:2
+msgid "Die Netztopologie"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/topology.rst:4
+msgid ""
+"Sollen 2 WLANs über einen Accesspoint (AP) ausgestrahlt werden, muss "
+"mindestens ein Netzwerk ein getaggtes VLAN sein."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/topology.rst:-1
+msgid "VLAN-Topologie"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/topology.rst:9
+msgid ""
+"Im Beispiel ist der Hypervisor (z.B. Proxmox) mit einem Netzwerkkabel mit"
+" dem Switch verbunden."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/topology.rst:11
+msgid ""
+"Die virtuellen Maschinen sollten somit nicht direkt mit der Netzwerkkarte"
+" des Hypervisors verbunden sein. Es muss noch zusätzlich die VLAN-ID "
+"angegeben werden."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/topology.rst:13
+msgid ""
+"Im Beispiel werden die Datenpakete des Unifi-Controllers mit der Nummer "
+"16 gekennzeichnet. Man sagt getaggt."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/topology.rst:-1
+msgid "VLAN-Netzwerkkarte"
+msgstr ""
+

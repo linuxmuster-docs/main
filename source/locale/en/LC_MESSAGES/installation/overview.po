@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/installation/overview.rst:4
+msgid "Installationablauf"
+msgstr ""
+
+#: ../../source/installation/overview.rst:9
+msgid ""
+"Um **linuxmuster.net latest** zu installieren musst Du folgende Schritte "
+"durchlaufen:"
+msgstr ""
+
+#: ../../source/installation/overview.rst:11
+msgid "Planung der Infrastruktur (Server und Netzwerk)"
+msgstr ""
+
+#: ../../source/installation/overview.rst:13
+msgid "ggf. Vorbereitung / Setup der Netzkomponenten"
+msgstr ""
+
+#: ../../source/installation/overview.rst:15
+msgid "Einrichtung einer Basis für linuxmuster.net"
+msgstr ""
+
+#: ../../source/installation/overview.rst:23
+msgid ""
+"Diese Dokumentation konzentriert sich auf die Umsetzung als Zwei-Server-"
+"Lösung auf einem Hypervisor (Proxmox). Andere Virtualisierungslösungen "
+"sind möglich, werden aber von linuxmuster.net nicht (mehr) offiziell "
+"unterstützt."
+msgstr ""
+
+#: ../../source/installation/overview.rst:26
+msgid ""
+"Falls Du einen anderen Hypervisor bevorzugst, kannst Du Dich dennoch an "
+"der Dokumentation orientieren und findest im linuxmuster.net Forum "
+"(https://ask.linuxmuster.net) und im Community-Wiki "
+"(https://wiki.linuxmuster.net/community/) Unterstützung."
+msgstr ""
+
+#: ../../source/installation/overview.rst:28
+msgid "Vorbereitung der benötigten Server"
+msgstr ""
+
+#: ../../source/installation/overview.rst
+msgid "Installation: Übersicht"
+msgstr ""
+
+#: ../../source/installation/overview.rst:36
+msgid ""
+"\\* Bei der aktuellen linuxmuster.net Version dient die LTS Version 22.04"
+" als Basis."
+msgstr ""
+
+#: ../../source/installation/overview.rst:38
+msgid "Installation in die vorbereiteten VMs (virtuelle Maschinen)"
+msgstr ""
+
+#: ../../source/installation/overview.rst:46
+msgid "Test der Netzwerkfunktionen"
+msgstr ""
+
+#: ../../source/installation/overview.rst:54
+msgid "Ersteinrichtung (Setup) der Server"
+msgstr ""
+
+#: ../../source/installation/overview.rst:62
+msgid "Anlegen der Benutzer und Gruppen"
+msgstr ""
+
+#: ../../source/installation/overview.rst:70
+msgid "Einrichtung der Clients"
+msgstr ""
+
+#: ../../source/installation/overview.rst:79
+msgid "Nachstehend kannst Du den Installationsablauf als Übersicht herunterladen:"
+msgstr ""
+
+#: ../../source/installation/overview.rst:81
+msgid ""
+":download:`Übersicht als PDF-Datei <media/overview-installation-"
+"process.pdf>`"
+msgstr ""
+
+#: ../../source/installation/overview.rst:83
+msgid ""
+":download:`Übersicht als Inkscape SVG-Datei <media/overview-installation-"
+"process_inkscape_latest.svg>`"
+msgstr ""
+
+#: ../../source/installation/overview.rst:85
+msgid "Zu tun"
+msgstr ""
+
+#: ../../source/installation/overview.rst:87
+msgid "Grafik anpassen"
+msgstr ""
+

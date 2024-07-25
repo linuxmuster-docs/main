@@ -1,0 +1,319 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:2
+msgid "Drucker am Windows - Client"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:6
+msgid ""
+"Nachdem die Drucker auf dem Server eingerichtet wurden, sind diese auf "
+"Windows-Clients nun als Freigaben sichtbar."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:-1
+msgid "Windows: Printer-Share"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:12
+msgid ""
+"Die Treiber sind nun über die Microsoft Management Console (MMC) "
+"hinzuzufügen."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:15
+msgid "Dem global-admin die nötigen Rechte einräumen"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:17
+msgid ""
+"Bevor es losgehen kann, müssen wir dem `global-admin` noch die nötigen "
+"Rechte auf dem Server einräumen. Melde Dich dazu als `root` auf dem "
+"Server an und führen Sie die folgenden Befehle aus:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:27
+msgid ""
+"Ersetze LINUXMUSTER durch den Samba-Domänennamen z.B. SCHULE, den Du beim"
+" Setup eingerichtet hast."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:31
+msgid "Dem Server vertrauen"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:33
+msgid ""
+"Seit Juli 2016 hat Windows10 ein neues Sicherheitsfeature. Es muss über "
+"GPOs festgelegt werden, dass die Windows-Clients unserem Server "
+"vertrauen. Dazu gehen wir wie folgt vor:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:35
+msgid ""
+"Melde Dich als global-admin am Windows-Client an und starte die "
+"Gruppenrichtlinienverwaltung (Wie Du sie installierts kannst Du "
+":ref:`hier<install-RSAT-label>` nachlesen). Navigiere zur Default Domain "
+"Policy von linuxmuster.lan."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:-1
+msgid "Default-Domain-Policy"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:42
+msgid ""
+"Wähle mit einem Rechtsklick ``Bearbeiten``. Es öffnet sich der "
+"Gruppenrichtlinien-Editor. Navigiere zu ``Computerkonfiguration → "
+"Richtlinien → Administrative Vorlagen → Drucker``."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:-1
+msgid "RSAT-Printer"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:49
+msgid ""
+"Doppelklicke auf ``Point and Print Einschränkungen``, aktiviere die "
+"Richtlinie und setzen folgende Einstellungen:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:-1
+msgid "Point and Print Einschränkungen"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:56
+msgid ""
+"Setze einen Haken bei ``Benutzer können Point and Print für Pakete – "
+"Genehmigte Server verwenden``. Gib die FQDN des Servers bei "
+"``Vollqualifizierte Servernamen`` ein und wähle bei ``Beim Installieren "
+"von Treibern für eine neue Verbindung`` und bei ``Beim Aktualisieren von "
+"Treibern für eine vorhandene Verbindung`` die Einstellung ``Warnung oder "
+"Anhebungsaufforderung nicht anzeigen``."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:60
+msgid "Bestätige mit OK."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:62
+msgid ""
+"Doppelklicke auf ``Point and Print für Pakete – Genehmigte Server`` und "
+"aktiviere die Richtlinie."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:-1
+msgid "Print and Point gen. Server"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:68
+msgid ""
+"Aktiviere die Richtlinie, klicken auf ``Anzeigen…`` und gib den FQDN des "
+"Servers ein."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:70
+msgid "Bestätige zwei mal mit OK."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:72
+msgid ""
+"Schließe den Gruppenrichtlinien-Editor und die Gruppenrichtlinien-"
+"Verwaltung"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:74
+msgid "Starte den Rechner neu."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:77
+msgid "Druckertreiber auf dem Server installieren"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:79
+msgid "Jetzt können wir die Druckertreiber auf dem Server installieren."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:81
+msgid ""
+"Öffne als global-admin das Programm mmc.exe, wähle ``Datei → snapin "
+"hinzufügen/entfernen`` und füge die Druckverwaltung hinzu."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:-1
+msgid "mmc.exe"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:87
+msgid ""
+"Trage den Server ein, klicke auf ``zur Liste hinzufügen`` und "
+"anschließend auf ``Fertigstellen`` und ``OK``."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:89
+msgid ""
+"Wie man sieht, sind die Drucker dem Systems bekannt. Du musst nur noch "
+"die Druckertreiber installieren."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:95
+msgid ""
+"Mache einen Rechtsklick auf ``Treiber`` und wähle ``Treiber hinzufügen``."
+" Gehe zu ``Weiter → Weiter → Datenträger… Durchsuchen → Ok`` und wähle "
+"den richtigen Druckertreiber. Es werden nur Microsoft zertifizierte "
+"Treiber akzeptiert. Falls Du mit einem Treiber Probleme haben solltest, "
+"versuche es eventuell mit einem etwas älteren Treiber. Die werden sehr "
+"oft akzeptiert."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:98
+msgid "Klicke abschließend auf ``Fertigstellen``."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:101
+msgid "Einem Drucker einen Druckertreiber zuweisen"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:103
+msgid "Jetzt müssen wir nur noch den Druckern die Druckertreiber zuweisen."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:105
+msgid ""
+"Öffne als global-admin das Programm ``mmc.exe`` und navigiere zu "
+"``Drucker``."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:111
+msgid ""
+"Mache einen Rechtsklick auf den Drucker, dem Du einen Druckertreiber "
+"zuweisen möchtest und wähle ``Eigenschaften…`` Falls Du gefragt wirst, ob"
+" Du einen Druckertreiber lokal installieren möchtest, antworte mit Nein."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:114
+msgid ""
+"Gehe zum Reiter ``Erweitert``, wähle bei Treiber den passenden Treiber "
+"für den Drucker und bestätige mit ``OK``."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:-1
+msgid "Eigenschaften von"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:120
+msgid ""
+"Leider ändert Windows den Namen des Drucker in den Namen des "
+"Druckertreibers. Um wieder den richtigen Namen zu setzen, machst Du in "
+"mmc.exe einen Rechtsklick auf den Drucker und wählst ``Eigenschaften…``"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:122
+msgid ""
+"Ändere unter dem Reiter ``Allgemein`` den Namen des Druckers auf den "
+"Namen, den er in CUPS hat und bestätige mit ``OK``."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:-1
+msgid "Eigenschaften Allgemein"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:129
+msgid "Benutzern erlauben einen Druckertreiber zu installieren"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:131
+msgid ""
+"Die Windows-Clients erlauben normalen Benutzern nicht, einen "
+"Druckertreiber zu installieren. Das müssen wir ändern, da sonst normale "
+"Benutzer nicht drucken können. Am einfachsten geht das mit folgendem "
+"Registry-Eintrag:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:138
+msgid ""
+"Erzeuge den Eintrag mit dem Registrierungs-Editor direkt in die Registry "
+"oder lege Dir die Datei ``win10.printer.reg`` mit folgendem Inhalt an:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:148
+msgid "Und doppelklicke als `global-admin` ``win10.printer.reg``."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:150
+msgid ""
+"Jetzt muss nur noch ein neues Image erzeugt und verteilt werden, damit "
+"die Firewall-Einstellungen und der Registry-Eintrag auf die Windows-"
+"Clients verteilt werden."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:152
+msgid ""
+"Wenn alles geklappt hat, installieren sich die Druckertreiber auf den "
+"Windows-Clients sobald sich ein Benutzer anmeldet. Wie Du die Drucker-"
+"Raumzuweisung machst, kannst Du :ref:`hier<add-ad-group-label>` "
+"nachlesen."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:154
+msgid ""
+"Hat ein Lehrer in der Schulkonsole bei einem Drucker einen Haken gesetzt,"
+" wird der Drucker bei der Anmeldung des Lehrers zusätzlich installiert. "
+"Das ist dann sinnvoll, wenn beispielsweise ein Lehrer oft in der Nähe des"
+" Physik-Drucker unterrichtet. Dann kann er auch von jedem Laptop aus auf "
+"dem Physik-Drucker ausdrucken."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:156
+msgid ""
+"Falls o.g. Weg nicht funktionieren sollte, ist der Treiber manuell auf "
+"dem Windows Client zu installieren. Anschließend ist der Druckertreiber "
+"dem Drucker auf dem Server zuzuweisen."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:158
+msgid "Hierzu sind die eingerichteten Drucker auf dem Server zunächst auszugeben:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:164
+msgid ""
+"LINUXMUSTER stellt den Namen der eigenen Samba-Domäne dar, global-admin "
+"ist der Administrator auf dem Server, 10.0.0.1 ist die IP des Server."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:166
+msgid ""
+"Danach ist der lokale Druckertreiber dem Drucker zuzuordnen - in "
+"nachstehendem Beispiel ist dies der Druckertreiber `HP Universal Printing"
+" PS`:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:173
+msgid "Das Ergebnis kann mit dem zuvor genannten Befehl kontrolliert werden:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-windows-clients.rst:179
+msgid ""
+"Danach ist der Druck zu testen. Funktioniert der Drucker wie gewünscht "
+"ist ein neues Image für den Windows-Client zu erstellen."
+msgstr ""
+

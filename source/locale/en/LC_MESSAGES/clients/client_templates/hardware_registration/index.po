@@ -1,0 +1,462 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:7
+msgid "Rechneraufnahme"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:14
+msgid ""
+"Der PC, der als Hardware zum Aufbau des Muster-Clients genutzt werden "
+"soll, ist via Kabel mit dem Netzwerk zu verbinden."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:16
+msgid ""
+"Alternativ kann für den Aufbau des Muster-Clients eine VM in der "
+"Virtualisierungsumgebung angelegt werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:18
+msgid ""
+"Nachstehende Angaben stellen ein Beispiel für die Rahmendaten einer "
+"solchen VM dar:"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:20
+msgid "4 GiB vRAM"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:21
+msgid "mind. 1 vCPU mit 2 Kernen"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:22
+msgid "VGA mit 16 MiB Speicher"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:23
+msgid "1x vNIC (ggf. im \"richtigen\" VLAN)"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:24
+msgid "PXE-Boot einstellen (Bootreihenfolge: NIC first)"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:25
+msgid ""
+"Boot Firmware: BIOS oder UEFI (je nach später genutzten PCs) - Achtung: "
+"start.conf von linbo ggf. anpassen -> siehe Hinweise bei den Client-"
+"Systemen"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:26
+msgid ""
+"z.B. 50 GiB HDD (20 GiB OS + 20 GiB Cache + ggf. SWAP oder andere "
+"Partitionen)"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:30
+msgid ""
+"Die Gerätenamen dürfen nur aus ASCII-Zeichen (nur Kleinbuchstaben), "
+"Ziffern von 0 bis 9 und dem Bindestrich bestehen. Ein Gerätename darf "
+"nicht mit einem Bindestrich beginnen oder enden."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:32
+msgid "Für den Gerätenamen dürfen maximal 15-Zeichen verwendet werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:34
+msgid "Beispiel: ``g001-r101-pc001``"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:38
+msgid "... mit der WebUI"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:40
+msgid ""
+"Um einen Rechner mit der Schulkonsole aufzunehmen, meldest Du Dich "
+"zunächst an der Schulkonsole als ``global-admin`` an."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:42
+msgid "Wähle dann links im Menü ``Geräteverwaltung --> Geräte``."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:48
+msgid "Device Management: Menue"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:48
+msgid "Menü Geräte"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:50
+msgid ""
+"Danach siehst Du rechts die Liste mit allen bereits in der Gerätedatei "
+"eingetragenen Geräten. Standardmäßig sind nach dem Setup die "
+"konfigurierten Server schon in der Liste mit der Rolle ``Server`` "
+"eingetragen."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:57
+msgid "Device Management: Devices"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:57
+msgid "Eingetragene Server"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:59
+msgid ""
+"Klicke unterhalb der Liste auf den Button ``+ Gerät hinzufügen``, um ein "
+"neues Gerät einzutragen. Es wird eine neue, noch leere Zeile am Anfang "
+"der Geräteliste eingefügt."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:66
+msgid "Device Management: Add New Device"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:66
+msgid "Neues Gerät hinzufügen"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:68
+msgid "In der neuen Zeile gibst Du nun folgenes an:"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:70
+msgid ""
+"Raum: Name des Raums (Achtung: keine Binde- und Unterstriche verwenden, "
+"keine Umlaute,  max. 10 Zeichen)"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:71
+msgid ""
+"Hostname: Name des Geräts (Erlaubte Zeichen ``a-z`` ``A-Z`` ``0-9`` "
+"``-``; Achtung: Keine Unterstriche verwenden; max. 15 Zeichen)"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:72
+msgid ""
+"Gruppe: Bezeichnung der Linbo-Hardwareklasse. ``Gleiche Bezeichnungen für"
+" Raum und Gruppe sind unzulässig``. Reservierte Wörter, wie \"con\" und "
+"\"man\", dürfen nicht verwendet werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:73
+msgid ""
+"MAC: Media Access Control - Hardware-Adresse des Netzwerkadapters. Trage "
+"12 Hexadezimalzahlen mit einem Doppelpunkt als Trennzeichen nach zwei "
+"Ziffern ein."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:74
+msgid ""
+"IP: Gib eine IP-Adresse für das Gerät an, das diesem automatisch "
+"zugewiesen werden soll. Z.B. Raum 202 im Gebäude G erhält den Bereich "
+"10.0.202.x/16 und PC01 erhält die UP 10.0.202.1"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:75
+msgid ""
+"Sophomorix-Rolle: Hier gibst Du an, welche Art von Gerät Du einbindest. "
+"Für PCs im Fachraum gibst Du z.B. Schüler-PC im Klassenzimmer an."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:76
+msgid ""
+"PXE: Lege über das Drop-down Menü fest, ob der PC mit Linbo-PXE "
+"synchronisiert werden soll oder nicht."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:80
+msgid ""
+"Die Bedeutung der Sophomorix-Rolle wird auf `Github "
+"<https://github.com/linuxmuster/sophomorix4/wiki/objectClasses>`_ "
+"beschrieben."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:82
+msgid "Die o.g. Zeile könnte ausgefüllt wie folgt aussehen:"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:89
+msgid "Device Management: Add New Device Settings"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:89
+msgid "Eintragungen für neuen Client"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:91
+msgid ""
+"Die Schaltfläche ``Speichern`` überprüft die Eingabe, ``Speichern & "
+"importieren`` werden die neuen Geräte importiert. Mit dem Button ``Im "
+"Editor öffnen`` wird die Datei ``/etc/linuxmuster/sophomorix/default-"
+"school/devices.csv`` im Editor geöffnet und kann bearbeitet werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:98
+msgid "Device Management: Add New Devices - Buttons"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:98
+msgid "Schaltflächen"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:100
+msgid ""
+"Im folgenden erscheinen einige Log-Meldungen und - wenn der Import "
+"erfolgreich war - \"Import abgeschlossen\""
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:107
+msgid "Device Management: Import finished"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:107
+#: ../../source/clients/client_templates/hardware_registration/index.rst:230
+msgid "Import abgeschlossen"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:109
+msgid ""
+"Um weitere Geräte hinzuzufügen, wiederholst Du den beschriebenen Vorgang "
+"in der Schulkonsole entsprechend."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:113
+msgid "Sind nun die gewünschten Geräte aufgenommen, kannst Du mit ..."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:115
+#: ../../source/clients/client_templates/hardware_registration/index.rst:152
+#: ../../source/clients/client_templates/hardware_registration/index.rst:236
+msgid ""
+"... der Erstellung eines Muster-Clients fortfahren, so dass alle PCs "
+"einer Linbo Hardwareklasse ein identisches Image erhalten. Gehe zu :ref"
+":`client-templates-label`"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:117
+#: ../../source/clients/client_templates/hardware_registration/index.rst:154
+#: ../../source/clients/client_templates/hardware_registration/index.rst:238
+msgid ""
+"... dem Verteilen eines vorhandenen Images auf die aufgenommenen Geräte "
+"beginnen. Gehe zu :ref:`using-linbo-label`"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:122
+msgid "... mittels der Datei devices.csv"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:124
+msgid ""
+"Wenn Du sehr viele Geräte hinzufügen möchtest, deren MAC-Adressen Du "
+"bereits kennst, dann ist die o.g. Option ``Im Editor öffnen`` eine "
+"Möglichkeit, die Datei devices.csv direkt zu editieren."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:131
+msgid "Device Management: Edit file"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:131
+msgid "devices.csv im Editor anpassen"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:133
+msgid "Auf dem Server kannst Du Dir in der Konsole mit"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:139
+msgid ""
+"die ``man pages`` anzeigen lassen. Hier kannst Du Dir alle Felder der "
+"CSV-Datei mit Erklärungen ausgeben lassen."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:141
+msgid ""
+"Weitere Hinweise zu den möglichen Rollen eines Gerätes in der devices.csv"
+" findest Du hier:"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:143
+msgid "https://github.com/linuxmuster/sophomorix4/wiki/objectClasses"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:146
+msgid ""
+"Die Datei kann hier auch zur lokalen Bearbeitung heruntergeladen und "
+"wieder hochgeladen werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:150
+#: ../../source/clients/client_templates/hardware_registration/index.rst:234
+msgid "Es sind nun die gewünschten Geräte aufgenommen und Du kannst mit ..."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:157
+msgid "... mittles LINBO"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:159
+msgid ""
+"Wurde z.B. ein neuer Schulungsraum mit 20 PCs ausgestattet, deren MAC-"
+"Adressen Du nicht kennst, dann bietet sich diese Möglichkeit an."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:161
+msgid "Dazu hat sich folgendes Vorgehen bewährt:"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:163
+msgid ""
+"Der Clientrechner muss mit dem Schulnetzwerk verbunden sein und den "
+"Server erreichen können."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:164
+msgid ""
+"Um LINBO zu starten, den PC über das Netzwerk booten (PXE). Dazu entweder"
+" im BIOS-Setup in der Bootreihenfolge PXE-Boot als erstes Bootmedium "
+"einstellen oder über das Bootmenü PXE-Boot auswählen. Dies gelingt je "
+"nach Rechner meistens über die Tasten F2, F10 oder F12. Als virtueller "
+"Rechner auf einem Hypervisor unter ``VMxyz --> Options --> Bootorder`` "
+"ist hier die Netzwerkkarte als erstes Boot-Medium zu wählen."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:165
+msgid ""
+"Es sollte bei einem erfolgreichen Bootvorgang via PXE folgender "
+"Startbildschirm zu sehen sein:"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:172
+msgid "Device Management: Linbo 4 - bootscreen"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:172
+msgid "PXE-Bootvorgang auf dem Client"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:174
+msgid ""
+"Wähle in dem LINBO Startbildschirm nun rechts das Werkzeug-Symbol aus. Es"
+" erscheint die Kennwortabfrage. Gib das Kennwort des Linbo-Root-Benutzers"
+" an, wie es beim Setup erstellt wurde."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:176
+msgid ""
+"Deine Eingabe ist nicht zu sehen, es werden auch keine Sternchen für die "
+"eingegebenen Ziffern dargestellt."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:183
+msgid "Device Management: Linbo 4 - password"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:183
+msgid "Eingabe des LINBO Kennworts"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:185
+msgid "Es werden nun zwei weitere Menü-Symbole dargestellt:"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:191
+msgid "Device Management: Linbo 4 - new menue symbols"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:191
+msgid "Werkzeug-Symbol - Untermenü"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:193
+msgid "Wähle den Eintrag ``Register`` aus."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:194
+msgid ""
+"Es öffnet sich ein Fenster, um den Client zu registrieren. Fülle alle "
+"Felder aus. Achte darauf, dass Du als Host group die zuvor neu angelegte "
+"einträgst."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:201
+msgid "Device Management: Linbo 4 - register client"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:201
+msgid "Register Client"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:203
+msgid ""
+"Klicke dann auf den Eintrag ``register``. Nach Abschluss der Neuaufnahme "
+"siehst Du nachstehende Meldung:"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:210
+msgid "Device Management: Linbo 4 - registering client finished"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:210
+msgid "Registrierung abgeschlossen"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:212
+msgid "Führe o.g. Vorgang für alle neu aufzunehmenden Clients durch."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:214
+msgid ""
+"Wenn alle PCs so registriert wurden, öffne an Deinem Administrations-"
+"Rechner die Schulkonsole und melde Dich wieder als ``global-admin`` an. "
+"Wähle im Menü ``Geräteverwaltung --> Geräte`` aus. Du siehst nun neben "
+"den schon vorhandenen Geräten ebenfalls die neu aufgenommen Geräte (in "
+"der Abb. sind dies die PCs für den Raum g202):"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:221
+msgid "Device Management: Linbo 4 - registered clients"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:221
+msgid "Neu aufgenommene Geräte"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:223
+msgid ""
+"Klicke nun auf ``Speichern & importieren``. Wurde der Vorgang "
+"abgeschlossen, siehst Du dies im Importfenster."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_registration/index.rst:230
+msgid "Device Management: Linbo 4 - registered clients imported"
+msgstr ""
+

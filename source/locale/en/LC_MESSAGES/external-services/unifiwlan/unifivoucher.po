@@ -1,0 +1,206 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:2
+msgid "Gast-WLAN mit Gutschein / Voucher"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:4
+msgid "Unifi unterstützt auch WLAN-Gutscheine (WLAN-Voucher)."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:-1
+msgid "Voucherbeispiel"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:9
+msgid ""
+"Bei einem WLAN-Gutschein meldet man sich, wie in einigen Hotels, an einem"
+" unverschlüsselten Gästenetz an und wird auf eine Anmeldeseite "
+"umgeleitet. Dort gibt man einen Gutschein-Code ein."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:11
+msgid "Der Unifi-Controller unterstützt zwei Arten von Gutscheinen:"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:14
+msgid "Einmaliger Gebrauch:"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:14
+msgid ""
+"Der Gutschein-Code ist nur für ein Gerät gültig. Nach der Anmeldung kann "
+"man mit seinem Gerät so lange ins Internet, bis der Gutschein abgelaufen "
+"ist. Das Gerät kann sich in dieser Zeit unbegrenzt mit dem Gäste-WLAN neu"
+" verbinden."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:17
+msgid "Mehrmaliger Gebrauch:"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:17
+msgid ""
+"Der Gutschein-Code ist für beliebig viele Geräte gültig. Sobald sich das "
+"erste Gerät mit dem Gutschein-Code angemeldet hat, beginnt die Gültigkeit"
+" des Gutscheins abzulaufen. Solche Gutscheine eignen sich beispielsweise "
+"für VHS-Kurse, die keine Accounts im Schulnetz haben."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:20
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:55
+msgid "Schritt für Schritt"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:22
+msgid "Melde Dich an und gehe auf `Einstellungen` -> `Gastkontrolle`."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:-1
+msgid "Gastrichtlinien"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:27
+msgid ""
+"Im Bereich Gastrichtlinien setzt Du einen Haken bei `Gastzugang "
+"aktivieren`."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:29
+msgid "Bei `Authentifizierung` wählst Du `Hotspot`."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:31
+msgid ""
+"Hat `HTTPS-Umleitung aktivieren` ein Häkchen, so werden Clients auch dann"
+" umgeleitet, wenn Sie auf HTTPS-Seiten surfen. Leider erhält man dann "
+"eine Zertifikatswarnung, da der Unifi-Kontroller mit einem "
+"selbstsignierten Zertifikat arbeitet. Allerdings leiten viele "
+"Betriebsysteme von selbst auf das Gastportal um."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:-1
+msgid "Portal-Anpassung"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:36
+msgid ""
+"In der Portal-Anpassung wählst Du die Template-Engine AngularJS und fügst"
+" die Sprache Deutsch hinzu."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:38
+msgid "Den Rest der Einstellungen kannst Du so lassen."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:43
+msgid "Unter `HOTSPOT` setz Du ein Häkchen bei Gutscheine."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:45
+msgid ""
+"In der `Zugriffskontrolle` musst Du den Zugriff auf den Unifi-Kontroller "
+"noch vor der Anmeldung erlauben, da man sonst nicht auf die Anmeldeseite "
+"kommt."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:47
+msgid ""
+"Gehe auf `ÄNDERUNGEN ANWENDEN`. Damit werden die Änderungen gespeichert "
+"und auf die APs ausgerollt."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:50
+msgid "Firewall-Regeln für die OPNsense®"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:52
+msgid ""
+"Damit die Clients überhaupt auf den Unifi-Kontroller zugreifen können, "
+"muss eine neue Firewallregel für die OpnSense angelegt werden:"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:57
+msgid ""
+"Öffne die OPNsense® `<https://firewall.linuxmuster.lan>`_ und melde Dich "
+"an."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:59
+msgid "Gehe auf `Firewall`->`Regeln`->`WLAN` und wähle `Hinzufügen`."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:-1
+msgid "OPNsense®-Regel 8880"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:64
+msgid "Mache die folgenden Eingaben:"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:66
+msgid "Schnittstelle: WLAN"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:68
+msgid "Protokoll: TCP"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:70
+msgid ""
+"Ziel: `Einzelner Host oder Netzwerk` und gib in der Eingabezteile die IP-"
+"Adresse des Unifi-Controllers ein."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:72
+msgid "Zielportbereich: Wähle `(andere(r/s))` und gib von 8880 an 8880 ein."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:74
+msgid "Beschreibung: `WLAN hat Zugriff auf Unifi-Controller Port 8880`"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:76
+msgid "Speichere Deine Eingaben."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:-1
+msgid "Regel kopieren"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:81
+msgid "Kopiere die eben erstellte Regel und ändere:"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:83
+msgid "Zielportbereich: Wähle `(andere(r/s))` und gib von 8443 an 8443 ein."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:85
+msgid "Beschreibung: `WLAN hat Zugriff auf Unifi-Controller Port 8443`"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivoucher.rst:87
+msgid "Steichere Deine Eingabe und übernimm die Änderungen."
+msgstr ""
+

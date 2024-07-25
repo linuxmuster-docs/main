@@ -1,0 +1,959 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:7
+msgid "Anlegen und Installieren des Servers"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:14
+msgid ""
+"Bist Du zuvor der Anleitung \"Proxmox vorbereiten\" gefolgt, dann kannst "
+"Du fortfahren mit `Erster Start des Servers vom Installationsmedium`_."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:18
+msgid ""
+"Willst Du in einer VM installieren, so must Du für die neue VM folgende "
+"Mindesteinstellungen angeben:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:20
+msgid "Installation von Local/ISO,"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:21
+msgid "Gast OS: Linux, 6.X - 2.6 Kernel"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:22
+msgid "BIOS: Boot / MBR / SeaBIOS,"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:23
+msgid "2 vCPU,"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:24
+msgid "3 GiB RAM,"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:25
+msgid "storage -> hdd1: 25 GiB -> hdd2: 100 GiB,"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:26
+msgid "1 NIC mit Zuordnung zu vSwitch green."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:28
+msgid ""
+"Achte darauf, dass vor dem Start der VM beide Festplatten der VM "
+"zugewiesen wurden."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:30
+msgid ""
+"Bei der Einrichtung des Servers musst Du nur einen Server mit 2 HDDs "
+"haben und Ubuntu auf der ersten HDD installieren. Die zweite HDD bleibt "
+"frei. Auf dieser 2. HDD richtest Du - wie nachstehend beschrieben -  ein "
+"LVM ein."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:33
+msgid "Erster Start des Servers vom Installationsmedium"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:36
+msgid "Sprachauswahl"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:38
+msgid ""
+"Starte den Server Ubuntu 22.04 LTS Server ISO-Image. Es erscheint das "
+"erste Installationsfenster mit der Abfrage zur gewünschten Sprache."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:45
+msgid "Choose your language"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:45
+msgid "Wähle Deine bevorzugte Sprache"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:47
+msgid "Wähle Deine bevorzugte Sprache."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:50
+msgid "Tastaturlayout"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:52
+msgid "Danach wähle Dein Tastaturlayout."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:59
+msgid "choose keyboard layout"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:59
+msgid "Wähle Dein Tastaturlayout"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:61
+msgid "Wähle das Tastaturlayout ``Deutsch`` und bestätige dies mit ``Erledigt``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:63
+msgid "Wenn Du Dir nicht sicher bist, vor welcher Tastatur Du gerade sitzt:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:65
+msgid "Wähle nacheinander"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:67
+msgid ""
+"``Tastatur erkennen`` --> ``OK`` --> ``y`` --> ``Ja`` --> ``Shift`` + "
+"``*`` --> ``q`` --> ``z`` --> ``OK``"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:69
+msgid ""
+"Da sollte zumindest für eine deutsche Tastatur das richtige Layout "
+"finden. Für andere einfach den Abfragen folgen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:73
+#: ../../source/installation/install-from-scratch/basis_server.rst:82
+msgid "Installationsart wählen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:75
+msgid ""
+"Wähle die Art der Installation für den Ubuntu Server aus. Es reicht die "
+"minimale Installation."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:82
+msgid "typr of installation"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:86
+msgid "Netzwerk"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:88
+msgid "Konfiguriere danach Deine Netzwerkkarte."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:95
+msgid "configure your nic"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:95
+msgid "Konfiguriere Deine Netzwerkkarte"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:97
+msgid ""
+"In der Voreinstellung ist die Netzwerkkarte auf DHCP eingestellt. Das "
+"klappt natürlich nicht, da der DHCP-Service der Firewall deaktiviert "
+"wurde. Du musst also die Konfiguration manuell vornehmen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:99
+msgid "Gehe dazu auf die Netzwerkkarte und wähle ``Edit IPv4``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:106
+msgid "change IPv4 configuration"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:106
+msgid "Ändere die IPv4 Konfiguration"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:108
+msgid "Wähle ``Manual`` aus."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:115
+msgid "insert IPv4 configuration"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:115
+msgid "Trage die IPv4 Einstellungen ein"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:117
+msgid ""
+"Gib die Netzwerkkonfiguration, wie im oberen Bild ein beziehungsweise "
+"|...|"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:119
+msgid ""
+"|...| passe sie Deinen Bedürfnissen an und übernehme diese mit "
+"``Speichern``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:123
+msgid ""
+"Die Länge des ersten Teils der Domäne darf maximal 15 Zeichen betragen. "
+"Die Domäne \"muster-gymnasium.de\" überschreitet diese Grenze um ein "
+"Zeichen, da \"muster-gymnasium\" 16 Zeichen lang ist."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:125
+msgid ""
+"Eine gute Wahl ist beispielsweise ``linuxmuster.lan``. Beim späteren "
+"Setup von linuxmuster.net wird diese ggf. für alle Server-Dienste "
+"angepasst."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:132
+msgid "confirm setting"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:132
+msgid "Bestätige Deine Einstellungen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:134
+msgid "Mit ``Èrledigt`` geht es weiter."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:141
+msgid "confirm empty proxy"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:141
+msgid "Bestätige die Proxy-Einstellungen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:143
+msgid ""
+"Lass die Proxy-Adresszeile leer. Auch diese Anfrage verlässt Du mit "
+"``Erledigt``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:150
+msgid "confirm mirror"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:150
+msgid "Bestätige den Ubuntu Mirror Server"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:152
+msgid "Die Mirror-Adresse übernimmst Du ebenfalls mit ``Erledigt``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:155
+msgid "Aktualisierung des Installers"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:162
+msgid "update installer"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:162
+msgid "Installer aktualisieren"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:164
+msgid ""
+"Bei der angebotene Aktualisierung wählst Du ``Aktualisieren auf neuen "
+"Installer``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:167
+msgid "Speichermedien"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:169
+msgid ""
+"Für die weitere Installation benötigst Du zwei unterschiedliche "
+"Speichermedien in Deinem Server."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:171
+msgid "Dabei ist es egal ob es sich dabei um |...|"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:173
+msgid "|...| eine reale Festplatte mit zwei Partionen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:174
+msgid "|...| zwei reale Festplatten."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:175
+msgid "|...| zwei virtuelle Festplatten handelt."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:177
+msgid ""
+"In dieser Anleitung beschreiben wir zunächst die Installation auf Basis "
+"unserer Mindestanforderungen, also |...|"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:179
+msgid "|...| 25G Speichermedium für das System und"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:180
+msgid "|...| 100G Speichermedium für Daten"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:182
+msgid ""
+"Wobei anzumerken ist, dass die Installation des Speicherplatzes für das "
+"System ``/`` für alle Varianten identisch ist."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:185
+msgid "Speicher des Systems"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:192
+msgid "choose your custom storage layout"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:192
+msgid "Eigenes Festplattenlayout wählen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:194
+msgid ""
+"Wähle nun zur Einrichtung der Festplatten ``Custom Storage Layout`` aus, "
+"wie in obigen Bild dargestellt."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:196
+msgid "Es werden Dir dann die verfügbaren Geräte angezeigt."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:203
+msgid "available devices"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:203
+msgid "Anzeige der verfügbaren Geräte - andere HDD-Größen als zuvor genannt"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:205
+msgid ""
+"Wähle die erste Festplatte bzw. die erste Partition aus, auf der Du das "
+"System des Servers unterbringen möchtest. Es wird ein Kontextmenü "
+"angezeigt, bei dem Du mit ``Add GPT Partition`` diese erstellen musst."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:212
+msgid "add gpt partition"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:212
+msgid "Füge eine GPT Partition hinzu"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:214
+msgid ""
+"Wähle den gesamten Festplattenplatz (einfach das Eingabefeld leer lassen)"
+" und formatiere diesen mit dem ext4-Dateiformat und weise diese dem Mount"
+" Point ``/`` zu."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:221
+msgid "choose partition size"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:221
+msgid "Lege die Partitionsgröße fest"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:223
+msgid "Gehe auf ``Erstellen``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:225
+msgid "Danach gelangst Du zu nachstehendem Bildschirm."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:232
+msgid "storage configuration overview"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:232
+msgid "Speicherplatzkonfiguration"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:234
+msgid "Lasse das `zweite Speichermedium unkonfiguriert`."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:236
+msgid ""
+"Für das Setup werden noch weitere Partitionen benötigt, die so ohne "
+"weitere Angabe von dem später beschriebenen Skript ``lmn-prepare`` "
+"genutzt werden."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:238
+msgid ""
+"Für kleine Schulen oder eine Test-Installation sollten diese Vorgaben "
+"passen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:241
+msgid "LV Name"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:241
+msgid "LV Pfad"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:241
+msgid "Mountpoint"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:241
+msgid "Größe"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:243
+msgid "var"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:243
+msgid "/dev/sg_srv/var"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:243
+msgid "/var"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:243
+#: ../../source/installation/install-from-scratch/basis_server.rst:245
+msgid "10G"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:244
+msgid "linbo"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:244
+msgid "/dev/sg_srv/linbo"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:244
+msgid "/srv/linbo"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:244
+msgid "40G"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:245
+msgid "global"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:245
+msgid "/dev/sg_srv/global"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:245
+msgid "/srv/samba/global"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:246
+msgid "default-school"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:246
+msgid "/dev/sg_srv/default-school"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:246
+msgid "/srv/samba/schools/default-school"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:246
+msgid "40G [#f1]_"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:249
+msgid ""
+"Sollte Deine Festplatte größer sein als die vorgeschlagene Mindestgröße, "
+"so wird für diese Partition der maximal übrige freie Platz verwendet. Du "
+"kannst zudem eigene Größenangaben vornehmen, sofern Deine Voraussetzungen"
+" abweichen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:253
+msgid ""
+"Unser lmn-prepare nimmt Dir die nötigen vorbereitenden Aktionen ab. Du "
+"läßt also das `zweite Speichermedium unkonfiguriert`."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:256
+msgid "Speicherplatzkonfiguration übernehmen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:258
+msgid "Übernehme die Speicherplatzkonfiguration und wähle ``Erledigt`` aus."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:260
+msgid ""
+"Danach erhälst Du die Rückfrage, ob die Installation fortgesetzt werden "
+"soll und die Daten auf der Festplatte hierbei gelöscht werden."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:267
+msgid "confirm partition settings"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:267
+msgid "Bestätige die Partitionseinstellungen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:269
+msgid "Bestätige dies mit ``Fortfahren``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:272
+msgid "Benutzerprofil anlegen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:279
+msgid "profile setup"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:279
+msgid "Lege ein Benutzerprofil an"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:281
+msgid ""
+"Nenne den Server ``server``. Der Benutzername (linuxadmin) und das "
+"Passwort (Muster!) sind frei wählbar - wie in der Abb. dargestellt."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:284
+msgid "Abfrage Ubuntu Pro"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:286
+msgid ""
+"Danach wirst Du gefragt, ob Die ``Ubuntu Pro`` aktiviert werden soll. "
+"Überspringe dies."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:293
+msgid "skip Ubuntu Pro activation"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:293
+msgid "Überspringe die Aktivierung von Ubuntu Pro"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:296
+msgid "Abfrage OpenSSH-Zugang"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:303
+msgid "activate ssh server"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:303
+msgid "Aktiviere den SSH-Server"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:305
+msgid ""
+"Solltest Du eine Möglichkeit für einen Fernzugang zu dem Server wünschen,"
+" aktiviere ``OpenSSH-Server installieren``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:307
+msgid ""
+"Wenn Du dies machst, mache Dir auch Gedanken wie Du diesen Zugang "
+"absichern kannst."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:309
+msgid ""
+"Wir empfehlen das PublicKey-Verfahren. https://wiki.ubuntuusers.de/SSH"
+"/#Publickey-Authentifizierung (externer Link)"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:313
+msgid "Optionale Server-Pakete"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:320
+msgid "deactivate server snaps"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:320
+msgid "Deaktiviere alle Server Snaps"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:322
+msgid "Installiere keine weiteren optionalen Pakete."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:324
+msgid "Bestätige den Start des Installationsvorganges mit ``Erledigt``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:326
+msgid ""
+"Zum Abschluß der Installation wird automatisch versucht, Updates zu "
+"installieren |...|"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:333
+msgid "complete Installation"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:333
+msgid "Schließe die Installation ab"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:335
+msgid "|...| und danach gilt es den Server neu zu starten."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:339
+msgid ""
+"Bei einer VM achte vor dem Neustart darauf, dass Du die ISO-Datei / DVD "
+"ausgeworfen hast und die Boot-Reihenfolge so umgestellt hast, dass die VM"
+" direkt von HDD bootet."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:341
+msgid ""
+"Wann die Installation abgeschlossen ist, erkennst Du daran, dass die "
+"Anzeige am unteren Bildschirmrand von"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:348
+msgid "updating server"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:348
+msgid "Server-Aktualisierungen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:350
+msgid "auf"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:357
+msgid "finished updates"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:357
+msgid "... abgeschlosse"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:359
+msgid "gewechselt ist."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:366
+msgid "reboot server"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:366
+msgid "Starte den Server neu"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:368
+msgid ""
+"Den Neustart veranlasst Du mit ``Jetzt neustarten``, wenn es Dir "
+"angeboten wird."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:372
+msgid ""
+"Folgendes Vorgehen bietet sich an, wenn der Server virtualisiert "
+"betrieben wird und der Hypervisor so schnell den Neustart einleitet, dass"
+" Du keine Chance hast, das Installationsmedium zu entfernen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:374
+msgid ""
+"Alternative zum ``Jetzt Neustarten`` gehe zum Punkt ``Hilfe`` oben "
+"rechts. Dort wählst Du den Menüpunkt ``Enter Shell`` aus, wo Du dann den "
+"Server gezielt mit ``init 0`` herunterfährst. Es folgt noch ein Hinweis, "
+"dass Du die Entfernung des Installationsmediums mit ``Enter`` bestätigen "
+"sollst. Im Anschluss daran fährt der Server herunter und Du kannst ihn "
+"von neuem starten."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:376
+msgid ""
+"Bei laufender und wie zuvor beschriebener Einrichtung der OPNsense |reg| "
+"sollte dies erfolgreich verlaufen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:380
+msgid "Basis-Konfiguration des Servers"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:383
+msgid "term.js für die Konsolen-Nutzung in Proxmox aktivieren"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:385
+msgid ""
+"Nachdem Du Dich erneut als ``linuxadmin`` beziehungsweise mit dem von Dir"
+" angelegten Nutzer an der ``noVNC`` Konsole angemeldet hast, gib diese "
+"zwei Zeilen Code nacheinander ein:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:395
+msgid "Fahre nun die virtuelle Maschine (VM) herunter und starte sie erneut."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:397
+msgid ""
+"Wähle jedoch oben rechts ``>_ Console -> xterm.js``. Es öffnet sich das "
+"Terminal-Fenster der VM und es erscheint folgender Hinweis:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:405
+msgid "starting serial terminal"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:405
+msgid "Starte die serielle Schnittstelle"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:407
+msgid "Nach einem ``Enter`` wirst Du zur Eingabe Deines Passwortes aufgefordert."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:409
+msgid ""
+"Nach erfolgter Anmeldung mit Deinem Account kannst Du die ab jetzt "
+"folgenden Codezeilen einfach zwischen der Anleitung und dem Server "
+"mittels ``Copy-and-paste`` übertragen. Abhängig von dem Betriebssystem "
+"Deines Administration-PCs klappt vielleicht auch ``Drag-and-drop``. "
+"Einfach mal testen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:415
+msgid ""
+"Der Befehl sorgt dafür, dass die Zeilenumbrüche hoffentlich zu Deiner "
+"Konsolen-Anzeige passen. Ansonsten musst Du die Angaben für die Zeichen "
+"(cols) und Zeilen (rows) anpassen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:419
+msgid "Proxmox Guest-Agent installieren"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:421
+msgid ""
+"Um mit Proxmox die Server VM herunterfahren zu können, oder für den "
+"Snapshot diese vorher korrekt \"einzufrieren\", ist die Installation "
+"eines Gast-Agenten unter Ubuntu Server 22.04 erforderlich. Zudem musst Du"
+" noch dem Agenten unter Proxmox aktivieren."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:423
+msgid "Gehe dabei wie folgt vor:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:425
+msgid ""
+"Installiere auf der Server-Konsole die benötigten Pakete für den QEMU-"
+"Gast-Agenten:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:432
+msgid "Aktiviere auf Ubuntu Server den QEMU-Gast-Agenten als Daemon via Konsole:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:438
+msgid "Fahre die virtuelle Maschine herunter: ``sudo shutdown -h now``"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:439
+msgid ""
+"Wähle in der Proxmox WebUI die virtuelle Maschine für den Ubuntu Server "
+"aus. Gehe dort zu ``Options``"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:446
+msgid "proxmox qemu guest agent"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:446
+msgid "Proxmox QEMU Guest Agent aufrufen"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:448
+msgid "Wähle den QEMU Guest Agent aus und klicke dann oben auf ``Edit``."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:449
+msgid ""
+"Aktiviere den QEMU Guest Agent, indem Du den Haken setzt und dies mit "
+"``OK`` bestätigst."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:456
+msgid "activate qemu guest agent"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:456
+msgid "Aktiviere den QEMU Guest Agent"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:458
+msgid "Starte danach die VM neu."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:461
+msgid "Automatische Updates abschalten"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:463
+msgid ""
+"Der frisch installierte Ubuntu-Server hat automatische Updates aktiviert."
+" Das solltest Du abschalten, denn nur so kannst Du sichern sein, dass "
+"Updates nicht während der Unterrichtszeit in Deiner Einrichtung "
+"durchgeführt werden und zu eventuellen Problemen im Schulalltag führen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:465
+msgid "Werde mit |...|"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:471
+msgid ""
+"|...| zum Nutzer ``root`` und editiere, beispielsweise mit nano, die "
+"Datei |...|"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:478
+msgid ""
+"Ersetze bei ``APT::Periodic::Unattended-Upgrade`` die ``\"1\";`` durch "
+"``\"0\";``. Mit ``<Strg>+o`` und anschließendem ``Enter`` speicherst Du "
+"die Änderung ab. Und mit ``<Strg>+x`` verlässt Du nano wieder."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:481
+msgid "Jetzt kannst Du den Server updaten, mit |...|"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:487
+msgid ""
+"Nachdem Dir neue Pakete zur Anzeige gebracht wurden, startest Du den "
+"Upgrade-Prozess mit ``j``. Du erhälst die Rückfrage, welche Dienste, die "
+"noch mit alten Bibliotheken arbeiten, neu gestartet werden sollen."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:490
+msgid ""
+"Hier spielt es keine Rolle, welche Dienste Du angibst, denn zum Abschluss"
+" startest Du den Server einmal neu mit dem Befehl ``reboot``. Danach sind"
+" alle Dienste mit den jeweils neu installierten Bibliotheken neu "
+"gestartet."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:495
+msgid ""
+"Durch das Deaktivieren der automatischen Updates liegt jetzt natürlich "
+"die Verantwortung des zeitnahen Einspielen von Updates bei Dir bzw. der "
+"Person, die für die Administration verantwortlich zeichnet!"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:498
+msgid "Test der Verbindung zur Firewall"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:500
+msgid ""
+"Es folgt ein letzter Test, um sicherzustellen, dass die SSH-Verbindung "
+"zwischen dem Server und der Firewall funktioniert. Diese ist für das "
+"weitere Vorgehen entscheidend."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:502
+msgid ""
+"Nach dem erneuten Einloggen rufst Du folgende Zeile an der Konsole des "
+"Servers auf:"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:508
+msgid "Da es die erste Kontaktaufnahme zwischen dem Server und der Firewall ist,"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:515
+msgid "ecdsa key opnsense"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:515
+msgid "Akzeptiere den ECDSA Schlüssel der OPNsense"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:517
+msgid "ist es notwendig, dass Du den Key akzeptierst."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:519
+msgid ""
+"Anschließend sollte der Log-in nach der Eingabe des Passwortes "
+"``Muster!`` erfolgreich sein."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:526
+msgid "opnsense login"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:526
+msgid "OPNsense Login Bildschirm"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:529
+msgid "Mit ``0) Logout`` beendest Du die Verbindung."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:531
+msgid ""
+"Für Anwender einer Vrtualisierungslösung empfehlen wir an dieser Stelle "
+"einen Snapshot zu erstellen!"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/basis_server.rst:533
+msgid "Weiter geht es jetzt mit :ref:`lmn_pre_install-label`"
+msgstr ""
+

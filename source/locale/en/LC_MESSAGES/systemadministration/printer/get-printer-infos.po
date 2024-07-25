@@ -1,0 +1,81 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/systemadministration/printer/get-printer-infos.rst:2
+msgid "Drucker Informationen"
+msgstr ""
+
+#: ../../source/systemadministration/printer/get-printer-infos.rst:6
+msgid ""
+"Um in linuxmuster.net mit Druckern zu arbeiten, ist es erforderlich, dass"
+" Netzwerkdrucker zur Verfügung stehen. Es können entweder Drucker mit "
+"eingebauten Netzwerkkarten (Printservern) eingesetzt, oder bisherige "
+"Drucker mit einer geeigneten sog. \"Printserver-Box\" in das Netzwerk "
+"eingebunden werden."
+msgstr ""
+
+#: ../../source/systemadministration/printer/get-printer-infos.rst:10
+msgid ""
+"Vor dem Hinzufügen und Einrichten von Druckern in linuxmuster.net ist es "
+"sehr hilfreich, vorab nachstehende Informationen zu erfassen:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/get-printer-infos.rst:13
+msgid "die genaue Bezeichnung des Druckermodells"
+msgstr ""
+
+#: ../../source/systemadministration/printer/get-printer-infos.rst:14
+msgid "mögliche Treiber für Linux, Windows und ggf. andere Clients"
+msgstr ""
+
+#: ../../source/systemadministration/printer/get-printer-infos.rst:15
+msgid "MAC-Adresse des Druckers"
+msgstr ""
+
+#: ../../source/systemadministration/printer/get-printer-infos.rst:16
+msgid "Raum / Standort des Druckers"
+msgstr ""
+
+#: ../../source/systemadministration/printer/get-printer-infos.rst:17
+msgid "IP-Adresse gemäß des genutzen Adressschema"
+msgstr ""
+
+#: ../../source/systemadministration/printer/get-printer-infos.rst:19
+msgid ""
+"Die meisten Netzwerkdrucker sind bei Auslieferung so eingestellt, dass "
+"diese eine IP-Adresse via DHCP beziehen. Die IP-Adresse für den Drucker "
+"muss daher in der Schulkonsole gesetzt werden."
+msgstr ""
+
+#: ../../source/systemadministration/printer/get-printer-infos.rst:22
+msgid ""
+"Um eine Steuerung der Drucker via Schulkonsole zu ermöglichen, müssen die"
+" Drucker zentral auf dem Server als Geräte eingetragen und auf dem Server"
+" in CUPS konfiguriert werden."
+msgstr ""
+
+#: ../../source/systemadministration/printer/get-printer-infos.rst:25
+msgid ""
+"CUPS arbeitet als \"zentraler Printserver\" und hält für alle dort "
+"eingerichteten Drucker entsprechende Druckwarteschlangen vor."
+msgstr ""
+

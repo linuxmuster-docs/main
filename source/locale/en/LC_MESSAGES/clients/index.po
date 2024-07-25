@@ -1,0 +1,184 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/clients/index.rst:7
+msgid "Clients in der linuxmuster.net"
+msgstr ""
+
+#: ../../source/clients/index.rst:12
+msgid ""
+"Die Bereitstellung und Pflege der schulischen Rechner für die Nutzer in "
+"einer linuxmuster.net Umgebung erfolgt mittels LINBO."
+msgstr ""
+
+#: ../../source/clients/index.rst:15
+msgid "LINBO steht für GNU/ LI nux N etwork BO ot."
+msgstr ""
+
+#: ../../source/clients/index.rst:16
+msgid ""
+"Es wurde ursprünglich im Auftrag des Landesmedienzentrums Baden-"
+"Württemberg von der Firma KNOPPER.NET in Zusammenarbeit mit den damaligen"
+" paedML-Linux- und heutigen linuxmuster.net-Entwickler realisiert."
+msgstr ""
+
+#: ../../source/clients/index.rst:18
+msgid ""
+"Durch die letztgenannten ist es nun in der Version 4 erschienen. Der "
+"Sourcecode ist unter GNU General Public License 3.0 auf GitHub "
+"veröffentlicht. https://github.com/linuxmuster/linuxmuster-linbo7"
+msgstr ""
+
+#: ../../source/clients/index.rst:21
+msgid "Funktionsweise"
+msgstr ""
+
+#: ../../source/clients/index.rst:23
+msgid "Zum Verständnis erklären wir Dir einen"
+msgstr ""
+
+#: ../../source/clients/index.rst:26
+msgid "Start eines Arbeitsplatzrechners"
+msgstr ""
+
+#: ../../source/clients/index.rst:28
+msgid ""
+"Über das Transport-Protokoll TFTP wird vom linuxmuster.net-Server und die"
+" PXE-Implementierung von Grub bootet es ein kleines Linux-System "
+"(linbofs) auf den Clients. Diese zeigen dann eine Benutzeroberfläche, mit"
+" der dann alle Imaging-Aufgaben auf dem Client gesteuert werden."
+msgstr ""
+
+#: ../../source/clients/index.rst:32
+msgid ""
+"Die steuerbaren Funktionen unterscheiden sich anhand der Berechtigungen "
+"der Nutzer und Nutzerinnen."
+msgstr ""
+
+#: ../../source/clients/index.rst:34
+msgid ""
+"Konsolen-Tools sind ebenfalls verfügbar, um Clients und Imaging aus der "
+"Ferne über den Server zu verwalten."
+msgstr ""
+
+#: ../../source/clients/index.rst:37
+msgid "Auswahl eines Betriebssystems"
+msgstr ""
+
+#: ../../source/clients/index.rst:39
+msgid ""
+"Die Funktionsweise wird am Beispiel eines Clients (rechts im Bild) "
+"beschrieben. Auf dem Server (links im Bild) sind zwei Betriebssysteme für"
+" Clients dieses Typs komprimiert gespeichert."
+msgstr ""
+
+#: ../../source/clients/index.rst:-1
+msgid "linbo-functionality"
+msgstr ""
+
+#: ../../source/clients/index.rst:48
+msgid ""
+"Der Benutzer wählt das erste Betriebssystem zum synchronisierten Start "
+"aus."
+msgstr ""
+
+#: ../../source/clients/index.rst:49
+msgid ""
+"Der Client überprüft, ob sein lokal gespeichertes Systemabbild identisch "
+"ist mit dem auf dem Server (1.)."
+msgstr ""
+
+#: ../../source/clients/index.rst:50
+msgid ""
+"Ist dieses der Fall und entpackt der Client das erste Betriebssystem auf "
+"die eigentliche System-Partition und startet das System anschließend "
+"(3.). Wäre das nicht der Fall gewesen, hätte dieser zuerst das "
+"Systemabbild vom Server heruntergeladen (2.), um dann mit (3.) "
+"fortzufahren."
+msgstr ""
+
+#: ../../source/clients/index.rst:53
+msgid ""
+"Der hier aufgezeigte Ablauf eines synchronisierten Startes ist einer von "
+"vielen und dient der Veranschaulichung."
+msgstr ""
+
+#: ../../source/clients/index.rst:55
+msgid "Start wie in der vorherigen Sitzung"
+msgstr ""
+
+#: ../../source/clients/index.rst:56
+msgid "Start mit erzwungener Formatierung der Betriebssystem-Partition"
+msgstr ""
+
+#: ../../source/clients/index.rst:57
+msgid "Offline-Boot"
+msgstr ""
+
+#: ../../source/clients/index.rst:58
+msgid "|ua|"
+msgstr ""
+
+#: ../../source/clients/index.rst:60
+msgid "Deren Beschreibung ist im Unterkapitel :ref:`using-linbo-label` zu finden."
+msgstr ""
+
+#: ../../source/clients/index.rst:62
+msgid ""
+"In dem gezeigten Ablauf eines synchronisierten Betriebssystem-Starts "
+"wurde ersichtlich, das sich auf dem Server mindestens ein Client-Image "
+"befinden muss. Dabei ist folgendes von entscheidender Wichtigkeit:"
+msgstr ""
+
+#: ../../source/clients/index.rst:64
+msgid ""
+"In der linuxmuster.net 7 ist es für Clients, denen alle pädagogischen "
+"Funktionen im Netz zur Verfügung stehen sollen, erforderlich, dass diese "
+"im Active Directory (AD) des Servers (samba 4) einen sog. "
+"``Domänenbeitritt`` ausführen. Hierbei werden Schlüssel erzeugt und "
+"ausgetauscht. Diese stellen sicher, dass der Client als berechtigtes "
+"Gerät erkannt wird."
+msgstr ""
+
+#: ../../source/clients/index.rst:66
+msgid ""
+"Ziel ist es, dass alle PCs mit einem vordefinierten ``Muster-Image`` für "
+"Linux oder Windows genutzt werden, sodass nach Möglichkeit nur ein Image "
+"oder wenige raumbezogene Images gepflegt werden."
+msgstr ""
+
+#: ../../source/clients/index.rst:68
+msgid ""
+"Hierzu ist zunächst ein Rechner mit dem gewünschten Client-Betriebssystem"
+" und den gewünschten Programmen zu installieren und vorzukonfigurieren. "
+"Dieser ``Muster-Client`` muss dann mit dem jeweiligen Betriebssystem "
+"einen Domänenbeitritt ausführen, auch dieser wird im Image gespeichert. "
+"Erst danach kann dieses Image ebenfalls für alle anderen PCs genutzt "
+"werden."
+msgstr ""
+
+#: ../../source/clients/index.rst:70
+msgid ""
+"Das Vorgehen wird Dir detailiert unter :ref:`masterclient-template-label`"
+" beschrieben."
+msgstr ""
+

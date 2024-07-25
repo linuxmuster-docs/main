@@ -1,68 +1,163 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, linuxmuster.net
-# This file is distributed under the same license as the linuxmuster.net package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
+"Language-Team: English "
+"(https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
 
 #: ../../source/classroom/check-own-quota/index.rst:3
 msgid "Anzeigen des eigenen Plattenplatzes"
 msgstr ""
 
-#: ../../source/classroom/check-own-quota/index.rst:5
+#: ../../source/classroom/check-own-quota/index.rst:7
 msgid ""
-"Jeder Benutzer kann sich auf der Startseite der *Schulkonsole* über seinen "
-"verbrauchten Speicherplatz und seine Quota (im zustehenden Anteil) "
-"informieren."
+"Jeder Benutzer kann sich auf der Startseite der *Schulkonsole* über den "
+"verbrauchten Speicherplatz und die ihnen zugewiesenen "
+"Speicherplatzbegrenzungen (Quota) informieren."
 msgstr ""
 
 #: ../../source/classroom/check-own-quota/index.rst:9
-msgid "Melden Sie sich in der Schulkonsole an."
+msgid "**Lehrer: Prüfen der eigenen Quota**"
 msgstr ""
 
-#: ../../source/classroom/check-own-quota/index.rst:13
+#: ../../source/classroom/check-own-quota/index.rst:11
 msgid ""
-"In diesem Beispiel ist die Quota nur zur Hälfte ausgeschöpft. Um genauere "
-"Angaben zu bekommen, genügt es, mit dem Mauszeiger auf die entsprechende "
-"Leiste zu gehen. Die Zahlen bedeuten: 180308 kiloByte von ca. 400 MegaByte "
-"sind belegt, das entspricht 45%.  Nur 6 von 40000 möglichen Dateien machen "
-"die 180 MB aus und gehören dem Benutzer."
+"Melde Dich als Lehrer in der Schulkonsole an. Es erscheint zunächst die "
+"Hauptseite mit den Konto-Informationen, den Quotas und denjenigen "
+"Gruppen, denen Sie zugeordnet sind."
 msgstr ""
 
-#: ../../source/classroom/check-own-quota/index.rst:19
-msgid ""
-"Es gibt ein \"soft limit\" (hier 400MB), das unter einem Windows-"
-"Arbeitsplatz als maximaler Speicherplatz angezeigt wird. Überschreitet das "
-"Datenvolumen diese Grenze, wird ein Warnhinweis ausgegeben, die Dateien "
-"werden aber noch bis zum Erreichen des \"hard limit\" (hier 500MB) "
-"abgespeichert.  Bei Erreichen des \"hard limit\" geht dann für diesen "
-"Benutzer wirklich nichts mehr, bis er wieder so viel Platz geschaffen hat, "
-"dass er unter das \"soft-limit\" rutscht. Ebenso wird auch die Anzahl der "
-"Dateien begrenzt."
+#: ../../source/classroom/check-own-quota/index.rst:18
+msgid "Quota Overview Teacher"
+msgstr ""
+
+#: ../../source/classroom/check-own-quota/index.rst:18
+msgid "Schulkonsole Übersicht"
+msgstr ""
+
+#: ../../source/classroom/check-own-quota/index.rst:20
+msgid "Es sind verschiedene Quotas voneinander abzugrenzen:"
+msgstr ""
+
+#: ../../source/classroom/check-own-quota/index.rst:26
+msgid "Different Quota"
+msgstr ""
+
+#: ../../source/classroom/check-own-quota/index.rst:26
+msgid "Verschiedene Quota des Benutzers"
 msgstr ""
 
 #: ../../source/classroom/check-own-quota/index.rst:28
-msgid ""
-"Beachten Sie auch, dass das gesetzte Quota immer für eine ganze "
-"Festplattenpartition auf dem Linux-Server gilt, d.h. in den meisten Fällen "
-"zählen auch Dateien auf den Tauschverzeichnissen zum verbrauchten "
-"Speicherplatz."
+msgid "Wie in obiger Abbildung dargestellt, sind folgende Quota zu unterscheiden:"
 msgstr ""
 
-#: ../../source/classroom/check-own-quota/index.rst:33
+#: ../../source/classroom/check-own-quota/index.rst:30
 msgid ""
-"Neben der Speicherplatzbeschränkung kann im Schulnetz auch eine Beschränkung"
-" des E-Mail-Speicherplatzes und der gedruckten Seiten eingerichtet sein."
+"**default-school**: Dieser Plattenplatz in MiB wird auf dem Server auf "
+"dem share ``/srv/samba/schools/default-school`` geprüft. Diese Freigabe "
+"(share DFLT) ist für alle Benutzer der zugeordneten Schule relevant. In "
+"der eigenen Schule - hier ``default-school`` - können Daten bis zur "
+"definierten Obergrenze auf dieser Freigabe gespeichert werden."
 msgstr ""
+
+#: ../../source/classroom/check-own-quota/index.rst:32
+msgid ""
+"**linuxmuster-global**: Dieser Plattenplatz in MiB wird auf dem Server "
+"auf dem share ``/srv/samba/global`` geprüft. Diese Freigabe (share "
+"GLOBAL) ist für alle Benutzer der beteiligten Schulen (Mehr-Schulbetrieb)"
+" relevant, um schulübergreifend Dateien zu tauschen (linuxmuster-global)."
+msgstr ""
+
+#: ../../source/classroom/check-own-quota/index.rst:34
+msgid ""
+"**Cloudquota**: Bezeichnet die Quota der eigenen Schule - ein anderer "
+"Name für die unter 1.) dargestellte Quota für default-school."
+msgstr ""
+
+#: ../../source/classroom/check-own-quota/index.rst:36
+msgid ""
+"**Mailquota**: Zeigt den verfügbaren Plattenplatz zur Ablage von E-Mails "
+"an."
+msgstr ""
+
+#: ../../source/classroom/check-own-quota/index.rst:38
+msgid ""
+"Beachte auch, dass die gesetzte Quota immer für eine ganze "
+"Festplattenpartition auf dem Linux-Server gilt. Dies bedeutet, dass auch "
+"Dateien auf den Tauschverzeichnissen zum verbrauchten Speicherplatz oder "
+"ausgeteilte Dateien für Prüfungen, die nicht wieder gelöscht wurden, "
+"diesen Plattenplatz belegen."
+msgstr ""
+
+#~ msgid ""
+#~ "Jeder Benutzer kann sich auf der "
+#~ "Startseite der *Schulkonsole* über seinen "
+#~ "verbrauchten Speicherplatz und seine Quota "
+#~ "(im zustehenden Anteil) informieren."
+#~ msgstr ""
+
+#~ msgid "Melden Sie sich in der Schulkonsole an."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In diesem Beispiel ist die Quota "
+#~ "nur zur Hälfte ausgeschöpft. Um genauere"
+#~ " Angaben zu bekommen, genügt es, mit"
+#~ " dem Mauszeiger auf die entsprechende "
+#~ "Leiste zu gehen. Die Zahlen bedeuten:"
+#~ " 180308 kiloByte von ca. 400 MegaByte"
+#~ " sind belegt, das entspricht 45%.  "
+#~ "Nur 6 von 40000 möglichen Dateien "
+#~ "machen die 180 MB aus und gehören"
+#~ " dem Benutzer."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Es gibt ein \"soft limit\" (hier "
+#~ "400MB), das unter einem Windows-"
+#~ "Arbeitsplatz als maximaler Speicherplatz "
+#~ "angezeigt wird. Überschreitet das Datenvolumen"
+#~ " diese Grenze, wird ein Warnhinweis "
+#~ "ausgegeben, die Dateien werden aber noch"
+#~ " bis zum Erreichen des \"hard limit\""
+#~ " (hier 500MB) abgespeichert.  Bei Erreichen"
+#~ " des \"hard limit\" geht dann für "
+#~ "diesen Benutzer wirklich nichts mehr, "
+#~ "bis er wieder so viel Platz "
+#~ "geschaffen hat, dass er unter das "
+#~ "\"soft-limit\" rutscht. Ebenso wird auch"
+#~ " die Anzahl der Dateien begrenzt."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Beachten Sie auch, dass das gesetzte "
+#~ "Quota immer für eine ganze "
+#~ "Festplattenpartition auf dem Linux-Server "
+#~ "gilt, d.h. in den meisten Fällen "
+#~ "zählen auch Dateien auf den "
+#~ "Tauschverzeichnissen zum verbrauchten Speicherplatz."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Neben der Speicherplatzbeschränkung kann im"
+#~ " Schulnetz auch eine Beschränkung des "
+#~ "E-Mail-Speicherplatzes und der gedruckten "
+#~ "Seiten eingerichtet sein."
+#~ msgstr ""
+

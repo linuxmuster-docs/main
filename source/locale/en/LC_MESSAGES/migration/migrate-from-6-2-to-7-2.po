@@ -1,0 +1,799 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:7
+msgid "Migration lmn 6.2 --> lmn 7.2"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:14
+msgid "Es wird eine Migration der"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:16
+msgid "Benutzerinformationen (Namen, Passwort, Projekte),"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:17
+msgid "Computerinformationen (``workstations``),"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:18
+msgid "der Benutzerdaten (``/home``),"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:19
+msgid "Tausch- und Projektverzeichnisse und der"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:20
+msgid "Geräte-Abbilder (``/var/linbo``) unterstützt."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:22
+msgid "Nicht migriert werden"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:24
+msgid "Beschreibungen von Projekten,"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:25
+msgid "Quota-Tabellen und"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:26
+msgid "Rollen, die Geräte bekommen."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:28
+msgid "Diese müssen von Hand angepasst werden."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:30
+msgid ""
+"Ebenso werden die Dienste mrbs, openSchulPortfolio und der Mail-Server "
+"nicht migriert, da diese - wenn benötigt - zur Installation in einem "
+"Dockercontainer übernommen werden müssen."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:33
+msgid "Voraussetzungen"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:36
+msgid "Bestehendes System"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:38
+msgid ""
+"Es muss als Quellsystem linuxmuster.net in der Version 6.2 installiert "
+"sein."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:40
+msgid ""
+"Es ist möglich, dass auch ab Version 6.1 und 6.0 eine Migration "
+"funktioniert. Dies wurde nicht offiziell getestet."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:44
+msgid "Neues v7.2 System"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:46
+msgid "Es wird davon ausgegangen, dass |...|"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:48
+msgid ""
+"der Server der Version 7.2 und eine Firewall (Standard OPNSense |reg| ) "
+"zur Verfügung stehen."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:49
+msgid ""
+"das Setup wie zuvor beschrieben ausgeführt wurde und ohne Fehler "
+"durchgelaufen ist."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:50
+msgid ""
+"nach der Installation keine zusätzlichen Benutzer, Gruppen und Projekte "
+"angelegt wurden."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:52
+msgid ""
+"In dieser Beschreibung wird als Schulinstanz, wie beim Erstsetup "
+"vorgegeben, ``default-school`` beibehalten."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:58
+msgid ""
+"Solltest Du in der linuxmuster.net v6.2 bereits Netzsegmente gebildet "
+"und/oder Netzbereiche geändert haben, dann beachte nachstehendes "
+"Unterkapitel mit Hinweisen zum korrekten Vorgehen."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:61
+msgid ""
+"Dieser Teil kommt aus der Dokumenation der Version 7, und dient der "
+"Übernahme. Die einzelnen Schritte können so übernommen werden, allerdings"
+" der Workflow und die Beschreibung der Kommando-Parameter sind zu "
+"überarbeiten."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:63
+msgid "System mit Netzanpassungen .. --------------------------"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:66
+msgid ""
+"Solltest Du in der linuxmuster.net v6.2 andere Netzbereiche konfiguriert "
+"haben, die jetzt weiter genutzt werden sollen, oder hast Du das Netz in "
+"Subnetze aufgeteilt und möchtest bei der Migration diese Subnetze mit "
+"umstellen, dann ist nachstehendes Vorgehen unbedingt bereits beim "
+"Erstsetup der VMs der v7.2 zu beachten."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:69
+msgid "Ablauf .. ------"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:72
+msgid "VMs erstellen (:ref:`install-from-scratch-label`)"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:73
+msgid "VMs starten"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:74
+msgid "IPs der OPNsense® auf die bisher verwendeten IPs/Netze anpassen"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:75
+msgid ""
+"ServerVM mit netplan die IPs so ändern, dass diese die korrekte IP im "
+"internen (grünen) Netz haben wie bisher"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:76
+msgid ""
+"VMs vor dem Setup auf die neue Netzstruktur vorbereiten (:ref:`modify-"
+"net-label`)"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:77
+msgid "Erreichbarkeit der VMs im internen Netz testen."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:78
+msgid "Update der VMs druchführen"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:79
+msgid "Erstsetup durchführen (:ref:`setup-label`)"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:81
+msgid "IPs OPNsense® anpassen .. ----------------------"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:84
+msgid ""
+"Die IP der externen Schnittstelle (WAN) der OPNsense® ist ggf. "
+"anzupassen. Diese ist in der Erstauslieferung so konfiguriert, das diese "
+"eine IP via DHCP erhalten würde. Sollte die OPNsense® Firewall hinter "
+"einem Router arbeiten, so kann eine Anpassung für eine statische IP "
+"erforderlich sein."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:86
+msgid ""
+"Hierzu rufst Du auf der Konsole in der OPNsense®, nachdem Du Dich als "
+"``root`` angemeldet hast, den Punkt ``2) Set interface IP address`` auf. "
+"Solle eine DHCP-Konfiguration in Deinem Netz hier nicht möglich sein,  "
+"wählst Du zunächst die WAN-Schnittstelle aus und trägst die IP Adresse "
+"aus Deinem lokalen Netz mit korrekter Subnetzmaske, Gateway und DNS ein."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:88
+msgid ""
+"Danach wählst Du die `LAN-Schnittstelle` aus und konfigurierst die "
+"bisherige IP, die im IPFire bereits genutzt wurde. Hast Du z.B. ein "
+"Subnetting für das Server-Netz in der v6.2 genutzt, das im \"grünen\" "
+"Netz den Bereich 10.16.1.0/24 vorsieht, so vergibst Du hier auf der LAN-"
+"Schnittstelle der OPNsense® die IP 10.16.1.254/24 (Subnetmask "
+"255.255.255.0 = 24 Bit)."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:90
+msgid ""
+"Bei vorhandener Subnettierung dürfte für o.g. Besipiel der L3-Switch im "
+"Server - VLAN die IP 10.16.1.253 haben. Zudem ist darauf zu achten, dass "
+"auf der Virtualisierungsumgebung die korrekten Bridges für das jeweilige "
+"VLAN den Schnittstellen der VMs korrekt zugeordnet wurden."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:92
+msgid "VMs vorbereiten ..^^^^^^^^^^^^^^^"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:95
+msgid "netplan ..\"\"\"\"\"\"\""
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:98
+msgid "Die Server-VM muss nun vorbereitet werden."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:100
+msgid ""
+"In der Datei `/etc/netplan/01-meine-netzconfig.yaml` - Name bitte auf "
+"Dein System anpassen - sind die Netzwerkeinstellungen wie folgt zu ändern"
+" (**Hinweis:** nachstehende Angaben greifen o.g. Beispiel hier nur für "
+"die Server-VM auf):"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:116
+msgid ""
+"Danach speicherst Du die Änderungen und wendest diese mit folgendem "
+"Befehl an und testest, ob die Firewall im internen Netz erreichbar ist:"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:123
+msgid "Erhälst Du erfolgreich Pakete zurück, so kanst Du die Firewall erreichen."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:125
+msgid ""
+"Können alle VMs im internen Netz sich untereinander via ping erreichen, "
+"bereitest Du die VMs mit linuxmuster-prepare vor. siehe: :ref:`modify-"
+"net-label`"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:127
+msgid "linuxmuster-prepare ..\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\""
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:130
+msgid "Jetzt meldest Du Dich auf der Eingabekonsole an der Server-VM an."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:132
+msgid ""
+"Du bereitest diese VMs für der Erstsetup vor, indem Du die korrekten "
+"Angaben zur gewünschten IP der VM und der Firewall mit linuxmuster-"
+"prepare (siehe: :ref:`modify-net-label`) angibst."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:134
+msgid ""
+"Gehen wir davon aus, dass Du für die Server VM im vorangegangenen Schritt"
+" die IP `10.16.1.1/24` und für die OPNsense® als Firewall die IP "
+"`10.16.1.254/24` zugeordnet hast. Zudem nehmen wir an, dass Deine "
+"zukunftige Schuldomäne den Namen `schuldomaene` erhalten wird und Deine "
+"Domain `meineschule`.`de` lautet."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:136
+msgid ""
+"Mit diesen Vorgaben bereitest Du die Server-VM nun mit folgendem Befehl "
+"auf das Setup vor:"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:142
+msgid "Starte nach den Anpassungen die VM neu mit ``reboot``."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:144
+msgid "Tests & Setup ..\"\"\"\"\"\"\"\"\"\"\"\"\""
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:147
+msgid ""
+"Teste nun die Erreichbarkeit der VMs im internen Netz mit folgenden "
+"Befehlen (angepasst auf o.g. Bsp.):"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:154
+msgid ""
+"Funktioniert dies korrekt, so kann jetzt die Aktualisierung der VM "
+"erfolgen."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:156
+msgid "Aktualisiere die VM mit folgendem Befehl:"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:163
+msgid "Starte danach die VM neu."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:165
+msgid ""
+"Nach dem Neustart meldest Du Dich an der Server-VM als Benutzer `root` an"
+" und rufst das Setup mit folgendem Befehl auf:"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:171
+msgid ""
+"Nach erfolgreichem Setup :ref:`setup-label` durchläuft Du die nachstehend"
+" dargestellten Schritte zur Migration."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:174
+msgid "Vorgehen zur Migration .. ======================"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:177
+msgid ""
+"1. Zunächst installiert man auf dem Quellsystem (Version 6.x) das Paket "
+"`sophomorix-dump` und exportiert die Daten  (ca. 15MByte)."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:180
+msgid ""
+"2. Danach importiert man diese Daten auf einem Zielsystem (Version 7.x) "
+"und rekonstruiert dort Benutzer, Passwörter, Projekte und Geräte, etc."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:184
+msgid ""
+"3. Es müssen manuell die Verzeichnisse ``/home/share``, "
+"``/home/teachers`` und ``/home/students`` im Zielsystem gemountet werden "
+"(z.B. über eine externe Festplatte und bind-mount, Netzwerk-mount, etc.) "
+"und importiert werden."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:189
+msgid ""
+"4. Die Daten von LINBO können ebenso wie Benutzerdaten synchronisiert "
+"werden."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:192
+msgid ""
+"Export der Daten unter linuxmuster.net 6.x .. "
+"=========================================="
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:195
+msgid ""
+"Der Server 6.x muss sich in einem synchronisierten Zustand befinden, d.h."
+" der Befehl auf der Konsole ``sophomorix-check`` darf keine "
+"hinzuzufügenden oder zu verändernden Benutzer anzeigen. Dafür führt man "
+"folgende Schritte als `root` nacheinander aus:"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:211
+msgid ""
+"Jetzt sollte ein ``sophomorix-check`` keine Benutzer mehr verändern "
+"wollen."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:214
+msgid "sophomorix-dump installieren .. ----------------------------"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:217
+msgid ""
+"**Installiere** jetzt ``sophomorix-dump`` aus dem babo-Repository oder "
+"lade das entsprechende Debian-Paket von der Webseite herunter"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:227
+msgid ""
+"Alternativ kannst Du (z.B. wenn Du das babo-Repository nicht einbinden "
+"kannst) unter http://pkg.linuxmuster.net/babo/ die neueste Version "
+"`sophomorix-dump_u.v.w-z_all.deb` herausfinden, herunterladen und "
+"installieren:"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:239
+msgid "Daten exportieren .. -----------------"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:242
+msgid "Führe das Skript ``sophomorix-dump`` aus"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:257
+msgid ""
+"Die Zusammenfassung zeigt Fehler und Warnungen an. Warnungen und der "
+"folgende Fehler: ``ERROR dumping: /root/sophomorix-"
+"dump/data/etc/sophomorix/user/mail/*`` können ignoriert werden."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:260
+msgid ""
+"Die exportierten Daten (bis zu 15MByte) liegen jetzt in ``/root"
+"/sophomorix-dump``. Kopiere dieses Verzeichnis auf den Server mit Version"
+" 7.x. Um die exportierten Daten wieder zu löschen, führe ``sophomorix-"
+"dump.. --clean`` aus."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:265
+msgid ""
+"Import der Daten unter linuxmuster.net 7.x .. "
+"=========================================="
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:268
+msgid "**Installiere** die ``sophomorix-vampire``-Skripte über"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:276
+msgid ""
+"Das Skript ``sophomorix-vampire -h`` zeigt Optionen und Schritte an, die "
+"im folgenden durchgeführt werden."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:278
+msgid ""
+"Kompletter Import mit sophomorix-vampire-example .. "
+"------------------------------------------------"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:281
+msgid ""
+"Beispielhaft führt das Skript ``sophomorix-vampire-example`` alle "
+"Schritte für eine typische Schule durch. Es empfiehlt sich das Skript in "
+"den übertragenen Ordner ``sophomorix-dump`` zu kopieren und an die "
+"eigenen Bedürfnisse anzupassen. Besonders der Import der Nutzerdaten "
+"sollte in der folgenden Schritt-für-Schritt Anleitung genau geprüft "
+"werden."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:283
+msgid "1. Analyse der exportierten Daten .. ---------------------------------"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:286
+msgid "Die folgende Analyse zeigt"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:294
+msgid "``ERROR``:"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:293
+msgid ""
+"z.B. fehlende Dateien (``/etc/sophomorix/user/mail/*`` wird dagegen nicht"
+" in jeder Installation verwendet)"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:297
+msgid "``INFO``:"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:297
+msgid "z.B. Gruppen, die während der Migration umbenannt werden"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:300
+msgid "``WARNING``:"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:300
+msgid "z.B. Warnungen, welche Dateien überschrieben werden"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:302
+msgid "2. Migration der Klassen .. ------------------------"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:305
+msgid ""
+"Alle Klassen werden vor den Benutzern migriert, inklusive eventueller "
+"Umbenennungen der Klassennamen wie in der Analyse angezeigt. Dafür "
+"erstellt man zunächst das Klassenskript und führt es danach aus"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:313
+msgid "Jetzt können die neu erstellten Klassen überprüft werden, beispielsweise"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:320
+msgid "3. Migration der Benutzer .. -------------------------"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:323
+msgid ""
+"Zunächst muss die Passwortlängen und -komplexitätsüberprüfung von Samba 4"
+" so eingestellt werden, dass bisherige einfache Passwörter erlaubt sind."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:331
+msgid ""
+"Jetzt wird aus den exportierten Daten eine Datei ``sophomorix.add`` "
+"erzeugt, die an die richtige Stelle im System kopiert werden muss, um "
+"danach die Benutzer regulär aufzunehmen."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:339
+msgid ""
+"Folgender Schritt informiert vorab mit ``ERRORS`` und ``WARNINGS`` über "
+"mögliche Fehlermeldungen bei der geplanten Aufnahme. Diese Fehler sollten"
+" manuell in der Datei ``/var/lib/sophomorix/check-result/sophomorix.add``"
+" korrigiert werden."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:352
+msgid ""
+"Die Aufnahme der Benutzer wird ca. 1 Sekunde Zeit pro Benutzer in "
+"Anspruch nehmen, Zeit einen Tee zu trinken."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:360
+msgid "Die Aufnahme"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:362
+msgid "nimmt die Benutzer mit ihren Erstpasswörtern auf, dies kann mit"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:369
+#, python-format
+msgid ""
+"getestet werden, was hier zu 100% funktionieren sollte. Im nächsten "
+"Schritt folgt der Import der aktuellen Passworthashes."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:372
+msgid ""
+"gibt den Benutzern zunächst keine Rechte für die WebUI/Schulkonsole. Dies"
+" folgt in einem späteren Schritt."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:376
+msgid "4. Passworthashes importieren .. -----------------------------"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:379
+msgid ""
+"Die mit Hash codierten Passwörter werde mit folgendem Befehl importiert "
+"und sollte keine Fehler erzeugen"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:388
+msgid ""
+"Jetzt müssen die standardmäßig komplexen Passwörter wieder aktiviert "
+"werden"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:395
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:434
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:493
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:514
+msgid "Tests .. ^^^^^"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:398
+msgid ""
+"Jetzt sollten für Konten bei denen nicht mehr das Erstpasswort gilt, der "
+"folgende Test fehlschlagen. Für alle Konten mit Erstpasswörtern sollte er"
+" noch funktionieren."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:406
+msgid "Zeige einen oder mehrere Benutzer an"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:414
+msgid ""
+"5. Klassenadministratoren importieren .. "
+"-------------------------------------"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:417
+msgid "Wie bisher"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:424
+msgid "6. Projekte importieren .. -----------------------"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:427
+msgid "Im nachfolgenden Schritt werden alle Projekte importiert."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:437
+msgid "Zeige ein oder mehrere Projekte an"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:445
+msgid ""
+"7. Konfigurationsdateien importieren .. "
+"------------------------------------"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:448
+msgid "Mit folgendem Schritt werden wichtige Konfigurationsdateien verändert."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:450
+msgid "Das Skript muss zwei Mal ausgeführt werden."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:460
+msgid ""
+"Jetzt solltest Du noch die Datei ``school.conf`` bearbeiten, denn das "
+"wird nicht automatisch gemacht."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:463
+msgid "8. Updates diverser Einstellungen .. ---------------------------------"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:466
+msgid "Grundsätzlicher Durchlauf von ``sophomorix-check`` muss funktionieren:"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:472
+msgid "Stelle sicher, dass keine weiteren Benutzer hinzugefügt werden müssen:"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:478
+msgid "Mit folgendem Schritt werden"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:480
+msgid ""
+"Benutzernamen in UTF-8 konvertiert (ab jetzt sind Umlaute und "
+"Sonderzeichen in Namen möglich),"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:481
+msgid "Zugriffsrechte in der Schulkonsole gesetzt"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:487
+msgid ""
+"Lösche die Benutzer, die nach Deinen Einstellungen in ``school.conf`` "
+"fällig werden."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:496
+msgid ""
+"So kann man überprüfen, ob Sonderzeichen in ``students.csv`` oder "
+"``teachers.csv`` in das System übernommen wurden:"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:502
+msgid "9. Rechner importieren .. ----------------------"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:517
+msgid "Überprüfe, ob einzelne Rechner vorhanden sind:"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:524
+msgid "Überprüfe ob die Namensauflösung funktioniert:"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:530
+msgid ""
+"10. Überprüfung von Benutzern und Gruppen .. "
+"-----------------------------------------"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:533
+msgid "Benutzer und Gruppen können mit folgendem Skript getestet werden:"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:539
+msgid "Kommando liefert"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:541
+msgid "Unknown option: verify-uid Command line:"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:544
+msgid "You have made a mistake, when specifying options. See error message above."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:547
+msgid "... sophomorix-vampire is terminating"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:550
+msgid "11. Synchronisiere Benutzerdaten .. --------------------------------"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:553
+msgid ""
+"Zunächst müssen über irgendein Verfahren die Verzeichnisse "
+"``/home/share``, ``/home/teachers`` und ``/home/students`` vom "
+"Quellsystem im Zielsystem unter einem Pfad (hier im Beispiel: ``/mnt``) "
+"erscheinen."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:561
+msgid ""
+"Der Pfad im Zielsystem wird über das Kommandozeilenargument ``--path-"
+"oldserver /mnt`` an nachfolgende Skripte übergeben und erwartet dann die "
+"obige Ordnerstruktur unterhalb von ``/mnt``."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:563
+msgid ""
+"Für einzelne Schüler, Lehrer, Klassen und Projekte sollte man eine "
+"Synchronisation testen:"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:572
+msgid ""
+"Jetzt können alle Schüler, Lehrer, Klassen und Projekte in einem Schritt "
+"importiert werden"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:581
+msgid "12. Synchronisiere LINBO-Daten .. ------------------------------"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:584
+msgid ""
+"Alle Daten von LINBO können ebenso wie die Benutzerdaten aus dem früheren"
+" Verzeichnis ``/var/linbo`` importiert werden."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:590
+msgid ""
+"Auch hier wird beispielsweise der Inhalt von ``/var/linbo`` in das "
+"Zielsystem nach ``/mnt`` eingebunden. Das Skript erwartet dann die obige "
+"Ordnerstruktur unterhalb von ``/mnt``."
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:597
+msgid ""
+"Jetzt muss LINBO erneut installiert werden, um Änderungen, die nur unter "
+"linuxmuster.net v7 existieren, importiert werden"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:603
+msgid ""
+"13. Dinge, die manuell gemacht werden müssen .. "
+"--------------------------------------------"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:606
+msgid "Beschreibungen zu Projekten hinzufügen"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:607
+msgid "Die Rolle von Geräten festlegen"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:608
+msgid "Quota für die Benutzer (neu) festlegen"
+msgstr ""
+
+#: ../../source/migration/migrate-from-6-2-to-7-2.rst:609
+msgid ""
+"Bei migrierten Subnetzen: Es muss in ``/etc/linuxmuster/subnets.csv`` das"
+" Gateway für das Servernetz eingetragen werden, z.B. 10.0.0.253 für einen"
+" L3-Switch. Danach muss ``linuxmuster-import-subnets`` ausgeführt werden."
+msgstr ""
+

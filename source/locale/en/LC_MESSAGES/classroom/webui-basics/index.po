@@ -1,0 +1,811 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/classroom/webui-basics/index.rst:5
+msgid "Schulkonsole des Lehrers"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:10
+msgid ""
+"Hast Du auf dem Server einen Lehrer-Account, so kannst Du die Steuerung "
+"des Unterrichts web-basiert mithilfe der Schulkonsole in einem Browser "
+"vornehmen."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:16
+#: ../../source/classroom/webui-basics/index.rst:25
+msgid "WebUI Welcome"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:16
+msgid "Schulkonsole als Lehrer nach der Anmeldung"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:18
+msgid ""
+"Die Schulkonsole wird im Browser über ``https://10.0.0.1`` aufgerufen. Je"
+" nachdem welcher Benutzer angemeldet ist, erscheinen zugehörige "
+"Menüpunkte."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:25
+msgid "Profil nach erfolgter Anmeldung"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:27
+msgid "Die Icons haben folgende Bedeutung:"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:29
+msgid ""
+"Das Menü kannst Du durch Anklicken der drei Striche links neben dem "
+"linuxmuster.net-Symbol ein- und ausblenden."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:35
+msgid "WebUI Extend Menue"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:35
+msgid "oben links: Menü ein- und ausklappen"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:41
+msgid "WebUI User Icon"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:41
+msgid "angemeldeter Benutzer"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:47
+msgid "WebUI Change Password"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:47
+msgid "Kennwort ändern"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:53
+msgid "WebUI Change Password Authentication to 2FA"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:53
+msgid "Aktiviere die Zwei-Faktor-Authentifizierung"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:59
+msgid "WebUI Logout"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:59
+msgid "Abmelden"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:65
+msgid "WebUI Scale Page Ratio"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:65
+msgid "Seitenverhältnis skalieren"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:69
+msgid ""
+"Bei Vergabe von Kurs- oder Projektnamen solltest Du auf Umlaute und ß "
+"verzichten."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:71
+msgid ""
+"Das Menü der Schulkonsole des Lehrers teilt sich in die Bereiche "
+"``Allgemein`` und ``Klassenzimmer`` auf."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:74
+msgid "Allgemein"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:77
+msgid "Hauptseite"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:83
+msgid "WebUI Main Page"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:83
+msgid "Hauptseite als angemeldeter Lehrer"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:85
+msgid ""
+"Hier findest Du Informationen zu Deinem Konto, Deinen zugeordneten "
+"Benutzergruppen sowie dem Verbrauch Deines Festplattenkontingents "
+"(Quota)."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:89
+msgid "Meine Dateien"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:95
+msgid "WebUI My Files"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:95
+msgid "Meine Dateien als angemeldeter Lehrer"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:97
+msgid ""
+"Hier findest Du die Ordner und Dateien, die z.B. im Unterverzeichnis "
+"**Unterricht** abgelegt hast und im Unterricht an die Schüler der Klassen"
+" verteilen kannst. Das Verzeichnis ``transfer`` wird u.a. für den "
+"Klassenarbeitsmodus benötigt, um Dateien für Klassenarbeiten auszuteilen "
+"und die Ergebnisse auch wieder einzusammeln."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:100
+msgid "Klassenzimmer"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:103
+msgid "Unterricht"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:105
+msgid "Klassen / Kurse, in denen Du Mitglied bist, werden hier aufgelistet."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:111
+msgid "WebUI My Classes"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:111
+msgid "Unterricht nach der Erstanmeldung als Lehrer"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:113
+msgid ""
+"Zu Beginn bist Du noch in keinen Klassen / Kursen oder Projekten "
+"eingeschrieben. Schreibe Dich als Lehrer zuerst in den gewünschten "
+"Klassen / Kursen ein.  Hierzu klickst Du links im Menü auf "
+"``Einschreiben`` -> ``Schulklassen``. Bei den angezeigten Schulklassen "
+"setzt Du für diejenigen Klassen einen Haken, in denen Du Dich "
+"einschreiben möchtest."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:119
+msgid "class enrollement"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:119
+msgid "Einschreibung in Klassen"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:121
+msgid ""
+"Oben erscheint ein blau hinterlegter Hinweis. Um die Die Einschreibung "
+"abzuschließen, musst Du auf ``Jetzt ausführen`` in dem blauen Hinweisfeld"
+" klicken. Verlief die Einschreibung erfolgreich, siehst Du nun im "
+"Menüpunkt ``Unterricht`` Deine Dir zugewiesenen Klassen / Kurse."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:128
+msgid "classes enrolled"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:128
+msgid "Eingeschriebene Klassen"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:130
+msgid ""
+"Klickst Du nun auf eine Klasse, so wird diese mit den eingetragenen "
+"Benutzern zusammengestellt. Es werden alle Benutzer der Klasse "
+"dargestellt."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:136
+msgid "class selected"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:136
+msgid "Ausgewählte Klassen und deren Benutzer"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:139
+msgid "Kurse erstellen"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:141
+msgid ""
+"Du kannst über die Funktion oben rechts ``Neuer Kurs`` einen neuen Kurs "
+"anlegen."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:147
+msgid "WebUI New Class Button"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:147
+msgid "Wähle den Eintrag Neuer Kurs"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:149
+msgid ""
+"Gib in dem sich öffnenden Fenster den neuen Kursnamen ein und bestätige "
+"diesen mit ``OK``."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:155
+msgid "WebUI New Class"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:155
+msgid "Neuen Kurs erstellen"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:157
+msgid ""
+"Der neu angelegte Kurs erscheint im Menü ``Unterricht`` -> unter der "
+"Rubrik ``Meine Kurse``."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:163
+msgid "WebUI my courses"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:163
+msgid "Meine Kurse"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:165
+msgid ""
+"In obiger Abbildung siehst Du, dass in dem neu angelegten Kurs noch keine"
+" Schüler zugewiesen wurden."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:169
+msgid "Schüler einem Kurs hinzufügen"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:171
+msgid ""
+"Um Schüler einem Kurs hinzuzufügen, wählst Du den gewünschten Kurse via "
+"Klick auf das Icon des Kurses aus."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:177
+msgid "seclected course"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:177
+msgid "Ausgwählter Kurs"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:179
+msgid ""
+"In den oberen Zeilen gibt es nun die Möglichkeit über ``Schüler "
+"hinzufügen`` einzelne Schüler hinzuzufügen oder über ``Klasse "
+"hinzufügen`` eine ganze Schulklasse dem Kurs hinzuzufügen. Klickst Du in "
+"das Feld ``Schüler hinzufügen`` und gibst dort die **ersten beiden "
+"Buchstaben des Schülernamens** ein, erscheint eine Liste mit Schülern, "
+"deren Nachnamen mit diesen Buchstaben beginnen."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:185
+msgid "add pupils to course"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:185
+msgid "Ausgwählter Kurs: Schüler hinzufügen"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:187
+msgid ""
+"Hast Du alle gewünschten Schüler nacheinander ausgewählt, siehst Du eine "
+"Liste mit allen Schülern des Kurses. Um diese in den Kurs zu übernehmen, "
+"klickst Du abschließend unten rechts auf ``Speichern & übernehmen``."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:189
+msgid ""
+"Wählst Du einen bestimmten Kurs oder eine bestimmte Klasse aus, findest "
+"Du folgende Ansicht vor."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:195
+msgid "WebUI Class Overview"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:195
+msgid "Übersicht der Kursteilnehmer"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:197
+msgid ""
+"In dieser Übersicht können die pädagogischen Funktionen WLAN-, Internet- "
+"& Drucker-Freigabe, Dateien-Übertragungs-Funktion und Prüfungsmodus "
+"genutzt werden."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:200
+msgid "WLAN-, Internet-Freigabe & Drucker-Freigabe"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:202
+msgid "WLAN-Freigabe"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:208
+msgid "WebUI WLAN Icon"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:208
+msgid "WLAN Icon"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:210
+msgid "Internet-Freigabe"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:216
+msgid "WebUI Internet Icon"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:216
+msgid "Internet Icon"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:218
+msgid "Drucker-Freigabe"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:224
+msgid "WebUI Printer Icon"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:224
+msgid "Drucker Icon"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:226
+#: ../../source/classroom/webui-basics/index.rst:298
+#: ../../source/classroom/webui-basics/index.rst:306
+msgid "Prüfungsmodus"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:232
+msgid "WebUI exam mode Icon"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:232
+msgid "Prüfungs Icon"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:234
+msgid ""
+"Freigaben zu den jeweiligen Diensten können über ``Haken setzen oder "
+"entfernen`` für die jeweiligen Benutzer freigegeben oder gesperrt werden."
+" Über das Kästchen direkt unter einem Dienstsymbol kann die Freigabe oder"
+" Sperrung zu dem jeweiligen Dienst auf alle Benutzer angewendet werden."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:236
+msgid ""
+"Beispielsweise wurde hier mit einem Klick unter das WLAN-Symbol für jeden"
+" Benutzer des aktuellen Kurses der WLAN-Zugang freigegeben. Dieses muss "
+"nur noch unten rechts mit ``Speichern & übernehmen`` angewendet werden."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:242
+msgid "WebUI Allow WLAN Access"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:242
+msgid "WLAN Zugang für alle Kursteilnehmer freigeben"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:244
+msgid "Einstellungen (Zahnrad)"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:250
+msgid "Settings Button"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:250
+msgid "Einstellungen"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:252
+msgid ""
+"Unter Einstellungen sind verschiedene Optionen zum Passwort des Benutzers"
+" zu finden."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:254
+msgid "Löschen (Mülleimer)"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:260
+msgid "Trash Button"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:260
+msgid "Mülleimer"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:262
+msgid ""
+"Mit Hilfe des Mülleiners können einzelne Schüler aus dem Kurs entfernt "
+"werden. Dies gilt, bis die Sitzung neu erstellt wird."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:264
+msgid ""
+"Sämtliche Änderungen müssen mit ``Speichern & Übernehmen`` angewendet "
+"werden."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:267
+msgid "Dateien austeilen & einsammeln"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:269
+msgid ""
+"Dateien können für die Unterrichtsarbeit mithilfe der Funktion ``Teilen &"
+" Einsammeln`` an Schüler ausgeteilt und wieder eingesammelt werden."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:271
+msgid ""
+"Auf der Kursseite findest Du im unteren Bereich die Buttons ``Teilen`` "
+"und ``Einsammeln``, welche sich auf alle Kursteilnehmer beziehen."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:277
+msgid "Share files"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:277
+msgid "Teilen"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:283
+#: ../../source/classroom/webui-basics/index.rst:293
+msgid "collect files"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:283
+#: ../../source/classroom/webui-basics/index.rst:293
+msgid "Einsammeln"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:286
+msgid ""
+"Neben jedem Benutzer selbst gibt es ``Austeilen`` und ``Einsammeln`` "
+"Funktionen, welche nur auf die einzelnen Benutzer angewendet werden."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:295
+msgid ""
+"Weitere Erläuterungen hierzu findest Du im Abschnitt :ref:`exam-and-"
+"transfer-label`."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:300
+msgid "Das Absolventenkappen-Symbol"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:306
+msgid "WebUI Graduate Icon"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:308
+msgid ""
+"stellt den Prüfungsmodus dar. Ausgewählte Schüler oder alle Schüler einer"
+" Klasse eines Kurses können dadurch in diesen Modus gesetzt werden (nach "
+"Klick auf ``Speichern & Übernehmen`` unten rechts). Im aktivierten "
+"Prüfungsmodus wird die Seite wie folgt angezeigt:"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:314
+msgid "WebUIActive Exam Modus"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:314
+msgid "Aktiver Prüfungsmodus"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:316
+msgid ""
+"Bei allen Schülern, die im Prüfungsmodus sind, wird unter "
+"Prüfungsaufsicht der Name des Lehrers, die den Modus aktiviert hat, mit "
+"rotem Hintergrund dargestellt. Schülern im Prüfungsmodus ist automatisch "
+"die WLAN-, Internet- & Drucker-Freigabe gesperrt. Dies kann jedoch "
+"individuell angepasst werden."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:318
+msgid ""
+"Um den Prüfungsmodus zu beenden, entfernst Du den Haken bei jedem "
+"Kursmitglied (Klick unter das Prüfungsmodus-Icon) und übernimmst die "
+"Einstellungen mit ``Speichern & Übernehmen``."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:320
+msgid ""
+"Ausführliche Hinweise zum Prüfungsmodus findest Du im Abschnitt :ref"
+":`exam-and-transfer-label`."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:323
+msgid "Einschreiben"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:325
+msgid "Im Menü ``Einschreiben`` findest Du nachstehende drei Rubriken."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:328
+#: ../../source/classroom/webui-basics/index.rst:334
+msgid "Schulklassen"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:334
+msgid "WebUI School Classes"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:336
+msgid ""
+"Hier werden alle Schulklassen der Schule aufgelistet. Durch Klick auf den"
+" Klassennamen werden Dir weitere Informationen angezeigt, wie etwa alle "
+"Schüler der Klasse."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:342
+msgid "WebUI Details for School Classes"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:342
+msgid "Details der Schulklassen"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:345
+msgid "Drucker"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:347
+msgid ""
+"Hier werden alle Drucker aufgelistet. Durch Anklicken werden weitere "
+"Informationen angezeigt."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:349
+msgid ""
+"Ein Auswählen ist nur erforderlich, wenn man den Drucker auch außerhalb "
+"des zugehörigen Raumes nutzen möchte."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:352
+#: ../../source/classroom/webui-basics/index.rst:360
+msgid "Projekte"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:354
+msgid ""
+"Hier werden alle Projekte aufgelistet. Zu Beginn ist die Liste leer. Du "
+"musst zuest Projekte anlegen und diesen beitreten."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:360
+msgid "WebUI projects"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:362
+msgid "Projekte unterscheiden sich von Kursen:"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:364
+msgid "Mehrere Lehrer können in eine Projektgruppe aufgenommen werden."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:365
+msgid "Projekte verfügen über eigene Tauschverzeichnisse"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:366
+msgid "Projekte können wiederverwendet werden."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:367
+msgid ""
+"Unterrichtssteuerung (Passwörter ändern, Internet sprerren, etc.) ist "
+"**nicht** möglich."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:369
+msgid "**Projekt anlegen**"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:371
+msgid ""
+"Um ein Projket anzulegen klickst Du im Menü ``Klassenzimmmer -> "
+"Einschreiben -> Neues Projekt``."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:377
+msgid "WebUI create new project"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:377
+msgid "Neues Projekt anlegen"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:379
+msgid ""
+"Es erscheint ein neues Fenster, in dem Du den Namen für das anzulegende "
+"Projekt einträgst."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:385
+msgid "WebUI New Project Name"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:385
+msgid "Namen für das Projekt festlegen"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:388
+msgid ""
+"Du darfst nur Kleinbuchstaben und Zahlen in dem Projektnamen verwenden. "
+"Bestätige das Anlegen des neuen Projektes mit ``OK``."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:390
+msgid "**Projektmitglieder verwalten**"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:392
+msgid ""
+"Durch Anklicken eines bestimmten Projekts, werden weitere Informationen "
+"angezeigt, wie etwa die Mitglieder und Administratoren des Projekts."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:398
+msgid "WebUI New Project Deatils"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:398
+msgid "Weitere Projektinformationen"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:400
+msgid ""
+"Über die Funktion ``Beitretbar`` kann die Beitrittmöglichkeit und über "
+"die Funktion ``Nicht anzeigen`` die Sichtbarkeit eingestellt werde. "
+"Klicke die Option ``Beitretbar`` an, damit Benutzer dem Projekt "
+"hinzugefügt werden können."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:407
+msgid "WebUI New Project Joinable"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:407
+msgid "Projektoption \"beitretbar\" setzen"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:409
+msgid ""
+"Mitglieder können nun über den Button ``Benutzer oder Gruppe hinzufügen``"
+" dem Projekt zugeordnet werden. Danach erscheint ein Fenster, in dem Du "
+"nach Benutzer, Klassen oder Gruppen suchen kannst."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:415
+msgid "WebUI Manage Project Members"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:415
+msgid "Projektmitglieder hinzufügen"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:417
+msgid ""
+"Gebe in einer der Zeilen die ersten beiden Anfangsbuchstaben ein und es "
+"werden Dir unter Benutzer, Klasse oder Gruppe die bereits existierenden "
+"Einträge aufgelistet. Wähle aus der Liste die gewünschten aus. Wiederhole"
+" diese Vorgang für weitere Benutzer oder Gruppen. Die bereits "
+"ausgewählten Benutzer oder Gruppen werden Dir unten links in dem Fenster "
+"unter der Überschrift ``Hinzufügen`` aufgelistet. Findest Du hier alle "
+"gewnüschten Benutzer und Gruppen, klicke auf ``Übernehmen``, um diese dem"
+" Projekt hinzuzufügen."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:419
+msgid "**Projekt löschen**"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:421
+msgid ""
+"Klicken auf das jeweilige Projekt und wähle unten links ``Projekt "
+"löschen``. Bestätige diesen Vorgang im nächsten Fenster mit ``LÖSCHEN``."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:425
+msgid "Passwörter drucken"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:427
+msgid ""
+"Hier gibt es die Möglichkeit, eine übersichtliche Liste von Benutzer- & "
+"Passwortinformationen im PDF- oder CSV-Format ausdrucken zu lassen bzw. "
+"als Datei herunterzuladen."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:433
+msgid "WebUI User List Export"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:433
+msgid "Übersicht der Klassen zum Ausdruck der Passwörter"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:435
+msgid ""
+"Der Druck der Passwörter kann durch Anklicken der jeweiligen Klasse "
+"klassenspezifisch erfolgen. Markiere die Klasse und klicke auf das "
+"Druckersymbol in der Zeile der Klasse. Es erscheint ein neues Fenster."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:441
+msgid "WebUI User List Export PDF"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:441
+msgid "Passwörter der Klasse als PDF ausdrucken"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:443
+msgid ""
+"Wähle die gewünschten Einstellungen aus und es wird die erstellte Datei "
+"heruntergeladen und angezeigt."
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:445
+msgid ""
+"Im PDF-Format werden die Benutzer neben dem zugehörigen Passwort in "
+"Kästchen angezeigt, wie in diesem Beispiel:"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:451
+msgid "WebUI class Users Export"
+msgstr ""
+
+#: ../../source/classroom/webui-basics/index.rst:451
+msgid "PDF-Datei mit den Passwörtern der Schüler der Klasse"
+msgstr ""
+

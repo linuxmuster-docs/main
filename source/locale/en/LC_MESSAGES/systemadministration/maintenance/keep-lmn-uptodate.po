@@ -1,0 +1,190 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:2
+msgid "linuxmuster.net aktuell halten"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:7
+msgid "Update des Ubuntu Servers von linuxmuster.net"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:9
+msgid ""
+"Um die linuxmuster.net 7.x zugrunde liegende Ubuntu Version (Ubuntu "
+"Server 22.04.x LTS 64bit) zu aktualisieren, beachte bitte nachstehende "
+"Hinweise."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:13
+msgid "Für ein sicheres System muss regelmäßig ein Update durchgeführt werden!"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:16
+msgid "Keine automatischen Updates"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:18
+msgid ""
+"Es wird ausdrücklich davon abgeraten den Linuxmuster.net-Server die "
+"Option ``Automatische Updates`` zu aktivieren, so dass "
+"Paketaktualisierungen automatisch von den Ubuntu-Update-Servern "
+"heruntergeladen und installiert werden."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:20
+msgid ""
+"Automatische Updates sind in der Datei ``/etc/apt/apt.conf.d/20auto-"
+"upgrades`` konfiguriert. Sofern darin der Eintrag ``APT::Periodic"
+"::Unattended-Upgrade \"1\";`` existiert, muss die ``\"1\"`` in eine "
+"``\"0\"`` geändert werden."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:22
+msgid ""
+"Melde Dich zusätzlich bei der entsprechenden `Mailingliste "
+"<https://lists.ubuntu.com/mailman/listinfo/ubuntu-security-announce>`_ an"
+" oder abonniere den entsprechenden `RSS-Feed "
+"<http://www.ubuntu.com/usn/rss.xml>`_. Alle Hinweise zu "
+"Sicherheitsupdates von Ubuntu erhält man unter http://www.ubuntu.com/usn/"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:26
+msgid "Aktualisierungen einspielen"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:28
+msgid ""
+"Um die Server-Installation auf den aktuellen Paketstand zu bringen, gehe "
+"folgendermaßen vor:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:30
+msgid "Logge Dich als Benutzer root auf einer Serverkonsole ein."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:32
+msgid "Aktualisiere die Paketlisten:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:38
+msgid ""
+"Installiere nun Aktualisierungen und weitere Software-Pakete über das "
+"Internet:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:44
+msgid ""
+"Es wird aufgelistet, welche Pakete aktualisiert werden. Bestätige die "
+"Aktualisierung mit der Eingabe von **Y**"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:47
+msgid ""
+"Während des Aktualisierungsverlaufs fragen manchmal Pakete nach, ob eine "
+"neue Konfigurationsdatei installiert werden soll. Gib hier **N** oder "
+"**ENTER** für \"Beibehalten\" an."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst
+msgid "Keep Config"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:54
+msgid ""
+"Insbesondere bei einem ersten Update innerhalb eines Ubuntu-Server-"
+"Releases, können Dienste die Nachfrage stellen, ob die jeweilige "
+"Konfigurationsdatei automatisch erstellen sollen. hier lautet die Antwort"
+" grundsätzlich \"nein\" (z. B. Samba)"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst
+msgid "Say NO for autoconfig"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:62
+msgid ""
+"Zudem kann die Frage auftauchen, ob bei Bedarf Dienste neu gestartet "
+"werden dürfen. Sofern das Update eher zu Zeiten geringer Last ausgeführt "
+"werden sollten, kann diese Frage mit **y** beantwortet werden:"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst
+msgid "Restart Services"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:70
+msgid "Aktualisierung der Firewall OPNsense®"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:72
+msgid "Um die Firewall OPNsense® zu aktualisieren, beachte bitte Hinweise."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:76
+msgid "Führe Updates bitte regelmäßig manuell durch."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:78
+msgid ""
+"Bei linuxmuster.net 7.2 ist die Firewall relativ unabhängig vom "
+"eigentlichen Server zu warten. Dementsprechend werden die Updates über "
+"die Weboberfläche der Firewall eingespielt."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:80
+msgid ""
+"Verbinde Dich hierzu mit der Firewall über einen Browser. Nach der "
+"Anmeldung erscheint das Dashboard (unter Lobby). Darin befindet sich ein "
+"Link um direkt Updates einzuspielen."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:82
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:88
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:95
+msgid "OPNsense® aktualisieren"
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:86
+msgid ""
+"Eine etwas ausführlichere Übersicht ist unter ``System -> Firmware -> "
+"Aktualisierungen`` zu finden."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:92
+msgid ""
+"Normale Minor-Releases können so direkt eingespielt werden. Sobald "
+"allerdings das Patch-Level erhöht wird, muss hier zuerst das `Upgrade` "
+"entsperrt werden."
+msgstr ""
+
+#: ../../source/systemadministration/maintenance/keep-lmn-uptodate.rst:99
+msgid ""
+"Es ist zu empfehlen solche Upgrades außerhalb der regulären Einsatzzeiten"
+" der Schule zu betreiben. Bei einem Upgrade startet die Firewall mehrfach"
+" neu und unterbricht damit alle Verbindungen nach außen. Zudem kann es zu"
+" Problemen mit einzelnen Modulen kommen.  Vor dem Update sollte also im "
+"Hypervisor (Proxmox, XenServer, ...) unbedingt ein Snapshot erstellt "
+"werden, so dass die Maschine im Fehlerfall wieder in den Ausgangszustand "
+"zurückgesetzt werden kann."
+msgstr ""
+

@@ -1,0 +1,714 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/systemadministration/openvpn/index.rst:5
+msgid "OpenVPN konfigurieren"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:9
+msgid ""
+"Um Schülern und Lehrern die Möglichkeit zu geben, sich via VPN in das "
+"Schulnetz \"einzuwählen\", beschreibt diese Dokumentation die Einrichtung"
+" des OpenVPN-Dienstes auf der Firewall OPNsense®. Sowie die Anmeldung via"
+" LDAP über den linuxmuster Server."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:12
+msgid "Voraussetzungen"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:14
+msgid ""
+"Die Firewall OPNsense® wurde erfolgreich in Verbindung mit dem "
+"linuxmuster.net Server (v7) eingerichtet. Sofern \"vor\" der OPNsense® "
+"ein Router zur Verwaltung der externen Verbindung eingesetzt wird, muss "
+"dieser ein Port - Forwarding ermöglichen, der Anfragen auf dem für VPN "
+"genutzten Port (z.B. 1194) auf die externe Schnittstelle der OPNsense® "
+"ermöglicht. Zudem muss die OPNsense® aus dem externen Netz via URL "
+"(DynDNS oder eigene Domain) erreichbar sein."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:17
+msgid "LDAP-Anbindung"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:19
+msgid "Melde Dich an der GUI der OPNsense® als Benutzer ``root`` an."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "Login OPNsense®"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:25
+msgid ""
+"Wähle links im Menü unter dem Eintrag ``System`` --> ``Zugang`` --> "
+"``Server`` , um einen neuen Server-Eintrag für die LDAP-Authentifizierung"
+" hinzuzufügen."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "Menue System - Access - Server"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:31
+msgid ""
+"Um die LDAP-Anbindung auf der OPNsense® für Schüler und Lehrer "
+"einzurichten, durchläufst Du folgende Schritte:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:34
+msgid "Server hinzufügen"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:36
+msgid ""
+"Unter ``System`` --> ``Zugang`` --> ``Server`` einen Server hinzufügen "
+"(oben rechts). Es sind folgende Einträge vorzunehmen:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:38
+msgid "Beschreibender Name: ``Linuxmuster VPN Zugang``"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:39
+msgid "Typ: LDAP"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:40
+msgid "Hostname oder IP-Adresse: ``server.linuxmuster.lan``"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:41
+msgid "Port-Wert: 636"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:42
+msgid "Transport: SSL - Verschlüsselt"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:43
+msgid "Protokollversion: 3"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:44
+msgid "Bind-Zugangsdaten:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:51
+#: ../../source/systemadministration/openvpn/index.rst:56
+msgid "DC-Werte wie unter 8. auf den eigenen Bind anpassen."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:53
+msgid "Basis-DN: ``DC=linuxmuster,DC=lan``"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:54
+msgid "Authentifizierungscontainer: ``DC=linuxmuster,DC=lan``"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:58
+#: ../../source/systemadministration/openvpn/index.rst:81
+msgid "Nachstehende Abb. verdeutlicht die Anwendung der o.g. Einstellungen:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "Settings VPN LDAP-Serer"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:64
+msgid "Erweiterte Abfrage: ``Schüler und Lehrer``:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:70
+msgid "O D E R"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:72
+msgid "Erweiterte Abfrage: ``Nur Lehrer``:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:78
+msgid "Benutzerbennenungsattribut: ``sAMAccountName``"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "Settings VPN LDAP-Serer Part2"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:87
+msgid ""
+"Danach sollte der Login mit beliebigen Nutzern getestet werden. Erst "
+"nachdem die Tests erfolgreich waren fortgahren. Dies kann unter ``System "
+"> Zugang > Prüfer`` und der Auswahl des vorhin angelegten "
+"Authentifizierungsservers für den  Linuxmuster VPN-Zugang erfolgen."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:91
+msgid "Zertifikate erstellen"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:93
+msgid ""
+"Der OpenVPN Server braucht eine CA, um das Serverzertifikat zu erstellen."
+" Man kann entweder eine neue CA generieren, oder die vom linuxmuster "
+"Setup erzeugte CA verwenden. In dieser Dokumentation wird die Erstellung "
+"einer neuen CA dargestellt, die nur für das VPN verwendet werden soll."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:96
+msgid "CA erstellen"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:97
+msgid "Unter ``System`` --> ``Zugang`` --> ``Sicherheit`` --> ``Aussteller``"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "System-Security-CA: Menue item"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:103
+msgid ""
+"ist ein Aussteller hinzuzufügen (oben rechts). Es sind folgende "
+"Einstellungen vorzunehmen:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:106
+msgid "Beschreibender Name: ``Linuxmuster VPN CA`` <eigener Name>"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:107
+msgid "Vorgehen: Erstelle eine interne Zertifizierungsstelle"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:108
+#: ../../source/systemadministration/openvpn/index.rst:140
+msgid "Key Type: RSA"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:109
+#: ../../source/systemadministration/openvpn/index.rst:141
+msgid "Schlüssellänge: 4096"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:110
+#: ../../source/systemadministration/openvpn/index.rst:142
+msgid "Hash-Algorithmus: SHA512"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:111
+msgid "Lebenszeit (Tage): <frei wählbar>"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "System-Security-CA"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:117
+msgid "Bedeutender Name: <dein bedeutender Name für die CA>"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:119
+msgid ""
+"Die erstellte CA findet sich unter ``System`` --> ``Zugang`` --> "
+"``Sicherheit`` --> ``Aussteller`` wie in nachstehender Abb. dargestellt:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "CA System-Security-CA: Part2"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:126
+msgid "Zertifikat hinzufügen"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:128
+msgid ""
+"Danach ist unter Unter ``System`` --> ``Sicherheit`` --> ``Zertifikate`` "
+"ein Zertifikat hinzuzufügen (oben rechts)."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "System-Security-Certificates: Menue item"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:134
+msgid "Folgende Eingaben sind zu treffen:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:136
+msgid "Vorgehen: Erstelle ein neues internes Zertifikat"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:137
+msgid "Beschreibender Name: Linuxmuster VPN Server"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:138
+msgid "Zertifizierungsstelle: Linuxmuster VPN CA"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:139
+msgid "Type: Serverzertifikate"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:143
+msgid "Lebenszeit (Tage): frei wählbar!"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:144
+msgid "Private Key Location: Save on this firewall"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:145
+msgid "Bedeutender Name: <dein bedeutender Name für das Zertifikat>"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:147
+msgid "Folgende Abb. gibt diese Einstellungen wieder:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "Create Server Certificate"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:154
+msgid "OpenVPN-Server erstellen"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:156
+msgid ""
+"Unter ``VPN`` --> ``OpenVPN`` --> ``Server`` ist ein OpenVPN-Server zu "
+"erstellen (oben rechts)."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "OPenVPN Server: Menue item"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:162
+msgid "Es sind folgende Eingaben sind zu treffen:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:164
+msgid "Beschreibender Name: ``Linuxmuster VPN``"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:165
+msgid "Servermodus: Remotezugriff (Benutzerauthentifizierung)"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:166
+msgid "Backend Authentifizierung: Linuxmuster VPN Zugang"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:167
+msgid "Lokale Gruppe erzwingen (keiner)"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:168
+#: ../../source/systemadministration/openvpn/index.rst:227
+msgid "Protokoll: UDP"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:169
+msgid "Gerätemodus: tun"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:170
+msgid "Schnittstelle: WAN"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:171
+msgid "Lokaler Port: (frei wählbar) 25008"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:172
+msgid "TLS Authentifikation: Beides angehakt lassen"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:173
+msgid "Peer-Zertifizierungsstelle: Linuxmuster VPN CA"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:174
+msgid "Peerzertifikatsrückrufliste: Keine"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:175
+msgid "Serverzertifikate: Linuxmuster VPN Server"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:177
+msgid "Nachstehende Abb. verdeutlicht diese Einstellungen:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "Add VPN Server"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:183
+msgid "DH Parameterlänge: 4096"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:184
+msgid "Verschlüsselungsalgorithmus: AES-256-CBC (256-bit key, 128-bit block)"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:185
+msgid "Authentifizierungs-Digestalgorithmus: SHA512 (512-bit)"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:186
+msgid "Hardwarekryptografie: No Hardware Crypto Acceleration"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:187
+msgid "Zertifikatstiefe: Eins (Client+Server)"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:193
+msgid ""
+"IPv4 Tunnelnetzwerk: Ein Netzbereich in dem die VPN Clients ihre IP "
+"bekommen z.B. 172.30.1.0/24 oder 192.168.100.0/24"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:194
+msgid "IPv6 Tunnelnetzwerk:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:195
+msgid "Weiterleitungs Gateway:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:196
+msgid ""
+"Lokales IPv4-Netzwerk: 10.0.0.0/16 --> hier ist das beim Setup gewählte "
+"linuxmuster-Netz anzugeben"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:197
+msgid "Lokales IPv6-Netzwerk:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:198
+msgid "Fernes IPv4-Netzwerk:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:199
+msgid "Fernes IPv6-Netzwerk:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:200
+msgid "Konkurrierende Verbindungen:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:201
+msgid "Komprimierung: Aktiviert mit adaptiver Kompression"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "VPN Server Settings: Compression"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:207
+msgid "Typ des Dienstes:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:208
+msgid "Inter-Client-Kommunikation:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:209
+msgid "Doppelte Verbindungen:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:210
+msgid "IPv6 deaktivieren:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:211
+msgid "Für den Rest: Standardwerte!"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:213
+msgid ""
+"Hast Du den VPN-Server erfolgreich hinzugefügt, so wird dieser in der "
+"Übersicht angezeigt. Siehst Du vor der Angabe des Protokolls ein "
+"``grünes`` Dreieck, dann läuft der VPN-Server."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "VPN Server hinzugefügt"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:220
+msgid "Firewall Regeln"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:222
+msgid ""
+"Es müssen nun Regeln definiert werden, die die VPN-Anfragen an die "
+"Firewall weitergeben und nach erfolgreicher Authentifizierung den VPN-"
+"Datenverkehr zulassen."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:224
+msgid ""
+"Unter ``Firewall`` --> ``Regeln`` --> ``WAN`` eine neue Regel anlegen "
+"(oben rechts). Folgende Eingaben sind zu treffen:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:228
+msgid "Ziel: Diese Firewall"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:229
+msgid ""
+"Zielportbereich: von: 25008 bis: 25008 (ggf. anpassen an eigene Portwahl "
+"-> in der Abb. 1194)"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:230
+#: ../../source/systemadministration/openvpn/index.rst:248
+#: ../../source/systemadministration/openvpn/index.rst:286
+msgid "Für den Rest: <Standardwerte>"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:232
+msgid "In der Regelansicht stellt sich diese wie folgt dar:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "Add VPN rule on WAN interface for VPN Port"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:238
+msgid ""
+"Danach unter ``Firewall`` --> ``Regeln`` --> ``OpenVPN`` eine neue Regel "
+"anlegen (oben rechts). Hier findet sich jetzt nach der Anlage des VPN-"
+"Servers eine neuer Menüeintrag für OpenVPN:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "Rule: OpenVPN Menue"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:245
+msgid "Es sind folgende Eingaben vorzunehmenn:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:247
+msgid ""
+"Quelle: 172.30.1.0/24 -> das VPN-Netz, das Du für den OpenVPN-Server "
+"zuvor eingerichtet hast."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:250
+msgid "Änderungen übernehmen (rechts im blauen Kasten)."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "OpenVPN Rule: Settings"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:256
+msgid ""
+"Sollte ein Router das externe Netz bedienen und befindet sich die "
+"OPNsense® \"hinter\" dem Router, so so muss auf dem Router eine POrt-"
+"Forwarding Regeln für den gewünschten VPN-Port und das TCP-Protokoll "
+"eingerichtet werden, so dass alle externen Pakete auf diesem Port via UDP"
+" zur externen Schnittstelle der OPNsense® weitergeleitet werden."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:258
+msgid ""
+"In der OPNsense® ist dann unter ``Firewall`` --> ``NAT`` --> "
+"``Portweiterleitung`` eine Regel hierzu anzulegen."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "NAT: Port-Forwarding"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:264
+msgid ""
+"Hier legst Du nun eine Regel an, die UDP-Pakete, die an diese Firewall "
+"auf dem gewählten VPN-Port (hier in dem Beispiel Port 1194) ankommen, an "
+"die externe Schnittstelle (IP aus einem privaten Netz) der Firewall und "
+"den hier konfigurierten Port weitergegeben werden."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:266
+msgid "Nachstehende Abb. verdeutlicht diese Regel:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "NAT: Port-Forwarding Rule"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:272
+msgid ""
+"Zwischen dem Router, der die externe Verbindung bedinet und der externen "
+"Schnittstelle der Firewall wird i.d.R. ein privates Netz (z.B. "
+"192.168.200.0/24) verwendet. Daher muss hier eine Weiterleitungsregel für"
+" NAT angelegt werden, sonst werden die eingehenden Pakete vom Router "
+"nicht an die Firewall weitergegeben."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:275
+msgid "Konfiguration exportieren"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:277
+msgid ""
+"Für die Verbidnung mit den Clients muss nun ein Export des Profils für "
+"den Benutzer erfolgen."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:279
+msgid ""
+"Dazu gehst Du zu ``VPN`` --> ``OpenVPN`` --> ``Clientexport``. Dort gibst"
+" Du Folgerndes an:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:282
+msgid ""
+"Ferner Zugriffsserver: ``Linuxmuster VPN UDP:25008`` --> Server aus der "
+"Liste auswählen, Port wie von Dir vorher angegeben."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:283
+msgid "Export type: Nur Datei"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:284
+msgid ""
+"Hostname: URL unter dem die Firewall erreichbar ist, z.B: "
+"vpn.meineschule.de"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:285
+msgid "Port: 25008 (ggf. anpassen an eigene Portwahl)"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "OpenVPN Client: Export configuration"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:292
+msgid ""
+"Danach drückst Du unter ``Accounts / certificates`` bei Linuxmuster VPN "
+"Server ganz rechts auf das Downloadsymbol."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "OpenVPN Client: Download configuration"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:298
+msgid ""
+"Diese Konfigurationseinstellungen kannst Du nun allen Nutzern (z.B. "
+"Lehrern und Schülern), die Zugriff auf der Schulnetz via VPN haben "
+"sollen, im Intranet oder via Messenger zur Verfügung stellen."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:301
+msgid "mit VPN verbinden"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:303
+msgid ""
+"Bevor Du nun die Verbindung mit einem Client zum VPN-Server testest, "
+"überprüfe zuerst, ob der Dienst läuft. In der GUI der OPNsense® klickst "
+"Du links auf den Menüeintrag ``Lobby`` und siehst rechts alle Dienste mit"
+" ihrem Status aufgelistet. Hier muss für OpenVPN Server ein ``grünes`` "
+"Dreieck zu sehen sein. Dies weist daraufhin, dass der Dienst läuft."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "VPN-Server: Check Status"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:311
+msgid "OpenVPN Client"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:313
+msgid ""
+"Installiere Dir auf Deinem Gerät (PC, Tablet, Smartphone) den OpenVPN "
+"Client. Die heruntergeladene Datei muss nun auf das Endgerät "
+"heruntergeladen und dort in die App OpenVPN Connect (für alle "
+"Plattformen) importiert werden. Nach dem Import kann durch Eingabe von "
+"Benutzername und Passwort eine VPN-Verbindung hergestellt werden."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:316
+msgid ""
+"Auf der OPNsense® kannst Du den Verbindungsstatus der VPN-Verbindungen "
+"unter ``VPN`` --> ``OpenVPN`` --> ``Verbindungsstatus`` überprüfen."
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "VPN: Check connection status - menue item"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:322
+msgid ""
+"Hier werden dann die Benutzer mit den zugeordneten VPN-Verbindungen "
+"angezeigt:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:-1
+msgid "VPN: Check connection status"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:329
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:331
+msgid ""
+"Sollte die Verbindung nicht erfolgreich aufgebaut werden können, prüfe "
+"Folgendes ab:"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:333
+msgid "Ist die OPNsense® von extern via URL erreichbar ?"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:334
+msgid "Antwortet die OPNsense® auf dem eingestellten VPN Port ?"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:335
+msgid "Kommen die VPN - Pakete (ggf. Prot-Forwarding) auf der OPNsense® an?"
+msgstr ""
+
+#: ../../source/systemadministration/openvpn/index.rst:336
+msgid ""
+"Werden die VPN-Pakete auf der WAN-Schnittstelle zugelassen (siehe Live-"
+"Logs)?"
+msgstr ""
+

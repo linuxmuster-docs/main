@@ -1,0 +1,400 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/setup/add-user-accounts.rst:5
+msgid "Benutzeraufnahme mit der Schulkonsole"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:11
+msgid ""
+"In einer Schule müssen meist mehrere hundert bis einige tausend Schüler "
+"als Benutzer angelegt werden. Die Schulkonsole (WebUI) erlaubt das "
+"Einlesen aller Schülerdaten aus einer Text-Datei, die z.B. aus dem "
+"Schulverwaltungsprogramm der Schule bezogen wurde. Anschließend werden"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:13
+msgid ""
+"Konten aller Schüler dieser Liste, die im System noch nicht vorhanden "
+"sind, angelegt,"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:14
+msgid "solche mit einer neuen Klasse versetzt und"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:15
+msgid ""
+"Konten nicht mehr aufgeführter Schüler schrittweise aus dem System "
+"entfernt."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:17
+msgid ""
+"In diesen Abschnitten werden beispielhaft ``ein Lehrer händisch`` "
+"angelegt und per Datei-Import einige Schüler aufgenommen. Melde Dich "
+"dafür an der Schulkonsole als ``global-admin`` an."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:21
+msgid "Zeichenkodierung wählen"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:23
+msgid ""
+"Die Zeichencodierung für die zu importierenden CSV-Benutzerdateien kann "
+"in der WebUI festgelegt werden. Der Standard ist eine Auto-Erkennung der "
+"Codierung festgelegt. Ist die Kodierung der Eingabedatei bekannt, so kann"
+" diese auch direkt vorgegeben werden."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:25
+msgid "Klicke dazu auf das Menü ``Einstellungen -->  Schuleinstellungen``."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:31
+msgid "Menue Settings"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:31
+msgid "Schuleinstellungen wählen"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:33
+msgid ""
+"Klicke rechts auf die Reiterkarte ``Listenimport``, unterhalb von "
+"``Zeichenkodierung`` ist im Beispiel ``UTF-8`` erkannt worden."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:41
+msgid "Menue Coding"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:41
+msgid "Listenimport und Zeichenkodierung"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:43
+msgid ""
+"Klicke auf das Drop-down Menü für die Listenkodierung und wähle die "
+"gewünschte Kodierung aus. Schließe die Eingabe mit \"Speichern\" ab."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:46
+msgid "Für den Listenimport gibt es drei verschiedene CSV-Dateien:"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:48
+msgid "``students.csv``: Liste für den Schülerimport"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:49
+msgid "``teachers.csv``: Liste für den Lehrerimport"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:50
+msgid ""
+"``extrastudents.csv``: Liste für den Import von Benutzern für z.B. "
+"Fortbildungen, Kurse etc."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:52
+msgid "Diese CSV-Dateien folgen nachstehendem Aufbau:"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:58
+msgid ""
+"Trennzeichen ist das Semikolon (;). Klasse ist nur für Schüler anzugeben."
+" Die ID kann nachgestellt sein und stammt i.d.R. aus den "
+"Schulverwaltungsprogrammen. Auf diese Weise wird sichergestellt, dass für"
+" identische Benutzer immer nur ein Zugang angelegt wird."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:62
+msgid "Lehrer importieren"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:64
+msgid "Wähle das Menü ``Benutzerverwaltung --> Listenverwaltung``."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:70
+msgid "Menue list management"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:70
+msgid "Menüeintrag Listenverwaltung"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:72
+msgid "Wähle rechts oben die Reiterkarte ``Lehrer``."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:75
+msgid "Einzelnen Lehrer hinzufügen"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:77
+msgid ""
+"Klicke auf den Button ``+ Lehrer hinzufügen``. Es wird eine leere Zeile "
+"hinzugefügt, die nun mit den angezeigten Daten zu füllen ist."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:84
+msgid "Menue: Add teacher"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:84
+msgid "Lehrer hinzufügen"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:88
+msgid ""
+"Wie dargestellt führt der ``Benutzername bo.hans zu einem Importfehler`` "
+"! Im Benutzernamen darf kein Punkt enthalten sein. ``vornamenachname`` "
+"oder nur ``nachname`` wären hingegen zulässige Benutzernamen."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:92
+msgid ""
+"Der angegebene Benutzername darf keine Leerzeichen, Punkte und "
+"Großbuchstaben enthalten. Anderfalls kommt es bei ``Speichern & Prüfen`` "
+"zu einer Fehlermeldung"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:94
+msgid ""
+"Mit ``+ Lehrer hinzufügen`` können auf diese Art und Weise weitere Lehrer"
+" einzeln aufgenommen werden. Klicke nach dem Eintragen aller der Daten "
+"unten auf den Button ``Speichern & Prüfen``."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:96
+msgid ""
+"Es erscheint ein Fenster, in dem Du siehst, wie mit den angegebenen "
+"Benutzerdaten verfahren wird."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:103
+msgid "Menue: Add teacher - check data"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:103
+msgid "Prüfergebnis für den Import der Nutzerdaten"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:105
+msgid ""
+"In o.g. Fenster ist zu sehen, dass ein neuer Lehrer hinzugefügt wird. Mit"
+" dem Button ``Übernehmen`` werden die dargestellten Aktionen ausgeführt "
+"(hinzufügen, aktualisieren, löschen)."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:107
+msgid ""
+"Der Importdialog zeigt den Fortschritt an und meldet zurück, wenn die "
+"Aufnahme abgeschlossen wurde."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:114
+msgid "Menue: Add teacher - import finished"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:114
+msgid "Import fertiggestellt"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:116
+msgid "Bestätige dies mit dem Button ``Schliessen``."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:118
+msgid ""
+"Die neune oder geänderten Benutzer findest Du nun im Menü "
+"``Benutzerverwaltung --> Lehrer``. Hier können deren Kontoinformationen "
+"abgerufen und z.B. Erstpasswörter (zurück-)gesetzt werden."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:125
+msgid "Menue: Added teacher"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:125
+msgid "Benutzerverwaltung: Lehrer"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:129
+msgid "Schüler importieren"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:131
+msgid "Schüler können analog zu Lehrern einzeln hinzugefügt werden."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:133
+msgid ""
+"Alternativ können **alle** Schüler (alte wie neue) importiert werden. "
+"Wähle im Menü ``Benutzerverwaltung --> /Listenverwaltung --> Schüler`` "
+"(es erscheint automatisch die Schülerliste)."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:135
+msgid ""
+"Mit der Schaltfläche unterhalb der dargestellten Schüler ``CSV`` kannst "
+"Du verschiedene Möglichkeiten ansteuern, eine CSV-Datei zu erstellen, "
+"diese zu bearbeiten oder eine neue bereitzustellen."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:141
+msgid "Menue: list management - csv"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:141
+#: ../../source/setup/add-user-accounts.rst:214
+msgid "Eigene CSV hochladen"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:143
+msgid "Eine zu importierende Datei sollte folgende Daten aufweisen:"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:149
+msgid ""
+"Nachstehende Daten könnten lokal erstellt, als CSV-Datei mit der UTF-8 "
+"Codierung abgespeichert und danach mit o.g. Option ``Eigene CSV "
+"hochladen`` importiert werden."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:159
+msgid ""
+"Die Datei muss alle alten und neuen Schüler enthalten, sonst werden alle "
+"fehlenden Schüler zur Entfernung (Versetzung aus der Schule) vorgemerkt. "
+"Siehe auch :ref:`add-user-errorcorrection-label` unten. Die Dateinamen "
+"sind ebenso eindeutig vorgegeben. Für Schüler ist die Datei students.csv "
+"zu nennen."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:161
+msgid ""
+"Mit der Option ``Eigene CSV hochladen`` kann eine so formatierte Datei "
+"nun hochgeladen werden. Die Schüler der zu importierenden Datei sind dann"
+" in der Listenverwaltung unter den Schülern zu sehen."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:168
+msgid "Menue: pupils to be imported via csv"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:168
+msgid "Schüler hinzufügen"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:170
+msgid ""
+"Mit ``Speichern`` werden eventuelle Konsistenzfehler überprüft. Die "
+"Schaltfläche ``SPEICHERN & PRÜFEN`` zeigt nun an, wieviele Schüler bei "
+"``ÜBERNEHMEN`` ins System übernommen, versetzt (aktualisiert) oder "
+"gelöscht werden."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:177
+#: ../../source/setup/add-user-accounts.rst:186
+msgid "Menue: pupils to be imported - checked"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:177
+msgid "Überprüfung der zu importierenden Benutzer"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:179
+msgid ""
+"Mit Klick auf den Button ``Übernehmen`` werden die dargestellten Aktionen"
+" ausgeführt. Der abgeschlossene Import ist im Fenster zu sehen:"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:186
+msgid "Benutzer importiert"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:188
+msgid ""
+"Ab der erfolgreichen Übernahme können die Schüler unter dem Menüpunkt "
+"``Benutzerverwaltung --> Schüler`` gefunden und deren Konten bearbeitet "
+"werden."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:194
+msgid "Fehlerkorrektur"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:196
+msgid ""
+"Hat man fehlerhafte Daten in das System eingepflegt und hat sie noch "
+"nicht imporiert, lassen sich Schüler und Lehrerlisten aus einer Sicherung"
+" zurückholen. Der Knopf für die Sicherung ist rechts unten in der "
+"Listenverwaltung."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:199
+msgid ""
+"Hast Du z.B. bei der zuvor importierten CSV-Datei die IDs vergessen, "
+"kannst Du diese in der CSV-Datei ergänzen, diese erneut importieren. Es "
+"werden Dir dann die Änderungen angezeigt. In diesem Fall wird die ``uid``"
+" auf die neu eingetragenen ID geändert."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:206
+msgid "Menue: import users - changes"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:206
+msgid "Benutzer aktualisiert"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:208
+msgid ""
+"Unter Listenverwaltung hast Du bei den jeweiligen Benutzern (Schüler, "
+"Lehrer, Extraschüler) unten rechts das Drop-down-Menü für die CSV-"
+"Dateien."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:214
+#: ../../source/setup/add-user-accounts.rst:224
+msgid "Menue: CSV"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:217
+msgid ""
+"Klickst Du auf ``CSV --> Im Editor öffnen`` wird die ``students.csv`` auf"
+" dem Server geöffnet und Du kannst Änderungen vornehmen."
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:224
+msgid "CSV-Datei mit der WebUI im Browser editieren"
+msgstr ""
+
+#: ../../source/setup/add-user-accounts.rst:226
+msgid ""
+"Eine ausführlichere Dokumentation zur Benutzerverwaltung findet sich im "
+"entsprechenden Abschnitt dieser Dokumentation."
+msgstr ""
+

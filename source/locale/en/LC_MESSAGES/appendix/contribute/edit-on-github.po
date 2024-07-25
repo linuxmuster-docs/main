@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/appendix/contribute/edit-on-github.rst:4
+msgid "Dokumentation in GitHub ändern"
+msgstr ""
+
+#: ../../source/appendix/contribute/edit-on-github.rst:6
+msgid ""
+"Wenn Du einen Fehler (Rechtschreibfehler, kleine inhaltliche Fehler, "
+"etc.) in der Dokumentation gefunden hast, klicke einfach auf den ``Edit "
+"on Github`` Link am rechten oberen Rand jeder Dokumentationsseite."
+msgstr ""
+
+#: ../../source/appendix/contribute/edit-on-github.rst:-1
+msgid "Edit on Github"
+msgstr ""
+
+#: ../../source/appendix/contribute/edit-on-github.rst:12
+msgid ""
+"Damit wirst Du auf github.com geleitet. Mit einem Klick auf den Stift "
+"(siehe Bild) kannst Du das aktuelle Kapitel bearbeiten. Dafür müsst du "
+"Dich bei GitHub anmelden. Wenn Du noch kein Konto bei GitHub hast, kannst"
+" Du `hier eines anlegen <https://github.com/join>`_ oder oben rechts auf "
+"\"Sign up\" klicken."
+msgstr ""
+
+#: ../../source/appendix/contribute/edit-on-github.rst:-1
+msgid "Edit not signed in"
+msgstr ""
+
+#: ../../source/appendix/contribute/edit-on-github.rst:22
+msgid ""
+"Die Dokumentation ist in der Auszeichnungssprache \"rST\" geschrieben. "
+"`Hier <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_ "
+"findest Du einen guten Überblick über die am häufigsten verwendeten "
+"Elemente."
+msgstr ""
+
+#: ../../source/appendix/contribute/edit-on-github.rst:-1
+msgid "Edit signed in"
+msgstr ""
+
+#: ../../source/appendix/contribute/edit-on-github.rst:28
+msgid ""
+"Im Beispiel wurde der Rechtschreibfehler und die Länge der zur "
+"Überschrift gehörenden Unterschreichung geändert."
+msgstr ""
+
+#: ../../source/appendix/contribute/edit-on-github.rst:30
+msgid ""
+"Nachdem Du alle Änderungen vorgenommen hast, gib unten einen Titel und "
+"einen Kommentar ein. Die Änderungen können nun mit einem Klick auf "
+"\"Propose file changes\" eingereicht werden."
+msgstr ""
+
+#: ../../source/appendix/contribute/edit-on-github.rst:-1
+msgid "propose changes"
+msgstr ""
+
+#: ../../source/appendix/contribute/edit-on-github.rst:36
+msgid ""
+"Dein Änderungsvorschlag wird dann vom Dokumentationsteam geprüft und "
+"gegebenenfalls übernommen. Sekunden später erscheint die Änderung dann "
+"auch hier in der offiziellen Dokumentation."
+msgstr ""
+
+#: ../../source/appendix/contribute/edit-on-github.rst:40
+msgid ""
+"Bitte beachte auch unbedingt die :doc:`Leitlinien zur Dokumentation "
+"<guidelines>`, damit Deine Änderungen schnell eingepflegt werden könnnen!"
+msgstr ""
+
+#: ../../source/appendix/contribute/edit-on-github.rst:42
+msgid ""
+"Sollest Du bereits Schreibrechte am Repositorium haben und bist Dir "
+"sicher, dass die Dokumentation durch Deine Änderung nicht beeinträchtigt "
+"wird, kannst Du die Änderungen direkt einbauen (\"Commit\") oder im "
+"Zweifel einen Zweig und einen so genannten Pull-Request erstellen."
+msgstr ""
+
+#: ../../source/appendix/contribute/edit-on-github.rst:-1
+msgid "commit changes directly"
+msgstr ""
+
+#: ../../source/appendix/contribute/edit-on-github.rst:48
+msgid ""
+"Größere Änderungen an der Dokumentation sind immer über Pull-Requests zu "
+"erstellen. Dafür ist es nützlich, lokal eine Kopie (fork) vorzuhalten und"
+" Änderungen lokal zu testen, das im :doc:`entsprechenden Kapitel <new>` "
+"erklärt wird."
+msgstr ""
+

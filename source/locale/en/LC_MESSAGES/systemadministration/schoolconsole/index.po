@@ -1,0 +1,654 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/systemadministration/schoolconsole/index.rst:5
+msgid "Schulkonsole des global-admin"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "School Console Welcome"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:15
+msgid "Allgemeine Bedienung"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:17
+msgid ""
+"Die Schulkonsole wird im Browser über https://10.0.0.1 aufgerufen. Je "
+"nachdem welcher Benutzer angemeldet ist, erscheinen zugehörige "
+"Menüpunkte. Alle verwaltungsspezifischen Menüpunkte stehen dem Benutzer "
+"''global-admin'' bereit. Lehrer haben Zugriff auf alle pädagogischen "
+"Funktionen."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Welcome"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:24
+msgid "Die Icons haben folgende Bedeutung:"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:26
+msgid "Menü ein- und ausklappen"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Extend Menue"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:32
+msgid "Benutzericon"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI User Icon"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:38
+msgid "angemeldeter Benutzername"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Username"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:44
+msgid "eigenes Passwort ändern"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Change Password"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:50
+msgid "Abmelden"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Logout"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:56
+msgid "Seitenverhältnis skalieren"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Scale Page Ratio"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:62
+msgid ""
+"Das Menü können Sie durch Anklicken der drei Striche links neben dem "
+"linuxmuster.net-Symbol ein- und ausblenden."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:65
+msgid ""
+"Bei Namenvergaben, beispielsweise von Kursen oder Projekten, sollte auf "
+"Umlaute und ß verzichtet werden."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:69
+msgid "Allgemein"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:72
+msgid "Hauptseite"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:74
+msgid ""
+"Eine Übersicht über Account- & Speicherinformationen des angemeldeten "
+"Benutzer. Möglichkeit zur Änderung des eigenen Passworts über Passwort "
+"ändern-Funktion."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Overview"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:81
+msgid "Dashboard"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:83
+msgid ""
+"Übersicht über aktive Serverkomponenten, wie CPU-Auslastung, "
+"Speicherauslastung und Laufzeit."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Dashboard"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:90
+msgid "Benutzerverwaltung"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI User Management"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:96
+msgid ""
+"Hier können bereits aufgenommene Benutzer in den jeweiligen Bereichen "
+"Schüler, Lehrer, Schul-Administratoren verwaltet werden, sowie diese in "
+"der Listenverwaltung hinzufügt/entfernt werden. Im Bereich Globale "
+"Administratoren können globale Admins verwaltet und hinzugefügt/entfernt "
+"werden."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:101
+msgid ""
+"Schüler, Lehrer, Schul-Administratoren, Globale Administratoren: "
+"Funktionen"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:104
+msgid "Suche"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:106
+msgid ""
+"In den jeweligen Benutzer-Bereichen kann in der intelligenten "
+"Filterleiste nach Benutzern mit Kriterien wie Namen, Klassen, Projekten "
+"gefiltert und gesucht werden."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Search"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:113
+msgid "Passwort-Verwaltung"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:115
+msgid ""
+"Zu einzelnen Benutzern gibt es die Möglichkeiten über das Passwort-Menü "
+"rechts neben dem jeweiligen Namen."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:117
+msgid "Erstpasswort anzeigen"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:118
+msgid "Erstpasswort wiederherstellen"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:119
+msgid "Erstpasswort zufällig festlegen"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:120
+msgid "Erstpasswort benutzerdefiniert festlegen"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:121
+msgid "Benutzerpasswort festlegen"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Password Management"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:127
+msgid ""
+"Durch Auswählen von mehreren Benutzern über Anklicken des Quadrats links "
+"neben dem Loginnamen oder über die Funktion ``Alle auswählen``, können "
+"Funktionen auf mehrere Benutzer gleichzeitig angewendet werden."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:129
+msgid "Setze Zufallspasswort für Ausgewählte"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:130
+msgid "Setze Erstpasswort für Ausgewählte"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:131
+msgid "Benutzerdefiniertes Passwort für Ausgewählte"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Password All Users"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:138
+msgid "Informationsübersicht"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:140
+msgid ""
+"Über das Benutzereinstellungen-Menü rechts neben der jeweiligen Person "
+"können über die Funktion Benutzerinformationen benutzerbezogene "
+"Informationen angezeigt, wie Rolle und Gruppenzugehörigkeiten."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Password User Information"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:148
+msgid "Listenverwaltung"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:150
+msgid ""
+"In der Listenverwaltung können Benutzer von Schülern, Lehrern, und Extra-"
+"Schülern verwaltet werden, das bedeutet hinzugefügt, entfernet oder deren"
+" Daten und Zugehörigkeiten geändert werden. Benutzer können manuell über "
+"Eingabe von Vorname, Nachname und Geburtsdatum (und ggf. "
+"selbstdefinierten Benutzernamen für Lehrer) hinzugeügt werden und einzeln"
+" wiederum entfernt werden. Ebenso besteht die Möglichkeit auf schnellerem"
+" Wege eine vorhanden CSV-Liste mit Benutzerdaten in die Schulumgebung zu "
+"importieren."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:154
+msgid "Manuelle Benutzeraufnahme"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:155
+msgid ""
+"Unter den 3 Bereichen Schüler, Lehrer, Extra Schüler gibt es jeweils "
+"unten links der Seite (ggf. runterscrollen) eine ``hinzufügen``-Option "
+"drücken."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Add User"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:161
+msgid "Drücken Sie dann ``Speichern & Prüfen``."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Add User Save & Check"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:167
+msgid ""
+"Haben Sie alle Benutzerinformationen eingegeben und ist kein Feld leer, "
+"überprüfen Sie die Eingaben mit Speichern & Überprüfen in der "
+"Prüfergebnis-Ansicht."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Check Overview"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:173
+msgid ""
+"Eventuelle Fehler in der Fehleransicht auslesen, die Prüfergebnis-Ansicht"
+" abbrechen und die fehlerhaften Daten korrigieren und nochmals mit "
+"``Speichern & Überprüfen`` testen. Sind keine Fehler aufgetreten, über "
+"den Button Übernehmen die neuen Benutzer ins System übertragen."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Create User"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:181
+msgid "Benutzeraufnahme über vorhandene CSV-Datei"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:183
+msgid ""
+"Über die integrierte Funktion, Benutzer simpel über eine CSV-Datei zu "
+"übernehmen und anzupassen, können so zahlreiche Benutzer schnell "
+"aufgenommen werden. Dafür in einer bestimmten Benutzerliste über die "
+"Funktion in der unteren Menüleiste CSV laden auswählen und die CSV-Datei "
+"hochladen."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Import User CSV"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:189
+#: ../../source/systemadministration/schoolconsole/index.rst:195
+msgid ""
+"Falls die Spalten nicht in der richtigen Reihenfolge aufgelistet sind, "
+"gibt es die Möglichkeit diese graphisch per Ziehen mit der Maus "
+"umzuordnen, bevor sie mit Sortierung akzeptieren in die Liste übernommen "
+"werden."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Import User CSV Overview"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:197
+msgid ""
+"Anschließend ``Speichern & Überprüfen`` und ganz unten auf der "
+"Listenübersicht (gegebenfalls runterscrollen) Übernehmen."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:200
+msgid "Benutzer entfernen"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:202
+msgid ""
+"Sollen Benutzer entfernt werden, kann dies in der Listenansicht über das "
+"Papierkorb-Symbol rechts in der Benutzerzeile gemacht werden. Jeweilige "
+"Liste (Schüler-, Lehrer-, Extra-Schüler oder Extra-Kurse) öffnen Benutzer"
+" über den Papierkorb aus dessen Zeile entfernen."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:204
+msgid "Jeweilige Liste (Schüler-, Lehrer-, Extra-Schüler oder Extra-Kurse) öffnen"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:205
+msgid "Benutzer über den Papierkorb aus dessen Zeile entfernen"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Delete User"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:213
+msgid ""
+"Die Listenänderungen werden erst übernommen, wenn Speichern & Überprüfen "
+"erfolgreich ausgeführt wurde. Mögliche unpassende Eingaben oder leere "
+"Felder werden rot gekennzeichnet und sollten korrigiert werden, um dann "
+"nochmal Speichern & Überprüfen auszuführen."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:218
+msgid "Geräteverwaltung"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Device Management"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:224
+msgid ""
+"In der Geräteverwaltung gibt es unter Geräte eine Übersichtsseite aller "
+"angebunden Geräte inklusiver Informationen und der Möglichkeit diese zu "
+"ändern, weitere Geräte hinzuzufügen oder zu entfernen. Weiter finden Sie "
+"das LINBO-Menü zu desen Handhabung Sie die Anleitung LINBO & "
+"Domänenintegration verwenden können."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:227
+msgid "Geräte"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:229
+msgid ""
+"Hier ist die graphische Gerätelistenverwaltung implementiert. Geräte "
+"können hier aufgenommen, bearbeitet oder entfernt werden. Jedem Gerät "
+"müssen die Informationen mitgegeben werden."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:231
+msgid "Raum"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:232
+msgid "Hostname"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:233
+msgid "Gruppe (Hardwareklasse)"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:234
+msgid "MAC"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:235
+msgid "IP (jede IP nur einmal vergeben)"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:236
+msgid "Sophomorix-Rolle"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:237
+msgid "PXE (ermöglicht oder deaktiviert Netzwerkboot per LINBO)"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:240
+msgid "Gerät hinzufügen"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:242
+msgid ""
+"Über die Funktion Gerät hinzufügen unten links erscheint eine neue Zeile,"
+" in welcher die Informationen des neuen Gerätes eingegeben werden sollen."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Add Device"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:248
+msgid ""
+"Die Listenänderungen werden übernommen, wenn ``Speichern & Importieren`` "
+"erfolgreich ausgeführt wurde. Mögliche unpassende Eingaben oder leere "
+"Felder werden rot gekennzeichnet und sollten korrigiert werden, um dann "
+"nochmal ``Speichern & Importieren`` auszuführen."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:251
+msgid "Geräteansicht"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Device Overview"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:257
+msgid ""
+"Mit der Filterfunktion in der oberen Leiste kann über Eigenschaften, wie "
+"Namen und MAC, nach Geräten gefiltert werden. Rechts gibt es die "
+"Möglichkeit die Sortierweise nach Standardspalten, wie Raum und Gruppe, "
+"anzupassen."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:258
+msgid ""
+"Unter Felder können zusätzliche Spalten in der Geräteliste zur Anzeige "
+"ausgewählt werden."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:259
+msgid ""
+"Die Anzahl der pro Seite aufgelisteten Geräte kann unter Zeilen angepasst"
+" werden."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:262
+msgid "Linbo"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Linbo"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:268
+msgid ""
+"Unter dem Menü Gruppen können die Hardwareklassen bearbeitet werden, "
+"welche in der Gerätelistenverwaltung den jeweiligen Geräten zugeordnet "
+"werden. Im Menü `'Abbilder`` werden die enthaltenen Images aufgelistet, "
+"welche wiederum einer Hardwareklasse zugeordnet werden können."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:271
+msgid "Klassenzimmer"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:274
+msgid "Einschreiben"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:276
+msgid ""
+"Dieser Abschnitt dient Lehrern oder global-admins dazu sich in "
+"Schulklassen, Projekte oder zu Druckern einzuschreiben. Der ``global-"
+"admin`` ist automatisch zu allen Klassen und Projekte sowie Druckern "
+"zugeteilt. Lehrer sollten sich den jeweiligen Klassen zuordnen."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Enrole"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:282
+msgid ""
+"Ein jeweiliges Objekt zum Einschreiben auswählen oder den Haken entfernen"
+" um daraus auszutreten. Geänderte Einstellungen werden gelb angezeigt. Um"
+" die Änderungen anzuwenden, auf **Übernehmen** klicken."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:285
+msgid "Passwörter drucken"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:287
+msgid ""
+"Hier gibt es die Möglichkeit, eine übersichtliche Liste von Benutzer- & "
+"Passwortinformationen per PDF oder CSV-Format ausdrucken zu lassen."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Print Passwords"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:293
+msgid ""
+"Die kann über Anklicken der jeweiligen Klasse klassenspezifisch, über "
+"Klasse: teachers auf alle Lehrer oder über die Option Alle Benutzer auf "
+"alle Benutzer der Schule angewendet werden. Als PDF werden die Benutzer "
+"neben dem zugehörigen Passwort in Kästchen angezeigt, wie in diesem "
+"Beispiel:"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Print Passwords Example"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:299
+msgid ""
+"Um nicht jedes Kästchen einzeln ausschneiden zu müssen, gibt es vor dem "
+"Drucken die Option One per page, um pro Seite nur eine "
+"Benutzerinformation auszugeben. Um zu Drucken Ausdrucken wählen."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:303
+msgid "Einstellungen"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:306
+msgid "Quotas"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:307
+msgid ""
+"Unter Standardwerte werden standarmäßige Speichergrößen von "
+"Standardquota, Cloudquota und Mailquota für Schüler, Lehrer und "
+"Schuladministratoren festgelegt."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:313
+msgid ""
+"In den Bereichen **Lehrer** und **Schüler** daneben können von den "
+"Standwartwerten abweichend pro Benutzer eigene Werte eingestellt werden. "
+"Ebenso kann unter **Klassen** und **Projekte** einer jeweiligen "
+"Schulklasse/einem jeweiligen Projekt die Speichergröße festgelegt werden."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:316
+msgid "Schuleinstellungen"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:318
+msgid ""
+"Allgemeine Informationen, Einstellungen zum Linstenimport, Quotalimits "
+"und Druck-Daten-Werte können in der Schuleinstellungen verwaltet werden."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:320
+msgid ""
+"Unter ``Allgemein`` werden generelle Schuleinstellungen wie Namen oder E"
+"-Mail-Domänen für jeweilige Rollen angegeben und geändert."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI School Settings"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:326
+msgid ""
+"Änderungen über Speichern & Prüfen und anschließend Übernehmen anwenden. "
+"Unter Listenimport können Standardwerte festgelegt werden, die beim "
+"Import einer CSV-Datei angewendet werden. Wird ein Haken unter der "
+"Funktion Nachname und Vorname im Benutzernamen umkehren für eine "
+"jeweilige Rolle, werden die Benutzernamen zuerst aus dem Vornamen und "
+"dann aus Nachnamen generiert. Wie viele Zeichen aus den jeweiligen Namen "
+"genommen werden, wird in den unteren Werten Nachname Zeichen und Vornamen"
+" Zeichen angegeben. Ältere Sicherungen könne über das Symbol"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Bacup Icon"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:333
+msgid "unten rechts wiederhergestellt werden."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:336
+msgid "Globale Einstellungen"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:338
+msgid ""
+"In diesem Bereich werden die globalen Einstellungen für die Schulkonsole "
+"der linuxmuster-Umgebung verwaltet, welche aber in der Regel nie geändert"
+" werden müssen."
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:-1
+msgid "WebUI Global Settings"
+msgstr ""
+
+#: ../../source/systemadministration/schoolconsole/index.rst:344
+msgid ""
+"Zu den globalen Einstellungen gehören die für die Schulkonsole Sprache, "
+"welche unter Sprache geändert werden kann. Auch die Zertifikatsdatei "
+"könnte hier unter SSL-Zertifikats-Datei geändert werden. Um die "
+"Änderungen wirksam zu machen, muss die Schulkonsole über ``Schulkonsole "
+"neu starten`` neu gestartet und initialisiert werden."
+msgstr ""
+

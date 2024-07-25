@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/systemadministration/gpo/gpo.rst:2
+msgid "Nutzung der Remote Server Administration Tools zum Anpassen der GPO"
+msgstr ""
+
+#: ../../source/systemadministration/gpo/gpo.rst:6
+msgid ""
+"Das Anpassen der vom SAMBA-Server bereitgestellten GPO erfolgt von einem "
+"Windows-PC aus."
+msgstr ""
+
+#: ../../source/systemadministration/gpo/gpo.rst:11
+msgid "Installation der RSAT (Remote Server Administration Tools)"
+msgstr ""
+
+#: ../../source/systemadministration/gpo/gpo.rst:12
+msgid ""
+"Zur Verwaltung des Active Directory (AD) benötigt man die Microsoft "
+"Remote Server Administration Tools (RSAT). Diese werden von Microsoft "
+"bereitgestellt. (Home-Versionen von Windows werden nicht unterstützt!)"
+msgstr ""
+
+#: ../../source/systemadministration/gpo/gpo.rst:14
+msgid ""
+"Für Windows10-Versionen vor 1809 müssen diese noch als separtes "
+"Installationspaket heruntergeladen werden: https://www.microsoft.com/en-"
+"us/download/details.aspx?id=45520"
+msgstr ""
+
+#: ../../source/systemadministration/gpo/gpo.rst:16
+msgid ""
+"Ab Version 1809 sind die RSAT ein optionales Feature. Die Installation "
+"erfolgt über ``Start`` -> ``Apps und Features`` -> ``optionale Features``"
+" -> ``Feature hinzufügen`` -> ``RSAT: Group Policy Management Tools``."
+msgstr ""
+
+#: ../../source/systemadministration/gpo/gpo.rst:19
+msgid "Verwendung der Gruppenrichtlinienverwaltung"
+msgstr ""
+
+#: ../../source/systemadministration/gpo/gpo.rst:20
+msgid ""
+"Falls noch nicht geschehen, melde Dich mit einem Domänenbenutzerkonto, "
+"welches zur Gruppe der Administratoren gehört, am Computer an. Zum "
+"Beispiel als global-admin. Starte die Gruppenrichtlinienverwaltung durch "
+"Eingabe von ``gpmc.mmc``. Bei Windows ab Version 1809 starte die App "
+"Gruppenrichtlinienverwaltung."
+msgstr ""
+
+#: ../../source/systemadministration/gpo/gpo.rst:-1
+msgid ""
+"GPMC\n"
+":align: center"
+msgstr ""
+
+#: ../../source/systemadministration/gpo/gpo.rst:26
+msgid ""
+"Mittels Rechtsklick auf ``sophomorix:school:default-school`` und "
+"``Bearbeiten`` öffnet sich der Gruppenrichtlinienverwaltungs-Editor:"
+msgstr ""
+
+#: ../../source/systemadministration/gpo/gpo.rst:33
+msgid ""
+"Sollte die Standard-GPO \"sophomorix:school:default-school\" nicht "
+"vorhanden sein, dann kann diese auf dem Server erzeugt werden durch "
+"Eingabe von: ``sophomorix-school --gpo-create default-school``."
+msgstr ""
+
+#: ../../source/systemadministration/gpo/gpo.rst:35
+msgid ""
+"Im Gruppenrichtlinienverwaltungs-Editor können nun Anpassungen der GPO "
+"vorgenommen werden:"
+msgstr ""
+
+#: ../../source/systemadministration/gpo/gpo.rst:38
+msgid "Beispiel für Änderung der Laufwerksbeschriftung"
+msgstr ""
+
+#: ../../source/systemadministration/gpo/gpo.rst:40
+msgid ""
+"Die Netzlaufwerke unter Windows werden mit Ausnahme des Homelaufwerks per"
+" GPO eingebunden. Wenn z.B. die Beschriftung deutsch statt englisch sein "
+"soll oder der Laufwerkbuchstabe geändert werden soll kann das unter "
+"``Benutzerkonfiguration`` -> ``Einstellungen`` -> "
+"``Laufwerkszuordnungen`` geändert werden:"
+msgstr ""
+

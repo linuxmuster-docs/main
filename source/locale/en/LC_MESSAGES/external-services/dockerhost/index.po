@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/external-services/dockerhost/index.rst:5
+msgid "Installation eines Dockerhosts"
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:9
+msgid ""
+"Ein Docker-Host vereinfacht die Bereitstellung von Anwendungen, weil "
+"Anwendungen virtualisiert in einem Container, der alle nötigen Pakete "
+"enthält, leicht als Datei transportiert und intalliert werden können."
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:11
+msgid ""
+"Angenommen wir möchten an einer Schule eine Nextcloud, ein MRBS, eine "
+"Website und eventuell noch ein OpenSchulPortfolio betreiben und jeder "
+"dieser Anwendungen soll eine Weboberfläche (Port 80 und 443) anbieten. "
+"Dann bräuchten wir entweder 5 öffentliche IP-Adressen oder einen Reverse "
+"Proxy, wie nginx, der alle Anfragen für verschiedene Domänen / Subdomänen"
+" über eine IP stellvertretend entgegennimmt und an die Anwendungen "
+"verteilt."
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:-1
+msgid "Reverse-Proxy"
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:17
+msgid ""
+"Das hier abgebildete System besteht aus der Firewall OpnSense einem "
+"Docker-Host und dem Server."
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:19
+msgid ""
+"Alle Anfragen auf Port 80 oder 443 an nextcloud.schulname.de,  "
+"www.schulname.de, mrbs.schulname.de oder osp.schulname.de kommen zunächst"
+" an der Firewall OpnSense an und werden direkt an den Dockerhost weiter "
+"geleitet. Der Reverse Proxy nginx schaut dann nach, mit welcher URL die "
+"Anfrage eigentlich verbunden werden möchte und stellt dann die Verbindung"
+" zum entsprechenden Service her."
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:22
+msgid "Dehydrated nutzen wir, um Zertifikate mit Let's Encrypt zu signieren."
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:24
+msgid ""
+"Wenn Du lediglich einen internen Service wie den Unifi-Controller "
+"benötigst, solltest Du auf nginx und dehydrated verzichten."
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:26
+msgid "Installiere zunächst einen ubuntu 20.04 Server."
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:29
+msgid "Installation des Ubuntu Servers"
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:31
+msgid ""
+"Lade die iso-Datei für den Ubuntu-Server von "
+"https://ubuntu.com/download/server herunter und starte Deinen Server vom "
+"Installationsmedium."
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:33
+msgid ""
+"Im folgenden gehen wir davon aus, dass der Docker-Host in Deiner "
+"`/etc/linuxmuster/sophomorix/default-school/devices.csv` als `servername`"
+" bekannt ist. Dann bekommt der Dockerhost seine IP und seinen Namen über "
+"DHCP."
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:35
+msgid ""
+"Wenn Du den Dockerhost nicht im Schulnetz sondern in der DMZ der OpnSense"
+" anlegen möchtest, bekommt er ebenfalls seine IP über DHCP."
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:41
+msgid "Wähle Deine bevorzugte Sprache"
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:47
+msgid "und Tastatur."
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:53
+msgid ""
+"Da der neue Docker-Host per DHCP seine IP-Adresse bekommt, kannst Du die "
+"Vorgaben übernehmen."
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:59
+msgid "Die Proxy-Adresse und"
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:65
+msgid "die Mirror-Adresse übernimmst du."
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:71
+msgid "Die Speicherplatzkonfiguration"
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:77
+msgid "kannst Du auch übernehmen."
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:83
+msgid ""
+"Der Name des Servers sollte so, wie in `/etc/linuxmuster/sophomorix"
+"/default-school/devices.csv` gewählt werden."
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:85
+msgid "Der Benutzername ist frei wählbar."
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:91
+msgid ""
+"OpenSSH-Server solltest Du installieren, möchtest Du Dich vom lmn-Server "
+"auf dem Docker-Host anmelden können. Andere Pakete brauchst Du nicht zu "
+"installieren."
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:94
+msgid ""
+"Wenn alles installiert ist, kannst Du Dich an Deinem frisch installiertem"
+" Docker-Host anmelden."
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:97
+msgid "Installation ohne nginx und dehydrated"
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:99
+#: ../../source/external-services/dockerhost/index.rst:111
+msgid "Gib ``sudo -i`` ein um `root` zu werden."
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:100
+#: ../../source/external-services/dockerhost/index.rst:112
+msgid "Update Dein System mit ``apt update`` und ``apt dist-upgrade``."
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:101
+msgid "Installiere docker und docker-compose mit:"
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:109
+msgid "Installation mit nginx und dehydrated"
+msgstr ""
+
+#: ../../source/external-services/dockerhost/index.rst:113
+msgid "Installiere docker, docker-compose, nginx und dehydrated mit:"
+msgstr ""
+

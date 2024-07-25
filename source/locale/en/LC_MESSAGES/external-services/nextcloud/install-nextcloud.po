@@ -1,0 +1,279 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:5
+msgid "Nextcloud installieren"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:9
+msgid "Auf einem Docker-Host sind folgende Schritte zur Installation notwendig:"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:11
+msgid "Erstellen eines Let's Encrypt - Zertifikats."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:12
+msgid "Erstellen einer Site für die Nextcloud in nginx."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:13
+msgid "Erstellen und Starten der Nextcloud Docker App."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:15
+msgid ""
+"Im Folgenden musst Du natürlich ``nextcloud.meine-schule.de`` durch Deine"
+" URL ersetzen."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:18
+msgid "Erstellung des Zertifikats"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:20
+msgid ""
+"Zuerst musst Du Dir einen Dienstenamen ausdenken und SSL-Zertifikate "
+"besorgen. Also z.B. nextcloud.meine-schule.de."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:22
+msgid ""
+"Dazu legst Du einen DNS Eintrag für Deine Dockerapp, z.B. nextcloud"
+".meine-schule.de, der auf die IP des Docker-Hosts zeigt an. Das darf auch"
+" ein CNAME sein."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:24
+msgid "Trage diesen Host in die Datei ``/etc/dehydrated/domains.txt`` ein."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:26
+msgid ""
+"Führe den Befehl ``dehydrated -c`` aus. Jetzt hast Du die Zertifikate im "
+"Verzeichnis ``/var/lib/dehydrated/certs/`` zur Verfügung, der Docker Host"
+" aktualisiert diese per Cronjob."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:29
+msgid "Erstellen einer Site für die Nextcloud in nginx"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:31
+msgid ""
+"Wir benutzen nginx als ``Reverse-Proxy``. So können auf Deinem Docker-"
+"Host viele Services wie beispielsweise ``mrbs.meine-schule.de`` und "
+"``nextcloud.meine-schule.de`` unter der gleichen IP-Adresse laufen."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:33
+msgid ""
+"Wenn beispielsweise ein Benutzer die Seite nextcloud.meine-schule.de "
+"aufruft, schaut sich nginx die URL an, die aufgerufen wurde, und liefert "
+"dann die entsprechende Seite aus."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:35
+msgid "Melde Dich als root auf Deinem Docker-Host an."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:37
+msgid ""
+"Erstelle mit ``mkdir -p /srv/docker/nextcloud`` das Verzeichnis, in das "
+"alle Nextcloud-Dateien abgelegt werden."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:39
+msgid ""
+"Erzeuge die Datei ``/srv/docker/nextcloud/nextcloud.nginx.conf`` mit "
+"folgendem Inhalt:"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:87
+msgid ""
+"Diese conf-Datei geht davon aus, dass Deine Nextcloud auf localhost:7771 "
+"erreichbar sein wird. Den Port 7771 kannst Du frei wählen. Dies muss "
+"identisch sein mit dem später in docker-compose.yml anzugebenen Port für "
+"nextcloud."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:89
+msgid ""
+"Jetzt musst Du noch im Verzeichnis ``/etc/nginx/sites-enabled`` einen "
+"Link auf Deine ``nextcloud.nginx.conf`` anlegen und nginx neu starten."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:91
+msgid ""
+"Melde Dich wieder als root am Docker-Host an und lege mit ``ln -s "
+"/srv/docker/nextcloud/nextcloud.nginx.conf /etc/nginx/sites-"
+"enabled/nextcloud.meine-schule.de`` den Link an."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:93
+msgid ""
+"So, jetzt musst Du nur noch mit ``systemctl restart nginx.service`` nginx"
+" neu starten."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:95
+msgid ""
+"Prüfe noch, welche Ports nun genutzt werden. Gib dazu den Befehl "
+"``netstat -tulp`` an."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:98
+msgid "Nextcloud mit docker-compose einrichten und starten"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:100
+msgid ""
+"Jetzt musst Du nur noch drei Dateien angelegen, die docker-compose sagen,"
+" was es machen soll."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:102
+msgid ""
+"Alles was wir jetzt machen, spielt sich im Verzeichnis "
+"``/srv/docker/nextcloud`` ab. Später werden auch dort sämtliche Daten "
+"liegen. Für eine Datensicherung musst Du nur dieses Verzeichnis sichern."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:105
+msgid ""
+"Melde Dich wieder als root auf dem Docker-Host an und gehe mit ``cd "
+"/srv/docker/nextcloud`` in das Verzeichnis ``/srv/docker/nextcloud``."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:108
+msgid "Die Datei Dockerfile"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:116
+msgid ""
+"Wenn Du experimentierfreudig bist, kannst Du statt ``stable`` auch "
+"``latest`` schreiben."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:118
+msgid ""
+"Mit der zweiten Zeile werden die Vorbereitungen für die Einbindungen der "
+"Home-Verzeichnisse (Samba-Shares) durchgeführt."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:121
+msgid "Die Datei db.env"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:130
+msgid "Hier sind die Zugangsdaten für die Datenbank hinterlegt."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:133
+msgid "Die Datei docker-compose.yml"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:187
+msgid ""
+"In der Datei ``docker-compose.yml`` werden die Services Deiner Nextcloud "
+"beschrieben."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:189
+msgid ""
+"Das Verzeichnis ``/var/www/html`` des Webservers wird unter dem "
+"Verzeichnis ``/srv/docker/nextcloud/nextcloud`` auf dem Docker-Host "
+"abgelegt. Und das Datenverzeichnis ``/var/lib/mysql`` der Maria Datenbank"
+" wird unter dem Verzeichnis ``/srv/docker/nextcloud/db`` auf dem Docker-"
+"Host abgelegt."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:191
+msgid ""
+"Sollte für nginx noch eine default.conf aktiv sein, so findet sich diese "
+"im Verzeichnis ``/srv/docker/nextcloud`` als symbolischer Link. Diesen "
+"kannst Du löschen und nginx wie zuvor neu starten."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:193
+msgid "Damit sind alle Daten im Verzeichnis ``/srv/docker/nextcloud``."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:195
+msgid ""
+"Wenn Du im Verzeichnis ``/srv/docker/nextcloud`` bist, startest Du die "
+"Nextcloud mit ``docker-compose up -d --build``."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:197
+msgid ""
+"Jetzt must Du mit einem Browser die Startseite ``https://nextcloud.meine-"
+"schule.de`` Deiner neuen Nextcloud aufrufen und einen Benutzernamen und "
+"ein Passwort für den Nextcloud-admin angeben."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:-1
+msgid "Server - Einstellungen"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:204
+msgid "Nextcloud-App: Einstellungen"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:206
+msgid ""
+"Da die Nextcloud hinter dem nginx-Proxy liegt und nicht weiß, ob die "
+"Benutzer die Nextcloud über http oder https aufrufen, wird eine Anmeldung"
+" über eine Nextcloud-Client-App scheitern. Mit einem Eintrag in "
+"``/srv/docker/nextcloud/nextcloud/config/config.php`` kannst Du das "
+"Problem lösen:"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:218
+msgid "Nextcloud: Hinweise config.php"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:220
+msgid ""
+"Melde Dich an der Nextcloud als admin an und wähle links unter "
+"``Verwaltung -> Übersicht`` aus. Es erscheinen ggf. Sicherheits- & "
+"Einrichtungswarnungen."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:222
+msgid ""
+"Solltest Du hier einen Hinweis auf eine fehlende default phone region "
+"sehen, so kannst Du in der config.hphp den Eintrag "
+"``'default_phone_region' => 'DE',`` ergänzen."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:224
+msgid ""
+"Nachstehendes Code-Beispiel der Datei "
+"``/srv/docker/nextcloud/nextcloud/config/config.php`` zeigt, wo dieser "
+"Eintrag neben anderen Ergänzungen plaziert werden kann."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/install-nextcloud.rst:260
+msgid "Danach ist der Docker-Container erneut zu starten:"
+msgstr ""
+

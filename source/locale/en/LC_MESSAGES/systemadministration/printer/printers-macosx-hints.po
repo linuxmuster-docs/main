@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/systemadministration/printer/printers-macosx-hints.rst:2
+msgid "Hinweise Mac OS X - Clients"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-macosx-hints.rst:4
+msgid ""
+"Für Mac OS X - Clients gibt es für linuxmuster.net keine Pakete zur "
+"Einbindung. Daher an dieser Stelle in der Dokumentation nur für "
+"diejenigen, die Mac OS X - Clients in einem linuxmuster.net Netzwerk "
+"einsetzen und mit diesen Clients drucken möchte, nachstehend nur kurz "
+"einige Hinweise zu Druckerproblemen:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-macosx-hints.rst:6
+msgid ""
+"Bei der Standardkonfiguration kann es passieren, dass die Kommunikation "
+"mit dem Drucker nicht funktioniert und zum Beispiel nach der Installation"
+" jeder Druck auf einen Fehler läuft:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-macosx-hints.rst:12
+msgid ""
+"Wenn ein Drucker unter MacOS mit dem Drucker-Dialog hinzufügt wird, kann "
+"nur das IPP-Protokoll ausgewählt (Reiter \"IP\") werden. Bei \"Address\" "
+"ist dann die Server-IP mit dem CUPS-Port ``10.0.0.1:631`` einzutragen. "
+"Bei \"Queue\" ``/printers/printer-name`` ist der Druckername anzugeben "
+"(z.B. /printers/lz-drucker)."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-macosx-hints.rst:17
+msgid ""
+"Sollte dies nicht funktionieren, ist zunächst die Web-Oberfläche von CUPS"
+" local auf dem Mac zu aktivieren (localhost:631) und anschließend dort "
+"der Drucker per IPP-Protokol und http://10.0.0.1:631/printers/printer-"
+"name hinzuzufügen. Gibt es Treiberprobleme und der Drucker druckte nur "
+"Kauderwelsch, kann es helfen, statt den generischen Postscript-Treiber "
+"den generischen PCL-Treiber auszuwählen, oder ggf. die Installation der "
+"Originaltreiber (in dem Fall von Kyocera) auszuführen. Ein ähnliches "
+"Problem mit dem Drucker und MacOS X wird hier veschrieben: "
+"https://ask.linuxmuster.net/t/mac-os-x-clients-an-cups/1176"
+msgstr ""
+

@@ -1,21 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, linuxmuster.net
-# This file is distributed under the same license as the linuxmuster.net package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
+"Language-Team: English "
+"(https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
 
 #: ../../source/clients/postsync/troubleshooting.rst:2
 msgid "Troubleshooting"
@@ -28,36 +32,63 @@ msgstr ""
 #: ../../source/clients/postsync/troubleshooting.rst:6
 msgid ""
 "Vom linuxmuster.net Server aus kann man sich auf dem Client mithilfe von "
-"**linbo_ssh** anmelden und dort z.B. den Synchronisationsvorgang aktivieren."
-" Es lassen sich so dann die Postsync-Ausgaben / Fehlermeldungen auf dem "
-"Client einsehen."
+"**linbo_ssh** anmelden. Es lassen sich so dann die Postsync-Ausgaben / "
+"Fehlermeldungen auf dem Client einsehen."
 msgstr ""
 
 #: ../../source/clients/postsync/troubleshooting.rst:8
 msgid "Das Postsync-Script schreibt eine LOG-Datei, die auf dem Client unter"
 msgstr ""
 
-#: ../../source/clients/postsync/troubleshooting.rst:15
-msgid ""
-"Auf dem linuxmuster.net Server gibt man hierzu folgendes an, um den Client "
-"zu starten, zu synchronisieren und dann in den Linbo-Bildschirm zu gelangen,"
-" um die Log-Datei einzusehen:"
+#: ../../source/clients/postsync/troubleshooting.rst:14
+msgid "abgelegt wird."
 msgstr ""
 
-#: ../../source/clients/postsync/troubleshooting.rst:24
+#: ../../source/clients/postsync/troubleshooting.rst:16
+msgid ""
+"Auf dem linuxmuster.net Server gibt man hierzu folgendes an, um den "
+"Client zu starten, zu synchronisieren und dann in den Linbo-Bildschirm zu"
+" gelangen, um die Log-Datei einzusehen:"
+msgstr ""
+
+#: ../../source/clients/postsync/troubleshooting.rst:26
 msgid "Herunterfahren der Clients mit:"
 msgstr ""
 
-#: ../../source/clients/postsync/troubleshooting.rst:30
-msgid "Hinweise zu linbo-remote und linbo-ssh"
+#: ../../source/clients/postsync/troubleshooting.rst:32
+msgid ""
+"Bei Einsatz des universellen Postsync-Scriptes stehen am Anfang der LOG-"
+"Datei z.B. folgende Angaben, die die Infos zu Raum, Rechnername etc. "
+"ausgeben:"
 msgstr ""
 
-#: ../../source/clients/postsync/troubleshooting.rst:33
-msgid ""
-"https://www.linuxmuster.net/wiki/dokumentation:handbuch:linbo:linbo.remote"
+#: ../../source/clients/postsync/troubleshooting.rst
+msgid "Output Postsync-LOG"
 msgstr ""
 
-#: ../../source/clients/postsync/troubleshooting.rst:35
+#: ../../source/clients/postsync/troubleshooting.rst:38
 msgid ""
-"https://www.linuxmuster.net/wiki/dokumentation:handbuch51:clients:linbo:linbo_remote?s[]=linbo&s[]=ssh"
+"Hier kann kontrolliert werden, ob der gewünschte Rechner, Raum, die "
+"korrekte Patchklasse und Hostgruppe ausgewählt wurden. Zudem wwerden die "
+"übertragenen Dateien / Scripte dargestellt."
 msgstr ""
+
+#~ msgid ""
+#~ "Vom linuxmuster.net Server aus kann man"
+#~ " sich auf dem Client mithilfe von "
+#~ "**linbo_ssh** anmelden und dort z.B. den"
+#~ " Synchronisationsvorgang aktivieren. Es lassen"
+#~ " sich so dann die Postsync-Ausgaben"
+#~ " / Fehlermeldungen auf dem Client "
+#~ "einsehen."
+#~ msgstr ""
+
+#~ msgid "Hinweise zu linbo-remote und linbo-ssh"
+#~ msgstr ""
+
+#~ msgid "https://www.linuxmuster.net/wiki/dokumentation:handbuch:linbo:linbo.remote"
+#~ msgstr ""
+
+#~ msgid "https://www.linuxmuster.net/wiki/dokumentation:handbuch51:clients:linbo:linbo_remote?s[]=linbo&s[]=ssh"
+#~ msgstr ""
+

@@ -1,0 +1,1705 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:5
+msgid "Netzwerksegmentierung"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:11
+msgid "Vorbemerkungen"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:13
+msgid ""
+"Aus datenschutzrechtichen Überlegungen ist ein schulisches Netzwerk in "
+"drei Bereiche mit unterschiedlichen Absicherungen und Berechtigungsstufen"
+" zur Verarbeitung und Speicherung von personenbezogenen Daten zu "
+"unterteilen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:15
+msgid "Verwaltungsnetz (Veraltungsprogramme, dienstliche Beurteilungen etc.)"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:16
+msgid "Lehrernetz (Stundenplan, Kompetenzen, Noten, etc.)"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:17
+msgid "pädagogisches Netz (keine Verarbeitung personenbezogener Daten)"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:19
+msgid ""
+"Wesentliches Ziel bei der Gestaltung der schulischen Netzinfrastruktur "
+"ist es, diese unterschiedlichen personenbezogenen Daten besonders zu "
+"schützen. Dabei ist sicherzustellen, dass nur diejenigen Personen auf "
+"solche personenbezogene Daten zugreifen können, die zur Erfüllung ihrer "
+"dienstlichen Aufgaben unbedingt erforderlich sind."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:21
+msgid ""
+"Es muss sichergestellt werden, dass ein **Zugriff auf das Lehrernetz und "
+"Verwaltungsnetz vom pädagogischen Netz aus wirksam verhindert** wird. Der"
+" Einsatz von VLANs und die Nutzung virtueller Maschinen wird hierzu "
+"explizit zugelassen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:23
+msgid ""
+"Im **pädagogischen Schulnetz dürfen grundsätzlich keine personenbezogenen"
+" Daten von Schülern** verarbeitet und gespeichert werden, außer Name und "
+"Klassenzugehörigkeit des Schülers sowie die hierzu erforderlichen "
+"technischen Daten, die direkt für die Unterrichtsgestaltung erforderlich "
+"sind. Insbesondere dürfen grundsätzlich keinerlei personenbezogene Daten "
+"zu Verhalten oder Leistung (Bewertungen, Beurteilungen) eines Schülers "
+"verarbeitet werden. Insgesamt dürfen in diesem Netz nur die zur "
+"Aufgabenerfüllung unbedingt erforderlichen Daten verarbeitet werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:25
+msgid ""
+"In dieser Dokumentation geht es im Folgenden **ausschließlich um den "
+"Betrieb des pädagogischen Netzes**."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:27
+msgid ""
+"Es wird empfohlen, das **pädagogische Netz** wiederum in mindestens drei "
+"Bereiche / Subnetze zu unterteilen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:29
+msgid "Lehrernetz"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:30
+msgid "Schülernetz"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:31
+msgid "Servernetz"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:35
+msgid ""
+"Das Lehrernetz im pädagogischen Netz besitzt aufgrund von Firewallregeln "
+"keine eingehenden Verbindungen vom Schülernetz aus. Es besteht aufgrund "
+"des Zugangsschutzes ein Sonderstatus. Ein Verarbeitung von "
+"**personenbezogenen Daten** in diesem Segment darf im pädagogischen Netz "
+"**nicht erfolgen!**"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:39
+msgid ""
+"Sollte z.B. WLAN zum Einsatz kommen oder sollen weitere Anforderungen "
+"erfüllt werden, so werden weitere Subnetze empfohlen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:41
+msgid ""
+"Diese Dokumentation greift den Fall einer **Unterteilung des "
+"pädagogischen Netzes in sieben Subnetze** auf. Eine Erweiterung/Anpassung"
+" um weitere Subnetzbereiche, ist später analog zu dem in dieser "
+"Dokumentation beschriebenen Vorgehen möglich. Die Umsetzung der "
+"Segmentierung erfordert managebare L2- und L3-Switche, die VLANs "
+"verwalten können. Hierzu können Switche beliebiger Hersteller genutzt "
+"werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:44
+msgid ""
+"Die Konfigurationsschritte für den L3-Switch werden anhand eines ``Cisco "
+"SG300-300-28`` besipielhaft dargstellt. Für die Konfiguration der "
+"L2-Switche werden die Schritte anhand eines ``Cisco SF200-24`` "
+"exemplarisch verdeutlicht. Bei dem Einsatz anderer Switche sind die "
+"dargestellten Konfigurationsschritte entsprechend anzupassen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:46
+msgid ""
+"Am Ende des Kapitels findest Du weitere Konfigurationen für andere "
+"L3-Switche, die Du zur Anpassung auf Dein Netzszenario nutzen kannst."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:49
+msgid "Geplante Netzwerkstruktur"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:51
+msgid ""
+"Bei dem Standard-Setup des linuxmuster.net Servers (v7.1) wird das Netz "
+"``10.0.0.0/16`` zur Einrichtung vorgesehen. Eine Unterteilung kann "
+"bereits in der Form erfolgen, dass im 2. Oktett weitere Netzsegemente "
+"genutzt werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:53
+msgid "Beispiel:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:55
+msgid "Servernetz, Netzwerkadressen 10.0.0.0/16"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:56
+msgid "Lehrernetz, Netzwerkadressen 10.1.0.0/16"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:57
+msgid "Schülernetz, Netzwerkadressen 10.2.0.0/16"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:59
+msgid ""
+"Es wäre so eine Einteilung der Rechner eines Raumes im dritten Oktett "
+"problemlos möglich, z.B. alle Rechner in Raum 107 sind im Schülernetz und"
+" haben Adressen aus dem Bereich 10.2.107.x, alle Rechner des "
+"Lehrerzimmers sind im Lehrernetz und haben Adressen aus dem Bereich "
+"10.1.120.x. Die Unterscheidung der Räume erfolgt so im 3. Oktett, die "
+"Unterscheidung der Subnetze im 2. Oktett."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:61
+msgid ""
+"Sollen weitere Segmente gebildet werden, die z.B. jeden Raum als eigenes "
+"Segment (VLAN) abbilden, so bietet es sich an, kleinere Segmente zu "
+"bilden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:63
+msgid ""
+"Nachstehend soll daher das **Vorgehen zur Vorbereitung einer "
+"Segmentierung mit kleineren IP-Netzen** dokumentiert werden. Es sollen "
+"nachstehende ``sieben Segmente`` gebildet werden:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:66
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:93
+msgid "VLAN Name"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:66
+msgid "Verwendung"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:66
+msgid "Netzwerkadressen"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:68
+msgid "``Internet``"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:68
+msgid "alle Server an der WAN - Schnittstelle"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:68
+msgid "IP-Netz der Firewall WAN"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:70
+msgid "``Server``"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:70
+msgid "alle Server/-VMs im LAN"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:70
+msgid "10.0.0.0/24"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:72
+msgid "``WLAN-LuL``"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:72
+msgid "ein WLAN-Netz für Lehrerinnen und Lehrer"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:72
+msgid "10.3.0.0/24"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:74
+msgid "``WLAN-SuS``"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:74
+msgid "ein WLAN-Netz für Schülerinnen und Schüler"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:74
+msgid "10.4.0.0/24"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:76
+msgid "``Lehrer``"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:76
+msgid "Zugriff mit Lehrer PCs, Laptops"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:76
+msgid "10.1.0.0/24"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:78
+msgid "``Raum100``"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:78
+msgid "Zugriff mit Schulungsgeräten im Raum 100"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:78
+msgid "10.2.100.0/24"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:80
+msgid "``Raum200``"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:80
+msgid "Zugriff mit Schulungsgeräten im Raum 200"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:80
+msgid "10.2.200.0/24"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:83
+msgid ""
+"Für die Unterteilung sind auf **allen** Switches entsprechende VLANs in "
+"gleicher Weise einzurichten. Die Verbindungen zwischen den Switches "
+"werden als Trunks (bzw. Tagged-Ports) definiert, die über Gerätegrenzen "
+"hinweg die Daten der VLANs weiterleiten. Die Ports auf den Switches sind "
+"i.d.R. als untagged ports zu konfigurieren und den gewünschten VLANs "
+"zuzuordnen (port-basierte VLANs), so dass die an den Ports "
+"angeschlossenen Geräte ihre Daten in das zugeordnete VLAN schicken."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:85
+msgid ""
+"Der L3-Switch erhält in jedem VLAN die letzte nutzbare IP-Adresse - also "
+"z.B. für das ``VLAN Lehrer`` die IP `10.1.0.254`, außer in den VLANs, in "
+"denen die Firewall im jeweiligen Subnetz bereits diese IP-Adresse nutzt."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:88
+msgid "VLAN IDs und Gateway-IPs"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:90
+msgid ""
+"In dieser Dokumentation werden folgende VLAN-IDs und Gateway-IPs "
+"verwendet:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:93
+msgid "VLAN ID"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:93
+msgid "Gateway-IP  (+ Firewall-IP )"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:95
+msgid "``VLAN Internet``"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:95
+msgid "5"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:95
+msgid "IP aus dem Netz der Firewall an der Schnittstelle WAN"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:97
+msgid "``VLAN Server``"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:97
+msgid "10"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:97
+msgid "10.0.0.253 (Firewall: 10.0.0.254)"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:99
+msgid "``VLAN WLAN LuL``"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:99
+msgid "20"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:99
+msgid "10.3.0.253 (Firewall: 10.3.0.254)"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:101
+msgid "``VLAN WLAn SuS``"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:101
+msgid "30"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:101
+msgid "10.4.0.253 (Firewall: 10.4.0.254)"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:103
+msgid "``VLAN Lehrer``"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:103
+msgid "40"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:103
+msgid "10.1.0.254"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:105
+msgid "``VLAN Raum100``"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:105
+msgid "100"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:105
+msgid "10.2.100.254"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:107
+msgid "``VLAN Raum200``"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:107
+msgid "200"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:107
+msgid "10.2.200.254"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:111
+msgid ""
+"Das VLAN 3 wird auf den Switchen zusätzlich eingerichtet und als "
+"Management VLAN für die Netzkomponenten genutzt. Das Default VLAN 1 wird "
+"hingegen deaktiviert. In diesem VLAN 3 wird das Netz 192.168.1.0/24 "
+"genutzt. Der L3-Switch erhält die Adresse 192.168.1.254/24, der L2-Switch"
+" die Adresse 192.168.1.250/24."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:115
+msgid ""
+"Damit DHCP-Anfragen der Clients aus dem internen Netz an den Server "
+"10.0.0.1 weitergeleitet werden, muss auf dem L3-Switch ein DHCP-Relay-"
+"Agent konfiguriert werden. Entsprechende Hinweise finden sich hierzu bei "
+"der Dokumentation zur Konfiguration des L3-Switches."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:118
+msgid "**Geplante Netzsegmentierung**"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "Struktur: Segmentiertes Netz"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:124
+msgid ""
+"In der Abbildung wird die Verbindung zwischen dem L3-Switch, dem VM-Host "
+"(Hypervisor) und zwei weiteren L2-Switchen dargestellt. Die Verbindungen "
+"zwischen dem L3-Switch und dem VM-Host sowie zwischen dem L3-Switch und "
+"den beiden L2-Switchen sind **lila als Trunk** (Cisco) bzw. tagged port "
+"(HP) gekennzeichnet. Dies bedeutet, dass die Uplinks zwischen den "
+"Switchen bzw. zwischen Switch und Hypervisor so zu konfigurieren sind, "
+"dass diese als Trunks arbeiten und o.g. VLANs als ``allowed VLANs`` "
+"aufweisen, so dass die Daten der VLANs über diese Verbindungen "
+"weitergereicht werden. An den L2-Switchen werden die benötigten Ports "
+"z.B. für die Computer in einem Fachraum als **untagged ports** definiert "
+"und dem jeweiligen VLAN zugeordnet (z.B. für Raum 200 dem VLAN 200)."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:128
+msgid ""
+"Verfügt der VM-Server über mehrere Netzwerkschnittstellen, so sollten "
+"diese gebündelt werden (je nach Hersteller werden hierfür die Begriffe "
+"NIC Bonding, LinkAggregation, Etherchannel verwendet), um den "
+"Datendurchsatz zu verbessern. Zudem können so die VMs recht flexibel den "
+"einzelnen VLANs zugeordnet werden. Die Bündelung von Ports kann ebenfalls"
+" für die Verbindung zwischen den Switchen (Uplinks) genutzt werden. In "
+"dieser Dokumentation soll die LinkAggregation am Beispiel des L3-Switch "
+"verdeutlicht werden. Es werden für 12 Ethernet-Schnittstellen drei Link-"
+"Aggregation Ports bestehend aus jeweils vier Ethernet-Schnittstellen "
+"gebildet, die dann entsprechend konfiguriert werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:131
+msgid "Überblick zum Vorgehen"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:133
+msgid ""
+"Nachstehende Auflistung gibt einen Überblick zu den erforderlichen "
+"Schritten zur Umsetzung der o.g. Netzsegmentierung bei einer neu zu "
+"installierenden linuxmuster v7.1."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:135
+msgid ""
+"L3-Switch und L2-Switche gemäß nachstehender Anleitung konfigurieren und "
+"testen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:137
+msgid "Hypervisor: LACP-Bonds und VLAN Bridges konfigurieren."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:139
+msgid "VMs importieren."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:141
+msgid ""
+"Netzwerkkarten (NICs) der importierten VMs den korrekten VLAN Bridges "
+"zuordnen, ggf. weitere NICs hinzufügen und diese den korrekten VLAN "
+"Bridges zuordnen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:143
+msgid ""
+"OPNsense®-VM starten und nach dem Login die Netzwerkkarten korrekt "
+"zuordnen (MAC-Adressen und VLAN Bridges helfen dabei die richtige "
+"Bezeichnung zu identiizieren)."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:145
+msgid ""
+"OPSense VM: Korrekte IPs den NICs zuordnen (LAN: 10.0.0.254/24, WAN: "
+"DHCPv4, OPT1: 10.3.0.254/24, OPT2: 10.4.0.254/24, kein Upstream Gateway "
+"eintragen)"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:147
+msgid "Update OPNsense®, danach Reboot."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:149
+msgid ""
+"lmn7 Server: NIC - VLAN Brdige für VLAN 10 zuordnen, VM starten, danach "
+"``apt update && apt dist-upgrade``, reboot."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:151
+msgid ""
+"lmn7 Server: Adressbereich anpassen: ``linuxmuster-prepare -s -u -p "
+"server -n 10.0.0.1/24 -f 10.0.0.254``"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:153
+msgid ""
+"wie unter 9) identisches Vorgehen für Opsi- und Docker-VM - Achtung: "
+"abweichende IPs und Profile"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:155
+msgid ""
+"Zugriff vom Server zur Firewall, zu OPSI und Docker via SSH "
+"sicherstellen. Danach alle VMs herunterfahren."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:157
+msgid ""
+"Den Konfigurationsstand der vier VMs mithilfe von Snapshots sichern. "
+"Danach alle vier VMs starten."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:159
+msgid ""
+"linuxmuster-setup auf dem Server ausführen - muss erfolgreich "
+"durchlaufen, alle VMs werden neu gestartet."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:161
+msgid ""
+"Erreichbarkeit der VMs und Internet-Zugriff testen, danach wieder "
+"Snapshots erstellen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:163
+msgid ""
+"In der Datei ``subnets.csv`` die Netzsegmentierung eintragen und "
+"speichern."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:165
+msgid ""
+"Die Segmentierung mithilfe des Befehls ``linuxmuster-import-subnets`` "
+"übernehmen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:167
+msgid ""
+"Kontrolle der Eintragungen in der Datei ``/etc/netplan/01-netcfg.yaml`` "
+"(siehe Eintragungen später bei der detaillierten Beschreibung)."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:169
+msgid "Tests zur Erreichbarkeit der VMs."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:171
+msgid ""
+"``devices.csv``: Weitere Computer aus den verschiedenen Netzsegmenten "
+"eintragen und mit ``linuxmuster-import-devices`` übernehmen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:173
+msgid ""
+"PCs, die in der devices.csv definiert wurden, an die entsprechenden Ports"
+" anschliessen und prüfen, ob diese eine IP aus dem gewünschten Bereich "
+"erhalten. Erreichbarkeit des Servers, der Firewall und des Internets von "
+"den Clients aus testen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:176
+msgid "Konfiguration des L3-Switches"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:178
+msgid "Konfigurationsschritte auf dem Layer-3-Switch:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:180
+msgid "VLANs für jedes Subnetz definieren"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:181
+msgid "VLANs den Ports zuordnen"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:182
+msgid ""
+"DHCP-Relaying einrichten (damit DHCP-Broadcasts in alle Subnetze geroutet"
+" werden)"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:183
+msgid ""
+"UDP-Relaying einrichten (damit WOL über Subnetzgrenzen hinweg "
+"funktioniert)"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:184
+msgid ""
+"Access Listen definieren (Zugriffe in Subnetze werden unterbunden mit "
+"Ausnahme des Servernetzes, das aus allen Subnetzen heraus erreicht werden"
+" muss)"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:187
+msgid "Einspielen der vordefinierten Konfiguration"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:191
+msgid ""
+"Die Firmware des Cisco L3 Switch SG300-28 ist vorab auf die aktuellste "
+"Version (hier: 1.4.8.6) zu aktualisieren. Für die Aktualisierung ist "
+"wesentlich, welche aktuelle FW-Version und welche Boot Version genutzt "
+"werden. Bei älteren Versionen ist eine Aktualisierung nur über "
+"Zwischenschritte möglich. So muss z.B. von FW 1.1.2.0 via 1.3.7.18 via "
+"1.4.75 via 1.4.11.2 aktualisiert werden. Um die die Boot Version zu "
+"aktualisieren, ist via TFTP schrittweise die jeweilige rfb-Datei des FW-"
+"Images hochzuladen und danach ist das Gerät jeweils erneut zu starten. "
+"Hier der Link zur aktuellen Firmware - FW_"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:199
+msgid ""
+"Die Version der Firmware sowie die Boot Version lassen sich unter "
+"``Status und Statistics`` im Untermenü ``System Summary`` anzeigen. Wie "
+"in nachstehender Abbildung:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:205
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:871
+msgid ""
+"Für den L3-Switch Cisco SG300-28 steht die vorbereitete "
+"Konfigurationsdatei zur Verfügung, die die Konfiguration auf dem "
+"L3-Switch so einspielt, wie diese in dieser Dokumentation beschrieben "
+"wird."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:207
+msgid "**Download**"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:209
+msgid ""
+":download:`Konfiguration für v7.1 mit Server-IP 10.0.0.1/24 "
+"<./media/configs/linuxmuster-ip-segmentation-sg300-28-l3.txt>`."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:213
+msgid "Upload der Konfiguration: Schritt für Schritt"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:217
+msgid ""
+"Im Auslieferungszustand kann auf den Cisco Switch mit der IP "
+"192.168.1.254/24 zugegriffen werden. Diese IP wird in dieser "
+"Konfiguration dem VLAN 3 (Management) zugewiesen, so dass nach Einspielen"
+" der Konfiguration und dem Reboot weiterhin mit dieser Adresse die "
+"Konfiguration über den access port 24 angepasst werden kann."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:225
+msgid ""
+"Meldest Du Dich als Benutzer ``cisco`` mit dem Kennwort ``cisco`` "
+"(Voreinstellungen) an."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:231
+msgid ""
+"Danach erfolgt der Wechsel in das Menü ``Administration --> User "
+"Accounts``. Dort ist der betreffende Benutzer auszuwählen, mit dem "
+"Menüpunkt ``Edit`` ist das Kennwort des Benutzers neu zu setzen. Die "
+"neueren Firmware-Versionen geben eine Kennwort-Komplexität vor."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:238
+msgid ""
+"Im Menü ``Administration --> System Settings`` ist der Name für den "
+"Switch zu vergeben und der System-Modus ist auf L3 zu ändern. Die "
+"Änderungen sind dann mit ``Apply`` zu übernehmen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:245
+msgid ""
+"Dies erfolgt im Menü ``Administration --> File Management --> "
+"Download/BackupConfig``. Die hochzuladende Datei ist als sog. ``Startup "
+"configuration file`` hochzuladen. Mit ``Durchsuchen`` ist die "
+"heruntergeladende Konfigurationsdatei anzugeben."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:248
+msgid ""
+"Ist der Upload erfolgreich verlaufen, so muss der Switch neu gestartet "
+"werden, um die Konfiguration anzuwenden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:254
+msgid ""
+"Der Neustart ist über das Menü ``Administration --> File Management --> "
+"Reboot`` durchzuführen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:256
+msgid ""
+"Nach dem Neustart meldest Du Dich erneut an dem L3-Switch an und "
+"kontrollieren nochmals die Switch-Ports. Hierbei ist zwischen Access-"
+"Ports (port-basierte VLANs) und Trunk-Ports zu unterscheiden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:260
+msgid ""
+"In der bereitgestellten Konfigurationsdatei ist der Login cisco mit dem "
+"Kennwort cisco für die weitere Konfiguration vorhanden - dies gilt "
+"ebenfalls für die IP 192.168.1.254/24 des Switches. Bei Verbindung via "
+"Port GE24 kann so eine Verbindung zur weiteren Anpassung der "
+"Konfiguration hergestellt werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:263
+msgid "Allgemeine Hinweise zur Konfiguration der Switch-Ports"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:265
+msgid ""
+"Für jeden Switchport muss festgelegt werden, in welchem (VLAN-)Modus "
+"dieser arbeitet (Access, Trunk, allgemein u.a.) und welche Mitgliedschaft"
+" diese im VLAN X aufweist (verboten, aktuell ausgschlossen, Mitglied "
+"tagged oder untagged). Bei der Mitgliedschaft werden die Daten mit oder "
+"ohne Tag weitergeleitet. Je nach Fall kann es also sein, dass ein Tag "
+"hinzugefügt oder gelöscht wird."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:267
+msgid ""
+"``ausgeschlossen``:   Datenpakete, die mit der VLAN-ID x getaggt sind, "
+"werden verworfen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:268
+msgid ""
+"``tagged``:           Datenpakete, die mit der VLAN-ID x getaggt sind, "
+"werden weitergeleitet."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:269
+msgid ""
+"``untagged``:         Von Datenpaketen, die mit der VLAN-ID x getaggt "
+"sind, wird die VLAN-ID entfernt und zum Client weitergeleitet. Die "
+"meisten Clients können mit getaggten Datenpaketen nichts anfangen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:270
+msgid ""
+"``PVID``:             Bei einem Port, der mit der PVID x markiert ist, "
+"werden alle ungetaggten Datenpakete des Clients mit der VLAN-ID x "
+"getaggt."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:273
+msgid "Anwendung auf das Ausgangsbeispiel"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:275
+msgid ""
+"Nachstehende Ausführungen, dienen dazu, die eingespielte Konfiguration zu"
+" prüfen oder ggf. Anpassungen für abweichend eingesetzte Hadrware zu "
+"erstellen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:278
+msgid "Definition der Link Aggregation Ports"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:280
+msgid "``LAG1``: Ports 1,2,13,14 -> Verbindung zu VMs / Servern"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:281
+msgid "``LAG2``: Ports 3,4,15,16 -> Verbindung zu VMs / Servern"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:282
+msgid "``LAG3``: Ports 25-28     -> Uplink/Trunk zu L2-Switches"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:293
+msgid "Definition der Access Ports (port-based VLAN)"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:295
+msgid ""
+"``Port 7``: Port wird dem VLAN 5 (Internet VLAN) zugeordnet (untagged / "
+"PVID 5)."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:296
+msgid ""
+"``Port 19``: Port wird dem VLAN 5 (Internet VLAN) zugeordnet (untagged / "
+"PVID 5)."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:297
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:318
+msgid ""
+"``Port 24``: Port wird dem VLAN 3 (Management VLAN) zugeordnet (untagged "
+"/ PVID 3)."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:300
+msgid ""
+"Werden auf dem Switch weitere Ports z.B. für Testzwecke im Server VLAN "
+"benötigt, so sind diese unter ``VLAN Management --> Interface Settings`` "
+"als Access-Ports und unter ``Port-to-VLAN`` dem korrekten VLAN zuzordnen."
+" Nachstehende Abbildungen stellen die Zuordnung zu VLAN 1 dar."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:312
+msgid "Definition / Zuordnung der VLANs"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:314
+msgid ""
+"``LAG1 (Port 1,2,13,14)``: Der Hypervisor ist über vier Netzwerkkabel mit"
+" Port 1,2,13,14 des Switches verbunden. Auf der Seite des Hypervisor sind"
+" ebenfalls vier Ports durch LinkAggregation definiert. LAG1 ist getaggtes"
+" Mitglied der VLANs 3,5,10,20,30,40,100,200."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:315
+msgid ""
+"``LAG2 (Port 3,4,15,16)``: Der zweite Hypervisor ist über vier "
+"Netzwerkkabel mit Port 3,4,15,16 des Switches verbunden. Auf der Seite "
+"des Hypervisor sind ebenfalls vier Ports durch LinkAggregation definiert."
+" LAG1 ist getaggtes Mitglied der VLANs 3,5,10,20,30,40,100,200."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:316
+msgid ""
+"``LAG3 (Port 25 - 28)``: Uplink zu anderen L2-Switches via vier Ports. "
+"Auf den L2-Switches sind ebenfalls vier Ports durch LinkAggregation "
+"definiert. LA32 ist getaggtes Mitglied der VLANs 3,5,10,20,30,40,100,200."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:317
+msgid ""
+"``Port 7,19``: Ports werden dem VLAN 5 (Internet VLAN) zugeordnet "
+"(untagged / PVID 5)."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:346
+msgid "Access Listen definieren"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:350
+msgid ""
+"Der Cisco L3-Switch kann nur eingehenden Datenverkehr filtern. Dies ist "
+"relevant für die Definition und Anwendung der Listen für die "
+"Zugriffssteuerung (ACLs). **Achtung**: Die hier vorgestellten ACLs führen"
+" dazu, dass bsp. PCs aus zwei verschiednen Klassenräumen sich "
+"untereinander via ping nicht mehr erreichen können. Wenn dies gewünscht "
+"ist, müsste in den ACEs eine weitere Regel erstellt werden, die Daten "
+"Zulassen --> 10.(subnet).0 mit Netmask 0.0.0.255 - also z.B. 10.16.1.0 "
+"0.0.0.255. Diese Regel muss die niedrigste Priorität erhalten."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:357
+msgid "**ACL: Lehrkraefte und Klassenraeume**"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:359
+msgid ""
+"Es sind Zwei ACL anzulegen: Lehrkraefte und Klassenraume. Dies erfolgt im"
+" Menü unter: Zugriffssteuerung --> IPv4 basierte ACL --> Hinzufügen --> "
+"<Name der ACL>"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:361
+msgid "**ACEs hinzufügen**"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:363
+msgid ""
+"Für die zuvor genannten ACLs sind jetzt sog. Entries (Einträge) "
+"anzulegen. Hierfür wählst Du im Menü:  Zugriffssteuerung --> IPv4 "
+"basiertes ACE --> <Name der ACL aus Liste auswählen - hier Lehrkraefte> "
+"--> Hinzufügen"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "ACLs"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:370
+msgid "Du gibst dann folgende Werte an:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:372
+msgid "Priorität: 20"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:373
+msgid "Aktion: Zulassen (permit)"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:374
+msgid "Protokoll: Beliebig (IP) (any)"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:375
+msgid "Quell-IP-Adresse: Beliebig (any)"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:376
+msgid "Ziel-IP-Adresse: Benutzerdefiniert (user defined)"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:377
+msgid "Wert der Ziel-IP-Adresse: 10.16.1.0 (Servernetz-IP)"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:378
+msgid "Ziel-IP-Platzhaltermaske: 0.0.0.255 (invertierte Netzmaske)"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:380
+msgid ""
+"Danach legst Du eine zweite ACE für die ACL Lehrkraefte an. Im Ergebnis "
+"solltest Du für die Lehrkraefte dann nachstehenden Einträge haben:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "ACE for teachers"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:386
+msgid ""
+"Danach lest Du ACEs für die ``ACL Klassenraeume`` an. Danach solltest Du "
+"nachstehende Einträge haben:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:392
+msgid ""
+"Schliesslich müssen die definierten ACLs noch an die VLANs gebunden "
+"werden, damit diese korrekt angewendet werden. Die Zuordnung sollte für "
+"das hier gewählte Beispiel wie folgt aussehen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "ACL Bindings"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:400
+msgid "DHCP-Relay konfigurieren"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:402
+msgid "Die Einstellungen für das DHCP-Relaying sollten wie folgt aussehen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "DHCP Relay"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:408
+msgid ""
+"Hierdurch wird sichergestellt, dass DHCP-Anfragen aus den genannten VLANs"
+" auch beim linuxmuster.net Server ankommen und bedient werden können."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:410
+msgid ""
+"Um Wake-on-LAN über Subnetze hinweg zu nutzen, muss ein sog. UDP-Relaying"
+" eingerichtet werden. Hierdruch können dann z.B. Clients via ``linbo-"
+"remote`` aufgeweckt werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "UDP Relay"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:416
+msgid "Für das DHCP-Relaying/Snooping muss zudem die Option 82 aktiviert werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "DHCP Snooping"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:422
+msgid ""
+"Abschliessend trägst Du noch die VLANs ein, die für das DHCP Relay aktiv "
+"sein sollen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "DHCP Relay: VLANs"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:428
+msgid ""
+"Nachdem Du alle Einstellungen kontrolliert und ggf. angepasst haben, "
+"speicherst Du die aktuelle Konfiguration. Dies erledigst Du bei dem "
+"Cisco-Switch dadurch, dass Du die Konfiguration aus dem RAM (running-"
+"config) auf die NVRAM-Konfiguration kopierst (startup-config)."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:431
+msgid "Weitere L2-Switches mit VLANs anbinden"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:433
+msgid ""
+"In Vorbereitung auf das Subnetting sind auf allen Switches im Netzwerk "
+"(in allen Gebäuden) die VLANs mit den IDs ``3``, ``5``, ``10``, ``20``, "
+"``30``, ``40``, ``100``, und ``200`` anzulegen, damit später die "
+"Portkonfiguration aller Switches angepasst werden kann."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:437
+msgid ""
+"In der hier dargestellten Konfiguration des L3-Switches gibt es drei LAG-"
+"Ports. Ein LAG-Port (25-28) ist dazu gedacht, eine Anbindung zu weiteren "
+"L2-Switches zu ermöglichen, die ebenfalls für die Nutzung der VLANs zu "
+"konfigurieren sind. Dieser LAG-Port ist als Trunk konfiguriert."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:439
+msgid ""
+"Wesentlich ist, dass alle VLANs, die auf dem L3-Switch eingerichtet "
+"wurden, ebenfalls auf allen L2-Switches erstellt werden. Danach muss eine"
+" LinkAggregation mit vier Ports erstellt werden, die die Anbindung zum "
+"LAG-Port des L3-Switches zur Verfügung stellt. Dieser LAG-Port auf dem "
+"L2-Switch ist dann als Trunk zu definieren, der alle VLANs "
+"(3,5,10,20,40,100,200) tagged."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:441
+msgid ""
+"Danach werden die einzelnen Ports auf den jeweiligen L2-Switches als "
+"untagged ports einem der gewünschten VLANs zugeordnet (port-based VLANs)."
+" Die Clients sind dann entsprechend auf den gewünschten VLAN-Port "
+"anzuschliessen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:443
+msgid ""
+"Ist ein Switch in einem PC-Raum, so ist der Uplink als LinkAggregation "
+"und Trunk mit den o.g. tagged VLANs zu definieren. Alle anderen Ports "
+"sind dann z.B. als access ports zu definieren, die dem VLAN 100 (Raum "
+"100) zugeordnet sind, so dass alle angeschlossenen PCs in diesem VLAN "
+"sind."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:447
+msgid ""
+"Es sollten alle Switch Konfigurationen, VLANs und Port-Belegungen sehr "
+"genau pro Switch dokumentiert sein. Hierzu ist es hilfreich in jedem "
+"Verteilerschrank eine entsprechende Dokumentation zu hinterlegen. Als "
+"Hilfestellung zur Erstellung dieser Dokumentation kann folgende Datei "
+"dienen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:451
+msgid ""
+":download:`Einfache Dokumentation mit Calc  "
+"<./media/filedownload/einfache_vlandoku_mit_calc.zip>`."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:455
+msgid "Vorbereitung der Switches im Netzwerk"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:457
+msgid ""
+"Das genaue Vorgehen kann hier nicht umfassend dokumentiert werden, da es "
+"auch von Art und Hersteller der Switche abhängt."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:459
+msgid ""
+"Exemplarisch erfolgt die Darstellung zur Einrichtung der VLANS auf "
+"L2-Switches anhand des Modells Cisco SF200-24. Für andere Modelle sind "
+"die Konfigurationsschritte entsprechend anzupassen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:462
+msgid "SF200-24 Startup-Config"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:464
+msgid ""
+"Für das hier dokumentierte Netzwerkszenario wurde ein Switch des o.g. "
+"Models für Raum 200 vorkonfiguriert, um das Vorgehen zur Konfiguration "
+"der L2-Switche besser darstellen zu können. Die Konfiguration wird zur "
+"schnelleren Umsetzung des Szenarios unten bereitgestellt."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:466
+msgid ""
+":download:`Startup-config-SF200-24-L2-Raum200 <./media/configs"
+"/linuxmuster-ip-segmentation-startup-config-sf200-24-l2.txt>`."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:470
+msgid ""
+"Die Firmware des Cisco L2-Switches ist vorab auf die aktuellste Version "
+"(hier: 1.4.11.2) zu aktualisieren. Ist eine ältere FW-Version noch "
+"installiert, so kann es erforderlich sein, die Aktualisierung in Etappen "
+"vorzunehmen (z.B. 1.1.2.0 -> 1.3.7.18 -> 1.4.7.5 -> 1.4.11.2). Um die "
+"Boot Version zu aktualisieren, ist die RTB-Datei desFW-Images via TFTP "
+"auf den Switch zu laden und dieses jeweils neu zu starten. Im "
+"Auslieferungszustand ist der Switch via IP 192.168.1.254/24 erreichbar. "
+"Login ist im Auslieferungszustand cisco mit dem Kennwort cisco."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "System Summary SF200-24"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:476
+msgid ""
+"Die heruntergeladene Konfigurationsdatei ist nun auf den Switch zu laden "
+"und dieser ist dann neu zu starten."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:480
+msgid ""
+"Im Auslieferungszustand kann auf den Switch mit der IP 192.168.1.254/24 "
+"zugegriffen werden. Benutzer und Kennwort sind ``cisco``."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:482
+msgid ""
+"Im Menü ``Administration --> File Management --> Download/Backup Config``"
+" ist zu Konfigurationsdatei mit ``Durchsuchen`` auszuwählen. Als Ziel ist"
+" ``Startup Configuration file`` anzugeben."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "Download Config File SF200-24"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:488
+msgid "Der erfolgreiche Upload der Konfigurationsdatei wird im Fenster bestätigt."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:494
+msgid ""
+"Danach ist der Switch neu zu starten (siehe Hinweise wie bei Cisco "
+"L3-Switch). Nach dem Neustart sind nachstehende Hinweise zur weiteren "
+"Konfiguration des Switches zu beachten."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:498
+msgid ""
+"Der Switch weist im VLAN 3 (access port 24) die IP 192.168.1.250/24 auf. "
+"Benutzer ist ``cisco`` und PW ist ``cisco``. Die ``Ports 25 & 26`` wurden"
+" als ``LACP-Bond`` konfiguriert. Dieser arbeitet als Trunk und tagged die"
+" Pakete für die VLANs ``3,5,10,20,30,40,100,200``. In dem dokumentierten "
+"Szenario sind die Ports 25&26 des L3-Switches mit den Ports 25 & 26 des "
+"L2-Switches zu verbinden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:500
+msgid ""
+"Durch den Import der Konfigurationsdatei sind bereits alle "
+"Konfigurationseinstellungen für den Switch eingetragen, der als Raum-"
+"Switch für Raum 200 (VLAN 200) für einen PC-Raum dienen soll."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:502
+msgid ""
+"Nachstehend dargestellte Konfigurationsschritte visualisieren die "
+"jeweiligen Einstellungen, die so auch manuell eingestellt werden können."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:504
+msgid ""
+"Zunächst sind die VLANs mit identischen IDs und Bezeichnungen auf allen "
+"L2 - Switchen analog zum L3-Switch anzulegen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "VLANs SF200-24"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:510
+msgid "Danach ist der LACP-Bond bestehend aus den Ports 25 & 26 zu definieren."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "LACP-Bond SF200-24"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:516
+msgid ""
+"Die Nutzung der jeweiligen Ports wird in der Beschreibung pro Port "
+"dokumentiert."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "Port Settings SF200-24"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:522
+msgid "Die VLAN - Nutzung der Ports (Access, Trunk) ist festzulegen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "Access, Trunk Ports SF200-24"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:528
+msgid ""
+"Die Ports sind den VLANs zuzuordnen in denen diese arbeiten sollen. So "
+"soll der Switch die Ports 1-20 als Access Ports im VLAN 200 nutzen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "VLAN Ports VLAn 200 SF200-24"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:534
+msgid ""
+"Die Darstellung der Zuordnung kann pro VLAN kontrolliert werden. Hier als"
+" Beispiel die Darstellung für das VLAN 5."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "Tagged Ports VLAN 200 SF200-24"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:540
+msgid ""
+"Die Zuordnung der Ports zu den VLANs inkl. Darstellung deren Funtkion ist"
+" im Menü ``VLAN Management --> Port VLAN Membership`` dargestellt."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "Port VLAN Membership SF200-24"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:546
+msgid ""
+"Sind alle Ports wie gewünscht konfiguriert, ist die Konfiguration zu "
+"speichern (Kopie der running-config auf die startup-config), eine "
+"Sicherungskopie anzulegen und abschliessend ist der Switch neu zu "
+"starten."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:550
+msgid ""
+"Es ist immer das Protokoll 802.1q für die Definition der VLANs "
+"anzuwenden. Dies ist ein genormtes Netzwerkprotokoll, das es ermöglicht, "
+"sog. tagged VLANs zu definieren."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:554
+msgid "Netzkonfiguration VM-Host"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:557
+msgid "Bonds erstellen"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:559
+msgid ""
+"Stehen auf dem VM-Host mehrere Netzwerkkarten zur Verfügung, so bietet es"
+" sich an, diese als Bonds (Link Aggregation) zu bündeln. Auf dem "
+"Hypervisor sind dann zudem VLAN Bridges anzulegen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:562
+msgid ""
+"In dem hier dokumentierten Netzszenario werden vier Netzwerkkarten zu "
+"einem Bond zusammengefasst und dann die VLANs eingerichtet. Dies "
+"Abbildung der VLANs erfolgt auf dem Hypervisor mithilfe von VLAN Bridges."
+" Eine Netzwerkkarte, die an ein VLAN Bridge angeschlossen wird, erhält "
+"den jeweiligen VLAN-TAG."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:565
+msgid "Auf diese Weise können VMs flexibel den VLANs zugeordnet werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:567
+msgid ""
+"Nachstehend wird die Konfiguration des Hypervisors in der Übersicht "
+"mithilfe von ``Proxmox v6`` dargestellt. Für andere Hypervisor müssen die"
+" Einstellungen entsprechend angepasst werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:570
+msgid "Übersicht der VM-Host Netzwerkkonfiguration"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:572
+msgid ""
+"Nachstehende Abb. zeigt die Netzwerkeinstellungen des Proxmox-Hosts in "
+"der Übersicht:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "Proxmox Network Config Overview"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:578
+msgid ""
+"Diese Konfiguration können entweder durch Eintragungen in der Proxmox-GUI"
+" erfolgen, oder durch Ergänzung der Datei ``/etc/network/interfaces``"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:686
+msgid "Nach einem Neustart sind die VLAN Bridges nutzbar."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:688
+msgid ""
+"Nach dem Import der VMs sind nun deren Netzwerkkarten den richtigen VLAN "
+"Bridges zuzuordnen. Dies muss für alle VMs erfolgen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:690
+msgid "Die Anpassung sieht unter Proxmox für OPSense wie folgt aus:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "Proxmox OPNsense® NICS VLAN Bridges"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:697
+msgid "Netzanpassung VMs"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:699
+msgid ""
+"Zunächst sind in der OPNsense®-VM die Netzwerkkarten korrekt den VLAN "
+"Bridges des Hypervisors zuzuordnen. Danach sind den Netzwerkkarten die "
+"korrekten IPs (FW: 10.0.0.254/24, OPT1: 10.3.0.254/24, OPT2: "
+"10.4.0.0.0/24, WAN: DHCPv4) zuzuordnen. Danach ist die VM neu zu starten."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:701
+msgid ""
+"Die virtuellen Maschinen (Server, Docker-Host, OPSI und ggf. XOA) sind "
+"mithilfe des Befehls ``linuxmuster-prepare`` auf die gewünschte Struktur "
+"anzupassen, so dass diese die korrekten Adressen aus dem Servernetz "
+"zugewiesen bekommen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:705
+msgid ""
+"siehe zur ausführlichen Darstellung von linuxmuster-prepare :ref:`modify-"
+"net-label`"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:707
+msgid ""
+"Als Bsp. zur Nutzung des Konsolenbefehls pro virtueller Maschine wird "
+"nachstehend die Anpassung des Servers erklärt:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:719
+msgid ""
+"Richtet das Server-Profil wie folgt ein (übersetzt für die erste Code-"
+"Zeile):"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:716
+msgid "Profil/Hostname server,"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:717
+msgid "IP/Bitmask 10.0.0.1/24,"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:718
+msgid "Domänenname meineschule.de,"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:719
+msgid "Gateway/DNS 10.0.0.254"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:721
+msgid ""
+"Wurde dies für alle verwendeten VMs durchgeführt, ist zu prüfen, ob die "
+"VMs im Servernetz sich untereinander erreichen können."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:723
+msgid ""
+"Vom Server aus ist die Erreichbarkeit der Firewall, der Docker-, der "
+"OPSI- und ggf. der XOA-VM zu prüfen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:732
+msgid ""
+"Sofern erfolgreich Antwortpakete zu sehen sind, kann mit dem nächsten "
+"Schritt die Einrichtung fortgesetzt werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:735
+msgid "Weitere Subnetze definieren"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:737
+msgid ""
+"Weitere Subnetze ergänzt man nach dem Setup in der Datei "
+"``/etc/linuxmuster/subnets.csv``."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:739
+msgid "Für o.g. Netzstruktur müsste die Datei folgende Eintragungen aufweisen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:758
+msgid "**Hinweise**:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:760
+msgid ""
+"Im zweiten Feld der Zeile steht die IP-Adresse des Subnetz-Gateways, die "
+"auf dem Layer-3-Switch für das entsprechende VLAN-Interface konfiguriert "
+"werden muss (s.o. - bereits auf dem L3-Swich erfolgt)."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:762
+msgid ""
+"Optional können im dritten und vierten Feld Anfangs- und Endadressen für "
+"eine freie DHCP-Range angegeben werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:764
+msgid ""
+"Wichtig ist darüberhinaus, dass auf dem Switch für das Servernetz "
+"ebenfalls ein VLAN-Interface mit einer IP-Adresse aus dem Subnetz (z.B. "
+"10.0.0.253) als Gateway eingerichtet werden muss."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:766
+msgid ""
+"Diese IP muss anstatt der Firewall-IP als Router-IP in die Servernetz-"
+"Zeile in subnets.csv eingetragen werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:769
+msgid "Subnetze importieren"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:771
+msgid ""
+"Die geänderte Subnetz-Konfiguration wird mit dem Befehl ``linuxmuster-"
+"import-subnets`` übernommen. Dabei werden die Subnetze in die DHCP-"
+"Server-Konfiguration eingetragen. Außerdem richtet das Skript statische "
+"Routen in die Subnetze über die definierten Gateway-Adressen auf Server-,"
+" Firewall-, Opsi- und Docker-VMs ein."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:775
+msgid "**Firewall-Beispiel**"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "Firewall: Routes for subnets"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:781
+msgid ""
+"Auf der Firewall werden zusätzlich ausgehende NAT-Regeln für jedes "
+"Subnetz angelegt:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "Firewall: NAT rules"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:787
+msgid "und das LAN-Gateway angepasst."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "Firewall: LAN Gateway"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:794
+msgid "netplan auf VMs prüfen"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:796
+msgid ""
+"Der Import ändert die Netzwerkeintragungen der VMs. Nach einem Neustart "
+"der VMs ist für den Server-, OPSI- und Docker-VM zu prüfen, ob die "
+"Eintragungen in der Datei ``/etc/netplan/01-netcfg.yaml`` den "
+"nachstehenden Eintragungen entsprechen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "Netplan Network Config"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:803
+msgid ""
+"Wichtig ist, dass die Routen zu den jeweileigen Netzen via IP 10.0.0.253 "
+"(IP des VLAN 10 auf dem L3-Switch) geleitet werden. Das Standard-Gateway "
+"bleibt hingegen die Firewall 10.0.0.254."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:805
+msgid ""
+"Sollten hier Abweichungen festgestellt werden, so sind diese so "
+"anzupassen, dass die diese den o.g. Eintragungen entsprechen. Die "
+"Änderungen werden dann mit dem Befehl ``netplan apply`` angewendet."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:807
+msgid ""
+"Es sollte nun die Erreichbarkeit der Server im Servernetz und der Zugrff "
+"der Server-VMs auf das Internet getestet werden. Sollte dies "
+"funktionieren, so können nun die Geräte eingetragen werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:810
+msgid "Geräte den Subnetzen zuweisen"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:812
+msgid ""
+"Auf dem linuxmuster.net Server sind in der Datei "
+"``/etc/linuxmuster/sophomorix/default-school/devices.csv`` alle Geräte "
+"eingetragen. Gemäß der neuen Netzstruktur sind die IP-Adressen "
+"entsprechend anzupassen und danach mit dem Import-Befehl zu übernehmen."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:815
+msgid ""
+"Nachstehende Eintragungen sollen verdeutlichen, wie Geräte den VLANs "
+"dieses hier dokumentierten Netzszenarios zugeordnet werden:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:835
+msgid ""
+"Die Anpassungen in der Datei sind nun zu speichern. Danach sind die so "
+"angepassten Geräte abschliessend mithilfe des nachstehenden Befehls in "
+"das System zu übernehmen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:842
+msgid ""
+"Die Clients in Raum 200 und im Lehrernetz sind dann anzuschliessen. Diese"
+" Clients müssen o.g. IPs erhalten. Ist dies der Fall, kann ein Linbo-"
+"Image erstellt und weitere Tests (Anmeldung, Zugriff auf den Server, "
+"Internet-Zugriff etc.) ausgeführt werden."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:844
+msgid ""
+"Erhält ein Client die korrekte IP so ist dies unter Linbo wie folgt zu "
+"erkennen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:-1
+msgid "IP PXE Client"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:851
+msgid "Testen der neuen Netzstruktur"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:853
+msgid ""
+"Grundsätzlich gilt, dass die einzelnen konfigurierten Netzbereiche "
+"unmittelbar zu testen sind. Wurde der L3-Switch und der Hypervisor mit "
+"den VMs konfiguriert und wurde die geignete Verkabelung hergestellt, so "
+"ist zunächst zu testen, ob sich alle VMs im Servernetz untereinander "
+"erreichen und ob diese Internet-Zugriff haben."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:857
+msgid "Die durchzuführenden Tests sind in folgende Bereiche zu unterteilen:"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:859
+msgid "Verbindung VMs untereinander via L3-Switch (Servernetz)"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:860
+msgid ""
+"Verbindung zwischen den Switchen über das Management VLAN - in diesem "
+"Beispiel VLAN 1"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:861
+msgid ""
+"Verbindung von Endgeräten eines VLANs auf L2-Switch1 / L2-Switch2 zum "
+"linuxmuster.net Server und Verbindung zum Internet"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:862
+msgid ""
+"Verbindung von Endgeräten von L2-Switch1 via L3 Switch zu Endgeräten des "
+"identischen VLANs auf L2-Switch2"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:863
+msgid ""
+"Linbo-Start der Clients in einem Fachraum. Prüfen, ob den Geräten eine IP"
+" über die Netzgrenzen hinweg - wie in der devices.csv angegeben - "
+"erfolgreich zugewiesen wird."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:864
+msgid ""
+"vom Server aus sind WOL-Pakete an einen Client zu senden, um diesen "
+"aufzuwecken und mit Linbo zu synchronisieren."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:867
+msgid "Download L3-Configs"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:869
+msgid ""
+"Nachstehend werden Dir einige Konfigurationsdateien für L3-Switche "
+"angeboten, die Du an Dein Netzszenario anpassen kannst."
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:874
+msgid "Hersteller"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:874
+msgid "L3 - Switch Modell"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:874
+msgid "Download"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:876
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:878
+msgid "Cisco"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:876
+msgid "SG-300-28"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:876
+msgid ""
+":download:`Config SG300-28 <./media/configs/linuxmuster-ip-segmentation-"
+"sg300-28-l3.txt>`"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:878
+msgid "3750G  (IOS 12.2)"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:878
+msgid ""
+":download:`Config 3750G <./media/configs/linuxmuster-ip-segmentation-"
+"3750g-l3.txt>`"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:880
+msgid "D-Link"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:880
+msgid "DGS-1510-28x"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:880
+msgid "``Config DGS1510-28x still missing``"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/networksegmentation.rst:885
+msgid "Die Liste wird schrittweise erweitert. D-Link fehlt noch."
+msgstr ""
+

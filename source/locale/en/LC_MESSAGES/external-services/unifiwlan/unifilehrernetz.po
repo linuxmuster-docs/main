@@ -1,0 +1,111 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/external-services/unifiwlan/unifilehrernetz.rst:2
+msgid "Einrichtung des Lehrer-WLANs"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifilehrernetz.rst:4
+msgid "Im Lehrer-WLAN sind alle schuleigenen Geräte und die Geräte der Lehrer."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifilehrernetz.rst:6
+msgid ""
+"So könnte beispielsweise ein Lehrer mit seinem Smartphone eine Aufgabe "
+"abfotografieren und zum Beamer schicken. Oder er könnte einen Film per "
+"Smartphone direkt über einen Beamer abspielen."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifilehrernetz.rst:8
+msgid "All diese Geräte müssen in die Datei `devices.csv` aufgenommen sein."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifilehrernetz.rst:10
+msgid ""
+"Schülergeräte haben in diesem Netzwerk nichts zu suchen. Denn Schüler "
+"sollen nicht in der Lage sein, Filmchen per Handy zu starten."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifilehrernetz.rst:13
+msgid "Schritt für Schritt"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifilehrernetz.rst:15
+msgid ""
+"Öffne von einem Rechner im Schulnetz den Unifi-Kontroller "
+"`<https://unifi:8443>`_ und melde Dich an."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifilehrernetz.rst:-1
+msgid "Einstellungen"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifilehrernetz.rst:20
+msgid "Klicke unten links auf `Einstellungen`. Gehe auf `drahtlose Netzwerke` ."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifilehrernetz.rst:-1
+msgid "Drahtlose Netzwerke"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifilehrernetz.rst:25
+msgid ""
+"Es ist bereits eine WLAN-Gruppe `Default` eingerichtet. Die wird Dir für "
+"den Betrieb in einer Schule ausreichen."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifilehrernetz.rst:27
+msgid ""
+"Wie erwartet sind noch keine drahtlosen Netzwerke eingerichtet. Für Dein "
+"erstes WLAN klickst Du auf `NEUES DRAHTLOSES NETZWERK HINZUFÜGEN`."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifilehrernetz.rst:-1
+msgid "Netzwerke hinzufügen"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifilehrernetz.rst:32
+msgid "Gib dem Lehrernetz einen Namen (z.B. Lehrer)."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifilehrernetz.rst:34
+msgid "Wähle die Verschlüsselung `WPA Personal` und ein Passwort."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifilehrernetz.rst:36
+msgid "Wähle **nicht** Gastrichtlinie. Im Schulnetz möchtest Du keine Gäste!"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifilehrernetz.rst:38
+msgid ""
+"Wenn Du möchtest, verbirg die SSID. Was Schüler nicht sehen, macht sie "
+"nicht neugierig."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifilehrernetz.rst:40
+msgid "Speichere die Einstellungen."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifilehrernetz.rst:42
+msgid "Das Lehrernetz ist nun eingerichtet und wird auf alle APs ausgerollt."
+msgstr ""
+

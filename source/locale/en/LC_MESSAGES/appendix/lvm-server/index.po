@@ -1,0 +1,394 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/appendix/lvm-server/index.rst:7
+msgid "LVM des Servers anpassen"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:12
+msgid "Die nachstehenden Hinweise sind dafür gedacht,"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:18
+msgid ""
+"Alternativ kannst Du die zweite Platte mit anderen Größenangaben auch mit"
+" linuxmuster-prepare im Zuge des Setup ausführen. Möchtest Du dies so "
+"durchführen, kannst Du nachstehende Punkte überspringen."
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:20
+msgid ""
+"Solltest Du Dich für eine andere Größeneinteilung oder für eine "
+"Einrichtung auf realen Festplatten entschieden haben, dann geht es hier "
+"für Dich weiter."
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:23
+#: ../../source/appendix/lvm-server/index.rst:77
+msgid "LV Name"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:23
+msgid "LV Pfad"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:23
+#: ../../source/appendix/lvm-server/index.rst:79
+msgid "Mountpoint"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:23
+#: ../../source/appendix/lvm-server/index.rst:78
+msgid "Größe"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:25
+msgid "var"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:25
+msgid "/dev/sg_srv/var"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:25
+msgid "/var"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:25
+#: ../../source/appendix/lvm-server/index.rst:27
+msgid "20G"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:26
+msgid "linbo"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:26
+msgid "/dev/sg_srv/linbo"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:26
+msgid "/srv/linbo"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:26
+#: ../../source/appendix/lvm-server/index.rst:28
+msgid "80G"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:27
+msgid "global"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:27
+msgid "/dev/sg_srv/global"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:27
+msgid "/srv/samba/global"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:28
+msgid "default-school"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:28
+msgid "/dev/sg_srv/default-school"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:28
+msgid "/srv/samba/schools/default-school"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:33
+msgid "Einrichtung eines LVM auf der 2. HDD"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:40
+msgid "create lvm on second storage"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:40
+msgid "Lege ein LVM an"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:42
+msgid "Wähle den Eintrag ``Datenträgergruppe (LVM) anlegen`` aus."
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:49
+msgid "create an lvm volume"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:49
+msgid "LVM-Volume erstellen"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:51
+msgid ""
+"Hier gibst Du einen Namen für die LVM Volume Group an (z.B. sg_srv) und "
+"wählst das Gerät aus wo es erstellt werden soll. ``Erstellen`` schließt "
+"dieses Fenster."
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:55
+msgid ""
+"Bei ``VERFÜGBARE GERÄTE`` gilt es nun in die angelegte ``LVM volume "
+"group`` die benötigten ``Logical Volume`` anzulegen."
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:62
+msgid "create logical volume"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:62
+msgid "Lege ein Logical Volume an"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:64
+msgid ""
+"Bei ``VERFÜGBARE GERÄTE`` findest Du die von Dir zuvor angelegte \"LVM "
+"volume group\". Diese markierst Du , um dann ``Create Logical Volume`` "
+"auszuwählen."
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:71
+msgid "define size of logical volume"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:71
+msgid "Lege die Größe des Logical Volume fest"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:73
+msgid ""
+"Die benötigten Daten entnimmst Du aus der obigen Tabelle. Die Zuordnung "
+"ist folgende:"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:77
+msgid "``Name``"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:77
+#: ../../source/appendix/lvm-server/index.rst:78
+#: ../../source/appendix/lvm-server/index.rst:79
+msgid "-->"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:78
+msgid "``Size``"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:79
+msgid "``Mount``"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:82
+msgid "Bei ``Format`` wählst Du, wie in der Grafik gezeigt \"ext4\"."
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:84
+msgid "Wieder schließt Du diese Aktion mit ``[Èrstellen]`` ab."
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:88
+msgid ""
+"Die letzten zwei Schritte wiederholst Du für die anderen Positionen der "
+"Tabelle |...|"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:90
+msgid "|...| linbo:"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:97
+msgid "volume for linbo"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:97
+msgid "Volume für LINBO festlegen"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:104
+msgid "define size for linbo volume"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:104
+msgid "Größe für LINBO festlegen"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:108
+msgid "|...| global:"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:115
+msgid "define volume for global"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:115
+msgid "Volume für global festlegen"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:122
+msgid "define size for volume global"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:122
+msgid "Größe für global festlegen"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:126
+msgid "|...| default-school:"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:133
+msgid "define volume vor default-school"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:133
+msgid "Volume für default-school definieren"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:140
+msgid "define size for volume default-school"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:140
+msgid "Größe für das Volume default-school festlegen"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:144
+msgid ""
+"Zum Abschluss werden Dir die Partitionsierungseinstellungen gemäß Deiner "
+"Eingaben angezeigt."
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:151
+msgid "overview partition settings"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:151
+msgid "Überblick über die Partitionseinstellungen"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:155
+msgid "Einrichtung ohne LVM auf HDD"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:157
+msgid ""
+"Ohne LVM sind die Mount Points ``/var``, ``/srv/linbo``, "
+"``/srv/samba/global`` und ``/srv/samba/schools/default-school`` auf die "
+"HDD(s) beziehungsweise auf einzelne Partitionen zu legen."
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:159
+msgid ""
+"Auf eine detaillierte Beschreibung verzichten wir hier. Wir gehen davon "
+"aus, dass Du weißt, wie Du es umsetzen musst, wenn Du es so einrichten "
+"willst."
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:161
+msgid ""
+"Die vorhergehende Beschreibung bietet Dir sicherlich genügende Hinweise, "
+"daher verlinken wir sie hier noch einmal für Dich."
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:164
+msgid "Quota-Einstellungen überprüfen"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:168
+msgid ""
+"Nachstehende Schritte musst Du nur durchführen, wenn Du **nicht** mit den"
+" default-Einstellungen installierst."
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:170
+msgid ""
+"Überspringe diesen Punkt und gehe zu: `Bezeichnung des Speichermediums "
+"für das LVM ermitteln`_"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:172
+msgid ""
+"Hast Du bei der Installation des Servers als Speichermediem **kein LVM "
+"manuell** angelegt, dann führst Du nachstehende Schritte aus. In allen "
+"anderen Fällen überspringt Du diesen Schritt."
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:179
+msgid ""
+"Mit diesem Aufruf öffnest Du die Datei ``/etc/fstab`` mit dem Editor nano"
+" auf, damit Du die Ersetzung von ``defaults`` durchführen kannst. Das ist"
+" der Ersetzungstext:"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:185
+msgid "Vor Deiner Ersetzung:"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:194
+msgid "Nach der Änderung:"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:203
+msgid ""
+"Speichere die Einstellung mit ``Strg+w`` und verlasse den Editor mit "
+"``Strg+x``."
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:205
+msgid ""
+"Lade die Eintragungen aus der Datei ``/etc/fstab`` neu mit ``mount -a``. "
+"Ggf. erkennst Du auch noch Fehler, die sich aufgrund von Tippfehlern in "
+"der Datei /etc/fstab ergeben. Behebe diese zuerst, bevor Du fortfährst."
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:210
+msgid "Bezeichnung des Speichermediums für das LVM ermitteln"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:212
+msgid "Betrifft Dich nur, wenn Du die default-Einstellungen verwendest."
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:218
+msgid ""
+"Aus dessen Ausgabe kannst Du Namen für die weitere Verwendung ermitteln. "
+"Hier wäre er beispielhaft ``/dev/sdb/``"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:225
+msgid "output of lsblk command"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:225
+msgid "Ausgabe des lsblk - Befehls"
+msgstr ""
+
+#: ../../source/appendix/lvm-server/index.rst:227
+msgid "Notiere Dir HDD- und Partition-Bezeichnungen für die spätere Verwendung."
+msgstr ""
+

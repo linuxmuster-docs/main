@@ -1,0 +1,1091 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:7
+msgid "Windows 11 Clients"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:13
+msgid "Betriebssystem Windows 11 installieren"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:17
+msgid ""
+"Willst Du eine Windows 11 VM als Client für linuxmuster.net nutzen, so "
+"musst Du bei der Anlage der VM unbedingt für das BIOS OVMF (UEFI) statt "
+"dem sonst üblichen SeaBIOS auswählen. Zudem musst Du TPM (Trusted "
+"Platform Module) in der Hardware hinzufügen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:19
+msgid ""
+"Um Windows 11 auf den Clients installieren zu können, sollten diese mind."
+" 4GB RAM als Arbeitsspeicher aufweisen und einen TPM-Chip 2.0 auf dem "
+"Mainboard verbaut haben. Zudem muss Secure-Boot im BIOS aktiviert worden "
+"sein."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:21
+msgid ""
+"Unter https://www.microsoft.com/de-de/software-download/windows11 wählst "
+"Du das gewünschte Installationsmedium für Windows 11 aus, lädst dieses "
+"herunter, erstellt einen bootbaren Win11-USB-Stick oder lädst die ISO-"
+"Datei (z.B. Win11_23H2_German_x64v2.iso) auf den Proxmox ISO-Speicher."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:23
+msgid ""
+"Alternativ kannst Du aus einer aktuellen Windows 11 ISO-Datei mit Rufus "
+"eine Windows 11 Installations-ISO erstellen, die die Beschränkungen mit "
+"Secure Boot, TPM 2.0 und anderen Mindestanforderungen bei der "
+"Installation nicht prüft, so dass auch auf älterer Hardware Windows 11 "
+"noch installiert werden kann."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:25
+msgid ""
+"Du hast den PC wie zuvor beschrieben mit LINBO partitioniert und "
+"formatiert. Danach hast Du den PC / die VM über CD/USB-Stick gebootet."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:29
+msgid ""
+"Auf dem Server im Verzeichnis ``/srv/linbo/examples/`` findet sich die "
+"start.conf.win10-efi. Diese kannst Du als Ausgangspunkt zur Anpassung für"
+" Windows 11 nutzen. In jedem Fall solltest Du UEFI auf dem PC aktivieren "
+"und in der start.conf muss eine EFI und eine MSR-Partition enthalten "
+"sein. Die Cache-Partition sollte niemals die letzte Partition sein. Setze"
+" danach z.B. noch eine Datenpartition. Ansonsten kann es bei der "
+"Installation von Windows 11 zu Problemen bei der Erkennung der "
+"Partitionen kommen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:31
+msgid ""
+"Drücke während des Boot-Vorgangs nach Aufforderung eine Taste, damit von "
+"dem Windows-Installationsmedium tatsächlich gebootet wird."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:33
+msgid ""
+"Danach siehst Du zu Beginn der Installation die Spracheinstellungen. "
+"Wähle die gewünschten Einstellungen aus und klicke auf ``Weiter``:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:40
+msgid "Win11 Choose Clients"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:40
+msgid "Wähle die Sprache und das Tastaturlayout"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:42
+msgid "``Jetzt installieren`` wählen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:49
+msgid "Win11 Choose Install"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:49
+msgid "Wähle Jetzt installieren"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:51
+msgid ""
+"Es wird das Setup gestartet. Es erscheint zuerst der Hinweis auf die "
+"Windows-Aktivierung. Hier kannst Du zum jetzigen Zeitpunkt die Option "
+"``Ich habe keinen Product Key`` wählen. Die Aktivierung mit der "
+"vorhandenen Lizenz erfolgt dann später in anderer Form."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:58
+msgid "License Key"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:58
+msgid "Wähle ``Ich habe keinen Product Key`` aus"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:60
+msgid ""
+"Wähle dann das gewünschte Betriebssystem aus, für das die Lizenz "
+"vorliegt, z.B. Windows 11 Pro Education N."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:67
+msgid "Choose OS"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:67
+msgid "Wähle das gewünschte Betriebssystem aus"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:69
+msgid "Haken zum Akzeptieren der Lizenzbedingungen setzen und auf ``Weiter``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:76
+msgid "Accept License Agreement"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:76
+msgid "Akzeptiere die Lizenzbedingungen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:78
+msgid "``Benutzderfinierte Installation`` wählen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:85
+msgid "Win11 Choose Individual Installation"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:85
+msgid "Wähle die benutzerdefinierte Installation"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:87
+msgid ""
+"Im Menü der Festplattenauswahl sollte nun eine Partition vorhanden sein, "
+"die von LINBO vorbereitet wurde und auf welcher Windows 11 installiert "
+"werden soll."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:94
+msgid "Win11 Choose Partition"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:94
+msgid "Wähle die Partition für die Installation von Windows"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:96
+msgid ""
+"In der Abb. wurde ein UEFI-System vorbereitet. Partition 3 wurde für "
+"Windows 11 vorbereitet und Partition 4 ist die Cache-Parition. Wähle nun "
+"die richtige Parition (hier: Partition 3: windows) aus und klicke auf "
+"``Weiter``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:98
+msgid "Warte bis die Installation von Windows abgeschlossen wurde."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:105
+msgid "Win11 installing os components"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:105
+msgid "Fortschritt der Installation von Windows"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:107
+msgid "Starte Windows neu."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:111
+msgid ""
+"Es ist jetzt wichtig, dass der PC in LINBO gebootet wird. Stelle daher "
+"die Boot-Reihenfolge wieder so um, dass via PXE LINBO gebootet wird. Du "
+"gelangst dann wieder wie zuvor in den Linbo Startbildschirm."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:113
+msgid ""
+"Starte im LINBO-Menü nun Windows unsynchronisiert über den kleinen GRÜNEN"
+" Startknopf neu:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:120
+msgid "Linbo: Start OS unsynchronised"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:120
+msgid "Starte Windows 11 unsynchronisiert"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:122
+msgid ""
+"Nachdem Windows nun aus dem lokalen LINBO-Cache bootet, wird die "
+"Installation fortgeführt. Windows richtet Dienste ein und startet dann "
+"erneut. Du gelangst wieder in LINBO und startest Windows wieder "
+"unsynchronisiert mit der grünen Pfeiltaste."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:124
+msgid "Nach dem erneuten Start von Windows wählst Du Deine Region aus."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:131
+msgid "Win11 Choose Region"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:131
+msgid "Wähle die Region aus"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:133
+msgid "Tastaturlayout wählen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:140
+msgid "Win11 Choose Keyboard Layout"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:140
+msgid "Wähle das Tastaurlayout aus"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:142
+msgid "Zweites Tastaturlayout ggf. wählen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:149
+msgid "Win11 Choose Second Key Layout"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:149
+msgid "Wähle ggf. ein zweites Tastaturlayout aus"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:151
+msgid ""
+"Ohne Netzwerkverbindung installieren. Hast Du den Muster-Client in der "
+"OPNsense noch nicht in der noproxy Gruppe eingetragen, kommst Du "
+"automatisch zu diesem Bildschirm. Klicke auf ``Ich habe kein Internet``"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:158
+msgid "Win11 Connect Network"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:158
+msgid "Ohne Internetverbindung installieren"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:160
+msgid ""
+"Admin-Benutzer festlegen. Gib hier den Namen des lokal anzulegenden "
+"Admin-Benutzers an."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:167
+msgid "Win11 Create Admin User"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:167
+msgid "Lege den Benutzer admin an"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:169
+msgid "Lege im nächsten Bildschirm das Kennwort des neuen lokalen Admins fest."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:172
+msgid ""
+"Beantworte die Sicherheitsfragen. Gib auch für alle nachfolgenden "
+"Abfragen immer ``Nein`` oder ``minimal`` an."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:179
+msgid "Win11 Deactivate Tracking"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:179
+msgid "Deaktiviere das Tracking"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:181
+msgid "Führe die restlichen Einrichtungsschritte durch."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:183
+msgid ""
+"Weitere gewünschte Einrichtungen ausführen (Programme, Hintergründe, "
+"usw.)."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:185
+msgid ""
+"Alle Updates installieren. Hierbei muss Windows immer wieder neu "
+"gestartet werden. Darauf achten, dass Windows aus LINBO heraus immer nur "
+"mit der GRÜNEN Pfeiltaste gestartet wird."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:189
+msgid ""
+"Achtung: Für den ersten Muster-Client muss in der OPNsense hierzu unter "
+"``Firewall --> Aliase --> NoProxy --> Editieren --> IP`` der neue Muster-"
+"Clients hinzugefügt werden, damit dieser Internet-Zugriff hat."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:191
+msgid "Gewünschte Einstellungen am Client vornehmen und Installation abschließen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:195
+msgid "Global-Registry Patch für Windows 11"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:197
+msgid ""
+"Vor der Aufnahme des Rechners in die Domäne muss der sog. ``Global-"
+"Registry-Patch`` eingespielt werden, da es ansonsten zu einer Änderung "
+"des Kennworts für das Computerkonto kommen kann."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:199
+msgid "Starte auf dem Client Windows in LINBO mit der grünen Pfeiltaste."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:201
+msgid "Melde Dich als lokaler Administrator am Windows-PC an."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:203
+msgid ""
+"Öffen den Explorer und gehe auf ``Dieser PC -> Geräte und Laufwerke -> "
+"windows (C:) -> linuxmuster-win``"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:210
+msgid "linuxmuster-win"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:210
+msgid "Öffne den Ordner c:\\\\linuxmuster-win\\\\"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:212
+msgid ""
+"Bestätige die Nachfrage zur Berechtigung zum Zugriff auf diesen Ordner "
+"mit ``Fortsetzen``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:214
+msgid "Führen einen Doppelklick auf die Datei ``win10.global`` aus."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:221
+msgid "linuxmuster-win-win10-global"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:221
+msgid "Führe einen Doppelklick auf die Datei win10.global aus"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:223
+msgid "Bestätige die Nachfrage zum Registrierungs-Editor mit Ja."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:230
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:239
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:248
+msgid "linuxmuster-win-win10-global2"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:230
+msgid "Bestätige die Nachfrage zum Registrierungs-Editor mit Ja"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:232
+msgid "Bestätige die Nachfrage zum Forsetzen des Vorgangs mit Ja."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:239
+msgid "Bestätige die Nachfrage zum Forsetzen des Vorgangs mit Ja"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:241
+msgid "Bestätige die Meldung mit OK."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:248
+msgid "Bestätige die Meldung mit OK"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:250
+msgid "Im Fehlerfall gehst Du zu dem Abschnitt :ref:`im Fehlerfall Win11`"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:252
+msgid "Fahre nun den PC herunter."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:254
+msgid ""
+"Zum Herunterfahren vorsichtshalber über das Windows-Startmenü in der "
+"Suche ``cmd`` eingeben und die Eingabeaufforderung öffnen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:256
+msgid "In der Console ``shutdown -s -t 1`` eingeben und mit ``Enter`` bestätigen:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:263
+msgid "Win10 Shutdown Device"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:263
+msgid "Fahre das Gerät herunter"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:266
+msgid "Domänenanbindung"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:268
+msgid ""
+"Geräte die dauerhaft mit den Ressourcen der linuxmuster.net Umgebung "
+"arbeiten sollen, sind nach dem Einspielen des ``win10-global.reg`` "
+"Patches in der Domäne aufzunehmen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:270
+msgid ""
+"Starte den Muster-Client wieder via LINBO, indem Du Win11 mit dem GRÜNEN "
+"Start-Button aus dem lokalen Cache startest."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:277
+msgid "Win11 start client unsynchronized"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:277
+msgid "Starte Windows 11 mit der grünen Taste"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:282
+msgid "Manueller Domänen Join für Windows"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:284
+msgid ""
+"Melde Dich an Windows 11 mit dem lokalen Admin-Konto an. Hast Du den Reg-"
+"Patch bereits eingespielt, so gibst Du als PC-Namen den in der "
+"Schulkonsole festlegen und danach das Kotno des Admins an."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:287
+msgid "Die kann z.B. wie folgt lauten: ``h00103\\linuxadmin``"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:289
+msgid ""
+"Über ``Einstellungen --> System --> Info --> Diesen PC umbenennen`` einen"
+" Hostname vergeben, der *übereinstimmend* mit dem Hostnamen in der "
+"Gerätelististe ist."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:296
+msgid "Win11 rename client"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:296
+msgid "Client umbenennen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:298
+msgid "Um den neuen Hostname anzuwenden, muss Windows neu gestartet werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:305
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:316
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:325
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:334
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:343
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:352
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:361
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:370
+msgid "Win11 reboot"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:305
+msgid "Starte Windows neu"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:307
+msgid "Starte in LINBO Windows mit der ``grünen Taste`` neu."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:309
+msgid ""
+"Nach dem Neustart meldest Du Dich wieder als Benutzer admin an und rufst "
+"``Einstellungen --> System --> Info --> Verwandte Links --> Domäne oder "
+"Arbeitsgruppe`` auf."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:316
+msgid "Domäne/ Arbeitsgruppe aufrufen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:318
+msgid "Danach erscheint folgendes Fenster:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:325
+msgid "Erweiterte Systemeinstellungen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:327
+msgid "Klicke auf der Reiterkarte ``Computername`` ganz unten auf ``Ändern``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:334
+msgid "Ändere die Dommänenzugehörigkeit"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:336
+msgid ""
+"Trage unter ``Mitglied von -> Domäne`` Deine Domäne ein. Bestätige dies "
+"mit ``OK``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:343
+msgid "Melde Dich als Benutzer global-admin an"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:345
+msgid ""
+"Bei einem erfolgreichen Beitritt zur Windows-Domäne wird dies mit "
+"folgendem Fenster bestätigt."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:352
+msgid "Willkommen in der Domäne"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:354
+msgid ""
+"Beendest Du die Systemeinstellungen erscheint der Hinweis, dass der PC "
+"neu zu starten ist."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:361
+msgid "Der Computer muss neu gestartet werden"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:363
+msgid "Bestätige dies im nächsten Fenster mit ``Jetzt neu starten``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:370
+msgid "PC neu starten"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:372
+msgid "Der PC bootet nun wieder in LINBO."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:376
+msgid ""
+"Starte Windows 11 nun **NICHT** neu ! Nach dem Start in LINBO erstellst "
+"Du jetzt ein Muster-Image erstellen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:379
+msgid "LINBO Muster-Image mit Domänenbeitritt"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:381
+msgid ""
+"Nachdem der Muster-Client mit Windows 11 der Domäne hinzugefügt wurde, "
+"erstellst Du **jetzt** ein Image für den Muster-Client. Wird dieses Image"
+" auf andere Maschinen übertragen, so sind diese bereits in der Domäne "
+"aufgenommen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:385
+msgid ""
+"Nachdem eine Template-Maschine frisch der Domain gejoined ist, darf diese"
+" vor dem Upload nicht neu gestartet werden, da sonst das durch den "
+"DomainJoin neu erstellte Maschinenpasswort in der AD für diese Maschine "
+"mit einem falschen Maschinenpasswort ersetzt werden würde. Durch den "
+"Image-Upload wird das neue Passwort ausgelesen und in die macct-Datei "
+"geschrieben, die zu dem Image gehört."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:388
+msgid "Image in LINBO erstellen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:390
+msgid ""
+"Jetzt wieder in LINBO starten und von dem aktuellem Stand ein Image "
+"erstellen. Klicke rechts auf das Werkzeug-Symbol. Gib das LINBO-Passwort "
+"ein, dann siehst Du folgende Einträge:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:397
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:406
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:426
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:453
+msgid "Linbo Upload Image"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:397
+msgid "Werkzeug-Symbol - Untermenü"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:399
+msgid ""
+"Klicke nun das grosse Windows-Symbol, um das Image zu erstellen. Es "
+"öffnet sich folgender Dialog:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:406
+msgid "Image erstellen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:408
+msgid ""
+"Gib eine Beschreibung an, die Dir Hinweise zum Konfigurationsstand des "
+"Images gibt. Da Du das erste Image erstellst, klickst Du nun ``erstellen "
+"+ hochladen``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:410
+msgid "Der Upload-Vorgang wird in LINBO wie folgt dargestellt:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:417
+msgid "Linbo Uploading Image"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:417
+msgid "Image wird hochgeladen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:419
+msgid "Nach dem erfolgreichen Upload siehst Du folgende Statusmeldung:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:426
+msgid "Image erfolgreich hochgeladen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:428
+msgid ""
+"Nach dem erfolgreichem Upload sollte das Image auf der linuxmuster.net "
+"Schulkonsole unter ``LINBO4 → Gruppen`` angezeigt werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:435
+msgid "School Console: Group - Used Image"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:435
+msgid "Verwendete Images"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:437
+msgid ""
+"Zudem finden sich die Abbilder selbst unter ``LINBO4 → Gruppen → "
+"Abbilder`` aufgelistet."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:444
+msgid "School Console List Images"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:444
+msgid "Übersicht der Abbilder"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:446
+msgid ""
+"Falls der Gruppe anfangs kein Basisimage zugeordnet war, sollte das unter"
+" ``Groups → <gruppenname> → Partitionen → Windows 11 edit → OS → "
+"Basisimage`` nachgeholt werden. Speichern nicht vergessen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:453
+msgid "Basisimage für die HWK festlegen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:455
+msgid ""
+"Einem Image muss ein sog. Image-Registry-Patch angegeben werden: Wähle "
+"dazu das gewünschte Image aus. Klicke hierzu auf ``LINBO 4 --> Abbilder "
+"--> <Name des Images>``. Klicke rechts neben dem Imagenamen auf das "
+"Zahnrad-Symbol. Gehe dort zur Reiterkarte ``Registry-Patch``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:462
+msgid "Image Regpatch"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:462
+msgid "Lege den Regpatch für das Image fest"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:464
+msgid ""
+"Klicke nun unten auf die Drop-down Liste ``Copy from``. Es werden "
+"verschiedene Reg-Patches in der Dropdown-Liste dargestellt."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:471
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:481
+msgid "Linbo Indicate Registry Patch"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:471
+msgid "Registry-Patch auswählen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:474
+msgid ""
+"Klicke nun unten auf die Drop-down Liste ``Copy from -> "
+"win10.image.reg``. Es wird die Reg-Datei in dem Fenster angezeigt."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:481
+msgid "Kopiere und speichere den Registry-Patch"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:483
+msgid ""
+"Speichere diesen kopierten Registry-Patch für das Windows 11 Image, indem"
+" Du direkt auf ``SPEICHERN`` klickst."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:485
+msgid ""
+"*Alternativ* kannst Du in der Server-Shell aus ``/srv/linbo/examples`` "
+"die richtige Vorlage in ``/srv/linbo/`` kopieren. Die Datei trägt dann "
+"den Namen ``<imagename>.reg`` - also in o.g. Beispiel win10.reg."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:488
+msgid "Imageübertragung auf den PC"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:490
+msgid ""
+"Starte den PC, auf den das Image übertragen werden soll, über das "
+"Netzlaufwerk bis er in LINBO gebootet hat. Nun öffnest Du den Imaging-"
+"Reiter, wie im ersten Kapitel :ref:`Computer in linuxmuster.net aufnehmen"
+" <install-windows10-clients-label>`  → ``Client lokal registrieren`` "
+"beschrieben wird."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:492
+msgid ""
+"Als nächstes partitionierst und formatierst Du den PC über den LINBO-"
+"Menüeintrag ``Partitionieren`` wie zuvor beschrieben."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:494
+msgid ""
+"Wechsel nun auf dem Imaging-Menü wieder in das Startmenü von LINBO. "
+"Klicke hier das ``ROTE`` Symbol (Windows neu installieren), um Windows "
+"neu zu installieren."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:501
+msgid "Linbo Start Imaging"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:501
+msgid "Windows neu installieren mit rotem Button"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:503
+msgid ""
+"Wenn das Image vollständig heruntergeladen ist, startet Windows "
+"automatisch."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:509
+msgid ""
+"In der Datei ``/srv/linbo/start.conf.win11-muster-client`` (start.conf "
+"der HWK) könnten die Einstellungen für Windows wie folgt aussehen:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:516
+msgid "Linbo Start.conf os settings"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:516
+msgid "LINBO Start.conf Einstellungen für Windows"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:519
+msgid ""
+"Bei Änderungen in der start.conf der HWK muss erneut ein Import der "
+"Geräte ausgeführt werden. Dies kann entweder in der Schulkonsole unter "
+"``Geräteverwaltung -> Geräte -> Speichern & importieren`` erfolgen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:521
+msgid "Alternativ kann dies auf dem Server in der Konsole durchgeführt werden:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:528
+msgid "Programminstallationen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:530
+msgid ""
+"Hast Du wie zuvor beschrieben, den Client synchronisiert gestartet, "
+"meldest Du Dich als Benutzer ``global-admin`` an der Domäne an."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:532
+msgid ""
+"Installiere die gewünschten Programme und konfiguriere die benötigten "
+"Programm- und Systemeinstellungen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:534
+msgid ""
+"Starte den PC neu, ohne danach neu zu sychronisieren. Führe danach "
+"nachstehenden Abschnitt aus."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:537
+msgid "Default Profil kopieren"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:539
+msgid ""
+"linuxmuster.net sieht vor, dass **Programminstallationen von global-"
+"admin** durchgeführt werden. Damit alle User die bei der Installation "
+"vorgenommenen Änderungen bekommen, muss das Profil des ``global-admin`` "
+"als ``Default`` Profil kopiert werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:541
+msgid ""
+"Dies kann mit dem dem freien Tool ``DefProf`` durchgeführt werden. Das "
+"Tool kann hier heruntergeladen werden: "
+"https://www.forensit.com/Downloads/DefProf.msi"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:545
+msgid ""
+"DefProf wurde für Windows 10 entwickelt. Das beschriebene Vorgehen "
+"funktioniert aber ebenfalls mit Windows 11."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:547
+msgid ""
+"Das Ausführen der MSI-Datei entpackt das eigentliche Programm. Hast Du "
+"dies als Benutzer ``global-admin`` durchgeführt, siehst Du folgendes "
+"Fenster:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:554
+msgid "Win11 Defprof installation"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:554
+msgid "Installiere DefProf"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:556
+msgid ""
+"Das ausführbare Programm befindet sich nun unter ``c:\\Users\\global-"
+"admin\\downloads\\Defprof.exe``. Kopiere diese Datei nun unter "
+"``c:\\Windows\\`` als Benutzer ``global-admin``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:559
+msgid ""
+"Hast Du alle Einstellungen als Benutzer ``global-admin`` für das Profil "
+"vorgenommen, kannst Du nun dieses Profil mithilfe des zuvor installierten"
+" Tools DefProf als Default-Profil kopieren."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:561
+msgid "Hierzu führst Du folgende Schritte aus:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:563
+msgid ""
+"Hierzu meldet Du Dich zuerst als Benutzer ``global-admin`` ab und lokal "
+"am PC als Benutzer ``admin`` wieder an."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:565
+msgid ""
+"Bist Du lokal als ``admin`` angemeldet, klickst Du mit der rechten "
+"Maustaste auf das Windows-Symbol unten links."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:567
+msgid "Wähle dann in dem Kontextmenü ``Terminal (Administrator)`` aus."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:569
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:615
+msgid ""
+"Es öffnet sich die Eingabekonsole von Windows mit Administrator-"
+"Berechtigungen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:571
+msgid ""
+"Gebe nun in der Konsole den Befehl ``defprof`` gefolgt von dem als "
+"Default-Profil zu kopierenden Profil an."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:573
+msgid ""
+"Für den Windows 11 Muster-Client bedeutet dies, dass Du ``defprof global-"
+"admin`` angibst."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:579
+msgid ""
+"Bei der Erstausführung müssen noch weitere Tools nachinstalliert werden. "
+"Bestätige dies mit ``Y``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:581
+msgid ""
+"Wurde das Profil erfolgreich als Default Profil kopiert, siehst Du "
+"folgende Meldungen:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:588
+msgid "Win11 Defprof profile copied"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:588
+msgid "DefProf: profil erfolgreich kopiert"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:590
+msgid ""
+"Danach startest Du Windows neu und erstellst wie zuvor beschrieben ein "
+"neues Image für Windows."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:595
+msgid "im Fehlerfall"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:597
+msgid "Zeitprobleme lösen*"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:599
+msgid ""
+"LINBO aktualisiert beim Sytemstart die Zeit in LINBO. In Windows ist die "
+"Zeit damit allerdings noch nicht synchronisiert. Wurde, wie zuvor "
+"beschrieben, der Win11-PC der Domäne hinzugefügt, dann erfolgt "
+"automatisch die Zeitsynchronisation des Client mit dem AD-Server / "
+"Domaincontroller."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:601
+msgid ""
+"Bei der Synchronisation zwischen Client und Server kann es zu Beginn zu "
+"Zeitabweichungen kommen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:603
+msgid ""
+"Die Systemzeit sollte möglichst synchron mit dem Server sein, um Probleme"
+" mit der Domänenanmeldung, dem Domänenbeitritt zu vermeiden! Auch andere "
+"Dienste (z.B. WSUS, KMS, ...) machen bei Zeitdifferenzen Probleme."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:605
+msgid "Domänenjoin verloren*"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:607
+msgid ""
+"Hast Du z.B. nicht daran gedacht, nach dem Domänenjoin ein Image zu "
+"erstellen, so kann die Vertrauensstellung zwischen Client und Server "
+"verloren gegangen sein."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:609
+msgid "Dies kannst Du wie folgt reparieren:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:611
+msgid ""
+"Melde Dich lokal am Windows-PC als admin an. Klicke mit der rechten "
+"Maustaste auf das Windows-Symbol unten links."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:613
+msgid "Wähle dann in dem Kontextmenü ``Shell (Administrator)`` aus."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:617
+msgid "Gib in der Windows Shell (Administrator) folgenden Befehl an:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:623
+msgid "Erstelle anschließend ein neues Image."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:626
+msgid "LINBO: Registry Patches"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:628
+msgid ""
+"Die bisherigen Beispiele für die Windows 10 Regisry Patches sind i.d.R. "
+"auch mit Windows 11 nutzbar."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:630
+msgid ""
+"1. Für jedes Windows Image muss es einen Registry Patch File geben, der "
+"unter ``/srv/linbo/images/<imagename>.reg`` abzulegen ist. Lautet der "
+"Name für das Image ``win11.qcow2``, dann muss der Registry File den Namen"
+" ``win11.reg`` tragen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:633
+msgid ""
+"Als Template steht hierfür ``win10.image.reg`` zur Verfügung: Registry "
+"Patch für den Hostnamen und angepasste Einträge. Diesen muss es mit dem "
+"Image File geben - wie zuvor dargestellt (z.B. win11.reg)."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:635
+msgid ""
+"Template ``win10.global.reg``: Diese Vorlage findet sich ebenfalls unter "
+"``/srv/linbo/examples/``. Dieser muss einmalig für den Windows 11 Muster-"
+"Client vor dem Domänen-Join aufgerufen werden. Wie dies anzuwenden ist, "
+"wurde zuvor ausführlich beschrieben."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows11clients/index.rst:637
+msgid ""
+"Template ``win11bypass.reg``: Werden diese Registry - Einträge "
+"angewendet, werden die Hardwareüberprüfungen beim Systemstart übergangen."
+" Soll ein bestehendes Windows 10 Image auf Windows 11 aktualisiert "
+"werden, so sollte vorab win11bypass.reg eingespielt werden, damit Windows"
+" 11 ebenfalls auf nicht kompatibler Hardware ausgeführt wird."
+msgstr ""
+
