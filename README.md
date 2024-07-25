@@ -21,7 +21,7 @@ Clone the repository "main" using git
    ~$ git clone https://github.com/linuxmuster-docs/main.git  # if you have no ssh-key within github
    ~$ git clone git@github.com:linuxmuster-docs/main.git # if you have a ssh-key within github
 
-Install sphinx, e.g. under Ubuntu 22.04, do
+Install sphinx, e.g. under Ubuntu 20.04, do
 
 .. code:: bash
 
@@ -114,7 +114,7 @@ Guidelines for documentation
 ++++++++++++++++++++++++++++
 
 The structure guide and style guide provide information on the design of our documentation. See our Guidelines
-https://docs.linuxmuster.net/de/latest/appendix/contribute/guidelines.html
+https://docs.linuxmuster.net/de/latest/appendix/contribute/guidelines.html.
 
 Translation
 +++++++++++
@@ -145,11 +145,3 @@ Then run to following commands (inside the document root):
    $ make -e SPHINXOPTS="-D language='en'" html
 
 Read the `Internationalization chapter <http://www.sphinx-doc.org/en/stable/intl.html>`__ in the offical sphinx documentation for a more detailed description.
-
-
-Further reading
-+++++++++++++++
-
-See the documentation on linuxmuster.net_.
-
-.. _linuxmuster.net: https://docs.linuxmuster.net/de/latest/appendix/contribute/index.html
