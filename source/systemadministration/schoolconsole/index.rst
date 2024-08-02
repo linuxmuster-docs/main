@@ -332,6 +332,13 @@ Unter Listenimport können Standardwerte festgelegt werden, die beim Import eine
 
 unten rechts wiederhergestellt werden.
 
+Unter ``Druck-Daten`` werden Informationen hinterlegt, welche automatisch in die Passwortlisten eingefügt werden. Es können auch eigene Latex-Vorlagen erstellt werden. Info's hierzu findest du im `Sophomorix-Wiki <https://github.com/linuxmuster/sophomorix4/blob/bionic/sophomorix-samba/lang/latex/README.latextemplates>`_.
+
+.. note::
+
+   Schlägt der Druck mit selbsterstellten Vorlagen fehl, liegt es oft an fehlenden Bibliotheken. In diesem Fall hilft: `apt-get install texlive-latex recommended`
+
+
 Globale Einstellungen
 =====================
 
