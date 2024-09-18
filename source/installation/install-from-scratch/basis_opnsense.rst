@@ -569,6 +569,10 @@ Das Update ist erfolgreich durchgeführt, wenn du wieder zu dieser Ansicht gelan
    
    NIC Zuordnung nach Neustart
 
+.. hint::
+
+   Stand Sept. 24 für die OPNsense |reg| ist die Version 24.1.10_8
+
 Klappt das Update, starte die OPNsense |reg| neu.
 
 Konfiguration der OPNsense |reg|
@@ -740,15 +744,23 @@ Melde Dich wieder mit ``root`` und dem Passwort ``Muster!`` an.
 
 DHCP abschalten
 ---------------
-Jetzt musst Du den DHCP-Service der Firewall abschalten. Der wird ja später vom Server übernommen. 
+Jetzt musst Du den DHCP-Service der Firewall abschalten. Dieser wird vom Server übernommen. 
 
 .. figure:: media/basis_opnsense_051.png
    :align: center
-   :alt: OPNsense: GUI - deactivate DHCP
+   :alt: OPNsense: GUI - deactivate ISC DHCP
    
-   DHCP deaktivieren
+   ISC DHCP deaktivieren
 
-Gehe auf ``Dienste -> DHCPv4 -> [LAN]`` und lösche den Haken bei ``Aktivieren``, wenn gesetzt. ``Speichern`` lässt Dich Deine Einstellungen unten auf der Seite.
+Gehe auf ``Dienste -> ISC DHCPv4 -> [LAN]`` und lösche den Haken bei ``Aktivieren``, wenn gesetzt. ``Speichern`` lässt sich Deine Einstellungen unten auf der Seite.
+
+Prüfe zudem, ob der neue Kea DHCP Server aktiviert ist. Falls ja, deaktiviere diesen. Hierzu gehst Du auf ``Dienste -> Kea DHCP [new] -> [Kea DHCP v4] -> Allgemeine Einstellungen``. Sollte der Halen bei ``Aktiviert`` gesetzt sein, musst Du diesen deaktivieren.
+
+.. figure:: media/basis_opnsense_051b.png
+   :align: center
+   :alt: OPNsense: GUI - deactivate Kea DHCP
+   
+   Kea DHCP deaktivieren
 
 
 Zusätzliche Netzwerkkarte hinzufügen (Optional)
