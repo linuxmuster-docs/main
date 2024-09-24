@@ -200,7 +200,7 @@ Wähle danach die Option ``Exit and reboot`` aus.
 
 .. hint::
 
-   Solltest Du nicht zum Entfernen, das Installationsmedium aufgefordert werden, fahre Deine neue Firewall herunter (schalte sie aus). 
+   Solltest Du nicht zum Entfernen des Installationsmedium aufgefordert werden, fahre Deine neue Firewall herunter (schalte sie aus). 
    
    Ändere die Boot-Reihenfolge zurück (Start via Festplatte).
    
