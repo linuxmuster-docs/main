@@ -528,6 +528,6 @@ Anschließend sollte der Log-in nach der Eingabe des Passwortes ``Muster!`` erfo
 
 Mit ``0) Logout`` beendest Du die Verbindung.
 
-.. hint:: Für Anwender einer Vrtualisierungslösung empfehlen wir an dieser Stelle einen Snapshot zu erstellen!
+.. hint:: Für Anwender einer Virtualisierungslösung empfehlen wir an dieser Stelle einen Snapshot zu erstellen!
 
 Weiter geht es jetzt mit :ref:`lmn_pre_install-label`
