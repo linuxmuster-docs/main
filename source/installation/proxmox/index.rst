@@ -712,7 +712,7 @@ Wähle wie dargestellt: ``SHA-256`` und trage die Checksumme ein:
 
 .. code:: 
   
-  a4acfda10b18da50e2ec50ccaf860d7f20b389df8765611142305c0e911d16fd
+  9bc6028870aef3f74f4e16b900008179e78b130e6b0b9a140635434a46aa98b0
 
 Das Herunterladen des ISOs beginnt mit ``Download``.
 
