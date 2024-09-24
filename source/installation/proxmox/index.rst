@@ -689,7 +689,7 @@ In dem nun geöffneten Fenster trägst Du die URL
 
 .. code::
    
-   https://releases.ubuntu.com/jammy/ubuntu-22.04.3-live-server-amd64.iso
+   https://releases.ubuntu.com/jammy/ubuntu-22.04.5-live-server-amd64.iso
 
 ein (copy&paste). Anschließend betätigst Du dann den Button ``Query URL``.
 
