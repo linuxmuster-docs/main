@@ -131,7 +131,7 @@ Gib die Netzwerkkonfiguration, wie im oberen Bild ein beziehungsweise |...|
 
    Bestätige Deine Einstellungen
 
-Mit ``Èrledigt`` geht es weiter.
+Mit ``Erledigt`` geht es weiter.
 
 .. figure:: media/basis_server_007.png
    :align: center
@@ -161,7 +161,7 @@ Aktualisierung des Installers
 
    Installer aktualisieren
 
-Bei der angebotene Aktualisierung wählst Du ``Aktualisieren auf neuen Installer``.
+Bei der angebotenen Aktualisierung wählst Du ``Aktualisieren auf neuen Installer``.
 
 Speichermedien
 --------------
