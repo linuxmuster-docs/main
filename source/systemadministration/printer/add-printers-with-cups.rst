@@ -84,7 +84,6 @@ Damit der Drucker nur von berechtigten Nutzern verwendet werden kann, muss noch 
 
 .. image:: media/add-printers-with-cups_09_define-allowed-users.png
    :alt: printer: allowed user
-   :width: 200
    :align: center
 
 Danach findet sich der neue Drucker in der Druckerliste in CUPS.

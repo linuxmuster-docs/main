@@ -217,7 +217,7 @@ Das erste Verfahren hat den Vorteil, dass Du nicht die Zeit des Neustarts abwart
 
 .. hint::
 
-   Starte nach dem erfolgreichen Setup ebenfalls die OPNsense | reg | neu.
+   Starte nach dem erfolgreichen Setup ebenfalls die OPNsense |reg| neu.
 
 Nach abgeschlossenem Setup und dem Neustart des Dienstes ``linuxmuster-webui`` bzw. eventuellen Neustart des Servers, kannst Du Dich mit einem PC via Browser an der Schulkonsole von linuxmuster.net v7.2 anmelden.  
 
