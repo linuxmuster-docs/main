@@ -193,7 +193,7 @@ Konten bearbeitet werden.
 Fehlerkorrektur
 ===============
 
-Hat man fehlerhafte Daten in das System eingepflegt und hat sie noch nicht imporiert, lassen sich Schüler und Lehrerlisten aus einer
+Hat man fehlerhafte Daten in das System eingepflegt und hat sie noch nicht importiert, lassen sich Schüler und Lehrerlisten aus einer
 Sicherung zurückholen. Der Knopf für die Sicherung ist rechts unten in der Listenverwaltung.
 
 Hast Du z.B. bei der zuvor importierten CSV-Datei die IDs vergessen, kannst Du diese in der CSV-Datei ergänzen, diese erneut importieren. Es werden Dir dann die Änderungen angezeigt. In diesem Fall wird die ``uid`` auf die neu eingetragenen ID geändert.
