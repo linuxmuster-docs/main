@@ -839,42 +839,62 @@ Sollten Dir - wie in nachstehender Abbildung - unter dem Reiter ``Aktualisierung
 
 |...| dann klicke in o.g. Fenster ``Jetzt aktualisieren``. 
 
-.. hint::
+|...| je nach Update/Upgrade erhälst Du Aktualisierungshinweise
 
-   Falls Du nicht ins Internet kommst, kann es an der Gateway-Einstellung liegen. Gehe auf ``System`` --> ``Gateways`` --> ``Einzeln`` und editiere Dein Gateway (WANGW).
+.. figure:: media/basis_opnsense_057b.png
+   :align: center
+   :alt: OPNsense: GUI - updates part1
+   
+   Aktualisierungshinweise
 
-   Setze einen Haken bei ``Deaktiviere Gatewayüberwachung``, speichere die Einstellung und übernimm die Änderung. Jetzt ist Dein Gateway online und Du kommst ins Internet. Erstaunlicherweise kannst Du die Gatewayüberwachung wieder aktivieren, ohne dass das Gateway offline geht.
+|...| und Hinweise zur neuen Version
+   
+.. figure:: media/basis_opnsense_057c.png
+   :align: center
+   :alt: OPNsense: GUI - updates available
+   
+   Hinweise zur neuen Version
+   
+|...| aktualisiere nun 
+   
+.. figure:: media/basis_opnsense_057d.png
+   :align: center
+   :alt: OPNsense: GUI - updates available
+   
+   Update/Upgrade ausführen
+   
+|...| je nach Updates/Upgrades kann ein Neustart der Firewall erforderlich sein
+   
+.. figure:: media/basis_opnsense_057e.png
+   :align: center
+   :alt: OPNsense: GUI - updates available
+   
+   Neustart erforderlich
 
-Je nach gefundenen Aktualisierungen, kann ein Neustart erforderlich sein. Dies wird vor dem Update abgefragt und ist zu bestätigen.
+|...| nach dem Neustart und der erneuten Anmeldung solltest Du das Dashboard der OPNsense |reg| sehen.
 
 .. figure:: media/basis_opnsense_058.png
    :align: center
-   :alt: OPNsense: GUI - Reboot
+   :alt: OPNsense: GUI - dashboard
    
-   Reboot bestätigen
+   Dashboard nach erneuter Anmeldung
 
-Danach werden die Aktualisierungen heruntergeladen und angewendet.
+|...| prüfe jetzt die Gateway-Einstellungen. Gehe auf ``System`` --> ``Gateways`` --> ``Konfiguration`` und editiere Dein Gateway (WAN_GW) mit dem Stiftsymbol.
 
 .. figure:: media/basis_opnsense_059.png
    :align: center
-   :alt: OPNsense: GUI - running update
+   :alt: OPNsense: Gateway configuration
    
-   Aktualisierungen anwenden
+   Gateway - Konfiguration
 
-Zum Abschluss erfolgt der Neustart automatisch.
+Setze einen Haken bei ``Deaktiviere Gatewayüberwachung``, speichere die Einstellung und übernimm die Änderung. Jetzt ist Dein Gateway online. Du kannst später die Gatewayüberwachung wieder aktivieren, ohne dass das Gateway offline geht.
 
-.. figure:: media/basis_opnsense_060.png
-   :align: center
-   :alt: OPNsense: GUI - automatic reboot
-   
-   Automatischer Neustart
-
-Nach dem Neustart ist die OPNsense |reg| soweit vorbereitet.
+Nach dem erneuten Neustart ist die OPNsense |reg| soweit vorbereitet.
 
 Logout
 ------
 
-.. figure:: media/basis_opnsense_061.png
+.. figure:: media/basis_opnsense_060.png
    :align: center
    :alt: OPNsense: GUI - logout
    
