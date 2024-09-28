@@ -60,7 +60,7 @@ Das Cloop-Image wird dadurch in das `qcow2`-Format konvertiert und im Verzeichni
 
    Images von Windows-Systemen könnten nach der Konvertierung ggf. nicht so funktionieren wie vorgesehen - dies gilt insbesondere für UEFI-Systeme. In diesem Fall ist es notwendig, ein neues Image zu erstellen.
 
-2. Ändere den Dateinamen des Images in the start.conf der jeweiligen Hardwareklasse/Gruppe. Das Ablageverzeichnis des Images wird dabei nicht genannt, obiges Beispiel: ``BaseImage = ubu22.qcow2``
+2. Ändere den Dateinamen des Images in der start.conf der jeweiligen Hardwareklasse/Gruppe. Das Ablageverzeichnis des Images wird dabei nicht genannt, obiges Beispiel: ``BaseImage = ubu22.qcow2``
 3. Starte die Dienste zur Image-Verteilung neu mit: ``systemctl restart linbo-torrent.service``.
 
 .. important::
@@ -74,7 +74,7 @@ Das Cloop-Image wird dadurch in das `qcow2`-Format konvertiert und im Verzeichni
 Widerspenstige LINBO-Clients
 ============================
 
-Möchtest Du, bestehende LINBO-Clients zu LINBO 4 migrieren und hast dabei Probleme, obwohl Du - wie zuvor beschrieben - den Befehl ``linuxmuster-import-devices`` ausgeführt hast, solltest Du nachstehend bechriebene Schritte ausführen. 
+Möchtest Du bestehende LINBO-Clients zu LINBO 4 migrieren und hast dabei Probleme, obwohl Du - wie zuvor beschrieben - den Befehl ``linuxmuster-import-devices`` ausgeführt hast, solltest Du nachstehend bechriebene Schritte ausführen. 
 
 Wichtig ist, dass vor dem Upgrade alle Clients das aktuelle LINBO im Cache haben. Falls es nach dem Upgrade beim Booten von LINBO trotzdem zu Fehlern kommt, kannst Du so vorgehen:
 
