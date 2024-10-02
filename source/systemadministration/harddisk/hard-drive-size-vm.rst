@@ -258,6 +258,8 @@ PV Größenanpassung testen
 
 b) LV-Größen anpassen
 
+Die Werte hinter dem ``+`` bitte wie gewünscht anpassen.
+
 .. code:: 
 
    lvextend -L+100G /dev/mapper/vg_srv-var
@@ -276,7 +278,7 @@ Diesen Befehl wiederholst Du für die anderen Logical Volumes
 
    lvextend -L+200G /dev/mapper/vg_srv-linbo
    lvextend -L+100G /dev/mapper/vg_srv-global
-   lvextend -l +100%FREE /dev/mapper/vg_srv-default–-school
+   lvextend -l +100%FREE /dev/mapper/vg_srv-default-school
 
 c) Dateisystem an die neuen Größen anpassen:
 
