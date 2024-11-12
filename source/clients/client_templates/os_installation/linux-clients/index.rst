@@ -94,7 +94,7 @@ Gib in den ersten Schritten der Installation die gewünschte Sprache und Tastatu
    
    Tastaturlayout auswählen
    
-Lege danach die Installationsart sowie weitere Optionen fest. Falls Du hier Aktualisierungen herunterladen wählst, so muss für dieser Client in der OPNSense \ |reg| in der NoProxy Gruppe eingetragen sein.
+Lege danach die Installationsart sowie weitere Optionen fest. Falls Du hier Aktualisierungen herunterladen wählst, so muss für dieser Client in der OPNSense® in der NoProxy Gruppe eingetragen sein.
 
 .. figure:: media/00-linux-client-ubu-installation-updates.png
    :align: center
@@ -459,4 +459,3 @@ Weiterführende Dokumentation
 - `Entwicklerdokumentation <https://github.com/linuxmuster/linuxmuster-linuxclient7/wiki/Setup>`_
 - :ref:`using-linbo-label`
 
-.. |reg|    unicode:: U+000AE .. REGISTERED SIGN
