@@ -109,6 +109,18 @@ In der Abb. wurde ein UEFI-System vorbereitet. Partition 3 wurde für Windows 11
 .. hint:: 
 
     Es ist jetzt wichtig, dass der PC in LINBO gebootet wird. Stelle daher die Boot-Reihenfolge wieder so um, dass via PXE LINBO gebootet wird. Du gelangst dann wieder wie zuvor in den Linbo Startbildschirm.
+    
+.. attention::
+   
+   Startet der PC nach dem Neustart von Windows nicht via LINBO, dann drücke während des Boot-Vorgangs mehrfach die Taste F12 bis ein Boot-Menü erscheint. Wähle dort die Option ``PXE IPv4 Netzwerkstart`` aus. Windows 11 versucht bei UEFI sich immer wieder über die weiteren zu bootenden Betriebssysteme hinwegzusetzen. 
+   
+   Hierbei hilft:
+   a) Setze für die Hardware-Gruppe in Linbo4 als Kernel Option ``forcegrub`` und 
+   b) füge unter Windows folgenden Code in der PowerShell des Administrator aus:
+   
+   .. code::
+
+      bcdedit /set "{bootmgr}" path \EFI\grub\grubx64.efi  
 
 11. Starte im LINBO-Menü nun Windows unsynchronisiert über den kleinen GRÜNEN Startknopf neu:
 
@@ -183,7 +195,7 @@ Nach dem erneuten Start von Windows wählst Du Deine Region aus.
 20. Weitere gewünschte Einrichtungen ausführen (Programme, Hintergründe, usw.).
 
 21. Alle Updates installieren. Hierbei muss Windows immer wieder neu gestartet werden. Darauf achten, dass Windows aus LINBO heraus immer nur mit der GRÜNEN Pfeiltaste gestartet wird. 
-
+  
 .. hint::
 
    Achtung: Für den ersten Muster-Client muss in der OPNsense hierzu unter ``Firewall --> Aliase --> NoProxy --> Editieren --> IP`` der neue Muster-Clients hinzugefügt werden, damit dieser Internet-Zugriff hat.
@@ -306,7 +318,17 @@ Um den neuen Hostname anzuwenden, muss Windows neu gestartet werden.
 
 Starte in LINBO Windows mit der ``grünen Taste`` neu.
 
-Nach dem Neustart meldest Du Dich wieder als Benutzer admin an und rufst ``Einstellungen --> System --> Info --> Verwandte Links --> Domäne oder Arbeitsgruppe`` auf.
+Nach dem Neustart meldest Du Dich wieder als Benutzer admin an.
+
+Klicke dann mit der rechten Maustaste auf das Windows-Symbol und rufe das Terminal (Administrator) auf. Trage folgenden Befehl im Terminal ein:
+
+.. code::
+
+   powercfg.exe /HIBERNATE OFF
+
+Dies deaktiviert den Ruhezustand. Dies bereitet die spätere Imageerstellung vor.
+
+Danach rufst Du ``Einstellungen --> System --> Info --> Verwandte Links --> Domäne oder Arbeitsgruppe`` auf.
 
 .. figure:: media/43_windows-11-clients_system-domain.png
    :align: center
@@ -315,7 +337,7 @@ Nach dem Neustart meldest Du Dich wieder als Benutzer admin an und rufst ``Einst
    
    Domäne/ Arbeitsgruppe aufrufen
 
-Danach erscheint folgendes Fenster:
+Es erscheint folgendes Fenster:
 
 .. figure:: media/43_windows-11-clients_system-settings.png
    :align: center
