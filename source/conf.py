@@ -71,7 +71,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'linuxmuster.net'
-copyright = u'2017-2024, linuxmuster.net'
+copyright = u'2017-2025, linuxmuster.net'
 author = u'linuxmuster.net'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -158,7 +158,7 @@ html_js_files = [
 # a list of builtin themes.
 # html_theme = 'linuxmuster'
 html_theme = 'sphinx_rtd_theme'
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+#html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
