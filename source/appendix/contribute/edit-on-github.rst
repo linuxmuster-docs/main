@@ -3,37 +3,49 @@
 Dokumentation in GitHub ändern
 ------------------------------
 
-Wenn Du einen Fehler (Rechtschreibfehler, kleine inhaltliche Fehler, etc.) in der Dokumentation gefunden hast, klicke einfach auf den ``Edit on Github`` Link am rechten oberen Rand jeder Dokumentationsseite.
+Um Fehler etc. in der Dokumentation in GitHub ändern zu können, musst Du Dich zuerst in GitHub anmelden und das linuxmuster-docs repository auswählen.
 
-.. figure:: media/01_edit-on-github_button.png
+Wenn Du einen Fehler (Rechtschreibfehler, kleine inhaltliche Fehler, etc.) in der Dokumentation gefunden hast, klicke auf die gewünschte Quelldatei, in der Du dies ändern möchtest.
+
+Du siehst dann nachstehende Menüleiste:
+
+.. figure:: media/01_select_source-file.png
    :align: center
-   :alt: Edit on Github
+   :alt: select source file
+   
+   Ausgewählte Quelldatei zur Änderung
 
-Damit wirst Du auf github.com geleitet. Mit einem Klick auf den Stift
-(siehe Bild) kannst Du das aktuelle Kapitel bearbeiten. Dafür müsst
-du Dich bei GitHub anmelden. Wenn Du noch kein Konto bei GitHub
-hast, kannst Du `hier eines anlegen <https://github.com/join>`_
-oder oben rechts auf "Sign up" klicken.
+Klicke dann auf den Pfeil rechts neben dem Stift-Symbol. Es erscheint dann folgendes Untermenü:
 
-.. figure:: media/02_edit-on-github_open-a-chapter.png
+.. figure:: media/02_edit-in-place.png
    :align: center
-   :alt: Edit not signed in
+   :scale: 80%
+   :alt: edit in place
+   
+   Editiere die ausgewählte Datei
+
+Klicke auf ``Edit in place``. Es wird auf GitHub die Datei in einem Online-Editor geöffnet. Diese kann wie in nachstehender Abbildung aussehen.
+
+.. figure:: media/03_edit-in-place-editor-opened.png
+   :align: center
+   :alt: edit with online editor in github
+   
+   Fügre die Änderungen online ein
 
 Die Dokumentation ist in der Auszeichnungssprache "rST" geschrieben. `Hier <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_ findest Du einen guten Überblick über die am häufigsten verwendeten Elemente.
 
-.. figure:: media/03_edit-on-github_edit-signed-in.png
+Nachdem Du alle Änderungen vorgenommen hast, klickst Du oben rechts auf ``Commit changes...``. Es öffnet sich ein neues Fenster. 
+
+.. figure:: media/04_add_extended_description.png
    :align: center
-   :alt: Edit signed in
+   :scale: 80%
+   :alt: add extended description
+   
+   Füge Deinen Änderungen eine Beschreibung hinzu
 
-Im Beispiel wurde der Rechtschreibfehler und die Länge der zur Überschrift gehörenden Unterschreichung geändert.
+Füge hier unter der Überschrift ``Extended description`` die Beschreibung für die von Dir vorgenommenen Änderungen ein und klicke unten rechts auf ``Commit changes``.
 
-Nachdem Du alle Änderungen vorgenommen hast, gib unten einen Titel und einen Kommentar ein. Die Änderungen können nun mit einem Klick auf "Propose file changes" eingereicht werden.
-
-.. figure:: media/04_edit-on-github_propose-changes.png
-   :align: center
-   :alt: propose changes
-
-Dein Änderungsvorschlag wird dann vom Dokumentationsteam geprüft und gegebenenfalls übernommen. Sekunden später erscheint die Änderung dann auch hier in der offiziellen Dokumentation.
+Dein Änderungsvorschlag wird dann vom Dokumentationsteam geprüft und gegebenenfalls übernommen. Danach erscheint die Änderung dann auch hier in der offiziellen Dokumentation.
 
 .. hint:: 
 
@@ -43,7 +55,10 @@ Sollest Du bereits Schreibrechte am Repositorium haben und bist Dir sicher, dass
 
 .. figure:: media/05_edit-on-github_commit-changes.png
    :align: center
+   :scale: 80%
    :alt: commit changes directly
+   
+   Füge die Änderungen direkt in den Zweig hinzu.
 
 Größere Änderungen an der Dokumentation sind immer über Pull-Requests zu erstellen. Dafür ist es nützlich, lokal eine Kopie (fork) vorzuhalten und Änderungen lokal zu testen, das im 
 :doc:`entsprechenden Kapitel <new>` erklärt wird.
