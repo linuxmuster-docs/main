@@ -11,6 +11,10 @@ In einem Kurs / einer Klasse können Schülerkonten in den Prüfungsmodus verset
 austeilen und von dort wieder einsammeln. Voraussetzung für diese Funktionen ist die :ref:`Aufnahme des Schülers <session-setup-label>`
 in einen Kurs.
 
+.. hint::
+
+   Um sicherzustellen, dass alle Prüfungsbenutzerkonten von vorherigen Prüfungen zurückgesetzt wurden, starte vor der Prüfung alle Clients neu und lasse diese mit LINBO synchronisieren.
+
 Öffne in der Schulkonsole unter ``KLASSENZIMMER -> Session-PREVIEW`` den angelegten Kurs oder die gewünschte Klasse.
 
 .. figure:: media/webui-teachers-session-class.png
@@ -66,13 +70,13 @@ Der Prüfungsmodus bleibt so lange erhalten, bis der Lehrer (oder auch ein ander
    
    Beende den Prüfungsmodus
 
-Klicke zum Beende des Prüfungsmodus auf der rot hinterlegte Prüfungssymbol.
+Klicke zum Beenden des Prüfungsmodus auf das rot hinterlegte Prüfungssymbol.
 
 .. figure:: media/webui-teachers-confirm-deactivation-exam-mode.png
    :align: center
    :alt: WebUI Confirm Deactivation Exam Mode
    
-   Bestätige das Beendes Prüfungsmodus
+   Bestätige das Beenden des Prüfungsmodus
    
 Du erhälst ein Fenster mit der Nachfrage, ob die den Prüfungsmodus wirklich beenden möchstest. Hast Du alle gewünschten Daten der Prüflinge zuvor eingesammelt, bestätige diesen Vorgang mit ``PRÜFUNGSMODUS BEENDEN``.
 
@@ -84,10 +88,13 @@ Du erhälst ein Fenster mit der Nachfrage, ob die den Prüfungsmodus wirklich be
    
 Nachdem der Prüfungsmodus beendet wurde, werden alle Benutzer wie zuvor dargestellt und die Nutzung des Internet sowie der Drucker automatisch aktiviert.
 
+Möchtest Du, dass mit einer anderen Klasse nach erfolgter Prüfung eine weitere Prüfung geschrieben wird, sollten die Clients zuvor alle einmal neu gestartet und mit LINBO automatisch synchronisiert gestartet werden. Dies sollte zudem auch vor jeder Prüfung einmal durchgeführt werden, um sicherzustellen, dass alle Prüfungsbenutzerkonten vollständig zurückgesetzt wurden.
+
+Grundsätzlich ist es hilfreich, wenn die Clients so konfiguriert sind, dass diese mit LINBO immer synchronisiert werden. Dies kann zudem mit einem automatischen Start der Clients verbunden werden.
 
 Ablauf der Prüfung
 ------------------
-
+0. Die Clients wurden mit LINBO synchronisiert gestartet.
 1. Der Lehrer meldet sich an der Schulkonsole an.
 2. Der Lehrer wählt unter Session-PREVIEW die gewünschte Klasse aus.
 3. Der Lehrer aktiviert mit dem Prüfungssymbol den Prüfungsmodus.
@@ -98,8 +105,8 @@ Ablauf der Prüfung
 8. Schüler speichern die bearbeiteten Daten unter einem vorher vom Lehrer mitgeteilen Namen bzw. Namensschema ab und lege diese zur Abgabe in das Verzeichnis ``transfer/LEHRER/_collect``.
 9. Der Lehrer sammelt zum Abschluss der Prüfung alle Abgaben mit dem Button ``von allen einsammeln`` ein.
 10. Der Lehrer überprüft die eingesammelten Daten, die für diesen im Ordner ``transfer/collected/`` zu finden sind.
-11. Liegen alle Daten wie gewünscht vor, beendt der Lehrer den Prüfungsmodus.
-
+11. Liegen alle Daten wie gewünscht vor, beendet der Lehrer den Prüfungsmodus.
+12. Alle Clients werden danach neu gestartet und mit LINBO synchronisiert.
 
 Austeilen und Einsammeln
 ========================
@@ -162,7 +169,7 @@ Bist Du als Lehrer an einem Client angemeldet, so findest Du die zu teilenden Da
 Prüflinge
 ---------
 
-1. Nachdem der Leher den Prüflingen ihre Prüfungs-Accounts mitgeteilt hat, melden diese sich mit den Daten an.
+1. Nachdem der Lehrer den Prüflingen ihre Prüfungs-Accounts mitgeteilt hat, melden diese sich mit den Daten an.
 2. Der Prüfling geht im Dateiverzeichnis in sein Home-Laufwerk (H:\) in den Transfer-Ordner, dort in den Ordner des Lehrers der Prüfung.
 3. Im Ordner H:\transfer\LEHRER\ werden die bereitgestellten Dateien in ein anderes Verzeichnis übernommen, dort bearbeitet und gespeichert.
 4. Bei Abschluss der Prüfung kopiet der Prüfling zur Abgabe die bearbeiteten Dateien in das Verzeichnis ``H:\transfer\LEHRER\_collect\``.
@@ -311,5 +318,9 @@ Die Abgaben kannst Du markieren und herunterladen.
    :alt: Download Results
    
    Prüfung: Dateiabgaben herunterladen
+   
+.. hint::
+
+   Starte nach der Prüfung alle Clients neu und lasse diese mit LINBO synchronisieren.
    
 
