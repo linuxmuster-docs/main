@@ -342,7 +342,7 @@ Hast Du als Lehrer die Prüfung beendet, kannst Du nun in der Schulkonsole unter
 
 .. figure:: media/webui-exam-check-collected-files.png
    :align: center
-     :scale: 70%
+   :scale: 70%
    :alt: Check colletced Files
    
    Prüfung: Prüfe Dateiabgaben
