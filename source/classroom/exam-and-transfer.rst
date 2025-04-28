@@ -122,11 +122,9 @@ Ablauf der Prüfung
 5. Der Lehrer teilt die Prüfungs und ggf. weitere Vorlagen an die Prüfungsteilnehmer aus.
 6. Die Dateien liegen für die Prüfungsteilnehmer im Verzeichnis ``transfer/LEHRER/``.
 7. Schüler nutzen die bereitgestellten Daten und erstellen ihre Lösungen.
-8. Schüler speichern die bearbeiteten Daten unter einem vorher vom Lehrer mitgeteilen Namen bzw. Namensschema ab und lege diese zur Abgabe in das Verzeichnis ``transfer/LEHRER/_collect``.
-9. Der Lehrer prüft den Inhalt in diesem Verzeichnis immer wieder mithilfe des Symbols der ``Recycling-Pfeile`` im Spaltenkopf neben der Angabe des Arbeitsverzeichnisses.
-10. Der Lehrer sammelt zum Abschluss der Prüfung alle Abgaben mit dem Button ``von allen einsammeln`` ein.
-11. Der Lehrer überprüft die eingesammelten Daten, die für diesen im Ordner ``transfer/collected/`` zu finden sind.
-12. Liegen alle Daten wie gewünscht vor, beendet der Lehrer den Prüfungsmodus.
+8. Schüler speichern die bearbeiteten Daten unter einem vorher vom Lehrer mitgeteilen Namen bzw. Namensschema ab und legen diese zur Abgabe in das Verzeichnis ``transfer/LEHRER/_collect``.
+9. Aktiviert der Lehrer das Symbol ``Recycling`` im Spaltenkopf zur Erneuerung der Anzeige des Arbeitsverzeichnisses der Prüflinge, dann wird die Anzeige so lange wiederkehrend neu aufgebaut, bis der Knopf erneut geklickt wird.
+10. Der Lehrer beendet mit Ablauf der Prüfung den Prüfungsmodus. Dabei wird das vollständige Heimatverzeichnis der Prüflinge auf dem Server eingesammelt (, für den Fall, dass Prüflinge den falschen Ort auf dem Server gewählt haben sollten). Der Lehrer findet die eingesammelten Daten einer Prüfungsgruppe im Ordner ``/transfer/collected/EXAM_group_GRUPPENNAME_DATUM_UHRZEIT/``. Dort werden die Verzeichnisse der Benutzer der Gruppe abgelegt. Startet bzw. beendet man den Klassenarbeitsmodus für einzelne Prüflinge, entfällt dieses Verzeichnis beim Einsammeln.
 
 Austeilen und Einsammeln
 ========================
@@ -195,11 +193,11 @@ Prüflinge
 ---------
 
 1. Nachdem der Lehrer den Prüflingen ihre Prüfungs-Accounts mitgeteilt hat, melden diese sich mit den Daten an.
-2. Der Prüfling geht im Dateiverzeichnis in sein Home-Laufwerk (H:\) in den Transfer-Ordner, dort in den Ordner des Lehrers der Prüfung.
-3. Im Ordner H:\transfer\LEHRER\ werden die bereitgestellten Dateien in ein anderes Verzeichnis übernommen, dort bearbeitet und gespeichert.
-4. Bei Abschluss der Prüfung kopiet der Prüfling zur Abgabe die bearbeiteten Dateien in das Verzeichnis ``H:\transfer\LEHRER\_collect\``.
-5. Der Lehrer sammelt alle abgegebene Dateien ein und schließt die Prüfung.
-6. Der Prüfling meldet sich ab.
+2. Der Prüfling geht im Dateiverzeichnis in sein Home-Laufwerk (H:\\) in den Transfer-Ordner, dort in den Ordner des Lehrers der Prüfung.
+3. Sollen bereitgestellte Dateien aus dem Ordner H:\\transfer\\LEHRER\\ bearbeitet werden, empfiehlt es sich diese direkt in den Ordner H:\\transfer\\LEHRER\\_collect\\ zu kopieren und dort zu bearbeiten.
+4. Bei Abschluss der Prüfung müssen alle einzusammelnden Dateien im Ordner H:\\transfer\\LEHRER\\_collect\\ liegen.
+5. Der Prüfling meldet sich ab.
+6. Der Lehrer sammelt alle abgegebene Dateien ein und schließt die Prüfung.
 
 Anmeldung
 ^^^^^^^^^
@@ -298,7 +296,7 @@ Abgabe unter ``H:\transfer\LEHRER\_collect\``
 Abgaben einsammeln
 ^^^^^^^^^^^^^^^^^^
 
-Der Lehrer sieht in der Schulkonsole die abgegebenen Dateien. Um die Liste mit den Abgaben in der Spalte ``Arbeitsverzeichnis`` zu aktualisieren, klickst Du in der Spalte auf des Symbol mit den ``Recycling-Pfeilen``.
+Der Lehrer sieht in der Schulkonsole die abgegebenen Dateien. Um die Liste mit den Abgaben in der Spalte ``Arbeitsverzeichnis`` zu aktualisieren, klickst Du in der Spalte auf das Symbol mit den ``Recycling-Pfeilen``.
 
 .. figure:: media/webui-exam-sent-files.png
    :align: center
@@ -318,7 +316,7 @@ Klicke nun auf ``Move _collect cirectory from all members``. Es werden nun alle 
    
 .. hint:: 
 
-  Um Überraschungen bei der Abgabe vorzubeuge: Zeige den letzten aktuellen Stand in Deinem Arbeitsverzeichnis mit den Abgaben via Beamer Deinen Prüflingen. So können alle überprüfen, ob sie ihre Daten auch wirklich abgegeben haben.
+  Um Überraschungen bei der Abgabe vorzubeugen: Zeige den letzten aktuellen Stand in Deinem Arbeitsverzeichnis mit den Abgaben via Beamer Deinen Prüflingen. So können alle überprüfen, ob sie ihre Daten auch wirklich abgegeben haben.
    
 Prüfung beenden
 ^^^^^^^^^^^^^^^
