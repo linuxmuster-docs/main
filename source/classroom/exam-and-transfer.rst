@@ -63,7 +63,7 @@ Bei Aktivierung des Prüfungsmodus wird für jedes Schülerkonto ein neues Konto
    
    Angelegte Schüleraccounts im Prüfungsmodus
    
-In o.g. Abbildung müsste sich der Benutzer ``Achim Testuser`` nun mit dem Login ``testuac-exam`` und seinem bisherigen Kennwort am Client-PC anmelden. Zum Zeitpunkt des aktivierten Prüfungsmodus wurde die Klasse ``10a-exam`` angelegt.
+In o.g. Abbildung müsste sich der Benutzer ``Achim Testuser`` nun mit dem Login ``testusac-exam`` und seinem bisherigen Kennwort am Client-PC anmelden. Zum Zeitpunkt des aktivierten Prüfungsmodus wurde die Klasse ``10a-exam`` angelegt.
 
 Die Prüfungsaufsicht übernimmt der Lehrer, der den Prüfungsmodus aktiviert hat. Dies ist in den roten Rechtecken zu erkennen.
 
