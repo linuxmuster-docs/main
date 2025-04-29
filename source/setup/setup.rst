@@ -1,13 +1,15 @@
 .. _setup-label:
 
 ===========
-Setup v7.2
+Setup v7.3
 ===========
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
                    `@MachtDochNix <https://ask.linuxmuster.net/u/machtdochnix>`_
 
 .. attention::
+
+   !!Achtung noch alt!!
 
    Alle linuxmuster 6.x Systeme können statt einer Neuinstallation über eine :ref:`migration-label` umgezogen werden, dennoch ist die Erstkonfiguration hier eine notwendige Voraussetzung.
 

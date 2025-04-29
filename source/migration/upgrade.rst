@@ -1,10 +1,14 @@
-.. _upgrade-from-7.1-label:
+.. _upgrade-from-7.2-label:
 
 =====================
-Upgrade v7.1 auf v7.2
+Upgrade v7.2 auf v7.3
 =====================
 
-1. Bringe zuerst den lmn7.1 Server auf den aktuellsten Paketstand.
+.. attention::
+
+   Noch alte Doku
+
+1. Bringe zuerst den lmn7.2 Server auf den aktuellsten Paketstand.
 
 Führe dazu in der Konsole folgende Befehle aus:
 
@@ -13,7 +17,7 @@ Führe dazu in der Konsole folgende Befehle aus:
    sudo apt update
    sudo apt dist-upgrade
 
-2. Aktualisiere danach das Betriebssystem auf dem Server von Ubuntu 18.04 LTS auf die Version Ubuntu 20.04 LTS. Nutze dazu den Befehl ``do-release-upgrade``.
+2. Aktualisiere danach das Betriebssystem auf dem Server von Ubuntu 20.04 LTS auf die Version Ubuntu 22.04 LTS. 
 
 
 Gib dazu auf der Server-Konsole ein:
