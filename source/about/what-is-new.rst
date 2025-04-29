@@ -28,8 +28,7 @@ Verbesserte Skalierbarkeit
 Moderne Betriebssystembasis und Steuerung
   * Aktuelle Betriebssysteme für die Server (Ubuntu Server 24.04 LTS) 
   * **Optionale** Firewall OPNsense |reg| ab v25.1
-  * Verbesserung der Performance des Samba-Dateiservers durch automatische Verlagerung der Shares auf 
-  auf eine zweite VM, die nur den Dateiserver aufnimmt. Nutzung von DFS als Dateisystem.
+  * Verbesserung der Performance des Samba-Dateiservers durch automatische Verlagerung der Shares auf eine zweite VM, die nur den Dateiserver aufnimmt. Nutzung von DFS als Dateisystem.
   * Mit LINBO > 4.2: aktuellste Linux-Kernels für aktuelle Hardware, differentielle Images, ntfs3 Kernel-Treiber, VNC-Server, mit neuem Namensschema zur einheitlichen Partitionierung
   * Webbasierte Steuerung der pädagogischen Funktionen mit einem **responsive design** (passt sich an alle Bildschirmgrößen und -auflösungen an).
   * WebUI mit vielen neuen administrativen Möglichkeiten wie die Verwaltung von Schulpersonal und Eltern

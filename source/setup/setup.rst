@@ -10,10 +10,6 @@ Setup v7.3
 .. attention::
 
    !!Achtung noch alt!!
-
-   Alle linuxmuster 6.x Systeme können statt einer Neuinstallation über eine :ref:`migration-label` umgezogen werden, dennoch ist die Erstkonfiguration hier eine notwendige Voraussetzung.
-
-   Alle linuxmuster 7.1 Systeme werden lediglich über ein :ref:`upgrade-from-7.1-label` auf linuxmuster v7.2 aktualisiert. Ein erneutes Setup ist dann nicht mehr erforderlich.
    
 Es gibt 2 Möglichkeiten, die Erstkonfiguration durchzuführen: 
 
@@ -21,7 +17,6 @@ Es gibt 2 Möglichkeiten, die Erstkonfiguration durchzuführen:
 2. Setup im Terminal
 
 Lies zunächst alle wichtigen Hinweise des Setup Kapitels und mache dann entweder auf der Schulkonsole (grafisch / GUI) oder im Terminal weiter.
-
 
 Wichtige Hinweise
 =================
