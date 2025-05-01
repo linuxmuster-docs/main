@@ -252,14 +252,12 @@ Alternativ kann die Open-Source Firewall OPNsense |reg| installiert und in linux
    Grafik ist noch anzupassen
 
 .. image::    media/structure_of_version_7_firewall.svg
-      :name:     structure-firewall
-      :alt:      Struktur der Basis-Komponente - Firewall 
-      :height:   40px
-      :align:    left
+   :name:     structure-firewall
+   :alt:      Struktur der Basis-Komponente - Firewall 
 
-   Durch die Integration der Firewall an AD DS (Active Directory Domain Services) des Servers (Samba4) werden sämtliche Benutzer-Zugriffe der Nutzer mittels Single-Sign-On auf das Internet geregelt.
+Durch die Integration der Firewall an AD DS (Active Directory Domain Services) des Servers (Samba4) werden sämtliche Benutzer-Zugriffe der Nutzer mittels Single-Sign-On auf das Internet geregelt.
 
-   Sämtliche verfügbaren Bausteine dieser Open-Source-Firewall stehen selbstverständlich zur Verfügung.
+Sämtliche verfügbaren Bausteine dieser Open-Source-Firewall stehen selbstverständlich zur Verfügung.
 
 Für weitergehende Informationen `siehe opnsense.org <https://opnsense.org/>`_.
 
