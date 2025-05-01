@@ -13,7 +13,8 @@
 Was ist neu in 7.3?
 ===================
 
-.. sectionauthor:: `Das Dokuteam <https://ask.linuxmuster.net/c/weiterentwicklung/doku>`_
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
+                   `@MachtDochNix <https://ask.linuxmuster.net/u/machtdochnix>`_
 
 Linuxmuster.net 7.3 ist das Release-Update der linuxmuster.net v7.2. Es erfolgt eine Aktualisierung der bisher eingesetzten Ubuntu LTS Version auf die Ubuntu Server LTS Version 24.04. Die Kernpakete der linuxmuster.net Lösung erhalten alle ein Update und stellen viele Verbesserungen und neue Features bereit.
 
@@ -21,7 +22,7 @@ Neue Funktionalitäten
 ---------------------
 
 Verbesserte Skalierbarkeit
-  * Mehrschulfähigkeit: Konsolidierung mehrerer Schulinstanzen auf einem Server möglich
+  * Mehrschulfähigkeit: Konsolidierung mehrerer Schulinstanzen möglich
   * Gruppenorientierte Abbildung der Schule und flexible, regelbasierte Steuerung
   * Moderne Bereitstellung zusätzlicher IT-Dienste der Schule innerhalb der Schullösung
 
@@ -29,22 +30,22 @@ Moderne Betriebssystembasis und Steuerung
   * Aktuelle Betriebssysteme für die Server (Ubuntu Server 24.04 LTS) 
   * **Optionale** Firewall OPNsense |reg| ab v25.1
   * Verbesserung der Performance des Samba-Dateiservers durch automatische Verlagerung der Shares auf eine zweite VM, die nur den Dateiserver aufnimmt. Nutzung von DFS als Dateisystem.
-  * Mit LINBO > 4.2: aktuellste Linux-Kernels für aktuelle Hardware, differentielle Images, ntfs3 Kernel-Treiber, VNC-Server, mit neuem Namensschema zur einheitlichen Partitionierung
+  * Mit LINBO 4.3: aktuellste Linux-Kernels für aktuelle Hardware, differentielle Images, ntfs3 Kernel-Treiber, VNC-Server, mit neuem Namensschema zur einheitlichen Partitionierung
   * Webbasierte Steuerung der pädagogischen Funktionen mit einem **responsive design** (passt sich an alle Bildschirmgrößen und -auflösungen an).
   * WebUI mit vielen neuen administrativen Möglichkeiten wie die Verwaltung von Schulpersonal und Eltern
-  * Bereitstellung von linuxmuster - tools, linuxmuster - api und linuxmuster - cli mit erweiterten Möglichkeiten zur Administration und Anbindung externer webbasierter Systeme
-  * Benutzerverwaltung sophomorix mit verbesserter Quotierung für Nutzer und Kennworterstellung
+  * Bereitstellung von linuxmuster-tools, linuxmuster-api und linuxmuster-cli mit erweiterten Möglichkeiten zur Administration und Anbindung externer webbasierter Systeme
+  * Benutzerverwaltung sophomorix mit verbesserter Quotierung für Nutzer sowie flexibleren Möglichkeiten zur Erstellung von Kennwörtern für Benutzer
 
 Technische Neuerungen
 ---------------------
 
 Installation
-  * linuxmuster.net ist nun eine Drei-Serverlösung. Es wird der linuxmuster-Server (AD/DC, LINBO etc.) sowie der linuxmuster-Dateiserver benötigt. Zudem muss eine zusätzliche Firewall genutzt werden. Dies kann eine bereits bestehende eigene Firewall sein. Optional kann diese Firewall auch als OPNsense genutzt werden. Letztere wird beim Setup miteingebunden. 
+  * linuxmuster.net ist eine Drei-Serverlösung. Es wird der linuxmuster-Server (für AD/DC, LINBO, Benutzerverwaltung etc.) sowie der linuxmuster-Dateiserver benötigt. Zudem muss eine zusätzliche Firewall genutzt werden. Dies kann eine bereits bestehende eigene Firewall sein. Optional kann diese Firewall auch als OPNsense genutzt werden. Letztere wird beim Setup direkt eingebunden. 
   * Es können weitere Server / Docker-Instanzen angebunden werden.
   * Die Installation erwartet eine vorkonfigurierte Virtualisierungslösung (Proxmox - andere sind ebenfalls möglich).
 
 Bedienung und Administration
-  * Die WebUI als Verwaltungswerkzeug zur Administration und zur Steuerung von Unterricht weist viele zusätzliche Funktionen auf.
+  * Die WebUI als Verwaltungswerkzeug zur Administration und zur Steuerung von Unterricht weist viele zusätzliche Funktionen auf (z.B. Verwaltung von Eltern und VPN via Wireguard).
   * Die vollständige Bedienbarkeit auf der Konsole bleibt erhalten.
 
 Benutzerverwaltung
