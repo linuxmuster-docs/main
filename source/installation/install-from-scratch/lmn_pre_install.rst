@@ -3,7 +3,7 @@
 .. _lmn_pre_install-label:
 
 =============================
-Server auf lmn7.2 vorbereiten
+Server auf lmn7.3 vorbereiten
 =============================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_

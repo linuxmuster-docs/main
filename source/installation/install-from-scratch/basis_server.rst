@@ -2,9 +2,9 @@
 
 .. _basis_server-label:
 
-====================================
-Anlegen und Installieren des Servers
-====================================
+============================================
+Anlegen und Installieren des Servers (AD/DC)
+============================================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
@@ -35,7 +35,7 @@ Erster Start des Servers vom Installationsmedium
 Sprachauswahl
 -------------
 
-Starte den Server Ubuntu 22.04 LTS Server ISO-Image. Es erscheint das erste Installationsfenster mit der Abfrage zur gewünschten Sprache.
+Starte den Server Ubuntu 24.04 LTS Server ISO-Image. Es erscheint das erste Installationsfenster mit der Abfrage zur gewünschten Sprache.
 
 .. figure:: media/basis_server_001.png
    :align: center
