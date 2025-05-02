@@ -2,13 +2,17 @@
 
 .. _basis_opnsense:
 
-=====================================
-Anlegen und Installieren der Firewall
-=====================================
+================================================
+Anlegen und Installieren der Firewall (optional)
+================================================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_,
                    `@rettich <https://ask.linuxmuster.net/u/rettich>`_,
+
+Die Installation der Open-Source Firewall OPNsense |reg| ist optional. Ebenso kannst Du Deine bereits bestehende Firewall weiterverwenden und diese nach der Konfiguration der beiden linuxmuster.net-Server (AD/DC und File-Server) zur Nutzung mit linuxmuster.net anpassen.
+
+Die nastehende Dokumentation beschreibt zunächsst die optionale Installation der OPNsense |reg| Firewall.
 
 Installation der OPNsense |reg|
 ===============================
