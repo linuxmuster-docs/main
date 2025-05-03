@@ -21,12 +21,37 @@ Vorteile:
 Installation Ubuntu-Server
 ==========================
 
-Führe die Installation des für den File-Server benötigten Ubuntu 24.04 LTS Servers so aus, wie zuvor :ref:`basis_server-label` beschrieben. 
+Führe die Installation des für den File-Server benötigten Ubuntu 24.04 LTS Servers so aus, wie zuvor :ref:`basis_server-label` beschrieben. Es wird nur eine Festplattte benötigt.
+
+Passe die Partitionierung und Formatierung der Festplatte an Deine Anforderungen an. Zudem musst Du eine statische IP-Adresse aus dem LAN dem File-Server zuweisen.
+
+Nutze die Daten gemäß Deine IP-Adresskonzeptes oder gebe nachstehende Daten ein, die in der Dokumentation durchgängig für das LAN verwendet wurden:
+
+- Netzbereich: 10.0.0.0/16
+- IP-Adresse:  10.0.0.2
+- Netzmaske:   10.0.0.254
+- Gateway:     10.0.0.254
+- DNS:         10.0.0.254
+- Domäne:      linuxmuster.local
+
+Letztere wird bei der Integration noch automatisch angeepasst.
 
 Die Installation endet bei dem Punkt ``Automatische Updates abschalten``.
 
+Führe danach die Vorbereitung des Ubuntu Servers weiter wie in :ref:`lmn_pre_install-label` beschrieben. Durchlaufe folgende Schritte:
+1. Zeitservereinstellungen überprüfen
+2. Cloud-init deinstallieren
+3. Default-Locale setzen
+4. Paketquellen eintragen - siehe nachstehend
+
 Paketquellen eintragen
 ======================
+
+Nachdem Du als Benutzer ``linuxadmin`` am file-server angemeldet bist, wechselst Du nun zum Benutzer root mit:
+
+.. code::
+
+   sudo -i
 
 1. Importiere den Schlüssel für die Paketquellen
 
@@ -48,14 +73,20 @@ Aktualisiere den Server und installiere die linuxmuster.net File-Server-Pakete:
 .. code::
 
    sudo apt update && sudo apt install linuxmuster-fileserver
- 
+
+Bei der Paketinstallation wird für die Kerberos-Authentifizierung eon sog. Realm abgefragt. Dieser bleibt zu diesem Zeitpunkt frei. Bei der späteren Integration des File-Servers in den AD/DC wird dies dann automaisch angepasst.
+
+.. hint::
+
+   Für Anwender einer Virtualisierungslösung empfehlen wir an dieser Stelle einen Snapshot zu erstellen!
+
 Weiteres Vorgehen
 =================
 
 1. Nun muss der linuxmuster.net Server (AD/DC) im nächsten Schritt vorbereitet werden.
 2. Proxmox muss in das interne Netz gebracht werden.
 3. Es muss das Setup für lmnv7.3 (AD/DC) durchgeführt werden.
-4. Der File-Server ist in das AD einzubindungen und es sind die Freigaben/Shares auf dem lmn-Server zu definieren.
+4. Der File-Server ist in das AD einzubinden und es sind die Freigaben/Shares auf dem lmn-Server zu definieren.
 
 
 
