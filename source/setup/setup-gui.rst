@@ -2,17 +2,17 @@
 
 .. _setup-gui-label:
 
-======================
-Setup via Schulkonsole
-======================
+===============
+Setup via WebUI
+===============
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
            `@MachtDochNix <https://ask.linuxmuster.net/u/machtdochnix>`_
 
-Setup über die Schulkonsole
-===========================
+Setup über WebUI
+================
 
-Die Weboberfläche (WebUI/Schulkonsole) erreicht man über einen Browser eines Gerätes (im folgenden Admin-PC genannt) im Servernetzwerk. Dafür konfiguriert man den Admin-PC mit der festen IP-Adresse ``10.0.0.10`` (entsprechend ``x.x.x.10`` in jeder anderen Netzwerkkonfiguration) der Netzwerkmaske ``255.255.0.0``, dem Gateway ``10.0.0.254`` und dem DNS-Eintrag ``10.0.0.1``.
+Die Weboberfläche erreichst Du mit dem Browser eines Gerätes (im folgenden Admin-PC genannt) im Servernetzwerk. Dafür konfiguriert Du den Admin-PC mit der festen IP-Adresse ``10.0.0.10`` (entsprechend ``x.x.x.10`` in jeder anderen Netzwerkkonfiguration) der Netzwerkmaske ``255.255.0.0``, dem Gateway ``10.0.0.254`` und dem DNS-Eintrag ``10.0.0.1``.
 
 Öffne auf dem Admin-PC mit einem Webbrowser die URL ``http://10.0.0.1``. Melde Dich hier einmalig mit dem Benutzer ``root`` und dem Passwort ``Muster!`` an.
     
@@ -139,22 +139,16 @@ Zum Abschluss siehst Du den Eintrag
 
    ### linuxmuster-setup finished at ... ###
 
-Schliesse das Setup nun mit ``Finish`` ab. Es erscheint eine Statusmeldung, dass das Setup abgeschlossen ist und Du Dich danach mit dem Benutzer ``global-admin`` anmelden sollst.
-
-.. figure:: media/newsetup/lmn-setup-gui-08.png
-   :align: center
-   :alt: WebUI Setup: Wizard - setup complete
-   :width: 60%
-   
-   Abschluss des Setups
-
-Bestätige dies mit ``Close``.
+Schliesse das Setup nun mit ``Finish`` ab.
 
 Rufe auf dem Server das Terminal auf und starte den Server neu:
 
 .. code:: Bash
 
    sudo reboot
+   
+   
+Starte zudem die OPNsense |reg| neu, sofern Du diese im Zuge des Setups mitkonfiguriert haben solltest.
 
 
 Anmeldung an der Schulkonsole
@@ -259,6 +253,3 @@ Setze die Ersteinrichtung fort, indem Du
 
 :ref:`add-user-accounts-label` und :ref:`hardware-registration-label` aufrufst.
 
-``Alternativ``: Wenn Du eine Migration durchführen willst, geht es weiter mit
-
-:ref:`migration-label`
