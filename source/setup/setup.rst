@@ -1,15 +1,11 @@
 .. _setup-label:
 
-===========
-Setup v7.3
-===========
+=======================
+Setup v7.3 AD/DC Server
+=======================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
                    `@MachtDochNix <https://ask.linuxmuster.net/u/machtdochnix>`_
-
-.. attention::
-
-   !!Achtung noch alt!!
    
 Es gibt 2 Möglichkeiten, die Erstkonfiguration durchzuführen: 
 
@@ -21,13 +17,15 @@ Lies zunächst alle wichtigen Hinweise des Setup Kapitels und mache dann entwede
 Wichtige Hinweise
 =================
 
-* Nach Abschluss dieses Setups sind die (AD-)Domäne und andere Details des Netzwerks permanent festgelegt und nur durch eine erneute Neuinstallation änderbar.
+.. attention::
 
-  Es ist daher wichtig, zu diesem Zeitpunkt ein **Snapshot/Backup von Server und Firewall** anzufertigen.
+   Nach Abschluss dieses Setups sind die (AD-)Domäne und andere Details des Netzwerks permanent festgelegt und nur durch eine erneute Neuinstallation änderbar.
 
-  Sollte es beim Setup Fehler geben, oder Einstellungen nochmals geändert werden müssen, sind die virtuellen Maschinen auf den Stand des Snapshots zurückzusetzen und das Setup muss erneut aufgerufen werden.
+   Es ist daher wichtig, zu diesem Zeitpunkt ein **Snapshot/Backup von Server und Firewall** anzufertigen.
 
-* Beim Domänennamen ist zu beachten:
+   Sollte es beim Setup Fehler geben, oder Einstellungen nochmals geändert werden müssen, sind die virtuellen Maschinen auf den Stand des Snapshots zurückzusetzen und das Setup muss erneut aufgerufen werden.
+
+**Beim Domänennamen ist zu beachten**:
 
   - nutze immer eine echte externe Domain, die auf Deine Organisation registriert ist -> z.B. ``meineschule.de``
   - für das Setup von linuxmuster benötigst Du nun eine Subdomain, die vom AD DNS-Server authoritativ intern aufgelöst wird, aber niemals von extern.
@@ -40,7 +38,11 @@ Wichtige Hinweise
 * Beim Setup von linuxmuster gibst Du also einen Domänennamen nach folgendem Schema an:
   
   hostname.subdomain=NetBIOS-Name.domain.tld
-  ein funktionierendes Beispiel wäre: server01ad.linuxmuster.meineschule.de
+  
+  
+  ein funktionierendes ``Beispiel`` wäre: **server01ad.linuxmuster.meineschule.de**
+  
+  Die Bestandteile sind wie folgt zugeordnet:  
     
   * server01ad -> hostname
   * linuxmuster -> subdomain
@@ -57,18 +59,15 @@ Wichtige Hinweise
   
 .. hint::
 
-  Daraus folgt wie in einem reinen MS-Netzwerk, dass der linuxmuster.net-Server immer den Service DNS für die Vertrauensstellung liefern muss, denn er übernimmt die Rolle des Domänencontrollers für die Active Domane. In unserer Beschreibung als SAMBA-Domäne bezeichnet. 
+  Daraus folgt wie in einem reinen MS-Netzwerk, dass der linuxmuster.net-Server immer den Service DNS für die Vertrauensstellung liefern muss, denn er übernimmt die Rolle des Domänencontrollers für die Active Domäne. In unserer Beschreibung als SAMBA-Domäne bezeichnet. 
 
-* Alle Hosts, die im Setup konfiguriert werden, müssen bereits laufen (OPNsense und Server) und sie müssen sich im internen LAN gegenseitig erreichen.
+* Alle Hosts, die im Setup konfiguriert werden, müssen bereits laufen (ggf. OPNsense und Server AD/DC) und sie müssen sich im internen LAN gegenseitig erreichen.
 
-* v6.x Systeme, die mithilfe der Migration auf linuxmuster.net 7.2 migriert werden, können dabei für eine neue (oder die alte) Domäne konfiguriert werden.
 
 Anpassung des Netzbereichs
 ==========================
 
 Die Standardkonfiguration sieht vor, dass Geräte im Netzbereich ``10.0.0.0/16`` sind.
-
-v6.x Systeme, die mithilfe der Migration auf linuxmuster.net 7.2 migriert werden, sollten den bisher verwendeten Netzbereich beibehalten.
 
 .. hint::
 
@@ -92,8 +91,6 @@ Server-Konsole
 
 WEB UI
 ------
-
-(formerly known as Schulkonsole) 
 
 .. figure:: media/newsetup/lmn-setup-gui-02.png
      :align: center 
