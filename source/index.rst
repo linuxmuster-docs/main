@@ -95,6 +95,7 @@ Nach einem Klick auf die Leiste eröffnen sich Dir dort noch weitere Möglichkei
   setup/setup
   setup/setup-gui
   setup/setup-console
+  setup/setup-file-server
   setup/add-user-accounts
   clients/client_templates/index
 
