@@ -16,33 +16,35 @@ Vorteile:
 - verbesserte Backupstrategie (jeweils eigenständiges Backup für die Dateien als auch für das AD)
 - verbesserte Sicherheit (bei einem Multi-School Setup kann jeweils ein eigenständier File-Server pro Schule eingesetzt werden.)
 - einfache Wartung und vereinfachte Updates
-- deutliche Leistungsverbesserung - gerade bei großen Schulinstallationen
+- deutliche Leistungsverbesserung - gerade bei grossen Schulinstallationen
 
 Installation Ubuntu-Server
 ==========================
 
-Führe die Installation des für den File-Server benötigten Ubuntu 24.04 LTS Servers so aus, wie zuvor :ref:`basis_server-label` beschrieben. Es wird nur eine Festplattte benötigt.
+Führe die Installation des für den File-Server benötigten Ubuntu 24.04 LTS Servers so aus, wie zuvor :ref:`basis_server-label` beschrieben. Es wird nur eine Festplattte benötigt, passe die Plattenkapazität an die Anforderungen Eurer Schule an.
 
-Passe die Partitionierung und Formatierung der Festplatte an Deine Anforderungen an. Zudem musst Du eine statische IP-Adresse aus dem LAN dem File-Server zuweisen.
+Passe die Partitionierung und Formatierung der Festplatte entsprechend an. Zudem musst Du eine statische IP-Adresse aus dem LAN dem File-Server zuweisen.
 
-Nutze die Daten gemäß Deine IP-Adresskonzeptes oder gebe nachstehende Daten ein, die in der Dokumentation durchgängig für das LAN verwendet wurden:
+Nutze die Daten gemäß Deines IP-Adresskonzeptes oder gib nachstehende Daten ein, die in der Dokumentation durchgängig für das LAN verwendet werden:
 
 - Netzbereich: 10.0.0.0/16
 - IP-Adresse:  10.0.0.2
 - Netzmaske:   10.0.0.254
 - Gateway:     10.0.0.254
 - DNS:         10.0.0.254
-- Domäne:      linuxmuster.local
+- Domäne:      linuxmuster.lan
 
-Letztere wird bei der Integration noch automatisch angeepasst.
+Die Domäne wird bei der Integration später noch automatisch angepasst.
 
 Die Installation endet bei dem Punkt ``Automatische Updates abschalten``.
 
 Führe danach die Vorbereitung des Ubuntu Servers weiter wie in :ref:`lmn_pre_install-label` beschrieben. Durchlaufe folgende Schritte:
+
 1. Zeitservereinstellungen überprüfen
 2. Cloud-init deinstallieren
 3. Default-Locale setzen
-4. Paketquellen eintragen - siehe nachstehend
+4. Paketquellen eintragen - siehe nachstehende Schritte
+
 
 Paketquellen eintragen
 ======================
@@ -74,7 +76,7 @@ Aktualisiere den Server und installiere die linuxmuster.net File-Server-Pakete:
 
    sudo apt update && sudo apt install linuxmuster-fileserver
 
-Bei der Paketinstallation wird für die Kerberos-Authentifizierung eon sog. Realm abgefragt. Dieser bleibt zu diesem Zeitpunkt frei. Bei der späteren Integration des File-Servers in den AD/DC wird dies dann automaisch angepasst.
+Bei der Paketinstallation wird für die Kerberos-Authentifizierung ein sog. Realm abgefragt. Dieser bleibt zu diesem Zeitpunkt frei. Bei der späteren Integration des File-Servers in den AD/DC wird dies dann automatisch angepasst.
 
 .. hint::
 

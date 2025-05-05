@@ -29,7 +29,7 @@ Im Terminal wirst Du mit dem Erstbildschirm von linuxmuster.net v7.3 begrüßt u
    
    Welcome to lmn.net
    
-Wechsle im Terminal zum Benutzer root mit
+Wechsel im Terminal zum Benutzer root mit
 
 .. code::
 
@@ -103,19 +103,92 @@ Rufe dort im Terminal das Setup-Programm für den File-Server auf:
 
 .. code::
 
-   linuxmuster-fileserver 
+   linuxmuster-fileserver setup [-d DOMAIN] [-u USERNAME] [-p PASSWORD] [-s SCHOOL]
    
-.. hint::
+Das Setup benötigt folgende Optionen, die bei Aufruf anzugeben sind:
 
-   still to be completed
++-----------+---------------+-----------------+
+| Parameter | Beschreibung  |   Vorgabewert   |
++===========+===============+=================+
+|    -h     | Hilfeseite    |                 |
++-----------+---------------+-----------------+
+|    -d     | Domäne des AD | linuxmuster.lan |
++-----------+---------------+-----------------+
+|    -u     | Benutzername  | global-admin    |
+|           | des Admins    |                 |
++-----------+---------------+-----------------+
+|    -p     | Kennwort des  |                 |
+|           | Admins        |                 |
++-----------+---------------+-----------------+
+|    -s     | Schulname für | default-school  |
+|           | die Freigaben |                 |
++-----------+---------------+-----------------+
+
+Der vollständige Befehlsaufruf für das Setup lautet z.B. für die
+
+a) Domain: schule.willie-wichtig.org (wie beim Setup des AD/DC angegeben)
+b) Admin: global-admin
+c) -p auslassen, dann wird das Kennwort interaktiv abgefragt
+d) Schulname: wird -s ausgelassen, wird default-school genutzt
+
+.. code::
+
+   linuxmuster-fileserver setup -d schule.willie-wichtig.org -u global-admin -s willie-wichtig-bk
+
+Wurde das Setup erfolgreich ausgeführt, siehst Du folgende Bestätigung:
+
+.. figure:: media/newsetup/lmn-file-server-05.png
+   :align: center
+   :alt: successful setup
+   :width: 40%
+   
+   File-Server: Erolgreiches Setup
+   
+Auf dem File-Server findet sich der Inhalt der Freigabe nun unter:
+
+.. code::
+
+   /srv/samba/schools/willie-wichtig-bk/
+   
 
 
 Aktualisierung der Freigaben
 ============================
 
+Melde Dich nun in der Konsole auf dem linuxmuster.net AD/DC Server an.
+
+Wechsel im Terminal zum Benutzer root mit
+
+.. code::
+
+   sudo -i
+
+Gib im Terminal zur Aktualisierung der Freigaben (Shares) folgende Befehle ein:
+
 .. hint::
 
-   still to be completed
+   Hast Du für den File-Server einen anderen Schulnamen als den Vorgabewert (default-school) angegeben, dann must Du diesen hier angeben.
+
+.. code::
+
+   SCHOOL=willie-wichtig-bk
+   FQDN=lmn-file-server.schule.willie-wichtig.org
+   
+   net conf addshare $SCHOOL /srv/samba/schools/$SCHOOL/
+   net conf delparm $SCHOOL "guest ok"
+   net conf delparm $SCHOOL "read only"
+   net conf delparm $SCHOOL "path"
+   net conf setparm $SCHOOL "msdfs root"  yes
+   net conf setparm $SCHOOL "msdfs proxy"  //$FQDN/$SCHOOL
+   net conf setparm $SCHOOL "hide unreadable"  yes
+   
+Zum Abschluss der Integration führe noch folgenden Befehl aus dem linuxmuster.net AD/DC Server aus:
+
+.. code::
+
+   sophomorix-repair --all
+   
+
 
 
 
