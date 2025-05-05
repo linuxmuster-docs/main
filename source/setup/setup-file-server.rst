@@ -144,13 +144,63 @@ Wurde das Setup erfolgreich ausgeführt, siehst Du folgende Bestätigung:
    
    File-Server: Erolgreiches Setup
    
-Auf dem File-Server findet sich der Inhalt der Freigabe nun unter:
+Auf dem File-Server findet sich nun das Verzeichnis:
 
 .. code::
 
    /srv/samba/schools/willie-wichtig-bk/
-   
 
+Freigaben übertragen
+====================
+
+1. Du musst nun die auf dem linuxmuster.net AD/DC Server vorhandenen Freigaben, auf den File-Server übertragen.
+2. Danach aktualisierst Du die Freigaben.
+3. Du lässt mit sophomorix die Berechtigungen im AD anpassen.
+4. Auf dem File-Server passt Du die ACLs an.
+
+
+Übertrage zuerst den ssh_key des Benutzer root vom linuxmuster.net AD/DC Server auf den File-Server. Bislang kannst Du Dich nur als Benutzer linuxadmin auf dem File-Server via ssh anmelden.
+
+Gib daher auf dem AD in der Konsole folgenden Befehle ein:
+
+.. code::
+
+   root@server:~# ssh-copy-id -i .ssh/id_rsa.pub linuxadmin@10.0.0.2
+   
+Der Key wurde nun auf dem File-Server dem User linuxadmin in ``~.ssh/authorized_keys hinzugefügt``.
+
+Öffne nun die Konsole auf dem AD und wechsel zum Benutzer root. 
+
+Kopiere nun die Datei authorized_keys des Benutzers linuxadmin:
+
+.. code::
+
+   cp /home/linuxadmin/.ssh/authorized_keys /root/.ssh/
+   
+Teste nun, ob Du vom AD via SSH auf den File-Server gelangst. Dies sollte mit
+
+.. code::
+
+   ssh root@10.0.0.2
+   
+direkt erfolgen.
+
+Danach installierst Du rsync auf dem AD mit
+
+.. code::
+
+   sudo apt install -y rsync
+   
+Jetzt kannst Du den Inhalt des Freigabeordners auf dem AD zum File-Server synchronisieren.
+
+Hierzu gibst Du als Benutzer root auf dem AD folgenden Befehl ein:
+
+.. code::
+
+   rsync -av --delete -e ssh /srv/samba/schools/default-school/ root@10.0.0.2:/srv/samba/schools/willie-wichtig-bk/
+   
+Als Ziel ist auf dem File-Server der Schulname anzugeben, wie Du diesen zuvor mit dem linuxmuster-filserver setup eingerichtet hattest.
+   
 
 Aktualisierung der Freigaben
 ============================
@@ -181,12 +231,37 @@ Gib im Terminal zur Aktualisierung der Freigaben (Shares) folgende Befehle ein:
    net conf setparm $SCHOOL "msdfs root"  yes
    net conf setparm $SCHOOL "msdfs proxy"  //$FQDN/$SCHOOL
    net conf setparm $SCHOOL "hide unreadable"  yes
+
+Abschluss
+=========
    
-Zum Abschluss der Integration führe noch folgenden Befehl aus dem linuxmuster.net AD/DC Server aus:
+Zum Abschluss der Integration führe noch folgenden Befehl auf dem linuxmuster.net AD/DC Server aus:
 
 .. code::
 
    sophomorix-repair --all
+   
+Danach wechselst Du zur Konsole auf dem File-Server und gibst dort als Benutzer root folgenden Befehl ein:
+
+.. code::
+
+   linuxmuster-fix-acls willie-wichtig-bk
+   
+Du musst dem Befehl den Schulnamen übergeben, wie Du diesen für den File-Server festgelegt hast. Hast Du keinen festgelegt, nutzt Du default-school.
+
+Bei erfolgreicher Anwendung siehst Du diese Ausgabe:
+
+.. figure:: media/newsetup/lmn-file-server-06.png
+   :align: center
+   :alt: fix acls
+   :width: 100%
+   
+   File-Server: Setze die ACLs
+
+
+
+
+
    
 
 
