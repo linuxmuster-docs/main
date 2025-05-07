@@ -93,7 +93,7 @@ Setup des File-Servers
 
 Melde Dich als Benutzer ``linuxadmin`` mit dem Passwort ``Muster!`` auf dem linuxmuster.net File-Server in der Konsole an.
 
-Wechsle im Terminal zum Benutzer root mit
+Wechsel im Terminal zum Benutzer root mit
 
 .. code::
 
@@ -131,9 +131,13 @@ b) Admin: global-admin
 c) -p auslassen, dann wird das Kennwort interaktiv abgefragt
 d) Schulname: wird -s ausgelassen, wird default-school genutzt
 
+.. hint::
+
+   Hast Du zuvor das Setup des linuxmuster.net AD/DC Server durchlaufen, dann nutzt Du dort den Share default-school - unabhängig davon, wie Du beim Setup Deine Schule genannt hast. Du must also für den File-Server daher diese angeben bzw. den Parameter -s weglassen.
+
 .. code::
 
-   linuxmuster-fileserver setup -d schule.willie-wichtig.org -u global-admin -s willie-wichtig-bk
+   linuxmuster-fileserver setup -d schule.willie-wichtig.org -u global-admin -s default-school
 
 Wurde das Setup erfolgreich ausgeführt, siehst Du folgende Bestätigung:
 
@@ -148,7 +152,7 @@ Auf dem File-Server findet sich nun das Verzeichnis:
 
 .. code::
 
-   /srv/samba/schools/willie-wichtig-bk/
+   /srv/samba/schools/default-school/
 
 Freigaben übertragen
 ====================
@@ -197,7 +201,7 @@ Hierzu gibst Du als Benutzer root auf dem AD folgenden Befehl ein:
 
 .. code::
 
-   rsync -av --delete -e ssh /srv/samba/schools/default-school/ root@10.0.0.2:/srv/samba/schools/willie-wichtig-bk/
+   rsync -av --delete -e ssh /srv/samba/schools/default-school/ root@10.0.0.2:/srv/samba/schools/default-school/
    
 Als Ziel ist auf dem File-Server der Schulname anzugeben, wie Du diesen zuvor mit dem linuxmuster-filserver setup eingerichtet hattest.
    
@@ -221,7 +225,7 @@ Gib im Terminal zur Aktualisierung der Freigaben (Shares) folgende Befehle ein:
 
 .. code::
 
-   SCHOOL=willie-wichtig-bk
+   SCHOOL=default-school
    FQDN=lmn-file-server.schule.willie-wichtig.org
    
    net conf addshare $SCHOOL /srv/samba/schools/$SCHOOL/
@@ -245,7 +249,7 @@ Danach wechselst Du zur Konsole auf dem File-Server und gibst dort als Benutzer 
 
 .. code::
 
-   linuxmuster-fix-acls willie-wichtig-bk
+   linuxmuster-fix-acls default-school
    
 Du musst dem Befehl den Schulnamen übergeben, wie Du diesen für den File-Server festgelegt hast. Hast Du keinen festgelegt, nutzt Du default-school.
 
