@@ -30,19 +30,20 @@ Systemvoraussetzungen
 
 In der unten aufgeführten Tabelle findest Du die Systemvoraussetzungen zum Betrieb der virtuellen Maschinen. Die Systemanforderungen für die Installation von Proxmox selbst finden sich im Web unter https://www.proxmox.com/de/proxmox-ve/systemanforderungen. 
 
-Die Werte bilden die Mindestvoraussetzungen zur Planung. Für die Installation mit Proxmox und linuxmuster v7.2 wird als Standard der ``IP-Bereich 10.0.0.0/16`` genutzt.
+Die Werte bilden die Mindestvoraussetzungen zur Planung. Für die Installation mit Proxmox und linuxmuster v7.3 wird als Standard der ``IP-Bereich 10.0.0.0/16`` genutzt.
 
 ============ ============= ================= =====
 VM           IP            HDD               RAM 
 ============ ============= ================= =====
 OPNsense®    10.0.0.254/16 10 GiB            4 GiB
 Server       10.0.0.1/16   25 GiB u. 100 GiB 4 GiB
+File-Server  10.0.0.2/16   25 GiB u. 100 GiB 4 GiB
 Proxmox-Host 10.0.0.10/16  500 GiB           4 GiB
 ============ ============= ================= =====
 
-Die Festplattengröße sowie der genutzte RAM der jeweiligen VMs kann ggf. vor deren Einrichtung einfach an die Bedürfnisse der Schule angepasst werden.
+Die Festplattengröße sowie der genutzte RAM der jeweiligen VMs sollte vor deren Einrichtung an die tatsächlichen Bedürfnisse der Schule angepasst werden.
 
-Bevor Du dieses Kapitel durcharbeitest, lese bitte zuerst die Abschnitte
+Bevor Du dieses Kapitel durcharbeitest, lies bitte zuerst die Abschnitte
   +  :ref:`what-is-linuxmuster.net-label`
   +  :ref:`what-is-new-label`
   +  :ref:`install-overview-label`
@@ -52,7 +53,7 @@ Für den Betrieb des Hypervisor selbst (Proxmox VE) sollten ca. 2 bis 6 GB Arbei
 
 Der Proxmox-Host sollte gemäß o.g. Minimalanforderungen folgende Merkmale aufweisen:
 
-  * RAM gesamt: min. 16 GiB (besser: 32 GiB oder 64 GiB)
+  * RAM gesamt: min. 24 GiB (besser: 32 GiB oder 64 GiB)
   * Erste HDD: min. 100 GiB für Proxmox selbst
   * Zweite HDD: für die VMs mit mind. 500 GB Kapazität (besser: 1 TiB oder 2 TiB)
   * Zwei Netzwerkkarten
@@ -88,7 +89,7 @@ Nachdem Du die ISO-Datei für Proxmox heruntergeladen hast, wechselst Du in das 
 
 .. code-block:: console
 
-   dd if=proxmox-ve_8.1-2.iso of=/dev/sdX bs=1M status=progress conv=fdatasync
+   dd if=proxmox-ve_8.4-1.iso of=/dev/sdX bs=1M status=progress conv=fdatasync
 
 Verkabelungshinweise
 --------------------
@@ -121,7 +122,7 @@ Vom USB-Stick booten, danach erscheint folgender Bildschirm:
 
 .. figure:: media/install-on-proxmox_02_boot-menu.png
    :align: center
-   :scale: 60%
+   :scale: 50%
    :alt: Proxmox Boot-Menu
 
    Proxmox Boot Menue
@@ -130,7 +131,7 @@ Wähle ``Install Proxmox VE (Graphical)`` und starte die Installation mit ``ENTE
 
 .. figure:: media/install-on-proxmox_03_eula.png
    :align: center
-   :scale: 60%
+   :scale: 40%
    :alt: Proxmox Nutzervereinbarung
 
    Proxmox End-User-Agreement
@@ -139,7 +140,7 @@ Bestätige das ``End-User-Agreement`` mit ``Enter``.
 
 .. figure:: media/install-on-proxmox_04_target-harddisk.png
    :align: center
-   :scale: 80%
+   :scale: 40%
    :alt: Proxmox Installation Wahl der Festplatten
 
    Proxmox Festplattenauswahl
@@ -153,7 +154,7 @@ Gib bei ``Location and Time Zone selection`` als Land und Keyboard Layout  ``Ger
 
 .. figure:: media/install-on-proxmox_05_location-and-time-zone.png
    :align: center
-   :scale: 60%
+   :scale: 40%
    :alt: Proxmox Installation Zeitzone 
 
    Proxmox Zeitzone
@@ -162,7 +163,7 @@ Lege ein Kennwort für den Administrator des Proxmox-Host fest und gib eine E-Ma
 
 .. figure:: media/install-on-proxmox_06_admin-password.png
    :align: center
-   :scale: 60%
+   :scale: 40%
    :alt: Proxmox Installation Admin-Passwort
 
    Admin Password festelegen
@@ -188,7 +189,7 @@ Hier wurde die interne IP-Adresse `192.168.199.20/24` festgelegt.
 
 .. figure:: media/install-on-proxmox_08_install-summary.png
    :align: center
-   :scale: 60%
+   :scale: 40%
    :alt: Proxmox Installation Übersicht
 
    Zusamenfassung der Installationsoptionen
@@ -197,7 +198,7 @@ Warte den Abschluss der Installation ab.
 
 .. figure:: media/install-on-proxmox_09_install-success.png
    :align: center
-   :scale: 60%
+   :scale: 40%
    :alt: Proxmox Installation erfolgreich beendet
 
    Installation beendet
@@ -286,7 +287,7 @@ Die **bisherige** Netzwerkkonfiguration stellt sich wie folgt dar:
 
 .. figure:: media/install-on-proxmox_13_network.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: Proxmox Overview <hostename> (z.B. pve) - Network
 
    Proxmox Network
@@ -525,7 +526,7 @@ Es ist zu erkennen, dass auf ``/dev/sda3`` nur noch ``pve-swap`` und ``pve-root`
 
 .. figure:: media/install-on-proxmox_24_storage-default.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt:  Proxmox-Übersicht Festplatten default
 
    Festplatten Default-Einstellungen
@@ -534,7 +535,7 @@ Danach findest Du noch folgenden Speicher in der Weboberfläche:
 
 .. figure:: media/install-on-proxmox_25_storage-after-remove.png
    :align: center
-   :scale: 80%
+   :scale: 60%
    :alt: Proxmox-Übersicht nach Löschung local-lvm
 
    Zustand nach Löschung des local-lvm
@@ -665,7 +666,7 @@ Hier noch der Vollständigkeitshalber die schematische Darstellung, wie sie sich
 Vorbereiten des ISO-Speichers
 =============================
 
-Um die v7.2 zu installieren, müssen zwei virtuelle Maschinen angelegt werden. OPNsense und Ubuntu Server LTS werden in diesei VMs installiert. Dazu ist es erforderlich, dass Du die ISO-Images für OPNsense und Ubuntu Server LTS auf den Proxmox-Hypervisor in den Datenspeicher für ISO-Images lädst.
+Um die v7.3 zu installieren, müssen zwei virtuelle Maschinen angelegt werden. OPNsense und Ubuntu Server LTS werden in diesei VMs installiert. Dazu ist es erforderlich, dass Du die ISO-Images für OPNsense und Ubuntu Server LTS auf den Proxmox-Hypervisor in den Datenspeicher für ISO-Images lädst.
 
 .. figure:: media/proxmox-download-iso_01.png
    :align: center
@@ -681,15 +682,15 @@ Ubuntu Server
 
 .. hint:: 
 
-   Beachte für den Download des Ubuntu Servers, dass du immer die Version verwendest, die in den Systemvoraussetzungen genannt wurde. Gehe auf https://releases.ubuntu.com/jammy/ und überprüfe die dort zum Herunterladen angebotene Version für 22.04.-live-server-amd64 und deren Checksumme.
+   Beachte für den Download des Ubuntu Servers, dass du immer die Version verwendest, die in den Systemvoraussetzungen genannt wurde.
 
-   Zum jetzigen Zeitpunkt ist dies in der Angabe der URL berücksichtigt, muss also eventuell angepasst werden.
+   Bei den Bildern wird ggf. noch eine abweichende Version gezeigt. Diese ist unbedingt anzupassen.
 
 In dem nun geöffneten Fenster trägst Du die URL
 
 .. code::
    
-   https://releases.ubuntu.com/jammy/ubuntu-22.04.5-live-server-amd64.iso
+   https://ftp.halifax.rwth-aachen.de/ubuntu-releases/24.04/ubuntu-24.04.2-live-server-amd64.iso
 
 ein (copy&paste). Anschließend betätigst Du dann den Button ``Query URL``.
 
@@ -712,7 +713,7 @@ Wähle wie dargestellt: ``SHA-256`` und trage die Checksumme ein:
 
 .. code:: 
   
-  9bc6028870aef3f74f4e16b900008179e78b130e6b0b9a140635434a46aa98b0
+  d6dab0c3a657988501b4bd76f1297c053df710e06e0c3aece60dead24f270b4d
 
 Das Herunterladen des ISOs beginnt mit ``Download``.
 
@@ -788,31 +789,31 @@ Prüfsummendatei (<filename>.sha256)
 
 .. code::
 
-   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/24.1/OPNsense-24.1-checksums-amd64.sha256
+   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-25.1-checksums-amd64.sha256
    
 Signatur Datei (<filename>.sig)
 	
 .. code:: 
 
-   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/24.1/OPNsense-24.1-dvd-amd64.iso.sig
+   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-25.1-dvd-amd64.iso.sig
 
 Der öffentliche Schlüssel von OPNsense |reg| (<filename>.pub)
 
 .. code::
 
-   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/24.1/OPNsense-24.1.pub
+   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-25.1.pub
 
 Die komprimierte ISO Datei (<filename>.iso.bz2)
 
 .. code::
 
-   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/24.1/OPNsense-24.1-dvd-amd64.iso.bz2
+   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-25.1-dvd-amd64.iso.bz2
 
 Nun gilt es, die ISO-Datei auszupacken. Das machst Du mit folgendem Befehl:
 
 .. code::
 
-   bunzip2 OPNsense-24.1-dvd-amd64.iso.bz2
+   bunzip2 OPNsense-25.1-dvd-amd64.iso.bz2
 
 Das Entpacken kann einige Zeit in Anspruch nehmen. Anschließend sollte sich in dem Verzeichnis die OPNsense-ISO-Datei befinden.
 
@@ -820,11 +821,11 @@ Das Entpacken kann einige Zeit in Anspruch nehmen. Anschließend sollte sich in 
 
 .. code::
    
-   openssl base64 -d -in OPNsense-24.1-dvd-amd64.iso.sig -out /tmp/image.sig
+   openssl base64 -d -in OPNsense-25.1-dvd-amd64.iso.sig -out /tmp/image.sig
 
 .. code::
 
-   openssl dgst -sha256 -verify OPNsense-24.1.pub -signature /tmp/image.sig OPNsense-24.1-dvd-amd64.iso
+   openssl dgst -sha256 -verify OPNsense-25.1.pub -signature /tmp/image.sig OPNsense-25.1-dvd-amd64.iso
 
 Der letzte Befehl sollte Dir ein ``Verified OK`` liefern.
 
@@ -1005,7 +1006,7 @@ Klicke auf ``Add``.
 Anlegen der VM für linuxmuster server
 -------------------------------------
 
-Um für den linuxmuster.net Server v7.2 die VM anzulegen, wählst Du erneut in der Proxmox - Verwaltungsoberfläche den Button ``Create VM``.
+Um für den linuxmuster.net Server v7.3 die VM anzulegen, wählst Du erneut in der Proxmox - Verwaltungsoberfläche den Button ``Create VM``.
 
 .. figure:: media/proxmox-create-vm.png
    :align: center
@@ -1134,6 +1135,15 @@ Welches sich auch in der schematischen Übersicht zeigt:
    :alt: Proxmox Create VM: Add 2nd NIC
 
    Stand nach der Erzeugung der Virtuellen Maschine Ubuntu 
+   
+Anlegen der VM für den File-Server
+----------------------------------
+
+Setzt Du den File-Server für linuxmuster.net ein, so erstelle eine weitere VM identisch zu der bereits für den linuxmuster.net AD/DC Server. 
+
+Dieser muss über zwei Festplatten verfügen. Passe die Größen an Deinen Bedarf an.
+
+Alle weiteren Schritte entsprechen denen wie zuvor beschrieben.
 
 Abschließende Konfiguration der virtuellen Maschinen
 ----------------------------------------------------
@@ -1218,7 +1228,7 @@ Danach siehst Du den seriellen Port in der Hardware-Übersicht der VM. Klickst D
 
 Kontrolliere nochmals alle Einstellungen der neu angelegten VM.
 
-Die beiden letzten Einstellungen musst Du **nochmals für den linuxmuster.net Server (2. VM)** einrichten.
+Die beiden letzten Einstellungen musst Du **nochmals für den linuxmuster.net AD/DC Server (2. VM) und den File-Server (3. VM)** einrichten.
 
 .. hint:: Für die weitere Nutzung von xterm.js ist allerdings noch eine Anpassung bei der laufenden OPNsense |reg| bzw. dem Server nötig. Die nimmst Du zu einem geeigneten späteren Zeitpunkt vor, bis dahin musst Du noch die Konsole ``noVNC`` nutzen.
 
