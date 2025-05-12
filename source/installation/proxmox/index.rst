@@ -1143,7 +1143,7 @@ Setzt Du den File-Server für linuxmuster.net ein, so erstelle eine weitere VM i
 
 Dieser muss über zwei Festplatten verfügen. Passe die Größen an Deinen Bedarf an.
 
-Alle weiteren Schritte entsprechen denen wie zuvor beschrieben.
+Alle weiteren Schritte führst Du so aus, wie zuvor beschrieben.
 
 Abschließende Konfiguration der virtuellen Maschinen
 ----------------------------------------------------

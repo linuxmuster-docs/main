@@ -189,7 +189,7 @@ Teste nun, ob Du vom AD via SSH auf den File-Server gelangst. Dies sollte mit
    
 direkt erfolgen.
 
-Danach installierst Du rsync auf dem AD mit
+Danach installierst Du rsync jeweils auf dem ``AD/DC Server`` und auf dem ``File-Server`` mit
 
 .. code::
 

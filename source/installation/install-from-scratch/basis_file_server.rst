@@ -43,7 +43,55 @@ Führe danach die Vorbereitung des Ubuntu Servers weiter wie in :ref:`lmn_pre_in
 1. Zeitservereinstellungen überprüfen
 2. Cloud-init deinstallieren
 3. Default-Locale setzen
-4. Paketquellen eintragen - siehe nachstehende Schritte
+4. siehe nachstehende Schritte
+
+2. HDD einbinden
+================
+
+Bei der Einrichtung der VM für den File-Server hast Du eine zweite Festplatte vorgesehen. Bei der Installation von Ubuntu Server hast Du ggf. beim Setup für die zweite Platte bereits eine GPT-Partitionstabelle mit angelegt, wie in nachstehender Abb. zu sehen:
+
+.. figure:: media/lmn-file-server-2nd-hdd.png
+   :align: center
+   :scale: 80%
+   :alt: Zweite HDD für den File Server einbinden
+
+   Zweite HDD des File-Servers
+   
+Du musst jetzt noch den Eintrag in der Datei ``/etc/fstab`` anpassen, damit das zu verwendende Verzeichnis auf der zweiten HDD korrekt eingebunden wird und nach dem Setup des File-Servers dort Quotas aktiviert werden können.
+
+Lass Dir dazu den Inhalt der Datei zuerst ausgeben:
+
+.. code::
+
+   sudo apt install less
+   sudo less /etc/fstab
+   
+Du erkennst beide Festplatten mit ihren UUIDs:
+
+.. figure:: media/lmn-file-server-2nd-hdd-uuid.png
+   :align: center
+   :scale: 80%
+   :alt: Zweite HDD für den File Server - UUID
+
+   UUID der zweiten HDD des File-Servers
+   
+Du erkennst, dass die zweite Festplatte mit ihrer UUID bereits eingebunden ist und das Verzeichnis ``/srv/samba/schools/default-school`` zugeordnet ist.
+
+Diesen Eintrag musst Du nun noch wie folgt ergänzen:
+
+.. code::
+
+   /dev/disk/by-uuid/<UUID> /srv/samba/schools/default-school ext4 user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1 0 0
+   
+Damit die Quotas im Zuge des File-Server Setups noch eingebunden werden können, müssen wie o.g. Einträge ergänzt werden.
+
+Starte danach den Server neu und prüfe die Zuordnung mit
+
+.. code::
+
+   sudo lsblk
+   
+Dort solltest Du nun erkennen, dass das Verzeichnis für default-school auf der zweiten Festplatte liegt.
 
 
 Paketquellen eintragen
