@@ -70,65 +70,38 @@ Rufe die bisherigen Paketquellen auf und kommentiere dien Einträge mit einem # 
 
 .. code::
 
-   /usr/sbin/linuxmuster-release-upgrade --force --reboot
+   /usr/sbin/linuxmuster-release-upgrade
 
-Prüfe nach dem Reboot, ob es Fehlermeldungen oder Hinweise gab, indem Du die Dienste prüfst und in den Log-Dateien nachsiehst:
+Prüfe während des Upgrades, ob Fehler ausgegeben werden.
+
+Starte nach dem Upgrade den Server neu:
+
+.. code::
+
+   sudo reboot
+
+Nach dem Neustart prüfe, ob es Fehlermeldungen oder Hinweise gab, indem Du die Dienste prüfst und in den Log-Dateien nachsiehst:
 
 .. code::
 
    systemctl list-units --state=failed
    less /var/log/ajenti/ajenti.log
-   
-Aktualisiere die Pakete erneut:
-
-.. code::
-
-   apt update && apt dist-upgrade
  
 **f) Firewall neu starten** 
    
 Achte darauf, dass Du nach dem Update ebenfalls die Firewall neu startest.
 
-**g) Paketquellen bereinigen**
+**g) Ubuntu Server LTS aktualisieren**
 
-Nach dem Releasse upgrade wurden weitere Paketquellen eingetragen.
-Lösche die alten Paketquellen mit:
+Dein System sollte nun mit Ubuntu 24.04 LTS und linuxmuster.net v7.3 laufen.
 
-.. code::
-
-   rm /etc/apt/source.list.de/lmn72.list
-   rm /etc/apt/source.list.de/lmn73.list
- 
-In dem Verzeichnis verleibt noch eine Datei lmn.list mit den linuxmuster Paketquellen.
-
-**h) Ubuntu Server LTS aktualisieren**
-
-Aktualisiere danach das Betriebssystem auf dem Server von Ubuntu 22.04 LTS auf die Version Ubuntu 24.04 LTS. 
-
-Zuvor muss der Server auf den aktuellen Paketstand gebracht werden. 
+Aktualisiere jetzt nochmals den Server auf den aktuellsten Paketstand. 
 
 .. code::
 
    linuxadmin@server:~$ sudo -i
    root@server:~$ apt update && apt dist-upgrade -y
-   root@server:~$ do-release-upgrade -d
+   
 
-Nach der Überprüfung siehst Du, wieviele Pakete aktualisiert, neu installiert und gelöscht werden. Bestätige den Vorgang zur Durchführung des Upgrades mit ``j``.
-
-Während des Upgrades erhältst Du mehrere Nachfragen. 
-Für einige Dienste (z.B. samba, ssh) wirst Du gefragt, ob die Konfigurationsdatei aktualisiert werden soll.
-
-.. attention::
-
-   Die Nachfrage zur Aktualisierung der Konfigurationsdateien für diese Dienste musst Du unbedingt mit ``N`` beantworten.
-   Beispiele (keine Garantie auf Vollständigkeit) sind: ``/etc/security/limits.conf``, ``/etc/ntp.conf``, ``/etc/system/system.conf``, ``/etc/samba/smb.conf``, ``/etc/sshd/sshd_config``
-
-Zudem müssen während oder nach der Installation einige neuere Bibliotheken installiert und einige Dienste neu gestartet werden. Diese werden Dir in einer Liste angezeigt. Bestätige deren Neustart mit ``OK``.
-
-Danach wirst Du gefragt, ob Du die lokale Version bestimmter Dienste beibehalten möchtest. Beantworte dies jeweils mit ``Ja/OK``.
-
-Nach der Aktualisierung der Pakete wirst Du gefragt, ob die alten Pakete entfernt werden sollen. Bestätige dies mit ``J``.
-
-Danach wirst Du aufgefordert das System neu zu starten. Führe einen ``Reboot`` aus.
-
+ 
 
