@@ -6,6 +6,11 @@
 Upgrade v7.2 auf v7.3
 =====================
 
+.. attention::
+
+   Vor dem Upgrade auf linuxmuster.net v7.3 solltest Du unbedingt jeweils einen Snapshot Deiner VMs anlegen (Server und Firewall).
+
+
 Ablauf
 ------
 
