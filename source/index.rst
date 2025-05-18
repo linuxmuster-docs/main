@@ -107,7 +107,6 @@ Nach einem Klick auf die Leiste eröffnen sich Dir dort noch weitere Möglichkei
   :hidden:
 
   migration/upgrade
-  migration/linbo-migration-to-4
 
 .. toctree::
   :maxdepth: 2

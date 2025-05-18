@@ -10,9 +10,13 @@ Migration LINBO 2.4 zu 4.3
 Hinweise zu LINBO 4.3
 =====================
 
-In der linuxmuster v7.3 löst LINBO 4.3 das bisherige LINBO 2.4 ab. Bereits ab v7.1 gibt es nur noch ein Debian-Paket für LINBO (`linuxmuster-linbo7`) und eines für die grafische Oberfläche (`linuxmuster-linbo-gui7`), die nur noch LINBO 4 und eine grafische Oberfläche enthalten.
+In der linuxmuster v7.3 löst LINBO 4.3 das bisherige LINBO 4.2 ab. 
 
-Hast Du auf linuxmuster v7.3 umgestellt, ist es sinnvoll, die bisherigen LINBO 2.4 Cloop-Images zu konvertieren.
+Solltest Du noch v7.0/v7.1 ein, musst Du Du zunächst auf v7.2 aktualisieren und die in er Doku zu v7.2 beschrieben Schritte zur Konvertierung der bisherigen LINBO 2.4 Cloop-Images durchlaufen.
+
+.. hint::
+
+   noch zu überarbeiten
 
 LINBO 4.3 weist einige Besonderheiten auf:
 
