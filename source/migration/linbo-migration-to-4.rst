@@ -1,20 +1,20 @@
 .. _migration-linbo-label:
 
 ==========================
-Migration LINBO 2.4 zu 4.2
+Migration LINBO 2.4 zu 4.3
 ==========================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
 
-Hinweise zu LINBO 4.2
+Hinweise zu LINBO 4.3
 =====================
 
-In der linuxmuster v7.2 löst LINBO 4.2 das bisherige LINBO 2.4 ab. Bereits ab v7.1 gibt es nur noch ein Debian-Paket für LINBO (`linuxmuster-linbo7`) und eines für die grafische Oberfläche (`linuxmuster-linbo-gui7`), die nur noch LINBO 4 und eine grafische Oberfläche enthalten.
+In der linuxmuster v7.3 löst LINBO 4.3 das bisherige LINBO 2.4 ab. Bereits ab v7.1 gibt es nur noch ein Debian-Paket für LINBO (`linuxmuster-linbo7`) und eines für die grafische Oberfläche (`linuxmuster-linbo-gui7`), die nur noch LINBO 4 und eine grafische Oberfläche enthalten.
 
-Hast Du auf linuxmuster v7.2 umgestellt, ist es sinnvoll, die bisherigen LINBO 2.4 Cloop-Images zu konvertieren.
+Hast Du auf linuxmuster v7.3 umgestellt, ist es sinnvoll, die bisherigen LINBO 2.4 Cloop-Images zu konvertieren.
 
-LINBO 4.2 weist einige Besonderheiten auf:
+LINBO 4.3 weist einige Besonderheiten auf:
 
 * Neues Image-Format mit Abwärtskompatibilität zum alten Format für eine einfach Migration
 * Änderungen an der Namensgebung und des Speicherortes der zum Image zugehörigen Dateien
