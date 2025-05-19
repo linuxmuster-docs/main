@@ -60,7 +60,7 @@ Rufe die bisherigen Paketquellen auf und kommentiere dien Einträge mit einem # 
 
    sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/linuxmuster.net.gpg] https://deb.linuxmuster.net/ lmn73 main" > /etc/apt/sources.list.d/lmn73.list'
    
-**d) Aktualisiere die Paketuellen**
+**d) Aktualisiere die Paketquellen**
 
 .. code::
 
@@ -70,22 +70,21 @@ Rufe die bisherigen Paketquellen auf und kommentiere dien Einträge mit einem # 
 
 .. code::
 
-   /usr/sbin/linuxmuster-release-upgrade
+   /usr/sbin/linuxmuster-release-upgrade | tee /root/migration-to-lmn73.log
 
-Prüfe während des Upgrades, ob Fehler ausgegeben werden.
+Auf diese Weise siehst Du die Rückmeldungen des Upgrade Skriptes und es wird parallel eine Log-Datei mitgeschrieben.
 
-Starte nach dem Upgrade den Server neu:
+Das Upgrade dauert eine ganze Zeit, da sowohl linuxmuster.net auf die Version 7.3 als auch Ubuntu auf die version 24.04 LTS aktualisiert werden.
 
-.. code::
+Zu Beginn erhälst Du auf der Konsole den Hinweis, dass Du vor dem Upgrade einen Snapshot Deiner VM anlegen solltest. Zum Start des Upgrades musst Du dann den in der Konsole angezeigten Text eingeben und dies mit ENTER bestätigen. Danach startet das Upgrade.
 
-   sudo reboot
+Prüfe während des Upgrades, ob Fehler ausgegeben werden. Am Ende des Upgrades wird der Server automatisch neu gestartet. Melde Dich erneut an und prüfe die zuvor mitgeschriebene Log-Datei `/root/migration-to-lmn73.log` auf mögliche Fehlerhinweise.
 
-Nach dem Neustart prüfe, ob es Fehlermeldungen oder Hinweise gab, indem Du die Dienste prüfst und in den Log-Dateien nachsiehst:
+Prüfe zudem, ob alle Dienste korrekt gestartet wurden.
 
 .. code::
 
    systemctl list-units --state=failed
-   less /var/log/ajenti/ajenti.log
  
 **f) Firewall neu starten** 
    
