@@ -17,13 +17,14 @@ und Durchführung der Benutzerverwaltung mithilfe der Schulkonsole erforderlich 
 
 Der Ablauf zur Einrichtung von Benutzern verläuft wie folgt:
 
-1) Hochladen einer CSV-Datei mit den Benutzern via Schulkonsole.
-2) Speichern & prüfen der CSV-Datei.
-3) Die Schulkonsole legt eine temporäre CSV-Datei an, die dann
+1) CSV-Export der gewünschten Benutzer (students, teachers, parents, staff) aus der Schulverwaltung im gewünschten Format.
+2) Hochladen einer CSV-Datei mit den Benutzern via Schulkonsole.
+3) Speichern & prüfen der CSV-Datei.
+4) Die Schulkonsole legt eine temporäre CSV-Datei an, die dann
    anhand von Kriterien geprüft wird. 
-4) Verläuft der Prüfvorgang erfolgreich, so werden die Benutzer übernommen und
+5) Verläuft der Prüfvorgang erfolgreich, so werden die Benutzer übernommen und
    es wird eine CSV-Datei geschrieben, die danach in der Schulkonsole im Editor 
-   aufgerufen und geändert werden kann. Schritte 2 - 4 sind nach den Änderungen 
+   aufgerufen und geändert werden kann. Schritte 3 - 5 sind nach den Änderungen 
    erneut auszuführen.
 
 Benutzergruppen in der linuxmuster.net
@@ -52,7 +53,7 @@ Systemdateien modifiziert werden. Zusätzlich hat der Lehrer Zugriff
 auf alle Klassentauschverzeichnisse und lesenden Zugriff auf die
 Schüler-Homeverzeichnisse. Alle Lehrer können über die Schulkonsole
 pädagogisch notwendige Aufgaben auf dem Server ausführen
-(z. B. Dateien austeilen, Internetzugang abschalten)
+(z. B. Dateien austeilen, Internetzugang abschalten).
 
 *Schul-Administratoren:*
 Dürfen alle für den reinen Schulbetrieb wichtigen Aufgaben am Server
@@ -84,12 +85,13 @@ Listenimport
 ------------
 
 Die für das Benutzermanagement relevanten Einstellungen können in der 
-*Schulkonsole* im Menü unter *Einstellungen* -> *Schuleinstellungen* vorgenommen 
+*Schulkonsole* im Menü unter *Einstellungen* -> *Schuleinstellungen* -> Reiterkarte * Listenimport* vorgenommen 
 werden.
 
 .. figure:: media/02_schoolconsole_school-settings-user.png
    :align: center
-   :alt: Einstellngen für die Benutzerverwaltung
+   :alt: Einstellungen für die Benutzerverwaltung
+
 
 Hier legst Du fest, welche Vorgaben für den Listenimport von Benutzern mithilfe
 von CSV-Dateien angewendet werden sollen. 
@@ -112,8 +114,8 @@ Eine Änderung der Voreinstellung ist nur in besonderen Fällen erforderlich.
 Quota
 -----
 
-In der Schulkonsole können im Menü ``Einstellungen -> Schuleinstellungen -> Quota Vorgaben`` zur zulässigen 
-Festplattenbelegung getrennt nach den Gruppen Schüler, Lehrer und Extra-Schüler vorgenommen werden. 
+In der Schulkonsole können im Menü ``Einstellungen -> Schuleinstellungen -> Kontingent`` zur zulässigen 
+Festplattenbelegung getrennt nach den Gruppen Schüler, Lehrer und Schuladministrator vorgenommen werden. 
 Hierdurch wird definiert, bis zu welcher Obergrenze ein Benutzer der jeweiligen Gruppen Dateien auf dem 
 Server ablegen darf. Sollte diese Obergrenze erreicht werden, so werden weitere Speichervorgänge des Benutzers 
 verhindert. Erst nachdem dieser Dateien und Verzeichnisse gelöscht hat, kann dieser weiter Daten auf dem 
@@ -126,7 +128,7 @@ ermittelt wird.
 
 .. figure:: media/03_schoolconsole_school-settings-user-quotas.png
    :align: center
-   :alt: Einstellungen für die Benutzer-Quotas
+   :alt: Einstellungen für die Benutzer-Kontingente
 
 Werden die Quota-Einstellungen geändert, so sind diese mit ``Speichern & Quota übernehmen`` anzuwenden.
 
