@@ -113,7 +113,7 @@ Es ercheint eine Warnmeldung, da der Upload einer neuen students.csv die bisheri
 
 .. figure:: media/06_01_schoolconsole_import-students-upload-csv-file.png
    :align: center
-   :alt: Load csv - warning
+   :alt:   Load csv - warning
 
 Wählen Sie ``Spalten überprüfen`` aus. Haben Sie den Vorgang bestätigt, so wird nun die CSV-Datei überprüft und Sie sehen dann zur Kontrolle die ermittelten Klassen und Schüler.
 
@@ -200,7 +200,7 @@ Rufen Sie im Menü unter der Benutzerverwaltung den Eintrag ``Listenverwaltung -
 Die Abfolge ist identisch zu der zuvor für Schüler beschriebenen.
 
 Bei der Überprüfung der Sortierreihenfolge erhalten Sie folgendes Fenster:
-5_schoolc
+
 .. figure:: media/16_schoolconsole_import-teachers-upload-csv-file-check-list.png
    :align: center
    :alt: Upload teachers.csv folder
@@ -245,6 +245,7 @@ Nach der Bestätigung finden sich die Lehrer nun dauerhaft im System und werden 
 .. figure:: media/19_schoolconsole_import-teachers-imported.png
    :align: center
    :alt: imported teachers
+
 
 
 Pflege der Extraschüler
