@@ -7,11 +7,11 @@ Anlegen und Installieren des File-Servers
 =========================================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
-                   `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
 
 Der File-Server von linuxmuster.net wird vollständig in das AD des linuxmuster.net Servers integriert. Die Netzwerkfreigaben werden auf dem linuxmuster.net Server definiert und mithilfe einer DFS-Konfiguration für die konfigurierte Schule bereitgestellt. Es werden so alle persönlichen Netzlaufwerke, die Projektfreigaben, sowie die Klassenfreigaben auf diesem File-Server bereitgestellt.
 
 Vorteile:
+
 - Trennung der Dienste (AD Service, File Service)
 - verbesserte Backupstrategie (jeweils eigenständiges Backup für die Dateien als auch für das AD)
 - verbesserte Sicherheit (bei einem Multi-School Setup kann jeweils ein eigenständier File-Server pro Schule eingesetzt werden.)
@@ -21,9 +21,9 @@ Vorteile:
 Installation Ubuntu-Server
 ==========================
 
-Führe die Installation des für den File-Server benötigten Ubuntu 24.04 LTS Servers so aus, wie zuvor :ref:`basis_server-label` beschrieben. Es wird nur eine Festplattte benötigt, passe die Plattenkapazität an die Anforderungen Eurer Schule an.
+Führe die Installation des für den File-Server benötigten Ubuntu 24.04 LTS Servers so aus, wie zuvor :ref:`basis_server-label` beschrieben. Es werden zwei Festplatten benötigt. Passe die Plattenkapazitäten an die Anforderungen Eurer Schule an.
 
-Passe die Partitionierung und Formatierung der Festplatte entsprechend an. Zudem musst Du eine statische IP-Adresse aus dem LAN dem File-Server zuweisen.
+Passe die Partitionierung und Formatierung der Festplatten entsprechend an. Zudem musst Du eine statische IP-Adresse aus dem LAN dem File-Server zuweisen.
 
 Nutze die Daten gemäß Deines IP-Adresskonzeptes oder gib nachstehende Daten ein, die in der Dokumentation durchgängig für das LAN verwendet werden:
 

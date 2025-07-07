@@ -48,7 +48,7 @@ NIC                  - mind. 2 (intern + extern)
 
 Weitere Hinweise zu möglichen Hardwareanforderungen bei unterschiedlichen Einsatzszenarien finden sich `hier <https://wiki.opnsense.org/manual/hardware.html#hardware-requirements>`_.
 
-Als Basis nutzt OPNsense® v24.1 das Betriebssystem FreeBSD v13.2. Hinweise zu den Anforderungen von FreeBSD bzw. zur Kompatibilität mit eingesetzten Hardware-Komponenten finden sich unter der `HCL - Hardware Compatibility List <https://www.freebsd.org/releases/11.1R/hardware.html>`_.
+Als Basis nutzt OPNsense® v25.7 das Betriebssystem FreeBSD. Hinweise zu den Anforderungen von FreeBSD bzw. zur Kompatibilität mit eingesetzten Hardware-Komponenten finden sich unter der `HCL - Hardware Compatibility List <https://www.freebsd.org/releases/14.3R/hardware.html>`_.
 
 
 Server linuxmuster v7.3

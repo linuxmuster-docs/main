@@ -214,7 +214,7 @@ abweichende Spaltenreihenfole erkennen. Stimmt das dargestellte Ergebnis, so üb
    
 .. attention::
 
-   Solten Sie für die Lehrer das Kürzel als Login exportieren, achten Sie darauf, dass keine Umlaute enthalten sind. Lösen Sie ä zu ae, ö zu oe, ü zu ue und ß zu ss auf.  
+   Solten Sie für die Lehrer das Kürzel als Login exportieren, achten Sie darauf, dass keine Umlaute enthalten sind. Lösen Sie ä zu ae, ö zu oe, ü zu ue und ß zu ss auf und achten Sie darauf, dass das Kürzel nur Kleinbuchstaben verwendet.  
 
 Nach dem Import der CSV-Datei werden die zu importierenden Lehrer wie folgt dargestellt:
 

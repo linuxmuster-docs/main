@@ -1141,7 +1141,7 @@ Anlegen der VM für den File-Server
 
 Setzt Du den File-Server für linuxmuster.net ein, so erstelle eine weitere VM identisch zu der bereits für den linuxmuster.net AD/DC Server. 
 
-Dieser muss über zwei Festplatten verfügen. Passe die Größen an Deinen Bedarf an.
+Dieser muss über **zwei Festplatten** verfügen. Passe die Größen an Deinen Bedarf an.
 
 Alle weiteren Schritte führst Du so aus, wie zuvor beschrieben.
 
