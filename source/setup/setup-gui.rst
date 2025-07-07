@@ -249,7 +249,5 @@ Setze den Haken für ``Use System Nameservers``, dort siehst Du dann die in obig
 Mit sog. Overrides können im Unbound DNS genutzt werden, um die DNS-Ergebnisse in gewünschter Form anzupassen oder aber spezielle DNS Einträge bereitzustellen. Weitergehende Informationen findest Du hier: https://docs.opnsense.org/manual/unbound.html
 
 
-Setze die Ersteinrichtung fort, indem Du 
-
-:ref:`add-user-accounts-label` und :ref:`hardware-registration-label` aufrufst.
+Setze die Ersteinrichtung fort, indem Du :ref:`hardware-registration-label` aufrufst.
 

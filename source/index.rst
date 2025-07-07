@@ -96,7 +96,6 @@ Nach einem Klick auf die Leiste eröffnen sich Dir dort noch weitere Möglichkei
   setup/setup-gui
   setup/setup-console
   setup/setup-file-server
-  setup/add-user-accounts
   clients/client_templates/index
 
 ..  setup/add-devices
@@ -137,10 +136,10 @@ Nach einem Klick auf die Leiste eröffnen sich Dir dort noch weitere Möglichkei
   :caption: Benutzerverwaltung
   :hidden:
 
-  user-management/change-own-password
-  user-management/student-management
   user-management/manage-users/index
+  user-management/change-own-password
   user-management/change-teacher-passwords/index
+  user-management/student-management
   user-management/manage-quota/index
   user-management/preparation-newterm/index
 
