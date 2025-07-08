@@ -7,7 +7,7 @@
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
-Linuxmuster.net wird als Drei-Server-Lösung (linuxmuster.net-Server, linuxmuster.net-File-Server und eine Firewall) entweder auf einem Hypervisor (z.B. Proxmox) oder als eigenständige Hardware-Server betrieben werden. 
+Linuxmuster.net wird als Drei-Server-Lösung (linuxmuster.net-Server, linuxmuster.net-File-Server und eine Firewall) entweder auf einem Hypervisor (z.B. Proxmox) oder als eigenständige Hardware-Server betrieben. 
 
 Optional können weitere Server wie z. B. ein Docker-Host eingesetzt werden. Es gibt mindestens eine Trennung in zwei logische Netzwerke, meist sind aber drei oder mehr davon gefordert (WLAN, DMZ, Lehrernetz).
 

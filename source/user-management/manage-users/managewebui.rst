@@ -54,6 +54,8 @@ Sind Sie an der *Schulkonsole* als ``global-admin`` angemeldet, erhalten Sie unt
 .. figure:: media/05_schoolconsole_menue-usergroups.png
    :align: center
    :alt: Menüeinträge der Benutzerveraltung
+   
+   Menü zur Benutzerverwaltung
 
 
 Export von Schüler- und Lehrerliste aus dem Schulverwaltungsprogramm
@@ -65,7 +67,7 @@ Die meisten Schulverwaltungsprogramme bieten die Möglichkeit, eine Schüler- un
 
 ``Class;Last name;First name;Birthday;ID;``
 
-Dabei ist das letzte Feld Nr/ID optional. Es enthält die im Schulverwaltungsprogramm eindeutig vergebene Schülernummer. Ist sie vorhanden, sollte man sie unbedingt mit übernehmen, da diese die Identifikation des richtigen Datensatzes bei Versetzungen, Namensänderungen usw. erheblich erleichtert. Falls die Nummer nicht vorhanden ist, besteht jede Zeile nur aus den 4 Feldern
+Dabei ist das letzte Feld ``Nr/ID`` optional. Es enthält die im Schulverwaltungsprogramm eindeutig vergebene Schülernummer. Ist sie vorhanden, sollte man sie unbedingt mit übernehmen, da diese die Identifikation des richtigen Datensatzes bei Versetzungen, Namensänderungen usw. erheblich erleichtert. Falls die Nummer nicht vorhanden ist, besteht jede Zeile nur aus den ersten vier Feldern:
 
 ``Klasse;Nachname;Vorname;Geburtsdatum;``
 
@@ -80,21 +82,19 @@ Auch wenn Ihr Schulverwaltungsprogramm keine direkte Ausgabe für die Musterlös
    .. figure:: media/06b_schoolconsole_export-students-schildnrw-csv-file.png
       :align: center
       :alt: Export students
+      
+      Exportvorlage für Schülerinnen und Schüler in SchildNRW
    
-Für die CSV-Dateien sollte eine UTF-8 Kodierung verwendet werden. In den Voreinstellungen der Schulkonsole ist üblichweise eine
-automatische Erkennng der Kodierung festgelegt.
+Für die CSV-Dateien sollte eine UTF-8 Kodierung verwendet werden. In den Voreinstellungen der Schulkonsole ist üblichweise eine automatische Erkennng der Kodierung festgelegt.
 
 .. hint::
  
-   Die nachstehend dargestellten Benutzer sind alles *fiktive Testnutzer*, die nur zur Illustration eingetragen und auf den Screenshots 
-   dargestellt werden. Es handelt um keine lebenden Personen. Die Daten dienen nur zu Test- und Dokumentationszwecken.
-
+   Die nachstehend dargestellten Benutzer sind alles *fiktive Testnutzer*, die nur zur Illustration eingetragen und auf den Screenshots dargestellt werden. Es handelt um keine lebenden Personen. Die Daten dienen nur zu Test- und Dokumentationszwecken.
 
 Pflege der Schülerdatei
 """""""""""""""""""""""
 
-Die Schüler können Sie erstmals in das System aufnehmen, in dem Sie die vorbereitete students.csv Datei mithilfe der Schulkonsole
-hochladen.
+Die Schüler können Sie erstmals in das System aufnehmen, in dem Sie die vorbereitete students.csv Datei mithilfe der Schulkonsole hochladen.
 
 Gehen Sie hierzu in der Schulkonsole unter ``Benutzerveraltung`` in das Menü ``Listenverwaltung`` und klicken Sie auf die obere Reiterkarte 
 ``Schüler`` und dann unten auf den Eintrag ``CSV Laden``.
@@ -105,49 +105,57 @@ Es erscheinen dann schrittweise folgende Eingabefenster:
    :align: center
    :alt: User Management
    
+   Benutzermanagement
+   
 .. figure:: media/06a_schoolconsole_import-students-upload-csv-file.png
    :align: center
-   :alt: Load csv   
+   :alt: Load csv
+   
+   Lade die CSV-Datei
 
-Es ercheint eine Warnmeldung, da der Upload einer neuen students.csv die bisherige Datei und damit deren Einträge überschreibt.
+Es erscheint eine Warnmeldung, da der Upload einer neuen students.csv die bisherige Datei und damit deren Einträge überschreibt.
 
 .. figure:: media/06_01_schoolconsole_import-students-upload-csv-file.png
    :align: center
    :alt:   Load csv - warning
 
-Wählen Sie ``Spalten überprüfen`` aus. Haben Sie den Vorgang bestätigt, so wird nun die CSV-Datei überprüft und Sie sehen dann zur Kontrolle die ermittelten Klassen und Schüler.
+Wählen Sie ``Spalten überprüfen`` aus. Es wird nun die CSV-Datei überprüft und Sie sehen dann zur Kontrolle die ermittelten Klassen und Schüler.
 
 .. figure:: media/06_03_schoolconsole_import-students-upload-csv-file.png
    :align: center
    :alt: Upload folder for csv file
    
+   Liste sortieren
+   
 .. hint::
 
-   Haben Sie die ID der Schülerinnen und Schüler ebenfalls exportiert, aktivieren Sie das Häkchen, dass die CSV-Datei die student ID enthält.
+   Haben Sie die ID der Schülerinnen und Schüler ebenfalls exportiert, aktivieren Sie das Häkchen, dass die CSV-Datei die Student-ID enthält.
 
-Falls erforderlich kann hier die Reihenfolge der Spalteneinträge noch angepasst werden. Zudem kann angegeben werden, ob die Datei
-eine Schüler-ID verwendet.
+Falls erforderlich kann hier die Reihenfolge der Spalteneinträge noch angepasst werden. Zudem kann angegeben werden, ob die Datei eine Schüler-ID verwendet.
 
-Nach der Bestätigung der Sortierreihenfolge werden die Benutzer temporär importiert. Das Ergebnis wird Ihnen wie in der nachstehenden
-Abbildung angezeigt.
+Nach der Bestätigung der Sortierreihenfolge werden die Benutzer temporär importiert. Das Ergebnis wird Ihnen wie in der nachstehenden Abbildung angezeigt.
 
 .. figure:: media/10_schoolconsole_import-students-upload-csv-file-imported.png
    :align: center
-   :alt: Check utudents found in csv file
+   :alt: Check students found in csv file
+   
+   Anzeige der zu importierenden Schüler
 
-Entspricht dies dem gewünschen Import, so müssen Sie die Benutzer nun mithilfe des Eintrags ``Speichern & prüfen`` übernehmen.
-Das Prüfergebnis wird Ihnen angezeigt und Sie müssen nun die Übernahme der neuen Benutzer bestätigen.
+Entspricht dies dem gewünschen Import, so müssen Sie die Benutzer nun mithilfe des Eintrags ``Speichern & prüfen`` übernehmen. Das Prüfergebnis wird Ihnen angezeigt und Sie müssen nun die Übernahme der neuen Benutzer bestätigen.
 
 .. figure:: media/11_schoolconsole_import-students-upload-csv-file-save-and-check.png
    :align: center
    :alt: check and import students
+   
+   Prüfergebnis für die Benutzerübernahme
 
-Nach der Bestätigung zur Übernahme der neuen Benutzer werden diese auf dem Server angelegt und eingerichtet. Nach Abschluss des 
-Imports sehen Sie im dargestellten Konsolenfenster einen Eintrag wie ``4 users added`` - wir in der Abbildung zu erkennen ist.
+Nach der Bestätigung zur Übernahme der neuen Benutzer werden diese auf dem Server angelegt und eingerichtet. Nach Abschluss des Imports sehen Sie im dargestellten Konsolenfenster einen Eintrag wie ``4 users added`` - wie in der Abbildung zu erkennen ist.
 
 .. figure:: media/12_schoolconsole_import-students-upload-csv-file-students-added.png
    :align: center
    :alt: students imported
+   
+   Schüler wurden importiert
 
 Die CSV-Dateien finden sich auf dem Server in folgendem Verzeichnis: ``/etc/linuxmuster/sophomorix/default-school``
 
@@ -162,12 +170,13 @@ Es gibt dort fünf verschiedene CSV-Dateien:
 Haben Sie die Benutzer angelegt, so können Sie später Änderungen auch direkt via Schulkonsole in der CSV-Datei vornehmen.
 Wählen Sie hierzu im Menü ``Benutzerverwaltung -> Listenverwaltung -> Schüler -> Im Editor öffnen`` 
 
-Es erscheint dann im Browser die CSV-Datei im Editiermodus, so dass Sie Ihre Anpassungen vornehmen können, diese 
-speichern und danach auf ``speichern & prüfen`` gehen.
+Es erscheint dann im Browser die CSV-Datei im Editiermodus, so dass Sie Ihre Anpassungen vornehmen können, diese speichern und danach auf ``speichern & prüfen`` gehen.
 
 .. figure:: media/13_schoolconsole_edit-students-list-csv.png
    :align: center
    :alt: students imported 
+   
+   Editoransicht für die students.csv
 
 
 Pflege der Lehrerdatei
@@ -191,44 +200,44 @@ Aus diesem Grund macht es keinen Sinn, eine vorhandene Lehrerdatei mit derjenige
    
    .. figure:: media/13_schoolconsole_export-teachers-schildnrw-csv-file.png
       :align: center
-      :alt: Export students
+      :alt: Export teachers
+      
+      Exportvorlage für Lehrer im Programm SchildNRW
 
 Der Import der teachers.csv erfolgt analog zu dem Vorgehen wie es zuvor bereits für die students.csv beschrieben wurde.
 
 Rufen Sie im Menü unter der Benutzerverwaltung den Eintrag ``Listenverwaltung -> Lehrer -> CSV Laden`` auf.
-
-Die Abfolge ist identisch zu der zuvor für Schüler beschriebenen.
 
 Bei der Überprüfung der Sortierreihenfolge erhalten Sie folgendes Fenster:
 
 .. figure:: media/16_schoolconsole_import-teachers-upload-csv-file-check-list.png
    :align: center
    :alt: Upload teachers.csv folder
-
-Die Einträge werden nun geprüft und das Prüfergebnis wird Ihnen angezeigt. Hier können Sie bereits falsche Spaltenzuordnungen oder eine
-abweichende Spaltenreihenfole erkennen. Stimmt das dargestellte Ergebnis, so übernehmen Sie die Sortierreihenfolge.
-
-.. figure:: media/16_schoolconsole_import-teachers-upload-csv-file-check-list.png
-   :align: center
-   :alt: Upload teachers.csv check list items
    
+   Spaltenansicht der zu importierenden Lehrer
+
+Passen die Zuordnungen klicken Sie auf ``Sortierung akzeptieren``.
+
 .. attention::
 
-   Solten Sie für die Lehrer das Kürzel als Login exportieren, achten Sie darauf, dass keine Umlaute enthalten sind. Lösen Sie ä zu ae, ö zu oe, ü zu ue und ß zu ss auf und achten Sie darauf, dass das Kürzel nur Kleinbuchstaben verwendet.  
+   Sollten Sie für die Lehrer das Kürzel als Login exportieren, achten Sie darauf, dass keine Umlaute enthalten sind. Lösen Sie ä zu ae, ö zu oe, ü zu ue und ß zu ss auf und achten Sie darauf, dass das Kürzel nur Kleinbuchstaben verwendet.  
 
 Nach dem Import der CSV-Datei werden die zu importierenden Lehrer wie folgt dargestellt:
 
 .. figure:: media/17_schoolconsole_import-teachers-upload-csv-file-imported-tmp.png
    :align: center
    :alt: Teachers uploaded by teachers.csv
+   
+   Anzeige der zu importierenden Lehrer
 
-Klicken Sie nun auf ``Speichern & Prüfen``, um die importierten Lehrer dauerhaft in das System zu übernehmen. 
-Es wird Ihnen dann vor der endgültigen Übernahme nochmals das Prüfergebnis dargestellt, aus dem hervorgeht, welche
+Klicken Sie nun auf ``Speichern & Prüfen``, um die importierten Lehrer dauerhaft in das System zu übernehmen. Es wird Ihnen dann vor der endgültigen Übernahme nochmals das Prüfergebnis dargestellt, aus dem hervorgeht, welche
 Lehrer hinzugefügt, versetzt oder gelöscht werden.
 
 .. figure:: media/18_schoolconsole_import-teachers-save-and-check.png
    :align: center
    :alt: check & save teachers to be imported
+   
+   Prüfergebnis für die zu importierenden Lehrer
    
 .. hint::
 
@@ -237,19 +246,21 @@ Lehrer hinzugefügt, versetzt oder gelöscht werden.
    .. figure:: media/18_01_schoolconsole_import-teachers-save-and-check-error.png
       :align: center
       :alt: check & save teachers to be imported
+      
+      Fehleranzeige für zu importierende Lehrer
    
    Korrigieren Sie in der CSV-Datei diese Fehler und führen Sie den Import erneut durch.   
 
-Nach der Bestätigung finden sich die Lehrer nun dauerhaft im System und werden wie folgt dargestellt: 
+Nach der Bestätigung finden sich die Lehrer nun dauerhaft im System. Die erfolgreiche Übernahme wird am Ende dieses Vorgang wie folgt dargestellt: 
 
 .. figure:: media/19_schoolconsole_import-teachers-imported.png
    :align: center
    :alt: imported teachers
+   
+   Import erfolgreich abgeschlossen
 
-
-
-Pflege der Extraschüler
-"""""""""""""""""""""""
+Pflege der Extra-Schüler
+""""""""""""""""""""""""
 
 Zur Verwaltung von Schülern, die nicht im Schulverwaltungsprogramm aufgenommen sind, gibt es in der *Schulkonsole* unter der Rubrik *Benutzerverwaltung* in der *Listenverwaltung* die Reiterkarte *Extra-Schüler*:
 
@@ -263,23 +274,30 @@ Die Syntax ist wie bei der Schülerdatei, ergänzt um ein Feld für einen Wunsch
 
 Der Name für die Klasse ist frei wählbar, z.B: *koop* (für Kooperation) oder *at* (für Austausch). Es können aber, gerade auch bei Kooperationsschülern, die **bestehenden** Klassennamen verwendet werden. Dies ist wichtig, falls der Zugriff auf das Klassentauschverzeichnis der Klasse ermöglicht werden soll. Bei neuen Gruppennamen, wird auch ein neues Klassentauschverzeichnis angelegt.
 
-Analog zu dem Import der CSV-Dateien für die Schüler und Lehrer erfolgt auh für die Extra-Schüler der Upload bzw. die Bearbeitung der Datei extrastudents.csv.
+Analog zu dem Import der CSV-Dateien für die Schüler und Lehrer erfolgt auch für die Extra-Schüler der Upload bzw. die Bearbeitung der Datei extrastudents.csv.
 
 Die Benutzer werden wiederum mit ``Speichern & prüfen`` übernommen. Hierbei wird Ihnen wiederum das Prüfergebnis angezeigt:
 
 .. figure:: media/20_schoolconsole_import-extrastudents-list-checked.png
    :align: center
    :alt: check import of extrastudents
+   
+   Prüfergebnis für die Extra-Schüler
 
 Nach dem Import sehen Sie in der dargestellten Konsole Hinweise wie ``1 users added``.
 
 .. figure:: media/21_schoolconsole_import-extrastudents-imported-console-output.png
    :align: center
    :alt: extrastudents imported
+   
+   Erfolgreicher Import der Extra-Schüler
 
 Die Extra-Schüler werden im System dann wie folgt dargestellt:
 
 .. figure:: media/22_schoolconsole_import-extrastudents-imported-tmp-overview.png
    :align: center
    :alt: extrastudents 
+   
+   Anzeige der importierten Extra-Schüler
+
 
