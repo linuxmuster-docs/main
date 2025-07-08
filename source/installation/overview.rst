@@ -6,13 +6,17 @@ Installationablauf
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
                    `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
-Um **linuxmuster.net latest** zu installieren musst Du folgende Schritte durchlaufen:
+Um **linuxmuster.net** zu installieren musst Du folgende Schritte durchlaufen:
 
 1. Planung der Infrastruktur (Server und Netzwerk)
 
 2. ggf. Vorbereitung / Setup der Netzkomponenten
 
 3. Einrichtung einer Basis für linuxmuster.net
+
+.. todo::
+
+   Grafiken anpassen
 
    .. figure:: media/overview-installation-process-part1-preliminary-consideration.svg
        :align: center
@@ -82,7 +86,5 @@ Nachstehend kannst Du den Installationsablauf als Übersicht herunterladen:
 
 :download:`Übersicht als Inkscape SVG-Datei <media/overview-installation-process_inkscape_latest.svg>`
 
-.. todo::
 
-   Grafik anpassen
 
