@@ -120,10 +120,6 @@ Auf der Basis von Linux stellen wir ein Open-Source-Betriebssystem zur Verfügun
     * in einfacher Form anpass- und erweiterbar an die eigenen Bedürfnisse
     * keine Lizenzkosten
 
-.. hint::
-
-   Grafik ist noch anzupassen
-
 .. image::    media/structure_of_version_7_lmn.svg
    :name:     structure-basic-components
    :alt:      Struktur der Basis-Komponenten
@@ -134,17 +130,12 @@ Im Zusammenspiel der Clients mit dem Server, dem File-Server und einer Firewall 
 
 Dieses lässt sich aufgrund des modularen Aufbaus weiter an die darüber hinausgehenden Anforderungen, unter anderem einer schulweiten WLAN-Verfügbarkeit erweitern und anpassen.
 
-.. hint::
-
-   Grafik ist noch anzupassen
+Die Basis
+---------
 
 .. image::    media/structure_of_version_7_server.svg
    :name:     structure-lmn-server
    :alt:      Struktur der Basis-Komponente - LMN-Server
- 
-
-Die Basis
----------
 
 Der linuxmuster.net-Server
 ++++++++++++++++++++++++++
