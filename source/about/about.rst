@@ -105,10 +105,6 @@ Unser Anspruch liegt dabei auf der Bereitstellung eines Systems, das folgende Pu
 
 **Schulnetz - Komplett - Anpassbar!**
 
-.. hint::
-
-   Grafik ist noch anzupassen
-
 .. image::    media/structure_of_version_7.svg
    :name:     structure-over-all 
    :alt:      gesamte Struktur
