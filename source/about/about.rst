@@ -133,14 +133,16 @@ Dieses lässt sich aufgrund des modularen Aufbaus weiter an die darüber hinausg
 Die Basis
 ---------
 
+linuxmuster.net ist eine Lösung, die auf drei Servern aufsetzt. 
+
+Server 1: Der linuxmuster.net-Server
++++++++++++++++++++++++++++++++++++++
+
 .. image::    media/structure_of_version_7_server.svg
    :name:     structure-lmn-server
    :alt:      Struktur der Basis-Komponente - LMN-Server
 
-Der linuxmuster.net-Server
-++++++++++++++++++++++++++
-
-Die Basisdienste des abgebildeten Servers sind für die Funktion des ganzen Systems verantwortlich:
+Die Basisdienste dieses Servers sind für die Funktion des ganzen Systems verantwortlich:
 
 Benutzer- und Gruppenverwaltung
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -170,6 +172,9 @@ Klassenarbeitsmodus
 
 In Prüfungssituationen wie Abitur, Klassenarbeiten und andere Leistungsüberprüfungen kann die Lehrkraft mit einfachen Mitteln die Nutzung des Systems für die Prüfungsgruppe einschränken. Das Spektrum umfasst dabei alle Möglichkeiten der Unterrichtssteuerung ergänzt um die Sperrung des persönlichen Speicherbereichs.
 
+Server 2: Fileserver
+++++++++++++++++++++
+
 Dateiverwaltung und -verteilung
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -181,6 +186,28 @@ Alle Nutzer besitzen einen persönlichen Bereich auf dem Netzwerkspeicher (File-
 
 Ebenso steht er allen Gruppen für den Austausch ihrer gemeinschaftlichen Arbeiten zur Verfügung. 
 
+Server 3: Firewall
+++++++++++++++++++
+
+OPNsense |reg|
+^^^^^^^^^^^^^^
+Durch die Integration der Firewall an AD DS (Active Directory Domain Services) des Servers werden sämtliche Benutzer-Zugriffe der Nutzer mittels Single-Sign-On auf das Internet geregelt.
+
+Die Open-Source Firewall OPNsense |reg| wird nach einer auszuführenden Grundinstallation in das System der linuxmuster-net-Server aufgenommen. Hierfür wurde das Setup des linuxmuster.net Server so vorbereitet, dass die Integration bereits vollständig durchgeführt wird.
+
+Sämtliche verfügbaren Bausteine dieser Open-Source-Firewall stehen selbstverständlich zur Verfügung.
+
+Für weitergehende Informationen `siehe opnsense.org <https://opnsense.org/>`_.
+
+.. image::    media/structure_of_version_7_firewall.svg
+   :name:     structure-firewall
+   :alt:      Struktur der Basis-Komponente - Firewall 
+
+Bestehende Firewall
+^^^^^^^^^^^^^^^^^^^
+Es kann auch eine bestehende Firewall weiter genutzt und vollständig in linuxmuster.net integriert werden. Da diese Intergration von deren verwendeten Betriebssystem abhängt und unterschiedliche Schritte erfordert, können wir nicht eine datailierte Anleitung hier aufzeigen. Geben aber Hinweise dazu im Kapitel `Anpassbar`_. 
+
+  
 Selbstheilende Arbeitsstationen durch LINBO 4.3
 +++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -206,53 +233,6 @@ Integration unterschiedlicher Geräte (BYOD)
 
 Da sich alle Steuerungsfunktionen in unserer Lösung an den Benutzern orientieren, ist es unerheblich an welchem Gerät sie sich befinden. Das Gleiche gilt auch für mitgebrachte Geräte, die sich via WLAN verbinden.
 
-Firewall
-++++++++
-
-linuxmuster.net ist eine Lösung, die mit drei Servern (VMs) arbeitet. 
-Es kann eine bestehende Firewall weiter genutzt werden und vollständig in linuxmuster.net integriert werden.
-Alternativ kann OPNsense |reg| als Open-Source Firewall integriert werden.
-
-:Bestehende Firewall: Einsatzszenario
-
-   .. image::    media/structure_of_version_7_alternate.svg
-      :name:     structure-alternativ-firewall
-      :alt:      Struktur der Einbindung einer alternativen Firewall
-      :width:    150px
-      :align:    right
-
-   Wenn die bestehende Firewall über die Möglichkeit einer Anbindung an den Samba4-Dienst des linuxmuster.net-Servers verfügt, kann diese problemlos weiter genutzt werden.
-
-Für eine bestehende Firewall sind folgende Schritte zu durchlaufen:
-
-1. Installation und Setup des linuxmuster.net - Server für das Dienst-, User- und Client-Management
-2. Installation und Einbindung des linuxmuster.net - File-Server für die Bereitstellung von Speicherplatz für Benutzer, Klassen etc.
-3. Anpassung der bestehenden Firewall, um die Internet-Sperre u.a. Dienste von linuxmuster.net voll zu unterstützen.
-
-.. hint::
-
-   In der bestehenden Firewall müssen hier
-
-   - Routen gesetzt
-   - für die Internetsperre die Gruppenmitgliedschaften im AD abgefragt
-   - ein Zeitserver bereitgestellt
-   - ein DNS-Forwarder so konfiguriert werden, dass externe URLs aufgelöst und lokale URLs an den AD weitergeleitet werden, der für die lokale Zone als DNS arbeitet
-   
-Alternativ kann die Open-Source Firewall OPNsense |reg| installiert und in linuxmuster.net integriert werden. Hierfür wurde das Setup des linuxmuster.net Server so vorbereitet, dass die Integration bereits vollständig durchgeführt wird.
-
-.. hint::
-
-   Grafik ist noch anzupassen
-
-.. image::    media/structure_of_version_7_firewall.svg
-   :name:     structure-firewall
-   :alt:      Struktur der Basis-Komponente - Firewall 
-
-Durch die Integration der Firewall an AD DS (Active Directory Domain Services) des Servers (Samba4) werden sämtliche Benutzer-Zugriffe der Nutzer mittels Single-Sign-On auf das Internet geregelt.
-
-Sämtliche verfügbaren Bausteine dieser Open-Source-Firewall stehen selbstverständlich zur Verfügung.
-
-Für weitergehende Informationen `siehe opnsense.org <https://opnsense.org/>`_.
 
 Anpassbar
 ---------
@@ -269,7 +249,36 @@ Anpassbar
 
 Alle bisher vorgestellten Basisdienste werden mithilfe des Setups konfiguriert, bleiben aber frei anpass- und erweiterbar. Es folgt eine einführende Beschreibung der letzten drei Bausteine, die linuxmuster.net zu der Komplettlösung machen.
 
-:Optionale Server: Für weitergehende Anpassungen besteht die Möglichkeit, optionale Server einzubinden.
+Bestehende oder alternative Firewall
+++++++++++++++++++++++++++++++++++++
+
+   .. image::    media/structure_of_version_7_alternate.svg
+      :name:     structure-alternativ-firewall
+      :alt:      Struktur der Einbindung einer alternativen Firewall
+      :width:    150px
+      :align:    right
+
+Wenn diese Firewall über die Möglichkeit einer Anbindung an den Samba4-Dienst des linuxmuster.net-Servers verfügt, kann diese problemlos genutzt werden.
+
+Dafür sind folgende Schritte erforderlich:
+
+1. Installation und Setup des linuxmuster.net - Server für das Dienst-, User- und Client-Management
+2. Installation und Einbindung des linuxmuster.net - File-Server für die Bereitstellung von Speicherplatz für Benutzer, Klassen etc.
+3. Anpassung der bestehenden Firewall, um die Internet-Sperre u.a. Dienste von linuxmuster.net voll zu unterstützen.
+
+.. hint::
+
+   In der bestehenden Firewall müssen hier
+
+   - Routen gesetzt
+   - für die Internetsperre die Gruppenmitgliedschaften im AD abgefragt
+   - ein Zeitserver bereitgestellt
+   - ein DNS-Forwarder so konfiguriert werden, dass externe URLs aufgelöst und lokale URLs an den AD weitergeleitet werden, der für die lokale Zone als DNS arbeitet
+ 
+Optionale Server
+++++++++++++++++
+
+Für weitergehende Anpassungen besteht die Möglichkeit, optionale Server einzubinden.
 
    .. image::    media/structure_of_version_7_optional.svg
       :name:     structure-option-server
@@ -277,12 +286,15 @@ Alle bisher vorgestellten Basisdienste werden mithilfe des Setups konfiguriert, 
       :width:    150px
       :align:    right
 
-  In der Darstellung ist etwa ein Docker-Server als Erweiterung an die Bedürfnisse der Bildungseinrichtung eingebunden. Docker ist ein Open-Source-Projekt zur automatisierten Anwendungsverteilung durch Container, die alle benötigten Pakete mitbringen. So vereinfacht sich die Bereitstellung und Verteilung. Außerdem gewährleisten sie die Trennung und Verwaltung der auf dem Docker-Server genutzten Ressourcen.
+In der Darstellung ist etwa ein Docker-Server als Erweiterung an die Bedürfnisse der Bildungseinrichtung eingebunden. Docker ist ein Open-Source-Projekt zur automatisierten Anwendungsverteilung durch Container, die alle benötigten Pakete mitbringen. So vereinfacht sich die Bereitstellung und Verteilung. Außerdem gewährleisten sie die Trennung und Verwaltung der auf dem Docker-Server genutzten Ressourcen.
 
- Für weitergehende Informationen siehe die Docker-Homepage: https://www.docker.com
+Für weitergehende Informationen siehe die Docker-Homepage: https://www.docker.com
 
 
-:externe Dienste / Server: Ein Porfolio an unterschiedlichen externen Diensten / Servern lässt sich an die linuxmuster.net Lösung anbinden, sodass eine einheitliche Authentifizierung erfolgt.
+externe Dienste / Server
+++++++++++++++++++++++++
+
+Ein Porfolio an unterschiedlichen externen Diensten / Servern lässt sich an die linuxmuster.net Lösung anbinden, sodass eine einheitliche Authentifizierung erfolgt.
 
    .. image::    media/structure_of_version_7_extra.svg
       :name:     structure-extra-server-and-services
@@ -290,9 +302,11 @@ Alle bisher vorgestellten Basisdienste werden mithilfe des Setups konfiguriert, 
       :width:   150px
       :align:    right
 
-   Es können z.B. extern gehostete Server wie Nextcloud, Moodle oder Konferenzsysteme integriert werden.
+Es können extern gehostete Server wie Nextcloud, Moodle, Konferenzsysteme oder andere Dienste integriert werden.
 
-:download:`Komplette Struktur als Inkscape SVG <media/structure_of_version_7_simple.svg>`
+Eine weitere Alternative wäre die Integration von verschiedenen Diensten mittels edulution.io. Für weitere Informationen zu dieser als open-source-software frei verfügbare Lösung siehe `edulution.io <https://ask.linuxmuster.net/t/edulution-io-ankuendigungen-news/11388>`_
+
+:download:`Vorgestellte Struktur als Inkscape SVG <media/structure_of_version_7_simple.svg>`
 
 Support
 -------
