@@ -177,7 +177,9 @@ Dateiverwaltung und -verteilung
    :name:     structure-fileserver
    :alt:      Struktur der Basis-Komponente - Fileserver
 
-Alle Nutzer besitzen einen persönlichen Bereich auf dem Netzwerkspeicher (File-Server). Ebenso steht ein solcher den Gruppen für den Austausch ihrer gemeinschaftlichen Arbeit zur Verfügung.
+Alle Nutzer besitzen einen persönlichen Bereich auf dem Netzwerkspeicher (File-Server).
+
+Ebenso steht er allen Gruppen für den Austausch ihrer gemeinschaftlichen Arbeiten zur Verfügung. 
 
 Selbstheilende Arbeitsstationen durch LINBO 4.3
 +++++++++++++++++++++++++++++++++++++++++++++++
