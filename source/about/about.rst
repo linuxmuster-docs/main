@@ -311,7 +311,7 @@ Eine weitere Alternative wäre die Integration von verschiedenen Diensten mittel
 Support
 -------
 
-Diese vorgestellten Bestandteile werden vom Verein **linuxmuster.net e. V. entwickelt und unterstützt**.
+Die unter `Die Basis`_ vorgestellten Bestandteile werden vom Verein **linuxmuster.net e. V.** entwickelt und unterstützt.
 
 Diese Unterstützung wird durch das
 
