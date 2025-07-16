@@ -237,10 +237,6 @@ Da sich alle Steuerungsfunktionen in unserer Lösung an den Benutzern orientiere
 Anpassbar
 ---------
 
-.. hint::
-
-   Grafik ist noch anzupassen
-
 .. image::    media/structure_of_version_7_community.svg
    :name:     structure-community-components
    :alt:      Struktur der Erweiterungen (Community)
@@ -291,14 +287,10 @@ In der Darstellung ist etwa ein Docker-Server als Erweiterung an die Bedürfniss
 Für weitergehende Informationen siehe die Docker-Homepage: https://www.docker.com
 
 
-externe Dienste / Server
-++++++++++++++++++++++++
+Extra - externe Dienste / Server
+++++++++++++++++++++++++++++++++
 
 Ein Porfolio an unterschiedlichen externen Diensten / Servern lässt sich an die linuxmuster.net Lösung anbinden, sodass eine einheitliche Authentifizierung erfolgt.
-
-.. hint::
-
-   Grafik ist noch anzupassen
 
    .. image::    media/structure_of_version_7_extra.svg
       :name:     structure-extra-server-and-services
