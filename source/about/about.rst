@@ -173,6 +173,10 @@ In Prüfungssituationen wie Abitur, Klassenarbeiten und andere Leistungsüberpr�
 Dateiverwaltung und -verteilung
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. image::    media/structure_of_version_7_fileserver.svg
+   :name:     structure-fileserver
+   :alt:      Struktur der Basis-Komponente - Fileserver
+
 Alle Nutzer besitzen einen persönlichen Bereich auf dem Netzwerkspeicher (File-Server). Ebenso steht ein solcher den Gruppen für den Austausch ihrer gemeinschaftlichen Arbeit zur Verfügung.
 
 Selbstheilende Arbeitsstationen durch LINBO 4.3
