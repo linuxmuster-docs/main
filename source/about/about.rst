@@ -48,31 +48,31 @@ Im Prinzip gibt es vier große Merkmale, die auffallen:
 |  50  | 50 | 500  | 50 |
 +------+----+------+----+
 
-2. Die Zusammensetzung von Usern in  Abteilungen
+2. Die Zusammensetzung von Usern in Abteilungen/Gruppen
 
-.. tabularcolumns:: |c|c|c|c|
+.. tabularcolumns:: |c|c|c|c|c|
 
-+------------------+---------------+
-|      Firma       |    Schule     |
-+------+-----------+------+--------+
-| User | Abteilung | User | Gruppe |
-+======+===========+======+========+
-|  A   | Marketing |  A   | Klasse |
-|      |           |      +--------+
-|      |           |      | Kurs 1 |
-|      |           |      +--------+
-|      |           |      | Kurs 2 |
-|      |           |      +--------+
-|      |           |      | AG 1   |
-+------+-----------+------+--------+
-|  B   | Marketing |  B   | Klasse |
-|      |           |      +--------+
-|      |           |      | Kurs 3 |
-|      |           |      +--------+
-|      |           |      | Kurs 2 |
-|      |           |      +--------+
-|      |           |      | AG 1   |
-+------+-----------+------+--------+
++------------------+----+---------------+
+|      Firma       |    |    Schule     |
++------+-----------+ vs +------+--------+
+| User | Abteilung |    | User | Gruppe |
++======+===========+====+======+========+
+|  A   | Marketing |    |  A   | Klasse |
+|      |           |    |      +--------+
+|      |           |    |      | Kurs 1 |
+|      |           |    |      +--------+
+|      |           |    |      | Kurs 2 |
+|      |           |    |      +--------+
+|      |           |    |      | AG 1   |
++------+-----------+    +------+--------+
+|  B   | Marketing |    |  B   | Klasse |
+|      |           |    |      +--------+
+|      |           |    |      | Kurs 3 |
+|      |           |    |      +--------+
+|      |           |    |      | Kurs 2 |
+|      |           |    |      +--------+
+|      |           |    |      | AG 1   |
++------+-----------+----+------+--------+
 
 3. Die Fluktuation im jährlichen Wechsel
 
