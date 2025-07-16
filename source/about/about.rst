@@ -296,6 +296,10 @@ externe Dienste / Server
 
 Ein Porfolio an unterschiedlichen externen Diensten / Servern lässt sich an die linuxmuster.net Lösung anbinden, sodass eine einheitliche Authentifizierung erfolgt.
 
+.. hint::
+
+   Grafik ist noch anzupassen
+
    .. image::    media/structure_of_version_7_extra.svg
       :name:     structure-extra-server-and-services
       :alt:      Struktur der Einbindung externer Server und Dienste
