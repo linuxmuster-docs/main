@@ -1,5 +1,4 @@
-.. include:: ../../guided-inst.subst
-
+.. include:: /guided-inst.subst
 .. _basis_server-label:
 
 ============================================
@@ -418,7 +417,7 @@ Nach erfolgter Anmeldung mit Deinem Account kannst Du die ab jetzt folgenden Cod
 Proxmox Guest-Agent installieren
 --------------------------------
 
-Um mit Proxmox die Server VM herunterfahren zu können, oder für den Snapshot diese vorher korrekt "einzufrieren", ist die Installation eines Gast-Agenten unter Ubuntu Server 22.04 erforderlich. Zudem musst Du noch dem Agenten unter Proxmox aktivieren.
+Um mit Proxmox die Server VM herunterfahren zu können, oder für den Snapshot diese vorher korrekt "einzufrieren", ist die Installation eines Gast-Agenten unter Ubuntu Server |lts_version| erforderlich. Zudem musst Du noch dem Agenten unter Proxmox aktivieren.
 
 Gehe dabei wie folgt vor:
 

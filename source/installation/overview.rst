@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 .. _install-overview-label:
 
 Installationablauf
@@ -37,7 +38,7 @@ Falls Du einen anderen Hypervisor bevorzugst, kannst Du Dich dennoch an der Doku
 
 ..       :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part2-basis-server-provision.svg
 
-\* Bei der aktuellen linuxmuster.net Version dient die LTS Version 22.04 als Basis.
+\* Bei der aktuellen linuxmuster.net Version dient die LTS Version |lts_version| als Basis.
 
 5. Installation in die vorbereiteten VMs (virtuelle Maschinen)
 

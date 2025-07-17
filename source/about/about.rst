@@ -1,14 +1,4 @@
-.. |zb| unicode:: z. U+00A0 B. .. Zum Beispiel 
-
-.. |_| unicode:: U+202F
-   :trim:
-
-.. |copy| unicode:: 0xA9 .. Copyright-Zeichen
-   :ltrim:
-
-.. |reg| unicode:: U+00AE .. Trademark
-   :ltrim:
-
+.. include:: /guided-inst.subst
 .. _what-is-linuxmuster.net-label:
 
 ========================

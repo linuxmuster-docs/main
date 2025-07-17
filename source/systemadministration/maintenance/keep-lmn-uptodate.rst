@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 linuxmuster.net aktuell halten
 ==============================
 
@@ -6,7 +7,7 @@ linuxmuster.net aktuell halten
 Update des Ubuntu Servers von linuxmuster.net 
 ---------------------------------------------
 
-Um die linuxmuster.net 7.x zugrunde liegende Ubuntu Version (Ubuntu Server 22.04.x LTS 64bit) zu aktualisieren, beachte bitte nachstehende Hinweise.
+Um die linuxmuster.net 7.x zugrunde liegende Ubuntu Version (Ubuntu Server |lts_version| LTS 64bit) zu aktualisieren, beachte bitte nachstehende Hinweise.
 
 .. attention::
 
