@@ -1,4 +1,4 @@
-.. include:: ../../guided-inst.subst
+.. include:: /guided-inst.subst
 
 .. _proxmox_internes_netz-label:
 

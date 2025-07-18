@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 .. _using-linbo-label:
 
 LINBO4 nutzen

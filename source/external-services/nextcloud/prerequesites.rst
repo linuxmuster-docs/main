@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 
 Vorüberlegungen zum Standort des Nextcloud-Services
 ===================================================

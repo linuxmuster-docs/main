@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 Virtuelle Maschinen starten
 ===========================
 

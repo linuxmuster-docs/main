@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 .. _commonworkflow-user-management:
 
 Workflow zur Benutzerverwaltung

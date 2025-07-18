@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 .. _edit-on-github-label:
 
 Dokumentation in GitHub ändern

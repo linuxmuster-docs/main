@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 Funktionsweise und Grundlagen der Postsync-Scripte
 ==================================================
 

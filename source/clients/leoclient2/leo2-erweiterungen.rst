@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 Weitere Informationen zu leoclient2
 ===================================
 

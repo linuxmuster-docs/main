@@ -1,4 +1,4 @@
-.. include:: ../../guided-inst.subst
+.. include:: /guided-inst.subst
 
 .. _basis_file_server-label:
 

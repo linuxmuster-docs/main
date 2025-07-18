@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 Gast-WLAN mit Gutschein / Voucher
 ==================================
 

@@ -1,4 +1,4 @@
-.. include:: ../guided-inst.subst
+.. include:: /guided-inst.subst
 
 .. _upgrade-from-7.2-label:
 

@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 Nutzung der Remote Server Administration Tools zum Anpassen der GPO
 ===================================================================
 
