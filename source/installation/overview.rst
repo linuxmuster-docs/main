@@ -21,20 +21,18 @@ Der Punkt 3 findet sich in dem Kapitel "Proxmox vorbereiten"
 
    .. figure:: media/overview-installation-process-part1-preliminary-consideration.svg
          :align: center
-         :alt:
-
-   ..       :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part1-preliminary-consideration.svg
+         :alt: Installtion-Übersicht
+         :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part1-preliminary-consideration.svg
 
 Diese Dokumentation konzentriert sich auf die Umsetzung als Drei-Server-Lösung auf einem Hypervisor. 
 
-   Unsere Dokumentation basiert auf der Virtualisierung mittels Proxmox  
+Unsere Dokumentation basiert auf der Virtualisierung mittels Proxmox  
 
    .. figure:: media/overview-installation-process-part1-default.svg
          :align: center
-         :alt:
+         :alt: Installtion Hypervisor default
          :width: 40%
-
-..       :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part1-default.svg
+         :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part1-default.svg
 
 Andere Virtualisierungslösungen sind möglich, werden aber von linuxmuster.net nicht offiziell unterstützt.
 
@@ -42,10 +40,9 @@ Falls Du einen anderen Hypervisor bevorzugst, kannst Du Dich dennoch an der Doku
 
    .. figure:: media/overview-installation-process-part1-alternativ.svg
             :align: center
-            :alt:
-            :width: 30%
-
-..       :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part1-alternativ.svg
+            :alt: Installation Hypervisor alternativ 
+            :width: 40%
+            :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part1-alternativ.svg
 
 Das Kapitel "Install-from-Scratch" beschreibt die Arbeitsschritte 4 und 5.
 
@@ -53,51 +50,45 @@ Das Kapitel "Install-from-Scratch" beschreibt die Arbeitsschritte 4 und 5.
 
    .. figure:: media/overview-installation-process-part2-basis-server-provision.svg
        :align: center
-       :alt: Installation: Übersicht
+       :alt: Vorbereitung der benötigten virtualisierten Server
+       :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part2-basis-server-provision.svg
 
-..       :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part2-basis-server-provision.svg
-
-   \* Bei der aktuellen linuxmuster.net Version dient die LTS Version |lts_version| als Basis.
+\* Bei der aktuellen linuxmuster.net Version dient die LTS Version |lts_version| als Basis.
 
 5. Installation in die vorbereiteten VMs (virtuelle Maschinen)
 
    .. figure:: media/overview-installation-process-part3-lmn-server-preparation.svg
        :align: center
-       :alt: Installation: Übersicht
-
-..       :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part3-lmn-server-preparation.svg
+       :alt: Installation in die vorbereiteten VMs
+       :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part3-lmn-server-preparation.svg
 
 6. Test der Netzwerkfunktionen
 
    .. figure:: media/overview-installation-process-part4-lmn-server-setup.svg
       :align: center
-      :alt: Installation: Übersicht
-
-..      :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part4-lmn-server-setup.svg
+      :alt: Test der Netzwerkfunktionen
+      :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part4-lmn-server-setup.svg
 
 7. Ersteinrichtung (Setup) der Server
 
    .. figure:: media/overview-installation-process-part5-user-reception.svg
       :align: center
-      :alt: Installation: Übersicht
-
-..      :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part5-user-reception.svg
+      :alt: Ersteinrichtung der Server
+      :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part5-user-reception.svg
 
 8. Anlegen der Benutzer und Gruppen
 
    .. figure:: media/overview-installation-process-part6-computer-registration.svg
       :align: center
-      :alt: Installation: Übersicht
-
-..      :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part6-computer-registration.svg
+      :alt: Anlegen der Benutzer und Gruppen
+      :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part6-computer-registration.svg
 
 9. Einrichtung der Clients
 
     .. figure:: media/overview-installation-process-part7-installation-finish.svg
        :align: center
-       :alt: Installation: Übersicht
-
-..       :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part7-installation-finish.svg
+       :alt: Einrichtung der Clients
+       :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part7-installation-finish.svg
 
 
 Nachstehend kannst Du den Installationsablauf als Übersicht herunterladen:
