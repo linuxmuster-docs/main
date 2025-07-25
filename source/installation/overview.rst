@@ -9,13 +9,11 @@ Installationablauf
 
 Um **linuxmuster.net** zu installieren musst Du folgende Schritte durchlaufen:
 
-Die Punkte 1 und 2 werden in dem Kapitel "Vorüberlegungen" behandelt.
-
 1. Planung der Infrastruktur (Server und Netzwerk)
 
 2. ggf. Vorbereitung / Setup der Netzkomponenten
 
-Der Punkt 3 findet sich in dem Kapitel "Proxmox vorbereiten"
+.. hint:: Die Punkte 1 und 2 werden in dem Kapitel "Vorüberlegungen" behandelt.
 
 3. Einrichtung einer Basis für linuxmuster.net
 
@@ -44,7 +42,7 @@ Falls Du einen anderen Hypervisor bevorzugst, kannst Du Dich dennoch an der Doku
             :width: 40%
             :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part1-alternativ.svg
 
-Das Kapitel "Install-from-Scratch" beschreibt die Arbeitsschritte 4 und 5.
+.. hint:: Der Punkt 3 findet sich in dem Kapitel "Proxmox vorbereiten"
 
 4. Vorbereitung der benötigten virtualisierten Server (VMs)
 
@@ -61,6 +59,8 @@ Das Kapitel "Install-from-Scratch" beschreibt die Arbeitsschritte 4 und 5.
        :align: center
        :alt: Installation in die vorbereiteten VMs
        :target: https://docs.linuxmuster.net/de/latest/_images/overview-installation-process-part3-lmn-server-preparation.svg
+
+.. hint:: Das Kapitel "Install-from-Scratch" beschreibt die Arbeitsschritte 4 und 5.
 
 6. Test der Netzwerkfunktionen
 
