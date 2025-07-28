@@ -28,12 +28,14 @@ Erstelle nun die Konfiguration für die neue Hardwareklasse. Klicke links im Men
 
 Nun klickst Du unten links auf ``+ERSTELLEN``.
 
-Es öffnet sich ein Kontextmenü. Du kannst entweder ein leere ``start.conf`` nutzen, oder ein bereits vordefiniertes Template für Dein gewünschtes Betriebssystem auswählen. Hierbei kannst Du Templates für ein oder mehrere Betriebssysteme mit oder ohne UEFI-BIOS auswählen und diese ggf. nach Deinen Vorstellungen anpassen. LINBO nutzt zur Bezeichnung der Festplatte mittlerweile eine einheitliche Bezeichnung (unified block device name):
+Es öffnet sich ein Kontextmenü. Du kannst entweder ein leere ``start.conf`` nutzen, oder ein bereits vordefiniertes Template für Dein gewünschtes Betriebssystem auswählen. Hierbei kannst Du Templates für ein oder mehrere Betriebssysteme mit oder ohne UEFI-BIOS auswählen und diese ggf. nach Deinen Vorstellungen anpassen. 
+
+LINBO nutzt zur Bezeichnung der Festplatte ab v4.3 eine einheitliche Bezeichnung (unified block device name), was die Pflege eines einheitlichen Images bei unterschiedlicher Hardware vereinfacht:
 
 1. Die erste HDD wird als /dev/disk0 bezeichnet
-2. Die 1. Partitionauf der ersten HDD wird dann als /deb/disk0p1 bezeichnet.
+2. Die erste Partition auf der ersten HDD wird dann als /dev/disk0p1 bezeichnet.
 
-Sollten in Deinen start.conf - Dateien noch die alten Bezeichnungen enthalten sein, musst Du diese in den Dateien zunächst aktualisieren und mit dem Befehl ``linuxmuster-import-devices`` diese neu einlesen.
+Sollten in Deinen start.conf - Dateien noch die alten Bezeichnungen enthalten sein, musst Du diese in den Dateien zunächst aktualisieren und mit dem Befehl ``linuxmuster-import-devices`` neu einlesen.
 
 Wähle ein Template aus:
 
@@ -83,15 +85,6 @@ Unter ``Partitionen`` legst Du fest, welche Partitionen auf der Festplatte vorge
    
    Partitionen festlegen
 
-Löschst Du dort z.B. die Partitionen ``swap`` und ``data`` so sieht Deine Partitionierung wie folgt aus:
-
-.. figure:: media/07-webui-linbo-edit-new-group-partition-scheme-edited.png
-   :align: center
-   :alt: WebUI linbo edit new hwc group - partition scheme edited
-   :width: 80%
-   
-   Partitionen anpassen
-
 Um Einstellungen für das jeweilige Betriebssystem vorzunehmen, klickst Du auf das Stift-Icon neben dem angegebenen Betriebssystem. Es öffnet sich ein weiteres Fenster, um Einstellungen für das Betriebssystem vorzunehmen.
 
 .. figure:: media/08-webui-linbo-edit-new-group-os-infos-edited.png
@@ -103,7 +96,7 @@ Um Einstellungen für das jeweilige Betriebssystem vorzunehmen, klickst Du auf d
 
 Unter der Reiterkarte ``OS`` legst Du für das Betriebssystem (OS) die gewünschten Icons, die Start-Optionen und u.a. auch den Namen für das Basisimage fest. 
 
-Um ein neues Image festzulegen, klickst Du auf das ``+`` - Zeichen und trägst einen neuen Namen für das Image ein. Achte darauf, dass die Dateiendung ``.qcow2`` lautet. Um nun das neue Image zu erstellen, startest Du den Client neu. Es wird das bestehende Image, das unter Basisimage angelegt bzw. ausgewählt wurde - hier das noch nicht existierende Image ``pop_os_mim.qcow2`` - überschrieben. 
+Um ein neues Image festzulegen, klickst Du auf das ``+`` - Zeichen und trägst einen neuen Namen für das Image ein. Achte darauf, dass die Dateiendung ``.qcow2`` lautet. Um nun das neue Image zu erstellen, startest Du den Client neu. Es wird das bestehende Image, das unter Basisimage angelegt bzw. ausgewählt wurde - hier das noch nicht existierende Image ``ubuntu.qcow2`` - überschrieben. 
 
 Auf dem linuxmuster.net Server werden die start.conf-Dateien im Verzeichnis ``/srv/linbo`` abgelegt. Jede Hardwareklasse hat eine eigene start.conf-Datei. Für die neu angelegte Hardwareklasse des Muster-Clients wurde dort nun eine Datei ``start.conf.<name-der-hwk>`` erstellt (z.B. start.conf.ubu-efi).
 
@@ -115,8 +108,8 @@ Folgende Konfiguration zeigt ein mögliches Beispiel für die ``Hardwareklasse u
 
   [LINBO]
    Server = 10.0.0.1
-   Group = ubu-efi            #Hardwareklasse
-   Cache = /dev/disk0p3       #Uniform Block Device HDD 0 Partition 3 - frueher: /dev/sda3
+   Group = ubu-efi            # Name der Hardwareklasse
+   Cache = /dev/disk0p3       # Uniform Block Device - hier: HDD 0 Partition 3 - frueher: /dev/sda3
    RootTimeout = 600
    AutoPartition = no
    AutoFormat = no
@@ -139,7 +132,7 @@ Folgende Konfiguration zeigt ein mögliches Beispiel für die ``Hardwareklasse u
    [Partition]
    Dev = /dev/disk0p2
    Label = ubuntu
-   Size = 12G
+   Size = 25G
    Id = 83
    FSType = ext4
    Bootable = no
@@ -147,7 +140,7 @@ Folgende Konfiguration zeigt ein mögliches Beispiel für die ``Hardwareklasse u
    [Partition]
    Dev = /dev/disk0p3
    Label = cache
-   Size = 12G
+   Size = 25G
    Id = 83
    FSType = ext4
    Bootable = no
@@ -155,7 +148,7 @@ Folgende Konfiguration zeigt ein mögliches Beispiel für die ``Hardwareklasse u
    [Partition]
    Dev = /dev/disk0p4
    Label = swap
-   Size = 2G
+   Size = 8G
    Id = 82
    FSType = swap
    Bootable = no
@@ -173,7 +166,7 @@ Folgende Konfiguration zeigt ein mögliches Beispiel für die ``Hardwareklasse u
    Version = 24.04 LTS
    Description = Ubuntu 24.04
    IconName = ubuntu.svg
-   BaseImage = ubuntu.qcow2 # Name des neu angelegten Images in obiger Abb. ist dies: pop_os_mlm.qcow2
+   BaseImage = ubuntu.qcow2 # Name des neu angelegten Images
    Root = /dev/disk0p2
    Kernel = /boot/vmlinuz
    Initrd = /boot/initrd.img

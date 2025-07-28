@@ -11,7 +11,7 @@ Linux-Client
 
 linuxmuster.net stellt für Ubuntu basierte Clients das Paket ``linuxmuster-linuxclient7`` bereit. Es führt automatisiert den Domänenbeitritt aus und vereinheitlicht das Management von Linux- und Windows-Clients durch Auslesen der GPO-Konfigurationen im Active Directory.
 
-Offiziell wird derzeit Ubuntu 24.04 und Pop!_OS 24.04 mit gdm3 und Gnome unterstützt. Andere Ubuntu basierte Distributionen mit gdm3 und Gnome funktionieren i.d.R. ebenfalls.
+Offiziell wird derzeit Ubuntu 24.04 und Pop!_OS 22.04 mit gdm3 und Gnome unterstützt. Andere Ubuntu basierte Distributionen mit gdm3 und Gnome funktionieren i.d.R. ebenfalls.
 
 Voraussetzung
 =============
@@ -42,7 +42,7 @@ aus der Drop-down Liste auswählen. Bei der Erstellung des Erstimages wird ein v
    :alt: Ubuntu Installation: indicate image name
    :width: 80%
    
-   Festelegen des Dateinamens für das Basisimage
+   Festlegen des Dateinamens für das Basisimage
 
 Übernehme die Eintragungen jeweils mit ``Speichern & Importieren``. Danach wird automatisch ein Import der Geräte ausgeführt, um diese Einstellungen für alle Geräte der HWK zu übernehmen.
 
