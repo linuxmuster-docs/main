@@ -34,6 +34,7 @@ LINBO4, das von linuxmuster.net entwickelt wurde, weist einige Neuerungen auf:
 * Es können auf den Clients Linux Firmware-Dateien genutzt werden. Firmware ist in Ubuntu 24.04 zst-komprimiert. Firmware-Dateien können in /etc/linuxmuster/linbo/firmware aber wie bisher ohne .zst-Extension angegeben werden.
 * Ab LINBO 4.3 werden vereinheitlichte Partitionsnamen verwendet:
   Unabhängig vom verbauten Festplattentyp (SATA, NVME etc.) können die Partitionen jetzt mit einheitlichen Namen angesprochen werden.
+  
 Namensschema:
     • 1. Platte: /dev/disk0
     • 2. Platte: /dev/disk1
@@ -41,6 +42,7 @@ Namensschema:
     • 1. Partition: /dev/disk0p1
     • 2. Partition: /dev/disk0p2
     • …
+    
     Linbo legt beim Bootvorgang entsprechende Symlinks zu den tatsächlichen Devices an.
     Eine NVME-Disk wird immer als erste Platte (disk0) definiert.
     Eine USB-Platte wird immer als letzte Platte definiert.
