@@ -509,7 +509,7 @@ Speichere diesen kopierten Registry-Patch für das Windows 11 Image, indem Du di
 Imageübertragung auf den PC
 ---------------------------
 
-1. Starte den PC, auf den das Image übertragen werden soll, über das Netzlaufwerk bis er in LINBO gebootet hat. Nun öffnest Du den Imaging-Reiter, wie im ersten Kapitel :ref:`Computer in linuxmuster.net aufnehmen <install-windows10-clients-label>`  → ``Client lokal registrieren`` beschrieben wird.
+1. Starte den PC, auf den das Image übertragen werden soll, über das Netzlaufwerk bis er in LINBO gebootet hat. Nun öffnest Du den Imaging-Reiter, wie im ersten Kapitel :ref:`Computer in linuxmuster.net aufnehmen <install-windows11-clients-label>`  → ``Client lokal registrieren`` beschrieben wird.
 
 2. Als nächstes partitionierst und formatierst Du den PC über den LINBO-Menüeintrag ``Partitionieren`` wie zuvor beschrieben.
 

@@ -9,7 +9,7 @@ Muster-Client aufsetzen
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
                    `@MachtDochNix <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
-linuxmuster.net ermöglicht es, Clients mithilfe von LINBO automatisiert zu verwalteen. Auf den Clients kann ein Betriebssystem oder es können mehrere Multi-Boot Betriebssysteme auf dem Client installiert, aktualisiert, ausgerollte und zurückgesetzt werden. Mithilfe von LINBO erfolgt so ein automatischens Ausrollen der Clients im Netzwerk, das Verteilen zusätzlich zu installierender Software oder die Wiederherstellung eines funktionierenden Clients in den Ausgangszustand z.B. nach einer Laborübung, in der die Clients gezielt umkonfiguriert wurde.
+linuxmuster.net ermöglicht es, Clients mithilfe von LINBO automatisiert zu verwalten. Auf den Clients kann ein Betriebssystem oder es können mehrere Multi-Boot Betriebssysteme auf dem Client installiert, aktualisiert, ausgerollt und zurückgesetzt werden. Mithilfe von LINBO erfolgt so ein automatischens Ausrollen der Clients im Netzwerk, das Verteilen zusätzlich zu installierender Software oder die Wiederherstellung eines funktionierenden Clients in den Ausgangszustand z.B. nach einer Laborübung, in der die Clients gezielt neu konfiguriert wurden.
 
 Die Nutzung von LINBO erfordert die Einrichtung eines Muster-Clients. Dies erfordert nachstehende ``drei Installationsschritte``:
 
@@ -57,6 +57,7 @@ Im letzten Schritt wird nun das eigentliche Betriebssystem auf dem Muster-Client
    os_installation/index
 
 .. hint::
+   
    Damit Clients in die Domäne aufgenommen werden können, muss auf dem Server vorher die Standard-GPO erzeugt werden. Dies ist auch ``notwendig``, wenn ausschließlich Linux-Clients eingesetzt werden.
 
 Die Standard-GPO wird auf dem Server erzeugt durch:

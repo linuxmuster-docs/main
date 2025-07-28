@@ -4,7 +4,9 @@
 LINBO4 nutzen
 =============
 
-LINBO steht für GNU/\ **Li**\ nux **N**\ etwork **Bo**\ ot. Es wurde ursprünglich im Auftrag des Landesmedienzentrums Baden-Württemberg von der Firma KNOPPER.NET in Zusammenarbeit mit den damaligen paedML-Linux- und heutigen linuxmuster.net-Entwicklern realisiert. Der Sourcecode ist unter GNU General Public License Version 2 veröffentlicht.
+LINBO steht für GNU/\ **Li**\ nux **N**\ etwork **Bo**\ ot. Es wurde ursprünglich im Auftrag des Landesmedienzentrums Baden-Württemberg von der Firma KNOPPER.NET in Zusammenarbeit mit den damaligen paedML-Linux- und heutigen linuxmuster.net-Entwicklern realisiert. 
+
+Die linuxmuster.net-Entwickler haben LINBO nun in der Version > 4.3 veröffentlicht. Der Sourcecode ist unter GNU General Public License 3.0 auf GitHub veröffentlicht.
 
 LINBO bietet
 
@@ -24,9 +26,28 @@ LINBO4, das von linuxmuster.net entwickelt wurde, weist einige Neuerungen auf:
 * linuxmuster.net <=6.2 wird nicht mehr unterstützt.
 * Ab LINBO v4.1 stehen differentielle Images zur Verfügung.
 * Bisherige Images im cloop Format sind direkt in das neue qcow2 Format zu konvertieren.
-* AB LINBO v4.1.36 wird Kernel 6.5.3 verwendet und es können qcow2-Images mit Torrent verteilt werden, die > 52 GiB sind. Für ctorrent kann hierzu die sog. piece length konfiguriert werden.
+* Ab LINBO v4.1.36 wird Kernel 6.5.3 verwendet und es können qcow2-Images mit Torrent verteilt werden, die > 52 GiB sind. Für ctorrent kann hierzu die sog. piece length konfiguriert werden.
+* Ab LINBO v4.3 wird die Nutzung verschiedener Kernel bei den Clients ermöglicht:
+    • legacy - Kernel: 6.1.*
+    • longterm - Kernel: 6.12.*
+    • stable - Kernel: 6.14.* 
+* Es können auf den Clients Linux Firmware-Dateien genutzt werden. Firmware ist in Ubuntu 24.04 zst-komprimiert. Firmware-Dateien können in /etc/linuxmuster/linbo/firmware aber wie bisher ohne .zst-Extension angegeben werden.
+* Ab LINBO 4.3 werden vereinheitlichte Partitionsnamen verwendet:
+  Unabhängig vom verbauten Festplattentyp (SATA, NVME etc.) können die Partitionen jetzt mit einheitlichen Namen angesprochen werden.
+  
+Namensschema:
+    • 1. Platte: /dev/disk0
+    • 2. Platte: /dev/disk1
+    • ...
+    • 1. Partition: /dev/disk0p1
+    • 2. Partition: /dev/disk0p2
+    • …
+    
+    Linbo legt beim Bootvorgang entsprechende Symlinks zu den tatsächlichen Devices an.
+    Eine NVME-Disk wird immer als erste Platte (disk0) definiert.
+    Eine USB-Platte wird immer als letzte Platte definiert.
 
-Dieses Kapitel führt Dich in die Nutzung von LINBO4 ein und erklärt die wesentlichen Schritte zur Imageverwaltung.
+Dieses Kapitel führt in die Nutzung von LINBO4 ein und erklärt die wesentlichen Schritte zur Imageverwaltung.
 
 .. hint::
 	Die meisten PC mit UEFI verwenden standardmäßig "SecureBoot". Dies muss deaktiviert werden, um Linbo booten zu können!

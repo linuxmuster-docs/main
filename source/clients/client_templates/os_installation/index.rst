@@ -30,7 +30,7 @@ Bevor Du mit der eigentlichen Installation des Client-Betriebssystem beginnen ka
 Danach kannst Du das gewünschte Betriebssystem auf dem Client installieren. Das Vorgehen hierzu wird ausführlich für 
 
 1. :ref:`install-linux-clients-current-label`
-2. :ref:`install-windows10-clients-label` 
+2. :ref:`install-windows11-clients-label` 
 
 beschrieben.
 
@@ -73,6 +73,5 @@ Nach Abschluss der Installation und Konfiguration  des Muster-Clients kannst Du 
    format_hdd_with_linbo
    linux-clients/index
    linux-clients/installation-popos
-   windows10clients/index
    windows11clients/index
 
