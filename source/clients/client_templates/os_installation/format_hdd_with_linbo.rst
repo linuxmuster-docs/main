@@ -48,16 +48,7 @@ Wähle hier nun den Eintrag ``Festplatte partitionieren`` aus, damit die Festpla
 
 Bestätige dies mit ``Ja``. 
 
-Während der Partitionierung und Formatierung der Festplatte des Clients siehst Du eine Status-Anzeige.
-
-.. figure:: media/05-linbo-partitioning-formatting-hdd-client.png
-   :align: center
-   :alt: LINBO: partitioning of hdd client
-   :width: 80%
-   
-   Partitionierung der Client Festplatte
-
-Wurde der Vorgang abgeschlossen, so findest Du nachstehende Status-Meldung:
+Während der Partitionierung und Formatierung der Festplatte des Clients siehst Du eine Status-Anzeige. Wurde der Vorgang abgeschlossen, so findest Du nachstehende Status-Meldung:
 
 .. figure:: media/06-linbo-partitioning-finished.png
    :align: center
@@ -83,7 +74,7 @@ Starte dann den Client neu, drücke während des Boot-Vorgangs ``F2, F10, F12, u
 Setze nun die Installation fort ...
 
 1. :ref:`install-linux-clients-current-label`
-2. :ref:`install-windows10-clients-label` 
+2. :ref:`install-windows11-clients-label` 
 
 
 
