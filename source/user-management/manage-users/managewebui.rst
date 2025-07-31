@@ -187,9 +187,11 @@ Für die Lehrer besteht die Möglichkeit, einen Wunschlogin-Namen anzugeben. Der
 
 Das Format der Datei ``teachers.csv`` stellt sich wie folgt dar:
 
-``teachers;Last name;First name;Birthday;Login;;;;;``
+``teachers;Last name;First name;Birthday;Login;ID;;;;``
 
-``Lehrer;Nachname;Vorname;Geburtsdatum;Wunschlogin;;;;;``
+``Lehrer;Nachname;Vorname;Geburtsdatum;Wunschlogin;ID;;;;``
+
+Die Felder Login/Wunschlogin und ID sind optional. Ist eine ID im Schulverwaltungsprogramm vorhanden, so sollte diese ebenfalls exportiert werden.
 
 Von *sophomorix* werden noch die für einzelne Lehrer gesondert eingegebenen Quotas angehängt.
 
@@ -268,10 +270,11 @@ Zur Verwaltung von Schülern, die nicht im Schulverwaltungsprogramm aufgenommen 
 Im Bereich *Im Editor öffnen* können Schüler von Kooperationsschulen oder Austausch- bzw. Gastschüler eingegeben werden. 
 Die Syntax ist wie bei der Schülerdatei, ergänzt um ein Feld für einen Wunschanmeldenamen:
 
-``Class;Last name;First name;Birthday;Login;``
+``Class;Last name;First name;Birthday;Login;ID;``
 
-``Klasse;Nachname;Vorname;Geburtsdatum;Wunschlogin;``
+``Klasse;Nachname;Vorname;Geburtsdatum;Wunschlogin;ID;``
 
+Die Felder Login/Wunschlogin und ID sind optional. Ist eine ID im Schulverwaltungsprogramm vorhanden, so sollte diese ebenfalls exportiert werden.
 
 Der Name für die Klasse ist frei wählbar, z.B: *koop* (für Kooperation) oder *at* (für Austausch). Es können aber, gerade auch bei Kooperationsschülern, die **bestehenden** Klassennamen verwendet werden. Dies ist wichtig, falls der Zugriff auf das Klassentauschverzeichnis der Klasse ermöglicht werden soll. Bei neuen Gruppennamen, wird auch ein neues Klassentauschverzeichnis angelegt.
 
