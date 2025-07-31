@@ -73,7 +73,7 @@ Prüfe nun, ob alle Dienste korrekt gestartet wurden.
 
    sudo systemctl list-units --state=failed
    
-Du siehst ggf. einen Hinweis auf `quotaon.service`, der sich allerdings nur auf die Root-Partition bezieht, für keine Quota gesetzt werden kann. Dies ist das erwartete Verhalten.
+Du siehst ggf. einen Hinweis auf `quotaon.service`, der sich allerdings nur auf die Root-Partition bezieht, für die keine Quota gesetzt werden kann. Dies entspricht dem erwarteten Verhalten.
 
 .. hint::
 

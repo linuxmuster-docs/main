@@ -115,7 +115,6 @@ Nach einem Klick auf die Leiste eröffnen sich Dir dort noch weitere Möglichkei
 
   migration/index
   migration/linbo-migration-to-4
-  migration/linux-client-migration
 
 .. toctree::
   :maxdepth: 4
@@ -169,6 +168,8 @@ Nach einem Klick auf die Leiste eröffnen sich Dir dort noch weitere Möglichkei
   systemadministration/gpo/gpo
   systemadministration/sw-remote-gpo/sw-remote-gpo
   systemadministration/openvpn/index
+  systemadministration/certificates/index
+  
 
 .. toctree::
   :maxdepth: 2
