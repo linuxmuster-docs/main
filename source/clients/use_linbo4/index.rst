@@ -1055,10 +1055,10 @@ Dazu wechselst Du wieder mit ``linbo-ssh <IP des Clients>`` auf die LINBO-Konsol
 
 Sämtliche Befehle, die linuxmuster-linbo7 (next generation) beherrscht, werden hier aufgelistet: https://github.com/linuxmuster/linuxmuster-linbo7/issues/72#issuecomment-1156633508
 
-vncserver nutzen
-----------------
+LINBO4: VNCServer nutzen
+------------------------
 
-Wird für den Cient der LINBO Kernel-Parameter ``vncserver`` gesetzt, dann wird während des Bootvorgangs von LINBO ein VNC-Server auf dem Client gestartet. Dieser Dienst akzeptiert nur Verbindungen, die von der Server-IP ausgehend auf Port 9999 kommen.
+Wird für den Cient der LINBO Kernel-Parameter ``vncserver`` gesetzt, dann wird während des Bootvorgangs von LINBO ein VNC-Server auf dem Client gestartet. Dieser Dienst akzeptiert nur Verbindungen, die von der Server-IP ausgehend auf Port 9999 kommen. Hierdurch ist es möglich, von einem PC im Netzwerk via VNCViewer auf die grafische LINBO-Oberfläche eines LINBO-Clients zuzugreifen.
 
 Kernel-Parameter setzen
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -1096,7 +1096,23 @@ Dies kann auf dem PC wie folgt in der Linux-Konsole definiert werden:
    
 Der Server fordert zur Eingabe des Kennwortes für den Benutzer root auf. Wurde dies erfolgreich ausgeführt, so ist die Konsole es Server zu sehen.
 
-vncviewer aufrufen
+Auf dem Client kann nach dem LINBO-Bootvorgang in der LINBO-Konsole kontrolliert werden, ob der VNCServer gestartet wurde. Wähle in LINBO dazu rechts das Werkzeug aus und wähle den Eintrag LINBO-Konsole aus.
+
+Gib hier den Befehl ``ps`` ein und Du erhälst die Ausgabe der derzeit unter LINBO auf dem Client laufende Prozesse.
+
+Dies kann z.B. wie folgt aussehen:
+
+.. figure:: media/02-linbo-vncserver-process.png
+   :align: center
+   :alt: check vncserver process
+   :width: 80%
+   
+   LINBO VNCServer Prozess prüfen
+   
+Der mit der Prozessnummer 1460 in obiger Abbildung angegebene Prozess zeigt, dass der VNCServer auf dem LINBO-Client gestartet wurde und auf Port 9999 Anfragen annimmt.
+
+
+VNCViewer aufrufen
 ^^^^^^^^^^^^^^^^^^
 
 Auf dem PC, auf dem der SSH-Tunnel hergestellt wurde, muss das Programm VNCViewer installiert sein. Hiermit kann dann via Konsole eine VNC-Verbindung auf die LINBO-Oberfläche des Clients definiert werden. Starte auf dem Linux-PC eine zweite Konsole und gib folgenden Befehl ein:
@@ -1108,6 +1124,15 @@ Auf dem PC, auf dem der SSH-Tunnel hergestellt wurde, muss das Programm VNCViewe
 Voraussetzung ist, dass der Client in die LINBO-Oberfläche gestartet und zuvor der SSH-Tunnel hergestellt wurde.
 
 Danach kann mit dem Programm VNC von dem PC aus remote auf den LINBO-Client via VNC zugegriffen werden.
+
+Wie in nachstehender Abb. erhälst Du dann Zugriff auf den LINBO-Client vom PC aus:
+
+.. figure:: media/03-linbo-vncviewer-access.png
+   :align: center
+   :alt: vncviewer access
+   :width: 80%
+   
+   LINBO Zugriff via VNCViewer
 
 
 im Fehlerfall
