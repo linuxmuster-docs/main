@@ -1055,6 +1055,59 @@ Dazu wechselst Du wieder mit ``linbo-ssh <IP des Clients>`` auf die LINBO-Konsol
 
 Sämtliche Befehle, die linuxmuster-linbo7 (next generation) beherrscht, werden hier aufgelistet: https://github.com/linuxmuster/linuxmuster-linbo7/issues/72#issuecomment-1156633508
 
+vncserver nutzen
+----------------
+
+Wird für den Cient der LINBO Kernel-Parameter ``vncserver`` gesetzt, dann wird während des Bootvorgangs von LINBO ein VNC-Server auf dem Client gestartet. Dieser Dienst akzeptiert nur Verbindungen, die von der Server-IP ausgehend auf Port 9999 kommen.
+
+Kernel-Parameter setzen
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Wähle in der WebUI im Menü unter ``Geräteverwaltung -> LINBO4 -> Gruppen`` die gewünschte Hardwareklasse aus, bearbeite diese mit dem Stift Symbol und ergänze unter ``Allgemein -> Kernel-Optionen`` in der Eingabezeile als Start-Parameter manuell ``vncviewer``.
+
+.. figure:: media/01-linbo-start-vncserver.png
+   :align: center
+   :alt: Start vncserver
+   :width: 80%
+   
+   LINBO vncserver starten
+
+Speicher die Einstellungen mit dem Button ``Speichern`` und importiere alle Geräte erneut.
+
+In der zugehörigen Datei ``/srv/linbo/start.conf.<hwk>`` findet sich dann folgender Eintrag:
+
+.. code::
+
+   [LINBO]
+   ...
+   KernelOptions = quiet splash vncserver
+   ...
+   
+SSH-Tunnel herstellen
+^^^^^^^^^^^^^^^^^^^^^
+   
+es muss nun von dem PC im Netzwerk, von dem aus auf den INBO-Client zugegriffen werden soll, ein SSH-Tunnel auf den LINBO-Client hergestellt werden. Dazu muss ein SSH-Tunnel über den Server an den Client über Port 9999 definiert werden.
+
+Dies kann auf dem PC wie folgt in der Linux-Konsole definiert werden:
+
+.. code::
+
+   ssh -L 9999:<Client-IP>:9999 root@<Server-IP>
+
+vncviewer aufrufen
+^^^^^^^^^^^^^^^^^^
+
+Auf dem PC, auf dem der SSH-Tunnel hergestellt wurde, muss das Programm VNCViewer installiert sein. Hiermit kann dann via Konsole eine VNC-Verbindung auf die LINBO-Oberfläche des Clients definiert werden. 
+
+.. code::
+
+   vncviewer localhost:9999 
+   
+Voraussetzung ist, dass der Client in die LINBO-Oberfläche gestartet wurde.
+
+Danach kann mit dem Programm VNC Remote grafisch auf den LINBO-Client zugegriffen werden.
+
+
 im Fehlerfall
 -------------
 
