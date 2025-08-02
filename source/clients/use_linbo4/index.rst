@@ -1133,6 +1133,130 @@ Wie in nachstehender Abb. erhälst Du dann Zugriff auf den LINBO-Client vom PC a
    :width: 80%
    
    LINBO Zugriff via VNCViewer
+   
+LINBO4: Live-System von ISO booten
+----------------------------------
+
+Mit LINBO >= v4.3 ist es möglich via LINBO ein Live-System wie z.B. Ubuntu 24.04 Desktop oder Systemrescue 12.01 mithilfe der zugehörigen ISO-Datei, die auf dem Server liegt zu starten.
+
+Um im Fehlerfall auf bestimmten Clients diesen auch mithilfe eines Live-System zu booten, kann z.B. für eine Hardwareklasse ein zusätzlicher Boot-Eintrag bereitgestellt werden, der auf eine ISO-Datei verweist.
+
+Hierdurch kannst Du via LINBO auf dem Client das Live-System vom Server aus starten und so die Fehler auf dem Client anaylsieren, oder auch einfach nur das Live-System auf dem Client testen.
+
+Vorgehen
+^^^^^^^^
+
+1. ISO-Dateien für die Linux-Live-Systeme auf dem Server bereitstellen.
+2. Torrent- und Info-Dateien für diese ISO-Dateien auf dem Server erzeugen.
+3. Für jede ISO-Datei die Pfade für Kernel und Initrd herausfinden.
+4. Herausfinden, welche Kernel-Append Parameter ggf. erforderlich sind.
+5. In der Hardwareklasse/start-conf-Datei einen zugehörigen OS-Abschnitt erstellen.
+
+ISO-Dateien bereitstellen
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Stellt man eine ISO-Datei von einem Linux-Live-System als Imagedatei bereit, kann diese bei entsprechender Konfiguration der Hardwareklasse von der Linbo-Clientoberfläche aus gestartet werden.
+
+Zur Bereitstellung der ISO-Dateien sind diese auf dem Server im Verzeichnis ``/srv/linbo/images`` bereitzustellen.
+
+Pro ISO-Datei ist  unterhalb des o.g. Verzeichnisses ein gleichnamiges Unterverzeichnis zu erstellen.
+
+**Beispiel**:
+
+Sollen die ISO-Dateien ``ubuntu-24.04.2-desktop-amd64.iso`` und ``systemrescue-12.01-amd64.iso`` bereitgestellt werden, so sind zunächst folge unterverzeichnisse anzulegen:
+
+.. code::
+
+   mkdir /srv/linbo/images/ubuntu-24.04.2-desktop-amd64
+   mkdir /srv/linbo/images/systemrescue-12.01-amd64
+   
+Lade danach die ISO-Dateien in die zuvor angelegten Unterverzeichnisse:
+
+.. code::
+
+   cd /srv/linbo/images/ubuntu-24.04.2-desktop-amd64
+   curl -O ubuntu-24.04.2-desktop-amd64.iso https://ubuntu.com/download/desktop/thank-you?version=24.04.2&architecture=amd64&lts=true 
+   cd /srv/linbo/images/systemrescue-12.01-amd64/
+   curl -O systemrescue-12.01-amd64.iso wget https://sourceforge.net/projects/systemrescuecd/files/sysresccd-x86/12.01/systemrescue-12.01-amd64.iso/download 
+
+Torrent- und Info-Dateien erstellen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Nachdem im Schritt zuvor die ISO-Dateien bereitgestellt wurden, sind nun für diese jeweils Torrent- und Info-Dateien zu erstellen.
+
+Dies erfolgt bezogen auf o.g. Beispiel mit nachstehenden Befehlen:
+
+.. code::
+
+   linbo-torrent create /srv/linbo/images/ubuntu-24.04.2-desktop-amd64/ubuntu-24.04.2-desktop-amd64.iso
+   linbo-torrent create /srv/linbo/images/systemrescue-12.01-amd64/systemrescue-12.01-amd64.iso
+   
+Es finden sich in in dem jeweiligen Unterverzeichnis dann drei Dateien (z.B.):
+
+.. code::
+
+   systemrescue-12.01-amd64.iso
+   systemrescue-12.01-amd64.iso.info
+   systemrescue-12.01-amd64.iso.torrent
+
+Pfade für Kernel und Initrd ermitteln
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In der Hardwareklasse sind später die Pfade für Kernel und Initd anzugeben, wie diese in der ISO-Datei gültig sind. Daher sind in den ISO-Dateien zunächst deren Pfade zu ermitteln.
+
+1. Mounte die ISO-Datei auf dem PC
+2. Suche für den Kernel nach der Datei ``vmlinuz``. Notiere Dir den Pfad.
+3. Suche für Initrd nach der Datei ``initrd.img`` oder ``initramfs``. Notiere Dir den Pfad.
+
+Für ubuntu-24.04.2-desktop-amd64.iso liegen beide Dateien im Verzeichnis ``casper``.
+
+Für systemrescue-12.01-amd64.iso liegt die Datei ``vmlinuz`` im Verzeichnis ``sysresccd/boot/x86_64/``. Die Datei ``initramfs (sysresccd.img)`` liegt ebenfalls im Verzeichnis ``sysresccd/boot/x86_64/``.
+
+
+Kernel-Append-Parameter ermitteln
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Für die ISO-Dateien musst Du noch ermitteln, welche Kernel-Parameter angefügt werden können2, die dann in der Hardwareklasse für die start.conf angegeben werden können.
+
+1. Öffne die gemountete ISO-Datei auf dem PC.
+2. Suche die Dateien ``boot/grub/grub.cfg`` oder ``isolinux.cfg``. Die Parameter splash, quiet, findiso und iso-scan können weggelassen werden, da sie automatisch erzeugt werden.
+
+Hardwareklasse/start.conf anpassen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In der gewünschten Hardwareklasse ergänzt Du auf dem Server in der Konsole die gewünschte start.conf-Datei um einen OS-Abschnitt.
+
+Beispiel:
+
+.. code::
+ 
+   [OS]
+   Name = Ubuntu (Live)
+   Description = Ubuntu 24.04.2 Desktop Live
+   IconName = ubuntu.svg
+   BaseImage = ubuntu-24.04.2-desktop-amd64.iso
+   Root = /dev/disk0p3 # dies ist die Cache-Partition des Clients
+   Kernel = casper/vmlinuz
+   Initrd = casper/initrd
+   Append = locales=de_DE.UTF-8
+   StartEnabled = yes
+   SyncEnabled = no
+   NewEnabled = no
+   Autostart = no
+   AutostartTimeout = 5
+   DefaultAction = start
+   
+Devices importieren
+^^^^^^^^^^^^^^^^^^^
+
+Abschliessend musst Du in der Konsole auf dem Server den Befehl ``linuxmuster-import-devices`` ausführen, damit die Hardwareklassen neu eingelesen und angewendet werden.
+
+Live-CD starten
+^^^^^^^^^^^^^^^
+
+Starte nun den Client via LINBO. Im Startmenü von LINBO findest Du nun den zur angelegten Eintrag zur Live-CD. Starte diese nun durch einen Klick auf das grosse Symbol für das Betriebssystem.
+
+
 
 
 im Fehlerfall
@@ -1156,7 +1280,7 @@ Die Paketgrößen können nun als Parameter ``piece length`` angepasst werden. D
 .. code::
 
    # Piece length (torrent file option)
-   PIECELEN="524288"
+   ECELEN="524288"
    
 Hast Du den Wert angepasst, musst Du Torrent neu startebn:
 
