@@ -35,7 +35,7 @@ LINBO nutzt zur Bezeichnung der Festplatte ab v4.3 eine einheitliche Bezeichnung
 1. Die erste HDD wird als /dev/disk0 bezeichnet
 2. Die erste Partition auf der ersten HDD wird dann als /dev/disk0p1 bezeichnet.
 
-Sollten in Deinen start.conf - Dateien noch die alten Bezeichnungen enthalten sein, musst Du diese in den Dateien zunächst aktualisieren und mit dem Befehl ``linuxmuster-import-devices`` neu einlesen.
+Sollten in Deinen start.conf - Dateien noch die alten Bezeichnungen enthalten sein, kannst Du diese in den Dateien so belassen. Alternativ kannst Du dies auf die neuen einheitlichen Bezeichnungen (unified block device name) anpassen und mit dem Befehl ``linuxmuster-import-devices`` neu einlesen. Dies kannst Du ebenfalls effizient direkt in der WebUI in der Hardwareklasse für alle Partitionen durchführen. Durch Änderung des Festplattentyps werden hier automatisch alle Partitionsbezeichnungen einheitlich an die neuen Bezeichnungen angepasst.
 
 Wähle ein Template aus:
 
@@ -84,6 +84,10 @@ Unter ``Partitionen`` legst Du fest, welche Partitionen auf der Festplatte vorge
    :width: 80%
    
    Partitionen festlegen
+
+.. hint::
+
+   Achte darauf, dass der Festplattentyp Deines PCs dem Festplattentyp des gewählten Templates entspricht. Nutzt Du eine SATA-HDD, so sollte im Template /dev/sda stehen. Möchtest Du den Muster-Client auf einer virtuellen Maschine vorbereiten, achte darauf, dass der Festplattentyp auch hier auf SATA gestellt ist, wenn Du ein Template auswählst, das noch /dev/sda als Bezeichnungen nutzt. Solltest Du z.B. VirtIO als Festplattentyp nutzen, dann passe Deine Partitionsbezeichnungen auf die neue einheitliche Partitionsbezeichnung /dev/disk0p(x) an.  
 
 Um Einstellungen für das jeweilige Betriebssystem vorzunehmen, klickst Du auf das Stift-Icon neben dem angegebenen Betriebssystem. Es öffnet sich ein weiteres Fenster, um Einstellungen für das Betriebssystem vorzunehmen.
 
