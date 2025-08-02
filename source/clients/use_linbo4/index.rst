@@ -1086,26 +1086,28 @@ In der zugehörigen Datei ``/srv/linbo/start.conf.<hwk>`` findet sich dann folge
 SSH-Tunnel herstellen
 ^^^^^^^^^^^^^^^^^^^^^
    
-es muss nun von dem PC im Netzwerk, von dem aus auf den INBO-Client zugegriffen werden soll, ein SSH-Tunnel auf den LINBO-Client hergestellt werden. Dazu muss ein SSH-Tunnel über den Server an den Client über Port 9999 definiert werden.
+Es muss nun von dem PC im Netzwerk, von dem aus auf den LINBO-Client zugegriffen werden soll, ein SSH-Tunnel auf den LINBO-Client hergestellt werden. Dazu muss ein SSH-Tunnel über den Server an den Client über Port 9999 definiert werden.
 
 Dies kann auf dem PC wie folgt in der Linux-Konsole definiert werden:
 
 .. code::
 
    ssh -L 9999:<Client-IP>:9999 root@<Server-IP>
+   
+Der Server fordert zur Eingabe des Kennwortes für den Benutzer root auf. Wurde dies erfolgreich ausgeführt, so ist die Konsole es Server zu sehen.
 
 vncviewer aufrufen
 ^^^^^^^^^^^^^^^^^^
 
-Auf dem PC, auf dem der SSH-Tunnel hergestellt wurde, muss das Programm VNCViewer installiert sein. Hiermit kann dann via Konsole eine VNC-Verbindung auf die LINBO-Oberfläche des Clients definiert werden. 
+Auf dem PC, auf dem der SSH-Tunnel hergestellt wurde, muss das Programm VNCViewer installiert sein. Hiermit kann dann via Konsole eine VNC-Verbindung auf die LINBO-Oberfläche des Clients definiert werden. Starte auf dem Linux-PC eine zweite Konsole und gib folgenden Befehl ein:
 
 .. code::
 
    vncviewer localhost:9999 
    
-Voraussetzung ist, dass der Client in die LINBO-Oberfläche gestartet wurde.
+Voraussetzung ist, dass der Client in die LINBO-Oberfläche gestartet und zuvor der SSH-Tunnel hergestellt wurde.
 
-Danach kann mit dem Programm VNC Remote grafisch auf den LINBO-Client zugegriffen werden.
+Danach kann mit dem Programm VNC von dem PC aus remote auf den LINBO-Client via VNC zugegriffen werden.
 
 
 im Fehlerfall
