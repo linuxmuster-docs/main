@@ -1149,14 +1149,12 @@ Dieser muss über **zwei Festplatten** verfügen. Passe die Größen an Deinen B
 
 Alle weiteren Schritte führst Du so aus, wie zuvor beschrieben.
 
-.. Kos - image2copy&rename2proxmox-create-vm-file-server-NN.svg
-
-.. figure:: media/proxmox-create-vm-ubuntu-server-11.svg
+.. figure:: media/proxmox-create-vm-ubuntu-file-server-12.svg
    :align: center
    :scale: 80%
-   :alt: Proxmox Create VM: Add 2nd NIC
+   :alt: Proxmox Create VM: Add 2nd Ubuntu VM
 
-   Stand nach der Erzeugung der Virtuellen Maschine Ubuntu 
+   Stand nach der Erzeugung der Virtuellen Maschinen Ubuntu 
   
 Abschließende Konfiguration der virtuellen Maschinen
 ----------------------------------------------------
