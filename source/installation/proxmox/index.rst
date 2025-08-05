@@ -694,8 +694,6 @@ In dem nun geöffneten Fenster trägst Du die URL
 
 ein (copy&paste). Anschließend betätigst Du dann den Button ``Query URL``.
 
-.. Kos - image2renew
-
 .. figure:: media/proxmox-iso-download-ubuntu_01.png
    :align: center
    :scale: 80%
@@ -719,8 +717,6 @@ Wähle wie dargestellt: ``SHA-256`` und trage die Checksumme ein:
 
 Das Herunterladen des ISOs beginnt mit ``Download``.
 
-.. Kos - image2renew
-
 .. figure:: media/proxmox-iso-download-ubuntu_02.png
    :align: center
    :scale: 80%
@@ -729,8 +725,6 @@ Das Herunterladen des ISOs beginnt mit ``Download``.
    Download Status
 
 Zum Abschluss erfolgt die Überprüfung der Checksumme, die mit ``OK, checksum verified`` enden muss.
-
-.. Kos - image2renew
 
 .. figure:: media/proxmox-iso-download-ubuntu_03.png
    :align: center
