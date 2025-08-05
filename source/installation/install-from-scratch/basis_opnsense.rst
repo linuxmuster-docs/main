@@ -221,13 +221,11 @@ Wähle danach die Option ``Exit and reboot`` aus.
    
    Ändere die Boot-Reihenfolge
    
-   Werfe die ISO-Datei aus dem CD-Laufwerk aus.
-   
 .. figure:: media/basis_opnsense_012b.png
    :align: center
    :alt: OPNsense: Unmount CD
    
-Werfe die ISO-Datei aus dem Laufwerk aus.
+   Werfe die ISO-Datei aus dem Laufwerk aus.
    
 Starte die VM neu, nachdem Du das Installationsmedium ausgeworfen hast und fahre mit der Installation fort.
 
