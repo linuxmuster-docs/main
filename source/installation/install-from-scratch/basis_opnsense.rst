@@ -227,7 +227,7 @@ Wähle danach die Option ``Exit and reboot`` aus.
    :align: center
    :alt: OPNsense: Unmount CD
    
-   Werfe die ISo-Datei aus dem Laufwerk aus.
+   Werfe die ISO-Datei aus dem Laufwerk aus.
    
    Starte die VM neu, nachdem Du das Installationsmedium ausgeworfen hast und fahre mit der Installation fort.
 
