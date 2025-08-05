@@ -735,8 +735,6 @@ Zum Abschluss erfolgt die Überprüfung der Checksumme, die mit ``OK, checksum v
 
 Nach dem Schließen des Fensters,
 
-.. Kos - image2renew
-
 .. figure:: media/proxmox-iso-download-ubuntu_04.png
    :align: center
    :scale: 80%
@@ -769,8 +767,6 @@ Als Erstes startest Du die Konsole ``xterm.js`` wie dargestellt, falls sie nicht
    xterm shell öffnen
 
 Mit ihr hast Du jetzt die Möglichkeit, mit ``Copy&Paste`` die folgenden bash-Zeilen direkt zu übernehmen.
-
-.. Kos - image2renew
 
 .. figure:: media/proxmox-shell-xterm_02_open_shell.png
    :align: center
@@ -839,8 +835,6 @@ Somit hast Du nun alle nötigen ISO-Dateien für die weitere Installation zusamm
 
    rm OPNsense*.sha256 OPNsense*.pub OPNsense*.sig
 
-.. Kos - image2renew
-
 .. figure:: media/proxmox-download-iso_02.png
    :align: center
    :scale: 80%
@@ -885,8 +879,6 @@ Klicke dann auf ``Next``.
 
 Wähle nun den ISO-Datenspeicher unter ``Storage`` aus. Das ist der Speicher, auf den Du vorher die ISO-Images abgelegt hast.
 Wähle dann das ISO image der OPNsense aus.
-
-.. Kos - image2renew
 
 .. figure:: media/proxmox-create-vm-opnsense-02.png
    :align: center
@@ -959,8 +951,6 @@ Gib danach die ``Bridge vmbr0`` für die einzurichtende Netzwerkkarte an. Die zw
 Klicke dann auf ``Next``.
 
 Zum Abschluss siehst Du nochmals alle Einstellungen für die VM. Überprüfe diese. Solltest Du Änderungen vornehmen wollen, kannst Du auf die entsprechende Reiterkarte klicken, Änderungen durchführen und wieder zur Reiterkarte ``Confirm`` wechseln.
-
-.. Kos - image2renew
 
 .. figure:: media/proxmox-create-vm-opnsense-08.png
    :align: center
@@ -1038,8 +1028,6 @@ Klicke dann auf ``Next``.
 
 Wähle nun den ISO-Datenspeicher unter Storage aus. Das ist der Speicher, auf den Du vorher die ISO-Images abgelegt hast.
 Wähle dann das ISO image des Ubuntu Server aus.
-
-.. Kos - image2renew
 
 .. figure:: media/proxmox-create-vm-ubuntu-server-02.png
    :align: center
@@ -1131,8 +1119,6 @@ Achte darauf, dass die Option ``Start after created`` unbedingt ``deaktiviert`` 
 Klicke dann auf ``Finish``.
 
 Nachdem die VM angelegt wurde, siehst Du diese links im Verzeichnisbaum Deines Proxmox-Host, in dem alle VMs dargestellt werden.
-
-.. Kos - image2renew
 
 .. figure:: media/proxmox-create-vm-ubuntu-server-10.png
    :align: center
