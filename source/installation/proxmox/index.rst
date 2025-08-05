@@ -1136,6 +1136,8 @@ Welches sich auch in der schematischen Übersicht zeigt:
 
    Stand nach der Erzeugung der Virtuellen Maschine Ubuntu 
    
+.. Kos - Move the next paragraph after the paragraph “Concluding conf ...”
+
 Anlegen der VM für den File-Server
 ----------------------------------
 
