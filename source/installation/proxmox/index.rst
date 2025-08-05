@@ -1138,6 +1138,8 @@ Klicke dann auf ``Finish``.
 
 Nachdem die VM angelegt wurde, siehst Du diese links im Verzeichnisbaum Deines Proxmox-Host, in dem alle VMs dargestellt werden.
 
+.. Kos - image2renew
+
 .. figure:: media/proxmox-create-vm-ubuntu-server-10.png
    :align: center
    :scale: 80%
@@ -1159,7 +1161,11 @@ Anlegen der VM für den File-Server
 
 Setzt Du den File-Server für linuxmuster.net ein, so erstelle eine weitere VM identisch zu der bereits für den linuxmuster.net AD/DC Server. 
 
+.. Kos - cloning of the lmn-server-images with description and images 
+   
 Dieser muss über **zwei Festplatten** verfügen. Passe die Größen an Deinen Bedarf an.
+
+.. Kos - resizing second hdd 
 
 Alle weiteren Schritte führst Du so aus, wie zuvor beschrieben.
 
