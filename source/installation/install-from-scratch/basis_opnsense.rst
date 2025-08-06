@@ -10,9 +10,9 @@ Anlegen und Installieren der Firewall
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_,
                    `@rettich <https://ask.linuxmuster.net/u/rettich>`_,
 
-Die Installation der Open-Source Firewall OPNsense |reg| ist optional. Ebenso kannst Du Deine bereits bestehende Firewall weiterverwenden und diese nach der Konfiguration der beiden linuxmuster.net-Server (AD/DC und File-Server) zur Nutzung mit linuxmuster.net anpassen.
+Die Installation der Open-Source Firewall OPNsense |reg| ist in dieser Beschreibung der Standard. Ebenso kannst Du Deine bereits bestehende Firewall weiterverwenden und diese nach der Konfiguration der beiden linuxmuster.net-Server (AD/DC und File-Server) zur Nutzung mit linuxmuster.net anpassen.
 
-Die nachstehende Dokumentation beschreibt zunächst die Installation der OPNsense |reg| Firewall.
+Die nachstehende Dokumentation beschreibt die Installation der OPNsense |reg| Firewall.
 
 Installation der OPNsense |reg|
 ===============================
@@ -27,7 +27,7 @@ Installation der OPNsense |reg|
    
       Stand nach der vorhergehenden Beschreibung
 
-Falls Du Dich für eine andere Installationsart entschieden hast, musst Du den dargestellten Aufbau herstellen.
+Falls Du Dich für eine andere Installationsart entschieden hast, musst Du den dargestellten Aufbau herstellen. Solltest Du dich aufgrund der geringen Größe der Bildungseinrichtung für eine Installation ohne File-Server entschieden haben, so brauchst du nur eine Firewall und einen Ubuntu-Server.
       
 Lade Dir die ISO-Datei der OPNsense |reg| von der Seite https://opnsense.org/download/ herunter.
 
