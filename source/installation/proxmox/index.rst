@@ -789,31 +789,31 @@ Prüfsummendatei (<filename>.sha256)
 
 .. code::
 
-   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-25.1-checksums-amd64.sha256
+   curl -O https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-25.7-checksums-amd64.sha256
    
 Signatur Datei (<filename>.sig)
 	
 .. code:: 
 
-   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-25.1-dvd-amd64.iso.sig
+   curl -O https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-25.7-dvd-amd64.iso.sig
 
 Der öffentliche Schlüssel von OPNsense |reg| (<filename>.pub)
 
 .. code::
 
-   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-25.1.pub
+   curl -O https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-25.7.pub
 
 Die komprimierte ISO Datei (<filename>.iso.bz2)
 
 .. code::
 
-   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-25.1-dvd-amd64.iso.bz2
+   curl -O https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-25.7-dvd-amd64.iso.bz2
 
 Nun gilt es, die ISO-Datei auszupacken. Das machst Du mit folgendem Befehl:
 
 .. code::
 
-   bunzip2 OPNsense-25.1-dvd-amd64.iso.bz2
+   bunzip2 -v -v OPNsense-25.7-dvd-amd64.iso.bz2
 
 Das Entpacken kann einige Zeit in Anspruch nehmen. Anschließend sollte sich in dem Verzeichnis die OPNsense-ISO-Datei befinden.
 
@@ -821,11 +821,11 @@ Das Entpacken kann einige Zeit in Anspruch nehmen. Anschließend sollte sich in 
 
 .. code::
    
-   openssl base64 -d -in OPNsense-25.1-dvd-amd64.iso.sig -out /tmp/image.sig
+   openssl base64 -d -in OPNsense-25.7-dvd-amd64.iso.sig -out /tmp/image.sig
 
 .. code::
 
-   openssl dgst -sha256 -verify OPNsense-25.1.pub -signature /tmp/image.sig OPNsense-25.1-dvd-amd64.iso
+   openssl dgst -sha256 -verify OPNsense-25.7.pub -signature /tmp/image.sig OPNsense-25.7-dvd-amd64.iso
 
 Der letzte Befehl sollte Dir ein ``Verified OK`` liefern.
 
