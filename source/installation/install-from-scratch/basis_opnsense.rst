@@ -291,6 +291,8 @@ Fahre mit `Überprüfung der Zuordnung der Netzwerkkarten`_ fort, ansonsten |...
    
    Zuordnung der NICs prüfen
 
+.. Kos: Text dem Bild und Situation anpassen   
+
 Die erste Netzwerkkarte (LAN) ist derzeit als LAN mit dem pädagogischen Netz verbunden. Die Netzwerkkarte ``vtnet0`` ist nach der bisherigen Installation allerdings mit dem roten Netz verbunden. Dies kannst Du im Virtualisierer nochmals prüfen, achte dabei auf die MAC-Adressen der Netzwerkkarten. Zudem vergibt die Installationsroutine der OPNsense |reg| immer die IP 192.168.1.1/24 der LAN-Schnittstelle. Dies ist jetzt noch zu ändern.
 
 Die zweite Netzwerkkarte (WAN) ist derzeit mit ``vtnet1`` verbunden. Dies müssen wir noch ändern.
