@@ -45,6 +45,8 @@ Nutze als Architektur ``amd64`` und als ``image type dvd``. Du erhältst dann ei
    
    [Stand: Mai 25]. 
    
+   Version 25.7 befindet sich in der Testphase. Berichte über Erkenntnise der Zusammenarbeit mit linuxmuster.net bitte an das Forum oder an die oben genannten Personen. [Stand 06.08.25]
+
    wget https://mirror.informatik.hs-fulda.de/opnsense/releases/25.1/OPNsense-25.1-dvd-amd64.iso.bz2
 
 Die heruntergladene Datei entpackst Du unter Linux mit folgendem Befehl:
