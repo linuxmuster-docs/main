@@ -293,9 +293,23 @@ Fahre mit `Überprüfung der Zuordnung der Netzwerkkarten`_ fort, ansonsten |...
 
 .. Kos: Text dem Bild und Situation anpassen   
 
-Die erste Netzwerkkarte (LAN) ist derzeit als LAN mit dem pädagogischen Netz verbunden. Die Netzwerkkarte ``vtnet0`` ist nach der bisherigen Installation allerdings mit dem roten Netz verbunden. Dies kannst Du im Virtualisierer nochmals prüfen, achte dabei auf die MAC-Adressen der Netzwerkkarten. Zudem vergibt die Installationsroutine der OPNsense |reg| immer die IP 192.168.1.1/24 der LAN-Schnittstelle. Dies ist jetzt noch zu ändern.
+Die Installationsroutine der OPNsense |reg| vergibt immer die IP 192.168.1.1/24 für die LAN-Schnittstelle.
+  
+Das Netzwerk LAN soll mit dem pädagogischen Netz über die Netzwerkkarte ``vtnet1`` verbunden sein. Ihm wurde aber Netzwerkkarte ``vtnet0`` zugewiesen.
 
-Die zweite Netzwerkkarte (WAN) ist derzeit mit ``vtnet1`` verbunden. Dies müssen wir noch ändern.
+Das Netzwerk WAN ist derzeit mit ``vtnet1`` verbunden, hat hier keine IP-Adresse erhalten und sollte mit ``vtnet0`` verbunden sein .
+
+Dies kannst Du im Virtualisierer nochmals prüfen, achte dabei auf die MAC-Adressen der Netzwerkkarten. 
+
+Eventuell Änderungen musst Du noch vornehmen, damit sich folgendes Bild ergibt:
+
+.. figure:: media/basis_opnsense_023_old.png
+   :align: center
+   :alt: OPNsense: Assign interfaces 
+
+   Zuordnung nach der erfolgreichen Anpassung
+
+Eventuell deckt sich die Zuordnung der Netzwerk-Interfaces deiner Installation schon mit der dargestellten, dann kannst du zu dem nächsten Abschnitt springen. `WAN Zugang testen`_
 
 Anpassung der Zuordnung der Netzwerkkarten
 ------------------------------------------
@@ -384,13 +398,12 @@ Diese Zuordnung ist nun richtig, also weiter mit ``y`` |...|
 
 Die Zuordnung des WAN-Interfaces ist hier zu erkennen und nun so wie beabsichtigt. Das erkennst Du daran, das dessen IP-Adresse dem Adress-Pool des Routers entnommen ist (, sofern der DSL-Router via DHCP eine Adresse verteilt).
 
+WAN Zugang testen
+^^^^^^^^^^^^^^^^^
+
 .. hint::
 
    Starte die OPNsense |reg| neu, nachdem Du die Netzwerkkarten neu zugeordnet hast.
-
-
-WAN Zugang testen
-^^^^^^^^^^^^^^^^^
 
 Hast Du die OPNsense |reg| neu gestartet und auf der WAN-Schnittstelle eine IP-Adresse erhalten, führe zwei erste Tests durch. Wähle ``8) Shell`` auf der Kommandozeile und gib dort folgende Befehle ein:
 
@@ -442,7 +455,7 @@ Solltest Du in Deiner Netzwerkkonfiguration von unserem Muster abweichen, musst 
    :align: center
    :alt: OPNsense: set interfaces IP address 
 
-   Setze die INterface IPs
+   Setze die Interface IPs
 
 Wähle in der Konsole der OPNsense |reg| den Eintrag ``2) Set interface IP address`` aus.
 
@@ -558,15 +571,27 @@ Aktualisierung der OPNsense |reg|
 
 Aktualisiere die OPNsense |reg| in der Konsole, indem Du den Punkt ``12) Update from console`` aufrufst und die Rückfrage mit ``y`` bestätigst.
 
+.. hint:: Sollte von deinem Router neben einer IPv4-Adresse eine v6-Adresse vermittelt worden sein, kann es bei dem nachfolgenden Test zu einem Timeout des Prozesses kommen.
+
+   .. figure:: media/basis_opnsense_040_01.png
+      :align: center
+      :alt: OPNsense: Fehlermeldung timeout
+   
+   Da dieser Prozess dann nicht automatisch beendet wird, musst Du ihn mittels [Strg]+[C] beenden.
+  
+   Für die erfolgreiche Fortsetzung der Einrichtung wiederhole die Beschreibung `IP-Adressen zuweisen`_ für das WAN-Interface [2]. Dabei deaktivere den Eintrag ``DCHPv6 zuweisen lassen`` mit ``n`` und vergebe keine eigene Adresse. Nach einem erneuten Neustart sollte sich das Update der OPNsense |reg| durchführen lassen.
+
 .. hint:: 
 
-   Sollte hierbei keine Verbindung zu den externen Update-Servern möglich sein, dann stimmt etwas mit der Netzwerkkartenzuordnung nicht.
+   Sollte gar keine Verbindung zu den externen Update-Servern möglich sein, dann stimmt etwas mit der Netzwerkkartenzuordnung nicht.
 
-   Als Erstes probiere es mit dem Neustart aller Netzwerk-Dienste. Dazu wählst Du den Punkt ``11) Reload all services``. Danach wiederholst Du das Upgrade nochmals mit dem Punkt ``12) Update from console``.
-
-   Sollte die Aktualisierung immer noch nicht erfolgreich durchgeführt werden, dann überprüfe Deine vorherige Netzwerk-Konfiguration auf Fehler.
+   Als Erstes probiere es mit dem Neustart aller Netzwerk-Dienste. Dazu wählst Du den Punkt ``11) Reload all services``. 
    
-Sollte sich eine Eingabe-Aufforderung wie hier dargestellt vorher öffnen, muss du zum Fortführen des Updates ein ``q`` eingeben. Um dir alle Mitteilungen anzusehen, verwende die Auf- bzw. Ab-Tasten.
+   Danach wiederholst Du das Update nochmals mit dem Punkt ``12) Update from console``.
+
+   Sollte die Aktualisierung immer noch nicht erfolgreich durchgeführt werden, dann überprüfe Deine vorherige Netzwerk-Konfiguration auf generelle Fehler ebenso deine verwendete Hardware.
+   
+Sollte sich eine Eingabe-Aufforderung wie hier dargestellt vorher öffnen, kannst Du dir alle Mitteilungen ansehen mit  den Auf- bzw. Ab-Tasten. Zum Fortführen des Updates gebe ein ``q`` ein. 
 
 .. figure:: media/basis_opnsense_022_hello_world.png
    :align: center
@@ -584,7 +609,7 @@ Das Update ist erfolgreich durchgeführt, wenn du wieder zu dieser Ansicht gelan
 
 .. hint::
 
-   Stand Mai 25 für die OPNsense |reg| ist die Version 25.1.5_5
+   Stand August 25 für die OPNsense |reg| ist die Version 25.7
 
 Klappt das Update, starte die OPNsense |reg| neu.
 
