@@ -563,7 +563,9 @@ Nach erfolgreicher Übernahme erhältst Du den Hinweis, dass Du Dich mit der LAN
    
    GUI IP
 
-Bevor Du das aber machst, erfolgt ein letzter Test, und zwar mit der Aktualisierung der OPNsense |reg|.
+Bevor Du das aber machst, starte die OPNSENSE |reg| mit ``6`` nochmals neu.
+
+Nach dem Neusstart erfolgt ein letzter Test, und zwar mit der Aktualisierung der OPNsense |reg|.
 
 
 Aktualisierung der OPNsense |reg|
@@ -866,7 +868,7 @@ Wenn keine Aktualisierungen verfügbar sind, erhältst Du folgende Meldung |...|
    Keine Aktualisierungen verfügbar
 
 
-|...| und kannst zum abschließenden Schritt `Logout`_ gehen.
+|...| und kannst zum abschließenden Schritt `QEMU Guest Agent for OPNsense`_ gehen.
 
 Sollten Dir unter dem Reiter ``Aktualisierungen`` zu aktualisierende Pakete angezeigt werden |...|
 
@@ -888,15 +890,37 @@ Sollten Dir unter dem Reiter ``Aktualisierungen`` zu aktualisierende Pakete ange
    
    Dashboard nach erneuter Anmeldung
 
-|...| prüfe jetzt die Gateway-Einstellungen. Gehe auf ``System`` --> ``Gateways`` --> ``Konfiguration`` und editiere Dein **Gateway (WAN_GW) mit dem Stiftsymbol**.
+.. ... prüfe jetzt die Gateway-Einstellungen. Gehe auf ``System`` --> ``Gateways`` --> ``Konfiguration`` und editiere Dein **Gateway (WAN_GW) mit dem Stiftsymbol**.
 
-.. figure:: media/basis_opnsense_059.png
+.. .. figure:: media/basis_opnsense_059.png
    :align: center
    :alt: OPNsense: Gateway configuration
    
    Gateway - Konfiguration
 
-Setze einen Haken bei ``Deaktiviere Gatewayüberwachung``, speichere die Einstellung und übernimm die Änderung. Jetzt ist Dein Gateway online. Du kannst später die Gatewayüberwachung wieder aktivieren, ohne dass das Gateway offline geht.
+.. Setze einen Haken bei ``Deaktiviere Gatewayüberwachung``, speichere die Einstellung und übernimm die Änderung. Jetzt ist Dein Gateway online. Du kannst später die Gatewayüberwachung wieder aktivieren, ohne dass das Gateway offline geht.
+
+QEMU Guest Agent for OPNsense
+-----------------------------
+
+
+.. .. figure:: media/basis_opnsense_059a.png
+   :align: center
+   :alt: OPNsense: Gateway configuration
+   
+   Aktivierung Show community plugins 
+
+.. .. figure:: media/basis_opnsense_059b.png
+   :align: center
+   :alt: OPNsense: Gateway configuration
+   
+   Installation QEMU Guest Agent for OPNsense
+
+.. .. figure:: media/basis_opnsense_059b.png
+   :align: center
+   :alt: OPNsense: Gateway configuration
+   
+   Installation QEMU Guest Agent for OPNsense
 
 Nach dem erneuten Neustart ist die OPNsense |reg| soweit vorbereitet.
 
