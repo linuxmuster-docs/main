@@ -581,7 +581,7 @@ Aktualisiere die OPNsense |reg| in der Konsole, indem Du den Punkt ``12) Update 
    
    Da dieser Prozess dann nicht automatisch beendet wird, musst Du ihn mittels [Strg]+[C] beenden.
   
-   Für die erfolgreiche Fortsetzung der Einrichtung wiederhole die Beschreibung `IP-Adressen zuweisen`_ für das WAN-Interface [2]. Dabei deaktivere den Eintrag ``DCHPv6 zuweisen lassen`` mit ``n`` und vergebe keine eigene Adresse. Nach einem erneuten Neustart sollte sich das Update der OPNsense |reg| durchführen lassen.
+   Für die erfolgreiche Fortsetzung der Einrichtung wiederhole die Beschreibung `IP-Adressen zuweisen`_ für das WAN-Interface ``2``. Dabei deaktivere den Eintrag ``DCHPv6 zuweisen lassen`` mit ``n`` und vergebe keine eigene Adresse. Nach einem erneuten Neustart der OPNsense |reg| sollte sich das Update durchführen lassen.
 
 .. hint:: 
 
