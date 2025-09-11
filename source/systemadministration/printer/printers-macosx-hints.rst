@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 Hinweise Mac OS X - Clients
 ===========================
 

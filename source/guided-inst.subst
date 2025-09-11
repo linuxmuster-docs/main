@@ -4,18 +4,37 @@
 
    .. include:: /guided_inst.subst
 
-   The two pipe symbols "|abc|" with the text in between represent the placeholder. It is followed by the character set to be used, followed by two colons. This is followed by the text that replaces the placeholder during the make run. The end of the line is a comment that starts with the two dots.
+.. The two pipe symbols "|abc|" with the text in between represent the placeholder.
+   This is followed by the character set to be used, followed by two colons.
+   This is followed by the text that replaces the placeholder during the Make run.
+   The two dots mark the end of the text
+   The end of the line is a comment that begins with the two dots.
+   ############################################################################################################
 
 .. Diese Datei enthält alle Platzhalter, um eine zentrale Anlaufstelle im Falle von Änderungen zu gewährleisten.
 
    Um diese Platzhalter verwenden zu können, müssen die ersten Dateien, die einen solchen Link enthalten sollen, die include-Anweisung enthalten:
 
-   .. include:: /guided_inst.subst
+   .. include:: /guided-inst.subst
 
-   Die beiden Pipe-Symbole "|abc|" mit dem Text dazwischen stellen den Platzhalter dar. Es folgt der zu verwendende Zeichensatz, gefolgt von zwei Doppelpunkten. Danach folgt der Text, der den Platzhalter während des Make-Laufs ersetzt. Das Ende der Zeile ist ein Kommentar, der mit den beiden Punkten beginnt.
+.. Erklärung des Aufbau der Platzhalter
 
+   Die beiden Pipe-Symbole "|abc|" mit dem Text dazwischen stellen den Platzhalter dar.
+   Es folgt der zu verwendende Zeichensatz, gefolgt von zwei Doppelpunkten.
+   Danach folgt der Text, der den Platzhalter während des Make-Laufs ersetzt.
+   Die zwei Punkte markieren das Ende des Textes
+   Das Ende der Zeile ist ein Kommentar, der mit den beiden Punkten beginnt.
+   ############################################################################################################
    Siehe auch: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#substitutions
+   ############################################################################################################
    
+
+.. Hier Ersetzungen die sich bei Versionsänderungen angepasst werden sollen
+
+.. |lts_version| unicode:: 24.04 .. LTS Versionsnummer
+
+.. Hier feststehende Konstanten:
+
 .. |zB| unicode:: z. U+00A0 B. .. Zum Beispiel 
   
 .. |ua| unicode:: u. U+00A0 a. .. und andere
@@ -34,3 +53,6 @@
 .. |-| unicode:: U+2013 .. Gedankenstrich
 
 .. |dh| unicode:: d. U+00A0 h. .. das heisst
+
+
+

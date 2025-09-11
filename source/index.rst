@@ -1,7 +1,8 @@
+.. include:: /guided-inst.subst
 Einführung
 ==========
 
-Herzlich Willkommen zur Dokumentation von linuxmuster.net v7.2!
+Herzlich Willkommen zur Dokumentation von linuxmuster.net v7.3!
 
 Diese beschreibt alle wichtigen Schritte ...
 
@@ -31,7 +32,7 @@ Installation from Scratch
 -------------------------
 
 Diese Dokumentation führt Dich durch eine Installation von Grund auf. Dies bedeutet, dass zunächst 
-die Vorbereitung der Virtualisierungslösungen - hier Proxmox - dokumentiert wird. Auf dem Virtualisierer sind sog. Virtuelle Maschinen (VM) anzulegen, um linuxmuster.net 7.2 installieren zu können. Hierzu gehört die spezifische Einrichtung des Netzwerks, des Speichers sowie die Vorbereitung der VM.
+die Vorbereitung der Virtualisierungslösungen - hier Proxmox - dokumentiert wird. Auf dem Virtualisierer sind sog. Virtuelle Maschinen (VM) anzulegen, um linuxmuster.net 7.3 installieren zu können. Hierzu gehört die spezifische Einrichtung des Netzwerks, des Speichers sowie die Vorbereitung der VMs.
 
 Weitere Hilfe
 -------------
@@ -45,7 +46,7 @@ Informationen zum Telefon-Support gibt es auf unser Projektseite `<https://www.l
 
 .. hint::
 
-   Suchst Du die Dokumentation zur Version linuxmuster.net 7.1 oder die Möglichkeit unsere Dokumentation herunterzuladen?
+   Suchst Du die Dokumentation zur Version linuxmuster.net 7.2 oder die Möglichkeit unsere Dokumentation herunterzuladen?
 
 Dann schaue in die unten recht angezeigte - zusätzliche - Menüleiste.
 
@@ -91,7 +92,7 @@ Nach einem Klick auf die Leiste eröffnen sich Dir dort noch weitere Möglichkei
   setup/setup
   setup/setup-gui
   setup/setup-console
-  setup/add-user-accounts
+  setup/setup-file-server
   clients/client_templates/index
 
 ..  setup/add-devices
@@ -102,7 +103,6 @@ Nach einem Klick auf die Leiste eröffnen sich Dir dort noch weitere Möglichkei
   :hidden:
 
   migration/upgrade
-  migration/linbo-migration-to-4
 
 .. toctree::
   :maxdepth: 2
@@ -111,7 +111,6 @@ Nach einem Klick auf die Leiste eröffnen sich Dir dort noch weitere Möglichkei
 
   migration/index
   migration/linbo-migration-to-4
-  migration/linux-client-migration
 
 .. toctree::
   :maxdepth: 4
@@ -133,10 +132,10 @@ Nach einem Klick auf die Leiste eröffnen sich Dir dort noch weitere Möglichkei
   :caption: Benutzerverwaltung
   :hidden:
 
-  user-management/change-own-password
-  user-management/student-management
   user-management/manage-users/index
+  user-management/change-own-password
   user-management/change-teacher-passwords/index
+  user-management/student-management
   user-management/manage-quota/index
   user-management/preparation-newterm/index
 
@@ -165,6 +164,8 @@ Nach einem Klick auf die Leiste eröffnen sich Dir dort noch weitere Möglichkei
   systemadministration/gpo/gpo
   systemadministration/sw-remote-gpo/sw-remote-gpo
   systemadministration/openvpn/index
+  systemadministration/certificates/index
+  
 
 .. toctree::
   :maxdepth: 2

@@ -1,3 +1,5 @@
+.. include:: /guided-inst.subst
+
 Drucker auf dem Server hinzufügen
 =================================
 
@@ -7,7 +9,7 @@ Um die als Geräte bereits importieren Netzwerkdrucker einzurichten, sind diese 
 
 Für die Nutzung von HP-Druckern ist es hilfreich, auf dem Server die Bibliothek ``HPLIP`` zu installieren und dann die Drucker einzurichten.
 
-Zur Installation der HPLIP Bibliothek rufst Du unter Ubuntu 22.04 LTS Server folgenden Befehl auf dem Server auf:
+Zur Installation der HPLIP Bibliothek rufst Du unter Ubuntu |lts_version| LTS Server folgenden Befehl auf dem Server auf:
 
 .. code::
 

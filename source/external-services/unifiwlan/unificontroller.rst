@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 Der Unifi-Kontroller
 ====================
 

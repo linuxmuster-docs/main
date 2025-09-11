@@ -1,4 +1,4 @@
-.. include:: ../guided-inst.subst
+.. include:: /guided-inst.subst
 
 .. _setup-console-label:
 
@@ -9,18 +9,24 @@ Setup im Terminal
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
                    `@MachtDochNix <https://ask.linuxmuster.net/u/machtdochnix>`_
 
-Melde Dich als Benutzer ``root`` mit dem Passwort ``Muster!`` auf dem Server an.
+Melde Dich als Benutzer ``linuxadmin`` mit dem Passwort ``Muster!`` auf dem linuxmuster.net Server AD/DC an.
 
 Für diese Anmeldung kannst Du die xterm.js Konsole von Proxmox verwenden, wenn Du unserer Anleitung gefolgt bist. Alternativ kannst Du Dich via ssh von einem anderen Rechner mit dem Server verbinden, wenn er sich im gleichen Netzwerksegment befindet.
 
-Im Terminal wirst Du mit dem Erstbildschirm von linuxmuster.net v7.2 begrüßt.
+Im Terminal wirst Du mit dem Erstbildschirm von linuxmuster.net v7.3 begrüßt und es werden die installierten Paketversionen von linuxmuster.net angezeigt.
 
 .. figure:: media/newsetup/lmn-setup-terminal-01.png
    :align: center
    :alt: Terminal after login
-   :width: 80%
+   :width: 40%
    
    Welcome to lmn.net
+   
+Wechsle im Terminal zum Benutzer root mit
+
+.. code::
+
+   sudo -i
 
 Das Setup wird über den Befehl ``linuxmuster-setup`` gestartet. 
 
@@ -63,6 +69,10 @@ Willst Du diese Möglichkeit nutzen, lege eine ``config.txt`` mittels des nächs
 .. code:: 
 
    echo -e "[setup] \nservername = \ndomainname = \ndhcprange = \nschoolname = \nlocation = \ncountry = \nstate = \nskipfw = False" > ~/config.txt
+   
+.. attention::
+
+   Solltest Du bereits eine Firewall in Betrieb haben und möchtest nicht während des Setups eine neu installierte OPNsense |reg| Firewall mit konfigurieren, dann setze für skipfw = TRUE
    
 Diese Datei musst Du noch mit Deinen Angaben füllen. Hier beispielhaft mit dem Editor nano gezeigt
 
@@ -135,7 +145,7 @@ Danach gelangst Du zur Angabe der sogenannten Domain. Beachte bei dessen Festleg
 
 Bestätige Deine Eingabe mit ``< OK >``. 
 
-Es erscheint der IP-Adressbereich, der für die Rechneraufnahme mit Linbo reserviert wird. In der Abb. ist dies der Bereich ``10.0.0.100`` bis ``10.0.0.200``.
+Es erscheint der IP-Adressbereich, der für die Rechneraufnahme mit Linbo reserviert wird. In der Abb. ist dies der Bereich ``10.0.255.1`` bis ``10.0.255.254``.
 
 .. figure:: media/newsetup/lmn-setup-terminal-04.png
    :align: center
@@ -146,7 +156,7 @@ Es erscheint der IP-Adressbereich, der für die Rechneraufnahme mit Linbo reserv
 
 Wechsele mit ``< OK >`` zur nächsten Eingabemaske.
 
-Hier setzt Du ein neues Administrations-Kennwort. Dieses wird zugleich das neue Kennwort aller administrativens Benutzer, so auch vom ``gobal-admin`` in der Schulkonsole.
+Hier setzt Du ein neues Administrations-Kennwort. Dieses wird zugleich das neue Kennwort aller administrativen Benutzer, so auch für den WebUI Benutzer ``gobal-admin``.
 
 .. figure:: media/newsetup/lmn-setup-terminal-05.png
    :align: center
@@ -201,7 +211,7 @@ Nach Abschluss des Setups siehst Du im Terminal, dass das Setup beendet wurde.
    
    Terminal Setup: Abschluss des Setups
 
-Danach muss noch der Dienst für die WebUI/Schulkonsole oder der Server neu gestartet werden.
+Danach muss noch der Dienst für die WebUI oder der Server neu gestartet werden.
 
 .. code::
 
@@ -219,11 +229,11 @@ Das erste Verfahren hat den Vorteil, dass Du nicht die Zeit des Neustarts abwart
 
    Starte nach dem erfolgreichen Setup ebenfalls die OPNsense |reg| neu.
 
-Nach abgeschlossenem Setup und dem Neustart des Dienstes ``linuxmuster-webui`` bzw. eventuellen Neustart des Servers, kannst Du Dich mit einem PC via Browser an der Schulkonsole von linuxmuster.net v7.2 anmelden.  
+Nach abgeschlossenem Setup und dem Neustart des Dienstes ``linuxmuster-webui`` bzw. eventuellen Neustart des Servers, kannst Du Dich mit einem PC via Browser an der Schulkonsole von linuxmuster.net v7.3 anmelden.  
 
-Nachdem sich Dein Client eine IP-Adresse via DHCP aus dem Adressbereich für die Rechneraufnahme geholt hat, ist dieses aber nicht möglich. Dessen Adressen sind aus sicherheitstechnischen Erwägungen nur auf das allernötigste beschränkt.
+Nachdem sich Dein Client eine IP-Adresse via DHCP aus dem Adressbereich für die Rechneraufnahme geholt hat, ist dieses aber nicht möglich. Dessen Adressen sind aus sicherheitstechnischen Erwägungen beschränkt.
 
-Daher muss sich der Rechner in einem besonderen LAN-Bereich befinden, etwa mit der IPv4-Adresse 10.0.0.10/16. Diese IP-Adresse musst Du manuell in Deinem Admin-PC einrichten.
+Daher muss sich der Rechner in einem besonderen LAN-Bereich befinden - etwa mit der IPv4-Adresse 10.0.0.10/16. Diese IP-Adresse musst Du manuell in Deinem Admin-PC einrichten.
 
 Anmeldung an der Schulkonsole als global-admin
 ==============================================
@@ -248,7 +258,7 @@ Der Browser zeigt Dir den Warnhinweis an. Klicke auf ``Erweitert ...``.
 
 Es erscheint auf der gleichen Seite unten ein weiterer Eintrag. Bestätige diesen, indem Du den Button ``Risiko akzeptieren und fortfahren`` auswählst.
 
-Danach kommst Du zur Anmeldeseite der WebUI/Schulkonsole. Melde Dich nun als Benutzer ``global-admin`` an und nutze das während des Setups festgelegte Kennwort.
+Danach kommst Du zur Anmeldeseite der WebUI. Melde Dich nun als Benutzer ``global-admin`` an und nutze das während des Setups festgelegte Kennwort.
 
 .. figure:: media/newsetup/lmn-setup-gui-11.png
    :align: center
@@ -321,10 +331,8 @@ Setze den Haken für ``Use System Nameservers``, dort siehst Du dann die in obig
 
 Mit sog. Overrides können im Unbound DNS genutzt werden, um die DNS-Ergebnisse in gewünschter Form anzupassen oder aber spezielle DNS Einträge bereitzustellen. Weitergehende Informationen findest Du hier: https://docs.opnsense.org/manual/unbound.html
 
-   
-Setze die Ersteinrichtung fort, indem Du :ref:`add-user-accounts-label` und :ref:`hardware-registration-label` aufrufst.
+Klicke weiter um den Fileserver einzurichten.
 
-``Alternativ``: Willst Du eine Migration durchführen, geht es weiter mit: :ref:`migration-label`
 
 
 

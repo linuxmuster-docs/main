@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 Umzug von Leoclient1 nach Leoclient2
 ------------------------------------
 

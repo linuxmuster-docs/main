@@ -1,10 +1,9 @@
-.. include:: ../../guided-inst.subst
-
+.. include:: /guided-inst.subst
 .. _basis_server-label:
 
-====================================
-Anlegen und Installieren des Servers
-====================================
+============================================
+Anlegen und Installieren des Servers (AD/DC)
+============================================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
@@ -35,7 +34,7 @@ Erster Start des Servers vom Installationsmedium
 Sprachauswahl
 -------------
 
-Starte den Server Ubuntu 22.04 LTS Server ISO-Image. Es erscheint das erste Installationsfenster mit der Abfrage zur gewünschten Sprache.
+Starte den Server Ubuntu 24.04 LTS Server ISO-Image. Es erscheint das erste Installationsfenster mit der Abfrage zur gewünschten Sprache.
 
 .. figure:: media/basis_server_001.png
    :align: center
@@ -418,7 +417,7 @@ Nach erfolgter Anmeldung mit Deinem Account kannst Du die ab jetzt folgenden Cod
 Proxmox Guest-Agent installieren
 --------------------------------
 
-Um mit Proxmox die Server VM herunterfahren zu können, oder für den Snapshot diese vorher korrekt "einzufrieren", ist die Installation eines Gast-Agenten unter Ubuntu Server 22.04 erforderlich. Zudem musst Du noch dem Agenten unter Proxmox aktivieren.
+Um mit Proxmox die Server VM herunterfahren zu können, oder für den Snapshot diese vorher korrekt "einzufrieren", ist die Installation eines Gast-Agenten unter Ubuntu Server |lts_version| erforderlich. Zudem musst Du noch dem Agenten unter Proxmox aktivieren.
 
 Gehe dabei wie folgt vor:
 
@@ -472,8 +471,8 @@ Werde mit |...|
 
 .. code::
 
-  apt install nano
-  nano /etc/apt/apt.conf.d/20auto-upgrades
+   apt install nano vim less
+   nano /etc/apt/apt.conf.d/20auto-upgrades
 
 Ersetze bei ``APT::Periodic::Unattended-Upgrade`` die ``"1";`` durch ``"0";``.
 Mit ``<Strg>+o`` und anschließendem ``Enter`` speicherst Du die Änderung ab. Und mit ``<Strg>+x`` verlässt Du nano wieder.
@@ -493,6 +492,25 @@ Danach sind alle Dienste mit den jeweils neu installierten Bibliotheken neu gest
 .. attention::
 
    Durch das Deaktivieren der automatischen Updates liegt jetzt natürlich die Verantwortung des zeitnahen Einspielen von Updates bei Dir bzw. der Person, die für die Administration verantwortlich zeichnet!
+   
+Netz-Tools installieren
+-----------------------
+
+Dem frisch installierten Ubuntu-Server fehlen noch Tools, um Netzwerktests ausführen zu können.
+
+Führe hierzu folgenden Befehl aus:
+
+.. code::
+
+   sudo apt install -y net-tools iputils-ping dnsutils
+   
+Sollte die Namensauflösung Probleme bereiten, prüfe die Datei /etc/resolv.conf mit
+
+.. code::
+
+   less /etc/resolv.conf
+   
+Sollte als nameserver nur 127.0.0.53 angegeben sein, must Du diese IP durch 10.0.0.254 ersetzen.
 
 Test der Verbindung zur Firewall
 --------------------------------

@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 Unifi-WLAN-Lösung für linuxmuster.net 
 =====================================
 

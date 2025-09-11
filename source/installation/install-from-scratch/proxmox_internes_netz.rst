@@ -1,4 +1,4 @@
-.. include:: ../../guided-inst.subst
+.. include:: /guided-inst.subst
 
 .. _proxmox_internes_netz-label:
 
@@ -8,17 +8,36 @@ Proxmox in das interne Netz bringen
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
-                  
+
+Vorbereitungen
+==============                  
 
 Du hast bis hiering bereits folgende Schritte absolviert:
 
+``Optional``
+
 - Du hast die Firewall installiert,
 - eine Erstkonfiguration der Firewall erstellt,
-- Du hast einen Snapshot der Firewall-VM erstellt,
-- Du hast die Server-VM erstellt
-- Du hast Ubuntu-Server installiert und vorkonfiguriert
-- Du hast den Server mit ``lmn-prepare`` für das spätere linuxmuster-setup vorbereitet,
+- Du hast einen Snapshot der Firewall-VM erstellt.
+
+``Pflicht``
+
+**linuxmuster.net Server AD/DC**
+
+- Du hast die Server-VM für den AD/DC erstellt.
+- Du hast Ubuntu-Server installiert und vorkonfiguriert.
+- Du hast den Server mit ``lmn-prepare`` für das spätere linuxmuster-setup vorbereitet.
 - Du hast von der Server-VM einen Snapshot erstellt.
+
+**linuxmuster.net File-Server**
+
+- Du hast die Server-VM für den File-Server erstellt.
+- Du hast Ubuntu-Server installiert und vorkonfiguriert.
+- Du hast die linuxmuster-fileserver Paketquellen sowie das Paket installiert.
+- Du hast von der File-Server-VM einen Snapshot erstellt.
+
+Netzwerkkonfiguration
+=====================
 
 Hast Du diese Schritte erfolgreich durchlaufen, gilt es jetzt, die Netzwerk-Konfiguration des Proxmox-Host umzukonfigurieren.
 
@@ -74,7 +93,10 @@ Danach must Du noch die Datei ``/etc/hosts`` anpassen:
 
 Diese Einstellungen werden mit dem nächsten Start des Proxmox-Hosts aktiv.
 
-Daher gilt es sicherszustellen das die OPNSense |reg| automatisch startet. Dafür bei (``Proxmox-Host`` --> ``VM`` --> ``Options`` --> ``Start on boot``) die Aktivierung setzen.
+Boot-Optionen der VMs
+=====================
+
+Daher gilt es sicherzustellen das die OPNSense |reg| automatisch startet. Dafür bei (``Proxmox-Host`` --> ``VM`` --> ``Options`` --> ``Start on boot``) die Aktivierung setzen.
 
 .. figure:: media/proxmox_internes_netz_001.png
    :align: center
@@ -101,9 +123,11 @@ Du musst den Admin-PC an den internen Switch des grünen Netzes nach dem Neustar
    
 Danach solltest Du vom Admin-PC aus folgende Hosts erreichen können:
 
-1. 10.0.0.20 - Proxmox-Host
+1. 10.0.0.20  - Proxmox-Host
 2. 10.0.0.254 - OPNsense
-3. 8.8.8.8 - externer DNS-Server
-4. linuxmuster.net - externe URL
+3. 10.0.0.1   - linuxmuster.net Server AD/DC
+4. 10.0.0.2   - linuxmuster.net File-Server 
+5. 8.8.8.8 - externer DNS-Server
+6. linuxmuster.net - externe URL
 
 Der Proxmox-Host ist nun "hinter" der OPNsense |reg| und kann über diese auf das Internet zugreifen. Dafür muss die virtuelle Maschine der OPNsense |reg| aktiv sein, was Du mit dem vorherigen Schritt sichergestellt hast.

@@ -1,4 +1,4 @@
-.. include:: ../../../../guided-inst.subst
+.. include:: /guided-inst.subst
 
 .. _install-linux-clients-current-label:
 
@@ -11,7 +11,7 @@ Linux-Client
 
 linuxmuster.net stellt für Ubuntu basierte Clients das Paket ``linuxmuster-linuxclient7`` bereit. Es führt automatisiert den Domänenbeitritt aus und vereinheitlicht das Management von Linux- und Windows-Clients durch Auslesen der GPO-Konfigurationen im Active Directory.
 
-Offiziell wird derzeit Ubuntu 22.04 und Pop!_OS 22.04 mit gdm3 und Gnome unterstützt. Andere Ubuntu basierte Distributionen mit gdm3 und Gnome könnten aber auch funktionieren.
+Offiziell wird derzeit Ubuntu 24.04 und Pop!_OS 22.04 mit gdm3 und Gnome unterstützt. Andere Ubuntu basierte Distributionen mit gdm3 und Gnome funktionieren i.d.R. ebenfalls.
 
 Voraussetzung
 =============
@@ -42,13 +42,13 @@ aus der Drop-down Liste auswählen. Bei der Erstellung des Erstimages wird ein v
    :alt: Ubuntu Installation: indicate image name
    :width: 80%
    
-   Festelegen des Dateinamens für das Basisimage
+   Festlegen des Dateinamens für das Basisimage
 
 Übernehme die Eintragungen jeweils mit ``Speichern & Importieren``. Danach wird automatisch ein Import der Geräte ausgeführt, um diese Einstellungen für alle Geräte der HWK zu übernehmen.
 
 .. hint::
 
-   Das neue Image befindet sich später auf dem Server unter ``/srv/linbo/images/<os>/`` - also für o.g. Abb. z.B. /srv/linbo/images/ubuntu/pop_os_mlm.qcow2
+   Das neue Image befindet sich später auf dem Server unter ``/srv/linbo/images/<os>/`` - also für o.g. Abb. z.B. /srv/linbo/images/ubuntu/ubuntu.qcow2
 
 
 Client OS installieren
@@ -78,7 +78,7 @@ Hast Du den PC / die VM von vom ISO-Image / der Installations-DVD gestartet, sie
    
    Installationsart festlegen   
 
-Gib in den ersten Schritten der Installation die gewünschte Sprache und Tastaturbelegung an.
+Gib in den ersten Schritten der Installation die gewünschte Sprache, Optionen für die Barrierefreiheit und die Tastaturbelegung an.
 
 .. figure:: media/00-linux-client-ubu-installation-language.png
    :align: center
@@ -87,6 +87,13 @@ Gib in den ersten Schritten der Installation die gewünschte Sprache und Tastatu
    
    Sprache auswählen
    
+.. figure:: media/00-linux-client-ubu-installation-options.png
+   :align: center
+   :alt: Ubuntu installation select options
+   :width: 80%
+   
+   Optionen für die Barrierefreiheit auswählen
+   
 .. figure:: media/00-linux-client-ubu-installation-keyboard-layout.png
    :align: center
    :alt: Ubuntu installation select keyboard layout
@@ -94,16 +101,16 @@ Gib in den ersten Schritten der Installation die gewünschte Sprache und Tastatu
    
    Tastaturlayout auswählen
    
-Lege danach die Installationsart sowie weitere Optionen fest. Falls Du hier Aktualisierungen herunterladen wählst, so muss für dieser Client in der OPNSense® in der NoProxy Gruppe eingetragen sein.
+Lege danach die Internetverbindung fest. Falls Du hier Aktualisierungen herunterladen möchtest, wählst Du für diesen Client:
 
 .. figure:: media/00-linux-client-ubu-installation-updates.png
    :align: center
    :alt: Ubuntu installation updates
    :width: 80%
    
-   Installationsart und -optionen festlegen
+   Installationsart festlegen
 
-Bei der ``Installationsart`` wählst Du ``Etwas Anderes`` aus.
+Danach wählst Du ``Ubuntu installieren`` aus.
 
 .. figure:: media/01-linux-client-ubu-install.png
    :align: center
@@ -111,28 +118,60 @@ Bei der ``Installationsart`` wählst Du ``Etwas Anderes`` aus.
    :width: 80%
    
    Installationsart festlegen
+   
+Wähle danach die ``Interaktive Installation`` und ``Standard Installation`` aus:
 
+.. figure:: media/01-linux-client-ubu-interactive-installation.png
+   :align: center
+   :alt: Ubuntu Installation Method interactive
+   :width: 80%
+   
+   Interaktive Installation festlegen   
+   
+.. figure:: media/01-linux-client-ubu-standard-installation.png
+   :align: center
+   :alt: Ubuntu Standard Installation Method
+   :width: 80%
+   
+   Standard Installation festlegen
+   
+Gib an, ob Du ggf. Software von Drittanbietern z.B. für die Grafikkarte oder den WLAN-Adapter zusätzlich während der Installation herunterladen möchtest.
+
+.. figure:: media/01-linux-client-ubu-third-party-software-installation.png
+   :align: center
+   :alt: Ubuntu Third Party Software
+   :width: 80%
+   
+   Software von Drittanbietern festlegen
+   
 Du hattest mit LINBO bereits die Festplatte partitioniert und formatiert.
 
-Es werden Dir also die bereits vorhandenen Partitionen und Dateisysteme angezeigt. Je nach genutzter Virtualisierungsumgebung / Hardware können die Festplattenbezeichnungen hier auch als ``/dev/xvda`` und die Partionen als ``/dev/xvda1`` etc. angezeigt werden.
+Gib nun an, dass Du manuell installieren möchtest:
 
-Wähle, wie in der nachstehenden Abb. zu sehen, die Partition aus, auf der Ubuntu installiert werden soll.
+.. figure:: media/01-linux-client-ubu-manual-installation.png
+   :align: center
+   :alt: Ubuntu Third Party Software
+   :width: 80%
+   
+   Manuelle Installation festlegen
 
-.. figure:: media/02-linux-client-ubu-install.png
+Danach wird Dir die aktuelle Partitionierung angezeigt, wie Du diese bereits mit LINBO durchgeführt hast. Es werden Dir also die bereits vorhandenen Partitionen und Dateisysteme angezeigt. Je nach genutzter Virtualisierungsumgebung / Hardware können die Festplattenbezeichnungen hier auch als ``/dev/xvda`` und die Partionen als ``/dev/xvda1`` etc. angezeigt werden.
+
+.. figure:: media/01-linux-client-ubu-partition-overview.png
+   :align: center
+   :alt: Ubuntu Third Party Software
+   :width: 80%
+   
+   Übersicht zu den vorhandenen Partitionen
+
+Wähle, wie in der nachstehenden Abb. zu sehen, die Partition aus, auf der Ubuntu installiert werden soll. Hier ist dies die 2. Partition der Festplatte.
+
+.. figure:: media/02-linux-client-ubu-partition-selection.png
    :align: center
    :alt: Ubuntu Installation Method - Partitions
    :width: 80%
    
-   Wähle die Ubuntu-Partition aus
-
-Klicke nun auf ``Ändern`` und es erscheint das nächste Fenster:
-
-.. figure:: media/03-linux-client-ubu-install.png
-   :align: center
-   :alt: Ubuntu Installation Method - Partition Settings
-   :width: 80%
-   
-   Partition bearbeiten
+   Bearbeite die Ubuntu-Partition
 
 Belasse die angezeigte Größe und das Dateisystem. Setze den Haken bei ``Partition formatieren`` und wähle als ``Einbindungspunkt`` das Root-Verzeichnis ``/`` aus.
 
@@ -145,11 +184,11 @@ Klicke auf ``ok`` und es werden nochmals alle Einstellungen angezeigt:
    
    Übersicht der Partitionen
 
-Sind diese Einstellungen korrekt, prüfe noch, ob das Gerät für die Bootloader-Installation die Ubuntu-Parition ist (hier in der Abb. /dev/sda1). Falls nicht passe dies an. Der Bootloader sollte nicht auf den MBR der Festplatte installiert werden (hier also nicht auf /dev/sda).
+Sind diese Einstellungen korrekt, prüfe noch, ob das Gerät für die Bootloader-Installation die Ubuntu-Parition ist bzw. bei UEFI-Geräte EFI-Partition (z.B. /dev/vda1 hier mit dem Einhängepunkt /boot/efi). Falls nicht passe dies an. Der Bootloader sollte **nicht** auf den MBR der Festplatte installiert werden.
 
-Setze die Installation mit dem Button ``Jetzt installieren`` fort.
+Setze die Installation mit dem Button ``weiter`` fort.
 
-Im Verlauf der Installation wirst Du nach dem Namen für den Computer und dem Benutzername und Kennwort für den neuen Administrator gefragt. Gib hier als Benutzername ``linuxadmin`` ein. Beim Namen des Rechners musst Du den Namen des PCs / der VM angeben, wie Du ihn in der Gerätekonfiguration des festgelegt hast.
+Im weiteren INstallationsverlauf wirst Du nach dem Namen für den Computer und dem Benutzernamen und Kennwort für den neuen Administrator gefragt. Gib hier als Benutzernamen ``linuxadmin`` ein. Beim Namen des Rechners musst Du den Namen des PCs / der VM angeben, wie Du ihn in der Gerätekonfiguration festgelegt hast.
 
 .. figure:: media/05-linux-client-ubu-install.png
    :align: center
@@ -157,13 +196,52 @@ Im Verlauf der Installation wirst Du nach dem Namen für den Computer und dem Be
    :width: 80%
    
    Benutzer festlegen
+   
+Lege danach die Zeitzone fest.
 
-Am Ende der Installation wirst Du aufgefordert, den Rechner neu zu starten. Fahre die VM herunter und werfe das ISO-Image / die Installations-DVD aus.
+.. figure:: media/05-linux-client-ubu-installation-time-zone.png
+   :align: center
+   :alt: Ubuntu Installation: Zeitzone festlegen
+   :width: 80%
+   
+   Zeitzone festlegen   
+
+Vor der eigentlichen Installation werden Dir die Einstellungen nochmals als Übersicht angezeigt.
+
+.. figure:: media/05-linux-client-ubu-installation-overview.png
+   :align: center
+   :alt: Ubuntu Installation: Installationsuebersicht
+   :width: 80%
+   
+   Installationsübersicht 
+
+Entsprechen die angezeigten Einstellungen den von Dir gewünschten Einstellungen, dann starte die Installation mit dem Button ``Installieren``.
+
+Während der Installation wir Dir der Status des Vorgangs dargestellt.
+
+.. figure:: media/05-linux-client-ubu-installation-status.png
+   :align: center
+   :alt: Ubuntu Installation: Installation status
+   :width: 80%
+   
+   Status der laufenden Installation 
+
+Am Ende der Installation wirst Du aufgefordert, den Rechner neu zu starten. 
+
+.. figure:: media/05-linux-client-ubu-installation-finished.png
+   :align: center
+   :alt: Ubuntu Installation: Installation beendet
+   :width: 80%
+   
+   Installation beendet
+
+Fahre den PC / die VM herunter und werfe das ISO-Image / die Installations-DVD aus.
+
 
 Erstimage erstellen
 -------------------
 
-Passe die Boot-Reihenfolge für den PC / die VM jetzt so an, dass diese wieder via PXE bootet. Du siehst dann die Startoptionen in Linbo für das installierte Ubuntu 22.04.
+Passe die Boot-Reihenfolge für den PC / die VM jetzt so an, dass diese wieder via PXE bootet. Du siehst dann die Startoptionen in Linbo für das installierte Ubuntu 24.04.
 
 .. figure:: media/06-linux-client-ubu-install.png
    :align: center
@@ -207,7 +285,7 @@ Klicke auf das große Festplatten-Symbol, das in der Ecke rechts unten farblich 
 .. figure:: media/09-linux-client-ubu-install-os-icon.png
    :align: center
    :alt: Ubuntu Installation: linbo imaging icon
-   :width: 50%
+   :width: 20%
    
    Imaging-Symbol Ubuntu
 
@@ -246,7 +324,7 @@ Zum Abschluss erscheint die Meldung, dass das Image erfolgreich hochgeladen wurd
 
 Gehe durch einen Klick auf das Zeichen ``<`` zurück und klicke im nächsten Bildschirm das obere Symbol auf der rechten Seite an, um Dich abzumelden.
 
-Du siehst nun drei Start-Symbole. Der grosse Symbol started das Image sychronisiert, während das grüne Icon das lokale Image aus dem Cache ohne Synchronisation startet.
+Du siehst nun drei Start-Symbole. Das grosse Symbol started das Image sychronisiert, während das grüne Icon das lokale Image aus dem Cache ohne Synchronisation startet.
 
 .. figure:: media/06-linux-client-ubu-install.png
    :align: center
@@ -261,7 +339,7 @@ Starte nun Ubuntu synchronisiert.
 Paket linuxmuster-linuxclient7 installieren
 --------------------------------------------
 
-Melde Dich an dem gestarteten Ubuntu 22.04 als Benutzer ``linuxadmin`` an.
+Melde Dich an dem gestarteten Ubuntu 24.04 als Benutzer ``linuxadmin`` an.
 
 .. figure:: media/14-linux-client-ubu-install.png
    :align: center
@@ -279,13 +357,17 @@ Installiere das Paket ``linuxmuster-linuxclient7`` wie folgt:
 1. Schritt
 ^^^^^^^^^^
 
-Öffne ein Terminal unter Ubuntu mit ``strg`` + ``T`` oder klicke unten links auf die Kacheln und gib in der Suchzeile als Anwendung ``Terminal`` ein.
+Öffne ein Terminal unter Ubuntu mit ``strg`` + ``T``. Oder klicke oben links auf die Suchzeile als Anwendung und trage dort die Anwendung ``Terminal`` ein.
 
-Importiere nun den GPG-Schlüssel des linuxmuster.net Repository:
+Importiere nun den GPG-Schlüssel des linuxmuster.net Repository, indem Du nachstehenden Befehl im Terminal eingibst:
 
 .. code::
 
    sudo sh -c 'wget -qO- "https://deb.linuxmuster.net/pub.gpg" | gpg --dearmour -o /usr/share/keyrings/linuxmuster.net.gpg'
+   
+.. hint::
+
+   Sollte kein Key heruntergeladen werden, so hast Du ggf. Deinen Muster-Client noch nicht in der OPNSense in der Gruppe ``NoProxy`` angegeben. Dies musst Du nun nachholen, damit dieser ohne Anmeldung Internet-Zugriff erhält. In der OPNSense gibst Du die IP des Muster-Client unter ``Firewall -> Aliase -> NoProxy -> Bearbeiten`` an.
 
 2. Schritt
 ^^^^^^^^^^

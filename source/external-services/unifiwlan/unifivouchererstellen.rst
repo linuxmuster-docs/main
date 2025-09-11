@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 WLAN-Gutscheine / Voucher erstellen
 ===================================
 

@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 .. _linuxmuster-install-nextcloud-label:
 
 ======================

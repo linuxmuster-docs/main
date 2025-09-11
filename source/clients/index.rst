@@ -1,4 +1,4 @@
-.. include:: ../guided-inst.subst
+.. include:: /guided-inst.subst
 
 .. _client-administration-label:
 
@@ -13,23 +13,21 @@ Die Bereitstellung und Pflege der schulischen Rechner für die Nutzer in einer l
 
 .. centered:: ``LINBO`` steht für GNU/ ``LI`` nux ``N`` etwork ``BO`` ot.
 
-Es wurde ursprünglich im Auftrag des Landesmedienzentrums Baden-Württemberg von der Firma KNOPPER.NET in Zusammenarbeit mit den damaligen paedML-Linux- und heutigen linuxmuster.net-Entwickler realisiert.
+Es wurde ursprünglich im Auftrag des Landesmedienzentrums Baden-Württemberg von der Firma KNOPPER.NET in Zusammenarbeit mit den damaligen paedML-Linux- und heutigen linuxmuster.net-Entwicklern realisiert.
 
-Durch die letztgenannten ist es nun in der Version 4 erschienen. Der Sourcecode ist unter GNU General Public License 3.0 auf GitHub veröffentlicht. https://github.com/linuxmuster/linuxmuster-linbo7
+Die linuxmuster.net-Entwickler haben LINBO nun in der Version > 4.3 veröffentlicht. Der Sourcecode ist unter GNU General Public License 3.0 auf GitHub veröffentlicht. https://github.com/linuxmuster/linuxmuster-linbo7
 
 Funktionsweise
 ==============
 
-Zum Verständnis erklären wir Dir einen 
-
 Start eines Arbeitsplatzrechners
 --------------------------------
 
-Über das Transport-Protokoll TFTP wird vom linuxmuster.net-Server und die PXE-Implementierung von Grub bootet es ein kleines Linux-System (linbofs) auf den Clients. Diese zeigen dann eine Benutzeroberfläche, mit der dann alle Imaging-Aufgaben auf dem Client gesteuert werden.
+Über das Transport-Protokoll TFTP wird durch den Startvorgang des Clients via Netzwerk (PXE) vom linuxmuster.net Server ein kleines Linux-System (linbofs) auf den Client geladen und dort gestartet. Dieses zeigt dann eine Benutzeroberfläche, mit der alle Imaging-Aufgaben auf dem Client gesteuert werden.
 
 .. todo einfügen einer entsprechenden Grafik
 
-Die steuerbaren Funktionen unterscheiden sich anhand der Berechtigungen der Nutzer und Nutzerinnen. 
+Die steuerbaren Funktionen unterscheiden sich anhand der Nutzerberechtigungen. 
 
 Konsolen-Tools sind ebenfalls verfügbar, um Clients und Imaging aus der Ferne über den Server zu verwalten.
 
@@ -59,7 +57,7 @@ Der hier aufgezeigte Ablauf eines synchronisierten Startes ist einer von vielen 
 
 Deren Beschreibung ist im Unterkapitel :ref:`using-linbo-label` zu finden.
 
-In dem gezeigten Ablauf eines synchronisierten Betriebssystem-Starts wurde ersichtlich, das sich auf dem Server mindestens ein Client-Image befinden muss. Dabei ist folgendes von entscheidender Wichtigkeit:
+In dem gezeigten Ablauf eines synchronisierten Betriebssystem-Starts wurde ersichtlich, dass sich auf dem Server mindestens ein Client-Image befinden muss. Dabei ist folgendes wesentlich:
 
 In der linuxmuster.net 7 ist es für Clients, denen alle pädagogischen Funktionen im Netz zur Verfügung stehen sollen, erforderlich, dass diese im Active Directory (AD) des Servers (samba 4) einen sog. ``Domänenbeitritt`` ausführen. Hierbei werden Schlüssel erzeugt und ausgetauscht. Diese stellen sicher, dass der Client als berechtigtes Gerät erkannt wird.
 

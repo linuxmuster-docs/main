@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 ================================================
 Linux-Client - Anpassungen mit Postsync-Scripten
 ================================================

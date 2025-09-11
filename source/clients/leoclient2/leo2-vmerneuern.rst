@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 Basis und Snapshots verwalten
 =============================
 

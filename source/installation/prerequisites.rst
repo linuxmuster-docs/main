@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 
 .. _prerequisites-label:
 
@@ -5,17 +6,23 @@
  Vorüberlegungen
 ==================
 
-.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
-		   `@Tobias <https://ask.linuxmuster.net/u/Tobias>`_
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
-Linuxmuster.net wird als Zwei-Server-Lösung (Firewall und linuxmuster.net-Server) auf einem Hypervisor (Proxmox) betrieben. 
+Linuxmuster.net wird als Drei-Server-Lösung (linuxmuster.net-Server, linuxmuster.net-File-Server und eine Firewall) entweder auf einem Hypervisor (z.B. Proxmox) oder als eigenständige Hardware-Server betrieben. 
 
-Optional können weitere Server wie z. B. ein Docker-Host eingesetzt werden. Daneben gibt es mindestens eine Trennung in zwei logische Netzwerke, meist sind aber drei oder mehr davon gefordert (WLAN, DMZ, Lehrernetz).
+Optional können weitere Server wie z. B. ein Docker-Host eingesetzt werden. Es gibt mindestens eine Trennung in zwei logische Netzwerke, meist sind aber drei oder mehr davon gefordert (WLAN, DMZ, Lehrernetz).
 
 Daraus leiten sich Voraussetzungen an Hardware, Netzwerkstrukturen und Software ab, die in diesem Kapitel benannt werden.
 
 Hardware
 ========
+
+Firewall
+--------
+
+Entweder es wird die bereits bestehende Firewall als dedizierte Lösung oder als bestehende virtuelle Maschine weiter betrieben. Diese muss nach der Installation von linuxmuster.net noch entsprechend integriert werden.
+
+Alternativ wird folgende Open-Source Firewall installiert und in linuxmuster.net automatisch integriert:
 
 OPNsense®
 ---------
@@ -42,13 +49,13 @@ NIC                  - mind. 2 (intern + extern)
 
 Weitere Hinweise zu möglichen Hardwareanforderungen bei unterschiedlichen Einsatzszenarien finden sich `hier <https://wiki.opnsense.org/manual/hardware.html#hardware-requirements>`_.
 
-Als Basis nutzt OPNsense® v24.1 das Betriebssystem FreeBSD v13.2. Hinweise zu den Anforderungen von FreeBSD bzw. zur Kompatibilität mit eingesetzten Hardware-Komponenten finden sich unter der `HCL - Hardware Compatibility List <https://www.freebsd.org/releases/11.1R/hardware.html>`_.
+Als Basis nutzt OPNsense® v25.7 das Betriebssystem FreeBSD. Hinweise zu den Anforderungen von FreeBSD bzw. zur Kompatibilität mit eingesetzten Hardware-Komponenten finden sich unter der `HCL - Hardware Compatibility List <https://www.freebsd.org/releases/14.3R/hardware.html>`_.
 
 
-Server linuxmuster v7.2
+Server linuxmuster v7.3
 -----------------------
 
-Für linuxmuster.net v7.2 wird als Basis Ubuntu Server 22.04 LTS eingesetzt. Es wird empfohlen folgende Hardware-Mindestanforderungen zu erfüllen:
+Für linuxmuster.net v7.3 wird als Basis Ubuntu Server 24.04 LTS eingesetzt. Es wird empfohlen folgende Hardware-Mindestanforderungen zu erfüllen:
 
 ========================= ===========================================
 Prozessor                 >= 2 GHz Multi-Core CPU (64 Bit)

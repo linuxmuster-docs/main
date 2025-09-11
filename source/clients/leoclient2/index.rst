@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 Leoclient 2 - Windows im Linuxclient
 ====================================
 

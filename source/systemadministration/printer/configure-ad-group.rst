@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 .. _add-ad-group-label:
 
 Drucker einzelnen Räumen zuweisen

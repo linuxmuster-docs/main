@@ -1,4 +1,4 @@
-.. include:: ../../../../guided-inst.subst
+.. include:: /guided-inst.subst
 
 .. _install-windows11-clients-label:
 
@@ -18,7 +18,7 @@ Betriebssystem Windows 11 installieren
    
    Um Windows 11 auf den Clients installieren zu können, sollten diese mind. 4GB RAM als Arbeitsspeicher aufweisen und einen TPM-Chip 2.0 auf dem Mainboard verbaut haben. Zudem muss Secure-Boot im BIOS aktiviert worden sein.
    
-   Unter https://www.microsoft.com/de-de/software-download/windows11 wählst Du das gewünschte Installationsmedium für Windows 11 aus, lädst dieses herunter, erstellt einen bootbaren Win11-USB-Stick oder lädst die ISO-Datei (z.B. Win11_23H2_German_x64v2.iso) auf den Proxmox ISO-Speicher. 
+   Unter https://www.microsoft.com/de-de/software-download/windows11 wählst Du das gewünschte Installationsmedium für Windows 11 aus, lädst dieses herunter, erstellt einen bootbaren Win11-USB-Stick oder lädst die ISO-Datei (z.B. Win11_24H2_German_x64.iso) auf den Proxmox ISO-Speicher. 
    
    Alternativ kannst Du aus einer aktuellen Windows 11 ISO-Datei mit Rufus eine Windows 11 Installations-ISO erstellen, die die Beschränkungen mit Secure Boot, TPM 2.0 und anderen Mindestanforderungen bei der Installation nicht prüft, so dass auch auf älterer Hardware Windows 11 noch installiert werden kann. 
    
@@ -26,7 +26,7 @@ Betriebssystem Windows 11 installieren
 
 .. hint:: 
 
-   Auf dem Server im Verzeichnis ``/srv/linbo/examples/`` findet sich die start.conf.win10-efi. Diese kannst Du als Ausgangspunkt zur Anpassung für Windows 11 nutzen. In jedem Fall solltest Du UEFI auf dem PC aktivieren und in der start.conf muss eine EFI und eine MSR-Partition enthalten sein. Die Cache-Partition sollte niemals die letzte Partition sein. Setze danach z.B. noch eine Datenpartition. Ansonsten kann es bei der Installation von Windows 11 zu Problemen bei der Erkennung der Partitionen kommen.
+   Auf dem Server im Verzeichnis ``/srv/linbo/examples/`` findet sich die start.conf.win11-efi. Diese kannst Du als Ausgangspunkt zur Anpassung für Windows 11 nutzen. In jedem Fall solltest Du UEFI auf dem PC aktivieren und in der start.conf muss eine EFI und eine MSR-Partition enthalten sein. Die Cache-Partition sollte niemals die letzte Partition sein. Setze danach z.B. noch eine Datenpartition. Ansonsten kann es bei der Installation von Windows 11 zu Problemen bei der Erkennung der Partitionen kommen.
    
 2. Drücke während des Boot-Vorgangs nach Aufforderung eine Taste, damit von dem Windows-Installationsmedium tatsächlich gebootet wird.
 
@@ -223,14 +223,14 @@ Global-Registry Patch für Windows 11
 
 4. Bestätige die Nachfrage zur Berechtigung zum Zugriff auf diesen Ordner mit ``Fortsetzen``.
 
-5. Führen einen Doppelklick auf die Datei ``win10.global`` aus.
+5. Führen einen Doppelklick auf die Datei ``win11.global`` aus.
 
 .. figure:: media/35_windows-11-clients_linuxmuster-win-win10-global.png
    :align: center
    :alt: linuxmuster-win-win10-global
    :width: 80%
    
-   Führe einen Doppelklick auf die Datei win10.global aus
+   Führe einen Doppelklick auf die Datei win11.global aus
 
 Bestätige die Nachfrage zum Registrierungs-Editor mit Ja.
 
@@ -277,7 +277,7 @@ In der Console ``shutdown -s -t 1`` eingeben und mit ``Enter`` bestätigen:
 Domänenanbindung
 ================
 
-Geräte die dauerhaft mit den Ressourcen der linuxmuster.net Umgebung arbeiten sollen, sind nach dem Einspielen des ``win10-global.reg`` Patches in der Domäne aufzunehmen.
+Geräte die dauerhaft mit den Ressourcen der linuxmuster.net Umgebung arbeiten sollen, sind nach dem Einspielen des ``win11.global.reg`` Patches in der Domäne aufzunehmen.
 
 Starte den Muster-Client wieder via LINBO, indem Du Win11 mit dem GRÜNEN Start-Button aus dem lokalen Cache startest.
 
@@ -493,7 +493,7 @@ Klicke nun unten auf die Drop-down Liste ``Copy from``. Es werden verschiedene R
    Registry-Patch auswählen
 
 
-Klicke nun unten auf die Drop-down Liste ``Copy from -> win10.image.reg``. Es wird die Reg-Datei in dem Fenster angezeigt.
+Klicke nun unten auf die Drop-down Liste ``Copy from -> win11.image.reg``. Es wird die Reg-Datei in dem Fenster angezeigt.
 
 .. figure:: media/47_windows-10-clients_linbo-save-registry-patch.png
    :align: center
@@ -504,12 +504,12 @@ Klicke nun unten auf die Drop-down Liste ``Copy from -> win10.image.reg``. Es wi
    
 Speichere diesen kopierten Registry-Patch für das Windows 11 Image, indem Du direkt auf ``SPEICHERN`` klickst.
 
-6. *Alternativ* kannst Du in der Server-Shell aus ``/srv/linbo/examples`` die richtige Vorlage in ``/srv/linbo/`` kopieren. Die Datei trägt dann den Namen ``<imagename>.reg`` - also in o.g. Beispiel win10.reg. 
+6. *Alternativ* kannst Du in der Server-Shell aus ``/srv/linbo/examples`` die richtige Vorlage in ``/srv/linbo/`` kopieren. Die Datei trägt dann den Namen ``<imagename>.reg`` - also in o.g. Beispiel win11.reg. 
 
 Imageübertragung auf den PC
 ---------------------------
 
-1. Starte den PC, auf den das Image übertragen werden soll, über das Netzlaufwerk bis er in LINBO gebootet hat. Nun öffnest Du den Imaging-Reiter, wie im ersten Kapitel :ref:`Computer in linuxmuster.net aufnehmen <install-windows10-clients-label>`  → ``Client lokal registrieren`` beschrieben wird.
+1. Starte den PC, auf den das Image übertragen werden soll, über das Netzlaufwerk bis er in LINBO gebootet hat. Nun öffnest Du den Imaging-Reiter, wie im ersten Kapitel :ref:`Computer in linuxmuster.net aufnehmen <install-windows11-clients-label>`  → ``Client lokal registrieren`` beschrieben wird.
 
 2. Als nächstes partitionierst und formatierst Du den PC über den LINBO-Menüeintrag ``Partitionieren`` wie zuvor beschrieben.
 
@@ -652,9 +652,9 @@ Die bisherigen Beispiele für die Windows 10 Regisry Patches sind i.d.R. auch mi
 1. Für jedes Windows Image muss es einen Registry Patch File geben, der unter
 ``/srv/linbo/images/<imagename>.reg`` abzulegen ist. Lautet der Name für das Image ``win11.qcow2``, dann muss der Registry File den Namen ``win11.reg`` tragen.
 
-2. Als Template steht hierfür ``win10.image.reg`` zur Verfügung: Registry Patch für den Hostnamen und angepasste Einträge. Diesen muss es mit dem Image File geben - wie zuvor dargestellt (z.B. win11.reg).
+2. Als Template steht hierfür ``win11.image.reg`` zur Verfügung: Registry Patch für den Hostnamen und angepasste Einträge. Diesen muss es mit dem Image File geben - wie zuvor dargestellt (z.B. win11.reg).
 
-4. Template ``win10.global.reg``: Diese Vorlage findet sich ebenfalls unter ``/srv/linbo/examples/``. Dieser muss einmalig für den Windows 11 Muster-Client vor dem Domänen-Join aufgerufen werden. Wie dies anzuwenden ist, wurde zuvor ausführlich beschrieben.
+4. Template ``win11.global.reg``: Diese Vorlage findet sich ebenfalls unter ``/srv/linbo/examples/``. Dieser muss einmalig für den Windows 11 Muster-Client vor dem Domänen-Join aufgerufen werden. Wie dies anzuwenden ist, wurde zuvor ausführlich beschrieben.
 
 5. Template ``win11bypass.reg``: Werden diese Registry - Einträge angewendet, werden die Hardwareüberprüfungen beim Systemstart übergangen. Soll ein bestehendes Windows 10 Image auf Windows 11 aktualisiert werden, so sollte vorab win11bypass.reg eingespielt werden, damit Windows 11 ebenfalls auf nicht kompatibler Hardware ausgeführt wird.
 

@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 ===========================
 Das Online-Office Collabora
 ===========================

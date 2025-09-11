@@ -1,14 +1,4 @@
-.. |zb| unicode:: z. U+00A0 B. .. Zum Beispiel 
-
-.. |_| unicode:: U+202F
-   :trim:
-
-.. |copy| unicode:: 0xA9 .. Copyright-Zeichen
-   :ltrim:
-
-.. |reg| unicode:: U+00AE .. Trademark
-   :ltrim:
-
+.. include:: /guided-inst.subst
 .. _what-is-linuxmuster.net-label:
 
 ========================
@@ -25,8 +15,7 @@ heutige Schulnetz unterscheiden.
 
 Die Entwicklung von linuxmuster.net greift all diese Anforderungen auf und stellt eine modulare Lösung für ein Schulnetz zur Verfügung. 
 
-Diese kann von einer Ein-Server-Lösung bis hin zu einer
-Mehr-Server-Lösung mit Cloud-Anbindung und BYOD-Integration skaliert werden.
+Diese kann von einer Ein-Server-Lösung (mit drei virtuellen Maschinen - VMs) bis hin zu einer Mehr-Server-Lösung mit Cloud-Anbindung und BYOD-Integration und mehreren physikalischen Servern skaliert werden.
 
 Die Anforderungen, die heute an ein Schulnetz gestellt werden, erklären wir im nachfolgenden Abschnitten detailliert. Im Anschluss zeigen wir auf, wie linuxmuster.net diese umsetzt.
 
@@ -49,41 +38,41 @@ Im Prinzip gibt es vier große Merkmale, die auffallen:
 |  50  | 50 | 500  | 50 |
 +------+----+------+----+
 
-2. Die Zusammensetzung von Usern in  Abteilungen
+2. Die Zusammensetzung von Usern in Abteilungen/Gruppen
 
-.. tabularcolumns:: |c|c|c|c|
+.. tabularcolumns:: |c|c|c|c|c|
 
-+------------------+---------------+
-|      Firma       |    Schule     |
-+------+-----------+------+--------+
-| User | Abteilung | User | Gruppe |
-+======+===========+======+========+
-|  A   | Marketing |  A   | Klasse |
-|      |           |      +--------+
-|      |           |      | Kurs 1 |
-|      |           |      +--------+
-|      |           |      | Kurs 2 |
-|      |           |      +--------+
-|      |           |      | AG 1   |
-+------+-----------+------+--------+
-|  B   | Marketing |  B   | Klasse |
-|      |           |      +--------+
-|      |           |      | Kurs 3 |
-|      |           |      +--------+
-|      |           |      | Kurs 2 |
-|      |           |      +--------+
-|      |           |      | AG 1   |
-+------+-----------+------+--------+
++------------------+----+---------------+
+|      Firma       |    |    Schule     |
++------+-----------+ vs +------+--------+
+| User | Abteilung |    | User | Gruppe |
++======+===========+====+======+========+
+|  A   | Marketing |    |  A   | Klasse |
+|      |           |    |      +--------+
+|      |           |    |      | Kurs 1 |
+|      |           |    |      +--------+
+|      |           |    |      | Kurs 2 |
+|      |           |    |      +--------+
+|      |           |    |      | AG 1   |
++------+-----------+    +------+--------+
+|  B   | Marketing |    |  B   | Klasse |
+|      |           |    |      +--------+
+|      |           |    |      | Kurs 3 |
+|      |           |    |      +--------+
+|      |           |    |      | Kurs 2 |
+|      |           |    |      +--------+
+|      |           |    |      | AG 1   |
++------+-----------+----+------+--------+
 
 3. Die Fluktuation im jährlichen Wechsel
 
-   Zum Schuljahreswechsel verlässt eine große Anzahl an Schüler:innen die Einrichtung und neue müssen in das System eingepflegt werden. Die Zusammensetzung der Klassen, Kurse und Arbeitsgruppen werden zu großen Teilen neu formiert.
+   Zum Schuljahreswechsel verlässt eine große Anzahl an Schüler:innen die Einrichtung und neue Schüler:innen müssen in das System eingepflegt werden. Die Zusammensetzung der Klassen, Kurse und Arbeitsgruppen werden zu großen Teilen neu formiert, so dass Änderungen an bestehenden Schüler:innen erforderlich sind.
 
    Solch ein administrativen Aufwand ergibt sich in einer Firma selten.
 
 4. Der Umgang mit den Arbeitsmitteln
 
-   Schüler:innen teilen sich ein und dasselbe Arbeitsmittel im schulischen Alltag. Dabei ist es für die nächste Unterrichtseinheit entscheidend, dass zum Start immer eine einheitliche Umgebung auf den Rechnern vorhanden ist. Die zeitliche Taktung zwischen den Wechseln kann sehr kurz sein.
+   Schüler:innen teilen sich ein und dasselbe Arbeitsmittel im schulischen Alltag. Dabei ist es für die nächste Unterrichtseinheit entscheidend, dass zum Start immer eine einheitliche und funktionsfähige Umgebung auf den Rechnern vorhanden ist. Die zeitliche Taktung zwischen den Wechseln kann sehr kurz sein.
 
    Dies ist in einer Firma so nicht gegeben. Wenn ein User seinen Rechner verlässt, findet er ihn der Regel immer genauso wieder.
 
@@ -99,7 +88,8 @@ Unser Anspruch liegt dabei auf der Bereitstellung eines Systems, das folgende Pu
     * automatisierte Installation der Server-Komponenten
     * durch einen freien Zugang zu einer umfänglichen Dokumentation eine möglichst einfache Installation
     * einfache Integration in vorhandene Infrastruktur
-    * bestehend aus Server, Firewall und vorkonfigurierten Arbeitsstationen
+    * bestehend aus Server, File-Server und vorkonfigurierten Arbeitsstationen. 
+    * Integration einer bestehenden Firewall oder alternativ Integration der Open-Source Firewall OPNsense |reg|
     * mehrstufige ausbau- und anpassbare Struktur mit heterogenen Clients und unterschiedlichsten Diensten bzw. Cloud-Lösungen
     * ein frei zugängliches `Community-Wiki <https://wiki.linuxmuster.net/community/>`_ mit einer Vielzahl an ergänzenden Anleitungen und Erweiterungen aus dem Umfeld der Unterstützer von linuxmuster.net
 
@@ -107,10 +97,9 @@ Unser Anspruch liegt dabei auf der Bereitstellung eines Systems, das folgende Pu
 
 .. image::    media/structure_of_version_7.svg
    :name:     structure-over-all 
-   :alt:      Struktur über alles
-   :height:   40px
+   :alt:      gesamte Struktur
 
-Ein Augenmerk liegt dabei auf der Unabhängigkeit von der eingesetzten Hard- und Software. Dieses wird unter anderem erkennbar an dem Umfang der unterstützten Betriebssysteme für die Arbeitsstationen.
+Ein Augenmerk liegt dabei auf der Unabhängigkeit eingesetzter Hard- und Software. Dieses wird unter anderem an dem Umfang der unterstützten Betriebssysteme für die Arbeitsstationen erkennbar.
 
 Proprietäre Betriebssysteme, |zb| aus dem Hause Microsoft |reg|, können aufgrund der Lizenzpolitik der Hersteller nicht von uns vorbereitet ausgeliefert werden. Diese lassen sich aber ebenso leicht in unsere Infrastruktur integrieren, wie solche, die als Open-Source erhältlich sind.
 
@@ -127,23 +116,23 @@ Auf der Basis von Linux stellen wir ein Open-Source-Betriebssystem zur Verfügun
    :width:    500px
    :align:    center
 
-Im Zusammenspiel der Clients mit dem Server und einer Firewall entsteht so die grundlegende professionelle Infrastruktur zur zentralen Administration der Schülergeräte und der Verwaltung des pädagogischen Schulnetzwerkes.
+Im Zusammenspiel der Clients mit dem Server, dem File-Server und einer Firewall entsteht so die grundlegende professionelle Infrastruktur zur zentralen Administration der Schülergeräte und der Verwaltung des pädagogischen Schulnetzwerks.
 
 Dieses lässt sich aufgrund des modularen Aufbaus weiter an die darüber hinausgehenden Anforderungen, unter anderem einer schulweiten WLAN-Verfügbarkeit erweitern und anpassen.
-
-.. image::    media/structure_of_version_7_server.svg
-   :name:     structure-lmn-server
-   :alt:      Struktur der Basis-Komponente - LMN-Server
-   :height:   40px
-   :align:    left
 
 Die Basis
 ---------
 
-Der linuxmuster.net-Server
-++++++++++++++++++++++++++
+linuxmuster.net ist eine Lösung, die auf drei Servern aufsetzt. 
 
-Die Basisdienste des links abgebildeten Servers sind für die Funktion des ganzen Systems verantwortlich:
+Server 1: Der linuxmuster.net-Server
++++++++++++++++++++++++++++++++++++++
+
+.. image::    media/structure_of_version_7_server.svg
+   :name:     structure-lmn-server
+   :alt:      Struktur der Basis-Komponente - LMN-Server
+
+Die Basisdienste dieses Servers sind für die Funktion des ganzen Systems verantwortlich:
 
 Benutzer- und Gruppenverwaltung
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -156,6 +145,7 @@ Die Benutzer- und Gruppenverwaltung orientiert sich an den Bedürfnissen, die de
     * Zu Beginn eines Schuljahres können diese Daten und Abhängigkeiten aus der Schulverwaltung mittels Import der Daten eingespielt bzw. fortgeschrieben werden.
       Gleiches gilt selbstverständlich auch für Veränderungen während eines laufenden Schuljahres.
     * Für Lehrer:innen gilt dies ebenso.
+    * Zudem können Benutzer-Accounts sowie Gruppenzugehörigkeiten für Schulpersonal und Eltern nahtlos abgebildet werden.
 
 Unterrichtssteuerung
 ^^^^^^^^^^^^^^^^^^^^
@@ -172,19 +162,48 @@ Klassenarbeitsmodus
 
 In Prüfungssituationen wie Abitur, Klassenarbeiten und andere Leistungsüberprüfungen kann die Lehrkraft mit einfachen Mitteln die Nutzung des Systems für die Prüfungsgruppe einschränken. Das Spektrum umfasst dabei alle Möglichkeiten der Unterrichtssteuerung ergänzt um die Sperrung des persönlichen Speicherbereichs.
 
+Server 2: Fileserver
+++++++++++++++++++++
+
 Dateiverwaltung und -verteilung
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Alle Nutzer besitzen einen persönlichen Bereich auf dem Netzwerkspeicher. Ebenso steht ein solcher den Gruppen für den Austausch ihrer gemeinschaftlichen Arbeit zur Verfügung.
+.. image::    media/structure_of_version_7_fileserver.svg
+   :name:     structure-fileserver
+   :alt:      Struktur der Basis-Komponente - Fileserver
 
-Selbstheilende Arbeitsstationen durch LINBO 4.2
+Alle Nutzer besitzen einen persönlichen Bereich auf dem Netzwerkspeicher (File-Server).
+
+Ebenso steht er allen Gruppen für den Austausch ihrer gemeinschaftlichen Arbeiten zur Verfügung. 
+
+Server 3: Firewall
+++++++++++++++++++
+
+OPNsense |reg|
+^^^^^^^^^^^^^^
+Durch die Integration der Firewall an AD DS (Active Directory Domain Services) des Servers werden sämtliche Benutzer-Zugriffe der Nutzer mittels Single-Sign-On auf das Internet geregelt.
+
+Die Open-Source Firewall OPNsense |reg| wird nach einer auszuführenden Grundinstallation in das System der linuxmuster-net-Server aufgenommen. Hierfür wurde das Setup des linuxmuster.net Server so vorbereitet, dass die Integration bereits vollständig durchgeführt wird.
+
+Sämtliche verfügbaren Bausteine dieser Open-Source-Firewall stehen selbstverständlich zur Verfügung.
+
+Für weitergehende Informationen `siehe opnsense.org <https://opnsense.org/>`_.
+
+.. image::    media/structure_of_version_7_firewall.svg
+   :name:     structure-firewall
+   :alt:      Struktur der Basis-Komponente - Firewall 
+
+Bestehende Firewall
+^^^^^^^^^^^^^^^^^^^
+Es kann auch eine bestehende Firewall weiter genutzt und vollständig in linuxmuster.net integriert werden. Da diese Intergration von deren verwendeten Betriebssystem abhängt und unterschiedliche Schritte erfordert, können wir nicht eine datailierte Anleitung hier aufzeigen. Geben aber Hinweise dazu im Kapitel `Anpassbar`_. 
+
+  
+Selbstheilende Arbeitsstationen durch LINBO 4.3
 +++++++++++++++++++++++++++++++++++++++++++++++
 
 .. image::    media/structure_of_version_7_client.svg
    :name:     structure-linbo-client-management
    :alt:      Struktur der Basis-Komponente - LINBO (Client-Managements)
-   :height:   40px
-   :align:    left
 
 Das Konzept der Selbstheilenden Arbeitsstationen (SheilA) ermöglicht einheitliche, identische Schulungssysteme. Diese können bei jedem Start der Rechner in einen vorher definierten Zustand zurückgesetzt werden. Dieser Standard wird durch die letzte Veränderung oder Installation festgelegt, in dem ein Abbild des Betriebssystems auf dem Server gespeichert wird. Weitere Vorteile sind:
 
@@ -194,6 +213,7 @@ Das Konzept der Selbstheilenden Arbeitsstationen (SheilA) ermöglicht einheitlic
     * einfache Wiederherstellung der Clients ist jedem Benutzer möglich
     * einfache Softwareverteilung durch Installation auf einem Client - keine gesonderten Kenntnisse erforderlich, bei demjenigen, der die Software-Installation betreut.
     * Möglichkeit der zeit- und/oder ferngesteuerten Aktualisierung der Clients.
+    * Möglichkeit sich via VNC auf den LINBO-Client aufzuschalten.
     * mit sogenannten Postsync-Scripten kann der Administrator für einzelne, raumweite oder für alle Geräte notwendige Konfigurationsänderungen beim Systemstart einpflegen.
 
 Nähere Information sind im Kapitel "Clientverwaltung" beschrieben.
@@ -201,49 +221,11 @@ Nähere Information sind im Kapitel "Clientverwaltung" beschrieben.
 Integration unterschiedlicher Geräte (BYOD)
 +++++++++++++++++++++++++++++++++++++++++++
 
-Da sich alle Steuerungsfunktionen in unserer Lösung an den Benutzern orientieren, ist es unerheblich an welchem Gerät sie sich befinden. Das Gleiche gilt auch für mitgebrachte Geräte, mit denen sie sich mit dem Intranet via WLAN verbinden.
-
-Firewall
-++++++++
-
-OPNsense |reg|: wird als Standard-Firewall ausgeliefert.
-
-   .. image::    media/structure_of_version_7_firewall.svg
-      :name:     structure-firewall
-      :alt:      Struktur der Basis-Komponente - Firewall 
-      :height:   40px
-      :align:    left
-
-   Durch die Integration der Firewall an AD DS (Active Directory Domain Services) des Servers (Samba4) werden sämtliche Benutzer-Zugriffe der Nutzer mittels Single-Sign-On auf das Internet geregelt.
-
-   Sämtliche verfügbaren Bausteine dieser Open-Source-Firewall stehen selbstverständlich zur Verfügung.
-
-Für weitergehende Informationen `siehe opnsense.org <https://opnsense.org/>`_.
-
-.. note::
-   Diese vorgestellten Bestandteile werden vom Verein **linuxmuster.net e. V. entwickelt und unterstützt**.
-
-   Diese Unterstützung wird durch das
-
-   **Hilfe-Forum** `<https://www.linuxmuster.net/de/support-de/discourse-forum/>`_
-
-   und die
-
-   **telefonische Hotline** `<https://www.linuxmuster.net/de/support-de/hotline/>`_
-
-   geleistet.
-
-   **All diese Leistungen sind nicht von einer Mitgliedschaft im Verein abhängig.**
-
-   Aufgrund der Vielzahl möglicher Einsatzszenarien umfasst der telefonische Support alle bereitgestellten Basis-Dienste, die in der Dokumentation beschrieben sind.
-
-   **Das Support-Team berät aber gerne und zeigt alle Möglichkeiten und Alternativen auf.**
+Da sich alle Steuerungsfunktionen in unserer Lösung an den Benutzern orientieren, ist es unerheblich an welchem Gerät sie sich befinden. Das Gleiche gilt auch für mitgebrachte Geräte, die sich via WLAN verbinden.
 
 
 Anpassbar
 ---------
-
-Alle bisher vorgestellten Basisdienste werden mithilfe des Setups konfiguriert, bleiben aber frei anpass- und erweiterbar. Es folgt eine einführende Beschreibung der letzten drei Bausteine, die linuxmuster.net zu der Komplettlösung machen.
 
 .. image::    media/structure_of_version_7_community.svg
    :name:     structure-community-components
@@ -251,15 +233,10 @@ Alle bisher vorgestellten Basisdienste werden mithilfe des Setups konfiguriert, 
    :height:   500px
    :align:    center 
 
-.. note:: Die Unterstützung erfolgt für die nachfolgenden Bestandteile durch das
+Alle bisher vorgestellten Basisdienste werden mithilfe des Setups konfiguriert, bleiben aber frei anpass- und erweiterbar. Es folgt eine einführende Beschreibung der letzten drei Bausteine, die linuxmuster.net zu der Komplettlösung machen.
 
-   Hilfe-Forum https://www.linuxmuster.net/de/support-de/discourse-forum/
-
-   Die detaillierte Beschreibung ist nicht Gegenstand dieser Dokumentation, sondern wird durch die Community in deren Wiki festgehalten.
-
-   Community-Wiki: https://wiki.linuxmuster.net/community/
-
-:Alternative Firewall: Einsatzszenarien, die mit einer anderen Firewall als OPNsense |reg| ausgestattet sein sollen, lassen sich mit linuxmuster.net ebenfalls umsetzen.
+Bestehende oder alternative Firewall
+++++++++++++++++++++++++++++++++++++
 
    .. image::    media/structure_of_version_7_alternate.svg
       :name:     structure-alternativ-firewall
@@ -267,9 +244,27 @@ Alle bisher vorgestellten Basisdienste werden mithilfe des Setups konfiguriert, 
       :width:    150px
       :align:    right
 
-   Wenn die eingesetzte (alternative) Firewall über die Möglichkeit einer Anbindung an den Samba4-Dienst des linuxmuster.net-Servers verfügt, kann diese alle aufgezeigten Vorteile nutzen.
+Wenn diese Firewall über die Möglichkeit einer Anbindung an den Samba4-Dienst des linuxmuster.net-Servers verfügt, kann diese problemlos genutzt werden.
 
-:Optionale Server: Für weitergehende Anpassungen besteht die Möglichkeit, optionale Server einzubinden.
+Dafür sind folgende Schritte erforderlich:
+
+1. Installation und Setup des linuxmuster.net - Server für das Dienst-, User- und Client-Management
+2. Installation und Einbindung des linuxmuster.net - File-Server für die Bereitstellung von Speicherplatz für Benutzer, Klassen etc.
+3. Anpassung der bestehenden Firewall, um die Internet-Sperre u.a. Dienste von linuxmuster.net voll zu unterstützen.
+
+.. hint::
+
+   In der bestehenden Firewall müssen hier
+
+   - Routen gesetzt
+   - für die Internetsperre die Gruppenmitgliedschaften im AD abgefragt
+   - ein Zeitserver bereitgestellt
+   - ein DNS-Forwarder so konfiguriert werden, dass externe URLs aufgelöst und lokale URLs an den AD weitergeleitet werden, der für die lokale Zone als DNS arbeitet
+ 
+Optionale Server
+++++++++++++++++
+
+Für weitergehende Anpassungen besteht die Möglichkeit, optionale Server einzubinden.
 
    .. image::    media/structure_of_version_7_optional.svg
       :name:     structure-option-server
@@ -277,11 +272,15 @@ Alle bisher vorgestellten Basisdienste werden mithilfe des Setups konfiguriert, 
       :width:    150px
       :align:    right
 
-  In der Darstellung ist etwa ein Docker-Server als Erweiterung an die Bedürfnisse der Bildungseinrichtung eingebunden. Docker ist ein Open-Source-Projekt zur automatisierten Anwendungsverteilung durch Container, die alle benötigten Pakete mitbringen. So vereinfacht sich die Bereitstellung und Verteilung. Außerdem gewährleisten sie die Trennung und Verwaltung der auf dem Docker-Server genutzten Ressourcen.
+In der Darstellung ist etwa ein Docker-Server als Erweiterung an die Bedürfnisse der Bildungseinrichtung eingebunden. Docker ist ein Open-Source-Projekt zur automatisierten Anwendungsverteilung durch Container, die alle benötigten Pakete mitbringen. So vereinfacht sich die Bereitstellung und Verteilung. Außerdem gewährleisten sie die Trennung und Verwaltung der auf dem Docker-Server genutzten Ressourcen.
 
- Für weitergehende Informationen siehe die Docker-Homepage: https://www.docker.com
+Für weitergehende Informationen siehe die Docker-Homepage: https://www.docker.com
 
-:Extra: Ein Porfolio an unterschiedlichen externen Diensten lässt sich an die linuxmuster.net Lösung anbinden, sodass eine einheitliche Authentifizierung erfolgt.
+
+Extra - externe Dienste / Server
+++++++++++++++++++++++++++++++++
+
+Ein Porfolio an unterschiedlichen externen Diensten / Servern lässt sich an die linuxmuster.net Lösung anbinden, sodass eine einheitliche Authentifizierung erfolgt.
 
    .. image::    media/structure_of_version_7_extra.svg
       :name:     structure-extra-server-and-services
@@ -289,9 +288,32 @@ Alle bisher vorgestellten Basisdienste werden mithilfe des Setups konfiguriert, 
       :width:   150px
       :align:    right
 
-   Es können z.B. extern gehostete Server wie Nextcloud, Moodle oder Konferenzsysteme integriert werden.
+Es können extern gehostete Server wie Nextcloud, Moodle, Konferenzsysteme oder andere Dienste integriert werden.
 
-:download:`Komplette Struktur als Inkscape SVG <media/structure_of_version_7_simple.svg>`
+Eine weitere Alternative wäre die Integration von verschiedenen Diensten mittels edulution.io. Für weitere Informationen zu dieser als open-source-software frei verfügbare Lösung siehe `edulution.io <https://ask.linuxmuster.net/t/edulution-io-ankuendigungen-news/11388>`_
+
+:download:`Vorgestellte Struktur als Inkscape SVG <media/structure_of_version_7_simple.svg>`
+
+Support
+-------
+
+Die unter `Die Basis`_ vorgestellten Bestandteile werden vom Verein **linuxmuster.net e. V.** entwickelt und unterstützt.
+
+Diese Unterstützung wird durch das
+
+   **Hilfe-Forum** `<https://www.linuxmuster.net/de/support-de/discourse-forum/>`_
+
+und die
+
+   **telefonische Hotline** `<https://www.linuxmuster.net/de/support-de/hotline/>`_
+
+geleistet.
+
+   **All diese Leistungen sind nicht von einer Mitgliedschaft im Verein abhängig.**
+
+   Aufgrund der Vielzahl möglicher Einsatzszenarien umfasst der telefonische Support alle bereitgestellten Basis-Dienste, die in der Dokumentation beschrieben sind.
+
+   **Das Support-Team berät aber gerne und zeigt alle Möglichkeiten und Alternativen auf.**
 
 
 

@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 Patchklassen für Postsync-Scripte
 =================================
 

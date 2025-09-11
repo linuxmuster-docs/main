@@ -1,4 +1,4 @@
-.. include:: ../../guided-inst.subst
+.. include:: /guided-inst.subst
 
 .. _install-from-scratch-label:
 
@@ -16,14 +16,16 @@ Lies zuerst die Abschnitte :ref:`what-is-new-label` und :ref:`prerequisites-labe
 Nach der Installation gemäß dieser Anleitung erhältst Du eine einsatzbereite Umgebung bestehend aus
 
 * einer Firewall (OPNsense |reg| für linuxmuster.net),
-* und einem Server (linuxmuster.net).
+* einem Server (linuxmuster.net) und
+* einem Fileserver (linuxmuster.net).
 
 Im Laufe der Installation benötigst Du einen Admin-PC. Das kann ein einfacher Laptop mit einem beliebigen Betriebssystem sein.
 
 **Vorgehensweise**
 
 * Zunächst installierst Du die Firewall OPNsense |reg|.
-* Danach installierst Du den Ubuntu-Server.
+* Danach installierst Du den Ubuntu-Server für den linuxmuster.net - Server
+* und installierst einen zweiten Ubuntu-Server für den linuxmuster.net File-Server.
 * Schließlich richtest Du linuxmuster.net ein.
 
 .. toctree::
@@ -34,5 +36,6 @@ Im Laufe der Installation benötigst Du einen Admin-PC. Das kann ein einfacher L
   basis_opnsense
   basis_server
   lmn_pre_install
+  basis_file_server
   proxmox_internes_netz
   

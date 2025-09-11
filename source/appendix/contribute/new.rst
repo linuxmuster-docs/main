@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 .. _new-label:
 
 Dokumentation lokal bearbeiten und veröffentlichen

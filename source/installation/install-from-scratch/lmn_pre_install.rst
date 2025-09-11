@@ -1,10 +1,10 @@
-.. include:: ../../guided-inst.subst
+.. include:: /guided-inst.subst
 
 .. _lmn_pre_install-label:
 
-=============================
-Server auf lmn7.2 vorbereiten
-=============================
+=====================================
+Server (AD/DC) auf lmn7.3 vorbereiten
+=====================================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
                    `@MachtDochNiX <https://ask.linuxmuster.net/u/MachtDochNiX>`_
@@ -46,9 +46,11 @@ Cloud-init kannst Du unter Ubuntu mit folgenden Schritten löschen:
 .. code-block:: Bash
 
    # Disable start
+   # Sollte die Datei schon existieren mit dem nächsten Schritt forfahren - sudo apt purge cloud-init -y
    sudo touch /etc/cloud/cloud-init.disabled
+
    # Uninstall
-   sudo apt purge cloud-init
+   sudo apt purge cloud-init -y
    sudo rm -rf /etc/cloud/ && sudo rm -rf /var/lib/cloud/
 
 Default-Locale setzen
@@ -277,7 +279,7 @@ Ist lmn-appliance ohne Fehler durchgelaufen, starte danach den Server neu mit de
 
   reboot
 
-Danach steht dem Setup v7.2 nichts mehr im Wege.
+Danach steht dem Setup v7.3 nichts mehr im Wege.
 
 Paketquellen eintragen
 ======================
@@ -286,7 +288,7 @@ Paketquellen eintragen
 
    Dies muss nur ausgeführt werden, sofern Du den Server bzw. die VM nicht mit dem Skript ``lmn-appliance`` vorbereitet haben solltest.
 
-Es müssen für linuxmuster.net v7.2 sowohl die Paketquellen für die v7.1 als auch die Paketquellen für die v7.2 eingetragen werden.
+Es müssen für linuxmuster.net v7.3 die neuen Paketquellen eingetragen werden.
 
 Zur Eintragung der Paketquellen führe folgende Befehle in der Eingabekonsole aus:
 
@@ -298,22 +300,15 @@ Zur Eintragung der Paketquellen führe folgende Befehle in der Eingabekonsole au
 
 Damit installierst Du den Key für das Repository von linuxmuster.net und aktivierst ihn.
 
-Danach fügst Du zuest das Linuxmuster 7.1 Repository hinzu.
+Füge dann das Linuxmuster 7.3 Repository hinzu.
 
 .. code-block:: Bash
 
-   sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/linuxmuster.net.gpg] https://deb.linuxmuster.net/ lmn71 main" > /etc/apt/sources.list.d/lmn71.list'
-
-Zuletzt fügst Du das Linuxmuster 7.2 Repository hinzu.
-
-.. code-block:: Bash
-
-   sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/linuxmuster.net.gpg] https://deb.linuxmuster.net/ lmn72 main" > /etc/apt/sources.list.d/lmn72.list'
+   sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/linuxmuster.net.gpg] https://deb.linuxmuster.net/ lmn73 main" > /etc/apt/sources.list.d/lmn.list'
 
 Aktualisiere die Softwareliste des Servers:
 
 .. code-block:: Bash
 
    sudo apt update
-
 

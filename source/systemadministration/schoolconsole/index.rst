@@ -1,3 +1,4 @@
+.. include:: /guided-inst.subst
 .. _school-console-global-admin-label:
 
 =============================

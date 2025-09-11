@@ -1,4 +1,4 @@
-.. include:: ../../../guided-inst.subst
+.. include:: /guided-inst.subst
 
 .. _hardware-category-label:
 
@@ -9,7 +9,7 @@ Hardwareklasse (HWK) / Gruppe erstellen
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
                    `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
-Melde Dich als Benutzer ``global-admin`` an der Web-UI an.
+Melde Dich als Benutzer ``global-admin`` an der WebUI an.
 
 .. figure:: media/01-webui-login.png
    :align: center
@@ -28,7 +28,16 @@ Erstelle nun die Konfiguration für die neue Hardwareklasse. Klicke links im Men
 
 Nun klickst Du unten links auf ``+ERSTELLEN``.
 
-Es öffnet sich ein Kontextmenü. Du kannst entweder ein leere ``start.conf`` nutzen, oder ein bereits vordefiniertes Template für Dein gewünschtes Betriebssystem auswählen. Hierbei kannst Du Templates für ein oder mehrere Betriebssysteme mit oder ohne UEFI-BIOS auswählen und diese ggf. nach Deinen Vorstellungen anpassen.
+Es öffnet sich ein Kontextmenü. Du kannst entweder ein leere ``start.conf`` nutzen, oder ein bereits vordefiniertes Template für Dein gewünschtes Betriebssystem auswählen. Hierbei kannst Du Templates für ein oder mehrere Betriebssysteme mit oder ohne UEFI-BIOS auswählen und diese ggf. nach Deinen Vorstellungen anpassen. 
+
+LINBO nutzt zur Bezeichnung der Festplatte ab v4.3 eine einheitliche Bezeichnung (unified block device name), was die Pflege eines einheitlichen Images bei unterschiedlicher Hardware vereinfacht:
+
+1. Die erste HDD wird als /dev/disk0 bezeichnet
+2. Die erste Partition auf der ersten HDD wird dann als /dev/disk0p1 bezeichnet.
+
+Sollten in Deinen start.conf - Dateien noch die alten Bezeichnungen enthalten sein, kannst Du diese in den Dateien so belassen. Alternativ kannst Du dies auf die neuen einheitlichen Bezeichnungen (unified block device name) anpassen und mit dem Befehl ``linuxmuster-import-devices`` neu einlesen. Dies kannst Du ebenfalls effizient direkt in der WebUI in der Hardwareklasse für alle Partitionen durchführen. Durch Änderung des Festplattentyps werden hier automatisch alle Partitionsbezeichnungen einheitlich an die neuen Bezeichnungen angepasst.
+
+Wähle ein Template aus:
 
 .. figure:: media/03-webui-menue-linbo-create-start-template.png
    :align: center
@@ -76,14 +85,9 @@ Unter ``Partitionen`` legst Du fest, welche Partitionen auf der Festplatte vorge
    
    Partitionen festlegen
 
-Löschst Du dort z.B. die Partitionen ``swap`` und ``data`` so sieht Deine Partitionierung wie folgt aus:
+.. hint::
 
-.. figure:: media/07-webui-linbo-edit-new-group-partition-scheme-edited.png
-   :align: center
-   :alt: WebUI linbo edit new hwc group - partition scheme edited
-   :width: 80%
-   
-   Partitionen anpassen
+   Achte darauf, dass der Festplattentyp Deines PCs dem Festplattentyp des gewählten Templates entspricht. Nutzt Du eine SATA-HDD, so sollte im Template /dev/sda stehen. Möchtest Du den Muster-Client auf einer virtuellen Maschine vorbereiten, achte darauf, dass der Festplattentyp auch hier auf SATA gestellt ist, wenn Du ein Template auswählst, das noch /dev/sda als Bezeichnungen nutzt. Solltest Du z.B. VirtIO als Festplattentyp nutzen, dann passe Deine Partitionsbezeichnungen auf die neue einheitliche Partitionsbezeichnung /dev/disk0p(x) an.  
 
 Um Einstellungen für das jeweilige Betriebssystem vorzunehmen, klickst Du auf das Stift-Icon neben dem angegebenen Betriebssystem. Es öffnet sich ein weiteres Fenster, um Einstellungen für das Betriebssystem vorzunehmen.
 
@@ -96,20 +100,20 @@ Um Einstellungen für das jeweilige Betriebssystem vorzunehmen, klickst Du auf d
 
 Unter der Reiterkarte ``OS`` legst Du für das Betriebssystem (OS) die gewünschten Icons, die Start-Optionen und u.a. auch den Namen für das Basisimage fest. 
 
-Um ein neues Image festzulegen, klickst Du auf das ``+`` - Zeichen und trägst einen neuen Namen für das Image ein. Achte darauf, dass die Dateiendung ``.qcow2`` lautet. Um nun das neue Image zu erstellen, startest Du den Client neu. Es wird das bestehende Image, das unter Basisimage angelegt bzw. ausgewählt wurde - hier das noch nicht existierende Image ``pop_os_mim.qcow2`` - überschrieben. 
+Um ein neues Image festzulegen, klickst Du auf das ``+`` - Zeichen und trägst einen neuen Namen für das Image ein. Achte darauf, dass die Dateiendung ``.qcow2`` lautet. Um nun das neue Image zu erstellen, startest Du den Client neu. Es wird das bestehende Image, das unter Basisimage angelegt bzw. ausgewählt wurde - hier das noch nicht existierende Image ``ubuntu.qcow2`` - überschrieben. 
 
-Auf dem linuxmuster.net Server werden die start.conf-Dateien im Verzeichnis ``/srv/linbo`` abgelegt. Jede Hardwareklasse hat eine eigene start.conf-Datei. Für die neu angelegte Hardwareklasse des Muster-Clients wurde dort nun eine Datei ``start.conf.<name-der-hwk>`` erstellt (z.B. start.conf.ubu20efi).
+Auf dem linuxmuster.net Server werden die start.conf-Dateien im Verzeichnis ``/srv/linbo`` abgelegt. Jede Hardwareklasse hat eine eigene start.conf-Datei. Für die neu angelegte Hardwareklasse des Muster-Clients wurde dort nun eine Datei ``start.conf.<name-der-hwk>`` erstellt (z.B. start.conf.ubu-efi).
 
 Diese Datei muss normalerweise nicht händisch editiert werden, da sich alle nötigen Einstellungen in der WebUI vornehmen lassen. Das folgende Beispiel dient nur dazu, zu zeigen, was "unter der Decke" passiert.
 
-Folgende Konfiguration zeigt ein mögliches Beispiel für die ``Hardwareklasse ubu20efi`` (hier als Linux-Client). Diese würde sich in der Datei ``/srv/linbo/start.conf.ubu20efi`` befinden. Hierbei wird von einem UEFI-BIOS und Linux als Betriebssystem ausgegangen:
+Folgende Konfiguration zeigt ein mögliches Beispiel für die ``Hardwareklasse ubu-efi`` (hier als Linux-Client). Diese würde sich in der Datei ``/srv/linbo/start.conf.ubu-efi`` befinden. Hierbei wird von einem UEFI-BIOS und Linux als Betriebssystem ausgegangen:
 
 .. code::
 
   [LINBO]
    Server = 10.0.0.1
-   Group = ubu20efi            #Hardwareklasse
-   Cache = /dev/sda3
+   Group = ubu-efi            # Name der Hardwareklasse
+   Cache = /dev/disk0p3       # Uniform Block Device - hier: HDD 0 Partition 3 - frueher: /dev/sda3
    RootTimeout = 600
    AutoPartition = no
    AutoFormat = no
@@ -122,7 +126,7 @@ Folgende Konfiguration zeigt ein mögliches Beispiel für die ``Hardwareklasse u
    KernelOptions = quiet splash        # hier muessen bei spezieller Hardware ggf. Kernel-Parameter angegeben werden wie nomodeset
   
    [Partition]
-   Dev = /dev/sda1
+   Dev = /dev/disk0p1
    Label = efi
    Size = 200M
    Id = ef
@@ -130,31 +134,31 @@ Folgende Konfiguration zeigt ein mögliches Beispiel für die ``Hardwareklasse u
    Bootable = yes
 
    [Partition]
-   Dev = /dev/sda2
+   Dev = /dev/disk0p2
    Label = ubuntu
-   Size = 12G
+   Size = 25G
    Id = 83
    FSType = ext4
    Bootable = no
   
    [Partition]
-   Dev = /dev/sda3
+   Dev = /dev/disk0p3
    Label = cache
-   Size = 12G
+   Size = 25G
    Id = 83
    FSType = ext4
    Bootable = no
 
    [Partition]
-   Dev = /dev/sda4
+   Dev = /dev/disk0p4
    Label = swap
-   Size = 2G
+   Size = 8G
    Id = 82
    FSType = swap
    Bootable = no
 
    [Partition]
-   Dev = /dev/sda5
+   Dev = /dev/disk0p5
    Label = data
    Size =            # verbleibender Plattenplatz wird der Partition zugewiesen
    Id = 83
@@ -163,13 +167,11 @@ Folgende Konfiguration zeigt ein mögliches Beispiel für die ``Hardwareklasse u
    
    [OS]
    Name = Ubuntu
-   Version = 20.04 LTS
-   Description = Ubuntu 20.04
+   Version = 24.04 LTS
+   Description = Ubuntu 24.04
    IconName = ubuntu.svg
-   Image =
-   BaseImage = ubuntu.qcow2 # Name des neu angelegten Images in obiger Abb. ist dies: pop_os_mlm.qcow2
-   Boot = /dev/sda2
-   Root = /dev/sda2
+   BaseImage = ubuntu.qcow2 # Name des neu angelegten Images
+   Root = /dev/disk0p2
    Kernel = /boot/vmlinuz
    Initrd = /boot/initrd.img
    Append = ro splash
@@ -179,13 +181,10 @@ Folgende Konfiguration zeigt ein mögliches Beispiel für die ``Hardwareklasse u
    Autostart = no
    AutostartTimeout = 5
    DefaultAction = sync
-   RestoreOpsiState = no
-   ForceOpsiSetup =
-   Hidden = yes
-
+   
 .. hint::
 
-  Sollte der Client beim Boot-Vorgang Probleme haben (z.B. initializing hardware ...), dann müssen zur Behebung Kernel-Parameter für den Linux-Client in der Conf-Datei eingetragen werden. Dies kann insbesondere bei neueren Grafik- und Netzwerkkarten der Fall sein, so dass hier weitere Optionen anzugeben sind. Oftmals führt bereits folgende Zeile zum Erfolg: 
+  Sollte der Client beim Boot-Vorgang Probleme haben (z.B. initializing hardware ...), dann müssen zur Behebung Kernel-Parameter für den Linux-Client in der Conf-Datei eingetragen oder ggf. einer anderer Kernel getestet werden. Dies kann insbesondere bei neueren Grafik- und Netzwerkkarten der Fall sein, so dass hier weitere Optionen anzugeben sind. Oftmals führt bereits folgende Zeile zum Erfolg: 
 
   ``KernelOptions = quiet splash nomodeset``
 

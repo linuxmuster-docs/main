@@ -1,9 +1,12 @@
+.. include:: /guided-inst.subst
 .. _using-linbo-label:
 
 LINBO4 nutzen
 =============
 
-LINBO steht für GNU/\ **Li**\ nux **N**\ etwork **Bo**\ ot. Es wurde ursprünglich im Auftrag des Landesmedienzentrums Baden-Württemberg von der Firma KNOPPER.NET in Zusammenarbeit mit den damaligen paedML-Linux- und heutigen linuxmuster.net-Entwicklern realisiert. Der Sourcecode ist unter GNU General Public License Version 2 veröffentlicht.
+LINBO steht für GNU/\ **Li**\ nux **N**\ etwork **Bo**\ ot. Es wurde ursprünglich im Auftrag des Landesmedienzentrums Baden-Württemberg von der Firma KNOPPER.NET in Zusammenarbeit mit den damaligen paedML-Linux- und heutigen linuxmuster.net-Entwicklern realisiert. 
+
+Die linuxmuster.net-Entwickler haben LINBO nun in der Version > 4.3 veröffentlicht. Der Sourcecode ist unter GNU General Public License 3.0 auf GitHub veröffentlicht.
 
 LINBO bietet
 
@@ -23,9 +26,28 @@ LINBO4, das von linuxmuster.net entwickelt wurde, weist einige Neuerungen auf:
 * linuxmuster.net <=6.2 wird nicht mehr unterstützt.
 * Ab LINBO v4.1 stehen differentielle Images zur Verfügung.
 * Bisherige Images im cloop Format sind direkt in das neue qcow2 Format zu konvertieren.
-* AB LINBO v4.1.36 wird Kernel 6.5.3 verwendet und es können qcow2-Images mit Torrent verteilt werden, die > 52 GiB sind. Für ctorrent kann hierzu die sog. piece length konfiguriert werden.
+* Ab LINBO v4.1.36 wird Kernel 6.5.3 verwendet und es können qcow2-Images mit Torrent verteilt werden, die > 52 GiB sind. Für ctorrent kann hierzu die sog. piece length konfiguriert werden.
+* Ab LINBO v4.3 wird die Nutzung verschiedener Kernel bei den Clients ermöglicht:
+    • legacy - Kernel: 6.1.*
+    • longterm - Kernel: 6.12.*
+    • stable - Kernel: 6.14.* 
+* Es können auf den Clients Linux Firmware-Dateien genutzt werden. Firmware ist in Ubuntu 24.04 zst-komprimiert. Firmware-Dateien können in /etc/linuxmuster/linbo/firmware aber wie bisher ohne .zst-Extension angegeben werden.
+* Ab LINBO 4.3 werden vereinheitlichte Partitionsnamen verwendet:
+  Unabhängig vom verbauten Festplattentyp (SATA, NVME etc.) können die Partitionen jetzt mit einheitlichen Namen angesprochen werden.
+  
+Namensschema:
+    • 1. Platte: /dev/disk0
+    • 2. Platte: /dev/disk1
+    • ...
+    • 1. Partition: /dev/disk0p1
+    • 2. Partition: /dev/disk0p2
+    • …
+    
+    Linbo legt beim Bootvorgang entsprechende Symlinks zu den tatsächlichen Devices an.
+    Eine NVME-Disk wird immer als erste Platte (disk0) definiert.
+    Eine USB-Platte wird immer als letzte Platte definiert.
 
-Dieses Kapitel führt Dich in die Nutzung von LINBO4 ein und erklärt die wesentlichen Schritte zur Imageverwaltung.
+Dieses Kapitel führt in die Nutzung von LINBO4 ein und erklärt die wesentlichen Schritte zur Imageverwaltung.
 
 .. hint::
 	Die meisten PC mit UEFI verwenden standardmäßig "SecureBoot". Dies muss deaktiviert werden, um Linbo booten zu können!
@@ -1033,6 +1055,210 @@ Dazu wechselst Du wieder mit ``linbo-ssh <IP des Clients>`` auf die LINBO-Konsol
 
 Sämtliche Befehle, die linuxmuster-linbo7 (next generation) beherrscht, werden hier aufgelistet: https://github.com/linuxmuster/linuxmuster-linbo7/issues/72#issuecomment-1156633508
 
+LINBO4: VNCServer nutzen
+------------------------
+
+Wird für den Cient der LINBO Kernel-Parameter ``vncserver`` gesetzt, dann wird während des Bootvorgangs von LINBO ein VNC-Server auf dem Client gestartet. Dieser Dienst akzeptiert nur Verbindungen, die von der Server-IP ausgehend auf Port 9999 kommen. Hierdurch ist es möglich, von einem PC im Netzwerk via VNCViewer auf die grafische LINBO-Oberfläche eines LINBO-Clients zuzugreifen.
+
+Kernel-Parameter setzen
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Wähle in der WebUI im Menü unter ``Geräteverwaltung -> LINBO4 -> Gruppen`` die gewünschte Hardwareklasse aus, bearbeite diese mit dem Stift Symbol und ergänze unter ``Allgemein -> Kernel-Optionen`` in der Eingabezeile als Start-Parameter manuell ``vncviewer``.
+
+.. figure:: media/01-linbo-start-vncserver.png
+   :align: center
+   :alt: Start vncserver
+   :width: 80%
+   
+   LINBO vncserver starten
+
+Speicher die Einstellungen mit dem Button ``Speichern`` und importiere alle Geräte erneut.
+
+In der zugehörigen Datei ``/srv/linbo/start.conf.<hwk>`` findet sich dann folgender Eintrag:
+
+.. code::
+
+   [LINBO]
+   ...
+   KernelOptions = quiet splash vncserver
+   ...
+   
+SSH-Tunnel herstellen
+^^^^^^^^^^^^^^^^^^^^^
+   
+Es muss nun von dem PC im Netzwerk, von dem aus auf den LINBO-Client zugegriffen werden soll, ein SSH-Tunnel auf den LINBO-Client hergestellt werden. Dazu muss ein SSH-Tunnel über den Server an den Client über Port 9999 definiert werden.
+
+Dies kann auf dem PC wie folgt in der Linux-Konsole definiert werden:
+
+.. code::
+
+   ssh -L 9999:<Client-IP>:9999 root@<Server-IP>
+   
+Der Server fordert zur Eingabe des Kennwortes für den Benutzer root auf. Wurde dies erfolgreich ausgeführt, so ist die Konsole es Server zu sehen.
+
+Auf dem Client kann nach dem LINBO-Bootvorgang in der LINBO-Konsole kontrolliert werden, ob der VNCServer gestartet wurde. Wähle in LINBO dazu rechts das Werkzeug aus und wähle den Eintrag LINBO-Konsole aus.
+
+Gib hier den Befehl ``ps`` ein und Du erhälst die Ausgabe der derzeit unter LINBO auf dem Client laufende Prozesse.
+
+Dies kann z.B. wie folgt aussehen:
+
+.. figure:: media/02-linbo-vncserver-process.png
+   :align: center
+   :alt: check vncserver process
+   :width: 80%
+   
+   LINBO VNCServer Prozess prüfen
+   
+Der mit der Prozessnummer 1460 in obiger Abbildung angegebene Prozess zeigt, dass der VNCServer auf dem LINBO-Client gestartet wurde und auf Port 9999 Anfragen annimmt.
+
+
+VNCViewer aufrufen
+^^^^^^^^^^^^^^^^^^
+
+Auf dem PC, auf dem der SSH-Tunnel hergestellt wurde, muss das Programm VNCViewer installiert sein. Hiermit kann dann via Konsole eine VNC-Verbindung auf die LINBO-Oberfläche des Clients definiert werden. Starte auf dem Linux-PC eine zweite Konsole und gib folgenden Befehl ein:
+
+.. code::
+
+   vncviewer localhost:9999 
+   
+Voraussetzung ist, dass der Client in die LINBO-Oberfläche gestartet und zuvor der SSH-Tunnel hergestellt wurde.
+
+Danach kann mit dem Programm VNC von dem PC aus remote auf den LINBO-Client via VNC zugegriffen werden.
+
+Wie in nachstehender Abb. erhälst Du dann Zugriff auf den LINBO-Client vom PC aus:
+
+.. figure:: media/03-linbo-vncviewer-access.png
+   :align: center
+   :alt: vncviewer access
+   :width: 80%
+   
+   LINBO Zugriff via VNCViewer
+   
+LINBO4: Live-System von ISO booten
+----------------------------------
+
+Mit LINBO >= v4.3 ist es möglich via LINBO ein Live-System wie z.B. Ubuntu 24.04 Desktop oder Systemrescue 12.01 mithilfe der zugehörigen ISO-Datei, die auf dem Server liegt zu starten.
+
+Um im Fehlerfall auf bestimmten Clients diesen auch mithilfe eines Live-System zu booten, kann z.B. für eine Hardwareklasse ein zusätzlicher Boot-Eintrag bereitgestellt werden, der auf eine ISO-Datei verweist.
+
+Hierdurch kannst Du via LINBO auf dem Client das Live-System vom Server aus starten und so die Fehler auf dem Client anaylsieren, oder auch einfach nur das Live-System auf dem Client testen.
+
+Vorgehen
+^^^^^^^^
+
+1. ISO-Dateien für die Linux-Live-Systeme auf dem Server bereitstellen.
+2. Torrent- und Info-Dateien für diese ISO-Dateien auf dem Server erzeugen.
+3. Für jede ISO-Datei die Pfade für Kernel und Initrd herausfinden.
+4. Herausfinden, welche Kernel-Append Parameter ggf. erforderlich sind.
+5. In der Hardwareklasse/start-conf-Datei einen zugehörigen OS-Abschnitt erstellen.
+
+ISO-Dateien bereitstellen
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Stellt man eine ISO-Datei von einem Linux-Live-System als Imagedatei bereit, kann diese bei entsprechender Konfiguration der Hardwareklasse von der Linbo-Clientoberfläche aus gestartet werden.
+
+Zur Bereitstellung der ISO-Dateien sind diese auf dem Server im Verzeichnis ``/srv/linbo/images`` bereitzustellen.
+
+Pro ISO-Datei ist  unterhalb des o.g. Verzeichnisses ein gleichnamiges Unterverzeichnis zu erstellen.
+
+**Beispiel**:
+
+Sollen die ISO-Dateien ``ubuntu-24.04.2-desktop-amd64.iso`` und ``systemrescue-12.01-amd64.iso`` bereitgestellt werden, so sind zunächst folge unterverzeichnisse anzulegen:
+
+.. code::
+
+   mkdir /srv/linbo/images/ubuntu-24.04.2-desktop-amd64
+   mkdir /srv/linbo/images/systemrescue-12.01-amd64
+   
+Lade danach die ISO-Dateien in die zuvor angelegten Unterverzeichnisse:
+
+.. code::
+
+   cd /srv/linbo/images/ubuntu-24.04.2-desktop-amd64
+   curl -O ubuntu-24.04.2-desktop-amd64.iso https://ubuntu.com/download/desktop/thank-you?version=24.04.2&architecture=amd64&lts=true 
+   cd /srv/linbo/images/systemrescue-12.01-amd64/
+   curl -O systemrescue-12.01-amd64.iso wget https://sourceforge.net/projects/systemrescuecd/files/sysresccd-x86/12.01/systemrescue-12.01-amd64.iso/download 
+
+Torrent- und Info-Dateien erstellen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Nachdem im Schritt zuvor die ISO-Dateien bereitgestellt wurden, sind nun für diese jeweils Torrent- und Info-Dateien zu erstellen.
+
+Dies erfolgt bezogen auf o.g. Beispiel mit nachstehenden Befehlen:
+
+.. code::
+
+   linbo-torrent create /srv/linbo/images/ubuntu-24.04.2-desktop-amd64/ubuntu-24.04.2-desktop-amd64.iso
+   linbo-torrent create /srv/linbo/images/systemrescue-12.01-amd64/systemrescue-12.01-amd64.iso
+   
+Es finden sich in in dem jeweiligen Unterverzeichnis dann drei Dateien (z.B.):
+
+.. code::
+
+   systemrescue-12.01-amd64.iso
+   systemrescue-12.01-amd64.iso.info
+   systemrescue-12.01-amd64.iso.torrent
+
+Pfade für Kernel und Initrd ermitteln
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In der Hardwareklasse sind später die Pfade für Kernel und Initd anzugeben, wie diese in der ISO-Datei gültig sind. Daher sind in den ISO-Dateien zunächst deren Pfade zu ermitteln.
+
+1. Mounte die ISO-Datei auf dem PC
+2. Suche für den Kernel nach der Datei ``vmlinuz``. Notiere Dir den Pfad.
+3. Suche für Initrd nach der Datei ``initrd.img`` oder ``initramfs``. Notiere Dir den Pfad.
+
+Für ubuntu-24.04.2-desktop-amd64.iso liegen beide Dateien im Verzeichnis ``casper``.
+
+Für systemrescue-12.01-amd64.iso liegt die Datei ``vmlinuz`` im Verzeichnis ``sysresccd/boot/x86_64/``. Die Datei ``initramfs (sysresccd.img)`` liegt ebenfalls im Verzeichnis ``sysresccd/boot/x86_64/``.
+
+
+Kernel-Append-Parameter ermitteln
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Für die ISO-Dateien musst Du noch ermitteln, welche Kernel-Parameter angefügt werden können2, die dann in der Hardwareklasse für die start.conf angegeben werden können.
+
+1. Öffne die gemountete ISO-Datei auf dem PC.
+2. Suche die Dateien ``boot/grub/grub.cfg`` oder ``isolinux.cfg``. Die Parameter splash, quiet, findiso und iso-scan können weggelassen werden, da sie automatisch erzeugt werden.
+
+Hardwareklasse/start.conf anpassen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In der gewünschten Hardwareklasse ergänzt Du auf dem Server in der Konsole die gewünschte start.conf-Datei um einen OS-Abschnitt.
+
+Beispiel:
+
+.. code::
+ 
+   [OS]
+   Name = Ubuntu (Live)
+   Description = Ubuntu 24.04.2 Desktop Live
+   IconName = ubuntu.svg
+   BaseImage = ubuntu-24.04.2-desktop-amd64.iso
+   Root = /dev/disk0p3 # dies ist die Cache-Partition des Clients
+   Kernel = casper/vmlinuz
+   Initrd = casper/initrd
+   Append = locales=de_DE.UTF-8
+   StartEnabled = yes
+   SyncEnabled = no
+   NewEnabled = no
+   Autostart = no
+   AutostartTimeout = 5
+   DefaultAction = start
+   
+Devices importieren
+^^^^^^^^^^^^^^^^^^^
+
+Abschliessend musst Du in der Konsole auf dem Server den Befehl ``linuxmuster-import-devices`` ausführen, damit die Hardwareklassen neu eingelesen und angewendet werden.
+
+Live-CD starten
+^^^^^^^^^^^^^^^
+
+Starte nun den Client via LINBO. Im Startmenü von LINBO findest Du nun den zur angelegten Eintrag zur Live-CD. Starte diese nun durch einen Klick auf das grosse Symbol für das Betriebssystem.
+
+
+
+
 im Fehlerfall
 -------------
 
@@ -1054,7 +1280,7 @@ Die Paketgrößen können nun als Parameter ``piece length`` angepasst werden. D
 .. code::
 
    # Piece length (torrent file option)
-   PIECELEN="524288"
+   ECELEN="524288"
    
 Hast Du den Wert angepasst, musst Du Torrent neu startebn:
 
