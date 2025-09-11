@@ -1,0 +1,1215 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:7
+msgid "Windows 10 Clients"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:14
+msgid "Betriebssystem Windows 10 installieren"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:16
+msgid ""
+"Du hast den PC wie zuvor beschrieben mit LINBO partioniert und "
+"formatiert. Danach hast Du den PC / die VM über CD/USB-Stick gebootet."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:17
+msgid ""
+"Drücke während des Boot-Vorgangs nach Aufforderung eine Taste, damit von "
+"dem Windows-Installationsmedium tatsächlich gebootet wird."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:18
+msgid ""
+"Danach siehst Du zu Beginn der Installation die Spracheinstellungen. "
+"Wähle die gewünschten Einstellungen aus und klicke auf ``Weiter``:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:25
+msgid "Win10 Choose Clients"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:25
+msgid "Wähle die Sprache und das Tastaturlayout"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:27
+msgid "``Jetzt installieren`` wählen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:34
+msgid "Win10 Choose Install"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:34
+msgid "Wähle Jetzt installieren"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:36
+msgid ""
+"Es wird das Setup gestartet. Es erscheint zuerst der Hinweis auf die "
+"Windows-Aktivierung. Hier kannst Du zum jetzigen Zeitpunkt die Option "
+"``Ich habe keinen Product Key`` wählen. Die Aktivierung mit der "
+"vorhandenen Lizenz erfolgt dann später in anderer Form."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:38
+msgid ""
+"Wähle dann das gewünschte Betriebssystem aus, für das die Lizenz "
+"vorliegt, z.B. Windows 10 Pro Education N."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:45
+msgid "Choose OS"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:45
+msgid "Wähle das gewünschte Betriebssystem aus"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:47
+msgid "Haken zum Akzeptieren der Lizenzbedingungen setzen und auf ``Weiter``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:54
+msgid "Accept License Agreement"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:54
+msgid "Akzeptiere die Lizenzbedingungen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:56
+msgid "``Benutzderfinierte Installation`` wählen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:63
+msgid "Win10 Choose Individual Installation"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:63
+msgid "Wähle die benutzerdefinierte Installation"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:65
+msgid ""
+"Im Menü der Festplattenauswahl sollte nun eine Partition vorhanden sein, "
+"die von LINBO vorbereitet wurde und auf welcher Windows 10 installiert "
+"werden soll."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:72
+msgid "Win10 Choose Partition"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:72
+msgid "Wähle die Partition für die Installation von Windows"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:74
+msgid ""
+"In der Abb. wurde ein UEFI-System vorbereitet. Partition 3 wurde für "
+"Windows 10 vorbereitet und Partition 4 ist die Cache-Parition. Wähle nun "
+"die richtige Parition (hier: Parition 3: windows) aus und klicke auf "
+"``Weiter``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:76
+msgid "Warte bis die Installation von Windows abgeschlossen wurde."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:83
+msgid "Win10 installing os components"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:83
+msgid "Fortschritt der Installation von Windows"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:85
+msgid "Starte Windows neu."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:89
+msgid ""
+"Es ist jetzt wichtig, dass der PC in LINBO gebootet wird. Stelle daher "
+"die Boot-Reihenfolge wieder so um, dass via PXE LINBO gebootet wird. Du "
+"gelangst dann wieder wie zuvor in den Linbo Startbildschirm."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:91
+msgid ""
+"Starte im LINBO-Menü nun Windows unsynchronisiert über den kleinen GRÜNEN"
+" Startknopf neu (!!!nicht rot oder orange!!!):"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:98
+msgid "Linbo Start OS Unsynchronised"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:98
+msgid "Starte Windows 10 unsynchronisiert"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:102
+msgid ""
+"Solltest Du hier Probleme haben und ein UEFI-System als Client "
+"eingerichtet haben, so versuche, den Client auf den Legacy-Modus "
+"umzustellen und die Hardwareklasse in der Schulkonsole ebenfalls so "
+"anzupassen, dass BIOS64 genutzt wird. Importiere die Geräte neu, "
+"formatiere den Client mit LINBO neu, installiere Windows erneut und boote"
+" das installierte Windows aus dem lokalen Cache - wie zuvor beschrieben."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:104
+msgid ""
+"Nachdem Windows nun aus dem lokalen LINBO-Cache bootet, wird die "
+"Installation fortgeführt. Windows richtet Dienste ein und startet dann "
+"erneut. Du gelangst wieder in LINBO und startest Windows wieder "
+"unsynchronisiert mit der grünen Pfeiltaste."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:106
+msgid "Nach dem erneuten Start von Windows wählst Du Deine Region aus."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:113
+msgid "Win10 Choose Region"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:113
+msgid "Wähle die Region aus"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:115
+msgid "Tastaturlayout wählen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:122
+msgid "Win10 Choose Keyboard Layout"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:122
+msgid "Wähle das Tastaurlayout aus"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:124
+msgid "Zweites Tastaturlayout ggf. wählen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:131
+msgid "Win10 Choose Second Key Layout"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:131
+msgid "Wähle ggf. ein zweites Tastaturlayout aus"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:133
+msgid "Mit Netzwerk verbinden."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:140
+msgid "Win10 Connect Network"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:140
+msgid "Ohne Internet-verbindung installieren"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:143
+msgid "Internet-Verbindung herstellen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:150
+msgid "Win10 Internet Connection"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:150
+msgid "Weiter mit eingeschränktem Setup"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:152
+msgid "Admin-Benutzer festlegen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:159
+msgid "Win10 Create Admin User"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:159
+msgid "Lege den Benutzer admin an"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:161
+msgid "Kennwort festlegen und die Sicherheitsfragen beantworten."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:168
+msgid "Win10 Create Admin Password"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:168
+msgid "Lege das Kennwort für den lokalen Benutzer admin fest"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:170
+msgid "Aktivitätenverlauf deaktivieren."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:177
+msgid "Win10 Deactivate Tracking"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:177
+msgid "Deaktiviere das Tracking"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:179
+msgid "Assistenten deaktiviern."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:186
+msgid "Win10 Deactivate Assistant"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:186
+msgid "Deaktiviere Assistenten"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:188
+msgid "Spracherkennung deaktivieren."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:195
+msgid "Win10 Deactivate Voice Recognition"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:195
+msgid "Deaktiviere die Spracherkennung"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:197
+msgid "Standortdienste deaktivieren."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:204
+msgid "Win10 Deavtivate Location Services"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:204
+msgid "Deaktiviere den Ortungsdienst"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:206
+msgid "Gerätesuche deaktivieren"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:213
+msgid "Win10 Deactivate Device Search"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:213
+msgid "Deaktiviere die Gerätesuche"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:215
+msgid "Übermittlung der Diagnosedaten deaktivieren."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:222
+msgid "Win10 Deactivate Diagnose Data"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:222
+msgid "Deaktiviere die Übermittlung von Diagnosedaten"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:224
+msgid "Verbesserung der Eingabe / Freihand deaktivierens"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:231
+msgid "Win10 Deactivate Freehand"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:231
+msgid "Deaktiviere die Freihandeingabe"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:233
+msgid "Restliche Einrichtungsschritte vornehmen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:235
+msgid ""
+"Als Nutzer ``admin`` anlegen und Kennwort leer lassen oder ein bestimmtes"
+" setzen. Die nächsten Einstellungen ablehnen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:237
+msgid ""
+"Weitere gewünschte Einrichtungen ausführen (Programme, Hintergründe, "
+"usw.)."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:239
+msgid ""
+"Alle Updates installieren. Hierbei muss Windows immer wieder neu "
+"gestartet werden. Darauf achten, dass Windows aus LINBO heraus immer nur "
+"mit der GRÜNEN Pfeiltaste gestartet wird."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:241
+msgid "Gewünschte Einstellungen am Client vornehmen und Installation abschließen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:245
+msgid "Global-Registry Patch für Windows 10"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:247
+msgid ""
+"Vor der Aufnahme des Rechners in die Domäne muss der sog. ``Global-"
+"Registry-Patch`` eingespielt werden, da es ansonsten zu einer Änderung "
+"des Kennworts für das Computerkonto kommen kann."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:249
+msgid "Starte auf dem Client Windows in LINBO mit der grünen Pfeiltaste."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:251
+msgid "Melde Dich als lokaler Administrator am Windows-PC an."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:253
+msgid ""
+"Öffen den Explorer und gehe auf ``Dieser PC -> Geräte und Laufwerke -> "
+"windows (C:) -> linuxmuster-win``"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:260
+msgid "linuxmuster-win"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:260
+msgid "Öffne den Ordner c:\\\\linuxmuster-win\\\\"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:262
+msgid ""
+"Bestätige die Nachfrage zur Berechtigung zum Zugriff auf diesen Ordner "
+"mit ``Fortsetzen``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:264
+msgid ""
+"Kopiere die Datei ``win10.global`` auf den Desktop, indem Du diese mit "
+"der linken Maustaste markierst und auf den Desktop ziehst."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:271
+msgid "linuxmuster-win-win10-global"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:271
+msgid "Kopiere die Datei win10.global auf den Desktop"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:273
+msgid ""
+"Danach setzt Du die Installation mit dem Abschnitt :ref:`win10.global.reg"
+" einspielen` einspielen fort."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:275
+msgid "Im Fehlerfall gehst Du zu dem Abschnitt :ref:`im Fehlerfall`"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:280
+msgid "win10.global.reg einspielen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:282
+msgid ""
+"Führe nun einen Doppelklick auf die Datei ``win10.global.reg`` auf dem "
+"Desktop aus. Lasse Änderungen durch diese App zu."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:284
+msgid "Nehme ggf. weitere gewünschte System-Einrichtungen vor."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:286
+msgid ""
+"Zum Herunterfahren vorsichtshalber über das Windows-Startmenü in der "
+"Suche ``cmd`` eingeben und die Eingabeaufforderung öffnen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:293
+msgid "Win10 Open Terminal"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:293
+msgid "Öffne das Windows-Terminal"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:295
+msgid "In der Console ``shutdown -s -t 1`` eingeben und mit ``Enter`` bestätigen:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:302
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:316
+msgid "Win10 Shutdown Device"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:302
+msgid "Fahre das Gerät herunter"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:305
+msgid "Domänenanbindung"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:307
+msgid ""
+"Geräte die dauerhaft mit den Ressourcen der linuxmuster.net Umgebung "
+"arbeiten sollen, sind nach dem Einspielen des ``win10-global.reg`` "
+"Patches in der Domäne aufzunehmen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:309
+msgid ""
+"Starte den Muster-Client wieder via LINBO, indem Du Win10 mit dem GRÜNEN "
+"Start-Button aus dem lokalen Cache startest."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:316
+msgid "Starte Windows 10 mit der grünen Taste"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:321
+msgid "Manueller Domänen Join für Windows"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:323
+msgid ""
+"Über ``System → Info → Diesen PC umbenennen`` einen Hostname vergeben, "
+"der *übereinstimmend* mit dem Hostnamen in der Gerätelististe ist."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:330
+msgid "Win10 rename client"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:330
+msgid "Client umbenennen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:332
+msgid "Um den neuen Hostname anzuwenden, muss Windows neu gestartet werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:339
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:350
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:359
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:368
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:377
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:386
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:395
+msgid "Win10 reboot"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:339
+msgid "Starte Windows neu"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:341
+msgid "Starte in LINBO Windows mit der ``grünen Taste`` neu."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:343
+msgid ""
+"Nach dem Neustart meldest Du Dich wieder als Benutzer admin an und rufst "
+"``System --> Info --> Diesen PC umbenennen (fortgeschritten)`` auf."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:350
+msgid "Erweiterte Systemeinstellungen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:352
+msgid "Klicke auf der Reiterkarte ``Computername`` auf ``Ändern``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:359
+msgid "Ändere die Dommänenzugehörigkeit"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:361
+msgid ""
+"Trage unter ``Mitglied von -> Domäne`` Deine Domäne ein. Bestätige dies "
+"mit ``OK``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:368
+msgid "Melde Dich als Benutzer global-admin an"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:370
+msgid ""
+"Bei einem erfolgreichen Beitritt zur Windows-Domäne wird dies mit "
+"folgendem Fenster bestätigt."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:377
+msgid "Willkommen in der Domäne"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:379
+msgid ""
+"Beendest Du die Systemeinstellungen erscheint der Hinweis, dass der PC "
+"neu zu starten ist."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:386
+msgid "Der Computer muss neu gestartet werden"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:388
+msgid "Bestätige dies im nächsten Fenster mit ``Jetzt neu starten``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:395
+msgid "PC neu starten"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:397
+msgid "Der PC bootet nun wieder in LINBO."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:401
+msgid ""
+"Starte Windows 10 nun **NICHT** neu ! Nach dem Start in LINBO erstellst "
+"Du jetzt Muster-Image"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:404
+msgid "LINBO Muster-Image mit Domänenbeitritt"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:406
+msgid ""
+"Nachdem der Muster-Client mit Windows 10 - wie zuvor beschrieben - der "
+"Domäne hinzugefügt wurde, erstellst Du **jetzt** ein Image für den "
+"Muster-Client. Wird dieses Image auf andere Maschinen übertragen, so sind"
+" diese bereits in der Domäne aufgenommen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:410
+msgid ""
+"Nachdem eine Template-Maschine frisch der Domain gejoined ist, darf diese"
+" vor dem Upload nicht neu gestartet werden, da sonst das durch den "
+"DomainJoin neu erstellte Maschinenpasswort in der AD für diese Maschine "
+"mit einem falschen Maschinenpasswort ersetzt werden würde. Durch den "
+"Image-Upload wird das neue Passwort ausgelesen und in die macct-Datei   "
+"geschrieben, die zu dem Image gehört."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:413
+msgid "Image in LINBO erstellen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:415
+msgid ""
+"Jetzt wieder in LINBO starten und von dem aktuellem Stand ein Image "
+"erstellen. Klicke rechts auf das Werkzeug-Symbol. Gib das LINBO-Passwort "
+"ein, dann siehst Du folgende Einträge:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:422
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:431
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:442
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:469
+msgid "Linbo Upload Image"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:422
+msgid "Werkzeug-Symbol - Untermenü"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:424
+msgid ""
+"Klicke nun das grosse Windows-Symbol, um das Image zu erstellen. Es "
+"öffnet sich folgender Dialog:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:431
+msgid "Image erstellen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:433
+msgid ""
+"Gib eine Beschreibung an, die Dir Hinweise zum Konfigurationsstand des "
+"Images gibt. Da Du das erste Image erstellst, klickst Du nun ``erstellen "
+"+ hochladen``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:435
+msgid "Nach dem erfolgreichen Upload siehst Du folgende Statusmeldung:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:442
+msgid "Image erfolgreich hochgeladen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:444
+msgid ""
+"Nach dem erfolgreichem Upload sollte das Image auf der linuxmuster.net "
+"Schulkonsole unter ``LINBO4 → Gruppen`` angezeigt werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:451
+msgid "School Console: Group - Used Image"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:451
+msgid "Verwendete Images"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:453
+msgid ""
+"Zudem finden sich die Abbilder selbst unter ``LINBO4 → Gruppen → "
+"Abbilder`` aufgelistet."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:460
+msgid "School Console List Images"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:460
+msgid "Übersicht der Abbilder"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:462
+msgid ""
+"Falls der Gruppe anfangs kein Basisimage zugeordnet war, sollte das unter"
+" ``Groups → <gruppenname> → Partitionen → Windows 10 edit → OS → "
+"Basisimage`` nachgeholt werden. Speichern nicht vergessen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:469
+msgid "Basisimage für die HWK festlegen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:471
+msgid ""
+"Einem Image muss ein sog. Image-Registry-Patch angegeben werden: Wähle "
+"dazu das gewünschte Image aus. Klicke hierzu auf ``LINBO 4 --> Abbilder "
+"--> <Name des Images>``. Klicke rechts neben dem Imagenamen auf das "
+"Zahnrad-Symbol. Gehe dort zur Reiterkarte ``Registry-Patch``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:473
+msgid ""
+"Klicke nun unten auf die Drop-down Liste ``Copy from``. Es werden "
+"verschiedene Reg-Patches in der Dropdown-Liste dargestellt."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:480
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:490
+msgid "Linbo Indicate Registry Patch"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:480
+msgid "Registry-Patch auswählen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:483
+msgid ""
+"Klicke nun unten auf die Drop-down Liste ``Copy from -> "
+"win10.image.reg``. Es wird die Reg-Datei in dem Fenster angezeigt."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:490
+msgid "Kopiere und speichere den Registry-Patch"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:492
+msgid ""
+"Speichere diesen kopierten Registry-Patch für das Windows 10 Image, indem"
+" Du direkt auf ``SPEICHERN`` klickst."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:494
+msgid ""
+"*Alternativ* kannst Du in der Server-Shell aus ``/srv/linbo/examples`` "
+"die richtige Vorlage in ``/srv/linbo/`` kopieren. Die Datei trägt dann "
+"den Namen ``<imagename>.reg`` - also in o.g. Beispiel win10.reg."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:497
+msgid "Imageübertragung auf den PC"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:499
+msgid ""
+"Starte den PC, auf den das Image übertragen werden soll, über das "
+"Netzlaufwerk bis er in LINBO gebootet hat. Nun öffnest Du den Imaging-"
+"Reiter, wie im ersten Kapitel :ref:`Computer in linuxmuster.net aufnehmen"
+" <install-windows10-clients-label>`  → ``Client lokal registrieren`` "
+"beschrieben wird."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:501
+msgid ""
+"Als nächstes partitionierst und formatierst Du den PC über den LINBO-"
+"Menüeintrag ``Partitionieren`` wie zuvor beschrieben."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:503
+msgid ""
+"Wechsel nun auf dem Imaging-Menü wieder in das Startmenü von LINBO. "
+"Klicke hier das ``ROTE`` Symbol (Windows neu installieren), um Windows "
+"neu zu installieren."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:510
+msgid "Linbo Start Imaging"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:510
+msgid "Windows neu installieren"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:512
+msgid ""
+"Wenn das Image vollständig heruntergeladen ist, startet Windows "
+"automatisch."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:518
+msgid ""
+"In der Datei ``/srv/linbo/start.conf.win10-muster-client`` (start.conf "
+"der HWK) könnten die Einstellungen für Windows wie folgt aussehen:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:525
+msgid "Linbo Start.conf os settings"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:525
+msgid "LINBO Start.conf Einstellungen für Windows"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:528
+msgid ""
+"Bei Änderungen in der start.conf der HWK muss erneut ein Import der "
+"Geräte ausgeführt werden. Dies kann entweder in der Schulkonsole unter "
+"``Geräteverwaltung -> Geräte -> Speichern & importieren`` erfolgen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:530
+msgid "Alternativ kann dies auf dem Server in der Konsole durchgeführt werden:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:537
+msgid "Programminstallationen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:539
+msgid ""
+"Hast Du wie zuvor beschrieben, den Client synchronisiert gestartet, "
+"meldest Du Dich als Benutzer ``global-admin`` an der Domäne an."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:541
+msgid ""
+"Installiere die gewünschten Programme und konfiguriere die benötigten "
+"Programm- und Systemeinstellungen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:543
+msgid ""
+"Starte den PC neu, ohne danach neu zu sychronisieren. Führe danach "
+"nachstehenden Abschnitt aus."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:546
+msgid "Default Profil kopieren"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:548
+msgid ""
+"linuxmuster.net sieht vor, dass **Programminstallationen von global-"
+"admin** durchgeführt werden. Damit alle User die bei der Installation "
+"vorgenommenen Änderungen bekommen, muss das Profil des ``global-admin`` "
+"als ``Default`` Profil kopiert werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:550
+msgid ""
+"Dies kann mit dem dem freien Tool ``DefProf`` durchgeführt werden. Das "
+"Tool kann hier heruntergeladen werden: "
+"https://www.forensit.com/Downloads/DefProf.msi"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:552
+msgid ""
+"Das Ausführen der MSI-Datei entpackt das eigentliche Programm. Hast Du "
+"dies als Benutzer ``global-admin`` durchgeführt, siehst Du folgendes "
+"Fenster:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:559
+msgid "Win10 Defprof installation"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:559
+msgid "Installiere DefProf"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:561
+msgid ""
+"Das ausführbare Programm befindet sich nun unter ``c:\\Users\\global-"
+"admin\\downloads\\Defprof.exe``. Kopiere diese Datei nun unter "
+"``c:\\Windows\\`` als Benutzer ``global-admin``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:564
+msgid ""
+"Hast Du alle Einstellungen als Benutzer ``global-admin`` für das Profil "
+"vorgenommen, kannst Du nun dieses Profil mithilfe des zuvor installierten"
+" Tools DefProf als Default-Profil kopieren."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:566
+msgid "Hierzu führst Du folgende Schritte aus:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:568
+msgid ""
+"Hierzu meldet Du Dich zuerst als Benutzer ``global-admin`` ab und lokal "
+"am PC als Benutzer ``admin`` wieder an."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:570
+msgid ""
+"Bist Du lokal als ``admin`` angemeldet, klickst Du mit der rechten "
+"Maustaste auf das Windows-Symbol unten links."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:572
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:624
+msgid "Wähle dann in dem Kontextmenü ``Windows PowerShell(Administrator)`` aus."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:574
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:626
+msgid ""
+"Es öffnet sich die PowerShell-Eingabekonsole von Windows mit "
+"Administrator-Berechtigungen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:576
+msgid ""
+"Gebe nun in der Konsole den Befehl ``defprof`` gefolgt von dem als "
+"Default-Profil zu kopierenden Profil an."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:578
+msgid ""
+"Für den Windows 10 Muster-Client bedeutet dies, dass Du ``defprof global-"
+"admin`` angibst."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:584
+msgid ""
+"Bei der Erstausführung müssen noch weitere Tools nachinstalliert werden. "
+"Bestätige dies mit ``Y``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:586
+msgid ""
+"Wurde das Profil erfolgreich als Default Profil kopiert, siehst Du "
+"folgende Meldungen:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:593
+msgid "Win10 Defprof profile copied"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:593
+msgid "DefProf: profil erfolgreich kopiert"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:595
+msgid ""
+"Danach startest Du Windows neu und erstellst wie zuvor beschrieben ein "
+"neues Image für Windows."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:600
+msgid "im Fehlerfall"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:603
+msgid "Zeitprobleme lösen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:605
+msgid ""
+"LINBO aktualisiert beim Sytemstart die Zeit in LINBO. In Windows ist die "
+"Zeit damit allerdings noch nicht synchronisiert. Wurde, wie zuvor "
+"beschrieben, der Win10-PC der Domäne hinzugefügt, dann erfolgt "
+"automatisch die Zeitsynchronisation des Client mit dem AD-Server / "
+"Domaincontroller."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:607
+msgid ""
+"Bei der Synchronisation zwischen Client und Server kann es zu Beginn zu "
+"Zeitabweichungen kommen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:609
+msgid ""
+"Die Systemzeit sollte möglichst synchron mit dem Server sein, um Probleme"
+" mit der Domänenanmeldung, dem Domänenbeitritt zu vermeiden! Auch andere "
+"Dienste (z.B. WSUS, KMS, ...) machen bei Zeitdifferenzen Probleme."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:613
+msgid ""
+"Wurde der linuxmuster.net Server vor Oktober 2022 installiert und treten "
+"hier noch Fehler auf, dann ist ggf. die Samba-Konfiguration für die "
+"Zeitsynchronisation zu korrigieren. Hinweise finden sich hier: "
+"https://github.com/linuxmuster/linuxmuster-base7/issues/144"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:616
+msgid "Domänenjoin verloren"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:618
+msgid ""
+"Hast z.B. nicht daran gedacht, nach dem Domänenjoin ein Image zu "
+"erstellen, so kann die Vertrauensstellung zwischen Client und Server "
+"verloren gegangen sein."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:620
+msgid "Dies kannst Du wie folgt reparieren:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:622
+msgid ""
+"Melde Dich lokal am Windows-PC als admin an. Klicke mit der rechten "
+"Maustaste auf das Windows-Symbol unten links."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:628
+msgid "Gib in der Windows PowerShell(Administrator) folgenden Befehl an:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:634
+msgid "Erstelle anschließend ein neues Image."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:638
+msgid "fehlendes Verzeichnis linuxmuster-win"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:644
+msgid ""
+"Die Global-Registry-Patch-Datei liegt als Vorlage auf dem Server in "
+"``\\\\server\\srv\\linbo\\examples`` und heißt ``win10.global.reg``. "
+"Diese muss auf den Client kopiert, angepasst und auf dem Client "
+"eingespielt werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:646
+msgid "Gehe wie folgt dabei vor:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:648
+msgid ""
+"a) Installiere Dir zuerst auf dem Windows-Client das freie Programm "
+"WinSCP (Freeware). Dieses kannst Du hier herunterladen: "
+"https://winscp.net/download/WinSCP-6.1.2-Setup.exe"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:656
+msgid "winscp download"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:656
+msgid "WinSCP herunterladen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:658
+msgid ""
+"b) Überprüfe, ob die Prüfsumme des heruntergeladenen Programms korrekt "
+"ist, um sicherzustellen, dass Du keine kompromittierte Version "
+"heruntergeladen hast. Die korrekten SHA-Prüfsummen des Zertifikats für "
+"WinSCP sind:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:666
+msgid "winscp checksum"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:666
+msgid "Prüfsummen von WinSCP"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:668
+msgid ""
+"Führe auf die heruntergeladene Datei einen Rechtsklick aus und klicke auf"
+" ``Eigenschaften``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:675
+msgid "winscp file properties"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:675
+msgid "WinSCP: Eigenschaften der heruntergeladenen Datei"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:677
+msgid ""
+"Klicke nun auf die Reiterkarte ``Digitale Dignaturen``, markiere den "
+"Digestalgorithmus SHA-256 in der Signaturliste und klicke auf "
+"``Details``. Klicke dann auf ``Zertifikat anzeigen`` und im nächsten "
+"Fenster auf die Reiterkarte ``Details``. Gehe in der Liste mit den "
+"Feldern bis zu dem Eintrag ``Fingerabdruck``. Der hier angezeigte Wert "
+"muss mit dem auf dem Bild dargestellten übereinstimmen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:684
+msgid "winscp signature fingerprint"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:684
+msgid "WinSCP: Fingerprint der Signatur prüfen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:686
+msgid ""
+"Stimmt diese überein, so führe die Installation durch. Wähle während die "
+"Installation die Commander - Oberfläche aus."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:688
+msgid ""
+"Öffne nun das Programm WinSCP. Es erscheint direkt ein Anmeldefenster. "
+"Trage hier folgende Werte ein:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:695
+msgid "winscp logon windows"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:695
+msgid "WinSCP: Anmeldefenster"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:697
+msgid ""
+"Klicke danach auf ``anmelden``. Bei der ersten Anmeldung erhälst Du noch "
+"ein Hinweisfenster zu dem Hostschlüssel des Servers. Klicke hier auf "
+"``Ja``, um diesen im Speicher abzulegen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:704
+msgid "winscp host key"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:704
+msgid "Nehme den Hostschlüssel des Servers bei der ersten Anmeldung an"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:706
+msgid ""
+"Klicke nun im rechten Fenster, in dem der Inhalt des Servers dargestellt "
+"wird auf ``/srv/linbo/examples/``. Wähle hier - wie in der Abb. markiert "
+"- die Datei ``win10.global.reg`` aus. Klicke links in dem Fenster, in dem"
+" der Inhalt Deines Win10-Clients dargestellt wird auf ``c:\\users"
+"\\global-admin\\Desktop\\``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:713
+msgid "winscp choose directories"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:713
+msgid "WinSCP: Verzeichnisse auswählen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:715
+msgid ""
+"Kopiere die Datei ``win10.global.reg`` auf den Desktop, in dem Du diese "
+"mit der linken Maustaste in WinSCP aus dem rechten Fenster in das linke "
+"Fenster ziehst. Danach erhälst Du die Rückfrage, ob Du die Datei wirklich"
+" herunterladen möchtest:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:722
+msgid "winscp copy global reg file"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:722
+msgid "Bestätige das Kopieren der Datei auf den Desktop mit OK"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:724
+msgid "Schließe WinSCP wieder."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:726
+msgid "Win10.global.reg anpassen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:728
+msgid ""
+"Die Datei ``win10.global.reg`` befindet sich nun auf dem Desktop Deines "
+"Win10-Clients."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:735
+msgid "global reg file desktop"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:735
+msgid "Du findest nun die Datei win10.global.reg auf dem Desktop"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/windows10clients/index.rst:737
+msgid ""
+"Führe danach den einen Neustart aus und gehe zu :ref:`manueller Domänen "
+"Join`"
+msgstr ""
+

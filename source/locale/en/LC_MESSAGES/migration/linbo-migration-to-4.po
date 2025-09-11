@@ -1,0 +1,244 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/migration/linbo-migration-to-4.rst:5
+msgid "Migration LINBO 2.4 zu 4.2"
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:11
+msgid "Hinweise zu LINBO 4.2"
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:13
+msgid ""
+"In der linuxmuster v7.2 löst LINBO 4.2 das bisherige LINBO 2.4 ab. "
+"Bereits ab v7.1 gibt es nur noch ein Debian-Paket für LINBO "
+"(`linuxmuster-linbo7`) und eines für die grafische Oberfläche "
+"(`linuxmuster-linbo-gui7`), die nur noch LINBO 4 und eine grafische "
+"Oberfläche enthalten."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:15
+msgid ""
+"Hast Du auf linuxmuster v7.2 umgestellt, ist es sinnvoll, die bisherigen "
+"LINBO 2.4 Cloop-Images zu konvertieren."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:17
+msgid "LINBO 4.2 weist einige Besonderheiten auf:"
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:19
+msgid ""
+"Neues Image-Format mit Abwärtskompatibilität zum alten Format für eine "
+"einfach Migration"
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:20
+msgid ""
+"Änderungen an der Namensgebung und des Speicherortes der zum Image "
+"zugehörigen Dateien"
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:21
+msgid "Es wird nur noch 64-Bit Client-Hardware unterstützt."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:22
+msgid "LINBO 4.2 kann nicht mit linuxmuster v6.2 und kleiner verwendet werden."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:23
+msgid "Es werden differentielle Images ab LINBO >= 4.1 unterstützt."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:24
+msgid "Erweiterte LINBO-Client Shell"
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:25
+msgid "WLAN-Unterstützung"
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:26
+msgid "Unterstützung eigener Boot-Skripte"
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:27
+msgid ""
+"Einbindung des aktuellsten Linux-Kernels (z.B. > 6.6) - alternativ kann "
+"auch ein LTS-Kernel (6.1.*), ein legacy Kernel (5.15.*) oder ein eigener "
+"Kernel eingebunden werden."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:30
+msgid "Neues Image-Format"
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:32
+msgid ""
+"Das neue Image-Format heißt `qcow2`. `qemu-img` wird nun genutzt, um die "
+"Erstellung und Wiederherstellung der `qcow2`-Images durchzuführen."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:34
+msgid "Für neue Images wird nur noch das Format `qcow2` unterstützt."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:35
+msgid "Images im `cloop`-Format werden aber weiterhin an Clients ausgeliefert."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:36
+msgid ""
+"Bisherige Images im `cloop`-Format können in das neue `qcow2`-Format "
+"einfach konvertiert werden."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:38
+msgid "Folgende Änderungen sollte man auch beachten:"
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:40
+msgid ""
+"Der Name des Basis-Images muss aufgrund des Formatwechsels in der "
+"übernommenen start.conf angepasst werden (z.B. `image.qcow2` statt "
+"`image.cloop`)."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:41
+msgid ""
+"Die Benennung der zusätzlichen Image-Dateien ``*.postsync``, "
+"``*.prestart`` and ``*.reg`` ändern sich, so dass das Image-Format nicht "
+"mehr in den Dateinamen mit angegeben wird (z.B. ``image.postsync`` statt "
+"``image.cloop.postsync`` oder ``image.prestart`` statt "
+"``image.cloop.prestart``)."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:42
+msgid ""
+"Der Ablageort der neuen Images und der zugehörigen zusätzlichen Dateien "
+"ist ``/srv/linbo/images/<imagename>/``. Diese Verzeichnisstruktur wird "
+"aber nicht in der start.conf angegeben."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:43
+msgid ""
+"Backups von Images werden jetzt nach "
+"``/srv/linbo/images/<imagename>/backups/<timestamp>`` verschoben."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:48
+msgid "Konvertieren der LINBO 2.4 Images"
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:50
+msgid ""
+"Konvertiere Deine Cloop-Images in das qcow2 Format mithilfe von ``linbo-"
+"cloop2qcow2``. Wechsle dazu in das Linbo-Verzeichnis und rufe den Befehl "
+"mit dem zu konvertierenden Dateinamen auf:"
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:57
+msgid ""
+"Das Cloop-Image wird dadurch in das `qcow2`-Format konvertiert und im "
+"Verzeichnis ``/srv/linbo/images/ubu22/`` als Datei ``ubu22.qcow2`` "
+"abgelegt."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:61
+msgid ""
+"Images von Windows-Systemen könnten nach der Konvertierung ggf. nicht so "
+"funktionieren wie vorgesehen - dies gilt insbesondere für UEFI-Systeme. "
+"In diesem Fall ist es notwendig, ein neues Image zu erstellen."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:63
+msgid ""
+"Ändere den Dateinamen des Images in the start.conf der jeweiligen "
+"Hardwareklasse/Gruppe. Das Ablageverzeichnis des Images wird dabei nicht "
+"genannt, obiges Beispiel: ``BaseImage = ubu22.qcow2``"
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:64
+msgid ""
+"Starte die Dienste zur Image-Verteilung neu mit: ``systemctl restart "
+"linbo-torrent.service``."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:68
+msgid ""
+"Starte alle Clients zweimal, um sicherzustellen, dass LINBO v2 auf v4 "
+"aktualisiert wurde."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:71
+msgid ""
+"Zum Schluss starte das Skript ``linuxmuster-import-devices``. Dieses "
+"löscht die nun nicht mehr benötigten start.conf-Links."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:72
+msgid "Ab jetzt kannst Du Images wieder wie gewohnt erstellen und verteilen."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:75
+msgid "Widerspenstige LINBO-Clients"
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:77
+msgid ""
+"Möchtest Du, bestehende LINBO-Clients zu LINBO 4 migrieren und hast dabei"
+" Probleme, obwohl Du - wie zuvor beschrieben - den Befehl ``linuxmuster-"
+"import-devices`` ausgeführt hast, solltest Du nachstehend bechriebene "
+"Schritte ausführen."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:79
+msgid ""
+"Wichtig ist, dass vor dem Upgrade alle Clients das aktuelle LINBO im "
+"Cache haben. Falls es nach dem Upgrade beim Booten von LINBO trotzdem zu "
+"Fehlern kommt, kannst Du so vorgehen:"
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:81
+msgid "Auf dem Server temporär den LINBO-Netboot erzwingen:"
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:89
+msgid "Clients per PXE booten."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:90
+msgid ""
+"Prüfe, ob die Clients wirklich via PXE Network Boot starten, damit "
+"hierdurch die Clients auf die letzte LINBO-Version aktualisiert werden."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:91
+msgid "Nehme die Änderungen nun wieder zurück."
+msgstr ""
+
+#: ../../source/migration/linbo-migration-to-4.rst:98
+msgid "Starte die Clients erneut."
+msgstr ""
+

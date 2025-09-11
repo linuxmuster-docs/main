@@ -32,11 +32,11 @@ Netzwerkberater. Standardmäßig gibt es folgende Regeln
        a-z A-Z 0-9 ! § + - @ # $ % & * ( )[ ]{ }
 
     (D.h. Umlaute oder diakritische Zeichen sind nicht erlaubt)
-  * Die Mindestlänge des Passwortes sind 7 Zeichen. 
+  * Die Mindestlänge des Passwortes sind 7 Zeichen.
   * Das Passwort muss aus Großbuchstaben, Kleinbuchstaben und entweder
     Zahlen oder Sonderzeichen (oder beidem) bestehen.
 
-    Beispiele sind: ``Muster!`` oder ``HundKatzeMau5``  
+    Beispiele sind: ``Muster!`` oder ``HundKatzeMau5``
 
 Das erfolgreiche Ändern des Passwortes wird mit einer Meldung bestätigt.
 
@@ -60,3 +60,22 @@ Mit dem neuen Passwort kannst Du Dich an allen Diensten anmelden, die
 im Schulnetzwerk mit dem Schulkonto verbunden sind, z.B. auch die
 Anmeldung an PCs.
 
+.. _configure_2FA_label:
+
+Einrichtung 2FA
+===============
+
+Als zusätzliche Absicherung ist die Einrichtung einer Zweifaktorauthentifizierung möglich.
+Dies empfiehlt sich besonders, wenn die Schulkonsole aus dem Internet zugänglich ist.
+Du benötigst eine Authenticator-App. Es eignet sich jede App, welche zeitbegrenzte Einmalpasswörter unterstützt.
+
+Klicke auf den Kontobutton und wähle "2FA".
+
+.. figure:: media/webui-2fa.png
+
+Klicke auf ``TOTP hinzufügen``.
+
+Scanne den QR-Code mit der App und gib die aktuell angezeigt PIN bei ``Überprüfen`` ein. Speichere die Konfiguration.
+
+Sollte das Konto in der Authenticator-App versehentlich gelöscht worden sein, muss die Konfiguration für den betroffenen Benutzer 
+manuell in der Datei ``/etc/ajenti/tfa.yml`` gelöscht werden.

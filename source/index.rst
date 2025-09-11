@@ -47,18 +47,23 @@ Informationen zum Telefon-Support gibt es auf unser Projektseite `<https://www.l
 
    Suchst Du die Dokumentation zur Version linuxmuster.net 7.1 oder die Möglichkeit unsere Dokumentation herunterzuladen?
 
-Dann schaue an das untere Ende der Menüleiste.
+Dann schaue in die unten recht angezeigte - zusätzliche - Menüleiste.
 
 .. figure:: media/01_intro_read-the-docs-closed.png
    :align: center
    :alt: Read The Docs Menu - closed
+   :width: 30%
 
-Nach einem Klick eröffnen sich Dir dort noch weitere Möglichkeiten:
+   Read the Docs Untermenü
+
+Nach einem Klick auf die Leiste eröffnen sich Dir dort noch weitere Möglichkeiten:
 
 .. figure:: media/02_intro_read-the-docs-opened.png
    :align: center
    :alt: Read The Docs Menu - opened
-
+   :width: 30%
+   
+   Read the Docs geöffnetes Untermenü
 
 .. toctree::
   :maxdepth: 2

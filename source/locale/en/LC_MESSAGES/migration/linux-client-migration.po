@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/migration/linux-client-migration.rst:6
+msgid "Migration eines bestehenden Linux-Clients"
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:11
+msgid ""
+"Wird ein Ubuntu 20.04 Linux-Client eingesetzt, so kann dieser "
+"vorbereitete Client migriert werden, so dass die aktuell gepflegten "
+"Pakete für linuxmuster-linuxclient7 genutzt werden können."
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:14
+msgid "Vorgehen"
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:16
+msgid ""
+"VM anlegen und vorbereiten wie unter :ref:`hardware-registration-label` "
+"beschrieben."
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:17
+msgid ""
+"Für Linbo die start.conf der Hardwareklasse anpassen, so dass das "
+"bisherige Image angegeben wird."
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:18
+msgid "Start der VM via PXE"
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:19
+msgid "Anmelden als Benutzer ``linuxadmin``"
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:20
+msgid ""
+"ggf. Backup der eigenen Skripte unter ``/etc/linuxmuster-client`` - diese"
+" werden automatisch gelöscht!"
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:21
+msgid "Entferne den alten Linux-Client vollständig"
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:22
+msgid "Entferne das ale Proxy-Skript auf dem Client"
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:23
+msgid "Entferne lightdm als Anmeldemanager"
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:24
+msgid "Installiere gdm3 als Anmeldemanager"
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:25
+msgid ""
+"Führe das Setup des neuen Pakets linuxmuster-linuxlient7 aus (:ref"
+":`install-linux-clients-current-label`)"
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:26
+msgid "Erstelle ein neues Image."
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:31
+msgid ""
+"Du musst als Benutzer ``linuxadmin`` angemeldet bleiben, solange bis das "
+"Setup des neuen Pakets linuxmuster-linuxclient7 vollständig abgeschlossen"
+" ist!"
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:33
+msgid "Zu den Schritten 6. bis 10. findest Du nachstehend Hinweise zur Umsetzung."
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:36
+msgid "Entferne die alten Linux-Client Pakete"
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:38
+msgid ""
+"Hast Du den alten Linux-Client in der VM erfolgreich gestartet, meldest "
+"Du Dich als Benutzer ``linuxadmin`` an."
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:40
+msgid "Entferne danach die alten Linux-Client Pakete mit folgendem Befehl:"
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:47
+msgid "Anmeldemanager wechseln"
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:49
+msgid ""
+"Das neue Paket linuxmuster-linuxclient7 benötigt als Anmeldemanager gdm3 "
+"und Gnome, so dass zuerst der bisherige Anmeldemanager zu deinstallieren "
+"ist. Die Dokumentation geht hier dabei davon aus, dass lightdm zu "
+"deinstallierenn ist. Ggf. must Du das auf Deinen genutzten Anmeldemanager"
+" anpassen."
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:51
+msgid "Lösche den Anmeldemanager ``lightdm`` mit dem Befehl:"
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:57
+msgid "Danach installierst Du ``gdm3`` mit:"
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:63
+msgid "Räume danach die Pakete im apt-cache auf:"
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:71
+msgid ""
+"Bleibe weiterhin als Benutzer linuxadmin angemeldet, solange bis Du das "
+"Setup des neuen Paketes linuxmuster-linuxclient7 abgeschlossen hast."
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:73
+msgid ""
+"Führe nun alle Schritte zur Installation und zum Setup des neuen "
+"linuxmuster-linuxclient7 Pakets aus wie diese im Kapitel :ref:`install-"
+"linux-clients-current-label` beschrieben sind."
+msgstr ""
+
+#: ../../source/migration/linux-client-migration.rst:75
+msgid "Nach Abschluss des Setups erstellst Du ein neues Image."
+msgstr ""
+

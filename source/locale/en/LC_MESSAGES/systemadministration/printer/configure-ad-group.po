@@ -1,0 +1,226 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:4
+msgid "Drucker einzelnen Räumen zuweisen"
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:10
+msgid ""
+"Sobald diese Funktion in der Schulkonsole zur Verfügung steht, wird "
+"dieser Teil der Dokumentation ergänzt."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:12
+msgid ""
+"Für die Raumzuweisung von Druckern eignet sich am besten das `Apache "
+"Directory Studio`. Das `Apache Direktory Studio` braucht das Java "
+"Development Kit. Lade dafür von `www.oracle.com "
+"<https://www.oracle.com/de/java/technologies/javase-downloads.html>`_ die"
+" Installationsdatei und installiere sie. Lade anschließend von "
+"`directory.apache.org <https://directory.apache.org/studio/>`_ die "
+"aktuelle Version des `Apache Direktory Studios` herunter und installiere "
+"sie ebenfalls."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:19
+msgid ""
+"Auf dem Ubuntu-Client kann das `Apache Directory Studio` direkt "
+"ausgeführt werden."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:21
+msgid ""
+"Schauen wir uns mit dem `Apache Directory Studio` die AD-Struktur etwas "
+"genauer an. Dazu müssen wir zunächst eine Verbindung zum Server aufbauen."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:23
+msgid ""
+"Starte das `Apache Directory Studio` und gehe in der Menü-Leiste auf "
+"``Datei → Neu``."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:-1
+msgid "Neu"
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:29
+msgid "Wähle ``LDAP-Verbindung`` und klicke auf ``weiter``."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:31
+msgid ""
+"Gib der Verbindung einen Namen und trage die Verbindungsdaten des Servers"
+" ein."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:-1
+msgid "Neue LDAP Verbindung"
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:37
+msgid ""
+"Klicke auf Netzwerkparameter überprüfen. Falls der Server nur ein selbst "
+"signiertes Zertifikat hat, erscheint der folgende Dialog:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:-1
+msgid "Ungültiges Zertifikat"
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:43
+msgid ""
+"Wähle ``Diesem Zertifikat immer vertrauen`` und klicke auf ``ok``. Wenn "
+"Du jetzt auf Netzwerkparameter überprüfen klicken, sollte die Verbindung "
+"erfolgreich aufgebaut werden."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:46
+msgid ""
+"Nachdem Du auf ``weiter`` geklickt hast, erscheint ein neues "
+"Dialogfenster in dem die Anmeldeinformationen abgefragt werden."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:-1
+msgid "Eigenschaften"
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:52
+msgid ""
+"Als Bind DN trägst Du ``CN=global-admin,OU=Management,OU=GLOBAL,`` "
+"gefolgt von Deiner DN ein. In diesem Beispiel ist das ``CN=global-"
+"admin,OU=Management,OU=GLOBAL,DC=linuxmuster,DC=lan``."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:57
+msgid ""
+"Du nutzt hier den global-admin, weil Du Schreibrechte brauchst. "
+"Sicherheitshalber solltest Du vor Deiner Arbeit einen Snapshot des "
+"Servers machen."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:59
+msgid "Klicke auf ``Anwenden und Schließen``."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:61
+msgid "Der Baum des AD wird geladen und angezeigt."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:63
+msgid "Schreib Dich in der Schulkonsole bei den Druckern ein."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:69
+msgid "Im AD-Baum sieht das dann so aus:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:-1
+msgid "Der LDAP-Baum"
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:75
+msgid ""
+"In ``Devices`` findest Du Klassenräume und ihre Rechner. Und es gibt dort"
+" auch die ``printer-groups`` in der die Drucker zu finden sind. In "
+"``Students`` sind die Klassen und ihre Schüler. Und in ``Teachers`` "
+"findest Du die Lehrer."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:79
+msgid "Im Eintrag des Benutzers sind die Drucker als memberOf eingetragen."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:85
+msgid "Beim Eintrag des Druckers ist der Benutzer als member eingetragen."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:91
+msgid ""
+"Genau so tragen wir die Gruppe eines Raums als Member in die Gruppe eines"
+" Druckers ein. Im Beispiel soll der Informatikraum in die Gruppe des "
+"InfoLasers eingetragen werden."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:93
+msgid "Navigiere zum Gruppeneintrag des Informatik-Raums."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:-1
+msgid "Gruppeneintrag Informatikraum"
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:99
+msgid ""
+"Im mittleren Fenster werden die Einträge der Gruppe info angezeigt. "
+"Kopiere mit einem Rechtsklick den ``distinguishedName``."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:-1
+msgid "distinguishedName kopieren"
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:106
+msgid "Navigiere zur Gruppe des Druckers."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:-1
+msgid "Gruppe InfoLaser"
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:112
+msgid "und klicke auf ``Neues Attribut...``"
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:-1
+msgid "Neues Attribut"
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:118
+msgid ""
+"Als Attribut-Typ gibst Du ``member`` ein und klickst anschließend auf "
+"``Fertigstellen``."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:-1
+msgid "Attribut Typ"
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:124
+msgid ""
+"Jetzt Fügst Du mit <Strg>+V den vorher kopierten distinguishedName ein "
+"und klickst anschließend auf ``OK``."
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:-1
+msgid "DN Info"
+msgstr ""
+
+#: ../../source/systemadministration/printer/configure-ad-group.rst:130
+msgid ""
+"Alle Rechner die im Informatikraum stehen, werden ab „jetzt“ Zugriff auf "
+"den InfoLaser haben. Allerdings kann es eine ganze Weile dauern, bis sich"
+" dieser Eintrag auf die Druckerverteilung auswirkt. Starte am besten "
+"Deinen Client neu."
+msgstr ""
+

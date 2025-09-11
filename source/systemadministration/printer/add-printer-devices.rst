@@ -15,7 +15,7 @@ IP-Adresse 10.2.200.101.
 Melde Dich als ``global-admin`` in der `Schulkonsole (https://10.0.0.1) <https://10.0.0.1>`_ an.
 Wähle dort links im Menü ``Geräteverwaltung`` das Untermenü ``Geräte`` aus.
 
-.. image:: media/01-printer-devices.png
+.. image:: media/add-printer-devices_01_schulkonsole.png
    :alt: Schulkonsole devices
    :align: center
 
@@ -23,7 +23,7 @@ Klicke unterhalb der Geräteliste auf den Eintrag ``Gerät hinzufügen``.
 
 Es wird eine leere Zeile zur Liste hinzugefügt.
 
-.. image:: media/02-printer-devices-add.png
+.. image:: media/add-printer-devices_02_schulkonsole.png
    :alt: Schulkonsole neuer Drucker
    :align: center
 
@@ -31,7 +31,7 @@ Die Option PXE ist zu deaktivieren, da die Drucker nicht via PXE starten. Als Gr
 
 Für o.g. Beispieldrucker stellt sich der Eintrag wie folgt dar:
 
-.. image:: media/03-printer-devices-add-example.png
+.. image:: media/add-printer-devices_03_schulkonsole.png
    :alt: Schulkonsole Eintragungen für den Beispieldrucker
    :align: center
 
@@ -43,7 +43,7 @@ Bestätige den Eintrag mit ``speichern & importieren``.
 
 Es erscheint ein Fenster, in dem der Vorgang bestätigt wird.
 
-.. image:: media/04-printer-devices-added.png
+.. image:: media/add-printer-devices_04_schulkonsole.png
    :alt: Schulkonsole: Drucker hinzugefügt
    :align: center
 

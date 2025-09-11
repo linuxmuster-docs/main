@@ -1,0 +1,36 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/systemadministration/network/networksegmentation/index.rst:5
+#: ../../source/systemadministration/network/networksegmentation/index.rst:13
+msgid "Netzwerksegmentierung"
+msgstr ""
+
+#: ../../source/systemadministration/network/networksegmentation/index.rst:10
+msgid ""
+"Im ersten Schritt erhälst Du Hinweise zur Anpassung der "
+"Netzwerkkonfiguration der Server mithilfe des Skript lmn71-prepare. Im "
+"zweiten Schritt wirst Du in das Thema Netzsegmentierung eingeführt. Wir "
+"geben Sie Hilfestellung zur Planung der neuen Netzstruktur und deren "
+"vollständigen Umsetzung."
+msgstr ""
+

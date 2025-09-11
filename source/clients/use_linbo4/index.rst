@@ -176,8 +176,12 @@ Das Passwort steht im Klartext auf dem Server in der Datei ``/etc/rsyncd.secrets
 
    linbo:MeinKennwort
 
-Nach einer Änderung wird das Passwort mit der nächsten Synchronisation bzw. Netzwerkboot aktualisiert.
+Nach Änderung des Passwortes musst Du auf dem Server noch die ``linbofs.lz`` neu erstellen, damit der Hash-Wert des aktuellen Linbo-Passwortes integriert wird. Dazu führst Du folgenden Befehl auf dem Server aus:
 
+.. code::
+
+   update-linbofs
+   
 
 LINBO Imageverwaltung am Client
 -------------------------------
@@ -376,13 +380,15 @@ Erscheint die LINBO GUI:
 
    LINBO GUI
 
+Wähle rechts das Werkzeug-Icon 
+
 .. figure:: media/linbo-diff-images/02-tools-icon.png
-   :align: left
+   :align: center
    :alt: Tools Icon
 
    Tools Icon
 
-Wähle rechts das Werkzeug-Icon aus.
+aus.
 
 Es erscheint ein neues Fenster, in dem Du das Passwort des Linbo-Admins eingeben musst, um dich zu authentifizieren.
 
@@ -779,6 +785,122 @@ Dabei ist zu beachten:
   Synchronisiert das Betriebsysystem, das in der start.conf an der angegebenen <#> Position eingetragen wurde.
 * ``start:<#>``:
   Startet das Betriebsyssystem, das in der start.conf an der angegebenen <#> Position eingetragen wurde.
+  
+LINBO4 mit WLAN nutzen
+----------------------
+
+Linbo4 unterstützt ab der Version 4.2 die Nutzung von LINBO via WLAN-Netzwerk. Hierzu wurde das Programm ``wpa_supplicant`` in LINBO integriert. 
+
+Vor der Nutzung solltest Du zuerst prüfen, ob LINBO für den eingebauten WLAN-Adapter die benötigte Firmware aufweist. Hierzu gehst Du wie folgt vor:
+
+Firmware prüfen
+^^^^^^^^^^^^^^^
+
+1. Überprüfe die Ausagbe von ``dmesg``
+
+.. code::
+
+   nb-01: ~ # dmesg | grep firmware
+   i915 0000:00:02.0: Direct firmware load for i915/kbl_dmc_ver1_04.bin failed with error -2
+   i915 0000:00:02.0: [drm] Failed to load DMC firmware i915/kbl_dmc_ver1_04.bin. Disabling runtime power management.
+   i915 0000:00:02.0: [drm] DMC firmware homepage: https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/i915
+   
+2. In obiger Ausgabe fehlt die Firmware für i915 DMC. Um die Firmware zu laden, findet Du unter ``/etc/linuxmuster/linbo/firmware`` eine Konfigurationsdatei, in der Du die benötigte Firmware einträgst.
+ 
+.. code::
+
+   # /etc/linuxmuster/linbo/firmware
+   
+   # Realtek r8168 ethernet adapters firmware (whole directory)
+   rtl_nic
+   
+   # Realtek RTL8821AE wifi firmware (single file)
+   rtlwifi/rtl8821aefw.bin
+   
+   # Intel Wi-Fi 6 AX200 firmware (single file)
+   iwlwifi-cc-a0-77.ucode
+   
+   # i915 DMC firmware
+   i915/kbl_dmc_ver1_04.bin
+ 
+Zu o.g. Beipiel fügst Du die Zeile ``i915/kbl_dmc_ver1_04.bin`` in die Konfigurationsdatei für die LINBO-Firmware ein. Das Linux-Firmware Package ist auf dem linuxmuster.net Server bereits zusammen mit LINBO installiert. Der Pfad für die zu ladende Firmware-Datei muss relativ zum Verzeichnis ``/lib/firmware`` angegeben werden.
+ 
+3.  Um die Firmware für linbofs bereitzustellen, musst Du noch auf dem Server den Befehl
+
+.. code::
+
+   update-linbofs 
+
+ausführen.
+
+.. hint::
+
+   Wenn die geladene WLAN-Firmware dazu führt, dass der WLAN Adapter nach einem Warmstart nicht funktioniert, kannst Du den warmstart in der start.conf mit ``nowarmstart`` als Kernel-Option abschalten.
+
+WLAN definieren
+^^^^^^^^^^^^^^^
+
+ Hat der Client die benötigte Firmware, bearbeitest Du die Datei ``/etc/linuxmuster/linbo/wpa_supplicant.conf`` auf dem Server. In dieser definierst Du das WLAN, das der Client verwenden soll.
+ 
+ Nachstehend findest Du zwei Beispiele hierzu:
+
+.. code::
+
+   # /etc/linuxmuster/linbo/wpa_supplicant.conf
+
+   # wpa-psk secured
+   network={
+     ssid="LINBO_MGMT"
+     scan_ssid=1
+     key_mgmt=WPA-PSK
+     psk="My Secret Passphrase"
+   }
+   
+   # open
+   network={
+      ssid="LINBO_MGMT"
+      key_mgmt=NONE
+   }
+  
+Weitere Konfigurationsbeispiele findest Du unter: https://linux.die.net/man/5/wpa_supplicant.conf  
+   
+Nachdem Du die Konfigurationsdatei mit den WLAN-Einstellungen bereitgestellt hast, müssen diese Informationen noch auf ``linbofs`` angewendet werden. Hierzu gibst Du auf dem Server den Befehl 
+
+.. code::
+
+   update-linbofs
+   
+an.
+
+WLAN-Gerät anlegen
+^^^^^^^^^^^^^^^^^^
+
+Zuletzt musst Du noch für das Gerät, das via WLAN mit LINBO arbeiten soll, einen Geräteintrag erstellen. In der Datei ``/etc/linuxmuster/devices.csv`` oder in der Schulkonsole unter ``Geräte`` erstellst Du einen Eintrag für den WLAN-Adapter des zu importierenden Gerätes wie in nachstehendem Beispiel gezeigt: 
+
+.. code::
+
+    notebooks;nb-01;nbclass;4d:b6:a7:12:45:79;10.0.100.1;;;;classroom-studentcomputer;;1
+    notebooks;nb-01w;nbclass;b2:5f:5e:32:12:65;10.0.250.1;;;;classroom-studentcomputer;;1
+
+Achte darauf, dass Du bei zwei Eintragungen für ein Gerät (LAN und WLAN) jeweils voneinander abweichende Gerätenamen verwendest. In o.g. Beispiel ist der erste Eintrag für ein Notebook, das via Kabel mit LINBO arbeitet. Der zweite Eintrag ist für das identische Notebook (WLAN). Hier wird nun aber ein abweichender Hostname ``nb-01w`` genutzt und die MAC-Adresse des WLAN-Adapters eingetragen. Als IP-Adresse wird dem WLAN-Adapter eine eigene zugewiesen. DHCP-Einträge sollten vermieden werden, da sonst auch nicht bekannte Geräte, ggf. das WLAN nutzen können.
+
+Hast Du die Eintragungen in der devices.csv auf dem Server vorgenommen, importierst Du diese mit:
+
+.. code::
+
+   linuxmuster-import-devices 
+   
+Hast Du die Eintragungen hingegen in der Schulkonsole vorgenommen, so must Du nur auf ``Save & import`` klicken.
+
+.. hint::
+
+   Für WLAN-Verbindungen gelten für LINBO einige Einschränkungen.
+
+* Wireless pxe boot ist nicht möglich. LINBO stellt die WLAN-Verbindung nur während des Boot-Prozesses her.
+* Die Erstinstallation von LINBO auf dem Client ist zuerst über ein kabelgebundenes LAN durchzuführen.
+* Der Download größer Betriebssystem-Images beeinträchtigt Deine WLAN-Performance. Dies solltest Du vermeiden werden.
+* Du solltest zudem überlegen, ob Du ein gesichertes WLAN für das LINBO-Management einrichtest, um den Zugriff auf das WLAN zu beschränken.
+
 
 LINBO4: Hook-Skripte
 --------------------

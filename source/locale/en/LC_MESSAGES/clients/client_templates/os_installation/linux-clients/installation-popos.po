@@ -1,0 +1,892 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:7
+msgid "Linux-Client: pop!os"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:11
+msgid ""
+"Hast Du alle Vorarbeiten wie im Kapitel :ref:`install-linux-clients-"
+"current-label` ausgeführt, startetst Du nun den PC/die VM von CD/DVD/USB-"
+"Stick mit pop!os."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:15
+msgid ""
+"Die ISO-Datei zur Erstellung des Installationsmediums findest Du unter: "
+"https://pop.system76.com"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:17
+msgid ""
+"z.B. https://iso.pop-os.org/22.04/amd64/intel/35/pop-"
+"os_22.04_amd64_intel_35.iso"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:20
+msgid "Zur Erinnerung - folgende Vorarbeiten sollten bereits erledigt sein:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:22
+msgid "Lege in der WebUI unter LINBO4 eine neue Hardwareklasse (HWK) an."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:29
+msgid "popos HWK erstellen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:29
+msgid "Hardwareklasse hinzufügen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:31
+msgid "Vergebe für die HWK einen eindeutigen Namen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:38
+msgid "HWK Name festlegen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:38
+msgid "Name der HWK festlegen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:40
+msgid ""
+"Editiere die Eintragungen für die HWK, in dem Du auf das Stift-Symbol "
+"klickst."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:47
+msgid "HWK editieren"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:49
+msgid ""
+"Trage unter der Reiterkarte ``Allgemein`` die Server IP sowie den "
+"Systemtyp ein."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:-1
+msgid "HWK allgemeine Einstellungen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:55
+msgid ""
+"Gebe auf der Reiterkarte ``Partitionen`` die erforderlichen Partitionen "
+"EFI (für UEFI-Systeme - mind 1 GiB), pop!os, cache und swap an. Die "
+"Größenangaben richten sich nach Deinen Anforderungen und sollten i.d.R. "
+"größer sein als auf der Abbildung."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:62
+msgid "HWK Partitionen erstellen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:62
+msgid "Allgemeine Einstellungen der HWK"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:66
+msgid ""
+"Bei pop!os sollte darauf geachtet werden, dass bei UEFI-System die EFI-"
+"Partition eine Größe von mind. 1 GiB aufweist!"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:69
+msgid ""
+"Bearbeite die Partition pop!os mit dem Stift und gebe auf der Reiterkarte"
+" ``OS`` einen eindeutigen Namen an. Lege den Namen für das Basisimage "
+"fest. Dies erreichst Du über das ``+``-Symbol und der Angabe eines neuen "
+"Namens, der auf .qcow2 enden muss. Danach kannst Du diesen aus der "
+"Dropdown-Liste auswählen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:76
+msgid "Basisimage festlegen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:76
+msgid "Partitionen festlegen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:78
+msgid ""
+"Nutzt Du ein UEFI-System, so musst Du für pop!os die Einträge für Kernel "
+"und initrd anpassen, die auf das Verzeichnis ``boot/`` verweisen, das auf"
+" der EFI-Partition liegt."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:-1
+msgid "Startoptionen EFI"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:85
+msgid ""
+"Gebe in der WebUI für diesen PC als Gruppe die neu angelegte HWK - hier "
+"pop-os-22-04-lts - an und klicke auf ``Spechern & importieren``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:91
+msgid "Gerät mit neuer HWK importieren"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:91
+msgid "Gerät der HWK zuordnen und importieren"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:93
+msgid "Starte danach den Client via PXE und LINBO."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:100
+msgid "Starte HWK via PXE/Linbo"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:100
+msgid "LINBO Startbildschirm pop!os"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:102
+msgid ""
+"Klicke auf das Werkzeugsymbol, authentifiziere Dich mit dem Kennwort das "
+"LINBO-Admins (dieses siehst Du bei der Eingabe nicht - auch keine "
+"Sternchen)."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:104
+msgid ""
+"In der sich öffnenden Anzeige klicke auf den Eintrag ``Festplatte "
+"partitionieren``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:111
+msgid "Linbo - Werkzeugleiste"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:111
+msgid "LINBO Werkzeugleiste - Menüeinträge für pop!os"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:113
+msgid ""
+"Gehe nach erfolgreicher Ausführung mit dem Pfeil-Symbol zurück und "
+"schalte danach den Client aus."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:115
+msgid ""
+"Stelle die Bootreihenfolge auf dem Client so um, dass dieser nun vom "
+"pop!os Installationsmedium startet."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:119
+msgid "Installation pop!os"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:121
+msgid ""
+"Nach dem Start von dem Installationsmedium erhälst Du den Hinweis, dass "
+"pop!os gestartet wird. Es kann einige Zeit dauern, bis Du den grafischen "
+"Installations-Bildschirm siehst."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:128
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:137
+msgid "Sprache festlegen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:128
+msgid "Sprache auswählen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:130
+msgid "Wähle die gewünschte Sprache und bestätige dies mit ``Select``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:137
+msgid "Tastaturlayout festlegen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:139
+msgid ""
+"Wähle die gewünschte Tastaturbelegung. Diese kannst Du im Eingabefeld "
+"testen. Bestätige Deine Wahl mit ``Auswählen``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:146
+msgid "Custom Install"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:146
+msgid "Installationsart wählen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:148
+msgid ""
+"Die Partitionen auf Deinem Muster-Client sind bereits mit LINBO angelegt "
+"worden, so dass Du hier die Option ``Custom (Advanced)`` auswählst und "
+"bestätigst."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:150
+msgid ""
+"Du gelangst zu nachstehendem Bildschirm, in dem Deine bisherigen "
+"Partitionen angezeigt werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:157
+msgid "Übersicht der Partitionen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:157
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:199
+msgid "Partitionsübersicht"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:159
+msgid "Du hattest mit LINBO bereits die Festplatte partitioniert und formatiert."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:161
+msgid ""
+"Es werden Dir die bereits vorhandenen Partitionen und Dateisysteme "
+"angezeigt. Je nach genutzter Virtualisierungsumgebung / Hardware können "
+"die Festplattenbezeichnungen hier auch als ``/dev/vda`` und die Partionen"
+" als ``/dev/vda1`` etc. angezeigt werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:163
+msgid ""
+"Markiere zunächst Die EFI-Partition (gelb) und lege fest, dass diese "
+"Partition verwendet werden soll."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:170
+msgid "EFI-Partition nutzen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:170
+msgid "EFI-Partition aktivieren"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:172
+msgid ""
+"Diese soll unter pop!os als /boot/efi Boot-Partition eingehangen, aber N "
+"I C H T formatiert werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:174
+msgid ""
+"Klicke danach auf die pop!os-Partition und binde diese als Root-Partition"
+" ( / ) ein. Diese ist ebenfalls nicht zu formatieren."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:181
+msgid "pop!os Partition einhängen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:181
+msgid "Partition für pop!os einhängen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:183
+msgid ""
+"Klicke abschliessend auf die SWAP-Partition (rot) und binde diese als "
+"Swap ein."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:190
+msgid "Swap Partition"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:190
+msgid "SWAP-Partition einhängen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:192
+msgid ""
+"Danach siehst Du Deine einegbundenden Partitionen, die jeweils mit einem "
+"Häkchen gekennzeichnet sind."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:199
+msgid "ÜArtitionsübersicht"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:201
+msgid "Starte die Installation mit dem Button ``Löschen und installieren``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:203
+msgid "Danach musst Du noch einen neuen Benutzer ``linuxadmin`` festlegen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:210
+msgid "Neuer Benutzer"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:210
+msgid "Neuen bentuzer linuxadmin anlegen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:212
+msgid ""
+"Lege für den neuen Benutzer ein Kennwort fest, das mind. 8 Zeichen "
+"aufweist."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:219
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:259
+msgid "Kennwort festlegen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:219
+msgid "Kennwort für linuxadmin festlegen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:221
+msgid "Bestätige dies mit ``Next``. Danach startet die Installation."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:223
+msgid ""
+"Gelangst Du nach erfolgreicher Installation zunm Abschluss-Bildschirm, so"
+" wähle hier ``Herunterfahren`` aus."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:225
+msgid "Werfe das Installationsmedium aus."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:228
+msgid "Erstimage erstellen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:230
+msgid ""
+"Passe die Boot-Reihenfolge für den PC / die VM jetzt so an, dass wieder "
+"via PXE/LINBO gebootet wird. Du siehst dann die Startoptionen in Linbo "
+"für das installierte pop!os."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:237
+msgid "pop!os boot"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:237
+msgid "LINBO Startbildschirm für pop!os"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:239
+msgid ""
+"Klicke nun unten rechts auf das Werkzeug-Icon, um zum Menü für die "
+"Imageerstellung zu gelangen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:246
+msgid "Menue Tools"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:246
+msgid "Werkzeugleiste"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:248
+msgid "Du wirst nach dem Linbo-Passwort gefragt. Gib dieses ein."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:252
+msgid "Deine Eingabe wird hierbei nicht angezeigt."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:259
+msgid "LINBO Kennwort eingeben"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:261
+msgid "Klicke dann auf ``anmelden`` und Du gelangst zu folgender Ansicht:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:268
+msgid "Tools Übersicht"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:268
+msgid "Menü Werkzeugleiste"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:270
+msgid ""
+"Klicke auf das große Festplatten-Symbol, das in der Ecke rechts unten "
+"farblich markiert ist, um nun ein Image zu erstellen. Anstatt des "
+"Festplatten-Symbols wird bei Dir eventuell das Symbol des Betriebssystems"
+" angezeigt, dass Du in der WebUI festgelegt hast."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:272
+msgid "Es wird ein neues Fenster geöffnet:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:279
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:444
+msgid "Image erstellen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:281
+msgid "Starte den Vorgang mit ``erstellen & hochladen``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:283
+msgid ""
+"Gibt es das Image noch nicht, so wird ein neues Image mit dem zuvor in "
+"der WebUI festgelegten Namen erstellt. Ansonsten wir das bestehende Image"
+" überschrieben."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:285
+msgid "Während des Vorgangs siehst Du nachstehenden Bildschirm:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:292
+msgid "Uploading Image"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:295
+msgid ""
+"Zum Abschluss erscheint die Meldung, dass das Image erfolgreich "
+"hochgeladen wurde."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:302
+msgid "Finished"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:302
+msgid "Image erfolgreich hochgeladen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:304
+msgid "Gehe durch einen Klick auf das Zeichen ``<`` zurück und melde Dich ab."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:306
+msgid ""
+"Rufst Du mit der WebUI denMenüpunkt ``Geräteverwaltung --> LINBO4`` auf, "
+"siehst Du Deine HWK. Klickst Du hier auf die Reiterkarte ``Abbilder``, "
+"wird das soeben erstellte Image angezeigt."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:314
+msgid "Abbilder"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:314
+msgid "Schulkonsole Abbilder"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:316
+msgid ""
+"Klickst Du hier auf das Zahnrad-Symbol siehst Du weitere Informationen zu"
+" dem erstellten Image."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:323
+msgid "Image Details"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:323
+msgid "Informationen zum Image"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:326
+msgid "Wichtige Hinweise"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:328
+msgid ""
+"pop!os versucht während der Installation für die EFI-Partition und für "
+"die SWAP-Partition diese mithile von UUIDs einzubinden. Startest Du das "
+"synchronisierte Image, so wird es einige Zeit bei einem grauen Bildschirm"
+" hängen bleiben. Danach erscheinen Fehlerhinweise und eine "
+"Notfallkonsole."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:330
+msgid "In der Notfallkonsole musst Du nun folgende Dateien"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:337
+msgid "auf dem Client korrigieren."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:339
+msgid "Die Datei ``/etc/fstab`` sollte folgende Einträge aufweisen:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:354
+msgid ""
+"Ersetze hierbei Einträge wie ``PARTUUID=61bb910e-54ce-"
+"45e3-bd81-18f6f445d1d0`` durch den Partitionseintrag ``/dev/sda1``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:356
+msgid "Die Datei ``/etc/crypttab`` sollte folgende Einträge aufweisen:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:362
+msgid ""
+"Hier musst Du ebenfalls UUID-Einträge durch die Angabe der SWAP-Partition"
+" ersetzen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:364
+msgid ""
+"Fahre das System herunter. Starte den Client und starte diesen mithilfe "
+"der ``grünen Pfeiltaste``, so dass nur das lokale System mit den soeben "
+"durchgeführten Anpassungen gestartet wird."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:366
+msgid "Danach solltest Du bis zum Login-Bildschirm kommen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:369
+msgid "Paket linuxmuster-linuxclient7 installieren"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:371
+msgid "Melde Dich an dem gestarteten pop!os 22.04 als Benutzer ``linuxadmin`` an."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:378
+msgid "Login as linuxadmin"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:378
+msgid "Anmelden als Benutzer linuxadmin"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:380
+msgid "Installiere das Paket ``linuxmuster-linuxclient7`` wie folgt:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:382
+msgid "Importiere den GPG-Schlüssel des linuxmuster.net Respository."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:383
+msgid "Trage das linuxmuster.net Repository ein."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:384
+msgid "Installiere eine Library und das Paket"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:387
+msgid "1. Schritt"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:389
+msgid ""
+"Öffne ein Terminal unter Ubuntu mit ``strg`` + ``T`` oder klicke unten "
+"links auf die Kacheln und gib in der Suchzeile als Anwendung ``Terminal``"
+" ein."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:391
+msgid "Importiere nun den GPG-Schlüssel des linuxmuster.net Repository:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:398
+msgid "2. Schritt"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:400
+msgid "Trage das linuxmuster.net Repository in die Paketquellen des Clients ein:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:406
+msgid "Aktualisiere die Paketinformationen mit ``sudo apt update``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:409
+msgid "3. Schritt"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:411
+msgid ""
+"Installiere vorab eine Library mit ``sudo apt install libsss-sudo -y``. "
+"Führe danach die Installation des Pakets mit ``sudo apt install "
+"linuxmuster-linuxclient7 -y`` durch."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:415
+msgid "Setup"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:417
+msgid ""
+"Um den Domänenbeitritt auszuführen, rufe das Setup des linuxmuster-"
+"linuxclient7 auf:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:423
+msgid ""
+"Für den Domänenbeitritt wird das Kennwort des Domänen-Admins ``global-"
+"admin`` abgefragt."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:425
+msgid ""
+"Am Ende des Domänenbeitritts erfolgt eine Bestätigung, dass dieser "
+"erfolgreich durchgeführt wurde. Falls nicht, musst Du das Setup für den "
+"linuxmuster-linuxclient7 erneut durchlaufen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:428
+msgid "Image vorbereiten"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:430
+msgid ""
+"Der Linux-Client muss nun für die Erstellung des Images vorbereitet "
+"werden. Rufe hierzu den Befehl auf:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:437
+msgid ""
+"Der Client erhält daruch Aktualisierungen und es werden einige Dateien "
+"(journalctl & apt-caches) aufgeräumt, um Speicherplatz im Image zu "
+"sparen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:441
+msgid ""
+"Danach unbedingt S O F O R T ein neues Image mit Linbo erstellen. Beim "
+"Neustart via PXE darf Ubuntu N I C H T gestartet werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:446
+msgid ""
+"Führe einen Neustart des Linux-Client durch, sodass die VM via PXE in "
+"Linbo bootet."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:448
+msgid ""
+"Nun erstellst Du in Linbo - genauso wie zuvor unter **Erstimage "
+"erstellen** beschrieben - das Image des neuen Muster-Clients für Linux."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:450
+msgid ""
+"Wurde der Vorgang erfolgreich beendet, kannst Du Dich wieder abmelden und"
+" den vorbereiteten Linux-Client synchronisiert starten. Nun sollte die "
+"Anmeldung mit jedem in der Schulkonsole eingetragenen Benutzer "
+"funktionieren."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:453
+msgid "Eigene Anpassungen im Image"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:455
+msgid ""
+"Um den Linux-Client als Mustervorlage zu aktualisieren und Anpassungen "
+"vorzunehmen, startest Du den Client synchronisiert und meldest Dich mit "
+"dem Benutzer ``linuxadmin`` an."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:457
+msgid ""
+"Danach installierst Du die benötigte Software und nimmst die gewünschten "
+"Einstellungen vor."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:459
+msgid "Beispielsweise installierst Du auf dem Linux-Client zuerst Libre-Office:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:466
+msgid ""
+"Hast Du alle Anpassungen vorgenommen, musst Du den Linux-Client noch zur "
+"Erstellung des Images vorbereiten."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:468
+msgid "Das machst Du mit folgendem Befehl:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:476
+msgid ""
+"Falls Du die history Deines Terminals nutzt um Befehle wieder zu nutzen, "
+"dann achte darauf das Du den Parameter ``-y`` entfernst."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:478
+msgid ""
+"Sollte während des Updates oder der Image-Vorbereitung die Meldung "
+"erscheinen, dass lokale Änderungen der PAM-Konfiguration außer Kraft "
+"gesetzt werden sollen, wähle hier immer ``Nein`` (siehe Abb.), da sonst "
+"der konfigurierte Login nicht mehr funktioniert."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:485
+msgid "Linux-Client: Update - PAM Settings"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:485
+msgid "PAM-Settings"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:487
+msgid ""
+"Solltest Du versehentlich ``ja`` ausgewählt haben, kannst Du die "
+"Anmeldung mit folgendem Befehl reparieren:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:493
+msgid ""
+"Im Anschluss startest Du Deinen Linux-Client neu und erstellst wiederum, "
+"wie zuvor beschrieben, ein neues Image."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:497
+msgid "Serverseitige Anpassungen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:499
+msgid ""
+"Damit der Linux-Client die Drucker automatisch ermittelt und der Proxy "
+"korrekt eingerichtet wird, ist es erforderlich, dass auf dem "
+"linuxmuster.net Server einige Anpassungen vorgenommen werden."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:502
+msgid "Proxy-Einstellungen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:504
+msgid ""
+"Bei der Anmeldung vom Linux-Client werden sog. ``Hook-Skripte`` "
+"ausgeführt."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:506
+msgid ""
+"Diese finden sich auf dem linuxmuster.net Server im Verzeichnis: "
+"``/var/lib/samba/sysvol/gshoenningen.linuxmuster.lan/scripts/default-"
+"school/custom/linux/``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:510
+msgid ""
+"Ersetze ``gshoenningen.linuxmuster.lan`` durch den von Dir beim Setup "
+"festgelegten Domänennamen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:512
+msgid ""
+"Hier findet sich das Logon-Skript (``logon.sh``). Es wird immer dann "
+"ausgeführt, wenn sich ein Benutzer am Linux-Client anmeldet."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:514
+msgid ""
+"In diesem Logon-Skript musst Du die Einstellungen für den zu verwenden "
+"Proxy-Server festlegen, sofern dieser von den Linux-Clients verwendet "
+"werden soll."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:516
+msgid ""
+"Editiere die Datei "
+"``/var/lib/samba/sysvol/gshoenningen.linuxmuster.lan/scripts/default-"
+"school/custom/linux/logon.sh`` und füge folgende Zeilen hinzu. Passe die "
+"``PROXY_DOMAIN`` für Dein Einsatzszenario an."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:542
+msgid "Drucker vorbereiten"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:546
+msgid ""
+"Dies sind nur kurze allgemeine Hinweise. Im Kapitel :ref:`configure-"
+"printers-label` findet sich eine ausführliche Anleitung."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:548
+msgid ""
+"Damit die Drucker richtig gefunden und via GPO administriert werden "
+"können, ist es erforderlich, dass jeder Drucker im CUPS-Server als Namen "
+"exakt seinen Hostnamen aus der Geräteverwaltung bekommt."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:550
+msgid ""
+"Die Zuordnung von Druckern zu Computern geschieht auf Basis von Gruppen "
+"im Active Directory. Im Kapitel :ref:`configure-printers-label` gibt es "
+"weitere Informationen dazu."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:552
+msgid ""
+"Damit auf jedem Rechner nur die Drucker angezeigt werden, die ihm auch "
+"zugeordnet wurden, muss auf dem Server in der Datei "
+"``/etc/cups/cupsd.conf`` der Eintrag ``Browsing On`` auf ``Browsing Off``"
+" umgestellt werden. Andernfalls werden auf jedem Rechner ALLE Drucker "
+"angezeigt, nicht nur die ihm zugeteilten."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:555
+msgid "Appendix"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:557
+msgid ""
+"Die HWK wird auf dem Server unter ``/srv/linbo/start.conf.pop-"
+"os-22-04-lts`` (Name für die hier dargestellte HWK) abgelegt."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:559
+msgid "Für die dargestellte Beispiel-HWK weist diese folgenden Inhalt auf:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:631
+msgid ""
+"In der WebUI kannst Du unter ``Geräteverwaltung --> Linbo-"
+"Synchronisierung`` die PC und die HWK Gruppen einsehen und hier sog. "
+"``linbo-remote`` Befehle vom Server aus absetzen, die z.B. bewirken, dass"
+" der PC a00101 ausgeschaltet (Halt) wird."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:638
+msgid "WebUI linbo-remote"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/linux-clients/installation-popos.rst:638
+msgid "WebUI LINBO-Synchronisierung"
+msgstr ""
+

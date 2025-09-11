@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/systemadministration/harddisk/index.rst:37
+msgid "Festplatten-Anpassung"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/index.rst:7
+msgid "Anpassen der Festplattengröße"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/index.rst:12
+msgid ""
+"Must Du aufgrund geänderter Anforderungen die bereits eingerichteten "
+"Festplattengrößen in Deiner Virtualisierungsumgebung ändern, dann ist es "
+"hilfreich, sich an nachstehend beschriebenen Ablauf und Hinweisen zu "
+"orientieren."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/index.rst:17
+msgid "Übersicht zum Vorgehen"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/index.rst:19
+msgid "Folgender Ablauf zur Anpassung der Festplattengrößen ist einzuhalten:"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/index.rst:21
+msgid ""
+"In der Virtualisierungsumgebung ein Snapshot der VM ausführen. Auf diesen"
+" Stand kannst Du zurückkehren, sofern bei den nachfolgenden Schritten "
+"etwas nicht funktioniert."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/index.rst:23
+msgid "In der Virtualisierungsumgebung die HDDs der VM erweitern."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/index.rst:24
+msgid "Größenänderung in den VMs bekannt machen."
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/index.rst:28
+msgid ""
+"Die VM der OPNsense® benötigt bei der Anpassung ein etwas anderes "
+"Vorgehen, da hier ein BSD Linux zum Einsatz kommt. Die entsprechenden "
+"Hinweise finden sich im entsprechenden Abschnitt"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/index.rst:32
+msgid "Anpassung Hypervisor"
+msgstr ""
+
+#: ../../source/systemadministration/harddisk/index.rst:34
+msgid ""
+"Starte nun mit Punkt 1, indem Du nachstehend Deine eingesetzte "
+"Virtualisierungsumgebung auswählst und gemäß der Dokumentation die "
+"Festplattengröße Deiner VMs im Hypervisor anpasst."
+msgstr ""
+

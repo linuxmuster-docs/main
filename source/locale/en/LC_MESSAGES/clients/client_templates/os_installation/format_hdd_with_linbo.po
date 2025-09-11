@@ -1,0 +1,159 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:7
+msgid "Festplatte mit LINBO vorbereiten"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:12
+msgid ""
+"Du bootest nun den zuvor aufgenommen Client via PXE, so dass dieser vom "
+"Server eine IP-Adresse erhält und Du folgenden LINBO-Bildschirm siehst "
+"(hier als Beispiel für eine Hardwareklasse für Ubuntu):"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:19
+msgid "LINBO start screen afte pxe boot"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:19
+msgid "LNBO PXE Startbildschirm"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:21
+msgid "Wähle nun das ``Werkzeug-Symbol`` rechts aus."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:27
+msgid "LINBO tool icon"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:27
+msgid "Werkzeug-Symbol"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:29
+msgid ""
+"Es erscheint die Aufforderung, dass Du das LINBO-Passwort eingeben musst."
+" Dies entspricht nach der Installation i.d.R. dem des global-admin. Bei "
+"der Eingabe des Kennwortes werden Dir keine Zeichen angezeigt - auch "
+"keine Sternchen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:36
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:45
+msgid "LINBO password screen"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:36
+msgid "Eingabe des LINBO Kennwortes"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:38
+msgid "Es erscheint dann das LINBO-Tools Menü."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:45
+msgid "LINBO Werkzeug-Menü"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:47
+msgid ""
+"Wähle hier nun den Eintrag ``Festplatte partitionieren`` aus, damit die "
+"Festplatte Deines Clients wie zuvor in der Hardwareklasse angegeben, "
+"partitioniert und formatiert wird. Bevor der Vorgang angewendet wird, "
+"erhälst Du die Rückfrage, ob damit wirklich alle Daten auf dem Laufwerk "
+"gelöscht werden sollen."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:49
+msgid "Bestätige dies mit ``Ja``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:51
+msgid ""
+"Während der Partitionierung und Formatierung der Festplatte des Clients "
+"siehst Du eine Status-Anzeige."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:58
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:67
+msgid "LINBO: partitioning of hdd client"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:58
+msgid "Partitionierung der Client Festplatte"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:60
+msgid ""
+"Wurde der Vorgang abgeschlossen, so findest Du nachstehende Status-"
+"Meldung:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:67
+msgid "Fertigstellung der Partitionierung"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:69
+msgid "Klicke dann auf das Kleiner-Zeichen ``<``."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:71
+msgid "Fahre nun den Client herunter, indem Du folgenden Button klickst:"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:77
+msgid "LINBO: shutdown icon"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:77
+msgid "Client herunterfahren"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:79
+msgid ""
+"Nachdem der Client heruntergefahren wurde, achte darauf, dass das "
+"Installationsmedium (z.B. USB-Stick mit ISO-Image oder DVD) für das "
+"gewünschte Betriebssystem eingelegt ist."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:81
+msgid ""
+"Starte dann den Client neu, drücke während des Boot-Vorgangs ``F2, F10, "
+"F12, usw.``, um in das BIOS Boot-Menü zu gelangen. Als virtueller Rechner"
+" auf einem Hypervisor wählst Du unter ``VMxyz ⇒ Options ⇒ Bootorder``` "
+"das eingelegte Installationsmedium aus."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:83
+msgid "Setze nun die Installation fort ..."
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:85
+msgid ":ref:`install-linux-clients-current-label`"
+msgstr ""
+
+#: ../../source/clients/client_templates/os_installation/format_hdd_with_linbo.rst:86
+msgid ":ref:`install-windows10-clients-label`"
+msgstr ""
+

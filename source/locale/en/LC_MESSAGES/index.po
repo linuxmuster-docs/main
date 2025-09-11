@@ -1,57 +1,241 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, linuxmuster.net
-# This file is distributed under the same license as the linuxmuster.net package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-<<<<<<< Updated upstream
-"POT-Creation-Date: 2017-09-29 05:50+0700\n"
-=======
-"POT-Creation-Date: 2018-01-02 10:28+0700\n"
->>>>>>> Stashed changes
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
+"Language-Team: English "
+"(https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../source/index.rst:3
-msgid "linuxmuster.net 6.2 Dokumentation"
-msgstr ""
+#: ../../source/index.rst:69
+msgid "Über"
+msgstr "about"
 
-#: ../../source/index.rst:5
+#: ../../source/index.rst:77
+msgid "Installation"
+msgstr "installation"
+
+#: ../../source/index.rst:87
+msgid "Ersteinrichtung"
+msgstr "initial setup"
+
+#: ../../source/index.rst:100
+msgid "Upgrade"
+msgstr "upgrade"
+
+#: ../../source/index.rst:108
+msgid "Migration"
+msgstr "migration"
+
+#: ../../source/index.rst:117
+msgid "Clientverwaltung"
+msgstr "client management"
+
+#: ../../source/index.rst:132
+msgid "Benutzerverwaltung"
+msgstr "user management"
+
+#: ../../source/index.rst:144
+msgid "Pädagogische Funktionen"
+msgstr "school management"
+
+#: ../../source/index.rst:154
+msgid "Systemadministration"
+msgstr "system administration"
+
+#: ../../source/index.rst:170
+msgid "Externe Dienste"
+msgstr "external services"
+
+#: ../../source/index.rst:181
+msgid "linuxmuster.net helfen"
+msgstr "support linuxmuster.net"
+
+#: ../../source/index.rst:188
+msgid "Anhang"
+msgstr "appendix"
+
+#: ../../source/index.rst:2
+msgid "Einführung"
+msgstr "introduction"
+
+#: ../../source/index.rst:4
+msgid "Herzlich Willkommen zur Dokumentation von linuxmuster.net v7.2!"
+msgstr "Welcome to our documentation for linuxmuster.net v7.2!"
+
+#: ../../source/index.rst:6
+msgid "Diese beschreibt alle wichtigen Schritte ..."
+msgstr "All important steps are described ..." 
+
+#: ../../source/index.rst
+msgid "... von der Installation,"
+msgstr "... starting with the installation,"
+
+#: ../../source/index.rst
+msgid "... der Einrichtung von Windows- und Linux-Rechnern als Clients,"
+msgstr "... setting up Windows- and Linux-Clients,"
+
+#: ../../source/index.rst
+msgid "... der Systemadministration,"
+msgstr ".. system administration,"
+
+#: ../../source/index.rst
+msgid "... der Verwaltung von Nutzern,"
+msgstr "... management of users,"
+
+#: ../../source/index.rst
+msgid "... bis hin zu individuellen Anpassungen."
+msgstr "... up to individual settings."
+
+#: ../../source/index.rst:14
 msgid ""
-"Herzlich Willkommen zur Dokumentation von linuxmuster.net! Diese "
-"Dokumentation beschreibt alle wichtigen Schritte von der Installation, der "
-"Einrichtung von Windows- und Ubuntu-Rechnern, der Verwaltung von Nutzern bis"
-" hin zu individuellen Anpassungen."
+"Wie es bei einem Projekt ist, dessen Entwicklungsgeschichte mittlerweile "
+"auf das Jahr 1999 zurückblickt, ist Dein Einstieg in die Beschreibung "
+"unseres Systems sicherlich unterschiedlich."
 msgstr ""
 
-#: ../../source/index.rst:7
-msgid ""
-"Neben dieser Dokumentation steht Ihnen unsere Community und unser Telefon-"
-"Support helfend Seite. Weiter Informationen dazu finden sie auf der `Website"
-" von Linuxmuster.net <http://linuxmuster.net/about/hilfsbereit/>`_."
+#: ../../source/index.rst:17
+msgid "Kennst Du linuxmuster.net noch nicht,"
 msgstr ""
 
-#: ../../source/index.rst:9
-msgid ""
-"Zum einen dient die Dokumentation als Schritt-für-Schritt Anleitung für die "
-"Einrichtungs- und Administrationsaufgaben, zum anderen als Referenz für die "
-"Möglichkeiten der freien Musterlösung linuxmuster.net."
+#: ../../source/index.rst:19
+msgid "dann empfehlen wir Dir das Kapitel"
 msgstr ""
 
-#: ../../source/index.rst:11
-msgid ""
-"Dabei richtet sich die Dokumentation an verschiedene Zielgruppen. Das "
-"Handbuch für Netzwerkbetreuer beschreibt die Installation und Konfiguration "
-"von Linuxmuster.net. Die Handbücher für Lehrkräfte und SchülerInnen haben "
-"vor allem die pädagogischen Funktionen der Musterlösung (Funktionen für den "
-"Unterricht, Klassenarbeitsmodus, Dateien austeilen und einsammeln, etc.)."
+#: ../../source/index.rst:21
+msgid ":ref:`what-is-linuxmuster.net-label`"
 msgstr ""
+
+#: ../../source/index.rst:24
+msgid "Hattest Du schon Kontakt mit einer Installation von"
+msgstr ""
+
+#: ../../source/index.rst
+msgid "linuxmuster.net Version 7?"
+msgstr ""
+
+#: ../../source/index.rst:28
+msgid "Dann ist das Kapitel :ref:`what-is-new-label` für Dich von Interesse."
+msgstr ""
+
+#: ../../source/index.rst:31
+msgid "Installation from Scratch"
+msgstr ""
+
+#: ../../source/index.rst:33
+msgid ""
+"Diese Dokumentation führt Dich durch eine Installation von Grund auf. "
+"Dies bedeutet, dass zunächst die Vorbereitung der "
+"Virtualisierungslösungen - hier Proxmox - dokumentiert wird. Auf dem "
+"Virtualisierer sind sog. Virtuelle Maschinen (VM) anzulegen, um "
+"linuxmuster.net 7.2 installieren zu können. Hierzu gehört die spezifische"
+" Einrichtung des Netzwerks, des Speichers sowie die Vorbereitung der VM."
+msgstr ""
+
+#: ../../source/index.rst:37
+msgid "Weitere Hilfe"
+msgstr ""
+
+#: ../../source/index.rst:39
+msgid ""
+"Neben dieser Dokumentation steht Dir unsere Community in unserem "
+"Hilfeforum und unser kostenfreier Telefon-Support helfend zur Seite."
+msgstr ""
+
+#: ../../source/index.rst:41
+msgid "Das Forum findest Du unter `<https://ask.linuxmuster.net>`_."
+msgstr ""
+
+#: ../../source/index.rst:43
+msgid ""
+"Informationen zum Telefon-Support gibt es auf unser Projektseite "
+"`<https://www.linuxmuster.net/de/support-de/>`_."
+msgstr ""
+
+#: ../../source/index.rst:48
+msgid ""
+"Suchst Du die Dokumentation zur Version linuxmuster.net 7.1 oder die "
+"Möglichkeit unsere Dokumentation herunterzuladen?"
+msgstr ""
+
+#: ../../source/index.rst:50
+msgid "Dann schaue an das untere Ende der Menüleiste."
+msgstr ""
+
+#: ../../source/index.rst:57
+msgid "Read The Docs Menu - closed"
+msgstr ""
+
+#: ../../source/index.rst:57
+msgid "Read the Docs Untermenü"
+msgstr ""
+
+#: ../../source/index.rst:59
+msgid "Nach einem Klick eröffnen sich Dir dort noch weitere Möglichkeiten:"
+msgstr ""
+
+#: ../../source/index.rst:66
+msgid "Read The Docs Menu - opened"
+msgstr ""
+
+#: ../../source/index.rst:66
+msgid "Read the Docs geöffnetes Untermenü"
+msgstr ""
+
+#~ msgid "linuxmuster.net 6.2 Dokumentation"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Herzlich Willkommen zur Dokumentation von "
+#~ "linuxmuster.net! Diese Dokumentation beschreibt "
+#~ "alle wichtigen Schritte von der "
+#~ "Installation, der Einrichtung von Windows- "
+#~ "und Ubuntu-Rechnern, der Verwaltung von"
+#~ " Nutzern bis hin zu individuellen "
+#~ "Anpassungen."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Neben dieser Dokumentation steht Ihnen "
+#~ "unsere Community und unser Telefon-"
+#~ "Support helfend Seite. Weiter Informationen"
+#~ " dazu finden sie auf der `Website "
+#~ "von Linuxmuster.net "
+#~ "<http://linuxmuster.net/about/hilfsbereit/>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Zum einen dient die Dokumentation als"
+#~ " Schritt-für-Schritt Anleitung für "
+#~ "die Einrichtungs- und Administrationsaufgaben, "
+#~ "zum anderen als Referenz für die "
+#~ "Möglichkeiten der freien Musterlösung "
+#~ "linuxmuster.net."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Dabei richtet sich die Dokumentation an"
+#~ " verschiedene Zielgruppen. Das Handbuch für"
+#~ " Netzwerkbetreuer beschreibt die Installation "
+#~ "und Konfiguration von Linuxmuster.net. Die "
+#~ "Handbücher für Lehrkräfte und SchülerInnen "
+#~ "haben vor allem die pädagogischen "
+#~ "Funktionen der Musterlösung (Funktionen für"
+#~ " den Unterricht, Klassenarbeitsmodus, Dateien "
+#~ "austeilen und einsammeln, etc.)."
+#~ msgstr ""
+

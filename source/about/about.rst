@@ -177,7 +177,7 @@ Dateiverwaltung und -verteilung
 
 Alle Nutzer besitzen einen persönlichen Bereich auf dem Netzwerkspeicher. Ebenso steht ein solcher den Gruppen für den Austausch ihrer gemeinschaftlichen Arbeit zur Verfügung.
 
-Selbstheilende Arbeitsstationen durch LINBO 4.1
+Selbstheilende Arbeitsstationen durch LINBO 4.2
 +++++++++++++++++++++++++++++++++++++++++++++++
 
 .. image::    media/structure_of_version_7_client.svg

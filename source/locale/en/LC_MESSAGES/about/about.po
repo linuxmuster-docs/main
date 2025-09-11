@@ -1,44 +1,684 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, linuxmuster.net
-# This file is distributed under the same license as the linuxmuster.net package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
+"Language-Team: English "
+"(https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../source/about/about.rst:2
+#: ../../source/about/about.rst:16
 msgid "Was ist linuxmuster.net?"
 msgstr ""
 
-#: ../../source/about/about.rst:4
+#: ../../source/about/about.rst:21
 msgid ""
-"linuxmuster.net ist eine umfassende Komplettlösung zum Betrieb schulischer "
-"IT-Infrastruktur."
+"linuxmuster.net ist eine Komplettlösung für den digital unterstützten "
+"Unterricht für Schüler:innen und Lehrer:innen einer zeitgemäßen "
+"Bildungseinrichtung."
 msgstr ""
 
-#: ../../source/about/about.rst:6
-msgid "benutzerfreundlich"
+#: ../../source/about/about.rst:23
+msgid ""
+"Die langjährigen Erfahrungen aller Beteiligten aus der linuxmuster.net "
+"Gemeinde haben gezeigt, dass sich ein Firnmennetzwerk fundamental von den"
+" Anforderungen an ein heutige Schulnetz unterscheiden."
 msgstr ""
 
-#: ../../source/about/about.rst:7
-msgid "anpassungsfähig"
+#: ../../source/about/about.rst:26
+msgid ""
+"Die Entwicklung von linuxmuster.net greift all diese Anforderungen auf "
+"und stellt eine modulare Lösung für ein Schulnetz zur Verfügung."
 msgstr ""
 
-#: ../../source/about/about.rst:8
-msgid "hilfsbereit"
+#: ../../source/about/about.rst:28
+msgid ""
+"Diese kann von einer Ein-Server-Lösung bis hin zu einer Mehr-Server-"
+"Lösung mit Cloud-Anbindung und BYOD-Integration skaliert werden."
 msgstr ""
 
-#: ../../source/about/about.rst:9
-msgid "nachhaltig"
+#: ../../source/about/about.rst:31
+msgid ""
+"Die Anforderungen, die heute an ein Schulnetz gestellt werden, erklären "
+"wir im nachfolgenden Abschnitten detailliert. Im Anschluss zeigen wir "
+"auf, wie linuxmuster.net diese umsetzt."
 msgstr ""
+
+#: ../../source/about/about.rst:34
+msgid "Schulnetzwerk vs. \"normales\" Netzwerk"
+msgstr ""
+
+#: ../../source/about/about.rst:36
+msgid ""
+"**Welche Unterschiede in der IT in einer Firma und einer Schule sind für "
+"uns relevant?**"
+msgstr ""
+
+#: ../../source/about/about.rst:38
+msgid "Im Prinzip gibt es vier große Merkmale, die auffallen:"
+msgstr ""
+
+#: ../../source/about/about.rst:40
+msgid "Das Verhältnis der Anzahl von Usern zu den Arbeitsmitteln"
+msgstr ""
+
+#: ../../source/about/about.rst:45 ../../source/about/about.rst:57
+msgid "Firma"
+msgstr ""
+
+#: ../../source/about/about.rst:45 ../../source/about/about.rst:57
+msgid "Schule"
+msgstr ""
+
+#: ../../source/about/about.rst:47 ../../source/about/about.rst:59
+msgid "User"
+msgstr ""
+
+#: ../../source/about/about.rst:47
+msgid "PC"
+msgstr ""
+
+#: ../../source/about/about.rst:49
+msgid "50"
+msgstr ""
+
+#: ../../source/about/about.rst:49
+msgid "500"
+msgstr ""
+
+#: ../../source/about/about.rst:52
+msgid "Die Zusammensetzung von Usern in  Abteilungen"
+msgstr ""
+
+#: ../../source/about/about.rst:59
+msgid "Abteilung"
+msgstr ""
+
+#: ../../source/about/about.rst:59
+msgid "Gruppe"
+msgstr ""
+
+#: ../../source/about/about.rst:61
+msgid "A"
+msgstr ""
+
+#: ../../source/about/about.rst:61 ../../source/about/about.rst:69
+msgid "Marketing"
+msgstr ""
+
+#: ../../source/about/about.rst:61 ../../source/about/about.rst:69
+msgid "Klasse"
+msgstr ""
+
+#: ../../source/about/about.rst:63
+msgid "Kurs 1"
+msgstr ""
+
+#: ../../source/about/about.rst:65 ../../source/about/about.rst:73
+msgid "Kurs 2"
+msgstr ""
+
+#: ../../source/about/about.rst:67 ../../source/about/about.rst:75
+msgid "AG 1"
+msgstr ""
+
+#: ../../source/about/about.rst:69
+msgid "B"
+msgstr ""
+
+#: ../../source/about/about.rst:71
+msgid "Kurs 3"
+msgstr ""
+
+#: ../../source/about/about.rst:78
+msgid "Die Fluktuation im jährlichen Wechsel"
+msgstr ""
+
+#: ../../source/about/about.rst:80
+msgid ""
+"Zum Schuljahreswechsel verlässt eine große Anzahl an Schüler:innen die "
+"Einrichtung und neue müssen in das System eingepflegt werden. Die "
+"Zusammensetzung der Klassen, Kurse und Arbeitsgruppen werden zu großen "
+"Teilen neu formiert."
+msgstr ""
+
+#: ../../source/about/about.rst:82
+msgid "Solch ein administrativen Aufwand ergibt sich in einer Firma selten."
+msgstr ""
+
+#: ../../source/about/about.rst:84
+msgid "Der Umgang mit den Arbeitsmitteln"
+msgstr ""
+
+#: ../../source/about/about.rst:86
+msgid ""
+"Schüler:innen teilen sich ein und dasselbe Arbeitsmittel im schulischen "
+"Alltag. Dabei ist es für die nächste Unterrichtseinheit entscheidend, "
+"dass zum Start immer eine einheitliche Umgebung auf den Rechnern "
+"vorhanden ist. Die zeitliche Taktung zwischen den Wechseln kann sehr kurz"
+" sein."
+msgstr ""
+
+#: ../../source/about/about.rst:88
+msgid ""
+"Dies ist in einer Firma so nicht gegeben. Wenn ein User seinen Rechner "
+"verlässt, findet er ihn der Regel immer genauso wieder."
+msgstr ""
+
+#: ../../source/about/about.rst:90
+msgid "Aus diesen Gründen sprechen wir von einem"
+msgstr ""
+
+#: ../../source/about/about.rst:93
+msgid "Schulnetz"
+msgstr ""
+
+#: ../../source/about/about.rst:95
+msgid ""
+"Mit linuxmuster.net wird die schulische IT mit einer voll integrierten "
+"Open-Source-Lösung abgebildet. Dieses umfasst alle Bereiche, die in einer"
+" Bildungseinrichtung anzutreffen sind."
+msgstr ""
+
+#: ../../source/about/about.rst:97
+msgid ""
+"Unser Anspruch liegt dabei auf der Bereitstellung eines Systems, das "
+"folgende Punkte erfüllt:"
+msgstr ""
+
+#: ../../source/about/about.rst:99
+msgid "automatisierte Installation der Server-Komponenten"
+msgstr ""
+
+#: ../../source/about/about.rst:100
+msgid ""
+"durch einen freien Zugang zu einer umfänglichen Dokumentation eine "
+"möglichst einfache Installation"
+msgstr ""
+
+#: ../../source/about/about.rst:101
+msgid "einfache Integration in vorhandene Infrastruktur"
+msgstr ""
+
+#: ../../source/about/about.rst:102
+msgid "bestehend aus Server, Firewall und vorkonfigurierten Arbeitsstationen"
+msgstr ""
+
+#: ../../source/about/about.rst:103
+msgid ""
+"mehrstufige ausbau- und anpassbare Struktur mit heterogenen Clients und "
+"unterschiedlichsten Diensten bzw. Cloud-Lösungen"
+msgstr ""
+
+#: ../../source/about/about.rst:104
+msgid ""
+"ein frei zugängliches `Community-Wiki "
+"<https://wiki.linuxmuster.net/community/>`_ mit einer Vielzahl an "
+"ergänzenden Anleitungen und Erweiterungen aus dem Umfeld der Unterstützer"
+" von linuxmuster.net"
+msgstr ""
+
+#: ../../source/about/about.rst:106
+msgid "**Schulnetz - Komplett - Anpassbar!**"
+msgstr ""
+
+#: ../../source/about/about.rst:-1
+msgid "Struktur über alles"
+msgstr ""
+
+#: ../../source/about/about.rst:113
+msgid ""
+"Ein Augenmerk liegt dabei auf der Unabhängigkeit von der eingesetzten "
+"Hard- und Software. Dieses wird unter anderem erkennbar an dem Umfang der"
+" unterstützten Betriebssysteme für die Arbeitsstationen."
+msgstr ""
+
+#: ../../source/about/about.rst:115
+msgid ""
+"Proprietäre Betriebssysteme, |zb| aus dem Hause Microsoft |reg|, können "
+"aufgrund der Lizenzpolitik der Hersteller nicht von uns vorbereitet "
+"ausgeliefert werden. Diese lassen sich aber ebenso leicht in unsere "
+"Infrastruktur integrieren, wie solche, die als Open-Source erhältlich "
+"sind."
+msgstr ""
+
+#: ../../source/about/about.rst:117
+msgid ""
+"Auf der Basis von Linux stellen wir ein Open-Source-Betriebssystem zur "
+"Verfügung, das folgende Vorteile bietet:"
+msgstr ""
+
+#: ../../source/about/about.rst:119
+msgid "entwickelt von Praktikern für den täglichen Einsatz an Schulen"
+msgstr ""
+
+#: ../../source/about/about.rst:120
+msgid "mit hilfreichen Schulfunktionen für den Unterrichtseinsatz"
+msgstr ""
+
+#: ../../source/about/about.rst:121
+msgid "in einfacher Form anpass- und erweiterbar an die eigenen Bedürfnisse"
+msgstr ""
+
+#: ../../source/about/about.rst:122
+msgid "keine Lizenzkosten"
+msgstr ""
+
+#: ../../source/about/about.rst:-1
+msgid "Struktur der Basis-Komponenten"
+msgstr ""
+
+#: ../../source/about/about.rst:130
+msgid ""
+"Im Zusammenspiel der Clients mit dem Server und einer Firewall entsteht "
+"so die grundlegende professionelle Infrastruktur zur zentralen "
+"Administration der Schülergeräte und der Verwaltung des pädagogischen "
+"Schulnetzwerkes."
+msgstr ""
+
+#: ../../source/about/about.rst:132
+msgid ""
+"Dieses lässt sich aufgrund des modularen Aufbaus weiter an die darüber "
+"hinausgehenden Anforderungen, unter anderem einer schulweiten WLAN-"
+"Verfügbarkeit erweitern und anpassen."
+msgstr ""
+
+#: ../../source/about/about.rst:-1
+msgid "Struktur der Basis-Komponente - LMN-Server"
+msgstr ""
+
+#: ../../source/about/about.rst:141
+msgid "Die Basis"
+msgstr ""
+
+#: ../../source/about/about.rst:144
+msgid "Der linuxmuster.net-Server"
+msgstr ""
+
+#: ../../source/about/about.rst:146
+msgid ""
+"Die Basisdienste des links abgebildeten Servers sind für die Funktion des"
+" ganzen Systems verantwortlich:"
+msgstr ""
+
+#: ../../source/about/about.rst:149
+msgid "Benutzer- und Gruppenverwaltung"
+msgstr ""
+
+#: ../../source/about/about.rst:151
+msgid ""
+"Die Benutzer- und Gruppenverwaltung orientiert sich an den Bedürfnissen, "
+"die der Schulbetrieb vorgibt."
+msgstr ""
+
+#: ../../source/about/about.rst:153
+msgid ""
+"Schüler:innen bekommen mit der Einschulung ihren persönlichen Benutzer-"
+"Account."
+msgstr ""
+
+#: ../../source/about/about.rst:154
+msgid "Dieser bleibt ihnen bis zum Ende ihrer Laufbahn an der Schule erhalten."
+msgstr ""
+
+#: ../../source/about/about.rst:155
+msgid ""
+"Die Gruppenzugehörigkeit der einzelnen Schüler:innen werden in Klassen, "
+"Kursen und Projekten abgebildet."
+msgstr ""
+
+#: ../../source/about/about.rst:156
+msgid ""
+"Zu Beginn eines Schuljahres können diese Daten und Abhängigkeiten aus der"
+" Schulverwaltung mittels Import der Daten eingespielt bzw. "
+"fortgeschrieben werden. Gleiches gilt selbstverständlich auch für "
+"Veränderungen während eines laufenden Schuljahres."
+msgstr ""
+
+#: ../../source/about/about.rst:158
+msgid "Für Lehrer:innen gilt dies ebenso."
+msgstr ""
+
+#: ../../source/about/about.rst:161
+msgid "Unterrichtssteuerung"
+msgstr ""
+
+#: ../../source/about/about.rst:163
+msgid ""
+"Vielfältige Möglichkeiten stehen den Lehrkräften zur Verfügung, um "
+"Einfluss auf die Rechner der zu Unterrichtenden zu nehmen."
+msgstr ""
+
+#: ../../source/about/about.rst:165
+msgid "Internet - An/Aus"
+msgstr ""
+
+#: ../../source/about/about.rst:166
+msgid "Intranet - An/Aus"
+msgstr ""
+
+#: ../../source/about/about.rst:167
+msgid "Wi-Fi - An/Aus"
+msgstr ""
+
+#: ../../source/about/about.rst:168
+msgid "Drucker - An/Aus"
+msgstr ""
+
+#: ../../source/about/about.rst:171
+msgid "Klassenarbeitsmodus"
+msgstr ""
+
+#: ../../source/about/about.rst:173
+msgid ""
+"In Prüfungssituationen wie Abitur, Klassenarbeiten und andere "
+"Leistungsüberprüfungen kann die Lehrkraft mit einfachen Mitteln die "
+"Nutzung des Systems für die Prüfungsgruppe einschränken. Das Spektrum "
+"umfasst dabei alle Möglichkeiten der Unterrichtssteuerung ergänzt um die "
+"Sperrung des persönlichen Speicherbereichs."
+msgstr ""
+
+#: ../../source/about/about.rst:176
+msgid "Dateiverwaltung und -verteilung"
+msgstr ""
+
+#: ../../source/about/about.rst:178
+msgid ""
+"Alle Nutzer besitzen einen persönlichen Bereich auf dem Netzwerkspeicher."
+" Ebenso steht ein solcher den Gruppen für den Austausch ihrer "
+"gemeinschaftlichen Arbeit zur Verfügung."
+msgstr ""
+
+#: ../../source/about/about.rst:181
+msgid "Selbstheilende Arbeitsstationen durch LINBO 4.2"
+msgstr ""
+
+#: ../../source/about/about.rst:-1
+msgid "Struktur der Basis-Komponente - LINBO (Client-Managements)"
+msgstr ""
+
+#: ../../source/about/about.rst:189
+msgid ""
+"Das Konzept der Selbstheilenden Arbeitsstationen (SheilA) ermöglicht "
+"einheitliche, identische Schulungssysteme. Diese können bei jedem Start "
+"der Rechner in einen vorher definierten Zustand zurückgesetzt werden. "
+"Dieser Standard wird durch die letzte Veränderung oder Installation "
+"festgelegt, in dem ein Abbild des Betriebssystems auf dem Server "
+"gespeichert wird. Weitere Vorteile sind:"
+msgstr ""
+
+#: ../../source/about/about.rst:191
+msgid "verschiedene Betriebssysteme auf jedem Client möglich"
+msgstr ""
+
+#: ../../source/about/about.rst:192
+msgid "schnelle Erst- oder Neueinrichtung"
+msgstr ""
+
+#: ../../source/about/about.rst:193
+msgid "keine Einschränkung der Nutzer durch Benutzerrechte auf den Clients nötig"
+msgstr ""
+
+#: ../../source/about/about.rst:194
+msgid "einfache Wiederherstellung der Clients ist jedem Benutzer möglich"
+msgstr ""
+
+#: ../../source/about/about.rst:195
+msgid ""
+"einfache Softwareverteilung durch Installation auf einem Client - keine "
+"gesonderten Kenntnisse erforderlich, bei demjenigen, der die Software-"
+"Installation betreut."
+msgstr ""
+
+#: ../../source/about/about.rst:196
+msgid "Möglichkeit der zeit- und/oder ferngesteuerten Aktualisierung der Clients."
+msgstr ""
+
+#: ../../source/about/about.rst:197
+msgid ""
+"mit sogenannten Postsync-Scripten kann der Administrator für einzelne, "
+"raumweite oder für alle Geräte notwendige Konfigurationsänderungen beim "
+"Systemstart einpflegen."
+msgstr ""
+
+#: ../../source/about/about.rst:199
+msgid "Nähere Information sind im Kapitel \"Clientverwaltung\" beschrieben."
+msgstr ""
+
+#: ../../source/about/about.rst:202
+msgid "Integration unterschiedlicher Geräte (BYOD)"
+msgstr ""
+
+#: ../../source/about/about.rst:204
+msgid ""
+"Da sich alle Steuerungsfunktionen in unserer Lösung an den Benutzern "
+"orientieren, ist es unerheblich an welchem Gerät sie sich befinden. Das "
+"Gleiche gilt auch für mitgebrachte Geräte, mit denen sie sich mit dem "
+"Intranet via WLAN verbinden."
+msgstr ""
+
+#: ../../source/about/about.rst:207
+msgid "Firewall"
+msgstr ""
+
+#: ../../source/about/about.rst:209
+msgid "OPNsense |reg|: wird als Standard-Firewall ausgeliefert."
+msgstr ""
+
+#: ../../source/about/about.rst:211
+msgid "Struktur der Basis-Komponente - Firewall"
+msgstr ""
+
+#: ../../source/about/about.rst:217
+msgid ""
+"Durch die Integration der Firewall an AD DS (Active Directory Domain "
+"Services) des Servers (Samba4) werden sämtliche Benutzer-Zugriffe der "
+"Nutzer mittels Single-Sign-On auf das Internet geregelt."
+msgstr ""
+
+#: ../../source/about/about.rst:219
+msgid ""
+"Sämtliche verfügbaren Bausteine dieser Open-Source-Firewall stehen "
+"selbstverständlich zur Verfügung."
+msgstr ""
+
+#: ../../source/about/about.rst:221
+msgid ""
+"Für weitergehende Informationen `siehe opnsense.org "
+"<https://opnsense.org/>`_."
+msgstr ""
+
+#: ../../source/about/about.rst:224
+msgid ""
+"Diese vorgestellten Bestandteile werden vom Verein **linuxmuster.net e. "
+"V. entwickelt und unterstützt**."
+msgstr ""
+
+#: ../../source/about/about.rst:226
+msgid "Diese Unterstützung wird durch das"
+msgstr ""
+
+#: ../../source/about/about.rst:228
+msgid ""
+"**Hilfe-Forum** `<https://www.linuxmuster.net/de/support-de/discourse-"
+"forum/>`_"
+msgstr ""
+
+#: ../../source/about/about.rst:230
+msgid "und die"
+msgstr ""
+
+#: ../../source/about/about.rst:232
+msgid ""
+"**telefonische Hotline** `<https://www.linuxmuster.net/de/support-"
+"de/hotline/>`_"
+msgstr ""
+
+#: ../../source/about/about.rst:234
+msgid "geleistet."
+msgstr ""
+
+#: ../../source/about/about.rst:236
+msgid ""
+"**All diese Leistungen sind nicht von einer Mitgliedschaft im Verein "
+"abhängig.**"
+msgstr ""
+
+#: ../../source/about/about.rst:238
+msgid ""
+"Aufgrund der Vielzahl möglicher Einsatzszenarien umfasst der telefonische"
+" Support alle bereitgestellten Basis-Dienste, die in der Dokumentation "
+"beschrieben sind."
+msgstr ""
+
+#: ../../source/about/about.rst:240
+msgid ""
+"**Das Support-Team berät aber gerne und zeigt alle Möglichkeiten und "
+"Alternativen auf.**"
+msgstr ""
+
+#: ../../source/about/about.rst:244
+msgid "Anpassbar"
+msgstr ""
+
+#: ../../source/about/about.rst:246
+msgid ""
+"Alle bisher vorgestellten Basisdienste werden mithilfe des Setups "
+"konfiguriert, bleiben aber frei anpass- und erweiterbar. Es folgt eine "
+"einführende Beschreibung der letzten drei Bausteine, die linuxmuster.net "
+"zu der Komplettlösung machen."
+msgstr ""
+
+#: ../../source/about/about.rst:-1
+msgid "Struktur der Erweiterungen (Community)"
+msgstr ""
+
+#: ../../source/about/about.rst:254
+msgid "Die Unterstützung erfolgt für die nachfolgenden Bestandteile durch das"
+msgstr ""
+
+#: ../../source/about/about.rst:256
+msgid "Hilfe-Forum https://www.linuxmuster.net/de/support-de/discourse-forum/"
+msgstr ""
+
+#: ../../source/about/about.rst:258
+msgid ""
+"Die detaillierte Beschreibung ist nicht Gegenstand dieser Dokumentation, "
+"sondern wird durch die Community in deren Wiki festgehalten."
+msgstr ""
+
+#: ../../source/about/about.rst:260
+msgid "Community-Wiki: https://wiki.linuxmuster.net/community/"
+msgstr ""
+
+#: ../../source/about/about.rst
+msgid "Alternative Firewall"
+msgstr ""
+
+#: ../../source/about/about.rst:262
+msgid ""
+"Einsatzszenarien, die mit einer anderen Firewall als OPNsense |reg| "
+"ausgestattet sein sollen, lassen sich mit linuxmuster.net ebenfalls "
+"umsetzen."
+msgstr ""
+
+#: ../../source/about/about.rst
+msgid "Struktur der Einbindung einer alternativen Firewall"
+msgstr ""
+
+#: ../../source/about/about.rst:270
+msgid ""
+"Wenn die eingesetzte (alternative) Firewall über die Möglichkeit einer "
+"Anbindung an den Samba4-Dienst des linuxmuster.net-Servers verfügt, kann "
+"diese alle aufgezeigten Vorteile nutzen."
+msgstr ""
+
+#: ../../source/about/about.rst
+msgid "Optionale Server"
+msgstr ""
+
+#: ../../source/about/about.rst:272
+msgid ""
+"Für weitergehende Anpassungen besteht die Möglichkeit, optionale Server "
+"einzubinden."
+msgstr ""
+
+#: ../../source/about/about.rst:274
+msgid "Struktur der Einbindung optionaler lokaler Server"
+msgstr ""
+
+#: ../../source/about/about.rst:280
+msgid ""
+"In der Darstellung ist etwa ein Docker-Server als Erweiterung an die "
+"Bedürfnisse der Bildungseinrichtung eingebunden. Docker ist ein Open-"
+"Source-Projekt zur automatisierten Anwendungsverteilung durch Container, "
+"die alle benötigten Pakete mitbringen. So vereinfacht sich die "
+"Bereitstellung und Verteilung. Außerdem gewährleisten sie die Trennung "
+"und Verwaltung der auf dem Docker-Server genutzten Ressourcen."
+msgstr ""
+
+#: ../../source/about/about.rst:282
+msgid ""
+"Für weitergehende Informationen siehe die Docker-Homepage: "
+"https://www.docker.com"
+msgstr ""
+
+#: ../../source/about/about.rst
+msgid "Extra"
+msgstr ""
+
+#: ../../source/about/about.rst:284
+msgid ""
+"Ein Porfolio an unterschiedlichen externen Diensten lässt sich an die "
+"linuxmuster.net Lösung anbinden, sodass eine einheitliche "
+"Authentifizierung erfolgt."
+msgstr ""
+
+#: ../../source/about/about.rst
+msgid "Struktur der Einbindung externer Server und Dienste"
+msgstr ""
+
+#: ../../source/about/about.rst:292
+msgid ""
+"Es können z.B. extern gehostete Server wie Nextcloud, Moodle oder "
+"Konferenzsysteme integriert werden."
+msgstr ""
+
+#: ../../source/about/about.rst:294
+msgid ""
+":download:`Komplette Struktur als Inkscape SVG "
+"<media/structure_of_version_7_simple.svg>`"
+msgstr ""
+
+#~ msgid ""
+#~ "linuxmuster.net ist eine umfassende "
+#~ "Komplettlösung zum Betrieb schulischer IT-"
+#~ "Infrastruktur."
+#~ msgstr ""
+
+#~ msgid "benutzerfreundlich"
+#~ msgstr ""
+
+#~ msgid "anpassungsfähig"
+#~ msgstr ""
+
+#~ msgid "hilfsbereit"
+#~ msgstr ""
+
+#~ msgid "nachhaltig"
+#~ msgstr ""
+

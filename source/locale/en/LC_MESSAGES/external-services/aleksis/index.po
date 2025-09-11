@@ -1,0 +1,222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/external-services/aleksis/index.rst:5
+msgid "Externe Authentifizierung - Aleksis"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:9
+msgid ""
+"Aleksis ist eine Schulische Informationsplattform, die als Open-Source "
+"Software entwickelt wurde. `aleksis.org <https://aleksis.org/de/>`_"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:11
+msgid "Folgende Funktionen bietet Aleksis an:"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:13
+msgid "Stundenplan Verwaltung"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:15
+msgid "Vertretunsplan"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:17
+msgid "Digitales Klassenbuch"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:19
+msgid "Sitzpläne"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:21
+msgid "Info Dashboard (z.B. für Bildschirme)"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:23
+msgid "Bücherei Verwaltung"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:27
+msgid "Voraussetzungen"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:29
+msgid ""
+"Diese Dokumentation setzt voraus, dass eine Aleksis Instanz eingerichtet "
+"wurde mit der direkten Installationsmethode."
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:31
+msgid "Die Dokumentaion für die LDAP Anbidung der Docker Variante erfolgt noch."
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:33
+msgid ""
+"Eine Installationsanleitung für Aleksis ist hier zu finden: `Installation"
+" Aleksis <https://aleksis.edugit.io/official/AlekSIS-"
+"Core/docs/html/admin/01_install.html>`_"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:35
+msgid ""
+"Außerdem muss auf der Aleksis Instanz dieser Installationsbefehl "
+"ausgeführt werden um alle nötigen LDAP Pakete zu installieren."
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:43
+msgid "LDAP-Anbindung"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:46
+msgid "Verbindungseinstellungen"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:48
+msgid ""
+"Sind die benötigten LDAP Pakete installiert muss die LDAP Konfiguration "
+"in der Aleksis Konfigurationsdatei angepasst / erstellt werden."
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:68
+msgid ""
+"Die ``uri`` muss natürlich auf die jeweilige Schule mit dem "
+"entsprechenden Domain Namen angepasst werden ebenso bei ``search``"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:70
+msgid ""
+"Sollte die Aleksis Instanz extern betrtrieben werden. Ist es dringend "
+"empfohlen den Port ``636`` für LDAPs zu verwenden außerdem bei ``uri`` "
+"statt ``ldap:`` ebenfalls ``ldaps`` einzutragen."
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:74
+msgid ""
+"Als nächstes wechselt man in die Aleksis Weboberfläche und wechselt auf "
+"der linken Seite auf ``Admin`` und dann auf ``LDAP``"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:76
+msgid "Dort ändert man folgende Werte:"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:79
+msgid "LDAP-Synchronisation aktivieren"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:79
+#: ../../source/external-services/aleksis/index.rst:81
+#: ../../source/external-services/aleksis/index.rst:83
+#: ../../source/external-services/aleksis/index.rst:85
+msgid "Haken setzen"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:81
+msgid "Fehlende Personen für LDAP-Benutzer erstellen"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:83
+msgid "LDAP-Benutzer bei der Anmeldung synchronisieren"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:85
+msgid "LDAP-Synchronisation von Gruppen aktivieren"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:87
+msgid "Feld für den Kurznamen der Gruppe"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:87
+msgid "cn"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:89
+msgid "LDAP-Synchronisation für passende Felder durchführen"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:89
+msgid "UID"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:91
+msgid "Abgleich-Modus für die LDAP-Synchronisation"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:91
+msgid "Alle Felder müssen passen"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:93
+msgid "LDAP-Passwort bei ALekSIS-Passwortänderung ändern"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:93
+#: ../../source/external-services/aleksis/index.rst:95
+msgid "Haken entfernen"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:95
+msgid "Admin-Konto nutzen, um Passwörter zu ändern"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:97
+msgid "LDAP field for 'First name' on core.Person"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:97
+msgid "givenName"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:99
+msgid "LDAP field for 'Last name' on core.Person"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:99
+msgid "sn"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:101
+msgid "LDAP sync matching fields"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:101
+msgid "nur first_name & last_name auswählen"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:104
+msgid "Alle anderen Felder sollten leer bleiben"
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:106
+msgid "Am Ende die Einstellungen mit ``EINSTELLUNGEN SPEICHERN`` bestätigen."
+msgstr ""
+
+#: ../../source/external-services/aleksis/index.rst:108
+msgid ""
+"Jetzt sollte der Benutzer in der Lage sein sich anzumelden. Die LDAP "
+"Anbindung ist hiermit abgeschlossen."
+msgstr ""
+

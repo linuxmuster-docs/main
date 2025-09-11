@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/external-services/unifiwlan/unifivouchererstellen.rst:2
+msgid "WLAN-Gutscheine / Voucher erstellen"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivouchererstellen.rst:4
+msgid "Jetzt müssen die Gutscheine noch erzeugt und ausgedruckt werden."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivouchererstellen.rst:7
+msgid "Schritt für Schritt"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivouchererstellen.rst:9
+msgid "Gehe auf `<https://unifi:8443/manage/hotspot>`_ und melde Dich an."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivouchererstellen.rst:-1
+msgid "Voucherbeispiel"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivouchererstellen.rst:14
+msgid "Gehe auf `GUTSCHEINE`->`GUTSCHEIN ERSTELLEN`."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivouchererstellen.rst:19
+msgid "Fülle die Felder des Dialogfensters aus und speichere Deine Eingabe."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivouchererstellen.rst:24
+msgid "In dieser Ansicht siehst Du alle gültigen Gutscheine."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivouchererstellen.rst:26
+msgid ""
+"Du hast die Möglichkeit, einzelne Gutscheine, alle nicht benutzten "
+"Gutscheine oder alle Gutscheine, die an einem bestimmten Zeitpunkt "
+"erstellt wurden, zu drucken."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifivouchererstellen.rst:28
+msgid "Hier kannst auch Gutscheine löschen."
+msgstr ""
+

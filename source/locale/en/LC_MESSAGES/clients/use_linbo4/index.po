@@ -1,0 +1,1837 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/clients/use_linbo4/index.rst:4
+msgid "LINBO4 nutzen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:6
+msgid ""
+"LINBO steht für GNU/\\ **Li**\\ nux **N**\\ etwork **Bo**\\ ot. Es wurde "
+"ursprünglich im Auftrag des Landesmedienzentrums Baden-Württemberg von "
+"der Firma KNOPPER.NET in Zusammenarbeit mit den damaligen paedML-Linux- "
+"und heutigen linuxmuster.net-Entwicklern realisiert. Der Sourcecode ist "
+"unter GNU General Public License Version 2 veröffentlicht."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:8
+msgid "LINBO bietet"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:10
+msgid "Vollautomatisches Ausrollen von Client-Installationen im Netzwerk"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:11
+msgid ""
+"Verwaltung mehrerer Betriebssystem-Installationen auf einem Client "
+"(Multiboot)"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:12
+msgid ""
+"Minutenschnelle automatische Reparatur des Betriebssystems (SheilA-"
+"Prinzip)"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:13
+msgid "Konfigurierbarer Autostart"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:14
+msgid ""
+"Grafische Client-Oberfläche zur einfachen Bedienung durch Anwender und "
+"Netzwerkbetreuer"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:15
+msgid "Vollständige Integration in linuxmuster.net"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:17
+msgid ""
+"LINBO4, das von linuxmuster.net entwickelt wurde, weist einige Neuerungen"
+" auf:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:19
+msgid ""
+"Für neue Images wird nur noch das Format qcow2 unterstützt. Der Name des "
+"Basis-Images muss daher in der übernommenen start.conf angepasst werden "
+"(z.B. image.qcow2)."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:20
+msgid ""
+"Die Bennenung der zusätzlichen Image-Dateien postsync, prestart and reg "
+"ändert sich, so dass diese nur noch ohne dem Image-Format angegeben "
+"werden (z.B. image.postsync, image.prestart and image.reg, früher: "
+"image.cloop.postsync etc.)."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:21
+msgid ""
+"qemu-img wird nun genutzt, um die Erstellung und Wiederherstellung der "
+"qcow2-Images durchzuführen."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:22
+msgid "Es wird nur noch 64 Bit Client-Hardware unterstützt."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:23
+msgid "linuxmuster.net <=6.2 wird nicht mehr unterstützt."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:24
+msgid "Ab LINBO v4.1 stehen differentielle Images zur Verfügung."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:25
+msgid ""
+"Bisherige Images im cloop Format sind direkt in das neue qcow2 Format zu "
+"konvertieren."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:26
+msgid ""
+"AB LINBO v4.1.36 wird Kernel 6.5.3 verwendet und es können qcow2-Images "
+"mit Torrent verteilt werden, die > 52 GiB sind. Für ctorrent kann hierzu "
+"die sog. piece length konfiguriert werden."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:28
+msgid ""
+"Dieses Kapitel führt Dich in die Nutzung von LINBO4 ein und erklärt die "
+"wesentlichen Schritte zur Imageverwaltung."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:31
+msgid ""
+"Die meisten PC mit UEFI verwenden standardmäßig \"SecureBoot\". Dies muss"
+" deaktiviert werden, um Linbo booten zu können!"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:34
+msgid "Der LINBO Startbildschirm"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:36
+msgid ""
+"Wird der Arbeitsplatzrechner (Client-PC) über das Netzwerk gebootet, "
+"startet LINBO und zeigt folgenden Bildschirm, wenn der PC noch nicht "
+"aufgenommen / registriert wurde."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:43
+msgid "Linbo Startbildschirm eines nicht aufgenommenen Client"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:43
+msgid "Linbo Startbildschirm"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:45
+msgid ""
+"Sobald der Client registriert wurde, zeigt der Startbildschirm weitere "
+"Optionen an."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:52
+msgid "Linbo Startbildschirm eines aufgenommenen Clients"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:56
+msgid "Informationen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:58
+msgid ""
+"Drückst Du im Startbildschirm die Funktionstaste ``F1``, dann werden Dir "
+"Informationen zum Client angezeigt."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:65
+msgid "LINBO Infos zum Client - F1"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:65
+msgid "Client Informationen - F1"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:68
+msgid "Host"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:68
+msgid ""
+"Der festgelegte Hostname oder \"pxeclient\", wenn der Client nicht "
+"registriert ist."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:71
+msgid "Gruppe"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:71
+msgid "Die festgelegte Hardwareklasse"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:75
+msgid "IP-Address"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:74
+msgid ""
+"Die festgelegte Netzwerkadresse oder \"OFFLINE\", wenn der Client ohne "
+"Netzwerkverbindung zum Server gestartet wurde."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:78
+msgid "Mac"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:78
+msgid "Die Hardware-Adresse des Clients."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:82
+msgid "HD, CPU, RAM"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:81
+msgid ""
+"Zeigt die entsprechend verbaute Hardware des Clients an: "
+"Festplattengröße, Prozessor und Hauptspeicherinformationen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:86
+msgid "Cache"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:85
+msgid "Zeigt die freie/gesamte Partitionsgröße der Cache-Partition an."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:89
+msgid "Reboot"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:-1
+msgid "Linbo Reboot Icon"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:95
+msgid "Erzwingt einen Neustart."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:98
+msgid "Neustart"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:-1
+msgid "Linbo Shutdown Icon"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:104
+msgid "Lässt den Client herunterfahren."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:108
+msgid "Start-Icons"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:110
+msgid ""
+"Pro festgelegter Partition (mit Betriebssystem oder ohne) erscheinen nach"
+" dem Start von Linbo ein großer Knopf und mehrere kleinere Knöpfe mit "
+"folgenden Bedeutungen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:118
+msgid "Linbo Sync+Start Icon"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:118
+msgid "Sync+Start Icon"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:120
+msgid ""
+"Synchronisiert das System mit dem letzten aktuellen Image (hier Ubuntu). "
+"Bei Windows-Systemen wird eine bereitgestellte Registry-Patch-Datei "
+"angewendet. Bei Linux-Systemen werden Hostname und Rootpartition "
+"gepatcht. Falls ein neueres Image auf dem Server liegt, wird dies "
+"zunächst heruntergeladen."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:126
+msgid "Linbo Start Icon"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:126
+msgid "Start Icon"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:128
+msgid ""
+"Startet das System im aktuellen Zustand, unsynchronisiert. Es werden "
+"keine Patches angewendet."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:-1
+msgid "Linbo New+Start Icon"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:134
+msgid "Neu+Start Knopf"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:136
+msgid ""
+"Formatiert die relevante Partition neu, synchronisiert das System von "
+"Grund auf mit dem aktuellen Image und startet das System wie bei "
+"\"Sync+Start\"."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:140
+msgid ""
+"Die einzelnen Schaltflächen für die Startmechanismen können auch "
+"ausgegraut sein, wenn der Administrator den jeweiligen Mechanismus "
+"deaktiviert hat."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:144
+msgid "Tools-Icon"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:146
+msgid "Um Images zu verwalten, klickst Du zunächst auf das Werkzeug-Icon."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:152
+msgid "Linbo Tools Icon"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:152
+msgid "Werkzeug-Icon"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:154
+msgid ""
+"Der Bereich ist mit dem Passwort von ``LINBO`` abgesichert. Dies "
+"entspricht dem LINBO-Administrator Kennwort. Dies ist nach dem Setup "
+"zunächst identisch mit dem festgelegten root / global-admin Kennwort."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:161
+msgid "LINBO Password Dialog"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:161
+#: ../../source/clients/use_linbo4/index.rst:400
+msgid "LINBO Passwort"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:165
+msgid ""
+"Bei der Eingabe des LINBO-Passwortes werden keine Zeichen angezeigt, "
+"weder das Passwort selbst, noch Sterne."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:168
+msgid "Passwort für \"LINBO\" ändern"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:170
+msgid ""
+"Das Passwort steht im Klartext auf dem Server in der Datei "
+"``/etc/rsyncd.secrets`` und kann einfach mit einem Editor geändert "
+"werden."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:179
+msgid ""
+"Nach Änderung des Passwortes musst Du auf dem Server noch die "
+"``linbofs.lz`` neu erstellen, damit der Hash-Wert des aktuellen Linbo-"
+"Passwortes integriert wird. Dazu führst Du folgenden Befehl auf dem "
+"Server aus:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:187
+msgid "LINBO Imageverwaltung am Client"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:189
+msgid "Über den Tab ``Tools`` erhält der Administrator neue Funktionen."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:196
+msgid "Linbo Tools - Imaging Functions"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:196
+msgid "LINBO Tools"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:198
+msgid ""
+"Für jedes definierte Betriebssystem gibt es Schaltflächen für die "
+"Funktionen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:204
+#: ../../source/clients/use_linbo4/index.rst:256
+msgid "Linbo Create Image"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:204
+#: ../../source/clients/use_linbo4/index.rst:256
+#: ../../source/clients/use_linbo4/index.rst:372
+msgid "Image erstellen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:206
+msgid ""
+"Es öffnet sich ein neues Dialogfenster, über das man ein neues Image "
+"erstellen (und hochladen) kann."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:212
+#: ../../source/clients/use_linbo4/index.rst:294
+msgid "Linbo Upload Image"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:212
+msgid "Image hochladen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:214
+msgid ""
+"Es öffnet sich ein neues Dialogfenster, über das man das aktuelle Image "
+"auf den Server hochladen kann."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:216
+msgid "Daneben gibt es Schaltflächen für folgende administrative Funktionen:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:222
+msgid "Linbo Console"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:222
+msgid "Console"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:224
+msgid ""
+"Du kannst eine (rudimentäre) Console öffnen, um Shell-Befehle abzusetzen "
+"und Fehler zu diagnostizieren."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:230
+msgid "Linbo Cache"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:230
+msgid "Cache aktualisieren"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:232
+msgid ""
+"Üblicherweise wird eine Partition auf dem Client als Cache festgelegt. "
+"Mit dieser Schaltfläche kann der Cache aktualisiert werden, d.h. alle für"
+" diesen Client nötigen Images und postsync-Dateien werden gegebenenfalls "
+"heruntergeladen."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:238
+msgid "Linbo Partitioning"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:238
+msgid "Partitionieren"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:240
+msgid "Partitioniert die gesamte Festplatte gemäß der Vorgabe der Hardwareklasse."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:246
+msgid "Linbo Register"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:246
+msgid "Registrieren"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:248
+msgid "Öffnet den Registrierungdialog zur erstmaligen Aufnahme dieses Rechners."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:250
+msgid "Rufe zur Imageerstellung die entsprechende Schaltfläche auf:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:260
+msgid "Dialog: Image erstellen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:267
+msgid "Linbo Create Image Dialog"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:267
+msgid "LINBO - Image erstellen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:269
+msgid ""
+"Ab der LINBO Version 4.1 kannst Du wählen, ob Du ein neues Basisimage "
+"oder ein differentielles Image erstellen möchtest. Sollte bereits ein "
+"Basisimage existieren, so wird dieses mit überschrieben. Es erfolgt keine"
+" weitere Rückfrage."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:271
+msgid ""
+"Lokal im Cache wir das aktuelle Image beim Erstellen überschrieben. Beim "
+"Hochladen des aktuellen Images mit demselben Namen wird auf dem Server "
+"zuvor ein Backup des vorherigen Images erstellt."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:273
+msgid ""
+"Auf dem Server finden sich die Images im Verzeichnis "
+"``/srv/linbo/images/<hardwareklasse>/``. Die Backups der Images finden "
+"sich auf dem Server im Verzeichnis "
+"``/srv/linbo/images/<hardwareklasse>/backups``."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:276
+msgid ""
+"In der WebUI können die LINBO-Images komfortabel verwaltet werden (LINBO-"
+"Imageverwaltung_)."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:280
+msgid ""
+"Vergibt man einen neuen Dateinamen, sollte man sicher stellen, dass die "
+"Cache-Partition über ausreichend Platz verfügt, da das alte Image "
+"ebenfalls im Cache gespeichert bleibt. Ist nicht genügend Platz "
+"vorhanden, dann schlägt das Erstellen des Images fehl. Hier ist vor der "
+"Erstellung eines neuen Images sicherzustellen, dass die lokale Cache-"
+"Partition vorab geleert wird."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:282
+msgid ""
+"Siehe hierzu das Unterkapitel zum Linbo4-Cache am Ende dieses "
+"Hauptkapitels."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:284
+msgid ""
+"Es gibt die Optionen ``erstellen``, ``erstellen+hochladen``. Mit der "
+"Option ``erstellen`` wird das neue Image nur lokal im LINBO-Cache "
+"erstellt. Die Option ``erstellen + hochladen`` erstellt zuerst das Image "
+"lokal im LINBO-Cache und lädt danach das Image auf den Server."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:287
+msgid "Dialog: Image hochladen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:294
+msgid "LINBO Image hochladen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:296
+msgid ""
+"Wie beim Dialog zum Erstellen des Images, kann hier explizit nur ein "
+"ausgewähltes Image hochgeladen werden und der Rechner zum Abschluss neu "
+"gestartet oder heruntergefahren werden. In der Drop-down Liste werden nur"
+" dann Images angezeigt, wenn diese bereits im Cache vorhanden sind."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:299
+msgid "Dialog: Console"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:306
+msgid "Linbo Console Dialog"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:306
+msgid "LINBO Konsole"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:308
+msgid ""
+"Der einfache Konsolendialog erlaubt die Eingabe einzelner Befehle in die "
+"untere Zeile."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:311
+msgid "Dialog: Cache aktualisieren"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:318
+msgid "Linbo Update Cache"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:318
+msgid "LINBO Update Cache"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:320
+msgid ""
+"Der lokale Cache wird aktualisiert. Es werden die drei Möglichkeiten der "
+"Synchronisation zur Auswahl gegeben: Rsync, Multicast oder Torrent."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:323
+msgid "Dialog: Partitionieren"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:325
+msgid ""
+"Es wird noch einmal gefragt, ob man wirklich alle Daten auf der "
+"Festplatte löschen will. Danach kann man mit \"Cache aktualisieren\" auch"
+" wieder die Images vom Server in den Cache kopieren."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:328
+msgid "Dialog: Registrieren"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:335
+msgid "Linbo Register Dialog"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:335
+msgid "LINBO Client registrieren"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:337
+msgid ""
+"Mit diesem Dialog kann ein erstmalig genutzer Rechner registriert werden."
+" Dafür müssen alle Eingabefelder entsprechend ausgefüllt werden."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:341
+msgid ""
+"Bitte trage für die Rechnergruppe einen Namen ohne Bindestriche `` - `` "
+"ein."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:344
+msgid "LINBO Differenzielle Images"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:348
+msgid ""
+"Seit der Version LINBO 4.1 ist es möglich, differentielle Images zu "
+"erstellen."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:350
+msgid ""
+"``Differentielle Images`` bauen auf einem vollständigen Image eines "
+"Client-Betriebssystems auf und legen alle Änderungen / Ergänzungen seit "
+"dem letzten Image ab. Diese werden dann bei einer Synchronisation des "
+"Clients vollständig angewendet."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:352
+msgid ""
+"Werden nur kleine Ergänzungen auf dem Client vorgenommen, kann ein "
+"differenzielles Image erstellt werden, um das Verteilen der Änderungen "
+"möglichst schnell für alle Clients einer Hardware-Klasse durchzuführen. "
+"Für die Aktualisierung der Clients werden so, deutlich weniger Daten via "
+"Netzwerk übertragen."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:354
+msgid ""
+"Sollten für ein Basisimage bereits mehrere differenzielle Images erstellt"
+" worden sein, so kann es sinnvoll sein, wenn viel neue Software "
+"installiert wurde, diese wieder duch Erstellung eines Vollimages zu "
+"konsolidieren."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:357
+msgid "Vorbereitungen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:359
+msgid ""
+"Der betreffende Muster-Client wurde entsprechend angepasst und alle "
+"erforderlichen Schritte zur Erstellung eines Images auf Client-Seite "
+"durchgeführt."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:361
+msgid "Für Linux-Clients ist z.B. der Befehl"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:367
+msgid "auszuführen."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:369
+msgid "Danach ist der Client neu zu starten."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:374
+msgid "Erscheint die LINBO GUI:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:381
+msgid "Linbo GUI"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:381
+msgid "LINBO GUI"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:383
+msgid "Wähle rechts das Werkzeug-Icon"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:389
+msgid "Tools Icon"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:391
+msgid "aus."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:393
+msgid ""
+"Es erscheint ein neues Fenster, in dem Du das Passwort des Linbo-Admins "
+"eingeben musst, um dich zu authentifizieren."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:400
+msgid "Linbo Password"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:402
+msgid ""
+"Das Kennwort ist bei Eingabe nicht sichtbar. Klicke auf ``anmelden``. Es "
+"erscheint das Werkzeug-Menü."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:409
+msgid "Linbo Tools Menue"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:409
+msgid "LINBO Image Menü"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:411
+msgid ""
+"Zur Erstellung eines differenziellen Images klicke nun auf das große Icon"
+" zur Erstellung eines Images."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:418
+msgid "Linbo New Image"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:418
+msgid "Icon neues Image"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:420
+msgid "Es erscheint das Menü zur Erstellung neuer oder differenzieller Images."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:427
+msgid "Linbo create image"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:427
+msgid "LINBO Image erstellen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:429
+msgid ""
+"Wähle die Option ``Neues differenzielles Image erstellen`` aus, trage "
+"eine nachvollziehbare Beschreibung für das Image als Text ein."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:431
+msgid ""
+"Wähle zur Erstellung des differenziellen Images den Eintrag ``erstellen +"
+" hochladen`` aus, damit zuerst auf dem Client das Image erstellt und "
+"dieses im Anschluss auf den Server geladen wird."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:438
+msgid "Create + Upload Image"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:438
+msgid "Image erstellen + hochladen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:440
+msgid ""
+"Es werden bei der Erstellung des Images in der Linbo-GUI weitere Status-"
+"Meldungen angezeigt. Ist der Prozess der Erstellung und das Hochladen des"
+" differenziellen Images auf den Server abgeschlossen, siehst Du folgende "
+"Meldung:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:447
+#: ../../source/clients/use_linbo4/index.rst:476
+msgid "Image Creation finished"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:447
+msgid "LINBO Image erstellt"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:449
+msgid "Starte im Anschluss LINBO neu, indem Du das entsprechende Icon auswählst:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:455
+msgid "Reboot Linbo"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:455
+msgid "Icon neu starten"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:458
+msgid "Image synchronisieren"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:460
+msgid "Nachdem LINBO neu gestartet wurde, erscheint wieder die LINBO-GUI."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:467
+msgid "Linbo Boot Icons"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:467
+msgid "LINBO-GUI: Boot-Icons"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:469
+msgid ""
+"Wende nun das differenzielle Image auf den Client an, indem Du das grosse"
+" Icon zur Synchronisation des Images klickst. Während der lokale Cache "
+"aktualisiert wird, siehst Du eine entsprechende Status-Leiste mit dem "
+"Fortschritt."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:476
+msgid "Fortschrittsbalken"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:478
+msgid ""
+"Das differenzielle Image wird vom Server geholt und lokal im Cache des "
+"Clients angewendet. Danach wird der Client gestartet."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:483
+msgid "WebUI: LINBO-Imageverwaltung"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:485
+msgid ""
+"Alle LINBO-Images werden mit der Zuordnung zu den Hardwaregruppen in der "
+"WebUI übersichtlich dargestellt und können hier einfach verwaltet werden."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:487
+msgid ""
+"Neben den Informationen zu den Images wie z.B. Dateigröße und "
+"Imagebeschreibungen, lassen sich Images beispielsweise löschen oder "
+"anpassen."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:490
+msgid "Imageverwaltung aufrufen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:496
+msgid "LNBO Image Menue"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:496
+msgid "LINBO4 Menü"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:498
+msgid ""
+"Um zur Umageverwaltung in der WebUI zu gelangen, meldest Du Dich in der "
+"WebUI als ``global-admin`` an. Danach rufst Du links in der Menüspalte "
+"``Geräteverwaltung -> LINBO4`` auf."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:505
+msgid "LINBO Group Images"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:505
+msgid "LINBO Hardwaregruppen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:507
+msgid ""
+"Rechts erscheinen im Fenster zunächst die Hardwaregruppen mit den "
+"zugeordneten Basis-Images als ``Verwendete Images``. In nachstehender "
+"Abbildung ist das Basis-Image blau hervorgehoben. Es nutzt die "
+"Dateiendung ``.qcow2``. In der Abbildung ist nur eine Hardwareklasse mit "
+"dem zugeordneten Basis-Image dargestellt."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:510
+msgid "Images verwalten"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:512
+msgid ""
+"Klicke oben in dem Fenster auf den Tab ``Abbilder / Images``, so siehst "
+"Du eine Gesamtliste aller Images, die mit LINBO erstellt wurden und hier "
+"verwaltet werden können."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:519
+msgid "LINBO Image Overview"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:519
+msgid "Überblick der LINBO-Images"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:521
+msgid ""
+"Unter der Spaltenüberschrift ``Name`` ist der Name und die Dateigröße des"
+" Basis-Images abgelegt. Daneben findest Du in der Spalte "
+"``Differentielles Image`` das dem Basis-Image zugeordnete differentielle "
+"Image inkl. Angabe der Dateigröße. Zudem wird dargestellt, in welcher "
+"Gruppe diese Images verwendet werden. In der Spalte ``Aktionen`` befinden"
+" sich Symbole, die Aktionen für das Basis-Image ausführen."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:524
+msgid "Basis-Image"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:531
+msgid "ImagesOverview"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:531
+msgid "LINBO Images"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:533
+msgid ""
+"Um das Basis-Image zu verwalten, das in der Image-Übersicht in der Spalte"
+" ``Namen`` angegeben wird, findest Du die Aktions-Icons in der Übersicht "
+"ganz rechts als etwas größere Symbole."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:540
+msgid "Basic Image"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:540
+msgid "Aktionen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:542
+msgid ""
+"Klicke auf das Zahnradsymbol. Es erscheint ein Fenster mit Informationen "
+"zu dem Basis-Image."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:549
+msgid "Basic Image Info"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:549
+msgid "Informationen zum Image"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:551
+msgid ""
+"Hier finden Sie Informationen zum Dateinamen, dem Zeitstempel der "
+"Erstellung, der Dateigröße und weiterer Parameter. Die Dateiendung "
+"``.qcow2`` steht für ein Basis-Image."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:553
+#: ../../source/clients/use_linbo4/index.rst:587
+msgid ""
+"Hier kannst Du Änderungen bzw. Ergänzungen vornehmen und diese mithilfe "
+"des Buttons ``SPEICHERN`` dauerhaft anwenden."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:555
+msgid ""
+"Klicke auf mittlere Icon, um die Sicherungen des Basis-Images im "
+"Zeitablauf anzuzeigen."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:562
+msgid "Basic Image Backups"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:562
+msgid "Image-Sicherungen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:564
+msgid ""
+"Das aktuell gültige Basis-Image wird mit dem ``Status`` Basis-Image und "
+"einem grünen Haken symbolisiert. Im Zeitablauf werden die vorangegangenen"
+" Basis-Images dargestellt. Diese können entweder gelöscht (Papierkorb), "
+"wiederhergestellt (Pfeil gegen den Uhrzeigersinn) oder deren "
+"Besonderheiten eingesehen werden (Zahnrad-Icon)."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:568
+msgid "Differentielle Images"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:-1
+msgid "Diff Image"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:574
+msgid ""
+"Die beiden kleinen Icons neben dem Namen für das differentielle Image "
+"bieten die Möglichkeit, das differentielle Image entweder zu löschen "
+"(``Papierkorb``), oder mit dem Zahnrad weitere Informationen zu dem "
+"differentiellen Image aufzurufen."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:576
+msgid ""
+"Klickst Du auf das Zahnrad neben dem Namen für das differentielle Image, "
+"dann erscheint folgendes Fenster:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:583
+msgid "Diff Image Infos"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:583
+msgid "Informationen zum diff. Image"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:585
+msgid ""
+"Unter der Reiterkarte ``Allgemein`` findest Du Informationen zu dem "
+"differentiellen Image wie z.B. den Zeitstempel oder den Imagenamen. Die "
+"Dateiendung ``.qdiff`` steht für ein differentielles Image."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:590
+msgid "Boot-Bildschirme in LINBO"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:592
+msgid "Beim Booten in LINBO sind folgende Bildschirme sichtbar:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:596
+msgid "Bootvorgang via Netzwerk"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:603
+msgid "Initialmeldungen beim Bootvorgang via Netzwerk (PXE)"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:605
+msgid ""
+"Egal ob über die lokale Festplatte gebootet wurde oder nach dem "
+"Bootvorgang via Netzwerkkarte (PXE) wird mit der Gruppenkonfiguration der"
+" Kernel geladen."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:612
+msgid "Bootbildschirm: Laden des Kernels"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:614
+msgid "Der gebootete LINBO-Kernel erscheint als ASCII-Art."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:621
+msgid "LINBO-Kernelboot ASCII-Art"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:623
+msgid ""
+"Die Grub-Konfiguration wird ggf aktualisiert, danach erscheint der "
+"reguläre ``LINBO Startbildschirm``."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:626
+msgid "LINBO-Image für USB-Sticks und CD/DVD"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:628
+msgid ""
+"Zum Erstellen einer Boot-CD/DVD oder zum Kopieren auf einen USB-Stick "
+"lädst Du zuerst das aktuelle LINBO - Image als ``linbo.iso`` herunter. "
+"Dies ermöglicht es, dass ein Client lokal via CD/DVD oder USB-Stick als "
+"Boot-Medium startet. Dies kann dann hilfreich sein, wenn das Booten von "
+"LINBO via Netzwerk Probleme bereitet."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:630
+msgid "Melde Dich zuerst an der Schulkonsole an:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:632
+msgid "https://10.0.0.1/"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:634
+msgid "Melde Dich an der Schulkonsole als Benutzer ``global-admin`` an."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:641
+msgid "LINBO - Login School Console"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:641
+msgid "Login WebUI"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:643
+msgid "Wähle danach links den Menüpunkt ``LINBO4`` aus."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:650
+msgid "LINBO4 Menue"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:650
+msgid "LINBO4 Menüeintrag"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:652
+msgid ""
+"Rechts im Fenster erscheinen ganz unten zwei Buttons. Klicke nun den "
+"Button ``Linbo Boot herunterladen``."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:654
+msgid "Es erscheint ein Fenster zum Download des ISO-Images."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:661
+msgid "Download linbo.iso"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:661
+msgid "Download des LINBO-Images"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:663
+msgid ""
+"Das Booten eines Rechers mit einem LINBO-USB-Stick oder einer LINBO-"
+"CD/DVD kann nötig werden, wenn - in seltenen Fällen - LINBO nicht per PXE"
+" installiert wird."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:665
+msgid ""
+"Bootes Du einen Rechner via Stick oder von einer CD/DVD, dann siehst Du "
+"folgendes Bild:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:672
+msgid "LINBO Boot Screen 1"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:672
+msgid "LINBO Screen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:674
+msgid "Mit ``Enter`` wird der Client gebootet"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:681
+msgid "LINBO menue selction"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:681
+msgid "LINBO Start-Menü"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:683
+msgid ""
+"Mit der Auswahl durch die Pfeiltasten der Tastatur ``Ersteinrichtung + "
+"Neustart`` wird Linbo eingerichtet und der Rechner mit Linbo gestartet. "
+"Nach dem Neustart stehen alle Linbo-Funktionen zur Verfügung."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:686
+msgid "LINBO4-Cache: Hinweise"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:688
+msgid ""
+"Linbo4 nutzt auf jedem Client eine lokale Cache-Partition, um ein oder "
+"mehrere Image/s eine Betriebssystems lokal vorzuhalten. Es lassen sich so"
+" unterschiedliche Verhaltensweisen eines Clients entweder via start.conf "
+"Datei oder via linbo-remote steuern."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:691
+msgid "Cache-Verhalten"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:693
+msgid "Ausgangszustände des Linbo-Caches können sein:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:695
+msgid "Cache ist leer."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:696
+msgid "Cache beinhaltet ein altes, aber gewünschtes Image."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:697
+msgid "Cache beinhaltet ein aktuelles Image."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:698
+msgid "Cache beinhaltet ein altes, aber nicht mehr gewünschtes Image."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:699
+msgid "Cache beinhaltet zwei alte, aber gewünschte Images."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:700
+msgid "Cache beinhaltet zwei aktuelle Images."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:701
+msgid "Cache beinhaltet zwei alte, aber nicht mehr gewünschte Images."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:703
+msgid "Weitere Fälle sind denkbar."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:705
+msgid "Welches Verhalten stellt sich dar?"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:706
+msgid ""
+"Welche Wirkung hat in Linbo der Befehl initcache - also eine vorherige "
+"Bereinigung / neue Befüllung des Linbo-Caches?"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:708
+msgid "Fall 1, das Image wird geladen ohne „initcache“."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:709
+msgid ""
+"Fall 2, das neue Image wird geladen ohne „initcache“, das alte wird "
+"gelöscht."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:710
+msgid "Fall 3, nichts passiert, ob mit oder ohne „initcache“."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:711
+msgid ""
+"Fall 4, ohne „initcache“ läuft man Gefahr, dass der Cache voll läuft, mit"
+" „initcache“ wird das überflüssige Image gelöscht."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:712
+msgid ""
+"Fall 5, die Images werden geladen (ohne „initcache“), die alten Images "
+"werden gelöscht."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:713
+msgid "Fall 6, nichts passiert, ob mit oder ohne „initcache“."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:714
+msgid ""
+"Fall 7, ohne „initcache“ läuft man Gefahr, dass der Cache voll läuft; mit"
+" „initcache“ werden die Images gelöscht und die neuen Images geladen."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:717
+msgid "Grundsätzlich gilt:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:719
+msgid "``initcache`` ist dann hilfreich, wenn"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:725
+msgid ""
+"``initcache`` ist überflüssig, wenn nur ein Betriebssystem mit einem "
+"neuen Image gesynct werden soll und es keinen Grund gibt den Cache "
+"aufzuräumen. Das Image wird auch mit sync heruntergeladen."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:727
+msgid ""
+"``initcache`` ist kontraproduktiv, wenn der Client mehrere Images vorhält"
+" und beim Sync dann u.U. länger als nötig unbenutzbar ist, weil zuerst "
+"alle neuen Images (nicht nur das zu syncende) heruntergeladen werden."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:730
+msgid "Initcache anwenden"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:732
+msgid "**Option 1**"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:734
+msgid ""
+"In der Hardwareklasse (HWK) besteht für Linbo in der start.conf die "
+"Möglichkeit die Option"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:750
+msgid ""
+"Wird der Parameter ``AutoInitCache=yes`` gesetzt, so wird der lokale "
+"Cache jedesmal vollständig neu befüllt. Das ist entsprechend der oben "
+"beschriebenen Fälle allerdings nicht immer sinnvoll."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:752
+msgid "**Option 2**"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:754
+msgid ""
+"Vom linuxmuster.net Server aus wird mit ``linbo-remote`` das Verhalten "
+"für initcache bei Bedarf gezielt gesteuert. In der start.conf der Linbo-"
+"HWK ist die Option ``AutoInitCache=no`` gesetzt."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:756
+msgid ""
+"Mit folgendem Befehl, der auf dem Server abgesetzt wird, lässt sich der "
+"Cache beim nächsten Boot-Vorgang des betreffenden PCs neu befüllen:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:762
+msgid ""
+"Es werden WOL-Pakete an den PC r100-pc01 gesendet, um diesen "
+"\"aufzuwecken\". Nach einer Wartezeit von 45 Sekunden werden die "
+"angegebenen Befehle an den Client weitergegeben. Es wird der Cache neu "
+"befüllt, das 1., 2. und 3. Betriebssystem synchronisiert und das 2. "
+"Betriebssystem gestartet."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:765
+msgid "Dies kann ebenfalls für eine ganze Rechnergruppe angewendet werden:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:771
+msgid ""
+"Es werden ein WOL-Pakete an alle PCs der Geruppe r101 gesendet, um diese "
+"\"aufzuwecken\". Nach einer Wartezeit von 60 Sekunden werden die "
+"angegebenen Befehle an dien Clients weitergegeben. Es wird der Cache neu "
+"befüllt, das 1., 2. und 3. Betriebssystem synchronisiert und das 2. "
+"Betriebssystem gestartet."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:774
+msgid ""
+"Zudem kann mit ``linbo-remote`` auch gezielt eine Partition formatiert "
+"werden und danach die Synchronisation sowie der Start eines gewünschten "
+"Betriebssystems erfolgen:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:780
+msgid "Dabei ist zu beachten:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:782
+msgid ""
+"``format:<#>``: Schreibt die Partitionstabelle und formatiert nur die "
+"Partition mit der angegebenen Nummer aus der Partitionstabelle. Achtung: "
+"Bei UEFI-System ist EFI immer die erste Partition"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:784
+msgid ""
+"``sync:<#>``: Synchronisiert das Betriebsysystem, das in der start.conf "
+"an der angegebenen <#> Position eingetragen wurde."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:786
+msgid ""
+"``start:<#>``: Startet das Betriebsyssystem, das in der start.conf an der"
+" angegebenen <#> Position eingetragen wurde."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:790
+msgid "LINBO4 mit WLAN nutzen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:792
+msgid ""
+"Linbo4 unterstützt ab der Version 4.2 die Nutzung von LINBO via WLAN-"
+"Netzwerk. Hierzu wurde das Programm ``wpa_supplicant`` in LINBO "
+"integriert."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:794
+msgid ""
+"Vor der Nutzung solltest Du zuerst prüfen, ob LINBO für den eingebauten "
+"WLAN-Adapter die benötigte Firmware aufweist. Hierzu gehst Du wie folgt "
+"vor:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:797
+msgid "Firmware prüfen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:799
+msgid "Überprüfe die Ausagbe von ``dmesg``"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:808
+msgid ""
+"In obiger Ausgabe fehlt die Firmware für i915 DMC. Um die Firmware zu "
+"laden, findet Du unter ``/etc/linuxmuster/linbo/firmware`` eine "
+"Konfigurationsdatei, in der Du die benötigte Firmware einträgst."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:826
+msgid ""
+"Zu o.g. Beipiel fügst Du die Zeile ``i915/kbl_dmc_ver1_04.bin`` in die "
+"Konfigurationsdatei für die LINBO-Firmware ein. Das Linux-Firmware "
+"Package ist auf dem linuxmuster.net Server bereits zusammen mit LINBO "
+"installiert. Der Pfad für die zu ladende Firmware-Datei muss relativ zum "
+"Verzeichnis ``/lib/firmware`` angegeben werden."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:828
+msgid ""
+"Um die Firmware für linbofs bereitzustellen, musst Du noch auf dem Server"
+" den Befehl"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:834
+msgid "ausführen."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:838
+msgid ""
+"Wenn die geladene WLAN-Firmware dazu führt, dass der WLAN Adapter nach "
+"einem Warmstart nicht funktioniert, kannst Du den warmstart in der "
+"start.conf mit ``nowarmstart`` als Kernel-Option abschalten."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:841
+msgid "WLAN definieren"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:843
+msgid ""
+"Hat der Client die benötigte Firmware, bearbeitest Du die Datei "
+"``/etc/linuxmuster/linbo/wpa_supplicant.conf`` auf dem Server. In dieser "
+"definierst Du das WLAN, das der Client verwenden soll."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:845
+msgid "Nachstehend findest Du zwei Beispiele hierzu:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:865
+msgid ""
+"Weitere Konfigurationsbeispiele findest Du unter: "
+"https://linux.die.net/man/5/wpa_supplicant.conf"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:867
+msgid ""
+"Nachdem Du die Konfigurationsdatei mit den WLAN-Einstellungen "
+"bereitgestellt hast, müssen diese Informationen noch auf ``linbofs`` "
+"angewendet werden. Hierzu gibst Du auf dem Server den Befehl"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:873
+msgid "an."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:876
+msgid "WLAN-Gerät anlegen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:878
+msgid ""
+"Zuletzt musst Du noch für das Gerät, das via WLAN mit LINBO arbeiten "
+"soll, einen Geräteintrag erstellen. In der Datei "
+"``/etc/linuxmuster/devices.csv`` oder in der Schulkonsole unter "
+"``Geräte`` erstellst Du einen Eintrag für den WLAN-Adapter des zu "
+"importierenden Gerätes wie in nachstehendem Beispiel gezeigt:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:885
+msgid ""
+"Achte darauf, dass Du bei zwei Eintragungen für ein Gerät (LAN und WLAN) "
+"jeweils voneinander abweichende Gerätenamen verwendest. In o.g. Beispiel "
+"ist der erste Eintrag für ein Notebook, das via Kabel mit LINBO arbeitet."
+" Der zweite Eintrag ist für das identische Notebook (WLAN). Hier wird nun"
+" aber ein abweichender Hostname ``nb-01w`` genutzt und die MAC-Adresse "
+"des WLAN-Adapters eingetragen. Als IP-Adresse wird dem WLAN-Adapter eine "
+"eigene zugewiesen. DHCP-Einträge sollten vermieden werden, da sonst auch "
+"nicht bekannte Geräte, ggf. das WLAN nutzen können."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:887
+msgid ""
+"Hast Du die Eintragungen in der devices.csv auf dem Server vorgenommen, "
+"importierst Du diese mit:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:893
+msgid ""
+"Hast Du die Eintragungen hingegen in der Schulkonsole vorgenommen, so "
+"must Du nur auf ``Save & import`` klicken."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:897
+msgid "Für WLAN-Verbindungen gelten für LINBO einige Einschränkungen."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:899
+msgid ""
+"Wireless pxe boot ist nicht möglich. LINBO stellt die WLAN-Verbindung nur"
+" während des Boot-Prozesses her."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:900
+msgid ""
+"Die Erstinstallation von LINBO auf dem Client ist zuerst über ein "
+"kabelgebundenes LAN durchzuführen."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:901
+msgid ""
+"Der Download größer Betriebssystem-Images beeinträchtigt Deine WLAN-"
+"Performance. Dies solltest Du vermeiden werden."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:902
+msgid ""
+"Du solltest zudem überlegen, ob Du ein gesichertes WLAN für das LINBO-"
+"Management einrichtest, um den Zugriff auf das WLAN zu beschränken."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:906
+msgid "LINBO4: Hook-Skripte"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:910
+msgid ""
+"Ab der Version LINBO 4.1.31 ``linuxmuster-linbo7 4.1.31`` stehen "
+"sogenannte Hook-Skripte zur Verfügung, um vor oder nach ``update-"
+"linbofs`` auf dem Server kleine Programme auszuführen, die durch "
+"definierte Ereignisse ausgelöst werden."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:913
+msgid "Pre-Hook-Skripte"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:915
+msgid ""
+"Mit dem Befehl ``update-linbofs`` wird die Erstellung von linbofs auf dem"
+" Server angestossen."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:917
+msgid ""
+"Pre-Hook-Skripte, werden hierbei vor der Erstellung von ``linbofs64.lz`` "
+"ausgeführt. Dies bietet die Möglichkeit, im Dateisystem vorher eigene "
+"Anpassungen vornehmen."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:919
+msgid "**Was passiert bei Ausführung des Befehls update-linbofs?**"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:921
+msgid ""
+"Das Template (``/var/lib/linuxmuster/linbo/linbofs64.cpio``) wird in ein "
+"Verzeichnis (``/var/cache/linuxmuster/linbo/linbofs64``) entpackt."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:922
+msgid ""
+"Dort wird das Template angepasst: passwort-hash, dropbear-key, "
+"permissions, default-start.conf (``/srv/linbo/start.conf``), Zeitzone."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:923
+msgid ""
+"Zum Schluss werden die Pre-Hook Skripte ausgeführt. Dies geschieht "
+"ebenfalls innerhalb des Verzeichnisses - man kann also über relative "
+"Bezüge auf die linbofs-Dateien zugreifen."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:924
+msgid ""
+"Abschließend wird das Verzeichnis wieder gepackt (z.B. nach "
+"``/srv/linbo/linbofs64.lz``), bevor danach die Posthook-Skripte angepasst"
+" werden."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:928
+msgid ""
+"Die Linbo bekannten Variable können in den Hook-Skripten nicht verwendet "
+"werden, ohne sie vorher zu importieren."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:930
+msgid ""
+"Mit Pre-Hook-Skripten können so z.B. angepasste Dateien für "
+"``.ssh/authorized_keys`` oder ``.env`` bereitgestellt werden."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:932
+#: ../../source/clients/use_linbo4/index.rst:972
+msgid "Diese Skripte sind in folgendem Verzeichnis abzulegen:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:938
+msgid "Ein Hook-Skript muss ausführbar sein und mit einem ``shebang`` beginnen."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:940
+msgid "Nachstehendes Pre-Hook-Skript zeigt hierzu einige Möglichkeiten auf."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:961
+msgid "Das Skript muss in dem o.g. Verzeichnis als ausführbar definiert werden:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:968
+msgid "Post-Hook-Skripte"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:970
+msgid ""
+"Post-Hook-Skripte werden nach der Erstellung von ``update-linbofs`` auf "
+"dem Server ausgeführt. Es können so nachdem der Befehl ``update-linbofs``"
+" durchgelaufen ist, z.B. Programme auf dem Server gestartet werden."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:978
+msgid ""
+"Hook-Skripte müssen ausführbar sein und mit einem ``shebang`` beginnen. "
+"Es sind die zuvor genannten Hinweise zu beachten."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:981
+msgid "LINBO4: Linux-Kernel"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:983
+msgid ""
+"Linbo ab v4.2 nutzt als Standard den aktuellsten Linux-Kernel. Manchmal "
+"gibt es aber dennoch Probleme mit Hardware, die nicht richtig erkannt "
+"wird. Dann kann es sein, dass z.B. LINBO per PXE nicht korrekt startet "
+"oder das System *scheinbar hängen bleibt*. Solche Fälle widerspenstiger "
+"Hardware können mit LINBO 4.2 mit einigen Handgriffen vielfach "
+"erfolgreich gelöst werden."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:985
+msgid ""
+"Mit LINBO 4.2 wird auf dem Client ein aktueller Linux-Kernel >= 6.6.x "
+"installiert und gestartet. Bei neuerer Hardware funktioniert dies i.d.R. "
+"problemlos. Bei einigen älteren Hardware-Modellen oder Modellen mit "
+"besonderer Hardware-Bestückung kann es vorkommen, dass der Client nicht "
+"startet. Dies kann schrittweise wie nachstehend beschrieben, zuerst "
+"eingegrenzt und dann behoben werden:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:989
+msgid "1. LINBO-Kernel wechseln"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:991
+msgid ""
+"Auf dem Server befindet sich unter "
+"``/etc/linuxmuster/linbo/custom_kernel.ex`` eine Beispieldatei, wie man "
+"den LINBO-Kernel wechselt. Die Kernel befinden sich unterhalb von "
+"``/var/lib/linuxmuster/linbo/``. Es stehen drei verschiedene Versionen zu"
+" Verfügung: *legacy, longterm, stable*"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:994
+msgid "2. Netzwerkkarten-Treiber ersetzen"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:996
+msgid ""
+"Erkennt der Client Hardware nicht richtig, kann mit linbo-ssh geprüft "
+"werden, welcher Treiber Probleme bereitet. Hierzu wechselst Du mit "
+"``linbo-ssh <IP des Clients>`` auf die LINBO-Konsole auf dem Client."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:1002
+msgid ""
+"Danach die benötigte Firmware mit Pfad so unter "
+"``/etc/linuxmuster/linbo/firmware`` eintragen - siehe hierzu auch die "
+"*Beispieldatei firmware.ex*."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:1004
+msgid ""
+"Führe anschließend den Befehl ``update-linbofs`` auf dem linuxmuster "
+"Server aus."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:1007
+msgid "3. Kernel-Options verwenden"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:1009
+msgid ""
+"Auf dem Server findet sich pro Hardwareklasse eine start.conf Datei "
+"unter: ``/srv/linbo/start.conf.<Hardwareklasse>``"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:1011
+msgid ""
+"Setze den Eintrag KernOptions und gebe Optionen an, die für Deine "
+"Hardware dem Kernel wichtige Infos mitgeben."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:1024
+msgid ""
+"Anschließend musst Du auf dem Sever den Befehl ``linuxmuster-import-"
+"devices`` ausführen, damit die Änderungen auf den Clients übernommen "
+"werden."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:1027
+msgid "4. LINBO-Befehle"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:1029
+msgid ""
+"Unter LINBO können sämtliche Befehle auch direkt am Client eingegeben "
+"werden. Dies ist sehr hilfreich, um Log-Dateien auszulesen, Hardware-"
+"Probleme und ihre mögliche Lösung schrittweise auszutesten."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:1031
+msgid ""
+"Dazu wechselst Du wieder mit ``linbo-ssh <IP des Clients>`` auf die "
+"LINBO-Konsole des Clients. Dort kannst Du dann direkt LINBO-Befehle wie "
+"z.B. ``linbo_partition_format`` oder ``linbo_sync 1`` angeben."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:1034
+msgid ""
+"Sämtliche Befehle, die linuxmuster-linbo7 (next generation) beherrscht, "
+"werden hier aufgelistet: https://github.com/linuxmuster/linuxmuster-"
+"linbo7/issues/72#issuecomment-1156633508"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:1037
+msgid "im Fehlerfall"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:1040
+msgid "Torrent-Fehler"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:1042
+msgid ""
+"Nutzt Du sehr große Images, so kann es passieren, dass bei der Verteilung"
+" der qcow2-Images mit Torrent-Fehler auftreten und die Synchronisation "
+"auf ``rsync`` zurückfällt. Hierbei kommt es zum Einbruch bei den "
+"Datenübertragungsraten."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:1044
+msgid ""
+"Ab LINBO v4.1.36 können für ``ctorrent`` Parameter angepasst werden, um "
+"dies zu verhindern."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:1046
+msgid "Die Konfigurationsdati für ctorrent befindet sich"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:1052
+msgid ""
+"Die Paketgrößen können nun als Parameter ``piece length`` angepasst "
+"werden. Dazu kannst Du in o.g. Konfigurationsdatei den Parameter wie "
+"folgt setzen:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:1059
+msgid "Hast Du den Wert angepasst, musst Du Torrent neu startebn:"
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:1065
+msgid ""
+"Wurde die Option in der Konfigurationsdatei nicht explizit gesetzt, so "
+"wird ein Standardwert (default value) von ``262144`` verwendet."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:1067
+msgid "Mit der Erhöhung des Wertes können o.g. Probleme behoben werden."
+msgstr ""
+
+#: ../../source/clients/use_linbo4/index.rst:1069
+msgid ""
+"Zum Vergleich findet sich nachstehende Konfigurationsdatei ``/etc/default"
+"/linbi-torrent``:"
+msgstr ""
+

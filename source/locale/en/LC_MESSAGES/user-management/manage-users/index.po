@@ -1,39 +1,100 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, linuxmuster.net
-# This file is distributed under the same license as the linuxmuster.net package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
+"Language-Team: English "
+"(https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../source/user-management/manage-users/index.rst:9
+#: ../../source/user-management/manage-users/index.rst:32
+msgid "Inhalt"
+msgstr ""
+
+#: ../../source/user-management/manage-users/index.rst:5
 msgid "Benutzer verwalten mit der Schulkonsole"
 msgstr ""
 
-#: ../../source/user-management/manage-users/index.rst:11
+#: ../../source/user-management/manage-users/index.rst:9
 msgid ""
-"Dieses Dokument gibt Schritt-für-Schritt-Anleitungen für die wichtigsten "
-"Tätigkeiten, die der Netzwerkbetreuer im Hinblick auf die Benutzer mit der "
-"*Schulkonsole* durchführt."
+"In dieser Dokumentation erhalten Sie einen Überblick über den "
+"``workflow`` zur Benutzerverwaltung in der aktuellen linuxmuster.net. "
+"Neben den Möglichkeiten zur Konfiguration der Benutzereinstellungen, über"
+" das Einlesen der Benutzer via CSV-Datei und die Änderung einzelner "
+"Nutzer werden die wichtigsten Tätigkeiten zur Benutzerverwaltung "
+"erläutert."
 msgstr ""
 
-#: ../../source/user-management/manage-users/index.rst:15
+#: ../../source/user-management/manage-users/index.rst:14
 msgid ""
-"In der Schulkonsole werden grundlegende Einstellungen vorgenommen, die "
-"Benutzerlisten gepflegt und geprüft sowie Benutzer angelegt, versetzt und "
-"gelöscht, außerdem die Passwörter und der Plattenplatz (Quotas) für alle "
-"Benutzer und Gruppen verwaltet. Nur Passwörter von Schülern/innen sowie "
-"Projekte können auch von Personen mit normalen Lehrer-Rechten verwaltet "
-"werden."
+"Die Benutzerverwaltung in der aktuellen linuxmuster.net Version erfolgt "
+"auf dem Server mithilfe von sophomorix4. Sophomorix stellt eine Vielzahl "
+"an Befehlen und einen speziellen Workflow bereit, arbeitet aber "
+"vollständig konsolenorientiert. Es können somit alle Befehle zur "
+"Benutzerveraltun auch auf der CLI am Server direkt abgesetzt werden. "
+"Siehe hierzu die Hinweise im letzten Unterkapitel dieses Abschnitts."
 msgstr ""
+
+#: ../../source/user-management/manage-users/index.rst:19
+msgid ""
+"Um eine grafisch unterstützte, einfache und bequeme Möglichkeit zur "
+"Benutzerverwaltung bereitzustellen, verfügt linuxmuster.net über die sog."
+" ``Schulkonsole``, einem grafischen Hilfsmittel, das im Browser "
+"aufgerufen wird. Die Schulkonsole führt die Vielzahl an pädagogischen "
+"Funktionen und Funktionen zur Verwaltung und zum Betrieb des "
+"Schulungsnetzs unter einer einfach zu nutzenden, grafischen Oberfläche "
+"zusammen."
+msgstr ""
+
+#: ../../source/user-management/manage-users/index.rst:24
+msgid ""
+"In der Schulkonsole (WebUI) werden grundlegende Einstellungen "
+"vorgenommen, die für die Benutzerverwaltung relevant sind, wie z.B. die "
+"Mindestanzahl an Zeichen für Nach- und Vorname. Zudem werden hier die "
+"Benutzerlisten gepflegt, geprüft sowie Benutzer angelegt, versetzt und "
+"gelöscht. Die Passwörter und der Plattenplatz (Quotas) werden hier für "
+"alle Benutzer, Klassen und Gruppen verwaltet."
+msgstr ""
+
+#: ../../source/user-management/manage-users/index.rst:29
+msgid ""
+"Grundsätzlich nimmt der Benutzer ``global-admin`` die Einstellungen für "
+"die Benutzerverwaltung vor. Benutzer mit Lehrer-Rechten können danach "
+"Passwörter für Schüler und Schülerinnen sowie Projekte verwalten."
+msgstr ""
+
+#~ msgid ""
+#~ "Dieses Dokument gibt Schritt-für-"
+#~ "Schritt-Anleitungen für die wichtigsten "
+#~ "Tätigkeiten, die der Netzwerkbetreuer im "
+#~ "Hinblick auf die Benutzer mit der "
+#~ "*Schulkonsole* durchführt."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In der Schulkonsole werden grundlegende "
+#~ "Einstellungen vorgenommen, die Benutzerlisten "
+#~ "gepflegt und geprüft sowie Benutzer "
+#~ "angelegt, versetzt und gelöscht, außerdem "
+#~ "die Passwörter und der Plattenplatz "
+#~ "(Quotas) für alle Benutzer und Gruppen"
+#~ " verwaltet. Nur Passwörter von "
+#~ "Schülern/innen sowie Projekte können auch "
+#~ "von Personen mit normalen Lehrer-Rechten"
+#~ " verwaltet werden."
+#~ msgstr ""
+

@@ -1,0 +1,466 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/external-services/moodle/index.rst:5
+msgid "Externe Authentifizierung - Moodle"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:10
+msgid ""
+"Das Active Directory (AD) der linuxmuster.net 7 dient als zentrale "
+"Authentifizierungsinstanz. Sollen Dienste wie z.B. das "
+"Lernmanagementsystem (LMS) Moodle oder das Raumbuchungssystem MRBS extern"
+" betrieben werden, so können diese so konfiguriert werden, dass eine "
+"Authentifizierung gegen das AD der lmn 7 erfolgt."
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:15
+msgid ""
+"Hierzu sind einige Konfigurationsschritte erforderlich, die nachstehend "
+"beschrieben werden."
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:18
+msgid "Firewalleinstellungen"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:20
+msgid ""
+"Die Firewall (OPNsense®) muss so konfiguriert werden, dass Anfragen über "
+"den ``LDAPS-Port 636`` an den Server weitergeleitet werden."
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:23
+msgid ""
+"In der Konfigurationsoberfläche ist unter ``Firewall -> NAT -> "
+"Portweiterleitung`` eine entsprechende Regel anzulegen. Wenn die von "
+"linuxmuster.net bereitgestellte Appliance verwendet wurde, ist die Regel "
+"schon vorbereitet. Anderfalls muss diese wie in der Abb. ersichtlich, "
+"noch erstellt werden."
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:-1
+msgid "Firwall NAT Port Forwarding"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:33
+msgid "Die Regel muss nun noch aktiviert"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:-1
+msgid "Activate Firwall NAT Port Forwarding Rule"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:39
+msgid "und anschliessend übernommen werden:"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:-1
+msgid "Activate Settings"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:46
+msgid "Moodle-Einstellungen"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:48
+msgid ""
+"Im externen Moodle-System sind unter ``Website-Administration ->  Plugins"
+" -> Authentifizierung -> LDAP-Server`` die folgenden Einstellungen "
+"vorzunehmen."
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:51
+msgid ""
+"Nicht aufgeführte Optionen sollten auf der Standard-Einstellung bleiben "
+"bzw. leer gelassen werden."
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:53
+msgid "**LDAP-Server-Einstellungen**"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:56
+msgid "Host Url"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:56
+msgid "ldaps://server.linuxmuster.lan"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:58
+msgid ""
+"Hier den vollständigen Namen des eigenen Servers oder die IP-Adresse "
+"verwenden."
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:60
+msgid "Version"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:60
+msgid "3"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:62
+msgid "TLS benutzen"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:62
+#: ../../source/external-services/moodle/index.rst:123
+#: ../../source/external-services/moodle/index.rst:125
+#: ../../source/external-services/moodle/index.rst:127
+#: ../../source/external-services/moodle/index.rst:133
+#: ../../source/external-services/moodle/index.rst:139
+#: ../../source/external-services/moodle/index.rst:147
+#: ../../source/external-services/moodle/index.rst:165
+#: ../../source/external-services/moodle/index.rst:171
+#: ../../source/external-services/moodle/index.rst:173
+msgid "Nein"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:64
+msgid "LDAP-Codierung"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:64
+msgid "utf-8"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:68
+msgid "Bind-Einstellungen"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:72
+msgid ""
+"Grundsätzlich sollten alle externen Dienste, die via LDAP an das AD "
+"angebunden werden, mit einem eigens dafür angelegten Bind-User genutzt "
+"werden. Für Moodle sollte so z.B. ein Benutzer ``moodle-binduser`` "
+"angelegt werden, der für die Verbindung zum AD genutzt wird. Hinweise "
+"hierzu findest Du unter "
+"https://github.com/linuxmuster/sophomorix4/wiki/bindusers"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:74
+msgid "**Vorgehen zur Anlage eines neuen Bind-Users**"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:76
+msgid ""
+"Auf dem linuxmuster.net Server folgenden Befehl in der Konsole als "
+"Benutzer root absetzen, um einen neuen Benutzer (``moodle-binduser``) für"
+" den Bind-Zugriff zu definieren. Das zufällig erzeugte Kennwort wird in "
+"einer Datei auf dem Server hinterlegt."
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:82
+msgid ""
+"Gib für den neu angelegten Benutzer einen Kommentar an, um später einen "
+"Hinweis zu erhalten, für welchen Zweck der Benutzer genutzt wird."
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:88
+msgid ""
+"Lasse nun die Daten für den neu angelegten Benutzer anzeigen, die dann in"
+" Moodle als bind-user einzutragen sind."
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:94
+msgid ""
+"Trage in Moodle die unter 3. angezeigten Daten in Moodle für den Bind-"
+"User nach dem nachstehenden Schema ein:"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:97
+msgid "Anmeldename"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:97
+msgid ""
+"CN=moodle-binduser,OU=Management,OU=default-"
+"school,OU=SCHOOLS,DC=linuxmuster,DC=lan"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:99
+msgid "DC=linuxmuster,DC=lan sind mit den Angaben der eigenen Domäne zu ersetzen."
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:101
+msgid "Kennwort"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:101
+msgid "geheim (angezeigtes Kennwort, das in der datei hinterlegt wurde)"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:103
+msgid ""
+"Kennwort des Bind-Users wurde unter 1. in einer Datei auf dem Server "
+"abgelegt."
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:105
+msgid "zur Anzeige ist der Befehl unter 3. erforderlich"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:107
+msgid "Nutzertyp"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:107
+msgid "MS ActiveDirectory"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:109
+msgid "Kontexte"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:109
+msgid "OU=schools,DC=linuxmuster,DC=lan"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:111
+msgid "Die DC-Einträge sind durch die, der eigenen Domäne zu ersetzen."
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:113
+msgid "Subkontexte"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:113
+msgid "Ja"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:118
+msgid "Weitere Einstellungen"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:120
+msgid "**Kennwortänderung fordern**"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:123
+msgid "Änderung fordern"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:125
+msgid "Standardseite zur Änderung nutzen"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:127
+msgid "Kennwortformat"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:130
+msgid "**Einstellungen zum Ablauf von LDAP-Kennwörtern**"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:133
+msgid "Ablauf"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:135
+msgid "Ablaufwarnung"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:135
+#: ../../source/external-services/moodle/index.rst:137
+#: ../../source/external-services/moodle/index.rst:141
+#: ../../source/external-services/moodle/index.rst:149
+#: ../../source/external-services/moodle/index.rst:185
+msgid "Leer"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:137
+msgid "Ablaufmerkmal"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:139
+msgid "GraceLogins"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:141
+msgid "Merkmal für GraceLogin"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:144
+msgid "**Nutzererstellung aktivieren**"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:147
+msgid "Nutzer/innen extern anlegen"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:149
+msgid "Kontext für neue Nutzer/innen"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:152
+msgid "**Zuordnung von Systemrollen**"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:155
+msgid "Kursersteller/in-Kontext"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:155
+msgid "OU=teachers,OU=default-school,OU=schools,DC=linuxmuster,DC=lan"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:157
+msgid "DC-Einträge durch eigene Domäne ersetzen."
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:160
+msgid "**Synchronisierung von Nutzerkonten**"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:163
+msgid "Entfernte externe  Nutzer"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:163
+msgid "Intern löschen"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:165
+msgid "Status von lokalen Nutzerkonten synchronisieren"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:168
+msgid "**NTLM-SSO**"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:171
+msgid "Aktivieren"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:173
+msgid "Subnet"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:175
+msgid "MS IE fast path?"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:175
+msgid "NTLM mit allen Browsern versuchen"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:178
+msgid "**Datenzuordnung**"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:181
+msgid "Daten übernehmen (Vorname)"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:181
+msgid "givenName"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:183
+msgid "Daten übernehmen (Nachname)"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:183
+msgid "sn"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:185
+msgid "Daten übernehmen (E-Mail-Adresse)"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:188
+msgid "**Nutzersuche (user lookup)**"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:191
+msgid "ObjectClass (auth_ldap|objectclass)"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:191
+msgid "(\\|(sophomorixRole=teacher)(sophomorixRole=student))"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:193
+msgid "Filter: Nur Lehrer und SuS, keine Maschinen-Accounts"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:196
+msgid ""
+"Zum Testen, ob der Filter korrekt arbeitet, sollte zugleich die "
+"Einstellung zur Synchronisierung von Nutzerkonten wie folgt angepasst "
+"werden:"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:199
+msgid "**Synchronisierung von Nutzerkonten (user account synchronisation)**"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:202
+msgid "Entfernte externe Nutzer/innen (auth_ldap|removeuser)"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:202
+msgid "für Tests: intern sperren (suspend  internal)"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:205
+msgid "danach: intern löschen (delete internal)"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:208
+msgid ""
+"Die Änderungen sind abschließend über die Schaltfläche am Seitenende zu "
+"sichern. In der Übersicht der ``Aktiven Plugins`` ist der LDAP-Server zur"
+" Authentifizierung zu aktivieren."
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:213
+msgid "Nachdem alle Einstellungen getroffen sind, unbedingt alle Caches leeren!"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:216
+msgid "Host-Einstellungen"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:218
+msgid ""
+"Gegebenenfalls muss auf dem Moodle-Host sicher gestellt werden, dass das "
+"selbstsignierte Zertifikat des Servers bei der LDAP-Abfrage akzeptiert "
+"wird."
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:221
+msgid ""
+"Auf dem Host selbst ist hierzu in der Datei ``/etc/ldap/ldap.conf`` "
+"folgender Eintrag zu ergänzen:"
+msgstr ""
+
+#: ../../source/external-services/moodle/index.rst:227
+msgid ""
+"Läuft die Moodle-Instanz in einem ``Docker-Container``, reicht man diese "
+"Datei als ``readonly Volume`` an den Container durch. Der Eintrag in der "
+"Datei ``docker-compose.yml`` lautet dann:"
+msgstr ""
+

@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/installation/install-from-scratch/index.rst:29
+msgid "basis_opnsense"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/index.rst:7
+msgid "Install-from-Scratch"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/index.rst:12
+msgid ""
+"In diesem Dokument findest Du eine \"Schritt-für-Schritt\" Anleitung zur "
+"Installation der linuxmuster.net Musterlösung von Grund auf (install-"
+"from-scratch)."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/index.rst:14
+msgid ""
+"Lies zuerst die Abschnitte :ref:`what-is-new-label` und :ref"
+":`prerequisites-label`, bevor Du dieses Kapitel durcharbeitest."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/index.rst:16
+msgid ""
+"Nach der Installation gemäß dieser Anleitung erhältst Du eine "
+"einsatzbereite Umgebung bestehend aus"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/index.rst:18
+msgid "einer Firewall (OPNsense |reg| für linuxmuster.net),"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/index.rst:19
+msgid "und einem Server (linuxmuster.net)."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/index.rst:21
+msgid ""
+"Im Laufe der Installation benötigst Du einen Admin-PC. Das kann ein "
+"einfacher Laptop mit einem beliebigen Betriebssystem sein."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/index.rst:23
+msgid "**Vorgehensweise**"
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/index.rst:25
+msgid "Zunächst installierst Du die Firewall OPNsense |reg|."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/index.rst:26
+msgid "Danach installierst Du den Ubuntu-Server."
+msgstr ""
+
+#: ../../source/installation/install-from-scratch/index.rst:27
+msgid "Schließlich richtest Du linuxmuster.net ein."
+msgstr ""
+

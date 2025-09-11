@@ -1,212 +1,501 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, linuxmuster.net
-# This file is distributed under the same license as the linuxmuster.net package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
+"Language-Team: English "
+"(https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
 
 #: ../../source/user-management/manage-quota/index.rst:5
 msgid "Festplattenplatz für Benutzer einschränken (Quota)"
 msgstr ""
 
-#: ../../source/user-management/manage-quota/index.rst:7
+#: ../../source/user-management/manage-quota/index.rst:9
 msgid ""
 "Alle Benutzer im System dürfen Daten auf dem Server abspeichern. Es kann "
-"also vorkommen, dass Schüler und Lehrer so viele Daten abspeichern, dass der"
-" Festplattenplatz des Servers erschöpft ist, was bis zur Einstellung des "
-"Betriebes führen kann. Außerdem kann das „Vollmüllen“ des Servers auch vom "
-"Internet aus z.B. durch E-Mail-Bombing erfolgen."
+"also vorkommen, dass Schüler und Lehrer so viele Daten abspeichern, dass "
+"der Festplattenplatz des Servers aufgebraucht ist, was bis zur "
+"Einstellung des Betriebes führen kann. Außerdem kann eine übermäßige "
+"Beanspruchung des Plattenplatzes des Servers auch via Internet z.B. durch"
+" E-Mail-Bombing erfolgen."
 msgstr ""
 
-#: ../../source/user-management/manage-quota/index.rst:14
+#: ../../source/user-management/manage-quota/index.rst:16
 msgid ""
-"Einziger Ausweg: Sie beschränken (\"quotieren\") den Festplattenplatz eines "
-"jeden Benutzers und achten darauf, dass die Summe der vergebenen „Quota” "
-"nicht die Kapazität der Festplatten des Servers übersteigt."
+"Um dies zu verhindern, sollten Sie als Netzwerkbetreuer die Nutzung des "
+"Festplattenplatzes durch einzelne Nutzer oder Gruppen kontrollieren und "
+"beschränken."
 msgstr ""
 
-#: ../../source/user-management/manage-quota/index.rst:18
+#: ../../source/user-management/manage-quota/index.rst:19
 msgid ""
-"Melden Sie sich wie im Handbuch :ref:`schulekonsole-admin-label` beschrieben"
-" an der Schulkonsole als ``administrator`` an."
+"Hierzu werden auf dem linuxmuster.net Server die sog. Quotas aktiviert. "
+"Dies erfolgt bei der Ersteinrichtung automatisch. Für jede Partition auf "
+"die Quotas angewendet werden, finden sich folgende Dateien:"
 msgstr ""
 
-#: ../../source/user-management/manage-quota/index.rst:23
-msgid "Standardeinstellungen ändern"
-msgstr ""
-
-#: ../../source/user-management/manage-quota/index.rst:25
+#: ../../source/user-management/manage-quota/index.rst:29
 msgid ""
-"Im Abschnitt :ref:`manual-sk-admin-settings-user-label` des Handbuchs zur "
-"Schulkonsole finden Sie eine Übersicht über alle Einstellungsmöglichkeiten."
+"Zunächst ist zu prüfen, welcher Festplattenplatz - verteilt über die "
+"veschiedenen Partitionen - zur Verfügung steht. Danach ist zu planen, "
+"welche Obergrenzen zur Belegung des Festplattenplattes pro Lehrer, "
+"Schüler und Schuladministrator festgelegt werden sollen. Danach kann ggf."
+" eine individuelle Änderung der Quotas für einzelne Benutzer z.B. für "
+"einige Lehrer, die umfangreiches Material ablegen müssen, erfolgen."
 msgstr ""
 
-#: ../../source/user-management/manage-quota/index.rst:36
+#: ../../source/user-management/manage-quota/index.rst:37
 msgid ""
-"Im Bereich Quotierung können Sie diese aktivieren (Standard) oder "
-"deaktivieren. Ebenso können Sie für Schüler und Lehrer jeweils drei Quotas "
-"angeben."
+"Es ist darauf zu achten, dass die Summe der vergebenen „Quotas” nicht die"
+" Kapazität der Festplatten des Servers übersteigt."
 msgstr ""
 
 #: ../../source/user-management/manage-quota/index.rst:42
+msgid "Quotavorgaben erstellen"
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:44
 msgid ""
-"Ändern Sie die Einstellungen für ``/home``, dann beschränkt das den Platz, "
-"den neue Lehrer oder versetzte Schüler auf ``Home_auf_Server`` bzw. unter "
-"``H:\\`` und ``Tausch_auf_Server`` bzw. unter ``T:\\`` belegen können."
+"Um die Quotas für alle Benutzer der Gruppen Lehrer, Schüler und "
+"Schuladministratoren in gleicher Weise vorzugeben, melden Sie ich an der "
+"Schulkonsole als ``global-admin`` an."
 msgstr ""
 
 #: ../../source/user-management/manage-quota/index.rst:47
 msgid ""
-"Ändern Sie die Einstellungen für ``/var``, dann beschränkt das den Platz, "
-"den neue Lehrer oder versetzte Schüler auf ``Vorlagen_auf_Server`` bzw. "
-"unter ``V:\\`` oder mit Dateien während des Klassenarbeitsmodus belegen "
-"können."
+"Gehen Sie im Menü der Schulkonsole unter dem Menüpunt ``Einstellungen`` "
+"auf ``Schuleinstellungen -> Reiterkarte Quota``."
 msgstr ""
 
-#: ../../source/user-management/manage-quota/index.rst:52
+#: ../../source/user-management/manage-quota/index.rst:-1
+msgid "Einstellungen für die Benutzer-Quotas"
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:54
 msgid ""
-"Ändern Sie die Einstellungen in der dritten Spalte, dann beschränkt das den "
-"Platz für Mails, die auf dem Server liegen."
+"Hier legen Sie nun die gewünschten Quotas für die Benutzer der Gruppen "
+"Schüler, Lehrer und Schuladministratoren fest. Die Angaben sind in der "
+"Einheit ``MiB`` vorzunehmen."
 msgstr ""
 
-#: ../../source/user-management/manage-quota/index.rst:59
+#: ../../source/user-management/manage-quota/index.rst:57
 msgid ""
-"Wirksam sind die geänderten Werte erst nach einem Durchlauf zum "
-"*Anlegen/Versetzen/Löschen* von Benutzern. Auf das Quota bestehender Lehrer "
-"haben die Einstellungen keinen Einfluss."
+"Danach müssen Sie die neuen Vorgaben anwenden, indem Sie die Option "
+"``Speichern & Quota übernehmen`` auswählen. Es öffnet sich ein neues "
+"Konsolenfenster, das den Verlauf der Anwendung der neuen Quotas "
+"darstellt. Ist der Vorgang abgeschlossen, sehen Sie im Konsolenfenster "
+"einen Eintrag wie ``12 users smbquotas updated``."
 msgstr ""
 
-#: ../../source/user-management/manage-quota/index.rst:71
-msgid "Ändern von einzelnen Lehrerquota"
+#: ../../source/user-management/manage-quota/index.rst:-1
+msgid "Neue Quota Vorgaben anwenden"
 msgstr ""
 
-#: ../../source/user-management/manage-quota/index.rst:73
+#: ../../source/user-management/manage-quota/index.rst:66
+msgid "Quotas kontrollieren"
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:68
 msgid ""
-"Der Administrator hat in der *Schulkonsole* im Menü unter *Quota* die "
-"Möglichkeit, den Festplattenplatz für Lehrer und Schüler zu beschränken."
+"Nachdem die Änderungen angewendet wurden, sehen Sie die neuen Quotas in "
+"der Übersicht ``Schuleinstellungen -> Quota``."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:-1
+msgid "Übersicht der enuen Quotas"
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:74
+msgid "Die Quotas können Sie nun pro Benutzer kontrollieren."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:76
+msgid ""
+"Hierzu wählen Sie im Menü der Schulkonsole im Bereich der "
+"Benutzerveraltung die Gruppe der Benutzer, für die Sie Quotas "
+"kontrollieren möchten."
 msgstr ""
 
 #: ../../source/user-management/manage-quota/index.rst:79
 msgid ""
-"Benötigt ein Kollege mehr Platz, können Sie dessen Quota leicht über die "
-"*Schulkonsole* unter *Quota* -> *Lehrer* ändern:"
+"Haben Sie z.B. für die Lehrer eine neue Quota-Richtlinie angewendet, so "
+"wählen Sie das Menü ``Lehrer`` aus und klicken für einen exemplarischen "
+"Benutzer den Eintrag ``Benutzereinstellungen -> Benutzerinformationen``. "
+"Es erscheint ein Fenster, in dem Informationen zum Benutzer dargestellt "
+"werden. Am unteren Rand des Fensters werden ebenfalls die Cloud- und die "
+"Mail-Quotas, die für diesen Benutzer greifen, dargestellt."
 msgstr ""
 
-#: ../../source/user-management/manage-quota/index.rst:83
-msgid ""
-"Sind die Felder leer, gelten die Standardwerte. Mit einem Klick auf die "
-"Schaltfläche *Änderungen übernehmen* werden die geänderten Werte gleich "
-"gesetzt."
+#: ../../source/user-management/manage-quota/index.rst:-1
+msgid "Benutzer-Quotas Infos Lehrer"
 msgstr ""
 
-#: ../../source/user-management/manage-quota/index.rst:89
+#: ../../source/user-management/manage-quota/index.rst:88
 msgid ""
-"Beachten Sie auch, dass das gesetzte Quota immer für eine ganze "
-"Festplattenpartition auf dem Linux-Server gilt. Üblicherweise befinden sich "
-"alle Netzlaufwerke auf der selben Serverpartition ``/home``. Befindet sich "
-"z.B. das Kollegiumstauschverzeichnis auf der selben Serverpartition wie das "
-"Heimatverzeichnis ``H:`` bzw. ``Home_auf_Server``, werden die Daten auf dem "
-"Tauschverzeichnis zum verbrauchten Plattenplatz hinzugerechnet."
+"Gleiches können Sie auch für die Schüler durchführen, so dass Sie "
+"identische Informationen sehen."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:-1
+msgid "Benutzer-Quotas Infos Schüler"
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:95
+msgid "Quotas für einzelne Benutzer und Klassen anpassen"
 msgstr ""
 
 #: ../../source/user-management/manage-quota/index.rst:97
 msgid ""
-"Ein Lehrer kann also auf allen Netzlaufwerken zusammen nicht mehr als das "
-"voreingestellte Quota belegen."
+"Haben Sie Quota-Vorgaben für die gesamte Schule vorgenommen, so können "
+"Sie nun diese für Sonderfälle oder erforderliche Abweichungen anpassen."
 msgstr ""
 
-#: ../../source/user-management/manage-quota/index.rst:105
-msgid "Ändern von Klassen- und Projektquota"
-msgstr ""
-
-#: ../../source/user-management/manage-quota/index.rst:107
+#: ../../source/user-management/manage-quota/index.rst:100
 msgid ""
-"Unter *Quota* -> *Klassen* können Sie die Quota für alle Schüler einer "
-"Klasse ändern."
+"Sind Sie als ``global-admin`` in der Schulkonsole angemeldet, so rufen "
+"Sie unter dem Punkt ``Einstellungen`` den Menüeintrag ``Extraquota`` auf."
 msgstr ""
 
-#: ../../source/user-management/manage-quota/index.rst:109
+#: ../../source/user-management/manage-quota/index.rst:103
 msgid ""
-"Unter *Quota* -> *Projekte* können Sie zusätzliche Quota für alle Schüler "
-"eines Projektes vergeben."
+"Hier stehen zu Beginn i.d.R. keine Einträge. Sie können nun getrennt für "
+"einzelne Lehrer, Schüler, Schul-Administratoren, Klassen und Projekte "
+"gesonderte Quota-Vorgaben vornehmen, die die allgemeinen Vorgaben für "
+"diese Benutzer überschreiben."
 msgstr ""
 
-#: ../../source/user-management/manage-quota/index.rst:111
+#: ../../source/user-management/manage-quota/index.rst:108
+msgid "Lehrer"
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:110
 msgid ""
-"Mit *Änderungen übernehmen* werden die geänderten Quotas in diesen beiden "
-"Fällen nicht in einer Datei abgelegt, sondern gleich in die "
-"*Sophomorix*-Datenbank geschrieben und sind damit sofort gültig."
+"Haben Sie die Reiterkarte ``Lehrer`` gewählt, klicken Sie unten auf "
+"``Search & add user``. Es erscheint ein Konsolenfenster, in dem Sie einen"
+" Suchbegriff eingeben sollen, so dass passende Lehrer gefunden werden."
 msgstr ""
 
-#: ../../source/user-management/manage-quota/index.rst:116
-msgid "Sonderquota: Quota für Administratoren und einzelne Schüler"
+#: ../../source/user-management/manage-quota/index.rst:-1
+msgid "Lehrer-Quota: Benutzer hinzufügen"
 msgstr ""
 
-#: ../../source/user-management/manage-quota/index.rst:118
+#: ../../source/user-management/manage-quota/index.rst:117
+#: ../../source/user-management/manage-quota/index.rst:138
 msgid ""
-"Mittels *Quota* -> *Sonderquota* in der *Schulkonsole* können Sie nun Quota "
-"für"
+"Wählen Sie aus der angezeigten Liste den gewünschten Benutzer aus und "
+"bestätigen Sie dies mit ``Schliessen``."
 msgstr ""
 
-#: ../../source/user-management/manage-quota/index.rst:120
-msgid "einzelne Schüler,"
-msgstr ""
-
-#: ../../source/user-management/manage-quota/index.rst:121
-msgid "Administratoren und"
-msgstr ""
-
-#: ../../source/user-management/manage-quota/index.rst:122
-msgid "den max. für Homepages zur Verfügung stehenden Platz (Webspace)"
-msgstr ""
-
-#: ../../source/user-management/manage-quota/index.rst:124
-msgid "festlegen."
-msgstr ""
-
-#: ../../source/user-management/manage-quota/index.rst:126
+#: ../../source/user-management/manage-quota/index.rst:119
 msgid ""
-"Für den *Webspace* und die *Administratoren* können einfach die Werte "
-"überschrieben werden und dann mittels *Änderungen übernehmen* gesetzt "
-"werden."
+"Danach sehen Sie in der Quota-Übersicht für Lehrer den Benutzer mit "
+"seinen bisherigen Quota-Eintragungen."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:-1
+msgid "Lehrer-Quota: Übersicht"
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:125
+#: ../../source/user-management/manage-quota/index.rst:147
+msgid ""
+"Passen Sie nun für die jeweiligen Benutzer, die Quotas wie gewünscht an. "
+"Änderungen gegenüber den bisherigen Vorgaben werden farblich abgesetzt."
 msgstr ""
 
 #: ../../source/user-management/manage-quota/index.rst:129
-msgid ""
-"Für einzelne Schüler müssen Sonderquota erst neu angelegt werden, indem der "
-"Login-Name und die gewünschten Quota eingegeben werden. Nach einem Klick auf"
-" *Änderungen übernehmen* ist dann der Schüler in einer Schülerliste "
-"unterhalb des Abschnitts für die Administratoren aufgeführt."
+msgid "Schüler"
 msgstr ""
 
-#: ../../source/user-management/manage-quota/index.rst:135
+#: ../../source/user-management/manage-quota/index.rst:131
 msgid ""
-"Für bereits dort vorhandene Schüler können Sie einfach die Quotawerte "
-"überschreiben und dann mittels *Änderungen übernehmen* setzten."
+"Haben Sie die Reiterkarte ``Schüler`` gewählt, klicken Sie unten auf "
+"``Search & add user``. Es erscheint ein Konsolenfenster, in dem Sie einen"
+" Suchbegriff eingeben sollen, so dass passende Schüler gefunden werden."
 msgstr ""
 
-#: ../../source/user-management/manage-quota/index.rst:139
-msgid ""
-"Die obige wichtige Anmerkung gilt auch für Schüler: Befindet sich z.B. das "
-"Klassentauschverzeichnis eines Schülers auf der selben Serverpartition wie "
-"das Heimatverzeichnis ``H:`` bzw. ``Home_auf_Server``, werden die Daten auf "
-"dem Tauschverzeichnis zum verbrauchten Plattenplatz hinzugerechnet."
+#: ../../source/user-management/manage-quota/index.rst:-1
+msgid "Schüler-Quota: Benutzer hinzufügen"
 msgstr ""
 
-#: ../../source/user-management/manage-quota/index.rst:145
+#: ../../source/user-management/manage-quota/index.rst:140
 msgid ""
-"Ein Schüler kann also auf allen Netzlaufwerken zusammen nicht mehr als das "
-"voreingestellte Quota belegen."
+"Danach sehen Sie in der Quota-Übersicht für Schüler den Benutzer bzw. die"
+" Benutzer mit seinen/ihren bisherigen Quota-Eintragungen."
 msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:-1
+msgid "Schüler-Quota: Übersicht"
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:151
+msgid "Klassen"
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:153
+msgid ""
+"Um für Klassen Quota-Vorgaben zu erstellen bzw. klassenweise anzupassen, "
+"gehen Sie in der Schulkonsole unter ``Einstellungen`` auf ``Extraquota ->"
+" Klassen``."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:156
+msgid ""
+"Es wird Ihnen dann eine Übersicht der im System vorhandenen Klassen "
+"angezeigt."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:-1
+msgid "Übersicht zu Klassen-Quotas"
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:162
+msgid ""
+"Nehmen Sie hier nun wie gewünscht die neuen Eintragungen für die Quotas "
+"der Klassen vor. Änderungen gegenüber den bisherigen Vorgaben werden "
+"farblich abgesetzt."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:170
+msgid "Extraquotas anwenden"
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:172
+msgid ""
+"Um nun alle individuellen Anpassungen für Quota-Vorgaben von Lehrern, "
+"Schülern, Schul-Administratoren, Klassen und Projekten vorzunehmen, "
+"wählen Sie unter ``Extraquota -> Reiterkarte -> Speichern & übernehmen``."
+msgstr ""
+
+#: ../../source/user-management/manage-quota/index.rst:175
+msgid ""
+"Danach erscheint ein Konsolenfenster, in dem die Anwendung der neuen "
+"Quotavorgaben dargestellt wird. Ist der Vorgang abgeschlossen, so "
+"erkennen Sie dies z.B. an Einträgen wie ``8 user smbquota updated``"
+msgstr ""
+
+#~ msgid ""
+#~ "Alle Benutzer im System dürfen Daten "
+#~ "auf dem Server abspeichern. Es kann "
+#~ "also vorkommen, dass Schüler und Lehrer"
+#~ " so viele Daten abspeichern, dass der"
+#~ " Festplattenplatz des Servers erschöpft "
+#~ "ist, was bis zur Einstellung des "
+#~ "Betriebes führen kann. Außerdem kann das"
+#~ " „Vollmüllen“ des Servers auch vom "
+#~ "Internet aus z.B. durch E-Mail-Bombing"
+#~ " erfolgen."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Einziger Ausweg: Sie beschränken "
+#~ "(\"quotieren\") den Festplattenplatz eines "
+#~ "jeden Benutzers und achten darauf, dass"
+#~ " die Summe der vergebenen „Quota” "
+#~ "nicht die Kapazität der Festplatten des"
+#~ " Servers übersteigt."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Melden Sie sich wie im Handbuch "
+#~ ":ref:`schulekonsole-admin-label` beschrieben "
+#~ "an der Schulkonsole als ``administrator`` "
+#~ "an."
+#~ msgstr ""
+
+#~ msgid "Standardeinstellungen ändern"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Im Abschnitt :ref:`manual-sk-admin-"
+#~ "settings-user-label` des Handbuchs zur "
+#~ "Schulkonsole finden Sie eine Übersicht "
+#~ "über alle Einstellungsmöglichkeiten."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Im Bereich Quotierung können Sie diese"
+#~ " aktivieren (Standard) oder deaktivieren. "
+#~ "Ebenso können Sie für Schüler und "
+#~ "Lehrer jeweils drei Quotas angeben."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Ändern Sie die Einstellungen für "
+#~ "``/home``, dann beschränkt das den "
+#~ "Platz, den neue Lehrer oder versetzte"
+#~ " Schüler auf ``Home_auf_Server`` bzw. unter"
+#~ " ``H:\\`` und ``Tausch_auf_Server`` bzw. "
+#~ "unter ``T:\\`` belegen können."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Ändern Sie die Einstellungen für "
+#~ "``/var``, dann beschränkt das den Platz,"
+#~ " den neue Lehrer oder versetzte "
+#~ "Schüler auf ``Vorlagen_auf_Server`` bzw. unter"
+#~ " ``V:\\`` oder mit Dateien während "
+#~ "des Klassenarbeitsmodus belegen können."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Ändern Sie die Einstellungen in der "
+#~ "dritten Spalte, dann beschränkt das den"
+#~ " Platz für Mails, die auf dem "
+#~ "Server liegen."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Wirksam sind die geänderten Werte erst"
+#~ " nach einem Durchlauf zum "
+#~ "*Anlegen/Versetzen/Löschen* von Benutzern. Auf "
+#~ "das Quota bestehender Lehrer haben die"
+#~ " Einstellungen keinen Einfluss."
+#~ msgstr ""
+
+#~ msgid "Ändern von einzelnen Lehrerquota"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Der Administrator hat in der "
+#~ "*Schulkonsole* im Menü unter *Quota* die"
+#~ " Möglichkeit, den Festplattenplatz für "
+#~ "Lehrer und Schüler zu beschränken."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Benötigt ein Kollege mehr Platz, können"
+#~ " Sie dessen Quota leicht über die "
+#~ "*Schulkonsole* unter *Quota* -> *Lehrer* "
+#~ "ändern:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Sind die Felder leer, gelten die "
+#~ "Standardwerte. Mit einem Klick auf die"
+#~ " Schaltfläche *Änderungen übernehmen* werden "
+#~ "die geänderten Werte gleich gesetzt."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Beachten Sie auch, dass das gesetzte "
+#~ "Quota immer für eine ganze "
+#~ "Festplattenpartition auf dem Linux-Server "
+#~ "gilt. Üblicherweise befinden sich alle "
+#~ "Netzlaufwerke auf der selben Serverpartition"
+#~ " ``/home``. Befindet sich z.B. das "
+#~ "Kollegiumstauschverzeichnis auf der selben "
+#~ "Serverpartition wie das Heimatverzeichnis "
+#~ "``H:`` bzw. ``Home_auf_Server``, werden die"
+#~ " Daten auf dem Tauschverzeichnis zum "
+#~ "verbrauchten Plattenplatz hinzugerechnet."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Ein Lehrer kann also auf allen "
+#~ "Netzlaufwerken zusammen nicht mehr als "
+#~ "das voreingestellte Quota belegen."
+#~ msgstr ""
+
+#~ msgid "Ändern von Klassen- und Projektquota"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Unter *Quota* -> *Klassen* können Sie"
+#~ " die Quota für alle Schüler einer "
+#~ "Klasse ändern."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Unter *Quota* -> *Projekte* können Sie"
+#~ " zusätzliche Quota für alle Schüler "
+#~ "eines Projektes vergeben."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Mit *Änderungen übernehmen* werden die "
+#~ "geänderten Quotas in diesen beiden "
+#~ "Fällen nicht in einer Datei abgelegt,"
+#~ " sondern gleich in die "
+#~ "*Sophomorix*-Datenbank geschrieben und sind "
+#~ "damit sofort gültig."
+#~ msgstr ""
+
+#~ msgid "Sonderquota: Quota für Administratoren und einzelne Schüler"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Mittels *Quota* -> *Sonderquota* in der"
+#~ " *Schulkonsole* können Sie nun Quota "
+#~ "für"
+#~ msgstr ""
+
+#~ msgid "einzelne Schüler,"
+#~ msgstr ""
+
+#~ msgid "Administratoren und"
+#~ msgstr ""
+
+#~ msgid "den max. für Homepages zur Verfügung stehenden Platz (Webspace)"
+#~ msgstr ""
+
+#~ msgid "festlegen."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Für den *Webspace* und die "
+#~ "*Administratoren* können einfach die Werte "
+#~ "überschrieben werden und dann mittels "
+#~ "*Änderungen übernehmen* gesetzt werden."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Für einzelne Schüler müssen Sonderquota "
+#~ "erst neu angelegt werden, indem der "
+#~ "Login-Name und die gewünschten Quota "
+#~ "eingegeben werden. Nach einem Klick auf"
+#~ " *Änderungen übernehmen* ist dann der "
+#~ "Schüler in einer Schülerliste unterhalb "
+#~ "des Abschnitts für die Administratoren "
+#~ "aufgeführt."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Für bereits dort vorhandene Schüler "
+#~ "können Sie einfach die Quotawerte "
+#~ "überschreiben und dann mittels *Änderungen "
+#~ "übernehmen* setzten."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Die obige wichtige Anmerkung gilt auch"
+#~ " für Schüler: Befindet sich z.B. das"
+#~ " Klassentauschverzeichnis eines Schülers auf "
+#~ "der selben Serverpartition wie das "
+#~ "Heimatverzeichnis ``H:`` bzw. ``Home_auf_Server``,"
+#~ " werden die Daten auf dem "
+#~ "Tauschverzeichnis zum verbrauchten Plattenplatz "
+#~ "hinzugerechnet."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Ein Schüler kann also auf allen "
+#~ "Netzlaufwerken zusammen nicht mehr als "
+#~ "das voreingestellte Quota belegen."
+#~ msgstr ""
+

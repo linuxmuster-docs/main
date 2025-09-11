@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/external-services/unifiwlan/unifischuelernetz.rst:2
+msgid "Einrichtung des Schüler-WLANs"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifischuelernetz.rst:4
+msgid ""
+"Im Schüler-WLAN sind die Geräte der Schüler. Es liegt im blauen Netz der "
+"OPNsense®. Der Netzwerk-Schlüssel des Schüler-WLANs basiert auf ihrem "
+"Benutzernamen und ihrem Kennwort."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifischuelernetz.rst:7
+msgid "Schritt für Schritt"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifischuelernetz.rst:9
+msgid ""
+"Installiere auf dem linuxmuster.net-Server das Paket ``freeradius``. "
+"Siehe :ref:`linuxmuster-freeradius-label`"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifischuelernetz.rst:11
+msgid "Melde Dich am Unifi-Kontroller an `<https://unifi:8443>`_."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifischuelernetz.rst:13
+msgid "Gehe zu `Einstellungen` -> `Profile` -> `NEUES RADIUS-PROFIL ERSTELLEN`."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifischuelernetz.rst:-1
+msgid "Radiusprofil"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifischuelernetz.rst:18
+msgid "Gib dem neuen Radius-Profil einen Namen."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifischuelernetz.rst:20
+msgid ""
+"Trage bei `Radius-Authentifikationsserver` die IP-Adresse des linuxmuster"
+".net-Servers und das Passwort für die APs ein."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifischuelernetz.rst:22
+msgid "Speiche die Einstellungen."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifischuelernetz.rst:24
+msgid ""
+"Gehe zu `Einstellungen` -> `Drahtlose-Netzwerke` -> `NEUES DRAHTLOSES "
+"NETZWERK HINZUFÜGEN`."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifischuelernetz.rst:-1
+msgid "Schülernetz"
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifischuelernetz.rst:29
+msgid "Gib dem Schüler-WLAN einen Namen."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifischuelernetz.rst:31
+msgid "Sicherheit ist `WPA Enterprise`."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifischuelernetz.rst:33
+msgid "Wähle das vorher definierte Radius-Profil."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifischuelernetz.rst:35
+msgid ""
+"Da das blaue Netz der OPNsense® als getaggtes VLAN mit der VLAN-ID 10 zu "
+"den APs kommt, setze ein Häkchen bei VLAN und gib als VLAN-ID 10 ein."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifischuelernetz.rst:37
+msgid "Speichere die Enstellungen."
+msgstr ""
+
+#: ../../source/external-services/unifiwlan/unifischuelernetz.rst:39
+msgid "Das Schüler-WLAN wird jetzt an die APs ausgerollt."
+msgstr ""
+

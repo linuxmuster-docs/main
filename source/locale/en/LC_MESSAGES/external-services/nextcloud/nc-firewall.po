@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:5
+msgid "Firewall-Regeln"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:7
+msgid ""
+"Damit die Nextcloud funktionieren kann, braucht Sie Zugriff auf das AD "
+"des Servers. Möchtest Du auch auf Verzeichnisse und Dateien zugreifen, "
+"muss die OpnSense auch Samba-Anfragen an den Server weiterleiten."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:9
+msgid ""
+"In beiden Fällen müssen Anfragen vom Docker-Host an den Server "
+"weitergeleitet werden"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:13
+msgid ""
+"Jede Öffnung der Firewall birgt Sicherheitsrisiken. Ingesamt müssen diese"
+" vor der Einrichtung bewertet werden."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:16
+msgid "Firewallregel für den Zugriff auf das AD"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:18
+msgid ""
+"Wenn ein Service, wie die Nextcloud oder Moodle auf das AD des Servers "
+"zugreifen möchte, wird er die Anfrage an die Firewall stellen. Die "
+"Firewall sollte dann diese Anfrage an den Server weiterleiten."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:20
+msgid ""
+"Die Firewallregel wird also eine Portweiterleitung des Ports 636 (ldaps) "
+"sein."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:22
+msgid ""
+"Melde Dich als root an der OpnSense an und navigiere zu ``Firewall -> NAT"
+" -> Portweiterleitung``."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:-1
+msgid "Firewall Portweiterleitung"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:28
+msgid ""
+"Klicke auf Hinzufügen um eine neue Firewallregel hinzuzufügen und trage "
+"die folgenden Werte ein."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:30
+#: ../../source/external-services/nextcloud/nc-firewall.rst:58
+msgid "Firewall Portweiterleitung ldaps"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:34
+msgid ""
+"Bei *Ziel-IP umleiten* trägst Du natürlich die IP-Adresse Deines Servers "
+"ein. Im Allgemeinen wird das 10.0.0.1 sein. In der lmn6 war das "
+"10.16.1.1."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:37
+msgid "Externer NC-Docker"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:39
+msgid ""
+"Steht der NC-Docker extern so ist folgende Einstellung für die WAN-"
+"Schnittstelle zu setzen:"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:41
+msgid "WAN-Port Einstellungen"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:48
+msgid "Firewallregel für den Zugriff über Samba"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:52
+msgid ""
+"Sollte der Nextcloud-Servicve extern stehen, so sollten diese Ports nicht"
+" weitergeleitet werden."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:54
+msgid ""
+"Für den Zugriff über Samba müssen die Ports ``139 und 445`` an den Server"
+" weiter geleitet werden. Dazu legst Du erst mal einen Alias an."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:56
+msgid "Navigiere auf Firewall -> Aliase."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:62
+msgid ""
+"In der Zeile unter dem letzten Alias klickst Du auf ``+`` um einen neuen "
+"Alias anzulegen."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:64
+msgid "Firewall neuer Alias"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:68
+msgid "Und trage die folgenden Werte ein."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:70
+msgid "Firewall SMB Alias"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:74
+msgid "Klicke anschließend auf ``Speichern``."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:76
+msgid ""
+"Jetzt kommt noch die eigentliche Firewall-Regel. Navigiere wieder zu "
+"``Firewall -> NAT -> Portweiterleitung``."
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:82
+msgid ""
+"Klicke auf ``Hinzufügen``, um eine neue Firewallregel hinzuzufügen und "
+"trage die folgenden Werte ein:"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:-1
+msgid "Firewall Portweiterleitung SMB"
+msgstr ""
+
+#: ../../source/external-services/nextcloud/nc-firewall.rst:88
+msgid ""
+"Bei Quelle trägst Du die IP-Adresse und die Netzwerkmaske Deines Docker-"
+"Hosts ein. Und bei *Ziel-IP umleiten* trägst Du wieder die IP-Adresse "
+"Deines Servers ein. Im Allgemeinen wird das ``10.0.0.1`` sein. In der "
+"lmn6 war dies die IP ``10.16.1.1``."
+msgstr ""
+

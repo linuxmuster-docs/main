@@ -27,7 +27,7 @@ Um Klassenlisten zu aktualisieren, ist nach erfolgreicher Anmeldung als Lehrer d
    :alt: choose enrole
    :align: center
 
-Jede Klasse, die dem Leher zugeordnet ist, ist mit einem Auswahlhäkchen markiert. Für Klassen, die nun dem Lehrer 
+Jede Klasse, die dem Lehrer zugeordnet ist, ist mit einem Auswahlhäkchen markiert. Für Klassen, die nun dem Lehrer 
 neu hinzugefügt werden sollen, ist das Häkchen vor der betreffenden Klasse zu setzen. Für Klassen, die im neuen 
 Schuljahr nicht mehr dem Lehrer zugeordnet sein sollen, ist das Häkchen zu deaktivieren.
 

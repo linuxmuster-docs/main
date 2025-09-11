@@ -90,7 +90,7 @@ Du gelangst direkt zum Installer und kannst das Layout der Tastatur festlegen.
    :align: center
    :alt: OPNsense: Installer keymap
 
-   INstaller: Tstaturlayout festlegen
+   Installer: Tastaturlayout festlegen
 
 Standardmäßig ist ein amerikanisches Tastaturlayout voreingestellt. Gehe mit den Pfeiltasten auf den Eintrag ``( ) German (no accent keys)``. Wählen diesen mit ``<Select>`` aus.
 
@@ -200,7 +200,7 @@ Wähle danach die Option ``Exit and reboot`` aus.
 
 .. hint::
 
-   Solltest Du nicht zum Entfernen, das Installationsmedium aufgefordert werden, fahre Deine neue Firewall herunter (schalte sie aus). 
+   Solltest Du nicht zum Entfernen des Installationsmedium aufgefordert werden, fahre Deine neue Firewall herunter (schalte sie aus). 
    
    Ändere die Boot-Reihenfolge zurück (Start via Festplatte).
    
@@ -569,6 +569,10 @@ Das Update ist erfolgreich durchgeführt, wenn du wieder zu dieser Ansicht gelan
    
    NIC Zuordnung nach Neustart
 
+.. hint::
+
+   Stand Sept. 24 für die OPNsense |reg| ist die Version 24.1.10_8
+
 Klappt das Update, starte die OPNsense |reg| neu.
 
 Konfiguration der OPNsense |reg|
@@ -740,15 +744,23 @@ Melde Dich wieder mit ``root`` und dem Passwort ``Muster!`` an.
 
 DHCP abschalten
 ---------------
-Jetzt musst Du den DHCP-Service der Firewall abschalten. Der wird ja später vom Server übernommen. 
+Jetzt musst Du den DHCP-Service der Firewall abschalten. Dieser wird vom Server übernommen. 
 
 .. figure:: media/basis_opnsense_051.png
    :align: center
-   :alt: OPNsense: GUI - deactivate DHCP
+   :alt: OPNsense: GUI - deactivate ISC DHCP
    
-   DHCP deaktivieren
+   ISC DHCP deaktivieren
 
-Gehe auf ``Dienste -> DHCPv4 -> [LAN]`` und lösche den Haken bei ``Aktivieren``, wenn gesetzt. ``Speichern`` lässt Dich Deine Einstellungen unten auf der Seite.
+Gehe auf ``Dienste -> ISC DHCPv4 -> [LAN]`` und lösche den Haken bei ``Aktivieren``, wenn gesetzt. ``Speichern`` lässt sich Deine Einstellungen unten auf der Seite.
+
+Prüfe zudem, ob der neue Kea DHCP Server aktiviert ist. Falls ja, deaktiviere diesen. Hierzu gehst Du auf ``Dienste -> Kea DHCP [new] -> [Kea DHCP v4] -> Allgemeine Einstellungen``. Sollte der Halen bei ``Aktiviert`` gesetzt sein, musst Du diesen deaktivieren.
+
+.. figure:: media/basis_opnsense_051b.png
+   :align: center
+   :alt: OPNsense: GUI - deactivate Kea DHCP
+   
+   Kea DHCP deaktivieren
 
 
 Zusätzliche Netzwerkkarte hinzufügen (Optional)
@@ -827,42 +839,62 @@ Sollten Dir - wie in nachstehender Abbildung - unter dem Reiter ``Aktualisierung
 
 |...| dann klicke in o.g. Fenster ``Jetzt aktualisieren``. 
 
-.. hint::
+|...| je nach Update/Upgrade erhälst Du Aktualisierungshinweise
 
-   Falls Du nicht ins Internet kommst, kann es an der Gateway-Einstellung liegen. Gehe auf ``System`` --> ``Gateways`` --> ``Einzeln`` und editiere Dein Gateway (WANGW).
+.. figure:: media/basis_opnsense_057b.png
+   :align: center
+   :alt: OPNsense: GUI - updates part1
+   
+   Aktualisierungshinweise
 
-   Setze einen Haken bei ``Deaktiviere Gatewayüberwachung``, speichere die Einstellung und übernimm die Änderung. Jetzt ist Dein Gateway online und Du kommst ins Internet. Erstaunlicherweise kannst Du die Gatewayüberwachung wieder aktivieren, ohne dass das Gateway offline geht.
+|...| und Hinweise zur neuen Version
+   
+.. figure:: media/basis_opnsense_057c.png
+   :align: center
+   :alt: OPNsense: GUI - updates available
+   
+   Hinweise zur neuen Version
+   
+|...| aktualisiere nun 
+   
+.. figure:: media/basis_opnsense_057d.png
+   :align: center
+   :alt: OPNsense: GUI - updates available
+   
+   Update/Upgrade ausführen
+   
+|...| je nach Updates/Upgrades kann ein Neustart der Firewall erforderlich sein
+   
+.. figure:: media/basis_opnsense_057e.png
+   :align: center
+   :alt: OPNsense: GUI - updates available
+   
+   Neustart erforderlich
 
-Je nach gefundenen Aktualisierungen, kann ein Neustart erforderlich sein. Dies wird vor dem Update abgefragt und ist zu bestätigen.
+|...| nach dem Neustart und der erneuten Anmeldung solltest Du das Dashboard der OPNsense |reg| sehen.
 
 .. figure:: media/basis_opnsense_058.png
    :align: center
-   :alt: OPNsense: GUI - Reboot
+   :alt: OPNsense: GUI - dashboard
    
-   Reboot bestätigen
+   Dashboard nach erneuter Anmeldung
 
-Danach werden die Aktualisierungen heruntergeladen und angewendet.
+|...| prüfe jetzt die Gateway-Einstellungen. Gehe auf ``System`` --> ``Gateways`` --> ``Konfiguration`` und editiere Dein Gateway (WAN_GW) mit dem Stiftsymbol.
 
 .. figure:: media/basis_opnsense_059.png
    :align: center
-   :alt: OPNsense: GUI - running update
+   :alt: OPNsense: Gateway configuration
    
-   Aktualisierungen anwenden
+   Gateway - Konfiguration
 
-Zum Abschluss erfolgt der Neustart automatisch.
+Setze einen Haken bei ``Deaktiviere Gatewayüberwachung``, speichere die Einstellung und übernimm die Änderung. Jetzt ist Dein Gateway online. Du kannst später die Gatewayüberwachung wieder aktivieren, ohne dass das Gateway offline geht.
 
-.. figure:: media/basis_opnsense_060.png
-   :align: center
-   :alt: OPNsense: GUI - automatic reboot
-   
-   Automatischer Neustart
-
-Nach dem Neustart ist die OPNsense |reg| soweit vorbereitet.
+Nach dem erneuten Neustart ist die OPNsense |reg| soweit vorbereitet.
 
 Logout
 ------
 
-.. figure:: media/basis_opnsense_061.png
+.. figure:: media/basis_opnsense_060.png
    :align: center
    :alt: OPNsense: GUI - logout
    

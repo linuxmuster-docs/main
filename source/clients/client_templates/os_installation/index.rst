@@ -74,4 +74,5 @@ Nach Abschluss der Installation und Konfiguration  des Muster-Clients kannst Du 
    linux-clients/index
    linux-clients/installation-popos
    windows10clients/index
+   windows11clients/index
 

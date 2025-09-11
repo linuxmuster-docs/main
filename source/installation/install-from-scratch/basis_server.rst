@@ -131,7 +131,7 @@ Gib die Netzwerkkonfiguration, wie im oberen Bild ein beziehungsweise |...|
 
    Bestätige Deine Einstellungen
 
-Mit ``Èrledigt`` geht es weiter.
+Mit ``Erledigt`` geht es weiter.
 
 .. figure:: media/basis_server_007.png
    :align: center
@@ -161,7 +161,7 @@ Aktualisierung des Installers
 
    Installer aktualisieren
 
-Bei der angebotene Aktualisierung wählst Du ``Akualisieren auf neuen Installer``.
+Bei der angebotenen Aktualisierung wählst Du ``Aktualisieren auf neuen Installer``.
 
 Speichermedien
 --------------
@@ -528,6 +528,6 @@ Anschließend sollte der Log-in nach der Eingabe des Passwortes ``Muster!`` erfo
 
 Mit ``0) Logout`` beendest Du die Verbindung.
 
-.. hint:: Für Anwender einer Vrtualisierungslösung empfehlen wir an dieser Stelle einen Snapshot zu erstellen!
+.. hint:: Für Anwender einer Virtualisierungslösung empfehlen wir an dieser Stelle einen Snapshot zu erstellen!
 
 Weiter geht es jetzt mit :ref:`lmn_pre_install-label`

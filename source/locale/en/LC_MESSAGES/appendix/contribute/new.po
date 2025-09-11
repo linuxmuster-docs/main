@@ -1,0 +1,332 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/appendix/contribute/new.rst:4
+msgid "Dokumentation lokal bearbeiten und veröffentlichen"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:6
+msgid ""
+"Wenn Du die Dokumentation erweitern willst, z.B. mit einem eigenen HowTo,"
+" ein fehlendes Kapitel ergänzen möchtest, oder größere Änderungen machen "
+"und testen willst, benötigst Du folgende Dinge:"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:8
+msgid "ein Konto bei `Github <https://github.com/join>`_"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:9
+msgid ""
+"Die Software `git <https://git-scm.com/>`_ (wird zur Verwaltung und "
+"Versionierung der Dokumentation verwendet)"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:10
+msgid ""
+"Die Software `sphinx <http://www.sphinx-doc.org>`_ (zum Übersetzen und "
+"Testen der Quelldateien), die wiederum python voraussetzt"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:11
+msgid ""
+"optional: SSH-Schlüssel bei Github `hochladen "
+"<https://help.github.com/articles/generating-an-ssh-key/>`_ (erleichtert "
+"die Arbeit mit git)"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:14
+msgid "Lokale Installation (Ubuntu)"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:16
+msgid ""
+"Mit folgenden Befehlen kannst Du unter einer aktuellen (ab 22.04 LTS) "
+"Ubuntu-Distributionen git (>= 2.39.2), python (>= 3.10) und sphinx (>= "
+"7.2.6) nachinstallieren:"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:26
+msgid "Offizielle Dokumentation kompilieren"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:28
+msgid ""
+"Hast Du bereits bereits eine heruntergeladene Dokumentation aus dem "
+"offiziellen Repository, dann könntest Du nun eine lokale Version der "
+"Dokumentation bauen und betrachten. Ansonsten mach mit dem nächsten Punkt"
+" weiter: `GitHub Konto erstellen`_"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:30
+msgid ""
+"Öffne dazu ein Terminal, navigiere zum Ordner `linuxmuster-docs/main`, "
+"führe `make clean && make html` aus und rufe die Datei `linuxmuster-"
+"docs/main/build/html/index.html` z.B. mit dem Browser Firefox auf, um das"
+" Ergebnis zu betrachten."
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:45
+msgid "GitHub Konto erstellen"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:47
+msgid ""
+"Spätestens jetzt solltest Du ein Konto bei GitHub erstellen: "
+"https://github.com/join."
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:49
+msgid ""
+"Verifziere Deine E-Mail-Adresse. Natürlich kannst Du die Dokumentation zu"
+" GitHub durchlesen. Weiter geht es dann unter https://github.com"
+"/linuxmuster-docs/main"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:53
+msgid ""
+"Im folgenden wird das Konto \"lmn-docs-bot\" verwendet. Überall wo dieser"
+" auftaucht, ersetze ihn durch Dein Kontonamen bei GitHub."
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:56
+msgid "Linuxmuster Dokumentation forken"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:58
+msgid ""
+"Öffne die `linuxmuster.net Dokumentation auf Github <https://github.com"
+"/linuxmuster-docs/main>`_ und klicke auf \"Fork\"."
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:-1
+msgid "Fork on Github"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:64
+msgid ""
+"Öffne nun einen Terminal / Eingabeauffoderung (``Strg+Alt+t`` in Ubuntu) "
+"and gib folgenden Befehl ein:"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:68
+msgid ""
+"Nutze die URL ``git@github.com:lmn-docs-bot/main.git`` falls Du bereits "
+"einen SSH-Schlüssel bei Github hochgeladen hast!"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:77
+msgid "Du kannst nun mit"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:84
+msgid ""
+"die Dokumentation in HTML übersetzen und diese lokal in Deinem Browser "
+"öffnen."
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:87
+msgid "Dokumentation ändern oder neu erstellen"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:89
+msgid ""
+"Die Dokumentation ist in der Markupsprache \"rST\" geschrieben. `Hier "
+"<http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_ findest "
+"Du einen guten Überblick über die häufig verwendeten Elemente."
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:92
+msgid ""
+"Bitte beachte auch unbedingt die :doc:`Leitlinien zur Dokumentation "
+"<guidelines>`, damit die Änderungen schnell eingepflegt werden könnnen!"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:94
+msgid ""
+"Im Verzeichnis ``source`` und den entsprechenden Unterordnern befinden "
+"sich alle Dokumentationsdateien. Öffne einfach eine dieser Dateien und "
+"führe die gewünschten Änderungen durch. Du kannst auch eine neue "
+"Dokumentation in einem der Unterordner anlegen. Erstelle dazu einfach "
+"einen Ordner mit einem passenden Namen und die notwendige ``index.rst`` "
+"Datei."
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:101
+msgid ""
+"Schau Dir auch die anderen Dokumentationsdateien an, um mehr über den "
+"Aufbau und Syntax zu lernen."
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:104
+msgid "Commit und push"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:106
+msgid ""
+"Hast Du alle Änderungen vorgenommen, kannst Du diese nun zur Überprüfung "
+"einreichen. Dazu sind folgende Schritte notwendig:"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:110
+msgid ""
+"Überprüfe bitte zuerst, ob ``make clean && make html`` ohne Fehler "
+"durchläuft! Falls nicht, behebe bitte alle Fehler und Warnungen, bevor Du"
+" Deine Änderungen hochlädst!"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:116
+msgid ""
+"Falls Du neue Dateien oder Ordner erstellt hast, müssen diese noch "
+"hinzugefügt werden:"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:122
+msgid ""
+"Gib nun noch einen Kommentar zu Deinen Änderungen ein und lade alles in "
+"Deinen Fork hoch:"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:130
+msgid "Pull-Request"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:132
+msgid ""
+"Erstelle nun einen \"Pull-Request\" unter `<https://github.com/lmn-docs-"
+"bot/main>`_, indem Du auf ``New Pull Request`` klickst."
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:-1
+msgid "PR on Github"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:138
+msgid ""
+"Wenn Du weitere Änderungen vornehmen möchtest und diese mit ``git commit "
+"-a -m\"My comment\"`` und ``git push`` bei Github hochlädst, werden diese"
+" Änderungen automatisch dem Pull Request hinzugefügt."
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:142
+msgid "Eigenen Fork aktualisieren"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:144
+msgid ""
+"Um später weiter Änderungen vornehmen zu können, kann der eigene Fork bei"
+" GitHub komplett gelöscht und ein neuer erzeugt werden. Alternativ kann "
+"der eigene Fork auf den Stand des offiziellen Repository gebracht werden:"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:146
+msgid "Verschiebe alle lokalen Änderungen mit ``git stash`` in den Hintergrund"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:152
+msgid "Füge (einmalig) einen remote-tracking branch hinzu:"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:158
+msgid "Hole und merge den aktuellen offiziellen branch:"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:167
+msgid ""
+"Wenn der merge nicht in einem ``Fast-forward`` endet, solltest Du besser "
+"den Fork löschen und neu erzeugen. Andernfalls kannst Du jetzt die "
+"offiziellen Änderungen hochladen."
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:173
+msgid "Jetzt kannst Du Deine lokalen Änderungen wieder hervorholen:"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:181
+msgid "Für Fortgeschrittene: andere Zweige bearbeiten"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:183
+msgid ""
+"Unterschiedliche Versionen von linuxmuster.net werden in "
+"unterschiedlichen Zweigen des github-Repository dokumentiert. Die "
+"aktuelle Version ist im Zweig ``master`` untergebracht und obige "
+"Abschnitte beziehen sich darauf."
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:185
+msgid ""
+"Will man einen anderen Zweig bearbeiten, beispielsweise den Zweig "
+"``v7.2``, dann gibt es nur Folgendes zu beachten:"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:187
+msgid ""
+"Man muss einmalig den Zweig mit ``git checkout v7.2`` lokal "
+"initialisieren. Mit ``git branch`` sieht man, welche Zweige aktuell sind."
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:200
+msgid "Man sollte also immer nachschauen, in welchem Zweig man gerade arbeitet."
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:202
+msgid "Die Abschnitte zu ``commit`` und ``push`` stimmen in jedem Zweig."
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:204
+msgid ""
+"Wird ein Pull-Request in Github erstellt, dann ist zu beachten, dass auch"
+" die gleichen Zweige verglichen werden."
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst
+msgid "Pull-Request mit falsch gewähltem Zweig"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:210
+msgid ""
+"Ein Pull-Request mit falsch gewähltem Zweig, die sich nicht automatisch "
+"zusammenführen lassen."
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:212
+msgid ""
+"Aktualisiert man den eigenen Fork über das ``upstream``-Repository, dann "
+"muss man den Befehl zum Zusammenführen anpassen. Ein Ablauf kann dann so "
+"aussehen:"
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:234
+msgid ""
+"Ein \"merge\" des falschen Zweiges, z.B. ``upstream/master`` hätte hier "
+"zu Folge, dass alle Änderungen zwischen den Zweigen zusammengeführt "
+"werden würden. Dies führt bei stark unterscheidenden Zweigen zu Fehlern."
+msgstr ""
+
+#: ../../source/appendix/contribute/new.rst:236
+msgid ""
+"Der ``master``-Zweig ist kein besonderer Zweig. Man kann also dorthin "
+"zurückkehren, wie man zu jedem Zweig wechselt, mit ``git checkout "
+"master``."
+msgstr ""
+

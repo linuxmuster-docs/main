@@ -88,7 +88,7 @@ Nachdem Du die ISO-Datei für Proxmox heruntergeladen hast, wechselst Du in das 
 
 .. code-block:: console
 
-   dd if=proxmox-ve_8.1-1.iso of=/dev/sdX bs=1M status=progress conv=fdatasync
+   dd if=proxmox-ve_8.1-2.iso of=/dev/sdX bs=1M status=progress conv=fdatasync
 
 Verkabelungshinweise
 --------------------
@@ -681,13 +681,15 @@ Ubuntu Server
 
 .. hint:: 
 
-   Beachte für den Download des Ubuntu Servers, dass du immer die Version verwendest, die in den Systemvoraussetzungen genannt wurde. Zum jetzigen Zeitpunkt ist dies in der Angabe der URL berücksichtigt. 
+   Beachte für den Download des Ubuntu Servers, dass du immer die Version verwendest, die in den Systemvoraussetzungen genannt wurde. Gehe auf https://releases.ubuntu.com/jammy/ und überprüfe die dort zum Herunterladen angebotene Version für 22.04.-live-server-amd64 und deren Checksumme.
+
+   Zum jetzigen Zeitpunkt ist dies in der Angabe der URL berücksichtigt, muss also eventuell angepasst werden.
 
 In dem nun geöffneten Fenster trägst Du die URL
 
 .. code::
    
-   https://releases.ubuntu.com/jammy/ubuntu-22.04.3-live-server-amd64.iso
+   https://releases.ubuntu.com/jammy/ubuntu-22.04.5-live-server-amd64.iso
 
 ein (copy&paste). Anschließend betätigst Du dann den Button ``Query URL``.
 
@@ -710,7 +712,7 @@ Wähle wie dargestellt: ``SHA-256`` und trage die Checksumme ein:
 
 .. code:: 
   
-  a4acfda10b18da50e2ec50ccaf860d7f20b389df8765611142305c0e911d16fd
+  9bc6028870aef3f74f4e16b900008179e78b130e6b0b9a140635434a46aa98b0
 
 Das Herunterladen des ISOs beginnt mit ``Download``.
 
@@ -822,7 +824,7 @@ Das Entpacken kann einige Zeit in Anspruch nehmen. Anschließend sollte sich in 
 
 .. code::
 
-   openssl dgst -sha256 -verify OPNsense-24.1.pub -signature /tmp/image.sig OPNsense-24.1-dvd-amd64.iso.bz2
+   openssl dgst -sha256 -verify OPNsense-24.1.pub -signature /tmp/image.sig OPNsense-24.1-dvd-amd64.iso
 
 Der letzte Befehl sollte Dir ein ``Verified OK`` liefern.
 

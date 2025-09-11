@@ -1,0 +1,92 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/systemadministration/printer/printers-linux-clients.rst:2
+msgid "Drucker am Linux-Client"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-linux-clients.rst:4
+msgid ""
+"In dieser Dokumentation wird davon ausgegangen, dass der Linux-Client "
+"mithilfe des aktuellen Pakets linuxmuster-linuxclient7 der Domäne "
+"hinzugefügt wurde."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-linux-clients.rst:7
+msgid "Vorgehen"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-linux-clients.rst:9
+msgid "Drucker - wie zuvor dokumentiert - auf dem Server einrichten."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-linux-clients.rst:10
+msgid ""
+"Linux-Client erstellen wie unter ref:`install-linux-clients-label` "
+"beschrieben"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-linux-clients.rst:11
+msgid ""
+"ggf. das CUPs Browsing auf dem Server anpassen, sofern nicht jeder "
+"Rechner alle Drucker anzeigen soll. (siehe: ref:`install-linux-clients-"
+"label`)"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-linux-clients.rst:12
+msgid "Auf dem Server cupsd neu starten."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-linux-clients.rst:13
+msgid "Linux-Client neu synchronisieren."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-linux-clients.rst:14
+msgid ""
+"Nach der Anmeldung prüfen, ob Drucker angezeigt werden und dann Drucker "
+"testen."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-linux-clients.rst:17
+msgid "Drucker testen"
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-linux-clients.rst:19
+msgid ""
+"Nachdem der Linux-Client neu gestartet und synchronisiert wurde, meldest "
+"Du Dich an und prüfst, ob unter ``Drucker`` alle zuvor auf dem Server "
+"eingerichteten Drucker angezeigt werden. Dies muss der Fall sein, sofern "
+"aus dem jeweiligen Raum oder von dem jeweiligen PC ein Zugriff auf dem "
+"Drucker überhaupt gewünscht ist und zuvor eingerichtet wurde."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-linux-clients.rst:21
+msgid ""
+"Markiere einen Drucker, klicke mit der rechten Maustaste und wähle im "
+"Kontextmenü den Punkt ``Eigenschaften`` aus. Klicke unterhalb von ``Tests"
+" und Wartungen`` den Button ``Testseite drucken`` aus."
+msgstr ""
+
+#: ../../source/systemadministration/printer/printers-linux-clients.rst:23
+msgid "Führe das Verfahren aus allen Räumen und von allen PCs durch."
+msgstr ""
+

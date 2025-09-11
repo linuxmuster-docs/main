@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/systemadministration/printer/add-printer-devices.rst:2
+msgid "Drucker via Schulkonsole hinzufügen"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printer-devices.rst:6
+msgid ""
+"Viele Printserver und Netzwerkdrucker sind in der Lage, Ihre IP-Adresse "
+"von einem DHCP-Server zu beziehen. Zuerst muss der Drucker am Server "
+"mithilfe der Schulkonsole hinzugefügt werden. Hierbei wird dem Drucker "
+"ein Name sowie eine IP-Adresse zugewiesen."
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printer-devices.rst:10
+msgid ""
+"Für das folgende Beispiel nehmen wir an, der Drucker stehe in Raum "
+"\"r200\", bekomme den Namen \"r200-pr01\", habe die MAC-Adresse "
+"\"00:11:22:33:44:55\" und bekomme entsprechend einem IP-Adressschema die "
+"IP-Adresse 10.2.200.101."
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printer-devices.rst:15
+msgid ""
+"Melde Dich als ``global-admin`` in der `Schulkonsole (https://10.0.0.1) "
+"<https://10.0.0.1>`_ an. Wähle dort links im Menü ``Geräteverwaltung`` "
+"das Untermenü ``Geräte`` aus."
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printer-devices.rst:-1
+msgid "Schulkonsole devices"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printer-devices.rst:22
+msgid "Klicke unterhalb der Geräteliste auf den Eintrag ``Gerät hinzufügen``."
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printer-devices.rst:24
+msgid "Es wird eine leere Zeile zur Liste hinzugefügt."
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printer-devices.rst:-1
+msgid "Schulkonsole neuer Drucker"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printer-devices.rst:30
+msgid ""
+"Die Option PXE ist zu deaktivieren, da die Drucker nicht via PXE starten."
+" Als Gruppe ist ``nopxe`` einzutragen."
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printer-devices.rst:32
+msgid "Für o.g. Beispieldrucker stellt sich der Eintrag wie folgt dar:"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printer-devices.rst:-1
+msgid "Schulkonsole Eintragungen für den Beispieldrucker"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printer-devices.rst:38
+msgid "Bestätige den Eintrag mit ``speichern & importieren``."
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printer-devices.rst:42
+msgid ""
+"Den hier vergebenen Druckernamen musst Du später in identischer "
+"Schreibweise in CUPS angeben (siehe nächstes Unterkapitel)."
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printer-devices.rst:44
+msgid "Es erscheint ein Fenster, in dem der Vorgang bestätigt wird."
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printer-devices.rst:-1
+msgid "Schulkonsole: Drucker hinzugefügt"
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printer-devices.rst:50
+msgid ""
+"Danach ist ein Neustart des Druckers empfehlenswert, damit dieser die "
+"neue IP-Adresse übernimmt."
+msgstr ""
+
+#: ../../source/systemadministration/printer/add-printer-devices.rst:52
+msgid ""
+"Die Erreichbarkeit des Druckers sollte nach dem Neustart des Druckers vom"
+" Server aus vorab mithilfe des ping-Befehl überprüft werden."
+msgstr ""
+

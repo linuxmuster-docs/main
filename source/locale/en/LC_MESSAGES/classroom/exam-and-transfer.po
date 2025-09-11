@@ -1,0 +1,618 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/classroom/exam-and-transfer.rst:5
+msgid "Prüfungsmodus"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:10
+msgid ""
+"In einem Kurs / einer Klasse können Schülerkonten in den Prüfungsmodus "
+"versetzt werden, ebenso kann man mit oder ohne Prüfungsmodus Schülern "
+"Dateien austeilen und von dort wieder einsammeln. Voraussetzung für diese"
+" Funktionen ist die :ref:`Aufnahme des Schülers <session-setup-label>` in"
+" einen Kurs."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:14
+msgid ""
+"Öffne in der Schulkonsole unter ``KLASSENZIMMER -> Session-PREVIEW`` den "
+"angelegten Kurs oder die gewünschte Klasse."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:20
+msgid "WebUI Start Teacher Session"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:20
+msgid "Starte die Session für die Klasse"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:22
+msgid "Die Liste mit Schülern des Kurses wird angezeigt."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:28
+msgid "WebUI Session Members"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:28
+msgid "Teilnehmer der ausgewählten"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:30
+msgid ""
+"Der Prüfungsmodus wird aktiviert, indem Du auf das Prüfungssymbol "
+"klickst. Du erhälst in einem neuen Fesnter die Rückfrage, ob Du den "
+"Prüfungsmodus wirklich starten möchtest. Bestätige dies mit einem Klick "
+"auf ``PRÜFUNGSMODUS STARTEN``."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:36
+msgid "WebUI Start Exam Modus"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:36
+msgid "Starte den Prüfungsmodus"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:38
+msgid ""
+"Wurde der Prüfungsmodus aktiviert, so erkennst Du in der Spalte mit dem "
+"Prüfungssymbol pro Teilnehmer ein rotes Rechteck mit dem Prüfungssymbol "
+"und dem Namen des Lehrers, der für diese Teilnehmer den Prüfungsmodus "
+"aktiviert hat."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:44
+msgid "WebUI Activated Exam Modus"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:44
+msgid "Aktivierter Prüfungsmodus"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:47
+msgid "Prüfungsmodus = Klassenarbeitsmodus"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:49
+msgid ""
+"Bei Aktivierung des Prüfungsmodus wird für jedes Schülerkonto ein neues "
+"Konto angelegt mit dem bisherigen Kontonamen mit angehängter Zeichenkette"
+" ``-exam``. Ebenso wird der Schüler in eine zugehörige Klasse \"-exam\" "
+"gesetzt (siehe Abbildung). Das Passwort zur Anmeldung wird dabei "
+"übernommen."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:55
+msgid "WebUI New Accounts"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:55
+msgid "Angelegte Schüleraccounts im Prüfungsmodus"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:57
+msgid ""
+"In o.g. Abbildung müsste sich der Benutzer ``Achim Testuser`` nun mit dem"
+" Login ``testuac-exam`` und seinem bisherigen Kennwort am Client-PC "
+"anmelden. Zum Zeitpunkt des aktivierten Prüfungsmodus wurde die Klasse "
+"``10a-exam`` angelegt."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:59
+msgid ""
+"Die Prüfungsaufsicht übernimmt der Lehrer, der den Prüfungsmodus "
+"aktiviert hat. Dies ist in den roten Rechtecken zu erkennen."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:61
+msgid ""
+"Der Prüfungsmodus bleibt so lange erhalten, bis der Lehrer (oder auch ein"
+" anderer Lehrer) den Haken bei dem Schülerkonto entfernt."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:67
+msgid "WebUI Deactivate Exam Mode"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:67
+msgid "Beende den Prüfungsmodus"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:69
+msgid ""
+"Klicke zum Beende des Prüfungsmodus auf der rot hinterlegte "
+"Prüfungssymbol."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:75
+msgid "WebUI Confirm Deactivation Exam Mode"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:75
+msgid "Bestätige das Beendes Prüfungsmodus"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:77
+msgid ""
+"Du erhälst ein Fenster mit der Nachfrage, ob die den Prüfungsmodus "
+"wirklich beenden möchstest. Hast Du alle gewünschten Daten der Prüflinge "
+"zuvor eingesammelt, bestätige diesen Vorgang mit ``PRÜFUNGSMODUS "
+"BEENDEN``."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:83
+msgid "WebUI Deactivated exam Mode"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:83
+msgid "Prüfungsmodus beendet"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:85
+msgid ""
+"Nachdem der Prüfungsmodus beendet wurde, werden alle Benutzer wie zuvor "
+"dargestellt und die Nutzung des Internet sowie der Drucker automatisch "
+"aktiviert."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:89
+msgid "Ablauf der Prüfung"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:91
+msgid "Der Lehrer meldet sich an der Schulkonsole an."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:92
+msgid "Der Lehrer wählt unter Session-PREVIEW die gewünschte Klasse aus."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:93
+msgid "Der Lehrer aktiviert mit dem Prüfungssymbol den Prüfungsmodus."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:94
+msgid ""
+"Der Lehrer teilt den Prüflingen im Raum mit wie diese sich am PC für die "
+"Prüfung anmelden müssen (<bisherigsLogin>+\"-exam\" & bisheriges "
+"Kennwort)."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:95
+msgid ""
+"Der Lehrer teilt die Prüfungs und ggf. weitere Vorlagen an die "
+"Prüfungsteilnehmer aus."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:96
+msgid ""
+"Die Dateien liegen für die Prüfungsteilnehmer im Verzeichnis "
+"``transfer/LEHRER/_collect``."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:97
+msgid "Schüler nutzen die bereitgestellten Daten und erstellen ihre Lösungen."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:98
+msgid ""
+"Schüler speichern die bearbeiteten Daten unter einem vorher vom Lehrer "
+"mitgeteilen Namen bzw. Namensschema ab und lege diese zur Abgabe in das "
+"Verzeichnis ``transfer/LEHRER/_collect``."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:99
+msgid ""
+"Der Lehrer sammelt zum Abschluss der Prüfung alle Abgaben mit dem Button "
+"``von allen einsammeln`` ein."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:100
+msgid ""
+"Der Lehrer überprüft die eingesammelten Daten, die für diesen im Ordner "
+"``transfer/collected/`` zu finden sind."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:101
+msgid "Liegen alle Daten wie gewünscht vor, beendt der Lehrer den Prüfungsmodus."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:105
+msgid "Austeilen und Einsammeln"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:108
+msgid "Lehrer"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:110
+msgid ""
+"Hast Du als Lehrer, wie zuvor beschrieben, für die gewünschte Klasse den "
+"Prüfungsmodus aktiviert, siehst Du folgende Anzeige:"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:116
+msgid "WebUI Exam Started"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:116
+msgid "Prüfungsmodus aktiviert"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:118
+msgid ""
+"Stellen nun den Prüflingen die Prüfung bzw. Vorlagendateien bereit. "
+"Klicke hierzu unten links auf den Button ``Mit allen teilen``."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:124
+msgid "WebUI Share Files"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:124
+msgid "Dateien bereitstellen"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:126
+msgid ""
+"Es öffnet sich ein neues Fenster, in dem Dir der Inhalt Deines Home-"
+"Verzeichnisses dargestellt wird."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:132
+msgid "WebUI Share Files Home Directory"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:132
+msgid "Dateien bereitstellen: Verzeichnisansicht"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:134
+msgid ""
+"Sollten die gewünschten Dateien noch nicht in Deinem Ordner sein, klickst"
+" Du oben rechts auf das Wolkensymbol, um Dateien von Deinem USB-Stick "
+"oder dem lokalen PC in Dein Home-Verzeichnis hochzuladen."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:136
+msgid "Die hochgeladenen Dateien werden Dir ebenfalls hier angezeigt."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:142
+msgid "WebUI Share Files List"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:142
+msgid "Dateien bereitstellen: Auflistung der Dateien im Home-Verzeichnis"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:144
+msgid ""
+"Aktiviere nun die gewünschten Dateien und /oder Verzeichniss, die Du den "
+"Prüflingen austeilen möchtest."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:150
+msgid "WebUI Activate Files"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:150
+msgid "Dateien bereitstellen: Aktiviere die bereitzustellenden Dateien"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:152
+msgid "Um die Dateien auszuteilen, klickst Du nun unten rechts auf ``TEILEN``."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:154
+msgid ""
+"Bist Du als Lehrer an einem Client angemeldet, so findest Du die zu "
+"teilenden Daten unter Deinem Home-Laufwerk ``H:\\`` im Unterverzeichnis "
+"``transfer``."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:160
+msgid "WebUI Share Files Client View"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:160
+msgid "Zu teilende Daten am Client"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:163
+msgid "Prüflinge"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:165
+msgid ""
+"Nachdem der Leher den Prüflingen ihre Prüfungs-Accounts mitgeteilt hat, "
+"melden diese sich mit den Daten an."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:166
+msgid ""
+"Der Prüfling geht im Dateiverzeichnis in sein Home-Laufwerk (H:\\) in den"
+" Transfer-Ordner, dort in den Ordner des Lehrers der Prüfung."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:167
+msgid ""
+"Im Ordner H:\\transfer\\LEHRER\\ werden die bereitgestellten Dateien in "
+"ein anderes Verzeichnis übernommen, dort bearbeitet und gespeichert."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:168
+msgid ""
+"Bei Abschluss der Prüfung kopiet der Prüfling zur Abgabe die bearbeiteten"
+" Dateien in das Verzeichnis ``H:\\transfer\\LEHRER\\_collect\\``."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:169
+msgid "Der Lehrer sammelt alle abgegebene Dateien ein und schließt die Prüfung."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:170
+msgid "Der Prüfling meldet sich ab."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:173
+msgid "Anmeldung"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:175
+msgid ""
+"Jeder Prüfling meldet sich an dem Client an. Hierzu ist der bisherige "
+"Login + die Erweiterung -exam und das bisherige Kennwort anzugeben. "
+"Nachstehende Abbildungen verdeutlichen dies einmal für einen Windows-"
+"Client und für einen Ubuntu-Client:"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:182
+msgid "Exam Login Windows Client"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:182
+msgid "Prüfungsanmeldung Windows-Client"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:184
+msgid ""
+"Nach erfolgreicher Anmeldung am Client sieht der Prüfling die Einrichtung"
+" der Prüfungsumgebung."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:190
+msgid "Exam Login Windows Client Setup"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:190
+msgid "Prüfungsanmeldung Windows-Client - Setup"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:192
+msgid "An einem 22.04 Ubuntu-Client mit Gnome sieht die Anmeldung wie folgt aus:"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:198
+msgid "Exam Login Ubuntu"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:198
+msgid "Prüfungsanmeldung Ubuntu-Client"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:200
+msgid "Angabe des Kennworts."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:206
+msgid "Exam Login Ubuntu Password"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:206
+msgid "Prüfungsanmeldung Ubuntu-Client - Eingabe des Kennworts"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:208
+msgid ""
+"Hat sich der Prüfling erfolgreich am Client angemeldet und ruft den "
+"Dateimanager auf, so sieht dieser folgende Netzlaufwerke:"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:214
+msgid "Exam Login Network Shares"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:214
+msgid "Prüfungsanmeldung: Netzwerklaufwerke"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:216
+msgid ""
+"Die bereitgestellten Dateien findet der Prüfling nun im Verzeichnis "
+"``H:\\transfer\\LEHRER\\``."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:222
+msgid "Exam Login Network Shares Shared Files"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:222
+msgid "Prüfung: Bereitgestellte Dateien"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:224
+msgid ""
+"In der Prüfung bearbeitet der Prüfling die bereitgestellten Dateien und "
+"speichert seine Lösung zur Abgabe in dem Verzeichnis "
+"``H:\\transfer\\LEHRER\\_collect\\``."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:230
+msgid "Exam Finalise files"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:230
+msgid "Prüfung: Dateiabgabe"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:232
+msgid "Unter Windows stellt sich dies für den Prüfling wie folgt dar:"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:234
+msgid "Netzwerkfreigaben"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:240
+msgid "Exam Shares Windows"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:240
+msgid "Prüfung: Netzwerkfreigaben unter Windows"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:242
+msgid "Bereitgestellte Dateien"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:248
+msgid "Exam Windows Shared Files"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:248
+msgid "Prüfung: Bereitgestellte Dateien unter Windows"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:250
+msgid "Abgabe unter ``H:\\transfer\\LEHRER\\_collect\\``"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:256
+msgid "Exam Windows Files finalised"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:256
+msgid "Prüfung: Dateiabgabe unter Windows"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:260
+msgid "Abgaben einsammeln"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:262
+msgid "Der Lehrer sieht in der Schulkonsole die abgegebenen Dateien."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:268
+msgid "Exam Windows Files sent"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:268
+msgid "Prüfung: abgegebene Dateien einsehen"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:270
+msgid ""
+"Um vor Abschluss der Prüfung alle Abgaben einzusammeln, klickst Du unten "
+"links auf ``Von allen einsammeln``. Klicke nun auf ``Move _collect "
+"cirectory from all members``. Es werden nun alle Abgaben in das "
+"Verzeichnis des Lehrers zum Einsammeln der Dateien verschoben."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:277
+msgid "Exam Collect all Files"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:277
+msgid "Prüfung: Alle Dateien einsammeln"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:280
+msgid "Prüfung beenden"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:282
+msgid ""
+"Nachdem alle Dateien eingsammelt wurden, beendet der Lehrer den "
+"Prüfungsmodus."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:288
+msgid "Stop Exam Mode"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:288
+msgid "Prüfung: beenden"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:290
+msgid "Hierzu klickst Du auf das rot hinterlegte Prüfungssymbol."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:293
+msgid "Abgaben einsehen"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:295
+msgid ""
+"Hast Du als Lehrer die Prüfung beendet, kannst Du nun in der Schulkonsole"
+" unter ``Allgemein -> Meine Dateien`` im Ordner ``transfer`` alle bislang"
+" eingesammelten Dateien finden."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:301
+msgid "Check colletced Files"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:301
+msgid "Prüfung: Prüfe Dateiabgaben"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:303
+msgid ""
+"Für die durchgeführte Prüfung gehst Du in den Ordner "
+"``schoolclass_10a_20231209-171650`` - also immer der Ordner mit dem "
+"aktuellen Prüfungsdatum."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:305
+msgid ""
+"Dort findest Du pro Prüfling einen Ordner, in dem sich die abgegebenen "
+"Dateien befinden."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:307
+msgid "Die Abgaben kannst Du markieren und herunterladen."
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:313
+msgid "Download Results"
+msgstr ""
+
+#: ../../source/classroom/exam-and-transfer.rst:313
+msgid "Prüfung: Dateiabgaben herunterladen"
+msgstr ""
+

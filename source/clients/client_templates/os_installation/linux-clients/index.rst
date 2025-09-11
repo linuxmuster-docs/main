@@ -94,7 +94,7 @@ Gib in den ersten Schritten der Installation die gewünschte Sprache und Tastatu
    
    Tastaturlayout auswählen
    
-Lege danach die Installationsart sowie weitere Optionen fest. Falls Du hier Aktualisierungen herunterladen wählst, so muss für dieser Client in der OPNSense|reg| in der NoProxy Gruppe eingetragen sein.
+Lege danach die Installationsart sowie weitere Optionen fest. Falls Du hier Aktualisierungen herunterladen wählst, so muss für dieser Client in der OPNSense® in der NoProxy Gruppe eingetragen sein.
 
 .. figure:: media/00-linux-client-ubu-installation-updates.png
    :align: center
@@ -338,7 +338,7 @@ Rufe hierzu den Befehl auf:
 
    sudo linuxmuster-linuxclient7 prepare-image -y
 
-Der Client erhält daruch Aktualisierungen und es werden einige Dateien (journalctl & apt-caches) aufgeräumt, um Speicherplatz im Image zu sparen.
+Der Client erhält dadurch Aktualisierungen und es werden einige Dateien (journalctl & apt-caches) aufgeräumt, um Speicherplatz im Image zu sparen.
 
 .. attention::
 

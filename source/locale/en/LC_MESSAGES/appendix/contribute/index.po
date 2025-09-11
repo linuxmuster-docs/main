@@ -1,49 +1,88 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, linuxmuster.net
-# This file is distributed under the same license as the linuxmuster.net package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmuster.net 6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-02 10:28+0700\n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Language-Team: English (https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
+"Language-Team: English "
+"(https://www.transifex.com/linuxmusternet/teams/62586/en/)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../source/appendix/contribute/index.rst:2
-msgid "Linuxmuster.net helfen"
-msgstr ""
-
-#: ../../source/appendix/contribute/index.rst:4
-msgid ""
-"Es gibt verschiedene Möglichkeiten, wie Sie helfen können, linuxmuster.net "
-"zu verbessern."
-msgstr ""
-
-#: ../../source/appendix/contribute/index.rst:6
-msgid ""
-"Über linuxmuster.net berichten (z.B. in Blogs, Sozialen Netzwerken, etc.)"
+#: ../../source/appendix/contribute/index.rst:29
+msgid "Mitarbeit"
 msgstr ""
 
 #: ../../source/appendix/contribute/index.rst:7
+msgid "Mitarbeit linuxmuster.net"
+msgstr ""
+
+#: ../../source/appendix/contribute/index.rst:11
+msgid ""
+"Es gibt verschiedene Möglichkeiten, wie Sie helfen können, "
+"linuxmuster.net zu verbessern."
+msgstr ""
+
+#: ../../source/appendix/contribute/index.rst:13
+msgid "Über linuxmuster.net berichten (z.B. in Blogs, Sozialen Netzwerken, etc.)"
+msgstr ""
+
+#: ../../source/appendix/contribute/index.rst:14
 msgid "Fragen stellen und Fehler melden: https://ask.linuxmuster.net"
 msgstr ""
 
-#: ../../source/appendix/contribute/index.rst:8
+#: ../../source/appendix/contribute/index.rst:15
 msgid "selbst Fragen beantworten: https://ask.linuxmuster.net"
 msgstr ""
 
-#: ../../source/appendix/contribute/index.rst:9
+#: ../../source/appendix/contribute/index.rst:16
 msgid "Eigene Tipps und Tricks dokumentieren: https://linuxmuster.net/wiki"
 msgstr ""
 
-#: ../../source/appendix/contribute/index.rst:10
-msgid "Dem Verein beitreten"
+#: ../../source/appendix/contribute/index.rst:17
+msgid "dem Verein beitreten"
 msgstr ""
+
+#: ../../source/appendix/contribute/index.rst:19
+msgid ""
+"Wir freuen uns, wenn Du darüber hinaus an der Dokumentation mitarbeiten "
+"würdest. Dies können"
+msgstr ""
+
+#: ../../source/appendix/contribute/index.rst:21
+msgid "einfache Änderungen auf Github sein,"
+msgstr ""
+
+#: ../../source/appendix/contribute/index.rst:22
+msgid "die Übersetzung von Abschnitten,"
+msgstr ""
+
+#: ../../source/appendix/contribute/index.rst:23
+msgid "die Erstellung neuer Dokumentationskapitel"
+msgstr ""
+
+#: ../../source/appendix/contribute/index.rst:25
+msgid ""
+"Für alle drei Möglichkeiten findest Du links im Menü weitere Hinweise. "
+"Zudem haben wir Dokumentationsleitlinien erstellt. Diese sollten von "
+"allen Mitarbeitenden an der Dokumentation berücksichtigt werden."
+msgstr ""
+
+#~ msgid "Linuxmuster.net helfen"
+#~ msgstr ""
+
+#~ msgid "Dem Verein beitreten"
+#~ msgstr ""
+

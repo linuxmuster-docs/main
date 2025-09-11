@@ -1,0 +1,255 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/setup/setup.rst:5
+msgid "Setup v7.2"
+msgstr ""
+
+#: ../../source/setup/setup.rst:12
+msgid ""
+"Alle linuxmuster 6.x Systeme können statt einer Neuinstallation über eine"
+" :ref:`migration-label` umgezogen werden, dennoch ist die "
+"Erstkonfiguration hier eine notwendige Voraussetzung."
+msgstr ""
+
+#: ../../source/setup/setup.rst:14
+msgid ""
+"Alle linuxmuster 7.1 Systeme werden lediglich über ein :ref:`upgrade-"
+"from-7.1-label` auf linuxmuster v7.2 aktualisiert. Ein erneutes Setup ist"
+" dann nicht mehr erforderlich."
+msgstr ""
+
+#: ../../source/setup/setup.rst:16
+msgid "Es gibt 2 Möglichkeiten, die Erstkonfiguration durchzuführen:"
+msgstr ""
+
+#: ../../source/setup/setup.rst:18
+msgid "Setup mit der Schulkonsole"
+msgstr ""
+
+#: ../../source/setup/setup.rst:19
+msgid "Setup im Terminal"
+msgstr ""
+
+#: ../../source/setup/setup.rst:21
+msgid ""
+"Lies zunächst alle wichtigen Hinweise des Setup Kapitels und mache dann "
+"entweder auf der Schulkonsole (grafisch / GUI) oder im Terminal weiter."
+msgstr ""
+
+#: ../../source/setup/setup.rst:25
+msgid "Wichtige Hinweise"
+msgstr ""
+
+#: ../../source/setup/setup.rst:27
+msgid ""
+"Nach Abschluss dieses Setups sind die (AD-)Domäne und andere Details des "
+"Netzwerks permanent festgelegt und nur durch eine erneute Neuinstallation"
+" änderbar."
+msgstr ""
+
+#: ../../source/setup/setup.rst:29
+msgid ""
+"Es ist daher wichtig, zu diesem Zeitpunkt ein **Snapshot/Backup von "
+"Server und Firewall** anzufertigen."
+msgstr ""
+
+#: ../../source/setup/setup.rst:31
+msgid ""
+"Sollte es beim Setup Fehler geben, oder Einstellungen nochmals geändert "
+"werden müssen, sind die virtuellen Maschinen auf den Stand des Snapshots "
+"zurückzusetzen und das Setup muss erneut aufgerufen werden."
+msgstr ""
+
+#: ../../source/setup/setup.rst:33
+msgid "Beim Domänennamen ist zu beachten:"
+msgstr ""
+
+#: ../../source/setup/setup.rst:35
+msgid ""
+"nutze immer eine echte externe Domain, die auf Deine Organisation "
+"registriert ist -> z.B. ``meineschule.de``"
+msgstr ""
+
+#: ../../source/setup/setup.rst:36
+msgid ""
+"für das Setup von linuxmuster benötigst Du nun eine Subdomain, die vom AD"
+" DNS-Server authoritativ intern aufgelöst wird, aber niemals von extern."
+msgstr ""
+
+#: ../../source/setup/setup.rst:37
+msgid ""
+"der AD DNS-Server arbeitet immer nur für diese eine Subdomain und die "
+"darunter liegenden Namensräume autoritativ."
+msgstr ""
+
+#: ../../source/setup/setup.rst:38
+msgid "alle internen Clients müssen den AD DNS-Server als DNS-Server nutzen."
+msgstr ""
+
+#: ../../source/setup/setup.rst:39
+msgid ""
+"diese Subdomain darf nicht nicht länger als 15 Zeichen sein (NetBIOS-"
+"Name) und keine Satzzeichen enthalten."
+msgstr ""
+
+#: ../../source/setup/setup.rst:40
+msgid "der Fully Qualified Domain Name (FQDN) darf nicht länger als 64 Byte sein."
+msgstr ""
+
+#: ../../source/setup/setup.rst:41
+msgid ""
+"nutze niemals nicht registrierte Domains wie z.B. .local -> "
+"meineschule.local"
+msgstr ""
+
+#: ../../source/setup/setup.rst:43
+msgid ""
+"Beim Setup von linuxmuster gibst Du also einen Domänennamen nach "
+"folgendem Schema an:"
+msgstr ""
+
+#: ../../source/setup/setup.rst:45
+msgid ""
+"hostname.subdomain=NetBIOS-Name.domain.tld ein funktionierendes Beispiel "
+"wäre: server01ad.linuxmuster.meineschule.de"
+msgstr ""
+
+#: ../../source/setup/setup.rst:48
+msgid "server01ad -> hostname"
+msgstr ""
+
+#: ../../source/setup/setup.rst:49
+msgid "linuxmuster -> subdomain"
+msgstr ""
+
+#: ../../source/setup/setup.rst:50
+msgid "domain -> meineschule"
+msgstr ""
+
+#: ../../source/setup/setup.rst:51
+msgid "de -> tld"
+msgstr ""
+
+#: ../../source/setup/setup.rst:53
+msgid ""
+"Es wird also eine extern auflösbare, registrierte Domain genutzt und bei "
+"der Einrichtung des Servers wird eine eigene interne Subdomain als AD-"
+"Domäne angegeben."
+msgstr ""
+
+#: ../../source/setup/setup.rst:55
+msgid ""
+"Zum Beispiel ``linuxmuster.meineschule.de`` -> linuxmuster als Subdomain "
+"zur Domain ``meineschule.de``."
+msgstr ""
+
+#: ../../source/setup/setup.rst:57
+msgid ""
+"Der erste Part ``linuxmuster`` wird in diesem Beispiel dann als SAMBA-"
+"Domäne verwendet."
+msgstr ""
+
+#: ../../source/setup/setup.rst:59
+msgid ""
+"Der volle Name(FQDN) des Servers ist dann "
+"``server.linuxmuster.meineschule.de``."
+msgstr ""
+
+#: ../../source/setup/setup.rst:63
+msgid ""
+"Daraus folgt wie in einem reinen MS-Netzwerk, dass der linuxmuster.net-"
+"Server immer den Service DNS für die Vertrauensstellung liefern muss, "
+"denn er übernimmt die Rolle des Domänencontrollers für die Active Domane."
+" In unserer Beschreibung als SAMBA-Domäne bezeichnet."
+msgstr ""
+
+#: ../../source/setup/setup.rst:65
+msgid ""
+"Alle Hosts, die im Setup konfiguriert werden, müssen bereits laufen "
+"(OPNsense und Server) und sie müssen sich im internen LAN gegenseitig "
+"erreichen."
+msgstr ""
+
+#: ../../source/setup/setup.rst:67
+msgid ""
+"v6.x Systeme, die mithilfe der Migration auf linuxmuster.net 7.2 migriert"
+" werden, können dabei für eine neue (oder die alte) Domäne konfiguriert "
+"werden."
+msgstr ""
+
+#: ../../source/setup/setup.rst:70
+msgid "Anpassung des Netzbereichs"
+msgstr ""
+
+#: ../../source/setup/setup.rst:72
+msgid ""
+"Die Standardkonfiguration sieht vor, dass Geräte im Netzbereich "
+"``10.0.0.0/16`` sind."
+msgstr ""
+
+#: ../../source/setup/setup.rst:74
+msgid ""
+"v6.x Systeme, die mithilfe der Migration auf linuxmuster.net 7.2 migriert"
+" werden, sollten den bisher verwendeten Netzbereich beibehalten."
+msgstr ""
+
+#: ../../source/setup/setup.rst:78
+msgid ""
+"Die erforderlichen Anpassungen der Netzkonfiguration - sofern diese von "
+"dem Standard abweichen sollen - sind vor der Ausführung der "
+"Erstkonfiguration durchzuführen. Zur Durchführung der Anpassungen folge "
+"bitte dem Kapitel :ref:`modify-net-label`."
+msgstr ""
+
+#: ../../source/setup/setup.rst:82
+msgid "Auswahl der Setup-Variante"
+msgstr ""
+
+#: ../../source/setup/setup.rst:85
+msgid "Server-Konsole"
+msgstr ""
+
+#: ../../source/setup/setup.rst
+msgid "Screenshot Server Console"
+msgstr ""
+
+#: ../../source/setup/setup.rst:93
+msgid "Hier geht es zum :ref:`setup-console-label`"
+msgstr ""
+
+#: ../../source/setup/setup.rst:97
+msgid "WEB UI"
+msgstr ""
+
+#: ../../source/setup/setup.rst:99
+msgid "(formerly known as Schulkonsole)"
+msgstr ""
+
+#: ../../source/setup/setup.rst
+msgid "Screenshot Web UI"
+msgstr ""
+
+#: ../../source/setup/setup.rst:107
+msgid "Hier geht es zum :ref:`setup-gui-label`"
+msgstr ""
+

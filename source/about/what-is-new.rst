@@ -17,10 +17,6 @@ Was ist neu in 7.2?
 
 Linuxmuster.net 7.2 ist das Release-Update der linuxmuster.net v7.1. Es erfolgt eine Aktualisierung der bisher eingesetzten Ubuntu LTS Version auf die derzeit aktuellste Ubuntu Server LTS Version. Die Kernpakete der linuxmuster.net Lösung erhalten alle ein Update und stellen viele Verbesserungen und neue Features bereit.
 
-.. attention::
-
-   Die Version linuxmuster.net 7.2 ist derzeit noch im Beta-Stadium und n i c h t für den produktiven Einsatz freigegeben.
-
 Neue Funktionalitäten
 ---------------------
 
@@ -30,7 +26,7 @@ Verbesserte Skalierbarkeit
   * Moderne Bereitstellung zusätzlicher IT-Dienste der Schule innerhalb der Schullösung
 
 Moderne Betriebssystembasis und Steuerung
-  * Aktuelle Betriebssysteme der Server (Ubuntu Server 22.04 LTS & OPNSense |reg| 23.7) und der vorkonfigurierten, kostenlos bereitgestellten Linux-Arbeitsplätze
+  * Aktuelle Betriebssysteme der Server (Ubuntu Server 22.04 LTS & OPNSense |reg| 24.x) und der vorkonfigurierten, kostenlos bereitgestellten Linux-Arbeitsplätze
   * Mit LINBO 4.2: Neues User-Interface für die Steuerung an den Clients, aktuellste Linux-Kernels für aktuelle Hardware, differentielle Images, ntfs3 Kernel-Treiber
   * Webbasierte Steuerung der pädagogischen Funktionen mit einem **responsive design** (passt sich an alle Bildschirmgrößen und -auflösungen an).
   * WebUI mit vielen administrativen Möglichkeiten, die zuvor nur an der Server-Konsole zu erreichen waren (Erstellen von Hardwareklassen, Erstellen von Client-Konfigurationen, Erstellen von differenziellen Images u.v.m.).

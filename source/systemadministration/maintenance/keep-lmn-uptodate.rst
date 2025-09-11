@@ -1,4 +1,4 @@
-Linuxmuster.net aktuell halten
+linuxmuster.net aktuell halten
 ==============================
 
 .. sectionauthor:: `@toheine <https://ask.linuxmuster.net/u/toheine>`_
@@ -6,7 +6,7 @@ Linuxmuster.net aktuell halten
 Update des Ubuntu Servers von linuxmuster.net 
 ---------------------------------------------
 
-Um die linuxmuster.net 7.x zugrunde liegende Ubuntu Version (Ubuntu Server 18.04.x LTS 64bit) zu aktualisieren, beachte bitte nachstehende Hinweise.
+Um die linuxmuster.net 7.x zugrunde liegende Ubuntu Version (Ubuntu Server 22.04.x LTS 64bit) zu aktualisieren, beachte bitte nachstehende Hinweise.
 
 .. attention::
 
@@ -15,20 +15,11 @@ Um die linuxmuster.net 7.x zugrunde liegende Ubuntu Version (Ubuntu Server 18.04
 Keine automatischen Updates
 ---------------------------
 
-Es wird ausdrücklich davon abgeraten den Linuxmuster.net-Server die Option
-``Automatische Updates`` zu aktivieren, so dass
-Paketaktualisierungen automatisch von den Ubuntu-Update-Servern
-heruntergeladen und installiert werden.
+Es wird ausdrücklich davon abgeraten den Linuxmuster.net-Server die Option ``Automatische Updates`` zu aktivieren, so dass Paketaktualisierungen automatisch von den Ubuntu-Update-Servern heruntergeladen und installiert werden.
 
-Automatische Updates sind in der Datei ``/etc/apt/apt.conf.d/20auto-upgrades``
-konfiguriert. Sofern darin der Eintrag ``APT::Periodic::Unattended-Upgrade "1";``
-existiert, muss die ``"1"`` in eine ``"0"`` geändert werden.
+Automatische Updates sind in der Datei ``/etc/apt/apt.conf.d/20auto-upgrades`` konfiguriert. Sofern darin der Eintrag ``APT::Periodic::Unattended-Upgrade "1";`` existiert, muss die ``"1"`` in eine ``"0"`` geändert werden.
 
-Melde Dich zusätzlich bei der entsprechenden `Mailingliste
-<https://lists.ubuntu.com/mailman/listinfo/ubuntu-security-announce>`_
-an oder abonniere den entsprechenden `RSS-Feed
-<http://www.ubuntu.com/usn/rss.xml>`_. Alle Hinweise zu
-Sicherheitsupdates von Ubuntu erhält man unter http://www.ubuntu.com/usn/
+Melde Dich zusätzlich bei der entsprechenden `Mailingliste <https://lists.ubuntu.com/mailman/listinfo/ubuntu-security-announce>`_ an oder abonniere den entsprechenden `RSS-Feed <http://www.ubuntu.com/usn/rss.xml>`_. Alle Hinweise zu Sicherheitsupdates von Ubuntu erhält man unter http://www.ubuntu.com/usn/
 
 
 Aktualisierungen einspielen
@@ -84,11 +75,9 @@ Um die Firewall OPNsense® zu aktualisieren, beachte bitte Hinweise.
 
    Führe Updates bitte regelmäßig manuell durch.
 
-Im Gegensatz zur bisherigen Firewall-Implementierung unter Linuxmuster 6.2, ist in der neuen Linuxmuster 7.x die Firewall relativ
-unabhängig vom eigentlichen Server zu warten. Dementsprechend werden die Updates über die Weboberfläche der Firewall eingespielt.
+Bei linuxmuster.net 7.2 ist die Firewall relativ unabhängig vom eigentlichen Server zu warten. Dementsprechend werden die Updates über die Weboberfläche der Firewall eingespielt.
 
-Verbinde Dich hierzu mit der Firewall über einen Browser. Nach der Anmeldung erscheint das Dashboard (unter Lobby). Darin befindet sich ein Link 
-um direkt Updates einzuspielen.
+Verbinde Dich hierzu mit der Firewall über einen Browser. Nach der Anmeldung erscheint das Dashboard (unter Lobby). Darin befindet sich ein Link um direkt Updates einzuspielen.
     
     .. image:: media/04-opnsense-update.png
         :alt: OPNsense® aktualisieren
@@ -107,7 +96,5 @@ das `Upgrade` entsperrt werden.
         :alt: OPNsense® aktualisieren
         :align: center
 
-Es ist zu empfehlen solche Upgrades außerhalb der regulären Einsatzzeiten der Schule zu betreiben. Bei einem Upgrade startet 
-die Firewall mehrfach neu und unterbricht damit alle Verbindungen nach außen. Zudem kann es zu Problemen mit einzelnen Modulen kommen. 
-Vor dem Update sollte also im Hypervisor (Proxmox, XenServer, ...) unbedingt ein Snapshot erstellt werden, so dass die Maschine im Fehlerfall wieder in den Ausgangszustand
-zurückgesetzt werden kann.
+Es ist zu empfehlen solche Upgrades außerhalb der regulären Einsatzzeiten der Schule zu betreiben. Bei einem Upgrade startet die Firewall mehrfach neu und unterbricht damit alle Verbindungen nach außen. Zudem kann es zu Problemen mit einzelnen Modulen kommen.  Vor dem Update sollte also im Hypervisor (Proxmox, XenServer, ...) unbedingt ein Snapshot erstellt werden, so dass die Maschine im Fehlerfall wieder in den Ausgangszustand zurückgesetzt werden kann.
+

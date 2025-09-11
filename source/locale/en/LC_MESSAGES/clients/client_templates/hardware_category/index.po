@@ -1,0 +1,242 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, linuxmuster.net
+# This file is distributed under the same license as the linuxmuster.net
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmuster.net latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-21 19:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:7
+msgid "Hardwareklasse (HWK) / Gruppe erstellen"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:12
+msgid "Melde Dich als Benutzer ``global-admin`` an der Web-UI an."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:19
+msgid "WebUI login"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:19
+msgid "Anmeldung als Benutzer global-admin"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:21
+msgid ""
+"Erstelle nun die Konfiguration für die neue Hardwareklasse. Klicke links "
+"im Menü auf den Eintrag ``Geräteverwaltung --> Linbo4``."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:27
+msgid "WebUI menue linbo"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:27
+msgid "Menü LINBO4"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:29
+msgid "Nun klickst Du unten links auf ``+ERSTELLEN``."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:31
+msgid ""
+"Es öffnet sich ein Kontextmenü. Du kannst entweder ein leere "
+"``start.conf`` nutzen, oder ein bereits vordefiniertes Template für Dein "
+"gewünschtes Betriebssystem auswählen. Hierbei kannst Du Templates für ein"
+" oder mehrere Betriebssysteme mit oder ohne UEFI-BIOS auswählen und diese"
+" ggf. nach Deinen Vorstellungen anpassen."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:37
+msgid "WebUI menue linbo create start template"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:37
+msgid "Template für die start.conf auswählen"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:39
+msgid ""
+"Es öffnet sich ein Fenster, in dem Du die Namen der neuen Hardwareklasse "
+"angibst. Diesen wirst Du später benötigen, um Geräte dieser "
+"Hardwareklasse zuzuweisen."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:46
+msgid "WebUI menue linbo hwc group name"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:46
+msgid "Namen für die neue Hardwareklasse festlegen"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:48
+msgid ""
+"Die Liste der angelegten Hardwareklassen kann dann - z.B. wie nachstehend"
+" dargestellt - aussehen (andere Namen für die HWK verwendet):"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:55
+msgid "WebUI menue linbo hwc list"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:55
+msgid "Übersicht der Hardwareklassen / Gruppen"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:57
+msgid ""
+"Du rufst nun die Einstellungen der zuvor angelegten Hardwareklasse auf, "
+"indem Du das ``Stift-Symbol`` rechts daneben aufrufst."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:59
+msgid ""
+"Es erscheint ein Fenster mit den Einstellungen der Hardwareklasse. Dort "
+"gibt es die Reiterkarten ``Allgemein`` und  ``Partitionen``."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:61
+msgid ""
+"Unter ``Allgemein`` legst Du die IP des Servers fest, gibst das "
+"Startverhalten und ggf. Kernel-Optionen (Linux) für den Boot bei "
+"besonderer Hardware an."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:68
+msgid "WebUI linbo edit new hwc group"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:68
+msgid "Allgemeine Einstellungen für die Hardwareklasse"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:70
+msgid ""
+"Unter ``Partitionen`` legst Du fest, welche Partitionen auf der "
+"Festplatte vorgesehen werden sollen."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:77
+msgid "WebUI linbo edit new hwc group - partition scheme"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:77
+msgid "Partitionen festlegen"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:79
+msgid ""
+"Löschst Du dort z.B. die Partitionen ``swap`` und ``data`` so sieht Deine"
+" Partitionierung wie folgt aus:"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:86
+msgid "WebUI linbo edit new hwc group - partition scheme edited"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:86
+msgid "Partitionen anpassen"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:88
+msgid ""
+"Um Einstellungen für das jeweilige Betriebssystem vorzunehmen, klickst Du"
+" auf das Stift-Icon neben dem angegebenen Betriebssystem. Es öffnet sich "
+"ein weiteres Fenster, um Einstellungen für das Betriebssystem "
+"vorzunehmen."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:95
+msgid "WebUI linbo edit new hwc group - os edited"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:95
+msgid "Einstellungen des Betriebssystems anpassen"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:97
+msgid ""
+"Unter der Reiterkarte ``OS`` legst Du für das Betriebssystem (OS) die "
+"gewünschten Icons, die Start-Optionen und u.a. auch den Namen für das "
+"Basisimage fest."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:99
+msgid ""
+"Um ein neues Image festzulegen, klickst Du auf das ``+`` - Zeichen und "
+"trägst einen neuen Namen für das Image ein. Achte darauf, dass die "
+"Dateiendung ``.qcow2`` lautet. Um nun das neue Image zu erstellen, "
+"startest Du den Client neu. Es wird das bestehende Image, das unter "
+"Basisimage angelegt bzw. ausgewählt wurde - hier das noch nicht "
+"existierende Image ``pop_os_mim.qcow2`` - überschrieben."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:101
+msgid ""
+"Auf dem linuxmuster.net Server werden die start.conf-Dateien im "
+"Verzeichnis ``/srv/linbo`` abgelegt. Jede Hardwareklasse hat eine eigene "
+"start.conf-Datei. Für die neu angelegte Hardwareklasse des Muster-Clients"
+" wurde dort nun eine Datei ``start.conf.<name-der-hwk>`` erstellt (z.B. "
+"start.conf.ubu20efi)."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:103
+msgid ""
+"Diese Datei muss normalerweise nicht händisch editiert werden, da sich "
+"alle nötigen Einstellungen in der WebUI vornehmen lassen. Das folgende "
+"Beispiel dient nur dazu, zu zeigen, was \"unter der Decke\" passiert."
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:105
+msgid ""
+"Folgende Konfiguration zeigt ein mögliches Beispiel für die "
+"``Hardwareklasse ubu20efi`` (hier als Linux-Client). Diese würde sich in "
+"der Datei ``/srv/linbo/start.conf.ubu20efi`` befinden. Hierbei wird von "
+"einem UEFI-BIOS und Linux als Betriebssystem ausgegangen:"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:188
+msgid ""
+"Sollte der Client beim Boot-Vorgang Probleme haben (z.B. initializing "
+"hardware ...), dann müssen zur Behebung Kernel-Parameter für den Linux-"
+"Client in der Conf-Datei eingetragen werden. Dies kann insbesondere bei "
+"neueren Grafik- und Netzwerkkarten der Fall sein, so dass hier weitere "
+"Optionen anzugeben sind. Oftmals führt bereits folgende Zeile zum Erfolg:"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:190
+msgid "``KernelOptions = quiet splash nomodeset``"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:192
+msgid "Hilfreich können auch KernelOptions sein wie z.B.:"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:194
+msgid "``modprobe.blacklist=radeon``  oder   ``i915.alpha_support=1``"
+msgstr ""
+
+#: ../../source/clients/client_templates/hardware_category/index.rst:196
+msgid ""
+"Wenn bei neueren Realtek-Netzwerkkarten mit r8169-Chip in linbo >=4.1.26 "
+"sehr niedrige Download-Raten auftreten, können die Kerneloptionen "
+"``pcie_aspm=off`` und  ``loadmodules=r8168``  Besserung bringen."
+msgstr ""
+
