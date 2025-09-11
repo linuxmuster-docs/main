@@ -4,10 +4,6 @@ Einführung
 
 Herzlich Willkommen zur Dokumentation von linuxmuster.net v7.3!
 
-.. attention::
-
-   linuxmuster.net v7.3 befindet sich derzeit im Beta-Test. Diese Dokumentation wird schrittweise erweitert und auf v7.3 angepasst werden.
-
 Diese beschreibt alle wichtigen Schritte ...
 
   | ... von der Installation,

@@ -17,7 +17,7 @@ Nach der Installation gemäß dieser Anleitung erhältst Du eine einsatzbereite 
 
 * einer Firewall (OPNsense |reg| für linuxmuster.net),
 * einem Server (linuxmuster.net) und
-* einem File-Server (linuxmuster.net).
+* einem Fileserver (linuxmuster.net).
 
 Im Laufe der Installation benötigst Du einen Admin-PC. Das kann ein einfacher Laptop mit einem beliebigen Betriebssystem sein.
 

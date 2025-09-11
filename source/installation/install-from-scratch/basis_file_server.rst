@@ -10,15 +10,16 @@ Anlegen und Installieren des Fileservers
 
 .. hint::
 
-    Der Fileserver für inuxmuster.net 7.3 kann optional installiert werden (Drei-Server-Lösung). Es kann aber weiterhin wie bisher auch ein Weiterbetrieb als Zwei-Server-Lösung erfolgen. Wir empfehlen den Fileserver z.B. in einer eigenen VM zu installieren, da hierdurch deutliche Performancesteigerungen in Verbidnung mit Samba erreicht werden. Dies empfehlen wir insbesondere mittleren bis grösseren Schulen. Kleinere Schulen können problemlos linuxmuster.net 7.3 als Zwei-Server-Lösung weiterbetreiben.
+    Der Fileserver für linuxmuster.net 7.3 kann optional installiert werden (Drei-Server-Lösung). Es kann aber weiterhin wie bisher auch ein Weiterbetrieb als Zwei-Server-Lösung erfolgen. Wir empfehlen den Fileserver z.B. in einer eigenen VM zu installieren, da hierdurch deutliche Performancesteigerungen in Verbidnung mit Samba erreicht werden. Dies empfehlen wir insbesondere mittleren bis grösseren Schulen. Kleinere Schulen können problemlos linuxmuster.net 7.3 als Zwei-Server-Lösung weiterbetreiben.
     
     Grundsätzlich kann linuxmuster.net 7.3 weiterhin als Zwei-Server-Lösung betrieben werden und es kann jederzeit später eine Erweiterung / Umstellung auf den zusätzlichen File-Server erfolgen. Die Migration/ das Update von v7.2 erfolgt zunächst immer als Zwei-Server-Lösung und es erfolgt danach eine Erweiterung um den Fileserver. 
     
-In Samba-Umgebungen ist es inzwischen üblich, den Domänencontroller und den Fileserver getrennt voneinander zu betreiben, da das Performancevorteile hat: selbst wenn der Fileserver auf dem gleichen Host virtualisiert wird, wie der Server und auf dem gleichen Storage läuft. Das ist für große Schulen mit vielen Clients von Vorteil.
-Es ist aber ohne Probleme möglich, den Fileserver später heraus zu trennen und auf eine eigene Maschine zu verlegen.
-Man kann die Umgebung also erstmal ohne extra Fileserver aufsetzen, und wenn man später merkt, dass das von Vorteil wäre, ihn herausziehen.
+In Samba-Umgebungen ist es inzwischen üblich, den Domänencontroller und den Fileserver getrennt voneinander zu betreiben, da dies Performancevorteile hat: Selbst wenn der Fileserver auf dem gleichen Host virtualisiert wird, wie der Server und auf dem gleichen Storage läuft. Das ist für große Schulen mit vielen Clients von Vorteil.
 
-Der File-Server von linuxmuster.net wird vollständig in das AD des linuxmuster.net Servers integriert. Die Netzwerkfreigaben werden auf dem linuxmuster.net Server definiert und mithilfe einer DFS-Konfiguration für die konfigurierte Schule bereitgestellt. Es werden so alle persönlichen Netzlaufwerke, die Projektfreigaben, sowie die Klassenfreigaben auf diesem File-Server bereitgestellt.
+Es ist aber ohne Probleme möglich, den Fileserver später heraus zu trennen und auf eine eigene Maschine zu verlegen.
+Man kann die Umgebung also zunächst ohne extra Fileserver installieren. Stellt man später fest, dass Dateizugriffe der Nutzer zu lange dauern, kann man jederzeit den Fileserver installieren und linuxmuster.net entsprechend auf eine Dri-Server-Lösung erweitern.
+
+Der Fileserver von linuxmuster.net wird vollständig in das AD des linuxmuster.net Servers integriert. Die Netzwerkfreigaben werden auf dem linuxmuster.net Server definiert und mithilfe einer DFS-Konfiguration für die konfigurierte Schule bereitgestellt. Es werden so alle persönlichen Netzlaufwerke, die Projektfreigaben, sowie die Klassenfreigaben auf diesem File-Server bereitgestellt.
 
 Vorteile:
 
@@ -28,12 +29,25 @@ Vorteile:
 - einfache Wartung und vereinfachte Updates
 - deutliche Leistungsverbesserung - gerade bei grossen Schulinstallationen
 
+.. attention::
+
+   Der Fileserver benötigt - genauso wie der linuxmuster.net Server - zwei Festplatten. 
+   Lege eine VM wie für den linuxmuster.net Server an.
+   
+   .. figure:: ../proxmox/media/proxmox-create-vm-ubuntu-server-09.png
+     :align: center
+     :scale: 80%
+     :alt: Einstellungen zum Anlegen der VM mit 2 HDDs
+
+     Zwei HDDs für den Fileserver
+   
+   Wie die VM hierzu anlegt wird, wurde bereits im Kapitel :ref:`Anlegen der VM für den Linuxmuster.net Server (Vorbereiten der virtuellen Maschinen) <install-on-proxmox-label>` beschrieben.
+
+
 Installation Ubuntu-Server
 ==========================
 
-Führe die Installation des für den File-Server benötigten Ubuntu 24.04 LTS Servers so aus, wie zuvor :ref:`basis_server-label` beschrieben. Es werden zwei Festplatten benötigt. Passe die Plattenkapazitäten an die Anforderungen Eurer Schule an.
-
-Passe die Partitionierung und Formatierung der Festplatten entsprechend an. Zudem musst Du eine statische IP-Adresse aus dem LAN dem File-Server zuweisen.
+Führe die Installation des für den File-Server benötigten Ubuntu 24.04 LTS Servers so aus, wie zuvor im Kapitel :ref:`basis_server-label` beschrieben. Nutze die zuvor bereitgestellten zwei HDDs. Passe die Partitionierung und Formatierung der Festplatten ggf. entsprechend an die Bedürfnisse der Schule an. Zudem musst Du eine statische IP-Adresse aus dem LAN dem File-Server zuweisen.
 
 Nutze die Daten gemäß Deines IP-Adresskonzeptes oder gib nachstehende Daten ein, die in der Dokumentation durchgängig für das LAN verwendet werden:
 
@@ -42,13 +56,22 @@ Nutze die Daten gemäß Deines IP-Adresskonzeptes oder gib nachstehende Daten ei
 - Netzmaske:   10.0.0.254
 - Gateway:     10.0.0.254
 - DNS:         10.0.0.254
-- Domäne:      linuxmuster.lan
+- Domäne:      <lasse diese leer>
+
+Lasse die Domäne des FQDN in den Dateien
+
+.. :code::
+
+   /etc/hosts
+   /etc/hostname
+   
+raus. Es sollte nur der Hostname (z.B. fileserver) ohne die Domäne (z.B. linuxmuster.lan) in diesen Dateien stehen.
 
 Die Domäne wird bei der Integration später noch automatisch angepasst.
 
 Die Installation endet bei dem Punkt ``Automatische Updates abschalten``.
 
-Führe danach die Vorbereitung des Ubuntu Servers weiter wie in :ref:`lmn_pre_install-label` beschrieben. Durchlaufe folgende Schritte:
+Führe danach die Vorbereitung des Ubuntu Servers weiter wie in Kapitel :ref:`lmn_pre_install-label` beschrieben. Durchlaufe folgende Schritte:
 
 1. Zeitservereinstellungen überprüfen
 2. Cloud-init deinstallieren
@@ -58,16 +81,16 @@ Führe danach die Vorbereitung des Ubuntu Servers weiter wie in :ref:`lmn_pre_in
 2. HDD einbinden
 ================
 
-Bei der Einrichtung der VM für den File-Server hast Du eine zweite Festplatte vorgesehen. Bei der Installation von Ubuntu Server hast Du ggf. beim Setup für die zweite Platte bereits eine GPT-Partitionstabelle mit angelegt, wie in nachstehender Abb. zu sehen:
+Bei der Einrichtung der VM für den Fileserver hast Du eine zweite Festplatte vorgesehen. Bei der Installation von Ubuntu Server hast Du ggf. beim Setup für die zweite Platte bereits eine GPT-Partitionstabelle mit angelegt, wie in nachstehender Abb. zu sehen:
 
 .. figure:: media/lmn-file-server-2nd-hdd.png
    :align: center
    :scale: 80%
-   :alt: Zweite HDD für den File Server einbinden
+   :alt: Zweite HDD für den Fileserver einbinden
 
-   Zweite HDD des File-Servers
+   Zweite HDD des Fileservers
    
-Du musst jetzt noch den Eintrag in der Datei ``/etc/fstab`` anpassen, damit das zu verwendende Verzeichnis auf der zweiten HDD korrekt eingebunden wird und nach dem Setup des File-Servers dort Quotas aktiviert werden können.
+Du musst jetzt noch den Eintrag in der Datei ``/etc/fstab`` anpassen, damit das zu verwendende Verzeichnis auf der zweiten HDD korrekt eingebunden wird und nach dem Setup des Fileservers dort Quotas aktiviert werden können.
 
 Lass Dir dazu den Inhalt der Datei zuerst ausgeben:
 
@@ -81,9 +104,9 @@ Du erkennst beide Festplatten mit ihren UUIDs:
 .. figure:: media/lmn-file-server-2nd-hdd-uuid.png
    :align: center
    :scale: 80%
-   :alt: Zweite HDD für den File Server - UUID
+   :alt: Zweite HDD für den Fileserver - UUID
 
-   UUID der zweiten HDD des File-Servers
+   UUID der zweiten HDD des Fileservers
    
 Du erkennst, dass die zweite Festplatte mit ihrer UUID bereits eingebunden ist und das Verzeichnis ``/srv/samba/schools/default-school`` zugeordnet ist.
 
@@ -93,7 +116,7 @@ Diesen Eintrag musst Du nun noch wie folgt ergänzen:
 
    /dev/disk/by-uuid/<UUID> /srv/samba/schools/default-school ext4 user_xattr,acl,usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,barrier=1 0 0
    
-Damit die Quotas im Zuge des File-Server Setups noch eingebunden werden können, müssen wie o.g. Einträge ergänzt werden.
+Damit die Quotas im Zuge des Fileserver Setups noch eingebunden werden können, müssen wie o.g. Einträge ergänzt werden.
 
 Starte danach den Server neu und prüfe die Zuordnung mit
 
@@ -125,8 +148,8 @@ Nachdem Du als Benutzer ``linuxadmin`` am file-server angemeldet bist, wechselst
 
    sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/linuxmuster.net.gpg] https://deb.linuxmuster.net/ lmn73 main" > /etc/apt/sources.list.d/lmn73.list'
    
-File-Server Installation
-========================
+Fileserver Installation
+=======================
 
 Aktualisiere den Server und installiere die linuxmuster.net File-Server-Pakete:
 
