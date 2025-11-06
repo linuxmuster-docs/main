@@ -29,7 +29,7 @@ Führe dazu in der Konsole folgende Befehle aus:
 Upgrade
 -------
 
-Nachdem Du als Benutzer ``linuxadmin`` angemeldet bist, wechselst Du nun zum Benutzer root mit:
+Nachdem Du als Benutzer ``linuxadmin`` angemeldet bist, wechselst Du zum Benutzer root mit:
 
 .. code::
 
@@ -74,6 +74,78 @@ Prüfe nun, ob alle Dienste korrekt gestartet wurden.
    sudo systemctl list-units --state=failed
    
 Du siehst ggf. einen Hinweis auf `quotaon.service`, der sich allerdings nur auf die Root-Partition bezieht, für die keine Quota gesetzt werden kann. Dies entspricht dem erwarteten Verhalten.
+
+**c) auf dem Server die Datei school.conf ergänzen** 
+
+Beim Update wird die Datei ``/etc/linuxmuster/sophomorix/default-school/school.conf`` nicht verändert, um eigene Eintragungen in dieser Datei nicht zu überschreiben.
+
+Bitte ergänze jetzt diese Datei wie nachstehend beschrieben, um die neuen Rollen zur Verfügung zu stellen:
+
+.. code::
+
+   # bis hierin gibt es bereits Eintragungen
+   [role.schooladministrator]
+       QUOTA_DEFAULT_GLOBAL = 1506
+       ...
+   # danach folgende Rollen eintragen
+   [role.parent]
+        QUOTA_DEFAULT_GLOBAL = 1506   # eigenen Wert eintragen
+        QUOTA_DEFAULT_SCHOOL = 1506   # eigenen Wert eintragen
+        MAILQUOTA_DEFAULT = 156       # eigenen Wert eintragen
+        CLOUDQUOTA_PERCENTAGE = 100   # eigenen Wert eintragen
+        WEBUI_PERMISSIONS =
+        MAILDOMAIN =                  # ggf. eigenen Wert eintragen
+        MAIL_LOCAL_PART_SCHEME =
+        MAIL_LOCAL_PART_MAP =
+   [role.staff]
+        QUOTA_DEFAULT_GLOBAL = 1506   # eigenen Wert eintragen
+        QUOTA_DEFAULT_SCHOOL = 1506   # eigenen Wert eintragen
+        MAILQUOTA_DEFAULT = 156       # eigenen Wert eintragen
+        CLOUDQUOTA_PERCENTAGE = 100   # eigenen Wert eintragen
+        WEBUI_PERMISSIONS =          
+        MAILDOMAIN = 		      # ggf. eigenen Wert eintragen
+        MAIL_LOCAL_PART_SCHEME =
+        MAIL_LOCAL_PART_MAP =
+    # danach folgt wieder
+    [type.adminclass]
+    ...
+    [userfile.extrastudents.csv]
+    ...
+    # danach fügst Du folgende Angaben für die CSV-Dateien noch vor [devicefile.devices.csv] ein
+    [userfile.parents.csv]
+        FILTERSCRIPT = ---
+    	ENCODING = UTF8
+    	ENCODING_FORCE = yes
+    	SURNAME_CHARS = 8
+    	FIRSTNAME_CHARS = 3
+    	SURNAME_FIRSTNAME_REVERSE = yes
+    	RANDOM_PWD = yes
+    	PWD_LENGTH = 10
+    	TOLERATION_TIME = 0
+    	DEACTIVATION_TIME = 0
+    	CLASSNAME_SLASH_TO_HYPHEN = FALSE
+    	MAILDOMAIN_BY_GROUP =
+   [userfile.staff.csv]
+        FILTERSCRIPT = ---
+   	ENCODING = UTF8
+    	ENCODING_FORCE = yes
+    	SURNAME_CHARS = 3
+   	FIRSTNAME_CHARS = 2
+    	SURNAME_FIRSTNAME_REVERSE = yes
+    	RANDOM_PWD = yes
+   	PWD_LENGTH = 10
+    	TOLERATION_TIME = 0
+    	DEACTIVATION_TIME = 0
+    	CLASSNAME_SLASH_TO_HYPHEN = FALSE
+    	MAILDOMAIN_BY_GROUP =
+
+Speichere diese Ergänzungen in der Datei ``/etc/linuxmuster/sophomorix/default-school/school.conf`` ab und starte die WebUI neu mit:
+
+.. code::
+
+   systemctl restart linuxmuster-webui.service
+   
+Ab sofort kannst Du nun mit den neuen Benutzerrollen in der WebUI arbeiten.
 
 .. hint::
 
