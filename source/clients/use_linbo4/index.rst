@@ -203,7 +203,10 @@ Nach Änderung des Passwortes musst Du auf dem Server noch die ``linbofs.lz`` ne
 .. code::
 
    update-linbofs
-   
+
+
+LINBO4 Imageverwaltung
+======================  
 
 LINBO Imageverwaltung am Client
 -------------------------------
@@ -645,7 +648,7 @@ Der gebootete LINBO-Kernel erscheint als ASCII-Art.
 Die Grub-Konfiguration wird ggf aktualisiert, danach erscheint der reguläre ``LINBO Startbildschirm``.
 
 LINBO-Image für USB-Sticks und CD/DVD
--------------------------------------
+=====================================
 
 Zum Erstellen einer Boot-CD/DVD oder zum Kopieren auf einen USB-Stick lädst Du zuerst das aktuelle LINBO - Image als ``linbo.iso`` herunter. Dies ermöglicht es, dass ein Client lokal via CD/DVD oder USB-Stick als Boot-Medium startet. Dies kann dann hilfreich sein, wenn das Booten von LINBO via Netzwerk Probleme bereitet.
 
@@ -705,12 +708,12 @@ Mit ``Enter`` wird der Client gebootet
 Mit der Auswahl durch die Pfeiltasten der Tastatur ``Ersteinrichtung + Neustart`` wird Linbo eingerichtet und der Rechner mit Linbo gestartet. Nach dem Neustart stehen alle Linbo-Funktionen zur Verfügung.
 
 LINBO4-Cache: Hinweise
-----------------------
+======================
 
 Linbo4 nutzt auf jedem Client eine lokale Cache-Partition, um ein oder mehrere Image/s eine Betriebssystems lokal vorzuhalten. Es lassen sich so unterschiedliche Verhaltensweisen eines Clients entweder via start.conf Datei oder via linbo-remote steuern.
 
 Cache-Verhalten
-^^^^^^^^^^^^^^^
+---------------
 
 Ausgangszustände des Linbo-Caches können sein:
 
@@ -749,7 +752,7 @@ Grundsätzlich gilt:
 - ``initcache`` ist kontraproduktiv, wenn der Client mehrere Images vorhält und beim Sync dann u.U. länger als nötig unbenutzbar ist, weil zuerst alle neuen Images (nicht nur das zu syncende) heruntergeladen werden.
 
 Initcache anwenden
-^^^^^^^^^^^^^^^^^^
+------------------
 
 **Option 1**
 
@@ -809,16 +812,16 @@ Dabei ist zu beachten:
   Startet das Betriebsyssystem, das in der start.conf an der angegebenen <#> Position eingetragen wurde.
   
 LINBO4 mit WLAN nutzen
-----------------------
+======================
 
 Linbo4 unterstützt ab der Version 4.2 die Nutzung von LINBO via WLAN-Netzwerk. Hierzu wurde das Programm ``wpa_supplicant`` in LINBO integriert. 
 
 Vor der Nutzung solltest Du zuerst prüfen, ob LINBO für den eingebauten WLAN-Adapter die benötigte Firmware aufweist. Hierzu gehst Du wie folgt vor:
 
 Firmware prüfen
-^^^^^^^^^^^^^^^
+---------------
 
-1. Überprüfe die Ausagbe von ``dmesg``
+1. Überprüfe die Ausgabe von ``dmesg``
 
 .. code::
 
@@ -860,7 +863,7 @@ ausführen.
    Wenn die geladene WLAN-Firmware dazu führt, dass der WLAN Adapter nach einem Warmstart nicht funktioniert, kannst Du den warmstart in der start.conf mit ``nowarmstart`` als Kernel-Option abschalten.
 
 WLAN definieren
-^^^^^^^^^^^^^^^
+---------------
 
  Hat der Client die benötigte Firmware, bearbeitest Du die Datei ``/etc/linuxmuster/linbo/wpa_supplicant.conf`` auf dem Server. In dieser definierst Du das WLAN, das der Client verwenden soll.
  
@@ -895,9 +898,9 @@ Nachdem Du die Konfigurationsdatei mit den WLAN-Einstellungen bereitgestellt has
 an.
 
 WLAN-Gerät anlegen
-^^^^^^^^^^^^^^^^^^
+------------------
 
-Zuletzt musst Du noch für das Gerät, das via WLAN mit LINBO arbeiten soll, einen Geräteintrag erstellen. In der Datei ``/etc/linuxmuster/devices.csv`` oder in der Schulkonsole unter ``Geräte`` erstellst Du einen Eintrag für den WLAN-Adapter des zu importierenden Gerätes wie in nachstehendem Beispiel gezeigt: 
+Zuletzt musst Du noch für das Gerät, das via WLAN mit LINBO arbeiten soll, einen Geräteeintrag erstellen. In der Datei ``/etc/linuxmuster/devices.csv`` oder in der Schulkonsole unter ``Geräte`` erstellst Du einen Eintrag für den WLAN-Adapter des zu importierenden Gerätes wie in nachstehendem Beispiel gezeigt: 
 
 .. code::
 
@@ -923,18 +926,20 @@ Hast Du die Eintragungen hingegen in der Schulkonsole vorgenommen, so must Du nu
 * Der Download größer Betriebssystem-Images beeinträchtigt Deine WLAN-Performance. Dies solltest Du vermeiden werden.
 * Du solltest zudem überlegen, ob Du ein gesichertes WLAN für das LINBO-Management einrichtest, um den Zugriff auf das WLAN zu beschränken.
 
+LINBO4: Client-Anpassungen
+==========================
 
 LINBO4: Hook-Skripte
 --------------------
 
 .. attention::
 
-   Ab der Version LINBO 4.1.31 ``linuxmuster-linbo7 4.1.31`` stehen sogenannte Hook-Skripte zur Verfügung, um vor oder nach ``update-linbofs`` auf dem Server kleine Programme auszuführen, die durch definierte Ereignisse ausgelöst werden.
+   Unter LINBO stehen sog. Hook-Scripte zur Verfügung. Dies sind kleine Programme / Programmcode, die / der vor oder nach der Erstellung des LINBO-Dateisystems ausgeführt werden/wird.  
 
 Pre-Hook-Skripte
 ^^^^^^^^^^^^^^^^
 
-Mit dem Befehl ``update-linbofs`` wird die Erstellung von linbofs auf dem Server angestossen.
+Mit dem Befehl ``update-linbofs`` auf dem Server wird die Erstellung von linbofs angestossen.
 
 Pre-Hook-Skripte, werden hierbei vor der Erstellung von ``linbofs64.lz`` ausgeführt. Dies bietet die Möglichkeit, im Dateisystem vorher eigene Anpassungen vornehmen.
 
@@ -942,7 +947,7 @@ Pre-Hook-Skripte, werden hierbei vor der Erstellung von ``linbofs64.lz`` ausgef�
 
 - Das Template (``/var/lib/linuxmuster/linbo/linbofs64.cpio``) wird in ein Verzeichnis (``/var/cache/linuxmuster/linbo/linbofs64``) entpackt.
 - Dort wird das Template angepasst: passwort-hash, dropbear-key, permissions, default-start.conf (``/srv/linbo/start.conf``), Zeitzone.
-- Zum Schluss werden die Pre-Hook Skripte ausgeführt. Dies geschieht ebenfalls innerhalb des Verzeichnisses - man kann also über relative Bezüge auf die linbofs-Dateien zugreifen.
+- Zum Schluss werden die Pre-Hook Skripte ausgeführt. Dies geschieht ebenfalls innerhalb des Verzeichnisses. Über relative Bezüge kann auf linbofs-Dateien zugegegriffen.
 - Abschließend wird das Verzeichnis wieder gepackt (z.B. nach ``/srv/linbo/linbofs64.lz``), bevor danach die Posthook-Skripte angepasst werden.
 
 .. hint::
@@ -999,54 +1004,159 @@ Diese Skripte sind in folgendem Verzeichnis abzulegen:
 
 Hook-Skripte müssen ausführbar sein und mit einem ``shebang`` beginnen. Es sind die zuvor genannten Hinweise zu beachten.
 
+Weiterführende Hinweise zur Nutzung der Hook-Skripte findest Du hier: https://github.com/linuxmuster/linuxmuster-linuxclient7/wiki/Hook-scripts
+
+
 LINBO4: Linux-Kernel
---------------------
+====================
 
 Linbo ab v4.2 nutzt als Standard den aktuellsten Linux-Kernel. Manchmal gibt es aber dennoch Probleme mit Hardware, die nicht richtig erkannt wird. Dann kann es sein, dass z.B. LINBO per PXE nicht korrekt startet oder das System *scheinbar hängen bleibt*. Solche Fälle widerspenstiger Hardware können mit LINBO 4.2 mit einigen Handgriffen vielfach erfolgreich gelöst werden.
 
-Mit LINBO 4.2 wird auf dem Client ein aktueller Linux-Kernel >= 6.6.x installiert und gestartet. Bei neuerer Hardware funktioniert dies i.d.R. problemlos. Bei einigen älteren Hardware-Modellen oder Modellen mit besonderer Hardware-Bestückung kann es vorkommen, dass der Client nicht startet. Dies kann schrittweise wie nachstehend beschrieben, zuerst eingegrenzt und dann behoben werden:
+Mit LINBO 4.2 wird auf dem Client ein aktueller Linux-Kernel >= 6.6.x installiert und gestartet. Bei neuerer Hardware funktioniert dies i.d.R. problemlos. Bei einigen älteren Hardware-Modellen oder Modellen mit besonderer Hardware-Bestückung kann es vorkommen, dass der Client nicht startet. Dies kann schrittweise wie nachstehend beschrieben, zuerst eingegrenzt und dann behoben werden.
+
+Es können 
+1. andere Kernel auf den LINBO-Clients genutzt werden. 
+2. Zudem können für die Kernel Firmware-Module angepasst / ergänzt werden, um ggf. fehlende Netzwerkkartentreiber einzubinden.
+3. Kernel-Startparameter angepasst werden, um bestimmte Hardware-Module zu laden, oder ein bestimmtes Verhalten zu steueern.
 
 
-1. LINBO-Kernel wechseln
-^^^^^^^^^^^^^^^^^^^^^^^^
+LINBO-Kernel wechseln
+---------------------
 
 Auf dem Server befindet sich unter ``/etc/linuxmuster/linbo/custom_kernel.ex`` eine Beispieldatei, wie man den LINBO-Kernel wechselt. Die Kernel befinden sich unterhalb von ``/var/lib/linuxmuster/linbo/``. Es stehen drei verschiedene Versionen zu Verfügung: *legacy, longterm, stable*
 
-2. Netzwerkkarten-Treiber ersetzen
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Kopiere die Datei Vorlage ``/etc/linuxmuster/linbo/custom_kernel.ex`` nach ``/etc/linuxmuster/linbo/custom_kernel``. Editiere diese Datei nun so, dass der gewünschte Kernel auf dem Client gebootet wird. Sind in der Datei alle Zeilen auskommentiert, dann startet der Client einen letzten stable Kernel.
+
+- Es kann alternativ der **5.15er Kernel (legacy)** genutzt werden. Dazu müssen einfach in der Datei ``/etc/linuxmuster/linbo/custom_kernel`` die folgenden Zeilen eingetragen werden. Es ist nur das Kommentarzeichen für die zweite Zeile zu entfernen.
+
+.. code::
+
+   ## use Linbo's alternative legacy kernel
+   KERNELPATH="legacy"
+   ## use Linbo's alternative longterm kernel
+   #KERNELPATH="longterm"
+   
+   ## currently active kernel image and modules used by the server
+   ## path to kernel image
+   #KERNELPATH="/boot/vmlinuz-$(uname -r)"
+   ## path to the corresponding modules directory
+   #MODULESPATH="/lib/modules/$(uname -r)"
+
+   ## custom kernel image and modules
+   #KERNELPATH="/path/to/my/kernelimage"
+   ## path to the corresponding modules directory
+   #MODULESPATH="/path/to/my/lib/modules/n.n.n"
+
+Danach ist der Befehl ``update-linbofs`` auf dem Server auszuführen. Danach bootet der Linbo-Client mit einem 5.15er-Kernel.
+
+- Anstelle des aktuellsten Linux-Kernel kann auch ein **6.1er LTS-Kernel** verwendet werden. Dazu müssen einfach in der Datei ``/etc/linuxmuster/linbo/custom_kernel`` die folgenden Zeilen eingetragen werden. Es ist nur in der vierten Zeile das Kommentarzeichen zu entfernen.
+
+.. code::
+
+   ## use Linbo's alternative legacy kernel
+   # KERNELPATH="legacy"
+   ## use Linbo's alternative longterm kernel
+   KERNELPATH="longterm"
+   
+   ## currently active kernel image and modules used by the server
+   ## path to kernel image
+   #KERNELPATH="/boot/vmlinuz-$(uname -r)"
+   ## path to the corresponding modules directory
+   #MODULESPATH="/lib/modules/$(uname -r)"
+
+   ## custom kernel image and modules
+   #KERNELPATH="/path/to/my/kernelimage"
+   ## path to the corresponding modules directory
+   #MODULESPATH="/path/to/my/lib/modules/n.n.n"
+
+Danach ist der Befehl ``update-linbofs`` auf dem Server auszuführen. Danach bootet der Linbo-Client mit einem 6.1er-Kernel.
+
+
+Netzwerkkarten-Treiber ersetzen
+-------------------------------
 
 Erkennt der Client Hardware nicht richtig, kann mit linbo-ssh geprüft werden, welcher Treiber Probleme bereitet. Hierzu wechselst Du mit ``linbo-ssh <IP des Clients>`` auf die LINBO-Konsole auf dem Client.
 
 .. code::
 
-    dmesg |grep firmware    # listet evtl Probleme mit fehlenden Treiber auf     
+    dmesg |grep -i firmware    # listet evtl Probleme mit fehlenden Treiber auf     
     
-Danach die benötigte Firmware mit Pfad so unter ``/etc/linuxmuster/linbo/firmware`` eintragen - siehe hierzu auch die *Beispieldatei firmware.ex*. 
-
-Führe anschließend den Befehl ``update-linbofs`` auf dem linuxmuster Server aus.
-
-3. Kernel-Options verwenden
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Auf dem Server findet sich pro Hardwareklasse eine start.conf Datei unter: ``/srv/linbo/start.conf.<Hardwareklasse>``
-
-Setze den Eintrag KernOptions und gebe Optionen an, die für Deine Hardware dem Kernel wichtige Infos mitgeben.
+Danach kopierst Du die Vorlagendatei zur Einbindung von Firmware ``/etc/linuxmuster/linbo/firmware.ex`` nach ``/etc/linuxmuster/linbo/firmware``.
+In dieser Datei trägst Du nun die benötigte Firmware ein, wie diese in o.g. Befehl mit *dmesg* ausgegeben wird.
 
 .. code::
 
-     KernelOptions =
-     #unterschiedliche Einträge ausprobieren.
+   # /etc/linuxmuster/linbo/firmware
+
+   # Realtek r8168 ethernet adapters firmware (whole directory)
+   #rtl_nic
+
+   # Realtek RTL8821AE wifi firmware (single file)
+   #rtlwifi/rtl8821aefw.bin
+   i915/kbl_dmc_ver1_04.bin 
+   # Intel Wi-Fi 6 AX200 firmware (single file)
+   #iwlwifi-cc-a0-77.ucode
+
+Gibt dmesg folgenden Fehler aus:
+
+.. code::
+
+   ~ # dmesg | grep firmware
+   i915 0000:00:02.0: Direct firmware load for i915/kbl_dmc_ver1_04.bin failed with error -2
+   i915 0000:00:02.0: [drm] Failed to load DMC firmware i915/kbl_dmc_ver1_04.bin. Disabling runtime power management.
+   i915 0000:00:02.0: [drm] DMC firmware homepage: https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/i915
+
+Dann passe die Datei wir folgt an:
+
+.. code::
+
+   # /etc/linuxmuster/linbo/firmware
+
+   # Realtek r8168 ethernet adapters firmware (whole directory)
+   #rtl_nic
+
+   # intel wifi firmware (single file)
+   i915/kbl_dmc_ver1_04.bin 
+   
+   # Intel Wi-Fi 6 AX200 firmware (single file)
+   #iwlwifi-cc-a0-77.ucode
+
+Führe anschließend den Befehl ``update-linbofs`` auf dem linuxmuster Server aus, um die angegebene Firmware-Datei in das linbofs Archiv aufzunehmen.
+
+.. hint::
+
+   Sollte ein geladener Wifi Treiber dazu führen, dass die Wifi NIC nicht nach einem LINBO Reboot funktioniert, dann nutze die Kerneloption ``nowarmstart``.
+
+
+Kernel-Options verwenden
+------------------------
+
+Auf dem Server findet sich pro Hardwareklasse eine start.conf Datei unter: ``/srv/linbo/start.conf.<Hardwareklasse>``
+Um Besonderheiten einzelner Hardwareklassen anzupassen, gibt es den Eintrag **KernelOptions_**. 
+
+.. code::
      
+     # unterschiedliche Einträge ausprobieren.
+     KernelOptions =
+   
+     
+     # Modul realtek r8168 laden, aber den Aufruf des Moduls realtek r8169 unterbinden
      KernelOptions = loadmodules=r8168 modprobe.blacklist=r8169
      
-     oder auch
-     
+     # lade noche keine Grafikkarten-Treiber, bis das System gestartet wurde und lade diese erst danach. 
      KernelOptions = nomodeset
      
-Anschließend musst Du auf dem Sever den Befehl ``linuxmuster-import-devices`` ausführen, damit die Änderungen auf den Clients übernommen werden.
+     # linbo soll nach dem herunterladen eines neuen LINBO-Kernels keinen Warmstart ausführen  
+     KernelOptions = nowarmstart
+     
+     # kombiniere mehrere Optionen
+     KernelOptions =nomodeset dhcpretry=10 modprobe.blacklist=r8169 loadmodules=r8125
+     
+Anschließend musst Du auf dem Server den Befehl ``linuxmuster-import-devices`` ausführen, damit die Änderungen auf den Clients übernommen werden.
 
-4. LINBO-Befehle
-^^^^^^^^^^^^^^^^
+
+LINBO-Befehle
+-------------
 
 Unter LINBO können sämtliche Befehle auch direkt am Client eingegeben werden. Dies ist sehr hilfreich, um Log-Dateien auszulesen, Hardware-Probleme und ihre mögliche Lösung schrittweise auszutesten.
 
@@ -1056,12 +1166,12 @@ Dazu wechselst Du wieder mit ``linbo-ssh <IP des Clients>`` auf die LINBO-Konsol
 Sämtliche Befehle, die linuxmuster-linbo7 (next generation) beherrscht, werden hier aufgelistet: https://github.com/linuxmuster/linuxmuster-linbo7/issues/72#issuecomment-1156633508
 
 LINBO4: VNCServer nutzen
-------------------------
+========================
 
 Wird für den Cient der LINBO Kernel-Parameter ``vncserver`` gesetzt, dann wird während des Bootvorgangs von LINBO ein VNC-Server auf dem Client gestartet. Dieser Dienst akzeptiert nur Verbindungen, die von der Server-IP ausgehend auf Port 9999 kommen. Hierdurch ist es möglich, von einem PC im Netzwerk via VNCViewer auf die grafische LINBO-Oberfläche eines LINBO-Clients zuzugreifen.
 
 Kernel-Parameter setzen
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
 
 Wähle in der WebUI im Menü unter ``Geräteverwaltung -> LINBO4 -> Gruppen`` die gewünschte Hardwareklasse aus, bearbeite diese mit dem Stift Symbol und ergänze unter ``Allgemein -> Kernel-Optionen`` in der Eingabezeile als Start-Parameter manuell ``vncviewer``.
 
@@ -1084,7 +1194,7 @@ In der zugehörigen Datei ``/srv/linbo/start.conf.<hwk>`` findet sich dann folge
    ...
    
 SSH-Tunnel herstellen
-^^^^^^^^^^^^^^^^^^^^^
+---------------------
    
 Es muss nun von dem PC im Netzwerk, von dem aus auf den LINBO-Client zugegriffen werden soll, ein SSH-Tunnel auf den LINBO-Client hergestellt werden. Dazu muss ein SSH-Tunnel über den Server an den Client über Port 9999 definiert werden.
 
@@ -1113,7 +1223,7 @@ Der mit der Prozessnummer 1460 in obiger Abbildung angegebene Prozess zeigt, das
 
 
 VNCViewer aufrufen
-^^^^^^^^^^^^^^^^^^
+------------------
 
 Auf dem PC, auf dem der SSH-Tunnel hergestellt wurde, muss das Programm VNCViewer installiert sein. Hiermit kann dann via Konsole eine VNC-Verbindung auf die LINBO-Oberfläche des Clients definiert werden. Starte auf dem Linux-PC eine zweite Konsole und gib folgenden Befehl ein:
 
@@ -1135,7 +1245,7 @@ Wie in nachstehender Abb. erhälst Du dann Zugriff auf den LINBO-Client vom PC a
    LINBO Zugriff via VNCViewer
    
 LINBO4: Live-System von ISO booten
-----------------------------------
+==================================
 
 Mit LINBO >= v4.3 ist es möglich via LINBO ein Live-System wie z.B. Ubuntu 24.04 Desktop oder Systemrescue 12.01 mithilfe der zugehörigen ISO-Datei, die auf dem Server liegt zu starten.
 
@@ -1144,7 +1254,7 @@ Um im Fehlerfall auf bestimmten Clients diesen auch mithilfe eines Live-System z
 Hierdurch kannst Du via LINBO auf dem Client das Live-System vom Server aus starten und so die Fehler auf dem Client anaylsieren, oder auch einfach nur das Live-System auf dem Client testen.
 
 Vorgehen
-^^^^^^^^
+--------
 
 1. ISO-Dateien für die Linux-Live-Systeme auf dem Server bereitstellen.
 2. Torrent- und Info-Dateien für diese ISO-Dateien auf dem Server erzeugen.
@@ -1153,7 +1263,7 @@ Vorgehen
 5. In der Hardwareklasse/start-conf-Datei einen zugehörigen OS-Abschnitt erstellen.
 
 ISO-Dateien bereitstellen
-^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------
 
 Stellt man eine ISO-Datei von einem Linux-Live-System als Imagedatei bereit, kann diese bei entsprechender Konfiguration der Hardwareklasse von der Linbo-Clientoberfläche aus gestartet werden.
 
@@ -1180,7 +1290,7 @@ Lade danach die ISO-Dateien in die zuvor angelegten Unterverzeichnisse:
    curl -O systemrescue-12.01-amd64.iso wget https://sourceforge.net/projects/systemrescuecd/files/sysresccd-x86/12.01/systemrescue-12.01-amd64.iso/download 
 
 Torrent- und Info-Dateien erstellen
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------
 
 Nachdem im Schritt zuvor die ISO-Dateien bereitgestellt wurden, sind nun für diese jeweils Torrent- und Info-Dateien zu erstellen.
 
@@ -1200,7 +1310,7 @@ Es finden sich in in dem jeweiligen Unterverzeichnis dann drei Dateien (z.B.):
    systemrescue-12.01-amd64.iso.torrent
 
 Pfade für Kernel und Initrd ermitteln
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 
 In der Hardwareklasse sind später die Pfade für Kernel und Initd anzugeben, wie diese in der ISO-Datei gültig sind. Daher sind in den ISO-Dateien zunächst deren Pfade zu ermitteln.
 
@@ -1214,7 +1324,7 @@ Für systemrescue-12.01-amd64.iso liegt die Datei ``vmlinuz`` im Verzeichnis ``s
 
 
 Kernel-Append-Parameter ermitteln
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------
 
 Für die ISO-Dateien musst Du noch ermitteln, welche Kernel-Parameter angefügt werden können2, die dann in der Hardwareklasse für die start.conf angegeben werden können.
 
@@ -1222,7 +1332,7 @@ Für die ISO-Dateien musst Du noch ermitteln, welche Kernel-Parameter angefügt 
 2. Suche die Dateien ``boot/grub/grub.cfg`` oder ``isolinux.cfg``. Die Parameter splash, quiet, findiso und iso-scan können weggelassen werden, da sie automatisch erzeugt werden.
 
 Hardwareklasse/start.conf anpassen
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------
 
 In der gewünschten Hardwareklasse ergänzt Du auf dem Server in der Konsole die gewünschte start.conf-Datei um einen OS-Abschnitt.
 
@@ -1247,23 +1357,21 @@ Beispiel:
    DefaultAction = start
    
 Devices importieren
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
-Abschliessend musst Du in der Konsole auf dem Server den Befehl ``linuxmuster-import-devices`` ausführen, damit die Hardwareklassen neu eingelesen und angewendet werden.
+Abschließend musst Du in der Konsole auf dem Server den Befehl ``linuxmuster-import-devices`` ausführen, damit die Hardwareklassen neu eingelesen und angewendet werden.
 
 Live-CD starten
-^^^^^^^^^^^^^^^
+---------------
 
 Starte nun den Client via LINBO. Im Startmenü von LINBO findest Du nun den zur angelegten Eintrag zur Live-CD. Starte diese nun durch einen Klick auf das grosse Symbol für das Betriebssystem.
 
 
-
-
 im Fehlerfall
--------------
+=============
 
 Torrent-Fehler
-^^^^^^^^^^^^^^
+--------------
 
 Nutzt Du sehr große Images, so kann es passieren, dass bei der Verteilung der qcow2-Images mit Torrent-Fehler auftreten und die Synchronisation auf ``rsync`` zurückfällt. Hierbei kommt es zum Einbruch bei den Datenübertragungsraten.
 
