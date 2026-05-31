@@ -8,7 +8,7 @@ Schulkonsole des Lehrers
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
                    `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
-Hast Du auf dem Server einen Lehrer-Account, so kannst Du die Steuerung des Unterrichts web-basiert mithilfe der Schulkonsole in einem Browser vornehmen.
+Hast Du auf dem Server einen Lehrer-Account, so kannst Du die Steuerung des Unterrichts webbasiert mithilfe der Schulkonsole (WebUI) in einem Browser vornehmen.
 
 .. figure:: media/01_webui-basics_welcome.png
    :align: center
@@ -16,16 +16,24 @@ Hast Du auf dem Server einen Lehrer-Account, so kannst Du die Steuerung des Unte
        
    Schulkonsole als Lehrer nach der Anmeldung
 
-Die Schulkonsole wird im Browser über ``https://10.0.0.1`` aufgerufen. Je nachdem welcher Benutzer angemeldet ist, erscheinen
-zugehörige Menüpunkte.
+Die Schulkonsole wird im Browser über ``https://10.0.0.1`` aufgerufen.
+
+Links erscheinen im Menü folgende Auswahlpunkte:
+
+.. figure:: media/02_webui-basics_general-menue-items.png
+   :align: center
+   :alt: WebUI: Menue items
+
+Mit einem Klick oben rechts auf den blauen Kreis erscheint oben rechts ein
+Kontextmenü für den angemeldeten Benutzer, um z.B. das Passwort zu ändern oder die Einstellungen zur 2-Faktor-Authentifizierung (2FA) anzupassen.
 
 .. figure:: media/02_webui-basics_user-overview.png
    :align: center
-   :alt: WebUI Welcome
+   :alt: WebUI context menue for active user
    
    Profil nach erfolgter Anmeldung
 
-Die Icons haben folgende Bedeutung:
+Allgemein haben die im Menü verwendeten Icons folgende Bedeutung:
 
 Das Menü kannst Du durch Anklicken der drei Striche links neben dem linuxmuster.net-Symbol ein- und ausblenden.
 
@@ -69,7 +77,10 @@ Das Menü kannst Du durch Anklicken der drei Striche links neben dem linuxmuster
   
    Bei Vergabe von Kurs- oder Projektnamen solltest Du auf Umlaute und ß verzichten.
 
-Das Menü der Schulkonsole des Lehrers teilt sich in die Bereiche ``Allgemein`` und ``Klassenzimmer`` auf.
+
+
+Das Menü der Schulkonsole des Lehrers teilt sich in die Bereiche ``Allgemein`` und ``Klassenzimmer`` auf. Nachstehend einige Hinweise zu den Menüpunkten.
+
 
 Allgemein
 =========
@@ -77,13 +88,7 @@ Allgemein
 Hauptseite
 ----------
 
-.. figure:: media/01_webui-basics_welcome.png
-   :align: center
-   :alt: WebUI Main Page
-   
-   Hauptseite als angemeldeter Lehrer
-
-Hier findest Du Informationen zu Deinem Konto, Deinen zugeordneten Benutzergruppen sowie dem Verbrauch Deines Festplattenkontingents (Quota).
+Hier findest Du in der Übersicht Informationen zu Deinem Konto, Deinen zugeordneten Benutzergruppen sowie dem Verbrauch Deines Festplattenkontingents (Quota).
 
 
 Meine Dateien
@@ -103,13 +108,13 @@ Klassenzimmer
 Unterricht
 ----------
 
-Klassen / Kurse, in denen Du Mitglied bist, werden hier aufgelistet.
+In dem Menüpunkt Kurse werden Deine Klassen / Kurse / Projekte, in denen Du Mitglied bist, aufgelistet.
 
 .. figure:: media/10_webui-basics_my-classes.png
    :align: center
-   :alt: WebUI My Classes
+   :alt: WebUI My Courses
 
-   Unterricht nach der Erstanmeldung als Lehrer
+   Meine Kurse als Lehrer nach Erstanmeldung
 
 Zu Beginn bist Du noch in keinen Klassen / Kursen oder Projekten eingeschrieben. Schreibe Dich als Lehrer zuerst in den gewünschten Klassen / Kursen ein.  Hierzu klickst Du links im Menü auf ``Einschreiben`` -> ``Schulklassen``. Bei den angezeigten Schulklassen setzt Du für diejenigen Klassen einen Haken, in denen Du Dich einschreiben möchtest.
 
@@ -117,16 +122,17 @@ Zu Beginn bist Du noch in keinen Klassen / Kursen oder Projekten eingeschrieben.
    :align: center
    :alt: class enrollement
    
-   Einschreibung in Klassen
+   Einschreibung in Klassen/Kurse/Projekte
 
-Oben erscheint ein blau hinterlegter Hinweis. Um die Die Einschreibung abzuschließen, musst Du auf ``Jetzt ausführen`` in dem blauen Hinweisfeld klicken.
-Verlief die Einschreibung erfolgreich, siehst Du nun im Menüpunkt ``Unterricht`` Deine Dir zugewiesenen Klassen / Kurse.
+Oben erscheint ein blau hinterlegter Hinweis. Um die Die Einschreibung abzuschließen, musst Du auf ``Jetzt ausführen`` in dem blauen Hinweisfeld klicken. Hierbei wirst Du nach Deinem Benutzerkennwort gefragt, um den Vorgang zu bestätigen.
+
+Verlief die Einschreibung erfolgreich, siehst Du nun im Menüpunkt ``Kurs`` Deine Dir zugewiesenen Klassen / Kurse.
 
 .. figure:: media/12_webui-classes-enrolled.png
    :align: center
    :alt: classes enrolled
    
-   Eingeschriebene Klassen
+   Eingeschriebene Kurse/Klassen
 
 Klickst Du nun auf eine Klasse, so wird diese mit den eingetragenen Benutzern zusammengestellt. Es werden alle Benutzer der Klasse dargestellt.
 
@@ -139,23 +145,17 @@ Klickst Du nun auf eine Klasse, so wird diese mit den eingetragenen Benutzern zu
 Kurse erstellen
 ^^^^^^^^^^^^^^^
 
-Du kannst über die Funktion oben rechts ``Neuer Kurs`` einen neuen Kurs anlegen. 
-
-.. figure:: media/11_webui-basics_new-class-button.png
-   :align: center
-   :alt: WebUI New Class Button
-   
-   Wähle den Eintrag Neuer Kurs
+Du kannst über die Funktion ``Kurs -> Neue Gruppe`` einen neuen Kurs anlegen.
 
 Gib in dem sich öffnenden Fenster den neuen Kursnamen ein und bestätige diesen mit ``OK``.
 
-.. figure:: media/11_webui-basics_new-class.png
+.. figure:: media/11_webui-basics_new-course.png
    :align: center
    :alt: WebUI New Class
    
    Neuen Kurs erstellen
 
-Der neu angelegte Kurs erscheint im Menü ``Unterricht`` -> unter der Rubrik ``Meine Kurse``.
+Der neu angelegte Kurs erscheint im Menü ``Kurs`` -> unter der Rubrik ``Meine Gruppen``.
 
 .. figure:: media/11_webui-basics_my-courses.png
    :align: center
@@ -169,7 +169,7 @@ In obiger Abbildung siehst Du, dass in dem neu angelegten Kurs noch keine Schül
 Schüler einem Kurs hinzufügen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Um Schüler einem Kurs hinzuzufügen, wählst Du den gewünschten Kurse via Klick auf das Icon des Kurses aus.
+Um Schüler einem Kurs hinzuzufügen, wählst Du den gewünschten Kurs via Klick auf das Icon des Kurses aus.
 
 .. figure:: media/12_webui-basics_selected_course.png
    :align: center
@@ -185,14 +185,23 @@ In den oberen Zeilen gibt es nun die Möglichkeit über ``Schüler hinzufügen``
    
    Ausgwählter Kurs: Schüler hinzufügen
 
-Hast Du alle gewünschten Schüler nacheinander ausgewählt, siehst Du eine Liste mit allen Schülern des Kurses. Um diese in den Kurs zu übernehmen, klickst Du abschließend unten rechts auf ``Speichern & übernehmen``.
-
-Wählst Du einen bestimmten Kurs oder eine bestimmte Klasse aus, findest Du folgende Ansicht vor.
+Hast Du alle gewünschten Schüler nacheinander ausgewählt, siehst Du eine Liste mit allen Schülern des Kurses.
 
 .. figure:: media/13_webui-basics_class-overview.png
    :align: center
    :alt: WebUI Class Overview
    
+   Übersicht der Kursteilnehmer
+
+
+Klicke danach im Menü links auf ``Kurse``. Danach erscheinen alle Schüler, die hinzugefügt werden sollen. Schließe die Einrichtung des Kurses mithilfe des Klicks auf den roten Button ab, der alle Schüler auflistest und diese beitreten sollen, um zu teilen (z.B. ahm2,avf,ahu1 beitreten, um zu teilen). Zur Bestätigung musst Du Dein Anmeldekennwort angeben.
+
+Klickst Du nun auf Kurs, siehst Du folgende Ansicht:
+
+.. figure:: media/13_webui-basics_class-selected.png
+   :align: center
+   :alt: WebUI: Course selected
+
    Übersicht der Kursteilnehmer
 
 In dieser Übersicht können die pädagogischen Funktionen WLAN-, Internet- & Drucker-Freigabe, Dateien-Übertragungs-Funktion und Prüfungsmodus genutzt werden.
@@ -269,27 +278,15 @@ Dateien austeilen & einsammeln
 
 Dateien können für die Unterrichtsarbeit mithilfe der Funktion ``Teilen & Einsammeln`` an Schüler ausgeteilt und wieder eingesammelt werden. 
 
-Auf der Kursseite findest Du im unteren Bereich die Buttons ``Teilen`` und ``Einsammeln``, welche sich auf alle Kursteilnehmer beziehen. 
+Pro Schüler findest Du in der Spalte ``Übertragung`` die Buttons ``Teilen`` & ``Einsammeln``, um mit einzelnen Schülern Dateien zu teilen oder diese wieder einzusammeln.
+
+Soll dies für alle Schüler des Kurses erfolgen, finden sich unten auf der Seite folgende Buttons:
 
 .. figure:: media/46_webui-basics_share_files.png
    :align: center
    :alt: Share files
    
-   Teilen
-
-.. figure:: media/46_webui-basics_collect_files.png
-   :align: center
-   :alt: collect files
-   
-   Einsammeln
-
-
-Neben jedem Benutzer selbst gibt es ``Austeilen`` und ``Einsammeln`` Funktionen, welche nur auf die einzelnen Benutzer angewendet werden.
-
-
-.. figure:: media/46_webui-basics_share_files_per_user.png
-   :align: center
-   :alt: collect files
+   Teilen und Einsammlen für alle Schüler des Kurses
    
    Einsammeln
 
@@ -316,7 +313,7 @@ stellt den Prüfungsmodus dar. Ausgewählte Schüler oder alle Schüler einer Kl
 
 Bei allen Schülern, die im Prüfungsmodus sind, wird unter Prüfungsaufsicht der Name des Lehrers, die den Modus aktiviert hat, mit rotem Hintergrund dargestellt. Schülern im Prüfungsmodus ist automatisch die WLAN-, Internet- & Drucker-Freigabe gesperrt. Dies kann jedoch individuell angepasst werden. 
 
-Um den Prüfungsmodus zu beenden, entfernst Du den Haken bei jedem Kursmitglied (Klick unter das Prüfungsmodus-Icon) und übernimmst die Einstellungen mit ``Speichern & Übernehmen``.
+Um den Prüfungsmodus zu beenden, klickst Du oben in der Spalte das Prüfungs-Icon, um den Modus für alle Schüler zu beenden.
 
 Ausführliche Hinweise zum Prüfungsmodus findest Du im Abschnitt :ref:`exam-and-transfer-label`.
 
@@ -327,20 +324,8 @@ Im Menü ``Einschreiben`` findest Du nachstehende drei Rubriken.
 
 Schulklassen
 ^^^^^^^^^^^^
-
-.. figure:: media/22_webui-basics_school_classes.png
-   :align: center
-   :alt: WebUI School Classes
-   
-   Schulklassen
    
 Hier werden alle Schulklassen der Schule aufgelistet. Durch Klick auf den Klassennamen werden Dir weitere Informationen angezeigt, wie etwa alle Schüler der Klasse.
-
-.. figure:: media/22_webui-basics_school_classes_details.png
-   :align: center
-   :alt: WebUI Details for School Classes
-   
-   Details der Schulklassen
 
 Drucker
 ^^^^^^^
@@ -352,74 +337,7 @@ Ein Auswählen ist nur erforderlich, wenn man den Drucker auch außerhalb des zu
 Projekte
 ^^^^^^^^
 
-Hier werden alle Projekte aufgelistet. Zu Beginn ist die Liste leer. Du musst zuest Projekte anlegen und diesen beitreten.
-
-.. figure:: media/22_webui-basics_projects.png
-   :align: center
-   :alt: WebUI projects
-   
-   Projekte
-
-Projekte unterscheiden sich von Kursen: 
-
-* Mehrere Lehrer können in eine Projektgruppe aufgenommen werden. 
-* Projekte verfügen über eigene Tauschverzeichnisse
-* Projekte können wiederverwendet werden.
-* Unterrichtssteuerung (Passwörter ändern, Internet sprerren, etc.) ist **nicht** möglich.
-
-**Projekt anlegen**
-
-Um ein Projket anzulegen klickst Du im Menü ``Klassenzimmmer -> Einschreiben -> Neues Projekt``.
-
-.. figure:: media/22_webui-basics_new_project.png
-   :align: center
-   :alt: WebUI create new project
-   
-   Neues Projekt anlegen
-
-Es erscheint ein neues Fenster, in dem Du den Namen für das anzulegende Projekt einträgst.
-
-.. figure:: media/22_webui-basics_new_project_name.png
-   :align: center
-   :alt: WebUI New Project Name
-
-   Namen für das Projekt festlegen
-
-
-Du darfst nur Kleinbuchstaben und Zahlen in dem Projektnamen verwenden. Bestätige das Anlegen des neuen Projektes mit ``OK``.
-
-**Projektmitglieder verwalten**
-
-Durch Anklicken eines bestimmten Projekts, werden weitere Informationen angezeigt, wie etwa die Mitglieder und Administratoren des Projekts.
-
-.. figure:: media/22_webui-basics_new_project_details.png
-   :align: center
-   :alt: WebUI New Project Deatils
-
-   Weitere Projektinformationen
-
-Über die Funktion ``Beitretbar`` kann die Beitrittmöglichkeit und über die Funktion ``Nicht anzeigen`` die Sichtbarkeit eingestellt werde. 
-Klicke die Option ``Beitretbar`` an, damit Benutzer dem Projekt hinzugefügt werden können. 
-
-.. figure:: media/23_webui-basics_new_project_joinable.png
-   :align: center
-   :alt: WebUI New Project Joinable
-
-   Projektoption "beitretbar" setzen 
-
-Mitglieder können nun über den Button ``Benutzer oder Gruppe hinzufügen`` dem Projekt zugeordnet werden. Danach erscheint ein Fenster, in dem Du nach Benutzer, Klassen oder Gruppen suchen kannst.
-
-.. figure:: media/23_webui-basics_new_project_add_project_members.png
-   :align: center
-   :alt: WebUI Manage Project Members
-   
-   Projektmitglieder hinzufügen
-
-Gebe in einer der Zeilen die ersten beiden Anfangsbuchstaben ein und es werden Dir unter Benutzer, Klasse oder Gruppe die bereits existierenden Einträge aufgelistet. Wähle aus der Liste die gewünschten aus. Wiederhole diese Vorgang für weitere Benutzer oder Gruppen. Die bereits ausgewählten Benutzer oder Gruppen werden Dir unten links in dem Fenster unter der Überschrift ``Hinzufügen`` aufgelistet. Findest Du hier alle gewnüschten Benutzer und Gruppen, klicke auf ``Übernehmen``, um diese dem Projekt hinzuzufügen.
-
-**Projekt löschen**
-
-Klicken auf das jeweilige Projekt und wähle unten links ``Projekt löschen``. Bestätige diesen Vorgang im nächsten Fenster mit ``LÖSCHEN``.
+Hier werden alle Projekte aufgelistet.
 
 
 Passwörter drucken
