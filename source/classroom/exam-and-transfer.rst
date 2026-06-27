@@ -8,15 +8,14 @@ Prüfungsmodus
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
                    `@MachtDochNix (pics) <https://ask.linuxmuster.net/u/MachtDochNix>`_
 
-In einem Kurs / einer Klasse können Schülerkonten (einzeln oder der gesamte Kurs / die Klasse) in den Prüfungsmodus versetzt werden, ebenso kann man mit oder ohne Prüfungsmodus Schülern Dateien
-austeilen und von dort wieder einsammeln. Voraussetzung für diese Funktionen ist die :ref:`Aufnahme des Schülers <session-setup-label>`
-in einen Kurs.
+In einem Kurs / einer Klasse können Schülerkonten (einzeln oder der gesamte Kurs / die Klasse) in den Prüfungsmodus versetzt werden, ebenso kann man mit oder ohne Prüfungsmodus Schülern Dateien austeilen und von dort wieder einsammeln. Voraussetzung für diese Funktionen ist die :ref:`Aufnahme des Schülers <session-setup-label>`
+in einen Kurs/Klasse.
 
 .. hint::
 
    Um sicherzustellen, dass alle Prüfungsbenutzerkonten von vorherigen Prüfungen zurückgesetzt wurden, starte vor der Prüfung alle Clients neu und lasse diese mit LINBO synchronisieren.
 
-Öffne in der Schulkonsole unter ``KLASSENZIMMER -> Session-PREVIEW`` den angelegten Kurs oder die gewünschte Klasse.
+Öffne in der Schulkonsole unter ``KLASSENZIMMER -> Kurs -> Schulklasse <ahm1>`` den angelegten Kurs oder die gewünschte Klasse.
 
 .. figure:: media/webui-teachers-session-class.png
    :align: center
@@ -33,7 +32,17 @@ Hast Du einen Kurse / eine Klasse ausgewählt, wird Dir die Liste mit Schülern 
    
    Teilnehmer
 
-Du kannst den Prüfungsmodus entweder für alle zusammen über das Prüfungssymbol im Spaltenkopf aktivieren. Alternativ kannst Du für einzelne Prüflingen den Prüfungsmodus starten, indem Du in der Zeile des Prüflings das Prüfungssymbol klikcst.
+Du kannst den Prüfungsmodus entweder für alle zusammen über das Prüfungssymbol im Spaltenkopf aktivieren.
+
+Alternativ kannst Du für einzelne Prüflingen den Prüfungsmodus starten, indem Du in der Zeile des Prüflings das Prüfungssymbol klikcst.
+
+.. figure:: media/exam-icon.png
+   :align: center
+   :scale: 90%
+   :alt: WebUI Start Exam Modus with Exam Icon
+
+   Starte den Prüfungsmodus mit dem Prüfungs-Icon
+
 
 Du erhälst in einem neuen Fenster die Rückfrage, ob Du den Prüfungsmodus wirklich starten möchtest. Bestätige dies mit einem Klick auf ``PRÜFUNGSMODUS STARTEN``.
 
@@ -64,9 +73,9 @@ Bei Aktivierung des Prüfungsmodus wird für jedes Schülerkonto ein neues Konto
    
    Angelegte Schüleraccounts im Prüfungsmodus
    
-In o.g. Abbildung müsste sich der Benutzer ``Achim Testuser`` nun mit dem Login ``testusac-exam`` und seinem bisherigen Kennwort am Client-PC anmelden. Zum Zeitpunkt des aktivierten Prüfungsmodus wurde die Klasse ``10a-exam`` angelegt.
+In o.g. Abbildung müsste sich der Benutzer ``Daniel Borg`` nun mit dem Login ``borgda-exam`` und seinem bisherigen Kennwort am Client-PC anmelden.
 
-Die Prüfungsaufsicht übernimmt der Lehrer, der den Prüfungsmodus aktiviert hat. Dies ist in den roten Rechtecken zu erkennen.
+Die Prüfungsaufsicht übernimmt der Lehrer, der den Prüfungsmodus aktiviert hat. Dies ist in den roten Rechtecken - hier mit dem Kürzel für die Lehrkraft ``oert`` - zu erkennen.
 
 Ist es erforderlich, dass für einzelne Benutzer das Kennwort neu zu setzen ist, da es z.B. vergessen wurde, dann kann dieses von der Prüfungsaufsicht neu gesetzt werden.
 
@@ -77,6 +86,14 @@ Ist es erforderlich, dass für einzelne Benutzer das Kennwort neu zu setzen ist,
    Setze für Prüflinge ein neues Prüfungskennwort
 
 Klicke in der Zeile des betreffenden Prüflings ganz rechts auf das Zahnrad-Symbol und wähle ``Setze das aktuelle Passwort für <Prüfungs-Account>``.
+
+Es erscheint ein neues Fenster zur Änderung des Passworts für den ausgewählten Benutzer.
+
+.. figure:: media/webui-teachers-change-exam-password.png
+   :align: center
+   :alt: Change exam password for users
+
+   Setze für den Benutzer ein neues Prüfungskennwort
 
 .. hint::
 
@@ -101,10 +118,10 @@ Danach erscheint eine Rückfrage zur Bestätigung:
    
 Du erhälst ein Fenster mit der Nachfrage, ob Du den Prüfungsmodus wirklich beenden möchstest. Hast Du alle gewünschten Daten der Prüflinge zuvor eingesammelt, bestätige diesen Vorgang mit ``PRÜFUNGSMODUS BEENDEN``.
 
-.. figure:: media/webui-teachers-session-deactivated-examm-mode.png
+.. figure:: media/webui-teachers-session-members.png
    :align: center
-   :alt: WebUI Deactivated exam Mode
-   
+   :alt: WebUI Session Members
+
    Prüfungsmodus beendet
    
 Nachdem der Prüfungsmodus beendet wurde, werden alle Benutzer wie zuvor dargestellt und die Nutzung des Internet sowie der Drucker automatisch aktiviert.
@@ -117,10 +134,10 @@ Ablauf der Prüfung
 ------------------
 0. Die Clients wurden mit LINBO synchronisiert gestartet.
 1. Der Lehrer meldet sich an der Schulkonsole an.
-2. Der Lehrer wählt unter Session-PREVIEW die gewünschte Klasse aus.
+2. Der Lehrer wählt unter KLASSENzimmer -> Kurs -> Klasse die gewünschte Klasse aus.
 3. Der Lehrer aktiviert mit dem Prüfungssymbol den Prüfungsmodus.
 4. Der Lehrer teilt den Prüflingen im Raum mit wie diese sich am PC für die Prüfung anmelden müssen (<bisherigsLogin>+"-exam" & bisheriges Kennwort).
-5. Der Lehrer teilt die Prüfungs und ggf. weitere Vorlagen an die Prüfungsteilnehmer aus.
+5. Der Lehrer teilt die Prüfungen und ggf. weitere Vorlagen an die Prüfungsteilnehmer aus.
 6. Die Dateien liegen für die Prüfungsteilnehmer im Verzeichnis ``transfer/LEHRER/``.
 7. Schüler nutzen die bereitgestellten Daten und erstellen ihre Lösungen.
 8. Schüler speichern die bearbeiteten Daten unter einem vorher vom Lehrer mitgeteilen Namen bzw. Namensschema ab und legen diese zur Abgabe in das Verzeichnis ``transfer/LEHRER/_collect``.
@@ -135,13 +152,11 @@ Lehrer
 
 Hast Du als Lehrer, wie zuvor beschrieben, für die gewünschte Klasse den Prüfungsmodus aktiviert, siehst Du folgende Anzeige:
 
-.. figure:: media/webui-teachers-session-exam-mode-started.png
+.. figure:: media/webui-teachers-session-activated-exam-mode.png
    :align: center
-   :alt: WebUI Exam Started
+   :alt: WebUI Activated Exam Modus
    
-   Prüfungsmodus aktiviert
-   
-Stellen nun den Prüflingen die Prüfung bzw. Vorlagendateien bereit. Klicke hierzu unten links auf den Button ``Mit allen teilen``.
+Stelle nun den Prüflingen die Prüfung bzw. Vorlagendateien bereit. Klicke hierzu unten links auf den Button ``Mit allen teilen``.
 
 .. figure:: media/webui-teachers-session-share-files-for-all.png
    :align: center
@@ -150,7 +165,7 @@ Stellen nun den Prüflingen die Prüfung bzw. Vorlagendateien bereit. Klicke hie
    
    Dateien bereitstellen
    
-Es öffnet sich ein neues Fenster, in dem Dir der Inhalt Deines Home-Verzeichnisses dargestellt wird. 
+Es öffnet sich ein neues Fenster, in dem Dir der Inhalt Deines Transfer-Verzeichnisses dargestellt wird.
 
 .. figure:: media/webui-teachers-session-share-files-home-directory.png
    :align: center
@@ -161,6 +176,13 @@ Es öffnet sich ein neues Fenster, in dem Dir der Inhalt Deines Home-Verzeichnis
 
 Sollten die gewünschten Dateien noch nicht in Deinem Ordner sein, klickst Du oben rechts auf das Wolkensymbol, um Dateien von Deinem USB-Stick oder dem lokalen PC in Dein Home-Verzeichnis hochzuladen.
 
+.. figure:: media/webui-teachers-session-share-files-upload-files.png
+   :align: center
+   :scale: 70%
+   :alt: WebUI Share Files: Upload Files
+
+   Dateien bereitstellen: Datei laden
+
 Die hochgeladenen Dateien werden Dir ebenfalls hier angezeigt.
 
 .. figure:: media/webui-teachers-session-share-files-list.png
@@ -168,17 +190,11 @@ Die hochgeladenen Dateien werden Dir ebenfalls hier angezeigt.
    :scale: 70%
    :alt: WebUI Share Files List
    
-   Dateien bereitstellen: Auflistung der Dateien im Home-Verzeichnis
+   Dateien bereitstellen: Auflistung der Dateien im Transfer-Verzeichnis
 
-Aktiviere nun die gewünschten Dateien und /oder Verzeichniss, die Du den Prüflingen austeilen möchtest.
+Aktiviere die gewünschte/n Datei/en und / oder Verzeichnis, die Du den Prüflingen austeilen möchtest.
+Diese werden farblich gekennzeichnet, wie in o.g. Abb. zu sehen ist.
 
-.. figure:: media/webui-teachers-session-share-activate-files.png
-   :align: center
-   :scale: 50%
-   :alt: WebUI Activate Files
-   
-   Dateien bereitstellen: Aktiviere die bereitzustellenden Dateien
-   
 Um die Dateien auszuteilen, klickst Du nun unten rechts auf ``TEILEN``.
 
 Bist Du als Lehrer an einem Client angemeldet, so findest Du die zu teilenden Daten unter Deinem Home-Laufwerk ``H:\`` im Unterverzeichnis ``transfer``.
@@ -209,7 +225,7 @@ Nachstehende Abbildungen verdeutlichen dies einmal für einen Windows-Client und
 .. figure:: media/webui-exam-login-windows.png
    :align: center
    :scale: 70%
-   :alt: Exam Login Windows Client
+   :alt: Exam Login Windows-Client
    
    Prüfungsanmeldung Windows-Client
    
@@ -222,9 +238,9 @@ Nach erfolgreicher Anmeldung am Client sieht der Prüfling die Einrichtung der P
    
    Prüfungsanmeldung Windows-Client - Setup
 
-An einem 22.04 Ubuntu-Client mit Gnome sieht die Anmeldung wie folgt aus:
+An einem 24.04 Ubuntu-Client mit Gnome sieht die Anmeldung wie folgt aus:
 
-.. figure:: media/webui-exam-login-ubtunu.png
+.. figure:: media/webui-exam-login-ubuntu.png
    :align: center
    :scale: 80%
    :alt: Exam Login Ubuntu
@@ -240,7 +256,7 @@ Angabe des Kennworts.
    
    Prüfungsanmeldung Ubuntu-Client - Eingabe des Kennworts
    
-Hat sich der Prüfling erfolgreich am Client angemeldet und ruft den Dateimanager auf, so sieht dieser folgende Netzlaufwerke:
+Hat sich der Prüfling erfolgreich am Windows-Client angemeldet und ruft den Dateimanager auf, so sieht dieser folgende Netzlaufwerke:
 
 .. figure:: media/webui-exam-login-network-shares.png
    :align: center
@@ -301,7 +317,7 @@ Der Lehrer sieht in der Schulkonsole die abgegebenen Dateien. Um die Liste mit d
 
 .. figure:: media/webui-exam-sent-files.png
    :align: center
-   :alt: Exam Windows Files sent
+   :alt: Exam Files sent
    
    Prüfung: abgegebene Dateien einsehen
    
@@ -324,12 +340,6 @@ Prüfung beenden
 
 Nachdem alle Dateien eingsammelt wurden, beendet der Lehrer den Prüfungsmodus.
 
-.. figure:: media/webui-exam-stop-exam-mode.png
-   :align: center
-   :alt: Stop Exam Mode
-   
-   Prüfung: beenden
-   
 Hierzu klickst Du auf das rot hinterlegte Prüfungssymbol im Spaltenkopf, um für alle Prüflingen den Prüfungsmodus zu beenden.
 
 Sollten für Prüflinge untzerschiedliche Prüfungszeiten gelten, so beendest Du pro Prüfling deren Prüfung zeilenweise einzeln.
@@ -337,7 +347,36 @@ Sollten für Prüflinge untzerschiedliche Prüfungszeiten gelten, so beendest Du
 Abgaben einsehen
 ^^^^^^^^^^^^^^^^
 
-Hast Du als Lehrer die Prüfung beendet, kannst Du nun in der Schulkonsole unter ``Allgemein -> Meine Dateien`` im Ordner ``transfer`` alle bislang eingesammelten Dateien finden.
+Du kannst als Lehrer wähend der Prüfung bereits eingesammelte Ordner und Dateien einsehen. Gehe hierzu unten auf ``Eingesammelte Dateien durchschauen``
+Es öffnet sich ein Fenster mit den einsammelten Ordnern und Dateien.
+
+.. figure:: media/webui-exam-check-collected-directories.png
+   :align: center
+   :scale: 70%
+   :alt: Check colletced Files
+
+   Prüfung: Prüfe Dateiabgaben
+
+Die aktuelle Prüfung ist am Klassennamen und an dem Zeistempel zu erkennen. Klicke auf das Ordnersymbol, um diesen zu öffnen.
+
+.. figure:: media/webui-exam-check-collected-directories-of-users.png
+   :align: center
+   :scale: 70%
+   :alt: Check directories of users
+
+   Prüfung: Zeige die Ordner der Prüflinge
+
+Es wird die Liste mit den Ordner der Prüflinge dargestellt. Klicke wiederum auf das Ordnersymbol des Prüflings, dessen Dateien eingesehen werden sollen.
+
+.. figure:: media/webui-exam-check-collected-files-of-single-user.png
+   :align: center
+   :scale: 70%
+   :alt: Check directories of users
+
+   Prüfung: Zeige die Dateien eines Prüflings
+
+
+Wurde die Prüfung über das rote Prüfungs-Symbol beendet, findet sich die eingesammelte Prüfung in der Schulkonsole unter ``Allgemein -> Meine Dateien`` im Ordner ``transfer`` alle bislang eingesammelten Dateien finden.
 
 .. figure:: media/webui-exam-check-collected-files.png
    :align: center
@@ -346,7 +385,7 @@ Hast Du als Lehrer die Prüfung beendet, kannst Du nun in der Schulkonsole unter
    
    Prüfung: Prüfe Dateiabgaben
    
-Für die durchgeführte Prüfung gehst Du in den Ordner ``schoolclass_10a_20231209-171650`` - also immer der Ordner mit dem aktuellen Prüfungsdatum.
+Für die durchgeführte Prüfung gehst Du in den Ordner ``schoolclass_ahm1_20260627-182411`` - also immer der Ordner mit dem aktuellen Prüfungsdatum.
 
 Dort findest Du pro Prüfling einen Ordner, in dem sich die abgegebenen Dateien befinden.
 
@@ -356,7 +395,7 @@ Die Abgaben kannst Du markieren und herunterladen.
    :align: center
    :alt: Download Results
    
-   Prüfung: Dateiabgaben herunterladen
+   Prüfung: Dateiabgaben im Transfer-Ordner
    
 .. hint::
 

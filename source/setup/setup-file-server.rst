@@ -45,7 +45,7 @@ Rufe dort im Terminal die Datei auf und trage den File-Server mit seiner Funktio
 .. code::
 
    # /etc/linuxmuster/sophomorix/default-school/devices.csv
-   server;lmn-file-server;nopxe;52:24:11:4D:97:AB;10.0.0.101;;;;server;;0;;;;SETUP;
+   server;lmn-file-server;nopxe;52:24:00:22:c1:79;10.0.0.2;;;;server;;0;;;;SETUP;
 
 Speichere die Änderungen in der Datei.
 
@@ -235,7 +235,7 @@ Gib im Terminal zur Aktualisierung der Freigaben (Shares) folgende Befehle ein:
 .. code::
 
    SCHOOL=default-school
-   FQDN=lmn-file-server.schule.willie-wichtig.org
+   FQDN=$(ssh 10.0.0.2 "hostname -f")
    
    net conf addshare $SCHOOL /srv/samba/schools/$SCHOOL/
    net conf delparm $SCHOOL "guest ok"
