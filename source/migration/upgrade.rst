@@ -52,7 +52,7 @@ Führe dazu in der Konsole folgende Befehle aus:
 
    Eine ausführliche Beschreibung mit Screenshots findest Du hier: https://www.thomas-krenn.com/en/wiki/OPNsense_26.1_Firewall_Rule_Migration
 
-4. Führe das Upgrade auf die linuxmuster.net v7.4 - wie nachstehend beschrieben - durch.
+4. Führe das Upgrade auf die linuxmuster.net v7.4 - wie nachstehend beschrieben - durch. Setzt Du zusätzlich einen separaten Fileserver ein, aktualisiere diesen im Anschluss ebenfalls, siehe c) Fileserver aktualisieren.
 
 Upgrade
 -------
@@ -124,6 +124,23 @@ Prüfe nun, ob alle Dienste korrekt gestartet wurden.
    
 Du siehst ggf. einen Hinweis auf `quotaon.service`, der sich allerdings nur auf die Root-Partition bezieht, für die keine Quota gesetzt werden kann. Dies entspricht dem erwarteten Verhalten.
 
+**c) Fileserver aktualisieren**
+
+Setzt Du einen separaten Fileserver ein, bringst Du diesen anschließend ebenfalls auf Ubuntu 26.04 LTS. Anders als beim Server gibt es dafür kein eigenes linuxmuster.net-Skript — führe stattdessen ein reguläres Ubuntu-Release-Upgrade durch:
+
+.. code::
+
+   sudo apt update
+   sudo apt dist-upgrade
+   sudo do-release-upgrade
+
+.. note::
+
+   Bis zur Veröffentlichung von Ubuntu 26.04.1 (voraussichtlich 06.08.2026) musst Du dafür ggf. den Parameter ``-d`` ergänzen (``sudo do-release-upgrade -d``), da 26.04 bis dahin nur als Entwicklungsversion angeboten wird.
+
+Nach dem Upgrade ist der Fileserver auf demselben Samba-Stand wie der Server; ein separates ``linuxmuster-fileserver``-Paket für v7.4 wird dafür nicht benötigt.
+
+Starte den Fileserver anschließend neu und prüfe die Dienste wie unter b) beschrieben.
 
 
 
