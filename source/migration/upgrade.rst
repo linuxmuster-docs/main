@@ -126,17 +126,23 @@ Du siehst ggf. einen Hinweis auf `quotaon.service`, der sich allerdings nur auf 
 
 **c) Fileserver aktualisieren**
 
-Setzt Du einen separaten Fileserver ein, bringst Du diesen anschließend ebenfalls auf Ubuntu 26.04 LTS. Anders als beim Server gibt es dafür kein eigenes linuxmuster.net-Skript — führe stattdessen ein reguläres Ubuntu-Release-Upgrade durch:
+Setzt Du einen separaten Fileserver ein, bringst Du diesen anschließend ebenfalls auf Ubuntu 26.04 LTS. Anders als beim Server gibt es dafür kein eigenes linuxmuster.net-Skript — führe stattdessen ein reguläres Ubuntu-Release-Upgrade durch.
+
+Melde Dich dazu am Fileserver an und wechsle wie oben beschrieben zum Benutzer root:
 
 .. code::
 
-   sudo apt update
-   sudo apt dist-upgrade
-   sudo do-release-upgrade
+   sudo -i
+
+.. code::
+
+   apt update
+   apt dist-upgrade
+   do-release-upgrade
 
 .. note::
 
-   Bis zur Veröffentlichung von Ubuntu 26.04.1 (voraussichtlich 06.08.2026) musst Du dafür ggf. den Parameter ``-d`` ergänzen (``sudo do-release-upgrade -d``), da 26.04 bis dahin nur als Entwicklungsversion angeboten wird.
+   Bis zur Veröffentlichung von Ubuntu 26.04.1 (voraussichtlich 06.08.2026) musst Du dafür ggf. den Parameter ``-d`` ergänzen (``do-release-upgrade -d``), da 26.04 bis dahin nur als Entwicklungsversion angeboten wird.
 
 Nach dem Upgrade ist der Fileserver auf demselben Samba-Stand wie der Server; ein separates ``linuxmuster-fileserver``-Paket für v7.4 wird dafür nicht benötigt.
 
