@@ -197,7 +197,7 @@ Wenn Du im Verzeichnis ``/srv/docker/nextcloud`` bist, startest Du die Nextcloud
 
 Jetzt must Du mit einem Browser die Startseite ``https://nextcloud.meine-schule.de`` Deiner neuen Nextcloud aufrufen und einen Benutzernamen und ein Passwort für den Nextcloud-admin angeben.
 
-.. image:: media/install-01.png
+.. image:: media/install-nextcloud_01_server-settings.png
    :alt: Server - Einstellungen
    :align: center
 
