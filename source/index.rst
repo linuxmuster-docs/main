@@ -99,17 +99,12 @@ Nach einem Klick auf die Leiste eröffnen sich Dir dort noch weitere Möglichkei
 
 .. toctree::
   :maxdepth: 2
-  :caption: Upgrade
-  :hidden:
-
-  migration/upgrade
-
-.. toctree::
-  :maxdepth: 2
   :caption: Migration
   :hidden:
 
   migration/index
+  migration/linbo-migration
+  migration/upgrade
 
 .. toctree::
   :maxdepth: 4
