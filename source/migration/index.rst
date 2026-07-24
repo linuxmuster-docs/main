@@ -18,3 +18,5 @@ Um auf die linuxmuster 7.4 zu migrieren:
 4. Führe danach das ``linuxmuster-release-upgrade`` durch. Falls erforderlich führe nach dem Upgrade einen Neustart der Server durch.
 5. Falls Du den File-Server installiert hast, führe für diesen ein release-upgrade auf Ubuntu 26.04 LTS durch.
 
+Eine ausführliche Schritt-für-Schritt-Anleitung zu diesen Punkten findest Du unter :ref:`Upgrade v7.3 auf v7.4 <upgrade-from-7.3-label>`.
+
