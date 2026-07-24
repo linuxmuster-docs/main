@@ -43,7 +43,9 @@ Bind-User
 
 .. attention::
 
-   Grundsätzlich sollten alle externen Dienste, die via LDAP an das AD angebunden werden, mit einem eigens dafür angelegten Bind-User genutzt werden. Für Nextcloud sollte so z.B. ein Benutzer ``nextcloud-binduser`` angelegt werden, der für die Verbindung zum AD genutzt wird. Hinweise hierzu findest Du unter https://github.com/linuxmuster/sophomorix4/wiki/bindusers 
+   Grundsätzlich sollten alle externen Dienste, die via LDAP an das AD angebunden werden, mit einem eigens dafür angelegten Bind-User genutzt werden. Für Nextcloud sollte so z.B. ein Benutzer ``nextcloud-binduser`` angelegt werden, der für die Verbindung zum AD genutzt wird. Hinweise hierzu findest Du unter https://github.com/linuxmuster/sophomorix4/wiki/bindusers
+
+.. include:: /external-services/_ldap-vertrauen-keycloak.rst
 
 **Vorgehen zur Anlage eines neuen Bind-Users**
 
@@ -197,4 +199,6 @@ Im Feld ``Standard-Kontingent`` wird festgelegt, wie viel Speicher dem Benutzer 
 Das ``"$home"Platzhalter-Feld`` brauchst Du, wenn Du die Home-Verzeichnisse auch in der Nextcloud zur Verfügung stellen möchtest.
 
 So, das war's. Sicherheitshalber gehst Du nochmal auf den Reiter ``Experte`` und klicks auf  ``Lösche LDAP-Benutzernamenzuordung`` und ``Lösche LDAP-Gruppennamenzuordung``.
+
+.. include:: /external-services/_datenschutz-loeschung.rst
 
