@@ -1,15 +1,15 @@
 .. include:: /guided-inst.subst
 
-.. _migration-label:
+.. _upgrade-label:
 
-=======================
-Übersicht zur Migration
-=======================
+=====================
+Übersicht zum Upgrade
+=====================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
 
-Um auf die linuxmuster 7.4 zu migrieren:
+Um das Upgrade auf linuxmuster 7.4 durchzuführen, solltest Du folgende Schritte durchführen:
 
 1. Führe ein Update Deiner bisherigen linuxmuster.net Version auf linuxmuster v7.3 mit den aktuellsten Paketen durch.
 2. Falls Du OPNsense |reg| als Firewall einsetzt, aktualisiere diese auf Version >= v26.1.

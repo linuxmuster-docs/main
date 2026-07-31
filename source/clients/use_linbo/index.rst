@@ -1,12 +1,12 @@
 .. include:: /guided-inst.subst
 .. _using-linbo-label:
 
-LINBO4 nutzen
-=============
+LINBO nutzen
+============
 
 LINBO steht für GNU/\ **Li**\ nux **N**\ etwork **Bo**\ ot. Es wurde ursprünglich im Auftrag des Landesmedienzentrums Baden-Württemberg von der Firma KNOPPER.NET in Zusammenarbeit mit den damaligen paedML-Linux- und heutigen linuxmuster.net-Entwicklern realisiert. 
 
-Die linuxmuster.net-Entwickler haben LINBO nun in der Version > 4.3 veröffentlicht. Der Sourcecode ist unter GNU General Public License 3.0 auf GitHub veröffentlicht.
+Die linuxmuster.net-Entwickler haben LINBO nun in der Version 7.4 veröffentlicht. Der Sourcecode ist unter GNU General Public License 3.0 auf GitHub veröffentlicht.
 
 LINBO bietet
 
@@ -17,40 +17,24 @@ LINBO bietet
 * Grafische Client-Oberfläche zur einfachen Bedienung durch Anwender und Netzwerkbetreuer
 * Vollständige Integration in linuxmuster.net
 
-LINBO4, das von linuxmuster.net entwickelt wurde, weist einige Neuerungen auf:
+LINBO, das von linuxmuster.net entwickelt wurde, weist einige Neuerungen auf:
 
 * Für neue Images wird nur noch das Format qcow2 unterstützt. Der Name des Basis-Images muss daher in der übernommenen start.conf angepasst werden (z.B. image.qcow2).
-* Die Bennenung der zusätzlichen Image-Dateien postsync, prestart and reg ändert sich, so dass diese nur noch ohne dem Image-Format angegeben werden (z.B. image.postsync, image.prestart and image.reg, früher: image.cloop.postsync etc.).
+* Die Benennung der zusätzlichen Image-Dateien postsync, prestart and reg ändert sich, so dass diese nur noch ohne dem Image-Format angegeben werden (z.B. image.postsync, image.prestart and image.reg).
 * qemu-img wird nun genutzt, um die Erstellung und Wiederherstellung der qcow2-Images durchzuführen.
 * Es wird nur noch 64 Bit Client-Hardware unterstützt.
-* linuxmuster.net <=6.2 wird nicht mehr unterstützt.
-* Ab LINBO v4.1 stehen differentielle Images zur Verfügung.
-* Bisherige Images im cloop Format sind direkt in das neue qcow2 Format zu konvertieren.
-* Ab LINBO v4.1.36 wird Kernel 6.5.3 verwendet und es können qcow2-Images mit Torrent verteilt werden, die > 52 GiB sind. Für ctorrent kann hierzu die sog. piece length konfiguriert werden.
-* Ab LINBO v4.3 wird die Nutzung verschiedener Kernel bei den Clients ermöglicht:
-    • legacy - Kernel: 6.1.*
-    • longterm - Kernel: 6.12.*
-    • stable - Kernel: 6.14.* 
-* Es können auf den Clients Linux Firmware-Dateien genutzt werden. Firmware ist in Ubuntu 24.04 zst-komprimiert. Firmware-Dateien können in /etc/linuxmuster/linbo/firmware aber wie bisher ohne .zst-Extension angegeben werden.
-* Ab LINBO 4.3 werden vereinheitlichte Partitionsnamen verwendet:
-  Unabhängig vom verbauten Festplattentyp (SATA, NVME etc.) können die Partitionen jetzt mit einheitlichen Namen angesprochen werden.
-  
-Namensschema:
-    • 1. Platte: /dev/disk0
-    • 2. Platte: /dev/disk1
-    • ...
-    • 1. Partition: /dev/disk0p1
-    • 2. Partition: /dev/disk0p2
-    • …
-    
-    Linbo legt beim Bootvorgang entsprechende Symlinks zu den tatsächlichen Devices an.
-    Eine NVME-Disk wird immer als erste Platte (disk0) definiert.
-    Eine USB-Platte wird immer als letzte Platte definiert.
+* Es stehen differentielle Images zur Verfügung.
+* Ab LINBO 7.4 wird der Standardkernel von Ubuntu 26.04 verwendet (7.0.0).
 
-Dieses Kapitel führt in die Nutzung von LINBO4 ein und erklärt die wesentlichen Schritte zur Imageverwaltung.
+.. hint:: Bei der Image-Verteilung per torrent wurde ctorrent durch aria2 ersetzt.
+
+
+Dieses Kapitel führt in die Nutzung von LINBO ein und erklärt die wesentlichen Schritte zur Imageverwaltung.
 
 .. hint::
 	Die meisten PC mit UEFI verwenden standardmäßig "SecureBoot". Dies muss deaktiviert werden, um Linbo booten zu können!
+
+.. todo:: Alle LINBO Screenshots prüfen und ggf. aktualisieren!
 
 Der LINBO Startbildschirm
 -------------------------
@@ -205,8 +189,8 @@ Nach Änderung des Passwortes musst Du auf dem Server noch die ``linbofs.lz`` ne
    update-linbofs
 
 
-LINBO4 Imageverwaltung
-======================  
+LINBO Imageverwaltung
+=====================
 
 LINBO Imageverwaltung am Client
 -------------------------------
@@ -291,7 +275,7 @@ Dialog: Image erstellen
 
    LINBO - Image erstellen
 
-Ab der LINBO Version 4.1 kannst Du wählen, ob Du ein neues Basisimage oder ein differentielles Image erstellen möchtest. Sollte bereits ein Basisimage existieren, so wird dieses mit überschrieben. Es erfolgt keine weitere Rückfrage. 
+Du kannst wählen, ob Du ein neues Basisimage oder ein differentielles Image erstellen möchtest. Sollte bereits ein Basisimage existieren, so wird dieses dann überschrieben. Es erfolgt keine weitere Rückfrage.
 
 Lokal im Cache wir das aktuelle Image beim Erstellen überschrieben. Beim Hochladen des aktuellen Images mit demselben Namen wird auf dem Server zuvor ein Backup des vorherigen Images erstellt.
 
@@ -370,7 +354,7 @@ LINBO Differenzielle Images
 
 .. hint::
 
-   Seit der Version LINBO 4.1 ist es möglich, differentielle Images zu erstellen.
+  Es ist möglich, differentielle Images zu erstellen.
 
 ``Differentielle Images`` bauen auf einem vollständigen Image eines Client-Betriebssystems auf und legen alle Änderungen / Ergänzungen seit dem letzten Image ab. Diese werden dann bei einer Synchronisation des Clients vollständig angewendet.
 
@@ -518,9 +502,9 @@ Imageverwaltung aufrufen
    :align: left
    :alt: LNBO Image Menue
 
-   LINBO4 Menü
+   LINBO Menü
 
-Um zur Umageverwaltung in der WebUI zu gelangen, meldest Du Dich in der WebUI als ``global-admin`` an. Danach rufst Du links in der Menüspalte ``Geräteverwaltung -> LINBO4`` auf.
+Um zur Umageverwaltung in der WebUI zu gelangen, meldest Du Dich in der WebUI als ``global-admin`` an. Danach rufst Du links in der Menüspalte ``Geräteverwaltung -> LINBO`` auf.
 
 .. figure:: media/linbo-diff-images/13-linbo-group-images.png
    :align: center
@@ -665,14 +649,14 @@ Melde Dich an der Schulkonsole als Benutzer ``global-admin`` an.
 
    Login WebUI
 
-Wähle danach links den Menüpunkt ``LINBO4`` aus.
+Wähle danach links den Menüpunkt ``LINBO`` aus.
 
 .. figure:: media/linbo-bootscreen/linbo-iso-menue-linbo4.png
    :align: center
    :scale: 70%
-   :alt: LINBO4 Menue
+   :alt: LINBO Menue
 
-   LINBO4 Menüeintrag
+   LINBO Menüeintrag
 
 Rechts im Fenster erscheinen ganz unten zwei Buttons. Klicke nun den Button ``Linbo Boot herunterladen``.
 
@@ -707,7 +691,7 @@ Mit ``Enter`` wird der Client gebootet
 
 Mit der Auswahl durch die Pfeiltasten der Tastatur ``Ersteinrichtung + Neustart`` wird Linbo eingerichtet und der Rechner mit Linbo gestartet. Nach dem Neustart stehen alle Linbo-Funktionen zur Verfügung.
 
-LINBO4-Cache: Hinweise
+LINBO-Cache: Hinweise
 ======================
 
 Linbo4 nutzt auf jedem Client eine lokale Cache-Partition, um ein oder mehrere Image/s eine Betriebssystems lokal vorzuhalten. Es lassen sich so unterschiedliche Verhaltensweisen eines Clients entweder via start.conf Datei oder via linbo-remote steuern.
@@ -762,9 +746,7 @@ In der Hardwareklasse (HWK) besteht für Linbo in der start.conf die Möglichkei
 
    [LINBO]                       # globale Konfiguration
    Cache = /dev/sda6             # lokale Cache Partition
-   Server = 10.0.0.1             # IP des Linbo-Servers, der das Linbo-Repository vorhaelt
    Group = r101                  # Name der Rechnergruppe fuer die diese Konfigurationsdatei gilt
-   SystemType = efi64            # moeglich ist bios|bios64|efi32|efi64 (Standard: bios fuer bios 32bit)
    RootTimeout = 600             # automatischer Rootlogout nach 600 Sek.
    AutoPartition = no            # automatische Partitionsreparatur beim LINBO-Start
    AutoFormat = no               # kein automatisches Formatieren aller Partitionen beim LINBO-Start
@@ -811,10 +793,10 @@ Dabei ist zu beachten:
 * ``start:<#>``:
   Startet das Betriebsyssystem, das in der start.conf an der angegebenen <#> Position eingetragen wurde.
   
-LINBO4 mit WLAN nutzen
-======================
+LINBO mit WLAN nutzen
+=====================
 
-Linbo4 unterstützt ab der Version 4.2 die Nutzung von LINBO via WLAN-Netzwerk. Hierzu wurde das Programm ``wpa_supplicant`` in LINBO integriert. 
+Linbo unterstützt die Nutzung von LINBO via WLAN-Netzwerk. Hierzu wurde das Programm ``wpa_supplicant`` in LINBO integriert.
 
 Vor der Nutzung solltest Du zuerst prüfen, ob LINBO für den eingebauten WLAN-Adapter die benötigte Firmware aufweist. Hierzu gehst Du wie folgt vor:
 
@@ -926,11 +908,11 @@ Hast Du die Eintragungen hingegen in der Schulkonsole vorgenommen, so must Du nu
 * Der Download größer Betriebssystem-Images beeinträchtigt Deine WLAN-Performance. Dies solltest Du vermeiden werden.
 * Du solltest zudem überlegen, ob Du ein gesichertes WLAN für das LINBO-Management einrichtest, um den Zugriff auf das WLAN zu beschränken.
 
-LINBO4: Client-Anpassungen
-==========================
+LINBO: Client-Anpassungen
+=========================
 
-LINBO4: Hook-Skripte
---------------------
+LINBO: Hook-Skripte
+-------------------
 
 .. attention::
 
@@ -1007,12 +989,12 @@ Hook-Skripte müssen ausführbar sein und mit einem ``shebang`` beginnen. Es sin
 Weiterführende Hinweise zur Nutzung der Hook-Skripte findest Du hier: https://github.com/linuxmuster/linuxmuster-linuxclient7/wiki/Hook-scripts
 
 
-LINBO4: Linux-Kernel
+LINBO: Linux-Kernel
 ====================
 
-Linbo ab v4.2 nutzt als Standard den aktuellsten Linux-Kernel. Manchmal gibt es aber dennoch Probleme mit Hardware, die nicht richtig erkannt wird. Dann kann es sein, dass z.B. LINBO per PXE nicht korrekt startet oder das System *scheinbar hängen bleibt*. Solche Fälle widerspenstiger Hardware können mit LINBO 4.2 mit einigen Handgriffen vielfach erfolgreich gelöst werden.
+Linbo nutzt als Standard den aktuellsten Linux-Kernel der jeweiligen Ubuntu LTS Version. Manchmal gibt es aber dennoch Probleme mit Hardware, die nicht richtig erkannt wird. Dann kann es sein, dass z.B. LINBO per PXE nicht korrekt startet oder das System *scheinbar hängen bleibt*. Solche Fälle widerspenstiger Hardware können mit LINBO mit einigen Handgriffen vielfach erfolgreich gelöst werden.
 
-Mit LINBO 4.2 wird auf dem Client ein aktueller Linux-Kernel >= 6.6.x installiert und gestartet. Bei neuerer Hardware funktioniert dies i.d.R. problemlos. Bei einigen älteren Hardware-Modellen oder Modellen mit besonderer Hardware-Bestückung kann es vorkommen, dass der Client nicht startet. Dies kann schrittweise wie nachstehend beschrieben, zuerst eingegrenzt und dann behoben werden.
+Mit LINBO wird auf dem Client ein aktueller Linux-Kernel installiert und gestartet. Bei neuerer Hardware funktioniert dies i.d.R. problemlos. Bei einigen älteren Hardware-Modellen oder Modellen mit besonderer Hardware-Bestückung kann es vorkommen, dass der Client nicht startet. Dies kann schrittweise wie nachstehend beschrieben, zuerst eingegrenzt und dann behoben werden.
 
 Es können 
 1. andere Kernel auf den LINBO-Clients genutzt werden. 
@@ -1023,53 +1005,28 @@ Es können
 LINBO-Kernel wechseln
 ---------------------
 
-Auf dem Server befindet sich unter ``/etc/linuxmuster/linbo/custom_kernel.ex`` eine Beispieldatei, wie man den LINBO-Kernel wechselt. Die Kernel befinden sich unterhalb von ``/var/lib/linuxmuster/linbo/``. Es stehen drei verschiedene Versionen zu Verfügung: *legacy, longterm, stable*
-
-Kopiere die Datei Vorlage ``/etc/linuxmuster/linbo/custom_kernel.ex`` nach ``/etc/linuxmuster/linbo/custom_kernel``. Editiere diese Datei nun so, dass der gewünschte Kernel auf dem Client gebootet wird. Sind in der Datei alle Zeilen auskommentiert, dann startet der Client einen letzten stable Kernel.
-
-- Es kann alternativ der **6.1er Kernel (legacy)** genutzt werden. Dazu müssen einfach in der Datei ``/etc/linuxmuster/linbo/custom_kernel`` die folgenden Zeilen eingetragen werden. Es ist nur das Kommentarzeichen für die zweite Zeile zu entfernen.
+- Es kann alternativ ein **anderer Kernel** genutzt werden. Dazu müssen einfach in der Datei ``/etc/linuxmuster/linbo/custom_kernel`` die folgenden Zeilen eingetragen werden.
 
 .. code::
 
-   ## use Linbo's alternative legacy kernel
-   KERNELPATH="legacy"
-   ## use Linbo's alternative longterm kernel
-   #KERNELPATH="longterm"
-   
-   ## currently active kernel image and modules used by the server
-   ## path to kernel image
-   #KERNELPATH="/boot/vmlinuz-$(uname -r)"
-   ## path to the corresponding modules directory
-   #MODULESPATH="/lib/modules/$(uname -r)"
+  ## currently active kernel image and modules used by the server
+  ## path to kernel image
+  KERNELPATH="/boot/vmlinuz-$(uname -r)"
+  ## path to the corresponding modules directory
+  MODULESPATH="/lib/modules/$(uname -r)"
 
-   ## custom kernel image and modules
-   #KERNELPATH="/path/to/my/kernelimage"
-   ## path to the corresponding modules directory
-   #MODULESPATH="/path/to/my/lib/modules/n.n.n"
+  ## custom kernel image and modules
+  #KERNELPATH="/path/to/my/kernelimage"
+  ## path to the corresponding modules directory
+  #MODULESPATH="/path/to/my/lib/modules/n.n.n"
 
-Danach ist der Befehl ``update-linbofs`` auf dem Server auszuführen. Danach bootet der Linbo-Client mit einem 5.15er-Kernel.
+Kommentiere die Zeilen für den nicht mehr verwendeten Kenel und dessen Modules auf mit einem # - Zeichen. Nehme die Kommentarzeichen für den Kernel und die Module heraus,
+die nun gestartet werden sollen.
 
-- Anstelle des aktuellsten Linux-Kernel kann auch ein **6.1er LTS-Kernel** verwendet werden. Dazu müssen einfach in der Datei ``/etc/linuxmuster/linbo/custom_kernel`` die folgenden Zeilen eingetragen werden. Es ist nur in der vierten Zeile das Kommentarzeichen zu entfernen.
+Das Kernelimage und die Kernel-Module müssen in dem angegebenen Pfad jeweils vorhanden sein.
 
-.. code::
+Danach ist der Befehl ``update-linbofs`` auf dem Server auszuführen. Danach bootet der Linbo-Client mit einem anderen Kernel.
 
-   ## use Linbo's alternative legacy kernel
-   # KERNELPATH="legacy"
-   ## use Linbo's alternative longterm kernel
-   KERNELPATH="longterm"
-   
-   ## currently active kernel image and modules used by the server
-   ## path to kernel image
-   #KERNELPATH="/boot/vmlinuz-$(uname -r)"
-   ## path to the corresponding modules directory
-   #MODULESPATH="/lib/modules/$(uname -r)"
-
-   ## custom kernel image and modules
-   #KERNELPATH="/path/to/my/kernelimage"
-   ## path to the corresponding modules directory
-   #MODULESPATH="/path/to/my/lib/modules/n.n.n"
-
-Danach ist der Befehl ``update-linbofs`` auf dem Server auszuführen. Danach bootet der Linbo-Client mit einem 6.1er-Kernel.
 
 
 Netzwerkkarten-Treiber ersetzen
@@ -1165,7 +1122,7 @@ Dazu wechselst Du wieder mit ``linbo-ssh <IP des Clients>`` auf die LINBO-Konsol
 
 Sämtliche Befehle, die linuxmuster-linbo7 (next generation) beherrscht, werden hier aufgelistet: https://github.com/linuxmuster/linuxmuster-linbo7/issues/72#issuecomment-1156633508
 
-LINBO4: VNCServer nutzen
+LINBO: VNCServer nutzen
 ========================
 
 Wird für den Cient der LINBO Kernel-Parameter ``vncserver`` gesetzt, dann wird während des Bootvorgangs von LINBO ein VNC-Server auf dem Client gestartet. Dieser Dienst akzeptiert nur Verbindungen, die von der Server-IP ausgehend auf Port 9999 kommen. Hierdurch ist es möglich, von einem PC im Netzwerk via VNCViewer auf die grafische LINBO-Oberfläche eines LINBO-Clients zuzugreifen.
@@ -1173,7 +1130,7 @@ Wird für den Cient der LINBO Kernel-Parameter ``vncserver`` gesetzt, dann wird 
 Kernel-Parameter setzen
 -----------------------
 
-Wähle in der WebUI im Menü unter ``Geräteverwaltung -> LINBO4 -> Gruppen`` die gewünschte Hardwareklasse aus, bearbeite diese mit dem Stift Symbol und ergänze unter ``Allgemein -> Kernel-Optionen`` in der Eingabezeile als Start-Parameter manuell ``vncviewer``.
+Wähle in der WebUI im Menü unter ``Geräteverwaltung -> LINBO -> Gruppen`` die gewünschte Hardwareklasse aus, bearbeite diese mit dem Stift Symbol und ergänze unter ``Allgemein -> Kernel-Optionen`` in der Eingabezeile als Start-Parameter manuell ``vncviewer``.
 
 .. figure:: media/01-linbo-start-vncserver.png
    :align: center
@@ -1244,10 +1201,10 @@ Wie in nachstehender Abb. erhälst Du dann Zugriff auf den LINBO-Client vom PC a
    
    LINBO Zugriff via VNCViewer
    
-LINBO4: Live-System von ISO booten
+LINBO: Live-System von ISO booten
 ==================================
 
-Mit LINBO >= v4.3 ist es möglich via LINBO ein Live-System wie z.B. Ubuntu 24.04 Desktop oder Systemrescue 12.01 mithilfe der zugehörigen ISO-Datei, die auf dem Server liegt zu starten.
+Mit LINBO ist es möglich via LINBO ein Live-System wie z.B. Ubuntu 24.04 Desktop oder Systemrescue 12.01 mithilfe der zugehörigen ISO-Datei, die auf dem Server liegt zu starten.
 
 Um im Fehlerfall auf bestimmten Clients diesen auch mithilfe eines Live-System zu booten, kann z.B. für eine Hardwareklasse ein zusätzlicher Boot-Eintrag bereitgestellt werden, der auf eine ISO-Datei verweist.
 
@@ -1366,81 +1323,29 @@ Live-CD starten
 
 Starte nun den Client via LINBO. Im Startmenü von LINBO findest Du nun den angelegten Eintrag zur Live-CD. Starte diese nun durch einen Klick auf das große Symbol für das Betriebssystem.
 
+LINBO: Image-Verteilung
+=======================
 
-im Fehlerfall
-=============
+LINBO nutzt für die Image-Verteilung via Torrent **aria2**.
 
-Torrent-Fehler
---------------
-
-Nutzt Du sehr große Images, so kann es passieren, dass bei der Verteilung der qcow2-Images mit Torrent-Fehler auftreten und die Synchronisation auf ``rsync`` zurückfällt. Hierbei kommt es zum Einbruch bei den Datenübertragungsraten.
-
-Ab LINBO v4.1.36 können für ``ctorrent`` Parameter angepasst werden, um dies zu verhindern.
-
-Die Konfigurationsdatei für ctorrent befindet sich
+In ``/etc/default/linbo-torrent`` können jetzt die aria2-Optionen angepasst werden (für die Optionen siehe https://aria2.github.io/manual/en/html/aria2c.html):
 
 .. code::
 
-   /etc/default/linbo-torrent
-   
-Die Paketgrößen können nun als Parameter ``piece length`` angepasst werden. Dazu kannst Du in o.g. Konfigurationsdatei den Parameter wie folgt setzen:
+  # /etc/default/linbo-torrent
+  #
+  # aria2c options, only change that if you know exactly what you're doing.
+  #
+  # thomas@linuxmuster.net
+  # 20260625
+  #
 
-.. code::
+  # used for both purposes
+  ARIA2C_GLOBAL_OPTS="--enable-color=false --enable-dht=false --disable-ipv6=true"
 
-   # Piece length (torrent file option)
-   PIECELEN="524288"
-   
-Hast Du den Wert angepasst, musst Du Torrent neu starten:
+  # used for torrent downloads
+  ARIA2C_DWNLD_OPTS="-c --console-log-level=notice --show-console-readout=true --summary-interval=3 --seed-time=0"
 
-.. code::
-
-   linbo-torrent restart  
- 
-Wurde die Option in der Konfigurationsdatei nicht explizit gesetzt, so wird ein Standardwert (default value) von ``262144`` verwendet. 
-
-Mit der Erhöhung des Wertes können o.g. Probleme behoben werden.
-
-Zum Vergleich findet sich nachstehende Konfigurationsdatei ``/etc/default/linbo-torrent``:
-
-.. code::
-
-   # default values for linbo-torrenthelper service provided by ctorrent
-   # thomas@linuxmuster.net
-   # 20230918
-   #
-   # note: you have to invoke 'linbo-torrent restart' after you have changed any values
-   #
-
-   # Exit while seed <SEEDHOURS> hours later (default 72 hours)
-   SEEDHOURS="100000"
-
-   # Max peers count (default 100)
-   MAXPEERS="100"
-   
-   # Min peers count (default 1)
-   MINPEERS="1"
-   
-   # Download slice/block size, unit KB (default 16, max 128)
-   SLICESIZE="128"
-   
-   # Max bandwidth down (unit KB/s, default unlimited)
-   MAXDOWN=""
-   
-   # Max bandwidth up (unit KB/s, default unlimited)
-   MAXUP=""
-   
-   # Supplemental ctorrent options, separated by space (-v: Verbose output for debugging)
-   #OPTIONS="-v"
-   
-   # Timeout in seconds until rsync fallback (client only)
-   TIMEOUT="300"
-   
-   # user to run ctorrent (server only)
-   CTUSER="nobody"
-   
-   # Piece length (torrent file option)
-   PIECELEN="524288"
-   
-   
-   
+  # used to seed torrents
+  ARIA2C_SEED_OPTS="-V --seed-ratio=0.0"
 
