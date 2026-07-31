@@ -27,8 +27,8 @@ Neuerungen von LINBO v7.4
 
 LINBO 7.4 weist u.a. folgende Neuerungen auf:
 
-* Es sind verschiedene Kernel Versionen verfügbar (6.1.*, 6.12.* & 6.16.*).
-* Es wird als Image-Format ``qcow2`` gentutzt.
+* Es sind verschiedene Kernel Versionen verfügbar. Es wird der aktuelle Kernel von Ubuntu 26.04 LTS als Standard-Kernel verwendet.
+* Es wird als Image-Format ``qcow2`` genutzt.
 * Es werden differentielle Images unterstützt.
 * ``linbo_cmd`` wurde vollständig neu refaktorisiert.
 * Es wurde ein neuer NTFS3-Kernel-Treiber eingebunden, der die Synchronisation für NTFS-Partitionen unterstützt.

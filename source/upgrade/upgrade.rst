@@ -34,9 +34,9 @@ Führe dazu in der Konsole folgende Befehle aus:
 
    .. note::
 
-      Dieser Sprung erfolgt je nach Ausgangsstand in mehreren Stufen (z. B. 25.1 -> 25.7 -> 26.1) mit jeweils einem Neustart dazwischen — der Hinweis auf die jeweils nächste Major-Version erscheint erst, wenn die aktuell laufende Serie ihr letztes Patchlevel erreicht hat. Prüfe daher nach jedem Zwischenschritt erneut auf verfügbare Updates, bis Version 26.1 erreicht ist.
+      Dieser Sprung erfolgt je nach Ausgangsstand in mehreren Stufen (z. B. 25.1 -> 25.7 -> 26.1 -> 26.7) mit jeweils einem Neustart dazwischen — der Hinweis auf die jeweils nächste Major-Version erscheint erst, wenn die aktuell laufende Serie ihr letztes Patchlevel erreicht hat. Prüfe daher nach jedem Zwischenschritt erneut auf verfügbare Updates, bis Version 26.7 erreicht ist.
 
-      Führst Du das Update über das Konsolenmenü durch (Punkt **12) Update from console**), wird ein Major-Upgrade nicht mit ``y``, sondern durch Eintippen der Zielversionsnummer (z. B. ``25.7`` bzw. ``26.1``) bestätigt — ``y`` aktualisiert nur innerhalb der aktuell laufenden Serie.
+      Führst Du das Update über das Konsolenmenü durch (Punkt **12) Update from console**), wird ein Major-Upgrade nicht mit ``y``, sondern durch Eintippen der Zielversionsnummer (z. B. ``25.7`` bzw. ``26.7``) bestätigt — ``y`` aktualisiert nur innerhalb der aktuell laufenden Serie.
 
 3. Hast Du die OPNsense |reg| aktualisiert, werden Deine bisherigen Firewall-Regeln mitgenommen. Diese musst Du nun unbedingt auf das neue Format für Firewall-Regeln migrieren:
 

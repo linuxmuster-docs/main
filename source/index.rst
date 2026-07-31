@@ -99,12 +99,12 @@ Nach einem Klick auf die Leiste eröffnen sich Dir dort noch weitere Möglichkei
 
 .. toctree::
   :maxdepth: 2
-  :caption: Migration
+  :caption: Upgrade
   :hidden:
 
-  migration/index
-  migration/linbo-migration
-  migration/upgrade
+  upgrade/index
+  upgrade/linbo-migration
+  upgrade/upgrade
 
 .. toctree::
   :maxdepth: 4
@@ -113,13 +113,9 @@ Nach einem Klick auf die Leiste eröffnen sich Dir dort noch weitere Möglichkei
 
   clients/index
   clients/client_templates/index
-  clients/use_linbo4/index
+  clients/use_linbo/index
   clients/postsync/index
   clients/leoclient2/index
-
-..  clients/linbo/index
-..  clients/windows10clients/index
-..  clients/linux-clients/index
 
 .. toctree::
   :maxdepth: 2
