@@ -20,20 +20,20 @@ Hardware
 Firewall
 --------
 
-Entweder es wird die bereits bestehende Firewall als dedizierte Lösung oder als bestehende virtuelle Maschine weiter betrieben. Diese muss nach der Installation von linuxmuster.net noch entsprechend integriert werden.
+Entweder wird die bereits bestehende Firewall als dedizierte Lösung oder als bestehende virtuelle Maschine weiter betrieben. Diese muss nach der Installation von linuxmuster.net noch entsprechend integriert werden.
 
-Alternativ wird folgende Open-Source Firewall installiert und in linuxmuster.net automatisch integriert:
+Alternativ wird die Open-Source Firewall OPNsense | reg | installiert und in linuxmuster.net automatisch integriert:
 
 OPNsense®
 ---------
 
-OPNsense® ist für x86-32 und x86-64 Bit Architekturen verfügbar und kann auf SD-Karte, SSDs oder HDDs installiert werden. Folgende Mindestanforderung muss erfüllt sein:
+OPNsense® ist für x86-64 Bit Architekturen verfügbar und kann auf SD-Karte, SSDs oder HDDs installiert werden. Folgende Mindestanforderungen sollten erfüllt sein:
 
 ==================== ==================================
 Prozessor            >= 1.5 GHz Multi-Core CPU (64 Bit)
-RAM                  >= 4 GiB
+RAM                  >= 8 GiB
 Installationsmethode Video (VGA)
-Festplatte           mind. 20 GByte, z.B. 120 GByte SSD
+Festplatte           mind. 40 GByte, z.B. 120 GByte SSD
 NIC                  - mind. 2 (intern + extern)
                      - oder  3 (intern + extern + WLAN)
 ==================== ==================================
@@ -47,22 +47,24 @@ NIC                  - mind. 2 (intern + extern)
    Empfehlung: RAM --> 8GiB, HDD --> 50GiB
 
 
-Weitere Hinweise zu möglichen Hardwareanforderungen bei unterschiedlichen Einsatzszenarien finden sich `hier <https://wiki.opnsense.org/manual/hardware.html#hardware-requirements>`_.
+Weitere Hinweise zu möglichen Hardwareanforderungen bei unterschiedlichen Einsatzszenarien finden sich hier:
+https://docs.opnsense.org/manual/hardware.html
 
-Als Basis nutzt OPNsense® v25.7 das Betriebssystem FreeBSD. Hinweise zu den Anforderungen von FreeBSD bzw. zur Kompatibilität mit eingesetzten Hardware-Komponenten finden sich unter der `HCL - Hardware Compatibility List <https://www.freebsd.org/releases/14.3R/hardware.html>`_.
+
+Als Basis nutzt OPNsense® v26.7 das Betriebssystem FreeBSD. Hinweise zu den Anforderungen von FreeBSD bzw. zur Kompatibilität mit eingesetzten Hardware-Komponenten finden sich unter der HCL - Hardware Compatibility List: https://www.freebsd.org/releases/15.1R/hardware/
 
 
-Server linuxmuster v7.3
------------------------
+Server linuxmuster.net
+----------------------
 
-Für linuxmuster.net v7.3 wird als Basis Ubuntu Server 24.04 LTS eingesetzt. Es wird empfohlen folgende Hardware-Mindestanforderungen zu erfüllen:
+Für linuxmuster.net wird als Basis Ubuntu Server 26.04 LTS eingesetzt. Es wird empfohlen folgende Hardware-Mindestanforderungen zu erfüllen:
 
 ========================= ===========================================
 Prozessor                 >= 2 GHz Multi-Core CPU (64 Bit)
 RAM                       >= 4 GByte
-Festplatte System + Daten - mind. 25 GiB + 100 GiB
-                          - mind. 500 GiB für Daten und Backup
-                          - empfohlen >= 1 TiB
+Festplatte System + Daten - mind. 200 GiB + 800 GiB
+                          - mind. 1000 GiB für Daten und Backup
+                          - empfohlen >= 2 TiB
 ========================= ===========================================
 
 Festplattenspeicher
@@ -79,16 +81,9 @@ So *kann* bei minimaler Ausstattung einer mittleren Schule (ca. 500 Benutzer) ei
 ---------- -------- ---------------------- ------------------
 Schule     Features Standard   Empfohlen   Standard Empfohlen
 ========== ======== ========== =========== ======== =========
-mittelgroß minimal  ~650 GByte 1500+ GByte 8 GByte  16+ GByte
-groß       normal   ~1000GB    2000GB+     10GB     16GB+
+mittelgroß minimal  ~10000GB   2000GB+     16GB     32GB+
+groß       normal   ~2000GB    4000GB+     32GB     64GB+
 ========== ======== ========== =========== ======== =========
-
-..
-  .. hint::
-  Abbilder für drei verschiedene Hardwareklassen haben ca. 40G. Von jedem Image sollen drei Kopien vorgehalten werden, dann ist man schon bei 120G benötigtem Festplattenplatz alleine für die Arbeitsplätze.
-  
-  Auch im Verzeichnis ``/home`` oder im Cloud-Speicher sollte man Platz pro Benutzer einplanen. Bei 5GB für 100 Lehrer und 500MB für 1000 Schüler kommt man auf weitere 1000GB.
-
 
 .. _`net-infrastructure-label`:
 
@@ -100,8 +95,7 @@ In Abhängigkeit vom Einsatzszenario muss die Netzwerkstruktur der linuxmuster.n
 IP-Bereiche
 -----------
 
-Die linuxmuster.net-Lösung kann mit unterschiedlichen IP-Bereichen arbeiten. Standardmäßig wird das interne Netz aus dem privaten IPv4-Bereich 10.0.x.x mit der
-16-Bit Netzmaske 255.255.0.0 (/16) eingerichtet.
+Die linuxmuster.net-Lösung kann mit unterschiedlichen IP-Bereichen arbeiten. Standardmäßig wird das interne Netz aus dem privaten IPv4-Bereich 10.0.x.x mit der 16-Bit Netzmaske 255.255.0.0 (/16) eingerichtet.
 
 Andere private Adressbereiche sind prinzipiell möglich, müssen aber händisch vorbereitet werden. :ref:`modify-net-label`
 
@@ -173,6 +167,6 @@ Wenn man linuxmuster.net virtualisiert betreibt, gelten zu den obigen Voraussetz
 Hypervisoren
 ------------
 
-Die Voraussetzungen für einen virtualisierten Betrieb besteht natürlich darin, vorab den Hypervisor/den VM-Host installiert zu haben und Zugriff auf dessen Verwaltung zu haben.
+Die Voraussetzung für einen virtualisierten Betrieb besteht natürlich darin, vorab den Hypervisor/den VM-Host installiert und Zugriff auf dessen Verwaltung zu haben.
 
 Wo es uns möglich ist, haben wir eine Anleitung dazu geschrieben, um auf die Besonderheiten der Schulnetzumgebung an geeigneter Stelle hinzuweisen.
