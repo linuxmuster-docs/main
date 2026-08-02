@@ -35,10 +35,10 @@ Die Werte bilden die Mindestvoraussetzungen zur Planung. Für die Installation m
 ============ ============= ================= =====
 VM           IP            HDD               RAM 
 ============ ============= ================= =====
-OPNsense®    10.0.0.254/16 10 GiB            4 GiB
-Server       10.0.0.1/16   25 GiB u. 100 GiB 4 GiB
-File-Server  10.0.0.2/16   25 GiB u. 100 GiB 4 GiB
-Proxmox-Host 10.0.0.10/16  500 GiB           4 GiB
+OPNsense®    10.0.0.254/16 10 GiB            8 GiB
+Server       10.0.0.1/16   50 GiB u. 250 GiB 4 GiB
+File-Server  10.0.0.2/16   50 GiB u. 250 GiB 4 GiB
+Proxmox-Host 10.0.0.10/16  1000 GiB          4 GiB
 ============ ============= ================= =====
 
 Die Festplattengröße sowie der genutzte RAM der jeweiligen VMs sollte vor deren Einrichtung an die tatsächlichen Bedürfnisse der Schule angepasst werden.
@@ -53,10 +53,10 @@ Für den Betrieb des Hypervisor selbst (Proxmox VE) sollten ca. 2 bis 6 GB Arbei
 
 Der Proxmox-Host sollte gemäß o.g. Minimalanforderungen folgende Merkmale aufweisen:
 
-  * RAM gesamt: min. 24 GiB (besser: 32 GiB oder 64 GiB)
-  * Erste HDD: min. 100 GiB für Proxmox selbst
-  * Zweite HDD: für die VMs mit mind. 500 GB Kapazität (besser: 1 TiB oder 2 TiB)
-  * Zwei Netzwerkkarten
+  * RAM gesamt: min. 32 GiB (besser: >= 64 GiB), davon  mind. 2 GB für OS und Proxmox VE-Dienste.
+  * Erste SSD: min. 250 GiB für Proxmox selbst
+  * Zweite SSD: für die VMs mit mind. 1 TiB Kapazität (besser: 2 TiB oder 4 TiB)
+  * mind. zwei Netzwerkkarten
   * Der Internetzugang des Proxmox-Hosts sollte zunächst gewährleistet sein, |dh| dieser wird |zB| an einen (DSL-)Router angeschlossen, der den Internetzugang sicherstellt. Sobald alles eingerichtet ist, bekommt der Proxmox-Host eine IP-Adresse im Schulnetz und die Firewall OPNsense® stellt den Internetzugang für alle VMs und den Proxmox-Host bereit.
 
 .. hint::
@@ -70,7 +70,7 @@ Bereitstellen des Proxmox-Hosts
 
    Der Proxmox-Host bildet das Grundgerüst für die Firewall *OPNsense®* und den Schulserver *server*. Die Virtualisierungsfunktionen der CPU sollten zuvor im BIOS aktiviert worden sein.
 
-Die folgende Anleitung beschreibt die *einfachste* Implementierung ohne Dinge wie VLANs, Teaming oder RAID. Diese Themen werden in zusätzlichen Anleitungen betrachtet.
+Die folgende Anleitung beschreibt die *einfachste* Implementierung ohne Dinge wie VLANs, Teaming, RAID oder ZFS. Diese Themen werden in zusätzlichen Anleitungen betrachtet.
 
 * :ref:`Anleitung Netzwerksegmentierung <subnetting-basics-label>` 
 
@@ -690,7 +690,7 @@ In dem nun geöffneten Fenster trägst Du die URL
 
 .. code::
    
-   https://ftp.halifax.rwth-aachen.de/ubuntu-releases/24.04/ubuntu-24.04.2-live-server-amd64.iso
+   https://ftp.halifax.rwth-aachen.de/ubuntu-releases/26.04/ubuntu-26.04-live-server-amd64.iso
 
 ein (copy&paste). Anschließend betätigst Du dann den Button ``Query URL``.
 
@@ -713,7 +713,7 @@ Wähle wie dargestellt: ``SHA-256`` und trage die Checksumme ein:
 
 .. code:: 
   
-  d6dab0c3a657988501b4bd76f1297c053df710e06e0c3aece60dead24f270b4d
+  dec49008a71f6098d0bcfc822021f4d042d5f2db279e4d75bdd981304f1ca5d9
 
 Das Herunterladen des ISOs beginnt mit ``Download``.
 
@@ -789,31 +789,31 @@ Prüfsummendatei (<filename>.sha256)
 
 .. code::
 
-   curl -O https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-25.7-checksums-amd64.sha256
+   curl -O https://mirror.level66.services//opnsense-dist/releases/mirror/OPNsense-26.7-checksums-amd64.sha256
    
 Signatur Datei (<filename>.sig)
 	
 .. code:: 
 
-   curl -O https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-25.7-dvd-amd64.iso.sig
+   curl -O https://mirror.level66.services//opnsense-dist/releases/mirror/OPNsense-26.7-dvd-amd64.iso.sig
 
 Der öffentliche Schlüssel von OPNsense |reg| (<filename>.pub)
 
 .. code::
 
-   curl -O https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-25.7.pub
+   curl -O https://mirror.level66.services//opnsense-dist/releases/mirror/OPNsense-26.7.pub
 
 Die komprimierte ISO Datei (<filename>.iso.bz2)
 
 .. code::
 
-   curl -O https://mirror.informatik.hs-fulda.de/opnsense/releases/mirror/OPNsense-25.7-dvd-amd64.iso.bz2
+   curl -O https://mirror.level66.services//opnsense-dist/releases/mirror/OPNsense-26.7-dvd-amd64.iso.bz2
 
 Nun gilt es, die ISO-Datei auszupacken. Das machst Du mit folgendem Befehl:
 
 .. code::
 
-   bunzip2 -v -v OPNsense-25.7-dvd-amd64.iso.bz2
+   bunzip2 -v -v OPNsense-26.7-dvd-amd64.iso.bz2
 
 Das Entpacken kann einige Zeit in Anspruch nehmen. Anschließend sollte sich in dem Verzeichnis die OPNsense-ISO-Datei befinden.
 
@@ -821,11 +821,11 @@ Das Entpacken kann einige Zeit in Anspruch nehmen. Anschließend sollte sich in 
 
 .. code::
    
-   openssl base64 -d -in OPNsense-25.7-dvd-amd64.iso.sig -out /tmp/image.sig
+   openssl base64 -d -in OPNsense-26.7-dvd-amd64.iso.sig -out /tmp/image.sig
 
 .. code::
 
-   openssl dgst -sha256 -verify OPNsense-25.7.pub -signature /tmp/image.sig OPNsense-25.7-dvd-amd64.iso
+   openssl dgst -sha256 -verify OPNsense-26.7.pub -signature /tmp/image.sig OPNsense-26.7-dvd-amd64.iso
 
 Der letzte Befehl sollte Dir ein ``Verified OK`` liefern.
 

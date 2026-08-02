@@ -19,9 +19,9 @@ Anlegen und Installieren des Servers (AD/DC)
      - Installation von Local/ISO, 
      - Gast OS: Linux, 6.X - 2.6 Kernel
      - BIOS: OVMF (UEFI)
-     - 2 vCPU, 
-     - 3 GiB RAM, 
-     - storage -> hdd1: 25 GiB -> hdd2: 100 GiB, 
+     - 4 vCPU,
+     - 4 GiB RAM,
+     - storage -> hdd1: 50 GiB -> hdd2: 250 GiB,
      - 1 NIC mit Zuordnung zu vSwitch green.
    
    Achte darauf, dass vor dem Start der VM beide Festplatten der VM zugewiesen wurden.
@@ -35,7 +35,7 @@ Erster Start des Servers vom Installationsmedium
 Sprachauswahl
 -------------
 
-Starte den Server Ubuntu 24.04 LTS Server ISO-Image. Es erscheint das erste Installationsfenster mit der Abfrage zur gewünschten Sprache.
+Starte den Server Ubuntu 26.04 LTS Server ISO-Image. Es erscheint das erste Installationsfenster mit der Abfrage zur gewünschten Sprache.
 
 .. figure:: media/basis_server_001.png
    :align: center
@@ -172,12 +172,12 @@ Dabei ist es egal ob es sich dabei um |...|
 
 * |...| eine reale Festplatte mit zwei Partitionen.
 * |...| zwei reale Festplatten.
-* |...| zwei virtuelle Festplatten handelt.
+* |...| zwei virtuelle Festplatten handel
 
 In dieser Anleitung beschreiben wir zunächst die Installation auf Basis unserer Mindestanforderungen, also |...|
 
-* |...| 25G Speichermedium für das System und
-* |...| 100G Speichermedium für Daten / linuxmuster.net
+* |...| 50G Speichermedium für das System und
+* |...| 250G Speichermedium für Daten / linuxmuster.net
 
 Wobei anzumerken ist, dass die Installation des Speicherplatzes für das System ``/`` für alle Varianten identisch ist.
 

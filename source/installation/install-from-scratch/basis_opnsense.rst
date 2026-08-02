@@ -17,6 +17,10 @@ Die nachstehende Dokumentation beschreibt die Installation der OPNsense |reg| Fi
 Installation der OPNsense |reg|
 ===============================
 
+.. todo::
+
+   Die Screenshots sind ggf. noch zu aktualisieren.
+
 .. note:: 
 
    Bist Du zuvor der Anleitung :ref:`Proxmox vorbereiten <install-on-proxmox-label>` gefolgt, dann kannst Du fortfahren mit: `Erster Start der Firewall`_
@@ -41,19 +45,17 @@ Nutze als Architektur ``amd64`` und als ``image type dvd``. Du erhältst dann ei
 
 .. hint::
 
-   Die zuletzt freigegeben OPNsense Version für das Setup von linuxmuster.net v7.3 ist die Version 25.1 
+   Die zuletzt freigegeben OPNsense Version für das Setup von linuxmuster.net v7.4 ist die Version 26.7
    
-   [Stand: Mai 25]. 
+   [Stand: August 65].
    
-   Version 25.7 befindet sich in der Testphase. Berichte über Erkenntnise der Zusammenarbeit mit linuxmuster.net bitte an das Forum oder an die oben genannten Personen. [Stand 06.08.25]
-
-   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/25.1/OPNsense-25.1-dvd-amd64.iso.bz2
+      wget https://mirror.level66.network/opnsense-dist/releases/26.7/OPNsense-26.7-dvd-amd64.iso.bz2
 
 Die heruntergladene Datei entpackst Du unter Linux mit folgendem Befehl:
 
 .. code::
 
-   bunzip2 OPNsense-25.1-dvd-amd64.iso.bz2
+   bunzip2 OPNsense-26.7-dvd-amd64.iso.bz2
 
 
 In der Virtualisierungsumgebung lädst Du die ISO-Datei auf den ISO-Speicher.
@@ -65,11 +67,11 @@ In der Virtualisierungsumgebung lädst Du die ISO-Datei auf den ISO-Speicher.
    - template - other install media, installation from ISO library,
    - Boot-Mode - UEFI (Achtung: xcp-ng: Boot/MBR),
    - 2 vCPU
-   - 4 GiB RAM
-   - storage 20 GiB
+   - 8 GiB RAM
+   - storage 50 GiB
    - 2 NIC mit Zuordnung zu vSwitch red, green.
   
-Für den produktiven Betrieb müssen diese Hardware-Einstellungen **deutlich** angehoben werden (z.B.: 4 vCPU, 8 GiB RAM, 50 GiB SSD, 3 NIC).
+Für den produktiven Betrieb müssen diese Hardware-Einstellungen **deutlich** angehoben werden (z.B.: 4 vCPU, 8 GiB RAM, 250 GiB SSD, 3 NIC).
   
 .. _first_start_firewall:
 
@@ -608,10 +610,6 @@ Das Update ist erfolgreich durchgeführt, wenn du wieder zu dieser Ansicht gelan
    :alt: OPNsense: GUI - Assign interfaces
    
    NIC Zuordnung nach Neustart
-
-.. hint::
-
-   Stand August 25 für die OPNsense |reg| ist die Version 25.7
 
 Klappt das Update, starte die OPNsense |reg| neu.
 
