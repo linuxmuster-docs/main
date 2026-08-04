@@ -81,7 +81,7 @@ So *kann* bei minimaler Ausstattung einer mittleren Schule (ca. 500 Benutzer) ei
 ---------- -------- ---------------------- ------------------
 Schule     Features Standard   Empfohlen   Standard Empfohlen
 ========== ======== ========== =========== ======== =========
-mittelgroß minimal  ~10000GB   2000GB+     16GB     32GB+
+mittelgroß minimal  ~1000GB    2000GB+     16GB     32GB+
 groß       normal   ~2000GB    4000GB+     32GB     64GB+
 ========== ======== ========== =========== ======== =========
 
