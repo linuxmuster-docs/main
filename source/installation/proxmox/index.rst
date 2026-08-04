@@ -49,11 +49,11 @@ Bevor Du dieses Kapitel durcharbeitest, lies bitte zuerst die Abschnitte
   +  :ref:`install-overview-label`
   +  :ref:`prerequisites-label`
 
-Für den Betrieb des Hypervisor selbst (Proxmox VE) sollten ca. 2 bis 6 GB Arbeitsspeicher eingeplant werden. Um nach Anleitung installieren zu können, sollte der Server mit mindestens zwei Netzwerkkarten bestückt sein. Durch VLANs kann der Betrieb aber auch bereits mit nur einer NIC erfolgen - |zB| eine 10 Gbit-Karte an einem Core-VLAN-Switch (L3).
+Für den Betrieb des Hypervisor selbst (Proxmox VE) sollten ca. 2 bis 6 GiB Arbeitsspeicher eingeplant werden. Um nach Anleitung installieren zu können, sollte der Server mit mindestens zwei Netzwerkkarten bestückt sein. Durch VLANs kann der Betrieb aber auch bereits mit nur einer NIC erfolgen - |zB| eine 10 Gbit-Karte an einem Core-VLAN-Switch (L3).
 
 Der Proxmox-Host sollte gemäß o.g. Minimalanforderungen folgende Merkmale aufweisen:
 
-  * RAM gesamt: min. 32 GiB (besser: >= 64 GiB), davon  mind. 2 GB für OS und Proxmox VE-Dienste.
+  * RAM gesamt: min. 32 GiB (besser: >= 64 GiB), davon  mind. 2 GiB für OS und Proxmox VE-Dienste.
   * Erste SSD: min. 250 GiB für Proxmox selbst
   * Zweite SSD: für die VMs mit mind. 1 TiB Kapazität (besser: 2 TiB oder 4 TiB)
   * mind. zwei Netzwerkkarten
