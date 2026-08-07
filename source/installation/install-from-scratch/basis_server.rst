@@ -149,19 +149,7 @@ Lass die Proxy-Adresszeile leer. Auch diese Anfrage verlässt Du mit ``Erledigt`
 
    Bestätige den Ubuntu Mirror Server
 
-Die Mirror-Adresse übernimmst Du ebenfalls mit ``Erledigt``.
-
-Aktualisierung des Installers
------------------------------
-
-.. figure:: media/basis_server_009_new-installer.png
-   :align: center
-   :scale: 40%
-   :alt: update installer
-
-   Installer aktualisieren
-
-Bei der angebotenen Aktualisierung wählst Du ``Aktualisieren auf neuen Installer``.
+Die Mirror-Adresse übernimmst Du ebenfalls mit ``Erledigt``. Hast Du wie zuvor in der from-scratch Installation der OPNsense |reg| beschrieben, dort den Unbound-DNS korrekt konfiguriert, ist die jetzige Namensauflösung bei der Abfrage der Mirror-Adressen erfolgreich.
 
 Speichermedien
 --------------
@@ -177,9 +165,9 @@ Dabei ist es egal ob es sich dabei um |...|
 In dieser Anleitung beschreiben wir zunächst die Installation auf Basis unserer Mindestanforderungen, also |...|
 
 * |...| 50G Speichermedium für das System und
-* |...| 250G Speichermedium für Daten / linuxmuster.net
+* |...| 400G Speichermedium für Daten / linuxmuster.net
 
-Wobei anzumerken ist, dass die Installation des Speicherplatzes für das System ``/`` für alle Varianten identisch ist.
+Die Installation des Speicherplatzes für das System ``/`` für alle Varianten identisch.
 
 Speicher des Systems
 ^^^^^^^^^^^^^^^^^^^^
@@ -191,7 +179,7 @@ Speicher des Systems
 
    Eigenes Festplattenlayout wählen
    
-Wähle nun zur Einrichtung der Festplatten ``Custom Storage Layout`` aus, wie in obigen Bild dargestellt.
+Wähle nun zur Einrichtung der Festplatten ``Custom Storage Layout bzw. benutzerdefinierte Partitionierung`` aus, wie in der Abbildung dargestellt.
 
 Es werden Dir dann die verfügbaren Geräte angezeigt. 
 
@@ -211,8 +199,11 @@ Wähle die erste Festplatte aus, auf der Du das System des Servers unterbringen 
 
    Füge eine GPT Partition hinzu
 
-Wähle den gesamten Festplattenplatz (einfach das Eingabefeld leer lassen) und formatiere diesen mit dem btrfs-Dateiformat und weise diese dem Mount Point ``/`` zu.
-Die sog. Subvolumes für btrfs werden bei der Ubuntu-Installation selbständig erstellt.
+Wähle den gesamten Festplattenplatz (einfach das Eingabefeld leer lassen) und formatiere diesen mit dem **btrfs-Dateiformat** und weise diese dem Mount Point ``/`` zu.
+
+.. hint::
+
+   Mit btrfs und sog. Subvolumes lassen sich Snapshots des Servers erstellen, z.B. bevor Aktualisierungen eingespielt werden. Für viele aktuelle Linux-Installation wird dies bereits als Standard genutzt. Die Subvolumes selbst (z.B. @var), werden erst nach der eigentlichen Installation des linuxmuster.net manuell erstellt.
 
 .. figure:: media/basis_server_013_custom-storage-layout-create-partition-table3.png
    :align: center
@@ -235,7 +226,7 @@ Danach gelangst Du zu nachstehendem Bildschirm.
 Wähle dort das ``zweite Speichermedium`` aus. Dieses muss noch für das spätere Setup partitioniert werden.
 Füge hier erneut eine GPT-Partition für den gesamten Speicherplatz des zweiten Speichermediums hinzu.
 
-Wähle bei der Partitionierung für diese Festplatte das Dateisystem btrfs und hänge dieses auf dem mountpoint ``/srv`` ein.
+Wähle bei der Partitionierung für diese Festplatte das Dateisystem **btrfs** und hänge dieses auf den mountpoint ``/srv`` ein.
 
 .. figure:: media/basis_server_015_custom-storage-layout-create-partition-table-2nd-storage.png
    :align: center
@@ -244,7 +235,7 @@ Wähle bei der Partitionierung für diese Festplatte das Dateisystem btrfs und h
 
    Partitionierung der 2. Festplatte
 
-Hast Du dies übernehmen gelangst Du wieder zur Gesamtübersicht der vorgenommenen Partitionierung.
+Hast Du dies übernommen gelangst Du wieder zur Gesamtübersicht der vorgenommenen Partitionierung.
 
 .. figure:: media/basis_server_016_custom-storage-layout-create-partitions.png
    :align: center
@@ -550,5 +541,130 @@ Anschließend sollte der Log-in nach der Eingabe des Passwortes ``Muster!`` erfo
 Mit ``0) Logout`` beendest Du die Verbindung.
 
 .. hint:: Für Anwender einer Virtualisierungslösung empfehlen wir an dieser Stelle einen Snapshot zu erstellen!
+
+
+Setup der btrfs subvolumes
+--------------------------
+
+.. attention::
+
+   Die Einrichtung von subvolumes ist für den Betrieb des linuxmuster.net Servers nicht erforderlich. Du hat dadurch aber die Möglichkeit, dass pro subvolume snapshots erzeugt werden können.
+
+Nach der bisherigen Installation wurde auf der 1. Festplatte btrfs zur Formatierung genutzt und Root / hierauf gemountet. Auf der zweiten Festplatte wurde ebenfalls btrfs zur Formatierung genutzt und /srv hierauf gemountet.
+
+In der Datei /etc/fstab sollten sich dann u.a. diese Einträge befinden:
+
+.. code::
+
+   # die uuid sind in Deinem System andere
+   /dev/disk/by-uuid/asasas-aasas-asas-asssdds-bah7as       /      btrfs defaults 0 1
+   /dev/disk/by-uuid/basbvv-asaas-asew-sdsdsdd-ffgh5s       /srv   btrfs defaults 0 1
+
+1. Prüfe die btrfs subvolume Basis in Deinem System:
+
+.. code::
+
+   sudo btrfs subvolume list /
+   sudo btrfs subvolume list /srv
+
+Erhälst Du keine Ausgabe, dann sind keine subvolumes aktiv - wie nach der bisherigen Installation zu erwarten.
+
+2. subvolumes erstellen:
+
+Auf der 1. Festplatte soll Root / als subvolume angelegt werden.
+Auf der 2. Festplatte sollen /srv und /var als subvolumes erzeugt werden.
+
+.. code::
+
+   sudo btrfs subvolume create /@        # für / auf 1. Platte
+   sudo btrfs subvolume create /srv/@srv # für /srv auf 2. Platte
+   sudo btrfs subvolume create /srv/@var # für /var auf 2. Platte
+
+3. Bestehende Inhalte von /var in das neue subvolume bringen
+
+Dein aktuelles /var liegt noch auf Platte 1. Bevor du umstellst, musst du den Inhalt nach /srv/@var kopieren.
+
+Dies kannst Du wie folgt durchführen:
+
+.. code::
+
+   sudo apt install rsnyc # rsync installieren
+   sudo systemctl stop rsyslog 2>/dev/null || true  # stoppe rsyslog
+   sudo systemctl stop systemd-journald 2>/dev/null || true # stoppe journald
+   sudo rsync -aHAX --numeric-ids /var/ /srv/@var/ # fuehre ein rsync aus, um die INhalte zu übertragen
+
+
+4. /etc/fstab ändern
+
+Ändere nun die Datei ``/etc/fstab`` wie folgt:
+
+.. code::
+
+   /dev/disk/by-uuid/asasas-aasas-asas-asssdds-bah7as       /      btrfs defaults,subvol=@    0 1
+   /dev/disk/by-uuid/basbvv-asaas-asew-sdsdsdd-ffgh5s       /srv   btrfs defaults,subvol=@srv 0 1
+   /dev/disk/by-uuid/basbvv-asaas-asew-sdsdsdd-ffgh5s       /var   btrfs defaults,subvol=@var 0 1
+
+5. Prüfe nun die subvolumnes mit:
+
+.. code::
+
+   sudo btrfs subvolume list /
+   sudo btrfs subvolume list /srv
+
+Du solltest @ für / und @srv und @var für /srv ausgegeben bekommen.
+
+6. Prüfe, ob die Daten korrekt transferiert wurden:
+
+.. code::
+
+   sudo ls -lah /srv/@var
+   sudo ls -lah /srv/@var/log
+   sudo ls -lah /srv/@var/lib
+   sudo du -sh /srv/@var
+
+7. Teste stichprobenartig, ob ide Dateien vorhanden sind:
+
+.. code::
+
+   sudo test -d /srv/@var/log && echo "log ok"
+   sudo test -d /srv/@var/lib && echo "lib ok"
+   sudo test -d /srv/@var/tmp && echo "tmp ok"
+   sudo test -d /srv/@var/cache && echo "cache ok"
+
+8. Vergleiche die Größen auf dem alten /var und dem neuen subvolume /srv/@var:
+
+.. code::
+
+   sudo du -sh /var
+   sudo du -sh /srv/@var
+
+Die Größenangaben sollten übereinstimmen.
+
+Ist dies der Fall, führst Du ein letztesmal erneut einen ``rsync`` für /var aus.
+
+.. code::
+
+   sudo rsync -aHAX --numeric-ids /var/ /srv/@var/
+
+9. Start den Server nun neu.
+
+.. code::
+
+  reboot
+
+10. Nach dem Neustart kannst Du mit folgenden Befehlen nach möglichen Fehlern suchen:
+
+.. code::
+
+   systemctl --failed
+   journalctl -b -p err --no-pager
+   journalctl -b -u systemd-fstab-generator --no-pager
+
+Achte bei den Ausgaben auf “failed to mount”, “wrong fs type”, “subvolume does not exist”, “mount point … does not exist”.
+
+Ist alles ohne Fehler verlaufen und Du kannst erfolgreich Pakete installieren und aktualisieren, kannst Du die Installation von linuxmuster.net nun weiter fortsetzen.
+
+
+
 
 Weiter geht es jetzt mit :ref:`lmn_pre_install-label`
