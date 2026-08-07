@@ -13,7 +13,7 @@ Melde Dich als Benutzer ``linuxadmin`` mit dem Passwort ``Muster!`` auf dem linu
 
 Für diese Anmeldung kannst Du die xterm.js Konsole von Proxmox verwenden, wenn Du unserer Anleitung gefolgt bist. Alternativ kannst Du Dich via ssh von einem anderen Rechner mit dem Server verbinden, wenn er sich im gleichen Netzwerksegment befindet.
 
-Im Terminal wirst Du mit dem Erstbildschirm von linuxmuster.net v7.3 begrüßt und es werden die installierten Paketversionen von linuxmuster.net angezeigt.
+Im Terminal wirst Du mit dem Erstbildschirm von linuxmuster.net v7.4 begrüßt und es werden die installierten Paketversionen von linuxmuster.net angezeigt.
 
 .. figure:: media/newsetup/lmn-setup-terminal-01.png
    :align: center
@@ -28,72 +28,17 @@ Wechsle im Terminal zum Benutzer root mit
 
    sudo -i
 
-Das Setup wird über den Befehl ``linuxmuster-setup`` gestartet. 
-
-Erfolgt der Aufruf direkt mittels ``linuxmuster-setup`` *müssen* mindestens folgende Setup-Parameter als Kommandozeilenparameter übergeben werden (in einer Zeile) - die angegebene Werte nach dem Gleichheitszeichen sind selbstverständlich nur Beispielwerte:
-
-.. code:: console
-
-   linuxmuster-setup --location="Bad Tuxhausen" --schoolname="Linus-Benedict-Gesamtschule" --country=de --state=SH
-
-Weitere Parameter *können* auf der Kommandozeile angegeben werden. Werden aber auch in einem Dialogsystem abgefragt. Um alle Parameter zu sehen, verwende |...|
-
-.. code::
-  
-   linuxmuster-setup --help
-
-Die dazugehörende Ausgabe:
+Das Setup wird über den Befehl
 
 .. code::
 
-   Usage: linuxmuster-setup [options]
-   [options] may be:
-   -n <hostname>,   --servername=<hostname>   : Set server hostname.
-   -d <domainname>, --domainname=<domainname> : Set domainname.
-   -r <dhcprange>,  --dhcprange=<dhcprange>   : Set dhcp range.
-   -a <adminpw>,    --adminpw=<adminpw>       : Set admin password.
-   -e <schoolname>, --schoolname=<schoolname> : Set school name.
-   -l <location>,   --location=<location>     : Set school location.
-   -z <country>,    --country=<country>       : Set school country.
-   -v <state>,      --state=<state>           : Set school state.
-   -c <file>,       --config=<file>           : path to ini file with setup values
-   -u,              --unattended              : unattended mode, do not ask questions
-   -s,              --skip-fw                 : skip firewall setup per ssh
-   -h,              --help                    : print this help
+   linuxmuster-setup
 
+gestartet.
 
-Alternativ kannst Du eine Konfigurationsdatei mit dem Parameter ``--config`` übergeben.
+Erfolgt der Aufruf direkt mittels ``linuxmuster-setup``, fragt das Setup verschiedene Parameter ab.
 
-Willst Du diese Möglichkeit nutzen, lege eine ``config.txt`` mittels des nächsten Befehls an:
-
-.. code:: 
-
-   echo -e "[setup] \nservername = \ndomainname = \ndhcprange = \nschoolname = \nlocation = \ncountry = \nstate = \nskipfw = False" > ~/config.txt
-   
-.. attention::
-
-   Solltest Du bereits eine Firewall in Betrieb haben und möchtest nicht während des Setups eine neu installierte OPNsense |reg| Firewall mit konfigurieren, dann setze für skipfw = TRUE
-   
-Diese Datei musst Du noch mit Deinen Angaben füllen. Hier beispielhaft mit dem Editor nano gezeigt
-
-.. code:: console
-	
-   nano ~/config.txt
-
-.. figure:: media/newsetup/lmn-setup-terminal-02a.png
-   :align: center
-   :alt: Terminal Setup: Editor nano config.txt
-   :width: 80%
-   
-   Editor Nano: config.txt
-
-Hast Du diese Textdatei mit deinen Einträgen gespeichert ``[Strg]+[X]`` --> ``[Y]`` --> ``[Enter]``, kannst Du das Setup mit folgendem Befehl aufrufen:
-
-.. code::
-
-   linuxmuster-setup --config /root/config.txt
-
-Nach dessen Aufruf, erscheinen in der Konsole nach und nach nochmals relevante Parameter. Hattest Du diese bereits festgelegt, so siehst Du Deine Werte. Bei nicht festgelegten, siehst Du die standardmäßig vorbelegten Werte. Prüfe alle Parameter und passe deren Werte gegebenenfalls an. 
+Bei nicht festgelegten, siehst Du die standardmäßig vorbelegten Werte. Prüfe alle Parameter und passe deren Werte gegebenenfalls an.
 
 Klicke jeweils auf ``< OK >``, um zum nächsten Schritt zu gelangen.
 
@@ -154,7 +99,7 @@ Es erscheint der IP-Adressbereich, der für die Rechneraufnahme mit Linbo reserv
    
    Terminal Setup: DHCP Bereich festlegen
 
-Wechsele mit ``< OK >`` zur nächsten Eingabemaske.
+Wechsel mit ``< OK >`` zur nächsten Eingabemaske.
 
 Hier setzt Du ein neues Administrations-Kennwort. Dieses wird zugleich das neue Kennwort aller administrativen Benutzer, so auch für den WebUI Benutzer ``gobal-admin``.
 
@@ -182,7 +127,7 @@ Hier setzt Du ein neues Administrations-Kennwort. Dieses wird zugleich das neue 
    * Die Grundeinstellungen für Kennwörter in samba4 kannst Du Dir auf dem Server in der Konsole mit ``samba-tool domain passwordsettings show`` anzeigen lassen.
 
 
-Gebe das Kennwort ein und klicke auf ``< OK >``.
+Gib das Kennwort ein und klicke auf ``< OK >``.
 
 .. figure:: media/newsetup/lmn-setup-terminal-06.png
    :align: center
@@ -211,25 +156,13 @@ Nach Abschluss des Setups siehst Du im Terminal, dass das Setup beendet wurde.
    
    Terminal Setup: Abschluss des Setups
 
-Danach muss noch der Dienst für die WebUI oder der Server neu gestartet werden.
+Starte danach sowohl den Server als auch die OPNsense |reg| neu.
 
 .. code::
 
-   # systemctl restart linuxmuster-webui.service
+   root@server:~# reboot
 
-alternativ
-
-.. code::
-
-   # reboot
-
-Das erste Verfahren hat den Vorteil, dass Du nicht die Zeit des Neustarts abwarten, Dich erneut verbinden und anmelden musst.
-
-.. hint::
-
-   Starte nach dem erfolgreichen Setup ebenfalls die OPNsense |reg| neu.
-
-Nach abgeschlossenem Setup und dem Neustart des Dienstes ``linuxmuster-webui`` bzw. eventuellen Neustart des Servers, kannst Du Dich mit einem PC via Browser an der Schulkonsole von linuxmuster.net v7.3 anmelden.  
+Nach abgeschlossenem Setup und dem Neustart kannst Du Dich mit einem PC via Browser an der Schulkonsole von linuxmuster.net v7.4 anmelden.
 
 Nachdem sich Dein Client eine IP-Adresse via DHCP aus dem Adressbereich für die Rechneraufnahme geholt hat, ist dieses aber nicht möglich. Dessen Adressen sind aus sicherheitstechnischen Erwägungen beschränkt.
 
@@ -276,33 +209,14 @@ Nach erfolgreicher Anmeldung gelangst Du zur Hauptseite der Schulkonsole.
    
    Hauptseite der Schulkonsole
 
-Berechtigungen der Log-Dateien anpassen
-=======================================
+Log-Dateien prüfen
+==================
 
 Nach dem erfolgreichen Setup verbindest Du Dich via ssh auf den Server. 
 
-Zum Abschluss sind noch die Dateiberechtigung für die linuxmuster Log-Dateien anzupassen.
+Prüfe, ob in den Log-Dateien des Setups ggf. Fehler berichtet werden.
 
-Setze die Berechtigungen nun mit folgendem Befehl als Benutzer ``root``:
 
-.. code::
-
-  chmod 600 /var/log/linuxmuster/setup.*.log 
-
-Lasse Dir den Inhalt des Verzeichnisses danach ausgeben und kontrollieren, ob Besitzer und Gruppe root sind und diese lesen und schreiben dürfen. 
-
-.. code::
-
-   ls -alh /var/log/linuxmuster/
-
-Der Inhalt des Verzeichnisses sollte sich wie folgt darstellen:
-
-.. figure:: media/newsetup/lmn-setup-permissions-log-files.png
-   :align: center
-   :alt: directory listing log files
-   :width: 80%
-   
-   Liste die Berechtigungen der Dateien auf
 
 OPNsense |reg| Unbound DNS anpassen
 ====================================

@@ -171,17 +171,18 @@ Wenn Du nicht mehr an Deinem Server eingeloggt bist, melde Dich erneut an.
 .. code::
 
    lsblk
-   
-   NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
-   sda      8:0    0   160G  0 disk
-   ├─sda1   8:1    0     1G  0 part /boot/efi
-   └─sda2   8:2    0 158.9G  0 part /
-   sdb      8:16   0  1000G  0 disk
-     └─sdb1 8:17   0  1000G  0 part /srv
-   sr0     11:0    1 1024M  0 rom  
 
-In o.g. Beispiel wurde Ubuntu Server auf der 1. Festplatte (sda) installiert. Die erste Partition der ersten Platte wird für EFI verwendet,
-auf der zweiten Partition wird die Root-Partition ( / ) eingehängt. Auf der zweiten Platte existiert eine Partition, die auf /srv eingehängt ist.
+   NAME   MAJ:MIN   RM  SIZE RO TYPE MOUNTPOINTS
+   vda      253:0    0   50G  0 disk
+   ├─vda1   253:1    0    1G  0 part /boot/efi
+   └─vda2   253:2    0   49G  0 part /
+   vdb      253:16   0  400G  0 disk
+     └─vdb1 253:17   0  400G  0 part /mnt
+                                     /srv
+   sr0       11:0    1 1024M  1 rom
+
+In o.g. Beispiel wurde Ubuntu Server auf der ersten Festplatte (vda) installiert. Die erste Partition der ersten Platte wird für EFI verwendet,
+auf der zweiten Partition wird die Root-Partition ( / ) eingehängt. Auf der zweiten Platte (vdb) existiert eine Partition, auf dieser finden sich die Einhängepunkte /mnt und /srv als subvolumes des btrfs Dateisystems.
 
 Skript herunterladen
 --------------------
@@ -226,7 +227,7 @@ Mit dem Parametern -u (unattended) und -p (Serverprofil) wird das Setup für den
 Ablauf
 ======
 
-Es werden alle erforderlichen Pakete geladen und installiert. Dies kann etwas dauern. Nach Abschluss des Installations- und Vorbereitungsarbeiten wirst Du aufgefordert, den Server neu zu starten.
+Es werden alle erforderlichen Paketquellen für linuxmuster.net eingetragen, die erforderlichen geladen und installiert. Dies kann etwas dauern. Nach Abschluss des Installations- und Vorbereitungsarbeiten wirst Du aufgefordert, den Server neu zu starten.
 
 .. code-block:: Bash
 
@@ -243,7 +244,7 @@ Es werden alle erforderlichen Pakete geladen und installiert. Dies kann etwas da
   # Netmask   : 255.255.0.0
   # Firewall  : 10.0.0.254
   # Gateway   : 10.0.0.254
-  # Interface : ens18
+  # Interface : enp1s0
   # Swapsize  : 2G
 
   ### Finished - a reboot is necessary!
@@ -286,4 +287,18 @@ Aktualisiere die Softwareliste des Servers:
 .. code-block:: Bash
 
    sudo apt update
+
+.. hint::
+
+   Die Eintragung der Quellen wurde in Ubuntu 26.04 ebenfalls dem neuen Debian-Format angepasst. Für die lmn.sources unter ``/etc/apt/sources.list.d/lmn.sources`` sieht der Inhalt wie folgt aus:
+
+   Types: deb
+   URIs: https://deb.linuxmuster.net/
+   Suites: lmn74
+   Components: main
+   Signed-by: /usr/share/keyring/linuxmuster.net.gpg
+
+
+
+
 
