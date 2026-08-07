@@ -854,6 +854,41 @@ Sollten Dir unter dem Reiter ``Aktualisierungen`` zu aktualisierende Pakete ange
 
 .. Setze einen Haken bei ``Deaktiviere Gatewayüberwachung``, speichere die Einstellung und übernimm die Änderung. Jetzt ist Dein Gateway online. Du kannst später die Gatewayüberwachung wieder aktivieren, ohne dass das Gateway offline geht.
 
+Unbound-DNS
+-----------
+
+Dnsmasq DNS haben wir mit dem Wizard bereits deaktiviert. Im System wurde mit dem Wizard bereits ein DNS-Server eingetragen.
+Damit wir aktuell mit OPNsense |reg| für LAN-PCs oder auch den noch zu konfigurierenden linuxmuster.net Server eine Namensauflösung erhalten, müssen wir prüfen, ob Unbound-DNS aktiviert ist.
+
+Zudem stellen wir weitere Optionen ein und definieren eine Abfrage-Weiterleitung.
+
+Gehe hierzu in der OPNsense |reg| auf ``Dienste -> Unbound-DNS -> Allgemein``.
+
+Aktiviere die Einstellungen wie in nachstehender Abbildung dargestellt:
+
+.. figure:: media/basis_opnsense_058a.png
+   :align: center
+   :alt: OPNsense: Unbound-DNS
+
+   Unbound-DNS aktivieren
+
+Klicke zum Abschluss auf ``Anwenden``.
+
+Gehe nun unter Unbound-DNS zum Unterpunkt ``Abfrage-Weiterleitung``
+
+.. figure:: media/basis_opnsense_058b.png
+   :align: center
+   :alt: OPNsense: Unbound-DNS
+
+   Unbound-DNS Weiterleitung aktivieren
+
+Erstelle hier über das Pluszeichen einen neuen Weiterleitungseintrag. Gib einen DNS-Server Deiner Wahl an - hier ist dies ein freier DNS-Server der schweizer Stiftung Quad 9 (https://docs.quad9.net/). Achte darauf, dass der über den Weiterleitungseinträgen angegebene Eintrag ``System-Nameserver verwenden`` *deaktiviert* ist. Hast Du den Eintrag wie abgebildet erstellt, übernehme die Einstellungen mit ``Anwenden``.
+
+Diese Weiterleitung ermöglicht es, dass Geräte aus dem LAN (IP-Bereich 10.0.0.0/16) - noch ohne linuxmuster.net Server - eine Namensauflösung erreichen, wenn diese eine statische IPv4 - Adresse und als DNS-Server die IPv4-Adresse der Firewall im LAN (10.0.0.254) eintragen.
+
+Dies ist hilfreich für die weitere Installation des linuxmuster.net Servers, um während der Installation bereits Updates installieren zu können.
+
+
 QEMU Guest Agent for OPNsense
 -----------------------------
 
