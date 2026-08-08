@@ -210,7 +210,7 @@ Wähle die erste Festplatte bzw. die erste Partition aus, auf der Du das System 
 
    Füge eine GPT Partition hinzu
 
-Wähle den gesamten Festplattenplatz (einfach das Eingabefeld leer lassen) und formatiere diesen mit dem ext4-Dateiformat und weise diese dem Mount Point ``/`` zu.
+Wähle den gesamten Festplattenplatz (einfach das Eingabefeld leer lassen) und formatiere diesen mit dem ``ext4-Dateisystem`` und weise diese dem Mount-Point ``/`` zu.
 
 .. figure:: media/basis_server_013_custom-storage-layout-create-partition-table3.png
    :align: center
