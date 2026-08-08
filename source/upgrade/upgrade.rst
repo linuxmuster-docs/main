@@ -106,13 +106,10 @@ Starte nach dem Upgrade sowohl die Firewall als auch den Server neu.
 
 Melde Dich am Server an, Du solltest den Hinweis auf linuxmuster.net 7.4 sehen:
 
-.. todo::
-
-   Screenshot erneuern
-
-.. figure:: media/02-login-lmn-7.3.png
+.. figure:: media/02-login-lmn-7.4.png
    :align: center
-   :alt: linuxmuster.net v7.4 Pakete an der Anmeldung.
+   :alt: linuxmuster.net v7.4 Pakete
+   :width: 35%
 
    linuxmuster.net v7.4
 
