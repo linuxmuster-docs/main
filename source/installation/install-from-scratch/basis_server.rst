@@ -211,8 +211,7 @@ Wähle die erste Festplatte aus, auf der Du das System des Servers unterbringen 
 
    Füge eine GPT Partition hinzu
 
-Wähle den gesamten Festplattenplatz (einfach das Eingabefeld leer lassen) und formatiere diesen mit dem btrfs-Dateiformat und weise diese dem Mount Point ``/`` zu.
-Die sog. Subvolumes für btrfs werden bei der Ubuntu-Installation selbständig erstellt.
+Wähle den gesamten Festplattenplatz (einfach das Eingabefeld leer lassen) und formatiere diesen mit dem ``ext4-Dateisystem`` und weise diese dem Mount-Point ``/`` zu.
 
 .. figure:: media/basis_server_013_custom-storage-layout-create-partition-table3.png
    :align: center
@@ -235,9 +234,9 @@ Danach gelangst Du zu nachstehendem Bildschirm.
 Wähle dort das ``zweite Speichermedium`` aus. Dieses muss noch für das spätere Setup partitioniert werden.
 Füge hier erneut eine GPT-Partition für den gesamten Speicherplatz des zweiten Speichermediums hinzu.
 
-Wähle bei der Partitionierung für diese Festplatte das Dateisystem btrfs und hänge dieses auf dem mountpoint ``/srv`` ein.
+Wähle bei der Partitionierung für diese Festplatte das Dateisystem ext4 und hänge dieses auf den Mount-Point ``/srv`` ein.
 
-.. figure:: media/basis_server_015_custom-storage-layout-create-partition-table-2nd-storage.png
+.. .. figure:: media/basis_server_015_custom-storage-layout-create-partition-table-2nd-storage.png
    :align: center
    :scale: 50%
    :alt: 2nd storage partitioning
@@ -246,7 +245,7 @@ Wähle bei der Partitionierung für diese Festplatte das Dateisystem btrfs und h
 
 Hast Du dies übernehmen gelangst Du wieder zur Gesamtübersicht der vorgenommenen Partitionierung.
 
-.. figure:: media/basis_server_016_custom-storage-layout-create-partitions.png
+.. .. figure:: media/basis_server_016_custom-storage-layout-create-partitions.png
    :align: center
    :scale: 50%
    :alt: total storage partitioning
