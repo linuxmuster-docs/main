@@ -156,7 +156,7 @@ Nach Abschluss des Setups siehst Du im Terminal, dass das Setup beendet wurde.
    
    Terminal Setup: Abschluss des Setups
 
-Starte danach sowohl den Server als auch die OPNsense |reg| neu.
+Starte danach den Server neu, die OPNsense |reg| wurde bereits während des Setups neu gestartet.
 
 .. code::
 
@@ -216,37 +216,9 @@ Nach dem erfolgreichen Setup verbindest Du Dich via ssh auf den Server.
 
 Prüfe, ob in den Log-Dateien des Setups ggf. Fehler berichtet werden.
 
+.. code::
 
+   sudo apt install less
+   sudo less /var/log/linuxmuster/setup.log | more
 
-OPNsense |reg| Unbound DNS anpassen
-====================================
-
-Das linuxmuster-setup richtet in der OPNsense |reg| als voreingestellte DNS-Server diejnigen des DNS0.EU - Projekts ein. Dies sind europäische öffentliche DNS-Server, die darauf zielen, bösartige Domains zu blocken, Ende-zu-Ende Verschlüsselung zu gewährleisten und gefährdende Inhalte zu filtern (https://www.dns0.eu/de).
-
-Nach der Installation muss im Unbound DNS-Resolver der OPNsense diese Voreinstellung ggf. noch aktiviert werden. Die DNS-Einstellungen der OPNsense kannst Du unter ``System -> Einstellungen -> Allgemein`` kontrollieren.
-
-.. figure:: media/newsetup/opnsense-dns-eintragungen-01.png
-   :align: center
-   :alt: dns settings
-   :width: 80%
-   
-   DNS-Einträge
-
-Zur Aktivierung gehe auf ``Dienste -> Unbound DNS -> Query Forwarding``.
-
-.. figure:: media/newsetup/opnsense-unbound-dns-resolver-settings.png
-   :align: center
-   :alt: dns settings
-   :width: 80%
-   
-   Unbound-DNS: Query Forwarding
-
-Setze den Haken für ``Use System Nameservers``, dort siehst Du dann die in obiger Abb. dargestellten DNS-Einträge. Klicke zur Aktivierung auf ``Anwenden``.
-
-Mit sog. Overrides können im Unbound DNS genutzt werden, um die DNS-Ergebnisse in gewünschter Form anzupassen oder aber spezielle DNS Einträge bereitzustellen. Weitergehende Informationen findest Du hier: https://docs.opnsense.org/manual/unbound.html
-
-Klicke weiter um den Fileserver einzurichten.
-
-
-
-
+Sollten keine Fehler aufgetreten sein, kannst Du mit den Einrichtung des Fileservers fortfahren.
