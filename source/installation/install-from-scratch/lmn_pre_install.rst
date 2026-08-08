@@ -197,7 +197,7 @@ Lade das lmn-appliance Skript herunter und setze die Ausführungsberechtigung:
 
 .. code-block:: Bash
   
-   wget https://raw.githubusercontent.com/linuxmuster/linuxmuster-prepare/master/lmn-appliance
+   wget https://github.com/linuxmuster/linuxmuster-prepare/blob/7.3/lmn-appliance
    chmod +x lmn-appliance
 
 Aufruf lmn-appliance
