@@ -173,16 +173,14 @@ Wenn Du nicht mehr an Deinem Server eingeloggt bist, melde Dich erneut an.
    lsblk
 
    NAME   MAJ:MIN   RM  SIZE RO TYPE MOUNTPOINTS
-   vda      253:0    0   50G  0 disk
-   ├─vda1   253:1    0    1G  0 part /boot/efi
-   └─vda2   253:2    0   49G  0 part /
-   vdb      253:16   0  400G  0 disk
-     └─vdb1 253:17   0  400G  0 part /mnt
-                                     /srv
    sr0       11:0    1 1024M  1 rom
+   vda      253:0    0   50G  0 disk
+   ├─vda1   253:1    0    1M  0 part
+   └─vda2   253:2    0   50G  0 part /
+   vdb      253:16   0  400G  0 disk
+     └─vdb1 253:17   0  400G  0 part /srv
 
-In o.g. Beispiel wurde Ubuntu Server auf der ersten Festplatte (vda) installiert. Die erste Partition der ersten Platte wird für EFI verwendet,
-auf der zweiten Partition wird die Root-Partition ( / ) eingehängt. Auf der zweiten Platte (vdb) existiert eine Partition, auf dieser finden sich die Einhängepunkte /mnt und /srv als subvolumes des btrfs Dateisystems.
+In o.g. Beispiel wurde Ubuntu Server auf der ersten Festplatte (vda) installiert. Die erste Partition wurde als Boot-Device definiert, auf der zweiten Partition befindet sich das System (Root-Partition  / ). Auf der zweiten Platte (vdb) existiert eine Partition, auf dieser findet sich die Einhängepunkte /srv.
 
 Skript herunterladen
 --------------------
@@ -216,7 +214,7 @@ Die möglichen Optionen findest Du hier dokumentiert: https://github.com/linuxmu
 Installation
 ============
 
-Nachstehende Beschreibung geht davon aus, dass Du eine zweite HDD mit einer Größe von 1TiB hast.
+Nachstehende Beschreibung geht davon aus, dass Du eine zweite HDD hast, die Du, wie zuvor beschrieben, partitioniert hast. Der Mount-Point ``/srv`` wird auf der zweiten Festplatte zugeordnet.
 
 .. code-block:: Bash
 
@@ -256,49 +254,6 @@ Ist lmn-appliance ohne Fehler durchgelaufen, starte danach den Server neu mit de
   reboot
 
 Danach steht dem Setup v7.4 nichts mehr im Wege.
-
-Paketquellen eintragen
-======================
-
-.. hint::
-
-   Dies muss nur ausgeführt werden, sofern Du den Server bzw. die VM nicht mit dem Skript ``lmn-appliance`` vorbereitet haben solltest.
-
-Es müssen für linuxmuster.net v7.4 die neuen Paketquellen eingetragen werden.
-
-Zur Eintragung der Paketquellen führe folgende Befehle in der Eingabekonsole aus:
-
-.. code-block:: Bash
-
-   sudo sh -c 'wget -qO- "https://deb.linuxmuster.net/pub.gpg" | gpg --dearmour -o /usr/share/keyrings/linuxmuster.net.gpg'
-
-.. hint:: -O --> [-][Großbuchstabe O]
-
-Damit installierst Du den Key für das Repository von linuxmuster.net und aktivierst ihn.
-
-Füge dann das Linuxmuster 7.4 Repository hinzu.
-
-.. code-block:: Bash
-
-   sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/linuxmuster.net.gpg] https://deb.linuxmuster.net/ lmn74 main" > /etc/apt/sources.list.d/lmn.list'
-
-Aktualisiere die Softwareliste des Servers:
-
-.. code-block:: Bash
-
-   sudo apt update
-
-.. hint::
-
-   Die Eintragung der Quellen wurde in Ubuntu 26.04 ebenfalls dem neuen Debian-Format angepasst. Für die lmn.sources unter ``/etc/apt/sources.list.d/lmn.sources`` sieht der Inhalt wie folgt aus:
-
-   Types: deb
-   URIs: https://deb.linuxmuster.net/
-   Suites: lmn74
-   Components: main
-   Signed-by: /usr/share/keyring/linuxmuster.net.gpg
-
-
 
 
 

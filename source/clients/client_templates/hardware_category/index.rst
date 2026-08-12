@@ -30,7 +30,7 @@ Nun klickst Du unten links auf ``+ERSTELLEN``.
 
 Es öffnet sich ein Kontextmenü. Du kannst entweder ein leere ``start.conf`` nutzen, oder ein bereits vordefiniertes Template für Dein gewünschtes Betriebssystem auswählen. Hierbei kannst Du Templates für ein oder mehrere Betriebssysteme mit oder ohne UEFI-BIOS auswählen und diese ggf. nach Deinen Vorstellungen anpassen. 
 
-LINBO nutzt zur Bezeichnung der Festplatte ab v4.3 eine einheitliche Bezeichnung (unified block device name), was die Pflege eines einheitlichen Images bei unterschiedlicher Hardware vereinfacht:
+LINBO nutzt zur Bezeichnung der Festplatte eine einheitliche Bezeichnung (unified block device name), was die Pflege eines einheitlichen Images bei unterschiedlicher Hardware vereinfacht:
 
 1. Die erste HDD wird als /dev/disk0 bezeichnet
 2. Die erste Partition auf der ersten HDD wird dann als /dev/disk0p1 bezeichnet.
