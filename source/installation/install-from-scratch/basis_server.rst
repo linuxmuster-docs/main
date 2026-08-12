@@ -160,14 +160,16 @@ Dabei ist es egal ob es sich dabei um |...|
 
 * |...| eine reale Festplatte mit zwei Partitionen.
 * |...| zwei reale Festplatten.
-* |...| zwei virtuelle Festplatten handel
+* |...| zwei virtuelle Festplatten
+
+handelt.
 
 In dieser Anleitung beschreiben wir zunächst die Installation auf Basis unserer Mindestanforderungen, also |...|
 
 * |...| 50G Speichermedium für das System und
-* |...| 400G Speichermedium für Daten / linuxmuster.net
+* |...| 400G Speichermedium für Daten /srv
 
-Die Installation des Speicherplatzes für das System ``/`` für alle Varianten identisch.
+Die Installation des Speicherplatzes für das System selbst auf der ersten Festplattte mit dem Mount-Point ``/`` ist für alle Varianten identisch.
 
 Speicher des Systems
 ^^^^^^^^^^^^^^^^^^^^
@@ -188,9 +190,31 @@ Es werden Dir dann die verfügbaren Geräte angezeigt.
    :scale: 60%
    :alt: available devices
 
-   Anzeige der verfügbaren Geräte - andere HDD-Größen als zuvor genannt
+   Anzeige der verfügbaren Geräte
 
-Wähle die erste Festplatte aus, auf der Du das System des Servers unterbringen möchtest. Es wird ein Kontextmenü angezeigt, bei dem Du mit ``Add GPT Partition`` diese erstellen musst.
+Wähle die erste Festplatte aus, auf der Du das System des Servers unterbringen möchtest.
+
+Wähle dort für ``/dev/vda`` (HDD-Bezeichnung in diesem Beispiel), dass diese als Bootplatte verwendet wird.
+
+.. figure:: media/basis_server_011_custom-storage-layout-create-boot-device.png
+   :align: center
+   :scale: 60%
+   :alt: boot device
+
+   Lege das Boot-Gerät fest
+
+
+Wähle dann unter ``freier Speicherplatz`` im Kontextmenü ``Add GPT Partition`` aus.
+
+.. figure:: media/basis_server_011_custom-storage-layout-create-gpt-partition.png
+   :align: center
+   :scale: 60%
+   :alt: boot device
+
+   Erstelle eine GPT-Partitionstabelle
+
+
+Gib an, dass Du den gesamten Platz der Partition zuweist.
 
 .. figure:: media/basis_server_012_custom-storage-layout-create-partition-table2.png
    :align: center
@@ -199,56 +223,39 @@ Wähle die erste Festplatte aus, auf der Du das System des Servers unterbringen 
 
    Füge eine GPT Partition hinzu
 
-Wähle den gesamten Festplattenplatz (einfach das Eingabefeld leer lassen) und formatiere diesen mit dem **btrfs-Dateiformat** und weise diese dem Mount Point ``/`` zu.
+Formatiere diese Partition mit dem **ext4-Dateisystem** und weise für das Sytsem den Mount-Point ``/`` zu.
 
-.. hint::
+Danach gelangst Du zu nachstehendem Bildschirm. Wähle dort das zweite Speichermedium aus. Dieses muss noch für das spätere Setup partitioniert werden. Füge hier erneut eine GPT-Partition hinzu.
 
-   Mit btrfs und sog. Subvolumes lassen sich Snapshots des Servers erstellen, z.B. bevor Aktualisierungen eingespielt werden. Für viele aktuelle Linux-Installation wird dies bereits als Standard genutzt. Die Subvolumes selbst (z.B. @var), werden erst nach der eigentlichen Installation des linuxmuster.net manuell erstellt.
-
-.. figure:: media/basis_server_013_custom-storage-layout-create-partition-table3.png
+.. figure:: media/basis_server_013_custom-storage-layout-create-partition-table.png
    :align: center
-   :scale: 60%
-   :alt: choose partition size
+   :scale: 50%
+   :alt: 2nd storage gpt partition table
 
-   Lege die Partitionsgröße fest
+   Erstelle eine GPT-Partitionstabelle für die zweite Festplatte
 
-Gehe auf ``Erstellen``.
+Wähle den gesamten Speicherplatz des zweiten Speichermediums für die zu erstellende Partition aus, formatiere diese mit dem Dateisystem **ext4** und hänge diese auf den Mount-Point ``/srv`` ein.
 
-Danach gelangst Du zu nachstehendem Bildschirm.
-
-.. figure:: media/basis_server_014_custom-storage-layout-create-partition-table.png
+.. figure:: media/basis_server_014_custom-storage-layout-create-partition-2nd-hdd.png
    :align: center
    :scale: 50%
    :alt: storage configuration overview
 
-   Speicherplatzkonfiguration
+   Erstelle eine Partition mit dem Dateisystem ext4 für /srv
 
-Wähle dort das ``zweite Speichermedium`` aus. Dieses muss noch für das spätere Setup partitioniert werden.
-Füge hier erneut eine GPT-Partition für den gesamten Speicherplatz des zweiten Speichermediums hinzu.
+Hast Du dies übernommen, gelangst Du wieder zur Gesamtübersicht der vorgenommenen Partitionierung.
 
-Wähle bei der Partitionierung für diese Festplatte das Dateisystem **btrfs** und hänge dieses auf den mountpoint ``/srv`` ein.
-
-.. figure:: media/basis_server_015_custom-storage-layout-create-partition-table-2nd-storage.png
+.. figure:: media/basis_server_015_custom-storage-layout-overview.png
    :align: center
    :scale: 50%
-   :alt: 2nd storage partitioning
+   :alt: storage configuration overview
 
-   Partitionierung der 2. Festplatte
-
-Hast Du dies übernommen gelangst Du wieder zur Gesamtübersicht der vorgenommenen Partitionierung.
-
-.. figure:: media/basis_server_016_custom-storage-layout-create-partitions.png
-   :align: center
-   :scale: 50%
-   :alt: total storage partitioning
-
-   Partitionierung der Festplatten
-
+   Gesamtübersicht der Partitionierung
 
 Speicherplatzkonfiguration übernehmen
 -------------------------------------
 
-Übernehme die Speicherplatzkonfiguration und wähle ``Erledigt`` aus.
+Übernimm die Speicherplatzkonfiguration und wähle ``Erledigt`` aus.
 
 Danach erhälst Du die Rückfrage, ob die Installation fortgesetzt werden soll und die Daten auf der Festplatte hierbei gelöscht werden.
 
@@ -541,128 +548,6 @@ Anschließend sollte der Log-in nach der Eingabe des Passwortes ``Muster!`` erfo
 Mit ``0) Logout`` beendest Du die Verbindung.
 
 .. hint:: Für Anwender einer Virtualisierungslösung empfehlen wir an dieser Stelle einen Snapshot zu erstellen!
-
-
-Setup der btrfs subvolumes
---------------------------
-
-.. attention::
-
-   Die Einrichtung von subvolumes ist für den Betrieb des linuxmuster.net Servers nicht erforderlich. Du hat dadurch aber die Möglichkeit, dass pro subvolume snapshots erzeugt werden können.
-
-Nach der bisherigen Installation wurde auf der 1. Festplatte btrfs zur Formatierung genutzt und Root / hierauf gemountet. Auf der zweiten Festplatte wurde ebenfalls btrfs zur Formatierung genutzt und /srv hierauf gemountet.
-
-In der Datei /etc/fstab sollten sich dann u.a. diese Einträge befinden:
-
-.. code::
-
-   # die uuid sind in Deinem System andere
-   /dev/disk/by-uuid/asasas-aasas-asas-asssdds-bah7as       /      btrfs defaults 0 1
-   /dev/disk/by-uuid/basbvv-asaas-asew-sdsdsdd-ffgh5s       /srv   btrfs defaults 0 1
-
-1. Prüfe die btrfs subvolume Basis in Deinem System:
-
-.. code::
-
-   sudo btrfs subvolume list /
-   sudo btrfs subvolume list /srv
-
-Erhälst Du keine Ausgabe, dann sind keine subvolumes aktiv - wie nach der bisherigen Installation zu erwarten.
-
-2. subvolumes erstellen:
-
-Auf der 1. Festplatte soll Root / als subvolume angelegt werden.
-Auf der 2. Festplatte sollen /srv und /var als subvolumes erzeugt werden.
-
-.. code::
-
-   sudo btrfs subvolume create /@        # für / auf 1. Platte
-   sudo btrfs subvolume create /srv/@srv # für /srv auf 2. Platte
-   sudo btrfs subvolume create /srv/@var # für /var auf 2. Platte
-
-3. Bestehende Inhalte von /var in das neue subvolume bringen
-
-Dein aktuelles /var liegt noch auf Platte 1. Bevor du umstellst, musst du den Inhalt nach /srv/@var kopieren.
-
-Dies kannst Du wie folgt durchführen:
-
-.. code::
-
-   sudo apt install rsnyc # rsync installieren
-   sudo systemctl stop rsyslog 2>/dev/null || true  # stoppe rsyslog
-   sudo systemctl stop systemd-journald 2>/dev/null || true # stoppe journald
-   sudo rsync -aHAX --numeric-ids /var/ /srv/@var/ # fuehre ein rsync aus, um die INhalte zu übertragen
-
-
-4. /etc/fstab ändern
-
-Ändere nun die Datei ``/etc/fstab`` wie folgt:
-
-.. code::
-
-   /dev/disk/by-uuid/asasas-aasas-asas-asssdds-bah7as       /      btrfs defaults,subvol=@    0 1
-   /dev/disk/by-uuid/basbvv-asaas-asew-sdsdsdd-ffgh5s       /srv   btrfs defaults,subvol=@srv 0 1
-   /dev/disk/by-uuid/basbvv-asaas-asew-sdsdsdd-ffgh5s       /var   btrfs defaults,subvol=@var 0 1
-
-5. Prüfe nun die subvolumnes mit:
-
-.. code::
-
-   sudo btrfs subvolume list /
-   sudo btrfs subvolume list /srv
-
-Du solltest @ für / und @srv und @var für /srv ausgegeben bekommen.
-
-6. Prüfe, ob die Daten korrekt transferiert wurden:
-
-.. code::
-
-   sudo ls -lah /srv/@var
-   sudo ls -lah /srv/@var/log
-   sudo ls -lah /srv/@var/lib
-   sudo du -sh /srv/@var
-
-7. Teste stichprobenartig, ob ide Dateien vorhanden sind:
-
-.. code::
-
-   sudo test -d /srv/@var/log && echo "log ok"
-   sudo test -d /srv/@var/lib && echo "lib ok"
-   sudo test -d /srv/@var/tmp && echo "tmp ok"
-   sudo test -d /srv/@var/cache && echo "cache ok"
-
-8. Vergleiche die Größen auf dem alten /var und dem neuen subvolume /srv/@var:
-
-.. code::
-
-   sudo du -sh /var
-   sudo du -sh /srv/@var
-
-Die Größenangaben sollten übereinstimmen.
-
-Ist dies der Fall, führst Du ein letztesmal erneut einen ``rsync`` für /var aus.
-
-.. code::
-
-   sudo rsync -aHAX --numeric-ids /var/ /srv/@var/
-
-9. Start den Server nun neu.
-
-.. code::
-
-  reboot
-
-10. Nach dem Neustart kannst Du mit folgenden Befehlen nach möglichen Fehlern suchen:
-
-.. code::
-
-   systemctl --failed
-   journalctl -b -p err --no-pager
-   journalctl -b -u systemd-fstab-generator --no-pager
-
-Achte bei den Ausgaben auf “failed to mount”, “wrong fs type”, “subvolume does not exist”, “mount point … does not exist”.
-
-Ist alles ohne Fehler verlaufen und Du kannst erfolgreich Pakete installieren und aktualisieren, kannst Du die Installation von linuxmuster.net nun weiter fortsetzen.
 
 
 
