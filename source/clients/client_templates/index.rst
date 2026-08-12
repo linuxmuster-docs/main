@@ -58,7 +58,7 @@ Im letzten Schritt wird nun das eigentliche Betriebssystem auf dem Muster-Client
 
 .. hint::
    
-   Damit Clients in die Domäne aufgenommen werden können, muss auf dem Server vorher die Standard-GPO erzeugt werden. Dies ist auch ``notwendig``, wenn ausschließlich Linux-Clients eingesetzt werden.
+   Damit Clients in die Domäne aufgenommen werden können, muss auf dem Server **vorher** die Standard-GPO erzeugt werden. Dies ist auch ``notwendig``, wenn ausschließlich Linux-Clients eingesetzt werden.
 
 Die Standard-GPO wird auf dem Server erzeugt durch:
 
