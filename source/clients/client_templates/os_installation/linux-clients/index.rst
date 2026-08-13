@@ -6,12 +6,11 @@
 Linux-Client
 ============
 
-.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_, 
-                   `@dorian <https://ask.linuxmuster.net/u/dorian>`_
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
 linuxmuster.net stellt für Ubuntu basierte Clients das Paket ``linuxmuster-linuxclient7`` bereit. Es führt automatisiert den Domänenbeitritt aus und vereinheitlicht das Management von Linux- und Windows-Clients durch Auslesen der GPO-Konfigurationen im Active Directory.
 
-Offiziell wird derzeit Ubuntu 24.04 und Pop!_OS 22.04 mit gdm3 und Gnome unterstützt. Andere Ubuntu basierte Distributionen mit gdm3 und Gnome funktionieren i.d.R. ebenfalls.
+Offiziell wird derzeit Ubuntu 26.04 LTS unterstützt. Andere Debian basierte Distributionen funktionieren i.d.R. ebenfalls.
 
 Voraussetzung
 =============
@@ -59,8 +58,6 @@ Gib im PC / in der VM nun an, dass von dem gewünschten ISO-Image / der Installa
 Starte nun den PC / die VM mit den neuen Einstellungen, sodass Ubuntu vom ISO-Image / von der Installations-DVD startet. Nachdem der Start ausgeführt wurde, wähle auf dem ersten Bildschirm aus, dass Du Ubuntu installieren möchtest.
 
 Nachstehend findest Du die Beschreibung zur Installation von Ubuntu.
-
-Möchtest Du pop!os installieren, so folge dieser Beschreibung :ref:`install-linux-clients-popos-label`
 
 
 Installation Ubuntu
@@ -219,13 +216,6 @@ Entsprechen die angezeigten Einstellungen den von Dir gewünschten Einstellungen
 
 Während der Installation wird Dir der Status des Vorgangs dargestellt.
 
-.. figure:: media/05-linux-client-ubu-installation-status.png
-   :align: center
-   :alt: Ubuntu Installation: Installation status
-   :width: 80%
-   
-   Status der laufenden Installation 
-
 Am Ende der Installation wirst Du aufgefordert, den Rechner neu zu starten. 
 
 .. figure:: media/05-linux-client-ubu-installation-finished.png
@@ -241,7 +231,7 @@ Fahre den PC / die VM herunter und werfe das ISO-Image / die Installations-DVD a
 Erstimage erstellen
 -------------------
 
-Passe die Boot-Reihenfolge für den PC / die VM jetzt so an, dass diese wieder via PXE bootet. Du siehst dann die Startoptionen in Linbo für das installierte Ubuntu 24.04.
+Passe die Boot-Reihenfolge für den PC / die VM jetzt so an, dass diese wieder via PXE bootet. Du siehst dann die Startoptionen in Linbo für das installierte Ubuntu 26.04.
 
 .. figure:: media/06-linux-client-ubu-install.png
    :align: center
@@ -339,7 +329,7 @@ Starte nun Ubuntu synchronisiert.
 Paket linuxmuster-linuxclient7 installieren
 --------------------------------------------
 
-Melde Dich an dem gestarteten Ubuntu 24.04 als Benutzer ``linuxadmin`` an.
+Melde Dich an dem gestarteten Ubuntu als Benutzer ``linuxadmin`` an.
 
 .. figure:: media/14-linux-client-ubu-install.png
    :align: center
@@ -374,9 +364,17 @@ Importiere nun den GPG-Schlüssel des linuxmuster.net Repository, indem Du nachs
 
 Trage das linuxmuster.net Repository in die Paketquellen des Clients ein:
 
+.. hint::
+
+   Für linuxmuster.net v7.4 gibt es noch kein eigenes Client-Paket in dem v7.4 Repository.
+
+.. attention::
+
+   Der Domänen-Beitritt weist derzeit noch Fehler auf.
+
 .. code::
 
-   sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/linuxmuster.net.gpg] https://deb.linuxmuster.net/ lmn74 main" > /etc/apt/sources.list.d/lmn74.list'
+   sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/linuxmuster.net.gpg] https://deb.linuxmuster.net/ lmn73 main" > /etc/apt/sources.list.d/lmn73.list'
 
 Aktualisiere die Paketinformationen mit ``sudo apt update``.
 
