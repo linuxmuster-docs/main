@@ -48,7 +48,7 @@ Informationen zum Telefon-Support gibt es auf unserer Projektseite `<https://www
 
    Suchst Du die Dokumentation zur Version linuxmuster.net 7.3 oder die Möglichkeit, unsere Dokumentation herunterzuladen?
 
-Dann schaue in die unten recht angezeigte - zusätzliche - Menüleiste.
+Dann schaue in die unten rechts angezeigte - zusätzliche - Menüleiste.
 
 .. figure:: media/01_intro_read-the-docs-closed.png
    :align: center
