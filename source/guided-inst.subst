@@ -31,7 +31,7 @@
 
 .. Hier Ersetzungen die sich bei Versionsänderungen angepasst werden sollen
 
-.. |lts_version| unicode:: 24.04 .. LTS Versionsnummer
+.. |lts_version| unicode:: 26.04 .. LTS Versionsnummer
 
 .. Hier feststehende Konstanten:
 

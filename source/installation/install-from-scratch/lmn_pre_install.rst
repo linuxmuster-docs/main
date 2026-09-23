@@ -3,7 +3,7 @@
 .. _lmn_pre_install-label:
 
 =====================================
-Server (AD/DC) auf lmn7.3 vorbereiten
+Server (AD/DC) auf lmn7.4 vorbereiten
 =====================================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
@@ -27,7 +27,7 @@ Nachdem Du nun den Server vorbereitet hast, überprüfe die Zeiteinstellungen au
    timedatectl
    
 Es wird hier noch die UTC-Zeit angegeben. Wie für die OPNsense muss nun die Zeitzone angepasst werden.
-Die erfolgt mit folgendem Befehl:
+Dies erfolgt mit folgendem Befehl:
 
 .. code-block:: Bash
 
@@ -35,7 +35,7 @@ Die erfolgt mit folgendem Befehl:
    # erneute Ausgabe der Zeiteinstellungen mit
    timedatectl
    
-Du solltest nun als Zeitzone ``Europe/Berlin`` und die korrekte Lokalzeit sowie die korrkte UTC - Zeit angezeigt bekommen.
+Du solltest nun als Zeitzone ``Europe/Berlin`` und die korrekte Lokalzeit sowie die korrekte UTC-Zeit angezeigt bekommen.
  
  
 Cloud-init deinstallieren
@@ -46,7 +46,7 @@ Cloud-init kannst Du unter Ubuntu mit folgenden Schritten löschen:
 .. code-block:: Bash
 
    # Disable start
-   # Sollte die Datei schon existieren mit dem nächsten Schritt forfahren - sudo apt purge cloud-init -y
+   # Sollte die Datei schon existieren mit dem nächsten Schritt fortfahren - sudo apt purge cloud-init -y
    sudo touch /etc/cloud/cloud-init.disabled
 
    # Uninstall
@@ -118,7 +118,7 @@ Erzeuge nun die Locales neu:
    de_DE.UTF-8... done
    Generation complete.
 
-Du kannst die Default-Locale ggf. auch mit folgenden Befehl neu setzen:
+Du kannst die Default-Locale ggf. auch mit folgendem Befehl neu setzen:
 
 .. code-block:: Bash
 
@@ -171,24 +171,23 @@ Wenn Du nicht mehr an Deinem Server eingeloggt bist, melde Dich erneut an.
 .. code::
 
    lsblk
-   
-   NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
-   sda      8:0    0   160G  0 disk
-   ├─sda1   8:1    0     1G  0 part /boot/efi
-   └─sda2   8:2    0 158.9G  0 part /
-   sdb      8:16   0  1000G  0 disk
-     └─sdb1 8:17   0  1000G  0 part /srv
-   sr0     11:0    1 1024M  0 rom  
 
-In o.g. Beispiel wurde Ubuntu Server auf der 1. Festplatte (sda) installiert. Die erste Partition der ersten Platte wird für EFI verwendet,
-auf der zweiten Partition wird die Root-Partition ( / ) eingehangen. Auf der zweiten Platte existiert eine PArtition, die auf /srv eingehangen ist.
+   NAME   MAJ:MIN   RM  SIZE RO TYPE MOUNTPOINTS
+   sr0       11:0    1 1024M  1 rom
+   vda      253:0    0   50G  0 disk
+   ├─vda1   253:1    0    1M  0 part
+   └─vda2   253:2    0   50G  0 part /
+   vdb      253:16   0  400G  0 disk
+     └─vdb1 253:17   0  400G  0 part /srv
+
+In o.g. Beispiel wurde Ubuntu Server auf der ersten Festplatte (vda) installiert. Die erste Partition wurde als Boot-Device definiert, auf der zweiten Partition befindet sich das System (Root-Partition  / ). Auf der zweiten Platte (vdb) existiert eine Partition, auf dieser findet sich die Einhängepunkte /srv.
 
 Skript herunterladen
 --------------------
 
 Führe danach folgende Befehle in der Eingabekonsole aus:
 
-Wechsel Deinen Log-in und werde zu ``root``, falls du es nicht mehr sein solltest:
+Wechsle Deinen Log-in und werde zu ``root``, falls du es nicht mehr sein solltest:
 
 .. code-block:: Bash
  
@@ -215,7 +214,7 @@ Die möglichen Optionen findest Du hier dokumentiert: https://github.com/linuxmu
 Installation
 ============
 
-Nachstehende Beschreibung geht davon aus, dass Du eine zweite HDD mit einer Größe von 1TiB hast.
+Nachstehende Beschreibung geht davon aus, dass Du eine zweite HDD hast, die Du, wie zuvor beschrieben, partitioniert hast. Der Mount-Point ``/srv`` wird auf der zweiten Festplatte zugeordnet.
 
 .. code-block:: Bash
 
@@ -226,7 +225,7 @@ Mit dem Parametern -u (unattended) und -p (Serverprofil) wird das Setup für den
 Ablauf
 ======
 
-Es werden alle erforderliche Pakete geladen und installiert. Dies kann etwas dauern. Nach Abschluss des Installations- und Vorbereitungsarbeiten wirst Du aufgefordert, den Server neu zu starten.
+Es werden alle erforderlichen Paketquellen für linuxmuster.net eingetragen, die erforderlichen geladen und installiert. Dies kann etwas dauern. Nach Abschluss des Installations- und Vorbereitungsarbeiten wirst Du aufgefordert, den Server neu zu starten.
 
 .. code-block:: Bash
 
@@ -243,7 +242,7 @@ Es werden alle erforderliche Pakete geladen und installiert. Dies kann etwas dau
   # Netmask   : 255.255.0.0
   # Firewall  : 10.0.0.254
   # Gateway   : 10.0.0.254
-  # Interface : ens18
+  # Interface : enp1s0
   # Swapsize  : 2G
 
   ### Finished - a reboot is necessary!
@@ -254,36 +253,7 @@ Ist lmn-appliance ohne Fehler durchgelaufen, starte danach den Server neu mit de
 
   reboot
 
-Danach steht dem Setup v7.3 nichts mehr im Wege.
+Danach steht dem Setup v7.4 nichts mehr im Wege.
 
-Paketquellen eintragen
-======================
 
-.. hint::
-
-   Dies muss nur ausgeführt werden, sofern Du den Server bzw. die VM nicht mit dem Skript ``lmn-appliance`` vorbereitet haben solltest.
-
-Es müssen für linuxmuster.net v7.3 die neuen Paketquellen eingetragen werden.
-
-Zur Eintragung der Paketquellen führe folgende Befehle in der Eingabekonsole aus:
-
-.. code-block:: Bash
-
-   sudo sh -c 'wget -qO- "https://deb.linuxmuster.net/pub.gpg" | gpg --dearmour -o /usr/share/keyrings/linuxmuster.net.gpg'
-
-.. hint:: -O --> [-][Großbuchstabe O]
-
-Damit installierst Du den Key für das Repository von linuxmuster.net und aktivierst ihn.
-
-Füge dann das Linuxmuster 7.3 Repository hinzu.
-
-.. code-block:: Bash
-
-   sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/linuxmuster.net.gpg] https://deb.linuxmuster.net/ lmn73 main" > /etc/apt/sources.list.d/lmn.list'
-
-Aktualisiere die Softwareliste des Servers:
-
-.. code-block:: Bash
-
-   sudo apt update
 

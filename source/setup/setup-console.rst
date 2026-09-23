@@ -13,7 +13,7 @@ Melde Dich als Benutzer ``linuxadmin`` mit dem Passwort ``Muster!`` auf dem linu
 
 Für diese Anmeldung kannst Du die xterm.js Konsole von Proxmox verwenden, wenn Du unserer Anleitung gefolgt bist. Alternativ kannst Du Dich via ssh von einem anderen Rechner mit dem Server verbinden, wenn er sich im gleichen Netzwerksegment befindet.
 
-Im Terminal wirst Du mit dem Erstbildschirm von linuxmuster.net v7.3 begrüßt und es werden die installierten Paketversionen von linuxmuster.net angezeigt.
+Im Terminal wirst Du mit dem Erstbildschirm von linuxmuster.net v7.4 begrüßt und es werden die installierten Paketversionen von linuxmuster.net angezeigt.
 
 .. figure:: media/newsetup/lmn-setup-terminal-01.png
    :align: center
@@ -28,23 +28,21 @@ Wechsle im Terminal zum Benutzer root mit
 
    sudo -i
 
-Das Setup wird über den Befehl ``linuxmuster-setup`` gestartet. 
-
-Erfolgt der Aufruf direkt mittels ``linuxmuster-setup`` *müssen* mindestens folgende Setup-Parameter als Kommandozeilenparameter übergeben werden (in einer Zeile) - die angegebene Werte nach dem Gleichheitszeichen sind selbstverständlich nur Beispielwerte:
-
-.. code:: console
-
-   linuxmuster-setup --location="Bad Tuxhausen" --schoolname="Linus-Benedict-Gesamtschule" --country=de --state=SH
-
-Weitere Parameter *können* auf der Kommandozeile angegeben werden. Werden aber auch in einem Dialogsystem abgefragt. Um alle Parameter zu sehen, verwende |...|
+Das Setup wird über den Befehl
 
 .. code::
-  
+
+   linuxmuster-setup
+
+gestartet.
+
+Erfolgt der Aufruf direkt mittels ``linuxmuster-setup``, fragt das Setup verschiedene Parameter ab.
+
+Folgende Parameter zur Übergabe beim Aufruf des Befehls können übergeben werden:
+
+.. code::
+
    linuxmuster-setup --help
-
-Die dazugehörende Ausgabe:
-
-.. code::
 
    Usage: linuxmuster-setup [options]
    [options] may be:
@@ -61,40 +59,43 @@ Die dazugehörende Ausgabe:
    -s,              --skip-fw                 : skip firewall setup per ssh
    -h,              --help                    : print this help
 
-
-Alternativ kannst Du eine Konfigurationsdatei mit dem Parameter ``--config`` übergeben.
-
-Willst Du diese Möglichkeit nutzen, lege eine ``config.txt`` mittels des nächsten Befehls an:
-
-.. code:: 
-
-   echo -e "[setup] \nservername = \ndomainname = \ndhcprange = \nschoolname = \nlocation = \ncountry = \nstate = \nskipfw = False" > ~/config.txt
-   
-.. attention::
-
-   Solltest Du bereits eine Firewall in Betrieb haben und möchtest nicht während des Setups eine neu installierte OPNsense |reg| Firewall mit konfigurieren, dann setze für skipfw = TRUE
-   
-Diese Datei musst Du noch mit Deinen Angaben füllen. Hier beispielhaft mit dem Editor nano gezeigt
-
-.. code:: console
-	
-   nano ~/config.txt
-
-.. figure:: media/newsetup/lmn-setup-terminal-02a.png
-   :align: center
-   :alt: Terminal Setup: Editor nano config.txt
-   :width: 80%
-   
-   Editor Nano: config.txt
-
-Hast Du diese Textdatei mit deinen Einträgen gespeichert ``[Strg]+[X]`` --> ``[Y]`` --> ``[Enter]``, kannst Du das Setup mit folgendem Befehl aufrufen:
+Du kannst mehrere Parameter beim Aufruf direkt mit übergeben:
 
 .. code::
 
-   linuxmuster-setup --config /root/config.txt
+   linuxmuster-setup --location="Bad Tuxhausen" --schoolname="Linus-Benedict-Gesamtschule" --country=de --state=SH
 
-Nach dessen Aufruf, erscheinen in der Konsole nach und nach nochmals relevante Parameter. Hattest Du diese bereits festgelegt, so siehst Du Deine Werte. Bei nicht festgelegten, siehst Du die standardmäßig vorbelegten Werte. Prüfe alle Parameter und passe deren Werte gegebenenfalls an. 
+Du kannst auch eine Konfigurationsdatei als Textdatei erstellen und dort die Parameter mit den gewünschten Werten eintragen.
+Lege dazu eine neue Textdatei unter ``/root/setupconfig.txt`` mit folgendem Befehl an:
 
+.. code::
+
+   echo -e "[setup] \nservername = \ndomainname = \ndhcprange = \nschoolname = \nlocation = \ncountry = \nstate = \nskipfw = False" > /root/setupconfig.txt
+
+Um nun die Werte einzufügen, editiere diese mit dem Texteditor ``nano``:
+
+.. code::
+
+   nano /root/setupconfig.txt
+
+
+.. figure:: media/newsetup/lmn-setup-terminal-01a.png
+   :align: center
+   :alt: Terminal Setup: setupconfig.txt
+   :width: 80%
+
+   Terminal Setup: Parameter in einer Textdatei festlegen
+
+Hast Du diese Textdatei mit deinen Einträgen gespeichert ``[Strg]+[X] –> [Y] –> [Enter]``, kannst Du das Setup mit folgendem Befehl aufrufen:
+
+.. code::
+
+   linuxmuster-setup --config /root/setupconfig.txt
+
+Nach dem Aufruf, erscheinen in der Konsole nach und nach nochmals die Parameter. Hattest Du diese bereits festgelegt, so siehst Du Deine Werte.
+
+
+Bei nicht festgelegten, siehst Du die standardmäßig vorbelegten Werte. Prüfe alle Parameter und passe deren Werte gegebenenfalls an.
 Klicke jeweils auf ``< OK >``, um zum nächsten Schritt zu gelangen.
 
 .. figure:: media/newsetup/lmn-setup-terminal-02.png
@@ -154,7 +155,7 @@ Es erscheint der IP-Adressbereich, der für die Rechneraufnahme mit Linbo reserv
    
    Terminal Setup: DHCP Bereich festlegen
 
-Wechsele mit ``< OK >`` zur nächsten Eingabemaske.
+Wechsel mit ``< OK >`` zur nächsten Eingabemaske.
 
 Hier setzt Du ein neues Administrations-Kennwort. Dieses wird zugleich das neue Kennwort aller administrativen Benutzer, so auch für den WebUI Benutzer ``gobal-admin``.
 
@@ -182,7 +183,7 @@ Hier setzt Du ein neues Administrations-Kennwort. Dieses wird zugleich das neue 
    * Die Grundeinstellungen für Kennwörter in samba4 kannst Du Dir auf dem Server in der Konsole mit ``samba-tool domain passwordsettings show`` anzeigen lassen.
 
 
-Gebe das Kennwort ein und klicke auf ``< OK >``.
+Gib das Kennwort ein und klicke auf ``< OK >``.
 
 .. figure:: media/newsetup/lmn-setup-terminal-06.png
    :align: center
@@ -211,27 +212,19 @@ Nach Abschluss des Setups siehst Du im Terminal, dass das Setup beendet wurde.
    
    Terminal Setup: Abschluss des Setups
 
-Danach muss noch der Dienst für die WebUI oder der Server neu gestartet werden.
+Starte danach den Server neu, die OPNsense |reg| wurde bereits während des Setups neu gestartet.
 
 .. code::
 
-   # systemctl restart linuxmuster-webui.service
+   root@server:~# reboot
 
-alternativ
-
-.. code::
-
-   # reboot
-
-Das erste Verfahren hat den Vorteil, dass Du nicht die Zeit des Neustarts abwarten, Dich erneut verbinden und anmelden musst.
+Nach abgeschlossenem Setup und dem Neustart kannst Du Dich mit einem PC via Browser an der Schulkonsole von linuxmuster.net v7.4 anmelden.
 
 .. hint::
 
-   Starte nach dem erfolgreichen Setup ebenfalls die OPNsense |reg| neu.
+   Für das AD auf dem Server wurde eine Organizational Unit OU=default-school angelegt, unabhängig von dem beim Setup angegebenem Schulnamen.
 
-Nach abgeschlossenem Setup und dem Neustart des Dienstes ``linuxmuster-webui`` bzw. eventuellen Neustart des Servers, kannst Du Dich mit einem PC via Browser an der Schulkonsole von linuxmuster.net v7.3 anmelden.  
-
-Nachdem sich Dein Client eine IP-Adresse via DHCP aus dem Adressbereich für die Rechneraufnahme geholt hat, ist dieses aber nicht möglich. Dessen Adressen sind aus sicherheitstechnischen Erwägungen beschränkt.
+Nachdem sich Dein Client eine IP-Adresse via DHCP aus dem Adressbereich für die Rechneraufnahme geholt hat, ist dieses aber nicht möglich. Diese Adressen sind nur für die interne LAN-Kommunikation vorgesehen.
 
 Daher muss sich der Rechner in einem besonderen LAN-Bereich befinden - etwa mit der IPv4-Adresse 10.0.0.10/16. Diese IP-Adresse musst Du manuell in Deinem Admin-PC einrichten.
 
@@ -276,63 +269,16 @@ Nach erfolgreicher Anmeldung gelangst Du zur Hauptseite der Schulkonsole.
    
    Hauptseite der Schulkonsole
 
-Berechtigungen der Log-Dateien anpassen
-=======================================
+Log-Dateien prüfen
+==================
 
 Nach dem erfolgreichen Setup verbindest Du Dich via ssh auf den Server. 
 
-Zum Abschluss sind noch die Dateiberechtigung für die linuxmuster Log-Dateien anzupassen.
-
-Setze die Berechtigungen nun mit folgendem Befehl als Benutzer ``root``:
+Prüfe, ob in den Log-Dateien des Setups ggf. Fehler berichtet werden.
 
 .. code::
 
-  chmod 600 /var/log/linuxmuster/setup.*.log 
+   sudo apt install less
+   sudo less /var/log/linuxmuster/setup.log | more
 
-Lasse Dir den Inhalt des Verzeichnisses danach ausgeben und kontrollieren, ob Besitzer und Gruppe root sind und diese lesen und schreiben dürfen. 
-
-.. code::
-
-   ls -alh /var/log/linuxmuster/
-
-Der Inhalt des Verzeichnisses sollte sich wie folgt darstellen:
-
-.. figure:: media/newsetup/lmn-setup-permissions-log-files.png
-   :align: center
-   :alt: directory listing log files
-   :width: 80%
-   
-   Liste die Berechtigungen der Dateien auf
-
-OPNsense |reg| Unbound DNS anpassen
-====================================
-
-Das linuxmuster-setup richtet in der OPNsense |reg| als voreingestellte DNS-Server diejnigen des DNS0.EU - Projekts ein. Dies sind europäische öffentliche DNS-Server, die darauf zielen, bösartige Domains zu blocken, Ende-zu-Ende Verschlüsselung zu gewährleisten und gefährdende Inhalte zu filtern (https://www.dns0.eu/de).
-
-Nach der Installation muss im Unbound DNS-Resolver der OPNsense diese Voreinstellung ggf. noch aktiviert werden. Die DNS-Einstellungen der OPNsense kannst Du unter ``System -> Einstellungen -> Allgemein`` kontrollieren.
-
-.. figure:: media/newsetup/opnsense-dns-eintragungen-01.png
-   :align: center
-   :alt: dns settings
-   :width: 80%
-   
-   DNS-Einträge
-
-Zur Aktivierung gehe auf ``Dienste -> Unbound DNS -> Query Forwarding``.
-
-.. figure:: media/newsetup/opnsense-unbound-dns-resolver-settings.png
-   :align: center
-   :alt: dns settings
-   :width: 80%
-   
-   Unbound-DNS: Query Forwarding
-
-Setze den Haken für ``Use System Nameservers``, dort siehst Du dann die in obiger Abb. dargestellten DNS-Einträge. Klicke zur Aktivierung auf ``Anwenden``.
-
-Mit sog. Overrides können im Unbound DNS genutzt werden, um die DNS-Ergebnisse in gewünschter Form anzupassen oder aber spezielle DNS Einträge bereitzustellen. Weitergehende Informationen findest Du hier: https://docs.opnsense.org/manual/unbound.html
-
-Klicke weiter um den Fileserver einzurichten.
-
-
-
-
+Sollten keine Fehler aufgetreten sein, kannst Du mit den Einrichtung des Fileservers fortfahren.

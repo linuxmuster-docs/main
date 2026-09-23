@@ -8,16 +8,20 @@ Anlegen und Installieren des Fileservers
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
+.. todo::
+
+   Kapitel muss noch überarbeitet werden. btrfs, subvolumes - Anpassungen an neues lmn74 setup etc.
+
 .. hint::
 
-    Der Fileserver für linuxmuster.net 7.3 kann optional installiert werden (Drei-Server-Lösung). Es kann aber weiterhin wie bisher auch ein Weiterbetrieb als Zwei-Server-Lösung erfolgen. Wir empfehlen den Fileserver z.B. in einer eigenen VM zu installieren, da hierdurch deutliche Performancesteigerungen in Verbidnung mit Samba erreicht werden. Dies empfehlen wir insbesondere mittleren bis grösseren Schulen. Kleinere Schulen können problemlos linuxmuster.net 7.3 als Zwei-Server-Lösung weiterbetreiben.
-    
-    Grundsätzlich kann linuxmuster.net 7.3 weiterhin als Zwei-Server-Lösung betrieben werden und es kann jederzeit später eine Erweiterung / Umstellung auf den zusätzlichen File-Server erfolgen. Die Migration/ das Update von v7.2 erfolgt zunächst immer als Zwei-Server-Lösung und es erfolgt danach eine Erweiterung um den Fileserver. 
+    Der Fileserver für linuxmuster.net 7.4 kann optional installiert werden (Drei-Server-Lösung). Es kann aber weiterhin wie bisher auch ein Weiterbetrieb als Zwei-Server-Lösung erfolgen. Wir empfehlen den Fileserver z.B. in einer eigenen VM zu installieren, da hierdurch deutliche Performancesteigerungen in Verbindung mit Samba erreicht werden. Dies empfehlen wir insbesondere mittleren bis größeren Schulen. Kleinere Schulen können problemlos linuxmuster.net 7.4 als Zwei-Server-Lösung weiterbetreiben.
+
+    Grundsätzlich kann linuxmuster.net 7.4 weiterhin als Zwei-Server-Lösung betrieben werden und es kann jederzeit später eine Erweiterung / Umstellung auf den zusätzlichen File-Server erfolgen. Die Migration/ das Update von v7.2 erfolgt zunächst immer als Zwei-Server-Lösung und es erfolgt danach eine Erweiterung um den Fileserver. 
     
 In Samba-Umgebungen ist es inzwischen üblich, den Domänencontroller und den Fileserver getrennt voneinander zu betreiben, da dies Performancevorteile hat: Selbst wenn der Fileserver auf dem gleichen Host virtualisiert wird, wie der Server und auf dem gleichen Storage läuft. Das ist für große Schulen mit vielen Clients von Vorteil.
 
 Es ist aber ohne Probleme möglich, den Fileserver später heraus zu trennen und auf eine eigene Maschine zu verlegen.
-Man kann die Umgebung also zunächst ohne extra Fileserver installieren. Stellt man später fest, dass Dateizugriffe der Nutzer zu lange dauern, kann man jederzeit den Fileserver installieren und linuxmuster.net entsprechend auf eine Dri-Server-Lösung erweitern.
+Man kann die Umgebung also zunächst ohne extra Fileserver installieren. Stellt man später fest, dass Dateizugriffe der Nutzer zu lange dauern, kann man jederzeit den Fileserver installieren und linuxmuster.net entsprechend auf eine Drei-Server-Lösung erweitern.
 
 Der Fileserver von linuxmuster.net wird vollständig in das AD des linuxmuster.net Servers integriert. Die Netzwerkfreigaben werden auf dem linuxmuster.net Server definiert und mithilfe einer DFS-Konfiguration für die konfigurierte Schule bereitgestellt. Es werden so alle persönlichen Netzlaufwerke, die Projektfreigaben, sowie die Klassenfreigaben auf diesem File-Server bereitgestellt.
 
@@ -25,7 +29,7 @@ Vorteile:
 
 - Trennung der Dienste (AD Service, File Service)
 - verbesserte Backupstrategie (jeweils eigenständiges Backup für die Dateien als auch für das AD)
-- verbesserte Sicherheit (bei einem Multi-School Setup kann jeweils ein eigenständier File-Server pro Schule eingesetzt werden.)
+- verbesserte Sicherheit (bei einem Multi-School Setup kann jeweils ein eigenständiger File-Server pro Schule eingesetzt werden.)
 - einfache Wartung und vereinfachte Updates
 - deutliche Leistungsverbesserung - gerade bei grossen Schulinstallationen
 
@@ -165,7 +169,7 @@ Nachdem Du als Benutzer ``linuxadmin`` am file-server angemeldet bist, wechselst
 
 .. code::
 
-   sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/linuxmuster.net.gpg] https://deb.linuxmuster.net/ lmn73 main" > /etc/apt/sources.list.d/lmn73.list'
+   sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/linuxmuster.net.gpg] https://deb.linuxmuster.net/ lmn74 main" > /etc/apt/sources.list.d/lmn74.list'
    
 Fileserver Installation
 =======================
@@ -195,7 +199,7 @@ Weiteres Vorgehen
 
 1. Nun muss der linuxmuster.net Server (AD/DC) im nächsten Schritt vorbereitet werden.
 2. Proxmox muss in das interne Netz gebracht werden.
-3. Es muss das Setup für lmnv7.3 (AD/DC) durchgeführt werden.
+3. Es muss das Setup für lmnv7.4 (AD/DC) durchgeführt werden.
 4. Der File-Server ist in das AD einzubinden und es sind die Freigaben/Shares auf dem lmn-Server zu definieren.
 
 

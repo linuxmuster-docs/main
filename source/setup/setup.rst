@@ -2,7 +2,7 @@
 .. _setup-label:
 
 =======================
-Setup v7.3 AD/DC Server
+Setup v7.4 AD/DC Server
 =======================
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
@@ -32,7 +32,7 @@ Wichtige Hinweise
   - für das Setup von linuxmuster benötigst Du nun eine Subdomain, die vom AD DNS-Server authoritativ intern aufgelöst wird, aber niemals von extern.
   - der AD DNS-Server arbeitet immer nur für diese eine Subdomain und die darunter liegenden Namensräume autoritativ.
   - alle internen Clients müssen den AD DNS-Server als DNS-Server nutzen.
-  - diese Subdomain darf nicht nicht länger als 15 Zeichen sein (NetBIOS-Name) und keine Satzzeichen enthalten.
+  - diese Subdomain darf nicht länger als 15 Zeichen sein (NetBIOS-Name) und keine Satzzeichen enthalten.
   - der Fully Qualified Domain Name (FQDN) darf nicht länger als 64 Byte sein.
   - nutze niemals nicht registrierte Domains wie z.B. .local -> meineschule.local 
 

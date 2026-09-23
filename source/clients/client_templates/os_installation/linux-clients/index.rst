@@ -6,12 +6,11 @@
 Linux-Client
 ============
 
-.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_, 
-                   `@dorian <https://ask.linuxmuster.net/u/dorian>`_
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
 linuxmuster.net stellt für Ubuntu basierte Clients das Paket ``linuxmuster-linuxclient7`` bereit. Es führt automatisiert den Domänenbeitritt aus und vereinheitlicht das Management von Linux- und Windows-Clients durch Auslesen der GPO-Konfigurationen im Active Directory.
 
-Offiziell wird derzeit Ubuntu 24.04 und Pop!_OS 22.04 mit gdm3 und Gnome unterstützt. Andere Ubuntu basierte Distributionen mit gdm3 und Gnome funktionieren i.d.R. ebenfalls.
+Offiziell wird derzeit Ubuntu 26.04 LTS unterstützt. Andere Debian basierte Distributionen funktionieren i.d.R. ebenfalls.
 
 Voraussetzung
 =============
@@ -60,8 +59,6 @@ Starte nun den PC / die VM mit den neuen Einstellungen, sodass Ubuntu vom ISO-Im
 
 Nachstehend findest Du die Beschreibung zur Installation von Ubuntu.
 
-Möchtest Du pop!os installieren, so folge dieser Beschreibung :ref:`install-linux-clients-popos-label`
-
 
 Installation Ubuntu
 -------------------
@@ -69,7 +66,7 @@ Installation Ubuntu
 .. hint::
    Bei Ubuntu sollte man darauf achten, dass der Firefox nicht als Snap-Paket installiert wird, da damit SSO nicht funktioniert! Möglicherweise trifft das auch auf andere Distributionen zu!
    
-Hast Du den PC / die VM von vom ISO-Image / der Installations-DVD gestartet, siehst Du zunächst folgenden Start-Bildschirm:
+Hast Du den PC / die VM vom ISO-Image / der Installations-DVD gestartet, siehst Du zunächst folgenden Start-Bildschirm:
 
 .. figure:: media/00-linux-client-ubu-grub-start.png
    :align: center
@@ -184,11 +181,11 @@ Klicke auf ``ok`` und es werden nochmals alle Einstellungen angezeigt:
    
    Übersicht der Partitionen
 
-Sind diese Einstellungen korrekt, prüfe noch, ob das Gerät für die Bootloader-Installation die Ubuntu-Parition ist bzw. bei UEFI-Geräte EFI-Partition (z.B. /dev/vda1 hier mit dem Einhängepunkt /boot/efi). Falls nicht passe dies an. Der Bootloader sollte **nicht** auf den MBR der Festplatte installiert werden.
+Sind diese Einstellungen korrekt, prüfe noch, ob das Gerät für die Bootloader-Installation die Ubuntu-Parition ist bzw. bei UEFI-Geräten EFI-Partition (z.B. /dev/vda1 hier mit dem Einhängepunkt /boot/efi). Falls nicht passe dies an. Der Bootloader sollte **nicht** auf den MBR der Festplatte installiert werden.
 
 Setze die Installation mit dem Button ``weiter`` fort.
 
-Im weiteren INstallationsverlauf wirst Du nach dem Namen für den Computer und dem Benutzernamen und Kennwort für den neuen Administrator gefragt. Gib hier als Benutzernamen ``linuxadmin`` ein. Beim Namen des Rechners musst Du den Namen des PCs / der VM angeben, wie Du ihn in der Gerätekonfiguration festgelegt hast.
+Im weiteren Installationsverlauf wirst Du nach dem Namen für den Computer und dem Benutzernamen und Kennwort für den neuen Administrator gefragt. Gib hier als Benutzernamen ``linuxadmin`` ein. Beim Namen des Rechners musst Du den Namen des PCs / der VM angeben, wie Du ihn in der Gerätekonfiguration festgelegt hast.
 
 .. figure:: media/05-linux-client-ubu-install.png
    :align: center
@@ -217,14 +214,7 @@ Vor der eigentlichen Installation werden Dir die Einstellungen nochmals als Übe
 
 Entsprechen die angezeigten Einstellungen den von Dir gewünschten Einstellungen, dann starte die Installation mit dem Button ``Installieren``.
 
-Während der Installation wir Dir der Status des Vorgangs dargestellt.
-
-.. figure:: media/05-linux-client-ubu-installation-status.png
-   :align: center
-   :alt: Ubuntu Installation: Installation status
-   :width: 80%
-   
-   Status der laufenden Installation 
+Während der Installation wird Dir der Status des Vorgangs dargestellt.
 
 Am Ende der Installation wirst Du aufgefordert, den Rechner neu zu starten. 
 
@@ -241,7 +231,7 @@ Fahre den PC / die VM herunter und werfe das ISO-Image / die Installations-DVD a
 Erstimage erstellen
 -------------------
 
-Passe die Boot-Reihenfolge für den PC / die VM jetzt so an, dass diese wieder via PXE bootet. Du siehst dann die Startoptionen in Linbo für das installierte Ubuntu 24.04.
+Passe die Boot-Reihenfolge für den PC / die VM jetzt so an, dass diese wieder via PXE bootet. Du siehst dann die Startoptionen in Linbo für das installierte Ubuntu 26.04.
 
 .. figure:: media/06-linux-client-ubu-install.png
    :align: center
@@ -256,7 +246,7 @@ Klicke nun unten rechts auf das Werkzeug-Symbol, um zum Menü für die Imageerst
    :align: center
    :alt: Ubuntu Installation: Menue Tools
    
-   Wekzeug-Symbol
+   Werkzeug-Symbol
 
 Du wirst nach dem Linbo-Passwort gefragt. Gib dieses ein. 
 
@@ -324,7 +314,7 @@ Zum Abschluss erscheint die Meldung, dass das Image erfolgreich hochgeladen wurd
 
 Gehe durch einen Klick auf das Zeichen ``<`` zurück und klicke im nächsten Bildschirm das obere Symbol auf der rechten Seite an, um Dich abzumelden.
 
-Du siehst nun drei Start-Symbole. Das grosse Symbol started das Image sychronisiert, während das grüne Icon das lokale Image aus dem Cache ohne Synchronisation startet.
+Du siehst nun drei Start-Symbole. Das große Symbol startet das Image synchronisiert, während das grüne Icon das lokale Image aus dem Cache ohne Synchronisation startet.
 
 .. figure:: media/06-linux-client-ubu-install.png
    :align: center
@@ -339,7 +329,7 @@ Starte nun Ubuntu synchronisiert.
 Paket linuxmuster-linuxclient7 installieren
 --------------------------------------------
 
-Melde Dich an dem gestarteten Ubuntu 24.04 als Benutzer ``linuxadmin`` an.
+Melde Dich an dem gestarteten Ubuntu als Benutzer ``linuxadmin`` an.
 
 .. figure:: media/14-linux-client-ubu-install.png
    :align: center
@@ -373,6 +363,14 @@ Importiere nun den GPG-Schlüssel des linuxmuster.net Repository, indem Du nachs
 ^^^^^^^^^^
 
 Trage das linuxmuster.net Repository in die Paketquellen des Clients ein:
+
+.. hint::
+
+   Für linuxmuster.net v7.4 gibt es noch kein eigenes Client-Paket in dem v7.4 Repository.
+
+.. attention::
+
+   Der Domänen-Beitritt weist derzeit noch Fehler auf.
 
 .. code::
 

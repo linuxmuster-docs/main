@@ -10,14 +10,14 @@ Was ist linuxmuster.net?
 
 linuxmuster.net ist eine Komplettlösung für den digital unterstützten Unterricht für Schüler:innen und Lehrer:innen einer zeitgemäßen Bildungseinrichtung.
 
-Die langjährigen Erfahrungen aller Beteiligten aus der linuxmuster.net Gemeinde haben gezeigt, dass sich ein Firnmennetzwerk fundamental von den Anforderungen an ein 
-heutige Schulnetz unterscheiden. 
+Die langjährigen Erfahrungen aller Beteiligten aus der linuxmuster.net Gemeinde haben gezeigt, dass sich ein Firmennetzwerk fundamental von den Anforderungen an ein
+heutiges Schulnetz unterscheidet.
 
 Die Entwicklung von linuxmuster.net greift all diese Anforderungen auf und stellt eine modulare Lösung für ein Schulnetz zur Verfügung. 
 
 Diese kann von einer Ein-Server-Lösung (mit drei virtuellen Maschinen - VMs) bis hin zu einer Mehr-Server-Lösung mit Cloud-Anbindung und BYOD-Integration und mehreren physikalischen Servern skaliert werden.
 
-Die Anforderungen, die heute an ein Schulnetz gestellt werden, erklären wir im nachfolgenden Abschnitten detailliert. Im Anschluss zeigen wir auf, wie linuxmuster.net diese umsetzt.
+Die Anforderungen, die heute an ein Schulnetz gestellt werden, erklären wir in den nachfolgenden Abschnitten detailliert. Im Anschluss zeigen wir auf, wie linuxmuster.net diese umsetzt.
 
 Schulnetzwerk vs. "normales" Netzwerk
 =====================================
@@ -68,13 +68,13 @@ Im Prinzip gibt es vier große Merkmale, die auffallen:
 
    Zum Schuljahreswechsel verlässt eine große Anzahl an Schüler:innen die Einrichtung und neue Schüler:innen müssen in das System eingepflegt werden. Die Zusammensetzung der Klassen, Kurse und Arbeitsgruppen werden zu großen Teilen neu formiert, so dass Änderungen an bestehenden Schüler:innen erforderlich sind.
 
-   Solch ein administrativen Aufwand ergibt sich in einer Firma selten.
+   Solch ein administrativer Aufwand ergibt sich in einer Firma selten.
 
 4. Der Umgang mit den Arbeitsmitteln
 
    Schüler:innen teilen sich ein und dasselbe Arbeitsmittel im schulischen Alltag. Dabei ist es für die nächste Unterrichtseinheit entscheidend, dass zum Start immer eine einheitliche und funktionsfähige Umgebung auf den Rechnern vorhanden ist. Die zeitliche Taktung zwischen den Wechseln kann sehr kurz sein.
 
-   Dies ist in einer Firma so nicht gegeben. Wenn ein User seinen Rechner verlässt, findet er ihn der Regel immer genauso wieder.
+   Dies ist in einer Firma so nicht gegeben. Wenn ein User seinen Rechner verlässt, findet er ihn in der Regel immer genauso wieder.
 
 Aus diesen Gründen sprechen wir von einem
 
@@ -99,7 +99,7 @@ Unser Anspruch liegt dabei auf der Bereitstellung eines Systems, das folgende Pu
    :name:     structure-over-all 
    :alt:      gesamte Struktur
 
-Ein Augenmerk liegt dabei auf der Unabhängigkeit eingesetzter Hard- und Software. Dieses wird unter anderem an dem Umfang der unterstützten Betriebssysteme für die Arbeitsstationen erkennbar.
+Ein Augenmerk liegt dabei auf der Unabhängigkeit eingesetzter Hard- und Software. Dies wird unter anderem an dem Umfang der unterstützten Betriebssysteme für die Arbeitsstationen erkennbar.
 
 Proprietäre Betriebssysteme, |zb| aus dem Hause Microsoft |reg|, können aufgrund der Lizenzpolitik der Hersteller nicht von uns vorbereitet ausgeliefert werden. Diese lassen sich aber ebenso leicht in unsere Infrastruktur integrieren, wie solche, die als Open-Source erhältlich sind.
 
@@ -141,7 +141,7 @@ Die Benutzer- und Gruppenverwaltung orientiert sich an den Bedürfnissen, die de
 
     * Schüler:innen bekommen mit der Einschulung ihren persönlichen Benutzer-Account.
     * Dieser bleibt ihnen bis zum Ende ihrer Laufbahn an der Schule erhalten.
-    * Die Gruppenzugehörigkeit der einzelnen Schüler:innen werden in Klassen, Kursen und Projekten abgebildet.
+    * Die Gruppenzugehörigkeit der einzelnen Schüler:innen wird in Klassen, Kursen und Projekten abgebildet.
     * Zu Beginn eines Schuljahres können diese Daten und Abhängigkeiten aus der Schulverwaltung mittels Import der Daten eingespielt bzw. fortgeschrieben werden.
       Gleiches gilt selbstverständlich auch für Veränderungen während eines laufenden Schuljahres.
     * Für Lehrer:innen gilt dies ebenso.
@@ -195,10 +195,10 @@ Für weitergehende Informationen `siehe opnsense.org <https://opnsense.org/>`_.
 
 Bestehende Firewall
 ^^^^^^^^^^^^^^^^^^^
-Es kann auch eine bestehende Firewall weiter genutzt und vollständig in linuxmuster.net integriert werden. Da diese Intergration von deren verwendeten Betriebssystem abhängt und unterschiedliche Schritte erfordert, können wir nicht eine datailierte Anleitung hier aufzeigen. Geben aber Hinweise dazu im Kapitel `Anpassbar`_. 
+Es kann auch eine bestehende Firewall weiter genutzt und vollständig in linuxmuster.net integriert werden. Da diese Integration von deren verwendeten Betriebssystem abhängt und unterschiedliche Schritte erfordert, können wir nicht eine detaillierte Anleitung hier aufzeigen. Geben aber Hinweise dazu im Kapitel `Anpassbar`_. 
 
   
-Selbstheilende Arbeitsstationen durch LINBO 4.3
+Selbstheilende Arbeitsstationen durch LINBO 7.4
 +++++++++++++++++++++++++++++++++++++++++++++++
 
 .. image::    media/structure_of_version_7_client.svg
@@ -216,7 +216,7 @@ Das Konzept der Selbstheilenden Arbeitsstationen (SheilA) ermöglicht einheitlic
     * Möglichkeit sich via VNC auf den LINBO-Client aufzuschalten.
     * mit sogenannten Postsync-Scripten kann der Administrator für einzelne, raumweite oder für alle Geräte notwendige Konfigurationsänderungen beim Systemstart einpflegen.
 
-Nähere Information sind im Kapitel "Clientverwaltung" beschrieben.
+Nähere Informationen sind im Kapitel "Clientverwaltung" beschrieben.
 
 Integration unterschiedlicher Geräte (BYOD)
 +++++++++++++++++++++++++++++++++++++++++++

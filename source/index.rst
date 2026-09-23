@@ -2,7 +2,7 @@
 Einführung
 ==========
 
-Herzlich Willkommen zur Dokumentation von linuxmuster.net v7.3!
+Herzlich Willkommen zur Dokumentation von linuxmuster.net v7.4!
 
 Diese beschreibt alle wichtigen Schritte ...
 
@@ -32,7 +32,7 @@ Installation from Scratch
 -------------------------
 
 Diese Dokumentation führt Dich durch eine Installation von Grund auf. Dies bedeutet, dass zunächst 
-die Vorbereitung der Virtualisierungslösungen - hier Proxmox - dokumentiert wird. Auf dem Virtualisierer sind sog. Virtuelle Maschinen (VM) anzulegen, um linuxmuster.net 7.3 installieren zu können. Hierzu gehört die spezifische Einrichtung des Netzwerks, des Speichers sowie die Vorbereitung der VMs.
+die Vorbereitung der Virtualisierungslösungen - hier Proxmox - dokumentiert wird. Auf dem Virtualisierer sind sog. Virtuelle Maschinen (VM) anzulegen, um linuxmuster.net 7.4 installieren zu können. Hierzu gehört die spezifische Einrichtung des Netzwerks, des Speichers sowie die Vorbereitung der VMs.
 
 Weitere Hilfe
 -------------
@@ -41,12 +41,12 @@ Neben dieser Dokumentation steht Dir unsere Community in unserem Hilfeforum und 
 
 Das Forum findest Du unter `<https://ask.linuxmuster.net>`_.
 
-Informationen zum Telefon-Support gibt es auf unser Projektseite `<https://www.linuxmuster.net/de/support-de/>`_.
+Informationen zum Telefon-Support gibt es auf unserer Projektseite `<https://www.linuxmuster.net/de/support-de/>`_.
 
 
 .. hint::
 
-   Suchst Du die Dokumentation zur Version linuxmuster.net 7.2 oder die Möglichkeit unsere Dokumentation herunterzuladen?
+   Suchst Du die Dokumentation zur Version linuxmuster.net 7.3 oder die Möglichkeit, unsere Dokumentation herunterzuladen?
 
 Dann schaue in die unten recht angezeigte - zusätzliche - Menüleiste.
 
@@ -102,15 +102,9 @@ Nach einem Klick auf die Leiste eröffnen sich Dir dort noch weitere Möglichkei
   :caption: Upgrade
   :hidden:
 
-  migration/upgrade
-
-.. toctree::
-  :maxdepth: 2
-  :caption: Migration
-  :hidden:
-
-  migration/index
-  migration/linbo-migration-to-4
+  upgrade/index
+  upgrade/linbo-migration
+  upgrade/upgrade
 
 .. toctree::
   :maxdepth: 4
@@ -119,13 +113,9 @@ Nach einem Klick auf die Leiste eröffnen sich Dir dort noch weitere Möglichkei
 
   clients/index
   clients/client_templates/index
-  clients/use_linbo4/index
+  clients/use_linbo/index
   clients/postsync/index
   clients/leoclient2/index
-
-..  clients/linbo/index
-..  clients/windows10clients/index
-..  clients/linux-clients/index
 
 .. toctree::
   :maxdepth: 2

@@ -68,9 +68,10 @@ Sind die benötigten LDAP Pakete installiert muss die LDAP Konfiguration in der 
 
 Die ``uri`` muss natürlich auf die jeweilige Schule mit dem entsprechenden Domain Namen angepasst werden ebenso bei ``search``
 
-Sollte die Aleksis Instanz extern betrtrieben werden. Ist es dringend empfohlen den Port ``636`` für LDAPs zu verwenden außerdem bei ``uri`` 
-statt ``ldap:`` ebenfalls ``ldaps`` einzutragen. 
+Sollte die Aleksis Instanz extern betrtrieben werden. Ist es dringend empfohlen den Port ``636`` für LDAPs zu verwenden außerdem bei ``uri``
+statt ``ldap:`` ebenfalls ``ldaps`` einzutragen.
 
+.. include:: /external-services/_ldap-vertrauen-keycloak.rst
 
 Als nächstes wechselt man in die Aleksis Weboberfläche und wechselt auf der linken Seite auf ``Admin`` und dann auf ``LDAP``
 
@@ -107,3 +108,5 @@ Alle anderen Felder sollten leer bleiben
 Am Ende die Einstellungen mit ``EINSTELLUNGEN SPEICHERN`` bestätigen.
 
 Jetzt sollte der Benutzer in der Lage sein sich anzumelden. Die LDAP Anbindung ist hiermit abgeschlossen.
+
+.. include:: /external-services/_datenschutz-loeschung.rst
