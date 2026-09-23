@@ -167,7 +167,7 @@ Als erstes musst Du die App ``Collabora Online`` aktivieren. Gehe dazu auf ``A -
 
 Navigiere links zu ``Verwaltung -> Einstellungen -> Collabora Online Development Edition`` und trage dort unter ``Verwende Deinen eigenen Server`` die URL Deines Collabora-Services ein.
 
-.. image:: media/collabora-01.png   
+.. image:: media/collabora_01_use-in-nextcloud.png   
    :align: center
 
 .. hint::

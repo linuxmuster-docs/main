@@ -5,7 +5,9 @@
 Netzwerkzugriff über Radius
 ===========================
 
-.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
+.. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_, 
+  `@rettich <https://ask.linuxmuster.net/u/rettich>`_
+
 
 RADIUS (Remote Authentification Dial-In User Service) ist ein Client-Server Protokoll, das zur Authentifizierung, Autorisierung und 
 für das Accounting (Triple A - AAA) von Benutzern in einem Netzwerk dient.
@@ -137,7 +139,7 @@ Anpassen des Abschnitts ``ntlm_auth`` weiter unten. Zuerst das Kommentarzeichen 
 .. code::
 
    # eine Zeile
-   ntlm_auth = "/usr/bin/ntlm_auth --allow-mschapv2 --request-nt-key --domain=DOMÄNE --require-membership-of=DOMÄNE\wifi --username=%{%{Stripped-User-Name}:-%{%{User-Name}:-None}} --challenge=%{%{mschap:Challenge}:-00} --nt-response=%{%{mschap:NT-Response}:-00}"
+   ntlm_auth = "/usr/bin/ntlm_auth --allow-mschapv2 --request-nt-key --domain=DOMÄNE --require-membership-of=DOMÄNE\\wifi --username=%{%{Stripped-User-Name}:-%{%{User-Name}:-None}} --challenge=%{%{mschap:Challenge}:-00} --nt-response=%{%{mschap:NT-Response}:-00}"
 
 Dabei muss DOMÄNE durch den eigenen Domänennamen ersetzt werden. Gebe den Inhalt der Datei ``/etc/hosts`` mit folgendem Befehl aus:
 
@@ -162,7 +164,7 @@ Danach ist die Datei ``/etc/freeradius/3.0/mods-enabled/ntlm_auth`` noch anzupas
   exec ntlm_auth {
     wait = yes
        # eine Zeile
-       program = "/usr/bin/ntlm_auth --allow-mschapv2 --request-nt-key --domain=DOMÄNE --require-membership-of=DOMÄNE\wifi --username=%{mschap:User-Name} --password=%{User-Password}"
+       program = "/usr/bin/ntlm_auth --allow-mschapv2 --request-nt-key --domain=DOMÄNE --require-membership-of=DOMÄNE\\wifi --username=%{mschap:User-Name} --password=%{User-Password}"
    }
 
 DOMÄNE ist hierbei wieder wie zuvor zu ersetzen.
@@ -359,3 +361,148 @@ Die APs müssen im Freeradius noch in der Datei ``/etc/freeradius/3.0/clients.co
 Um den APs feste IPs zuzuweisen, sollten diese auf dem lmn-Server in der Datei ``/etc/linuxmuster/sophomorix/default-school/devices.csv`` eingetragen sein.
 
 Je nachdem, ob in jedem (Sub)-netz die APs angeschlossen werden, ist die zuvor dargestellte Firewall-Regel anzupassen. Der Radius-Port in der OPNsense® müsste dann z.B. von Subnetz A (blau) zu Subnetz B (grün Servernetz) geöffnet werden, damit alle APs Zugriff auf den Radius-Dienst erhalten.
+
+VLANs mit Freeradius zuweisen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Wenn die Unterscheidung **ist in der Gruppe wifi** oder **ist nicht in der Gruppe wifi** nicht mehr ausreicht, muss der RADIUS-Server via LDAP die Gruppenzugehörigkeit abfragen.
+
+Wenn es beispielsweise ein Schülernetz ohne Druckerzugriff und ein Lehrernetz mit Druckerzugriff gibt, muss der RADIUS den Usern aus der Gruppe teachers das Lehrernetz und den anderen Usern das Schülernetz zuweisen.
+
+Im Folgenden gehen wir davon aus, dass das Schülernetz die VLAN-ID 10 und das Lehrernetz die VLAN-ID 20 hat.
+
+Als erstes muss mit ``apt install freeradius-ldap`` das freeradius-ldap-modul installiert werden.
+Wechsle mit ``cd /etc/freeradius/3.0/mods-enabled/`` in das Verzeichnis **/etc/freeradius/3.0/mods-enabled/**.
+Dann wird ldap mit ``ln -s ../mods-available/ldap ldap`` aktiviert.
+In ``/etc/freeradius/3.0/mods-enabled/ldap`` müssen folgende Eintragungen gemacht/angepasst werden:
+
+.. code::
+
+  ldap {
+    server = 'ldaps://server.linuxmuster.lan'
+    identity = 'CN=global-binduser,OU=Management,OU=GLOBAL,DC=linuxmuster,DC=lan'
+    password = Mk5ZXi1XTt7iRouX
+    base_dn = 'OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan'
+    ...
+  }
+  
+und 
+
+.. code::
+
+  user {
+    base_dn = "OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan"
+    filter = "(&(objectClass=person)(sAMAccountName=%{%{Stripped-User-Name}:-%{User-Name}})(memberOf=CN=wifi,OU=Management,OU=*))"
+    ...
+  }
+  
+  group {
+    base_dn = "OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan"
+    filter = '(objectClass=group)'
+    name_attribute = cn
+    membership_attribute = 'memberOf'
+    ...
+  }
+
+**identity** und das **password** findet man mit:
+
+.. code::
+
+  root@server:~# cat /etc/linuxmuster/webui/config.yml
+  linuxmuster:
+    ldap:
+      binddn: CN=global-binduser,OU=Management,OU=GLOBAL,DC=linuxmuster,DC=lan
+      bindpw: Mk5ZXi1XTt7iRouX
+      host: server
+      searchdn: DC=linuxmuster,DC=lan
+
+Nachdem der LDAP-Zugriff konfiguriert ist, muss nur noch die gruppenabhängige VLAN-Zuordnung erstellt werden. In **/etc/freeradius/3.0/sites-enabled/inner-tunnel** und **/etc/freeradius/3.0/sites-enabled/default** ist in **post-auth** folgende Eintragung zu machen:
+
+.. code::
+
+  post-auth {
+    if (Ldap-Group == "teachers"){
+      update reply {
+        Tunnel-Type :=VLAN,
+        Tunnel-Medium-Type:=6,
+        Tunnel-Private-Group-Id := 20,
+        Reply-Message := "Wilkommen im Lehrer-WLAN"
+        }
+      }
+    else{
+      update reply {
+        Tunnel-Type :=VLAN,
+        Tunnel-Medium-Type:=6,
+        Tunnel-Private-Group-Id := 10,
+        Reply-Message := "Wilkommen im Schüler-WLAN"
+      }
+    }
+
+Jetzt muss nur noch der RADIUS mit ``systemctl start freeradius.service`` gestartet werden.
+
+So wird der RADIUS getestet:
+.. code::
+
+  root@server:~# radtest ba Muster! server 10 Muster!
+  Sent Access-Request Id 200 from 0.0.0.0:45025 to 10.32.0.1:1812 length 72
+	User-Name = "ba"
+	User-Password = "Muster!"
+	NAS-IP-Address = 10.32.0.1
+	NAS-Port = 10
+	Message-Authenticator = 0x00
+	Cleartext-Password = "Muster!"
+  Received Access-Accept Id 200 from 10.32.0.1:1812 to 10.32.0.1:45025 length 80
+	Message-Authenticator = 0x1c4bb67e743500e6551c3fa2a2e19228
+	Tunnel-Type:0 = VLAN
+	Tunnel-Medium-Type:0 = IEEE-802
+	Tunnel-Private-Group-Id:0 = "20"
+	Reply-Message = "Wilkommen im Lehrer-WLAN"
+	
+oder mit Schülerzugangsdaten
+
+.. code::
+
+  root@server:~# radtest frayka Muster! server 10 Muster!
+  Sent Access-Request Id 222 from 0.0.0.0:36803 to 10.32.0.1:1812 length 76
+	User-Name = "frayka"
+	User-Password = "Muster!"
+	NAS-IP-Address = 10.32.0.1
+	NAS-Port = 10
+	Message-Authenticator = 0x00
+	Cleartext-Password = "Muster!"
+  Received Access-Accept Id 222 from 10.32.0.1:1812 to 10.32.0.1:36803 length 82
+	Message-Authenticator = 0x4917bfcd76547545613363c2098fafa3
+	Tunnel-Type:0 = VLAN
+	Tunnel-Medium-Type:0 = IEEE-802
+	Tunnel-Private-Group-Id:0 = "10"
+	Reply-Message = "Wilkommen im Schüler-WLAN"
+	
+
+VLANs im Unifi-Controller nutzen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Die VLAN-Zurodnung lässt sich jetzt sehr einfach im Unifi-Controller nutzen.
+
+Die VLANs müssen natürlich auch als Netzwerk im Unifi-Controller definiert sein. Unter **Einstellungen -> Netzwerke** lassen sich die Netzwerke einfach definieren. 
+
+.. image:: media/VLAN_unifi_01.png
+   :alt: Radius: VLAN 01
+   :align: center
+
+
+Es muss lediglich ein Name und die VLAN-ID eingegeben werden. Den Rest macht ja die OpnSense.
+Wenn alles geklappt hat, sind die Netzwerke wie folgt aufgeführt.
+
+.. image:: media/VLAN_unifi_02.png
+   :alt: Radius: VLAN 02
+   :align: center
+
+Jetzt muss dem Unifi-Controller noch mitgeteilt werden, dass der RADIUS die VLAN-IDs fürs WLAN liefert. In **Einstellungen -> Übersicht** ist ganz unten die RADIUS-Einstellung.
+Mit einem Klick auf den Radius-Server öffnen sich die Einstellungen. Dort muss ein Haken bei **Unterstützung von RADIUS zugewiesenen VLANs** -> **Drahtlose Netzwerke** gesetzt werden.
+
+.. image:: media/RADIUS_unifi.png
+   :alt: Radius: Einstellungen
+   :align: center
+
+Wir sind kurz vor dem Ziel. Im Schul-WLAN muss nur noch, ziemlich weit unten, das **Sicherheitsprotokoll** WPA2/WPA3 Enterprise und unter **Radius-Profil** unser RADIUS-Server gewählt werden.
+

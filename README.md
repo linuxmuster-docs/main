@@ -149,8 +149,10 @@ for more details.
 
 ## Release History
 
-* latest - v7.2
+* latest - v7.3
     * CHANGE: Updated docs according to current release status of linuxmuster.net
+* 7.2
+    * STATUS: Documentation reflects status v7.2 of linuxmuster.net
 * 7.1
     * STATUS: Documentation reflects status v7.1 of linuxmuster.net
 * 6.2

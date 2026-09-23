@@ -363,7 +363,7 @@ Importiere nun den GPG-Schlüssel des linuxmuster.net Repository, indem Du nachs
 
 .. code::
 
-   sudo sh -c 'wget -qO- "https://deb.linuxmuster.net/pub.gpg" | gpg --dearmour -o /usr/share/keyrings/linuxmuster.net.gpg'
+   wget -qO- "https://deb.linuxmuster.net/pub.gpg" | gpg --dearmour -o /usr/share/keyrings/linuxmuster.net.gpg
    
 .. hint::
 
@@ -376,10 +376,9 @@ Trage das linuxmuster.net Repository in die Paketquellen des Clients ein:
 
 .. code::
 
-   sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/linuxmuster.net.gpg] https://deb.linuxmuster.net/ lmn71 main" > /etc/apt/sources.list.d/lmn71.list'
+   sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/linuxmuster.net.gpg] https://deb.linuxmuster.net/ lmn73 main" > /etc/apt/sources.list.d/lmn73.list'
 
 Aktualisiere die Paketinformationen mit ``sudo apt update``.
-
 
 3. Schritt
 ^^^^^^^^^^

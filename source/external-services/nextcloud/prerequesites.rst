@@ -13,7 +13,7 @@ Beide Szenarien werden nachstehend kurz dargestellt.
 Nextcloud auf einem internen Docker-Host
 ----------------------------------------
 
-.. image:: media/index-01.png
+.. image:: media/prerequesites_01_internal-docker-host.png
    :align: center
 
 In der Grafik ist der Nextcloud-Service auf dem Docker-Host der Schule installiert. Da der Docker-Host Web-Services wie das Medien- und Raumbuchungssystem und die Nextcloud zur Verfügung stellt, ist er ein völlig eigenständiger Server, der außerhalb der linuxmuster.net steht. Er sollte also direkt an den Router angeschlossen sein und eine eigene IP-Adresse haben. Hier ist später darauf zu achten, dass die Portweiterleitungen am Router für den Docker-Host und die lmn7 korrekt gesetzt sind.
@@ -25,7 +25,7 @@ Greift ein Gerät außerhalb der Schule über die Nextcloud auf Daten auf dem Sc
 Nextcloud auf einem externen Docker-Host
 ----------------------------------------
 
-.. image:: media/index-02.png
+.. image:: media/prerequesites_02_external-docker-host.png
    :align: center
 
 In der Grafik ist ein externer Nextcloud-Service außerhalb der Schule dargestellt.
