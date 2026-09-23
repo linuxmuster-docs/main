@@ -109,7 +109,7 @@ Klassenzimmer
 Kurs
 ----
 
-In dem Menüpunkt Kurs werden der aktuelle Raum, Deine zugeordneten Klassen, Deine Gruppenund Projekte aufgelistet.
+In dem Menüpunkt Kurs werden der aktuelle Raum, Deine zugeordneten Klassen, Deine Gruppen und Projekte aufgelistet.
 
 .. figure:: media/10_webui-basics_my-classes.png
    :align: center
@@ -176,7 +176,7 @@ Um Schüler einer Gruppe hinzuzufügen, wählst Du die gewünschte Gruppe via Kl
    :align: center
    :alt: seclected course
    
-   Ausgwählter Kurs
+   Ausgewählter Kurs
 
 In den oberen Zeilen gibt es nun die Möglichkeit über ``Schüler hinzufügen`` einzelne Schüler hinzuzufügen oder über ``Klasse hinzufügen`` eine ganze Schulklasse dem Kurs hinzuzufügen. Klickst Du in das Feld ``Schüler hinzufügen`` und gibst dort die **ersten beiden Buchstaben des Schülernamens** ein, erscheint eine Liste mit Schülern, deren Nachnamen mit diesen Buchstaben beginnen.
 
@@ -184,7 +184,7 @@ In den oberen Zeilen gibt es nun die Möglichkeit über ``Schüler hinzufügen``
    :align: center
    :alt: add pupils to course
    
-   Ausgwählter Kurs: Schüler hinzufügen
+   Ausgewählter Kurs: Schüler hinzufügen
 
 Wähle einen einzelnen Schüler aus, der zur Gruppe hinzugefügt werden soll. Wiederhole diesen Vorgang für alle weiteren Schüler.
 
@@ -200,9 +200,9 @@ Die Gruppe ist nun erstellt.
 
 .. hint::
 
-   Bei einzelnen Schülern siehst Du noch einen roten Button in der Spalte Arbeitsverzeichnis. Dies liegt daran, dass für diese Schüler in Deinem Transferorrdner noch keine Verzeichnisse angelegt wurden.
+   Bei einzelnen Schülern siehst Du noch einen roten Button in der Spalte Arbeitsverzeichnis. Dies liegt daran, dass für diese Schüler in Deinem Transferordner noch keine Verzeichnisse angelegt wurden.
 
-   Sollte dies so sein, klicke danach im Menü links auf ``Kurs`` -> ``Meine Gruppen`` -> ``Neu erstellte Gruppe``. Danach erscheinen alle Schüler, die der Gruppe hinzugefügt wurden. Schließe die Einrichtung des Kurses mithilfe des Klicks auf den roten Button ab, der alle Schüler auflistest, für die noch kein Verzeichnis im Transferordner angelegt wurde. Zur Bestätigung musst Du Dein Anmeldekennwort angeben.
+   Sollte dies so sein, klicke danach im Menü links auf ``Kurs`` -> ``Meine Gruppen`` -> ``Neu erstellte Gruppe``. Danach erscheinen alle Schüler, die der Gruppe hinzugefügt wurden. Schließe die Einrichtung des Kurses mithilfe des Klicks auf den roten Button ab, der alle Schüler auflistet, für die noch kein Verzeichnis im Transferordner angelegt wurde. Zur Bestätigung musst Du Dein Anmeldekennwort angeben.
 
 Klickst Du nun auf Kurs, siehst Du folgende Ansicht:
 
@@ -310,7 +310,7 @@ Das Absolventenkappen-Symbol
 
    Prüfungsmodus
 
-stellt den Prüfungsmodus dar. Ausgewählte Schüler oder alle Schüler einer Klasse eines Kurses können dadurch in diesen Modus gesetzt werden. Um alle Schüler des Kurses in den Prüfungsmodus zu versetzen, klickst Du auf das Icon für den Prüfungsmodus im Spaltenkopf. Sollen nur einzelne Schüler in den Prüfungsmodus versetzt werden, wäjlst Du dies Symbol bei dem jeweiligen Schüler aus.
+stellt den Prüfungsmodus dar. Ausgewählte Schüler oder alle Schüler einer Klasse eines Kurses können dadurch in diesen Modus gesetzt werden. Um alle Schüler des Kurses in den Prüfungsmodus zu versetzen, klickst Du auf das Icon für den Prüfungsmodus im Spaltenkopf. Sollen nur einzelne Schüler in den Prüfungsmodus versetzt werden, wählst Du dies Symbol bei dem jeweiligen Schüler aus.
 
 Im aktivierten Prüfungsmodus wird die Seite wie folgt angezeigt:
 
@@ -334,12 +334,12 @@ Im Menü ``Einschreiben`` findest Du nachstehende drei Rubriken.
 Schulklassen
 ^^^^^^^^^^^^
    
-Hier werden alle Schulklassen der Schule aufgelistet. Durch Klick auf den Klassennamen werden Dir weitere Informationen angezeigt, wie etwa alle Schüler der Klasse. Um Dir eine schulklasse zuzuordnen aktivierst Du den Haken vor der Klasse und bestätigst dann die Ausführung oben auf der Seite mit ``Jetzt ausführen``.
+Hier werden alle Schulklassen der Schule aufgelistet. Durch Klick auf den Klassennamen werden Dir weitere Informationen angezeigt, wie etwa alle Schüler der Klasse. Um Dir eine Schulklasse zuzuordnen aktivierst Du den Haken vor der Klasse und bestätigst dann die Ausführung oben auf der Seite mit ``Jetzt ausführen``.
 
 Drucker
 ^^^^^^^
 
-Hier werden alle Drucker aufgelistet. Durch Anklicken werden weitere Informationen angezeigt. Drucker müssen zuvor vom Administrator angelegt und eingerichtet worden sein, damit diese hier erscheinen..
+Hier werden alle Drucker aufgelistet. Durch Anklicken werden weitere Informationen angezeigt. Drucker müssen zuvor vom Administrator angelegt und eingerichtet worden sein, damit diese hier erscheinen.
 
 Ein Auswählen ist nur erforderlich, wenn man den Drucker auch außerhalb des zugehörigen Raumes nutzen möchte.
 
@@ -352,7 +352,7 @@ Projekte
 
    - Gruppe: Eine Gruppe hat kein Netzlaufwerk (keine Shares), um Dateien gemeinsam abzulegen und auszutauschen. Zudem kann diesen keine E-Mail zugeordnet werden. Insofern ist es nur eine Liste mit Benutzer für einen Kurs (z.B. eine einmalige Schulung).
 
-   - Projekt: Ist ein Zusammenschluss mehrerer Benutzer aus verswchiedenen Gruppen, mit einem gemeinsamen Projektlaufwerk (also mit Shares) und der Möglichkeit, hiermit einen Projektverteiler zu erstellen, um via E-Mail Infos weiterzugeben. Letzters erfordert aber eine Konfiguration des SMTP-Relais und ggf. der Edulution UI.
+   - Projekt: Ist ein Zusammenschluss mehrerer Benutzer aus verschiedenen Gruppen, mit einem gemeinsamen Projektlaufwerk (also mit Shares) und der Möglichkeit, hiermit einen Projektverteiler zu erstellen, um via E-Mail Infos weiterzugeben. Letzters erfordert aber eine Konfiguration des SMTP-Relais und ggf. der Edulution UI.
 
 
 Hier werden alle Deine Projekte aufgelistet. Um ein neues Projekt anzulegen, klicke auf ``Neues Projekt`` und trage den Projektnamen ein.
@@ -384,7 +384,7 @@ Klickst Du auf das Projekt - hier ``P_netzwerkguide`` siehst Du alle Einstellung
 
 Um dem neu angelegten Projekt Projektmitglieder hinzuzufügen, klickst Du wie oben dargestellt auf den Button ``Benutzer oder Gruppe hinzufügen``.
 
-Um einzelne Benutzer hinzuzufügen, klikcst Du in das Feld ``Nach einem Benutzer suchen`` und gibst dort einige Buchstaben des Names des Benutzers ein. Es werden alle gefundenden Einträge in einer Liste angezeigt. Aus dieser kannst Du einen gewünschten Benutzer auswählen.
+Um einzelne Benutzer hinzuzufügen, klickst Du in das Feld ``Nach einem Benutzer suchen`` und gibst dort einige Buchstaben des Names des Benutzers ein. Es werden alle gefundenen Einträge in einer Liste angezeigt. Aus dieser kannst Du einen gewünschten Benutzer auswählen.
 
 .. figure:: media/23_webui-basics_new_project_add_project_members.png
    :align: center
@@ -392,7 +392,7 @@ Um einzelne Benutzer hinzuzufügen, klikcst Du in das Feld ``Nach einem Benutzer
 
    Projektmitglieder hinzufügen
 
-Diesen Vorgang wiederholst Du für alle gewünschten Benutzer, Schüler aus einer Klasse oder Projektmitglieder anderer Projekte. Alle ausgewählten Benutzer werden ann unter ``Hinzufügen`` aufgelistet.
+Diesen Vorgang wiederholst Du für alle gewünschten Benutzer, Schüler aus einer Klasse oder Projektmitglieder anderer Projekte. Alle ausgewählten Benutzer werden dann unter ``Hinzufügen`` aufgelistet.
 
 .. figure:: media/23_webui-basics_new_project_add_project_members2.png
    :align: center

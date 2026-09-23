@@ -14,20 +14,20 @@ Anlegen und Installieren des Servers (AD/DC)
 
 .. hint::
 
-   Willst Du in einer VM installieren, so must Du für die neue VM folgende Mindesteinstellungen angeben:
+   Willst Du in einer VM installieren, so musst Du für die neue VM folgende Mindesteinstellungen angeben:
      
      - Installation von Local/ISO, 
      - Gast OS: Linux, 6.X - 2.6 Kernel
      - BIOS: OVMF (UEFI)
-     - 2 vCPU, 
-     - 3 GiB RAM, 
-     - storage -> hdd1: 25 GiB -> hdd2: 100 GiB, 
+     - 4 vCPU,
+     - 4 GiB RAM,
+     - storage -> hdd1: 50 GiB -> hdd2: 250 GiB,
      - 1 NIC mit Zuordnung zu vSwitch green.
    
    Achte darauf, dass vor dem Start der VM beide Festplatten der VM zugewiesen wurden.
 
    Bei der Einrichtung des Servers musst Du nur einen Server mit 2 HDDs haben und Ubuntu auf der ersten HDD installieren.
-   Die zweite HDD bleibt wird später für linuxmuster.net genutzt.
+   Die zweite HDD wird später für linuxmuster.net genutzt.
 
 Erster Start des Servers vom Installationsmedium
 ================================================
@@ -35,7 +35,7 @@ Erster Start des Servers vom Installationsmedium
 Sprachauswahl
 -------------
 
-Starte den Server Ubuntu 24.04 LTS Server ISO-Image. Es erscheint das erste Installationsfenster mit der Abfrage zur gewünschten Sprache.
+Starte den Server Ubuntu 26.04 LTS Server ISO-Image. Es erscheint das erste Installationsfenster mit der Abfrage zur gewünschten Sprache.
 
 .. figure:: media/basis_server_001.png
    :align: center
@@ -149,19 +149,7 @@ Lass die Proxy-Adresszeile leer. Auch diese Anfrage verlässt Du mit ``Erledigt`
 
    Bestätige den Ubuntu Mirror Server
 
-Die Mirror-Adresse übernimmst Du ebenfalls mit ``Erledigt``.
-
-Aktualisierung des Installers
------------------------------
-
-.. figure:: media/basis_server_009_new-installer.png
-   :align: center
-   :scale: 40%
-   :alt: update installer
-
-   Installer aktualisieren
-
-Bei der angebotenen Aktualisierung wählst Du ``Aktualisieren auf neuen Installer``.
+Die Mirror-Adresse übernimmst Du ebenfalls mit ``Erledigt``. Hast Du wie zuvor in der from-scratch Installation der OPNsense |reg| beschrieben, dort den Unbound-DNS korrekt konfiguriert, ist die jetzige Namensauflösung bei der Abfrage der Mirror-Adressen erfolgreich.
 
 Speichermedien
 --------------
@@ -172,14 +160,16 @@ Dabei ist es egal ob es sich dabei um |...|
 
 * |...| eine reale Festplatte mit zwei Partitionen.
 * |...| zwei reale Festplatten.
-* |...| zwei virtuelle Festplatten handelt.
+* |...| zwei virtuelle Festplatten
+
+handelt.
 
 In dieser Anleitung beschreiben wir zunächst die Installation auf Basis unserer Mindestanforderungen, also |...|
 
-* |...| 25G Speichermedium für das System und
-* |...| 100G Speichermedium für Daten / linuxmuster.net
+* |...| 50G Speichermedium für das System und
+* |...| 400G Speichermedium für Daten /srv
 
-Wobei anzumerken ist, dass die Installation des Speicherplatzes für das System ``/`` für alle Varianten identisch ist.
+Die Installation des Speicherplatzes für das System selbst auf der ersten Festplattte mit dem Mount-Point ``/`` ist für alle Varianten identisch.
 
 Speicher des Systems
 ^^^^^^^^^^^^^^^^^^^^
@@ -191,7 +181,7 @@ Speicher des Systems
 
    Eigenes Festplattenlayout wählen
    
-Wähle nun zur Einrichtung der Festplatten ``Custom Storage Layout`` aus, wie in obigen Bild dargestellt.
+Wähle nun zur Einrichtung der Festplatten ``Custom Storage Layout bzw. benutzerdefinierte Partitionierung`` aus, wie in der Abbildung dargestellt.
 
 Es werden Dir dann die verfügbaren Geräte angezeigt. 
 
@@ -200,9 +190,31 @@ Es werden Dir dann die verfügbaren Geräte angezeigt.
    :scale: 60%
    :alt: available devices
 
-   Anzeige der verfügbaren Geräte - andere HDD-Größen als zuvor genannt
+   Anzeige der verfügbaren Geräte
 
-Wähle die erste Festplatte aus, auf der Du das System des Servers unterbringen möchtest. Es wird ein Kontextmenü angezeigt, bei dem Du mit ``Add GPT Partition`` diese erstellen musst.
+Wähle die erste Festplatte aus, auf der Du das System des Servers unterbringen möchtest.
+
+Wähle dort für ``/dev/vda`` (HDD-Bezeichnung in diesem Beispiel), dass diese als Bootplatte verwendet wird.
+
+.. figure:: media/basis_server_011_custom-storage-layout-create-boot-device.png
+   :align: center
+   :scale: 60%
+   :alt: boot device
+
+   Lege das Boot-Gerät fest
+
+
+Wähle dann unter ``freier Speicherplatz`` im Kontextmenü ``Add GPT Partition`` aus.
+
+.. figure:: media/basis_server_011_custom-storage-layout-create-gpt-partition.png
+   :align: center
+   :scale: 60%
+   :alt: boot device
+
+   Erstelle eine GPT-Partitionstabelle
+
+
+Gib an, dass Du den gesamten Platz der Partition zuweist.
 
 .. figure:: media/basis_server_012_custom-storage-layout-create-partition-table2.png
    :align: center
@@ -211,52 +223,39 @@ Wähle die erste Festplatte aus, auf der Du das System des Servers unterbringen 
 
    Füge eine GPT Partition hinzu
 
-Wähle den gesamten Festplattenplatz (einfach das Eingabefeld leer lassen) und formatiere diesen mit dem ``ext4-Dateisystem`` und weise diese dem Mount-Point ``/`` zu.
+Formatiere diese Partition mit dem **ext4-Dateisystem** und weise für das Sytsem den Mount-Point ``/`` zu.
 
-.. figure:: media/basis_server_013_custom-storage-layout-create-partition-table3.png
+Danach gelangst Du zu nachstehendem Bildschirm. Wähle dort das zweite Speichermedium aus. Dieses muss noch für das spätere Setup partitioniert werden. Füge hier erneut eine GPT-Partition hinzu.
+
+.. figure:: media/basis_server_013_custom-storage-layout-create-partition-table.png
    :align: center
-   :scale: 60%
-   :alt: choose partition size
+   :scale: 50%
+   :alt: 2nd storage gpt partition table
 
-   Lege die Partitionsgröße fest
+   Erstelle eine GPT-Partitionstabelle für die zweite Festplatte
 
-Gehe auf ``Erstellen``.
+Wähle den gesamten Speicherplatz des zweiten Speichermediums für die zu erstellende Partition aus, formatiere diese mit dem Dateisystem **ext4** und hänge diese auf den Mount-Point ``/srv`` ein.
 
-Danach gelangst Du zu nachstehendem Bildschirm.
-
-.. figure:: media/basis_server_014_custom-storage-layout-create-partition-table.png
+.. figure:: media/basis_server_014_custom-storage-layout-create-partition-2nd-hdd.png
    :align: center
    :scale: 50%
    :alt: storage configuration overview
 
-   Speicherplatzkonfiguration
+   Erstelle eine Partition mit dem Dateisystem ext4 für /srv
 
-Wähle dort das ``zweite Speichermedium`` aus. Dieses muss noch für das spätere Setup partitioniert werden.
-Füge hier erneut eine GPT-Partition für den gesamten Speicherplatz des zweiten Speichermediums hinzu.
+Hast Du dies übernommen, gelangst Du wieder zur Gesamtübersicht der vorgenommenen Partitionierung.
 
-Wähle bei der Partitionierung für diese Festplatte das Dateisystem ext4 und hänge dieses auf den Mount-Point ``/srv`` ein.
-
-.. .. figure:: media/basis_server_015_custom-storage-layout-create-partition-table-2nd-storage.png
+.. figure:: media/basis_server_015_custom-storage-layout-overview.png
    :align: center
    :scale: 50%
-   :alt: 2nd storage partitioning
+   :alt: storage configuration overview
 
-   Partitionierung der 2. Festplatte
-
-Hast Du dies übernehmen gelangst Du wieder zur Gesamtübersicht der vorgenommenen Partitionierung.
-
-.. .. figure:: media/basis_server_016_custom-storage-layout-create-partitions.png
-   :align: center
-   :scale: 50%
-   :alt: total storage partitioning
-
-   Partitionierung der Festplatten
-
+   Gesamtübersicht der Partitionierung
 
 Speicherplatzkonfiguration übernehmen
 -------------------------------------
 
-Übernehme die Speicherplatzkonfiguration und wähle ``Erledigt`` aus.
+Übernimm die Speicherplatzkonfiguration und wähle ``Erledigt`` aus.
 
 Danach erhälst Du die Rückfrage, ob die Installation fortgesetzt werden soll und die Daten auf der Festplatte hierbei gelöscht werden.
 
@@ -324,7 +323,7 @@ Installiere keine weiteren optionalen Pakete.
 
 Bestätige den Start des Installationsvorganges mit ``Erledigt``.
 
-Zum Abschluß der Installation wird automatisch versucht, Updates zu installieren |...|
+Zum Abschluss der Installation wird automatisch versucht, Updates zu installieren |...|
 
 .. figure:: media/basis_server_020.png
    :align: center
@@ -339,7 +338,7 @@ Zum Abschluß der Installation wird automatisch versucht, Updates zu installiere
 
    Bei einer VM achte vor dem Neustart darauf, dass Du die ISO-Datei / DVD ausgeworfen hast und die Boot-Reihenfolge so umgestellt hast, dass die VM direkt von HDD bootet.
 
-Wann die Installation abgeschlossen ist, erkennst Du daran, dass die Anzeige am unteren Bildschirmrand von
+Dass die Installation abgeschlossen ist, erkennst Du daran, dass die Anzeige am unteren Bildschirmrand von
 
 .. figure:: media/basis_server_022.png
    :align: center
@@ -355,7 +354,7 @@ auf
    :scale: 80%
    :alt: finished updates
 
-   ... abgeschlosse
+   ... abgeschlossen
 
 gewechselt ist.
 
@@ -512,7 +511,7 @@ Sollte die Namensauflösung Probleme bereiten, prüfe die Datei /etc/resolv.conf
 
    less /etc/resolv.conf
    
-Sollte als nameserver nur 127.0.0.53 angegeben sein, must Du diese IP durch 10.0.0.254 ersetzen.
+Sollte als nameserver nur 127.0.0.53 angegeben sein, musst Du diese IP durch 10.0.0.254 ersetzen.
 
 Test der Verbindung zur Firewall
 --------------------------------
@@ -549,5 +548,8 @@ Anschließend sollte der Log-in nach der Eingabe des Passwortes ``Muster!`` erfo
 Mit ``0) Logout`` beendest Du die Verbindung.
 
 .. hint:: Für Anwender einer Virtualisierungslösung empfehlen wir an dieser Stelle einen Snapshot zu erstellen!
+
+
+
 
 Weiter geht es jetzt mit :ref:`lmn_pre_install-label`

@@ -13,7 +13,7 @@ RADIUS (Remote Authentification Dial-In User Service) ist ein Client-Server Prot
 für das Accounting (Triple A - AAA) von Benutzern in einem Netzwerk dient.
 
 Der RADIUS-Server dient als zentraler Authentifizierungsserver, an den sich verschiedene IT-Dienste für die Authentifizierung wenden 
-können. RADIUS bietet sich an, um in grossen Netzen sicherzustellen, dass ausschließlich berechtigte Nutzer Zugriff haben. 
+können. RADIUS bietet sich an, um in großen Netzen sicherzustellen, dass ausschließlich berechtigte Nutzer Zugriff haben.
 Der Zugriff kann zudem auch auf bestimmte Endgeräte beschränkt werden. 
 Um die Authentifizierungsdaten zu übertragen, wird oftmals das Protokoll EAP (Extensible Authentification Protocol) genutzt.
 
@@ -71,7 +71,7 @@ Wenn Du z.B. nur die Gruppe der Lehrer und der Schüler der Oberstufenklassen �
 
    server ~ # sophomorix-managementgroup --set-wifi teachers_and_oberstufe
 
-Um noch weitere einzelne Schüler hinzuzunehmen oder zu entfernen, nutzt Du danach die Funktion --wifi bzw. --nowifi mit von Komma getrennten Benutzernamen.
+Um noch weitere einzelne Schüler hinzuzunehmen oder zu entfernen, nutzt Du danach die Funktion --wifi bzw. --nowifi mit von Kommas getrennten Benutzernamen.
 
 .. code::
 
@@ -110,14 +110,14 @@ Danach muss der samba-ad-dc Dienst neu gestartet werden:
 Radius konfigurieren
 ^^^^^^^^^^^^^^^^^^^^
 
-Dem Freeradius-Dient muss Zugriff auf winbind gegeben werden:
+Dem Freeradius-Dienst muss Zugriff auf winbind gegeben werden:
 
 .. code::
 
    usermod -a -G winbindd_priv freerad
    chown root:winbindd_priv /var/lib/samba/winbindd_privileged/
 
-In dem Verzeichnis ``/etc/freeradius/3.0/sites-enabled`` in die Dateien ``default`` und ``inner-tunnel`` ganz am Anfang unter ``authenticate`` ist ``ntlm_auth`` einzufügen.
+In dem Verzeichnis ``/etc/freeradius/3.0/sites-enabled`` in den Dateien ``default`` und ``inner-tunnel`` ganz am Anfang unter ``authenticate`` ist ``ntlm_auth`` einzufügen.
 
 .. code::
 
@@ -141,7 +141,7 @@ Anpassen des Abschnitts ``ntlm_auth`` weiter unten. Zuerst das Kommentarzeichen 
    # eine Zeile
    ntlm_auth = "/usr/bin/ntlm_auth --allow-mschapv2 --request-nt-key --domain=DOMÄNE --require-membership-of=DOMÄNE\\wifi --username=%{%{Stripped-User-Name}:-%{%{User-Name}:-None}} --challenge=%{%{mschap:Challenge}:-00} --nt-response=%{%{mschap:NT-Response}:-00}"
 
-Dabei muss DOMÄNE durch den eigenen Domänennamen ersetzt werden. Gebe den Inhalt der Datei ``/etc/hosts`` mit folgendem Befehl aus:
+Dabei muss DOMÄNE durch den eigenen Domänennamen ersetzt werden. Gib den Inhalt der Datei ``/etc/hosts`` mit folgendem Befehl aus:
 
 
 .. code::
@@ -198,7 +198,7 @@ Um alle Schüler aus der Gruppe wifi zu nehmen, listest Du alle User des Systems
 
    samba-tool user list > user.txt
 
-Jetzt entferns Du alle User aus der Liste, die immer ins Wlan dürfen sollen. Danach baust Du die Liste zu einer Kommazeile um mit:
+Jetzt entfernst Du alle User aus der Liste, die immer ins Wlan dürfen sollen. Danach baust Du die Liste zu einer Kommazeile um mit:
 
 .. code::
 
@@ -248,7 +248,7 @@ Danach ist ein neues Zertifikat zu beantragen:
 
     openssl req -new -key radius-key.pem -out radius.csr -sha512
 
-Gebe hierbei die gewünschten Informationen an. Bei ``Common Name (e.g. server FQDN or YOUR name) []:`` muss die zuvor ermittelte CN eingetragen werden, die z.B. durch ein vorangestelltes ``radius`` ergänzt wird. Ein korrekter Eintrag wäre z.B.: ``radius.gshoenningen.linuxmuster.lan``
+Gib hierbei die gewünschten Informationen an. Bei ``Common Name (e.g. server FQDN or YOUR name) []:`` muss die zuvor ermittelte CN eingetragen werden, die z.B. durch ein vorangestelltes ``radius`` ergänzt wird. Ein korrekter Eintrag wäre z.B.: ``radius.gshoenningen.linuxmuster.lan``
 
 Das Zertifikat ist nun noch auszustellen. Zuvor wird noch das Kennwort für den CA-Key (/etc/linuxmuster/ssl/cakey.pem) benötigt. Das Kennwort findet sich unter ``/etc/linuxmuster/.secret/cakey``.
 
@@ -299,7 +299,7 @@ Passe nun RADIUS so an, dass das Fullchain-Zertifikat genutzt wird.
 
 .. hint::
 
-   Je nach Server-Distribution ist ggf. die datei EAP unter /etc/raddb/mods-enabled/eap oder je nach Radius-Version unter /etc/freeradius/3.2/mods-enabled/eap anzupassen.
+   Je nach Server-Distribution ist ggf. die Datei EAP unter /etc/raddb/mods-enabled/eap oder je nach Radius-Version unter /etc/freeradius/3.2/mods-enabled/eap anzupassen.
 
 Danach den Dienst neu starten:
 
@@ -316,7 +316,7 @@ Auf diese Weise kann WPA-Enterprise auch mit neueren Client-Betriebssystemen gen
 Firewallregeln anpassen
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Auf der Firewall OPNsense® muss je nach eigenen Voraussetzungen dafür gesorgt werden, dass die AP’s aus dem Wlan-Netz den Server auf dem Port 1812 via udp erreichen können. Es ist darauf zu achten, dass die IP des Servers den eigenen Netzvorgaben entspricht (also z.B. 10.0.0.1/16 oder /24 oder 10.16.1.1/16 oder /24)
+Auf der Firewall OPNsense® muss je nach eigenen Voraussetzungen dafür gesorgt werden, dass die APs aus dem Wlan-Netz den Server auf dem Port 1812 via UDP erreichen können. Es ist darauf zu achten, dass die IP des Servers den eigenen Netzvorgaben entspricht (also z.B. 10.0.0.1/16 oder /24 oder 10.16.1.1/16 oder /24)
 
 Die Regel auf der OPNsense® hierzu könnte, wie nachstehend abgebildet, eingetragen werden.
 
@@ -426,7 +426,7 @@ Nachdem der LDAP-Zugriff konfiguriert ist, muss nur noch die gruppenabhängige V
         Tunnel-Type :=VLAN,
         Tunnel-Medium-Type:=6,
         Tunnel-Private-Group-Id := 20,
-        Reply-Message := "Wilkommen im Lehrer-WLAN"
+        Reply-Message := "Willkommen im Lehrer-WLAN"
         }
       }
     else{
@@ -434,7 +434,7 @@ Nachdem der LDAP-Zugriff konfiguriert ist, muss nur noch die gruppenabhängige V
         Tunnel-Type :=VLAN,
         Tunnel-Medium-Type:=6,
         Tunnel-Private-Group-Id := 10,
-        Reply-Message := "Wilkommen im Schüler-WLAN"
+        Reply-Message := "Willkommen im Schüler-WLAN"
       }
     }
 
@@ -456,7 +456,7 @@ So wird der RADIUS getestet:
 	Tunnel-Type:0 = VLAN
 	Tunnel-Medium-Type:0 = IEEE-802
 	Tunnel-Private-Group-Id:0 = "20"
-	Reply-Message = "Wilkommen im Lehrer-WLAN"
+	Reply-Message = "Willkommen im Lehrer-WLAN"
 	
 oder mit Schülerzugangsdaten
 
@@ -475,13 +475,13 @@ oder mit Schülerzugangsdaten
 	Tunnel-Type:0 = VLAN
 	Tunnel-Medium-Type:0 = IEEE-802
 	Tunnel-Private-Group-Id:0 = "10"
-	Reply-Message = "Wilkommen im Schüler-WLAN"
+	Reply-Message = "Willkommen im Schüler-WLAN"
 	
 
 VLANs im Unifi-Controller nutzen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Die VLAN-Zurodnung lässt sich jetzt sehr einfach im Unifi-Controller nutzen.
+Die VLAN-Zuordnung lässt sich jetzt sehr einfach im Unifi-Controller nutzen.
 
 Die VLANs müssen natürlich auch als Netzwerk im Unifi-Controller definiert sein. Unter **Einstellungen -> Netzwerke** lassen sich die Netzwerke einfach definieren. 
 

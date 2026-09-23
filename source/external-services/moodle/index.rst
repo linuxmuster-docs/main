@@ -70,7 +70,9 @@ Bind-Einstellungen
 
 .. attention::
 
-   Grundsätzlich sollten alle externen Dienste, die via LDAP an das AD angebunden werden, mit einem eigens dafür angelegten Bind-User genutzt werden. Für Moodle sollte so z.B. ein Benutzer ``moodle-binduser`` angelegt werden, der für die Verbindung zum AD genutzt wird. Hinweise hierzu findest Du unter https://github.com/linuxmuster/sophomorix4/wiki/bindusers 
+   Grundsätzlich sollten alle externen Dienste, die via LDAP an das AD angebunden werden, mit einem eigens dafür angelegten Bind-User genutzt werden. Für Moodle sollte so z.B. ein Benutzer ``moodle-binduser`` angelegt werden, der für die Verbindung zum AD genutzt wird. Hinweise hierzu findest Du unter https://github.com/linuxmuster/sophomorix4/wiki/bindusers
+
+.. include:: /external-services/_ldap-vertrauen-keycloak.rst
 
 **Vorgehen zur Anlage eines neuen Bind-Users**
 
@@ -165,6 +167,8 @@ Weitere Einstellungen
 +-------------------------------------------------+-----------------------------------------------+
 | Status von lokalen Nutzerkonten synchronisieren | Nein                                          |
 +-------------------------------------------------+-----------------------------------------------+
+
+.. include:: /external-services/_datenschutz-loeschung.rst
 
 **NTLM-SSO**
 

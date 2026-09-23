@@ -41,19 +41,17 @@ Nutze als Architektur ``amd64`` und als ``image type dvd``. Du erhältst dann ei
 
 .. hint::
 
-   Die zuletzt freigegeben OPNsense Version für das Setup von linuxmuster.net v7.3 ist die Version 25.1 
+   Die zuletzt freigegeben OPNsense Version für das Setup von linuxmuster.net v7.4 ist die Version 26.7
    
-   [Stand: Mai 25]. 
+   [Stand: August 26].
    
-   Version 25.7 befindet sich in der Testphase. Berichte über Erkenntnise der Zusammenarbeit mit linuxmuster.net bitte an das Forum oder an die oben genannten Personen. [Stand 06.08.25]
-
-   wget https://mirror.informatik.hs-fulda.de/opnsense/releases/25.1/OPNsense-25.1-dvd-amd64.iso.bz2
+   wget https://mirror.level66.network/opnsense-dist/releases/26.7/OPNsense-26.7-dvd-amd64.iso.bz2
 
 Die heruntergladene Datei entpackst Du unter Linux mit folgendem Befehl:
 
 .. code::
 
-   bunzip2 OPNsense-25.1-dvd-amd64.iso.bz2
+   bunzip2 OPNsense-26.7-dvd-amd64.iso.bz2
 
 
 In der Virtualisierungsumgebung lädst Du die ISO-Datei auf den ISO-Speicher.
@@ -65,11 +63,11 @@ In der Virtualisierungsumgebung lädst Du die ISO-Datei auf den ISO-Speicher.
    - template - other install media, installation from ISO library,
    - Boot-Mode - UEFI (Achtung: xcp-ng: Boot/MBR),
    - 2 vCPU
-   - 4 GiB RAM
-   - storage 20 GiB
+   - 8 GiB RAM
+   - storage 50 GiB
    - 2 NIC mit Zuordnung zu vSwitch red, green.
   
-Für den produktiven Betrieb müssen diese Hardware-Einstellungen **deutlich** angehoben werden (z.B.: 4 vCPU, 8 GiB RAM, 50 GiB SSD, 3 NIC).
+Für den produktiven Betrieb müssen diese Hardware-Einstellungen **deutlich** angehoben werden (z.B.: 4 vCPU, 8 GiB RAM, 250 GiB SSD, 3 NIC).
   
 .. _first_start_firewall:
 
@@ -103,7 +101,7 @@ Du gelangst direkt zum Installer und kannst das Layout der Tastatur festlegen.
 
    Installer: Tastaturlayout festlegen
 
-Standardmäßig ist ein amerikanisches Tastaturlayout voreingestellt. Gehe mit den Pfeiltasten auf den Eintrag ``( ) German (no accent keys)``. Wählen diesen mit ``<Select>`` aus.
+Standardmäßig ist ein amerikanisches Tastaturlayout voreingestellt. Gehe mit den Pfeiltasten auf den Eintrag ``( ) German (no accent keys)``. Wählen diesen mit der ``<Leertaste>`` und ``<Select>`` aus.
 
 Teste danach das Tastaturlayout:
 
@@ -113,17 +111,13 @@ Teste danach das Tastaturlayout:
    
    Teste das Tastaturlayout
 
-Bei der deutschen Tastatur werden ggf. die Umlaute im Test noch nicht korrekt wiedergegeben.
-
 Wähle die eingestellte deutsche Tastatur aus:
 
 .. figure:: media/basis_opnsense_004.png
    :align: center
    :alt: OPNsense: continue with keymap
 
-   Bestätige der Stataturlayout
-
-Wähle ``<Select>``.
+   Bestätige das Tastaturlayout
 
 Installiere nun OPNsense |reg| via ``Install (UFS)``.
 
@@ -141,7 +135,7 @@ Jetzt wird OPNsense |reg| auf der Festplatte installiert. Zuvor musst Du diese n
    :align: center
    :alt: OPNsense: UFS Configuration
    
-   vtbd0 QEMU HARDDISK
+   QEMU HARDDISK
    
 Je nach Virtualisierungsumgebung kann die Bezeichnung der Festplatte von o.g. abweichen (z.B. da0).
 
@@ -161,17 +155,11 @@ Danach erfolgt die Rückfrage, ob die Festplatte wirklich überschrieben werden 
    :align: center
    :alt: OPNsense: Last change to abort vs. start installation
    
-   Bestätige die Installation auf vtbd0
+   Bestätige die Installation auf der Festplatte
    
 Bestätige diesen Vorgang, um die Installation zu starten.
 
 Warte jetzt, bis die Installation abgeschlossen ist.
-
-.. figure:: media/basis_opnsense_008.png
-   :align: center
-   :alt: OPNsense: Installation progress
-   
-   Installationsfortschritt
 
 Zum Abschluss der Konfiguration musst Du das Kennwort für den Benutzer ``root`` neu setzen.
 
@@ -185,23 +173,7 @@ Zum Abschluss der Konfiguration musst Du das Kennwort für den Benutzer ``root``
    
    An dieser Stelle muss als root-Passwort ``Muster!`` eingegeben werden, da später der lmn-Server beim Einrichten der Firewall davon ausgeht, dass das root-Passwort ``Muster!`` ist! Sollte dieses anders lauten, wird die komplette weitere Installation scheitern!
 
-Gib das neue Passwort (``Muster!``) für root ein.
-
-.. figure:: media/basis_opnsense_010.png
-   :align: center
-   :alt: OPNsense: Type new root password
-   
-   Eingabe des neuen Root Kennwortes
-
-Gib dieses Kennwort erneut ein.
-
-.. figure:: media/basis_opnsense_011.png
-   :align: center
-   :alt: OPNsense: Retype new root password
-   
-   Bestätigung des neuen Root Kennwortes
-
-Setze es mit ``OK``
+Gib das neue Passwort (``Muster!``) für root ein. Gib dieses Kennwort erneut ein. Setze es mit ``OK``
 
 .. figure:: media/basis_opnsense_012.png
    :align: center
@@ -210,6 +182,16 @@ Setze es mit ``OK``
    Schließe die Installation ab
 
 Wähle danach die Option ``Exit and reboot`` aus.
+
+
+Bestätige, dass Du die VM nun neu starten möchtest.
+
+.. figure:: media/basis_opnsense_012a.png
+   :align: center
+   :alt: OPNsense: Complete Install
+
+   Führe den Neustart aus.
+
 
 .. hint::
 
@@ -609,10 +591,6 @@ Das Update ist erfolgreich durchgeführt, wenn du wieder zu dieser Ansicht gelan
    
    NIC Zuordnung nach Neustart
 
-.. hint::
-
-   Stand August 25 für die OPNsense |reg| ist die Version 25.7
-
 Klappt das Update, starte die OPNsense |reg| neu.
 
 Konfiguration der OPNsense |reg|
@@ -680,26 +658,6 @@ Gib als ``Primary DNS``, die neue IP des Upstream Gateway der externen WAN-Schni
 Weiter geht es mit ``Next``
 
 
-System: Assistent: Zeitserverinformation
------------------------------------------
-
-.. figure:: media/basis_opnsense_044.png
-   :align: center
-   :alt: OPNsense: GUI - time server settings
-   
-   Angabe des Zeitservers
-
-Die Angaben zum Time Server belässt Du wie angegeben. Den Eintrag für die Zeitzone änderst Du auf ``Europ/Berlin`` wie in nachstehender Abbildung.
-
-.. figure:: media/basis_opnsense_044a.png
-   :align: center
-   :alt: OPNsense: GUI - time zone
-   
-   Zeitzone einstellen
-
-Die Angaben übernimmst Du mit ``Next``.
-
-
 System: Assistent: Konfiguriere WAN-Schnittstelle
 -------------------------------------------------
 
@@ -736,6 +694,17 @@ System: Assistent: Konfiguriere LAN-Schnittstelle
 
 Die IP-Adresse und die Subnetzmaske des Schulnetzes sollten hier eingetragen sein. Sollte dies nicht der Fall sein, ändere dies nun.
 
+System: Assistent: Deployment Type
+----------------------------------
+
+.. figure:: media/basis_opnsense_046a.png
+   :align: center
+   :alt: OPNsense: GUI - Deployment Types
+
+   Deployment Type
+
+Deaktiviere die automatiscche DHCP/DNS Registrierung.
+
 
 System: Assistent: Setze Root-Passwort 
 --------------------------------------
@@ -751,14 +720,14 @@ System: Assistent: Setze Root-Passwort
    An dieser Stelle muss als root-Passwort ``Muster!`` eingegeben werden, da später der lmn-Server beim Einrichten der Firewall davon ausgeht, dass das root-Passwort ``Muster!`` ist!
 
 
-System: Assistent: Konfiguration neu laden
-------------------------------------------
+System: Assistent: Konfiguration abschließen
+--------------------------------------------
 
 .. figure:: media/basis_opnsense_049.png
    :align: center
-   :alt: OPNsense: GUI - reload system configuration
+   :alt: OPNsense: GUI - finish system configuration
    
-   System-Konfiguration neu laden
+   System-Konfiguration abschließen
 
 Nachdem Du die Einstellungen übernommen hast, können sich auch die Einstellungen des LAN-Netzwerks geändert haben. Dann wirst Du nicht - wie im nächsten Bild zu sehen - über die erfolgreiche Konfiguration informiert.
 
@@ -785,23 +754,8 @@ Melde Dich wieder mit ``root`` und dem Passwort ``Muster!`` an.
 
 DHCP abschalten
 ---------------
-Jetzt musst Du den DHCP-Service der Firewall abschalten. Dieser wird vom Server übernommen. 
 
-.. figure:: media/basis_opnsense_051.png
-   :align: center
-   :alt: OPNsense: GUI - deactivate ISC DHCP
-   
-   ISC DHCP deaktivieren
-
-Gehe auf ``Dienste -> ISC DHCPv4 -> [LAN]`` und lösche den Haken bei ``Aktivieren``, wenn gesetzt. ``Speichern`` lässt sich Deine Einstellungen unten auf der Seite.
-
-Prüfe zudem, ob der neue Kea DHCP Server aktiviert ist. Falls ja, deaktiviere diesen. Hierzu gehst Du auf ``Dienste -> Kea DHCP -> KeaDHCPv4 -> Allgemeine Einstellungen``. Sollte der Haken bei ``Aktiviert`` gesetzt sein, musst Du diesen deaktivieren.
-
-.. figure:: media/basis_opnsense_051b.png
-   :align: center
-   :alt: OPNsense: GUI - deactivate Kea DHCP
-   
-   Kea DHCP deaktivieren
+OPNsense |reg| soll nicht als DHCP-Server in Kombination mit dem linuxmuster.net Server arbeiten. DHCP wurde bereits bei der Konfiguration mit dem Wizard zuvor abgeschaltet.
 
 
 Zusätzliche Netzwerkkarte hinzufügen (Optional)
@@ -900,29 +854,54 @@ Sollten Dir unter dem Reiter ``Aktualisierungen`` zu aktualisierende Pakete ange
 
 .. Setze einen Haken bei ``Deaktiviere Gatewayüberwachung``, speichere die Einstellung und übernimm die Änderung. Jetzt ist Dein Gateway online. Du kannst später die Gatewayüberwachung wieder aktivieren, ohne dass das Gateway offline geht.
 
+Unbound-DNS
+-----------
+
+Dnsmasq DNS haben wir mit dem Wizard bereits deaktiviert. Im System wurde mit dem Wizard bereits ein DNS-Server eingetragen.
+Damit wir aktuell mit OPNsense |reg| für LAN-PCs oder auch den noch zu konfigurierenden linuxmuster.net Server eine Namensauflösung erhalten, müssen wir prüfen, ob Unbound-DNS aktiviert ist.
+
+Zudem stellen wir weitere Optionen ein und definieren eine Abfrage-Weiterleitung.
+
+Gehe hierzu in der OPNsense |reg| auf ``Dienste -> Unbound-DNS -> Allgemein``.
+
+Aktiviere die Einstellungen wie in nachstehender Abbildung dargestellt:
+
+.. figure:: media/basis_opnsense_058a.png
+   :align: center
+   :alt: OPNsense: Unbound-DNS
+
+   Unbound-DNS aktivieren
+
+Klicke zum Abschluss auf ``Anwenden``.
+
+Gehe nun unter Unbound-DNS zum Unterpunkt ``Abfrage-Weiterleitung``
+
+.. figure:: media/basis_opnsense_058b.png
+   :align: center
+   :alt: OPNsense: Unbound-DNS
+
+   Unbound-DNS Weiterleitung aktivieren
+
+Erstelle hier über das Pluszeichen einen neuen Weiterleitungseintrag. Gib einen DNS-Server Deiner Wahl an - hier ist dies ein freier DNS-Server der schweizer Stiftung Quad 9 (https://docs.quad9.net/). Achte darauf, dass der über den Weiterleitungseinträgen angegebene Eintrag ``System-Nameserver verwenden`` *deaktiviert* ist. Hast Du den Eintrag wie abgebildet erstellt, übernehme die Einstellungen mit ``Anwenden``.
+
+Diese Weiterleitung ermöglicht es, dass Geräte aus dem LAN (IP-Bereich 10.0.0.0/16) - noch ohne linuxmuster.net Server - eine Namensauflösung erreichen, wenn diese eine statische IPv4 - Adresse und als DNS-Server die IPv4-Adresse der Firewall im LAN (10.0.0.254) eintragen.
+
+Dies ist hilfreich für die weitere Installation des linuxmuster.net Servers, um während der Installation bereits Updates installieren zu können.
+
+
 QEMU Guest Agent for OPNsense
 -----------------------------
 
+Klicke auf ``System --> Firmware --> Erweiterungen`` und gib in der Suche qemu ein. Bestätige, dass Community Plugins angezeigt werden sollen.
 
-.. .. figure:: media/basis_opnsense_059a.png
-   :align: center
-   :alt: OPNsense: Gateway configuration
-   
-   Aktivierung Show community plugins 
 
-.. .. figure:: media/basis_opnsense_059b.png
+.. figure:: media/basis_opnsense_059a.png
    :align: center
-   :alt: OPNsense: Gateway configuration
-   
+   :alt: OPNsense: Install QEMU Plugin
+
    Installation QEMU Guest Agent for OPNsense
 
-.. .. figure:: media/basis_opnsense_059b.png
-   :align: center
-   :alt: OPNsense: Gateway configuration
-   
-   Installation QEMU Guest Agent for OPNsense
-
-Nach dem erneuten Neustart ist die OPNsense |reg| soweit vorbereitet.
+Klicke nun auf das + - Zeichen hinter der Anzeige des QEMU-Plugin. Ist die Installation des Plugins erfolgreich durchgelaufen, melde Dich ab, erstelle einen Snapshot der VM und boote die VM neu.
 
 Logout
 ------

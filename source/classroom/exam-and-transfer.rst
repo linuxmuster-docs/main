@@ -24,7 +24,7 @@ in einen Kurs/Klasse.
    
    Starte die Session für die Klasse
 
-Hast Du einen Kurse / eine Klasse ausgewählt, wird Dir die Liste mit Schülern des Kurses / der Klasse angezeigt. 
+Hast Du einen Kurs / eine Klasse ausgewählt, wird Dir die Liste mit Schülern des Kurses / der Klasse angezeigt.
 
 .. figure:: media/webui-teachers-session-members.png
    :align: center
@@ -34,7 +34,7 @@ Hast Du einen Kurse / eine Klasse ausgewählt, wird Dir die Liste mit Schülern 
 
 Du kannst den Prüfungsmodus entweder für alle zusammen über das Prüfungssymbol im Spaltenkopf aktivieren.
 
-Alternativ kannst Du für einzelne Prüflingen den Prüfungsmodus starten, indem Du in der Zeile des Prüflings das Prüfungssymbol klikcst.
+Alternativ kannst Du für einzelne Prüflingen den Prüfungsmodus starten, indem Du in der Zeile des Prüflings das Prüfungssymbol klickst.
 
 .. figure:: media/exam-icon.png
    :align: center
@@ -116,7 +116,7 @@ Danach erscheint eine Rückfrage zur Bestätigung:
    
    Bestätige das Beenden des Prüfungsmodus
    
-Du erhälst ein Fenster mit der Nachfrage, ob Du den Prüfungsmodus wirklich beenden möchstest. Hast Du alle gewünschten Daten der Prüflinge zuvor eingesammelt, bestätige diesen Vorgang mit ``PRÜFUNGSMODUS BEENDEN``.
+Du erhältst ein Fenster mit der Nachfrage, ob Du den Prüfungsmodus wirklich beenden möchtest. Hast Du alle gewünschten Daten der Prüflinge zuvor eingesammelt, bestätige diesen Vorgang mit ``PRÜFUNGSMODUS BEENDEN``.
 
 .. figure:: media/webui-teachers-session-members.png
    :align: center
@@ -136,7 +136,7 @@ Ablauf der Prüfung
 1. Der Lehrer meldet sich an der Schulkonsole an.
 2. Der Lehrer wählt unter KLASSENzimmer -> Kurs -> Klasse die gewünschte Klasse aus.
 3. Der Lehrer aktiviert mit dem Prüfungssymbol den Prüfungsmodus.
-4. Der Lehrer teilt den Prüflingen im Raum mit wie diese sich am PC für die Prüfung anmelden müssen (<bisherigsLogin>+"-exam" & bisheriges Kennwort).
+4. Der Lehrer teilt den Prüflingen im Raum mit wie diese sich am PC für die Prüfung anmelden müssen (<bisheriger Login>+"-exam" & bisheriges Kennwort).
 5. Der Lehrer teilt die Prüfungen und ggf. weitere Vorlagen an die Prüfungsteilnehmer aus.
 6. Die Dateien liegen für die Prüfungsteilnehmer im Verzeichnis ``transfer/LEHRER/``.
 7. Schüler nutzen die bereitgestellten Daten und erstellen ihre Lösungen.
@@ -322,7 +322,7 @@ Der Lehrer sieht in der Schulkonsole die abgegebenen Dateien. Um die Liste mit d
    Prüfung: abgegebene Dateien einsehen
    
 Um vor Abschluss der Prüfung alle Abgaben einzusammeln, klickst Du unten links auf ``Von allen einsammeln``.
-Klicke nun auf ``Move _collect cirectory from all members``. Es werden nun alle Abgaben in das Verzeichnis des Lehrers zum Einsammeln der Dateien verschoben.
+Klicke nun auf ``Move _collect directory from all members``. Es werden nun alle Abgaben in das Verzeichnis des Lehrers zum Einsammeln der Dateien verschoben.
 
 .. figure:: media/webui-exam-collect-all-files.png
    :align: center
@@ -338,17 +338,17 @@ Klicke nun auf ``Move _collect cirectory from all members``. Es werden nun alle 
 Prüfung beenden
 ^^^^^^^^^^^^^^^
 
-Nachdem alle Dateien eingsammelt wurden, beendet der Lehrer den Prüfungsmodus.
+Nachdem alle Dateien eingesammelt wurden, beendet der Lehrer den Prüfungsmodus.
 
 Hierzu klickst Du auf das rot hinterlegte Prüfungssymbol im Spaltenkopf, um für alle Prüflingen den Prüfungsmodus zu beenden.
 
-Sollten für Prüflinge untzerschiedliche Prüfungszeiten gelten, so beendest Du pro Prüfling deren Prüfung zeilenweise einzeln.
+Sollten für Prüflinge unterschiedliche Prüfungszeiten gelten, so beendest Du pro Prüfling deren Prüfung zeilenweise einzeln.
 
 Abgaben einsehen
 ^^^^^^^^^^^^^^^^
 
 Du kannst als Lehrer wähend der Prüfung bereits eingesammelte Ordner und Dateien einsehen. Gehe hierzu unten auf ``Eingesammelte Dateien durchschauen``
-Es öffnet sich ein Fenster mit den einsammelten Ordnern und Dateien.
+Es öffnet sich ein Fenster mit den eingesammelten Ordnern und Dateien.
 
 .. figure:: media/webui-exam-check-collected-directories.png
    :align: center
@@ -357,7 +357,7 @@ Es öffnet sich ein Fenster mit den einsammelten Ordnern und Dateien.
 
    Prüfung: Prüfe Dateiabgaben
 
-Die aktuelle Prüfung ist am Klassennamen und an dem Zeistempel zu erkennen. Klicke auf das Ordnersymbol, um diesen zu öffnen.
+Die aktuelle Prüfung ist am Klassennamen und an dem Zeitstempel zu erkennen. Klicke auf das Ordnersymbol, um diesen zu öffnen.
 
 .. figure:: media/webui-exam-check-collected-directories-of-users.png
    :align: center
