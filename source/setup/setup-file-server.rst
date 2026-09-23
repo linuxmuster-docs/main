@@ -45,7 +45,7 @@ Rufe dort im Terminal die Datei auf und trage den File-Server mit seiner Funktio
 .. code::
 
    # /etc/linuxmuster/sophomorix/default-school/devices.csv
-   server;lmn-file-server;nopxe;52:24:11:4D:97:AB;10.0.0.101;;;;server;;0;;;;SETUP;
+   server;lmn-file-server;nopxe;52:24:00:22:c1:79;10.0.0.2;;;;server;;0;;;;SETUP;
 
 Speichere die Änderungen in der Datei.
 
@@ -208,7 +208,7 @@ Hierzu gibst Du als Benutzer root auf dem AD folgenden Befehl ein:
 
    rsync -av --delete -e ssh /srv/samba/schools/default-school/ root@10.0.0.2:/srv/samba/schools/default-school/
    
-Als Ziel ist auf dem File-Server der Schulname anzugeben, wie Du diesen zuvor mit dem linuxmuster-filserver setup eingerichtet hattest.
+Als Ziel ist auf dem File-Server der Schulname anzugeben, wie Du diesen zuvor mit dem linuxmuster-fileserver setup eingerichtet hattest.
    
 
 Aktualisierung der Freigaben
@@ -227,11 +227,15 @@ Gib im Terminal zur Aktualisierung der Freigaben (Shares) folgende Befehle ein:
 .. hint::
 
    Hast Du für den File-Server einen anderen Schulnamen als den Vorgabewert (default-school) angegeben, dann must Du diesen hier angeben.
+   
+.. attention::
+
+   Nachstehenden Befehl musst Du nur eingeben, wenn Du eine neue Installation von linuxmuster.net zusammen mit dem Fileserver durchführst. Hast Du bereits eine lmn v7.3 installiert / eingerichtet und fügst erst später den Fileserver hinzu, dann musst Du folgenden Befehl weglassen: ``net conf addshare $SCHOOL /srv/samba/schools/$SCHOOL/``
 
 .. code::
 
    SCHOOL=default-school
-   FQDN=lmn-file-server.schule.willie-wichtig.org
+   FQDN=$(ssh 10.0.0.2 "hostname -f")
    
    net conf addshare $SCHOOL /srv/samba/schools/$SCHOOL/
    net conf delparm $SCHOOL "guest ok"

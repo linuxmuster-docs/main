@@ -18,7 +18,7 @@ Anlegen und Installieren des Servers (AD/DC)
      
      - Installation von Local/ISO, 
      - Gast OS: Linux, 6.X - 2.6 Kernel
-     - BIOS: Boot / MBR / SeaBIOS, 
+     - BIOS: OVMF (UEFI)
      - 2 vCPU, 
      - 3 GiB RAM, 
      - storage -> hdd1: 25 GiB -> hdd2: 100 GiB, 
@@ -26,7 +26,8 @@ Anlegen und Installieren des Servers (AD/DC)
    
    Achte darauf, dass vor dem Start der VM beide Festplatten der VM zugewiesen wurden.
 
-   Bei der Einrichtung des Servers musst Du nur einen Server mit 2 HDDs haben und Ubuntu auf der ersten HDD installieren. Die zweite HDD bleibt frei. Auf dieser 2. HDD richtest Du - wie nachstehend beschrieben -  ein LVM ein.
+   Bei der Einrichtung des Servers musst Du nur einen Server mit 2 HDDs haben und Ubuntu auf der ersten HDD installieren.
+   Die zweite HDD bleibt wird später für linuxmuster.net genutzt.
 
 Erster Start des Servers vom Installationsmedium
 ================================================
@@ -169,14 +170,14 @@ Für die weitere Installation benötigst Du zwei unterschiedliche Speichermedien
 
 Dabei ist es egal ob es sich dabei um |...| 
 
-* |...| eine reale Festplatte mit zwei Partionen.
+* |...| eine reale Festplatte mit zwei Partitionen.
 * |...| zwei reale Festplatten.
 * |...| zwei virtuelle Festplatten handelt.
 
 In dieser Anleitung beschreiben wir zunächst die Installation auf Basis unserer Mindestanforderungen, also |...|
 
 * |...| 25G Speichermedium für das System und
-* |...| 100G Speichermedium für Daten
+* |...| 100G Speichermedium für Daten / linuxmuster.net
 
 Wobei anzumerken ist, dass die Installation des Speicherplatzes für das System ``/`` für alle Varianten identisch ist.
 
@@ -201,7 +202,7 @@ Es werden Dir dann die verfügbaren Geräte angezeigt.
 
    Anzeige der verfügbaren Geräte - andere HDD-Größen als zuvor genannt
 
-Wähle die erste Festplatte bzw. die erste Partition aus, auf der Du das System des Servers unterbringen möchtest. Es wird ein Kontextmenü angezeigt, bei dem Du mit ``Add GPT Partition`` diese erstellen musst. 
+Wähle die erste Festplatte aus, auf der Du das System des Servers unterbringen möchtest. Es wird ein Kontextmenü angezeigt, bei dem Du mit ``Add GPT Partition`` diese erstellen musst.
 
 .. figure:: media/basis_server_012_custom-storage-layout-create-partition-table2.png
    :align: center
@@ -223,33 +224,34 @@ Gehe auf ``Erstellen``.
 
 Danach gelangst Du zu nachstehendem Bildschirm.
 
-.. figure:: media/basis_server_014_custom-storage-layout-create-partition-table-lvm-hdb-5.png
+.. figure:: media/basis_server_014_custom-storage-layout-create-partition-table.png
    :align: center
    :scale: 50%
    :alt: storage configuration overview
 
    Speicherplatzkonfiguration
 
-Lasse das `zweite Speichermedium unkonfiguriert`.
+Wähle dort das ``zweite Speichermedium`` aus. Dieses muss noch für das spätere Setup partitioniert werden.
+Füge hier erneut eine GPT-Partition für den gesamten Speicherplatz des zweiten Speichermediums hinzu.
 
-Für das Setup werden noch weitere Partitionen benötigt, die so ohne weitere Angabe von dem später beschriebenen Skript ``lmn-prepare`` genutzt werden.
+Wähle bei der Partitionierung für diese Festplatte das Dateisystem ext4 und hänge dieses auf den Mount-Point ``/srv`` ein.
 
-.. hint:: Für kleine Schulen oder eine Test-Installation sollten diese Vorgaben passen. 
-   
-   ============== ========================== ================================= ==========
-   LV Name        LV Pfad                    Mountpoint                        Größe
-   ============== ========================== ================================= ==========
-   var            /dev/sg_srv/var            /var                              10G
-   linbo          /dev/sg_srv/linbo          /srv/linbo                        40G
-   global         /dev/sg_srv/global         /srv/samba/global                 10G
-   default-school /dev/sg_srv/default-school /srv/samba/schools/default-school 40G [#f1]_
-   ============== ========================== ================================= ==========
+.. .. figure:: media/basis_server_015_custom-storage-layout-create-partition-table-2nd-storage.png
+   :align: center
+   :scale: 50%
+   :alt: 2nd storage partitioning
 
-.. [#f1] Sollte Deine Festplatte größer sein als die vorgeschlagene Mindestgröße, so wird für diese Partition der maximal übrige freie Platz verwendet. Du kannst zudem eigene Größenangaben vornehmen, sofern Deine Voraussetzungen abweichen.
+   Partitionierung der 2. Festplatte
 
-.. attention::
+Hast Du dies übernehmen gelangst Du wieder zur Gesamtübersicht der vorgenommenen Partitionierung.
 
-   Unser lmn-prepare nimmt Dir die nötigen vorbereitenden Aktionen ab. Du läßt also das `zweite Speichermedium unkonfiguriert`.
+.. .. figure:: media/basis_server_016_custom-storage-layout-create-partitions.png
+   :align: center
+   :scale: 50%
+   :alt: total storage partitioning
+
+   Partitionierung der Festplatten
+
 
 Speicherplatzkonfiguration übernehmen
 -------------------------------------
@@ -421,7 +423,7 @@ Um mit Proxmox die Server VM herunterfahren zu können, oder für den Snapshot d
 
 Gehe dabei wie folgt vor:
 
-1. Installiere auf der Server-Konsole die benötigten Pakete für den QEMU-Gast-Agenten:
+1. Installiere auf der Server-Konsole die benötigte pakete für den QEMU-Gast-Agenten:
 
 .. code::
 

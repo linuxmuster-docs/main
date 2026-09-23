@@ -90,6 +90,25 @@ Bei der Einrichtung der VM für den Fileserver hast Du eine zweite Festplatte vo
 
    Zweite HDD des Fileservers
    
+Solltest Du für die 2. HDD noch keine Partitionstabelle angelegt haben, rufst Du im Terminal folgende Befehle auf:
+
+.. code::
+
+   sudo -i
+   fdisk /dev/sdb  # Bezeichnung des Devices auf die eigene Situation anpassen
+   # erzeuge eine leere GPT Partitionstabelle
+   g
+   # erstelle eine neue Partition
+   n
+   # pruefe die anzulegende Partition
+   p
+   # schreibe die neu angelegte Partition
+   w
+   # formatiere nun die neu angelegte Partition auf der 2. HDD
+   mkfs.ext4 /dev/sdb1
+   #lasse nun die uuid der 2. Platte ausgeben
+   lsblk -lf /dev/sdb
+
 Du musst jetzt noch den Eintrag in der Datei ``/etc/fstab`` anpassen, damit das zu verwendende Verzeichnis auf der zweiten HDD korrekt eingebunden wird und nach dem Setup des Fileservers dort Quotas aktiviert werden können.
 
 Lass Dir dazu den Inhalt der Datei zuerst ausgeben:
@@ -150,6 +169,14 @@ Nachdem Du als Benutzer ``linuxadmin`` am file-server angemeldet bist, wechselst
    
 Fileserver Installation
 =======================
+
+Das später zu installierende Paket ``linuxmuster-fileserver`` installiert den Zeitserver ``ntpsec``. Dies steht im Konflikt mit dem bereits installierten Zeitserver ``systemd-timesync``.
+
+Deinstalliere daher diesen zuvor mit:
+
+.. code::
+
+   sudo apt purge systemd-timesyncd
 
 Aktualisiere den Server und installiere die linuxmuster.net File-Server-Pakete:
 

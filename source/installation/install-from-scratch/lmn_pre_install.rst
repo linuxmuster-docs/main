@@ -158,8 +158,7 @@ Das Skript ``lmn-appliance`` bereitet den Server / die Appliance vor:
 - startet dann das Vorbereitungsskript lmn-prepare,
   - das die für das jeweilige Appliance-Profil benötigten Pakete installiert,
   - das Netzwerk konfiguriert,
-  - das root-Passwort auf Muster! setzt und
-  - im Falle des Serverprofils optional LVM einrichtet.
+  - das root-Passwort auf Muster! setzt.
 
 .. hint::
 
@@ -174,20 +173,22 @@ Wenn Du nicht mehr an Deinem Server eingeloggt bist, melde Dich erneut an.
    lsblk
    
    NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
-   sda      8:0    0   50G  0 disk 
-   ├─sda1   8:1    0    1M  0 part 
-   └─sda2   8:2    0   50G  0 part /
-   sdb      8:16   0  200G  0 disk 
+   sda      8:0    0   160G  0 disk
+   ├─sda1   8:1    0     1G  0 part /boot/efi
+   └─sda2   8:2    0 158.9G  0 part /
+   sdb      8:16   0  1000G  0 disk
+     └─sdb1 8:17   0  1000G  0 part /srv
    sr0     11:0    1 1024M  0 rom  
 
-In o.g. Beispiel wurde Ubuntu Server auf der 1. Festplatte (sda) installiert. Die zweite Festplatte (sdb) kennt noch keine Partitionen.
+In o.g. Beispiel wurde Ubuntu Server auf der 1. Festplatte (sda) installiert. Die erste Partition der ersten Platte wird für EFI verwendet,
+auf der zweiten Partition wird die Root-Partition ( / ) eingehangen. Auf der zweiten Platte existiert eine PArtition, die auf /srv eingehangen ist.
 
 Skript herunterladen
 --------------------
 
 Führe danach folgende Befehle in der Eingabekonsole aus:
 
-Wechsele Deinen Log-in und werde zu ``root``, falls du es nicht mehr sein solltest:
+Wechsel Deinen Log-in und werde zu ``root``, falls du es nicht mehr sein solltest:
 
 .. code-block:: Bash
  
@@ -211,45 +212,21 @@ Das Skript ist generell wie folgt zu starten:
 
 Die möglichen Optionen findest Du hier dokumentiert: https://github.com/linuxmuster/linuxmuster-prepare
 
-Für unsere Beispielkonfiguration rufe nun das Skript ``lmn-appliance`` so auf, dass Dein Server vorbereitet wird. Das LVM wird dann auf  der zweiten Festplatte eingerichtet wird.
+Installation
+============
+
+Nachstehende Beschreibung geht davon aus, dass Du eine zweite HDD mit einer Größe von 1TiB hast.
 
 .. code-block:: Bash
 
-  ./lmn-appliance -p server -u -l /dev/sdb
+  ./lmn-appliance -p server -u
 
-Mit dem Parametern -u (unattended) und -l wird dann ein LVM - hier auf der 2. Festplatte (sdb) - mit folgenden Werten eingerichtet:
-
-- var: 10 GiB
-- linbo: 40 GiB
-- global: 10GiB
-- default-school: restlicher Plattenplatz
-
-Installation mit Deinen Vorgaben
-================================
-
-Nachstehendes Beispiel geht davon aus, dass Du eine zweite HDD mit einer Größe von 1TiB hast.
-
-.. code-block:: Bash
-
-  ./lmn-appliance -p server -l /dev/sdb -v var:50,linbo:500,global:50,default-school:100%FREE
-
-Es wird hier also mit dem Profil server auf der zweiten Festplatte (/dev/sdb) ein LVM eingerichtet. Auf der zweiten Platte werden vier Volumes mit den Größen
-
-- var: 50GiB
-- linbo: 500GiB
-- global: 50GiB
-- default-school: verbleibender Rest der zweiten Festplatte - hier 400 GiB -
-
-eingerichtet.
-
-.. attention::
-
-  Passe die Größenangaben auf Deine Situation an.
+Mit dem Parametern -u (unattended) und -p (Serverprofil) wird das Setup für den Server aufgerufen.
 
 Ablauf
 ======
 
-Es wird zuerst das LVM auf der zweiten Platte eingerichtet, danach werden alle erforderliche Pakete geladen und installiert. Dies kann etwas dauern. Nach Abschluss des Installations- und Vorbereitungsarbeiten wirst Du aufgefordert, den Server neu zu starten.
+Es werden alle erforderliche Pakete geladen und installiert. Dies kann etwas dauern. Nach Abschluss des Installations- und Vorbereitungsarbeiten wirst Du aufgefordert, den Server neu zu starten.
 
 .. code-block:: Bash
 
@@ -268,9 +245,7 @@ Es wird zuerst das LVM auf der zweiten Platte eingerichtet, danach werden alle e
   # Gateway   : 10.0.0.254
   # Interface : ens18
   # Swapsize  : 2G
-  # LVM device: /dev/sdb
-  # LVM vlms  : var:10,linbo:40,global:10,default-school:100%FREE
-  
+
   ### Finished - a reboot is necessary!
 
 Ist lmn-appliance ohne Fehler durchgelaufen, starte danach den Server neu mit dem Befehl: 

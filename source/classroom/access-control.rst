@@ -7,13 +7,13 @@
 
 In einer Klasse und einem Kurs kann einzelnen Personen oder dem gesamten Kurs / der Klasse die Berechtigung zu Drucken oder der Zugriff auf WLAN und Internet gegeben oder genommen werden. Voraussetzung für diese Funktionen ist die :ref:`Aufnahme des Schülers <session-setup-label>` in einen Kurs.
 
-Öffne in der Schulkonsole unter ``KLASSENZIMMER -> Session-PREVIEW`` wähle die geünschte Klasse oder den gewünschten Kurs.
+Öffne in der Schulkonsole unter ``KLASSENZIMMER -> Kurse`` wähle die geünschte Klasse oder den gewünschten Kurs.
 
 .. figure:: media/webui-teachers-select-session.png
    :align: center
    :alt: WebUI Select Session
    
-   Starte die Session für die Klasse
+   Wähle die Klasse / Gruppe aus
 
 Es wird Liste mit Schülern des Kurses bzw. der Klasse angezeigt. 
 

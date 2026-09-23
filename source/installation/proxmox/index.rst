@@ -89,7 +89,7 @@ Nachdem Du die ISO-Datei für Proxmox heruntergeladen hast, wechselst Du in das 
 
 .. code-block:: console
 
-   dd if=proxmox-ve_8.4-1.iso of=/dev/sdX bs=1M status=progress conv=fdatasync
+   dd if=proxmox-ve_9.2-1.iso of=/dev/sdX bs=1M status=progress conv=fdatasync
 
 Verkabelungshinweise
 --------------------
@@ -1039,6 +1039,8 @@ Wähle dann das ISO image des Ubuntu Server aus.
 Klicke dann auf ``Next``.
 
 Belasse hier zunächst alle Voreinstellungen für Grafikkarte und Festplatten-Controller wie angezeigt.
+Wähle als BIOS ``OVMF (UEFI)`` und füge einen EFI-Storage hinzu. Wähle hier im Drop-down den zuvor eingerichteten Proxmox-Speicher aus.
+Aktiviere den ``Qmu Agent``.
 
 .. figure:: media/proxmox-create-vm-ubuntu-server-03.png
    :align: center

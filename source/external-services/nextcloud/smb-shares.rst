@@ -12,7 +12,7 @@ Aktivierung der App External storage support
 
 Als erstes musst Du die App ``External storage support`` aktivieren.
 
-.. image:: media/SMB01.png
+.. image:: media/smb-shares_01_enable-external-storage-app.png
    :alt: +Apps
    :align: center
 
@@ -28,7 +28,7 @@ Sollte der Nextloud-Server extern betrieben werden, so muss die OPNsense®-Firew
 In der Konfigurationsoberfläche ist unter ``Firewall -> NAT -> Portweiterleitung``
 eine entsprechende Regel anzulegen.
 
-.. image:: media/SMB02.png
+.. image:: media/smb-shares_02_external-storage-settings.png
    :alt: Externer Speicher
    :align: center
 
@@ -42,7 +42,7 @@ In den Einstellungen von ``Externer Speicher`` kannst Du jetzt, wie oben im Bild
 
   Du solltest das Share ``Tausch`` nicht für Schüler freigeben. Die Nextcloud registriert Änderungen nur dann, wenn ein Benutzer seine Dateien ändert, oder wenn die Nextcloud selbst teilt. Wenn Schüler oder Schülerinnen an Dateien oder Verzeichnissen Änderungen vornehmen, wird die Desktop-App diese Änderungen bei anderen Benutzern nicht aktualisieren. Das passiert nicht, wenn Du als Lehrer über die Nextcloud diese Tauschverzeichnisse mit den Schülern/Gruppen teilst. Dann arbeitet die Desktop-App einwandfrei.
 
-.. image:: media/SMB03.png
+.. image:: media/smb-shares_03_login-credentials.png
    :alt: Anmeldedaten
    :align: center
 
@@ -54,7 +54,7 @@ Achte darauf, dass Du ``Anmeldedaten in Datenbank speichern`` wählst.
 
 Ob Du die Vorschau aktivierst oder nicht hängt vom Standort der Nextcloud ab. Ist die Nextcloud nicht in der Schule gehostet und ist Deine Internet-Verbindung eher langsam, so ist es besser, wenn Du den Haken bei ``Vorschau aktivieren`` nicht setzt.
 
-.. image:: media/SMB04.png
+.. image:: media/smb-shares_04_enable-preview.png
    :alt: Vorschau aktivieren
    :align: center
 

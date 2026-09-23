@@ -5,7 +5,7 @@ Anzeigen des eigenen Plattenplatzes
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
-Jeder Benutzer kann sich auf der Startseite der *Schulkonsole* über den verbrauchten Speicherplatz und die ihnen zugewiesenen Speicherplatzbegrenzungen (Quota) informieren. 
+Jeder Benutzer kann sich auf der Startseite der *Schulkonsole* über den verbrauchten Speicherplatz und zugewiesenen Speicherplatzbegrenzungen (Quota) informieren.
 
 **Lehrer: Prüfen der eigenen Quota**
 
