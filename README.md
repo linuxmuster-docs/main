@@ -18,7 +18,7 @@ Clone the repository "main" using git
    ~$ git clone git@github.com:linuxmuster-docs/main.git # if you have a ssh-key within github
 ```
 
-Install sphinx, e.g. using Ubuntu 22.04, do
+Install sphinx, e.g. using Ubuntu 24.04, do
 
 ```sh
    ~$  sudo apt install git python3-sphinx texlive texlive-latex-extra texlive-lang-german
@@ -149,15 +149,14 @@ for more details.
 
 ## Release History
 
-* latest - v7.3
+* latest - v7.4
     * CHANGE: Updated docs according to current release status of linuxmuster.net
+* v7.3
+    * STATUS: Documentation reflects status v7.3 of linuxmuster.net
 * 7.2
     * STATUS: Documentation reflects status v7.2 of linuxmuster.net
 * 7.1
     * STATUS: Documentation reflects status v7.1 of linuxmuster.net
-* 6.2
-    * STATUS: Old documentation of the old version of linuxmuster.net
-    * version with an english translation (EN)
  
 ## License for linuxmuster.net documentation
 
