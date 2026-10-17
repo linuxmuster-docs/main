@@ -908,6 +908,55 @@ Hast Du die Eintragungen hingegen in der Schulkonsole vorgenommen, so must Du nu
 * Der Download größer Betriebssystem-Images beeinträchtigt Deine WLAN-Performance. Dies solltest Du vermeiden werden.
 * Du solltest zudem überlegen, ob Du ein gesichertes WLAN für das LINBO-Management einrichtest, um den Zugriff auf das WLAN zu beschränken.
 
+
+Fehlerbehebung
+--------------
+
+Sollte die WLAN-Karte des Clients Probleme bereiten, obwohl Du Dich, wie zuvor beschrieben, mit ``linbo-ssh`` auf den Client aufgeschaltet und auch mit ``dmesg | grep -i firmware`` keine WLAN-Fehler angezeigt bekommst, dann kannst Du weitere Befehle zur Eingrenzung des Fehlers auf dem Client absetzen:
+
+.. code::
+
+   ip link set dev wlan0 up
+   wpa_supplicant -B -c/etc/wpa_supplicant.conf -iwlan0
+   udhcpc -O nisdomain -n -i wlan0
+
+.. hint::
+
+   Sollten bei o.g. Befehlen keine Fehler ausgegeben werden, dann funktioniert die WLAN-Hardware. Diese wird allerdings zu langsam initialisiert.
+
+Um eine langsame Initialisierung zu korrigieren, erstellst Du auf dem Server im Verzeichnis ``/var/lib/linuxmuster/hooks/update-linbofs.pre.d`` eine neue ausführbare Datei, die ein Bash-Skript enthält.
+
+Führe dazu folgende Befehle aus:
+
+.. code::
+
+   sudo -i
+   touch /var/lib/linuxmuster/hooks/update-linbofs.pre.d/10_warte-wegen-wlan.sh
+   chmod +x /var/lib/linuxmuster/hooks/update-linbofs.pre.d/10_warte-wegen-wlan.sh
+
+Danach änderst Du den Inhalt der Datei mit:
+
+.. code::
+
+   sudo nano /var/lib/linuxmuster/hooks/update-linbofs.pre.d/10_warte-wegen-wlan.sh
+
+
+Füge nun folgenden Inhalt ein, speichere den Inhalt (``strg + o``) und beende danach die Bearbeitung (``strg + x``):
+
+.. code::
+
+   #!/bin/bash
+   set -eu
+   sed -i '/local ipaddr/a sleep 1' init.sh
+   echo "- Mein Hook gelaufen - 1 Sek. Wartezeit für Mediatek-WLAN hinzugefügt -"
+
+Ggf. musst Du bei Deiner WLAN-Karte die Wartezeit zwischen 1 bis 10 Sekunden anpassen. Ob die Karte erkannt wird, kannst Du auf dem Client mit folgendem Befehl prüfen:
+
+.. code::
+
+   sed -i '/local ipaddr/a cat /proc/net/dev' init.sh
+
+
 LINBO: Client-Anpassungen
 =========================
 

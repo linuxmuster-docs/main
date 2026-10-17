@@ -8,15 +8,11 @@ Anlegen und Installieren des Fileservers
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_
 
-.. todo::
-
-   Kapitel muss noch überarbeitet werden. btrfs, subvolumes - Anpassungen an neues lmn74 setup etc.
-
 .. hint::
 
     Der Fileserver für linuxmuster.net 7.4 kann optional installiert werden (Drei-Server-Lösung). Es kann aber weiterhin wie bisher auch ein Weiterbetrieb als Zwei-Server-Lösung erfolgen. Wir empfehlen den Fileserver z.B. in einer eigenen VM zu installieren, da hierdurch deutliche Performancesteigerungen in Verbindung mit Samba erreicht werden. Dies empfehlen wir insbesondere mittleren bis größeren Schulen. Kleinere Schulen können problemlos linuxmuster.net 7.4 als Zwei-Server-Lösung weiterbetreiben.
 
-    Grundsätzlich kann linuxmuster.net 7.4 weiterhin als Zwei-Server-Lösung betrieben werden und es kann jederzeit später eine Erweiterung / Umstellung auf den zusätzlichen File-Server erfolgen. Die Migration/ das Update von v7.2 erfolgt zunächst immer als Zwei-Server-Lösung und es erfolgt danach eine Erweiterung um den Fileserver. 
+    Grundsätzlich kann linuxmuster.net 7.4 weiterhin als Zwei-Server-Lösung betrieben werden und es kann jederzeit später eine Erweiterung / Umstellung auf den zusätzlichen File-Server erfolgen.
     
 In Samba-Umgebungen ist es inzwischen üblich, den Domänencontroller und den Fileserver getrennt voneinander zu betreiben, da dies Performancevorteile hat: Selbst wenn der Fileserver auf dem gleichen Host virtualisiert wird, wie der Server und auf dem gleichen Storage läuft. Das ist für große Schulen mit vielen Clients von Vorteil.
 
@@ -51,16 +47,16 @@ Vorteile:
 Installation Ubuntu-Server
 ==========================
 
-Führe die Installation des für den File-Server benötigten Ubuntu 24.04 LTS Servers so aus, wie zuvor im Kapitel :ref:`basis_server-label` beschrieben. Nutze die zuvor bereitgestellten zwei HDDs. Passe die Partitionierung und Formatierung der Festplatten ggf. entsprechend an die Bedürfnisse der Schule an. Zudem musst Du eine statische IP-Adresse aus dem LAN dem File-Server zuweisen.
+Führe die Installation des für den File-Server benötigten Ubuntu 26.04 LTS Servers so aus, wie zuvor im Kapitel :ref:`basis_server-label` beschrieben. Nutze die zuvor bereitgestellten zwei HDDs. Passe die Partitionierung und Formatierung der Festplatten ggf. entsprechend an die Bedürfnisse der Schule an. Zudem musst Du eine statische IP-Adresse aus dem LAN dem File-Server zuweisen.
 
 Nutze die Daten gemäß Deines IP-Adresskonzeptes oder gib nachstehende Daten ein, die in der Dokumentation durchgängig für das LAN verwendet werden:
 
 - Netzbereich: 10.0.0.0/16
 - IP-Adresse:  10.0.0.2
-- Netzmaske:   10.0.0.254
-- Gateway:     10.0.0.254
-- DNS:         10.0.0.254
-- Domäne:      <lasse diese leer>
+- Netzmaske:   255.255.0.0
+- Gateway:     10.0.0.254 (Firewall)
+- DNS:         10.0.0.1 (AD/DC-Server)
+- Domäne:      <leer lassen bitte>
 
 Lasse die Domäne des FQDN in den Dateien
 
@@ -188,11 +184,11 @@ Aktualisiere den Server und installiere die linuxmuster.net File-Server-Pakete:
 
    sudo apt update && sudo apt install linuxmuster-fileserver
 
-Bei der Paketinstallation wird für die Kerberos-Authentifizierung ein sog. Realm abgefragt. Dieser bleibt zu diesem Zeitpunkt frei. Bei der späteren Integration des File-Servers in den AD/DC wird dies dann automatisch angepasst.
-
 .. hint::
 
-   Für Anwender einer Virtualisierungslösung empfehlen wir an dieser Stelle einen Snapshot zu erstellen!
+   Bei der Paketinstallation wird für die Kerberos-Authentifizierung ein sog. Realm abgefragt. Dieser bleibt zu diesem Zeitpunkt frei. Bei der späteren Integration des File-Servers in den AD/DC wird dies dann automatisch angepasst.
+
+   Für Anwender einer Virtualisierungslösung empfehlen wir an dieser Stelle einen ``Snapshot`` zu erstellen!
 
 Weiteres Vorgehen
 =================
