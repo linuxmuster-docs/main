@@ -8,15 +8,11 @@ Setup File-Server
 
 .. sectionauthor:: `@cweikl <https://ask.linuxmuster.net/u/cweikl>`_,
 
-.. todo::
-
-   Kapitel muss noch vollständig neu überarbeitet werden. Es stehen noch Infos und Tests aus.
-
 .. hint::
 
     Der Fileserver für linuxmuster.net 7.4 kann optional installiert werden (Drei-Server-Lösung). Es kann aber weiterhin wie bisher auch ein Weiterbetrieb als Zwei-Server-Lösung erfolgen. Wir empfehlen den Fileserver z.B. in einer eigenen VM zu installieren, da hierdurch deutliche Performancesteigerungen in Verbindung mit Samba erreicht werden. Dies empfehlen wir insbesondere mittleren bis größeren Schulen. Kleinere Schulen können problemlos linuxmuster.net 7.4 als Zwei-Server-Lösung weiterbetreiben.
 
-    Grundsätzlich kann linuxmuster.net 7.4 weiterhin als Zwei-Server-Lösung betrieben werden und es kann jederzeit später eine Erweiterung / Umstellung auf den zusätzlichen File-Server erfolgen. Die Migration/ das Update von v7.2 erfolgt zunächst immer als Zwei-Server-Lösung und es erfolgt danach eine Erweiterung um den Fileserver.                
+    Grundsätzlich kann linuxmuster.net 7.4 weiterhin als Zwei-Server-Lösung betrieben werden und es kann jederzeit später eine Erweiterung / Umstellung auf den zusätzlichen File-Server erfolgen.
 
 File-Server aufnehmen
 =====================
@@ -38,7 +34,7 @@ Im Terminal wirst Du mit dem Erstbildschirm von linuxmuster.net v7.4 begrüßt u
    
    Welcome to lmn.net
    
-Wechsel im Terminal zum Benutzer root mit
+Wechsel im Terminal zum Benutzer ``root`` mit
 
 .. code::
 
@@ -135,14 +131,14 @@ Das Setup benötigt folgende Optionen, die bei Aufruf anzugeben sind:
 
 Der vollständige Befehlsaufruf für das Setup lautet z.B. für die
 
-a) Domain: schule.willie-wichtig.org (wie beim Setup des AD/DC angegeben)
-b) Admin: global-admin
-c) -p auslassen, dann wird das Kennwort interaktiv abgefragt
-d) Schulname: wird -s ausgelassen, wird default-school genutzt
+ - *Domäne*: schule.willie-wichtig.org (wie beim Setup des AD/DC angegeben)
+ - *Benutzername des Admins*: global-admin
+ - *Kennwort des Admins*: ``-p`` auslassen, dann wird das Kennwort interaktiv abgefragt
+ - *Schulname für Freigaben*: Wird ``-s`` ausgelassen, wird default-school genutzt
 
 .. hint::
 
-   Hast Du zuvor das Setup des linuxmuster.net AD/DC Server durchlaufen, dann nutzt Du dort den Share default-school - unabhängig davon, wie Du beim Setup Deine Schule genannt hast. Du musst also für den File-Server daher diese angeben bzw. den Parameter -s weglassen.
+   Hast Du zuvor das Setup des linuxmuster.net AD/DC - Server durchlaufen, dann nutzt Du dort den Share ``default-school`` - unabhängig davon, wie Du beim Setup Deine Schule genannt hast. Du musst also für den File-Server diesen Share angeben oder den Parameter ``-s`` weglassen.
 
 .. code::
 
@@ -171,32 +167,31 @@ Freigaben übertragen
 3. Du lässt mit sophomorix die Berechtigungen im AD anpassen.
 4. Auf dem File-Server passt Du die ACLs an.
 
+``Schritt 1``
 
-Übertrage zuerst den ssh_key des Benutzer root vom linuxmuster.net AD/DC Server auf den File-Server. Bislang kannst Du Dich nur als Benutzer linuxadmin auf dem File-Server via ssh anmelden.
+Übertrage zuerst vom linuxmuster.net AD/DC Server den ssh-key des Benutzer root auf den File-Server. Bislang kannst Du Dich nur als Benutzer linuxadmin auf dem File-Server via ssh anmelden. Du musst also nach der Übertragung den übertragenen ssh-key dem Benutzer root auf dem File-Server zuweisen.
 
-Gib daher auf dem AD in der Konsole folgenden Befehle ein:
+Gib daher auf dem AD/DC Server zur Übertragung des ssh-keys in der Konsole folgenden Befehle ein:
 
 .. code::
 
    root@server:~# ssh-copy-id -i .ssh/id_rsa.pub linuxadmin@10.0.0.2
-   
-Der Key wurde nun auf dem File-Server dem User linuxadmin in ``~.ssh/authorized_keys hinzugefügt``.
 
-Öffne nun die Konsole auf dem AD und wechsel zum Benutzer root. 
-
-Kopiere nun die Datei authorized_keys des Benutzers linuxadmin:
-
-.. code::
-
-   cp /home/linuxadmin/.ssh/authorized_keys /root/.ssh/
-   
-Teste nun, ob Du vom AD via SSH auf den File-Server gelangst. Dies sollte mit
+- Der Key wurde nun auf dem File-Server dem User linuxadmin in ``~.ssh/authorized_keys`` hinzugefügt.
+- Verbinde Dich nun vom AD/DC-Server via ssh auf den File-Server.
 
 .. code::
 
    ssh root@10.0.0.2
-   
-direkt erfolgen.
+
+- Wechsel auf dem File-Server in der Konsole zum Benutzer ``root``.
+- Kopiere nun die Datei ``authorized_keys`` des Benutzers ``linuxadmin``:
+
+.. code::
+
+   cp /home/linuxadmin/.ssh/authorized_keys /root/.ssh/
+
+``Schritt 2``
 
 Danach installierst Du rsync jeweils auf dem ``AD/DC Server`` und auf dem ``File-Server`` mit
 
@@ -204,15 +199,17 @@ Danach installierst Du rsync jeweils auf dem ``AD/DC Server`` und auf dem ``File
 
    sudo apt install -y rsync
    
-Jetzt kannst Du den Inhalt des Freigabeordners auf dem AD zum File-Server synchronisieren.
+``Schritt 3``
 
-Hierzu gibst Du als Benutzer root auf dem AD folgenden Befehl ein:
+Jetzt kannst Du den Inhalt des Freigabeordners auf dem AD/DC-Server zum File-Server synchronisieren.
+
+Hierzu gibst Du als Benutzer root auf dem AD/DC-Server folgenden Befehl ein:
 
 .. code::
 
    rsync -av --delete -e ssh /srv/samba/schools/default-school/ root@10.0.0.2:/srv/samba/schools/default-school/
    
-Als Ziel ist auf dem File-Server der Schulname anzugeben, wie Du diesen zuvor mit dem linuxmuster-fileserver setup eingerichtet hattest.
+Als Ziel ist auf dem ``File-Server`` der Schulname anzugeben, wie Du diesen zuvor mit dem linuxmuster-fileserver setup eingerichtet hattest.
    
 
 Aktualisierung der Freigaben
@@ -227,10 +224,6 @@ Wechsel im Terminal zum Benutzer root mit
    sudo -i
 
 Gib im Terminal zur Aktualisierung der Freigaben (Shares) folgende Befehle ein:
-
-.. hint::
-
-   Hast Du für den File-Server einen anderen Schulnamen als den Vorgabewert (default-school) angegeben, dann musst Du diesen hier angeben.
    
 .. attention::
 
@@ -249,16 +242,17 @@ Gib im Terminal zur Aktualisierung der Freigaben (Shares) folgende Befehle ein:
    net conf setparm $SCHOOL "msdfs proxy"  //$FQDN/$SCHOOL
    net conf setparm $SCHOOL "hide unreadable"  yes
 
+
 Abschluss
 =========
    
-Zum Abschluss der Integration führe noch folgenden Befehl auf dem linuxmuster.net AD/DC Server aus:
+Führe zum Abschluss der Integration noch folgenden Befehl auf dem linuxmuster.net ``AD/DC - Server`` aus:
 
 .. code::
 
    sophomorix-repair --all
    
-Danach wechselst Du zur Konsole auf dem File-Server und gibst dort als Benutzer root folgenden Befehl ein:
+Danach wechselst Du zur Konsole auf dem ``File-Server`` und gibst dort als Benutzer root folgenden Befehl ein:
 
 .. code::
 
@@ -276,14 +270,56 @@ Bei erfolgreicher Anwendung siehst Du diese Ausgabe:
    File-Server: Setze die ACLs
 
 
+Fehlerbehebung
+==============
+
+Sollten Fehler auftreten, können zur Behebung folgende Befehle hilfreich sein:
+
+1. Prüfe auf dem AD/DC-Server, ob der File-Server läuft:
+
+.. code::
+
+   linuxmuster-fileserver status
+
+2. Prüfe, ob Benutzer und Grupppen auf dem File-Server gelesen werden können:
+
+.. code::
+
+   # user
+   wbinfo -u
+   # group
+   wbinfo -g
+
+3. Prüfe, ob Clients vom File-Server aus erreicht werden können.
+
+Geschwindigkeitstests
+=====================
+
+Wurde der File-Server erfolgreich eingerichtet, kannst Du Tests zur Überprüfung der Geschwindigkeit durchführen. Dazu rufst Du auf dem AD/DC-Server eine Konsole auf und gibst folgenden Befehl an:
+
+.. code::
+
+   smbclient //<target>/<share> -U global-admin -k -c "put random-1G;rm random-1G"
+
+Es wird eine Datei mit zufälligem Inhalt und einer Dateigröße von 1GiB auf die Freigabe übertragen und danach direkt wieder gelöscht. Beobachte die dabei angegebene Übertragungszeit. Wiederhole den Test mehrfach.
+
+.. hint::
+
+   Passe <target> auf Deinen File-Server und <share> auf Deine Freigabe an.
 
 
+Samba DFS
+=========
 
-   
+Das Distributed File System (DFS) arbeitet so, dass die Anfrage eines Client an eine DFS-PFad (z.B. \\server\default-school) von Samba mit einem DFS-Verweis beantwortet wird. Dieser Verweis teilt dem Client mit, wo sich aktuell die angefragten Daten befinden. Üblicherweise entspricht dies einem UNC - Pfad wie z.B. \\lmn-fileserver.linuxmuster.lan\default-school.
 
+Der Client verbindet sich direkt mit dem Zielserver und greift direkt auf die Dateien zu, so als wenn diese Bestandteil des ursprünglichen DFS-Pfads wären. Die Umleitung erfolgt nahtlos im Hintergrund, so dass ein Nutzer immer den einheitlichen DFS-Namensraum sieht.
 
+Kernaspekte:
 
-
+ - Clients greifen auf ein sog. virtuelles Root-Verzeichnis (``\domain\dfsroot``) anstelle auf ein Root-Verzeichnis ``/``  eines einzelnen Servers zu.
+ - Samba leitet den Client zu dem richtigen Server anhand des DFS-Verweises um.
+ - Nach der Umleitung des Clients erfolgt der Dateizugriff wie bei einer sonstigen Freigabe eines Samba-Shares.
 
 
 
