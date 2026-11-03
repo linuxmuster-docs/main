@@ -948,7 +948,7 @@ Füge nun folgenden Inhalt ein, speichere den Inhalt (``strg + o``) und beende d
    #!/bin/bash
    set -eu
    sed -i '/local ipaddr/a sleep 1' init.sh
-   echo "- Mein Hook gelaufen - 1 Sek. Wartezeit für Mediatek-WLAN hinzugefügt -"
+   echo "- Hook wurde ausgefuehrt und 1 Sekunde Wartezeit für die WLAN-Karte hinzugefuegt -"
 
 Ggf. musst Du bei Deiner WLAN-Karte die Wartezeit zwischen 1 bis 10 Sekunden anpassen. Ob die Karte erkannt wird, kannst Du auf dem Client mit folgendem Befehl prüfen:
 

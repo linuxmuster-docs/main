@@ -210,7 +210,26 @@ Hierzu gibst Du als Benutzer root auf dem AD/DC-Server folgenden Befehl ein:
    rsync -av --delete -e ssh /srv/samba/schools/default-school/ root@10.0.0.2:/srv/samba/schools/default-school/
    
 Als Ziel ist auf dem ``File-Server`` der Schulname anzugeben, wie Du diesen zuvor mit dem linuxmuster-fileserver setup eingerichtet hattest.
-   
+
+Genutzte Parameter:
+
+ - -a („Archivmodus“): Berechtigungen, Zeitstempel und symbolische Links werden mitgenommen. Es erfolgt auch eine rekursive Übertragung.
+ - -v: Zeigt ausführlicher in der Konsole an, welche Schritte rsync gerade ausführt.
+ - --delete: Löscht auf 10.0.0.2 im Zielordner Dateien, die lokal im Quellordner nicht vorhanden sind. Hier ist es sinnvoll dies vorher mit einem Probelauf zu testen.
+ - -e ssh: Verwendet SSH für die Verbindung.
+ - `root@10.0.0.2` verbindet sich als root mit dem Rechner 10.0.0.2.
+ - Der abschließende Schrägstrich im Quellpfad bedeutet: Übertragen wird der Inhalt von default-school/, nicht der Ordner selbst als zusätzliche Unterebene.
+
+
+ Führe vorab erst einen Probelauf aus:
+
+.. code::
+
+   rsync -av --delete --dry-run -e ssh  /srv/samba/schools/default-school/ root@10.0.0.2:/srv/samba/schools/default-school/
+
+Prüfe die Ausgabe genau, ob Löschungen angekündigt werden. Nur wenn Quelle und Ziel stimmen und die Aktion dem gewünschten Vorgehen entspricht, solltest Du den Parameter ``--dry-run`` entfernen.
+
+
 
 Aktualisierung der Freigaben
 ============================
@@ -269,13 +288,26 @@ Bei erfolgreicher Anwendung siehst Du diese Ausgabe:
    
    File-Server: Setze die ACLs
 
+Optional: Bisherige Daten auf dem AD/DC-Server löschen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Hast Du danach den File-Server-Betrieb erfolgreich getestet, ein ``Backup`` erstellt und es funktioniert alles wie gewünscht, dann kannst Du die ursprünglich auf dem AD/DC-Server liegenden Daten mit folgendem Befehl endgültig löschen:
+
+.. code::
+
+   # Zeige zunächst an, was wir löschen würden.
+   find /srv/samba/schools/default-school/ -mindepth 1 -maxdepth 1 -print
+
+   # Stimmt die Ausgabe, lösche danach und lasse die zu entfernenden Einträge anzeigen.
+   find /srv/samba/schools/default-school/ -mindepth 1 -maxdepth 1 -exec rm -rv -- {} +
+
 
 Fehlerbehebung
 ==============
 
 Sollten Fehler auftreten, können zur Behebung folgende Befehle hilfreich sein:
 
-1. Prüfe auf dem AD/DC-Server, ob der File-Server läuft:
+1. Prüfe auf dem File-Server, ob dieser läuft:
 
 .. code::
 
