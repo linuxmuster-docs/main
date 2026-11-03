@@ -381,7 +381,7 @@ In ``/etc/freeradius/3.0/mods-enabled/ldap`` müssen folgende Eintragungen gemac
   ldap {
     server = 'ldaps://server.linuxmuster.lan'
     identity = 'CN=global-binduser,OU=Management,OU=GLOBAL,DC=linuxmuster,DC=lan'
-    password = Mk5ZXi1XTt7iRouX
+    password = GLOBALBINDUSERPASSWORT
     base_dn = 'OU=default-school,OU=SCHOOLS,DC=linuxmuster,DC=lan'
     ...
   }
@@ -412,7 +412,7 @@ und
   linuxmuster:
     ldap:
       binddn: CN=global-binduser,OU=Management,OU=GLOBAL,DC=linuxmuster,DC=lan
-      bindpw: Mk5ZXi1XTt7iRouX
+      bindpw: GLOBALBINDUSERPASSWORT
       host: server
       searchdn: DC=linuxmuster,DC=lan
 
